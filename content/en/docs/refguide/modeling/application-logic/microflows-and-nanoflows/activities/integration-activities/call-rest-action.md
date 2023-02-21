@@ -106,7 +106,7 @@ The options are:
 When you select **Override**, you can configure which client certificate will be used. Click **Edit** to specify the **Client certificate identifier**. This identifier can be set in different places, depending on where you deploy the app:
 
 * When you deploy the app in the Mendix cloud, set the **Client certificate identifier** to the desired **WEB SERVICE CALL NAME** when [pinning a client certificate](/developerportal/deploy/certificates/#outgoing-client-certificates).
-* When you deploy the app elsewhere, the identifier is set in the custom setting [ClientCertificateUsages](/refguide/custom-settings/#ca-certificates). For testing locally, this can be set as a custom server setting in a [Configuration](/refguide/configuration/#custom).
+* When you deploy the app elsewhere, the identifier is set in the custom setting [ClientCertificateUsages](/refguide/custom-settings/#CACertificates). For testing locally, this can be set as a custom server setting in a [Configuration](/refguide/configuration/#custom).
 
 When this identifier is not set for the environment where your app is deployed (either not pinned or not present in *ClientCertificateUsages*), the default settings will be used (as if **Use app settings** were selected).
 
@@ -216,7 +216,7 @@ The **Variable** field defines the name for the result of the operation.
 
 #### 7.3.1 $latestHttpResponse Variable
 
-The `$latestHttpResponse` variable is of the [HttpResponse](/refguide/http-request-and-response-entities/#http-response) type. It is available after a **Call REST** activity.
+The `$latestHttpResponse` variable is of the [HttpResponse](/refguide/http-request-and-response-entities/#http-response) type. It is available after a **Call REST** activity. This variable can only be accessed in the microflow where the **Call REST Service** activity is used.
 
 However, its `Content` attribute will be left empty in most cases to minimize memory usage.
 
@@ -224,8 +224,6 @@ This attribute is filled when one of the following scenarios occur:
 
 * The **Response handling** is **Store in an HTTP response** and the call succeeded
 * The **Store message body in $latestHttpResponse variable** option in the **Error handling** section is checked and the call failed
-
-This variable can be accessed from any microflow action in the [scope](/refguide/objects-and-caching/#scope-tracking).
 
 #### 7.3.2  Store Message Body in $latestHttpResponse Variable {#latesthttpresponse}
 
@@ -248,7 +246,6 @@ This error occurs when your app's infrastructure closes the connection because i
 There are two ways to resolve this:
 
 1. Alter the value of the `http.client.CleanupAfterSeconds` [runtime setting](/refguide/custom-settings/) to be less than the connection timeout. This will ensure that the your app client will create a new HTTP client for the request.
-
 2. Handle the error in your microflow and retry a number of times before returning the error. Your flow might look similar to the one below.
 
     {{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/integration-activities/call-rest-action/retry-rest-connection-timeout.png" >}}

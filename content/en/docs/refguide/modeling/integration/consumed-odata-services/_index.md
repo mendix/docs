@@ -21,6 +21,10 @@ Contact your [Mendix Admin](/developerportal/control-center/#company) to find ou
 
 For details on the features that a published OData service must support and how the conversion from and to the Mendix data model works, see [Consumed OData Service Requirements](/refguide/consumed-odata-service-requirements/).
 
+{{% alert color="warning" %}}
+The OData implementation in Mendix does not support all features in the OData specification, nor do we have any plans to provide a full implementation of the entire specification. The supported capabilities of OData are focused on providing a simple and productive way to share data between Mendix apps. Although OData [external entities](/refguide/external-entities/) may also work for third-party OData APIs, their use is not tested nor guaranteed. Please validate upfront that the functionality provided in Mendix matches the requirements of your third-party APIs. If [external entities](/refguide/external-entities/) do not work with your OData APIs, the advised alternative is to use [REST](/refguide/consumed-rest-services/) functionality.
+{{% /alert %}}
+
 ## 2 OData Services and External Entities {#external-entities}
 
 When an external entity is used in an app, the associated dataset for the entity is retrieved through the information in the consumed OData service contract and returned.

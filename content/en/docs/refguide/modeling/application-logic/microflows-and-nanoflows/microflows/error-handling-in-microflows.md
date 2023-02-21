@@ -4,8 +4,8 @@ url: /refguide/error-handling-in-microflows/
 weight: 4
 tags: ["error", "error handling", "rollback", "microflow", "logic"]
 aliases:
-    - /howto/logic-business-rules/set-up-error-handling.html
     - /howto/logic-business-rules/set-up-error-handling
+#If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
 ## 1 Introduction
@@ -123,7 +123,7 @@ In a custom error handler that is executed after an error occurs, `$latestError`
 | --- | --- | --- |
 | ErrorType | String | The Java exception type of the error that occurred. |
 | Message | String | The message of the Java exception. |
-| Stacktrace | String | The stacktrace of the Java exception. |
+| Stacktrace | String | The stack trace of the Java exception. |
 
 {{% alert color="warning" %}}
 In microflows that apply entity access, you may not be able to inspect the attributes of error objects for security reasons. You can pass the error object to a sub-microflow that does not apply entity access and inspect the attributes there.

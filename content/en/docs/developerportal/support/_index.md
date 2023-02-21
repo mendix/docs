@@ -85,7 +85,7 @@ Please read more about this in [Control Center](/developerportal/control-center/
 
 ### 5.2 Technical Contacts
 
-You need to appoint a [technical contact](/developerportal/collaborate/app-roles/#technical-contact) for each of your applications running in the Mendix Public Cloud and Cloud Dedicated. The technical contact checks the performance of the applications in the Developer Portal and receives alerts from the Mendix Developer Portal based on errors and warnings in the application. It is possible to have other team members receive these alerts as well.
+You need to appoint a [Technical Contact](/developerportal/collaborate/app-roles/#technical-contact) for each of your applications running in the Mendix Public Cloud and Cloud Dedicated. The Technical Contact checks the performance of the applications in the Developer Portal and receives alerts from the Mendix Developer Portal based on errors and warnings in the application. It is possible to have other team members receive these alerts as well.
 Reading these alerts carefully and acting upon them is important, as they can affect the performance of your app. For more information on alerts, see [Alerts](/developerportal/operate/monitoring-application-health/).
 
 ### 5.3 Training
@@ -193,7 +193,7 @@ Only when running on the Mendix Public Cloud or Cloud Dedicated, can Mendix Supp
 
 The container runtime platform refers to the platform for managing, creating, destroying and scaling of runtime containers. In the Mendix Public Cloud and Cloud Dedicated Cloud Foundry is used.
 
-Only when running on the Mendix Public Cloud or Cloud Dedicated, can Mendix Support diagnose this component. When running on SAP BTP or IBM Cloud, the selected third party can diagnose this component.
+Only when running on the Mendix Public Cloud or Cloud Dedicated, can Mendix Support diagnose this component. When running on SAP BTP, the selected third party can diagnose this component.
 
 ### 10.4 Buildpack, m2ee, and Service Console
 

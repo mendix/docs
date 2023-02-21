@@ -2,7 +2,7 @@
 title: "Commit Object(s)"
 url: /refguide/committing-objects/
 weight: 30
-tags: ["studio pro"]
+tags: ["studio pro", "commit object", "activity"]
 ---
 
 {{% alert color="warning" %}}
@@ -88,7 +88,7 @@ If set to **Yes**, the object is refreshed across the client, which includes rel
 
 When inside a microflow that is called from an offline, native, or hybrid app, the **Refresh in client** option is ignored and functions as if it was set to **No**.
 
-For more information, see the [Microflows](/refguide/mobile/using-mobile-capabilities/offlinefirst-data/best-practices/#microflows) section of Offline-First Data.
+For more information, see the [Microflows](/refguide/mobile/building-efficient-mobile-apps/offlinefirst-data/best-practices/#microflows) section of Offline-First Data.
 
 #### 3.3.3 Action is in a Nanoflow
 

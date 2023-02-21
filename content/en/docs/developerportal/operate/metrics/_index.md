@@ -22,12 +22,9 @@ In this tab you can view graphs which display the following information about th
 * Application Node Statistics
 * Database Node Statistics
 
-The information displayed in **Trends** depends on which **Mendix Cloud version** the app is running. The following documents describe the different trends information available:
+The following document describes the different trends information available:
 
-* [Trends in Mendix Cloud v3](/developerportal/operate/trends/)
-* [Trends in Mendix Cloud v4](/developerportal/operate/trends-v4/)
-
-You can find the Mendix Cloud version of your App in the **Environment details**. For more information, see [Cloud Version and Region in the Mendix Cloud](/developerportal/deploy/cloud-version-region/).
+* [Trends in the Mendix Cloud](/developerportal/operate/trends-v4/)
 
 ## 3 Running Now
 
@@ -54,20 +51,6 @@ You can click the following buttons to execute actions:
     * Type
     * Details
 
-## 4 Cache
-
-Mendix Runtime version 6 has an object cache for non-persistable objects. In this tab you can see how many objects of each type currently live in memory. You can also see the number of objects broken down by user session.
-
-{{< figure src="/attachments/developerportal/operate/metrics/cache-summary.png" alt="User session cache details" >}}
-
-If you select a user session you can click **Details** to see which entities are being used by that user session.
-
-{{< figure src="/attachments/developerportal/operate/metrics/user-cache.png" alt="User session cache details" >}}
-
-{{% alert color="info" %}}
-Runtime versions 7 and above are stateless and do not cache Mendix objects on the server. See the [Mendix Desktop Modeler Release Notes 7.0](/releasenotes/studio-pro/7.0/) for more information.
-{{% /alert %}}
-
-## 5 Read More
+## 4 Read More
 
 * [Environment Details](/developerportal/deploy/environments-details/)

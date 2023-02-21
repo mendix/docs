@@ -80,7 +80,7 @@ Default: *5*
 This value cannot be set arbitrarily high as the platform to which the app is deployed may also impose a limitation on the size of the files that can be uploaded or downloaded.
 {{% /alert %}}
 
-#### 2.4.3 Allowed Extensions
+#### 2.4.3 Allowed Extensions{#allowed-extensions}
 
 You can specify file extensions that users are allowed to upload. If no extension is specified, all file extensions are allowed. Separate multiple extensions by a semi-colon, for example, `txt;doc`
 
@@ -88,6 +88,10 @@ If a file with an extension that is not allowed is selected, a [system text](/re
 
 {{% alert color="warning" %}}
 The feature to allow extensions is not meant as a security feature, as the file manager widget does not check the contents of a file to see if they match the provided extension. For more information, see the [Scanning Uploaded Files for Malicious Content](/howto/security/best-practices-security/#scanning-for-malicious-content) section of *How to Implement Best Practices for App Security*.
+{{% /alert %}}
+
+{{% alert color="warning" %}}
+Although it is **not** in the list of approved file extensions, File Manager erroneously allows the *.xls* extension. This happens when the *.xlsx* extension is in the accepted list and an *.xls* file is selected from the **All files** option. This is due to your operating system's way of handling the **All files** option, and it cannot be changed.
 {{% /alert %}}
 
 #### 2.4.4 Show File in Browser

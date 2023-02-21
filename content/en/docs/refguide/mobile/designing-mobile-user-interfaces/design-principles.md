@@ -42,13 +42,13 @@ In apps where custom UX or UI is more important (for example B2C and B2B apps) t
 
 At Mendix we strongly believe in enabling other developers as they grow to scale and speed up development. In general there are more Mendix developers than UI or UX designers. Therefore, when building a mobile app it is important that a UI or UX designer can enable Mendix developers as much as possible to speed up development.
 
-One could compare building with Mendix to building with toy blocks. Give a maker a set of generic blocks that can be combined, and they can build anything. However if they constantly need to buy new types of specific blocks,  their building would be slow and hampered.
+One could compare building with Mendix to building with toy blocks. Give a user a set of generic blocks that can be combined, and they can build anything. However if they constantly need to buy new types of specific blocks,  their building would be slow and hampered.
 
 To learn about building a Mendix native mobile app's UI, consult the sections below. Be sure to see the [Configure Design Properties](#configure-design-props) section below for key information on implementing design easily.
 
 ### 3.1 Creating App Designs Using a UI Kit
 
-By designing a set of reusable components including variations, a UI designer can create a UI kit that can be used to design pages. This includes settings like the brand colors, typography, spacing settings, and the UI components (for example buttons and inputs) including variations. Designers frequently use the [Sketch](https://www.sketch.com/) tool to complete these tasks with satisfying results.
+By designing a set of reusable components including variations, a UI designer can create a UI kit that can be used to design pages. This includes settings like the brand colors, typography, spacing settings, and the UI components (for example buttons and inputs) including variations. Designers frequently use the [Figma](https://www.figma.com/) tool to complete these tasks with satisfying results.
 
 This UI kit will be the input for creating the Mendix theme and related components. Therefore it helps to have Mendix and front-end knowledge to align what is available already in Mendix and what is needed for the designs..
 

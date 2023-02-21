@@ -56,8 +56,8 @@ This option specifies who is able to open the user task page when a user has alr
 
 | Option | Description |
 | --- | --- |
-| Users with access  | All users who have access to the user task can open the user task page.<br />Note that this option means that multiple users can open the page at the same time. Only the assigned user is able to complete the task, however, other users can make changes to the page, and the data will not be saved unless you add a **Save** button. This button saves data, but does not complete the task. <br />Take into account that when two users have the task page open simultaneously, data from the user who saves changes the last is stored and this will overwrite data from the other user. |
 | Assigned user *(default)* | Only the user who is currently assigned to the task is able to open the user task page. |
+| Users with access  | All users who have access to the user task can open the user task page.<br />Note that this option means that multiple users can open the page at the same time. Only the assigned user is able to complete the task, however, other users can make changes to the page, and the data will not be saved unless you add a **Save** button. This button saves data, but does not complete the task. <br />Take into account that when two users have the task page open simultaneously, data from the user who saves changes the last is stored and this will overwrite data from the other user. |
 
 ## 4 Common Section {#common}
 

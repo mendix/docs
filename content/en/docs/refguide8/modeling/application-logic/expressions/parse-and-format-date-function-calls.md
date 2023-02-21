@@ -18,7 +18,7 @@ For details on all pattern possibilities, see [Class SimpleDateFormat](https://d
 
 ## 2 parseDateTime[UTC] {#parsedatetime-utc}
 
-Takes a string and parses it. If it fails and a default value is specified, it returns the default value. Otherwise, an error occurs. The function `parseDateTime` uses the user's timezone and `parseDateTimeUTC` uses the UTC calendar.
+Takes a string and parses it. If it fails and a default value is specified, it returns the default value. Otherwise, an error occurs. The function `parseDateTime` uses the user's time zone and `parseDateTimeUTC` uses the UTC calendar.
 
 ### 2.1 Input Parameters
 

@@ -13,6 +13,10 @@ With the [Mendix SSO](https://marketplace.mendix.com/link/component/111349/) mod
 
 This module allows end-users to log in with their Mendix account with the click of a button, instead of requiring their local user credentials. This avoids having to deal with local user management or password reset flows, and improves governance capabilities over your app landscape.
 
+{{% alert color="info" %}}
+For Mendix versions 9.20 and above, you will need to use version 4.0.1 or above of the Mendix SSO module.
+{{% /alert %}}
+
 ### 1.1 Typical Usage Scenario
 
 You can use this module when you want your application's end-users to sign in with their Mendix account. That means you will not have to manage user credentials locally.

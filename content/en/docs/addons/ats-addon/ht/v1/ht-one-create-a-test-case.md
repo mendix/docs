@@ -25,7 +25,7 @@ Before starting with this how-to, make sure you have the following prerequisites
 * Complete [How to Get Started](/addons/ats-addon/ht-one-getting-started/)
 * Complete [How to Install the ATS Helper and ATS Recorder](/addons/ats-addon/ht-one-install-ats-helper-recorder/)
 
-## 3 Creating a Test Case<a name="3"></a>
+## 3 Creating a Test Case {#3}
 
 To create a test case, follow these steps:
 

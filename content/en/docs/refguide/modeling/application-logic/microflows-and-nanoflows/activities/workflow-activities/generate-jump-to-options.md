@@ -68,4 +68,4 @@ The name of the variable or the object returned by the activity. This is an obje
 
 ## 5 Read More
 
-*  [Jumping to Different Activities in a Workflow](/refguide/jump-to/)
+* [Jumping to Different Activities in a Workflow](/refguide/jump-to/)

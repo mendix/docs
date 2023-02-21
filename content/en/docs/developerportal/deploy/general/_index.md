@@ -4,7 +4,7 @@ url: /developerportal/deploy/general/
 category: "Deployment"
 weight: 10
 description: "Presents an overview of the DEPLOY section of the Developer Portal."
-tags: ["Deploy", "App", "Developer Portal", "Mendix Cloud", "Cloud Foundry", "Azure", "Docker", "IBM", "SAP", "On-premises", "Kubernetes"]
+tags: ["Deploy", "App", "Developer Portal", "Mendix Cloud", "Cloud Foundry", "Azure", "Docker", "SAP", "On-premises", "Kubernetes"]
 #To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 ---
 
@@ -49,10 +49,8 @@ For details of the Environments page for **Mendix for Private Cloud** deployment
 
 For details of the Environments page for **SAP** deployments, see [SAP Business Technology Platform](/developerportal/deploy/sap-cloud-platform/#EnvironmentDetails).
 
-For details of the Environments page for **IBM** deployments, see [IBM Cloud](/developerportal/deploy/ibm-cloud/#EnvironmentDetails).
-
 Other platforms are not currently supported on the Mendix *Environments* page and you will have to go to the relevant platform portal to monitor and configure your environments.
-    
+
 ### 3.2 Mobile App
 
 On this page, you can manage and publish your app in mobile app stores.
@@ -60,4 +58,3 @@ On this page, you can manage and publish your app in mobile app stores.
 Mendix supports Android and iOS.
 
 For more details, see [Mobile App](/developerportal/deploy/mobileapp/).
-

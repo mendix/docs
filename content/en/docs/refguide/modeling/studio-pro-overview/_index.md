@@ -26,7 +26,7 @@ This document describes the user interface of Mendix Studio Pro:
 
 {{< figure src="/attachments/refguide/modeling/studio-pro-overview/studio-pro-diagram.png" alt="Studio Pro Diagram" >}}
 
-## 2 Top Bar
+## 2 Top Bar {#top-bar}
 
 The Studio Pro top bar contains the following items:
 
@@ -44,21 +44,23 @@ For more information on menus, see [Menus](/refguide/menus/).
 
 You can deploy your app by clicking the **Publish** or play (**Run locally**) buttons. To view your deployed app, click **View App**. 
 
+{{< figure src="/attachments/refguide/modeling/studio-pro-overview/view-and-publish.png" alt="View and Publish buttons" >}}
+
 For more information on deployment in Mendix, see [Deployment](/developerportal/deploy/).
 
 For more information on deploying your app and versioning it, see the [Versioning an App Deployed to the Cloud](/refguide/using-version-control-in-studio-pro/#versioning-app) section in *Using Version Control in Studio Pro*. 
 
 ### 2.3 Links and User Profile Menu {#links}
 
-You can find links to the [Mendix Studio](/studio/) (if enabled), [Developer Portal](/developerportal/), and [Marketplace](/appstore/) in the upper-right corner of Studio Pro.
+You can find links to the [Mendix Studio](/studio/) (if your Studio Pro version is 9.20 or below and if Studio is enabled in your app), [Developer Portal](/developerportal/), and [Marketplace](/appstore/) in the upper-right corner of Studio Pro.
 
 Your profile picture is displayed next to them if you are signed in. When you click the profile picture, the drop-down menu is displayed with your full name and email, as well as links to your user profile, My Apps screen, and signing out option. 
 
-## 3 App Structure
+## 3 App Structure (App Explorer)
 
 An app consists of individual files (*documents*) and settings that are grouped in folders and [modules](/refguide/modules/). The complete structure of your app can be viewed in the [App Explorer](/refguide/app-explorer/). 
 
-## 4 Working Area
+## 4 Working Area {#working-area}
 
 A working area is a current document tab that you work in. The working area and its settings differs depending on the editor (for example, pages, microflows, domain model editors) and type of the document. 
 
@@ -76,19 +78,23 @@ Each document has its own save state, history, and future, so undo and redo acti
 
 ## 5 Dockable Panes {#panes}
 
-Dockable panes can be positioned around the working area and contain various elements and settings. For example, you can view list of errors, configure properties of a specific document or an element, view toolbox. Panes are opened via [Menus](/refguide/menus/).
+Dockable panes can be positioned around the working area and contain various elements and settings:
 
-## 6 Status Bar
+{{< figure src="/attachments/refguide/modeling/studio-pro-overview/pane-example.png" alt="Properties Pane Example" width="300" >}}
 
-At the bottom of the Studio Pro main window pane is a status bar.
+For example, you can view [list of errors](/refguide/errors-pane/) or run [MxAssist Performance bot](/refguide/mx-assist-performance-bot/), configure properties of a specific document or an element, view toolbox. For more information on panes and their layout, see [View Menu](/refguide/view-menu/).
 
-On the left is the current status of Studio Pro.
+## 6 Status Bar {#status-bar}
+
+At the bottom of the Studio Pro main window pane is a status bar. On the left is the current status of Studio Pro:
+
+{{< figure src="/attachments/refguide/modeling/studio-pro-overview/status-bar.png" alt="Status Bar Example" >}}
 
 On the right is the currently selected language. If you have set up multiple languages in your app you can change the currently selected language by clicking here. For more information see [Language Menu](/refguide/translatable-texts/).
 
 ## 7 Shortcut Keys
 
-This section summarizes the shortcut keys available in Studio Pro. It is broken into sections which indicate where you can use the keys.
+This section summarizes the shortcut keys available in Studio Pro. It is divided into sections which indicate where you can use the keys.
 
 ### 7.1 General Shortcut Keys
 
@@ -113,7 +119,7 @@ There are alternative ways to navigate between tabs within panes:
 
 Most menu items also have shortcut keys assigned to them that can be used in all panes. These are shown in the menus, listed in the [Menu Shortcut Keys](#menu-shortcuts) section, below, and also listed on the documentation page for each menu under [Menus](/refguide/menus/).
 
-##### 7.1.1.2 Editors Only
+##### 7.1.1.2 Editors Only {#editors-only}
 
 The following key combinations work in the editors, such as the Domain Model, Pages, Workflows, Microflow, or Navigation editor.
 
@@ -126,7 +132,10 @@ The following key combinations work in the editors, such as the Domain Model, Pa
 | <kbd>Ctrl</kbd> + <kbd>Z</kbd> | Undo the last action in an editor pane. |
 | <kbd>Alt</kbd>+(<kbd>Shift</kbd>)+&nbsp;<kbd>Tab</kbd> | Navigate between open editors (opens pane navigation dialog where editors are called *active files*). |
 | <kbd>Ctrl</kbd> + Mouse scroll wheel | Zooms in or out. |
+| <kbd>Ctrl</kbd>+(<kbd>Shift</kbd>)+&nbsp;<kbd>-</kbd> | Zooms in or out. |
 | <kbd>Shift</kbd>&nbsp;+&nbsp;Mouse&nbsp;scroll&nbsp;wheel | Scrolls left or right. Works as if you were using the horizontal scroll bar. |
+| <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>C</kbd> | Copy the inline styles, classes, and design properties of a widget. |
+| <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>V</kbd> | Paste the widget styling onto another selected widget. |
 
 ##### 7.1.1.3 Panes Only
 

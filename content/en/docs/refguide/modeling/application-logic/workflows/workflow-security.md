@@ -62,10 +62,3 @@ If the user does not see the user task, check the following:
 3. Make sure that the XPath specified for the **User assignment** property does not restrict the user role in viewing the task. Open workflow > user task properties > **Assign task using** property to check it.
 
 4. Conditions specified in the XPath constraint of the **System.WorkflowUserTask** entity are met. For more information, see the [Configuring User Assignment](#user-assignment) section above.
-
-
-
-
-
-
-

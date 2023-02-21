@@ -20,9 +20,7 @@ This document describes the published REST service configuration options shown w
 
 ## 2 General
 
-<a name="service-name"></a>
-
-### 2.1 Service Name
+### 2.1 Service Name {#service-name}
 
 Service name uniquely identifies the service in the app. It is also displayed in [OpenAPI (Swagger) documentation page](/refguide7/open-api/).
 
@@ -40,9 +38,7 @@ Version is used to display version information in [OpenAPI (Swagger) documentati
 
 By default, version is set to "1.0.0".
 
-<a name="location"></a>
-
-### 2.3 Location
+### 2.3 Location {#location}
 
 {{% alert color="info" %}}
 
@@ -78,15 +74,11 @@ Following URL prefixes are reserved and are not allowed to be used in location:
 
 When your application is running, you can click the location to open the [interactive documentation page](/refguide7/published-rest-services/#interactive-documentation).
 
-<a name="public-documentation"></a>
-
-### 2.3 Public Documentation
+### 2.3 Public Documentation {#public-documentation}
 
 The public documentation is used in the service's [OpenAPI 2.0 (Swagger) Documentation](/refguide7/open-api/). You can use [GitHub-flavored markdown](/refguide7/gfm-syntax/) for rich text.
 
-<a name="export-swagger-json"></a>
-
-### 2.5 Export swagger.json
+### 2.5 Export swagger.json {#export-swagger-json}
 
 To save a service's [OpenAPI (Swagger) documentation](/refguide7/open-api/) somewhere on your machine, simply right-click the service in the **Project Explorer** and select **Export swagger.json** (or just click the **Export swagger.json** button, depending on your Modeler version). This is a machine-readable file in the [OpenAPI 2.0 file format](https://github.com/OAI/OpenAPI-Specification/blob/master/versions/2.0.md). Most API tools support this format.
 
@@ -94,9 +86,7 @@ When the app is running, this file is available under `/rest-doc/servicename/swa
 
 ## 3 Security
 
-<a name="authentication"></a>
-
-### 3.1 Requires Authentication
+### 3.1 Requires Authentication {#authentication}
 
 {{% alert color="info" %}}
 
@@ -130,9 +120,7 @@ If authentication is required, you can select which authentication methods you w
 
 Check more than one authentication method to have the service try each of them. It will first try **Custom** authentication, then **Username and password**, and then **Active session**. For more details, see [Published REST Routing](/refguide7/published-rest-routing/).
 
-<a name="authentication-microflow"></a>
-
-### 3.3 Microflow
+### 3.3 Microflow {#authentication-microflow}
 
 Specify which microflow to use for custom authentication.
 

@@ -35,8 +35,8 @@ To configure this widget, follow these steps:
 #### 2.1.2 General Section
 
 * **Menu position** – sets the location of a visible menu relative to the trigger area 
-   * Default: **Bottom**
+    * Default: **Bottom**
 * **Open on** – determines if hovering or clicking the trigger widgets displays the menu
-   * Default: **Click**
+    * Default: **Click**
 * **Hide for single language** – determines whether or not to render language selector in your DOM 
-   * Default: **Yes**
+    * Default: **Yes**

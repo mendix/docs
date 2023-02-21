@@ -9,23 +9,74 @@ weight: 30
 
 These release notes cover changes made to the [Mendix Data Hub Catalog](/data-hub/data-hub-catalog/).
 
-## 2022
+## 2023
 
-### November 24th, 2022
+### February 16th, 2023
 
 #### Improvements
 
-* It is now possible to edit data source details directly from the [data source details](/data-hub/data-hub-catalog/search/#service-details) page.
+* We added a link to the Marketplace module under authentication details that implements the specified authentication method.
+
+### February 9th, 2023
+
+#### Improvements
+
+* We added a user-friendly interface for `404 not found` errors in a REST deeplink API.
 
 #### Fixes
 
-* We fixed an issue with the display of services with anonymous access in the [data source details](/data-hub/data-hub-catalog/search/#service-details) page.
+* We fixed an issue with cropping images when uploading an application icon.
+* We fixed an issue where authentication details of a data source were not visible to users without curation rights.
+
+### February 2nd, 2023
+
+#### Improvements
+
+* You can now select relevant Mendix Marketplace module for an [authentication](/data-hub/data-hub-catalog/register-data/#authentication) type. See the [Selecting an Authentication Method](/data-hub/data-hub-catalog/register-data/#authentication) section of *Register OData Resources in the Data Hub Catalog* for more information on the authentication types.
+
+#### Fixes
+
+* We fixed a bug that was causing the creation of an application using the [Registration API](/apidocs-mxsdk/apidocs/data-hub-apis/#registration) to fail.
+
+### January 12th, 2023
+
+#### Improvements
+
+* You can now add [authentication](/data-hub/data-hub-catalog/register-data/#authentication) details to a data source. Click **Edit** on the data source and then click the **Authentication** tab. See the [Selecting an Authentication Method](/data-hub/data-hub-catalog/register-data/#authentication) section of *Register OData Resources in the Data Hub Catalog* for more information on the authentication types.
+
+## 2022
+
+### December 22nd, 2022
+
+#### Improvements
+
+* You can now edit data source details directly from the [asset details](/data-hub/data-hub-catalog/search/#service-details) page. In our [November 24th](#nov-24) release, we made it possible to edit dataset details from the same page. To learn more about data sources and datasets, see the [Selected Asset Details](/data-hub/data-hub-catalog/search/#search-details) section of *Search in the Data Hub Catalog*.
+
+#### Fixes
+
+* We fixed an issue with a `PUT` environment API request, which resulted in 409 conflict instead of updating the environment. (Ticket 173609)
+
+### December 8th, 2022
+
+#### Improvements
+
+* When you receive and click on a notification from the Catalog about newly registered endpoints or newly assigned ownership, you will now be directed to the more user-friendly [Curate](/data-hub/data-hub-catalog/curate/) page that shows all relevant and filtered resources. 
+
+### November 24th, 2022 {#nov-24}
+
+#### Improvements
+
+* You can now edit dataset details directly from the [asset details](/data-hub/data-hub-catalog/search/#service-details) page.
+
+#### Fixes
+
+* We fixed an issue with the display of services with anonymous access in the [asset details](/data-hub/data-hub-catalog/search/#service-details) page.
 
 ### November 17th, 2022
 
 #### Improvements
 
-* You can now request access to a data source directly from the [data source details](/data-hub/data-hub-catalog/search/#service-details) page. Click **Request access** in the **Authentication** section to open a draft email to the owner.
+* You can now request access to a data source directly from the [asset details](/data-hub/data-hub-catalog/search/#service-details) page. Click **Request access** in the **Authentication** section to open a draft email to the owner.
 
 ### November 10th, 2022
 

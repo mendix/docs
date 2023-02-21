@@ -151,7 +151,7 @@ Examples of commands are described in the table below:
 | `mx check C:\MxProjects\App-main\App-main.mpr`               | Checks the app at `C:\MxProjects\App-main\App-main.mpr` for errors. |
 | `mx check C:\MxProjects\App-main\App-main.mpr -p`            | Checks the app at `C:\MxProjects\App-main\App-main.mpr` for errors and performance recommendations. |
 | `mx check C:\MxProjects\App-main\App-main.mpr --warnings --deprecations` | Checks the app at `C:\MxProjects\App-main\App-main.mpr` for errors, warnings, and deprecations. Suppressed warnings will be read from the *project-settings.user.json* file within the app directory. |
-| `mx check C:\MxProjects\App-main\App-main.mpr c:\MxFiles\my-exported-suppressed-warnings.json --warnings ` | Checks the app at `C:\MxProjects\App-main\App-main.mpr` for errors and warnings. Suppressed warnings will be read from the JSON file *my-exported-suppressed-warnings.json*. |
+| `mx check C:\MxProjects\App-main\App-main.mpr c:\MxFiles\my-exported-suppressed-warnings.json --warnings` | Checks the app at `C:\MxProjects\App-main\App-main.mpr` for errors and warnings. Suppressed warnings will be read from the JSON file *my-exported-suppressed-warnings.json*. |
 | `mx check C:\MxProjects\App-main\App-main.mpr -w -d -p`      | Checks the app at `C:\MxProjects\App-main\App-main.mpr` for errors, warnings, deprecations, and performance recommendations. |
 
 #### 3.3.3 Return Codes

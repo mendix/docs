@@ -17,22 +17,22 @@ In the 8.18.1 example, the first number (**8**) indicates the major version.
 
 Mendix supports three major versions at a time. To clarify our current offering and in relation to our SLA, today Mendix supports major versions 7, 8, and 9. Once version 10 has been released, version 7 will only be supported via the Extended Support product.
 
-As of Mendix 10, to make planning version upgrades easier for our users, Mendix will release in a two-year cadence, which means that every two years we plan to release a new major version in June. This will help in preparing and planning to adopt new releases and upgrade older Mendix versions. Each major version release will start with two Public Beta releases.
+As of Mendix 10, to make planning version upgrades easier for our users, Mendix will release in a two-year cadence, which means that every two years we plan to release a new major version in June. This will help in preparing and planning to adopt new releases and upgrade older Mendix versions. Each major version release will start with two Beta releases.
 
 For Mendix 10 and 11, we are planning to follow this release timeline:
 
 | Release | Date |
 | --- | --- |
 | 9.24 LTS | March 2023 |
-| 10 Public Beta 1 | April 2023 |
-| 10 Public Beta 2 | May 2023 |
+| 10 Beta 1 | April 2023 |
+| 10 Beta 2 | May 2023 |
 | 10.0 GA | June 2023 |
 | 10.6 MTS | December 2023 |
 | 10.12 MTS | June 2024 |
 | 10.18 MTS | December 2024 |
 | 10.21 LTS | March 2025 |
-| 11 Public Beta 1 | April 2025 |
-| 11 Public Beta 2 | May 2025 |
+| 11 Beta 1 | April 2025 |
+| 11 Beta 2 | May 2025 |
 | 11.0 GA | June 2025 |
 
 ### 1.2 Minor Version

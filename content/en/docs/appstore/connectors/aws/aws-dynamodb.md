@@ -164,9 +164,9 @@ After you configure the authentication profile for Amazon DynamoDB, you can impl
     {{< figure src="/attachments/appstore/connectors/aws-dynamodb/listview.png" alt="The List view widget">}}
 
 46. In the **Select Data Source** dialog, set the **Type** to **Microflow**.
-47. In the **Entity (path)** field, select the **DS_ListTables** microflow.
+47. In the **Microflow** field, select the **DS_ListTables** microflow.
 48. Click **OK**, and then click **Yes**.
-49. In the **Properties** pane for the page, in the **Security** section, select a user role that should be allowed to run the microflow.
+49. In the **Properties** pane for the page, in the **Navigation** > **Visible for** section, select a user role that should be allowed to run the microflow.
 50. In the **App Explorer**, double-click the **Navigation** for your app.
 51. In the Menu section, click **New Item**.
 52. In the **New Menu Item** dialog, configure the following settings:
@@ -180,6 +180,7 @@ After you configure the authentication profile for Amazon DynamoDB, you can impl
 53. Click **OK**.
 
     {{< figure src="/attachments/appstore/connectors/aws-dynamodb/microflow2.png" alt="The microflow after mapping the properties">}}
+54. Click the **Run locally** icon to preview your app and validate your results. For more information, see [Studio Pro Overview: Run and View App](/refguide/studio-pro-overview/#menus).
 
 ## 4 Technical Reference
 

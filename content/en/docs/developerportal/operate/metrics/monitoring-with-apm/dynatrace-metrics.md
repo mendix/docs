@@ -11,11 +11,10 @@ tags: ["Dynatrace", "Mendix Cloud", "monitoring", "analysis"]
 
 [Dynatrace](https://www.dynatrace.com/) is a monitoring and analysis tool for cloud applications, providing monitoring of servers, databases, tools, and services through a SaaS-based data analytics platform. This document explains how to configure your Mendix Cloud app to send data to Dynatrace to provide additional monitoring.
 
-{{% alert color="info" %}}
-Dynatrace is fully supported in Mendix version 9.7 and above.
-{{% /alert %}}
+For Dynatrace monitoring, Dynatrace OneAgent is being used to collect metrics.
 
-For more information on the data you can send to Dynatrace, see [Monitoring Your Mendix Apps with an APM Tool](/developerportal/operate/monitoring-with-apm/).
+In addition to auto-instrumented built-in metrics collected by the OneAgent, we also ingest custom application metrics. Custom application metrics are supported in Mendix version 9.7 and above.
+For more information on custom metrics you can send to Dynatrace, see [Monitoring Your Mendix Apps with an APM Tool](/developerportal/operate/monitoring-with-apm/).
 
 ## 2 Prerequisites
 
@@ -24,12 +23,13 @@ To use Dynatrace, and to send data to Dynatrace from your Mendix app, you will n
 * Access to a Saas or Managed Dynatrace environment
 * The following information about Dynatrace
     * The Dynatrace environment url
+    * The Dynatrace environment id - see [Dynatrace Environment ID](https://www.dynatrace.com/support/help/get-started/monitoring-environment/environment-id)
     * An access token for integrating your Dynatrace environment with your Mendix app — you can find out how to obtain this in the Dynatrace documentation [Generate an access token](https://www.dynatrace.com/support/help/get-started/access-tokens#create-api-token)
 * A licensed Mendix app of which you are the [Technical Contact](/developerportal/collaborate/app-roles/#technical-contact)
 
 ## 3 Connect Node to Dynatrace{#connect-node}
 
-To send your runtime information to Dynatrace, you need to set it up using environment variables in the Developer Portal.
+To start ingesting metrics to Dynatrace for your Mendix app, you need to set it up using environment variables in the Developer Portal.
 
 1. Go to the **Environments** page of your app in the *Developer Portal*.
 2. Click **Details** to select the environment you wish to monitor with Dynatrace. 
@@ -42,19 +42,37 @@ To send your runtime information to Dynatrace, you need to set it up using envir
 
         The format for using the Dynatrace SaaS environment is similar to `https://<your-environment-id>.live.dynatrace.com`
 
-        The format for using a Dynatrace managed environment is similar to  `https://<your-domain>/e/<your-environment-id>`
+        The format for using a Dynatrace managed environment is similar to  `https://<your-dynatrace-domain>`
+   
+    2. DT_TENANT – *Required*
 
-    2. DT_PAAS_TOKEN – *Required*
+        The Dynatrace environment id, [Dynatrace Environment ID](https://www.dynatrace.com/support/help/get-started/monitoring-environment/environment-id)
+
+    3. DT_PAAS_TOKEN – *Required*
 
         The access token for integrating your Mendix app with Dynatrace, [created on Dynatrace environment](https://www.dynatrace.com/support/help/get-started/access-tokens#create-api-token).
 
-        The token must include the `Ingest metrics` scope.
+        The token must include the `PaaS integration - Installer download` and `Ingest metrics` scopes.
+   
+    4. DT_IS_MANAGED - *Optional*
+        
+        Should be set to `true` if you are using Dynatrace Managed. The default is assumed to be Dynatrace SaaS and set to `false`.
+
+        Only needed for custom application metrics ingestion.
+
+    5. DT_CLUSTER_ID - *Optional*
+
+        It can be used to tag your cluster, process group or deployment group
+
+    6. DT_CUSTOM_PROP - *Optional*
+
+        It can be used to provide metadata for your process group, [Define metadata] (https://www.dynatrace.com/support/help/platform-modules/infrastructure-monitoring/process-groups/configuration/define-your-own-process-group-metadata)
 
 5. Return to the **General** tab and *restart* your environment.
 
 ## 4 Additional Information{#additional-info}
 
-### 4.1 Dimensions
+### 4.1 Dimensions - only valid for custom metrics
 
 If you use Dynatrace to monitor more than one app and environment you will need some dimensions to be able to tell which app or environment these metrics apply to. To identify the metrics for your app and environment in Dynatrace, Mendix provide some default dimensions. You can also add extra dimensions.
 

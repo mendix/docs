@@ -11,7 +11,7 @@ tags: ["marketplace", "marketplace component", "google", "google tag", "google a
 
 With the [Google Tag](https://marketplace.mendix.com/link/component/207519/) module, you can add tags from various Google products and services like Google Ads, Campaign Manager, and Google Analytics (including version 4) in your Mendix application.
 
-This module uses [Google Tag (gtag.js)](https://developers.google.com/tag-platform/gtagjs) and provides an easily configurable widget that can be placed on the pages or in a layout of your Mendix app. The module also provides a JavaScript action that uses advanced features of *gtag.js* and can send custom tracking events from within your nanoflows.
+This module uses [Google Tag (gtag.js)](https://developers.google.com/tag-platform/gtagjs) and provides an easily configurable widget that can be placed on the pages or in a layout of your Mendix app. The module also provides a JavaScript action that uses advanced features of `gtag.js` and can send custom tracking events from within your nanoflows.
 
 {{% alert color="info" %}}
 Google Tag (gtag.js) should not be confused with Google Tag Manager, as those are two separate products.
@@ -19,7 +19,7 @@ Google Tag (gtag.js) should not be confused with Google Tag Manager, as those ar
 
 ### 1.2 Features
 
-* Easy event tracking with Google using *gtag.js*
+* Easy event tracking with Google using `gtag.js`
 * Versatile widget and JavaScript action for user activity tracking
 * Two **Widget modes** for users of all levels: **Basic** and **Advanced**
 * Simple page visit tracking with single-parameter configuration in **Basic** mode
@@ -43,13 +43,17 @@ When using the Google Tag widget with Mendix Studio Pro 8, there is a limitation
 
 "When the **Widget mode** is set to **Basic**, the widget only sends page-tracking events, which covers the majority of use cases. In this mode, only the **Tag ID** property needs to be filled in. Additionally, you can fill in the **Parameters** if you want to include specific information along with the page view events. For more information, see the [Parameters](#widget-advanced-parameters) section below."
 
-Typically, the Google Tag widget in basic mode is expected to be placed in the layout of your application. The widget automatically tracks when the end user switches pages and sends page view events accordingly. Placing two widgets in basic mode on a page and/or its layout is not supported.
+Typically, the Google Tag widget in **Basic** mode is placed in the layout of your app. The widget automatically tracks when the end-user switches pages and sends page view events accordingly. 
 
 {{< figure src="/attachments/appstore/modules/google-tag/widget-basic-mode.png" >}}
 
+{{% alert color="info" %}}
+Placing two widgets in **Basic** mode on a page and/or its layout is not supported.
+{{% /alert %}}
+
 ### 2.2 Advanced Mode {#widget-advanced-mode}
 
-Switching the **Widget mode** to **Advanced** gives you the full control over the interaction with `gtag.js`. It is advised to have basic understanding of [gtag.js](https://developers.google.com/tag-platform/gtagjs).
+Switching the **Widget mode** to **Advanced** gives you full control over the interaction with `gtag.js`. To use this mode, it is advised to have a basic understanding of [gtag.js](https://developers.google.com/tag-platform/gtagjs).
 
 {{< figure src="/attachments/appstore/modules/google-tag/widget-advanced-event.png" >}}
 
@@ -57,9 +61,13 @@ Switching the **Widget mode** to **Advanced** gives you the full control over th
 
 When the **Command** setting is set to **Config**, the widget issues the `config` command to `gtag.js`. This command requires **Tag ID** and accepts additional parameters configured via the **Parameters** property.
 
-`gtag.js` requires the `config` command to be issued exactly once. For this reason, only one Google Tag widget in advanced mode with **Command** set to **Config** should be placed on a page and/or its layout. Combining it with Google Tag widgets in basic mode is also not possible as those automatically issue `config` command as well.
+`gtag.js` requires the `config` command to be issued exactly once. For this reason, only one Google Tag widget in **Advanced** mode with **Command** set to **Config** should be placed on a page and/or its layout. 
 
-Typically, Google Tag widget in advanced mode with **Command** setting set to *Config** is expected to be placed in a layout of your application and be combined with Google Tag widgets in advanced mode with **Command** setting set to **Event** as well as Google Tag Command JavaScript actions with **Command** parameter set to **Event**.
+{{% alert color="info" %}}
+Combining a Google Tag widget in **Advanced** mode with **Command** set to **Config** with Google Tag widgets in **Basic** mode is not possible, as those automatically issue the `config` command as well.
+{{% /alert %}}
+
+Typically, the Google Tag widget in **Advanced** mode with the **Command** setting set to **Config** is placed in a layout of your application. It is typically combined with Google Tag widgets in **Advanced** mode with the **Command** setting set to **Event** as well as with Google Tag Command JavaScript actions with the **Command** parameter set to **Event**.
 
 #### 2.2.2 Event Command {#widget-advanced-event}
 

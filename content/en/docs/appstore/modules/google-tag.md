@@ -21,26 +21,25 @@ Google Tag (gtag.js) should not be confused with Google Tag Manager, as those ar
 
 * Easy event tracking with Google using *gtag.js*
 * Versatile widget and JavaScript action for user activity tracking
-* Basic and advanced modes for users of all levels
-* Simple page visit tracking with single-parameter configuration in basic mode
-* Highly customizable tracking events in advanced mode
+* **Basic** and **Advanced** modes for users of all levels
+* Simple page visit tracking with single-parameter configuration in **Basic** mode
+* Highly customizable tracking events in **Advanced** mode
 
 ### 1.3 Limitations
 
-In basic mode, the Google Tag widget sends a pre-configured `page_view` event as [suggested by Google](https://developers.google.com/tag-platform/gtagjs/reference/events#page_view). If this doesn't meet your needs, please use the advanced mode of the widget.
+In **Basic** mode, the Google Tag widget sends a pre-configured `page_view` event as [suggested by Google](https://developers.google.com/tag-platform/gtagjs/reference/events#page_view). If this does not meet your needs, please use the **Advanced** mode of the widget.
 
 ### 1.4 Compatibility
 
-The module is compatible with Mendix 8 and above.
+The module is compatible with Studio Pro 8 and above.
 
 {{% alert color="warning" %}}
-When using the Google Tag widget with Mendix Studio Pro 8, there is a known issue where non-relevant properties are not hidden in the configuration window (for example, advanced properties are not hidden when selecting basic mode). This issue does not affect the functionality of the widget but makes it a bit harder to configure. Please refer to the documentation to determine which properties need to be configured depending on the mode the widget is set to.
+When using the Google Tag widget with Mendix Studio Pro 8, there is a limitation where non-relevant properties are not hidden in the configuration window (for example, advanced properties are not hidden when selecting **Basic** mode). This issue does not affect the functionality of the widget, but it makes harder to configure. See the sections below to determine which properties need to be configured depending on the mode of the widget.
 {{% /alert %}}
-
 
 ## 2 Google Tag Widget
 
-### 2.1 Basic mode {#widget-basic-mode}
+### 2.1 Basic Mode {#widget-basic-mode}
 
 "When the **Widget mode** is set to **Basic**, the widget only sends page tracking events, which covers the majority of use cases. In this mode, only the **Tag ID** property needs to be filled in. Additionally, you can fill in the **Parameters** if you want to include specific information along with the page view events. For information on how to configure Parameters, please refer to the [Parameters](#widget-advanced-parameters) section below."
 
@@ -48,7 +47,7 @@ Typically, the Google Tag widget in basic mode is expected to be placed in the l
 
 {{< figure src="/attachments/appstore/modules/google-tag/widget-basic-mode.png" >}}
 
-### 2.2 Advanced mode {#widget-advanced-mode}
+### 2.2 Advanced Mode {#widget-advanced-mode}
 
 Switching the **Widget mode** to **Advanced** gives you the full control over the interaction with `gtag.js`. It is advised to have basic understanding of [gtag.js](https://developers.google.com/tag-platform/gtagjs).
 
@@ -83,6 +82,3 @@ Google Tag Command is a JavaScript action that allows making direct calls to `gt
 The **Command** input might be set to **Config** or **Event**. When set to **Config** only **Tag ID** and **Parameters** have to be passed. When set to **Event** only **Event Name** and **Parameters** have to be passed.
 
 The **Parameters** input accepts a list of **GoogleTagParameter** entities to represent arbitrary parameters to send along with a command to `gtag.js`. The entity includes two fields, `Name` and `Value`.
-
-
-

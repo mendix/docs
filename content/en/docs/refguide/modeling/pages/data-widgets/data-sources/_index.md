@@ -1,6 +1,7 @@
 ---
 title: "Data Sources"
 url: /refguide/data-sources/
+weight: 40
 tags: ["studio pro", "data source"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---

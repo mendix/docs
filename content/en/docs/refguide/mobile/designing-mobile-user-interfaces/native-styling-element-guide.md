@@ -219,6 +219,41 @@ Tab containers are used to show information categorized into multiple tab pages.
 
 {{< figure src="/attachments/refguide/mobile/native-mobile/native-styling-refguide/tab-container.png" alt="tab container"   width="350"  >}}
 
+
+```javascript
+export const TabContainer = {
+  container: {
+    // All ViewStyle properties   
+  },
+  tabBar: {
+    // All ViewStyle properties
+    bounces: // This is a Boolean value indicating whether the tab bar bounces when scrolling.
+    pressColor: // This is a color for material ripple (Android only).
+    pressOpacity: // This is opacity for a pressed tab.
+    scrollEnabled: // This is a Boolean value enabling scrollable tabs.
+    tabBarPosition, defaults to `top`: // This is the position of the tab bar in the tab view, and possible values are `top` and `bottom`. 
+  },
+  indicator: {
+    // All ViewStyle properties   
+  },
+  tab: {
+    // All ViewStyle properties   
+  },
+  label: {
+    // All TextStyle properties   
+  },  
+  activeLabel: {
+    // All TextStyle properties   
+  },
+  badgeContainer: {
+    // All ViewStyle properties   
+  },
+  badgeCaption: {
+    // All TextStyle properties   
+  },
+};
+```
+
 The widget's style properties are as follows:
 
 | Element | Style Properties    | Description |

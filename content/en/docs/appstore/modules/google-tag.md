@@ -41,7 +41,7 @@ When using the Google Tag widget with Mendix Studio Pro 8, there is a limitation
 
 ### 2.1 Basic Mode {#widget-basic-mode}
 
-"When the **Widget mode** is set to **Basic**, the widget only sends page-tracking events, which covers the majority of use cases. In this mode, only the **Tag ID** property needs to be filled in. Additionally, you can fill in the **Parameters** if you want to include specific information along with the page view events. For more information, see the [Parameters](#widget-advanced-parameters) section below."
+When the **Widget mode** is set to **Basic**, the widget only sends page-tracking events, which covers the majority of use cases. In this mode, only the **Tag ID** property needs to be filled in. Additionally, you can fill in the **Parameters** if you want to include specific information along with the page view events. For more information, see the [Parameters](#widget-advanced-parameters) section below.
 
 Typically, the Google Tag widget in **Basic** mode is placed in the layout of your app. The widget automatically tracks when the end-user switches pages and sends page view events accordingly. 
 

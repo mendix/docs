@@ -144,7 +144,7 @@ The table below shows an example of a logistic regression, its netron.app schema
 ![](https://paper-attachments.dropboxusercontent.com/s_F19B5057CF910819DD4979B74DBA21AFABE41F48C813CF87BBA941642B25F067_1675867290215_image.png)
 
 
-Connect the inputs to proper elements inside your Mendix App, and the output to something you can process. 
+Create pre-processed inputs with Create Object Action for inference inside your Mendix App, and consume inference output with microflow expressions. 
 
 In [Integrating Models with Pre- and Post-Processors] , a Create Object activity is used for the first part in order to transfer entities from the Domain Model to the model input object. Then, a create a variable action turns the numeric output into a string, and change variable stores it in the same Domain Model.
 

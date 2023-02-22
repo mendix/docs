@@ -28,7 +28,7 @@ App **Buzz** is for a specific app:
 
 {{< figure src="/attachments/developerportal/collaborate/buzz/app-buzz.png" >}}
 
-You can see the size of your **Team** and your team members on the right side of the page. Click the **+** icon to invite new members to your team directly. Please note that we show no more than 25 team members. Click **Show all** to go to the [Team](/developerportal/collaborate/team/) page for the app.
+You can see the size of your **Team** and your team members on the right side of the page. Click the **+** icon to invite new members to your team directly (please note that we show no more than 25 team members at a time). Click **Show all** to go to the [Team](/developerportal/collaborate/team/) page for the app.
 
 **Latest Stories** shows the last few stories created for this app. Click **Show all** to see all the [Stories](/developerportal/collaborate/stories/).
 

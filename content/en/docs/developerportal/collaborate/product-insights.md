@@ -13,7 +13,7 @@ This feature is in Beta. For more information on Beta products, see [Beta Releas
 
 ## 1 Introduction
 
-By using **Product Insights** in the Developer Portal and the [Product Insights – Mini-Surveys](/appstore/modules/product-insights/) module in the Marketplace, you can set up mini-surveys for the target user groups you would like to reach and collect their feedback to gain valuable product insights.
+By using **Mini Surveys** > **Product Insights** in the Developer Portal and the [App Insights – Mini Surveys](/appstore/modules/product-insights/) module in the Marketplace, you can set up mini-surveys for the target user groups you would like to reach and collect their feedback to gain valuable product insights.
 
 You begin with creating the mini-survey in **Product Insights** in the Developer Portal, and then you implement the mini-survey by configuring the **Product Insights – Mini-Surveys** module in Studio Pro. After the mini-survey is running, you can view responses that have been collected in **Product Insights** and export the responses to an XLSX file.
 
@@ -23,7 +23,7 @@ This document first describes all the pages in **Product Insights** in the Devel
 
 ### 2.1 Survey Overview {#survey-overview}
 
-When you click **Product Insights** for an app that already has existing mini-surveys, the **Survey Overview** page opens first.
+When you click **Mini Surveys** in the sidebar for an app that already has existing mini-surveys, the **Survey Overview** page opens first.
 
 On the upper-left corner of the page, you can see the name of the app currently opened. Click the app name to open a drop-down list of other apps you can navigate to that have been previously opened for Product Insights.
 

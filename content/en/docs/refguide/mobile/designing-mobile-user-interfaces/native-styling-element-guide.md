@@ -401,6 +401,8 @@ Since Studio Pro v8.11, the drop-down widget has a new style property called `us
 | `selectedItem` | This has all TextStyle properties | Styles the selected item in dropdown menu (with Studio Pro v8.11).|
 | `selectedItemContainer` | This has all ViewStyle properties | Styles the selected item's container in dropdown menu (with Studio Pro v8.11).|
 
+The default class to style all text areas is named `DropDown`.
+
 ### 6.4 Check Box
 
 A check box input widget can be used to display and edit Boolean attributes and is rendered as either a switch or a checkbox. This is how a check box widget in switch render mode looks by default:

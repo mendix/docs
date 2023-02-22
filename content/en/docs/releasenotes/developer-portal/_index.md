@@ -17,6 +17,12 @@ To see the current status of the Mendix Developer Portal and Control Center, see
 
 ## 2023
 
+### February 23rd, 2023
+
+#### Fixes
+* We fixed a performance issue when opening an [App Buzz](/developerportal/collaborate/buzz/#app-buzz) page for a project with a large team. As a result, we show no more than 25 team members in the team list on the right hand corner
+* We fixed an issue where the country of residence you selected during sign-up was not properly stored in your [profile](/developerportal/community-tools/mendix-profile/#profile)
+
 ### February 16th, 2023
 
 #### Improvements

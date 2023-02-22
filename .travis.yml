@@ -4,7 +4,7 @@ node_js:
 arch: amd64           # optional, this is default, routes to a full VM
 # arch: arm64         # this is the recommended LXD container - faster spin up but some limitations Not used as it seems very unstable.
 os: linux             # optional, this is default
-dist: bionic          # or bionic | xenial | trusty | precise with xenial as default - Recommended here: https://docs.travis-ci.com/user/reference/overview/#deprecated-virtualization-environments
+dist: focal          # or bionic | xenial | trusty | precise with xenial as default - Recommended here: https://docs.travis-ci.com/user/reference/overview/#deprecated-virtualization-environments
 
 git:
   depth: 20000 # We're cloning a max of xxx commits, so the author date is correct

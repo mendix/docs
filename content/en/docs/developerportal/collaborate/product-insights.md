@@ -29,7 +29,7 @@ On the upper-left corner of the page, you can see the name of the app currently 
 
 The tabs of the **Survey Overview** page are described below.
 
-{{< figure src="/attachments/developerportal/collaborate/app-insights/survey-overview.png" >}}
+{{< figure src="/attachments/developerportal/collaborate/product-insights/survey-overview.png" >}}
 
 #### 2.1.1 Active Tab {#active}
 
@@ -81,7 +81,7 @@ On the **Settings** tab of **Survey Overview**, you can select **Enable Mendix S
 
 When you click a mini-survey on the [Survey Overview](#survey-overview) page, the survey details page of the mini-survey opens.
 
-{{< figure src="/attachments/developerportal/collaborate/app-insights/survey-details.png" >}}
+{{< figure src="/attachments/developerportal/collaborate/product-insights/survey-details.png" >}}
 
 On the upper-right corner, you can find the following buttons:
 
@@ -118,11 +118,11 @@ You can collect test data using two methods:
 * Change the value of the **TEST_MODE** constant in the [App Insights – Mini-Surveys](/appstore/modules/app-insights/) module. This will show **[TEST_MODE]** on the survey widget UI.
 * Select the **Enable Mendix SSO test users"** check box on the **Settings** tab of **Survey Overview**, which marks the app team members as testers. Note that if an app team member is not authenticated through Mendix SSO, this setting does not work for them. The survey widget will not show **[TEST_MODE]** on the UI.
 
-### 2.3 Product Insights Settings {#app-insights-settings}
+### 2.3 Product Insights Settings {#product-insights-settings}
 
 When you click the settings icon on [Survey Overview](#survey-overview), **Product Insights Settings** opens.
 
-{{< figure src="/attachments/developerportal/collaborate/app-insights/settings-icon.png" >}}
+{{< figure src="/attachments/developerportal/collaborate/product-insights/settings-icon.png" >}}
 
 Here you can view the existing API key, or generate an API key if there is not one available. You need to use the API key as input when you configure the App Insights – Mini-Surveys module in Studio Pro to implement the mini-survey. You need only one API key per app.
 
@@ -182,9 +182,9 @@ To obtain an API key for the implementation, follow these steps:
 
 1. On the [Survey Overview](#survey-overview) page, click the settings icon.
 
-    {{< figure src="/attachments/developerportal/collaborate/app-insights/settings-icon.png" >}}
+    {{< figure src="/attachments/developerportal/collaborate/product-insights/settings-icon.png" >}}
 
-2. The [Product Insights Settings](#app-insights-settings) page opens:
+2. The [Product Insights Settings](#product-insights-settings) page opens:
 
     * If there is already an active API key, it is shown on the list. If it is suitable to use, click **View** to show the API key, then copy it and save it for later use.
     * If there is no active API key that you can use, generate one as follows:

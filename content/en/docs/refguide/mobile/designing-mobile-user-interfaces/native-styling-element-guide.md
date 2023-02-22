@@ -278,6 +278,14 @@ The default class to style all tab containers is named `TabContainer`.
 
 A scroll container is used to make enable scrolling for a part of a page. This widget does not have a visual representation by default, though styling can be used to add spacing. 
 
+```javascript
+export const ScrollContainer = {
+  container: {
+    // All ViewStyle properties
+  },
+};
+```
+
 | Element | Style Properties    | Description |
 | --- | --- | --- |
 | `container` | This has all ViewStyle properties. |            |
@@ -293,6 +301,47 @@ Input elements are typically used to show data to the user and allow them to edi
 A text box can be used to display or edit a textual value. This is how a text box widget with validation feedback and a plain text box widget could look in an app:
 
 {{< figure src="/attachments/refguide/mobile/native-mobile/native-styling-refguide/text-box.png" alt="text box"   width="350"  >}}
+
+```javascript
+export const TextBox = {
+  container: {
+    // All ViewStyle properties   
+  },
+  containerDisabled: {
+    // Same properties as `container`. Overrides `container` styles if the text box is non-editable.   
+  },
+  input: {
+    // All TextStyle properties
+    autoCapitalize: // This is a Boolean value indicating whether the tab bar bounces when scrolling. This automatically capitalizes certain characters when the user types: 
+    // * `characters`: capitalizes all characters 
+    // *`words`: capitalizes the first letter of each word 
+    // *`sentences`: capitalizes the first letter of each sentence (default) 
+    // *`none`: capitalizes nothing
+    placeholderTextColor: // This is the text color of the placeholder string.
+    selectionColor: // This is the highlight and cursor color of the text input.
+    underlineColorAndroid: // This is the color of the `input` underline.
+  },  
+  inputFocused: {
+    // Same properties as `input`. Overrides `input` styles if the text box is focused (with Studio Pro v8.15).
+  },
+  inputError: {
+    // Same properties as `input`. Overrides `input` styles if there are validation errors.  
+  },
+  inputDisabled: {
+    // Same properties as `input`. Overrides `input` styles if the text box is non-editable.
+  },
+  label: {
+    // All TextStyle properties
+    numberOfLines, defaults to `1`: // This is the maximum number of lines to wrap the label text. If the text is any longer, it will be cut off with an ellipsis.  
+  },
+  labelDisabled: {
+    // Same properties as `label`. Overrides `label` styles if the text box is non-editable.
+  },
+  validationMessage: {
+    // This has all TextStyle properties.
+  },  
+};
+```
 
 | Element | Style Properties    | Description |
 | --- | --- | --- |

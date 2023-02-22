@@ -1,6 +1,6 @@
 ---
 title: "Mini Surveys & Product Insights"
-url: /developerportal/collaborate/app-insights/
+url: /developerportal/collaborate/product-insights/
 category: "Collaboration"
 weight: 4
 description: "Describes how to set up mini-surveys to gain product insights into your app and view and export the survey results."

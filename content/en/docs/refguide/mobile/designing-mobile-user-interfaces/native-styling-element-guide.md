@@ -480,6 +480,61 @@ This is how a check box widget in checkbox render mode looks by default:
 
 {{< figure src="/attachments/refguide/mobile/native-mobile/native-styling-refguide/check-box-checkbox.png" alt="check box in checkbox render mode"   width="350"  >}}
 
+```javascript
+export const Checkbox = {
+  container: {
+    // All ViewStyle properties
+  },
+  containerDisabled: {
+    // All ViewStyle properties. Same properties as `container`. Overrides `container` styles if the text box is non-editable.
+    // Render mode: both.
+  },
+  input: {
+    // All ViewStyle properties.
+    // Render mode: Switch.
+    trackColorOn: // Custom color for the switch track when turned on. Render mode: Switch.
+    trackColorOff: // Custom color for the switch track when turned off. Render mode: Switch.
+    thumbColorOn: // Color of the foreground switch grip when turned on. If this is set on iOS, the switch grip will lose its drop shadow. Render mode: Switch.
+    thumbColorOff: // Color of the foreground switch grip when turned off. If this is set on iOS, the switch grip will lose its drop shadow. Render mode: Switch.
+  },
+  inputError: {
+    // This has the same properties as `input`. Overrides `input` styles if there are validation errors.
+    // Render mode: Switch.
+  },
+  inputDisabled: {
+    // This has the same properties as `input`. Overrides `input` styles if the check box is non-editable.
+    // Render mode: Switch.
+  },
+  checkboxInput: {
+    // This has all ViewStyle properties.
+    // Render mode: Checkbox.
+    color: // Custom color for the tick icon. Render mode: Checkbox.
+    size: // Custom size for the tick icon. Render mode: Checkbox.
+  },
+  checkboxInputDisabled: {
+    // This has the same properties as `checkboxInput`. Overrides `checkboxInput` styles if the check box is non-editable.
+    // Render mode: Checkbox.
+  },
+  checkboxInputError: {
+    // This has the same properties as `checkboxInput`. Overrides `input` styles if there are validation errors.
+    // Render mode: Checkbox.
+  },
+  label: {
+    // This has all TextStyle properties.
+    // Render mode: Both.
+    numberOfLines, defaults to `1`: // The maximum number of lines to wrap the label text. If the text is any longer it will be cut off with an ellipsis. Render mode: Both.
+  },
+  labelDisabled: {
+    // Same properties as `label`. Overrides `label` styles if the check box is non-editable.
+    // Render mode: Both.
+  },
+  validationMessage: {
+    // This has all TextStyle properties.
+    // Render mode: Both.
+  },
+};
+```
+
 | Element | Style Properties    | Description | Render mode |
 | --- | --- | --- | --- |
 | `container` | This has all ViewStyle properties.   |   | Both |

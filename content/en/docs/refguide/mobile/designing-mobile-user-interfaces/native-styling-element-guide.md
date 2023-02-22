@@ -384,6 +384,15 @@ export const DropDown = {
   containerDisabled: {
     // Same properties as `container`. Overrides `container` styles if the text box is non-editable.   
   },
+  iconStyle: {
+    // This has all TextStyle properties. Styles the arrow down icon next to the value (with Studio Pro v8.15).
+  },  
+  item: {
+    // This has all TextStyle properties. Styles all the items in dropdown menu including selected item (with Studio Pro v8.11)
+  }, 
+  itemContainer: {
+    // This has all ViewStyle properties. Styles all the item containers in dropdown menu including selected item container (with Studio Pro v8.11).
+  },   
   label: {
     // This has all TextStyle properties.
     numberOfLines, defaults to `1`: // The maximum number of lines to wrap the label text. If the text is any longer it will be cut off with an ellipsis.  
@@ -391,6 +400,9 @@ export const DropDown = {
   labelDisabled: {
     // Same properties as `label`. Overrides `label` styles if the drop-down is non-editable.
   },
+  menuWrapper: {
+    // This has all ViewStyle properties. Styles the wrapper view surrounding all the menu items (with Studio Pro v8.11).
+  }, 
   pickerIOS: {
     // This has all ViewStyle properties.
   },
@@ -400,18 +412,21 @@ export const DropDown = {
   pickerTopIOS: {
     // This has all ViewStyle properties.
   },
+  selectedItem: {
+    // This has all TextStyle properties. Styles the selected item in dropdown menu (with Studio Pro v8.11).
+  }, 
+  selectedItemContainer: {
+    // This has all ViewStyle properties. Styles the selected item's container in dropdown menu (with Studio Pro v8.11).
+  }, 
+  useUniformDesign: {
+    boolean: // Enables new uniformDesign (with Studio Pro v8.11).
+  },     
   validationMessage: {
     // This has all TextStyle properties. Styles the validation message (with Studio Pro v8.11).
   },
   value: {
     // This has all TextStyle properties. Styles the value button which toggle's dropdown and PickerIOS items. If placeholder is selected, placeholderTextColor will be applied
     placeholderTextColor: string: // If placeholder is selected, placeholderTextColor will be applied (with Studio Pro v8.11).
-  },
-  useUniformDesign: {
-    boolean: // Enables new uniformDesign (with Studio Pro v8.11).
-  },   
-  iconStyle: {
-    // This has all TextStyle properties. Styles the arrow down icon next to the value (with Studio Pro v8.15).
   },
   valueFocused: {
     // Same properties as `value`. Overrides `value` styles if the dropdown box is focused. (with Studio Pro v8.15).
@@ -425,21 +440,6 @@ export const DropDown = {
   valueContainerError: {
     // Same properties as `valueContainer`. Overrides `valueContainer` styles if the dropdown has a validation error (with Studio Pro v9.19.0).
   }, 
-  menuWrapper: {
-    // This has all ViewStyle properties. Styles the wrapper view surrounding all the menu items (with Studio Pro v8.11).
-  }, 
-  itemContainer: {
-    // This has all ViewStyle properties. Styles all the item containers in dropdown menu including selected item container (with Studio Pro v8.11).
-  }, 
-  item: {
-    // This has all TextStyle properties. Styles all the items in dropdown menu including selected item (with Studio Pro v8.11)
-  }, 
-  selectedItem: {
-    // This has all TextStyle properties. Styles the selected item in dropdown menu (with Studio Pro v8.11).
-  }, 
-  selectedItemContainer: {
-    // This has all ViewStyle properties. Styles the selected item's container in dropdown menu (with Studio Pro v8.11).
-  }, 
 };
 ```
 
@@ -447,26 +447,26 @@ export const DropDown = {
 | --- | --- | --- |
 | `container` | This has all ViewStyle properties. |  |
 | `containerDisabled` | Same properties as `container` | Overrides `container` styles if the drop-down is non-editable. |
+| `iconStyle`  | This has all TextStyle properties | Styles the arrow down icon next to the value (with Studio Pro v8.15).|
+| `item` | This has all TextStyle properties | Styles all the items in dropdown menu including selected item (with Studio Pro v8.11).|
+| `itemContainer` | This has all ViewStyle properties | Styles all the item containers in dropdown menu including selected item container (with Studio Pro v8.11).|
 | `label` | This has all TextStyle properties. | |
 | `label` | `numberOfLines` | The maximum number of lines to wrap the label text. If the text is any longer it will be cut off with an ellipsis. Defaults to `1`. |
 | `labelDisabled` | Same properties as `label` | Overrides `label` styles if the drop-down is non-editable. |
+| `menuWrapper` | This has all ViewStyle properties | Styles the wrapper view surrounding all the menu items (with Studio Pro v8.11).|
 | `pickerIOS` | This has all ViewStyle properties. |  |
 | `pickerBackdropIOS` | This has all ViewStyle properties. |   |
 | `pickerTopIOS` | This has all ViewStyle properties. |   |
+| `selectedItem` | This has all TextStyle properties | Styles the selected item in dropdown menu (with Studio Pro v8.11).|
+| `selectedItemContainer` | This has all ViewStyle properties | Styles the selected item's container in dropdown menu (with Studio Pro v8.11).|
+| `useUniformDesign` | `boolean` | Enables new uniformDesign (with Studio Pro v8.11). |
 | `validationMessage` | This has all TextStyle properties. | Styles the validation message (with Studio Pro v8.11).|
 | `value`  | This has all TextStyle properties  | Styles the value button which toggle's dropdown and PickerIOS items. If placeholder is selected, placeholderTextColor will be applied |
-| `useUniformDesign` | `boolean` | Enables new uniformDesign (with Studio Pro v8.11). |
-| `iconStyle`  | This has all TextStyle properties | Styles the arrow down icon next to the value (with Studio Pro v8.15).|
 | `value`  | `placeholderTextColor: string` | If placeholder is selected, placeholderTextColor will be applied (with Studio Pro v8.11).|
-| `valueFocused`  | Same properties as `value` | Overrides `value` styles if the dropdown box is focused. (with Studio Pro v8.15).|
 | `valueContainer` | This has all ViewStyle properties and rippleColor | Styles the value button's container (with Studio Pro v8.11).|
 | `valueContainerFocused` | Same properties as `valueContainer` | Overrides `valueContainer` styles if the dropdown box is focused (with Studio Pro v8.15).|
 | `valueContainerError` | Same properties as `valueContainer`  | Overrides `valueContainer` styles if the dropdown has a validation error (with Studio Pro v9.19.0).|
-| `menuWrapper` | This has all ViewStyle properties | Styles the wrapper view surrounding all the menu items (with Studio Pro v8.11).|
-| `itemContainer` | This has all ViewStyle properties | Styles all the item containers in dropdown menu including selected item container (with Studio Pro v8.11).|
-| `item` | This has all TextStyle properties | Styles all the items in dropdown menu including selected item (with Studio Pro v8.11).|
-| `selectedItem` | This has all TextStyle properties | Styles the selected item in dropdown menu (with Studio Pro v8.11).|
-| `selectedItemContainer` | This has all ViewStyle properties | Styles the selected item's container in dropdown menu (with Studio Pro v8.11).|
+| `valueFocused`  | Same properties as `value` | Overrides `value` styles if the dropdown box is focused. (with Studio Pro v8.15).|
 
 The default class to style all text areas is named `DropDown`.
 

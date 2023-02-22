@@ -331,9 +331,6 @@ The below code snippet creates a preprocessor ONNX artifact that contains the ne
 2.3.2 Modifying ONNX Graphs
 The computation graph of an existing ONNX artifact can be altered in various ways. An ONNX operator (node) can be added or removed, or replaced with another operator. Python API of the ONNX provides a bunch of tools to make modifications to existing artifacts.
 ONNX model is represented using protocol buffers. Dealing with ONNX protocol buffer is complicated and error-prone. The ONNX protocol buffer representation also depends on ONNX IR version and OpSet version.
- 
-
-![](/static/img/pixel.gif)
 
 
 ResNet Pre-processor and Model Inference Combined in a Single MLKit Activity
@@ -364,9 +361,4 @@ Here is an overview of a typical NLP model inference pipeline in microflows.
 
 
 ![](https://paper-attachments.dropboxusercontent.com/s_5E4F633166D614F309877C2287B1B3E5F838F0D45F24422C0A4FECBB43036E88_1673961505733_image.png)
-
-![](/static/img/pixel.gif)
-
-
- 
 

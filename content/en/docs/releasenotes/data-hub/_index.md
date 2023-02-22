@@ -11,11 +11,11 @@ These release notes cover changes made to the [Mendix Data Hub Catalog](/data-hu
 
 ## 2023
 
-### February 23th, 2023
+### February 23rd, 2023
 
 #### Improvements
 
-* On search page, there is no default search filter anymore as well as filters are persistent per search session.
+* On the [Search](/data-hub/data-hub-catalog/search/) page, there are no default search filters anymore and filters are persistent per search session.
 
 ### February 16th, 2023
 

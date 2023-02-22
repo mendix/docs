@@ -116,7 +116,7 @@ When this identifier is not set for the environment where your app is deployed (
 
 ### 5.1 Use HTTP Authentication
 
-The **Use HTTP authentication** check box defines whether basic authentication should be used.
+The **Use HTTP authentication** check box defines whether basic authentication (username and password) should be used.
 
 ### 5.2 User Name
 

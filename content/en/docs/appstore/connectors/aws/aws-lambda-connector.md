@@ -49,7 +49,7 @@ In order to use the Amazon Lambda service, you must authenticate with AWS. To do
 
 7. Depending on your selected authentication type, configure the required parameters for the **StaticCredentials** or **SessionCredentials**.
 
-    | Credentials type | Parameter | Value |
+    | Credentials type | Constant | Value |
     | --- | --- | --- |
     | Any | **UseStaticCredentials** | **true** if you want to use static credentials, or **false** for session credentials |
     | **StaticCredentials** | **AccessKey** | Access key ID [created in IAM](/appstore/connectors/aws/aws-authentication/#prerequisites)  |

@@ -4,7 +4,7 @@ url: /refguide/ml-model-mapping/
 tags: ["ML kit", "ML model mapping", "machine learning", "models"]
 ---
 
-[Machine learning model support is currently in [Beta](/releasenotes/beta-features/).
+{{% alert color="info" %}}[Machine learning model](/refguide/machine-learning-kit/) support is currently in [Beta](/releasenotes/beta-features/) and is available in Studio Pro [9.23](/releasenotes/studio-pro/9.23/) and above.{{% /alert %}}
 
 ## 1 Introduction
 

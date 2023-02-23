@@ -6,7 +6,7 @@ weight: 35
 tags: ["studio pro", "machine learning", "ml kit", "models", "design patterns"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
-{{% alert color="info" %}}[Machine learning model](/refguide/machine-learning-kit/) support is currently in [Beta](/releasenotes/beta-features/).{{% /alert %}}
+{{% alert color="info" %}}[Machine learning model](/refguide/machine-learning-kit/) support is currently in [Beta](/releasenotes/beta-features/) and is available in Studio Pro [9.23](/releasenotes/studio-pro/9.23/) and above.{{% /alert %}}
 
 ## 1 Introduction
 
@@ -36,8 +36,6 @@ Domain Model of an ensemble model:
 1.2 Cascaded Inference
 
 This pattern refers to the ability to feed the output of one model into another, in a cascade pattern. Normally it is used to compensate for a model bias, or incomplete data, in such a way you could use another predictor to compensate for that. In this case, a potential implementation looks pretty much like a graphical representation of this pattern:
-
-![](/static/img/pixel.gif)
 
 
 Example Microflow

@@ -1,5 +1,5 @@
 ---
-title: "Mendix Webhooks"
+title: "Mendix Deployment Webhooks"
 linktitle: "Webhooks"
 url: /developerportal/deploy/webhooks/
 weight: 75
@@ -9,78 +9,110 @@ tags: ["Mendix cloud", "Webhooks", "CI/CD", "Pipeline"]
 
 ## 1 Introduction
 
-Webhooks allow you to send project information between your Mendix app and an external app. 
+Webhooks in the Developer Portal allow you to send information about your Mendix app to an external app or workflow. This can be used, for example, to trigger an automated CI/CD workflow when a new change is committed to the Team Server.
 
-You can always find an example of how to set up webhooks in our documentation here.
+Mendix provides webhooks to send project information when the following events happen to your app:
+
+* On package upload – when a deployment package is uploaded to the Developer Portal
+* Team Server push – when a new commit is pushed to the Team Server — this will only be triggered if your app is stored in a Git repository
+
+## 2 Configuring a Webhook{#setting-up}
+
+### 2.1 Creating a New Webhook
+
+To set up a webhook, do the following:
+
+1. Open your app in the Developer Portal.
+1. Open the **Webhooks** page from the left-hand menu.
+
+    You will see any current webhooks with an indication of whether they are active or inactive. An inactive webhook will not send any payloads to the endpoint.
+
+1. Click **New Webhook**.
+1. Enter the following information:
+    * **Webhook Name** – a name, so you can identify the webhook
+    * **URL** – the endpoint which will receive the information which is posted
+    * **Validation Secret** – a secret which will be received by the endpoint to confirm that it has been triggered by this webhook
+    * **Available Events** – the event or events which will trigger the webhook to send information to the endpoint. You can see more information about these events in the sections below.
+    * **Custom Headers** – a **Key**/**Value** pair which is sent as an HTTP header to the endpoint.
+
+You can edit or delete an existing webhook by clicking the elipsis, **…**, in the **Action** column for the webhook you want to change and then select **Edit Webhook** or **Delete Webhook**.
+
+### 2.2 Editing an Existing Webhook
+
+If you select **Edit Webhook** from the elipsis, **…**, in the **Action** column for a webhook you want to change, you have the following actions available to you:
+
+* You can update **Webhook Name**, **URL**, and **Validation Secret** — click **Save** to save the changes.
+* You can add or delete **Custom Headers** — click **Save** to save the changes.
+
+    {{% alert color="info" %}}You cannot change the value of an existing custom header. If you want to change the value, delete the existing header and add a new one with the same key.{{% /alert %}}
+
+* Click **Test Webhook** to send a test payload to the endpoint specified under **URL**.
+* Click **(De)activate Webhook** to switch deactivate an active webhook or activate an inactive webhook.
+* Click **Delete Webhook*** to completely remove the webhook.
 
 
-## 2 Definitions
+## 3 Webhook Headers
 
-Mendix uses one IP address when someone connects to your Mendix application (Incoming IP) and a different IP address for when your application connects to outside services (Outgoing IP).
+Every POST payload contains the following delivery information as part of the header:
 
-{{% alert color="warning" %}}
-Incoming IP addresses are liable to change without notice and should not be used to access the application.
+* **connection** – `close`, indicating that there is no further information for this HTTP request
+* **content-length** – the size of the HTTP request in bytes, for example `475`
+* **webhook-signature** – the signature of the webhook in the format `<version>,<signature>`, for example `v1,Ay2spGBdE7i6OzNkFgTDnGfqgZT0WonCFoBMt8V3YiQ=`
+* **webhook-id** – a unique identifier for this webhook trigger, for example `msg_2M605iBQRge9hTgpYg7fKXQubaw`
+* **user-agent** – the user agent used to process this trigger. Mendix uses [Svix](https://www.svix.com/), which returns something like `Svix-Webhooks/0.75.0`
+* **webhook-timestamp** – the time the webhook was triggered, for example `1677072542`
+* **test** – if this POST is a test, then this header will be included with the value `test`
+* **content-type** – `application/json`
+* **accept** – `*/*`
+* **host** – the host part of the endpoing URL, for example `gitlab.com`
 
-Mendix will endeavor to maintain the current *outgoing* IP addresses. However, they may change for operational reasons and this is subject to a 48-hour notice period.
+In addition, you can add your own custom headers. See [Setting Up a Webhook](#setting-up) for more information.
+
+{{% alert color="info" %}}
+The order of these headers is not guaranteed.
 {{% /alert %}}
 
-### 2.1 Incoming IP
+## 4 Package Upload to Developer Portal
 
-This is the IP address of one of our front-facing web servers. This is the IP address your browser connects to when you visit your application in the Mendix Cloud, for example, yourapplication.mendixcloud.com. You can also retrieve this IP address easily by performing a DNS lookup for this domain with, for example, http://ping.eu/nslookup/ (not 127.0.0.1).
+When you [upload a package to the Developer Portal](/developerportal/deploy/environments/#package-repository), and the webhook responds to the event **On package upload**, request content with the following format will be sent to the configured endpoint:
 
-### 2.2 Outgoing IP {#outgoing}
+```json {linenos=false}
+{
+  "modelVersion": "0.0.19.62e3d711",
+  "name": "main-0.0.19.62e3d711.mda",
+  "packageId": "9222b92a-51ca-4932-a1f1-72c33ff76b86",
+  "projectId": "f60650eb-230a-4419-a6af-b3668fc82d5d",
+  "runtimeVersion": "9.18.1.54902",
+  "uploadTime": "2023-02-23T10:25:21.3896Z",
+  "uploaderId": "4bcafd1c-dac8-4335-b401-06ebe86f7851"
+}
+```
 
-This is the IP address other servers see when the Mendix application initiates the connection. You normally need to add it to your firewall if you want your Mendix application to contact one of your firewalled servers.
+## 5 Model Upload to Team Server
 
-Mendix uses the following static IP addresses. If you need further information, please file a support ticket with Mendix Support.
+When you push a model change to the [Git Team Server](/developerportal/collaborate/team-server/), and the webhook responds to the event **Teamserver push (Git)**, request content with the following format will be sent to the configured endpoint:
 
-#### 2.2.1 Mendix Cloud
-
-| Region | Location | IP Addresses |
-| --- | --- | ---|
-| Mendix Cloud Free Tier EU | Ireland (eu-west-1) | `52.18.20.119` <br /> `52.18.122.238` <br /> `52.211.106.230` |
-| Mendix Cloud Africa | Cape Town (af-south-1) | `13.245.222.81`<br /> `13.246.150.209`<br /> `13.246.181.69` |
-| Mendix Cloud Asia Pacific | Singapore (ap-southeast-1) | `52.77.0.52` <br /> `54.179.212.86` <br /> `122.248.194.24`  |
-| Mendix Cloud Asia Pacific | Sydney (ap-southeast-2) | `13.54.176.58` <br /> `13.54.220.143` <br /> `13.238.3.124` |
-| Mendix Cloud Asia Pacific | Tokyo (ap-northeast-1) | `13.113.58.15` <br /> `52.193.228.1` <br /> `52.198.238.110` |
-| Mendix Cloud Asia Pacific | Mumbai (ap-south-1) | `43.204.254.95` <br /> `43.205.31.32` <br /> `65.1.183.103`  |
-| Mendix Cloud Canada | Canada (ca-central-1) | `3.97.111.124` <br /> `3.98.194.54` <br /> `35.182.171.81` |
-| Mendix Cloud EU | Frankfurt (eu-central-1) | `3.76.96.252`<br /> `3.125.228.151`<br /> `35.156.112.28` <br /> `35.157.102.14` <br /> `52.58.42.15` <br /> `54.93.126.19` |
-| Mendix Cloud IE | Ireland (eu-west-1) | `52.18.10.62` <br /> `52.208.39.99` <br /> `99.80.177.69` |
-| Mendix Cloud Middle East | Bahrain (me-south-1) | `15.184.118.253`<br /> `16.24.5.102`<br /> `157.241.15.222` |
-| Mendix Cloud UK | London (eu-west-2) | `18.130.169.15` <br /> `35.177.185.47` <br /> `52.56.174.215` |
-| Mendix Cloud US | North Virginia (us-east-1) | `34.197.224.250` <br /> `52.55.243.62` <br /> `52.205.207.103` |
-| Mendix Cloud US | Oregon (us-west-2) | `35.160.4.29` <br /> `44.236.131.88` <br /> `54.190.172.197` |
-
-##### 2.2.1.1 Accessing AWS Services in Mendix Cloud
-
-The Mendix Cloud uses [VPC endpoints](https://docs.aws.amazon.com/vpc/latest/privatelink/concepts.html) to privately access AWS services.
-
-AWS API requests can, therefore, originate from the following IP ranges:
-
-* `10.10.128.0/21`
-* `10.10.136.0/21`
-* `10.10.144.0/21`
-
-The [aws:VpcSourceIp](https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-vpcsourceip) condition
-key can be used in a policy to allow principals (Mendix apps and end-users) to make requests only from within a specified IP range. If you apply IP restrictions to your AWS IAM user or role, make sure that the IP ranges for AWS API requests, above, are allowed in your policy.
-
-## 3 Frequently Asked Questions
-
-**Why does the IP address need to change?**
-
-Because Mendix provides a platform we need to keep our infrastructure flexible. As a result, even though Mendix servers use static IP addresses, those IP addresses are subject to change occasionally. Since these are manual changes we provide a 48-hour notice. Please note that a longer notice period would hinder our operational capabilities.
-
-**In the past we have received the same IP address for multiple environments and/or applications. How is that possible?**
-
-The incoming IP address is the same for multiple environments and applications because it is the IP address of a front facing web server. The web server serves multiple applications.
-
-The outgoing IP address is the same for multiple environments and applications because we use Network Address Translation on our routers.
-
-**Which IP address should be whitelisted on our firewall?**
-
-Usually you configure your firewall with rules for *incoming* traffic to your network. Therefore you need to use the *outgoing IP address* of the Mendix application.
-
-## 4 Read More
-
-* [Mendix Cloud Status](/developerportal/deploy/mendix-cloud-status/)
+```json {linenos=false}
+{
+  "after": "4b76061182bf183281b5107cd753c6071ed00040",
+  "before": "0b9cb7a3e9a5ccfffa6c79435441999543ccb8c9",
+  "branchName": "main",
+  "commits": [
+    {
+      "authorDate": "2022-12-08T16:15:52+01:00",
+      "authorEmail": "ahmed.negm@mendix.com",
+      "authorName": "Balazs Bole",
+      "id": "4b76061182bf183281b5107cd753c6071ed00040",
+      "mendixVersion": "9.20.2.1234",
+      "message": "Commit the changes",
+      "relatedStories": [
+        {
+          "id": "MS-1234"
+        }
+      ]
+    }
+  ],
+  "projectId": "9bcd62a6-9c19-4c7f-a5ae-49182c67f80f",
+  "repositoryType": "git"
+}
+```

@@ -1,5 +1,5 @@
 ---
-title: "Machine Learning Design Patterns"
+title: "Design Patterns"
 url: /refguide/machine-learning-kit/design-patterns/
 category: Design Patterns
 
@@ -7,7 +7,7 @@ weight: 35
 tags: ["studio pro", "machine learning", "ml kit", "models"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
-[Machine learning model support is currently in [Beta](/releasenotes/beta-features/).
+{{% alert color="info" %}}[Machine learning model](/refguide/machine-learning-kit/) support is currently in [Beta](/releasenotes/beta-features/).{{% /alert %}}
 
 ## 1 Introduction
 

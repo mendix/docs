@@ -5,7 +5,7 @@ weight: 45
 description_list: true
 tags: ["studio pro"]
 ---
-[Machine learning model support is currently in [Beta](/releasenotes/beta-features/).
+{{% alert color="info" %}}[Machine learning model](/refguide/machine-learning-kit/) support is currently in [Beta](/releasenotes/beta-features/).{{% /alert %}}
 
 {{% alert color="warning" %}}
 These activities can only be used in **Microflows**.

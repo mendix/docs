@@ -1,16 +1,16 @@
 ---
-title: "Integrate Machine Learning Models with ML Kit"
+title: "Machine Learning Models"
 url: /refguide/machine-learning-kit/
 category: Integration
 weight: 35
 tags: ["studio pro", "machine learning", "ml kit", "models"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
-[Machine learning model support is currently in [Beta](/releasenotes/beta-features/).
+{{% alert color="info" %}}[Machine learning model](/refguide/machine-learning-kit/) support is currently in [Beta](/releasenotes/beta-features/).{{% /alert %}}
 
 ## 1 Introduction
 
-In Studio Pro [9.23] and above, you can build apps that support integration with machine learning models. Collectively called the Mendix Machine Learning (ML) Kit, these functionalities are built using common AI framework and language, and include deployment support for common AI frameworks.
+In Studio Pro [9.23](/releasenotes/studio-pro/9.23/) and above, you can build apps that support integration with machine learning models. Collectively called the *Machine Learning (ML) Kit*, these functionalities are built using common AI framework and language, and include deployment support for common AI frameworks.
 
 ### 1.1 Under the Hood {#ml-kit-hood}
 

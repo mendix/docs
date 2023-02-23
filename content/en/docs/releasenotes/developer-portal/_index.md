@@ -19,6 +19,16 @@ To see the current status of the Mendix Developer Portal and Control Center, see
 
 ### February 23rd, 2023
 
+#### New Features
+
+We have released a feature in Control Center where you can add and manage a [Security Contact](/developerportal/control-center/#company-details) for your company. A Security Contact is informed if there are security-related issues with the company's apps (for example, data breaches, new advisories, or critical vulnerabilities).
+
+With this feature, you can do the following:
+
+* Add a new Security Contact to your company
+* Remove an existing Security Contact and replace it with a newer one
+* Adjust the Security Contact’s name 
+
 #### Fixes
 
 * We fixed a performance issue that occurred when opening an [App Buzz](/developerportal/collaborate/buzz/#app-buzz) page for an app with a large team. We now show no more than 25 team members in the team list in the right corner at a time.
@@ -71,7 +81,7 @@ To see the current status of the Mendix Developer Portal and Control Center, see
 
 ### December 13th, 2022
 
-#### New Feature
+#### New Features
 
 We have released the Beta version of [Product Insights](/developerportal/collaborate/product-insights/), which is a new way for you to proactively get feedback from your users. The functionality consists of a tool for setting up mini surveys in addition to the [Product Insights - Mini Surveys](/appstore/modules/product-insights/) Marketplace module, which you can add to your app to set up the exact targeting criteria for a survey.
 

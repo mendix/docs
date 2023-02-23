@@ -20,6 +20,8 @@ The ONNX Runtime is based on the ONNX standard, and is an optimized inference en
 
 ## 2 Usage {#usage}
 
+To use a ML modela in your app, you need to convert it to ONNX, then import it to create a model mapping.
+
 ### 2.1 Converting Your Model to ONNX {#convert-ml-model}
 
 To embed your ML model into a Mendix app, you need to convert your model into the ONNX format. Depending upon the frameworks and tools used to create the ML model, there are many tools and sources to convert a model to ONNX format.
@@ -30,16 +32,15 @@ Examples include the following:
 * [TensorFlow to ONNX](https://github.com/onnx/tensorflow-onnx)
 * [Scikit-learn to ONNX](https://github.com/onnx/sklearn-onnx)
 
-### 2.2 Importing the Model {#import-model}
+### 2.2 Importing and Creating the Mapping {#import-model}
 
-To use the ML model in your app, you first need to import it.
+To use the ML model in your app, you will import it to create a mapping document.
 
 1. Right-click on the desired module and select **Add other > ML model mapping**.
 2. Add a name for the mapping document.
 3. Click **Import Model** to import your ONNX file.
 
 This will generate two non-persistable entities representing your ML Model input and outputs (see [Persistable and Non-Persistable Entities](#persist-nonpersist-entities) below).
-
 
 {{< figure src="/attachments/refguide/modeling/integration/ml-kit/ml-kit/ml-model-created-entities.png" alt="Two non-persistable entities generated when importing an ONNX file." >}}
 
@@ -63,10 +64,9 @@ Tensors inject and retrieve information from a machine learning model. A distinc
 
 2.2.2.1 Static Shapes {#static-shapes}
 
-ML Kit will detect models with static shapes automatically and display them in the Mapping:
+Studio Pro will detect models with static shapes automatically and display them in the mapping. The image below is a ResNet50 mapping with static dimensions that accepts 1 image of 3 channels (colors) with a size of 224x224 pixels:
 
-![ResNet50 Mapping with static dimensions: It accepts 1 image of 3 channels (colors) of 224x224 pixels](https://paper-attachments.dropboxusercontent.com/s_F19B5057CF910819DD4979B74DBA21AFABE41F48C813CF87BBA941642B25F067_1674460605858_image.png)
-
+{{< figure src="/attachments/refguide/modeling/integration/ml-kit/ml-kit/mapping-static-dimensions.png" alt="ResNet50 mapping with static dimensions. Described in the paragraph above." >}}
 
 ##### 2.2.2.2 Dynamic Shapes {#dynamic-shapes}
 
@@ -76,59 +76,49 @@ Several models (including EasyOCR and Yolo) have tensors with dynamic shapes. In
 
 When importing your model, you might encounter error CE1790. Go to the error and double-click on the affected mapping line to open the Edit ML model input shapes dialog box:
 
-![Tensor mapping for an EasyOCR Detector model](https://paper-attachments.dropboxusercontent.com/s_F19B5057CF910819DD4979B74DBA21AFABE41F48C813CF87BBA941642B25F067_1674460858139_image.png)
+{{< figure src="/attachments/refguide/modeling/integration/ml-kit/ml-kit/edit-model-input-shapes.png" alt="Edit ML model input shape dialog box." >}}
 
+In this case, the -1 dimensions should be configured before using the mapping in a [Call ML model](/refguide/call-ml-model/) activity. Once filled, static tensor shapes of an output mapping will be automatically calculated based on configured dimensions of the input entity mappings:
 
-In this case, the -1 dimensions should be configured before using the mapping in a Call ML Model Activity. Once filled, static tensor shapes of an output mapping will be automatically calculated based on configured dimensions of the input entity mappings:
+{{< figure src="/attachments/refguide/modeling/integration/ml-kit/ml-kit/completed-mapping.png" alt="Completed ML mapping. Described in the paragraph above." >}}
 
-![Properly filled model mapping with the desired dimensions](https://paper-attachments.dropboxusercontent.com/s_F19B5057CF910819DD4979B74DBA21AFABE41F48C813CF87BBA941642B25F067_1674460981201_image.png)
-
-
-Note: some these shapes should be handled in Java Action pre- and post-processors you may have (see the topic below).
+{{% alert color="info" %}}Some these shapes should be handled in [Java Action pre- and post-processors](#java-pre-post) you may have.{{% /alert %}}
 
 #### 2.2.3 Persistable and Non Persistable Entities {#persist-nonpersist-entities}
-After importing a model non-persistable entities will be created using the input type. 
 
-![Entities from the Titanic survivor xgboost model](https://paper-attachments.dropboxusercontent.com/s_F19B5057CF910819DD4979B74DBA21AFABE41F48C813CF87BBA941642B25F067_1674461423838_image.png)
+After importing a model, two non-persistable entities will be created using the input type.
 
-
-For non-structured data, such as most of the tensors for Neural Networks, an entity attribute will be a `String`.  This is because Base64 is used to to encode the tensors to and from MLKit:
-
-![Mapping from a ResNet50 from ONXX Model zoo](https://paper-attachments.dropboxusercontent.com/s_F19B5057CF910819DD4979B74DBA21AFABE41F48C813CF87BBA941642B25F067_1674461523505_image.png)
-
+For non-structured data, such as most of the tensors for Neural Networks, an entity attribute will be a `String`.  This is because Base64 is used to to encode the tensors to and from MLKit.
 
 ##### 2.2.3.1 Converting to Persistable Entities
 
-You can convert these entities into Persistable ones and use other types, such as Binary. This can be done to decrease inference latency of ML mappings document used in Call ML Model Activity. 
+You can convert these entities into [peristable](/refguide/persistability/) ones and use other types, such as **Binary**. This can be done to decrease inference latency of ML mappings document used in the [Call ML model](/refguide/call-ml-model/) activity. 
 
-To do so, open the entity Properties in the Domain Model, and select Yes in the Persistable section.
+To convert an entity, do the following:
 
-![](https://paper-attachments.dropboxusercontent.com/s_F19B5057CF910819DD4979B74DBA21AFABE41F48C813CF87BBA941642B25F067_1674461682924_image.png)
+1. Double-click on the entity to open its **Properties**.
+2. Select **Yes** in the **Persistable** section.
 
-
-You now have a Persistable entity in your Domain Model that you can set as the type you need, and that can be used in pre- and post-processors [link to section].
+You now have a [peristable](/refguide/persistability/) entity in your domain model that you can set as the type you need, and that can be used in [pre- and post-processors](#pre-post-processors).
  
 ### 2.3 Using the Model in a Microflow {#use-model-microflow}
 
-Once the ML mapping document is created, the ML model is available in the Studio Pro. Use the Call ML model activity in microflows to call and use your ML model in your application logic.
+Once the ML [mapping document](#import-model) is created by importing the model, the ML model is available in the Studio Pro. Use the Call ML model activity in microflows to call and use your ML model in your application logic.
 
-Drag and drop the Call ML model action from the toolbar in the Microflow editor to use it. 
+Drag and drop the [Call ML model](/refguide/call-ml-model/) activity from the toolbar in the Microflow editor to use it.
 
 #### 2.3.1 Example of a Model Microflow
 
+In the microflow below, a [Create object](/refguide/create-object/) activity creates an object of input entity type, mapped to input tensors in the ML mapping document. The [Call ML model](/refguide/call-ml-model/) activity calls the model, and a [Change object](/refguide/change-object/) activity updates business object with predicted value.
 
-![](https://paper-attachments.dropboxusercontent.com/s_5E4F633166D614F309877C2287B1B3E5F838F0D45F24422C0A4FECBB43036E88_1673957667848_image.png)
-
-
-In the microflow above, a Create object activity creates an object of input entity type, mapped to input tensors in the ML mapping document [link to section above]. The Call ML model activity calls the model, and a Change object activity updates business object with predicted value.
+{{< figure src="/attachments/refguide/modeling/integration/ml-kit/ml-kit/drag-action-into-microflow.png" alt="Completed ML mapping. Described in the paragraph above." >}}
 
 #### 2.3.1 Call ML Model Activity Details
 
-The Call ML model activity consists of the following:
+The [Call ML model](/refguide/call-ml-model/) activity consists of the following:
 
-
-- a model drop-down dialog that will list all the mappings created in [Importing the Model]
-- an Input section that consumes an object of type Input from the ML Mapping Document and produces an Output type object as per the mapping
+* a model drop-down dialog that will list all the mappings created in [Importing the Model]
+* an Input section that consumes an object of type Input from the ML Mapping Document and produces an Output type object as per the mapping
 
 The Input object in ML Kit expects the same Object Type—not the entity—as in the Import mapping.
 
@@ -151,7 +141,7 @@ In [Integrating Models with Pre- and Post-Processors] , a Create Object activity
 ![](https://paper-attachments.dropboxusercontent.com/s_5E4F633166D614F309877C2287B1B3E5F838F0D45F24422C0A4FECBB43036E88_1673960638735_image.png)
 
 
-## 3 Integrating Models with Pre-processors and Post-processors
+## 3 Integrating Models with Pre-processors and Post-processors {#pre-post-processors}
 
 Integrating machine learning models can sometimes require using a more complex structure. This incudes having a pre-processor, the model itself, and a post-processor:
 
@@ -185,8 +175,7 @@ Once you import your model, the Call ML Model action allows you to add your inpu
 ![](https://paper-attachments.dropboxusercontent.com/s_5E4F633166D614F309877C2287B1B3E5F838F0D45F24422C0A4FECBB43036E88_1673960917525_image.png)
 
 
-### 3.2 Pre-processing and Post-processing using Java Actions
-
+### 3.2 Pre-processing and Post-processing using Java Actions {#java-pre-post}
 
 Data transformations are usually complex tasks, and often require mathematical libraries or even more complex pieces of software (think OpenCV for computer vision). As a result, sometimes they are not integrated into the model. In this case, the best way to perform these transformations in Mendix using Java Actions (see https://docs.mendix.com/refguide/extending-your-application-with-custom-java/).
  

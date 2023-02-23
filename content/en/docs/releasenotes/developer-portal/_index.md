@@ -21,7 +21,7 @@ To see the current status of the Mendix Developer Portal and Control Center, see
 
 #### New Features
 
-We have released a feature in Control Center where you can add and manage a [Security Contact](/developerportal/control-center/#company-details) for your company. A Security Contact is informed if there are security-related issues with the company's apps (for example, data breaches, new advisories, or critical vulnerabilities).
+We have released a feature in Control Center where you can add and manage a [Security Contact](/developerportal/control-center/#company-details) for your company.  A **Security Contact** will be informed if there are critical security-related issues in the Mendix provided platform supported components or modules. You can find all advisories at https://docs.mendix.com/releasenotes/security-advisories/.
 
 With this feature, you can do the following:
 

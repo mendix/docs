@@ -14,34 +14,23 @@ tags: ["studio pro", "machine learning", "ml kit", "models", "design patterns"]
 
 When dealing with a lot of variance on a dataset or many features versus a relatively low number of data available, you can use ensemble models. Ensemble models are a machine learning approach to combine multiple other models, called base estimators, in the prediction process. Ensemble models offer a solution to overcome the technical challenges of building a single estimator. In this approach, the same data points are sent to a group of models and then collect all the predictions to find the best prediction.
 
-
-![](https://paper-attachments.dropboxusercontent.com/s_5E4F633166D614F309877C2287B1B3E5F838F0D45F24422C0A4FECBB43036E88_1673961063429_image.png)
-
+{{< figure src="/attachments/refguide/modeling/integration/ml-kit/design-patterns/advanced-inference-patterns/design-pattern-ensembles.png" alt="." >}}
 
 You can create ensemble models in Mendix building a separate microflow for each model, then combine the predictions in another microflow. The example shows an ensemble of two models.
 
-
 Domain Model of an ensemble model:
 
-![](https://paper-attachments.dropboxusercontent.com/s_5E4F633166D614F309877C2287B1B3E5F838F0D45F24422C0A4FECBB43036E88_1673961108911_image.png)
+{{< figure src="/attachments/refguide/modeling/integration/ml-kit/design-patterns/advanced-inference-patterns/ensembles-domain-model.png" alt="." >}}
 
-
-
-
-![](https://paper-attachments.dropboxusercontent.com/s_5E4F633166D614F309877C2287B1B3E5F838F0D45F24422C0A4FECBB43036E88_1673961121439_image.png)
-
-
-
+{{< figure src="/attachments/refguide/modeling/integration/ml-kit/design-patterns/advanced-inference-patterns/ensembles-example-microflow.png" alt="." >}}
 
 ### 1.2 Cascaded Inference
 
 This pattern refers to the ability to feed the output of one model into another, in a cascade pattern. Normally it is used to compensate for a model bias, or incomplete data, in such a way you could use another predictor to compensate for that. In this case, a potential implementation looks pretty much like a graphical representation of this pattern:
 
-
 Example Microflow
 
-![](https://paper-attachments.dropboxusercontent.com/s_5E4F633166D614F309877C2287B1B3E5F838F0D45F24422C0A4FECBB43036E88_1673961162960_image.png)
-
+{{< figure src="/attachments/refguide/modeling/integration/ml-kit/design-patterns/advanced-inference-patterns/cascaded-inference-microflow.png" alt="." >}}
 
 We have a model pre-processor that makes some data available for the first model, which output is injected into the second model as an input. Ultimately, that output will be used for the final prediction.
 
@@ -51,21 +40,17 @@ Another common pattern in machine learning deployment is use a microservice or a
 
 Below you can see an an example of such deployment. Instead of actually storing the variable after predicting the elements in an image, the variable could be encoded as JSON and then published.
 
-
-![](https://paper-attachments.dropboxusercontent.com/s_5E4F633166D614F309877C2287B1B3E5F838F0D45F24422C0A4FECBB43036E88_1673961187049_image.png)
-
+{{< figure src="/attachments/refguide/modeling/integration/ml-kit/design-patterns/advanced-inference-patterns/maas-sample-microflow.png" alt="." >}}
 
 ### 1.4 Batch Inference
 
 Another common pattern for ML applications is the ability to run multiple inferences with a single request for the model, or batch inference. This is just a special case of Dynamic Shapes (See 2.2.2), in which the first dimension is dynamic:
 
-![Mapping of a ResNet50 with its first parameter dynamic](https://paper-attachments.dropboxusercontent.com/s_F19B5057CF910819DD4979B74DBA21AFABE41F48C813CF87BBA941642B25F067_1674462624809_image.png)
-
+{{< figure src="/attachments/refguide/modeling/integration/ml-kit/design-patterns/advanced-inference-patterns/log-message.png" alt="Mapping of a ResNet50 with first parameter dynamic." >}}
 
 You can add 1 as the first element and the model will work with a batch size of 1, or whatever figure you desire and work with n elements at time:
 
-![ResNet50 with a batch size of 10](https://paper-attachments.dropboxusercontent.com/s_F19B5057CF910819DD4979B74DBA21AFABE41F48C813CF87BBA941642B25F067_1674462710673_image.png)
+{{< figure src="/attachments/refguide/modeling/integration/ml-kit/design-patterns/advanced-inference-patterns/resnet50-dynamic-parameter.png" alt="ResNet50 with a batch size of 10." >}}
 
-
-Please remember to properly adjust your pre/post processor to send/receive the proper batch size.
+Remember to properly adjust your pre/post processor to send/receive the proper batch size.
 

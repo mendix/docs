@@ -10,7 +10,7 @@ tags: ["studio pro", "machine learning", "ml kit", "models", "design patterns"]
 
 ## 1 Introduction
 
-1.1 Ensembles
+### 1.1 Ensembles
 
 When dealing with a lot of variance on a dataset or many features versus a relatively low number of data available, you can use ensemble models. Ensemble models are a machine learning approach to combine multiple other models, called base estimators, in the prediction process. Ensemble models offer a solution to overcome the technical challenges of building a single estimator. In this approach, the same data points are sent to a group of models and then collect all the predictions to find the best prediction.
 
@@ -33,7 +33,7 @@ Domain Model of an ensemble model:
 
 
 
-1.2 Cascaded Inference
+### 1.2 Cascaded Inference
 
 This pattern refers to the ability to feed the output of one model into another, in a cascade pattern. Normally it is used to compensate for a model bias, or incomplete data, in such a way you could use another predictor to compensate for that. In this case, a potential implementation looks pretty much like a graphical representation of this pattern:
 
@@ -45,7 +45,7 @@ Example Microflow
 
 We have a model pre-processor that makes some data available for the first model, which output is injected into the second model as an input. Ultimately, that output will be used for the final prediction.
 
-1.3 Machine Learning MaaS (Model as a Service)
+### 1.3 Machine Learning MaaS (Model as a Service)
 
 Another common pattern in machine learning deployment is use a microservice or a service. While Studio Pro excels at creating monolith applications with all its security and speed advantages, creating a microservice is possible by servers publishing a REST service and clients calling the service . In this way, the AI-powered smart app can be split into two Mendix apps: one to host the ML model, and one to process and use the predictions. This is a good approach for use cases where the ML model is complex and requires heavy computing power, or when the ML model is owned and maintained by another team. Another advantage is that you can update the ML model without the need for deploying the Mendix client app.
 
@@ -55,7 +55,7 @@ Below you can see an an example of such deployment. Instead of actually storing 
 ![](https://paper-attachments.dropboxusercontent.com/s_5E4F633166D614F309877C2287B1B3E5F838F0D45F24422C0A4FECBB43036E88_1673961187049_image.png)
 
 
-1.4 Batch Inference
+### 1.4 Batch Inference
 
 Another common pattern for ML applications is the ability to run multiple inferences with a single request for the model, or batch inference. This is just a special case of Dynamic Shapes (See 2.2.2), in which the first dimension is dynamic:
 

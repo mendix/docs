@@ -90,11 +90,13 @@ Mendix can import and export data from and to JSON and XML. To learn more, see t
 
 ## 7 Machine Learning (ML) Models
 
-In Studio Pro [9.23](/releasenotes/studio-pro/9.23/) and above, you can use machine learning (ML) models in your Mendix apps. 
+In Studio Pro [9.23](/releasenotes/studio-pro/9.23/) and above, you can integrate machine learning (ML) models into your Mendix apps.
 
-For work with machine learning models, see:
+To work with machine learning models, see:
 
-* [Machine Learning (ML) Models](/refguide/machine-learning-kit/), a guide to integrating machine learning models
+* [Machine Learning (ML) Models](/refguide/machine-learning-kit/), an overview in the Studio Pro guide
 * [Design Patterns](/refguide/machine-learning-kit/design-patterns/), an overview page that links to two documents about machine learning design patterns:
      * [Advanced Inference Design Patterns](/refguide/machine-learning-kit/design-patterns/advanced-inference/)
      * [Pre- and Post-Processor Design Patterns](/refguide/machine-learning-kit/design-patterns/pre-post-processor-patterns/)
+* [ML model mapping](/refguide/ml-model-mapping/), an entry in the Studio Pro guide about the [mapping document](/refguide/mapping-documents/) for machine learning models
+* [Call ML Model](/refguide/call-ml-model/), about the microflow [activity](/refguide/activities/) to call an imported ML model in a microflow

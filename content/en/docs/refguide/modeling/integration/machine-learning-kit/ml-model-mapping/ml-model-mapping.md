@@ -8,11 +8,11 @@ tags: ["ML kit", "ML model mapping", "machine learning", "models"]
 
 ## 1 Introduction
 
-Studio Pro [9.23](/releasenotes/studio-pro/9.23/] and above supports integrating machine learning models built using common AI framework and language into your Mendix Studio Pro apps.
+Studio Pro [9.23](/releasenotes/studio-pro/9.23/] and above supports integrating machine learning (ML) models into your Mendix Studio Pro apps.
 
 For a list of supported models, see [Supported Frameworks and Libraries](/refguide/machine-learning-kit/#supported-frameworks).
 
-## 2 Adding a Mapping to Your App
+## 2 Adding a ML Mapping to Your App
 
 To add a ML model to your app, do the following:
 

@@ -1,5 +1,5 @@
 ---
-title: "Machine Learning (ML) Models"
+title: "Machine Learning Models"
 url: /refguide/machine-learning-kit/
 category: Integration
 weight: 35
@@ -242,7 +242,7 @@ You can look into the CVPublicDemo app for more complex examples of Java Actions
 
 To ensure that your model will work with the Call ML Model action, follow the guidelines in this section.
 
-To learn more about design patterns that can be applied to the Inference process, and specifications that for pre/post-processing while using Mendix components, Java Actions, or embedding it into the model directly, see [Design Patterns].
+To learn more about design patterns that can be applied to the Inference process, and specifications that for pre/post-processing while using Mendix components, Java Actions, or embedding it into the model directly, see our documentation on [Design Patterns](/refguide/machine-learning-kit/design-patterns/).
 
 ### 4.1 Model Building
 

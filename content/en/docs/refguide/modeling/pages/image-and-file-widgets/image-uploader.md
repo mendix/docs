@@ -3,6 +3,7 @@ title: "Image Uploader"
 url: /refguide/image-uploader/
 weight: 50
 tags: ["studio pro", "image uploader", "file widget", "widget"] 
+weight: 50
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
@@ -77,7 +78,39 @@ For SVG files, TwelveMonkeys ImageIO itself delegates to the Batik library—whi
 
 {{% snippet file="/static/_includes/refguide/visibility-section-link.md" %}}
 
-## 3 Read More
+## 3 Example of Image Uploader Usage
+
+An image uploader needs to be placed in a data view or a snippet that is connected to System.Image or is a specialization of it. 
+
+For that you can create an entity in your domain model and define that it is an image entity. This is done by the concept of *inheritance*, sometimes called *generalization*. By inheriting from System.Image your entity gets all the properties of the system image entity. 
+
+Do the following:
+
+1. Open your domain model and create an entity that you would like to define as an image entity.
+
+2. Double-click the entity to open its properties.
+
+3. In the **Generalization** property, click **Select**.
+
+   {{< figure src="/attachments/refguide/modeling/pages/image-and-file-widgets/image-uploader/generalization.png" >}}
+
+4. In the **Select Entity** dialog box, choose **System.Image** and click the **Select** button.
+
+   {{< figure src="/attachments/refguide/modeling/pages/image-and-file-widgets/image-uploader/select-entity.png" >}}
+
+5. Click **OK**. Your entity now inherits all properties from the System.Image entity you selected:
+
+   {{< figure src="/attachments/refguide/modeling/pages/image-and-file-widgets/image-uploader/entity-example.png" >}}
+
+6. Open a page or a snippet where you would like to place the image uploader and add a data view there.
+
+7. Set the image entity you have created in your domain model as data view's data source. 
+
+8. Place the image uploader inside the data view. You can reference the page example below:
+
+    {{< figure src="/attachments/refguide/modeling/pages/image-and-file-widgets/image-uploader/page-example.png" >}}
+
+## 4 Read More
 
 * [Page](/refguide/page/)
 * [Images, Videos, and Files](/refguide/image-and-file-widgets/)

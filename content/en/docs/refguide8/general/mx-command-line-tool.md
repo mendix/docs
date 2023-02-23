@@ -13,7 +13,7 @@ The **mx tool** is a Windows and Linux command-line tool that can be used to do 
 
 ## 2 Location
 
-Mendix Studio Pro comes with the mx command-line tool. The executable `mx.exe` file can be found in the same folder that contains `studiopro.exe` (for example, *C:\Program Files\Mendix\8.1.0.58215\modeler\mx.exe*).
+Mendix Studio Pro comes with the mx command-line tool. The executable *mx.exe* file can be found in the same folder that contains `studiopro.exe` (for example, *C:\Program Files\Mendix\8.1.0.58215\modeler\mx.exe*).
 
 ## 3 mx Tool Options
 

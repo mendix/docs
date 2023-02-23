@@ -17,6 +17,18 @@ For information on the current status of deployment to Mendix Cloud and any plan
 
 ## 2023
 
+### February 21st, 2023
+
+#### Improvements
+
+* We now return HTTP headers for the SHA1 Fingerprint and Serial number of an authenticated Client Certificate. See [Mendix Cloud HTTP Request Headers](/developerportal/deploy/mendix-cloud-request-headers/) for more information.
+
+### February 16th, 2023
+
+#### Improvements
+
+* Customers can now download access logs for their applications. The Deploy API has also been updated with this functionality — see [Download Access Logs](/apidocs-mxsdk/apidocs/deploy-api/#download-logs) in *Deploy API* for more information.
+
 ### January 26th, 2023
 
 #### Improvements

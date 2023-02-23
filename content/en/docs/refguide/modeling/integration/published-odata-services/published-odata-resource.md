@@ -116,6 +116,8 @@ Select a combination of attributes with the following constraints:
 * Required – If one of the key attribute values is empty, you cannot find an object with it anymore.
 * Stable over time – The attribute values used for the key should not change, so that you can find it again later.
 
+Having an [index](/refguide/indexes/) for the key attribute(s) makes retrieving objects by key perform better.
+
 You can set unique and required constraints using [validation rules](/refguide/validation-rules/).
 
 {{% alert color="info" %}}

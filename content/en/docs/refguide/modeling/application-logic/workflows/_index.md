@@ -66,23 +66,23 @@ To add an element to a workflow, do the following:
 
 The selected element is added.
 
-### 3.5 Cut/Copy/Paste Elements in a Workflow
+### 3.5 Cutting/Coping/Pasting Elements in a Workflow
 
-To cut/copy/paste elements you can use <kbd>Ctrl</kbd> + <kbd>X</kbd> /  <kbd>Ctrl</kbd> + <kbd>C</kbd> / <kbd>Ctrl</kbd> + <kbd>V</kbd> or  <kbd>Cmd</kbd> + <kbd>X</kbd> /  <kbd>Cmd</kbd> + <kbd>C</kbd> / <kbd>Cmd</kbd> + <kbd>V</kbd>.
+To cut/copy/paste elements, use <kbd>Ctrl</kbd> + <kbd>X</kbd> /  <kbd>Ctrl</kbd> + <kbd>C</kbd> / <kbd>Ctrl</kbd> + <kbd>V</kbd> or  <kbd>Cmd</kbd> + <kbd>X</kbd> /  <kbd>Cmd</kbd> + <kbd>C</kbd> / <kbd>Cmd</kbd> + <kbd>V</kbd>.
 
-Mind the following characteristics when using cut/copy/paste:
+When using cut/copy/paste, note the following:
 
-* When cutting or copying an element, the clipboard will contain the whole structure of the element. For example, when copying a **User Task** with **Outcomes** which contain activities, the **User Task** and the **Outcomes** and its activities will be copied. 
-* When no element is selected, the clipboard content will be pasted at the end of the workflow.
-* When the start event is selected, the clipboard content will be pasted at the start of the workflow.
-* When an activity is selected, the clipboard content will be pasted under the selected activity.
-* When a branch is selected, the clipboard content will be pasted at the start of the selected branch.
+* When cutting or copying an element, the clipboard contains the whole structure of the element. For example, when copying a **User Task** with **Outcomes** which contain activities, the **User Task** and the **Outcomes** and its activities are copied. 
+* When no element is selected in the workflow, the clipboard content is pasted at the end of the workflow.
+* When the start event is selected, the clipboard content is pasted at the start of the workflow.
+* When an activity is selected, the clipboard content is pasted under the selected activity.
+* When a flow is selected, the clipboard content is pasted at the beginning of the selected flow.
 
-### 3.5.1 Annotations
+### 3.5.1 Pasting Annotations
 
-If the clipboard content is an **Annotation**, it can only be pasted onto the workflow or onto individual activities support annotations.
+If the clipboard contents has an **Annotation**, it can only be pasted into the workflow or into individual activities that support annotations.
 
-### 3.5.2 Elements that cannot be cut, copied or pasted
+### 3.5.2 Elements that Cannot be Cut, Copied or Pasted
 
 The following elements cannot be cut, copied or pasted:
 

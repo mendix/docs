@@ -17,11 +17,19 @@ For information on the current status of deployment to Mendix Cloud and any plan
 
 ## 2023
 
+### February 23rd, 2023
+
+#### Improvements
+
+* We have added OneAgent support for [Dynatrace](/developerportal/operate/dynatrace-metrics/) monitoring in the Mendix Cloud.
+* The `DT_TENANT` environment variable is now required for the Dynatrace integration.
+
 ### February 21st, 2023
 
 #### Improvements
 
 * We now return HTTP headers for the SHA1 Fingerprint and Serial number of an authenticated Client Certificate. See [Mendix Cloud HTTP Request Headers](/developerportal/deploy/mendix-cloud-request-headers/) for more information.
+
 
 ### February 16th, 2023
 

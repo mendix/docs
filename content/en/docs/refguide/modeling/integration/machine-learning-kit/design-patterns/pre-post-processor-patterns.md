@@ -52,7 +52,7 @@ Create Variable Activity
 > For instance, the output of the model that is called target_probability which is ranging from 0 and 1 can be converted into a binary value based on a threshold (0.80) value.
 
 2.1.3 Aggregation
-Some numerical features can be somewhat summarized using aggregation components. The most common aggregate functions are min(), max(), mean(), count(), sum(), etc. Those features could be very powerful features for use-cases like real-time data flow is a concern on time-series data. List Activities can be useful to calculate such features inside the microflows.
+Some numerical features can be somewhat summarized using aggregation components. The most common aggregate functions are min(), max(), mean(), count(), sum(), etc. Those features could be very powerful features for use-cases like real-time data flow is a concern on time-series data. [List activities](/refguide/list-activities/) can be useful to calculate such features inside the microflows.
  
 An aggregation activity
 
@@ -129,7 +129,7 @@ The post-processor is even simpler:
 Most of the code is related to creating a Map from Integer (the output of the model) to String (a valid class name) from a file that should be already in your artifacts folder and then returning it so that we can process it later.
 
 2.2.2 Java Actions for data transformation features
-A common step required in most non-structured data inference using neural networks is to resize the image, normalize, et al. For NLP, a similar flow would require text-cleaning, stop word removal, lemmatization, etc. These would require more complex tasks to be executed. As an example, we share the Pre- and post-processing required for inference using an image through the ResNet50 in the ONNX model zoo, essentially, resizing and normalization.
+A common step required in most non-structured data inference using neural networks is to resize the image, normalize, et al. For NLP, a similar flow would require text-cleaning, stop word removal, lemmatization, etc. These would require more complex tasks to be executed. As an example, we share the Pre- and post-processing required for inference using an image through the [ResNet50 in the ONNX model zoo](https://github.com/onnx/models/tree/main/vision/classification/resnet), essentially, resizing and normalization.
 2.2.2.1 Preprocessing
 As you can see, most of the code are the loops required for normalization and encoding
 
@@ -234,7 +234,7 @@ In this case, the bulk of the code is about creating a map for translating the i
 
 More often than not the pre- and post-processing steps are deeply coupled with the model being used, thus, supporting in-file embedded, model-training creation time entities is so important. ONNX allows doing pretty much any pre and post-processor except, maybe, in the most convoluted use cases, and even more so, these probably will be covered in the future as the format grows and expands.
 2.3.1 Embedded ONNX Operators
-There is an extensive list of ONNX Operators that can be embedded into the model file in order to perform several kinds of calculations. Several examples are also available online to demonstrate how this can be achieved. A specific example could be this spam filter trained out of a simple corpus that integrates a count-vectorizer into the ONNX file via a pipeline:
+There is an extensive [list of ONNX Operators](https://github.com/onnx/onnx/blob/main/docs/Operators.md) that can be embedded into the model file in order to perform several kinds of calculations. Several [examples](https://towardsdatascience.com/creating-onnx-from-scratch-4063eab80fcd) are also available online to demonstrate how this can be achieved. A specific example could be this spam filter trained out of a simple corpus that integrates a count-vectorizer into the ONNX file via a pipeline:
 
 
     from skl2onnx import to_onnx
@@ -280,7 +280,7 @@ ResNet Pre-processor and Model Inference in Separate MLKit Activities
 ![](https://paper-attachments.dropboxusercontent.com/s_5E4F633166D614F309877C2287B1B3E5F838F0D45F24422C0A4FECBB43036E88_1673961577771_image.png)
 
 
-The below code snippet creates a preprocessor ONNX artifact that contains the necessary feature pre-processor transformation steps by the ResNet models that can be found in the ONNX Zoo.
+The below code snippet creates a preprocessor ONNX artifact that contains the necessary feature pre-processor transformation steps by the [ResNet models](https://github.com/onnx/models/tree/main/vision/classification/resnet) that can be found in the ONNX Zoo.
 
 
     
@@ -327,7 +327,7 @@ The below code snippet creates a preprocessor ONNX artifact that contains the ne
     onnx.save(model_def, 'preprocessor.onnx')
 
 2.3.2 Modifying ONNX Graphs
-The computation graph of an existing ONNX artifact can be altered in various ways. An ONNX operator (node) can be added or removed, or replaced with another operator. Python API of the ONNX provides a bunch of tools to make modifications to existing artifacts.
+The computation graph of an existing ONNX artifact can be altered in various ways. An ONNX operator (node) can be added or removed, or replaced with another operator. [Python API](https://github.com/onnx/onnx/blob/rel-1.9.0/docs/PythonAPIOverview.md) of the ONNX provides a bunch of tools to make modifications to existing artifacts.
 ONNX model is represented using protocol buffers. Dealing with ONNX protocol buffer is complicated and error-prone. The ONNX protocol buffer representation also depends on ONNX IR version and OpSet version.
 
 

@@ -1,6 +1,6 @@
 ---
 title: "Pre/Post-Processor Design Patterns"
-url: /refguide/machine-learning-kit/pre-post-processor-patterns/
+url: /refguide/machine-learning-kit/design-patterns/pre-post-processor-patterns/
 category: Design Patterns
 weight: 35
 tags: ["studio pro", "machine learning", "ml kit", "models", "design patterns"]
@@ -9,8 +9,6 @@ tags: ["studio pro", "machine learning", "ml kit", "models", "design patterns"]
 [Machine learning model support is currently in [Beta](/releasenotes/beta-features/).
 
 ## 1 Introduction
-
-2 Pre-processor and Post-processor Design Patterns
 
 An ML algorithm typically gets and returns numerical values in various shapes (scalar, vector, matrix, etc.) as input and output. However, the input data in our applications could be used and stored in different formats like string, JPG, PNG, mp3, etc. Similarly, an output of an ML model could not be interpreted by our applications and need to be converted into a different data representation format. Therefore, we need pre- / post-processors to make the necessary data representation conversions in our ML-based applications in order to feed the ML model with the correct input data format and parse the relevant output. Mendix developers have multiple choices when it comes to implementing pre- / post-processors.
 

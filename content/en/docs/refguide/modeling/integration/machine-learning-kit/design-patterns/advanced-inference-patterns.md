@@ -1,17 +1,14 @@
 ---
 title: "Advanced Inference Design Patterns"
-url: /refguide/machine-learning-kit/
+url: /refguide/machine-learning-kit/design-patterns/advanced-inference/
 category: Design Patterns
 weight: 35
 tags: ["studio pro", "machine learning", "ml kit", "models", "design patterns"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
-
-## 1 Introduction
-
 [Machine learning model support is currently in [Beta](/releasenotes/beta-features/).
 
-1 Advanced Inference Design Patterns
+## 1 Introduction
 
 1.1 Ensembles
 

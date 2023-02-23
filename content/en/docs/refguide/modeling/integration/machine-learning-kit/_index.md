@@ -1,15 +1,14 @@
 ---
-title: "Machine Learning Kit"
+title: "Integrate Machine Learning Models with ML Kit"
 url: /refguide/machine-learning-kit/
 category: Integration
 weight: 35
 tags: ["studio pro", "machine learning", "ml kit", "models"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
+[Machine learning model support is currently in [Beta](/releasenotes/beta-features/).
 
 ## 1 Introduction
-
-[Machine learning model support is currently in [Beta](/releasenotes/beta-features/).
 
 In Studio Pro [9.23] and above, you can build apps that support integration with machine learning models. Collectively called the Mendix Machine Learning (ML) Kit, these functionalities are built using common AI framework and language, and include deployment support for common AI frameworks.
 
@@ -23,7 +22,7 @@ The ONNX Runtime is based on the ONNX standard, and is an optimized inference en
 
 ### 2.1 Converting Your Model to ONNX {#convert-ml-model}
 
-To embed your ML model into a Mendix app, you need to convert your model into the ONNX format. Depending upon the frameworks and tools used to create the ML model, there are many tools and sources to convert a model to ONNX format. 
+To embed your ML model into a Mendix app, you need to convert your model into the ONNX format. Depending upon the frameworks and tools used to create the ML model, there are many tools and sources to convert a model to ONNX format.
 
 Examples include the following:
 
@@ -44,7 +43,7 @@ This will generate two non-persistable entities representing your ML Model input
 
 {{< figure src="/attachments/refguide/modeling/integration/ml-kit/ml-kit/ml-model-created-entities.png" alt="Two non-persistable entities generated when importing an ONNX file." >}}
 
-If error CE1790 is thrown, you will need to [set dynamic tensor shapes](#tensor-shapes).
+If error CE1790 appears, you will need to [set dynamic tensor shapes](#tensor-shapes).
 
 #### 2.2.1 Locating the Model Directory {#model-directory}
 
@@ -52,12 +51,11 @@ The ML model in ONNX format will be placed in the `mlsource/<your_module_name>` 
 
 {{< figure src="/attachments/refguide/modeling/integration/ml-kit/ml-kit/mlsource-location.png" alt="Location of the ML model in a file explorer." >}}
 
-Store any additional files in the same directory, including the following:
-
-* Text files for storing class names
-* Additional files that your model or ML process uses (encoders, text files, corpora)
+{{% alert color="info" %}}
+Store any additional files in the same directory, including text files for storing class names and additional files that your model or ML process uses (encoders, text files, corpora).
 
 This way, the files will be packaged with your app, and you can easily refer to them in microflow actions.
+{{% /alert %}}
 
 #### 2.2.2 Setting Tensor Shapes {#tensor-shapes}
 
@@ -110,7 +108,7 @@ To do so, open the entity Properties in the Domain Model, and select Yes in the 
 
 You now have a Persistable entity in your Domain Model that you can set as the type you need, and that can be used in pre- and post-processors [link to section].
  
-### 2.3 Using the Model in a Microflow
+### 2.3 Using the Model in a Microflow {#use-model-microflow}
 
 Once the ML mapping document is created, the ML model is available in the Studio Pro. Use the Call ML model activity in microflows to call and use your ML model in your application logic.
 
@@ -244,17 +242,17 @@ You can look into the CVPublicDemo app for more complex examples of Java Actions
 
 To ensure that your model will work with the Call ML Model action, follow the guidelines in this section.
 
-The MLKit comes with native support to ONNX Runtime, which means Mendix developers are free to use the right machine learning framework or library for their use cases. Mendix developers can use the native ONNX operators or use the major machine learning libraries like Tensorflow, PyTorch, scikit-learn, XGBoost, etc. to develop their models, preprocessing, and post-processing actions.
-To learn more about design patterns that can be applied to the Inference process, and  specifications that for pre/post-processing while using Mendix components, Java Actions, or embedding it into the model directly, see [Design Patterns].
+To learn more about design patterns that can be applied to the Inference process, and specifications that for pre/post-processing while using Mendix components, Java Actions, or embedding it into the model directly, see [Design Patterns].
 
 ### 4.1 Model Building
 
-The MLKit comes with native support to ONNX Runtime, which means Mendix developers are free to use the right machine learning framework or library for their use cases. Mendix developers can use the native ONNX operators or use the major machine learning libraries like Tensorflow, PyTorch, XGBoost, etc. to develop their models, preprocessing, and post-processing actions.
+The MLKit comes with native support to ONNX Runtime, which means Mendix developers are free to use the right machine learning framework or library for their use cases. Mendix developers can use the native ONNX operators or use the major machine learning libraries like Tensorflow, PyTorch, scikit-learn, XGBoost, etc. to develop their models, preprocessing, and post-processing actions.
 The artifacts (HDF5, protocol buffers, pickle, etc.) should be converted to ONNX computation graphs in order to integrate them into apps using the ML Kit. ONNX community develops and maintains the converters for many ML frameworks. Please check out the ONNX repository for further information.
 
 Please follow the link for getting information on supported tools.
 
 ### 4.2 Pre-Trained Models
+
 To integrate a pre-built (propriety or public) ML model into a Mendix app, please take into the account the following:
 
 - Compatibility of the model internal representation (IR) version with the ML Kit
@@ -264,6 +262,7 @@ See [Versioning] for details on versioning schemes
 The ONNX community provides a model repository, called ONNX Zoo, where common computer vision and language models can be found.
 
 ### 4.3 Versioning {#versioning}
+
 Use ONNX versioning schemes while creating ONNX computation graphs and integrating them with Mendix apps using the ML Kit. Mendix Studio Pro guides developers to comply with the suggested internal representation, and package OpSets. In case of version conflicts in models (or pre- / post-processors), it is recommended to use the version converter tool to align with the suggested IR and OpSets.
 Here is the link to extended information about the ONNX versioning scheme. The released versions of the ML Kit and supported ONNX Runtime versions can be found below.
 
@@ -320,7 +319,6 @@ When we run the application and provide an image to make an inference, the Studi
 A similar log message can also be placed after pre-processing actions to observe the output of the pre-processing step. However, this approach is not feasible to analyze the multidimensional inputs and outputs as Base64 encodings of the multidimensional arrays are not human-readable and need additional conversion logic.
 In general, the transformation of the multidimensional arrays is subject to Java Actions. Exploiting debugging tools or using logging mechanisms inside the Java Actions will help Mendix developers easily debug the state of the variables. Here is a link to the official document about debugging Java Actions.
  
-
 ## 6 Known Issues
 
 ### 6.1 I/O Data Types
@@ -354,26 +352,29 @@ This is not supported.
 
 ## 7 FAQs
 
-My model did not import properly
+1.  My model did not import properly.
+   
+    This may indicate a corrupt model file. Studio Pro supports importing a wide variety of models, ranging from simple logistic regressors to Whisper, and a wide range of Computer Vision models, so as far as the model is properly imported into ONNX and complies with the standard, Studio Pro will be able to run it.
 
-This may indicate a corrupt model file. Studio Pro supports importing a wide variety of models, ranging from simple logistic regressors to Whisper, and a wide range of Computer Vision models, so as far as the model is properly imported into ONNX and complies with the standard, Studio Pro will be able to run it.
+    Try re-downloading the model or verifying the conversion process.
 
-Try re-downloading the model or verifying the conversion process.
+2.  My model outputs diverge from my training environment from the results in Studio Pro.
+   
+    When converting your model to ONNX, and especially if you use Pre and Post processors, there will be type casting/conversion.
+    We recommend double-checking that all the new types you use and the mathematical operations you conduct in your java actions if you use pre/post processor are suitable for the Types the model expect/uses, I.E, a division is casted to float if a float is expected, etc.
 
-My model outputs diverge from my training environment from the results in Studio Pro
-When converting your model to ONNX, and especially if you use Pre and Post processors, there will be type casting/conversion.
-We recommend double-checking that all the new types you use and the mathematical operations you conduct in your java actions if you use pre/post processor are suitable for the Types the model expect/uses, I.E, a division is casted to float if a float is expected, etc.
+3.  My model crashes Studio Pro or its execution is too slow.
+   
+    Please mind that while the model file size is small, the outputs or inputs of it may be not so. Look this output for the detection model for EasyOCR.
 
-My model crashes Studio Pro or its execution is too slow.
-Please mind that while the model file size is small, the outputs or inputs of it may be not so. Look this output for the detection model for EasyOCR.
+    We have two outputs with the Rely281_dim and Transposeoutput_dim labels, both of them of 4 bytes length, as they’re float32. So, assuming we’re dealing with a standard 224x224 pixels image, we will receive a ~10 mb object. Should we deal with a larger image of 986 pixels, the memory footprint of that output grows to 133 mb, and that is for a single inference. A parallel microflow that calls ML Kit ten times will require obviously ten times more memory, thus probably crashing the JVM.
 
-We have two outputs with the Rely281_dim and Transposeoutput_dim labels, both of them of 4 bytes length, as they’re float32. So, assuming we’re dealing with a standard 224x224 pixels image, we will receive a ~10 mb object. Should we deal with a larger image of 986 pixels, the memory footprint of that output grows to 133 mb, and that is for a single inference. A parallel microflow that calls ML Kit ten times will require obviously ten times more memory, thus probably crashing the JVM.
+    The main takeaway point here is, mind the geometric growth of memory usage with very complex model outputs. See 2.2.3 for an example on how to mitigate this.
 
-The main takeaway point here is, mind the geometric growth of memory usage with very complex model outputs. See 2.2.3 for an example on how to mitigate this.
+    Another potential cause of crashing is, if there is an inconsistency between the architecture of the model and the data injected into it, especially with complex operations in models that accepts complex calculations such as neural networks. For example, if your model has a `Convolution` layer of shape `16x16x1`, injecting a tensor of a shape whose algebraic division results in an integer result smaller than 1 (such as an input of `[1,3,15,15]` , will have unpredictable consequences, among these, crashing StudioPro. As a rule of thumb, verify that the implementation of your model using MLKit matches, in shape and type of the data being sent into the component, the model architecture, whereas you trained it yourself using jupyter notebook -for instance-, or the model documentation if you obtained from third-party sources such as the ONNX Model Zoo.
 
-Another potential cause of crashing is, if there is an inconsistency between the architecture of the model and the data injected into it, especially with complex operations in models that accepts complex calculations such as neural networks. For example, if your model has a `Convolution` layer of shape `16x16x1`, injecting a tensor of a shape whose algebraic division results in an integer result smaller than 1 (such as an input of `[1,3,15,15]` , will have unpredictable consequences, among these, crashing StudioPro. As a rule of thumb, verify that the implementation of your model using MLKit matches, in shape and type of the data being sent into the component, the model architecture, whereas you trained it yourself using jupyter notebook -for instance-, or the model documentation if you obtained from third-party sources such as the ONNX Model Zoo.
+4.  I have an exception when executing the model or running it.
+  
+    This situation is the most difficult to solve as the causes may vary a lot, ranging from an incompatible Studio Pro version (See the Release Notes for which features are compatible and which are not) to a failure inside the model or a permission issues.
 
-I have an exception when executing the model or running it
-This situation is the most difficult to solve as the causes may vary a lot, ranging from an incompatible Studio Pro version (See the Release Notes for which features are compatible and which are not) to a failure inside the model or a permission issues.
-
-We recommend turning the logs to trace level, as the ML Engine provides a great deal of information on what is going on, and using this as a basis to decide next steps.
+    We recommend turning the logs to trace level, as the ML Engine provides a great deal of information on what is going on, and using this as a basis to decide next steps.

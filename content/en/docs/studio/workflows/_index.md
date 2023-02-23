@@ -114,11 +114,39 @@ To add an element to a workflow, do the following:
 
 The selected element is added.
 
-### 2.8 Triggering a Workflow
+### 2.8 Cut/Copy/Paste Elements in a Workflow
+
+To cut/copy/paste elements you can use <kbd>Ctrl</kbd> + <kbd>X</kbd> /  <kbd>Ctrl</kbd> + <kbd>C</kbd> / <kbd>Ctrl</kbd> + <kbd>V</kbd> or  <kbd>Cmd</kbd> + <kbd>X</kbd> /  <kbd>Cmd</kbd> + <kbd>C</kbd> / <kbd>Cmd</kbd> + <kbd>V</kbd>.
+
+Mind the following characteristics when using cut/copy/paste:
+
+* When cutting or copying an element, the clipboard will contain the whole structure of the element. For example, when copying a **User Task** with **Outcomes** which contain activities, the **User Task** and the **Outcomes** and the activities will be copied.
+* When no element is selected, the clipboard content will be pasted at the end of the workflow.
+* When the start event is selected, the clipboard content will be pasted at the start of the workflow.
+* When an activity is selected, the clipboard content will be pasted under the selected activity.
+* When a branch is selected, the clipboard content will be pasted at the start of the selected branch.
+
+### 2.8.1 Annotations
+
+If the clipboard content is an **Annotation**, it can only be pasted onto the workflow or onto individual activities which support annotations.
+
+
+### 2.8.2 Elements that cannot be cut, copied or pasted
+
+The following elements cannot be cut, copied or pasted:
+
+* **Workflow** (this can be only be done in the [App Explorer](/refguide/app-explorer/#2-performing-basic-functions))
+* **WorkflowContext**
+* **Start activity**
+* **End activity** (this only holds true for the final **End activity** which is at the end of the **Workflow**)
+* **Outcomes**
+
+
+### 2.9 Triggering a Workflow
 
 You can trigger a workflow [from a page](#trigger-page) or [via a microflow](#trigger-microflow). 
 
-#### 2.8.1 Triggering a Workflow from a Page {#trigger-page}
+#### 2.9.1 Triggering a Workflow from a Page {#trigger-page}
 
 To start the workflow, you can add a widget with a specific on-click action on a page. For more information on on-click actions, see [Events Section](/studio/page-editor-widgets-events-section/).
 
@@ -133,7 +161,7 @@ Do the following:
 
 You have configured the button to trigger the workflow.
 
-#### 2.8.2 Triggering a Workflow via a Microflow {#trigger-microflow}
+#### 2.9.2 Triggering a Workflow via a Microflow {#trigger-microflow}
 
 To trigger a workflow via a microflow, you can add a **Call workflow** activity to the microflow. For more information on this activity, see [Workflow Activities](/studio/microflows/#microflow-workflow-activities) section in *Microflows*.  
 

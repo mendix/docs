@@ -11,10 +11,10 @@ tags: ["Dynatrace", "Mendix Cloud", "monitoring", "analysis"]
 
 [Dynatrace](https://www.dynatrace.com/) is a monitoring and analysis tool for cloud applications, providing monitoring of servers, databases, tools, and services through a SaaS-based data analytics platform. This document explains how to configure your Mendix Cloud app to send data to Dynatrace to provide additional monitoring.
 
-For Dynatrace monitoring, Dynatrace OneAgent is being used to collect metrics.
+For Dynatrace monitoring, [Dynatrace OneAgent](https://www.dynatrace.com/platform/oneagent/) is being used to collect metrics.
 
-In addition to auto-instrumented built-in metrics collected by the OneAgent, we also ingest custom application metrics. Custom application metrics are supported in Mendix version 9.7 and above.
-For more information on custom metrics you can send to Dynatrace, see [Monitoring Your Mendix Apps with an APM Tool](/developerportal/operate/monitoring-with-apm/).
+In addition to auto-instrumented built-in metrics collected by OneAgent, we also collect custom application metrics. Custom application metrics are supported in Mendix version 9.7 and above.
+For more information on the custom metrics you can send to Dynatrace, see [Monitoring Your Mendix Apps with an APM Tool](/developerportal/operate/monitoring-with-apm/).
 
 ## 2 Prerequisites
 
@@ -29,44 +29,44 @@ To use Dynatrace, and to send data to Dynatrace from your Mendix app, you will n
 
 ## 3 Connect Node to Dynatrace{#connect-node}
 
-To start ingesting metrics to Dynatrace for your Mendix app, you need to set it up using environment variables in the Developer Portal.
+To start sending your Mendix app's metrics to Dynatrace, you need to set some environment variables in the Developer Portal.
 
 1. Go to the **Environments** page of your app in the *Developer Portal*.
 2. Click **Details** to select the environment you wish to monitor with Dynatrace. 
 3. Open the [**Runtime** tab](/developerportal/deploy/environments-details/#runtime-tab).
 4. Add the following **Custom Environment Variable**s.
 
-    1. DT_SAAS_URL – *Required*
+    * DT_SAAS_URL – *Required*
 
         The url of Dynatrace environment. 
 
-        The format for using the Dynatrace SaaS environment is similar to `https://<your-environment-id>.live.dynatrace.com`
+        The format when using the Dynatrace SaaS environment is similar to `https://<your-environment-id>.live.dynatrace.com`.
 
-        The format for using a Dynatrace managed environment is similar to  `https://<your-dynatrace-domain>`
+        If you are using a Dynatrace managed environment you just need to provide the full URL of the Dynatrace domain, like  `https://<your-dynatrace-domain>`.
    
-    2. DT_TENANT – *Required*
+    * DT_TENANT – *Required*
 
-        The Dynatrace environment id, [Dynatrace Environment ID](https://www.dynatrace.com/support/help/get-started/monitoring-environment/environment-id)
+        The Dynatrace environment id, [Dynatrace Environment ID](https://www.dynatrace.com/support/help/get-started/monitoring-environment/environment-id).
 
-    3. DT_PAAS_TOKEN – *Required*
+    * DT_PAAS_TOKEN – *Required*
 
-        The access token for integrating your Mendix app with Dynatrace, [created on Dynatrace environment](https://www.dynatrace.com/support/help/get-started/access-tokens#create-api-token).
+        The access token for integrating your Mendix app with Dynatrace. You [create this on the Dynatrace environment](https://www.dynatrace.com/support/help/get-started/access-tokens#create-api-token).
 
         The token must include the `PaaS integration - Installer download` and `Ingest metrics` scopes.
    
-    4. DT_IS_MANAGED - *Optional*
+    * DT_IS_MANAGED - *Optional*
         
         Should be set to `true` if you are using Dynatrace Managed. The default is assumed to be Dynatrace SaaS and set to `false`.
 
         Only needed for custom application metrics ingestion.
 
-    5. DT_CLUSTER_ID - *Optional*
+    * DT_CLUSTER_ID - *Optional*
 
-        It can be used to tag your cluster, process group or deployment group
+        This can be used to tag your cluster, process group, or deployment group.
 
-    6. DT_CUSTOM_PROP - *Optional*
+    * DT_CUSTOM_PROP - *Optional*
 
-        It can be used to provide metadata for your process group, [Define metadata] (https://www.dynatrace.com/support/help/platform-modules/infrastructure-monitoring/process-groups/configuration/define-your-own-process-group-metadata)
+        This can be used to provide metadata for your process group. For more information, see [Define your own process group metadata](https://www.dynatrace.com/support/help/platform-modules/infrastructure-monitoring/process-groups/configuration/define-your-own-process-group-metadata) for more information about process group metadata.
 
 5. Return to the **General** tab and *restart* your environment.
 

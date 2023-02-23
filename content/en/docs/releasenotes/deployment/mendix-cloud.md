@@ -21,8 +21,8 @@ For information on the current status of deployment to Mendix Cloud and any plan
 
 #### Improvements
 
-* We have added OneAgent support for [Dynatrace](/developerportal/operate/dynatrace-metrics/) monitoring in Mendix Cloud V4.
-* `DT_TENANT` environment variable is now required for the Dynatrace integration.
+* We have added OneAgent support for [Dynatrace](/developerportal/operate/dynatrace-metrics/) monitoring in the Mendix Cloud.
+* The `DT_TENANT` environment variable is now required for the Dynatrace integration.
 
 ### February 21st, 2023
 

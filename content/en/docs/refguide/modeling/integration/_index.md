@@ -98,5 +98,5 @@ To work with machine learning models, see:
 * [Design Patterns](/refguide/machine-learning-kit/design-patterns/), an overview page that links to two documents about machine learning design patterns:
      * [Advanced Inference Design Patterns](/refguide/machine-learning-kit/design-patterns/advanced-inference/)
      * [Pre- and Post-Processor Design Patterns](/refguide/machine-learning-kit/design-patterns/pre-post-processor-patterns/)
-* [ML model mapping](/refguide/ml-model-mapping/), an entry in the Studio Pro guide about the [mapping document](/refguide/mapping-documents/) for machine learning models
+* [ML model mapping](/refguide/ml-model-mapping/), an entry in the Studio Pro guide about the service document for machine learning models
 * [Call ML Model](/refguide/call-ml-model/), about the microflow [activity](/refguide/activities/) to call an imported ML model in a microflow

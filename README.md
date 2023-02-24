@@ -1,4 +1,4 @@
-# Mendix Documentation [![badge](https://img.shields.io/badge/hugo-0.91.0-green.svg)](https://gohugo.io/) [![badge](https://img.shields.io/badge/node-16.14.0-green.svg)](https://nodejs.org/en/) [![badge](https://img.shields.io/badge/docsy-0.1.0-green.svg)](https://www.docsy.dev/)
+# Mendix Documentation [![badge](https://img.shields.io/badge/hugo-0.109.0-green.svg)](https://gohugo.io/) [![badge](https://img.shields.io/badge/node-18.14.0-green.svg)](https://nodejs.org/en/) [![badge](https://img.shields.io/badge/docsy-0.6.0-green.svg)](https://www.docsy.dev/)
 
 This repository contains the Mendix documentation, which is served on [https://docs.mendix.com](https://docs.mendix.com).
 
@@ -19,28 +19,22 @@ You can clone a local copy of the repository and build local previews. The Mendi
 
 #### Cloning the Repo
 
-To clone the repo there are a few things to keep in mind:
+To clone the repo please keep in mind:
 
 * If you are running on Windows, the directory path for the local directory should not be too long, otherwise some files will reach the limits of git’s file length. A base path of up to 50 characters works - 64 characters is currently too long.
-* If you are using a Git GUI-based tool (such as Sourcetree), make sure you have **Recurse submodules** checked. Github Desktop does this automatically for you.
-* If you are cloning the repo via Git commands from a terminal, run: `git clone --recurse-submodules https://github.com/mendix/docs`
-
-Clone the repo through one of the above mentioned methods. Check that you have content within the directory `/themes/docsy/`.
 
 #### Installing Dependencies
 
-1. Download and install [NodeJS](https://nodejs.org/en/download/). Use the version indicated at the top of this readme.
+1. Download and install the LTS version of [NodeJS](https://nodejs.org/en/download/).
 1. In a terminal at the root of the repository run: `npm install`.
-1. Download the [0.91 Hugo](https://github.com/gohugoio/hugo/releases/tag/v0.91.0) *extended* version.
-1. Extract hugo.exe from the archive and place it in the root of the repo directory. None of the other files are needed.
-
-Changes made to your local repository, such as adding the Hugo executable, should be excluded from git control. If any new/changed files are added to your uncommitted files, please do not commit the changes.
 
 ### Running the Server
 
 To run a local version of the site: 
 
-1. Run cmd: `hugo server --environment development`
+1. Run cmd: `./node_modules/.bin/hugo server --environment development`
+
+    The path syntax prefacing `hugo` may be different based on your operating system and terminal you use. 
 
     Once the site is built you will see a table indicating how many pages have been created. You will need to wait until the server is set up before you can see the site.
 

@@ -22,11 +22,7 @@ weight: 77
 
 ### DocumentTemplates
 
-#### DataGridColumn (Element)
-
-* We changed the default value of the `caption` property.
-
-#### StaticLabel and Title (Elements)
+#### DataGridColumn, StaticLabel, and Title (Element)
 
 * We changed the default value of the `caption` property.
 

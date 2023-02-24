@@ -29,7 +29,7 @@ With this feature, you can do the following:
 * Remove an existing Security Contact and replace it with a newer one
 * Adjust the Security Contact’s name 
 
-For more information on security, see [Security Advisories](/releasenotes/security-advisories/).
+For more information on security issues, see [Security Advisories](/releasenotes/security-advisories/).
 
 #### Fixes
 

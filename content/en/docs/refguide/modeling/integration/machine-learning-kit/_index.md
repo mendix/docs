@@ -1,5 +1,5 @@
 ---
-title: "Machine Learning Models"
+title: "Integrate Machine Learning Models"
 url: /refguide/machine-learning-kit/
 category: Integration
 weight: 35
@@ -10,13 +10,13 @@ tags: ["studio pro", "machine learning", "ml kit", "models"]
 
 ## 1 Introduction
 
-In Studio Pro [9.23](/releasenotes/studio-pro/9.23/) and above, you can build apps that support integration with machine learning models. Collectively called the *Machine Learning (ML) Kit*, these functionalities are built using common AI framework and language, and include common AI framework deployment support.
+In Studio Pro [9.23](/releasenotes/studio-pro/9.23/) and above, you can deploy apps that integrate with machine learning models. Collectively called the *Machine Learning (ML) Kit*, this functionality is built using common AI framework and language, and include common AI framework deployment support.
 
-This guide gives a detailed overview of *ML Kit* functionality. Check out other documents about *ML Kit* components in the [Read More](#readmore) section.
+{{% alert color="info" %}}This guide gives a detailed overview of *ML Kit* functionality. Check out other documents about *ML Kit* components in the [Read More](#readmore) section.{{% /alert %}}
 
 ### 1.1 Under the Hood {#ml-kit-hood}
 
-The Mendix ML Kit is built with the Open Neural Network Exchange ([ONNX](https://onnx.ai/)), an open source framework [co-developed by Microsoft and Facebook in 2017]([co-developed by Microsoft and Facebook](https://azure.microsoft.com/en-us/blog/microsoft-and-facebook-create-open-ecosystem-for-ai-model-interoperability/)) to enable framework interoperability. ONNX is an open standard format representing machine learning models. Models trained with various frameworks, from scikit-learn to PyTorch or TensorFlow, can be converted to ONNX.
+Mendix *ML Kit* is built with the Open Neural Network Exchange ([ONNX](https://onnx.ai/)), an open source framework [co-developed by Microsoft and Facebook in 2017]([co-developed by Microsoft and Facebook](https://azure.microsoft.com/en-us/blog/microsoft-and-facebook-create-open-ecosystem-for-ai-model-interoperability/)) to enable framework interoperability. ONNX is an open standard format representing machine learning models. Models trained with various frameworks, from scikit-learn to PyTorch or TensorFlow, can be converted to ONNX.
 
 The ONNX Runtime is based on the ONNX standard, and is an optimized inference engine for efficiently running any model converted to the ONNX format across different hardware and operating systems with minimum effort. Due to this framework interoperability nature of ONNX, ONNX Runtime improves the development efficiency from model training to inference. With the ML Kit, we have extended Mendix runtime with ONNX runtime. ONNX bridges the gap between AI frameworks and Mendix.
 

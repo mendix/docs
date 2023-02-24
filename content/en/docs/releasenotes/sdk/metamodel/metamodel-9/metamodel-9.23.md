@@ -26,11 +26,7 @@ weight: 77
 
 * We changed the default value of the `caption` property.
 
-#### StaticLabel (Element)
-
-* We changed the default value of the `caption` property.
-
-#### Title (Element)
+#### StaticLabel and Title (Elements)
 
 * We changed the default value of the `caption` property.
 
@@ -58,23 +54,12 @@ weight: 77
 
 #### ConfirmationInfo (Element)
 
-* We changed the default value of the `question` property.
-* We changed the default value of the `proceedButtonCaption` property.
-* We changed the default value of the `cancelButtonCaption` property.
+* We changed the default values of the `question`, `proceedButtonCaption`, and `cancelButtonCaption` properties.
 
-#### DropDownButtonItem (Element)
+#### DropDownButtonItem, SearchField, and TabPage (Elements)
 
 * We changed the default value of the `caption` property.
 
 #### GridColumn (Element)
 
-* We changed the default value of the `caption` property.
-* We changed the default value of the `aggregateCaption` property.
-
-#### SearchField (Element)
-
-* We changed the default value of the `caption` property.
-
-#### TabPage (Element)
-
-* We changed the default value of the `caption` property.
+* We changed the default values of the `caption` and `aggregateCaption` properties.

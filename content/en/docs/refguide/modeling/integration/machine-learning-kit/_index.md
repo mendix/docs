@@ -76,7 +76,7 @@ Several models (including EasyOCR and Yolo) have tensors with dynamic shapes. In
 
 ###### 2.2.2.2.1 Setting Dynamic Tensor Shape Mapping (Error 1790) {#set-dynamic-shapes}
 
-When importing your model, you might encounter error CE1790. Go to the error and double-click on the affected mapping line to open the Edit ML model input shapes dialog box:
+When importing your model, you might encounter error CE1790. Go to the error and double-click on the affected mapping line to open the **Edit ML model input shape**s dialog box:
 
 {{< figure src="/attachments/refguide/modeling/integration/ml-kit/ml-kit/edit-model-input-shapes.png" alt="Edit ML model input shape dialog box." >}}
 
@@ -129,7 +129,7 @@ The images below show an example of a logistic regression, its [netron.app](http
 
 {{< figure src="/attachments/refguide/modeling/integration/ml-kit/ml-kit/call-ml-mapping.png" alt="Example of the mapping call." >}}
 
-Create pre-processed inputs with Create Object Action for inference inside your Mendix App, and consume the inference output with microflow [expressions](/refguide/expressions/).
+Create pre-processed inputs with **Create object** activity for inference inside your Mendix App, and consume the inference output with microflow [expressions](/refguide/expressions/).
 
 A **Create Object** activity is used for the first part in order to transfer entities from the Domain Model to the model input object. 
 
@@ -222,7 +222,7 @@ The rationale for using a post-processor is quite similar to the pre-processor b
     }
 ```
 
-You can look into the CVPublicDemo app for more complex examples of Java Actions. It covers using a ResNet50 Neural Network, thus image pre-processing is required.
+For detailed information on pre-processing and post-processing patterns of machine learning designs, see [Pre/Post-Processor Design Patterns](/refguide/machine-learning-kit/design-patterns/pre-post-processor-patterns/).
 
 ## 4 Supported Frameworks and Libraries {#supported-frameworks}
 

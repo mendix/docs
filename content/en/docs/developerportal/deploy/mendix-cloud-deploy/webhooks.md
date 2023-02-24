@@ -116,3 +116,9 @@ When you push a model change to the [Git Team Server](/developerportal/collabora
   "repositoryType": "git"
 }
 ```
+
+## 6 Logging
+
+You will see log messages from the creation or update of your webhooks.
+
+We do not create a log message for when a webhook is triggered.

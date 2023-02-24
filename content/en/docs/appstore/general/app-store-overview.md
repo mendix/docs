@@ -69,7 +69,7 @@ The header for a component presents the following details:
     * The best practice is to download a component from the Marketplace functionality built into Studio Pro, because it then downloads directly into Studio Pro (for details on importing downloaded Marketplace content into Studio Pro, see the [Installing Marketplace Content](/appstore/general/app-store-content/#install) section in *Use Marketplace Content in Studio Pro*))
 * The premium icon is applied to components like solutions that require a subscription; some premium services also offer a free trial based on a predefined quota/limit
 
-    {{< figure src="/attachments/appstore/general/app-store-overview/premium.png"  width="100"  >}}
+    {{< figure src="/attachments/appstore/general/app-store-overview/premium.png"  width="50"  >}}
 
     * These components have a **Subscribe** button to configure your subscription (by selecting a specific plan and setting a **Technical Owner**) and a **Try for Free** button to start your free trial
     * If your company has an active subscription, click **Buy More** to buy more instances on the same or different plan.

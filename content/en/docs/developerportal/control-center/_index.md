@@ -144,8 +144,7 @@ If you have [configured single sign on using BYOIDP](/developerportal/control-ce
 
 {{< figure src="/attachments/developerportal/control-center/company-email-domains.png" width="650px" >}}
 
-You can also provide a specific **Security Contact** who will be informed if there are critical security-related issues in the Mendix provided platform supported components or modules. You can find all advisories at https://docs.mendix.com/releasenotes/security-advisories/.
-
+You can also provide a specific **Security Contact** who is informed if there are critical security-related issues in Mendix-provided platform-supported components or modules. 
 
 After you click **Add security contact** and add the required **Name** and **Email** address, a confirmation email is sent to the proposed contact. The recipient has seven days to click the link in the email and validate the Security Contact request. After seven days, the pending request is automatically removed. If the recipient has not received the confirmation email but is still within the seven-day validation timeframe, you can click **Resend confirmation email**.
 
@@ -156,6 +155,8 @@ For an existing **Security Contact**, there are two menu options available:
 Click **Edit** to edit the Security Contact's **Name**.
 
 Click **Delete** to delete the existing Security Contact. This is the first step in changing a validated Security Contact. After you make the deletion, you can add the new Security Contact.
+
+For more information on security issues, see [Security Advisories](/releasenotes/security-advisories/).
 
 ### 6.2 Mendix Admins
 

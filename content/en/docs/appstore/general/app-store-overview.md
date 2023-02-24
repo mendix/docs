@@ -76,10 +76,12 @@ The header for a component presents the following details:
     * If you have an active subscription or trial, click **View status** to go to the [Company Subscriptions](#company-subscriptions) page
     * These components also have a [Pricing](#tabs) tab
 * The **Request Demo** and **Contact Sales** buttons are only available for [industry solutions](#types)
-  <a id="usage"></a>The **Usage** section presents  the following information (depending on the type of component):
-    * The latest **Version** number of the component
-    * The Studio Pro version that the component **Requires** to work
-    * The type of [license](/appstore/general/share-app-store-content/#license) for the component
+
+<a id="usage"></a>The **Usage** section presents  the following information (depending on the type of component):
+
+* The latest **Version** number of the component
+* The Studio Pro version that the component **Requires** to work
+* The type of [license](/appstore/general/share-app-store-content/#license) for the component
 
 The **Publisher** section presents the name of the company who created the component as well as the **Date** when the component was first published.
 

@@ -21,7 +21,7 @@ To see the current status of the Mendix Developer Portal and Control Center, see
 
 #### New Features
 
-We have released a feature in Control Center where you can add and manage a [Security Contact](/developerportal/control-center/#company-details) for your company.  A Security Contact is informed if there are critical security-related issues in Mendix-provided platform-supported components or modules. 
+We have released a feature in Control Center where you can add and manage a [Security Contact](/developerportal/control-center/#company-details) for your company. A Security Contact is informed if there are critical security issues with the Mendix Platform and platform-supported Marketplace components.
 
 With this feature, you can do the following:
 

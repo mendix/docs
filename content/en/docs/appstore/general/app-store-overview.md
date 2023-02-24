@@ -53,7 +53,7 @@ The following filter options are also available:
 
 Clicking the tile of a Marketplace component will bring you to its details page with the sections described below.
 
-{{< figure src="/attachments/appstore/general/app-store-overview/component-details.jpg" >}}
+{{< figure src="/attachments/appstore/general/app-store-overview/component-details.png" >}}
 
 ### 3.1 Header and Usage
 
@@ -67,7 +67,10 @@ The header for a component presents the following details:
 * **Download** – click this to download the component
     * This is only available for components that have a file attached (meaning, all shared Studio Pro components, but not promotions)
     * The best practice is to download a component from the Marketplace functionality built into Studio Pro, because it then downloads directly into Studio Pro (for details on importing downloaded Marketplace content into Studio Pro, see the [Installing Marketplace Content](/appstore/general/app-store-content/#install) section in *Use Marketplace Content in Studio Pro*))
-* The **Premium** label is applied to components like solutions that require a subscription; some premium services also offer a free trial based on a predefined quota/limit
+* The premium icon is applied to components like solutions that require a subscription; some premium services also offer a free trial based on a predefined quota/limit
+
+    {{< figure src="/attachments/appstore/general/app-store-overview/premium.png" >}}
+
     * These components have a **Subscribe** button to configure your subscription (by selecting a specific plan and setting a **Technical Owner**) and a **Try for Free** button to start your free trial
     * If your company has an active subscription, click **Buy More** to buy more instances on the same or different plan.
     * If you have an active subscription or trial, click **View status** to go to the [Company Subscriptions](#company-subscriptions) page

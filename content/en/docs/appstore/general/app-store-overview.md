@@ -27,9 +27,7 @@ The home page is your entry point to the various parts of the Mendix Marketplace
 * Click **Add Content** to [share new Marketplace content](/appstore/general/share-app-store-content/) you have developed
 * Explore various [industry solutions](#industry) and[content types](#types).
 
-{{< figure src="/attachments/appstore/general/app-store-overview/home-page.jpg" >}}
-
-<a id="industry"></a>The Marketplace offers **Industry** solutions for manufacturing, financial services, and other industries.
+{{< figure src="/attachments/appstore/general/app-store-overview/home-page.png" >}}
 
 <a id="types"></a>The Marketplace offers the following **Content Types**:
 
@@ -43,11 +41,13 @@ The home page is your entry point to the various parts of the Mendix Marketplace
 | [Widgets](/appstore/widgets/) | Widgets are single user-interface elements like containers, drop-down menus, and buttons. Select a widget, configure it, and add it to pages and snippets in your app. |
 | **Platform Services** | These services for Mendix Platform integration accessible through the Marketplace include [Data Hub](/data-hub/). |
 
+<a id="industry"></a>The Marketplace offers **Industry** solutions for manufacturing, financial services, and other industries.
+
 The following filter options are also available:
 
+* **Rating**
 * **Compatibility**
 * **Tags**
-* **Rating**
 
 ## 3 Component Details Page {#details}
 
@@ -69,7 +69,7 @@ The header for a component presents the following details:
     * The best practice is to download a component from the Marketplace functionality built into Studio Pro, because it then downloads directly into Studio Pro (for details on importing downloaded Marketplace content into Studio Pro, see the [Installing Marketplace Content](/appstore/general/app-store-content/#install) section in *Use Marketplace Content in Studio Pro*))
 * The premium icon is applied to components like solutions that require a subscription; some premium services also offer a free trial based on a predefined quota/limit
 
-    {{< figure src="/attachments/appstore/general/app-store-overview/premium.png" >}}
+    {{< figure src="/attachments/appstore/general/app-store-overview/premium.png"  width="100"  >}}
 
     * These components have a **Subscribe** button to configure your subscription (by selecting a specific plan and setting a **Technical Owner**) and a **Try for Free** button to start your free trial
     * If your company has an active subscription, click **Buy More** to buy more instances on the same or different plan.

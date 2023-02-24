@@ -25,7 +25,7 @@ For information on the current status of deployment to Mendix Cloud and any plan
 * The `DT_TENANT` environment variable is now required for the Dynatrace integration.
 
 * We have enabled DNSSEC to authenticate DNS lookups for `cname.mendix.net`.
-    * This also means that custom domains for applications in the Mendix Cloud will validate using DNSSEC, provided it is also enabled for the custom domain.
+    * This means that custom domains for applications in the Mendix Cloud will validate using DNSSEC, provided it is also enabled for the custom domain.
 
 ### February 21st, 2023
 

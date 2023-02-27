@@ -820,6 +820,17 @@ The activity indicator widget displays a circular loading indicator. This is how
 
 {{< figure src="/attachments/refguide/mobile/native-mobile/native-styling-refguide/activity-indicator.png" alt="activity indicator"   width="350"  >}}
 
+```javascript
+export const com_mendix_widget_native_activityindicator_ActivityIndicator = {
+  container: {
+    // This has all ViewStyle properties.
+  },
+  indicator: {
+    color, defaults to `gray`: // This is the color of the indicator.
+    size, defaults to `large`: // Possible values for indicator are `large` and `small`.
+};
+```
+
 | Element | Style Properties    | Description |
 | --- | --- | --- |
 | `container` | This has all ViewStyle properties. |  |

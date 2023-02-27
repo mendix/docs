@@ -11,6 +11,8 @@ tags: ["studio pro", "machine learning", "ml kit", "models"]
 
 ## 1 Introduction
 
+Design patterns are implementation patterns for machine learning models. The documents in this section include ideas, guidance, and specifications when using specific patterns with *ML Kit*.
 
+For detailed information on working with machine learning models in Studio Pro, see [Integrate Machine Learning Models](/refguide/machine-learning-kit/).
 
 ## 2 Documents in This Category

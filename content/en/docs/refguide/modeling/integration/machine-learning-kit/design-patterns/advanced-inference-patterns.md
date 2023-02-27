@@ -14,11 +14,10 @@ The [Integrating Models with Pre-processors and Post-processors](/refguide/machi
 
 This document explores four common advanced inference design patterns for machine learning models. These include the following:
 
-- [1 Introduction](#1-introduction)
-  - [1.1 Ensembles {#ensembles}](#11-ensembles-ensembles)
-  - [1.2 Cascaded Inference {#cascaded-inference}](#12-cascaded-inference-cascaded-inference)
-  - [1.3 Machine Learning MaaS (Model as a Service) {#maas}](#13-machine-learning-maas-model-as-a-service-maas)
-  - [1.4 Batch Inference {#batch-inference}](#14-batch-inference-batch-inference)
+* [Ensembles](#ensembles)
+* [Cascaded inference](#cascaded-inference) patterns
+* [Machine learning model as a service](#maas) patterns
+* [Batch inference](#batch-inference) patterns
 
 ### 1.1 Ensembles {#ensembles}
 
@@ -65,6 +64,5 @@ A common pattern for machine learning applications is the ability to run multipl
 You can add 1 as the first element and the model will work with a batch size of 1, or whatever figure you desire and work with any elements at the time:
 
 {{< figure src="/attachments/refguide/modeling/integration/ml-kit/design-patterns/advanced-inference-patterns/resnet50-dynamic-parameter.png" alt="ResNet50 with a batch size of 10." >}}
-
 
 Adjust your pre/post processor to send/receive the correct batch size.

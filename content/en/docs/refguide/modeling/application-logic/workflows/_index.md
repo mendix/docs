@@ -83,11 +83,11 @@ When using cut/copy/paste, note the following:
 
 The following elements cannot be cut, copied or pasted:
 
-* **Workflow** (this can be only be done in the [App Explorer](/refguide/app-explorer/#2-performing-basic-functions))
-* **WorkflowContext**
-* **Start activity**
-* **End activity** (this only holds true for the final **End activity** which is at the end of the **Workflow**)
-* **Outcomes**
+* Workflow (this can be only be done in the [App Explorer](/refguide/app-explorer/#2-performing-basic-functions))
+* WorkflowContext
+* Start activity
+* End activity (the final **End activity** which is at the end of the workflow)
+* Outcomes (meaning outcomes of different outgoing flows from an activity that can have several flows, for example, a Decision)
 
 ### 3.6 Viewing Element Properties 
 

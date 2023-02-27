@@ -10,7 +10,7 @@ tags: ["studio pro", "machine learning", "ml kit", "models"]
 
 ## 1 Introduction
 
-In Studio Pro [9.23](/releasenotes/studio-pro/9.23/) and above, you can deploy apps that integrate with machine learning models. Collectively called the *Machine Learning (ML) Kit*, this functionality is built using common AI framework and language, and include common AI framework deployment support.
+Studio Pro [9.23](/releasenotes/studio-pro/9.23/) and above supports machine learning (ML) model integration in Menidx apps. Collectively called the *Machine Learning (ML) Kit*, this functionality is built using common AI framework and language, and include common AI framework deployment support.
 
 {{% alert color="info" %}}This guide gives a detailed overview of *ML Kit* functionality. Check out other documents about *ML Kit* components in the [Read More](#readmore) section.{{% /alert %}}
 

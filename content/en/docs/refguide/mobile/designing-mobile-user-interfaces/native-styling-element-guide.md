@@ -564,6 +564,56 @@ A date picker is an input widget that can be used to display and edit date or ti
 
 {{< figure src="/attachments/refguide/mobile/native-mobile/native-styling-refguide/date-picker.png" alt="date picker"   width="300"  >}}
 
+```javascript
+export const DatePicker = {
+  container: {
+    // All ViewStyle properties
+  },
+  containerDisabled: {
+    // All ViewStyle properties. Same properties as `container`. Overrides `container` styles if the text box is non-editable.
+  },
+  label: {
+    // This has all TextStyle properties.
+    // Render mode: Both.
+    numberOfLines, defaults to `1`: // The maximum number of lines to wrap the label text. If the text is any longer it will be cut off with an ellipsis. Render mode: Both.
+  },
+  labelDisabled: {
+    // Same properties as `label`. Overrides `label` styles if the check box is non-editable.
+    // Render mode: Both.
+  },
+  value: {
+    // This has all TextStyle properties.
+    ripplecolor, defaults to `rgba(0, 0, 0, 0.2)`: // This is the color of the ripple on Android, and will be applied only when the date picker is pressed.
+    underlayColor: // This is the color while pressing the date picker on iOS, if not set it will be defaulted to opacity only.
+  },
+  valueDisabled: {
+    // This has all TextStyle properties. Overrides `value` styles if the date picker is non-editable.
+  },
+  valueContainerError: {
+    // This has all TextStyle properties. Overrides `value` styles if the date picker has a validation error.
+  }, 
+  placeholder: {
+    // This has all TextStyle properties.
+  },
+  placeholderDisabled: {
+    // This has all TextStyle properties.  Overrides `placeholder` styles if the date picker is non-editable.
+  },
+  validationMessage: {
+    // This has all TextStyle properties.
+  },
+  pickerBackdropIOS: {
+    // This has all Viewstyle properties.
+  },
+  pickerIOS: {
+    // This has all Viewstyle properties.
+    color
+  },
+  pickerTopIOS: {
+    // This has all Viewstyle properties.
+  },
+};
+```
+
 | Element | Style Properties    | Description |
 | --- | --- | --- |
 | `container` | This has all ViewStyle properties. |  |

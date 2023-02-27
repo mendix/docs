@@ -63,6 +63,6 @@ A common pattern for machine learning applications is the ability to run multipl
 
 You can add 1 as the first element and the model will work with a batch size of 1, or whatever figure you desire and work with any elements at the time:
 
-{{< figure src="/attachments/refguide/modeling/integration/ml-kit/design-patterns/advanced-inference-patterns/resnet50-dynamic-parameter.png" alt="ResNet50 with a batch size of 10." >}}
+{{< figure src="/attachments/refguide/modeling/integration/ml-kit/design-patterns/advanced-inference-patterns/restnet-50-batch-size-10.png" alt="ResNet50 with a batch size of 10." >}}
 
 Adjust your pre/post processor to send/receive the correct batch size.

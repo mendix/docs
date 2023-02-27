@@ -36,6 +36,7 @@ Alternatives to using OIDC SSO for managing single sign on are:
 * **API consumption.** If your app makes calls to APIs of other services on behalf of your end-user, you can use the access token obtained via the “OIDC SSO” module. This scenario is not supported when using SAML SSO. This makes the OIDC SSO module suitable for Mendix customers using Mendix Data Hub.
 * **Authorizing access to a Mendix back-end app.**  If you want to secure APIs in Mendix back-end apps using an access token, your API can use an access token passed by the calling app in the authorization header. If the access token is a JWT, your app can use the user and/or the user’s authorizations to assign user roles based on the claims in the access token JWT. 
 * **Xcelerator apps.** Your Siemens Xcelerator app is designed to be integrated with Siemens' SAM IdP.  The Siemens SAM IdP supports the OIDC protocol and allows your app to delegate both authentication (login) and authorization (roles).
+* **Apps that use Amazon Cognito for customer access management**. As a widely used SSO solution, Amazon Cognito is fully compatible with OIDC SSO module. For more information about configuring the OIDC SSO module to work with the Amazon Cognito service, see [Use the OIDC SSO Module with the Amazon Cognito Service](/appstore/connectors/aws/oidc-sso-for-amazon-cognito/).
 
 ### 1.2 Features and Limitations
 

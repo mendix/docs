@@ -10,9 +10,19 @@ tags: ["studio pro", "machine learning", "ml kit", "models", "design patterns"]
 
 ## 1 Introduction
 
-### 1.1 Ensembles
+The [Integrating Models with Pre-processors and Post-processors](/refguide/machine-learning-kit/#pre-post-processors) section of *Integrate Machine Learning Models* outlines considerations when importing a machine learning model with advanced processing needs. What are the standards for these models, and what do they look like? 
 
-When dealing with a lot of variance on a dataset or many features versus a relatively low number of data available, you can use ensemble models. Ensemble models are a machine learning approach to combine multiple other models, called base estimators, in the prediction process. Ensemble models offer a solution to overcome the technical challenges of building a single estimator. In this approach, the same data points are sent to a group of models and then collect all the predictions to find the best prediction.
+This document explores four common advanced inference design patterns for machine learning models. These include the following:
+
+- [1 Introduction](#1-introduction)
+  - [1.1 Ensembles {#ensembles}](#11-ensembles-ensembles)
+  - [1.2 Cascaded Inference {#cascaded-inference}](#12-cascaded-inference-cascaded-inference)
+  - [1.3 Machine Learning MaaS (Model as a Service) {#maas}](#13-machine-learning-maas-model-as-a-service-maas)
+  - [1.4 Batch Inference {#batch-inference}](#14-batch-inference-batch-inference)
+
+### 1.1 Ensembles {#ensembles}
+
+Ensemble models are used when dealing with a lot of variance on a dataset or many features versus a relatively low number of data available. Ensemble models are a machine learning approach to combine multiple other models, called *base estimators*, in the prediction process. Ensemble models offer a solution to overcome the technical challenges of building a single estimator. In this approach, the same data points are sent to a group of models and then collect all the predictions to find the best prediction.
 
 {{< figure src="/attachments/refguide/modeling/integration/ml-kit/design-patterns/advanced-inference-patterns/design-pattern-ensembles.png" alt="." >}}
 
@@ -24,33 +34,37 @@ Domain Model of an ensemble model:
 
 {{< figure src="/attachments/refguide/modeling/integration/ml-kit/design-patterns/advanced-inference-patterns/ensembles-example-microflow.png" alt="." >}}
 
-### 1.2 Cascaded Inference
+### 1.2 Cascaded Inference {#cascaded-inference}
 
-This pattern refers to the ability to feed the output of one model into another, in a cascade pattern. Normally it is used to compensate for a model bias, or incomplete data, in such a way you could use another predictor to compensate for that. In this case, a potential implementation looks pretty much like a graphical representation of this pattern:
+The Cascaded Inference pattern refers to the ability to feed the output of one model into another in a cascade pattern. 
+
+It is used to compensate for a model bias, or incomplete data, in such a way you could use another predictor to compensate for that. In this case, a potential implementation looks pretty much like a graphical representation of this pattern:
 
 Example Microflow
 
 {{< figure src="/attachments/refguide/modeling/integration/ml-kit/design-patterns/advanced-inference-patterns/cascaded-inference-microflow.png" alt="." >}}
 
-We have a model pre-processor that makes some data available for the first model, which output is injected into the second model as an input. Ultimately, that output will be used for the final prediction.
+A model pre-processor makes some data available for the first model, and the output is injected into the second model as an input. Ultimately, that output will be used for the final prediction.
 
-### 1.3 Machine Learning MaaS (Model as a Service)
+### 1.3 Machine Learning MaaS (Model as a Service) {#maas}
 
-Another common pattern in machine learning deployment is use a microservice or a service. While Studio Pro excels at creating monolith applications with all its security and speed advantages, creating a microservice is possible by servers [publishing a REST service](/howto/integration/publish-rest-service/) and clients [calling the service](/refguide/call-rest-action/). In this way, the AI-powered smart app can be split into two Mendix apps: one to host the ML model, and one to process and use the predictions. This is a good approach for use cases where the ML model is complex and requires heavy computing power, or when the ML model is owned and maintained by another team. Another advantage is that you can update the ML model without the need for deploying the Mendix client app.
+A common pattern in machine learning deployment is using a microservice or a service. While Studio Pro supports monolith applications with its security and speed advantages, creating a microservice is possible by servers [publishing a REST service](/howto/integration/publish-rest-service/) and clients [calling the service](/refguide/call-rest-action/). 
 
-Below you can see an an example of such deployment. Instead of actually storing the variable after predicting the elements in an image, the variable could be encoded as JSON and then published.
+In this way, the AI-powered smart app can be split into two Mendix apps: one to host the ML model, and one to process and use the predictions. This is a good approach for use cases where the ML model is complex and requires heavy computing power, or when the ML model is owned and maintained by another team. Another advantage is that you can update the ML model without the need for deploying the Mendix client app.
+
+Below is an example of such deployment. Instead of actually storing the variable after predicting the elements in an image, the variable is encoded as JSON and then published.
 
 {{< figure src="/attachments/refguide/modeling/integration/ml-kit/design-patterns/advanced-inference-patterns/maas-sample-microflow.png" alt="." >}}
 
-### 1.4 Batch Inference
+### 1.4 Batch Inference {#batch-inference}
 
-Another common pattern for ML applications is the ability to run multiple inferences with a single request for the model, or batch inference. This is just a special case of Dynamic Shapes (See 2.2.2), in which the first dimension is dynamic:
+A common pattern for machine learning applications is the ability to run multiple inferences with a single request for the model, or batch inference. This is just a special case of [Dynamic Shapes](/refguide/machine-learning-kit/#dynamic-shapes), in which the first dimension is dynamic:
 
 {{< figure src="/attachments/refguide/modeling/integration/ml-kit/design-patterns/advanced-inference-patterns/log-message.png" alt="Mapping of a ResNet50 with first parameter dynamic." >}}
 
-You can add 1 as the first element and the model will work with a batch size of 1, or whatever figure you desire and work with n elements at time:
+You can add 1 as the first element and the model will work with a batch size of 1, or whatever figure you desire and work with any elements at the time:
 
 {{< figure src="/attachments/refguide/modeling/integration/ml-kit/design-patterns/advanced-inference-patterns/resnet50-dynamic-parameter.png" alt="ResNet50 with a batch size of 10." >}}
 
-Remember to properly adjust your pre/post processor to send/receive the proper batch size.
 
+Adjust your pre/post processor to send/receive the correct batch size.

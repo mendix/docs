@@ -145,6 +145,8 @@ Integrating machine learning models can sometimes require using a more complex s
 
 {{< figure src="/attachments/refguide/modeling/integration/ml-kit/ml-kit/pre-post-processing-microflow.png" alt="Example of a microflow that includes a pre-processor and post-processor." >}}
 
+For information on design patterns that include pre-processors and post-processors, see [Pre/Post-Processor Design Patterns](/refguide/machine-learning-kit/design-patterns/pre-post-processor-patterns/).
+
 ### 3.1 Processing {#processing}
 
 The *pre-processor* is the block of code that manipulates the data before being injected into the model. Some common examples of the pre-processing are [normalization](https://towardsdatascience.com/understand-data-normalization-in-machine-learning-8ff3062101f0) and [missing data handling](https://towardsdatascience.com/7-ways-to-handle-missing-values-in-machine-learning-1a6326adf79e). 

@@ -1,5 +1,5 @@
 ---
-title: "Machine Learning Models"
+title: "Machine Learning Kit"
 url: /refguide/machine-learning-kit/
 category: Integration
 weight: 35

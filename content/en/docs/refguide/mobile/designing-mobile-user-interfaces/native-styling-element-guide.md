@@ -929,6 +929,48 @@ The feedback widget allows users to give direct feedback. This is how a feedback
 
 {{< figure src="/attachments/refguide/mobile/native-mobile/native-styling-refguide/feedback-two.png" alt="feedback"   width="350"  >}}
 
+```javascript
+export const com_mendix_widget_native_feedback_Feedback = {
+  floatingButton: {
+    // This has all ViewStyle properties.
+  },
+  dialog: {
+    // This has all ViewStyle properties.
+  },
+  title: {
+    // This has all TextStyle properties.
+  },
+  textAreaInput: {
+    // This has all TextStyle properties.
+    placeholderTextColor: // This is the text color of the placeholder string.
+    selectionColor: // This is the highlight and cursor color of the text input.
+    underlineColorAndroid: // This is the underline color for Android devices.
+    numberOfLines: // This is the height of the text area is based on this number of text lines.
+  },
+  switchLabel: {
+    // This has all TextStyle properties.
+  },
+  switchInput: {
+    // This has all TextStyle properties.
+    trackColorOn: // This is the custom color for the switch track when turned on.
+    trackColorOff: // This is the custom color for the switch track when turned off.
+    thumbColorOn: // This is the color of the foreground switch grip when turned on. If this is set on iOS, the switch grip will lose its drop shadow.
+    thumbColorOff: // This is the color of the foreground switch grip when turned off. If this is set on iOS, the switch grip will lose its drop shadow.
+  },
+  button: {
+    borderColor: // This is the color of dialog button borders.
+    borderWidth: // This is the width of dialog button borders.
+    color: // This is the color of dialog button text.
+  },
+  buttonDisabled: {
+    color: // This is the color of dialog button text when disabled.
+  },
+  activityIndicator: {
+    color: // This is the color of the activity indicator that is shown while feedback is being submitted.
+  },
+};
+```
+
 | Element | Style Properties    | Description |
 | --- | --- | --- |
 | `floatingButton` | This has all ViewStyle properties. |    |

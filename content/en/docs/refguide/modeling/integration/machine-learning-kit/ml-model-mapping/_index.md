@@ -8,9 +8,11 @@ tags: ["ML kit", "ML model mapping", "machine learning", "models"]
 
 ## 1 Introduction
 
-Studio Pro [9.23](/releasenotes/studio-pro/9.23/] and above supports integrating machine learning (ML) models into your Mendix Studio Pro apps.
+Studio Pro [9.23](/releasenotes/studio-pro/9.23/) and above supports machine learning (ML) model integration in Mendix apps. Collectively called the *Machine Learning (ML) Kit*, this functionality allows Mendix developers to deploy a ML model built using common ML framework and language into Mendix Studio Pro runtime.
 
 For a list of supported models, see [Supported Frameworks and Libraries](/refguide/machine-learning-kit/#supported-frameworks).
+
+For detailed information on working with machine learning models in Studio Pro, see [Integrate Machine Learning Models](/refguide/machine-learning-kit/).
 
 ## 2 Adding a ML Mapping to Your App
 
@@ -19,5 +21,3 @@ To add a ML model to your app, do the following:
 1. Convert your model to ONNX format (see [Converting Your Model to ONNX](/refguide/machine-learning-kit/#convert-ml-model)).
 2. Right-click on the module where you would like to add the mapping, and go to **Add other > ML model mapping**.
 3. Click **Import model** to import your ONNX file.
-
-For detailed information on working with machine learning models in Studio Pro, see [Integrate Machine Learning Models](/refguide/machine-learning-kit/).

@@ -14,9 +14,11 @@ These activities can only be used in **Microflows**.
 
 ## 1 Introduction
 
-Studio Pro [9.23](/releasenotes/studio-pro/9.23/) and above supports integrating machine learning models into your Mendix Studio Pro apps.
+Studio Pro [9.23](/releasenotes/studio-pro/9.23/) and above supports machine learning (ML) model integration in Mendix apps. Collectively called the *Machine Learning (ML) Kit*, this functionality allows Mendix developers to deploy a ML model built using common ML framework and language into Mendix Studio Pro runtime.
 
 Use the **Call ML Model** [activity](/refguide/activities/) in a microflow to call the ML model mapping document (see the [Using the Model in a Microflow](/refguide/machine-learning-kit/#use-model-microflow) section of *Integrate Machine Learning Models*).
+
+To get started with machine learning models, check out [Integrate Machine Learning Models](/refguide/machine-learning-kit/).
 
 ## 2 Properties
 
@@ -28,5 +30,3 @@ Use the **Call ML Model** [activity](/refguide/activities/) in a microflow to ca
 ### 2.2 Output
 
 * **Output object** – name of the output object (for example, `outputObject`)
-
-To get started with machine learning models, check out [Integrate Machine Learning Models](/refguide/machine-learning-kit/).

@@ -11,6 +11,12 @@ These release notes cover changes made to the [Mendix Data Hub Catalog](/data-hu
 
 ## 2023
 
+### February 27th, 2023
+
+#### Fixes
+
+* We fixed an issue that was generating endpoint URLs leading to `404 not found` errors when deploying an app in Studio Pro.
+
 ### February 23rd, 2023
 
 #### Improvements

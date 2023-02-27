@@ -793,6 +793,7 @@ export const navigationStyle = {
     container: // This has all ViewStyle properties.
     activityIndicator: // This is the same as the `activity indicator` widget.
     text: // This has all TextStyle properties.
+  },    
 };
 ```
 
@@ -828,6 +829,7 @@ export const com_mendix_widget_native_activityindicator_ActivityIndicator = {
   indicator: {
     color, defaults to `gray`: // This is the color of the indicator.
     size, defaults to `large`: // Possible values for indicator are `large` and `small`.
+    };
 };
 ```
 
@@ -846,6 +848,18 @@ The app events widget allows you to set actions when your app’s network status
 ### 11.3 Background Image
 
 The background image widget enables layering one or more widgets on top of an image.
+
+```javascript
+export const com_mendix_widget_native_backgroundimage_BackgroundImage = {
+  container: {
+    // This has all ViewStyle properties.
+  },
+  image: {
+      // This has all ImageStyle properties.
+    svgColor, defaults to `black`: // Property to set the color of an SVG image.
+    };
+};
+```
 
 | Element | Style Properties    | Description |
 | --- | --- | --- |

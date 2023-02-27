@@ -779,6 +779,23 @@ The navigation consists of the bottom bar (which allows users to navigate within
 
 {{< figure src="/attachments/refguide/mobile/native-mobile/native-styling-refguide/nav-widget.png" alt="navigation widget"   width="300"  >}}
 
+```javascript
+export const navigationStyle = {
+  bottomBar: {
+    container: // This has all ViewStyle properties.
+    label: // This has all TextStyle properties.
+    selectedLabel: // This has all TextStyle properties.
+    icon: // This has all TextStyle properties.
+    selectedIcon: // This has all ViewStyle properties.
+  },
+  progressOverlay: {
+    background: // This has all ViewStyle properties.
+    container: // This has all ViewStyle properties.
+    activityIndicator: // This is the same as the `activity indicator` widget.
+    text: // This has all TextStyle properties.
+};
+```
+
 | Element | Style Properties    | Description |
 | --- | --- | --- |
 | `bottomBar` | `container` | This has all ViewStyle properties. |

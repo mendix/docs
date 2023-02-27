@@ -3,7 +3,7 @@ title: "Integrate Machine Learning Models"
 url: /refguide/machine-learning-kit/
 category: Integration
 weight: 35
-tags: ["studio pro", "machine learning", "ml kit", "models"]
+tags: ["studio pro", "machine learning", "ml kit", "models", "integration"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 {{% alert color="info" %}}Machine learning model support is currently in [Beta](/releasenotes/beta-features/), and is available in Studio Pro [9.23](/releasenotes/studio-pro/9.23/) and above.{{% /alert %}}

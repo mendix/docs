@@ -657,7 +657,26 @@ The static image widget can be used to show a predefined image on a page, layout
 | `container`         | `underlayColor`                     | This is the color while pressing the container on iOS, and will be applied only when the container has an on click action set, otherwise it will be ignored and defaulted to opacity only. |
 | `containerDisabled` | Same properties as `container`      | Overrides `container` styles if the image has an on click action and the action cannot be executed or is disabled during action. |
 | `image`             | This has all ImageStyle properties. |                                                              |
-| `imageDisabled`     | Same properties as `image`          | Overrides `image` styles if the image has an on click action and the action cannot be executed or is disabled during action. |
+| `imageDisabled`     | Same properties as `image`.          | Overrides `image` styles if the image has an on click action and the action cannot be executed or is disabled during action. |
+
+```javascript
+export const image = {
+  container: {
+    // All ViewStyle properties
+    rippleColor, defaults to `rgba(0, 0, 0, 0.2)` : // This is the color of the ripple on Android, and will be applied only when the container has an on click action set, otherwise it will be ignored.
+    underlayColor: // This is the color while pressing the container on iOS, and will be applied only when the container has an on click action set, otherwise it will be ignored and defaulted to opacity only.
+  },
+  containerDisabled: {
+    // Same properties as `container`. Overrides `container` styles if the image has an on click action and the action cannot be executed or is disabled during action.
+  },
+  image: {
+    // This has all ImageStyle properties.
+  },
+  imageDisabled: {
+    // Same properties as `image`. Overrides `image` styles if the image has an on click action and the action cannot be executed or is disabled during action.
+  },
+};
+```
 
 The default class to style all static image styles is named `Image`. Please note that images loaded from the model are styled with `NativeDynamicImage` as described in the [Dynamic Image](#dynamic-image) section below.
 

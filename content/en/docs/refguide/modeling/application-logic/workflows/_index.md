@@ -79,9 +79,9 @@ When using cut/copy/paste, note the following:
 * When a flow is selected, the clipboard content is pasted at the beginning of the selected flow.
 * When the clipboard contents has an **Annotation**, it can only be pasted into the workflow or into individual activities that support annotations.
 
-### 3.5.1 Elements that Cannot be Cut, Copied or Pasted
+#### 3.5.1 Elements that Cannot be Cut, Copied or Pasted
 
-The following elements cannot be cut, copied or pasted:
+The following elements cannot be cut, copied or pasted in the workflow editor:
 
 * Workflow (this can be only be done in the [App Explorer](/refguide/app-explorer/#2-performing-basic-functions))
 * WorkflowContext

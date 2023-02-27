@@ -1,6 +1,7 @@
 ---
 title: "Call ML Model"
 url: /refguide/call-ml-model/
+category: ML Kit Activities
 weight: 45
 tags: ["ml kit", "call model", "ML microflow", "machine learning", "models"]
 ---
@@ -15,7 +16,7 @@ These activities can only be used in **Microflows**.
 
 Studio Pro [9.23](/releasenotes/studio-pro/9.23/) and above supports integrating machine learning models into your Mendix Studio Pro apps.
 
-Use the **Call ML Model** [activity](/refguide/activities/) in a microflow to call the ML model mapping document (see the [Using the Model in a Microflow](/refguide/machine-learning-kit/#use-model-microflow) section of *Integrate Machine Learning Models with ML Kit*).
+Use the **Call ML Model** [activity](/refguide/activities/) in a microflow to call the ML model mapping document (see the [Using the Model in a Microflow](/refguide/machine-learning-kit/#use-model-microflow) section of *Integrate Machine Learning Models*).
 
 ## 2 Properties
 
@@ -27,3 +28,5 @@ Use the **Call ML Model** [activity](/refguide/activities/) in a microflow to ca
 ### 2.2 Output
 
 * **Output object** – name of the output object (for example, `outputObject`)
+
+To get started with machine learning models, check out [Integrate Machine Learning Models](/refguide/machine-learning-kit/).

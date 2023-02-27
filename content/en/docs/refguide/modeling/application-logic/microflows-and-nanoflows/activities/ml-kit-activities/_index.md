@@ -15,6 +15,6 @@ These activities can only be used in **Microflows**.
 
 The **ML Kit** section of the [Toolbox](/refguide/view-menu/#toolbox) contains activities you can use with a machine learning model.
 
-To get started with machine learning models, check out [Machine Learning Models](/refguide/machine-learning-kit/).
+To get started with machine learning models, check out [Integrate Machine Learning Models](/refguide/machine-learning-kit/).
 
 ## 2 Documents in This Category

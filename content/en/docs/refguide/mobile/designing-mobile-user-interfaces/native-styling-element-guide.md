@@ -696,6 +696,34 @@ An action button can perform various actions such as calling a nanoflow, opening
 
 {{< figure src="/attachments/refguide/mobile/native-mobile/native-styling-refguide/action-button.png" alt="action button"   width="350"  >}}
 
+```javascript
+export const ActionButton = {
+  container: {
+    // All ViewStyle properties
+    rippleColor, defaults to `rgba(0, 0, 0, 0.2)` : // This is the color of the ripple on Android, and will be applied only when the container has an on click action set, otherwise it will be ignored.
+    underlayColor: // This is the color while pressing the container on iOS, and will be applied only when the container has an on click action set, otherwise it will be ignored and defaulted to opacity only.
+  },
+  containerDisabled: {
+    // Same properties as `container`. Overrides `container` styles if the button has on click action set and it cannot be executed or is set with `Disable during action`.
+  },
+
+  caption: {
+    // This has all TextStyle properties.
+  },
+  captionDisabled: {
+    // Same properties as `caption`. Overrides `caption` styles if the button has on click action set and it cannot be executed or is set with `Disable during action`.
+  },
+  icon: {
+    // This has all ViewStyle properties.
+    size, defaults to `12`: // This is the size of the button icon.
+    color: // This is the color of the button icon.
+  },
+  iconDisabled: {
+    // Same properties as `icon`. Overrides `icon` styles if the button has on click action set and it cannot be executed or is set with `Disable during action`.
+  },
+};
+```
+
 | Element | Style Properties    | Description |
 | --- | --- | --- |
 | `container` | This has all ViewStyle properties. |    |

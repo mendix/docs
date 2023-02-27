@@ -125,13 +125,9 @@ Mind the following characteristics when using cut/copy/paste:
 * When the start event is selected, the clipboard content will be pasted at the start of the workflow.
 * When an activity is selected, the clipboard content will be pasted under the selected activity.
 * When a branch is selected, the clipboard content will be pasted at the start of the selected branch.
+* When the clipboard content is an **Annotation**, it can only be pasted onto the workflow or onto individual activities which support annotations.
 
-### 2.8.1 Annotations
-
-If the clipboard content is an **Annotation**, it can only be pasted onto the workflow or onto individual activities which support annotations.
-
-
-### 2.8.2 Elements that cannot be cut, copied or pasted
+### 2.8.1 Elements that cannot be cut, copied or pasted
 
 The following elements cannot be cut, copied or pasted:
 
@@ -140,7 +136,6 @@ The following elements cannot be cut, copied or pasted:
 * **Start activity**
 * **End activity** (this only holds true for the final **End activity** which is at the end of the **Workflow**)
 * **Outcomes**
-
 
 ### 2.9 Triggering a Workflow
 

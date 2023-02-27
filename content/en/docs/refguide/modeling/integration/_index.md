@@ -94,7 +94,8 @@ In Studio Pro [9.23](/releasenotes/studio-pro/9.23/) and above, you can integrat
 
 To work with machine learning models, see:
 
-* [Machine Learning (ML) Models](/refguide/machine-learning-kit/), an overview in the Studio Pro guide
+* [Machine Learning Kit](/refguide/machine-learning-kit/), an introduction in the Studio Pro guide
+* [Using ML Kit](/refguide/machine-learning-kit/usage/), a comprehensive overview of working with machine learning model functionality in Studio Pro
 * [Design Patterns](/refguide/machine-learning-kit/design-patterns/), an overview page that links to two documents about machine learning design patterns:
      * [Advanced Inference Design Patterns](/refguide/machine-learning-kit/design-patterns/advanced-inference/)
      * [Pre- and Post-Processor Design Patterns](/refguide/machine-learning-kit/design-patterns/pre-post-processor-patterns/)

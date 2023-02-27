@@ -1,6 +1,7 @@
 ---
 title: "ML Model Mapping"
 url: /refguide/ml-model-mapping/
+category: Mapping Documents
 tags: ["ML kit", "ML model mapping", "machine learning", "models"]
 ---
 

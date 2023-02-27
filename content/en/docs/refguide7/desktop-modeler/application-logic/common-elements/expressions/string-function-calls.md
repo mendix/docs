@@ -544,7 +544,7 @@ returns:
 '4.73 kilometers'
 ```
 
-## 16 <a name="urlEncode"></a>urlEncode
+## 16 urlEncode {#urlEncode}
 
 Converts a string to be used in a URL. This function is useful when you want to use the string as part of the URL.
 

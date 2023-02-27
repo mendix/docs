@@ -205,6 +205,10 @@ A successful `PUT` call will result in a `200` status code and a JSON response b
 }
 ```
 
+##### 4.1.3.1 Behavior When Renaming an Environment
+
+Though uncommon, you update the URL of a hosted environment. When redeploying, the root URL is then updated, and endpoints that are registered under that environment get updated endpoint locations.
+
 #### 4.1.4 Preparing Your Service Details Using the Transform API {#transform-api}
 
 The Transform API, an endpoint in the Registration API, converts the `dependencies.json` file your Mendix app generates into the fields the Registration API requires to registers services. 
@@ -332,4 +336,8 @@ The following methods are supported by the Data Hub Catalog:
 * **OpenID Connect** – Authenticates with [OpenID Connect](https://openid.net/connect/), built on top of [OAuth 2.0](https://oauth.net/2/) and used with the [OIDC SSO](/appstore/modules/oidc/) module
 * **Other** – Specify other ways to authenticate, including custom modules
 
-Fill in as many details as you can to ensure that consuming developers can easily authentication themselves to consume your service.
+Fill in as many details as you can to ensure that consuming developers can easily authenticate themselves to consume your service. 
+
+##### 4.2.1.1 Selecting a Marketplace Module (Optional)
+
+If you are using a module from the Mendix Marketplace, you select it in the **Marketplace Module** field.

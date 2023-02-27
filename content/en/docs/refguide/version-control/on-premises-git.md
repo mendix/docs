@@ -36,7 +36,7 @@ Make sure you have completed the following prerequisites:
 
 ## 3 Supported Authentication Mechanisms
 
-Currently, we only support HTTP Basic authentication for Git service providers. With most providers this takes the form of using of Personal Access Tokens (PATs).
+Currently, we only support HTTP Basic authentication for Git service providers. With most providers, this takes the form of using of personal access tokens (PATs).
 
 To use PAT (or another equivalent), you need to specify it in the **Password** field when Studio Pro requests credentials for the version control server:
 
@@ -63,7 +63,7 @@ Studio Pro is able to use the following Git server providers:
 * BitBucket Server
 * BitBucket Data Center
 
-You need to create a private repository in the selected provider and create a Personal Access Token (PAT) to provide access to it. The PAT is used as a password.
+You need to create a private repository in the selected provider and create a personal access token (PAT) to provide access to it. The PAT is used as a password.
 
 To interact with this private repository from Studio Pro, you need a link to the repository and a PAT.
 

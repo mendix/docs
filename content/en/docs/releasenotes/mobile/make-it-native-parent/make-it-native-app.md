@@ -200,7 +200,7 @@ On Android:
 
 ### Fixes
 
-* <a name="153"></a>We fixed an issue where clearing data on Android via the start screen did not clear cookies correctly.
+* <a id="153"></a>We fixed an issue where clearing data on Android via the start screen did not clear cookies correctly.
 
 ## Android 1.0.0 / iOS 1.0.2
 

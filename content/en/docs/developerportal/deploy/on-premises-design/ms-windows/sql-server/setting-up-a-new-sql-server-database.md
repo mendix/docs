@@ -86,9 +86,9 @@ RECONFIGURE;
 
 #### 4.2.1 Create Function mx_toLocalDateTime
 
-If you are not working in the same timezone as UTC, you need to enable CLR and this function. Without timezone support in the platform, development of your functionality will be much more difficult. A function needs to be created for timezone handling. Also, for this function, Common Language Runtime (CLR) needs to be enabled on the SQL Server instance (see above). 
+If you are not working in the same time zone as UTC, you need to enable CLR and this function. Without time zone support in the platform, development of your functionality will be much more difficult. A function needs to be created for time zone handling. Also, for this function, Common Language Runtime (CLR) needs to be enabled on the SQL Server instance (see above). 
 
-You can create the timezone handling function using the following command:
+You can create the time zone handling function using the following command:
 
 ```sql
 CREATE FUNCTION [dbo].[mx_toLocalDateTime] (@utcDateTime datetime, @dstTimeZone nvarchar(50)) RETURNS datetime AS EXTERNAL NAME [Mendix.SqlServerExtensions].[Mendix.SqlServerExtensions.DateTimeLocalizer].[ConvertToLocalDateTime];

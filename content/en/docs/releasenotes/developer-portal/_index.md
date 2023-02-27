@@ -15,17 +15,75 @@ For release notes on Mendix Cloud and deployment options, see [Deployment](/rele
 
 To see the current status of the Mendix Developer Portal and Control Center, see [Mendix Status](https://status.mendix.com/). Here you can also see planned maintenance and past incidents.
 
+## 2023
+
+### February 23rd, 2023
+
+#### New Features
+
+We have released a feature in Control Center where you can add and manage a [Security Contact](/developerportal/control-center/#company-details) for your company. A Security Contact is informed if there are critical security issues with the Mendix Platform and platform-supported Marketplace components.
+
+With this feature, you can do the following:
+
+* Add a new Security Contact to your company
+* Remove an existing Security Contact and replace it with a newer one
+* Adjust the Security Contact’s name 
+
+For more information on security issues, see [Security Advisories](/releasenotes/security-advisories/).
+
+#### Fixes
+
+* We fixed a performance issue that occurred when opening an [App Buzz](/developerportal/collaborate/buzz/#app-buzz) page for an app with a large team. We now show no more than 25 team members in the team list in the right corner at a time.
+* We fixed an issue where the country of residence you selected during sign-up was not properly stored in your [Mendix Profile](/developerportal/community-tools/mendix-profile/#profile).
+
+### February 16th, 2023
+
+#### Improvements
+
+* We enabled more options for search in [Epics](/developerportal/collaborate/epics/). On the [Board](/developerportal/collaborate/epics/#board) page, you can now search stories based on tags, epic name, assignee (and unassigned stories), story title, and story ID. On the [Planning](/developerportal/collaborate/epics/#planning) page, you can search stories based on tags, epic name, assignee (and unassigned stories), status name (only in the Scrum workflow), story title, and story ID.
+* The Epics listed on the [Epics](/developerportal/collaborate/epics/#epics) overview page now have visible tags.
+
+#### Fixes
+
+* We fixed an issue in **Epics** where the unsaved changes pop-up window did not take you to the correct story after clicking **Leave**.
+* We updated the text in the [notifications](/developerportal/#notifications) when a story is assigned to you in **Epics**.
+
+### February 13th, 2023
+
+#### Improvements
+
+* We overhauled the entire [Project Management](/developerportal/collaborate/general-settings/#project-management) to a completely new design. This design brings the benefit of using the full body width of your screen, scales much better across several devices and screen resolutions, and is dark-mode ready.
+* Have you lost track of where your apps live? We now display the cloud plan on the app tile in [My Apps](/developerportal/#my-apps).
+* We moved the notification settings you set for your app management to **Account Settings** > [Notifications](/developerportal/community-tools/mendix-profile/#notifications) (which you can access via the menu beneath your avatar in the top bar). This page includes a list of the apps you are watching.
+* We simplified the [team member invitation](/developerportal/collaborate/team/#inviting) flow from a multi-step wizard to a single page.
+* We moved the **Pending Invites** to a tab on the [My Apps](/developerportal/#my-apps) page. You will find both the pending invitations to apps that you have received (which you can **Accept** or **Decline**) in addition to the invitations you have sent. 
+* In addition, personal **API Keys** are available via **Account Settings** > [Developer Settings](/developerportal/community-tools/mendix-profile/#dev-settings).
+
+#### Fixes
+
+* We fixed a performance issue on the [Team](/developerportal/collaborate/team/) page.
+
+### January 26th, 2023
+
+#### Improvements
+
+* We fixed an issue where the story description did not appear in Studio Pro.
+* [Epics](/developerportal/collaborate/epics/) now have different colors so that you can distinguish between them more easily. The color is currently assigned randomly (as is done with story labels), but we may add management functionality at a later point.
+* If you practice Scrum, you can now see the status of the stories in your active Sprint on the [Planning](/developerportal/collaborate/epics/#planning) page.
+* Sprint details are now editable, so you can change the date, name, and goal of your Sprint after you start it. Use this power wisely, as committing to a Sprint goal is important, so only change the goal if there really is no other option.
+* We have implemented the new [Mendix Feedback](/appstore/modules/mendix-feedback/) module, so now you have much better screenshot functionality. Do send us feedback, we love hearing what you think. And also try out the new Mendix Feedback module in your own apps, it's awesome!
+
 ## 2022
 
 ### December 21st, 2022
 
 #### Fixes
 
-* We fixed an issue where some users were not able to open the [Sprint Status](/developerportal/collaborate/stories/#sprint-status) page.
+* We fixed an issue where some users were not able to open the [Sprint Status](/developerportal/collaborate/stories/) page.
 
 ### December 13th, 2022
 
-#### New Feature
+#### New Features
 
 We have released the Beta version of [Product Insights](/developerportal/collaborate/product-insights/), which is a new way for you to proactively get feedback from your users. The functionality consists of a tool for setting up mini surveys in addition to the [Product Insights - Mini Surveys](/appstore/modules/product-insights/) Marketplace module, which you can add to your app to set up the exact targeting criteria for a survey.
 
@@ -166,7 +224,7 @@ In Portfolio Management, you can do the following
 #### Improvements
 
 * We removed **My Activity Overview** from the **Account Settings** page.
-* We redesigned the [Pending App Invites](/developerportal/community-tools/mendix-profile/#pending-app-invites) section and added it as a new menu item to the **Account Settings** page.
+* We redesigned the **Pending App Invites** section and added it as a new menu item to the **Account Settings** page.
 * We improved the warning messages when you leave or delete an app.
 
 #### Fixes
@@ -214,7 +272,7 @@ In Portfolio Management, you can do the following
 
 #### Fixes
 
-* We fixed an issue where users with an invalid Twitter URL in the [Social](/developerportal/community-tools/mendix-profile/#social) section of their Mendix Profile Settings could not change their password.
+* We fixed an issue where users with an invalid Twitter URL in the **Social** section of their Mendix Profile Settings could not change their password.
 * We fixed an issue where users could have a duplicated project membership, resulting in two identical projects in the Developer Portal.
 
 ### June 9th, 2022
@@ -375,7 +433,7 @@ In Portfolio Management, you can do the following
 
 #### Improvements
 
-* We noticed our [API Keys](/developerportal/community-tools/mendix-profile/#api-key) overview was not telling the exact truth and made some changes accordingly. Because API keys are cached by our user-provisioning system, when you revoke an API key, it takes a certain amount of time before this is reflected across the platform. A new confirmation message warns you of this.
+* We noticed our **API Keys** overview was not telling the exact truth and made some changes accordingly. Because API keys are cached by our user-provisioning system, when you revoke an API key, it takes a certain amount of time before this is reflected across the platform. A new confirmation message warns you of this.
 * We added a [Team Server revision history](/developerportal/collaborate/team-server/#revision-history) overview page for your Git-enabled apps. This allows you to have an overview of the last 40 commits made in your app. You can filter the overview per branch. When a revision is linked to a user story, the Team Server page can bring you to the [story details](/developerportal/collaborate/stories/#story-details) page.
 
 #### Fixes
@@ -467,7 +525,7 @@ In Portfolio Management, you can do the following
 * You can now assign team members to a [user story](/developerportal/collaborate/stories/#story-details).
 * We moved the old version of the Stories UI. You can now access it via the [More](/developerportal/collaborate/stories/#more) button on the **Stories** page.
 * We removed the **Team** read-only overview page and send you straight to the [Manage Team](/developerportal/collaborate/team/#managing) page.
-* We moved the **API Keys** page to the [General Settings](/developerportal/collaborate/general-settings/#api-keys) page.
+* We moved the **API Keys** page to the [General Settings](/developerportal/collaborate/general-settings/#general-settings-api-keys) page.
 * We implemented a new responsive search panel.
 * We will remove the **Burndown Chart** and **Release Plan** tabs from the Developer Portal on August 31st, 2021.
 
@@ -1067,4 +1125,4 @@ The Web Modeler can now be enabled for all types of apps. You can do this on the
 
 #### Improvement
 
-* It is now possible for you to change the technical contact of your applications by yourself.
+* It is now possible for you to change the Technical Contact of your applications by yourself.

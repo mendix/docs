@@ -105,7 +105,7 @@ By performing your authentication checks in this way, you will have the flexibil
 Choosing *No* without these restrictions will allow anyone on the internet to make requests to your API endpoint at any time and at any rate, which can seriously affect your app's response and even cause server failure.
 {{% /alert %}}
 
-Choosing *Yes* comes with the benefits of having the timezone and language settings available for that API user account. It can also provide better traceability of changes made through API requests. Additionally, it gives the possibility of applying restrictions to requested entities based on the System.User object used for the API account.
+Choosing *Yes* comes with the benefits of having the time zone and language settings available for that API user account. It can also provide better traceability of changes made through API requests. Additionally, it gives the possibility of applying restrictions to requested entities based on the System.User object used for the API account.
 
 ### 5.2 Selecting Authentication Option
 

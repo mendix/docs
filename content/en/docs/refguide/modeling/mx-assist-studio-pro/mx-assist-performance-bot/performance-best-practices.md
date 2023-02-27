@@ -13,7 +13,7 @@ This document outlines performance issues and Mendix best practices for optimizi
 
 ## 2 Calculated Attributes Best Practices [MXP001][MXP002] {#mxp001}
 
-<a name="mxp002"></a>When an object has calculated attributes, each time this object is changed or retrieved from the storage, its calculated attributes are computed by calling a microflow. If the logic behind calculated attributes retrieves other objects or executes Integration activities, it will result in an extra load (and delay) while the outcome of the logic is not used. Creating calculated attributes always affects performance, so you should evaluate whether it is necessary to use them. For more information on attributes, see [Attributes](/refguide/attributes/).
+<a id="mxp002"></a>When an object has calculated attributes, each time this object is changed or retrieved from the storage, its calculated attributes are computed by calling a microflow. If the logic behind calculated attributes retrieves other objects or executes Integration activities, it will result in an extra load (and delay) while the outcome of the logic is not used. Creating calculated attributes always affects performance, so you should evaluate whether it is necessary to use them. For more information on attributes, see [Attributes](/refguide/attributes/).
 
 In most cases, the logic behind a calculated attribute is always executed when the object is used. It is executed whenever there is no retrieval schema for a Retrieve activity (which is the case with data grids). The logic behind calculated attributes is executed in the following elements:
 
@@ -75,7 +75,7 @@ To fix the issue, add an index on attributes which are used as sort items in sor
 
 ## 4 Avoid Committing Objects Inside a Loop with Create Object, Change Object, or Commit Activities [MXP004][MXP005] {#mxp004}
 
-<a name="mxp005"></a>In a microflow, Mendix objects can be persisted to the database with three activities: the **Create object** activity, **Change object** activity, and **Commit** activity. For objects that are created or changed in a loop, it is not the best practice to commit them immediately in the loop, as this comes with an unnecessary performance overhead. Instead, it is recommended to perform a batch commit of several created/changed objects with the **Commit** activity outside of the loop to reduce database, application, and network overhead. For more information on **Create object**, **Change object**, and **Commit** activities, see [Create Object](/refguide/create-object/), [Change Object](/refguide/change-object/), and [Commit Object(s)](/refguide/committing-objects/).
+<a id="mxp005"></a>In a microflow, Mendix objects can be persisted to the database with three activities: the **Create object** activity, **Change object** activity, and **Commit** activity. For objects that are created or changed in a loop, it is not the best practice to commit them immediately in the loop, as this comes with an unnecessary performance overhead. Instead, it is recommended to perform a batch commit of several created/changed objects with the **Commit** activity outside of the loop to reduce database, application, and network overhead. For more information on **Create object**, **Change object**, and **Commit** activities, see [Create Object](/refguide/create-object/), [Change Object](/refguide/change-object/), and [Commit Object(s)](/refguide/committing-objects/).
 
 Committing lists of objects has the following benefits compared to individual commits:
 
@@ -111,6 +111,11 @@ You can identify convertible microflows using the following criteria:
 * Microflows that contain nanoflow-compatible activities. For information on activities supported by nanoflows, see [Activities](/refguide/activities/). 
 * Microflow expressions do not contain the following variables: `$latestSoapFault`, `$latestHttpResponse`, `$currentSession`, `$currentUser`, `$currentDeviceType`. These variables are not supported by nanoflows.
 * As nanoflows are executed in the context of the current user, ensure that the microflow has only operations for which the current user is authorized. Otherwise the converted nanoflow will fail.
+
+{{% alert color="info" %}}
+Security: microflows execute on the server side which in general is simpler to fully secure. If security is a critical concern for your app, note this when deciding whether to convert a microflow to a nanoflow.
+{{% /alert %}}
+
 
 ### 5.1 Steps to Fix
 

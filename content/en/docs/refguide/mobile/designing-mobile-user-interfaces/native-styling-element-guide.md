@@ -743,6 +743,24 @@ The default class to style all actions buttons is named `ActionButton`. However,
 
 To style pages, you can add classes to a page or its layout. The status bar and header are part of a page and can also be styled this way.
 
+```javascript
+export const Page = {
+  statusBar: {
+    barStyle: // The style of the status bar, which can be either `dark-content` (black text) or `light-content` (white text).
+    backgroundColor: // The background color of the status bar (Android only).
+  },
+  header: {
+    container: // This has all ViewStyle properties.
+    title: // This has all TextStyle properties.
+    backButtonText: // This has all TextStyle properties.
+    backButtonIcon: // This has all ImageStyle properties.
+  },
+  header: {
+    // This has all ViewStyle properties.
+  },
+};
+```
+
 | Element | Style Properties    | Description |
 | --- | --- | --- |
 | `statusBar` | `barStyle` | The style of the status bar, which can be either `dark-content` (black text) or `light-content` (white text). |

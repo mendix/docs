@@ -855,7 +855,7 @@ export const com_mendix_widget_native_backgroundimage_BackgroundImage = {
     // This has all ViewStyle properties.
   },
   image: {
-      // This has all ImageStyle properties.
+    // This has all ImageStyle properties.
     svgColor, defaults to `black`: // Property to set the color of an SVG image.
     };
 };
@@ -875,6 +875,17 @@ The badge widget displays text or values as a badge. This is how a badge widget 
 
 {{< figure src="/attachments/refguide/mobile/native-mobile/native-styling-refguide/badge.png" alt="badge"   width="350"  >}}
 
+```javascript
+export const com_mendix_widget_native_badge_Badge = {
+  container: {
+    // This has all ViewStyle properties.
+  },
+  text: {
+    // This has all TextStyle properties.
+    };
+};
+```
+
 | Element | Style Properties    | Description |
 | --- | --- | --- |
 | `container` | This has all ViewStyle properties. |      |
@@ -885,6 +896,21 @@ The default class to style all badges is named `com_mendix_widget_native_badge_B
 ### 11.5 Barcode Scanner
 
 The barcode scanner widget allows your app to scan barcodes and QR codes. This widget renders a camera view in a styleable container.
+
+```javascript
+export const com_mendix_widget_native_barcodescanner_BarcodeScanner = {
+  container: {
+    // This has all ViewStyle properties.
+  },
+  mask: {
+    // This only allows the properties below.
+    color, defaults to `#62B1F6`: // Property to set the color of the mask border indicators.
+    width: // Property to set the width of the barcode reader.
+    height: // Property to set the height of the barcode reader.
+    backgroundColor, defaults to `rgba(0, 0, 0, 0.6)`: // Property to set the background color of the mask.
+    };
+};
+```
 
 | Element | Style Properties    | Description |
 | --- | --- | --- |

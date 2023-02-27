@@ -308,7 +308,7 @@ For Azure AD access to APIs through an access token, in addition to the configur
 
 Now, you can acquire tokens which can be validated using JWKS URI.
 
-### 5.2.3 Amazon Cognito Client Configuration
+#### 5.2.3 Amazon Cognito Client Configuration
 
 After you configure the necessary settings in Amazon Cognito, you must add the endpoint URLs to your Mendix app, and then add a button to sign in with Amazon Cognito.
 

@@ -10,7 +10,7 @@ tags: ["studio pro", "machine learning", "ml kit", "models", "design patterns"]
 
 ## 1 Introduction
 
-The [Integrating Models with Pre-processors and Post-processors](/refguide/machine-learning-kit/#pre-post-processors) section of *Integrate Machine Learning Models* outlines considerations when importing a machine learning model with advanced processing needs. 
+The [Integrating Models with Pre-processors and Post-processors](/refguide/machine-learning-kit/using-ml-kit/#pre-post-processors) section of *Integrate Machine Learning Models* outlines considerations when importing a machine learning model with advanced processing needs. 
 
 An ML algorithm typically gets and returns numerical values in various shapes (scalar, vector, matrix, etc.) as input and output. However, the input data in our applications could be used and stored in different formats like string, JPG, PNG, mp3, etc. Similarly, an output of an ML model could not be interpreted by our applications and need to be converted into a different data representation format. Therefore, we need pre- / post-processors to make the necessary data representation conversions in our ML-based applications in order to feed the ML model with the correct input data format and parse the relevant output. Mendix developers have multiple choices when it comes to implementing pre- / post-processors.
 

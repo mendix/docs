@@ -22,7 +22,7 @@ The ONNX Runtime is based on the ONNX standard, and is an optimized inference en
 
 Learn more about the machine learning kit in the following documents:
 
-* [Using ML Kit](/refguide/machine-learning-kit/usage/), a comprehensive overview of working with machine learning model functionality in Studio Pro
+* [Using ML Kit](/refguide/machine-learning-kit/using-ml-kit/), a comprehensive overview of working with machine learning model functionality in Studio Pro
 * [Design Patterns](/refguide/machine-learning-kit/design-patterns/), an overview page that links to two documents about machine learning design patterns:
      * [Advanced Inference Design Patterns](/refguide/machine-learning-kit/design-patterns/advanced-inference/)
      * [Pre- and Post-Processor Design Patterns](/refguide/machine-learning-kit/design-patterns/pre-post-processor-patterns/)

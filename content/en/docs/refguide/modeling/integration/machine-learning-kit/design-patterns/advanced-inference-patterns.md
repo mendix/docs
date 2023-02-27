@@ -10,7 +10,7 @@ tags: ["studio pro", "machine learning", "ml kit", "models", "design patterns"]
 
 ## 1 Introduction
 
-The [Integrating Models with Pre-processors and Post-processors](/refguide/machine-learning-kit/#pre-post-processors) section of *Integrate Machine Learning Models* outlines considerations when importing a machine learning model with advanced processing needs. What are the standards for these models, and what do they look like? 
+The [Integrating Models with Pre-processors and Post-processors](/refguide/machine-learning-kit/using-ml-kit/#pre-post-processors) section of *Integrate Machine Learning Models* outlines considerations when importing a machine learning model with advanced processing needs. What are the standards for these models, and what do they look like? 
 
 This document explores four common advanced inference design patterns for machine learning models. These include the following:
 
@@ -57,9 +57,9 @@ Below is an example of such deployment. Instead of actually storing the variable
 
 ### 1.4 Batch Inference {#batch-inference}
 
-A common pattern for machine learning applications is the ability to run multiple inferences with a single request for the model, or batch inference. This is just a special case of [Dynamic Shapes](/refguide/machine-learning-kit/#dynamic-shapes), in which the first dimension is dynamic:
+A common pattern for machine learning applications is the ability to run multiple inferences with a single request for the model, or batch inference. This is just a special case of [Dynamic Shapes](/refguide/machine-learning-kit/using-ml-kit/#dynamic-shapes), in which the first dimension is dynamic:
 
-{{< figure src="/attachments/refguide/modeling/integration/ml-kit/design-patterns/advanced-inference-patterns/log-message.png" alt="Mapping of a ResNet50 with first parameter dynamic." >}}
+{{< figure src="/attachments/refguide/modeling/integration/ml-kit/design-patterns/advanced-inference-patterns/resnet50-dynamic-parameter.png" alt="Mapping of a ResNet50 with first parameter dynamic." >}}
 
 You can add 1 as the first element and the model will work with a batch size of 1, or whatever figure you desire and work with any elements at the time:
 

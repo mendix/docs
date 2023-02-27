@@ -351,28 +351,28 @@ This is not supported.
 
 1.  My model did not import properly. Anything I can do?
    
-    This may indicate a corrupt model file. Studio Pro supports importing a wide variety of models, ranging from simple logistic regressors to [Whisper](https://github.com/zhuzilin/whisper-openvino), and a wide range of Computer Vision models, so as far as the model is properly imported into ONNX and complies with the standard, Studio Pro will be able to run it.
+    This may indicate a corrupt model file. Studio Pro supports importing a wide variety of models, ranging from simple logistic regressors to [Whisper](https://github.com/zhuzilin/whisper-openvino), and a wide range of computer vision models, so as far as the model is properly imported into ONNX and complies with the standard, Studio Pro will be able to run it.
 
     Try re-downloading the model or verifying the conversion process.
 
 2.  My model outputs diverge from my training environment from the results in Studio Pro. What now?
    
-    When converting your model to ONNX, and especially if you use Pre and Post processors, there will be type casting/conversion.
-    We recommend double-checking that all the new types you use and the mathematical operations you conduct in your java actions if you use pre/post processor are suitable for the Types the model expect/uses, I.E, a division is casted to float if a float is expected, etc.
+    When converting your model to ONNX, and especially if you use pre- and post-processors, type casting and conversion will occur.
+    Check that all the new types you use and that the mathematical operations you conduct in your Java actions (if you use pre- or post-processing) are suitable for the Types the model expect/uses (for example, a division is casted to float if a float is expected).
 
 3.  My model crashes Studio Pro or its execution is too slow. Can this be fixed?
    
-    Please mind that while the model file size is small, the outputs or inputs of it may be not so. Look this output for the detection model for [EasyOCR](https://github.com/JaidedAI/EasyOCR).
+    While the model file size is small, the outputs or inputs of it may be not so. Look at the output for the detection model for [EasyOCR](https://github.com/JaidedAI/EasyOCR).
 
-    We have two outputs with the Rely281_dim and Transposeoutput_dim labels, both of them of 4 bytes length, as they’re float32. So, assuming we’re dealing with a standard 224x224 pixels image, we will receive a ~10 mb object. Should we deal with a larger image of 986 pixels, the memory footprint of that output grows to 133 mb, and that is for a single inference. A parallel microflow that calls ML Kit ten times will require obviously ten times more memory, thus probably crashing the JVM.
+    There are two outputs with the `Rely281_dim` and `Transposeoutput_dim` labels, both of them of 4 bytes length, as they are float32. Assuming a standard 224x224 pixels image, we will receive a ~10 mb object. If it is a larger image of 986 pixels, the memory footprint of that output grows to 133 mb, and that is for a single inference. A parallel microflow that calls the model ten times will require obviously ten times more memory, probably crashing the JVM.
 
-    The main takeaway point here is, mind the growth of memory usage with very complex model outputs. See 2.2.3 for an example on how to mitigate this.
+    In short: mind the growth of memory usage with very complex model outputs. 
 
-    Another potential cause of crashing is, if there is an inconsistency between the architecture of the model and the data injected into it, especially with complex operations in models that accepts complex calculations such as neural networks. For example, if your model has a `Convolution` layer of shape `16x16x1`, injecting a tensor of a shape whose algebraic division results in an integer result smaller than 1 (such as an input of `[1,3,15,15]` , will have unpredictable consequences, among these, crashing StudioPro. As a rule of thumb, verify that the implementation of your model using MLKit matches, in shape and type of the data being sent into the component, the model architecture, whereas you trained it yourself using jupyter notebook -for instance-, or the model documentation if you obtained from third-party sources such as the ONNX Model Zoo.
+    Another potential cause of crashing is if there is an inconsistency between the architecture of the model and the data injected into it, especially with complex operations in models that accepts complex calculations such as neural networks. For example, if your model has a `Convolution` layer of shape `16x16x1`, injecting a tensor of a shape whose algebraic division results in an integer result smaller than 1 (such as an input of `[1,3,15,15]` , will have unpredictable consequences. This might include Studio Pro crashing. Verify that the implementation of your model in Studio Pro matches, in shape and type of the data being sent into the component, the model architecture, or the model documentation if you obtained from third-party sources such as the ONNX Model Zoo.
 
 4.  I have an exception when executing the model or running it. How can I handle this?
   
-    This situation is the most difficult to solve as the causes may vary a lot, ranging from an incompatible Studio Pro version (See the Release Notes for which features are compatible and which are not) to a failure inside the model or a permission issues.
+    This situation is the most difficult to solve as the causes may vary a lot, ranging from an incompatible Studio Pro version to a failure inside the model or a permission issues.
 
     We recommend turning the logs to trace level, as the ML Engine provides a great deal of information on what is going on, and using this as a basis to decide next steps.
 

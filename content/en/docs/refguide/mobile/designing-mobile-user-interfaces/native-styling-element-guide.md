@@ -1399,7 +1399,21 @@ The default class to style all video players is named `com_mendix_widget_native_
 
 ### 11.19 Web View
 
-The web view widget allows you to embed static or dynamic websites in your app. The widget's internal structure is as follows:
+The web view widget allows you to embed static or dynamic websites in your app. The widget's style properties are is as follows:
+
+```javascript
+export const com_mendix_widget_native_webview_WebView = {
+  container: {
+    // This has all ViewStyle properties.
+  },
+  errorContainer: {
+    // This has all ViewStyle properties.
+  },
+  errorText: {
+    // This has all TextSTyle properties.
+  },
+};
+```
 
 | Element | Style Properties    | Description |
 | --- | --- | --- |

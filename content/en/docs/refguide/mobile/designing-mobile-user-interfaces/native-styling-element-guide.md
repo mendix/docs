@@ -1447,6 +1447,42 @@ This introduction screen widget displays paginated contents you can swipe throug
 
 {{< figure src="/attachments/refguide/mobile/native-mobile/native-styling-refguide/intro-screen.gif" alt="intro screen"   width="350"  >}}
 
+```javascript
+export const com_mendix_widget_native_animation_Animation = {
+  fullscreenContainer: {
+    // This has all ViewStyle properties.
+  },
+  popupContainer: {
+    // This has all ViewStyle properties.
+  },
+  paginationContainer: {
+    // This has all ViewStyle properties.
+  },
+  paginationText: {
+    // This has all TextStyle properties.
+  },
+  dotStyle: {
+    // This has all ViewStyle properties.
+  },
+  activeDotStyle: {
+    // This has all ViewStyle properties.
+  },
+  buttonsContainer: {
+    // This has all ViewStyle properties.
+  },
+  container: {
+    // This has all ViewStyle properties. Meant for buttonSkip, buttonDone, buttonPrevious, and buttonNext.
+  },
+  caption: {
+    // This has all ViewStyle properties.
+  },
+  icon: {
+    size: // The size of the icon.
+    color: // The color of the icon.
+  },
+};
+```
+
 | Element | Style Properties | Description |
 | --- | --- | --- |
 | `fullscreenContainer` | This has all ViewStyle properties. | |

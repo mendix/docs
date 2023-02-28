@@ -19,6 +19,6 @@ For detailed information on working with machine learning models in Studio Pro, 
 
 To add a ML model to your app, do the following:
 
-1. Convert your model to ONNX format (see [Converting Your Model to ONNX](/refguide/machine-learning-kit/using-ml-kit/#convert-ml-model)).
+1. Convert your model to ONNX format (see the [Converting Your Model to ONNX](/refguide/machine-learning-kit/using-ml-kit/#convert-ml-model) section in *Using ML Kit*).
 2. Right-click on the module where you would like to add the mapping, and go to **Add other > ML model mapping**.
 3. Click **Import model** to import your ONNX file.

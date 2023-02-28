@@ -123,7 +123,7 @@ The images below show an example of a logistic regression, its [netron.app](http
 
 Create pre-processed inputs with **Create object** activity for inference inside your Mendix app, and consume the inference output with microflow [expressions](/refguide/expressions/).
 
-A **Create Object** activity is used for the first part in order to transfer entities from the Domain Model to the model input object. 
+A **Create Object** activity is used for the first part in order to transfer entities from the domain model to the model input object. 
 
 {{< figure src="/attachments/refguide/modeling/integration/ml-kit/ml-kit/create-object.png" alt="Details of the log message in a microflow example." >}}
 

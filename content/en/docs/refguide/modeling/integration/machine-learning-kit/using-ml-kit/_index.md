@@ -260,7 +260,7 @@ Machine learning models might be placed in the core of a Mendix application that
 
 The [Monitoring and Troubleshooting](/howto/monitoring-troubleshooting/) guide in Studio Pro helps
 
-Typically microflows that contain an MLKit activity may also be composed of various helper activities (e.g. Java Actions, Aggregate List Activities) in order to provide necessary input features to the model or parse its outputs. Tools that are provided by Studio Pro can be easily used for monitoring and troubleshooting. 
+Typically microflows that contain an MLKit activity may also be composed of various helper activities (e.g. Java actions, Aggregate List activities) in order to provide necessary input features to the model or parse its outputs. Tools that are provided by Studio Pro can be easily used for monitoring and troubleshooting. 
 
 Besides the traditional Mendix monitoring and troubleshooting tools, we share some tips for Mendix developers to get insights about inference calls in the development and production phases. 
 

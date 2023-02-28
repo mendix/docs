@@ -34,7 +34,7 @@ To use the ML model in your app, you import it to create a mapping document.
 2. Add a name for the mapping document.
 3. Click **Import Model** to import your ONNX file.
 
-This will generate two non-persistable entities representing your ML Model input and outputs (see [Persistable and Non-Persistable Entities](#persist-nonpersist-entities) below).
+This generates two non-persistable entities representing your ML Model input and outputs (see [Persistable and Non-Persistable Entities](#persist-nonpersist-entities) below).
 
 {{< figure src="/attachments/refguide/modeling/integration/ml-kit/ml-kit/ml-model-created-entities.png" alt="Two non-persistable entities generated when importing an ONNX file." >}}
 

@@ -27,7 +27,7 @@ Ensemble models are used when dealing with a lot of variance on a dataset or man
 
 You can create ensemble models in Mendix building a separate microflow for each model, then combine the predictions in another microflow. The example shows an ensemble of two models.
 
-Domain Model of an ensemble model:
+An example of a domain model of an ensemble model:
 
 {{< figure src="/attachments/refguide/modeling/integration/ml-kit/design-patterns/advanced-inference-patterns/ensembles-domain-model.png" alt="." >}}
 

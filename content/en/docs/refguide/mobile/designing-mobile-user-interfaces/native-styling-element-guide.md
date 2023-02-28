@@ -1399,7 +1399,7 @@ The default class to style all video players is named `com_mendix_widget_native_
 
 ### 11.19 Web View
 
-The web view widget allows you to embed static or dynamic websites in your app. The widget's style properties are is as follows:
+The web view widget allows you to embed static or dynamic websites in your app. The widget's style properties are as follows:
 
 ```javascript
 export const com_mendix_widget_native_webview_WebView = {
@@ -1425,7 +1425,15 @@ The default class to style all web views is named `com_mendix_widget_native_webv
 
 ### 11.20 Animation
 
-The animation widget allows you to animate a container. You can make the content wiggle, move, change size, and more.
+The animation widget allows you to animate a container. You can make the content wiggle, move, change size, and more. The widget's style properties are as follows:
+
+```javascript
+export const com_mendix_widget_native_animation_Animation = {
+  container: {
+    // This has all ViewStyle properties.
+  },
+};
+```
 
 | Element | Style Properties    | Description |
 | --- | --- | --- |

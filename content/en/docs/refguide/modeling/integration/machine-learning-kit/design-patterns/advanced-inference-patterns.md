@@ -31,6 +31,8 @@ An example of a domain model of an ensemble model:
 
 {{< figure src="/attachments/refguide/modeling/integration/ml-kit/design-patterns/advanced-inference-patterns/ensembles-domain-model.png" alt="." >}}
 
+An example of the sample microflow:
+
 {{< figure src="/attachments/refguide/modeling/integration/ml-kit/design-patterns/advanced-inference-patterns/ensembles-example-microflow.png" alt="." >}}
 
 ### 1.2 Cascaded Inference {#cascaded-inference}

@@ -1089,6 +1089,23 @@ The progress bar widget shows percentage of progress. This is how a progress bar
 
 {{< figure src="/attachments/refguide/mobile/native-mobile/native-styling-refguide/progress-bar.png" alt="progress bar"   width="300"  >}}
 
+```javascript
+export const com_mendix_widget_native_progressbar_ProgressBar = {
+  container: {
+    // This has all ViewStyle properties.
+  },
+  bar: {
+    // This has all ViewStyle properties.
+  },
+  fill: {
+    backgroundColor: // This is the background color of the filled progress bar portion.
+  },
+  marker: {
+    // This has all TextStyle properties.
+  },
+};
+```
+
 | Element | Style Properties    | Description |
 | --- | --- | --- |
 | `container` | This has all ViewStyle properties. |  |

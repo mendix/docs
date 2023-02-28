@@ -76,7 +76,7 @@ In this case, the -1 dimensions should be configured before using the mapping in
 
 {{< figure src="/attachments/refguide/modeling/integration/ml-kit/ml-kit/completed-mapping.png" alt="Completed ML mapping. Described in the paragraph above." >}}
 
-{{% alert color="info" %}}Some these shapes should be handled in [Java Action pre- and post-processors](#java-pre-post) you may have.{{% /alert %}}
+{{% alert color="info" %}}Some of these shapes should be handled in [Java Action pre- and post-processors](#java-pre-post) you may have.{{% /alert %}}
 
 #### 2.2.3 Persistable and Non-Persistable Entities {#persist-nonpersist-entities}
 

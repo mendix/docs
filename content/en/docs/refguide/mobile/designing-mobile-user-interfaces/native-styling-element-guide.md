@@ -1243,7 +1243,15 @@ The default class to style all range slider inputs is named `com_mendix_widget_n
 
 The safe area view widget prevents content from being rendered in unwanted areas, such as behind rounded screen corners or notches. This widget is only supported on iOS apps. Note that `container` styling will only be applied to the safe area.
 
-The widget's internal structure is as follows:
+The widget's style properties are as follows:
+
+```javascript
+export const com_mendix_widget_native_safeareaview_SafeAreaView = {
+  container: {
+    // This has all ViewStyle properties.
+  },
+};
+```
 
 | Element | Style Properties    | Description |
 | --- | --- | --- |

@@ -147,7 +147,7 @@ The required pre-processing varies a lot with each model and implementation, and
 
 #### 3.1.1 Multidimensional Outputs {#multidimensional-outputs}
 
-Currently, it is required to have any multidimensional data as a string encoded using the base64 format. Any multidimensional data has to be encoded, either in string base64 format if you are using non-persistable entities, or binary streams if you opt for persistable entities for the model in the mapping (see [Persistable and Non-Persistable Entities](#persist-nonpersist-entities) in this document).
+Currently, it is required to have any multidimensional data as a string encoded using the base64 format. Any multidimensional data has to be encoded, either in string base64 format if you are using non-persistable entities, or binary streams if you opt for persistable entities for the model in the mapping (see the [Persistable and Non-Persistable Entities](#persist-nonpersist-entities) section in this document).
 
 Below are two models (a Scikit-learn [random forest](https://www.kaggle.com/code/prashant111/random-forest-classifier-tutorial) and a ResNet50 network), and their [netron.app](https://netron.app/) schemas, and how these are rendered by the [Call ML model](/refguide/call-ml-model/) activity.
 

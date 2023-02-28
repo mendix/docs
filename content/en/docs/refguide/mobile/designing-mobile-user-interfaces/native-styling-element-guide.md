@@ -1165,6 +1165,19 @@ The QR code widget generates a QR code based on a value, which a user can then s
 
 {{< figure src="/attachments/refguide/mobile/native-mobile/native-styling-refguide/qr-code.png" alt="qr code"   width="350"  >}}
 
+```javascript
+export const com_mendix_widget_native_qrcode_QRCode = {
+  container: {
+    // This has all ViewStyle properties.
+  },
+  qrcode: {
+    size: // The size of the QR code.
+    color: // The color of the QR code. 
+    borderColor: // The background color behind the QR code.
+  },
+};
+```
+
 | Element | Style Properties    | Description |
 | --- | --- | --- |
 | `container` | This has all ViewStyle properties. |   |

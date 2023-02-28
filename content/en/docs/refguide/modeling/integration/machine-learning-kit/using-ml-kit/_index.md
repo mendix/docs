@@ -239,8 +239,7 @@ To integrate a pre-built (propriety or public) ML model into a Mendix app, consi
 * Compatibility of the model internal representation (IR) version with the ML Kit
 * Compatibility of the model OpSets with the ML Kit
 
-See [Versioning] for details on versioning schemes
-The ONNX community provides a model repository, called [ONNX Model Zoo](https://github.com/onnx/models), where common computer vision and language models can be found.
+For details on versioning schemes, see the [Versioning](#versioning) section below. The ONNX community provides a model repository, called [ONNX Model Zoo](https://github.com/onnx/models), where common computer vision and language models can be found.
 
 ### 4.3 Versioning {#versioning}
 
@@ -256,15 +255,11 @@ The released versions of the ML Kit and supported ONNX Runtime versions can be f
 
 ## 5 Monitoring and Troubleshooting
 
-Machine learning models might be placed in the core of a Mendix application that makes automated decisions, and data quality is a crucial part of a machine learning system. Because of this, Mendix developers need to implement and configure monitoring tools that track not only service health but also the input and output of the MLKit actions.
+Machine learning models might be placed in the core of a Mendix application that makes automated decisions, and data quality is a crucial part of a machine learning system. Because of this, Mendix developers need to implement and configure monitoring tools that track not only service health but also the input and output of the *ML Kit* actions.
 
-The [Monitoring and Troubleshooting](/howto/monitoring-troubleshooting/) guide in Studio Pro helps
+In the section below, there are tips for Mendix developers to get insights about inference calls in the development and production phases. You might need to observe the inputs/outputs of a model that is used in an *ML Kit* activity, assess the performance (latency) of making a prediction, or debug an individual pre/post-processing unit on a test sample to verify that the Microflow works and to catch potential bugs in development time before rolling out the application to the production environments.
 
-Typically microflows that contain an MLKit activity may also be composed of various helper activities (e.g. Java Actions, Aggregate List Activities) in order to provide necessary input features to the model or parse its outputs. Tools that are provided by Studio Pro can be easily used for monitoring and troubleshooting. 
-
-Besides the traditional Mendix monitoring and troubleshooting tools, we share some tips for Mendix developers to get insights about inference calls in the development and production phases. 
-
-One might need to observe the inputs/outputs of a model that is used in an *ML Kit* activity, assess the performance (latency) of making a prediction, or debug an individual pre/post-processing unit on a test sample to verify that the Microflow works and to catch potential bugs in development time before rolling out the application to the production environments. 
+See the [Monitoring and Troubleshooting](/howto/monitoring-troubleshooting/) guide for general monitoring and troubleshooting tips in Studio Pro.
 
 ### 5.1 Troubleshooting
 

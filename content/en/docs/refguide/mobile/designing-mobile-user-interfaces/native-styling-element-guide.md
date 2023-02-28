@@ -1353,6 +1353,35 @@ The video player widget allows you to play video based on a URL, and is limited 
 
 {{< figure src="/attachments/refguide/mobile/native-mobile/native-styling-refguide/video-player.png" alt="video player"   width="300"  >}}
 
+```javascript
+export const com_mendix_widget_native_videoplayer_VideoPlayer = {
+  container: {
+    // This has all ViewStyle properties.
+  },
+  indicator: {
+    color: // The loading indicator color.
+  },
+  video: {
+    // This has all ViewStyle properties.
+  },
+  errorMessage: {
+    // This has all TextStyle properties.
+  },
+  fullScreenVideoPlayer: {
+    // This has all ViewStyle properties. Android only.
+  },
+  controlBtnContainerStyle: {
+    // This has all ViewStyle properties. Android only.
+  },
+  fullScreenVideoStyle: {
+    // This has all ViewStyle properties. Android only. 
+  },
+  fullScreenActivityIndicatorStyle: {
+    // This has all ViewStyle properties. Android only.
+  },
+};
+```
+
 The widget’s style properties are as follows:
 
 | Element | Style Properties    | Description |

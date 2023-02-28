@@ -1121,6 +1121,30 @@ The progress circle widget displays progress in a circle using positive or negat
 
 {{< figure src="/attachments/refguide/mobile/native-mobile/native-styling-refguide/progress-circle.png" alt="progress circle"   width="300"  >}}
 
+```javascript
+export const com_mendix_widget_native_progresscircle_ProgressCircle = {
+  container: {
+    // This has all ViewStyle properties.
+  },
+  circle: {
+    size: // This is the radius of the progress circle.
+    borderWidth: // This is the border width of the progress circle.
+    borderColor: // This is the color of the progress circle border.
+  },
+  fill: {
+    backgroundColor: // This is the color of the circle’s filled portion.
+    width: // This is the width of the progress circle.
+    lineCapRounded: // This determines if the rotating line’s front tip is rounded off or not.
+  },
+  text: {
+    // This has all TextStyle properties.
+  },
+  validationMessage: {
+    // This has all TextStyle properties.
+  },
+};
+```
+
 | Element | Style Properties    | Description |
 | --- | --- | --- |
 | `container` | This has all ViewStyle properties. |  |

@@ -1,7 +1,7 @@
 ---
 title: "Starting with App from a Spreadsheet"
 url: /refguide/app-from-spreadsheet/
-weight: 20
+weight: 19
 description: "Describes how to import an Excel spreadsheet to your app in Mendix Studio Pro using App from a spreadsheet template."
 tags: ["studio", "domain model", "excel import", "start with data", "data model"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
@@ -42,13 +42,13 @@ During the import process, spreadsheet data is analyzed and converted the follow
     2. The values of the other column are unique. 
     3. The type of data in these columns is converted to string or enumeration attribute types. For more information on correspondence between Excel data types and attribute types, see the [Correspondence Between Excel Data Types and Attribute Types](#excel-type-attribute-type) section.
 
-Download this Excel spreadsheet example to check how data is normalized there: [Spreadsheet Example](/attachments/studio/work-with-data/start-with-data/Example.xlsx). You can also import it into an app and test how this spreadsheet is converted. For more information, see the [Importing a Spreadsheet](#importing-spreadsheet) section.
+Download this Excel spreadsheet example to check how data is normalized there: [Spreadsheet Example](/attachments/refguide/modeling/app-from-spreadsheet/Example.xlsx). You can also import it into an app and test how this spreadsheet is converted. For more information, see the [Importing a Spreadsheet](#importing-spreadsheet) section.
 
 ## 4 Starting an App From a Spreadsheet {#importing-spreadsheet}
 
 When you create your app, a page where you can upload your spreadsheet is opened. Drag your spreadsheet onto the page or browse your files and choose the one you would like to import.
 
-{{< figure src="/attachments/studio/work-with-data/start-with-data/drag-and-drop.png"   width="300"  >}}
+{{< figure src="/attachments/refguide/modeling/app-from-spreadsheet/drag-and-drop.jpg"  width="650"  >}}
 
 {{% alert color="info" %}}
 If you choose to start without data, you will have just a blank app, and will not be able to import a spreadsheet later. 
@@ -81,13 +81,13 @@ After you upload the spreadsheet, worksheets that have relations (associations) 
 
 In the **Data Preview**, you can check the spreadsheet data before the actual import is completed. You can review tables and columns and untick the ones that you do not want to import. Tables that have relations (associations) detected are indicated with a link icon:
 
-{{< figure src="/attachments/studio/work-with-data/start-with-data/data-preview.png" >}}
+{{< figure src="/attachments/refguide/modeling/app-from-spreadsheet/data-preview.jpg" >}}
 
 The columns which have associations cannot be deselected for the import, you need to delete the association first.   
 
 To review a list of associations and unselect the ones that you do not want to be created, click **Manage Relations**. In the **Manage Relations** pop-up window, you can see which table and column will be used to create an association **from** and which will be used to create an association **to**. A column with unique data is the one the association goes **to**. 
 
-{{< figure src="/attachments/studio/work-with-data/start-with-data/manage-relations.png"   width="400"  >}}
+{{< figure src="/attachments/refguide/modeling/app-from-spreadsheet/manage-relations.jpg"   width="500"  >}}
 
 For example, in the image above you can see that an association are created from the **MarketingDocs** entity to the **Contributors** entity. This association was discovered through the column **Responsible** in **MarketingDocs** and the column **Name** in **Contributors**.  As a result, when data is imported the **MarketingDocs** entity does not have **Responsible** as an attribute, instead it has an association to the **Contributors** entity and gets data from this entity through the association.
 
@@ -99,7 +99,7 @@ A column can be used to create an association **from** it once only. If an assoc
 
 At the bottom of each column (that will be turned into an attribute) an attribute type is automatically identified and indicated. Click the drop-down menu to change the attribute type. For more information on how Excel data types correspond to attribute types, see [Correspondence between Excel Data Types and Attribute Types](#excel-type-attribute-type).
 
-{{< figure src="/attachments/studio/work-with-data/start-with-data/attribute-type-drop-down.png" >}}
+{{< figure src="/attachments/refguide/modeling/app-from-spreadsheet/attribute-type-drop-down.jpg" >}}
 
 If columns have empty values,the attribute type will be identified as **String**. However, if you change it to another attribute type, Studio Pro automatically chooses and fills in a default value for the following attribute types:
 
@@ -110,7 +110,7 @@ If columns have empty values,the attribute type will be identified as **String**
 
 **Generate pages for my data** generates an overview page with a data grid for you, and *{EntityName}__NewEdit* pages for each entity. For more information, see [Generating Pages](#generating-pages). 
 
-{{< figure src="/attachments/studio/work-with-data/start-with-data/generate-pages-option.png" >}}
+{{< figure src="/attachments/refguide/modeling/app-from-spreadsheet/generate-pages-option.jpg" width="650">}}
 
 ### 4.2 Importing Data
 
@@ -120,7 +120,7 @@ You can take a brief tour showing you how your file has been converted.
 
 Open the domain model to see all created entities and attributes:
 
-{{< figure src="/attachments/studio/work-with-data/start-with-data/domain-model-example.png"   width="350"  >}}
+{{< figure src="/attachments/refguide/modeling/app-from-spreadsheet/domain-model-example.jpg"   width="650"  >}}
 
 {{% alert color="success" %}}
 After import is completed, you can [preview or publish your app](/studio/publishing-app/) and see all your data or continue configuring your app.
@@ -132,12 +132,12 @@ If **Generate pages for my data** has been selected in the preview page, pages a
 
 * A **Manage_Data** page is created – an overview page with tabs for each Excel table and with data grids per each entity
 
-    {{< figure src="/attachments/studio/work-with-data/start-with-data/manage-data-page.png" >}}
+    {{< figure src="/attachments/refguide/modeling/app-from-spreadsheet/manage-data-page.jpg" >}}
 
 * An **{EntityName}__NewEdit** page is created – a page for each of your entities for creating and saving a new object of this entity
 * A link from the **HomePage** is created – a card with buttons linking to the **Manage_Data** page   
 
-    {{< figure src="/attachments/studio/work-with-data/start-with-data/home-page.png" >}}
+    {{< figure src="/attachments/refguide/modeling/app-from-spreadsheet/home-page.jpg" >}}
 
 * The **Manage Data** menu item is created in the navigation with a link to the **Manage_Data** page
 * Your data is transferred to the preview and publish environment, that means when you preview or publish your app, you can view your data there

@@ -88,3 +88,38 @@ An example `offline.html/404.html/403.html` page could look like this:
 ```
 
 This example refers to *style.css* and *script.js*, which you should also create and place in the **error_page** directory if you want to have special styling and/or JavaScript.
+
+## 4 Creating a Re-Usable Custom Error Page
+
+It is also possible to create custom error pages inside [re-usable theme modules](/howto/front-end/customize-styling-new/#create-theme-mod) in a similar way as described above.
+
+To create a custom error page inside your theme module:
+
+1. Open the local folder of your app.
+2. Go to **themesource**
+
+   {{< figure src="/attachments/howto/front-end/custom-error-page/themesource.png" >}}
+
+3. Go the the folder of your theme module:
+
+   {{< figure src="/attachments/howto/front-end/custom-error-page/module-themesource.png" >}}
+
+4. Go to the **public** folder:
+
+   {{< figure src="/attachments/howto/front-end/custom-error-page/public.png" >}}
+
+5. Create a new folder named *error_page*:
+
+   {{< figure src="/attachments/howto/front-end/custom-error-page/public-error-page.png" >}}
+
+6. In the **error_page** folder, place your *offline.html*, *404.html*, and/or *403.html* files:
+
+   {{< figure src="/attachments/howto/front-end/custom-error-page/offline.png" >}}
+
+When this module is imported in other apps, the custom error pages in it will automatically become available.
+This can also be used in a [company design system](/howto/front-end/create-a-company-design-system/).
+
+{{% alert color="info" %}}
+Error pages created inside the app's **theme/web** folder will override error pages that are included with a theme module.  
+This way, it is always possible to customize/change one or more error pages while still using the rest of the styling and elements from the module. 
+{{% /alert %}}

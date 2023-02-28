@@ -93,7 +93,7 @@ To convert an entity, do the following:
 1. Double-click on the entity to open its **Properties**.
 2. Select **Yes** in the **Persistable** section.
 
-You now have a [peristable](/refguide/persistability/) entity in your domain model that you can set as the type you need, and that can be used in [pre- and post-processors](#pre-post-processors).
+You now have a [persistable](/refguide/persistability/) entity in your domain model that you can set as the type you need, and that can be used in [pre- and post-processors](#pre-post-processors).
  
 ### 2.3 Using the Model in a Microflow {#use-model-microflow}
 

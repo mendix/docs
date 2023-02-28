@@ -222,7 +222,7 @@ For detailed information on pre-processing and post-processing patterns of machi
 
 To ensure that your model will work with the [Call ML Model](/refguide/call-ml-model/) activity, follow the guidelines in this section.
 
-To learn more about design patterns that can be applied to the Inference process, and specifications that for pre/post-processing while using Mendix components, Java Actions, or embedding it into the model directly, see our documentation on [Design Patterns](/refguide/machine-learning-kit/design-patterns/).
+To learn more about design patterns that can be applied to the Inference process, and specifications that for pre/post-processing while using Mendix components, Java actions, or embedding it into the model directly, see our documentation on [Design Patterns](/refguide/machine-learning-kit/design-patterns/).
 
 ### 4.1 Model Building
 

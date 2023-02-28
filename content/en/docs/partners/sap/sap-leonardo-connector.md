@@ -45,7 +45,7 @@ To use the Connector for SAP Leonardo Machine Learning Foundation, you need the 
 
     5. Use the API key in your app, as described in the next section.
 
-## 3 Setting up the API Key {#api-key}
+## 3 Setting up the API Key {#sap-leonardo-api-key}
 
 The Connector for SAP Leonardo Machine Learning Foundation actions are available in your microflows, once you have imported the Connector for SAP Leonardo Machine Learning Foundation module from the Mendix Marketplace.
 
@@ -314,7 +314,7 @@ The **ScoreSimilarity** action returns an object of entity type *LeonardoMachine
 |SecondVectorId|id|The id of the vector which is in the top *numSimilarVectors* matches with *FirstVectorId*|
 |Score||A score between -1 and 1 indicating how similar the vectors are|
 
-<a name="scoresimilarity-example"></a>**Example**
+<a id="scoresimilarity-example"></a>**Example**
 
 You have three vectors, *v0*, *v1*, and *v2*, containing the following values: [1.0, 2.0, 3.0, 4.0], [5.0, 6.0, 7.0, 8.0], and [1.0, 2.1, 3.1, 4.0]. In this case the JSON needs to be constructed as shown in the example, below.
 

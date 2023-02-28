@@ -4,7 +4,7 @@ url: /developerportal/deploy/licensing-apps/
 #New document which replaces four others
 weight: 15
 description: "Licensing apps for production by linking them to a licensed cloud node."
-tags: ["App", "Node", "Developer Portal", "Deploy", "Link", "Unlink", "Licensed", "Free App", "Upgrade", "Mendix Cloud", "v3", "v4"]
+tags: ["App", "Node", "Developer Portal", "Deploy", "Link", "Unlink", "Licensed", "Free App", "Upgrade", "Mendix Cloud"]
 aliases:
     - /developerportal/howto/how-to-link-a-different-app-to-a-node.html
     - /developerportal/howto/how-to-link-app-to-node.html
@@ -46,7 +46,7 @@ In a **node** in the Mendix Cloud, you may have one, or more, of these environme
 
 For a **Free App**, your app has a single environment which allows you to test your app. However, this comes with restrictions on how long it will run. In addition, you cannot scale the app, and the operational capabilities are limited. For more details on the restrictions of a Free App, see [Mendix Cloud](/developerportal/deploy/mendix-cloud-deploy/#free-app).
 
-In a **licensed node** you have everything you need to stage and deploy your app. You can have several different environments to support development: test, acceptance, and production, for example. With [Flexible Environments](/developerportal/deploy/mendix-cloud-deploy/#flexible-environments) in Mendix Cloud v4, you can even specify the number and names of your environments. You can scale licensed environments by providing more memory or multiple instances, and you can configure and monitor them using the tools in the Developer Portal.
+In a **licensed node** you have everything you need to stage and deploy your app. You can have several different environments to support development: test, acceptance, and production, for example. With [Flexible Environments](/developerportal/deploy/mendix-cloud-deploy/#flexible-environments) in the Mendix Cloud, you can even specify the number and names of your environments. You can scale licensed environments by providing more memory or multiple instances, and you can configure and monitor them using the tools in the Developer Portal.
 
 ## 3 Prerequisites
 

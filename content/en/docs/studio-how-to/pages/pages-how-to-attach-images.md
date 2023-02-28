@@ -94,7 +94,7 @@ Follow the steps below:
 
         1. Set the **Title** to *Attach Images*.
         2. Set the **Layout** to *PopupLayout*.
-        3. Set **Entity** to **Receipt**.
+        3. Set **Entity** to **Receipt** through the association **Receipt_Report**.
         4. The **Autofill Contents** option is on, so contents of the page will be configured automatically for you and the suggested page template is narrowed down to **Forms**. Choose **Form Vertical** and click **Create**.
 
         {{< figure src="/attachments/studio-how-to/pages/pages-how-to-attach-images/create-new-page-images.png"   width="500"  >}}

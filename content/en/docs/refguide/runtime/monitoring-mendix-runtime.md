@@ -19,7 +19,7 @@ For deployments to other platforms (for example Mendix for Private Cloud) you do
 For deployments to the Mendix Cloud, you can get the same information from various pages in the Developer Portal. For more information see:
 
 * [Metrics](/developerportal/operate/metrics/)
-* [Trends in Mendix Cloud v4](/developerportal/operate/trends-v4/)
+* [Trends in the Mendix Cloud](/developerportal/operate/trends-v4/)
 * [Running Now Metrics](/developerportal/operate/troubleshooting-mxcloud-runningnow/)
 {{% /alert %}}
 

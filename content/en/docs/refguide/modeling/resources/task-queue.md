@@ -196,7 +196,7 @@ Prior to Mendix 9.6 tasks were always executed in a system context, even if the 
 In case where **Apply entity access** is set to *true*, the following rules apply:
 
 * When a user is logged in, the task will be executed in a new context for the same named user. This context will be the same as if the user is logged in. 
-* When no user is logged in, the task will be executed in a new anonymous context. This context will be for a new anonymous user with the same language and timezone as the original user.
+* When no user is logged in, the task will be executed in a new anonymous context. This context will be for a new anonymous user with the same language and time zone as the original user.
 
 There is one exception to the above rules:
 

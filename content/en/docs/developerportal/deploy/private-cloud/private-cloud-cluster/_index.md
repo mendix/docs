@@ -37,9 +37,8 @@ Should you consider using a connected environment, the following URLs should be 
 | URL | Description |
 |-----|-------------|
 | `https://interactor-bridge.private-cloud.api.mendix.com` | Websocket based main communication API |
-| `https://privatecloud.mendixcloud.com` | Registry for downloading MDA artifacts |
+| `https://package-store-prod-2.s3-accelerate.amazonaws.com/` | Registry for downloading MDA artifacts |
 | `https://private-cloud.registry.mendix.com` | Docker registry for downloading Runtime base images |
-| `https://cdn.mendix.com` | Registry for downloading placeholder MDA artifacts |
 | `https://subscription-api.mendix.com` | Service to verify call-home license |
 
 ## 3 Creating a Cluster and Namespace
@@ -1592,7 +1591,7 @@ Here you can perform the following actions on the entire cluster:
 * Rename the cluster or edit its description by clicking the edit icon
 * Invite another cluster manager
 
-<a name="actvity-logs"></a>You can also see the activities logged for all you clusters by clicking **Activity** in the [cluster overview](#overview) page. This shows the following:
+<a id="actvity-logs"></a>You can also see the activities logged for all you clusters by clicking **Activity** in the [cluster overview](#overview) page. This shows the following:
 
 * When a cluster has been added
 * When a cluster description is added

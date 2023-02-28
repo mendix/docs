@@ -1,5 +1,5 @@
 ---
-title: "XPath Not"
+title: "XPath not"
 url: /refguide/xpath-not/
 tags: ["studio pro"]
 ---
@@ -9,7 +9,7 @@ tags: ["studio pro"]
 The `not()` function inverts the meaning (and as such; the result) of the argument.
 
 {{% alert color="info" %}}
-This can have different results from an inverse comparison (for example `!=` as the negative of `=`) if the XPath is over a one-to-many relationship. See the examples below for more explanation.
+The `not()` function can have different results from an inverse comparison (for example, `!=` as the negative of `=`). See the examples below for more explanation.
 {{% /alert %}}
 
 ## 2 Examples

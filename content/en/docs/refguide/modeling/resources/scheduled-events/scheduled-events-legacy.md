@@ -150,7 +150,7 @@ In addition to Monthly and Yearly scheduled events, you also want to be careful 
 
 Whenever you set up an event to run every day at a certain time, it will start at the specified time. However, after this it will run at a fixed interval (internally this is calculated back to run every X nanoseconds). This means that a daily event runs every 24 hours. Therefore, if the time changes because of daylight saving, your event *could* be an hour off.
 
-This depends on the locale (timezone) your server is hosted in. Even if you choose **UTC** time, you will still experience this time shift if you are in a country that adopts daylight savings, as the daylight savings changes the offset from UTC.
+This depends on the locale (time zone) your server is hosted in. Even if you choose **UTC** time, you will still experience this time shift if you are in a country that adopts daylight savings, as the daylight savings changes the offset from UTC.
 
 Unfortunately there isn't a great workaround for this issue. If the scheduled event has to be run at a specific time you could create a similar solution to that described above, scheduling the event hourly and using 'HH' (0-23 hours), or 'kk' (1-24 hours) rather than 'dd' in the date format expression. Remember that this will increase the number of `ScheduledEventInformation` objects created.
 

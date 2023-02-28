@@ -123,4 +123,3 @@ After this, all `Attachments` belonging to one `GenericObject` are copied to ano
 ## 4 Read More
 
 * [Extending Your Application with Custom Java](/refguide/extending-your-application-with-custom-java/)
-

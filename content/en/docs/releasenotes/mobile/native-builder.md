@@ -100,8 +100,8 @@ Please update to Native Builder v3.2.1 or higher. Version 3.2.1 includes the fix
 
 ### Fixes
 
-* <a name="nalm-217"></a>Using more than one consecutive space in an app's name is now supported.
-* <a name="nalm-215"></a>MxBuild no longer fails without error messages during the build process.
+* <a id="nalm-217"></a>Using more than one consecutive space in an app's name is now supported.
+* <a id="nalm-215"></a>MxBuild no longer fails without error messages during the build process.
 
 ## 2.0.0
 

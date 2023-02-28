@@ -47,7 +47,7 @@ When you choose to get an object by microflow, this is shown in the **Export Map
 
 Finally, the user can also define what should be done when the chosen method to get the Mendix object (from parameter, by association, or by microflow) fails. The first option is to throw an error and abort the mapping. The microflow that called this mapping should then handle this error. Alternatively, if the minimum occurrence of the schema element that is being mapped to is zero it's possible to skip the creation of the element. The export mapping will continue for the remainder of the elements.
 
-## Mapping Attributes in Export Mappings<a name="mapping-attributes"></a>
+## Mapping Attributes in Export Mappings {#mapping-attributes}
 
 For each value element that the complex schema element encompasses, an attribute needs to be mapped from the entity. These properties are not applicable for choice or inheritance elements, because they do not contain value elements. Configuring how to map the attributes is done in the window depicted in figure 5, which is shown after double-clicking a specific mapping element.
 
@@ -71,7 +71,7 @@ It is possible to implicitly convert Mendix Decimal data type to xs:float type. 
 
 {{% /alert %}}
 
-## Optional Mapping Elements<a name="optional"></a>
+## Optional Mapping Elements {#optional}
 
 For some selected schema elements defining an Entity is optional. This is the case when the schema element:
 

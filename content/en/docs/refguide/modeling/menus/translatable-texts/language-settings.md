@@ -209,6 +209,7 @@ The list below is provided to enable you to quickly evaluate if Mendix supports 
 | Tamil | Singapore | ta_SG | 9.3.0 |
 | Thai (Western digits) | Thailand | th_TH | 9.0.5 |
 | Thai (Thai digits) | Thailand | th_TH_TH | 9.0.5 |
+| Tigrinya | Eritrea | ti_ER | 9.23.0 |
 | Turkish | Turkey | tr_TR | 9.0.5 |
 | Ukrainian | Ukraine | uk_UA | 9.0.5 |
 | Urdu | India | ur_IN | 9.2.0 |

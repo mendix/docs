@@ -10,7 +10,7 @@ tags: ["studio pro", "machine learning", "ml kit", "models", "integration"]
 
 ## 1 Introduction
 
-Studio Pro [9.23](/releasenotes/studio-pro/9.23/) and above supports machine learning (ML) model integration in Mendix apps. Collectively called the *Machine Learning (ML) Kit*, this functionality allows Mendix developers to deploy a ML model built using common ML framework and language into Mendix Studio Pro runtime.
+Studio Pro [9.23](/releasenotes/studio-pro/9.23/) and above supports machine learning (ML) model integration in Mendix apps. Collectively called the *Machine Learning (ML) Kit*, this functionality allows Mendix developers to deploy a ML model built using common ML framework and language into the Mendix Runtime.
 
 ## 2 Usage {#usage}
 
@@ -66,7 +66,7 @@ Studio Pro detects models with static shapes automatically and display them in t
 
 Several models (including EasyOCR and Yolo) have tensors with dynamic shapes. In these cases, decide on a tensor mapped static shape and attribute type in a mapped entity before integrating in microflows.
 
-###### 2.2.2.2.1 Setting Dynamic Tensor Shape Mapping (Error 1790) {#set-dynamic-shapes}
+###### 2.2.2.2.1 Setting Dynamic Tensor Shape Mapping (Error CE1790) {#set-dynamic-shapes}
 
 When importing your model, you might encounter error CE1790. Go to the error and double-click on the affected mapping line to open the **Edit ML model input shape**s dialog box:
 
@@ -143,9 +143,9 @@ For information on design patterns that include pre-processors and post-processo
 
 The *pre-processor* is the block of code that manipulates the data before being injected into the model. Some common examples of the pre-processing are [normalization](https://towardsdatascience.com/understand-data-normalization-in-machine-learning-8ff3062101f0) and [missing data handling](https://towardsdatascience.com/7-ways-to-handle-missing-values-in-machine-learning-1a6326adf79e). 
 
-The required pre-processing varies a lot with each model and implementation, and can even be part of the ONNX file itself (see [Pre and post processing](https://onnxruntime.ai/docs/reference/build-web-app.html#pre-and-post-processing) in the ONNX runtime documentation). It is highly coupled with the model, its training process, and the domain of knowledge.
+The required pre-processing varies a lot with each model and implementation, and can even be part of the ONNX file itself (see [Pre and post processing](https://onnxruntime.ai/docs/reference/build-web-app.html#pre-and-post-processing) in the ONNX Runtime documentation). It is highly coupled with the model, its training process, and the domain of knowledge.
 
-#### 3.1.1 Multidimensional Outputs
+#### 3.1.1 Multidimensional Outputs {#multidimensional-outputs}
 
 Currently, it is required to have any multidimensional data as a string encoded using the base64 format. Any multidimensional data has to be encoded, either in string base64 format if you are using non-persistable entities, or binary streams if you opt for persistable entities for the model in the mapping (see [Persistable and Non-Persistable Entities](#persist-nonpersist-entities) in this document).
 
@@ -264,25 +264,26 @@ Typically microflows that contain an MLKit activity may also be composed of vari
 
 Besides the traditional Mendix monitoring and troubleshooting tools, we share some tips for Mendix developers to get insights about inference calls in the development and production phases. 
 
-One might need to observe the inputs/outputs of a model that is used in an MLKit activity, assess the performance (latency) of making a prediction, or debug an individual pre/post-processing unit on a test sample to verify that the Microflow works and to catch potential bugs in development time before rolling out the application to the production environments. The StudioPro allows us to fulfill these aims in many different ways.
+One might need to observe the inputs/outputs of a model that is used in an *ML Kit* activity, assess the performance (latency) of making a prediction, or debug an individual pre/post-processing unit on a test sample to verify that the Microflow works and to catch potential bugs in development time before rolling out the application to the production environments. 
 
 ### 5.1 Troubleshooting
 
 The [Errors Pane](/refguide/errors-pane/) in Studio Pro shares informative messages about the metadata of the models that are consumed by the **Call ML Model** activity. Warning messages do not block deployment, but the application may not work seamlessly. All error messages have to be resolved in order to execute applications in local environments or deploy applications into the production environments.
 
     Warning
-- CE9997: ONNX IR version Incompatibility. See [ONNX versioning docs](https://github.com/onnx/onnx/blob/main/docs/Versioning.md) and version compatibility matrixes in the following section.
-- CE9998: ONNX Opset Incompatibility. See [ONNX versioning docs](https://github.com/onnx/onnx/blob/main/docs/Versioning.md) and version compatibility matrixes in the following section.
+* **CE9997**: ONNX IR version Incompatibility. See [ONNX versioning docs](https://github.com/onnx/onnx/blob/main/docs/Versioning.md) and version compatibility matrixes in the following section.
+* **CE9998**: ONNX Opset Incompatibility. See [ONNX versioning docs](https://github.com/onnx/onnx/blob/main/docs/Versioning.md) and version compatibility matrixes in the following section.
     Error
-- CE9999: Missing input. The required model input has to be provided.
+* **CE9999**: The required model input has to be provided.
+* **CE1790**: See [Set dynamic tensor shapes](#set-dynamic-shapes).
 
 ### 5.2 Console
 
-The [Console](/refguide/view-menu/#console) pane displays the output of the Mendix [Runtime](/refguide/runtime/) while running an application.
+The [Console](/refguide/view-menu/#console) pane displays the output of the [Mendix Runtime](/refguide/runtime/) while running an application.
 
 #### 5.2.1 Mendix Runtime Logs
 
-The responsibility of the Mendix Runtime is to make an inference call on the model which is integrated into an app via the **Call ML Model** activity. While making a prediction on the model, Mendix Runtime publishes several metrics on the ML Engine log node available in the Console and application logs. These instance-based metrics are provided in each inference call to provide insights to the Mendix developers.
+The responsibility of the Mendix Runtime is to make an inference call on the model which is integrated into an app via the **Call ML Model** activity. While making a prediction on the model, the Mendix Runtime publishes several metrics on the ML Engine log node available in the Console and application logs. These instance-based metrics are provided in each inference call to provide insights to the Mendix developers.
 `Trace` 
 
 - ML Model Inference Time: This shows how many milliseconds it took to make an inference call.
@@ -291,7 +292,7 @@ The responsibility of the Mendix Runtime is to make an inference call on the mod
 
 The [Log Message](/refguide/log-message/) activity is very flexible and can be used to debug the inputs/outputs of any activity including Java Actions and the **Call ML Model** activities. It is useful when it comes to checking the state of the data at a specific point inside the Microflow.
 
-For example, a log message after an inference call made by the **Call ML Model** activity helps us to observe the classification result of a ResNet model on a provided image:
+For example, a log message after an inference call made by the **Call ML Model** activity helps to observe the classification result of a ResNet model on a provided image:
 
 {{< figure src="/attachments/refguide/modeling/integration/ml-kit/ml-kit/exploit-log-message.png" alt="Image of a microflow with a log message activity." >}}
 

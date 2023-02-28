@@ -10,13 +10,13 @@ tags: ["studio pro", "machine learning", "ml kit", "models", "integration"]
 
 ## 1 Introduction
 
-Studio Pro [9.23](/releasenotes/studio-pro/9.23/) and above supports machine learning (ML) model integration in Mendix apps. Collectively called the *Machine Learning (ML) Kit*, this functionality allows Mendix developers to deploy a ML model built using common ML framework and language into Mendix Studio Pro runtime.
+Studio Pro [9.23](/releasenotes/studio-pro/9.23/) and above supports machine learning (ML) model integration in Mendix apps. Collectively called the *Machine Learning (ML) Kit*, this functionality allows Mendix developers to deploy a ML model built using common ML framework and language into the Mendix Runtime.
 
 ## 2 Under the Hood {#ml-kit-hood}
 
 Mendix *ML Kit* is built with the Open Neural Network Exchange ([ONNX](https://onnx.ai/)), an open source framework [co-developed by Microsoft and Facebook](https://azure.microsoft.com/en-us/blog/microsoft-and-facebook-create-open-ecosystem-for-ai-model-interoperability/) to enable framework interoperability. ONNX is an open standard format representing machine learning models. Models trained with various frameworks, from scikit-learn to PyTorch or TensorFlow, can be converted to ONNX.
 
-The ONNX Runtime is based on the ONNX standard, and is an optimized inference engine for efficiently running any model converted to the ONNX format across different hardware and operating systems with minimum effort. Due to this framework interoperability nature of ONNX, ONNX Runtime improves the development efficiency from model training to inference. With the ML Kit, we have extended Mendix runtime with ONNX runtime. ONNX bridges the gap between AI frameworks and Mendix.
+The ONNX Runtime is based on the ONNX standard, and is an optimized inference engine for efficiently running any model converted to the ONNX format across different hardware and operating systems with minimum effort. Due to this framework interoperability nature of ONNX, ONNX Runtime improves the development efficiency from model training to inference. With the ML Kit, we have extended the Mendix Runtime with ONNX Runtime. ONNX bridges the gap between AI frameworks and Mendix.
 
 ## 3 Work with ML Kit
 

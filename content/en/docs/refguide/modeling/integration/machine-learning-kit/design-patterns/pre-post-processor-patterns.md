@@ -71,12 +71,11 @@ For instance, a new feature (minimum bike age) is calculated via Aggregate List 
 
 More advanced use cases would require to use the full power of a programming language in order to achieve some complex transformation, into and from the model itself.
 
-Please note that as per the current Beta 2 status, if your model has multidimensional numeric inputs and/or outputs, we need to encode these as strings, using Base64, thus in this use case Java Actions will be required.
-Let’s take a look into some examples.
+If your model has multidimensional numeric inputs and/or outputs, you need to encode these as `strings`, using Base64. In this use case Java Actions will be required. See the [Multidimensional Outputs](/refguide/machine-learning-kit/using-ml-kit/#multidimensional-outputs) section of *Using ML Kit* for more information.
 
-#### 1.2.1 Java Actions for encoding features
+#### 1.2.1 Java Actions for Encoding Features
 
-Let’s consider this microflow:
+Consider the following microflow:
 
 {{< figure src="/attachments/refguide/modeling/integration/ml-kit/design-patterns/pre-postprocessor-design-patterns/java-actions-encoding-features-microflow.png" alt="." >}}
  
@@ -128,11 +127,11 @@ The post-processor is even simpler:
  
 Most of the code is related to creating a Map from Integer (the output of the model) to String (a valid class name) from a file that should be already in your artifacts folder and then returning it so that we can process it later.
 
-#### 1.2.2 Java Actions for data transformation features
+#### 1.2.2 Java Actions for Data Transformation Features
 
 A common step required in most non-structured data inference using neural networks is to resize the image, normalize, et al. For NLP, a similar flow would require text-cleaning, stop word removal, lemmatization, etc. These would require more complex tasks to be executed. As an example, we share the Pre- and post-processing required for inference using an image through the [ResNet50 in the ONNX model zoo](https://github.com/onnx/models/tree/main/vision/classification/resnet), essentially, resizing and normalization.
 
-##### 1.2.2.1 Pre-processing
+##### 1.2.2.1 Pre-Processing
 
 As you can see, most of the code are the loops required for normalization and encoding
 
@@ -184,7 +183,7 @@ As you can see, most of the code are the loops required for normalization and en
     }
 ```
  
-##### 1.2.2.2 Post-processing
+##### 1.2.2.2 Post-Processing
 
 In this case, the bulk of the code is about creating a map for translating the id derived from the highest confidence class retrieved by the model, and the highest probability calculation.
 ```

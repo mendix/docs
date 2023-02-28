@@ -1049,6 +1049,24 @@ The maps widget supports various digital map providers. This is how a maps widge
 
 {{< figure src="/attachments/refguide/mobile/native-mobile/native-styling-refguide/maps.png" alt="maps"   width="350"  >}}
 
+```javascript
+export const com_mendix_widget_native_maps_Maps = {
+  container: {
+    // This has all ViewStyle properties.
+  },
+  loadingOverlay: {
+    // This has all ViewStyle properties.
+  },
+  loadingIndicator: {
+    color: // This is the color of the loading indicator.
+  },
+  marker: {
+    color: // This is the color of the location marker.
+    opacity: // This is the opacity of the location marker.
+  },
+};
+```
+
 The widget's style properties are as follows:
 
 | Element | Style Properties    | Description |

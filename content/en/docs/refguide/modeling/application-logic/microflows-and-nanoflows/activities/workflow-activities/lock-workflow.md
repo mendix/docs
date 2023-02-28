@@ -71,7 +71,7 @@ It is not possible to pause Failed workflow instances, because even if you unpau
 
 This option is enabled by default.
 
-#### 3.2.1 Workflow State Transitions Upon Lock And Unlock
+#### 3.2.1 Workflow State Transitions Upon Lock And Unlock {#workflow-state-transitions}
 
 In the table below you can see all workflow state transitions upon lock and unlock the workflow.
 

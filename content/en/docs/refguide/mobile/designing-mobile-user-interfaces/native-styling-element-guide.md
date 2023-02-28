@@ -1193,6 +1193,38 @@ The range slider widget allows you to change a range of values using a slider wi
 
 {{< figure src="/attachments/refguide/mobile/native-mobile/native-styling-refguide/range-slider.png" alt="range slider"   width="300"  >}}
 
+```javascript
+export const com_mendix_widget_native_rangeslider_RangeSlider = {
+  container: {
+    // This has all ViewStyle properties.
+  },
+  track: {
+    // This has all ViewStyle properties.
+  },
+  trackDisabled: {
+    // This has all ViewStyle properties.
+  },
+  highlight: {
+    // This has all ViewStyle properties.
+  },
+  highlightDisabled: {
+    // This has all ViewStyle properties.
+  },
+  marker: {
+    // This has all ViewStyle properties.
+  },
+  markerActive: {
+    // This has all ViewStyle properties.
+  },
+  markerDisabled: {
+    // This has all ViewStyle properties.
+  },
+  validationMessage: {
+    // This has all TextStyle properties.
+  },
+};
+```
+
 | Element | Style Properties    | Description |
 | ---| --- | --- |
 | `container` | This has all ViewStyle properties. |    |

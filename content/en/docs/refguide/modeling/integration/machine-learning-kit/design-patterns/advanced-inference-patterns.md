@@ -53,7 +53,7 @@ In this way, the AI-powered smart app can be split into two Mendix apps: one to 
 
 Below is an example of such deployment. Instead of actually storing the variable after predicting the elements in an image, the variable is encoded as JSON and then published.
 
-{{< figure src="/attachments/refguide/modeling/integration/ml-kit/design-patterns/advanced-inference-patterns/maas-sample-microflow.png" alt="." >}}
+{{< figure src="/attachments/refguide/modeling/integration/ml-kit/design-patterns/advanced-inference-patterns/maas-sample-microflow.png" alt="Sample microflow for a Maas, as explained in the paragraph above." >}}
 
 ### 1.4 Batch Inference {#batch-inference}
 

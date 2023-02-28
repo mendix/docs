@@ -109,7 +109,7 @@ In the microflow below, a [Create object](/refguide/create-object/) activity cre
 
 ##### 2.3.1.2 Call ML Model Activity Details
 
-The **Call ML model** activity is an **ML Kit** activity in the **Toolbox**. Detailed documentation on the properties of this activity can be found in the [Call ML model](/refguide/call-ml-model/) page.
+The **Call ML model** activity is an **ML Kit** activity in the **Toolbox**. For further details, see [Call ML model](/refguide/call-ml-model/).
 
 ##### 2.4 Logistic Regression Example
 

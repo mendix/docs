@@ -283,7 +283,7 @@ There is an extensive [list of ONNX Operators](https://github.com/onnx/onnx/blob
        f.write(onxx_pipeline.SerializeToString())
 ```
 
-There is nothing to be done inside Studio Pro, as the runtime supports it entirely without any extra steps required. Alternatively, a pre- / post-processor can also be constructed from scratch with native ONNX Operators without the need for a conversion library.
+There is nothing to be done inside Studio Pro, as the Mendix Runtime supports it entirely without any extra steps required. Alternatively, a pre- / post-processor can also be constructed from scratch with native ONNX Operators without the need for a conversion library.
 
 ResNet Pre-processor and Model Inference in Separate MLKit Activities
 

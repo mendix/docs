@@ -43,7 +43,7 @@ An example of a microflow:
 
 {{< figure src="/attachments/refguide/modeling/integration/ml-kit/design-patterns/advanced-inference-patterns/cascaded-inference-microflow.png" alt="." >}}
 
-A model pre-processor makes some data available for the first model, and the output is injected into the second model as an input. Ultimately, that output will be used for the final prediction.
+A model pre-processor makes some data available for the first model, and the output is injected into the second model as an input. Ultimately, that output is used for the final prediction.
 
 ### 1.3 Machine Learning MaaS (Model as a Service) {#maas}
 

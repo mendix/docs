@@ -11,7 +11,7 @@ tags: ["ML kit", "ML model mapping", "machine learning", "models"]
 
 Studio Pro [9.23](/releasenotes/studio-pro/9.23/) and above supports machine learning (ML) model integration in Mendix apps. Collectively called the *Machine Learning (ML) Kit*, this functionality allows Mendix developers to deploy a ML model built using common ML framework and language into Mendix Studio Pro runtime.
 
-For a list of supported models, see [Supported Frameworks and Libraries](/refguide/machine-learning-kit/using-ml-kit/#supported-frameworks).
+For a list of supported models, see the [Supported Frameworks and Libraries](/refguide/machine-learning-kit/using-ml-kit/#supported-frameworks) section in *Using ML Kit*.
 
 For detailed information on working with machine learning models in Studio Pro, see [Using ML Kit](/refguide/machine-learning-kit/using-ml-kit/).
 

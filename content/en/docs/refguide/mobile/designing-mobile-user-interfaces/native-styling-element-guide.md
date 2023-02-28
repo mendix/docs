@@ -999,6 +999,35 @@ The default class to style all feedback widgets is named `com_mendix_widget_nati
 
 The floating action button widget lets you customize the appearance and functionality of floating action buttons. The widget’s style properties are as follows:
 
+```javascript
+export const com_mendix_widget_native_floatingactionbutton_FloatingActionButton = {
+  container: {
+    // This has all ViewStyle properties.
+  },
+  button: {
+    // This has all ViewStyle properties.
+    size: // This is the radius of the button.
+    rippleColor: // This is the color of the ripple on Android.
+  },
+  buttonIcon: {
+    // This has all ImageStyle properties.
+  },
+  secondaryButton: {
+    // This has all ViewStyle properties.
+    size: // This is the radius of the secondary buttons.
+  },
+  secondaryButtonIcon: {
+    // This has all ImageStyle properties.
+  },
+  secondaryButtonCaption: {
+    // This has all TextStyle properties.
+  },
+  secondaryButtonCaptionContainer: {
+    // This has all ViewStyle properties.
+  },
+};
+```
+
 | Element | Style Properties    | Description |
 | --- | ---| --- |
 | `container` | This has all ViewStyle properties. |  |

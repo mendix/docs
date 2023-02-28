@@ -13,7 +13,6 @@ Studio Pro [9.23](/releasenotes/studio-pro/9.23/) and above supports machine lea
 
 For a list of supported models, see the [Supported Frameworks and Libraries](/refguide/machine-learning-kit/using-ml-kit/#supported-frameworks) section in *Using ML Kit*.
 
-For detailed information on working with machine learning models in Studio Pro, see [Using ML Kit](/refguide/machine-learning-kit/using-ml-kit/).
 
 ## 2 Adding a ML Mapping to Your App
 
@@ -22,3 +21,9 @@ To add a ML model to your app, do the following:
 1. Convert your model to ONNX format (see the [Converting Your Model to ONNX](/refguide/machine-learning-kit/using-ml-kit/#convert-ml-model) section in *Using ML Kit*).
 2. Right-click on the module where you would like to add the mapping, and go to **Add other > ML model mapping**.
 3. Click **Import model** to import your ONNX file.
+
+## 3 Read More
+
+* An introduction to the [Machine Learning Kit](/refguide/machine-learning-kit/)
+* Detailed information on [using ML Kit](/refguide/machine-learning-kit/using-ml-kit/).
+* Learn about machine learning [Design Patterns](/refguide/machine-learning-kit/design-patterns/), including [Advanced Inference Design Patterns](/refguide/machine-learning-kit/design-patterns/advanced-inference/) and [Pre- and Post-Processor Design Patterns](/refguide/machine-learning-kit/design-patterns/pre-post-processor-patterns/)

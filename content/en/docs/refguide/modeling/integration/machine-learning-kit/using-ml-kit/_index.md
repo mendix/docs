@@ -159,15 +159,15 @@ Once you import your model, the **Call ML Model** activity allows you to add you
 
 {{< figure src="/attachments/refguide/modeling/integration/ml-kit/ml-kit/name-your-output.png" alt="Example of naming the object output." >}}
 
-### 3.2 Pre-processing and Post-processing using Java Actions {#java-pre-post}
+### 3.2 Pre-processing and Post-processing Using Java Actions {#java-pre-post}
 
 Data transformations are usually complex tasks, and often require mathematical libraries or even more complex pieces of software (think OpenCV for computer vision). As a result, sometimes they are not integrated into the model. In this case, the best way to perform these transformations in Mendix is using Java Actions (see [Extending Your Application with Custom Java](/refguide/extending-your-application-with-custom-java/)).
  
 Read the sections below for an example of pre-processing and post-processing using Java Actions in Mendix.
 
-#### 3.2.1 Pre-processing using Java Actions
+#### 3.2.1 Pre-processing Using Java Actions
 
-This uses a [Random Forest](https://www.kaggle.com/code/prashant111/random-forest-classifier-tutorial) example trained with the Iris/Setosa dataset. The output is a long value, representing a flower type. The input is a base64 encoded float array, as we use Base64 encoded strings for passing multidimensional data to the Call ML Model action at this stage of development.
+This [Random Forest example](https://www.kaggle.com/code/prashant111/random-forest-classifier-tutorial) example is trained with the Iris/Setosa dataset. The output is a long value, representing a flower type. The input is a base64 encoded float array, as we use Base64 encoded strings for passing multidimensional data to the Call ML Model action at this stage of development.
 
 The pre-processor is essentially a standard Java Action that creates the multidimensional input for your model and in this case, encodes the data into a string with Base64 (see line 14 below). Another important step is to convert the Decimal data type into float, as the ONNX format uses that data type. But this may vary along models and implementations.
 
@@ -195,9 +195,9 @@ The pre-processor is essentially a standard Java Action that creates the multidi
     }
 ```
 
-#### 3.2.2 Post-processing using Java Actions
+#### 3.2.2 Post-processing Using Java Actions
 
-The rationale for using a post-processor is quite similar to the pre-processor but in the opposite direction. We’re going to extract something out of the model and do something with it. For more complex models, the output can be multidimensional, and then decoding is required. In this example, the post-processor is to map it using a class map in order to get not ids nor probabilities, but the class name, using a file already present in the artifacts directory.
+The rationale for using a post-processor is similar to that of the pre-processor, but in the opposite direction: you extract something out of the model and do something with it. For more complex models, the output can be multidimensional, and then decoding is required. In this example, the post-processor is mapped using a class map in order to get the class name, not IDs or probabilities, using a file already present in the directory.
 
 ```
     @java.lang.Override

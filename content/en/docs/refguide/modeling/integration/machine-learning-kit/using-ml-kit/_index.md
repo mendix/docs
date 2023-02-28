@@ -282,7 +282,7 @@ The [Console](/refguide/view-menu/#console) pane displays the output of the Mend
 
 #### 5.2.1 Mendix Runtime Logs
 
-The responsibility of the Mendix Runtime is to make an inference call on the model which is integrated into an app via the `Call ML Model` activity. While making a prediction on the model, Mendix Runtime publishes several metrics on the ML Engine log node available in the Console and application logs. These instance-based metrics are provided in each inference call to provide insights to the Mendix developers.
+The responsibility of the Mendix Runtime is to make an inference call on the model which is integrated into an app via the **Call ML Model** activity. While making a prediction on the model, Mendix Runtime publishes several metrics on the ML Engine log node available in the Console and application logs. These instance-based metrics are provided in each inference call to provide insights to the Mendix developers.
 `Trace` 
 
 - ML Model Inference Time: This shows how many milliseconds it took to make an inference call.

@@ -1,6 +1,7 @@
 ---
 title: "File Manager"
 url: /refguide/file-manager/
+weight: 40
 tags: ["studio pro", "file manager", "file widget", "widget"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
@@ -107,7 +108,35 @@ Default: *False*
 
 {{% snippet file="/static/_includes/refguide/visibility-section-link.md" %}}
 
-## 3 Read More
+## 3 Example of File Manager Usage
+
+A file manager needs to be placed in a data view or a snippet that is connected to System.File or is a specialization of it. 
+
+For that you can create an entity in your domain model and define that it is a file entity. This is done by the concept of *inheritance*, sometimes called *generalization*. By inheriting from System.File your entity gets all the properties of the system file entity. 
+
+Do the following:
+
+1. Open your domain model and create an entity that you would like to define as a file entity.
+
+2. Double-click the entity to open its properties.
+
+3. In the **Generalization** property, click **Select**.
+
+4. In the **Select Entity** dialog box, choose **System.File** and click the **Select** button.
+
+5. Click **OK**. Your entity now inherits all properties from the System.File entity you selected:
+
+   {{< figure src="/attachments/refguide/modeling/pages/image-and-file-widgets/file-manager/entity-example.png" >}}
+
+6. Open a page or a snippet where you would like to place the file manager and add a data view there.
+
+7. Set the file entity you have created in your domain model as data view's data source. 
+
+8. Place the file manager inside the data view. You can reference the page example below:
+
+   {{< figure src="/attachments/refguide/modeling/pages/image-and-file-widgets/file-manager/page-example.png" >}}
+
+## 4 Read More
 
 * [Page](/refguide/page/)
 * [Images, Videos, and Files](/refguide/image-and-file-widgets/)

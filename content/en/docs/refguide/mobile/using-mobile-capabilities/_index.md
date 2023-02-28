@@ -19,3 +19,4 @@ Guides in this section will help you implement key features of native apps and/o
 * [Local Notifications](/refguide/mobile/using-mobile-capabilities/location-and-maps/): in addition to push notifications, native apps can schedule notifications to be shown at a specific time even if the app is not running
 * [Augmented Reality](/refguide/mobile/using-mobile-capabilities/augmented-reality/): native apps can render 3D objects in the physical environments via the camera stream of a mobile device
 * [App Permissions](/refguide/mobile/using-mobile-capabilities/generic-permission-action/): this guide allows native apps to request permissions from iOS and Android device users
+* [Mobile Accessibility](/refguide/mobile/using-mobile-capabilities/mobile-accessibility/): this guide allows you to customize accessibility options for native mobile applications

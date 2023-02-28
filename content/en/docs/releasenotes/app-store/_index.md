@@ -97,7 +97,7 @@ If you are using Studio Pro on a Mac with Parallels, see [this update](https://k
 
 * Marketplace filtering has been revamped. You can now find content faster by filtering by **Industry**, [Content Type](/appstore/general/app-store-overview/#types), and Studio Pro **Compatibility**. 
 * We have made 15+ fully developed solutions and 10+ solution templates available to help you realize value even more quickly.
-* We have listed 10+ **Premium** [app services](/appstore/app-services/), and we now support a self-service [subscription](/appstore/general/app-store-overview/#company-subscriptions) experience using credit card for two app services in supported regions.
+* We have listed 10+ **Premium** app services, and we now support a self-service [subscription](/appstore/general/app-store-overview/#company-subscriptions) experience using credit card for two app services in supported regions.
 
 ### August 12th, 2021
 
@@ -141,7 +141,7 @@ If you are using Studio Pro on a Mac with Parallels, see [this update](https://k
 
 #### Fixes
 
-* <a name="windows-service"></a>We fixed the issue with downloading the Windows Service. 
+* <a id="windows-service"></a>We fixed the issue with downloading the Windows Service. 
 * We fixed a minor bug for anonymous users.
 
 ### April 7th, 2021

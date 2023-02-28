@@ -27,33 +27,33 @@ The home page is your entry point to the various parts of the Mendix Marketplace
 * Click **Add Content** to [share new Marketplace content](/appstore/general/share-app-store-content/) you have developed
 * Explore various [industry solutions](#industry) and[content types](#types).
 
-{{< figure src="/attachments/appstore/general/app-store-overview/home-page.jpg" >}}
+{{< figure src="/attachments/appstore/general/app-store-overview/home-page.png" >}}
 
-<a name="industry"></a>The Marketplace offers **Industry** solutions for manufacturing, financial services, and other industries.
-
-<a name="types"></a>The Marketplace offers the following **Content Types**:
+<a id="types"></a>The Marketplace offers the following **Content Types**:
 
 | Type | Description |
 | --- | --- |
 | **Solutions** | Out-of-the-box solutions are aimed at industries and domain problems, and they deliver instant value. These solutions can be adapted using the core Mendix Platform to fully meet your requirements. |
 | **Templates** | Templates and starter apps serve as accelerators for implementing solutions to help increase speed-to-value and time-to-market. |
-| [App Services](/appstore/app-services/) | App services are packages of preconfigured business capabilities provided as modules containing logic, UIs, workflows, connectors, and APIs. |
+| **App Services** | App services are packages of preconfigured business capabilities provided as modules containing logic, UIs, workflows, connectors, and APIs. |
 | [Connectors](/appstore/connectors/) | Connectors are for connecting data services. They have content that you can drag from the [Connector](/refguide/view-menu/#connector) pane in Studio Pro into your app.|
 | [Modules](/appstore/modules/) | Modules are packages of functionality for your app. They consist of a domain model, security options, and other elements like microflows, pages, or Java actions. Modules are mostly used for complex functionality that needs business or Java logic. |
 | [Widgets](/appstore/widgets/) | Widgets are single user-interface elements like containers, drop-down menus, and buttons. Select a widget, configure it, and add it to pages and snippets in your app. |
 | **Platform Services** | These services for Mendix Platform integration accessible through the Marketplace include [Data Hub](/data-hub/). |
 
+<a id="industry"></a>The Marketplace offers **Industry** solutions for manufacturing, financial services, and other industries.
+
 The following filter options are also available:
 
+* **Rating**
 * **Compatibility**
 * **Tags**
-* **Rating**
 
 ## 3 Component Details Page {#details}
 
 Clicking the tile of a Marketplace component will bring you to its details page with the sections described below.
 
-{{< figure src="/attachments/appstore/general/app-store-overview/component-details.jpg" >}}
+{{< figure src="/attachments/appstore/general/app-store-overview/component-details.png" >}}
 
 ### 3.1 Header and Usage
 
@@ -62,21 +62,23 @@ The header for a component presents the following details:
 * The name and category of the component
 * The review average (in stars) and the number of reviews
 * The number of times the component has been downloaded
-* <a name="saved"></a>The **Add to Saved** button which, when clicked, will add the component to the list on the [My Marketplace](#my-marketplace)
+* <a id="saved"></a>The **Add to Saved** button which, when clicked, will add the component to the list on the [My Marketplace](#my-marketplace)
 * The **Share** button, which allows you to copy the URL of the component and share it to your networks
 * **Download** – click this to download the component
     * This is only available for components that have a file attached (meaning, all shared Studio Pro components, but not promotions)
     * The best practice is to download a component from the Marketplace functionality built into Studio Pro, because it then downloads directly into Studio Pro (for details on importing downloaded Marketplace content into Studio Pro, see the [Installing Marketplace Content](/appstore/general/app-store-content/#install) section in *Use Marketplace Content in Studio Pro*))
-* The **Premium** label is applied to components like solutions that require a subscription; some premium services also offer a free trial based on a predefined quota/limit
-    * These components have a **Subscribe** button to configure your subscription (by selecting a specific plan and setting a **Technical Owner**) and a **Try for Free** button to start your free trial
-    * If your company has an active subscription, click **Buy More** to buy more instances on the same or different plan.
-    * If you have an active subscription or trial, click **View status** to go to the [Company Subscriptions](#company-subscriptions) page
-    * These components also have a [Pricing](#tabs) tab
-* The **Request Demo** and **Contact Sales** buttons are only available for [industry solutions](#types)
-<a name="usage"></a>The **Usage** section presents  the following information (depending on the type of component):
-    * The latest **Version** number of the component
-    * The Studio Pro version that the component **Requires** to work
-    * The type of [license](/appstore/general/share-app-store-content/#license) for the component
+* The premium icon is applied to components that are supported by a partner:
+
+    {{< figure src="/attachments/appstore/general/app-store-overview/premium.png"  width="50"  >}}
+
+    * These components have a **Contact Us** button for setting up your subscription with the partner
+    * If you already have an active subscription or trial, click **View status** to go to the [Company Subscriptions](#company-subscriptions) page
+
+<a id="usage"></a>The **Usage** section presents  the following information (depending on the type of component):
+
+* The latest **Version** number of the component
+* The Studio Pro version that the component **Requires** to work
+* The type of [license](/appstore/general/share-app-store-content/#license) for the component
 
 The **Publisher** section presents the name of the company who created the component as well as the **Date** when the component was first published.
 
@@ -260,7 +262,7 @@ Click **Return to the overview** to go to the main page of the dashboard.
 
 When you are developing your app, set the app service's binding keys as [constants](/refguide/configuration/#constants) in the [App Settings](/refguide/app-settings/).
 
-Refer to the documentation on specific [app services](/appstore/app-services/) for how to use the binding keys (for example, see the [Authenticating MindSphere REST Calls](/partners/siemens/mindsphere-app-service/#authenticating) section of *MindSphere IIoT for Makers*).
+Refer to the documentation on specific app services for how to use the binding keys (for example, see the [Authenticating MindSphere REST Calls](/partners/siemens/mindsphere-app-service/#authenticating) section of *MindSphere IIoT for Makers*).
 
 #### 4.7.2 Usage Dashboard {#usage-dashboard}
 
@@ -345,6 +347,6 @@ To delete a user group, a Group Admin or Mendix Admin can click **Delete Group**
 ## 5 Read More
 
 * [How to Use Marketplace Content in Studio Pro](/appstore/general/app-store-content/)
-* [How to Prepare Your Commercial Content to Sell in the Marketplace](/appstore/creating-content/prepare/) 
 * [How to Share Marketplace Content](/appstore/general/share-app-store-content/)
 * [Marketplace Content Support](/appstore/general/app-store-content-support/)
+* [Mendix Component Partner Program](/appstore/creating-content/partner-program/)

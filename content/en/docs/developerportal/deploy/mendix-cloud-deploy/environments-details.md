@@ -107,14 +107,14 @@ In **Scaling**, there are two sliders that you can control:
 
 * Use the **Instances** slider to increase or decrease the number of instances from one to four
     * The instances are meant for improved resiliency and increased processing power
-    * The minimum amount of RAM per instances is 1 GB; you can spread the RAM among four instances if you have more than 1 GB of RAM 
+    * The minimum amount of RAM per instances is 1 GiB; you can spread the RAM among four instances if you have more than 1 GiB of RAM 
 * Use the **Memory per instance** slider to increase or decrease the memory amount per instance
 
 The **Total Allocated Memory** is a process circle that shows how much memory is currently used for scaling.
 
-{{% alert color="info" %}}The maximum value for **Memory per instance** equals the **Total Allocated Memory** of your plan, but it cannot exceed 32 GB. The maximum number of instances changes according to the **Memory per instance** you have chosen in such a way that `Max instances x Memory per instance = Total Allocated Memory`.{{% /alert %}}
+{{% alert color="info" %}}The maximum value for **Memory per instance** equals the **Total Allocated Memory** of your plan, but it cannot exceed 32 GiB. The maximum number of instances changes according to the **Memory per instance** you have chosen in such a way that `Max instances x Memory per instance = Total Allocated Memory`.{{% /alert %}}
 
-If you have 1 GB RAM of the **Total Allocated Memory**, you have one instance available to store your memory. To scale your memory over multiple instances, you need more memory.
+If you have 1 GiB RAM of the **Total Allocated Memory**, you have one instance available to store your memory. To scale your memory over multiple instances, you need more memory.
 
 ### 2.4 Overviews {#overviews}
 

@@ -188,7 +188,7 @@ To build an iOS app with a Mac running Intel Silicon, do the following:
 
 The iOS project is using CocoaPods for its dependency management. For more information on installing the CocoaPods dependency manager on your machine see this CocoaPods [documentation](https://cocoapods.org/#install).
 
-<a name="resume-ios"></a>Now that you have completed one of the two paths listed above, you can resume building your iOS app:
+<a id="resume-ios"></a>Now that you have completed one of the two paths listed above, you can resume building your iOS app:
 
 1. Open *.xcodeworkspace* using XCode.
 1. Navigate to **Signing and Capabilities** and choose your **Team** from the drop-down menu:

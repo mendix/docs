@@ -77,7 +77,7 @@ By default, the Mendix login page will not allow the user to enter their SSO cre
 If you are using the [Deep Link](/appstore/modules/deep-link/) module, you will also need to set the **LoginLocation** constant to `/xsauaalogin/`.
 {{% /alert %}}
 
-#### 4.2.1 Adding the SSO Login Button to the Login Page<a name="adding"></a>
+#### 4.2.1 Adding the SSO Login Button to the Login Page {#adding}
 
 {{% alert color="info" %}}
 If your app already had XSUAA included, your login.html file may have been modified already.

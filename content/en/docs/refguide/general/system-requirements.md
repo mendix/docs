@@ -14,6 +14,10 @@ This document presents the system requirements for the various parts of the Mend
 
 ## 2 Mendix Studio Pro {#sp}
 
+Mendix Studio Pro has the requirements listed in the following sections.
+
+### 2.1 Software Specifications
+
 Mendix [Studio Pro](/refguide/modeling/) version 9 is supported on 64-bit versions of Windows 10 release 1809 and above. This also includes Windows 11. MTS versions starting from Mendix Studio Pro 9.6.5 and Mendix Studio 9.9.1 are enabled and tested to run on Apple Silicon Macs such as the M1, which requires [Parallels 17](https://www.parallels.com/) and Windows 11.
 
 The following frameworks are required. They will be installed automatically by the Studio Pro installer if necessary:
@@ -42,6 +46,14 @@ You can choose which JDK is used for building and running locally via the **Edit
 {{% alert color="warning" %}}
 Please note the limitation that the database viewer built into Studio Pro (as described in [How to Share the Development Database](/howto/data-models/sharing-the-development-database/)) does not work with JDK 11.06 or 11.07.
 {{% /alert %}}
+
+### 2.2 Hardware Specifications
+
+Mendix Studio Pro will run on any machine which can run the [minimum requirements for running Windows 10 64-bit](https://www.microsoft.com/en-gb/windows/windows-10-specifications#primaryR2) with the following additional requirement:
+
+* **Disk Space** – Studio Pro requires 2GB disk space to install, and each app you create will vary in size depending on the functionality, but will take a minimum of around 150MB.
+* **RAM** – 4GB
+* **Display Resolution** –  1080p (1920x1080)
 
 ### 2.1 Firewall Settings {#firewall-settings}
 
@@ -104,11 +116,11 @@ You need `write_repository` permission for the token.
 
 We support all tiers of Atlassian’s BitBucket service, including BitBucket.org, BitBucket Server, and BitBucket Data Center on-premises solutions.
 
-On BitBucket.org, the Personal Access Tokens are called App Passwords.
+On BitBucket.org, the personal access token are called app passwords.
 
 To setup an App Password for your BitBucket.org account, see the [App passwords](https://support.atlassian.com/bitbucket-cloud/docs/app-passwords/) instructions.
 
-BitBucket Server and BitBucket Data Center, on the other hand, still use the term Personal Access Tokens. To set up a personal access token, see [Personal access tokens](https://confluence.atlassian.com/bitbucketserver/personal-access-tokens-939515499.html) instructions.
+BitBucket Server and BitBucket Data Center, on the other hand, still use the term "personal access token." To set up a personal access token, see the [Personal access tokens](https://confluence.atlassian.com/bitbucketserver/personal-access-tokens-939515499.html) instructions.
 
 In both cases you need `repository write` permission.
 
@@ -178,11 +190,11 @@ Mendix tries to support the most recent and patched database server versions fro
 Current support:
 
 * [MariaDB](/refguide/mysql/): 10.2, 10.3, 10.4, 10.5, 10.6 (please note that support for 10.2 is deprecated and will be removed in Studio Pro versions 9.22.0, 9.18.5, 9.12.11, and 9.6.17)
-* [Microsoft SQL Server](/developerportal/deploy/mendix-on-windows-microsoft-sql-server/): 2017, 2019 (please note that support for 2017 is deprecated and will be removed in Studio Pro version 9.20.0, and MTS versions 9.18.2, 9.12.9, and 9.6.15)
+* [Microsoft SQL Server](/developerportal/deploy/mendix-on-windows-microsoft-sql-server/): 2019
 * [Azure SQL](https://docs.microsoft.com/en-us/sql/t-sql/statements/alter-database-transact-sql-compatibility-level?view=sql-server-2017): v12 compatibility mode 140 or higher
 * [MySQL](/refguide/mysql/): 8.0
 * [Oracle Database](/refguide/oracle/): 19
-* PostgreSQL: 10, 11, 12, 13, 14 (please note that support for 10 is deprecated and will be removed in Studio Pro version 9.20.0 and MTS versions 9.18.2, 9.12.8, and 9.6.15)
+* PostgreSQL: 11, 12, 13, 14
 * [SAP HANA](/refguide/saphana/): 2.00.040.00.1545918182
 * [IBM DB2](/refguide/db2/): 11.5 for Linux, Unix, and Windows (please note that support for DB2 is deprecated and will be removed in Studio Pro version 10)
 

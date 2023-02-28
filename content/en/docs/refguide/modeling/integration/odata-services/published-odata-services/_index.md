@@ -100,6 +100,10 @@ Select whether clients need to authenticate or not. Select **No** to allow acces
 
 Even when you choose **Yes**, you can still expose OData resources to anonymous users. For detailed information on allowing anonymous users, see [Anonymous User Role](/refguide/anonymous-users/).
 
+{{% alert color="info" %}}
+The **Authentication** section of a published OData service is only visible when you have enabled [app security](/refguide/app-security/).
+{{% /alert %}}
+
 #### 3.3.2 Authentication Methods {#authentication-methods}
 
 If authentication is required, you can select which authentication methods you would like to support.

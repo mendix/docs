@@ -58,7 +58,13 @@ You can manage the alerts by yourself, follow these steps:
 
     {{< figure src="/attachments/developerportal/operate/monitoring-application-health/receive-alerts/email-alerts.png" >}}
 
-## 4 Read More
+## 4 Issue: Receiving Too Many Alerts
+
+Under some circumstances, a critical alert in one instance of a multi-instance app will cause emails to be sent out constantly. The other instances of your app will continue to run without reporting issues, so it will appear to be working.
+
+If you cannot resolve the issue in the instance reporting the critical error, you will need to restart your app to ensure that all instances are healthy. Otherwise you will continue to receive regular email alerts.
+
+## 5 Read More
 
 * [Alerts](/developerportal/operate/monitoring-application-health/)
 * [Trends in the Mendix Cloud](/developerportal/operate/trends-v4/)

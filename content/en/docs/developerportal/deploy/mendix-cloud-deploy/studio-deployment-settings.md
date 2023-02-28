@@ -23,7 +23,7 @@ To select the target environment, do the following:
 
 1. Open **Environments** in the left menu bar in the Developer Portal.
 
-2. <a name="target"></a>In the **Deploy** tab, click **Setup Studios Deployment**:
+2. <a id="target"></a>In the **Deploy** tab, click **Setup Studios Deployment**:
 
     {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/studio-deployment-settings/developer-portal-web-modeler-target.png" alt="Deploy Tab of Environments Page" >}}
 

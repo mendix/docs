@@ -89,7 +89,6 @@ After you have obtained an API response, you can use it to model the service in 
 
     Mendix Studio Pro now shows a visual representation of the mapping of the AWS service into your Mendix application.
 
-
 9. Remove the entities that serve no purpose, such as the Root entity, by doing the following steps:
     1. Open the *IMM_DescribeVoices* import mapping document.
     2. Clear the **Root (Object)** entity check box.

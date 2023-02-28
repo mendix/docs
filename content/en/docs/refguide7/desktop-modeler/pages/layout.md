@@ -20,7 +20,7 @@ When opening a new page in the browser, the content found in the layouts is not 
 
 Mendix will intelligently detect if pages share a layout, so no user input is required. This also applies for nested layouts. If two pages have different layouts but those layouts share a common master layout, the sub-layout will reload, but the master layout will remain static. 
 
-## 2 Placeholder Management<a name="phm"></a>
+## 2 Placeholder Management {#phm}
 
 {{% alert color="info" %}}
 
@@ -56,7 +56,7 @@ As a consequence of this behavior, user experience can be improved significantly
 
 This property specifies the master layout on which the layout is based. If no master layout is specified, the layout contains a single widget (for example, a [scroll container](/refguide7/scroll-container/)) that defines the structure of pages based on this layout. If a master layout is specified, this layout fills the gaps defined by the master layout. You can introduce new gaps in this layout by using [placeholders](/refguide7/placeholder/).
 
-### 5.1 Layout Type<a name="layout-type"></a>
+### 5.1 Layout Type {#layout-type}
 
 Every layout has a layout type, which determines the purpose of the layout and how a page using the layout is opened.
 
@@ -68,7 +68,7 @@ Every layout has a layout type, which determines the purpose of the layout and h
 | **Modal pop-up** | Use this layout for pages that should appear as [modal pop-up windows](https://www.wikiwand.com/en/Modal_window). |
 | **Pop-up** | Use this layout for pages that should appear as modeless pop-up windows. |
 
-## 6 Page Generation Properties<a name="pgp"></a>
+## 6 Page Generation Properties {#pgp}
 
 {{% alert color="warning" %}}
 

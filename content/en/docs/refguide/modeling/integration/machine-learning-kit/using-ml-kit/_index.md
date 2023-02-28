@@ -161,7 +161,7 @@ Once you import your model, the **Call ML Model** activity allows you to add you
 
 ### 3.2 Pre-processing and Post-processing using Java Actions {#java-pre-post}
 
-Data transformations are usually complex tasks, and often require mathematical libraries or even more complex pieces of software (think OpenCV for computer vision). As a result, sometimes they are not integrated into the model. In this case, the best way to perform these transformations in Mendix using Java Actions (see [Extending Your Application with Custom Java](/refguide/extending-your-application-with-custom-java/)).
+Data transformations are usually complex tasks, and often require mathematical libraries or even more complex pieces of software (think OpenCV for computer vision). As a result, sometimes they are not integrated into the model. In this case, the best way to perform these transformations in Mendix is using Java Actions (see [Extending Your Application with Custom Java](/refguide/extending-your-application-with-custom-java/)).
  
 Read the sections below for an example of pre-processing and post-processing using Java Actions in Mendix.
 

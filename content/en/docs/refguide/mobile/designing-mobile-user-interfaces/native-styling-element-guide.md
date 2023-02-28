@@ -1309,6 +1309,32 @@ The toggle buttons widget allows you to set an enumeration attribute. This is ho
 
 {{< figure src="/attachments/refguide/mobile/native-mobile/native-styling-refguide/toggle-buttons.png" alt="toggle buttons"   width="350"  >}}
 
+```javascript
+export const com_mendix_widget_native_togglebuttons_ToggleButtons = {
+  container: {
+    // This has all ViewStyle properties.
+  },
+  containerDisabled: {
+    // This has all ViewStyle properties.
+  },
+  button: {
+    // This has all ViewStyle properties.
+  },
+  text: {
+    // This has all TextStyle properties.
+  },
+  activeButton: {
+    // This has all ViewStyle properties.
+  },
+  activeButtonText: {
+    // This has all TextStyle properties.
+  },
+  validationMessage: {
+    // This has all TextStyle properties.
+  },
+};
+```
+
 | Element | Style Properties    | Description |
 | --- | --- | --- |
 | `container` | This has all ViewStyle properties. |       |

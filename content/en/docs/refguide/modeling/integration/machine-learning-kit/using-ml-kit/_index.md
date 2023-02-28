@@ -23,8 +23,14 @@ To embed your ML model into a Mendix app, you need to convert your model into th
 Examples include the following:
 
 * [PyTorch](https://pytorch.org/docs/stable/onnx) 
-* [TensorFlow to ONNX](https://github.com/onnx/tensorflow-onnx)
-* [Scikit-learn to ONNX](https://github.com/onnx/sklearn-onnx)
+* [TensorFlow](https://github.com/onnx/tensorflow-onnx)
+* [Scikit-learn](https://github.com/onnx/sklearn-onnx)
+* [Keras](https://github.com/onnx/keras-onnyx)
+* [CoreML](https://github.com/onnx/onnxmltools)
+* [LightGBM](https://github.com/onnx/onnxmltools)
+* [LibSVM](https://github.com/onnx/onnxmltools)
+* [XGBoost](https://github.com/onnx/onnxmltools)
+* [SparkML](https://github.com/onnx/onnxmltools)
 
 ### 2.2 Importing a Model and Creating the Mapping {#import-model}
 
@@ -82,7 +88,7 @@ In this case, the -1 dimensions should be configured before using the mapping in
 
 After importing a model, two [non-persistable](/refguide/persistability/) entities will be created using the input type.
 
-For non-structured data, such as most of the tensors for Neural Networks, an entity attribute will be a `String`.  This is because Base64 is used to to encode the tensors to and from MLKit.
+For non-structured data, such as most of the tensors for Neural Networks, the attributes of a model with a multidimensional parameter will be represented as a string. This is because Base64 is used to to encode the tensors to and from *ML Kit*.
 
 ##### 2.2.3.1 Converting to Persistable Entities
 

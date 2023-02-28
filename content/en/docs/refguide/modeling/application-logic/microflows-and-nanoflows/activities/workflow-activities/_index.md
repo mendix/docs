@@ -19,6 +19,8 @@ The following are the workflow activities you can use in your microflow:
 * [Retrieve workflow context](/refguide/retrieve-workflow-context/) – retrieves the Workflow Context entity 
 * [Show user task page](/refguide/show-task-page/) – opens a user task page specified in [user task properties](/refguide/user-task/) 
 * [Show workflow admin page](/refguide/show-workflow-page/) – opens a workflow overview page
+* [Lock workflow](/refguide/lock-workflow/) – locks the selected workflow
+* [Unlock workflow](/refguide/unlock-workflow/) – unlocks the selected workflow
 
 ## 2 Read More
 

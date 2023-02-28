@@ -38,7 +38,7 @@ This generates two non-persistable entities representing your ML Model input and
 
 {{< figure src="/attachments/refguide/modeling/integration/ml-kit/ml-kit/ml-model-created-entities.png" alt="Two non-persistable entities generated when importing an ONNX file." >}}
 
-If error CE1790 appears, you will need to [set dynamic tensor shapes](#set-dynamic-shapes).
+If error CE1790 appears, you need to [set dynamic tensor shapes](#set-dynamic-shapes).
 
 #### 2.2.1 Locating the Model Directory {#model-directory}
 

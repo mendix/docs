@@ -99,7 +99,7 @@ You now have a [persistable](/refguide/persistability/) entity in your domain mo
 
 Once the ML [mapping document](#import-model) is created by importing the model, the ML model is available in the Studio Pro. 
 
-Drag and drop the [Call ML model](/refguide/call-ml-model/) activity from the toolbar in the Microflow editor to use call and use your ML model in your application logic..
+Drag and drop the [Call ML model](/refguide/call-ml-model/) activity from the Toolbox in the microflow editor to use call and use your ML model in your application logic.
 
 #### 2.3.1 Example of a Model Microflow
 

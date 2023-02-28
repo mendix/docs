@@ -153,7 +153,7 @@ Below are two models (a Scikit-learn [random forest](https://www.kaggle.com/code
 
 {{< figure src="/attachments/refguide/modeling/integration/ml-kit/ml-kit/advanced-model-rendering.png" alt="Example of how two models are rendered by the call ML model activity." >}}
 
-In this example, the [Call ML Model][Call ML model](/refguide/call-ml-model/) activity adapts to the model output. If you intend to use a multidimensional output in this stage (such as in the ResNet), it will come out string-encoded using base64 (link to section about persistable entities), and will probably require post-processing.
+In this example, the [Call ML Model][Call ML model](/refguide/call-ml-model/) activity adapts to the model output. If you intend to use a multidimensional output in this stage (such as in the ResNet), it will come out string-encoded using base64, and will probably require post-processing.
 
 Once you import your model, the Call ML Model activity allows you to add your input variable coming from the previous action, and name your output to be used in any ulterior steps:
 

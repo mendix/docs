@@ -133,7 +133,7 @@ A **Create Object** activity is used for the first part in order to transfer ent
 
 ## 3 Integrating Models with Pre-processors and Post-processors {#pre-post-processors}
 
-Integrating machine learning models can sometimes require using a more complex structure. This incudes having a pre-processor, the model itself, and a post-processor:
+Integrating machine learning models can sometimes require using a more complex structure. This includes having a pre-processor, the model itself, and a post-processor:
 
 {{< figure src="/attachments/refguide/modeling/integration/ml-kit/ml-kit/pre-post-processing-microflow.png" alt="Example of a microflow that includes a pre-processor and post-processor." >}}
 

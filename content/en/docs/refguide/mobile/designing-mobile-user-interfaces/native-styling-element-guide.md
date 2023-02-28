@@ -1505,6 +1505,24 @@ The list view swipe widget can make a list view interactive by adding swipe gest
 
 {{< figure src="/attachments/refguide/mobile/native-mobile/native-styling-refguide/list-view-swipe-buttons.gif" alt="list view swipe"   width="350"  >}}
 
+```javascript
+export const com_mendix_widget_native_listviewswipe_ListViewSwipe = {
+  container: {
+    // This has all ViewStyle properties.
+  },
+  leftAction: {
+    // This has all ViewStyle properties.
+    panelSize: // The number of pixels and the combined size of the background buttons.
+    threshold: // The number of pixels to accept the swipe action.
+  },
+  rightAction: {
+    // This has all ViewStyle properties.
+    panelSize: // The number of pixels and the combined size of the background buttons.
+    threshold: // The number of pixels to accept the swipe action.
+  },
+};
+```
+
 | Element | Style Properties | Description |
 | --- | --- | --- |
 | `container` | This has all ViewStyle properties. | |

@@ -39,7 +39,7 @@ The Cascaded Inference pattern refers to the ability to feed the output of one m
 
 It is used to compensate for a model bias, or incomplete data, in such a way you could use another predictor to compensate for that. In this case, a potential implementation looks pretty much like a graphical representation of this pattern:
 
-Example Microflow
+An example of a microflow:
 
 {{< figure src="/attachments/refguide/modeling/integration/ml-kit/design-patterns/advanced-inference-patterns/cascaded-inference-microflow.png" alt="." >}}
 

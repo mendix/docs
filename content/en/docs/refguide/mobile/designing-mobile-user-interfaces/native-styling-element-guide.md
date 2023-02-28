@@ -1275,6 +1275,23 @@ The ratings widget allows users to rate an object from 0 to 5. This is how a rat
 
 {{< figure src="/attachments/refguide/mobile/native-mobile/native-styling-refguide/ratings.png" alt="ratings"   width="350"  >}}
 
+```javascript
+export const com_mendix_widget_native_rating_Rating = {
+  container: {
+    // This has all ViewStyle properties.
+  },
+  containerDisabled: {
+    // This has all ViewStyle properties.
+  },
+  icon: {
+    // This has all ViewStyle properties.
+    size: // The size of the icon.
+    color: // The color of the icon.
+    selectedColor: // The color of the icon when selected.
+  },
+};
+```
+
 | Element | Style Properties    | Description |
 | --- | --- | --- |
 | `container` | This has all ViewStyle properties. |  |

@@ -28,7 +28,7 @@ Examples include the following:
 
 ### 2.2 Importing a Model and Creating the Mapping {#import-model}
 
-To use the ML model in your app, you will import it to create a mapping document.
+To use the ML model in your app, you import it to create a mapping document.
 
 1. Right-click on the desired module and select **Add other > ML model mapping**.
 2. Add a name for the mapping document.

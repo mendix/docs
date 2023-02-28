@@ -55,7 +55,7 @@ The workflow that is unlocked by this activity.
 
 ### 3.2 Unpause Instances {#workflow}
 
-With this option, all paused running workflow instances are reverted to their previous state.
+With this option, all paused running workflow instances are reverted to their previous state. Workflow instances that are not currently paused are not impacted.
 For more information on workflow state transitions, see the [Workflow State Transitions Upon Locking and Unlocking](/refguide/lock-workflow/#workflow-state-transitions) section in *Lock Workflow*.
 
 This option is enabled by default.

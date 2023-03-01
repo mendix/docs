@@ -805,36 +805,42 @@ Defines the PMI entities you do not want to display.
 
 Available enumeration values:
 
-```js
+```json
 
-const ignoredPMI = [
-    "BALLOON_NOTE",
-    "CALLOUT_DIMENSION_TYPE",
-    "CENTRELINE",
-    "CHAMFER_DIMENSION_TYPE",
-    "COORDINATE_SYSTEM",
-    "DATUM_TARGET",
-    "DIMENSION",
-    "FEATURE_CONTROL_FRAME",
-    "FEATURE_DATUM_TYPE",
-    "FEATURE_DISCRETE_JOIN_TYPE",
-    "LINE_WELD",
-    "MATERIAL_SPECIFICATION",
-    "MEASUREMENT_LOCATOR",
-    "MEASUREMENT_POINT",
-    "NOTE",
-    "ORGANIZATION",
-    "PART_SPECIFICATION",
-    "PMI_TABLE_TYPE",
-    "PROCESS_SPECIFICATION",
-    "REFERENCE_AXIS",
-    "REFERENCE_GEOMETRY",
-    "REFERENCE_PLANE",
-    "REFERENCE_POINT",
-    "SECTION",
-    "SPOT_WELD",
-    "SURFACE_FINISH",
-];
+{
+  "type": "array",
+  "items": {
+    "type": "string",
+    "enum": [
+      "BALLOON_NOTE",
+      "CALLOUT_DIMENSION_TYPE",
+      "CENTRELINE",
+      "CHAMFER_DIMENSION_TYPE",
+      "COORDINATE_SYSTEM",
+      "DATUM_TARGET",
+      "DIMENSION",
+      "FEATURE_CONTROL_FRAME",
+      "FEATURE_DATUM_TYPE",
+      "FEATURE_DISCRETE_JOIN_TYPE",
+      "LINE_WELD",
+      "MATERIAL_SPECIFICATION",
+      "MEASUREMENT_LOCATOR",
+      "MEASUREMENT_POINT",
+      "NOTE",
+      "ORGANIZATION",
+      "PART_SPECIFICATION",
+      "PMI_TABLE_TYPE",
+      "PROCESS_SPECIFICATION",
+      "REFERENCE_AXIS",
+      "REFERENCE_GEOMETRY",
+      "REFERENCE_PLANE",
+      "REFERENCE_POINT",
+      "SECTION",
+      "SPOT_WELD",
+      "SURFACE_FINISH"
+    ]
+  }
+}
 
 ```
 

@@ -801,7 +801,7 @@ Here is a sample Preference configuration:
 Defines the PMI entities you do not want to display.
 
 * Type – array
-* Default value - *[ ]*
+* Default value - *`[ ]`*
 
 Available enumeration values:
 

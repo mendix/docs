@@ -11,7 +11,7 @@ aliases:
 
 ## 1 Introduction
 
-A decision is an element that makes a choice based on a condition and follows one and only one of the outgoing sequence flows. For example, you can use a decision to decide whether to give a customer a discount based on whether they have a membership or not. You can also use a decision to assign a different online meeting URL to an employee based on in which time zone they work. 
+A decision is an element that makes a choice based on a condition and follows one and only one of the outgoing sequence flows. For example, you can use a decision to decide whether to give a customer a discount based on whether they have a membership or not. You can also use a decision to assign a different online meeting URL to an employee based on which time zone they work in. 
 
 ## 2 Properties
 

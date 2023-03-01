@@ -587,7 +587,7 @@ The **Usage Dashboard** shows the real-time statistics about the usage of an app
 
 ### 5.9 Setting Preferences {#set-preferences}
 
-You can change the settings of the Preferences widget to customize the behavior of the model and setup to suit your needs.
+You can change the settings of the Preference widget to customize the behavior of the model and set it up to suit your needs.
 
 {{< figure src="/attachments/partners/siemens/3d-viewer/preferences-general.png" alt="preferences-general" >}}
 

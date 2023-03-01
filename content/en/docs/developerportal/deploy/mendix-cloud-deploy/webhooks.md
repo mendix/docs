@@ -7,13 +7,17 @@ description: "Creating a Webhook to trigger actions from the Mendix cloud"
 tags: ["Mendix cloud", "Webhooks", "CI/CD", "Pipeline"]
 ---
 
+{{% alert color="warning" %}}
+This feature is in Beta. For more information on Beta products, see [Beta Releases](/releasenotes/beta-features/).
+{{% /alert %}}
+
 ## 1 Introduction
 
 Webhooks in the Developer Portal allow you to send information about your Mendix app to an external app or workflow. This can be used, for example, to trigger an automated CI/CD workflow when a new change is committed to the Team Server.
 
 Mendix provides webhooks to send project information when the following events happen to your app:
 
-* On package upload – when a deployment package is uploaded to the Developer Portal
+* On package upload – when a deployment package is available in the Developer Portal — this includes creating a package from the Teamserver
 * Team Server push – when a new commit is pushed to the Team Server — this will only be triggered if your app is stored in a Git repository
 
 ## 2 Configuring a Webhook{#setting-up}
@@ -30,16 +34,16 @@ To set up a webhook, do the following:
 1. Click **New Webhook**.
 1. Enter the following information:
     * **Webhook Name** – a name, so you can identify the webhook
-    * **URL** – the endpoint which will receive the information which is posted
+    * **URL** – the endpoint which will receive the payload when one of the event types selected in **Available Events** occurs
     * **Validation Secret** – a secret which will be received by the endpoint to confirm that it has been triggered by this webhook
-    * **Available Events** – the event or events which will trigger the webhook to send information to the endpoint. You can see more information about these events in the sections below.
-    * **Custom Headers** – a **Key**/**Value** pair which is sent as an HTTP header to the endpoint.
+    * **Available Events** – the event or events which will trigger the webhook to send information to the endpoint. You can see more information about these events in the sections below
+    * **Custom Headers** – a **Key**/**Value** pair which is sent as an HTTP header to the endpoint
 
-You can edit or delete an existing webhook by clicking the elipsis, **…**, in the **Action** column for the webhook you want to change and then select **Edit Webhook** or **Delete Webhook**.
+You can edit or delete an existing webhook by clicking the ellipsis, **…**, in the **Action** column for the webhook you want to change and then select **Edit Webhook** or **Delete Webhook**.
 
 ### 2.2 Editing an Existing Webhook
 
-If you select **Edit Webhook** from the elipsis, **…**, in the **Action** column for a webhook you want to change, you have the following actions available to you:
+If you select **Edit Webhook** from the ellipsis, **…**, in the **Action** column for a webhook you want to change, you have the following actions available to you:
 
 * You can update **Webhook Name**, **URL**, and **Validation Secret** — click **Save** to save the changes.
 * You can add or delete **Custom Headers** — click **Save** to save the changes.
@@ -49,7 +53,6 @@ If you select **Edit Webhook** from the elipsis, **…**, in the **Action** colu
 * Click **Test Webhook** to send a test payload to the endpoint specified under **URL**.
 * Click **(De)activate Webhook** to switch deactivate an active webhook or activate an inactive webhook.
 * Click **Delete Webhook*** to completely remove the webhook.
-
 
 ## 3 Webhook Headers
 
@@ -64,7 +67,7 @@ Every POST payload contains the following delivery information as part of the he
 * **test** – if this POST is a test, then this header will be included with the value `test`
 * **content-type** – `application/json`
 * **accept** – `*/*`
-* **host** – the host part of the endpoing URL, for example `gitlab.com`
+* **host** – the host part of the endpoint URL, for example `gitlab.com`
 
 In addition, you can add your own custom headers. See [Setting Up a Webhook](#setting-up) for more information.
 
@@ -74,7 +77,7 @@ The order of these headers is not guaranteed.
 
 ## 4 Package Upload to Developer Portal
 
-When you [upload a package to the Developer Portal](/developerportal/deploy/environments/#package-repository), and the webhook responds to the event **On package upload**, request content with the following format will be sent to the configured endpoint:
+When you [upload a package to the Developer Portal](/developerportal/deploy/environments/#package-repository) (including creating a package from the Teamserver), and the webhook responds to the event **On package upload**, request content containing a payload with the following format will be sent to the configured endpoint:
 
 ```json {linenos=false}
 {
@@ -88,9 +91,9 @@ When you [upload a package to the Developer Portal](/developerportal/deploy/envi
 }
 ```
 
-## 5 Model Upload to Team Server
+## 5 Teamserver Push (Git)
 
-When you push a model change to the [Git Team Server](/developerportal/collaborate/team-server/), and the webhook responds to the event **Teamserver push (Git)**, request content with the following format will be sent to the configured endpoint:
+When you push a model change to the [Git Team Server](/developerportal/collaborate/team-server/), and the webhook responds to the event **Teamserver push (Git)**, request content containing a payload with the following format will be sent to the configured endpoint:
 
 ```json {linenos=false}
 {
@@ -119,6 +122,6 @@ When you push a model change to the [Git Team Server](/developerportal/collabora
 
 ## 6 Logging
 
-You will see log messages from the creation or update of your webhooks.
+You will see [log messages](/developerportal/operate/logs/) in the Developer Portal from the creation or update of your webhooks.
 
 We do not create a log message for when a webhook is triggered.

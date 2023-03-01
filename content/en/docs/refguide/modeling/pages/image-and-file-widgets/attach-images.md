@@ -153,7 +153,6 @@ After users attach the images, it would be nice to display their attachments and
 
 8. Open **Properties** pane of the button and in the **Button style** property, change **Default** to **Danger**. 
 
-
 Great job! Now you have the image list that shows attached images and your users will be able to delete images from the list if necessary:
 
 {{< figure src="/attachments/refguide/modeling/pages/image-and-file-widgets/attach-images/configured-image-list.png" >}}

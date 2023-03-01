@@ -146,9 +146,9 @@ There are several workflow-related entities in the System module of your app, so
 You can find the following workflow-related entities in the System module: 
 
 * **WorkflowDefinition** – Represents your workflow in the database. It contains following four attributes:
-  *  **Name** and **Title** are **Name** and **Title** properties of the workflow
-  * **IsObsolete** is a Boolean that is marked as true when you delete your workflow 
-  * **IsLocked** is a Boolean that is marked as true when you lock your workflow and marked as false when you unlock your workflow
+    * **Name** and **Title** are **Name** and **Title** properties of the workflow
+    * **IsObsolete** is a Boolean that is marked as true when you delete your workflow 
+    * **IsLocked** is a Boolean that is marked as true when you lock your workflow and marked as false when you unlock your workflow
     In the case that you delete the workflow, the workflow still stays in the database (and you will still be able to create reports with it), but Mendix marks that it does not exist anymore. For more information on properties, see [Workflow Properties](/refguide/workflow-properties/). 
 
 * **WorkflowUserTaskDefinition** – Represents your [user tasks](/refguide/user-task/) and [system activities](/refguide/call-microflow/) in the database. It contains two attributes, where **Name** is a **Name** property of the user task or a system activity, and **IsObsolete** is a Boolean that is marked as true when you delete a user task/system activity from your workflow. They still stay in the database (and you will still be able to create reports with them), but Mendix marks that they do not exist anymore. 

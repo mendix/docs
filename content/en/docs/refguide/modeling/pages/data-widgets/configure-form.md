@@ -128,7 +128,7 @@ Follow the steps below:
 
 16. Now you can configure editing items. Click the **Edit** button in the data grid and open its properties.
 
-17.  Set the **On click event** property to **Show page**.
+17. Set the **On click event** property to **Show page**.
 
 18. Click the **On click page** property.
 
@@ -145,4 +145,3 @@ Congratulations! You have the page that displays details of the selected report 
 There are many ways you can use this page in your app. For example, you can use it as a page for a user task in a [workflow](/refguide/workflows/). 
 
 You can now preview your app and test your page.
-

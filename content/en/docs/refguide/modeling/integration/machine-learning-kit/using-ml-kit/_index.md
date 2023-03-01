@@ -272,6 +272,7 @@ See the [Monitoring and Troubleshooting](/howto/monitoring-troubleshooting/) gui
 The [Errors Pane](/refguide/errors-pane/) in Studio Pro shares informative messages about the metadata of the models that are consumed by the **Call ML Model** activity. Warning messages do not block deployment, but the application may not work seamlessly. All error messages have to be resolved in order to execute applications in local environments or deploy applications into the production environments.
 
     Warning
+
 * **CE9997**: ONNX IR version Incompatibility. See [ONNX versioning docs](https://github.com/onnx/onnx/blob/main/docs/Versioning.md) and version compatibility matrixes in the following section.
 * **CE9998**: ONNX Opset Incompatibility. See [ONNX versioning docs](https://github.com/onnx/onnx/blob/main/docs/Versioning.md) and version compatibility matrixes in the following section.
     Error
@@ -287,7 +288,7 @@ The [Console](/refguide/view-menu/#console) pane displays the output of the [Men
 The responsibility of the Mendix Runtime is to make an inference call on the model which is integrated into an app via the **Call ML Model** activity. While making a prediction on the model, the Mendix Runtime publishes several metrics on the ML Engine log node available in the Console and application logs. These instance-based metrics are provided in each inference call to provide insights to the Mendix developers.
 `Trace` 
 
-- ML Model Inference Time: This shows how many milliseconds it took to make an inference call.
+* ML Model Inference Time: This shows how many milliseconds it took to make an inference call.
 
 #### 5.2.2 Using the Log Message Activity
 
@@ -343,18 +344,18 @@ This is not supported.
 
 ## 7 FAQs
 
-1.  My model did not import properly. Anything I can do?
+1. My model did not import properly. Anything I can do?
    
     This may indicate a corrupt model file. Studio Pro supports importing a wide variety of models, ranging from simple logistic regressors to [Whisper](https://github.com/zhuzilin/whisper-openvino), and a wide range of computer vision models, so as far as the model is properly imported into ONNX and complies with the standard, Studio Pro will be able to run it.
 
     Try re-downloading the model or verifying the conversion process.
 
-2.  My model outputs diverge from my training environment from the results in Studio Pro. What now?
+2. My model outputs diverge from my training environment from the results in Studio Pro. What now?
    
     When converting your model to ONNX, and especially if you use pre- and post-processors, type casting and conversion will occur.
     Check that all the new types you use and that the mathematical operations you conduct in your Java actions (if you use pre- or post-processing) are suitable for the Types the model expect/uses (for example, a division is casted to float if a float is expected).
 
-3.  My model crashes Studio Pro or its execution is too slow. Can this be fixed?
+3. My model crashes Studio Pro or its execution is too slow. Can this be fixed?
    
     While the model file size is small, the outputs or inputs of it may be not so. Look at the output for the detection model for [EasyOCR](https://github.com/JaidedAI/EasyOCR).
 
@@ -364,7 +365,7 @@ This is not supported.
 
     Another potential cause of crashing is if there is an inconsistency between the architecture of the model and the data injected into it, especially with complex operations in models that accepts complex calculations such as neural networks. For example, if your model has a `Convolution` layer of shape `16x16x1`, injecting a tensor of a shape whose algebraic division results in an integer result smaller than 1 (such as an input of `[1,3,15,15]` , will have unpredictable consequences. This might include Studio Pro crashing. Verify that the implementation of your model in Studio Pro matches, in shape and type of the data being sent into the component, the model architecture, or the model documentation if you obtained from third-party sources such as the ONNX Model Zoo.
 
-4.  I have an exception when executing the model or running it. How can I handle this?
+4. I have an exception when executing the model or running it. How can I handle this?
   
     This situation is the most difficult to solve as the causes may vary a lot, ranging from an incompatible Studio Pro version to a failure inside the model or a permission issues.
 

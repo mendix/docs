@@ -281,11 +281,11 @@ When deploying your app for the first time, there will be no environment to depl
 
 1. Go to the **环境概览** page for your app in the ATM.
 
-2.  Click **创建环境**.
+2. Click **创建环境**.
 
     If there are no clusters available to you, you will have to create one or get access to an existing one before you can continue. You will be taken to the Cluster Manager page. See [Cluster and Namespace Management](#cluster-namespace), above, for information on the three ways you can get a cluster, then start this section again.
 
-3.  Choose the deployment package you want to use to create the environment and click **下一步**.
+3. Choose the deployment package you want to use to create the environment and click **下一步**.
 
     A **内部名称** will be generated for you. This will be used when creating your environment to ensure that all the environment names in your namespace are unique.
 
@@ -295,17 +295,17 @@ When deploying your app for the first time, there will be no environment to depl
 
 5. Use the drop-down **选择命名空间** to select an existing namespace. You will see all namespaces of which you are a member.
 
-6.  Select the **目的**.
+6. Select the **目的**.
    
     1. For development of the app, for example acceptance testing, choose **开发环境**.
 
-    2.  For production deployment, select **生产环境**. If you select **生产环境**, then you will be asked for the **订阅密钥** which you received when you purchased Tencent resources.
+    2. For production deployment, select **生产环境**. If you select **生产环境**, then you will be asked for the **订阅密钥** which you received when you purchased Tencent resources.
 
         {{% alert color="warning" %}}Your app can only be deployed to a production environment if security is set on. You will not receive an error if security is set off, but the deployment will appear to hang with a spinner being displayed.{{% /alert %}}
 
 7. Click **下一步**.
 
-8.  Select **核心资源**.
+8. Select **核心资源**.
 
     For core resources, there are two sets of values. The **请求** value is the amount of core resources which are initially requested. The **限制** value is the maximum amount of resource that the environment can use.
 
@@ -682,4 +682,3 @@ This section covers an issue which can arise where Siemens Low Code Platform can
 ### 8.1 Status Reporting
 
 Under some circumstances changes in the status of the environment and its apps will not be updated automatically. To ensure you are seeing the current status, you may need to click the **刷新** button on the screen (not the browser page refresh button).
-

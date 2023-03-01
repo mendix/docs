@@ -62,7 +62,7 @@ The expression should result in a Boolean or an [enumeration](/refguide/enumerat
 
     Since you want to go in a different direction for each value of the enumeration, you only need to use the attribute containing the enumeration. So the expression in the example above is `$MeetingRegistration/WorkingLocation`. 
     
-    Afterwards, you can merge the three flows followed by a meeting URL into one flow (for more information, see the document on [Merge](/refguide/merge/).). By doing so, you only need to [commit](/refguide/committing-objects/) the registration once and have one [Close page](/refguide/committing-objects/) activity after the merge. 
+    Afterwards, you can merge the three flows followed by a meeting URL into one flow (for more information, see  [Merge](/refguide/merge/)). Afterwards, you need to [commit](/refguide/committing-objects/) the registration once and have one [Close page](/refguide/committing-objects/) activity after the merge. 
 
 ##### 2.1.2.2 Rule {#rule}
 

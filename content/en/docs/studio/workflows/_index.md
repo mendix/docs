@@ -120,7 +120,7 @@ To cut/copy/paste elements, use <kbd>Ctrl</kbd> + <kbd>X</kbd> /  <kbd>Ctrl</kbd
 
 When using cut/copy/paste, note the following:
 
-* When cutting or copying an element, the clipboard contains the whole structure of the element. For example, when copying a **User Task** with **Outcomes** which contain activities, the **User Task** and the **Outcomes** and its activities are copied. Also note that when copying a **User Task** or **Microflow**, this action will not create a copy of the elements that are being referenced. Instead, the copied element will have the same references as the original. For example, the copied **User Task** will, when configured, refer to the same task page.
+* When cutting or copying an element, the clipboard contains the whole structure of the element. For example, when copying a **User Task** with **Outcomes** which contain activities, the **User Task** and the **Outcomes** and its activities are copied. Also note that when copying a **User Task** or **Microflow**, this action will not create a copy of the elements that are being referenced. Instead, the copied element will have the same references as the original. For example, the copied **User Task** will, when the original **User Task** has a task page configured, refer to the same task page.
 * When no element is selected in the workflow, the clipboard content is pasted at the end of the workflow.
 * When the start event is selected, the clipboard content is pasted at the start of the workflow.
 * When an activity is selected, the clipboard content is pasted under the selected activity.

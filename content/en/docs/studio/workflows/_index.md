@@ -121,11 +121,15 @@ To cut/copy/paste elements, use <kbd>Ctrl</kbd> + <kbd>X</kbd> /  <kbd>Ctrl</kbd
 When using cut/copy/paste, note the following:
 
 * When cutting or copying an element, the clipboard contains the whole structure of the element. For example, when copying a **User Task** with **Outcomes** which contain activities, the **User Task** and the **Outcomes** and its activities are copied. 
+    
+    Note that copying a **User Task** or a **Microflow** does not create a copy of the elements that are being referenced. Instead, the copied element will have the same references as the original. For example, when the original **User Task** has a task page configured, the copied **User Task** refers to the same task page.
 * When no element is selected in the workflow, the clipboard content is pasted at the end of the workflow.
 * When the start event is selected, the clipboard content is pasted at the start of the workflow.
 * When an activity is selected, the clipboard content is pasted under the selected activity.
 * When a flow is selected, the clipboard content is pasted at the beginning of the selected flow.
 * When the clipboard contents has an **Annotation**, it can only be pasted into the workflow or into individual activities that support annotations.
+* Pasting an activity after an **End** or **Jump** activity results in a consistency error as an **End** or **Jump** activity should be placed at the end of a flow.
+* Pasting activity can result in a consistency error when the next activity becomes unreachable by either placing an **End** or **Jump** activity in front of it or when all flows before a merge end with an **End** or **Jump** activity.
 
 #### 2.8.1 Elements that Cannot be Cut, Copied or Pasted
 

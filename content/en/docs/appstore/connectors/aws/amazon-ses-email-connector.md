@@ -15,7 +15,12 @@ tags: ["AWS", "Amazon Simple Email Service", "SES", "email", "Mendix Email Conne
 
 To configure your SES account in the Email Connector in Studio Pro, follow these steps: 
 
-1. Download the Email Connector module and import it into your Studio Pro app. For more information, see [Email Connector](/appstore/connectors/email-connector/). 
+1. Download the Email Connector module and import it into your Studio Pro app. For more information, see [Email Connector](/appstore/connectors/email-connector/).
+
+{{% alert color="warning" %}}
+Ensure that you follow the prerequisites listed in the [EMail Connector documentation](/appstore/connectors/email-connector/). Missing a step might lead to errors.
+{{% /alert %}}
+
 2. Get the following details from Amazon SES: 
     * SMTP hostname 
     * SMTP username 

@@ -1979,7 +1979,6 @@ export const com_mendix_widget_native_piedoughnutchart_PieDoughnutChart = {
     paddingTop: // Applies padding to the top side of the chart (number).
     paddingVertical: // Applies padding to the vertical sides of the chart (number).
   },
-  },
 };
 ```
 

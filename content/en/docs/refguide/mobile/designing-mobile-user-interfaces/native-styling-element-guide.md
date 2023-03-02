@@ -1736,22 +1736,40 @@ export const TODO:FILL THIS IN = {
 
 #### 25.1 LayoutStyle
 
-| Element                | Style Properties                               | Description                                                                                    |
-| -----------------------|-------------------------------- | ---------------------------------------------------------------------------------------------- |
-| slideItem | This has all ViewStyle properties.                                   | Styles the view surrounding each slide, including inactive slides.                             |
+| Element | Style Properties | Description   |
+| --- | --- | --- |
+| slideItem | This has all ViewStyle properties.  | Styles the view surrounding each slide, including inactive slides.  |
 | inactiveSlideItem | `opacity: number, scale: number` | `inactiveSlideOpacity` and `inactiveSlideScale`, will allow inactive slides smaller and faded. |
-| indicator | `color: string`                             | Styles the loading indicator which will be shown while the carousel is loading.                 |
-| pagination | Pagination                                 | Styles pagination container, dots, active dots, and text.                                        |
+| indicator | `color: string`  | Styles the loading indicator which will be shown while the carousel is loading.   |
+| pagination | Pagination  | Styles pagination container, dots, active dots, and text.  |
+
+```javascript
+export const TODO:FILL THIS IN = {
+  slideItem: {
+    // This has all ViewStyle properties. Styles the view surrounding each slide, including inactive slides.
+  },
+  inactiveSlideItem: {
+    opacity: number: // Allows inactive slides to become more smaller and faded.   
+    scale: number: // Allows inactive slides to become more smaller and faded.   
+  },
+  indicator: {
+    color: string: // Styles the loading indicator which will be shown while the carousel is loading.
+  },
+  pagination: {
+    // Styles pagination container, dots, active dots, and text.
+  },
+};
+```
 
 #### 25.2 Pagination
 
-| Element | Style Properties                                                                         | Description                                                                                                    |
-| ---------|------------------------------------------------------------------------ | -------------------------------------------------------------------------------------------------------------- |
-| container | This has all ViewStyle properties.                                                              | Styles the main view around pagination, regardless of text or dot.                                             |
-| dotStyle | All ViewStyle properties + `color: string`                                              | Styles all the pagination dots.                                                                                |
-| inactiveDotStyle|  All ViewStyle properties + `opacity: number; scale: number; color: string` | Additional styles for inactive dots. Will be merged with `dotStyle`.                                             |
-| dotContainerStyle | This has all ViewStyle properties.                                                      | Styles the view around individual pagination dots.                                                              |
-| text | This has all TextStyle properties.                                                                   | Will be applied when there are more than five elements in carousel, in which case pagination buttons become text like **1/5**. |
+| Element | Style Properties | Description  |
+| ---|--- | --- |
+| container | This has all ViewStyle properties.  | Styles the main view around pagination, regardless of text or dot.   |
+| dotStyle | All ViewStyle properties + `color: string` | Styles all the pagination dots.  |
+| inactiveDotStyle|  All ViewStyle properties + `opacity: number; scale: number; color: string` | Additional styles for inactive dots. Will be merged with `dotStyle`.  |
+| dotContainerStyle | This has all ViewStyle properties. | Styles the view around individual pagination dots.                                                              |
+| text | This has all TextStyle properties.| Will be applied when there are more than five elements in carousel, in which case pagination buttons become text like **1/5**. |
 
 The default class to style all popup menus is named `com_mendix_widget_native_carousel_Carousel`.
 

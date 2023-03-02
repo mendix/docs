@@ -1736,13 +1736,6 @@ export const TODO:FILL THIS IN = {
 
 #### 25.1 LayoutStyle
 
-| Element | Style Properties | Description   |
-| --- | --- | --- |
-| slideItem | This has all ViewStyle properties.  | Styles the view surrounding each slide, including inactive slides.  |
-| inactiveSlideItem | `opacity: number, scale: number` | `inactiveSlideOpacity` and `inactiveSlideScale`, will allow inactive slides smaller and faded. |
-| indicator | `color: string`  | Styles the loading indicator which will be shown while the carousel is loading.   |
-| pagination | Pagination  | Styles pagination container, dots, active dots, and text.  |
-
 ```javascript
 export const TODO:FILL THIS IN = {
   slideItem: {
@@ -1760,6 +1753,12 @@ export const TODO:FILL THIS IN = {
   },
 };
 ```
+| Element | Style Properties | Description   |
+| --- | --- | --- |
+| slideItem | This has all ViewStyle properties.  | Styles the view surrounding each slide, including inactive slides.  |
+| inactiveSlideItem | `opacity: number, scale: number` | `inactiveSlideOpacity` and `inactiveSlideScale`, will allow inactive slides smaller and faded. |
+| indicator | `color: string`  | Styles the loading indicator which will be shown while the carousel is loading.   |
+| pagination | Pagination  | Styles pagination container, dots, active dots, and text.  |
 
 #### 25.2 Pagination
 
@@ -1853,6 +1852,51 @@ The default class to style all text boxes is named `com_mendix_widget_native_sig
 ### 11.27 Line Chart
 
 The [line chart](https://github.com/mendix/widgets-resources/blob/master/packages/pluggableWidgets/line-chart-native) widget renders a scalable line graph based on static and dynamic data sets.
+
+```javascript
+export const com_mendix_widget_native_linechart_LineChart = {
+  container: {
+    // This has all ViewStyle properties. 
+  },
+  errorMessage: {
+    // This has all TextStyle properties. 
+  },
+  chart: {
+    // This has all ViewStyle properties. 
+  },
+  grid: {
+    backgroundColor: // Applies a color to the grid background (string).
+    dashArray: // Applies a pattern of dashes and gaps to the grid lines (string containing a [dash pattern](https://www.w3.org/TR/SVG11/painting.html#StrokeDasharrayProperty).
+    lineColor: // Applies a color to the grid lines (string).
+    lineWidth: // Applies a width to the grid lines (number).
+    padding: // Applies padding to all sides of the grid (number). Use it to make axis value labels visible.
+    paddingBottom: // Applies padding to the bottom side of the grid (number). Use it to make axis value labels visible.
+    paddingHorizontal: // Applies padding to the horizontal sides of the grid (number). Use it to make axis value labels visible.
+    paddingLeft: // Applies padding to the left side of the grid (number). Use it to make axis value labels visible.
+    paddingRight: // Applies padding to the right side of the grid (number). Use it to make axis value labels visible.
+    paddingTop: // Applies padding to the top side of the grid (number). Use it to make axis value labels visible.
+    paddingVertical: // Applies padding to the vertical sides of the grid (number). Use it to make axis value labels visible.
+  },
+  xAxis: {
+    color: // Applies a color to the axis value labels (string).
+    dashArray: // Applies a pattern of dashes and gaps to the axis line (string containing a [dash pattern](https://www.w3.org/TR/SVG11/painting.html#StrokeDasharrayProperty)).
+    fontFamily: // Applies fonts to the axis value labels (string).
+    fontSize: // Applies a size to the axis value labels (number).
+    fontStyle: // Applies a font style to the axis value labels ("normal" or "italic").
+    fontWeight: // Applies a font weight to the axis value labels ("normal" or "bold" or "100" or "200" or "300" or "400" or "500" or "600" or "700" or "800" or "900").
+    lineColor: // Applies a color to the axis line (string).
+    lineWidth: // Applies a width to the axis line (number).
+   xAxis > label: // All [TextStyle](https://reactnative.dev/docs/text-style-props) properties.
+    relativePositionGrid: // Positions the axis label at the bottom or right side of the grid ("bottom" or "right").
+  },
+  yAxis: {
+    // All `xAxis` element styles.
+   yAxis > label: // All [TextStyle](https://reactnative.dev/docs/text-style-props) properties.
+    relativePositionGrid: // Positions the axis label at the top or left side of the grid ("top" or "left").
+  },
+
+};
+```
 
 | Element | Style Properties | Description |
 | --- | --- | --- |

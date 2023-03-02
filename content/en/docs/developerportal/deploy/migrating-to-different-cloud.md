@@ -45,23 +45,21 @@ Start the migration by opening a request with Mendix Support. Our support team w
     
     You can find the required information by checking the **General** tab of the [Environment Details](/developerportal/deploy/environments-details/) page for your app.
 
-4. In the Developer Portal, create a temporary new app.
-4. Request the target cloud node in the required datacenter through the [Request New App Node](https://newnode.mendix.com/) app.
-4. After the Mendix Support team provisions a new cloud node for you, ensure that you have the [Technical Contact](/developerportal/collaborate/app-roles/#technical-contact) role for both your cloud nodes.
+4. In the Developer Portal, create an empty temporary app.
+5. Request the target cloud node in the required datacenter through the [Request New App Node](https://newnode.mendix.com/) app.
+6. After the Mendix Support team provisions a new cloud node for you, ensure that you have the [Technical Contact](/developerportal/collaborate/app-roles/#technical-contact) role for both your cloud nodes.
 
 ### 3.2 Linking the Temporary App to the Target Cloud Node
 
 Connect the temporary app that you created to the target node.
 
-1. In the [Developer Portal](http://sprintr.home.mendix.com), click **Apps** and select one of your temporary apps.
+1. In the [Developer Portal](http://sprintr.home.mendix.com), click **Apps**, and then click on the temporary app that you created.
+2. In the app, in the **Deploy** section of the left navigation pane, click **Environments**.
+3. Click **Select a node**.
 
-2. Once you are in the app, go to the **Environments** tab in the left menu.
+    {{< figure src="/attachments/developerportal/deploy/migrating-to-v4/select-node.png" alt="The Select a node option on the Environments page" >}}
 
-3. Click **select a node**.
-
-    {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/mxcloudv4/migrating-to-v4/select-a-node.png" >}}
-
-4. Select the target node by clicking **Use this Node** and link it to your app.
+4. Select the target node by clicking **Use this Node**, and link it to your app.
 
 For more information on how to do this, see [Licensing Mendix Cloud Apps](/developerportal/deploy/licensing-apps/#licensed-node).
 
@@ -73,31 +71,22 @@ The following steps explain how to do this.
 
 #### 3.3.1 Downloading and Uploading the Deployment Package
 
-Download the deployment package of your app hosted in the source node and upload the deployment package to the app hosted in the target node.
+Download the deployment package of your app hosted in the source node, and then upload the deployment package to the app hosted in the target node by doing the following steps:
 
-To download a deployment package, follow these steps:
-
-1. Go to **Environments** of the source app.
-
-2. Click **Details** for a **Deployment Package**.
-
+1. Go to **Environments** page of the source app.
+2. On the **Deploy** tab, in the **Deployment Package Repository** section, click the **Details** button by the deployment package that you want to download.
 3. Click **Download Package**.
 
-    {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/mxcloudv4/migrating-to-v4/download-package.png" >}}
+    {{< figure src="/attachments/developerportal/deploy/migrating-to-v4/download-package.png" alt="Downloading a deployment package" >}}
 
-To upload the deployment package, follow these steps:
+4. Go to **Environments** page of the target app.
+5. On the **Deploy** tab, in the **Deployment Package Repository** section, click **Upload**.
 
-1. Go to **Environments** of the target App.
+    {{< figure src="/attachments/developerportal/deploy/migrating-to-v4/upload-package.png" alt="Uploading a deployment package" >}}
 
-2. Below the **Deployment Package Repository**, click **Upload**.
-
-    {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/mxcloudv4/migrating-to-v4/upload-package.png" >}}
-
-3. Browse and select the downloaded deployment package from your device.
-
-4. Deploy the uploaded package and ensure that it starts.
-
-5. Stop the app so that you can upload the backup data.
+6. Select the deployment package that you downloaded from your source app.
+7. After uploading the package, click **Deploy**, and ensure that the package is deployed.
+8. [Stop the app](/developerportal/deploy/private-cloud-deploy/#environment-details) so that you can upload the backup data.
 
 #### 3.3.2 Backing Up
 

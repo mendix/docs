@@ -11,11 +11,11 @@ tags: ["studio", "domain model", "excel import", "start with data", "data model"
 
 With the **App from a spreadsheet** you can import a Microsoft Excel spreadsheet and build an app using your data. The data of the spreadsheet will be analyzed and converted into entities, attributes, and associations. Also, pages and navigation items based on your data can be created. 
 
-You can use the **App from a spreadsheet** template either from Studio Pro or via the Developer Portal.
+You can create the **App from a spreadsheet** by using an app template either in Studio Pro or via the Developer Portal.
 
 ## 2 Preparing Your Data for Import
 
-Before importing your spreadsheet to the app, do the following:
+Before importing your spreadsheet into the app, do the following:
 
 1. Make sure your spreadsheet is in the *.xlsx* format
 2. Make sure that the spreadsheet meets the following requirements:
@@ -44,7 +44,7 @@ During the import process, spreadsheet data is analyzed and converted the follow
 
 Download this Excel spreadsheet example to check how data is normalized there: [Spreadsheet Example](/attachments/refguide/modeling/app-from-spreadsheet/Example.xlsx). You can also import it into an app and test how this spreadsheet is converted. For more information, see the [Importing a Spreadsheet](#importing-spreadsheet) section.
 
-## 4 Starting an App From a Spreadsheet {#importing-spreadsheet}
+## 4 Starting an App from a Spreadsheet {#importing-spreadsheet}
 
 When you create your app, a page where you can upload your spreadsheet is opened. Drag your spreadsheet onto the page or browse your files and choose the one you would like to import.
 
@@ -108,11 +108,11 @@ If columns have empty values,the attribute type will be identified as **String**
 
 #### 4.1.3 Generate Pages for My Data 
 
-**Generate pages for my data** generates an overview page with a data grid for you, and *{EntityName}__NewEdit* pages for each entity. For more information, see [Generating Pages](#generating-pages). 
+**Generate pages for my data** generates an overview page with a data grid for you, and *{EntityName}__NewEdit* pages for each entity. For more information, see [Your Data after the Import](#after-import). 
 
 {{< figure src="/attachments/refguide/modeling/app-from-spreadsheet/generate-pages-option.jpg" width="650">}}
 
-### 4.2 Importing Data
+### 4.2 Your Data after the Import {#after-import}
 
 After you have reviewed all data, click **Import Data** at the bottom of the **Data Preview** screen. 
 
@@ -122,12 +122,6 @@ Open the domain model to see all created entities and attributes:
 
 {{< figure src="/attachments/refguide/modeling/app-from-spreadsheet/domain-model-example.jpg"   width="650"  >}}
 
-{{% alert color="success" %}}
-After import is completed, you can [preview or publish your app](/studio/publishing-app/) and see all your data or continue configuring your app.
-{{% /alert %}}
-
-### 4.3 Generating Pages {#generating-pages}
-
 If **Generate pages for my data** has been selected in the preview page, pages are created based on your spreadsheet. The following changes are made in the page editor and the navigation document :
 
 * A **Manage_Data** page is created – an overview page with tabs for each Excel table and with data grids per each entity
@@ -135,10 +129,14 @@ If **Generate pages for my data** has been selected in the preview page, pages a
     {{< figure src="/attachments/refguide/modeling/app-from-spreadsheet/manage-data-page.jpg" >}}
 
 * An **{EntityName}__NewEdit** page is created – a page for each of your entities for creating and saving a new object of this entity
+
 * A link from the **HomePage** is created – a card with buttons linking to the **Manage_Data** page   
 
     {{< figure src="/attachments/refguide/modeling/app-from-spreadsheet/home-page.jpg" >}}
 
 * The **Manage Data** menu item is created in the navigation with a link to the **Manage_Data** page
+
 * Your data is transferred to the preview and publish environment, that means when you preview or publish your app, you can view your data there
+
+You can preview your app and see that your data was imported there and test the app.
 

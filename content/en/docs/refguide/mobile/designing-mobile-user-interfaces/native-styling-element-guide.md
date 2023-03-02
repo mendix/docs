@@ -1763,12 +1763,32 @@ export const TODO:FILL THIS IN = {
 
 #### 25.2 Pagination
 
+```javascript
+export const com_mendix_widget_native_carousel_Carousel = {
+  container: {
+    // This has all ViewStyle properties. Styles the main view around pagination, regardless of text or dot.
+  },
+  dotStyle: {
+    // This has all ViewStyle properties as well as `color: string`. Styles all the pagination dots.   
+  },
+  inactiveDotStyle: {
+    // This has all ViewStyle properties as well as `opacity: number; scale: number; color: string`. Additional styles for inactive dots. Will be merged with `dotStyle`.   
+  },
+  dotContainerStyle: {
+    // This has all ViewStyle properties. Styles the view around individual pagination dots.  
+  },
+  text: {
+    // This has all TextStyle properties. Will be applied when there are more than five elements in carousel, in which case pagination buttons become text like **1/5**.
+  },
+};
+```
+
 | Element | Style Properties | Description  |
 | ---|--- | --- |
 | container | This has all ViewStyle properties.  | Styles the main view around pagination, regardless of text or dot.   |
 | dotStyle | All ViewStyle properties + `color: string` | Styles all the pagination dots.  |
 | inactiveDotStyle|  All ViewStyle properties + `opacity: number; scale: number; color: string` | Additional styles for inactive dots. Will be merged with `dotStyle`.  |
-| dotContainerStyle | This has all ViewStyle properties. | Styles the view around individual pagination dots.                                                              |
+| dotContainerStyle | This has all ViewStyle properties. | Styles the view around individual pagination dots.  |
 | text | This has all TextStyle properties.| Will be applied when there are more than five elements in carousel, in which case pagination buttons become text like **1/5**. |
 
 The default class to style all popup menus is named `com_mendix_widget_native_carousel_Carousel`.

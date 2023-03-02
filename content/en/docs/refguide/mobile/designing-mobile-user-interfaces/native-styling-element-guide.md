@@ -1547,6 +1547,32 @@ The bottom sheet widget creates a set of options while blocking interaction with
 
     {{< figure src="/attachments/refguide/mobile/native-mobile/native-styling-refguide/expanding-bottom-sheet.gif" alt="expanding bottom sheet"   width="350"  >}}
 
+```javascript
+export const com_mendix_widget_native_bottomsheet_BottomSheet = {
+  container: {
+    // This has all ViewStyle properties.
+  },
+  containerWhenExpandedFullscreen: {
+    // This has all ViewStyle properties. This has all ViewStyle properties. Only available if `Expading` and `Enable full screen` are enabled.
+  },
+  modal: {
+    // This has all ViewStyle properties. 
+  },
+  defaultStyle: {
+    // This has all TextStyle properties. Available when `Default` is selected as style for basic items.
+  },
+  primaryStyle: {
+    // This has all TextStyle properties. Available when `Primary` is selected as style for basic items.
+  },
+  dangerStyle: {
+    // This has all TextStyle properties. Available when `Danger` is selected as style for basic items.
+  },
+  customStyle: {
+    // This has all TextStyle properties. Available when `Custom` is selected as style for basic items.
+  },
+};
+```
+
 | Element | Style Properties | Description |
 | --- | --- | --- |
 | `container` | This has all ViewStyle properties. | |

@@ -1982,6 +1982,40 @@ A switch input widget can be used to display and edit Boolean attributes and is 
 
 {{< figure src="/attachments/refguide/mobile/native-mobile/native-styling-refguide/check-box.png" alt="check box"   width="350"  >}}
 
+```javascript
+export const com_mendix_widget_native_switch_Switch = {
+  container: {
+    // This has all ViewStyle properties. 
+  },
+  containerDisabled: {
+    // Same properties as `container`. Overrides `container` styles if the text box is non-editable.
+  },
+  input: {
+    // This has all TextStyle properties. 
+    trackColorOn: // Custom color for the switch track when turned on.
+    trackColorOff: // Custom color for the switch track when turned off.
+    thumbColorOn: // Color of the foreground switch grip when turned on. If this is set on iOS, the switch grip will lose its drop shadow.
+    thumbColorOff: // Color of the foreground switch grip when turned off. If this is set on iOS, the switch grip will lose its drop shadow.
+  },
+  inputError: {
+    // This has the same properties as `input`. Overrides `input` styles if there are validation errors.
+  },
+  inputDisabled: {
+    // This has the same properties as `input`. Overrides `input` styles if the check box is non-editable.
+  },
+  label: {
+    // This has all TextStyle properties 
+    numberOfLines, defaults to `1`: // The maximum number of lines to wrap the label text. If the text is any longer it will be cut off with an ellipsis.
+  },
+  labelDisabled: {
+    // Same properties as `label`. Overrides `label` styles if the check box is non-editable.
+  },
+  validationMessage: {
+    // This has all TextStyle properties.
+  },
+};
+```
+
 | Element | Style Properties    | Description |
 | --- | --- | --- |
 | `container` | This has all ViewStyle properties.   |   |

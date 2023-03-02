@@ -1956,6 +1956,33 @@ The default class to style all bar chart widgets is named `com_mendix_widget_nat
 
 The [Pie/Doughnut Chart](https://github.com/mendix/widgets-resources/blob/master/packages/pluggableWidgets/pie-doughnut-chart-native) widget renders a dataset as a pie or doughnut chart (depending on its configuration) based on static data sets.
 
+```javascript
+export const com_mendix_widget_native_piedoughnutchart_PieDoughnutChart = {
+  container: {
+    // This has all ViewStyle properties. 
+  },
+  slices > customStyles > any_custom_key > slice: {
+    color: // Applies a color to the slice (string). If labels are configured to be shown, each label will be the same color as its corresponding slice.
+    fontFamily: // Applies a font type to the slice label (string).
+    fontSize: //  Applies a size to the slice label (number).
+    fontStyle: // Applies a font style to the slice label (**normal** or **italic**).
+    fontWeight: // Applies a font weight to the slice label ("normal" or "bold" or "100"-"900" ascending by increments of 100).
+  },
+  slices: {
+    colorPalette: // Provides colors to slices that do not have a slice color configured (string with list of colors separated by a ';').
+    innerRadius: //  Applies an inner radius to the chart when in doughnut presentation mode (number).
+    padding: // Applies padding to all sides of the chart (number).
+    paddingBottom: // Applies padding to the bottom side of the chart (number).
+    paddingHorizontal: // Applies padding to the horizontal sides of the chart (number).
+    paddingLeft: // Applies padding to the left side of the chart (number).
+    paddingRight: // Applies padding to the right side of the chart (number).
+    paddingTop: // Applies padding to the top side of the chart (number).
+    paddingVertical: // Applies padding to the vertical sides of the chart (number).
+  },
+  },
+};
+```
+
 | Element | Style Properties | Description |
 | --- | --- | --- |
 | `container` | All [ViewStyle](https://reactnative.dev/docs/view-style-props) properties. | |

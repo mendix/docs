@@ -28,7 +28,7 @@ Only email IDs and identities configured under Verified identities, and that are
 2. Download the Email Connector module and import it into your Studio Pro app. For more information, see [Email Connector](/appstore/connectors/email-connector/).
 
 {{% alert color="warning" %}}
-Ensure that you follow the prerequisites listed in the [EMail Connector documentation](/appstore/connectors/email-connector/). Missing a step might lead to errors.
+Ensure that you follow the prerequisites listed in the [Email Connector documentation](/appstore/connectors/email-connector/). Missing a step might lead to errors.
 {{% /alert %}}
 
 3. Set up the Email Connector. For more information, see [Set Up in Studio Pro](/appstore/connectors/email-connector/#setup) and [Email Account Configuration](/appstore/connectors/email-connector/#accountconfig).  

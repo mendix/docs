@@ -1589,41 +1589,58 @@ The default class to style all bottom sheet widgets is named `com_mendix_widget_
 
 The popup menu widget allows you to show a context menu exactly where the user taps.
 
-A main object has four objects.
+A main object has four objects:
 
-| Element                    | Style Properties | Description                                                                                                      |
-| ----------------------------| --- | ---------------------------------------------------------------------------------------------------------------- |
-| basic      | BasicItemStyle |Styles basic items.                                                                                                   |
-| custom      | CustomItemStyle |Styles custom items.                                                                                                   |
-| buttonContainer | This has all ViewStyle properties. | Styles the wrapper view of triggerer since there could be multiple elements, and it has to be wrapped in a view. |
-| container       | This has all ViewStyle properties. | Styles the wrapper view around the whole menu.     |
+```javascript
+export const TODO:FILL THIS IN = {
+  basic: {
+    // BasicItemStyle. Styles basic items.
+  },
+  custom: {
+    // CustomItemStyle. Styles custom items.
+  },
+  buttonContainer: {
+    // This has all ViewStyle properties. Styles the wrapper view of triggerer since there could be multiple elements, and it has to be wrapped in a view. 
+  },
+  container: {
+    // This has all ViewStyle properties. Styles the wrapper view around the whole menu.
+  },
+};
+```
+
+| Element | Style Properties | Description  |
+| ---| --- | ---|
+| `basic`     | BasicItemStyle |Styles basic items.  |
+| `custom`    | CustomItemStyle |Styles custom items.  |
+| `buttonContainer` | This has all ViewStyle properties. | Styles the wrapper view of triggerer since there could be multiple elements, and it has to be wrapped in a view. |
+| `container` | This has all ViewStyle properties. | Styles the wrapper view around the whole menu. |
 
 #### 24.1 BasicItemStyle
 
-| Element                   | Style Properties |  Description                                      |
-| ---------------------------| ---- | ------------------------------------------------ |
-| containerStyle | This has all ViewStyle properties. | Styles the wrapper container around a basic item. |
-| itemStyle | ItemStyle      | Styles the basic items.                         |
-| dividerColor | `string`      | Styles the divider color.                         |
+| Element    | Style Properties |  Description     |
+| ----| ---- | ------ |
+| `containerStyle` | This has all ViewStyle properties. | Styles the wrapper container around a basic item. |
+| `itemStyle` | ItemStyle      | Styles the basic items.      |
+| `dividerColor` | `string`      | Styles the divider color.    |
 
 #### 24.2 ItemStyle
 
-| Element                | Style Properties                     | Description                                                                                      |
-| ----------------------------------------| ----- | ------------------------------------------------------------------------------------------------ |
-| ellipsizeMode | `head`, `middle`, `tail`, or `clip` | Styles how the text will be clipped if its too long. |
-| rippleColor | `string`      | Styles the color of touch feedback when item is tapped. Works for both iOS and Android platforms. |
-| defaultStyle |  This has all TextStyle properties.                | Styles all basic menu items which have the `default` style selected.                                 |
-| primaryStyle |  This has all TextStyle properties.                | Styles all basic menu items which have the `primary` style selected.                                 |
-| dangerStyle |  This has all TextStyle properties.                 | Styles all basic menu items which have the `danger` style selected.                                  |
-| customStyle |  This has all TextStyle properties.                 | Styles all basic menu items which have the `custom` style selected.                                  |
+| Element | Style Properties  | Description  |
+| -------------| ----- | ----- |
+| `ellipsizeMode` | `head`, `middle`, `tail`, or `clip` | Styles how the text will be clipped if its too long. |
+| `rippleColor` | `string`      | Styles the color of touch feedback when item is tapped. Works for both iOS and Android platforms. |
+| `defaultStyle` |  This has all TextStyle properties. | Styles all basic menu items which have the `default` style selected.   |
+| `primaryStyle` |  This has all TextStyle properties. | Styles all basic menu items which have the `primary` style selected.   |
+| `dangerStyle` |  This has all TextStyle properties. | Styles all basic menu items which have the `danger` style selected.   |
+| `customStyle` |  This has all TextStyle properties.  | Styles all basic menu items which have the `custom` style selected.  |
 
 #### 24.3 CustomItemStyle
 
 | Element                   | Style Properties |  Description                                      |
 | ---------------------------| ---- | ------------------------------------------------ |
-| containerStyle | This has all ViewStyle properties. | Styles the wrapper container around a custom item. |
-| itemStyle | `rippleColor: string`      | Styles the color of touch feedback when item is tapped. Works for both iOS and Android platforms. |
-| dividerColor | `string`      | Styles the divider color.                         |
+| `containerStyle` | This has all ViewStyle properties. | Styles the wrapper container around a custom item. |
+| `itemStyle` | `rippleColor: string`      | Styles the color of touch feedback when item is tapped. Works for both iOS and Android platforms. |
+| `dividerColor` | `string`      | Styles the divider color.                         |
 
 The default class to style all popup menus is named `com_mendix_widget_native_popupmenu_PopupMenu`.
 

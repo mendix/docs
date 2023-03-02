@@ -1886,7 +1886,9 @@ export const com_mendix_widget_native_linechart_LineChart = {
     fontWeight: // Applies a font weight to the axis value labels ("normal" or "bold" or "100" or "200" or "300" or "400" or "500" or "600" or "700" or "800" or "900").
     lineColor: // Applies a color to the axis line (string).
     lineWidth: // Applies a width to the axis line (number).
-   xAxis > label: // All [TextStyle](https://reactnative.dev/docs/text-style-props) properties.
+  },
+   xAxis > label: { 
+    // All [TextStyle](https://reactnative.dev/docs/text-style-props) properties.
     relativePositionGrid: // Positions the axis label at the bottom or right side of the grid ("bottom" or "right").
   },
   yAxis: {
@@ -1894,7 +1896,35 @@ export const com_mendix_widget_native_linechart_LineChart = {
    yAxis > label: // All [TextStyle](https://reactnative.dev/docs/text-style-props) properties.
     relativePositionGrid: // Positions the axis label at the top or left side of the grid ("top" or "left").
   },
-
+  legend > container: {
+    // All [ViewStyle](https://reactnative.dev/docs/view-style-props) properties. 
+  },
+  legend > item: {
+    // All [ViewStyle](https://reactnative.dev/docs/view-style-props) properties. 
+  },
+  legend > indicator: {
+    // All [ViewStyle](https://reactnative.dev/docs/view-style-props) properties. 
+  },
+  legend > label: {
+    // All [ViewStyle](https://reactnative.dev/docs/view-style-props) properties. 
+  },
+  lines: {
+    lineColorPalette: // Provides colors to lines that do not have a line color configured (string with list of colors separated by ';').
+  },
+  lines > customLineStyles > any_custom_line_style_name > line: {
+    dashArray: // Applies a pattern of dashes and gaps to the graph line (string containing a [dash pattern](https://www.w3.org/TR/SVG11/painting.html#StrokeDasharrayProperty)).
+    ending: // Applies a flat or rounded line end to the graph line ("flat" or "round").
+    lineColor: // Applies a color to the graph line (string).
+    lineWidth: // Applies a width to the graph line (number).
+  },
+  lines > customLineStyles > any_custom_line_style_name > markers: {
+    backgroundColor: // Applies a background color to the markers of the graph line (string).
+    borderColor: // Applies a border color to the markers of the graph line (string).
+    borderWidth: // Applies a border width to the markers of the graph line (string).
+    display: // Influences whether markers are displayed. When displayed, it positions the markers of the graph line on top or underneath the line ("false" or "underneath" or "onTop").
+    size: // Applies a size to the markers of the graph line (number).
+    symbol: // Applies a symbol to the markers of the graph line ("circle" or "diamond" or "plus" or "minus" or "square" or "star" or "triangleDown" or "triangleUp").
+  },
 };
 ```
 

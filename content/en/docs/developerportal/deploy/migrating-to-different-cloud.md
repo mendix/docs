@@ -88,9 +88,9 @@ Download the deployment package of your app hosted in the source node, and then 
 7. After uploading the package, click **Deploy**, and ensure that the package is deployed.
 8. [Stop the app](/developerportal/deploy/private-cloud-deploy/#environment-details) so that you can upload the backup data.
 
-#### 3.3.2 Backing Up
+#### 3.3.2 Transferring Your Backup Data
 
-{{% alert color="warning" %}}
+{{% alert color="info" %}}
 Ensure you have performed the last two steps in the previous section to deploy your deployment package before continuing. Making a deployment prepares the environment and ensures your data is restored to the correct locations.
 {{% /alert %}}
 

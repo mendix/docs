@@ -2097,7 +2097,24 @@ The Gallery widget (a replacement for both template grids and list views) helps 
 
 ### 11.33.1 Gallery Filtering
 
-In order to enable filtering within the gallery items you need to select the desired attributes to be filtered in the Filtering tab.
+In order to enable filtering within the gallery items you need to select the desired attributes to be filtered in the **Filtering** tab.
+
+```javascript
+export const TODO = {
+  textInputContainer: {
+    // This has all ViewStyle properties. Applies a view style to the container of the text input. 
+  },
+  textInputContainerFocused: {
+    // This has all ViewStyle properties. Applies a view style to the container of the text input when the text box is focused.
+  },
+  textInput: {
+    // This has all ViewStyle properties. Applies a view style to the text input.
+  },
+  textInputClearIcon: {
+    // This has all ViewStyle properties. Applies style to the text clear button in the text box.
+  },
+};
+```
 
 | Element | Style Properties | Description |
 | --- | --- | --- |

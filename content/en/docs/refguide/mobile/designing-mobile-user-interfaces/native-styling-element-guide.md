@@ -1799,6 +1799,39 @@ The signature widget allows you to draw and save a signature. The signature widg
 
 {{< figure src="/attachments/refguide/mobile/native-mobile/native-styling-refguide/signature.png" alt="signature"   width="350"  >}}
 
+```javascript
+export const com_mendix_widget_native_signature_Signature = {
+  container: {
+    // This has all ViewStyle properties. 
+    penColor: // This will change the color of the stroke.
+  },
+  buttonWrapper: {
+    // This has all ViewStyle properties. 
+  },
+  buttonClearContainer: {
+    // This has all ViewStyle properties. 
+    rippleColor: // This will change the color of the ripple on Android.
+    activeOpacity: // This will change the opacity when touch is active on iOS.
+    underlayColor: // This will change the underlay color when touch is active on iOS.
+  },
+  buttonClearCaption: {
+    // This has all TextStyle properties. 
+  },
+  buttonSaveContainer: {
+    // This has all ViewStyle properties.
+  },
+  buttonSaveContainer: {
+    // This has all ViewStyle properties. 
+    rippleColor: // This will change the color of the ripple on Android.
+    activeOpacity: // This will change the opacity when touch is active on iOS.
+    underlayColor: // This will change the underlay color when touch is active on iOS.
+  }, 
+  buttonSaveCaption: {
+    // This has all TextStyle properties.
+  },
+};
+```
+
 | Element | Style Properties    | Description |
 | --- | --- | --- |
 | `container` | This has all ViewStyle properties.   |   |

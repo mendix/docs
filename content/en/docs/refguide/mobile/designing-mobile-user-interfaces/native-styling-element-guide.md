@@ -1620,7 +1620,7 @@ export const TODO:FILL THIS IN = {
 ```javascript
 export const TODO:FILL THIS IN = {
   containerStyle: {
-    // This has all ViewStyle properties. | Styles the wrapper container around a basic item. 
+    // This has all ViewStyle properties. Styles the wrapper container around a basic item. 
   },
   itemStyle: {
     // This has all ItemStyle properties. Styles the basic items.     
@@ -1678,6 +1678,20 @@ export const TODO:FILL THIS IN = {
 
 #### 24.3 CustomItemStyle
 
+```javascript
+export const com_mendix_widget_native_popupmenu_PopupMenu = {
+  containerStyle: {
+    // This has all ViewStyle properties. Styles the wrapper container around a custom item. 
+  },
+  itemStyle: {
+    rippleColor: string: // Styles the color of touch feedback when item is tapped. Works for both iOS and Android platforms.     
+  },
+  dividerColor: {
+    string: // Styles the divider color. 
+  },
+};
+```
+
 | Element                   | Style Properties |  Description                                      |
 | ---------------------------| ---- | ------------------------------------------------ |
 | `containerStyle` | This has all ViewStyle properties. | Styles the wrapper container around a custom item. |
@@ -1700,11 +1714,25 @@ export myCarouselStyle = {
 }
 ```
 
-| Element                | Style Properties                               | Description                                                                                    |
-| -----------------------|-------------------------------- | ---------------------------------------------------------------------------------------------- |
-| container | This has all ViewStyle properties.                                   | Styles the view surrounding the carousel widget. For best results, make sure to give a fixed `height`.                             |
+```javascript
+export const TODO:FILL THIS IN = {
+  container: {
+    // This has all ViewStyle properties. Styles the view surrounding the carousel widget. For best results, make sure to give a fixed `height`
+  },
+  cardLayout: {
+    LayoutStyle: // Styles the carousel when the layout is set to card.     
+  },
+  fullWidthLayout: {
+    LayoutStyle: // Styles the carousel when the layout is set to full width.
+  },
+};
+```
+
+| Element  | Style Properties | Description    |
+| --- | --- | --- |
+| container | This has all ViewStyle properties. | Styles the view surrounding the carousel widget. For best results, make sure to give a fixed `height`.                             |
 | cardLayout | LayoutStyle | Styles the carousel when the layout is set to card  |
-| fullWidthLayout | LayoutStyle                             | Styles the carousel when the layout is set to full width.                 |
+| fullWidthLayout | LayoutStyle  | Styles the carousel when the layout is set to full width. |
 
 #### 25.1 LayoutStyle
 

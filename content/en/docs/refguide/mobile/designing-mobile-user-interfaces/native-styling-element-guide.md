@@ -2004,6 +2004,23 @@ The default class to style all check box inputs is named `com_mendix_widget_nati
 
 The background gradient widget allows you to apply a background that transitions between multiple colors in a linear direction.
 
+```javascript
+export const com_mendix_widget_native_backgroundgradient_BackgroundGradient = {
+  angle: {
+    // Line of direction. Takes a value from `0` to `360`. A value of 0 is equivalent to top; increasing values rotate the design clockwise.
+  },
+  colorList: {
+    gradient_color_object: // Passes the colors you want to display in an array. Example: `[{ color: "#fff", offset: 0 }, { color: "#000", offset: 1 }].
+  },
+  container: {
+    // This has all ViewStyle properties. 
+  },
+  opacity: {
+    // Takes a value from `0` to `100`. The lower the value, the more transparent.
+  },
+};
+```
+
 | Element | Style Properties    | Description |
 | --- | --- | --- |
 | `angle` | | Line of direction. Takes a value from `0` to `360`. A value of 0 is equivalent to top; increasing values rotate the design clockwise. |

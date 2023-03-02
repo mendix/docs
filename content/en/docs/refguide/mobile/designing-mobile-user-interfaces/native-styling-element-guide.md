@@ -1617,6 +1617,20 @@ export const TODO:FILL THIS IN = {
 
 #### 24.1 BasicItemStyle
 
+```javascript
+export const TODO:FILL THIS IN = {
+  containerStyle: {
+    // This has all ViewStyle properties. | Styles the wrapper container around a basic item. 
+  },
+  itemStyle: {
+    // This has all ItemStyle properties. Styles the basic items.     
+  },
+  dividerColor: {
+    string: // Styles the divider color. 
+  },
+};
+```
+
 | Element    | Style Properties |  Description     |
 | ----| ---- | ------ |
 | `containerStyle` | This has all ViewStyle properties. | Styles the wrapper container around a basic item. |
@@ -1624,6 +1638,34 @@ export const TODO:FILL THIS IN = {
 | `dividerColor` | `string`      | Styles the divider color.    |
 
 #### 24.2 ItemStyle
+
+```javascript
+export const TODO:FILL THIS IN = {
+  ellipsizeMode: {
+    // Styles how the text will be clipped if its too long.
+    head
+    middle
+    tail
+    clip
+  },
+  rippleColor: {
+    // Styles the color of touch feedback when item is tapped. Works for both iOS and Android platforms.
+    string
+  },
+  defaultStyle: {
+    // This has all TextStyle properties. Styles all basic menu items which have the `default` style selected.
+  },
+  primaryStyle: {
+    // This has all TextStyle properties. Styles all basic menu items which have the `primary` style selected.
+  },
+  dangerStyle: {
+    // This has all TextStyle properties. Styles all basic menu items which have the `danger` style selected.
+  },
+  customStyle: {
+    // This has all TextStyle properties. Styles all basic menu items which have the `custom` style selected.
+  },
+};
+```
 
 | Element | Style Properties  | Description  |
 | -------------| ----- | ----- |

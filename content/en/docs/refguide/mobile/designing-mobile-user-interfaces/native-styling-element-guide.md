@@ -2079,6 +2079,39 @@ The default class to style all column chart widgets is named `com_mendix_widget_
 
 The Gallery widget (a replacement for both template grids and list views) helps you build beautiful lists and grids for tablet and mobile devices.
 
+```javascript
+export const TODO = {
+  container: {
+    // This has all ViewStyle properties. 
+  },
+  emptyPlaceholder: {
+    // This has all ViewStyle properties. Applies a view style to the empty placeholder.
+  },
+  firstItem: {
+    // This has all ViewStyle properties. Applies a view style to the first item of the list.
+  },
+  lastItem: {
+    // This has all ViewStyle properties. Applies a view style to the last item of the list.
+  },
+  list: {
+    // This has all ViewStyle properties. Applies a view style to the list container.
+  },
+  listitem: {
+    // This has all ViewStyle properties. Applies a view style to each item container in the list.
+  },
+  loadMoreButtonContainer: {
+    // This has all ViewStyle properties. Applies a view style to the load more button container.
+  },
+  loadMoreButtonPressableContainer: {
+    // This has all ViewStyle properties. Applies a view style to the load more button container.
+    rippleColor: // Defines the color of the ripple effect. ([color](https://reactnative.dev/docs/colors)) (Android only)
+    borderless: // Defines if ripple effect should not include border. (Boolean) (Android only)
+    radius: // Defines the radius of the ripple effect. (number) (Android only)
+    foreground: // Set to true to add the ripple effect to the foreground of the view, instead of the background. (Boolean) (Android only)
+  },
+};
+```
+
 | Element | Style Properties | Description |
 | --- | --- | --- |
 | `container` | All [ViewStyle](https://reactnative.dev/docs/view-style-props) properties. | |

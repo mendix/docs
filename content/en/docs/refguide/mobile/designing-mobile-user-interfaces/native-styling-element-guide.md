@@ -1893,7 +1893,8 @@ export const com_mendix_widget_native_linechart_LineChart = {
   },
   yAxis: {
     // All `xAxis` element styles.
-   yAxis > label: // All [TextStyle](https://reactnative.dev/docs/text-style-props) properties.
+  },
+  yAxis > label: { // All [TextStyle](https://reactnative.dev/docs/text-style-props) properties.
     relativePositionGrid: // Positions the axis label at the top or left side of the grid ("top" or "left").
   },
   legend > container: {
@@ -1978,6 +1979,85 @@ The default class to style all line chart widgets is named `com_mendix_widget_na
 ### 11.28 Bar Chart
 
 The [Bar Chart](https://github.com/mendix/widgets-resources/tree/master/packages/pluggableWidgets/bar-chart-native) widget renders a horizontal bar graph based on static and dynamic data sets.
+
+```javascript
+export const com_mendix_widget_native_barchart_BarChart = {
+  container: {
+    // This has all ViewStyle properties. 
+  },
+  errorMessage: {
+    // This has all TextStyle properties. 
+  },
+  chart: {
+    // This has all ViewStyle properties. 
+  },
+  grid: {
+    backgroundcolor: // Applies a color to the grid background (string).
+    dashArray: //  Applies a pattern of dashes and gaps to the grid lines (string containing a [dash pattern](https://www.w3.org/TR/SVG11/painting.html#StrokeDasharrayProperty)).
+    lineColor: // Applies a color to the grid lines (string).
+    width: // Applies a width to the grid lines (number).
+    padding: // Applies padding to all sides of the grid (number). This makes axis value labels visible.
+    paddingBottom: // Applies padding to the bottom side of the grid (number). This makes axis value labels visible.
+    paddingHorizontal:  // Applies padding to the horizontal sides of the grid (number). This makes axis value labels visible.
+    paddingLeft: // Applies padding to the left side of the grid (number). This makes axis value labels visible.
+    paddingRight: // Applies padding to the right side of the grid (number). This makes axis value labels visible.
+    paddingTop: // Applies padding to the top side of the grid (number). This makes axis value labels visible.
+    paddingVertical: // Applies padding to the vertical sides of the grid (number). This makes axis value labels visible.
+  },
+  xAxis: {
+    color: // Applies a color to the grid background (string).
+    dashArray: // Applies a pattern of dashes and gaps to the axis line (string containing a [dash pattern](https://www.w3.org/TR/SVG11/painting.html#StrokeDasharrayProperty)).
+    fontFamily: // Applies a font type to the axis value labels (string).
+    fontSize: // Applies a size to the axis value labels (number).
+    fontStyle: // Applies a font style to the axis value labels ("normal" or "italic").
+    fontWeight: // Applies a font weight to the axis value labels ("normal" or "bold" or "100" or "200" or "300" or "400" or "500" or "600" or "700" or "800" or "900").
+    lineColor: // Applies a color to the axis line (string).
+    width: // Applies a width to the axis line (number).
+  },
+  xAxis > label: {
+    // All [TextStyle](https://reactnative.dev/docs/text-style-props) properties.
+    relativePositionGrid: // Positions the axis label at the **bottom** or **right** side of the grid.
+  },
+  yAxis: {
+    // All `xAxis` element styles.
+  },
+  yAxis > label: {
+    // All [TextStyle](https://reactnative.dev/docs/text-style-props) properties.
+    relativePositionGrid: // Positions the axis label at the **top** or **left** side of the grid.
+  },
+  legend > container: {
+    // All [ViewStyle](https://reactnative.dev/docs/view-style-props) properties.
+  },
+  legend > item: {
+    // All [ViewStyle](https://reactnative.dev/docs/view-style-props) properties.
+  },
+  legend > indicator: {
+    // All [ViewStyle](https://reactnative.dev/docs/view-style-props) properties.
+  },
+  legend > label: {
+    // All [TextStyle](https://reactnative.dev/docs/text-style-props) properties.
+  },
+  domain > padding: {
+    x: // Applies a number of pixels of padding to add the beginning and end of the X axis domain (number).
+    y: // Applies a number of pixels of padding to add the beginning and end of the y axis domain (number).
+  },
+ bars: {
+    barColorPalette: // Provides colors to bars that do not have a bar color configured (string with list of colors separated by ';', one color for each series).
+    barsoffset: // Determines the number of pixels each bar in a group should be offset from its original position on the Y axis (number). This is only applicable when presentation mode is **Grouped**.
+  },
+ bars > customBarStyles > any_custom_bar_style_name > bar: {
+    ending: // Specifies a radius to apply to each bar.
+    barcolor: // Applies a color to the bar (string). If bars are configured to have labels, the labels will be the same color as the bar.
+    width: // Applies a width to the bar (number).
+  },
+ bars > customBarStyles > any_custom_bar_style_name > label: {
+    fontFamily: // Applies a font type to the bar label (string).
+    fontSize: // Applies a size to the bar label (number).
+    fontStyle: // Applies a font style to the bar label (**normal** or **italic**).
+    fontWeight: // Applies a font weight to the bar label ("normal" or "bold" or "100" or "200" or "300" or "400" or "500" or "600" or "700" or "800" or "900").
+  }, 
+};
+```
 
 | Element | Style Properties | Description |
 | --- | --- | --- |

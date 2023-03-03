@@ -74,7 +74,7 @@ This list gives an overview of the values of the published enumeration.
 
 Click **Edit** to change the exposed name of the enumeration value (the name as it appears to clients of the service) and to provide documentation.
 
-Use the **Refresh** butten when the enumeration values have changed to update the list with the new values.
+Use the **Refresh** button when the enumeration values have changed to update the list with the new values.
 
 ## 3 Settings
 

@@ -8,7 +8,7 @@ tags: ["rest", "binary", "send files", "receive files", "OData", "expose", "publ
 
 ## 1 Introduction
 
-This guide will cover how to use REST to send and retrieve files, including images, in Studio Pro.
+This guide covers how to use REST to send and retrieve files, including images, in Studio Pro.
 
 You will learn about the following:
 
@@ -64,7 +64,9 @@ To publish the **System.Image** or **System.Filedocument** entities as a [REST s
 
 7.  Click **OK**. 
 
-The **Published REST service** document for the exposed image or file entity has been created and is now open on your screen. After you run your app, click the URL in the **Location** field to open the OpenAPI specs.
+The **Published REST service** document for the exposed image or file entity has been created and is now open on your screen. 
+
+After you run your app, click the URL in the **Location** field to view the OpenAPI specs.
 
 ### 2.1.1 Understanding the Service Details {#service-details}
 
@@ -186,7 +188,7 @@ To retrieve files using a microflow, do the following:
          * **Type** – select the **RetrievedFile** entity
          * **Variable Name** – enter `GetResponseFile`
   
-4. For images: drag a **Change object** action into the microflow after the **Call REST service** action, so that the list view will display the retrieved image. 
+4. For images: drag a **Change object** action into the microflow after the **Call REST service** action, so that the image viewer will display the retrieved image. 
     * Double click the newly created action to open the properties.
     * In the **Object** field, select the **GetResponseFile** variable for the **RetrievedFile** entity.
     * In the **Refresh in client** field, select **Yes**.

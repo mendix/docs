@@ -3,7 +3,7 @@ title: "Starting with App from a Spreadsheet"
 url: /refguide/app-from-spreadsheet/
 weight: 19
 description: "Describes how to import an Excel spreadsheet to your app in Mendix Studio Pro using App from a spreadsheet template."
-tags: ["studio", "domain model", "excel import", "start with data", "data model"]
+tags: ["studio pro", "domain model", "excel import", "spreadsheet", "app from spreadsheet"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
@@ -72,7 +72,7 @@ In the table below, you can see how the Excel data corresponds to the attribute 
 | Data of type Date or Time that does not contain empty cells. | Date and Time **Note** If only the date is indicated, the time is set to 00:00 in the preview |
 | All of the following conditions should be met:  <ul><li>The value is identified as a string</li><li>Values in the column are used more than once</li><li>The number of such values is less than or equals ten</li></ul>When all conditions listed above are met, the column is treated as enumeration, and the values are turned into enumeration items. Values which are identical apart from being spelled with a lowercase or an uppercase will be combined under the version which is most common, or under the first one if all values are used the same number of times. For example, the values "Test" and "test" will be combined. | Enumeration                                                  |
 
-#### 4.1.1 Previewing Associations
+#### 4.1.2 Previewing Associations
 
 After you upload the spreadsheet, worksheets that have relations (associations) are identified. 
 
@@ -95,7 +95,7 @@ For example, in the image above you can see that an association are created from
 A column can be used to create an association **from** it once only. If an association is created to lead **from** a column, no link can be created as a link **to** it. 
 {{% /alert %}}
 
-#### 4.1.2 Managing Attribute Types {#managing-attribute-types}
+#### 4.1.3 Managing Attribute Types {#managing-attribute-types}
 
 At the bottom of each column (that will be turned into an attribute) an attribute type is automatically identified and indicated. Click the drop-down menu to change the attribute type. For more information on how Excel data types correspond to attribute types, see [Correspondence between Excel Data Types and Attribute Types](#excel-type-attribute-type).
 
@@ -106,7 +106,7 @@ If columns have empty values,the attribute type will be identified as **String**
 * Booleans – empty values are converted to **False**
 * Long and integer – empty values are converted to **0**
 
-#### 4.1.3 Generate Pages for My Data 
+#### 4.1.4 Generate Pages for My Data 
 
 **Generate pages for my data** generates an overview page with a data grid for you, and *{EntityName}__NewEdit* pages for each entity. For more information, see [Your Data after the Import](#after-import). 
 

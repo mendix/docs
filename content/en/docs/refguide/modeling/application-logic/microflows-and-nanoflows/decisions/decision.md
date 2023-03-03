@@ -68,7 +68,7 @@ In the example below, the microflow parameter is *MeetingRegistration*. Dependin
 
 Since you want to go in a different direction for each value of the enumeration, you only need to use the attribute containing the enumeration. So the expression in this example is `$MeetingRegistration/WorkingLocation`. 
     
-Afterwards, you can merge the three flows followed by a meeting URL into one flow (for more information, see  [Merge](/refguide/merge/)). Then, you only need to [commit](/refguide/committing-objects/) the registration once and have one [Close page](/refguide/committing-objects/) activity after the merge. 
+Afterwards, you can merge the three flows followed by a meeting URL into one flow (for more information, see  [Merge](/refguide/merge/)). Then you only need to [commit](/refguide/committing-objects/) the registration once and have one [Close page](/refguide/committing-objects/) activity after the merge. 
 
 ## 5 Rule Section {#rule}
 

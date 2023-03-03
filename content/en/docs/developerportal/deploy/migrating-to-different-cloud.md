@@ -86,25 +86,28 @@ Download the deployment package of your app hosted in the source node, and then 
 
 6. Select the deployment package that you downloaded from your source app.
 7. After uploading the package, click **Deploy**, and ensure that the package is deployed.
-8. [Stop the app](/developerportal/deploy/private-cloud-deploy/#environment-details) so that you can upload the backup data.
 
-#### 3.3.2 Transferring Your Backup Data
+#### 3.3.2 Configuring the New App
+
+Before starting your app in the target node, make sure it has the same configuration as the source node. You can find the node settings on the [Environment Details](/developerportal/deploy/environments-details/) page under **Model Options**, **Network**, **Runtime**, and **Maintenance**.
+
+Make sure to configure any constants, variables, and custom runtime settings. If you have any custom domain certificates, upload them to the new node.
+
+#### 3.3.3 Transferring Your Backup Data
 
 {{% alert color="info" %}}
-Ensure you have performed the last two steps in the previous section to deploy your deployment package before continuing. Making a deployment prepares the environment and ensures your data is restored to the correct locations.
+Ensure that you have deployed your deployment package before continuing. Making a deployment prepares the environment and ensures your data is restored to the correct locations.
 {{% /alert %}}
 
 Transfer the backup data from the source app to the target app by following these steps:
 
-1. Download a backup from your source app (for details, see [How to Download a Backup](/developerportal/operate/download-backup/)).
+1. [Stop the target app](/developerportal/deploy/private-cloud-deploy/#environment-details) so that you can upload the backup data.
+2. Download a backup from your source app (for details, see [How to Download a Backup](/developerportal/operate/download-backup/)).
 
     {{% alert color="info" %}}It is recommended that you download copies of all backups that you want to keep. Once you have offboarded the old environment, they will no longer be available.{{% /alert %}}
 
-2. Upload the downloaded backup to your app hosted in the target node (for details, see [How to Restore a Backup](/developerportal/operate/restore-backup/)).
-
-#### 3.3.3 Configuring the New App
-
-Before starting your app in the target node, make sure it has the same configuration as the source node. You can find the node settings on the [Environment Details](/developerportal/deploy/environments-details/) page under **Model Options**, **Network**, **Runtime**, and **Maintenance**.
+3. Upload the downloaded backup to your app hosted in the target node (for details, see [How to Restore a Backup](/developerportal/operate/restore-backup/)).
+4. [Start the target app](/developerportal/deploy/private-cloud-deploy/#environment-details).
 
 #### 3.3.4 Testing and Repeating
 

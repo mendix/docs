@@ -86,13 +86,23 @@ In this case, the -1 dimensions should be configured before using the mapping in
 
 #### 2.2.3 Persistable and Non-Persistable Entities {#persist-nonpersist-entities}
 
-After importing a model, two [non-persistable](/refguide/persistability/) entities are created using the ML model *input* and *output*.
+After importing a model, two [non-persistable](/refguide/persistability/) entities are created using the ML model *input* and *output*:
+
+{{< figure src="/attachments/refguide/modeling/integration/ml-kit/ml-kit/entities-example-1.png" alt="Input and output entities in the mapping document." >}}
+
+In the image above, the attributes are mapped as closely as possible to data types in Studio Pro. 
 
 For non-structured data, such as most of the tensors for Neural Networks, the attributes of a model with a multidimensional parameter will be represented as a string. This is because Base64 is used to to encode the tensors to and from *ML Kit*.
 
+In the image below, the inputs and outputs are multidimensional and need to be encoded:
+
+{{< figure src="/attachments/refguide/modeling/integration/ml-kit/ml-kit/entities-example-2.png" alt="Multidimensional outputs that need to be encoded." >}}
+
+See [Integrating Models with Pre-processors and Post-processors](#pre-post-processors).
+
 ##### 2.2.3.1 Converting to Persistable Entities
 
-You can convert these entities into [peristable](/refguide/persistability/) ones and use other types, such as **Binary**. This can be done to decrease inference latency of ML mappings document used in the [Call ML model](/refguide/call-ml-model/) activity. 
+You can convert non-persistable entities into [peristable](/refguide/persistability/) ones and use other types, such as **Binary**. This can be done to decrease inference latency of ML mappings document used in the [Call ML model](/refguide/call-ml-model/) activity. 
 
 To convert an entity, do the following:
 

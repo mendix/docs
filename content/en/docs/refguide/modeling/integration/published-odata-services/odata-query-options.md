@@ -55,7 +55,7 @@ This table describes how to pass values for different attribute types:
 | Type | How to Pass |
 | --- | --- |
 | String | Enclosed in single quotes (for example, `'John'`) |
-| Enumeration | The enumeration member name between single quotes, prefixed with the enum type (for example, `DefaultNamespace.PrimaryColor'Red'`). Please note that OData v4.01 sysnax without qualified enum typen name is not supported |
+| Enumeration | The enumeration member name between single quotes, prefixed with the enum type (for example, `DefaultNamespace.PrimaryColor'Red'`). Please note that OData v4.01 syntax without qualified enum type name is not supported |
 | Datetime | For OData 4: a plain value (for example, `2021-12-31`). For OData 3: Preceded with `datetime` and enclosed in single quotes (for example, `datetime'2021-12-31'` or `datetime'<epoch value here>'`) |
 | Other | Plain value (for example, 15) |
 

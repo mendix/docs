@@ -174,15 +174,13 @@ Default: *enabled*
 ### 8.2 Dark Mode Preview {#dark-mode}
 
 {{% alert color="info" %}}
-
 This functionality is currently in [Beta](/releasenotes/beta-features/).
-
 {{% /alert %}}
 
 The **Dark mode** option allows you to preview to the dark mode of the Studio Pro user interface. 
 
 {{% alert color="info" %}}
-Not all screens of Studio Pro support the dark mode yet.
+Not all screens of Studio Pro support dark mode yet.
 {{% /alert %}}
 
 Default: *disabled*
@@ -192,6 +190,16 @@ Default: *disabled*
 With this option, you can enable the new merge algorithm that is used when you update your app or merge changes in it. For more information on the algorithm, see [New Merge Algorithm with Fine-Grained Conflict Resolution](/refguide/new-merge-algorithm/).
 
 Default: *enabled*
+
+### 8.4 Properties Pane {#properties}
+
+{{% alert color="info" %}}
+This functionality is currently in [Beta](/releasenotes/beta-features/).
+{{% /alert %}}
+
+The **New Properties pane preview** option allows you to enable the overhauled UI for viewing and changing properties in Studio Pro.
+
+Default: *disabled*
 
 ## 9 Read More
 

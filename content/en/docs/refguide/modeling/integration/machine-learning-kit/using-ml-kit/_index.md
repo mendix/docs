@@ -271,11 +271,13 @@ See the [Monitoring and Troubleshooting](/howto/monitoring-troubleshooting/) gui
 
 The [Errors Pane](/refguide/errors-pane/) in Studio Pro shares informative messages about the metadata of the models that are consumed by the **Call ML Model** activity. Warning messages do not block deployment, but the application may not work seamlessly. All error messages have to be resolved in order to execute applications in local environments or deploy applications into the production environments.
 
-    Warning
+Warning
 
 * **CE9997**: ONNX IR version Incompatibility. See [ONNX versioning docs](https://github.com/onnx/onnx/blob/main/docs/Versioning.md) and version compatibility matrixes in the following section.
 * **CE9998**: ONNX Opset Incompatibility. See [ONNX versioning docs](https://github.com/onnx/onnx/blob/main/docs/Versioning.md) and version compatibility matrixes in the following section.
-    Error
+
+Error
+
 * **CE9999**: The required model input has to be provided.
 * **CE1790**: See [Set dynamic tensor shapes](#set-dynamic-shapes).
 

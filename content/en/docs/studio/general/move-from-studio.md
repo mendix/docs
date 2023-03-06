@@ -19,12 +19,12 @@ To start using Studio Pro for your app modeling, do the following:
 
 1. [Download and install Studio Pro](/refguide/install/). From Studio, you can initiate the download by clicking the **More Options** icon > **Edit in Studio Pro** in the top menu bar. This path ensures that you downloaded the same Mendix version for Studio Pro as your Studio app: 
 
-    {{< figure src="/attachments/studio/general/migrate-from-studio/edit-in-studio-pro.jpg"   width="350"  >}}
+    {{< figure src="/attachments/studio/general/move-from-studio/edit-in-studio-pro.jpg"   width="350"  >}}
 
 2. After you downloaded and installed Studio Pro, sign in to Studio Pro with your Mendix credentials. 
 
 3. Find and open your app from the list of apps:
-      {{< figure src="/attachments/studio/general/migrate-from-studio/apps-list.jpg" width="550"  >}}
+      {{< figure src="/attachments/studio/general/move-from-studio/apps-list.jpg" width="550"  >}}
 
 ## 3 Learn Your Way Around Studio Pro
 

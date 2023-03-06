@@ -160,7 +160,7 @@ The list of expressions that are used in Studio the most is represented below. F
 * [`BeginOfMonth`](/refguide/begin-of-date-function-calls/) – calculates the beginning of the month compared to the initial date
 * [`BeginOfYear`](/refguide/begin-of-date-function-calls/) – calculates the beginning of the year compared to the initial date
 
-## 3.10 End-of Date Function Calls
+### 3.10 End-of Date Function Calls
 
 * [`EndOfDay`](/refguide/end-of-date-function-calls/) – calculates the end of the day compared to the initial date
 * [`EndOfWeek`](/refguide/end-of-date-function-calls/) – calculates the end of the week compared to the initial date
@@ -202,7 +202,13 @@ The list of expressions that are used in Studio the most is represented below. F
 * [`subtractQuarters`](/refguide/subtract-date-function-calls/) – subtracts quarters from a date
 * [`subtractYears`](/refguide/subtract-date-function-calls/) – subtracts years from a date
 
-### 3.14 Parse & Format Decimal Function Calls
+### 3.14 Format Date Function Calls
+
+* [`formatDateTime[UTC]`](/refguide/parse-and-format-date-function-calls/) – converts a date value to a string
+* [`formatTime[UTC]`](/refguide/parse-and-format-date-function-calls/) – converts the time part of a date value to a string
+* [`formatDate[UTC]`](/refguide/parse-and-format-date-function-calls/) – converts the date part of a date value to a string
+
+### 3.15 Parse & Format Decimal Function Calls
 
 * [`formatDecimal`](/refguide/parse-and-format-decimal-function-calls/) – converts a decimal to a string 
 

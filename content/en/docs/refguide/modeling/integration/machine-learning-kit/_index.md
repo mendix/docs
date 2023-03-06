@@ -10,7 +10,7 @@ tags: ["studio pro", "machine learning", "ml kit", "models", "integration"]
 
 ## 1 Introduction
 
-Studio Pro [9.23](/releasenotes/studio-pro/9.23/) and above supports machine learning (ML) model integration in Mendix apps. Collectively called the *Machine Learning (ML) Kit*, this functionality allows Mendix developers to deploy a ML model built using common ML framework and language into the Mendix Runtime.
+Studio Pro [9.23](/releasenotes/studio-pro/9.23/) and above supports a unique approach to machine learning (ML) model integration in Mendix apps. Collectively called the *Machine Learning (ML) Kit*, this functionality allows Mendix developers to deploy a machine learning model built using common ML framework and language into the Mendix Runtime.
 
 ## 2 Under the Hood {#ml-kit-hood}
 

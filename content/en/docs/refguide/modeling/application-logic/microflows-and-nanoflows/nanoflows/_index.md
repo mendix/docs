@@ -149,6 +149,6 @@ The nanoflow editor offers keyboard support for navigating and manipulating the 
 | <kbd>End</kbd> | Cycles through the end events. |
 | Context-menu key or <kbd>Shift</kbd> + <kbd>F10</kbd> | Opens the context menu for the currently selected element. |
 
-## 6 Security
+## 6 Security {#security}
 
 Nanoflows are executed in the context of the current user. Any operation for which the user is unauthorized will fail. For instance, when objects are retrieved in a nanoflow, only the ones for which the current user has read access will be returned. Committing an object only succeeds when the current user has write access for all changes.

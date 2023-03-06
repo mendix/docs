@@ -2,8 +2,6 @@
 title: "Automate Catalog Registration"
 linktitle: "Automate Catalog Registration"
 url: /data-hub/data-hub-catalog/automate-registration/
-category: "Data Hub Catalog"
-weight: 70
 description: "Learn how to automate Catalog registration in a pipeline deploying to a (virtual) private Cloud."
 tags: ["data hub catalog", "security", "registration", "pipeline","register services"]
 ---

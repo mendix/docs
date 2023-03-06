@@ -1,8 +1,6 @@
 ---
 title: "Curate Registered Assets"
 url: /data-hub/data-hub-catalog/curate/
-category: "Data Hub Catalog"
-weight: 45
 description: "Describes how to curate and enhance findability of data assets in Data Hub."
 tags: ["data hub", "data hub catalog", "curate", "description", "services", "tags"]
 ---

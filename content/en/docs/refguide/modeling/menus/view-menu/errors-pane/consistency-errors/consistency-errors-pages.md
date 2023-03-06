@@ -290,7 +290,7 @@ To fix the consistency errors, finish configuring the on click event (for exampl
 
 ## 10 Icon Collection Consistency Errors
 
-Icon collections have configurable class names, icon prefixes, and icon names. These properties are used to generate the CSS code for our pages, so to prevent generating invalid CSS, you can come accross the following consistency errors:
+Icon collections have configurable class names, icon prefixes, and icon names. These properties are used to generate the CSS code for your pages. You can come accross the following consistency errors that prevent you from generating invalid CSS:
 
 | Error code | Message in the Error Pane | Cause of the Error | Way to Fix |
 | ---------- | ------------------------- | ------------------ | ---------- |

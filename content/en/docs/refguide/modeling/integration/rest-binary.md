@@ -192,4 +192,3 @@ To retrieve files using a microflow, do the following:
     * Double click the newly created action to open the properties.
     * In the **Object** field, select the **GetResponseFile** variable for the **RetrievedFile** entity.
     * In the **Refresh in client** field, select **Yes**.
-

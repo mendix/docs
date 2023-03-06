@@ -1,6 +1,6 @@
 ---
 title: "Get Started with the Catalog"
-url: /data-hub/data-hub-catalog/consume/
+url: /data-hub/data-hub-catalog/get-started/
 category: "Data Hub Catalog"
 linktitle: "Get Started"
 weight: 1

@@ -31,4 +31,8 @@ DATEDIFF ( unit , startdate_expression, enddate_expression [, timezone ] )
 
 ### 2.4 timezone
 
+{{% alert color="info" %}}
+The optional `timezone` parameter is only available since [Mendix Studio Pro 9.22.0](/releasenotes/studio-pro/9.22/). 
+{{% /alert %}}
+
 `timezone` specifies the time zone to use for the retrieval. This parameter is optional and defaults to the local time zone. It should be a string literal containing an IANA time zone. GMT offset time zones are not supported.

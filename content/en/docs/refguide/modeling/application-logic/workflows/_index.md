@@ -66,7 +66,34 @@ To add an element to a workflow, do the following:
 
 The selected element is added.
 
-### 3.5 Viewing Element Properties 
+### 3.5 Cutting/Coping/Pasting Elements in a Workflow
+
+To cut/copy/paste elements, use <kbd>Ctrl</kbd> + <kbd>X</kbd> /  <kbd>Ctrl</kbd> + <kbd>C</kbd> / <kbd>Ctrl</kbd> + <kbd>V</kbd> or  <kbd>Cmd</kbd> + <kbd>X</kbd> /  <kbd>Cmd</kbd> + <kbd>C</kbd> / <kbd>Cmd</kbd> + <kbd>V</kbd>.
+
+When using cut/copy/paste, note the following:
+
+* When cutting or copying an element, the clipboard contains the whole structure of the element. For example, when copying a **User Task** with **Outcomes** which contain activities, the **User Task** and the **Outcomes** and its activities are copied. 
+
+    Note that copying a **User Task** or a **Microflow** does not create a copy of the elements that are being referenced. Instead, the copied element will have the same references as the original. For example, when the original **User Task** has a task page configured, the copied **User Task** refers to the same task page.
+* When no element is selected in the workflow, the clipboard content is pasted at the end of the workflow.
+* When the start event is selected, the clipboard content is pasted at the start of the workflow.
+* When an activity is selected, the clipboard content is pasted under the selected activity.
+* When a flow is selected, the clipboard content is pasted at the beginning of the selected flow.
+* When the clipboard contents has an **Annotation**, it can only be pasted into the workflow or into individual activities that support annotations.
+* Pasting an activity after an **End** or **Jump** activity results in a consistency error as an **End** or **Jump** activity should be placed at the end of a flow.
+* Pasting activity can result in a consistency error when the next activity becomes unreachable by either placing an **End** or **Jump** activity in front of it or when all flows before a merge end with an **End** or **Jump** activity.
+
+#### 3.5.1 Elements that Cannot be Cut, Copied or Pasted
+
+The following elements cannot be cut, copied or pasted in the workflow editor:
+
+* Workflow (this can be only be done in the [App Explorer](/refguide/app-explorer/#2-performing-basic-functions))
+* WorkflowContext
+* Start activity
+* End activity (the final **End activity** which is at the end of the workflow)
+* Outcomes (meaning outcomes of different outgoing flows from an activity that can have several flows, for example, a Decision)
+
+### 3.6 Viewing Element Properties 
 
 To view properties of an element, do one of the following:
 
@@ -74,11 +101,11 @@ To view properties of an element, do one of the following:
 2. Right-click an element and select **Properties** from the list of options that opens.
 3. Double-click an element.
 
-### 3.6 Triggering a Workflow
+### 3.7 Triggering a Workflow
 
 You can trigger a workflow [from a page](#trigger-page) or [via a microflow](#trigger-microflow). 
 
-#### 3.6.1 Triggering a Workflow from a Page {#trigger-page}
+#### 3.7.1 Triggering a Workflow from a Page {#trigger-page}
 
 To start the workflow, you can add a widget with a specific on-click event on a page. For more information on on-click events, see [On Click Event and Events Section](/refguide/on-click-event/).
 
@@ -93,7 +120,7 @@ Do the following:
 
 You have configured the button to trigger the workflow.
 
-#### 3.6.2 Triggering a Workflow via a Microflow {#trigger-microflow}
+#### 3.7.2 Triggering a Workflow via a Microflow {#trigger-microflow}
 
 To trigger a workflow via a microflow, you can add a **Call workflow** activity to the microflow. For more information on this activity, see [Workflow Call](/refguide/workflow-call/).  
 
@@ -118,7 +145,12 @@ There are several workflow-related entities in the System module of your app, so
 
 You can find the following workflow-related entities in the System module: 
 
-* **WorkflowDefinition** – Represents your workflow in the database. It contains two attributes, where **Name** and **Title** are **Name** and **Title** properties of the workflow and **Obsolete** is a Boolean that is marked as true when you delete your workflow. In this case, the workflow still stays in the database (and you will still be able to create reports with it), but Mendix marks that it does not exist anymore. For more information on properties, see [Workflow Properties](/refguide/workflow-properties/). 
+* **WorkflowDefinition** – Represents your workflow in the database. It contains following four attributes:
+  *  **Name** and **Title** are **Name** and **Title** properties of the workflow
+  * **IsObsolete** is a Boolean that is marked as true when you delete your workflow 
+  * **IsLocked** is a Boolean that is marked as true when you lock your workflow and marked as false when you unlock your workflow
+    In the case that you delete the workflow, the workflow still stays in the database (and you will still be able to create reports with it), but Mendix marks that it does not exist anymore. For more information on properties, see [Workflow Properties](/refguide/workflow-properties/). 
+
 * **WorkflowUserTaskDefinition** – Represents your [user tasks](/refguide/user-task/) and [system activities](/refguide/call-microflow/) in the database. It contains two attributes, where **Name** is a **Name** property of the user task or a system activity, and **IsObsolete** is a Boolean that is marked as true when you delete a user task/system activity from your workflow. They still stay in the database (and you will still be able to create reports with them), but Mendix marks that they do not exist anymore. 
 * **Workflow** – A representation of a running workflow, so every time when the new workflow is started, the Runtime creates a new instance.
 * **WorkflowUserTask** – This entity is created when the Runtime executes the user task and an end-user chooses an action (for example, clicks an **Approve** button to approve a request). This entity can be used for workflow overview pages and in an application logic.

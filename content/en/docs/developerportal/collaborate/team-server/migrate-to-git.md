@@ -27,6 +27,10 @@ Only a user with the Scrum master role can migrate an app. For more information,
 
 ## 3 How Migration Works
 
+If your app is eligible for migration and your team role is Scrum master, you see a notification on possible migration at the top of the **Team Server** screen. Click **Migrate to Git** to start migration:
+
+{{< figure src="/attachments/developerportal/collaborate/team-server/migrate-to-git/migrate-to-git.jpg" >}}
+
 During migration all app history, including revisions for all branches, is copied from SVN to Git. 
 
 Access to SVN is disabled as soon as migration starts to prevent developers from making changes to SVN that will not be copied. If migration fails for any reason, it is rolled back and access to SVN is restored.

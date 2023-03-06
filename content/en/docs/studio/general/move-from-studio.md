@@ -1,10 +1,11 @@
 ---
 title: "Moving from Studio to Studio Pro"
-url: /studio/migrate-from-studio/
+url: /studio/move-from-studio/
 category: "General Info"
 weight: 10
 description: "Describes how Studio users can switch to Studio Pro and find their way around it."
 tags: ["studio", "studio pro", "fusion", "moving to studio pro"]
+#If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
 ## 1 Introduction 

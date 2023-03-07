@@ -22,6 +22,8 @@ The Mendix for Private Cloud Build API is available only for connected private c
 
 ## 2 Using the API
 
+To help you work with the Mendix for Private Cloud Build API, the following sections of this document describe how to authenticate for the API, and how to manage asynchronous API calls.
+
 ### 2.1 Authentication
 
 Authentication for the API uses a Personal Access Token (PAT).

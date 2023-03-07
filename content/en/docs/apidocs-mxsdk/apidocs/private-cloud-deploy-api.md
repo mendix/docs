@@ -1,6 +1,5 @@
 ---
 title: "Mendix for Private Cloud Deploy API"
-linktitle: "Private Cloud Deploy API"
 url: /apidocs-mxsdk/apidocs/private-cloud-deploy-api/
 type: swagger
 category: "API Documentation"
@@ -18,7 +17,7 @@ The Mendix for Private Cloud Deploy API allows you to manage application environ
 * Update an environment and deploy and manage an app in an environment through changes to the environment manifest
 
 {{% alert color="info" %}}
-This API is for connected private cloud clusters only.
+The Mendix for Private Cloud Deploy API is for connected private cloud clusters only.
 {{% /alert %}}
 
 ## 2 Using the API

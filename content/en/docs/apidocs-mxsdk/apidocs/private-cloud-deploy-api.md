@@ -35,9 +35,9 @@ Go to https://warden.mendix.com/ and follow the instructions in [Create a Person
 * `mx:deployment:read` – to perform `GET` operations
 * `mx:deployment:write` – to perform all operations (`GET`, `POST`, `PUT`, and `DELETE`)
 
-For operations related to deployment packages such as (Create, Upload, Delete, Retrieve), you need to create PAT tokens as specified in [Build API](https://docs.mendix.com/apidocs-mxsdk/apidocs/private-cloud-build-api/#212-using-the-pat) section.
+For operations related to deployment packages (such as Create, Upload, Delete, and Retrieve), you need to create PAT tokens as specified in [Build API](https://docs.mendix.com/apidocs-mxsdk/apidocs/private-cloud-build-api/#212-using-the-pat) section.
  
-Store the generated value `{GENERATED_PAT}` somewhere safe so you can use it to authorize your Mendix for Private Cloud API calls.
+Store the `{GENERATED_PAT}` value in a safe location, so you can use it to authorize your Mendix for Private Cloud API calls.
 
 #### 2.1.2 Scopes explanation
 | Operation                   | Scopes                                       |
@@ -66,23 +66,25 @@ Each request must contain an `Authorization` header with the value `MxToken {GEN
 
 To authenticate calls when using the Open API specification below, click **Authorize** and use the value `MxToken {GENERATED_PAT}`.
 
-### 2.2 Managing Asynchronous Jobs{#async-jobs}
+### 2.2 Managing Asynchronous Jobs {#async-jobs}
 
 All resource manipulation API calls are processed asynchronously. In the response, there is an `id` which you can use with the `GET /jobs/…` call to get the status of the asynchronous job.
 
-Each asynchronous call will also return a `Location` header that references the URL where the result of that job can be found. For example `https://privatecloud.mendixcloud.com/api/v3/jobs/59464c21-0558-47a9-8d3d-ccc7057dc359`. This can be used as an alternative to `GET /jobs/…`.
+Each asynchronous call will also return a `Location` header that references the URL where the result of that job can be found, for example, `https://privatecloud.mendixcloud.com/api/v3/jobs/59464c21-0558-47a9-8d3d-ccc7057dc359`. This can be used as an alternative to `GET /jobs/…`.
 
-Once `GET /jobs/…` or the equivalent HTTP call returns a response with `"status": "finished"`, you can verify the manifest for the resource by using a `GET {RESOURCE}` API call. For example, if you were updating a cluster, you can use `GET /clusters/{clusterId}` to verify the cluster manifest.
+Once `GET /jobs/…` or the equivalent HTTP call returns a response with `"status": "finished"`, you can verify the manifest for the resource by using a `GET {RESOURCE}` API call. For example, when updating a cluster, you can use `GET /clusters/{clusterId}` to verify the cluster manifest.
 
 ### 2.3 Assigning IDs
 
-The API does not generate unique UUIDs for the resources. You will need to generate your own IDs, which must be unique. If these are not unique, then the asynchronous job which creates the resource will fail.
+The API does not generate unique UUIDs for the resources. You must generate your own IDs, which must be unique. If the IDs are not unique, the asynchronous job which creates the resource will fail.
 
 ## 3 Examples
 
+The following sections of this document contain sample usage scenarios for the API.
+
 ### 3.1 Using the API to update the cluster and namespace
 
-The following steps will create a cluster, register and install a namespace, add or update a cluster member and enable development mode for the namespace.
+The following steps will create a cluster, register and install a namespace, add or update a cluster member, and enable development mode for the namespace.
 
 1. Set up your authentication PAT.
 2. Prepare a manifest for your new cluster.
@@ -90,11 +92,11 @@ The following steps will create a cluster, register and install a namespace, add
 4. Verify that the job is successful using the process described in [Managing Asynchronous Jobs](#async-jobs).
 5. Prepare a manifest for your new namespace. 
 6. Make the API call `POST /clusters/{clusterId}/namespaces` using the `{clusterId}` of the cluster you just created and your namespace manifest to create a new namespace. 
-7. Verify that the job is successful, as before.
+7. Verify that the job is successful using the process described in [Managing Asynchronous Jobs](#async-jobs).
 8. Call `GET /cli` to retrieve all the available CLI versions.
 9. Call `POST/cli/…` to download the correct version on mxpc-cli. This call will validate the provided path and query parameters and then redirect you to the CDN URL where the correct version of mxpc-cli is stored.
 10. After mxpc-cli has been downloaded use the command `./mxpc-cli installer -n new-operator -i {namespaceID} -s {secret}` to install and configure the Mendix operator in the namespace. `{secret}` is the secret you provided in the manifest when creating the namespace.
-Once the installer has run, the namespace is ready to use (namespace installed, agent connected, database and store plans configured, ingress configured, registry configured).
+    Once the installer has run, the namespace is ready to use (namespace installed, agent connected, database and store plans configured, ingress configured, registry configured).
 11. Call `GET /clusters` to retrieve all the clusters that have been created. Copy the `clusterId` from the response of this call.
 12. Make an API call `POST /clusters/{clusterId}` to add/update the cluster member. You can get the manifest for this update request from `GET /clusters/{clusterId}`.
 13. Make an API call `POST /clusters/{namespaceId}` to update the namespace development mode and set `enableDevelopmentMode` to true . You can get the manifest for this update request from `GET /clusters/{namespaceId}`.
@@ -110,7 +112,7 @@ The following steps will restart an app by setting the number of instances to ze
 4. Call `PUT /apps/{appId}/environments/{environmentId}` using the updated manifest.
 5. Verify that the job is successful using the process described in [Managing Asynchronous Jobs](#async-jobs).
 
-    At this point your app is stopped and you will not be able to access it using the `appURL`.
+    At this point, your app is stopped and you will not be able to access it using the `appURL`.
 6. Change the `container.instances` in the manifest to the number of instances you want to run.
 7. Call `PUT /apps/{appId}/environments/{environmentId}` using the updated manifest.
 8. Verify that the job is successful, as before.
@@ -127,7 +129,7 @@ The following steps will create a cluster, create a namespace, and create an env
 4. Verify that the job is successful using the process described in [Managing Asynchronous Jobs](#async-jobs).
 5. Prepare a manifest for your new namespace. 
 6. Make the API call `POST /clusters/{clusterId}/namespaces` using the `{clusterId}` of the cluster you just created and your namespace manifest to create a new namespace. 
-7. Verify that the job is successful, as before.
+7. Verify that the job is successful using the process described in [Managing Asynchronous Jobs](#async-jobs).
 8. Call `GET /cli` to retrieve all the available CLI versions.
 9. Call `POST/cli/…` to download the correct version on mxpc-cli. This call will validate the provided path and query parameters and then redirect you to the CDN URL where the correct version of mxpc-cli is stored.
 10. After mxpc-cli has been downloaded use the command `./mxpc-cli installer -n new-operator -i {namespaceID} -s {secret}` to install and configure the Mendix operator in the namespace. `{secret}` is the secret you provided in the manifest when creating the namespace.
@@ -136,10 +138,11 @@ The following steps will create a cluster, create a namespace, and create an env
 11. Create a `DeploymentPackage` in the Private Cloud Portal.
 
     You can create a deployment package by using the Build Api [documentation](https://docs.mendix.com/apidocs-mxsdk/apidocs/private-cloud-build-api/) documentation.) Once you create a deployment package, you can retrieve the `packageId` using the `GET /apps/{appId}/packages` response.
-12. Prepare a manifest for your new environment. Either use the model in the OpenAPI spec file or get the manifest of an existing environment (by calling `GET /apps/{appId}/environments/{environmentId}`, for example) and change where required. Remember to use the `{clusterID}` and `{namespace}` values for the `provider` using the cluster and namespace you have just created, and use the ID of the deployment package you have just created as the `packageId`.
+12. Prepare a manifest for your new environment. 
+    Either use the model in the OpenAPI spec file or get the manifest of an existing environment (by calling `GET /apps/{appId}/environments/{environmentId}`, for example) and change where required. Remember to use the `{clusterID}` and `{namespace}` values for the `provider` using the cluster and namespace you have just created, and use the ID of the deployment package you have just created as the `packageId`.
 13. Make the API call `POST /apps/{appId}/environments` using the environment manifest to create a new environment. 
-14. Verify that the job is successful, as before.
-15. Now you can access the `appURL` which is returned from `GET /apps/{appId}/environments/{environmentId}` of the environment and, assuming everything was configure properly, you should see the application.
+14. Verify that the job is successful using the process described in [Managing Asynchronous Jobs](#async-jobs).
+15. Now you can access the application at the `appURL` which is returned from `GET /apps/{appId}/environments/{environmentId}` of the environment.
 
 ## 4 API Reference
 

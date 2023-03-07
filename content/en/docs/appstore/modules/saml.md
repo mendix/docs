@@ -151,18 +151,26 @@ The base URL used for the links in your SP metadata is determined by the **Appli
 You can choose what you want to enter for the **Entity Id**, **Organization**, and **Contact person**. The SAML module imposes no restrictions and doesn’t apply any validations. The SAML core specification recommends that you “use a URL containing its own domain name to identify itself“ as the value of the EntityID of your app.
 
 * **Log available days** – If **Log SAML Requests** is checked in the IdP configuration, all login attempts are tracked in the **SAMLRequest** and **SSOLog** entities. This setting configures how long those records are kept before removing them. A scheduled event runs daily to remove all the files outside that date range. This value is mandatory. If it is set to 0, all records will be removed daily.
-* **Use Encryption** – This allows the encryption of any messages being sent from the SP to the IdP. This is in addition to the encryption provided by using a secure HTTPS connection. If encryption is chosen, all the messages going out to the IdP will be encrypted, and a self-signed certificate will be generated and stored in the key store. Changing the encryption requires all IdPs to re-import the new metadata file.
+* **Use Encryption** – This setting controls the encryption and signing of messages being exchanged between your app (as an SP) and the IdP. This is in addition to the encryption provided by using a secure HTTPS connection. For security and privacy reasons it is recommended that you enable this. Limitations in your IdP may be a reason not to enable it, but this should typically not be the case.
 
     If you choose to use encryption, you will need to select the appropriate values:
 
     * **Encryption method** – `SHA1 - RSA` or `SHA256 - RSA`
     * **Encryption key length** – 1024 or 2048 bits
 
+    Enabling encryption has the following effects on messages being exchanged:
+
+    * all the messages between your app and the IdP will be encrypted, this requires the IdP’s metadata to contain a KeyDescriptor having ‘use’ value ‘encryption’ or empty — see [Identity Provider Metadata](#idp-metadata) for more information
+    * all the messages between your app and the IdP will be signed. The SP metadata exported from your app will have `AuthnRequestSigned` with value `true`. This corresponds to IdPs whose metadata have `WantAuthnRequestSigned` with value `true`
+    * in SAML SSO module versions 1.17.3 and above, 2.3.0 and above, and 3.3.0 and above, your IdP is expected to sign all SAML assertions sent to your app. The SP metadata will have `WantAssertionsSigned` with value `true`. Any assertions that are not properly signed will be rejected. SAML’s signature inheritance is supported as well; if the SAML response message is signed by the IdP, it is not necessary for the assertion to be signed as well
+
     If encryption is enabled, all the certificates required for encryption are stored in the key store. When you choose **Use encryption** a key store is automatically created using the URL of the application, or the custom EntityID, and shown as the **Key store alias**. See [Managing the Key Store](#keystore), below, for more key store options.
 
 {{% alert color="info" %}}
 The SP metadata that you supply to the IdP is only available after you have configured the [IdP-specific settings](#idp-specific-settings) following the instructions below.
 {{% /alert %}}
+
+{{% todo %}}Pick up more changes from Paper document{{% /todo %}}
 
 #### 3.1.1 Managing the Key Store{#keystore}
 
@@ -209,7 +217,7 @@ The following settings apply to this IdP configuration:
 * **Alias** – The alias for your IDP can be used in the URL of the application to indicate the IdP configuration that should be used during login. There are no validations on this field (except that it is required), but you should make sure that this alias is compatible with usage in an URL (meaning, no `/`, `&`, `?`, or special character that could get lost in the communication).
 * **Log SAML Requests** – Determines whether all requests and login attempts should be logged and stored in an entity.
 
-#### 3.2.3 Identity Provider Metadata
+#### 3.2.3 Identity Provider Metadata{#idp-metadata}
 
 The following settings are for the IdP metadata:
 

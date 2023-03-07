@@ -119,7 +119,7 @@ The following steps will restart an app by setting the number of instances to ze
 
     Your app is available once more.
 
-### 3.3 Using the API to Deploy an App
+### 3.3 Using the API to Deploy an App {#api-deploy}
 
 The following steps will create a cluster, create a namespace, and create an environment with a running app.
 

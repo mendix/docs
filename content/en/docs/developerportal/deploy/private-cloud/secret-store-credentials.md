@@ -476,12 +476,15 @@ After completing the prerequisites, follow these steps to switch from password-b
 
 1. Remove or comment out `database-password` from the `SecretProviderClass` and the associated AWS Secret.
 2. Enable [IAM authentication](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/UsingWithRDS.IAMDBAuth.DBAccounts.html#UsingWithRDS.IAMDBAuth.DBAccounts.PostgreSQL) for the `database-username` role by using the `psql` commandline to run the following commands (replacing `<database-username>` with the username specified in `database-username`):
+
    ```sql {linenos=false}
    GRANT rds_iam TO <database-username>;
    ALTER ROLE <database-username> WITH PASSWORD NULL;
    ```
+
    {{% alert color="info" %}}This step is not necessary if the RDS instance was created with only IAM authentication enabled, and if `database-username` is the default (master) user.{{% /alert %}}
 3. Attach the following inline IAM policy to the environment's IAM role (created when [Configuring a Secret Store with AWS Secrets Manager](#configure-using-aws-secrets-manager)):
+
    ```json
    {
      "Version": "2012-10-17",
@@ -498,6 +501,7 @@ After completing the prerequisites, follow these steps to switch from password-b
      ]
    }
    ```
+
    replacing `<db-region>` with the RDS database region, `<account-id>` with the AWS account ID, `<db-resource-id>` with the database Resource ID and `<database-username>` with the username specified in `database-username`.
    
    For more information on how to get the Resource ID and create an RDS IAM policy, see the [AWS documentation](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/UsingWithRDS.IAMDBAuth.IAMPolicy.html).

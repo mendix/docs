@@ -13,7 +13,6 @@ Studio Pro [9.23](/releasenotes/studio-pro/9.23/) and above supports machine lea
 
 For a list of supported models, see the [Supported Frameworks and Libraries](/refguide/machine-learning-kit/using-ml-kit/#supported-frameworks) section in *Using ML Kit*.
 
-
 ## 2 Adding a ML Mapping to Your App
 
 To add a ML model to your app, do the following:

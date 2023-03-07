@@ -33,7 +33,6 @@ For information on the current status of deployment to Mendix Cloud and any plan
 
 * We now return HTTP headers for the SHA1 Fingerprint and Serial number of an authenticated Client Certificate. See [Mendix Cloud HTTP Request Headers](/developerportal/deploy/mendix-cloud-request-headers/) for more information.
 
-
 ### February 16th, 2023
 
 #### Improvements

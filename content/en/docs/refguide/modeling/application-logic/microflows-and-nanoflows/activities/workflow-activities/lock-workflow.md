@@ -84,7 +84,6 @@ In the table below you can see all workflow state transitions upon lock and unlo
 | Aborted | Aborted | Aborted |
 | Completed | Completed | Completed |
 
-
 ## 4 Common Section {#common}
 
 {{% snippet file="/static/_includes/refguide/microflow-common-section-link.md" %}}

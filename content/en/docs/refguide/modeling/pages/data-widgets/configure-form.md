@@ -94,45 +94,45 @@ Follow the steps below:
 
 1. Open **Toolbox** > **Data Containers**.
 
-2. Drag **Data grid** *inside* the data view.
+1. Drag **Data grid** *inside* the data view.
 
-3. Go to the data grid properties and click **Entity (path)**.  
+1. Go to the data grid properties and click **Entity (path)**.  
 
-4. To show only checklist items associated with the current inspection report, choose the **Checklist** entity over association (*Checklist_InspectionReport/Checklist*) in the **Select Entity** dialog box and click **Select**:
+1. To show only checklist items associated with the current inspection report, choose the **Checklist** entity over association (*Checklist_InspectionReport/Checklist*) in the **Select Entity** dialog box and click **Select**:
 
     {{< figure src="/attachments/refguide/modeling/pages/data-widgets/configure-form/data-grid-over-association.jpg" width="400" >}}
 
-5. Say **Yes** to the question *Do you want to automatically fill in the contents of the data grid?*.
+1. Say **Yes** to the question *Do you want to automatically fill in the contents of the data grid?*.
 
-5. As the main purpose of the page is to display information, you do not need to search the data grid. Open data grid properties and set the **Show search bar property** to **Never**.
+1. As the main purpose of the page is to display information, you do not need to search the data grid. Open data grid properties and set the **Show search bar property** to **Never**.
 
-7. To be able to add new checklist items to the report, select the **New** button in the data grid and open its properties.
+1. To be able to add new checklist items to the report, select the **New** button in the data grid and open its properties.
 
-8. Set the **On click event** property to **Create object**.
+1. Set the **On click event** property to **Create object**.
 
-8. Set **Entity (path)** to **Checklist**.
+1. Set **Entity (path)** to **Checklist**.
 
-8. Click the **On click page** property.
+1. Click the **On click page** property.
 
-8. In the **Select web page** dialog box, click **New**.
+1. In the **Select web page** dialog box, click **New**.
 
-13. In the **Create Page** dialog box, set the **page name** to **Manage_Checklist** and the **Layout** to **PopupLayout**. 
+1. In the **Create Page** dialog box, set the **page name** to **Manage_Checklist** and the **Layout** to **PopupLayout**. 
 
-12. Page template (*Forms*) is selected automatically for you. Choose **Forms Vertical**: 
+1. Page template (*Forms*) is selected automatically for you. Choose **Forms Vertical**: 
 
     {{< figure src="/attachments/refguide/modeling/pages/data-widgets/configure-form/manage-checklist.jpg"   width="550"  >}}
 
-15. Click **OK**.
+1. Click **OK**.
 
-15. A pop-up page where end-users can add new checklist items is created. 
+1. A pop-up page where end-users can add new checklist items is created. 
 
-16. Now you can configure editing items. Click the **Edit** button in the data grid and open its properties.
+1. Now you can configure editing items. Click the **Edit** button in the data grid and open its properties.
 
-17.  Set the **On click event** property to **Show page**.
+1. Set the **On click event** property to **Show page**.
 
-18. Click the **On click page** property.
+1. Click the **On click page** property.
 
-19. In the **Select web page** dialog box, select **Manage_Checklist**.
+1. In the **Select web page** dialog box, select **Manage_Checklist**.
 
 Now checklist items are displayed in the table. You can add new checklist by clicking the **New** button in the table, and edit the selected checklist by clicking the **Edit** button.
 
@@ -145,4 +145,3 @@ Congratulations! You have the page that displays details of the selected report 
 There are many ways you can use this page in your app. For example, you can use it as a page for a user task in a [workflow](/refguide/workflows/). 
 
 You can now preview your app and test your page.
-

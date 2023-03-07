@@ -30,7 +30,7 @@ We recommend reading the following for some more background:
 * [Publishing](/howto/integration/publish-rest-service/) and [consuming](/howto/integration/consume-a-rest-service/) REST services
 * [Working with images and files](/howto/data-models/working-with-images-and-files/) in Studio Pro
 
-## 2 Publish Files with REST {#create-service}
+## 2 Send Files with REST {#create-service}
 
 Imagine that your app is functioning as a content management system (CMS), and you want to be able to send and receive images and files. You can publish the generalized entities as a REST service, which exposes the binary data of files stored in the entity.
 

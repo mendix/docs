@@ -52,4 +52,4 @@ See the [Hugo Server](https://gohugo.io/commands/hugo_server/) documentation for
 
 If you are using a Mac, you might get an error `too many open files` or `fatal error: pipe failed`. By default, your Mac is probably set to restrict the number of open files. You will need to override this, see [Docsy known issues](https://www.docsy.dev/docs/getting-started/#known-issues) for more information.
 
-If your system has a low memory limit, add the `--renderToDisk` parameter to the Hugo command, for example `hugo server --environment development`. With this option, Hugo will only load pages on demand; without the `--renderToDisk` option, Hugo will load all documentation into memory for faster access.
+If your system has a low memory limit, add the `--renderToDisk` parameter to the Hugo command, for example `hugo server --environment development --renderToDisk`. With this option, Hugo will only load pages on demand; without the `--renderToDisk` option, Hugo will load all documentation into memory for faster access.

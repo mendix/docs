@@ -9,16 +9,16 @@ weight: 38
 
 ## 1 Introduction
 
-The Build API allows you to manage deployment packages which can later be used in the environments deployed in your private cloud. You can use the API to do the following:
+The Private Cloud Build API allows you to manage deployment packages which can later be used in the environments deployed in your private cloud. You can use the API to do the following:
 
-- Retrieve all deployment packages of an application
-- Retrieve a single deployment package based on the package id
-- Upload deployment package in an application
-- Create deployment packages based on the branch and revision
-- Delete a deployment package
+* Retrieve all deployment packages of an application
+* Retrieve a single deployment package based on the package ID
+* Upload deployment package in an application
+* Create deployment packages based on the branch and revision
+* Delete a deployment package
 
 {{% alert color="info" %}}
-This API is for connected private cloud clusters only.
+The Private Cloud Build API is available only for connected private cloud clusters.
 {{% /alert %}}
 
 ## 2 Using the API

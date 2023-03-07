@@ -10,9 +10,9 @@ tags: ["studio pro", "domain model", "excel import", "spreadsheet", "app from sp
 
 ## 1 Introduction 
 
-With the **App from a spreadsheet** you can import a Microsoft Excel spreadsheet and build an app using your data. The data of the spreadsheet will be analyzed and converted into entities, attributes, and associations. Also, pages and navigation items based on your data can be created. 
+With the **App from a spreadsheet** you can import a Microsoft Excel spreadsheet and build an app using your data. The data of the spreadsheet will be analyzed and converted into a domain model with entities, attributes, and associations. Also, pages and navigation items based on your data can be created. 
 
-You can create the **App from a spreadsheet** by using an app template either in Studio Pro or via the Developer Portal.
+You can create the **App from a spreadsheet** by using an app template either in Studio Pro.
 
 ## 2 Preparing Your Data for Import
 
@@ -102,7 +102,7 @@ At the bottom of each column (that will be turned into an attribute) an attribut
 
 {{< figure src="/attachments/refguide/modeling/app-from-spreadsheet/attribute-type-drop-down.jpg" >}}
 
-If columns have empty values,the attribute type will be identified as **String**. However, if you change it to another attribute type, Studio Pro automatically chooses and fills in a default value for the following attribute types:
+If columns have empty values, the attribute type will be identified as **String**. However, if you change it to another attribute type, Studio Pro automatically chooses and fills in a default value for the following attribute types:
 
 * Booleans – empty values are converted to **False**
 * Long and integer – empty values are converted to **0**
@@ -127,6 +127,8 @@ If **Generate pages for my data** has been selected in the preview page, pages a
 
 * A **Manage_Data** page is created – an overview page with tabs for each Excel table and with data grids per each entity
 
+    {{%/todo /%}}[A screenshot of the App explorer, showing the folder+ documents generated]{{%/ /todo /%}}
+
     {{< figure src="/attachments/refguide/modeling/app-from-spreadsheet/manage-data-page.jpg" >}}
 
 * An **{EntityName}__NewEdit** page is created – a page for each of your entities for creating and saving a new object of this entity
@@ -137,7 +139,7 @@ If **Generate pages for my data** has been selected in the preview page, pages a
 
 * The **Manage Data** menu item is created in the navigation with a link to the **Manage_Data** page
 
-* Your data is transferred to the preview and publish environment, that means when you preview or publish your app, you can view your data there
+* Your data is stored in the data snapshot file which is transferred to local test environment when running the app locally and to the published app when first publishing the app (for more information on data snapshot and databases, see [How to Share the Development Database](/howto/data-models/sharing-the-development-database/)) 
 
-You can preview your app and see that your data was imported there and test the app.
+You can now preview your app by running it locally (the play icon at the top) and test the app.
 

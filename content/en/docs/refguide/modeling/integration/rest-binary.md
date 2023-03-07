@@ -143,7 +143,7 @@ To do so, do the following:
 
 1. Complete the two steps in the [Retrieve Files with REST](#retrieve-files) section.
 2. Download the [Image](/appstore/widgets/image/) widget from the Mendix Marketplace and import it into your app.
-3. In the [Toolbox](/refguide/view-menu/#toolbox/), click **Widgets** and search for "Image".
+3. In the [Toolbox](/refguide/view-menu/#toolbox), click **Widgets** and search for "Image".
 4. Drag the **Image** widget onto a page.
 5. Double-click the widget you dragged onto your page to open the **Properties**.
 6. In the **Data source** field, select the **Image URL** for **Image type**.
@@ -171,7 +171,7 @@ To do so, do the following:
 
 You can call a REST service in a microflow, then store the binary response in an entity.
 
-Retriving files in a microflow uses the [Call REST service](/refguide/integration/call-rest-action/) action. For step-by-step instructions for calling a REST service in a microflow, see [Consume a REST Service](/howto/integration/consume-a-rest-service/).
+Retriving files in a microflow uses the [Call REST service](/refguide/call-rest-action/) action. For step-by-step instructions for calling a REST service in a microflow, see [Consume a REST Service](/howto/integration/consume-a-rest-service/).
 
 To retrieve files using a microflow, do the following:
 

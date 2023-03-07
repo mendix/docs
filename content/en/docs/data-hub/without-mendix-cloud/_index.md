@@ -9,7 +9,7 @@ tags: ["entity", "external entities", "private cloud", "on prem", "local", "stud
 ---
 ## 1 Introduction
 
-This guide explains how to use Data Hub when not deploying to the Mendix Cloud. This includes users who are deploying locally, or users who deploy to a Private Cloud, the Tencent Cloud, or an On-Premises solution.
+This guide explains how to use [external entities](/refguide/external-entities/) and the [Catalog](/datahub/data-hub-catalog/) when not deploying to the Mendix Cloud. This includes users who are deploying locally, or users who deploy to a Private Cloud, the Tencent Cloud, or an On-Premises solution.
 
 ## 1.1 Background
 

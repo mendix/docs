@@ -10,9 +10,7 @@ tags: ["data hub", "data hub catalog", "consume", "external entities", "asset", 
 
 ## 1 Introduction
 
-Data Hub Catalog is an open, standards-based metadata repository that enables Mendix developers and business admins to discover and explore data sources throughout their connected ecosystem. 
-
-This respository is accessible to [authorized users](/data-hub/data-hub-catalog/manage-data-sources/user-roles/) in your company on the web app, hub.mendix.com, or through [Data Hub APIs](/apidocs-mxsdk/apidocs/data-hub-apis/).
+Data Hub Catalog is an open, standards-based metadata repository that enables Mendix developers and business admins to discover and explore data sources throughout their connected ecosystem. This respository is accessible to [authorized users](/data-hub/data-hub-catalog/manage-data-sources/user-roles/) in your company on the web app, hub.mendix.com, or through [Data Hub APIs](/apidocs-mxsdk/apidocs/data-hub-apis/).
 
 ## 2 Your Company's Catalog
 

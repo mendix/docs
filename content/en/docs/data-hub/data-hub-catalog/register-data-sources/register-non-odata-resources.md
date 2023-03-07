@@ -3,6 +3,7 @@ title: "Register Non-OData Resources in the Data Hub Catalog"
 linktitle: "Register Non-OData Resources"
 url: /data-hub/data-hub-catalog/register-non-odata-resources/
 description: "Describes how to convert non-OData resources into OData and then register them in the Data Hub Catalog."
+weight: 30
 tags: ["Data Hub", "Data Hub Catalog", "registration", "OData", "register data"]
 ---
 
@@ -40,7 +41,4 @@ You can find the following examples of how to write an OData service in .NET:
 * [Work With OData in Web API: Create Your First OData Service](https://www.c-sharpcorner.com/UploadFile/dacca2/work-with-odata-in-web-api-create-your-first-odata-service/)
 * [Write a Simple OData V4 Service](https://docs.microsoft.com/en-us/odata/webapi/getting-started)
 
-<<<<<<< HEAD
-=======
 For further details applicable to Studio Pro [9.17](/releasenotes/studio-pro/9.17/) and above, see [Wrap Services, APIs, or Databases with OData](/refguide/wrap-services-odata/).
->>>>>>> development

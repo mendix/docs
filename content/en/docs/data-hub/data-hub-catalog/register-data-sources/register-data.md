@@ -3,6 +3,7 @@ title: "Register OData Resources in the Data Hub Catalog"
 linktitle: "Register OData Resources"
 url: /data-hub/data-hub-catalog/register-data/
 description: "Describes how to register OData resources in the Data Hub Catalog: through the Mendix Cloud, using the Registration API, or in the UI form."
+weight: 10
 tags: ["data hub catalog", "data hub", "external entities", "register", "published OData service" ,"how to", "registration"]
 aliases:
     - /data-hub/data-hub-catalog/register.html

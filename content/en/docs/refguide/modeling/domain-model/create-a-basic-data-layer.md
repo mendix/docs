@@ -59,29 +59,32 @@ To create entities and their attributes, follow these steps:
 
 ## 4 Adding Enumerations {#add-enumeration}
 
-An [enumeration](/refguide/enumerations/) is a predefined list of values that can be used as an attribute type. This allows users of the app to select any of the predefined values for this attribute. A good example of an enumeration is order status. To extend the **Order** entity with an enumeration value-based attribute, we first need to add an enumeration. Follow these steps:
+An [enumeration](/refguide/enumerations/) is a predefined list of values that can be used as an attribute type. This allows end-users to select any of the predefined values for this attribute. A good example of an enumeration is order status.
+
+To extend the **Order** entity with an enumeration value-based attribute, follow these steps:
 
 1. Right-click the module and select **Add other** > **Enumeration**.
 2. Enter *OrderStatus* for the **Name** and click **OK**.
-3. Click **New** to add an enumeration value:
-
-    {{< figure src="/attachments/refguide/modeling/domain-model/create-a-basic-data-layer/18582181.png" >}}
-
+3. Click **New** to add an enumeration value.
 4. Enter *Open* for the **Caption** and click **OK**.
+
+    {{< figure src="/attachments/refguide/modeling/domain-model/create-a-basic-data-layer/add-enum-value.png" width="350px" >}}
+
 5. Repeat the steps above for the **Processing** and **Complete** values. You should then have the following configured values:
 
-    {{< figure src="/attachments/refguide/modeling/domain-model/create-a-basic-data-layer/18582179.png" >}}
+    {{< figure src="/attachments/refguide/modeling/domain-model/create-a-basic-data-layer/enum-order-status.png" width="400px" >}}
 
-    Click **OK** to save the enumeration. Now we will create an enumeration value-based attribute in the **Order** entity.
+    Click **OK** to save the enumeration. Now, you need to add an enumeration value-based attribute to the **Order** entity and select enumeration **OrderStatus** there. 
 
-6. Right-click the **Order** entity and select **Add** > **Attribute**.
-7. Enter *OrderStatus* for the **Name** and select **Enumeration** for the **Type**.
-8. Select the **OrderStatus** enumeration and click **Select**.
-9. Select **Open** for **Default value**:
+6. Double-click the **Order** entity and go to **Attributes**.
+7. Click **New** to add an attribute to the **Order** entity.
+8. Enter *OrderStatus* for the **Name** and select **Enumeration** for the **Type**.
+9. Select the **OrderStatus** enumeration and click **Select**.
+10. Select **Open** for **Default value**:
 
-    {{< figure src="/attachments/refguide/modeling/domain-model/create-a-basic-data-layer/18582197.png" >}}
+    {{< figure src="/attachments/refguide/modeling/domain-model/create-a-basic-data-layer/add-order-status-attribute.png" width="450px" >}}
 
-10. Click **OK** to save the new attribute. The **Order** entity should look like this:
+11. Click **OK** to save the new attribute. Now, the **Order** entity should look like this:
 
     {{< figure src="/attachments/refguide/modeling/domain-model/create-a-basic-data-layer/18582176.png" >}}
 

@@ -28,7 +28,7 @@ To publish or retrieve files with REST, do the following:
 We recommend reading the following for some more background:
 
 * [Publishing](/howto/integration/publish-rest-service/) and [consuming](/howto/integration/consume-a-rest-service/) REST services
-* [Working with images and files](/howto/data-models/working-with-images-and-files/) in Studio Pro
+* Working with [Images, Videos and Files](/refguide/image-and-file-widgets/) in Studio Pro
 
 ## 2 Send Files with REST {#create-service}
 
@@ -156,7 +156,7 @@ Retrieve PDFs with the URL of the published REST service by using the [HTML/Java
 To do so, do the following:
 
 1. Complete the two steps in [Retrieve Files with REST](#retrieve-files).
-2. Download the [HTML/Javascript Snippet](/appstore/widgets/html-javascript-snippet) widget from the Mendix Marketplace and import it into your app.
+2. Download the [HTML/Javascript Snippet](/appstore/widgets/html-javascript-snippet/) widget from the Mendix Marketplace and import it into your app.
 3. In the [Toolbox](/refguide/toolbox/), click **Widgets** and search for "HTMLSnippet".
 4. Drag the **HTMLSnippet** widget onto a page.
 5. Double-click the widget you dragged onto your page to open the **Properties**.
@@ -171,7 +171,7 @@ To do so, do the following:
 
 You can call a REST service in a microflow, then store the binary response in an entity.
 
-Retriving files in a microflow uses the [Call REST service](/refguide/integration/call-rest-service/) action. For step-by-step instructions for calling a REST service in a microflow, see [Consume a REST Service](/howto/integration/consume-a-rest-service/).
+Retriving files in a microflow uses the [Call REST service](/refguide/integration/call-rest-action/) action. For step-by-step instructions for calling a REST service in a microflow, see [Consume a REST Service](/howto/integration/consume-a-rest-service/).
 
 To retrieve files using a microflow, do the following:
 

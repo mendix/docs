@@ -22,18 +22,40 @@ Depending on your [user role](/data-hub/data-hub-catalog/manage-data-sources/use
 * [Consume data sources](/data-hub/data-hub-catalog/consume-data-sources/) in your company's Catalog
 * [Manage data sources](/data-hub/data-hub-catalog/manage-data-sources/) as a data source owner or as an administrator
 
-## 3 Deploying
+Using your company's Catalog depends on how you deploy your apps.
 
-Using your company's Catalog depends how you deploy your apps. 
+### 2.1 Catalog and the Mendix Cloud
 
-### 3.1 Catalog and the Mendix Cloud
+If you deploy to the [Mendix Cloud](/developerportal/deploy/mendix-cloud-deploy/), 
 
-If you deploy to the [Mendix Cloud](/developerportal/deploy/mendix-cloud-deploy/)
+#### 2.1.1 Registering Data Sources
 
-### 3.2 Catalog and Private Cloud
+[Published OData services](/refguide/integration/published-odata-services/) are registered in the Catalog as soon as you deploy your app. These appear automatically in your Catalog.
 
-If you deploy to a [Private Cloud](/developerportal/deploy/private-cloud/)
+#### 2.1.2 Consuming Data Sources
 
-### 3.3 Catalog On-Premises
+#### 2.1.3 Managing Data Sources
+
+### 2.2 Catalog and Private Cloud
+
+If you deploy to a [Private Cloud](/developerportal/deploy/private-cloud/), 
+
+#### 2.1.1 Registering Data Sources
+
+See [Automate Catalog Registration](/data-hub/data-hub-catalog/automate-registration/) for step-by-step instructions on setting up automatic Catalog registration in a pipeline on a private cloud.
+
+#### 2.1.2 Consuming Data Sources
+
+#### 2.1.3 Managing Data Sources
+
+
+
+### 2.3 Catalog On-Premises
 
 If you deploy [On-Premises](/developerportal/deploy/on-premises-design/)
+
+#### 2.1.1 Registering Data Sources
+
+#### 2.1.2 Consuming Data Sources
+
+#### 2.1.3 Managing Data Sources

@@ -35,7 +35,7 @@ To set up a webhook, do the following:
 1. Enter the following information:
     * **Webhook Name** – a name, so you can identify the webhook
     * **URL** – the endpoint which will receive the payload when one of the event types selected in **Available Events** occurs
-    * **Validation Secret** – a secret which will be received by the endpoint to confirm that it has been triggered by this webhook
+    * **Validation Secret** – a secret which will be received by the endpoint to confirm that it has been triggered by this webhook — see [Verifying Your Webhook](#verify-webhook), below for more information
     * **Available Events** – the event or events which will trigger the webhook to send information to the endpoint. You can see more information about these events in the sections below
     * **Custom Headers** – a **Key**/**Value** pair which is sent as an HTTP header to the endpoint
 
@@ -60,7 +60,7 @@ Every POST payload contains the following delivery information as part of the he
 
 * **connection** – `close`, indicating that there is no further information for this HTTP request
 * **content-length** – the size of the HTTP request in bytes, for example `475`
-* **webhook-signature** – the signature of the webhook in the format `<version>,<signature>`, for example `v1,Ay2spGBdE7i6OzNkFgTDnGfqgZT0WonCFoBMt8V3YiQ=`
+* **webhook-signature** – the signature of the webhook in the format `<version>,<signature>`, for example `v1,Ay2spGBdE7i6OzNkFgTDnGfqgZT0WonCFoBMt8V3YiQ=` — see [Verifying Your Webhook](#verify-webhook), below for more information
 * **webhook-id** – a unique identifier for this webhook trigger, for example `msg_2M605iBQRge9hTgpYg7fKXQubaw`
 * **user-agent** – the user agent used to process this trigger. Mendix uses [Svix](https://www.svix.com/), which returns something like `Svix-Webhooks/0.75.0`
 * **webhook-timestamp** – the time the webhook was triggered, for example `1677072542`
@@ -74,6 +74,14 @@ In addition, you can add your own custom headers. See [Setting Up a Webhook](#se
 {{% alert color="info" %}}
 The order of these headers is not guaranteed.
 {{% /alert %}}
+
+### 3.1 Verifying Your Webhook{#verify-webhook}
+
+You will want to verify that your endpoint has received a payload from Mendix and that the request hasn't been generated or intercepted by a bad actor. 
+
+This verification is enabled through the `webhook-signature` which is sent in the webhook header. This is created automatically by the Svix user agent. It is generated using the **Validation Secret** you provided when you set up the webhook in combination with the payload of the trigger.
+
+A description of how this verification works can be found in [How to Verify Webhooks with the Svix Libraries](https://docs.svix.com/receiving/verifying-payloads/how) on the Svix website. You can also find information on why you need to verify webhooks and how to verify webhooks manually if you don't want to use the official libraries.
 
 ## 4 Package Upload to Developer Portal
 

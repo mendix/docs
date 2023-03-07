@@ -22,6 +22,8 @@ The Mendix for Private Cloud Deploy API is for connected private cloud clusters 
 
 ## 2 Using the API
 
+To help you work with the Mendix for Private Cloud Build API, the following sections of this document describe how to authenticate for the API, how to manage asynchronous API calls, and what to keep in mind when assigning unique IDs for the resources.
+
 ### 2.1 Authentication
 
 Authentication for the API uses a Personal Access Token (PAT).

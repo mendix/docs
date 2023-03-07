@@ -1,5 +1,5 @@
 ---
-title: "Mendix for Private Build API"
+title: "Mendix for Private Cloud Build API"
 linktitle: "Private Cloud Build API"
 url: /apidocs-mxsdk/apidocs/private-cloud-build-api/
 type: swagger

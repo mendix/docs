@@ -252,6 +252,10 @@ For details on these tasks, see [Data Hub Administration](/developerportal/contr
 
 ## 13 Marketplace Content {#marketplace-content}
 
+{{% alert color="info" %}}
+This page will be removed in June 2023.
+{{% /alert %}}
+
 The **Marketplace Content** page offers a dashboard where you can manage the visibility of public and [private Marketplace components](/appstore/general/app-store-overview/#company-content) in Studio for your company's users. Currently, you can only configure the visibility of widgets. 
 
 The list shows all the Marketplace components for which you have the curation options. This list includes all the public Marketplace components that can be used in Studio and all the private Marketplace components of your company. You can configure whether any of these components is visible in Studio to your company's users (whether components appear in the **Toolbox** in Studio).

@@ -40,6 +40,6 @@ Once data sources are registered, the metadata is stored in the Catalog so that 
 
 Our [Share Data Between Apps](/data-hub/share-data/) guide helps you build an app and use the Catalog to share data. Follow the steps to get a better idea how it works! You can also follow [Write Data to Another App](/data-hub/write-data/) to build on this experience.
 
-## 5 Catalog Processes and Properties
+## 5 Processes and Properties
 
-Check out the [Data Hub Catalog](/data-hub/data-hub-catalog/) for detailed information on processes and properties of the Catalog.
+[Data Hub Catalog](/data-hub/data-hub-catalog/) goes into detailed information on the Catalog's processes and properties. This is helpful if you are looking for explanations of what you see in the Catalog UI (hub.mendix.com) and how parts of the UI relate to each other.

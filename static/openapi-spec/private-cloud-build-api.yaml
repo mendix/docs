@@ -15,7 +15,7 @@ paths:
     get:
       tags:
         - jobs
-      summary: Get Status and Result
+      summary: Get status and result
       responses:
         '200':
           $ref: '#/components/responses/job'
@@ -26,7 +26,7 @@ paths:
         '404':
           $ref: '#/components/responses/error404'
       operationId: get-job
-      description: Retrieve status of an asynchronous job which has been initiated by an API call. Each API call which successfully starts a job will return the "id" of the job which can be used in this API call.
+      description: Retrieve the status of an asynchronous job which has been initiated by an API call. Each API call which successfully starts a job will return the ID of the job which can be used in this API call.
     parameters:
       - name: jobId
         in: path
@@ -63,7 +63,7 @@ paths:
     post:
       summary: Upload deployment package
       operationId: upload-package
-      description: Create a new deployment package by uploading a `.mda` file.
+      description: Create a new deployment package by uploading an `.mda` file.
       tags:
         - packages
       requestBody:
@@ -78,11 +78,11 @@ paths:
                 fileName:
                   type: string
                   example: my-app_2.2.1.19665.mda
-                  description: 'If the extension `.mda` is not provided, it''ll be added automatically once the upload has been processed.'
+                  description: 'If the `.mda` extension is not provided, it will be added automatically once the upload has been processed.'
               required:
                 - file
                 - fileName
-        description: Multipart/form-data that contains a `.mda` file and a `filename` string.
+        description: Request body of type `multipart/form-data` that contains an `.mda` file and a `filename` string.
       responses:
         '202':
           $ref: '#/components/responses/job'
@@ -98,7 +98,7 @@ paths:
     post:
       summary: Build deployment package
       operationId: build-package
-      description: Create a new deployment package by building it based on a `branch` and `revision`.
+      description: Create a new deployment package for a given `branch` and `revision`.
       tags:
         - packages
       requestBody:
@@ -115,17 +115,17 @@ paths:
                   minLength: 1
                 revision:
                   type: string
-                  description: The revision number (SVN) or string (Git)
+                  description: The revision number (for SVN) or string (for Git)
                   maxLength: 50
                   minLength: 1
                   example: 93de884c
                 description:
                   type: string
-                  description: 'An optional description of the package, for example release notes'
+                  description: 'An optional description of the package'
                   example: 'Fixed issues 7733, 7734 and 7613'
                 version:
                   type: string
-                  description: 'The version of the package in x.y.z format, for example 2.0.4'
+                  description: 'The version of the package in x.y.z format'
                   maxLength: 20
                   example: 2.0.4
               required:
@@ -163,18 +163,18 @@ paths:
         '404':
           $ref: '#/components/responses/error404'
       operationId: get-package
-      description: Retrieves the deployment package metadata. The query parameter can be used to request a time limited download URL.
+      description: Retrieves the deployment package metadata. The query parameter can be used to request a time-limited download URL.
       parameters:
         - schema:
             type: boolean
           in: query
           name: url
-          description: Use value `true` to request a time limited download URL of the deployment package file. Default value is `false`.
+          description: Set the value to `true` to request a time-limited download URL of the deployment package file. The default value is `false`.
         - schema:
             type: boolean
           in: query
           name: log
-          description: Use value `true` to request the build log for the deployment package. Default value is `false`.
+          description: Set the value to `true` to request the build log for the deployment package. The default value is `false`.
     delete:
       summary: Delete deployment package
       operationId: delete-package
@@ -252,7 +252,7 @@ components:
           type: string
           example: 63e50976-34bf-4ce4-820b-9e5f106e5fa5
           format: uuid
-          description: Only present if the JobRequest was for building or uploading deployment package.
+          description: Only present if the JobRequest was for building or uploading a deployment package.
         error:
           $ref: '#/components/schemas/error-body'
       required:
@@ -290,7 +290,7 @@ components:
         createdOn:
           type: string
           format: date-time
-          description: The date the package was created (uploaded or build).
+          description: The date the package was created (uploaded or built).
         description:
           type: string
           example: 'Fixed issues 7733, 7734 and 7613'
@@ -316,7 +316,7 @@ components:
               type: string
               example: 'https://url/to/download/the/package/file'
               format: uri
-              description: The URL to the deployment package file.
+              description: The URL of the deployment package file.
             ttl:
               type: integer
               description: The validity of the URL in seconds.
@@ -337,7 +337,7 @@ components:
       x-stoplight:
         id: aht25xuoseg2k
       type: object
-      description: Model for list of deployment packages.
+      description: The model for the list of deployment packages.
       x-examples: {}
       properties:
         packages:
@@ -367,7 +367,7 @@ components:
                 example: 9.12.0.41679
               createdOn:
                 type: string
-                description: The date the package was created (uploaded or build).
+                description: The date the package was created (uploaded or built).
                 format: date-time
               description:
                 type: string
@@ -399,7 +399,7 @@ components:
         limit:
           type: integer
           minimum: 1
-          description: The maximum amount of objects to retrieve. When not specified then the server will set use a default value (for example 20). When set larger than supported then the supported maximum is used.
+          description: The maximum amount of objects to retrieve. When not specified, the a default value is 20.
           example: 20
         size:
           type: integer
@@ -419,7 +419,7 @@ components:
         type: integer
         minimum: 0
         example: 30
-      description: 'Used with paging and defines the offset, default 0.'
+      description: Used with paging and defines the offset. The default value is 0.
     limit:
       name: limit
       in: query
@@ -429,7 +429,7 @@ components:
         minimum: 1
         maximum: 50
         example: 20
-      description: 'Used with paging and defines the maximum amount of objects to return, default 20.'
+      description: Used with paging and defines the maximum amount of objects to return. The default value is 20.
     appId:
       name: appId
       in: path
@@ -471,7 +471,7 @@ components:
               value:
                 error:
                   code: 400
-                  message: Request validation errors
+                  message: The request has validation errors.
     error401:
       description: |-
         There were no usable authentication credentials found.
@@ -580,7 +580,7 @@ components:
       name: Authorization
       type: apiKey
       in: header
-      description: 'See [Create a Personal Access Token with Warden](https://docs.mendix.com/developerportal/community-tools/warden) for documentation how to request a token and how to use it.<br/> Contents of the header should be `MxToken <Your PAT>`.'
+      description: For more information about requesting and using a token see [Create a Personal Access Token with Warden](https://docs.mendix.com/developerportal/community-tools/warden).<br/> The header must be set to `MxToken <Your PAT>`.
   requestBodies: {}
 tags:
   - name: packages

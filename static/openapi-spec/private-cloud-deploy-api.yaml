@@ -828,7 +828,7 @@ components:
       x-examples:
         example-cluster-manifest:
           $ref: '#/components/examples/ClusterManifest'
-      description: Model for clusterManifest.
+      description: Model for the cluster manifest.
       properties:
         manifestVersion:
           type: string
@@ -873,7 +873,7 @@ components:
       x-examples:
         example-namespace-manifest:
           $ref: '#/components/examples/NamespaceManifest'
-      description: Model for namespace manifest.
+      description: Model for the namespace manifest.
       properties:
         manifestVersion:
           type: string
@@ -943,7 +943,7 @@ components:
       x-examples:
         example-update-namespace-manifest:
           $ref: '#/components/examples/UpdateNamespaceManifest'
-      description: Model for update namespace manifest.
+      description: Model for the manifest used when updating a namespace.
       properties:
         manifestVersion:
           type: string
@@ -1080,7 +1080,7 @@ components:
       x-examples:
         example-update-cluster-manifest:
           $ref: '#/components/examples/UpdateClusterManifest'
-      description: Model for update cluster manifest.
+      description: Model for the manifest used when updating a cluster.
       properties:
         manifestVersion:
           type: string
@@ -1098,7 +1098,7 @@ components:
               $ref: '#/components/schemas/clusterType'
             description:
               type: string
-              example: My test cluster.
+              example: This cluster is for testing purposes.
             clusterManagers:
               type: array
               items:
@@ -1128,7 +1128,7 @@ components:
           planType: OnDemand
           activate: true
           planConfig: '{type: "database"}'
-      description: Model for database plan.
+      description: Model for the database plan.
       properties:
         planName:
           type: string
@@ -1167,7 +1167,7 @@ components:
     invitationStatus:
       title: invitationStatus
       type: string
-      description: Model for member InvitationStatus into a Cluster or Namespace.
+      description: Model for the status of the member invite.
       example: Invitation_Sent
       enum:
         - Invitation_Sent
@@ -1178,7 +1178,7 @@ components:
     planType:
       title: planType
       type: string
-      description: Model for Database/Storage plan type
+      description: Model for the database or storage plan type.
       enum:
         - OnDemand
         - Dedicated
@@ -1372,7 +1372,7 @@ components:
             type: string
           description: The URL where the result of the job can be found. This is only available after the job has been created.
     environmentManifest:
-      description: The environmentManifest response returned by a get-environment-manifest request.
+      description: The environment manifest response returned by a get-environment-manifest request.
       content:
         application/json:
           schema:
@@ -1442,7 +1442,7 @@ components:
                     mxAgentConfig: 'https://docs.mendix.com/developerportal/deploy/private-cloud-monitor/#configuring-mxagent'
                     mxAgentInstrumentationConfig: 'https://docs.mendix.com/developerportal/deploy/private-cloud-monitor/#configuring-mxagent'
     environmentsManifests:
-      description: The environmentsManifests response returned by a get-environments-manifests request.
+      description: The environments manifests response returned by a get-environments-manifests request.
       content:
         application/json:
           schema:
@@ -1551,7 +1551,7 @@ components:
                         mxAgentConfig: config
                         mxAgentInstrumentationConfig: config
     clusterManifest:
-      description: The clusterManifest response returned by a get-cluster-manifest request.
+      description: The cluster manifest response returned by a get-cluster-manifest request.
       content:
         application/json:
           schema:
@@ -1564,7 +1564,7 @@ components:
                   clusterId: 085a0e34-69ec-4c61-9c7d-5cd42554f9f2
                   name: new-cluster
                   clusterType: os
-                  description: My test cluster.
+                  description: This cluster is for testing purposes.
                   totalNamespaces: 0
                   totalEnvironments: 0
                   creator: ' cluster creator'
@@ -1573,7 +1573,7 @@ components:
                       status: Invitation_Sent
                       displayName: member name
     clustersManifests:
-      description: The clustersManifests response returned by a get-clusters-manifests request.
+      description: The clusters manifests response returned by a get-clusters-manifests request.
       content:
         application/json:
           schema:
@@ -1592,7 +1592,7 @@ components:
                       clusterId: 085a0e34-69ec-4c61-9c7d-5cd42554f9f2
                       name: new-cluster
                       clusterType: k8s
-                      description: My test cluster.
+                      description: This cluster is for testing purposes.
                       totalNamespaces: 0
                       totalEnvironments: 0
                       creator: ' cluster creator'
@@ -1601,7 +1601,7 @@ components:
                           status: Invitation_Sent
                           displayName: member name
     namespaceManifest:
-      description: The namespaceManifest response returned by a get-namespace-manifest request.
+      description: The namespace manifest response returned by a get-namespace-manifest request.
       content:
         application/json:
           schema:
@@ -1668,7 +1668,7 @@ components:
                       buildDate: '2023-01-03_14:45:47'
                       buildHash: fee1feb8df3898b37b356281006b2f0acbfa8982
     namespacesManifests:
-      description: The namespacesManifests response returned by a get-namespaces-manifests request.
+      description: The namespaces manifests response returned by a get-namespaces-manifests request.
       content:
         application/json:
           schema:
@@ -1826,7 +1826,7 @@ components:
       name: Authorization
       type: apiKey
       in: header
-      description: 'See [Create a Personal Access Token with Warden](https://docs.mendix.com/developerportal/community-tools/warden) for documentation how to request a token and how to use it.<br/> Contents of the header should be `MxToken <Your PAT>`.'
+      description: For more information about requesting and using a token see [Create a Personal Access Token with Warden](https://docs.mendix.com/developerportal/community-tools/warden).<br/> The header must be set to `MxToken <Your PAT>`.
   requestBodies:
     environmentManifest:
       content:
@@ -1836,7 +1836,7 @@ components:
           examples:
             example-environment-manifest:
               $ref: '#/components/examples/EnvironmentManifest'
-      description: Request body for environmentManifest.
+      description: Request body for the environment manifest.
     clusterManifest:
       content:
         application/json:
@@ -1845,7 +1845,7 @@ components:
           examples:
             example-cluster-manifest:
               $ref: '#/components/examples/ClusterManifest'
-      description: Request body for clusterManifest.
+      description: Request body for the cluster manifest.
     namespaceManifest:
       content:
         application/json:
@@ -1854,7 +1854,7 @@ components:
           examples:
             example-namespace-manifest:
               $ref: '#/components/examples/NamespaceManifest'
-      description: Request body for namespaceManifest.
+      description: Request body for the namespace manifest.
     updateClusterManifest:
       content:
         application/json:
@@ -1863,7 +1863,7 @@ components:
           examples:
             example-update-cluster-manifest:
               $ref: '#/components/examples/UpdateClusterManifest'
-      description: Request body for updateClusterManifest.
+      description: Request body for manifest used when updating the cluster.
     updateNamespaceManifest:
       content:
         application/json:
@@ -1872,7 +1872,7 @@ components:
           examples:
             example-update-namespace-manifest:
               $ref: '#/components/examples/UpdateNamespaceManifest'
-      description: Request body for updateNamespaceManifest.
+      description: Request body for the manifest used when updating a namespace.
   examples:
     EnvironmentManifest:
       value:

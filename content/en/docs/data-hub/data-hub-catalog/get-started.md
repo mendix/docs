@@ -30,25 +30,15 @@ Using your company's Catalog depends on how you deploy your apps.
 
 ### 2.1 Catalog and the Mendix Cloud
 
-If you deploy to the [Mendix Cloud](/developerportal/deploy/mendix-cloud-deploy/), you can easily register, consume, and manage data sources using the Data Hub Catalog and the Data Hub APIs.
+* [Published OData services](/refguide/published-odata-services/) are registered in the Catalog as soon as you deploy your app. 
 
-* Registering Data Sources
-
-[Published OData services](/refguide/published-odata-services/) are registered in the Catalog as soon as you deploy your app. 
-
-* Consuming Data Sources
-
-Services registered in your company's Catalog are made available in the [Data Hub pane](/refguide/data-hub-pane/) in Studio Pro.
-
-* Managing Data Sources
+* Services registered in your company's Catalog are made available in the [Data Hub pane](/refguide/data-hub-pane/) in Studio Pro.
 
 ### 3.2 Catalog and Private Cloud
 
-If you deploy to a [Private Cloud](/developerportal/deploy/private-cloud/), you can register
+If you deploy to a [Private Cloud](/developerportal/deploy/private-cloud/), you can register, consume, and manage data sources
 
-* Registering Data Sources
-
-The Data Hub APIs allow you to register data sources. See
+* The Registration API allow you to register data sources in your company's Catalog. See the [Registering a Service without the Mendix Cloud](/data-hub/data-hub-catalog/register-data/#without-mendix-cloud) section of *Register OData Resources in the Data Hub Catalog*.
 
 See [Automate Catalog Registration](/data-hub/data-hub-catalog/automate-registration/) for step-by-step instructions on setting up automatic Catalog registration in a pipeline on a private cloud.
 
@@ -61,6 +51,8 @@ See [Automate Catalog Registration](/data-hub/data-hub-catalog/automate-registra
 If you deploy [On-Premises](/developerportal/deploy/on-premises-design/)
 
 * Registering Data Sources
+
+The Registration API allow you to register data sources in your company's Catalog. See the [Registering a Service without the Mendix Cloud](/data-hub/data-hub-catalog/register-data/#without-mendix-cloud) section of *Register OData Resources in the Data Hub Catalog*.
 
 * Consuming Data Sources
 

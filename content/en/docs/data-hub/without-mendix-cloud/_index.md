@@ -38,7 +38,7 @@ See the [Registering a Service Through the Mendix Cloud](/data-hub/data-hub-cata
 
 We support ZIP (for multiple file contracts) or XML (for single file contracts).
 
-### 2.2 Manually Registering Contracts to the Data Hub Catalog with Team Server
+### 2.2 Manually Registering Contracts to the Data Hub Catalog with Team Server {#manual-team-server}
 
 If you deploy to a Private Cloud or On-Premises setup, and use the [Mendix Team Server](/refguide/version-control/#team-server), you can manually register applications, environments, services, or data sources to the Data Hub Catalog. Registering the data source contracts to the Catalog ensures that it can be found and imported into an application by members of the company that owns it. 
 
@@ -50,7 +50,7 @@ To manually register an OData contract metadata file to the Data Hub Catalog, fo
 
 For detailed steps, see the [Registering a Service without the Mendix Cloud](/data-hub/data-hub-catalog/register-data/#without-mendix-cloud) section of *Register OData Resources in the Data Hub Catalog*.
 
-### 2.3 Manually Registering Contracts to the Data Hub Catalog without Team Server
+### 2.3 Manually Registering Contracts to the Data Hub Catalog without Team Server {#manual-no-team-server}
 
 To manually register contracts to the Data Hub Catalog without the Mendix Team Server, do the following:
 

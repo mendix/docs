@@ -4,6 +4,17 @@ url: /releasenotes/add-ons/ats-2.28/
 weight: 72
 ---
 
+## 2.28.8
+
+**Release date: March 7th, 2023**
+
+### Fixes
+
+* When (un)subscribing to schedules the browser showed HTML instead of rendering it as a page.
+* Show 'Wrong browser' notification when trying to record steps in Microsoft Edge. As Edge is Chromium based, it did not detect that the browser was not the Chrome browser.
+* Old testcase/testsuite executions were not always deleted after 90 days, despite the log retention time being set to 90 days.
+* On sign up the links to the privacy statement and terms and conditions returned a 404.
+
 ## 2.28.7
 
 **Release date: January 31st, 2023**

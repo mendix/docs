@@ -16,17 +16,19 @@ For more information on how to migrate to Git, see [Migrate to Git](/developerpo
 
 ## 2 Differences in Collaboration: Committing, Pushing, Updating (Pulling), and Merging 
 
-SVN is a centralized version control system, whereas Git is a distributed system. This means that in SVN all interactions go directly to a central server, while Git has the concept of a local repository where you can make changes.
+SVN is a centralized version control system, whereas Git is a distributed system. When making a commit, in SVN it directly goes to the centralized server, while Git only creates a local commit and to submit your local commit(s) to the centralized server you need to *push* your changes (pushing changes is selected by default in the **Commit** dialog box). As a result, your local changes are committed faster, and you can roll back to a previous state without having to contact the version control server.
+
+
 
 {{< figure src="/attachments/refguide/version-control/image10.png" alt="Local Repository and Team Server" >}}
 
-This means you can fully integrate the changes from your other developers locally, without having to do the merge on the remote server. This means these operations are relatively fast in comparison to SVN.
+This also means you can fully integrate the changes from your other developers locally, without having to do the merge on the remote server. These operations are relatively fast in comparison to SVN.
 
 For example, you are developing a feature together with another developer on the same branch. You both have the same starting point (3). When your colleague commits a change, you can choose to retrieve these changes and integrate them. To enable this, we ask developers to first commit existing changes locally (6), so the changes can be automatically merged when they are retrieved by other developers. After this you commit the merged result, and optionally push the merged result (7) to be used by your colleague. Because changes are already explicitly committed, you can always see what you changed and you cannot accidentally override your local changes when you are resolving conflicts.
 
 {{< figure src="/attachments/refguide/version-control/image11.png" alt="Incoming changes in Git" >}}
 
-When making a commit, in SVN it directly goes to the centralized server, while Git only creates a local commit and to submit your local commit(s) to the centralized server you need to *push* your changes (pushing changes is selected by default in the **Commit** dialog box). This means your local changes are committed faster, and you can roll back to a previous state without having to contact the version control server.
+The table below outlines the main differences between SVN and Git:
 
 | Action      | SVN                                                          | Git                                                          |
 | ----------- | ------------------------------------------------------------ | ------------------------------------------------------------ |

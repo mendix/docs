@@ -167,7 +167,7 @@ Automation, such as CI/CD pipelines, and other functions which require access to
 
 ### 8.4 Multiple Email Domains for a Company
 
-You cannot select which of your email domains are used for single sign-on. When you activate BYOIDP SSO, it will apply to all email domains which are registered to your company.
+When you activate BYOIDP SSO, it will apply to all email domains which are registered to your company. If you add another email domain to your company, BYOIDP will automatically adopt it, without further actions from the Mendix administrator.
 
 ## 9 Troubleshooting{#troubleshooting}
 

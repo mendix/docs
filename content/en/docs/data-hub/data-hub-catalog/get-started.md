@@ -12,7 +12,7 @@ tags: ["data hub", "data hub catalog", "consume", "external entities", "asset", 
 
 Data Hub Catalog is an open, standards-based metadata repository that enables Mendix developers and business admins to discover and explore data sources throughout their connected ecosystem. This respository is accessible to [authorized users](/data-hub/data-hub-catalog/manage-data-sources/user-roles/) in your company on the web app, hub.mendix.com, or through [Data Hub APIs](/apidocs-mxsdk/apidocs/data-hub-apis/).
 
-The Catalog currently supports OData resources, or services, APIs, or databases that are [wrapped in OData](/refguide/wrap-services-odata/).
+{{% alert color="info" %}}The Catalog currently supports OData data sources, or services, APIs, or databases that are [wrapped in OData](/refguide/wrap-services-odata/).{{% /alert %}}
 
 ## 2 Your Company's Catalog
 
@@ -26,34 +26,20 @@ Depending on your [user role](/data-hub/data-hub-catalog/manage-data-sources/use
 
 ## 3 Catalog and App Deployment Methods
 
-Using your company's Catalog depends on how you deploy your apps.
+You can use the Catalog with any deployment method, though there are differences in how data sources are registered for each deployment method. The chart below outlines these differences.
 
-### 2.1 Catalog and the Mendix Cloud
+| Deployment Method | How are Data Sources Registered? | 
+| --- | --- |
+| [Mendix Cloud](/developerportal/deploy/mendix-cloud-deploy/) | Published OData services in a deployed app are [registered automatically](/data-hub/data-hub-catalog/register-data/#mendix-cloud) as data sources in the Catalog <br> [Register sources using the Registration API](/data-hub/data-hub-catalog/register-data/#register-services) |
+| [Private Cloud](/developerportal/deploy/private-cloud/), [Tencent Cloud](/developerportal/deploy/tencent-deploy/) | Using the [Registration API](/data-hub/data-hub-catalog/register-data/#register-services) |
+| [On-Premises](/developerportal/deploy/on-premises-design/) | Using the [Registration API](/data-hub/data-hub-catalog/register-data/#register-services) |
 
-* [Published OData services](/refguide/published-odata-services/) are registered in the Catalog as soon as you deploy your app. 
+Once data sources are registered, the metadata is stored in the Catalog so that you can share these sources with authorized users in your company.
 
-* Services registered in your company's Catalog are made available in the [Data Hub pane](/refguide/data-hub-pane/) in Studio Pro.
+## 4 Try It Out
 
-### 3.2 Catalog and Private Cloud
+Our [Share Data Between Apps](/data-hub/share-data/) guide helps you build an app and use the Catalog to share data. Follow the steps to get a better idea how it works! You can also follow [Write Data to Another App](/data-hub/write-data/) to build on this experience.
 
-If you deploy to a [Private Cloud](/developerportal/deploy/private-cloud/), you can register, consume, and manage data sources
+## 5 Catalog Processes and Properties
 
-* The Registration API allow you to register data sources in your company's Catalog. See the [Registering a Service without the Mendix Cloud](/data-hub/data-hub-catalog/register-data/#without-mendix-cloud) section of *Register OData Resources in the Data Hub Catalog*.
-
-See [Automate Catalog Registration](/data-hub/data-hub-catalog/automate-registration/) for step-by-step instructions on setting up automatic Catalog registration in a pipeline on a private cloud.
-
-* Consuming Data Sources
-
-* Managing Data Sources
-
-### 3.3 Catalog On-Premises
-
-If you deploy [On-Premises](/developerportal/deploy/on-premises-design/)
-
-* Registering Data Sources
-
-The Registration API allow you to register data sources in your company's Catalog. See the [Registering a Service without the Mendix Cloud](/data-hub/data-hub-catalog/register-data/#without-mendix-cloud) section of *Register OData Resources in the Data Hub Catalog*.
-
-* Consuming Data Sources
-
-* Managing Data Sources
+Check out the [Data Hub Catalog](/data-hub/data-hub-catalog/) for detailed information on processes and properties of the Catalog.

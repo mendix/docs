@@ -1,5 +1,5 @@
 ---
-title: "Retrieve Environment-sensitive Data from a Secret Store"
+title: "Retrieve Environment-Sensitive Data from a Secret Store"
 url: /developerportal/deploy/secret-store-credentials/
 description: "Describes the process for using external secret stores for Kubernetes secrets"
 weight: 20

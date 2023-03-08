@@ -17,6 +17,17 @@ To see the current status of the Mendix Developer Portal and Control Center, see
 
 ## 2023
 
+### March 9th, 2023
+
+#### Improvements
+
+* We simplified the way your [project notification settings](/developerportal/community-tools/mendix-profile/#notifications) are stored
+* As of now only Scrum Masters can change the role of existing [Team Members](/developerportal/collaborate/team/#managing)
+
+#### Fixes
+
+* We fixed an issue where the users you would administer for your [app's environment](/developerportal/collaborate/general-settings/#manage-users) were not displayed in the correct order
+
 ### February 23rd, 2023
 
 #### New Features

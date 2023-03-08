@@ -11,9 +11,9 @@ tags: ["studio pro"]
 
 Nanoflows are similar to [microflows](/refguide/microflows/), in that they allow you to express the logic of your application. However, they do have some specific benefits (for example, they run directly on the browser/device and can be used in an offline app). Furthermore, most of the actions run directly on the device, so there is also a speed benefit for logic which does not need access to the server.
 
-{{% alert color="info" %}}
-This page is an overview of all the elements that can be used in a nanoflow. For the properties of the nanoflow itself, see [Nanoflow Properties](/refguide/nanoflow/).
-{{% /alert %}}
+This page is an overview of all the elements that can be used in a nanoflow. For the properties of the nanoflow itself, see [Nanoflow Properties](/refguide/nanoflow/). 
+
+For information on using nanoflows as data sources, see [Nanoflow Source](/refguide/nanoflow-source/).
 
 ## 2 When to Use Nanoflows
 

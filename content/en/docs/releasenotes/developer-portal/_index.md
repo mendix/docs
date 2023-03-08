@@ -941,7 +941,7 @@ In Portfolio Management, you can do the following
 
 #### Webhooks Available
 
-* We have added the ability to create webhooks for your apps. These webhooks can be configured to send information when sprints change and/or stories change. For more information, see the [Managing Webhooks](/developerportal/collaborate/general-settings/#webhooks) section of *How to Manage General App Settings* as well as [Webhooks](/apidocs-mxsdk/apidocs/webhooks-sprints/) in the *API Documentation*.
+* We have added the ability to create webhooks for your apps. These webhooks can be configured to send information when sprints change and/or stories change.
 
 ### April 5th, 2019
 

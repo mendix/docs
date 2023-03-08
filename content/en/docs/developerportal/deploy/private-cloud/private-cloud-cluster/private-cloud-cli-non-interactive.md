@@ -1,5 +1,5 @@
 ---
-title: "Install and Configure Mendix for Private Cloud Non-interactive Mode"
+title: "Install and Configure Mendix for Private Cloud Non-Interactive Mode"
 linktitle: "Non-Interactive Mode"
 url: /developerportal/deploy/private-cloud-cli-non-interactive/
 description: "Describes how to install and configure Mendix for Private Cloud in non-interactive mode"

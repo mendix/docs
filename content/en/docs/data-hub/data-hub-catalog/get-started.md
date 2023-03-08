@@ -12,9 +12,11 @@ tags: ["data hub", "data hub catalog", "consume", "external entities", "asset", 
 
 Data Hub Catalog is an open, standards-based metadata repository that enables Mendix developers and business admins to discover and explore data sources throughout their connected ecosystem. This respository is accessible to [authorized users](/data-hub/data-hub-catalog/manage-data-sources/user-roles/) in your company on the web app, hub.mendix.com, or through [Data Hub APIs](/apidocs-mxsdk/apidocs/data-hub-apis/).
 
+The Catalog currently supports OData resources, or services, APIs, or databases that are [wrapped in OData](/refguide/wrap-services-odata/).
+
 ## 2 Your Company's Catalog
 
-If you have a Mendix license and a Data Hub license, you have a Data Hub Catalog! Log in with your company credentials on hub.mendix.com to see what data sources have been shared in your company. 
+If you (or your company) have a Mendix license and a Data Hub license, you have a Data Hub Catalog! Log in with your company credentials to hub.mendix.com to see what metadata has been shared in your company. 
 
 Depending on your [user role](/data-hub/data-hub-catalog/manage-data-sources/user-roles/) and use case, you can do the following:
 
@@ -22,40 +24,44 @@ Depending on your [user role](/data-hub/data-hub-catalog/manage-data-sources/use
 * [Consume data sources](/data-hub/data-hub-catalog/consume-data-sources/) in your company's Catalog
 * [Manage data sources](/data-hub/data-hub-catalog/manage-data-sources/) as a data source owner or as an administrator
 
-## 3 Catalog and Deployment Methods
+## 3 Catalog and App Deployment Methods
 
 Using your company's Catalog depends on how you deploy your apps.
 
 ### 2.1 Catalog and the Mendix Cloud
 
-If you deploy to the [Mendix Cloud](/developerportal/deploy/mendix-cloud-deploy/), 
+If you deploy to the [Mendix Cloud](/developerportal/deploy/mendix-cloud-deploy/), you can easily register, consume, and manage data sources using the Data Hub Catalog and the Data Hub APIs.
 
-Registering Data Sources
+* Registering Data Sources
 
-[Published OData services](/refguide/integration/published-odata-services/) are registered in the Catalog as soon as you deploy your app. These appear automatically in your Catalog.
+[Published OData services](/refguide/integration/published-odata-services/) are registered in the Catalog as soon as you deploy your app. 
 
-Consuming Data Sources
+* Consuming Data Sources
 
-Managing Data Sources
+Services registered in your company's Catalog are made available in the [Data Hub pane](/refguide/data-hub-pane/) in Studio Pro.
+
+* Managing Data Sources
 
 ### 3.2 Catalog and Private Cloud
 
-If you deploy to a [Private Cloud](/developerportal/deploy/private-cloud/), 
+If you deploy to a [Private Cloud](/developerportal/deploy/private-cloud/), you can register
 
-Registering Data Sources
+* Registering Data Sources
+
+The Data Hub APIs allow you to register data sources. See
 
 See [Automate Catalog Registration](/data-hub/data-hub-catalog/automate-registration/) for step-by-step instructions on setting up automatic Catalog registration in a pipeline on a private cloud.
 
-Consuming Data Sources
+* Consuming Data Sources
 
-Managing Data Sources
+* Managing Data Sources
 
 ### 3.3 Catalog On-Premises
 
 If you deploy [On-Premises](/developerportal/deploy/on-premises-design/)
 
-Registering Data Sources
+* Registering Data Sources
 
-Consuming Data Sources
+* Consuming Data Sources
 
-Managing Data Sources
+* Managing Data Sources

@@ -486,7 +486,7 @@ If you encounter errors using APIs, please ensure that the format matches the do
 
     For more information on custom environment variables, see [Runtime Tab](/developerportal/deploy/environments-details/#custom-environment-variables) in the *Environment Details* documentation.
 
-* As part of a Developer Portal clean up, we removed the Model option from the DEVELOP section of the Developer Portal menu when you are looking at environments on Mendix Cloud. The functions of this page are still available via the Edit in Studio and Edit in Studio Pro buttons on the environments page.
+* As part of a Developer Portal clean up, we removed the Model option from the DEVELOP section of the Developer Portal menu when you are looking at environments on Mendix Cloud. The functions of this page are still available via the **Edit in Studio Pro** button on the environments page.
 
 ### December 8th, 2020
 

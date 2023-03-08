@@ -542,7 +542,7 @@ After upgrading the Mendix Operator, we recommend downloading the latest version
 
 * We have added support in the Developer Portal to configure custom Certificate Authorities which should be trusted by the Mendix Operator and app environments.
 * We now add an environment UUID to environments deployed to Private Cloud namespaces so environment names no longer need to be unique.
-* As part of a Developer Portal clean up, we removed the *Model* option from the *DEVELOP* section of the Developer Portal menu when you are looking at environments on Mendix for Private Cloud. The functions of this page are still available via the **Edit in Studio** and **Edit in Studio Pro** buttons on the environments page. 
+* As part of a Developer Portal clean up, we removed the *Model* option from the *DEVELOP* section of the Developer Portal menu when you are looking at environments on Mendix for Private Cloud. The functions of this page are still available via the **Edit in Studio Pro** button on the environments page. 
 
 #### Fixes
 

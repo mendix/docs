@@ -34,7 +34,7 @@ If you deploy to the [Mendix Cloud](/developerportal/deploy/mendix-cloud-deploy/
 
 * Registering Data Sources
 
-[Published OData services](/refguide/integration/published-odata-services/) are registered in the Catalog as soon as you deploy your app. 
+[Published OData services](/refguide/published-odata-services/) are registered in the Catalog as soon as you deploy your app. 
 
 * Consuming Data Sources
 

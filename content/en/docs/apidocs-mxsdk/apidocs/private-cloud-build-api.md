@@ -48,7 +48,7 @@ Store the `{GENERATED_PAT}` in a safe location, so you can use it to authorize y
 | Get deployment package list | `mx:privatecloud-build:read` or `mx:privatecloud-build:write` |
 | Get Job                     | `mx:privatecloud-build:read` or `mx:privatecloud-build:write` |
 
-#### 2.1.3 Using the PAT
+#### 2.1.3 Using the PAT {#using-the-pat}
 
 Each request must contain an `Authorization` header with the value `MxToken {GENERATED_PAT}`.
 
@@ -56,7 +56,7 @@ Each request must contain an `Authorization` header with the value `MxToken {GEN
 
 To authenticate calls when using the Open API specification below, click **Authorize** and use the value `MxToken {GENERATED_PAT}`.
 
-### 2.2 Managing Asynchronous Jobs{#async-jobs}
+### 2.2 Managing Asynchronous Jobs {#async-jobs}
 
 All resource manipulation API calls are processed asynchronously. In the response, there is an `id` which you can use with the `GET /jobs/…` call to get the status of the asynchronous job.
 
@@ -99,7 +99,7 @@ Follow the steps below to upload a deployment package by using the API.
 3. Make the API call `POST /apps/{appId}/packages` using the request created in the previous step to upload the new deployment package.
 4. Verify that the job is successful using the process described in [Managing Asynchronous Jobs](#async-jobs).
 5. Once the previous job is successful, you will see a `packageId` in the response. You can then call `GET /apps/{appId}/packages/{packageId}` to get the deployment package details and verify the uploaded file.
-    You can use the same `packageId` [when deploying an app through the Mendix for Private Cloud Deploy API](/apidocs-mxsdk/apidocs/private-cloud-deploy-api/#api-deploy).
+    You can use the same `packageId` when deploying an app through the [Mendix for Private Cloud Deploy API](/apidocs-mxsdk/apidocs/private-cloud-deploy-api/#api-deploy).
 
 ## 4 API Reference
 

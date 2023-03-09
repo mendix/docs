@@ -48,7 +48,19 @@ In Git, committing is done locally at first. Then commits are sent to other repo
 
 ## 5 Proxy Support
 
-It is currently not possible to use Git from behind an authenticated proxy. For more information, see the [Known Issues](/refguide/troubleshoot-git-issues/#ki) section of *Solving Known Git Issues*. If you depend on this functionality, it is sensible to postpone migration until support is realized. 
+Studio Pro communicates to Git repositories by two means: through LibGit2 library or Git command line interface (Git CLI). LibGit2 provides a nice and clean repository object model that is in intensive use during local repository operations. But it's not performant enough whem it comes to communicate with remove Git servers. This is where Git CLI takes a place, and Studio Pro switch to the client while performing Fetch, Pull and Push operations (that is why `Git for Windows` package, which ships Git CLI to your computer, is an integral part of Studio Pro installation bundle). Therefore, any operation, that requires transferring data to/from remote Git repositories, uses GitCLI client now. 
+
+Unfortunately, `Git for Windows` doesn’t support `Web Proxy Auto Discovery (WPAD)` protocol by default. So that the proxy settings needs to be hardcoded directly by either overriding `http_proxy`, `https_proxy` and `all_proxy` environment variables or by setting the URL up in your local `.git/config` file via the folowwing commands:
+
+1. Configure the proxy settings:
+
+`git config --local http.proxy [protocol://][user[:password]@]proxyhost[:port]`
+
+2. Check the setting change took effect:
+
+`git config --local http.proxy`
+
+Of course, you can also use `--global` modifier for applying the changes system wise. For more information regarding proxy support for Git please check the [official documentation] (https://git-scm.com/docs/git-config#Documentation/git-config.txt-httpproxy)
 
 ## 6 Interacting with Version Control Outside Studio Pro
 

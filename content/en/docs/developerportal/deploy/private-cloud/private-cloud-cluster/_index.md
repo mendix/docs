@@ -45,16 +45,13 @@ Should you consider using a connected environment, the following URLs should be 
 
 ### 3.1 Creating a Cluster{#create-cluster}
 
-1. Click **Cloud Settings** on the **General Settings** page of your Mendix app.
-
-    {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/image2.png" >}}
-
+1. Click [Cloud Settings](/developerportal/collaborate/general-settings/#cloud-settings) on the **General Settings** page of your Mendix app.
 2. Click **Mendix for Private Cloud**.
 
     {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/image3.png" >}}
 
 3. Click **Set up Mendix for Private Cloud**.
-    
+   
     {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/image4.png" >}}
 
 4. Click the **Switch-to** menu in the Developer Portal and choose **Cloud**.
@@ -157,17 +154,17 @@ You can do this as follows:
 1. Sign in to the OpenShift Console.
 
 2. Click **Copy Login Command** in the user drop-down.
-    
+   
     {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/image9.png" >}}
 
 3. Choose your IdP (Identity Provider).
-    
+   
     {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/image10.png" >}}
 
 4. Click **Display Token**.
 
 5. Copy the command under **Log in with this token**.
-    
+   
     {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/image11.png" >}}
 
 6. Paste the command into your command line terminal and press Enter.
@@ -890,7 +887,7 @@ In order for the Mendix Operator to trust such certificates, you need to add the
         ```
 
 2. Paste the name of this `custom.crt` secret (the `{secret}` used in the commands above) into the **CA Certificates Secret Name** field (for example, `mendix-custom-ca`):
-    
+   
     {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/custom-tls-config.png" alt="Custom TLS configuration" >}}
 
 These custom CAs will be trusted by:

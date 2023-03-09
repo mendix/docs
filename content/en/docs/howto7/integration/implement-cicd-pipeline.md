@@ -75,7 +75,7 @@ If the environment is running, you need to stop it. To do this, use the [Stop En
 
 #### 3.3.3 Deploying/Transporting the Package
 
-To deploy/transport a package to the environment, use the [Transporting a Deployment Package to an Environment API call](/apidocs-mxsdk/apidocs/deploy-api/#transport-deployment-package).
+To deploy/transport a package to the environment, use the [Transport a Deployment Package to an Environment API call](/apidocs-mxsdk/apidocs/deploy-api/#transport-deployment-package).
 
 For this action, you need the `PackageId` from section [3.2.2 Building the Package](#BuildPackage).
 

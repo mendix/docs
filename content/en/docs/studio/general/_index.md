@@ -143,7 +143,7 @@ Mind the following characteristics when using cut/copy/paste:
 
 * You can cut/copy/paste elements within one visual editor; that means that you can cut/copy/paste elements within one page or to other pages in Studio, and copy microflow activities within one microflow or to other microflows
 * You can cut/copy/paste elements to different apps in Studio if they have the same Mendix version
-* You cannot copy/paste pages, microflows, or workflows, only elements of a page or a microflow 
+* You cannot copy/paste pages, microflows, or workflows, only elements of a page, microflow or a workflow 
 * You cannot cut/copy/paste from Studio to Studio Pro or vice versa
 
 ## 9 Main Documents in This Category

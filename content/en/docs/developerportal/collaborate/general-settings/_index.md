@@ -114,7 +114,7 @@ Specific steps for configuring different cloud platforms are provided here:
 * [SAP Business Technology Platform](/developerportal/deploy/sap-cloud-platform/)
 * [Mendix Private Cloud](/developerportal/deploy/private-cloud/)
 
-## 5 API Keys {#api-keys}
+## 5 API Keys {#general-settings-api-keys}
 
 {{% alert color="info" %}}
 Only users with the **App Settings** permission can manage app-specific API keys.
@@ -151,37 +151,7 @@ On the **Project Management** tab, you can select your team's planning tool for 
 
 It is possible to migrate all or part of your content from [Stories](/developerportal/collaborate/stories/) to Epics. For details, see the [Data Migration](/developerportal/collaborate/epics/#data-migration) section of *Epics*.
 
-## 7 Webhooks {#webhooks}
-
-{{% alert color="info" %}}
-Only users with the **App Settings** permission can manage webhooks.
-{{% /alert %}}
-
-{{% alert color="info" %}}You will only see the **Webhooks** tab if you have **Mendix Stories** turned on in the [Project Management](#project-management) tab (click **Switch to Mendix Stories** if necessary).{{% /alert %}}
-
-Click the **Webhooks** tab to manage your app's webhooks. A webhook enables the Developer Portal to talk to another website and post updated Developer Portal content (for example, Sprint updates and new stories) to that website. For example, if [CLEVR](https://developer.mendixcloud.com/link/partnerprofile/1068) wants to follow the changes in their app, they will create a service with a certain URL (see the required [URL](#url) below) that keeps track of the data. Changes in the app in the Developer Portal are then sent to that URL.
-
-{{< figure src="/attachments/developerportal/collaborate/general-settings/webhooks-list.png"   width="800"  >}}
-
-After clicking **New Webhook** to create a new webhook, fill in the following details:
-
-* **Name** – the name of the webhook
-* <a id="url"></a>**URL** – the URL to which the webhook will connect 
-* **Secret** – the secret used by the Developer Portal to sign the data payload in order to identify the source of the data to the receiving URL (this appears when creating and editing a webhook, but it will not be displayed on the **Webhooks settings** page)
-* **Version** – the version of the webhooks feature to be used
-* **Events** – what types of data will be sent via the webhook (you must select at least one; this appears when creating and editing a webhook, but it will not be displayed on the **Webhooks settings** page)
-    * [Sprints](/developerportal/collaborate/stories/#story-actions)
-    * [Stories](/developerportal/collaborate/stories/)
-
-To edit the above details for an existing webhook, click **Edit**.
-
-To delete an existing webhook, click **Delete**.
-
-{{% alert color="info" %}}
-For details on the technical configuration of webhooks, see [Webhooks](/apidocs-mxsdk/apidocs/webhooks-sprints/) in the *API Documentation*.
-{{% /alert %}}
-
-## 8 History {#history}
+## 7 History {#history}
 
 {{% alert color="info" %}}
 Only users with the **App Settings** permission can view the history.
@@ -193,7 +163,7 @@ The **Project History** page presents the collaboration actions for the app. On 
 
 When you select a history item and click **Show item**, the details of the story, Sprint, or [feedback item](/developerportal/collaborate/feedback/) will be presented.
 
-## 9 Read More
+## 8 Read More
 
 * [Leave and Delete an App](/developerportal/collaborate/leave-delete-app/)
 * [Manage Deep Links](/developerportal/collaborate/manage-deeplinks/)

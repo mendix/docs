@@ -66,7 +66,6 @@ To develop widgets and submit them to Marketplace, follow these guidelines:
 * A function should not be more than 200 lines of code
 * A function should only do one thing, and it should do it properly
 * Use hooks and functional components over class components
-* Use TypeScript instead of JavaScript
 * Create test pages for mobile when content is made for mobile platforms
 
 ### 3.4 For Modules
@@ -86,7 +85,7 @@ To develop modules and submit them to the Marketplace, follow these guidelines:
 * The [status](/refguide/app-security/#app-status) must be **Complete** for the following access: page, microflow, OData, entity, and dataset
 * For example pages and microflows to be copied to another module, select the **Exclude from project** option for the document in order to encourage duplication and reduce dependency errors 
 * Do not rename entities and attributes when creating new versions, as data in these entities will get lost (replacing an existing module is based on the entity names)
-* The module should include the English language
+* The module must include the English language
 
 ### 3.5 Mendix Partner Program
 

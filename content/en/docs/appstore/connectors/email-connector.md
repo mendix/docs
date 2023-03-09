@@ -37,7 +37,7 @@ Before you use the Email connector in your app, do the following:
 1. Download and [configure](/appstore/modules/model-reflection/#configuration) the latest version of [Mx Model Reflection](https://marketplace.mendix.com/link/component/69) module. If you have the module already, ensure that it is up-to-date.
 2. Download and [configure](/appstore/modules/encryption/#configuration) the latest version of the [Encryption](https://marketplace.mendix.com/link/component/1011) module. If you have the module already, ensure that it is up-to-date.
 3. Remove any existing email modules ([IMAP/POP3](/appstore/modules/imap/) or [Email Module with Templates](/appstore/modules/email-with-templates/)).
-4. Check for and remove orphaned JAR files from any old email modules in the *userlib* subdirectory (for example, *javax.mail-1.6.2.jar* and *activation-1.1.jar*).
+4. Check for and remove orphaned JAR files from any old email modules in the *userlib* subdirectory (including *javax.mail-1.6.2.jar*, *activation-1.1.jar*, and *commons-email.jar*).
 5. [Clean the deployment directory](/refguide/app-menu/#clean-deployment-directory) before running the app.
 
 ### 1.2.1 Migrating from Another Module
@@ -286,7 +286,6 @@ If you already have an email account configured using basic authentication in yo
     * Associate the existing email account with newly created OAuth provider.
     * Navigate to the **EmailConnector_Overview** page and handle the warning messages visible for desired email account.
 
-
 ### 5.3 Deploying to On-Premises Cloud Environments
 
 When deploying [on premises](/developerportal/deploy/on-premises-design/) running [Microsoft Windows](/developerportal/deploy/deploy-mendix-on-microsoft-windows/), you nede to add a rule for a URL redirect.
@@ -302,7 +301,7 @@ For more information, see the [Reverse Proxy Inbound Rules](/developerportal/dep
 
 ### 5.4 Configuring Local Email Clients
 
-Configuring local clients, like [PaperCut](https://www.papercut.com/), is supported. If using a tool like PaperCut, do the following:
+Configuring local clients, like [PaperCut](https://github.com/ChangemakerStudios/Papercut-SMTP), is supported. If using a tool like PaperCut, do the following:
 
 1. Follow the steps for [adding an email account](#adding-email-account). 
 2. Automatic configuration will not work for local clients, so continue with manual configuration in the wizard.

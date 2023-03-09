@@ -34,6 +34,7 @@ At the top of the **MxAssist Performance Bot** pane you can see the following op
 
 * **Inspect now** – Inspects your app model on performance issues. 
 * **Limit to current  tab** – Limits the messages displayed in the pane to the current document.
+* **Export** – Exports the recommendations to a CSV file. Suppressed recommendations are excluded.
 * **Configuration** – Defines the modules and documents that the MxAssist Performance Bot will analyze. Click the **Configuration** button to open the **MxAssist Performance Bot Configuration** dialog box that contains the **App Model** and **Best Practice** tabs.
 
     * The **App Model** tab lists all relevant documents in your app. You can choose which specific modules or documents to inspect or leave out. 

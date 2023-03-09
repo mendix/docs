@@ -2,6 +2,10 @@
 title: "Published OData Resource"
 url: /refguide/published-odata-resource/
 tags: ["studio pro", "OData"]
+aliases:
+    - /refguide/published-odata-attribute
+#If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details. 
+
 ---
 
 ## 1 Introduction
@@ -52,17 +56,7 @@ Attributes of type **Binary** cannot be exported through OData services except f
 
 {{% /alert %}}
 
-### 3.1 Selecting Attributes as the Key {#select-attributes}
-
-You can select which attributes you would like to use as a key. Choose a combination of attributes that are never empty, do not change, and together uniquely identify the object. An autonumber attribute is a good choice for a key.
-
-{{% alert color="info" %}}
-Selecting a single attribute as a key was introduced in Studio Pro [9.17.0](/releasenotes/studio-pro/9.17/). Selecting multiple attributes as a key was introduced in Studio Pro [9.19.0](/releasenotes/studio-pro/9.19/).
-{{% /alert %}}
-
-To learn more about selecting attributes as keys, see the [Selecting an Attribute as a Key](/refguide/wrap-services-odata/#select-key) section of *Wrap Services, APIs, or Databases with OData*.
-
-### 3.2 Required Validation Rules for Published Attributes
+### 3.1 Required Validation Rules for Published Attributes
 
 For published OData services, the **Can be empty** check box appears when you edit a published attribute. 
 
@@ -96,11 +90,13 @@ It is possible to customize the name of the entity set that is displayed in the 
 
 Default: *{Entity name}s*
 
-## 6 Use Paging
+## 6 Use Paging {#paging}
 
 The **Use paging** option is used to set a maximum number of objects per response and include a link to the next set of objects. A client such as [Tableau](https://www.tableau.com) is able use this to display progress and automatically continue to follow the links until all the data is retrieved. The memory usage of the clients can be improved if paging is set to a reasonable page size.
 
 Default: *No*
+
+When set to **Yes**, select **Top supported** and **Skip supported** [query options](#query-options).
 
 Setting **Use paging** to **Yes** may result in inconsistency in the retrieved data because the data will not be retrieved in a single transaction. As an example, sorting on the **Age** attribute in an entity called **Customer** and retrieving customers set to 1000 objects per page. If a customer is deleted between two calls, then the customer with **Age** 23 at position 1001 then moves to position 1000. This means that the object that would be the first item on the second page is moved to the first page and is no longer retrieved. Similarly, data inserted between calls can result in a duplication of the data. This option should only be used when this kind of inconsistency is acceptable.
 
@@ -112,14 +108,25 @@ Default: *10000*
 
 ## 8 Key {#key}
 
-Every entity in Mendix has an [ID](/refguide/odata-representation/#id-representation) that is used internally to store the object in the database. However, this ID is not stable over time, since it can change in certain scenarios (such as data migration). Starting in Studio Pro [9.17](/releasenotes/studio-pro/9.17/), you can select which attribute to use as a unique [key](/refguide/published-odata-resource/#key) when exposing an entity as a Published OData Resource. The attribute type can be one of the following: 
+Every entity in Mendix has an [ID](/refguide/odata-representation/#id-representation) that is used internally to store the object in the database. However, this ID is not stable over time, since it can change in certain scenarios (such as data migration). That means that a published OData resource should not use the ID as a key, and needs to have a combination of attributes that form a key instead. The attribute(s) can be of type **Integer**, **Long**, **String**, or **AutoNumber**.
 
-* **Integer**
-* **Long**
-* **String**
-* **AutoNumber** 
+Select a combination of attributes with the following constraints:
 
-To learn more about selecting a key, unique see the [Key Selection](/refguide/wrap-services-odata/#select-key) section of *Wrap Services, APIs, or Databases with OData*.
+* Unique – The combination of key attributes should be unique, so each key points to exactly one object.
+* Required – If one of the key attribute values is empty, you cannot find an object with it anymore.
+* Stable over time – The attribute values used for the key should not change, so that you can find it again later.
+
+Having an [index](/refguide/indexes/) for the key attribute(s) makes retrieving objects by key perform better.
+
+You can set unique and required constraints using [validation rules](/refguide/validation-rules/).
+
+{{% alert color="info" %}}
+Selecting a single attribute as a key was introduced in Studio Pro [9.17.0](/releasenotes/studio-pro/9.17/). Selecting multiple attributes as a key was introduced in Studio Pro [9.19.0](/releasenotes/studio-pro/9.19/).
+{{% /alert %}}
+
+{{% alert color="info" %}}
+Selecting more than one attribute as the key is only available for published OData services that use OData version 4.
+{{% /alert %}}
 
 ## 9 Capabilities {#capabilities}
 
@@ -191,6 +198,12 @@ The *Deletable* capability was introduced in Studio Pro [9.13.0](/releasenotes/s
 
 ## 10 Query Options {#query-options}
 
-Select the options that you would like to include in each OData capability.
+Select the options to include for the **Readable** OData capability.
 
-* **Countable** – required for getting the total number of records
+* **Countable** – This option is required for getting the total number of records.
+* **Top supported** – This option indicates whether clients can specify that they want to retrieve only a limited number of items. Enable this option when [Use paging](#paging) is selected.
+* **Skip supported** – This option indicates whether clients can specify the number of items in the queried collection that are to be skipped and not included in the result. Enable this option when [Use paging](#paging) is selected.
+
+The **Top supported** and **skip supported** queries are required for pagination, when the server allows the client to request only a subset of the data and skips the first *n* objects. [Paging](#paging) occurs when the client requests a lot of data, and the server returns a subset and a link to request the rest.
+
+For more information, see the [System Query Option $top and $skip](https://www.odata.org/getting-started/basic-tutorial/#topskip) in the *Basic Tutorial* on OData.org

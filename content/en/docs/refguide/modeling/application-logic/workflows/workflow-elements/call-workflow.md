@@ -56,9 +56,9 @@ When a calling workflow or a called workflow changes a state, they may have impa
 
 ### 3.1 State of Calling Workflow When Called Workflow Changes Its State
 
-Usually state transition of a called workflow does not affect the calling workflow except for when the called workflow fails or is aborted. When the called workflow fails or is aborted, the calling workflow fails. 
-All other state changes of a called workflow do not affect the workflow.
+Usually state transition of a called workflow does not affect the calling workflow except for when the called workflow fails, is aborted or locked. When the called workflow fails or is aborted, the calling workflow fails. When the called workflow is [locked](/refguide/lock-workflow/), the calling workflow fails because calling workflow tries to call the locked workflow.
 
+All other state changes of a called workflow do not affect the workflow.
 
 ### 3.2 State of Called Workflow When Calling Workflow Changes Its State
 

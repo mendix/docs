@@ -1,5 +1,5 @@
 ---
-title: "XPath Week-from-DateTime"
+title: "XPath week-from-dateTime"
 url: /refguide/xpath-week-from-datetime/
 tags: ["studio pro"]
 ---
@@ -9,20 +9,46 @@ tags: ["studio pro"]
 The `week-from-dateTime()` function extracts the week number (in the year) from a **Date and time** attribute so it can be used to compare to a value. Values range from 1 to 53.
 
 {{% alert color="warning" %}}
-The value returned depends on which *database* is being used to support your Mendix app. It does *not* take into account the app runtime setting **First day of the week**.
+The value returned depends on which *database* is being used to support your Mendix app. It does NOT take into account the app runtime setting **First day of the week**.
 
 Many databases implement [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601), but please refer to the documentation for the database you are using to find the exact details.
 {{% /alert %}}
 
-## 2 Example
+## 2 Syntax
 
-This query returns all the logs where the date `DateAttribute` falls in the second week of the year (for example, "2011-01-13"):
+The syntax is as follows:
+
+```
+week-from-dateTime ( attribute [, timezone ] )
+```
+
+### 2.1 attribute
+
+`attribute` specifies the attribute to extract the day from. Attribute must be of the **Date and time** type.
+
+### 2.2 timezone
+
+{{% alert color="info" %}}
+The optional `timezone` parameter is available in [Studio Pro 9.22.0](/releasenotes/studio-pro/9.22/) and above. 
+{{% /alert %}}
+
+`timezone` specifies the time zone to use for the extraction. This parameter is optional and defaults to the local time zone. It should be a string literal containing an IANA time zone or `'UTC'`. GMT offset time zones are not supported.
+
+## 3 Examples
+
+This query returns all the logs where the date `DateAttribute` falls in the second week of the year in the local time zone (for example, "2011-01-13"):
 
 ```java {linenos=false}
 //Logging.Log[week-from-dateTime(DateAttribute) = 2]
 ```
 
-## 3 Read More
+This query returns all the logs where the date `DateAttribute` falls in the second week of the year in the New York time zone (for example, "2011-01-13"):
+
+```java {linenos=false}
+//Logging.Log[week-from-dateTime(DateAttribute, 'America/New_York') = 2]
+```
+
+## 4 Read More
 
 The following links are for the relevant documentation on how week number is calculated for a specific date for many of the databases used with Mendix.
 

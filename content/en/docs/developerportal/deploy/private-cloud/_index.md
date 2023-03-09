@@ -156,8 +156,6 @@ If your app is able to connect to the internet to contact the Mendix license ser
 
 If your app is **Connected** to the Developer Portal, you can enter the subscription secret [in the Developer Portal](/developerportal/deploy/private-cloud-deploy/#license-mendix)
 
-If your app is **Standalone**, then you will have to apply the subscription secret by [editing the CR](/developerportal/deploy/private-cloud-operator/#edit-cr) in the cluster.
+#### 4.4.2 Standalone & Offline Private Cloud Apps{#activate-offline}
 
-#### 4.4.2 Offline Private Cloud Apps{#activate-offline}
-
-If your app is unable to contact the Mendix license server, you will receive a **LicenseId** and a **LicenseKey**. You will have to apply these by [editing the CR](/developerportal/deploy/private-cloud-operator/#edit-cr) in the cluster.
+If your app is **Standalone** or unable to contact the Mendix license server, you will receive a **LicenseId** and a **LicenseKey**. You will have to apply these by [editing the CR](/developerportal/deploy/private-cloud-operator/#edit-cr) in the cluster.

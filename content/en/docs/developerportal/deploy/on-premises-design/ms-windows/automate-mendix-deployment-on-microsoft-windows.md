@@ -1,6 +1,7 @@
 ---
 title: "Automate Mendix Deployment on Microsoft Windows"
 url: /developerportal/deploy/automate-mendix-deployment-on-microsoft-windows/
+linktitle: "Automate Mendix Deployment"
 description: "How to automate Mendix deployment on servers running Windows"
 weight: 5
 tags: ["deploy", "Windows", "Mendix Service Console", "Microsoft", "CI/CD pipeline", "cmdlets"]
@@ -19,7 +20,7 @@ Before starting this how-to, make sure you complete the following prerequisites:
 * Ensure that your Windows Service Console version is 4.3 or above.
 * Familiarize yourself with the update process for Mendix apps running on Windows. For more information, see [MS Windows: Update a Mendix App](/developerportal/deploy/updating-a-mendix-application/).
 
-## 3 Importing Mendix-specific Cmdlets into Windows PowerShell
+## 3 Importing Mendix-Specific Cmdlets into Windows PowerShell
 
 To install Mendix-specific cmdlets that you can use to script your app deployment, follow these steps:
 
@@ -144,6 +145,7 @@ To solve this issue, follow these steps:
     </startup> 
     </configuration> 
     ```
+
 With the above configuration, PowerShell primarily uses .NET version 4, but also supports the version that it previously used, for example, version 2.
 
 ### 5.2 Could Not Load File or Assembly System.Management.Automation
@@ -174,6 +176,7 @@ At line:1 char:1
     + CategoryInfo          : InvalidOperation: (App1:String) [Start-MxApp], InvalidOperationException
     + FullyQualifiedErrorId : AppProcessError,Mendix.Service.Commands.StartAppCommand
 ```
+
 #### 5.3.1 Cause
 
 PowerShell is run without administrator privileges.
@@ -182,13 +185,14 @@ PowerShell is run without administrator privileges.
 
 Run PowerShell as an administrator.
 
-### 5.4 Could not load file or assembly Mendix.Service
+### 5.4 Could Not Load File or Assembly Mendix.Service
 
 PowerShell shows an error message similar to the following:
 
 ```text {linenos=false}
 Start-MxApp: Could not load file or assembly 'Mendix.Service, Version=4.7.0.0, Culture=neutral, PublicKeyToken=null'. Het systeem kan het opgegeven bestand niet vinden.
 ```
+
 #### 5.4.1 Cause
 
 You ran the `Start-MxApp` cmdlet in a version of PowerShell other than 5.1.
@@ -197,7 +201,7 @@ You ran the `Start-MxApp` cmdlet in a version of PowerShell other than 5.1.
 
 Use Windows PowerShell 5.1 to run Mendix cmdlets. Other versions of PowerShell are currently not supported.
 
-### 5.5 Unable to start the app. Reason: The database does not exist
+### 5.5 Unable to Start the App. Reason: The Database Does Not Exist
 
 When you run the `Start-MxApp $APP_NAME` or `Start-MxApp $APP_NAME -synchronizedatabase` cmdlets, PowerShell shows an error message similar to the following:
 
@@ -209,6 +213,7 @@ At line:1 char:1
 + CategoryInfo : InvalidOperation: (MyFirstApp:String) [Start-MxApp], Exception 
 + FullyQualifiedErrorId : AppProcessError,Mendix.Service.Commands.StartAppCommand
 ```
+
 #### 5.5.1 Cause
 
 You tried to start the app without first creating the app database.
@@ -217,7 +222,7 @@ You tried to start the app without first creating the app database.
 
 Deploy your app manually before you running automated deployment scripts. For more information, see [Microsoft Windows](/developerportal/deploy/deploy-mendix-on-microsoft-windows/).
 
-### 5.6 Unable to start the app. Reason: The database is not synchronized with the model
+### 5.6 Unable to Start the App. Reason: The Database Is Not Synchronized with the Model
 
 When you run the `Start-MxApp $APP_NAME` cmdlet, PowerShell shows an error message similar to the following:
 

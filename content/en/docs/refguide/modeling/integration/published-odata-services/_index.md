@@ -100,7 +100,11 @@ Select whether clients need to authenticate or not. Select **No** to allow acces
 
 Even when you choose **Yes**, you can still expose OData resources to anonymous users. For detailed information on allowing anonymous users, see [Anonymous User Role](/refguide/anonymous-users/).
 
-#### 3.3.2 Authentication Methods
+{{% alert color="info" %}}
+The **Authentication** section of a published OData service is only visible when you have enabled [app security](/refguide/app-security/).
+{{% /alert %}}
+
+#### 3.3.2 Authentication Methods {#authentication-methods}
 
 If authentication is required, you can select which authentication methods you would like to support.
 
@@ -148,6 +152,15 @@ There are three possible outcomes of the authentication microflow:
 * When the status code of the HttpResponse parameter is set to something other then **200**, this value is returned and the operation will not be executed
 * When the resulting User is not empty, the operation is executed in the context of that user
 * When the resulting User is empty, the next authentication method is attempted (when there are no other authentication methods, the result is **404 Not Found**)
+
+###### 3.3.2.3.1 Mendix SSO {#authentication-mendix-sso}
+
+You can configure a published OData service to authenticate with the [Mendix SSO](/appstore/modules/mendix-sso/) module. This is a form of [Custom](#authentication-microflow) authentication.
+
+To set up authentication with Mendix SSO, do the following:
+
+1. Ensure that the [Mendix SSO](/appstore/modules/mendix-sso/) module has been installed and configured in your app.
+2. In the published OData service, choose **Custom** authentication and select the **AuthorizeRequestWithAccessTokenFrom Request** microflow.
 
 #### 3.3.3 Allowed Roles
 

@@ -5,11 +5,32 @@ weight: 97
 #When updating, remember to update the Latest Mendix Releases file
 ---
 
+## 4.72.0 {#472}
+
+**Release date: February 21st, 2023**
+
+* We added support for Mendix [9.23.0](/releasenotes/studio-pro/9/).
+* We added support for Mendix Metamodel [9.23.0](/releasenotes/sdk/metamodel-9.23/).
+
+## 4.71.0 {#471}
+
+**Release date: January 25th, 2023**
+
+* We added support for Mendix [9.22.0](/releasenotes/studio-pro/9.22/).
+* We added support for Mendix Metamodel [9.22.0](/releasenotes/sdk/metamodel-9.22/).
+
+## 4.70.0 {#470}
+
+**Release date: December 13th, 2022**
+
+* We added support for Mendix [9.21.0](/releasenotes/studio-pro/9.21/).
+* We added support for Mendix Metamodel [9.21.0](/releasenotes/sdk/metamodel-9.21/).
+
 ## 4.69.0 {#469}
 
 **Release date: November 18th, 2022**
 
-* We added support for Mendix [9.20.0](/releasenotes/studio-pro/9/).
+* We added support for Mendix [9.20.0](/releasenotes/studio-pro/9.20/).
 * We added support for Mendix Metamodel [9.20.0](/releasenotes/sdk/metamodel-9.20/).
 
 ## 4.68.0 {#468}
@@ -17,7 +38,7 @@ weight: 97
 **Release date: October 19th, 2022**
 
 * We added support for Mendix [9.19.0](/releasenotes/studio-pro/9.19/).
-* We added support for Mendix Metamodel [9.19.0](/releasenotes/sdk/metamodel-9.19/)
+* We added support for Mendix Metamodel [9.19.0](/releasenotes/sdk/metamodel-9.19/).
 
 ## 4.67.0 {#467}
 

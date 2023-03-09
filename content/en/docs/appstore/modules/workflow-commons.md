@@ -22,6 +22,8 @@ This module allows Mendix developers with little or no experience in building wo
 * Attachments layer on top of workflows
 * Comments section to use with workflows
 
+{{% alert color="info" %}}For Workflow Commons version 2.4.0 and above, attachments are (an optional) part of comments. This means that the WorkflowAttachment entity is associated with the WorkflowComment entity. Security settings for the WorkflowAttachment entity are based on the workflows in which a user is involved, since the context of a specific workflow is not known in advance in Workflow Commons. If you would like to set custom security for attachments, you need to configure the attachment entity in your domain model and associate it with the Workflow Context entity of the workflow. {{% /alert %}}
+
 ### 1.3 Prerequisites
 
 As workflows are only available from Mendix 9 version, Workflow Commons requires Mendix 9.0.5 and above.
@@ -80,16 +82,16 @@ If you would like to customize page templates, you can do that with the help of 
 Preconfigured microflows help you assigning user tasks, and one allows you to abort workflows.
 You can find the following microflows in Workflow Commons:
 
-*   **ACT_UserTask_AssignToMe** – Assigns a user task, which is passed as a parameter, and assigns it to the current user.
-*   **ACT_UserTask_AssignToUser** – Assigns a user task to a specified user, both passed as parameters.
-*   **ACT_UserTask_Unassign** – Removes the assignee from a user task, which is passed as a parameter.
-*   **ACT_Workflow_Abort** – Aborts a workflow instance and all of its currently running user tasks. The workflow instance is passed in as a parameter.
-*   **ACT_Workflow_Continue** – Continues processing of a workflow instance from the point where it was before a new version of the workflow definition was deployed. The workflow instance is passed in as a parameter.
-*   **ACT_Workflow_JumpTo** – Shows a list of activities the workflow can jump to. After selecting the activity, changes will be applied to the workflow instance. 
-*   **ACT_Workflow_Pause** – Pauses processing of a workflow instance. The workflow instance is passed in as a parameter.
-*   **ACT_Workflow_Restart** – Stops the current task of the workflow and starts it from the initial task in the workflow definition. The workflow instance is passed in as a parameter.
-*   **ACT_Workflow_Retry** – Retries a failed workflow from the failed activity to check whether the workflow can get back into the in-progress state. The workflow instance is passed in as a parameter.
-*   **ACT_Workflow_Resume** – Resumes the workflow after it has been paused. The workflow instance is passed in as a parameter.
+* **ACT_UserTask_AssignToMe** – Assigns a user task, which is passed as a parameter, and assigns it to the current user.
+* **ACT_UserTask_AssignToUser** – Assigns a user task to a specified user, both passed as parameters.
+* **ACT_UserTask_Unassign** – Removes the assignee from a user task, which is passed as a parameter.
+* **ACT_Workflow_Abort** – Aborts a workflow instance and all of its currently running user tasks. The workflow instance is passed in as a parameter.
+* **ACT_Workflow_Continue** – Continues processing of a workflow instance from the point where it was before a new version of the workflow definition was deployed. The workflow instance is passed in as a parameter.
+* **ACT_Workflow_JumpTo** – Shows a list of activities the workflow can jump to. After selecting the activity, changes will be applied to the workflow instance. 
+* **ACT_Workflow_Pause** – Pauses processing of a workflow instance. The workflow instance is passed in as a parameter.
+* **ACT_Workflow_Restart** – Stops the current task of the workflow and starts it from the initial task in the workflow definition. The workflow instance is passed in as a parameter.
+* **ACT_Workflow_Retry** – Retries a failed workflow from the failed activity to check whether the workflow can get back into the in-progress state. The workflow instance is passed in as a parameter.
+* **ACT_Workflow_Resume** – Resumes the workflow after it has been paused. The workflow instance is passed in as a parameter.
 
 ## 4 Configuration
 

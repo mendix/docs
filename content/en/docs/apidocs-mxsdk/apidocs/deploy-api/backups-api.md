@@ -7,7 +7,7 @@ weight: 10
 
 ## 1 Introduction
 
-The **Backups API V2** allows you to manage backups of the data in your app hosted in the Mendix Cloud V4.
+The **Backups API V2** allows you to manage backups of the data in your app hosted in the Mendix Cloud.
 
 If you want to download a backup of your data, you need to perform three steps:
 
@@ -22,10 +22,6 @@ Database **archives** are a zip file which contains all the data in the snapshot
 You cannot currently upload an archive through this API. This function is currently only supported via the [Developer Portal](/developerportal/operate/backups/). However, you can use this API to restore data from an existing environment snapshot.
 
 V2 of this API is focused on working with snapshots and archives asynchronously, as these can be very long-running tasks for large quantities of data. The [older V1 API](/apidocs-mxsdk/apidocs/backups-api-v1/), in contrast, works synchronously. 
-
-{{% alert color="info" %}}
-This article is only applicable to applications deployed in **Mendix Cloud V4**. You can check which version of the Mendix Cloud you are using in the [Developer Portal](/developerportal/deploy/environments-details/).
-{{% /alert %}}
 
 ## 2 Authentication
 
@@ -81,7 +77,7 @@ An object with the following key-value pairs:
 | HTTP Status | Error code | Description |
 | --- | --- | --- |
 | 400 | INVALID_PARAMETERS | Not enough parameters given. Please set project_id and environment_id parameters. |
-| 400 | NOT_SUPPORTED | This endpoint can only be used with Mendix Cloud V4 |
+| 400 | NOT_SUPPORTED | This endpoint can only be used with the Mendix Cloud |
 | 403 | NO_ACCESS | The user does not have access to the backups of this environment. |
 | 404 | ENVIRONMENT_NOT_FOUND | Environment not found. |
 | 500 | SNAPSHOT_LISTING_FAILED | An error occurred while listing the backups. Please contact Support. |
@@ -178,7 +174,7 @@ A JSON object with the following key-value pairs:
 | HTTP Status | Error code | Description |
 | --- | --- | --- |
 | 400 | INVALID_PARAMETERS | Not enough parameters given. Please set project_id and environment_id parameters. |
-| 400 | NOT_SUPPORTED | This endpoint can only be used with Mendix Cloud V4 |
+| 400 | NOT_SUPPORTED | This endpoint can only be used with the Mendix Cloud |
 | 400 | ENVIRONMENT_BUSY | Environment is busy, please try again later or contact Support for assistance.|
 | 400 | INVALID_STATE | Failed to create a backup. There is currently a maintenance action in progress. Please wait until that is finished. |
 | 403 | NO_ACCESS | The user does not have access to the backups of this environment. |
@@ -251,7 +247,7 @@ An object with the following key-value pairs:
 | HTTP Status | Error code | Description |
 | --- | --- | --- |
 | 400 | INVALID_PARAMETERS | Not enough parameters given. Please set project_id and environment_id parameters. |
-| 400 | NOT_SUPPORTED | This endpoint can only be used with Mendix Cloud V4 |
+| 400 | NOT_SUPPORTED | This endpoint can only be used with the Mendix Cloud |
 | 403 | NO_ACCESS | The user does not have access to the backups of this environment. |
 | 404 | ENVIRONMENT_NOT_FOUND | Environment not found. |
 | 404 | NOT_FOUND | Snapshot not found. |
@@ -326,7 +322,7 @@ An object with the following key-value pairs:
 | HTTP Status | Error code | Description |
 | --- | --- | --- |
 | 400 | INVALID_PARAMETERS | Not enough parameters given. Please set project_id and environment_id parameters. |
-| 400 | NOT_SUPPORTED | This endpoint can only be used with Mendix Cloud V4 |
+| 400 | NOT_SUPPORTED | This endpoint can only be used with the Mendix Cloud |
 | 400 | UNSUPPORTED | Unsupported data_type |
 | 403 | NO_ACCESS | The user does not have access to the backups of this environment. |
 | 404 | ENVIRONMENT_NOT_FOUND | Environment not found. |
@@ -400,7 +396,7 @@ An object with the following key-value pairs:
 | HTTP Status | Error code | Description |
 | --- | --- | --- |
 | 400 | INVALID_PARAMETERS | Not enough parameters given. Please set project_id and environment_id parameters. |
-| 400 | NOT_SUPPORTED | This endpoint can only be used with Mendix Cloud V4 |
+| 400 | NOT_SUPPORTED | This endpoint can only be used with the Mendix Cloud |
 | 403 | NO_ACCESS | The user does not have access to the backups of this environment. |
 | 404 | ENVIRONMENT_NOT_FOUND | Environment not found. |
 | 404 | NOT_FOUND | Snapshot not found. |
@@ -482,7 +478,7 @@ An object with the following key-value pairs:
 | HTTP Status | Error code | Description |
 | --- | --- | --- |
 | 400 | INVALID_PARAMETERS | Not enough parameters given. Please set project_id and environment_id parameters. |
-| 400 | NOT_SUPPORTED | This endpoint can only be used with Mendix Cloud V4 |
+| 400 | NOT_SUPPORTED | This endpoint can only be used with the Mendix Cloud |
 | 403 | NO_ACCESS | The user does not have access to the backups of this environment. |
 | 404 | ENVIRONMENT_NOT_FOUND | Environment not found. |
 | 404 | NOT_FOUND | Snapshot not found. |
@@ -542,7 +538,7 @@ Mendix-ApiKey:  26587896-1cef-4483-accf-ad304e2673d6
 | HTTP Status | Error code | Description |
 | --- | --- | --- |
 | 400 | INVALID_PARAMETERS | Not enough parameters given. Please set project_id and environment_id parameters. |
-| 400 | NOT_SUPPORTED | This endpoint can only be used with Mendix Cloud V4 |
+| 400 | NOT_SUPPORTED | This endpoint can only be used with the Mendix Cloud |
 | 403 | NO_ACCESS | The user does not have access to the backups of this environment. |
 | 404 | ENVIRONMENT_NOT_FOUND | Environment not found. |
 | 500 | SERVICE_UNAVAILABLE | Operation failed. Please try again later or contact Support if the problem persists. |
@@ -555,7 +551,7 @@ No content is returned when a backup has been successfully removed.
 
 #### 3.8.1 Description
 
-Restore a previously created backup snapshot to an environment. The environment to which the data will be restored must be stopped before using this call. The response of a successful call contains the details of the request. This call is only available for Mendix Cloud v4 applications. Please note that the `source_snapshot_id` can be a snapshot created for a different environment, similar to the "restore into" functionality in the Developer Portal.
+Restore a previously created backup snapshot to an environment. The environment to which the data will be restored must be stopped before using this call. The response of a successful call contains the details of the request. This call is only available for Mendix Cloud applications. Please note that the `source_snapshot_id` can be a snapshot created for a different environment, similar to the "restore into" functionality in the Developer Portal.
 
 ```bash
 HTTP Method: POST
@@ -616,7 +612,7 @@ An object with the following key-value pairs:
 | HTTP Status | Error code | Description |
 | --- | --- | --- |
 | 400 | INVALID_PARAMETERS | Not enough parameters given. Please set project_id and environment_id parameters. |
-| 400 | NOT_SUPPORTED | This endpoint can only be used with Mendix Cloud V4 |
+| 400 | NOT_SUPPORTED | This endpoint can only be used with the Mendix Cloud |
 | 400 | NOT_FOUND | Source snapshot not found |
 | 400 | INVALID_STATE | Failed to restore a backup. There is currently a maintenance action in progress. Please wait until that is finished. |
 | 400 | ERROR_NOT_ALLOWED | Not allowed to restore backups. |
@@ -692,7 +688,7 @@ An object with the following key-value pairs:
 | HTTP Status | Error code | Description |
 | --- | --- | --- |
 | 400 | INVALID_PARAMETERS | Not enough parameters given. Please set project_id and environment_id parameters. |
-| 400 | NOT_SUPPORTED | This endpoint can only be used with Mendix Cloud V4 |
+| 400 | NOT_SUPPORTED | This endpoint can only be used with the Mendix Cloud |
 | 400 | NOT_FOUND | Restore not found |
 | 403 | NO_ACCESS | The user does not have access to the backups of this environment. |
 | 404 | ENVIRONMENT_NOT_FOUND | Environment not found. |

@@ -196,7 +196,7 @@ Prior to Mendix 9.6 tasks were always executed in a system context, even if the 
 In case where **Apply entity access** is set to *true*, the following rules apply:
 
 * When a user is logged in, the task will be executed in a new context for the same named user. This context will be the same as if the user is logged in. 
-* When no user is logged in, the task will be executed in a new anonymous context. This context will be for a new anonymous user with the same language and timezone as the original user.
+* When no user is logged in, the task will be executed in a new anonymous context. This context will be for a new anonymous user with the same language and time zone as the original user.
 
 There is one exception to the above rules:
 
@@ -313,4 +313,3 @@ The **Task Queue** supersedes the earlier [Process Queue](/appstore/modules/proc
 
 * The **Task Queue** supports a multi-node cluster setup and can therefore be used in a horizontally scaled environment.
 * The **Task Queue** does not require additional entities to be created, since Microflows or Java actions can simply be marked to execute in the background.
-* The **Task Queue** does not yet support automatic retrying of failed tasks.

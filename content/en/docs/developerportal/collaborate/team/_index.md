@@ -2,7 +2,7 @@
 title: "Team"
 url: /developerportal/collaborate/team/
 category: "Collaboration"
-weight: 4
+weight: 5
 description: "Describes the Team page of the Developer Portal."
 tags: ["Team", "Developer Portal"]
 #To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
@@ -21,18 +21,19 @@ To view and manage your team members, follow these steps:
 
 Only the following roles can manage the app team: [Scrum Master](/developerportal/collaborate/app-roles/#team-roles), [Mendix Admin](/developerportal/control-center/), or a [custom role](/developerportal/collaborate/app-roles/#team-roles) with  the **App Settings** permission.
 
-{{< figure src="/attachments/developerportal/collaborate/team/team.jpg" >}}
+{{< figure src="/attachments/developerportal/collaborate/team/team.png" >}}
 
-On this page, you can do the following:
+On the **Overview** tab, you can do the following:
 
 * Select a new **Role** for a team member (for details on available roles, see [App Roles](/developerportal/collaborate/app-roles/))
-* Click **Remove Member** to remove a user from the team
-* Click **Invite member** to invite a new user to the team (for more information, see the [Inviting Team Members](#inviting) section below)
-* Click **Role settings** to view and edit the permissions for the team roles (clicking **Security Guide** in the **Role** dialog box will present useful information for configuring roles)
+* Click **Remove** to remove a user from the team
+* Click **Invite New Member** to invite a new user to the team (for more information, see the [Inviting Team Members](#inviting) section below)
 
-    {{< figure src="/attachments/developerportal/collaborate/team/role-settings.png"   width="400"  >}}
+Navigate to the **Role Settings** tab to view and edit permissions for the team roles as well as to **Add New Role**:
 
-* Click **Change log** to view the change log for the team and [node permissions](/developerportal/deploy/node-permissions/)
+{{< figure src="/attachments/developerportal/collaborate/team/role-settings.png"   width="400"  >}}
+
+Navigate to the **History** tab to view the history of changes for the team and [node permissions](/developerportal/deploy/node-permissions/).
 
 ## 3 Inviting Team Members {#inviting}
 
@@ -40,7 +41,8 @@ To invite new team members, follow these steps:
 
 1. Click **Invite Member** on the **Team** page or the **+** icon next to the team in the [app Buzz](/developerportal/collaborate/buzz/#app-buzz).
 2. Enter the email address for the Mendix user(s) you want to invite to the team.
-3. Confirm the invitation(s).
+3. Select an **Access Role** for the new member and click **Add**.
+4. Send the invitation(s).
 
 ## 4 Read More
 

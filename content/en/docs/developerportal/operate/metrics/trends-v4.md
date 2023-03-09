@@ -1,9 +1,9 @@
 ---
-title: "Trends in Mendix Cloud v4"
+title: "Trends in the Mendix Cloud"
 url: /developerportal/operate/trends-v4/
 weight: 10
-description: "Describes how to interpret various graphs and trends in the Mendix Cloud v4."
-tags: ["Trends","v4","Mendix Cloud","Developer Portal"]
+description: "Describes how to interpret various graphs and trends in the Mendix Cloud."
+tags: ["Trends","Mendix Cloud","Developer Portal"]
 #To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 #Please do not rename the anchors in this document as they are used in links from the Developer Portal.
@@ -12,12 +12,6 @@ tags: ["Trends","v4","Mendix Cloud","Developer Portal"]
 ## 1 Introduction
 
 To track the usage growth of your app, and to debug performance problems, the Mendix Cloud includes detailed graphs of both your app and its environment. These graphs show performance trends of your apps in the paid editions of the Mendix Cloud. If you experience issues with your app, always check the **Alerts** and **Trends** in the **Developer Portal**.
-
-{{% alert color="info" %}}
-This document describes the trends graphs available in Mendix Cloud v4. If your app is deployed to the deprecated Mendix Cloud v3, please refer to [Trends in Mendix Cloud v3](/developerportal/operate/trends/).
-
-If you don't know which Mendix Cloud version you are using, you can find out by following the instructions in [Cloud Version and Region in the Mendix Cloud](/developerportal/deploy/cloud-version-region/).
-{{% /alert %}}
 
 ## 2 Access to Monitoring Trends
 
@@ -99,17 +93,7 @@ Request Type | Explanation
 
 Additional information about request handlers is available in the *Requests* section of [Monitoring Mendix Runtime](/refguide/monitoring-mendix-runtime/#request-handlers) and the *Applying Access Restrictions to Unnecessary Request Handlers* section of [How To Implement Best Practices for App Security](/howto/security/best-practices-security/#request-handlers).
 
-### 4.2 Object Cache{#Trends-appmxruntimecache}
-
-In the **Object cache** graph you can monitor the number of Mendix Objects that live in memory.
-
-{{% alert color="info" %}}
-This metric is only available for apps built with Mendix versions 6 and below. Mendix versions 7 and above use a stateless runtime and so have no object cache. See the [Mendix 7.0 Release Notes](/releasenotes/studio-pro/7.0/) for more information.
-{{% /alert %}}
-
-Non-persistable entities live in the JVM memory and are garbage-collected regularly. If you have a memory leak, the number of objects in memory will grow over time. This might be a problem.
-
-### 4.3 User Accounts and Login Sessions{#Trends-appmxruntimesessions}
+### 4.2 User Accounts and Login Sessions{#Trends-appmxruntimesessions}
 
 The **User Accounts and Login Sessions** graph shows the number of logged-in named and anonymous user sessions for your application.
 
@@ -123,7 +107,7 @@ User Type | Explanation
 **concurrent named user sessions** | Total number of sessions for users using a named login. 
 **concurrent anonymous user sessions** | Total number of sessions for users who are signing in anonymously. 
 
-### 4.4 JVM Object Heap{#Trends-appmxruntimejvmheap}
+### 4.3 JVM Object Heap{#Trends-appmxruntimejvmheap}
 
 The **JVM Object Heap** graph shows the internal distribution of allocated memory inside the application process for *Java* objects. Java objects are created in Java actions, but also include all objects that are used by microflows running in your app at runtime.
 
@@ -142,7 +126,7 @@ Object Type | Explanation
 
 For example, if the **tenured generation** is shown as 65% of the complete heap size, this may change to 0% if a garbage collection is triggered when the percentage reaches two thirds of the total heap size. However, it could stay at this 65% if all data in this memory part is still referenced by running actions in the application. This behavior means that the JVM heap memory graphs are the most difficult to base conclusions on.
 
-### 4.5 JVM Process Memory Usage{#Trends-appmxruntimejvmprocessmemory}
+### 4.4 JVM Process Memory Usage{#Trends-appmxruntimejvmprocessmemory}
 
 This **JVM Process Memory Usage** graph is similar to the previous graph, *JVM Object Heap*. It shows a more complete view of the actual size and composition of the operating system memory that is in use by the JVM process.
 
@@ -167,7 +151,7 @@ Type | Explanation
 **other** | Virtual or reserved memory space.
 **thread stacks** | Stacks that are reserved for unique threads.
 
-### 4.6 Application Node Operating System Memory{#Trends-appmemory}
+### 4.5 Application Node Operating System Memory{#Trends-appmemory}
 
 The **Application node operating system memory** graph shows the distribution of operating system memory that is available for this server.
 
@@ -175,7 +159,7 @@ The **Application node operating system memory** graph shows the distribution of
 
 Performance issues can arise if the apps memory takes up too large a proportion of the operating system memory.
 
-### 4.7 Threadpool for Handling External Requests{#Trends-appm2eeserverthreadpool}
+### 4.6 Threadpool for Handling External Requests{#Trends-appm2eeserverthreadpool}
 
 The **Threadpool for handling external requests** graph shows the number of concurrent requests that are being handled by the Mendix Runtime. The requests are counted in two circumstances:
 
@@ -195,7 +179,7 @@ Value | Explanation
 **active threads** | Active threads that are being used within the Jetty threadpool.
 **threadpool size** | The current total size of the Jetty threadpool.
 
-### 4.8 Total Number of Threads in the JVM Process{#Trends-appmxruntimethreads}
+### 4.7 Total Number of Threads in the JVM Process{#Trends-appmxruntimethreads}
 
 The **Total Number of Threads in the JVM Process** graph shows the total number of threads that exist inside the running JVM process.
 
@@ -203,7 +187,7 @@ The **Total Number of Threads in the JVM Process** graph shows the total number 
 
 Besides the threadpool that is used for *external* HTTP requests, described above, this includes the threadpool used for database connections, internal processes inside the Mendix Runtime, and optional extra threads created by the application itself, for example, using a threadpool in a custom module or custom Java code.
 
-### 4.9 Application Node CPU Usage{#Trends-appcpu}
+### 4.8 Application Node CPU Usage{#Trends-appcpu}
 
 The **Application node CPU usage** graph shows the CPU utilization in percentage.
 
@@ -221,7 +205,7 @@ If your app consistently uses more CPU than specified for your container your ap
 
 Your app will always have access to at least the amount of CPU specified for your container when it needs it.
 
-### 4.10 Application Node Disk Usage in Percentage (%){#Trends-appdf}
+### 4.9 Application Node Disk Usage in Percentage (%){#Trends-appdf}
 
 The **Application node disk usage (percentage)** graph shows the relative amounts of data that are stored on disk.
 
@@ -231,13 +215,13 @@ This graph should be interpreted in combination with other graphs. See [Combinin
 
 The disk usage graph shows only the disk usage inside the container. This is usually only relevant if your application creates a lot of temporary files in `/tmp`. This value is not the same as the file document storage.
 
-### 4.11 Application Number of Files{#Trends-appnumberoffiles}
+### 4.10 Application Number of Files{#Trends-appnumberoffiles}
 
 The **Application Number of Files** graph shows the number of files created by entities which are based on `FileDocument` generalizations, that are stored in S3 file storage.
 
 {{< figure src="/attachments/developerportal/operate/metrics/trends-v4/app-number-of-files.png" >}}
 
-### 4.12 Application Size of Files (in bytes){#Trends-appsizeoffiles}
+### 4.11 Application Size of Files (in bytes){#Trends-appsizeoffiles}
 
 {{% alert type="info" %}}
 This metric was added on 21 January 2022 in release [4.25.0](https://github.com/mendix/cf-mendix-buildpack/releases/tag/v4.25.0) of the Cloud Foundry Mendix Buildpack. The data will only be visible once you deploy your Mendix app after that date. Before you redeploy, the graph will show **No Data Available**. After the deployment, data will only be shown on the graph from that date onward.
@@ -320,9 +304,9 @@ You will not see this if you are using the [Basic License](/developerportal/depl
 
 {{< figure src="/attachments/developerportal/operate/metrics/trends-v4/no-db-connections.png" >}}
 
-The number of connections will go up and down with the usage of the application.
+The number of connections will go up and down with the usage of the application. The database can reuse open connections and will not open more connections than it needs.
 
-The standard configuration sets a maximum of 50 connections per instance. The graph displays the total number of connections for all instances in a multi-instance scaled runtime.
+The standard configuration sets a maximum of 50 connections per instance. You can change this through [The Number of Database Connections](/refguide/tricky-custom-runtime-settings/#num-connections) described in *Advanced Custom Settings in Mendix Runtime*. The graph displays the total number of connections for all instances in a multi-instance scaled runtime. 
 
 ### 5.5 Database Node Operating System Memory{#Trends-dbmemory}
 
@@ -367,11 +351,13 @@ You will not see this if you are using the [Basic License](/developerportal/depl
 {{< figure src="/attachments/developerportal/operate/metrics/trends-v4/db-disk-throughput.png" >}}
 
 If you see large values here which do not immediately drop back again, it may indicate that your app is continually swapping data to disk. This could be caused by inefficient queries, for example ones which require sorting within the app.
-<a name="Trends-dbdf"></a>
+<a id="Trends-dbdf"></a>
 
 ### 5.8 Database Node Disk Usage (in Bytes){#Trends-dbdfabs}
 
 The **Database node disk usage (in bytes)** graph displays both used storage (the absolute amount of data that is stored on disk), and free space (the remaining space on the database node). When hovering over the graph, you will also see the total size of your database.
+
+The value for used storage also includes space which is used to store transaction logs. These are required to maintain the integrity of the database. Although limits are set to keep the transaction logs to a minimum, storage used by the transaction logs can sometimes exceed 2GiB. 
 
 {{% alert color="info" %}}
 You will not see this if you are using the [Basic License](/developerportal/deploy/basic-package/) as you are using a private schema on a shared database server.
@@ -379,10 +365,6 @@ You will not see this if you are using the [Basic License](/developerportal/depl
 
 {{% alert color="info" %}}
 The units on the graph are mebibytes. One gibibyte is 1024 mebibytes, so if the total storage of your database is 10 GiB, it is 10240 MiB, and will appear like this on the graph.
-{{% /alert %}}
-
-{{% alert color="info" %}}
-The used storage metric was added in September 2020. The used storage metric will not be present on graphs for times before September 2020. When hovering over the graph for times before September 2020, the value will be shown as "NaN". This is normal.
 {{% /alert %}}
 
 {{< figure src="/attachments/developerportal/operate/metrics/trends-v4/db-disk-usage-bytes.png" >}}
@@ -437,7 +419,7 @@ The **Database IOPS burst balance** graph shows the number of IOPS credits accru
 
 {{< figure src="/attachments/developerportal/operate/metrics/trends-v4/db-burst-balance.png" >}}
 
-Apps running on Mendix Cloud V4 use AWS databases to store their data. These databases are **burstable**, which means that it has a specified performance baseline. See the AWS document [Overview of Monitoring Amazon RDS](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/MonitoringOverview.html) for more information.
+Apps running on the Mendix Cloud use AWS databases to store their data. These databases are **burstable**, which means that it has a specified performance baseline. See the AWS document [Overview of Monitoring Amazon RDS](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/MonitoringOverview.html) for more information.
 
 Burstable performance means that if you use fewer IOPS than is required for baseline performance (such as when it is idle), the unspent IOPS credits are accrued until they reach a maximum. If a burstable performance instance needs to burst above the baseline performance level, it spends the accrued credits. The more credits that a burstable performance instance has accrued, the more time it can burst beyond its baseline when more performance is needed.
 
@@ -451,7 +433,6 @@ For more information, see the *AWS Database blog* [Understanding Burst vs. Basel
 
 * [Alerts](/developerportal/operate/monitoring-application-health/)
 * [Maintenance Windows: Configuration](/developerportal/deploy/maintenance-windows/)
-* [Migrate to Mendix Cloud v4](/developerportal/deploy/migrating-to-v4/)
 * [How to Receive Environment Status Alerts](/developerportal/operate/receive-alerts/)
-* [Cloud Version and Region in the Mendix Cloud](/developerportal/deploy/cloud-version-region/)
-* [Mendix Cloud v4 - FAQ](/developerportal/deploy/mxcloudv4/)
+* [Mendix Cloud Region](/developerportal/deploy/cloud-version-region/)
+* [Mendix Cloud - FAQ](/developerportal/deploy/mxcloudv4/)

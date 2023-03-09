@@ -1,5 +1,5 @@
 ---
-title: "Air-gapped Installation of Tekton CI/CD for Mendix for Private Cloud"
+title: "Air-Gapped Installation of Tekton CI/CD for Mendix for Private Cloud"
 linktitle: "Air-gapped Tekton Installation"
 url: /developerportal/deploy/private-cloud-tekton-airgapped/
 description: "Describes how to use Tekton to create a CI/CD solution for Mendix environments in the Private Cloud"
@@ -24,7 +24,7 @@ Please read [CI/CD for Mendix for Private Cloud using Tekton](/developerportal/d
 All commands used in this document should be executed in a Bash (or bash-compatible) terminal.
 {{% /alert %}}
 
-## 2 Preparation for Air-gapped Environments{#preparation}
+## 2 Preparation for Air-Gapped Environments {#preparation}
 
 To install Tekton and your CI/CD Pipeline in air-gapped environment you need to provision a list of images in your registry. Mendix has created a tool, **aip**, to perform this on different operating systems. You will need to download it using one of the following links:
 
@@ -71,7 +71,7 @@ You will now need to create the repositories listed by the command above. The co
 {{% alert color="info" %}}
 Some registries cannot support complex repository addresses such as `my.registry.com/tekton-releases/github.com/tektoncd/pipeline/cmd/webhook:v0.26.0` and you may have to use a simpler format such as `my.registry.com/tekton/webhook:v0.26.0`. You will then need to update the `state.json` file (in your current directory) which is used by aip to push information to your repositories.
 
-You will need to update the `destination: ` value for each of the repositories as shown below:
+You will need to update the `destination:` value for each of the repositories as shown below:
 
 ```json {linenos=table,hl_lines=[6],linenostart=22}
 …
@@ -83,6 +83,7 @@ You will need to update the `destination: ` value for each of the repositories a
 },
 …
 ```
+
 {{% /alert %}}
 
 ```bash
@@ -132,7 +133,7 @@ aip push
 
 If Tekton is already installed in your namespace, you can skip to [Pipelines Installation](#pipelines-installation).
 
-### 3.1 Installing on Air-gapped Kubernetes
+### 3.1 Installing on Air-Gapped Kubernetes
 
 Assuming you have [performed the preparation steps](#preparation), use the following commands:
 
@@ -143,7 +144,7 @@ cat tekton-triggers.yaml | aip inject-manifest | kubectl apply -f -
 cat interceptors.yaml | aip inject-manifest | kubectl apply -f -
 ```
 
-### 3.2 Installing on Air-gapped OpenShift
+### 3.2 Installing on Air-Gapped OpenShift
 
 Assuming you have [performed the preparation steps](#preparation), use the following commands to install Tekton and Tekton triggers
 
@@ -164,9 +165,11 @@ For Tekton Triggers on OpenShift you need to update the deployment objects to ma
 
 1. Edit the `tekton-triggers-controller` deployment.
 2. Add the following line to the `args` section:
+
     ```bash{linenos=false}
     - '--el-security-context=false'
     ```
+
 3. Change `runAsUser:` to a valid OpenShift user (like `1001000000`).
 4. Edit the `tekton-triggers-core-interceptors` deployment.
 5. Change `runAsUser:` to a valid OpenShift user (like `1001000000`).

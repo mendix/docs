@@ -10,7 +10,7 @@ See [http://docs.oracle.com/javase/7/docs/api/java/text/SimpleDateFormat.html](h
 
 ## parseDateTime[UTC]
 
-Takes a string and tries to parse it. If it fails and a default value is specified, it returns the default value. Otherwise, an error is raised. The function `parseDateTime` uses the user's timezone and `parseDateTimeUTC` uses the UTC calendar.
+Takes a string and tries to parse it. If it fails and a default value is specified, it returns the default value. Otherwise, an error is raised. The function `parseDateTime` uses the user's time zone and `parseDateTimeUTC` uses the UTC calendar.
 
 ### Input parameters
 

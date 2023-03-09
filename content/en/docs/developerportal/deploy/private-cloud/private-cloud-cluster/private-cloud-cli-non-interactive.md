@@ -1,6 +1,6 @@
 ---
-title: "Install and Configure Mendix for Private Cloud Non-interactive Mode"
-linktitle: "Non-interactive Mode"
+title: "Install and Configure Mendix for Private Cloud Non-Interactive Mode"
+linktitle: "Non-Interactive Mode"
 url: /developerportal/deploy/private-cloud-cli-non-interactive/
 description: "Describes how to install and configure Mendix for Private Cloud in non-interactive mode"
 weight: 5
@@ -38,6 +38,7 @@ To perform the [base installation](/developerportal/deploy/private-cloud-cluster
 ```shell {linenos=false}
 ./mxpc-cli base-install --namespace <namespace> -i <namespace-id> -s <namespace-secret> --clusterMode <cluster-mode> --clusterType <cluster-type>
 ```
+
 The namespace-id and namespace-secret are only required when using Mendix for Private Cloud in connected mode.
 
 ## 3 Apply Configuration
@@ -47,6 +48,7 @@ To [configure the namespace](/developerportal/deploy/private-cloud-cluster/#conf
 ```shell {linenos=false}
 ./mxpc-cli apply-config -i <namespace-id> -s <namespace-secret> --file <config-file>
 ```
+
 The namespace-id and namespace-secret are only required when using Mendix for Private Cloud in connected mode.
 
 The config file is the **mx_config_cli.yaml** file that you generate when you click the **Write YAML** in the [Review and Apply](/developerportal/deploy/private-cloud-cluster/#review-apply) phase of configuring your namespace interactively.

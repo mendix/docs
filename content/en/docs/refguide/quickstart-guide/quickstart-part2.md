@@ -20,8 +20,8 @@ Mendix native mobile apps are native mobile apps based on React Native. These ap
 
 Native mobile apps are offline first and only fetch data from the server when programmed to do so. By completing this guide, you will become acquainted with the following Mendix native mobile concepts:
 
-* [Offline-first design](/refguide/mobile/using-mobile-capabilities/offlinefirst-data/)
-* [Data synchronization](/refguide/mobile/using-mobile-capabilities/offlinefirst-data/synchronization/) between mobile devices and web apps
+* [Offline-first design](/refguide/mobile/building-efficient-mobile-apps/offlinefirst-data/)
+* [Data synchronization](/refguide/mobile/building-efficient-mobile-apps/offlinefirst-data/synchronization/) between mobile devices and web apps
 * [Nanoflows](/refguide/nanoflows/): the native mobile JavaScript equivalent to microflows)
 * Using custom [JavaScript actions](/refguide/javascript-actions/) in your nanoflows
 
@@ -41,7 +41,7 @@ Specifically, the Make it Native 9 app connects to your local development machin
 
 ## 3 Creating a Native Mobile Picture App
 
-Starting in Studio Pro, open the page **Home_Native** by double-clicking it in the App Explorer or by pressing <kbd>CTRL</kbd> + <kbd>G</kbd> to open your **Go to** menu and search for the page. The **Go to** menu is used for quick navigation in the project—for more Mendix shortcuts see [Edit Menu](/refguide/edit-menu/).
+Starting in Studio Pro, open the page **Home_Native** by double-clicking it in the App Explorer or by pressing <kbd>CTRL</kbd> + <kbd>G</kbd> to open your **Go to** menu and search for the page. The **Go to** menu is used for quick navigation in the app—for more Mendix shortcuts see [Edit Menu](/refguide/edit-menu/).
 
 {{% alert type="info" %}}
 The **Home_Native** page has a different icon than the **Home_Web** page. Mendix uses these icons to help you develop the right aspect of your app.

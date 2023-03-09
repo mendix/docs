@@ -31,7 +31,7 @@ To set up the Gulp project, follow these steps:
 1. Download *gulp.zip* from [mendix/ux-theming](https://github.com/mendix/ux-theming/releases).
 2. Unzip the folder into your app's root folder.
 3. In your terminal, go to your app root folder by typing `cd`, then drag your root file into the terminal. Please note that if you do this on Windows and you encounter errors with installing the dependencies, open your CMD or PowerShell as Administrator.
-4. <a name="34"></a>Install the dependencies by typing `npm install`.
+4. <a id="34"></a>Install the dependencies by typing `npm install`.
 
 {{< figure src="/attachments/howto7/front-end/use-gulp-and-sass/style-with-gulp-and-sass/cd.png" >}}
 
@@ -66,7 +66,7 @@ If you have [TortoiseSVN](/refguide7/using-version-control-in-the-dm/#tortoisesv
 {{< figure src="/attachments/howto7/front-end/use-gulp-and-sass/style-with-gulp-and-sass/svn-ignore.jpg" >}}
 
 {{% alert color="warning" %}}
-Always use the version of TortoiseSVN which matches your app model. If you open a local model from Mendix version 7.x or 6.x with the latest version of TortoiseSVN, **you will no longer be able to open it in Mendix**.
+Always use the version of TortoiseSVN which matches your app model. If you open a local model from Mendix version 7.x with the latest version of TortoiseSVN, **you will no longer be able to open it in Mendix**.
 {{% /alert %}}
 
 ## 7 Troubleshooting

@@ -63,7 +63,15 @@ Click **Edit…** to open a dialog box which will provide a full reference for t
 
 ## 5 List of Supported Languages {#supported-languages}
 
-The most up-to-date list of supported languages in your version of Studio Pro is the one in the add languages menu. The list below is provided to enable you to quickly evaluate if Mendix supports your desired language.
+The most up-to-date list of supported languages in your version of Studio Pro is the one in the add languages menu. 
+
+{{% alert color="info" %}}
+
+You cannot add custom languages that are not listed in supported languages below. 
+
+{{% /alert %}}
+
+The list below is provided to enable you to quickly evaluate if Mendix supports your desired language.
 
 | Language | Region | Locale | Available Since |
 | --- | --- | --- | --- |
@@ -201,6 +209,7 @@ The most up-to-date list of supported languages in your version of Studio Pro is
 | Tamil | Singapore | ta_SG | 9.3.0 |
 | Thai (Western digits) | Thailand | th_TH | 9.0.5 |
 | Thai (Thai digits) | Thailand | th_TH_TH | 9.0.5 |
+| Tigrinya | Eritrea | ti_ER | 9.23.0 |
 | Turkish | Turkey | tr_TR | 9.0.5 |
 | Ukrainian | Ukraine | uk_UA | 9.0.5 |
 | Urdu | India | ur_IN | 9.2.0 |

@@ -1,6 +1,7 @@
 ---
 title: "XPath Constraints"
 url: /refguide/xpath-constraints/
+weight: 2
 tags: ["studio pro"]
 ---
 

@@ -7,7 +7,7 @@ tags: ["studio pro", "add-on", "solution", "module", "modules"]
 ---
 
 {{% alert color="warning" %}}
-Access to this functionality is currently limited and can be gained through the [Mendix Vendor Program](/appstore/creating-content/vendor-program/).
+Access to this functionality is currently limited and can be gained through the [Mendix Component Partner Program](/appstore/creating-content/partner-program/) and the [Mendix Commercial Solution Partner Program](https://www.mendix.com/partners/become-a-partner/isv-program/).
 {{% /alert %}}
 
 ## 1 Introduction
@@ -71,7 +71,7 @@ Below is the list of documents and elements that can be mark as **Usable**:
 ## 3 Exporting Add-on Modules and Solutions {#export}
 
 {{% alert color="info" %}}
-Before exporting an add-on module or a solution to customers, note that English (US) and Dutch language translations are shipped with it by default. This may be important *if your app is in another language*, not English (US) or Dutch, and *your customers decide to translate the consumed solution or add-on to other languages*. To avoid the confusion, open the **Language** menu > **Language Operations** and select the **Delete** operation for English (US) or Dutch. For more information on the **Language** menu, see [Language Menu](/refguide/translatable-texts/). For more information on how to perform a certain operation, see [Language Operations](/refguide/language-operations/). 
+Before exporting an add-on module or a solution to customers, note that for Studio Pro versions 9.22 and below, English (US) and Dutch language translations are shipped with it by default, and for Studio Pro versions 9.23 and above, only English (US) is shipped by default (for more information, see the [Internationalization Improvements](/releasenotes/studio-pro/9.23/#internationalization-improvements) section of *9.23* Studio Pro release notes). This may be important if your app is in another language (not English (US) or Dutch) and your customers decide to translate the consumed solution or add-on to other languages. To avoid confusion, open [Language](/refguide/translatable-texts/) > **Language Operations** and select the **Delete** operation for English (US) and/or Dutch. For more information on how to perform a certain operation, see [Language Operations](/refguide/language-operations/).
 {{% /alert %}}
 
 ### 3.1 Exporting Add-on Module Package
@@ -106,7 +106,7 @@ When you update an individual add-on or a solution module to another version, yo
 If, for some reason, you switch the add-on and solution module to an app module, for example, to provide source code to customers, their module data is lost once they upload a new version of this module to their app.
 {{% /alert %}}
 
-## Read More
+## 5 Read More
 
 * [Create Solutions](/appstore/creating-content/sol-solutions-guide/)
 * [IP Protection](/appstore/creating-content/sol-ip-protection/)

@@ -145,11 +145,10 @@ Now the application is ready to store redundant data, but you still need to keep
 
 ## 5 Read More
 
-* [Work with Images and Files](/howto/data-models/working-with-images-and-files/)
 * [Create a Basic Data Layer](/howto/data-models/create-a-basic-data-layer/)
 * [Set Up Data Validation](/howto/data-models/setting-up-data-validation/)
 * [Find the Root Cause of Runtime Errors](/howto/monitoring-troubleshooting/finding-the-root-cause-of-runtime-errors/)
 * [Stories](/developerportal/collaborate/stories/)
-* [Define Access Rules Using XPath](/howto/logic-business-rules/define-access-rules-using-xpath/)
+* [Defining Access Rules Using XPath](/refguide/define-access-rules-using-xpath/)
 * [Attributes](/refguide/attributes/)
 * [Event Handlers](/refguide/event-handlers/)

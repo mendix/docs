@@ -17,6 +17,7 @@ This page is a summary of the elements which make up a microflow, together with 
 
 For the properties of the microflow itself, see [Microflow Properties](/refguide/microflow/). For more best practice details, see [Microflow Naming Conventions](/refguide/dev-best-practices/#microflow-naming-conventions), [Microflow General Best Practices](/refguide/dev-best-practices/#microflow-dev-best-practices), and [Microflow Best Practices from the Community](/refguide/community-best-practices-for-app-performance/#microflow-community-best-practices).
 
+For information on using microflows as data sources, see [Microflow Source](/refguide/microflow-source/).
 
 ## 2 Microflow Notation
 

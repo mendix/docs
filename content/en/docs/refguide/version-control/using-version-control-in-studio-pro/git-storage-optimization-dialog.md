@@ -43,7 +43,7 @@ To optimize Git repository storage automatically and regularly, do the following
 2. In the **Git** section, toggle the **Enable automatic repository optimization** option.
 3. In the **Number of commits**, specify the minimum number of commits that should be reached to start an optimization process in background (for more information, see [Preferences](/refguide/preferences-dialog/).)
 4. Click **OK**.
-4. Studio Pro keeps track of user's activities now, however, reaching or overcoming the limit does not mean the process starts immediately. To trigger the process, either push (**Version Control** > **Push**) or commit (**Version Control** > **Commit** with **Also push changes to the remote server** option on).
+5. Studio Pro keeps track of user's activities now, however, reaching or overcoming the limit does not mean the process starts immediately. To trigger the process, either push (**Version Control** > **Push**) or commit (**Version Control** > **Commit** with **Also push changes to the remote server** option on).
 
 As soon as optimization is completed, Studio Pro resets the counter of commits to zero.
 

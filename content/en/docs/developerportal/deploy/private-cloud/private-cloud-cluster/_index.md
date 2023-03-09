@@ -37,9 +37,8 @@ Should you consider using a connected environment, the following URLs should be 
 | URL | Description |
 |-----|-------------|
 | `https://interactor-bridge.private-cloud.api.mendix.com` | Websocket based main communication API |
-| `https://privatecloud.mendixcloud.com` | Registry for downloading MDA artifacts |
+| `https://package-store-prod-2.s3-accelerate.amazonaws.com/` | Registry for downloading MDA artifacts |
 | `https://private-cloud.registry.mendix.com` | Docker registry for downloading Runtime base images |
-| `https://cdn.mendix.com` | Registry for downloading placeholder MDA artifacts |
 | `https://subscription-api.mendix.com` | Service to verify call-home license |
 
 ## 3 Creating a Cluster and Namespace
@@ -1486,7 +1485,7 @@ To disable the Prometheus metrics API, remove the `runtimeMetricsConfiguration` 
 
 For more information about collecting metrics in Mendix for Private Cloud, see [Monitoring Environments in Mendix for Private Cloud](/developerportal/deploy/private-cloud-monitor/).
 
-### 5.6 Customize Service Account
+### 5.6 Customize Service Account {#customize-service-account}
 
 The Mendix environment can be configured to use a specific Kubernetes ServiceAccount instead of the default ServiceAccount.
 
@@ -1495,6 +1494,8 @@ To achieve this, you need to add the annotation `privatecloud.mendix.com/environ
 {{% alert color="info" %}}
 The service account can be customized for Private Cloud Operator version 2.7.0 and above.
 {{% /alert %}}
+
+If required, you can use additional annotations. For example, in order to authenticate with AWS services instead of with static credentials, you can attach an AWS IAM role to an environment and use [IRSA](https://aws.amazon.com/blogs/opensource/introducing-fine-grained-iam-roles-service-accounts/).
 
 ### 5.7 Autoscaling
 
@@ -1590,7 +1591,7 @@ Here you can perform the following actions on the entire cluster:
 * Rename the cluster or edit its description by clicking the edit icon
 * Invite another cluster manager
 
-<a name="actvity-logs"></a>You can also see the activities logged for all you clusters by clicking **Activity** in the [cluster overview](#overview) page. This shows the following:
+<a id="actvity-logs"></a>You can also see the activities logged for all you clusters by clicking **Activity** in the [cluster overview](#overview) page. This shows the following:
 
 * When a cluster has been added
 * When a cluster description is added
@@ -1818,11 +1819,17 @@ This tab shows information on the versions of the various components installed i
 
 This tab allows the cluster manager to customize the enablement of the secret store and developer mode for the developers. 
 
-Enabling the **External Secrets Store** option will allow users to retrieve the following secrets from an external secrets store
+Enabling the **External Secrets Store** option allows users to retrieve the following secrets from an external secrets store:
 
-* database plan
-* storage plan
+* Database plan
+* Storage plan
 * MxAdmin password
+* Custom runtime settings
+* MxApp constants
+
+{{% alert color="info" %}}
+If you want to use the secret store for custom runtime settings or MxApp constants, the Mendix Operator must be in version 2.10.0 or later. Database plan, storage plan, and MxAdmin password are available from version 2.9.0 onwards.
+{{% /alert %}}
 
 Enabling the Development Mode option will allow users to change the type of an environment to Development.
 

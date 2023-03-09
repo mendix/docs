@@ -1,5 +1,5 @@
 ---
-title: "XPath Avg"
+title: "XPath avg"
 url: /refguide/xpath-avg/
 tags: ["studio pro"]
 ---

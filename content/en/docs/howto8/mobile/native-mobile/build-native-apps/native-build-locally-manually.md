@@ -138,10 +138,16 @@ In the sections below you can see the basic steps to get an app up and running o
 
 ### 5.1 Building an Android App with Android Studio
 
+{{% alert color="warning" %}}
+During this process, do not accept any suggestions to update to latest Gradle or Kotlin version.
+{{% /alert %}}
+
+To build an Android app with Android Studio, do the following:
+
 1. Run `npm install` (for NPM v7 and above run `npm install --legacy-peer-deps`) in the app root to install the required dependencies.
 1. Open Android Studio.
 1. Select the `<Native Template root>/android` as the entry point for the app.
-1. After synchronizing the app your Android Studio should look something like this. **Do not accept any suggestions to update to latest Gradle or Kotlin version!**:
+1. After synchronizing the app your Android Studio should look something like this (remember to not accept any suggestions to update to latest Gradle or Kotlin version):
 
     {{< figure src="/attachments/howto8/mobile/native-mobile/build-native-apps/native-build-locally-manually/as-home.png" alt="Android Studio"   width="350"  >}}
 
@@ -182,7 +188,7 @@ To build an iOS app with a Mac running Intel Silicon, do the following:
 
 The iOS project is using CocoaPods for its dependency management. For more information on installing the CocoaPods dependency manager on your machine see this CocoaPods [documentation](https://cocoapods.org/#install).
 
-<a name="resume-ios"></a>Now that you have completed one of the two paths listed above, you can resume building your iOS app:
+<a id="resume-ios"></a>Now that you have completed one of the two paths listed above, you can resume building your iOS app:
 
 1. Open *.xcodeworkspace* using XCode.
 1. Navigate to **Signing and Capabilities** and choose your **Team** from the drop-down menu:

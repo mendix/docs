@@ -86,6 +86,10 @@ The following steps will create a deployment package, retrieve it, refresh its `
 11. Verify that the job is successful using the process described in [Managing Asynchronous Jobs](#async-jobs). 
 12. Call `GET /apps/{appId}/packages` to retrieve all the deployment packages in the application. The deployment package should be removed from the list.
 
+{{% alert color="info" %}}
+If you are trying to build a deployment package for the `Main line` and the build operation fails, try setting the branch to `trunk` in the JSON request body for the Build Deployment Package endpoint.
+{{% /alert %}}
+
 ### 3.2 Using the API to Upload a Deployment Package
 
 Follow the steps below to upload a deployment package by using the API.

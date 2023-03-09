@@ -21,12 +21,12 @@ To see the current status of the Mendix Developer Portal and Control Center, see
 
 #### Improvements
 
-* We simplified the way your [project notification settings](/developerportal/community-tools/mendix-profile/#notifications) are stored
-* As of now only Scrum Masters can change the role of existing [Team Members](/developerportal/collaborate/team/#managing)
+* As of now, only Scrum Masters can [manage the app team](/developerportal/collaborate/team/#managing).
+* We simplified the way your [Notification](/developerportal/community-tools/mendix-profile/#notifications) settings are stored.
 
 #### Fixes
 
-* We fixed an issue where the users you would administer for your [app's environment](/developerportal/collaborate/general-settings/#manage-users) were not displayed in the correct order
+* We fixed an issue where the users you administered for your app's [environment](/developerportal/collaborate/general-settings/#manage-users) were not displayed in the correct order.
 
 ### February 23rd, 2023
 

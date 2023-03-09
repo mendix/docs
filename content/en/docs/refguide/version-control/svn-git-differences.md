@@ -48,19 +48,20 @@ In Git, committing is done locally at first. Then commits are sent to other repo
 
 ## 5 Proxy Support
 
-Studio Pro communicates to Git repositories by two means: through LibGit2 library or Git command line interface (Git CLI). LibGit2 provides a nice and clean repository object model that is in intensive use during local repository operations. But it's not performant enough whem it comes to communicate with remove Git servers. This is where Git CLI takes a place, and Studio Pro switch to the client while performing Fetch, Pull and Push operations (that is why `Git for Windows` package, which ships Git CLI to your computer, is an integral part of Studio Pro installation bundle). Therefore, any operation, that requires transferring data to/from remote Git repositories, uses GitCLI client now. 
+Studio Pro communicates to Git repositories by two means: LibGit2 library or Git command line interface (Git CLI). LibGit2 provides a nice and clean repository object model that is in intensive use during local repository operations. However, it is not performant enough when it comes to communication with remove Git servers. This is when Git CLI is used and Studio Pro switches to the client while performing fetch, pull and push operations (that is why the Git for Windows package, which ships Git CLI to your computer, is an integral part of Studio Pro installation). Therefore, any operation that requires transferring data to/from remote Git repositories, uses GitCLI client. 
 
-Unfortunately, `Git for Windows` doesn’t support `Web Proxy Auto Discovery (WPAD)` protocol by default. So that the proxy settings needs to be hardcoded directly by either overriding `http_proxy`, `https_proxy` and `all_proxy` environment variables or by setting the URL up in your local `.git/config` file via the folowwing commands:
+Unfortunately, Git for Windows does not support the Web Proxy Auto Discovery (WPAD) protocol by default. This means that proxy settings need to be hardcoded directly by either overriding **http_proxy**, **https_proxy** and **all_proxy** environment variables or by setting the URL in your local **.git/config** file following steps below:
 
-1. Configure the proxy settings:
+1. Configure proxy settings:
 
-`git config --local http.proxy [protocol://][user[:password]@]proxyhost[:port]`
+    `git config --local http.proxy [protocol://][user[:password]@]proxyhost[:port]`
 
-2. Check the setting change took effect:
+2. Check that settings are changed:
 
-`git config --local http.proxy`
+    `git config --local http.proxy`
 
-Of course, you can also use `--global` modifier for applying the changes system wise. For more information regarding proxy support for Git please check the [official documentation] (https://git-scm.com/docs/git-config#Documentation/git-config.txt-httpproxy)
+You can also use `--global` modifier to apply the changes system-wise. 
+For more information on proxy support for Git, see [Git documentation] (https://git-scm.com/docs/git-config#Documentation/git-config.txt-httpproxy).
 
 ## 6 Interacting with Version Control Outside Studio Pro
 

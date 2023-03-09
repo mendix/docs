@@ -35,7 +35,7 @@ Go to https://warden.mendix.com/ and follow the instructions in [Create a Person
 * `mx:deployment:read` – to perform `GET` operations
 * `mx:deployment:write` – to perform all operations (`GET`, `POST`, `PUT`, and `DELETE`)
 
-For operations related to deployment packages (such as Create, Upload, Delete, and Retrieve), you need to create PAT tokens as specified in [Mendix for Private Cloud Build API: Using the PAT](/apidocs-mxsdk/apidocs/private-cloud-build-api/using-the-pat).
+For operations related to deployment packages (such as Create, Upload, Delete, and Retrieve), you need to create PAT tokens as specified in [Mendix for Private Cloud Build API: Using the PAT](/apidocs-mxsdk/apidocs/private-cloud-build-api/#using-the-pat).
  
 Store the `{GENERATED_PAT}` value in a safe location, so you can use it to authorize your Mendix for Private Cloud API calls.
 

@@ -27,7 +27,7 @@ For information on the current status of deployment to Mendix for Private Cloud 
 * We have improved the Delete Cluster API endpoint by allowing the forced deletion of a cluster with namespaces, as long as the namespaces do not have any attached environments.
 * We have modified the OpenAPI specification file. Please download or check the latest version.
 
-#### Build API Improvements
+#### Build API Release
 
 * We have introduced a new Mendix for Private Cloud Build API, which allows users to build, upload, delete and retrieve deployment packages for an application deployed in the Private Cloud.
 

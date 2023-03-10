@@ -128,9 +128,9 @@ If Tekton is already installed in your namespace, you can skip to [Pipeline Inst
 To install Tekton with Tekton Triggers, apply the following *yaml* manifests:
 
 ```bash {linenos=false}
-kubectl apply --filename https://storage.googleapis.com/tekton-releases/pipeline/previous/v0.33.2/release.yaml
-kubectl apply --filename https://storage.googleapis.com/tekton-releases/triggers/previous/v0.19.0/release.yaml
-kubectl apply --filename https://storage.googleapis.com/tekton-releases/triggers/previous/v0.19.0/interceptors.yaml
+kubectl apply --filename https://storage.googleapis.com/tekton-releases/pipeline/previous/v0.41.1/release.yaml
+kubectl apply --filename https://storage.googleapis.com/tekton-releases/triggers/previous/v0.22.1/release.yaml
+kubectl apply --filename https://storage.googleapis.com/tekton-releases/triggers/previous/v0.22.1/interceptors.yaml
 ```
 
 {{% alert color="info" %}}
@@ -143,7 +143,7 @@ To install Tekton and Tekton Triggers on OpenShift you can use Red Hat OpenShift
 
 Main objects would be installed in `openshift-pipelines` namespace. 
 
-At the moment we support Red Hat OpenShift Pipelines v1.7.2. 
+At the moment we support Red Hat OpenShift Pipelines v1.9.2. 
 
 ## 6 Pipeline Installation for Non Air-gapped Environments{#pipelines-installation}
 

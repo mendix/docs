@@ -32,7 +32,7 @@ To create entities and their attributes, follow these steps:
 
     {{< figure src="/attachments/refguide/modeling/domain-model/create-a-basic-data-layer/toolbox-entity.png" width="300px" >}}
 
-    By default, Studio Pro creates a persistable entity, which means that the app's database will be able to store objects of this type of entity.
+    By default, Studio Pro creates a persistable entity, which means that the app's database is able to store objects of this type of entity.
 
 3. Start typing directly to change the name of the entity to *Customer*, or you can go to **Properties** and enter *Customer* for the **Name**:
 

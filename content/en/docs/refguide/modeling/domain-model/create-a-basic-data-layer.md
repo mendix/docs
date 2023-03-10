@@ -119,7 +119,7 @@ To configure the delete behavior, double-click the **Order_Customer** associatio
 
     {{< figure src="/attachments/refguide/modeling/domain-model/create-a-basic-data-layer/cascading-delete.png" >}}
 
-* To configure the delete prevention, select the **Delete 'Customer' object only if it is not associated with 'Order' object(s)** in the **On delete of 'Customer' object** section; this means that a customer can only be deleted if no orders refer to this customer, and the **Error message** will be shown to the end-user who tries to delete a customer that has orders:
+* To configure the delete prevention, select the **Delete 'Customer' object only if it is not associated with 'Order' object(s)** in the **On delete of 'Customer' object** section; this means that a customer can only be deleted if no orders refer to this customer, and the **Error message** is shown to the end-user who tries to delete a customer that has orders:
 
     {{< figure src="/attachments/refguide/modeling/domain-model/create-a-basic-data-layer/delete-prevention.png" >}}
 

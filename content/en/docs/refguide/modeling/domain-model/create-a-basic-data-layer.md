@@ -44,17 +44,17 @@ To create entities and their attributes, follow these steps:
 
     {{< figure src="/attachments/refguide/modeling/domain-model/create-a-basic-data-layer/add-attribute.png" width="350px" >}}
 
-7. Repeat the steps above to create a **Customer** entity that looks like this:
+7. Refer to steps 4-6 to create a **Customer** entity that looks like this:
 
     {{< figure src="/attachments/refguide/modeling/domain-model/create-a-basic-data-layer/customer-entity.png" >}}
 
-8. Repeat the steps above again to create a second entity **Order** that looks like this:
+8. Refer to steps 1-6 to create a second entity **Order** that looks like this:
 
     {{< figure src="/attachments/refguide/modeling/domain-model/create-a-basic-data-layer/order-entity-one.png" >}}
 
 ## 3 Adding Enumerations {#add-enumeration}
 
-An [enumeration](/refguide/enumerations/) is a predefined list of values that can be used as an attribute type. This allows end-users to select any of the predefined values for this attribute. A good example of an enumeration is order status.
+An [enumeration](/refguide/enumerations/) is a predefined list of values that can be used as an attribute type. This allows end-users to select any of the predefined values for this attribute. A good example of an enumeration is order status (with values open, processing, and complete).
 
 To extend the **Order** entity with an enumeration value-based attribute, follow these steps:
 
@@ -65,11 +65,11 @@ To extend the **Order** entity with an enumeration value-based attribute, follow
 
     {{< figure src="/attachments/refguide/modeling/domain-model/create-a-basic-data-layer/add-enum-value.png" width="350px" >}}
 
-5. Repeat the steps above for the **Processing** and **Complete** values. You should then have the following configured values:
+5. Refer to steps 3 and 4 to add the **Processing** and **Complete** values. You should then have the following configured values:
 
     {{< figure src="/attachments/refguide/modeling/domain-model/create-a-basic-data-layer/enum-order-status.png" width="400px" >}}
 
-    Click **OK** to save the enumeration. Now, you need to add an enumeration value-based attribute to the **Order** entity and select the **OrderStatus** enumeration there. 
+    Click **OK** to save the enumeration. Now you need to add an enumeration value-based attribute to the **Order** entity and select the **OrderStatus** enumeration there. 
 
 6. Double-click the **Order** entity and go to **Attributes**.
 7. Click **New** to add an attribute to the **Order** entity.
@@ -81,7 +81,7 @@ To extend the **Order** entity with an enumeration value-based attribute, follow
 
 11. Click **OK** to save the new attribute. Now the **Order** entity should look like this:
 
-    {{< figure src="/attachments/refguide/modeling/domain-model/create-a-basic-data-layer/order-entity-two.png" >}}
+    {{< figure src="/attachments/refguide/modeling/domain-model/create-a-basic-data-layer/order-entity-two.png" width="160px" >}}
 
 ## 4 Creating Associations
 
@@ -101,11 +101,11 @@ If you want to change the multiplicity, double-click the **Order_Customer** asso
 
 * To change the association to a one-to-one multiplicity, select the **[1 – 1]** option in the **Multiplicity** section; this means that a customer can only have one order and vice versa:
 
-    {{< figure src="/attachments/refguide/modeling/domain-model/create-a-basic-data-layer/one-to-one.png" >}}
+    {{< figure src="/attachments/refguide/modeling/domain-model/create-a-basic-data-layer/one-to-one.png" width="500px" >}}
 
 * To change the association to a many-to-many multiplicity, select the **[* – *]** option in the **Multiplicity** section; this means that a customer can have multiple orders, and an order can have multiple customers:
 
-    {{< figure src="/attachments/refguide/modeling/domain-model/create-a-basic-data-layer/many-to-many.png" >}}
+    {{< figure src="/attachments/refguide/modeling/domain-model/create-a-basic-data-layer/many-to-many.png" width="500px" >}}
 
     When the association is set to a many-to-many multiplicity, the **Navigability** property is also activated. For further details, see the [Navigability](/refguide/association-properties/#navigability) section in *Association Properties*.
 
@@ -115,16 +115,16 @@ You can configure the [delete behavior](/refguide/association-properties/#delete
 
 To configure the delete behavior, double-click the **Order_Customer** association to open its **Properties** dialog box:
 
-* To configure a cascading delete, select the **Delete 'Order' object(s) as well** option in the **On delete of 'Customer' object** section; this means that all the orders of a customer are removed if the customer is deleted:
+* To configure cascading delete, select the **Delete 'Order' object(s) as well** option in the **On delete of 'Customer' object** section; this means that all the orders of a customer are removed if the customer is deleted:
 
-    {{< figure src="/attachments/refguide/modeling/domain-model/create-a-basic-data-layer/cascading-delete.png" >}}
+    {{< figure src="/attachments/refguide/modeling/domain-model/create-a-basic-data-layer/cascading-delete.png" width="500px" >}}
 
-* To configure the delete prevention, select the **Delete 'Customer' object only if it is not associated with 'Order' object(s)** in the **On delete of 'Customer' object** section; this means that a customer can only be deleted if no orders refer to this customer, and the **Error message** is shown to the end-user who tries to delete a customer that has orders:
+* To configure prevention of delete, select the **Delete 'Customer' object only if it is not associated with 'Order' object(s)** in the **On delete of 'Customer' object** section; this means that a customer can only be deleted if no orders refer to this customer, and the **Error message** is shown to the end-user who tries to delete a customer that has orders:
 
-    {{< figure src="/attachments/refguide/modeling/domain-model/create-a-basic-data-layer/delete-prevention.png" >}}
+    {{< figure src="/attachments/refguide/modeling/domain-model/create-a-basic-data-layer/delete-prevention.png" width="500px" >}}
 
 {{% alert color="info" %}}
-Delete behavior includes objects which are in memory. This means that delete cascades and delete prevention apply, even if the associated object has not been committed.
+Delete behavior includes objects which are in memory. This means that delete cascades or delete prevention applies, even if the associated object has not been committed.
 {{% /alert %}}
 
 ## 7 Read More

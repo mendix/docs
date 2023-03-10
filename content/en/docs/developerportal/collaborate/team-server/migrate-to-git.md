@@ -50,7 +50,11 @@ Inform your team members that they should commit their changes before migration.
 
 ## 4 Steps After Migration
 
-After migration is completed all developers need to check out (re-download) the app from Team Server and remove existing local copies, since developers can no longer interact with SVN. For more information, see [Migrating from SVN to Git: Steps After Migration and Process Differences](/refguide/svn-git-differences/).
+After migration, existing local copies are no longer linked to a working version control system. To be able to work on your app and store your changes in the version control system, you need to check out (re-download) the app from Team Server. Do the following:
+
+1. Open Studio Pro, select the app that was migrated to Git (you can identify it by a Git icon), and click **Open** in Studio Pro to download the Git version of your app. Once this is completed you can make changes and store them in version control system.
+
+2. Remove previous local copies of the app to avoid working on the wrong app version.
 
 ## 5 If Migration Failed
 

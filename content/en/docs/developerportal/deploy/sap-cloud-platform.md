@@ -734,13 +734,8 @@ A more detailed description of the reason why the environment creation failed wi
 
 ### 9.2 Deleting an App
 
-Note that if you are the last person to leave a Mendix app you can delete the app. However, this will not delete the app or resources on SAP BTP. You can leave the app by going to the **General Settings** page of the Developer Portal and clicking **Leave app**.
-
-{{< figure src="/attachments/developerportal/deploy/sap-cloud-platform/leave-app.png" >}}
-
-If you are the last member of the app development team, you will be asked if you want to delete the app.
-
-{{< figure src="/attachments/developerportal/deploy/sap-cloud-platform/delete-app.png" >}}
+Note that if you are the last person to leave a Mendix app you can delete the app. However, it is only possible to delete apps hosted in the Mendix Public cloud. For SAP BTP, you must first switch back to Mendix Public
+Cloud before you can delete your app.
 
 {{% alert color="info" %}}
 This will not stop the app and delete the deployment of the app in SAP BTP.

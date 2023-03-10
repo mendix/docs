@@ -47,6 +47,10 @@ Click **Getting Started** and then continue with [Set Up Region](#SetUpRegion).
 
 In this scenario, you choose a Mendix app template for SAP **SAP Apps** tab and give it a name.
 
+{{% alert color="warning" %}}
+The app name that you provide is passed to SAP BTP as the host name parameter used when creating [routes](https://help.sap.com/docs/btp/sap-business-technology-platform/create-routes). Because of that, the name that you use for your SAP app should only contain characters that are valid when used in a host name (such as ASCII letters from A to Z, digits from 0 to 9, and hyphens).
+{{% /alert %}}
+
 Once the app has been created you can continue with [Set Up Region](#SetUpRegion).
 
 ### 2.3 Set Up Region{#SetUpRegion}

@@ -124,7 +124,7 @@ To configure the delete behavior, double-click the **Order_Customer** associatio
     {{< figure src="/attachments/refguide/modeling/domain-model/create-a-basic-data-layer/delete-prevention.png" >}}
 
 {{% alert color="info" %}}
-Delete behavior includes objects which are in memory. This means that delete cascades and delete prevention will apply, even if the associated object has not been committed.
+Delete behavior includes objects which are in memory. This means that delete cascades and delete prevention apply, even if the associated object has not been committed.
 {{% /alert %}}
 
 ## 7 Read More

@@ -34,14 +34,14 @@ Each style object has a name, referred to as the object’s class name. You can 
 ```javascript
 // A custom styling class
 export const customClassName = {
-	container: {
-		// ViewStyle properties
-		paddingTop: 5
-	},
-	text: {
-		// TextStyle properties
-		fontWeight: "bold"
-	}
+  container: {
+    // ViewStyle properties
+    paddingTop: 5
+  },
+  text: {
+    // TextStyle properties
+    fontWeight: "bold"
+  }
 }
 ```
 
@@ -53,14 +53,14 @@ When you want to apply styling to one instance of a widget, you can extend that 
 
 ```javascript
 export const ActionButton = {
-	container: {
-		// ViewStyle properties
-		borderWidth: 3
-	},
-	caption: {
-		// TextStyle properties
-		fontSize: 20
-	},
+  container: {
+    // ViewStyle properties
+    borderWidth: 3
+  },
+  caption: {
+    // TextStyle properties
+    fontSize: 20
+  }
 };
 ```
 
@@ -68,10 +68,10 @@ Add-on widgets each have their own default styling classes based on their full w
 
 ```javascript
 export const com_mendix_widget_native_badge_Badge = (Badge = {
-	text: {
-		// TextStyle properties
-		color: "#00FF00",
-	}
+  text: {
+    // TextStyle properties
+    color: "#00FF00",
+  }
 });
 ```
 
@@ -195,8 +195,8 @@ A container widget can be used to style or hide a group of widgets. This widget 
 export const Container = {
   container: {
     // All ViewStyle properties
-    rippleColor: `rgba(0, 0, 0, 0.2)`, // This is the color of the ripple on Android, and will be applied only when the container has an on click action set, otherwise it will be ignored.
-    underlayColor: // This is the color while pressing the container on iOS, and will be applied only when the container has an on click action set, otherwise it will be ignored and defaulted to opacity only.      
+    rippleColor: 'rgba(0, 0, 0, 0.2)', // This is the color of the ripple on Android, and will be applied only when the container has an on click action set, otherwise it will be ignored.
+    underlayColor: null, // This is the color while pressing the container on iOS, and will be applied only when the container has an on click action set, otherwise it will be ignored and defaulted to opacity only.      
   },
   containerDisabled: {
     // Same properties as `container`. This overrides `container` styles if the there is an on click action set and the action cannot be executed or is disabled during action.
@@ -227,11 +227,11 @@ export const TabContainer = {
   },
   tabBar: {
     // All ViewStyle properties
-    bounces: // This is a Boolean value indicating whether the tab bar bounces when scrolling.
-    pressColor: // This is a color for material ripple (Android only).
-    pressOpacity: // This is opacity for a pressed tab.
-    scrollEnabled: // This is a Boolean value enabling scrollable tabs.
-    tabBarPosition, defaults to `top`: // This is the position of the tab bar in the tab view, and possible values are `top` and `bottom`. 
+    bounces: null, // This is a Boolean value indicating whether the tab bar bounces when scrolling.
+    pressColor: null, // This is a color for material ripple (Android only).
+    pressOpacity: null, // This is opacity for a pressed tab.
+    scrollEnabled: null, // This is a Boolean value enabling scrollable tabs.
+    tabBarPosition: 'top' // This is the position of the tab bar in the tab view, and possible values are `top` and `bottom`. 
   },
   indicator: {
     // All ViewStyle properties   
@@ -312,14 +312,14 @@ export const TextBox = {
   },
   input: {
     // All TextStyle properties
-    autoCapitalize: // This is a Boolean value indicating whether the tab bar bounces when scrolling. This automatically capitalizes certain characters when the user types: 
-    // * `characters`: capitalizes all characters 
-    // *`words`: capitalizes the first letter of each word 
-    // *`sentences`: capitalizes the first letter of each sentence (default) 
-    // *`none`: capitalizes nothing
-    placeholderTextColor: // This is the text color of the placeholder string.
-    selectionColor: // This is the highlight and cursor color of the text input.
-    underlineColorAndroid: // This is the color of the `input` underline.
+    autoCapitalize: 'sentences', // This is a Boolean value indicating whether the tab bar bounces when scrolling. This automatically capitalizes certain characters when the user types: 
+    // 'characters': capitalizes all characters 
+    // 'words': capitalizes the first letter of each word 
+    // 'sentences': capitalizes the first letter of each sentence (default) 
+    // 'none': capitalizes nothing
+    placeholderTextColor: null, // This is the text color of the placeholder string.
+    selectionColor: null, // This is the highlight and cursor color of the text input.
+    underlineColorAndroid: null, // This is the color of the `input` underline.
   },  
   inputFocused: {
     // Same properties as `input`. Overrides `input` styles if the text box is focused (with Studio Pro v8.15).
@@ -332,7 +332,7 @@ export const TextBox = {
   },
   label: {
     // All TextStyle properties
-    numberOfLines, defaults to `1`: // This is the maximum number of lines to wrap the label text. If the text is any longer, it will be cut off with an ellipsis.  
+    numberOfLines: 1 // This is the maximum number of lines to wrap the label text. If the text is any longer, it will be cut off with an ellipsis.  
   },
   labelDisabled: {
     // Same properties as `label`. Overrides `label` styles if the text box is non-editable.
@@ -395,7 +395,7 @@ export const DropDown = {
   },   
   label: {
     // This has all TextStyle properties.
-    numberOfLines, defaults to `1`: // The maximum number of lines to wrap the label text. If the text is any longer it will be cut off with an ellipsis.  
+    numberOfLines: 1 // The maximum number of lines to wrap the label text. If the text is any longer it will be cut off with an ellipsis.  
   },
   labelDisabled: {
     // Same properties as `label`. Overrides `label` styles if the drop-down is non-editable.
@@ -418,15 +418,13 @@ export const DropDown = {
   selectedItemContainer: {
     // This has all ViewStyle properties. Styles the selected item's container in dropdown menu (with Studio Pro v8.11).
   }, 
-  useUniformDesign: {
-    boolean: // Enables new uniformDesign (with Studio Pro v8.11).
-  },     
+  useUniformDesign: null, // Enables new uniformDesign (with Studio Pro v8.11).
   validationMessage: {
     // This has all TextStyle properties. Styles the validation message (with Studio Pro v8.11).
   },
   value: {
     // This has all TextStyle properties. Styles the value button which toggle's dropdown and PickerIOS items. If placeholder is selected, placeholderTextColor will be applied
-    placeholderTextColor: string: // If placeholder is selected, placeholderTextColor will be applied (with Studio Pro v8.11).
+    placeholderTextColor: null, // If placeholder is selected, placeholderTextColor will be applied (with Studio Pro v8.11).
   },
   valueFocused: {
     // Same properties as `value`. Overrides `value` styles if the dropdown box is focused. (with Studio Pro v8.15).
@@ -487,50 +485,45 @@ export const Checkbox = {
   },
   containerDisabled: {
     // All ViewStyle properties. Same properties as `container`. Overrides `container` styles if the text box is non-editable.
-    // Render mode: both.
-  },
-  input: {
-    // All ViewStyle properties.
-    // Render mode: Switch.
-    trackColorOn: // Custom color for the switch track when turned on. Render mode: Switch.
-    trackColorOff: // Custom color for the switch track when turned off. Render mode: Switch.
-    thumbColorOn: // Color of the foreground switch grip when turned on. If this is set on iOS, the switch grip will lose its drop shadow. Render mode: Switch.
-    thumbColorOff: // Color of the foreground switch grip when turned off. If this is set on iOS, the switch grip will lose its drop shadow. Render mode: Switch.
-  },
-  inputError: {
-    // This has the same properties as `input`. Overrides `input` styles if there are validation errors.
-    // Render mode: Switch.
-  },
-  inputDisabled: {
-    // This has the same properties as `input`. Overrides `input` styles if the check box is non-editable.
-    // Render mode: Switch.
-  },
-  checkboxInput: {
-    // This has all ViewStyle properties.
-    // Render mode: Checkbox.
-    color: // Custom color for the tick icon. Render mode: Checkbox.
-    size: // Custom size for the tick icon. Render mode: Checkbox.
-  },
-  checkboxInputDisabled: {
-    // This has the same properties as `checkboxInput`. Overrides `checkboxInput` styles if the check box is non-editable.
-    // Render mode: Checkbox.
-  },
-  checkboxInputError: {
-    // This has the same properties as `checkboxInput`. Overrides `input` styles if there are validation errors.
-    // Render mode: Checkbox.
   },
   label: {
     // This has all TextStyle properties.
-    // Render mode: Both.
-    numberOfLines, defaults to `1`: // The maximum number of lines to wrap the label text. If the text is any longer it will be cut off with an ellipsis. Render mode: Both.
+    numberOfLines: 1 // The maximum number of lines to wrap the label text. If the text is any longer it will be cut off with an ellipsis.
   },
   labelDisabled: {
     // Same properties as `label`. Overrides `label` styles if the check box is non-editable.
-    // Render mode: Both.
   },
   validationMessage: {
     // This has all TextStyle properties.
-    // Render mode: Both.
+  },
+
+  // The following properties are only used for the render mode: Switch
+  input: {
+    // All ViewStyle properties.
+    trackColorOn: null, // Custom color for the switch track when turned on.
+    trackColorOff: null, // Custom color for the switch track when turned off.
+    thumbColorOn: null, // Color of the foreground switch grip when turned on. If this is set on iOS, the switch grip will lose its drop shadow.
+    thumbColorOff: null, // Color of the foreground switch grip when turned off. If this is set on iOS, the switch grip will lose its drop shadow.
+  },
+  inputError: {
+    // This has the same properties as `input`. Overrides `input` styles if there are validation errors.
+  },
+  inputDisabled: {
+    // This has the same properties as `input`. Overrides `input` styles if the check box is non-editable.
+  },
+  
+  // The following properties are only used for the render mode: Checkbox
+  checkboxInput: {
+    // This has all ViewStyle properties.
+    // Render mode: Checkbox.
+    color: null, // Custom color for the tick icon.
+    size: null, // Custom size for the tick icon.
+  },
+  checkboxInputDisabled: {
+    // This has the same properties as `checkboxInput`. Overrides `checkboxInput` styles if the check box is non-editable.
+  },
+  checkboxInputError: {
+    // This has the same properties as `checkboxInput`. Overrides `input` styles if there are validation errors.
   },
 };
 ```
@@ -539,6 +532,10 @@ export const Checkbox = {
 | --- | --- | --- | --- |
 | `container` | This has all ViewStyle properties.   |   | Both |
 | `containerDisabled` | Same properties as `container`. | Overrides `container` styles if the text box is non-editable. | Both |
+| `label` | This has all TextStyle properties.   |  | Both |
+| `label` | `numberOfLines` | The maximum number of lines to wrap the label text. If the text is any longer it will be cut off with an ellipsis. Defaults to `1`. | Both |
+| `labelDisabled` | Same properties as `label`. | Overrides `label` styles if the check box is non-editable. | Both |
+| `validationMessage` | This has all TextStyle properties.   |  | Both |
 | `input` | This has all ViewStyle properties.   |   | Switch |
 | `input` | `trackColorOn` | Custom color for the switch track when turned on. | Switch  |
 | `input` | `trackColorOff` | Custom color for the switch track when turned off. | Switch |
@@ -551,10 +548,6 @@ export const Checkbox = {
 | `checkboxInput` | `size` | Custom size for the tick icon. | Checkbox |
 | `checkboxInputDisabled` | This has the same properties as `checkboxInput`. | Overrides `checkboxInput` styles if the check box is non-editable. | Checkbox |
 | `checkboxInputError` | This has the same properties as `checkboxInput`. | Overrides `input` styles if there are validation errors. | Checkbox |
-| `label` | This has all TextStyle properties.   |  | Both |
-| `label` | `numberOfLines` | The maximum number of lines to wrap the label text. If the text is any longer it will be cut off with an ellipsis. Defaults to `1`. | Both |
-| `labelDisabled` | Same properties as `label`. | Overrides `label` styles if the check box is non-editable. | Both |
-| `validationMessage` | This has all TextStyle properties.   |  | Both |
 
 The default class to style all check box inputs is named `Checkbox`.
 
@@ -575,7 +568,7 @@ export const DatePicker = {
   label: {
     // This has all TextStyle properties.
     // Render mode: Both.
-    numberOfLines, defaults to `1`: // The maximum number of lines to wrap the label text. If the text is any longer it will be cut off with an ellipsis. Render mode: Both.
+    numberOfLines: 1 // The maximum number of lines to wrap the label text. If the text is any longer it will be cut off with an ellipsis. Render mode: Both.
   },
   labelDisabled: {
     // Same properties as `label`. Overrides `label` styles if the check box is non-editable.
@@ -583,8 +576,8 @@ export const DatePicker = {
   },
   value: {
     // This has all TextStyle properties.
-    ripplecolor, defaults to `rgba(0, 0, 0, 0.2)`: // This is the color of the ripple on Android, and will be applied only when the date picker is pressed.
-    underlayColor: // This is the color while pressing the date picker on iOS, if not set it will be defaulted to opacity only.
+    rippleColor: 'rgba(0, 0, 0, 0.2)', // This is the color of the ripple on Android, and will be applied only when the date picker is pressed.
+    underlayColor: null, // This is the color while pressing the date picker on iOS, if not set it will be defaulted to opacity only.
   },
   valueDisabled: {
     // This has all TextStyle properties. Overrides `value` styles if the date picker is non-editable.
@@ -606,7 +599,7 @@ export const DatePicker = {
   },
   pickerIOS: {
     // This has all Viewstyle properties.
-    color
+    color: null,
   },
   pickerTopIOS: {
     // This has all Viewstyle properties.
@@ -650,21 +643,12 @@ Images, videos and files help your user app manage images and other files. For m
 
 The static image widget can be used to show a predefined image on a page, layout, or snippet. For more information on this widgets, see [Static Image](/refguide/image/). 
 
-| Element             | Style Properties                    | Description                                                  |
-| ------------------- | ----------------------------------- | ------------------------------------------------------------ |
-| `container`         | This has all ViewStyle properties.  |                                                              |
-| `container`         | `rippleColor`                       | This is the color of the ripple on Android, and will be applied only when the container has an on click action set, otherwise it will be ignored (defaults to `rgba(0, 0, 0, 0.2)`). |
-| `container`         | `underlayColor`                     | This is the color while pressing the container on iOS, and will be applied only when the container has an on click action set, otherwise it will be ignored and defaulted to opacity only. |
-| `containerDisabled` | Same properties as `container`      | Overrides `container` styles if the image has an on click action and the action cannot be executed or is disabled during action. |
-| `image`             | This has all ImageStyle properties. |                                                              |
-| `imageDisabled`     | Same properties as `image`.          | Overrides `image` styles if the image has an on click action and the action cannot be executed or is disabled during action. |
-
 ```javascript
-export const image = {
+export const Image = {
   container: {
     // All ViewStyle properties
-    rippleColor, defaults to `rgba(0, 0, 0, 0.2)` : // This is the color of the ripple on Android, and will be applied only when the container has an on click action set, otherwise it will be ignored.
-    underlayColor: // This is the color while pressing the container on iOS, and will be applied only when the container has an on click action set, otherwise it will be ignored and defaulted to opacity only.
+    rippleColor: 'rgba(0, 0, 0, 0.2)', // This is the color of the ripple on Android, and will be applied only when the container has an on click action set, otherwise it will be ignored.
+    underlayColor: null, // This is the color while pressing the container on iOS, and will be applied only when the container has an on click action set, otherwise it will be ignored and defaulted to opacity only.
   },
   containerDisabled: {
     // Same properties as `container`. Overrides `container` styles if the image has an on click action and the action cannot be executed or is disabled during action.
@@ -677,6 +661,15 @@ export const image = {
   },
 };
 ```
+
+| Element             | Style Properties                    | Description                                                  |
+| ------------------- | ----------------------------------- | ------------------------------------------------------------ |
+| `container`         | This has all ViewStyle properties.  |                                                              |
+| `container`         | `rippleColor`                       | This is the color of the ripple on Android, and will be applied only when the container has an on click action set, otherwise it will be ignored (defaults to `rgba(0, 0, 0, 0.2)`). |
+| `container`         | `underlayColor`                     | This is the color while pressing the container on iOS, and will be applied only when the container has an on click action set, otherwise it will be ignored and defaulted to opacity only. |
+| `containerDisabled` | Same properties as `container`      | Overrides `container` styles if the image has an on click action and the action cannot be executed or is disabled during action. |
+| `image`             | This has all ImageStyle properties. |                                                              |
+| `imageDisabled`     | Same properties as `image`.          | Overrides `image` styles if the image has an on click action and the action cannot be executed or is disabled during action. |
 
 The default class to style all static image styles is named `Image`. Please note that images loaded from the model are styled with `NativeDynamicImage` as described in the [Dynamic Image](#dynamic-image) section below.
 
@@ -700,8 +693,8 @@ An action button can perform various actions such as calling a nanoflow, opening
 export const ActionButton = {
   container: {
     // All ViewStyle properties
-    rippleColor, defaults to `rgba(0, 0, 0, 0.2)` : // This is the color of the ripple on Android, and will be applied only when the container has an on click action set, otherwise it will be ignored.
-    underlayColor: // This is the color while pressing the container on iOS, and will be applied only when the container has an on click action set, otherwise it will be ignored and defaulted to opacity only.
+    rippleColor: 'rgba(0, 0, 0, 0.2)', // This is the color of the ripple on Android, and will be applied only when the container has an on click action set, otherwise it will be ignored.
+    underlayColor: null, // This is the color while pressing the container on iOS, and will be applied only when the container has an on click action set, otherwise it will be ignored and defaulted to opacity only.
   },
   containerDisabled: {
     // Same properties as `container`. Overrides `container` styles if the button has on click action set and it cannot be executed or is set with `Disable during action`.
@@ -715,8 +708,8 @@ export const ActionButton = {
   },
   icon: {
     // This has all ViewStyle properties.
-    size, defaults to `12`: // This is the size of the button icon.
-    color: // This is the color of the button icon.
+    size: 12, // This is the size of the button icon.
+    color: null, // This is the color of the button icon.
   },
   iconDisabled: {
     // Same properties as `icon`. Overrides `icon` styles if the button has on click action set and it cannot be executed or is set with `Disable during action`.
@@ -746,18 +739,26 @@ To style pages, you can add classes to a page or its layout. The status bar and 
 ```javascript
 export const Page = {
   statusBar: {
-    barStyle: // The style of the status bar, which can be either `dark-content` (black text) or `light-content` (white text).
-    backgroundColor: // The background color of the status bar (Android only).
+    barStyle: null, // The style of the status bar, which can be either `dark-content` (black text) or `light-content` (white text).
+    backgroundColor: null, // The background color of the status bar (Android only).
   },
   header: {
-    container: // This has all ViewStyle properties.
-    title: // This has all TextStyle properties.
-    backButtonText: // This has all TextStyle properties.
-    backButtonIcon: // This has all ImageStyle properties.
+    container: {
+      // This has all ViewStyle properties.
+    },
+    title: {
+      // This has all TextStyle properties.
+    },
+    backButtonText: {
+      // This has all TextStyle properties.
+    },
+    backButtonIcon: {
+      // This has all ImageStyle properties.
+    }
   },
-  header: {
-    // This has all ViewStyle properties.
-  },
+  container: {
+    // This has all ImageStyle properties.
+  }
 };
 ```
 
@@ -782,17 +783,35 @@ The navigation consists of the bottom bar (which allows users to navigate within
 ```javascript
 export const navigationStyle = {
   bottomBar: {
-    container: // This has all ViewStyle properties.
-    label: // This has all TextStyle properties.
-    selectedLabel: // This has all TextStyle properties.
-    icon: // This has all TextStyle properties.
-    selectedIcon: // This has all ViewStyle properties.
+    container: {
+      // This has all ViewStyle properties.
+    },
+    label: {
+      // This has all TextStyle properties.
+    },
+    selectedLabel: {
+      // This has all TextStyle properties.
+    },
+    icon: {
+      // This has all TextStyle properties.
+    },
+    selectedIcon: {
+      // This has all ViewStyle properties.
+    }
   },
   progressOverlay: {
-    background: // This has all ViewStyle properties.
-    container: // This has all ViewStyle properties.
-    activityIndicator: // This is the same as the `activity indicator` widget.
-    text: // This has all TextStyle properties.
+    background: {
+      // This has all ViewStyle properties.
+    },
+    container: {
+      // This has all ViewStyle properties.
+    },
+    activityIndicator: {
+      // This is the same as the `activity indicator` widget.
+    },
+    text: {
+      // This has all TextStyle properties.
+    }
   },    
 };
 ```
@@ -827,9 +846,9 @@ export const com_mendix_widget_native_activityindicator_ActivityIndicator = {
     // This has all ViewStyle properties.
   },
   indicator: {
-    color, defaults to `gray`: // This is the color of the indicator.
-    size, defaults to `large`: // Possible values for indicator are `large` and `small`.
-    };
+    color: 'gray', // This is the color of the indicator.
+    size: 'large' // Possible values for indicator are `large` and `small`.
+  }
 };
 ```
 
@@ -856,8 +875,8 @@ export const com_mendix_widget_native_backgroundimage_BackgroundImage = {
   },
   image: {
     // This has all ImageStyle properties.
-    svgColor, defaults to `black`: // Property to set the color of an SVG image.
-    };
+    svgColor: 'black', // Property to set the color of an SVG image.
+  }
 };
 ```
 
@@ -882,7 +901,7 @@ export const com_mendix_widget_native_badge_Badge = {
   },
   text: {
     // This has all TextStyle properties.
-    };
+  }
 };
 ```
 
@@ -903,12 +922,11 @@ export const com_mendix_widget_native_barcodescanner_BarcodeScanner = {
     // This has all ViewStyle properties.
   },
   mask: {
-    // This only allows the properties below.
-    color, defaults to `#62B1F6`: // Property to set the color of the mask border indicators.
-    width: // Property to set the width of the barcode reader.
-    height: // Property to set the height of the barcode reader.
-    backgroundColor, defaults to `rgba(0, 0, 0, 0.6)`: // Property to set the background color of the mask.
-    };
+    color: '#62B1F6', // Property to set the color of the mask border indicators.
+    width: null, // Property to set the width of the barcode reader.
+    height: null, // Property to set the height of the barcode reader.
+    backgroundColor: 'rgba(0, 0, 0, 0.6)' // Property to set the background color of the mask.
+  }
 };
 ```
 
@@ -942,31 +960,31 @@ export const com_mendix_widget_native_feedback_Feedback = {
   },
   textAreaInput: {
     // This has all TextStyle properties.
-    placeholderTextColor: // This is the text color of the placeholder string.
-    selectionColor: // This is the highlight and cursor color of the text input.
-    underlineColorAndroid: // This is the underline color for Android devices.
-    numberOfLines: // This is the height of the text area is based on this number of text lines.
+    placeholderTextColor: null, // This is the text color of the placeholder string.
+    selectionColor: null, // This is the highlight and cursor color of the text input.
+    underlineColorAndroid: null, // This is the underline color for Android devices.
+    numberOfLines: null, // This is the height of the text area is based on this number of text lines.
   },
   switchLabel: {
     // This has all TextStyle properties.
   },
   switchInput: {
     // This has all TextStyle properties.
-    trackColorOn: // This is the custom color for the switch track when turned on.
-    trackColorOff: // This is the custom color for the switch track when turned off.
-    thumbColorOn: // This is the color of the foreground switch grip when turned on. If this is set on iOS, the switch grip will lose its drop shadow.
-    thumbColorOff: // This is the color of the foreground switch grip when turned off. If this is set on iOS, the switch grip will lose its drop shadow.
+    trackColorOn: null, // This is the custom color for the switch track when turned on.
+    trackColorOff: null, // This is the custom color for the switch track when turned off.
+    thumbColorOn: null, // This is the color of the foreground switch grip when turned on. If this is set on iOS, the switch grip will lose its drop shadow.
+    thumbColorOff: null, // This is the color of the foreground switch grip when turned off. If this is set on iOS, the switch grip will lose its drop shadow.
   },
   button: {
-    borderColor: // This is the color of dialog button borders.
-    borderWidth: // This is the width of dialog button borders.
-    color: // This is the color of dialog button text.
+    borderColor: null, // This is the color of dialog button borders.
+    borderWidth: null, // This is the width of dialog button borders.
+    color: null, // This is the color of dialog button text.
   },
   buttonDisabled: {
-    color: // This is the color of dialog button text when disabled.
+    color: null, // This is the color of dialog button text when disabled.
   },
   activityIndicator: {
-    color: // This is the color of the activity indicator that is shown while feedback is being submitted.
+    color: null, // This is the color of the activity indicator that is shown while feedback is being submitted.
   },
 };
 ```
@@ -1006,15 +1024,15 @@ export const com_mendix_widget_native_floatingactionbutton_FloatingActionButton 
   },
   button: {
     // This has all ViewStyle properties.
-    size: // This is the radius of the button.
-    rippleColor: // This is the color of the ripple on Android.
+    size: null, // This is the radius of the button.
+    rippleColor: null, // This is the color of the ripple on Android.
   },
   buttonIcon: {
     // This has all ImageStyle properties.
   },
   secondaryButton: {
     // This has all ViewStyle properties.
-    size: // This is the radius of the secondary buttons.
+    size: null, // This is the radius of the secondary buttons.
   },
   secondaryButtonIcon: {
     // This has all ImageStyle properties.
@@ -1058,11 +1076,11 @@ export const com_mendix_widget_native_maps_Maps = {
     // This has all ViewStyle properties.
   },
   loadingIndicator: {
-    color: // This is the color of the loading indicator.
+    color: null, // This is the color of the loading indicator.
   },
   marker: {
-    color: // This is the color of the location marker.
-    opacity: // This is the opacity of the location marker.
+    color: null, // This is the color of the location marker.
+    opacity: null, // This is the opacity of the location marker.
   },
 };
 ```
@@ -1098,7 +1116,7 @@ export const com_mendix_widget_native_progressbar_ProgressBar = {
     // This has all ViewStyle properties.
   },
   fill: {
-    backgroundColor: // This is the background color of the filled progress bar portion.
+    backgroundColor: null, // This is the background color of the filled progress bar portion.
   },
   marker: {
     // This has all TextStyle properties.
@@ -1127,14 +1145,14 @@ export const com_mendix_widget_native_progresscircle_ProgressCircle = {
     // This has all ViewStyle properties.
   },
   circle: {
-    size: // This is the radius of the progress circle.
-    borderWidth: // This is the border width of the progress circle.
-    borderColor: // This is the color of the progress circle border.
+    size: null, // This is the radius of the progress circle.
+    borderWidth: null, // This is the border width of the progress circle.
+    borderColor: null, // This is the color of the progress circle border.
   },
   fill: {
-    backgroundColor: // This is the color of the circle’s filled portion.
-    width: // This is the width of the progress circle.
-    lineCapRounded: // This determines if the rotating line’s front tip is rounded off or not.
+    backgroundColor: null, // This is the color of the circle’s filled portion.
+    width: null, // This is the width of the progress circle.
+    lineCapRounded: null, // This determines if the rotating line’s front tip is rounded off or not.
   },
   text: {
     // This has all TextStyle properties.
@@ -1171,9 +1189,9 @@ export const com_mendix_widget_native_qrcode_QRCode = {
     // This has all ViewStyle properties.
   },
   qrcode: {
-    size: // The size of the QR code.
-    color: // The color of the QR code. 
-    borderColor: // The background color behind the QR code.
+    size: null, // The size of the QR code.
+    color: null, // The color of the QR code. 
+    borderColor: null, // The background color behind the QR code.
   },
 };
 ```
@@ -1285,9 +1303,9 @@ export const com_mendix_widget_native_rating_Rating = {
   },
   icon: {
     // This has all ViewStyle properties.
-    size: // The size of the icon.
-    color: // The color of the icon.
-    selectedColor: // The color of the icon when selected.
+    size: null, // The size of the icon.
+    color: null, // The color of the icon.
+    selectedColor: null, // The color of the icon when selected.
   },
 };
 ```
@@ -1359,7 +1377,7 @@ export const com_mendix_widget_native_videoplayer_VideoPlayer = {
     // This has all ViewStyle properties.
   },
   indicator: {
-    color: // The loading indicator color.
+    color: null, // The loading indicator color.
   },
   video: {
     // This has all ViewStyle properties.
@@ -1477,8 +1495,8 @@ export const com_mendix_widget_native_animation_Animation = {
     // This has all ViewStyle properties.
   },
   icon: {
-    size: // The size of the icon.
-    color: // The color of the icon.
+    size: null, // The size of the icon.
+    color: null, // The color of the icon.
   },
 };
 ```
@@ -1512,13 +1530,13 @@ export const com_mendix_widget_native_listviewswipe_ListViewSwipe = {
   },
   leftAction: {
     // This has all ViewStyle properties.
-    panelSize: // The number of pixels and the combined size of the background buttons.
-    threshold: // The number of pixels to accept the swipe action.
+    panelSize: null, // The number of pixels and the combined size of the background buttons.
+    threshold: null, // The number of pixels to accept the swipe action.
   },
   rightAction: {
     // This has all ViewStyle properties.
-    panelSize: // The number of pixels and the combined size of the background buttons.
-    threshold: // The number of pixels to accept the swipe action.
+    panelSize: null, // The number of pixels and the combined size of the background buttons.
+    threshold: null, // The number of pixels to accept the swipe action.
   },
 };
 ```
@@ -1592,13 +1610,36 @@ The popup menu widget allows you to show a context menu exactly where the user t
 A main object has four objects:
 
 ```javascript
-export const TODO:FILL THIS IN = {
+export const com_mendix_widget_native_popupmenu_PopupMenu = {
   basic: {
-    // BasicItemStyle. Styles basic items.
+  // BasicItemStyle. Styles basic items.
+    containerStyle: {
+      // This has all ViewStyle properties. Styles the wrapper container around a basic item. 
+    },
+    itemStyle: {
+      ellipsizeMode: null, // 'head', 'middle', 'tail', or 'clip'. Styles how the text will be clipped if its too long.
+      rippleColor: null, // Styles the color of touch feedback when item is tapped. Works for both iOS and Android platforms.
+      defaultStyle: {
+        // This has all TextStyle properties. Styles all basic menu items which have the `default` style selected.
+      },
+      primaryStyle: {
+        // This has all TextStyle properties. Styles all basic menu items which have the `primary` style selected.
+      },
+      dangerStyle: {
+        // This has all TextStyle properties. Styles all basic menu items which have the `danger` style selected.
+      },
+      customStyle: {
+        // This has all TextStyle properties. Styles all basic menu items which have the `custom` style selected.
+      },
+    },
+    dividerColor: null, // Styles the divider color. 
   },
+
   custom: {
     // CustomItemStyle. Styles custom items.
+    // This has the same properties as BasicItemStyle.
   },
+
   buttonContainer: {
     // This has all ViewStyle properties. Styles the wrapper view of triggerer since there could be multiple elements, and it has to be wrapped in a view. 
   },
@@ -1617,20 +1658,6 @@ export const TODO:FILL THIS IN = {
 
 #### 24.1 BasicItemStyle
 
-```javascript
-export const TODO:FILL THIS IN = {
-  containerStyle: {
-    // This has all ViewStyle properties. Styles the wrapper container around a basic item. 
-  },
-  itemStyle: {
-    // This has all ItemStyle properties. Styles the basic items.     
-  },
-  dividerColor: {
-    string: // Styles the divider color. 
-  },
-};
-```
-
 | Element    | Style Properties |  Description     |
 | ----| ---- | ------ |
 | `containerStyle` | This has all ViewStyle properties. | Styles the wrapper container around a basic item. |
@@ -1638,34 +1665,6 @@ export const TODO:FILL THIS IN = {
 | `dividerColor` | `string`      | Styles the divider color.    |
 
 #### 24.2 ItemStyle
-
-```javascript
-export const TODO:FILL THIS IN = {
-  ellipsizeMode: {
-    // Styles how the text will be clipped if its too long.
-    head
-    middle
-    tail
-    clip
-  },
-  rippleColor: {
-    // Styles the color of touch feedback when item is tapped. Works for both iOS and Android platforms.
-    string
-  },
-  defaultStyle: {
-    // This has all TextStyle properties. Styles all basic menu items which have the `default` style selected.
-  },
-  primaryStyle: {
-    // This has all TextStyle properties. Styles all basic menu items which have the `primary` style selected.
-  },
-  dangerStyle: {
-    // This has all TextStyle properties. Styles all basic menu items which have the `danger` style selected.
-  },
-  customStyle: {
-    // This has all TextStyle properties. Styles all basic menu items which have the `custom` style selected.
-  },
-};
-```
 
 | Element | Style Properties  | Description  |
 | -------------| ----- | ----- |
@@ -1677,20 +1676,6 @@ export const TODO:FILL THIS IN = {
 | `customStyle` |  This has all TextStyle properties.  | Styles all basic menu items which have the `custom` style selected.  |
 
 #### 24.3 CustomItemStyle
-
-```javascript
-export const com_mendix_widget_native_popupmenu_PopupMenu = {
-  containerStyle: {
-    // This has all ViewStyle properties. Styles the wrapper container around a custom item. 
-  },
-  itemStyle: {
-    rippleColor: string: // Styles the color of touch feedback when item is tapped. Works for both iOS and Android platforms.     
-  },
-  dividerColor: {
-    string: // Styles the divider color. 
-  },
-};
-```
 
 | Element                   | Style Properties |  Description                                      |
 | ---------------------------| ---- | ------------------------------------------------ |
@@ -1706,24 +1691,49 @@ The carousel widget allows you to show swipeable items in a carousel.
 
 Main object has to have three objects called `container`, `cardLayout`, and `fullWidthLayout`. `cardLayout` and `fullWidthLayout` will be applied automatically depending on selected layout in widget properties.
 
-```css
-export myCarouselStyle = {
-    container: ViewStyle  //
-    cardLayout: ...LayoutStyle,
-    fullWidthLayout: ...LayoutStyle
-}
-```
-
 ```javascript
-export const TODO:FILL THIS IN = {
+export const com_mendix_widget_native_carousel_Carousel = {
   container: {
     // This has all ViewStyle properties. Styles the view surrounding the carousel widget. For best results, make sure to give a fixed `height`
   },
   cardLayout: {
-    LayoutStyle: // Styles the carousel when the layout is set to card.     
+    // Styles the carousel when the layout is set to card.     
+    slideItem: {
+      // This has all ViewStyle properties. Styles the view surrounding each slide, including inactive slides.
+    },
+    inactiveSlideItem: {
+      opacity: null, // Allows inactive slides to become more smaller and faded.   
+      scale: null, // Allows inactive slides to become more smaller and faded.   
+    },
+    indicator: {
+      color: null, // Styles the loading indicator which will be shown while the carousel is loading.
+    },
+    pagination: {
+      container: {
+        // This has all ViewStyle properties. Styles the main view around pagination, regardless of text or dot.
+      },
+      dotStyle: {
+        // This has all ViewStyle properties. Styles all the pagination dots.   
+  color: null, 
+      },
+      inactiveDotStyle: {
+        // This has all ViewStyle properties. Additional styles for inactive dots. Will be merged with `dotStyle`.
+  opacity: null,
+  scale: null,
+  color: null,
+      },
+      dotContainerStyle: {
+        // This has all ViewStyle properties. Styles the view around individual pagination dots.  
+      },
+      text: {
+        // This has all TextStyle properties. Will be applied when there are more than five elements in carousel, in which case pagination buttons become text like **1/5**.
+      },
+    },
   },
+
   fullWidthLayout: {
-    LayoutStyle: // Styles the carousel when the layout is set to full width.
+    // Styles the carousel when the layout is set to full width.
+    // Same properties as cardLayout.
   },
 };
 ```
@@ -1736,23 +1746,6 @@ export const TODO:FILL THIS IN = {
 
 #### 25.1 LayoutStyle
 
-```javascript
-export const TODO:FILL THIS IN = {
-  slideItem: {
-    // This has all ViewStyle properties. Styles the view surrounding each slide, including inactive slides.
-  },
-  inactiveSlideItem: {
-    opacity: number: // Allows inactive slides to become more smaller and faded.   
-    scale: number: // Allows inactive slides to become more smaller and faded.   
-  },
-  indicator: {
-    color: string: // Styles the loading indicator which will be shown while the carousel is loading.
-  },
-  pagination: {
-    // Styles pagination container, dots, active dots, and text.
-  },
-};
-```
 | Element | Style Properties | Description   |
 | --- | --- | --- |
 | slideItem | This has all ViewStyle properties.  | Styles the view surrounding each slide, including inactive slides.  |
@@ -1761,26 +1754,6 @@ export const TODO:FILL THIS IN = {
 | pagination | Pagination  | Styles pagination container, dots, active dots, and text.  |
 
 #### 25.2 Pagination
-
-```javascript
-export const com_mendix_widget_native_carousel_Carousel = {
-  container: {
-    // This has all ViewStyle properties. Styles the main view around pagination, regardless of text or dot.
-  },
-  dotStyle: {
-    // This has all ViewStyle properties as well as `color: string`. Styles all the pagination dots.   
-  },
-  inactiveDotStyle: {
-    // This has all ViewStyle properties as well as `opacity: number; scale: number; color: string`. Additional styles for inactive dots. Will be merged with `dotStyle`.   
-  },
-  dotContainerStyle: {
-    // This has all ViewStyle properties. Styles the view around individual pagination dots.  
-  },
-  text: {
-    // This has all TextStyle properties. Will be applied when there are more than five elements in carousel, in which case pagination buttons become text like **1/5**.
-  },
-};
-```
 
 | Element | Style Properties | Description  |
 | ---|--- | --- |
@@ -1802,16 +1775,16 @@ The signature widget allows you to draw and save a signature. The signature widg
 export const com_mendix_widget_native_signature_Signature = {
   container: {
     // This has all ViewStyle properties. 
-    penColor: // This will change the color of the stroke.
+    penColor: null, // This will change the color of the stroke.
   },
   buttonWrapper: {
     // This has all ViewStyle properties. 
   },
   buttonClearContainer: {
     // This has all ViewStyle properties. 
-    rippleColor: // This will change the color of the ripple on Android.
-    activeOpacity: // This will change the opacity when touch is active on iOS.
-    underlayColor: // This will change the underlay color when touch is active on iOS.
+    rippleColor: null, // This will change the color of the ripple on Android.
+    activeOpacity: null, // This will change the opacity when touch is active on iOS.
+    underlayColor: null, // This will change the underlay color when touch is active on iOS.
   },
   buttonClearCaption: {
     // This has all TextStyle properties. 
@@ -1821,9 +1794,9 @@ export const com_mendix_widget_native_signature_Signature = {
   },
   buttonSaveContainer: {
     // This has all ViewStyle properties. 
-    rippleColor: // This will change the color of the ripple on Android.
-    activeOpacity: // This will change the opacity when touch is active on iOS.
-    underlayColor: // This will change the underlay color when touch is active on iOS.
+    rippleColor: null, // This will change the color of the ripple on Android.
+    activeOpacity: null, // This will change the opacity when touch is active on iOS.
+    underlayColor: null, // This will change the underlay color when touch is active on iOS.
   }, 
   buttonSaveCaption: {
     // This has all TextStyle properties.
@@ -1865,67 +1838,70 @@ export const com_mendix_widget_native_linechart_LineChart = {
     // This has all ViewStyle properties. 
   },
   grid: {
-    backgroundColor: // Applies a color to the grid background (string).
-    dashArray: // Applies a pattern of dashes and gaps to the grid lines (string containing a [dash pattern](https://www.w3.org/TR/SVG11/painting.html#StrokeDasharrayProperty).
-    lineColor: // Applies a color to the grid lines (string).
-    lineWidth: // Applies a width to the grid lines (number).
-    padding: // Applies padding to all sides of the grid (number). Use it to make axis value labels visible.
-    paddingBottom: // Applies padding to the bottom side of the grid (number). Use it to make axis value labels visible.
-    paddingHorizontal: // Applies padding to the horizontal sides of the grid (number). Use it to make axis value labels visible.
-    paddingLeft: // Applies padding to the left side of the grid (number). Use it to make axis value labels visible.
-    paddingRight: // Applies padding to the right side of the grid (number). Use it to make axis value labels visible.
-    paddingTop: // Applies padding to the top side of the grid (number). Use it to make axis value labels visible.
-    paddingVertical: // Applies padding to the vertical sides of the grid (number). Use it to make axis value labels visible.
+    backgroundColor: null, // Applies a color to the grid background (string).
+    dashArray: null, // Applies a pattern of dashes and gaps to the grid lines (string containing a [dash pattern](https://www.w3.org/TR/SVG11/painting.html#StrokeDasharrayProperty).
+    lineColor: null, // Applies a color to the grid lines (string).
+    lineWidth: null, // Applies a width to the grid lines (number).
+    padding: null, // Applies padding to all sides of the grid (number). Use it to make axis value labels visible.
+    paddingBottom: null, // Applies padding to the bottom side of the grid (number). Use it to make axis value labels visible.
+    paddingHorizontal: null, // Applies padding to the horizontal sides of the grid (number). Use it to make axis value labels visible.
+    paddingLeft: null, // Applies padding to the left side of the grid (number). Use it to make axis value labels visible.
+    paddingRight: null, // Applies padding to the right side of the grid (number). Use it to make axis value labels visible.
+    paddingTop: null, // Applies padding to the top side of the grid (number). Use it to make axis value labels visible.
+    paddingVertical: null, // Applies padding to the vertical sides of the grid (number). Use it to make axis value labels visible.
   },
   xAxis: {
-    color: // Applies a color to the axis value labels (string).
-    dashArray: // Applies a pattern of dashes and gaps to the axis line (string containing a [dash pattern](https://www.w3.org/TR/SVG11/painting.html#StrokeDasharrayProperty)).
-    fontFamily: // Applies fonts to the axis value labels (string).
-    fontSize: // Applies a size to the axis value labels (number).
-    fontStyle: // Applies a font style to the axis value labels ("normal" or "italic").
-    fontWeight: // Applies a font weight to the axis value labels ("normal" or "bold" or "100" or "200" or "300" or "400" or "500" or "600" or "700" or "800" or "900").
-    lineColor: // Applies a color to the axis line (string).
-    lineWidth: // Applies a width to the axis line (number).
-  },
-   xAxis > label: { 
-    // All [TextStyle](https://reactnative.dev/docs/text-style-props) properties.
-    relativePositionGrid: // Positions the axis label at the bottom or right side of the grid ("bottom" or "right").
+    color: null, // Applies a color to the axis value labels (string).
+    dashArray: null, // Applies a pattern of dashes and gaps to the axis line (string containing a [dash pattern](https://www.w3.org/TR/SVG11/painting.html#StrokeDasharrayProperty)).
+    fontFamily: null, // Applies fonts to the axis value labels (string).
+    fontSize: null, // Applies a size to the axis value labels (number).
+    fontStyle: null, // Applies a font style to the axis value labels ("normal" or "italic").
+    fontWeight: null, // Applies a font weight to the axis value labels ("normal" or "bold" or "100" or "200" or "300" or "400" or "500" or "600" or "700" or "800" or "900").
+    lineColor: null, // Applies a color to the axis line (string).
+    lineWidth: null, // Applies a width to the axis line (number).
+    label: { 
+      // All TextStyle properties.
+      relativePositionGrid: null, // Positions the axis label at the bottom or right side of the grid ("bottom" or "right").
+    },
   },
   yAxis: {
     // All `xAxis` element styles.
   },
-  yAxis > label: { // All [TextStyle](https://reactnative.dev/docs/text-style-props) properties.
-    relativePositionGrid: // Positions the axis label at the top or left side of the grid ("top" or "left").
-  },
-  legend > container: {
-    // All [ViewStyle](https://reactnative.dev/docs/view-style-props) properties. 
-  },
-  legend > item: {
-    // All [ViewStyle](https://reactnative.dev/docs/view-style-props) properties. 
-  },
-  legend > indicator: {
-    // All [ViewStyle](https://reactnative.dev/docs/view-style-props) properties. 
-  },
-  legend > label: {
-    // All [ViewStyle](https://reactnative.dev/docs/view-style-props) properties. 
+  legend: {
+    container: {
+      // All ViewStyle properties.
+    },
+    item: {
+      // All ViewStyle properties. 
+    },
+    indicator: {
+      // All ViewStyle properties. 
+    },
+    label: {
+      // All ViewStyle properties. 
+    }
   },
   lines: {
-    lineColorPalette: // Provides colors to lines that do not have a line color configured (string with list of colors separated by ';').
-  },
-  lines > customLineStyles > any_custom_line_style_name > line: {
-    dashArray: // Applies a pattern of dashes and gaps to the graph line (string containing a [dash pattern](https://www.w3.org/TR/SVG11/painting.html#StrokeDasharrayProperty)).
-    ending: // Applies a flat or rounded line end to the graph line ("flat" or "round").
-    lineColor: // Applies a color to the graph line (string).
-    lineWidth: // Applies a width to the graph line (number).
-  },
-  lines > customLineStyles > any_custom_line_style_name > markers: {
-    backgroundColor: // Applies a background color to the markers of the graph line (string).
-    borderColor: // Applies a border color to the markers of the graph line (string).
-    borderWidth: // Applies a border width to the markers of the graph line (string).
-    display: // Influences whether markers are displayed. When displayed, it positions the markers of the graph line on top or underneath the line ("false" or "underneath" or "onTop").
-    size: // Applies a size to the markers of the graph line (number).
-    symbol: // Applies a symbol to the markers of the graph line ("circle" or "diamond" or "plus" or "minus" or "square" or "star" or "triangleDown" or "triangleUp").
-  },
+    lineColorPalette: null, // Provides colors to lines that do not have a line color configured (string with list of colors separated by ';').
+    customLineStyles: {
+      any_custom_line_style_name: {
+        line: {
+          dashArray: null, // Applies a pattern of dashes and gaps to the graph line (string containing a [dash pattern](https://www.w3.org/TR/SVG11/painting.html#StrokeDasharrayProperty)).
+          ending: null, // Applies a flat or rounded line end to the graph line ("flat" or "round").
+          lineColor: null, // Applies a color to the graph line (string).
+          lineWidth: null, // Applies a width to the graph line (number).
+        },
+        markers: {
+          backgroundColor: null, // Applies a background color to the markers of the graph line (string).
+          borderColor: null, // Applies a border color to the markers of the graph line (string).
+          borderWidth: null, // Applies a border width to the markers of the graph line (string).
+          display: null, // Influences whether markers are displayed. When displayed, it positions the markers of the graph line on top or underneath the line ("false" or "underneath" or "onTop").
+          size: null, // Applies a size to the markers of the graph line (number).
+          symbol: null, // Applies a symbol to the markers of the graph line ("circle" or "diamond" or "plus" or "minus" or "square" or "star" or "triangleDown" or "triangleUp").
+        }
+      }
+    }
+  }
 };
 ```
 
@@ -1992,70 +1968,74 @@ export const com_mendix_widget_native_barchart_BarChart = {
     // This has all ViewStyle properties. 
   },
   grid: {
-    backgroundcolor: // Applies a color to the grid background (string).
-    dashArray: //  Applies a pattern of dashes and gaps to the grid lines (string containing a [dash pattern](https://www.w3.org/TR/SVG11/painting.html#StrokeDasharrayProperty)).
-    lineColor: // Applies a color to the grid lines (string).
-    width: // Applies a width to the grid lines (number).
-    padding: // Applies padding to all sides of the grid (number). This makes axis value labels visible.
-    paddingBottom: // Applies padding to the bottom side of the grid (number). This makes axis value labels visible.
-    paddingHorizontal:  // Applies padding to the horizontal sides of the grid (number). This makes axis value labels visible.
-    paddingLeft: // Applies padding to the left side of the grid (number). This makes axis value labels visible.
-    paddingRight: // Applies padding to the right side of the grid (number). This makes axis value labels visible.
-    paddingTop: // Applies padding to the top side of the grid (number). This makes axis value labels visible.
-    paddingVertical: // Applies padding to the vertical sides of the grid (number). This makes axis value labels visible.
+    backgroundcolor: null, // Applies a color to the grid background (string).
+    dashArray: null, //  Applies a pattern of dashes and gaps to the grid lines (string containing a [dash pattern](https://www.w3.org/TR/SVG11/painting.html#StrokeDasharrayProperty)).
+    lineColor: null, // Applies a color to the grid lines (string).
+    width: null, // Applies a width to the grid lines (number).
+    padding: null, // Applies padding to all sides of the grid (number). This makes axis value labels visible.
+    paddingBottom: null, // Applies padding to the bottom side of the grid (number). This makes axis value labels visible.
+    paddingHorizontal: null, // Applies padding to the horizontal sides of the grid (number). This makes axis value labels visible.
+    paddingLeft: null, // Applies padding to the left side of the grid (number). This makes axis value labels visible.
+    paddingRight: null, // Applies padding to the right side of the grid (number). This makes axis value labels visible.
+    paddingTop: null, // Applies padding to the top side of the grid (number). This makes axis value labels visible.
+    paddingVertical: null, // Applies padding to the vertical sides of the grid (number). This makes axis value labels visible.
   },
   xAxis: {
-    color: // Applies a color to the grid background (string).
-    dashArray: // Applies a pattern of dashes and gaps to the axis line (string containing a [dash pattern](https://www.w3.org/TR/SVG11/painting.html#StrokeDasharrayProperty)).
-    fontFamily: // Applies a font type to the axis value labels (string).
-    fontSize: // Applies a size to the axis value labels (number).
-    fontStyle: // Applies a font style to the axis value labels ("normal" or "italic").
-    fontWeight: // Applies a font weight to the axis value labels ("normal" or "bold" or "100" or "200" or "300" or "400" or "500" or "600" or "700" or "800" or "900").
-    lineColor: // Applies a color to the axis line (string).
-    width: // Applies a width to the axis line (number).
-  },
-  xAxis > label: {
-    // All [TextStyle](https://reactnative.dev/docs/text-style-props) properties.
-    relativePositionGrid: // Positions the axis label at the **bottom** or **right** side of the grid.
+    color: null, // Applies a color to the grid background (string).
+    dashArray: null, // Applies a pattern of dashes and gaps to the axis line (string containing a [dash pattern](https://www.w3.org/TR/SVG11/painting.html#StrokeDasharrayProperty)).
+    fontFamily: null, // Applies a font type to the axis value labels (string).
+    fontSize: null, // Applies a size to the axis value labels (number).
+    fontStyle: null, // Applies a font style to the axis value labels ("normal" or "italic").
+    fontWeight: null, // Applies a font weight to the axis value labels ("normal" or "bold" or "100" or "200" or "300" or "400" or "500" or "600" or "700" or "800" or "900").
+    lineColor: null, // Applies a color to the axis line (string).
+    width: null, // Applies a width to the axis line (number).
+    label: {
+      // All TextStyle properties.
+      relativePositionGrid: null, // Positions the axis label at the **bottom** or **right** side of the grid.
+    }
   },
   yAxis: {
     // All `xAxis` element styles.
   },
-  yAxis > label: {
-    // All [TextStyle](https://reactnative.dev/docs/text-style-props) properties.
-    relativePositionGrid: // Positions the axis label at the **top** or **left** side of the grid.
+  legend: {
+    container: {
+      // All ViewStyle properties.
+    },
+    item: {
+      // All ViewStyle properties.
+    },
+    indicator: {
+      // All ViewStyle properties.
+    },
+    label: {
+      // All TextStyle properties.
+    }
   },
-  legend > container: {
-    // All [ViewStyle](https://reactnative.dev/docs/view-style-props) properties.
+  domain: {
+    padding: {
+      x: null, // Applies a number of pixels of padding to add the beginning and end of the X axis domain (number).
+      y: null, // Applies a number of pixels of padding to add the beginning and end of the y axis domain (number).
+    },
   },
-  legend > item: {
-    // All [ViewStyle](https://reactnative.dev/docs/view-style-props) properties.
-  },
-  legend > indicator: {
-    // All [ViewStyle](https://reactnative.dev/docs/view-style-props) properties.
-  },
-  legend > label: {
-    // All [TextStyle](https://reactnative.dev/docs/text-style-props) properties.
-  },
-  domain > padding: {
-    x: // Applies a number of pixels of padding to add the beginning and end of the X axis domain (number).
-    y: // Applies a number of pixels of padding to add the beginning and end of the y axis domain (number).
-  },
- bars: {
-    barColorPalette: // Provides colors to bars that do not have a bar color configured (string with list of colors separated by ';', one color for each series).
-    barsoffset: // Determines the number of pixels each bar in a group should be offset from its original position on the Y axis (number). This is only applicable when presentation mode is **Grouped**.
-  },
- bars > customBarStyles > any_custom_bar_style_name > bar: {
-    ending: // Specifies a radius to apply to each bar.
-    barcolor: // Applies a color to the bar (string). If bars are configured to have labels, the labels will be the same color as the bar.
-    width: // Applies a width to the bar (number).
-  },
- bars > customBarStyles > any_custom_bar_style_name > label: {
-    fontFamily: // Applies a font type to the bar label (string).
-    fontSize: // Applies a size to the bar label (number).
-    fontStyle: // Applies a font style to the bar label (**normal** or **italic**).
-    fontWeight: // Applies a font weight to the bar label ("normal" or "bold" or "100" or "200" or "300" or "400" or "500" or "600" or "700" or "800" or "900").
-  }, 
+  bars: {
+    barColorPalette: null, // Provides colors to bars that do not have a bar color configured (string with list of colors separated by ';', one color for each series).
+    barsoffset: null, // Determines the number of pixels each bar in a group should be offset from its original position on the Y axis (number). This is only applicable when presentation mode is **Grouped**.
+    customBarStyles: {
+      any_custom_bar_style_name: {
+        bar: {
+          ending: null, // Specifies a radius to apply to each bar.
+          barcolor: null, // Applies a color to the bar (string). If bars are configured to have labels, the labels will be the same color as the bar.
+          width: null, // Applies a width to the bar (number).
+        },
+        label: {
+          fontFamily: null, // Applies a font type to the bar label (string).
+          fontSize: null, // Applies a size to the bar label (number).
+          fontStyle: null, // Applies a font style to the bar label (**normal** or **italic**).
+          fontWeight: null, // Applies a font weight to the bar label ("normal" or "bold" or "100" or "200" or "300" or "400" or "500" or "600" or "700" or "800" or "900").
+        }
+      }
+    }
+  }
 };
 ```
 
@@ -2115,23 +2095,27 @@ export const com_mendix_widget_native_piedoughnutchart_PieDoughnutChart = {
   container: {
     // This has all ViewStyle properties. 
   },
-  slices > customStyles > any_custom_key > slice: {
-    color: // Applies a color to the slice (string). If labels are configured to be shown, each label will be the same color as its corresponding slice.
-    fontFamily: // Applies a font type to the slice label (string).
-    fontSize: //  Applies a size to the slice label (number).
-    fontStyle: // Applies a font style to the slice label (**normal** or **italic**).
-    fontWeight: // Applies a font weight to the slice label ("normal" or "bold" or "100"-"900" ascending by increments of 100).
-  },
   slices: {
-    colorPalette: // Provides colors to slices that do not have a slice color configured (string with list of colors separated by a ';').
-    innerRadius: //  Applies an inner radius to the chart when in doughnut presentation mode (number).
-    padding: // Applies padding to all sides of the chart (number).
-    paddingBottom: // Applies padding to the bottom side of the chart (number).
-    paddingHorizontal: // Applies padding to the horizontal sides of the chart (number).
-    paddingLeft: // Applies padding to the left side of the chart (number).
-    paddingRight: // Applies padding to the right side of the chart (number).
-    paddingTop: // Applies padding to the top side of the chart (number).
-    paddingVertical: // Applies padding to the vertical sides of the chart (number).
+    customStyles: {
+      any_custom_key: {
+        slice: {
+          color: null, // Applies a color to the slice (string). If labels are configured to be shown, each label will be the same color as its corresponding slice.
+          fontFamily: null, // Applies a font type to the slice label (string).
+          fontSize: null, //  Applies a size to the slice label (number).
+          fontStyle: null, // Applies a font style to the slice label (**normal** or **italic**).
+          fontWeight: null, // Applies a font weight to the slice label ("normal" or "bold" or "100"-"900" ascending by increments of 100).
+        },
+      },
+    },
+    colorPalette: null, // Provides colors to slices that do not have a slice color configured (string with list of colors separated by a ';').
+    innerRadius: null, //  Applies an inner radius to the chart when in doughnut presentation mode (number).
+    padding: null, // Applies padding to all sides of the chart (number).
+    paddingBottom: null, // Applies padding to the bottom side of the chart (number).
+    paddingHorizontal: null, // Applies padding to the horizontal sides of the chart (number).
+    paddingLeft: null, // Applies padding to the left side of the chart (number).
+    paddingRight: null, // Applies padding to the right side of the chart (number).
+    paddingTop: null, // Applies padding to the top side of the chart (number).
+    paddingVertical: null, // Applies padding to the vertical sides of the chart (number).
   },
 };
 ```
@@ -2172,10 +2156,10 @@ export const com_mendix_widget_native_switch_Switch = {
   },
   input: {
     // This has all TextStyle properties. 
-    trackColorOn: // Custom color for the switch track when turned on.
-    trackColorOff: // Custom color for the switch track when turned off.
-    thumbColorOn: // Color of the foreground switch grip when turned on. If this is set on iOS, the switch grip will lose its drop shadow.
-    thumbColorOff: // Color of the foreground switch grip when turned off. If this is set on iOS, the switch grip will lose its drop shadow.
+    trackColorOn: null, // Custom color for the switch track when turned on.
+    trackColorOff: null, // Custom color for the switch track when turned off.
+    thumbColorOn: null, // Color of the foreground switch grip when turned on. If this is set on iOS, the switch grip will lose its drop shadow.
+    thumbColorOff: null, // Color of the foreground switch grip when turned off. If this is set on iOS, the switch grip will lose its drop shadow.
   },
   inputError: {
     // This has the same properties as `input`. Overrides `input` styles if there are validation errors.
@@ -2185,7 +2169,7 @@ export const com_mendix_widget_native_switch_Switch = {
   },
   label: {
     // This has all TextStyle properties 
-    numberOfLines, defaults to `1`: // The maximum number of lines to wrap the label text. If the text is any longer it will be cut off with an ellipsis.
+    numberOfLines: 1, // The maximum number of lines to wrap the label text. If the text is any longer it will be cut off with an ellipsis.
   },
   labelDisabled: {
     // Same properties as `label`. Overrides `label` styles if the check box is non-editable.
@@ -2220,18 +2204,15 @@ The background gradient widget allows you to apply a background that transitions
 
 ```javascript
 export const com_mendix_widget_native_backgroundgradient_BackgroundGradient = {
-  angle: {
-    // Line of direction. Takes a value from `0` to `360`. A value of 0 is equivalent to top; increasing values rotate the design clockwise.
-  },
-  colorList: {
-    gradient_color_object: // Passes the colors you want to display in an array. Example: `[{ color: "#fff", offset: 0 }, { color: "#000", offset: 1 }].
-  },
   container: {
     // This has all ViewStyle properties. 
   },
-  opacity: {
-    // Takes a value from `0` to `100`. The lower the value, the more transparent.
+  colorList: {
+    color: null, // Colors can be passed in different formats. Valid color value formats are #d0d0d0, rgb(115,155,155), or rgba(195,226,226,0.5)
+    offset: null, // A color-stop's value, followed by one or more optional stop positions (should be between 0.0 and 1.0)
   },
+  angle: null, // Line of direction. Takes a value from `0` to `360`. A value of 0 is equivalent to top; increasing values rotate the design clockwise.
+  opacity: null, // Takes a value from `0` to `100`. The lower the value, the more transparent.
 };
 ```
 
@@ -2258,6 +2239,89 @@ An object `{ color: string, offset: number }` that represents the color and the 
 ### 11.32 Column Chart
 
 The [column chart](https://github.com/mendix/widgets-resources/blob/master/packages/pluggableWidgets/column-chart-native) widget renders a vertical column graph based on static and dynamic data sets.
+
+```javascript
+export const com_mendix_widget_native_columnchart_ColumnChart = {
+  container: {
+    // All ViewStyle properties.
+  },
+  errorMessage: {
+    // All TextStyle properties.
+  },
+  chart: {
+    // All ViewStyle properties.
+  },
+  grid: {
+    backgroundColor: null, // Applies a color to the grid background (string).
+    dashArray: null, // Applies a pattern of dashes and gaps to the grid lines (string containing a [dash pattern](https://www.w3.org/TR/SVG11/painting.html#StrokeDasharrayProperty)).
+    lineColor: null, // Applies a color to the grid lines (string).
+    width: null, // Applies a width to the grid lines (number).
+    padding: null, // Applies padding to all sides of the grid (number). This makes axis value labels visible.
+    paddingBottom: null, // Applies padding to the bottom side of the grid (number). This makes axis value labels visible.
+    paddingHorizontal: null, // Applies padding to the horizontal sides of the grid (number). This makes axis value labels visible.
+    paddingLeft: null, // Applies padding to the left side of the grid (number). This makes axis value labels visible.
+    paddingRight: null, // Applies padding to the right side of the grid (number). This makes axis value labels visible.
+    paddingTop: null, // Applies padding to the top side of the grid (number). This makes axis value labels visible.
+    paddingVertical: null, // Applies padding to the vertical sides of the grid (number). This makes axis value labels visible.
+  },
+  xAxis: {
+    color: null, // Applies a color to the axis value labels (string).
+    dashArray: null, // Applies a pattern of dashes and gaps to the axis line (string containing a [dash pattern](https://www.w3.org/TR/SVG11/painting.html#StrokeDasharrayProperty)).
+    fontFamily: null, // Applies a font type to the axis value labels (string).
+    fontSize: null, // Applies a size to the axis value labels (number).
+    fontStyle: null, // Applies a font style to the axis value labels ("normal" or "italic").
+    fontWeight: null, // Applies a font weight to the axis value labels ("normal" or "bold" or "100" or "200" or "300" or "400" or "500" or "600" or "700" or "800" or "900").
+    lineColor: null, // Applies a color to the axis line (string).
+    width: null, // Applies a width to the axis line (number).
+    label: {
+      // All TextStyle properties.
+      relativePositionGrid: null, //P ositions the axis label at the **bottom** or **right** side of the grid.
+    }
+  },
+  yAxis: {
+    // All xAxis properties
+  },
+  legend: {
+    container: {
+      // All ViewStyle properties.
+    },
+    item: {
+      // All ViewStyle properties.
+    },
+    indicator: {
+      // All ViewStyle properties.
+    },
+    label: {
+      // All TextStyle properties.
+    },
+  },
+  domain: {
+    padding: {
+      x: null, // Applies a number of pixels of padding to add the beginning and end of the X axis domain (number).
+      y: null, // Applies a number of pixels of padding to add the beginning and end of the Y axis domain (number).
+    }
+  },
+  columns: {
+    columnColorPalette: null, // Provides colors to columns that do not have a column color configured (string with list of colors separated by ';', one color for each series).
+    columnsOffset: null, // Determines the number of pixels each column in a group should be offset from its original position on the Y axis (number). This is only applicable when presentation mode is **Grouped**.
+    customColumnStyles: {
+      any_custom_column_style_name: {
+        column: {
+          ending: null, // Specifies a radius to apply to each column.
+          columnColor: null, // Applies a color to the column (string). If columns are configured to have labels, the labels will be the same color as the column.
+          width: null, // Applies a width to the column (number).
+        },
+        label: {
+          fontFamily: null, // Applies a font type to the column label (string).
+          fontSize: null, // Applies a size to the column label (number).
+          fontStyle: null, // Applies a font style to the column label (**normal** or **italic**).
+          fontWeight: null, // Applies a font weight to the column label ("normal" or "bold" or "100" or "200" or "300" or "400" or "500" or "600" or "700" or "800" or "900").
+        }
+      }
+    }
+  }
+};
+```
 
 | Element | Style Properties | Description |
 | --- | --- | --- |
@@ -2335,10 +2399,10 @@ export const TODO = {
   },
   loadMoreButtonPressableContainer: {
     // This has all ViewStyle properties. Applies a view style to the load more button container.
-    rippleColor: // Defines the color of the ripple effect. ([color](https://reactnative.dev/docs/colors)) (Android only)
-    borderless: // Defines if ripple effect should not include border. (Boolean) (Android only)
-    radius: // Defines the radius of the ripple effect. (number) (Android only)
-    foreground: // Set to true to add the ripple effect to the foreground of the view, instead of the background. (Boolean) (Android only)
+    rippleColor: null, // Defines the color of the ripple effect. ([color](https://reactnative.dev/docs/colors)) (Android only)
+    borderless: null, // Defines if ripple effect should not include border. (Boolean) (Android only)
+    radius: null, // Defines the radius of the ripple effect. (number) (Android only)
+    foreground: null, // Set to true to add the ripple effect to the foreground of the view, instead of the background. (Boolean) (Android only)
   },
 };
 ```

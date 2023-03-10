@@ -216,7 +216,7 @@ Return codes are described in the table below:
 
 ### 3.5 mx merge Command [version 9.17+]
 
-The mx merge command performs a tree-way merge of two MPR files having a common base commit.
+The mx merge command performs a three-way merge of two MPR files having a common base commit.
 
 The input is three MPR files: base, mine, and theirs
 

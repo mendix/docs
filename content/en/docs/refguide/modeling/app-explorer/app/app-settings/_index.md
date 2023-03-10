@@ -327,7 +327,7 @@ If you want to distribute your app as an adaptive solution package and allow upg
 
 A distributable app must have a **Solution version** that you can set on this tab.
 
-If you are implementing a solution, *Based on* setting will show the version of the solution package your app is currently based on.
+If you are implementing a solution, **Based on** setting shows the version of the solution package your app is currently based on.
 
 ## 10 Miscellaneous Tab {#miscellaneous}
 

@@ -28,6 +28,7 @@ The actions which can be performed are:
 * Find by expression 
 * Head 
 * Tail 
+* Range
 
 See below for details on these actions.
 
@@ -99,6 +100,14 @@ These operations take a list and filter it based on an expression. Inside the ex
 | --- | --- | --- |
 | Find by expression | Finds the first object that matches the given expression. | Object |
 | Filter by expression | Finds all the objects that match the given expression. | List |
+
+#### 3.1.5 Range
+
+These operations take a list and 2 expressions: `offset` and `amount`.
+
+| Operation | Description | Result Type |
+| --- | --- | --- |
+| Range | Retrieve a given number of objects (Amount) starting at a given index (Offset). The amount and offset are expressions that should result in a number. Note that the first object has an offset of 0. An amount of 0 means that all objects are retrieved. | List |
 
 ### 3.2 List Name, Object Name, or Variable Name
 

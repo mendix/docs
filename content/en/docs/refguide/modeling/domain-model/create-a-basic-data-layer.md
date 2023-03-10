@@ -79,7 +79,7 @@ To extend the **Order** entity with an enumeration value-based attribute, follow
 
     {{< figure src="/attachments/refguide/modeling/domain-model/create-a-basic-data-layer/add-order-status-attribute.png" width="450px" >}}
 
-11. Click **OK** to save the new attribute. Now, the **Order** entity should look like this:
+11. Click **OK** to save the new attribute. Now the **Order** entity should look like this:
 
     {{< figure src="/attachments/refguide/modeling/domain-model/create-a-basic-data-layer/order-entity-two.png" >}}
 

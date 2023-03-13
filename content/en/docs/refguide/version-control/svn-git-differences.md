@@ -54,7 +54,7 @@ Unfortunately, Git for Windows is not synchronized with the system proxy setting
    
    * Configure the proxy settings:
         `git config --local http.proxy [protocol://][user[:password]@]proxyhost[:port]`
-   * Check the setting change took effect:
+   * Check that the setting has changed:
         `git config --local http.proxy`
 
 You can also use **--global** modifier for applying the changes system-wise, but it is not recommended if you are using Git not only for Mendix development.

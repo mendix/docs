@@ -46,18 +46,20 @@ In SVN, commits are done to a central server which enforces the commit order. Th
 
 In Git, committing is done locally at first. Then commits are sent to other repositories and they should be uniquely identifiable. Therefore, commits in Git are represented with a SHA-1/SHA-256 hash (e.g. f0e165, bb2327, 76d34e, c31247), as they can be generated in a distributed setting and still be the same on different clients with identical changes.
 
-## 5 Proxy Support
+## 5 Proxy Support {#proxy-support}
 
 Studio Pro communicates to Git repositories by two means: LibGit2 library or Git command line interface (Git CLI). LibGit2 provides a nice and clean repository object model that is in intensive use during local repository operations. However, it is not performant enough when it comes to communication with remove Git servers. This is when Git CLI is used and Studio Pro switches to the client while performing fetch, pull and push operations (that is why the Git for Windows package, which ships Git CLI to your computer, is an integral part of Studio Pro installation). Therefore, any operation that requires transferring data to/from remote Git repositories, uses GitCLI client.
 
-Unfortunately, Git for Windows is not synchronized with the system proxy settings by default, which mean it may be tricky to integrate them into Studio Pro seamlessly. We are trying our best to provide integration as soon as possible, but as a workaround you can configure the proxy settings directly by either overriding **http_proxy**, **https_proxy** and **all_proxy** (for more information, see [Git documentation] (https://git-scm.com/docs/git-config#Documentation/git-config.txt-httpproxy) or by setting the proxy URL in your local **.git/config** via the folowwing commands:
-   
-   * Configure the proxy settings:
-        `git config --local http.proxy [protocol://][user[:password]@]proxyhost[:port]`
-   * Check that the setting has changed:
-        `git config --local http.proxy`
+Unfortunately, Git for Windows is not synchronized with the system proxy settings by default, which means it may be tricky to integrate them into Studio Pro seamlessly. We are trying our best to provide integration as soon as possible, but as a workaround you can configure the proxy settings directly by either overriding **http_proxy**, **https_proxy** and **all_proxy** (for more information, see [Git documentation] (https://git-scm.com/docs/git-config#Documentation/git-config.txt-httpproxy) or by setting the proxy URL in your local **.git/config** via the folowwing commands:
 
-You can also use **--global** modifier for applying the changes system-wise, but it is not recommended if you are using Git not only for Mendix development.
+* Configure the proxy settings:
+
+    `git config --local http.proxy [protocol://][user[:password]@]proxyhost[:port]`
+* Check that the setting has changed:
+
+    `git config --local http.proxy`
+
+You can also use `--global` modifier for applying the changes system-wise, but it is not recommended if you are using Git not only for Mendix development.
 
 ## 6 Interacting with Version Control Outside Studio Pro
 

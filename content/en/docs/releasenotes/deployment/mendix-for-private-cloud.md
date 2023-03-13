@@ -13,6 +13,24 @@ For information on the current status of deployment to Mendix for Private Cloud 
 
 ## 2023
 
+### March 9th, 2023
+
+#### Deploy API Improvements
+
+* We have added a new API endpoint for updating the namespaces. This will allow cluster managers to do the following tasks:
+    * Add, edit or remove member permissions and members in a namespace. 
+    * Enable or disable the external secret store and development mode configurations. 
+    * Add, update, or clear the operational URLs.
+    * Activate or deactivate database and storage plans.
+* We have improved the Update Cluster API endpoint by allowing cluster managers to add new cluster managers.
+* We have improved the responses for `Get Cluster`, `Get Namespace`, `Get Clusters`, and `Get Namespaces`. The responses now provide more information for the user.
+* We have improved the Delete Cluster API endpoint by allowing the forced deletion of a cluster with namespaces, as long as the namespaces do not have any attached environments.
+* We have modified the OpenAPI specification file. Please download or check the latest version.
+
+#### Build API Release
+
+* We have introduced a new Mendix for Private Cloud Build API, which allows users to build, upload, delete and retrieve deployment packages for an application deployed in the Private Cloud.
+
 ### February 16th, 2023
 
 #### Portal Improvements

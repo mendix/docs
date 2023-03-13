@@ -71,7 +71,7 @@ However, in this case the following products and capabilities are not available:
 
 * [Mendix Studio](/studio/general/) and the [collaborative development in Studio](/studio/collaboration/)
 * Deployment using the Developer Portal directly from the Team Server
-* Integrated platform APIs such as the [App repository API](/apidocs-mxsdk/apidocs/app-repository-api/), [Build API](/apidocs-mxsdk/apidocs/build-api/), [Platform SDK](/apidocs-mxsdk/mxsdk/), [Permissions API](/apidocs-mxsdk/apidocs/permissions-api/), [Projects API](/apidocs-mxsdk/apidocs/projects-api/), [Stories API](/apidocs-mxsdk/apidocs/stories-api/), [User management API](/apidocs-mxsdk/apidocs/user-management-api/), and [Developer portal webhooks](/apidocs-mxsdk/apidocs/webhooks-sprints/)
+* Integrated platform APIs such as the [App repository API](/apidocs-mxsdk/apidocs/app-repository-api/), [Build API](/apidocs-mxsdk/apidocs/build-api/), [Platform SDK](/apidocs-mxsdk/mxsdk/), [Permissions API](/apidocs-mxsdk/apidocs/permissions-api/), [Projects API](/apidocs-mxsdk/apidocs/projects-api/), [Stories API](/apidocs-mxsdk/apidocs/stories-api/), and [User management API](/apidocs-mxsdk/apidocs/user-management-api/)
 * [AQM](/addons/aqm-addon/) 
 
 {{% alert color="info" %}}

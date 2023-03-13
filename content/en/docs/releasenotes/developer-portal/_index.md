@@ -17,6 +17,17 @@ To see the current status of the Mendix Developer Portal and Control Center, see
 
 ## 2023
 
+### March 9th, 2023
+
+#### Improvements
+
+* As of now, only Scrum Masters can [manage the app team](/developerportal/collaborate/team/#managing).
+* We simplified the way your [Notification](/developerportal/community-tools/mendix-profile/#notifications) settings are stored.
+
+#### Fixes
+
+* We fixed an issue where the users you administered for your app's [environment](/developerportal/collaborate/general-settings/#manage-users) were not displayed in the correct order.
+
 ### February 23rd, 2023
 
 #### New Features
@@ -941,7 +952,7 @@ In Portfolio Management, you can do the following
 
 #### Webhooks Available
 
-* We have added the ability to create webhooks for your apps. These webhooks can be configured to send information when sprints change and/or stories change. For more information, see the [Managing Webhooks](/developerportal/collaborate/general-settings/#webhooks) section of *How to Manage General App Settings* as well as [Webhooks](/apidocs-mxsdk/apidocs/webhooks-sprints/) in the *API Documentation*.
+* We have added the ability to create webhooks for your apps. These webhooks can be configured to send information when sprints change and/or stories change.
 
 ### April 5th, 2019
 

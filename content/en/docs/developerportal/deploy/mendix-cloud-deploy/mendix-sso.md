@@ -57,7 +57,7 @@ Every app implementing Mendix SSO needs some of your profile information (like y
 
 Click **Authorize** to continue using Mendix SSO with this app. After authorizing the app you are automatically signed in to the app.
 
-### 2.2 Assigning End-user Roles
+### 2.2 Assigning End-User Roles
 
 Give end-users access to your app through the [Manage App Users](/developerportal/collaborate/general-settings/#managing-app-users) page of the Developer Portal. You can get to this page in the Developer Portal from the **General Settings** page of your app.
 

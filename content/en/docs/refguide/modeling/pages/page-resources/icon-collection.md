@@ -30,7 +30,7 @@ Some of the actions can be applied to multiple icons. You can select all icons w
 
 ### 3.1 Import
 
-The **Import** button allows you to select a font file to base your icon collection on. The imported icons will be given a name based on their character codes in the font file.
+The **Import ** button allows you to select a font file to base your icon collection on. The imported icons will be given a name based on their character codes in the font file.
 
 Only the *ttf* format is supported.
 
@@ -42,11 +42,11 @@ A CSS stylesheet is automatically generated for your icon collection. The **Conf
 
 #### 3.2.1 Collection Class
 
-This is a CSS class that represents the entire icon collection. This must either be a valid CSS class name or be left blank. When left blank, one will be generated based on the name the icon collection.
+This is a CSS class that represents the entire icon collection. This must either be a valid CSS class name or be left blank. To ensure the collection class is a valid CSS class, it must start with a letter or underscore and can only contain letters, numbers, hyphens and underscores. When left blank, one will be generated based on the name the icon collection.
 
 #### 3.2.2 Prefix
 
-The prefix will be used together with the icon name to generate a unique CSS class for each icon in the icon collection. This must be a valid way to begin a CSS class name. For example, it can't start with two hyphens. When left blank, one will generated based on the name of the icon collection.
+The prefix will be used together with the icon name to generate a unique CSS class for each icon in the icon collection. To ensure the prefix results in a valid CSS class, it must start with a letter or underscore and can only contain letters, numbers, hyphens and underscores. When left blank, one will generated based on the name of the icon collection.
 
 ### 3.3 Delete
 
@@ -61,6 +61,8 @@ The **Find usages** button displays, in the **Find Results** dock, all the place
 ## 4 Renaming and Tagging Icons
 
 The name and tags column of the icon collection are editable, and allow you to directly change these values of any icon.
+
+The name of the icon will be used to generate a CSS class. To ensure the icon name results in a valid CSS class, it must start with a letter or underscore and can only contain letters, numbers, hyphens or underscores.
 
 Two icons in the same collection can't share the same name.
 

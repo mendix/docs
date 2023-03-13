@@ -7,7 +7,7 @@ tags: ["git", "svn", "subversion", "byo-git", "byo-svn"]
 ---
 
 
-## Introduction
+## 1 Introduction
 
 As of Studio Pro version 9.21, Git is the default version control system in Studio Pro. Git offers [several advantages](/refguide/version-control-faq/#git-advantages) over SVN and provides a way to have a stronger and more robust collaboration with your team members. However, there are some differences in the way you commit changes and the way you collaborate. This document describes the most prominent changes between Git and SVN.
 

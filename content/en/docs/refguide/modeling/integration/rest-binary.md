@@ -171,7 +171,7 @@ To do so, do the following:
 
 You can call a REST service in a microflow, then store the binary response in an entity.
 
-Retriving files in a microflow uses the [Call REST service](/refguide/call-rest-action/) action. For step-by-step instructions for calling a REST service in a microflow, see [Consume a REST Service](/howto/integration/consume-a-rest-service/).
+Retrieving files in a microflow uses the [Call REST service](/refguide/call-rest-action/) action. For step-by-step instructions for calling a REST service in a microflow, see [Consume a REST Service](/howto/integration/consume-a-rest-service/).
 
 To retrieve files using a microflow, do the following:
 

@@ -107,39 +107,13 @@ If columns have empty values, the attribute type will be identified as **String*
 * Booleans – empty values are converted to **False**
 * Long and integer – empty values are converted to **0**
 
-#### 4.1.4 Generate Pages for My Data 
-
-**Generate pages for my data** generates an overview page with a data grid for you, and *{EntityName}__NewEdit* pages for each entity. For more information, see [Your Data after the Import](#after-import). 
-
-{{< figure src="/attachments/refguide/modeling/app-from-spreadsheet/generate-pages-option.jpg" width="650">}}
-
 ### 4.2 Your Data after the Import {#after-import}
 
 After you have reviewed all data, click **Import Data** at the bottom of the **Data Preview** screen. 
 
-You can take a brief tour showing you how your file has been converted.
-
 Open the domain model to see all created entities and attributes:
 
 {{< figure src="/attachments/refguide/modeling/app-from-spreadsheet/domain-model-example.jpg"   width="650"  >}}
-
-If **Generate pages for my data** has been selected in the preview page, pages are created based on your spreadsheet. The following changes are made in the page editor and the navigation document :
-
-* A **Manage_Data** page is created – an overview page with tabs for each Excel table and with data grids per each entity
-
-    {{%/todo /%}}[A screenshot of the App explorer, showing the folder+ documents generated]{{%/ /todo /%}}
-
-    {{< figure src="/attachments/refguide/modeling/app-from-spreadsheet/manage-data-page.jpg" >}}
-
-* An **{EntityName}__NewEdit** page is created – a page for each of your entities for creating and saving a new object of this entity
-
-* A link from the **HomePage** is created – a card with buttons linking to the **Manage_Data** page   
-
-    {{< figure src="/attachments/refguide/modeling/app-from-spreadsheet/home-page.jpg" >}}
-
-* The **Manage Data** menu item is created in the navigation with a link to the **Manage_Data** page
-
-* Your data is stored in the data snapshot file which is transferred to local test environment when running the app locally and to the published app when first publishing the app (for more information on data snapshot and databases, see [How to Share the Development Database](/howto/data-models/sharing-the-development-database/)) 
 
 You can now preview your app by running it locally (the play icon at the top) and test the app.
 

@@ -7,7 +7,7 @@ tags: ["git", "svn", "subversion", "byo-git", "byo-svn"]
 ---
 
 
-## Introduction
+## 1 Introduction
 
 As of Studio Pro version 9.21, Git is the default version control system in Studio Pro. Git offers [several advantages](/refguide/version-control-faq/#git-advantages) over SVN and provides a way to have a stronger and more robust collaboration with your team members. However, there are some differences in the way you commit changes and the way you collaborate. This document describes the most prominent changes between Git and SVN.
 
@@ -30,7 +30,7 @@ The table below outlines the main differences between SVN and Git:
 
 | Action      | SVN                                                          | Git                                                          |
 | ----------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| Update/Pull | Retrieves changes from the server and applies them directly on your local copy of the app. | Retrieves changes from the server. Changes can only be applied to your local copy of the app if you do not have any uncommited changes. If you have uncommited changes, you need to either *revert* them or *commit* them first. Note that in Git this operation is typically called *Pull* instead of *Update*. |
+| Update/Pull | Retrieves changes from the server and applies them directly on your local copy of the app. | Retrieves changes from the server. Changes can only be applied to your local copy of the app if you do not have any uncommitted changes. If you have uncommitted changes, you need to either *revert* them or *commit* them first. Note that in Git this operation is typically called *Pull* instead of *Update*. |
 | Commit      | Submits changes to the server.                               | Creates a *local* commit: a set of changes with a message that you can jump back to. Changes are not submitted to the server, unless you check the **Push** checkbox. |
 | Push        | N/a                                                          | Submits *all* local commits to the server. If other developers have pushed changes to the server that are not in your local app yet, you have to *update*/*push* first. |
 | Port fix    | Port fix transports the actual commit from one branch and applies it to another. You need to commit the change. | Port fix transports the actual commit from one branch and directly applies it, including author and commit text to another branch. This means you do not need to explicitly commit your change. |
@@ -41,9 +41,20 @@ In SVN, commits are done to a central server which enforces the commit order. Th
 
 In Git, committing is done locally at first. Then commits are sent to other repositories and they should be uniquely identifiable. Therefore, commits in Git are represented with a SHA-1/SHA-256 hash (e.g. f0e165, bb2327, 76d34e, c31247), as they can be generated in a distributed setting and still be the same on different clients with identical changes.
 
-## 4 Proxy Support
+## 4 Proxy Support {#proxy-support}
 
-It is currently not possible to use Git from behind an authenticated proxy. For more information, see the [Known Issues](/refguide/troubleshoot-git-issues/#ki) section of *Solving Known Git Issues*. If you depend on this functionality, it is sensible to postpone migration until support is realized. 
+Studio Pro communicates to Git repositories by two means: LibGit2 library or Git command line interface (Git CLI). LibGit2 provides a nice and clean repository object model that is in intensive use during local repository operations. However, it is not performant enough when it comes to communication with remove Git servers. This is when Git CLI is used and Studio Pro switches to the client while performing fetch, pull and push operations (that is why the Git for Windows package, which ships Git CLI to your computer, is an integral part of Studio Pro installation). Therefore, any operation that requires transferring data to/from remote Git repositories, uses GitCLI client.
+
+Unfortunately, Git for Windows is not synchronized with the system proxy settings by default, which means it may be tricky to integrate them into Studio Pro seamlessly. We are trying our best to provide integration as soon as possible, but as a workaround you can configure the proxy settings directly by either overriding **http_proxy**, **https_proxy** and **all_proxy** (for more information, see [Git documentation] (https://git-scm.com/docs/git-config#Documentation/git-config.txt-httpproxy)) or by setting the proxy URL in your local **.git/config** via the following commands:
+
+* Configure the proxy settings:
+
+    `git config --local http.proxy [protocol://][user[:password]@]proxyhost[:port]`
+* Check that the setting has changed:
+
+    `git config --local http.proxy`
+
+You can also use `--global` modifier for applying the changes system-wise, but it is not recommended if you are using Git not only for Mendix development.
 
 ## 5 Interacting with Version Control Outside Studio Pro
 

@@ -20,6 +20,10 @@ Mendix provides webhooks to send project information when the following events h
 * On package upload – when a deployment package is available in the Developer Portal — this includes creating a package from the Teamserver
 * Team Server push – when a new commit is pushed to the Team Server — this will only be triggered if your app is stored in a Git repository
 
+{{% alert color="info" %}}
+The deployment webhooks are set up and work independently of the [Webhooks used for Sprints and Stories](/developerportal/collaborate/general-settings/#webhooks)
+{{% /alert %}}
+
 ## 2 Configuring a Webhook{#setting-up}
 
 ### 2.1 Creating a New Webhook
@@ -79,9 +83,26 @@ The order of these headers is not guaranteed.
 
 You will want to verify that your endpoint has received a payload from Mendix and that the request hasn't been generated or intercepted by a bad actor. 
 
-This verification is enabled through the `webhook-signature` which is sent in the webhook header. This is created automatically by the Svix user agent. It is generated using the **Validation Secret** you provided when you set up the webhook in combination with the payload of the trigger.
+This verification is enabled through the `webhook-signature` which is sent in the webhook header. This is created automatically by the Svix user agent. It is generated using the **Validation Secret** you provided when you set up the webhook in combination with the payload of the trigger using [HMAC-SHA256](https://en.wikipedia.org/wiki/HMAC) authentication.
 
-A description of how this verification works can be found in [How to Verify Webhooks with the Svix Libraries](https://docs.svix.com/receiving/verifying-payloads/how) on the Svix website. You can also find information on why you need to verify webhooks and how to verify webhooks manually if you don't want to use the official libraries.
+To verify the the signature, you need to reconstruct it and then compare it with the **webhook-signature** in the webhook header. This is done as follows:
+
+1. Construct a string containing the signed content which is the `{webhook-id}.{webhook-timestamp}.{webhook payload}`. Note the full-stop (`.`) between the three elements.
+1. Calculate the **webhook-signature** using the HMAC-SHA256 function for your language and the **Validation Secret** you set up for the Webhook.
+
+    For example, in Node.js this might be:
+
+    ```text {linenos=false}
+    calculated-signature = HMAC_SHA256(Validation Secret, Signed Content)
+    ```
+
+1. Compare **calculated-signature** with **webhook-signature** to ensure that they match. Note that the **webhook-signature** is prefixed by a version and a delimiter, and ends with another delimiter. For example, the signature for `v1,f7bc83f430538424b13298e6aa6fb143ef4d59a14946175997479dbc2d1a3cd8=` is just `f7bc83f430538424b13298e6aa6fb143ef4d59a14946175997479dbc2d1a3cd8`
+
+When verifying your webhook signature, bear the following in mind:
+
+* The signature list **webhook-signature** is most commonly of length one. However, there could be any number of signatures.
+* You should use a constant-time string comparison method in order to prevent timing attacks.
+* You should also verify that **webhook-timestamp** is within your tolerance for the current system time, to ensure you are not receiving timestamp attacks where old webhook payloads are being sent to your endpoint.
 
 ## 4 Package Upload to Developer Portal
 

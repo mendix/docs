@@ -148,7 +148,7 @@ This section shows you how to configure your app to use OIDC for SSO.
 
 ### 4.1 Configuring Roles
 
-Ensure that you have allocated the following user roles to the OIDC module roles
+Ensure that you have allocated the following user roles to the OIDC module roles:
 
 | User Role | OIDC Module Role |
 | --- | --- |
@@ -163,6 +163,8 @@ You may have to add the *Anonymous* user role if it does not exist already.
 {{% /alert %}}
 
 ### 4.2 Allowing Anonymous Users
+
+The OIDC module supports multiple OIDC/OAuth-compatible IdPs. If you want to allow your end users to choose from a number of different IdPs, you will need to give them access to the app to choose their preferred IdP. Because they need to do this before they have signed in to the app, you need to give anonymous users access to your app. If you have only configured a single IdP, you do not need to allow anonymous users.
 
 In the **Anonymous** tab of the app security settings, do the following:
 

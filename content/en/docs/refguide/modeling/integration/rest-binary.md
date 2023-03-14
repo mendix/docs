@@ -17,7 +17,7 @@ You will learn about the following:
      * [Setting the MIME type](#set-mime-type) for supported files
 * [Retrieving files](#retrieve-files) with REST
 
-If you are only interesting in consuming files, you can skip down to the [Retrieving Images and Files with REST](#retrieve-files) section.
+If you are only interesting in consuming files, you can skip down to the [Retrieve Images and Files with REST](#retrieve-files) section.
 
 ### 1.1 Prerequisites
 

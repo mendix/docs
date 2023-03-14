@@ -165,11 +165,9 @@ Single sign-on was introduced in Mendix version 7.18. Your app will need to be t
 
 Automation, such as CI/CD pipelines, and other functions which require access to the [Team Server](/developerportal/collaborate/team-server/) (where versioned copies of your app are held online) cannot be performed if BYOIDP is enabled.
 
-### 8.4 Adding and Removing Email Domains from Company
+### 8.4 Multiple Email Domains for a Company
 
-When you [add or remove an email domain from your company](/developerportal/control-center/#company) in Mendix, you will need to deactivate BYOIDP and reactivate it again to apply the changes for users logging on using the changed domains.
-
-You cannot select which of your email domains are used for single sign-on. When you activate BYOIDP SSO, it will apply to all email domains which are registered to your company.
+When you activate BYOIDP SSO, it will apply to all email domains which are registered to your company. If you add another email domain to your company, BYOIDP will automatically adopt it, without further actions from the Mendix administrator.
 
 ## 9 Troubleshooting{#troubleshooting}
 

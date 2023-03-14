@@ -210,7 +210,7 @@ For this widget to visualize a model correctly, set the following properties:
     * **Show navigation cube**  – determines if a navigation cube will appear at the upper-right corner of the viewer
     * **Show tooltip** determines if a tooltip will appear when the end-user clicks a model part; this accepts a Boolean value
     * **Automatically load parts** – determines if the model part will be loaded into the Viewer automatically; if set to **Yes**, the model will be automatically loaded as long as the Viewer receives the **Model ID** and **Model source type** values; if set to **No**, the model will only be loaded into the Viewer when triggered from the PS Tree part toggling (for this use case, add the [PS Tree](#ps-tree) widget so you can trigger the part loading by clicking the PS Tree)
-    * **Advance configuration** – provides advanced configurations in JSON string format for viewer. Please see [Advanced Configuration](#advance_configuration), below, for details.
+    * **Advance configuration** – provides advanced configurations in JSON string format for Viewer. Please see [Advanced Configuration](#advance_configuration), below, for details.
 * On the **Events** tab, there are some optional customization options for changing the widget's behavior:
     * **On selection change** – by binding a String attribute to the **Selection** property, you can use this attribute as an input parameter to add an action to trigger when the selection changes on the Viewer 
     * **On error** – by binding a String attribute to the **Error** property, you can obtain the error message raised by the Viewer and add custom actions to trigger when an error arises
@@ -279,9 +279,7 @@ No specific configuration is needed. With this widget, you can measure the dista
 
 ##### 4.6.2.7 Preference {#preference}
 
-This widget enables setting and saving your personal preferences.
-
-{{% alert color="info" %}}Only options for PMI filter are supported currently.{{% /alert %}}
+This widget allows you to set and save your personal preferences.
 
 Place this widget inside of a [Container3D](#container3d) widget. A [Viewer](#viewer) widget should be present in the same Container3D widget so that you can use the options provided in the widget to filter PMI of the model.
 
@@ -295,7 +293,7 @@ With this widget, you can use the following filtering settings:
 
 * Show assembly level PMI
 
-For details on how this widget behaves in an app, see the [Setting Preferences](#set-preferences) section below.
+For details on how this widget behaves in an application, see the [Setting Preferences](#set-preferences) section below.
 
 #### 4.6.3 Toolbar Widgets
 
@@ -589,11 +587,11 @@ The **Usage Dashboard** shows the real-time statistics about the usage of an app
 
 ### 5.9 Setting Preferences {#set-preferences}
 
-You can change the setting of the Preference widget to customize the behavior of the model and setup to your requirements.
+You can change the settings of the Preference widget to customize the behavior of the model and set it up to suit your needs.
 
-{{<figure src="/attachments/partners/siemens/3d-viewer/preferences-general.png" alt="preferences-general" >}}
+{{< figure src="/attachments/partners/siemens/3d-viewer/preferences-general.png" alt="preferences-general" >}}
 
-On the **PMI** tab, you can set filtering options for PMI and click **Ok** to save the changes.
+Click **Preference** to display the dialog. You can set your filter as a preference in any combination you like, and when you click the **OK** button, the filter will take effect the next time you open a file; the **Reset** button clears all settings. This method can only set the preference when your application is running, but of course we also provide a more advanced method - before the application starts - to set your preference, for more details you can refer to [Advanced Configuration](#advance_configuration).
 
 ## 6 Advanced Configuration {#advance_configuration}
 
@@ -608,6 +606,12 @@ Here is an example of how to set configuration options:
     "enableBboxSurfaceScanner": true,
     "bboxSurfaceScanner": {
         "showBBoxes": false,
+    },
+    "pmiPreference": {
+        "ignoredPMI": ["DIMENSION","NOTE"], 
+        "ignoreModelView": true, 
+        "ignoreDesignGroup": true, 
+        "onlyShowAssemblyLevelPMI": false
     }
 }
 ```
@@ -776,6 +780,90 @@ This defines measurement behaviors and dimension styles. The `measurement` secti
         }    
     }
     ```
+
+### 6.5 Preference Options
+
+Here is a sample Preference configuration:
+
+```json
+{
+    "pmiPreference": {
+        "ignoredPMI": ["DIMENSION","NOTE"], 
+        "ignoreModelView": true, 
+        "ignoreDesignGroup": true, 
+        "onlyShowAssemblyLevelPMI": false
+    }
+}
+```
+
+#### 6.5.1 ignoredPMI
+
+Defines the PMI entities you do not want to display.
+
+* Type – array
+* Default value - *`[ ]`*
+
+Available enumeration values:
+
+```json
+
+{
+  "type": "array",
+  "items": {
+    "type": "string",
+    "enum": [
+      "BALLOON_NOTE",
+      "CALLOUT_DIMENSION_TYPE",
+      "CENTRELINE",
+      "CHAMFER_DIMENSION_TYPE",
+      "COORDINATE_SYSTEM",
+      "DATUM_TARGET",
+      "DIMENSION",
+      "FEATURE_CONTROL_FRAME",
+      "FEATURE_DATUM_TYPE",
+      "FEATURE_DISCRETE_JOIN_TYPE",
+      "LINE_WELD",
+      "MATERIAL_SPECIFICATION",
+      "MEASUREMENT_LOCATOR",
+      "MEASUREMENT_POINT",
+      "NOTE",
+      "ORGANIZATION",
+      "PART_SPECIFICATION",
+      "PMI_TABLE_TYPE",
+      "PROCESS_SPECIFICATION",
+      "REFERENCE_AXIS",
+      "REFERENCE_GEOMETRY",
+      "REFERENCE_PLANE",
+      "REFERENCE_POINT",
+      "SECTION",
+      "SPOT_WELD",
+      "SURFACE_FINISH"
+    ]
+  }
+}
+
+```
+
+#### 6.5.2 ignoreModelView
+
+Defines whether or not to filter the model view.
+
+* Type – Boolean
+* Default value – *false*
+
+#### 6.5.3 ignoreDesignGroup
+
+Defines whether or not to filter the design group.
+
+* Type – Boolean
+* Default value – *false*
+
+#### 6.5.4 onlyShowAssemblyLevelPMI
+
+Defines whether or not to show the assembly level PMI only.
+
+* Type – Boolean
+* Default value – *false*
 
 ## 7 Read More
 

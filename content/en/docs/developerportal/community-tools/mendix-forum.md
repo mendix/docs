@@ -1,5 +1,5 @@
 ---
-title: "Forum"
+title: "Mendix Forum"
 url: /developerportal/community-tools/mendix-forum/
 category: "Community Tools"
 weight: 4

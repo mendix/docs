@@ -300,9 +300,9 @@ The second method should be used if the first method is not possible for some re
 
 #### 7.2.5 Merging Using Git in the Command Line
 
-For merging *.mpr* files using Git in the command line to work, it is necessary to attach mx.exe merge to Git as a driver.
+For merging *.mpr* files using Git in the command line to work, it is necessary to attach *mx.exe* merge to Git as a driver.
 
-When doing a **git merge** operation on two branches in the command line, Git attempts to merge the binaries of *.mpr* files, which does not work. You need to apply Studio Pro merge algorithm and that is where mx.exe as a driver is needed.
+When doing a **git merge** operation on two branches in the command line, Git attempts to merge the binaries of *.mpr* files, which does not work. You need to apply Studio Pro merge algorithm and that is where *mx.exe* as a driver is needed.
 
 Navigate to the *.gitconfig* file in C:/Users/[USER_NAME] and add the following:
 
@@ -314,7 +314,7 @@ Navigate to the *.gitconfig* file in C:/Users/[USER_NAME] and add the following:
   driver = [MX.EXE_PATH] merge %O %A %B
 ```
 
-Where *[MX.EXE_PATH]* should be replaced by the mx.exe path with only forward slashes pointing to a drive using */C/* instead of *C:/*.
+Where `[MX.EXE_PATH]` should be replaced by the *mx.exe* path with only forward slashes pointing to a drive using `/C/` instead of `C:/`.
 
 You can also configure the git driver locally per repository using the following commands:
 
@@ -329,7 +329,7 @@ After setting up the driver either locally or globally, create a *.gitattributes
 *.mpr merge=custom
 ```
 
-Save the files and now when **git merge** is run and it involves *.mpr* files, the mx.exe merge will run Studio Pro merge algorithm before Git finishes the merge.
+Save the files and now when **git merge** is run and it involves *.mpr* files, the *mx.exe* merge will run Studio Pro merge algorithm before Git finishes the merge.
 
 ## 8 Versioning an App Deployed to the Cloud {#versioning-app}
 
@@ -389,13 +389,12 @@ Studio Pro adds metadata on the Mendix version of your app to each revision when
 
 When using external tools, you might be asked to authenticate separately to Team Server.
 
-Connecting to Git is done via a personal access token (PAT). For information on how to create a PAT, see the [Personal Access Tokens](/developerportal/community-tools/mendix-profile/#pat) section of *Mendix Profile*.
-
+Connecting to Git is done via a Personal Access Token (PAT). For more information on how to create a PAT, see [Create a Personal Access Token with Warden](/developerportal/community-tools/warden/) in the *Developer Portal Guide*. 
 You need to use the following credentials:
 
 * URL: `https://git.api.mendix.com/<your AppID>.git`
 * Username: your Mendix account username (alternatively, you can use the word *pat* as your username)
-* Password: the personal access token you created
+* Password: the Personal Access Token you created
 
 Connecting to SVN is done with your Mendix credentials:
 

@@ -11,6 +11,24 @@ These release notes cover changes made to the [Mendix Data Hub Catalog](/data-hu
 
 ## 2023
 
+### February 27th, 2023
+
+#### Fixes
+
+* We fixed an issue that was generating endpoint URLs leading to `404 not found` errors when deploying an app in Studio Pro.
+
+### February 23rd, 2023
+
+#### Improvements
+
+* On the [Search](/data-hub/data-hub-catalog/search/) page, there are no default search filters anymore and filters are persistent per search session.
+
+### February 16th, 2023
+
+#### Improvements
+
+* We added a link to the Marketplace module under authentication details that implements the specified authentication method.
+
 ### February 9th, 2023
 
 #### Improvements

@@ -1,5 +1,5 @@
 ---
-title: "Air-gapped Installation of Tekton CI/CD for Mendix for Private Cloud"
+title: "Air-Gapped Installation of Tekton CI/CD for Mendix for Private Cloud"
 linktitle: "Air-gapped Tekton Installation"
 url: /developerportal/deploy/private-cloud-tekton-airgapped/
 description: "Describes how to use Tekton to create a CI/CD solution for Mendix environments in the Private Cloud"
@@ -24,7 +24,7 @@ Please read [CI/CD for Mendix for Private Cloud using Tekton](/developerportal/d
 All commands used in this document should be executed in a Bash (or bash-compatible) terminal.
 {{% /alert %}}
 
-## 2 Preparation for Air-gapped Environments{#preparation}
+## 2 Preparation for Air-Gapped Environments {#preparation}
 
 To install Tekton and your CI/CD Pipeline in air-gapped environment you need to provision a list of images in your registry. Mendix has created a tool, **aip**, to perform this on different operating systems. You will need to download it using one of the following links:
 
@@ -133,7 +133,7 @@ aip push
 
 If Tekton is already installed in your namespace, you can skip to [Pipelines Installation](#pipelines-installation).
 
-### 3.1 Installing on Air-gapped Kubernetes
+### 3.1 Installing on Air-Gapped Kubernetes
 
 Assuming you have [performed the preparation steps](#preparation), use the following commands:
 
@@ -144,7 +144,7 @@ cat tekton-triggers.yaml | aip inject-manifest | kubectl apply -f -
 cat interceptors.yaml | aip inject-manifest | kubectl apply -f -
 ```
 
-### 3.2 Installing on Air-gapped OpenShift
+### 3.2 Installing on Air-Gapped OpenShift
 
 Assuming you have [performed the preparation steps](#preparation), use the following commands to install Tekton and Tekton triggers
 

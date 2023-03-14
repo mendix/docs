@@ -13,6 +13,31 @@ For information on the current status of deployment to Mendix for Private Cloud 
 
 ## 2023
 
+### March 9th, 2023
+
+#### Deploy API Improvements
+
+* We have added a new API endpoint for updating the namespaces. This will allow cluster managers to do the following tasks:
+    * Add, edit or remove member permissions and members in a namespace. 
+    * Enable or disable the external secret store and development mode configurations. 
+    * Add, update, or clear the operational URLs.
+    * Activate or deactivate database and storage plans.
+* We have improved the Update Cluster API endpoint by allowing cluster managers to add new cluster managers.
+* We have improved the responses for `Get Cluster`, `Get Namespace`, `Get Clusters`, and `Get Namespaces`. The responses now provide more information for the user.
+* We have improved the Delete Cluster API endpoint by allowing the forced deletion of a cluster with namespaces, as long as the namespaces do not have any attached environments.
+* We have modified the OpenAPI specification file. Please download or check the latest version.
+
+#### Build API Release
+
+* We have introduced a new Mendix for Private Cloud Build API, which allows users to build, upload, delete and retrieve deployment packages for an application deployed in the Private Cloud.
+
+### February 16th, 2023
+
+#### Portal Improvements
+
+* We have improved the validation message for the internal name in the environment creation flow.
+* We have removed access to the old deployment packages repository. This means that active deployment packages which have not been deployed in the last 4 weeks might stop working. If that happens, simply recreate the deployment package with the same revision, and then redeploy it in your environment.
+
 ### February 9th, 2023
 
 #### Portal Improvements
@@ -535,7 +560,7 @@ After upgrading the Mendix Operator, we recommend downloading the latest version
 
 * We have added support in the Developer Portal to configure custom Certificate Authorities which should be trusted by the Mendix Operator and app environments.
 * We now add an environment UUID to environments deployed to Private Cloud namespaces so environment names no longer need to be unique.
-* As part of a Developer Portal clean up, we removed the *Model* option from the *DEVELOP* section of the Developer Portal menu when you are looking at environments on Mendix for Private Cloud. The functions of this page are still available via the **Edit in Studio** and **Edit in Studio Pro** buttons on the environments page. 
+* As part of a Developer Portal clean up, we removed the *Model* option from the *DEVELOP* section of the Developer Portal menu when you are looking at environments on Mendix for Private Cloud. The functions of this page are still available via the **Edit in Studio Pro** button on the environments page. 
 
 #### Fixes
 

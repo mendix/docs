@@ -13,7 +13,7 @@ The **mx tool** is a Windows and Linux command-line tool that can be used to per
 
 ## 2 Location
 
-Mendix Studio Pro comes with the mx command-line tool. The executable `mx.exe` file can be found in the same folder that contains `studiopro.exe` (for example, *C:\Program Files\Mendix\9.12.2.44241\modeler\mx.exe*).
+Mendix Studio Pro comes with the mx command-line tool. The executable *mx.exe* file can be found in the same folder that contains `studiopro.exe` (for example, *C:\Program Files\Mendix\9.12.2.44241\modeler\mx.exe*).
 
 ## 3 mx Tool Options
 
@@ -216,7 +216,7 @@ Return codes are described in the table below:
 
 ### 3.5 mx merge Command [version 9.17+]
 
-The mx merge command performs a tree-way merge of two MPR files having a common base commit.
+The mx merge command performs a three-way merge of two MPR files having a common base commit.
 
 The input is three MPR files: base, mine, and theirs
 

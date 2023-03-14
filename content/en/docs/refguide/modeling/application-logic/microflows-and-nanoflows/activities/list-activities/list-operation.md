@@ -101,7 +101,11 @@ These operations take a list and filter it based on an expression. Inside the ex
 | Find by expression | Finds the first object that matches the given expression. | Object |
 | Filter by expression | Finds all the objects that match the given expression. | List |
 
-#### 3.1.5 Range
+#### 3.1.5 Range{#range}
+
+{{% alert color="info" %}}
+This list operation action was introduced in Studio Pro 9.24.
+{{% /alert %}}
 
 This operation takes a list and filters it based on two expressions: `offset` and `amount`.
 

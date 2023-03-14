@@ -28,13 +28,13 @@ You can perform the following actions within icon collections using the buttons 
 
 Some of the actions can be applied to multiple icons. You can select all icons with <kbd>Ctrl</kbd>+<kbd>A</kbd>, or multiple icons by combining your click with <kbd>Ctrl</kbd> or <kbd>Shift</kbd>
 
-### 3.1 Import
+### 3.1 Import font file
 
-The **Import ** button allows you to select a font file to base your icon collection on. The imported icons will be given a name based on their character codes in the font file.
+The **Import font file...** button allows you to select a font file to base your icon collection on. The imported icons will be given a name based on their character codes in the font file.
 
 Only the *ttf* format is supported.
 
-If the icon collection already contains icons, you will be warned that importing a font will override the existing icons. Icons that are present in the newly selected file will be kept, including their name and tags. This allows you to upgrade your icon collection to use a newer version of the font. However, any icon that isn't present in the newly selected font file will instead be removed.
+If the icon collection already contains icons, you will be warned that importing a font file will override the existing icons. Icons that are present in the newly selected file will be kept, including their name and tags. This allows you to upgrade your icon collection to use a newer version of the font. However, any icon that isn't present in the newly selected font file will instead be removed.
 
 ### 3.2 Configure
 

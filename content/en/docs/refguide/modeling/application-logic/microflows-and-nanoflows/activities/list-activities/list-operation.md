@@ -103,11 +103,11 @@ These operations take a list and filter it based on an expression. Inside the ex
 
 #### 3.1.5 Range
 
-These operations take a list and 2 expressions: `offset` and `amount`.
+This operation takes a list and filters it based on two expressions: `offset` and `amount`.
 
 | Operation | Description | Result Type |
 | --- | --- | --- |
-| Range | Retrieve a given number of objects (Amount) starting at a given index (Offset). The amount and offset are expressions that should result in a number. Note that the first object has an offset of 0. An amount of 0 means that all objects are retrieved. | List |
+| Range | Retrieve a given number of objects (**Amount**) starting at a given index (**Offset**). The `amount` and `offset` are expressions that should result in a number. Note that the first object has an offset of 0. An amount of 0 means that all objects are retrieved. | List |
 
 ### 3.2 List Name, Object Name, or Variable Name
 

@@ -246,9 +246,43 @@ In this detailed view, you can see a list of all your transactions for a particu
 
 The **Cloud Provisioning** page is a self-service tool that enables you to provision and offboard environments.
 
-{{< figure src="/attachments/developerportal/control-center/cloud-provisioning.png" alt="cloud provisioning page" >}}
+The **Apps Overview** page shows a list of all the apps within your company. You can use it to view an app's name, ID, technical contact, or status. The page has separate tabs for **Licensed Apps** and **Free Apps**.
 
-To offboard an environment, click the **Offboard** button, available for stopped environments.
+{{< figure src="/attachments/developerportal/control-center/apps-overview.png" alt="cloud provisioning - apps overview" >}}
+
+You can click on the name of an app to see a list of environments available for the app.
+
+{{< figure src="/attachments/developerportal/control-center/cloud-provisioning.png" alt="cloud provisioning page for an app" >}}
+
+### 12.1 Adding a New Environment
+
+To add a new environment for your app, click the **Add Environment** button, and then specify the following information:
+
+* **Environment Name** - A name for your new environment. The name must be unique (that is, your app cannot have more than one environment with the same name).
+* **Resource Pack** - The resources required for the new environment. The page displays the resources included in each resource pack, and their cost in cloud credits.
+* **Production Environment** - Indicates whether the environment will be used for production.
+
+{{< figure src="/attachments/developerportal/control-center/new-environment.png" alt="adding a new environment" >}}
+
+### 12.2 Offboarding an Environment
+
+To offboard an environment, click the **Offboard** button, available for stopped environments.After that, confirm that you have made any necessary backups, and type *Offboard* to confirm.
+
+{{< figure src="/attachments/developerportal/control-center/offboarding.png" alt="confirming the offboarding" >}}
+
+{{% alert color="warning" %}}
+Offboarding an environment deletes it permanently. You are responsible for making a backup of the environment in case you need it in the future.
+{{% /alert %}}
+
+### 12.3 Changing the Technical Contact of an App
+
+To quickly change the technical contact for your app, click the **Edit** icon by the name of the contact.
+
+{{< figure src="/attachments/developerportal/control-center/offboarding.png" alt="confirming the offboarding" >}}
+
+{{% alert color="info" %}}
+You may only have one technical contact per app. When you change the technical contact, both the new and the old contact receive a notification email about the change.
+{{% /alert %}}
 
 ## 13 Billing Accounts {#billing-accounts}
 

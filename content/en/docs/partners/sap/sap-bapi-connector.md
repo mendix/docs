@@ -163,7 +163,13 @@ The values for the properties can be found in the **Connection Properties** of t
 
 ### 4.2 Configuring XSUAA Security for the Bapi-Service Component
 
-If you want to use the *bapi-service* component, you can secure access to the *bapi-service* microservice by using SAP XSUAA.
+If you want to use the *bapi-service* component, you can secure access to the microservice by using the SAP XSUAA service. The service supports both user-based authentication with a user access token obtained from the SAP XSUAA service, and application-based authentication with an access token obtained from the SAP XSUAA service bindings.
+
+{{% alert color="info" %}}
+To help you implement the XSUAA service for your app, Mendix provides the platform-supported [XSUAA Connector for SAP BTP](/partners/sap/sap-xsuaa-connector/). The configuration described below does not require the XSUAA Connector to be installed, but you may consider using it as a best practice.
+{{% /alert %}}
+
+#### 4.2.1 Trust Configuration
 
 ## 5 Domain Models
 

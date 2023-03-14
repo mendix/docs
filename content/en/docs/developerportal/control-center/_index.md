@@ -230,7 +230,27 @@ These links will open in a new browser tab.
 
 The **Free Environments** tab presents details on your company's free environments.
 
-## 11 Billing Accounts {#billing-accounts}
+## 11 Entitlements
+
+The **Entitlements** page is a self-service tool that displays the platform tenants (that is, accounts) registered for your organization. You can use the page to monitor your resource entitlements, and your consumption of cloud credits.
+
+{{< figure src="/attachments/developerportal/control-center/entitlements.png" alt="entitlements page" >}}
+
+The **Entitlements** page shows a list of registered platform tenants along with the amount of cloud credits that are currently available for a particular tenant. For each tenant, you can click on the amount of credits in order to view more details about the resource consumption for that tenant.
+
+{{< figure src="/attachments/developerportal/control-center/entitlements-per-tenant.png" alt="entitlements per tenant" >}}
+
+In this detailed view, you can see a list of all your transactions for a particular tenant, including both credit and debit transactions. The **Cloud Credits** section of the page shows a summary of purchased, available, and consumed credits. In this way, you can monitor the resource consumption per registered account.
+
+## 12 Cloud Provisioning
+
+The **Cloud Provisioning** page is a self-service tool that enables you to provision and offboard environments.
+
+{{< figure src="/attachments/developerportal/control-center/cloud-provisioning.png" alt="cloud provisioning page" >}}
+
+To offboard an environment, click the **Offboard** button, available for stopped environments.
+
+## 13 Billing Accounts {#billing-accounts}
 
 Before the licenses are renewed for your company, Mendix checks if your company's payment method is still valid. If it is expired, you will receive an email that asks you to update your company's payment method on the **Billing Accounts** page.
 
@@ -244,13 +264,13 @@ You can find **Payment Method** at the bottom of the page. Depending on the paym
 
 If the credit card is expired, the credit card data is shown in red. To update the credit card data, click **Update**, fill in the new credit card data, and then click **Update Details**.
 
-## 12 Data Hub {#data-hub}
+## 14 Data Hub {#data-hub}
 
 An organization's Data Hub requires governance of the data-sharing policy down to the practical details of curating registered assets. A Mendix Admin can oversee these functions and also assign curators that can perform governance tasks for their apps.
 
 For details on these tasks, see [Data Hub Administration](/developerportal/control-center/data-hub-admin/).
 
-## 13 Marketplace Content {#marketplace-content}
+## 15 Marketplace Content {#marketplace-content}
 
 {{% alert color="info" %}}
 This page will be removed in June 2023.
@@ -272,4 +292,4 @@ The list has the following columns:
 * **Content Last Updated** – This shows the date when a component was last updated. The most recently updated component is shown on top.
 * **Studio Visibility** – You can toggle the button to configure whether the component is visible in Studio's **Toolbox** to your company's users. 
 
-## 14 Documents in This Category
+## 16 Documents in This Category

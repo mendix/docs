@@ -1808,6 +1808,8 @@ The widget's internal structure is as follows:
 | `loadMoreButtonPressableContainer` | foreground | Set to true to add the ripple effect to the foreground of the view, instead of the background. (Boolean) (Android only) |
 | `loadMoreButtonCaption` | All [TextStyle](https://reactnative.dev/docs/view-style-props) properties. | Applies a text style to the load more button caption. |
 
+The default class to style all gallery widgets is named `com_mendix_widget_native_gallery_Gallery`.
+
 ### 11.33.1 Gallery Filtering
 
 In order to enable filtering within the gallery items you need to select the desired attributes to be filtered in the Filtering tab.
@@ -1827,6 +1829,8 @@ The widget's internal structure is as follows:
 | `textInputContainerFocused` | All [ViewStyle](https://reactnative.dev/docs/view-style-props) properties. | Applies a view style to the container of the text input when the text box is focused. |
 | `textInput` | All [ViewStyle](https://reactnative.dev/docs/view-style-props) properties. | Applies a view style to the text input. |
 | `textInputClearIcon` | All [ViewStyle](https://reactnative.dev/docs/view-style-props) properties. | Applies style to the text clear button in the text box. |
+
+The default class to style all gallery text filter widgets is named `com_mendix_widget_native_gallerytextfilter_GalleryTextFilter`.
 
 ## 13 Read More
 

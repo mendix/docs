@@ -1,6 +1,6 @@
 ---
 title: "Mendix Deployment Webhooks"
-linktitle: "Webhooks"
+linktitle: "Deployment Webhooks"
 url: /developerportal/deploy/webhooks/
 weight: 75
 description: "Creating a Webhook to trigger actions from the Mendix cloud"

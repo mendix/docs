@@ -83,12 +83,13 @@ The order of these headers is not guaranteed.
 
 You will want to verify that your endpoint has received a payload from Mendix and that the request hasn't been generated or intercepted by a bad actor. 
 
-This verification is enabled through the `webhook-signature` which is sent in the webhook header. This is created automatically by the Svix user agent. It is generated using the **Validation Secret** you provided when you set up the webhook in combination with the payload of the trigger using [HMAC-SHA256](https://en.wikipedia.org/wiki/HMAC) authentication.
+This verification is enabled through the `webhook-signature` which is sent in the webhook header. This is created automatically by the user agent. It is generated using the **Validation Secret** you provided when you set up the webhook in combination with the payload of the trigger using [HMAC-SHA256](https://en.wikipedia.org/wiki/HMAC) authentication.
 
 To verify the the signature, you need to reconstruct it and then compare it with the **webhook-signature** in the webhook header. This is done as follows:
 
 1. Construct a string containing the signed content which is the `{webhook-id}.{webhook-timestamp}.{webhook payload}`. Note the full-stop (`.`) between the three elements.
 1. Calculate the **webhook-signature** using the HMAC-SHA256 function for your language and the **Validation Secret** you set up for the Webhook.
+1. Ensure the result is base64 encoded.
 
     For example, in a bash script this might be:
 
@@ -102,7 +103,7 @@ To verify the the signature, you need to reconstruct it and then compare it with
     printf '%s.%s.%s' "$WEBHOOK_ID" "$WEBHOOK_TIMESTAMP" "$PAYLOAD" | openssl dgst -sha256 -binary -hmac "$VALIDATION_SECRET" | openssl base64
     ```
 
-1. Compare **calculated-signature** with **webhook-signature** to ensure that they match. Note that the **webhook-signature** is prefixed by a version and a delimiter, and ends with another delimiter. For example, the signature for `v1,f7bc83f430538424b13298e6aa6fb143ef4d59a14946175997479dbc2d1a3cd8=` is just `f7bc83f430538424b13298e6aa6fb143ef4d59a14946175997479dbc2d1a3cd8`
+1. Compare **calculated-signature** with **webhook-signature** to ensure that they match. Note that the **webhook-signature** is prefixed by a version and a delimiter. For example, the signature for `v1,f7bc83f430538424b13298e6aa6fb143ef4d59a14946175997479dbc2d1a3cd8=` is just `f7bc83f430538424b13298e6aa6fb143ef4d59a14946175997479dbc2d1a3cd8=`
 
 When verifying your webhook signature, bear the following in mind:
 

@@ -12,7 +12,7 @@ Mendix users can use the Data Hub Catalog to search for and consume registered O
 Data Hub Catalog users can do the following: 
 
 * Publish services and register them in the Data Hub Catalog from Studio Pro
-* Register published OData V4 Services for non-Mendix apps manually
+* Register [published OData services](/refguide/published-odata-services/)(v2, v3, and v4) for non-Mendix apps manually
 * Update the metadata such as descriptions, tags, contact information, and discoverability of their own registered services
 * See all the discoverable services and datasets registered in their organization’s Data Hub Catalog, and connect to the data by using the published entities as external entities in their apps in Studio Pro
 

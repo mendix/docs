@@ -10,13 +10,13 @@ tags: ["data hub", "data hub catalog", "consume", "external entities", "asset", 
 
 ## 1 Introduction
 
-Data Hub Catalog is an open, standards-based metadata repository that enables Mendix developers and business admins to discover and explore data sources throughout their connected ecosystem. This respository is accessible to [authorized users](/data-hub/data-hub-catalog/manage-data-sources/user-roles/) in your company on the web app, hub.mendix.com, or through [Data Hub APIs](/apidocs-mxsdk/apidocs/data-hub-apis/).
+Data Hub Catalog is an open, standards-based metadata repository that enables Mendix developers and administrators to discover and explore data sources throughout their connected ecosystem. This respository is accessible to [authorized users](/data-hub/data-hub-catalog/manage-data-sources/user-roles/) in your company on the web app, hub.mendix.com, or through [Data Hub APIs](/apidocs-mxsdk/apidocs/data-hub-apis/).
 
 {{% alert color="info" %}}The Catalog currently supports OData data sources, or services, APIs, or databases that are [wrapped in OData](/refguide/wrap-services-odata/).{{% /alert %}}
 
 ## 2 Your Company's Catalog
 
-If you (or your company) have a Mendix license and a Data Hub license, you have a Data Hub Catalog! Log in with your company credentials to hub.mendix.com to see what metadata has been shared in your company. 
+Log in with your company credentials to hub.mendix.com to see what metadata has been shared in your company. 
 
 Depending on your [user role](/data-hub/data-hub-catalog/manage-data-sources/user-roles/) and use case, you can do the following:
 
@@ -38,7 +38,9 @@ Once data sources are registered, the metadata is stored in the Catalog so that 
 
 ## 4 Try It Out
 
-Our [Share Data Between Apps](/data-hub/share-data/) guide helps you build an app and use the Catalog to share data. Follow the steps to get a better idea how it works! You can also follow [Write Data to Another App](/data-hub/write-data/) to build on this experience.
+Follow [Share Data Between Apps](/data-hub/share-data/) to use the Catalog to share data between two Mendix apps.
+
+Build on this experience by learning how to [write data to another app](/data-hub/write-data/).
 
 ## 5 Processes and Properties
 

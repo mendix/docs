@@ -278,7 +278,7 @@ Offboarding an environment deletes it permanently. You are responsible for makin
 
 To quickly change the technical contact for your app, click the **Edit** icon by the name of the contact.
 
-{{< figure src="/attachments/developerportal/control-center/offboarding.png" alt="confirming the offboarding" >}}
+{{< figure src="/attachments/developerportal/control-center/edit-technical-contact.png" alt="changing the technical contact" >}}
 
 {{% alert color="info" %}}
 You may only have one technical contact per app. When you change the technical contact, both the new and the old contact receive a notification email about the change.

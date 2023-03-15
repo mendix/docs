@@ -19,7 +19,7 @@ Webhooks allow you to build or set up Mendix Platform connectors that subscribe 
 
 Every POST payload contains the following delivery information as part of the header:
 
-* `MxAPI-Projects-EventCategory` – the types of event subscribed to (for example, sprints)
+* `MxAPI-Projects-EventCategory` – the types of event subscribed to (for example, Sprints)
 * `MxAPI-Projects-Delivery` – a random UUID
 * `MxAPI-Signature` –  the HMAC hex digest (asymmetric hash using the *HMAC_SHA256* hash algorithm) of the response body, which is calculated using the hash (the hashes secret provided in the webhooks setting using the *SHA-256* hash algorithm with the length as 50)
     * For example, `(gNh407kBD1wkpHfwIrjWcTMjw4rKxIKX0s5b48FYOys=)`
@@ -31,13 +31,13 @@ Every POST payload contains the following delivery information as part of the he
 
 Webhook events are generated when a [Sprint](/developerportal/collaborate/stories/#sprint-actions) is created or updated.
 
-The required event category subscription is **sprints**.
+The required event category subscription is **Sprints**.
 
 ## 3 Stories
 
 Webhooks event are generated when a [story](/developerportal/collaborate/stories/) is created or updated.
 
-The required event category subscription is **stories**.
+The required event category subscription is **Stories**.
 
 ## 4 Payload
 

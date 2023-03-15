@@ -127,6 +127,10 @@ When you [upload a package to the Developer Portal](/developerportal/deploy/envi
 }
 ```
 
+{{% alert color="info" %}}
+Ensure you use the correct key names if using this payload information to call other Mendix APIs. The data may be labelled differently in the API.
+{{% /alert %}}
+
 ## 5 Teamserver Push (Git)
 
 When you push a model change to the [Git Team Server](/developerportal/collaborate/team-server/), and the webhook responds to the event **Teamserver push (Git)**, request content containing a payload with the following format will be sent to the configured endpoint:
@@ -155,6 +159,10 @@ When you push a model change to the [Git Team Server](/developerportal/collabora
   "repositoryType": "git"
 }
 ```
+
+{{% alert color="info" %}}
+Ensure you use the correct key names if using this payload information to call other Mendix APIs. The data may be labelled differently in the API.
+{{% /alert %}}
 
 ## 6 Logging
 

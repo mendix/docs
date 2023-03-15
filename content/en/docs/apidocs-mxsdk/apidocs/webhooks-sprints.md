@@ -12,7 +12,7 @@ The webhook payloads described in this document are for app Sprints and stories.
 {{% /alert %}}
 
 {{% alert color="info" %}}
-You can also set deployment webhooks for your app. These are described in [Mendix Deployment Webhooks](/developerportal/deploy/webhooks/).
+You can now set deployment webhooks for your app. These are described in [Mendix Deployment Webhooks](/developerportal/deploy/webhooks/).
 {{% /alert %}}
 
 Webhooks allow you to build or set up Mendix Platform connectors that subscribe to certain events on the Developer Portal. When one of those events is triggered, Mendix sends an HTTP POST payload to the webhook's configured URL. Webhooks can be used to update an external application to keep it up-to-date with the changes happening in the Developer Portal.

@@ -338,7 +338,7 @@ There are three access roles: Portfolio Managers, Contributors or Viewers. Mendi
 The table below shows the permissions of Portfolio Managers, Contributors and Viewers:
 
 | Action | Portfolio Manager | Contributor | Viewer |
-| --- | --- | --- |
+| --- | --- | --- | --- |
 | Invite new users | {{< figure src="/attachments/developerportal/portfolio-management/check-mark.svg" >}} | {{< figure src="/attachments/developerportal/portfolio-management/cross-mark.svg" >}} | {{< figure src="/attachments/developerportal/portfolio-management/cross-mark.svg" >}} |
 | Remove user permissions and roles | {{< figure src="/attachments/developerportal/portfolio-management/check-mark.svg" >}}{{% alert type="info" %}}A Portfolio Manager cannot remove the permissions and role of another Portfolio Manager if the latter is a Mendix Admin.{{% /alert %}} | {{< figure src="/attachments/developerportal/portfolio-management/cross-mark.svg" >}} | {{< figure src="/attachments/developerportal/portfolio-management/cross-mark.svg" >}} |
 | Update user permissions and roles | {{< figure src="/attachments/developerportal/portfolio-management/check-mark.svg" >}}{{% alert type="info" %}}A Portfolio Manager cannot update the permissions and role of another Portfolio Manager if the latter is a Mendix Admin.{{% /alert %}} | {{< figure src="/attachments/developerportal/portfolio-management/cross-mark.svg" >}} | {{< figure src="/attachments/developerportal/portfolio-management/cross-mark.svg" >}} |

@@ -34,9 +34,9 @@ Clone this [code sample](https://github.com/mendix/native-group-box-pluggable-wi
 
 Before starting this how-to, make sure you have completed the following prerequisites:
 
-* Install Mendix Studio Pro 8.x.
+* Install the latest version of Mendix Studio Pro 8.18.x.
 * Install the Mendix Make It Native app for Mendix 8 on a mobile device or an emulator.
-* Install [Node.js](https://nodejs.org) v12.0.0 or any higher version.
+* Install [Node.js](https://nodejs.org) v16.
 * Install the latest [Yeoman](https://yeoman.io/) with the following command:
 
     ```shell {linenos=false}
@@ -87,12 +87,12 @@ To scaffold your project folder for the group box widget, follow these steps:
 
     * Widget name: {*GroupBox*}
     * Widget description: {*Widget to group building blocks, snippets, or other widgets.*}
-    * Organization name: {*com.mendix.widget.native*}
-    * Copyright: {*Mendix 2019*}
+    * Organization name: {*Your organization*}
+    * Copyright: {*Your copyright statement*}
     * License: {*Apache-2.0*}
     * Initial version: {*1.0.0*}
-    * Author: {*Mendix*}
-    * Mendix Project path: {*./test/MxTestProject/*}
+    * Author: {*Your name*}
+    * Mendix Project path: {*./tests/testProject/*}
     * Programming language: {**TypeScript**}
     * Widget type: {**For native mobile apps**}
     * Widget template: {**Empty widget (recommended for more experienced developers)**}
@@ -112,41 +112,33 @@ In order to test your group box widget, you will a Mendix application that uses 
 
 1. Open Studio Pro.
 2. Create a new project by clicking **File** > **New Project**.
-3. Select the **Blank** app (do not select **Blank App**).
+3. Select the **Blank Native Mobile App** (do not select **Blank App**).
 4. Click the **Use this starting point** button
 5. Fill in the following details in the **App Settings** dialog box:
     * App name: *GroupBoxTestProject*
     * Enable online services: *No*
 6. Click **Create app**.
 
-Optionally, you can remove all unused widgets to optimize the debugging process. To do so, follow these steps:
-
-1. Click **Project** > **Show Project Directory in Explorer**.
-2. Open the **widgets** folder.
-3. Delete all files in this folder.
-
 Follow these steps to add the Mendix project as a test project to your widget project, so that you can start modeling with the new widget:
 
 1. Close the project in Mendix Studio Pro by clicking **File** > **Close Project**.
-2. Move the contents of the Mendix project folder into **test/MxTestProject**, which is located inside your group box widget project folder.
+2. Move the contents of the Mendix project folder into **tests/testProject**, which is located inside your group box widget project folder.
 
 Create a test case by following these steps:
 
-1. Open the Mendix test project in **test/MxTestProject** by selecting **File** > **Open Project**.
-2. In the **Open App** dialog box, select **Locally on disk**.
-3. Open the *GroupBoxTestProject.mpr* file inside your group box widget project folder.
-4. Open **Home_Native** page.
-5. Copy the **Home** container and paste it underneath that container:
-
-    {{< figure src="/attachments/howto8/extensibility/build-native-widget/home-container.png" alt="home container" >}}
-
-6. Delete the contents of your new container.
-7. Search in Toolbox for the **Group Box** widget.
-8. Drag the widget into your empty container:
+1. Build the widget by running `npm run build` in the root folder of the pluggable widget.
+2. Open the Mendix test project in **tests/testProject** by selecting **File** > **Open Project**.
+3. In the **Open App** dialog box, select **Locally on disk**.
+4. Open the *GroupBoxTestProject.mpr* file inside your group box widget project folder.
+5. Set the **Security level to Off** in Project Security.
+6. Open **Home_Native** page.
+7. Delete the Intro screen widget and the two containers holding text from the page.
+8. Search in Toolbox for the **Group Box** widget. If you cannot find it press **F4** to refresh the project widgets.
+. Drag the widget into the empty container:
 
     {{< figure src="/attachments/howto8/extensibility/build-native-widget/initial-widget.png" alt="initial widget" >}}
 
-9. Double-click the widget, fill in your name as the **Default value**, and click **OK**.
+10. Double-click the widget, fill in your name as the **Default value**, and click **OK**.
 
 You have set up your test project. To verify that your Mendix test project is set up correctly, follow these steps:
 

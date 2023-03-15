@@ -79,7 +79,7 @@ The most commonly used attribute types can be used in your app. The types of the
 | (Other)                        | (Ignored) |
 
 {{% alert type="info" %}}
-Support for enumerations was introduced in Studio Pro [9.23.0](/releasenotes/studio-pro/9.23/).
+Support for enumerations was introduced in Studio Pro [9.24.0](/releasenotes/studio-pro/9.24/).
 {{% /alert %}}
 
 {{% alert color="warning" %}}

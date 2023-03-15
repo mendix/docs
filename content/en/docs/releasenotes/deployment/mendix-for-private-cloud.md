@@ -23,6 +23,7 @@ For information on the current status of deployment to Mendix for Private Cloud 
 * We reduced the scope granted to `mendix-operator` and `mendix-agent` roles in Kubernetes; instead of a `*` verb that includes all permissions, the roles are now more fine-grained.
 * We fixed an issue where annotations would only apply to new OpenShift Routes; with this update, it's possible to add or modify annotations in existing OpenShift Routes.
 * We fixed an issue where enabling the _Add credentials to pull secrets_ option would not work when the Push URL and Pull URL are different; with this update, credentials are now added for the push and pull registries.
+* We've extended options for configuring Google Cloud storage buckets - allowing to share a bucket between multiple environments.
 
 ### March 9th, 2023
 

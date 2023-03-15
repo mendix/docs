@@ -130,4 +130,4 @@ Delete behavior includes objects which are in memory. This means that cascading 
 ## 7 Read More
 
 * [Denormalize Data to Improve Performance](/howto/data-models/denormalize-data-to-improve-performance/)
-* [Set Up Data Validation](/howto/data-models/setting-up-data-validation/)
+* [Setting Up Data Validation](/refguide/setting-up-data-validation/)

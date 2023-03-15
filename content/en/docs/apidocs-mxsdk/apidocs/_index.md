@@ -107,9 +107,3 @@ For details, see [Team Server API](/apidocs-mxsdk/apidocs/team-server-api/).
 Use this API to integrate your company's user management systems with the Mendix Platform. You can then create and manage user accounts and groups as well as define group policies for your applications.
 
 For details, see [User Management API](/apidocs-mxsdk/apidocs/user-management-api/).
-
-## 18 Webhooks
-
-Webhooks allow you to build or set up Mendix Platform connectors that subscribe to certain events on the [Developer Portal](/developerportal/).
-
-Continue reading in [Webhooks](/apidocs-mxsdk/apidocs/webhooks-sprints/).

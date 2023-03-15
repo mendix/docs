@@ -56,7 +56,7 @@ Event handler properties consist of the following sections:
 | Value | Description |
 | --- | --- |
 | Create | The microflow is executed when an object of this entity is created. This happens when the user clicks **Create** on a grid or when an object is created in a microflow. In a [create](/refguide/create-object/) action in a microflow, an after create action is executed after the object is initialized with the attributes' default values, but before any change items specified in the action are applied. |
-| Commit | The microflow is executed when an object of this entity is committed. This happens when the user clicks **Save** on a page or when an object is committed in a microflow. |
+| Commit | The microflow is executed when an object of this entity is committed. This happens when the user clicks **Save** on a page or when an object is committed in a microflow. For more information, see the [Security](/refguide/nanoflows/#security) section of *Nanoflows*. |
 | Delete | The microflow is executed when an object of this entity is deleted. This happens when a user clicks **Delete** in a grid or when an object is deleted in a microflow. |
 | Rollback | The microflow is executed when an object of this entity is rolled back. This happens when a user clicks **Cancel** on a page or when an object is rolled back in a microflow. |
 

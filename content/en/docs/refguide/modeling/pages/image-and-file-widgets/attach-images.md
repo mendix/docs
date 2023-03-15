@@ -53,11 +53,11 @@ Do the following:
 
 3. Set the **Name** property to *Receipt*.
 
-3. In the **Generalization** property, click **Select**, choose the **Image** entity under **System**, and confirm your choice:
+4. In the **Generalization** property, click **Select**, choose the **Image** entity under **System**, and confirm your choice:
 
     {{< figure src="/attachments/refguide/modeling/pages/image-and-file-widgets/attach-images/selecting-system-image-entity.png"   >}}
 
-4. Now you need to create an association from the **Receipt** entity to the **Report** entity. In the **Properties** dialog box, open the **Associations** tab and click **New**. 
+5. Now you need to create an association from the **Receipt** entity to the **Report** entity. In the **Properties** dialog box, open the **Associations** tab and click **New**. 
 
 6. In the **Select Entity** dialog box, select **Report** and confirm your choice:
 
@@ -151,8 +151,7 @@ After users attach the images, it would be nice to display their attachments and
 
     {{< figure src="/attachments/refguide/modeling/pages/image-and-file-widgets/attach-images/layout-in-list-view.png"  >}}
 
-8. Open **Properties** pane of the button and in the **Button style** property, change **Default** to **Danger**. 
-
+10. Open **Properties** pane of the button and in the **Button style** property, change **Default** to **Danger**. 
 
 Great job! Now you have the image list that shows attached images and your users will be able to delete images from the list if necessary:
 

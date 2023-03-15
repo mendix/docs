@@ -38,10 +38,14 @@ Only *Retrieve apps*, *Create Free App Environment* and *Retrieve app* API calls
 
 #### 3.1.1 Description
 
-Retrieves all licensed apps and Free Apps to which the authenticated user has access as a regular user.
+Retrieves all apps to which the authenticated user has access as a regular user which have environments created on the Mendix Cloud. This includes all licensed apps and any Free Apps which have been deployed.
 
 {{% alert color="info" %}}
-The [Nodes](/developerportal/deploy/node-permissions/#nodes) screen in the Developer Portal shows all the licensed apps which are returned by this request, but does not show any Free Apps, while the [My Apps](/developerportal/#my-apps) screen shows both licensed apps and Free Apps.
+This API call does not return the same results as you can see within the Developer Portal.
+
+The [Nodes](/developerportal/deploy/node-permissions/#nodes) screen in the Developer Portal shows all the licensed apps which are returned by this request, but does not show any Free Apps.
+
+The [My Apps](/developerportal/#my-apps) screen shows both licensed apps and Free Apps, but also includes apps which are deployed to other platforms (for example, Mendix for Private Cloud or SAP BTP) and Free Apps which have not yet been deployed and therefore have no environments set up for them.
 {{% /alert %}}
 
 ```bash
@@ -602,13 +606,13 @@ curl -v -F "file=@%USERPROFILE%/Documents/Mendix/calc-main/releases/calc_1.0.0.4
 | 500 | UPLOAD_COPY_FAILED | Failed to store the deployment package. |
 | 500 | INVALID_PACKAGE | Failed to process the deployment package. |
 
-### 3.11 Transporting a Deployment Package to an Environment {#transport-deployment-package}
+### 3.11 Transport a Deployment Package to an Environment {#transport-deployment-package}
 
 #### 3.11.1 Description
 
 Transports a specific deployment package to a specific environment. After the deployment package has been transported, it will not replace a currently-running app automatically. You will need to [stop](#stop-environment) and [start](#start-environment) the environment to activate the new package.
 
-This call is not available for Free App. For a Free App, the Build API can be used to trigger a deployment.
+This call is not available for Free Apps. For a Free App, the Build API can be used to trigger a deployment.
 
 ```bash
 HTTP Method: POST
@@ -861,7 +865,7 @@ Mendix-ApiKey:  26587896-1cef-4483-accf-ad304e2673d6
 }
 ```
 
-### 3.15 Scaling Environments
+### 3.15 Scale Environments
 
 #### 3.15.1 Description
 

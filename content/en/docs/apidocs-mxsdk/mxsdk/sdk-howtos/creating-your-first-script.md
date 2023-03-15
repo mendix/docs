@@ -116,12 +116,6 @@ Once you are done with the model changes, you can flush the changes to make sure
 
 Note that the steps for app creation and committing to the Team Server can take some time, so please be patient.
 
-## 4 Opening the App in Studio Pro
-
-1. In the **Apps** page of the [Developer Portal](https://sprintr.home.mendix.com/), the app you just created should be visible at the top of the list.
-2. Open the new app, and on the right side, click **Edit in Studio**.
-3. If you have the latest [Mendix Studio Pro](https://marketplace.mendix.com/link/studiopro/), it will start and load the app you just created from the Team Server.
-
-## 5 Next Step
+## 4 Next Step
 
 Continue with [How to Create the Domain Model](/apidocs-mxsdk/mxsdk/creating-the-domain-model/).

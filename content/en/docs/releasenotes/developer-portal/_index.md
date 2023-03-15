@@ -23,6 +23,36 @@ To see the current status of the Mendix Developer Portal and Control Center, see
 
 * We have deprecated **General Settings** > **Webhooks** for app Sprints and stories. For more information, see the deprecation note in [Webhooks](/developerportal/collaborate/general-settings/#webhooks). You can now set deployment webhooks for your app. These are described in [Mendix Deployment Webhooks](/developerportal/deploy/webhooks/).
 
+### March 9th, 2023
+
+#### Improvements
+
+* As of now, only Scrum Masters can [manage the app team](/developerportal/collaborate/team/#managing).
+* We simplified the way your [Notification](/developerportal/community-tools/mendix-profile/#notifications) settings are stored.
+
+#### Fixes
+
+* We fixed an issue where the users you administered for your app's [environment](/developerportal/collaborate/general-settings/#manage-users) were not displayed in the correct order.
+
+### February 23rd, 2023
+
+#### New Features
+
+We have released a feature in Control Center where you can add and manage a [Security Contact](/developerportal/control-center/#company-details) for your company. A Security Contact is informed if there are critical security issues with the Mendix Platform and platform-supported Marketplace components.
+
+With this feature, you can do the following:
+
+* Add a new Security Contact to your company
+* Remove an existing Security Contact and replace it with a newer one
+* Adjust the Security Contact’s name 
+
+For more information on security issues, see [Security Advisories](/releasenotes/security-advisories/).
+
+#### Fixes
+
+* We fixed a performance issue that occurred when opening an [App Buzz](/developerportal/collaborate/buzz/#app-buzz) page for an app with a large team. We now show no more than 25 team members in the team list in the right corner at a time.
+* We fixed an issue where the country of residence you selected during sign-up was not properly stored in your [Mendix Profile](/developerportal/community-tools/mendix-profile/#profile).
+
 ### February 16th, 2023
 
 #### Improvements
@@ -70,7 +100,7 @@ To see the current status of the Mendix Developer Portal and Control Center, see
 
 ### December 13th, 2022
 
-#### New Feature
+#### New Features
 
 We have released the Beta version of [Product Insights](/developerportal/collaborate/product-insights/), which is a new way for you to proactively get feedback from your users. The functionality consists of a tool for setting up mini surveys in addition to the [Product Insights - Mini Surveys](/appstore/modules/product-insights/) Marketplace module, which you can add to your app to set up the exact targeting criteria for a survey.
 
@@ -928,7 +958,7 @@ In Portfolio Management, you can do the following
 
 #### Webhooks Available
 
-* We have added the ability to create webhooks for your apps. These webhooks can be configured to send information when sprints change and/or stories change. For more information, see the [Managing Webhooks](/developerportal/collaborate/general-settings/#webhooks) section of *How to Manage General App Settings* as well as [Webhooks](/apidocs-mxsdk/apidocs/webhooks-sprints/) in the *API Documentation*.
+* We have added the ability to create webhooks for your apps. These webhooks can be configured to send information when sprints change and/or stories change.
 
 ### April 5th, 2019
 

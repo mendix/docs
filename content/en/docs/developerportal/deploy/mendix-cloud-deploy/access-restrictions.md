@@ -159,7 +159,7 @@ To add this additional access restriction profile, follow these steps:
 5. Go to the **Deploy** tab of the **Environments** page, and click the **Details** of the desired environment.
 6. Select the **Network** tab of an application environment.
 
-    {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/access-restrictions/environment-restriction.png" >}}
+    {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/access-restrictions/environment-restriction-2.png" >}}
 
 7. **Edit** the `/ws/` path of the environment to apply the new access restriction profile. For the selected path (`/ws/`), the default profile (for the top level `/`) will now be overridden.
 

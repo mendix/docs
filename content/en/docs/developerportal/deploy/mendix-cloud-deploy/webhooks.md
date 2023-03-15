@@ -39,7 +39,7 @@ To set up a webhook, do the following:
 1. Enter the following information:
     * **Webhook Name** – a name, so you can identify the webhook
     * **URL** – the endpoint which will receive the payload when one of the event types selected in **Available Events** occurs
-    * **Validation Secret** – a secret which will be received by the endpoint to confirm that it has been triggered by this webhook — see [Verifying Your Webhook](#verify-webhook), below for more information
+    * **Validation Secret** – a secret which is shared with the endpoint to verify that it has been triggered by this webhook — see [Verifying Your Webhook](#verify-webhook), below for more information
     * **Available Events** – the event or events which will trigger the webhook to send information to the endpoint. You can see more information about these events in the sections below
     * **Custom Headers** – a **Key**/**Value** pair which is sent as an HTTP header to the endpoint
 
@@ -90,10 +90,16 @@ To verify the the signature, you need to reconstruct it and then compare it with
 1. Construct a string containing the signed content which is the `{webhook-id}.{webhook-timestamp}.{webhook payload}`. Note the full-stop (`.`) between the three elements.
 1. Calculate the **webhook-signature** using the HMAC-SHA256 function for your language and the **Validation Secret** you set up for the Webhook.
 
-    For example, in Node.js this might be:
+    For example, in a bash script this might be:
 
-    ```text {linenos=false}
-    calculated-signature = HMAC_SHA256(Validation Secret, Signed Content)
+    ```bash {linenos=false}
+    WEBHOOK_ID=# from the header
+    WEBHOOK_TIMESTAMP=# from the header
+    PAYLOAD=# payload of the message
+    VALIDATION_SECRET=# set when creating the webhook in the Developer Portal
+
+    # to generate the signature:
+    printf '%s.%s.%s' "$WEBHOOK_ID" "$WEBHOOK_TIMESTAMP" "$PAYLOAD" | openssl dgst -sha256 -binary -hmac "$VALIDATION_SECRET" | openssl base64
     ```
 
 1. Compare **calculated-signature** with **webhook-signature** to ensure that they match. Note that the **webhook-signature** is prefixed by a version and a delimiter, and ends with another delimiter. For example, the signature for `v1,f7bc83f430538424b13298e6aa6fb143ef4d59a14946175997479dbc2d1a3cd8=` is just `f7bc83f430538424b13298e6aa6fb143ef4d59a14946175997479dbc2d1a3cd8`

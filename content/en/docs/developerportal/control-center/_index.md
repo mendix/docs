@@ -41,7 +41,7 @@ These are some examples of what you can find on the dashboard:
 
 ## 3 Apps {#apps}
 
-### 3.1 Active and Deactivated Apps
+### 3.1 Active and Deactivated Apps {#active-deactivated}
 
 #### 3.1.1 Overview {#overview}
 

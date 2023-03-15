@@ -17,6 +17,12 @@ To see the current status of the Mendix Developer Portal and Control Center, see
 
 ## 2023
 
+### March 15th, 2023
+
+#### Deprecations
+
+* We have deprecated **General Settings** > **Webhooks** for app Sprints and stories. For more information, see the deprecation note in [Webhooks](/developerportal/collaborate/general-settings/#webhooks). You can now set deployment webhooks for your app. These are described in [Mendix Deployment Webhooks](/developerportal/deploy/webhooks/).
+
 ### February 16th, 2023
 
 #### Improvements

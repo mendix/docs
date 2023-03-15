@@ -333,7 +333,11 @@ The **Access Management** page shows all the users who have access to this portf
 
 {{< figure src="/attachments/developerportal/portfolio-management/access-management.png" >}}
 
-There are three access roles: Portfolio Managers, Contributors or Viewers. Mendix Admins are by default Portfolio Managers.
+There are three access roles: **Portfolio Managers**, **Contributors**, and **Viewers**.
+
+{{% alert type="info" %}}
+Mendix Admins are by default Portfolio Managers.
+{{% /alert %}}
 
 The table below shows the permissions of Portfolio Managers, Contributors and Viewers:
 

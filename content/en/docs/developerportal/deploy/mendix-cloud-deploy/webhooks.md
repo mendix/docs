@@ -13,7 +13,7 @@ This feature is in Beta. For more information on Beta products, see [Beta Releas
 
 ## 1 Introduction
 
-Webhooks in the Developer Portal allow you to send information about your Mendix app to an external app or workflow. This can be used, for example, to trigger an automated CI/CD workflow when a new change is committed to the Team Server.
+Mendix deployment webhooks allow you to send information about your Mendix app to an external app or workflow. This can be used, for example, to trigger an automated CI/CD workflow when a new change is committed to the Team Server.
 
 Mendix provides webhooks to send project information when the following events happen to your app:
 
@@ -21,7 +21,7 @@ Mendix provides webhooks to send project information when the following events h
 * Team Server push – when a new commit is pushed to the Team Server — this will only be triggered if your app is stored in a Git repository
 
 {{% alert color="info" %}}
-The deployment webhooks are set up and work independently of the [Webhooks used for Sprints and Stories](/developerportal/collaborate/general-settings/#webhooks)
+The deployment webhooks are set up and work independently of the [Webhooks used for Sprints and Stories](/developerportal/collaborate/general-settings/#webhooks).
 {{% /alert %}}
 
 ## 2 Configuring a Webhook{#setting-up}
@@ -81,7 +81,7 @@ The order of these headers is not guaranteed.
 
 ### 3.1 Verifying Your Webhook{#verify-webhook}
 
-You will want to verify that your endpoint has received a payload from Mendix and that the request hasn't been generated or intercepted by a bad actor. 
+You will want to verify that your endpoint has received a payload from Mendix and that the request has not been generated or intercepted by a bad actor. 
 
 This verification is enabled through the `webhook-signature` which is sent in the webhook header. This is created automatically by the user agent. It is generated using the **Validation Secret** you provided when you set up the webhook in combination with the payload of the trigger using [HMAC-SHA256](https://en.wikipedia.org/wiki/HMAC) authentication.
 

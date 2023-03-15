@@ -160,7 +160,7 @@ Only users with the **App Settings** permission can manage webhooks.
 {{% alert color="info" %}}You will only see the **Webhooks** tab if you have **Mendix Stories** turned on in the [Project Management](#project-management) tab (click **Switch to Mendix Stories** if necessary).{{% /alert %}}
 
 {{% alert color="info" %}}
-This tab sets up webhooks for app sprints and stories.
+This tab sets up webhooks for app Sprints and stories.
 
 You can also set deployment webhooks for your app. These are described in [Mendix Deployment Webhooks](/developerportal/deploy/webhooks/).
 {{% /alert %}}

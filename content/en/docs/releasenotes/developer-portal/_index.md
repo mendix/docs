@@ -21,7 +21,7 @@ To see the current status of the Mendix Developer Portal and Control Center, see
 
 #### Improvements
 
-* We added the Contributor access role in [Portfolio Management](/developerportal/portfolio-management/#access-management), and renamed the User access role to Viewer.
+* We added the **Contributor** access role in [Portfolio Management](/developerportal/portfolio-management/#access-management), and we renamed the **User** access role to **Viewer**.
 
 ### March 9th, 2023
 

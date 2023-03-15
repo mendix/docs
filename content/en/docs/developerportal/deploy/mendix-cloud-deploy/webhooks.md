@@ -21,7 +21,7 @@ Mendix provides webhooks to send project information when the following events h
 * Team Server push – when a new commit is pushed to the Team Server — this will only be triggered if your app is stored in a Git repository
 
 {{% alert color="info" %}}
-The deployment webhooks are set up and work independently of the [Webhooks used for Sprints and Stories](/developerportal/collaborate/general-settings/#webhooks).
+The deployment webhooks are set up and work independently of the [webhooks used for Sprints and stories](/developerportal/collaborate/general-settings/#webhooks), which are deprecated.
 {{% /alert %}}
 
 ## 2 Configuring a Webhook{#setting-up}

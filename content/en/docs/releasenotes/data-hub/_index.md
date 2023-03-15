@@ -11,6 +11,13 @@ These release notes cover changes made to the [Mendix Data Hub Catalog](/data-hu
 
 ## 2023
 
+### March 16th, 2023
+
+#### Fixes
+
+* Fixed the issue in the Catalog Admin Control Center Page where it was showing wrong counts of Data Sources registered in the company.
+* Fixed the error when user selects no authentication while registering datasource in Catalog.
+
 ### February 27th, 2023
 
 #### Fixes

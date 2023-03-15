@@ -11,7 +11,16 @@ tags: ["build", "deploy", "deployment package", "command-line", "studio pro"]
 
 MxBuild is a Windows and Linux command-line tool that can be used to build a Mendix Deployment Package from a Mendix app.
 
-The version of MxBuild which you need is dependent on the version of the Mendix model you want to build. You can find your correct MxBuild by entering this URL into a browser and replacing `mxversion` with your own, full Mendix version number: `https://cdn.mendix.com/runtime/mxbuild-{mxversion}.tar.gz`.
+The version of MxBuild which you need is dependent on the version of the Mendix model you want to build, and on the host operating system you want to use.
+
+Please refer to the following table to find your correct MxBuild by entering a URL from a correct row into a browser and replacing `mxversion` with your own, full Mendix version number:
+
+| Operating system | Mendix version    | URL |
+| ---------------- | ----------------- | --- |
+| Linux (x64)      | All versions      | `https://cdn.mendix.com/runtime/mxbuild-{mxversion}.tar.gz`      |
+| Windows (x64)    | < 9.20            | `https://cdn.mendix.com/runtime/mxbuild-{mxversion}.tar.gz`      |
+| Windows (x64)    | 9.20 - 9.22       | `https://cdn.mendix.com/runtime/mono-mxbuild-{mxversion}.tar.gz` |
+| Windows (x64)    | >= 9.23           | `https://cdn.mendix.com/runtime/win-mxbuild-{mxversion}.tar.gz`  |
 
 {{% alert color="info" %}}
 

@@ -17,6 +17,12 @@ To see the current status of the Mendix Developer Portal and Control Center, see
 
 ## 2023
 
+### March 16th, 2023
+
+### Improvements
+
+* In Control Center, we increased the limit of [deactivation or activation](developerportal/control-center/#31-active-and-deactivated-apps) of apps up to 100 elements.
+
 ### March 9th, 2023
 
 #### Improvements

@@ -364,7 +364,7 @@ The table below shows the permissions of Portfolio Managers, Contributors and Vi
 1. Go to **Access Management**.
 2. On the upper-right corner, click **Add New Users**.
 3. In the dialog box, enter the **Email Address** of the user who you want to invite. They can be someone within your company or outside your company. For users outside your company, their names and profile pictures are not displayed.
-4. Select an **Access Role** for the user – **Portfolio Manager**, **Contributor** or **Viewer**. This determines the user's access level to all the projects in this portfolio.
+4. Select an **Access Role** for the user – **Portfolio Manager**, **Contributor**, or **Viewer**. This determines the user's access level to all the projects in this portfolio.
 5. Click **Add to List**.
 6. Repeat steps 2 and 4 until you add all the users.
 7. Click **Send Invites**.

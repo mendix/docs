@@ -20,6 +20,8 @@ Mendix provides webhooks to send project information when the following events h
 * On package upload – when a deployment package is available in the Developer Portal — this includes creating a package from the Teamserver
 * Team Server push – when a new commit is pushed to the Team Server — this will only be triggered if your app is stored in a Git repository
 
+The webhooks contain a retry mechanism if an error response is received from the endpoint to ensure that the trigger reaches the endpoint.
+
 {{% alert color="info" %}}
 The deployment webhooks are set up and work independently of the [webhooks used for Sprints and stories](/developerportal/collaborate/general-settings/#webhooks), which are deprecated.
 {{% /alert %}}
@@ -39,7 +41,7 @@ To set up a webhook, do the following:
 1. Enter the following information:
     * **Webhook Name** – a name, so you can identify the webhook
     * **URL** – the endpoint which will receive the payload when one of the event types selected in **Available Events** occurs
-    * **Validation Secret** – a secret which is shared with the endpoint to verify that it has been triggered by this webhook — see [Verifying Your Webhook](#verify-webhook), below for more information
+    * **Validation Secret** – a secret which is shared with the endpoint to verify that it has been triggered by this webhook — see [Verifying Your Webhook](#verify-webhook), below for more information. If you leave this blank, a secret will be generated automatically for you — you can see the generated value if you go back in to edit the webhook.
     * **Available Events** – the event or events which will trigger the webhook to send information to the endpoint. You can see more information about these events in the sections below
     * **Custom Headers** – a **Key**/**Value** pair which is sent as an HTTP header to the endpoint
 
@@ -66,7 +68,7 @@ Every POST payload contains the following delivery information as part of the he
 * **content-length** – the size of the HTTP request in bytes, for example `475`
 * **webhook-signature** – the signature of the webhook in the format `<version>,<signature>`, for example `v1,Ay2spGBdE7i6OzNkFgTDnGfqgZT0WonCFoBMt8V3YiQ=` — see [Verifying Your Webhook](#verify-webhook), below for more information
 * **webhook-id** – a unique identifier for this webhook trigger, for example `msg_2M605iBQRge9hTgpYg7fKXQubaw`
-* **user-agent** – the user agent used to process this trigger. Mendix uses [Svix](https://www.svix.com/), which returns something like `Svix-Webhooks/0.75.0`
+* **user-agent** – the user agent used to process this trigger.
 * **webhook-timestamp** – the time the webhook was triggered, for example `1677072542`
 * **test** – if this POST is a test, then this header will be included with the value `test`
 * **content-type** – `application/json`
@@ -83,7 +85,7 @@ The order of these headers is not guaranteed.
 
 You will want to verify that your endpoint has received a payload from Mendix and that the request has not been generated or intercepted by a bad actor. 
 
-This verification is enabled through the `webhook-signature` which is sent in the webhook header. This is created automatically by the user agent. It is generated using the **Validation Secret** you provided when you set up the webhook in combination with the payload of the trigger using [HMAC-SHA256](https://en.wikipedia.org/wiki/HMAC) authentication.
+This verification is enabled through the `webhook-signature` which is sent in the webhook header. It is generated using the **Validation Secret** you provided when you set up the webhook in combination with the payload of the trigger using [HMAC-SHA256](https://en.wikipedia.org/wiki/HMAC) authentication.
 
 To verify the the signature, you need to reconstruct it and then compare it with the **webhook-signature** in the webhook header. This is done as follows:
 
@@ -107,6 +109,8 @@ To verify the the signature, you need to reconstruct it and then compare it with
 
 When verifying your webhook signature, bear the following in mind:
 
+{{% todo %}}Can you ever get two signatures{{% /todo %}}
+
 * The signature list **webhook-signature** is most commonly of length one. However, there could be any number of signatures.
 * You should use a constant-time string comparison method in order to prevent timing attacks.
 * You should also verify that **webhook-timestamp** is within your tolerance for the current system time, to ensure you are not receiving timestamp attacks where old webhook payloads are being sent to your endpoint.
@@ -117,15 +121,17 @@ When you [upload a package to the Developer Portal](/developerportal/deploy/envi
 
 ```json {linenos=false}
 {
+  "eventType": "package.uploaded",
   "modelVersion": "0.0.19.62e3d711",
   "name": "main-0.0.19.62e3d711.mda",
-  "packageId": "9222b92a-51ca-4932-a1f1-72c33ff76b86",
   "projectId": "f60650eb-230a-4419-a6af-b3668fc82d5d",
   "runtimeVersion": "9.18.1.54902",
   "uploadTime": "2023-02-23T10:25:21.3896Z",
   "uploaderId": "4bcafd1c-dac8-4335-b401-06ebe86f7851"
 }
 ```
+
+If you need a specific package id for an API call, you will need to use the **Retrieve Packages** call of the [Build API](/apidocs-mxsdk/apidocs/build-api/) to find all the packages and then use the **name** and **uploadTime** values to find the package information for the package you want.
 
 {{% alert color="info" %}}
 Ensure you use the correct key names if using this payload information to call other Mendix APIs. The data may be labelled differently in the API.
@@ -155,10 +161,13 @@ When you push a model change to the [Git Team Server](/developerportal/collabora
       ]
     }
   ],
+  "eventType": "teamserver.push",
   "projectId": "9bcd62a6-9c19-4c7f-a5ae-49182c67f80f",
   "repositoryType": "git"
 }
 ```
+
+The **after**, **before**, and **id** values are git commit hashes. In most cases, you will want to use the **id** hash which is the latest commit on the branch.
 
 {{% alert color="info" %}}
 Ensure you use the correct key names if using this payload information to call other Mendix APIs. The data may be labelled differently in the API.

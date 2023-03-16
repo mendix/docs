@@ -109,9 +109,7 @@ To verify the the signature, you need to reconstruct it and then compare it with
 
 When verifying your webhook signature, bear the following in mind:
 
-{{% todo %}}Can you ever get two signatures{{% /todo %}}
-
-* The signature list **webhook-signature** is most commonly of length one. However, there could be any number of signatures.
+* The signature list **webhook-signature** usually contains a single signature. If there is more than one signature, you should use the first signature, which is calculated using the latest validation secret.
 * You should use a constant-time string comparison method in order to prevent timing attacks.
 * You should also verify that **webhook-timestamp** is within your tolerance for the current system time, to ensure you are not receiving timestamp attacks where old webhook payloads are being sent to your endpoint.
 

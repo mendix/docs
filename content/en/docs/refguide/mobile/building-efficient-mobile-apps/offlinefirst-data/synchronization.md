@@ -101,21 +101,27 @@ These settings are not applied for [selective synchronization](#selective-sync).
 
 By default, Mendix automatically determines which objects need to be synchronized as mentioned in [Synchronization](#synchronization).
 
-Depending on the use-case, more fine-grained synchronization controls might be required. Therefore, it is possible to change the download behavior for an entity. You can choose between the following options:
+Depending on the use-case, more fine-grained synchronization controls might be required. Therefore, it is possible to change the synchronization mode for an entity. You can choose between the following options:
 
 * **All Objects** – Download all objects applying the regular security constraints.
 * **By XPath** – Only download the objects which match the [XPath Constraints](/refguide/xpath-constraints/) in addition to the regular security constraints. This means all previously synchronized objects that do not match the XPath constraint will be removed.
 * **Nothing (clear data)** – Do not download any objects automatically, but do clear the data stored in the database for this entity when performing a synchronization (this can be useful in cases where the objects should only be uploaded, for example a `Feedback` entity).
 * **Nothing (preserve data)** – Do not download any objects automatically, and do not clear the data stored in the database for this entity when performing a synchronization  (this can be useful in cases where you want have full control over the synchronization and should be used in combination with the [Synchronize to device](/refguide/synchronize-to-device/) or [Synchronize](/refguide/synchronize/) activity with specific objects selected).
+* **Never** – When an entity is set to `Never`, its objects will not be synchronized between the runtime and the offline database during a Startup Synchronization, Full Synchronization, or [Synchronize Unsynchronized Objects](/refguide/synchronize/#unsynchronized-objects). However, the objects can still be synchronized using [Synchronize to device](/refguide/synchronize-to-device/) or [Synchronize selected object(s)](/refguide/synchronize/#selected-objects), but you will be in control when and what is synchronized.
+
 
 If you have custom widgets or JavaScript actions which use an entity that cannot be detected by Studio Pro in your offline-first profile (because its only used in the code), you can use customizable synchronization to include such entities.
 
-{{< figure src="/attachments/refguide/mobile/offline-first/custom-sync.png" alt="custom synchronization"   width="450"  >}}
+{{< figure src="/attachments/refguide/mobile/offline-first/custom-synchronization-configs.png" alt="custom synchronization"   width="450"  >}}
 
 ### 2.5 Limitations
 
-Running multiple synchronization processes at the same time is not supported, regardless the of the type (**full** or **selective**). For more information, see the [Limitations](/refguide/synchronize/#limitations) section of the *Synchronize Guide*.
+- Running multiple synchronization processes at the same time is not supported, regardless the of the type (**full** or **selective**). For more information, see the [Limitations](/refguide/synchronize/#limitations) section of the *Synchronize Guide*.
 
+- An entity configured with `Never` synchronization mode is not allowed to be associated with an entity that is not used in offline, or configured with a synchronization mode other than `Never`.
+
+- File and Image documents are not supported for entities configured with `Never` synchronization mode.
+- An entity configured with `Never` synchronization mode is not allowed to have generalization from an entity that is not used in offline, or configured with a synchronization mode other than `Never`.
 ### 2.6 Error Handling {#error-handling}
 
 During synchronization, errors might occur. This section describes how Mendix handles these errors and how you can prevent them.

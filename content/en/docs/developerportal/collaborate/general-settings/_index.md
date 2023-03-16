@@ -35,7 +35,6 @@ These tabs are only available for users with the **App Settings** permission:
 * **Cloud Settings**
 * **API Keys**
 * **Project Management**
-* **Webhooks**
 * **History**
 
 ## 2 General {#general}
@@ -153,13 +152,19 @@ It is possible to migrate all or part of your content from [Stories](/developerp
 
 ## 7 Webhooks {#webhooks}
 
-{{% alert color="info" %}}
-Only users with the **App Settings** permission can manage webhooks.
+{{% alert color="warning" %}}
+This tab is for webhooks for app Sprints and stories, and it is deprecated. This tab will be removed and these webhooks will be discontinued later in 2023. It is no longer possible to add new webhook configurations for app Sprints and stories to your apps, but existing configurations will remain active and can still be edited. 
 {{% /alert %}}
 
-{{% alert color="info" %}}You will only see the **Webhooks** tab if you have **Mendix Stories** turned on in the [Project Management](#project-management) tab (click **Switch to Mendix Stories** if necessary).{{% /alert %}}
+{{% alert color="info" %}}
+You can now set deployment webhooks for your app. For details, see [Mendix Deployment Webhooks](/developerportal/deploy/webhooks/).
+{{% /alert %}}
 
-Click the **Webhooks** tab to manage your app's webhooks. A webhook enables the Developer Portal to talk to another website and post updated Developer Portal content (for example, Sprint updates and new stories) to that website. For example, if you want to follow the changes in your app, you can create a service with a certain [URL](#url) that keeps track of the data, and then changes in the app in the Developer Portal are sent to that URL.
+{{% alert color="info" %}}
+This tab is only visible if you already have webhooks created, you are a **Scrum Master**, and you have **Mendix Stories** turned on in the [Project Management](#project-management) tab.
+{{% /alert %}}
+
+Open the **Webhooks** tab to manage your app's webhooks. A webhook enables the Developer Portal to talk to another website and post updated Developer Portal content (for example, Sprint updates and new stories) to that website. For example, if you want to follow the changes in your app, you can create a service with a certain [URL](#url) that keeps track of the data, and then changes in the app in the Developer Portal are sent to that URL.
 
 {{< figure src="/attachments/developerportal/collaborate/general-settings/webhooks-list.png" width="800"  >}}
 

@@ -70,7 +70,6 @@ Every POST payload contains the following delivery information as part of the he
 * **webhook-id** – a unique identifier for this webhook trigger, for example `msg_2M605iBQRge9hTgpYg7fKXQubaw`
 * **user-agent** – the user agent used to process this trigger.
 * **webhook-timestamp** – the time the webhook was triggered, for example `1677072542`
-* **test** – if this POST is a test, then this header will be included with the value `test`
 * **content-type** – `application/json`
 * **accept** – `*/*`
 * **host** – the host part of the endpoint URL, for example `gitlab.com`
@@ -129,7 +128,7 @@ When you [upload a package to the Developer Portal](/developerportal/deploy/envi
 }
 ```
 
-If you need a specific package id for an API call, you will need to use the **Retrieve Packages** call of the [Build API](/apidocs-mxsdk/apidocs/build-api/) to find all the packages and then use the **name** and **uploadTime** values to find the package information for the package you want.
+If you need a specific package id for an API call, you will need to use the **Retrieve Packages** call of the [Build API](/apidocs-mxsdk/apidocs/build-api/) to find all the packages and then use the **name** value to find the latest package information for the package you want.
 
 {{% alert color="info" %}}
 Ensure you use the correct key names if using this payload information to call other Mendix APIs. The data may be labelled differently in the API.
@@ -147,8 +146,8 @@ When you push a model change to the [Git Team Server](/developerportal/collabora
   "commits": [
     {
       "authorDate": "2022-12-08T16:15:52+01:00",
-      "authorEmail": "ahmed.negm@mendix.com",
-      "authorName": "Balazs Bole",
+      "authorEmail": "uria.abrams@example.com",
+      "authorName": "Uria Abrams",
       "id": "4b76061182bf183281b5107cd753c6071ed00040",
       "mendixVersion": "9.20.2.1234",
       "message": "Commit the changes",
@@ -165,7 +164,7 @@ When you push a model change to the [Git Team Server](/developerportal/collabora
 }
 ```
 
-The **after**, **before**, and **id** values are git commit hashes. In most cases, you will want to use the **id** hash which is the latest commit on the branch.
+The **after**, **before**, and **id** values are git commit hashes. In most cases, you will want to use the **after** hash which is the last commit on the branch.
 
 {{% alert color="info" %}}
 Ensure you use the correct key names if using this payload information to call other Mendix APIs. The data may be labelled differently in the API.

@@ -45,7 +45,7 @@ The list operation properties pane consists of the following sections:
 * [Action](#action)
 * [Common](#common)
 
-## 3 Action Section{#action}
+## 3 Action Section {#action}
 
 The **Action** section of the properties pane shows the action associated with this activity.
 
@@ -101,7 +101,7 @@ These operations take a list and filter it based on an expression. Inside the ex
 | Find by expression | Finds the first object that matches the given expression. | Object |
 | Filter by expression | Finds all the objects that match the given expression. | List |
 
-#### 3.1.5 Range{#range}
+#### 3.1.5 Range {#range}
 
 {{% alert color="info" %}}
 This list operation action was introduced in Studio Pro 9.24.
@@ -117,6 +117,6 @@ This operation takes a list and filters it based on two expressions: `offset` an
 
 This is the name of the resulting List, Object, or Boolean variable. The result can be used by all activities that follow this activity.
 
-## 4 Common Section{#common}
+## 4 Common Section {#common}
 
 {{% snippet file="/static/_includes/refguide/microflow-common-section-link.md" %}}

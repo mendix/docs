@@ -72,7 +72,6 @@ Some SAML services, such as eHerkenning and DigID in the Netherlands, use option
 
 * Signature included as a query string parameter in URL (for HTTP-REDIRECT)
 * restriction of RelayState to 80 characters (i.e. SAML SSO may generate RelayState values that exceed 80 characters)
-* ForceAuthn
 * ProviderName
 * Scoping
 * RequestedAuthnContext in the SAML requests
@@ -402,7 +401,7 @@ In-session authentication at the SAML IdP is only available in the following ver
 * v3.3.0/v3.3.1 and above for Mendix version 9
 * v2.3.0 and above for Mendix version 8
 
-Usage of the in-session authentication changes the user roles that apply to the current session. If your app is configured with multiple IDP configurations, the in-session authentication will use the same SAML IDP as the initial (non-anonymous) session. If there is no current session, it lets the user select their IDP.
+Usage of the in-session authentication changes the user roles that apply to the current session. If your app is configured with multiple IDP configurations, the in-session authentication will use the same SAML IDP as the initial (non-anonymous) session. If there is no current session, the end user can select their IDP. In-session authentication uses the setting `ForceAuthn=true`, which means that the IdP will always authenticate an end user even if the IdP already has a session for that end user.
 
 This flow can be initiated by using the URL `https://{app-url}/sso/login?action=verify`
 

@@ -10,11 +10,11 @@ aliases:
 
 ## 1 Introduction
 
-This how-to explains how you can set up data validation with Mendix. Before you can start with this how-to you need to setup a basic data structure, otherwise there won't be any data to validate. If you don't know how to setup a basic data structure, you can take a look at [Creating a Basic Data Layer](/refguide/create-a-basic-data-layer/).
+This how-to explains how you can set up data validation with Mendix. Before you can start with this how-to, you need to setup a basic data structure, otherwise there is no data to validate. If you do not know how to set up a basic data structure, you can take a look at [Creating a Basic Data Layer](/refguide/create-a-basic-data-layer/).
 
 ## 2 Data Validation on Entity Level
 
-This section will explain how you can add validation rules to the domain model of your module. Validation rules are always triggered when changes to an object are committed. Please note that validation rules can only be applied on entities that are persistable.
+This section explains how you can add validation rules to the domain model of your module. Validation rules are always triggered when changes to an object are committed. Note that validation rules can only be applied on entities that are persistable.
 
 1. Open a **domain model** in Studio Pro.
 2. Double click a persistable entity to open its **properties.**

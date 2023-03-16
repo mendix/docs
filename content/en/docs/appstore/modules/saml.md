@@ -235,7 +235,7 @@ The following settings are for the IdP metadata:
 If you want to automatically synchronize the IdP metadata, make sure the **SE_SynchronizeIdPMetadata** [scheduled event](/refguide/scheduled-events/) is enabled. This is in the **\_USE ME** > **Scheduled Events** folder of the SAML module.
 {{% /alert %}}
 
-If you need to change your identity provider metadata you can find more information in the [Configuration of SAML Binding](#saml-binding) section.
+If you need to change your identity provider metadata you can find more information in the [Response Protocol Binding](#saml-binding) section.
 
 #### 3.2.4 User Provisioning 
 
@@ -274,7 +274,7 @@ These settings are only available in the following versions of the module (depen
         * the custom microflow name must begin with the string “Custom”, (for example, `CustomMyUserProvisioning`)
         * to see the latest custom microflows in the dropdown, refresh the modules in the *Model Reflection* of your application whenever you add/remove any custom microflow — see [Mx Model Reflection](/appstore/modules/model-reflection/) for information on how to do this
 
-* **Enable delegated authentication** *(deprecated)* - See [Multi-tier Delegated Authentication](#delegated-auth), below, for information on when you might set this.
+* **Enable delegated authentication** *(deprecated)* - See [Enable Delegated Authentication](#delegated-auth), below, for information on when you might set this.
 
 * **Enable mobile authentication Token** - If you are using a [hybrid mobile](/refguide/hybrid-mobile/) app and you enable this, you can log in to your Mendix hybrid mobile app after the app is closed, using an auth token cookie. Only check this if you are using SAML on a hybrid mobile app. Note that this functionality also requires changes to the hybrid app package as described in [How To Implement SSO on a Hybrid App with Mendix and SAML](/howto8/mobile/implement-sso-on-a-hybrid-app-with-mendix-and-saml/).
 
@@ -378,7 +378,7 @@ Checking this box will force the SAML IdP  to (re)authenticate end-users, even i
 
 If you are using a [hybrid mobile](/refguide/hybrid-mobile/) app and you enable this, you can sign in to your Mendix hybrid mobile app after the app is closed, using an authentication token cookie. Only check this if you are using SAML on a hybrid mobile app. Note that this functionality also requires changes to the hybrid app package as described in [How To Implement SSO on a Hybrid App with Mendix and SAML](/howto8/mobile/implement-sso-on-a-hybrid-app-with-mendix-and-saml/).
 
-#### 4.3.4 Enable Delegated Authentication
+#### 4.3.4 Enable Delegated Authentication {#delegated-auth}
 
 This feature is deprecated.
 
@@ -389,7 +389,7 @@ In the SAML module, you can enable this by checking “Enable delegated authenti
 
 If you enable this, you will need to enter the **Delegated Auth URL**.
 
-#### 4.3.5 In-session Authentication
+#### 4.3.5 In-session Authentication {#in-session}
 
 In-session authentication is a process that takes place within a session that was initiated by a (primary) end-user that signed in to your app or from within an anonymous session. This can be useful in the following situations:
 
@@ -446,7 +446,7 @@ This passes the allowed authentication methods. This has to be whatever the IdP 
 
 You may need to choose a different SAML binding to match your IdP. You can configure the SAML binding in the **Identity Provider Metadata** tab of the `OpenConfiguration` microflow.
 
-#### 4.4.1 Response Protocol Binding
+#### 4.4.1 Response Protocol Binding {#saml-binding}
 
 By default, the SAML SSO module uses `POST_BINDING` for the SAML response. In most cases (for example, when using AzureAD) you will want to stick to this default.
 Some IdPs, however, require your app to use the more secure `ARTIFACT_BINDING`.
@@ -482,13 +482,13 @@ If you want to import the IdP metadata files from a URL, do the following:
     **The following metadata has been fetched** will show an overview of all the information that has been found in the IdP metadata information. It is usually not necessary to do anything here, but it can be useful in order to review the possible IdP and SP configuration options.
 
 If you want to automatically synchronize the IdP metadata, make sure the **SE_SynchronizeIdPMetadata** [scheduled event](/refguide/scheduled-events/) is enabled. This is in the **_USE ME** > **Scheduled Events** folder of the SAML module.
-If you need to change your identity provider metadata you can find more information in the [Configuration of SAML Binding](/appstore/modules/saml/#saml-binding) section.
+If you need to change your identity provider metadata you can find more information in the [Response Protocol Binding](#saml-binding) section.
 
 ### 4.5 Attribute Consuming Service
 
 In the **Attribute Consuming Service** tab, you can configure your app using the SAML protocol to request specific attributes, such as Date of Birth or Gender, from the SAML IdP. Your SAML IdP documentation will tell you what attributes can be requested. In the request you can also indicate whether you consider the attribute as mandatory or optional for your app’s logic.
 
-You can set up two sets of attributes, by adding new attributes, editing existing attributes, or removing selected attributes. These will be provided at different times. Those listed under **I want to request attribute(s) at my IDP during initial login** will be returned when the end user initially signs in. Those listed under **I want to request attribute(s) at my IDP during in-session login** will be returned during [In-session Authentication](/appstore/modules/saml/#in-session).
+You can set up two sets of attributes, by adding new attributes, editing existing attributes, or removing selected attributes. These will be provided at different times. Those listed under **I want to request attribute(s) at my IDP during initial login** will be returned when the end user initially signs in. Those listed under **I want to request attribute(s) at my IDP during in-session login** will be returned during [In-session Authentication](#in-session).
 Although the typical use case for requesting attributes is to obtain information about the user, you can request an attribute with a specific value. In this case, you can configure the optional **Attribute value that must be returned**.
 
 Requesting user attributes at the SAML IdP is only available in the following versions of the module (depending on which Mendix version you are using)
@@ -504,7 +504,7 @@ The resource folder contains a file called *SAMLConfig.properties*. In this file
 This file contains the documented properties, and example lines show the default values of these options.
 With these settings, you can configure the behavior of this module and improve the multi-tenant behavior of your application. For plain SAML authentication, it is best to leave this file unchanged.
 
-### 5.2 Use a Certificate Issued by a Certificate Authority
+### 5.2 Use a Certificate Issued by a Certificate Authority {#use-ca}
 
 By default the SAML SSO module will use self-signed certificates. It is, however, also possible to use certificates issued by a Certificate Authority (CA).
 SAML SSO supports 2 file formats:

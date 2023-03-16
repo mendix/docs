@@ -50,7 +50,11 @@ On the **Active Apps** tab and the **Deactivated Apps** tab, you can see an over
 When you select one or more apps via the check boxes in the list, a context menu appears at the bottom of the screen with options for exporting app details to an *.xlsx* file, deactivating apps (on the **Active Apps** tab) or activating apps (on the **Deactivated Apps** tab), and deleting an app.
 
 {{% alert color="info" %}}
-Deleting and deactivating apps is currently not supported for licensed apps or apps that are not running on the Mendix Cloud. In the overview, you can only deactivate or activate up to 20 apps and delete one app in one go.
+Deleting and deactivating apps is currently not supported for licensed apps or apps that are not running on the Mendix Cloud.
+{{% /alert %}}
+
+{{% alert color="info" %}}
+In the overview, you can activate or deactivate up to 100 apps at a time and delete 1 app at a time.
 {{% /alert %}}
 
 The consequences of deactivating and deleting an app are as below:

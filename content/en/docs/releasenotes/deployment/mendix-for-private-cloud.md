@@ -15,7 +15,7 @@ For information on the current status of deployment to Mendix for Private Cloud 
 
 ### March 17th, 2023
 
-#### Mendix Operator v2.10.2{#2.10.2}
+#### Mendix Operator v2.10.2 {#2.10.2}
 
 * We have updated components to use the latest dependency versions, in order to improve security score ratings for all container images.
 * We have fixed an issue where the Operator would continuously create and delete pods after a container's memory, CPU or ephemeral storage had been adjusted by the cluster. (Tickets 175836, 177443)

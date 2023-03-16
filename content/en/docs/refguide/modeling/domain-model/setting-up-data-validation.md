@@ -14,33 +14,42 @@ This how-to explains how you can set up data validation with Mendix. Before you 
 
 ## 2 Data Validation on Entity Level
 
-This section explains how you can add validation rules to the domain model of your module. Validation rules are always triggered when changes to an object are committed. Note that validation rules can only be applied on entities that are persistable.
+This section explains how you can add validation rules to the domain model of your module. Validation rules are always triggered when changes to an object are committed. 
+
+{{% alert color="info" %}}
+Validation rules can only be applied on entities that are [persistable](/refguide/persistability/).
+{{% /alert %}}
 
 1. Open your [domain model](/refguide/create-a-basic-data-layer/) in Studio Pro.
 2. Double-click a persistable entity to open its properties.
 3. Go to the **Validation rules** tab.
 
-    {{< figure src="/attachments/refguide/modeling/domain-model/setting-up-data-validation/18582149.png" >}}
+    {{< figure src="/attachments/refguide/modeling/domain-model/setting-up-data-validation/validation-rules-tab.png" width="500px" >}}
 
 4. Click **New** to start configuring a new validation rule for this entity.
-
-    {{< figure src="/attachments/refguide/modeling/domain-model/setting-up-data-validation/18582148.png" >}}
-
 5. Select an **Attribute** whose value should be validated.
 6. Enter an **Error message** that is shown to the end-user if the validation fails.
 7. Select a **Type** for the validation rule.
-8. Click **OK** to save this validation rule.
+8. Click **OK** to save this validation rule. 
+
+An example of an already-configured validation rule is shown below:
+
+{{< figure src="/attachments/refguide/modeling/domain-model/setting-up-data-validation/validation-rule-example.png" width="500px" >}}
 
 ## 3 Required Validation on Inputs, Reference Selectors, and Drop-downs
 
 The page builder of Studio Pro allows you to configure which inputs are mandatory and what message is shown to the end-user if the input is empty. If you do not have a detail page yet, take a look at [How to create Your First Two Overview and Detail Pages](/howto/front-end/create-your-first-two-overview-and-detail-pages/).
 
 1. Open a **detail page** and double-click an input area to open its properties.
-2. Enter a message for **Placeholder text**. This message is shown inside the input area if an end-user clicks the **Save** button without filling in a value.
+2. Enter a message as **Placeholder text**. This message is shown inside the input area.
 
-{{< figure src="/attachments/refguide/modeling/domain-model/setting-up-data-validation/18582144.png" >}}
+An example of checking the input for the **Name** attribute of a **Customer** entity is shown below:
 
-Note that a **Required** validation rule on entity level overrules this property.
+{{< figure src="/attachments/refguide/modeling/domain-model/setting-up-data-validation/placeholder-validation.png" width="500px">}}
+
+{{% alert color="info" %}}
+When a message is entered as **Placeholder text**, the page input is always checked even when validation is not set as **Required** on entity level.
+{{% /alert %}}
 
 ## 4 Advanced Data Validation with the 'Before Commit' Event
 

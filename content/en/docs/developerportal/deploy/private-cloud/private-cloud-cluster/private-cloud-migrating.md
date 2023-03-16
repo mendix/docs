@@ -47,9 +47,7 @@ Follow these steps to export the Mendix components and store them on your local 
     The components you selected will be extracted from the Mendix repository and saved on your local machine. This will be in the folder `C:\Users\<User id>\.mxpc-cli\registry-migration` on Windows or `home/<User id>/.mxpc-cli/registry-migration` for Mac and U*ix. This can take some time. Wait for the message*The images for the selected components were exported successfully in tarballs*.
 
 {{% alert color="info" %}}
-To avoid downloading too many images, there's a default limit on the number of images that will be downloaded.
-If you'd like to increase this limit, specify this limit by using a `--max-images` commandline argument,
-for example: `mxpc-cli registry-migration --max-images=50`.
+To avoid downloading too many images, there is a default limit on the number of images that will be downloaded. If you would like to increase this limit, use a `--max-images` commandline argument, for example, `mxpc-cli registry-migration --max-images=50`.
 
 This option is available in `mxpc-cli` 2.10.2 and newer versions.
 {{% /alert %}}

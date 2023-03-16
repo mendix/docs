@@ -48,7 +48,7 @@ Follow these steps to export the Mendix components and store them on your local 
 
 {{% alert color="info" %}}
 To avoid downloading too many images, there is a default limit on the number of images that will be downloaded. You can check the current limit by running the following command: `./mxpc-cli registry-migration --help`
-Starting in version 2.10.2 of `mxpc-cli`, you can change this limit by using a `--max-images` commandline argument, for example, `mxpc-cli registry-migration --max-images=50`.
+Since version 2.10.2 of `mxpc-cli`, you can change this limit by using a `--max-images` commandline argument, for example, `mxpc-cli registry-migration --max-images=50`.
 {{% /alert %}}
 
 ## 5 Import Mendix Components Into Your Own Registry

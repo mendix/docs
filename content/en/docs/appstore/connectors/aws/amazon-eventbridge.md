@@ -40,7 +40,7 @@ In order to use the Amazon EventBridge service, you must authenticate with AWS. 
 The Amazon EventBridge connector supports both session and static credentials. By default, the connector is pre-configured to use static credentials, but you may want to switch to session credentials, for example, to increase the security of your app. For an overview of both authentication methods, see [AWS Authentication](/appstore/connectors/aws/aws-authentication/).
 3. In the App Explorer, double-click the Settings for your app.
 
-    {{< figure src="/attachments/appstore/connectors/aws-eventbridge/eventbridge_open_settings.png” alt="The Settings option in the App Explorer">}}
+    {{< figure src="/attachments/appstore/connectors/aws-eventbridge/eventbridge_open_settings.png" alt="The Settings option in the App Explorer">}}
 
 4. In the App Settings dialog, in the Configurations tab, edit or create an authentication profile.
 

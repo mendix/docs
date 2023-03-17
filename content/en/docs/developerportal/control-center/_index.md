@@ -232,11 +232,11 @@ The **Free Environments** tab presents details on your company's free environmen
 
 ## 11 Entitlements
 
-The **Entitlements** page is a self-service tool that displays the platform tenants (that is, accounts) registered for your organization. You can use the page to monitor your resource entitlements, and your consumption of cloud credits.
+The **Entitlements** page is a self-service tool that displays the platform tenants (that is, accounts) registered for your organization. You can use the page to monitor your resource entitlements and your consumption of cloud credits.
 
 {{< figure src="/attachments/developerportal/control-center/entitlements.png" alt="entitlements page" >}}
 
-The **Entitlements** page shows a list of registered platform tenants along with the amount of cloud credits that are currently available for a particular tenant. For each tenant, you can click on the amount of credits in order to view more details about the resource consumption for that tenant.
+For each tenant in the list, you can see the amount of available cloud credits. You can click the amount of credits in order to view more details about the resource consumption for that tenant.
 
 {{< figure src="/attachments/developerportal/control-center/entitlements-per-tenant.png" alt="entitlements per tenant" >}}
 
@@ -250,23 +250,23 @@ The **Apps Overview** page shows a list of all the apps within your company. You
 
 {{< figure src="/attachments/developerportal/control-center/apps-overview.png" alt="cloud provisioning - apps overview" >}}
 
-You can click on the name of an app to see a list of environments available for the app.
+You can click the name of an app to see a list of environments available for the app.
 
 {{< figure src="/attachments/developerportal/control-center/cloud-provisioning.png" alt="cloud provisioning page for an app" >}}
 
 ### 12.1 Adding a New Environment
 
-To add a new environment for your app, click the **Add Environment** button, and then specify the following information:
+To add a new environment for your app, click the name of an app, and then click the **Add Environment** button. You must specify the following information:
 
-* **Environment Name** - A name for your new environment. The name must be unique (that is, your app cannot have more than one environment with the same name).
-* **Resource Pack** - The resources required for the new environment. The page displays the resources included in each resource pack, and their cost in cloud credits.
-* **Production Environment** - Indicates whether the environment will be used for production.
+* **Environment Name** – Enter a name for your new environment. The name must be unique (that is, your app cannot have more than one environment with the same name).
+* **Resource Pack** – Select the resources required for the new environment. The page displays the resources included in each resource pack, and their cost in cloud credits.
+* **Production Environment** – Indicate whether the environment will be used for production.
 
 {{< figure src="/attachments/developerportal/control-center/new-environment.png" alt="adding a new environment" >}}
 
 ### 12.2 Offboarding an Environment
 
-To offboard an environment, click the **Offboard** button, available for stopped environments.After that, confirm that you have made any necessary backups, and type *Offboard* to confirm.
+To offboard an environment, click **Offboard**, which is available for stopped environments. After that, confirm that you have made any necessary backups, and type *Offboard* to confirm.
 
 {{< figure src="/attachments/developerportal/control-center/offboarding.png" alt="confirming the offboarding" >}}
 
@@ -276,12 +276,12 @@ Offboarding an environment deletes it permanently. You are responsible for makin
 
 ### 12.3 Changing the Technical Contact of an App
 
-To quickly change the technical contact for your app, click the **Edit** icon by the name of the contact.
+To quickly change the [Technical Contact](/developerportal/collaborate/app-roles/#technical-contact) for your app, click **Edit** by the name of the contact.
 
 {{< figure src="/attachments/developerportal/control-center/edit-technical-contact.png" alt="changing the technical contact" >}}
 
 {{% alert color="info" %}}
-You may only have one technical contact per app. When you change the technical contact, both the new and the old contact receive a notification email about the change.
+You may only have one Technical Contact per app. When you change the Technical Contact, both the new and the old contact receive a notification email about the change.
 {{% /alert %}}
 
 ## 13 Billing Accounts {#billing-accounts}

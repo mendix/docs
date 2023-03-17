@@ -163,7 +163,9 @@ Single sign-on was introduced in Mendix version 7.18. Your app will need to be t
 
 ### 8.3 Automation
 
-Automation, such as CI/CD pipelines, and other functions which require access to the [Team Server](/developerportal/collaborate/team-server/) (where versioned copies of your app are held online) cannot be performed if BYOIDP is enabled.
+Direct access to online code repositories on [Team Server](/developerportal/collaborate/team-server/)/SVN from a custom CI/CD pipeline or via tools like Tortoise SVN requires the platform user to enter their Mendix platform password. This means that when BYOIDP is enabled, such access is no longer possible because platform users no longer have a Mendix platform password.
+
+Access to Team Server/SVN through other mechanisms (such as using a [Personal Access Token](/developerportal/community-tools/warden/), via Studio Pro, or using Mendix for Private Cloud) is not impacted.
 
 ### 8.4 Multiple Email Domains for a Company
 

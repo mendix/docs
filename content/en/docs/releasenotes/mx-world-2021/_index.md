@@ -67,7 +67,7 @@ If you want to watch the keynote speech in which these announcements were made, 
 | --- | --- |
 | MxAssist Logic Bot improvements | Released for GA on [Oct 26th, 2021](/releasenotes/studio-pro/9.7/#mx-assist-logic-bot) |
 | MxAssist Performance Bot new best practices | Released for GA on  [Oct 26th, 2021](/releasenotes/studio-pro/9.7/); [Nov 30th, 2021](/releasenotes/studio-pro/9.8/); [Dec 17th, 2021](/releasenotes/studio-pro/9.9/) |
-| Validation Assist | Currently in Public Beta<br/>GA: Jan 2023 |
+| Validation Assist | Released for GA on Dec 20th, 2022 |
 | Machine learning toolkit | Currently in Public Beta<br/>GA: TBD |
 
 ## 7 Studio Pro Experience

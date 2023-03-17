@@ -218,7 +218,7 @@ This entity holds information about the authorization for the connection that is
 | `CreationTime` |  Time stamp indicating the time that the connection was created |
 | `LastModifiedTime` |  Time stamp indicating the time that the connection was last modified |
 
-#### 4.2.4 CreateApiDestination
+#### 4.2.4 CreateApiDestination {#CreateApiDestination}
 
 ##### 4.2.4.1 CreateApiDestinationRequest
 

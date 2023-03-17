@@ -37,8 +37,6 @@ You can use this module when you want your application's end-users to sign in wi
 
 ### 1.3 Limitations
 
-{{% todo %}}Are we still working on improving the volume throughput issues?{{% /todo %}}
-
 * Mendix SSO is not recommended for Production deployments as the Mendix SSO sign in screens are Mendix branded.
 * Due to the large number of app creations, synchronizing newly created apps might take some time. When an app is not yet synchronized, the deployment will not work when you attempt to deploy your app to the Mendix Developer Portal, as it will not recognize your app. In these cases, please be patient and try again later or contact [Mendix Support](https://support.mendix.com/) if the problem persists. Mendix is working on resolving the volume throughput issues.
 * This module does not work for [native mobile](/refguide/native-mobile/) apps.

@@ -175,35 +175,31 @@ For the XSUAA authentication to work between the *bapi-service* component and yo
 
 The following sections show how you can configure the required settings in the *xs-security.json* file of the XSUAA service.
 
-Consider the applications name deployed on SAP BTP as
-
-| Application | Application name | Application Type |
-| --- | --- | ---|
-| bapi-service | bapi-service | API Provider |
-| BAPI-Consumer | BAPI-Consumer-dev | Client application (Mendix application) |
-
 ##### 4.2.1.1 Application-to-Application Authentication
 
-To configure application-to-application authentication, include the following line in xs-security.json of xsuaa service instance bind with bapi-service
+To configure application-to-application authentication, include the following line in the *xs-security.json* file of the XSUAA service instance bound with *bapi-service*:
 
 ```text
-grant-as-authority-to-apps" : [ "$XSAPPNAME(application,{your-Mendix-app-name})"]
+grant-as-authority-to-apps" : [ "$XSAPPNAME(application,{your-Mendix-app-deployed-on-SAP-BTP})"]
 ``` 
-Include following for xs-security.json of xsuaa service instance bind with BAPI-Consumer-dev application
+Also, include the following line in the *xs-security.json* file of the XSUAA service instance bound with your Mendix app deployed on SAP BTP:
 
 ```text
-"authorities":["$XSAPPNAME(application,bapi-service).bapiAuth"]
+"authorities":["$XSAPPNAME(application,{bapi-service-component-deployed-on-SAP-BTP}).bapiAuth"]
 ``` 
+
+{{% alert color="info" %}}
+In this example, *bapiAuth* is the scope for the provider app defined on in the *xs-security.json* file for *bapi-service*. You can replace it with the name of your choice.
+{{% /alert %}}
 
 ##### 4.2.1.2 User Authentication 
 
-Include following in xs-security.json of xsuaa service instance bind with bapi-service
+To configure application-to-application authentication, include the following line in the *xs-security.json* file of the XSUAA service instance bound with *bapi-service*:
 
 ```text
 granted-apps" : [ "$XSAPPNAME(application,BAPI-Consumer-dev)"]
 ``` 
-
-sample xs-security.json for bapi-service (API provider app)
+The following sample shows a configuration of the *xs-security.json* file for *bapi-service*:
 
 ```text
 {
@@ -222,13 +218,12 @@ sample xs-security.json for bapi-service (API provider app)
 }
 ```  
 
-Include following for xs-security.json of xsuaa service instance bind with BAPI-Consumer-dev application
+Also, include the following line in the *xs-security.json* file of the XSUAA service instance bound with your Mendix app deployed on SAP BTP:
 
 ```text
 "foreign-scope-references": ["$XSAPPNAME(application,bapi-service).bapiAuth"]
 ```   
-
-sample xs-security.json for BAPI-Consumer-dev application (Client APP)
+The following sample shows a configuration of the *xs-security.json* file for your Mendix app deployed on SAP BTP:
 
 ```text
 {
@@ -248,8 +243,9 @@ sample xs-security.json for BAPI-Consumer-dev application (Client APP)
     }
 }
 ```  
-
-Here “bapiAuth” is the scope for provider app defined on “bapi-service” xs-security.json. Developer can use any name of their choice.
+{{% alert color="info" %}}
+In this example, *bapiAuth* is the scope for the provider app defined on in the *xs-security.json* file for *bapi-service*. You can replace it with the name of your choice.
+{{% /alert %}}
 
 ## 5 Domain Models
 

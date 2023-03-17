@@ -1,36 +1,44 @@
+---
+title: "Icon Collection"
+url: /refguide/icon-collection/
+weight: 5
+description: "This guide shows you why and how to create an icon collection."
+tags: ["Studio Pro", "Icons", "Icon Collection"]
+---
+
 ## 1 Introduction
 
-You can create an icon collection to manage the icons you can use in your app, for example for branding or to use third-party icons. Icon collections are created from a font.
+You can create an icon collection to manage the icons you can use in your app. This is useful if you have a collection of your own brand's icons, as well as if your app uses third-party icons. Icon collections are created from a font.
 
-Remember that, if you want to use the same set of icons in several apps, you can export and import complete icon collections, with their icons. For more information, see [Importing and Exporting Apps, Modules, Widgets, and Documents](/refguide/import-and-export/).
+If you want to use the same set of icons across several apps, you can export and import complete icon collections. For more information, see [Importing and Exporting Apps, Modules, Widgets, and Documents](/refguide/import-and-export/).
 
 ## 2 Adding an Icon Collection
 
-To add an icon collection, do the following.
+To add an icon collection, do the following:
 
 1. Right-click a module in the **App Explorer**.
-2. Select **Add other > Icon collection**.
-3. Give your icon collection a name.
+1. Select **Add other** > **Icon collection**.
+1. Name your icon collection.
 
 ## 3 Icon Collection Actions
 
-You can perform the following actions within icon collections using the buttons at the top of the icon collection tab.
+You can perform the following actions within icon collections using the buttons at the top of the icon collection tab:
 
 {{< figure src="/attachments/refguide/modeling/pages/page-resources/icon-collection/actions.png" alt="Icon collection actions" >}}
 
-Some of the actions can be applied to multiple icons. You can select all icons with <kbd>Ctrl</kbd>+<kbd>A</kbd>, or multiple icons by combining your click with <kbd>Ctrl</kbd> or <kbd>Shift</kbd>
+Some of the actions can be applied to multiple icons. You can select all icons using <kbd>Ctrl</kbd>+<kbd>A</kbd>, or select multiple icons by combining your click with <kbd>Ctrl</kbd> or <kbd>Shift</kbd>
 
-### 3.1 Import font file
+### 3.1 Import Font File
 
-The **Import font file...** button allows you to select a font file to base your icon collection on. The imported icons will be given a name based on their character codes in the font file.
+The **Import font file** button allows you to select a font file to base your icon collection on. The imported icons will be given a name based on their character codes in the font file.
 
 Only the *ttf* format is supported.
 
 If the icon collection already contains icons, you will be warned that importing a font file will override the existing icons. Icons that are present in the newly selected file will be kept, including their name and tags. This allows you to upgrade your icon collection to use a newer version of the font. However, any icon that isn't present in the newly selected font file will instead be removed.
 
-### 3.2 Import icon data
+### 3.2 Import Icon Data
 
-The **Import icon data...** button lets you batch import names and/or tags for your icons. You can either provide the data as a text file, a csv file, or even paste it directly from your clipboard. The only requirement is that the data is in the following format and order:
+The **Import icon data** button lets you batch import names and/or tags for your icons. You can either provide the data as a text file, a *.csv* file, or even paste it directly from your clipboard. The only requirement is that the data is in the following format and order:
 
 ```
 [Char_code];[Name];[Search_Tags (optional)]
@@ -39,15 +47,16 @@ The **Import icon data...** button lets you batch import names and/or tags for y
 ```
 
 For example, it could look like the following:
+
 ```
 F01C9;ab-testing;UX, Research
 F16E0;abacus;Calculation
 F1328;abjad-arabic;Alphabet, Language
 ```
 
-Easy ways of getting your font data into this format is by either using a text manipulation software like VSCode or creating an Excel sheet and saving it as a csv file.
+Easy ways of getting your font data into this format is by either using a text manipulation software like VSCode or creating an Excel sheet and saving it as a *.csv* file.
 
-*Note: After loading the data from a file or clipboard, you will see a preview of the data before it's applied. Make sure to check the list, as it will also mention any potentials problems that cause a specific line to be ignored.*
+After loading the data from a file or clipboard, you will see a preview of the data before it is applied. Make sure to check the list, as it will also mention any potentials problems that cause a specific line to be ignored.
 
 {{< figure src="/attachments/refguide/modeling/pages/page-resources/icon-collection/excel.png" alt="Editing Icon Data in an Excel sheet" >}}
 
@@ -91,15 +100,16 @@ You can search for these icons when selecting an icon to use in your app.
 
 When you deploy your app or run it locally, a CSS stylesheet will be automatically generated and included with your app. You can use the generated CSS classes for your icons directly in your stylings, for example in a CSS stylesheet or as part of the design properties of a widget. This isn't intended to be the main way to use your icon collection, but is available as an option for advanced usage.
 
-To use an icon, you'll need to use both the collection class and the specific class of an icon, as shown in the "generated CSS classes" column in the editor.
+To use an icon, you'll need to use both the collection class and the specific class of an icon, as shown in the editor's **Generated CSS classes** column.
 
-When using an icon in this way, be aware that the find usages option won't be able to find all usages of an icon. Deleting an icon that is being used like this, also won't result in a consistency error.
+When using an icon in this way, be aware that the find usages option won't be able to find all usages of an icon. Deleting an icon that is being used like this, also will not result in a consistency error.
 
 In some cases the generated CSS classes of an icon changes and you'll have to manually update your styling:
-* Renaming an icon changes the CSS class of that icon.
-* Changing the configured collection class or prefix of the icon collection, including removing either option. This affects all icons in the collection.
-* If the collection class or prefix isn't explicitly configured, renaming the icon collection or moving it to a different module. This affects all icons in the collection.
+
+* Renaming an icon changes the CSS class of that icon
+* Changing the configured collection class or prefix of the icon collection, including removing either option (this affects all icons in the collection)
+* If the collection class or prefix isn't explicitly configured, renaming the icon collection or moving it to a different module (this affects all icons in the collection)
 
 To prevent issues from occuring, we recommend configuring the icon collection and naming all icons before you start using them directly in your styling. Afterwards, do not make any further changes.
 
-Icon tags don't affect the generated CSS styling. This means that you are always able to edit, remove or update icon tags, even after you've started using your icons directly in your styling.
+Icon tags do not affect the generated CSS styling. This means that you are always able to edit, remove or update icon tags, even after you have started using your icons directly in your styling.

@@ -521,3 +521,30 @@ The `UpdateApiDestination` Amazon EventBridge action allows you to update a spec
 | Input | Output | 
 | --- | --- | 
 | `UpdateApiDestinationRequest` | `UpdateApiDestinationResponse` |
+
+#### 4.4.8 RegisterMyMendixApp {#register-my-mendix-app}
+
+This custom microflow registers your Mendix application into the Amazon EventBridge service in the specified region. To use this microflow, add this microflow to an after start-up microflow and configure this in your runtime settings. Upon restarting your Mendix application, this microflow will expose your Mendix application as an custom endpoint in Amazon EventBridge.
+
+This microflow requires the `APIKey` constant to be set, otherwise an error will be thrown.
+
+This microflow uses actions to create the necessary Connection (`CreateConnection`) and ApiDestination (`CreateApiDestination`) resources. Additionally, the microflow validates whether the API endpoint (`DescribeApiDestination`) remains the same, and when it is invalidated, the value is updated accordingly (`UpdateApiDestination`). The Connection resource is always updated (`UpdateConnection`) as long as it exists. Because of this, the microflow supports changing the location of the Mendix application and rotating API keys. 
+
+The input and output for this service are shown in the table below: 
+
+| Input | Output | 
+| --- | --- | 
+| `Credentials` | `Boolean` |
+| `Description` | |
+| `Name` | |
+
+#### 4.4.9 CreateConfiguration {#create-configuration}
+
+The `CreateConfiguration` java action allows you to create a EventRoutingConfiguration object for each event that you would want to be able to call. It takes an EventType and a CallbackMicroflow as parameters. The CallbackMicroflow is required to have an HttpRequest object as an input parameter. If the parameter is not provided, an IllegalArgumentException will be thrown.
+
+If an `EventRoutingConfiguration` object with the same EventType already exists, the object will be updated with a new CallbackMicroflow value. The input and output for this service are shown in the table below:
+
+| Input | Output | 
+| --- | --- | 
+| `EventType` | |
+| `CallbackMicroflow` | |

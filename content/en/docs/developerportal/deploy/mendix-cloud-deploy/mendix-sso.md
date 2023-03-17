@@ -15,19 +15,21 @@ tags: ["SSO", "Single Sign-on", "Mendix credentials", "Mendix SSO"]
 The [Mendix SSO module](/appstore/modules/mendix-sso/) enables your app end-users to sign in with their Mendix account when your app is deployed to the Mendix Cloud.
 
 {{% alert color="warning" %}}
+Because your app end-users are signing in with a Mendix account, they will all need to [signup for a Mendix account](https://signup.mendix.com/) before they can sign in to your app.
+
 Mendix Single Sign-On is only activated when your app is deployed to the Mendix Cloud. When you run your app locally, or on another cloud, you will need to use local credentials.
+
+Mendix SSO is not recommended for Production deployments as the Mendix SSO sign in screens are Mendix branded.
 {{% /alert %}}
 
-Using Mendix accounts has the following benefits:
+Using Mendix accounts while developing has the following benefits:
 
 * You do not need a special authorization module to support resetting and changing passwords
-* It is easy to create multiple applications which all use the same sign-on mechanism
+* It is easy to develop and test multiple applications which all use the same sign-on mechanism
 
 In addition, the Mendix SSO module has a default implementation for user administration. This can be used in any Mendix app, but if you want to implement customized user administration this is also possible. See [Customizing Mendix SSO](#customizing), below, for more information.
 
-We are in the process of adding the Mendix SSO module to the Mendix app templates. Where it has been added, all you have to do is to set your security level to **Production** and your end-users will be able to sign in.
-
-You can see if your app has the Mendix SSO module, and which version it has, by looking in the **Marketplace modules** section in the **App Explorer** for your app. The version number is recorded in the **Version** constant within the module.
+Where the Mendix SSO module has been added to a Mendix app templates, all you have to do is to set your security level to **Production** and your end-users will be able to sign in. You can see if your app has the Mendix SSO module, and which version it has, by looking in the **Marketplace modules** section in the **App Explorer** for your app. The version number is recorded in the **Version** constant within the module.
 
 {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/mendix-sso/mxsso-app-store-module.png" >}}
 

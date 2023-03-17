@@ -11,7 +11,11 @@ tags: ["marketplace", "marketplace component", "sso", "single sign on", "platfor
 
 With the [Mendix SSO](https://marketplace.mendix.com/link/component/111349/) module, you can utilize single sign-on functionality by directly integrating with the Mendix identity provider and leveraging the [OpenID Connect](https://openid.net/connect/) framework.
 
-This module allows end-users to log in with their Mendix account with the click of a button, instead of requiring their local user credentials. This avoids having to deal with local user management or password reset flows, and improves governance capabilities over your app landscape.
+This module allows end-users to log in with their Mendix account with the click of a button, instead of requiring their local user credentials. This avoids having to deal with local user management or password reset flows for the test and acceptance phases of your app development.
+
+{{% alert color="warning" %}}
+Because your app end-users are signing in with a Mendix account, they will all need to [signup for a Mendix account](https://signup.mendix.com/) before they can sign in to your app.
+{{% /alert %}}
 
 {{% alert color="info" %}}
 For Mendix versions 9.20 and above, you will need to use version 4.0.1 or above of the Mendix SSO module.
@@ -33,18 +37,18 @@ You can use this module when you want your application's end-users to sign in wi
 
 ### 1.3 Limitations
 
+{{% todo %}}Are we still working on improving the volume throughput issues?{{% /todo %}}
+
+* Mendix SSO is not recommended for Production deployments as the Mendix SSO sign in screens are Mendix branded.
 * Due to the large number of app creations, synchronizing newly created apps might take some time. When an app is not yet synchronized, the deployment will not work when you attempt to deploy your app to the Mendix Developer Portal, as it will not recognize your app. In these cases, please be patient and try again later or contact [Mendix Support](https://support.mendix.com/) if the problem persists. Mendix is working on resolving the volume throughput issues.
 * This module does not work for [native mobile](/refguide/native-mobile/) apps.
-* The default app `Logout` action resolves to the origin location found in a session cookie, which (re)triggers the `/openid/login/` endpoint, which logs the end-user in again. 
+* The default app `Logout` action resolves to the origin location found in a session cookie, which (re)triggers the `/openid/login/` endpoint, which logs the end-user in again.
 
 ### 1.4 Dependencies
 
-Your app has to be deployed on the Mendix Cloud in order to use this module.
+Your app has to be deployed on the Mendix Cloud in order to use this module. 
+Mendix Single Sign-On is only activated when your app is deployed to the Mendix Cloud. When you run your app locally, or on another cloud, you will need to use local credentials.
 
 ## 2 Installation and Configuration
 
 For instructions, see [Mendix Single Sign-On](/developerportal/deploy/mendix-sso/) in the *Developer Portal Guide*.
-
-## 3 Read More
-
-* [Mendix Single Sign-On](/developerportal/deploy/mendix-sso/)

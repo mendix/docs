@@ -1,11 +1,3 @@
----
-title: "Icon Collection"
-url: /refguide/icon-collection/
-weight: 5
-description: "Why and how to create an icon collection"
-tags: ["Studio Pro", "Icons", "Icon Collection"]
----
-
 ## 1 Introduction
 
 You can create an icon collection to manage the icons you can use in your app, for example for branding or to use third-party icons. Icon collections are created from a font.
@@ -36,25 +28,50 @@ Only the *ttf* format is supported.
 
 If the icon collection already contains icons, you will be warned that importing a font file will override the existing icons. Icons that are present in the newly selected file will be kept, including their name and tags. This allows you to upgrade your icon collection to use a newer version of the font. However, any icon that isn't present in the newly selected font file will instead be removed.
 
-### 3.2 Configure
+### 3.2 Import icon data
+
+The **Import icon data...** button lets you batch import names and/or tags for your icons. You can either provide the data as a text file, a csv file, or even paste it directly from your clipboard. The only requirement is that the data is in the following format and order:
+
+```
+[Char_code];[Name];[Search_Tags (optional)]
+[Char_code];[Name];[Search_Tags (optional)]
+...
+```
+
+For example, it could look like the following:
+```
+F01C9;ab-testing;UX, Research
+F16E0;abacus;Calculation
+F1328;abjad-arabic;Alphabet, Language
+```
+
+Easy ways of getting your font data into this format is by either using a text manipulation software like VSCode or creating an Excel sheet and saving it as a csv file.
+
+*Note: After loading the data from a file or clipboard, you will see a preview of the data before it's applied. Make sure to check the list, as it will also mention any potentials problems that cause a specific line to be ignored.*
+
+{{< figure src="/attachments/refguide/modeling/pages/page-resources/icon-collection/excel.png" alt="Editing Icon Data in an Excel sheet" >}}
+
+{{< figure src="/attachments/refguide/modeling/pages/page-resources/icon-collection/import-icon-data.png" alt="The imported Icon Data" >}}
+
+### 3.3 Configure
 
 A CSS stylesheet is automatically generated for your icon collection. The **Configure** button allows you to change settings that affect the generated CSS classes. This isn't required, but is recommended. There are two values that can be configured:
 
-#### 3.2.1 Collection Class
+#### 3.3.1 Collection Class
 
 This is a CSS class that represents the entire icon collection. This must either be a valid CSS class name or be left blank. To ensure the collection class is a valid CSS class, it must start with a letter or underscore and can only contain letters, numbers, hyphens and underscores. When left blank, one will be generated based on the name the icon collection.
 
-#### 3.2.2 Prefix
+#### 3.3.2 Prefix
 
 The prefix will be used together with the icon name to generate a unique CSS class for each icon in the icon collection. To ensure the prefix results in a valid CSS class, it must start with a letter or underscore and can only contain letters, numbers, hyphens and underscores. When left blank, one will generated based on the name of the icon collection.
 
-### 3.3 Delete
+### 3.4 Delete
 
 The **Delete** button removes the selected icon(s) from the icon collection. You will be warned if the icon or icons are used elsewhere in the app.
 
 Deleting the icon won't remove it from the font file.
 
-### 3.4 Find Usages
+### 3.5 Find Usages
 
 The **Find usages** button displays, in the **Find Results** dock, all the places where this icon is used in your app.
 

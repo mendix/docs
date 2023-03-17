@@ -57,7 +57,7 @@ Only users with the **App Settings** permission can change the description of th
 
 On the **Access Management** tab, you can manage and invite app users. App users are end-users who can access the deployed app on specific environments. They can use and test your deployed app, and provide feedback.
 
-To manage users or invite users for an app deployed on a specific environment, click **Mange Users** or **Invite Users** for that environment. For more information, see the [Mange Users](#manage-users) and [Invite Users](#invite-users) section below.
+To manage users or invite users for an app deployed on a specific environment, click **Mange Users** or **Invite Users** for that environment. For more information, see the [Manage Users](#manage-users) and [Invite Users](#invite-users) section below.
 
 {{% alert color="info" %}}
 You can also manage app users from Studio, by clicking **Manage Users** on the **Settings > Roles and Permissions** page within Studio.

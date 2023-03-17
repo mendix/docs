@@ -49,9 +49,9 @@ In order to use the Amazon EventBridge service, you must authenticate with AWS. 
     If you have multiple sets of AWS credentials, or if you want to use both static and session credentials for different use cases, create separate authentication profiles for each set of credentials.
 
 5. In the **Edit Configuration** dialog, in the **Constants** tab, click **New** to add the constants required for the configuration.
-6. In the **Select Constants** dialog, find and expand the **AmazonDynamoDBConnector** > **ConnectionDetails** section.
+6. In the **Select Constants** dialog, find and expand the **AmazonEventBridgeConnector** > **ConnectionDetails** section.
 
-    {{< figure src="/attachments/appstore/connectors/aws-dynamodb/eventbridge_edit_configuration.png" alt="The SessionCredentials and StaticCredentials items in the ConnectionDetails section">}}
+    {{< figure src="/attachments/appstore/connectors/aws-eventbridge/eventbridge_edit_configuration.png" alt="The SessionCredentials and StaticCredentials items in the ConnectionDetails section">}}
 
 7. Depending on your selected authentication type, configure the required parameters for the **StaticCredentials** or **SessionCredentials**.
    

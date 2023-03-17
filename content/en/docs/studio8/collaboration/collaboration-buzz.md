@@ -47,7 +47,7 @@ You will be automatically taken to the Developer Portal. For more information on
 
 You can create a feedback item via the **Buzz** tab. Feedback items allow you to submit ideas, questions, or issues on the app, and let your team work on them in the Developer Portal. 
 
-In a thread in Studio Buzz, you and your team may conclude that the subject discussed needs more thorough refinement or needs to be postponed to be picked up in future sprints. In that case, a feedback item is a useful way to bring the item under attention of the product owner in the team. From there it can evolve into a story and be planned for a sprint. For more information on feedback items, see [Feedback Management](/developerportal/collaborate/feedback/), especially the [Adding a Feedback Item to Your Backlog](/developerportal/collaborate/feedback/#adding) section.  
+In a thread in Studio Buzz, you and your team may conclude that the subject discussed needs more thorough refinement or needs to be postponed to be picked up in future Sprints. In that case, a feedback item is a useful way to bring the item under attention of the product owner in the team. From there it can evolve into a story and be planned for a Sprint. For more information on feedback items, see [Feedback Management](/developerportal/collaborate/feedback/), especially the [Adding a Feedback Item to Your Backlog](/developerportal/collaborate/feedback/#adding) section.  
 
 To create a feedback item, do the following:
 

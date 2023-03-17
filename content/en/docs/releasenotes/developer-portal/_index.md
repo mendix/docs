@@ -197,7 +197,7 @@ In Portfolio Management, you can do the following
 
 #### Improvements
 
-* We improved some empty states in the story details dialog box, epics details dialog box, archived sprint details dialog box, and archived story details dialog box in Epics.
+* We improved some empty states in the story details dialog box, epics details dialog box, archived Sprint details dialog box, and archived story details dialog box in Epics.
 
 ### September 15th, 2022
 
@@ -269,13 +269,13 @@ In Portfolio Management, you can do the following
 
     * Map your exact development process with fully customizable swimlanes
     * Use Scrum or Kanban – we support both!
-    * Set sprint goals and see all the basic sprint information on the board – if you are using Scrum
+    * Set Sprint goals and see all the basic Sprint information on the board – if you are using Scrum
     * Drag and drop stories on our brand new project board
     * Format stories in any way you want – for example, adding headers, links, and code blocks, linking specific stories, and using @ to mention people (notifications for this coming soon!)
     * Clone stories
     * Create and track the progress of epics
     * Archive single stories or whole swimlanes
-    * Easily search through your completed stories and get an overview of completed sprints in the archive
+    * Easily search through your completed stories and get an overview of completed Sprints in the archive
 
     You can try it out for any Mendix app. Your Scrum Master just needs to enable Epics in the [General Settings](/developerportal/collaborate/general-settings/#project-management). Please note it is not yet possible to migrate the data from Stories into Epics, so we recommend using it for new projects or iterations first – in this way you do not have to worry about the stories in your current backlog.
 
@@ -963,7 +963,7 @@ In Portfolio Management, you can do the following
 
 #### Webhooks Available
 
-* We have added the ability to create webhooks for your apps. These webhooks can be configured to send information when sprints change and/or stories change.
+* We have added the ability to create webhooks for your apps. These webhooks can be configured to send information when Sprints change and/or stories change.
 
 ### April 5th, 2019
 

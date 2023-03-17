@@ -171,11 +171,9 @@ To help you implement the XSUAA service for your app, Mendix provides the platfo
 
 #### 4.2.1 Trust Configuration
 
-For the XSUAA authentication to work between the *bapi-service* component and your Mendix app, configuration need to be applied to XSUAA service instance for both of the applications. 
+For the XSUAA authentication to work between the *bapi-service* component and your Mendix app, you must configure the XSUAA service instance for both applications. The *bapi-service* component and your Mendix app must both be deployed in the same sub-account in SAP BTP.
 
-This solution will only  work when Provider app and client app will be deployed in same sub account on SAP BTP.
-
-configuration to xsuaa service is applied using xs-security.json as example shown below:
+The following sections show how you can configure the required settings in the *xs-security.json* file of the XSUAA service.
 
 Consider the applications name deployed on SAP BTP as
 
@@ -184,12 +182,12 @@ Consider the applications name deployed on SAP BTP as
 | bapi-service | bapi-service | API Provider |
 | BAPI-Consumer | BAPI-Consumer-dev | Client application (Mendix application) |
 
-##### 4.2.1.1 Application to Application Authentication
+##### 4.2.1.1 Application-to-Application Authentication
 
-Include following in xs-security.json of xsuaa service instance bind with bapi-service
+To configure application-to-application authentication, include the following line in xs-security.json of xsuaa service instance bind with bapi-service
 
 ```text
-grant-as-authority-to-apps" : [ "$XSAPPNAME(application,BAPI-consumer-dev)"]
+grant-as-authority-to-apps" : [ "$XSAPPNAME(application,{your-Mendix-app-name})"]
 ``` 
 Include following for xs-security.json of xsuaa service instance bind with BAPI-Consumer-dev application
 

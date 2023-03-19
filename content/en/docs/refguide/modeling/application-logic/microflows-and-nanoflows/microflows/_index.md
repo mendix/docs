@@ -123,3 +123,11 @@ If you want to see what happens while a microflow is executing, you can use the 
 
 * [Debugging Microflows and Nanoflows](/refguide/debug-microflows-and-nanoflows/)
 * [Debugging Microflows Remotely](/refguide/debug-microflows-remotely/)
+
+## 5 Converting Microflow To Nanoflow
+
+To convert a microflow to a nanoflow, right-click anywhere in the editor and select **Convert to nanoflow**.
+
+{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/microflows/microflow/convert-to-nanoflow.png" alt="Convert to nanoflow" width="550" >}}
+
+A new nanoflow will be created and added to the same directory, and you can get consistency errors if there are actions that are not supported by microflow.

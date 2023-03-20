@@ -12,7 +12,7 @@ tags: ["studio pro"]
 
 An **input reference set selector** is used to allow the end-user to display or select the value(s) of a many-to-many (reference set) [association](/refguide/associations/) by selecting the associated object(s).
 
-An input reference set selector must be placed in a [data widget](/refguide/data-widgets/).
+An input reference set selector must be placed in a [data container](/refguide/data-widgets/).
 
 For example, you could group customers into groups, and each customer could belong to several groups. Each Group can have many customers. The entities **Customer** and **Group** have a many-to-many (reference set) relationship. An input reference set selector can be used to select the groups the customer belongs to.
 

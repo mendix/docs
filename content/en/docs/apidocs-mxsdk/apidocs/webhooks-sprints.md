@@ -7,11 +7,19 @@ weight: 75
 
 ## 1 Introduction
 
+{{% alert color="warning" %}}
+The webhook payloads described in this document are for app Sprints and stories. These webhooks were enabled via **General Settings** > **Webhooks** or via your app. These webhooks have been deprecated. For more information, see the deprecation note in [Webhooks](/developerportal/collaborate/general-settings/#webhooks).
+{{% /alert %}}
+
+{{% alert color="info" %}}
+You can now set deployment webhooks for your app. These are described in [Mendix Deployment Webhooks](/developerportal/deploy/webhooks/).
+{{% /alert %}}
+
 Webhooks allow you to build or set up Mendix Platform connectors that subscribe to certain events on the Developer Portal. When one of those events is triggered, Mendix sends an HTTP POST payload to the webhook's configured URL. Webhooks can be used to update an external application to keep it up-to-date with the changes happening in the Developer Portal.
 
 Every POST payload contains the following delivery information as part of the header:
 
-* `MxAPI-Projects-EventCategory` – the types of event subscribed to (for example, sprints)
+* `MxAPI-Projects-EventCategory` – the types of event subscribed to (for example, Sprints)
 * `MxAPI-Projects-Delivery` – a random UUID
 * `MxAPI-Signature` –  the HMAC hex digest (asymmetric hash using the *HMAC_SHA256* hash algorithm) of the response body, which is calculated using the hash (the hashes secret provided in the webhooks setting using the *SHA-256* hash algorithm with the length as 50)
     * For example, `(gNh407kBD1wkpHfwIrjWcTMjw4rKxIKX0s5b48FYOys=)`
@@ -21,15 +29,15 @@ Every POST payload contains the following delivery information as part of the he
 
 ## 2 Sprints
 
-Webhook events are generated when a [sprint](/developerportal/collaborate/stories/#sprint-actions) is created or updated.
+Webhook events are generated when a [Sprint](/developerportal/collaborate/stories/#sprint-actions) is created or updated.
 
-The required event category subscription is **sprints**.
+The required event category subscription is **Sprints**.
 
 ## 3 Stories
 
 Webhooks event are generated when a [story](/developerportal/collaborate/stories/) is created or updated.
 
-The required event category subscription is **stories**.
+The required event category subscription is **Stories**.
 
 ## 4 Payload
 

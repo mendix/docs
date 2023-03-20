@@ -56,7 +56,7 @@ You can configure the module for certain actions in your app. All the configurat
 
 * **Project** tab     
     * **Submit successful image url** – changes the image to show on the last successfully submitted page
-    * **Allow screenshots** – controls whether the end user can take a screenshot or not
+    * **Allow screenshots** – controls whether the end-user can take a screenshot or not
 * **Advanced** tab
     * **App ID** – the unique identifier of your app, which you can find in your app’s [General Settings](/developerportal/collaborate/general-settings/) in the Developer Portal
 

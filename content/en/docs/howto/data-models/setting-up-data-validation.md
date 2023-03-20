@@ -9,7 +9,7 @@ tags: ["studio pro"]
 
 ## 1 Introduction
 
-This how-to explains how you can set up data validation with Mendix. Before you can start with this how-to you need to setup a basic data structure, otherwise there won't be any data to validate. If you don't know how to setup a basic data structure, you can take a look at [How to Create a Basic Data Layer](/howto/data-models/create-a-basic-data-layer/).
+This how-to explains how you can set up data validation with Mendix. Before you can start with this how-to you need to setup a basic data structure, otherwise there won't be any data to validate. If you don't know how to setup a basic data structure, you can take a look at [Creating a Basic Data Layer](/refguide/create-a-basic-data-layer/).
 
 ## 2 Data Validation on Entity Level
 
@@ -121,7 +121,7 @@ If you want to validate multiple attributes, it is best to do this in a sub-micr
 
 ## 7 Read More
 
-* [Create a Basic Data Layer](/howto/data-models/create-a-basic-data-layer/)
+* [Creating a Basic Data Layer](/refguide/create-a-basic-data-layer/)
 * [Denormalize Data to Improve Performance](/howto/data-models/denormalize-data-to-improve-performance/)
 * [Set Up Data Validation](/howto/data-models/setting-up-data-validation/)
 * [Find the Root Cause of Runtime Errors](/howto/monitoring-troubleshooting/finding-the-root-cause-of-runtime-errors/)

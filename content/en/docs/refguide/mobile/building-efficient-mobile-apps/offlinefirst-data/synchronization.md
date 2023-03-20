@@ -116,13 +116,18 @@ If you have custom widgets or JavaScript actions which use an entity that cannot
 
 ### 2.5 Limitations
 
-- Running multiple synchronization processes at the same time is not supported, regardless the of the type (**full** or **selective**). For more information, see the [Limitations](/refguide/synchronize/#limitations) section of the *Synchronize Guide*.
+Please be aware of the following limitation affecting synchronization: 
 
-- An entity configured with `Never` synchronization mode is not allowed to be associated with an entity that is not used in offline, or configured with a synchronization mode other than `Never`.
+* Running multiple synchronization processes at the same time is not supported, regardless the of the type (**full** or **selective**). For more information, see the [Limitations](/refguide/synchronize/#limitations) section of the *Synchronize Guide*.
+* An entity configured with the **Never** synchronization mode is not allowed to be associated with either of the following:
+    * An entity that is not used in offline.
+    * An entity that is configured with a synchronization mode other than **Never**.
+* File and Image documents are not supported for entities configured with the **Never** synchronization mode.
+* An entity configured with **Never** synchronization mode is not allowed to have generalization from either of the following:
+    * An entity that is not used in offline.
+    * An entity that is configured with a synchronization mode other than **Never**.
+* Deleted objects configured with **Never** will be ignored during Startup Synchronization, [Synchronize all Objects](/refguide/synchronize/#all-objects), or [Synchronize Unsynchronized Objects](/refguide/synchronize/#unsynchronized-objects).
 
-- File and Image documents are not supported for entities configured with `Never` synchronization mode.
-- An entity configured with `Never` synchronization mode is not allowed to have generalization from an entity that is not used in offline, or configured with a synchronization mode other than `Never`.
-- Deleted objetcs configured with `Never` will be ignored during Startup Synchronization, [Synchronize all Objects](/refguide/synchronize/#all-objects), or [Synchronize Unsynchronized Objects](/refguide/synchronize/#unsynchronized-objects).
 ### 2.6 Error Handling {#error-handling}
 
 During synchronization, errors might occur. This section describes how Mendix handles these errors and how you can prevent them.

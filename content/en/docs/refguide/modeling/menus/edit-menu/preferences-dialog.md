@@ -53,6 +53,16 @@ The JDK is necessary to run Mendix applications, because the Mendix Runtime is w
 
 Enable this setting to increase the speed at which a running application is updated after changes have been made in Studio Pro. When only pages, layouts or snippets have been changed, an entire restart of the application is skipped to decrease deployment time. Also, no Java compilation is performed when no relevant files have changed.
 
+#### 2.3.3 Build using Gradle
+
+Enable this setting to build using Gradle. If this setting is disabled Ant will be used instead.
+
+#### 2.3.4 Gradle directory
+
+This is the directory in which Gradle is located on the computer on which you deploy the application. Usually, the correct directory is located automatically.
+
+Gradle is necessary to deploy Mendix applications if the "Build using Gradle" setting is enabled.
+
 ### 2.4 Disk Location
 
 #### 2.4.1 Default App Directory

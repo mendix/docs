@@ -107,7 +107,7 @@ Depending on the use-case, more fine-grained synchronization controls might be r
 * **By XPath** – Only download the objects which match the [XPath Constraints](/refguide/xpath-constraints/) in addition to the regular security constraints. This means all previously synchronized objects that do not match the XPath constraint will be removed.
 * **Nothing (clear data)** – Do not download any objects automatically, but do clear the data stored in the database for this entity when performing a synchronization (this can be useful in cases where the objects should only be uploaded, for example a `Feedback` entity).
 * **Nothing (preserve data)** – Do not download any objects automatically, and do not clear the data stored in the database for this entity when performing a synchronization  (this can be useful in cases where you want have full control over the synchronization and should be used in combination with the [Synchronize to device](/refguide/synchronize-to-device/) or [Synchronize](/refguide/synchronize/) activity with specific objects selected).
-* **Never** – When an entity is set to `Never`, its objects will not be synchronized between the runtime and the offline database during a Startup Synchronization, Full Synchronization, or [Synchronize Unsynchronized Objects](/refguide/synchronize/#unsynchronized-objects). However, the objects can still be synchronized using [Synchronize to device](/refguide/synchronize-to-device/) or [Synchronize selected object(s)](/refguide/synchronize/#selected-objects), but you will be in control when and what is synchronized.
+* **Never** – When an entity is set to `Never`, its objects will not be synchronized between the runtime and the offline database during a Startup Synchronization, [Synchronize all Objects](/refguide/synchronize/#all-objects), or [Synchronize Unsynchronized Objects](/refguide/synchronize/#unsynchronized-objects). However, the objects can still be synchronized using [Synchronize to device](/refguide/synchronize-to-device/) or [Synchronize selected object(s)](/refguide/synchronize/#selected-objects), but you will be in control when and what is synchronized.
 
 
 If you have custom widgets or JavaScript actions which use an entity that cannot be detected by Studio Pro in your offline-first profile (because its only used in the code), you can use customizable synchronization to include such entities.
@@ -122,6 +122,7 @@ If you have custom widgets or JavaScript actions which use an entity that cannot
 
 - File and Image documents are not supported for entities configured with `Never` synchronization mode.
 - An entity configured with `Never` synchronization mode is not allowed to have generalization from an entity that is not used in offline, or configured with a synchronization mode other than `Never`.
+- Deleted objetcs configured with `Never` will be ignored during Startup Synchronization, [Synchronize all Objects](/refguide/synchronize/#all-objects), or [Synchronize Unsynchronized Objects](/refguide/synchronize/#unsynchronized-objects).
 ### 2.6 Error Handling {#error-handling}
 
 During synchronization, errors might occur. This section describes how Mendix handles these errors and how you can prevent them.

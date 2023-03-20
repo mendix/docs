@@ -67,14 +67,14 @@ The following tokens can be used to obtain a date and time value:
 | `[%BeginOfCurrentDayUTC%]` | The date and time at the beginning of the current day in UTC. |
 | `[%EndOfCurrentDay%]` | The date and time at the end of the current day. |
 | `[%EndOfCurrentDayUTC%]` | The date and time at the end of the current day in UTC. |
-| `[%BeginOfYesterday%]` | The date and time at the beginning of the day before the current day. |
-| `[%BeginOfYesterdayUTC%]` | The date and time at the beginning of the day before the current day in UTC. |
-| `[%EndOfYesterday%]` | The date and time at the end of the day before the current day. |
-| `[%EndOfYesterdayUTC%]` | The date and time at the end of the day before the current day in UTC. |
-| `[%BeginOfTomorrow%]` | The date and time at the beginning of the day after the current day. |
-| `[%BeginOfTomorrowUTC%]` | The date and time at the beginning of the day after the current day in UTC. |
-| `[%EndOfTomorrow%]` | The date and time at the end of the day after the current day. |
-| `[%EndOfTomorrowUTC%]` | The date and time at the end of the day after the current day in UTC. |
+| `[%BeginOfYesterday%]` | The date and time at the beginning of yesterday. |
+| `[%BeginOfYesterdayUTC%]` | The date and time at the beginning of yesterday in UTC. |
+| `[%EndOfYesterday%]` | The date and time at the end of yesterday. |
+| `[%EndOfYesterdayUTC%]` | The date and time at the end of yesterday in UTC. |
+| `[%BeginOfTomorrow%]` | The date and time at the beginning of tomorrow. |
+| `[%BeginOfTomorrowUTC%]` | The date and time at the beginning of tomorrow in UTC. |
+| `[%EndOfTomorrow%]` | The date and time at the end of tomorrow. |
+| `[%EndOfTomorrowUTC%]` | The date and time at the end of tomorrow in UTC. |
 | `[%BeginOfCurrentWeek%]` | The date and time at the beginning of the current week. |
 | `[%BeginOfCurrentWeekUTC%]` | The date and time at the beginning of the current week in UTC. |
 | `[%EndOfCurrentWeek%]` | The date and time at the end of the current week. |

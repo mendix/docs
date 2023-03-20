@@ -159,4 +159,4 @@ To convert a nanoflow to a microflow, right-click anywhere in the editor and sel
 
 {{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/nanoflows/nanoflow/convert-to-microflow.png" alt="Convert to microflow" width="550" >}}
 
-A new microflow will be created and added to the same directory, and you can get consistency errors if there are actions that are not supported by nanoflow.
+A new microflow will be created and added to the same directory, and you can get consistency errors if there are actions that are not supported by microflow.

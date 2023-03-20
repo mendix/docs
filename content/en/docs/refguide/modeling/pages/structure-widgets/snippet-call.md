@@ -49,6 +49,21 @@ To perform actions on a snippet call, select it on a page and right-click it. Th
 * **Show snippet** – opens a snippet selected for a snippet call
 * **Inline snippet** – turns the snippet call into widgets that the selected snippet consists of
 
+### 3.1 Inline Snippet
+
+When you select **Inline snippet**, Studio Pro will analyze the snippet call to determine whether it is safe to do so. If this is the case, the snippet call will be replaced by the contents of the snippet and all references to the snippet parameters will be rewritten to the objects to which they are mapped in the **Snippet settings** of the snippet call. This is basically the inverse operation of [Extract Snippet](/refguide/snippet/#extract-snippet). Note that the snippet is not automatically deleted, even if the inlined snippet call was the last remaining usage of the snippet.
+
+Not every snippet call can be successfully inlined, as there are certain configurations which cannot be represented correctly outside a snippet. Attempting to inline such a snippet call could result in a consistency error or it may produce inlined content which does not have the same behaviour as the original snippet call. In this case, a warning dialog is shown to ask whether you want to proceed:
+
+{{< figure src="/attachments/refguide/modeling/pages/structure-widgets/snippet-call/inline-snippet-warning-dialog.png" alt="Warning dialog for Inline snippet" width="600" >}}
+
+The following are examples of configurations which cannot be correctly inlined:
+
+* A Data view with a _Context_ data source using an association of a snippet parameter, if that parameter has been mapped to an object which is not the directly surrounding object of the snippet call.
+* An attribute widget (such as Text box) using an attribute of a snippet parameter, if that parameter has been mapped to a page parameter in the snippet call.
+
+In such cases, the inlined content needs to be fixed manually by adding or removing a Data view (depending on the configuration) and reconfiguring the affected widgets to refer to the correct object again.
+
 ## 4 Read More
 
 * [Snippet](/refguide/snippet/)

@@ -16,4 +16,7 @@ You must have the [Mendix Business Events](/appstore/modules/business-events/) m
 
 ### 2 Adding a Business Event Service
 
-To add a business event service, right-click on a module in your app and go to **Add other** > **Business event service**.
+To add a business event service, right-click on a module in your app and go to **Add other** > **Business Event Service**.
+
+
+

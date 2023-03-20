@@ -35,7 +35,7 @@ To use Mendix Business Events, you will need the following:
 
 * The [Mendix Business Events](https://marketplace.mendix.com/link/component/202649) module from the Mendix Marketplace
 * Studio Pro [9.18](/releasenotes/studio-pro/9.18/) and above
-* At least two Mendix apps: one that publishes the business events and makes them available, and one that subscribes to the business events (you can have as many publishing and consuming apps as you require)
+* At least two Mendix apps: one that defines events, and another that uses the predefined events to subscribe to and receive events
 * An event broker, either a licensed [Mendix Event Broker](#mendix-event-broker) for apps running in the Mendix Cloud or for local testing the [local testing](#local-testing) broker (see [Deployment](#deployment))
 * [Docker](https://www.docker.com/) for local deployment
 
@@ -123,7 +123,15 @@ Optionally you can set **SummaryLogIntervalSeconds** to a different value. The d
 
 ## 5 Usage
 
-This section explains how to publish and consume business events in Mendix apps using the Mendix Business Events module.
+This section explains how to use business events in Mendix apps with the Mendix Business Events module.
+
+### 5.1 Creating a New Business Event Service
+
+To add a business event service, right-click on a module in your app and go to **Add other** > **Business Event Service**.
+
+### 5.2 Using an Existing Business Event Service
+
+TO use an existing business event servics, right-click on a module in your app and go to **Add other** > **Business Event Service**.
 
 ### 5.1 Publishing Business Events {#publish-be}
 
@@ -246,7 +254,7 @@ Use our [Local Setup Tool](https://github.com/mendix/event-broker-tools) for loc
 
 When you deploy your apps to the free cluster, a free event broker is provided and configured automatically. In the Mendix Free App environment, there is a limit of 1000 events per app per day.
 
-### 6.2 Free Apps Deployment
+### 6.2 Free App Deployment
 
 When you deploy your apps to the free cluster, a free event broker is provided and configured automatically. In the Mendix Free App environment, there is a limit of 1000 events per app per day. 
 

@@ -330,7 +330,7 @@ To see the scopes of a PAT you have created, click **View Details**.
 {{< figure src="/attachments/developerportal/community-tools/mendix-profile/manage-pat.png" >}}
 
 {{% alert color="info" %}}
-You cannot see the secret token of a PAT here. You can only see that the PAT exists long with its scopes. 
+You cannot see the secret token of a PAT here. You can only see that the PAT exists along with its scopes. 
 {{% /alert %}}
 
 You can delete a PAT you have created via **Delete**. This will prevent anyone who has obtained the PAT's secret token from successfully using it.
@@ -348,7 +348,7 @@ To use a PAT with the [Data Hub APIs](/apidocs-mxsdk/apidocs/data-hub-apis/), it
 ```http
 GET /v1/register HTTP/1.1
 Host: catalog.mendix.com
-Authorization: mxtoken <your token>
+Authorization: mxtoken <your personal access token>
 ```
 
 If the PAT is not valid, the response will be `HTTP 403 Access Denied`:

@@ -1,5 +1,5 @@
 ---
-title: "CI/CD for Mendix for Standalone Private Cloud using Tekton"
+title: "CI/CD for Mendix for Standalone Private Cloud Using Tekton"
 linktitle: "CI/CD with Tekton"
 url: /developerportal/deploy/private-cloud-tekton/
 description: "Describes how to use Tekton to create a CI/CD solution for Mendix environments in the Private Cloud"
@@ -119,11 +119,11 @@ If your cluster is air-gapped and does not have access to the internet, you will
 When you have followed those instructions, you can continue with [Installing Triggers](#installing-triggers), below.
 {{% /alert %}}
 
-## 5 Tekton Installation for Non Air-gapped (Regular) Environments{#tekton-installation}
+## 5 Tekton Installation for Non Air-Gapped (Regular) Environments {#tekton-installation}
 
 If Tekton is already installed in your namespace, you can skip to [Pipeline Installation for non air-gapped Environments](#pipelines-installation).
 
-### 5.1 Installing on Non Air-gapped Kubernetes
+### 5.1 Installing on Non Air-Gapped Kubernetes
 
 To install Tekton with Tekton Triggers, apply the following *yaml* manifests:
 
@@ -137,7 +137,7 @@ kubectl apply --filename https://storage.googleapis.com/tekton-releases/triggers
 The manifests target the `tekton-pipelines` namespace.
 {{% /alert %}}
 
-### 5.2 Installing on Non Air-gapped OpenShift
+### 5.2 Installing on Non Air-Gapped OpenShift
 
 To install Tekton and Tekton Triggers on OpenShift you can use Red Hat OpenShift Pipelines, follow the instructions on the [Installing OpenShift Pipelines](https://docs.openshift.com/container-platform/4.7/cicd/pipelines/installing-pipelines.html) page of the OpenShift documentation. 
 
@@ -145,7 +145,7 @@ Main objects would be installed in `openshift-pipelines` namespace.
 
 At the moment we support Red Hat OpenShift Pipelines v1.7.2. 
 
-## 6 Pipeline Installation for Non Air-gapped Environments{#pipelines-installation}
+## 6 Pipeline Installation for Non Air-Gapped Environments {#pipelines-installation}
 
 Before you install the Mendix pipelines, which contain all Tekton-related objects, you need to do the following:
 

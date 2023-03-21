@@ -140,4 +140,3 @@ This is the resulting document:
 {{< figure src="/attachments/refguide8/modeling/resources/document-templates/creating-your-own-documents/15_Result.png" >}}
 
 In this example, you retrieved the **OrderLine** information via the **Entity (path)** data source. An alternative way of doing this would be to use a microflow that returns objects for the list presentation. If you do this, make sure to add the correct user role(s) to the microflows that are being used as data source microflows within the document template.
-

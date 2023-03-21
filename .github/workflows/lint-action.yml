@@ -52,8 +52,8 @@ jobs:
           body: |
             ${{ env.VER }}
           branch: lint-docs
-          assignees: NatasaKralj
-          reviewers: NatasaKralj
+          assignees: MarkvanMents
+          reviewers: MarkvanMents
           labels: Internal WIP
           add-paths: |
             content/en/docs/**/*.md

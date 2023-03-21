@@ -27,6 +27,10 @@ Only a user with the Scrum master role can migrate an app. For more information,
 
 ## 3 How Migration Works
 
+If your app is eligible for migration and your team role is Scrum master, you see a notification on possible migration at the top of the **Team Server** screen. Click **Migrate to Git** to start migration:
+
+{{< figure src="/attachments/developerportal/collaborate/team-server/migrate-to-git/migrate-to-git.jpg" >}}
+
 During migration all app history, including revisions for all branches, is copied from SVN to Git. 
 
 Access to SVN is disabled as soon as migration starts to prevent developers from making changes to SVN that will not be copied. If migration fails for any reason, it is rolled back and access to SVN is restored.
@@ -46,7 +50,11 @@ Inform your team members that they should commit their changes before migration.
 
 ## 4 Steps After Migration
 
-After migration is completed all developers need to check out (re-download) the app from Team Server and remove existing local copies, since developers can no longer interact with SVN. For more information, see [Migrating from SVN to Git: Steps After Migration and Process Differences](/refguide/svn-git-differences/).
+After migration, existing local copies are no longer linked to a working version control system. To be able to work on your app and store your changes in the version control system, you need to check out (re-download) the app from Team Server. Do the following:
+
+1. Open Studio Pro, select the app that was migrated to Git (you can identify it by a Git icon), and click **Open** in Studio Pro to download the Git version of your app. Once this is completed you can make changes and store them in version control system.
+
+2. Remove previous local copies of the app to avoid working on the wrong app version.
 
 ## 5 If Migration Failed
 

@@ -17,6 +17,30 @@ For information on the current status of deployment to Mendix Cloud and any plan
 
 ## 2023
 
+### March 16th, 2023
+
+#### Improvements
+
+* We have added webhooks which can trigger endpoints when changes are committed to a Team Server Git repository, or a new deployment package is available for deployment to the Mendix Cloud. See [Mendix Deployment Webhooks](/developerportal/deploy/webhooks/) for more information.
+
+    {{% alert color="info" %}}This feature is currently in a [Beta Release](/releasenotes/beta-features/).{{% /alert %}}
+
+### February 23rd, 2023
+
+#### Improvements
+
+* We have added OneAgent support for [Dynatrace](/developerportal/operate/dynatrace-metrics/) monitoring in the Mendix Cloud.
+* The `DT_TENANT` environment variable is now required for the Dynatrace integration.
+
+* We have enabled DNSSEC to authenticate DNS lookups for `cname.mendix.net`.
+    * This means that custom domains for applications in the Mendix Cloud will validate using DNSSEC, provided it is also enabled for the custom domain.
+
+### February 21st, 2023
+
+#### Improvements
+
+* We now return HTTP headers for the SHA1 Fingerprint and Serial number of an authenticated Client Certificate. See [Mendix Cloud HTTP Request Headers](/developerportal/deploy/mendix-cloud-request-headers/) for more information.
+
 ### February 16th, 2023
 
 #### Improvements
@@ -470,7 +494,7 @@ If you encounter errors using APIs, please ensure that the format matches the do
 
     For more information on custom environment variables, see [Runtime Tab](/developerportal/deploy/environments-details/#custom-environment-variables) in the *Environment Details* documentation.
 
-* As part of a Developer Portal clean up, we removed the Model option from the DEVELOP section of the Developer Portal menu when you are looking at environments on Mendix Cloud. The functions of this page are still available via the Edit in Studio and Edit in Studio Pro buttons on the environments page.
+* As part of a Developer Portal clean up, we removed the Model option from the DEVELOP section of the Developer Portal menu when you are looking at environments on Mendix Cloud. The functions of this page are still available via the **Edit in Studio Pro** button on the environments page.
 
 ### December 8th, 2020
 

@@ -41,7 +41,7 @@ These are some examples of what you can find on the dashboard:
 
 ## 3 Apps {#apps}
 
-### 3.1 Active and Deactivated Apps
+### 3.1 Active and Deactivated Apps {#active-deactivated}
 
 #### 3.1.1 Overview {#overview}
 
@@ -50,7 +50,11 @@ On the **Active Apps** tab and the **Deactivated Apps** tab, you can see an over
 When you select one or more apps via the check boxes in the list, a context menu appears at the bottom of the screen with options for exporting app details to an *.xlsx* file, deactivating apps (on the **Active Apps** tab) or activating apps (on the **Deactivated Apps** tab), and deleting an app.
 
 {{% alert color="info" %}}
-Deleting and deactivating apps is currently not supported for licensed apps or apps that are not running on the Mendix Cloud. In the overview, you can only deactivate or activate up to 20 apps and delete one app in one go.
+Deleting and deactivating apps is currently not supported for licensed apps or apps that are not running on the Mendix Cloud.
+{{% /alert %}}
+
+{{% alert color="info" %}}
+In the overview, you can activate or deactivate up to 100 apps at a time and delete 1 app at a time.
 {{% /alert %}}
 
 The consequences of deactivating and deleting an app are as below:
@@ -134,13 +138,29 @@ When you select groups in the list or members or accessible apps in the group de
 
 ## 6 Company Settings {#company}
 
-### 6.1 Company Details
+### 6.1 Company Details {#company-details}
 
 On the **Company Details** tab of this page, you can edit your **Company Name** and **Description**.
 
-You can also request new **Company Email Domains** by clicking **Add Domain**, upon which a request is sent to [Mendix Support](/developerportal/support/). Once a domain is added, every user who signs up to Mendix with that email domain will be assigned to your company.
+You can request new **Company Email Domains** by clicking **Add Domain**, upon which a request is sent to [Mendix Support](/developerportal/support/). Once a domain is added, every user who signs up to Mendix with that email domain will be assigned to your company.
 
 If you have [configured single sign on using BYOIDP](/developerportal/control-center/set-up-sso-byoidp/), you will have to wait until the domain has been added, then deactivate and reactivate BYOIDP to pick up the new email domain. It is not possible to add email domains which do not use single sign-on if it is activated for your company.
+
+{{< figure src="/attachments/developerportal/control-center/company-email-domains.png" width="650px" >}}
+
+You can also provide a specific **Security Contact** who is informed if there are critical security issues with the Mendix Platform and platform-supported Marketplace components. Mendix strongly recommends applying a team email address or a functional mailbox instead of a personal individual email address.
+
+After you click **Add security contact** and add the required **Name** and **Email** address, a confirmation email is sent to the proposed contact. The recipient has seven days to click the link in the email and validate the Security Contact request. After seven days, the pending request is automatically removed. If the recipient has not received the confirmation email but is still within the seven-day validation timeframe, you can click **Resend confirmation email**.
+
+For an existing **Security Contact**, there are two menu options available:
+
+{{< figure src="/attachments/developerportal/control-center/security-contact.png" >}}
+
+Click **Edit** to edit the Security Contact's **Name**.
+
+Click **Delete** to delete the existing Security Contact. This is the first step in changing a validated Security Contact. After you make the deletion, you can add the new Security Contact.
+
+For more information on security issues, see [Security Advisories](/releasenotes/security-advisories/).
 
 ### 6.2 Mendix Admins
 
@@ -236,9 +256,11 @@ For details on these tasks, see [Data Hub Administration](/developerportal/contr
 
 ## 13 Marketplace Content {#marketplace-content}
 
-The **Marketplace Content** page offers a dashboard where you can manage the visibility of public and [private Marketplace components](/appstore/general/app-store-overview/#company-content) in Studio for your company's users. Currently, you can only configure the visibility of widgets. 
+{{% alert color="info" %}}
+This page will be removed in June 2023.
+{{% /alert %}}
 
-{{< figure src="/attachments/developerportal/control-center/marketplace-content.png" >}}
+The **Marketplace Content** page offers a dashboard where you can manage the visibility of public and [private Marketplace components](/appstore/general/app-store-overview/#company-content) in Studio for your company's users. Currently, you can only configure the visibility of widgets. 
 
 The list shows all the Marketplace components for which you have the curation options. This list includes all the public Marketplace components that can be used in Studio and all the private Marketplace components of your company. You can configure whether any of these components is visible in Studio to your company's users (whether components appear in the **Toolbox** in Studio).
 

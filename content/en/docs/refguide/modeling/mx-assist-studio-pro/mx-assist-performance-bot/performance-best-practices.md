@@ -116,7 +116,6 @@ You can identify convertible microflows using the following criteria:
 Security: microflows execute on the server side which in general is simpler to fully secure. If security is a critical concern for your app, note this when deciding whether to convert a microflow to a nanoflow.
 {{% /alert %}}
 
-
 ### 5.1 Steps to Fix
 
 To fix the issue, do the following:

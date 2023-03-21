@@ -78,7 +78,7 @@ This section explains how you can validate data using the 'Before Commit' event.
 
     {{< figure src="/attachments/refguide/modeling/domain-model/setting-up-data-validation/microflow-1.png" >}}
 
-As long as this microflow returns a Boolean value, you are free to add any logic to determine if the data is valid or not. If the microflow returns `false`, the commit is cancelled. Returning `true` commits the object. 
+As long as this microflow returns a Boolean value, you are free to add any logic to determine whether the data is valid or not. If the microflow returns `false`, the commit is cancelled. Returning `true` commits the object. 
 
 For more information on working with microflows, see [Microflows](/refguide/microflows/).
 

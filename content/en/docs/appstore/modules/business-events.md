@@ -9,12 +9,12 @@ tags: ["marketplace", "marketplace component", "business events", "data broker",
 
 ## 1 Introduction
 
-With [Mendix Business Events](https://marketplace.mendix.com/link/component/202649), applications can signal when something important happens, and can independently subscribe to these events if they want to be informed. Business events are like a mailing list to share event notifications between apps. The key difference between business events and traditional communication between apps, like REST or Web Services, is that there is no direct communication between the different apps. Applications publish events to, or subscribe to events with, an event broker. This results in much better availability for your applications, as applications are not impacted by downtime of other applications. It also simplifies your applications, as you reduce the fact that applications need to be aware of other applications, this simplifying dependency management and impact analysis when changing your software.
+With [Mendix Business Events](https://marketplace.mendix.com/link/component/202649), applications can signal when something important happens, and can independently subscribe to these events if they want to be informed. Business events are like a mailing list to share event notifications between apps. The key difference between business events and traditional communication between apps, like REST or Web Services, is that there is no direct communication between the different apps. 
 
 To deliver these events reliably between your applications, an event broker is required. For apps running the Mendix cloud on licensed nodes, you'll need to purchase a license for a [Mendix Event Broker](#mendix-event-broker). A limited multi-tenant Event Broker is provided for free apps in the Mendix cloud. If desired for development, you can run your own broker cluster.
 
 {{% alert color="info" %}}
-Mendix Business Events is supported for Studio Pro [9.18](/releasenotes/studio-pro/9.18/) and above.{{% /alert %}} 
+The Mendix Business Events module and functionality is supported for Studio Pro [9.18](/releasenotes/studio-pro/9.18/) and above.{{% /alert %}} 
 
 {{% alert color="info" %}}
 Currently, business events can only be deployed to the [Mendix Cloud](/developerportal/deploy/mendix-cloud-deploy/), with other deployment models expected in forthcoming releases.{{% /alert %}} 
@@ -32,7 +32,7 @@ Business events help you automate the resulting actions when something happens i
 To use Mendix Business Events, you will need the following:
 
 * The [Mendix Business Events](https://marketplace.mendix.com/link/component/202649) module from the Mendix Marketplace
-* Studio Pro [9.18](/releasenotes/studio-pro/9.18/) and above for one-way events, Studio Pro [9.24](/releasenotes/studio-pro/9.24/) and above for two-way events
+* Studio Pro [9.18](/releasenotes/studio-pro/9.18/) and above for [one-way events](#one-way-be), Studio Pro [9.24](/releasenotes/studio-pro/9.24/) and above for [two-way events](#two-way-be)
 * At least two Mendix apps: one that defines events, and another that uses the predefined events to subscribe to and receive events
 * An event broker, either a licensed [Mendix Event Broker](#mendix-event-broker) for apps running in the Mendix Cloud or for local testing the [local testing](#local-testing) broker (see [Deployment](#deployment))
 * [Docker](https://www.docker.com/) for local deployment
@@ -125,10 +125,14 @@ This section explains how to use business events in Mendix apps with the Mendix 
 
 Usage and user experience differs depending on which versions of Studio Pro you are using:
 
-* Studio Pro [9.18](/releasenotes/studio-pro/9.18/) through [9.23](/releasenotes/studio-pro/9.23/) support published and consumed business event services with one publishing app and multiple client apps
-* Studio Pro [9.24](/releasenotes/studio-pro/9.24/) and above supports events defined centrally by one app for a specific use case, and other apps sending or receiving these predefined events
+* Studio Pro [9.18](/releasenotes/studio-pro/9.18/) through [9.23](/releasenotes/studio-pro/9.23/) support published and consumed business event services with one publishing app and multiple client apps ([one-way events](#one-way-be))
+* Studio Pro [9.24](/releasenotes/studio-pro/9.24/) and above supports events defined centrally by one app for a specific use case, and other apps sending or receiving these predefined events ([two-way events](#two-way-be))
 
-### 5.1 Publishing and Consuming Business Events in Studio Pro 9.18 through 9.23
+### 5.1 Publishing and Consuming Business Events in Studio Pro 9.18 through 9.23 {#one-way-be}
+
+Studio Pro 9.18 through 9.23 support our first experience of business events, sometimes called *one way* business events. In these versions, business events are published by an app, and one or more client apps consume, or subscribe to, the events.
+
+If you are modelling with Studio Pro 9.24 and above, skip down to [Creating a Service, and Sending/Receiving Business Events in Studio Pro 9.24](#two-way-be).
 
 #### 5.1.1 Creating a Published Business Event Service {#create-be}
 
@@ -145,9 +149,7 @@ A **Published Business Event Service** contains a definition of the business eve
 When deploying an app with one or more **Published Business Event** services, channels will be created in the Mendix Event Broker for every event part of the service. (This works similarly to how tables are created in a database for persistable entities.) If you reuse a module with published events in multiple apps, multiple independent channels will be created. Apps interested in receiving events will need to subscribe to every event or channel independently. 
 {{% /alert %}}
 
-To receive or consume business events, an application needs to subscribe to one or more business events and define which microflow is responsible for handle the event received. 
-
-This is done in a reliable way: if the receiving app is unavailable the event will be delivered once the app is available. If the microflow handling the event fails, it will be retried.
+To receive or consume business events, an application needs to subscribe to one or more business events and define which microflow is responsible for handle the event received. This is done in a reliable way: if the receiving app is unavailable the event will be delivered once the app is available. If the microflow handling the event fails, it will be retried.
 
 #### 5.1.2 Create a Consumed Business Event Service
 
@@ -160,12 +162,14 @@ To start consuming a business event contract, you first need to create a **Consu
 
 {{< figure src="/attachments/appstore/modules/business-events/subscriptions-available-2.png" >}}
 
-##### 5.1.3 Automatically Created Event Handler Microflow and Entity
+#### 5.1.3 Subscribing to a Business Event
 
 There are two ways to subscribe to, or consume a specific business event:
 
-* **Add** the subscription in the **subscribed business event service**.
+* **Add** the subscription in the **Subscribed business event service**.
 * **Drag and drop** the business event from the **Data Hub pane** to your domain model
+
+##### 5.1.3.1 Automatically Created Event Handler Microflow and Entity
 
 When you click **Add** to add the events from the Contract into your module, Studio Pro will automatically create an entity within your domain model and an **Event Handler** microflow to manage the flow of the Event after delivery. The **Event Handler** microflow is created in the same directory as your service.
 
@@ -187,9 +191,15 @@ Upgrade your apps to Studio Pro [9.24](/releasenotes/studio-pro/9.24/) and above
 
 ### 5.2 Creating a Service, and Sending/Receiving Business Events in Studio Pro 9.24 {#two-way-be}
 
-Creating a New Business Event Service
+Studio Pro 9.24 and above supports newer behavior of business events, sometimes called *two way* business events. In these versions, business events are published by an app, and one or more client apps consume, or subscribe to, the events.
 
-Business Event Definitions
+If you are modelling in Studio Pro 9.18 through 9.23, go back up to [Publishing and Consuming Business Events in Studio Pro 9.18 through 9.23](#one-way-be).
+
+#### 5.2.1 Creating a New Business Event Service {#two-way-be-create}
+
+
+
+##### 5.2.1.1 Business Event Definitions
 
 Step 1: Define what information is included in this event
 
@@ -206,6 +216,13 @@ If other apps can only receive this event, this service needs to implement the  
 Other apps can publish: if other apps can only send this event, this service needs to implement the reception of this event.
 
 **Export AsyncAPI Document** button
+
+#### 5.2.2 Using an Existing Business Event Service {#two-way-be-existing}
+
+Add publish implementation
+(select event)
+Add consume implementation
+(select event), add Handler Microflow Name
 
 
 ### 5.3 Modelling with Business Events (All Studio Pro Versions)
@@ -344,7 +361,7 @@ Here is an example of postgres service that you can add to your `docker-compose.
 
 4. I want to replicate data between my Mendix apps. Should I use business events?
 
-    Business events can help you replicate data more efficiently by ensuring you do not have to poll continuously. Instead, the consuming app only polls for new data if it receives a business event indicating that something has changed.  To share data, it is still preferable to use OData or RESTful APIs, as this is not the current purpose of business events.
+    Business events can help you replicate data more efficiently by ensuring you do not have to poll continuously. To share data, it is still preferable to use OData or REST.
 
 5. Are business events guaranteed to be delivered only once?
 
@@ -378,4 +395,8 @@ Here is an example of postgres service that you can add to your `docker-compose.
 
 ## 9 Read More
 
-Check out the [Mendix Studio Pro 9.18 release blog](https://www.mendix.com/blog/mendix-release-9-18-next-level-performance/) for other information about business events.
+Check out the following release blogs for more information about business events:
+* [Mendix Studio Pro 9.18 release blog](https://www.mendix.com/blog/mendix-release-9-18-next-level-performance/) 
+* [Mendix Studio Pro 9.24 release blog](https://www.mendix.com/blog/mendix-release-9-24-what-a-ride-it-has-been/) 
+
+See also [Business Event Services](/refguide/business-event-services/), the Studio Pro 9 guide entry about the business event service documents.

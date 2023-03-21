@@ -66,6 +66,8 @@ Not every snippet call can be inlined, because certain configurations cannot be 
 
 {{< figure src="/attachments/refguide/modeling/pages/structure-widgets/snippet-call/inline-snippet-warning-dialog.png" alt="Warning dialog for Inline snippet" width="600" >}}
 
+## 4 Limitations
+
 The following are examples of configurations which cannot be correctly inlined:
 
 * A Data view with a _Context_ data source using an association of a snippet parameter (if that parameter has been mapped to an object which is not the directly surrounding object of the snippet call)
@@ -73,7 +75,7 @@ The following are examples of configurations which cannot be correctly inlined:
 
 In such cases, the inlined content needs to be fixed manually by adding or removing a Data view (depending on the configuration) and reconfiguring the affected widgets to refer to the correct object again.
 
-## 4 Read More
+## 5 Read More
 
 * [Snippet](/refguide/snippet/)
 * [Page](/refguide/page/)

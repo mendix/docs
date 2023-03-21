@@ -82,7 +82,7 @@ The following steps will create a deployment package, retrieve it, refresh its `
 5. Verify that the job is successful using the process described in [Managing Asynchronous Jobs](#async-jobs). 
 6. Call `GET /apps/{appId}/packages` to retrieve all the packages in the application. 
 7. Once the job that you launched in step 4 is successful, you will see a `packageId` in the response from Step 6. You can then call `GET /apps/{appId}/packages/{packageId}` to get the deployment package details.
-    The same `packageId` can the be used in step 12 from the [DeployAPI](/apidocs-mxsdk/apidocs/private-cloud-deploy-api/#32-using-the-api-to-deploy-an-app) documentation.
+    The same `packageId` can the be used in step 12 from the [DeployAPI](/apidocs-mxsdk/apidocs/private-cloud-deploy-api/#restart) documentation.
 8. Call `GET /apps/{appId}/packages` to retrieve all the deployment packages in the application. You should see the previously created deployment package in the list.
 9. If you want to download the deployment package locally, you can use the location URL present in the response from step 7. The URL has a lifetime of 15 minutes, so if more than 15 minutes have passed since the creation of the deployment package, you must request a new URL by calling `GET /apps/{appId}/packages/{packageId}?url=true`.
 10. Call `DELETE /apps/{appId}/packageId`, where you can get the package ID value from step 7.

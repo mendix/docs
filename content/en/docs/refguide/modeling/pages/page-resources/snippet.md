@@ -37,7 +37,7 @@ Snippet properties consist of the following sections:
 
 #### 2.2.1 Parameters{#parameters}
 
-**Snippet Parameters** works the same way as [Page Parameter](/studio/page-parameter/) with the difference that a snippet's parameter can be accessed at the top level, for example when creating expressions or selecting attributes.
+**Snippet Parameters** works the same way as [Page Parameter](/refguide/page-properties/#parameters) with the difference that a snippet's parameter can be accessed at the top level, for example when creating expressions or selecting attributes.
 
 ### 2.3 Designer Section{#designer}
 

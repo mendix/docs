@@ -69,22 +69,22 @@ The values for the platform property are:
 
 ## 3 Extract Snippet{#extract-snippet}
 
-To extract a snippet from an existing widget, right-click the widget and select **Extract snippet**. An example of such a widget is depicted below:
+To extract a snippet from an existing widget, right-click the widget and select **Extract snippet**:
 
 {{< figure src="/attachments/refguide/modeling/pages/page-resources/snippet/extract-snippet-contextmenu.png" alt="Example of a widget about to be extracted to a snippet" width="800" >}}
 
-Studio Pro will analyze which objects from the surrounding widgets are used inside the selected widget to determine which snippet parameters are needed. There are various ways in which a widget may refer to a surrounding object:
+To determine which snippet parameters are needed, Studio Pro analyzes which objects from the surrounding widgets are used inside the selected widget. There are various ways a widget can refer to a surrounding object:
 
 * The selected attribute of an attribute widget (such as Text box)
 * The parameters of a text template
 * Conditional visibility and editability
 * Expressions for dynamic classes
-* XPath constraints using variables (e.g. `$dataView3`)
+* XPath constraints using variables (for example `$dataView3`)
 * Entity widgets (such as Data view) with a data source which follows an association
 * Data views using a page parameter or snippet parameter as a *Context* data source
 * Parameter mappings for actions and snippet calls
 
-After selecting **Extract snippet**, a dialog is shown with an overview of the snippet parameters that are necessary for the extracted widget. The **Name** for the new snippet can be also entered here. For the widget in the previous example, the dialog would look like this:
+After selecting **Extract snippet**, a dialog box shows an overview of the snippet parameters required for the extracted widget. You can also enter the new snippet's **Name** here:
 
 {{< figure src="/attachments/refguide/modeling/pages/page-resources/snippet/extract-snippet-dialog.png" alt="Example of the Extract Snippet dialog" width="640" >}}
 
@@ -92,9 +92,9 @@ The table showing the snippet parameters has the following columns:
 
 * **Name** - the suggested name for the snippet parameter.
 * **Type** - the type of the snippet parameter.
-* **Substitute for** - the element(s) in the original document for which the snippet parameter is substituted in the extracted snippet.
+* **Substitute for** - the elements in the original document for which the snippet parameter is substituted in the extracted snippet.
 
-The names of the snippet parameters can be changed, as long as they are unique and not already in use in the extracted content. The order of the parameters can also be changed.
+The names of the snippet parameters can be changed as long as they are unique and not already used in the extracted content. The order of the parameters can also be changed.
 
 Clicking **OK** will create the new snippet and replace the extracted widget in the original document with a snippet call. The **Snippet settings** of the call are automatically configured to pass the correct object to each snippet parameter. In the extracted snippet, references to the original objects are rewritten to refer to a snippet parameter instead. For example, a conditional visibility expression could be rewritten as shown in the following side-by-side comparison:
 

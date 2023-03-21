@@ -88,7 +88,7 @@ Validating user input can also be achieved by overriding the default **Save** bu
 
 There are two ways to configure a custom **Save** button for data validation. 
 
-You can do this with the help of [Validation Assist](/refguide/validation-assist/). With Validation Assist, you can build validation microflows in a more automatic way using pre-built expressions. For more information on how to use the Validation Assist, see the [Using Validation Assist to Build Data Validations](/refguide/validation-assist/#3-using-validation-assist-to-build-data-validations) section in *Validation Assist*. 
+You can do this with the help of [Validation Assist](/refguide/validation-assist/). With Validation Assist, you can build validation microflows automatically by using pre-built expressions. For more information on how to use the Validation Assist, see the [Using Validation Assist to Build Data Validations](/refguide/validation-assist/#3-using-validation-assist-to-build-data-validations) section in *Validation Assist*. 
 
 You can also configure a custom **Save** button manually. To do so, follow these steps:
 

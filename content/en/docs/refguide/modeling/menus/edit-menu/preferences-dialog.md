@@ -53,7 +53,7 @@ The JDK is necessary to run Mendix applications, because the Mendix Runtime is w
 
 Enable this setting to increase the speed at which a running application is updated after changes have been made in Studio Pro. When only pages, layouts or snippets have been changed, an entire restart of the application is skipped to decrease deployment time. Also, no Java compilation is performed when no relevant files have changed.
 
-#### 2.3.3 Build Using Gradle
+#### 2.3.3 Build Using Gradle {#gradle}
 
 Enable this setting to build you app using Gradle. If this setting is disabled Ant is used instead.
 

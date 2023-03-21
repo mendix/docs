@@ -82,7 +82,7 @@ The API does not generate unique UUIDs for the resources. You must generate your
 
 The following sections of this document contain sample usage scenarios for the API.
 
-### 3.1 Using the API to update the cluster and namespace
+### 3.1 Using the API to Update the Cluster and Namespace
 
 The following steps will create a cluster, register and install a namespace, add or update a cluster member, and enable development mode for the namespace.
 
@@ -101,8 +101,7 @@ The following steps will create a cluster, register and install a namespace, add
 12. Make an API call `POST /clusters/{clusterId}` to add/update the cluster member. You can get the manifest for this update request from `GET /clusters/{clusterId}`.
 13. Make an API call `POST /clusters/{namespaceId}` to update the namespace development mode and set `enableDevelopmentMode` to true . You can get the manifest for this update request from `GET /clusters/{namespaceId}`.
 
-
-### 3.2 Using the API to Restart an App
+### 3.2 Using the API to Restart an App {#restart}
 
 The following steps will restart an app by setting the number of instances to zero and then setting it back to the number of instances required.
 

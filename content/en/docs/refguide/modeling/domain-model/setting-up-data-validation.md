@@ -10,7 +10,7 @@ aliases:
 
 ## 1 Introduction
 
-This how-to explains how you can set up data validation with Mendix. Before you can start with this how-to, you need to set up a basic data structure, otherwise there is no data to validate. If you do not know how to set up a basic data structure, you can take a look at [Creating a Basic Data Layer](/refguide/create-a-basic-data-layer/).
+This document explains how you can set up data validation with Mendix. Make sure you have set up a basic data structure, otherwise there is no data to validate. For more information on how to set up a basic data structure, see [Creating a Basic Data Layer](/refguide/create-a-basic-data-layer/).
 
 ## 2 Data Validation on Entity Level
 

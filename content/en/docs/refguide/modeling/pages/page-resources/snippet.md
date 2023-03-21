@@ -100,7 +100,11 @@ Clicking **OK** will create the new snippet and replace the extracted widget in 
 
 {{< figure src="/attachments/refguide/modeling/pages/page-resources/snippet/extract-snippet-expression-rewrite.png" alt="Example of an expression rewritten by Extract snippet" width="580" >}}
 
-Not every widget can be successfully extracted to a snippet if the result requires multiple snippet parameters. For example, a Data view with an _Association_ data source must be surrounded by a single context object, which is not the case in a snippet with multiple parameters. This can be fixed after the extraction by manually wrapping the widget in a Data view with a _Context_ data source pointing to the correct snippet parameter.
+{{% alert color="info" %}}
+Not every widget can be successfully extracted to a snippet if the result requires multiple snippet parameters. For example, a Data view with an _Association_ data source must be surrounded by a single context object, which is not the case in a snippet with multiple parameters. 
+
+This can be fixed after the extraction by manually wrapping the widget in a Data view with a _Context_ data source pointing to the correct snippet parameter.
+{{% /alert %}}
 
 ## 4 Read More
 

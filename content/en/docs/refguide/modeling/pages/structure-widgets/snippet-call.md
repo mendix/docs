@@ -49,7 +49,7 @@ To perform actions on a snippet call, select it on a page and right-click it. Th
 * **Show snippet** – opens a snippet selected for a snippet call
 * **Inline snippet** – turns the snippet call into widgets that the selected snippet consists of
 
-### 3.1 Inline Snippet
+### 3.1 Inline Snippet {#inline-snippet}
 
 When you select **Inline snippet**, Studio Pro will analyze the snippet call to determine if it is safe to inline. If it is safe, the following will occur: 
 

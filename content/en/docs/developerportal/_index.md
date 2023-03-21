@@ -39,7 +39,6 @@ On the left side of the top bar, you open an access menu by clicking the **Switc
 You can then access the following parts of the Mendix Platform:
 
 * **Mendix Home** – the [My Apps](/developerportal/#my-apps) page
-* [Studio](/studio/)
 * **Get Studio Pro** – the [Studio Pro](/refguide/) download page in the [Mendix Marketplace](/appstore/)
 * **Cloud**  – the [Nodes](/developerportal/deploy/node-permissions/) page, which shows a list of all the licensed Mendix Cloud nodes to which you have access
     * Clicking **Details** on this page opens the [Environments](/developerportal/deploy/environments/) page for the app that is deployed to a node

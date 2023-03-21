@@ -187,6 +187,25 @@ Upgrade your apps to Studio Pro [9.24](/releasenotes/studio-pro/9.24/) and above
 
 ### 5.2 Creating a Service, and Sending/Receiving Business Events in Studio Pro 9.24 {#two-way-be}
 
+Creating a New Business Event Service
+
+Business Event Definitions
+
+Step 1: Define what information is included in this event
+
+Attributes
+
+Step 2: Decide what other apps can do and what service this will implement
+
+Other apps can: publish events, subscribe to events
+
+This business event service implements: publish events (learn more), subscribe to events (learn more)
+
+If other apps can only receive this event, this service needs to implement the  sending of this event.
+
+Other apps can publish: if other apps can only send this event, this service needs to implement the reception of this event.
+
+**Export AsyncAPI Document** button
 
 
 ### 5.3 Modelling with Business Events (All Studio Pro Versions)

@@ -12,4 +12,4 @@ The **ML Kit** section of the [Toolbox](/refguide/view-menu/#toolbox) contains a
 
 To get started with machine learning models, check out [Machine Learning Kit](/refguide/machine-learning-kit/) and [Using ML Kit](/refguide/machine-learning-kit/using-ml-kit/).
 
-{{% alert color="info" %}}Check out a demo app and Jupyter notebook examples in our [ML Kit Demo Apps](https://github.com/mendix/mlkit-demo-apps) repository for detailed machine learning kit references.{{% /alert %}}
+{{% alert color="info" %}}Check out the Jupyter notebook examples in our [ML Kit Demo Apps](https://github.com/mendix/mlkit-demo-apps/tree/main/notebooks) repository for further information on working with machine learning models in Mendix.{{% /alert %}}

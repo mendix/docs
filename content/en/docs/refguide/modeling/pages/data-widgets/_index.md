@@ -27,7 +27,7 @@ The Data containers category contains the following widgets:
 
     {{< figure src="/attachments/refguide/modeling/pages/data-widgets/list-view-example.png"   width="450"  >}}
 
-A [snippet](/refguide/snippet/) can also function as a data container when it has at least one snippet parameter. Unlike other data containers, a snippet never exposes a `$currentObject` variable as it can represent multiple independent objects.
+A [snippet](/refguide/snippet/) can also function as a data container when it has at least one snippet parameter. Unlike other data containers, a snippet never exposes a `$currentObject` variable because it can represent multiple independent objects.
 
 ## 2 Performing Basic Functions
 

@@ -21,6 +21,8 @@ This document explores four pre-processor and post-processor design patterns for
 * [ONNX operators](#onnx-operators)
 * [Hybrid activities](#complex-hybrid)
 
+{{% alert color="info" %}}Check out the Jupyter notebook examples in our [ML Kit Demo Apps](https://github.com/mendix/mlkit-demo-apps/tree/main/notebooks) repository for further information on working with machine learning models in Mendix.{{% /alert %}}
+
 ### 1.1 Pre-processors and Post-processors as Microflow Activities {#microflow-activities}
 
 The most simple processors could be implemented using existing microflow activities that are provided by Studio Pro. Here is some example usage of Design Pattern #1.

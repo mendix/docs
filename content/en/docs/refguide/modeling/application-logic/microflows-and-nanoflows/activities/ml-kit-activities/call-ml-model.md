@@ -19,6 +19,8 @@ Use the **Call ML Model** [activity](/refguide/activities/) in a microflow to ca
 
 To get started with machine learning models, check out [Using ML Kit](/refguide/machine-learning-kit/using-ml-kit/).
 
+{{% alert color="info" %}}Check out the Jupyter notebook examples in our [ML Kit Demo Apps](https://github.com/mendix/mlkit-demo-apps/tree/main/notebooks) repository for further information on working with machine learning models in Mendix.{{% /alert %}}
+
 ## 2 Properties
 
 ### 2.1 Action

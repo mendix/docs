@@ -12,6 +12,8 @@ tags: ["studio pro", "machine learning", "ml kit", "models", "integration"]
 
 Studio Pro [9.23](/releasenotes/studio-pro/9.23/) and above supports a unique approach to machine learning (ML) model integration in Mendix apps. Collectively called the *Machine Learning (ML) Kit*, this functionality allows Mendix developers to deploy a machine learning model built using common ML framework and language into the Mendix Runtime.
 
+{{% alert color="info" %}}Check out the Jupyter notebook examples in our [ML Kit Demo Apps](https://github.com/mendix/mlkit-demo-apps/tree/main/notebooks) repository for further information on working with machine learning models in Mendix.{{% /alert %}}
+
 ## 2 Under the Hood {#ml-kit-hood}
 
 Mendix *ML Kit* is built with the Open Neural Network Exchange ([ONNX](https://onnx.ai/)), an open source framework [co-developed by Microsoft and Facebook](https://azure.microsoft.com/en-us/blog/microsoft-and-facebook-create-open-ecosystem-for-ai-model-interoperability/) to enable framework interoperability. ONNX is an open standard format representing machine learning models. Models trained with various frameworks, from scikit-learn to PyTorch or TensorFlow, can be converted to ONNX.

@@ -130,7 +130,7 @@ Usage and user experience differs depending on which versions of Studio Pro you 
 
 ### 5.1 Publishing and Consuming Business Events in Studio Pro 9.18 through 9.23
 
-#### 5.1.2 Creating a Published Business Event Service {#create-be}
+#### 5.1.1 Creating a Published Business Event Service {#create-be}
 
 A **Published Business Event Service** contains a definition of the business events provided by this service. A contract can be exported from the published service, to inform other developers what the published business event service provides. This is similar to a OpenAPI or WSDL contract.
 
@@ -149,7 +149,7 @@ To receive or consume business events, an application needs to subscribe to one 
 
 This is done in a reliable way: if the receiving app is unavailable the event will be delivered once the app is available. If the microflow handling the event fails, it will be retried.
 
-#### 5.2.1 Create a Consumed Business Event Service
+#### 5.1.2 Create a Consumed Business Event Service
 
 To start consuming a business event contract, you first need to create a **Consumed Business Event Service**.
 
@@ -160,7 +160,7 @@ To start consuming a business event contract, you first need to create a **Consu
 
 {{< figure src="/attachments/appstore/modules/business-events/subscriptions-available-2.png" >}}
 
-##### 5.2.1.1 Automatically Created Event Handler Microflow and Entity
+##### 5.1.3 Automatically Created Event Handler Microflow and Entity
 
 There are two ways to subscribe to, or consume a specific business event:
 
@@ -175,14 +175,17 @@ You can use the payload of the event as an entity:
 The handler microflow attached to it triggers each event where you can build your business logic:
 {{< figure src="/attachments/appstore/modules/business-events/payload-event-entity-3.png" >}}
 
-## Migrating Business Event Apps to Studio Pro 9.24 and Above
+#### 5.1.4 Migrating Business Event Apps to Studio Pro 9.24 and Above {#migrate-two-way-be}
 
-You might want to upgrade your apps to Studio Pro 9.24 and above to enjoy the most recent business event behavior. If you upgrade, the following happens:
+Upgrade your apps to Studio Pro [9.24](/releasenotes/studio-pro/9.24/) and above to enjoy the most recent business event behavior. If you upgrade, the following happens:
 
-* Published business event service documents are converted to created business event services.
-* The created service will be able to publish
+* Published business event service documents are converted to created business event service documents.
+     * The created service document allows it to publish events.
+     * The other app's implementation will be to subscribe to events.
+* Consumed business event service documents are converted to documents that use a business events service.
+     * They will be able to subscribe to events.
 
-### 5.2 Creating a Service, and Sending/Receiving Business Events in Studio Pro 9.24
+### 5.2 Creating a Service, and Sending/Receiving Business Events in Studio Pro 9.24 {#two-way-be}
 
 
 
@@ -198,7 +201,7 @@ The base values for your entity are taken from the **PublishedBusinessEvent**, a
 The text with the blue background above the entity tells you that it is a specialized entity based on the **PublishedBusinessEvent** entity in the **BusinessEvents** module:
 {{< figure src="/attachments/appstore/modules/business-events/specialized-entity.png" >}}
 
-####  Using the Publish Business Event Activity
+#### 5.3.1 Using the Publish Business Event Activity
 
 After defining your business events, and adding them to a published service, you can publish the events in your microflows whenever a noticeable event occurs. You do this using the **Publish business event** activity:
 
@@ -215,7 +218,7 @@ After defining your business events, and adding them to a published service, you
 The *Publish Business Event* Activity will commit all event objects at the start of the publishing process as an **Outbox** entity. This is an implementation detail. In case something goes wrong during the publishing process, a retry mechanism will be triggered for up to 48 hours.  If the publishing microflow fails, the entity in the **Outbox** will be rolled back as well. See the [Business Event Entities](#be-entities) section for more information on the **Outbox** entity.
 {{% /alert %}}
 
-####  Business Event Entities {#be-entities}
+#### 5.3.2 Business Event Entities {#be-entities}
 
 The **PublishedBusinessEvent** and **ConsumedBusinessEvent** entities are necessary to include in your domain model to publish business events. The **DeadLetterQueue** and **Outbox** are part of the Mendix Business Events module.
 
@@ -226,9 +229,9 @@ The **PublishedBusinessEvent** and **ConsumedBusinessEvent** entities are necess
 * **DeadLetterQueue**: This persistent entity within the Domain Model of the Business Events Module is used for generating a historical record of events that are generated for business event activities that were not successful or had errors when received by the consumer and can be referred to for troubleshooting. You can query the DeadLetterQueue entity to determine which received events could not be processed.
 * **Outbox**: This entity is used to store the event prior to being sent.  This entity is connected to the microflow where a Business event is triggered.  If the microflow fails, the entity will be removed as part of the same transaction. If the event broker is down at runtime, business events will accumulate in the **Outbox**. They will be retried at increasing intervals for 48 hours, and they will fail after that time.
 
-### Dead Letter Queue for Failed Messages {#dead-letter-queue}
+#### 5.3.4 Dead Letter Queue for Failed Messages {#dead-letter-queue}
 
-Every time a business event is consumed, it is transformed to match the Entity created as part of the Subscription. When the Entity within the Business Event has changed based on the imported contract, it can render the Entity unable to be processed. In such a scenario the Business Event will fail into a **Dead Letter Queue** which contains the representation of the Entity within the data column.
+Every time a business event is received, it is transformed to match the Entity created as part of the Subscription. When the Entity within the Business Event has changed based on the imported contract, it can render the Entity unable to be processed. In such a scenario the Business Event will fail into a **Dead Letter Queue** which contains the representation of the Entity within the data column.
 
 The most important fields in this entity to be checked when there are errors include the following:
 

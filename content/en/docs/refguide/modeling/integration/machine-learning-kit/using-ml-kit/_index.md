@@ -12,6 +12,8 @@ tags: ["studio pro", "machine learning", "ml kit", "models", "integration"]
 
 Studio Pro [9.23](/releasenotes/studio-pro/9.23/) and above supports machine learning (ML) model integration in Mendix apps. Collectively called the *Machine Learning (ML) Kit*, this functionality allows Mendix developers to deploy an ML model built using common ML framework and language into the Mendix Runtime.
 
+{{% alert color="info" %}}Check out a demo app and Jupyter notebook examples in our [ML Kit Demo Apps](https://github.com/mendix/mlkit-demo-apps) repository for detailed machine learning kit references.{{% /alert %}}
+
 ## 2 Usage {#usage}
 
 To use an ML model in your app, you need to convert it to ONNX, then import it to create an ML model mapping.

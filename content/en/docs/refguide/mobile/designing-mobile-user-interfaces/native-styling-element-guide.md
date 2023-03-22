@@ -2455,7 +2455,7 @@ export const com_mendix_widget_native_gallerytextfilter_GalleryTextFilter = {
 
 The default class to style all gallery text filter widgets is named `com_mendix_widget_native_gallerytextfilter_GalleryTextFilter`.
 
-## 13 Read More
+## 12 Read More
 
 * [Native Styling](/refguide/mobile/designing-mobile-user-interfaces/native-styling/)
 * [Design Properties Documentation](/apidocs-mxsdk/apidocs/design-properties/)

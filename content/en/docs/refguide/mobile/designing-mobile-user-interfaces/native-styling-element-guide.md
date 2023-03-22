@@ -2425,7 +2425,7 @@ export const com_mendix_widget_native_gallery_Gallery = {
 
 The default class to style all gallery widgets is named `com_mendix_widget_native_gallery_Gallery`.
 
-### 11.33.1 Gallery Filtering
+#### 11.33.1 Gallery Filtering
 
 In order to enable filtering within the gallery items you need to select the desired attributes to be filtered in the **Filtering** tab.
 

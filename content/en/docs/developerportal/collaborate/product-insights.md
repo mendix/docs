@@ -1,10 +1,10 @@
 ---
-title: "Mini Surveys & Product Insights"
+title: "Mini Surveys & App Insights"
 url: /developerportal/collaborate/product-insights/
 category: "Collaboration"
 weight: 4
-description: "Describes how to set up mini-surveys to gain product insights into your app and view and export the survey results."
-tags: ["mini survey", "product insights", "sprint", "developer portal"]
+description: "Describes how to set up mini-surveys to gain app insights into your app and view and export the survey results."
+tags: ["mini survey", "app insights", "sprint", "developer portal"]
 ---
 
 {{% alert color="warning" %}}
@@ -13,19 +13,19 @@ This feature is in Beta. For more information on Beta products, see [Beta Releas
 
 ## 1 Introduction
 
-By using **Mini Surveys** > **Product Insights** in the Developer Portal and the [App Insights – Mini Surveys](/appstore/modules/app-insights/) module in the Marketplace, you can set up mini-surveys for the target user groups you would like to reach and collect their feedback to gain valuable product insights.
+By using **Mini Surveys** > *App Insights** in the Developer Portal and the [App Insights – Mini Surveys](/appstore/modules/app-insights/) module in the Marketplace, you can set up mini-surveys for the target user groups you would like to reach and collect their feedback to gain valuable app insights.
 
-You begin by creating a mini-survey in **Product Insights** in the Developer Portal, and then you implement the mini-survey by configuring the **App Insights – Mini-Surveys** module in Studio Pro. After the mini-survey is running, you can view responses that have been collected in **Product Insights** and export the responses to an XLSX file.
+You begin by creating a mini-survey in **App Insights** in the Developer Portal, and then you implement the mini-survey by configuring the **App Insights – Mini-Surveys** module in Studio Pro. After the mini-survey is running, you can view responses that have been collected in **App Insights** and export the responses to an XLSX file.
 
-This document first describes all the pages in **Product Insights** in the Developer Portal, and then it describes the procedure for running a mini-survey.
+This document first describes all the pages in **App Insights** in the Developer Portal, and then it describes the procedure for running a mini-survey.
 
-## 2 Product Insights Configuration 
+## 2 App Insights Configuration 
 
 ### 2.1 Survey Overview {#survey-overview}
 
 When you click **Mini Surveys** in the sidebar for an app that already has existing mini-surveys, the **Survey Overview** page opens first.
 
-On the upper-left corner of the page, you can see the name of the app currently opened. Click the app name to open a drop-down list of other apps you can navigate to that have been previously opened for Product Insights.
+On the upper-left corner of the page, you can see the name of the app currently opened. Click the app name to open a drop-down list of other apps you can navigate to that have been previously opened for App Insights.
 
 The tabs of the **Survey Overview** page are described below.
 
@@ -118,14 +118,6 @@ You can collect test data using two methods:
 * Change the value of the **TEST_MODE** constant in the [App Insights – Mini-Surveys](/appstore/modules/app-insights/) module. This will show **[TEST_MODE]** on the survey widget UI.
 * Select the **Enable Mendix SSO test users"** check box on the **Settings** tab of **Survey Overview**, which marks the app team members as testers. Note that if an app team member is not authenticated through Mendix SSO, this setting does not work for them. The survey widget will not show **[TEST_MODE]** on the UI.
 
-### 2.3 Product Insights Settings {#product-insights-settings}
-
-When you click the settings icon on [Survey Overview](#survey-overview), **Product Insights Settings** opens.
-
-{{< figure src="/attachments/developerportal/collaborate/product-insights/settings-icon.png" >}}
-
-Here you can view the existing API key, or generate an API key if there is not one available. You need to use the API key as input when you configure the App Insights – Mini-Surveys module in Studio Pro to implement the mini-survey. You need only one API key per app.
-
 ## 3 Running a Mini-Survey
 
 ### 3.1 Creating a Mini-Survey {#create-survey}
@@ -184,7 +176,7 @@ To obtain an API key for the implementation, follow these steps:
 
     {{< figure src="/attachments/developerportal/collaborate/product-insights/settings-icon.png" >}}
 
-2. The [Product Insights Settings](#product-insights-settings) page opens:
+2. The [App Insights Settings](#product-insights-settings) page opens:
 
     * If there is already an active API key, it is shown on the list. If it is suitable to use, click **View** to show the API key, then copy it and save it for later use.
     * If there is no active API key that you can use, generate one as follows:

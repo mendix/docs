@@ -13,6 +13,8 @@ These release notes cover changes made to the [Mendix Marketplace](/appstore/).
 
 ### March 23rd, 2023
 
+#### New Features
+
 On top of open-source [community-supported](/appstore/general/app-store-content-support/#category) content, we are now introducing an additional layer of support through our new **Mendix Component Partner** program. Partner members can now bring their components to the Mendix Marketplace under terms that guarantee full support to customers:
 
 * Partners are free to choose either one of the existing open-source licenses, or they can opt for a commercial option with the corresponding license and present their own license.

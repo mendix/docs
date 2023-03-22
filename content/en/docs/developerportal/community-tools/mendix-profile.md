@@ -290,7 +290,7 @@ Some platform APIs use personal access tokens (PATs) rather than API keys. This 
 
 PATs are used as alternatives to passwords. They are designed to be used when the client application needs to get access on behalf of a specific platform user, but the user is not "present" at the time of access, so the user cannot login via a browser (web SSO). The client application can be any application (meaning, even an app not built with Mendix).
 
-You can create a PAT and remain in control of what access is delegated via the PAT by selecting the scopes. The PAT itself is a "‘bearer" token, which means that anyone or anything that has access to the PAT can use it as if they were the associated platform user subject to the restrictions set up in the scope of the PAT.
+You can create a PAT and remain in control of what access is delegated via the PAT by selecting the scopes. The PAT itself is a "bearer" token, which means that anyone or anything that has access to the PAT can use it as if they were the associated platform user subject to the restrictions set up in the scope of the PAT.
 
 PATs are security tokens that do not expire, but they cannot be used if the associated user has been deactivated on the Mendix Platform or when the user has deleted the PAT.
 
@@ -320,7 +320,7 @@ After you click **Create**, a pop-up window shows your secret token, which is th
 {{< figure src="/attachments/developerportal/community-tools/mendix-profile/token-secret.png" width="500px" alt="Created PAT in pop-up window" >}}
 
 {{% alert color="warning" %}}
-Store the secret token in a safe location, as it will not be displayed again!
+Store the secret token in a safe location, because it will not be displayed again!
 {{% /alert %}}
 
 ##### 10.4.2.2 Managing a PAT
@@ -340,7 +340,7 @@ You can delete a PAT you have created via **Delete**. This will prevent anyone w
 Use of a PAT depends on the API you are accessing.
 
 {{% alert color="warning" %}}
-For security reasons, you should not include PATs into your source code!
+For security reasons, you should not include PATs into your source code.
 {{% /alert %}}
 
 To use a PAT with the [Data Hub APIs](/apidocs-mxsdk/apidocs/data-hub-apis/), it must be passed as the authorization header on every request made to the Data Hub Catalog. The request will look like this:

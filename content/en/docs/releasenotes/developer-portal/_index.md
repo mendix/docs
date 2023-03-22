@@ -17,6 +17,16 @@ To see the current status of the Mendix Developer Portal and Control Center, see
 
 ## 2023
 
+### March 23rd, 2023
+
+#### Improvements
+* After the big overhaul released on 13 February, our logging showed a decrease of the overall performance of [Stories](/developerportal/collaborate/stories/). We took some counter measures
+* There are some minor improvements to the [Invitation flow](/developerportal/collaborate/team/#inviting). For example, when you invite someone new to your Project, the default role will be 'Business Engineer' (if such a role exists in your project, of course)
+* We made some improvements to the layout of the [App Buzz](/developerportal/collaborate/buzz/#app-buzz) page so that it shows better on small screen resolutions
+* The left hand Project context menu is now collapsible, which makes for a far better experience on small screen resolutions
+* In preparation for the merge of Studio with Studio Pro, we removed the Edit in Studio button. You can still open your Project in Studio via the [three-dotted menu](/developerportal/#my-apps) in the App tile on the MyApps page
+* We are preparing the Developer Portal for a brand new Feedback experience. Please stay tuned
+
 ### March 16th, 2023
 
 #### Improvements

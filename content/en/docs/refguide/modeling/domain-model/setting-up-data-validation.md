@@ -20,6 +20,8 @@ This section explains how you can add validation rules to the domain model of yo
 Validation rules can only be applied on entities that are [persistable](/refguide/persistability/).
 {{% /alert %}}
 
+To add validation rules on entity level, follow the steps below:
+
 1. Open your [domain model](/refguide/create-a-basic-data-layer/) in Studio Pro.
 2. Double-click a persistable entity to open its properties.
 3. Go to the **Validation rules** tab.
@@ -40,7 +42,9 @@ For more information on adding validation rules on entity level, see [Validation
 
 ## 3 Required Validation on Inputs, Reference Selectors, and Drop-downs
 
-The page builder of Studio Pro allows you to configure which inputs are mandatory and what message is shown to the end-user if the input is empty. If you do not have a detail page yet, take a look at [How to create Your First Two Overview and Detail Pages](/howto/front-end/create-your-first-two-overview-and-detail-pages/).
+The page editor of Studio Pro allows you to configure mandatory inputs and add error messages shown to end-users if the inputs are empty. To do so, you first need to have a detail page. For more information on how to create a detail page, se  [How to create Your First Two Overview and Detail Pages](/howto/front-end/create-your-first-two-overview-and-detail-pages/).
+
+To set required validation on input elements through the page editor, follow the steps below:
 
 1. Open a **detail page** and double-click an input widget to open its properties.
 2. Go to the **Validation** section and select a **Type** of validation.
@@ -52,16 +56,16 @@ An example of checking the input for the **Name** attribute of a **Customer** en
 {{< figure src="/attachments/refguide/modeling/domain-model/setting-up-data-validation/input-widget-validation.png" width="500px">}}
 
 {{% alert color="info" %}}
-**Required** validation on **Input elements** in a page editor always checks before the validation rule set on entity level. This means that if you set both as **Required** and have different error messages. The page error message is shown to the end-user.  
+**Required** validation on **Input elements** in a page editor is always checked before the validation rule set on entity level is. This means that if you set both as **Required** and have different error messages, the page error message is shown to the end-user.  
 {{% /alert %}}
 
 For more information on input widget validation, see the [Validation](/refguide/common-widget-properties/#validation) section in *Properties Common in the Page Editor*. 
 
-## 4 Advanced Data Validation with the 'Before Commit' Event
+## 4 Advanced Data Validation with the Before Commit Event
 
-Validation rules are great for simple validations, but Mendix also offers ways to handle more complex validations. The domain model allows you to define event handlers on entity level. The 'Before Commit' and 'After Commit' events are triggered when an object is committed to the database. The 'After Commit' is most commonly used to calculate values of denormalized data. With the 'Before Commit' event, you can run a microflow that must return a Boolean value. If the microflow returns `false`, the entire commit is aborted, otherwise the object is stored in the database. This mechanism is great for data validation. 
+Validation rules are great for simple validations, but Mendix also offers ways to handle more complex validations. The domain model allows you to define event handlers on entity level. The **Before Commit** and **After Commit** events are triggered when an object is committed to the database. The **After Commit** is most commonly used to calculate values of denormalized data. With the **Before Commit** event, you can run a microflow that must return a Boolean value. If the microflow returns `false`, the entire commit is aborted, otherwise the object is stored in the database. This mechanism is great for data validation. 
 
-This section explains how you can validate data using the 'Before Commit' event. To do so, follow these steps:
+This section explains how you can validate data using the **Before Commit** event. To do so, follow these steps:
 
 1. Open your [domain model](/refguide/create-a-basic-data-layer/) in Studio Pro.
 2. Double-click an entity to open its properties.
@@ -82,9 +86,9 @@ As long as this microflow returns a Boolean value, you are free to add any logic
 
 For more information on working with microflows, see [Microflows](/refguide/microflows/).
 
-## 5 Advanced Validation with a Custom 'Save' Button {#custom-validation-save-button}
+## 5 Advanced Validation with a Custom Save Button {#custom-validation-save-button}
 
-Validating user input can also be achieved by overriding the default **Save** button on a detail page. If you do not have a detail page yet, take a look at [How to create Your First Two Overview and Detail Pages](/howto/front-end/create-your-first-two-overview-and-detail-pages/) and create one.
+Validating user input can also be achieved by overriding the default **Save** button on a detail page. For more information on how to create a detail page, see [How to create Your First Two Overview and Detail Pages](/howto/front-end/create-your-first-two-overview-and-detail-pages/).
 
 There are two ways to configure a custom **Save** button for data validation. 
 
@@ -110,13 +114,13 @@ You can also configure a custom **Save** button manually. To do so, follow these
 7. Double-click the decision to open its properties.
 8. Type in an expression that returns `true` or `false`. For example: *$Customer/Name != 'John'*. As you can see, you can use the **Customer** input parameter in the expression to validate its values.
 9. Save the properties by clicking **OK**.
-10. Right-click the line between the decision and the commit activity and select **true** as the condition value. In this case, if the customer's name is not 'John', the object is stored in the database and the page is closed.
+10. Right-click the flow between the decision and the commit activity and select **true** as the condition value. In this case, if the customer's name is not 'John', the object is stored in the database and the page is closed.
 
     {{< figure src="/attachments/refguide/modeling/domain-model/setting-up-data-validation/microflow-4.png" width="500px" >}}
 
-11. Draw an additional line from the decision and add another end event.
-12. Right-click the line between the decision and the end event and select **false** as the condition value.
-13. Insert a **Validation feedback** activity between the decision and the new end event. In the activity's properties editor, configure the activity in the following way:
+11. Draw an additional flow from the decision and add another end event.
+12. Right-click the flow between the decision and the end event and select **false** as the condition value.
+13. Insert a **Validation feedback** activity between the decision and the new end event. In the activity's properties dialog box, configure the activity in the following way:
 
     1. Select your input parameter as **Variable** (in the example, the **Customer** entity is the input parameter).
     2. Select an attribute of the **Customer** entity as **Member** (for example, **Name**).
@@ -140,8 +144,4 @@ If you want to validate multiple attributes, it is best to do this in a sub-micr
 
 ## 7 Read More
 
-* [Validation Rules](/refguide/validation-rules/)
-* [Validation Section](/refguide/common-widget-properties/#validation)
-* [Creating a Basic Data Layer](/refguide/create-a-basic-data-layer/)
-* [Create Your First Two Overview and Detail Pages](/howto/front-end/create-your-first-two-overview-and-detail-pages/)
 * [Denormalize Data to Improve Performance](/howto/data-models/denormalize-data-to-improve-performance/)

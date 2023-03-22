@@ -11,6 +11,10 @@ git:
   quiet: true # prevent commit numbers appearing in the log and being flagged as potential security leaks.
   submodules: false # turn off submodules
 
+env:
+  global:
+# Global variables can go here, for example HUGO_VERSION if we were using Netlify to publish.
+
 branches:
 # build only development and production
   only:

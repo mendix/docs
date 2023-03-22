@@ -23,6 +23,7 @@ Support for Marketplace content is determined by the content support category an
 | Deprecated | The content in this category is considered end-of-life and will be dropped to the **Community support** status in the next major release of Mendix. Content is provided as-is by Mendix R&D, and support depends on the severity of the reported issue and the effort required to resolve it. |
 | Community | Content is provided as-is by members of the Mendix community, and support depends on the availability and effort of the owner. | 
 | Siemens | The content in this category is provided and supported by the Siemens team. Siemens supports this content as-is when you are equipped with an SLA with Siemens. | 
+| Partner | The content in this category is supported via the partner's own SLA required via the Mendix Component Partner program. Customers can rely on this SLA for support if something goes wrong. A partner-supported [component details page](/appstore/general/app-store-overview/#details) contains a reference to the partner's support portal or the partner's support contact email.| 
 
 ## 2 Support Category and Feedback Process
 

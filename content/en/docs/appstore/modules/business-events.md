@@ -155,13 +155,17 @@ In the [next section](#add-be-definitions), you will define the information incl
 
 ##### 4.2.1.1 Defining Business Events {#add-be-definitions}
 
-To start defining what information is included in your events, as well as what the service will implement, click **Add** in the open service document:
+To start defining what information is included in your events, as well as what the service will implement, do the following:
+
+1. Click **Add** in the open service document:
 
 {{< figure src="/attachments//appstore/modules/business-events/add-event-definition.png" >}}
 
 The **Add business event** wizard opens:
 
 {{< figure src="/attachments//appstore/modules/business-events/wizard-step-1.png" >}}
+
+2. Go through Steps 1 and 2 of the wizard.
 
 *Step 1: Define what information is included in this event*
 
@@ -171,11 +175,11 @@ In the **Attributes** section, click **Add** to define attributes. Any changes y
 
 *Step 2: Decide what other apps can do and what service this will implement*
 
-Under *Other apps can*, you can select how other apps can use the service. 
+Under *Other apps can*, you can select how other apps can use the service. *This Business Events service implements* section defines whether the service will be responsible for publishing events, subscribing to events, or both. 
 
-*This Business Events service implements* section defines whether the service will be responsible for publishing events, subscribing to events, or both. Whatever is implemented here will complement what other apps can do as you defined in the *Other apps can* section.
+3. Click **Done** to exit the wizard and view the defined service document. 
 
-Click **Done** to exit the wizard and view the defined service doucment. **Export AsyncAPI Document** exports the YAML file of the business event contract so that other apps can [use your newly created service](#two-way-be-existing).
+**Export AsyncAPI Document** exports the YAML file of the business event contract so that other apps can [use your newly created service](#two-way-be-existing).
 
 #### 4.2.2 Using an Existing Business Event Service {#two-way-be-existing}
 
@@ -200,7 +204,7 @@ After following the instructions [Using an Existing Business Event Service](#two
 
 ##### 4.2.2.1.1 Automatically Created Event Handler Microflow and Entity
 
-When you click **Add** to add the events from the Contract into your module, Studio Pro will automatically create an entity within your domain model and an **Event Handler** microflow to manage the flow of the Event after delivery. The **Event Handler** microflow is created in the same directory as your service.
+When you click **Add** to add the events from the Contract into your module, Studio Pro will automatically create an entity within your domain model and an **Event Handler** microflow (**Handle_BE**) to manage the flow of the Event after delivery. The **Event Handler** microflow is created in the same directory as your service.
 
 ### 4.3 Modelling with Business Events (All Supported Studio Pro Versions)
 

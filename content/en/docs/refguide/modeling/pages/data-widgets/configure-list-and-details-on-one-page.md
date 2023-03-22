@@ -1,5 +1,5 @@
 ---
-title: "Configuring a List and View List Item Details on One Page"
+title: "Configuring a List and Viewing List Item Details on One Page"
 linktitle: "Configure List and View Details on 1 Page"
 url: /refguide/configure-list-and-details-on-one-page/
 category: "Pages"
@@ -100,27 +100,28 @@ Now you need to configure the widgets inside the data view to show all the attri
 
     {{< figure src="/attachments/refguide/modeling/pages/data-widgets/configure-list-and-details-on-one-page/title.png" width="500px" >}}
 
-9. Double-click the **First name** text box to open its properties.
-10. Go to **Data Source** > **Attribute**. 
-11. Select the **Name** attribute as the data source.
-12. In the **Label** section, rename the **Label caption** to *Name*.
-13. Refer to steps 9-12 to select the **Phone** attribute for the **Phonenumber** text box, the **Email** attribute for the **Email** text box, and the **DateCreated**  attribute for the **Birthday** text box.
+9. Now you need to configure the existing input widgets in the data view so that they display the details of an opportunity contact. 
+10. Double-click the **First name** text box to open its properties.
+11. Go to **Data Source** > **Attribute**. 
+12. Select the **Name** attribute as the data source.
+13. In the **Label** section, rename the **Label caption** to *Name*.
+14. Refer to steps 10-13 to select the **Phone** attribute for the **Phonenumber** text box, the **Email** attribute for the **Email** text box, and the **DateCreated**  attribute for the **Birthday** text box.
 
     {{< figure src="/attachments/refguide/modeling/pages/data-widgets/configure-list-and-details-on-one-page/attributes-replaced.png" width="500px" >}}
 
-14. Delete the **Bio** text widget in the data view, because it is a **Text area** widget that can only take an attribute of **String** data type. Now you want to add the **EstimatedValue** attribute, which is of **Integer** data type.
-15. Navigate to **Toolbox** > **Widgets**, and search for **Text box**.
-16. Drag it inside the data view below the **Date created** text box. 
-17. Refer to steps 9-12 to select the **EstimatedValue** attribute for the new text box.
-18. Now you still lack information on the contact's job title and status. 
-19. To add the job title information:
+15. Delete the **Bio** text widget in the data view, because it is a **Text area** widget that can only take an attribute of **String** data type. Now you want to add the **EstimatedValue** attribute, which is of **Integer** data type.
+16. Navigate to **Toolbox** > **Widgets**, and search for **Text box**.
+17. Drag it inside the data view below the **Date created** text box. 
+18. Refer to steps 10-13 to select the **EstimatedValue** attribute for the new text box.
+19. Now you still lack information on the contact's job title and status. 
+20. To add the job title information:
     1. Navigate to **Toolbox** > **Widgets**, search for a **Text box**.
     2. Drag it inside the data view below the **Name** text box.
-    3. Refer to steps 9-12 to select the **Jobtitle** attribute for the new text box.
-20. To add the information on the opportunity contact's status:
+    3. Refer to steps 10-13 to select the **Jobtitle** attribute for the new text box.
+21. To add the information on the opportunity contact's status:
     1. Navigate to **Toolbox** > **Widgets**, search for for **Radio Buttons**.
     2. Drag it inside the data view below the **Estimated Value** text box.
-    3. Refer to steps 9-12 to select the **Status** attribute for the new radio button.
+    3. Refer to steps 10-13 to select the **Status** attribute for the new radio button.
 
 Congratulations! Now you have a page that displays a list of opportunity contacts and the details of the selected contact:
 

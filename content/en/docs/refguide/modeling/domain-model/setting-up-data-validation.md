@@ -82,7 +82,7 @@ As long as this microflow returns a Boolean value, you are free to add any logic
 
 For more information on working with microflows, see [Microflows](/refguide/microflows/).
 
-## 5 Advanced Validation with a Custom 'Save' Button{#custom-validation-save-button}
+## 5 Advanced Validation with a Custom 'Save' Button {#custom-validation-save-button}
 
 Validating user input can also be achieved by overriding the default **Save** button on a detail page. If you do not have a detail page yet, take a look at [How to create Your First Two Overview and Detail Pages](/howto/front-end/create-your-first-two-overview-and-detail-pages/) and create one.
 

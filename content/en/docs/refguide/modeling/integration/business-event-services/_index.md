@@ -28,7 +28,7 @@ Business event services in Studio Pro 9.18 through 9.23 are published by one app
 
 ##### 2.1.1 Published Business Event Services {#published-event-service-doc}
 
-A **Published Business Event Service** is the contract defining various events, like a REST API spec. To add a published business event service, right-click on a module in your app and go to **Add other** > **Published Business Event Service**. The published business event service document is open in Studio Pro:
+A **Published Business Event Service** is the document defining various events, like a REST API spec. To add a published business event service, right-click on a module in your app and go to **Add other** > **Published Business Event Service**. The published business event service document is open in Studio Pro:
 
 {{< figure src="/attachments/refguide/modeling/integration/business-event-services/published-business-event-service.png" >}}
 
@@ -39,8 +39,6 @@ See the [Creating a Published Business Event Service](/appstore/modules/business
 To subscribe to a business event, you first need to create a **Consumed Business Event Service**. Right-click on a module in your app and go to **Add other** > **Consumed Business Event Service**. The published business event service document is open in Studio Pro:
 
 {{< figure src="/attachments/refguide/modeling/integration/business-event-services/consumed-business-event-service.png" >}}
-
-Update AsyncAPI Service Contract
 
 See the [Create a Consumed Business Event Service](/appstore/modules/business-events/#consume-be) section of *Mendix Business Events* for more extensive documentation.
 

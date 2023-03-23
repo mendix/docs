@@ -30,7 +30,6 @@ To use Mendix Business Events, you will need the following:
 
 * The [Mendix Business Events](https://marketplace.mendix.com/link/component/202649) module from the Mendix Marketplace
 * Studio Pro [9.18](/releasenotes/studio-pro/9.18/) and above for [one-way events](#one-way-be), Studio Pro [9.24](/releasenotes/studio-pro/9.24/) and above for [two-way events](#two-way-be)
-* At least two Mendix apps
 * An event broker, either a licensed [Mendix Event Broker](#mendix-event-broker) for apps running in the Mendix Cloud or the [local testing](#local-testing) broker (see [Deployment](#deployment))
 * [Docker](https://www.docker.com/) for local deployment
 
@@ -66,40 +65,40 @@ This section explains how to use business events in Mendix apps with the Mendix 
 
 Usage and user experience differs depending on which versions of Studio Pro you are using:
 
-* Studio Pro [9.18](/releasenotes/studio-pro/9.18/) through [9.23](/releasenotes/studio-pro/9.23/) support published and consumed business event services with one publishing app and multiple client apps ([one-way events](#one-way-be))
+* Studio Pro [9.18](/releasenotes/studio-pro/9.18/) through [9.23](/releasenotes/studio-pro/9.23/) support published and consumed business event services with one publishing app and multiple consuming apps ([one-way events](#one-way-be))
 * Studio Pro [9.24](/releasenotes/studio-pro/9.24/) and above supports events defined centrally by one app for a specific use case, and other apps sending or receiving these predefined events ([two-way events](#two-way-be))
 
 ### 4.1 Using Business Events (Studio Pro 9.18 through 9.23) {#one-way-be}
 
-Studio Pro 9.18 through 9.23 support our first experience of business events, sometimes called *one way* business events. In these versions, business events are published by an app, and one or more client apps consume, or subscribe to, the events.
+Studio Pro 9.18 through 9.23 support the first experience of business events, sometimes called *one way* business events. In these versions, business events are published by an app, and one or more apps consume, or subscribe to, the events.
 
 {{% alert color="info" %}}
 If you are modelling with Studio Pro 9.24 and above, skip down to [Creating a Service, and Sending/Receiving Business Events in Studio Pro 9.24](#two-way-be).{{% /alert %}}
 
 #### 4.1.1 Creating a Published Business Event Service {#create-be}
 
-A **Published Business Event Service** contains a definition of the business events provided by this service. A contract can be exported from the published service, to inform other developers what the published business event service provides. This is an AsyncAPI contract, similar to a OpenAPI or WSDL contract.
+A **Published Business Event Service** contains a definition of the business events provided by this service. A contract can be exported from the published service, to inform other developers what the published business event service provides. This is an AsyncAPI document, similar to a OpenAPI or WSDL contract.
 
 1. Right-click on the module folder, hover over **Add other**, and click **Published Business Event Service**.
 2. Provide the name for your service and **OK** to create it.
 3. If needed, select an **Event Name Prefix**. Use this to distinguish events from other ones in your company, like in a different department. This ensures that your events are uniquely named. This field is empty by default. 
 4. Once you have the Service created, click **Add** to link your modelled **PublishedBusinessEvent** entity as an event.
-5. Select the entity that you would like to publish to add it to the service.
-6. Once you have all of your entities linked into the **Published Business Event Service**, export it to be shared as an AsyncAPI contract in YAML format.
+5. Either select an existing **PublishedBusinessEvent** entity, or click **New** to create a new published entity there.
+6. Once you have all of your entities linked into the **Published Business Event Service**, export it to be shared as an AsyncAPI document in YAML format.
 
 {{% alert color="info" %}}
-When deploying an app with one or more **Published Business Event** services, channels will be created in the Mendix Event Broker for every event part of the service. (This works similarly to how tables are created in a database for persistable entities.) If you reuse a module with published events in multiple apps, multiple independent channels will be created. Apps interested in receiving events will need to subscribe to every event or channel independently. 
+When deploying an app with one or more **Published Business Event** services, channels will be created in the Mendix Event Broker for every event of the service. (This works similarly to how tables are created in a database for persistable entities.) If you reuse a module with published events in multiple apps, multiple independent channels will be created. Apps interested in receiving events will need to subscribe to every event or channel independently. 
 {{% /alert %}}
 
 To receive or consume business events, an application needs to subscribe to one or more business events and define which microflow is responsible for handling the received event. This is done in a reliable way: if the receiving app is unavailable the event will be delivered once the app is available. If the microflow handling the event fails, it will be retried.
 
 #### 4.1.2 Create a Consumed Business Event Service {#consume-be}
 
-To start consuming a business event contract, you first need to create a **Consumed Business Event Service**.
+To consume a business event, you first need to create a **Consumed Business Event Service**.
 
 1. Right-click on the module folder, hover over **Add other**, then click **Consumed Business Event Service**.
 2. Provide the name for your service.
-3. Import an AsyncAPI service contract. Click **Browse** and select the YAML file (created in the [Create a Published Business Event Service](#create-be) step). This will make subscriptions to business events available for you to start mapping to entities within your consuming application.
+3. Import an AsyncAPI service document. Click **Browse** and select the YAML file (created in the [Create a Published Business Event Service](#create-be) step). This will make subscriptions to business events available for you to start mapping to entities within your consuming application.
 4. Click **OK**.
 
 {{< figure src="/attachments/appstore/modules/business-events/subscriptions-available-2.png" >}}
@@ -133,7 +132,7 @@ Upgrade your apps to Studio Pro [9.24](/releasenotes/studio-pro/9.24/) and above
 
 ### 4.2 Using Business Events (Studio Pro 9.24 and Above) {#two-way-be}
 
-Studio Pro 9.24 and above supports newer behavior of business events, sometimes called *two way* business events. In these versions, business events are published by an app, and one or more client apps consume, or subscribe to, the events.
+Studio Pro 9.24 and above supports newer behavior of business events, sometimes called *two way* business events. In these versions, business events are published by an app, and one or more apps consume, or subscribe to, the events.
 
 {{% alert color="info" %}}
 If you are modelling in Studio Pro 9.18 through 9.23, go back up to [Publishing and Consuming Business Events in Studio Pro 9.18 through 9.23](#one-way-be), or learn how [migrating business event apps](#migrate-two-way-be) to Studio Pro 9.24 and above works.{{% /alert %}}
@@ -171,7 +170,7 @@ The **Add business event** wizard opens:
 
 In the **General** section, provide the **Event name** and **Description** to let others know what the service is about.
 
-In the **Attributes** section, click **Add** to define attributes. Any changes you make here later might lead to breaking changes, though related entities will be updated automatically.
+In the **Attributes** section, click **Add** to define attributes. Changes you make here later might lead to breaking changes if the entity the attribute belongs to is consumed, though related entities will be updated automatically.
 
 *Step 2: Decide what other apps can do and what service this will implement*
 

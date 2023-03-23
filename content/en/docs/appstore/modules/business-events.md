@@ -78,7 +78,7 @@ If you are modelling with Studio Pro 9.24 and above, skip down to [Creating a Se
 
 #### 4.1.1 Creating a Published Business Event Service {#create-be}
 
-A **Published Business Event Service** contains a definition of the business events provided by this service. A contract can be exported from the published service, to inform other developers what the published business event service provides. This is similar to a OpenAPI or WSDL contract.
+A **Published Business Event Service** contains a definition of the business events provided by this service. A contract can be exported from the published service, to inform other developers what the published business event service provides. This is an AsyncAPI contract, similar to a OpenAPI or WSDL contract.
 
 1. Right-click on the module folder, hover over **Add other**, and click **Published Business Event Service**.
 2. Provide the name for your service and **OK** to create it.

@@ -26,6 +26,7 @@ To see the current status of the Mendix Developer Portal and Control Center, see
 * We made some improvements to the layout of the [App Buzz](/developerportal/collaborate/buzz/#app-buzz) page so that it displays better on small screen resolutions.
 * The left-hand app sidebar menu is now collapsible, which makes for a far better experience on small screen resolutions.
 * In preparation for the [merging of Studio and Studio Pro](https://www.mendix.com/blog/coming-in-2023-the-merging-of-studio-and-studio-pro/), we removed the **Edit in Studio** button. You can still open your app in Studio via the ellipsis (**…**) in the [app tile](/developerportal/#my-apps) on the **My Apps** page.
+* You can now create and manage personal access tokens (PATs) in **User Settings** > **Developer Settings**. This location replaces the Warden tool that was previously used. For more information, see the [Personal Access Tokens](/developerportal/community-tools/mendix-profile/#pat) section in *Mendix Profile*.
 * We are preparing the Developer Portal for a brand new feedback experience. Please stay tuned!
 
 ### March 16th, 2023

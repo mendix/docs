@@ -78,13 +78,13 @@ For more details on what can and cannot be provided in these fields, see the [AP
 You can see an example of a request below:
 
 ```curl
-curl --location --request POST 'https://hub.mendix.com/rest/registration/v4/applications' \
+curl --location --request PUT 'https://hub.mendix.com/rest/registration/v4/applications' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: MxToken <your_Personal_Access_Token>' \
 --data-raw '{"Name": "My-Application"}'
 ```
 
-A successful `POST` call results in a `201` status code and a JSON response body that includes the details you provided about the application, the location of an application icon, and a unique ID:
+A successful `PUT` call results in a `201` status code and a JSON response body that includes the details you provided about the application, the location of an application icon, and a unique ID:
 
 ```json
 {
@@ -112,13 +112,13 @@ For more details on what can and cannot be provided in these fields, see the [AP
 You can see an example of a request below:
 
 ```curl
-curl --location --request POST 'https://hub.mendix.com/rest/registration/v4/applications/{application_UUID}/environments' \
+curl --location --request PUT 'https://hub.mendix.com/rest/registration/v4/applications/{application_UUID}/environments' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: MxToken <your_Personal_Access_Token>' \
 --data-raw '{"Name": "My-Environment", "Location": "https://my-deployed-application-url.com", "Type": "Production"}'
 ```
 
-A successful `POST` call results in a `201` status code and a JSON response body that includes the details you provided about the environment, along with a unique ID:
+A successful `PUT` call results in a `201` status code and a JSON response body that includes the details you provided about the environment, along with a unique ID:
 
 ```json
 {
@@ -231,7 +231,7 @@ For more details on what can and cannot be provided in these fields, see the [AP
 You can see an example of a request that converts a `dependencies.json` file below: 
 
 ```curl
-curl --location --request POST 'https://datahub-spec.s3.eu-central-1.amazonaws.com/registration_v4.html#/Endpoints/post_transform_dependenciesjson' \
+curl --location --request PUT 'https://datahub-spec.s3.eu-central-1.amazonaws.com/registration_v4.html#/Endpoints/post_transform_dependenciesjson' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: MxToken <your_Personal_Access_Token>' \
 --data-raw '{
@@ -245,7 +245,7 @@ curl --location --request POST 'https://datahub-spec.s3.eu-central-1.amazonaws.c
 }'
 ```
 
-A successful `POST` call results in a `200` status code and a JSON response body. The `PUTPublishedEndpoints` section is what you will want to go register your services:
+A successful `PUT` call results in a `200` status code and a JSON response body. The `PUTPublishedEndpoints` section is what you will want to go register your services:
 
 ```json
 {

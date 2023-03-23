@@ -68,7 +68,7 @@ Click **Edit** to change the exposed name of the enumeration (the name as it app
 The *enumerations* feature was introduced in Studio Pro [9.24.0](/releasenotes/studio-pro/9.24.0/). In earlier versions, enumeration attributes were published as strings.
 {{% /alert %}}
 
-### 2.6.1 Enumeration details
+### 2.6.1 Enumeration Details
 
 This list gives an overview of the values of the published enumeration.
 

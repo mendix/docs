@@ -87,7 +87,11 @@ The Kibana user guide is available here: [Kibana User Guide](https://www.elastic
 
 ## 5 Free App
 
-Logs are not available for Free Apps. You will see a sample screen.
+Logs are not available for Free Apps. You will see a sample screen on the logs page. You only have access to a live log of your deployed free app, on the **Environments** page, under **View Live Log**. 
+
+{{% alert color="info" %}}
+If you have set up custom log messages, you will only be able to see messages up to Info log level.
+{{% /alert %}}
 
 ## 6 App Deployed to Other Clouds
 

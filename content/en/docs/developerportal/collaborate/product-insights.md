@@ -19,6 +19,17 @@ You begin by creating a mini-survey in **App Insights** in the Developer Portal,
 
 This document first describes all the pages in **App Insights** in the Developer Portal, and then it describes the procedure for running a mini-survey.
 
+### 1.1 Survey Pop-Up Behaviour 
+
+The Mini Survey has specific opt-out rules after a user is shown a Survey.
+   * **The survey opt-out scenarios are;**
+     * **Scenario 1:** – User closes Survey, without answering any questions. User is opted-out and survey will not show again.
+     * **Scenario 2:** – User Answers 1 or more questions but does not finish the survey: Survey will show again to the user. But if they close the survey before finishing (for second time), it will not show survey again.
+     * **Scenario 3:** – User Answers all questions: Survey will not show again.
+
+
+{{% alert color="info" %}}In the GA release (May/June) we will allow you customise these opt-out rules from App Insights portal.{{% /alert %}} 
+
 ## 2 App Insights Configuration 
 
 ### 2.1 Survey Overview {#survey-overview}
@@ -73,7 +84,13 @@ Clicking the mini-survey in a row on the list shows its [survey details](#survey
 
 #### 2.1.3 Settings Tab {#settings}
 
-On the **Settings** tab of **Survey Overview**, you can select **Enable Mendix SSO test users**, which marks the app team members as testers. Testers see the survey every time it is triggered, and their responses are not saved. You can view all the test data on the [Test data](#test-data) tab of the survey details page.
+On the **Settings** tab of **Survey Overview**, you can generate a Survey API Key & enable Test Mode for project members.
+
+**API Keys** Generate an API key if there is not one available. You need to use the API key as input when you configure the App Insights – Mini-Surveys module in Studio Pro to implement the mini-survey. You need only one API key per app.
+
+**Test Mode - For All Users**,  This can only be enable using the TEST_MODE constant in the module in your App. You can find this in your App at Marketplace modules > AppInsights_MiniSurvey > _SETUP > 2. Set API Key & mode. The results are collected in the [Test data](#test-data) tab of the survey details page and will not pollute your main Survey Data collection. 
+
+**Test Mode - For Project Members**, which marks the app team members as testers. Testers see the survey every time it is triggered, and their responses are not saved. You can view all the test data on the [Test data](#test-data) tab of the survey details page.
 
 {{% alert color="info" %}}If an app team member is not authenticated through Mendix SSO, this setting does not work for them.{{% /alert %}} 
 
@@ -172,9 +189,7 @@ Before the start time of the mini-survey is reached, you should implement the su
 
 To obtain an API key for the implementation, follow these steps:
 
-1. On the [Survey Overview](#survey-overview) page, click the settings icon.
-
-    {{< figure src="/attachments/developerportal/collaborate/product-insights/settings-icon.png" >}}
+1. On the [Survey Overview](#survey-overview) page, click the settings tab.
 
 2. The [App Insights Settings](#product-insights-settings) page opens:
 
@@ -193,6 +208,7 @@ To install the [App Insights – Mini-Surveys](/appstore/modules/app-insights/) 
 2. Follow the instructions in [How to Use Marketplace Content in Studio Pro](/appstore/general/app-store-content/) to import the module into your app.
 3. Follow the instructions in the [Configuration](/appstore/modules/app-insights/#configuration) section of *App Insights – Mini-Surveys* to complete the implementation of the mini-survey in Studio Pro.
 
+
 ### 3.4 Viewing/Exporting Responses {#view-export-responses}
 
 When the start time that you set for the mini-survey is reached, the survey will start running automatically. Then you get [notifications](/developerportal/#notifications) on how many responses have been collected.
@@ -204,3 +220,10 @@ To check the responses that have been collected, follow these steps::
 3. On the **Active** tab, click the mini-survey to open the [survey details](#survey-details) page.
 4. Go to the **Responses** tab to see all the responses that have been collected.
 5. To export the responses to an XLSX file, click **Export Responses** on the upper-right corner of the page.
+
+## 4 FAQ
+
+### 4.1 Upgrading the module from v1.0.0. to v1.1.0.
+
+In order to fix the issue where surveys do not work locally when running multiple applications we have updated the way Mini Surveys are tracked. Due to this change if you are upgrading from release v1.0.0 to v1.1.0 then you must clear your browsers local storage/cached data to remove deprecated features. This only needs to be done one time in your browser.
+

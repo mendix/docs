@@ -55,7 +55,7 @@ This table describes how to pass values for different attribute types:
 | Type | How to Pass |
 | --- | --- |
 | String | Enclosed in single quotes (for example, `'John'`) |
-| Enumeration | The enumeration member name between single quotes, prefixed with the enum type (for example, `DefaultNamespace.PrimaryColor'Red'`). Please note that OData v4.01 syntax without qualified enum type name is not supported |
+| Enumeration | The enumeration member name between single quotes, prefixed with the enum type (for example, `DefaultNamespace.PrimaryColor'Red'`). OData v4.01 syntax without the qualified enum type name is not supported |
 | Datetime | For OData 4: a plain value (for example, `2021-12-31`). For OData 3: Preceded with `datetime` and enclosed in single quotes (for example, `datetime'2021-12-31'` or `datetime'<epoch value here>'`) |
 | Other | Plain value (for example, 15) |
 
@@ -163,7 +163,7 @@ The body must adhere to *URL encoding* principles. So, for instance, spaces, tab
 
 ## 10 Updating Objects {#updating-objects}
 
-### 10.1 Updating attributes
+### 10.1 Updating Attributes
 
 When a published resource has the [Updatable](/refguide/published-odata-resource/#capabilities) capability, clients can update its attributes and associations by sending a `PATCH` request to the URL of the object (for example, `PATCH /odata/myservice/v1/Employees(8444249301330581)`).
 
@@ -177,7 +177,7 @@ Specify new values for attributes in the body of the request. Here is an example
 }
 ```
 
-### 10.1.1 Updating attributes with enumeration type
+### 10.1.1 Updating Attributes of Enumeration Type
 
 Attributes of an enumeration type can be updated by specifying the exposed value of the enumeration, without the prefix of the enumeration type, in the body of the `PATCH` request.
 For an attribute of type `Country` with values `MyModule.Country.FR`, `MyModule.Country.BR` and `MyModule.Country.JP`, exposed as `France`, `Brazil`, and `Japan` respectively, you can update your object as follows:

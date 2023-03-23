@@ -36,7 +36,7 @@ for dirListItem in dirList_1:
             fullSearch = re.findall(fullAttachmentRefSearch,line)
             if fullSearch != []:
                 for searchitem in fullSearch:
-                    # Creates a dictionary for file with aliases
+                    # Creates a dictionary for file with attachments
                     itemDict = {"File path": relFilePath, "File name": dirListItem.name, "Attachment Link": searchitem}
                     # Appends each dictionary to attachmentList
                     attachmentList.append(itemDict)                    

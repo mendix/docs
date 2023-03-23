@@ -91,7 +91,7 @@ A **Published Business Event Service** contains a definition of the business eve
 When deploying an app with one or more **Published Business Event** services, channels will be created in the Mendix Event Broker for every event part of the service. (This works similarly to how tables are created in a database for persistable entities.) If you reuse a module with published events in multiple apps, multiple independent channels will be created. Apps interested in receiving events will need to subscribe to every event or channel independently. 
 {{% /alert %}}
 
-To receive or consume business events, an application needs to subscribe to one or more business events and define which microflow is responsible for handle the event received. This is done in a reliable way: if the receiving app is unavailable the event will be delivered once the app is available. If the microflow handling the event fails, it will be retried.
+To receive or consume business events, an application needs to subscribe to one or more business events and define which microflow is responsible for handling the received event. This is done in a reliable way: if the receiving app is unavailable the event will be delivered once the app is available. If the microflow handling the event fails, it will be retried.
 
 #### 4.1.2 Create a Consumed Business Event Service {#consume-be}
 

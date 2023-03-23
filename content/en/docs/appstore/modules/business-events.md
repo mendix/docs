@@ -204,7 +204,7 @@ After following the instructions [Using an Existing Business Event Service](#two
 
 ##### 4.2.2.1.1 Automatically Created Event Handler Microflow and Entity
 
-When you click **Add** to add the events from the Contract into your module, Studio Pro will automatically create an entity within your domain model and an **Event Handler** microflow (**Handle_BE**) to manage the flow of the Event after delivery. The **Event Handler** microflow is created in the same directory as your service.
+When you click **Add** to add the events from the document into your module, Studio Pro will automatically create an entity within your domain model and an **Event Handler** microflow (**Handle_BE**) to manage the flow of the event after delivery. The **Event Handler** microflow is created in the same directory as your service.
 
 ### 4.3 Modelling with Business Events (All Supported Studio Pro Versions)
 

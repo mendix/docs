@@ -12,11 +12,11 @@ The **Edit published attribute** dialog allows you to edit the properties of an 
 
 # 2 General
 
-## 2.1 Exposed name
+## 2.1 Exposed Name
 
 The exposed name is the name of the attribute as it appears to clients of the service.
 
-## 2.2 Can be empty
+## 2.2 Can Be Empty
 
 Select this box if there is a possibility for this attribute the have an empty value. One way to make sure no empty values are created in the database is to add a required [validation rule](/refguide/validation-rules/).
 
@@ -34,7 +34,7 @@ The attribute that is being published. This value cannot be changed; to publish 
 
 The type of the attribute.
 
-## 2.6 Exposed as
+## 2.6 Exposed As
 
 This field is shown when the type is an enumeration that was previously exposed as a string, and only for OData version 4. Change the value to **Enumeration** to publish the enumeration. This informs clients of the possible values of this attribute.
 
@@ -48,6 +48,6 @@ Select **Sortable** to allow clients to sort results based on this attribute.
 
 Select **Filter** to allow clients to filter results based on this attribute.
 
-# 3 Public documentation
+# 3 Public Documentation
 
 In the **Public documentation** tab, you can write a summary and a description intended for people using the service.

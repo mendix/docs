@@ -151,6 +151,13 @@ When the **Send Studio Pro usage data to Mendix** setting is enabled, Studio Pro
 This functionality is currently available in Studio Pro 9.22 or above.
 {{% /alert %}}
 
+### 6.2 Rendering
+Sometimes hardware and driver issues cause performance problems when running Studio Pro. These issues can manifest in form of dialogs opening and closing much slower than expected, and general sluggishness of the UI. In case the hardware problems cannot be solved, it is possible to mitigate these issues by turning the **Enable software rendering mode** setting on. Enabling this setting will require a restart of Studio Pro to take effect. Running the application with this setting on may increase the CPU usage.
+
+{{% alert color="info" %}}
+This functionality is currently available in Studio Pro 9.24 or above.
+{{% /alert %}}
+
 ## 7 Work Environment Tab
 
 ### 7.1 Default Page Editor {#default-page-editor}

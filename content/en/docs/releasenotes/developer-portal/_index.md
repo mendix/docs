@@ -17,6 +17,17 @@ To see the current status of the Mendix Developer Portal and Control Center, see
 
 ## 2023
 
+### March 23rd, 2023
+
+#### Improvements
+
+* After the big overhaul we released on [February 13th](#feb-13-23), our logging showed a decrease in the overall performance of [Stories](/developerportal/collaborate/stories/). We took some counter-measures and made performance improvements.
+* We made some minor improvements to the flow for [inviting app team members](/developerportal/collaborate/team/#inviting). For example, when you invite someone new to your app, the default role will be **Business Engineer** (as long as this role exists in your app).
+* We made some improvements to the layout of the [App Buzz](/developerportal/collaborate/buzz/#app-buzz) page so that it displays better on small screen resolutions.
+* The left-hand app context menu is now collapsible, which makes for a far better experience on small screen resolutions.
+* In preparation for the [merging of Studio and Studio Pro](https://www.mendix.com/blog/coming-in-2023-the-merging-of-studio-and-studio-pro/), we removed the **Edit in Studio** button. You can still open your app in Studio via the ellipsis (**…**) in the [app tile](/developerportal/#my-apps) on the **My Apps** page.
+* We are preparing the Developer Portal for a brand new feedback experience. Please stay tuned!
+
 ### March 16th, 2023
 
 #### Improvements
@@ -70,7 +81,7 @@ For more information on security issues, see [Security Advisories](/releasenotes
 * We fixed an issue in **Epics** where the unsaved changes pop-up window did not take you to the correct story after clicking **Leave**.
 * We updated the text in the [notifications](/developerportal/#notifications) when a story is assigned to you in **Epics**.
 
-### February 13th, 2023
+### February 13th, 2023 {#feb-13-23}
 
 #### Improvements
 

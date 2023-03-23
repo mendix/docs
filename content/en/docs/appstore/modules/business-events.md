@@ -99,7 +99,7 @@ To start consuming a business event contract, you first need to create a **Consu
 
 1. Right-click on the module folder, hover over **Add other**, then click **Consumed Business Event Service**.
 2. Provide the name for your service.
-3. Import a AsyncAPI service contract. Click **Browse** and select the YAML file (created in the [Create a Published Business Event Service](#create-be) step). This will make subscriptions to business events available for you to start mapping to entities within your consuming application.
+3. Import an AsyncAPI service contract. Click **Browse** and select the YAML file (created in the [Create a Published Business Event Service](#create-be) step). This will make subscriptions to business events available for you to start mapping to entities within your consuming application.
 4. Click **OK**.
 
 {{< figure src="/attachments/appstore/modules/business-events/subscriptions-available-2.png" >}}

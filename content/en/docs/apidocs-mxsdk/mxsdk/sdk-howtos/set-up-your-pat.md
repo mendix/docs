@@ -2,6 +2,8 @@
 title: "Set Up your Personal Access Token (PAT)"
 url: /apidocs-mxsdk/mxsdk/set-up-your-pat/
 weight: 11
+aliases:
+    - /apidocs-mxsdk/mxsdk/setup-your-pat/
 ---
 
 ## 1 Introduction

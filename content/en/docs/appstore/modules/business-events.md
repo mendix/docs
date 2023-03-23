@@ -123,7 +123,7 @@ The handler microflow attached to it triggers each event where you can build you
 
 #### 4.1.4 Migrating Business Event Apps to Studio Pro 9.24 and Above {#migrate-two-way-be}
 
-Upgrade your apps to Studio Pro [9.24](/releasenotes/studio-pro/9.24/) and above to enjoy the most recent business event behavior. If you upgrade, the following happens:
+Upgrade your apps to Studio Pro [9.24](/releasenotes/studio-pro/9.24/) and above to enjoy the most recent business event behavior. When you upgrade, the following happens:
 
 * [Published business event](/refguide/business-event-services/#published-event-service-doc) service documents are converted to created business event service documents.
      * The created service document allows it to publish events.

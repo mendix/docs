@@ -164,7 +164,7 @@ To enable Mendix SSO in your app, follow these steps:
     2. Go to the **theme/web** folder (for Mendix versions below 9.0.0 this will be the **theme** folder).
     3. Rename *login.html* to  *login-without-sso.html*.
     4. Rename *login-with-mendixsso-button.html* or *login-with-mendixsso-automatically.html* to *login.html*. The differences between two versions of the file which you can use to replace `login.html` are as follows:
-        * `login-with-mendixsso-button.html` – adds a button to the standard sign in page which the end user can click to initiate the single sign-on process — this gives the end user the possibility to sign in using a user name and password if desired
+        * `login-with-mendixsso-button.html` – adds a button to the standard sign in page which the end-user can click to initiate the single sign-on process — this gives the end-user the possibility to sign in using a user name and password if desired
         * `login-with-mendixsso-automatically.html` – automatically initiates the single sign-on process without needing to click a button
 
 Your app is now configured to use Mendix Single Sign-on when it is deployed to the Cloud.

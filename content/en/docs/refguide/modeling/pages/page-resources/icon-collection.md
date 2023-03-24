@@ -52,9 +52,11 @@ F16E0;abacus;Calculation
 F1328;abjad-arabic;Alphabet, Language
 ```
 
-Easy ways of getting your font data into this format is by either using a text manipulation software like VSCode or creating an Excel sheet and saving it as a *.csv* file.
+{{% alert color="info" %}}
+You can easily convert your font data into this format is by either using a text manipulation software like VSCode or creating an Excel sheet and saving it as a *.csv* file.
+{{% /alert %}}
 
-After loading the data from a file or clipboard you will see a preview of the data before it is applied. Make sure to check the list, as it will also mention any potentials problems that cause a specific line to be ignored.
+After loading the data from a file or your clipboard, you will see a preview of the data before it is applied. Make sure to check the list, as it will also mention any potential problems that might cause a specific line to be ignored:
 
 {{< figure src="/attachments/refguide/modeling/pages/page-resources/icon-collection/excel.png" alt="Editing Icon Data in an Excel sheet" >}}
 
@@ -62,21 +64,29 @@ After loading the data from a file or clipboard you will see a preview of the da
 
 ### 3.3 Configure
 
-A CSS stylesheet is automatically generated for your icon collection. The **Configure** button allows you to change settings that affect the generated CSS classes. This is not required, but is recommended. There are two values that can be configured:
+A CSS stylesheet is automatically generated for your icon collection. The **Configure** button allows you to change settings that affect the generated CSS classes. This is not required, but is recommended. There are two values that can be configured: collection class and prefix.
 
 #### 3.3.1 Collection Class
 
-This is a CSS class that represents the entire icon collection. This must either be a valid CSS class name or be left blank. To ensure the collection class is a valid CSS class, it must start with a letter or underscore and can only contain letters, numbers, hyphens, and underscores. When left blank, one will be generated based on the name of the icon collection.
+This is a CSS class that represents the entire icon collection. This must either be a valid CSS class name or be left blank. 
+
+To ensure the collection class is a valid CSS class, it must start with a letter or underscore and can only contain letters, numbers, hyphens, and underscores. 
+
+If this field is left blank, a collection class will be automatically generated based on the name of the icon collection.
 
 #### 3.3.2 Prefix
 
-The prefix will be used together with the icon name to generate a unique CSS class for each icon in the icon collection. To ensure the prefix results in a valid CSS class, it must start with a letter or underscore and can only contain letters, numbers, hyphens, and underscores. When left blank, one will generated based on the name of the icon collection.
+The prefix will be used together with the icon name to generate a unique CSS class for each icon in the icon collection. 
+
+To ensure the prefix results in a valid CSS class, it must start with a letter or underscore and can only contain letters, numbers, hyphens, and underscores. 
+
+If this field is left blank, a prefix will generated based on the name of the icon collection.
 
 ### 3.4 Delete
 
 The **Delete** button removes selected icons from the icon collection. You will be warned if the icons are used elsewhere in the app.
 
-Deleting the icon will not remove it from the font file.
+Deleting an icon will not remove it from the font file.
 
 ### 3.5 Find Usages
 
@@ -84,7 +94,7 @@ Located in **Find Results**, the **Find usages** button displays all the places 
 
 ## 4 Renaming and Tagging Icons
 
-The name and tags column of the icon collection are editable and allow you to directly change these values of any icon.
+The name and tags columns of the icon collection are editable and allow you to directly change these values of any icon.
 
 The name of the icon will be used to generate a CSS class. To ensure the icon name results in a valid CSS class, it must start with a letter or underscore and can only contain letters, numbers, hyphens or underscores.
 
@@ -112,4 +122,4 @@ In some cases the generated CSS classes of an icon changes and you will have to 
 
 To prevent issues from occurring, we recommend configuring the icon collection and naming all icons before you start using them directly in your styling. Afterwards, do not make any further changes.
 
-Icon tags do not affect the generated CSS styling. This means that you are always able to edit, remove or update icon tags, even after you have started using your icons directly in your styling.
+Icon tags do not affect the generated CSS styling. Thus, you are always able to edit, remove, or update icon tags even after you have started using your icons in your styling.

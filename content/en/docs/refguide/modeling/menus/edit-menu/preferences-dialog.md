@@ -148,15 +148,15 @@ Sometimes the computer running Studio Pro cannot access the internet directly, b
 When the **Send Studio Pro usage data to Mendix** setting is enabled, Studio Pro sends usage data to Mendix that allows Mendix to identify issues and improve the user experience. The usage data does not contain sensitive information. It is possible to disable this feature, but it may affect the behavior of some features, prevent Mendix from identifying issues reported by the user, or affect tracking issues that are not reported yet. This setting is machine-specific and changing this feature does not affect any existing installed version.
 
 {{% alert color="info" %}}
-This functionality is currently available in Studio Pro 9.22 or above.
+This functionality is currently available in Studio Pro 9.22 and above.
 {{% /alert %}}
 
-### 6.2 Rendering
+### 6.2 Rendering {#rendering}
 
 Hardware and driver issues may cause performance problems when running Studio Pro. These issues can appear in form of dialogs opening and closing much slower than expected, and general slowness of the UI. In case the hardware problems cannot be solved, it is possible to mitigate these issues by turning the **Enable software rendering mode** setting on. Enabling this setting requires a restart of Studio Pro to take effect. Running the application with this setting on may increase the CPU usage.
 
 {{% alert color="info" %}}
-This functionality is currently available in Studio Pro 9.24 or above.
+This functionality is currently available in Studio Pro 9.24.
 {{% /alert %}}
 
 ## 7 Work Environment Tab

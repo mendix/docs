@@ -64,9 +64,9 @@ The level of support depends on the availability and effort of the developer and
 
 | Support Category  | Standard/Premium SLA | Platform SLA | No SLA |
 | --- | --- | --- | --- |
-| Platform support | [Mendix Support](https://support.mendix.com/)   | [Mendix Support](https://support.mendix.com/) | Mendix community |
+| Platform | [Mendix Support](https://support.mendix.com/)   | [Mendix Support](https://support.mendix.com/) | Mendix community |
 | Deprecated | [Mendix Support (Limited)](https://support.mendix.com/) (for more information, see the [Deprecated Support Category](#deprecated) section above) | [Mendix Support (Limited)](https://support.mendix.com/) (for more information, see the [Deprecated Support Category](#deprecated) section above) | Mendix community |
-| Community support | Mendix community | Mendix community | Mendix community |
+| Community | Mendix community | Mendix community | Mendix community |
 
 ## 3 Read More
 

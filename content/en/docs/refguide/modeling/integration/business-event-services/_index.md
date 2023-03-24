@@ -8,9 +8,9 @@ tags: ["studio pro", "consumed business event", "published business event"]
 
 ## 1 Introduction
 
-Studio Pro [9.18](/releasenotes/studio-pro/9.18/) and above integrates with Mendix Business Events module functionality. With the [Mendix Business Events](/appstore/modules/business-events/) module, applications can signal when something important happens, and can independently subscribe to these events if they want to be informed. Business events are like a mailing list to share event notifications between apps.
+Studio Pro [9.18](/releasenotes/studio-pro/9.18/) and above integrates with Mendix Business Events module functionality. With the [Mendix Business Events](/appstore/modules/business-events/) module, applications can signal when something important happens, and can subscribe to these events if they want to be informed. Business events are like a mailing list to share event notifications between apps.
 
-This page references the **Business Event Service** documents in Studio Pro, part of the larger business events functionality. See [Mendix Business Events](/appstore/modules/business-events/) for the complete documentation. 
+This page references the **Business Event Service** documents in Studio Pro. See [Mendix Business Events](/appstore/modules/business-events/) for the complete documentation. 
 
 {{% alert color="warning" %}}
 You must have the [Mendix Business Events](https://marketplace.mendix.com/link/component/202649) module installed for it to work properly. If it is not installed, you will be prompted to download it and add it to your app.
@@ -18,9 +18,9 @@ You must have the [Mendix Business Events](https://marketplace.mendix.com/link/c
 
 ### 2 Business Event Service Documents
 
-The **Business Event Service** document in Studio Pro appears in your app when you create a business event service.
+The **Business Event Service** document is added to your app in Studio Pro when you create a business event service.
 
-The service documents themselves, and way to create a business event service, differe depending on which version of Studio Pro you are using. 
+The service documents themselves, and way to create a business event service, differ depending on which version of Studio Pro you are using. 
 
 #### 2.1 Business Event Services in Studio Pro 9.18 through 9.23
 

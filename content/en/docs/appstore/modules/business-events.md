@@ -73,11 +73,11 @@ Usage and user experience differs depending on which versions of Studio Pro you 
 Studio Pro 9.18 through 9.23 support the first experience of business events, sometimes called *one way* business events. In these versions, business events are published by an app, and one or more apps consume, or subscribe to, the events.
 
 {{% alert color="info" %}}
-If you are modelling with Studio Pro 9.24 and above, skip down to [Creating a Service, and Sending/Receiving Business Events in Studio Pro 9.24](#two-way-be).{{% /alert %}}
+If you are running with Studio Pro 9.24 and above, skip down to [Creating a Service, and Sending/Receiving Business Events in Studio Pro 9.24](#two-way-be). For modelling with any version, see [Modelling with Business Events](#be-modelling).{{% /alert %}}
 
 #### 4.1.1 Creating a Published Business Event Service {#create-be}
 
-A **Published Business Event Service** contains a definition of the business events provided by this service. A contract can be exported from the published service, to inform other developers what the published business event service provides. This is an AsyncAPI document, similar to a OpenAPI or WSDL contract.
+A **Published Business Event Service** contains a definition of the business events provided by this service. A document can be exported from the published service, to inform other developers what the published business event service provides. This is an AsyncAPI document, similar to a OpenAPI or WSDL contract.
 
 1. Right-click on the module folder, hover over **Add other**, and click **Published Business Event Service**.
 2. Provide the name for your service and **OK** to create it.
@@ -112,7 +112,7 @@ There are two ways to subscribe to, or consume a specific business event:
 
 ##### 4.1.3.1 Automatically Created Event Handler Microflow and Entity
 
-When you click **Add** to add the events from the Contract into your module, Studio Pro will automatically create an entity within your domain model and an **Event Handler** microflow to manage the flow of the Event after delivery. The **Event Handler** microflow is created in the same directory as your service.
+When you click **Add** to add the events from the AsyncAPI document into your module, Studio Pro will automatically create a **persistable** consumed entity within your domain model, and an **Event Handler** microflow to manage the flow of the Event after delivery. The **Event Handler** microflow is created in the same directory as your service.
 
 You can use the payload of the event as an entity:
 {{< figure src="/attachments/appstore/modules/business-events/payload-event-entity-2.png" >}}
@@ -132,10 +132,10 @@ Upgrade your apps to Studio Pro [9.24](/releasenotes/studio-pro/9.24/) and above
 
 ### 4.2 Using Business Events (Studio Pro 9.24 and Above) {#two-way-be}
 
-Studio Pro 9.24 and above supports newer behavior of business events, sometimes called *two way* business events. In these versions, business events are published by an app, and one or more apps consume, or subscribe to, the events.
+Studio Pro 9.24 and above supports newer behavior of business events, sometimes called *two way* business events. In these versions, business events are published by an app, and one or more apps consume, or subscribe to, the events. A publisher can also consume a business event of some other publishing app, and a subscriber can publish a business event to another app.
 
 {{% alert color="info" %}}
-If you are modelling in Studio Pro 9.18 through 9.23, go back up to [Publishing and Consuming Business Events in Studio Pro 9.18 through 9.23](#one-way-be), or learn how [migrating business event apps](#migrate-two-way-be) to Studio Pro 9.24 and above works.{{% /alert %}}
+If you are modelling in Studio Pro 9.18 through 9.23, go back up to [Publishing and Consuming Business Events in Studio Pro 9.18 through 9.23](#one-way-be), or learn how [migrating business event apps](#migrate-two-way-be) to Studio Pro 9.24 and above works. For modelling with any version, see [Modelling with Business Events](#be-modelling).{{% /alert %}}
 
 #### 4.2.1 Creating a New Business Event Service {#two-way-be-create}
 
@@ -178,16 +178,16 @@ Under *Other apps can*, you can select how other apps can use the service. *This
 
 3. Click **Done** to exit the wizard and view the defined service document. 
 
-**Export AsyncAPI Document** exports the YAML file of the business event contract so that other apps can [use your newly created service](#two-way-be-existing).
+**Export AsyncAPI Document** exports the YAML file of the business event service so that other apps can [use your newly created service](#two-way-be-existing).
 
 #### 4.2.2 Using an Existing Business Event Service {#two-way-be-existing}
 
-To use an existing business service [created by another app](#two-way-be-create), do the following:
+To use an existing business service in Studio Pro 9.24 and above, do the following:
 
 1. Right-click on the module folder, hover over **Add other**, then click **Business Event Service**.
 2. Select **Use an existing business event service**.
 3. Click **Browse** and navigate to the YAML file you [exported from the publishing app]().
-4. Enter a **Document name** for the [business event service document](/refguide/business-event-services/).
+4. Enter a **Document name**, or use the default name, for the [business event service document](/refguide/business-event-services/).
 5. Click **OK**.
 
 The business event service document is open in Studio Pro:
@@ -203,9 +203,13 @@ After following the instructions [Using an Existing Business Event Service](#two
 
 ##### 4.2.2.1.1 Automatically Created Event Handler Microflow and Entity
 
-When you click **Add** to add the events from the document into your module, Studio Pro will automatically create an entity within your domain model and an **Event Handler** microflow (**Handle_BE**) to manage the flow of the event after delivery. The **Event Handler** microflow is created in the same directory as your service.
+When you click **Add** to add the events from the document into your module, Studio Pro will automatically create a **persistable** consumed entity within your domain model and an **Event Handler** microflow (**Handle_BE**) to manage the flow of the event after delivery. The **Event Handler** microflow is created in the same directory as your service. 
 
-### 4.3 Modelling with Business Events (All Supported Studio Pro Versions)
+Currently, we don’t support multiple subscribers to the same business event within the same app.
+
+### 4.3 Modelling with Business Events (All Supported Studio Pro Versions) {#be-modelling}
+
+Once you have created a service in [Studio Pro 9.18 through 9.23](#one-way-be) or [Studio Pro 9.24 and above](#two-way-be), you can start modelling with them in your app.
 
 Business events are defined using entities specializing the **PublishedBusinessEvent** entity that is included in the Mendix Business Events module. 
 
@@ -219,7 +223,12 @@ The text with the blue background above the entity tells you that it is a specia
 
 #### 4.3.1 Using the Publish Business Event Activity
 
-After defining your business events, and adding them to a published service, you can publish the events in your microflows whenever a noticeable event occurs. You do this using the **Publish business event** activity:
+After defining your business events, and adding them to a published service, you can publish the events in your microflows whenever a noticeable event occurs. 
+
+{{% alert color="info" %}}
+A microflow needs to be triggered somewhere in order to publish a business event. {{% /alert %}}
+
+Do this using the **Publish business event** activity:
 
 1. Open the microflow in which the business events will be published.
 2. Create an object of the business events you want to publish.
@@ -243,11 +252,11 @@ The **PublishedBusinessEvent** and **ConsumedBusinessEvent** entities are necess
 * **PublishedBusinessEvent**: This non-persistable entity has the fields settings that every published event will include. Every published business event will inherit from this entity. The three fields can be set from the Java Action. This is used to define what your published business events look like.
 * **ConsumedBusinessEvent**: This entity has the fields that every consumed event will include. Every consumed business event will inherit from this entity. These fields will be set from the module, as will any additional fields that match with the payload of the event. This defines what you want to receive from the business events you subscribe to.
 * **DeadLetterQueue**: This persistent entity within the Domain Model of the Business Events Module is used for generating a historical record of events that are generated for business event activities that were not successful or had errors when received by the consumer and can be referred to for troubleshooting. You can query the DeadLetterQueue entity to determine which received events could not be processed.
-* **Outbox**: This entity is used to store the event prior to being sent.  This entity is connected to the microflow where a Business event is triggered.  If the microflow fails, the entity will be removed as part of the same transaction. If the event broker is down at runtime, business events will accumulate in the **Outbox**. They will be retried at increasing intervals for 48 hours, and they will fail after that time.
+* **Outbox**: This entity is used to store the event prior to being sent.  This entity is connected to the microflow where a Business event is triggered.  If the microflow fails, the entity will be removed as part of the same transaction. If the event broker is down at runtime, business events will accumulate in the **Outbox**. They will be retried at increasing intervals for 48 hours, and they will fail after that time. Once an event is successfully delivered, it gets deleted from the **Outbox**.
 
 #### 4.3.4 Dead Letter Queue for Failed Messages {#dead-letter-queue}
 
-Every time a business event is received, it is transformed to match the Entity created as part of the Subscription. When the Entity within the Business Event has changed based on the imported contract, it can render the Entity unable to be processed. In such a scenario the Business Event will fail into a **Dead Letter Queue** which contains the representation of the Entity within the data column.
+Every time a business event is received, it is transformed to match the Entity created as part of the Subscription. When the Entity within the Business Event has changed based on the imported AsyncAPI doucment, it can render the Entity unable to be processed. In such a scenario the Business Event will fail into a **Dead Letter Queue** which contains the representation of the Entity within the data column.
 
 The most important fields in this entity to be checked when there are errors include the following:
 
@@ -278,6 +287,8 @@ Once a license is purchased, a Technical Contact must enable the Event Broker Se
 
 1. On the App level, under Environments > [Services](/developerportal/deploy/environments/#services)
 2. On the [Environment Details](/developerportal/deploy/environments-details/#services) page, for each environment
+
+The event broker must be enabled on both the *App* and specific *Environment* levels in order to use the event broker services.
 
 ### 5.2 Managing the Mendix Event Broker {#manage-mx-broker}
 

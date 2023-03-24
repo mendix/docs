@@ -61,4 +61,6 @@ for file in dirList_2:
             break
     # Delete files that are in dirList2 and not in the attachment list
     if deleteFlag is True:
-        pathlib.Path.unlink(file)
+        # Make sure that it is not a directory
+        if pathlib.Path.is_file(file):
+            pathlib.Path.unlink(file)

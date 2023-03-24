@@ -8,7 +8,7 @@ tags: ["studio pro", "snippet", "page resources"]
 
 ## 1 Introduction
 
-Snippets define reusable interface parts. They can be used on [pages](/refguide/page/), [layouts](/refguide/layout/) and even other snippets. By using snippets you can make changes in fewer places when you modify the interface. For example, you can have a snippet that is used both in the contents area of a template grid and in a data view. If you change something in the snippet, that change will show up in both places.
+Snippets define reusable interface parts. They can be used on [pages](/refguide/page/), [layouts](/refguide/layout/) and even other snippets. By using snippets, you can make changes in fewer places when you modify the interface. For example, you can have a snippet that is used both in the contents area of a template grid and in a data view. If you change something in the snippet, that change will show up in both places.
 
 There are two ways to create a snippet:
 
@@ -94,7 +94,7 @@ The table showing the snippet parameters has the following columns:
 * **Type** — the type of the snippet parameter.
 * **Substitute for** — the elements in the original document for which the snippet parameter is substituted in the extracted snippet.
 
-The names of the snippet parameters can be changed as long as they are unique and not already used in the extracted content. The order of the parameters can also be changed.
+The names of the snippet parameters can be changed only if they are unique and not already used in the extracted content. The order of the parameters can also be changed.
 
 Clicking **OK** will create the new snippet and replace the extracted widget in the original document with a snippet call. The **Snippet settings** of the call are automatically configured to pass the correct object to each snippet parameter. In the extracted snippet, references to the original objects are rewritten to refer to a snippet parameter instead. For example, a conditional visibility expression could be rewritten as shown in the following side-by-side comparison:
 

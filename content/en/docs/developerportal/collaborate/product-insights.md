@@ -84,15 +84,23 @@ Clicking the mini-survey in a row on the list shows its [survey details](#survey
 
 #### 2.1.3 Settings Tab {#settings}
 
-On the **Settings** tab of **Survey Overview**, you can generate a Survey API Key & enable Test Mode for project members.
+On the **Settings** tab of **Survey Overview**, you can enable test mode, and view or generate API keys.
 
-**API Keys** Generate an API key if there is not one available. You need to use the API key as input when you configure the App Insights – Mini-Surveys module in Studio Pro to implement the mini-survey. You need only one API key per app.
+*  **Test Mode - For All Users** – After you enable this test mode, all users will become the testers of your survey. They will see the survey every time it is triggered. Their responses will not be saved, and therefore will not pollute the true survey results. You can view their responses on the [Test data](#test-data) tab of the survey details page. 
+    
+    * To enable this test mode, open your app in Studio Pro. In the **App Explorer**, go to  **Marketplace modules > AppInsights_MiniSurvey > _SETUP > 2. Set API Key & mode.**, and set the **TEST_MODE** constant to **True**.
+    
+*  **Test Mode - For Project Members** – After you enable this test mode, all team members of the app will become the testers of your survey. They will see the survey every time it is triggered. Their responses will not be saved, and therefore will not pollute the true survey results. You can view their responses on the [Test data](#test-data) tab of the survey details page.
 
-**Test Mode - For All Users**,  This can only be enable using the TEST_MODE constant in the module in your App. You can find this in your App at Marketplace modules > AppInsights_MiniSurvey > _SETUP > 2. Set API Key & mode. The results are collected in the [Test data](#test-data) tab of the survey details page and will not pollute your main Survey Data collection. 
+    {{% alert color="info" %}}This test mode only works for app team members who are authenticated through Mendix SSO.{{% /alert %}} 
 
-**Test Mode - For Project Members**, which marks the app team members as testers. Testers see the survey every time it is triggered, and their responses are not saved. You can view all the test data on the [Test data](#test-data) tab of the survey details page.
+    * To enable this test mode, select **Yes** for **Test Mode - For Project Members** here.
 
-{{% alert color="info" %}}If an app team member is not authenticated through Mendix SSO, this setting does not work for them.{{% /alert %}} 
+* **API Keys** – You can view API keys here, or generate an API key if there is none available. You need to use the API key as input when you configure the App Insights – Mini-Surveys module in Studio Pro to implement the mini-survey. You need only one API key per app.
+
+    *  To generate an API key, click **Generate API Key** here.
+    *  To view an existing API key, click the eye icon in the **View** column in the table.
+
 
 ### 2.2 Survey Details {#survey-details}
 
@@ -189,11 +197,10 @@ Before the start time of the mini-survey is reached, you should implement the su
 
 To obtain an API key for the implementation, follow these steps:
 
-1. On the [Survey Overview](#survey-overview) page, click the settings tab.
-
-2. The [App Insights Settings](#product-insights-settings) page opens:
-
-    * If there is already an active API key, it is shown on the list. If it is suitable to use, click **View** to show the API key, then copy it and save it for later use.
+1. On the [Survey Overview](#survey-overview) page.
+2. Go to the [Setting](#settings) tab.
+3. Check the **API Keys** section:
+    * If there is already an active API key, it is shown on the table. If it is suitable to use, click **View** to show the API key, then copy it and save it for later use.
     * If there is no active API key that you can use, generate one as follows:
 
         1. Click **Generate API Key**.

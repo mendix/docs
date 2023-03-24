@@ -84,7 +84,7 @@ Clicking the mini-survey in a row on the list shows its [survey details](#survey
 
 #### 2.1.3 Settings Tab {#settings}
 
-On the **Settings** tab of **Survey Overview**, you can enable test mode, and view or generate API keys.
+On the **Settings** tab of **Survey Overview**, you can enable the test mode, and view or generate API keys.
 
 *  **Test Mode - For All Users** – After you enable this test mode, all users will become the testers of your survey. They will see the survey every time it is triggered. Their responses will not be saved, and therefore will not pollute the true survey results. You can view their responses on the [Test data](#test-data) tab of the survey details page. 
     

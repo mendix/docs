@@ -132,9 +132,11 @@ Follow these steps to describe your content:
 
 #### 4.2.2 Providing License Details {#license}
 
-Select the type of **License** you want applied to your app (if applicable). The lists and tables below describe the different considerations and requirements for these licenses.
+Select the type of **License** you want applied to your app (if applicable).
 
-These are the open-source software licenses and requirements available:
+##### 4.2.2.1 Open-Source Software Licenses
+
+These are the open-source software license options available and their requirements:
 
 | | **Notes** | **Commercial use allowed?** | **Component code needs to be in public repo?** | **License text required with copyright info in code and distribution artifact?** | **Can modify?** (Mention modifications to code) | **Can consuming apps use without making their code public?** | **Notice files should be distributed with artifact?** | **Original component source code to be distributed with consuming app?** | **Can sub-license?** |
 | --- | --- | --- | --- | --- | --- | --- |  --- | --- | --- |
@@ -147,6 +149,10 @@ These are the open-source software licenses and requirements available:
 {{% alert color="info" %}}
 The [GNU General Public License (GPL), version 3](https://www.gnu.org/licenses/gpl-3.0.en.html)  is not available to use, as everything licensed under GNU GPL is public; GNU GPL has a strong copyleft effect; modification has a strong copyleft effect; and all consuming apps should make their code public.
 {{% /alert %}}
+
+##### 4.2.2.2 Partner Licenses
+
+If you participate in the [Mendix Component Partner Program](/appstore/creating-content/partner-program/), you can offer your own commercial license for your content.
 
 #### 4.2.3 Generating New Leads {#lead-generation}
 

@@ -4,7 +4,7 @@ url: /refguide/moving-from-8-to-9/
 category: "General Info"
 weight: 20
 description: "Provides details on updating your app from Mendix 8 to Mendix 9, including sections on converting your app and deprecated features."
-tags: ["studio pro", "studio"]
+tags: ["studio pro", "studio", "upgrade"]
 ---
 
 ## 1 Introduction

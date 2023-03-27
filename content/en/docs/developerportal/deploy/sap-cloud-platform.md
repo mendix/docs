@@ -103,13 +103,9 @@ You will be able to choose a Domain, Organization, and Space which is configured
 
 If you do not choose a Custom database, you will still be able to choose from a range of different databases, PostgreSQL, Hyperscaler Option and SAP HANA for example. Please ensure that the database you choose is supported by your quota plan for this region and organization. See [Databases in SAP BTP](#databases), below, for important information on selecting the correct database for your app.
 
-If you select **Yes** for **Custom database?**, you will be asked for the Name and the Plan.
+If you select **Yes** for **Custom database?**, you will be asked for the **Name** and the **Plan**.
 
-After the environment has been created successfully, you will see the following page:
-
-{{< figure src="/attachments/developerportal/deploy/sap-cloud-platform/02-sap-configured-for-use.png" >}}
-
-Your development environment is now configured and you can now develop your app.
+After the environment has been created successfully, you will see a confirmation message. Your development environment is now configured and you ca develop your app.
 
 ## 3 Create a New Environment{#NewEnvironment}
 

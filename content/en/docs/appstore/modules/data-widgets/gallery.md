@@ -51,7 +51,7 @@ Defines the amount of data shown for each page or the limit to be presented when
 
 #### 2.3.2 Pagination
 
-You can choose between paging buttons (button being presented below or above the grid) or virtual scrolling (mechanism that automatically loads data when the users reaches the bottom of the scrollbar). 
+You can choose between paging buttons (button being presented below or above the grid) or virtual scrolling (mechanism that automatically loads data when the users reaches the bottom of the scroll bar). 
 
 #### 2.3.3 Position of Paging Buttons
 

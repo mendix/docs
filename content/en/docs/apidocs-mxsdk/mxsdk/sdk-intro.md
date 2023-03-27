@@ -24,7 +24,7 @@ For more information, see [Importing Legacy Code](/apidocs-mxsdk/mxsdk/sdk-use-c
 
 ### 1.1 Mendix Platform SDK
 
-The Mendix Platform SDK allows you to work at the app level. Currently, the Mendix Platform SDK implements the following functionality: 
+The [Mendix Platform SDK](https://apidocs.rnd.mendix.com/platformsdk/latest/index.html) allows you to work at the app level. Currently, the Mendix Platform SDK implements the following functionality: 
 
 * Create a new app
 * Delete an app
@@ -34,7 +34,7 @@ The Mendix Platform SDK allows you to work at the app level. Currently, the Mend
 
 ### 1.2 Mendix Model SDK
 
-With the Mendix Model SDK, you can read, modify, and analyze every metamodel element of your app model. This includes domain models, microflows, pages, integrations (consumed and published web services), Java actions, custom widgets, security constraints, and so on. Anything you can access with Studio Pro, and all the technical details we abstract away in the UI, are part of the app model.
+With the [Mendix Model SDK](https://apidocs.rnd.mendix.com/modelsdk/latest/index.html), you can read, modify, and analyze every metamodel element of your app model. This includes domain models, microflows, pages, integrations (consumed and published web services), Java actions, custom widgets, security constraints, and so on. Anything you can access with Studio Pro, and all the technical details we abstract away in the UI, are part of the app model.
 
 When analyzing app models you get a lot of power: you can access every tiny detail in the model so that you can reason about the entire model, analyze it for quality, or export it completely.
 

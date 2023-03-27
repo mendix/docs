@@ -35,7 +35,6 @@ These tabs are only available for users with the **App Settings** permission:
 * **Cloud Settings**
 * **API Keys**
 * **Project Management**
-* **Webhooks**
 * **History**
 
 ## 2 General {#general}
@@ -58,7 +57,7 @@ Only users with the **App Settings** permission can change the description of th
 
 On the **Access Management** tab, you can manage and invite app users. App users are end-users who can access the deployed app on specific environments. They can use and test your deployed app, and provide feedback.
 
-To manage users or invite users for an app deployed on a specific environment, click **Mange Users** or **Invite Users** for that environment. For more information, see the [Mange Users](#manage-users) and [Invite Users](#invite-users) section below.
+To manage users or invite users for an app deployed on a specific environment, click **Mange Users** or **Invite Users** for that environment. For more information, see the [Manage Users](#manage-users) and [Invite Users](#invite-users) section below.
 
 {{% alert color="info" %}}
 You can also manage app users from Studio, by clicking **Manage Users** on the **Settings > Roles and Permissions** page within Studio.
@@ -151,7 +150,43 @@ On the **Project Management** tab, you can select your team's planning tool for 
 
 It is possible to migrate all or part of your content from [Stories](/developerportal/collaborate/stories/) to Epics. For details, see the [Data Migration](/developerportal/collaborate/epics/#data-migration) section of *Epics*.
 
-## 7 History {#history}
+## 7 Webhooks {#webhooks}
+
+{{% alert color="warning" %}}
+This tab is for webhooks for stories and Sprints, and it is deprecated. This tab will be removed and these webhooks will be discontinued later in 2023. It is no longer possible to add new webhook configurations for stories and Sprints to your apps, but existing configurations will remain active and can still be edited. 
+{{% /alert %}}
+
+{{% alert color="info" %}}
+You can also set webhooks for your app to trigger endpoints when changes are made to deployment packages or models held in the git Team Server. For details, see [Webhooks](/developerportal/deploy/webhooks/).
+{{% /alert %}}
+
+{{% alert color="info" %}}
+This tab is only visible if you already have webhooks for stories and Sprints created, you are a **Scrum Master**, and you have **Mendix Stories** turned on in the [Project Management](#project-management) tab.
+{{% /alert %}}
+
+Open the **Webhooks** tab to manage your app's webhooks for stories and Sprints. A webhook enables the Developer Portal to talk to another website and post updated Developer Portal content (for example, Sprint updates and new stories) to that website. For example, if you want to follow the changes in your app, you can create a service with a certain [URL](#url) that keeps track of the data, and then changes in the app in the Developer Portal are sent to that URL.
+
+{{< figure src="/attachments/developerportal/collaborate/general-settings/webhooks-list.png" width="800"  >}}
+
+After clicking **New Webhook** to create a new webhook for stories and sprints, fill in the following details:
+
+* **Name** – the name of the webhook for stories and Sprints
+* <a id="url"></a>**URL** – the URL to which the webhook for stories and Sprints will connect 
+* **Secret** – the secret used by the Developer Portal to sign the data payload in order to identify the source of the data to the receiving URL (this appears when creating and editing a webhook for stories and Sprints, but it will not be displayed on the **Webhooks settings** page)
+* **Version** – the version of the webhooks feature to be used
+* **Events** – what types of data will be sent via the webhook for stories and Sprints (you must select at least one; this appears when creating and editing a webhook for stories and Sprints, but it will not be displayed on the **Webhooks settings** page)
+    * [Sprints](/developerportal/collaborate/stories/#story-actions)
+    * [Stories](/developerportal/collaborate/stories/)
+
+To edit the above details for an existing webhook for stories and Sprints, click **Edit**.
+
+To delete an existing webhook for stories and Sprints, click **Delete**.
+
+{{% alert color="info" %}}
+For details on the technical configuration of webhooks for stories and sprints, see [Webhooks for Stories and Sprints](/apidocs-mxsdk/apidocs/webhooks-sprints/) in the *API Documentation*.
+{{% /alert %}}
+
+## 8 History {#history}
 
 {{% alert color="info" %}}
 Only users with the **App Settings** permission can view the history.
@@ -163,7 +198,7 @@ The **Project History** page presents the collaboration actions for the app. On 
 
 When you select a history item and click **Show item**, the details of the story, Sprint, or [feedback item](/developerportal/collaborate/feedback/) will be presented.
 
-## 8 Read More
+## 9 Read More
 
 * [Leave and Delete an App](/developerportal/collaborate/leave-delete-app/)
 * [Manage Deep Links](/developerportal/collaborate/manage-deeplinks/)

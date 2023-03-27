@@ -48,9 +48,9 @@ weight: 76
 
 ### Pages
 
-#### StaticImageViewer, DivContainer, TextBox, TextArea, CheckBox, DatePicker, ActionButton, DropDown, DynamicImageViewer, DynamicText, ReferenceSelector, and Title (Elements)
+#### AccessibilitySettings (Element)
 
-* We introduced the `nativeAccessibilitySettings` property. 
+* We deleted the `accessible` property. 
 
 #### ConditionallyVisibleWidget (Element)
 
@@ -60,10 +60,6 @@ weight: 76
 
 * We introduced the `sourceVariable` property. 
 
-#### AccessibilitySettings (Element)
-
-* We deleted the `accessible` property. 
-
 #### NamedValue (Element)
 
 * We introduced this element. 
@@ -71,7 +67,11 @@ weight: 76
 #### RuntimeOperation (Element)
 
 * We introduced the `constants` property. 
-* We deleted the `operationName` property. 
+* We deleted the `operationName` property.
+
+#### ActionButton, CheckBox, DatePicker, DropDown, DynamicImageViewer, DynamicText, DivContainer, ReferenceSelector, StaticImageViewer, TextArea, TextBox, and Title (Elements)
+
+* We introduced the `nativeAccessibilitySettings` property. 
 
 ### Workflows
 

@@ -56,7 +56,7 @@ An example of checking the input for the **Name** attribute of a **Customer** en
 {{< figure src="/attachments/refguide/modeling/domain-model/setting-up-data-validation/input-widget-validation.png" width="500px">}}
 
 {{% alert color="info" %}}
-**Required** validation on **Input elements** in a page editor is always checked before the validation rule set on entity level is. This means that if you set both as **Required** and have different error messages, the page error message is shown to the end-user.  
+**Required** validation on **Input elements** in a page editor is always checked before the validation rule on the entity level. This means that if you set both as **Required** and have different error messages, the page error message is shown to the end-user.  
 {{% /alert %}}
 
 For more information on input widget validation, see the [Validation](/refguide/common-widget-properties/#validation) section in *Properties Common in the Page Editor*. 

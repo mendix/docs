@@ -178,14 +178,11 @@ Under *Other apps can*, you can select how other apps can use the service. *This
 
 Below is an explanation of the possibilities for what other apps can do and what the service implements:
 
-| Other apps can: | The service implements: | The following are created: |
-| ---------- | ---------- | ---------- |
-| Publish events | Subscribe to events | **ConsumedBusinessEvent** entity and a [handler microflow](#two-way-be-handler) |
-| Publish events | Publish events <br>Subscribe to events | **PublishedBusinessEvent** entity, handler microflow, **ConsumedBusinessEvent** entity |
-| Publish events <br>Subscribe to events | [None selected] | Nothing created (if apps can do both, there is no obligation for the service to implement anything) |
-| Publish events <br>Subscribe to events | Publish events and/or subscribe to events | **PublishedBusinessEvent** entity, handler microflow, and/or **ConsumedBusinessEvent** entity  |
-| Subscribe to events | Publish events | **PublishedBusinessEvent** entity |
-| Subscribe to events | Publish events <br>Subscribe to events | **PublishedBusinessEvent** entity, handler microflow, **ConsumedBusinessEvent** entity |
+| If you say that other apps can: | Then the service itself must implement: | The service could also implement: | The following are automatically created: |
+| ---------- | ---------- | ---------- | ---------- | 
+| Publish events | Subscribing to events | Publishing events | **ConsumedBusinessEvent** entity and a [handler microflow](#two-way-be-handler) |
+| Subscribe to events | Publishing events | Subscribing to events | When publishing, **PublishedBusinessEvent** entity and handler microflow <br>If subscribing, a **ConsumedBusinessEvent** entity |
+| Publish events and<br>Subscribe to events | [Nothing requred: if apps can do both, there is no obligation for the service to implement anything] | Publishing events and/or subscribing to events | If no service implementations are selected, then nothing created <br>If publishing, **PublishedBusinessEvent** entity and handler microflow <br>If subscribing, a **ConsumedBusinessEvent** entity <br>If both, then both entities and the handler microflow are created  |
 
 3.   Click **Done** to exit the wizard and view the defined service document. 
 

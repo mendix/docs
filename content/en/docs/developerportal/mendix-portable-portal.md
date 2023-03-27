@@ -31,7 +31,7 @@ The **App Selection** page shows all the apps that you can access in the Develop
 
 {{< figure src="/attachments/developerportal/mendix-portable-portal/app-selection.png" >}}
 
-Select at least one app that you want to manage in the Portable Portal app (you can also select multiple apps). To select an app, tap the app's name. You can also search for an app using the search bar on the top. 
+Select at least one app that you want to manage in the Portable Portal app (you can also select multiple apps). To select an app, tap the app's name. You can also search for an app using the search bar at the top. 
 
 After you select the app(s), tap **Continue** to open the [My Apps](#my-apps).
 

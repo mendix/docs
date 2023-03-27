@@ -105,7 +105,7 @@ Apps that run on the Mendix Cloud are automatically given their own URLs. The fo
 | Licensed app | test, acceptance, flexible environments | Depends on the region:<br /> `{name of your app}-{environment type}.mendixcloud.com`*<br />or<br />`{name of your app}-{environment type}.apps.{region}.mendixcloud.com`\* | `myappname-accp.mendixcloud.com`, <br /> `myappname-accp.apps.ap-3a.mendixcloud.com` |
 | Free App | N/A | `{name of your app}.mxapps.io` | `myfreeappname.mxapps.io` |
 
-{{% alert color="info" %}}*There can be multiple clusters in one region. In that case, the domain name of the first cluster will be  `{name of your app}.mendixcloud.com`, and the domain name of the other clusters will be `{name of your app}.apps.{region}.mendixcloud.com`. {{% /alert %}}
+{{% alert color="info" %}}*There can be multiple clusters in a region. In that case, the URL of an app on the first cluster does not contain `apps.{region}`, but the URL of an app on the other clusters contains `apps.{region}`. {{% /alert %}}
 
 You can customize a URL by adding [custom domains](/developerportal/deploy/custom-domains/).
 

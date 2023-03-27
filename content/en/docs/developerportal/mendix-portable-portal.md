@@ -43,7 +43,7 @@ The **My Apps** page by default shows the last app that you selected from the [A
 
 {{< figure src="/attachments/developerportal/mendix-portable-portal/my-apps.png" >}}
 
-The name of this app is shown on top of the screen. If you tap the app name, then you see the option to open a different app you previously selected or to go back to the **App Selection** page where you can change what apps you selected.
+The name of this app is shown at the top of the screen. If you tap the app name, then you see the option to open a different app you previously selected or to go back to the **App Selection** page where you can change what apps you selected.
 
 This page page contains the **Cloud** and **Stories** tabs, which are described below.
 

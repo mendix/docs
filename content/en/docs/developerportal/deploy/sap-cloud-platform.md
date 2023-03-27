@@ -53,7 +53,7 @@ The app name that you provide is passed to SAP BTP as the host name parameter us
 
 Once the app has been created you can continue with [Set Up Region](#SetUpRegion).
 
-### 2.3 Set Up Region{#SetUpRegion}
+### 2.3 Set Up Region {#SetUpRegion}
 
 You are now prompted with an SAP BTP login screen. Select the region where your SAP BTP is located.
 
@@ -738,7 +738,7 @@ A more detailed description of the reason why the environment creation failed wi
 
 ### 9.2 Deleting an App
 
-Note that if you are the last person to leave a Mendix app you can delete the app. However, this will not delete the app or resources on SAP BTP. You can leave the app by going to the **General Settings** page of the Developer Portal and clicking **Leave app**.
+Note that if you are the last person to leave a Mendix app you can delete the app. However, this will not delete the app or resources on SAP BTP. To leave the app, find it on the [My Apps](https://sprintr.home.mendix.com/link/myapps) page in the **Developer Portal**, and then click **Leave app**.
 
 {{< figure src="/attachments/developerportal/deploy/sap-cloud-platform/leave-app.png" >}}
 

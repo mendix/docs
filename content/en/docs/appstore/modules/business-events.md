@@ -156,15 +156,15 @@ In the [next section](#add-be-definitions), you will define the information incl
 
 To start defining what information is included in your events, as well as what the service will implement, do the following:
 
-1. Click **Add** in the open service document:
+1.   Click **Add** in the open service document:
 
-{{< figure src="/attachments//appstore/modules/business-events/add-event-definition.png" >}}
+     {{< figure src="/attachments//appstore/modules/business-events/add-event-definition.png" >}}
 
-The **Add business event** wizard opens:
+     The **Add business event** wizard opens:
 
-{{< figure src="/attachments//appstore/modules/business-events/wizard-step-1.png" >}}
+     {{< figure src="/attachments//appstore/modules/business-events/wizard-step-1.png" >}}
 
-2. Go through Steps 1 and 2 of the wizard.
+2.   Go through Steps 1 and 2 of the wizard.
 
 *Step 1: Define what information is included in this event*
 
@@ -176,9 +176,20 @@ In the **Attributes** section, click **Add** to define attributes. Changes you m
 
 Under *Other apps can*, you can select how other apps can use the service. *This Business Events service implements* section defines whether the service will be responsible for publishing events, subscribing to events, or both. 
 
-3. Click **Done** to exit the wizard and view the defined service document. 
+Below is an explanation of the possibilities for what other apps can do and what the service implements:
 
-**Export AsyncAPI Document** exports the YAML file of the business event service so that other apps can [use your newly created service](#two-way-be-existing).
+| Other apps can: | The service implements: | The following are created: |
+| ---------- | ---------- | ---------- |
+| Publish events | Subscribe to events | **ConsumedBusinessEvent** entity and a [handler microflow](#two-way-be-handler) |
+| Publish events | Publish events <br>Subscribe to events | **PublishedBusinessEvent** entity, handler microflow, **ConsumedBusinessEvent** entity |
+| Publish events <br>Subscribe to events | [None selected] | Nothing created (if apps can do both, there is no obligation for the service to implement anything) |
+| Publish events <br>Subscribe to events | Publish events and/or subscribe to events | **PublishedBusinessEvent** entity, handler microflow, and/or **ConsumedBusinessEvent** entity  |
+| Subscribe to events | Publish events | **PublishedBusinessEvent** entity |
+| Subscribe to events | Publish events <br>Subscribe to events | **PublishedBusinessEvent** entity, handler microflow, **ConsumedBusinessEvent** entity |
+
+3.   Click **Done** to exit the wizard and view the defined service document. 
+
+     **Export AsyncAPI Document** exports the YAML file of the business event service so that other apps can [use your newly created service](#two-way-be-existing).
 
 #### 4.2.2 Using an Existing Business Event Service {#two-way-be-existing}
 
@@ -201,7 +212,7 @@ After following the instructions [Using an Existing Business Event Service](#two
 * Open the business service document and click **Add**
 * **Drag and drop** the business event from the **Data Hub pane** to your domain model
 
-##### 4.2.2.1.1 Automatically Created Event Handler Microflow and Entity
+##### 4.2.2.1.1 Automatically Created Event Handler Microflow and Entity {#two-way-be-handler}
 
 When you click **Add** to add the events from the document into your module, Studio Pro will automatically create a **persistable** consumed entity within your domain model and an **Event Handler** microflow (**Handle_BE**) to manage the flow of the event after delivery. The **Event Handler** microflow is created in the same directory as your service. 
 

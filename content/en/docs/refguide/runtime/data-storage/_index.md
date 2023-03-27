@@ -64,7 +64,7 @@ Mendix does not use read locks on the database. Therefore, object reads can alwa
 
 When users or microflows make changes to database records, all changes will execute in a transaction. Individual records will receive a lock when they are committed or deleted, at the moment when the database transaction starts. Until this point no locks will be placed on the data.
 
-When the record has been locked, as long as the transaction is executing no other users or processes will be able to change the data. The uncommitted information will not be visible for others. The changed data becomes available for other users to read only after the transaction has completed. While the transaction is running other users will be able to read the previously persisted version of the data. 
+When the record gets locked, as long as the transaction is executing, no other users or processes are able to change the data. The uncommitted information is not visible for others. The changed data becomes available for other users to read only after the transaction completes. While the transaction is running other users are able to read the previously persisted version of the data. 
 
 Mendix does not use pessimistic locking for database transactions.
 

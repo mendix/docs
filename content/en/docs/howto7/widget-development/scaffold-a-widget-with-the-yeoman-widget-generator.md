@@ -93,7 +93,7 @@ To update the widget, press **F4** in the Modeler or select **Project** > **Sync
 
 The `grunt build` will clean your */dist/* and */test/widgets/* folders and will only destroy your custom widget. It will place a new one, built from the */src/* folder.
 
-## 5 Troubleshooting<a name="Troubleshooting"></a>
+## 5 Troubleshooting {#Troubleshooting}
 
 ### 5.1 Installing Dependencies Results in Errors
 

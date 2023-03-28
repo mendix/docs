@@ -12,10 +12,6 @@ tags: ["SSO", "Single Sign-on", "Mendix credentials", "Mendix SSO"]
 
 ## 1 Introduction
 
-{{% alert color="warning" %}}
-This module is not currently compatible with Mendix versions 9.20 and above. We are working on a new version to resolve this issue.
-{{% /alert %}}
-
 The [Mendix SSO module](/appstore/modules/mendix-sso/) enables your app end-users to sign in with their Mendix account when your app is deployed to the Mendix Cloud.
 
 {{% alert color="warning" %}}
@@ -39,6 +35,10 @@ If your app does not have the Mendix SSO module, it is available from the Mendix
 
 If you need a newer version of the Mendix SSO module (for example, to use a new feature), then it is also available from the Marketplace via the same link.
 
+{{% alert color="info" %}}
+For Mendix versions 9.20 and above, you will need to use version 4.0.1 or above of the Mendix SSO module.
+{{% /alert %}}
+
 ## 2 Using Mendix SSO
 
 {{% alert color="warning" %}}
@@ -57,7 +57,7 @@ Every app implementing Mendix SSO needs some of your profile information (like y
 
 Click **Authorize** to continue using Mendix SSO with this app. After authorizing the app you are automatically signed in to the app.
 
-### 2.2 Assigning End-user Roles
+### 2.2 Assigning End-User Roles
 
 Give end-users access to your app through the [Manage App Users](/developerportal/collaborate/general-settings/#managing-app-users) page of the Developer Portal. You can get to this page in the Developer Portal from the **General Settings** page of your app.
 
@@ -164,7 +164,7 @@ To enable Mendix SSO in your app, follow these steps:
     2. Go to the **theme/web** folder (for Mendix versions below 9.0.0 this will be the **theme** folder).
     3. Rename *login.html* to  *login-without-sso.html*.
     4. Rename *login-with-mendixsso-button.html* or *login-with-mendixsso-automatically.html* to *login.html*. The differences between two versions of the file which you can use to replace `login.html` are as follows:
-        * `login-with-mendixsso-button.html` – adds a button to the standard sign in page which the end user can click to initiate the single sign-on process — this gives the end user the possibility to sign in using a user name and password if desired
+        * `login-with-mendixsso-button.html` – adds a button to the standard sign in page which the end-user can click to initiate the single sign-on process — this gives the end-user the possibility to sign in using a user name and password if desired
         * `login-with-mendixsso-automatically.html` – automatically initiates the single sign-on process without needing to click a button
 
 Your app is now configured to use Mendix Single Sign-on when it is deployed to the Cloud.

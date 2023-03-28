@@ -16,7 +16,7 @@ This document explains how you can create a custom **Save** button on a detail p
 
 Before you continue, make sure you have completed the following:
 
-1. Create a **Customer** entity with the attribute **Name** in your domain model (for more information, see [Create a basic data layer](/howto/data-models/create-a-basic-data-layer/)).
+1. Create a **Customer** entity with the attribute **Name** in your domain model (for more information, see [Creating a basic data layer](/refguide/create-a-basic-data-layer/)).
 
     {{< figure src="/attachments/refguide/modeling/pages/button-widgets/create-a-custom-save-button/entity-customer.png" width="200px" >}}
 

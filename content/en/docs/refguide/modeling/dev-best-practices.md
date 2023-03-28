@@ -215,6 +215,9 @@ For integrations, you have the following types of microflow:
 | Consumed web service operation microflow  | CWS\_  |
 | Published web service operation microflow | PWS\_  |
 | Published REST service operation microflow | PRS\_  |
+| Published OData service operation microflow | POS\_  |
+
+You can also use the [Find Advanced](/refguide/find-and-find-advanced/#find-advanced) option in Studio Pro to search for microflows by service type.
 
 ### 3.5 Other Document Types
 
@@ -305,7 +308,7 @@ When using inheritance (specialization/generalization), it is recommended to use
 
 #### 4.1.3 Delete Behavior
 
-[Delete behavior](/howto/data-models/create-a-basic-data-layer/#delete-behavior) must be specified where possible. Delete behavior must, however, never be relied upon when deleting large amounts of data. For performance reasons it is better to explicitly delete dependent objects when doing batch deletes.
+[Delete behavior](/refguide/create-a-basic-data-layer/#delete-behavior) must be specified where possible. Delete behavior must, however, never be relied upon when deleting large amounts of data. For performance reasons it is better to explicitly delete dependent objects when doing batch deletes.
 
 #### 4.1.4 Event Handlers
 

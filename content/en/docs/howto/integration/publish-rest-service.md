@@ -81,7 +81,10 @@ To be able to use the data from your model in the REST service, you need to crea
     {{< figure src="/attachments/howto/integration/publish-rest-service/AddOperationMicroflow.png" >}}
 
 7. Click **Show** to start editing the newly created microflow.
-8. Add two parameters: **httpRequest** and **OrderID**.
+8. Add two parameters: **httpRequest** and **OrderID**. 
+
+{{% alert color="info" %}}These parameters might be added automatically, along with an **httpResponse** paramter. If you create an **Export Mapping** in steps 11-19 below, you will need to remove the **httpResponse** parameter to avoid getting any errors.{{% /alert %}}
+
 9. Add an action to the microflow to convert the **OrderID** variable (string) to an integer variable. This is needed to be able to search for the OrderID (autonumber).
 
     {{< figure src="/attachments/howto/integration/publish-rest-service/ConvertOrderID.png" >}}
@@ -90,7 +93,7 @@ To be able to use the data from your model in the REST service, you need to crea
 
     {{< figure src="/attachments/howto/integration/publish-rest-service/RetrieveOrder.png" >}}
 
-11. <a name="eleven"></a>The next steps cover how you ensure that outputs are generated in JSON. You can do this using [Export Mappings](/refguide/export-mappings/) or in a microflow. Steps 11-19 take you through the steps of building this Export Mapping. To start, right-click the RESTExample module on the App Explorer and select **Add other** > **Export Mapping** to add a new mapping named **EM_ExportOrder**.
+11. <a id="eleven"></a>The next steps cover how you ensure that outputs are generated in JSON. You can do this using [Export Mappings](/refguide/export-mappings/) or in a microflow. Steps 11-19 take you through the steps of building this Export Mapping. To start, right-click the RESTExample module on the App Explorer and select **Add other** > **Export Mapping** to add a new mapping named **EM_ExportOrder**.
 
     {{% alert color="info" %}}Creating an Export Mapping is not required because published REST services in Mendix support [content negotiation](https://nordicapis.com/content-negotiation/): the ability for clients to select the media type they want returned to the server. Follow the next steps in this document to learn how to set up Export Mapping in this case, but note that you can also return the list of objects from the microflow. The platform will export it in the format desired by the client, as indicated by the **Accept** header. The client can then specify if it wants to receive XML or JSON.{{% /alert %}}
 
@@ -106,7 +109,7 @@ To be able to use the data from your model in the REST service, you need to crea
 
 14. Now go back to the **PRS_GetGetOrderByID** microflow and add an **Export with mapping** activity.
 15. In the **Mapping** field of the dialog box, select the mapping created above in [step 11](#eleven). For the **Parameter** field, select the **Order** object retrieved with the database retrieve action in the microflow.
-16. <a name="sixteen"></a>Select **JSON** for the result, and store the output in a **String variable**. Enter *Order_JSON* for the variable's **Name**.
+16. <a id="sixteen"></a>Select **JSON** for the result, and store the output in a **String variable**. Enter *Order_JSON* for the variable's **Name**.
 
     {{< figure src="/attachments/howto/integration/publish-rest-service/MFExportWithMapping.png" >}}
 
@@ -124,6 +127,8 @@ To be able to use the data from your model in the REST service, you need to crea
 19. Open the end activity in your microflow and select **$NewHttpResponse** as the return value. You should have no errors, and your microflow should look like this:
 
     {{< figure src="/attachments/howto/integration/publish-rest-service/CompleteMFNoErrorHandling.png" >}}
+    
+    If you have error CE0346, remove the **httpResponse** parameter that may have been automatically created in step 4.2.7.
 
 ### 4.3 Viewing the App{#viewing}
 

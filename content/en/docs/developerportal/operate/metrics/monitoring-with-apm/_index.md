@@ -3,8 +3,8 @@ title: "Monitoring Your Mendix Apps with an APM Tool"
 linktitle: "Monitoring with APM"
 url: /developerportal/operate/monitoring-with-apm/
 weight: 30
-description: "How to use an APM (Application Performance Monitoring) tool to monitor your Mendix Cloud v4 app."
-tags: ["Datadog", "Mendix Cloud", "v4", "monitoring", "analysis", "Saas", "AppDynamics", "APM", "Splunk", "Dynatrace"]
+description: "How to use an APM (Application Performance Monitoring) tool to monitor your Mendix Cloud app."
+tags: ["Datadog", "Mendix Cloud", "monitoring", "analysis", "Saas", "AppDynamics", "APM", "Splunk", "Dynatrace"]
 ---
 
 ## 1 Introduction
@@ -16,7 +16,7 @@ Mendix provides out-of-the-box configuration to use Datadog, AppDynamics, Dynatr
 {{% alert color="info" %}}
 [AppDynamics](https://www.appdynamics.com/) application monitoring is fully supported in Mendix version 9.7 and above. For older supported versions, only the basic AppDynamics Java Agent metrics are available, along with the `postgresql` and `mx.client` namespaces.
 
-[Dynatrace](https://www.dynatrace.com/) application runtime and database metrics are supported in Mendix version 9.7 and above.
+[Dynatrace](https://www.dynatrace.com/) OneAgent is used to collect metrics. Additionally, in Mendix version 9.7 and above, custom application runtime and database metrics are supported.
 
 [Datadog](https://www.datadoghq.com/) logging and application metrics are supported in Mendix version 7.15 and above.
 
@@ -89,7 +89,7 @@ The following metrics are useful when monitoring the performance of your Mendix 
 * postgresql.max_connections
 * postgresql.percent_usage_connections
 
-Note that the absolute values are often not useful, but looking at trends over time can indicate performance issues or future action which might be required. Some of these trends are similar to those described in [Trends in Mendix Cloud v4](/developerportal/operate/trends-v4/).
+Note that the absolute values are often not useful, but looking at trends over time can indicate performance issues or future action which might be required. Some of these trends are similar to those described in [Trends in the Mendix Cloud](/developerportal/operate/trends-v4/).
 
 ## 4 App Metrics {#app-metrics}
 
@@ -202,7 +202,7 @@ The following Mendix *request handler* calls will be passed:
 | `FileRequestHandler` | File upload/download requests | `mx.client.time` |
 | `PageUrlRequestHandler` | `/p` requests | `mx.client.time` |
 
-You can find help in analyzing some of these values in [Trends in Mendix Cloud v4](/developerportal/operate/trends-v4/).
+You can find help in analyzing some of these values in [Trends in the Mendix Cloud](/developerportal/operate/trends-v4/).
 </details>
 
 **<details><summary><sup><small>[2]</small></sup> Activities (click to see list)</summary>**

@@ -50,13 +50,13 @@ For detailed information on working with external entities and the Catalog witho
 
 Calling the Data Hub Catalog [Registration API](/apidocs-mxsdk/apidocs/data-hub-apis/#registration) allows you to register one or more exposed OData service(s). 
 
-First, you need to create an authentication token to get access to the Data Hub Catalog APIs. The Data Hub Catalog Registration API requires authentication through a Personal Access Token. For every API request you make to a Data Hub Catalog API, include the following key-value pair with your headers:
+First, you need to create an authentication token to get access to the Data Hub Catalog APIs. The Data Hub Catalog Registration API requires authentication through a personal access token. For every API request you make to a Data Hub Catalog API, include the following key-value pair with your headers:
 
 `Authorization: MxToken <your_Personal_Access_Token>`
 
-**You can [Create a Personal Access Token with Warden](/developerportal/community-tools/warden/).**
+For details on creating a personal access token (PAT), see the [Personal Access Tokens](/developerportal/community-tools/mendix-profile/#pat) section of *Mendix Profile*.
 
-Once you have a Personal Access Token, follow this series of REST calls to register the details of our exposed OData service:
+Once you have a personal access token, follow this series of REST calls to register the details of our exposed OData service:
 
 1. [Register the application and retrieve an application UUID](#register-application).
 2. Use the application UUID to [register the environment, and retrieve the environment UUID](#register-environment).
@@ -70,7 +70,7 @@ The [Data Hub Registration API specification](https://datahub-spec.s3.eu-central
 
 To register an application, you need:
 
-* Personal Access Token
+* Personal access token
 * Application `Name`
 
 For more details on what can and cannot be provided in these fields, see the [API specification](https://datahub-spec.s3.eu-central-1.amazonaws.com/registration_v4.html#/Register/post_applications).
@@ -78,13 +78,13 @@ For more details on what can and cannot be provided in these fields, see the [AP
 You can see an example of a request below:
 
 ```curl
-curl --location --request POST 'https://hub.mendix.com/rest/registration/v4/applications' \
+curl --location --request PUT 'https://hub.mendix.com/rest/registration/v4/applications' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: MxToken <your_Personal_Access_Token>' \
 --data-raw '{"Name": "My-Application"}'
 ```
 
-A successful `POST` call results in a `201` status code and a JSON response body that includes the details you provided about the application, the location of an application icon, and a unique ID:
+A successful `PUT` call results in a `201` status code and a JSON response body that includes the details you provided about the application, the location of an application icon, and a unique ID:
 
 ```json
 {
@@ -101,7 +101,7 @@ Use the application UUID to register your environment.
 
 To register an environment, you need the following:
 
-* Personal Access Token
+* Personal access token
 * `application_UUID`
 * Environment `Name`
 * Environment `Location`
@@ -112,13 +112,13 @@ For more details on what can and cannot be provided in these fields, see the [AP
 You can see an example of a request below:
 
 ```curl
-curl --location --request POST 'https://hub.mendix.com/rest/registration/v4/applications/{application_UUID}/environments' \
+curl --location --request PUT 'https://hub.mendix.com/rest/registration/v4/applications/{application_UUID}/environments' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: MxToken <your_Personal_Access_Token>' \
 --data-raw '{"Name": "My-Environment", "Location": "https://my-deployed-application-url.com", "Type": "Production"}'
 ```
 
-A successful `POST` call results in a `201` status code and a JSON response body that includes the details you provided about the environment, along with a unique ID:
+A successful `PUT` call results in a `201` status code and a JSON response body that includes the details you provided about the environment, along with a unique ID:
 
 ```json
 {
@@ -141,7 +141,7 @@ Use the application UUID and the environment UUID to register one or more servic
 
 To register services, you need the following:
 
-* Personal Access Token
+* Personal access token
 * `application_UUID`
 * `environment_UUID`
 * Service `Path`, `Name`, and `ContractType`
@@ -231,7 +231,7 @@ For more details on what can and cannot be provided in these fields, see the [AP
 You can see an example of a request that converts a `dependencies.json` file below: 
 
 ```curl
-curl --location --request POST 'https://datahub-spec.s3.eu-central-1.amazonaws.com/registration_v4.html#/Endpoints/post_transform_dependenciesjson' \
+curl --location --request PUT 'https://datahub-spec.s3.eu-central-1.amazonaws.com/registration_v4.html#/Endpoints/post_transform_dependenciesjson' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: MxToken <your_Personal_Access_Token>' \
 --data-raw '{
@@ -245,7 +245,7 @@ curl --location --request POST 'https://datahub-spec.s3.eu-central-1.amazonaws.c
 }'
 ```
 
-A successful `POST` call results in a `200` status code and a JSON response body. The `PUTPublishedEndpoints` section is what you will want to go register your services:
+A successful `PUT` call results in a `200` status code and a JSON response body. The `PUTPublishedEndpoints` section is what you will want to go register your services:
 
 ```json
 {
@@ -336,4 +336,8 @@ The following methods are supported by the Data Hub Catalog:
 * **OpenID Connect** – Authenticates with [OpenID Connect](https://openid.net/connect/), built on top of [OAuth 2.0](https://oauth.net/2/) and used with the [OIDC SSO](/appstore/modules/oidc/) module
 * **Other** – Specify other ways to authenticate, including custom modules
 
-Fill in as many details as you can to ensure that consuming developers can easily authentication themselves to consume your service.
+Fill in as many details as you can to ensure that consuming developers can easily authenticate themselves to consume your service. 
+
+##### 4.2.1.1 Selecting a Marketplace Module (Optional)
+
+If you are using a module from the Mendix Marketplace, you select it in the **Marketplace Module** field.

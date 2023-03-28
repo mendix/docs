@@ -32,8 +32,6 @@ Once you have access to an app in Epics, open it in the [Developer Portal](https
 
 After you open the app in Epics, you can easily switch to other apps that you have access to. To do so, click the name of the current app on the upper-left corner, and then select a different app from the drop-down list.
 
-{{< figure src="/attachments/developerportal/collaborate/epics/switch-app.png" >}}
-
 ### 1.3 Pages in Epics
 
 Epics has the following pages: **Board**, **Planning**, **Epics**, and **Archive**. Some pages look different if you are working in the Scrum workflow or Kanban workflow. These pages are described in the sections below.
@@ -50,7 +48,7 @@ If you work in the Kanban workflow, the **Board** page gives an overview of all 
 
 {{< figure src="/attachments/developerportal/collaborate/epics/stories-story-points.png" >}}
 
-Click **Project Buzz** on the upper-right corner of the page to go back to the [Buzz](/developerportal/collaborate/buzz/#app-buzz) page of the app. Click **Create Epic** or **Create Story** to create an item. In the search box, you can search stories based on their titles.
+Click **Project Buzz** on the upper-right corner of the page to go back to the [Buzz](/developerportal/collaborate/buzz/#app-buzz) page of the app. Click **Create Epic** or **Create Story** to create an item. In the search box, you can search stories based on story title, tags, epic name, assignee (and unassigned stories), story title, and story ID.
 
 {{< figure src="/attachments/developerportal/collaborate/epics/create-epic-story-search.png" >}}
 
@@ -140,7 +138,7 @@ If you select the **Scrum** workflow, the **Planning** page shows the **Active S
 
 If you use the **Kanban** workflow, the **Planning** page shows the **To Do**, **Refinement**, and **Backlog** categories.
 
-No matter which workflow you use, you can always create an epic or a story by clicking **Create Epic** or **Create Story** on the upper-right corner of the page. In the search box, you can search for stories based on the story title.
+No matter which workflow you use, you can always create an epic or a story by clicking **Create Epic** or **Create Story** on the upper-right corner of the page. In the search box, you can search stories based on story title, tags, epic name, assignee (and unassigned stories), status name (only in the Scrum workflow), story title, and story ID.
 
 Each row in a category shows the following information about a story:
 
@@ -246,10 +244,13 @@ If you still have content with the **Error** status (for example, in the **Unmig
 
 ## 4 Epics {#epics}
 
-The **Epics** page shows all the epics for your current app. Each row shows the following details about the epic:
+### 4.1 Epics Overview 
+
+The **Epics** overview page shows all the epics for your current app. Each row shows the following details about the epic:
 
 * Unique ID, which consists of a prefix and a number
 * Title
+* Tags
 * To whom the epic is assigned
 * How many stories are completed for the epic
 
@@ -259,7 +260,7 @@ You can create an epic by clicking **Create Epic** on the upper-right corner of 
 
 ### 4.1 Epic Details {#epic-details}
 
-If you click the row of an epic, the epic details dialog box opens. 
+When you click the row of an epic, the epic details dialog box opens. 
 
 On the upper-right corner, there is a link icon and an ellipsis (**...**) icon. Clicking the link icon copies the link to the epic. Clicking the ellipsis icon opens a pop-up menu that allows you to delete the epic.
 
@@ -276,8 +277,8 @@ The epic details dialog box shows the following items:
 * **Assign to** – enables assigning the epic to anybody who can access the app in the Developer Portal
 * **Tags** – enables adding or removing tags; to create a new tag, type the tag in the text box and click **Create new "[tag name]"**
 * **Attachments** – enables adding attachments by clicking **+**
+* **Stories** – all the open stories that are linked to this epic; click **Create** to create a new **Feature** or **Bug** story directly from the epic
 * **Archived Stories** – all the archived stories that are linked to this epic
-* **Stories** – all the open stories that are linked to this epic
 * **Comment** – enables typing your comment in the text box and then clicking **Post Your Comments** to save and post the comment
 
 {{% alert color="info" %}}To save any change on the epic details dialog box, click **Save Epic** at the bottom of the page.{{% /alert %}}

@@ -37,7 +37,7 @@ Before you use the Email connector in your app, do the following:
 1. Download and [configure](/appstore/modules/model-reflection/#configuration) the latest version of [Mx Model Reflection](https://marketplace.mendix.com/link/component/69) module. If you have the module already, ensure that it is up-to-date.
 2. Download and [configure](/appstore/modules/encryption/#configuration) the latest version of the [Encryption](https://marketplace.mendix.com/link/component/1011) module. If you have the module already, ensure that it is up-to-date.
 3. Remove any existing email modules ([IMAP/POP3](/appstore/modules/imap/) or [Email Module with Templates](/appstore/modules/email-with-templates/)).
-4. Check for and remove orphaned JAR files from any old email modules in the *userlib* subdirectory (for example, *javax.mail-1.6.2.jar* and *activation-1.1.jar*).
+4. Check for and remove orphaned JAR files from any old email modules in the *userlib* subdirectory (including *javax.mail-1.6.2.jar*, *activation-1.1.jar*, and *commons-email.jar*).
 5. [Clean the deployment directory](/refguide/app-menu/#clean-deployment-directory) before running the app.
 
 ### 1.2.1 Migrating from Another Module
@@ -195,7 +195,7 @@ Encryption for emails using the Email Connector module includes the following:
 * Supports SSL/TLS and non-SSL connection types
 * While encrypting email, the recipient's public certificate will be searched for on the Base DN
 
-### 4.5 Subscribing to Incoming Email
+### 4.5 Subscribing to Incoming Email {#subscribe-incoming-email}
 
 When modeling your app in Studio Pro, call the **SubscribeToIncomingEmail** Java action to subscribe to incoming email from an account.
 
@@ -213,17 +213,19 @@ When duplicating this microflow, do not change the input parameter name and data
     * `CONNECTIONTOSERVERLOST`
     * `CONNECTIONRETRYEXHAUSTED`
 
-    Make sure that microflow is accepting the string parameters `State` and `Comment`. Refer to the sample microflow **OCH_Background_SubscriptionStateChanged**.
+    Make sure that microflow is accepting the string parameter `State` and `Comment`. Refer to the sample microflow **OCH_Background_SubscriptionStateChanged**.
 
-    {{% alert color="warning" %}}When duplicating this microflow, do not change input parameters’ name and data type.{{% /alert %}}
+    {{% alert color="warning" %}}When duplicating this microflow, do not change input parameter name and data type.{{% /alert %}}
+    
+#### 4.5.1 Enabling Subscription in Email Settings
 
-{{% alert color="info" %}}
-Before subscribing to incoming email, it is recommended to attempt to unsubscribe from incoming email so that application will not end up having duplicate subscription for a single email account. The complete flow of subscription is shown in the microflow **SUB_EmailAccount_SubscribeForEmailNotification**.
-{{% /alert %}}
+For some use cases, like triggering actions when a new email is received, you need to enable the subscriptions to new emails using in the Email Settings as well as in the subscription microflow documented in [Subscribing to Incoming Email](#subscribe-incoming-email).
 
-{{% alert color="info" %}}
-The subscription to new emails will only work if email account is configured with IMAP/S protocol and if the email server supports notifications. The subscription will end if the app is stopped. To subscribe again in between app restarts, register the **Sample_ASU_SubscribeForEmailNotification** microflow in the **After Startup** option. 
-{{% /alert %}}
+#### 4.5.2 Additional Considerations 
+
+* Before subscribing to incoming email, it is recommended to attempt to unsubscribe from incoming email so that application will not end up having duplicate subscription for a single email account. The complete flow of subscription is shown in the microflow **SUB_EmailAccount_SubscribeForEmailNotification**.
+
+* The subscription to new emails will only work if email account is configured with IMAP/S protocol and if the email server supports notifications. The subscription will end if the app is stopped. To subscribe again in between app restarts, register the **Sample_ASU_SubscribeForEmailNotification** microflow in the **After Startup** option. 
 
 ### 4.6 Unsubscribing from Incoming Email
 
@@ -284,9 +286,22 @@ If you already have an email account configured using basic authentication in yo
     * Associate the existing email account with newly created OAuth provider.
     * Navigate to the **EmailConnector_Overview** page and handle the warning messages visible for desired email account.
 
-### 5.3 Configuring Local Email Clients
+### 5.3 Deploying to On-Premises Cloud Environments
 
-Configuring local clients, like [PaperCut](https://www.papercut.com/), is supported. If using a tool like PaperCut, do the following:
+When deploying [on premises](/developerportal/deploy/on-premises-design/) running [Microsoft Windows](/developerportal/deploy/deploy-mendix-on-microsoft-windows/), you nede to add a rule for a URL redirect.
+
+Add the following rule to the *web.config* file where the on-premise application was installed:
+
+`<rule name="mxecoh">
+   <match url="^(mxecoh/)(.*)" />
+   <action type="Rewrite" url="http://localhost:8080/{R:1}{R:2}" />
+</rule>`
+
+For more information, see the [Reverse Proxy Inbound Rules](/developerportal/deploy/deploy-mendix-on-microsoft-windows/#reverse-proxy-rules) section of *How to Deploy Mendix on Microsoft Windows*.
+
+### 5.4 Configuring Local Email Clients
+
+Configuring local clients, like [PaperCut](https://github.com/ChangemakerStudios/Papercut-SMTP), is supported. If using a tool like PaperCut, do the following:
 
 1. Follow the steps for [adding an email account](#adding-email-account). 
 2. Automatic configuration will not work for local clients, so continue with manual configuration in the wizard.
@@ -294,7 +309,7 @@ Configuring local clients, like [PaperCut](https://www.papercut.com/), is suppor
 4. Select **SMTP** for the **Protocol**, enter `localhost` for the **Server host**, and the **Server port** number (for example, `25`).
 5. Enter a random email ID on the login screen, and it should start working.
 
-### 5.4 Adding Attachments
+### 5.5 Adding Attachments
 
 To add attachments to the email message, do the following:
 
@@ -304,10 +319,10 @@ To add attachments to the email message, do the following:
 
 2. Set the **Attachment_EmailMessage** association.
 
-### 5.5 Page Styling
+### 5.6 Page Styling
 
 If the **Email Connector** page styling is affected as you select/view email messages, please turn on the **Sanitize email to prevent XSS attacks** option available in the [Account Settings](#other-account-settings). It is probably due to errors in the email message CSS, so this option should fix any issues. 
 
-### 5.6 Known Errors
+## 6 Known Errors
 
 If you already have the [included widgets](#included-widgets) in your app, and they are not up-to-date, you may get a `Some widgets can not be read` error when trying to run locally.

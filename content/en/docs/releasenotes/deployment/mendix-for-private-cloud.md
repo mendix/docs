@@ -13,6 +13,83 @@ For information on the current status of deployment to Mendix for Private Cloud 
 
 ## 2023
 
+### March 17th, 2023
+
+#### Mendix Operator v2.10.2 {#2.10.2}
+
+* We have updated components to use the latest dependency versions, in order to improve security score ratings for all container images.
+* We have fixed an issue where the Operator would continuously create and delete pods after a container's memory, CPU or ephemeral storage had been adjusted by the cluster. (Tickets 175836, 177443)
+* We have added an option to specify a custom limit of how many Mendix Runtime versions can be downloaded when using the [Registry Migration](/developerportal/deploy/private-cloud-migrating/) tool. (Ticket 178006)
+* We have reduced the scope granted to the `mendix-operator` and `mendix-agent` roles in Kubernetes. Instead of an `*` verb that includes all permissions, the roles are now more fine-grained.
+* We have fixed an issue where annotations would only apply to new OpenShift Routes. With this update, it is possible to add or modify annotations in existing OpenShift Routes.
+* We have fixed an issue where enabling the **Add credentials to pull secrets** option would not work when the Push URL and Pull URL were different. With this update, credentials are now added for the push and pull registries.
+* We have extended the options for configuring Google Cloud storage buckets. It is now possible to share a bucket between multiple environments.
+
+### March 9th, 2023
+
+#### Deploy API Improvements
+
+* We have added a new API endpoint for updating the namespaces. This will allow cluster managers to do the following tasks:
+    * Add, edit or remove member permissions and members in a namespace. 
+    * Enable or disable the external secret store and development mode configurations. 
+    * Add, update, or clear the operational URLs.
+    * Activate or deactivate database and storage plans.
+* We have improved the Update Cluster API endpoint by allowing cluster managers to add new cluster managers.
+* We have improved the responses for `Get Cluster`, `Get Namespace`, `Get Clusters`, and `Get Namespaces`. The responses now provide more information for the user.
+* We have improved the Delete Cluster API endpoint by allowing the forced deletion of a cluster with namespaces, as long as the namespaces do not have any attached environments.
+* We have modified the OpenAPI specification file. Please download or check the latest version.
+
+#### Build API Release
+
+* We have introduced a new Mendix for Private Cloud Build API, which allows users to build, upload, delete and retrieve deployment packages for an application deployed in the Private Cloud.
+
+### February 16th, 2023
+
+#### Portal Improvements
+
+* We have improved the validation message for the internal name in the environment creation flow.
+* We have removed access to the old deployment packages repository. This means that active deployment packages which have not been deployed in the last 4 weeks might stop working. If that happens, simply recreate the deployment package with the same revision, and then redeploy it in your environment.
+
+### February 9th, 2023
+
+#### Portal Improvements
+
+* We have added a new info section on top of the **Environments Overview** page which will be used to improve the communication about upcoming features and deprecations in the Portal. If nothing needs to be communicated, the section will be hidden.
+* We have fixed the known issue from previous release where the builds were failing when customer tried to deploy the same deployment package or scale the app.
+
+### February 8th, 2023
+
+#### Mendix for Amazon EKS
+
+As part of our [strategic partnership with AWS](/partners/aws/), we have added a way for you to streamline the deployment of your apps in your AWS account by automatically provisioning a private cloud environment, based on Amazon Elastic Kubernetes Service (EKS). By using the Mendix for Amazon EKS solution, you can deploy your apps in the AWS cloud in a simplified, automated way. For more information, see Mendix for [Amazon EKS—Terraform module](https://aws.amazon.com/solutions/partners/terraform-modules/mendix-eks/).
+
+### February 7th, 2023
+
+#### Documentation Updates
+
+* We have updated the [CSI Secrets Storage](/developerportal/deploy/secret-store-credentials/) documentation to clarify how database password rotation works, and how to use AWS RDS IAM authentication instead of passwords.
+
+### February 2nd, 2023
+
+#### Portal Improvements
+
+* We have updated the registry for downloading MDA artifacts from `https://privatecloud.mendixcloud.com/` to `https://package-store-prod-2.s3-accelerate.amazonaws.com/`.
+* We have removed the registry for downloading placeholder MDA artifacts (`https://cdn.mendix.com/`).
+* We have added the **Package ID** field to display the ID of a deployment package in the deployment package details.
+* We now provide the feature to lock or unlock the deployment package in the environment **Overview** page. Any existing deployment packages will remain in an unlocked state. New deployment packages deployed in the environment will be locked by default.
+
+#### Known Issues
+
+Your build may fail if you try to deploy the same deployment package more than once in the same environment. To fix this issue, recreate the deployment package, and then deploy it again. The same workaround is sometimes required when rescaling an application. A fix for this issue will be available in an upcoming release.
+
+### January 26th, 2023
+
+#### Mendix Operator v2.10.1{#2.10.1}
+
+* We have updated components to use the latest dependency versions, in order to improve security score ratings for all container images.
+* We have switched from UBI 8 Minimal base images to [UBI 8 Micro](https://www.redhat.com/en/blog/introduction-ubi-micro).
+* We have implemented a feature to use [IAM role authentication](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/UsingWithRDS.IAMDBAuth.html) when connecting to RDS Postgres databases. This feature depends on an upcoming release of Mendix, and additional documentation will be provided later.
+
 ### January 19th, 2023
 
 #### Portal Improvements
@@ -495,7 +572,7 @@ After upgrading the Mendix Operator, we recommend downloading the latest version
 
 * We have added support in the Developer Portal to configure custom Certificate Authorities which should be trusted by the Mendix Operator and app environments.
 * We now add an environment UUID to environments deployed to Private Cloud namespaces so environment names no longer need to be unique.
-* As part of a Developer Portal clean up, we removed the *Model* option from the *DEVELOP* section of the Developer Portal menu when you are looking at environments on Mendix for Private Cloud. The functions of this page are still available via the **Edit in Studio** and **Edit in Studio Pro** buttons on the environments page. 
+* As part of a Developer Portal clean up, we removed the *Model* option from the *DEVELOP* section of the Developer Portal menu when you are looking at environments on Mendix for Private Cloud. The functions of this page are still available via the **Edit in Studio Pro** button on the environments page. 
 
 #### Fixes
 

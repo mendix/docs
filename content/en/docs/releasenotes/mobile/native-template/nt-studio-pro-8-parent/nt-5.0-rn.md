@@ -5,6 +5,12 @@ weight: 30
 description: "Native Template 5.0 release notes."
 ---
 
+{{% alert color="warning" %}}
+Native Template versions [5.0](/releasenotes/mobile/nt-5.0-rn/) and [5.1](/releasenotes/mobile/nt-5.1-rn/) are no longer receiving updates. Also, Native Template does not work for versions below 8.18.9. 
+
+Please use a Native Template version [compatible](/releasenotes/mobile/nt-studio-pro-8-parent/) with the latest Studio Pro [8.18.x](/releasenotes/studio-pro/8.18/) patch release.
+{{% /alert %}}
+
 ## 5.0.14
 
 **Release date: May 17th, 2022**

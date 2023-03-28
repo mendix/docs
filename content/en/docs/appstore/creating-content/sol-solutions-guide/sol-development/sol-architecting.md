@@ -73,3 +73,7 @@ When designing the interfaces of your solutions, you should do the following:
 ### 3.4 Applying IP Protection 
 
 IP protection can be used to make parts of the application model and the common core immutable by customers. For practical guidance, see [Apply IP Protection](/appstore/creating-content/sol-ip-protection/).
+
+### 3.5 Configuring App Settings
+
+Be sure to configure the [Solution](/refguide/app-settings/#solution) tab of **App Settings** to allow for distribution as an adaptive solution.

@@ -122,26 +122,9 @@ In Studio Pro [9.16](/releasenotes/studio-pro/9.16/) and below, the inline count
 
 ## 5 Key Selection When Exposing Entities as OData Resources {#select-key}
 
-Every entity in Mendix has an [ID](/refguide/odata-representation/#id-representation) that is used internally to store the object in the database. However, this ID is not stable over time, since it can change in certain scenarios (such as data migration).
+Select which attribute(s) to use as a [key](/refguide/published-odata-resource/#key) when exposing an entity as Published OData Resource so that clients will be able to identify objects returned by the service.
 
-Starting in Studio Pro [9.17](/releasenotes/studio-pro/9.17/), you can select which attribute to use as a [key](/refguide/published-odata-resource/#key) when exposing an entity as Published OData Resource. The attribute type can be one of the following: 
-
-* **Integer**
-* **Long**
-* **String**
-* **AutoNumber**
-
-Select a combination of attributes with the following constraints: 
-
-* Unique – The combination of key attributes should be unique, so each key points to exactly one entity.
-* Required – If one of the key attribute values is empty, you cannot find an object with it anymore.
-* Stable over time – The attribute values used for the key should not change, so that you can find it again later.
-
-When exposing an entity as a published OData resource for the first time, Studio Pro chooses a unique and required attribute as the key. If there is no attribute that has a unique constraint or a required constraint, then it will select the first attribute with a supported type. You can set these constraints using [validation rules](/refguide/validation-rules/).
-
-{{% alert color="info" %}}
-Selecting more than one attribute as the key is only available for published OData services that use OData version 4.
-{{% /alert %}}
+To learn more about selecting a key, see the [Key](/refguide/published-odata-resource/#key) section of *Published OData Resource*.
 
 ### 5.1 Selecting Attributes as a Key {#select-key}
 
@@ -171,6 +154,10 @@ For example, say you want to build an app that works with the [Twitter v2 REST A
 
 {{% alert color="info" %}}
 This guide is meant to serve as an example to show how to use *Connector Kit 2* features, and is not an official guide to building a Twitter connector. It is intended for local deployments and has not been tested.{{% /alert %}}
+
+{{% alert color="warning" %}}
+On February 9, 2023, Twitter will drop support for free API access and will offer a paid basic version instead. Please use the guide below as a reference only.
+{{% /alert %}}
 
 #### 7.1.1 Prerequisites
 
@@ -228,7 +215,7 @@ Ensure that you have created microflows for all entities used in your connector.
 
 ## 7.2 Updatable Operational Data Stores {#operational-data-stores}
 
-Wrapped OData APIs can function as an operational data store, or as a [Data Layer](/howto/data-models/create-a-basic-data-layer/) for other Mendix apps. For example, you have one Mendix app where you define a central data model that is being used by multiple frontend apps. This central app gets data from different backend systems, caches it, and makes it available as a unified model to the frontend apps. With OData, can provide full read-write APIs to your frontend apps. To ensure data consistency, you can use [OData as a data source microflows](#odata-data-sources) to update your backend systems when a front-end app changes data through an OData API.
+Wrapped OData APIs can function as an operational data store, or as a [Data Layer](/refguide/create-a-basic-data-layer/) for other Mendix apps. For example, you have one Mendix app where you define a central data model that is being used by multiple frontend apps. This central app gets data from different backend systems, caches it, and makes it available as a unified model to the frontend apps. With OData, can provide full read-write APIs to your frontend apps. To ensure data consistency, you can use [OData as a data source microflows](#odata-data-sources) to update your backend systems when a front-end app changes data through an OData API.
 
 Operational data stores are often used to unify and cache external data used by multiple apps. Reasons for this include the following:
 

@@ -13,11 +13,7 @@ tags: ["new relic", "on-premises", "monitoring", "setup"]
 
 ## 1 Introduction
 
-When setting up a Mendix application on premises, you can set up advanced monitoring with New Relic. This works with both Windows and Linux deployments.
-
-{{% alert color="warning" %}}
-New Relic is currently in Private Beta, and thus not supported. We plan to offer full support for New Relic during 2022.
-{{% /alert %}}
+When setting up a Mendix application on premises, you can set up advanced monitoring with New Relic. This works with both Windows and Linux deployments. It is not supported in the Mendix Cloud.
 
 ## 2 Prerequisites
 

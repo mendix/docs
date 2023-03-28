@@ -54,9 +54,27 @@ In OData, the namespace is used to refer to data types. You can customize this n
 
 This list gives an overview of all entities published as [OData resources](/refguide/published-odata-resource/).
 
-### 2.6 Entity Details
+### 2.5.1 Entity Details
 
 This list gives an overview of all published attributes and associations.
+
+### 2.6 Enumerations
+
+This list gives an overview of all [enumerations](/refguide/enumerations/) that are published by the service (for OData version 4 only). When a published entity has an attribute with an enumeration type then the enumeration appears in this list. The list does not appear when there are no published enumerations. There is no need to add enumerations yourself, because Studio Pro will add them when needed.
+
+Click **Edit** to change the exposed name of the enumeration (the name as it appears to clients of the service) and to provide documentation.
+
+{{% alert color="info" %}}
+The *enumerations* feature was introduced in Studio Pro [9.24.0](/releasenotes/studio-pro/9.24/). In earlier versions, enumeration attributes were published as strings.
+{{% /alert %}}
+
+### 2.6.1 Enumeration Details
+
+This list gives an overview of the values of the published enumeration.
+
+Click **Edit** to change the exposed name of the enumeration value (the name as it appears to clients of the service) and to provide documentation.
+
+Use the **Refresh** button when the enumeration values have changed to update the list with the new values.
 
 ## 3 Settings
 
@@ -100,7 +118,11 @@ Select whether clients need to authenticate or not. Select **No** to allow acces
 
 Even when you choose **Yes**, you can still expose OData resources to anonymous users. For detailed information on allowing anonymous users, see [Anonymous User Role](/refguide/anonymous-users/).
 
-#### 3.3.2 Authentication Methods
+{{% alert color="info" %}}
+The **Authentication** section of a published OData service is only visible when you have enabled [app security](/refguide/app-security/).
+{{% /alert %}}
+
+#### 3.3.2 Authentication Methods {#authentication-methods}
 
 If authentication is required, you can select which authentication methods you would like to support.
 
@@ -148,6 +170,15 @@ There are three possible outcomes of the authentication microflow:
 * When the status code of the HttpResponse parameter is set to something other then **200**, this value is returned and the operation will not be executed
 * When the resulting User is not empty, the operation is executed in the context of that user
 * When the resulting User is empty, the next authentication method is attempted (when there are no other authentication methods, the result is **404 Not Found**)
+
+###### 3.3.2.3.1 Mendix SSO {#authentication-mendix-sso}
+
+You can configure a published OData service to authenticate with the [Mendix SSO](/appstore/modules/mendix-sso/) module. This is a form of [Custom](#authentication-microflow) authentication.
+
+To set up authentication with Mendix SSO, do the following:
+
+1. Ensure that the [Mendix SSO](/appstore/modules/mendix-sso/) module has been installed and configured in your app.
+2. In the published OData service, choose **Custom** authentication and select the **AuthorizeRequestWithAccessTokenFrom Request** microflow.
 
 #### 3.3.3 Allowed Roles
 

@@ -4,6 +4,33 @@ url: /releasenotes/add-ons/ats-2.28/
 weight: 72
 ---
 
+## 2.28.8
+
+**Release date: March 7th, 2023**
+
+### Fixes
+
+* When (un)subscribing to schedules, the browser showed HTML instead of rendering it as a page. This has been fixed.
+* We fixed an issue where a "Wrong browser" notification was not shown when trying to record steps in Microsoft Edge. As Edge is Chromium-based, it did not detect that the browser was not the Chrome browser.
+* We fixed an issue where old test-case and test-suite executions were not deleted after 90 days, despite the log retention time being set to 90 days.
+* On sign-up, links to the privacy statement and terms and conditions no longer return a 404 error.
+
+## 2.28.7
+
+**Release date: January 31st, 2023**
+
+### Fixes
+
+* We fixed an issue with the Desktop Recorder, which caused it to stop recording any actions when clicking in the recorder browser.
+
+## 2.28.6
+
+**Release date: January 17th, 2023**
+
+### Fixes
+
+* We fixed an issue that occurred when copying a test case that had a data set and even though the copy had the data set associated, it did not use the data set values.
+
 ## 2.28.5
 
 **Release date: January 3rd, 2023**

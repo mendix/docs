@@ -13,7 +13,7 @@ The **mx tool** is a Windows and Linux command-line tool that can be used to per
 
 ## 2 Location
 
-Mendix Studio Pro comes with the mx command-line tool. The executable `mx.exe` file can be found in the same folder that contains `studiopro.exe` (for example, *C:\Program Files\Mendix\9.12.2.44241\modeler\mx.exe*).
+Mendix Studio Pro comes with the mx command-line tool. The executable *mx.exe* file can be found in the same folder that contains `studiopro.exe` (for example, *C:\Program Files\Mendix\9.12.2.44241\modeler\mx.exe*).
 
 ## 3 mx Tool Options
 
@@ -86,7 +86,7 @@ The `OPTIONS` are described in the table below:
 | `app-name` | App | Assigns the specified app name to the app. |
 | `output-dir` | Current directory | The directory in which to create the app. |
 | `language-code` | en_US | The default language of the app. | 
-| `sprintr-app-id` | Optional | Associates the app [feedback features](/developerportal/collaborate/feedback/) with the provided [Developer Portal app](/developerportal/#my-apps). The value is a GUID. When accessing the app portal (on sprintr or on Team Server) it can be seen in the browser's URL - for example `1a428ea7-b00e-4166-9b23-20b7be88a40e`. |
+| `sprintr-app-id` | Optional | Associates the app [feedback features](/developerportal/collaborate/feedback/) with the provided [Developer Portal app](/developerportal/#my-apps). The value is a GUID. When accessing the app in the Developer Portal, this ID can be found in the browser's URL (for example, `1a428ea7-b00e-4166-9b23-20b7be88a40e`). |
 
 `TEMPLATE-MPK-FILE` is an optional path to a Mendix app package (*.mpk*) file. If this argument is omitted, the app is created with a default empty project template.
 
@@ -216,7 +216,7 @@ Return codes are described in the table below:
 
 ### 3.5 mx merge Command [version 9.17+]
 
-The mx merge command performs a tree-way merge of two MPR files having a common base commit.
+The mx merge command performs a three-way merge of two MPR files having a common base commit.
 
 The input is three MPR files: base, mine, and theirs
 

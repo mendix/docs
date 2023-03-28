@@ -102,7 +102,7 @@ This setting overrides the app-wide setting in the **App Settings**. For more in
 
 **Workflow state change** allows you to select a microflow that is triggered when the state of the current workflow has changed, for example, when the workflow is in progress or completed. 
 
-#### 2.4.2 User Task State Change
+#### 2.4.2 User Task State Change {#user-task-state-change}
 
 {{% alert color="info" %}}
 This setting overrides the app-wide setting in the **App Settings**. For more information see the [User Task State Change](/refguide/app-settings/#user-task-state-change) section in *App Settings*.

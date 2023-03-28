@@ -5,6 +5,14 @@ weight: 10
 description: "Native Template 6 release notes."
 ---
 
+## 6.3.5
+
+**Release date: January 31st, 2023**
+
+### Fixes
+
+* We added multiple maven repositories to fall back to in case main repositories are down.
+
 ## 6.3.4
 
 **Release date: December 27th, 2022**

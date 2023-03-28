@@ -172,7 +172,7 @@ You should catch any exceptions when using the **Get Destination** to access the
 
 {{< figure src="/attachments/partners/sap/sap-destination-service/get-destination-error-flow.png" >}}
 
-If your access token has expired, you will get a return code of **401**. The access token cannot be refreshed automatically and the end user will be signed out and will need to sign in again to get a new token.
+If your access token has expired, you will get a return code of **401**. The access token cannot be refreshed automatically and the end-user will be signed out and will need to sign in again to get a new token.
 
 If the **Get Destination** action returns a different error, or signing in again does not solve the issue, then continue testing for other possible causes.
 

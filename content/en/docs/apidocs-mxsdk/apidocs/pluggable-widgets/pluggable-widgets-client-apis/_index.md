@@ -195,13 +195,18 @@ interface WebImageIcon {
     readonly type: "image";
     readonly iconUrl: string;
 }
+
+interface Icon {
+    readonly type: "icon";
+    readonly iconClass: string;
+}
     
 interface NativeImageIcon {
     readonly type: "image";
     readonly iconUrl: Readonly<ImageURISource>;
 }
     
-export type WebIcon = GlyphIcon | WebImageIcon | undefined;
+export type WebIcon = GlyphIcon | WebImageIcon | Icon | undefined;
 export type NativeIcon = GlyphIcon | NativeImageIcon | undefined;
 export type IconValue = WebIcon | NativeIcon;
 ```

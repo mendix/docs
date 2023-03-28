@@ -19,6 +19,8 @@ This document explores four common advanced inference design patterns for machin
 * [Machine learning model as a service](#maas) patterns
 * [Batch inference](#batch-inference) patterns
 
+{{% alert color="info" %}}Check out a demo app and Jupyter notebook examples in our [Demo for Mendix ML Kit](https://github.com/mendix/mlkit-example-app) repository for further information on working with machine learning models in Mendix.{{% /alert %}}
+
 ### 1.1 Ensembles {#ensembles}
 
 Ensemble models are used when dealing with a lot of variance on a dataset or many features versus a relatively low number of data available. Ensemble models are a machine learning approach to combine multiple other models, called *base estimators*, in the prediction process. Ensemble models offer a solution to overcome the technical challenges of building a single estimator. In this approach, the same data points are sent to a group of models and then collect all the predictions to find the best prediction.

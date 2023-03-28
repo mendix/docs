@@ -28,7 +28,7 @@ Each call also requires the parameters 'username' and 'password'. These are the 
 
 ### 2.1 AcceptFeedback
 
-This call **accepts** the specified feedback item. This means that the app team has accepted the feedback and added this feedback as a story to the sprint.
+This call **accepts** the specified feedback item. This means that the app team has accepted the feedback and added this feedback as a story to the Sprint.
 
 | Parameter Name | Parameter Type | Description |
 | --- | --- | --- |

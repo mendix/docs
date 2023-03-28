@@ -28,6 +28,7 @@ The actions which can be performed are:
 * Find by expression 
 * Head 
 * Tail 
+* Range
 
 See below for details on these actions.
 
@@ -44,7 +45,7 @@ The list operation properties pane consists of the following sections:
 * [Action](#action)
 * [Common](#common)
 
-## 3 Action Section{#action}
+## 3 Action Section {#action}
 
 The **Action** section of the properties pane shows the action associated with this activity.
 
@@ -100,10 +101,22 @@ These operations take a list and filter it based on an expression. Inside the ex
 | Find by expression | Finds the first object that matches the given expression. | Object |
 | Filter by expression | Finds all the objects that match the given expression. | List |
 
+#### 3.1.5 Range {#range}
+
+{{% alert color="info" %}}
+This list operation action was introduced in Studio Pro 9.24.
+{{% /alert %}}
+
+This operation takes a list and filters it based on two expressions: `offset` and `amount`.
+
+| Operation | Description | Result Type |
+| --- | --- | --- |
+| Range | Retrieve a given number of objects (**Amount**) starting at a given index (**Offset**). The `amount` and `offset` are expressions that should result in a number. Note that the first object has an offset of 0. An amount of 0 means that all objects are retrieved. | List |
+
 ### 3.2 List Name, Object Name, or Variable Name
 
 This is the name of the resulting List, Object, or Boolean variable. The result can be used by all activities that follow this activity.
 
-## 4 Common Section{#common}
+## 4 Common Section {#common}
 
 {{% snippet file="/static/_includes/refguide/microflow-common-section-link.md" %}}

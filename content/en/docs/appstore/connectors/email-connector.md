@@ -286,7 +286,6 @@ If you already have an email account configured using basic authentication in yo
     * Associate the existing email account with newly created OAuth provider.
     * Navigate to the **EmailConnector_Overview** page and handle the warning messages visible for desired email account.
 
-
 ### 5.3 Deploying to On-Premises Cloud Environments
 
 When deploying [on premises](/developerportal/deploy/on-premises-design/) running [Microsoft Windows](/developerportal/deploy/deploy-mendix-on-microsoft-windows/), you nede to add a rule for a URL redirect.

@@ -21,6 +21,8 @@ This document explores four pre-processor and post-processor design patterns for
 * [ONNX operators](#onnx-operators)
 * [Hybrid activities](#complex-hybrid)
 
+{{% alert color="info" %}}Check out a demo app and Jupyter notebook examples in our [Demo for Mendix ML Kit](https://github.com/mendix/mlkit-example-app) repository for further information on working with machine learning models in Mendix.{{% /alert %}}
+
 ### 1.1 Pre-processors and Post-processors as Microflow Activities {#microflow-activities}
 
 The most simple processors could be implemented using existing microflow activities that are provided by Studio Pro. Here is some example usage of Design Pattern #1.
@@ -186,6 +188,7 @@ As you can see, most of the code are the loops required for normalization and en
 ##### 1.2.2.2 Post-Processing
 
 In this case, the bulk of the code is about creating a map for translating the id derived from the highest confidence class retrieved by the model, and the highest probability calculation.
+
 ```
 
     // BEGIN EXTRA CODE
@@ -289,7 +292,6 @@ ResNet Pre-processor and Model Inference in Separate MLKit Activities
 
 {{< figure src="/attachments/refguide/modeling/integration/ml-kit/design-patterns/pre-postprocessor-design-patterns/ResNet-pre-processor-Model-Inference-sep-activities.png" alt="." >}}
 
-
 The below code snippet creates a preprocessor ONNX artifact that contains the necessary feature pre-processor transformation steps by the [ResNet models](https://github.com/onnx/models/tree/main/vision/classification/resnet) that can be found in the ONNX Zoo.
 
 ```
@@ -342,7 +344,6 @@ The below code snippet creates a preprocessor ONNX artifact that contains the ne
 The computation graph of an existing ONNX artifact can be altered in various ways. An ONNX operator (node) can be added or removed, or replaced with another operator. [Python API](https://github.com/onnx/onnx/blob/rel-1.9.0/docs/PythonAPIOverview.md) of the ONNX provides a bunch of tools to make modifications to existing artifacts.
 
 ONNX model is represented using protocol buffers. Dealing with ONNX protocol buffer is complicated and error-prone. The ONNX protocol buffer representation also depends on ONNX IR version and OpSet version.
-
 
 ResNet Pre-processor and Model Inference Combined in a Single MLKit Activity
 

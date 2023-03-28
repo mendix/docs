@@ -215,7 +215,7 @@ The permissions in Yufu are equivalent to the roles in Mendix.
 
 1. Download the QianfanSSO module from the following address.
 
-    [https://mendix-cdn-prod-1305133312.cos.ap-shanghai.myqcloud.com/Qianfansso/QianfanSSO.mpk](https://mendix-cdn-prod-1305133312.cos.ap-shanghai.myqcloud.com/qianfansso/QianFanSSO.mpk)
+    [https://mendix-cdn-prod-1305133312.cos.ap-shanghai.myqcloud.com/qianfansso/QianFanSSO.mpk](https://mendix-cdn-prod-1305133312.cos.ap-shanghai.myqcloud.com/qianfansso/QianFanSSO.mpk)
 
 ### 4.2 Importing the QianfanSSO Module
 

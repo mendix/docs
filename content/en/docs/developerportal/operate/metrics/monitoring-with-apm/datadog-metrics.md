@@ -149,7 +149,7 @@ Setting these values for your app means that all metrics from this environment o
 You can add more tags if you want, but note that Datadog's charges include an element for [custom metrics](https://docs.datadoghq.com/developers/metrics/custom_metrics/) as described on the Datadog site.
 {{% /alert %}}
 
-## 4 Multi-instance metrics{#multi-instance-metrics}
+## 4 Multi-Instance metrics {#multi-instance-metrics}
 
 You can view metrics for multiple instances of an application on the Datadog dashboard:
 
@@ -217,7 +217,7 @@ The Datadog Events log contains events which come from your app: those are the s
 
 By default all email addresses contained in log events will be redacted. You can change this – see [Email Address Redaction](#redact-emails), above.
 
-### 5.9 Datadog Agent not Started
+### 5.9 Datadog Agent Not Started
 
 If you configure your app for Datadog but the Datadog agent is not started, the events will be sent to the app log files.
 

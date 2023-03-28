@@ -19,11 +19,11 @@ See [App Roles](/developerportal/collaborate/app-roles/) to learn more about the
 
 ## 2 Viewing Your Nodes{#nodes}
 
-To find a list of all the Mendix Cloud nodes to which you have access, click the **Switch-to** menu in the Developer Portal and choose **Cloud**.
+To find a list of all the Mendix Cloud licensed nodes to which you have access, click the **Switch-to** menu in the Developer Portal and choose **Cloud**.
 
 {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/node-permissions/go-to-nodes-page.png" alt="Licensed Mendix Cloud nodes" >}}
 
-You will see a list of all your nodes:
+You will see a list of all your licensed nodes:
 
 {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/node-permissions/nodes-list.png" alt="Licensed Mendix Cloud nodes" >}}
 

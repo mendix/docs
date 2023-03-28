@@ -95,11 +95,11 @@ For a Free App, you can only restore available backups which are made from the a
 
 You may want to restore a backup which has been created on another platform, for example an on-premises deployment. In this case you will have to construct the backup file which the Mendix Cloud will recognize.
 
-### .tar.gz archive
+### 5.1 .tar.gz Archive
 
 A **Full snapshot** backup file is a *.tar.gz* file (for example, *files_and_database-fc9e126f-201811210121.tar.gz*).
 
-### .tar archive
+### 5.2 .tar Archive
 
 The *.tar* archive within the *.tar.gz* archive (for example, *files_and_database-fc9e126f-201811210121.tar*) contains a number of files in a folder structure.
 
@@ -121,7 +121,7 @@ tree/46/9c/469c9c80-34d3-4810-8494-86b63eb37214
 tree/4d/8f/4d8ffd66-7ad3-4f5c-a992-985cf360581b
 ```
 
-### .metadata file
+### 5.3 .metadata File
 
 This contains json describing the backup. For example:
 
@@ -135,7 +135,7 @@ This contains json describing the backup. For example:
 }
 ```
 
-### db folder{#db-folder}
+### db Folder {#db-folder}
 
 This contains the *db.backup* file. This is a PostgreSQL dump file created using the command `pg_dump -O -x -Fc`.
 
@@ -145,7 +145,7 @@ If the dump does not use the *custom format* then the restore will fail.
 The dump must be created with `pg_dump` version 1.14 or below, which is currently bundled with PostgreSQL 12 and 13. If it is created with a later version, then the upload will fail.
 {{% /alert %}}
 
-### tree folder
+### tree Folder
 
 This contains the files which are stored in external file storage. Each file has the name of the uuid used within Mendix to identify the resource. They are also stored in the following tree structure where each file is stored in a second level location:
 

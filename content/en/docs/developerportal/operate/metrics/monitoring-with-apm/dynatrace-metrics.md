@@ -27,7 +27,7 @@ To use Dynatrace, and to send data to Dynatrace from your Mendix app, you will n
     * An access token for integrating your Dynatrace environment with your Mendix app — you can find out how to obtain this in the Dynatrace documentation [Generate an access token](https://www.dynatrace.com/support/help/get-started/access-tokens#create-api-token)
 * A licensed Mendix app of which you are the [Technical Contact](/developerportal/collaborate/app-roles/#technical-contact)
 
-## 3 Connect Node to Dynatrace{#connect-node}
+## 3 Connect Node to Dynatrace {#connect-node}
 
 To start sending your Mendix app's metrics to Dynatrace, you need to set some environment variables in the Developer Portal.
 
@@ -70,9 +70,9 @@ To start sending your Mendix app's metrics to Dynatrace, you need to set some en
 
 5. Return to the **General** tab and *restart* your environment.
 
-## 4 Additional Information{#additional-info}
+## 4 Additional Information {#additional-info}
 
-### 4.1 Dimensions - only valid for custom metrics
+### 4.1 Dimensions (Only Valid for Custom Metrics)
 
 If you use Dynatrace to monitor more than one app and environment you will need some dimensions to be able to tell which app or environment these metrics apply to. To identify the metrics for your app and environment in Dynatrace, Mendix provide some default dimensions. You can also add extra dimensions.
 

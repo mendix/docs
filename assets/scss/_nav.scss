@@ -202,7 +202,7 @@ nav.foldable-nav {
     }
 
     .ul-1 .with-child > input:checked ~ label:before { 
-        color: $primary;
+        color: $blue; // we changed the color from $primary to $blue
         transform: rotate(90deg);
         transition: transform 0s; // NK - disables animation transition time, now switch is instant
     }
@@ -216,13 +216,13 @@ nav.foldable-nav {
     nav.foldable-nav {
 
         .ul-1 .with-child > label:hover:before { 
-            color: $primary;
+            color: $blue; // we changed the color from $primary to $blue
             transform: rotate(30deg);
             transition: transform 0s; // NK - disables animation transition time, now switch is instant
         }
 
         .ul-1 .with-child > input:checked ~ label:hover:before { 
-            color: $primary;
+            color: $blue; // we changed the color from $primary to $blue
             transform: rotate(60deg) !important;
             transition: transform 0s; // NK - disables animation transition time, now switch is instant
         }

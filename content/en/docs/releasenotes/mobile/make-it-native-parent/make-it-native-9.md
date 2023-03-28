@@ -17,11 +17,11 @@ You can download the Make It Native app for [iOS](https://apps.apple.com/app/mak
 
 ## Android 2.0.0 / iOS 2.0.0
 
-**Release date: 28th Match 2023**
+**Release date: 28th March 2023**
 
 ### Improvements
 
-* The Make It Native 9 app now uses React Native 0.70.7 to support Studio Pro 9.24.0.
+* The Make It Native 9 app now uses React Native 0.70.7 to support Studio Pro [9.24.0](/releasenotes/studio-pro/9.24/).
 
 ### Fixes 
 

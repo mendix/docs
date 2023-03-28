@@ -69,12 +69,11 @@ First of all, you need to connect data to the list. Do the following:
 5. Now the list is connected to the **OpportunityContact** entity. To display the name of each report per company, do the following:
 
     1. Select the **List item title** text in the list view and navigate to its **Properties** pane.
-    2. Click the **Caption** property from the **General** section.
-    3. Click the three-dots icon to open the **Edit Caption** dialog box.
-    4. In the **Edit Caption** dialog box, click **New**.
-    5. In the **Edit Template Parameter** dialogue box, click **Select** for **Attribute (path)**.
-    6. In the drop-down list of the **OpportunityContact** entity, select **Name**, and click **OK**.
-    7. Change the **Caption** from **List item title** to *{1}* and click **OK**.
+    2. Select the **Caption** property and click the three dots to open the **Edit Caption** dialog box.
+    3. In the **Edit Caption** dialog box, click **New** for the **Parameters** section.
+    4. In the **Edit Template Parameter** dialog box, click **Select** for **Attribute (path)**.
+    5. In the drop-down list of the **OpportunityContact** entity, select **Name**, and click **OK**.
+    6. Change the **Caption** from **List item title** to *{1}* and click **OK**.
 
     Now the list view displays the list of opportunity contacts by their name:
 
@@ -94,20 +93,20 @@ Now you need to configure the widgets inside the data view to show all the attri
 2. Double-click **Form title** (which is displayed as a data view heading), rename the **Caption** to *Opportunity Contact Details*, and click **OK**.
 3. Navigate to **Toolbox** > **Widgets**, and search for **Radio buttons**.
 4. Drag it inside the data view above the **First name** text box.
-5. Double-click the radio button to open its properties:
+5. Double-click the radio button to open its properties and do the following:
 
     1. Go to **Data Source** > **Attribute**. 
-    2. Select the **Title** attribute as the data source for the radio button. 
+    2. In the **Select Attribute** dialog box, select the **Title** attribute as the data source for the radio button. 
     3. In the **Label** section, rename the **Label caption** to *Title*.
 
     Now the title of an opportunity contact is displayed. You need to configure the other existing input widgets for other contact details:
 
     {{< figure src="/attachments/refguide/modeling/pages/data-widgets/configure-list-and-details-on-one-page/title.png" width="500px" >}}
 
-6. Double-click the **First name** text box to open its properties:
+6. Double-click the **First name** text box to open its properties and do the following:
 
     1. Go to **Data Source** > **Attribute**. 
-    2. Select the **Name** attribute as the data source.
+    2. In the **Select Attribute** dialog box, select the **Name** attribute as the data source.
     3. In the **Label** section, rename the **Label caption** to *Name*.
 
 7. Refer to steps 6a-6c to select the **Phone** attribute for the **Phonenumber** text box, the **Email** attribute for the **Email** text box, and the **DateCreated** attribute for the **Birthday** text box.

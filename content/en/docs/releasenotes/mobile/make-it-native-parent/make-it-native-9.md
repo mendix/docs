@@ -6,7 +6,12 @@ description: "These release notes showcase each release of the iOS and Android M
 tags: ["Native", "Android", "iOS", "Apple", "Android"]
 ---
 
+{{% alert color="info" %}}
+The latest version of Make It Native 9 is only compatible with versions of Mendix 9.24.0 and above. If you wish to use a MIN testing app with an older version of Mendix 9, see [Use Make It Native 9 with an Older Version of Mendix 9](/refguide/getting-the-make-it-native-app/#use-MIN-older).
+{{% /alert %}}
+
 For more information on the Make It Native app, see [Getting the Make It Native App](/refguide/getting-the-make-it-native-app/).
+
 
 You can download the Make It Native app for [iOS](https://apps.apple.com/app/make-it-native/id1334081181) or [Android](/refguide/getting-the-make-it-native-app/).
 

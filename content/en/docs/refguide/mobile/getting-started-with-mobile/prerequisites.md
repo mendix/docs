@@ -94,7 +94,7 @@ If your company has strict network policies which do not allow you to open the p
     adb reverse tcp:8083 tcp:8083
     ```
 
-#### 3.1.6 Use Make It Native 9 with an Older Version of Mendix 9
+#### 3.1.6 Use Make It Native 9 with an Older Version of Mendix 9 {#use-MIN-older}
 
 The latest version of Make It Native 9 is only compatible with versions of Mendix 9.24.0 and above. To develop with older versions of Mendix 9, you can create a custom developer app by following [this guide](/refguide/mobile/distributing-mobile-apps/building-native-apps/how-to-devapps/). Note that a custom developer app can be used to develop multiple older Mendix apps as long as no custom dependencies are introduced.
 

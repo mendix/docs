@@ -44,7 +44,7 @@ The table below describes all the available dockable window panes.
 | Get Started | Shows useful resources for getting started with the Mendix Modeler. |
 | Project Explorer | Shows the complete structure of your project including all documents inside the modules. By default the active document is always selected in the project explorer so you can quickly see where the document you are editing is in the tree. You can change this behavior in the **Edit** > **Preferences** window pane. |
 | Properties | Shows properties of the currently selected element. This is where a lot of editing in the Modeler takes place. |
-| Stories | For [Team Server](/refguide7/team-server/) enabled projects, this pane shows the stories of the current sprint. |
+| Stories | For [Team Server](/refguide7/team-server/) enabled projects, this pane shows the stories of the current Sprint. |
 | Toolbox | Shows the tools that can be used in the current editor. For example, in a page you can insert all kinds of widgets (for example, text box and data view) by dragging them from the **Toolbox** to your form. |
 | Variables (via Debug Windows) | You can view the current values of variables here when debugging your application. |
 

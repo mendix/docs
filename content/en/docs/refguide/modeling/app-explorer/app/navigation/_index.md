@@ -105,7 +105,7 @@ The default home page indicates which [page](/refguide/page/) or [microflow](/re
 The default home page is visible to all unauthenticated users.
 {{% /alert %}}
 
-#### 4.2.2 Role-Based Home Pages
+#### 4.2.2 Role-Based Home Pages{#role-based}
 
 By using role-based home pages, you can show different home pages for different users. If a user logs in, the first role-based home page of which the user role matches the user role of the user is displayed. If no match is found, the default home page is used.
 

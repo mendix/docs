@@ -21,6 +21,7 @@ Support for Marketplace content is determined by the content support category an
 | --- | --- |
 | Platform | Mendix supports all the content in this category as-is when you are equipped with an SLA (**Platform**, **Standard**, or **Premium**) with Mendix. Content in this category is proactively incorporated into Mendix R&D test cycles as part of our platform release management. Please note that this category replaces the former **Extended** category, which has been deprecated. |
 | Deprecated | The content in this category is considered end-of-life and will be dropped to the **Community support** status in the next major release of Mendix. Content is provided as-is by Mendix R&D, and support depends on the severity of the reported issue and the effort required to resolve it. |
+| Partner | The content in this category is provided and supported by a partner. The partner supports this content as-is when you are equipped with an SLA with the partner. For more information, see [Mendix Component Partner Program](/appstore/creating-content/partner-program/). | 
 | Community | Content is provided as-is by members of the Mendix community, and support depends on the availability and effort of the owner. | 
 | Siemens | The content in this category is provided and supported by the Siemens team. Siemens supports this content as-is when you are equipped with an SLA with Siemens. | 
 
@@ -44,7 +45,11 @@ We will move Platform-supported content into this category when we consider the 
 
 Support for content in this category is limited and is decided by Mendix on a case-by-case basis. You can still follow the standard support process using the [Mendix Support Portal](https://support.mendix.com). However, the Mendix SLA no longer applies. 
 
-### 2.3 Community Support Category {#community-category}
+### 2.3 Partner Support Category
+
+Partner-supported content is created and maintained by partners as part of the [Mendix Component Partner program](/appstore/creating-content/partner-program/). Partners in the program commit to providing support to paying customers under an SLA (meaning, under terms specified by the partner). Customers can rely on this SLA for support from the partner if something goes wrong. A partner-supported Marketplace [component details page](/appstore/general/app-store-overview/#details) contains a reference to the partner's support portal or the partner's support contact email.
+
+### 2.4 Community Support Category {#community-category}
 
 Support on content in this category is up to the user or organization providing the content. We recommend contacting the owner of the content in case of questions or issues via the following methods:
 
@@ -55,13 +60,13 @@ Support on content in this category is up to the user or organization providing 
 
 The level of support depends on the availability and effort of the developer and/or the Mendix community.
 
-### 2.4 Support Category and Feedback Process Summary
+### 2.5 Support Category and Feedback Process Summary
 
 | Support Category  | Standard/Premium SLA | Platform SLA | No SLA |
 | --- | --- | --- | --- |
-| Platform support | [Mendix Support](https://support.mendix.com/)   | [Mendix Support](https://support.mendix.com/) | Mendix community |
+| Platform | [Mendix Support](https://support.mendix.com/)   | [Mendix Support](https://support.mendix.com/) | Mendix community |
 | Deprecated | [Mendix Support (Limited)](https://support.mendix.com/) (for more information, see the [Deprecated Support Category](#deprecated) section above) | [Mendix Support (Limited)](https://support.mendix.com/) (for more information, see the [Deprecated Support Category](#deprecated) section above) | Mendix community |
-| Community support | Mendix community | Mendix community | Mendix community |
+| Community | Mendix community | Mendix community | Mendix community |
 
 ## 3 Read More
 

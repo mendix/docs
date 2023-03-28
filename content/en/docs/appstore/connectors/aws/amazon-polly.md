@@ -135,7 +135,6 @@ The `Voice` entity is a representation of an Amazon Polly voice. It contains the
 | `LanguageCode` | The language code of the voice (string)|
 | `Gender` | Gender of the voice. (string)|
 
-
 #### 4.2.2 DescribeVoicesResponse
 
 The `DescribeVoicesResponse` entity is the response for the [DescribeVoices](#describe-voices) action. The action also returns a list of `DescribeVoice` objects associated with the `DescribeVoicesResponse` object. The `DescribeVoice` entity inherits from the voice entity and contains all its attributes. For more information on the attributes, see [Voice](#voice).

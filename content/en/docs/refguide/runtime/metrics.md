@@ -77,6 +77,10 @@ The following settings can be used, depending on the type of metrics being gener
 
 We do not support multiple [Prometheus](https://prometheus.io/docs/introduction/overview/). When the Prometheus registry is set, it can be accessed through the `/prometheus` context path over the admin endpoint.
 
+{{% alert color="warning" %}}
+Prometheus has a limitation where it sometimes ignores metrics with the same name but a different set of tags. Make sure all metrics with the same name have the same set of tags.
+{{% /alert %}}
+
 * `step` – the step size or reporting frequency to use.
 
 Example 1

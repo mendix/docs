@@ -148,7 +148,7 @@ This section shows you how to configure your app to use OIDC for SSO.
 
 ### 4.1 Configuring Roles
 
-Ensure that you have allocated the following user roles to the OIDC module roles
+Ensure that you have allocated the following user roles to the OIDC module roles:
 
 | User Role | OIDC Module Role |
 | --- | --- |
@@ -164,6 +164,8 @@ You may have to add the *Anonymous* user role if it does not exist already.
 
 ### 4.2 Allowing Anonymous Users
 
+The OIDC module supports multiple OIDC/OAuth-compatible IdPs. To allow your end-users to choose from a number of different IdPs, or to have the option to log back into the app after they have logged out, you will need to give them access to the app before they have signed in to the app. Therefore, you need to give anonymous users access to your app.
+
 In the **Anonymous** tab of the app security settings, do the following:
 
 1. Set **Allow anonymous users** to **Yes**
@@ -174,6 +176,8 @@ In the **Anonymous** tab of the app security settings, do the following:
 ### 4.3 Configuring Navigation
 
 The OIDC SSO module works without a specified sign-in page. Therefore, in the navigation section of your app, set **Sign-in page** (in the **Authentication** section) to *(none)*.
+
+To allow your end-users to choose from a number of different IdPs, or to have the option to log back into the app after they have logged out, set a **Role-based home page** for role **Anonymous** to **OIDC.Login_Web_Button**. See [Role-Based Home Pages](/refguide/navigation/#role-based) in *Navigation* for more information.
 
 In addition, administrators will need to have access to configure OIDC and also manage end-users. You can do this by including the pages `Administration.Account_Overview` and `OIDC.OIDC_Client_Overview` into the app navigation, or a separate administration page.
 
@@ -218,7 +222,7 @@ To configure Amazon Cognito for the OIDC SSO module, follow these steps:
     2. On the **Verified identities** page, in the **Identities** section, click **Create identity**.
     3. Verify the email address or addresses that you want to use for the user pool
 
-    {{< figure src="/attachments/appstore/connectors/aws-cognito/verifyemail.png" alt="The Verified identities page in Amazon SES">}}
+        {{< figure src="/attachments/appstore/connectors/aws-cognito/verifyemail.png" alt="The Verified identities page in Amazon SES">}}
 
 2. Create a user pool for Amazon Cognito by doing the following steps:
     1. In the Amazon Console, open the Amazon Cognito service.
@@ -226,21 +230,22 @@ To configure Amazon Cognito for the OIDC SSO module, follow these steps:
     3. Follow the **Create user pool** wizard to configure the sign-in and sign-up, security requirements, and message delivery.
     4. In the **Integrate your app** step of the wizard, enter a name for your user pool and leave the other settings as default.
 
-    {{< figure src="/attachments/appstore/connectors/aws-cognito/userpoolname.png" alt="The Integrate your app step in the Create user pool wizard">}}
+        {{< figure src="/attachments/appstore/connectors/aws-cognito/userpoolname.png" alt="The Integrate your app step in the Create user pool wizard">}}
     
     5. Review and create the user pool.
+
 3. Add users to the user pool by doing the following steps:
     1. In Amazon Cognito, on the **User pools** page, find and open the user pool that you created.
     2. On the **Users** tab of the user pool, click **Create user**.
     3. Specify a verified email and a password.
 
-    {{< figure src="/attachments/appstore/connectors/aws-cognito/addusers.png" alt="The Users tab of a user pool">}}
+        {{< figure src="/attachments/appstore/connectors/aws-cognito/addusers.png" alt="The Users tab of a user pool">}}
 
 4. Configure the app integration by doing the following steps:
     1. Go to the **App integration** tab of the user pool that you created.
     2. In the **App clients and analytics** section, click **Create app client**.
     
-    {{< figure src="/attachments/appstore/connectors/aws-cognito/createappclient.png" alt="The Create app client button on the App integration page">}}
+        {{< figure src="/attachments/appstore/connectors/aws-cognito/createappclient.png" alt="The Create app client button on the App integration page">}}
 
     3. On the **Create app client** page, configure the following settings:
         * **App type** - **Public client**
@@ -256,7 +261,7 @@ To configure Amazon Cognito for the OIDC SSO module, follow these steps:
     5. Open the app client that you created.
     6. In the **App client information** section, copy the **Client ID** and the **Client secret**, and save them in a secure location.
 
-    {{< figure src="/attachments/appstore/connectors/aws-cognito/idsecret.png" alt="The Client ID and Client secret on the App client information page">}}
+        {{< figure src="/attachments/appstore/connectors/aws-cognito/idsecret.png" alt="The Client ID and Client secret on the App client information page">}}
 
     7. Go back to the user pool that you created.
     8. On the **App integration** tab, in the **Domain** section, copy the **Cognito domain** and save it in a secure location.

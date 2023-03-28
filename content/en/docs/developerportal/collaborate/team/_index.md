@@ -19,7 +19,7 @@ To view and manage your team members, follow these steps:
 
 ## 2 Managing the Team {#managing}
 
-Only the following roles can manage the app team: [Scrum Master](/developerportal/collaborate/app-roles/#team-roles), [Mendix Admin](/developerportal/control-center/), or a [custom role](/developerportal/collaborate/app-roles/#team-roles) with  the **App Settings** permission.
+Only team members with the [Scrum Master](/developerportal/collaborate/app-roles/#team-roles) role can manage the app team.
 
 {{< figure src="/attachments/developerportal/collaborate/team/team.png" >}}
 

@@ -81,7 +81,10 @@ To be able to use the data from your model in the REST service, you need to crea
     {{< figure src="/attachments/howto/integration/publish-rest-service/AddOperationMicroflow.png" >}}
 
 7. Click **Show** to start editing the newly created microflow.
-8. Add two parameters: **httpRequest** and **OrderID**.
+8. Add two parameters: **httpRequest** and **OrderID**. 
+
+{{% alert color="info" %}}These parameters might be added automatically, along with an **httpResponse** paramter. If you create an **Export Mapping** in steps 11-19 below, you will need to remove the **httpResponse** parameter to avoid getting any errors.{{% /alert %}}
+
 9. Add an action to the microflow to convert the **OrderID** variable (string) to an integer variable. This is needed to be able to search for the OrderID (autonumber).
 
     {{< figure src="/attachments/howto/integration/publish-rest-service/ConvertOrderID.png" >}}
@@ -124,6 +127,8 @@ To be able to use the data from your model in the REST service, you need to crea
 19. Open the end activity in your microflow and select **$NewHttpResponse** as the return value. You should have no errors, and your microflow should look like this:
 
     {{< figure src="/attachments/howto/integration/publish-rest-service/CompleteMFNoErrorHandling.png" >}}
+    
+    If you have error CE0346, remove the **httpResponse** parameter that may have been automatically created in step 4.2.7.
 
 ### 4.3 Viewing the App{#viewing}
 

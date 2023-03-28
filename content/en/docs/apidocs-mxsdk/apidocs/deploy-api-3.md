@@ -22,11 +22,13 @@ The V3 Deploy API only supports the endpoints listed here. For all other API cal
 
 ## 2 Authentication{#authentication}
 
-Authentication for the Deploy API v3 uses a Personal Access Token (PAT).
+Authentication for the Deploy API v3 uses a personal access token (PAT).
 
 ### 2.1 Generating a PAT
 
-Go to https://warden.mendix.com/ and follow the instructions in [Create a Personal Access Token with Warden](/developerportal/community-tools/warden/). Select the following as **Deployment Mendix Cloud** scopes:
+To generate a PAT, see the [Personal Access Tokens](/developerportal/community-tools/mendix-profile/#pat) section of *Mendix Profile*.
+
+Select the following as **Deployment Mendix Cloud** scopes:
 
 * `mx:deployment:read` – to perform `GET` operations
 * `mx:deployment:write` – to perform all operations (`GET`, `POST`, `PUT`, and `DELETE`)

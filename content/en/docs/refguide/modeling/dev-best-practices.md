@@ -174,7 +174,7 @@ You can call a microflow from a [workflow](/refguide/workflows/). See the list o
 
 #### 3.4.5 Validation Microflows
 
-Microflows that are used for [data validation](/howto/data-models/setting-up-data-validation/) use the prefix **VAL_**.
+Microflows that are used for [data validation](/refguide/setting-up-data-validation/) use the prefix **VAL_**.
 
 | Event Type      | Prefix               |
 |-----------------|----------------------|

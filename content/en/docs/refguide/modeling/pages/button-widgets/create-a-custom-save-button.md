@@ -89,7 +89,4 @@ Congratulations! You have customized the **Save** button using a microflow:
 
 ## 5 Read More
 
-* [Microflows](/refguide/microflows/)
-* [Microflow Activities](/refguide/activities/)
-* [Working With Lists in a Microflow](/refguide/working-with-lists-in-a-microflow/)
-* [Extracting and Using Sub-Microflows](/refguide/extracting-and-using-sub-microflows/)
+* [Advanced Validation with a Custom Save Button](/refguide/setting-up-data-validation/#custom-validation-save-button)

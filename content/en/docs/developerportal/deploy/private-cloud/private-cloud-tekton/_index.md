@@ -628,7 +628,7 @@ curl -X POST \
 | `namespace` | name of the Kubernetes namespace where Mendix Operator runs                                                                                   |
 | `env-internal-name` | Mendix environment internal name. You can get all the internal environment names with the command `kubectl get mendixapps -n $namespace_name` |
 | `source-url` *(Optional)* | .mda file url or oci-image (using `oci-image://` scheme) url. If empty, the url is not changed                                                |
-| `mx-admin-password` | mendix admin password     |
+| `mx-admin-password` | Mendix admin password     |
 | `replicas` *(Optional)* | number of replicas. If empty, the number of replicas remains the same                                                                         |
 | `dtap-mode` *(Optional)* | mode for running the Mendix application. Available options<br/>`P` – Production (for all production environments)<br/>`D` – Development       |
 | `set-constants` *(Optional)* | constants to set provided as a JSON map. Replaces the old list with the new one. Example: {"KEY":"VALUE"}                                     |

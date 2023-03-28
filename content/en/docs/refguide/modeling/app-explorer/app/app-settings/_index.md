@@ -319,20 +319,30 @@ A microflow selected for this setting will start every time a user task changes 
 
 This tab allows you to exclude libraries from deployment. For example, you can exclude libraries when you consume a different version of an existing add-on module.
 
-## 9 Miscellaneous Tab {#miscellaneous}
+## 9 Solution Tab {#solution}
+
+Settings on the **Solution** tab allow you to configure application distribution as an [adaptive solution](/appstore/creating-content/sol-solutions-guide/). 
+
+If you want to distribute your app as an adaptive solution package and allow upgrading it from the [implementer's side](/appstore/creating-content/sol-solutions-impl/), you need to **Enable solution adaptation** on this tab. The title of your app in the App Explorer will change to *Solution* and the solution version will be displayed after the app name.
+
+A distributable app must have a **Solution version** that you can set on this tab.
+
+If you are implementing a solution, **Based on** setting shows the version of the solution package your app is currently based on.
+
+## 10 Miscellaneous Tab {#miscellaneous}
 
 These settings determine the behavior of Studio Pro for this app. The settings apply to everyone that is working on this app.
 
-### 9.1 Bundle Widgets When Running Locally
+### 10.1 Bundle Widgets When Running Locally
 
 When deploying to the cloud, custom widgets are bundled to optimize client-server communication. When deploying locally, this step is skipped to accelerate startup duration. In some cases, this may obfuscate errors triggered by faulty custom widgets.
 
 If this option is set, custom widgets will also be bundled locally. This mimics the production deployment, eliminating risk at the cost of start-up time.
 
-### 9.2 Suggest Lower-Case Variable Names in Microflows
+### 10.2 Suggest Lower-Case Variable Names in Microflows
 
 When enabled, the names that Studio Pro suggests in microflows will start with a lower-case letter instead of an upper-case letter.
 
-### 9.3 Activity Default Colors
+### 10.3 Activity Default Colors
 
 This table allows you to select a default color for each microflow activity type that is available in your app. The selected color will be used as the background color for all microflow activities of that type in your app. It is possible to override this default value for individual activities in the microflow editor. If you change the default color for an activity type, and there are activities of that type present in the app that have an individual background color specified, a dialog will be shown that allows you to apply the new default color to these activities as well.

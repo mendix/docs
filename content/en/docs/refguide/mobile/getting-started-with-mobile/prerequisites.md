@@ -94,24 +94,26 @@ If your company has strict network policies which do not allow you to open the p
     adb reverse tcp:8083 tcp:8083
     ```
 
-#### 3.1.6 Use Make It Native 9 with an older version of Mendix 9
+#### 3.1.6 Use Make It Native 9 with an Older Version of Mendix 9
 
-The latest version fo Make It Native 9 is only compatible with Mendix 9.24.0 and later. To develop older versions of Mendix 9, you can create a custom developer app by following [this guide](/refguide/mobile/distributing-mobile-apps/building-native-apps/how-to-devapps/). Note, that the custom developer app can be used to develop multiple older Mendix apps as long as no custom dependencies are introduced.
+The latest version of Make It Native 9 is only compatible with versions of Mendix 9.24.0 and above. To develop with older versions of Mendix 9, you can create a custom developer app by following [this guide](/refguide/mobile/distributing-mobile-apps/building-native-apps/how-to-devapps/). Note that a custom developer app can be used to develop multiple older Mendix apps as long as no custom dependencies are introduced.
 
-Until June 2023, we also provide a special version of Make It Native 9 that is compatible with older versions of Mendix 9:
+Until June 2023, Mendix is also providing a special version of the Make It Native 9 app that is compatible with older versions of Mendix 9. To install the special MIN 9 app, do the following:
 
-For iOS:
-* Download and Install the [TestFlight App from Apple](https://developer.apple.com/testflight/).
-* Open the following URL on your phone: [https://testflight.apple.com/join/3tVndxSt](https://testflight.apple.com/join/3tVndxSt).
-* Accept the invitation and install the Make It Native 9 app via TestFlight.
+For iOS, do the following:
+
+1. Download and install the [TestFlight App from Apple](https://developer.apple.com/testflight/).
+1. Open the following URL on your phone: [https://testflight.apple.com/join/3tVndxSt](https://testflight.apple.com/join/3tVndxSt).
+1. Accept the invitation and install the Make It Native 9 app via TestFlight.
 
 For Android:
-* Uninstall Make It Native 9 from your phone.
-* Open the following URL in Chrome on your phone to download MakeItNative9.apk: [https://www.dropbox.com/s/9rvgnb87bofwyaj/MakeItNative9.apk?dl=1](https://www.dropbox.com/s/9rvgnb87bofwyaj/MakeItNative9.apk?dl=1).
-* Access Downloads by tapping the three dots on the top left.
-* Tap on MakeItNative9.apk to install the app.
-* If Chrome refuses to install the app, enable "Allow from this source" in Settings and try again.
-* If a warning is shown tap "Install anyway".
+
+1. Uninstall the Make It Native 9 app from your phone.
+1. Open the following URL in Chrome on your phone to download the *MakeItNative9.apk* file: [https://www.dropbox.com/s/9rvgnb87bofwyaj/MakeItNative9.apk?dl=1](https://www.dropbox.com/s/9rvgnb87bofwyaj/MakeItNative9.apk?dl=1).
+1. Access **Downloads** by tapping the three dots in the top-left corner.
+1. Tap on *MakeItNative9.apk* to install the app.
+1. If Chrome refuses to install the app, enable **Allow from this source** in Settings and try again.
+1. If a warning is shown, tap **Install anyway**.
 
 ### 3.2 Configure Parallels
 

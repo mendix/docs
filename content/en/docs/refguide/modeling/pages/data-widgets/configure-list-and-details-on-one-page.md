@@ -70,7 +70,7 @@ First of all, you need to connect data to the list. Do the following:
 
     1. Select the **List item title** text in the list view and navigate to its **Properties** pane.
     2. Select the **Caption** property and click the three dots to open the **Edit Caption** dialog box.
-    3. In the **Edit Caption** dialog box, click **New** for the **Parameters** section.
+    3. In the **Edit Caption** dialog box, click **New** in the **Parameters** section.
     4. In the **Edit Template Parameter** dialog box, click **Select** for **Attribute (path)**.
     5. In the drop-down list of the **OpportunityContact** entity, select **Name**, and click **OK**.
     6. Change the **Caption** from **List item title** to *{1}* and click **OK**.

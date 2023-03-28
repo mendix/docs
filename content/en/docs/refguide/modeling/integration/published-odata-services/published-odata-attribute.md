@@ -10,6 +10,8 @@ tags: ["studio pro","OData","publish"]
 
 The **Edit published attribute** dialog allows you to edit the properties of an attribute published in an OData service.
 
+{{< figure src="/attachments/refguide/modeling/integration/published-odata-attribute/edit-published-attribute.png" alt="Edit published attribute dialog box." >}}
+
 # 2 General
 
 ## 2.1 Exposed Name
@@ -39,7 +41,7 @@ The type of the attribute.
 This field is shown when the type is an enumeration that was previously exposed as a string, and only for OData version 4. Change the value to **Enumeration** to publish the enumeration. This informs clients of the possible values of this attribute.
 
 {{% alert color="info" %}}
-The *enumerations* feature was introduced in Studio Pro [9.24.0](/releasenotes/studio-pro/9.24.0/). In earlier versions, enumeration attributes were published as strings.
+The *enumerations* feature was introduced in Studio Pro [9.24.0](/releasenotes/studio-pro/9.24/). In earlier versions, enumeration attributes were published as strings.
 {{% /alert %}}
 
 ## 2.7 Capabilities

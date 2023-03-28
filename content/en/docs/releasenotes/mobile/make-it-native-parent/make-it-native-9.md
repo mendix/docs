@@ -12,8 +12,19 @@ The latest version of Make It Native 9 is only compatible with versions of Mendi
 
 For more information on the Make It Native app, see [Getting the Make It Native App](/refguide/getting-the-make-it-native-app/).
 
-
 You can download the Make It Native app for [iOS](https://apps.apple.com/app/make-it-native/id1334081181) or [Android](/refguide/getting-the-make-it-native-app/).
+
+## Android 2.0.0 / iOS 2.0.0
+
+**Release date: 28th March 2023**
+
+### Improvements
+
+* The Make It Native 9 app now uses React Native 0.70.7 to support Studio Pro [9.24.0](/releasenotes/studio-pro/9.24/). This means it is no longer compatible with older Studio Pro versions. We recommend upgrading your app to 9.24 or building a [custom developer app](/refguide/mobile/distributing-mobile-apps/building-native-apps/how-to-devapps/). 
+
+### Fixes 
+
+* We fixed an issue with the QR Code scanner.
 
 ## Android 1.1.2 / iOS 1.1.1
 

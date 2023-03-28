@@ -49,15 +49,18 @@ This property appears as follows:
 ```typescript
 type GlyphIcon = { type: "glyph"; iconClass: string; }
 type ImageIcon = { type: "image"; imageUrl: string; }
+type Icon = { type: "icon"; iconClass: string; }
 
-type IconProperty = null | GlyphIcon | ImageIcon;
+type IconProperty = null | GlyphIcon | ImageIcon | Icon;
 ```
 
-Icon properties are exposed objects containing a `type` field that is `"glyph"` if a glyphicon is selected, `"image"` if an image is selected, or `null` if no icon is selected at all.
+Icon properties are exposed objects containing a `type` field that is `"glyph"` if a glyphicon is selected, `"image"` if an image is selected, `"icon"` if an icon from an icon collection is selected, or `null` if no icon is selected at all.
 
 For the `"glyph"` type, `iconClass` is available. It contains the class to apply on a `glyphicon` element to display the correct icon. It will be an empty string value if no icon has been selected.
 
 For the `"image"` type, `imageUrl` is available. It represents a URL from which your selected image can be reached by Studio and Studio Pro's Design mode. It will be an empty string value if no image has been selected.
+
+For the `"icon"` type, `iconClass` is available. It contains the classes to apply to an element to display the correct icon. This element does not need to have the `glyphicon` class. It will be an empty string value if no icon has been selected.
 
 ### 2.3 Image
 

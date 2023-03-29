@@ -306,7 +306,7 @@ The following settings apply to this IdP configuration:
 Additional settings must be configured in the page tabs.
 
 {{% alert color="warning" %}}
-When you add a new configuration or change an existing one, you should restart your app. This ensures that the correct configuration is used, and is particularly important if your app is scaled for high availability.
+When you add a new configuration or change an existing one, you should restart your app. This ensures that the correct configuration is used.
 {{% /alert %}}
 
 ### 4.1  Mapping 

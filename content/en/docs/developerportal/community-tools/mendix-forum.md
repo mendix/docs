@@ -19,16 +19,16 @@ On the right side of the Mendix Forum, you can see the **Top contributors**, whi
 
 This page contains the following tabs:
 
-* **Questions** – the questions you have bookmarked (for details on how to bookmark a question, see the [Question Details Page](#question-description-page) section)
-* **Ideas** – the ideas you have bookmarked (for details on how to bookmark an idea, see the [Idea Details Page](#idea-details-page) section)
+* **Questions** – the questions you have bookmarked (for details on how to bookmark a question, see the [Question Details](#question-details) section)
+* **Ideas** – the ideas you have bookmarked (for details on how to bookmark an idea, see the [Idea Details](#idea-details) section)
 
 ## 2 Posts
 
 This page contains the following tabs:
 
-* **Posted** – the questions and ideas you have posted (for more information, see the [Asking Your Question](#asking-your-question) and [Submitting an Idea](#submitting-an-idea) sections below)
+* **Posted** – the questions and ideas you have posted (for more information, see the [Asking Your Question](#asking-question) and [Posting Your Idea](#posting-idea) sections below)
 * **Answered** – the questions you have answered (for more information, see the [Answering a Question](#answering-question) section)
-* **Commented** – the questions and ideas that you have commented on (for details on how to comment on a question, see the [Question Details](#question-description-page) section below)
+* **Commented** – the questions and ideas that you have commented on (for details on how to comment on a question, see the [Question Details](#question-details) section below)
 
 ## 3 Questions  {#questions-tab}
 
@@ -36,16 +36,16 @@ On the **Questions** page, you can see an overview of the questions that have be
 
 {{< figure src="/attachments/developerportal/community-tools/mendix-forum/questions_example.png" >}}
 
-Each question has a descriptive title (①). Clicking the question title opens the specific [question details page](#question-description-page).
+Each question has a descriptive title (①). Clicking the question title opens the specific [Question Details](#question-details).
 
 Each question specifies the following elements:
 
-* The beginning of the question description (②), which is taken from the [question details page](#question-description-page)
+* The beginning of the question description (②), which is taken from the [Question Details](#question-details)
 * The category (③)
-    * This is set when asking a question (for details, see the [Asking Your Question](#asking-your-question) section).
+    * This is set when asking a question (for details, see the [Asking Your Question](#asking-question) section).
     * Clicking a category opens an overview page that lists all the questions in the same category.
 * The tags applied to question (④) 
-    * These are set when asking a question (for details, see the [Asking Your Question](#asking-your-question) section).
+    * These are set when asking a question (for details, see the [Asking Your Question](#asking-question) section).
     * Clicking a tag opens an overview page that lists all the questions with the same tag.
 * The number of votes (⑤), answers (⑥), and views (⑦) the question has received
 * The name, avatar, and level of the Mendix community member who asked the question (⑧)
@@ -57,7 +57,7 @@ Hovering over the developer name brings up the profile card:
 
 The profile card presents the Mendix points for the developer. Clicking the developer name on the card will bring you to their Mendix Profile.
 
-### 3.1 Searching and Filtering Questions {#searching}
+### 3.1 Searching and Filtering Questions
 
 {{< figure src="/attachments/developerportal/community-tools/mendix-forum/search-filter-questions.png" >}}
 
@@ -73,9 +73,9 @@ To filter the searching results, you can use the following filters:
 
 [**VERIFY- SPACES DEFINITION AND CROSS-REFERENCE**]
 
-* **Spaces** – the category set when the question was asked (for more information, see the [Asking Your Question](#asking-your-question) section)
-* **Type in a Tag** – the tags set when the question was asked (for more information, see the [Asking Your Question](#asking-your-question) section)
-* **Version** – the Mendix version to which the question is related (for more information, see the [Asking Your Question](#asking-your-question) section)
+* **Spaces** – the category set when the question was asked (for more information, see the [Asking Your Question](#asking-question) section)
+* **Type in a Tag** – the tags set when the question was asked (for more information, see the [Asking Your Question](#asking-question) section)
+* **Version** – the Mendix version to which the question is related (for more information, see the [Asking Your Question](#asking-question) section)
 
 Alternatively, you can search the entire Mendix Forum (both for questions and ideas) by clicking the search icon in the upper-right corner of the screen and entering keywords into the **Search** text box. Notice the following search details:
 
@@ -83,7 +83,7 @@ Alternatively, you can search the entire Mendix Forum (both for questions and id
 * You can set the **Type** of search results for the Mendix Forum to **Question**, **Idea**, or both (default)
 * You can filter by **Space** to get more refined results
 
-### 3.2 Question Details {#question-description-page}
+### 3.2 Question Details {#question-details}
 
 #### 3.2.1 Providing Question Details
 
@@ -98,7 +98,7 @@ On this page, you can read the full descriptive text of the question and do the 
     * How many times the question has been **Viewed**
     * The **Category** of the question
     * The **Tags** applied to the question (clicking a tag opens an overview page that lists questions with the same tag)
-    * The **Mendix version** set when the question was asked (for more information, see the [Asking Your Question](#asking-your-question) section)
+    * The **Mendix version** set when the question was asked (for more information, see the [Asking Your Question](#asking-question) section)
 * Click the **▲** or **▼** button to upvote or downvote the question based on its usefulness (②)
 * Click **Comment** to write and submit a comment on the question (③)
 * Click **Bookmark** to bookmark the question (④)
@@ -117,21 +117,20 @@ Below the question details are the answer(s) to the question. Click the **▲** 
 
 ### 3.3 Asking a Question
 
-#### 3.3.1 Asking Your Question {#asking-your-question}
+#### 3.3.1 Asking Your Question {#asking-question}
 
 It has never been easier to ask a question on the Mendix Forum. But before you submit a new question, be sure to search the Mendix Forum for similar questions that have already been asked. There may be someone else who has already posted the same question!
 
 To ask your own question on the Mendix Forum, follow these steps:
 
-1. Click **Ask a Question** on the upper-right corner of the **All Questions** page. 
+1. Click **Ask a Question** on the upper-right corner of the **Questions** page. 
 2. On the **Ask Your Question** page, fill in the following details in the editor:
 
     {{< figure src="/attachments/developerportal/community-tools/mendix-forum/questions_ask_screen.jpg"   width="800"  >}}
 
     * The **Title** of your question (which is how Mendix Forum users will first see your question, so make the title descriptive and interesting)
     * The **Description** of your question (add all the details about your question to make it searchable and so other users can answer it; consider including steps to reproduce the issue)
-    * The **Mendix Studio Version** on which version you encountered the issue you have a question about
-    * The **Category** that reflects your question (for example, **Connectors**, **Databases**, **Security**)
+    * The **Space** that reflects your question (for example, **Connectors**, **Databases**, **Security**)
     * The **Tag(s)** that reflect the topic of your question (which other users can use to filter the list of questions)
 
 3. Click **Ask your question**.
@@ -158,23 +157,23 @@ On the **Ideas** page, you can see an overview of the ideas and feature requests
 
 {{< figure src="/attachments/developerportal/community-tools/mendix-forum/ideas_example.png" >}}
 
-All the submitted ideas are publicly visible, and each idea has a descriptive title (①). Clicking the idea title opens the specific [idea details page](#idea-details-page).
+All the submitted ideas are publicly visible, and each idea has a descriptive title (①). Clicking the idea title opens the specific [Idea Details](#idea-details).
 
 Each idea specifies the following elements:
 
-* The beginning of the idea description (②) (this is taken from the [idea details page](#idea-details-page))
+* The beginning of the idea description (②) (this is taken from the [Idea Details](#idea-details))
 * The category (③)
-    * This is set when submitting an idea (for details, see the [Submitting an Idea](#submitting-an-idea) section).
+    * This is set when Posting Your Idea (for details, see the [Posting Your Idea](#posting-idea) section).
     * Clicking a category opens an overview page that lists all the ideas in the same category.
 * Tags (④) (for example, **Native-widgets**)
-    * This is set when submitting an idea (for details, see the [Submitting an Idea](#submitting-an-idea) section).
+    * This is set when Posting Your Idea (for details, see the [Posting Your Idea](##posting-idea) section).
     * Clicking a tag opens an overview page that lists all the ideas with the same tag.
 * The number of votes (⑤), comments (⑥), and views (⑦) for the idea
 * The name, avatar, and level of the Mendix community member who created the idea (⑧)
 * When the idea was created (⑨)
-* The status of the idea (⑩) (for descriptions of the statuses, see the [Idea Details Page](#idea-details-page) section below)
+* The status of the idea (⑩) (for descriptions of the statuses, see the [Idea Details](#idea-details) section below)
 
-### 4.1 Searching and Filtering Ideas {#searching}
+### 4.1 Searching and Filtering Ideas
 
 {{< figure src="/attachments/developerportal/community-tools/mendix-forum/search-filter-ideas.png" >}}
 
@@ -188,8 +187,8 @@ To filter the searching results, you can use the following filters:
     * **Implemented** – the idea has been implemented
     * **Closed** – the idea has been reviewed by the Product Managers but it has not been accepted
 * **Sort by** – the default is **Last Updated**; you can set it to **Newest** or **Most Votes**
-* **Categories** – the category set when the idea was submitted (for more information, see the [Submitting an Idea](#submitting-an-idea) section)
-* **Type in a Tag** – the tags set when the idea was submitted (for more information, see the [Submitting an Idea](#submitting-an-idea) section)
+* **Categories** – the category set when the idea was submitted (for more information, see the [Posting Your Idea](##posting-idea) section)
+* **Type in a Tag** – the tags set when the idea was submitted (for more information, see the [Posting Your Idea](##posting-idea) section)
 
 Alternatively, you can search the entire Mendix Forum (both for questions and ideas) by clicking the search icon in the upper-right corner of the screen and entering keywords into the **Search** text box. Notice the following search details:
 
@@ -197,7 +196,7 @@ Alternatively, you can search the entire Mendix Forum (both for questions and id
 * You can set the **Type** of search results for the Mendix Forum to **Question**, **Idea**, or both (default)
 * You can filter by **Category** to get more refined results
 
-### 4.2 Idea Details Page {#idea-details-page}
+### 4.2 Idea Details {#idea-details}
 
 Clicking the title of an idea will bring you to the details page for that idea:
 
@@ -232,7 +231,7 @@ If you want to follow the discussion on an idea via email notifications, click *
 The URL for each idea is unique.
 {{% /alert %}}
 
-### 4.3 Submitting an Idea {#submitting-an-idea}
+### 4.3 Posting an Idea {#posting-idea}
 
 If you have a great idea that you would like to see implemented on the Mendix Platform, we want to hear it! But please make sure you search the idea forum for similar ideas before submitting a new idea. There may be someone else who has already posted the same idea!
 

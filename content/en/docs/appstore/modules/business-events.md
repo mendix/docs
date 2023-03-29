@@ -200,7 +200,7 @@ To use an existing business service in Studio Pro 9.24 and above, do the followi
 
 The business event service document is open in Studio Pro:
 
-{{< figure src="/attachments//appstore/modules/business-events/existing-business-event-service.png" >}}
+{{< figure src="/attachments/appstore/modules/business-events/existing-business-event-service.png" >}}
 
 ##### 4.2.2.1 Publishing and Subscribing to Business Events
 
@@ -208,6 +208,8 @@ After following the instructions [Using an Existing Business Event Service](#two
 
 * Open the business service document and click **Add**
 * **Drag and drop** the business event from the **Data Hub pane** to your domain model
+
+To publish a business event service, you need to use it in a microflow.
 
 ##### 4.2.2.1.1 Automatically Created Event Handler Microflow and Entity {#two-way-be-handler}
 

@@ -73,7 +73,7 @@ To filter the searching results, you can use the following filters:
 
 [**VERIFY- SPACES DEFINITION AND CROSS-REFERENCE**]
 
-* **Spaces** – the category set when the question was asked (for more information, see the [Asking Your Question](#asking-question) section)
+* **Spaces** – the space set when the question was asked (for more information, see the [Asking Your Question](#asking-question) section)
 * **Type in a Tag** – the tags set when the question was asked (for more information, see the [Asking Your Question](#asking-question) section)
 * **Version** – the Mendix version to which the question is related (for more information, see the [Asking Your Question](#asking-question) section)
 
@@ -131,6 +131,7 @@ To ask your own question on the Mendix Forum, follow these steps:
     * The **Title** of your question (which is how Mendix Forum users will first see your question, so make the title descriptive and interesting)
     * The **Description** of your question (add all the details about your question to make it searchable and so other users can answer it; consider including steps to reproduce the issue)
     * The **Space** that reflects your question (for example, **Connectors**, **Databases**, **Security**)
+    * The **Studio Pro Version** that is relevant to your question (only available when you select a version-dependent space)
     * The **Tag(s)** that reflect the topic of your question (which other users can use to filter the list of questions)
 
 3. Click **Ask your question**.

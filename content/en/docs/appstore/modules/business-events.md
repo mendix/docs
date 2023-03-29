@@ -148,7 +148,7 @@ In your defining app, you can create a new service by doing the following:
 
 The business event service document is open in Studio Pro:
 
-{{< figure src="/attachments//appstore/modules/business-events/new-business-event-service.png" >}}
+{{< figure src="/attachments/appstore/modules/business-events/new-business-event-service.png" >}}
 
 In the [next section](#add-be-definitions), you will define the information included in your events, as well as what the service will implement.
 
@@ -158,11 +158,11 @@ To start defining what information is included in your events, as well as what t
 
 1.   Click **Add** in the open service document:
 
-     {{< figure src="/attachments//appstore/modules/business-events/add-event-definition.png" >}}
+     {{< figure src="/attachments/appstore/modules/business-events/add-event-definition.png" >}}
 
      The **Add business event** wizard opens:
 
-     {{< figure src="/attachments//appstore/modules/business-events/wizard-step-1.png" >}}
+     {{< figure src="/attachments/appstore/modules/business-events/wizard-step-1.png" >}}
 
 2.   Go through Steps 1 and 2 of the wizard.
 

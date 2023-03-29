@@ -4,7 +4,7 @@ url: /refguide/mobile/building-efficient-mobile-apps/
 category: Mobile
 weight: 31
 description: "These documents explain how to best arrange data syncing, startups, and improve other aspects of mobile apps."
-tags: ["optimize", "mobile", "performance", "efficient"]
+tags: ["optimize", "mobile", "performance", "efficient", "ios"]
 ---
 
 ## 1 Introduction

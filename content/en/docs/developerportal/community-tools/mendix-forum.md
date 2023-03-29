@@ -70,15 +70,18 @@ To filter the searching results, you can use the following filters:
     * **Answered** – the question has been answered
     * **Answer Accepted** – the question has been answered and the answer has been accepted)
 * **Sort by** – the default is **Last Updated**; you can set it to **Newest** or **Most Popular**
-* **Categories** – the category set when the question was asked (for more information, see the [Asking Your Question](#asking-your-question) section)
+
+[**VERIFY- SPACES DEFINITION AND CROSS-REFERENCE**]
+
+* **Spaces** – the category set when the question was asked (for more information, see the [Asking Your Question](#asking-your-question) section)
 * **Type in a Tag** – the tags set when the question was asked (for more information, see the [Asking Your Question](#asking-your-question) section)
-* **Mendix Version** – the Mendix version to which the question is related (for more information, see the [Asking Your Question](#asking-your-question) section)
+* **Version** – the Mendix version to which the question is related (for more information, see the [Asking Your Question](#asking-your-question) section)
 
 Alternatively, you can search the entire Mendix Forum (both for questions and ideas) by clicking the search icon in the upper-right corner of the screen and entering keywords into the **Search** text box. Notice the following search details:
 
-* The source is set to **Forum** by default; if you want to search other resources, you can switch the source.
-* You can set the **Type** of search results for the Mendix Forum to **Question**, **Idea**, or both (default).
-* You can filter by **Category** to get more refined results.
+* The source is set to **Forum** by default; if you want to search other resources, you can switch the source
+* You can set the **Type** of search results for the Mendix Forum to **Question**, **Idea**, or both (default)
+* You can filter by **Space** to get more refined results
 
 ### 3.2 Question Details {#question-description-page}
 

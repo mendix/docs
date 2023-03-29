@@ -20,7 +20,7 @@ You can download the Make It Native app for [iOS](https://apps.apple.com/app/mak
 
 ### Improvements
 
-* The Make It Native 9 app now uses React Native 0.70.7 to support Studio Pro [9.24.0](/releasenotes/studio-pro/9.24/). This means it is no longer compatible with older Studio Pro versions(to use on old versions, please give a look [here](https://docs.mendix.com/refguide/mobile/getting-started-with-mobile/prerequisites/#use-MIN-older)). We recommend upgrading your app to 9.24 or building a [custom developer app](/refguide/mobile/distributing-mobile-apps/building-native-apps/how-to-devapps/). 
+* The Make It Native 9 app now uses React Native 0.70.7 to support Studio Pro [9.24.0](/releasenotes/studio-pro/9.24/). This means it is no longer compatible with older Studio Pro versions (to use the MIN app with versions below 9.24.0, click [here](/refguide/mobile/getting-started-with-mobile/prerequisites/#use-MIN-older)). We recommend upgrading your app to 9.24 or building a [custom developer app](/refguide/mobile/distributing-mobile-apps/building-native-apps/how-to-devapps/). 
 
 ### Fixes 
 

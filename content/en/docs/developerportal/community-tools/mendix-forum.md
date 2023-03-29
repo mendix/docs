@@ -15,11 +15,24 @@ The Mendix Forum is closely integrated with the [Mendix Profile](/developerporta
 
 On the right side of the Mendix Forum, you can see the **Top contributors**, which lists the five Mendix community developers who have the most Mendix Forum points in the last 30 days.
 
-## 2 Questions  {#questions-tab}
+## 2 Bookmarks
 
-### 2.1 All Questions
+This page contains the following tabs:
 
-On the **All Questions** page, you can see an overview of the questions that have been asked. Here is an example question:
+* **Questions** – the questions you have bookmarked (for details on how to bookmark a question, see the [Question Details Page](#question-description-page) section)
+* **Ideas** – the ideas you have bookmarked (for details on how to bookmark an idea, see the [Idea Details Page](#idea-details-page) section)
+
+## 2 Posts
+
+This page contains the following tabs:
+
+* **Posted** – the questions and ideas you have posted (for more information, see the [Asking Your Question](#asking-your-question) and [Submitting an Idea](#submitting-an-idea) sections below)
+* **Answered** – the questions you have answered (for more information, see the [Answering a Question](#answering-question) section)
+* **Commented** – the questions and ideas that you have commented on (for details on how to comment on a question, see the [Question Details](#question-description-page) section below)
+
+## 3 Questions  {#questions-tab}
+
+On the **Questions** page, you can see an overview of the questions that have been asked. Here is an example question:
 
 {{< figure src="/attachments/developerportal/community-tools/mendix-forum/questions_example.png" >}}
 
@@ -44,7 +57,7 @@ Hovering over the developer name brings up the profile card:
 
 The profile card presents the Mendix points for the developer. Clicking the developer name on the card will bring you to their Mendix Profile.
 
-#### 2.1.1 Searching and Filtering Questions {#searching}
+### 3.1 Searching and Filtering Questions {#searching}
 
 {{< figure src="/attachments/developerportal/community-tools/mendix-forum/search-filter-questions.png" >}}
 
@@ -67,9 +80,9 @@ Alternatively, you can search the entire Mendix Forum (both for questions and id
 * You can set the **Type** of search results for the Mendix Forum to **Question**, **Idea**, or both (default).
 * You can filter by **Category** to get more refined results.
 
-#### 2.1.2 Question Details Page {#question-description-page}
+### 3.2 Question Details {#question-description-page}
 
-##### 2.1.2.1 Question Details
+#### 3.2.1 Providing Question Details
 
 Clicking the title of a question will bring you to the details page for that question:
 {{< figure src="/attachments/developerportal/community-tools/mendix-forum/questions_specific_page.png" >}}
@@ -93,15 +106,15 @@ If you want to follow the discussion on a question via email notifications, clic
 The URL for each question is unique.
 {{% /alert %}}
 
-##### 2.1.2.2 Answers {#answers}
+#### 3.2.2 Answers {#answers}
 
 Below the question details are the answer(s) to the question. Click the **▲** or **▼** button to upvote or downvote the answer based on how it addresses the question. You can also click **Comment** to comment on an answer.
 
 {{< figure src="/attachments/developerportal/community-tools/mendix-forum/questions_answer.png" >}}
 
-#### 2.1.3 Asking a Question
+### 3.3 Asking a Question
 
-##### 2.1.3.1 Asking Your Question {#asking-your-question}
+#### 3.3.1 Asking Your Question {#asking-your-question}
 
 It has never been easier to ask a question on the Mendix Forum. But before you submit a new question, be sure to search the Mendix Forum for similar questions that have already been asked. There may be someone else who has already posted the same question!
 
@@ -120,13 +133,13 @@ To ask your own question on the Mendix Forum, follow these steps:
 
 3. Click **Ask your question**.
 
-##### 2.1.3.2 Accepting an Answer on a Question You Have Asked
+#### 3.3.2 Accepting an Answer on Your Question
 
 Once a question you have asked receives several answers, you can accept an answer by clicking the check mark next to the answer.
 
 You should accept the answer that properly and accurately responds to your question in the best way possible.
 
-##### 2.1.3.3 Answering a Question {#answering-question}
+#### 3.4 Answering a Question {#answering-question}
 
 Below the answer(s), you can contribute to the Mendix Forum by writing your own answer in the editor and then clicking **Submit Answer**:
 
@@ -136,19 +149,9 @@ You can easily upload your images in the Mendix Forum by dragging them directly 
 
 {{< figure src="/attachments/developerportal/community-tools/mendix-forum/questions_image_button.png" >}}
 
-### 2.2 My Questions
+## 4 Ideas
 
-On the **My Questions** page, you can find the following questions:
-
-* **Asked** – the questions you have asked (for more information, see the [Asking Your Question](#asking-your-question) section)
-* **Answered** – the questions you have answered (for more information, see the [Answering a Question](#answering-question) section)
-* **Commented** – the questions that you have commented on (for details on how to comment on a question, see the [Question Details Page](#question-description-page) section)
-
-## 3 Ideas
-
-### 3.1 All Ideas
-
-On the **All Ideas** page, you can see an overview of the ideas and feature requests for improving the Mendix Platform that have been submitted by Mendix community members. Here is an example idea:
+On the **Ideas** page, you can see an overview of the ideas and feature requests for improving the Mendix Platform that have been submitted by Mendix community members. Here is an example idea:
 
 {{< figure src="/attachments/developerportal/community-tools/mendix-forum/ideas_example.png" >}}
 
@@ -168,7 +171,7 @@ Each idea specifies the following elements:
 * When the idea was created (⑨)
 * The status of the idea (⑩) (for descriptions of the statuses, see the [Idea Details Page](#idea-details-page) section below)
 
-#### 3.1.1 Searching and Filtering Ideas {#searching}
+### 4.1 Searching and Filtering Ideas {#searching}
 
 {{< figure src="/attachments/developerportal/community-tools/mendix-forum/search-filter-ideas.png" >}}
 
@@ -191,7 +194,7 @@ Alternatively, you can search the entire Mendix Forum (both for questions and id
 * You can set the **Type** of search results for the Mendix Forum to **Question**, **Idea**, or both (default)
 * You can filter by **Category** to get more refined results
 
-#### 3.1.2 Idea Details Page {#idea-details-page}
+### 4.2 Idea Details Page {#idea-details-page}
 
 Clicking the title of an idea will bring you to the details page for that idea:
 
@@ -226,7 +229,7 @@ If you want to follow the discussion on an idea via email notifications, click *
 The URL for each idea is unique.
 {{% /alert %}}
 
-#### 3.1.3 Submitting an Idea {#submitting-an-idea}
+### 4.3 Submitting an Idea {#submitting-an-idea}
 
 If you have a great idea that you would like to see implemented on the Mendix Platform, we want to hear it! But please make sure you search the idea forum for similar ideas before submitting a new idea. There may be someone else who has already posted the same idea!
 
@@ -245,16 +248,6 @@ To submit your own idea to the idea forum, follow these steps:
 3. Click **Submit your idea**.
 
 Mendix looks forward to hearing all of your ideas!
-
-### 3.2 My Ideas
-
-* **Submitted** – the ideas you have submitted 
-* **Commented** – the ideas you have commented on
-
-## 4 Bookmarks
-
-**Questions** – the questions you have bookmarked (for details on how to bookmark a question, see the [Question Details Page](#question-description-page) section)
-**Ideas** – the ideas you have bookmarked (for details on how to bookmark an idea, see the [Idea Details Page](#idea-details-page) section)
 
 ## 5 Read More
 

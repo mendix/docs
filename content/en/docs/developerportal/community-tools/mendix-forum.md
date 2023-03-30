@@ -154,7 +154,7 @@ Each idea specifies the following elements:
     * This is set when Posting Your Idea (for details, see the [Posting Your Idea](#posting-idea) section).
     * Clicking a category opens an overview page that lists all the ideas in the same category.
 * Tags (④) (for example, **Native-widgets**)
-    * This is set when Posting Your Idea (for details, see the [Posting Your Idea](##posting-idea) section).
+    * This is set when Posting Your Idea (for details, see the [Posting Your Idea](#posting-idea) section).
     * Clicking a tag opens an overview page that lists all the ideas with the same tag.
 * The number of votes (⑤), comments (⑥), and views (⑦) for the idea
 * The name, avatar, and level of the Mendix community member who created the idea (⑧)
@@ -173,8 +173,8 @@ To filter the searching results, you can use the following filters:
     * **Implemented** – the idea has been implemented
     * **Closed** – the idea has been reviewed by the Product Managers but it has not been accepted
 * **Last Updated** > **Sort by** – the default is **Last Updated**; you can set it to **Newest** or **Most Votes**
-* **Spaces** – the space set when the idea was submitted (for more information, see the [Posting Your Idea](##posting-idea) section below)
-* **Type in a Tag** – the tags set when the idea was submitted (for more information, see the [Posting Your Idea](##posting-idea) section below)
+* **Spaces** – the space set when the idea was submitted (for more information, see the [Posting Your Idea](#posting-idea) section below)
+* **Type in a Tag** – the tags set when the idea was submitted (for more information, see the [Posting Your Idea](#posting-idea) section below)
 
 Alternatively, you can search the entire Mendix Forum (both for questions and ideas) by clicking the search icon in the upper-right corner of the screen and entering keywords into the **Search** text box. Notice the following search details:
 

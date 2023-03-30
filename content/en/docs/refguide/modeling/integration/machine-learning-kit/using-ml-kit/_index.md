@@ -252,9 +252,9 @@ The ONNX community develops and maintains the converters for many ML frameworks.
 
 ### 4.2 Pre-Trained ML Models
 
-The ONNX community provides an ML model repository, called [ONNX Model Zoo](https://github.com/onnx/models), where common computer vision and language models can be found. The [ONNX Model Zoo](https://github.com/onnx/models) is a collection of pre-trained, state-of-the-art models in the ONNX format contributed by community members. Accompanying each model are Jupyter notebooks for model training and running inference with the trained model. The notebooks are written in Python and include links to the training dataset, as well as references to the original paper that describes the model architecture.
+The ONNX community provides an ML model repository, called [ONNX Model Zoo](https://github.com/onnx/models), where common computer vision and language models can be found. The [ONNX Model Zoo](https://github.com/onnx/models) is a collection of pre-trained, state-of-the-art models in the ONNX format contributed by community members. Accompanying each model are Jupyter notebooks for model training and running inference with the trained model. The notebooks are written in Python and include links to the training dataset, as well as references to the original paper that describes the model architecture. All the ONNX models in the ONNX Zoo should be compatible with the *ML Kit*. You can pick up any model from this repository, customize it with your own data and integrate it in your Mendix app using the *ML Kit*.
 
-All the ONNX models in the ONNX zoo should be compatible with the *ML Kit*. You can pick up any model from this repository, customize it with your own data and integrate it in your Mendix app using the *ML Kit*.
+[Hugging Face](https://huggingface.co/models?library=onnx&sort=downloads) provides open source pre-trained models (including datasets). You can find hundreds of ONNX models to perform tasks on different modalities such as text, vision, and audio.
 
 To integrate a pre-built (propriety or public) ML model into a Mendix app, consider the following:
 

@@ -37,7 +37,7 @@ Clean up objects that were attached to the anonymous user and that you do *not* 
 The sign-in microflow is executed when an end-user:
 
 1. Uses your application without signing in (thus as an anonymous user), and then
-2. clicks a button for which she does not have access, which causes a sign-in screen to appear, and then
+2. clicks a button for which they do not have access, which causes a sign-in screen to appear, and then
 3. signs in to your application.
 
 {{% alert color="info" %}}

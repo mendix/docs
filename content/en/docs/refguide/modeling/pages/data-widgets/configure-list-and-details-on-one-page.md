@@ -33,14 +33,6 @@ Before starting this how-to, make sure you have completed the following prerequi
 
     {{< figure src="/attachments/refguide/modeling/pages/data-widgets/configure-list-and-details-on-one-page/domain-model.png" width="200px" >}}
 
-    * Make sure you have configured the **Title** attribute as the following enumeration:
-
-        {{< figure src="/attachments/refguide/modeling/pages/data-widgets/configure-list-and-details-on-one-page/enumeration-title.png" width="400px" >}}
-
-    * Make sure you have configured the **Status** attribute as the following enumeration:
-
-        {{< figure src="/attachments/refguide/modeling/pages/data-widgets/configure-list-and-details-on-one-page/enumeration-status.png" width="400px" >}}
-
 ## 3 Adding the Master Detail Page
 
 You would like to open a page with opportunity contact list and its details from your home page. Do the following:
@@ -54,32 +46,23 @@ You would like to open a page with opportunity contact list and its details from
 
 You just created a new page. A list (list view) is displayed on the left and list item details (data view) are displayed on the right:
 
-{{< figure src="/attachments/refguide/modeling/pages/data-widgets/configure-list-and-details-on-one-page/master-detail-page.png" width="600px" >}} 
+{{< figure src="/attachments/refguide/modeling/pages/data-widgets/configure-list-and-details-on-one-page/master-detail-page.png" width="650px" >}} 
 
 ## 4 Configuring the List
 
 Now you need to configure the page you just created. 
 
-First of all, you need to connect data to the list. Do the following:
+First of all, you need to configure the list so that it displays the opportunity contacts by their name. To do so, do the following:
 
 1. Open the **OpportunityContact** page that you created in the section above.
 2. Right-click the list on the left and choose **Select entity**.
 3. In the **Select Data Source** dialog box, choose the **OpportunityContact** entity, and click **Select**.
-4. Deselect **Automatically fill the contents of the list view** and click **OK**.
-5. Now the list is connected to the **OpportunityContact** entity. To display the name of each report per company, do the following:
-
-    1. Select the **List item title** text in the list view and navigate to its **Properties** pane.
-    2. Select the **Caption** property and click the three dots to open the **Edit Caption** dialog box.
-    3. In the **Edit Caption** dialog box, click **New** in the **Parameters** section.
-    4. In the **Edit Template Parameter** dialog box, click **Select** for **Attribute (path)**.
-    5. In the drop-down list of the **OpportunityContact** entity, select **Name**, and click **OK**.
-    6. Change the **Caption** from **List item title** to *{1}* and click **OK**.
+4. Make sure that **Automatically fill the contents of the list view** is selected and click **OK**.
+5. Now the list is connected to the **OpportunityContact** entity. To display only the name of the each contact in the list, delete the rows that show the **{Jobtitle}**, **{Phone}**, and **{Email}** information.
 
     Now the list view displays the list of opportunity contacts by their name:
 
-    {{< figure src="/attachments/refguide/modeling/pages/data-widgets/configure-list-and-details-on-one-page/list-configured.png" width="250px" >}} 
-
-6. Delete the **Secondary text** row in the list view because you do not need it in this case.
+    {{< figure src="/attachments/refguide/modeling/pages/data-widgets/configure-list-and-details-on-one-page/list-configured.png" width="300px" >}} 
 
 ## 5 Configuring List Item Details
 
@@ -87,47 +70,29 @@ Now you need to configure opportunity contact details displayed next to the list
 
 The **List MasterDetail** page template which your page is based on has a preconfigured data view that listens to the list view.
 
-Now you need to configure the widgets inside the data view to show all the attributes of the **OpportunityContact** entity. That is, you need to show all the details that an opportunity contact has, such as their title, name, job title, phone, and email. To do so, do the following:
+Now you need to configure the widgets inside the data view to show all the attributes of the **OpportunityContact** entity. That is, you need to show all the details that an opportunity contact has, such as their name, job title, phone, and email. To do so, do the following:
 
 1. Delete the **Save** and **Cancel** buttons inside the data view because you only want to display the data, not change it.
-2. Double-click **Form title** (which is displayed as a data view heading), rename the **Caption** to *Opportunity Contact Details*, and click **OK**.
-3. Navigate to **Toolbox** > **Widgets**, and search for **Radio buttons**.
-4. Drag it inside the data view above the **First name** text box.
-5. Double-click the radio button to open its properties and do the following:
+2. Double-click **Form title** (which is displayed as a data view heading), rename the **Caption** to *Opportunity Contact Details*, and click **OK**:
 
-    1. Go to **Data Source** > **Attribute**. 
-    2. In the **Select Attribute** dialog box, select the **Title** attribute as the data source for the radio button. 
-    3. In the **Label** section, rename the **Label caption** to *Title*.
+    {{< figure src="/attachments/refguide/modeling/pages/data-widgets/configure-list-and-details-on-one-page/data-view.png" width="500px" >}}
 
-    Now the title of an opportunity contact is displayed. You need to configure the other existing input widgets for other contact details:
-
-    {{< figure src="/attachments/refguide/modeling/pages/data-widgets/configure-list-and-details-on-one-page/title.png" width="500px" >}}
-
-6. Double-click the **First name** text box to open its properties and do the following:
+3. Double-click the **First name** text box to open its properties and do the following:
 
     1. Go to **Data Source** > **Attribute**. 
     2. In the **Select Attribute** dialog box, select the **Name** attribute as the data source.
     3. In the **Label** section, rename the **Label caption** to *Name*.
 
-7. Refer to steps 6a-6c to select the **Phone** attribute for the **Phonenumber** text box, the **Email** attribute for the **Email** text box, and the **DateCreated** attribute for the **Birthday** text box.
+4. Refer to steps 3a-3c to select the **Phone** attribute for the **Phonenumber** text box and the **Email** attribute for the **Email** text box.
 
     {{< figure src="/attachments/refguide/modeling/pages/data-widgets/configure-list-and-details-on-one-page/attributes-replaced.png" width="500px" >}}
 
-8. Delete the **Bio** text widget in the data view, because it is a **Text area** widget that can only take an attribute of **String** data type. Now you want to add the **EstimatedValue** attribute, which is of **Integer** data type.
-9. Navigate to **Toolbox** > **Widgets**, and search for **Text box**.
-10. Drag it inside the data view below the **Date created** text box. 
-11. Refer to steps 6a-6c to select the **EstimatedValue** attribute for the new text box.
-12. Now you still lack information on the contact's job title and status. To add the job title information:
-
+5. Now you still lack information on the contact's job title. To add the job title information:
     1. Navigate to **Toolbox** > **Widgets**, search for a **Text box**.
     2. Drag it inside the data view below the **Name** text box.
-    3. Refer to steps 6a-6c to select the **Jobtitle** attribute for the new text box.
+    3. Refer to steps 3a-3c to select the **Jobtitle** attribute for the new text box.
 
-13. To add the information on the opportunity contact's status:
-
-    1. Navigate to **Toolbox** > **Widgets**, search for for **Radio Buttons**.
-    2. Drag it inside the data view below the **Estimated Value** text box.
-    3. Refer to steps 6a-6c to select the **Status** attribute for the new radio button.
+6. Delete the **Birthday** and **Bio** inputs widgets in the data view because you do not need them in this case.
 
 Congratulations! Now you have a page that displays a list of opportunity contacts and the details of the selected contact:
 

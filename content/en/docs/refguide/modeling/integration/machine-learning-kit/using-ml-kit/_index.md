@@ -20,9 +20,9 @@ To use an ML model in your app, you need to convert it to ONNX, then import it t
 
 ### 2.1 Converting Your Model to ONNX {#convert-ml-model}
 
-To embed your ML model into a Mendix app using *ML Kit*, you need to convert your model into the ONNX format. Depending upon the frameworks and tools used to create the ML model, there are many tools and sources to convert a model to ONNX format.
+To embed your ML model into a Mendix app using *ML Kit*, you need to convert your model into the ONNX format. See [Jupyter Notebook Examples](https://github.com/mendix/mlkit-example-app/tree/main/notebooks) in our *Demo for Mendix ML Kit* repository for examples that cover the process of converting models to ONNX.
 
-Examples include the following:
+Depending upon the frameworks and tools used to create the ML model, there are many tools and sources to convert a model to ONNX format:
 
 * [PyTorch](https://pytorch.org/docs/stable/onnx) 
 * [TensorFlow](https://github.com/onnx/tensorflow-onnx)
@@ -76,16 +76,21 @@ Several models (for example, [Yolo](https://github.com/onnx/models/tree/main/vis
 
 When importing your model, you might encounter error CE1790 like in this [BERT](https://github.com/onnx/models/blob/main/text/machine_comprehension/bert-squad/model/bertsquad-12-int8.onnx) example:
 
-{{< figure src="/attachments/refguide/modeling/integration/ml-kit/ml-kit/error-ce1790.png" alt="Completed BERT mapping. Described in the paragraph above." >}} 
+{{< figure src="/attachments/refguide/modeling/integration/ml-kit/ml-kit/model-input-errors.png" alt="Red dots indicating CE1790 error." >}} 
 
 1. Go to the error and double-click on the affected mapping line to open the **Edit ML model input shapes** dialog box:
 
 {{< figure src="/attachments/refguide/modeling/integration/ml-kit/ml-kit/edit-model-input-shapes.png" alt="Edit ML model input shape dialog box." >}}
 
-In this case, the -1 dimensions should be configured before using the mapping in a [Call ML model](/refguide/call-ml-model/) activity. Once filled, static tensor shapes of an output mapping will be automatically calculated based on configured dimensions of the input entity mappings, like in this [BERT](https://github.com/onnx/models/blob/main/text/machine_comprehension/bert-squad/model/bertsquad-12-int8.onnx) example:
+In this case, the -1 dimensions should be configured before using the mapping in a [Call ML model](/refguide/call-ml-model/) activity. Once filled, static tensor shapes of an output mapping will be automatically calculated based on configured dimensions of the input entity mappings, like in this [BERT](https://github.com/onnx/models/blob/main/text/machine_comprehension/bert-squad/model/bertsquad-12-int8.onnx) example below.
 
-{{< figure src="/attachments/refguide/modeling/integration/ml-kit/ml-kit/bert-editor.png" alt="Completed BERT editor. Described in the paragraph above." >}} 
-{{< figure src="/attachments/refguide/modeling/integration/ml-kit/ml-kit/bert-mapping.png" alt="Completed BERT mapping. Described in the paragraph above." >}} 
+The editor for the BERT model is below:
+
+{{< figure src="/attachments/refguide/modeling/integration/ml-kit/ml-kit/bert-model-input-shapes.png" >}} 
+
+The completed mapping for the BERT model is below:
+
+{{< figure src="/attachments/refguide/modeling/integration/ml-kit/ml-kit/bert-model-entities.png" >}} 
 
 {{% alert color="info" %}}Some of these shapes should be handled in [Java Action pre- and post-processors](#java-pre-post) you may have.{{% /alert %}}
 

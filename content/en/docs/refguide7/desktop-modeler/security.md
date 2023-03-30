@@ -33,7 +33,7 @@ Each module defines its own set of module roles and you only have to specify sec
 
 See [Module Role](/refguide7/module-role/).
 
-A user role is a combination of module roles. A user that signs into the system gets the access rights of all of his or her user roles and indirectly to the module roles that are contained by those user roles.
+A user role is a combination of module roles. A user that signs into the system gets the access rights of all of their user roles and indirectly to the module roles that are contained by those user roles.
 
 {{% alert color="info" %}}
 

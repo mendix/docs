@@ -202,7 +202,7 @@ The sign-in microflow is executed when an end-user does the following:
 
 {{% alert color="info" %}}
 
-An anonymous user in a web shop adds some items to her shopping cart and then clicks the 'Check out' button. A sign-in screen appears, and the user signs in. The sign-in microflow is executed and transfers the shopping cart of the anonymous user to the signed-in user.
+An anonymous user in a web shop adds some items to their shopping cart and then clicks the 'Check out' button. A sign-in screen appears, and the user signs in. The sign-in microflow is executed and transfers the shopping cart of the anonymous user to the signed-in user.
 
 {{% /alert %}}
 

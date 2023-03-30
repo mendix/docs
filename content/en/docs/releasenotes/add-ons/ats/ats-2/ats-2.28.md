@@ -14,7 +14,7 @@ weight: 72
 * We fixed an issue that caused the **Confirm subscription** link to show a message stating something went wrong when confirming the subscription, even when the subscription was successfully confirmed.
 * We fixed an issue that caused the **Search** panel to show custom actions from another app the user was a member of when editing a test case or custom action.
 * We fixed an issue that caused newly created drop-down values not to appear initially on a new input parameter.
-* We fixed an issue that cuased the discontinued **ATSelenium** Selenium hub to be used when running a test case or test suite with default values.
+* We fixed an issue that caused the discontinued **ATSelenium** Selenium hub to be used when running a test case or test suite with default values.
 
 ## 2.28.8
 

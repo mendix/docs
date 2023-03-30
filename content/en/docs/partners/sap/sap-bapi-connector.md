@@ -22,6 +22,8 @@ This connector allows you to do the following:
 * Call BAPIs or BAPI sequences
 * Use the BAPI response in your application
 
+### 1.1 Installation Paths
+
 In addition to the Mendix connector module, you can also install an optional *bapi-service* microservice component. The *bapi-service* component facilitates calls from your Mendix application to the SAP backend system by using the SAP Cloud Connector. The optional component minimizes the network complexity and helps make your application is compliant with the recommended SAP security standards.
 
 You can download the *bapi-service* component from the [Mendix Content Delivery Network](https://cdn.mendix.com/mcdep/bapi-service/bapi-service-1.0.0.zip). To use the component, you must also define an RFC-type destination in SAP BTP.

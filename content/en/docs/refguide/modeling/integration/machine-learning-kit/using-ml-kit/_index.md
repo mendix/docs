@@ -20,9 +20,9 @@ To use an ML model in your app, you need to convert it to ONNX, then import it t
 
 ### 2.1 Converting Your Model to ONNX {#convert-ml-model}
 
-To embed your ML model into a Mendix app using *ML Kit*, you need to convert your model into the ONNX format. Depending upon the frameworks and tools used to create the ML model, there are many tools and sources to convert a model to ONNX format.
+To embed your ML model into a Mendix app using *ML Kit*, you need to convert your model into the ONNX format. See [Jupyter Notebook Examples](https://github.com/mendix/mlkit-example-app/tree/main/notebooks) in our *Demo for Mendix ML Kit* repository for examples that cover the process of converting models to ONNX.
 
-Examples include the following:
+Depending upon the frameworks and tools used to create the ML model, there are many tools and sources to convert a model to ONNX format:
 
 * [PyTorch](https://pytorch.org/docs/stable/onnx) 
 * [TensorFlow](https://github.com/onnx/tensorflow-onnx)
@@ -42,7 +42,7 @@ To use the ML model in your app, import it to create an ML mapping document.
 2. Add a name for the mapping document.
 3. Click **Import Model** to import your ONNX file.
 
-This generates two non-persistable entities representing your ML Model input and outputs (see [Persistable and Non-Persistable Entities](#persist-nonpersist-entities) below).
+This generates two non-persistable entities representing your ML Model input and outputs (see [Persistable and Non-Persistable Entities](#persist-nonpersist-entities) below). Below is an example of import mapping of a [sample XGBoost ML model](https://github.com/mendix/mlkit-example-app/tree/main/mlsource/titanic_xgboost):
 
 {{< figure src="/attachments/refguide/modeling/integration/ml-kit/ml-kit/ml-model-created-entities.png" alt="Two non-persistable entities generated when importing an ONNX file." >}}
 
@@ -52,43 +52,51 @@ If error CE1790 appears, you need to [set dynamic tensor shapes](#set-dynamic-sh
 
 The ML model in ONNX format will be placed in the `mlsource/<your_module_name>` folder from the App/Show App Directory in Explorer.
 
-{{< figure src="/attachments/refguide/modeling/integration/ml-kit/ml-kit/mlsource-location.png" alt="Location of the ML model in a file explorer." >}}
-
 {{% alert color="info" %}}
 Store any additional files in the same directory, including text files for storing class names and additional files that your model or ML process uses (encoders, text files, corpora).
 
 This way, the files will be packaged with your app, and you can easily refer to them in microflow actions.
 {{% /alert %}}
 
-#### 2.2.2 Tensor Shapes {#tensor-shapes}
+#### 2.2.2 Configuring Tensor Shapes {#tensor-shapes}
 
 Tensors inject and retrieve information from a machine learning model. A distinctive trait of such an entity mapping is the tensor Shape, or the definition of the dimensions a tensor has.
 
 ##### 2.2.2.1 Static Shapes {#static-shapes}
 
-Studio Pro detects models with static shapes automatically and display them in the mapping. The image below is a ResNet50 mapping with static dimensions that accepts 1 image of 3 channels (colors) with a size of 224x224 pixels:
+Studio Pro detects models with static shapes automatically and displays them in the mapping. The image below is a [ResNet50 model mapping](https://github.com/mendix/mlkit-example-app/tree/main/mlsource/resnet50) with static dimensions that accepts 1 image of 3 channels (colors) with a size of 224x224 pixels:
 
 {{< figure src="/attachments/refguide/modeling/integration/ml-kit/ml-kit/mapping-static-dimensions.png" alt="ResNet50 mapping with static dimensions. Described in the paragraph above." >}}
 
 ##### 2.2.2.2 Dynamic Shapes {#dynamic-shapes}
 
-Several models (including EasyOCR and Yolo) have tensors with dynamic shapes. In these cases, fill in a tensor shape and an attribute type in the mapped entity.
+Several models (for example, [Yolo](https://github.com/onnx/models/tree/main/vision/object_detection_segmentation/yolov3)) have tensors with dynamic shapes. In these cases, fill in a tensor shape and an attribute type in the mapped entity.
 
 ###### 2.2.2.2.1 Setting Dynamic Tensor Shape Mapping (Error CE1790) {#set-dynamic-shapes}
 
-When importing your model, you might encounter error CE1790. Go to the error and double-click on the affected mapping line to open the **Edit ML model input shape**s dialog box:
+When importing your model, you might encounter error CE1790 like in this [BERT](https://github.com/onnx/models/blob/main/text/machine_comprehension/bert-squad/model/bertsquad-12-int8.onnx) example:
+
+{{< figure src="/attachments/refguide/modeling/integration/ml-kit/ml-kit/model-input-errors.png" alt="Red dots indicating CE1790 error." >}} 
+
+1. Go to the error and double-click on the affected mapping line to open the **Edit ML model input shapes** dialog box:
 
 {{< figure src="/attachments/refguide/modeling/integration/ml-kit/ml-kit/edit-model-input-shapes.png" alt="Edit ML model input shape dialog box." >}}
 
-In this case, the -1 dimensions should be configured before using the mapping in a [Call ML model](/refguide/call-ml-model/) activity. Once filled, static tensor shapes of an output mapping will be automatically calculated based on configured dimensions of the input entity mappings:
+In this case, the -1 dimensions should be configured before using the mapping in a [Call ML model](/refguide/call-ml-model/) activity. Once filled, static tensor shapes of an output mapping will be automatically calculated based on configured dimensions of the input entity mappings, like in this [BERT](https://github.com/onnx/models/blob/main/text/machine_comprehension/bert-squad/model/bertsquad-12-int8.onnx) example below.
 
-{{< figure src="/attachments/refguide/modeling/integration/ml-kit/ml-kit/completed-mapping.png" alt="Completed ML mapping. Described in the paragraph above." >}}
+The editor for the BERT model is below:
+
+{{< figure src="/attachments/refguide/modeling/integration/ml-kit/ml-kit/bert-model-input-shapes.png" >}} 
+
+The completed mapping for the BERT model is below:
+
+{{< figure src="/attachments/refguide/modeling/integration/ml-kit/ml-kit/bert-model-entities.png" >}} 
 
 {{% alert color="info" %}}Some of these shapes should be handled in [Java Action pre- and post-processors](#java-pre-post) you may have.{{% /alert %}}
 
 #### 2.2.3 Persistable and Non-Persistable Entities {#persist-nonpersist-entities}
 
-After importing a model, two [non-persistable](/refguide/persistability/) entities are created using the ML model *input* and *output*:
+After importing a model, two [non-persistable](/refguide/persistability/) entities are created using the ML model *input* and *output* like in this [sample XGBoost ML model](https://github.com/mendix/mlkit-example-app/tree/main/mlsource/titanic_xgboost):
 
 {{< figure src="/attachments/refguide/modeling/integration/ml-kit/ml-kit/entities-example-1.png" alt="Input and output entities in the mapping document." >}}
 
@@ -96,7 +104,7 @@ In the image above, the attributes are mapped as closely as possible to data typ
 
 For non-structured data, such as most of the tensors for Neural Networks, the attributes of a model with a multidimensional parameter will be represented as a string. This is because Base64 is used to to encode the tensors to and from *ML Kit*.
 
-In the image below, the inputs and outputs are multidimensional and need to be encoded:
+In the image below from the [ResNet50 model mapping](https://github.com/mendix/mlkit-example-app/tree/main/mlsource/resnet50), the inputs and outputs are multidimensional and need to be encoded:
 
 {{< figure src="/attachments/refguide/modeling/integration/ml-kit/ml-kit/entities-example-2.png" alt="Multidimensional outputs that need to be encoded." >}}
 
@@ -150,6 +158,8 @@ A **Create Object** activity is used for the first part in order to transfer ent
 {{< figure src="/attachments/refguide/modeling/integration/ml-kit/ml-kit/change-object.png" alt="Details of the log message in a microflow example." >}}
 
 ## 3 Integrating Models with Pre-processors and Post-processors {#pre-post-processors}
+
+{{% alert color="info" %}}Check out a demo app and Jupyter notebook examples in our [Demo for Mendix ML Kit](https://github.com/mendix/mlkit-example-app) repository for examples on pre- and post-processors.{{% /alert %}}
 
 Integrating machine learning models can sometimes require using a more complex structure. This includes having a pre-processor, the ML model itself, and a post-processor:
 

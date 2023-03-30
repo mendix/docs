@@ -17,6 +17,8 @@ Studio Pro [9.23](/releasenotes/studio-pro/9.23/) and above supports machine lea
 
 Use the **Call ML Model** [activity](/refguide/activities/) in a microflow to call the ML model mapping document (see the [Using the Model in a Microflow](/refguide/machine-learning-kit/using-ml-kit/#use-model-microflow) section of *Integrate Machine Learning Models*).
 
+{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/ml-kit-activities/call-ml-model.png" alt="The Call ML Model activity." >}}
+
 To get started with machine learning models, check out [Using ML Kit](/refguide/machine-learning-kit/using-ml-kit/).
 
 {{% alert color="info" %}}Check out a demo app and Jupyter notebook examples in our [Demo for Mendix ML Kit](https://github.com/mendix/mlkit-example-app) repository for further information on working with machine learning models in Mendix.{{% /alert %}}

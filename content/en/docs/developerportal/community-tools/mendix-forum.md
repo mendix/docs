@@ -15,14 +15,14 @@ The Mendix Forum is closely integrated with the [Mendix Profile](/developerporta
 
 ## 2 Bookmarks
 
-In the **Personal** section, the **Bookmarks** page contains the following tabs:
+In **Personal** > **Bookmarks**, the following tabs are available:
 
 * **Questions** – the questions you have bookmarked (for details on how to bookmark a question, see the [Question Details](#question-details) section below)
 * **Ideas** – the ideas you have bookmarked (for details on how to bookmark an idea, see the [Idea Details](#idea-details) section below)
 
 ## 2 Posts
 
-In the **Personal** section, the **Posts** page contains the following tabs:
+In **Personal** > **Posts**, the following tabs are available:
 
 * **Posted** – the questions and ideas you have posted (for more information, see the [Asking Your Question](#asking-question) and [Posting Your Idea](#posting-idea) sections below)
 * **Answered** – the questions you have answered (for more information, see the [Answering a Question](#answering-question) section below)
@@ -30,7 +30,7 @@ In the **Personal** section, the **Posts** page contains the following tabs:
 
 ## 3 Questions  {#questions-tab}
 
-In the **General** section, the **Questions** page presents an overview of the questions that have been asked. Here is an example question:
+In **General** > **Questions**, there is an overview of the questions that have been asked. Here is an example question:
 
 {{< figure src="/attachments/developerportal/community-tools/mendix-forum/questions_example.png" >}}
 
@@ -97,7 +97,7 @@ On this page, you can read the full descriptive text of the question and do the 
 * Click **Bookmark** to bookmark the question (④)
 
 {{% alert color="info" %}}
-If you want to follow the discussion on a question via email notifications, click **Follow This Question** below the question details. Please note that you are automatically subscribed for email notifications on questions that you have asked; if you want to unsubscribe from these notifications, click **Unfollow This Question** on a specific question you have asked or that you want stop following.
+If you want to follow the discussion on a question via email notifications, click **Follow This Question** below the question details. Please note that you are automatically subscribed for email notifications on questions that you have asked; if you want to unsubscribe from these notifications, click **Unfollow This Question** on a specific question you have asked or that you want to stop following.
 {{% /alert %}}
 
 {{% alert color="info" %}}
@@ -126,7 +126,7 @@ To ask your own question on the Mendix Forum, follow these steps:
     * The **Title** of your question (which is how Mendix Forum users will first see your question, so make the title descriptive and interesting)
     * The **Description** of your question (add all the details about your question to make it searchable and so other users can answer it; consider including steps to reproduce the issue)
     * The **Space** that reflects your question (for example, **Connectors**, **Databases**, **Security**)
-    * The **Studio Pro Version** that is relevant to your question (only available when you select a version-dependent space)
+    * The **Studio Pro Version** that is relevant to your question (only available when you select a version-dependent **Space**)
     * The **Tag(s)** that reflect the topic of your question (which other users can use to filter the list of questions)
 
 3. Click **Ask your question**.
@@ -149,7 +149,7 @@ You can easily upload your images in the Mendix Forum by dragging them directly 
 
 ## 4 Ideas
 
-In the **General** section on the **Ideas** page, you can see an overview of the ideas and feature requests for improving the Mendix Platform that have been submitted by Mendix community members. Here is an example idea:
+In **General** > **Ideas**, you can see an overview of the ideas and feature requests for improving the Mendix Platform that have been submitted by Mendix community members. Here is an example idea:
 
 {{< figure src="/attachments/developerportal/community-tools/mendix-forum/ideas_example.png" >}}
 
@@ -171,9 +171,9 @@ Each idea specifies the following elements:
 
 ### 4.1 Searching and Filtering Ideas
 
-{{< figure src="/attachments/developerportal/community-tools/mendix-forum/search-filter-ideas.png" >}}
+To search for an idea, enter your keywords in the **Search** text box:
 
-To search for an idea, enter your keywords in the **Search** text box.
+{{< figure src="/attachments/developerportal/community-tools/mendix-forum/search-filter-ideas.png" >}}
 
 To filter the searching results, you can use the following filters:
 
@@ -182,15 +182,15 @@ To filter the searching results, you can use the following filters:
     * **Planned** – the idea has been accepted by the Mendix Product Managers and scheduled for implementation
     * **Implemented** – the idea has been implemented
     * **Closed** – the idea has been reviewed by the Product Managers but it has not been accepted
-* **Sort by** – the default is **Last Updated**; you can set it to **Newest** or **Most Votes**
-* **Categories** – the category set when the idea was submitted (for more information, see the [Posting Your Idea](##posting-idea) section)
-* **Type in a Tag** – the tags set when the idea was submitted (for more information, see the [Posting Your Idea](##posting-idea) section)
+* **Last Updated** > **Sort by** – the default is **Last Updated**; you can set it to **Newest** or **Most Votes**
+* **Spaces** – the space set when the idea was submitted (for more information, see the [Posting Your Idea](##posting-idea) section below)
+* **Type in a Tag** – the tags set when the idea was submitted (for more information, see the [Posting Your Idea](##posting-idea) section below)
 
 Alternatively, you can search the entire Mendix Forum (both for questions and ideas) by clicking the search icon in the upper-right corner of the screen and entering keywords into the **Search** text box. Notice the following search details:
 
 * The source is set to **Forum** by default; if you want to search other resources, you can switch the source
 * You can set the **Type** of search results for the Mendix Forum to **Question**, **Idea**, or both (default)
-* You can filter by **Category** to get more refined results
+* You can filter by **Space** to get more refined results
 
 ### 4.2 Idea Details {#idea-details}
 
@@ -210,7 +210,7 @@ On this page, you can read the full descriptive text of the idea and do the foll
     * When the ideas was **Submitted**
     * The date and time of the **Last activity** on the idea (meaning, when it was last updated)
     * How many times the idea has been **Viewed**
-    * The **Category** of the idea
+    * The **Space** of the idea
     * The **Tags** applied to the idea (clicking a tag opens an overview page that lists all the ideas with the same tag.)
 
 * Click **Vote** to upvote the idea (②)
@@ -221,7 +221,7 @@ On this page, you can read the full descriptive text of the idea and do the foll
 
 * Click **Bookmark** to bookmark the idea (③)
 
-If you want to follow the discussion on an idea via email notifications, click **Subscribe to Email Notifications** below the idea details. Please note that you are automatically subscribed for email notifications on ideas that you have submitted; if you want to unsubscribe from these notifications, click **Unsubscribe from Email Notifications** on a specific idea that you have submitted.
+If you want to follow the discussion on an idea via email notifications, click **Follow This Idea** below the idea details. Please note that you are automatically subscribed for email notifications on ideas that you have submitted; if you want to unsubscribe from these notifications, click **Unfollow This Idea** on a specific idea that you have submitted or that you want to stop following.
 
 {{% alert color="info" %}}
 The URL for each idea is unique.
@@ -229,7 +229,9 @@ The URL for each idea is unique.
 
 ### 4.3 Posting an Idea {#posting-idea}
 
+{{% alert color="info" %}}
 If you have a great idea that you would like to see implemented on the Mendix Platform, we want to hear it! But please make sure you search the idea forum for similar ideas before submitting a new idea. There may be someone else who has already posted the same idea!
+{{% /alert %}}
 
 To submit your own idea to the idea forum, follow these steps:
 
@@ -240,7 +242,7 @@ To submit your own idea to the idea forum, follow these steps:
 
     * The **Title** of your idea (which is how Mendix Forum users will first see your idea, so make the title descriptive and interesting)
     * The **Description** of your idea (add all the details about your idea to make it searchable and so other users can vote and comment on it)
-    * The **Category** that reflects your idea (for example, **Connectors** or **Microflows**)
+    * The **Space** that reflects your idea (for example, **Connectors** or **Microflows**)
     * The **Tag(s)** that reflect your idea (which other users can use to filter their searches)
 
 3. Click **Submit your idea**.

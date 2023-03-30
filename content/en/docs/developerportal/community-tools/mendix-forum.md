@@ -127,15 +127,15 @@ To ask your own question on the Mendix Forum, follow these steps:
 
 3. Click **Ask your question**.
 
-#### 3.3.2 Accepting an Answer on Your Question
+#### 3.3.2 Accepting an Answer
 
 Once a question you have asked receives several answers, you can accept an answer by clicking the check mark next to the answer.
 
 You should accept the answer that properly and accurately responds to your question in the best way possible.
 
-#### 3.4 Answering a Question {#answering-question}
+### 3.4 Answering a Question {#answering-question}
 
-Below the answer(s), you can contribute to the Mendix Forum by writing your own answer in the editor and then clicking **Submit Answer**:
+Below the answer(s), you can contribute to the Mendix Forum by writing your own answer in the editor and then clicking **Submit Answer**.
 
 You can easily upload your images in the Mendix Forum by dragging them directly into the text editors. In order to resize and position an image, double-click it in the editor or click the **Image** button in the toolbar.
 

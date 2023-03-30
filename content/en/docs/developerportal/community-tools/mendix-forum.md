@@ -57,9 +57,7 @@ Click the developer name on the card to go to their Mendix Profile.
 
 ### 3.1 Searching and Filtering Questions
 
-To search for a question, enter your keywords in the **Search** text box:
-
-{{< figure src="/attachments/developerportal/community-tools/mendix-forum/search-filter-questions.png" >}}
+To search for a question, enter your keywords in the **Search** text box.
 
 To filter the searching results, you can use the following filters:
 
@@ -121,8 +119,6 @@ To ask your own question on the Mendix Forum, follow these steps:
 1. Click **Ask a Question** on the upper-right corner of the **Questions** page. 
 2. On the **Ask Your Question** page, fill in the following details in the editor:
 
-    {{< figure src="/attachments/developerportal/community-tools/mendix-forum/questions_ask_screen.jpg"   width="800"  >}}
-
     * The **Title** of your question (which is how Mendix Forum users will first see your question, so make the title descriptive and interesting)
     * The **Description** of your question (add all the details about your question to make it searchable and so other users can answer it; consider including steps to reproduce the issue)
     * The **Space** that reflects your question (for example, **Connectors**, **Databases**, **Security**)
@@ -141,11 +137,7 @@ You should accept the answer that properly and accurately responds to your quest
 
 Below the answer(s), you can contribute to the Mendix Forum by writing your own answer in the editor and then clicking **Submit Answer**:
 
-{{< figure src="/attachments/developerportal/community-tools/mendix-forum/questions_answer_editor.png" >}}
-
-You can easily upload your images in the Mendix Forum by dragging them directly into the text editors. In order to resize and position an image, double-click it in the editor or click the image button in the toolbar:
-
-{{< figure src="/attachments/developerportal/community-tools/mendix-forum/questions_image_button.png" >}}
+You can easily upload your images in the Mendix Forum by dragging them directly into the text editors. In order to resize and position an image, double-click it in the editor or click the **Image** button in the toolbar.
 
 ## 4 Ideas
 
@@ -171,9 +163,7 @@ Each idea specifies the following elements:
 
 ### 4.1 Searching and Filtering Ideas
 
-To search for an idea, enter your keywords in the **Search** text box:
-
-{{< figure src="/attachments/developerportal/community-tools/mendix-forum/search-filter-ideas.png" >}}
+To search for an idea, enter your keywords in the **Search** text box.
 
 To filter the searching results, you can use the following filters:
 
@@ -237,8 +227,6 @@ To submit your own idea to the idea forum, follow these steps:
 
 1. Click **Submit idea** on the upper-right corner of the **All Ideas** page.
 2. On the **Submit your idea** page, fill in the following details in the editor:
-
-    {{< figure src="/attachments/developerportal/community-tools/mendix-forum/ideas_submit_screen.png"   width="800"  >}}
 
     * The **Title** of your idea (which is how Mendix Forum users will first see your idea, so make the title descriptive and interesting)
     * The **Description** of your idea (add all the details about your idea to make it searchable and so other users can vote and comment on it)

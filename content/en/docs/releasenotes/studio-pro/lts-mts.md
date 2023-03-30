@@ -94,7 +94,7 @@ These are the current MTS versions for Studio Pro:
 * [9.6](/releasenotes/studio-pro/9.6/) (started in September, 2021)
 
 {{% alert color="info" %}}
-Older MTS versions (for example, 9.6) remain supported until the next LTS version has been released.
+Older MTS versions (for example, 9.6) remain supported until the next major version has been released for General Availability (for example, 10).
 {{% /alert %}}
 
 If you are on an innovation track with your development and need to get the latest and greatest Mendix has to offer every month, then upgrade to an MTS and stay on that version with its patch releases until the next MTS version is released.

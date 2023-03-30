@@ -97,19 +97,7 @@ A branch line is a way of making an independent set of changes which can be test
 
 See the [Branches](#branches) section below for more information on how branch lines can be used.
 
-### 2.10 Studio Enabled {#studio-enabled}
-
-{{% alert color="info" %}}
-From Mendix 9.21, we only support [collaborative development](/refguide/collaborative-development/) between Studio Pro users. Mendix Studio is no longer supported for apps with Mendix version 9.21 or above. For more information, see the blog post [Coming in 2023: The Merging of Studio and Studio Pro](https://www.mendix.com/blog/coming-in-2023-the-merging-of-studio-and-studio-pro/).
-{{% /alert %}}
-
-You may enable Studio for one of the development lines. This means that a developer can make changes to the app through Studio and share changes with the team. All changes will be linked to the selected branch and committed as revisions to that branch. Changes made to other development lines will not be available in Studio.
-
-Studio cannot be used to develop the app if it is not enabled for any development lines.
-
-For app templates created via the Developer Portal, the main line of a new app will be Studio enabled.
-
-### 2.11 Tag {#tag}
+### 2.10 Tag {#tag}
 
 A Tag is a way of identifying a commit in addition to the [revision](#revision) number. It is specified by the developer and has four parts:
 
@@ -122,7 +110,7 @@ A Tag is a way of identifying a commit in addition to the [revision](#revision) 
 Tags are supported by Studio Pro Git ([BYO](/refguide/branch-line-manager-dialog/#byo-server-app) and Team Server) from Mendix version 9.8.0.
 {{% /alert %}}
 
-### 2.12 Repository Service
+### 2.11 Repository Service
 
 The Repository Service manages communication between Studio or Studio Pro and other supporting services (for example, Team Server). The developer will not generally be aware that they are communicating via the Repository Service.
 

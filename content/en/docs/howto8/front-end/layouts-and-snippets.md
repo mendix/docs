@@ -163,7 +163,7 @@ At the heart of the navigation model in Mendix, are three device types: Desktop,
 
 {{< figure src="/attachments/howto8/front-end/layouts-and-snippets/device-profiles.png" >}}
 
-When a user visits a Mendix application, she is automatically redirected to the home page of the appropriate device type (for details, see the section [Redirection to Device Types](#RedirectiontoDeviceTypes)).
+When a user visits a Mendix application, they are automatically redirected to the home page of the appropriate device type (for details, see the section [Redirection to Device Types](#RedirectiontoDeviceTypes)).
 
 For more information on navigation profiles, see [Navigation in Mendix](/refguide8/navigation/).
 

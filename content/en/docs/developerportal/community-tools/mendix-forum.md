@@ -13,26 +13,24 @@ The [Mendix Forum](https://forum.mendixcloud.com) is where the Mendix community 
 
 The Mendix Forum is closely integrated with the [Mendix Profile](/developerportal/community-tools/mendix-profile/) so that Mendix community members can see all the interesting and useful information about who is participating in the Mendix Forum. If someone clicks your name anywhere on the Mendix Forum, your profile will open, so make sure to [make your Mendix Profile public](/developerportal/community-tools/mendix-profile/#profile) so everyone can see your details and progress!
 
-On the right side of the Mendix Forum, you can see the **Top contributors**, which lists the five Mendix community developers who have the most Mendix Forum points in the last 30 days.
-
 ## 2 Bookmarks
 
-This page contains the following tabs:
+In the **Personal** section, the **Bookmarks** page contains the following tabs:
 
-* **Questions** – the questions you have bookmarked (for details on how to bookmark a question, see the [Question Details](#question-details) section)
-* **Ideas** – the ideas you have bookmarked (for details on how to bookmark an idea, see the [Idea Details](#idea-details) section)
+* **Questions** – the questions you have bookmarked (for details on how to bookmark a question, see the [Question Details](#question-details) section below)
+* **Ideas** – the ideas you have bookmarked (for details on how to bookmark an idea, see the [Idea Details](#idea-details) section below)
 
 ## 2 Posts
 
-This page contains the following tabs:
+In the **Personal** section, the **Posts** page contains the following tabs:
 
 * **Posted** – the questions and ideas you have posted (for more information, see the [Asking Your Question](#asking-question) and [Posting Your Idea](#posting-idea) sections below)
-* **Answered** – the questions you have answered (for more information, see the [Answering a Question](#answering-question) section)
-* **Commented** – the questions and ideas that you have commented on (for details on how to comment on a question, see the [Question Details](#question-details) section below)
+* **Answered** – the questions you have answered (for more information, see the [Answering a Question](#answering-question) section below)
+* **Commented** – the questions and ideas that you have commented on
 
 ## 3 Questions  {#questions-tab}
 
-On the **Questions** page, you can see an overview of the questions that have been asked. Here is an example question:
+In the **General** section, the **Questions** page presents an overview of the questions that have been asked. Here is an example question:
 
 {{< figure src="/attachments/developerportal/community-tools/mendix-forum/questions_example.png" >}}
 
@@ -51,17 +49,17 @@ Each question specifies the following elements:
 * The name, avatar, and level of the Mendix community member who asked the question (⑧)
 * When the question was created (⑨)
 
-Hovering over the developer name brings up the profile card:
+Hovering over the developer name brings up the profile card with theMendix points for the developer:
 
 {{< figure src="/attachments/developerportal/community-tools/mendix-forum/questions_profile_card.png"   width="200"  >}}
 
-The profile card presents the Mendix points for the developer. Clicking the developer name on the card will bring you to their Mendix Profile.
+Click the developer name on the card to go to their Mendix Profile.
 
 ### 3.1 Searching and Filtering Questions
 
-{{< figure src="/attachments/developerportal/community-tools/mendix-forum/search-filter-questions.png" >}}
+To search for a question, enter your keywords in the **Search** text box:
 
-To search for a question, enter your keywords in the **Search** text box.
+{{< figure src="/attachments/developerportal/community-tools/mendix-forum/search-filter-questions.png" >}}
 
 To filter the searching results, you can use the following filters:
 
@@ -69,10 +67,7 @@ To filter the searching results, you can use the following filters:
     * **Unanswered** – the question has not been answered
     * **Answered** – the question has been answered
     * **Answer Accepted** – the question has been answered and the answer has been accepted)
-* **Sort by** – the default is **Last Updated**; you can set it to **Newest** or **Most Popular**
-
-[**VERIFY- SPACES DEFINITION AND CROSS-REFERENCE**]
-
+* **Last Updated** > **Sort by** – the default is **Last Updated**; you can set it to **Newest** or **Most Popular**
 * **Spaces** – the space set when the question was asked (for more information, see the [Asking Your Question](#asking-question) section)
 * **Type in a Tag** – the tags set when the question was asked (for more information, see the [Asking Your Question](#asking-question) section)
 * **Version** – the Mendix version to which the question is related (for more information, see the [Asking Your Question](#asking-question) section)
@@ -85,8 +80,6 @@ Alternatively, you can search the entire Mendix Forum (both for questions and id
 
 ### 3.2 Question Details {#question-details}
 
-#### 3.2.1 Providing Question Details
-
 Clicking the title of a question will bring you to the details page for that question:
 {{< figure src="/attachments/developerportal/community-tools/mendix-forum/questions_specific_page.png" >}}
 
@@ -96,22 +89,22 @@ On this page, you can read the full descriptive text of the question and do the 
     * When the question was **Submitted**
     * The date and time of the **Last activity** on the question (meaning, when it was last updated)
     * How many times the question has been **Viewed**
-    * The **Category** of the question
+    * The **Space** of the question
     * The **Tags** applied to the question (clicking a tag opens an overview page that lists questions with the same tag)
-    * The **Mendix version** set when the question was asked (for more information, see the [Asking Your Question](#asking-question) section)
+    * The **Version** set when the question was asked (for more information, see the [Asking Your Question](#asking-question) section)
 * Click the **▲** or **▼** button to upvote or downvote the question based on its usefulness (②)
 * Click **Comment** to write and submit a comment on the question (③)
 * Click **Bookmark** to bookmark the question (④)
 
-If you want to follow the discussion on a question via email notifications, click **Subscribe to Email Notifications** below the question details. Please note that you are automatically subscribed for email notifications on questions that you have asked; if you want to unsubscribe from these notifications, click **Unsubscribe from Email Notifications** on a specific question that you have asked.
+{{% alert color="info" %}}
+If you want to follow the discussion on a question via email notifications, click **Follow This Question** below the question details. Please note that you are automatically subscribed for email notifications on questions that you have asked; if you want to unsubscribe from these notifications, click **Unfollow This Question** on a specific question you have asked or that you want stop following.
+{{% /alert %}}
 
 {{% alert color="info" %}}
 The URL for each question is unique.
 {{% /alert %}}
 
-#### 3.2.2 Answers {#answers}
-
-Below the question details are the answer(s) to the question. Click the **▲** or **▼** button to upvote or downvote the answer based on how it addresses the question. You can also click **Comment** to comment on an answer.
+Below the question details are the answers to the question. Click the **▲** or **▼** button to upvote or downvote the answer based on how it addresses the question. You can also click **Comment** to comment on an answer.
 
 {{< figure src="/attachments/developerportal/community-tools/mendix-forum/questions_answer.png" >}}
 
@@ -119,7 +112,9 @@ Below the question details are the answer(s) to the question. Click the **▲** 
 
 #### 3.3.1 Asking Your Question {#asking-question}
 
+{{% alert color="info" %}}
 It has never been easier to ask a question on the Mendix Forum. But before you submit a new question, be sure to search the Mendix Forum for similar questions that have already been asked. There may be someone else who has already posted the same question!
+{{% /alert %}}
 
 To ask your own question on the Mendix Forum, follow these steps:
 
@@ -154,7 +149,7 @@ You can easily upload your images in the Mendix Forum by dragging them directly 
 
 ## 4 Ideas
 
-On the **Ideas** page, you can see an overview of the ideas and feature requests for improving the Mendix Platform that have been submitted by Mendix community members. Here is an example idea:
+In the **General** section on the **Ideas** page, you can see an overview of the ideas and feature requests for improving the Mendix Platform that have been submitted by Mendix community members. Here is an example idea:
 
 {{< figure src="/attachments/developerportal/community-tools/mendix-forum/ideas_example.png" >}}
 

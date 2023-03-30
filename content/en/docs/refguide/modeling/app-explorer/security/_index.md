@@ -55,7 +55,7 @@ Let us say you have an app with two modules: System and ProjectManagement (PM). 
 
 ## 5 Entity Access vs. Page Access {#entity-vs-page-access}
 
-Per entity you can specify who can read or write what members (attributes and associations) under what circumstances. Using XPath constraints you can express powerful security behavior; for example, "an employee can only see orders created by the department he is a part of".
+Per entity you can specify who can read or write what members (attributes and associations) under what circumstances. Using XPath constraints you can express powerful security behavior (for example, "an employee can only see orders created by the department they are a part of").
 
 Per page you can specify who can open it from navigation. The menu bar is optimized so that only pages that the user has access to are visible. 
 

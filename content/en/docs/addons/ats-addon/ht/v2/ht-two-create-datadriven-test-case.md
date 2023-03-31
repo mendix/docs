@@ -7,14 +7,14 @@ tags: ["ATS", "testing"]
 
 ## 1 Introduction
 
-This how-to explains data-driven testing, a functionality of ATS. With data-driven testing, you can run the same test case with different data sheets without manually entering the new information in the case. ATS executes a test case for each record in the master dataset.
+This how-to explains data-driven testing, a functionality of ATS. With data-driven testing, you can run the same test case with different data sheets without manually entering the new information in the case. ATS executes a test case for each record in the primary dataset.
 
 **This how-to will teach you  how to do the following**
 
-* Create a master dataset with different datasheets in ATS
+* Create a primary dataset with different datasheets in ATS
 * Create an Excel file to upload in ATS
-* Create a master dataset using an Excel file
-* Use the master dataset in a test case
+* Create a primary dataset using an Excel file
+* Use the primary dataset in a test case
 * Understand the result log of a data-driven test case
 
 This how-to uses the Company Expenses app as an example. In the how-to, you will create data for the following fields in the Company Expenses app:
@@ -36,7 +36,7 @@ Before starting with this how-to, make sure you have the following prerequisites
 
 ## 3 Creating a Master Data Set within ATS
 
-The following steps explain how to create a master dataset within ATS. If you want to create a master dataset from an Excel file, please see chapter four.
+The following steps explain how to create a primary dataset within ATS. If you want to create a primary dataset from an Excel file, please see chapter four.
 
 1. Open your app in ATS and go to the **Test Cases** menu item.
 2. Click the **Test Data** tab.
@@ -56,7 +56,7 @@ The following steps explain how to create a master dataset within ATS. If you wa
 
 ### 3.1 Creating Data Set Fields
 
-The following steps explain how to add dataset fields to your master dataset.
+The following steps explain how to add dataset fields to your primary dataset.
 
 1. Click the name of the dataset.
 2. Click **New Field**.
@@ -143,7 +143,7 @@ The following steps explain how to create the right Excel file and how it should
 
 ## 5 Creating a Master Data Set with Excel {#create}
 
-The following steps explain how to create and update a master dataset from an Excel file. You will use the file you created in [4 Creating the Excel File](#excel).
+The following steps explain how to create and update a primary dataset from an Excel file. You will use the file you created in [4 Creating the Excel File](#excel).
 
 1. Open your app in ATS and go to the **Test Cases** menu item.
 2. Click the **Test Data** tab.
@@ -163,11 +163,11 @@ The following steps explain how to create and update a master dataset from an Ex
 
     {{< figure src="/attachments/addons/ats-addon/ht/v2/ht-two-create-datadriven-test-case/new-data-set-dialog-new-expense-excel.png" >}}
 
-Now you have a new master dataset using an Excel file.
+Now you have a new primary dataset using an Excel file.
 
 ## 6 Updating the Master Data Set Using an Excel File
 
-To update a master dataset using an Excel file, follow these steps:
+To update a primary dataset using an Excel file, follow these steps:
 
 1. Click the name of the dataset.
 2. Click the **Records** tab.
@@ -197,11 +197,11 @@ ATS updates the changed records:
 
 {{< figure src="/attachments/addons/ats-addon/ht/v2/ht-two-create-datadriven-test-case/updated-records-new-expense-data-set.png" >}}
 
-Great! You have updated the master dataset using an Excel file.
+Great! You have updated the primary dataset using an Excel file.
 
 ## 7 Connecting the Master Data Set to Your Test Case
 
-The following steps explain how to connect the master dataset to your test case. An example test case is used in this chapter. For more information, see [How to Create a Test Case](/addons/ats-addon/ht-two-create-a-test-case/).
+The following steps explain how to connect the primary dataset to your test case. An example test case is used in this chapter. For more information, see [How to Create a Test Case](/addons/ats-addon/ht-two-create-a-test-case/).
 
 1. Open your test case and click the **Test Data** tab.
 2. Click the arrow icon:
@@ -210,13 +210,13 @@ The following steps explain how to connect the master dataset to your test case.
 
     The **Select Data Set** dialog box opens.
 
-3. Search for the master dataset.
+3. Search for the primary dataset.
 4. Select the dataset.
 5. Click **Save**.
 
     {{< figure src="/attachments/addons/ats-addon/ht/v2/ht-two-create-datadriven-test-case/select-data-set-dialog-new-expense.png" >}}
 
-    Connect the master dataset to your test case.
+    Connect the primary dataset to your test case.
 
     {{< figure src="/attachments/addons/ats-addon/ht/v2/ht-two-create-datadriven-test-case/connected-master-data-set-new-expense.png" >}}
 
@@ -257,11 +257,11 @@ The following steps explain how to read and understand the results of a data-dri
 
 You now know how to do the following:
 
-* Create a master dataset within ATS
+* Create a primary dataset within ATS
 * Create an Excel file to upload in ATS
-* Create a master dataset using an Excel file
-* Update a master dataset using an Excel file
-* Connect the master dataset to your test case
+* Create a primary dataset using an Excel file
+* Update a primary dataset using an Excel file
+* Connect the primary dataset to your test case
 * Analyze the result of a data-driven test case
 
 ## 10 Next Up

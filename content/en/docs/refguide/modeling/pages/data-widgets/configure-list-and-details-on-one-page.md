@@ -52,13 +52,13 @@ You just created a new page. A list (list view) is displayed on the left and lis
 
 Now you need to configure the page you just created. 
 
-First of all, you need to configure the list so that it displays the opportunity contacts by their name. To do so, do the following:
+First of all, you need to configure the list view so that it displays the opportunity contacts by their name only. To do so, do the following:
 
 1. Open the **OpportunityContact** page that you created in the section above.
 2. Right-click the list on the left and choose **Select entity**.
 3. In the **Select Data Source** dialog box, choose the **OpportunityContact** entity, and click **Select**.
 4. Make sure that **Automatically fill the contents of the list view** is selected and click **OK**.
-5. Now the list is connected to the **OpportunityContact** entity. To display only the name of the each contact in the list, delete the rows that show the **{Jobtitle}**, **{Phone}**, and **{Email}** information.
+5. Now the list is connected to the **OpportunityContact** entity. To display only the name of each contact in the list, delete the rows that show the **{Jobtitle}**, **{Phone}**, and **{Email}** information.
 
     Now the list view displays the list of opportunity contacts by their name:
 
@@ -70,7 +70,7 @@ Now you need to configure opportunity contact details displayed next to the list
 
 The **List MasterDetail** page template which your page is based on has a preconfigured data view that listens to the list view.
 
-Now you need to configure the widgets inside the data view to show all the attributes of the **OpportunityContact** entity. That is, you need to show all the details that an opportunity contact has, such as their name, job title, phone, and email. To do so, do the following:
+Now you need to configure the widgets inside the data view to show all the attributes of the **OpportunityContact** entity. That is, you need to show all the details that an opportunity contact has, including their name, job title, phone, and email. To do so, do the following:
 
 1. Delete the **Save** and **Cancel** buttons inside the data view because you only want to display the data, not change it.
 2. Double-click **Form title** (which is displayed as a data view heading), rename the **Caption** to *Opportunity Contact Details*, and click **OK**:
@@ -87,7 +87,8 @@ Now you need to configure the widgets inside the data view to show all the attri
 
     {{< figure src="/attachments/refguide/modeling/pages/data-widgets/configure-list-and-details-on-one-page/attributes-replaced.png" width="500px" >}}
 
-5. Now you still lack information on the contact's job title. To add the job title information:
+5. Now you still lack information on the contact's job title. To add the job title information, do the following:
+
     1. Navigate to **Toolbox** > **Widgets**, search for a **Text box**.
     2. Drag it inside the data view below the **Name** text box.
     3. Refer to steps 3a-3c to select the **Jobtitle** attribute for the new text box.

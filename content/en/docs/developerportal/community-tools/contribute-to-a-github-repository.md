@@ -1,5 +1,5 @@
 ---
-title: "Contribute to a GitHub Repository"
+title: "Contribute to a GitHub Repo"
 url: /developerportal/community-tools/contribute-to-a-github-repository/
 category: "Community Tools"
 weight: 6
@@ -13,7 +13,7 @@ We like to work with our community, and we encourage you to create and contribut
 
 This how-to will teach you how to do the following:
 
-* Contribute to a Mendix GitHub Repository according to Mendix guidelines
+* Contribute to a Mendix GitHub repository according to Mendix guidelines
 
 ## 2 Prerequisites
 

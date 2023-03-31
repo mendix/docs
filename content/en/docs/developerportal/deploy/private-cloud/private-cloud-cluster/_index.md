@@ -32,7 +32,7 @@ To create a cluster in your OpenShift context, you need the following:
 
 ### 2.1 Connected Environments {#prerequisites-connected}
 
-Should you consider using a connected environment, the following URLs should be *whitelisted* in your cluster's operating system, as these URLs point to services or resources required by the *Connected Environments'* infrastructure.
+Should you consider using a connected environment, the following URLs should be safelisted in your cluster's operating system, as these URLs point to services or resources required by the *Connected Environments'* infrastructure.
 
 | URL | Description |
 |-----|-------------|
@@ -217,7 +217,7 @@ The Mendix operator and Mendix Gateway Agent are now installed on your platform.
 {{% alert color="info" %}}
 If you have selected the **Connected Mode** which installs the **Mendix Gateway Agent** component, please take note of the following:
 
-* All the Websocket connections (to communicate with the Mendix Platform) are initiated by the Mendix Gateway Agent from the cluster, and said connections do not require any listening ports to be opened in the cluster's firewall. Only an outbound connection from the cluster to the Portal needs to be set up, by whitelisting the URL `https://interactor-bridge.private-cloud.api.mendix.com` as mentioned above.
+* All the Websocket connections (to communicate with the Mendix Platform) are initiated by the Mendix Gateway Agent from the cluster, and said connections do not require any listening ports to be opened in the cluster's firewall. Only an outbound connection from the cluster to the Portal needs to be set up, by safelisting the URL `https://interactor-bridge.private-cloud.api.mendix.com` as mentioned above.
 
 * All the Websocket connections are established over HTTPS, and therefore, can be routed through a Proxy server.
 {{% /alert %}}

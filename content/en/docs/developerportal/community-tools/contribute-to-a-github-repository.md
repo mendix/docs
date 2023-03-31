@@ -1,8 +1,8 @@
 ---
-title: "Contribute to a Mendix GitHub Repository"
+title: "Contribute to a GitHub Repo"
 url: /developerportal/community-tools/contribute-to-a-github-repository/
 category: "Community Tools"
-weight: 15
+weight: 6
 description: "Describes how to contribute to a Mendix GitHub Repository according to Mendix guidelines."
 tags: ["GitHub", "contribute", "community"]
 ---
@@ -13,7 +13,7 @@ We like to work with our community, and we encourage you to create and contribut
 
 This how-to will teach you how to do the following:
 
-* Contribute to a Mendix GitHub Repository according to Mendix guidelines
+* Contribute to a Mendix GitHub repository according to Mendix guidelines
 
 ## 2 Prerequisites
 
@@ -27,9 +27,9 @@ Before starting with this how-to, make sure you have completed the following pre
 
 To make changes to an existing repository, follow these guidelines:
 
-* Create a new branch from where you want to base your work on your fork (this is usually the repository's **master** branch)
-* To quickly create a branch based on **master**, use `git checkout -b fix/master/my_contribution master`
-    * Avoid working directly on the **master** branch
+* Create a new branch from where you want to base your work on your fork (this is usually the repository's **production** branch)
+* To quickly create a branch based on **production**, use `git checkout -b fix/production/my_contribution production`
+    * Avoid working directly on the **production** branch
 * Make commits of logical units
 * Check for unnecessary whitespace with `git diff --check` before committing
 * Make sure you have added the necessary tests for your changes

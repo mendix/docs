@@ -10,7 +10,7 @@ weight: 10
 A **placeholder** can be used in two ways:
 
 * In a [layout](/refguide/layout/) to define a "gap" that can be filled in a [page](/refguide/page/) based on that layout
-* In a layout that defines the layout as a master layout
+* In a layout that defines the layout as a primary layout
 
 Each placeholder is colored blue with its name displayed in the middle of it. The placeholder named **Main** is always shown in a darker shade of blue. 
 

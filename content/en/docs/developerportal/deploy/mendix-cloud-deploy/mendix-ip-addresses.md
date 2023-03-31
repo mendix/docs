@@ -74,7 +74,7 @@ The incoming IP address is the same for multiple environments and applications b
 
 The outgoing IP address is the same for multiple environments and applications because we use Network Address Translation on our routers.
 
-**Which IP address should be whitelisted on our firewall?**
+**Which IP address should be safelisted on our firewall?**
 
 Usually you configure your firewall with rules for *incoming* traffic to your network. Therefore you need to use the *outgoing IP address* of the Mendix application.
 

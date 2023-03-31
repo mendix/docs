@@ -176,7 +176,7 @@ The [SAP Fiori 3 Demo app](https://marketplace.mendix.com/link/component/116787)
 The demo apps are:
 
 * Shopping Cart – a demo app which allows you to display products by category and view product details
-* Browse Orders – a searchable list of orders with the ability to switch from the searchable list to a master/detail view
+* Browse Orders – a searchable list of orders with the ability to switch from the searchable list to a primary/detail view
 * Manage Products – a list of products which demonstrates the use of the count badge and navigation to see the product details
 * Bulletin Board – a list of items with navigation to see the details of each item
 * Shopping Cart Master Slider – the same as the Shopping Cart demo but using dynamic side content

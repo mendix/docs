@@ -406,6 +406,8 @@ Click **Change** to change the **Redirect URLs**. Redirect URLs are custom URLs 
 
 #### 7.1.8 Change Mendix Studios Target
 
+{{% todo %}}[Verify: Will this setting be deleted?]{{% /todo %}}
+
 You can see if this is the current target environment to which apps will be published from Mendix Studio. If this is not the current target environment for Mendix Studio, click **Change** to make it the target.
 
 #### 7.1.9 Scaling

@@ -84,7 +84,7 @@ You can perform the following actions in this section:
 
 * **Details** – for more information, see [Details](/developerportal/deploy/environments-details/)
 * **Transport to** – stage an environment to acceptance or production
-* **Setup Studios Deployment** – the [Technical Contact](/developerportal/collaborate/app-roles/#technical-contact) can set the target environment to which apps will be deployed from Studio and Studio Pro; for more information, see [Studio Deployment Settings](/developerportal/deploy/studio-deployment-settings/)
+* **Setup Studios Deployment** – {{% todo %}}[Verify: what is the best update here?]{{% /todo %}} the [Technical Contact](/developerportal/collaborate/app-roles/#technical-contact) can set the target environment to which apps will be deployed from Studio and Studio Pro; for more information, see [Studio Deployment Settings](/developerportal/deploy/studio-deployment-settings/)
 
     {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/environments/setup-studios-target.png" alt="The Environments section with the Setup Studios Deployment button visible" >}}
 

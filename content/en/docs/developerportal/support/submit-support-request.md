@@ -84,7 +84,6 @@ To submit a request with Mendix Support, follow these steps:
         * **Developer Platform - Cloud Portal** – issues/questions regarding [deploying in the Developer Portal](/developerportal/deploy/) (for example, when you cannot view your [log](/developerportal/operate/logs/) files or [scale](/developerportal/deploy/scale-environment/) your environment)
         * **Developer Platform - Data Hub** – issues/questions regarding [Data Hub](/data-hub/) (for example, when you have difficulties accessing the Data Hub Catalog)
         * **Developer Platform - Control Center** - issues/questions regarding [Control Center](/developerportal/control-center/) (for example, when you have difficulties deactivating applications from the Control Center) 
-        * **Developer Platform - Studio** - issues/questions regarding [Mendix Studio](/studio/) (for example, when you have difficulties opening Mendix Studio)
         * **Developer Platform - Support Portal** - issues/questions regarding the [Support Portal](https://support.mendix.com/) (for example, when you have difficulties creating Support tickets)
         * **Developer Platform - Other** – any other issues/questions regarding the Mendix Platform itself
     * **Licensing** – select this component when you have issues/questions regarding your Mendix licenses
@@ -171,6 +170,8 @@ Mendix Support will only accept security findings for the Mendix platform. This 
 * [App ID](/developerportal/settings/general-settings/)
 
 ### 5.5 Studio and Studio Pro Problems
+
+{{% todo %}}[Verify: what is the best update here?]{{% /todo %}}
 
 * Mendix Studio type (Studio or Studio Pro)
 * Mendix version

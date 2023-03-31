@@ -256,6 +256,8 @@ For details on these tasks, see [Data Hub Administration](/developerportal/contr
 
 ## 13 Marketplace Content {#marketplace-content}
 
+{{% todo %}}[Verify: Is this only about Mendix Studio, will this be deleted?]{{% /todo %}}
+
 {{% alert color="info" %}}
 This page will be removed in June 2023.
 {{% /alert %}}

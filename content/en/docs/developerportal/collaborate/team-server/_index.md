@@ -23,7 +23,7 @@ On the **Team Server** screen of the Developer Portal, you can see a URL to acce
 
 ## 2 Versioning with Git
 
-In the **Versioning with Git** section, Scrum masters can migrate apps from SVN version control system to Git. For more information, see [Migrate to Git](/developerportal/collaborate/migrate-to-git/). 
+In the **Versioning with Git** section, Scrum Masters can migrate apps from SVN version control system to Git. For more information, see [Migrate to Git](/developerportal/collaborate/migrate-to-git/). 
 
 ## 3 Team Server URL
 

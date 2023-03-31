@@ -21,13 +21,13 @@ To be able to migrate your app to Git, your app needs to meet the following crit
 
 {{% alert type="info" %}}
 
-Only a user with the Scrum master role can migrate an app. For more information, see [App Roles](/developerportal/collaborate/app-roles/). 
+Only a user with the Scrum Master role can migrate an app. For more information, see [App Roles](/developerportal/collaborate/app-roles/). 
 
 {{% /alert %}}
 
 ## 3 How Migration Works
 
-If your app is eligible for migration and your team role is Scrum master, you see a notification on possible migration at the top of the **Team Server** screen. Click **Migrate to Git** to start migration:
+If your app is eligible for migration and your team role is Scrum Master, you see a notification on possible migration at the top of the **Team Server** screen. Click **Migrate to Git** to start migration:
 
 {{< figure src="/attachments/developerportal/collaborate/team-server/migrate-to-git/migrate-to-git.jpg" >}}
 

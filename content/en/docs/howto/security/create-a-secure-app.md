@@ -78,7 +78,7 @@ To set the security level to prototype/demo, follow these steps:
 
     {{< figure src="/attachments/howto/security/create-a-secure-app/18581559.png" >}}
 
-3. Go to the **Administrator** tab and set the master administrator **Password**:
+3. Go to the **Administrator** tab and set the primary administrator **Password**:
 
     {{< figure src="/attachments/howto/security/create-a-secure-app/18581565.png" >}}
 

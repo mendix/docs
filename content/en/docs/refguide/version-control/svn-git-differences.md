@@ -13,7 +13,6 @@ As of Studio Pro version 9.21, Git is the default version control system in Stud
 
 For more information on how to migrate to Git, see [Migrate to Git](/developerportal/collaborate/migrate-to-git/) in the *Developer Portal Guide*.
 
-
 ## 2 Differences in Collaboration: Committing, Pushing, Updating (Pulling), and Merging 
 
 SVN is a centralized version control system, whereas Git is a distributed system. When making a commit, in SVN it directly goes to the centralized server, while Git only creates a local commit and to submit your local commit(s) to the centralized server you need to *push* your changes (pushing changes is selected by default in the **Commit** dialog box). As a result, your local changes are committed faster, and you can roll back to a previous state without having to contact the version control server.

@@ -13,8 +13,8 @@ This guide covers how to use REST to send and retrieve files, including images, 
 You will learn about the following:
 
 * [Creating a REST service](#create-service) from a **System.Image** or **System.FileDocument** entity
-     * [Trying out, or testing,](#test-service) the service
-     * [Setting the MIME type](#set-mime-type) for supported files
+    * [Trying out, or testing,](#test-service) the service
+    * [Setting the MIME type](#set-mime-type) for supported files
 * [Retrieving files](#retrieve-files) with REST
 
 If you are only interesting in consuming files, you can skip down to the [Retrieve Images and Files with REST](#retrieve-files) section.
@@ -38,23 +38,23 @@ Imagine that your app is functioning as a content management system (CMS), and y
 
 To publish the **System.Image** or **System.Filedocument** entities as a [REST service](/refguide/published-rest-service/), do the following:
 
-1.  Add a new module (or use **MyFirstModule**) and name it **CMS**.
+1. Add a new module (or use **MyFirstModule**) and name it **CMS**.
 
-2.  Go to the domain model and create a new entity called *MyFile*.
+2. Go to the domain model and create a new entity called *MyFile*.
 
-3.  Add a **System.Image** or **System.FileDocument** [generalization](/refguide/entities/#generalization) to the *MyFile* entity
+3. Add a **System.Image** or **System.FileDocument** [generalization](/refguide/entities/#generalization) to the *MyFile* entity
 
      {{< figure src="/attachments/refguide/modeling/integration/rest-binary/starting-entity.png" >}}
 
-4.  Generate the overview pages for the file or image entity, then link them to the home page and navigation.
+4. Generate the overview pages for the file or image entity, then link them to the home page and navigation.
      * Right click on the **System.Image** or **System.FileDocument** entity that you want to publish, and click **Generate overview pages**. 
      * Add a button to the home page that links to the **Overview** page you created.
 
-5.  Expose the entity as a REST resource.
+5. Expose the entity as a REST resource.
      * Right-click on the **System.Image** or **System.FileDocument** entity that contains the file(s) that you want to publish, and click **Expose as a REST resource**.
      * Click **Select** next to the **Service** field, then click on the folder where you want to create the service and click **New**. Enter a name for the REST service and click **OK**.
 
-6.  Back in the **Generate resource and operations** window, select **MyFileID** as the **Key attribute** and check the boxes for the following **Operations***:
+6. Back in the **Generate resource and operations** window, select **MyFileID** as the **Key attribute** and check the boxes for the following **Operations***:
      * **Get all**
      * **Get by key**
      * **Post (Create)**
@@ -62,7 +62,7 @@ To publish the **System.Image** or **System.Filedocument** entities as a [REST s
 
      See the [Operations](/refguide/generate-rest-resource/#operations) section of *Generating a Published REST Resource* for a description of each operation.
 
-7.  Click **OK**. 
+7. Click **OK**. 
 
 The **Published REST service** document for the exposed image or file entity has been created and is now open on your screen. 
 
@@ -88,10 +88,10 @@ See [Common MIME types](https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics
 
 In the **GET_ByKey** microflow, do the following: 
 
-1.  Drag a **Create Object** action into your microflow just before the **End Event**. 
-2.  In the **Entity** field, select **System.HTTPHeader**.
-3.  Under the **Refresh in client** field, click **New**.
-4.  Set the three drop-down options to the following:
+1. Drag a **Create Object** action into your microflow just before the **End Event**. 
+2. In the **Entity** field, select **System.HTTPHeader**.
+3. Under the **Refresh in client** field, click **New**.
+4. Set the three drop-down options to the following:
      * **Key (String (Unlimited))** – set the **Value** to `'Content-Type'`
      * **Value (String (Unlimited))** – set the **Value** to `'image/png'`, or the image type that will be returned
      * **System.HttpHeaders (System.HttpMessage)** - set the **Value** to `$httpResponse`

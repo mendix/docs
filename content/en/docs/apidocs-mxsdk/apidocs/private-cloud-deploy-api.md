@@ -42,6 +42,7 @@ For operations related to deployment packages (such as Create, Upload, Delete, a
 Store the `{GENERATED_PAT}` value in a safe location, so you can use it to authorize your Mendix for Private Cloud API calls.
 
 #### 2.1.2 Scopes explanation
+
 | Operation                   | Scopes                                       |
 |-----------------------------|----------------------------------------------|
 | Get namespace manifest      | `mx:deployment:read` or `mx:deployment:write`|

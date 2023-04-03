@@ -137,25 +137,7 @@ In the microflow below, a [Create object](/refguide/create-object/) activity cre
 
 The **Call ML model** activity is an **ML Kit** activity in the **Toolbox**. For further details, see [Call ML model](/refguide/call-ml-model/).
 
-### 2.4 Logistic Regression Example
 
-The images below show an example of a logistic regression, its [netron.app](https://netron.app/) schema and the component display, along with the ML Mapping:
-
-{{< figure src="/attachments/refguide/modeling/integration/ml-kit/ml-kit/output-type.png" alt="Example of a logistic regression." >}}
-
-{{< figure src="/attachments/refguide/modeling/integration/ml-kit/ml-kit/ml-model-created-entities.png" alt="Example of a netron.app schema." >}}
-
-{{< figure src="/attachments/refguide/modeling/integration/ml-kit/ml-kit/call-ml-mapping.png" alt="Example of the mapping call." >}}
-
-Create pre-processed inputs with **Create object** activity for inference inside your Mendix app, and consume the inference output with microflow [expressions](/refguide/expressions/).
-
-A **Create Object** activity is used for the first part in order to transfer entities from the domain model to the ML model input object. 
-
-{{< figure src="/attachments/refguide/modeling/integration/ml-kit/ml-kit/create-object.png" alt="Details of the log message in a microflow example." >}}
-
-{{< figure src="/attachments/refguide/modeling/integration/ml-kit/ml-kit/create-variable.png" alt="Details of the log message in a microflow example." >}}
-
-{{< figure src="/attachments/refguide/modeling/integration/ml-kit/ml-kit/change-object.png" alt="Details of the log message in a microflow example." >}}
 
 ## 3 Integrating Models with Pre-processors and Post-processors {#pre-post-processors}
 
@@ -229,7 +211,7 @@ See the following post-processor example in our [Mendix ML Kit Demo Repository](
     }
 ```
 
-### 3.2 Models with Multidimensional Inputs and Outputs
+### 3.2 Models with Multidimensional Inputs and Outputs {#multidimensional-outputs}
 
 Currently, it is required to have any multidimensional data as a string encoded using the base64 format. Any multidimensional data has to be encoded, either in string base64 format if you are using non-persistable entities, or binary streams if you opt for persistable entities for the ML model in the mapping (see the [Persistable and Non-Persistable Entities](#persist-nonpersist-entities) section in this document).
 
@@ -253,24 +235,7 @@ Artifacts (including HDF5, protocol buffers, and pickle) should be converted to 
 
 The ONNX community develops and maintains the converters for many ML frameworks. Check out the [ONNX repository](https://github.com/onnx/onnxmltools) and [supported tools](https://onnx.ai/supported-tools.html) for further information.
 
-Once you build a model, see examples of notebooks that show you how to export them to ONNX in our [Mendix ML Kit Demo Repository](https://github.com/mendix/mlkit-example-app/tree/main/notebooks).
-
-### 4.2 Pre-Trained ML Models
-
-[Johanna add this to a new doc]
-
-The ONNX community provides an ML model repository, called [ONNX Model Zoo](https://github.com/onnx/models), where common computer vision and language models can be found. The [ONNX Model Zoo](https://github.com/onnx/models) is a collection of pre-trained, state-of-the-art models in the ONNX format contributed by community members. Accompanying each model are Jupyter notebooks for model training and running inference with the trained model. The notebooks are written in Python and include links to the training dataset, as well as references to the original paper that describes the model architecture. All the ONNX models in the ONNX Zoo should be compatible with the *ML Kit*. You can pick up any model from this repository, customize it with your own data and integrate it in your Mendix app using the *ML Kit*.
-
-[Add paragraph starting with Below, and all the list with links, from https://www.mendix.com/blog/introducing-the-mendix-ml-kit-for-low-code-deployment/#out-of-the-box-pre-trained-ml-models]
-
-[Hugging Face](https://huggingface.co/models?library=onnx&sort=downloads) provides open source pre-trained models (including datasets). You can find hundreds of ONNX models to perform tasks on different modalities such as text, vision, and audio.
-
-To integrate a pre-built (propriety or public) ML model into a Mendix app, consider the following:
-
-* Compatibility of the model internal representation (IR) version with the *ML Kit*
-* Compatibility of the model OpSets with the *ML Kit*
-
-For details on versioning schemes, see the [Versioning](#versioning) section below.
+{{% alert color="info" %}}Once you build a model, see examples of notebooks that show you how to export them to ONNX in our [Mendix ML Kit Demo Repository](https://github.com/mendix/mlkit-example-app/tree/main/notebooks).{{% /alert %}}
 
 ### 4.3 Versioning {#versioning}
 

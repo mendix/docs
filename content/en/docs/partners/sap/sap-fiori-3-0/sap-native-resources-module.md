@@ -1,20 +1,20 @@
 ---
-title: "SAP Native Resources Module"
+title: "SAP Horizon Native UI Resources"
 url: /partners/sap/sap-native-resources/
 category: "SAP"
 weight: 18
-description: "The SAP Native Resources Module allows you to use SAP Fiori UI resources in your native mobile Mendix app, to make the UI consistent with SAP products."
-tags: ["SAP", "Fiori", "UI", "resources"]
+description: "The SAP Horizon Native UI Resources module allows you to create Native apps with Fiori Horizon-theme UI styling."
+tags: ["SAP", "Fiori", "UI", "resources", "Native"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
 ## 1 Introduction
 
-The [SAP Native Resources Module](!TO BE ADDED) allows you to use SAP Fiori UI resources in your native mobile Mendix app in order to create a UI that is consistent with the UI of SAP products built with SAP Fiori. 
+The [SAP Horizon Native UI Resources module](!TO BE ADDED) allows you to use SAP Fiori UI resources in your native mobile Mendix app in order to create a UI that is consistent with the UI of SAP products built with SAP Fiori. 
 
 The module makes it possible to design your native mobile app pages with SAP Fiori-styled widgets and building blocks as part of your layout. The module uses the Horizon theme. Based on the selected mobile theme, your app will use the light or dark version of the theme.
 
-The SAP Native Resources Module includes the following resources:
+The SAP Horizon Native UI Resources module includes the following resources:
 
 * Components - Mendix core components with a SAP Fiori look and feel
 * Building blocks - Groups of components used to create prebuilt SAP Fiori page blocks
@@ -27,14 +27,14 @@ You may want to use this module if you are building a native mobile Mendix app n
 
 ## 2 Prerequisites
 
-The SAP Native Resources Module requires the following modules:
+The SAP Horizon Native UI Resources module requires the following modules:
 
 * [Atlas Core](https://marketplace.mendix.com/link/component/117187)
 * [Atlas Native Content](https://marketplace.mendix.com/link/component/117175)
 
 ## 3 Installation
 
-Follow the instructions in [How to Use Marketplace Content in Studio Pro](/appstore/general/app-store-content/) to import the SAP Native Resources Module into your app.
+Follow the instructions in [How to Use Marketplace Content in Studio Pro](/appstore/general/app-store-content/) to import the SAP Horizon Native UI Resources module into your app.
 
 ## 4 Configuration
 
@@ -53,14 +53,14 @@ After you install the connector, you can find it in the **App Explorer**, in the
 {{% alert color="info" %}}
 When using the module, keep the following additional concerns in mind:
 
-* The SAP Native Resources Module does not include icons other than glyphs. If required, you can upload any new icons into the module's [Image Collection](/refguide/image-collection/).
+* The SAP Horizon Native UI Resources module does not include icons other than glyphs. If required, you can upload any new icons into the module's [Image Collection](/refguide/image-collection/).
 * The side menus allow only static content. For dynamic menu options, use the action sheet or bottom sheet.
 * If you want to customize the styling or look of the components, you can add a new *main.js* file in **SAP_Native_Resources > Styling > native**.
 {{% /alert %}}
 
 ## 4 Reference
 
-To help you work with the SAP Native Resources Module, the following sections of this document describe the available components, building blocks, page templates, and layouts that you can use in your application.
+To help you work with the SAP Horizon Native UI Resources module, the following sections of this document describe the available components, building blocks, page templates, and layouts that you can use in your application.
 
 ### 4.1 Components {#components}
 

@@ -557,6 +557,10 @@ These release notes cover changes made to the [Mendix Data Hub Catalog](/data-hu
 
 ### September 23rd, 2021
 
+#### Data Hub Free Edition
+
+* The Data Hub Free edition is now available to all Mendix users! Publish your data sources in the Data Hub Catalog, curate them, and then consume them in another application.
+
 #### Fixes
 
 * We fixed an issue where the **Curate** button appeared in the navigation for users who were not able to curate any content.

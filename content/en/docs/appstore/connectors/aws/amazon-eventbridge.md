@@ -96,13 +96,13 @@ Constants are used to define configuration values. All activities are exported a
 | Name | Description | 
 | --- | --- |
 | `AmazonEventBridgeConnector.AWS_ClientCertificateID` | The ID for the `ClientCertificate` used to sign the authentication requests. | 
-|`AmazonEventBridgeConnector.ProfileARN` | The `ProfileARN` for the [IAM Roles Anywhere](https://docs.aws.amazon.com/rolesanywhere/latest/userguide/introduction.html) profile that has access to the Amazon Polly service | 
-|`AmazonEventBridgeConnector.Region` | The region in which both the IAM Roles Anywhere and the Polly service are located | 
-|`AmazonEventBridgeConnector.RoleARN` | The `RoleARN` of the IAM Role that has access to the Polly service. | 
-|`AmazonEventBridgeConnector.AWS_TrustAnchorARN` | The `TrustAnchorARN` of the TrustAnchor configured in IAM Roles Anywhere that is used for the configured role | 
-|`AmazonEventBridgeConnector.UseStaticCredentials` | The `UseStaticCredentials` Boolean value defines if the connector uses the provided static credentials (`AccessKey` and `SecretKey`) over the session-based credentials | 
-|`AmazonEventBridgeConnector.AccessKey` | The `AccessKey` from an AWS account able to use this service | 
-|`AmazonEventBridgeConnector.SecretKey` | The `SecretKey` from an AWS Account able to use this service |
+| `AmazonEventBridgeConnector.ProfileARN` | The `ProfileARN` for the [IAM Roles Anywhere](https://docs.aws.amazon.com/rolesanywhere/latest/userguide/introduction.html) profile that has access to the Amazon Polly service | 
+| `AmazonEventBridgeConnector.Region` | The region in which both the IAM Roles Anywhere and the Polly service are located | 
+| `AmazonEventBridgeConnector.RoleARN` | The `RoleARN` of the IAM Role that has access to the Polly service. | 
+| `AmazonEventBridgeConnector.AWS_TrustAnchorARN` | The `TrustAnchorARN` of the TrustAnchor configured in IAM Roles Anywhere that is used for the configured role | 
+| `AmazonEventBridgeConnector.UseStaticCredentials` | The `UseStaticCredentials` Boolean value defines if the connector uses the provided static credentials (`AccessKey` and `SecretKey`) over the session-based credentials | 
+| `AmazonEventBridgeConnector.AccessKey` | The `AccessKey` from an AWS account able to use this service | 
+| `AmazonEventBridgeConnector.SecretKey` | The `SecretKey` from an AWS Account able to use this service |
 
 ### 4.2 Domain Model {#domain-model}
 
@@ -314,7 +314,7 @@ This entity contains additional parameters of the connection. It is associated w
 
 | Attribute | Description | 
 | --- | --- |
-| `Key`   | The key for the parameter | 
+| `Key` | The key for the parameter | 
 | `IsSecretValue` | Specifies whether the value is secret | 
 | `Value` | The value associated with the key | 
 
@@ -322,7 +322,7 @@ This entity contains additional parameters of the connection. It is associated w
 
 | Attribute | Description | 
 | --- | --- |
-| `Key`   | The key for the parameter | 
+| `Key` | The key for the parameter | 
 | `IsSecretValue` | Specifies whether the value is secret | 
 | `Value` | The value associated with the key |
 
@@ -330,7 +330,7 @@ This entity contains additional parameters of the connection. It is associated w
 
 | Attribute | Description | 
 | --- | --- |
-| `Key`   | The key for the parameter | 
+| `Key` | The key for the parameter | 
 | `IsSecretValue` | Specifies whether the value is secret | 
 | `Value` | The value associated with the key |
 

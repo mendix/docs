@@ -179,7 +179,7 @@ The values for the properties can be found in the **Connection Properties** of t
 If you are using the SAP Cloud Connector to connect to your SAP backend system, you can secure access to the *bapi-service* microservice component by using the SAP XSUAA service. The service supports both user-based authentication with a user access token obtained from the SAP XSUAA service, and application-based authentication with an access token obtained from the SAP XSUAA service bindings.
 
 {{% alert color="info" %}}
-To help you implement the XSUAA service for your app, Mendix provides the platform-supported [XSUAA Connector for SAP BTP](/partners/sap/sap-xsuaa-connector/). The configuration described below does not require the XSUAA Connector to be installed, but you may consider using it as a best practice.
+To help you implement the XSUAA service for your app, Mendix provides the platform-supported [XSUAA Connector for SAP BTP](/partners/sap/sap-xsuaa-connector/). You can use it to create the required XSUAA service configuration.
 {{% /alert %}}
 
 ### 5.1 Trust Configuration

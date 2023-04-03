@@ -16,7 +16,7 @@ The BAPI Connector uses the [SAP Java Connector](https://support.sap.com/en/prod
 
 This connector allows you to do the following:
 
-* Search BAPIs within your SAP back end(s)
+* Search BAPIs within your SAP back end system
 * View BAPI details
 * Generate a Mendix domain model of the BAPI
 * Call BAPIs or BAPI sequences
@@ -46,7 +46,7 @@ Depending on whether you plan to use the SAP Cloud Connector, you also need the 
 
 ### 2.1 Required Only When Using the SAP Cloud Connector
 
-If you are using the SAP Cloud Connector to facilitate connection to the SAP backend system, you must install the *bapi-service* microservice component. The optional component minimizes the network complexity and helps make your application is compliant with the recommended SAP security standards.
+If you are using the SAP Cloud Connector to facilitate connection to the SAP backend system, you must install the *bapi-service* microservice component. The component minimizes the network complexity and helps make your application is compliant with the recommended SAP security standards.
 
 You can download the *bapi-service* component from the [Mendix Content Delivery Network](https://cdn.mendix.com/mcdep/bapi-service/bapi-service-1.0.0.zip), and then use the extracted manifest file to deploy the *bapi-service.war* file to SAP BTP. To use the component, you must also define an RFC-type destination in SAP BTP.
 
@@ -184,7 +184,7 @@ To help you implement the XSUAA service for your app, Mendix provides the platfo
 
 ### 5.1 Trust Configuration
 
-For the XSUAA authentication to work between the *bapi-service* component and your Mendix app, you must configure the XSUAA service instance for both applications. The *bapi-service* component and your Mendix app must both be deployed in the same sub-account in SAP BTP.
+For the XSUAA authentication to work between the *bapi-service* component and your Mendix app, you must configure separate XSUAA service instances for both applications. The *bapi-service* component and your Mendix app must both be deployed in the same sub-account in SAP BTP.
 
 The following sections show how you can configure the required settings in the *xs-security.json* file of the XSUAA service.
 

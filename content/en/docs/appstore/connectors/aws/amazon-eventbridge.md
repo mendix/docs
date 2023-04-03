@@ -79,10 +79,10 @@ After you configure the authentication profile for Amazon EventBridge, you can i
     
     For the `DescribeApiDestination` activity, you must specify the AWS Region and add your `Credentials` and `DescribeApiDestinationRequest` object. The `DescribeApiDestinationRequest` object requires the `Name` parameter, which is the name of the API destination you want to get the information of. To get your `Credentials` object, add the **Credentials_GenerateFromConstants** microflow in front of your `DescribeApiDestination` activity so that you can pass the `Credentials` object as input parameter of the `DescribeApiDestination` activity.
     
-7. In the **Edit parameters** section, edit the **AWS_Region** parameter, and provide a value by using a variable or an expression. For a list of available AWS regions, see [AWS_Region](#aws-region).
-8. Click **OK**.
-9. Open a page that contains a data view to show all the parameters of the `DescribeApiDestinationResponse` object, which is the response of the `DescribeApiDestination` activity.
-10. Configure a method to trigger the `ACT_DescribeApiDestination` microflow. 
+6. In the **Edit parameters** section, edit the **AWS_Region** parameter, and provide a value by using a variable or an expression. For a list of available AWS regions, see [AWS_Region](#aws-region).
+7. Click **OK**.
+8. Open a page that contains a data view to show all the parameters of the `DescribeApiDestinationResponse` object, which is the response of the `DescribeApiDestination` activity.
+9. Configure a method to trigger the `ACT_DescribeApiDestination` microflow. 
     For example, you can associate the activity with a custom button on a page in your app. For an example of how this can be implemented, see [Creating a Custom Save Button with a Microflow](/refguide/creating-a-custom-save-button/).
 
 ## 4 Technical Reference
@@ -96,13 +96,13 @@ Constants are used to define configuration values. All activities are exported a
 | Name | Description | 
 | --- | --- |
 | `AmazonEventBridgeConnector.AWS_ClientCertificateID` | The ID for the `ClientCertificate` used to sign the authentication requests. | 
-|`AmazonEventBridgeConnector.ProfileARN` | The `ProfileARN` for the [IAM Roles Anywhere](https://docs.aws.amazon.com/rolesanywhere/latest/userguide/introduction.html) profile that has access to the Amazon Polly service | 
-|`AmazonEventBridgeConnector.Region` | The region in which both the IAM Roles Anywhere and the Polly service are located | 
-|`AmazonEventBridgeConnector.RoleARN` | The `RoleARN` of the IAM Role that has access to the Polly service. | 
-|`AmazonEventBridgeConnector.AWS_TrustAnchorARN` | The `TrustAnchorARN` of the TrustAnchor configured in IAM Roles Anywhere that is used for the configured role | 
-|`AmazonEventBridgeConnector.UseStaticCredentials` | The `UseStaticCredentials` Boolean value defines if the connector uses the provided static credentials (`AccessKey` and `SecretKey`) over the session-based credentials | 
-|`AmazonEventBridgeConnector.AccessKey` | The `AccessKey` from an AWS account able to use this service | 
-|`AmazonEventBridgeConnector.SecretKey` | The `SecretKey` from an AWS Account able to use this service |
+| `AmazonEventBridgeConnector.ProfileARN` | The `ProfileARN` for the [IAM Roles Anywhere](https://docs.aws.amazon.com/rolesanywhere/latest/userguide/introduction.html) profile that has access to the Amazon Polly service | 
+| `AmazonEventBridgeConnector.Region` | The region in which both the IAM Roles Anywhere and the Polly service are located | 
+| `AmazonEventBridgeConnector.RoleARN` | The `RoleARN` of the IAM Role that has access to the Polly service. | 
+| `AmazonEventBridgeConnector.AWS_TrustAnchorARN` | The `TrustAnchorARN` of the TrustAnchor configured in IAM Roles Anywhere that is used for the configured role | 
+| `AmazonEventBridgeConnector.UseStaticCredentials` | The `UseStaticCredentials` Boolean value defines if the connector uses the provided static credentials (`AccessKey` and `SecretKey`) over the session-based credentials | 
+| `AmazonEventBridgeConnector.AccessKey` | The `AccessKey` from an AWS account able to use this service | 
+| `AmazonEventBridgeConnector.SecretKey` | The `SecretKey` from an AWS Account able to use this service |
 
 ### 4.2 Domain Model {#domain-model}
 
@@ -314,7 +314,7 @@ This entity contains additional parameters of the connection. It is associated w
 
 | Attribute | Description | 
 | --- | --- |
-| `Key`   | The key for the parameter | 
+| `Key` | The key for the parameter | 
 | `IsSecretValue` | Specifies whether the value is secret | 
 | `Value` | The value associated with the key | 
 
@@ -322,7 +322,7 @@ This entity contains additional parameters of the connection. It is associated w
 
 | Attribute | Description | 
 | --- | --- |
-| `Key`   | The key for the parameter | 
+| `Key` | The key for the parameter | 
 | `IsSecretValue` | Specifies whether the value is secret | 
 | `Value` | The value associated with the key |
 
@@ -330,7 +330,7 @@ This entity contains additional parameters of the connection. It is associated w
 
 | Attribute | Description | 
 | --- | --- |
-| `Key`   | The key for the parameter | 
+| `Key` | The key for the parameter | 
 | `IsSecretValue` | Specifies whether the value is secret | 
 | `Value` | The value associated with the key |
 

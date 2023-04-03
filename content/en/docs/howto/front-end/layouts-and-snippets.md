@@ -98,7 +98,7 @@ These are some layout examples:
 
     {{< figure src="/attachments/howto/front-end/layouts-and-snippets/basic-mobile.png" >}}
 
-* Master layout with added menu:
+* Primary layout with added menu:
 
     {{< figure src="/attachments/howto/front-end/layouts-and-snippets/primary.png" >}}
 

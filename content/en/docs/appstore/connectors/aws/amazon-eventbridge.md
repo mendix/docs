@@ -79,10 +79,10 @@ After you configure the authentication profile for Amazon EventBridge, you can i
     
     For the `DescribeApiDestination` activity, you must specify the AWS Region and add your `Credentials` and `DescribeApiDestinationRequest` object. The `DescribeApiDestinationRequest` object requires the `Name` parameter, which is the name of the API destination you want to get the information of. To get your `Credentials` object, add the **Credentials_GenerateFromConstants** microflow in front of your `DescribeApiDestination` activity so that you can pass the `Credentials` object as input parameter of the `DescribeApiDestination` activity.
     
-7. In the **Edit parameters** section, edit the **AWS_Region** parameter, and provide a value by using a variable or an expression. For a list of available AWS regions, see [AWS_Region](#aws-region).
-8. Click **OK**.
-9. Open a page that contains a data view to show all the parameters of the `DescribeApiDestinationResponse` object, which is the response of the `DescribeApiDestination` activity.
-10. Configure a method to trigger the `ACT_DescribeApiDestination` microflow. 
+6. In the **Edit parameters** section, edit the **AWS_Region** parameter, and provide a value by using a variable or an expression. For a list of available AWS regions, see [AWS_Region](#aws-region).
+7. Click **OK**.
+8. Open a page that contains a data view to show all the parameters of the `DescribeApiDestinationResponse` object, which is the response of the `DescribeApiDestination` activity.
+9. Configure a method to trigger the `ACT_DescribeApiDestination` microflow. 
     For example, you can associate the activity with a custom button on a page in your app. For an example of how this can be implemented, see [Creating a Custom Save Button with a Microflow](/refguide/creating-a-custom-save-button/).
 
 ## 4 Technical Reference

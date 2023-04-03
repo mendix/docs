@@ -16,7 +16,7 @@ Studio Pro [9.23](/releasenotes/studio-pro/9.23/) and above supports machine lea
 
 ## 2 Usage {#usage}
 
-To use an ML model in your app, you need to convert it to ONNX, then import it to create an ML model mapping.
+To use an ML model in your app, you need to convert it to ONNX, then import it to create an ML model mapping. For a visual walkthrough of the steps in this section, see the [Logistic Regression Example](/refguide/machine-learning-kit/using-ml-kit/logistic-regression-example/).
 
 ### 2.1 Converting Your Model to ONNX {#convert-ml-model}
 
@@ -136,8 +136,6 @@ In the microflow below, a [Create object](/refguide/create-object/) activity cre
 #### 2.3.2 Call ML Model Activity Details
 
 The **Call ML model** activity is an **ML Kit** activity in the **Toolbox**. For further details, see [Call ML model](/refguide/call-ml-model/).
-
-
 
 ## 3 Integrating Models with Pre-processors and Post-processors {#pre-post-processors}
 
@@ -368,5 +366,6 @@ This is currently not supported.
 ## 8 Read More {#readmore}
 
 * Learn about machine learning [Design Patterns](/refguide/machine-learning-kit/design-patterns/), including [Advanced Inference Design Patterns](/refguide/machine-learning-kit/design-patterns/advanced-inference/) and [Pre- and Post-Processor Design Patterns](/refguide/machine-learning-kit/design-patterns/pre-post-processor-patterns/)
+* See [Pre-Trained ML Models](/refguide/machine-learning-kit/pretrained-ml-models/) to learn about models you can use with *Mendix ML Kit*.
 * The [ML model mapping](/refguide/ml-model-mapping/) document covers details of the service document for machine learning models
 * The [Call ML Model](/refguide/call-ml-model/) document covers the microflow [activity](/refguide/activities/) used to call an imported ML model in a microflow

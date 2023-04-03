@@ -1,5 +1,5 @@
 ---
-title: "Building a Logistic Regression Model"
+title: "Logistic Regression Example"
 url: /refguide/machine-learning-kit/using-ml-kit/logistic-regression/
 category: Using ML Kit
 weight: 20
@@ -9,7 +9,11 @@ tags: ["studio pro", "machine learning", "ml kit", "models", "integration"]
 
 ## 1 Introduction
 
-The images below show an example of a logistic regression, its [netron.app](https://netron.app/) schema and the component display, along with the ML Mapping:
+The [Usage](/refguide/machine-learning-kit/using-ml-kit/#usage) section of *Using ML Kit* lists the steps you need to follow to set up and usage machine learning 
+
+The images below show an example of a logistic regression, its [netron.app](https://netron.app/) schema and the component display, along with the ML Mapping.
+
+
 
 {{< figure src="/attachments/refguide/modeling/integration/ml-kit/ml-kit/logistic-regression/output-type.png" alt="Example of a logistic regression." >}}
 

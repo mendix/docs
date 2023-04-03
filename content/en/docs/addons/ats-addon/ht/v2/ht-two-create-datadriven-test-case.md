@@ -34,7 +34,7 @@ Before starting with this how-to, make sure you have the following prerequisites
 
 * Read [How to Create a Test Case](/addons/ats-addon/ht-two-create-a-test-case/)
 
-## 3 Creating a Master Data Set within ATS
+## 3 Creating a Primary Data Set within ATS
 
 The following steps explain how to create a primary dataset within ATS. If you want to create a primary dataset from an Excel file, please see chapter four.
 
@@ -110,11 +110,11 @@ The records look like this:
 
 {{< figure src="/attachments/addons/ats-addon/ht/v2/ht-two-create-datadriven-test-case/all-records-new-expense.png" >}}
 
-You can also update your records from Excel.  For details on how to do this, see [5 Creating a Master Data Set with Excel](#create).
+You can also update your records from Excel.  For details on how to do this, see [Creating a Primary Data Set with Excel](#create).
 
 ## 4 Creating the Excel File {#excel}
 
-The following steps explain how to create the right Excel file and how it should look. You will need this file in [5 Creating a Master Data Set with Excel](#create).
+The following steps explain how to create the right Excel file and how it should look. You will need this file in [Creating a Primary Data Set with Excel](#create).
 
 1. Open Excel and create a new file. ATS implements the values in the first row as dataset fields and all the rows beyond the first row as records. This is an example:
 
@@ -141,7 +141,7 @@ The following steps explain how to create the right Excel file and how it should
 
 4. Save the Excel file so that you can use it in the next section.
 
-## 5 Creating a Master Data Set with Excel {#create}
+## 5 Creating a Primary Data Set with Excel {#create}
 
 The following steps explain how to create and update a primary dataset from an Excel file. You will use the file you created in [4 Creating the Excel File](#excel).
 
@@ -165,7 +165,7 @@ The following steps explain how to create and update a primary dataset from an E
 
 Now you have a new primary dataset using an Excel file.
 
-## 6 Updating the Master Data Set Using an Excel File
+## 6 Updating the Primary Data Set Using an Excel File
 
 To update a primary dataset using an Excel file, follow these steps:
 
@@ -199,7 +199,7 @@ ATS updates the changed records:
 
 Great! You have updated the primary dataset using an Excel file.
 
-## 7 Connecting the Master Data Set to Your Test Case
+## 7 Connecting the Primary Data Set to Your Test Case
 
 The following steps explain how to connect the primary dataset to your test case. An example test case is used in this chapter. For more information, see [How to Create a Test Case](/addons/ats-addon/ht-two-create-a-test-case/).
 
@@ -218,7 +218,7 @@ The following steps explain how to connect the primary dataset to your test case
 
     Connect the primary dataset to your test case.
 
-    {{< figure src="/attachments/addons/ats-addon/ht/v2/ht-two-create-datadriven-test-case/connected-master-data-set-new-expense.png" >}}
+    {{< figure src="/attachments/addons/ats-addon/ht/v2/ht-two-create-datadriven-test-case/connected-primary-data-set-new-expense.png" >}}
 
 6. Now you need to connect the dataset fields to the right test steps, so click the **Test Steps** tab.
 7. Select the test step to which you want to connect a dataset field.

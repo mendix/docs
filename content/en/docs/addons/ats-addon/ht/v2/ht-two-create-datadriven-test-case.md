@@ -218,7 +218,7 @@ The following steps explain how to connect the primary dataset to your test case
 
     Connect the primary dataset to your test case.
 
-    {{< figure src="/attachments/addons/ats-addon/ht/v2/ht-two-create-datadriven-test-case/connected-master-data-set-new-expense.png" >}}
+    {{< figure src="/attachments/addons/ats-addon/ht/v2/ht-two-create-datadriven-test-case/connected-primary-data-set-new-expense.png" >}}
 
 6. Now you need to connect the dataset fields to the right test steps, so click the **Test Steps** tab.
 7. Select the test step to which you want to connect a dataset field.

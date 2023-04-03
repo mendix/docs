@@ -99,7 +99,7 @@ These are some layout examples:
 
 * Master layout with added menu:
 
-    {{< figure src="/attachments/howto8/front-end/layouts-and-snippets/master.png" >}}
+    {{< figure src="/attachments/howto8/front-end/layouts-and-snippets/primary.png" >}}
 
 {{% alert color="info" %}}
 

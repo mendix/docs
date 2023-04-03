@@ -100,7 +100,7 @@ These are some layout examples:
 
 * Master layout with added menu:
 
-    {{< figure src="/attachments/howto/front-end/layouts-and-snippets/master.png" >}}
+    {{< figure src="/attachments/howto/front-end/layouts-and-snippets/primary.png" >}}
 
 {{% alert color="info" %}}
 By adjusting the canvas width, you can emulate the end-user's view of the page in Studio Pro. For example, the desktop layout has a canvas width of 800, and the default phone layouts have a width of 500. The property canvas width only applies to the view in Studio Pro, and the actual width of the page depends on the opened browser or the optional pop-up window size.

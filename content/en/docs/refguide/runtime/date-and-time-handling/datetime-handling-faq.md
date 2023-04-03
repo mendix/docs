@@ -30,6 +30,7 @@ Just like a regular time zone. If you are in Eastern Standard Time (EST, which i
 ## 6 I Planned a Scheduled Event at 02:00 Using Server Time and Set It to Repeat Every Day, Why Did My Local DST Change and Why Are Scheduled Events Starting to Run an Hour Off?
 
 This can be confusing but is expected. The scheduling of scheduled events is interval-based and not time-based. Notice that the original date of the scheduled event is still at your previous time zone (before the DST period changed), the scheduled event is simply repeating itself every 24 hour, which might mean that you will see a change in the local time it runs at, because during DST shifts a day may take 25 hours or 23 hours. This will cause a temporary shift for as long as the DST change lasts.
+
 This is only true for legacy scheduled events; the new task-queue-based scheduled events will not suffer from a one-hour shift from their intended schedule.
 
 ## 7 What If I Plan It in UTC?

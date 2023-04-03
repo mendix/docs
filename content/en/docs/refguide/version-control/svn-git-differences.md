@@ -32,7 +32,7 @@ The table below outlines the main differences between SVN and Git:
 | ----------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
 | Update/Pull | Retrieves changes from the server and applies them directly on your local copy of the app. | Retrieves changes from the server. Changes can only be applied to your local copy of the app if you do not have any uncommitted changes. If you have uncommitted changes, you need to either *revert* them or *commit* them first. Note that in Git this operation is typically called *Pull* instead of *Update*. |
 | Commit      | Submits changes to the server.                               | Creates a *local* commit: a set of changes with a message that you can jump back to. Changes are not submitted to the server, unless you check the **Push** checkbox. |
-| Push        | N/a                                                          | Submits *all* local commits to the server. If other developers have pushed changes to the server that are not in your local app yet, you have to *update*/*push* first. |
+| Push        | N/a                                                          | Submits *all* local commits to the server. If other developers have pushed changes to the server that are not in your local app yet, you have to *update*/*pull* first. |
 | Port fix    | Port fix transports the actual commit from one branch and applies it to another. You need to commit the change. | Port fix transports the actual commit from one branch and directly applies it, including author and commit text to another branch. This means you do not need to explicitly commit your change. |
 
 ## 3 Differences in Revision Numbers

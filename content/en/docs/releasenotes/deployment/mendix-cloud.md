@@ -732,7 +732,7 @@ This value is displayed in the following graphs in Metrics for Mendix Cloud v4:
 
 #### Improvements
 
-* For [Mendix Cloud Dedicated](https://www.mendix.com/evaluation-guide/app-capabilities/mendix-cloud-overview#mendix-cloud-vpc), we have added the ability to whitelist outgoing IP addresses.
+* For [Mendix Cloud Dedicated](https://www.mendix.com/evaluation-guide/app-capabilities/mendix-cloud-overview#mendix-cloud-vpc), we have added the ability to safelist outgoing IP addresses.
 
 ### March 17th, 2020
 

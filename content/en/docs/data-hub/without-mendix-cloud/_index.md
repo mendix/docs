@@ -111,11 +111,7 @@ During runtime, after you have deployed your app to a development server, the ex
 {{% alert color="info" %}}
 Publishing and consuming services need to have network access to each other, but do not necessarily need to be on cloud or network. {{% /alert %}}
 
-### 3.1 Licensing 
-
-A [Data Hub License](/data-hub/#data-hub-licences) is necessary for using Mendix Data Hub during runtime. A [Data Hub Free Edition](/data-hub/#dh-free) license limits use to 1000 OData objects per day for each runtime instance. For further details on limitations during runtime, see the [Limitations](/data-hub/#dh-free-limitations) section of the *Data Hub Guide*.
-
-## Read More
+## 4 Read More
 
 * [Data Hub Guide](/data-hub/)
 * [Data Hub Catalog](/data-hub/data-hub-catalog/)

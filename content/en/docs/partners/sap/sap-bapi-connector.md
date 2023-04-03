@@ -207,7 +207,7 @@ In this example, *bapiAuth* is the scope for the provider app defined on in the 
 
 #### 5.1.3 User Authentication 
 
-To configure application-to-application authentication, include the following line in the *xs-security.json* file of the XSUAA service instance bound with *bapi-service*:
+To configure user authentication, include the following line in the *xs-security.json* file of the XSUAA service instance bound with *bapi-service*:
 
 ```text
 granted-apps" : [ "$XSAPPNAME(application,BAPI-Consumer-dev)"]

@@ -20,6 +20,8 @@ Mendix *ML Kit* is built with the Open Neural Network Exchange ([ONNX](https://o
 
 The ONNX Runtime is based on the ONNX standard, and is an optimized inference engine for efficiently running any model converted to the ONNX format across different hardware and operating systems with minimum effort. Due to this framework interoperability nature of ONNX, ONNX Runtime improves the development efficiency from model training to inference. With the ML Kit, we have extended the Mendix Runtime with ONNX Runtime. ONNX bridges the gap between AI frameworks and Mendix.
 
+To get started, see [Converting Your Model to ONNX](/refguide/machine-learning-kit/using-ml-kit/#convert-ml-model) in *Using ML Kit*.
+
 ## 3 Work with ML Kit
 
 Learn more about the machine learning kit in the following documents:

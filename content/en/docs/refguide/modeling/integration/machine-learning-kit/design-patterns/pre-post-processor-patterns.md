@@ -33,7 +33,7 @@ Machine learning models cannot interpret categorical data without pre-processing
 
 A preprocessor activity
 
-{{< figure src="/attachments/refguide/modeling/integration/ml-kit/design-patterns/pre-postprocessor-design-patterns/ResNet-pre-processor-Model-Inference-single-activity.png" alt="." >}}
+{{< figure src="/attachments/refguide/modeling/integration/ml-kit/design-patterns/pre-postprocessor-design-patterns/ResNet-pre-processor-Model-Inference-single-activity.png" >}}
 
 Create Variable Activity
 
@@ -47,11 +47,11 @@ In a similar scenario, an output of an ML model that is a numerical value might 
 
 A post-processor activity
 
-{{< figure src="/attachments/refguide/modeling/integration/ml-kit/design-patterns/pre-postprocessor-design-patterns/numerical-categorical-postprocessor-activity.png" alt="." >}}
+{{< figure src="/attachments/refguide/modeling/integration/ml-kit/design-patterns/pre-postprocessor-design-patterns/numerical-categorical-postprocessor-activity.png" >}}
 
 Create Variable Activity
 
-{{< figure src="/attachments/refguide/modeling/integration/ml-kit/design-patterns/pre-postprocessor-design-patterns/numerical-categorical-create-variable.png" alt="." >}}
+{{< figure src="/attachments/refguide/modeling/integration/ml-kit/design-patterns/pre-postprocessor-design-patterns/numerical-categorical-create-variable.png" >}}
 
 For instance, the output of the model that is called target_probability which is ranging from 0 and 1 can be converted into a binary value based on a threshold (0.80) value.
 
@@ -61,11 +61,11 @@ Some numerical features can be somewhat summarized using aggregation components.
 
 An aggregation activity
 
-{{< figure src="/attachments/refguide/modeling/integration/ml-kit/design-patterns/pre-postprocessor-design-patterns/aggregation-activity.png" alt="." >}}
+{{< figure src="/attachments/refguide/modeling/integration/ml-kit/design-patterns/pre-postprocessor-design-patterns/aggregation-activity.png" >}}
 
 Aggregate List Activity
 
-{{< figure src="/attachments/refguide/modeling/integration/ml-kit/design-patterns/pre-postprocessor-design-patterns/aggregate-list-activity.png" alt="." >}}
+{{< figure src="/attachments/refguide/modeling/integration/ml-kit/design-patterns/pre-postprocessor-design-patterns/aggregate-list-activity.png" >}}
  
 For instance, a new feature (minimum bike age) is calculated via Aggregate List activity and fed into the model.
 
@@ -375,4 +375,4 @@ Typically, the necessary pre-processing actions of Computer Vision models are qu
 
 Here is an overview of a typical NLP model inference pipeline in microflows.
 
-{{< figure src="/attachments/refguide/modeling/integration/ml-kit/design-patterns/pre-postprocessor-design-patterns/hybrid-activity-microflow.png" alt="." >}}
+{{< figure src="/attachments/refguide/modeling/integration/ml-kit/design-patterns/pre-postprocessor-design-patterns/hybrid-activity-microflow.png" >}}

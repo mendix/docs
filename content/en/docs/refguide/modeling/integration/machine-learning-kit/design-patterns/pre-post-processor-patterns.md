@@ -107,7 +107,7 @@ Below there is a very simple pre-processing that essentially retrieves float val
     }
 ```
  
-The post-processor is even simpler:
+The post-processor is even simpler (see the example in our [Mendix ML Kit Demo Repository](https://github.com/mendix/mlkit-example-app/blob/main/javasource/iris_randomforest/actions/PostProcessor.java)):
 
 ```
 

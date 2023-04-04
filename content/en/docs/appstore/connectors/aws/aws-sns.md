@@ -165,13 +165,13 @@ This activity returns a `ListTopicsResponse` object with objects from the follow
 | `ListTopicsResponse` |  | This entity is the response for the Amazon SNS `ListTopics` action. It holds a list of ListTopicsTopic objects. |
 | `ListTopicsTopic` | `AmazonSNSConnector.Topic` | This entity holds information on the retrieved Topic. The attributes it contains are **ARN**, which reflects the name of the resource inside the Amazon environment, and **Name**, which reflects the name of the Topic.  |
 
-#### 4.3.2 Publish
+#### 4.3.2 PublishBatch
 
-The `Publish` Amazon SNS activity allows you to publish a message to all those subscribed to a given Topic. It requires a valid AWS Region and a `PublishRequest` object, containing both a Message object and a Topic object. The output of the action is a Boolean value which represents whether the operation was successful.
+The `Publish` Amazon SNS action allows you to publish up to 10 messages to all those subscribed to a given Topic.  It requires a valid AWS Region and a PublishRequest object, containing a Topic object that can contain up to 10 message objects. The output of the action is PublishBatchResponse object containing information on whether or not the messages was successfully delivered to the SNS topic.
 
 The input and output for this service are shown in the table below:
 
 | Input | Output |
 | --- | --- |
-| `AWS_Region (Enumeration)` | `IsPublished (Boolean)` |
-| `PublishRequest (Object)` |  |
+| `AWS_Region (Enumeration)` | `PublishBatchResponse` |
+| `PublishRequest (Object)` | `BatchResultErrorEntry` `PublishBatchResultEntry` |

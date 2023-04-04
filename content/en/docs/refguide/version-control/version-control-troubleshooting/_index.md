@@ -12,6 +12,8 @@ aliases:
 
 ## 1 Introduction
 
+{{% todo %}}[Verify that the whole document can be deleted including mapping]{{% /todo %}}
+
 Mendix Studio Pro contains a version control system that supports collaborating with team members. This document presents fixes that can be used when version control problems arise.
 
 For more information and general help on version control, see the following documents:

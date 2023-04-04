@@ -175,3 +175,14 @@ The input and output for this service are shown in the table below:
 | --- | --- |
 | `AWS_Region (Enumeration)` | `PublishBatchResponse` |
 | `PublishRequest (Object)` | |
+
+#### 4.3.3 CreateTopic
+
+The `CreateTopic` Amazon SNS action allows you to create a new topic, it requires a valid AWS Region and a CreateTopicRequest. The CreateTopicRequest must contain a topic name, and can contain attributes and tags. The output is a CreateTopicResponse that contains the newly created topics ARN
+
+The input and output for this service are shown in the table below:
+
+| Input | Output |
+| --- | --- |
+| `AWS_Region (Enumeration)` | `CreateTopicResponse` |
+| `CreateTopicRequest (Object)` | |

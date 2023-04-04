@@ -53,7 +53,7 @@ Continuous deployment is an excellent way to accelerate the feedback loop with y
 ### 3.4 Conclusion
 
 The CI/CD process ensures that everything committed is tested and deployed. An example:
-A Mendix developer commits a change into his team server branch. The branch is then automatically deployed into the test environment and tested. If the tests passes, the branch is deployed into the acceptance environment and also tested. You can even use Continuous Deployment to directly deploy to production and perform a regression test.
+A Mendix developer commits a change into their team server branch. The branch is then automatically deployed into the test environment and tested. If the tests passes, the branch is deployed into the acceptance environment and also tested. You can even use Continuous Deployment to directly deploy to production and perform a regression test.
 
 ## 4 ATS and CI/CD {#ats-and-ci-cd}
 

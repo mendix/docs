@@ -482,7 +482,7 @@ After completing the prerequisites, follow these steps to switch from password-b
    ALTER ROLE <database-username> WITH PASSWORD NULL;
    ```
 
-   {{% alert color="info" %}}This step is not necessary if the RDS instance was created with only IAM authentication enabled, and if `database-username` is the default (master) user.{{% /alert %}}
+   {{% alert color="info" %}}This step is not necessary if the RDS instance was created with only IAM authentication enabled, and if `database-username` is the default (primary) user.{{% /alert %}}
 3. Attach the following inline IAM policy to the environment's IAM role (created when [Configuring a Secret Store with AWS Secrets Manager](#configure-using-aws-secrets-manager)):
 
    ```json

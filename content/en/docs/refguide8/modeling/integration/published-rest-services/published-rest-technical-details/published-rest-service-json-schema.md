@@ -46,7 +46,7 @@ The schema of an attribute depends on the attribute type:
 | Boolean        | `{ "type": "boolean" }` |
 | Date and time  | `{ "type": "string", "format": "date-time" }` |
 | Decimal        | `{ "type": "number" }` |
-| Enumeration    | `{ "type": "string", "enum": ["Male", "Female"] }` |
+| Enumeration    | `{ "type": "string", "enum": ["cat", "dog"] }` |
 | Hashed string  | `{ "type": "string" }` |
 | Integer        | `{ "type": "integer", "format": "int32" }` |
 | Long           | `{ "type": "integer", "format": "int64" }` |

@@ -29,7 +29,7 @@ To import this module into your app, follow the instructions in [How to Use Mark
     2. (Optional) Configure the constant **TEST_MODE**. If this is turned on, the survey will always show.
     3. Save the changes.
 
-4. Open the **Put Survey Widget On Template** folder, and place **Template_SurveyWidget** on the page where you would like the mini-survey to appear. We recommend placing only one widget inside the master layout page.
+4. Open the **Put Survey Widget On Template** folder, and place **Template_SurveyWidget** on the page where you would like the mini-survey to appear. We recommend placing only one widget inside the primary layout page.
 5. Configure how the mini-survey will appear, either on-action or on-page load:
 
      * For the on-action option:

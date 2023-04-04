@@ -2,7 +2,7 @@
 title: "OAuth and Scopes"
 url: /developerportal/community-tools/oauth-scopes/
 category: "Community Tools"
-weight: 2
+weight: 7
 tags: ["oath", "profile", "login", "Developer Portal", "scopes"]  
 description: "Describes OAuth, authorizations, and scopes as used by Mendix."
 #To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
@@ -76,10 +76,10 @@ This scope is an extension of the [profile scope](#profile). With this scope, a 
 * LinkedIn profile
 * Twitter account
 
-### 4.5 Create a Mendix Application Scope {#mx:app:create}
+### 4.5 Creating an App Scope {#mx:app:create}
 
 This is a Mendix-specific scope that is used by internal Mendix applications as well as by SAP (as a strategic Mendix partner). This scope allows a website/application or partner to create a Mendix application on behalf of the user.
 
-### 4.6 Change the Deployment Cloud Target of a Mendix Application Scope {#mx:app:cloudswitch}
+### 4.6 Changing the Deployment Cloud Target of an App Scope {#mx:app:cloudswitch}
 
 This is a Mendix-specific scope that is used by internal Mendix applications as well as by SAP (as a strategic Mendix partner). This scope allows a website/application to change the platform to which an app will be deployed.

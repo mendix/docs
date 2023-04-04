@@ -38,13 +38,13 @@ The typical usage scenario is configuring a link to trigger a microflow, for exa
 * Provide a colleague with a link to a certain object instead of describing the necessary navigation steps
 * Generate confirmation links that can be emailed to users
 
-## 2. Installation
+## 2 Installation
 
 Follow the instructions in [How to Use Marketplace Content in Studio Pro](/appstore/general/app-store-content/) to import the Deep Link module into your app.
 
 {{% alert color="info" %}}After you install the Deep Link module and set up deep links, these links will not break if you upgrade from Mendix Studio Pro 8 to 9.{{% /alert %}}
 
-## 3. Configuration
+## 3 Configuration
 
 After importing the Deep Link module into your app, you need to configure it.
 

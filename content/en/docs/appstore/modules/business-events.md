@@ -148,7 +148,7 @@ In your defining app, you can create a new service by doing the following:
 
 The business event service document is open in Studio Pro:
 
-{{< figure src="/attachments//appstore/modules/business-events/new-business-event-service.png" >}}
+{{< figure src="/attachments/appstore/modules/business-events/new-business-event-service.png" >}}
 
 In the [next section](#add-be-definitions), you will define the information included in your events, as well as what the service will implement.
 
@@ -158,11 +158,11 @@ To start defining what information is included in your events, as well as what t
 
 1.   Click **Add** in the open service document:
 
-     {{< figure src="/attachments//appstore/modules/business-events/add-event-definition.png" >}}
+     {{< figure src="/attachments/appstore/modules/business-events/add-event-definition.png" >}}
 
      The **Add business event** wizard opens:
 
-     {{< figure src="/attachments//appstore/modules/business-events/wizard-step-1.png" >}}
+     {{< figure src="/attachments/appstore/modules/business-events/wizard-step-1.png" >}}
 
 2.   Go through Steps 1 and 2 of the wizard.
 
@@ -200,7 +200,7 @@ To use an existing business service in Studio Pro 9.24 and above, do the followi
 
 The business event service document is open in Studio Pro:
 
-{{< figure src="/attachments//appstore/modules/business-events/existing-business-event-service.png" >}}
+{{< figure src="/attachments/appstore/modules/business-events/existing-business-event-service.png" >}}
 
 ##### 4.2.2.1 Publishing and Subscribing to Business Events
 
@@ -208,6 +208,8 @@ After following the instructions [Using an Existing Business Event Service](#two
 
 * Open the business service document and click **Add**
 * **Drag and drop** the business event from the **Data Hub pane** to your domain model
+
+To publish a business event service, you need to use it in a microflow.
 
 ##### 4.2.2.1.1 Automatically Created Event Handler Microflow and Entity {#two-way-be-handler}
 

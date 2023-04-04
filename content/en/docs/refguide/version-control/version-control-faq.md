@@ -57,7 +57,7 @@ Mendix  is focusing on improving Team Server Git support and migrating customers
 
 ## 9 Can I Migrate from Team Server SVN to Git?
 
-Scrum masters can migrate an SVN app to Git in the Developer Portal. For more information on how to migrate, see [Migrate to Git](/developerportal/collaborate/migrate-to-git/) in the *Developer Portal Guide*. 
+Scrum Masters can migrate an SVN app to Git in the Developer Portal. For more information on how to migrate, see [Migrate to Git](/developerportal/collaborate/migrate-to-git/) in the *Developer Portal Guide*. 
 
 ## 10 Can I Use Third-Party Tools to Connect to the Team Server? {#third-party-tools}
 

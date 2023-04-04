@@ -17,7 +17,7 @@ The [Mobile Features](https://marketplace.mendix.com/link/component/48902/) widg
 
 ### 1.1 Typical Use Cases
 
-The widget is designed to be dropped on your master mobile page template. It overrides functions in the Mendix UI code to hook into Cordova plugins. The features below (with the exception of custom body classes) can be switched on and off.
+The widget is designed to be dropped on your primary mobile page template. It overrides functions in the Mendix UI code to hook into Cordova plugins. The features below (with the exception of custom body classes) can be switched on and off.
 
 ### 1.2 Features
 

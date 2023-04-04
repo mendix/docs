@@ -27,7 +27,7 @@ If you give an anonymous user write access on any field in the application, you 
 
 ## 4 Read Access
 
-If an anonymous user needs to have access to certain master data tables or needs the name of a user in an overview, the anonymous user needs read access on that entity. However, you should always limit this access. If the user doesn't need to have access to all fields, do not give it to them. If you see an anonymous user with full read access, always confirm that they cannot work with less access.
+If an anonymous user needs to have access to certain primary data tables or needs the name of a user in an overview, the anonymous user needs read access on that entity. However, you should always limit this access. If the user doesn't need to have access to all fields, do not give it to them. If you see an anonymous user with full read access, always confirm that they cannot work with less access.
 
 ## 5 Security Review
 

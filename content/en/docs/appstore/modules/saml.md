@@ -467,14 +467,14 @@ Requesting user attributes at the SAML IdP is only available in the following ve
 
 ## 4.6 Encryption Settings{#encryption-settings}
 
-* **Enable better security for app** (or *Use encryption*) – This setting controls the encryption and signing of messages being exchanged between your app (as an SP) and the IdP. This is in addition to the encryption provided by using a secure HTTPS connection. For security and privacy reasons it is enabled by default. Limitations in your IdP may be a reason to disable it, but this should typically not be the case.
+* **Enable better security for app** (or *Use encryption*) – This setting controls the encryption and signing of messages being exchanged between your app (as an SP) and the IdP. This is in addition to the encryption provided by using a secure HTTPS connection. For security and privacy reasons it is enabled by default. When using the POST binding ensure the security/encryption settings remain enabled. When using the artifact binding on the responses, or if there are limitations in your IdP, it is possible to disable the security/encryption setting but we do not recommend this.
 
     When you use encryption, you will need to set the following values:
 
     * **What algorithm do you want to use to sign messages** (or *Encryption method*) – `SHA1 - RSA` or `SHA256 - RSA`
     * **Encryption key length** – 1024 or 2048 bits
 
-    Enabling better security has the following effects on messages being exchanged:
+    Enabling encryption has the following effects on messages being exchanged:
 
     * all the messages between your app and the IdP will be encrypted, this requires the IdP’s metadata to contain a KeyDescriptor having ‘use’ value ‘encryption’ or empty — see [Identity Provider Metadata](#idp-metadata) for more information
     * all the messages between your app and the IdP will be signed. The SP metadata exported from your app will have `AuthnRequestSigned` with value `true`. This corresponds to IdPs whose metadata have `WantAuthnRequestSigned` with value `true`

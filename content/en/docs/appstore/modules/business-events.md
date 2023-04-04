@@ -182,7 +182,7 @@ Below is an explanation of the possibilities for what other apps can do and what
 | ---------- | ---------- | ---------- | ---------- | 
 | Publish events | Subscribing to events | Publishing events | **ConsumedBusinessEvent** entity and a [handler microflow](#two-way-be-handler) |
 | Subscribe to events | Publishing events | Subscribing to events | When publishing, **PublishedBusinessEvent** entity and handler microflow <br>If subscribing, a **ConsumedBusinessEvent** entity |
-| Publish events and<br>Subscribe to events | [Nothing requred: if apps can do both, there is no obligation for the service to implement anything] | Publishing events and/or subscribing to events | If no service implementations are selected, then nothing created <br>If publishing, **PublishedBusinessEvent** entity and handler microflow <br>If subscribing, a **ConsumedBusinessEvent** entity <br>If both, then both entities and the handler microflow are created  |
+| Publish events and<br>Subscribe to events | [Nothing requred: if apps can do both, there is no obligation for the service to implement anything] | Publishing events and/or subscribing to events | If no service implementations are selected, then nothing created <br>If publishing, **PublishedBusinessEvent** entity and handler microflow <br>If subscribing, a **ConsumedBusinessEvent** entity <br>If both, then both entities and the handler microflow are created 
 
 3. Click **Done** to exit the wizard and view the defined service document. 
 
@@ -194,7 +194,7 @@ To use an existing business service in Studio Pro 9.24 and above, do the followi
 
 1. Right-click on the module folder, hover over **Add other**, then click **Business Event Service**.
 2. Select **Use an existing business event service**.
-3. Click **Browse** and navigate to the YAML file you [exported from the publishing app]().
+3. Click **Browse** and navigate to the YAML file you [exported from the publishing app](#create-be).
 4. Enter a **Document name**, or use the default name, for the [business event service document](/refguide/business-event-services/).
 5. Click **OK**.
 

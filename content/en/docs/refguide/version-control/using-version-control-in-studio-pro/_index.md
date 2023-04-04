@@ -20,7 +20,7 @@ To start a new app with version control do the following:
 1. In the **Open App** dialog box, click **Create New App**, or select **File** > **New App**. 
 2. Select the starting point – an app template.
 3. In the **App Settings** dialog box, set **Enable online services** to *Yes*. This option creates a Team Server repository and a Developer Portal app.
-4. Choose **Repository type**  – SVN or Git. 
+4. Choose **Repository type**. 
 5. Change the **App directory**, or leave the default suggested by Studio Pro.
 6. Click **Create app**.
 

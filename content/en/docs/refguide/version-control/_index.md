@@ -67,9 +67,9 @@ A conflict occurs when two versions of the app cannot be combined automatically.
 
 When a conflict occurs, a developer has to intervene to decide how it should be resolved before it can be committed to the Team Server as a new revision.
 
-### 2.7 Update/Pull {#update}
+### 2.7 Pull {#pull}
 
-Updating (SVN terminology) or pulling (Git terminology) is the action, invoked in Studio Pro, which gets the latest revision of the current [development line](#development-line) from the repository and merges the differences into the current working copy.
+Pulling is the action, invoked in Studio Pro, which gets the latest revision of the current [development line](#development-line) from the repository and merges the differences into the current working copy.
 
 If Studio is enabled for this development line, the process first ensures that the Studio working copy is stored as a new revision.
 
@@ -78,7 +78,7 @@ If Studio is enabled for this development line, the process first ensures that t
 Committing is the action, invoked in Studio Pro, of creating a set of changes and sending/pushing all your changes to the [repository](#repository) and making a new [revision](#revision).
 
 {{% alert color="info" %}}
-When using Git, it is possible to store the committed data in a local repository, but not yet push it to the central [repository](#repository). In SVN these actions are always done together.
+When using Git, it is possible to store the committed data in a local repository, but not yet push it to the central [repository](#repository).
 {{% /alert %}}
 
 If Studio is enabled for this development line, the process first ensures that the Studio working copy is stored as a new revision and merged into the working copy of Studio Pro. If there are no conflicts, the changes are then sent to the repository to make a new revision.
@@ -143,10 +143,6 @@ All apps are developed along the main line. Here you have all development happen
 When you add a branch line, you take a copy of an existing [revision](#revision) and work separately on that copy. Changes made to one branch do not impact any other branches.
 
 In Mendix each commit within a [repository](#repository) is given a unique identifier. 
-
-{{% alert color="info" %}}
-In SVN, the unique identifiers are numbers. As each commit has a unique number in this case, version numbers given to revisions along any chosen branch line may not be consecutive.
-{{% /alert %}}
 
 {{< figure src="/attachments/refguide/version-control/image8.png" >}}
 

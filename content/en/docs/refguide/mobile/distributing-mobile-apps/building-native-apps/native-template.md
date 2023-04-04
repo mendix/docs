@@ -647,7 +647,7 @@ We suggest you initially develop your app using the Mendix Native Mobile Builder
 
 A CI environment needs to be able to do the following to successfully configure a Native Template for builds:
 
-* Check out the latest Mendix app from SVN
+* Check out the latest Mendix app
 * Check out your app's Native Template (the one used when configuring the app)
 * Run `mxbuild`
 * Set up the configuration and move assets as needed (this can be done with simple shell scripts or any other solution, and is the implementor's choice) 

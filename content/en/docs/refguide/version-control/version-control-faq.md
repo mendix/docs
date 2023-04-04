@@ -4,7 +4,7 @@ url: /refguide/version-control-faq/
 category: "Version Control"
 weight: 30
 description: "Presents and explains several frequently asked questions about version control."
-tags: ["git", "svn", "subversion", "teamserver", "byo-git", "byo-svn" ]
+tags: ["git", "teamserver", "byo-git"]
 ---
 
 ## 1 Introduction
@@ -13,9 +13,7 @@ tags: ["git", "svn", "subversion", "teamserver", "byo-git", "byo-svn" ]
 
 ## 2 What Version Control System Is Team Server Built On? {#which-team-server}
 
-Mendix Team Server is based on proven technology. Initially it was based only on top of Subversion (SVN), also called Team Server SVN. Starting from Mendix version 9.12.0, the Team Server also supports storing apps using Git technology, referred to as Team Server Git. 
-
-Currently, SVN is the default version control system for the Team Server, but you can choose to use Git. In the future, Git will become the default system. 
+Mendix Team Server is based on proven technology. Initially it was based only on top of Subversion (SVN), also called Team Server SVN. Starting from Mendix version 10, the Team Server only supports storing apps using Git technology, referred to as Team Server Git. 
 
 Mendix 7 and 8 only have support for Team Server SVN, and as long as these major versions are available, support for Team Server SVN will be maintained.
 
@@ -28,6 +26,8 @@ Storage space is unlimited for apps connected to a commercial license. 1 GB of f
 Mendix adheres to strict security standards and considers you the sole owner of your data. Only Mendix Cloud Infrastructure Engineers can access data and will only do so for troubleshooting. Your data is backed up for one year, and the backups are retained for one year after app deletion. You can get a backup of your data at any time by using default Subversion tools, or, if your app was deleted, by filing a [Mendix Support](https://support.mendix.com/) ticket.
 
 ## 5 What Are the Differences between Team Server SVN and Team Server Git?
+
+{{% todo %}}[Verify that SVN can be deleted from this document]{{% /todo %}}
 
 For information on differences between SVN and Git, see [Migrating to Git: SVN and Git Process Differences](/refguide/svn-git-differences/).
 

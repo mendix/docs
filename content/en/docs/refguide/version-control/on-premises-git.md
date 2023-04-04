@@ -13,7 +13,7 @@ aliases:
 
 When developing Mendix applications, changes to these applications are stored in a version control system. This system is called [Team Server](/developerportal/collaborate/team-server/) and is part of the Mendix Platform. This means that the application's files are stored in the Mendix online environment. For more information, see the [Version Control Reference Guide](/refguide/version-control/).
 
-While using Team Server is the recommended for most Mendix developers, you may prefer to store your application's files in a system controlled by your own organization. For version control, Mendix uses the [Subversion](https://subversion.apache.org) system (also known as SVN) and [Git](/refguide/on-premises-git/). This document describes how to work with Git version control system.
+While using Team Server is the recommended for most Mendix developers, you may prefer to store your application's files in a system controlled by your own organization. For version control, Mendix uses [Git](/refguide/on-premises-git/). This document describes how to work with Git version control system.
 
 {{% alert color="info" %}}
 This document does not describe how to set up a Git server from scratch; typically, this will be taken care of by the IT department of your organization.

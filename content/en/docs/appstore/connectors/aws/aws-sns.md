@@ -174,4 +174,4 @@ The input and output for this service are shown in the table below:
 | Input | Output |
 | --- | --- |
 | `AWS_Region (Enumeration)` | `PublishBatchResponse` |
-| `PublishRequest (Object)` | `BatchResultErrorEntry` `PublishBatchResultEntry` |
+| `PublishRequest (Object)` | |

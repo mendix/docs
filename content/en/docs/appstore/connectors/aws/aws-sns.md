@@ -74,7 +74,10 @@ After you configure the authentication profile for Amazon SNS, you can implement
 2. In the **App Explorer**, right-click on the name of your module, and then click **Add microflow**.
 3. Enter a name for your microflow, for example, *ACT_ListTopics*, and then click **OK**.
 4. In the **App Explorer**, in the **AmazonSNSConnector** section, find the **ListTopics** activity.
-5. Drag the **ListTopics** activity onto the work area of your microflow.
+5. Drag the **ListTopics** activity onto the work area of your microflow and double-click on it to configure the required parameters.
+
+    For the `ListTopics` activity, you must specify the AWS Region and add your `Credentials`. To get your `Credentials` object, add the **Credentials_GenerateFromConstants** microflow in front of your `ListTopics` activity so that you can pass the `Credentials` object as an input parameter of the `ListTopics` activity.
+
 6. In the **Toolbox** pane, search for the **Retrieve** activity and drag it onto the microflow area.
 7. Position the **Retrieve** activity between the **ListTopics** activity and the microflow end event.
 8. Double-click the **Retrieve** activity.

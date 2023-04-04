@@ -16,14 +16,14 @@ The module makes it possible to design your native mobile app pages with SAP Fio
 
 The SAP Horizon Native UI Resources module includes the following resources:
 
-* Components - Mendix core components with a SAP Fiori look and feel
+* Components - Mendix core components with a SAP Horizon look and feel
 * Building blocks - Groups of components used to create prebuilt SAP Fiori page blocks
 * Page templates - Predesigned pages that you can use directly in your app
 * Layouts - Layouts that you can use to build your app
 
 ### 1.1 Typical Use Cases
 
-You may want to use this module if you are building a native mobile Mendix app not built on an SAP template, but you still want the app layout and theme to be consistent with your SAP apps.
+You may want to use this module if you are building a native mobile Mendix app with a SAP Fiori Horizon theme. The module will make your native app consistent with SAP Fiori UI-based applications.
 
 ## 2 Prerequisites
 
@@ -38,7 +38,7 @@ Follow the instructions in [How to Use Marketplace Content in Studio Pro](/appst
 
 ## 4 Configuration
 
-After you install the connector, you can find it in the **App Explorer**, in the **SAP_Native_Resources** section. The connector provides a number of [components](#components), [building blocks](#building-blocks), [page templates](#page-templates), and [layouts](#layouts) that you can use to style your app to be consistent with the SAP Fiori Horizon theme. To apply the theme to your app, do the following steps:
+After you install the module, you can find it in the **App Explorer**, in the **SAP_Native_Resources** section. The module provides a number of [components](#components), [building blocks](#building-blocks), [page templates](#page-templates), and [layouts](#layouts) that you can use to style your app to be consistent with the SAP Fiori Horizon theme. To apply the theme to your app, do the following steps:
 
 1. In the */theme* folder of your app, find the *custom-variable.js* file and rename it to *custom-variable-old.js*.
 2. Move the *horizon-custom-variable.js* from the */themesource/sap_native_resources/native* folder to the */theme* folder of your app.
@@ -80,7 +80,7 @@ The module adds the following building blocks:
 
 ### 4.3 Page Templates {#page-templates}
 
-There are some predesigned pages that you can use to quickly create a native page UI. You can choose these templates while creating a new page in your native mobile app.
+There are some predesigned pages that you can use to quickly create a native page. You can choose these templates while creating a new page in your native mobile app.
 
 The module adds the following page templates:
 

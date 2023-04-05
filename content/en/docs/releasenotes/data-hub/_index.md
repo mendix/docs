@@ -15,7 +15,7 @@ These release notes cover changes made to the [Mendix Data Hub Catalog](/data-hu
 
 #### Improvements
 
-* We updated some texts in order to better reflect the current DataHub licensing model.
+* We improved the clarity and accuracy of some UI texts.
 
 ### March 16th, 2023
 

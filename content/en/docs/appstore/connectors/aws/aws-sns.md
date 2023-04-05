@@ -97,7 +97,7 @@ The domain model is a data model that describes the information in your applicat
 | Name | Description |
 | --- | --- |
 | `Topic` | This generalization entity represents information on topics inside the Amazon SNS environment. The [ARN](https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html) (Amazon Resource Name) attribute represents an ID in Amazon SNS. The **Name** attribute represents the name of the topic. |
-| `CreateTopicRequest` | This entity is used for creating a Topic. Required values: Name. \n Note that if the topic is a fifo topic, the name must end in ".fifo". It must also contain a CreateTopicAttribute with key FifoTopic and value "true" |
+| `CreateTopicRequest` | This entity is used for creating a Topic. Required values: Name. Note that if the topic is a fifo topic, the name must end in ".fifo". It must also contain a CreateTopicAttribute with key FifoTopic and value "true" |
 | `CreateTopicAttribute` | Specialization of TopicAttribute containing all attributes that will be added to the topic | 
 | `TopicTag` | Specialization of Tag containing all tags that will be added to a topic.
 

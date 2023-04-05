@@ -99,25 +99,10 @@ The domain model is a data model that describes the information in your applicat
 | `Topic` | This generalization entity represents information on topics inside the Amazon SNS environment. The [ARN](https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html) (Amazon Resource Name) attribute represents an ID in Amazon SNS. The **Name** attribute represents the name of the topic. |
 | `CreateTopicRequest` | This entity is used for creating a Topic. Required values: Name. Note that if the topic is a fifo topic, the name must end in ".fifo". It must also contain a CreateTopicAttribute with key FifoTopic and value "true" |
 | `CreateTopicAttribute` | Specialization of TopicAttribute containing all attributes that will be added to the topic | 
-| `TopicTag` | Specialization of Tag containing all tags that will be added to a topic.
-
-At most 50 tags can be added to a single topic |
+| `TopicTag` | Specialization of Tag containing all tags that will be added to a topic. At most 50 tags can be added to a single topic |
 | `Tag` | Entity for adding tags to keep track of what expenses belong where | 
 | `UsageTopicAttribute` | Usage entity for adding topic attributes. This entity itself will not hold any data, but it will point to a specialization of the AbstractTopicAttribute entity. This will contain the attribute that will be added to the topic | 
-| `AbstractTopicAttribute` | Abstract entity for adding Topic Attributes. Warning, do not use the Abstract entity itself, instead, you should always use one of its specializations.
-
-
-
-Has the following specializations:
-`ContentBasedDeduplication`
-`FifoTopic`
-`DeliveryPolicy`
-`DeliveryName`
-`Policy`
-`SignatureVersion`
-`TracingConfig`
-`KmsMasterKeyId`
-`DisplayName` |
+| `AbstractTopicAttribute` | Abstract entity for adding Topic Attributes. Warning, do not use the Abstract entity itself, instead, you should always use one of its specializations. `AbstractTopicAttribute` has the following specializations: `ContentBasedDeduplication`, `FifoTopic`, `DeliveryPolicy`, `DeliveryName`, `Policy`, `SignatureVersion`, `TracingConfig`, `KmsMasterKeyId`, `DisplayName` |
 
 
 

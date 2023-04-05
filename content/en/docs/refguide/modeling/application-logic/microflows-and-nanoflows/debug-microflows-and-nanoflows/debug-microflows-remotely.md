@@ -1,7 +1,11 @@
 ---
 title: "Debugging Microflows Remotely"
-url: /refguide/debug-microflows-remotely//
+url: /refguide/debug-microflows-remotely/
 tags: ["monitoring", "troubleshooting", "debug", "microflow", "remote"]
+aliases:
+    - /howto/monitoring-troubleshooting/debug-microflows-remotely
+#If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
+#The anchor <enable-cloud-debugging> below is mapped, so it should not be removed or changed.
 ---
 
 ## 1 Introduction

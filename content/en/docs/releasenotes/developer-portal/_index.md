@@ -17,6 +17,13 @@ To see the current status of the Mendix Developer Portal and Control Center, see
 
 ## 2023
 
+### April 4th, 2023
+
+#### Improvements
+
+* We are making the option to migrate your app to Git more prominent. The banner is now displayed on all pages within the Project management section of the Developer Portal. Read more information on how to migrate and if you are eligible to migrate [here](/developerportal/collaborate/migrate-to-git/)
+* Have you tried [Epics](/developerportal/collaborate/epics/) yet? You should, it's awesome if we do say ourselves. But we are also doing some things in the background to make it possible to connect your Mendix apps to your Jira boards - stay tuned!
+
 ### March 23rd, 2023
 
 #### Improvements

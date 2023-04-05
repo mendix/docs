@@ -27,7 +27,7 @@ This property defines whether the text area grows automatically depending on the
 
 ### Number of Lines
 
-The number of lines determine how many lines the text area shows at the same time. If the text in the text area contains more lines you will have to use a scrollbar to see it all. This property is only shown if Grow automatically is set to No.
+The number of lines determine how many lines the text area shows at the same time. If the text in the text area contains more lines you will have to use a scroll bar to see it all. This property is only shown if Grow automatically is set to No.
 
 *Default value:* 5
 

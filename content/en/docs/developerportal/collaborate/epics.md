@@ -196,7 +196,7 @@ To migrate from Stories to Epics, follow these steps:
 
 These are the new locations of migrated stories:
 
-| From Stories | To Epics | Additionnal Information |
+| From Stories | To Epics | Additional Information |
 | --- | --- | --- |
 | **Active Sprint** | **Active Sprint** in [Planning](#planning) | All stories are migrated to **To Do** swimlane with tags. |
 | Rest of the Sprints and backlog | **Refinement** in [Planning](#planning) | |
@@ -242,7 +242,9 @@ The **Not Finished** status means that you can use the **Continue Migration** bu
 If you still have content with the **Error** status (for example, in the **Unmigrated Stories** section) after retrying the migration via the **Continue Migration** button, Mendix recommends manually migrating that data from [Stories](/developerportal/collaborate/stories/) to Epics. Furthermore, if a section has been successfully migrated but there is still data that has not been migrated, Mendix recommends manually migrating the data.
 {{% /alert %}}
 
-## 4 Epics Overview {#epics}
+## 4 Epics {#epics}
+
+### 4.1 Epics Overview 
 
 The **Epics** overview page shows all the epics for your current app. Each row shows the following details about the epic:
 
@@ -258,7 +260,7 @@ You can create an epic by clicking **Create Epic** on the upper-right corner of 
 
 ### 4.1 Epic Details {#epic-details}
 
-If you click the row of an epic, the epic details dialog box opens. 
+When you click the row of an epic, the epic details dialog box opens. 
 
 On the upper-right corner, there is a link icon and an ellipsis (**...**) icon. Clicking the link icon copies the link to the epic. Clicking the ellipsis icon opens a pop-up menu that allows you to delete the epic.
 
@@ -275,8 +277,8 @@ The epic details dialog box shows the following items:
 * **Assign to** – enables assigning the epic to anybody who can access the app in the Developer Portal
 * **Tags** – enables adding or removing tags; to create a new tag, type the tag in the text box and click **Create new "[tag name]"**
 * **Attachments** – enables adding attachments by clicking **+**
+* **Stories** – all the open stories that are linked to this epic; click **Create** to create a new **Feature** or **Bug** story directly from the epic
 * **Archived Stories** – all the archived stories that are linked to this epic
-* **Stories** – all the open stories that are linked to this epic
 * **Comment** – enables typing your comment in the text box and then clicking **Post Your Comments** to save and post the comment
 
 {{% alert color="info" %}}To save any change on the epic details dialog box, click **Save Epic** at the bottom of the page.{{% /alert %}}

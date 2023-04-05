@@ -44,16 +44,16 @@ Get the Tekton package:
 
 ```bash
 mkdir tekton && cd tekton
-aip init https://cdn.mendix.com/mendix-for-private-cloud/airgapped-image-package/packages/tekton-package-v1.0.2.json
+aip init https://cdn.mendix.com/mendix-for-private-cloud/airgapped-image-package/packages/tekton-package-v1.0.4.json
 aip pull
 ```
 
 Get the yaml manifest for the Tekton installation:
 
 ```bash
-curl https://storage.googleapis.com/tekton-releases/pipeline/previous/v0.33.2/release.yaml -s > tekton.yaml
-curl https://storage.googleapis.com/tekton-releases/triggers/previous/v0.19.0/release.yaml -s > tekton-triggers.yaml
-curl https://storage.googleapis.com/tekton-releases/triggers/previous/v0.19.0/interceptors.yaml -s > interceptors.yaml
+curl https://storage.googleapis.com/tekton-releases/pipeline/previous/v0.41.1/release.yaml -s > tekton.yaml
+curl https://storage.googleapis.com/tekton-releases/triggers/previous/v0.22.1/release.yaml -s > tekton-triggers.yaml
+curl https://storage.googleapis.com/tekton-releases/triggers/previous/v0.22.1/interceptors.yaml -s > interceptors.yaml
 ```
 
 Then you need to transfer the `tekton` folder to the air-gapped environment with the aip tool:
@@ -100,7 +100,7 @@ Get the pipeline package:
 
 ```bash
 mkdir pipeline && cd pipeline
-aip init https://cdn.mendix.com/mendix-for-private-cloud/airgapped-image-package/packages/pipeline-package-v1.0.2.json
+aip init https://cdn.mendix.com/mendix-for-private-cloud/airgapped-image-package/packages/pipeline-package-v1.0.4.json
 aip pull
 ```
 
@@ -194,15 +194,15 @@ cd $PATH_TO_DOWNLOADED_FOLDERS && cd helm/charts
 helm install -n $NAMESPACE_WITH_PIPELINES mx-tekton-pipeline ./pipeline/ \
   -f ./pipeline/values.yaml \
   --set images.imagePushURL=$URL_TO_YOUR_REPO_WITHOUT_TAG \
-  --set images.fetch=$PRIVATE_REGISTRY/mxpc-pipeline-tools:git-init-0.0.1 \
-  --set images.verExtraction=$PRIVATE_REGISTRY/mxpc-pipeline-tools-cli:0.0.6 \
+  --set images.fetch=$PRIVATE_REGISTRY/mxpc-pipeline-tools:git-init-0.0.2 \
+  --set images.verExtraction=$PRIVATE_REGISTRY/mxpc-pipeline-tools-cli:0.0.8 \
   --set images.build=$PRIVATE_REGISTRY/mxbuild \
-  --set images.imageBuild=$PRIVATE_REGISTRY/mxpc-pipeline-tools:imagebuild-0.0.1 \
-  --set images.constantsAndEventsResolver=$PRIVATE_REGISTRY/mxpc-pipeline-tools-cli:0.0.6 \
-  --set images.k8sPatch=$PRIVATE_REGISTRY/mxpc-pipeline-tools-cli:0.0.6 \
-  --set images.createAppEnv=$PRIVATE_REGISTRY/mxpc-pipeline-tools-cli:0.0.6 \
-  --set images.deleteAppEnv=$PRIVATE_REGISTRY/mxpc-pipeline-tools-cli:0.0.6 \
-  --set images.configureAppEnv=$PRIVATE_REGISTRY/mxpc-pipeline-tools-cli:0.0.6 
+  --set images.imageBuild=$PRIVATE_REGISTRY/mxpc-pipeline-tools:imagebuild-0.0.2 \
+  --set images.constantsAndEventsResolver=$PRIVATE_REGISTRY/mxpc-pipeline-tools-cli:0.0.8 \
+  --set images.k8sPatch=$PRIVATE_REGISTRY/mxpc-pipeline-tools-cli:0.0.8 \
+  --set images.createAppEnv=$PRIVATE_REGISTRY/mxpc-pipeline-tools-cli:0.0.8 \
+  --set images.deleteAppEnv=$PRIVATE_REGISTRY/mxpc-pipeline-tools-cli:0.0.8 \
+  --set images.configureAppEnv=$PRIVATE_REGISTRY/mxpc-pipeline-tools-cli:0.0.8 
 ```
 
 ## 5 Installing Triggers{#installing-triggers}

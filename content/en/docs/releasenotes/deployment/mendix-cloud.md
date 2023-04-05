@@ -21,7 +21,7 @@ For information on the current status of deployment to Mendix Cloud and any plan
 
 #### Improvements
 
-* We have added webhooks which can trigger endpoints when changes are committed to a Team Server Git repository, or a new deployment package is available for deployment to the Mendix Cloud. See [Mendix Deployment Webhooks](/developerportal/deploy/webhooks/) for more information.
+* We have added webhooks which can trigger endpoints when changes are committed to a Team Server Git repository, or a new deployment package is available for deployment to the Mendix Cloud. See [Webhooks](/developerportal/deploy/webhooks/) for more information.
 
     {{% alert color="info" %}}This feature is currently in a [Beta Release](/releasenotes/beta-features/).{{% /alert %}}
 
@@ -732,7 +732,7 @@ This value is displayed in the following graphs in Metrics for Mendix Cloud v4:
 
 #### Improvements
 
-* For [Mendix Cloud Dedicated](https://www.mendix.com/evaluation-guide/app-capabilities/mendix-cloud-overview#mendix-cloud-vpc), we have added the ability to whitelist outgoing IP addresses.
+* For [Mendix Cloud Dedicated](https://www.mendix.com/evaluation-guide/app-capabilities/mendix-cloud-overview#mendix-cloud-vpc), we have added the ability to safelist outgoing IP addresses.
 
 ### March 17th, 2020
 

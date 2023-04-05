@@ -53,7 +53,7 @@ For encryption of SAML messages the following options are supported:
 
 For easy configurability, the SAML module offers the following:
 
-* a SAML administration screen that allows you to configure one or multiple SAML IdP’s. IdP discovery is supported by an endpoint that returns a page listing all configured IdPs so the end user can select the IdP where they have an account.
+* a SAML administration screen that allows you to configure one or multiple SAML IdP’s. IdP discovery is supported by an endpoint that returns a page listing all configured IdPs so the end-user can select the IdP where they have an account.
 * various options as per the SAML 2.0 specification and as indicated on this page
 
 #### 1.2.2 Other Features
@@ -305,6 +305,10 @@ The following settings apply to this IdP configuration:
 
 Additional settings must be configured in the page tabs.
 
+{{% alert color="warning" %}}
+When you add a new configuration or change an existing one, you should restart your app. This ensures that the correct configuration is used.
+{{% /alert %}}
+
 ### 4.1  Mapping 
 
 There are two tabs within the **Mapping** tab.
@@ -371,7 +375,7 @@ By default, the module does not allow for unsolicited requests. That means that 
 
 #### 4.3.2 Enable Force Authentication
 
-Checking this box will force the SAML IdP  to (re)authenticate end-users, even if they are already signed in at the SAML IdP. Only check this box if stronger security for your app is more important than the convenience of having single sign-on for your end users.
+Checking this box will force the SAML IdP  to (re)authenticate end-users, even if they are already signed in at the SAML IdP. Only check this box if stronger security for your app is more important than the convenience of having single sign-on for your end-users.
 
 #### 4.3.3 Enable Mobile Authentication Token
 
@@ -401,7 +405,7 @@ In-session authentication at the SAML IdP is only available in the following ver
 * v3.3.0/v3.3.1 and above for Mendix version 9
 * v2.3.0 and above for Mendix version 8
 
-Usage of the in-session authentication changes the user roles that apply to the current session. If your app is configured with multiple IDP configurations, the in-session authentication will use the same SAML IDP as the initial (non-anonymous) session. If there is no current session, the end user can select their IDP. In-session authentication uses the setting `ForceAuthn=true`, which means that the IdP will always authenticate an end user even if the IdP already has a session for that end user.
+Usage of the in-session authentication changes the user roles that apply to the current session. If your app is configured with multiple IDP configurations, the in-session authentication will use the same SAML IDP as the initial (non-anonymous) session. If there is no current session, the end-user can select their IDP. In-session authentication uses the setting `ForceAuthn=true`, which means that the IdP will always authenticate an end-user even if the IdP already has a session for that end-user.
 
 This flow can be initiated by using the URL `https://{app-url}/sso/login?action=verify`
 
@@ -487,7 +491,7 @@ If you need to change your identity provider metadata you can find more informat
 
 In the **Attribute Consuming Service** tab, you can configure your app using the SAML protocol to request specific attributes, such as Date of Birth or Gender, from the SAML IdP. Your SAML IdP documentation will tell you what attributes can be requested. In the request you can also indicate whether you consider the attribute as mandatory or optional for your app’s logic.
 
-You can set up two sets of attributes, by adding new attributes, editing existing attributes, or removing selected attributes. These will be provided at different times. Those listed under **I want to request attribute(s) at my IDP during initial login** will be returned when the end user initially signs in. Those listed under **I want to request attribute(s) at my IDP during in-session login** will be returned during [In-session Authentication](#in-session).
+You can set up two sets of attributes, by adding new attributes, editing existing attributes, or removing selected attributes. These will be provided at different times. Those listed under **I want to request attribute(s) at my IDP during initial login** will be returned when the end-user initially signs in. Those listed under **I want to request attribute(s) at my IDP during in-session login** will be returned during [In-session Authentication](#in-session).
 Although the typical use case for requesting attributes is to obtain information about the user, you can request an attribute with a specific value. In this case, you can configure the optional **Attribute value that must be returned**.
 
 Requesting user attributes at the SAML IdP is only available in the following versions of the module (depending on which Mendix version you are using)
@@ -574,12 +578,12 @@ The following diagram gives an overview of all endpoints that the SAML SSO modul
 
 {{< figure src="/attachments/appstore/modules/saml/saml-endpoints.png">}}
 
-End users can access your app through the following endpoints when using the SAML SSO module:
+End-users can access your app through the following endpoints when using the SAML SSO module:
 
 * **/SSO/discovery** – If there are multiple active IdP configurations and discovery is enabled, this page can give a list of all the IdP configuration. It also allows the user to click the correct URL to sign in.
 * **/SSO/login/[IdP Alias]** or **/SSO/login?_idp_id=[IdP_Alias]&action=verify&on={contextname}** – For logging using a specific IdP, you have to open either of these two URLs and pass the IdP alias as a parameter in the URL.
     The (optional) parameters for this end point are as follows:
-    * **idp_id** – this indicates which idp will be used to sign the end user in if you connect your app using multiple SAML IdPs
+    * **idp_id** – this indicates which idp will be used to sign the end-user in if you connect your app using multiple SAML IdPs
     * **action=verify** – indicates that in-session authentication is being requested (see [In-session Authentication](#in-session) for more information)
     * **on={contextname}** – this gives context to the initiation of in-session authentication,  (see [In-session Authentication](#in-session) for more information)
 * **/SSO/login/SSO/** or **/SSO/login/SSO?action=verify&on={contextname}** – If you have only one active IdP, opening these URLs will automatically try to log you in using the active IdP. In the case of multiple active IdPs and discovery enabled, the user will be redirected to the discovery page.  If discovery is not allowed, the user will receive an error message. The optional parameters work as described above.

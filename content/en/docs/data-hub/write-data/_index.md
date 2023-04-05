@@ -69,7 +69,7 @@ Now you have an external entity in your domain model. Depending on the capabilit
 
 ## 6 Validating Data and Error Handling {#data-validation}
 
-You can [set up data validation](/howto/data-models/setting-up-data-validation/) to check on inserted or updated data between your apps. An insert validation microflow in the domain model of the client application - the application consuming the service - can check on the data that is inserted or updated.
+You can [set up data validation](/refguide/setting-up-data-validation/) to check on inserted or updated data between your apps. An insert validation microflow in the domain model of the client application - the application consuming the service - can check on the data that is inserted or updated.
 
 How does the published service know that that an insert fails? In the publishing app, you can use a validation message action to report the error. The client app can include a custom error handler on the [Send External Object](/refguide/send-external-object/) activity to handle the error.
 

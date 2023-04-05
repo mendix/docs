@@ -28,7 +28,7 @@ For example, say your **Customer** entity has a **Postcode** attribute and you w
 
 {{< figure src="/attachments/refguide/modeling/domain-model/entities/event-handlers/customer-event-handlers.png" alt="Example of adding a before commit event handler to the Customer entity" >}}
 
-For more information on using event handlers for data validation, see [How To Set Up Data Validation](/howto/data-models/setting-up-data-validation/).
+For more information on using event handlers for data validation, see [Setting Up Data Validation](/refguide/setting-up-data-validation/).
 
 ## 2 Properties
 
@@ -99,4 +99,4 @@ Default: *Yes*
 ## 3 Read More
 
 * [How to Denormalize Data to Improve Performance](/howto/data-models/denormalize-data-to-improve-performance/)
-* [How To Set Up Data Validation](/howto/data-models/setting-up-data-validation/)
+* [Setting Up Data Validation](/refguide/setting-up-data-validation/)

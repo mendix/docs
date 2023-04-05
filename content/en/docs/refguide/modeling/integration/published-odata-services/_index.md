@@ -54,9 +54,27 @@ In OData, the namespace is used to refer to data types. You can customize this n
 
 This list gives an overview of all entities published as [OData resources](/refguide/published-odata-resource/).
 
-### 2.6 Entity Details
+### 2.5.1 Entity Details
 
 This list gives an overview of all published attributes and associations.
+
+### 2.6 Enumerations
+
+This list gives an overview of all [enumerations](/refguide/enumerations/) that are published by the service (for OData version 4 only). When a published entity has an attribute with an enumeration type then the enumeration appears in this list. The list does not appear when there are no published enumerations. There is no need to add enumerations yourself, because Studio Pro will add them when needed.
+
+Click **Edit** to change the exposed name of the enumeration (the name as it appears to clients of the service) and to provide documentation.
+
+{{% alert color="info" %}}
+The *enumerations* feature was introduced in Studio Pro [9.24.0](/releasenotes/studio-pro/9.24/). In earlier versions, enumeration attributes were published as strings.
+{{% /alert %}}
+
+### 2.6.1 Enumeration Details
+
+This list gives an overview of the values of the published enumeration.
+
+Click **Edit** to change the exposed name of the enumeration value (the name as it appears to clients of the service) and to provide documentation.
+
+Use the **Refresh** button when the enumeration values have changed to update the list with the new values.
 
 ## 3 Settings
 

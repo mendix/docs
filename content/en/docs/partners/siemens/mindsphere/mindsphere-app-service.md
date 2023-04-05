@@ -29,7 +29,7 @@ MindSphere IIoT for Makers is easy to add to your app but has the following limi
 
 * You cannot make your app multi-tenant – see [Multi-tenancy](/partners/siemens/mindsphere-development-considerations/#multitenancy) in *MindSphere Development Considerations* for more information on multi-tenancy
 * Your app cannot be deployed to the MindSphere platform and cannot be added to the MindSphere Developer Cockpit
-* End users cannot use MindSphere credentials to sign in to your app, so MindSphere does not know anything about individual app end users — you must design your app to handle any required security for each end user
+* End-users cannot use MindSphere credentials to sign in to your app, so MindSphere does not know anything about individual app end-users — you must design your app to handle any required security for each end-user
 
 MindSphere IIoT for Makers can be used in any Mendix app, for example an app which is based on the Mendix **Blank App**. However, it is not suitable for apps which are designed to be deployed to MindSphere, such as the **Siemens MindSphere Starter Application**, the **Siemens MindSphere Pump Asset Example**, or an app which is using the **Siemens MindSphere SSO** module.
 

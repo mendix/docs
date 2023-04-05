@@ -2,7 +2,7 @@
 title: "OData Services"
 url: /refguide/integration/odata-services/
 category: "Integration"
-weight: 10
+weight: 55
 description: "Introduces OData."
 tags: ["odata services"]
 ---

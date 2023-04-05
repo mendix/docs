@@ -10,9 +10,7 @@ tags: ["SAP", "Fiori", "UI", "resources", "Native"]
 
 ## 1 Introduction
 
-The [SAP Horizon Native UI Resources module](!TO BE ADDED) allows you to use SAP Fiori UI resources in your native mobile Mendix app in order to create a UI that is consistent with the UI of SAP products built with SAP Fiori. 
-
-The module makes it possible to design your native mobile app pages with SAP Fiori-styled widgets and building blocks as part of your layout. The module uses the Horizon theme. Based on the selected mobile theme, your app will use the light or dark version of the theme.
+The [SAP Horizon Native UI Resources module](!TO BE ADDED) allows you to design your native mobile app pages with SAP Fiori-styled widgets and building blocks as part of your layout. The module uses the Horizon theme. Based on the selected mobile theme, your app will use the light or dark version of the theme.
 
 The SAP Horizon Native UI Resources module includes the following resources:
 
@@ -66,9 +64,11 @@ To help you work with the SAP Horizon Native UI Resources module, the following 
 
 The module styles most Mendix components to match SAP Fiori styles by default.
 
-If you want to change a Mendix component to match the SAP Fiori style, you need to manually add the required classes to the component. For a list of classes, see (!TO BE ADDED).
+If you want to change a Mendix component to match the SAP Fiori style, you need to manually add the required classes to the component.
 
+{{% alert color="info" %}}
 If you want to customize any component according to your requirements, add the new class to the component and write style in the respective files in **SAP_Native_Resources > Styling > native > components > {component_name}.js**.
+{{% /alert %}}
 
 ### 4.2 Building Blocks {#building-blocks}
 

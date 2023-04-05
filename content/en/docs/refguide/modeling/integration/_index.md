@@ -34,14 +34,14 @@ To consume REST services, see:
 
 ## 3 OData Services
 
-OData is a set of best practices for building REST APIs that standardizes many aspects of REST APIs. It describes how you should provide filtering, sorting, and pagination on your resources, as well as how you should provide nested data structures. Using OData best practices ensures that your APIs are compatible with tools like Excel and PowerBI out of the box (see [Expose Data to BI Tools Using OData](/refguide/integration/exposing-data-to-bi-tools-using-odata/)), and also ensures that API clients can optimize payload size and minimize roundtrips for the best possible usage performance. 
+OData is a set of best practices for building REST APIs that standardizes many aspects of REST APIs. It describes how you should provide filtering, sorting, and pagination on your resources, as well as how you should provide nested data structures. Using OData best practices ensures that your APIs are compatible with tools like Excel and PowerBI out of the box (see [Expose Data to BI Tools Using OData](/howto/integration/exposing-data-to-bi-tools-using-odata/)), and also ensures that API clients can optimize payload size and minimize roundtrips for the best possible usage performance. 
 
 Published OData services are registered automatically in the [Data Hub Catalog](/data-hub/data-hub-catalog/), making them easily usable in other Mendix apps. Discovering and using OData resources in [external entities](/refguide/external-entities/) is made easy for users deploying to the [Mendix Cloud](/developerportal/deploy/mendix-cloud-deploy/), as [published OData Services](/refguide/published-odata-services/) are registered automatically in the [Data Hub Catalog](/data-hub/data-hub-catalog/) and made available in the Studio Pro [Data Hub pane](/refguide/data-hub-pane/).
 
 To publish OData services, see:
 
 * [Published OData Services](/refguide/published-odata-services/), an overview in the Studio Pro guide
-* [Expose Data to BI Tools Using OData](/refguide/integration/exposing-data-to-bi-tools-using-odata/), step-by-step instructions for a specific use case
+* [Expose Data to BI Tools Using OData](/howto/integration/exposing-data-to-bi-tools-using-odata/), step-by-step instructions for a specific use case
 
 To consume OData services, see:
 

@@ -33,7 +33,7 @@ Before starting this how-to, make sure you have completed the following prerequi
 
     {{< figure src="/attachments/refguide/modeling/pages/data-widgets/configure-list-and-details-on-one-page/domain-model.png" width="200px" >}}
 
-## 3 Adding the Master Detail Page
+## 3 Adding the Primary Detail Page
 
 You would like to open a page with opportunity contact list and its details from your home page. Do the following:
 
@@ -46,7 +46,7 @@ You would like to open a page with opportunity contact list and its details from
 
 You just created a new page. A list (list view) is displayed on the left and list item details (data view) are displayed on the right:
 
-{{< figure src="/attachments/refguide/modeling/pages/data-widgets/configure-list-and-details-on-one-page/master-detail-page.png" width="650px" >}} 
+{{< figure src="/attachments/refguide/modeling/pages/data-widgets/configure-list-and-details-on-one-page/primary-detail-page.png" width="650px" >}} 
 
 ## 4 Configuring the List
 

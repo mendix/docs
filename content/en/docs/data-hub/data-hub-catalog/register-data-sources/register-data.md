@@ -204,6 +204,10 @@ A successful `PUT` call will result in a `200` status code and a JSON response b
 }
 ```
 
+{{% alert color="info" %}}
+Note: The **PUT** operation call executed more than once overwrites the details for all the published endpoints at the specified environment. If there is a collection of endpoints on the environment, you can create, update, and delete different endpoints all in one **PUT** call.
+{{% /alert %}}
+
 ##### 4.1.3.1 Behavior When Renaming an Environment
 
 Though uncommon, you update the URL of a hosted environment. When redeploying, the root URL is then updated, and endpoints that are registered under that environment get updated endpoint locations.

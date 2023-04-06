@@ -14,6 +14,10 @@ This activity can only be used in **Nanoflows** that run in an offline-first app
 
 The **Clear from device** activity can be used to clear all objects of a persistable **entity** only from the local database of a device but these objects are not going to be deleted from the server after synchronization.
 
+{{% alert color="info" %}}
+If the entity is synchronized after clearing, the objects are downloaded from the Mendix Runtime again.
+{{% /alert %}}
+
 ## 2 Properties
 An example of clearing entity objects from local database is represented in the image below:
 
@@ -39,10 +43,6 @@ You can also open the dialog box by double-clicking the activity in the nanoflow
 ### 3.1 Entity
 
 The entity that you want to clear all its objects from the local database of the device.
-
-{{% alert color="info" %}}
-If the entity data are downloaded from the server, the cleared objects will be restored with the latest state they had on the runtime.
-{{% /alert %}}
 
 ## 4 Common Section {#common}
 

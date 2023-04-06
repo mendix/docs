@@ -67,8 +67,8 @@ Partner-supported content is created and maintained by partners as part of the [
 | Support Category  | Standard/Premium SLA | Platform SLA | No SLA | Notes |
 | --- | --- | --- | --- | --- |
 | **Platform** | [Mendix Support](https://support.mendix.com/)   | [Mendix Support](https://support.mendix.com/) | Mendix community supports | Mendix supports all the content in this category as-is when you are equipped with a Mendix SLA (Platform, Standard, or Premium). Content in this category is proactively incorporated into Mendix R&D test cycles as part of our platform release management. This category replaces the former Extended category, which has been deprecated. |
-| **Deprecated** | [Mendix Support (limited)](https://support.mendix.com/) (for more information, see the [Deprecated Support Category](#deprecated) section above) | [Mendix Support (limited)](https://support.mendix.com/) (for more information, see the [Deprecated Support Category](#deprecated) section above) | Mendix community supports | 1 |
-| **Community** | Mendix community supports | Mendix community supports | Mendix community supports | 1 |
+| **Deprecated** | [Mendix Support (limited)](https://support.mendix.com/) (for more information, see the [Deprecated Support Category](#deprecated) section above) | [Mendix Support (limited)](https://support.mendix.com/) (for more information, see the [Deprecated Support Category](#deprecated) section above) | Mendix community supports | Content in this category is considered end-of-life and will be dropped to the Community support category in the next major Mendix release. Content is provided as-is by Mendix R&D, and support depends on the severity of the reported issue and the effort required to resolve it. |
+| **Community** | Mendix community supports | Mendix community supports | Mendix community supports | Content is provided as-is by members of the Mendix community, and support depends on the availability and effort of the owner. |
 
 ### 3.2 Community-Supplied Content
 

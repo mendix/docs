@@ -114,10 +114,6 @@ A Tag is a way of identifying a commit in addition to the [revision](#revision) 
 * Patch: used to identify a fix to an error in a previously-released app
 * Revision: this is added automatically and is the revision number of the commit
 
-{{% alert color="info" %}}
-Tags are supported by Studio Pro Git ([BYO](/refguide/branch-line-manager-dialog/#byo-server-app) and Team Server) from Mendix version 9.8.0.
-{{% /alert %}}
-
 ### 2.12 Repository Service
 
 The Repository Service manages communication between Studio or Studio Pro and other supporting services (for example, Team Server). The developer will not generally be aware that they are communicating via the Repository Service.

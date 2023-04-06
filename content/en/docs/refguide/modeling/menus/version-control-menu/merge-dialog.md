@@ -23,7 +23,7 @@ Available scenarios are described below
 
 This scenario allows you to move a fix from a maintenance branch line to the main line. If you just want to redo a small fix, a single commit is often enough.
 
-In Git, port fix transports the actual commit from one branch and directly applies it, including author and commit text to another branch. This means you do not need to explicitly commit your change.
+Port fix transports the actual commit from one branch and directly applies it, including author and commit text to another branch. This means you do not need to explicitly commit your change.
 
 ### 2.1 Branch Line
 

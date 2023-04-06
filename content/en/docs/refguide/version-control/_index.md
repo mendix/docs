@@ -17,7 +17,7 @@ Version Control allows you to manage your app development in two ways:
 * Firstly, it allows you to store ([commit](#commit)) the current revision of your model and all its resources. You give it an identifier so that you can get that revision again and share it with other team members.
 * Secondly, it allows work to take place on multiple [development lines](#development-line) so that several different features can be worked on at once. These development lines can then be [merged](#merge) back together so that your [main line](#main-line) contains all the completed features that have been worked on separately.
 
-Version control in Mendix is built on top of either [Apache Subversion](https://subversion.apache.org/) or [Git](https://git-scm.com). The concepts will be familiar to seasoned users of these version control systems (VCS). Mendix simplifies the VCS commands by building them into Studio Pro, Studio, and the Developer Portal.
+Version control in Mendix is built on top [Git](https://git-scm.com). The concepts will be familiar to seasoned users of these version control systems (VCS). Mendix simplifies the VCS commands by building them into Studio Pro, Studio, and the Developer Portal.
 
 {{% alert color="info" %}}
 Team Server Git was released for GA in version [9.12.0](/releasenotes/studio-pro/9.12/#team-server-git). BYO Git (Bring Your Own) is in Beta since Mendix version [9.6.0](/releasenotes/studio-pro/9.6/#960). For more details, see [Working with Git On-Premises Version Control Server](/refguide/on-premises-git/) in the *Studio Pro Guide*. 
@@ -75,11 +75,7 @@ If Studio is enabled for this development line, the process first ensures that t
 
 ### 2.8 Commit/Push {#commit}
 
-Committing is the action, invoked in Studio Pro, of creating a set of changes and sending/pushing all your changes to the [repository](#repository) and making a new [revision](#revision).
-
-{{% alert color="info" %}}
-When using Git, it is possible to store the committed data in a local repository, but not yet push it to the central [repository](#repository).
-{{% /alert %}}
+Committing is the action, invoked in Studio Pro, of creating a set of changes and sending/pushing all your changes to the [repository](#repository) and making a new [revision](#revision). It is possible to store the committed data in a local repository, but not yet push it to the central [repository](#repository).
 
 If Studio is enabled for this development line, the process first ensures that the Studio working copy is stored as a new revision and merged into the working copy of Studio Pro. If there are no conflicts, the changes are then sent to the repository to make a new revision.
 

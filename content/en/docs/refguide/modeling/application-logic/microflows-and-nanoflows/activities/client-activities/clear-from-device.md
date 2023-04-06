@@ -18,6 +18,10 @@ The **Clear from device** activity can be used to clear all objects of a persist
 If the entity is synchronized after clearing, the objects are downloaded from the Mendix Runtime again.
 {{% /alert %}}
 
+{{% alert color="warning" %}}
+Objects with unsynchronized changes are also removed without synchronizing them. To avoid data loss, it is recommended to run [Synchronize unsynchronized objects](/refguide/synchronize/#unsynchronized-objects) before running this activity.
+{{% /alert %}}
+
 ## 2 Properties
 An example of clearing entity objects from local database is represented in the image below:
 

@@ -54,10 +54,7 @@ Should you consider using a connected environment, the following URLs should be 
    
     {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/image4.png" >}}
 
-4. Click the **Switch-to** menu in the Developer Portal and choose **Cloud**.
-
-    {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/go-to-nodes-page.png" >}}
-
+4. Open the [Switch to menu](/developerportal/#navigation) and select **Cloud**.
 5. Select **Cluster Manager** from the top menu bar in the Developer Portal.
 
     {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/cluster-manager.png" >}}

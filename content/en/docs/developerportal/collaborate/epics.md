@@ -128,7 +128,17 @@ The story details dialog box shows the following items:
 
 There are three tabs on the **Planning** page, which are described below.
 
-### 3.1 Board Type
+### 3.1 Manage Tags
+
+On this tab, you can add, rename, and delete tags, and change tag colors. The changes here affect all the tags in your app.
+
+To add a tag, click **+Add Tag**, then enter the name, and select a color, and then click the save icon.
+
+To rename a tag, double click the tag name, then edit the name in the text box, and then click outside the text box to save it.
+
+To delete a tag, hover over the row of the tag, and then click the delete icon that appears at the end of the row.
+
+### 3.2 Board Type
 
 On this tab, you can switch between a Scrum workflow and Kanban workflow by clicking the settings icon on the upper-right side of the screen. The workflow you select determines how the **Planning** page and the [Board](#board) page look.
 
@@ -153,6 +163,8 @@ Each row in a category shows the following information about a story:
 * Story points
 * To whom the story is assigned
 
+{{% todo %}}Add info about the progress score bar, which gives an overview of how many stories have been completed in each epic.{{% /todo %}}
+
 {{< figure src="/attachments/developerportal/collaborate/epics/story-kanban.png" >}}
 
 To [archive](#archive) or delete a story, click the **...** icon at the end of the row, and then select the corresponding option:
@@ -163,19 +175,19 @@ To move a story, drag the row to a different category.
 
 Click a row to open the [story details](#story-details) page.
 
-### 3.2 Toast Settings
+### 3.3 Toast Settings
 
 On this tab, you can enable or disable the toast notifications that appear like this:
 
 {{< figure src="/attachments/developerportal/collaborate/epics/toast-notification.png" width="500px" >}}
 
-### 3.3 Data Migration {#data-migration}
+### 3.4 Data Migration {#data-migration}
 
 On this tab, you can migrate all or part of your content from [Stories](/developerportal/collaborate/stories/) to Epics.
 
 {{% alert color="info" %}}Only a Scrum Master can start a migration. Once you have started the migration, Mendix recommends working on Epics from that point forward.{{% /alert %}}
 
-#### 3.3.1 Migration Process
+#### 3.4.1 Migration Process
 
 To migrate from Stories to Epics, follow these steps:
 
@@ -192,7 +204,7 @@ To migrate from Stories to Epics, follow these steps:
     
 4. A notification is sent in the Developer Portal's [top bar](/developerportal/#navigation) informing you of the status of the migration. An email is also sent with this information. You can open the [migration report](#migration-report) by clicking the notification or the button provided in the email.
    
-#### 3.3.2 What Is Migrated?
+#### 3.4.2 What Is Migrated?
 
 These are the new locations of migrated stories:
 
@@ -222,7 +234,7 @@ Beside the story details above, the remaining details for your stories are migra
 
 {{% alert color="warning" %}}In [Stories](/developerportal/collaborate/stories/), files are associated with Comments, not with Stories. In Epics, files can only be associated with Stories, not with Comments. Therefore, files migrated from Stories will lose their Comment context.{{% /alert %}}
 
-#### 3.3.3 Migration Report {#migration-report}
+#### 3.4.3 Migration Report {#migration-report}
 
 The migration report is available a few seconds after the migration completes (timing depends on the number of stories you have).
 

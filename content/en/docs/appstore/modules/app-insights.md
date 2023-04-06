@@ -28,7 +28,7 @@ To import this module into your app, follow the instructions in [How to Use Mark
     2. (Optional) Configure the constant **TEST_MODE**. If this is turned on, the survey will always show.
     3. Save the changes.
 4. Open the **Put Survey Widget On Template** folder, and place **Template_SurveyWidget** on the page where you would like the mini-survey to appear. We recommend placing only one widget inside the primary layout page.
-5.  Configure how the mini-survey will appear, either on-action or on-page load:
+5. Configure how the mini-survey will appear, either on-action or on-page load:
 
     * For the on-action option:
 
@@ -37,7 +37,7 @@ To import this module into your app, follow the instructions in [How to Use Mark
         3. (Optional) Double-click **CHANGE ME**, add your microflow or nanoflow action, then save the changes.
         4. Create a button that calls the **ShowSurvey_OnAction** nanoflow on the page where **Template_SurveyWidget** is placed. Mendix recommends renaming the flow to something that describes the original action.
 
-    *  For the on-page load option:
+    * For the on-page load option:
    
         1. Open the **Show Survey** folder, and copy the widget from **ShowSurvey_OnPageLoad** to your page.
         2. Place this widget on any page you wish to show the survey (you can use multiple **Show Mini Survey On Page Load** widgets in your app to trigger many surveys).

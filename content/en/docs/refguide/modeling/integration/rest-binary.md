@@ -100,9 +100,9 @@ In the **GET_ByKey** microflow, do the following:
 
 Follow the steps in the [MIME Type for Images](#mime-images) section, then set the three drop-down options to the following:
 
-     * **Key (String (Unlimited))** – set the **Value** to `'Content-Type'`
-     * **Value (String (Unlimited))** – set the **Value** to `'application/pdf'` 
-     * **System.HttpHeaders (System.HttpMessage)** - set the **Value** to `$httpResponse`
+* **Key (String (Unlimited))** – set the **Value** to `'Content-Type'`
+* **Value (String (Unlimited))** – set the **Value** to `'application/pdf'` 
+* **System.HttpHeaders (System.HttpMessage)** - set the **Value** to `$httpResponse`
 
 ### 2.4 Testing the Service {#test-service}
 

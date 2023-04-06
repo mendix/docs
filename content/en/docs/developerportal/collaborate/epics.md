@@ -106,43 +106,51 @@ On the upper-right corner, you can click the link icon to copy the link to the s
 
 The story details dialog box shows the following items:
 
-* **Description** – the description of the story:
+* **Description** – This is the description of the story:
+    * You can edit the description of the story by clicking **Edit Description** and making changes in the WYSIWYG editor. The editor supports different text formats, including code blocks.
+    * You can link a story in the editor by typing *#* and the story title, and then select the right story from the list.
+    * You can type a person in the editor by typing *@*, and the person's name, and then select the right person from the list. Once you save the story, the system will send a notification to the tagged person.
+    
+* **Assign to** – You can assign the story to anybody who can access the app in the Developer Portal.
+* **Status** – You can set the status to any of the category/swimlane names on the **Board** and **Planning** pages.
+* **Tasks** – You can add a task by clicking **+ Add Task**.
+    * You can move the tasks by dragging them around.
 
-    * Edit the description of the story by clicking **Edit Description** and making changes in the WYSIWYG editor; the editor supports different text formats, including code blocks
-    * Link a story in the editor by typing *#*, typing the story title, and selecting the right story from the list
-    * Tag a person in the editor by typing *@*, typing the person's name, and selecting the right person from the list; once you save the story, the system will send a notification to the tagged person
+* **Story Type** – You can set the story type to **Bug** or **Feature**.
+* **Linked Epic** – You can link the story to an epic.
+* **Tags** – You can add or remove tags.
+    * You can create a new tag by typing the tag in the text box and click **Create new "[tag name]"**.
+    * You can [manage tags](#manage-tags) by clicking the settings icon at the end.
 
-* **Assign to** – enables assigning the story to anybody who can access the app in the Developer Portal
-* **Status** – enables setting the status to any of the category/swimlane names on the **Board** and **Planning** pages
-* **Tasks** – enables adding a task by clicking **+ Add Task**; you can move the tasks by dragging them around
-* **Story Type** – enables setting the story type to **Bug** or **Feature**
-* **Linked Epic** – enables linking the story to an epic
-* **Tags** – enables adding or removing tags; to create a new tag, type the tag in the text box and click **Create new "[tag name]"**
-* **Story Points** – enables setting the story points to an integer
-* **Attached Files** – enables adding attached files by clicking **+**
-* **Comment** – enables typing your comment in the text box and then clicking **Post Your Comments** to save and post the comment
+* **Story Points** – You can set the story points to an integer.
+* **Attached Files** – You can add attached files by clicking **+**.
+* **Comment** – You can type your comment in the text box and then click **Post Your Comments** to save and post the comment.
 
 {{% alert color="info" %}}To save any change on the story details dialog box, click **Save Story** at the bottom of the page.{{% /alert %}}
 
 ## 3 Planning {#planning}
 
-There are three tabs on the **Planning** page, which are described below.
+When you click the settings icon on the upper-right side of the screen, a dialog box opens with four tabs: **Manage Tags**, **Board Type**, **Toast Settings**, **Data Migration**. 
 
-### 3.1 Manage Tags
+{{< figure src="/attachments/developerportal/collaborate/epics/planning-settings.png" >}}
 
-On this tab, you can add, rename, and delete tags, and change tag colors. The changes here affect all the tags in your app.
+These tabs are described below.
 
-To add a tag, click **+Add Tag**, then enter the name, and select a color, and then click the save icon.
+### 3.1 Manage Tags {#manage-tags}
 
-To rename a tag, double click the tag name, then edit the name in the text box, and then click outside the text box to save it.
+On this tab, you can add, rename, and delete tags, as well as change tag colors. The changes here affect all the tags in your app.
+
+To add a tag, click **+Add Tag**, then enter the name and select a color, and then click the save icon to save it.
+
+To rename a tag, double click the tag name, then change the name in the text box, and then click outside the text box to save it.
 
 To delete a tag, hover over the row of the tag, and then click the delete icon that appears at the end of the row.
 
+To change the tag color, click the current color and select the new color from the dialog box.
+
 ### 3.2 Board Type
 
-On this tab, you can switch between a Scrum workflow and Kanban workflow by clicking the settings icon on the upper-right side of the screen. The workflow you select determines how the **Planning** page and the [Board](#board) page look.
-
-{{< figure src="/attachments/developerportal/collaborate/epics/switch-scrum-kanban.png" width="500px" >}}
+On this tab, you can switch between a Scrum workflow and Kanban workflow. The workflow you select determines how the **Planning** page and the [Board](#board) page look.
 
 If you select the **Scrum** workflow, the **Planning** page shows the **Active Sprint**, **Next Sprint**, **Refinement**, and **Backlog** categories. The goal for the current Sprint is shown on the top of all categories. When there is no active Sprint, you can start a new Sprint by clicking **Start Sprint** in the upper-right corner. Once a Sprint is created, all the items in the **Next Sprint** are moved to the **Active Sprint** automatically. You can end a Sprint by clicking **End Sprint** on the upper-right corner. When you end a Sprint, the system shows you how many stories were completed in that Sprint. All the completed stories are [archived](#archive) automatically, and you can decide where the unfinished stories should go. 
 
@@ -280,18 +288,24 @@ On the upper-right corner, there is a link icon and an ellipsis (**...**) icon. 
 
 The epic details dialog box shows the following items:
 
-* **Objective** – this is the description of the epic:
+* **Objective** – This is the description of the epic:
+    * You can edit the objective of the epic by clicking **Edit Objective** and making changes in the WYSIWYG editor. The editor supports different text formats, including code blocks
+    * You can link a story in the editor by typing *#* and the story title, and then select the right story from the list.
+    * You can type a person in the editor by typing *@* and the person's name, and then select the right person from the list. Once you save the epic, the system will send a notification to the tagged person.
+    
+* **Assign to** – You can assign the epic to anybody who can access the app in the Developer Portal.
+* **Tags** – You can add or remove tags.
+    * You can create a new tag by typing the tag in the text box and click **Create new "[tag name]"**
+    * You can [manage tags](#manage-tags) by clicking the settings icon at the end.
 
-    * Edit the objective of the epic by clicking **Edit Objective** and making changes in the WYSIWYG editor; the editor supports different text formats, including code blocks
-    * Link a story in the editor by typing *#*, typing the story title, and selecting the right story from the list
-    * Tag a person in the editor by typing *@*, typing the person's name, and selecting the right person from the list; once you save the epic, the system will send a notification to the tagged person
+* **Attachments** – You can add attachments by clicking **+**.
+* **Stories** – This shows the open stories that are linked to this epic.
+    * You can click **Create** to create a new **Feature** or **Bug** story directly from the epic. The new story goes to the backlog by default.
+    * You can link an existing story by entering the story name or ID in the search bar and then clicking **+**.
+    * You can remove a linked story by clicking **x**.
 
-* **Assign to** – enables assigning the epic to anybody who can access the app in the Developer Portal
-* **Tags** – enables adding or removing tags; to create a new tag, type the tag in the text box and click **Create new "[tag name]"**
-* **Attachments** – enables adding attachments by clicking **+**
-* **Stories** – all the open stories that are linked to this epic; click **Create** to create a new **Feature** or **Bug** story directly from the epic
-* **Archived Stories** – all the archived stories that are linked to this epic
-* **Comment** – enables typing your comment in the text box and then clicking **Post Your Comments** to save and post the comment
+* **Archived Stories** – This shows the archived stories that are linked to this epic.
+* **Comment** – You can type a comment in the text box and then click **Post Your Comments** to save and post the comment.
 
 {{% alert color="info" %}}To save any change on the epic details dialog box, click **Save Epic** at the bottom of the page.{{% /alert %}}
 

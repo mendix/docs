@@ -81,7 +81,7 @@ Consider the following microflow:
 
 {{< figure src="/attachments/refguide/modeling/integration/ml-kit/design-patterns/pre-postprocessor-design-patterns/java-actions-encoding-features-microflow.png" alt="." >}}
  
-Below there is a very simple pre-processing that essentially retrieves float values from the Iris entity, converts it InputStream, encodes it as Base64 string, and returns it as the result so that it can be injected into the model later on.
+Below there is a very simple pre-processing that essentially retrieves float values from the Iris entity, converts it InputStream, encodes it as Base64 string, and returns it as the result so that it can be injected into the model later on. See this Random Forest example in our [Mendix ML Kit Demo Repository](https://github.com/mendix/mlkit-example-app/blob/main/javasource/iris_randomforest/actions/PreProcessor.java):
 
 ```
     @java.lang.Override
@@ -107,7 +107,7 @@ Below there is a very simple pre-processing that essentially retrieves float val
     }
 ```
  
-The post-processor is even simpler (see the example in our [Mendix ML Kit Demo Repository](https://github.com/mendix/mlkit-example-app/blob/main/javasource/iris_randomforest/actions/PostProcessor.java)):
+The post-processor is even simpler (see this Random Forest example in our [Mendix ML Kit Demo Repository](https://github.com/mendix/mlkit-example-app/blob/main/javasource/iris_randomforest/actions/PostProcessor.java)):
 
 ```
 
@@ -135,7 +135,7 @@ A common step required in most non-structured data inference using neural networ
 
 ##### 1.2.2.1 Pre-Processing
 
-As you can see, most of the code are the loops required for normalization and encoding
+As you can see, most of the code are the loops required for normalization and encoding (see this ResNet50 example in our [Mendix ML Kit Demo Repository](https://github.com/mendix/mlkit-example-app/blob/main/javasource/resnet50/actions/ResNet50Preprocessor.java)):
 
 ```
 
@@ -187,7 +187,7 @@ As you can see, most of the code are the loops required for normalization and en
  
 ##### 1.2.2.2 Post-Processing
 
-In this case, the bulk of the code is about creating a map for translating the id derived from the highest confidence class retrieved by the model, and the highest probability calculation.
+In this case, the bulk of the code is about creating a map for translating the id derived from the highest confidence class retrieved by the model, and the highest probability calculation. See this ResNet50 example in our [Mendix ML Kit Demo Repository](https://github.com/mendix/mlkit-example-app/blob/main/javasource/resnet50/actions/ResNet50Postprocessor.java):
 
 ```
 
@@ -246,7 +246,9 @@ More often than not the pre- and post-processing steps are deeply coupled with t
 
 #### 1.3.1 Embedded ONNX Operators
 
-There is an extensive [list of ONNX Operators](https://github.com/onnx/onnx/blob/main/docs/Operators.md) that can be embedded into the model file in order to perform several kinds of calculations. Several [examples](https://towardsdatascience.com/creating-onnx-from-scratch-4063eab80fcd) are also available online to demonstrate how this can be achieved. A specific example could be this spam filter trained out of a simple corpus that integrates a count-vectorizer into the ONNX file via a pipeline:
+There is an extensive [list of ONNX Operators](https://github.com/onnx/onnx/blob/main/docs/Operators.md) that can be embedded into the model file in order to perform several kinds of calculations. Several [examples](https://towardsdatascience.com/creating-onnx-from-scratch-4063eab80fcd) are also available online to demonstrate how this can be achieved. 
+
+A specific example could be this spam filter trained out of a simple corpus that integrates a count-vectorizer into the ONNX file via a pipeline. It is not a java action but a snipped of the Titanic XGBoost notebook in our [Mendix ML Kit Demo Repository](https://github.com/mendix/mlkit-example-app/blob/main/notebooks/titanic_survivors.ipynb):
 
 ```
 
@@ -292,7 +294,7 @@ ResNet Pre-processor and Model Inference in Separate MLKit Activities
 
 {{< figure src="/attachments/refguide/modeling/integration/ml-kit/design-patterns/pre-postprocessor-design-patterns/ResNet-pre-processor-Model-Inference-sep-activities.png" alt="." >}}
 
-The below code snippet creates a preprocessor ONNX artifact that contains the necessary feature pre-processor transformation steps by the [ResNet models](https://github.com/onnx/models/tree/main/vision/classification/resnet) that can be found in the ONNX Zoo.
+The below code snippet creates a preprocessor ONNX artifact that contains the necessary feature pre-processor transformation steps by the [ResNet models](https://github.com/onnx/models/tree/main/vision/classification/resnet) that can be found in the ONNX Model Zoo (see in the example below):
 
 ```
     
@@ -349,7 +351,7 @@ ResNet Pre-processor and Model Inference Combined in a Single MLKit Activity
 
 {{< figure src="/attachments/refguide/modeling/integration/ml-kit/design-patterns/pre-postprocessor-design-patterns/ResNet-pre-processor-Model-Inference-single-activity.png" alt="." >}}
 
-Another common scenario is merging multiple ONNX artifacts. For instance, an existing pre- / post-processor ONNX artifact can be merged with an existing/pre-trained ONNX model in order to create a single, all-in-one ONNX model that can handle model inference along with the related pre- / post-processing actions.
+Another common scenario is merging multiple ONNX artifacts. For instance, an existing pre- / post-processor ONNX artifact can be merged with an existing/pre-trained ONNX model in order to create a single, all-in-one ONNX model that can handle model inference along with the related pre- / post-processing actions. See the example below, taken from the [Pyhton API Overview](https://github.com/onnx/onnx/blob/main/docs/PythonAPIOverview.md) in the ONNX Model Zoo:
 
 ```
 

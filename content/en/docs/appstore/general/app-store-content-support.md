@@ -72,11 +72,17 @@ Partner-supported content is created and maintained by partners as part of the [
 
 ### 3.2 Community-Supplied Content
 
-| Support Category | Supplied by Individual Developer | Supplied by Partner Organization |
-| --- | --- | --- |
-| **Community** | Mendix community supports | Options: No support from partner, or Mendix community supports |
-| **Partner**  | N/A | Partner supports premium customers (allowed after Mendix Component Partner agreement is signed) |
-| **Siemens** | N/A  | Siemens supports (allowed after SLA with Siemens is signed) |
+| Support Category | Supplied by Individual Developer | Supplied by Partner Organization | Notes |
+| --- | --- | --- | --- |
+| **Community** | Mendix community supports | Options: No support from partner, or Mendix community supports | Content is provided as-is by members of the Mendix community, and support depends on the availability and effort of the owner. |
+| **Partner**  | N/A | Partner supports premium customers (allowed after Mendix Component Partner agreement is signed) | Content in this category is provided and supported by a Mendix partner. The partner supports this content as-is when you are equipped with an SLA with the partner. For more information, see [Mendix Component Partner Program](/appstore/creating-content/partner-program/). |
+
+### 3.3 Siemens-Supplied Content
+
+| Support Category | Supplied by Individual Developer | Supplied by Segment Team or Other Org Level | Notes |
+| --- | --- | --- | --- |
+| **Siemens** | N/A  | Siemens supports. | Content in this category is provided and supported by the Siemens team. Siemens supports this content as-is when you are equipped with an SLA with Siemens. |
+| **Community** | Mendix community supports | Options: No support from partner, or Mendix community supports | Content is provided as-is by members of the Mendix community, and support depends on the availability and effort of the owner. |
 
 ## 4 Read More
 

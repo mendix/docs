@@ -64,19 +64,25 @@ Partner-supported content is created and maintained by partners as part of the [
 
 ### 3.1 Mendix-Supplied Content
 
-| Support Category  | Standard/Premium SLA | Platform SLA | No SLA |
-| --- | --- | --- | --- |
-| **Platform** | [Mendix Support](https://support.mendix.com/)   | [Mendix Support](https://support.mendix.com/) | Mendix community |
-| **Deprecated** | [Mendix Support (Limited)](https://support.mendix.com/) (for more information, see the [Deprecated Support Category](#deprecated) section above) | [Mendix Support (Limited)](https://support.mendix.com/) (for more information, see the [Deprecated Support Category](#deprecated) section above) | Mendix community |
-| **Community** | Mendix community | Mendix community | Mendix community |
+| Support Category  | Standard/Premium SLA | Platform SLA | No SLA | Notes |
+| --- | --- | --- | --- | --- |
+| **Platform** | [Mendix Support](https://support.mendix.com/)   | [Mendix Support](https://support.mendix.com/) | Mendix community supports | Mendix supports all the content in this category as-is when you are equipped with a Mendix SLA (Platform, Standard, or Premium). Content in this category is proactively incorporated into Mendix R&D test cycles as part of our platform release management. This category replaces the former Extended category, which has been deprecated. |
+| **Deprecated** | [Mendix Support (limited)](https://support.mendix.com/) (for more information, see the [Deprecated Support Category](#deprecated) section above) | [Mendix Support (limited)](https://support.mendix.com/) (for more information, see the [Deprecated Support Category](#deprecated) section above) | Mendix community supports | Content in this category is considered end-of-life and will be dropped to the Community support category in the next major Mendix release. Content is provided as-is by Mendix R&D, and support depends on the severity of the reported issue and the effort required to resolve it. |
+| **Community** | Mendix community supports | Mendix community supports | Mendix community supports | Content is provided as-is by members of the Mendix community, and support depends on the availability and effort of the owner. |
 
 ### 3.2 Community-Supplied Content
 
-| Support Category | Supplied by Individual Developer | Supplied by Partner Organization |
-| --- | --- | --- |
-| **Community** | Mendix community  | Options: No support from partner, or Mendix community supports |
-| **Partner**  | N/A | Partner supports premium customers (allowed after Mendix Component Partner agreement is signed) |
-| **Siemens** | N/A  | Siemens supports (allowed after SLA with Siemens is signed) |
+| Support Category | Supplied by Individual Developer | Supplied by Partner Organization | Notes |
+| --- | --- | --- | --- |
+| **Community** | Mendix community supports | Options: No support from partner, or Mendix community supports | Content is provided as-is by members of the Mendix community, and support depends on the availability and effort of the owner. |
+| **Partner**  | N/A | Partner supports premium customers (allowed after Mendix Component Partner agreement is signed) | Content in this category is provided and supported by a Mendix partner. The partner supports this content as-is when you are equipped with an SLA with the partner. For more information, see [Mendix Component Partner Program](/appstore/creating-content/partner-program/). |
+
+### 3.3 Siemens-Supplied Content
+
+| Support Category | Supplied by Individual Developer | Supplied by Segment Team or Other Org Level | Notes |
+| --- | --- | --- | --- |
+| **Siemens** | N/A  | Siemens supports. | Content in this category is provided and supported by the Siemens team. Siemens supports this content as-is when you are equipped with an SLA with Siemens. |
+| **Community** | Mendix community supports | Options: No support from partner, or Mendix community supports | Content is provided as-is by members of the Mendix community, and support depends on the availability and effort of the owner. |
 
 ## 4 Read More
 

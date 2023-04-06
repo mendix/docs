@@ -109,7 +109,6 @@ Depending on the use-case, more fine-grained synchronization controls might be r
 * **Nothing (preserve data)** – Do not download any objects automatically, and do not clear the data stored in the database for this entity when performing a synchronization  (this can be useful in cases where you want have full control over the synchronization and should be used in combination with the [Synchronize to device](/refguide/synchronize-to-device/) or [Synchronize](/refguide/synchronize/) activity with specific objects selected).
 * **Never** – When an entity is set to `Never`, its objects will not be synchronized between the runtime and the offline database during a Startup Synchronization, [Synchronize all Objects](/refguide/synchronize/#all-objects), or [Synchronize Unsynchronized Objects](/refguide/synchronize/#unsynchronized-objects). Alternatively, the objects can still be synchronized using [Synchronize to device](/refguide/synchronize-to-device/) or [Synchronize selected object(s)](/refguide/synchronize/#selected-objects), but you will be in control when and what is synchronized.
 
-
 If you have custom widgets or JavaScript actions which use an entity that cannot be detected by Studio Pro in your offline-first profile (because its only used in the code), you can use customizable synchronization to include such entities.
 
 {{< figure src="/attachments/refguide/mobile/offline-first/custom-synchronization-configs.png" alt="custom synchronization"   width="450"  >}}

@@ -64,17 +64,17 @@ Partner-supported content is created and maintained by partners as part of the [
 
 ### 3.1 Mendix-Supplied Content
 
-| Support Category  | Standard/Premium SLA | Platform SLA | No SLA |
-| --- | --- | --- | --- |
-| **Platform** | [Mendix Support](https://support.mendix.com/)   | [Mendix Support](https://support.mendix.com/) | Mendix community |
-| **Deprecated** | [Mendix Support (Limited)](https://support.mendix.com/) (for more information, see the [Deprecated Support Category](#deprecated) section above) | [Mendix Support (Limited)](https://support.mendix.com/) (for more information, see the [Deprecated Support Category](#deprecated) section above) | Mendix community |
-| **Community** | Mendix community | Mendix community | Mendix community |
+| Support Category  | Standard/Premium SLA | Platform SLA | No SLA | Notes |
+| --- | --- | --- | --- | --- |
+| **Platform** | [Mendix Support](https://support.mendix.com/)   | [Mendix Support](https://support.mendix.com/) | Mendix community supports | Mendix supports all the content in this category as-is when you are equipped with a Mendix SLA (Platform, Standard, or Premium). Content in this category is proactively incorporated into Mendix R&D test cycles as part of our platform release management. This category replaces the former Extended category, which has been deprecated. |
+| **Deprecated** | [Mendix Support (limited)](https://support.mendix.com/) (for more information, see the [Deprecated Support Category](#deprecated) section above) | [Mendix Support (limited)](https://support.mendix.com/) (for more information, see the [Deprecated Support Category](#deprecated) section above) | Mendix community supports | 1 |
+| **Community** | Mendix community supports | Mendix community supports | Mendix community supports | 1 |
 
 ### 3.2 Community-Supplied Content
 
 | Support Category | Supplied by Individual Developer | Supplied by Partner Organization |
 | --- | --- | --- |
-| **Community** | Mendix community  | Options: No support from partner, or Mendix community supports |
+| **Community** | Mendix community supports | Options: No support from partner, or Mendix community supports |
 | **Partner**  | N/A | Partner supports premium customers (allowed after Mendix Component Partner agreement is signed) |
 | **Siemens** | N/A  | Siemens supports (allowed after SLA with Siemens is signed) |
 

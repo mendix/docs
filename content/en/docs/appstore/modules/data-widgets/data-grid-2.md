@@ -16,6 +16,8 @@ Here is an example of a data grid using filters:
 
 ### 1.2 Advanced Options
 
+{{% todo %}}[Delete sentence below as well since in SP always visible?]{{% /todo %}}
+
 The data grid has an option to enable advanced options. When this option is toggled on, it enables numerous features to customize your data grid:
 
 * Pagination type

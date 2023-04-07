@@ -21,7 +21,7 @@ Because your app end-users are signing in with a Mendix account, they will all n
 For Mendix versions 9.20 and above, you will need to use version 4.0.1 or above of the Mendix SSO module.
 {{% /alert %}}
 
-### 1.1 Typical Usage Scenario
+### 1.1 Typical Usage Scenarios{#typical-usage}
 
 The Mendix SSO module is typically used when you are collaborating in a small team to prepare the functionality of your app for production. During such an interactive development process, this brings two benefits:
 
@@ -44,7 +44,7 @@ Mendix SSO is also a good choice when you develop a Mendix app that is targeted 
 
 ### 1.3 Limitations
 
-* Mendix SSO is not recommended for Production deployments as the Mendix SSO sign in screens are Mendix branded.
+* Using Mendix SSO will present end-users with screens that are Mendix-branded. This means that the module is not suitable for use beyond the [Typical Usage Scenarios](#typical-usage) described above.
 * This module does not work for [native mobile](/refguide/native-mobile/) apps.
 * The default app `Logout` action resolves to the origin location found in a session cookie, which (re)triggers the `/openid/login/` endpoint, which logs the end-user in again.
 

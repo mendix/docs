@@ -17,7 +17,7 @@ To access the **Merge** dialog box, open [Version Control](/refguide/version-con
 
 {{< figure src="/attachments/refguide/modeling/menus/version-control-menu/merge-dialog/merge-dialog.png" alt="Merge Dialog" >}}
 
-Available scenarios are described below
+Available scenarios are described in sections below.
 
 ## 2 Port Fix
 

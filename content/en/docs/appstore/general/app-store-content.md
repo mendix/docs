@@ -34,9 +34,11 @@ There are three ways to install a Marketplace component, which are described in 
 
 ### 2.1 Downloading Content from Within Studio Pro {#downloading}
 
-{{% alert color="info" %}}The details below cover the updated Marketplace in Studio Pro that is available from version [9.19](/releasenotes/studio-pro/9.19/#updated-marketplace). For details on downloading content in older versions of Studio Pro, see the [For Older Versions of Studio Pro](#older) section below.{{% /alert %}}
+#### 2.1.1 For Studio Pro Versions 9.19 and Above
 
-{{% alert color="info" %}}This procedure works for all types of Marketplace components unless you are using Studio Pro China Edition.{{% /alert %}}
+{{% alert color="info" %}}This procedure works for all types of Marketplace components, unless you are using Studio Pro China Edition.{{% /alert %}}
+
+To download content in Studio Pro versions [9.19](/releasenotes/studio-pro/9.19/) and above, follow these steps:
 
 1. Open Studio Pro and sign in with your Mendix credentials.
 2. Open the app in which you want to install the component from the Marketplace.
@@ -75,9 +77,9 @@ There are three ways to install a Marketplace component, which are described in 
         2. Configure the necessary settings based on your storage choice.
         3. Click **OK**. After the app is downloaded, it opens automatically in Studio Pro.
 
-#### 2.1.1 For Older Versions of Studio Pro {#older}
+#### 2.1.1 For Studio Pro Versions 9.18 and Below
 
-These steps cover downloading content from the Marketplace available in Studio Pro version 9.18 and below:
+To download content in Studio Pro versions [9.18](/releasenotes/studio-pro/9.18/) and below, follow these steps:
 
 1. Open Studio Pro and sign in with your Mendix credentials.
 2. Open the app in which you want to install the component from the Marketplace.

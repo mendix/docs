@@ -11,6 +11,12 @@ These release notes cover changes made to the [Mendix Data Hub Catalog](/data-hu
 
 ## 2023
 
+### April 6th, 2023
+
+#### Improvements
+
+* We improved the clarity and accuracy of some UI texts.
+
 ### March 16th, 2023
 
 #### Fixes

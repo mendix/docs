@@ -22,6 +22,25 @@ In versions of Mendix below 9.11.0, the cluster manager will unblock *all* block
 
 ## 2 Customizing Login Behavior
 
-Login behavior can be customized by implementing a custom Java action and registering it to be used instead of the default login action.
+Login behavior can be customized by implementing a custom Java action and registering it to be used instead of the default login action. To do this you need to create a new java action which is run as part of the [After Startup](/refguide/app-settings/#after-startup) microflow. The Java action should add a new user action and a listener. For example, to add a LoginActionListener and CustomLoginAction, you could use the following code in the Java action:
+
+```java {linenos=false}
+// BEGIN USER CODE
+LoginActionListener loginActionListener = new LoginActionListener();
+loginActionListener.addReplaceEvent(CustomLoginAction.class.getName());
+Core.addUserAction(CustomLoginAction.class);
+Core.addListener(loginActionListener);
+return true;
+// END USER CODE
+```
+
+You will then need to add two Java class files to the `javasource` folder of your app. In the example above, these will be:
+
+* LoginActionListener.java – which extends `UserActionListener<LoginAction>`
+* CustomLoginAction.java – which performs you custom login actions
 
 Cluster manager behavior currently cannot be changed.
+
+## 3 Read More
+
+* [Doing custom stuff when a user logs in](https://bartgroot.nl/mendix/custom-checks-on-login/) *(external blog at BartGroot.nl)*

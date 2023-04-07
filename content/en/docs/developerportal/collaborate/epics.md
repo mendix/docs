@@ -26,7 +26,7 @@ This gives everyone in the team access to this app in Epics. To give the team ac
 
 ### 1.2 Opening an App in Epics
 
-Once you have access to an app in Epics, open it in the [Developer Portal](https://sprintr.home.mendix.com/link/myapps) and then go to the [Stories](/developerportal/collaborate/stories/) page. There is a notification on the top of the page where you can click **Check it Out** to open the app in Epics:
+Once you have access to an app in Epics, open it in the [Developer Portal](https://sprintr.home.mendix.com/link/myapps) and then go to the [Stories](/developerportal/collaborate/stories/) page. There is a notification at the top of the page where you can click **Check it Out** to open the app in Epics:
 
 {{< figure src="/attachments/developerportal/collaborate/epics/epics-check-it-out.png" >}}
 
@@ -34,43 +34,73 @@ After you open the app in Epics, you can easily switch to other apps that you ha
 
 ### 1.3 Pages in Epics
 
-Epics has the following pages: **Board**, **Planning**, **Epics**, and **Archive**. Some pages look different if you are working in the Scrum workflow or Kanban workflow. These pages are described in the sections below.
+Epics has the following pages: **Board**, **Planning**, **Epics**, and **Archive**. The **Board** page and **Planning** page look different, depending on if you are working in the Scrum workflow or Kanban workflow. All the pages are described in the sections below.
 
 ## 2 Board {#board}
 
-If you work in the Scrum workflow, the **Board** page gives an overview of your current Sprint. The top of the page shows the name of the Sprint, when it ends, and how many stories and points it has. Below, the shows the goal of the current Sprint.
+The **Board** page gives an overview of all the stories that your team is currently working on.
 
-{{< figure src="/attachments/developerportal/collaborate/epics/sprint-goal.png" >}}
-
-{{% alert color="info" %}}When you commit changes in Studio Pro, you can link your commit to stories of the current Sprint in Epics in the [Commit](/refguide/commit-dialog/) dialog box.{{% /alert %}}
-
-If you work in the Kanban workflow, the **Board** page gives an overview of all the stories that your team is currently working on. The top of the page shows the number of stories and the total points.
-
-{{< figure src="/attachments/developerportal/collaborate/epics/stories-story-points.png" >}}
-
-Click **Project Buzz** on the upper-right corner of the page to go back to the [Buzz](/developerportal/collaborate/buzz/#app-buzz) page of the app. Click **Create Epic** or **Create Story** to create an item. In the search box, you can search stories based on story title, tags, epic name, assignee (and unassigned stories), story title, and story ID.
+On the upper-right corner of the page, you can find the following items:
 
 {{< figure src="/attachments/developerportal/collaborate/epics/create-epic-story-search.png" >}}
 
+* **Project Buzz**  – directs you to the [Buzz](/developerportal/collaborate/buzz/#app-buzz) page of the app
+
+* **Create Epic** – opens a dialog box where you an create an epic
+
+* **Create Story** – opens a dialog box where you can create a story
+
+* Search box – enables searching stories based on story title, tags, epic name, assignee (and unassigned stories), story title, and story ID.
+
+### 2.1 Scrum Board vs Kanban Board {#different-boards}
+
+Depending on your settings of [board type](#board-type): Scrum or Kanban, the main area of the board looks different.
+
+#### 2.1.1 Scrum Board
+
+If you work with the Scrum board, at the top of the page, you can find the name of the Sprint, when it ends, and how many stories and points it has. The area right below shows the goal of the current Sprint.
+
+{{< figure src="/attachments/developerportal/collaborate/epics/sprint-goal.png" >}}
+
+The main area gives an overview of your current Sprint. 
+
+{{% alert color="info" %}}When you commit changes in Studio Pro, you can link your commit to stories of the current Sprint in Epics in the [Commit](/refguide/commit-dialog/) dialog box.{{% /alert %}}
+
+You can edit or end the current Sprint on the [Kanban Planning](#kanban-planning) page.
+
+#### 2.1.2 Kanban Board
+
+If you work with the Kanban board, the top of the page shows the number of stories and the total points. 
+
+{{< figure src="/attachments/developerportal/collaborate/epics/stories-story-points.png" >}}
+
+The main area gives an overview of all the stories that your team is working on. 
+
 ### 2.1 Swimlanes
 
-On the **Board** page, the stories are grouped into different swimlanes based on their status. The two default swimlanes are **To Do** and **Done**. 
+In the main area, the stories are grouped into different swimlanes based on their status. 
 
-You can add more custom swimlanes, such as **In Progress**, **In Review**, and **Testing**. To add a new swimlane, hover over the border of the swimlane where the new swimlane should be added, and click the vertical line when it appears. Enter the name of the swimlane and click **✓** to save the changes.
+The two default swimlanes are **To Do** and **Done**. 
+
+You can add more custom swimlanes, such as **In Progress**, **In Review**, and **Testing**. To add a new swimlane, hover over the border of the swimlane where the new swimlane should be added, and click the vertical line when it appears. Then enter the name of the swimlane and click **✓** to save the changes.
 
 {{< figure src="/attachments/developerportal/collaborate/epics/add-swimlane.png" width="500px" >}}
 
-To rename, [archive](#archive), or delete a swimlane, click the **...** icon on the upper-right corner of the swimlane, and then select the corresponding option.
+You can rename, [archive](#archive), or delete a swimlane as follows: click the **...** icon on the upper-right corner of the swimlane, and then select the corresponding option.
 
 {{< figure src="/attachments/developerportal/collaborate/epics/rename-archive-delete-swimlane.png" >}}
 
-{{% alert color="info" %}}It is not possible to do the following: delete a swimlane when it has stories in it, archive a swimlane when it has no stories, or delete the **To Do** and **Done** default swimlanes.{{% /alert %}}
+However, it is not possible to do the following actions:
 
-To move a swimlane, drag it to the new location.
+* Delete a swimlane when it still contains stories
+* Archive a swimlane when it contains no stories
+* Delete the default swimlanes:  **To Do** and **Done**
+
+You can move a swimlane by dragging it to the new location.
 
 ### 2.2 Story Cards
 
-On the **Board** page, each card represents a story:
+Each card in a swimlane represents a story:
 
 {{< figure src="/attachments/developerportal/collaborate/epics/story-card.png" >}}
 
@@ -86,23 +116,21 @@ A story card shows the following details:
 * ⑧ Points of the story
 * ⑨ To whom the story is assigned
 
-To [archive](#archive) or delete a story, click the **...** icon on the upper-right corner of the card, and then select the corresponding option:
+You can [archive](#archive) or delete a story: click the **...** icon on the upper-right corner of the card, and then select the corresponding option:
 
 {{< figure src="/attachments/developerportal/collaborate/epics/archive-delete-story.png" >}}
 
-To move a card within a swimlane or across swimlanes, drag the card to the new location.
+You can move a card within a swimlane or across swimlanes. To do so, drag the card to the new location.
 
-Click the story card to open the [story details](#story-details) dialog box.
+You can click a story card to view the [story details](#story-details).
 
 ### 2.3 Story Details {#story-details}
 
 When you click the card of a story, the story details dialog box opens.
 
-On the upper-right corner, you can click the link icon to copy the link to the story. Click the  ellipsis (**...**) icon to open a pop-up menu that allows you to clone, [archive](#archive), or delete the story.
+On the upper-right corner, you can click the link icon to copy the link to the story. Click the  ellipsis (**...**) icon to open a pop-up menu that allows you to clone, [archive](#archive), or delete the story. The clone option allows you to start creating a copy of the story. 
 
 {{< figure src="/attachments/developerportal/collaborate/epics/story-details-page-icons.png" >}}
-
-{{% alert color="info" %}}The clone option allows you to start creating a copy of the story. The title is pre-filled as *Copy - [original story title]*, and the other details are pre-filled with values from the original story.{{% /alert %}}
 
 The story details dialog box shows the following items:
 
@@ -130,105 +158,132 @@ The story details dialog box shows the following items:
 
 ## 3 Planning {#planning}
 
+The **Planning** page shows all your stories. At the top of the page, you can find the following items:
+
+* **...** – enables importing stories with an Excel file
+  * For more information, see the [Import Stories](#import-stories) section.
+* **Settings icon** – opens a dialog box where you can change settings
+  * For more information, see the [Settings](#settings) section.
+
+* **Create Epic** – opens a dialog box where you an create an epic
+* **Create Story** – opens a dialog box where you can create a story
+* Search box – enables searching stories based on story title, tags, epic name, assignee (and unassigned stories), story title, and story ID.
+
+If you work with the Scrum workflow, you can also find **Start Sprint** or **End Sprint** and **Edit Sprint**. For more information, see the [Scrum Planning v.s. Kanban Planning](#different-plannings) section.
+
+### 3.1 Import Stories {#import-stories}
+
+You can import your stories using an Excel file to Epics as follows:
+
+1. At the top of the **Planning** page, click **...** > **Import Stories**.
+
+   {{< figure src="/attachments/developerportal/collaborate/epics/import-stories.png" >}}
+
+   The **Import Stories From Excel** dialog box opens.
+
+2. Click **Download** to download the Excel file template. We recommend that you use this template to import your stories, because it can prevent errors.
+
+3. Open the Excel file template. Enter the data for your stories as follows:
+
+   * **Depth** – Enter **+** for a story and **++** for a task. A task should be added right below the story to which it belongs.
+
+   * **Name** – Enter the name of the story. For tasks, leave this column empty.
+
+   * **Epic** – If the story is linked to an epic, enter the epic ID. For tasks, leave this column empty.
+
+   * **Story Type** – Specify whether the story is a **Feature** or **Bug**. For tasks, leave this column empty.
+
+   * **Story Points** – Enter the story points. For tasks, leave this column empty.
+
+   * **Description** – Enter the description of the story. For tasks, leave this column empty.
+
+   * **Labels** – Enter the tags for the story, separated by a comma. For tasks, leave this column empty.
+
+     {{% alert color="warning" %}}All the tags that you enter in the Excel file should already exist in Epics.{{% /alert %}}
+
+4. Save the Excel file.
+
+5. Go back to the **Import Stories from Excel** dialog box. 
+
+6. Click **Browse**, navigate to the Excel file, and then select it.
+
+7. Click **Continue**. The dialog box gives a preview of all the stories that are to be imported.
+
+8. Click **Continue** to import the stories. A pop-up window shows the import is finished.
+
+You can find all the imported stories in the **Backlog**.
+
+### 3.2 Settings {#settings}
+
 When you click the settings icon on the upper-right side of the screen, a dialog box opens with four tabs: **Manage Tags**, **Board Type**, **Toast Settings**, **Data Migration**. 
 
 {{< figure src="/attachments/developerportal/collaborate/epics/planning-settings.png" >}}
 
 These tabs are described below.
 
-### 3.1 Manage Tags {#manage-tags}
+#### 3.2.1 Manage Tags {#manage-tags}
 
 On this tab, you can add, rename, and delete tags, as well as change tag colors. The changes here affect all the tags in your app.
 
-To add a tag, click **+Add Tag**, then enter the name and select a color, and then click the save icon to save it.
+To add a tag, click **+Add Tag**, enter the name,  select a color, and then click the save icon to save it.
 
-To rename a tag, double click the tag name, then change the name in the text box, and then click outside the text box to save it.
+To rename a tag, double click the tag name, change the name in the text box, and then click outside the text box to save it.
 
 To delete a tag, hover over the row of the tag, and then click the delete icon that appears at the end of the row.
 
-To change the tag color, click the current color and select the new color from the dialog box.
+To change the tag color, click the current color, and then select the new color from the dialog box.
 
-### 3.2 Board Type
+#### 3.2.2 Board Type {#board-type}
 
-On this tab, you can switch between a Scrum workflow and Kanban workflow. The workflow you select determines how the **Planning** page and the [Board](#board) page look.
+On this tab, you can switch between a Scrum workflow and Kanban workflow. The workflow you select determines how the [Board](#different-boards) page and the [Planning](#different-plannings) page look.
 
-If you select the **Scrum** workflow, the **Planning** page shows the **Active Sprint**, **Next Sprint**, **Refinement**, and **Backlog** categories. The goal for the current Sprint is shown on the top of all categories. When there is no active Sprint, you can start a new Sprint by clicking **Start Sprint** in the upper-right corner. Once a Sprint is created, all the items in the **Next Sprint** are moved to the **Active Sprint** automatically. You can end a Sprint by clicking **End Sprint** on the upper-right corner. When you end a Sprint, the system shows you how many stories were completed in that Sprint. All the completed stories are [archived](#archive) automatically, and you can decide where the unfinished stories should go. 
-
-If you use the **Kanban** workflow, the **Planning** page shows the **To Do**, **Refinement**, and **Backlog** categories.
-
-No matter which workflow you use, you can always create an epic or a story by clicking **Create Epic** or **Create Story** on the upper-right corner of the page. In the search box, you can search stories based on story title, tags, epic name, assignee (and unassigned stories), status name (only in the Scrum workflow), story title, and story ID.
-
-Each row in a category shows the following information about a story:
-
-* Whether the story is a bug or a feature
-* If the story has a feedback item linked to it
-* Unique story ID
-* Story title
-* Linked epic
-* Tags
-* Number of comments
-* Number of the tasks
-* Story points
-* To whom the story is assigned
-
-{{% todo %}}Add info about the progress score bar, which gives an overview of how many stories have been completed in each epic.{{% /todo %}}
-
-{{< figure src="/attachments/developerportal/collaborate/epics/story-kanban.png" >}}
-
-To [archive](#archive) or delete a story, click the **...** icon at the end of the row, and then select the corresponding option:
-
-{{< figure src="/attachments/developerportal/collaborate/epics/archive-delete-story-kanban.png" >}}
-
-To move a story, drag the row to a different category.
-
-Click a row to open the [story details](#story-details) page.
-
-### 3.3 Toast Settings
+#### 3.2.3 Toast Settings
 
 On this tab, you can enable or disable the toast notifications that appear like this:
 
 {{< figure src="/attachments/developerportal/collaborate/epics/toast-notification.png" width="500px" >}}
 
-### 3.4 Data Migration {#data-migration}
+#### 3.2.4 Data Migration {#data-migration}
 
 On this tab, you can migrate all or part of your content from [Stories](/developerportal/collaborate/stories/) to Epics.
 
 {{% alert color="info" %}}Only a Scrum Master can start a migration. Once you have started the migration, Mendix recommends working on Epics from that point forward.{{% /alert %}}
 
-#### 3.4.1 Migration Process
+##### 3.2.4.1 Migration Process
 
 To migrate from Stories to Epics, follow these steps:
 
 1. Go to [Planning](#planning) and click the settings icon on the upper-right side of the screen.
+
 2. Go to the **Data Migration** tab. Be sure to read the information before you click **Start Migration**:
 
-    {{< figure src="/attachments/developerportal/collaborate/epics/data-migration-info.png" width="400px" >}}
+   {{< figure src="/attachments/developerportal/collaborate/epics/data-migration-info.png" width="400px" >}}
 
 3. Select the content you want to migrate.
 
-    {{% alert color="warning" %}}Stories will become read-only once ALL sections have been migrated successfully. There is no further synchronization available between Developer Portal and Epics (or vice versa). After the migration is completed, the option to migrate is removed from Epics.{{% /alert %}}
-    
-    {{< figure src="/attachments/developerportal/collaborate/epics/data-migration-content.png" width="400px" >}}
-    
+   {{% alert color="warning" %}}Stories will become read-only once ALL sections have been migrated successfully. There is no further synchronization available between Developer Portal and Epics (or vice versa). After the migration is completed, the option to migrate is removed from Epics.{{% /alert %}}
+
+   {{< figure src="/attachments/developerportal/collaborate/epics/data-migration-content.png" width="400px" >}}
+
 4. A notification is sent in the Developer Portal's [top bar](/developerportal/#navigation) informing you of the status of the migration. An email is also sent with this information. You can open the [migration report](#migration-report) by clicking the notification or the button provided in the email.
-   
-#### 3.4.2 What Is Migrated?
+
+##### 3.2.4.2 What Is Migrated?
 
 These are the new locations of migrated stories:
 
-| From Stories | To Epics | Additional Information |
-| --- | --- | --- |
-| **Active Sprint** | **Active Sprint** in [Planning](#planning) | All stories are migrated to **To Do** swimlane with tags. |
-| Rest of the Sprints and backlog | **Refinement** in [Planning](#planning) | |
-| Archived stories | [Archive](#archive) | 
+| From Stories                    | To Epics                                   | Additional Information                                    |
+| ------------------------------- | ------------------------------------------ | --------------------------------------------------------- |
+| **Active Sprint**               | **Active Sprint** in [Planning](#planning) | All stories are migrated to **To Do** swimlane with tags. |
+| Rest of the Sprints and backlog | **Refinement** in [Planning](#planning)    |                                                           |
+| Archived stories                | [Archive](#archive)                        |                                                           |
 
 These are the new details of migrated stories:
 
-| From Stories | To Epics | Example |
-| --- | --- | --- |
-| Sprint **Name** | Tag with this format: **sprint:Sprint_Name** | **Sprint_Sprint 1** |
-| Story **Status** | Tag with this format: **status:Status** | **status:To-do** |
-| **Assignee** | Story is assigned unless the assignee is not a member of the app team. | |
+| From Stories     | To Epics                                                     | Example             |
+| ---------------- | ------------------------------------------------------------ | ------------------- |
+| Sprint **Name**  | Tag with this format: **sprint:Sprint_Name**                 | **Sprint_Sprint 1** |
+| Story **Status** | Tag with this format: **status:Status**                      | **status:To-do**    |
+| **Assignee**     | Story is assigned unless the assignee is not a member of the app team. |                     |
 
 For example, here is a Sprint with three stories from [Stories](/developerportal/collaborate/stories/):
 
@@ -242,7 +297,7 @@ Beside the story details above, the remaining details for your stories are migra
 
 {{% alert color="warning" %}}In [Stories](/developerportal/collaborate/stories/), files are associated with Comments, not with Stories. In Epics, files can only be associated with Stories, not with Comments. Therefore, files migrated from Stories will lose their Comment context.{{% /alert %}}
 
-#### 3.4.3 Migration Report {#migration-report}
+##### 3.2.4.3 Migration Report {#migration-report}
 
 The migration report is available a few seconds after the migration completes (timing depends on the number of stories you have).
 
@@ -262,6 +317,55 @@ The **Not Finished** status means that you can use the **Continue Migration** bu
 If you still have content with the **Error** status (for example, in the **Unmigrated Stories** section) after retrying the migration via the **Continue Migration** button, Mendix recommends manually migrating that data from [Stories](/developerportal/collaborate/stories/) to Epics. Furthermore, if a section has been successfully migrated but there is still data that has not been migrated, Mendix recommends manually migrating the data.
 {{% /alert %}}
 
+### 3.3 Scrum Planning vs Kanban Planning {#different-plannings}
+
+Depending on your settings of [board type](#board-type): Scrum or Kanban, the **Planning** page looks different.
+
+#### 3.3.1 Scrum Planning
+
+If you do Scrum planning, at the top of the page, you can find the name of the Sprint, when it ends, and how many stories and points it has. The area right below shows the goal of the current Sprint.
+
+{{< figure src="/attachments/developerportal/collaborate/epics/scrum-planning.png" >}}
+
+When there is no active Sprint, you can start a new Sprint by clicking **Start Sprint** in the upper-right corner. Once a Sprint is created, all the items in the **Next Sprint** are moved to the **Active Sprint** automatically. 
+
+You can end a Sprint by clicking **End Sprint** on the upper-right corner. When you end a Sprint, the system shows you how many stories were completed in that Sprint. All the completed stories are [archived](#archive) automatically, and you can decide where the unfinished stories should go. 
+
+In the main area of the page, stories are grouped in these categories: **Active Sprint**, **Next Sprint**, **Refinement**, and **Backlog**.
+
+#### 3.3.2 Kanban Planning {#kanban-planning}
+
+If you do Kanban planning, the top of the page shows the number of stories and the total points. 
+
+{{< figure src="/attachments/developerportal/collaborate/epics/kanban-planning.png" >}}
+
+In the main area of the page, stories are grouped in these categories: **To Do**, **Refinement**, and **Backlog**.
+
+### 3.4 Planning Overview
+
+The main area of the **Planning** page lists all the stories in different categories. Each row shows the following information about a story:
+
+* Whether the story is a bug or a feature
+* If the story has a feedback item linked to it
+* Unique story ID
+* Story title
+* Linked epic
+* Tags
+* Number of comments
+* Number of the tasks
+* Story points
+* To whom the story is assigned
+
+{{< figure src="/attachments/developerportal/collaborate/epics/story-kanban.png" >}}
+
+To [archive](#archive) or delete a story, click the **...** icon at the end of the row, and then select the corresponding option:
+
+{{< figure src="/attachments/developerportal/collaborate/epics/archive-delete-story-kanban.png" >}}
+
+To move a story, drag the row to a different category.
+
+Click a row to open the [story details](#story-details) page.
+
 ## 4 Epics {#epics}
 
 ### 4.1 Epics Overview 
@@ -272,13 +376,14 @@ The **Epics** overview page shows all the epics for your current app. Each row s
 * Title
 * Tags
 * To whom the epic is assigned
+* Progress bar
 * How many stories are completed for the epic
 
 {{< figure src="/attachments/developerportal/collaborate/epics/epic.png" >}}
 
 You can create an epic by clicking **Create Epic** on the upper-right corner of the page.
 
-### 4.1 Epic Details {#epic-details}
+### 4.2 Epic Details {#epic-details}
 
 When you click the row of an epic, the epic details dialog box opens. 
 

@@ -22,11 +22,11 @@ This document first describes all the pages in **App Insights** in the Developer
 ### 1.1 Survey Pop-Up Behaviour 
 
 The Mini Survey has specific opt-out rules after a user is shown a Survey.
-   * **The survey opt-out scenarios are;**
-     * **Scenario 1:** – User closes Survey, without answering any questions. User is opted-out and survey will not show again.
-     * **Scenario 2:** – User Answers 1 or more questions but does not finish the survey: Survey will show again to the user. But if they close the survey before finishing (for second time), it will not show survey again.
-     * **Scenario 3:** – User Answers all questions: Survey will not show again.
 
+* **The survey opt-out scenarios are;**
+    * **Scenario 1:** – User closes Survey, without answering any questions. User is opted-out and survey will not show again.
+    * **Scenario 2:** – User Answers 1 or more questions but does not finish the survey: Survey will show again to the user. But if they close the survey before finishing (for second time), it will not show survey again.
+    * **Scenario 3:** – User Answers all questions: Survey will not show again.
 
 {{% alert color="info" %}}In the GA release (May/June) we will allow you customise these opt-out rules from App Insights portal.{{% /alert %}} 
 
@@ -86,11 +86,11 @@ Clicking the mini-survey in a row on the list shows its [survey details](#survey
 
 On the **Settings** tab of **Survey Overview**, you can enable the test mode, and view or generate API keys.
 
-*  **Test Mode - For All Users** – After you enable this test mode, all users will become the testers of your survey. They will see the survey every time it is triggered. Their responses will not be saved, and therefore will not pollute the true survey results. You can view their responses on the [Test data](#test-data) tab of the survey details page. 
+* **Test Mode - For All Users** – After you enable this test mode, all users will become the testers of your survey. They will see the survey every time it is triggered. Their responses will not be saved, and therefore will not pollute the true survey results. You can view their responses on the [Test data](#test-data) tab of the survey details page. 
     
     * To enable this test mode, open your app in Studio Pro. In the **App Explorer**, go to  **Marketplace modules > AppInsights_MiniSurvey > _SETUP > 2. Set API Key & mode.**, and set the **TEST_MODE** constant to **True**.
     
-*  **Test Mode - For Project Members** – After you enable this test mode, all team members of the app will become the testers of your survey. They will see the survey every time it is triggered. Their responses will not be saved, and therefore will not pollute the true survey results. You can view their responses on the [Test data](#test-data) tab of the survey details page.
+* **Test Mode - For Project Members** – After you enable this test mode, all team members of the app will become the testers of your survey. They will see the survey every time it is triggered. Their responses will not be saved, and therefore will not pollute the true survey results. You can view their responses on the [Test data](#test-data) tab of the survey details page.
 
     {{% alert color="info" %}}This test mode only works for app team members who are authenticated through Mendix SSO.{{% /alert %}} 
 
@@ -98,9 +98,8 @@ On the **Settings** tab of **Survey Overview**, you can enable the test mode, an
 
 * **API Keys** – You can view API keys here, or generate an API key if there is none available. You need to use the API key as input when you configure the App Insights – Mini-Surveys module in Studio Pro to implement the mini-survey. You need only one API key per app.
 
-    *  To generate an API key, click **Generate API Key** here.
-    *  To view an existing API key, click the eye icon in the **View** column in the table.
-
+    * To generate an API key, click **Generate API Key** here.
+    * To view an existing API key, click the eye icon in the **View** column in the table.
 
 ### 2.2 Survey Details {#survey-details}
 
@@ -215,7 +214,6 @@ To install the [App Insights – Mini-Surveys](/appstore/modules/app-insights/) 
 2. Follow the instructions in [How to Use Marketplace Content in Studio Pro](/appstore/general/app-store-content/) to import the module into your app.
 3. Follow the instructions in the [Configuration](/appstore/modules/app-insights/#configuration) section of *App Insights – Mini-Surveys* to complete the implementation of the mini-survey in Studio Pro.
 
-
 ### 3.4 Viewing/Exporting Responses {#view-export-responses}
 
 When the start time that you set for the mini-survey is reached, the survey will start running automatically. Then you get [notifications](/developerportal/#notifications) on how many responses have been collected.
@@ -233,4 +231,3 @@ To check the responses that have been collected, follow these steps::
 ### 4.1 Upgrading the module from v1.0.0. to v1.1.0.
 
 In order to fix the issue where surveys do not work locally when running multiple applications we have updated the way Mini Surveys are tracked. Due to this change if you are upgrading from release v1.0.0 to v1.1.0 then you must clear your browsers local storage/cached data to remove deprecated features. This only needs to be done one time in your browser.
-

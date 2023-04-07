@@ -81,7 +81,6 @@ By clicking the ellipsis (**…**) in the app tile, you can quickly perform a nu
 
 The actions available depend on the app selected:
 
-* **Edit in Mendix Studio**
 * **Edit in Mendix Studio Pro**
 * **Leave App** – allows you to leave the app
 

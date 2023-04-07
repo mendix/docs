@@ -223,7 +223,7 @@ Once you have created a service in [Studio Pro 9.18 through 9.23](#one-way-be) o
 
 Business events are defined using entities specializing the **PublishedBusinessEvent** entity that is included in the Mendix Business Events module. 
 
-1. In your [Domain Model](/studio/domain-models/), double-click the entity you want to publish as a business event to display the entity properties.
+1. In your [Domain Model](/refguide/domain-model/), double-click the entity you want to publish as a business event to display the entity properties.
 2. In the **Generalization** field, click **Select** and select the **PublishedBusinessEvent** entity. 
 
 The base values for your entity are taken from the **PublishedBusinessEvent**, and your entity will behave like a specialized entity. For more information, see [Generalization, Specializations and Inheritance](/refguide/generalization-and-association/).

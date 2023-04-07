@@ -65,7 +65,7 @@ Use as few dependency modules as possible. When you must use one, make sure they
 
 Add the app to [Team Server](/refguide/version-control/#team-server) (or GitHub) version control, if you have not already done so when creating the app. 
 
-We recommend that you have a separate public Git repository next to your private Team Server SVN/Git repository, so that you can continue committing and applying changes while you only push to the public repository for a new release to the Marketplace. The automated integration with GitHub from the Marketplace makes this a good option for your public-facing Git repository.
+We recommend that you have a separate public Git repository next to your private Team Server Git repository, so that you can continue committing and applying changes while you only push to the public repository for a new release to the Marketplace. The automated integration with GitHub from the Marketplace makes this a good option for your public-facing Git repository.
 
 ### 2.4 Working with Java-Intensive Apps
 
@@ -174,7 +174,7 @@ If you are using Studio Pro [8.18](/releasenotes/studio-pro/8.18/) or older, you
 
 Use a **ConnectionDetails** entity for all general connection and security settings for the call. Use a **ConnectionDetails_Get** microflow in all your Operations. This way it is easy to change all the settings in one location. The individual settings can be stored in a constant or in the database and set in the create. Using constants are recommended because this avoids a dependency on the Encryption module.  
 
-{{% alert color="warning" %}} Using either the default value of a constant or the project’s configuration setting is unsafe. Both these places are readable by others and visible in the version management copies made by SVN. If you can share these settings with other developers, set them in the project configuration and leave the default values blank. This will limit the risk of accidentally exposing the settings when exporting the module.{{% /alert %}}
+{{% alert color="warning" %}} Using either the default value of a constant or the project’s configuration setting is unsafe. Both these places are readable by others and visible in the version management copies made by SVN. {{% todo %}}[What to update this to?]{{% /todo %}} If you can share these settings with other developers, set them in the project configuration and leave the default values blank. This will limit the risk of accidentally exposing the settings when exporting the module.{{% /alert %}}
 
 If you do need to store sensitive information in the database, then always use the [Encryption](/appstore/modules/encryption/) module to encrypt and store and to retrieve and decrypt the information.
 

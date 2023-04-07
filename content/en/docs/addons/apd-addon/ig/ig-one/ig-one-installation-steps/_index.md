@@ -14,7 +14,7 @@ Did you commit your work to the team server? And did you make a database backup?
 
 {{< figure src="/attachments/addons/apd-addon/ig/ig-one/ig-one-installation-steps/Commit.png" >}}
 
-If you don't have an SVN client like Tortoise SVN installed, make a copy of the widgets folder in your project.
+If you don't have an SVN client like Tortoise SVN installed, make a copy of the widgets folder in your project. {{% todo %}}[Update needed?]{{% /todo %}}
 
 ## 3 Import Module APMAgent
 

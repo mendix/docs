@@ -559,7 +559,7 @@ These release notes cover changes made to the [Mendix Data Hub Catalog](/data-hu
 
 #### Data Hub Free Edition
 
-* The Data Hub Free edition is now available to all Mendix users! Publish your data sources in the Data Hub Catalog, curate them, and then consume them in another application. Learn more about it [here](/data-hub/#data-hub-licences).
+* The Data Hub Free edition is now available to all Mendix users! Publish your data sources in the Data Hub Catalog, curate them, and then consume them in another application.
 
 #### Fixes
 

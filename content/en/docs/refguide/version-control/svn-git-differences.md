@@ -13,7 +13,6 @@ As of Studio Pro version 9.21, Git is the default version control system in Stud
 
 For more information on how to migrate to Git, see [Migrate to Git](/developerportal/collaborate/migrate-to-git/) in the *Developer Portal Guide*.
 
-
 ## 2 Differences in Collaboration: Committing, Pushing, Updating (Pulling), and Merging 
 
 SVN is a centralized version control system, whereas Git is a distributed system. When making a commit, in SVN it directly goes to the centralized server, while Git only creates a local commit and to submit your local commit(s) to the centralized server you need to *push* your changes (pushing changes is selected by default in the **Commit** dialog box). As a result, your local changes are committed faster, and you can roll back to a previous state without having to contact the version control server.
@@ -32,7 +31,7 @@ The table below outlines the main differences between SVN and Git:
 | ----------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
 | Update/Pull | Retrieves changes from the server and applies them directly on your local copy of the app. | Retrieves changes from the server. Changes can only be applied to your local copy of the app if you do not have any uncommitted changes. If you have uncommitted changes, you need to either *revert* them or *commit* them first. Note that in Git this operation is typically called *Pull* instead of *Update*. |
 | Commit      | Submits changes to the server.                               | Creates a *local* commit: a set of changes with a message that you can jump back to. Changes are not submitted to the server, unless you check the **Push** checkbox. |
-| Push        | N/a                                                          | Submits *all* local commits to the server. If other developers have pushed changes to the server that are not in your local app yet, you have to *update*/*push* first. |
+| Push        | N/A                                                          | Submits *all* local commits to the server. If other developers have pushed changes to the server that are not in your local app yet, you have to *update*/*pull* first. |
 | Port fix    | Port fix transports the actual commit from one branch and applies it to another. You need to commit the change. | Port fix transports the actual commit from one branch and directly applies it, including author and commit text to another branch. This means you do not need to explicitly commit your change. |
 
 ## 3 Differences in Revision Numbers

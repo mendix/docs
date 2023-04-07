@@ -22,28 +22,26 @@ To import this module into your app, follow the instructions in [How to Use Mark
 {{% alert color="info" %}}Before you configure this module in Studio Pro, make sure you have  [created your mini-survey](/developerportal/collaborate/product-insights/#create-survey) in **App Insights** in the Developer Portal. {{% /alert %}}
 
 1. Open your app in Studio Pro.
-2. In **App Explorer**, go to **Marketplace modules** > **AppInsights_MiniSurvey** > **_SETUP**.
+2. In **App Explorer**, go to **Marketplace modules** > **AppInsights_MiniSurvey** > **\_SETUP**.
 3. Open the **Set API Key & mode** folder and do the following:
-
     1. Set the constant **APIKEY_APPINSIGHTS** to the [API key](/developerportal/collaborate/product-insights/#obtain-api-key) that you obtained.
     2. (Optional) Configure the constant **TEST_MODE**. If this is turned on, the survey will always show.
     3. Save the changes.
-
-4. Open the **Put Survey Widget On Template** folder, and place **Template_SurveyWidget** on the page where you would like the mini-survey to appear. We recommend placing only one widget inside the master layout page.
+4. Open the **Put Survey Widget On Template** folder, and place **Template_SurveyWidget** on the page where you would like the mini-survey to appear. We recommend placing only one widget inside the primary layout page.
 5. Configure how the mini-survey will appear, either on-action or on-page load:
 
-     * For the on-action option:
-     
+    * For the on-action option:
+
         1. Open the **Show Survey** folder, then copy the **ShowSurvey_OnAction** nanoflow to your own module.
-        1. In the nanoflow, double-click **Create String variable**, fill in the **Survey ID** of the mini-survey, and then save the changes. You can find the survey ID on the [Settings](/developerportal/collaborate/product-insights/#survey-details-settings) tab or [Implementation](/developerportal/collaborate/product-insights/#survey-details-implementation) tab of the survey details page in **App Insights** in the Developer Portal.
-        1. (Optional) Double-click **CHANGE ME**, add your microflow or nanoflow action, then save the changes.
-        1. Create a button that calls the **ShowSurvey_OnAction** nanoflow on the page where **Template_SurveyWidget** is placed. Mendix recommends renaming the flow to something that describes the original action.
+        2. In the nanoflow, double-click **Create String variable**, fill in the **Survey ID** of the mini-survey, and then save the changes. You can find the survey ID on the [Settings](/developerportal/collaborate/product-insights/#survey-details-settings) tab or [Implementation](/developerportal/collaborate/product-insights/#survey-details-implementation) tab of the survey details page in **App Insights** in the Developer Portal.
+        3. (Optional) Double-click **CHANGE ME**, add your microflow or nanoflow action, then save the changes.
+        4. Create a button that calls the **ShowSurvey_OnAction** nanoflow on the page where **Template_SurveyWidget** is placed. Mendix recommends renaming the flow to something that describes the original action.
 
     * For the on-page load option:
-
+   
         1. Open the **Show Survey** folder, and copy the widget from **ShowSurvey_OnPageLoad** to your page.
-        1. Place this widget on any page you wish to show the survey (you can use multiple **Show Mini Survey On Page Load** widgets in your app to trigger many surveys).
-        1. Double-click the **Show Mini Survey On Page Load** widget, then fill in the **Survey ID**.
+        2. Place this widget on any page you wish to show the survey (you can use multiple **Show Mini Survey On Page Load** widgets in your app to trigger many surveys).
+        3. Double-click the **Show Mini Survey On Page Load** widget, then fill in the **Survey ID**.
 
 6. In **App Explorer**, double-click **Security**, and add the **AppInsights_MiniSurvey.User** user role to all the system roles that use the mini-survey in the **App Security** dialog box.
 

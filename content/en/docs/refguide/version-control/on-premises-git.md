@@ -65,7 +65,7 @@ To interact with this private repository from Studio Pro, you need a link to the
 
 ### 4.2 Preparing Studio Pro for Git {#preparing-git-support}
 
-To use Git, you need to configure the name and email values that will be used to identify your commit in Studio Pro by navigating to **Edit** > **Preferences** > **Version Control**:
+To use on-premise Git, you need to configure name and email values that will be used to identify your commit in Studio Pro by navigating to **Edit** > **Preferences** > **Version Control**:
 
 {{< figure src="/attachments/refguide/version-control/on-premises-git/preferences-git.png" alt="Preferences dialog" >}}
 

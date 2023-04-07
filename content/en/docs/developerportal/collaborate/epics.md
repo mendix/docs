@@ -196,7 +196,7 @@ To migrate from Stories to Epics, follow these steps:
 
 These are the new locations of migrated stories:
 
-| From Stories | To Epics | Additionnal Information |
+| From Stories | To Epics | Additional Information |
 | --- | --- | --- |
 | **Active Sprint** | **Active Sprint** in [Planning](#planning) | All stories are migrated to **To Do** swimlane with tags. |
 | Rest of the Sprints and backlog | **Refinement** in [Planning](#planning) | |

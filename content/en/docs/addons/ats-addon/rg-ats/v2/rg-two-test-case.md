@@ -80,7 +80,7 @@ For more information about the call types of test steps, see [Test Step](/addons
 
 ## 4 Test Data
 
-Under the **Test Data** tab, you can set a master dataset for your test case. You can now link the fields of the master dataset to your test steps. Note that the test case runs a separate session for every record in the master dataset. For more information on how to use datasets in your test cases, see [Data Driven Testing](/addons/ats-addon/rg-two-data-driven-testing/).
+Under the **Test Data** tab, you can set a primary dataset for your test case. You can now link the fields of the primary dataset to your test steps. Note that the test case runs a separate session for every record in the primary dataset. For more information on how to use datasets in your test cases, see [Data Driven Testing](/addons/ats-addon/rg-two-data-driven-testing/).
 
 ## 5 Show Usages
 

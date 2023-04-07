@@ -115,7 +115,7 @@ This performance difference is hardly noticeable to a single user when signing i
 
 A (web service) user will sign in to execute a web service operation, wait for the operation to finish, and finally get the result back (if any).
 
-Imagine an empty microflow that returns nothing at all exposed as a published web service. We ask one user to execute this operation as many times as he can in one minute (simulated with SoapUI). First we set the hashing algorithm to BCrypt, then we set it to SSHA256. Any extra overhead here (on top of establishing the connection, building the XML message and so forth) is basically the hashing algorithm, as the operation should take near zero milliseconds and there is no result. So that leaves only the login, or, more precisely, the hashing of the password.
+Imagine an empty microflow that returns nothing at all exposed as a published web service. We ask one user to execute this operation as many times as they can in one minute (simulated with SoapUI). First we set the hashing algorithm to BCrypt, then we set it to SSHA256. Any extra overhead here (on top of establishing the connection, building the XML message and so forth) is basically the hashing algorithm, as the operation should take near zero milliseconds and there is no result. So that leaves only the login, or, more precisely, the hashing of the password.
 
 | Hashing Algorithm | Total Operations Executed | Operation per Second | Overhead in Milliseconds |
 | --- | --- | --- | --- |

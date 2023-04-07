@@ -57,7 +57,7 @@ Mendix Studio Pro will run on any machine which can run the [minimum requirement
 
 ### 2.1 Firewall Settings {#firewall-settings}
 
-Studio Pro needs access to the following URLs in order to work. If your firewall is blocking these, you will need to whitelist them:
+Studio Pro needs access to the following URLs in order to work. If your firewall is blocking these, you will need to safelist them:
 
 * `*.mendix.com`
 * `*.mendixcloud.com`

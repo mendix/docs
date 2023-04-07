@@ -39,7 +39,6 @@ On the left side of the top bar, you open an access menu by clicking the **Switc
 You can then access the following parts of the Mendix Platform:
 
 * **Mendix Home** – the [My Apps](/developerportal/#my-apps) page
-* [Studio](/studio/)
 * **Get Studio Pro** – the [Studio Pro](/refguide/) download page in the [Mendix Marketplace](/appstore/)
 * **Cloud**  – the [Nodes](/developerportal/deploy/node-permissions/) page, which shows a list of all the licensed Mendix Cloud nodes to which you have access
     * Clicking **Details** on this page opens the [Environments](/developerportal/deploy/environments/) page for the app that is deployed to a node
@@ -82,8 +81,8 @@ By clicking the ellipsis (**…**) in the app tile, you can quickly perform a nu
 
 The actions available depend on the app selected:
 
-* **Edit in Mendix Studio**
-* **Edit in Mendix Studio Pro**
+* **Edit in Studio**
+* **Edit in Studio Pro**
 * **Leave App** – allows you to leave the app
 
 To stop watching an app and disable notifications for that app, click the eye symbol so that you see the tooltip **You are not watching this app**. To return to watching that app, click the eye symbol so that you see the tooltip **You are watching this app**.

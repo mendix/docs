@@ -19,14 +19,12 @@ Scheduled events can be tested locally, but they will not be run if your app is 
 
 ## 2 Variants
 
-Until Mendix 9.12.0 scheduled events only execute on the cluster leader node, with an at-most-once guarantee, which means that they
-will not be executed if something happens to the cluster leader node. Also, these scheduled events do not support proper monthly and
-yearly events and potentially suffer from a shift of one hour due to daylight saving. These 'legacy' scheduled events are
-deprecated and will no longer be supported from Mendix 10.
+Until Mendix 9.12.0 scheduled events only execute on the cluster leader node, with an at-most-once guarantee, which means that they will not be executed if something happens to the cluster leader node. Also, these scheduled events do not support proper monthly and yearly events and potentially suffer from a shift of one hour due to daylight saving. These 'legacy' scheduled events are deprecated and will no longer be supported from Mendix 10.
 
-As of Mendix 9.12.0 scheduled events have been improved and are being executed using the [task queue](/refguide/task-queue/), providing an
-at-least-once guarantee. They will be executed by an arbitrary node in the cluster and support monthly and yearly events properly.
+As of Mendix 9.12.0 scheduled events have been improved and are being executed using the [task queue](/refguide/task-queue/), providing an at-least-once guarantee. They will be executed by an arbitrary node in the cluster and support monthly and yearly events properly.
+
 Most importantly, you can no longer specify a specific date and time for task queue-based scheduled events — all events will recur at the specified time, depending on the schedule you set up.
+
 In addition, these recurring events will now work as expected in the face of daylight saving time.
 
 Mendix versions 9.12.0 and above supports the following schedule types:

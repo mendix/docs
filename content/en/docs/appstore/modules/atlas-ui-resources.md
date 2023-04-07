@@ -7,6 +7,10 @@ tags: ["marketplace", "marketplace component", "atlas ui", "atlas ui resources",
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
+{{% alert color="warning" %}}
+This module is deprecated. For an alternative, see [ABC]().
+{{% /alert %}}
+
 ## 1 Introduction
 
 The [Atlas UI Resources](https://marketplace.mendix.com/link/component/104730/) help you to speed up your app design process by using custom templates, building blocks, and widget, and making them your own.

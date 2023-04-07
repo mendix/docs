@@ -449,4 +449,4 @@ Check out the following release blogs for more information about business events
 * [Mendix Studio Pro 9.18 release blog](https://www.mendix.com/blog/mendix-release-9-18-next-level-performance/) 
 * [Mendix Studio Pro 9.24 release blog](https://www.mendix.com/blog/mendix-release-9-24-what-a-ride-it-has-been/) 
 
-See also [Business Event Services](/refguide/business-event-services/), the Studio Pro 9 guide entry about the business event service documents.
+See also [Business Event Services](/refguide/business-event-services/), the Studio Pro guide entry about the business event service documents.

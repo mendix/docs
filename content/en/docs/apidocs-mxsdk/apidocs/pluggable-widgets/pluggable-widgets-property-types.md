@@ -54,13 +54,13 @@ This defines a property's type. A `type` must be one of the following:
 
 ### 1.2 XML Elements
 
-`<caption>` (required) — This defines the property name visible for the user (not the end-user) while configuring the widget in Studio and Studio Pro.
+`<caption>` (required) — This defines the property name visible for the user (not the end-user) while configuring the widget in Studio Pro.
 
 `<description>` (required) — This is a description which explains a property's purpose.
 
 ## 2 Static Types
 
-Static types are made to pass values configured in Studio or Studio Pro to the widget. They do not depend on any dynamic data. Static properties are passed to the widget client component as simple primitive values.
+Static types are made to pass values configured in Studio Pro to the widget. They do not depend on any dynamic data. Static properties are passed to the widget client component as simple primitive values.
 
 ### 2.1 String {#string}
 
@@ -73,7 +73,7 @@ The string property type is represented as a simple text input in Studio Pro. It
 | `type`         | Yes      | String         | Must be `string`                                                      |
 | `key`          | Yes      | String         | See [key](#key)                                                       |
 | `defaultValue` | No       | String         | Default value for the property                                        |
-| `multiline`    | No       | Boolean        | `true` to enable multiline input in Studio, `false` otherwise         |
+| `multiline`    | No       | Boolean        | `true` to enable multiline input in Studio, `false` otherwise {{% todo %}}[Delete?]{{% /todo %}}         |
 | `required`     | No       | Boolean        | Whether the property must be specified by the user, `true` by default |
 
 #### 2.1.2 Studio Pro UI
@@ -292,7 +292,7 @@ Then the Studio Pro UI for the component appears like this:
 The widgets property allows a user to place multiple widgets inside a pluggable widget, similar to the content of a [container](/refguide/container/) widget. It is passed as a `ReactNode` prop to a client component if a `dataSource` attribute is not specified, otherwise it is passed as a [`ListWidgetValue`](/apidocs-mxsdk/apidocs/pluggable-widgets-client-apis-list-values/#listwidgetvalue). For more information, see the [Datasource](#datasource) section below.
 
 {{% alert color="warning" %}}
-Some widgets are not yet supported inside pluggable widgets. Placing unsupported widgets inside a pluggable widget results in a consistency error in Studio and Studio Pro.
+Some widgets are not yet supported inside pluggable widgets. Placing unsupported widgets inside a pluggable widget results in a consistency error in Studio Pro.
 {{% /alert %}}
 
 #### 3.3.1 XML Attributes
@@ -446,7 +446,7 @@ When a `dataSource` attribute is specified and configured by the user, it is pas
 |--------------|----------|----------------|----------------------------------------------------------------------------------------------------|
 | `type`       | Yes      | String         | Must be `textTemplate`                                                                             |
 | `key`        | Yes      | String         | See [key](#key)                                                                                    |
-| `multiline`  | No       | Boolean        | `true` to enable multiline input in Studio, `false` otherwise                                      |
+| `multiline`  | No       | Boolean        | `true` to enable multiline input in Studio, `false` otherwise {{% todo %}}[Delete?]{{% /todo %}}                                     |
 | `required`   | No       | Boolean        | Whether the property must be specified by the user, `true` by default                              |
 | `dataSource` | No       | Property Path  | Specifies the path to a [`datasource`](#datasource) property linked to this text template property |
 

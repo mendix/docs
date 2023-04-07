@@ -22,11 +22,11 @@ Errors that are related to the configuration module are shown in the Widget Deve
 
 ## 3 Customizing the Widget’s Properties
 
-To customize the properties available in the Studios for the pluggable widget, the module should export a `getProperties` function. This function is passed three parameters:
+To customize the properties available in Studio Pro for the pluggable widget, the module should export a `getProperties` function. This function is passed three parameters:
 
 * The current configured values, following the [Values API](/apidocs-mxsdk/apidocs/pluggable-widgets-studio-apis/#values)
 * The default property configuration
-* An indicator for which of the Studios the properties are built for (this property is `"web"` for Studio and `"desktop"` for Studio Pro)
+* An indicator for which of the Studios the properties are built for (this property is `"web"` for Studio and `"desktop"` for Studio Pro) {{% todo %}}[Delete this line?]{{% /todo %}}
 
 ```typescript
 function getProperties(
@@ -203,11 +203,6 @@ The default configuration would then be:
 ## 4 Customizing Object Grids {#customize-object-grids}
 
 An object grid for object properties can be customized. To do this, the property needs to have `objectHeaders` configured, which will be used as column headers. Each object also needs to have `captions` configured for the grid to be filled.
-
-{{% alert color="info" %}}
-In Studio, object values are shown as lists instead of grids. However, it is possible to customize this list similar to what you can do in Studio Pro. For each object, the first caption will be displayed as value in the list. The object headers have no effect in Studio.
-{{% /alert %}}
-
 ### 4.1 Example
 
 If you wished to use data point structure detailed above to visualize geographic coordinates, you might want to add the suffixes `° N` and `° W` to the numeric **x** and **y** values so the grid will look like this (values below are purely hypothetical):
@@ -282,13 +277,11 @@ type Problem = {
     property?: string; // key of the property, at which the problem exists
     severity?: "error" | "warning" | "deprecation"; // default = "error"
     message: string; // description of the problem
-    studioMessage?: string; // studio-specific message, defaults to message
-    url?: string; // link with more information about the problem
-    studioUrl?: string; // studio-specific link
+    url?: string; // link with more information about the problem    
 }
 ```
 
-Any problem returned from this function will be shown in the [Errors](/refguide/errors-pane/) pane in Studio Pro, and the [Checks](/studio/checks/) pane in Studio.
+Any problem returned from this function will be shown in the [Errors](/refguide/errors-pane/) pane in Studio Pro.
 
 ### 5.1 Targeting a Property of a Sub-Object
 

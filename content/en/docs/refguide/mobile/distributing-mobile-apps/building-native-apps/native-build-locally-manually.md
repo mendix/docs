@@ -143,6 +143,10 @@ In the sections below you can see the basic steps to get an app up and running o
 During this process, do not accept any suggestions to update to latest Gradle or Kotlin version.
 {{% /alert %}}
 
+{{% alert color="info" %}}
+During development in Android Studio, if you select the **devDebug** build variant your application will reload changes automatically without redeploying the package.
+{{% /alert %}}
+
 To build an Android app with Android Studio, do the following:
 
 1. Run `npm install` (for NPM v7 and above run `npm install --legacy-peer-deps`) in the app root to install the required dependencies.

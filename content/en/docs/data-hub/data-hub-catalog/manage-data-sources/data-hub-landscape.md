@@ -62,7 +62,7 @@ Data sources or the published OData services are depicted as a round node with t
 
 The following is an example of a selected service node exposing three datasets:
 
-{{< figure src="/attachments/data-hub/data-hub-landscape/node-service.png" alt="service  note" >}}
+{{< figure src="/attachments/data-hub/data-hub-catalog/manage-data-sources/data-hub-landscape/node-service.png" alt="service  note" >}}
 
 #### 2.3.2 Apps
 

@@ -305,7 +305,7 @@ The Data Hub Catalog has a UI form where you can register a single exposed OData
 Follow the steps below:
 
 1. Start at the [Data Hub Catalog homepage](https://hub.mendix.com). If the connector for your business application is not shown, use the generic **OData** v4 service.
-2. On the **Contract** screen, upload your XML or ZIP file.
+2. On the **Contract** screen, upload your XML or ZIP file. For more information on the contract, see the [Contract Structure](#contract-structure) section below.
 
     If you selected the wrong file, click the **x** to remove it and upload a different one. 
 
@@ -344,3 +344,11 @@ Fill in as many details as you can to ensure that consuming developers can easil
 ##### 4.2.1.1 Selecting a Marketplace Module (Optional)
 
 If you are using a module from the Mendix Marketplace, you select it in the **Marketplace Module** field.
+
+#### 4.2.2 Contract Structure {#contract-structure}
+
+Folders in a zip contract are relative to the Document Base URL. In the image below, the left the Document Base URL is https://AnimalKingdom.com/odata the folders. The documents are relative to this Document Base URL and must match the URL path. The absolute referenced documents must be under the folder Absolute and the entire URL must be represented as folders.
+
+In the example to the right, the Document Base URL is https://AnimalKingdom.com/odata/v1/docs and therefore the relative documents are now relative to that base URL, there is no change to the absolute referenced documents.
+
+{{< figure src="/attachments/data-hub/data-hub-catalog/register-data/zip-file-structure.png" >}}

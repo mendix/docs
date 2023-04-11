@@ -347,8 +347,12 @@ If you are using a module from the Mendix Marketplace, you select it in the **Ma
 
 #### 4.2.2 Contract Structure {#contract-structure}
 
-Folders in a zip contract are relative to the Document Base URL. In the image below, the left the Document Base URL is https://AnimalKingdom.com/odata the folders. The documents are relative to this Document Base URL and must match the URL path. The absolute referenced documents must be under the folder Absolute and the entire URL must be represented as folders.
+Folders in a ZIP contract are relative to the Document Base URL.
 
-In the example to the right, the Document Base URL is https://AnimalKingdom.com/odata/v1/docs and therefore the relative documents are now relative to that base URL, there is no change to the absolute referenced documents.
+* Primary document – This must be indicated by naming it primary.
+* Absolute URI – If the file location/URI is given by an absolute URL. For example, it includes the full path starting from `http` or `https` followed by the domain and the rest of the URI, then this must be in a folder named `http` or `https` according to the original URL, each following folder shall then represent a segment of the path, starting with the topmost folder `http` or `https`. 
+* Relative URI – All referenced documents that are relative to the primary document must have their folder structure given in such a way that when it is combined together will give the relative path as it is used in the primary document.
+
+See the ZIP structure example for reference:
 
 {{< figure src="/attachments/data-hub/data-hub-catalog/register-data/zip-file-structure.png" >}}

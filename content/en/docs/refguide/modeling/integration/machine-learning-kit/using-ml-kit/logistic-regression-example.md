@@ -29,17 +29,30 @@ To integrate this in a Mendix app with the Mendix [Machine Learning Kit](/refgui
 
 3. Resolve any errors by [configuring dynamic tensor shapes](/refguide/machine-learning-kit/using-ml-kit/#dynamic-shapes).
 
-4. 
+## 3 Using the Model
 
+Once you have imported the model, you can start working with it by calling it in microflows.
 
-{{< figure src="/attachments/refguide/modeling/integration/ml-kit/ml-kit/logistic-regression/call-ml-mapping.png" alt="Example of the mapping call." >}}
+1. Use the [Call ML model](/refguide/call-ml-model/) activity to call it in a microflow:
 
-Create pre-processed inputs with **Create object** activity for inference inside your Mendix app, and consume the inference output with microflow [expressions](/refguide/expressions/).
+{{< figure src="/attachments/refguide/modeling/integration/ml-kit/ml-kit/logistic-regression/call-ml-mapping.png" >}}
 
-A **Create Object** activity is used for the first part in order to transfer entities from the domain model to the ML model input object. 
+2. Create pre-processed inputs with **Create object** activity for inference inside your Mendix app. This activity is used for the first part in order to transfer entities from the domain model to the ML model input object:
 
 {{< figure src="/attachments/refguide/modeling/integration/ml-kit/ml-kit/logistic-regression/create-object.png" alt="Details of the log message in a microflow example." >}}
 
+3. You can then consume the inference output with microflow [expressions](/refguide/expressions/), using a **Create variable** activity:
+
 {{< figure src="/attachments/refguide/modeling/integration/ml-kit/ml-kit/logistic-regression/create-variable.png" alt="Details of the log message in a microflow example." >}}
 
-{{< figure src="/attachments/refguide/modeling/integration/ml-kit/ml-kit/logistic-regression/change-object.png" alt="Details of the log message in a microflow example." >}}
+## 4 Reference Microflows
+
+The microflow for making the inference is below:
+
+{{< figure src="/attachments/refguide/modeling/integration/ml-kit/ml-kit/logistic-regression/make-inference-microflow.png" >}}
+
+The complete microflow to predict the IRIS flower classification using logistic regression is below:
+
+{{< figure src="/attachments/refguide/modeling/integration/ml-kit/ml-kit/logistic-regression/predict-iris-class-microflow.png" >}}
+
+{{% alert color="info" %}}Access the [ONNX file](https://github.com/mendix/mlkit-demo-apps/tree/main/mlsource/iris_logisticregression), [Jupyter notebook](https://github.com/mendix/mlkit-demo-apps/blob/main/notebooks/iris_lr.ipynb), and the [Java files](https://github.com/mendix/mlkit-demo-apps/tree/main/javasource/iris_logisticregression/proxies) for the logistic regressor example in the [Mendix ML Kit Demo Respository](https://github.com/mendix/mlkit-demo-apps#getting-started).{{% /alert %}}

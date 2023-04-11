@@ -9,7 +9,7 @@ description: "Native Template 7 release notes."
 
 **Release date: March 23rd, 2023**
 
-### Changed
+### Improvements
 
 * We updated our React Native version to 0.70.7
-* We updated few libraries to be compatible with Studio Pro 9.24
+* We updated certain libraries to be compatible with Studio Pro [9.24](/releasenotes/studio-pro/9.24/)

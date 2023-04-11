@@ -279,7 +279,7 @@ You can set an explicit order in the theme settings (**App Settings** > **Theme*
 
 ### 7.2 Optimization
 
-Allows you to configure the maximum number of workflow and microflow threads that can be executed simultaneously by the Runtime. This is an advanced setting that gives developers control over app performance. Change these settings when you face performance issues on executing workflow instances or workflow-initiated microflows. The two values indicate the amount of threads that process the queues containing workflow instances or workflow-initiated microflows, for more information see [Workflow Imstance Threads](#workflow-instance-threads) and [Microflow Threads](#microflow-threads) sections below. 
+Allows you to configure the maximum number of workflow and microflow threads that can be executed simultaneously by the Runtime. This is an advanced setting that gives developers control over app performance. Change these settings when you face performance issues on executing workflow instances or workflow-initiated microflows. The two values indicate the amount of threads that process the queues containing workflow instances or workflow-initiated microflows, for more information see [Workflow Instance Threads](#workflow-instance-threads) and [Microflow Threads](#microflow-threads) sections below. 
 App performance can be tracked (from Mendix 9.19 and above) using the following Task Queue metrics:
 
 * `mx.runtime.stats.taskqueue.queue-wait-time` – the amount of time a task has to wait for execution

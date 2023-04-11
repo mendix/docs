@@ -1,6 +1,6 @@
 ---
 title: "Pre-Trained ML Models"
-url: /refguide/machine-learning-kit/pre-trained-ml-models/
+url: /refguide/machine-learning-kit/pretrained-ml-models/
 category: Machine Learning Kit
 weight: 20
 tags: ["studio pro", "machine learning", "ml kit", "models", "integration"]

@@ -45,9 +45,7 @@ Once you have imported the model, you can start working with it by calling it in
 
 {{< figure src="/attachments/refguide/modeling/integration/ml-kit/ml-kit/logistic-regression/create-variable.png" alt="Details of the log message in a microflow example." >}}
 
-## 4 Reference Microflows
-
-The microflow for making the inference is below:
+The complete microflow for making the inference is below:
 
 {{< figure src="/attachments/refguide/modeling/integration/ml-kit/ml-kit/logistic-regression/make-inference-microflow.png" >}}
 

@@ -1,7 +1,7 @@
 ---
 title: "Business Event Services"
 url: /refguide/business-event-services/
-weight: 70
+weight: 49
 description: "Overview of business event services in Studio Pro"
 tags: ["studio pro", "consumed business event", "published business event"]
 ---

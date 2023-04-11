@@ -5,7 +5,7 @@ weight: 9
 description: "Native Template 7 release notes."
 ---
 
-## 7.0.0
+## 7.0.0 {#700}
 
 **Release date: March 23rd, 2023**
 

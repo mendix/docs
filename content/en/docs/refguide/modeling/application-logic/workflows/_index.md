@@ -22,7 +22,8 @@ You can perform the following basic functions when working on workflows:
 * Create a workflow
 * Delete a workflow
 * Add elements to a workflow
-* View element properties 
+* View element properties
+* Export a workflow to an image
 
 ### 3.1 Opening a Workflow
 
@@ -138,6 +139,19 @@ Do the following:
 7. Click **OK**.
 
 Now when you run this microflow, it will trigger the selected workflow. 
+
+### 3.8 Exporting a workflow to an image
+
+There are two ways to export a workflow to an image: 
+
+* Through the [file menu](/refguide/file-menu/) in the topbar: **File** > **Export as image...**
+* Through the tool bar within the workflow editor, click the button **Export as image**.
+
+Both options will open a **Save file** dialog allowing you to choose a name and location for the exported image. After clicking **Save** the **Export workflow model to image** dialog is opened. Here you can tweak the parameters for your image export like choosing between a transparent or opaque background and the relative size of the exported image by selecting a zoom level:
+
+{{< figure src="/attachments/refguide/modeling/application-logic/workflows/export-workflow-to-image.png" alt="Export workflow to image prompt" width="600">}}
+
+When clicking **Ok**, the current document is exported as an image in the .png format.
 
 ## 4 Workflow Entities in the System Module {#workflow-entities}
 

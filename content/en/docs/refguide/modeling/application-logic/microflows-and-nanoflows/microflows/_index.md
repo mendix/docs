@@ -127,7 +127,7 @@ If you want to see what happens while a microflow is executing, you can use the 
 ## 5 Converting a Microflow to a Nanoflow {#convert-to-nanoflow}
 
 {{% alert color="info" %}}
-This feature was introduced in Studio Pro [9.24.0](/releasenotes/studio-pro/9.24/#9240).
+This feature was introduced in Studio Pro [9.24.0](/releasenotes/studio-pro/9.24/#9240) and the alternative option was added in Studio Pro 9.24.1.
 {{% /alert %}}
 
 To convert a microflow to a nanoflow, you have two options. The first option is to right-click anywhere in the microflow editor and select **Convert to nanoflow**. Alternatively, in the **App Explorer**, right-click on the name of the microflow you want to convert, and select **Convert to nanoflow**.

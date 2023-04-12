@@ -64,7 +64,7 @@ The main area gives an overview of your current Sprint.
 
 {{% alert color="info" %}}When you commit changes in Studio Pro, you can link your commit to stories of the current Sprint in Epics in the [Commit](/refguide/commit-dialog/) dialog box.{{% /alert %}}
 
-You can edit or end the current Sprint on the [Kanban Planning](#kanban-planning) page.
+You can edit or end the current Sprint on the [Scrum Planning](#scrum-planning) page.
 
 #### 2.1.2 Kanban Board
 

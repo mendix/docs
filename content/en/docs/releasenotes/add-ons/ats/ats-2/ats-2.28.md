@@ -8,13 +8,15 @@ weight: 72
 
 **Release date: April 11th, 2023**
 
-### Fixes
-- We fixed a styling issue causing a button in ATS to be missplaced.
-- We fixed an issue causing users to see all import runs across their apps instead of their current app.
-- We fixed an issue causing the app admin panel not displaying any environments or selenium hubs.
-
 ### Improvements
-- We upgraded to the latest Mendix patch version 8.18.24 for security fixes in the platform.
+
+* We upgraded to Mendix [8.18.24](/releasenotes/studio-pro/8.18/#81824) for security fixes.
+
+### Fixes
+
+* We fixed a styling issue that caused a button to be missplaced.
+* We fixed an issue that caused users to see all the import runs across their apps instead of their current app.
+* We fixed an issue that caused the **App Admin** panel to not display any environments or Selenium hubs.
 
 ## 2.28.9
 

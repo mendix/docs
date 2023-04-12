@@ -2,9 +2,8 @@
 title: "Register Non-OData Resources in the Data Hub Catalog"
 linktitle: "Register Non-OData Resources"
 url: /data-hub/data-hub-catalog/register-non-odata-resources/
-category: "Data Hub Catalog"
-weight: 40
 description: "Describes how to convert non-OData resources into OData and then register them in the Data Hub Catalog."
+weight: 30
 tags: ["Data Hub", "Data Hub Catalog", "registration", "OData", "register data"]
 ---
 

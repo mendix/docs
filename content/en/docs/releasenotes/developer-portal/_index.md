@@ -21,11 +21,13 @@ To see the current status of the Mendix Developer Portal and Control Center, see
 
 #### Improvements
 
-* Tag management - You can now rename, delete or change colors of your tags (21 colors to choose from!)
-* It is now possible to create, link or remove stories directly from an epic
-* Deeplink URL is now shown in the URL bar so you can bookmark individual pages including stories, epics or your main board, and easily come back to them later
-* If you are using Scrum, you can now see an summary of your completed sprints on the Archive page. You can see how many stories were completed (and uncompleted) and the breakdown of completed points in the sprint.
-* You can now import and export stories using Excel. More information can be found in our documentation.
+* We added the following features to Epics:
+  * You can now add, rename, and delete tags, as well as change tag colors (21 colors to choose from!).
+  * You can now create, link, or remove stories directly from an epic.
+  * The address bar in your browser now shows the link to the exact board, story, and epic, so you can bookmark individual pages and easily come back to them.
+  * If you use Scrum, you can now see a summary of your completed sprint on the [archived Sprint details](/developerportal/collaborate/epics/#archived-sprint-details) page. You can see how many stories were completed and uncompleted, as well as the breakdown of completed points in the Sprint.
+  * You can now [import](/developerportal/collaborate/epics/#import-stories) and [export](/developerportal/collaborate/epics/#export-archived-stories) stories using Excel files.
+
 
 ### April 4th, 2023
 

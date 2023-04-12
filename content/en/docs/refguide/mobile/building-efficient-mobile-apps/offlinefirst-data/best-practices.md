@@ -98,34 +98,26 @@ If you want to deviate from the practices outlined above, introduce a new microf
 
 Both autonumbers and calculated attributes require input from the server; therefore, they are not allowed. Objects with these attribute types can still be viewed and created offline, but the attributes themselves cannot be displayed.
 
-### 4.4 Default Attribute Values {#default-attributive}
-
-{{% alert color="warning" %}}
-This limitation applies only to Mendix 9.7 and below. Mendix 9.8 and above supports default attributes.
-{{% /alert %}}
-
-Default attribute values for entities in the domain model do not have any effect on objects created offline. Boolean attributes will always default to `false`, numeric attributes to `0`, and other attributes to `empty`.
-
-### 4.5 Many-to-Many Associations {#many-to-many}
+### 4.4 Many-to-Many Associations {#many-to-many}
 
 Many-to-many associations are not supported. A common alternative is to introduce a third entity that has one-to-many associations with the other entities.
 
-### 4.6 Inheritance {#inheritance}
+### 4.5 Inheritance {#inheritance}
 
 It is not possible to use more than one entity from a generalization or specialization relation. For example if you have an `Animal` entity and a `Dog` specialization, you can use either use `Animal` or `Dog`, but not both from your offline profile. An alternative pattern is to use composition (for example, object associations).
 
-### 4.7 System Members {#system-members}
+### 4.6 System Members {#system-members}
 
 System members (`createdDate`, `changedDate`, `owner`, `changedBy`) are not supported.
 
-### 4.8 Excel and CSV Export {#excel-cv}
+### 4.7 Excel and CSV Export {#excel-cv}
 
 Excel and CSV export are not available in offline applications.
 
-### 4.9 Hashed String Attributes {#hashed-strings}
+### 4.8 Hashed String Attributes {#hashed-strings}
 
 Attributes with the hashed string [attribute type](/refguide/attributes/#type) will not be synchronized.
 
-### 4.10 Access Rules with XPath Constraints {#access-rules}
+### 4.9 Access Rules with XPath Constraints {#access-rules}
 
 While working offline, offline-first apps cannot apply access rules with XPath constraints. For example, consider a `Customer` entity with `Locked` (Boolean) and `Name` (string) attributes. There is an access rule where the `Name` attribute of the customer is writable only when the `Locked` attribute is false. Changing and committing the `Locked` attribute’s value while offline will not change the read-only status of the `Name` attribute. Instead, this change will take effect after you synchronize the changed `Customer` object.

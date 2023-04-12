@@ -13,7 +13,7 @@ These different technologies (for example, responsive, native phone) can be conf
 
 ## 2 Native Mobile Apps {#nativemobile}
 
-With Mendix 9, it is possible to build fully native mobile apps. Native mobile apps do not render inside a web view, but use native UI elements instead. This results in fast performance, smooth animations, natural interaction patterns (like swipe gestures), and improved access to all native device capabilities.  To make such responsive native mobile apps, Mendix leverages the popular open-source framework [React Native](https://facebook.github.io/react-native/).
+Studio Pro makes it is possible to build fully native mobile apps. Native mobile apps do not render inside a web view, but use native UI elements instead. This results in fast performance, smooth animations, natural interaction patterns (like swipe gestures), and improved access to all native device capabilities.  To make such responsive native mobile apps, Mendix leverages the popular open-source framework [React Native](https://facebook.github.io/react-native/).
 
 For more information, see [Native Mobile](/refguide/mobile/introduction-to-mobile-technologies/native-mobile/).
 

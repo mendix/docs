@@ -18,7 +18,7 @@ This tutorial will teach you several key Mendix concepts, such how to add an ent
 
 A [microflow](/refguide/microflows/) is a visual way of expressing logic or code which is compiled into executable code at runtime. Microflows are commonly used to perform actions such as creating and changing objects, showing pages, and making choices.
 
-[Mendix Studio Pro](https://marketplace.mendix.com/link/studiopro/) is the Mendix integrated development environment (IDE) for professional developers. This tutorial will use Studio Pro version 9.12.1, but you can use a later version if you wish.
+[Mendix Studio Pro](https://marketplace.mendix.com/link/studiopro/) is the Mendix integrated development environment (IDE) for professional developers. Use the latest version of Studio Pro when completing the tutorial. Some of the screenshots in this guide might look a little different than your product, but we recommend you use the latest version of Studio Pro for ease and security.
 
 Every app created with us automatically provisions a [Free Cloud Environment](/developerportal/deploy/mendix-cloud-deploy/#free-app) the first time it is deployed, so you do not have to waste time provisioning a testing environment.
 

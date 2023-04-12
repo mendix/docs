@@ -21,7 +21,7 @@ To see the current status of the Mendix Developer Portal and Control Center, see
 
 #### Improvements
 
-* We added the following features to Epics:
+* We added the following features to [Epics](/developerportal/collaborate/epics/):
   * You can now add, rename, and delete tags, as well as change tag colors (21 colors to choose from!).
   * You can now create, link, or remove stories directly from an epic.
   * The address bar in your browser now shows the link to the exact board, story, and epic, so you can bookmark individual pages and easily come back to them.

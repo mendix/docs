@@ -14,7 +14,7 @@ Did you commit your work to the team server? And did you make a database backup?
 
 {{< figure src="/attachments/addons/apd-addon/ig/ig-one/ig-one-installation-steps/Commit.png" >}}
 
-If you don't have an SVN client like Tortoise SVN installed, make a copy of the widgets folder in your project. {{% todo %}}[Update needed?]{{% /todo %}}
+At this step, either make a local copy of the widgets folder in your app or have a third party version control client installed such as TortoiseGit. You can use this to revert accidental changes in the next step.
 
 ## 3 Import Module APMAgent
 

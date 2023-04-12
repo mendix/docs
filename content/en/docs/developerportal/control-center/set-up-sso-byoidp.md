@@ -163,11 +163,9 @@ Single sign-on was introduced in Mendix version 7.18. Your app will need to be t
 
 ### 8.3 Automation
 
-{{% todo %}}[Change this to Git?]{{% /todo %}}
+Direct access to online code repositories on [Team Server](/developerportal/collaborate/team-server/)/SVN/Git from a custom CI/CD pipeline or via tools like Tortoise SVN/Tortoise Git requires the platform user to enter their Mendix platform password. This means that when BYOIDP is enabled, such access is no longer possible because platform users no longer have a Mendix platform password.
 
-Direct access to online code repositories on [Team Server](/developerportal/collaborate/team-server/)/SVN from a custom CI/CD pipeline or via tools like Tortoise SVN requires the platform user to enter their Mendix platform password. This means that when BYOIDP is enabled, such access is no longer possible because platform users no longer have a Mendix platform password.
-
-Access to Team Server/SVN through other mechanisms (such as using a [personal access token](/developerportal/community-tools/mendix-profile/#pat), via Studio Pro, or using Mendix for Private Cloud) is not impacted.
+Access to Team Server/SVN/Git through other mechanisms (such as using a [personal access token](/developerportal/community-tools/mendix-profile/#pat), via Studio Pro, or using Mendix for Private Cloud) is not impacted.
 
 ### 8.4 Multiple Email Domains for a Company
 

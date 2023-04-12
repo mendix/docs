@@ -250,8 +250,6 @@ URL: https://deploy.mendix.com/api/1/apps/<AppId>/packages
 
 ##### 2.5.1.2 Payload
 
-{{% todo %}}[Remove SVN here?]{{% /todo %}}
-
 The payload depends on whether the app is held in a [git repository or an SVN repository](/refguide/version-control-faq/#which-team-server).
 
 An object with the following key-value pairs:

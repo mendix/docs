@@ -108,8 +108,6 @@ Authorization: MxToken hZUPhAV4ELPrRm7U7JAKf5BnxJk6q7dcsvFdw6ZR4wRYdv7egHjwHEYBw
 
 #### 6.1.3 Response Payload
 
-{{% todo %}}[Update needed in this section?]{{% /todo %}}
-
 List of objects with the following key-value pairs:
 
 |Name|Type|Description|

@@ -197,7 +197,7 @@ You can import your stories using an Excel file to Epics as follows:
     * **Story Type** – Specify whether the story is a **Feature** or **Bug**. For tasks, leave this column empty.
     * **Story Points** – Enter the story points. For tasks, leave this column empty.
     * **Description** – Enter the description of the story. For tasks, leave this column empty.
-    * **Labels** – Enter the tags for the story. Use a comma to separate tags. For tasks, leave this column empty.
+    * **Tags** – Enter the tags for the story. Use a comma to separate tags. For tasks, leave this column empty.
 
         {{% alert color="warning" %}}All the tags that you enter in the Excel file should already exist in Epics.{{% /alert %}}
 
@@ -211,7 +211,7 @@ You can find all the imported stories in the **Backlog**.
 
 ### 3.2 Settings {#settings}
 
-When you click the settings icon on the upper-right side of the screen, a dialog box opens with four tabs: **Manage Tags**, **Board Type**, **Toast Settings**, **Data Migration**. 
+When you click the settings icon on the upper-right side of the screen, a dialog box opens with four tabs: **Manage Tags**, **Board Type**, **Toast Settings**, and **Data Migration**. 
 
 {{< figure src="/attachments/developerportal/collaborate/epics/planning-settings.png" >}}
 

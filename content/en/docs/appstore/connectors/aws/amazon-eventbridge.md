@@ -21,7 +21,7 @@ Amazon EventBridge is a serverless service that uses events to connect applicati
 
 ### 1.2 Prerequisites {#prerequisites}
 
-The Amazon EventBridge connector requires Mendix Studio Pro 9.18.0 or above.
+The Amazon EventBridge connector requires Mendix Studio Pro version 9.18.0 or above.
 
 To use the Amazon EventBridge connector, you must also install and configure the following modules:
 

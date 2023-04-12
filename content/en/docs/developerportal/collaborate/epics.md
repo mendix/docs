@@ -182,9 +182,11 @@ You can import your stories using an Excel file to Epics as follows:
 
    The **Import Stories From Excel** dialog box opens.
 
-2. Click **Download** to download the Excel file template. We recommend that you use this template to import your stories, because it can prevent errors.
+2. Click **Download** to download the Excel file template.
 
-3. Open the Excel file template. Enter the data for your stories as follows:
+   {{% alert color="warning" %}}To prevent errors, we recommend that you use this Excel file template to import your stories.{{% /alert %}}
+
+3. Open the Excel file. Enter the data for your stories as follows:
 
    * **Depth** – Enter **+** for a story and **++** for a task. A task should be added right below the story to which it belongs.
 

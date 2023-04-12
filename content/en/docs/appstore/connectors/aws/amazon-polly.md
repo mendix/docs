@@ -23,12 +23,7 @@ Amazon Polly allows you to synthesize text to speech, with 96 voices supporting 
 
 ### 1.2 Prerequisites {#prerequisites}
 
-The Amazon Polly Connector requires the [AWS authentication connector version 2.1 or higher](https://marketplace.mendix.com/link/component/120333) to authenticate with Amazon Web Services (AWS). for more information about installing and configuring the AWS Authentication Connector see [AWS Authentication](/appstore/connectors/aws/aws-authentication/).
-
-### 1.3 Dependencies
-
-* AWS Authentication Connector
-* Mendix Studio Pro 9.18.0
+The Amazon Polly Connector requires the [AWS authentication connector version 2.1 or higher](https://marketplace.mendix.com/link/component/120333) to authenticate with Amazon Web Services (AWS). For more information about installing and configuring the AWS Authentication Connector, see [AWS Authentication](/appstore/connectors/aws/aws-authentication/).
 
 ## 2 Installation
 

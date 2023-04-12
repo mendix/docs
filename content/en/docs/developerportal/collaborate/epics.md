@@ -451,6 +451,10 @@ When you click the Sprint icon in a row of an archived story on the **Archived**
 * Sprint name
 * When the Sprint was archived
 * When the Sprint started and ended
+* Summary of the Sprint
+  * How many stories were completed
+  * How many stories were uncompleted
+  * Breakdown of completed points
 * Sprint goal
 * Whether the Sprint goal was reached
 * Who archived the Sprint (shown under **Archived by**)

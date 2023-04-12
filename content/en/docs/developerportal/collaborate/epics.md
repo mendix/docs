@@ -176,42 +176,35 @@ The **Planning** page shows all your stories. At the top of the page, you can fi
 
 You can import your stories using an Excel file to Epics as follows:
 
-1. At the top of the **Planning** page, click **...** and then click **Import Stories**.
+1.  At the top of the **Planning** page, click **...** and then click **Import Stories**.
 
-   {{< figure src="/attachments/developerportal/collaborate/epics/import-stories.png" >}}
+    {{< figure src="/attachments/developerportal/collaborate/epics/import-stories.png" >}}
 
-   The **Import Stories From Excel** dialog box opens.
+    The **Import Stories From Excel** dialog box opens.
 
-2. Click **Download** to download the Excel file template.
+2.  Click **Download** to download the Excel file template.
 
-   {{% alert color="warning" %}}To prevent errors, we recommend that you use this Excel file template to import your stories.{{% /alert %}}
+    {{% alert color="warning" %}}To prevent errors, we recommend that you use this Excel file template to import your stories.{{% /alert %}}
 
-3. Open the Excel file. Enter the data for your stories as follows:
+3.  Open the Excel file. Enter the data for your stories as follows:
 
-   * **Depth** – Enter **+** for a story and **++** for a task. A task should be added right below the story to which it belongs.
+    * **Depth** – Enter **+** for a story and **++** for a task. A task should be added right below the story to which it belongs.
+    * **Name** – Enter the name of the story. For tasks, leave this column empty.
+    * **Epic** – If the story is linked to an epic, enter the epic ID. For tasks, leave this column empty.
 
-   * **Name** – Enter the name of the story. For tasks, leave this column empty.
+        {{% alert color="warning" %}}The Epic ID that you enter in the Excel file should already exist in Epics.{{% /alert %}}
 
-   * **Epic** – If the story is linked to an epic, enter the epic ID. For tasks, leave this column empty.
+    * **Story Type** – Specify whether the story is a **Feature** or **Bug**. For tasks, leave this column empty.
+    * **Story Points** – Enter the story points. For tasks, leave this column empty.
+    * **Description** – Enter the description of the story. For tasks, leave this column empty.
+    * **Labels** – Enter the tags for the story. Use a comma to separate tags. For tasks, leave this column empty.
 
-   * **Story Type** – Specify whether the story is a **Feature** or **Bug**. For tasks, leave this column empty.
-
-   * **Story Points** – Enter the story points. For tasks, leave this column empty.
-
-   * **Description** – Enter the description of the story. For tasks, leave this column empty.
-
-   * **Labels** – Enter the tags for the story, separated by a comma. For tasks, leave this column empty.
-
-     {{% alert color="warning" %}}All the tags that you enter in the Excel file should already exist in Epics.{{% /alert %}}
+        {{% alert color="warning" %}}All the tags that you enter in the Excel file should already exist in Epics.{{% /alert %}}
 
 4. Save the Excel file.
-
 5. Go back to the **Import Stories from Excel** dialog box. 
-
 6. Click **Browse**, navigate to the Excel file, and then select it.
-
-7. Click **Continue**. The dialog box gives a preview of all the stories that are to be imported.
-
+7. Click **Continue**. The dialog box gives a preview of all the stories that will be imported.
 8. Click **Continue** to import the stories. A pop-up window shows the import is finished.
 
 You can find all the imported stories in the **Backlog**.

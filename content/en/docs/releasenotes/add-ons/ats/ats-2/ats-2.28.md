@@ -4,6 +4,18 @@ url: /releasenotes/add-ons/ats-2.28/
 weight: 72
 ---
 
+## 2.28.10
+
+**Release date: April 11th, 2023**
+
+### Fixes
+- We fixed a styling issue causing a button in ATS to be missplaced.
+- We fixed an issue causing users to see all import runs across their apps instead of their current app.
+- We fixed an issue causing the app admin panel not displaying any environments or selenium hubs.
+
+### Improvements
+- We upgraded to the latest Mendix patch version 8.18.24 for security fixes in the platform.
+
 ## 2.28.9
 
 **Release date: March 28th, 2023**

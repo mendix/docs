@@ -22,9 +22,8 @@ If you need to access pages or set up a published REST service, the Deep Link mo
 | URL property of a page | You can access a page by specifying the [URL property of the page](/refguide/page-properties/#url). This is an out-of-the-box feature of Mendix Studio Pro. | Mapping is clearly configured in the application model. | <ul><li>The object ID of the data is owned by Mendix runtime, so when the object ID changes for whatever reason, the link will be broken</li><li>You can only use this solution to access pages</li></ul> |
 | Deep Link module | The Deep Link module processes the request and creates a reference object which is being stored with the user session. After this, the user is forwarded to a location which takes care of loading the Mendix Client. This is by default the `index.html` page. When the Mendix Client is loaded, the **Home** microflow (configured in the model) is executed and the microflow which is configured to handle the deep link request is being executed. | It is possible to set up non-persistent actions which can be passed as a parameter to a page. |The model consistency check is not sufficient in certain scenarios. When a microflow which is configured with a deep link at runtime and afterwards deleted at design time, Mendix consistency checking mechanism cannot catch it.|
 
-
 {{% alert color="info" %}}
-There may be other approaches which are implemented by modules in the marketplace, but these may be community-supported. Therefore, they are not listed in the table.
+There can be other approaches which are implemented by community-supported Marketplace modules, but these are not listed in this table.
 {{% /alert %}}
 
 ### 1.1 Typical Use Cases

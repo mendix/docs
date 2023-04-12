@@ -1,5 +1,5 @@
 ---
-title: "Microsoft Teams Connector"
+title: "Microsoft Teams"
 url: /appstore/connectors/ms-teams-connector/
 category: "Connectors"
 description: "Describes the configuration and usage of the Microsoft Teams Connector, which enables sending messages and actionable message cards to a Microsoft Teams channel automatically."

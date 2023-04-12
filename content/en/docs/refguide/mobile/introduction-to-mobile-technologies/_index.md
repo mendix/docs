@@ -33,10 +33,6 @@ For more information, see [Progressive Web App](/refguide/mobile/introduction-to
 
 Hybrid mobile applications are web applications that run inside a native application. They can access device capabilities via JavaScript or by relying on the native application to provide the required functionality in native code.
 
-{{% alert color="warning" %}}
-Hybrid mobile apps are deprecated as of Mendix 9. This means that hybrid mobile apps are still supported in Mendix 9 but their usage is discouraged. Accordingly, the creation of new hybrid navigation profiles is disabled.
-{{% /alert %}}
-
 For more information, see [Hybrid Mobile (Deprecated)](/refguide/mobile/introduction-to-mobile-technologies/hybrid-mobile/).
 
 ## 5 Deciding Between a PWA or Native Mobile App

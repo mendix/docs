@@ -375,9 +375,11 @@ If you still have content with the **Error** status (for example, in the **Unmig
 
 ## 4 Epics {#epics}
 
+On the upper-right corner of the page, **Create Epic** enables creating an epic.
+
 ### 4.1 Epics Overview 
 
-The **Epics** overview page shows all the epics for your current app. Each row shows the following details about an epic:
+The main area gives an overview of all the epics for your current app. Each row shows the following details about an epic:
 
 * Unique ID, which consists of a prefix and a number
 * Title
@@ -388,9 +390,7 @@ The **Epics** overview page shows all the epics for your current app. Each row s
 
 {{< figure src="/attachments/developerportal/collaborate/epics/epic.png" >}}
 
-You can create an epic by clicking **Create Epic** on the upper-right corner of the page.
-
-Clicking an epic opens the [epic details](#epic-details) dialog box.
+Clicking a row opens the [epic details](#epic-details) dialog box.
 
 ### 4.2 Epic Details {#epic-details}
 

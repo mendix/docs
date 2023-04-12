@@ -50,13 +50,60 @@ The Mendix Feedback module is easy to set up and automatically attaches addition
 * [Atlas Core](https://marketplace.mendix.com/link/component/117187) is required to apply the styling 
 * In native mobile apps, some of the feedback metadata such as username, email address, and document name will be hard-coded, as they cannot be retrieved dynamically (to address this you can use the [Native Feedback widget](/appstore/modules/native-mobile-resources/) instead, located in [Native Mobile Resources](https://marketplace.mendix.com/link/component/109513))
 
-## 2 Configuration {#configuration}
+## 2 Usage
+
+### 2.1 Adding the Widget to Your App
+
+You should use the latest version of the Mendix Feedback module, as it will provide the most up-to-date features for leaving feedback and communicating with the team. To ensure you have the latest version of the module included in your app, follow these steps:
+
+1. Download the latest version of the Mendix Feedback module from the Marketplace. You are strongly encouraged to use the latest version of the module.
+2. Configure the **User roles** in the **App Security** for the module.
+3. If the Feedback widget has not been updated to the one from the Feedback module automatically, add via these steps: 
+    1. In the **Toolbox**, find the Feedback widget in the **Feedback** category.
+    1. Drop it into a position in the layout:
+
+        {{< figure src="/attachments/appstore/modules/mendix-feedback/Toolbox-feedback.png" width="350px">}} 
+
+        {{< figure src="/attachments/appstore/modules/mendix-feedback/feedback-on-layout.png" >}} 
+
+### 2.2 Submitting Feedback on an App
+
+When you click the **Feedback icon**, the Mendix Platform first checks if you are signed in. If you are not signed in, you will need to either **Sign in to Mendix** or **Continue as a guest** to enter feedback mode:
+When you click the **Feedback icon**, the Mendix Platform first checks if you are signed in. If you are not signed in, you will need to enter email address to continue as an **Anonymous User** to submit the feedback:
+
+{{< figure src="/attachments/appstore/modules/mendix-feedback/feedback-form.png" width="500px" >}} 
+
+Click **Enter Screenshot Mode** to take a screenshot of your page or choose **Upload From Computer** to upload a selected image.
+
+{{% alert color="info" %}}
+The image is allowed up to 5MB in one of the following formats: jpg, jpeg, png, gif.
+{{% /alert %}}
+
+{{< figure src="/attachments/appstore/modules/mendix-feedback/feedback-submit-button.png" width="500px" >}} 
+
+After clicking Submit, your feedback will go straight to the Feedback page of the app in the Developer Portal. 
+Once you see the final page, you have successfully submitted your feedback.
+
+After clicking **Submit**, your feedback will go straight to the [Feedback](/developerportal/collaborate/feedback/) page of the app in the Developer Portal. To be sure your feedback is successfully submmited, you should see a final page that informs your the feedback is received. 
+
+### 2.3 Upgrading the Widget to the Module
+
+Simply download the Mendix Feedback Module from the Marketplace. It will replace the old feedback widget in your folder. You can encounter the following error:
+
+{{< figure src="/attachments/appstore/modules/mendix-feedback/install-error.png" >}}
+
+When this happens, right-click the error message, and choose **Update widget** or **Update all widgets**. Then the name of the widget is changed to **Feedback**. The updated widget is ready for use.
+
+If you are using MendixSSO3 for authentication, after upgrading to the module you can choose to continue using your Microflow to configure the MendixSSO authentication or include and use the **DS_GetCurrentIdToken** Microflow from the FeedbackModule.
+
+## 3 Configuration {#configuration}
 
 You can configure the module for certain actions in your app. All the configuration properties are explained on the various tabs of the properties dialog box for the module. The feedback feature requires the following properties to be set:
 
-* **Project** tab     
-    * **Submit successful image url** – changes the image to show on the last successfully submitted page
-    * **Allow screenshots** – controls whether the end-user can take a screenshot or not
+* **Project** tab
+    * **Allow screenshots** – Controls whether the end-user can take a screenshot or not.
+    * **Submit successful image url** – Changes the image to show on the last successfully submitted dialog. Leaving this empty will result in no image being shown.
+    * **Submit failed image url** – Changes the image to show on the failed submitted dialog. Leaving this empty will result in no image being shown.
 * **Advanced** tab
     * **App ID** – the unique identifier of your app, which you can find in your app’s [General Settings](/developerportal/collaborate/general-settings/) in the Developer Portal
 
@@ -94,52 +141,6 @@ You can configure the module for certain actions in your app. All the configurat
 
 * **Authentication** tab
     The translation should be filled in automatically but you can still configure your own text and translation here.
-
-## 3 Usage
-
-### 3.1 Adding the Widget to Your App
-
-You should use the latest version of the Mendix Feedback module, as it will provide the most up-to-date features for leaving feedback and communicating with the team. To ensure you have the latest version of the module included in your app, follow these steps:
-
-1. Download the latest version of the Mendix Feedback module from the Marketplace. You are strongly encouraged to use the latest version of the module.
-2. Configure the **User roles** in the **App Security** for the module.
-3. If the Feedback widget has not been updated to the one from the Feedback module automatically, add via these steps: 
-    1. In the **Toolbox**, find the Feedback widget in the **Feedback** category.
-    1. Drop it into a position in the layout:
-
-        {{< figure src="/attachments/appstore/modules/mendix-feedback/Toolbox-feedback.png" width="350px">}} 
-
-        {{< figure src="/attachments/appstore/modules/mendix-feedback/feedback-on-layout.png" >}} 
-
-### 3.2 Submitting Feedback on an App
-
-When you click the **Feedback icon**, the Mendix Platform first checks if you are signed in. If you are not signed in, you will need to either **Sign in to Mendix** or **Continue as a guest** to enter feedback mode:
-When you click the **Feedback icon**, the Mendix Platform first checks if you are signed in. If you are not signed in, you will need to enter email address to continue as an **Anonymous User** to submit the feedback:
-
-{{< figure src="/attachments/appstore/modules/mendix-feedback/feedback-form.png" width="500px" >}} 
-
-Click **Enter Screenshot Mode** to take a screenshot of your page or choose **Upload From Computer** to upload a selected image.
-
-{{% alert color="info" %}}
-The image is allowed up to 5MB in one of the following formats: jpg, jpeg, png, gif.
-{{% /alert %}}
-
-{{< figure src="/attachments/appstore/modules/mendix-feedback/feedback-submit-button.png" width="500px" >}} 
-
-After clicking Submit, your feedback will go straight to the Feedback page of the app in the Developer Portal. 
-Once you see the final page, you have successfully submitted your feedback.
-
-After clicking **Submit**, your feedback will go straight to the [Feedback](/developerportal/collaborate/feedback/) page of the app in the Developer Portal. To be sure your feedback is successfully submmited, you should see a final page that informs your the feedback is received. 
-
-### 3.3 Upgrading the Widget to the Module
-
-Simply download the Mendix Feedback Module from the Marketplace. It will replace the old feedback widget in your folder. You can encounter the following error:
-
-{{< figure src="/attachments/appstore/modules/mendix-feedback/install-error.png" >}}
-
-When this happens, right-click the error message, and choose **Update widget** or **Update all widgets**. Then the name of the widget is changed to **Feedback**. The updated widget is ready for use.
-
-If you are using MendixSSO3 for authentication, after upgrading to the module you can choose to continue using your Microflow to configure the MendixSSO authentication or include and use the **DS_GetCurrentIdToken** Microflow from the FeedbackModule.
 
 ## 4 Troubleshooting
 

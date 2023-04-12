@@ -48,7 +48,7 @@ On the upper-right corner of the page, you can find the following items:
 
 * **Create Story** – opens a dialog box where you can create a story
 
-* Search box – enables searching stories based on story title, tags, epic name, assignee (and unassigned stories), story title, and story ID.
+* Search box – enables searching stories based on story title, tags, epic name, assignee (and unassigned stories), and story ID.
 
 ### 2.1 Scrum Board vs Kanban Board {#different-boards}
 
@@ -56,7 +56,7 @@ Depending on your settings of [board type](#board-type): Scrum or Kanban, the ma
 
 #### 2.1.1 Scrum Board
 
-If you work with the Scrum board, at the top of the page, you can find the name of the Sprint, when it ends, and how many stories and points it has. The area right below shows the goal of the current Sprint.
+If you work with the Scrum board, on the upper-left corner, you can find the name of the Sprint, when it ends, and how many stories and points it has. The area right below shows the goal of the current Sprint.
 
 {{< figure src="/attachments/developerportal/collaborate/epics/sprint-goal.png" >}}
 
@@ -68,7 +68,7 @@ You can edit or end the current Sprint on the [Scrum Planning](#scrum-planning) 
 
 #### 2.1.2 Kanban Board
 
-If you work with the Kanban board, the top of the page shows the number of stories and the total points. 
+If you work with the Kanban board, the upper-left corner of the page shows the number of stories and the total points. 
 
 {{< figure src="/attachments/developerportal/collaborate/epics/stories-story-points.png" >}}
 
@@ -167,49 +167,109 @@ The **Planning** page shows all your stories. At the top of the page, you can fi
 
 * **Create Epic** – This enables creating an epic.
 * **Create Story** – This enables creating a story.
-* Search box – This enables searching stories based on story title, tags, epic name, assignee (and unassigned stories), story title, and story ID.
 * **Edit Sprint** (only available for [Scrum planning](#Scrum-planning)) – This enables editing the current Sprint.
 * **End Sprint** (only available for [Scrum planning](#Scrum-planning)) – This enables ending the current Sprint.
 * **Start Sprint** (only available for [Scrum planning](#Scrum-planning)) – This enables starting a new Sprint.
+* Search box – This enables searching stories based on story title, tags, epic name, assignee (and unassigned stories), and story ID.
 
-### 3.1 Import Stories {#import-stories}
+### 3.1 Scrum Planning vs Kanban Planning {#different-plannings}
+
+Depending on your settings of [board type](#board-type): Scrum or Kanban, the **Planning** page looks different.
+
+#### 3.1.1 Scrum Planning {#scrum-planning}
+
+If there is an active Sprint, on the upper-left corner, you can find the name of the Sprint, when it ends, and how many stories and points it has. The area right below shows the goal of the current Sprint.
+
+{{< figure src="/attachments/developerportal/collaborate/epics/scrum-planning.png" >}}
+
+On the upper-right corner, you can find **End Sprint** and **Edit Sprint**, or **Start Sprint**:
+
+If there is an active Sprint, you can find **End Sprint** and **Edit Sprint**. When you end a Sprint, the system shows you how many stories were completed in that Sprint. All the completed stories are [archived](#archive) automatically, and you can decide where the unfinished stories should go. 
+
+If there is no active Sprint, you can find **Start Sprint**. Once a Sprint is created, all the items in the **Next Sprint** are moved to the **Active Sprint** automatically. 
+
+In the main area of the page, stories are grouped in these categories: **Active Sprint** (if there is an active Sprint), **Next Sprint**, **Refinement**, and **Backlog**.
+
+#### 3.1.2 Kanban Planning {#kanban-planning}
+
+If you do Kanban planning, the upper-top corner of the page shows the number of stories and the total points. 
+
+{{< figure src="/attachments/developerportal/collaborate/epics/kanban-planning.png" >}}
+
+In the main area of the page, stories are grouped in these categories: **To Do**, **Refinement**, and **Backlog**.
+
+### 3.2 Planning Overview
+
+The main area of the **Planning** page lists all the stories in different categories. Each row shows the following information about a story:
+
+* Whether the story is a bug or a feature
+* If the story has a feedback item linked to it
+* Unique story ID
+* Story title
+* Linked epic
+* Tags
+* Number of comments
+* Number of the tasks
+* Story points
+* To whom the story is assigned
+
+{{< figure src="/attachments/developerportal/collaborate/epics/story-kanban.png" >}}
+
+To [archive](#archive) or delete a story, click the **...** icon at the end of the row, and then select the corresponding option:
+
+{{< figure src="/attachments/developerportal/collaborate/epics/archive-delete-story-kanban.png" >}}
+
+To move a story, drag the row to a different category.
+
+Clicking a row opens the [story details](#story-details) page.
+
+### 3.3 Import Stories {#import-stories}
 
 You can import your stories using an Excel file to Epics as follows:
 
-1.  At the top of the **Planning** page, click **...** and then click **Import Stories**.
+1. At the top of the **Planning** page, click **...** and then click **Import Stories**.
 
-    {{< figure src="/attachments/developerportal/collaborate/epics/import-stories.png" >}}
+   {{< figure src="/attachments/developerportal/collaborate/epics/import-stories.png" >}}
 
-    The **Import Stories From Excel** dialog box opens.
+   The **Import Stories From Excel** dialog box opens.
 
-2.  Click **Download** to download the Excel file template.
+2. Click **Download** to download the Excel file template.
 
-    {{% alert color="warning" %}}To prevent errors, we recommend that you use this Excel file template to import your stories.{{% /alert %}}
+   {{% alert color="warning" %}}To prevent errors, we recommend that you use this Excel file template to import your stories.{{% /alert %}}
 
-3.  Open the Excel file. Enter the data for your stories as follows:
+3. Open the Excel file. Enter the data for your stories as follows:
 
-    * **Depth** – Enter **+** for a story and **++** for a task. A task should be added right below the story to which it belongs.
-    * **Name** – Enter the name of the story. For tasks, leave this column empty.
-    * **Epic** – If the story is linked to an epic, enter the epic ID. For tasks, leave this column empty.
+   * **Depth** – Enter **+** for a story and **++** for a task. A task should be added right below the story to which it belongs.
 
-        {{% alert color="warning" %}}The Epic ID that you enter in the Excel file should already exist in Epics.{{% /alert %}}
+   * **Name** – Enter the name of the story. For tasks, leave this column empty.
 
-    * **Story Type** – Specify whether the story is a **Feature** or **Bug**. For tasks, leave this column empty.
-    * **Story Points** – Enter the story points. For tasks, leave this column empty.
-    * **Description** – Enter the description of the story. For tasks, leave this column empty.
-    * **Tags** – Enter the tags for the story. Use a comma to separate tags. For tasks, leave this column empty.
+   * **Epic** – If the story is linked to an epic, enter the epic ID. For tasks, leave this column empty.
 
-        {{% alert color="warning" %}}All the tags that you enter in the Excel file should already exist in Epics.{{% /alert %}}
+     {{% alert color="warning" %}}The Epic ID that you enter in the Excel file should already exist in Epics.{{% /alert %}}
+
+   * **Story Type** – Specify whether the story is a **Feature** or **Bug**. For tasks, leave this column empty.
+
+   * **Story Points** – Enter the story points. For tasks, leave this column empty.
+
+   * **Description** – Enter the description of the story. For tasks, leave this column empty.
+
+   * **Tags** – Enter the tags for the story. Use a comma to separate tags. For tasks, leave this column empty.
+
+     {{% alert color="warning" %}}All the tags that you enter in the Excel file should already exist in Epics.{{% /alert %}}
 
 4. Save the Excel file.
+
 5. Go back to the **Import Stories from Excel** dialog box. 
+
 6. Click **Browse**, navigate to the Excel file, and then select it.
+
 7. Click **Continue**. The dialog box gives a preview of all the stories that will be imported.
+
 8. Click **Continue** to import the stories. A pop-up window shows the import is finished.
 
 You can find all the imported stories in the **Backlog**.
 
-### 3.2 Settings {#settings}
+### 3.4 Settings {#settings}
 
 When you click the settings icon on the upper-right side of the screen, a dialog box opens with four tabs: **Manage Tags**, **Board Type**, **Toast Settings**, and **Data Migration**. 
 
@@ -217,7 +277,7 @@ When you click the settings icon on the upper-right side of the screen, a dialog
 
 These tabs are described below.
 
-#### 3.2.1 Manage Tags {#manage-tags}
+#### 3.4.1 Manage Tags {#manage-tags}
 
 On this tab, you can add, rename, and delete tags, as well as change tag colors. The changes here affect all the tags in your app.
 
@@ -229,23 +289,23 @@ To delete a tag, hover over the row of the tag, and then click the delete icon t
 
 To change the tag color, click the current color, and then select the new color from the dialog box.
 
-#### 3.2.2 Board Type {#board-type}
+#### 3.4.2 Board Type {#board-type}
 
 On this tab, you can switch between a Scrum workflow and Kanban workflow. The workflow you select determines how the [Board](#different-boards) page and the [Planning](#different-plannings) page look.
 
-#### 3.2.3 Toast Settings
+#### 3.4.3 Toast Settings
 
 On this tab, you can enable or disable the toast notifications that appear like this:
 
 {{< figure src="/attachments/developerportal/collaborate/epics/toast-notification.png" width="500px" >}}
 
-#### 3.2.4 Data Migration {#data-migration}
+#### 3.4.4 Data Migration {#data-migration}
 
 On this tab, you can migrate all or part of your content from [Stories](/developerportal/collaborate/stories/) to Epics.
 
 {{% alert color="info" %}}Only a Scrum Master can start a migration. Once you have started the migration, Mendix recommends working on Epics from that point forward.{{% /alert %}}
 
-##### 3.2.4.1 Migration Process
+##### 3.4.4.1 Migration Process
 
 To migrate from Stories to Epics, follow these steps:
 
@@ -263,7 +323,7 @@ To migrate from Stories to Epics, follow these steps:
 
 4. A notification is sent in the Developer Portal's [top bar](/developerportal/#navigation) informing you of the status of the migration. An email is also sent with this information. You can open the [migration report](#migration-report) by clicking the notification or the button provided in the email.
 
-##### 3.2.4.2 What Is Migrated?
+##### 3.4.4.2 What Is Migrated?
 
 These are the new locations of migrated stories:
 
@@ -293,7 +353,7 @@ Beside the story details above, the remaining details for your stories are migra
 
 {{% alert color="warning" %}}In [Stories](/developerportal/collaborate/stories/), files are associated with Comments, not with Stories. In Epics, files can only be associated with Stories, not with Comments. Therefore, files migrated from Stories will lose their Comment context.{{% /alert %}}
 
-##### 3.2.4.3 Migration Report {#migration-report}
+##### 3.4.4.3 Migration Report {#migration-report}
 
 The migration report is available a few seconds after the migration completes (timing depends on the number of stories you have).
 
@@ -313,60 +373,11 @@ The **Not Finished** status means that you can use the **Continue Migration** bu
 If you still have content with the **Error** status (for example, in the **Unmigrated Stories** section) after retrying the migration via the **Continue Migration** button, Mendix recommends manually migrating that data from [Stories](/developerportal/collaborate/stories/) to Epics. Furthermore, if a section has been successfully migrated but there is still data that has not been migrated, Mendix recommends manually migrating the data.
 {{% /alert %}}
 
-### 3.3 Scrum Planning vs Kanban Planning {#different-plannings}
-
-Depending on your settings of [board type](#board-type): Scrum or Kanban, the **Planning** page looks different.
-
-#### 3.3.1 Scrum Planning {#scrum-planning}
-
-If there is an active Sprint, at the top of the page, you can find the name of the Sprint, when it ends, and how many stories and points it has. The area right below shows the goal of the current Sprint.
-
-{{< figure src="/attachments/developerportal/collaborate/epics/scrum-planning.png" >}}
-
-On the upper-right corner, you can find the **End Sprint** and **Edit Sprint**. When you end a Sprint, the system shows you how many stories were completed in that Sprint. All the completed stories are [archived](#archive) automatically, and you can decide where the unfinished stories should go.
-
-If there is no active Sprint, you can start a new Sprint by clicking **Start Sprint** on the upper-right corner. Once a Sprint is created, all the items in the **Next Sprint** are moved to the **Active Sprint** automatically. 
-
-In the main area of the page, stories are grouped in these categories: **Active Sprint** (if there is an active Sprint), **Next Sprint**, **Refinement**, and **Backlog**.
-
-#### 3.3.2 Kanban Planning {#kanban-planning}
-
-If you do Kanban planning, the top of the page shows the number of stories and the total points. 
-
-{{< figure src="/attachments/developerportal/collaborate/epics/kanban-planning.png" >}}
-
-In the main area of the page, stories are grouped in these categories: **To Do**, **Refinement**, and **Backlog**.
-
-### 3.4 Planning Overview
-
-The main area of the **Planning** page lists all the stories in different categories. Each row shows the following information about a story:
-
-* Whether the story is a bug or a feature
-* If the story has a feedback item linked to it
-* Unique story ID
-* Story title
-* Linked epic
-* Tags
-* Number of comments
-* Number of the tasks
-* Story points
-* To whom the story is assigned
-
-{{< figure src="/attachments/developerportal/collaborate/epics/story-kanban.png" >}}
-
-To [archive](#archive) or delete a story, click the **...** icon at the end of the row, and then select the corresponding option:
-
-{{< figure src="/attachments/developerportal/collaborate/epics/archive-delete-story-kanban.png" >}}
-
-To move a story, drag the row to a different category.
-
-Click a row to open the [story details](#story-details) page.
-
 ## 4 Epics {#epics}
 
 ### 4.1 Epics Overview 
 
-The **Epics** overview page shows all the epics for your current app. Each row shows the following details about the epic:
+The **Epics** overview page shows all the epics for your current app. Each row shows the following details about an epic:
 
 * Unique ID, which consists of a prefix and a number
 * Title
@@ -379,9 +390,11 @@ The **Epics** overview page shows all the epics for your current app. Each row s
 
 You can create an epic by clicking **Create Epic** on the upper-right corner of the page.
 
+Clicking an epic opens the [epic details](#epic-details) dialog box.
+
 ### 4.2 Epic Details {#epic-details}
 
-When you click the row of an epic, the epic details dialog box opens. 
+When you click an epic, the epic details dialog box opens. 
 
 On the upper-right corner, there is a link icon and an ellipsis (**...**) icon. Clicking the link icon copies the link to the epic. Clicking the ellipsis icon opens a pop-up menu that allows you to delete the epic.
 
@@ -391,12 +404,12 @@ The epic details dialog box shows the following items:
 
 * **Objective** – This is the description of the epic:
     * You can edit the objective of the epic by clicking **Edit Objective** and making changes in the WYSIWYG editor. The editor supports different text formats, including code blocks
-    * You can link a story in the editor by typing *#* and the story title, and then select the right story from the list.
-    * You can type a person in the editor by typing *@* and the person's name, and then select the right person from the list. Once you save the epic, the system will send a notification to the tagged person.
+    * You can link a story in the editor by typing *#* and the story title, and then selecting the right story from the list.
+    * You can type a person in the editor by typing *@* and the person's name, and then selecting the right person from the list. Once you save the epic, the system will send a notification to the tagged person.
     
 * **Assign to** – You can assign the epic to anybody who can access the app in the Developer Portal.
 * **Tags** – You can add or remove tags.
-    * You can create a new tag by typing the tag in the text box and click **Create new "[tag name]"**
+    * You can create a new tag by typing the tag in the text box and clicking **Create new "[tag name]"**
     * You can [manage tags](#manage-tags) by clicking the settings icon at the end.
 
 * **Attachments** – You can add attachments by clicking **+**.
@@ -408,7 +421,7 @@ The epic details dialog box shows the following items:
 * **Archived Stories** – This shows the archived stories that are linked to this epic.
 * **Comment** – You can type a comment in the text box and then click **Post Your Comments** to save and post the comment.
 
-{{% alert color="info" %}}To save any change on the epic details dialog box, click **Save Epic** at the bottom of the page.{{% /alert %}}
+{{% alert color="info" %}}You need to click **Save Epic** at the bottom to save any change.{{% /alert %}}
 
 ## 5 Archive {#archive}
 
@@ -419,17 +432,17 @@ Every time you complete a Sprint, all the stories that are **Done** are archived
 
 All the archived stories are shown on the **Archive** page. You can see the following details for an archived story:
 
-* Unique story ID – clicking this shows the story details
-* Story title – clicking this shows the story details
-* Which Sprint the story belongs to – clicking this shows the [archived Sprint details](#archived-sprint-details)
-* Linked epic – clicking this shows the epic details
-* Archive date and time – clicking this shows the story details
+* Unique story ID – Clicking this shows the story details.
+* Story title – Clicking this shows the story details.
+* Which Sprint the story belongs to – Clicking this shows the [archived Sprint details](#archived-sprint-details).
+* Linked epic – Clicking this shows the epic details.
+* Archive date and time – Clicking this shows the story details.
 
 If a feedback item was linked to your archived story, you will see it with a purple icon:
 
 {{< figure src="/attachments/developerportal/collaborate/epics/archive.png" >}}
 
-You can search stories based on story titles in the search box.
+You can search a story in the search box, based on story title, tags, epic name, and story ID.
 
 ### 5.1 Archived Sprint Details {#archived-sprint-details}
 

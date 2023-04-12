@@ -319,17 +319,17 @@ If you still have content with the **Error** status (for example, in the **Unmig
 
 Depending on your settings of [board type](#board-type): Scrum or Kanban, the **Planning** page looks different.
 
-#### 3.3.1 Scrum Planning
+#### 3.3.1 Scrum Planning {#scrum-planning}
 
-If you do Scrum planning, at the top of the page, you can find the name of the Sprint, when it ends, and how many stories and points it has. The area right below shows the goal of the current Sprint.
+If there is an active Sprint, at the top of the page, you can find the name of the Sprint, when it ends, and how many stories and points it has. The area right below shows the goal of the current Sprint.
 
 {{< figure src="/attachments/developerportal/collaborate/epics/scrum-planning.png" >}}
 
-When there is no active Sprint, you can start a new Sprint by clicking **Start Sprint** in the upper-right corner. Once a Sprint is created, all the items in the **Next Sprint** are moved to the **Active Sprint** automatically. 
+On the upper-right corner, you can find the **End Sprint** and **Edit Sprint**. When you end a Sprint, the system shows you how many stories were completed in that Sprint. All the completed stories are [archived](#archive) automatically, and you can decide where the unfinished stories should go.
 
-You can end a Sprint by clicking **End Sprint** on the upper-right corner. When you end a Sprint, the system shows you how many stories were completed in that Sprint. All the completed stories are [archived](#archive) automatically, and you can decide where the unfinished stories should go. 
+If there is no active Sprint, you can start a new Sprint by clicking **Start Sprint** on the upper-right corner. Once a Sprint is created, all the items in the **Next Sprint** are moved to the **Active Sprint** automatically. 
 
-In the main area of the page, stories are grouped in these categories: **Active Sprint**, **Next Sprint**, **Refinement**, and **Backlog**.
+In the main area of the page, stories are grouped in these categories: **Active Sprint** (if there is an active Sprint), **Next Sprint**, **Refinement**, and **Backlog**.
 
 #### 3.3.2 Kanban Planning {#kanban-planning}
 

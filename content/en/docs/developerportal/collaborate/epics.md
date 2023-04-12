@@ -277,7 +277,7 @@ When you click the settings icon on the upper-right side of the screen, a dialog
 
 These tabs are described below.
 
-#### 3.4.1 Manage Tags {#manage-tags}
+#### 3.4.1 Managing Tags {#manage-tags}
 
 On this tab, you can add, rename, and delete tags, as well as change tag colors. The changes here affect all the tags in your app.
 

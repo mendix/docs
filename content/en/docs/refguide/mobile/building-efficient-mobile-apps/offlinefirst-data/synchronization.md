@@ -167,7 +167,7 @@ The client downloads the contents of file objects during synchronization. Errors
 In these cases, synchronization fails. When it fails due to a connection error the client can retry. If it fails for other reasons, such as broken file content, the root cause must be fixed.
 
 {{% alert color="info" %}}
-In Mendix Studio Pro v9.17 and above, the client handles file download errors gracefully. Specifically, this means two things. 
+In Mendix Studio Pro, the client handles file download errors gracefully. Specifically, this means two things. 
 
 Firstly, when a connection error occurs while downloading a file, the synchronization fails. The nanoflow or end-user can retry later when the connection is stable.
 

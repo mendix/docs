@@ -160,7 +160,7 @@ The story details dialog box shows the following items:
 
 The **Planning** page shows all your stories. At the top of the page, you can find the following items:
 
-* **...** – Clicking the icon opens the option to import stories with an Excel file.
+* **...** – Clicking the icon opens the option to import stories using an Excel file.
   * For more information, see the [Import Stories](#import-stories) section.
 * **Settings icon** – This enables changing settings.
   * For more information, see the [Settings](#settings) section.

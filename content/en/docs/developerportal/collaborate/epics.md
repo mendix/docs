@@ -76,7 +76,7 @@ The main area gives an overview of all the stories that your team is working on.
 
 ### 2.1 Swimlanes
 
-In the main area, the stories are grouped into different swimlanes based on their status. 
+In the main area of the board, the stories are grouped into different swimlanes based on their status. 
 
 The two default swimlanes are **To Do** and **Done**. 
 
@@ -90,8 +90,8 @@ You can rename, [archive](#archive), or delete a swimlane as follows: click the 
 
 However, it is not possible to do the following actions:
 
-* Delete a swimlane when it still contains stories
-* Archive a swimlane when it contains no stories
+* Delete a swimlane if it still contains stories
+* Archive a swimlane if it contains no stories
 * Delete the default swimlanes:  **To Do** and **Done**
 
 You can move a swimlane by dragging it to the new location.
@@ -108,13 +108,13 @@ A story card shows the following details:
 * ② Story title
 * ③ Epic related to the story
 * ④ Tags
-* ⑤ Whether the story is for a feature or a bug (if it is about a feature, it shows a green star icon; if it is about a bug, it shows a red bug icon)
+* ⑤ Whether the story is for a feature or a bug (a green star icon means a feature; a red bug icon means a bug)
 * ⑥ Number of comments
 * ⑦ Number of tasks
 * ⑧ Points of the story
 * ⑨ To whom the story is assigned
 
-You can [archive](#archive) or delete a story: click the **...** icon on the upper-right corner of the card, and then select the corresponding option:
+You can [archive](#archive) or delete a story as follows: click the **...** icon on the upper-right corner of the card, and then select the corresponding option:
 
 {{< figure src="/attachments/developerportal/collaborate/epics/archive-delete-story.png" >}}
 
@@ -126,7 +126,7 @@ You can click a story card to view the [story details](#story-details).
 
 When you click the card of a story, the story details dialog box opens.
 
-On the upper-right corner, you can click the link icon to copy the link to the story. Click the  ellipsis (**...**) icon to open a pop-up menu that allows you to clone, [archive](#archive), or delete the story. The clone option allows you to start creating a copy of the story. 
+On the upper-right corner, you can click the link icon to copy the link to the story. Click the  ellipsis (**...**) icon to open a pop-up menu that allows you to clone, [archive](#archive), or delete the story.
 
 {{< figure src="/attachments/developerportal/collaborate/epics/story-details-page-icons.png" >}}
 
@@ -134,46 +134,49 @@ The story details dialog box shows the following items:
 
 * **Description** – This is the description of the story:
     * You can edit the description of the story by clicking **Edit Description** and making changes in the WYSIWYG editor. The editor supports different text formats, including code blocks.
-    * You can link a story in the editor by typing *#* and the story title, and then select the right story from the list.
-    * You can type a person in the editor by typing *@*, and the person's name, and then select the right person from the list. Once you save the story, the system will send a notification to the tagged person.
+    * You can link a story in the editor by typing *#* and the story title, and then selecting the right story from the list.
+    * You can type a person in the editor by typing *@*, and the person's name, and then selecting the right person from the list. Once you save the story, the system will send a notification to the tagged person.
     
 * **Assign to** – You can assign the story to anybody who can access the app in the Developer Portal.
 * **Status** – You can set the status to any of the category/swimlane names on the **Board** and **Planning** pages.
-* **Tasks** – You can add a task by clicking **+ Add Task**.
-    * You can move the tasks by dragging them around.
+* **Tasks** – All the tasks are listed.
+    * You can add a task by clicking **+ Add Task**.
 
+    * You can move a task upwards or downwards by dragging them around.
+    
 * **Story Type** – You can set the story type to **Bug** or **Feature**.
-* **Linked Epic** – You can link the story to an epic.
+* **Linked Epic** – You can select an epic from the drop-down list.
 * **Tags** – You can add or remove tags.
-    * You can create a new tag by typing the tag in the text box and click **Create new "[tag name]"**.
+    * You can create a new tag by typing the tag in the text box and clicking **Create new "[tag name]"**.
     * You can [manage tags](#manage-tags) by clicking the settings icon at the end.
 
 * **Story Points** – You can set the story points to an integer.
 * **Attached Files** – You can add attached files by clicking **+**.
 * **Comment** – You can type your comment in the text box and then click **Post Your Comments** to save and post the comment.
 
-{{% alert color="info" %}}To save any change on the story details dialog box, click **Save Story** at the bottom of the page.{{% /alert %}}
+{{% alert color="info" %}}You need to click **Save Story** at the bottom to save any change.{{% /alert %}}
 
 ## 3 Planning {#planning}
 
 The **Planning** page shows all your stories. At the top of the page, you can find the following items:
 
-* **...** – enables importing stories with an Excel file
+* **...** – Clicking the icon opens the option to import stories with an Excel file.
   * For more information, see the [Import Stories](#import-stories) section.
-* **Settings icon** – opens a dialog box where you can change settings
+* **Settings icon** – This enables changing settings.
   * For more information, see the [Settings](#settings) section.
 
-* **Create Epic** – opens a dialog box where you an create an epic
-* **Create Story** – opens a dialog box where you can create a story
-* Search box – enables searching stories based on story title, tags, epic name, assignee (and unassigned stories), story title, and story ID.
-
-If you work with the Scrum workflow, you can also find **Start Sprint** or **End Sprint** and **Edit Sprint**. For more information, see the [Scrum Planning v.s. Kanban Planning](#different-plannings) section.
+* **Create Epic** – This enables creating an epic.
+* **Create Story** – This enables creating a story.
+* Search box – This enables searching stories based on story title, tags, epic name, assignee (and unassigned stories), story title, and story ID.
+* **Edit Sprint** (only available for [Scrum planning](#Scrum-planning)) – This enables editing the current Sprint.
+* **End Sprint** (only available for [Scrum planning](#Scrum-planning)) – This enables ending the current Sprint.
+* **Start Sprint** (only available for [Scrum planning](#Scrum-planning)) – This enables starting a new Sprint.
 
 ### 3.1 Import Stories {#import-stories}
 
 You can import your stories using an Excel file to Epics as follows:
 
-1. At the top of the **Planning** page, click **...** > **Import Stories**.
+1. At the top of the **Planning** page, click **...** and then click **Import Stories**.
 
    {{< figure src="/attachments/developerportal/collaborate/epics/import-stories.png" >}}
 

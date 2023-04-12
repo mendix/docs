@@ -1,5 +1,5 @@
 ---
-title: "Email Connector"
+title: "Email"
 url: /appstore/connectors/email-connector/
 category: "Connectors"
 description: "Describes the configuration and usage of the Email Connector module, which is available in the Mendix Marketplace."

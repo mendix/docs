@@ -17,6 +17,16 @@ To see the current status of the Mendix Developer Portal and Control Center, see
 
 ## 2023
 
+### April 13th, 2023
+
+#### Improvements
+
+* Tag management - You can now rename, delete or change colors of your tags (21 colors to choose from!)
+* It is now possible to create, link or remove stories directly from an epic
+* Deeplink URL is now shown in the URL bar so you can bookmark individual pages including stories, epics or your main board, and easily come back to them later
+* If you are using Scrum, you can now see an summary of your completed sprints on the Archive page. You can see how many stories were completed (and uncompleted) and the breakdown of completed points in the sprint.
+* You can now import and export stories using Excel. More information can be found in our documentation.
+
 ### April 4th, 2023
 
 #### Improvements

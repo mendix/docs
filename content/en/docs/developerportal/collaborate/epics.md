@@ -74,7 +74,7 @@ If you work with the Kanban board, the upper-left corner of the page shows the n
 
 The main area gives an overview of all the stories that your team is working on. 
 
-### 2.1 Swimlanes
+### 2.2 Swimlanes
 
 In the main area of the board, the stories are grouped into different swimlanes based on their status. 
 
@@ -96,7 +96,7 @@ However, it is not possible to do the following actions:
 
 You can move a swimlane by dragging it to the new location.
 
-### 2.2 Story Cards
+### 2.3 Story Cards
 
 Each card in a swimlane represents a story:
 
@@ -122,7 +122,7 @@ You can move a card within a swimlane or across swimlanes. To do so, drag the ca
 
 You can click a story card to view the [story details](#story-details).
 
-### 2.3 Story Details {#story-details}
+### 2.4 Story Details {#story-details}
 
 When you click the card of a story, the story details dialog box opens.
 

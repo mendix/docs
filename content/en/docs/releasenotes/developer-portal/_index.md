@@ -17,6 +17,13 @@ To see the current status of the Mendix Developer Portal and Control Center, see
 
 ## 2023
 
+### April 13th, 2023
+
+#### Fixes
+
+* We fixed an issue that prevented some apps from being migrated to Git.
+* We fixed an issue that incorrectly removed Team Server access for some app team members when changing the permissions of an app role.
+
 ### April 4th, 2023
 
 #### Improvements

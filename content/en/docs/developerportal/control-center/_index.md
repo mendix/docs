@@ -236,27 +236,34 @@ The **Free Environments** tab presents details on your company's free environmen
 
 ## 11 Entitlements
 
-The **Entitlements** page is a self-service tool that displays the platform tenants (that is, accounts) registered for your organization. You can use the page to monitor your resource entitlements and your consumption of cloud credits.
+{{% alert color="info" %}}
+This feature is currently in Beta. For more information about Beta features, see [Beta releases](/releasenotes/beta-features/).
+{{% /alert %}}
+
+The **Entitlements** page is a self-service tool that displays the transactions (such as purchases of cloud credits, or provisioning of new environments) registered for your organization. You can use the page to monitor your resource entitlements and your consumption of cloud credits.
 
 {{< figure src="/attachments/developerportal/control-center/entitlements.png" alt="entitlements page" >}}
 
-For each tenant in the list, you can see the amount of available cloud credits. You can click the amount of credits in order to view more details about the resource consumption for that tenant.
+## 12 Deployed Apps
 
-{{< figure src="/attachments/developerportal/control-center/entitlements-per-tenant.png" alt="entitlements per tenant" >}}
+{{% alert color="info" %}}
+This feature is currently in Beta. For more information about Beta features, see [Beta releases](/releasenotes/beta-features/).
+{{% /alert %}}
 
-In this detailed view, you can see a list of all your transactions for a particular tenant, including both credit and debit transactions. The **Cloud Credits** section of the page shows a summary of purchased, available, and consumed credits. In this way, you can monitor the resource consumption per registered account.
+The **Deployed Apps** page is a self-service tool that enables you to provision and offboard environments.
 
-## 12 Cloud Provisioning
+The **Apps Overview** page shows a list of all the apps within your company. You can use it to view an app's name, ID, technical contact, or status. The page has separate tabs for **Mendix Cloud Apps** and **Free Apps**.
 
-The **Cloud Provisioning** page is a self-service tool that enables you to provision and offboard environments.
-
-The **Apps Overview** page shows a list of all the apps within your company. You can use it to view an app's name, ID, technical contact, or status. The page has separate tabs for **Licensed Apps** and **Free Apps**.
-
-{{< figure src="/attachments/developerportal/control-center/apps-overview.png" alt="cloud provisioning - apps overview" >}}
+{{< figure src="/attachments/developerportal/control-center/apps-overview.png" alt="Deployed Apps - apps overview" >}}
 
 You can click the name of an app to see a list of environments available for the app.
 
 {{< figure src="/attachments/developerportal/control-center/cloud-provisioning.png" alt="cloud provisioning page for an app" >}}
+
+Click the icon in the top right corner to access the following pages that allow you to [make requests to Mendix Support](/developerportal/support/submit-support-request/#submitting):
+
+* [Resize Environment](/developerportal/support/new-app-node-request-template/#resize) – requests a container size change
+* [Offboard Environment](/developerportal/support/new-app-node-request-template/#offboard) – requests that an app is offboarded
 
 ### 12.1 Adding a New Environment
 

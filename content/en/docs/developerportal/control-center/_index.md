@@ -234,7 +234,7 @@ These links will open in a new browser tab.
 
 The **Free Environments** tab presents details on your company's free environments.
 
-## 11 Entitlements
+## 11 Entitlements {#entitlements}
 
 {{% alert color="info" %}}
 This feature is currently in Beta. For more information about Beta features, see [Beta releases](/releasenotes/beta-features/).
@@ -244,15 +244,15 @@ The **Entitlements** page is a self-service tool that displays the transactions 
 
 {{< figure src="/attachments/developerportal/control-center/entitlements.png" alt="entitlements page" >}}
 
-## 12 Deployed Apps
+## 12 Deployed Apps Overview {#deployed-apps}
 
 {{% alert color="info" %}}
 This feature is currently in Beta. For more information about Beta features, see [Beta releases](/releasenotes/beta-features/).
 {{% /alert %}}
 
-The **Deployed Apps** page is a self-service tool that enables you to provision and offboard environments.
+The **Deployed Apps Overview** page is a self-service tool that enables you to provision and offboard environments.
 
-The **Apps Overview** page shows a list of all the apps within your company. You can use it to view an app's name, ID, technical contact, or status. The page has separate tabs for **Mendix Cloud Apps** and **Free Apps**.
+The **Deployed Apps Overview** page shows a list of all the apps within your company. You can use it to view an app's name, ID, technical contact, or status. The page has separate tabs for **Mendix Cloud Apps** and **Free Apps**.
 
 {{< figure src="/attachments/developerportal/control-center/apps-overview.png" alt="Deployed Apps - apps overview" >}}
 

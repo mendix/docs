@@ -169,11 +169,8 @@ Mendix Support will only accept security findings for the Mendix platform. This 
 
 * [App ID](/developerportal/settings/general-settings/)
 
-### 5.5 Studio and Studio Pro Problems
+### 5.5 Studio Pro Problems
 
-{{% todo %}}[Verify: what is the best update here?]{{% /todo %}}
-
-* Mendix Studio type (Studio or Studio Pro)
 * Mendix version
 * Test app (for details, see [How To Export A Mendix App Package](/refguide/export-app-package-dialog/))
 * Reproducible steps

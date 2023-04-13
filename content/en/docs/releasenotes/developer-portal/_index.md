@@ -19,6 +19,15 @@ To see the current status of the Mendix Developer Portal and Control Center, see
 
 ### April 13th, 2023
 
+#### Improvements
+
+* We added the following features to [Epics](/developerportal/collaborate/epics/):
+  * You can now add, rename, and delete tags, as well as change tag colors (21 colors to choose from!).
+  * You can now create, link, or remove stories directly from an epic.
+  * The address bar in your browser now shows the link to the exact board, story, and epic, so you can bookmark individual pages and easily come back to them.
+  * If you use Scrum, you can now see a summary of your completed sprint on the [archived Sprint details](/developerportal/collaborate/epics/#archived-sprint-details) page. You can see how many stories were completed and uncompleted, as well as the breakdown of completed points in the Sprint.
+  * You can now [import](/developerportal/collaborate/epics/#import-stories) and [export](/developerportal/collaborate/epics/#export-archived-stories) stories using Excel files.
+
 #### Fixes
 
 * We fixed an issue that prevented some apps from being migrated to Git.
@@ -28,7 +37,7 @@ To see the current status of the Mendix Developer Portal and Control Center, see
 
 #### Improvements
 
-* We are making the option to migrate your app to Git more prominent. The banner is now displayed on all pages within the **Collaborate** section of the Developer Portal. Read more information on how to migrate and if you are eligible to migrate [here](/developerportal/collaborate/migrate-to-git/).
+* We have made the option to migrate your app to Git more prominent. The banner is now displayed on all pages within the **Collaborate** section of the Developer Portal. Read more information on how to migrate and if you are eligible to migrate [here](/developerportal/collaborate/migrate-to-git/).
 * Have you tried [Epics](/developerportal/collaborate/epics/) yet? You should! It is awesome if we do say ourselves. We are also working in the background to make it possible to connect your Mendix apps to your Jira boards – stay tuned!
 
 ### March 23rd, 2023

@@ -167,9 +167,9 @@ The **Planning** page shows all your stories. At the top of the page, you can fi
 
 * **Create Epic** – This enables creating an epic.
 * **Create Story** – This enables creating a story.
-* **Edit Sprint** (only available for [Scrum planning](#Scrum-planning)) – This enables editing the current Sprint.
-* **End Sprint** (only available for [Scrum planning](#Scrum-planning)) – This enables ending the current Sprint.
-* **Start Sprint** (only available for [Scrum planning](#Scrum-planning)) – This enables starting a new Sprint.
+* **Edit Sprint** (only available for [Scrum planning](#scrum-planning)) – This enables editing the current Sprint.
+* **End Sprint** (only available for [Scrum planning](#scrum-planning)) – This enables ending the current Sprint.
+* **Start Sprint** (only available for [Scrum planning](#scrum-planning)) – This enables starting a new Sprint.
 * Search box – This enables searching stories based on story title, tags, epic name, assignee (and unassigned stories), and story ID.
 
 ### 3.1 Scrum Planning vs Kanban Planning {#different-plannings}

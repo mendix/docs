@@ -8,7 +8,7 @@ tags: ["connectors", "data hub", "studio pro", "build", "connector guide", "conn
 
 ## 1 Introduction
 
-Features released in Studio Pro [9.17](/releasenotes/studio-pro/9.17/) expand on existing OData capabilities in Studio Pro. These features allow you to wrap any non-OData service, API, or database with OData, ensuring compatibility with the [Mendix Data Hub](/data-hub/) ([external entities](/refguide/external-entities/) and the [Data Hub Catalog](/data-hub/data-hub-catalog/)). 
+Features in Studio Pro 10 allow you to wrap any non-OData service, API, or database with OData, ensuring compatibility with the [Mendix Data Hub](/data-hub/) ([external entities](/refguide/external-entities/) and the [Data Hub Catalog](/data-hub/data-hub-catalog/)). 
 
 You can also use these features to more easily [build connectors](/appstore/creating-content/connector-guide-build/) that access external data. This set of features adds to the tools described in [Introducing the Mendix Connector Kit](https://www.mendix.com/blog/introducing-mendix-connector-kit/), and are collectively referred to as *Connector Kit 2.0*.
 
@@ -24,7 +24,7 @@ Before you read this guide, do the following:
 
 * Learn how [published](/refguide/published-odata-services/) and [consumed](/refguide/consumed-odata-services/) OData services work in Studio Pro
 * Read the [Build Connectors](/appstore/creating-content/connector-guide-build/) guide
-* Install Studio Pro [9.17](/releasenotes/studio-pro/9.17/) and above
+* Install Studio Pro [9.17](/releasenotes/studio-pro/9.17/) or above
 
 ## 2 Why Wrap with OData?
 
@@ -140,7 +140,7 @@ A key icon represents attributes that are part of the key.
 
 You can use tools like Postman or Visual Studio Code to test your published OData services. These tools can help you call the OData service and validate its output.
 
-Another way to test published OData services is with the user interfaces of [OpenAPI](/refguide/published-odata-services/#openapi), released in Studio Pro [9.17](/releasenotes/studio-pro/9.17/).
+Another way to test published OData services is with the user interfaces of [OpenAPI](/refguide/published-odata-services/#openapi).
 
 ## 7 Usage Examples {#usage}
 
@@ -148,7 +148,7 @@ The following examples are possible ways to use OData to connect to external dat
 
 ### 7.1 Third-Party Service Connector {#3rd-party}
 
-You can use the features released in Studio Pro [9.17](/releasenotes/studio-pro/9.17/) to build a connector that wraps a third-party service API as OData. 
+You can use the features described in this document to build a connector that wraps a third-party service API as OData. 
 
 For example, say you want to build an app that works with the [Twitter v2 REST API](https://developer.twitter.com/en/docs/twitter-api/getting-started/about-twitter-api). You would like a simple app where you can enter the ID of a Twitter user and view their latest tweets and followers. 
 

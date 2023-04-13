@@ -42,12 +42,6 @@ In the **Public documentation** tab, you can provide a summary and a description
 
 When you have selected an entity in the list to the left, its published attributes and associations are shown in the list to the right. In this list, you can add, edit, delete and move these attributes and associations.
 
-{{% alert color="info" %}}
-
-In Studio Pro [9.16](/releasenotes/studio-pro/9.16/) and below, the **System.ID** attribute is used as a key in OData services and must always be checked. 
-
-{{% /alert %}}
-
 Attributes of published entities are **Nillable** by default. This means that if their value is empty then they will be encoded as explicit nulls in the OData content. If **Nillable** is unchecked for an attribute, the attribute cannot be empty (as this will result in a runtime error).
 
 {{% alert color="info" %}}
@@ -121,20 +115,12 @@ Having an [index](/refguide/indexes/) for the key attribute(s) makes retrieving 
 You can set unique and required constraints using [validation rules](/refguide/validation-rules/).
 
 {{% alert color="info" %}}
-Selecting a single attribute as a key was introduced in Studio Pro [9.17.0](/releasenotes/studio-pro/9.17/). Selecting multiple attributes as a key was introduced in Studio Pro [9.19.0](/releasenotes/studio-pro/9.19/).
-{{% /alert %}}
-
-{{% alert color="info" %}}
 Selecting more than one attribute as the key is only available for published OData services that use OData version 4.
 {{% /alert %}}
 
 ## 9 Capabilities {#capabilities}
 
 The **Capabilities** section gives an overview of what operations the resource supports.
-
-{{% alert color="info" %}}
-This *Capabilities* section was introduced in Studio Pro [9.6.0](/releasenotes/studio-pro/9.6/).
-{{% /alert %}}
 
 ### 9.1 Insertable
 
@@ -152,10 +138,6 @@ This is the behavior when you choose the action **Write to database**.
 You can also choose the **Call a microflow** action to use your own logic. Specify a microflow that takes the entity as a parameter, and optionally a [System.HttpRequest](/refguide/http-request-and-response-entities/) parameter. In the microflow, you can use the [Commit](/refguide/committing-objects/) activity to commit the changes to the database. 
 
 In the publishing app, you can use a validation message action to report a validation error. The client app can include a custom error handler on the [Send External Object](/refguide/send-external-object/) activity to handle the error. If the microflow reports [validation feedback](/refguide/validation-feedback/), the runtime informs the client that the request has failed. For more information, see [OData query options](/refguide/odata-query-options/#updating-objects).
-
-{{% alert color="info" %}}
-This **Call a microflow** action was introduced in Studio Pro [9.11.0](/releasenotes/studio-pro/9.11/). The *Insertable* capability was introduced in Studio Pro [9.12.0](/releasenotes/studio-pro/9.12/).
-{{% /alert %}}
 
 ### 9.2 Readable {#readable}
 
@@ -191,10 +173,6 @@ Select the check box for **Deletable** to indicate that clients can delete the v
 Choose whether the object should be deleted from the database directly, or whether to call a microflow. Specify a microflow that takes the entity as a parameter, and optionally a [System.HttpRequest](/refguide/http-request-and-response-entities/) parameter. In the microflow, you can use the [Delete](/refguide/deleting-objects/) activity to delete the object from the database. 
 
 You can use a validation message to report a validation error if you are performing, for example, a soft delete. If the microflow reports [validation feedback](/refguide/validation-feedback/), the runtime informs the client that the request has failed.
-
-{{% alert type="info" %}}
-The *Deletable* capability was introduced in Studio Pro [9.13.0](/releasenotes/studio-pro/9.13/).
-{{% /alert %}}
 
 ## 10 Query Options {#query-options}
 

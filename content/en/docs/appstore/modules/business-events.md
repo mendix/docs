@@ -14,7 +14,7 @@ With [Mendix Business Events](https://marketplace.mendix.com/link/component/2026
 To deliver these events reliably between your applications, an event broker is required. For apps running the Mendix cloud on licensed nodes, you'll need to purchase a license for a [Mendix Event Broker](#mendix-event-broker). 
 
 {{% alert color="info" %}}
-Business events are supported in Studio Pro [9.18](/releasenotes/studio-pro/9.18/) and above, and current can only be deployed to the [Mendix Cloud](/developerportal/deploy/mendix-cloud-deploy/).{{% /alert %}} 
+Business events are supported in Studio Pro [9.18](/releasenotes/studio-pro/9.18/) and above, and currently can only be deployed to the [Mendix Cloud](/developerportal/deploy/mendix-cloud-deploy/).{{% /alert %}} 
 
 ### 1.1 Typical Use Cases
 

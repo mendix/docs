@@ -191,7 +191,7 @@ To fix the issue, we recommend revisiting your security rules and avoid letting 
 
 ## 10 Avoid Deeply Nested Data/List Views [MXP011] {#mxp011}
 
-This Best Practice applies when a Data View or List View is used on a page that is nested to two or more levels, for example, a list view is in list view and the second list view is in a data view.
+This best practice applies when a data view or list view is used on a page that is nested to two or more levels, for example, a list view is in another list view and the second list view is in a data view.
 When you use two or more levels of nesting, page performance may be affected due to the increased number of requests and transferred data volume.
 
 ### 10.1 Steps to Fix
@@ -239,16 +239,16 @@ By "specific" we mean how many association steps are involved. For example, an X
 Rearrange the parts of the XPath, so that the cheapest and most-specific parts are to the left of each `and`. Similarly, if using separate predicates like `[part 1][part 2]`, you can rearrange the predicates to have optimal ordering.
 
 
-## 15 Entity exposed as OData with key that uses non-indexed attribute [MXP016] {#mxp016}
+## 15 Entity Exposed as OData with Key That Uses Non-indexed Attribute [MXP016] {#mxp016}
 
-Entities can be exposed as OData services. Depending on how many records the underlying entities contain, loading the data from the database can take time. For read-intensive entities that are exposed with a single key, it makes sense to add an index on the attribute used as key. For larger volumes of data, this can significantly boost performance of object retrieval from the database.
+Entities can be exposed as OData services. Depending on how many records the underlying entities contain, loading the data from the database can take time. For read-intensive entities that are exposed with a single key, it makes sense to add an index on the attribute used as a key. For larger volumes of data, this can significantly improve performance of object retrieval from the database.
 
 ### 15.1 Steps to Fix
 
 To fix the issue, do the following:
 
 1. Check if the underlying entity contains a substantial amount of records before adding an index (at least 10000 records).
-2. Add an index on the attribute that is used as key for the exposed entity.
+2. Add an index on the attribute that is used as a key for the exposed entity.
 
 {{% alert color="info" %}}
 This optimization may not be very beneficial for data types like Boolean and enumerations due to a limited number of possible values of these types. It is not recommended to add indexes for such types.

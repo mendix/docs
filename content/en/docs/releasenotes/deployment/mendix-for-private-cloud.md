@@ -21,16 +21,16 @@ For information on the current status of deployment to Mendix for Private Cloud 
 * We have added a message in the namespace plan section that displays when a namespace is configured with a secret store.
 * We have improved the look and feel of the Private Cloud portal.
 * We now allow the upload of deployment packages larger than 500 MB (up until 1024 MB) from the user interface. (Ticket 180884)
-
-#### Deploy API
-
-* We have fixed an issue where the environment list could not be retrieved successfully when the app internal ID was lshorter than 8 characters.
-* We have fixed an issue where upper-case letters in an email ID would prevent members invited to a cluster manager or namespace from retrieving the environments.
 * We have added webhooks which can trigger endpoints when changes are committed to a Team Server Git repository, or when a new deployment package is available for deployment to the Private Cloud. For more information, see [Webhooks](/developerportal/deploy/webhooks).
 
 {{% alert color="info" %}}
 This feature is currently in a Beta release.
 {{% /alert %}}
+
+#### Deploy API
+
+* We have fixed an issue where the environment list could not be retrieved successfully when the app internal ID was lshorter than 8 characters.
+* We have fixed an issue where upper-case letters in an email ID would prevent members invited to a cluster manager or namespace from retrieving the environments.
 
 ### March 17th, 2023
 

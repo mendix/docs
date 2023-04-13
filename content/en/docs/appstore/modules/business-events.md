@@ -124,10 +124,10 @@ The handler microflow attached to it triggers each event where you can build you
 
 Upgrade your apps to Studio Pro [9.24](/releasenotes/studio-pro/9.24/) and above to enjoy the most recent business event behavior. When you upgrade, the following happens:
 
-* [Published business event](/refguide/business-event-services/#published-event-service-doc) service documents are converted to created business event service documents.
+* [Published business event](/refguide9/business-event-services/#published-event-service-doc) service documents are converted to created business event service documents.
     * The created service document allows it to publish events.
     * The other app's implementation will be to subscribe to events.
-* [Consumed business event](/refguide/business-event-services/#consumed-event-service-doc) service documents are converted to documents that use a business events service.
+* [Consumed business event](/refguide9/business-event-services/#consumed-event-service-doc) service documents are converted to documents that use a business events service.
     * They will be able to subscribe to events.
 
 ### 4.2 Using Business Events (Studio Pro 9.24 and Above) {#two-way-be}

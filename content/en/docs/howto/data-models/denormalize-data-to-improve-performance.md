@@ -146,7 +146,7 @@ Now the application is ready to store redundant data, but you still need to keep
 ## 5 Read More
 
 * [Creating a Basic Data Layer](/refguide/create-a-basic-data-layer/)
-* [Set Up Data Validation](/howto/data-models/setting-up-data-validation/)
+* [Setting Up Data Validation](/refguide/setting-up-data-validation/)
 * [Find the Root Cause of Runtime Errors](/howto/monitoring-troubleshooting/finding-the-root-cause-of-runtime-errors/)
 * [Stories](/developerportal/collaborate/stories/)
 * [Defining Access Rules Using XPath](/refguide/define-access-rules-using-xpath/)

@@ -17,6 +17,36 @@ To see the current status of the Mendix Developer Portal and Control Center, see
 
 ## 2023
 
+### April 4th, 2023
+
+#### Improvements
+
+* We are making the option to migrate your app to Git more prominent. The banner is now displayed on all pages within the **Collaborate** section of the Developer Portal. Read more information on how to migrate and if you are eligible to migrate [here](/developerportal/collaborate/migrate-to-git/).
+* Have you tried [Epics](/developerportal/collaborate/epics/) yet? You should! It is awesome if we do say ourselves. We are also working in the background to make it possible to connect your Mendix apps to your Jira boards – stay tuned!
+
+### March 23rd, 2023
+
+#### Improvements
+
+* In preparation for the [merging of Studio and Studio Pro](https://www.mendix.com/blog/coming-in-2023-the-merging-of-studio-and-studio-pro/), we removed the **Edit in Studio** button. You can still open your app in Studio via the ellipsis (**…**) in the [app tile](/developerportal/#my-apps) on the **My Apps** page.
+* After the big overhaul we released on [February 13th](#feb-13-23), our logging showed a decrease in the overall performance of [Stories](/developerportal/collaborate/stories/). We took some counter-measures and made performance improvements.
+* We made some minor improvements to the flow for [inviting app team members](/developerportal/collaborate/team/#inviting). For example, when you invite someone new to your app, the default role will be **Business Engineer** (as long as this role exists in your app).
+* We made some improvements to the layout of the [App Buzz](/developerportal/collaborate/buzz/#app-buzz) page so that it displays better on small screen resolutions.
+* The left-hand app sidebar menu is now collapsible, which makes for a far better experience on small screen resolutions.
+* You can now create and manage personal access tokens (PATs) in **User Settings** > **Developer Settings**. This location replaces the Warden tool that was previously used. For more information, see the [Personal Access Tokens](/developerportal/community-tools/mendix-profile/#pat) section in *Mendix Profile*.
+* We are preparing the Developer Portal for a brand new feedback experience. Please stay tuned!
+
+### March 16th, 2023
+
+#### Improvements
+
+* In Control Center, we increased the limit of apps you can [activate or deactivate](/developerportal/control-center/#active-deactivated) to 100.
+* We added the **Contributor** access role in [Portfolio Management](/developerportal/portfolio-management/#access-management), and we renamed the **User** access role to **Viewer**.
+
+#### Deprecations
+
+* We have deprecated **General Settings** > **Webhooks** for stories and Sprints. For more information, see the deprecation note in the [Webhooks](/developerportal/collaborate/general-settings/#webhooks) section of *General Settings*. You can now set webhooks for building and deploying your app. These are described in [Webhooks](/developerportal/deploy/webhooks/).
+
 ### March 9th, 2023
 
 #### Improvements
@@ -59,7 +89,7 @@ For more information on security issues, see [Security Advisories](/releasenotes
 * We fixed an issue in **Epics** where the unsaved changes pop-up window did not take you to the correct story after clicking **Leave**.
 * We updated the text in the [notifications](/developerportal/#notifications) when a story is assigned to you in **Epics**.
 
-### February 13th, 2023
+### February 13th, 2023 {#feb-13-23}
 
 #### Improvements
 
@@ -186,7 +216,7 @@ In Portfolio Management, you can do the following
 
 #### Improvements
 
-* We improved some empty states in the story details dialog box, epics details dialog box, archived sprint details dialog box, and archived story details dialog box in Epics.
+* We improved some empty states in the story details dialog box, epics details dialog box, archived Sprint details dialog box, and archived story details dialog box in Epics.
 
 ### September 15th, 2022
 
@@ -258,13 +288,13 @@ In Portfolio Management, you can do the following
 
     * Map your exact development process with fully customizable swimlanes
     * Use Scrum or Kanban – we support both!
-    * Set sprint goals and see all the basic sprint information on the board – if you are using Scrum
+    * Set Sprint goals and see all the basic Sprint information on the board – if you are using Scrum
     * Drag and drop stories on our brand new project board
     * Format stories in any way you want – for example, adding headers, links, and code blocks, linking specific stories, and using @ to mention people (notifications for this coming soon!)
     * Clone stories
     * Create and track the progress of epics
     * Archive single stories or whole swimlanes
-    * Easily search through your completed stories and get an overview of completed sprints in the archive
+    * Easily search through your completed stories and get an overview of completed Sprints in the archive
 
     You can try it out for any Mendix app. Your Scrum Master just needs to enable Epics in the [General Settings](/developerportal/collaborate/general-settings/#project-management). Please note it is not yet possible to migrate the data from Stories into Epics, so we recommend using it for new projects or iterations first – in this way you do not have to worry about the stories in your current backlog.
 
@@ -952,7 +982,7 @@ In Portfolio Management, you can do the following
 
 #### Webhooks Available
 
-* We have added the ability to create webhooks for your apps. These webhooks can be configured to send information when sprints change and/or stories change.
+* We have added the ability to create webhooks for stories and Sprints for your apps. These webhooks can be configured to send information when Sprints change and/or stories change.
 
 ### April 5th, 2019
 

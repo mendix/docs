@@ -11,6 +11,19 @@ These release notes cover changes made to the [Mendix Data Hub Catalog](/data-hu
 
 ## 2023
 
+### April 6th, 2023
+
+#### Improvements
+
+* We improved the clarity and accuracy of some UI texts.
+
+### March 16th, 2023
+
+#### Fixes
+
+* We fixed an issue on the Catalog Admin page that displayed incorrect counts of data sources registered in the company.
+* We fixed an error that occured when no authentication is selected while registering a data source.
+
 ### February 27th, 2023
 
 #### Fixes
@@ -552,7 +565,7 @@ These release notes cover changes made to the [Mendix Data Hub Catalog](/data-hu
 
 #### Data Hub Free Edition
 
-* The Data Hub Free edition is now available to all Mendix users! Publish your data sources in the Data Hub Catalog, curate them, and then consume them in another application. Learn more about it [here](/data-hub/#data-hub-licences).
+* The Data Hub Free edition is now available to all Mendix users! Publish your data sources in the Data Hub Catalog, curate them, and then consume them in another application.
 
 #### Fixes
 

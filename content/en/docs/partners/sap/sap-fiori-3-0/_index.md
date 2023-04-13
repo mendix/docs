@@ -15,13 +15,13 @@ Should we have a section on the "Shell Bar"?
 
 ## 1 Introduction
 
-The SAP Fiori user experience creates a consistent UI across SAP products. SAP Fiori 3 is SAP’s new target design system for all SAP products in the *Intelligent Suite*. The  [SAP Fiori 3 UI Resource](https://marketplace.mendix.com/link/component/116359) module in the Mendix Marketplace allows you to create the same user experience in your Mendix apps.
+The SAP Fiori user experience creates a consistent UI across SAP products. SAP Fiori 3 is SAP’s new target design system for all SAP products in the *Intelligent Suite*. The  [Web UI Package for SAP Fiori theme](https://marketplace.mendix.com/link/component/116359) module in the Mendix Marketplace allows you to create the same user experience in your Mendix apps.
 
 The Mendix module gives you access to designing your pages with SAP Fiori-styled widgets and building blocks as part of your layout. You can also allow end-users to select a theme and apply it immediately. The module supports SAP Quartz Light and Dark themes.
 
 You can experience the SAP Fiori 3 design by using the [SAP Fiori 3 Starter App](https://marketplace.mendix.com/link/component/116366) as the basis for a new app.
 
-Alternatively, you can include the [SAP Fiori 3 UI Resources](https://marketplace.mendix.com/link/component/116359) module in your existing app. See [Add Fiori to Your App](#add-fiori), below, for instructions on how to do this.
+Alternatively, you can include the [Web UI Package for SAP Fiori theme](https://marketplace.mendix.com/link/component/116359) module in your existing app. See [Add Fiori to Your App](#add-fiori), below, for instructions on how to do this.
 
 More information on using SAP Fiori 3 design in your Mendix app is available in the following sections:
 
@@ -41,7 +41,7 @@ Some SAP Fiori components are not yet supported by Mendix core widgets. These ar
 
 ### 2.1 Examples of Mendix Core Widget Styling
 
-You can see examples of the SAP Fiori 3 styling of the Mendix Core Widgets by going to the **Mendix_Core_Elements** page of the SAP Fiori 3 UI Resources Marketplace Module.
+You can see examples of the SAP Fiori 3 styling of the Mendix Core Widgets by going to the **Mendix_Core_Elements** page of the Web UI Package for SAP Fiori theme Marketplace Module.
 
 Most widgets work the same way as they do in other Mendix styles based on Atlas UI, but there are some changes which are listed in the sections below.
 
@@ -121,11 +121,11 @@ In addition, there are some limitations on supporting other components:
 
 ## 3 Building Blocks{#building-blocks}
 
-You can see examples of the SAP Fiori 3 building blocks by going to the **Building Blocks** page of the SAP Fiori 3 UI Resources Marketplace Module. The building blocks are categorized by type.
+You can see examples of the SAP Fiori 3 building blocks by going to the **Building Blocks** page of the Web UI Package for SAP Fiori theme Marketplace Module. The building blocks are categorized by type.
 
 ## 4 Layouts{#layouts}
 
-You can see examples of the SAP Fiori 3 navigation layouts by going to the **Layout** page of the SAP Fiori 3 UI Resources Marketplace Module. These layouts are designed for use in *Responsive (Web)* applications, designed to run in any modern web browser, on any device.
+You can see examples of the SAP Fiori 3 navigation layouts by going to the **Layout** page of the Web UI Package for SAP Fiori theme Marketplace Module. These layouts are designed for use in *Responsive (Web)* applications, designed to run in any modern web browser, on any device.
 
 The guidelines for the use of each layout are:
 
@@ -158,7 +158,7 @@ Note that these pages work best when combined with the appropriate **Navigation 
 
 ## 6 Theme Selector{#theme-selector}
 
-You can give the end-use the option to choose their own theme. There is an example of this on the **Home** page of the SAP Fiori 3 UI Resources Marketplace Module. The end-user can click a button to switch between a *Dark Theme* or a *Light Theme*.
+You can give the end-use the option to choose their own theme. There is an example of this on the **Home** page of the Web UI Package for SAP Fiori theme Marketplace Module. The end-user can click a button to switch between a *Dark Theme* or a *Light Theme*.
 
 To do this you need to trigger a nanoflow which passes a variable containing the name of the theme to the **ChangeTheme_JavaScript_Action** JavaScript action. This changes the theme and implements it directly on your app's pages.
 
@@ -176,17 +176,17 @@ The [SAP Fiori 3 Demo app](https://marketplace.mendix.com/link/component/116787)
 The demo apps are:
 
 * Shopping Cart – a demo app which allows you to display products by category and view product details
-* Browse Orders – a searchable list of orders with the ability to switch from the searchable list to a master/detail view
+* Browse Orders – a searchable list of orders with the ability to switch from the searchable list to a primary/detail view
 * Manage Products – a list of products which demonstrates the use of the count badge and navigation to see the product details
 * Bulletin Board – a list of items with navigation to see the details of each item
 * Shopping Cart Master Slider – the same as the Shopping Cart demo but using dynamic side content
 
 ## 8 Add Fiori to Your App{#add-fiori}
 
-If you want to include the SAP Fiori 3 UI Resources in an existing app perform the following steps:
+If you want to include the Web UI Package for SAP Fiori theme in an existing app perform the following steps:
 
 1. Ensure that your app is using Mendix version 9.6.11 or above. 
-2. [Import](/appstore/general/app-store-content/) the  [SAP Fiori 3 UI Resource](https://marketplace.mendix.com/link/component/116359) module into your app.
+2. [Import](/appstore/general/app-store-content/) the  [Web UI Package for SAP Fiori theme](https://marketplace.mendix.com/link/component/116359) module into your app.
 3. Import the [Atlas Core](https://marketplace.mendix.com/link/component/117187) module into your app if it is not already there. Atlas Core must be version 3.2.2 or above.
 4. Look in the **Theme** tab of the app settings. This must contain the `SAP_3_0_UI_Resources` module below the `Atlas_Core` module.
 

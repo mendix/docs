@@ -15,6 +15,8 @@ The Build API only works for apps which are deployed to the Mendix Cloud.
 
 The Build API allows you to manage deployment packages and create new deployment packages using our build server. You will need the information from the [Teamserver API](/apidocs-mxsdk/apidocs/team-server-api/) as input for these API calls. You will also need to provide authentication for each call; this is described in [Authentication](/apidocs-mxsdk/apidocs/authentication/).
 
+You can use webhooks to trigger CI/CD pipelines which use this API. These are described in [Webhooks](/developerportal/deploy/webhooks/).
+
 The image below provides a domain model representation of the concepts discussed below and how these are related:
 
 {{< figure src="/attachments/apidocs-mxsdk/apidocs/build-api/api-model.png" >}}

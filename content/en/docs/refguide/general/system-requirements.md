@@ -57,7 +57,7 @@ Mendix Studio Pro will run on any machine which can run the [minimum requirement
 
 ### 2.1 Firewall Settings {#firewall-settings}
 
-Studio Pro needs access to the following URLs in order to work. If your firewall is blocking these, you will need to whitelist them:
+Studio Pro needs access to the following URLs in order to work. If your firewall is blocking these, you will need to safelist them:
 
 * `*.mendix.com`
 * `*.mendixcloud.com`
@@ -189,7 +189,7 @@ Mendix tries to support the most recent and patched database server versions fro
 
 Current support:
 
-* [MariaDB](/refguide/mysql/): 10.2, 10.3, 10.4, 10.5, 10.6, 10.11 (please note that support for 10.2 is deprecated and will be removed in Studio Pro versions 9.22.0, 9.18.5, 9.12.11, and 9.6.17)
+* [MariaDB](/refguide/mysql/): 10.2, 10.3, 10.4, 10.5, 10.6, 10.11 (please note that support for 10.2 is deprecated and has been removed in Studio Pro versions 9.22.0, 9.18.5, and 9.12.11; it will also be removed in 9.6.17)
 * [Microsoft SQL Server](/developerportal/deploy/mendix-on-windows-microsoft-sql-server/): 2019, 2022
 * [Azure SQL](https://docs.microsoft.com/en-us/sql/t-sql/statements/alter-database-transact-sql-compatibility-level?view=sql-server-2017): v12 compatibility mode 140 or higher
 * [MySQL](/refguide/mysql/): 8.0

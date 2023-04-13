@@ -4,6 +4,32 @@ url: /releasenotes/add-ons/ats-2.28/
 weight: 72
 ---
 
+## 2.28.10
+
+**Release date: April 11th, 2023**
+
+### Improvements
+
+* We upgraded to Mendix [8.18.24](/releasenotes/studio-pro/8.18/#81824) for security fixes.
+
+### Fixes
+
+* We fixed a styling issue that caused a button to be missplaced.
+* We fixed an issue that caused users to see all the import runs across their apps instead of their current app.
+* We fixed an issue that caused the **App Admin** panel to not display any environments or Selenium hubs.
+
+## 2.28.9
+
+**Release date: March 28th, 2023**
+
+### Fixes
+
+* We fixed an issue that caused the dashboard not to show all recently run test suites and test cases.
+* We fixed an issue that caused the **Confirm subscription** link to show a message stating something went wrong when confirming the subscription, even when the subscription was successfully confirmed.
+* We fixed an issue that caused the **Search** panel to show custom actions from another app the user was a member of when editing a test case or custom action.
+* We fixed an issue that caused newly created drop-down values not to appear initially on a new input parameter.
+* We fixed an issue that caused the discontinued **ATSelenium** Selenium hub to be used when running a test case or test suite with default values.
+
 ## 2.28.8
 
 **Release date: March 7th, 2023**

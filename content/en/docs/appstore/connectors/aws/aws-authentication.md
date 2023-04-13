@@ -148,7 +148,7 @@ If you want to use the AWS Authentication connector with an existing [platform-s
 
    {{< figure src="/attachments/appstore/connectors/aws-authentication/custom-settings.png" >}}
 
-   {{% alert color="info" %}}Fore more information, see [Runtime Customisation](/refguide/custom-settings/).{{% /alert %}}
+   {{% alert color="info" %}}Fore more information, see [Runtime Customization](/refguide/custom-settings/).{{% /alert %}}
 
 4. Click **OK**.
 5. Go to the microflow that uses the **GetSessionCredentials** activity, and then double-click the **GetSessionCredentials** activity to open the **GetSessionCredentials** dialog box.
@@ -201,21 +201,15 @@ You can view the domain model in the **App Explorer** in the **AWS Authenticatio
     
     | Name | Description |
     | --- | --- |
-    | `Service` | The service that you want to connect to, for example, S3 |
-    | `Method` | REST methods, for example, `GET` |
+    | `ServiceName` | The service that you want to connect to, for example, S3 |
+    | `HTTPMethod` | HTTP methods, for example, `GET` |
+    | `URIPrefix` | Optional prefix for services that require a prefix in their endpoint URL; leave blank if your service does not require a prefix |
     | `Region` | The AWS region where your service resides |
     | `Path` | URI from domain to query; enter `\` to leave blank |
     | `RequestBody` | The body of your request; signature version 4 headers require that the request body as part of the signing process, before you make the actual call. |
     
-    {{< figure src="/attachments/appstore/connectors/aws-authentication/sigv4builder.png" >}}
-
 * `SigV4Parameter` - This entity contains the key-value pairs which you can use as REST headers, or as `QueryParameters`. The key-value pairs can be used to create the headers, for example, `Content-JSON`, or to define the contents of the query, for example, the `Action` parameter in EC2 calls.
-    
-    {{< figure src="/attachments/appstore/connectors/aws-authentication/sigv4parameters.png" >}}
-
 * `SigV4Headers` - This entity is the output of the GetSigV4Headers Java action. It is used to create request headers in the custom HTTP REST call which you make towards AWS.
-
-    {{< figure src="/attachments/appstore/connectors/aws-authentication/sigv4headers.png" >}}
 
 #### 4.3.2 `GetSigV4SignedHeaders` Java Action {#java-action}
 

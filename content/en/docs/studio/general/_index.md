@@ -27,11 +27,13 @@ You can open Mendix Studio via [Developer Portal](#opening-studio-via-dev-portal
 
 ### 2.1 Opening Studio via Developer Portal {#opening-studio-via-dev-portal}
 
-You can edit an app in Mendix Studio by opening it in the [Developer Portal](https://home.mendix.com) and clicking **Edit in Studio**:
-
-{{< figure src="/attachments/studio/general/edit-app.jpg" alt="Edit in Studio"   width="350"  >}}
+In the [Developer Portal](https://home.mendix.com), you can open Mendix Studio by clicking **Edit in Studio** in the [app tile](/developerportal/#my-apps).
 
 ### 2.2 Opening Studio via Studio Pro {#opening-via-studio-pro}
+
+{{% alert color="info" %}}
+This option is only available for apps with Mendix version 9.20 or below.
+{{% /alert %}}
 
 You can also open your app in Studio via Studio Pro. Do the following:
 

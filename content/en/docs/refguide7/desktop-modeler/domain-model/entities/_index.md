@@ -47,7 +47,7 @@ The name property defines the name of the entity. This name is used to refer to 
 
 An entity can be a more specialized version of a general entity. This means that the specialized entity has all the attributes, associations, events etcetera of the more general entity. Using the generalization property you can specify which entity is the generalization of the entity. For example, the Car entity has Vehicle as its generalization.
 
-The generalization specifies the entity of which this entity derives her properties (attributes, associations, events, etc.). This is used when entities have common attributes and can be generalized using a super entity. Using this feature it is possible to derive functionality from the System module like images from the entity 'Image' and files from the entity 'FileDocument'. In object oriented programming (OOP) the generic term for generalization and specialization is called inheritance.
+The generalization specifies the entity of which this entity derives its properties (attributes, associations, events, etc.). This is used when entities have common attributes and can be generalized using a super entity. Using this feature it is possible to derive functionality from the System module like images from the entity 'Image' and files from the entity 'FileDocument'. In object oriented programming (OOP) the generic term for generalization and specialization is called inheritance.
 
 {{% alert color="info" %}}
 

@@ -135,9 +135,9 @@ To convert from Mendix 8.18.x to Mendix 9.12.5 or above, follow the steps below 
 
     You will see four errors in the [Errors Pane](/refguide/errors-pane/).
     {{< figure src="/attachments/appstore/modules/forgot-password/upgrade-errors.png" alt="Four CE1613 errors in the errors pane" >}}
-1. Open the page of one of the errors (for example, by double-clicking the error) and change the (master) layout to `Atlas_TopBar(Atlas_UI_Resources)`.
+1. Open the page of one of the errors (for example, by double-clicking the error) and change the (primary) layout to `Atlas_TopBar(Atlas_UI_Resources)`.
     {{< figure src="/attachments/appstore/modules/forgot-password/change-layout.png" >}}
-1. This will resolve two of the errors. Open the page of error and again change the (master) layout to `Atlas_TopBar(Atlas_UI_Resources)`.
+1. This will resolve two of the errors. Open the page of error and again change the (primary) layout to `Atlas_TopBar(Atlas_UI_Resources)`.
 
 You have now successfully upgraded the Forgot Password Module to work with Mendix version 9.
 

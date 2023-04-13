@@ -33,7 +33,7 @@ The **Environments** page has the following tabs:
 
 In the **Deploy** tab, you can view information about your environment, as well as create, upload, delete, and deploy packages.
 
-### 2.1 Deployment Package Repository
+### 2.1 Deployment Package Repository{#package-repository}
 
 In the **Deployment Package Repository** section, you have an overview of all the available deployment packages with the following details:
 

@@ -91,11 +91,3 @@ Currently, the binary data can only be accessed by Java actions.
 An OData v3 association can only be used if it has two ends.
 
 An OData v4 navigation property can only be used as an association if it has a partner.
-
-## 4 Data Hub License Limitations {#license-limitations}
-
-Contact your [Mendix Admin](/developerportal/control-center/#company) or company admin to find out what type of Data Hub license your organization has. See [Data Hub Licenses](/data-hub/#data-hub-licences) to learn more.
-
-### 4.1 Local development
-
-Local development is subject to the same license as the freemium model. You have the ability to retrieve a total of 1000 OData objects, after which an error will occur. It is possible to reset this by restarting the App.

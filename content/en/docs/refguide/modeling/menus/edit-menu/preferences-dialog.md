@@ -53,6 +53,16 @@ The JDK is necessary to run Mendix applications, because the Mendix Runtime is w
 
 Enable this setting to increase the speed at which a running application is updated after changes have been made in Studio Pro. When only pages, layouts or snippets have been changed, an entire restart of the application is skipped to decrease deployment time. Also, no Java compilation is performed when no relevant files have changed.
 
+#### 2.3.3 Build Using Gradle {#gradle}
+
+Enable this setting to build you app using Gradle. If this setting is disabled Ant is used instead.
+
+#### 2.3.4 Gradle Directory
+
+A directory where Gradle is located on the computer that you use to deploy the application. The correct directory is usually located automatically.
+
+Gradle is necessary to deploy Mendix applications if the **Build using Gradle** setting is enabled.
+
 ### 2.4 Disk Location
 
 #### 2.4.1 Default App Directory
@@ -127,13 +137,7 @@ Select **Enable automatic repository optimization** to run Git repository optimi
 
 This option is available when [Enable automatic repository optimization](#optimization) is on. Studio Pro keeps track of the number of commits made in the local repository. You can manually specify the minimum number of them to tell when to start background optimization. For more information, see [Git Storage Optimization](/refguide/git-storage-optimization-dialog/).
 
-#### 5.3.5 Enable Private Version Control with Git (Beta)
-
-{{% alert color="info" %}}
-
-This functionality is currently in [Beta](/releasenotes/beta-features/).
-
-{{% /alert %}}
+#### 5.3.5 Enable Private Version Control with Git 
 
 Select this option when you want to work on an app that is not stored in [Mendix Team Server](/developerportal/collaborate/team-server/), but in a private Git server to which you have access. This will allow you to specify the location of the app on the Git server when opening, downloading, or uploading the app. In this section, you also need to specify name and email values that will be used to identify your commits with Git.
 
@@ -148,7 +152,15 @@ Sometimes the computer running Studio Pro cannot access the internet directly, b
 When the **Send Studio Pro usage data to Mendix** setting is enabled, Studio Pro sends usage data to Mendix that allows Mendix to identify issues and improve the user experience. The usage data does not contain sensitive information. It is possible to disable this feature, but it may affect the behavior of some features, prevent Mendix from identifying issues reported by the user, or affect tracking issues that are not reported yet. This setting is machine-specific and changing this feature does not affect any existing installed version.
 
 {{% alert color="info" %}}
-This functionality is currently available in Studio Pro 9.22 or above.
+This functionality is currently available in Studio Pro 9.22 and above.
+{{% /alert %}}
+
+### 6.2 Rendering {#rendering}
+
+Hardware and driver issues may cause performance problems when running Studio Pro. These issues can appear in form of dialogs opening and closing much slower than expected, and general slowness of the UI. In case the hardware problems cannot be solved, it is possible to mitigate these issues by turning the **Enable software rendering mode** setting on. Enabling this setting requires a restart of Studio Pro to take effect. Running the application with this setting on may increase the CPU usage.
+
+{{% alert color="info" %}}
+This functionality is currently available in Studio Pro 9.24.
 {{% /alert %}}
 
 ## 7 Work Environment Tab

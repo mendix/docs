@@ -81,7 +81,7 @@ The progress message is shown along with the progress bar if the progress bar is
 
 ## 5 Confirmation
 
-If a microflow is triggered by a button you have the option to ask for confirmation before proceeding with the microflow. This is useful in cases where an operation modifies or deletes a lot of data or when it takes a lot of time to complete. The user will be prompted with a question whether he/she wants to continue with this operation.
+If a microflow is triggered by a button you have the option to ask for confirmation before proceeding with the microflow. This is useful in cases where an operation modifies or deletes a lot of data or when it takes a lot of time to complete. The user will be prompted with a question whether they want to continue with this operation.
 
 Note: the title of the confirmation pop-up is determined by a system text (category 'Message dialog title').
 

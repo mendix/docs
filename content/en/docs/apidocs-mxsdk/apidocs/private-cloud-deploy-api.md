@@ -26,11 +26,13 @@ To help you work with the Mendix for Private Cloud Build API, the following sect
 
 ### 2.1 Authentication
 
-Authentication for the API uses a Personal Access Token (PAT).
+Authentication for the API uses a personal access token (PAT).
 
 #### 2.1.1 Generating a PAT
 
-Go to https://warden.mendix.com/ and follow the instructions in [Create a Personal Access Token with Warden](/developerportal/community-tools/warden/). Select the following as scopes:
+To generate a PAT, see the [Personal Access Tokens](/developerportal/community-tools/mendix-profile/#pat) section of *Mendix Profile*.
+
+Select the following as scopes:
 
 * `mx:deployment:read` – to perform `GET` operations
 * `mx:deployment:write` – to perform all operations (`GET`, `POST`, `PUT`, and `DELETE`)
@@ -40,6 +42,7 @@ For operations related to deployment packages (such as Create, Upload, Delete, a
 Store the `{GENERATED_PAT}` value in a safe location, so you can use it to authorize your Mendix for Private Cloud API calls.
 
 #### 2.1.2 Scopes explanation
+
 | Operation                   | Scopes                                       |
 |-----------------------------|----------------------------------------------|
 | Get namespace manifest      | `mx:deployment:read` or `mx:deployment:write`|
@@ -82,7 +85,7 @@ The API does not generate unique UUIDs for the resources. You must generate your
 
 The following sections of this document contain sample usage scenarios for the API.
 
-### 3.1 Using the API to update the cluster and namespace
+### 3.1 Using the API to Update the Cluster and Namespace
 
 The following steps will create a cluster, register and install a namespace, add or update a cluster member, and enable development mode for the namespace.
 
@@ -101,8 +104,7 @@ The following steps will create a cluster, register and install a namespace, add
 12. Make an API call `POST /clusters/{clusterId}` to add/update the cluster member. You can get the manifest for this update request from `GET /clusters/{clusterId}`.
 13. Make an API call `POST /clusters/{namespaceId}` to update the namespace development mode and set `enableDevelopmentMode` to true . You can get the manifest for this update request from `GET /clusters/{namespaceId}`.
 
-
-### 3.2 Using the API to Restart an App
+### 3.2 Using the API to Restart an App {#restart}
 
 The following steps will restart an app by setting the number of instances to zero and then setting it back to the number of instances required.
 

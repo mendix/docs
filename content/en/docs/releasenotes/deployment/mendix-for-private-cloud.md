@@ -17,7 +17,7 @@ For information on the current status of deployment to Mendix for Private Cloud 
 
 #### Portal Enhancements
 
-* We have added webhooks which can trigger endpoints when changes are committed to a Team Server Git repository, or when a new deployment package is available for deployment to the Private Cloud. For more information, see [Webhooks](/developerportal/deploy/webhooks).
+* We have added webhooks which can trigger endpoints when changes are committed to a Team Server Git repository, or when a new deployment package is available for deployment to the Private Cloud. For more information, see [Webhooks](/developerportal/deploy/webhooks/).
 
 {{% alert color="info" %}}
 This feature is currently in a Beta release.

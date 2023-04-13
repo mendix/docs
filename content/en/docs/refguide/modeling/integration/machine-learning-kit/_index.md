@@ -2,7 +2,7 @@
 title: "Machine Learning Kit"
 url: /refguide/machine-learning-kit/
 category: Integration
-weight: 35
+weight: 90
 tags: ["studio pro", "machine learning", "ml kit", "models", "integration"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
@@ -27,6 +27,8 @@ To get started, see [Converting Your Model to ONNX](/refguide/machine-learning-k
 Learn more about the machine learning kit in the following documents:
 
 * [Using ML Kit](/refguide/machine-learning-kit/using-ml-kit/), a comprehensive overview of working with machine learning model functionality in Studio Pro
+    * [Logistic Regression Example](/refguide/machine-learning-kit/using-ml-kit/logistic-regression/), an example of the end-to-end flow of integrating an ML model into Studio Pro
+* [Pre-Trained ML Models](/refguide/machine-learning-kit/pretrained-ml-models/), a list of pre-trained models you can use with *Mendix ML Kit*
 * [Design Patterns](/refguide/machine-learning-kit/design-patterns/), an overview page that links to two documents about machine learning design patterns:
     * [Advanced Inference Design Patterns](/refguide/machine-learning-kit/design-patterns/advanced-inference/)
     * [Pre- and Post-Processor Design Patterns](/refguide/machine-learning-kit/design-patterns/pre-post-processor-patterns/)

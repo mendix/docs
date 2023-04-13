@@ -3,8 +3,7 @@ title: "Register OData Resources in the Data Hub Catalog"
 linktitle: "Register OData Resources"
 url: /data-hub/data-hub-catalog/register-data/
 description: "Describes how to register OData resources in the Data Hub Catalog: through the Mendix Cloud, using the Registration API, or in the UI form."
-category: "Data Hub Catalog"
-weight: 35
+weight: 10
 tags: ["data hub catalog", "data hub", "external entities", "register", "published OData service" ,"how to", "registration"]
 aliases:
     - /data-hub/data-hub-catalog/register.html
@@ -205,6 +204,10 @@ A successful `PUT` call will result in a `200` status code and a JSON response b
 }
 ```
 
+{{% alert color="info" %}}
+Note: The **PUT** operation call executed more than once overwrites the details for all the published endpoints at the specified environment. If there is a collection of endpoints on the environment, you can create, update, and delete different endpoints all in one **PUT** call.
+{{% /alert %}}
+
 ##### 4.1.3.1 Behavior When Renaming an Environment
 
 Though uncommon, you update the URL of a hosted environment. When redeploying, the root URL is then updated, and endpoints that are registered under that environment get updated endpoint locations.
@@ -302,7 +305,7 @@ The Data Hub Catalog has a UI form where you can register a single exposed OData
 Follow the steps below:
 
 1. Start at the [Data Hub Catalog homepage](https://hub.mendix.com). If the connector for your business application is not shown, use the generic **OData** v4 service.
-2. On the **Contract** screen, upload your XML or ZIP file.
+2. On the **Contract** screen, upload your XML or ZIP file. For more information on the contract, see the [Contract Structure](#contract-structure) section below.
 
     If you selected the wrong file, click the **x** to remove it and upload a different one. 
 
@@ -341,3 +344,15 @@ Fill in as many details as you can to ensure that consuming developers can easil
 ##### 4.2.1.1 Selecting a Marketplace Module (Optional)
 
 If you are using a module from the Mendix Marketplace, you select it in the **Marketplace Module** field.
+
+#### 4.2.2 Contract Structure {#contract-structure}
+
+Folders in a ZIP contract are relative to the Document Base URL.
+
+* Primary document – This must be indicated by naming it primary.
+* Absolute URI – If the file location/URI is given by an absolute URL. For example, it includes the full path starting from `http` or `https` followed by the domain and the rest of the URI, then this must be in a folder named `http` or `https` according to the original URL, each following folder shall then represent a segment of the path, starting with the topmost folder `http` or `https`. 
+* Relative URI – All referenced documents that are relative to the primary document must have their folder structure given in such a way that when it is combined together will give the relative path as it is used in the primary document.
+
+See the ZIP structure example for reference:
+
+{{< figure src="/attachments/data-hub/data-hub-catalog/register-data/zip-file-structure.png" >}}

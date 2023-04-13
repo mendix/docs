@@ -139,7 +139,7 @@ Create a test case by following these steps:
 
     {{< figure src="/attachments/howto8/extensibility/build-native-widget/initial-widget.png" alt="initial widget" >}}
 
-10.  Double-click the widget, fill in your name as the **Default value**, and click **OK**.
+10. Double-click the widget, fill in your name as the **Default value**, and click **OK**.
 
 You have set up your test project. To verify that your Mendix test project is set up correctly, follow these steps:
 

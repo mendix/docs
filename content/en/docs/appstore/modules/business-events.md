@@ -125,10 +125,10 @@ The handler microflow attached to it triggers each event where you can build you
 Upgrade your apps to Studio Pro [9.24](/releasenotes/studio-pro/9.24/) and above to enjoy the most recent business event behavior. When you upgrade, the following happens:
 
 * [Published business event](/refguide/business-event-services/#published-event-service-doc) service documents are converted to created business event service documents.
-     * The created service document allows it to publish events.
-     * The other app's implementation will be to subscribe to events.
+    * The created service document allows it to publish events.
+    * The other app's implementation will be to subscribe to events.
 * [Consumed business event](/refguide/business-event-services/#consumed-event-service-doc) service documents are converted to documents that use a business events service.
-     * They will be able to subscribe to events.
+    * They will be able to subscribe to events.
 
 ### 4.2 Using Business Events (Studio Pro 9.24 and Above) {#two-way-be}
 
@@ -156,7 +156,7 @@ In the [next section](#add-be-definitions), you will define the information incl
 
 To start defining what information is included in your events, as well as what the service will implement, do the following:
 
-1.   Click **Add** in the open service document:
+1. Click **Add** in the open service document:
 
      {{< figure src="/attachments/appstore/modules/business-events/add-event-definition.png" >}}
 
@@ -164,7 +164,7 @@ To start defining what information is included in your events, as well as what t
 
      {{< figure src="/attachments/appstore/modules/business-events/wizard-step-1.png" >}}
 
-2.   Go through Steps 1 and 2 of the wizard.
+2. Go through Steps 1 and 2 of the wizard.
 
 *Step 1: Define what information is included in this event*
 
@@ -182,9 +182,9 @@ Below is an explanation of the possibilities for what other apps can do and what
 | ---------- | ---------- | ---------- | ---------- | 
 | Publish events | Subscribing to events | Publishing events | **ConsumedBusinessEvent** entity and a [handler microflow](#two-way-be-handler) |
 | Subscribe to events | Publishing events | Subscribing to events | When publishing, **PublishedBusinessEvent** entity and handler microflow <br>If subscribing, a **ConsumedBusinessEvent** entity |
-| Publish events and<br>Subscribe to events | [Nothing requred: if apps can do both, there is no obligation for the service to implement anything] | Publishing events and/or subscribing to events | If no service implementations are selected, then nothing created <br>If publishing, **PublishedBusinessEvent** entity and handler microflow <br>If subscribing, a **ConsumedBusinessEvent** entity <br>If both, then both entities and the handler microflow are created  |
+| Publish events and<br>Subscribe to events | [Nothing requred: if apps can do both, there is no obligation for the service to implement anything] | Publishing events and/or subscribing to events | If no service implementations are selected, then nothing created <br>If publishing, **PublishedBusinessEvent** entity and handler microflow <br>If subscribing, a **ConsumedBusinessEvent** entity <br>If both, then both entities and the handler microflow are created 
 
-3.   Click **Done** to exit the wizard and view the defined service document. 
+3. Click **Done** to exit the wizard and view the defined service document. 
 
      **Export AsyncAPI Document** exports the YAML file of the business event service so that other apps can [use your newly created service](#two-way-be-existing).
 
@@ -194,7 +194,7 @@ To use an existing business service in Studio Pro 9.24 and above, do the followi
 
 1. Right-click on the module folder, hover over **Add other**, then click **Business Event Service**.
 2. Select **Use an existing business event service**.
-3. Click **Browse** and navigate to the YAML file you [exported from the publishing app]().
+3. Click **Browse** and navigate to the YAML file you [exported from the publishing app](#create-be).
 4. Enter a **Document name**, or use the default name, for the [business event service document](/refguide/business-event-services/).
 5. Click **OK**.
 
@@ -446,6 +446,7 @@ Here is an example of postgres service that you can add to your `docker-compose.
 ## 9 Read More
 
 Check out the following release blogs for more information about business events:
+
 * [Mendix Studio Pro 9.18 release blog](https://www.mendix.com/blog/mendix-release-9-18-next-level-performance/) 
 * [Mendix Studio Pro 9.24 release blog](https://www.mendix.com/blog/mendix-release-9-24-what-a-ride-it-has-been/) 
 

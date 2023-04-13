@@ -28,6 +28,10 @@ To see the current status of the Mendix Developer Portal and Control Center, see
   * If you use Scrum, you can now see a summary of your completed sprint on the [archived Sprint details](/developerportal/collaborate/epics/#archived-sprint-details) page. You can see how many stories were completed and uncompleted, as well as the breakdown of completed points in the Sprint.
   * You can now [import](/developerportal/collaborate/epics/#import-stories) and [export](/developerportal/collaborate/epics/#export-archived-stories) stories using Excel files.
 
+#### Fixes
+
+* We fixed an issue that prevented some apps from being migrated to Git.
+* We fixed an issue that incorrectly removed Team Server access for some app team members when changing the permissions of an app role.
 
 ### April 4th, 2023
 

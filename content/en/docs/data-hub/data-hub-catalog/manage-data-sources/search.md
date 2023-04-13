@@ -1,8 +1,6 @@
 ---
-title: "Search in the Data Hub Catalog"
+title: "Search in the Catalog"
 url: /data-hub/data-hub-catalog/search/
-category: "Data Hub Catalog"
-weight: 10
 description: "Describes how to find data sources and datasets in the Data Hub Catalog."
 tags: ["data hub", "data hub catalog", "data source", "dataset"]
 ---

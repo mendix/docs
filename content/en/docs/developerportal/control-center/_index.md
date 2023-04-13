@@ -244,10 +244,10 @@ The **Entitlements** page is a self-service tool that displays the transactions 
 
 {{< figure src="/attachments/developerportal/control-center/entitlements.png" alt="entitlements page" >}}
 
-## 12 Deployed Apps Overview {#deployed-apps}
+## 12 Deployed Apps {#deployed-apps}
 
 {{% alert color="info" %}}
-This feature is currently in Beta. For more information about Beta features, see [Beta releases](/releasenotes/beta-features/).
+This feature is currently in Beta. For more information about Beta features, see [Beta Releases](/releasenotes/beta-features/).
 {{% /alert %}}
 
 The **Deployed Apps Overview** page is a self-service tool that enables you to provision and offboard environments.

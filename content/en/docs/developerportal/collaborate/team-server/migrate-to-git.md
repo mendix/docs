@@ -33,6 +33,12 @@ If your app is eligible for migration and your team role is Scrum Master, you se
 
 During migration all app history, including revisions for all branches, is copied from SVN to Git. 
 
+{{% alert type="info" %}}
+
+Deleted SVN branches are not mapped to Git branches by the migration process. If the deleted branch was not merged to a non-deleted branch prior to the migration, all commits are lost.
+
+{{% /alert %}}
+
 Access to SVN is disabled as soon as migration starts to prevent developers from making changes to SVN that will not be copied. If migration fails for any reason, it is rolled back and access to SVN is restored.
 
 To inform your team members about the process, several emails are sent out automatically :

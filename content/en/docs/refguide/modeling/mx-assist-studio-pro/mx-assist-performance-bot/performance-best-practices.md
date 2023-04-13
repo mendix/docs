@@ -191,7 +191,7 @@ To fix the issue, we recommend revisiting your security rules and avoid letting 
 
 ## 10 Avoid Deeply Nested Data/List Views [MXP011] {#mxp011}
 
-This Best Practice applies when a Data View or List View is used on a page that is nested to two or more levels, for example, a list view is in list view and the second list view is in a data view.
+This best practice applies when a data view or list view is used on a page that is nested to two or more levels, for example, a list view is in another list view and the second list view is in a data view.
 When you use two or more levels of nesting, page performance may be affected due to the increased number of requests and transferred data volume.
 
 ### 10.1 Steps to Fix

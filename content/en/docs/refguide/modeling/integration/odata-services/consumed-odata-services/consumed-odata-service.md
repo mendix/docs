@@ -104,10 +104,6 @@ The microflow must return a `String` containing the error message. If it returns
 
 Note for developers of java actions: the message returned by the error handling microflow can be caught as a [UserException](https://apidocs.rnd.mendix.com/9/runtime/com/mendix/systemwideinterfaces/core/UserException.html).
 
-{{% alert color="info" %}}
-The *error handling microflow* feature was introduced in Studio Pro 9.6.0.
-{{% /alert %}}
-
 ### 3.1 Metadata
 
 When you create a consumed OData service, the metadata editor allows you to open an OData contract from a file or URL. When you have already consumed a contract, you can click the **Update** button to update the existing contract with a new version from file or URL.
@@ -144,7 +140,7 @@ Click the **Properties** tab for the consumed OData service which displays the p
 * **Application ID** – The unique identifier of the application that the service was published from in the Data Hub Catalog.
 * **Metadata** – The contents of the metadata file defining the service.
 * **OData version** – The OData version: can be OData 3 or OData 4.
-* **Use QuerySegment** – When set to `No`, the application retrieves data using a `GET HTTP` method and places data query arguments in the URL's query string. When set to `Yes`, then a `POST HTTP` method is used, `/$query` is appended to the resource path of the URL, and the query string is provided as the request body. This enables limiting the length of the URL and avoiding potential problems with the systems involved. This feature is not available for OData v3 or if the consumed service explicitly indicates that it is not supported. For details, see [Passing Query Options in the Request Body](https://docs.oasis-open.org/odata/odata/v4.01/odata-v4.01-part2-url-conventions.html#sec_PassingQueryOptionsintheRequestBody) in the OData specification. This property was introduced in Studio Pro 9.6.0.
+* **Use QuerySegment** – When set to `No`, the application retrieves data using a `GET HTTP` method and places data query arguments in the URL's query string. When set to `Yes`, then a `POST HTTP` method is used, `/$query` is appended to the resource path of the URL, and the query string is provided as the request body. This enables limiting the length of the URL and avoiding potential problems with the systems involved. This feature is not available for OData v3 or if the consumed service explicitly indicates that it is not supported. For details, see [Passing Query Options in the Request Body](https://docs.oasis-open.org/odata/odata/v4.01/odata-v4.01-part2-url-conventions.html#sec_PassingQueryOptionsintheRequestBody) in the OData specification. 
 
 ## 4 Updating or Switching a Consumed OData Service {#updating}
 

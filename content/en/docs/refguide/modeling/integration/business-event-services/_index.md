@@ -22,7 +22,7 @@ The **Business Event Service** document is added to your app in Studio Pro when 
 
 #### 2.1 Business Event Services {#be-services}
 
-Business event services in Studio Pro 9.24 and above are defined centrally by one app for a specific use case. Other apps can send or receive these predefined events.
+Business event services in are defined centrally by one app for a specific use case. Other apps can send or receive these predefined events.
 
 ##### 2.1.1 Creating a New Business Event Service {#create-new}
 

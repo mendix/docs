@@ -1,7 +1,6 @@
 ---
 title: "Consume Registered Assets"
 url: /data-hub/data-hub-catalog/consume/
-category: "Data Hub Catalog"
 weight: 20
 description: "Describes how to use shared data sources and datasets through Mendix Data Hub."
 tags: ["data hub", "data hub catalog", "consume", "external entities", "asset", "entities", data hub pane", "studio pro"]
@@ -10,10 +9,6 @@ tags: ["data hub", "data hub catalog", "consume", "external entities", "asset", 
 ## 1 Introduction
 
 The Data Hub Catalog is a catalog of OData services exposing datasets that you can use in your apps. In Mendix Studio Pro, these exposed datasets are added as *external entities* through the [Data Hub pane](/refguide/data-hub-pane/). The integrated Data Hub Catalog [search](/data-hub/data-hub-catalog/search/) functionality in Studio Pro is available to find suitable datasets to use in your apps. 
-
-This document provides general information and guidelines on consumed datasets in apps. For details on using shared datasets in Studio Pro, see [External Entities](/refguide/external-entities/) in the *Studio Pro Guide*.
-
-For details on the security of the data that the shared datasets connect to, and for defining access to the datasets for specified user roles, see [Data Accessibility and Security](/data-hub/data-hub-catalog/security/).
 
 ## 2 Using Registered Assets in Your App {#consuming-services-entities}
 

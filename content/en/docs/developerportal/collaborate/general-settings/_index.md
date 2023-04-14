@@ -61,7 +61,7 @@ To manage users or invite users for an app deployed on a specific environment, c
 
 On the tab, you can only see the environments that satisfy these requirements:
 
-* [Mendix Single Sign-On](/developerportal/deploy/mendix-sso/) is implemented in Studio Pro, SSO can be implemented via the [Mendix SSO](/appstore/modules/mendix-sso/) module (for more information, see [Mendix Single Sign-On](/developerportal/deploy/mendix-sso/))
+* [Mendix Single Sign-On](/developerportal/deploy/mendix-sso/) is implemented in the app using the [Mendix SSO](/appstore/modules/mendix-sso/) module (for more information, see [Mendix Single Sign-On](/developerportal/deploy/mendix-sso/))
 * Your user role allows you to manage other users (for more information, see the [User Management Properties](/refguide/user-roles/#user-management) section of *User Roles*)
 
 ### 3.1 Manage Users {#manage-users}

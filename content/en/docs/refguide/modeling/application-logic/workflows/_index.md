@@ -38,11 +38,12 @@ The selected workflow is opened.
 To add a workflow to your app, do the following:
 
 1. In the [App Explorer](/refguide/app-explorer/), right-click the module or a folder you want to create a page in and select **Add workflow**.
-2. In the **Add workflow** dialog box, fill in Name and click **OK**:
+2. In the **Add workflow** dialog box, fill in Name.
+3. Optionally you can select an **entity** to use as [Workflow Parameter](/refguide/workflow-parameters/):
 
-    {{< figure src="/attachments/refguide/modeling/application-logic/workflows/add-workflow-dialog.jpg" alt="Adding Workflow" >}}
+    {{< figure src="/attachments/refguide/modeling/application-logic/workflows/add-workflow-dialog.png" alt="Adding Workflow" >}}
 
-The workflow is created and the **WorkflowInstance** entity is added to the domain model. For more information on the **WorkflowInstance** entity, see [Workflow Parameters](/refguide/workflow-parameters/).
+The workflow is created.
 
 ### 3.3 Deleting a Workflow
 

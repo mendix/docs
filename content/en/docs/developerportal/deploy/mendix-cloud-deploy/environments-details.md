@@ -34,7 +34,6 @@ In this tab, you can find the following information about your environment:
 * **Environment ID** – the unique identifier of this environment
 * **Custom domains** – any [custom domains](/developerportal/deploy/custom-domains/) of the app
 * **Java Version** – Oracle version 1.8 or AdoptOpenJDK version 8
-* **Mendix Studios Target** – {{% todo %}}[Verify: what is the best update here?]{{% /todo %}} if **Yes**, it means that Mendix Studio and Studio Pro deploy apps to this environment; for more information, see [Studio Deployment Settings](/developerportal/deploy/studio-deployment-settings/)
 * **Plan** – this indicates the type of plan covered by this license
 * **Instances** – this shows a summary of the number and memory allocation of instances of this environment – for more information, see the [Scaling - Mendix Cloud](#scaling) section below
 * **Database Version** – the PostgreSQL version supporting the database

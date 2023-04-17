@@ -11,6 +11,12 @@ These release notes cover changes made to the [Mendix Data Hub Catalog](/data-hu
 
 ## 2023
 
+### April 13th, 2023
+
+#### Fixes
+
+* We fixed an issue where the page was flickering when selecting an object in the search results.
+
 ### April 6th, 2023
 
 #### Improvements

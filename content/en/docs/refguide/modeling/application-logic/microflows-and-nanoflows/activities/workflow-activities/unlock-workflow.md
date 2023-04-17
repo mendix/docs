@@ -7,10 +7,7 @@ tags: ["studio pro", "unlock workflow", "workflow unlock"]
 ---
 
 {{% alert color="warning" %}}
-
 This activity can only be used in **Microflows**.
-
-This activity was introduced in Studio Pro [9.23.0](/releasenotes/studio-pro/9.23/#9230).
 {{% /alert %}}
 
 ## 1 Introduction

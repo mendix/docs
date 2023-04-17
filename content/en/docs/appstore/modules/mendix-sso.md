@@ -270,10 +270,6 @@ Mendix SSO will now use your new entity to administer the users. You can edit th
 Remember that data which comes from the end-user's Mendix ID via SSO (for example, **EmailAddress**) will overwrite any changes you make within your app.
 {{% /alert %}}
 
-### 5.3 Using the Administration module
-
-The [Administration](https://marketplace.mendix.com/link/component/23513) module contains a set of microflows to configure Mendix SSO to use **Administration.Account** as the user entity. Follow the instructions in [Using the Administration Module with Mendix SSO](https://docs.mendix.com/appstore/modules/administration/#3-using-the-administration-module-with-mendix-sso) to use the Administration module with Mendix SSO.
-
 ## 6 Tokens
 
 Mendix SSO works by providing end-users with tokens when they are authenticated. If end-users are having issues with Mendix SSO it can be useful to see the tokens, either for your own debugging or to provide information to Mendix Support.

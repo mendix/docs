@@ -25,9 +25,7 @@ Atlas UI has a philosophy based on the core principles described below. These pr
 
 ## 3 Design Elements
 
-{{% todo %}}[Whole section about Studio? delete?]{{% /todo %}}
-
-Our UI library is fully integrated into Mendix Studio. After choosing a navigation layout in Mendix Studio, you can find page templates, building blocks, and widgets directly in your Toolbox. These UI elements form the foundation of your app.
+Our UI library is fully integrated into Mendix Studio Pro. After creating a page and selecting a layout in Mendix Studio Pro, you can find building blocks, and widgets directly in your Toolbox. These UI elements form the foundation of your app.
 
 {{< figure src="/attachments/howto/front-end/atlas-ui/get-started/designelements.png" alt="Atlas UI design elements" >}}
 

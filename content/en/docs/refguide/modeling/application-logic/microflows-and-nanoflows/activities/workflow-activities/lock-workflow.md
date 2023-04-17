@@ -59,11 +59,15 @@ You can open a dialog box to configure this action by clicking the ellipsis (**â
 
 You can also open the dialog box by double-clicking the activity in the microflow or right-clicking the activity and selecting **Properties**.
 
-### 3.1 Workflow {#workflow}
+### 3.1 Input type {#workflow}
+
+This option allows you to choose between a workflow document (which can be selected from the document explorer) or a workflow object (which is provided at runtime) to target the workflow you want to lock.
+
+### 3.2 Workflow {#workflow}
 
 The workflow that is locked by this activity. 
 
-### 3.2 Pause Instances 
+### 3.3 Pause Instances 
 
 With this option, all existing instances of the selected workflow which are in Incompatible or In-Progress state are paused.
 We do not pause the Aborted and Completed workflow instances because those are final states and there is no way to revert those instances.

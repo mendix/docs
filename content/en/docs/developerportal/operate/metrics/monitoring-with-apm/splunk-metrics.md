@@ -67,20 +67,28 @@ To send your runtime information to Splunk Cloud Platform, you need to set it up
 
 ### 3.2 Metadata
 
-Along with runtime application logs, following json-formatted metadata is automatically sent to Splunk Cloud Platform: `environment_id`, `instance_index`,`hostname`, `application_name`, `model_version` and `runtime_version`.
-It is possible to filter data by the specified metadata fields.
+In addition to the runtime application logs, the following JSON-formatted metadata is automatically sent to the Splunk Cloud Platform:
 
-### 3.3 Cuctom tags
+* `environment_id`
+* `instance_index`
+* `hostname`
+* `application_name`
+* `model_version`
+* `runtime_version`
 
-Moreover, it is possible to set up custom tags in the following format `key:value`.
+You can filter the data by these fields.
 
-* app:{app_name} – this enables you to identify all metrics sent from your app (for example, **app:customermanagement**)
-* env:{environment_name} – this enables you to identify metrics sent from a particular environment so you can separate out production metrics from test metrics (for example, **env:accp**)
+### 3.3 Custom tags
+
+You can also set up custom tags in the following format `key:value`. We recommend that you add the following custom tags:
+
+* `app:{app_name}` – this enables you to identify all metrics sent from your app (for example, **app:customermanagement**)
+* `env:{environment_name}` – this enables you to identify metrics sent from a particular environment so you can separate out production metrics from test metrics (for example, **env:accp**)
 
 To set these tags, do the following:
 
 1. Go to the **Environments** page of your app in the *Developer Portal*.
-2. Click **Details** to select an environment you are monitoring with Datadog. 
+2. Click **Details** to select an environment you are monitoring with Splunk. 
 3. Open the **Tags** tab.
 4. Add a **Tag** – this is the string which is sent to Splunk as a tag.
 5. **Restart** the application.

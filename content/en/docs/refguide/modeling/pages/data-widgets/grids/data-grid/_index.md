@@ -49,6 +49,11 @@ Data grid properties consist of the following sections:
 
 The data source determines which objects will be shown in a list view. For general information on data sources, see [Data Sources](/refguide/data-sources/).
 
+Wait for search
+
+If set to true, the grid will remain empty of contents until a search has been performed. This can be useful if the target entity contains an extremely large set of objects but most mutations only require a subset of the data. Waiting for search will ensure that no database query is performed until the desired subset is specified, thus skipping the initial loading period associated with major data retrievals.
+
+Default value: false
 #### 3.2.1 Type
 
 The list view supports the following types of data sources: 

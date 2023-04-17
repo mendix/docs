@@ -6,10 +6,6 @@ description: "Describes how to configure and report metrics in Mendix."
 tags: ["studio pro", "metrics", "micrometer"]
 ---
 
-{{% alert color="warning" %}}
-Custom metrics were introduced in Studio Pro [9.6.0](/releasenotes/studio-pro/9.6/#960).
-{{% /alert %}}
-
 ## 1 Introduction
 
 Mendix supports reporting metrics through [Micrometer](https://micrometer.io/docs).
@@ -403,14 +399,14 @@ The Runtime Server produces the following metrics out-of-the-box:
 | **mx.<wbr>runtime.<wbr>stats.<wbr>connectionbus.<wbr>inserts** | counter | `XASId` | The total number of `INSERT` statements that were executed on the database by a node (`XASId`) since it was started. |
 | **mx.<wbr>runtime.<wbr>stats.<wbr>connectionbus.<wbr>updates** | counter | `XASId` | The total number of `UPDATE` statements that were executed on the database by a node (`XASId`) since it was started. |
 | **mx.<wbr>runtime.<wbr>stats.<wbr>connectionbus.<wbr>deletes** | counter | `XASId` | The total number of `DELETE` statements that were executed on the database by a node (`XASId`) since it was started. |
-| **mx.<wbr>odata.<wbr>consume.<wbr>created** | counter | `entity` | The total number of objects of a certain entity type (`entity`) that were created using the [Send External Object activity](/refguide/send-external-object/). (introduced in Studio Pro 9.13) |
-| **mx.<wbr>odata.<wbr>consume.<wbr>updated** | counter | `entity` | The total number of objects of a certain entity type (`entity`) that were updated using the [Send External Object activity](/refguide/send-external-object/). (introduced in Studio Pro 9.13) |
-| **mx.<wbr>odata.<wbr>consume.<wbr>deleted** | counter | `entity` | The total number of objects of a certain entity type (`entity`) that were created using the [Delete External Object activity](/refguide/delete-external-object/). (introduced in Studio Pro 9.13) |
-| **mx.<wbr>odata.<wbr>publish.<wbr>objects** | counter | `entity` | The total number of objects that were served for a particular type of object (`entity`) by a [published OData service](/refguide/published-odata-services/). (introduced in Studio Pro 9.12) |
-| **mx.<wbr>odata.<wbr>publish.<wbr>created** | counter | `entity` | The total number of objects of a certain entity type (`entity`) that were created due to client requests to a [published OData service](/refguide/published-odata-services/). (introduced in Studio Pro 9.14) |
-| **mx.<wbr>odata.<wbr>publish.<wbr>updated** | counter | `entity` | The total number of objects of a certain entity type (`entity`) that were updated due to client requests to a [published OData service](/refguide/published-odata-services/). (introduced in Studio Pro 9.14) |
-| **mx.<wbr>odata.<wbr>publish.<wbr>deleted** | counter | `entity` | The total number of objects of a certain entity type (`entity`) that were deleted due to client requests to a [published OData service](/refguide/published-odata-services/). (introduced in Studio Pro 9.14) |
-| **mx.<wbr>odata.<wbr>retrieve** | counter | `entity` | The total number of objects of a certain entity type (`entity`) that were retrieved from an [OData service](/refguide/consumed-odata-service/). (introduced in Studio Pro 9.12) |
+| **mx.<wbr>odata.<wbr>consume.<wbr>created** | counter | `entity` | The total number of objects of a certain entity type (`entity`) that were created using the [Send External Object activity](/refguide/send-external-object/). |
+| **mx.<wbr>odata.<wbr>consume.<wbr>updated** | counter | `entity` | The total number of objects of a certain entity type (`entity`) that were updated using the [Send External Object activity](/refguide/send-external-object/). |
+| **mx.<wbr>odata.<wbr>consume.<wbr>deleted** | counter | `entity` | The total number of objects of a certain entity type (`entity`) that were created using the [Delete External Object activity](/refguide/delete-external-object/). |
+| **mx.<wbr>odata.<wbr>publish.<wbr>objects** | counter | `entity` | The total number of objects that were served for a particular type of object (`entity`) by a [published OData service](/refguide/published-odata-services/). |
+| **mx.<wbr>odata.<wbr>publish.<wbr>created** | counter | `entity` | The total number of objects of a certain entity type (`entity`) that were created due to client requests to a [published OData service](/refguide/published-odata-services/). |
+| **mx.<wbr>odata.<wbr>publish.<wbr>updated** | counter | `entity` | The total number of objects of a certain entity type (`entity`) that were updated due to client requests to a [published OData service](/refguide/published-odata-services/). |
+| **mx.<wbr>odata.<wbr>publish.<wbr>deleted** | counter | `entity` | The total number of objects of a certain entity type (`entity`) that were deleted due to client requests to a [published OData service](/refguide/published-odata-services/). |
+| **mx.<wbr>odata.<wbr>retrieve** | counter | `entity` | The total number of objects of a certain entity type (`entity`) that were retrieved from an [OData service](/refguide/consumed-odata-service/). |
 
 {{% alert color="info" %}}
 Note that the actual name may vary slightly depending on the back end (for example, Prometheus replaces dots by underscores).

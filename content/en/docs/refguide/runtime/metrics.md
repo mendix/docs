@@ -6,10 +6,6 @@ description: "Describes how to configure and report metrics in Mendix."
 tags: ["studio pro", "metrics", "micrometer"]
 ---
 
-{{% alert color="warning" %}}
-Custom metrics were introduced in Studio Pro [9.6.0](/releasenotes/studio-pro/9.6/#960).
-{{% /alert %}}
-
 ## 1 Introduction
 
 Mendix supports reporting metrics through [Micrometer](https://micrometer.io/docs).

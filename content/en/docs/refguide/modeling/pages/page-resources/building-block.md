@@ -32,7 +32,7 @@ The display name determines the name of the building block that will appear in t
 
 ### 4.2 Image
 
-The image selected will appear in the Studio Pro's **Toolbox** in **Tile View**. Selecting a representative image will allow users to easily distinguish between building blocks. If left blank, Studio will display a generic default image. {{% todo %}}[Update to SP?]{{% /todo %}} Any image selected will be scaled down to 200x200 pixels.
+The image selected will appear in Studio Pro's **Toolbox** in **Tile View**. Selecting a representative image will allow users to easily distinguish between building blocks. If left blank, Studio will display a generic default image. {{% todo %}}[Update to SP?]{{% /todo %}} Any image selected will be scaled down to 200x200 pixels.
 
 ### 4.3 Category
 

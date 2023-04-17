@@ -1,5 +1,5 @@
 ---
-title: "Studio Deployment Settings"
+title: "Studio Pro Deployment Settings"
 url: /developerportal/deploy/studio-deployment-settings/
 weight: 10
 description: "Describes how to set deployment targets for Mendix Studio Pro."

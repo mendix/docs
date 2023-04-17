@@ -5,6 +5,16 @@ weight: 9
 description: "Native Template 7 release notes."
 ---
 
+## 7.0.1 {#701}
+
+**Release date: April 13th, 2023**
+
+### Fixes
+
+* We fixed an issue with iOS builds throwing duplicate symbols during the build phase both in AppCenter and locally.
+* We fixed an issue affecting cookies in Android devices. (Tickets 178853, 178053)
+* We fixed an issue affecting the `mailto` schema in Android. (Ticket 180301)
+
 ## 7.0.0 {#700}
 
 **Release date: March 23rd, 2023**

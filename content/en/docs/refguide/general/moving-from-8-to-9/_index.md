@@ -4,7 +4,7 @@ url: /refguide/moving-from-8-to-9/
 category: "General Info"
 weight: 20
 description: "Provides details on updating your app from Mendix 8 to Mendix 9, including sections on converting your app and deprecated features."
-tags: ["studio pro", "upgrade"]
+tags: ["studio pro", "upgrade", "forum", "community"]
 ---
 
 ## 1 Introduction
@@ -147,6 +147,9 @@ Check out how the Mendix community resolves upgrade issues in the following Foru
 * [Does anyone have experience with upgrading Mx applications from 7 to 9?](https://forum.mendix.com/link/space/studio-pro/questions/112229) – on considerations for moving from 7 to 8 and then 8 to 9
 * [Native Mobile Synchronization Error after Mendix 9 Upgrade](https://forum.mendix.com/link/space/integrations/questions/112173) – on synchronizing objects and security rules
 * [Unable to Upgrade App from Mendix 8.18.7 to 9.4.0](https://forum.mendix.com/link/space/studio-pro/questions/109310) – on problems with Mendix Team Server and Git
+* [Mendix Native 8 to 9 Upgrade Deployment Structure Error](https://forum.mendix.com/link/space/deployment/questions/106428) – on deployment file structures and Marketplace component directories
+* [MX 9.5.0 Upgrade error from MX 8.18.8: The type cache does not contain a type with qualified name WebServices$ProvidedService](https://forum.mendix.com/link/space/studio-pro/questions/109620) – on upgrading with app services
+* [Error while upgrading to Mx 9](https://forum.mendix.com/link/space/studio-pro/questions/105907) – on upgrading with app services
 
 ## 9 Read More
 

@@ -162,6 +162,10 @@ The many-to-many-association with `DatabaseConnector.Parameter` is also used her
 If you intend to connect to SQL Server using integrated security, please be aware that the JDBC driver in the **userlib** folder needs to match the version supplied with the Mendix Platform (via the **runtime/bundles/** folder inside the Mendix installation directory).
 {{% /alert %}}
 
+### 5.1 Connection Errors
+
+Connection errors can often be resolved by adding missing *.jar* dependencies to the *userlib* folder in the module. 
+
 ## 6 Developing This Marketplace Component
 
 1. Clone [https://github.com/mendix/database-connector.git](https://github.com/mendix/database-connector.git).

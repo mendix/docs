@@ -1470,7 +1470,7 @@ You can set the following metrics configuration values:
 * `mxAgentInstrumentationConfig`: instrumentation configuration for the [Java instrumentation agent](https://github.com/mendix/mx-agent); collects additional metrics such as microflow execution times; can be left empty to use the default instrumentation config. This attribute is only applicable when `mode` is `native`, and `mxAgentConfig` is not empty.
 
 {{% alert color="warning" %}}
-MxAgent is a [Java instrumentation agent](https://docs.oracle.com/javase/8/docs/api/java/lang/instrument/Instrumentation.html) and is unrelated to the Mendix for Private Cloud Gateway Agent.
+MxAgent is a [Java instrumentation agent](https://docs.oracle.com/en/java/javase/11/docs/api/java.instrument/java/lang/instrument/Instrumentation.html) and is unrelated to the Mendix for Private Cloud Gateway Agent.
 {{% /alert %}}
 
 {{% alert color="info" %}}

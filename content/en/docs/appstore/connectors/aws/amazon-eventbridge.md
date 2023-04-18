@@ -71,54 +71,82 @@ In order to use the Amazon EventBridge service, you must authenticate with AWS. 
     | **SessionCredentials** | **Session Name** | An identifier for the session |
 
 ### 3.2 Configuring a Microflow for an AWS Service
-
-After you configure the authentication profile for Amazon EventBridge, you can implement the functions of the connector by using the provided activities in microflows. 
-
-#### 3.2.1 Send events to Event Bus
-
-To send events to an event bus in your AWS environment, implement the [PutEvents](#put-events) activity by performing the following steps:
+After you configure the authentication profile for Amazon EventBridge, you can implement the functions of the connector by using the provided activities in microflows.
  
-1. In the **App Explorer**, right-click on the name of your module, and then click **Add microflow**.
+#### 3.2.1 Send events to Event Bus
+To send events to an event bus in your AWS environment, implement the [PutEvents](#put-events) activity by performing the following steps:
+1. In the **App Explorer**, right-click on the name of your module, and then click **Add microflow**
+
+{{< figure src="/attachments/appstore/connectors/aws-eventbridge/eventbridge_create_microflow.png" >}}
+
 2. Enter a name for your microflow, for example, *ACT_PutEvents*, and then click **OK**.
 3. In the **App Explorer**, in the **AmazonEventBridgeConnector** section, find the **PutEvents** activity.
 4. Drag the **PutEvents** activity onto the microflow you are working on.
 5. Double-click the **PutEvents** activity to configure the required parameters.
-   
+
     For the **PutEvents** activity, you must specify the AWS Region, add your `Credentials` and `PutEventsRequest` object. The `PutEventsRequest` object requires at least one `RequestEntry` object associated with it, which defines the event you want to send. To get your `Credentials` object, add the **Credentials_GenerateFromConstants** microflow in front of your **PutEvents** activity so that you can pass the `Credentials` object as input parameter of the activity.
-   
-6. In the **Edit parameters** section, edit the **AWS_Region** parameter, and provide a value by using a variable or an expression. For a list of available AWS regions, see [AWS_Region](#aws-region).
-7. Click **OK**.
+
+{{< figure src="static/attachments/appstore/connectors/aws-eventbridge/eventbridge_put_events_actions.png" >}}
+
+6. In the **Edit parameters** section, edit the **AWS_Region** parameter and change **Type** to **Expression**. In the expression builder, type *AWS_Region* and then press **Ctrl+Space** to open the autocomplete dialog. From this autocomplete dialog, select **AmazonEventBridgeConnector.AWS_Region** , then type “**.**” to get the enumeration values and select your AWS region from the list.
+
+{{< figure src="static/attachments/appstore/connectors/aws-eventbridge/eventbridge_put_events_choose_aws_region.png" >}}
+
+For a list of available AWS regions, see [AWS_Region](#aws-region).
+
+7. Click **OK** and do the same for the **Credentials_GenerateFromConstants** microflow.
 8. Open a page that contains a data view to show all the parameters of the `PutEventsResponse` object and its associated `ResponseEntry` objects, which is the response of the **PutEvents** activity.
 9. Configure a method to trigger the *ACT_ PutEvents* microflow. For example, you can associate the activity with a custom button on a page in your app. For an example of how this can be implemented, see [Creating a Custom Save Button with a Microflow](/refguide/creating-a-custom-save-button/).
-
+ 
 #### 3.2.2 Receive events to Mendix app
-
-To be able to receive events to your Mendix app, you first need to add the destination of your Mendix app as an API destination in your AWS console and to create an API destination, you need a connection in your AWS console that defines the authorization type and credentials to use for authorization with your API destination HTTP endpoint. With our Amazon Eventbridge Connector, you are able to create/update a connection and API destination from your Mendix app and to make it easier to use, we have create a microflow **RegisterMyMendixApp** that can create/update a connection and create/update an API destination using your application’s URL.
+To be able to receive events to your Mendix app, you first need to add the destination of your Mendix app as an API destination in your AWS console and to create an API destination, you need a connection in your AWS console that defines the authorization type and credentials to use for authorization with your API destination HTTP endpoint. With the Amazon Eventbridge Connector, you are able to create/update a connection and API destination from your Mendix app and to make it easier to use, we have create a microflow **RegisterMyMendixApp** that can create/update a connection and create/update an API destination using your application’s URL.
 To be able to receive events to your Mendix app. , implement the following steps:
 1. In the **App Explorer**, right-click on the name of your module, and then click **Add microflow**.
+
+{{< figure src="/attachments/appstore/connectors/aws-eventbridge/eventbridge_create_microflow.png" >}}
+
 2. Enter a name for your microflow, because recommend you to use this as an after start-up microflow, we will name it something like *ASU_System*, and then click **OK**.
 3. In the **App Explorer**, in the **AmazonEventBridgeConnector** section, find the **RegisterMyMendixApp** microflow.
 4. Drag the **RegisterMyMendixApp** microflow onto the microflow you are working on.
-5. Before configuring the parameters of the **RegisterMyMendixApp** microflow, In the **App Explorer**, in the **AmazonEventBridgeConnector** section, find the **APIKey** constant and define the API key that will be used for the authentication of your connection.
-6. Then go back to your microflow and double-click the **RegisterMyMendixApp** microflow to configure the required parameters.
-   
-    For the **RegisterMyMendixApp** microflow, you must specify the AWS Region, add your `Credentials`, and add a `Name` and `Description` parameter. The `Name` parameter will be first used to check if a connection with the given name exists. If it does not exist, a new connection with the given `Name` and `Description` parameters and API authentication method with the **APIKey** constant will be created. If the connection already exists, it will update your connection with the given parameters. The `Name` parameter will then be used to check if an API destination with the given name exists. If it does not, a new API destination with the given `Name` and `Description` parameters, the previously created connection and the InvocationEndpoint *(ApplicationURL)/rest/EventBridge/v1/event* will be created. If an API destination with the given name exists, it will be updated with the parameters. To get your `Credentials` object, add the **Credentials_GenerateFromConstants** microflow in front of the **RegisterMyMendixApp** microflow so that you can pass the `Credentials` object as input parameter.
- 
-   
-7. In the **Edit parameter value** section, edit the **AWS_Region** parameter, and provide a value by using a variable or an expression. For a list of available AWS regions, see [AWS_Region](#aws-region).
-8. Click **OK**.
 
-If you go to the Runtime setting of your app and add this *ASU_System* microflow as the After startup microflow. Your connection and API destination will be updated in the AWS console every time your app is restarted and using this API destination, messages can be sent to your Mendix app. Now we need to create EventRoutingConfiguration settings to define what should happen when you receive events with different Event Types.
+{{< figure src="static/attachments/appstore/connectors/aws-eventbridge/eventbridge_register_add_register_app.png" >}}
+
+5. Before configuring the parameters of the **RegisterMyMendixApp** microflow, In the **App Explorer**, in the **AmazonEventBridgeConnector** section, find the **APIKey** constant and define the API key that will be used for the authentication of your connection.
+
+{{< figure src="static/attachments/appstore/connectors/aws-eventbridge/eventbridge_register_apikey.png" >}}
+
+6. Then go back to your microflow and double-click the **RegisterMyMendixApp** microflow to configure the required parameters.
     
-9. In the **App Explorer**, in the **AmazonEventBridgeConnector** section, find the **CreateConfiguration** java action.
-10. Drag as many **CreateConfiguration** java actions as different types of events you might receive onto the microflow you are working on.
-11. Double-click the **CreateConfiguration** java actions to configure the required parameters.
-   
-    For the **CreateConfiguration** java action, you must specify the `EventType` and `CallbackMicroflow` parameters. The `EventType` parameter must be the Event type of one of the events your app will receive and the `CallbackMicroflow` parameter must be callback microflow with an `HttpRequest` object as its input parameter that will be called when an event with the given Event type has been received.
+    For the **RegisterMyMendixApp** microflow, you must specify the AWS Region, add your `Credentials`, and add a `Name` and `Description` parameter. The `Name` parameter will be first used to check if a connection with the given name exists. If it does not exist, a new connection with the given `Name` and `Description` parameters and API authentication method with the **APIKey** constant will be created. If the connection already exists, it will update your connection with the given parameters. The `Name` parameter will then be used to check if an API destination with the given name exists. If it does not, a new API destination with the given `Name` and `Description` parameters, the previously created connection and the InvocationEndpoint *(ApplicationURL)/rest/EventBridge/v1/event* will be created. If an API destination with the given name exists, it will be updated with the parameters. To get your `Credentials` object, add the **Credentials_GenerateFromConstants** microflow in front of the **RegisterMyMendixApp** microflow so that you can pass the `Credentials` object as input parameter.
+
+{{< figure src="static/attachments/appstore/connectors/aws-eventbridge/eventbridge_register_credentials.png" >}}
+
+7. In the **Edit parameters** section, edit the **AWS_Region** parameter and change **Type** to **Expression**. In the expression builder, type *AWS_Region* and then press **Ctrl+Space** to open the autocomplete dialog. From this autocomplete dialog, select **AmazonEventBridgeConnector.AWS_Region** , then type “**.**” to get the enumeration values and select your AWS region from the list.
+
+{{< figure src="static/attachments/appstore/connectors/aws-eventbridge/eventbridge_register_choose_aws_region.png" >}}
+
+For a list of available AWS regions, see [AWS_Region](#aws-region).
+
+8. Click **OK** and do the same for the **Credentials_GenerateFromConstants** microflow
  
+If you go to the Runtime setting of your app and add this *ASU_System* microflow as the After startup microflow. Your connection and API destination will be updated in the AWS console every time your app is restarted and using this API destination, messages can be sent to your Mendix app. Now we need to create EventRoutingConfiguration settings to define what should happen when you receive events with different Event Types.
+ 
+9. In the **App Explorer**, in the **AmazonEventBridgeConnector** section, find the **CreateConfiguration** Java action.
+10. Drag as many **CreateConfiguration** Java actions as different types of events you might receive onto the microflow you are working on.
+
+{{< figure src="static/attachments/appstore/connectors/aws-eventbridge/eventbridge_register_add_configuration.png" >}}
+
+11. Double-click the **CreateConfiguration** Java actions to configure the required parameters.
+
+    For the **CreateConfiguration** Java action, you must specify the `EventType` and `CallbackMicroflow` parameters. The `EventType` parameter must be the Event type of one of the events your app will receive and the `CallbackMicroflow` parameter must be callback microflow with an `HttpRequest` object as its input parameter that will be called when an event with the given Event type has been received.
+
+{{< figure src="static/attachments/appstore/connectors/aws-eventbridge/eventbridge_register_edit_configuration.png" >}}
+
 12. Configure a method to trigger the *ASU_System* microflow. Our recommendation is to go to the Runtime setting of your app and add this *ASU_System* microflow as the After startup microflow.  For an example of how a different trigger method can be implemented, see [Creating a Custom Save Button with a Microflow](/refguide/creating-a-custom-save-button/).
 
-Now, your Mendix app is ready to receive events. However, please remember that the only way your app will receive any events is if the Event Bus you are using contains a Rule that propagates an event to your Mendix app’s API destination. These settings can be configure on the settings of your Event Bus in the AWS console.
+{{< figure src="static/attachments/appstore/connectors/aws-eventbridge/eventbridge_register_configure_asu.png" >}}
+ 
+Now, your Mendix app is ready to receive events. However, remember that the only way your app will receive any events is if the Event Bus you are using contains a Rule that propagates an event to your Mendix app’s API destination. These settings can be configured in the settings of your Event Bus in the AWS console.
 
 
 ## 4 Technical Reference

@@ -16,8 +16,6 @@ Here is an example of a data grid using filters:
 
 ### 1.2 Advanced Options
 
-{{% todo %}}[Delete sentence below as well since in SP always visible?]{{% /todo %}}
-
 The data grid has an option to enable advanced options. When this option is toggled on, it enables numerous features to customize your data grid:
 
 * Pagination type
@@ -67,7 +65,7 @@ Here is an example of hiding button containing columns to be hidden:
 {{< figure src="/attachments/appstore/modules/data-widgets/data-grid-2/hiding.png" alt="Example of hiding button containing columns to be hidden" >}}
 
 {{% alert color="info" %}}
-When a column is marked as “Yes, hidden by default” it will render differently in Structure mode and Design mode (Studio Pro) and in Studio to indicate that the column is hidden. **When running the application, the column will in fact be hidden by default**. {{% todo %}}[Delete note?]{{% /todo %}}
+When a column is marked as “Yes, hidden by default” it will render differently in Structure mode and Design mode and to indicate that the column is hidden. **When running the application, the column will in fact be hidden by default**. 
 {{% /alert %}}
 
 Here is an example containing a column with **Yes, hidden by default** in Structure mode:

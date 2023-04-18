@@ -22,25 +22,18 @@ Errors that are related to the configuration module are shown in the Widget Deve
 
 ## 3 Customizing the Widget’s Properties
 
-To customize the properties available in Studio Pro for the pluggable widget, the module should export a `getProperties` function. This function is passed three parameters:
+To customize the properties available in Studio Pro for the pluggable widget, the module should export a `getProperties` function. This function is passed by  two parameters:
 
 * The current configured values, following the [Values API](/apidocs-mxsdk/apidocs/pluggable-widgets-studio-apis/#values)
 * The default property configuration
-* An indicator for which of the Studios the properties are built for (this property is `"web"` for Studio and `"desktop"` for Studio Pro) {{% todo %}}[Delete this line?]{{% /todo %}}
 
 ```typescript
 function getProperties(
-    values: ValuesAPI,
-    defaultConfiguration: Properties,
-    target: "web" | "desktop"
+    values: ValuesAPI
 ): Properties
 ```
 
-Using this API, it is possible to have different captions and descriptions of properties between the two Studios. It is also possible to dynamically show or hide certain properties based on configured values.
-
-{{% alert color="info" %}}
-Please note that when a property is hidden for both web and desktop, its value will be cleared.
-{{% /alert %}}
+Using this API, it is possible to dynamically show or hide certain properties based on configured values.
 
 {{% alert color="info" %}}
 Be advised that hiding a property which is required according to the XML will still give a consistency error that it is required. We therefore discourage hiding properties that are required.<br><br>If a property is only required on a specific condition, it should not be marked as required in the XML. Instead of this, you should manually implement a check using the custom validation function.
@@ -264,7 +257,7 @@ The following code example shows an object property configuration which uses obj
 
 ## 5 Customizing Validation Using Consistency Checks
 
-By default, the Studios will validate required properties. To add extra validations to the configured data, the module can export a `check` function. This function gets the values passed following the values API, and is expected to return an array of problems found:
+By default, Studio Pro will validate required properties. To add extra validations to the configured data, the module can export a `check` function. This function gets the values passed following the values API, and is expected to return an array of problems found:
 
 ```typescript
 function check(values: ValuesAPI): Problem[]

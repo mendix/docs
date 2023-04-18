@@ -34,6 +34,10 @@ These are the prerequisites for using this connector:
 * Specific to the `Execute` query action: an entity in the domain model that can be used for the results of the executed query
     * For example, a query like `select name, number from stock` has two columns (of the string and integer type, respectively), so in order to use the **Execute query** action, you have to add an entity in the domain model that has the same attributes as the columns in the query
 
+{{% alert color="info" %}}
+Ensure that you follow these prerequisites, particularly adding the *.jar* files for the database to which you want to connect into the *userlib* folder. Otherwise, you might receive connection errors.
+{{% /alert %}}
+
 ## 3 Getting Started
 
 Once you have imported the Database Connector into your app, you will have the **Database connector** category available in the **Toolbox**. The connector supports five actions: **Execute query**, **Execute statement**, **Execute parameterized query**, **Execute parameterized statement**, and **Execute callable statement**.

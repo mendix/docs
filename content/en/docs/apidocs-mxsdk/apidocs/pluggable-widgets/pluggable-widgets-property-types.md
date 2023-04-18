@@ -525,7 +525,7 @@ When a `dataSource` attribute is specified and configured by the user, it is pas
 
 #### 4.4.2 XML Elements
 
-`<attributeTypes>` (required) — This element encapsulates `<attributeType>` elements which declare supported attribute types available while configuring the attribute property in the Studios.
+`<attributeTypes>` (required) — This element encapsulates `<attributeType>` elements which declare supported attribute types available while configuring the attribute property in Studio Pro.
 
 `<attributeType>` (required one or more) — this element defines the allowed attribute type in the `name` attribute.
 
@@ -595,7 +595,7 @@ When a `dataSource` attribute is specified and configured by the user, it is pas
 
 #### 4.5.2 XML Elements
 
-`<associationTypes>` (required) — This element encapsulates `<associationType>` elements which declare supported association types available while configuring the association property in the Studios.
+`<associationTypes>` (required) — This element encapsulates `<associationType>` elements which declare supported association types available while configuring the association property in Studio Pro.
 
 `<associationType>` (required one or more) — this element defines the allowed association type in the `name` attribute.
 

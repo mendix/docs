@@ -41,7 +41,7 @@ Right now the input is editable for any user at all times. However, the input sh
 
 To add these restrictions, follow the instructions below:
 
-1. In *TextBox.xml* add the [system property](/apidocs-mxsdk/apidocs/pluggable-widgets-property-types/#editability)  for `Editability` inside the `propertyGroup` of `Data source` (where you put the attribute inside `propertyGroup` will affect how the attribute renders in the Mendix Studios): 
+1. In *TextBox.xml* add the [system property](/apidocs-mxsdk/apidocs/pluggable-widgets-property-types/#editability)  for `Editability` inside the `propertyGroup` of `Data source` (where you put the attribute inside `propertyGroup` will affect how the attribute renders in Mendix Studio Pro): 
 
     ```xml
     <propertyGroup caption="Editability">

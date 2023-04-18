@@ -236,7 +236,7 @@ This section is represented by the `properties` tag in the widget XML file. It d
 
 ## 5 Property Groups {#property-groups}
 
-Before examining properties themselves, it is useful to understand property groups. Property groups are formed by properties wrapped in a `propertyGroup` tag. Studio Pro uses the property groups to render how the widget configuration UI appears in the Studios. Grouping can be used to help the modeling developer understand the configuration of a more complex widget. It is best practice to both use property groups and group properties in the Studios UI based on their purposes. The property groups from the code in [Widget Properties Definition](#properties-definition) above forms the following structure:
+Before examining properties themselves, it is useful to understand property groups. Property groups are formed by properties wrapped in a `propertyGroup` tag. Studio Pro uses the property groups to render how the widget configuration UI appears in Studio Pro. Grouping can be used to help the modeling developer understand the configuration of a more complex widget. It is best practice to both use property groups and group properties based on their purposes. The property groups from the code in [Widget Properties Definition](#properties-definition) above forms the following structure:
 
 ```
     ├── General
@@ -282,7 +282,7 @@ This section will explain the shape of the widget property. For more detailed in
 Some properties can or must have more attributes or tags. This depends on the `type` property. The following elements should be present for every property:
 
 * `key`<a id="key-attribute"></a> — This element is a property's unique, single-word identifier. The `key` elements are used internally to identify properties, so they should never change after a widget is used in an app or is published in the Marketplace. A `key` element also identifies a property value when it is passed to a pluggable widget’s client component.
-* `type`<a id="type-attribute"></a> — This element is a property's type. The `type` element defines which values can be configured for a property, which UI is used in the Mendix Studios, and what type of value a pluggable widget’s client component receives.
+* `type`<a id="type-attribute"></a> — This element is a property's type. The `type` element defines which values can be configured for a property, which UI is used in the Mendix Studio Pro, and what type of value a pluggable widget’s client component receives.
 * `caption` —  This element is a short label identifying a property to a modeling developer. The first letter of a caption should be capitalized.
 * `description` — This element is a longer description of a property. A description should be capitalized and limited to one or two sentences.
 

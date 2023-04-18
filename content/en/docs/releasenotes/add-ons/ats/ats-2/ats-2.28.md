@@ -4,6 +4,20 @@ url: /releasenotes/add-ons/ats-2.28/
 weight: 72
 ---
 
+## 2.28.10
+
+**Release date: April 11th, 2023**
+
+### Improvements
+
+* We upgraded to Mendix [8.18.24](/releasenotes/studio-pro/8.18/#81824) for security fixes.
+
+### Fixes
+
+* We fixed a styling issue that caused a button to be missplaced.
+* We fixed an issue that caused users to see all the import runs across their apps instead of their current app.
+* We fixed an issue that caused the **App Admin** panel to not display any environments or Selenium hubs.
+
 ## 2.28.9
 
 **Release date: March 28th, 2023**

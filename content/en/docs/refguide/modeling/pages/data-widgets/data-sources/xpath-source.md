@@ -73,6 +73,10 @@ The feature to use objects and attributes from surrounding data containers was i
 The feature to use objects and attributes can be used for [List view](/refguide/list-view/) widgets, [Data Grid 2](/appstore/modules/data-grid-2/) modules, and many other widgets. However, it **cannot be used** for [Data Grid](/refguide/data-grid/) and [Template Grid](/refguide/template-grid/) containers.
 {{% /alert %}}
 
+#### 2.4.1 Known Errors
+
+Currently, Studio Pro does not support database retreivals using XPath constraints that walk through both regular databases and [external entities](/refguide/external-entities/). This results in the error `Mixed source retrieval is currently not supported.` A workaround is to use Data Grid 2 instead of Data Grid, then disable sorting and remove the option to search on external entity attributes.
+
 ## 3 Read More
 
 * [Data Containers](/refguide/data-widgets/)

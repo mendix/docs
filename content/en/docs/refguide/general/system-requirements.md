@@ -18,26 +18,24 @@ Mendix Studio Pro has the requirements listed in the following sections.
 
 ### 2.1 Software Specifications
 
-Mendix [Studio Pro](/refguide/modeling/) version 9 is supported on 64-bit versions of Windows 10 release 1809 and above. This also includes Windows 11. MTS versions starting from Mendix Studio Pro 9.6.5 and Mendix Studio 9.9.1 are enabled and tested to run on Apple Silicon Macs such as the M1, which requires [Parallels 17](https://www.parallels.com/) and Windows 11.
+Mendix [Studio Pro](/refguide/modeling/) 10 is supported on 64-bit versions of Windows 10 release 1809 and above. This also includes Windows 11. Studio Pro 10 versions are enabled and tested to run on Apple Silicon Macs such as the M1, which requires [Parallels 17](https://www.parallels.com/) and Windows 11 {{% todo %}}[Update for Mx 10?]{{% /todo %}}.
 
 The following frameworks are required. They will be installed automatically by the Studio Pro installer if necessary:
 
 * Microsoft .NET 6.0.x desktop runtime (x64) and all applicable Windows security patches
 * Microsoft Visual C++ 2015 Redistributable Package (x64)
 * Microsoft Visual C++ 2019 Redistributable Package (x64)
-* A Java Developer Kit (JDK) version 11 - the flavor which will be installed, if Java 11 is not already installed on your machine, depends on which version of Studio Pro you are installing
-    * AdoptOpenJDK 11 (x64) – for Mendix versions below 9.14.0
-    * Adoptium Temurin JDK 11 (x64) – for Mendix versions from 9.14.0 and below 9.18.0
-    * Eclipse Temurin JDK 11 (x64)– for Mendix versions 9.18.0 and above
+* A Java Developer Kit (JDK) version 11 - the flavor which will be installed, if Java 11 is not already installed on your machine, you are installing:
+    * Eclipse Temurin JDK 11 (x64)
     
     Oracle JDK 11 can also be used if this is already installed.
 * Git for Windows (x64)
 * Mendix Native Mobile Builder
 * Microsoft Edge WebView2 Evergreen Runtime (x64)
 
-If you are running Studio Pro on an ARM64 device (for example, an M1 Mac), you need the following version of .NET 6 in addition to the x64 version listed above:
+When you are running Studio Pro on an ARM64 device (for example, an M1 Mac), you need the following version of .NET 6 in addition to the x64 version listed above:
 
-* .NET 6 Desktop Runtime (arm64)
+* .NET 6 Desktop Runtime (arm64) {{% todo %}}[Update for Mx 10?]{{% /todo %}}
 
 {{% alert color="info" %}}
 You can choose which JDK is used for building and running locally via the **Edit** > **Preferences** menu item in Studio Pro.
@@ -68,7 +66,7 @@ To run a Mendix app, Mendix Studio Pro uses the following ports by default. If y
 * 8080: runtime port
 * 8083: mobile packager
 * 8090: admin port
-* 8100: sign-in port (for version 9.18 and above)
+* 8100: sign-in port
 
 For more information on ports and modifying Studio Pro's default ports, see [Configurations](/refguide/configuration/) and the [Troubleshooting Common Mobile Issues](/refguide/mobile/getting-started-with-mobile/prerequisites/#troubleshooting) section of *Native App Prerequisites and Troubleshooting*.
 
@@ -189,7 +187,7 @@ Mendix tries to support the most recent and patched database server versions fro
 
 Current support:
 
-* [MariaDB](/refguide/mysql/): 10.2, 10.3, 10.4, 10.5, 10.6, 10.11 (please note that support for 10.2 is deprecated and has been removed in Studio Pro versions 9.22.0, 9.18.5, and 9.12.11; it will also be removed in 9.6.17)
+* [MariaDB](/refguide/mysql/): 10.2, 10.3, 10.4, 10.5, 10.6, 10.11 (please note that support for 10.2 is deprecated and has been removed in Studio Pro versions 9.22.0, 9.18.5, and 9.12.11; it will also be removed in 9.6.17) {{% todo %}}[Will this be removed in Mx 10 too?]{{% /todo %}}
 * [Microsoft SQL Server](/developerportal/deploy/mendix-on-windows-microsoft-sql-server/): 2019, 2022
 * [Azure SQL](https://docs.microsoft.com/en-us/sql/t-sql/statements/alter-database-transact-sql-compatibility-level?view=sql-server-2017): v12 compatibility mode 140 or higher
 * [MySQL](/refguide/mysql/): 8.0
@@ -236,14 +234,14 @@ For server-based installations, the following storage types mounted by the OS ar
 * Microsoft Edge (latest stable desktop version)
 
 {{% alert color="warning" %}}
-Internet Explorer is no longer supported in Studio Pro 9. As the market is moving away from Internet Explorer and Mendix continues to align with the best practices of the modern web ecosystem, we have dropped support for Internet Explorer 11. This allows us to keep in line with user expectations. Removing support has already improved app loading times and performance, and it will enable us to continue making improvements and innovating using modern web features.<br />
+Internet Explorer is not supported in Studio Pro 10. As the market is moving away from Internet Explorer and Mendix continues to align with the best practices of the modern web ecosystem, we have dropped support for Internet Explorer 11. This allows us to keep in line with user expectations. Removing support has already improved app loading times and performance, and it will enable us to continue making improvements and innovating using modern web features.<br />
 <br />
 As of Studio Pro 9, app end-users still using IE will be shown an **Unsupported Browser** message stating that upgrading to a modern browser is required. You can [customize this message](/howto/front-end/customize-styling-new/#customize-unsupported-browsers) to meet your needs.<br />
 <br />
-If you still need to support IE11, note that Studio Pro [8](/releasenotes/studio-pro/8.18/) and [7](/releasenotes/studio-pro/7.23/) will continue supporting IE11. Mendix recommends using Studio Pro 8 or 7 until your app end-users have upgraded their browsers.
+If you still need to support IE11, note that Studio Pro [8](/releasenotes/studio-pro/8.18/) and [7](/releasenotes/studio-pro/7.23/) will continue supporting IE11. Mendix recommends using Studio Pro 8 or 7 until your app end-users have upgraded their browsers. {{% todo %}}[Is this alert still necessary except for the first sentence?]{{% /todo %}}
 {{% /alert %}}
 
-## 11 Mobile Operating Systems {#mobileos}
+## 11 Mobile Operating Systems {#mobileos} {{% todo %}}[Update for Mx 10?]{{% /todo %}}
 
 For native and hybrid apps built with Mendix the following operating system versions are supported:
 

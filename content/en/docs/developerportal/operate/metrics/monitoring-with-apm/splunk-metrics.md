@@ -69,12 +69,12 @@ To send your runtime information to Splunk Cloud Platform, you need to set it up
 
 In addition to the runtime application logs, the following JSON-formatted metadata is automatically sent to the Splunk Cloud Platform:
 
-* `environment_id` - unique identifier of the environment;
-* `instance_index` - number of the application instance;
-* `hostname` - name of the application host;
-* `application_name` - default application name, retrieved from domain name;
-* `model_version` - model version of the Mendix runtime;
-* `runtime_version` - version of the Mendix runtime.
+* `environment_id` - unique identifier of the environment
+* `instance_index` - number of the application instance
+* `hostname` - name of the application host
+* `application_name` - default application name, retrieved from domain name
+* `model_version` - model version of the Mendix runtime
+* `runtime_version` - version of the Mendix runtime
 
 You can filter the data by these fields.
 

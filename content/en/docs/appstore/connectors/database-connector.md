@@ -35,7 +35,7 @@ These are the prerequisites for using this connector:
     * For example, a query like `select name, number from stock` has two columns (of the string and integer type, respectively), so in order to use the **Execute query** action, you have to add an entity in the domain model that has the same attributes as the columns in the query
 
 {{% alert color="info" %}}
-Ensure that you follow these prerequisites, particularly adding the *.jar* files for the database to which you want to connect into the *userlib* folder. Otherwise, you might receive connection errors.
+Ensure that you follow these prerequisites, particularly adding the *.jar* files for the database to which you want to connect into the *userlib* folder, to avoid connection errors.
 {{% /alert %}}
 
 ## 3 Getting Started

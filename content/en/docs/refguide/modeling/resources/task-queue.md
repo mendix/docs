@@ -97,7 +97,7 @@ Core.microflowCall("AModule.SomeMicroflow")
   .executeInBackground(context, "AModule.SomeQueueName");
 ```
 
-The method `executeInBackground` takes two parameters: a context and a queue name. The context is only used for creating the task; executing the task will be done with a [new, but equivalent context](#context). See the [API documentation](https://apidocs.rnd.mendix.com/9/runtime/com/mendix/core/Core.html#microflowCall(java.lang.String)) for more information.
+The method `executeInBackground` takes two parameters: a context and a queue name. The context is only used for creating the task; executing the task will be done with a [new, but equivalent context](#context). See the [API documentation](https://apidocs.rnd.mendix.com/10/runtime/com/mendix/core/Core.html#microflowCall(java.lang.String)) for more information.
 
 ### 2.4 Queueing Java Action Executions
 
@@ -119,7 +119,7 @@ Core.userActionCall("AModule.SomeJavaAction")
   .executeInBackground(context, "AModule.SomeQueueName");
 ```
 
-The method `executeInBackground` takes two parameters: a context and a queue name. The context is only used for creating the task; executing the task will be done with a [new, but equivalent context](#context). See the [API documentation](https://apidocs.rnd.mendix.com/9/runtime/com/mendix/core/Core.html#userActionCall(java.lang.String)) for more information.
+The method `executeInBackground` takes two parameters: a context and a queue name. The context is only used for creating the task; executing the task will be done with a [new, but equivalent context](#context). See the [API documentation](https://apidocs.rnd.mendix.com/10/runtime/com/mendix/core/Core.html#userActionCall(java.lang.String)) for more information.
 
 ### 2.5 Task scheduling {#scheduling}
 
@@ -200,7 +200,7 @@ In case where **Apply entity access** is set to *true*, the following rules appl
 
 There is one exception to the above rules:
 
-* When a system context is used to schedule the task using the [Java API](https://apidocs.rnd.mendix.com/9/runtime/com/mendix/core/actionmanagement/ActionCallBuilder.html#executeInBackground(com.mendix.systemwideinterfaces.core.IContext,java.lang.String)), the task will be executed in a new system context, regardless of the **Apply entity access** setting.
+* When a system context is used to schedule the task using the [Java API](https://apidocs.rnd.mendix.com/10/runtime/com/mendix/core/actionmanagement/ActionCallBuilder.html#executeInBackground(com.mendix.systemwideinterfaces.core.IContext,java.lang.String)), the task will be executed in a new system context, regardless of the **Apply entity access** setting.
 
 Projects containing task queues that were created before Mendix 9.6 will get a deprecation warning in the log: `The project setting 'System context tasks' is deprecated`.
 You can remove this warning in the **Runtime** tab of the app **Settings** in Studio Pro. Set **System context tasks** to *no* to execute tasks in an equivalent context to the one they were created in and remove the warning.

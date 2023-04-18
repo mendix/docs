@@ -9,7 +9,6 @@ tags: ["node","developer portal","deploy", "settings", "target", "Mendix Studios
 
 ## 1 Introduction
 
-{{% todo %}}[Verify: what is the best update here? Will the document be renamed?]{{% /todo %}}
 
 If you have a licensed app in the Mendix Cloud which you want to deploy directly to an environment, you need to select a target environment where Mendix Studio Pro will deploy your app when you **Deploy to Licensed Cloud Node**. For more information on licensed apps and environments, see [Mendix Cloud](/developerportal/deploy/mendix-cloud-deploy/) and [Environments](/developerportal/deploy/environments/).
 

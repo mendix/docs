@@ -68,7 +68,3 @@ Login behavior can be customized by implementing a custom Java action and regist
     ```
 
 1. Update the [After Startup](/refguide/app-settings/#after-startup) microflow to invoke the Java action which replaces the `LoginAction`.
-
-## 3 Read More
-
-* [Doing custom stuff when a user logs in](https://bartgroot.nl/mendix/custom-checks-on-login/) *(external blog at BartGroot.nl)*

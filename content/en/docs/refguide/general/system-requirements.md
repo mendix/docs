@@ -196,7 +196,6 @@ Current support:
 * [Oracle Database](/refguide/oracle/): 19, 21c
 * PostgreSQL: 11, 12, 13, 14, 15
 * [SAP HANA](/refguide/saphana/): 2.00.040.00.1545918182
-* [IBM DB2](/refguide/db2/): 11.5 for Linux, Unix, and Windows (please note that support for DB2 is deprecated and will be removed in Studio Pro version 10)
 
 {{% alert color="warning" %}}
 Each app must have its own database. Mendix apps cannot share data by sharing the same database.

@@ -32,12 +32,6 @@ You can see the location where the resource will be published in **Example of lo
 
 In the **Public documentation** tab, you can provide a summary and a description of the exposed entity.
 
-{{% alert color="info" %}}
-
-[IBM DB2](/refguide/db2/) does not support read-isolated data retrieval operations that are non-blocking in a multi-user environment. Therefore, the data retrieved by OData might not be 100% consistent if the same data rows are modified concurrently by another user. 
-
-{{% /alert %}}
-
 ## 3 Selecting Exposed Attributes and Associations {#exatass}
 
 When you have selected an entity in the list to the left, its published attributes and associations are shown in the list to the right. In this list, you can add, edit, delete and move these attributes and associations.

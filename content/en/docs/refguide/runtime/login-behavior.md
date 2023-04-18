@@ -16,10 +16,6 @@ Users that have been blocked for at least five minutes are unblocked each time t
 The cluster manager does more than just unblocking users. For example, it also removes expired sessions. So changing this interval has a broader impact.
 {{% /alert %}}
 
-{{% alert color="info" %}}
-In versions of Mendix below 9.11.0, the cluster manager will unblock *all* blocked users when it runs, even if they have been blocked for less than five minutes.
-{{% /alert %}}
-
 ## 2 Customizing Login Behavior
 
 Login behavior can be customized by implementing a custom Java action and registering it to be used instead of the default login action.

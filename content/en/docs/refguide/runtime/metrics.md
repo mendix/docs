@@ -368,6 +368,8 @@ It is recommended to use a common prefix that uniquely defines your organisation
 
 ### 5.2 Deprecated usages
 
+{{% todo %}}Where are Mx 10 APIs, and are these deprecated usages removed? Asked in #runtime-totw{{% /todo %}}
+
 The following deprecated usages will be removed in the future releases,
 
 1. Setting `com.mendix.metrics.Type` to `logger` and `statsd` is deprecated. You will get a warning message to advise you to start using the `micrometer` metric type.

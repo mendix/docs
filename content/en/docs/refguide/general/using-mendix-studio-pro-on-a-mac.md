@@ -45,7 +45,7 @@ Make sure you have completed the following prerequisites:
 Use the default browser installed in the Windows VM as the default browser for the Parallels VM, or configure your Windows virtual machine. Using the Windows VM browser or configuring it ensures your ability to sign in.
 {{% /alert %}}
 
-## 3 Configuring Your Windows Virtual Machine for Mendix Studio Pro
+## 3 Configuring Your Windows Virtual Machine for Mendix Studio Pro {#configuring}
 
 To configure your Windows virtual machine to work with Mendix Studio Pro, follow these steps:
 

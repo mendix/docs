@@ -22,18 +22,23 @@ Errors that are related to the configuration module are shown in the Widget Deve
 
 ## 3 Customizing the Widget’s Properties
 
-To customize the properties available in Studio Pro for the pluggable widget, the module should export a `getProperties` function. This function is passed by  two parameters:
+To customize the properties available in Studio Pro for the pluggable widget, the module should export a `getProperties` function. Two parameters are passed to this function::
 
 * The current configured values, following the [Values API](/apidocs-mxsdk/apidocs/pluggable-widgets-studio-apis/#values)
 * The default property configuration
 
 ```typescript
 function getProperties(
-    values: ValuesAPI
+    values: ValuesAPI,
+    defaultConfiguration: Properties
 ): Properties
 ```
 
 Using this API, it is possible to dynamically show or hide certain properties based on configured values.
+
+{{% alert color="info" %}}
+Please note that when a property is hidden,, its value will be cleared.
+{{% /alert %}}
 
 {{% alert color="info" %}}
 Be advised that hiding a property which is required according to the XML will still give a consistency error that it is required. We therefore discourage hiding properties that are required.<br><br>If a property is only required on a specific condition, it should not be marked as required in the XML. Instead of this, you should manually implement a check using the custom validation function.

@@ -140,18 +140,18 @@ Do the following:
 
 Now when you run this microflow, it will trigger the selected workflow. 
 
-### 3.8 Exporting a workflow to an image
+### 3.8 Exporting a Workflow to an Image
 
 There are two ways to export a workflow to an image: 
 
-* Through the [file menu](/refguide/file-menu/) in the topbar: **File** > **Export as image...**
-* Through the tool bar within the workflow editor, click the button **Export as image**.
+* Through the [File menu](/refguide/file-menu/) in the top bar: **File** > **Export as image**.
+* By clicking **Export as image** in the upper-left corner of the workflow editor.
 
-Both options will open a **Save file** dialog allowing you to choose a name and location for the exported image. After clicking **Save** the **Export workflow model to image** dialog is opened. Here you can tweak the parameters for your image export like choosing between a transparent or opaque background and the relative size of the exported image by selecting a zoom level:
+Both options open a **Save file** dialog-box allowing you to choose a name and location for the exported image. After clicking **Save** the **Export workflow model to image** dialog-box is opened, where you can change parameters for your image export such as choosing between a transparent or opaque background and the relative size of the exported image by selecting a zoom level:
 
 {{< figure src="/attachments/refguide/modeling/application-logic/workflows/export-workflow-to-image.png" alt="Export workflow to image prompt" width="600">}}
 
-When clicking **Ok**, the current document is exported as an image in the .png format.
+The current document is exported as an image in the .png format.
 
 ## 4 Workflow Entities in the System Module {#workflow-entities}
 

@@ -147,7 +147,7 @@ There are two ways to export a workflow to an image:
 * Through the [File menu](/refguide/file-menu/) in the top bar: **File** > **Export as image**.
 * By clicking **Export as image** in the upper-left corner of the workflow editor.
 
-Both options open a **Save file** dialog-box allowing you to choose a name and location for the exported image. After clicking **Save** the **Export workflow model to image** dialog-box is opened, where you can change parameters for your image export such as choosing between a transparent or opaque background and the relative size of the exported image by selecting a zoom level:
+Both options open a **Save file** dialog-box allowing you to choose a name and location for the exported image. After clicking **Save** the **Export workflow model to image** dialog-box is opened, where you can change parameters for your image export such as a transparent or opaque background and a relative size of the exported image by selecting a zoom level:
 
 {{< figure src="/attachments/refguide/modeling/application-logic/workflows/export-workflow-to-image.png" alt="Export workflow to image prompt" width="600">}}
 

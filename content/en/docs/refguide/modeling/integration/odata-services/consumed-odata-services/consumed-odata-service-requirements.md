@@ -47,10 +47,6 @@ Furthermore, an entity can only be used if it is uniquely identifiable with a ke
 * If the type of a key property is `String`, it must have a limited  (maximum) length specified. This is because not all databases support indexes on strings of unlimited length. It is sufficient if  a `MaxLength` is specified in the contract. However, if a `MaxLength` is not specified in the contract, and you know that the string is limited in length, you can still use the entity by specifying the maximum length of the attribute in the the domain model.
 
 {{% alert color="info" %}}
-This feature of using entities with keys that do not have a maximum length specified in the contract applies to version 9.3.0 and above. In previous versions of Studio Pro, you must change the contract to ensure that `MaxLength` is specified.
-{{% /alert %}}
-
-{{% alert color="info" %}}
 The list above for supported key fields does not include `Date` or `DateTime` data types.
 {{% /alert %}}
 

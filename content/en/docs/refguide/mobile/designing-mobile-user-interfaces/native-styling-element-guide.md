@@ -219,7 +219,6 @@ Tab containers are used to show information categorized into multiple tab pages.
 
 {{< figure src="/attachments/refguide/mobile/native-mobile/native-styling-refguide/tab-container.png" alt="tab container"   width="350"  >}}
 
-
 ```javascript
 export const TabContainer = {
   container: {

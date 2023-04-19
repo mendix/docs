@@ -1,7 +1,11 @@
 ---
 title: "Debugging Microflows Remotely"
-url: /refguide/debug-microflows-remotely//
+url: /refguide/debug-microflows-remotely/
 tags: ["monitoring", "troubleshooting", "debug", "microflow", "remote"]
+aliases:
+    - /howto/monitoring-troubleshooting/debug-microflows-remotely
+#If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
+#The anchor <enable-cloud-debugging> below is mapped, so it should not be removed or changed.
 ---
 
 ## 1 Introduction
@@ -117,7 +121,7 @@ The debugger is available at `{appURL}/debugger/` using the default runtime serv
 
 If you are debugging your app running behind IIS, make sure the debugger path is forwarded to the right runtime location as described in the [Reverse Proxy Inbound Rules](/developerportal/deploy/deploy-mendix-on-microsoft-windows/#reverse-proxy-rules) section of *Microsoft Windows – deploy*.
 
-### 3.2 How to Enable Cloud Debugging in Studio Pro
+### 3.2 How to Enable Cloud Debugging in Studio Pro {#enable-cloud-debugging}
 
 Once you have the unique URL and password, there are two methods for connecting Studio Pro to the cloud environment. 
 

@@ -19,7 +19,7 @@ This document explores four common advanced inference design patterns for machin
 * [Machine learning model as a service](#maas) patterns
 * [Batch inference](#batch-inference) patterns
 
-{{% alert color="info" %}}Check out a demo app and Jupyter notebook examples in our [Demo for Mendix ML Kit](https://github.com/mendix/mlkit-example-app) repository for further information on working with machine learning models in Mendix.{{% /alert %}}
+{{% alert color="info" %}}To view all of the examples from the sections below, check out the demo app in our [Demo for Mendix ML Kit Repository](https://github.com/mendix/mlkit-example-app#getting-started). The **Getting Started** section includes instructions on using the demo app.{{% /alert %}}
 
 ### 1.1 Ensembles {#ensembles}
 

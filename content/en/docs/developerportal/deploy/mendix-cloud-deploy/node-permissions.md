@@ -19,9 +19,7 @@ See [App Roles](/developerportal/collaborate/app-roles/) to learn more about the
 
 ## 2 Viewing Your Nodes{#nodes}
 
-To find a list of all the Mendix Cloud licensed nodes to which you have access, click the **Switch-to** menu in the Developer Portal and choose **Cloud**.
-
-{{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/node-permissions/go-to-nodes-page.png" alt="Licensed Mendix Cloud nodes" >}}
+To find a list of all the Mendix Cloud licensed nodes to which you have access, open the [Switch to menu](/developerportal/#navigation) and select **Cloud**.
 
 You will see a list of all your licensed nodes:
 
@@ -76,7 +74,7 @@ With Manage Permissions, team members other than the Technical Contact can chang
 Only the Technical Contact can grant this permission to other team members.
 {{% /alert %}}
 
-#### 3.3.2 Transport Rights
+#### 3.3.2 Transport Rights{#transport-rights}
 
 With Transport Rights you can deploy new versions of the application to the node. You can also create new deployment packages, stop and start the environment, and change configuration settings such as constants and scheduled events.
 

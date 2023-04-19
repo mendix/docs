@@ -31,7 +31,7 @@ The display pattern in the token is optional. If you do not specify a value, the
 
 For attributes of the decimal type, the display pattern `DecimalFormat` is used (for more information, see [Class DecimalFormat](https://docs.oracle.com/javase/8/docs/api/java/text/DecimalFormat.html)).
 
-For dates, the `SimpleDateFormat` is used (for more information, see [Class SimpleDateFormat](http://docs.oracle.com/javase/8/docs/api/java/text/SimpleDateFormat.html)).
+For dates, the `SimpleDateFormat` is used (for more information, see [Class SimpleDateFormat](https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/text/SimpleDateFormat.html)).
 
 For all other attributes, the functions from *java.util.Formatter* are used (for details on the patterns, see [Class Formatter](https://docs.oracle.com/javase/8/docs/api/java/util/Formatter.html)).
 

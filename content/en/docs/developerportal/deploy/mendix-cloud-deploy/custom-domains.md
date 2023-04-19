@@ -48,7 +48,7 @@ Before starting this how-to, you will need to have the following prerequisites:
     * What is an SSL/TLS private key and what it is used for?
     * What is a certificate request and what it is used for?
 * a basic knowledge of certificate authorities (like GeoTrust, Thawte, Verisign, RapidSSL, GoDaddy, Comodo)
-* the correct permissions to your licensed node (for more information, see [Node Permissions](/developerportal/deploy/node-permissions/))
+* the correct permissions to your licensed node (for more information, see [Node Permissions](/developerportal/deploy/node-permissions/)) — this must include [Transport Rights](/developerportal/deploy/node-permissions/#transport-rights)
 
 ### 2.2 Create and Configure a CNAME Record{#DNS}
 

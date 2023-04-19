@@ -17,7 +17,7 @@ The Email connector includes the following features:
 
 * Configuration of multiple email accounts
     * Supports basic authentication and [creating an account with OAuth 2.0](#create-oauth) to configure Microsoft Azure AD accounts.
-    * Supports addition of Shared Mailbox using Basic and OAuth 2.0 authentication.
+    * Supports shared mailboxes using basic and OAuth 2.0 authentication.
 * Digital signatures and encryption
 * Email templates
 
@@ -77,14 +77,14 @@ Once you run your Studio Pro app, you can start configuring your email accounts 
 
 When you run your app to use this module for the first time, and earlier data is not present, you will see a welcome screen with an account setup wizard. Click on **Get Started** button and follow the steps to add email accounts. The wizard takes you through 3 stages to configure either your primary email account or a shared mailbox.
 
-1. Choose the authentication method that you want to use. **Basic Credentials** or **Azure AD** (OAuth 2.0).
-2. Choose if you want to either configure **Primary** or **Shared Mailbox**
+1. Choose the authentication method that you want to use, either **Basic Credentials** or **Azure AD** (OAuth 2.0).
+2. Choose if you want to either configure the **Primary** account or **Shared Mailbox**.
 3. Choose the protocols for sending and receiving emails.
 
 You can add and configure an email account in the Email Connector using basic authentication and OAuth 2.0 for Microsoft Azure AD accounts. You can also add and configure "Shared Mailbox" using Basic & OAuth 2.0 authentitcation. To configure OAuth 2.0 accounts, see [Creating an Account Using Microsoft Azure OAuth 2.0](#create-oauth). The account configuration wizard supports automatic and manual configurations for Sending and Receiving emails.
 
 {{% alert color="info" %}}
-You can configure either your Primary email account or Shared Mailbox while iterating through the wizard steps. You cannot configure both (Primary & Shared) at the same time. If you want to add a Primary and a Shared Mailbox, you would have to go through the wizard twice; first to configure your Primary account and then to configure Shared Mailbox. You can only choose to configure a Shared Mailbox, although for configuring a Shared Mailbox, your primary email account would be needed.
+You can configure either your primary email account or shared mailbox in the wizard, but not both (primary and shared) at the same time. To add a primary and a shared mailbox, go through the wizard twice; first to configure your primary account, and then to configure the shared mailbox. You can choose to only configure a shared mailbox, although for your primary email account is needed to configure it.
 {{% /alert %}}
 
 #### 3.1.1 Automatic Configuration

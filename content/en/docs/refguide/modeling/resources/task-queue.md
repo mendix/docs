@@ -52,17 +52,13 @@ Background execution is done in so called **Task Queues**. They can be created i
 2. Select **Add other**.
 3. Click **Task Queue**.
 4. Enter the value for **Threads** for the Task Queue.
-5. Select the **Scope** for the threads (since Mendix 9.13):
+5. Select the **Scope** for the threads:
     * with "Per Node" the maximum thread count will be limited per node. When this option is selected, adding new nodes to the cluster will also increase the total thread count in overall cluster.
     * with "Cluster-wide" the maximum thread count will be limited cluster-wide. When this option is selected, total thread count in the cluster will be fixed and adding/removing new nodes will not have any impact on the thread count.
 
 Task Queues have a number threads. Each of these threads can process one task at a time. That is, a queue will pick up as many concurrent tasks as it has threads. Whenever a task is finished, the next one will be picked up.
     
 #### 2.2.1 Thread Count Recommendation 
-
-{{% alert color="info" %}}
-In versions of Mendix below 9.9.0, there is a limit of 40 threads per cluster node.
-{{% /alert %}}
 
 In general, one or two threads should be enough, unless there is a large number of tasks or tasks take a long time and need to execute in parallel. Having many threads will put additional load on the database and should not be done if not needed.
 
@@ -191,7 +187,7 @@ You can use the `com.mendix.core.ProcessedTasksCleanupAge` runtime setting if au
 
 ### 2.9 Execution Context {#context}
 
-Prior to Mendix 9.6 tasks were always executed in a system context, even if the scheduling microflow had **Apply entity access** set to *true* (see [Microflow Properties](/refguide/microflow/) for more information). As of Mendix 9.6 this behavior has been deprecated and tasks now run in an equivalent context to the one in which they were scheduled. This has the following effect:
+Tasks now run in an equivalent context to the one in which they were scheduled. This has the following effect:
 
 In case where **Apply entity access** is set to *true*, the following rules apply:
 
@@ -201,13 +197,6 @@ In case where **Apply entity access** is set to *true*, the following rules appl
 There is one exception to the above rules:
 
 * When a system context is used to schedule the task using the [Java API](https://apidocs.rnd.mendix.com/10/runtime/com/mendix/core/actionmanagement/ActionCallBuilder.html#executeInBackground(com.mendix.systemwideinterfaces.core.IContext,java.lang.String)), the task will be executed in a new system context, regardless of the **Apply entity access** setting.
-
-Projects containing task queues that were created before Mendix 9.6 will get a deprecation warning in the log: `The project setting 'System context tasks' is deprecated`.
-You can remove this warning in the **Runtime** tab of the app **Settings** in Studio Pro. Set **System context tasks** to *no* to execute tasks in an equivalent context to the one they were created in and remove the warning.
-
-{{% alert color="warning" %}}
-You will be asked to confirm this change as, after choosing *no*, you cannot switch back to *yes* because executing tasks in system contexts (unless scheduled from a system session) is deprecated.
-{{% /alert %}}
 
 ### 2.10 Task Status
 
@@ -243,15 +232,13 @@ Interrupting task threads may cause them to fail. These tasks will be marked as 
 
 The execution of a task produces a `System.ProcessedQueueTask` row in the database. Over time these accumulate and the table can grow large.
 
-In Mendix versions 9.9.0 and above, the `System.ProcessedQueueTask` can be cleaned up automatically by specifying the `com.mendix.core.ProcessedTasksCleanupAge` runtime setting. This setting specifies (in milliseconds) how old rows in the table have to be before they are automatically cleaned up. Only rows with the "Completed" status are cleaned up.  The cleanup action will be run every [`ClusterManagerActionInterval`](/refguide/custom-settings/#general), and does not produce any log messages.
+The `System.ProcessedQueueTask` can be cleaned up automatically by specifying the `com.mendix.core.ProcessedTasksCleanupAge` runtime setting. This setting specifies (in milliseconds) how old rows in the table have to be before they are automatically cleaned up. Only rows with the "Completed" status are cleaned up.  The cleanup action will be run every [`ClusterManagerActionInterval`](/refguide/custom-settings/#general), and does not produce any log messages.
 
 If `com.mendix.core.ProcessedTasksCleanupAge` is not specified, no cleanup is performed.
 
 {{% alert color="info" %}}
 When turning on the automatic cleanup after having used tasks for a long time, there might be many rows to clean up, which will be initiated when the runtime starts. This may cause additional load on the database, but will not block the startup. It is recommended not to do this during a busy period.
 {{% /alert %}}
-
-In versions of Mendix below 9.9.0, you can clean up old tasks by creating a microflow for administrators to use if the table gets too large.
 
 ## 3 Monitoring
 
@@ -281,8 +268,6 @@ Task queues have the following limitations:
 * Microflows or Java actions that are executed in the background execute as soon as possible in the order they were created, but possibly in parallel. They are consumed in FIFO order, but then executed in parallel in case of multiple threads. There is no way to execute only a single microflow or Java action at any point in time (meaning, ensure tasks are run sequentially), unless the number of threads is set to 1 and there's only a single runtime node.
 * Microflows or Java actions that are executed in the background can *only* use the following types of parameters: Boolean, Integer/Long, Decimal, String, Date and time, Enumeration, committed Persistent Entity.
 * Background microflows or Java actions will start execution as soon as the transaction in which they are created is completed. This ensures that any data that is needed by the background microflow or Java action is committed as well. It is not possible to start a background microflow or Java action immediately, halfway during a transaction. Note that if the transaction is rolled back, the task is not executed at all.
-* In versions of Mendix below 9.9.0, the total amount of parallelism per node is limited to 40. This means that at most 40 queues with parallelism 1 can be defined, or a single queue with parallelism 40, or somewhere in between, as long as the total does not exceed 40.
-* Queued actions that have failed can't be rescheduled out-of-the-box in Mendix versions below 9.9.0. You can set up a scheduled microflow to re-attempt failed tasks. They can be queried from `System.ProcessedQueueTask` table.
 
 ### 4.3 High-Level Implementation Overview
 
@@ -306,10 +291,3 @@ The task will then automatically be consumed again by one of the remaining nodes
 {{% alert color="warning" %}}
 Under normal circumstances, a task is executed exactly once, but in the face of node failures a task may be (partially) executed multiple times. This is the best guarantee that a distributed system can provide.
 {{% /alert %}}
-
-### 4.4 Replacing Process Queue {#process-queue}
-
-The **Task Queue** supersedes the earlier [Process Queue](/appstore/modules/process-queue/) Marketplace module, which has been deprecated with the release of Mendix 9. There are several differences between the Process Queue module and the **Task Queue**:
-
-* The **Task Queue** supports a multi-node cluster setup and can therefore be used in a horizontally scaled environment.
-* The **Task Queue** does not require additional entities to be created, since Microflows or Java actions can simply be marked to execute in the background.

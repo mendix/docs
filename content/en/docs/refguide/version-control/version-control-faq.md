@@ -17,8 +17,6 @@ Mendix Team Server is based on proven technology. Initially it was based only on
 
 Currently, SVN is the default version control system for the Team Server, but you can choose to use Git. In the future, Git will become the default system. 
 
-Mendix 7 and 8 only have support for Team Server SVN, and as long as these major versions are available, support for Team Server SVN will be maintained.
-
 ## 3 How Much Storage Space Is Provided with Team Server?
 
 Storage space is unlimited for apps connected to a commercial license. 1 GB of free storage is provided for your company account for apps not (yet) connected to a commercial license.

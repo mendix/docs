@@ -75,7 +75,7 @@ If Studio is enabled for this development line, the process first ensures that t
 
 ### 2.8 Commit/Push {#commit}
 
-Committing is the action, invoked in Studio Pro, of creating a set of changes and sending/pushing all your changes to the [repository](#repository) and making a new [revision](#revision). It is possible to store the committed data in a local repository, but not yet push it to the central [repository](#repository).
+Committing is the action, invoked in Studio Pro, of creating a set of changes and pushing all your changes to the [repository](#repository) and making a new [revision](#revision). It is possible to store the committed data in a local repository, but not yet push it to the central [repository](#repository).
 
 {{% alert color="info" %}}
 When using Git, it is possible to store the committed data in a local repository, but not yet push it to the central [repository](#repository). 

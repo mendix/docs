@@ -84,11 +84,7 @@ Once the app is created, you can upload it to your private Git repository. For m
 Now that you have a Git app on your server, you can download it to another directory or one of your team members can download it on their machine. Follow the steps below:
 
 1. Under **Version Control > Download from Version Control Server**, select the **Private server** option and enter the URL of your repository, which contains the app you want to download. If you are not sure what URL to use, you can find this info in your Git server.
-2. If you have both Subversion and Git enabled for the private version control in your preferences in Studio Pro, specify which version control system your repository uses. For this case, enable the **Git** radio button: {{% todo %}}[Delete Subversion?]{{% /todo %}}
-
-    {{< figure src="/attachments/refguide/version-control/on-premises-git/download-from-version-control-server.png" alt="Download from Version Control Server dialog" >}}
-
-3. Enter the link to the repository in the **App repository address** and click **Connect**. Now you will have the option to change the directory where the app is downloaded to:
+2. Enter the link to the repository in the **App repository address** and click **Connect**. Now you will have the option to change the directory where the app is downloaded to:
 
     {{< figure src="/attachments/refguide/version-control/on-premises-git/download-from-version-control-server-extended.png" alt="Download from Version Control Server Extended dialog" >}}
 

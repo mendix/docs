@@ -4,7 +4,7 @@ url: /refguide/troubleshoot-version-control-issues/
 linktitle: "Troubleshoot Version Control"
 weight: 20
 description: "Presents a list of problems and fixes for version control issues."
-tags: ["version control", "troubleshoot", "Studio Pro", "TortoiseSVN"]
+tags: ["version control", "troubleshoot", "Studio Pro"]
 aliases:
     - /howto/collaboration-requirements-management/troubleshoot-version-control-issues/
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.

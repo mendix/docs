@@ -289,7 +289,7 @@ The first method is to merge the entire branch line into the main line, essentia
 The second method should be used if the first method is not possible for some reason and you want to "overwrite" the main line with your branch line. For this method, you must follow these steps:
 
 1. Check out both the main line and the branch line locally.
-2. Overwrite all the files in the main line app directory with those of the branch line (except for the *.svn* directory). {{% todo %}}[Delete or update for Git?]{{% /todo %}}
+2. Overwrite all the files in the main line app directory with those of the branch line (except for the *.git* directory). 
 3. Commit your changes using Studio Pro. 
 4. Reopen the main line app in Studio Pro only after overwriting the files.
 
@@ -370,10 +370,6 @@ We advise you to always commit and update/pull inside Studio Pro because in this
 
 If you are doing more advanced changes to files, like adding Java actions or resources to your app, you will have to install a separate tool on your computer and perform some operations yourself: you can use TortoiseGit [https://tortoisegit.org/](https://tortoisegit.org/) (can be downloaded for free).
 
-{{% alert color="warning" %}}
-Mendix Studio Pro uses the Subversion 1.9 working copy. Previous versions of the Mendix Desktop Modeler used a Subversion 1.7 working copy. These working copy versions **are not compatible**. {{% todo %}}[Still true?]{{% /todo %}}
-{{% /alert %}}
-
 {{% alert color="info" %}}
 Studio Pro adds metadata on the Mendix version of your app to each revision when you commit or create a branch. Therefore, when committing or merging using third-party tools, it may no longer be possible to deploy to the Mendix Cloud. This can be fixed by making a commit using Studio Pro, so the correct metadata is present again.
 {{% /alert %}}
@@ -412,14 +408,7 @@ To fix this, make a small commit on your branch in Studio Pro (for example, chan
 
 When working in different apps with different Studio Pro versions, you may one day find yourself with an app model upgraded and committed to a newer Studio Pro version, while the the rest of your team is not yet ready to upgrade. 
 
-To revert this version upgrade of the app model, follow these steps using TortoiseGit:
-
-1. Inform your team of the situation and prevent them from making further commits.
-2. Close Studio Pro. 
-3. In Windows Explorer, go to your main app directory.
-4. Right-click the directory and select **TortoiseGit** > **Show log**. 
-5. Find the latest revision that was in the desired Studio Pro version.
-6. When using TortoiseGit, select all revisions up to but excluding the desired revision. Right-click and select **Revert changes by these commits**, then confirm and click **Yes**. {{% todo %}}[Deleted everything about SVN, verify that no steps are missing.]{{% /todo %}}
+To revert this version upgrade of the app model, use the Git tool of your preference to revert the change.
 ## 10 Read More
 
 * [Advanced Branching and Merging Strategies](https://www.mendix.com/blog/advanced-branching-merging-strategies-part-1-2/)

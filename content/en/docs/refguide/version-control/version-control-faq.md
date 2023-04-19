@@ -39,7 +39,7 @@ No, in Mendix 10, we are supporting only Git-versioned apps. You need to migrate
 
 ## 7 Can I Use Third-Party Tools to Connect to the Team Server? {#third-party-tools}
 
-Yes, as the Team Server is based on a full implementation of Git. You can directly use third-party tools like TortoiseGit or GitHub Desktop. For more information on how to set this up, see the [External Tools](/refguide/using-version-control-in-studio-pro/#external-tools) section in *Using Version Control in Studio Pro*. 
+Yes, as the Team Server is based on a full implementation of Git. You can directly use third-party tools like GitHub Desktop. For more information on how to set this up, see the [External Tools](/refguide/using-version-control-in-studio-pro/#external-tools) section in *Using Version Control in Studio Pro*. 
 
 ## 8 Is It Possible to Connect to a Third-Party or On-Premises Version Control Server?
 

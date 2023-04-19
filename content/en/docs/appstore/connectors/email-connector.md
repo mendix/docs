@@ -75,7 +75,7 @@ Once you run your Studio Pro app, you can start configuring your email accounts 
 
 ### 3.1 Adding Email Account {#adding-email-account}
 
-When you run your app to use this module for the first time, and earlier data is not present, you will see a welcome screen with an account setup wizard. Click on `Get Started` button and follow the steps to add email account. The wizard is intuitive and takes you through 3 stages to configure either your Primary email account or Shared Mailbox.
+When you run your app to use this module for the first time, and earlier data is not present, you will see a welcome screen with an account setup wizard. Click on **Get Started** button and follow the steps to add email accounts. The wizard takes you through 3 stages to configure either your primary email account or a shared mailbox.
 
 1. Choose the authentication method that you want to use. **Basic Credentials** or **Azure AD** (OAuth 2.0).
 2. Choose if you want to either configure **Primary** or **Shared Mailbox**

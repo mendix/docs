@@ -64,11 +64,10 @@ Drag the Tree Node widget onto the page and use the configuration properties des
     * Configurable when **Has children** is set to **Yes**; default: **No**
 * **Animate** – defines whether the content is animated when a tree node expands and collapses
     * Default: **Yes**
-    * Configurable when [**Enable advanced options**](#advanced) is set to **Yes** in Mendix Studio {{% todo %}}[Delete?]{{% /todo %}}
 
 ### 3.2 Visualization Tab {#visualization}
 
-The **Visualization** tab is only visible when the [Enable advanced options](#advanced) is set to **Yes** in Mendix Studio. It includes the following properties:
+The **Visualization** tab includes the following properties:
 
 * **Show icon** – defines the location of the icon relative to the header
     * Default: **Left**

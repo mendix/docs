@@ -23,7 +23,7 @@ Mendix [Studio Pro](/refguide/modeling/) 10 is supported on 64-bit versions of W
 The following frameworks are required. They will be installed automatically by the Studio Pro installer if necessary:
 
 * Microsoft .NET 6.0.x desktop runtime (x64) and all applicable Windows security patches
-* Microsoft Visual C++ 2015 Redistributable Package (x64)
+* Redistributable Package (x64)
 * Microsoft Visual C++ 2019 Redistributable Package (x64)
 * A Java Developer Kit (JDK) version 11 - the flavor which will be installed, if Java 11 is not already installed on your machine, you are installing:
     * Eclipse Temurin JDK 11 (x64)
@@ -33,9 +33,10 @@ The following frameworks are required. They will be installed automatically by t
 * Mendix Native Mobile Builder
 * Microsoft Edge WebView2 Evergreen Runtime (x64)
 
-When you are running Studio Pro on an ARM64 device (for example, an M1 Mac), you need the following version of .NET 6 in addition to the x64 version listed above:
+When you are running Studio Pro on an ARM64 device (for example, a Parallels virtual machine an M1 Mac), you need the following dependencies in addition to the x64 version listed above:
 
-* .NET 6 Desktop Runtime (arm64) {{% todo %}}[Update for Mx 10?]{{% /todo %}}
+* .NET 6 Desktop Runtime (arm64)
+* Microsoft Edge WebView2 Evergreen Runtime (arm64)
 
 {{% alert color="info" %}}
 You can choose which JDK is used for building and running locally via the **Edit** > **Preferences** menu item in Studio Pro.
@@ -226,11 +227,7 @@ For server-based installations, the following storage types mounted by the OS ar
 * Microsoft Edge (latest stable desktop version)
 
 {{% alert color="warning" %}}
-Internet Explorer is not supported in Studio Pro 10. As the market is moving away from Internet Explorer and Mendix continues to align with the best practices of the modern web ecosystem, we have dropped support for Internet Explorer 11. This allows us to keep in line with user expectations. Removing support has already improved app loading times and performance, and it will enable us to continue making improvements and innovating using modern web features.<br />
-<br />
-As of Studio Pro 9, app end-users still using IE will be shown an **Unsupported Browser** message stating that upgrading to a modern browser is required. You can [customize this message](/howto/front-end/customize-styling-new/#customize-unsupported-browsers) to meet your needs.<br />
-<br />
-If you still need to support IE11, note that Studio Pro [8](/releasenotes/studio-pro/8.18/) and [7](/releasenotes/studio-pro/7.23/) will continue supporting IE11. Mendix recommends using Studio Pro 8 or 7 until your app end-users have upgraded their browsers. {{% todo %}}[Is this alert still necessary except for the first sentence?]{{% /todo %}}
+Internet Explorer is not supported in Studio Pro 10.
 {{% /alert %}}
 
 ## 11 Mobile Operating Systems {#mobileos} {{% todo %}}[Update for Mx 10?]{{% /todo %}}

@@ -56,21 +56,21 @@ When using the module, keep the following additional concerns in mind:
 * If you want to customize the styling or look of the components, you can add a new *main.js* file in **SAP_Native_Resources > Styling > native**.
 {{% /alert %}}
 
-## 4 Reference
+### 4.1 Customization
+
+If you want to apply custom styling to the SAP Horizon UI module, see [Customize Styling: Adding Custom Styling](/howto/front-end/customize-styling-new/#23-adding-custom-styling).
+
+## 5 Reference
 
 To help you work with the SAP Horizon Native UI Resources module, the following sections of this document describe the available components, building blocks, page templates, and layouts that you can use in your application.
 
-### 4.1 Components {#components}
+### 5.1 Components {#components}
 
 The module styles most Mendix components to match SAP Fiori styles by default.
 
 If you want to change a Mendix component to match the SAP Fiori style, you need to manually add the required classes to the component.
 
-{{% alert color="info" %}}
-If you want to customize any component according to your requirements, add the new class to the component and write style in the respective files in **SAP_Native_Resources > Styling > native > components > {component_name}.js**.
-{{% /alert %}}
-
-### 4.2 Building Blocks {#building-blocks}
+### 5.2 Building Blocks {#building-blocks}
 
 The module adds the following building blocks:
 
@@ -78,7 +78,7 @@ The module adds the following building blocks:
 * Fiori Card - The card is usually used to display content in the card form.
 * Fiori Header - There are two types of headers. The first type has an SAP icon and page title, and can be used at the top of the page. The second type is the page title with a side menu where you can add navigation options.
 
-### 4.3 Page Templates {#page-templates}
+### 5.3 Page Templates {#page-templates}
 
 There are some predesigned pages that you can use to quickly create a native page. You can choose these templates while creating a new page in your native mobile app.
 
@@ -89,7 +89,7 @@ The module adds the following page templates:
 * List - The module includes a list type where items are displayed in the card style.
 * Form - This is basic form that includes all Fiori inputs. You can use and modify this form according to your requirements.
 
-### 4.4 Layouts {#layouts}
+### 5.4 Layouts {#layouts}
 
 The module adds the following page templates:
 

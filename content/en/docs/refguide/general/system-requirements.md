@@ -33,7 +33,7 @@ The following frameworks are required. They will be installed automatically by t
 * Mendix Native Mobile Builder
 * Microsoft Edge WebView2 Evergreen Runtime (x64)
 
-When you are running Studio Pro on an ARM64 device (for example, a Parallels virtual machine an M1 Mac), you need the following dependencies in addition to the x64 version listed above:
+When you are running Studio Pro on a Parallels virtual machine on an ARM64 device (for example, an M1 Mac), you need the following dependencies in addition to the x64 version listed above:
 
 * .NET 6 Desktop Runtime (arm64)
 * Microsoft Edge WebView2 Evergreen Runtime (arm64)

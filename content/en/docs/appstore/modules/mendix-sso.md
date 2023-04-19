@@ -272,12 +272,7 @@ Remember that data which comes from the end-user's Mendix ID via SSO (for exampl
 
 ### 5.3 Using the Administration module
 
-The following versions of the [Administration](https://marketplace.mendix.com/link/component/23513) module contain a set of microflows to configure Mendix SSO to use **Administration.Account** as the user entity:
-
-* Version 2.X.X, for example, 2.0.0
-* Version 1.3.2 and below
-
-Follow the instructions in [Using the Administration Module with Mendix SSO](https://docs.mendix.com/appstore/modules/administration/#use-with-mendix-sso) to use the Administration module with Mendix SSO.
+The [Administration](https://marketplace.mendix.com/link/component/23513) module versions 1.3.X (for example 1.3.2) and 2.1.X (for example 2.1.2) contain a set of microflows to configure Mendix SSO to use **Administration.Account** as the user entity. Follow the instructions in [Using the Administration Module with Mendix SSO](https://docs.mendix.com/appstore/modules/administration/#use-with-mendix-sso) to use the Administration module with Mendix SSO.
 
 ## 6 Tokens
 

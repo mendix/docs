@@ -729,7 +729,7 @@ Save and apply the changes.
 By specifying a value for `mxAgentConfig`, you can enable the Mendix [Java instrumentation agent](https://github.com/mendix/mx-agent) and collect additional metrics such as the execution times of microflows, OData/SOAP/REST endpoints, and client activity.
 
 {{% alert color="warning" %}}
-MxAgent is a [Java instrumentation agent](https://docs.oracle.com/javase/8/docs/api/java/lang/instrument/Instrumentation.html) and is unrelated to the Mendix for Private Cloud Gateway Agent.
+MxAgent is a [Java instrumentation agent](https://docs.oracle.com/en/java/javase/11/docs/api/java.instrument/java/lang/instrument/Instrumentation.html) and is unrelated to the Mendix for Private Cloud Gateway Agent.
 {{% /alert %}}
 
 <!-- BEGIN snippet This should be kept in sync with Section 4.2.1 Format of Metrics Agent Configuration in /developerportal/operate/metrics/monitoring-with-apm/_index.md, updating relative links -->

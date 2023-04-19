@@ -71,7 +71,7 @@ The 3D Viewer app service includes a few 3D widgets. These are some limitations 
 
 ### 1.4 Prerequisites
 
-3D Viewer version 2.2.0 and higher can be used with Studio Pro 9 versions starting with [9.4.0](/releasenotes/studio-pro/9.4/), and version 2.1.2 can be used with Studio Pro 8 versions starting with [8.15.1](/releasenotes/studio-pro/8.15/#8151).
+3D Viewer version 2.2.0 and higher can be used with Studio Pro versions starting with [9.4.0](/releasenotes/studio-pro/9.4/) until [9.11](/releasenotes/studio-pro/9.11/) (including 9.11), and version 2.1.2 can be used with Studio Pro 8 versions starting with [8.15.1](/releasenotes/studio-pro/8.15/#8151).
 
 ## 2 Installation
 

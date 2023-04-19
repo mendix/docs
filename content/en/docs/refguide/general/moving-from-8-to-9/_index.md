@@ -4,7 +4,7 @@ url: /refguide/moving-from-8-to-9/
 category: "General Info"
 weight: 20
 description: "Provides details on updating your app from Mendix 8 to Mendix 9, including sections on converting your app and deprecated features."
-tags: ["studio pro", "upgrade"]
+tags: ["studio pro", "upgrade", "forum", "community"]
 ---
 
 ## 1 Introduction
@@ -133,12 +133,23 @@ Mendix 9 contains a new XPath query engine called *query engine 9* or QE9, repla
 
 * If an association is [navigable from both sides](/refguide/association-properties/#navigability), both entities can have access rules defined which declare the readability of the association. For such associations, QE9 will always use the entity on the left of the current XPath to determine accessibility.
 For example: in the query `//Customer[Customer_Address/Address/City = 'Rotterdam']`, the access rules defined in `Customer` will be used for the association, whereas in `//Address[Customer_Address/Customer/Lastname = 'Doe']`, the rules in `Address` will be used for that same association. In QE7 the behavior was not well defined.
-
 * QE9 has been written to follow the least privilege principle strictly when retrieving data. This might cause less data to be visible to end-users.
-
 * While not allowed by Studio Pro, it was possible to use a non-boolean attribute as a constraint in a Java action, for example `//Address[City]`. QE7 accepts such queries but, depending on the database, it may give unexpected results. QE9 will reject such queries.
-
 * While not supported or documented, it is possible to use a query like `//Customer/Customer_Address/Address` in a Java action. If an instance of `Address` is reachable from multiple `Customer` instances, QE7 would return the instance of `Address` multiple times. QE9 will return each matching instance of `Address` only once.
+
+## 8 Relevant Forum Posts
+
+Check out how the Mendix community resolves upgrade issues in the following Forum posts:
+
+* [Upgrade from Mendix 8 to Mendix 9](https://forum.mendix.com/link/space/studio-pro/questions/123696) – on *.jar* files and the *userlib* directory
+* [Native app styling difference with Mendix 9 upgrade](https://forum.mendix.com/link/space/mobile/questions/118280) – on [upgrading to Atlas 3](https://docs.mendix.com/refguide/moving-from-atlas-2-to-3/)
+* [Error importing Excel file after upgrade to Mendix 9](https://forum.mendix.com/link/space/studio-pro/questions/117814) – on converting attribute values
+* [Does anyone have experience with upgrading Mx applications from 7 to 9?](https://forum.mendix.com/link/space/studio-pro/questions/112229) – on considerations for moving from 7 to 8 and then 8 to 9
+* [Native Mobile Synchronization Error after Mendix 9 Upgrade](https://forum.mendix.com/link/space/integrations/questions/112173) – on synchronizing objects and security rules
+* [Unable to Upgrade App from Mendix 8.18.7 to 9.4.0](https://forum.mendix.com/link/space/studio-pro/questions/109310) – on problems with Mendix Team Server and Git
+* [Mendix Native 8 to 9 Upgrade Deployment Structure Error](https://forum.mendix.com/link/space/deployment/questions/106428) – on deployment file structures and Marketplace component directories
+* [MX 9.5.0 Upgrade error from MX 8.18.8: The type cache does not contain a type with qualified name WebServices$ProvidedService](https://forum.mendix.com/link/space/studio-pro/questions/109620) – on upgrading with app services
+* [Error while upgrading to Mx 9](https://forum.mendix.com/link/space/studio-pro/questions/105907) – on upgrading with app services
 
 ## 9 Read More
 

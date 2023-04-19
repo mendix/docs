@@ -20,7 +20,9 @@ With Amazon Translate, you can localize content such as websites and application
 
 ### 1.2 Prerequisites {#prerequisites}
 
-The Amazon Translate connector requires the [AWS Authentication connector](https://marketplace.mendix.com/link/component/120333) to authenticate with Amazon Web Services (AWS). For more information about installing and configuring the AWS Authentication connector, see [AWS Authentication](/appstore/connectors/aws/aws-authentication/).
+The Amazon Translate connector requires Mendix Studio Pro version 9.18.0 or above.
+
+To authenticate with Amazon Web Service (AWS), you must also install and configure the [AWS authentication connector](https://marketplace.mendix.com/link/component/120333). For more information about installing and configuring the AWS Authentication connector, see [AWS Authentication](/appstore/connectors/aws/aws-authentication/).
 
 ## 2 Installation
 

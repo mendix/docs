@@ -84,9 +84,7 @@ You can perform the following actions in this section:
 
 * **Details** – for more information, see [Details](/developerportal/deploy/environments-details/)
 * **Transport to** – stage an environment to acceptance or production
-* **Setup Studio Pro Deployment** – the [Technical Contact](/developerportal/collaborate/app-roles/#technical-contact) can set the target environment to which apps will be deployed from Studio Pro; for more information, see [Studio Deployment Settings](/developerportal/deploy/studio-deployment-settings/)
-
-    {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/environments/setup-studios-target.png" alt="The Environments section with the Setup Studios Deployment button visible" >}}
+* **Setup Studio Pro Deployment** – the [Technical Contact](/developerportal/collaborate/app-roles/#technical-contact) can set the target environment to which apps will be deployed from Studio Pro; for more information, see [Studio Pro Deployment Settings](/developerportal/deploy/studio-deployment-settings/).
 
 #### 2.2.2 Flexible Environments
 
@@ -114,9 +112,7 @@ For flexible environments, the **Environments** section shows the following deta
 You can perform the following actions in this section:
 
 * **Details** – for more information, see [Details](/developerportal/deploy/environments-details/)
-* **Setup Studios Deployment** – the [Technical Contact](/developerportal/collaborate/app-roles/#technical-contact) can set the target environment to which apps will be deployed from Studio and Studio Pro; for more information, see [Studio Deployment Settings](/developerportal/deploy/studio-deployment-settings/)
-
-    {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/environments/setup-studios-target.png" alt="The Environments section with the Setup Studios Deployment button visible" >}}
+* **Setup Studio Pro Deployment** – the [Technical Contact](/developerportal/collaborate/app-roles/#technical-contact) can set the target environment to which apps will be deployed from Studio Pro; for more information, see [Studio Pro Deployment Settings](/developerportal/deploy/studio-deployment-settings/).
 
 * **Search** – you can use the **Search** box to find a specific environment
 * Reordering environments - the [Technical Contact](/developerportal/collaborate/app-roles/#technical-contact) can reorder the environments by dragging them in the list, for example, to group environments of the same type together:

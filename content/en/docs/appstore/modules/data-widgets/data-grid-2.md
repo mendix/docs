@@ -256,7 +256,7 @@ When **Default filter** is defined as **Between** these fields will appear to de
 
 #### 7.1.1 Configurations
 
-In this section you can select a **Saved attribute** in order to save the current value of the filter. The attribute available in this section must be this type:
+In this section you can select a **Saved attribute** in order to save the current value of the filter. However, the value is not automatically applied to the widget. To restore the previously saved value of the filter, you must configure the same attribute as the **Default value** of the widget. The attribute available in this section must be this type:
 
 * Date & Time
 
@@ -287,7 +287,7 @@ You can also define the empty option caption, which will be rendered as the firs
 
 #### 7.2.1 Configurations
 
-In this section you can select a **Saved attribute** in order to save the current value of the filter. The attribute available in this section must be this type:
+In this section you can select a **Saved attribute** in order to save the current value of the filter. However, the value is not automatically applied to the widget. To restore the previously saved value of the filter, you must configure the same attribute as the **Default value** of the widget. The attribute available in this section must be this type:
 
 * String
 
@@ -332,7 +332,7 @@ To have better control of when the filter will be applied, we offer a **Apply af
 
 #### 7.3.1 Configurations
 
-In this section you can select a **Saved attribute** in order to save the current value of the filter. The attribute available in this section must be one of the following types:
+In this section you can select a **Saved attribute** in order to save the current value of the filter. However, the value is not automatically applied to the widget. To restore the previously saved value of the filter, you must configure the same attribute as the **Default value** of the widget. The attribute available in this section must be one of the following types:
 
 * Autonumber
 * Decimal
@@ -379,7 +379,7 @@ To have better control of when the filter will be applied, we offer a **Apply af
 
 #### 7.4.1 Configurations
 
-In this section you can select a **Saved attribute** in order to save the current value of the filter. The attribute available in this section must be one of the following types:
+In this section you can select a **Saved attribute** in order to save the current value of the filter. However, the value is not automatically applied to the widget. To restore the previously saved value of the filter, you must configure the same attribute as the **Default value** of the widget. The attribute available in this section must be one of the following types:
 
 * Hashed string
 * String

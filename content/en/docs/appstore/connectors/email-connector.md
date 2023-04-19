@@ -15,8 +15,9 @@ The [Email](https://marketplace.mendix.com/link/component/120739) connector allo
 
 The Email connector includes the following features:
 
-* Configuration of multiple accounts
-    * Supports basic authentication and [creating an account with OAuth 2.0](#create-oauth) to configure Microsoft Azure AD accounts
+* Configuration of multiple email accounts
+    * Supports basic authentication and [creating an account with OAuth 2.0](#create-oauth) to configure Microsoft Azure AD accounts.
+    * Supports addition of Shared Mailbox using Basic and OAuth 2.0 authentication.
 * Digital signatures and encryption
 * Email templates
 
@@ -74,11 +75,17 @@ Once you run your Studio Pro app, you can start configuring your email accounts 
 
 ### 3.1 Adding Email Account {#adding-email-account}
 
-When you run your app to use this module for the first time, and earlier data is not present, you will see a welcome screen with an account setup wizard. Click on `Get Started` button and follow the steps to add email account. 
+When you run your app to use this module for the first time, and earlier data is not present, you will see a welcome screen with an account setup wizard. Click on `Get Started` button and follow the steps to add email account. The wizard is intuitive and takes you through 3 stages to configure either your Primary email account or Shared Mailbox.
 
-On the Email Connector dashboard, click on `Add Email Account` and follow the wizard.
+1. Choose the authentication method that you want to use. **Basic Credentials** or **Azure AD** (OAuth 2.0).
+2. Choose if you want to either configure **Primary** or **Shared Mailbox**
+3. Choose the protocols for sending and receiving emails.
 
-You can add and configure an email account in the Email Connector using basic authentication and OAuth 2.0 for Microsoft Azure AD accounts. To configure OAuth 2.0 accounts, see [Creating an Account Using Microsoft Azure OAuth 2.0](#create-oauth). The account configuration wizard supports automatic and manual configurations.
+You can add and configure an email account in the Email Connector using basic authentication and OAuth 2.0 for Microsoft Azure AD accounts. You can also add and configure "Shared Mailbox" using Basic & OAuth 2.0 authentitcation. To configure OAuth 2.0 accounts, see [Creating an Account Using Microsoft Azure OAuth 2.0](#create-oauth). The account configuration wizard supports automatic and manual configurations for Sending and Receiving emails.
+
+{{% alert color="info" %}}
+You can configure either your Primary email account or Shared Mailbox while iterating through the wizard steps. You cannot configure both (Primary & Shared) at the same time. If you want to add a Primary and a Shared Mailbox, you would have to go through the wizard twice; first to configure your Primary account and then to configure Shared Mailbox. You can only choose to configure a Shared Mailbox, although for configuring a Shared Mailbox, your primary email account would be needed.
+{{% /alert %}}
 
 #### 3.1.1 Automatic Configuration
 

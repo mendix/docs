@@ -9,9 +9,13 @@ tags: ["connectors", "amazon", "aws", "build", "api gateway", "how to"]
 
 ## 1 Introduction
 
-[what is Amazon API gateway, when you might want to use it (vs when to use an AWS connector), what are the benefits; link to Amazon documentation about the API Gateway]
+[what is Amazon API gateway; link to Amazon documentation about the API Gateway]
 
-### 1.1 Prerequisites
+### 1.1 Use Cases
+
+[When you might want to use it (vs when to use an AWS connector), what are the benefits]
+
+### 1.2 Prerequisites
 
 Before starting this how-to, make sure you have completed the following prerequisites:
 

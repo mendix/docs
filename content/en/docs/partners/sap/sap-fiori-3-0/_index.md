@@ -19,7 +19,7 @@ The SAP Fiori user experience creates a consistent UI across SAP products. SAP F
 
 The Mendix module gives you access to designing your pages with SAP Fiori-styled widgets and building blocks as part of your layout. You can also allow end-users to select a theme and apply it immediately. The module supports SAP Quartz Light and Dark themes.
 
-You can experience the SAP Fiori design by using the [SAP Fiori Starter App](https://marketplace.mendix.com/link/component/116366) as the basis for a new app.
+You can experience the SAP Fiori design by using the [SAP Fiori Web Starter App](https://marketplace.mendix.com/link/component/116366) as the basis for a new app.
 
 Alternatively, you can include the [Web UI Package for SAP Fiori theme](https://marketplace.mendix.com/link/component/116359) module in your existing app. See [Add Fiori to Your App](#add-fiori), below, for instructions on how to do this.
 

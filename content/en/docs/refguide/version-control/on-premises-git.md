@@ -84,7 +84,7 @@ Once the app is created, you can upload it to your private Git repository. For m
 Now that you have a Git app on your server, you can download it to another directory or one of your team members can download it on their machine. Follow the steps below:
 
 1. Under **Version Control > Download from Version Control Server**, select the **Private server** option and enter the URL of your repository, which contains the app you want to download. If you are not sure what URL to use, you can find this info in your Git server.
-2. If you have both Subversion and Git enabled for the private version control in your preferences in Studio Pro, specify which version control system your repository uses. For this case, enable the **Git** radio button:
+2. If you have both Subversion and Git enabled for the private version control in your preferences in Studio Pro, specify which version control system your repository uses. For this case, enable the **Git** radio button: {{% todo %}}[Delete Subversion?]{{% /todo %}}
 
     {{< figure src="/attachments/refguide/version-control/on-premises-git/download-from-version-control-server.png" alt="Download from Version Control Server dialog" >}}
 
@@ -183,7 +183,7 @@ If you already have an existing versioned app (with Subversion) that you would l
 
 5. Once the file browser dialog box is open, navigate to the location you save the *.mpk* file during the export process.
 6. In the **Import App Package** dialog box, select **Private server** option in the **Where should we store your App?** section. 
-7. In the **Private Server Type** option, select **Git** (if you have both **Subversion** and **Git** enabled in the **Preferences** form). 
+7. In the **Private Server Type** option, select **Git** (if you have both **Subversion** and **Git** enabled in the **Preferences** form).  
 8. Enter the link to the private repository in the address textbox and click **OK**. Remember, the repository **must be completely empty**, or **Studio Pro** will not be able to upload an app to it:
 
     {{< figure src="/attachments/refguide/version-control/on-premises-git/import-project-package-git-dialog.png" alt="Import Git Package menu" >}}

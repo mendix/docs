@@ -77,6 +77,10 @@ If Studio is enabled for this development line, the process first ensures that t
 
 Committing is the action, invoked in Studio Pro, of creating a set of changes and sending/pushing all your changes to the [repository](#repository) and making a new [revision](#revision). It is possible to store the committed data in a local repository, but not yet push it to the central [repository](#repository).
 
+{{% alert color="info" %}}
+When using Git, it is possible to store the committed data in a local repository, but not yet push it to the central [repository](#repository). 
+{{% /alert %}}
+
 If Studio is enabled for this development line, the process first ensures that the Studio working copy is stored as a new revision and merged into the working copy of Studio Pro. If there are no conflicts, the changes are then sent to the repository to make a new revision.
 
 ### 2.9 Development Line {#development-line}

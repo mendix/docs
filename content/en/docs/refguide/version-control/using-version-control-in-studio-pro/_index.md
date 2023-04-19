@@ -199,7 +199,7 @@ You can resolve an app conflict by choosing **Tasks > Use mine** or by deleting 
 
 ## 7 Using Branches
 
-A repository can contain a number of development lines. Each development line offers independent development from the other development lines. In the simple case there is just one development line called the main line (called 'trunk' in subversion). All development then happens inside that one line.
+A repository can contain a number of development lines. Each development line offers independent development from the other development lines. In the simple case there is just one development line called the main line. All development then happens inside that one line.
 
 {{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/main-branch-line.png" >}}
 

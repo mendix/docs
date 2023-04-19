@@ -21,12 +21,12 @@ To see the current status of the Mendix Developer Portal and Control Center, see
 
 #### Improvements
 
-* We added a pre-condition check to the [Git Migration](/developerportal/collaborate/migrate-to-git/) process. We'll inform you of any errors in the check, so that you can counter them before proceeding with the migration.
-* If your Project is between versions 9.0 and 9.11, we now alert you to upgrade and become eligible to migrate. You see, we really want you to migrate to Git!
+* We added a pre-condition check to the [Git migration](/developerportal/collaborate/migrate-to-git/) process. We will inform you of any errors in the check, so that you can counter them before proceeding with the migration.
+* If your app is between versions 9.0 and 9.11, we now alert you to upgrade and become eligible to migrate. You see, we really want you to migrate to Git!
 
 #### Fixes
 
-* We fixed an issue where authors of a [Feedback](/developerportal/collaborate/feedback/) item would receive notifications on that item even though they specifically set the system not to send any notifications.
+* We fixed an issue where authors of a [feedback](/developerportal/collaborate/feedback/) item would receive notifications on that item even though they specifically set the system not to send any notifications.
 
 ### April 13th, 2023
 

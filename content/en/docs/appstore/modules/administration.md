@@ -23,18 +23,15 @@ The [Administration](https://marketplace.mendix.com/link/component/23513) module
 ## 1.2 Dependencies
 
 * [Atlas UI Resources](https://marketplace.mendix.com/link/component/104730)
-* [Mendix SSO](https://marketplace.mendix.com/link/component/111349): for version 2.X.X (for example version 2.0.0), and version 1.3.2 and below
+* [Mendix SSO](https://marketplace.mendix.com/link/component/111349): required for the Administration module versions 1.3.X (for example 1.3.2) and 2.1.X (for example 2.1.2)
 
 ## 2. Installation
 
 Follow the instructions in [How to Use Marketplace Content in Studio Pro](https://docs.mendix.com/appstore/general/app-store-content/) to import the Administration module into your app.
 
-## 3 Using the Administration Module with Mendix SSO {#use-with-mendix-sso}
+## 3 Using the Adapter Microflows with Mendix SSO                                                               {#use-with-mendix-sso}
 
-You can use the following versions of the Administration module with Mendix SSO:
-
-* Version 2.X.X, for example, 2.0.0
-* Version 1.3.2 and below
+{{% alert color="info" %}}The following process only applies to the Administration module versions 1.3.X (for example 1.3.2) and 2.1.X (for example 2.1.2){{% /alert %}}
 
 To use the Administration module with Mendix SSO, perform the following steps:
 

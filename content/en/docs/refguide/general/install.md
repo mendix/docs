@@ -86,8 +86,7 @@ It is possible to prepare the prerequisite installers beforehand, so that the Me
 4. Download the prerequisites listed in the [Troubleshooting](#troubleshooting) section above and move them into the **Dependencies** folder.
 5. Rename the following dependencies:
     * The Microsoft .NET Desktop Runtime 6.0.x executable (*dotnet.exe*) to *windowsdesktop-runtime-6.0-x64.exe*
-    * The Java Development Kit 11 (x64) *msi* (for example, *OpenJDK11U-jdk_x64_windows_hotspot_11.0.3_7.msi*) to the following:
-        * *adoptiumjdk_11_x64.msi*
+    * The Java Development Kit 11 (x64) *msi* (for example, *OpenJDK11U-jdk_x64_windows_hotspot_11.0.3_7.msi*) to *adoptiumjdk_11_x64.msi*
     * The Visual C++ Redistributable for Visual Studio 2019 (x64) executable (for example, *VC_redist.x64.exe*) to *vcredist2019_x64.exe*
     * The `latest` executable to *mendix_native_mobile_builder.exe*
     * The *Git-{version}-64-bit.exe* executable to *git_for_windows_installer.exe*

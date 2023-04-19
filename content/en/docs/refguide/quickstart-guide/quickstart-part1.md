@@ -117,7 +117,7 @@ Domain models are comprised of entities similar to a table in traditional SQL. E
 
 When you run your app locally or deploy it for the first time, the runtime compiles your app’s domain models and creates the underlying database. Any subsequent changes will be seen as updates to the database.
 
-Mendix by default uses its own built-in HSSQL database, but Mendix also supports several alternative database types such as IBM DB2, PostgreSQL, Microsoft SQL Server, and others. 
+Mendix by default uses its own built-in HSSQL database, but Mendix also supports several alternative database types such as PostgreSQL, Microsoft SQL Server, and others. 
 
 ### 5.2 Creating an Entity to Store the Images
 

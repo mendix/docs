@@ -371,7 +371,7 @@ It is recommended to use a common prefix that uniquely defines your organisation
 The following deprecated usages will be removed in the future releases,
 
 1. Setting `com.mendix.metrics.Type` to `logger` and `statsd` is deprecated. You will get a warning message to advise you to start using the `micrometer` metric type.
-2. The [`Core.metrics()` Java Runtime API methods](https://apidocs.rnd.mendix.com/9/runtime/com/mendix/metrics/Metrics.html) `counter()`, `timer()`, `gauges()`, and `sets()` are deprecated.
+2. The [`Core.metrics()` Java Runtime API methods](https://apidocs.rnd.mendix.com/10/runtime/com/mendix/metrics/Metrics.html) `counter()`, `timer()`, `gauges()`, and `sets()` are deprecated.
 
 ## 6 Logging {#logging}
 

@@ -35,7 +35,7 @@ A Free App has a number of limitations compared to a licensed app. The main limi
 | App vCPUs | 0.5 | Depends on your [pricing plan](#plans). |
 | Scheduled events | Are not run. | Are run and can be configured from the Developer Portal. |
 | Environments | Single environment in the Mendix Cloud. | A node in the cloud which has one or more environments, for example, production, acceptance, and test. |
-| Deployment | Can only be deployed to the cloud from Mendix Studio or Studio Pro. | Can be deployed from the Studios, or from the Developer Portal. |
+| Deployment | Can only be deployed to the cloud from Mendix Studio Pro. | Can be deployed from the Studio Pro, or from the Developer Portal. |
 | Custom domains | Not available. | Can be configured from the Developer Portal. |
 | Access restriction profiles | Not available. | Can be configured from the Developer Portal. |
 | Client certificates | Not available. | Can be configured from the Developer Portal. |

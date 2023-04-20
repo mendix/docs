@@ -84,9 +84,11 @@ When loading data during an integration, inheritance can improve the development
 
 Although data retrieval for pages is optimized to only join with entities and retrieve attributes which are used in the data view, microflow retrieve activities are not. In a microflow, *all* columns are retrieved, from generalizations and specializations of the entity. In addition, all associated entities are retrieved where the selected entity is at the parent end of an association.
  
-For entities with a lot of attributes this leads to a lot of data being retrieved from the database. For entities with a lot of associations where they are the parent, this also leads to a lot of additional queries.
+For entities with a lot of attributes, this leads to a lot of data being retrieved from the database. For entities with a lot of associations where they are the parent, this also leads to a lot of additional queries.
  
-The most efficient retrieval in a microflow is of an object with associations with owner type `Default` where the object is the `child`. In other words, where you are retrieving an object which is at the `one` end of a `one-to-many` association. If you retrieve this object, no association tables will be read by default, because you are the child. Having a one-to-many association is not always handy, but making a one-to-one association, with owner type `Both` makes the association act like a parent-to-parent association so that a retrieval of the object will always retrieve the associated object.
+The most efficient retrieval in a microflow is of an object with associations with owner type `Default` where the object is the `Child`. In other words, you are retrieving an object which is at the `one` end of a `one-to-many` association. If you retrieve this object, no association tables are read by default, because the object is the child. 
+
+However, having a one-to-many association is not always handy. Having a one-to-one association with owner type `Both` makes the association act like a parent-to-parent association. So a retrieval of an object from either side of the one-to-one association involves reading the association table. 
 
 ## 5 Conclusion
 

@@ -87,23 +87,22 @@ If you want to connect your app to multiple SAML IdPs, you cannot use different 
 
 The URL for downloading the SP metadata of your app is independent of the value of the EntityID that you configure for your app (see [Configuring Service Provider](#configure-sp)) and which is included in the SP metadata. Instead, the metadata URL is based on the alias for the connected IDP where the SP metadata will be used.
 
-### 1.4 Prerequisites {#dependencies}
+### 1.4 Dependencies{#dependencies}
 
-* Install and configure the [Mx Model Reflection](/appstore/modules/model-reflection/) module.
-* For apps running outside of the Mendix Cloud, make sure you have [external file storage](/refguide/system-requirements/#file-storage) configured.
+{{% alert color="warning" %}}
+If you are running your app outside of the Mendix Cloud, make sure you have [external file storage](/refguide/system-requirements/#file-storage) configured. The SAML module writes configuration data to a file document on the file storage to read it later. Without external file storage, this configuration will be lost when you restart your app. The SAML module will not work correctly without reading the configuration data from the file storage.
+{{% /alert %}}
 
-    {{% alert color="warning" %}}
-    The SAML module writes configuration data to a file document on the file storage to read it later. Without external file storage, this configuration will be lost when you restart your app. The SAML module will not work correctly without reading the configuration data from the file storage.
-    {{% /alert %}}
+* [Mx Model Reflection](/appstore/modules/model-reflection/)
 
-* For apps running on a Microsoft Windows environment, add the following rule to the [Microsoft Internet Information Services Server Configuration](#configure-msiis):
+There are different versions of the module, depending on which version of Mendix you are using. These versions may change, see the versions available in the [SAML module](https://marketplace.mendix.com/link/component/1174/).
 
-    ```xml
-    <rule name="sso">
-        <match url="^(sso/)(.*)" />
-        <action type="Rewrite" url="http://localhost:8080/{R:1}{R:2}" />
-    </rule>
-    ```
+* Mendix version 7 – SAML module version 1.17.1
+* Mendix version 8 – SAML module version 2.3.1
+* Mendix version 9 (upgraded from version 8) – SAML module version 3.3.8
+* Mendix version 9 (new app using Atlas version 3.0) – SAML module version 3.3.9
+
+For Mendix 9, the versions for new apps (odd-numbered patch versions) differ from those for upgrading from Mendix version 8 (even numbered patch versions) as they have the newer version of Atlas UI (version 3). This is because using Atlas 3 with an app upgraded from Mendix version 8.x (which uses Atlas version 2) would result in issues because the templates for the SAML module pages would not exist.
 
 ## 2 Installation
 

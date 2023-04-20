@@ -21,11 +21,11 @@ Mendix also offers an [OIDC SSO](/appstore/modules/oidc/) module if you want to 
 
 Examples of the use of the SAML module include the following:
 
-* authenticating against your Microsoft Active Directory server in a secure manner utilizing the SAML capabilities of Active Directory Federation Services (ADFS) — the SAML protocol allows for the encryption of all information transferred between the two servers, so VPN connections, LDAP, or Kerberos authentication are no longer needed
-* implementing SSO in your Mendix App through a Shibboleth identity Provider
-* identifying the end-users of your Mendix app through SAML-enabled national identity schemes such as eHerkenning, a Dutch eID scheme for B2B or B2G scenarios, or DigiD, which gives Dutch citizens access to (semi) governmental services
+* Authenticating against your Microsoft Active Directory server in a secure manner utilizing the SAML capabilities of Active Directory Federation Services (ADFS) — the SAML protocol allows for the encryption of all information transferred between the two servers, so VPN connections, LDAP, or Kerberos authentication are no longer needed
+* Implementing SSO in your Mendix App through a Shibboleth identity Provider
+* Identifying the end-users of your Mendix app through SAML-enabled national identity schemes such as eHerkenning, a Dutch eID scheme for B2B or B2G scenarios, or DigiD, which gives Dutch citizens access to (semi) governmental services
     {{% alert color="info" %}}Some of these identity schemes use optional features of SAML which are not yet supported in the SAML SSO module — see [Limitations](#limitations) for more information{{% /alert %}}
-* authenticating within a Mendix session — for example requiring end-users to re-authenticate shortly before they are allowed to do critical transaction in your app or having a second user authenticate within the context of the first user’s session in your Mendix app
+* Authenticating within a Mendix session — for example requiring end-users to re-authenticate shortly before they are allowed to do critical transaction in your app or having a second user authenticate within the context of the first user’s session in your Mendix app
 
 ### 1.2 Features
 
@@ -75,7 +75,7 @@ When using SSO connections with multiple IdP's, the SAML EntityID for your app w
 Some SAML services, such as eHerkenning and DigID in the Netherlands, use optional features of SAML which are not yet supported by the Mendix SAML SSO module. These include:
 
 * Signature included as a query string parameter in URL (for HTTP-REDIRECT)
-* restriction of RelayState to 80 characters (i.e. SAML SSO may generate RelayState values that exceed 80 characters)
+* Restriction of RelayState to 80 characters (i.e. SAML SSO may generate RelayState values that exceed 80 characters)
 * ProviderName
 * Scoping
 * RequestedAuthnContext in the SAML requests
@@ -107,12 +107,37 @@ The URL for downloading the SP metadata of your app is independent of the value 
 
 ## 2 Installation
 
+There are different versions of the SAML module, depending on which version of Mendix you are using. To find and install the correct release, follow these steps:
+
+1. In Mendix Marketplace, search for the [SAML module](https://marketplace.mendix.com/link/component/1174/).
+2. In the **Releases** tab, find the correct release for your Mendix version:
+
+    * For Mendix version 9, there are concurrent odd- and even-numbered  patch releases that contain the same changes and require the same Mendix version (for example, SAML module version 3.4.0 and 3.4.1 both require Mendix version 9.22.0 or above). 
+    
+        The even-numbered releases (for example, 3.4.0) are intended for apps that were originally built on an earlier version of Mendix, and then upgraded to Mendix version 9. 
+        
+        The odd-numbered releases (for example, 3.4.1) are for new apps that were built on Mendix version 9 and are using the 3.0 version of Atlas UI. 
+        
+        Using Atlas 3 with an app upgraded from Mendix version 8 (which uses Atlas version 2) would result in issues because the templates for the SAML module pages would not exist. Because of that, you must ensure that you download the correct release for your new or upgraded app.
+    
+    * For Mendix version 8, look for releases in the **2.x** branch. For example, if your Mendix version is 8.18.7, download the 2.2.3 release of the SAML module.
+    * For Mendix version 7, look for releases in the **1.x** branch. For example, if your Mendix version is 7.23.21, download the 1.16.7 release of the SAML module.
+
+2. Click on a release to see which Mendix version it supports. This should be understood as the minimum version that is required, until a release with a different minimum version is published. For example, release 3.3.13 supports any version of Mendix from 9.12.5 (the minimum required version for the release) until 9.22.0 (which is supported by release 3.4.0 and above).
+
+    {{< figure src="/attachments/appstore/modules/saml/saml-versions.png" alt="A SAML module release with the supported Mendix version highlighted">}}
+
+3. To download the required release, click the **Download** link by the number of the release.
+4. Follow the instructions in [How to Use Marketplace Content in Studio Pro](/appstore/general/app-store-content/) to import the SAML module into your app.
+
+### 2.1 Post-Installation Configuration Steps
+
 By default, the SAML module will be installed as the **SAML20** module in your app’s Marketplace modules. You can find all microflows and other configuration elements in this module.
 
 1. Configure the **Startup** microflow in the SAML module (**SAML20.Startup**) to run as (part of) the [After startup](/refguide/app-settings/#after-startup) microflow. This microflow will initialize the custom request handler `/SSO/` (please note the importance of using the final `/` for all instances of `/SSO/`), validate all IdP configurations, and prepare the configuration entities required during the configuration.
-1. If you have set up path based access restrictions in your cloud (for example [Path-Based Access Restrictions](/developerportal/deploy/environments-details/#path-based-restrictions) in the Mendix Cloud), ensure that access to `/SSO/` is allowed.
-1. Add the **OpenConfiguration** microflow to the navigation, and then allow the administrator to access this page.
-1. Review and configure all the constants:
+21. If you have set up path based access restrictions in your cloud (for example [Path-Based Access Restrictions](/developerportal/deploy/environments-details/#path-based-restrictions) in the Mendix Cloud), ensure that access to `/SSO/` is allowed.
+3. Add the **OpenConfiguration** microflow to the navigation, and then allow the administrator to access this page.
+4. Review and configure all the constants:
     * **DefaultLoginPage** – You can specify a different login page here for when the login process fails. When the end-user cannot be authenticated in the external IdP, a button will appear, and by clicking this button, they will be redirected to the specified login page. If this is left blank, an unauthenticated user will be redirected to `/login.html`.
     * **DefaultLogoutPage** – Removing the sign-out button is recommended, but if you choose to keep it, the end-user will be redirected to a page. You can choose where the end-user is redirected to (for example, back to `/SSO/` or your `login.html` page). Every user signed in via SAML is redirected to this location when they are logged out.
     * **SSOLandingPage** – Set this if you redirect the `index.html` to log into your app automatically. See [Using SSOLandingPage](#ssolandingpage) for further information about this.
@@ -125,7 +150,7 @@ By default, the SAML module will be installed as the **SAML20** module in your a
 
         {{% alert color="warning" %}}Hybrid mobile apps are deprecated in Mendix version 9.{{% /alert %}}
 
-1. Sign in to the application and configure the SAML module as described in the [Configuration](#config) section.
+5. Sign in to the application and configure the SAML module as described in the [Configuration](#config) section.
 
 ### 2.1 Using SSOLandingPage{#ssolandingpage}
 

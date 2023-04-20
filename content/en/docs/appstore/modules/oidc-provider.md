@@ -180,15 +180,15 @@ If you cannot use automatic registration, you can register the client manually.
 1. Add the following information:
     * **Client Name** – a name for this client so that it is easy to identify
     * **Client ID** – a unique string which identifies this client
-    * **Alias**
-    * **Client Secret** – a secure string to allow the client to authenticate to the OIDC Provider module
+    * **Alias** – usually the same as *Client Name* but can be different
+    * **Client Secret** – the client password to allow the client to authenticate to the OIDC Provider module
     * **Post Logout redirect URI** – for example, for testing a local OIDC Provider app on port `8081`, `http://localhost:8081/logout` 
     * **Redirect URI** – for example, for testing a local OIDC Provider app on port `8081`, `http://localhost:8081/oauth/v2/callback`
     * **Back channel logout session support**
     * **Front channel Logout URI**
     * **Requires PKCE** – this needs to be enabled in both the client and the server to use PKCE
 
-#### 3.3.3 Configuring Centralized Authorization
+#### 3.3.3 Configuring Centralized Authorization{#configuring-authorization}
 
 There are two alternatives for [centralized authorization](#centralized-auth). You can use scopes, or a custom user claim.
 

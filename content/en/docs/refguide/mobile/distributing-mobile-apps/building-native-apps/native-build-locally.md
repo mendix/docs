@@ -138,9 +138,9 @@ After the build succeeds the app should be running on the selected device and co
 
 ## 5 Adding Dependencies{#adding-dependencies}
 
-Mendix Studio Pro 9 and later support a new format for widgets and JS actions, allowing them to define them Native Dependencies required. Mendix Native Mobile Builder, is able to derive the Native Dependencies required from the app and automatically adds them to the package.json of the app's Native Template. This works with all auto-linkable Native Dependencies. 
+Mendix Studio Pro supports a modern format for widgets and JS actions, allowing them to define them Native Dependencies required. Mendix Native Mobile Builder, is able to derive the Native Dependencies required from the app and automatically adds them to the package.json of the app's Native Template. This works with all auto-linkable Native Dependencies. 
 
-In some cases though, like when a dependency isn't derivable by its use case, like from a widget or JS action, or the dependency requires extra additions, like an elaborated initialisation process that can't be described via the auto-linking protocol, you will have to modify your app and add it manually.
+In some cases though, like when a dependency is not derivable by its use case (such as from a widget or JS action) or the dependency requires extra additions (like an elaborated initialisation process that cannot be described via the auto-linking protocol) you will have to modify your app and add it manually.
 
 Mendix native mobile apps are build on top of React Native. Therefore, any React Native module can be added and used in an app. The same rules apply as with any React Native app.
 

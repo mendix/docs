@@ -113,7 +113,7 @@ You can find the following microflows in Workflow Commons:
 
 ## 5 Usage
 
-For more information on how to use Workflow Commons in an app, see [Adding a Workflow to an Existing App: Using Workflow Commons](/refguide/workflow-setting-up-app/) in the *Studio Pro 9 Guide*.
+For more information on how to use Workflow Commons in an app, see [Adding a Workflow to an Existing App: Using Workflow Commons](/refguide/workflow-setting-up-app/) in the *Studio Pro Guide*.
 
 ## 6 Read More
 

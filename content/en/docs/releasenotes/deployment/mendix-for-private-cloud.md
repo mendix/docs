@@ -13,6 +13,16 @@ For information on the current status of deployment to Mendix for Private Cloud 
 
 ## 2023
 
+### April 13th, 2023
+
+#### Portal Enhancements
+
+* We have added webhooks which can trigger endpoints when changes are committed to a Team Server Git repository, or when a new deployment package is available for deployment to the Private Cloud. For more information, see [Webhooks](/developerportal/deploy/webhooks/).
+
+{{% alert color="info" %}}
+This feature is currently in a Beta release.
+{{% /alert %}}
+
 ### March 17th, 2023
 
 #### Mendix Operator v2.10.2 {#2.10.2}

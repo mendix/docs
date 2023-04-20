@@ -395,7 +395,7 @@ interface MyListWidgetsProps {
 The following code sample shows how to call `myListAction` on the first element from the `myDataSource`.
 
 ```ts
-const actionOnFirstItem = this.props.myDataSource.myListAction.get(this.props.myDataSource.item[0]);
+const actionOnFirstItem = this.props.myListAction.get(this.props.myDataSource.item[0]);
 
 actionOnFirstItem.execute();
 ```

@@ -13,7 +13,7 @@ For information on the current status of deployment to Mendix for Private Cloud 
 
 ## 2023
 
-### April 20th, 2023
+### April 25th, 2023
 
 #### Portal Improvements
 
@@ -24,8 +24,18 @@ For information on the current status of deployment to Mendix for Private Cloud 
 
 #### Deploy API
 
-* We have fixed an issue where the environment list could not be retrieved successfully when the app internal ID was lshorter than 8 characters.
+* We have fixed an issue where the environment list could not be retrieved successfully when the app internal ID was shorter than 8 characters.
 * We have fixed an issue where upper-case letters in an email ID would prevent members invited to a cluster manager or namespace from retrieving the environments.
+
+### April 13th, 2023
+
+#### Portal Enhancements
+
+* We have added webhooks which can trigger endpoints when changes are committed to a Team Server Git repository, or when a new deployment package is available for deployment to the Private Cloud. For more information, see [Webhooks](/developerportal/deploy/webhooks/).
+
+{{% alert color="info" %}}
+This feature is currently in a Beta release.
+{{% /alert %}}
 
 ### March 17th, 2023
 

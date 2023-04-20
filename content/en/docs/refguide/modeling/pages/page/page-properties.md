@@ -48,7 +48,7 @@ You can also use multiple page parameters. Multiple page parameters allow you to
 
 The values for the **Platform** property are:
 
-* Web *(default)* – pages which are going to be displayed in a browser or hybrid mobile app
+* Web *(default)* – pages which are going to be displayed in a browser or web app
 * Native – pages which are going to be displayed in a native mobile app
 
 #### 2.4.2 Layout Type {#layout-type}

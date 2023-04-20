@@ -91,7 +91,7 @@ The generator will ask you a few questions during setup. Answer the questions by
 * Mendix App path: *../../*
 * Programming language: **TypeScript**
 * Which type of components do you want to use? **Class Components** 
-* Widget type: **For web and hybrid mobile apps**
+* Widget type: **For web mobile apps**
 * Widget template: **Empty widget (recommended for more experienced developers)**
 * Unit tests: **No**
 * End-to-end tests: **No**

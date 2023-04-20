@@ -232,29 +232,23 @@ Internet Explorer is not supported in Studio Pro 10.
 
 ## 10 Mobile Operating Systems {#mobileos} {{% todo %}}[Update for Mx 10?]{{% /todo %}}
 
-For native and hybrid apps built with Mendix the following operating system versions are supported:
+For native and progressive web apps built with Mendix the following operating system versions are supported:
 
 * Latest version of iOS
 * Latest three versions of Android
 
 Only devices running on these operating system versions receive up-to-date security fixes from their vendors and thus minimize being vulnerable to known exploits.
 
-You can build native and hybrid apps with Mendix that run on older operating system versions than the ones we support. However, to receive official Mendix support you must demonstrate that your problem also occurs on a supported operating system version.
+You can build native and progressive web apps with Mendix that run on older operating system versions than the ones we support. However, to receive official Mendix support you must demonstrate that your problem also occurs on a supported operating system version.
 
-We recommend the following minimum hardware requirements for all mobile devices running native and hybrid Mendix apps:
+We recommend the following minimum hardware requirements for all mobile devices running native and progressive web Mendix apps:
 
 * CPU: minimum 2 cores with 2 GHz
 * Memory: minimum 2 GB
 
 Depending on your app's complexity, these minimum hardware requirements might not be sufficient and should be adjusted.
 
-### 10.1 Hybrid Apps Preview
-
-Using a hybrid preview feature is not the same as testing an app on a phone or simulator. A hybrid preview only shows a resized view of an app to give an impression of what that app might look like on a mobile device. Some hybrid app functionality will not be supported in this browser view. Full tests always need to be done on a device or emulator. Offline apps can only be previewed in Google Chrome.
-
-Hybrid apps cannot be tested in Android Emulator, only on a real device.
-
-## 11 MxBuild {#mxbuild}
+## 12 MxBuild {#mxbuild}
 
 MxBuild is a Windows and Linux command-line tool that can be used to build a Mendix Deployment Package. For more information, see [MxBuild](/refguide/mxbuild/).
 

@@ -51,7 +51,7 @@ The [Mendix Runtime](/refguide/runtime/) executes the application model that is 
 
 ## 5 Mobile
 
-Mobile app development allows you to create native mobile and hybrid apps and an important part of Studio Pro. For more information, see [Mobile](/refguide/mobile/). 
+Mobile app development allows you to create native mobile and progressive web apps. For more information, see [Mobile](/refguide/mobile/). 
 
 ## 6 Guide Categories
 

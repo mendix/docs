@@ -62,9 +62,9 @@ If **Refresh in client** is set to **No**, the rollback is not reflected in the 
 
 If set to **Yes**, the object is refreshed across the client, which includes reloading the relevant [data sources](/refguide/data-sources/).
 
-#### 3.2.2 Microflow Is Called in an Offline, Native, or Hybrid App
+#### 3.2.2 Microflow Is Called in an Offline or Native App
 
-When inside a microflow that is called from an offline, native, or hybrid app, the **Refresh in client** option is ignored and functions as if it was set to **No**.
+When inside a microflow that is called from an offline or native app, the **Refresh in client** option is ignored and functions as if it was set to **No**.
 
 For more information, see the [Microflows](/refguide/mobile/building-efficient-mobile-apps/offlinefirst-data/best-practices/#microflows) section of Offline-First Data.
 

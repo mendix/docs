@@ -33,7 +33,8 @@ The pane gives you information on each anti-pattern and contains MxAssist Perfor
 At the top of the **MxAssist Performance Bot** pane you can see the following options: 
 
 * **Inspect now** – Inspects your app model on performance issues. 
-* **Limit to current  tab** – Limits the messages displayed in the pane to the current document.
+* **Limit to current tab** – Limits the messages displayed in the pane to the current document.
+* **Limit to uncommitted** – Limits the messages displayed in the pane to documents that have not been committed to version control.
 * **Export** – Exports the recommendations to a CSV file. Suppressed recommendations are excluded.
 * **Configuration** – Defines the modules and documents that the MxAssist Performance Bot will analyze. Click the **Configuration** button to open the **MxAssist Performance Bot Configuration** dialog box that contains the **App Model** and **Best Practice** tabs.
 

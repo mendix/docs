@@ -6,11 +6,11 @@ weight: 15
 tags: ["studio pro", "machine learning", "ml kit", "models", "integration"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
-{{% alert color="info" %}}Machine learning model support is currently in [Beta](/releasenotes/beta-features/), and is available in Studio Pro [9.23](/releasenotes/studio-pro/9.23/) and above.{{% /alert %}}
+{{% alert color="info" %}}Machine learning model support is currently in [Beta](/releasenotes/beta-features/).{{% /alert %}}
 
 ## 1 Introduction
 
-Studio Pro [9.23](/releasenotes/studio-pro/9.23/) and above supports machine learning (ML) model integration in Mendix apps. Collectively called the *Machine Learning (ML) Kit*, this functionality allows Mendix developers to deploy an ML model built using common ML framework and language into the Mendix Runtime.
+Studio Pro supports machine learning (ML) model integration in Mendix apps. Collectively called the *Machine Learning (ML) Kit*, this functionality allows Mendix developers to deploy an ML model built using common ML framework and language into the Mendix Runtime.
 
 {{% alert color="info" %}}Check out a demo app and Jupyter notebook examples in our [Demo for Mendix ML Kit](https://github.com/mendix/mlkit-example-app) repository for further information on working with machine learning models in Mendix.{{% /alert %}}
 

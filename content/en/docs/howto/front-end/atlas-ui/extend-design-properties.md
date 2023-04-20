@@ -11,9 +11,7 @@ Design properties make it simple to change the appearance of widgets. These chan
 
 Design properties are based on the classes in the styling for both web apps and native mobile apps. Basically a design property toggles a class.
 
-In both Studio and Studio Pro, design properties are visible as part of the widget properties:
-
-{{< figure src="/attachments/howto/front-end/atlas-ui/extend-design-properties/studio-design-properties.png" alt="Design Properties in Studio"   width="350"  >}}
+Design properties are visible as part of the widget properties:
 
 {{< figure src="/attachments/howto/front-end/atlas-ui/extend-design-properties/studio-pro-design-properties.png" alt="Design Properties in Studio Pro"   width="350"  >}}
 

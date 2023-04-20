@@ -23,7 +23,7 @@ After importing the module, add **USE ME** > **MxObjects_Overview** to the navig
 If you have a large app, the synchronization will take much longer.
 {{% /alert %}}
 
-If you want to trigger the synchronization automatically after your app starts up, use the microflow **ASu_CheckMetamodel** from the **Private** > **Event flows** folder as your after startup microflow, or make sure this microflow gets triggered from your own after startup microflow.
+If you want the synchronization to get triggered automatically after your app starts up, use the microflow **ASu_CheckMetamodel** from the **Private** > **Event flows** folder as your after startup microflow, or make sure this microflow gets triggered from your own after startup microflow.
 
 ### 2.1 Token Configuration
 

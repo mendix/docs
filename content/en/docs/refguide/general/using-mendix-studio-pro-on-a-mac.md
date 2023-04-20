@@ -38,10 +38,10 @@ Make sure you have completed the following prerequisites:
 * Install Mendix Studio Pro on your Windows virtual machine
 
 {{% alert color="warning" %}}
-Please use the default browser installed in the Windows VM (not the macOS browser) as the default browser for the Parallels VM. Using the Windows VM browser ensures your ability to sign in.
+Use the default browser installed in the Windows VM as the default browser for the Parallels VM, or configure your Windows virtual machine. Using the Windows VM browser or configuring it ensures your ability to sign in.
 {{% /alert %}}
 
-## 3 Configuring Your Windows Virtual Machine for Mendix Studio Pro
+## 3 Configuring Your Windows Virtual Machine for Mendix Studio Pro {#configuring}
 
 To configure your Windows virtual machine to work with Mendix Studio Pro, follow these steps:
 
@@ -66,15 +66,19 @@ To configure your Windows virtual machine to work with Mendix Studio Pro, follow
 
     {{< figure src="/attachments/refguide/general/using-mendix-studio-pro-on-a-mac/parallels-preferences-no-ports.png" alt="network tab"   width="450"  >}}
 
-8. Click the **+** button and add two ports: one for 8080 and one for 8083, both forwarded to your Windows virtual machine (the 8083 port is only necessary for developing native mobile apps):
+8. Click the **+** button and add three ports: one for 8080, one for 8081, and one for 8083. Forward all of them to your Windows virtual machine (the 8083 port is only necessary for developing native mobile apps):
 
     {{< figure src="/attachments/refguide/general/using-mendix-studio-pro-on-a-mac/port-setup.png" alt="plus button"   width="450"  >}}
 
-    After adding those two ports, your **Port forwarding rules** should look like this:
+    After adding those three ports, your **Port forwarding rules** should look like this:
 
     {{< figure src="/attachments/refguide/general/using-mendix-studio-pro-on-a-mac/parallels-preferences-ports.png" alt="finished ports"   width="450"  >}}
 
-Congratulations! You have successfully configured port forwarding to enable testing Mendix apps with your Mac. 
+Congratulations! You have successfully configured port forwarding to enable testing Mendix apps with your Mac.
+
+{{% alert color="warning" %}}
+Make sure your Windows VM Firewall is active and properly configured.
+{{% /alert %}}
 
 ## 4 Checking Network Drive
 

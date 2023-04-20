@@ -17,11 +17,13 @@ The typical usage scenario is selecting and showing entities from your domain mo
 
 ## 2 Configuration {#configuration}
 
-After importing the module, add **USE ME** > **MxObjects_Overview** to the navigation of your app. Make sure that the microflow ASu_CheckMetamodel is your after startup microflow or is also run from your own after startup microflow. Run your application for the synchronization. You are able to enable synchronization for each module. For both security and performance purposes, you do not want your entire domain model structure available in your app.
+After importing the module, add **USE ME** > **MxObjects_Overview** to the navigation of your app. Run your application for the synchronization. You are able to enable synchronization for each module. For both security and performance purposes, you do not want your entire domain model structure available in your app.
 
 {{% alert color="info" %}}
 If you have a large app, the synchronization will take much longer.
 {{% /alert %}}
+
+If you want to trigger the synchronization automatically after your app starts up, use the microflow **ASu_CheckMetamodel** from the **Private** > **Event flows** folder as your after startup microflow, or make sure this microflow gets triggered from your own after startup microflow.
 
 ### 2.1 Token Configuration
 

@@ -32,11 +32,11 @@ Other
 * [Speech and Audio Processing](https://github.com/onnx/models#speech)
 * [Other interesting models](https://github.com/onnx/models#others)
 
-## 3 Additional Pre-Trained Models
+### 2.1 Additional Pre-Trained Models
 
 [Hugging Face](https://huggingface.co/models?library=onnx&sort=downloads) provides open source pre-trained models (including datasets). You can find hundreds of ONNX models to perform tasks on different modalities such as text, vision, and audio.
 
-## 4 Integrate Pre-Built Models
+## 3 Integrate Pre-Built Models
 
 To integrate a pre-built (propriety or public) ML model into a Mendix app, consider the following:
 

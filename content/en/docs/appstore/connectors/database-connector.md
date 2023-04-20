@@ -21,7 +21,7 @@ The **Execute statement** action works internally in the same manner as the **Ex
 
 * [HikariCP](https://github.com/brettwooldridge/HikariCP), a high-performance JDBC connection pool
 
-## 2 Prerequisites
+## 2 Prerequisites {#prerequisites}
 
 These are the prerequisites for using this connector:
 
@@ -162,9 +162,9 @@ The many-to-many-association with `DatabaseConnector.Parameter` is also used her
 If you intend to connect to SQL Server using integrated security, please be aware that the JDBC driver in the **userlib** folder needs to match the version supplied with the Mendix Platform (via the **runtime/bundles/** folder inside the Mendix installation directory).
 {{% /alert %}}
 
-### 5.1 Connection Errors
+### 5.1 Errors
 
-Connection errors can often be resolved by adding missing *.jar* dependencies to the *userlib* folder in the module. 
+Errors can often be resolved by adding missing *.jar* dependencies to the *userlib* folder in the module. See the [Prerequisites](#prerequisites) section for further information.
 
 ## 6 Developing This Marketplace Component
 

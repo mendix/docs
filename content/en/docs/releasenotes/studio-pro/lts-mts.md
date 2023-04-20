@@ -45,7 +45,7 @@ A minor version is generally released every month. It includes new features and 
 
 In the 8.18.1 example, the third number (**1**) indicates the patch version. 
 
-A patch version is released on an as-needed basis. It includes security fixes and critical bug fixes, but it does not include new features or breaking changes.
+A patch version is released on an as-needed basis. It includes security fixes and critical bug fixes, but it does not include new features or breaking changes (unless these address security issues).
 
 ## 2 Long-Term Support Version (LTS) {#lts}
 

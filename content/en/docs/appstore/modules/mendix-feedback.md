@@ -60,11 +60,11 @@ You should install the latest version of the Mendix Feedback module, as it will 
 
 1. Configure the **User roles** in the **App Security** for the Feedback module.
 
-2. In the **Toolbox**, find the **Feedback** widget in the **Feedback** category.
+2.  In the **Toolbox**, find the **Feedback** widget in the **Feedback** category.
 
     {{< figure src="/attachments/appstore/modules/mendix-feedback/Toolbox-feedback.png" width="250px">}} 
 
-3. Drop it into a position in the layout:
+3.  Drop it into a position in the layout:
 
     {{< figure src="/attachments/appstore/modules/mendix-feedback/feedback-on-layout.png" >}} 
 
@@ -133,7 +133,7 @@ When you click the **Feedback icon**, the Mendix Platform first checks if you ar
 Click **Enter Screenshot Mode** to take a screenshot of your page or choose **Upload From Computer** to upload a selected image.
 
 {{% alert color="info" %}}
-The image is allowed up to 5MB in one of the following formats: jpg, jpeg, png, gif.
+The image is allowed up to 5MB in one of the following formats: JPG, JPEG, PNG, GIF.
 {{% /alert %}}
 
 {{< figure src="/attachments/appstore/modules/mendix-feedback/feedback-submit-button.png" width="500px" >}} 

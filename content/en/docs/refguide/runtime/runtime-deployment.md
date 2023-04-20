@@ -31,7 +31,7 @@ This is the docker environment specification which specifies the docker environm
 
 ### 2.3 Project MPK
 
-This is the app model as created by Studio Pro or Studio. It cannot be directly interpreted by the Mendix Runtime.
+This is the app model as created by Studio Pro. It cannot be directly interpreted by the Mendix Runtime.
 
 ### 2.4 MX Build
 
@@ -60,7 +60,7 @@ This data repository stores components of the deployment process such as version
 
 ### 2.9 Java RE
 
-This is the Java Runtime Environment (JRE) used to run the Runtime Server. The version of the JRE depends on the version of the Runtime Server. For example, Mendix 7 runs on JRE version 8, and Mendix 8 runs on JRE version 11.
+This is the Java Runtime Environment (JRE) used to run the Runtime Server. The version of the JRE depends on the version of the Runtime Server. For example, Mendix 10 runs on JRE version 11.
 
 ### 2.10 M2ee
 

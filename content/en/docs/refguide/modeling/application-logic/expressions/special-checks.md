@@ -123,7 +123,7 @@ The output is described in the table below:
 
 | Value                                                        | Type    |
 | ------------------------------------------------------------ | ------- |
-| Returns whether the changes done to the object [offline](/refguide/offline-first/) have been synchronized to the runtime database. In web profiles and [hybrid profiles](/refguide/navigation/#hybrid-profiles) without offline support, this always returns `true`. | Boolean |
+| Returns whether the changes done to the object [offline](/refguide/offline-first/) have been synchronized to the runtime database. In web profiles without offline support, this always returns `true`. | Boolean |
 
 ### 5.3 Example
 

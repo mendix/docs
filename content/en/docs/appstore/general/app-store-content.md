@@ -219,7 +219,7 @@ To update the module in your app to a newer version, follow these steps::
 
 Each module that you download from the Marketplace is different. Some modules can cause errors because they are connected to other modules. For example, after you download the [Database Replication](/appstore/modules/database-replication/) module, you also need to download the [Mx Model Reflection](/appstore/modules/model-reflection/) module to accomplish the configuration. If you run into any problems, always check the **Documentation** tab on the page of this module in the Marketplace for installation guidelines and details on any dependencies.
 
-Keep in mind that some modules you can download may come with their own [user roles](/studio/settings-security/). If the **Security level** of your app is set to **Prototype/demo** or **Production**, you need to map the module roles to the applicable user roles in your app.
+Keep in mind that some modules you can download may come with their own user roles. If the **Security level** of your app is set to **Prototype/demo** or **Production**, you need to map the module roles to the applicable user roles in your app.
 
 ### 3.3  Using a Starter App
 

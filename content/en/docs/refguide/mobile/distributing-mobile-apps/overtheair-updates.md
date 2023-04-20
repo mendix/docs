@@ -12,7 +12,7 @@ aliases:
 
 Native apps can be updated by building and releasing an updated version to the appropriate app stores. The app-users are then asked to update their app and once they choose so the updated app is installed.
 
-Using Mendix Studio Pro v9.7 and above, you can also update your Mendix native apps over-the-air (OTA). OTA updates are a fast and painless way of updating elements like layouts, pages, assets, or even your app's business logic (such as nanoflows and JavaScript actions) without going through the entire release process.
+Using Mendix Studio Pro, you can also update your Mendix native apps over-the-air (OTA). OTA updates are a fast and painless way of updating elements like layouts, pages, assets, or even your app's business logic (such as nanoflows and JavaScript actions) without going through the entire release process.
 
 Native apps are separated into two parts: a wrapper that functions as a native iOS or Android app, and a bundle loaded dynamically by the wrapper. Elements like your business logic and static assets are part of this dynamically-loaded bundle. 
 
@@ -48,7 +48,7 @@ With these shortcomings in mind, we developed a Mendix OTA update mechanism whic
 
 Before starting this guide, make sure you have completed the following prerequisites:
 
-* Use Mendix Studio Pro v9.7 and above.
+* Use Mendix Studio Pro.
 * Deploy your app by completing [Build a Mendix Native App Locally](/refguide/mobile/distributing-mobile-apps/building-native-apps/native-build-locally/).
 * Install your app on a test device or emulator.
 * Read the [Offline-First](/refguide/offline-first/) guide. Understand this document before issuing OTA updates or releasing new versions.
@@ -84,7 +84,7 @@ If you have made any changes directly to your iOS or Android app, you will have 
 
 By default OTA updates are disabled for your Native Mobile Profile. To enable them, do the following: 
 
-1. Open your app in Studio Pro v9.7 or above.
+1. Open your app in Studio Pro.
 1. Navigate to the Native Mobile Profile.
 1. Select **Enable over-the-air updates**: 
 

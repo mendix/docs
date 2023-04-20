@@ -14,7 +14,7 @@ tags: ["studio pro", "workflow", "task", "onboarding"]
 
 Before adding the Workflow Commons module to your app, make sure you have completed the following:
 
-* Upgrade your application to Mendix 9
+* Upgrade your application to Mendix 10
 * Install Atlas 3 from the Mendix Marketplace, as Workflow Commons depends on it 
 * As a result of installing Atlas 3, your app should contain the following modules that Workflow Commons depends on: Atlas Core, Atlas Web Content, and Data Widgets
 * Dashboards and metrics in Workflow Commons v2.1.0 and above depend on state change microflows. Make sure to configure the following state change microflows in the **App Settings** > **Workflows** tab:

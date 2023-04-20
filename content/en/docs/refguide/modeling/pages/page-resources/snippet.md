@@ -64,7 +64,7 @@ Default value: *600*
 
 The values for the platform property are:
 
-* Web *(default)* – these snippets are used for pages which are going to be displayed in a browser or hybrid mobile app
+* Web *(default)* – these snippets are used for pages which are going to be displayed in a browser or web app
 * Native – these snippets are used for pages which are going to be displayed in a native mobile app
 
 ## 3 Extract Snippet{#extract-snippet}

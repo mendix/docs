@@ -45,6 +45,7 @@ The OIDC Provider has the following features and limitations:
 **Limitations**
 
 * The hybrid and client credential grants are not supported, although the OIDC Provider may contain some (rudimentary) implementation to support them.
+* The current implementation of setting custom claims in the generated ID-tokens is not working properly in this release as the custom attribute names that you would define is incorrectly set in the ID-token. If you want to set custom claims, you will have to customize the OIDC Provider module.
 
 ### 1.3 Dependencies
 
@@ -308,20 +309,66 @@ You need to configure the OIDC SSO module in your app which is using the IAM bro
 1. Sign out as Administrator from your OIDC Client app.
 1. Sign back in to the app using the OIDC SSO client alias you have just configured.
 1. Login by entering credentials of the user which you have created earlier on OIDC provider Accounts section.
-    You should be able to login successfully and get into the index.html page 
+    You should be able to login successfully and get into the index.html page
 
-## 5 Troubleshooting
+## 5 Token Formats for Non-custom Claims
 
-### 5.1 Infinite Loop of Redirects
+### 5.1 Non-custom Claims in Access Token
+
+The format of non-custom claims in the access token is as follows:
+
+```json {linenos=false}
+{
+    "aud": "DemoClient",
+    "sub": "3",
+    "nbf": 1681969726,
+    "scope": "",
+    "iss": "http://localhost:8080/",
+    "name": "test",
+    "exp": 1682056126,
+    "iat": 1681969726
+}
+```
+
+### 5.2 Non-custom Claims in ID-token
+
+The format of non-custom claims in the ID-token is as follows:
+
+```json {linenos=false}
+{
+    "com.mendix.user.language": "en_US",
+    "sub": "test",
+    "iss": "http://localhost:8080/",
+    "com.mendix.user.entity": "Administration.Account",
+    "nonce": "k5CDLkTE7Q61Q0cUTSgy",
+    "com.mendix.user.attributes": {
+        "Email": "",
+        "FullName": "test",
+        "IsLocalUser": "true"
+    },
+    "aud": "DemoClient",
+    "scope": "",
+    "exp": 1681970318,
+    "com.mendix.user.timezone": "",
+    "iat": 1681969718,
+    "com.mendix.user.roles": [
+        "User"
+    ]
+}
+```
+
+## 6 Troubleshooting
+
+### 6.1 Infinite Loop of Redirects
 
 The OIDC provider module sets a cookie as a means to persist the session in the user’s browser. If the cookie is not properly set, this may lead to problems. For example, when the OIDC Provider module is used to build an IAM Broker, no session is established and the broker may initiate a new session at the upstream IdP, which results in an ‘infinite loop’ of redirects via the user’s browser.
 To ensure the cookie is properly set, the runtime setting com.mendix.core.SameSiteCookies must have value None. See [Environment Details](https://docs.mendix.com/developerportal/deploy/environments-details/#4222-applying-a-different-samesite-setting) for more information how to set the correct value for SameSite runtime setting. Note that the default value for this setting has changed, see [Release Notes](https://docs.mendix.com/releasenotes/studio-pro/8.11/).
 
-### 5.2 Custom Claims Are Not Returned Properly
+### 6.2 Custom Claims Are Not Returned Properly
 
 This is a known issue and will be corrected in a future release.
 
-## 6 About Authorization
+## 7 About Authorization
 
 When you are building Mendix apps you need to make two architectural decisions in the area of end-user access:
 
@@ -336,13 +383,13 @@ With respect to authorization that leaves you, again, with two options:
 
 These two options are described below.
 
-### 6.1 Fully Decentralized Authorization
+### 7.1 Fully Decentralized Authorization
 
 With fully decentralized authorization, you will typically want to propagate the identity of the end-user to your app and the app can subsequently make an authorization decision using some logic in your app. The authorization business logic in your app may need information about the authenticated end-user. In a business application this could be end-user attributes like ‘department’ and/or ‘job title’.
 
 The OIDC Provider module allows you to pass user attributes in the ID-tokens that are sent from the OIDC Provider to your app. You can define ‘custom’ claims, so the user attributes that can be communicated are not restricted to a pre-defined set.
 
-### 6.2 Centralized Authorization {#centralized-auth}
+### 7.2 Centralized Authorization {#centralized-auth}
 
 With centralized authorization your app delegates authorization decisions to a central component which then communicates that decision to your app. Your app then enforces the authorization decision by applying one or more user roles to the end-user, but does not need any business logic to decide which user roles to apply.
 

@@ -4,7 +4,7 @@ url: /appstore/creating-content/sol-architecting/
 linktitle: "Architect Solutions"
 weight: 1
 description: "Architect a solution for adaptation"
-tags: [ "solutions", "adaptive solutions", "architecting solutions" ]
+tags: ["solutions", "adaptive solutions", "architecting solutions"]
 ---
 
 ## 1 Introduction
@@ -19,13 +19,13 @@ In an adaptive solution, up to 20% of the end solution can be adapted through cu
 
 ### 2.1 Adaptive Solution Examples
 
-An adaptive solution is a solution where each customer gets an instance of the solution based on a common core. This instance is adapted to the customer’s specific needs and context, and integrated with the customer’s existing IT landscape. 
+An adaptive solution is a solution where each customer gets an instance of the solution based on a common core. This instance is adapted to the customer’s specific needs and context, and integrated with the customer’s existing IT landscape.
 
 The Mendix Marketplace contains numerous adaptive solutions, for example:
 
-* [Mendix PLM for Fashion and Retail](https://marketplace.mendix.com/link/component/118343)
-* [Siemens FSM](https://marketplace.mendix.com/link/component/117710)
-* [Omnichannel Integration Layer](https://marketplace.mendix.com/link/component/118344)
+-   [Mendix PLM for Fashion and Retail](https://marketplace.mendix.com/link/component/118343)
+-   [Siemens FSM](https://marketplace.mendix.com/link/component/117710)
+-   [Omnichannel Integration Layer](https://marketplace.mendix.com/link/component/118344)
 
 Each solution is useable as is, but it can also be adapted to become even more suitable for the customer.
 
@@ -35,7 +35,7 @@ Each solution is useable as is, but it can also be adapted to become even more s
 
 This section discusses the main parts of architecting your solution.
 
-### 3.1 Three Parts {#three-parts}
+<!-- ### 3.1 Three Parts {#three-parts}
 
 Architecting a solution for adaptation requires an understanding of your customers' needs: You need to know which functional requirements are common across your customers and which are specific to individual customers. This enables splitting the application model into the following three main functional parts:
 
@@ -45,7 +45,7 @@ Architecting a solution for adaptation requires an understanding of your custome
 
 Identifying these main functional parts enables you to define API boundaries between them.
 
-{{< figure src="/attachments/appstore/creating-content/sol-solutions-guide/sol-development/sol-architecting/adaptive-solution-composition.png" alt="Adaptive Solution Composition" >}}
+{{< figure src="/attachments/appstore/creating-content/sol-solutions-guide/sol-development/sol-architecting/adaptive-solution-composition.png" alt="Adaptive Solution Composition" >}} -->
 
 ### 3.2 Progressive and Emergent Architecture
 
@@ -61,16 +61,16 @@ This requires an iterative approach, where your understanding of the architectur
 
 When designing the interfaces of your solutions, you should do the following:
 
-* Split your adaptive solution architecture into the [three main functional parts](#three-parts) described above
-* Think about which parts of the shared core are reusable in other parts:
-    * Define which shared logic should be reusable and define entry points to the shared logic as APIs
-    * Define which entities (data/state) are required in which parts of the functionality
-* Design APIs between common core and extension modules and consider making public only the parts that are explicitly required in other parts of your current architecture — design for today
-* Design APIs for custom-specific modules, focus on current customer requests and their value, and focus on a minimum viable product (MVP) by keeping it small and simple
-* Iterate with customers to evolve the adaptability of the solution by evolving the architecture
-    * Progressively, the architecture will emerge and become more complex as your solution becomes more successful, so re-architect when necessary
+-   Split your adaptive solution architecture into the [three main functional parts](#three-parts) described above
+-   Think about which parts of the shared core are reusable in other parts:
+    -   Define which shared logic should be reusable and define entry points to the shared logic as APIs
+    -   Define which entities (data/state) are required in which parts of the functionality
+-   Design APIs between common core and extension modules and consider making public only the parts that are explicitly required in other parts of your current architecture — design for today
+-   Design APIs for custom-specific modules, focus on current customer requests and their value, and focus on a minimum viable product (MVP) by keeping it small and simple
+-   Iterate with customers to evolve the adaptability of the solution by evolving the architecture
+    -   Progressively, the architecture will emerge and become more complex as your solution becomes more successful, so re-architect when necessary
 
-### 3.4 Applying IP Protection 
+### 3.4 Applying IP Protection
 
 IP protection can be used to make parts of the application model and the common core immutable by customers. For practical guidance, see [Apply IP Protection](/appstore/creating-content/sol-ip-protection/).
 

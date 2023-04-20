@@ -56,7 +56,7 @@ You should install the latest version of the Mendix Feedback module, as it will 
 
 ## 3 Usage
 
-### 3.1 Adding the Widget to Your App
+### 3.1 Adding the Feedback Widget to Your App
 
 1. Configure the **User roles** in the **App Security** for the Feedback module.
 

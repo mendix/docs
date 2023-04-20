@@ -5,7 +5,7 @@ weight: 7
 description: "Describes the environmental details of your app and how to manage the environment."
 tags: ["Deploy","App","Environment","Developer Portal"]
 #To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
-#The anchor #connection-whitelist below is mapped from the Developer Portal (Mendix Cloud Environment Details), so it should not be removed or changed.
+#The anchor #connection-safelist below is mapped from the Developer Portal (Mendix Cloud Environment Details), so it should not be removed or changed.
 #The anchor #services below is mapped from the Developer Portal (Mendix Cloud Environment Details), so it should not be removed or changed.
 ---
 
@@ -34,7 +34,6 @@ In this tab, you can find the following information about your environment:
 * **Environment ID** – the unique identifier of this environment
 * **Custom domains** – any [custom domains](/developerportal/deploy/custom-domains/) of the app
 * **Java Version** – Oracle version 1.8 or AdoptOpenJDK version 8
-* **Mendix Studios Target** – if **Yes**, it means that Mendix Studio and Studio Pro deploy apps to this environment; for more information, see [Studio Deployment Settings](/developerportal/deploy/studio-deployment-settings/)
 * **Plan** – this indicates the type of plan covered by this license
 * **Instances** – this shows a summary of the number and memory allocation of instances of this environment – for more information, see the [Scaling - Mendix Cloud](#scaling) section below
 * **Database Version** – the PostgreSQL version supporting the database
@@ -308,7 +307,7 @@ default-src 'self' ; script-src 'self' 'unsafe-inline' 'unsafe-eval' ; connect-s
 
 If you have issues which appear to be related to a content security policy, you can use the console of your browser to investigate them.
 
-### 4.3 Outgoing Connections Whitelisting (Mendix Cloud Dedicated){#connection-whitelist}
+### 4.3 Outgoing Connections Safelisting (Mendix Cloud Dedicated){#connection-safelist}
 
 If you are deploying your apps to [Mendix Cloud Dedicated](/developerportal/deploy/#mendix-cloud-dedicated), all outgoing IP addresses are allowed by default.
 
@@ -321,14 +320,14 @@ You can add or edit a number of different IP address and port combinations. Any 
 * Select an existing range and click **Edit** to edit an existing range
 * Select an existing range, click **Delete**, and then confirm that you want to delete this range
 
-#### 4.3.1 Managing a Whitelist Range
+#### 4.3.1 Managing a Safelist Range
 
-For each range where you define whitelisted IP addresses and ports, you can enter the following information:
+For each range where you define safelisted IP addresses and ports, you can enter the following information:
 
 * **Name** – Enter a name to identify this range, for example, *192 Group*.
-* **IP** – Specify an inclusive range of whitelisted IP addresses in IPv4 format, for example, *142.251.39.1* to *142.251.39.255*. All the IP addresses must be in a public range, see [Valid IP Ranges](#valid-ip), below. All addresses between the **Start** address and the **End** address are whitelisted, including the start and end addresses. If you only want to whitelist a single address, make the start and end addresses the same.
-* **Port** – Specify an inclusive range of ports which are whitelisted for the IP range above, for example, *80* to *5000*. You can use several whitelist entries if you want to whitelist different port ranges for the same IP range.
-* **Protocol** – Select whether the whitelisting is for **TCP**, **UDP**, or **ALL** traffic.
+* **IP** – Specify an inclusive range of safelisted IP addresses in IPv4 format, for example, *142.251.39.1* to *142.251.39.255*. All the IP addresses must be in a public range, see [Valid IP Ranges](#valid-ip), below. All addresses between the **Start** address and the **End** address are safelisted, including the start and end addresses. If you only want to safelist a single address, make the start and end addresses the same.
+* **Port** – Specify an inclusive range of ports which are safelisted for the IP range above, for example, *80* to *5000*. You can use several safelist entries if you want to safelist different port ranges for the same IP range.
+* **Protocol** – Select whether the safelisting is for **TCP**, **UDP**, or **ALL** traffic.
 * **Description** – Enter an optional description of this IP range, for example which API it supports.
 
 Click **Save** to save your range. The new values are applied within a few minutes without needing an app restart.

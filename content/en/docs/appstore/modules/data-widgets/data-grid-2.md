@@ -16,10 +16,6 @@ Here is an example of a data grid using filters:
 
 ### 1.2 Advanced Options
 
-{{% alert color="info" %}}
-The **Enable advanced options** toggle is available in Mendix Studio. In Mendix Studio Pro these advanced options are always available.
-{{% /alert %}}
-
 The data grid has an option to enable advanced options. When this option is toggled on, it enables numerous features to customize your data grid:
 
 * Pagination type
@@ -69,16 +65,16 @@ Here is an example of hiding button containing columns to be hidden:
 {{< figure src="/attachments/appstore/modules/data-widgets/data-grid-2/hiding.png" alt="Example of hiding button containing columns to be hidden" >}}
 
 {{% alert color="info" %}}
-When a column is marked as “Yes, hidden by default” it will render differently in Structure mode and Design mode (Studio Pro) and in Studio to indicate that the column is hidden. **When running the application, the column will in fact be hidden by default**.
+When a column is marked as “Yes, hidden by default” it will render differently in Structure mode and Design mode and to indicate that the column is hidden. **When running the application, the column will in fact be hidden by default**. 
 {{% /alert %}}
 
 Here is an example containing a column with **Yes, hidden by default** in Structure mode:
 
 {{< figure src="/attachments/appstore/modules/data-widgets/data-grid-2/hidden-columns-structure-mode.png" alt="Example containing a column with “Yes, hidden by default” in Structure mode" >}}
 
-Here is an example containing a column with **Yes, hidden by default** in Design mode and Studio:
+Here is an example containing a column with **Yes, hidden by default** in Design mode:
 
-{{< figure src="/attachments/appstore/modules/data-widgets/data-grid-2/hidden-columns-design-mode.png" alt="Example containing a column with “Yes, hidden by default” in Design mode and Studio" >}}
+{{< figure src="/attachments/appstore/modules/data-widgets/data-grid-2/hidden-columns-design-mode.png" alt="Example containing a column with “Yes, hidden by default” in Design mode" >}}
 
 ## 3 Pagination
 
@@ -260,7 +256,7 @@ When **Default filter** is defined as **Between** these fields will appear to de
 
 #### 7.1.1 Configurations
 
-In this section you can select a **Saved attribute** in order to save the current value of the filter. The attribute available in this section must be this type:
+In this section you can select a **Saved attribute** in order to save the current value of the filter. However, the value is not automatically applied to the widget. To restore the previously saved value of the filter, you must configure the same attribute as the **Default value** of the widget. The attribute available in this section must be this type:
 
 * Date & Time
 
@@ -291,7 +287,7 @@ You can also define the empty option caption, which will be rendered as the firs
 
 #### 7.2.1 Configurations
 
-In this section you can select a **Saved attribute** in order to save the current value of the filter. The attribute available in this section must be this type:
+In this section you can select a **Saved attribute** in order to save the current value of the filter. However, the value is not automatically applied to the widget. To restore the previously saved value of the filter, you must configure the same attribute as the **Default value** of the widget. The attribute available in this section must be this type:
 
 * String
 
@@ -336,7 +332,7 @@ To have better control of when the filter will be applied, we offer a **Apply af
 
 #### 7.3.1 Configurations
 
-In this section you can select a **Saved attribute** in order to save the current value of the filter. The attribute available in this section must be one of the following types:
+In this section you can select a **Saved attribute** in order to save the current value of the filter. However, the value is not automatically applied to the widget. To restore the previously saved value of the filter, you must configure the same attribute as the **Default value** of the widget. The attribute available in this section must be one of the following types:
 
 * Autonumber
 * Decimal
@@ -383,7 +379,7 @@ To have better control of when the filter will be applied, we offer a **Apply af
 
 #### 7.4.1 Configurations
 
-In this section you can select a **Saved attribute** in order to save the current value of the filter. The attribute available in this section must be one of the following types:
+In this section you can select a **Saved attribute** in order to save the current value of the filter. However, the value is not automatically applied to the widget. To restore the previously saved value of the filter, you must configure the same attribute as the **Default value** of the widget. The attribute available in this section must be one of the following types:
 
 * Hashed string
 * String
@@ -414,7 +410,7 @@ If a filter is being used and its type does not match with any selected attribut
 
 ## 8 Configuration
 
-You can define an attribute to store the current configuration of the data grid. In this way, if you re-open your page then the current sorted columns, order, and hidden columns will remain the same as in the previous state. To set this option, you need to select a `String` attribute with `Unlimited` as its size as the attribute in the data grid **Personalization** tab in Studio Pro or **Configuration** in Studio.
+You can define an attribute to store the current configuration of the data grid. In this way, if you re-open your page then the current sorted columns, order, and hidden columns will remain the same as in the previous state. To set this option, you need to select a `String` attribute with `Unlimited` as its size as the attribute in the data grid **Personalization** tab in Studio Pro.
 
 {{% alert color="warning" %}}
 If the desired `String` attribute does not contain `Unlimited` in its size, the Data grid will not be able to save all the configurations as expected.

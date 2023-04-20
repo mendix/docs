@@ -6,23 +6,23 @@ weight: 15
 tags: ["studio pro", "machine learning", "ml kit", "models", "integration"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
-{{% alert color="info" %}}Machine learning model support is currently in [Beta](/releasenotes/beta-features/), and is available in Studio Pro [9.23](/releasenotes/studio-pro/9.23/) and above.{{% /alert %}}
+{{% alert color="info" %}}Machine learning model support is currently in [Beta](/releasenotes/beta-features/).{{% /alert %}}
 
 ## 1 Introduction
 
-Studio Pro [9.23](/releasenotes/studio-pro/9.23/) and above supports machine learning (ML) model integration in Mendix apps. Collectively called the *Machine Learning (ML) Kit*, this functionality allows Mendix developers to deploy an ML model built using common ML framework and language into the Mendix Runtime.
+Studio Pro supports machine learning (ML) model integration in Mendix apps. Collectively called the *Machine Learning (ML) Kit*, this functionality allows Mendix developers to deploy an ML model built using common ML framework and language into the Mendix Runtime.
 
 {{% alert color="info" %}}Check out a demo app and Jupyter notebook examples in our [Demo for Mendix ML Kit](https://github.com/mendix/mlkit-example-app) repository for further information on working with machine learning models in Mendix.{{% /alert %}}
 
 ## 2 Usage {#usage}
 
-To use an ML model in your app, you need to convert it to ONNX, then import it to create an ML model mapping.
+To use an ML model in your app, you need to convert it to ONNX, then import it to create an ML model mapping. For a visual walkthrough of the steps in this section, see the [Logistic Regression Example](/refguide/machine-learning-kit/using-ml-kit/logistic-regression/).
 
 ### 2.1 Converting Your Model to ONNX {#convert-ml-model}
 
-To embed your ML model into a Mendix app using *ML Kit*, you need to convert your model into the ONNX format. Depending upon the frameworks and tools used to create the ML model, there are many tools and sources to convert a model to ONNX format.
+To embed your ML model into a Mendix app using *ML Kit*, you need to convert your model into the ONNX format. See [Jupyter Notebook Examples](https://github.com/mendix/mlkit-example-app/tree/main/notebooks) in our *Demo for Mendix ML Kit* repository for examples that cover the process of converting models to ONNX.
 
-Examples include the following:
+Depending upon the frameworks and tools used to create the ML model, there are many tools and sources to convert a model to ONNX format:
 
 * [PyTorch](https://pytorch.org/docs/stable/onnx) 
 * [TensorFlow](https://github.com/onnx/tensorflow-onnx)
@@ -42,7 +42,7 @@ To use the ML model in your app, import it to create an ML mapping document.
 2. Add a name for the mapping document.
 3. Click **Import Model** to import your ONNX file.
 
-This generates two non-persistable entities representing your ML Model input and outputs (see [Persistable and Non-Persistable Entities](#persist-nonpersist-entities) below).
+This generates two non-persistable entities representing your ML Model input and outputs (see [Persistable and Non-Persistable Entities](#persist-nonpersist-entities) below). Below is an example of import mapping of a [sample XGBoost ML model](https://github.com/mendix/mlkit-example-app/tree/main/mlsource/titanic_xgboost):
 
 {{< figure src="/attachments/refguide/modeling/integration/ml-kit/ml-kit/ml-model-created-entities.png" alt="Two non-persistable entities generated when importing an ONNX file." >}}
 
@@ -52,43 +52,51 @@ If error CE1790 appears, you need to [set dynamic tensor shapes](#set-dynamic-sh
 
 The ML model in ONNX format will be placed in the `mlsource/<your_module_name>` folder from the App/Show App Directory in Explorer.
 
-{{< figure src="/attachments/refguide/modeling/integration/ml-kit/ml-kit/mlsource-location.png" alt="Location of the ML model in a file explorer." >}}
-
 {{% alert color="info" %}}
 Store any additional files in the same directory, including text files for storing class names and additional files that your model or ML process uses (encoders, text files, corpora).
 
 This way, the files will be packaged with your app, and you can easily refer to them in microflow actions.
 {{% /alert %}}
 
-#### 2.2.2 Tensor Shapes {#tensor-shapes}
+#### 2.2.2 Configuring Tensor Shapes {#tensor-shapes}
 
 Tensors inject and retrieve information from a machine learning model. A distinctive trait of such an entity mapping is the tensor Shape, or the definition of the dimensions a tensor has.
 
 ##### 2.2.2.1 Static Shapes {#static-shapes}
 
-Studio Pro detects models with static shapes automatically and display them in the mapping. The image below is a ResNet50 mapping with static dimensions that accepts 1 image of 3 channels (colors) with a size of 224x224 pixels:
+Studio Pro detects models with static shapes automatically and displays them in the mapping. The image below is a [ResNet50 model mapping](https://github.com/mendix/mlkit-example-app/tree/main/mlsource/resnet50) with static dimensions that accepts 1 image of 3 channels (colors) with a size of 224x224 pixels:
 
 {{< figure src="/attachments/refguide/modeling/integration/ml-kit/ml-kit/mapping-static-dimensions.png" alt="ResNet50 mapping with static dimensions. Described in the paragraph above." >}}
 
 ##### 2.2.2.2 Dynamic Shapes {#dynamic-shapes}
 
-Several models (including EasyOCR and Yolo) have tensors with dynamic shapes. In these cases, fill in a tensor shape and an attribute type in the mapped entity.
+Several models (for example, [Yolo](https://github.com/onnx/models/tree/main/vision/object_detection_segmentation/yolov3)) have tensors with dynamic shapes. In these cases, fill in a tensor shape and an attribute type in the mapped entity.
 
 ###### 2.2.2.2.1 Setting Dynamic Tensor Shape Mapping (Error CE1790) {#set-dynamic-shapes}
 
-When importing your model, you might encounter error CE1790. Go to the error and double-click on the affected mapping line to open the **Edit ML model input shape**s dialog box:
+When importing your model, you might encounter error CE1790 like in this [BERT](https://github.com/onnx/models/blob/main/text/machine_comprehension/bert-squad/model/bertsquad-12-int8.onnx) example:
+
+{{< figure src="/attachments/refguide/modeling/integration/ml-kit/ml-kit/model-input-errors.png" alt="Red dots indicating CE1790 error." >}} 
+
+1. Go to the error and double-click on the affected mapping line to open the **Edit ML model input shapes** dialog box:
 
 {{< figure src="/attachments/refguide/modeling/integration/ml-kit/ml-kit/edit-model-input-shapes.png" alt="Edit ML model input shape dialog box." >}}
 
-In this case, the -1 dimensions should be configured before using the mapping in a [Call ML model](/refguide/call-ml-model/) activity. Once filled, static tensor shapes of an output mapping will be automatically calculated based on configured dimensions of the input entity mappings:
+In this case, the -1 dimensions should be configured before using the mapping in a [Call ML model](/refguide/call-ml-model/) activity. Once filled, static tensor shapes of an output mapping will be automatically calculated based on configured dimensions of the input entity mappings, like in this [BERT](https://github.com/onnx/models/blob/main/text/machine_comprehension/bert-squad/model/bertsquad-12-int8.onnx) example below.
 
-{{< figure src="/attachments/refguide/modeling/integration/ml-kit/ml-kit/completed-mapping.png" alt="Completed ML mapping. Described in the paragraph above." >}}
+The editor for the BERT model is below:
+
+{{< figure src="/attachments/refguide/modeling/integration/ml-kit/ml-kit/bert-model-input-shapes.png" >}} 
+
+The completed mapping for the BERT model is below:
+
+{{< figure src="/attachments/refguide/modeling/integration/ml-kit/ml-kit/bert-model-entities.png" >}} 
 
 {{% alert color="info" %}}Some of these shapes should be handled in [Java Action pre- and post-processors](#java-pre-post) you may have.{{% /alert %}}
 
 #### 2.2.3 Persistable and Non-Persistable Entities {#persist-nonpersist-entities}
 
-After importing a model, two [non-persistable](/refguide/persistability/) entities are created using the ML model *input* and *output*:
+After importing a model, two [non-persistable](/refguide/persistability/) entities are created using the ML model *input* and *output* like in this [sample XGBoost ML model](https://github.com/mendix/mlkit-example-app/tree/main/mlsource/titanic_xgboost):
 
 {{< figure src="/attachments/refguide/modeling/integration/ml-kit/ml-kit/entities-example-1.png" alt="Input and output entities in the mapping document." >}}
 
@@ -96,7 +104,7 @@ In the image above, the attributes are mapped as closely as possible to data typ
 
 For non-structured data, such as most of the tensors for Neural Networks, the attributes of a model with a multidimensional parameter will be represented as a string. This is because Base64 is used to to encode the tensors to and from *ML Kit*.
 
-In the image below, the inputs and outputs are multidimensional and need to be encoded:
+In the image below from the [ResNet50 model mapping](https://github.com/mendix/mlkit-example-app/tree/main/mlsource/resnet50), the inputs and outputs are multidimensional and need to be encoded:
 
 {{< figure src="/attachments/refguide/modeling/integration/ml-kit/ml-kit/entities-example-2.png" alt="Multidimensional outputs that need to be encoded." >}}
 
@@ -129,65 +137,30 @@ In the microflow below, a [Create object](/refguide/create-object/) activity cre
 
 The **Call ML model** activity is an **ML Kit** activity in the **Toolbox**. For further details, see [Call ML model](/refguide/call-ml-model/).
 
-### 2.4 Logistic Regression Example
-
-The images below show an example of a logistic regression, its [netron.app](https://netron.app/) schema and the component display, along with the ML Mapping:
-
-{{< figure src="/attachments/refguide/modeling/integration/ml-kit/ml-kit/output-type.png" alt="Example of a logistic regression." >}}
-
-{{< figure src="/attachments/refguide/modeling/integration/ml-kit/ml-kit/ml-model-created-entities.png" alt="Example of a netron.app schema." >}}
-
-{{< figure src="/attachments/refguide/modeling/integration/ml-kit/ml-kit/call-ml-mapping.png" alt="Example of the mapping call." >}}
-
-Create pre-processed inputs with **Create object** activity for inference inside your Mendix app, and consume the inference output with microflow [expressions](/refguide/expressions/).
-
-A **Create Object** activity is used for the first part in order to transfer entities from the domain model to the ML model input object. 
-
-{{< figure src="/attachments/refguide/modeling/integration/ml-kit/ml-kit/create-object.png" alt="Details of the log message in a microflow example." >}}
-
-{{< figure src="/attachments/refguide/modeling/integration/ml-kit/ml-kit/create-variable.png" alt="Details of the log message in a microflow example." >}}
-
-{{< figure src="/attachments/refguide/modeling/integration/ml-kit/ml-kit/change-object.png" alt="Details of the log message in a microflow example." >}}
-
 ## 3 Integrating Models with Pre-processors and Post-processors {#pre-post-processors}
 
 Integrating machine learning models can sometimes require using a more complex structure. This includes having a pre-processor, the ML model itself, and a post-processor:
 
 {{< figure src="/attachments/refguide/modeling/integration/ml-kit/ml-kit/pre-post-processing-microflow.png" alt="Example of a microflow that includes a pre-processor and post-processor." >}}
 
-For information on design patterns that include pre-processors and post-processors, see [Pre/Post-Processor Design Patterns](/refguide/machine-learning-kit/design-patterns/pre-post-processor-patterns/).
-
-### 3.1 Processing {#processing}
-
-The *pre-processor* is the block of code that manipulates the data before being injected into the ML model. Some common examples of the pre-processing are [normalization](https://towardsdatascience.com/understand-data-normalization-in-machine-learning-8ff3062101f0) and [missing data handling](https://towardsdatascience.com/7-ways-to-handle-missing-values-in-machine-learning-1a6326adf79e). 
-
-The required pre-processing varies a lot with each model and implementation, and can even be part of the ONNX file itself (see [Pre and post processing](https://onnxruntime.ai/docs/reference/build-web-app.html#pre-and-post-processing) in the ONNX Runtime documentation). It is highly coupled with the ML model, its training process, and the domain of knowledge.
-
-#### 3.1.1 Multidimensional Outputs {#multidimensional-outputs}
-
-Currently, it is required to have any multidimensional data as a string encoded using the base64 format. Any multidimensional data has to be encoded, either in string base64 format if you are using non-persistable entities, or binary streams if you opt for persistable entities for the ML model in the mapping (see the [Persistable and Non-Persistable Entities](#persist-nonpersist-entities) section in this document).
-
-Below are two models (a Scikit-learn [random forest](https://www.kaggle.com/code/prashant111/random-forest-classifier-tutorial) and a ResNet50 network), and their [netron.app](https://netron.app/) schemas, and how these are rendered by the [Call ML model](/refguide/call-ml-model/) activity.
-
-{{< figure src="/attachments/refguide/modeling/integration/ml-kit/ml-kit/advanced-model-rendering.png" alt="Example of how two models are rendered by the call ML model activity." >}}
-
-In this example, the [Call ML Model](/refguide/call-ml-model/) activity adapts to the ML model output. If you intend to use a multidimensional output in this stage (such as in the ResNet), it will come out string-encoded using base64, and will probably require post-processing. See [Persistable and Non-Persistable Entities](#persist-nonpersist-entities).
-
-Once you import your model, the **Call ML Model** activity allows you to add your input variable coming from the previous action, and name your output to be used in any ulterior steps:
-
-{{< figure src="/attachments/refguide/modeling/integration/ml-kit/ml-kit/name-your-output.png" alt="Example of naming the object output." >}}
-
-### 3.2 Pre-processing and Post-processing Using Java Actions {#java-pre-post}
+### 3.1 Pre-processing and Post-processing Using Java Actions {#java-pre-post}
 
 Data transformations are usually complex tasks, and often require mathematical libraries or even more complex pieces of software (think OpenCV for computer vision). As a result, sometimes they are not integrated into the ML model. In this case, the best way to perform these transformations in Mendix is using Java Actions (see [Extending Your Application with Custom Java](/refguide/extending-your-application-with-custom-java/)).
  
 Read the sections below for an example of pre-processing and post-processing using Java Actions in Mendix.
 
-#### 3.2.1 Pre-processing Using Java Actions
+#### 3.1.1 Pre-processing Using Java Actions
+
+The *pre-processor* is the block of code that manipulates the data before being injected into the ML model. Some common examples of the pre-processing are [normalization](https://towardsdatascience.com/understand-data-normalization-in-machine-learning-8ff3062101f0) and [missing data handling](https://towardsdatascience.com/7-ways-to-handle-missing-values-in-machine-learning-1a6326adf79e). 
+
+The required pre-processing varies a lot with each model and implementation, and can even be part of the ONNX file itself (see [Pre and post processing](https://onnxruntime.ai/docs/reference/build-web-app.html#pre-and-post-processing) in the ONNX Runtime documentation). It is highly coupled with the ML model, its training process, and the domain of knowledge.
 
 This [Random Forest example](https://www.kaggle.com/code/prashant111/random-forest-classifier-tutorial) example is trained with the Iris/Setosa dataset. The output is a long value, representing a flower type. The input is a base64 encoded float array, as we use Base64 encoded strings for passing multidimensional data to the Call ML Model action at this stage of development.
 
 The pre-processor is essentially a standard Java Action that creates the multidimensional input for your model and in this case, encodes the data into a string with Base64 (see line 14 below). Another important step is to convert the Decimal data type into float, as the ONNX format uses that data type. But this may vary along models and implementations.
+
+See the following pre-processor example in our [Mendix ML Kit Demo Repository](https://github.com/mendix/mlkit-example-app/blob/main/javasource/iris_randomforest/actions/PreProcessor.java):
+
 
 ```
     @java.lang.Override
@@ -213,9 +186,11 @@ The pre-processor is essentially a standard Java Action that creates the multidi
     }
 ```
 
-#### 3.2.2 Post-processing Using Java Actions
+#### 3.1.2 Post-processing Using Java Actions
 
 The rationale for using a post-processor is similar to that of the pre-processor, but in the opposite direction: you extract something out of the ML model and do something with it. For more complex models, the output can be multidimensional, and then decoding is required. In this example, the post-processor is mapped using a class map in order to get the class name, not IDs or probabilities, using a file already present in the directory.
+
+See the following post-processor example in our [Mendix ML Kit Demo Repository](https://github.com/mendix/mlkit-example-app/blob/main/javasource/iris_randomforest/actions/PostProcessor.java):
 
 ```
     @java.lang.Override
@@ -234,7 +209,15 @@ The rationale for using a post-processor is similar to that of the pre-processor
     }
 ```
 
-For detailed information on pre-processing and post-processing patterns of machine learning designs, see [Pre/Post-Processor Design Patterns](/refguide/machine-learning-kit/design-patterns/pre-post-processor-patterns/).
+### 3.2 Models with Multidimensional Inputs and Outputs {#multidimensional-outputs}
+
+Currently, it is required to have any multidimensional data as a string encoded using the base64 format. Any multidimensional data has to be encoded, either in string base64 format if you are using non-persistable entities, or binary streams if you opt for persistable entities for the ML model in the mapping (see the [Persistable and Non-Persistable Entities](#persist-nonpersist-entities) section in this document).
+
+Once you import your model, the **Call ML Model** activity allows you to add your input variable coming from the previous action, and name your output to be used in any ulterior steps.
+
+For information on design patterns that include pre-processors and post-processors, see [Pre/Post-Processor Design Patterns](/refguide/machine-learning-kit/design-patterns/pre-post-processor-patterns/).
+
+{{% alert color="info" %}}Check out pre- and post-processor sample files in our [Mendix ML Kit Demo Respository](https://github.com/mendix/mlkit-example-app/tree/main/javasource). In **Actions** folders, look for Java files named `PreProcessor.java` and `PostProcessor.java`.{{% /alert %}}
 
 ## 4 Supported Frameworks and Libraries {#supported-frameworks}
 
@@ -250,18 +233,7 @@ Artifacts (including HDF5, protocol buffers, and pickle) should be converted to 
 
 The ONNX community develops and maintains the converters for many ML frameworks. Check out the [ONNX repository](https://github.com/onnx/onnxmltools) and [supported tools](https://onnx.ai/supported-tools.html) for further information.
 
-### 4.2 Pre-Trained ML Models
-
-The ONNX community provides an ML model repository, called [ONNX Model Zoo](https://github.com/onnx/models), where common computer vision and language models can be found. The [ONNX Model Zoo](https://github.com/onnx/models) is a collection of pre-trained, state-of-the-art models in the ONNX format contributed by community members. Accompanying each model are Jupyter notebooks for model training and running inference with the trained model. The notebooks are written in Python and include links to the training dataset, as well as references to the original paper that describes the model architecture. All the ONNX models in the ONNX Zoo should be compatible with the *ML Kit*. You can pick up any model from this repository, customize it with your own data and integrate it in your Mendix app using the *ML Kit*.
-
-[Hugging Face](https://huggingface.co/models?library=onnx&sort=downloads) provides open source pre-trained models (including datasets). You can find hundreds of ONNX models to perform tasks on different modalities such as text, vision, and audio.
-
-To integrate a pre-built (propriety or public) ML model into a Mendix app, consider the following:
-
-* Compatibility of the model internal representation (IR) version with the *ML Kit*
-* Compatibility of the model OpSets with the *ML Kit*
-
-For details on versioning schemes, see the [Versioning](#versioning) section below.
+{{% alert color="info" %}}Once you build a model, see examples of notebooks that show you how to export them to ONNX in our [Mendix ML Kit Demo Repository](https://github.com/mendix/mlkit-example-app/tree/main/notebooks).{{% /alert %}}
 
 ### 4.3 Versioning {#versioning}
 
@@ -394,5 +366,6 @@ This is currently not supported.
 ## 8 Read More {#readmore}
 
 * Learn about machine learning [Design Patterns](/refguide/machine-learning-kit/design-patterns/), including [Advanced Inference Design Patterns](/refguide/machine-learning-kit/design-patterns/advanced-inference/) and [Pre- and Post-Processor Design Patterns](/refguide/machine-learning-kit/design-patterns/pre-post-processor-patterns/)
+* See [Pre-Trained ML Models](/refguide/machine-learning-kit/pretrained-ml-models/) to learn about models you can use with *Mendix ML Kit*.
 * The [ML model mapping](/refguide/ml-model-mapping/) document covers details of the service document for machine learning models
 * The [Call ML Model](/refguide/call-ml-model/) document covers the microflow [activity](/refguide/activities/) used to call an imported ML model in a microflow

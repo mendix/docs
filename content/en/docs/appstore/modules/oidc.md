@@ -78,7 +78,7 @@ The OIDC SSO module does not yet support
 
 ## 2 Dependencies
 
-The OIDC module requires your app to be using Mendix 8.18+ or later. (Mendix 9 compatible).
+The OIDC module requires your app to be using Mendix 8.18 or above.
 
 It requires the following Marketplace modules to be included in your app:
 

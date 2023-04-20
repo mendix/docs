@@ -37,7 +37,7 @@ Please note the limitation that the database viewer built into Studio Pro (as de
 
 ### 2.1 Firewall Settings
 
-Studio Pro needs access to the following URLs in order to work. If your firewall is currently blocking these, you will need to whitelist them.
+Studio Pro needs access to the following URLs in order to work. If your firewall is currently blocking these, you will need to safelist them.
 
 * `*.mendix.com`
 * `*.mendixcloud.com`

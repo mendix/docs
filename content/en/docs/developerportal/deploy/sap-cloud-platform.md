@@ -338,7 +338,7 @@ The environment details page contains the following four tabs:
 * [General](#general-tab) – how the application is deployed on SAP BTP
 * [Model Options](#model-options-tab) – application constants and scheduled events
 * [Services](#binding-services) – Cloud Foundry service management
-* [Runtime](#runtime-tab) – custom environment variables which define "User-Provided Variables" in SAP cloud foundry environment — pre-defined variables can be used to control the behavior of the Mendix Runtime
+* [Runtime](#runtime-tab) – custom environment variables which define **User-Provided Variables** in SAP cloud foundry environment — pre-defined variables can be used to control the behavior of the Mendix Runtime
 
 Open the environment details by clicking **Details** on an environment on the Environments page of the Development Portal. You will also be taken to this page when you successfully deploy or transport your app.
 
@@ -405,6 +405,8 @@ Click **Change** to change the **App URL** for this environment.
 Click **Change** to change the **Redirect URLs**. Redirect URLs are custom URLs (for example, `appname.subdomain.domain.com`) where the user will be redirected after signing on using XSUAA, instead of being redirected to the generated URL (for example, `appname.cfapps.eu10.hana.ondemand.com`) of the app.
 
 #### 7.1.8 Change Mendix Studios Target
+
+{{% todo %}}[Verify: Will this setting be deleted?]{{% /todo %}}
 
 You can see if this is the current target environment to which apps will be published from Mendix Studio. If this is not the current target environment for Mendix Studio, click **Change** to make it the target.
 

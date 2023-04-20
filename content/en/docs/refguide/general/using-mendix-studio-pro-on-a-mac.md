@@ -14,10 +14,6 @@ aliases:
 
 Using Parallels, you can run Mendix Studio Pro on your Mac device using a Windows virtual machine.
 
-{{% alert color="warning" %}}
-To run Studio Pro on Apple Silicon Macs, such as the M1(X), an MTS version starting from Mendix Studio Pro 9.6.5 or Mendix Studio Pro 9.9.1 is required. For more information, see [System Requirements](/refguide/system-requirements/).
-{{% /alert %}}
-
 {{% alert color="info" %}}
 When using parallels, some users might experience slow network speed. For instance, it might take much longer than usual when uploading a **Blank Web App** to create a new app. For information on how to solve this issue, see the [Increasing Network Speed](#increase-network-speed) section below.
 {{% /alert %}}

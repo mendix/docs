@@ -15,7 +15,7 @@ Upgrading a solution is the process of merging changes provided by the ISV into 
 
 To upgrade a Mendix solution, make sure the following prerequisites are met:
 
-* You are using the same Studio Pro version as the version used to create the solution package (for example, if Studio Pro 9.6.0 was used to create the solution, only that version can be used to upgrade the solution)
+* You are using the same Studio Pro version as the version used to create the solution package (for example, if Studio Pro 10.0 was used to create the solution, only that version can be used to upgrade the solution)
 * Your version control system is Git
 * Your app is currently on the **main** branch line
 * The **solution-releases** branch line exists

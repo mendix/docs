@@ -24,7 +24,7 @@ The basic package has the following features.
 * Runs in the Mendix Cloud
 * Supports between five and a hundred (5-100) users
 * Can be paid for via invoice only
-* Has a limited amount of resources and a single cloud environment on the Mendix Cloud, together with the ability to preview and test in Studio Pro and Studio. The cloud environment has the following features:
+* Has a limited amount of resources and a single cloud environment on the Mendix Cloud, together with the ability to preview and test in Studio Pro. The cloud environment has the following features:
     * 1 GiB App RAM
     * 0.25 vCPU
     * 1 GiB database schema as a part of a shared database — your schema is private to your app and some database monitoring graphs are not available (see [Trends in the Mendix Cloud](/developerportal/operate/trends-v4/) for more information)

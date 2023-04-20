@@ -9,15 +9,13 @@ tags: ["git", "svn", "subversion", "teamserver", "byo-git", "byo-svn" ]
 
 ## 1 Introduction
 
-[Mendix Team Server](/developerportal/collaborate/team-server/) is the Mendix-hosted environment that stores all Mendix apps. It facilitates versioning your apps by integrating them into a version control system. Mendix Studio and Mendix Studio Pro integrate into the Team Server allowing you to create and update apps, commit changes, and merge model versions in one click.
+[Mendix Team Server](/developerportal/collaborate/team-server/) is the Mendix-hosted environment that stores all Mendix apps. It facilitates versioning your apps by integrating them into a version control system. Mendix Studio Pro integrates with the Team Server allowing you to create and update apps, commit changes, and merge model versions with one click.
 
 ## 2 What Version Control System Is Team Server Built On? {#which-team-server}
 
 Mendix Team Server is based on proven technology. Initially it was based only on top of Subversion (SVN), also called Team Server SVN. Starting from Mendix version 9.12.0, the Team Server also supports storing apps using Git technology, referred to as Team Server Git. 
 
 Currently, SVN is the default version control system for the Team Server, but you can choose to use Git. In the future, Git will become the default system. 
-
-Mendix 7 and 8 only have support for Team Server SVN, and as long as these major versions are available, support for Team Server SVN will be maintained.
 
 ## 3 How Much Storage Space Is Provided with Team Server?
 
@@ -57,7 +55,7 @@ Mendix  is focusing on improving Team Server Git support and migrating customers
 
 ## 9 Can I Migrate from Team Server SVN to Git?
 
-Scrum masters can migrate an SVN app to Git in the Developer Portal. For more information on how to migrate, see [Migrate to Git](/developerportal/collaborate/migrate-to-git/) in the *Developer Portal Guide*. 
+Scrum Masters can migrate an SVN app to Git in the Developer Portal. For more information on how to migrate, see [Migrate to Git](/developerportal/collaborate/migrate-to-git/) in the *Developer Portal Guide*. 
 
 ## 10 Can I Use Third-Party Tools to Connect to the Team Server? {#third-party-tools}
 
@@ -69,7 +67,6 @@ Yes, it is possible to connect to a third-party Subversion or Git version contro
 
 However, in this case the following products and capabilities are not available:
 
-* [Mendix Studio](/studio/general/) and the [collaborative development in Studio](/studio/collaboration/)
 * Deployment using the Developer Portal directly from the Team Server
 * Integrated platform APIs such as the [App repository API](/apidocs-mxsdk/apidocs/app-repository-api/), [Build API](/apidocs-mxsdk/apidocs/build-api/), [Platform SDK](/apidocs-mxsdk/mxsdk/), [Permissions API](/apidocs-mxsdk/apidocs/permissions-api/), [Projects API](/apidocs-mxsdk/apidocs/projects-api/), [Stories API](/apidocs-mxsdk/apidocs/stories-api/), and [User management API](/apidocs-mxsdk/apidocs/user-management-api/)
 * [AQM](/addons/aqm-addon/) 

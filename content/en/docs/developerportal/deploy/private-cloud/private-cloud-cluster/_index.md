@@ -32,12 +32,12 @@ To create a cluster in your OpenShift context, you need the following:
 
 ### 2.1 Connected Environments {#prerequisites-connected}
 
-Should you consider using a connected environment, the following URLs should be *whitelisted* in your cluster's operating system, as these URLs point to services or resources required by the *Connected Environments'* infrastructure.
+Should you consider using a connected environment, the following URLs should be safelisted in your cluster's operating system, as these URLs point to services or resources required by the *Connected Environments'* infrastructure.
 
 | URL | Description |
 |-----|-------------|
 | `https://interactor-bridge.private-cloud.api.mendix.com` | Websocket based main communication API |
-| `https://mx-package-store.buildserver-prod-2-eu-central-1.mendix.com/` | Registry for downloading MDA artifacts |
+| `https://mx-package-store.home.mendix.com/` | Registry for downloading MDA artifacts |
 | `https://private-cloud.registry.mendix.com` | Docker registry for downloading Runtime base images |
 | `https://subscription-api.mendix.com` | Service to verify call-home license |
 
@@ -54,10 +54,7 @@ Should you consider using a connected environment, the following URLs should be 
    
     {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/image4.png" >}}
 
-4. Click the **Switch-to** menu in the Developer Portal and choose **Cloud**.
-
-    {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/go-to-nodes-page.png" >}}
-
+4. Open the [Switch to menu](/developerportal/#navigation) and select **Cloud**.
 5. Select **Cluster Manager** from the top menu bar in the Developer Portal.
 
     {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/cluster-manager.png" >}}
@@ -217,7 +214,7 @@ The Mendix operator and Mendix Gateway Agent are now installed on your platform.
 {{% alert color="info" %}}
 If you have selected the **Connected Mode** which installs the **Mendix Gateway Agent** component, please take note of the following:
 
-* All the Websocket connections (to communicate with the Mendix Platform) are initiated by the Mendix Gateway Agent from the cluster, and said connections do not require any listening ports to be opened in the cluster's firewall. Only an outbound connection from the cluster to the Portal needs to be set up, by whitelisting the URL `https://interactor-bridge.private-cloud.api.mendix.com` as mentioned above.
+* All the Websocket connections (to communicate with the Mendix Platform) are initiated by the Mendix Gateway Agent from the cluster, and said connections do not require any listening ports to be opened in the cluster's firewall. Only an outbound connection from the cluster to the Portal needs to be set up, by safelisting the URL `https://interactor-bridge.private-cloud.api.mendix.com` as mentioned above.
 
 * All the Websocket connections are established over HTTPS, and therefore, can be routed through a Proxy server.
 {{% /alert %}}
@@ -1473,7 +1470,7 @@ You can set the following metrics configuration values:
 * `mxAgentInstrumentationConfig`: instrumentation configuration for the [Java instrumentation agent](https://github.com/mendix/mx-agent); collects additional metrics such as microflow execution times; can be left empty to use the default instrumentation config. This attribute is only applicable when `mode` is `native`, and `mxAgentConfig` is not empty.
 
 {{% alert color="warning" %}}
-MxAgent is a [Java instrumentation agent](https://docs.oracle.com/javase/8/docs/api/java/lang/instrument/Instrumentation.html) and is unrelated to the Mendix for Private Cloud Gateway Agent.
+MxAgent is a [Java instrumentation agent](https://docs.oracle.com/en/java/javase/11/docs/api/java.instrument/java/lang/instrument/Instrumentation.html) and is unrelated to the Mendix for Private Cloud Gateway Agent.
 {{% /alert %}}
 
 {{% alert color="info" %}}

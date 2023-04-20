@@ -123,7 +123,7 @@ To configure the Feedback widget, double-click it to open the **Edit Feedback** 
 
 * **Translation** tab – The translation should be filled in automatically but you can still configure your own text and translation here.
 
-### 2.3 Submitting Feedback on an App
+### 3.3 Submitting Feedback on an App
 
 When you click the **Feedback icon**, the Mendix Platform first checks if you are signed in. If you are not signed in, you will need to either **Sign in to Mendix** or **Continue as a guest** to enter feedback mode:
 When you click the **Feedback icon**, the Mendix Platform first checks if you are signed in. If you are not signed in, you will need to enter email address to continue as an **Anonymous User** to submit the feedback:

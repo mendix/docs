@@ -50,9 +50,63 @@ The Mendix Feedback module is easy to set up and automatically attaches addition
 * [Atlas Core](https://marketplace.mendix.com/link/component/117187) is required to apply the styling 
 * In native mobile apps, some of the feedback metadata such as username, email address, and document name will be hard-coded, as they cannot be retrieved dynamically (to address this you can use the [Native Feedback widget](/appstore/modules/native-mobile-resources/) instead, located in [Native Mobile Resources](https://marketplace.mendix.com/link/component/109513))
 
-## 2 Usage
+## 2 Configuration {#configuration}
 
-### 2.1 Adding the Widget to Your App
+You can configure the module for certain actions in your app. All the configuration properties are explained on the various tabs of the properties dialog box for the module. The feedback feature requires the following properties to be set:
+
+* **Project** tab
+
+  * **Allow screenshots** – Controls whether the end-user can take a screenshot or not.
+  * **Submit successful image url** – Changes the image to show on the last successfully submitted dialog. Leaving this empty will result in no image being shown.
+  * **Submit failed image url** – Changes the image to show on the failed submitted dialog. Leaving this empty will result in no image being shown.
+
+* **Advanced** tab
+
+  * **App ID** – the unique identifier of your app, which you can find in your app’s [General Settings](/developerportal/collaborate/general-settings/) in the Developer Portal
+
+    {{% alert color="info" %}}The original value of **App ID** is 1, but this value should automatically change to your correct app ID. If it does not change automatically, see [Updating App ID](#update-app-id) below.
+    {{% /alert %}}
+
+  * **Feedback server location** – the URL of the Developer Portal server (usually `https://feedback-api.mendix.com`), which you should only change when you are using a different environment
+
+  * **Screenshot Foreign Rendering**
+
+    * **No** (default)
+    * **Yes** – only used when the page includes sensitive information
+
+* **Authentication** tab
+
+  {{% alert color="info" %}}For the best user experience, your are strongly encouraged to apply Mendix SSO to your app and connect the Mendix SSO module to the latest version of the Mendix Feedback module. The widget works without authentication. However, without authentication each users will be an **Anonymous User**. Choose either **MendixSSO** or **Custom Authentication** for your feedback widget. You need to enter the value of authentication items manually, as the widget does not support a drop-down menu for selecting a microflow or the attributes of an entity.{{% /alert %}}
+
+  * **MendixSSO** – if Mendix SSO is applied and the following settings are configured correctly, the end-user can leave feedback without providing their name and email address
+
+    * **ID token microflow** – recommended that you select the **DS_GetCurrentIdToken** microflow from the Mendix SSO module
+
+      {{% alert color="info" %}}If you are using MendixSSO 3, please include and select the **DS_GetCurrentIdToken** microflow from the FeedbackModule and configure the module roles in the security.{{% /alert %}}
+
+    * **Decrypted Token Value** – recommended that you select the **Value** attribute from it (the default if **Value** in the MendixSSO module). 
+
+    See the screenshot below for an example:
+
+    {{< figure src="/attachments/appstore/modules/mendix-feedback/mendixsso-authentication.png" width="600px">}}
+
+  * **Custom Authentication** – if you are using an SSO solution other than the Mendix SSO module, you should configure the following settings. With these settings, you can provide a microflow that should return a valid username and email when the end-user is signed in with your authentication solution. If the end-user is not signed in (meaning the **User Object Provider** microflow returns an empty username or an invalid email address) the end-user will have to manually enter their name and email address when they leave feedback.
+
+    * **User object microflow** – selects the microflow that returns **User** entity from your module
+    * **User object** – selects the **User** entity
+    * **User name attribute**– selects the attribute of **name** from the **User** entity
+    * **Email attribute** – selects the attribute of **email** from the **User** entity
+
+    See the screenshot below for an example:
+
+    {{< figure src="/attachments/appstore/modules/mendix-feedback/custom-authentication.png" width="600px">}}
+
+* **Authentication** tab
+  The translation should be filled in automatically but you can still configure your own text and translation here.
+
+## 3 Usage
+
+### 3.1 Adding the Widget to Your App
 
 You should use the latest version of the Mendix Feedback module, as it will provide the most up-to-date features for leaving feedback and communicating with the team. To ensure you have the latest version of the module included in your app, follow these steps:
 
@@ -66,7 +120,7 @@ You should use the latest version of the Mendix Feedback module, as it will prov
 
         {{< figure src="/attachments/appstore/modules/mendix-feedback/feedback-on-layout.png" >}} 
 
-### 2.2 Submitting Feedback on an App
+### 3.2 Submitting Feedback on an App
 
 When you click the **Feedback icon**, the Mendix Platform first checks if you are signed in. If you are not signed in, you will need to either **Sign in to Mendix** or **Continue as a guest** to enter feedback mode:
 When you click the **Feedback icon**, the Mendix Platform first checks if you are signed in. If you are not signed in, you will need to enter email address to continue as an **Anonymous User** to submit the feedback:
@@ -86,7 +140,7 @@ Once you see the final page, you have successfully submitted your feedback.
 
 After clicking **Submit**, your feedback will go straight to the [Feedback](/developerportal/collaborate/feedback/) page of the app in the Developer Portal. To be sure your feedback is successfully submmited, you should see a final page that informs your the feedback is received. 
 
-### 2.3 Upgrading the Widget to the Module
+### 3.3 Upgrading the Widget to the Module
 
 Simply download the Mendix Feedback Module from the Marketplace. It will replace the old feedback widget in your folder. You can encounter the following error:
 
@@ -95,52 +149,6 @@ Simply download the Mendix Feedback Module from the Marketplace. It will replace
 When this happens, right-click the error message, and choose **Update widget** or **Update all widgets**. Then the name of the widget is changed to **Feedback**. The updated widget is ready for use.
 
 If you are using MendixSSO3 for authentication, after upgrading to the module you can choose to continue using your Microflow to configure the MendixSSO authentication or include and use the **DS_GetCurrentIdToken** Microflow from the FeedbackModule.
-
-## 3 Configuration {#configuration}
-
-You can configure the module for certain actions in your app. All the configuration properties are explained on the various tabs of the properties dialog box for the module. The feedback feature requires the following properties to be set:
-
-* **Project** tab
-    * **Allow screenshots** – Controls whether the end-user can take a screenshot or not.
-    * **Submit successful image url** – Changes the image to show on the last successfully submitted dialog. Leaving this empty will result in no image being shown.
-    * **Submit failed image url** – Changes the image to show on the failed submitted dialog. Leaving this empty will result in no image being shown.
-* **Advanced** tab
-    * **App ID** – the unique identifier of your app, which you can find in your app’s [General Settings](/developerportal/collaborate/general-settings/) in the Developer Portal
-
-        {{% alert color="info" %}}The original value of **App ID** is 1, but this value should automatically change to your correct app ID. If it does not change automatically, see [Updating App ID](#update-app-id) below.
-        {{% /alert %}}
-
-    * **Feedback server location** – the URL of the Developer Portal server (usually `https://feedback-api.mendix.com`), which you should only change when you are using a different environment
-    * **Screenshot Foreign Rendering**
-        * **No** (default)
-        * **Yes** – only used when the page includes sensitive information
-* **Authentication** tab
-
-    {{% alert color="info" %}}For the best user experience, your are strongly encouraged to apply Mendix SSO to your app and connect the Mendix SSO module to the latest version of the Mendix Feedback module. The widget works without authentication. However, without authentication each users will be an **Anonymous User**. Choose either **MendixSSO** or **Custom Authentication** for your feedback widget. You need to enter the value of authentication items manually, as the widget does not support a drop-down menu for selecting a microflow or the attributes of an entity.{{% /alert %}}
-
-    * **MendixSSO** – if Mendix SSO is applied and the following settings are configured correctly, the end-user can leave feedback without providing their name and email address
-        * **ID token microflow** – recommended that you select the **DS_GetCurrentIdToken** microflow from the Mendix SSO module
-
-            {{% alert color="info" %}}If you are using MendixSSO 3, please include and select the **DS_GetCurrentIdToken** microflow from the FeedbackModule and configure the module roles in the security.{{% /alert %}}
-
-        * **Decrypted Token Value** – recommended that you select the **Value** attribute from it (the default if **Value** in the MendixSSO module). 
-
-        See the screenshot below for an example:
-
-        {{< figure src="/attachments/appstore/modules/mendix-feedback/mendixsso-authentication.png" width="600px">}}
-
-    * **Custom Authentication** – if you are using an SSO solution other than the Mendix SSO module, you should configure the following settings. With these settings, you can provide a microflow that should return a valid username and email when the end-user is signed in with your authentication solution. If the end-user is not signed in (meaning the **User Object Provider** microflow returns an empty username or an invalid email address) the end-user will have to manually enter their name and email address when they leave feedback.
-        * **User object microflow** – selects the microflow that returns **User** entity from your module
-        * **User object** – selects the **User** entity
-        * **User name attribute**– selects the attribute of **name** from the **User** entity
-        * **Email attribute** – selects the attribute of **email** from the **User** entity
-
-        See the screenshot below for an example:
-
-        {{< figure src="/attachments/appstore/modules/mendix-feedback/custom-authentication.png" width="600px">}}
-
-* **Authentication** tab
-    The translation should be filled in automatically but you can still configure your own text and translation here.
 
 ## 4 Troubleshooting
 

@@ -68,9 +68,9 @@ You should install the latest version of the Mendix Feedback module, as it will 
 
     {{< figure src="/attachments/appstore/modules/mendix-feedback/feedback-on-layout.png" >}} 
 
-4. [Configure the Feedback widget](#configure).
+4. [Configure the Feedback widget](#configuration).
 
-### 3.2 Configuring the Feedback Widget {#configure}
+### 3.2 Configuring the Feedback Widget {#configuration}
 
 To configure the Feedback widget, double-click it to open the **Edit Feedback** dialog box. To use the feedback feature, configure the following properties:
 
@@ -160,7 +160,7 @@ If it did not change to your app ID because of an unexpected error, you can upda
 
 ### 4.2 Feedback Item Does Not Show in the Developer portal
 
-If you cannot see your feedback items on the Developer Portal's **Feedback** page, it is possible that you have configured a wrong **App ID** or **Feedback server location**. Please check if all the configurations are filled in per the [Configuration](#configuration) section above.
+If you cannot see your feedback items on the Developer Portal's **Feedback** page, it is possible that you have configured a wrong **App ID** or **Feedback server location**. Check if all the configurations are filled in per the [Configuring the Feedback Widget](#configuration) section above.
 
 ### 4.3 Widget Cannot Be Read 
 
@@ -222,7 +222,7 @@ You can configure the widget for certain actions in your app. All the configurat
 
     * **MendixSSO** – if Mendix SSO is applied and the following settings are configured correctly, the end-user can leave feedback without having to enter their name and email address
         * **ID token microflow** – recommended that you select the **DS_GetCurrentIdToken** microflow from the Mendix SSO module. 
-        {{% alert color="info" %}}If you are using MendixSSO 3, please follow the [Create a New Microflow to Retrieve DecryptedToken](#create-a-new-microflow-to-retrieve-decryptedtoken) section below.{{% /alert %}}
+        {{% alert color="info" %}}If you are using MendixSSO 3, follow the [Create a New Microflow to Retrieve DecryptedToken](#create-a-new-microflow-to-retrieve-decryptedtoken) section below.{{% /alert %}}
         * **Decrypted Token Value** – recommended that you select the **Value** attribute from it (the default if **Value** in the MendixSSO module). 
 
         See the screenshot below for an example:
@@ -290,7 +290,7 @@ The Feedback widget uses the HTML2Canvas library which attempts to make an image
 
 #### 5.4.3 Feedback Item Does Not Show in the Developer portal
 
-If you cannot see your feedback items on the Developer Portal's **Feedback** page, it is possible that you have configured a wrong **App ID** or **Feedback server location**. Please check if all the configurations are filled in per the [Configuration](#legacy-configuration) section above.
+If you cannot see your feedback items on the Developer Portal's **Feedback** page, it is possible that you have configured a wrong **App ID** or **Feedback server location**. Check if all the configurations are filled in per the [Configuration](#legacy-configuration) section above.
 
 #### 5.4.4 Creating a New Microflow to Retrieve DecryptedToken {#create-a-new-microflow-to-retrieve-decryptedtoken}
 

@@ -29,17 +29,7 @@ Progressive web apps have three main characteristics:
 
 For more information, see [Progressive Web App](/refguide/mobile/introduction-to-mobile-technologies/progressive-web-app/).
 
-## 4 Hybrid Mobile
-
-Hybrid mobile applications are web applications that run inside a native application. They can access device capabilities via JavaScript or by relying on the native application to provide the required functionality in native code.
-
-{{% alert color="warning" %}}
-Hybrid mobile apps are deprecated as of Mendix 9. This means that hybrid mobile apps are still supported in Mendix 9 but their usage is discouraged. Accordingly, the creation of new hybrid navigation profiles is disabled.
-{{% /alert %}}
-
-For more information, see [Hybrid Mobile (Deprecated)](/refguide/mobile/introduction-to-mobile-technologies/hybrid-mobile/).
-
-## 5 Deciding Between a PWA or Native Mobile App
+## 4 Deciding Between a PWA or Native Mobile App
 
 Mendix offers options to build both native mobile apps and PWAs. Depending on your app's requirements or constraints, one or the other can be a better fit. It is also possible to have both native mobile and PWA profiles in a single app, which can run next to each other and overlap significantly.
 

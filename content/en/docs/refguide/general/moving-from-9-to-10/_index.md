@@ -55,40 +55,28 @@ Open your app in Studio Pro 10 and allow Studio Pro to update your app to versio
 
 Review all error messages and messages about deprecated items, then make changes where necessary.
 
-# OLD CONTENT
+## 5 Upgrading Widgets, Modules, and Marketplace Components {#upgrade-widgets}
 
+To minimize the chance of problems, you should update all the widgets, modules, and other Marketplace components your app uses to the latest version.
 
-
-
-
-
-
-
-
-
-
-
-### 3.6 Upgrade All Widgets and Modules {#upgrade-widgets}
-
-To minimize the chance of problems, you should update all widgets and other Marketplace modules used by your app to the latest version.
-
-Check if there is a newer version of your modules available in the Marketplace. Read the version release notes in the Marketplace to see whether you need to perform specific actions when upgrading.
+Check if there is a newer version of your component available in the Marketplace. Read the version release notes in the Marketplace to see whether you need to perform specific actions when upgrading.
 
 Be sure to update these key widgets, resources, and actions:
 
-* [Native Mobile Resources](https://marketplace.mendix.com/link/component/109513)
-* [Nanoflow Commons](https://marketplace.mendix.com/link/component/109515)
-* [Data Grid 2](https://marketplace.mendix.com/link/component/116540)
+[**VERIFY - ANYTHING TO INCLUDE HERE**]
 
-In general you should not remove and reimport modules, unless this is recommended in the release notes. If you do remove and reimport them, you may lose data or configuration related to the module.
+In general you should not remove and re-import modules unless this is recommended in the component's release notes. If you do remove and re-import a component, you may lose data or configuration related to the component.
 
-### 3.8 Review and Test Your App
+## 6. Reviewing and Testing Your App
 
 Finally, review the sections below and ensure that you have made all the changes necessary. Test the app for any unexpected results.
 
 {{% alert color="success" %}}
-Congratulations! Your app has been successfully upgraded to Mendix 9 and you can continue working as normal.
+Congratulations! Your app has been successfully upgraded to Studio Pro 10 and you can continue working as normal.
 {{% /alert %}}
+
+# OLD CONTENT
+
 
 ## 4 Runtime API Changes
 

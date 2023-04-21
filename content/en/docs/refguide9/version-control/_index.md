@@ -1,6 +1,6 @@
 ---
 title: "Version Control"
-url: /refguide/version-control/
+url: /refguide9/version-control/
 description: "Gives definitions and explains the version control process."
 weight: 30
 no_list: false
@@ -20,7 +20,7 @@ Version Control allows you to manage your app development in two ways:
 Version control in Mendix is built on top of either [Apache Subversion](https://subversion.apache.org/) or [Git](https://git-scm.com). The concepts will be familiar to seasoned users of these version control systems (VCS). Mendix simplifies the VCS commands by building them into Studio Pro, Studio, and the Developer Portal.
 
 {{% alert color="info" %}}
-Team Server Git was released for GA in version [9.12.0](/releasenotes/studio-pro/9.12/#team-server-git). BYO Git (Bring Your Own) is in Beta since Mendix version [9.6.0](/releasenotes/studio-pro/9.6/#960). For more details, see [Working with Git On-Premises Version Control Server](/refguide/on-premises-git/) in the *Studio Pro Guide*. 
+Team Server Git was released for GA in version [9.12.0](/releasenotes/studio-pro/9.12/#team-server-git). BYO Git (Bring Your Own) is in Beta since Mendix version [9.6.0](/releasenotes/studio-pro/9.6/#960). For more details, see [Working with Git On-Premises Version Control Server](/refguide9/on-premises-git/) in the *Studio Pro Guide*. 
 {{% /alert %}}
 
 ## 2 Concepts {#concepts}
@@ -31,7 +31,7 @@ Team Server Git was released for GA in version [9.12.0](/releasenotes/studio-pro
 
 To commit to the Team Server you will need to have a role in the app which allows you to edit the app. For more information, see the [Team Roles](/developerportal/collaborate/app-roles/#team-roles) section *App Roles*.
 
-For more information on the Team Server and technologies involved, see [Version Control FAQ](/refguide/version-control-faq/).
+For more information on the Team Server and technologies involved, see [Version Control FAQ](/refguide9/version-control-faq/).
 
 ### 2.2 Repository {#repository}
 
@@ -100,7 +100,7 @@ See the [Branches](#branches) section below for more information on how branch l
 ### 2.10 Studio Enabled {#studio-enabled}
 
 {{% alert color="info" %}}
-From Mendix 9.21, we only support [collaborative development](/refguide/collaborative-development/) between Studio Pro users. Mendix Studio is no longer supported for apps with Mendix version 9.21 or above. For more information, see the blog post [Coming in 2023: The Merging of Studio and Studio Pro](https://www.mendix.com/blog/coming-in-2023-the-merging-of-studio-and-studio-pro/).
+From Mendix 9.21, we only support [collaborative development](/refguide9/collaborative-development/) between Studio Pro users. Mendix Studio is no longer supported for apps with Mendix version 9.21 or above. For more information, see the blog post [Coming in 2023: The Merging of Studio and Studio Pro](https://www.mendix.com/blog/coming-in-2023-the-merging-of-studio-and-studio-pro/).
 {{% /alert %}}
 
 You may enable Studio for one of the development lines. This means that a developer can make changes to the app through Studio and share changes with the team. All changes will be linked to the selected branch and committed as revisions to that branch. Changes made to other development lines will not be available in Studio.
@@ -119,7 +119,7 @@ A Tag is a way of identifying a commit in addition to the [revision](#revision) 
 * Revision: this is added automatically and is the revision number of the commit
 
 {{% alert color="info" %}}
-Tags are supported by Studio Pro Git ([BYO](/refguide/branch-line-manager-dialog/#byo-server-app) and Team Server) from Mendix version 9.8.0.
+Tags are supported by Studio Pro Git ([BYO](/refguide9/branch-line-manager-dialog/#byo-server-app) and Team Server) from Mendix version 9.8.0.
 {{% /alert %}}
 
 ### 2.12 Repository Service
@@ -136,7 +136,7 @@ This is done using [Branch Lines](#branch-line).
 
 All apps are developed along the main line. Here you have all development happening along a single line, with all changes built upon the previous revision:
 
-{{< figure src="/attachments/refguide/version-control/image7.png" >}}
+{{< figure src="/attachments/refguide9/version-control/image7.png" >}}
 
 ### 3.2 Branch Line
 
@@ -148,7 +148,7 @@ In Mendix each commit within a [repository](#repository) is given a unique ident
 In SVN, the unique identifiers are numbers. As each commit has a unique number in this case, version numbers given to revisions along any chosen branch line may not be consecutive.
 {{% /alert %}}
 
-{{< figure src="/attachments/refguide/version-control/image8.png" >}}
+{{< figure src="/attachments/refguide9/version-control/image8.png" >}}
 
 ### 3.3 Merging Branches {#merging-branches}
 
@@ -161,7 +161,7 @@ On the other hand, you may want to add the features from one branch line into an
 
 You can merge a specific revision of a branch line into your current [working copy](#working-copy). If, for example, you were working on the main line updated to revision 6, you can [merge](#merge) revision 5 from another branch line into your working copy. Then you can commit the result to create revision 7. If you want to merge several different committed changes from a branch, you will need to select a range of revisions which includes all the changes.
 
-{{< figure src="/attachments/refguide/version-control/image9.png" >}}
+{{< figure src="/attachments/refguide9/version-control/image9.png" >}}
 
 {{% alert color="info" %}}
 

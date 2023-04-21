@@ -1,6 +1,6 @@
 ---
 title: "Export With Mapping"
-url: /refguide/export-mapping-action/
+url: /refguide9/export-mapping-action/
 tags: ["studio pro", "integration activity", "export mapping action", "export to xml"]
 weight: 40
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
@@ -12,13 +12,13 @@ This activity can only be used in **Microflows**.
 
 ## 1 Introduction
 
-The **Export with mapping** activity allows you to export the data stored in [domain model](/refguide/domain-model/) entities into an XML document, JSON document, or string variable.
+The **Export with mapping** activity allows you to export the data stored in [domain model](/refguide9/domain-model/) entities into an XML document, JSON document, or string variable.
 
 ## 2 Properties
 
 An example of export with mapping properties is represented in the image below:
 
-{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/integration-activities/export-mapping-action/properties.png" alt="export with mapping properties" >}}
+{{< figure src="/attachments/refguide9/modeling/application-logic/microflows-and-nanoflows/activities/integration-activities/export-mapping-action/properties.png" alt="export with mapping properties" >}}
 
 There are two sets of properties for this activity, those in the dialog box on the left, and those in the properties pane on the right.
 
@@ -37,19 +37,19 @@ You can also open the dialog box by double-clicking the activity in the microflo
 
 ### 3.1 Export Mapping
 
-The [Export Mapping](/refguide/export-mappings/) action defines in which way the data in the [domain model](/refguide/domain-model/) corresponds with the XML schema or JSON structure.
+The [Export Mapping](/refguide9/export-mappings/) action defines in which way the data in the [domain model](/refguide9/domain-model/) corresponds with the XML schema or JSON structure.
 
 ### 3.2 Parameter Type
 
-If the [export mapping](/refguide/export-mappings/) requires an input, this field shows the type of the input.
+If the [export mapping](/refguide9/export-mappings/) requires an input, this field shows the type of the input.
 
 ### 3.3 Parameter
 
-If the [export mapping](/refguide/export-mappings/) requires an input, you can select a parameter of the correct type.
+If the [export mapping](/refguide9/export-mappings/) requires an input, you can select a parameter of the correct type.
 
 ### 3.4 Content Type
 
-If the [export mapping](/refguide/export-mappings/) is based on a message definition, it can export both XML and JSON. Choose which type of output you want.
+If the [export mapping](/refguide9/export-mappings/) is based on a message definition, it can export both XML and JSON. Choose which type of output you want.
 
 ### 3.5 Validate Against Schema
 
@@ -77,4 +77,4 @@ The name of the object or string which is the result of the activity.
 
 ## 4 Common Section{#common}
 
-{{% snippet file="/static/_includes/refguide/microflow-common-section-link.md" %}}
+{{% snippet file="/static/_includes/refguide9/microflow-common-section-link.md" %}}

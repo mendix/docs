@@ -1,6 +1,6 @@
 ---
 title: "Performance Best Practices"
-url: /refguide/performance-best-practices/
+url: /refguide9/performance-best-practices/
 description: "Describes Mendix best practices on optimizing an app performance."
 tags: ["studio pro", "performance", "performance bot", "mx assist", "mendix assist"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
@@ -13,7 +13,7 @@ This document outlines performance issues and Mendix best practices for optimizi
 
 ## 2 Calculated Attributes Best Practices [MXP001][MXP002] {#mxp001}
 
-<a id="mxp002"></a>When an object has calculated attributes, each time this object is changed or retrieved from the storage, its calculated attributes are computed by calling a microflow. If the logic behind calculated attributes retrieves other objects or executes Integration activities, it will result in an extra load (and delay) while the outcome of the logic is not used. Creating calculated attributes always affects performance, so you should evaluate whether it is necessary to use them. For more information on attributes, see [Attributes](/refguide/attributes/).
+<a id="mxp002"></a>When an object has calculated attributes, each time this object is changed or retrieved from the storage, its calculated attributes are computed by calling a microflow. If the logic behind calculated attributes retrieves other objects or executes Integration activities, it will result in an extra load (and delay) while the outcome of the logic is not used. Creating calculated attributes always affects performance, so you should evaluate whether it is necessary to use them. For more information on attributes, see [Attributes](/refguide9/attributes/).
 
 In most cases, the logic behind a calculated attribute is always executed when the object is used. It is executed whenever there is no retrieval schema for a Retrieve activity (which is the case with data grids). The logic behind calculated attributes is executed in the following elements:
 
@@ -55,13 +55,13 @@ To fix the issue, delete the unused calculated attribute.
 
 ## 3 Add an Index to Attributes in Sort Bars [MXP003] {#mxp003}
 
-[Sort bars](/refguide/sort-bar/) are used to sort items in data containers. Sort bars can be used in three different types of data containers:
+[Sort bars](/refguide9/sort-bar/) are used to sort items in data containers. Sort bars can be used in three different types of data containers:
 
 * Data grid
 * Template grid
 * Reference set selector
 
-Each sort item in the sort bar is sequentially utilized to order the data in the widget. Adding an [index](/refguide/indexes/) on the attributes used in sort items can make the sorting process faster, subsequently improve the performance of the page. 
+Each sort item in the sort bar is sequentially utilized to order the data in the widget. Adding an [index](/refguide9/indexes/) on the attributes used in sort items can make the sorting process faster, subsequently improve the performance of the page. 
 
 There can be four operations performed on an entity: create, update, delete, and select. Entities, for which the number of create, update, and delete operations is much greater than the number of select operations can be called *write-intensive* because most operations mutate data in a database rather than select from it.
 
@@ -75,7 +75,7 @@ To fix the issue, add an index on attributes which are used as sort items in sor
 
 ## 4 Avoid Committing Objects Inside a Loop with Create Object, Change Object, or Commit Activities [MXP004][MXP005] {#mxp004}
 
-<a id="mxp005"></a>In a microflow, Mendix objects can be persisted to the database with three activities: the **Create object** activity, **Change object** activity, and **Commit** activity. For objects that are created or changed in a loop, it is not the best practice to commit them immediately in the loop, as this comes with an unnecessary performance overhead. Instead, it is recommended to perform a batch commit of several created/changed objects with the **Commit** activity outside of the loop to reduce database, application, and network overhead. For more information on **Create object**, **Change object**, and **Commit** activities, see [Create Object](/refguide/create-object/), [Change Object](/refguide/change-object/), and [Commit Object(s)](/refguide/committing-objects/).
+<a id="mxp005"></a>In a microflow, Mendix objects can be persisted to the database with three activities: the **Create object** activity, **Change object** activity, and **Commit** activity. For objects that are created or changed in a loop, it is not the best practice to commit them immediately in the loop, as this comes with an unnecessary performance overhead. Instead, it is recommended to perform a batch commit of several created/changed objects with the **Commit** activity outside of the loop to reduce database, application, and network overhead. For more information on **Create object**, **Change object**, and **Commit** activities, see [Create Object](/refguide9/create-object/), [Change Object](/refguide9/change-object/), and [Commit Object(s)](/refguide9/committing-objects/).
 
 Committing lists of objects has the following benefits compared to individual commits:
 
@@ -100,7 +100,7 @@ To fix the issue for the **Commit** activity, commit the list after the loop whe
 
 ## 5 Convert Eligible Microflows to Nanoflows [MXP006] {#mxp006}
 
-Nanoflows are executed directly on an end-user's device or browser. This makes them ideal for offline usage. In contrast, microflows run in the Runtime server, thus involve usage of network traffic. Converting an eligible microflow to a nanoflow helps avoiding communication over networks and significantly boosts app performance. For more information on when to use on nanoflows and when to use them, see [Nanoflows](/refguide/nanoflows/).
+Nanoflows are executed directly on an end-user's device or browser. This makes them ideal for offline usage. In contrast, microflows run in the Runtime server, thus involve usage of network traffic. Converting an eligible microflow to a nanoflow helps avoiding communication over networks and significantly boosts app performance. For more information on when to use on nanoflows and when to use them, see [Nanoflows](/refguide9/nanoflows/).
 
 You can identify convertible microflows using the following criteria:
 
@@ -108,7 +108,7 @@ You can identify convertible microflows using the following criteria:
     * Microflow has logic meant for offline applications.
     * Microflow has logic for online applications but does not involve any database related actions like a committing **Create object**, **Commit**, **Retrieve**, and **Rollback** activities. 
     * Microflow has at-most one database related action. (Not the best practice)
-* Microflows that contain nanoflow-compatible activities. For information on activities supported by nanoflows, see [Activities](/refguide/activities/). 
+* Microflows that contain nanoflow-compatible activities. For information on activities supported by nanoflows, see [Activities](/refguide9/activities/). 
 * Microflow expressions do not contain the following variables: `$latestSoapFault`, `$latestHttpResponse`, `$currentSession`, `$currentUser`, `$currentDeviceType`. These variables are not supported by nanoflows.
 * As nanoflows are executed in the context of the current user, ensure that the microflow has only operations for which the current user is authorized. Otherwise the converted nanoflow will fail.
 
@@ -127,7 +127,7 @@ To fix the issue, do the following:
 
 ## 6 Add Index to Attributes that Are Used in XPath Expressions [MXP007] {#mxp007}
 
-[XPath expressions](/refguide/xpath/) can take a long time to run depending on how many records the underlying entities contain. For read-intensive entities, it makes sense to add an index on the attributes used in XPath expressions. This can significantly boost performance of object retrieval from the database. XPath expressions can also be optimized by ordering them in such a way that the first class excludes as many items as possible. This can be achieved by using indexed attributes earlier in the expression. This will make the rest of the data set to join/filter as small as possible and reduce the load on the database.
+[XPath expressions](/refguide9/xpath/) can take a long time to run depending on how many records the underlying entities contain. For read-intensive entities, it makes sense to add an index on the attributes used in XPath expressions. This can significantly boost performance of object retrieval from the database. XPath expressions can also be optimized by ordering them in such a way that the first class excludes as many items as possible. This can be achieved by using indexed attributes earlier in the expression. This will make the rest of the data set to join/filter as small as possible and reduce the load on the database.
 
 Note that XPath expressions can be used in three different places:
 
@@ -148,7 +148,7 @@ This optimization may not be very beneficial for data types like Boolean and enu
 
 ## 7 Avoid Caching Non-Persistable Entities [MXP008] {#mxp008}
 
-A non-persistable object is an object that is considered temporary and only exists in the memory. It is an instance of a non-persistable entity. For more information on persistable and non-persistable entities, see [Persistablity](/refguide/persistability/). As these objects exist only in memory, caching them is not useful. On the one hand, it is redundant to create associations of non-persistable entities with System.Session or System.User persistable entities. On the other hand, it is important to cache objects which do not change very often but are used frequently in logic. This will help avoid the overhead of database communication. Persistable entities can be connected to the System.Session of the user and be used as a cache of outcomes. For more information on objects and caching, see [Objects and Caching](/refguide/objects-and-caching/).
+A non-persistable object is an object that is considered temporary and only exists in the memory. It is an instance of a non-persistable entity. For more information on persistable and non-persistable entities, see [Persistablity](/refguide9/persistability/). As these objects exist only in memory, caching them is not useful. On the one hand, it is redundant to create associations of non-persistable entities with System.Session or System.User persistable entities. On the other hand, it is important to cache objects which do not change very often but are used frequently in logic. This will help avoid the overhead of database communication. Persistable entities can be connected to the System.Session of the user and be used as a cache of outcomes. For more information on objects and caching, see [Objects and Caching](/refguide9/objects-and-caching/).
 
 You can use the following guidelines to decide whether caching is needed:
 
@@ -166,7 +166,7 @@ To fix the issue, do the following:
 
 ## 8 Avoid Using Too Many Levels of Inheritance [MXP009] {#mxp009}
 
-Using multiple levels of inheritance and too many specializations on entities may affect performance on large datasets, especially when you are using XPaths for [entity access rules](/refguide/access-rules/). This generates complex queries, adds XPaths for every specialization access rule, and leads to slow queries. 
+Using multiple levels of inheritance and too many specializations on entities may affect performance on large datasets, especially when you are using XPaths for [entity access rules](/refguide9/access-rules/). This generates complex queries, adds XPaths for every specialization access rule, and leads to slow queries. 
 
 ### 8.1 Steps to Fix
 
@@ -174,13 +174,13 @@ Do not use more than two levels of inheritance or overuse specializations on ent
 
 Consider the following alternatives:
 
-* Combine attributes in one entity and add an enumeration instead of setting the [generalization](/refguide/generalization-and-association/)
+* Combine attributes in one entity and add an enumeration instead of setting the [generalization](/refguide9/generalization-and-association/)
 * Create entities with a one-to-one association instead of setting the generalization
 * Create a non-persistable entity that inherits from an outcome of your business logic
 
 ## 9 Duplicated Access Rules [MXP010] {#mxp010}
 
-Using duplicated access rules on entities can affect performance, especially when you are using XPaths for [entity access rules](/refguide/access-rules/). This generates complex queries, adds XPaths for every specialization access rule, and leads to slow queries on a large dataset. 
+Using duplicated access rules on entities can affect performance, especially when you are using XPaths for [entity access rules](/refguide9/access-rules/). This generates complex queries, adds XPaths for every specialization access rule, and leads to slow queries on a large dataset. 
 
 ### 9.1 Steps to Fix
 

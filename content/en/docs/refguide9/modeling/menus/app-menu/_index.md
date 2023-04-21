@@ -1,6 +1,6 @@
 ---
 title: "App Menu"
-url: /refguide/app-menu/
+url: /refguide9/app-menu/
 description: "Describes the App Menu in Studio Pro."
 weight: 30
 tags: ["Studio Pro", "app menu", "top bar"]
@@ -10,7 +10,7 @@ tags: ["Studio Pro", "app menu", "top bar"]
 
 In the **App** menu, you can view and/or manipulate settings that are connected to your app and deployment. For example, you can create a deployment package.
 
-{{< figure src="/attachments/refguide/modeling/menus/app-menu/app-menu.png" alt="App Menu" >}}
+{{< figure src="/attachments/refguide9/modeling/menus/app-menu/app-menu.png" alt="App Menu" >}}
 
 ## 2 Tools
 
@@ -34,7 +34,7 @@ The **Check Widgets** option checks that the widgets you have implemented in the
 
 ### 2.5 Convert Classes to Design Properties
 
-The **Convert classes to design properties** option allows you to convert classes in widgets into design properties to assist in changing the widget styling. See [Native Styling](/refguide/mobile/designing-mobile-user-interfaces/native-styling/) for more information.
+The **Convert classes to design properties** option allows you to convert classes in widgets into design properties to assist in changing the widget styling. See [Native Styling](/refguide9/mobile/designing-mobile-user-interfaces/native-styling/) for more information.
 
 ## 3 Synchronize App Directory {#synchronize}
 
@@ -64,7 +64,7 @@ The **Create Deployment Package** option creates a Mendix Deployment Archive pac
 
 Shortcut key:  <kbd>F7</kbd>
 
-For more information on settings displayed on the Create Deployment Package dialog box, see [Create Deployment Package](/refguide/create-deployment-package-dialog/).
+For more information on settings displayed on the Create Deployment Package dialog box, see [Create Deployment Package](/refguide9/create-deployment-package-dialog/).
 
 ## 7 Clean Deployment Directory {#clean-deployment-directory}
 
@@ -80,9 +80,9 @@ Shortcut key:  <kbd>Ctrl</kbd> + <kbd>F5</kbd>
 The [Mendix Studios Target](/developerportal/deploy/studio-deployment-settings/#target) needs to be set and the deploying user needs to have transport rights to the set target.
 {{% /alert %}}
 
-For more information on using this option, see [Deploy to the Cloud](/refguide/deploy-to-the-cloud-dialog/).
+For more information on using this option, see [Deploy to the Cloud](/refguide9/deploy-to-the-cloud-dialog/).
 
 ## 9 Read More
 
-* [Studio Pro Overview](/refguide/studio-pro-overview/)
+* [Studio Pro Overview](/refguide9/studio-pro-overview/)
 * [Deployment](/developerportal/deploy/)

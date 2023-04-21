@@ -1,6 +1,6 @@
 ---
 title: "Updating Native Apps"
-url: /refguide/mobile/distributing-mobile-apps/overtheair-updates/
+url: /refguide9/mobile/distributing-mobile-apps/overtheair-updates/
 weight: 30
 description: "Describes enabling over the air updates using built-in functionality."
 tags: ["ota", "over the air", "update"]
@@ -23,7 +23,7 @@ Currently OTA does not update your app while the app is open or minimized.
 {{% /alert %}}
 
 {{% alert color="info" %}}
-Mendix OTA updates are the replacement for the deprecated [Release Over the Air Updates with App Center's CodePush (Deprecated)](/refguide/mobile/distributing-mobile-apps/overtheair-updates/). When opting in for OTA updates via the Mendix Runtime, CodePush OTA updates will be disabled. 
+Mendix OTA updates are the replacement for the deprecated [Release Over the Air Updates with App Center's CodePush (Deprecated)](/refguide9/mobile/distributing-mobile-apps/overtheair-updates/). When opting in for OTA updates via the Mendix Runtime, CodePush OTA updates will be disabled. 
 {{% /alert %}}
 
 This guide will teach you how to do the following:
@@ -49,9 +49,9 @@ With these shortcomings in mind, we developed a Mendix OTA update mechanism whic
 Before starting this guide, make sure you have completed the following prerequisites:
 
 * Use Mendix Studio Pro v9.7 and above.
-* Deploy your app by completing [Build a Mendix Native App Locally](/refguide/mobile/distributing-mobile-apps/building-native-apps/native-build-locally/).
+* Deploy your app by completing [Build a Mendix Native App Locally](/refguide9/mobile/distributing-mobile-apps/building-native-apps/native-build-locally/).
 * Install your app on a test device or emulator.
-* Read the [Offline-First](/refguide/offline-first/) guide. Understand this document before issuing OTA updates or releasing new versions.
+* Read the [Offline-First](/refguide9/offline-first/) guide. Understand this document before issuing OTA updates or releasing new versions.
 
 ## 4 When to Use OTA Updates
 
@@ -66,16 +66,16 @@ OTA updates are useful in the following app development cases:
 * JavaScript action changes
 * Widgets added or removed
 * A new custom Javascript-only widget or module added
-* Non-destructive model changes (for more information, see [Offline-First](/refguide/offline-first/))
+* Non-destructive model changes (for more information, see [Offline-First](/refguide9/offline-first/))
 
 ### 4.2 When a Full Release Is Required
 
 If you have made any changes directly to your iOS or Android app, you will have to fully redeploy your app to the app stores for the changes to take effect. OTA updates do not suffice and a full release is required in the following cases:
 
 * The initial release of your app
-* A Studio Pro version upgrade that requires a new [Native Template](/refguide/native-template/) version
+* A Studio Pro version upgrade that requires a new [Native Template](/refguide9/native-template/) version
 * You fundamentally changed your app's functionality (this is an Apple App Store limitation, and will require a re-release and re-review of your app by Apple—your app might be removed if you do not comply)
-* A new native module has been added (such as the [Native Mobile AR](https://marketplace.mendix.com/link/component/117209) module — for more information see [Modules](/refguide/modules/)
+* A new native module has been added (such as the [Native Mobile AR](https://marketplace.mendix.com/link/component/117209) module — for more information see [Modules](/refguide9/modules/)
 * The app has been renamed
 * The app's launcher icons have been changed
 * The splash screen has been changed

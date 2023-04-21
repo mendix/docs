@@ -1,6 +1,6 @@
 ---
 title: "DateTime Handling FAQ"
-url: /refguide/datetime-handling-faq/
+url: /refguide9/datetime-handling-faq/
 notoc: true
 tags: ["studio pro"]
 ---

@@ -1,6 +1,6 @@
 ---
 title: "Call Workflow"
-url: /refguide/call-workflow/
+url: /refguide9/call-workflow/
 weight: 70
 tags: ["workflow", "workflows", "call workflow", "Studio Pro"]
 ---
@@ -9,7 +9,7 @@ tags: ["workflow", "workflows", "call workflow", "Studio Pro"]
 
 To improve the maintainability of a workflow, you can split a larger process into smaller pieces and avoid having repeated tasks. You can use the **Call workflow** activity for this purpose and use another workflow as a *sub-workflow* for the current one. 
 
-{{< figure src="/attachments/refguide/modeling/application-logic/workflows/workflow-elements/call-workflow/call-workflow-example.jpg" alt="Call Workflow Example" >}}
+{{< figure src="/attachments/refguide9/modeling/application-logic/workflows/workflow-elements/call-workflow/call-workflow-example.jpg" alt="Call Workflow Example" >}}
 
 You can drag the **Call workflow** activity into the flow and either select an existing workflow or create a new one. The *called* workflow is then used as a *sub-workflow* for the current, *calling* workflow.   
 
@@ -21,7 +21,7 @@ It is also possible to nest **Call Workflow** activities, i.e. to use **Call wor
 
 An example of call workflow properties is represented in the image below:
 
-{{< figure src="/attachments/refguide/modeling/application-logic/workflows/workflow-elements/call-workflow/call-workflow-properties.jpg" alt="Call Workflow Properties" width="250">}}
+{{< figure src="/attachments/refguide9/modeling/application-logic/workflows/workflow-elements/call-workflow/call-workflow-properties.jpg" alt="Call Workflow Properties" width="250">}}
 
 Call workflow properties consist of the following sections:
 
@@ -48,7 +48,7 @@ This property indicates parameters of the selected workflow, parameters pass dat
 
 To change the parameter, either double-click the parameter from the list or select the parameter row and click the **Edit parameter value** button. When editing the parameter, you can define how the context entity of the calling workflow is mapped (related) to the context entity of the called workflow (sub-workflow). The context object of the called workflow can be selected by either using the calling  workflow context object or by using an expression: you can select a context object that is associated to the calling workflow's context object. The **Type** column shows the context object of the selected workflow. 
 
-{{< figure src="/attachments/refguide/modeling/application-logic/workflows/workflow-elements/call-workflow/call-workflow-parameter-example.jpg" alt="Call Workflow Parameter Example" >}}
+{{< figure src="/attachments/refguide9/modeling/application-logic/workflows/workflow-elements/call-workflow/call-workflow-parameter-example.jpg" alt="Call Workflow Parameter Example" >}}
 
 ## 3 State Changes
 
@@ -56,7 +56,7 @@ When a calling workflow or a called workflow changes a state, they may have impa
 
 ### 3.1 State of Calling Workflow When Called Workflow Changes Its State
 
-Usually state transition of a called workflow does not affect the calling workflow except for when the called workflow fails, is aborted or locked. When the called workflow fails or is aborted, the calling workflow fails. When the called workflow is [locked](/refguide/lock-workflow/), the calling workflow fails because calling workflow tries to call the locked workflow.
+Usually state transition of a called workflow does not affect the calling workflow except for when the called workflow fails, is aborted or locked. When the called workflow fails or is aborted, the calling workflow fails. When the called workflow is [locked](/refguide9/lock-workflow/), the calling workflow fails because calling workflow tries to call the locked workflow.
 
 All other state changes of a called workflow do not affect the workflow.
 
@@ -71,8 +71,8 @@ The following cases when the state of the calling workflow changes affect the st
 
 All other state changes of the calling workflow do not affect the called workflow.
 
-You can use the [Workflow state change](/refguide/workflow-properties/#workflow-state-change) property to extend the behavior described above and, for example, configure a behavior that when the calling workflow is paused, the called workflow is paused as well.
+You can use the [Workflow state change](/refguide9/workflow-properties/#workflow-state-change) property to extend the behavior described above and, for example, configure a behavior that when the calling workflow is paused, the called workflow is paused as well.
 
 ## 4 Read More
 
-* [Workflow Properties](/refguide/workflow-properties/)
+* [Workflow Properties](/refguide9/workflow-properties/)

@@ -1,12 +1,12 @@
 ---
 title: "Template Grid (Document Template)"
-url: /refguide/template-grid-document-template/
+url: /refguide9/template-grid-document-template/
 tags: ["studio pro"]
 aliases:
-    - /refguide/Template+Grid+(document+template).html
-    - /refguide/template-grid-(document-template).html
-    - /refguide/Template+Grid+(document+template)
-    - /refguide/template-grid-(document-template)
+    - /refguide9/Template+Grid+(document+template).html
+    - /refguide9/template-grid-(document-template).html
+    - /refguide9/Template+Grid+(document+template)
+    - /refguide9/template-grid-(document-template)
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
@@ -16,7 +16,7 @@ The template grid shows a list of objects in a tile view. For example, a templat
 
 {{% alert color="info" %}}
 
-{{< figure src="/attachments/refguide/modeling/resources/document-templates/918137.png" >}}
+{{< figure src="/attachments/refguide9/modeling/resources/document-templates/918137.png" >}}
 
 A template grid showing products with name, description, and image.
 
@@ -26,7 +26,7 @@ A template grid showing products with name, description, and image.
 
 ### 2.1 Sort Bar
 
-See [Sort Bar](/refguide/sort-bar/).
+See [Sort Bar](/refguide9/sort-bar/).
 
 ## 3 Appearance Properties
 
@@ -40,7 +40,7 @@ This defines the amount of columns the template grid will contain.
 
 ## 4 Common Properties
 
-{{% snippet file="/static/_includes/refguide/name-property.md" %}}
+{{% snippet file="/static/_includes/refguide9/name-property.md" %}}
 
 ## 5 Data Source Properties
 

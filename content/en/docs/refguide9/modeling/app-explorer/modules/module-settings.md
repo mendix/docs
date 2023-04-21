@@ -1,6 +1,6 @@
 ---
 title: "Module Settings"
-url: /refguide/module-settings/
+url: /refguide9/module-settings/
 weight: 10
 tags: ["studio pro", "module settings", "module", "add-on", "solution"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
@@ -14,11 +14,11 @@ Access to this functionality is currently limited and can be gained through the 
 
 Module settings allow you to choose the type of the module when you build your app and to set a version for certain module types:
 
-{{< figure src="/attachments/refguide/modeling/app-explorer/modules/module-settings/module-settings-dialog.png" >}}
+{{< figure src="/attachments/refguide9/modeling/app-explorer/modules/module-settings/module-settings-dialog.png" >}}
 
 To open module settings, select the module in the App Explorer and double-click **Settings**:
 
-{{< figure src="/attachments/refguide/modeling/app-explorer/modules/module-settings/settings.png" >}}
+{{< figure src="/attachments/refguide9/modeling/app-explorer/modules/module-settings/settings.png" >}}
 
 ## 2 Module Type {#module-type}
 
@@ -38,7 +38,7 @@ An **App module** is exported as a package file (*.mpk* ) that includes the full
 
 An **add-on module** is a stand-alone module that is not dependent on other modules and is used as a separate element, for example, as a connector. 
 
-An add-on module is exported as an module file (*.mxmodule*) that only exposes the elements with the **Usable** export level. For more information on Export levels, see [Configuring Add-on and Solution Modules for Publishing](/refguide/configure-add-on-and-solution-modules/). Its source cannot be inspected by the consumer of the module.
+An add-on module is exported as an module file (*.mxmodule*) that only exposes the elements with the **Usable** export level. For more information on Export levels, see [Configuring Add-on and Solution Modules for Publishing](/refguide9/configure-add-on-and-solution-modules/). Its source cannot be inspected by the consumer of the module.
 
 If you are creating functionality that can be exported and used by other users separately and independently of the rest of the app, you can set your module to an add-on type.  
 
@@ -62,7 +62,7 @@ We recommend setting a new version every time changes are made to the module.
 
 ## 5 Read More
 
-* [Modules](/refguide/modules/)
-* [Configure Add-on and Solution Modules for Publishing](/refguide/configure-add-on-and-solution-modules/)
+* [Modules](/refguide9/modules/)
+* [Configure Add-on and Solution Modules for Publishing](/refguide9/configure-add-on-and-solution-modules/)
 * [IP Protection](/appstore/creating-content/sol-ip-protection/)
 * [Create Solutions](/appstore/creating-content/sol-solutions-guide/)

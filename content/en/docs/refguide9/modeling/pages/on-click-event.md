@@ -1,13 +1,13 @@
 ---
 title: "On Click Event and Events Section"
-url: /refguide/on-click-event/
+url: /refguide9/on-click-event/
 weight: 130
 tags: ["studio pro", "events section", "properties", "widget", "on click", "action", "on click event"]
 aliases:
-    - /refguide/opening-pages.html
-    - /refguide/starting-microflows.html
-    - /refguide/opening-pages
-    - /refguide/starting-microflows
+    - /refguide9/opening-pages.html
+    - /refguide9/starting-microflows.html
+    - /refguide9/opening-pages
+    - /refguide9/starting-microflows
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
@@ -26,7 +26,7 @@ Events specify actions which can be triggered when the end-user interacts with a
 
 An **On click** event specifies an event that is executed when a user clicks a widget. Often the **On click** property is a part of the **Events** section in properties. For example, you can specify that when a user clicks a customer's profile image, the page with this customer's details will open:
 
-{{< figure src="/attachments/refguide/modeling/pages/on-click-event/on-click-event-example.png"   width="350"  >}}
+{{< figure src="/attachments/refguide9/modeling/pages/on-click-event/on-click-event-example.png"   width="350"  >}}
 
 An on-click event is common for many widgets (for example, image, buttons, list view). 
 
@@ -79,7 +79,7 @@ No action is taken. This option is useful for setting up a page without defining
 
 The **Show a page** event opens the specified page. Select the page which opens using the options below:
 
-* **Page** – a [page](/refguide/page/) that should open.
+* **Page** – a [page](/refguide9/page/) that should open.
   
 * **Page settings** – opens a dialog box enabling you to configure the page in more detail (including the page title).
 
@@ -89,7 +89,7 @@ The **Show a page** event opens the specified page. Select the page which opens 
 
 **Page settings** opens a dialog box enabling you to configure the page in more detail:
 
-* **Page** – a [page](/refguide/page/) that should open.
+* **Page** – a [page](/refguide9/page/) that should open.
   
 * **Page title** – the page you open can be given a unique title, depending on where you open it from. This allows you to re-use the same page for different purposes. For example, by setting the title to **New Customer** from one button and **Edit Customer** from another, you can use the same page for editing new and existing customers.
 
@@ -114,13 +114,13 @@ The following settings are specific for this event:
 
 #### 3.3.1 Microflow {#microflow}
 
-The [microflow](/refguide/microflow/) that should be executed.
+The [microflow](/refguide9/microflow/) that should be executed.
 
 #### 3.3.2 Microflow Settings {#microflow-settings}
 
 **Microflow settings** opens a dialog box enabling you to specify what parameters will be passed to the microflow and how the microflow will be run.
 
-{{< figure src="/attachments/refguide/modeling/pages/on-click-event/microflow-settings.png" alt="Microflow settings dialog" >}}
+{{< figure src="/attachments/refguide9/modeling/pages/on-click-event/microflow-settings.png" alt="Microflow settings dialog" >}}
 
 ##### 3.3.2.1 Microflow
 
@@ -209,7 +209,7 @@ For microflows that are used within a data widget, setting **Abort on Validation
 
 The **Call a nanoflow** event executes the specified nanoflow. 
 
-Set the **Nanoflow** property to specify a [nanoflow](/refguide/nanoflow/) that should be executed.
+Set the **Nanoflow** property to specify a [nanoflow](/refguide9/nanoflow/) that should be executed.
 
 ### 3.5 Open Link {#open-link}
 
@@ -240,19 +240,19 @@ When you Specify  **Email**, **Call**, or **Text** options, the corresponding de
 The **Create object** event creates a new object. The following properties are specific for this event:
 
 * **Entity (path)** – specifies which entity to create. It is also possible to choose an association (if available) from the context object. If an entity is configured, a new instance of the entity will be created. If an entity through association from the context object is configured, a new instance of the entity will be created and an object associated with the context will be created.
-* **On {event} page** – specifies which [page](/refguide/page/) should be shown to allow the end-user to enter values for the new created object. This page must accept a context parameter object (for example, a data view) with the same entity or a sub-type of the created entity. **{event}** specifies which event is being used to trigger this action (**click**, for example).
+* **On {event} page** – specifies which [page](/refguide9/page/) should be shown to allow the end-user to enter values for the new created object. This page must accept a context parameter object (for example, a data view) with the same entity or a sub-type of the created entity. **{event}** specifies which event is being used to trigger this action (**click**, for example).
 * **Page settings** - opens a dialog box enabling you to configure the page in more detail. See the [Page Settings](#page-settings) section in **Show a page** for more information. 
 
 ### 3.7 Save Changes {#save-changes}
 
-The **Save changes** event commits all changes made to the objects in *Editable* widgets on the page. If a non-editable widget displays an object and it is modified by, for example, a microflow, the object is not committed. For information on editability, see the [Editability](/refguide/common-widget-properties/#editability) section in *Properties Common in the Page Editor*. 
+The **Save changes** event commits all changes made to the objects in *Editable* widgets on the page. If a non-editable widget displays an object and it is modified by, for example, a microflow, the object is not committed. For information on editability, see the [Editability](/refguide9/common-widget-properties/#editability) section in *Properties Common in the Page Editor*. 
 
 The following properties are specific for this event:
 
 * **Close page** – specifies whether the current page should be closed.
-* **Auto-synchronize** – specifies whether synchronization should happen when the save button is clicked for a Mendix application running in an offline profile. When an object is saved in a Mendix application running in an offline profile it is stored in a local database until it can be synchronized with the server (for more information on the capabilities of offline apps, see [Offline First](/refguide/offline-first/). In practice, this means that uploading a new object to the server requires two distinct actions: saving the object and [synchronizing it](/refguide/mobile/building-efficient-mobile-apps/offlinefirst-data/synchronization/).
+* **Auto-synchronize** – specifies whether synchronization should happen when the save button is clicked for a Mendix application running in an offline profile. When an object is saved in a Mendix application running in an offline profile it is stored in a local database until it can be synchronized with the server (for more information on the capabilities of offline apps, see [Offline First](/refguide9/offline-first/). In practice, this means that uploading a new object to the server requires two distinct actions: saving the object and [synchronizing it](/refguide9/mobile/building-efficient-mobile-apps/offlinefirst-data/synchronization/).
 
-This event cannot be used on pages that change [external entities](/refguide/external-entities/). Use the [Send External Object](/refguide/send-external-object/) activity to save changes to external entities.
+This event cannot be used on pages that change [external entities](/refguide9/external-entities/). Use the [Send External Object](/refguide9/send-external-object/) activity to save changes to external entities.
 
 ### 3.8 Cancel Changes {#cancel-changes}
 
@@ -268,13 +268,13 @@ The **Close page** event closes a pop-up window (for pop-up pages) or navigates 
 
 The **Delete event** deletes an object. Its behavior depends on a data container it is placed in. When placed in a data view, deletes the connected object; it does not delete objects in a nested data view unless configured through delete behavior. When placed in a data grid, template grid, or reference set selector control bar, it deletes the selected object(s). When placed inside a list view, it deletes the corresponding list view item.
 
-This event cannot be used to delete [external objects](/refguide/external-entities/). Use a microflow with a [Delete External Object](/refguide/delete-external-object/) activity to delete external objects.
+This event cannot be used to delete [external objects](/refguide9/external-entities/). Use a microflow with a [Delete External Object](/refguide9/delete-external-object/) activity to delete external objects.
 
 Set the **Close page** property to indicate whether the current page should be closed.
 
 ### 3.11 Synchronize {#synchronize}
 
-The **Synchronize** event [synchronizes](/refguide/mobile/building-efficient-mobile-apps/offlinefirst-data/synchronization/) the data stored locally on your device with the server database.
+The **Synchronize** event [synchronizes](/refguide9/mobile/building-efficient-mobile-apps/offlinefirst-data/synchronization/) the data stored locally on your device with the server database.
 
 ### 3.12 Sign Out {#sign-out}
 
@@ -284,11 +284,11 @@ The **Sign out** event signs the currently signed-in user out. When no user is s
 
 The **Call workflow** event triggers the specified workflow. 
 
-An element calling this event should be placed in a data container connected to the [WorkflowContext entity](/refguide/workflow-parameters/#entity).
+An element calling this event should be placed in a data container connected to the [WorkflowContext entity](/refguide9/workflow-parameters/#entity).
 
 The following properties are specific for this event:
 
-* **Workflow** – A [workflow](/refguide/workflows/) that should be executed.
+* **Workflow** – A [workflow](/refguide9/workflows/) that should be executed.
 * **Close page** – Specifies whether the current page should be closed.
 * **Commit** – Specifies whether the data container object should be committed when running a workflow. 
 
@@ -298,23 +298,23 @@ The following properties are specific for this event:
 
 An element calling this event should be placed in a data container connected to the **System.WorkflowInstance** entity. 
 
-For more information on workflow-related entities in the System module, see the [Workflow Entities in the System Module](/refguide/workflows/#workflow-entities) section in *Workflows*. 
+For more information on workflow-related entities in the System module, see the [Workflow Entities in the System Module](/refguide9/workflows/#workflow-entities) section in *Workflows*. 
 
 ### 3.15 Show User Task Page {#show-user-task-page}
 
-**Show user task page** opens an overview page set for the [user task](/refguide/user-task/) in properties. An element calling this event should be placed in a data container connected to the **System.WorkflowUserTask** entity. 
+**Show user task page** opens an overview page set for the [user task](/refguide9/user-task/) in properties. An element calling this event should be placed in a data container connected to the **System.WorkflowUserTask** entity. 
 
 The following properties are specific for this event:
 
-* **Auto-assign** – Assigns the [user task](/refguide/user-task/) automatically to the user who has opened the task page if the [user task](/refguide/user-task/) has not been assigned to anyone yet. This option is enabled by default. 
+* **Auto-assign** – Assigns the [user task](/refguide9/user-task/) automatically to the user who has opened the task page if the [user task](/refguide9/user-task/) has not been assigned to anyone yet. This option is enabled by default. 
     {{% alert color="info" %}}Only the user who is assigned to the task can complete it (otherwise, it results in a Runtime error). If you choose to not automatically assign the user to the task when the page is opened, make sure that the user is assigned before the task is completed. For example, you can add the **Assign to me** button to the page. {{% /alert %}}
 
 * **Who can open** – Specifies who is able to open the user task page when a user has already been assigned to it. 
 
     * **Assigned user** *(default)* – Only the user who is currently assigned to the task is able to open the user task page. 
-    * **Users with access**  – All users who have access to the [user task](/refguide/user-task/) can open the user task page. This option means that multiple users can open the page at the same time. Only the assigned user is able to complete the task, however, other users can make changes to the page, and the data will not be saved unless you add a Save button. This button saves data, but does not complete the task. Take into account that when two users have the task page open simultaneously, data from the user who saves changes the last is stored and this will overwrite data from the other user.
+    * **Users with access**  – All users who have access to the [user task](/refguide9/user-task/) can open the user task page. This option means that multiple users can open the page at the same time. Only the assigned user is able to complete the task, however, other users can make changes to the page, and the data will not be saved unless you add a Save button. This button saves data, but does not complete the task. Take into account that when two users have the task page open simultaneously, data from the user who saves changes the last is stored and this will overwrite data from the other user.
 
-For more information on workflow-related entities in the System module, see the [Workflow Entities in the System Module](/refguide/workflows/#workflow-entities) section in *Workflows*. 
+For more information on workflow-related entities in the System module, see the [Workflow Entities in the System Module](/refguide9/workflows/#workflow-entities) section in *Workflows*. 
 
 ### 3.16  Complete User Task {#complete-task}
 
@@ -324,12 +324,12 @@ An element calling this event should be placed in a data container connected to 
 
 The following properties are specific for this event:
 
-* **User task** – The [user task](/refguide/user-task/) that should be marked as completed.
-* **Outcome** – Lists the outcomes of the selected [user task](/refguide/user-task/) and follows the selected outcome. If the user task has only one outcome, the **Default** is set as an outcome and the property cannot be edited. 
+* **User task** – The [user task](/refguide9/user-task/) that should be marked as completed.
+* **Outcome** – Lists the outcomes of the selected [user task](/refguide9/user-task/) and follows the selected outcome. If the user task has only one outcome, the **Default** is set as an outcome and the property cannot be edited. 
 * **Close page** – Specifies whether the current page should be closed.
 * **Commit** – Specifies whether the data container object should be committed when marking the task as completed.
 
 ## 4 Read More
 
-* [Pages](/refguide/pages/)
-* [Page](/refguide/page/)
+* [Pages](/refguide9/pages/)
+* [Page](/refguide9/page/)

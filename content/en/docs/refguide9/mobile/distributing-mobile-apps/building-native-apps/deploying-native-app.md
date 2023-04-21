@@ -1,7 +1,7 @@
 ---
 title: "Deploy Your First Mendix Native Mobile App"
 linktitle: "Deploy Mendix Native Mobile App"
-url: /refguide/mobile/distributing-mobile-apps/building-native-apps/deploying-native-app/
+url: /refguide9/mobile/distributing-mobile-apps/building-native-apps/deploying-native-app/
 weight: 10
 description: Describes how to deploy your first Mendix native mobile app with the Mendix Native Mobile Builder.
 tags: ["native", "mobile", "deploy", "mendix native mobile builder", "builder", "appcenter"]
@@ -24,7 +24,7 @@ The Mendix Native Mobile Builder does not currently support connections behind p
 Before starting this guide, make sure you have completed the following prerequisites:
 
 * Install the [latest MTS version](/releasenotes/studio-pro/lts-mts/#mts) of Mendix Studio using the online installer. The offline installer does not include the Mendix Native Mobile Builder dependency.
-* Read [Get Started with Native Mobile](/refguide/mobile/getting-started-with-mobile/) to see how to create, style and debug an application with Mendix Studio Pro
+* Read [Get Started with Native Mobile](/refguide9/mobile/getting-started-with-mobile/) to see how to create, style and debug an application with Mendix Studio Pro
 * Deploy your native mobile app to the cloud via Studio Pro and have the cloud address of your deployed application available
 * A [GitHub](https://github.com/) account.
 * An [App Center](https://appcenter.ms/) account. We recommend a paid account if you will be building and deploying regularly.
@@ -131,7 +131,7 @@ Next, do the following:
 
 ## 5 Signing Your Apps {#signing-a-build}
 
-By default, App Center builds are unsigned and cannot be released on the Google Play Store or the Apple App Store. To release your apps, you must provide your signature keys to Mendix Native Mobile Builder. Signature keys prove the authenticity of your app and prevent forgeries. For more information to how to acquire these keys, see the [Managing App Signing Keys Guide](/refguide/managing-app-signing-keys/).
+By default, App Center builds are unsigned and cannot be released on the Google Play Store or the Apple App Store. To release your apps, you must provide your signature keys to Mendix Native Mobile Builder. Signature keys prove the authenticity of your app and prevent forgeries. For more information to how to acquire these keys, see the [Managing App Signing Keys Guide](/refguide9/managing-app-signing-keys/).
 
 ### 5.1 Setting Up Signing for iOS {#signing-for-ios}
 
@@ -243,4 +243,4 @@ A signed Android APK can be uploaded to Google Play store directly. For more inf
 
 ## 7 Read More
 
-* [Get Started with Native Mobile](/refguide/mobile/getting-started-with-mobile/)
+* [Get Started with Native Mobile](/refguide9/mobile/getting-started-with-mobile/)

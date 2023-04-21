@@ -1,6 +1,6 @@
 ---
 title: "Introduction to Mobile Technologies"
-url: /refguide/mobile/introduction-to-mobile-technologies/
+url: /refguide9/mobile/introduction-to-mobile-technologies/
 category: Mobile
 weight: 20
 ---
@@ -9,13 +9,13 @@ weight: 20
 
 Mendix supports different technologies to build mobile applications. Besides responsive web apps, you can build native mobile apps or progress web apps. You can use pages, widgets, nanoflows, JavaScript actions, microflows, and many other familiar elements to build your app.
 
-These different technologies (for example, responsive, native phone) can be configured in a single model using navigation profiles. Mobile profiles can be added and removed separately. If you add a profile, you must also provide a home page for it. For more information on navigation profiles, see [Navigation](/refguide/navigation/).
+These different technologies (for example, responsive, native phone) can be configured in a single model using navigation profiles. Mobile profiles can be added and removed separately. If you add a profile, you must also provide a home page for it. For more information on navigation profiles, see [Navigation](/refguide9/navigation/).
 
 ## 2 Native Mobile Apps {#nativemobile}
 
 With Mendix 9, it is possible to build fully native mobile apps. Native mobile apps do not render inside a web view, but use native UI elements instead. This results in fast performance, smooth animations, natural interaction patterns (like swipe gestures), and improved access to all native device capabilities.  To make such responsive native mobile apps, Mendix leverages the popular open-source framework [React Native](https://facebook.github.io/react-native/).
 
-For more information, see [Native Mobile](/refguide/mobile/introduction-to-mobile-technologies/native-mobile/).
+For more information, see [Native Mobile](/refguide9/mobile/introduction-to-mobile-technologies/native-mobile/).
 
 ## 3 Progressive Web Apps {#pwa}
 
@@ -27,7 +27,7 @@ Progressive web apps have three main characteristics:
 * **Reliable** – Using service workers, PWAs can work offline or partially offline. Mendix PWAs can work partially offline (resources like styling, pages, and images are cached) or fully offline (like native mobile apps).
 * **Capable** – PWAs can leverage several device capabilities like the camera and location, and can offer support for web push notifications. Note that support for features depend on which browser is used.
 
-For more information, see [Progressive Web App](/refguide/mobile/introduction-to-mobile-technologies/progressive-web-app/).
+For more information, see [Progressive Web App](/refguide9/mobile/introduction-to-mobile-technologies/progressive-web-app/).
 
 ## 4 Hybrid Mobile
 
@@ -37,7 +37,7 @@ Hybrid mobile applications are web applications that run inside a native applica
 Hybrid mobile apps are deprecated as of Mendix 9. This means that hybrid mobile apps are still supported in Mendix 9 but their usage is discouraged. Accordingly, the creation of new hybrid navigation profiles is disabled.
 {{% /alert %}}
 
-For more information, see [Hybrid Mobile (Deprecated)](/refguide/mobile/introduction-to-mobile-technologies/hybrid-mobile/).
+For more information, see [Hybrid Mobile (Deprecated)](/refguide9/mobile/introduction-to-mobile-technologies/hybrid-mobile/).
 
 ## 5 Deciding Between a PWA or Native Mobile App
 
@@ -52,4 +52,4 @@ PWAs have the following limitations on iOS:
 
 Use the following diagram to decide whether to build a PWA, a native mobile app, or both:
 
-{{< figure src="/attachments/refguide/mobile/progressive-web-app/native-or-pwa.png" alt="Native app or PWA"   width="350"  >}}
+{{< figure src="/attachments/refguide9/mobile/progressive-web-app/native-or-pwa.png" alt="Native app or PWA"   width="350"  >}}

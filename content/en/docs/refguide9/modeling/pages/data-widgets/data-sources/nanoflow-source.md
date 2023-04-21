@@ -1,15 +1,15 @@
 ---
 title: "Nanoflow Source"
-url: /refguide/nanoflow-source/
+url: /refguide9/nanoflow-source/
 tags: ["studio pro", "nanoflow source", "data source"]
 weight: 50
 ---
 
 ## 1 Introduction
 
-The **Nanoflow** data source is available for [data views](/refguide/data-view/) and [list views](/refguide/list-view/). 
+The **Nanoflow** data source is available for [data views](/refguide9/data-view/) and [list views](/refguide9/list-view/). 
 
-In most cases, you use the *database*, *association* or *XPath* data sources to fill a [data widget](/refguide/data-widgets/). However, sometimes the target objects need to adhere to very specific criteria, or different objects are shown under different circumstances that cannot be handled by an [XPath](/refguide/xpath-constraints/). In these situations a *nanoflow data source* may be required. For more information on nanoflows and their advantages, see [Nanoflows](/refguide/nanoflows/).
+In most cases, you use the *database*, *association* or *XPath* data sources to fill a [data widget](/refguide9/data-widgets/). However, sometimes the target objects need to adhere to very specific criteria, or different objects are shown under different circumstances that cannot be handled by an [XPath](/refguide9/xpath-constraints/). In these situations a *nanoflow data source* may be required. For more information on nanoflows and their advantages, see [Nanoflows](/refguide9/nanoflows/).
 
 When a data widget with a nanoflow data source is displayed in the browser or refreshed, it runs the designated nanoflow and displays the return value. The manner in which the objects are acquired in the nanoflow is entirely up to you, which allows for unlimited control over what objects to return.
 
@@ -19,15 +19,15 @@ A nanoflow data source ignores all context. It performs actions described in the
 
 For example, you have a list that needs to display a list of potential orders based on the order type:
 
-{{< figure src="/attachments/refguide/modeling/pages/data-widgets/data-sources/nanoflow-source/nanoflow-source.png" alt="Nanoflow Source" >}}
+{{< figure src="/attachments/refguide9/modeling/pages/data-widgets/data-sources/nanoflow-source/nanoflow-source.png" alt="Nanoflow Source" >}}
 If the *OrderType* of the *Order* entity is set to *Cars*, then the data grid should display all *Products* for which the Boolean *Motorized* is set to true. If the *OrderType* is *Bicycles* only objects for which *Motorized* is set to false need be shown. If *OrderType* is empty the data grid should remain empty.
 
-{{< figure src="/attachments/refguide/modeling/pages/data-widgets/data-sources/microflow-source/entities-example.jpg" alt="Entities Example" >}}
+{{< figure src="/attachments/refguide9/modeling/pages/data-widgets/data-sources/microflow-source/entities-example.jpg" alt="Entities Example" >}}
 Because of the mismatch in attribute types this cannot be constrained by XPath and a nanoflow data source is required. 
 
 The nanoflow for the use-case should look like this:
 
-{{< figure src="/attachments/refguide/modeling/pages/data-widgets/data-sources/microflow-source/microflow-nanoflow-example.jpg" alt="Nanoflow Example" >}}
+{{< figure src="/attachments/refguide9/modeling/pages/data-widgets/data-sources/microflow-source/microflow-nanoflow-example.jpg" alt="Nanoflow Example" >}}
 This nanoflow does the following:
 
 1. It passes the *Order* of the enclosing data view as a parameter. 
@@ -46,5 +46,5 @@ Defines the nanoflow used to populate the widget. This nanoflow will be run when
 
 ## 4 Read More
 
-* [Nanoflows](/refguide/nanoflows/)
-* [Data Containers](/refguide/data-widgets/)
+* [Nanoflows](/refguide9/nanoflows/)
+* [Data Containers](/refguide9/data-widgets/)

@@ -1,6 +1,6 @@
 ---
 title: "Change List"
-url: /refguide/change-list/
+url: /refguide9/change-list/
 weight: 2
 tags: ["studio pro", "List"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
@@ -14,13 +14,13 @@ Note that there are minor differences between the way this function works in mic
 
 ## 1 Introduction
 
-The **Change list** activity allows you to change a list by adding objects to, and removing objects from, it. The activity works directly on the list provided, in contrast to the [List operation](/refguide/list-operation/) activity.
+The **Change list** activity allows you to change a list by adding objects to, and removing objects from, it. The activity works directly on the list provided, in contrast to the [List operation](/refguide9/list-operation/) activity.
 
 ## 2 Properties
 
 An example of change list properties is represented in the image below:
 
-{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/list-activities/change-list/change-list-properties.png" alt="change list properties" >}}
+{{< figure src="/attachments/refguide9/modeling/application-logic/microflows-and-nanoflows/activities/list-activities/change-list/change-list-properties.png" alt="change list properties" >}}
 
 There are two sets of properties for this activity, those in the dialog box on the left, and those in the properties pane on the right.
 
@@ -54,7 +54,7 @@ Defines the type of change that is applied to the list.
 
 #### 3.2.1 Notes When Using the Add Type{#notes}
 
-If you do not want duplicates in your (microflow) list, you can either remove the object(s) first, or use the **Contains** [list operation](/refguide/list-operation/) to examine the list before adding the object(s).
+If you do not want duplicates in your (microflow) list, you can either remove the object(s) first, or use the **Contains** [list operation](/refguide9/list-operation/) to examine the list before adding the object(s).
 
 {{% alert color="warning" %}}
 Currently, this works differently in **nanoflows** and **microflows**. In a **nanoflow** objects will *not* be added if they are already in the list whereas, in a **microflow**, the same object can be added multiple times.
@@ -62,8 +62,8 @@ Currently, this works differently in **nanoflows** and **microflows**. In a **na
 
 ### 3.3 Value
 
-Value defines the objects that are used to change the list. The value is entered using an [expression](/refguide/expressions/). The expression must result in an object or list of objects of the same type of [entity](/refguide/entities/) as the input list.
+Value defines the objects that are used to change the list. The value is entered using an [expression](/refguide9/expressions/). The expression must result in an object or list of objects of the same type of [entity](/refguide9/entities/) as the input list.
 
 ## 4 Common Section{#common}
 
-{{% snippet file="/static/_includes/refguide/microflow-common-section-link.md" %}}
+{{% snippet file="/static/_includes/refguide9/microflow-common-section-link.md" %}}

@@ -1,6 +1,6 @@
 ---
 title: "Change Workflow State"
-url: /refguide/change-workflow-state/
+url: /refguide9/change-workflow-state/
 weight: 20
 tags: ["studio pro", "user task", "workflow", "change workflow state", "workflow state"]
 ---
@@ -19,7 +19,7 @@ The **Change workflow state** activity can be used to add **Abort**, **Continue*
 
 An example of change workflow state properties is represented in the image below:
 
-{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/workflow-activities/change-workflow-state/properties.png" alt="Change Workflow State Properties" >}}
+{{< figure src="/attachments/refguide9/modeling/application-logic/microflows-and-nanoflows/activities/workflow-activities/change-workflow-state/properties.png" alt="Change Workflow State Properties" >}}
 
 There are two sets of properties for this activity, those in the dialog box on the left, and those in the properties pane on the right.
 
@@ -52,8 +52,8 @@ You can select the following operations that represent the new state of the work
 
 * **Retry workflow** – This operation allows you to retry the failed workflow. **Retry workflow** differs from **Restart workflow** – **Restart workflow** starts the same workflow from the beginning, while **Retry workflow** retries the failed activity to see whether the workflow can get back into the in-progress state. There can be the following use cases:
     * If the failed activity is a user task activity, **Retry workflow** attempts to get the user task back to the state it had before it failed. 
-    * If the user task failed due to an execution error in the event handling microflow (for more information, see the [Events Section](/refguide/user-task/#events) in *User Task* and the [User Task State Change](/refguide/workflow-properties/#user-task-state-change) section in *Workflow Properties*), the failed microflow is re-executed. 
-    * If the user task failed because no users were targeted by a microflow or XPath expression (for more information, see the [Assign User Task Using](/refguide/user-task/#assign-user-task) section in *User Task*), there are two ways to fix this:
+    * If the user task failed due to an execution error in the event handling microflow (for more information, see the [Events Section](/refguide9/user-task/#events) in *User Task* and the [User Task State Change](/refguide9/workflow-properties/#user-task-state-change) section in *Workflow Properties*), the failed microflow is re-executed. 
+    * If the user task failed because no users were targeted by a microflow or XPath expression (for more information, see the [Assign User Task Using](/refguide9/user-task/#assign-user-task) section in *User Task*), there are two ways to fix this:
         * Change the data that is used by the targeting microflow or the XPath expression so that it results in one or more users (e.g. making sure each role has at least one user). After that the **Retry workflow** will re-execute the targeting microflow or XPath expression.
         * Add targeted users to the **System.WorkflowUserTask_TargetUsers** association (e.g. from the **DefaultWorkflowAdmin** page in the [Workflow Commons](/appstore/modules/workflow-commons/) module or from your own functionality). In this case the **Retry workflow** puts the workflow into the in-progress state and does not execute the targeting microflow or XPath expression again.
 
@@ -71,4 +71,4 @@ The **Reason** property is only used when **Abort workflow** is selected in the 
 
 ## 4 Common Section {#common}
 
-{{% snippet file="/static/_includes/refguide/microflow-common-section-link.md" %}}
+{{% snippet file="/static/_includes/refguide9/microflow-common-section-link.md" %}}

@@ -1,6 +1,6 @@
 ---
 title: "OQL DATEDIFF"
-url: /refguide/oql-datediff/
+url: /refguide9/oql-datediff/
 tags: ["studio pro"]
 ---
 
@@ -19,7 +19,7 @@ DATEDIFF ( unit , startdate_expression, enddate_expression [, timezone ] )
 ### 2.1 unit
 
 `unit` specifies the unit of the date/time value to retrieve. This can be one of the following:
-`YEAR`, `QUARTER`, `MONTH`, `DAY`, `WEEK`, `HOUR`, `MINUTE` or `SECOND`. For more information on date/time values, see the [Example](/refguide/oql-datepart/#oql-datepart-example) section in *OQL DATEPART*.
+`YEAR`, `QUARTER`, `MONTH`, `DAY`, `WEEK`, `HOUR`, `MINUTE` or `SECOND`. For more information on date/time values, see the [Example](/refguide9/oql-datepart/#oql-datepart-example) section in *OQL DATEPART*.
 
 ### 2.2 startdate_expression
 

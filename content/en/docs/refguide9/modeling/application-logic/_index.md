@@ -1,6 +1,6 @@
 ---
 title: "Application Logic"
-url: /refguide/application-logic/
+url: /refguide9/application-logic/
 category: "App Modeling"
 weight: 40
 description: "Presents an overview of documentation on microflows and nanoflows."
@@ -11,7 +11,7 @@ tags: ["studio pro", "logic", "microflow", "nanoflow"]
 
 While you can create a simple Mendix app using widgets on pages, you can unleash the power of Mendix by adding application logic to your app.
 
-Application logic in Mendix can be implemented via [microflows](/refguide/microflows/), [nanoflows](/refguide/nanoflows/), and [workflows](/refguide/workflows/). You can change a value based on a function or combination of functions using expressions. 
+Application logic in Mendix can be implemented via [microflows](/refguide9/microflows/), [nanoflows](/refguide9/nanoflows/), and [workflows](/refguide9/workflows/). You can change a value based on a function or combination of functions using expressions. 
 
 Microflows and nanoflows allow you to express the logic of your application. They can perform actions such as creating and updating objects, showing pages, and making choices. It is a visual way of expressing what traditionally ends up in textual program code.
 
@@ -19,6 +19,6 @@ Workflows represent a long-lived process. Their main difference from microflows 
 
 Explore the documentation for details on microflow, nanoflow, and workflow definitions, properties, and usages.
 
-* [Microflows and Nanoflows](/refguide/microflows-and-nanoflows/)
-* [Workflows](/refguide/workflows/)
-* [Expressions](/refguide/expressions/)
+* [Microflows and Nanoflows](/refguide9/microflows-and-nanoflows/)
+* [Workflows](/refguide9/workflows/)
+* [Expressions](/refguide9/expressions/)

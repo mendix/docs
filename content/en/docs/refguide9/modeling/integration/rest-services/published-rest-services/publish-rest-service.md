@@ -93,7 +93,7 @@ To be able to use the data from your model in the REST service, you need to crea
 
     {{< figure src="/attachments/howto/integration/publish-rest-service/RetrieveOrder.png" >}}
 
-11. <a id="eleven"></a>The next steps cover how you ensure that outputs are generated in JSON. You can do this using [Export Mappings](/refguide/export-mappings/) or in a microflow. Steps 11-19 take you through the steps of building this Export Mapping. To start, right-click the RESTExample module on the App Explorer and select **Add other** > **Export Mapping** to add a new mapping named **EM_ExportOrder**.
+11. <a id="eleven"></a>The next steps cover how you ensure that outputs are generated in JSON. You can do this using [Export Mappings](/refguide9/export-mappings/) or in a microflow. Steps 11-19 take you through the steps of building this Export Mapping. To start, right-click the RESTExample module on the App Explorer and select **Add other** > **Export Mapping** to add a new mapping named **EM_ExportOrder**.
 
     {{% alert color="info" %}}Creating an Export Mapping is not required because published REST services in Mendix support [content negotiation](https://nordicapis.com/content-negotiation/): the ability for clients to select the media type they want returned to the server. Follow the next steps in this document to learn how to set up Export Mapping in this case, but note that you can also return the list of objects from the microflow. The platform will export it in the format desired by the client, as indicated by the **Accept** header. The client can then specify if it wants to receive XML or JSON.{{% /alert %}}
     
@@ -204,4 +204,4 @@ To add the error handling for those situations when the OrderID parameter is fil
 
 ## 6 Read More
 
-* For more information on creating published REST services in Mendix (including GET, POST, and DELETE operations), see [Published REST Services](/refguide/published-rest-services/)
+* For more information on creating published REST services in Mendix (including GET, POST, and DELETE operations), see [Published REST Services](/refguide9/published-rest-services/)

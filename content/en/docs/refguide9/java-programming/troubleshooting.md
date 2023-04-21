@@ -1,6 +1,6 @@
 ---
 title: "Troubleshooting"
-url: /refguide/troubleshooting/
+url: /refguide9/troubleshooting/
 weight: 1
 category: "Java Programming"
 description: "Lists the problematic JAR files and the known workarounds."
@@ -14,5 +14,5 @@ There are known compatibility limitations regarding JAR files in the `<app path>
 
 | JAR File | Exception in the Log | Workaround |
 | --- | --- | --- |
-| *xml-apis.jar* | *java.util.concurrent.ExecutionException: Boxed Error or java.lang.NoClassDefFoundError: org/w3c/dom/Document* | Use an alternative *xml-apis.jar*, which you can [download here](/attachments/refguide/java-programming/troubleshooting/16844051.jar). |
+| *xml-apis.jar* | *java.util.concurrent.ExecutionException: Boxed Error or java.lang.NoClassDefFoundError: org/w3c/dom/Document* | Use an alternative *xml-apis.jar*, which you can [download here](/attachments/refguide9/java-programming/troubleshooting/16844051.jar). |
 | *servlet-api.jar* | *java.lang.LinkageError: javax/servlet/http/HttpServletRequest* | Remove *servlet-api.jar* from the *userlib* directory. |

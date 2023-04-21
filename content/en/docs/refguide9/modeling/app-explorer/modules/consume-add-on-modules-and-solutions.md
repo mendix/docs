@@ -1,6 +1,6 @@
 ---
 title: "Consuming Add-on Modules and Solutions"
-url: /refguide/consume-add-on-modules-and-solutions/
+url: /refguide9/consume-add-on-modules-and-solutions/
 linktitle: "Consume Add-on Modules and Solutions"
 weight: 30
 tags: ["studio pro", "add-on", "solution", "module", "modules"]
@@ -20,7 +20,7 @@ When consuming add-on modules and solutions, you may come across the following l
 * Add-on and solution modules are not supported in Mendix Studio; it should be disabled for your app, when you consume an add-on module or a solution. 
 * When debugging add-on and solution modules, you cannot step into microflows, debugging will automatically use **Step Over**.
 * If app modules and add-on modules or solutions have conflicting custom widgets, you are prompted with a warning showing the sources of the conflicts (module and widget package names) to find a workaround. An automatic fix is not implemented.
-* When a constant is hidden, you cannot configure its value in the **App settings**. For more information on app settings, see the [Configuration Tab](/refguide/app-settings/#configurations) section in *App Settings*. 
+* When a constant is hidden, you cannot configure its value in the **App settings**. For more information on app settings, see the [Configuration Tab](/refguide9/app-settings/#configurations) section in *App Settings*. 
 
 ## 3 Importing an Add-on Module 
 
@@ -30,17 +30,17 @@ When consuming an add-on or a solution, Studio should be disabled for your app.
 
 There are several ways to import an add-on module from the Marketplace. For more information, see the [Installing Marketplace Content](/appstore/general/app-store-content/#install) section in *Use Marketplace Content in Studio Pro*.
 
-You can also add an add-on module to your app not through the Marketplace. For more information, see the [Importing Module Package](/refguide/import-and-export/#import-module) section in *Importing and Exporting Apps, Modules, Widgets, and Documents*. 
+You can also add an add-on module to your app not through the Marketplace. For more information, see the [Importing Module Package](/refguide9/import-and-export/#import-module) section in *Importing and Exporting Apps, Modules, Widgets, and Documents*. 
 
 ## 4 Importing a Solution Package 
 
-A solution package is imported to your app as any other app package. For more information, see  the [Importing App Packages](/refguide/import-and-export/#import-app-package) section in *Importing and Exporting Apps, Modules, Widgets, and Documents*. 
+A solution package is imported to your app as any other app package. For more information, see  the [Importing App Packages](/refguide9/import-and-export/#import-app-package) section in *Importing and Exporting Apps, Modules, Widgets, and Documents*. 
 
 ## 5 Working with Add-on Modules and Solutions in Your App
 
 When you import an add-on module, it shows up in the **Add-ons** folder in the App Explorer. The main difference of the add-on module is that the implementation details of some functionality and elements, such as microflows, are *hidden* from consumers so that IP is protected. This means that add-on modules have a clear API: you know which elements you can use. For example, when you open a microflow, you will see its API including the microflow and parameter documentation. You cannot see how the microflow is built, but you are able to use it in your app, for example, you can call the microflow with protected implementation from another microflow:
 
-{{< figure src="/attachments/refguide/modeling/app-explorer/modules/consume-add-on-modules-and-solutions/protected-microflow.png" >}}
+{{< figure src="/attachments/refguide9/modeling/app-explorer/modules/consume-add-on-modules-and-solutions/protected-microflow.png" >}}
 
 You also might not see the full domain model of the module, only entities, attributes, and associations that were specifically exposed by the publisher. The visible parts of the domain model are intended to be reused; hidden elements are not needed for proper use of the module.
 
@@ -61,4 +61,4 @@ The module is deleted from your app.
 
 * [IP Protection](/appstore/creating-content/sol-ip-protection/)
 * [Use Marketplace Content in Studio Pro](/appstore/general/app-store-content/)
-* [Importing and Exporting Apps, Modules, Widgets, and Documents](/refguide/import-and-export/)
+* [Importing and Exporting Apps, Modules, Widgets, and Documents](/refguide9/import-and-export/)

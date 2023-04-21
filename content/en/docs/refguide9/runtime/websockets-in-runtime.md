@@ -1,6 +1,6 @@
 ---
 title: "WebSockets"
-url: /refguide/websockets-in-runtime/
+url: /refguide9/websockets-in-runtime/
 category: "Mendix Runtime"
 description: "Describes how to use websockets in the Mendix Runtime."
 tags: ["runtime", "web socket", "endpoint", "java"]

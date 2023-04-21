@@ -1,6 +1,6 @@
 ---
 title: "Batch Replace"
-url: /refguide/batch-replace/
+url: /refguide9/batch-replace/
 weight: 20
 tags: ["studio pro", "translation", "languages", "translatable text"]
 ---
@@ -15,11 +15,11 @@ There are a number of reasons that you may wish to do this:
 * If all occurrences of a piece of text are identical, you only need to enter the translation once — this saves time and improves consistency
 * If you find better wording for a common label or text, you can change them all at once with a single command
 
-{{< figure src="/attachments/refguide/modeling/menus/translatable-texts/batch-replace/batch-replace.png" >}}
+{{< figure src="/attachments/refguide9/modeling/menus/translatable-texts/batch-replace/batch-replace.png" >}}
 
 ## 2 Using Batch Replace
 
-Batch replace works on the currently selected language, so first you should select the language you want to work on. For more information, see the [Working in the Currently Selected Language](/refguide/translatable-texts/#selected-language) section in *Language Menu*.
+Batch replace works on the currently selected language, so first you should select the language you want to work on. For more information, see the [Working in the Currently Selected Language](/refguide9/translatable-texts/#selected-language) section in *Language Menu*.
 
 ### 2.1 Documents/modules
 
@@ -27,7 +27,7 @@ You can select one or more modules you want to use for batch translate. For exam
 
 Click **Select…** and check the modules you want to work on.
 
-{{< figure src="/attachments/refguide/modeling/menus/translatable-texts/batch-replace/batch-replace-modules.png" alt="Module selection screen" >}}
+{{< figure src="/attachments/refguide9/modeling/menus/translatable-texts/batch-replace/batch-replace-modules.png" alt="Module selection screen" >}}
 
 The default is to work on all modules in the app.
 
@@ -35,7 +35,7 @@ The default is to work on all modules in the app.
 
 To search for phrases that are similar, type what you want to search for.
 
-{{< figure src="/attachments/refguide/modeling/menus/translatable-texts/batch-replace/batch-replace-search.png" alt="Batch translate search" >}}
+{{< figure src="/attachments/refguide9/modeling/menus/translatable-texts/batch-replace/batch-replace-search.png" alt="Batch translate search" >}}
 
 By default, all the translatable text from the selected module(s) will be shown.
 
@@ -52,11 +52,11 @@ Tip: move the dialog box to one side to get a better look at the document.
 
 In **Replace with**, type new text that you want to use instead of the existing text. Click **Replace** to confirm the replacement.
 
-{{< figure src="/attachments/refguide/modeling/menus/translatable-texts/batch-replace/batch-replace-replace.png" >}}
+{{< figure src="/attachments/refguide9/modeling/menus/translatable-texts/batch-replace/batch-replace-replace.png" >}}
 
 Identical replacement and original texts will be combined into a single entry.
 
-{{< figure src="/attachments/refguide/modeling/menus/translatable-texts/batch-replace/batch-replace-replaced.png" alt="Show combined entries" >}}
+{{< figure src="/attachments/refguide9/modeling/menus/translatable-texts/batch-replace/batch-replace-replaced.png" alt="Show combined entries" >}}
 
 ## 3 Exporting and Importing Text
 
@@ -70,7 +70,7 @@ Click **Export to Excel…** to export the currently displayed text items to a M
 
 The file will be in the format shown below:
 
-{{< figure src="/attachments/refguide/modeling/menus/translatable-texts/batch-replace/batch-replace-excel.png" alt="Sample Excel file" >}}
+{{< figure src="/attachments/refguide9/modeling/menus/translatable-texts/batch-replace/batch-replace-excel.png" alt="Sample Excel file" >}}
 
 **Row 1** – *Filter:* indicates the modules which are included in the exported file.
 

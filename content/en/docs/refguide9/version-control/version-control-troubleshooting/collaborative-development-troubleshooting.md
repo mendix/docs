@@ -1,6 +1,6 @@
 ---
 title: "Troubleshooting Studio Collaborative Development"
-url: /refguide/collaborative-development-troubleshooting/
+url: /refguide9/collaborative-development-troubleshooting/
 linktitle: "Studio Collaborative Development"
 weight: 10
 description: "Describes troubleshooting for collaborative development between Mendix Studio Pro and Mendix Studio."
@@ -14,13 +14,13 @@ Collaborative development allows users to share model changes with each other. T
 
 ## 2 Concepts
 
-For concepts and definitions, see the [Concepts](/refguide/version-control/#concepts) section in *Version Control*. 
+For concepts and definitions, see the [Concepts](/refguide9/version-control/#concepts) section in *Version Control*. 
 
 ## 3 Studio Is Out of Sync {#out-of-sync}
 
 Normally, the Studio working copy is synchronized with Studio Pro when the Studio Pro user updates or commits. However, if a commit or an update happened outside Studio Pro (using Tortoise SVN or any other version control tool), Studio is temporarily out of sync. In this case you will get a warning:
 
-{{< figure src="/attachments/refguide/version-control/troubleshoot-version-control-issues/collaborative-development-troubleshooting/changes-are-out-of-sync.png" >}}
+{{< figure src="/attachments/refguide9/version-control/troubleshoot-version-control-issues/collaborative-development-troubleshooting/changes-are-out-of-sync.png" >}}
 
 You can do one of the following:
 
@@ -30,7 +30,7 @@ You can do one of the following:
 
     1. If there are any merge conflicts found in the process, you need to resolve them and commit the changes afterwards. Once you resolve the conflicts and commit the changes, you can delete this automatically-created branch.<br/>
 
-    {{< figure src="/attachments/refguide/version-control/troubleshoot-version-control-issues/collaborative-development-troubleshooting/automatically-created-branch.png" >}}
+    {{< figure src="/attachments/refguide9/version-control/troubleshoot-version-control-issues/collaborative-development-troubleshooting/automatically-created-branch.png" >}}
 
 2. **Resolve Later** –  the changes can be merged later. In the meantime, changes from Studio and the Team Server development line will not be kept in sync. In this case, the dialog will appear again when committing/updating/merging changes. 
 
@@ -38,7 +38,7 @@ You can do one of the following:
 
 When a Studio enabled branch with a commit outside Studio Pro is being merged with a different line, you will see the following message:
 
-{{< figure src="/attachments/refguide/version-control/troubleshoot-version-control-issues/collaborative-development-troubleshooting/cannot-merge-automatically.png" >}}
+{{< figure src="/attachments/refguide9/version-control/troubleshoot-version-control-issues/collaborative-development-troubleshooting/cannot-merge-automatically.png" >}}
 
 You can choose one of the following:
 
@@ -46,7 +46,7 @@ You can choose one of the following:
     1. Open the Studio enabled development line.<br/>
     1. The warning described in the [Studio Pro and Studio Are Out of Sync](#out-of-sync) section will be displayed.<br/>
 
-        {{< figure src="/attachments/refguide/version-control/troubleshoot-version-control-issues/collaborative-development-troubleshooting/changes-are-out-of-sync.png" >}}<br/>
+        {{< figure src="/attachments/refguide9/version-control/troubleshoot-version-control-issues/collaborative-development-troubleshooting/changes-are-out-of-sync.png" >}}<br/>
 
     1. Click **Merge** to synchronize the changes with Studio.<br/>
     1. Open the previous branch and do the merge again. 
@@ -57,11 +57,11 @@ You can choose one of the following:
 
 During the **Update** operation, changes are requested from Studio and integrated into the current app.  There is an additional step **Retrieve branch status** in the update process. During this step, Studio changes are retrieved. 
 
-{{< figure src="/attachments/refguide/version-control/troubleshoot-version-control-issues/collaborative-development-troubleshooting/retrieving-branch-status.png" >}}
+{{< figure src="/attachments/refguide9/version-control/troubleshoot-version-control-issues/collaborative-development-troubleshooting/retrieving-branch-status.png" >}}
 
 If there are network or service issues, Studio Pro will not be able to contact the repository service and a warning message is displayed:
 
-{{< figure src="/attachments/refguide/version-control/troubleshoot-version-control-issues/collaborative-development-troubleshooting/changes-are-not-retrieved.png" >}}
+{{< figure src="/attachments/refguide9/version-control/troubleshoot-version-control-issues/collaborative-development-troubleshooting/changes-are-not-retrieved.png" >}}
 
 You can do one of the following:
 
@@ -72,7 +72,7 @@ You can do one of the following:
 
 When your team members initiate a blocking operation (commit/update/merge a Studio enabled branch or switch a Studio enabled branch), and at the same you initiate a blocking operation as well, and you will see the dialog below:
 
-{{< figure src="/attachments/refguide/version-control/troubleshoot-version-control-issues/collaborative-development-troubleshooting/another-operation-in-progress.png" >}}
+{{< figure src="/attachments/refguide9/version-control/troubleshoot-version-control-issues/collaborative-development-troubleshooting/another-operation-in-progress.png" >}}
 
 You can do one of the following:
 
@@ -81,5 +81,5 @@ You can do one of the following:
 
 ## 7 Read More
 
-* [Version Control](/refguide/version-control/) 
+* [Version Control](/refguide9/version-control/) 
 * [Collaborative Development in Studio](/studio/collaborative-development/)

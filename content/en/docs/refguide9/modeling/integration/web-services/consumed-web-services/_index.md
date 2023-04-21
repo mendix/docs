@@ -1,6 +1,6 @@
 ---
 title: "Consumed Web Services"
-url: /refguide/consumed-web-services/
+url: /refguide9/consumed-web-services/
 weight: 25
 tags: ["studio pro"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
@@ -8,7 +8,7 @@ tags: ["studio pro"]
 
 ## 1 Introduction
 
-This document describes imported web services. For further information on the consumed web services screen, see [Consumed Web Service](/refguide/consumed-web-service/).
+This document describes imported web services. For further information on the consumed web services screen, see [Consumed Web Service](/refguide9/consumed-web-service/).
 
 ## 2 Web Services
 
@@ -22,7 +22,7 @@ Using third party web services is easy in Mendix. There is a microflow activity 
 
 ### 2.2 Published web Services
 
-To expose functionality in a Mendix Server (thus enabling other systems to make use of certain functions) a microflow can easily be published as a web service. For further information, see [Published Web Services](/refguide/published-web-services/).
+To expose functionality in a Mendix Server (thus enabling other systems to make use of certain functions) a microflow can easily be published as a web service. For further information, see [Published Web Services](/refguide9/published-web-services/).
 
 ## 3 XML
 
@@ -43,8 +43,8 @@ In this case, the object 'person' is described with the corresponding values for
 
 XML can be used in Mendix for serialization and de-serialization in order to export and import data.
 
-See [XML Schemas](/refguide/xml-schemas/) for further information on importing XSDs into your application.
-See  [Import Mappings](/refguide/import-mappings/) for further information on mapping XML documents to domain model entities and [Export Mappings](/refguide/export-mappings/) for further information on exporting domain entities as XML.
+See [XML Schemas](/refguide9/xml-schemas/) for further information on importing XSDs into your application.
+See  [Import Mappings](/refguide9/import-mappings/) for further information on mapping XML documents to domain model entities and [Export Mappings](/refguide9/export-mappings/) for further information on exporting domain entities as XML.
 
 ## 4 SOAP {#soap}
 
@@ -56,7 +56,7 @@ An XSD (XML Schema Definition) document is a document that describes how the XML
 
 When importing an XSD file into your app, Studio Pro only accepts absolute paths, and the accepted schemes are limited to files or links starting with `https` or `http`.
 
-When importing or exporting an [XML schema](/refguide/xml-schema-support/), the XSD file needs to be in your app. If the XML refers to an XSD file that is not in your app, a runtime error will be thrown. Add the XSD file manually to resolve this error.
+When importing or exporting an [XML schema](/refguide9/xml-schema-support/), the XSD file needs to be in your app. If the XML refers to an XSD file that is not in your app, a runtime error will be thrown. Add the XSD file manually to resolve this error.
 
 ## 6 WSDL {#wdsl}
 
@@ -67,11 +67,11 @@ WDSLs have associated [XSD](#xsd) documents that are used to validate the data.
 Using imported web services, you can import a web service from an external application to use in your own application. You can import web services from third parties (such as the
 [w3schools example service](http://www.w3schools.com/xml/tempconvert.asmx?WSDL)) or from other Mendix apps.
 
-To use these imported web services in a microflow, see [Call Web Service](/refguide/call-web-service-action/).
+To use these imported web services in a microflow, see [Call Web Service](/refguide9/call-web-service-action/).
 
 ## 7 Proxies
 
-If you are behind a firewall, you may have to use a proxy to call a web service. Specific information on how to configure the JVM to use a proxy can be found in [Using a Proxy to Call a Web Service](/refguide/using-a-proxy-to-call-a-webservice/).
+If you are behind a firewall, you may have to use a proxy to call a web service. Specific information on how to configure the JVM to use a proxy can be found in [Using a Proxy to Call a Web Service](/refguide9/using-a-proxy-to-call-a-webservice/).
 
 ## 8 Protocols
 
@@ -87,4 +87,4 @@ Mendix supports consuming web service data according to the following protocols:
 * WS-ReliableMessaging 1.1
 * WS-Addressing 1.0 (from Mendix version 8.16)
 
-To connect to a Microsoft .NET web service, you have to configure your web service to use basicHttpBinding (SOAP 1.1) or wsHttpBinding (SOAP 1.2). For a secure connection, you have to configure SSL and to set the security mode to `Transport` with clientCredentialType `Basic` in the **web.config** file. The user credentials can be configured in Studio Pro as a **Call Web Service** activity as described in [Use HTTP authentication](/refguide/call-web-service-action/#http-headers).
+To connect to a Microsoft .NET web service, you have to configure your web service to use basicHttpBinding (SOAP 1.1) or wsHttpBinding (SOAP 1.2). For a secure connection, you have to configure SSL and to set the security mode to `Transport` with clientCredentialType `Basic` in the **web.config** file. The user credentials can be configured in Studio Pro as a **Call Web Service** activity as described in [Use HTTP authentication](/refguide9/call-web-service-action/#http-headers).

@@ -1,6 +1,6 @@
 ---
 title: "Debugging Native Apps"
-url: /refguide/mobile/distributing-mobile-apps/native-debug/
+url: /refguide9/mobile/distributing-mobile-apps/native-debug/
 weight: 40
 description: "A guide for debugging native mobile apps using the Make It Native app."
 tags: ["debug", "testing"]
@@ -99,7 +99,7 @@ After running `react-devtools` you will see the React developer tools GUI. To us
 
 When your Mendix app is crashing or the logging in Mendix Studio Pro is incomplete, you might want to dive into your operating system's log files for information. There are two options:
 
-1. You could start the app in [XCode or Android Studio](/refguide/mobile/distributing-mobile-apps/building-native-apps/native-build-locally/#building-app-project), either of which will give you more information and allow you to set breakpoint and inspect variable values. This approach is a bit more cumbersome. 
+1. You could start the app in [XCode or Android Studio](/refguide9/mobile/distributing-mobile-apps/building-native-apps/native-build-locally/#building-app-project), either of which will give you more information and allow you to set breakpoint and inspect variable values. This approach is a bit more cumbersome. 
 1. Get the log files directly from your device.
 
 The first approach is self-explanatory. For information on getting log files directly from your device, however, see below.

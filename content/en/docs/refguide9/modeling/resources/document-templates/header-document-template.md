@@ -1,12 +1,12 @@
 ---
 title: "Header (Document Template)"
-url: /refguide/header-document-template/
+url: /refguide9/header-document-template/
 tags: ["studio pro"]
 aliases:
-    - /refguide/header-(document-template).html
-    - /refguide/Header+(document+template).html
-    - /refguide/header-(document-template)
-    - /refguide/Header+(document+template)
+    - /refguide9/header-(document-template).html
+    - /refguide9/Header+(document+template).html
+    - /refguide9/header-(document-template)
+    - /refguide9/Header+(document+template)
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
@@ -16,15 +16,15 @@ When enabled, the header will be inserted at the top of every page. Other widget
 
 {{% alert color="info" %}}
 
-{{< figure src="/attachments/refguide/modeling/resources/document-templates/header-document-template/918236.png" >}}
+{{< figure src="/attachments/refguide9/modeling/resources/document-templates/header-document-template/918236.png" >}}
 
 A header.
 
 {{% /alert %}}
 
-For details on enabling the header from the properties of the document template itself, see the [Appearance Properties](/refguide/document-template/#appearance-properties) section of *Document Template*.
+For details on enabling the header from the properties of the document template itself, see the [Appearance Properties](/refguide9/document-template/#appearance-properties) section of *Document Template*.
 
-For details on inserting page numbers, see [Static Label](/refguide/static-label-document-template/).
+For details on inserting page numbers, see [Static Label](/refguide9/static-label-document-template/).
 
 ## 2 Appearance
 

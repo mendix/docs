@@ -1,6 +1,6 @@
 ---
 title: "Administrator"
-url: /refguide/administrator/
+url: /refguide9/administrator/
 weight: 20
 tags: ["studio pro", "administrator", "app security", "security"]
 ---
@@ -9,7 +9,7 @@ tags: ["studio pro", "administrator", "app security", "security"]
 
 In the **Administrator** tab of **App Security**, you can change the default credentials and a user role for the Administrator user:
 
-{{< figure src="/attachments/refguide/modeling/app-explorer/security/app-security/administrator/app-security-administrator.png" >}}
+{{< figure src="/attachments/refguide9/modeling/app-explorer/security/app-security/administrator/app-security-administrator.png" >}}
 
 ## 2 Administrator Properties {#administrator-properties}
 
@@ -68,7 +68,7 @@ Alternatively you can log in as an administrator to a Free App deployed to the c
 
 ### 2.3 User Role {#user-role}
 
-The user role assigned to the Administrator. For more information, see [User Roles](/refguide/user-roles/). 
+The user role assigned to the Administrator. For more information, see [User Roles](/refguide9/user-roles/). 
 
 Default: *Administrator*
 
@@ -86,8 +86,8 @@ When your app is not deployed locally, for example to the Mendix Cloud, changes 
 
 ## 3 Read More
 
-* [App Security](/refguide/app-security/)
-* [User Roles](/refguide/user-roles/)
-* [Demo Users](/refguide/demo-users/)
-* [Anonymous Users](/refguide/anonymous-users/)
-* [Password Policy](/refguide/password-policy/)
+* [App Security](/refguide9/app-security/)
+* [User Roles](/refguide9/user-roles/)
+* [Demo Users](/refguide9/demo-users/)
+* [Anonymous Users](/refguide9/anonymous-users/)
+* [Password Policy](/refguide9/password-policy/)

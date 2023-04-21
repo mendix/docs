@@ -1,6 +1,6 @@
 ---
 title: "Runtime Server"
-url: /refguide/runtime-server/
+url: /refguide9/runtime-server/
 category: "Mendix Runtime"
 description: "Describes the Runtime Server and how it functions."
 weight: 10
@@ -15,11 +15,11 @@ This description of the Runtime Server is based on an app running in the cloud. 
 
 ## 2 Description
 
-The Runtime Server is [deployed](/refguide/runtime-deployment/) and waits for requests from the Mendix Client or a call from another app or service. It processes the request and returns the requested data, plus any additional state information where appropriate; for more information, see [Communication Patterns in the Mendix Runtime](/refguide/communication-patterns/). The Runtime Server itself is stateless, which allows it to be efficiently scaled to multiple instances.
+The Runtime Server is [deployed](/refguide9/runtime-deployment/) and waits for requests from the Mendix Client or a call from another app or service. It processes the request and returns the requested data, plus any additional state information where appropriate; for more information, see [Communication Patterns in the Mendix Runtime](/refguide9/communication-patterns/). The Runtime Server itself is stateless, which allows it to be efficiently scaled to multiple instances.
 
 Below is a chart showing the components of the Runtime Server. Each of the components is described below the chart.
 
-{{< figure src="/attachments/refguide/runtime/runtime-server/runtime-server.png" alt="The makeup of the Runtime Server" >}}
+{{< figure src="/attachments/refguide9/runtime/runtime-server/runtime-server.png" alt="The makeup of the Runtime Server" >}}
 
 ### 2.1 M2ee
 
@@ -118,4 +118,4 @@ This is the web browser (for example, Google Chrome) or mobile device (for examp
 
 The Runtime Server communicates with the Mendix Client by using a private API called xas.
 
-For a description of the Mendix Client, see [Mendix Client](/refguide/mendix-client/).
+For a description of the Mendix Client, see [Mendix Client](/refguide9/mendix-client/).

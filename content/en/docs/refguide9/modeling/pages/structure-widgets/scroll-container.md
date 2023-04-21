@@ -1,13 +1,13 @@
 ---
 title: "Scroll Container"
-url: /refguide/scroll-container/
+url: /refguide9/scroll-container/
 weight: 50
 tags: ["studio pro", "scroll container", "container widget", "widget"]
 aliases:
-    - /refguide/horizontal-split-pane.html
-    - /refguide/vertical-split-pane.html
-    - /refguide/horizontal-split-pane
-    - /refguide/vertical-split-pane
+    - /refguide9/horizontal-split-pane.html
+    - /refguide9/vertical-split-pane.html
+    - /refguide9/horizontal-split-pane
+    - /refguide9/vertical-split-pane
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
@@ -19,7 +19,7 @@ Scroll containers may be placed on navigation layouts as well as on pages.
 
 The scroll container example below divides the layout in three parts: a header containing an image, a part in the middle with a long piece of text, and a footer. You can scroll the long text inside the container, without scrolling the page.
 
-{{< figure src="/attachments/refguide/modeling/pages/structure-widgets/scroll-container/scroll-container.PNG" alt="Scroll Container" >}}
+{{< figure src="/attachments/refguide9/modeling/pages/structure-widgets/scroll-container/scroll-container.PNG" alt="Scroll Container" >}}
 
 A scroll container can consist of several scroll container regions. For more information on scroll container regions and their properties, see the [Scroll Container Region](#scroll-container-region) section. 
 
@@ -27,7 +27,7 @@ A scroll container can consist of several scroll container regions. For more inf
 
 An example of scroll container properties is represented in the image below:
 
-{{< figure src="/attachments/refguide/modeling/pages/structure-widgets/scroll-container/scroll-container-properties.png" alt="Scroll Container Properties" >}}
+{{< figure src="/attachments/refguide9/modeling/pages/structure-widgets/scroll-container/scroll-container-properties.png" alt="Scroll Container Properties" >}}
 
 Scroll container properties consist of the following sections:
 
@@ -38,11 +38,11 @@ Scroll container properties consist of the following sections:
 
 ### 2.1 Common Section {#common}
 
-{{% snippet file="/static/_includes/refguide/common-section-link.md" %}}
+{{% snippet file="/static/_includes/refguide9/common-section-link.md" %}}
 
 ### 2.2 Design Properties Section {#design-properties}
 
-{{% snippet file="/static/_includes/refguide/design-section-link.md" %}} 
+{{% snippet file="/static/_includes/refguide9/design-section-link.md" %}} 
 
 ### 2.3 General Section {#general}
 
@@ -93,7 +93,7 @@ Default: *Center*
 Regions define the content area of a scroll container. For more information see the [Scroll Container Region](#scroll-container-region) section.
 
 {{% alert color="info" %}}
-If you add regions in a [layout](/refguide/layout/), they will automatically be filled with [placeholders](/refguide/placeholder/).
+If you add regions in a [layout](/refguide9/layout/), they will automatically be filled with [placeholders](/refguide9/placeholder/).
 {{% /alert %}}
 
 #### 2.4.1 Enable Top
@@ -128,7 +128,7 @@ You can add and remove all the regions listed above except the center one.
 
 #### 3.1.1 Common Section
 
-{{% snippet file="/static/_includes/refguide/common-section-link.md" %}}
+{{% snippet file="/static/_includes/refguide9/common-section-link.md" %}}
 
 #### 3.1.2 General Section
 
@@ -145,7 +145,7 @@ A scroll container region has the following properties in the **General** sectio
 
 ##### 3.1.2.2 Toggle Mode (Layouts Only)
 
-One (left or right) scroll container region within a layout can be set to toggle using a [sidebar toggle button](/refguide/sidebar-toggle-button/). This setting determines which region (here called a sidebar) will be toggled, and how the toggling is implemented.
+One (left or right) scroll container region within a layout can be set to toggle using a [sidebar toggle button](/refguide9/sidebar-toggle-button/). This setting determines which region (here called a sidebar) will be toggled, and how the toggling is implemented.
 
 | Mode | Effect |
 | --- | --- |
@@ -157,6 +157,6 @@ One (left or right) scroll container region within a layout can be set to toggle
 
 ## 4 Read More
 
-* [Page](/refguide/page/)
-* [Structure](/refguide/structure-widgets/)
-* [Properties Common in the Page Editor](/refguide/common-widget-properties/)
+* [Page](/refguide9/page/)
+* [Structure](/refguide9/structure-widgets/)
+* [Properties Common in the Page Editor](/refguide9/common-widget-properties/)

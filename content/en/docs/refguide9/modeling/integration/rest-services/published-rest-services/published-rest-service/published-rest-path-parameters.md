@@ -1,12 +1,12 @@
 ---
 title: "Published REST Path Parameters"
-url: /refguide/published-rest-path-parameters/
+url: /refguide9/published-rest-path-parameters/
 weight: 30
 tags: ["published REST", "path parameters", "Data and Time", "studio pro"]
 # combine this with published rest service
 ---
 
-The operation path in the [published REST operation](/refguide/published-rest-operation/) specifies the last part of the location (URL) of the operation. 
+The operation path in the [published REST operation](/refguide9/published-rest-operation/) specifies the last part of the location (URL) of the operation. 
 
 You can use one or more path parameters to capture part of the location as a microflow parameter. Specify path parameters in the operation path between `{` and `}`. 
 
@@ -19,6 +19,6 @@ These are the requirements for path parameters:
 * Path parameters can only have primitive types (Boolean, date and time, decimal, enumeration, integer/long, or string)
 * Path parameters can only appear between slashes (`/`) in the path
 
-When generating a new microflow from the [published REST operation](/refguide/published-rest-operation/) editor window, the resulting microflow will have string parameters for each of the path parameters specified in the operation path. If you want the path parameters to be of a different type, you can change the type in the microflow.
+When generating a new microflow from the [published REST operation](/refguide9/published-rest-operation/) editor window, the resulting microflow will have string parameters for each of the path parameters specified in the operation path. If you want the path parameters to be of a different type, you can change the type in the microflow.
 
 Date and time parameters should be entered in the [ISO-8601](https://www.w3schools.com/xml/schema_dtypes_date.asp) format (for example, `2018-12-31T09:00:00`).

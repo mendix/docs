@@ -1,6 +1,6 @@
 ---
 title: "Using the Java API"
-url: /refguide/java-api-tutorial/
+url: /refguide9/java-api-tutorial/
 category: "Java Programming"
 weight: 4
 description: "Describes how to add a Java action, edit it in Eclipse, and call it from a microflow."
@@ -122,4 +122,4 @@ After this, all `Attachments` belonging to one `GenericObject` are copied to ano
 
 ## 4 Read More
 
-* [Extending Your Application with Custom Java](/refguide/extending-your-application-with-custom-java/)
+* [Extending Your Application with Custom Java](/refguide9/extending-your-application-with-custom-java/)

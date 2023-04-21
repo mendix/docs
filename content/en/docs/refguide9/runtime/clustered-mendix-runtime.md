@@ -1,6 +1,6 @@
 ---
 title: "Clustered Mendix Runtime"
-url: /refguide/clustered-mendix-runtime/
+url: /refguide9/clustered-mendix-runtime/
 category: "Mendix Runtime"
 weight: 40
 description: "Introduces the cluster functionality of the Mendix Runtime, which allows you to set up your Mendix application to run behind a load balancer to enable a failover and/or high availability architecture."
@@ -23,7 +23,7 @@ Clustering is also supported on Kubernetes, but you will have to use a *Stateful
 
 The Mendix Runtime cluster requires the following infrastructure:
 
-{{< figure src="/attachments/refguide/runtime/clustered-mendix-runtime/16844074.png" >}}
+{{< figure src="/attachments/refguide9/runtime/clustered-mendix-runtime/16844074.png" >}}
 
 This means that a Mendix cluster requires a load balancer to distribute the load of the clients over the available Runtime cluster nodes. It also means that all the nodes need to connect to the same Mendix database, and the files need to be stored on S3 (for details, see the [File Storage](#file-storage) section below). The number of nodes in your cluster depends on the application, the high availability requirements, and its usage.
 
@@ -57,7 +57,7 @@ If no database synchronization is required, all the cluster nodes will become fu
 
 Uploaded files should be stored in a shared file storage facility, as every Mendix Runtime node should access the same files. Either the local storage facility is shared or the files are stored in a central storage facility such as an Amazon S3 file storage, Microsoft Azure Blob storage, or IBM Bluemix Object Storage. 
 
-For more information about configuring the Mendix Runtime to store files on these storage facilities,  see [Runtime Customization](/refguide/custom-settings/).
+For more information about configuring the Mendix Runtime to store files on these storage facilities,  see [Runtime Customization](/refguide9/custom-settings/).
 
 ## 7 After-Startup and Before-Shutdown Microflows {#startup-shutdown-microflows}
 
@@ -85,7 +85,7 @@ For example, imagine you are booking a vacation through a Mendix app with a flig
 
 The following image describes this behavior:
 
-{{< figure src="/attachments/refguide/runtime/clustered-mendix-runtime/16844072.png" >}}
+{{< figure src="/attachments/refguide9/runtime/clustered-mendix-runtime/16844072.png" >}}
 
 Reading objects and deleting (unchanged) objects from the Mendix database is still a "clean state." Changing an existing object or instantiating a new object will create "dirty state." Dirty state needs to be sent from the Mendix Client to the Mendix Runtime with every request. Committing objects or rolling back will remove them from the dirty state. The same will happen if an instantiated or changed object is deleted. Non-persistable entities are always part of the dirty state.
 
@@ -97,7 +97,7 @@ Whenever the Mendix Client is restarted, all the state is discarded, as it is on
 
 The more objects that are part of the dirty state, the more data has to be transferred in the requests and responses between the Mendix Runtime and the Mendix Client. As such, this has an impact on performance. In cluster environments, it is advised to minimize the amount of dirty state to minimize the impact of the synchronization on performance.
 
-The Mendix Client attempts to optimize the amount of state sent to the Mendix Runtime by only sending data that can potentially be read while processing the request. For example, if you call a microflow that gets `Booking` as a parameter and retrieves `Flight` over association, then the client will pass only `Booking` and the associated `Flight`s from the dirty state along with the request, but not the `Hotel`s. Note that this behavior is the best effort; if the microflow is too complex to analyze (for example, when a Java action is called with a state object as a parameter), the entire dirty state will be sent along. This optimization can be disabled via the [Optimize network calls](/refguide/app-settings/#optimize-network-calls) app setting.
+The Mendix Client attempts to optimize the amount of state sent to the Mendix Runtime by only sending data that can potentially be read while processing the request. For example, if you call a microflow that gets `Booking` as a parameter and retrieves `Flight` over association, then the client will pass only `Booking` and the associated `Flight`s from the dirty state along with the request, but not the `Hotel`s. Note that this behavior is the best effort; if the microflow is too complex to analyze (for example, when a Java action is called with a state object as a parameter), the entire dirty state will be sent along. This optimization can be disabled via the [Optimize network calls](/refguide9/app-settings/#optimize-network-calls) app setting.
 
 {{% alert color="warning" %}}
 It is important to realize that when calling external web services in Mendix to fetch external data, the responses of those actions are converted into Mendix entities. As long as they are not persisted in the Mendix database, they will be part of the dirty state and have a negative impact on the performance of the application. To reduce this impact, this behavior is likely to change in the future.
@@ -117,15 +117,15 @@ To make sure the dirty state does not become too big when the above scenarios ap
 
 The `$currentSession` *Session* object is available in microflows so that a reference to the current session can easily be obtained. When an object needs to be stored, its association can be set to `$currentSession`, and when the object needs to be retrieved again, `$currentSession` can be used as a starting point from which the desired object can be retrieved by association. The associated object can be designed so that it meets the desired needs. This same pattern applies to entities associated with `System.User`. In that case, you can use the `$currentUser` *User* object.
 
-{{< figure src="/attachments/refguide/runtime/clustered-mendix-runtime/2018-03-01_17-49-15.png" >}}
+{{< figure src="/attachments/refguide9/runtime/clustered-mendix-runtime/2018-03-01_17-49-15.png" >}}
 
 For example, you can add `Key` and `Value` members to a `Data` entity associated with `System.Session` (and have constants for key values).
 
-{{< figure src="/attachments/refguide/runtime/clustered-mendix-runtime/2018-03-01_17-42-38.png" >}}
+{{< figure src="/attachments/refguide9/runtime/clustered-mendix-runtime/2018-03-01_17-42-38.png" >}}
 
 The `Value` values can easily be obtained by performing a find on the `Key` values of a list of `Data` instances.
 
-{{< figure src="/attachments/refguide/runtime/clustered-mendix-runtime/2018-03-01_17-56-37.png" >}}
+{{< figure src="/attachments/refguide9/runtime/clustered-mendix-runtime/2018-03-01_17-56-37.png" >}}
 
 {{% alert color="warning" %}}
 When data is associated to the current user or current session, it cannot be automatically garbage-collected. As such, this data will be sent with every request to the server and returned by the responses of those requests. Therefore, associating entity instances with the current user and current session should be done when no other solutions are possible to retain this temporary data.

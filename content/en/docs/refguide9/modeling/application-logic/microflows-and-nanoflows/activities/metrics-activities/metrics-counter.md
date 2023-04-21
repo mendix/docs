@@ -1,6 +1,6 @@
 ---
 title: "Counter"
-url: /refguide/metrics-counter/
+url: /refguide9/metrics-counter/
 weight: 10
 tags: ["studio pro", "metrics", "micrometer"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
@@ -14,13 +14,13 @@ This activity can only be used in **Microflows**.
 
 The **Counter** activity can be used to increment a metrics counter by a specific value.
 
-{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/metrics-activities/metrics-counter/counter.png" alt="Counter" >}}
+{{< figure src="/attachments/refguide9/modeling/application-logic/microflows-and-nanoflows/activities/metrics-activities/metrics-counter/counter.png" alt="Counter" >}}
 
 ## 2 Properties
 
 An example of counter properties is represented in the image below:
 
-{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/metrics-activities/metrics-counter/counter-properties.png" alt="Counter Properties" >}}
+{{< figure src="/attachments/refguide9/modeling/application-logic/microflows-and-nanoflows/activities/metrics-activities/metrics-counter/counter-properties.png" alt="Counter Properties" >}}
 
 There are two sets of properties for this activity, those in the dialog box on the left, and those in the properties pane on the right.
 
@@ -52,7 +52,7 @@ It is recommended to use a common prefix that uniquely defines your organisation
 
 ### 3.2 Value
 
-The value used to increment the counter's value. Values are specified with [expressions](/refguide/expressions/) and should be of type Integer/Long. It is only possible to increment the counter, so values cannot be negative.
+The value used to increment the counter's value. Values are specified with [expressions](/refguide9/expressions/) and should be of type Integer/Long. It is only possible to increment the counter, so values cannot be negative.
 
 ### 3.3 Tags
 
@@ -60,10 +60,10 @@ You can specify a list of tags to enrich the counter name with key/value pairs. 
 
 ## 4 Common Section {#common}
 
-{{% snippet file="/static/_includes/refguide/microflow-common-section-link.md" %}}
+{{% snippet file="/static/_includes/refguide9/microflow-common-section-link.md" %}}
 
 ## 5 Read More
 
-* [Metric Configuration](/refguide/metrics/)
-* [Metrics Activities](/refguide/metrics-activities/)
+* [Metric Configuration](/refguide9/metrics/)
+* [Metrics Activities](/refguide9/metrics-activities/)
 * [Meter Concepts](https://micrometer.io/docs/concepts)

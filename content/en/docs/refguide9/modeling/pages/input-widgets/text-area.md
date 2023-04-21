@@ -1,6 +1,6 @@
 ---
 title: "Text Area"
-url: /refguide/text-area/
+url: /refguide9/text-area/
 weight: 20
 tags: ["studio pro"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
@@ -8,19 +8,19 @@ tags: ["studio pro"]
 
 ## 1 Introduction
 
-A **text area** is used to display and, optionally, allow the end-user to edit the value of an attribute of [data type](/refguide/data-types/) *String*. It differs from a [text box](/refguide/text-box/) In that the value can be displayed over several lines.
+A **text area** is used to display and, optionally, allow the end-user to edit the value of an attribute of [data type](/refguide9/data-types/) *String*. It differs from a [text box](/refguide9/text-box/) In that the value can be displayed over several lines.
 
-A text area must be placed in a [data container](/refguide/data-widgets/) and displays an attribute of the object(s) retrieved by that container. The name of the attribute to be displayed is shown inside the text area, between square brackets, and colored blue.
+A text area must be placed in a [data container](/refguide9/data-widgets/) and displays an attribute of the object(s) retrieved by that container. The name of the attribute to be displayed is shown inside the text area, between square brackets, and colored blue.
 
 For example, the following text area allows the end-user to see, and set, the **Notes** about a contact.
 
-{{< figure src="/attachments/refguide/modeling/pages/input-widgets/text-area/text-area.png" >}}
+{{< figure src="/attachments/refguide9/modeling/pages/input-widgets/text-area/text-area.png" >}}
 
 ## 2 Properties
 
 An example of text area properties is represented in the image below:
 
-{{< figure src="/attachments/refguide/modeling/pages/input-widgets/text-area/text-area-properties.png"   width="250"  >}}
+{{< figure src="/attachments/refguide9/modeling/pages/input-widgets/text-area/text-area-properties.png"   width="250"  >}}
 
 Text area properties consist of the following sections:
 
@@ -36,19 +36,19 @@ Text area properties consist of the following sections:
 
 ### 2.1 Common Section{#common}
 
-{{% snippet file="/static/_includes/refguide/common-section-link.md" %}}
+{{% snippet file="/static/_includes/refguide9/common-section-link.md" %}}
 
 ### 2.2 Data Source Section{#data-source}
 
-{{% snippet file="/static/_includes/refguide/data-source-section-link.md" %}}
+{{% snippet file="/static/_includes/refguide9/data-source-section-link.md" %}}
 
 ### 2.3 Design Properties Section{#design-properties}
 
-{{% snippet file="/static/_includes/refguide/design-section-link.md" %}} 
+{{% snippet file="/static/_includes/refguide9/design-section-link.md" %}} 
 
 ### 2.4 Editability Section{#editability}
 
-{{% snippet file="/static/_includes/refguide/editability-section-link.md" %}}
+{{% snippet file="/static/_includes/refguide9/editability-section-link.md" %}}
 
 ### 2.5 Events Section{#events}
 
@@ -56,7 +56,7 @@ Text area properties consist of the following sections:
 
 The on change property specifies an action that will be executed when leaving the widget, either by using the <kbd>Tab</kbd> key or by clicking another widget after the value has been changed.
 
-{{% snippet file="/static/_includes/refguide/events-section-link.md" %}}
+{{% snippet file="/static/_includes/refguide9/events-section-link.md" %}}
 
 #### 2.5.2 On Change Behavior
 
@@ -84,13 +84,13 @@ Text area will save changes if both these conditions are met:
 
 With **While user is entering data**, users can adjust one more property called **Apply after (ms)** (described above). This will reduce the amount of the calls made for an on change event, thus improving app performance.
 
-{{% snippet file="/static/_includes/refguide/events-section-link.md" %}}
+{{% snippet file="/static/_includes/refguide9/events-section-link.md" %}}
 
 #### 2.5.3 On Enter
 
 The on enter property specifies an action that will be executed when the widget is entered, either by using the <kbd>Tab</kbd> key or by clicking it.
 
-{{% snippet file="/static/_includes/refguide/events-section-link.md" %}}
+{{% snippet file="/static/_includes/refguide9/events-section-link.md" %}}
 
 #### 2.5.4 On Leave
 
@@ -98,7 +98,7 @@ The on leave property specifies an action that will be executed when leaving the
 
 This differs from the [on change](#on-change) property in that the event will always be triggered, even if the value has not been changed.
 
-{{% snippet file="/static/_includes/refguide/events-section-link.md" %}}
+{{% snippet file="/static/_includes/refguide9/events-section-link.md" %}}
 
 ### 2.6 General Section{#general}
 
@@ -121,11 +121,11 @@ Default: *5*
 
 {{% alert color="info" %}}Counter message is not supported on native mobile pages.{{% /alert %}}
 
-This is the text displayed when typing in the text area. This text has two [parameters](/refguide/text/#parameters). The first parameter contains the number of characters already typed and the second parameter contains the maximum number of characters.
+This is the text displayed when typing in the text area. This text has two [parameters](/refguide9/text/#parameters). The first parameter contains the number of characters already typed and the second parameter contains the maximum number of characters.
 
 For example, if you use the counter message `You've used {1} characters of the {2} characters that are allowed.` for your text area, the end-user will see this message displayed below the text area widget:
 
-{{< figure src="/attachments/refguide/modeling/pages/input-widgets/text-area/counter-message.png" >}}
+{{< figure src="/attachments/refguide9/modeling/pages/input-widgets/text-area/counter-message.png" >}}
 
 #### 2.6.4 Text Too Long Message
 
@@ -166,17 +166,17 @@ This option is only available in native pages.
 
 ### 2.7 Label Section{#label}
 
-{{% snippet file="/static/_includes/refguide/label-section-link.md" %}}
+{{% snippet file="/static/_includes/refguide9/label-section-link.md" %}}
 
 ### 2.8 Validation Section{#validation}
 
-{{% snippet file="/static/_includes/refguide/widget-validation-link.md" %}}
+{{% snippet file="/static/_includes/refguide9/widget-validation-link.md" %}}
 
 ### 2.9 Visibility Section{#visibility}
 
-{{% snippet file="/static/_includes/refguide/visibility-section-link.md" %}}
+{{% snippet file="/static/_includes/refguide9/visibility-section-link.md" %}}
 
 ## 3 Read More
 
-* [Data view](/refguide/data-view/)
-* [Attributes](/refguide/attributes/)
+* [Data view](/refguide9/data-view/)
+* [Attributes](/refguide9/attributes/)

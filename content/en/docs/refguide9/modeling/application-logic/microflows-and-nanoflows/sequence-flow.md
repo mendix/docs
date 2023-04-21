@@ -1,6 +1,6 @@
 ---
 title: "Sequence Flow"
-url: /refguide/sequence-flow/
+url: /refguide9/sequence-flow/
 weight: 30
 tags: ["studio pro", "sequence flow", "microflow"]
 ---
@@ -11,8 +11,8 @@ A sequence flow is a flow that is shown an arrow that links elements (events, ac
 
 When you have two activities that you want to link together a sequence flow is used.
 
-{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/sequence-flow/sequence-flow.png" >}}
+{{< figure src="/attachments/refguide9/modeling/application-logic/microflows-and-nanoflows/sequence-flow/sequence-flow.png" >}}
 
 ## 2 Condition Value
 
-The **Condition value** describes which direction should be followed based on the outcome of a [decision](/refguide/decision/) or an [object type decision](/refguide/object-type-decision/).
+The **Condition value** describes which direction should be followed based on the outcome of a [decision](/refguide9/decision/) or an [object type decision](/refguide9/object-type-decision/).

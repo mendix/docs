@@ -1,7 +1,7 @@
 ---
 title: "Minimizing the Number of In-Use Objects in Your Session"
 linktitle: "Minimizing Objects in Session"
-url: /refguide/minimize-number/
+url: /refguide9/minimize-number/
 category: "Mendix Runtime"
 weight: 60
 description: "Describes various ways to reduce the number of in-use objects."
@@ -12,7 +12,7 @@ tags: ["object", "session", "architecture", "stateless", "runtime", "client", "s
 
 Mendix has a completely stateless architecture. All the application state that was kept in the Mendix Runtime in earlier versions is now kept by the Mendix Client.
 
-The Mendix Client is a part of a Mendix application that runs on the end-user's device (a browser for a web app, and a mobile device for a native or hybrid app). It handles the interface between the end-user and the app. In most cases, it interacts with the Runtime Server to get or update shared data, or perform additional application logic. You can also run Mendix locally for testing. For more information on what the Mendix Client means for your apps, see the [Description](/refguide/mendix-client/#description) section of the *Mendix Client Reference Guide*.
+The Mendix Client is a part of a Mendix application that runs on the end-user's device (a browser for a web app, and a mobile device for a native or hybrid app). It handles the interface between the end-user and the app. In most cases, it interacts with the Runtime Server to get or update shared data, or perform additional application logic. You can also run Mendix locally for testing. For more information on what the Mendix Client means for your apps, see the [Description](/refguide9/mendix-client/#description) section of the *Mendix Client Reference Guide*.
 
 By *state* we mean non-persistable entities (NPEs) and persistable entities that have not yet been committed to the database.
 
@@ -28,7 +28,7 @@ After a microflow has run, any new objects or updates to existing objects that w
 
 The following diagram shows the flow of objects in detail:
 
-{{< figure src="/attachments/refguide/runtime/minimize-number/object_flow.png" >}}
+{{< figure src="/attachments/refguide9/runtime/minimize-number/object_flow.png" >}}
 
 ## 3 Minimizing the Number of In-Use Objects in Your Session
 
@@ -66,11 +66,11 @@ To prevent this from occurring, you can link non-persistable objects that have l
 
 To do this, first create a reference between your entity and the **Session** entity in the **System** module:
 
-{{< figure src="/attachments/refguide/runtime/minimize-number/domain_model_npe.png" >}}
+{{< figure src="/attachments/refguide9/runtime/minimize-number/domain_model_npe.png" >}}
 
 Then link the object to the current session when you create it in a microflow:
 
-{{< figure src="/attachments/refguide/runtime/minimize-number/create_object_dialog.png" >}}
+{{< figure src="/attachments/refguide9/runtime/minimize-number/create_object_dialog.png" >}}
 
 Because it is always possible to look at the current **Session** object, any objects related to the current session can also always be retrieved. The Mendix Client must then always keep these objects around; they will never be removed.
 

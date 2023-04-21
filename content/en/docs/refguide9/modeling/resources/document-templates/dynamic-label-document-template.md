@@ -1,12 +1,12 @@
 ---
 title: "Dynamic Label (Document Template)"
-url: /refguide/dynamic-label-document-template/
+url: /refguide9/dynamic-label-document-template/
 tags: ["studio pro"]
 aliases:
-    - /refguide/Dynamic+label+(document+template).html
-    - /refguide/dynamic-label-(document-template).html
-    - /refguide/Dynamic+label+(document+template)
-    - /refguide/dynamic-label-(document-template)
+    - /refguide9/Dynamic+label+(document+template).html
+    - /refguide9/dynamic-label-(document-template).html
+    - /refguide9/Dynamic+label+(document+template)
+    - /refguide9/dynamic-label-(document-template)
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
@@ -16,7 +16,7 @@ A dynamic label is used for the same kind of attributes as a text box from the p
 
 {{% alert color="info" %}}
 
-{{< figure src="/attachments/refguide/modeling/resources/document-templates/918131.png" >}}
+{{< figure src="/attachments/refguide9/modeling/resources/document-templates/918131.png" >}}
 
 A dynamic label linking to a customer name.
 
@@ -26,7 +26,7 @@ A dynamic label linking to a customer name.
 
 ### 2.1 Style
 
-For details, see [Style](/refguide/style/).
+For details, see [Style](/refguide9/style/).
 
 ### 2.2 Render XHTML
 
@@ -63,11 +63,11 @@ These are the possible values:
 
 If you choose **Custom** as the date format (see above), this property determines how the attribute value is formatted. The custom date format is a string that allows for any combination of symbols found in the table below. Any punctuation will be rendered literally.
 
-{{% snippet file="/static/_includes/refguide/custom-date-format-tokens.md" %}}
+{{% snippet file="/static/_includes/refguide9/custom-date-format-tokens.md" %}}
 
 ## 3 Common Properties
 
-{{% snippet file="/static/_includes/refguide/name-property.md" %}}
+{{% snippet file="/static/_includes/refguide9/name-property.md" %}}
 
 ## 4 Data Source Properties
 

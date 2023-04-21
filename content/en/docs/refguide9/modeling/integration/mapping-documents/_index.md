@@ -1,6 +1,6 @@
 ---
 title: "Mapping Documents"
-url: /refguide/mapping-documents/
+url: /refguide9/mapping-documents/
 weight: 19
 tags: ["studio pro"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
@@ -8,36 +8,36 @@ tags: ["studio pro"]
 
 ## 1 Introduction
 
-Mapping documents are used to define how Mendix objects can be converted to and from XML or JSON, according to a specific XML schema or JSON structure. There are two types of mappings: [Import Mappings](/refguide/import-mappings/) and [Export Mappings](/refguide/export-mappings/).
+Mapping documents are used to define how Mendix objects can be converted to and from XML or JSON, according to a specific XML schema or JSON structure. There are two types of mappings: [Import Mappings](/refguide9/import-mappings/) and [Export Mappings](/refguide9/export-mappings/).
 
 ## 2 Import Mappings {#import-mappings}
 
 Import mappings are used to define how incoming XML or JSON is converted into Mendix objects, according to a specific XML schema or JSON structure. This is needed to be able to interpret data received from other systems. In Mendix there are three basic scenarios for creating Mendix objects from XML or JSON:
 
-* Receiving XML from a web service (defined in an [imported web service](/refguide/consumed-web-service/)) in a [call web service](/refguide/call-web-service-action/) activity.
-* Receiving XML or JSON from a call action [call REST service](/refguide/call-rest-action/).
-* Importing XML or JSON directly in an [import from mapping](/refguide/import-mapping-action/) action. 
+* Receiving XML from a web service (defined in an [imported web service](/refguide9/consumed-web-service/)) in a [call web service](/refguide9/call-web-service-action/) activity.
+* Receiving XML or JSON from a call action [call REST service](/refguide9/call-rest-action/).
+* Importing XML or JSON directly in an [import from mapping](/refguide9/import-mapping-action/) action. 
 
 This is an example of an import mapping document that maps an **Order** from a web service to a **ReceivedOrder** entity:
 
-{{< figure src="/attachments/refguide/modeling/integration/mapping-documents/16843933.png" >}}
+{{< figure src="/attachments/refguide9/modeling/integration/mapping-documents/16843933.png" >}}
 
-For more details, see [Import Mappings](/refguide/import-mappings/).
+For more details, see [Import Mappings](/refguide9/import-mappings/).
 
 ## 3 Export Mappings
 
 Export mappings are used to define how Mendix objects can be converted to XML according to a specific XML schema. This is needed to be able to send data to other systems in a format the other system can process. In Mendix there are two basic scenarios for converting Mendix objects to XML:
 
-* Sending XML to a web service (defined in an [imported web service](/refguide/consumed-web-service/)) in a [call web service](/refguide/call-web-service-action/) activity.
-* Exporting XML directly in an [export with mapping](/refguide/export-mapping-action/) action. 
+* Sending XML to a web service (defined in an [imported web service](/refguide9/consumed-web-service/)) in a [call web service](/refguide9/call-web-service-action/) activity.
+* Exporting XML directly in an [export with mapping](/refguide9/export-mapping-action/) action. 
 
 This is an example of an export mapping document:
 
-{{< figure src="/attachments/refguide/modeling/integration/mapping-documents/16843940.png" >}}
+{{< figure src="/attachments/refguide9/modeling/integration/mapping-documents/16843940.png" >}}
 
 In this example, a **Cheesecake** entity will be passed when the export mapping is called. Subsequently, the **Topping** entities will be fetched by following the **Topping_Cheesecake** association from the passed Cheesecake Mendix object. The result is passed to an XML document or sent to a web service.
 
-For more details, see [Export Mappings](/refguide/export-mappings/).
+For more details, see [Export Mappings](/refguide9/export-mappings/).
 
 ## 4 Creating a New Mapping Document
 
@@ -46,11 +46,11 @@ To specify an import or export mapping, the user needs to do a number of things:
 1. Create a new **Import Mapping** or **Export Mapping** document.
 2. Click **Select elements...** to select an XML schema, imported web service document, or JSON structure document as the source schema for this mapping. See **Figure 1**. 
 
-    If the schema is large, a subset of elements can be selected so you don't have to map all of them. This is explained in more detail in the [Select Elements](/refguide/select--elements/) section.
+    If the schema is large, a subset of elements can be selected so you don't have to map all of them. This is explained in more detail in the [Select Elements](/refguide9/select--elements/) section.
 
 3. Click **OK**. A structure is created with placeholders for entities on the left, and the selected XSD elements on the right side.
 
-    It is possible to include a parameter entity in mapping documents. Mapping documents with a parameter entity need to be invoked (in a [call web service](/refguide/call-web-service-action/) or [export with mapping](/refguide/export-mapping-action/) activity) by passing a parameter of the configured type. Mapping documents without a parameter entity can be invoked without passing a parameter. For import mappings, a parameter entity can be included by dragging one onto the placeholder in the created structure using the Connector tool. Export mappings always need to have a parameter entity (the object that is being exported) and the mapped root element is used for this. In both cases, the parameter entity is depicted as a yellow arrow parameter symbol.
+    It is possible to include a parameter entity in mapping documents. Mapping documents with a parameter entity need to be invoked (in a [call web service](/refguide9/call-web-service-action/) or [export with mapping](/refguide9/export-mapping-action/) activity) by passing a parameter of the configured type. Mapping documents without a parameter entity can be invoked without passing a parameter. For import mappings, a parameter entity can be included by dragging one onto the placeholder in the created structure using the Connector tool. Export mappings always need to have a parameter entity (the object that is being exported) and the mapped root element is used for this. In both cases, the parameter entity is depicted as a yellow arrow parameter symbol.
 
 4. Map the child elements of the schema. Entities can be obtained in four ways:
 
@@ -63,7 +63,7 @@ To specify an import or export mapping, the user needs to do a number of things:
 
 ## 5 Convenience Functions
 
-* Map automatically: Automatically look for entities and associations in the domain model that can be used in the mapping. If a matching entity or association is not found, it is created in the domain model. This function is explained in more detail in the [Map Automatically](/refguide/map-automatically/) section.
+* Map automatically: Automatically look for entities and associations in the domain model that can be used in the mapping. If a matching entity or association is not found, it is created in the domain model. This function is explained in more detail in the [Map Automatically](/refguide9/map-automatically/) section.
 * Clear mappings: Disconnects all mapping elements in the document from entities and associations. They are not deleted in the domain model.
 
 ## 6 Tip: Important Windows

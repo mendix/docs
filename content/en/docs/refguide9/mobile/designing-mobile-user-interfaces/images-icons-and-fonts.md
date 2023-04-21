@@ -1,11 +1,11 @@
 ---
 title: "Images, Icons, and Fonts"
-url: /refguide/mobile/designing-mobile-user-interfaces/images-icons-and-fonts/
+url: /refguide9/mobile/designing-mobile-user-interfaces/images-icons-and-fonts/
 weight: 30
 description: "This tutorial will teach you to enrich the design of your native mobile app with images and custom fonts."
 tags: ["images", "svg", "custom fonts", "font"]
 aliases:
-    - /refguide/native-svg/
+    - /refguide9/native-svg/
     - /howto/mobile/native-custom-fonts/
 ---
 
@@ -54,17 +54,17 @@ Setting the `fill` property on this image's styling will turn the rectangle (`re
 
 Here is how an SVG without the `fill` property looks:
 
-{{< figure src="/attachments/refguide/mobile/native-mobile/native-svg/before.png" alt="before" >}}
+{{< figure src="/attachments/refguide9/mobile/native-mobile/native-svg/before.png" alt="before" >}}
 
 Here is how an SVG with the `fill` property looks:
 
-{{< figure src="/attachments/refguide/mobile/native-mobile/native-svg/after.png" alt="after" >}}
+{{< figure src="/attachments/refguide9/mobile/native-mobile/native-svg/after.png" alt="after" >}}
 
 You can check the list of allowed style properties at the [react-native-svg](https://github.com/react-native-community/react-native-svg#common-props) repository.
 
 #### 2.3.1 Coloring SVG Icons
 
-Icons can only be set for buttons and bottom bar items. When you integrate an SVG icon into a button or bottom bar item, you will have to set the SVG's color yourself. When using an app which employs Atlas UI, by default the colors are all white. For more information on styling, see the [Native Mobile Styling Guide](/refguide/native-styling-refguide/).
+Icons can only be set for buttons and bottom bar items. When you integrate an SVG icon into a button or bottom bar item, you will have to set the SVG's color yourself. When using an app which employs Atlas UI, by default the colors are all white. For more information on styling, see the [Native Mobile Styling Guide](/refguide9/native-styling-refguide/).
 
 For example, the following code:
 
@@ -84,7 +84,7 @@ export const DemoButton = {
 
 Would produce the following button and SVG:
 
-{{< figure src="/attachments/refguide/mobile/native-mobile/native-svg/blue-svg.png" alt="blue svg" >}}
+{{< figure src="/attachments/refguide9/mobile/native-mobile/native-svg/blue-svg.png" alt="blue svg" >}}
 
 ### 2.4 Using SVGs in Pluggable Native Widgets {#svg-pluggable}
 
@@ -236,7 +236,7 @@ To use the new fonts to style your content, follow these instructions:
 
     {{< figure src="/attachments/howto/mobile/native-mobile/implementation/native-custom-fonts/advanced-fonts4.png" alt="Custom fonts screen code snippet"   width="400"  >}}
 
-1. Open your styles *js* file and paste the snippet there. For this example, the *custom-variables.js* file is being used. For more information on styling your app, see [Native Styling](/refguide/mobile/designing-mobile-user-interfaces/native-styling/):
+1. Open your styles *js* file and paste the snippet there. For this example, the *custom-variables.js* file is being used. For more information on styling your app, see [Native Styling](/refguide9/mobile/designing-mobile-user-interfaces/native-styling/):
 
     {{< figure src="/attachments/howto/mobile/native-mobile/implementation/native-custom-fonts/custom-variables.png" alt="Custom variables file"   width="400"  >}}
 

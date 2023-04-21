@@ -1,6 +1,6 @@
 ---
 title: "Action Call Activities"
-url: /refguide/action-call-activities/
+url: /refguide9/action-call-activities/
 weight: 30
 tags: ["studio pro", "action call", "action call activities"]
 ---
@@ -9,11 +9,11 @@ tags: ["studio pro", "action call", "action call activities"]
 
 The following are the action call activities you can use in your microflow or nanoflow:
 
-* [Java action call](/refguide/java-action-call/) *(only in microflows)* – calls a Java action
-* [JavaScript action call](/refguide/javascript-action-call/) *(only in nanoflows)* – calls a JavaScript action
-* [Microflow call](/refguide/microflow-call/) – calls a microflow
+* [Java action call](/refguide9/java-action-call/) *(only in microflows)* – calls a Java action
+* [JavaScript action call](/refguide9/javascript-action-call/) *(only in nanoflows)* – calls a JavaScript action
+* [Microflow call](/refguide9/microflow-call/) – calls a microflow
 
 ## 2 Read More
 
-* [Activities](/refguide/activities/)
-* [Call Nanoflow](/refguide/nanoflow-call/)
+* [Activities](/refguide9/activities/)
+* [Call Nanoflow](/refguide9/nanoflow-call/)

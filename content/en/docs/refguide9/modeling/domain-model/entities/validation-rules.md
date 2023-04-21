@@ -1,6 +1,6 @@
 ---
 title: "Validation Rules"
-url: /refguide/validation-rules/
+url: /refguide9/validation-rules/
 weight: 40
 tags: ["domain model", "entity", "validation rule"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
@@ -18,7 +18,7 @@ In all other cases, a validation error results in a Java exception being thrown.
 
 For example, for entity 'Customer' the name and credit need to be filled in at all times, and the expenses cannot be higher than the credit. This is visualized in the domain model editor as follows:
 
-{{< figure src="/attachments/refguide/modeling/domain-model/entities/validation-rules/customer-validation-rules.png" >}}
+{{< figure src="/attachments/refguide9/modeling/domain-model/entities/validation-rules/customer-validation-rules.png" >}}
 
 {{% alert color="warning" %}}
 You can only define validation rules for persistable entities as they are designed to ensure database integrity. Therefore, validation rules are disabled for non-persistable entities.
@@ -26,11 +26,11 @@ You can only define validation rules for persistable entities as they are design
 
 ## 2 Properties
 
-You can add and edit validation rules for an entity from the [entity dialog box](/refguide/entities/#dialog-box).
+You can add and edit validation rules for an entity from the [entity dialog box](/refguide9/entities/#dialog-box).
 
 An example of the validation rule properties is represented in the image below:
 
-{{< figure src="/attachments/refguide/modeling/domain-model/entities/validation-rules/validation-rule-properties.png" >}}
+{{< figure src="/attachments/refguide9/modeling/domain-model/entities/validation-rules/validation-rule-properties.png" >}}
 
 Validation rule properties consist of the following sections:
 
@@ -59,7 +59,7 @@ The rule defines which condition an attribute should satisfy.
 | Unique | The value of this attribute must be different from the values of this attribute in all other objects of the same entity. See [Uniqueness Constraint](#uniqueness), below for more information. |
 | Equals | The attribute value needs to be equal to a specified value or equal to the value of another attribute of the same object. |
 | Range | The attribute value needs to be greater than or equal to, less than or equal to, or between two values. The values are either specified fixed values or values of other attributes of the same object. |
-| Regular expression | The attribute needs to match a regular expression stored in a [regular expression](/refguide/regular-expressions/) resource. |
+| Regular expression | The attribute needs to match a regular expression stored in a [regular expression](/refguide9/regular-expressions/) resource. |
 | Maximum length | The attribute may have no more than the specified number of characters. |
 
 {{% alert color="info" %}}
@@ -87,7 +87,7 @@ There are some things you need to consider when applying a uniqueness constraint
 
 #### 3.1.1 Strings
 
-The uniqueness constraint will take into account the way that the underlying database deals with case sensitivity. For a full discussion of this, see [Case-Sensitive Database Behavior](/refguide/case-sensitive-database-behavior/).
+The uniqueness constraint will take into account the way that the underlying database deals with case sensitivity. For a full discussion of this, see [Case-Sensitive Database Behavior](/refguide9/case-sensitive-database-behavior/).
 
 The uniqueness constraint will also take into account the way that the underlying database deals with string matching. If, for example, two values of a string attribute differ only in having a different number of trailing spaces, some databases will ignore these spaces when deciding if the strings are the same, while others will see them as different.
 
@@ -98,7 +98,7 @@ When you add a uniqueness constraint to an entity which already contains data, a
 * if you deploy the app from Studio Pro, an error will be shown on deployment
 * if you deploy the app from a deployment package (for example in the Mendix cloud), the app will not start and errors will be written to the log
 
-{{< figure src="/attachments/refguide/modeling/domain-model/entities/validation-rules/startup-error.png" >}}
+{{< figure src="/attachments/refguide9/modeling/domain-model/entities/validation-rules/startup-error.png" >}}
 
 #### 3.1.3 Generalizations
 
@@ -106,7 +106,7 @@ There are limitations on using database uniqueness validation if you are using a
 
 With the database uniqueness validation option enabled, you cannot define the unique validation rule in the specialization entity for attributes which come from the generalization of this entity. If you do this, a consistency error is reported, as in this image:
 
-{{< figure src="/attachments/refguide/modeling/domain-model/entities/validation-rules/unique-validation-rule-error.png" >}}
+{{< figure src="/attachments/refguide9/modeling/domain-model/entities/validation-rules/unique-validation-rule-error.png" >}}
 
 You can, however, define a unique validation rule for attributes which are added in the specialized entity.
 
@@ -125,7 +125,7 @@ You can, however, set a validation rule to make *EmailAddress* unique, as that a
 
 You can resolve this issue simply, by moving unique validation rules of these attributes to the generalization entity where the attribute it defined.
 
-{{< figure src="/attachments/refguide/modeling/domain-model/entities/validation-rules/unique-validation-rule-no-error.png" >}}
+{{< figure src="/attachments/refguide9/modeling/domain-model/entities/validation-rules/unique-validation-rule-no-error.png" >}}
 
 ### 3.2 Association Uniqueness
 
@@ -133,14 +133,14 @@ Uniqueness constraints also apply to associations. This is done by changing the 
 
 Consider the following example:
 
-{{< figure src="/attachments/refguide/modeling/domain-model/entities/validation-rules/one-to-many-assoc.PNG" >}}
+{{< figure src="/attachments/refguide9/modeling/domain-model/entities/validation-rules/one-to-many-assoc.PNG" >}}
 
 Initially, the domain model contains a one-to-many association between **Address** and **Person**. This means that a Person can have multiple addresses. After some time, the data structure is changed, because you only want to hold one Address per Person. Proper data modeling prescribes changing the association into a one-to-one association. New data will reflect the updated association properly.
 
-{{< figure src="/attachments/refguide/modeling/domain-model/entities/validation-rules/one-to-one-assoc.PNG" >}}
+{{< figure src="/attachments/refguide9/modeling/domain-model/entities/validation-rules/one-to-one-assoc.PNG" >}}
 
 Existing association data in the database must also adhere to the updated one-to-one association. This is checked at deployment. If a person has multiple addresses, the model will not deploy, and an error will be given in Studio Pro or in the logs of deployment in the (Mendix) cloud:
 
-{{< figure src="/attachments/refguide/modeling/domain-model/entities/validation-rules/startup-error-assoc.png" >}}
+{{< figure src="/attachments/refguide9/modeling/domain-model/entities/validation-rules/startup-error-assoc.png" >}}
 
 We enforce this new stricter association on existing data in order to avoid easily overlooked mistakes that result in returning only a single address per person (where in fact they still have multiple addresses in the database). For example, the Mendix Platform could consistently return the same address each run, but other addresses would be dormant entries in the database.

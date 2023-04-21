@@ -1,6 +1,6 @@
 ---
 title: "Call REST Service"
-url: /refguide/call-rest-action/
+url: /refguide9/call-rest-action/
 tags: ["studio pro", "integration activity", "call rest service"]
 weight: 10
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
@@ -18,7 +18,7 @@ The **Call REST service** activity can be used to call a REST endpoint. You can 
 
 An example of call rest action properties is represented in the image below:
 
-{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/integration-activities/call-rest-action/call-rest-action-properties.png" alt="call rest action properties" >}}
+{{< figure src="/attachments/refguide9/modeling/application-logic/microflows-and-nanoflows/activities/integration-activities/call-rest-action/call-rest-action-properties.png" alt="call rest action properties" >}}
 
 There are two sets of properties for this activity, those in the dialog box on the left, and those in the properties pane on the right.
 
@@ -44,7 +44,7 @@ The properties dialog box consists of four tabs:
 
 ## 4 General Tab {#general}
 
-{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/integration-activities/call-rest-action/general-tab.png"   width="66%"  >}}
+{{< figure src="/attachments/refguide9/modeling/application-logic/microflows-and-nanoflows/activities/integration-activities/call-rest-action/general-tab.png"   width="66%"  >}}
 
 ### 4.1 Location
 
@@ -58,7 +58,7 @@ The template for the location can contain parameters that are written as a numbe
 
 #### 4.1.2 Parameters
 
-For each parameter in the template, you can specify its value using a [microflow expression](/refguide/expressions/) resulting in a string value. This value will be inserted at the position of the parameter.
+For each parameter in the template, you can specify its value using a [microflow expression](/refguide9/expressions/) resulting in a string value. This value will be inserted at the position of the parameter.
 
 ### 4.2 HTTP Method
 
@@ -106,13 +106,13 @@ The options are:
 When you select **Override**, you can configure which client certificate will be used. Click **Edit** to specify the **Client certificate identifier**. This identifier can be set in different places, depending on where you deploy the app:
 
 * When you deploy the app in the Mendix cloud, set the **Client certificate identifier** to the desired **WEB SERVICE CALL NAME** when [pinning a client certificate](/developerportal/deploy/certificates/#outgoing-client-certificates).
-* When you deploy the app elsewhere, the identifier is set in the custom setting [ClientCertificateUsages](/refguide/custom-settings/#CACertificates). For testing locally, this can be set as a custom server setting in a [Configuration](/refguide/configuration/#custom).
+* When you deploy the app elsewhere, the identifier is set in the custom setting [ClientCertificateUsages](/refguide9/custom-settings/#CACertificates). For testing locally, this can be set as a custom server setting in a [Configuration](/refguide9/configuration/#custom).
 
 When this identifier is not set for the environment where your app is deployed (either not pinned or not present in *ClientCertificateUsages*), the default settings will be used (as if **Use app settings** were selected).
 
 ## 5 HTTP Headers Tab {#http-headers}
 
-{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/integration-activities/call-rest-action/http-headers-tab.png" >}}
+{{< figure src="/attachments/refguide9/modeling/application-logic/microflows-and-nanoflows/activities/integration-activities/call-rest-action/http-headers-tab.png" >}}
 
 ### 5.1 Use HTTP Authentication
 
@@ -120,11 +120,11 @@ The **Use HTTP authentication** check box defines whether basic authentication (
 
 ### 5.2 User Name
 
-The **User name** property defines the user name that will be used to authenticate over HTTP. The user name needs to be entered using [microflow Expressions](/refguide/expressions/). The microflow expression should result in a string.
+The **User name** property defines the user name that will be used to authenticate over HTTP. The user name needs to be entered using [microflow Expressions](/refguide9/expressions/). The microflow expression should result in a string.
 
 ### 5.3 Password
 
-The **Password** property defines the password that will be used to authenticate over HTTP. The password needs to be entered using [expressions](/refguide/expressions/). The microflow expression should result in a string.
+The **Password** property defines the password that will be used to authenticate over HTTP. The password needs to be entered using [expressions](/refguide9/expressions/). The microflow expression should result in a string.
 
 ### 5.4 Custom HTTP Headers {#custom-http-headers}
 
@@ -136,7 +136,7 @@ REST endpoints which are using NGINX as a webserver will ['silently drop'](https
 
 ## 6 Request Tab {#request}
 
-{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/integration-activities/call-rest-action/request-tab.png" >}}
+{{< figure src="/attachments/refguide9/modeling/application-logic/microflows-and-nanoflows/activities/integration-activities/call-rest-action/request-tab.png" >}}
 
 The sections below describe the options in the drop-down menu for generating the request.
 
@@ -146,7 +146,7 @@ Requests can only be generated for HTTP methods POST, PUT, PATCH, and OPTIONS.
 
 ### 6.1 Export Mapping for the Entire Request
 
-This option allows you to use a single [export mapping](/refguide/export-mappings/) for the body of the request. 
+This option allows you to use a single [export mapping](/refguide9/export-mappings/) for the body of the request. 
 
 #### 6.1.1 Mapping
 
@@ -154,15 +154,15 @@ Select the mapping that you want to apply.
 
 #### 6.1.2 Parameter Type
 
-If the [export mapping](/refguide/export-mappings/) requires an input, this field shows the type of the input.
+If the [export mapping](/refguide9/export-mappings/) requires an input, this field shows the type of the input.
 
 #### 6.1.3 Parameter
 
-If the [export mapping](/refguide/export-mappings/) requires an input, you can select a parameter of the correct type.
+If the [export mapping](/refguide9/export-mappings/) requires an input, you can select a parameter of the correct type.
 
 #### 6.1.4 Content Type
 
-If the [export mapping](/refguide/export-mappings/) is based on a message definition, it can export either XML or JSON. Choose the type of output you want.
+If the [export mapping](/refguide9/export-mappings/) is based on a message definition, it can export either XML or JSON. Choose the type of output you want.
 
 {{% alert color="info" %}}
 **Content-Type header** is not set by default. To set it, use the **Custom HTTP Headers** tab.
@@ -170,7 +170,7 @@ If the [export mapping](/refguide/export-mappings/) is based on a message defini
 
 ### 6.2 Binary for the Entire Request
 
-This option allows you to send binary data (for example, the contents of a FileDocument). See [Images and Files with REST](/refguide/send-receive-files-rest/) for detailed information working with files with REST).
+This option allows you to send binary data (for example, the contents of a FileDocument). See [Images and Files with REST](/refguide9/send-receive-files-rest/) for detailed information working with files with REST).
 
 ### 6.3 Form-Data
 
@@ -194,15 +194,15 @@ See [String Template](#string-template), above, for more information on construc
 
 ## 7 Response Tab {#response}
 
-{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/integration-activities/call-rest-action/response-tab.png" >}}
+{{< figure src="/attachments/refguide9/modeling/application-logic/microflows-and-nanoflows/activities/integration-activities/call-rest-action/response-tab.png" >}}
 
 ### 7.1 Response Handling
 
 These are the options in the drop-down menu for handling the response:
 
-* **Apply import mapping** – if the response is JSON or XML, it can be transformed directly into objects using an [import mapping](/refguide/import-mappings/); the fields that you can choose here are described in the [Import Mapping action](/refguide/import-mapping-action/)
-* **Store in an HTTP response** – any successful HTTP response can be stored directly in an [HttpResponse](/refguide/http-request-and-response-entities/#http-response) object, and the [$latestHttpResponse](#latesthttpresponse) variable is also updated
-* **Store in a file document** – if the response contains binary content (for example, a PDF), it can be stored in an object of an entity type which inherits from `System.FileDocument` (see [Images and Files with REST](/refguide/send-receive-files-rest/)) for detailed information working with files with REST)
+* **Apply import mapping** – if the response is JSON or XML, it can be transformed directly into objects using an [import mapping](/refguide9/import-mappings/); the fields that you can choose here are described in the [Import Mapping action](/refguide9/import-mapping-action/)
+* **Store in an HTTP response** – any successful HTTP response can be stored directly in an [HttpResponse](/refguide9/http-request-and-response-entities/#http-response) object, and the [$latestHttpResponse](#latesthttpresponse) variable is also updated
+* **Store in a file document** – if the response contains binary content (for example, a PDF), it can be stored in an object of an entity type which inherits from `System.FileDocument` (see [Images and Files with REST](/refguide9/send-receive-files-rest/)) for detailed information working with files with REST)
 * **Store in a string** – if the response is a string (for example, CSV), it can be stored directly in a string variable
 * **Do not store in a variable** - use this option when the call does not return anything useful
 
@@ -216,7 +216,7 @@ The **Variable** field defines the name for the result of the operation.
 
 #### 7.3.1 $latestHttpResponse Variable
 
-The `$latestHttpResponse` variable is of the [HttpResponse](/refguide/http-request-and-response-entities/#http-response) type. It is available after a **Call REST** activity. This variable can only be accessed in the microflow where the **Call REST Service** activity is used.
+The `$latestHttpResponse` variable is of the [HttpResponse](/refguide9/http-request-and-response-entities/#http-response) type. It is available after a **Call REST** activity. This variable can only be accessed in the microflow where the **Call REST Service** activity is used.
 
 However, its `Content` attribute will be left empty in most cases to minimize memory usage.
 
@@ -227,15 +227,15 @@ This attribute is filled when one of the following scenarios occur:
 
 #### 7.3.2  Store Message Body in $latestHttpResponse Variable {#latesthttpresponse}
 
-If HTTP response status code is not successful (for example, `[4xx]` or `[5xx]`), the flow will continue in an [error handler](/refguide/error-handling-in-microflows/#errorhandlers).
+If HTTP response status code is not successful (for example, `[4xx]` or `[5xx]`), the flow will continue in an [error handler](/refguide9/error-handling-in-microflows/#errorhandlers).
 
 {{% alert color="warning" %}}
-You should always add an error handler for a [call REST service](/refguide/call-rest-action/) action.
+You should always add an error handler for a [call REST service](/refguide9/call-rest-action/) action.
 {{% /alert %}}
 
 ## 8 Common Section{#common}
 
-{{% snippet file="/static/_includes/refguide/microflow-common-section-link.md" %}}
+{{% snippet file="/static/_includes/refguide9/microflow-common-section-link.md" %}}
 
 ## 9 Troubleshooting{#troubleshooting}
 
@@ -245,7 +245,7 @@ This error occurs when your app's infrastructure closes the connection because i
 
 There are two ways to resolve this:
 
-1. Alter the value of the `http.client.CleanupAfterSeconds` [runtime setting](/refguide/custom-settings/) to be less than the connection timeout. This will ensure that the your app client will create a new HTTP client for the request.
+1. Alter the value of the `http.client.CleanupAfterSeconds` [runtime setting](/refguide9/custom-settings/) to be less than the connection timeout. This will ensure that the your app client will create a new HTTP client for the request.
 2. Handle the error in your microflow and retry a number of times before returning the error. Your flow might look similar to the one below.
 
-    {{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/integration-activities/call-rest-action/retry-rest-connection-timeout.png" >}}
+    {{< figure src="/attachments/refguide9/modeling/application-logic/microflows-and-nanoflows/activities/integration-activities/call-rest-action/retry-rest-connection-timeout.png" >}}

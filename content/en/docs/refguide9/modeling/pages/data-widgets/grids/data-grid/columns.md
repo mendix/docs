@@ -1,18 +1,18 @@
 ---
 title: "Grid Columns"
-url: /refguide/columns/
+url: /refguide9/columns/
 tags: ["studio pro", "column", "grid column", "data grid"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 ## 1 Introduction
 
-Grid columns allow you to set properties for a [data grid](/refguide/data-grid/) or [reference set selector](/refguide/reference-set-selector/) column. 
+Grid columns allow you to set properties for a [data grid](/refguide9/data-grid/) or [reference set selector](/refguide9/reference-set-selector/) column. 
 
 ## 2 Properties
 
 An example of grid column properties is represented in the image below: 
 
-{{< figure src="/attachments/refguide/modeling/pages/data-widgets/grids/data-grid/columns/column-properties.png"   width="250"  >}}
+{{< figure src="/attachments/refguide9/modeling/pages/data-widgets/grids/data-grid/columns/column-properties.png"   width="250"  >}}
 
 Grid column properties consist of the following sections:
 
@@ -23,7 +23,7 @@ Grid column properties consist of the following sections:
 
 ### 2.1 Common Section {#common}
 
-{{% snippet file="/static/_includes/refguide/common-section-link.md" %}}
+{{% snippet file="/static/_includes/refguide9/common-section-link.md" %}}
 
 ### 2.2 Data Source Section {#data-source}
 
@@ -67,13 +67,13 @@ These are the possible values:
 
 If you choose **Custom** as the date format (see above), this property determines how the attribute value is formatted. The custom date format is a string that allows for any combination of symbols found in the table below. Any punctuation will be rendered literally.
 
-{{% snippet file="/static/_includes/refguide/custom-date-format-tokens.md" %}}
+{{% snippet file="/static/_includes/refguide9/custom-date-format-tokens.md" %}}
 
 ### 2.4 General Section {#general}
 
 #### 2.4.1 Caption
 
-The caption of a column is the text that appears as a header above the rows. This is a translatable text. See [Language Menu](/refguide/translatable-texts/).
+The caption of a column is the text that appears as a header above the rows. This is a translatable text. See [Language Menu](/refguide9/translatable-texts/).
 
 #### 2.4.2 Editable
 
@@ -98,7 +98,7 @@ Note that all objects will be taken into account, and not just the ones on the c
 
 #### 2.4.4 Aggregate Caption
 
-The aggregate caption is the text that appears in front of the computed value. This is a translatable text. See [Language Menu](/refguide/translatable-texts/).
+The aggregate caption is the text that appears in front of the computed value. This is a translatable text. See [Language Menu](/refguide9/translatable-texts/).
 
 {{% alert color="info" %}}
 'Total' could be an aggregate caption for a column that shows the sum of the values.
@@ -106,11 +106,11 @@ The aggregate caption is the text that appears in front of the computed value. T
 
 #### 2.4.5 Show Tooltip
 
-This property determines whether the tooltip page is shown as the mouse is hovered over this column. The tooltip page can be configured on the [Data grid](/refguide/data-grid/).
+This property determines whether the tooltip page is shown as the mouse is hovered over this column. The tooltip page can be configured on the [Data grid](/refguide9/data-grid/).
 
 Default: *False*
 
 ## 3 Read More
 
-* [Data Grid](/refguide/data-grid/)
-* [Template Grid](/refguide/template-grid/)
+* [Data Grid](/refguide9/data-grid/)
+* [Template Grid](/refguide9/template-grid/)

@@ -1,6 +1,6 @@
 ---
 title: "Web Services"
-url: /refguide/integration/web-services/
+url: /refguide9/integration/web-services/
 category: "Integration"
 weight: 60
 description: "Introduces web services (SOAP)."
@@ -13,12 +13,12 @@ You can publish your own web services in a Mendix application. Published web ser
 
 To publish web services, see:
 
-* [Published Web Services](/refguide/published-web-services/), an overview in the Studio Pro guide
+* [Published Web Services](/refguide9/published-web-services/), an overview in the Studio Pro guide
 * [Expose a Web Service](/howto/integration/expose-a-web-service/) for step-by-step instructions
 
 To consume web services, see:
 
-* [Consumed Web Services](/refguide/consumed-web-services/), an overview in the Studio Pro guide
-* [Call Web Service](/refguide/call-web-service-action/), a description of the microflow action
+* [Consumed Web Services](/refguide9/consumed-web-services/), an overview in the Studio Pro guide
+* [Call Web Service](/refguide9/call-web-service-action/), a description of the microflow action
 * [Consume a Simple Web Service](/howto/integration/consume-a-simple-web-service/) for step-by-step instructions
 * [Consume a Complex Web Service](/howto/integration/consume-a-complex-web-service/) for step-by-step instructions

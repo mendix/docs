@@ -1,6 +1,6 @@
 ---
 title: "Decision in Workflows"
-url: /refguide/decision-in-workflows/
+url: /refguide9/decision-in-workflows/
 weight: 40
 tags: ["workflow", "workflows", "decision", "Studio Pro"]
 ---
@@ -9,7 +9,7 @@ tags: ["workflow", "workflows", "decision", "Studio Pro"]
 
 A decision is an element that makes a choice based on a condition and follows one and only one of the outgoing paths. For example, you need to use a decision to follow different paths when a new hire works remotely or when they work from the office:
 
-{{< figure src="/attachments/refguide/modeling/application-logic/workflows/workflow-elements/decision-in-workflows/decision-example.jpg" alt="Decision Example" width="300">}}
+{{< figure src="/attachments/refguide9/modeling/application-logic/workflows/workflow-elements/decision-in-workflows/decision-example.jpg" alt="Decision Example" width="300">}}
 
 ## 2 Properties
 
@@ -31,7 +31,7 @@ The **Caption** describes what happens in this element. It is displayed in the w
 
 #### 2.2.2 Condition
 
-**Condition** is configured based on an [expression](/refguide/expressions/). The expression should result in a Boolean or an enumeration.
+**Condition** is configured based on an [expression](/refguide9/expressions/). The expression should result in a Boolean or an enumeration.
 
 For the expression resulting in a Boolean, two paths are possible: **true** and **false**. For example, you can use the expression resulting in a Boolean to follow different paths whether a new employee is working from home or from the office (and either send their devices to the home address or set up a workstation in the office).
 
@@ -43,4 +43,4 @@ The number of conditions available for the enumeration type depends on the corre
 
 ## 3 Read More
 
-* [Parallel Split](/refguide/parallel-split/)
+* [Parallel Split](/refguide9/parallel-split/)

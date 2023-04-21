@@ -1,6 +1,6 @@
 ---
 title: "Native Styling"
-url: /refguide/mobile/designing-mobile-user-interfaces/native-styling/
+url: /refguide9/mobile/designing-mobile-user-interfaces/native-styling/
 weight: 40
 description: "General information for native styling in Mendix."
 tags: ["native", "styling"]
@@ -53,12 +53,12 @@ Available in Mendix Studio and Mendix Studio Pro, design properties are an easie
 
 ## 5 Using Native Styling {#using-styling}
 
-You have the capacity to alter design properties with Mendix Studio Pro. Furthermore, because all native mobile styling is written in JavaScript, you have new ways of applying your styling customizations. For more details on native styling, class names, and widget styling, see the [Widget Styling Guide](/refguide/mobile/designing-mobile-user-interfaces/widget-styling-guide/).
+You have the capacity to alter design properties with Mendix Studio Pro. Furthermore, because all native mobile styling is written in JavaScript, you have new ways of applying your styling customizations. For more details on native styling, class names, and widget styling, see the [Widget Styling Guide](/refguide9/mobile/designing-mobile-user-interfaces/widget-styling-guide/).
 
 ### 5.1 Prerequisites 
 
 * Install an integrated development environment (IDE) of your choice (Mendix recommends [Microsoft Visual Studio Code](https://code.visualstudio.com/))
-* Create a Mendix app based on the Blank Native Mobile App template by following the [Creating a New App Based on the Quickstart App](/refguide/mobile/getting-started-with-mobile/#quickstartapp) section of *Get Started with Native Mobile*
+* Create a Mendix app based on the Blank Native Mobile App template by following the [Creating a New App Based on the Quickstart App](/refguide9/mobile/getting-started-with-mobile/#quickstartapp) section of *Get Started with Native Mobile*
 * Download the Make It Native 9 app on your mobile device via either the [Google Play](https://play.google.com/store/apps/details?id=com.mendix.developerapp.mx9) store or the [Apple App Store](https://apps.apple.com/us/app/make-it-native-9/id1542182000) so you can text your app and see your styling changes
 
 ### 5.2 Customizing the Quickstart App
@@ -154,7 +154,7 @@ When you have specific design requirements, you will need to build custom classe
     }
     ```
     
-    To alter a class on your own, consult the [Native Mobile Styling Guide](/refguide/native-styling-refguide/) to understand widget structures.
+    To alter a class on your own, consult the [Native Mobile Styling Guide](/refguide9/native-styling-refguide/) to understand widget structures.
 
 6. Now you will edit the code you pasted. Apply a transparent background color to customize the the default button widget:
 

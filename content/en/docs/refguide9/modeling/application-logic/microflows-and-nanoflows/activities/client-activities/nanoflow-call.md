@@ -1,6 +1,6 @@
 ---
 title: "Call Nanoflow"
-url: /refguide/nanoflow-call/
+url: /refguide9/nanoflow-call/
 weight: 2
 tags: ["studio pro", "nanoflow call", "call nanoflow"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
@@ -12,9 +12,9 @@ tags: ["studio pro", "nanoflow call", "call nanoflow"]
 This activity can only be used in **Nanoflows**.
 {{% /alert %}}
 
-The **Call nanoflow** activity can be used to call another [nanoflow](/refguide/nanoflows/). 
+The **Call nanoflow** activity can be used to call another [nanoflow](/refguide9/nanoflows/). 
 
-{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/client-activities/nanoflow-call/nanoflow-call.png" alt="Nanoflow Call"   width="200"  >}}
+{{< figure src="/attachments/refguide9/modeling/application-logic/microflows-and-nanoflows/activities/client-activities/nanoflow-call/nanoflow-call.png" alt="Nanoflow Call"   width="200"  >}}
 
 Arguments can be passed to the nanoflow and the result can be stored in a variable.
 
@@ -22,7 +22,7 @@ Arguments can be passed to the nanoflow and the result can be stored in a variab
 
 There are two sets of properties for this activity, those in the dialog box on the left, and those in the properties pane on the right:
 
-{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/client-activities/nanoflow-call/nanoflow-call-properties.png" alt="Nanoflow Call Properties" >}}
+{{< figure src="/attachments/refguide9/modeling/application-logic/microflows-and-nanoflows/activities/client-activities/nanoflow-call/nanoflow-call-properties.png" alt="Nanoflow Call Properties" >}}
 
 The **Nanoflow call** properties pane consists of the following sections:
 
@@ -51,11 +51,11 @@ The name of the parameter that is read-only.
 
 #### 3.2.2 Type
 
-The type of the parameter that is read-only. For more information on possible types of parameters, see [Data Types](/refguide/data-types/).
+The type of the parameter that is read-only. For more information on possible types of parameters, see [Data Types](/refguide9/data-types/).
 
 #### 3.2.3 Argument {#argument}
 
-The **Edit parameter value** button allows you to edit the argument value. For each parameter of the nanoflow, you have to supply an argument of the same type. The values of the arguments are expressed using [expressions](/refguide/expressions/).
+The **Edit parameter value** button allows you to edit the argument value. For each parameter of the nanoflow, you have to supply an argument of the same type. The values of the arguments are expressed using [expressions](/refguide9/expressions/).
 
 ### 3.3 Return Type
 
@@ -71,4 +71,4 @@ The name of the variable, list, or object returned by the activity.
 
 ## 4 Common Section {#common}
 
-{{% snippet file="/static/_includes/refguide/microflow-common-section-link.md" %}}
+{{% snippet file="/static/_includes/refguide9/microflow-common-section-link.md" %}}

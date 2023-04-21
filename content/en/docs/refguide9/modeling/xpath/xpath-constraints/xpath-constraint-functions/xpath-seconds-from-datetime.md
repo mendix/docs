@@ -1,6 +1,6 @@
 ---
 title: "XPath seconds-from-dateTime"
-url: /refguide/xpath-seconds-from-datetime/
+url: /refguide9/xpath-seconds-from-datetime/
 tags: ["studio pro"]
 ---
 

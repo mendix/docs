@@ -1,6 +1,6 @@
 ---
 title: "Published OData Services"
-url: /refguide/published-odata-services/
+url: /refguide9/published-odata-services/
 weight: 10
 tags: ["studio pro","OData","publish"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
@@ -8,7 +8,7 @@ tags: ["studio pro","OData","publish"]
 
 ## 1 Introduction
 
-In Studio Pro, entities can be exposed as [OData resources](/refguide/published-odata-resource/) by adding them to a published OData service. You can expose any number of related resources in a published OData service. By default, the plural of the non-qualified names of entities are used in the URI to uniquely identify them, but you can override the name of the resource as well. 
+In Studio Pro, entities can be exposed as [OData resources](/refguide9/published-odata-resource/) by adding them to a published OData service. You can expose any number of related resources in a published OData service. By default, the plural of the non-qualified names of entities are used in the URI to uniquely identify them, but you can override the name of the resource as well. 
 
 A published OData service is a REST service with an OpenAPI contract, which means that OpenAPI compatible REST clients can easily interact with it. 
 
@@ -52,7 +52,7 @@ In OData, the namespace is used to refer to data types. You can customize this n
 
 ### 2.5 Entities
 
-This list gives an overview of all entities published as [OData resources](/refguide/published-odata-resource/).
+This list gives an overview of all entities published as [OData resources](/refguide9/published-odata-resource/).
 
 ### 2.5.1 Entity Details
 
@@ -60,7 +60,7 @@ This list gives an overview of all published attributes and associations.
 
 ### 2.6 Enumerations
 
-This list gives an overview of all [enumerations](/refguide/enumerations/) that are published by the service (for OData version 4 only). When a published entity has an attribute with an enumeration type then the enumeration appears in this list. The list does not appear when there are no published enumerations. There is no need to add enumerations yourself, because Studio Pro will add them when needed.
+This list gives an overview of all [enumerations](/refguide9/enumerations/) that are published by the service (for OData version 4 only). When a published entity has an attribute with an enumeration type then the enumeration appears in this list. The list does not appear when there are no published enumerations. There is no need to add enumerations yourself, because Studio Pro will add them when needed.
 
 Click **Edit** to change the exposed name of the enumeration (the name as it appears to clients of the service) and to provide documentation.
 
@@ -90,7 +90,7 @@ This setting was introduced in Studio Pro [9.4.0](/releasenotes/studio-pro/9.4/)
 
 ### 3.1.2 Associations
 
-You can select how you want to represent associations. For more information, see the [Associations](/refguide/odata-representation/#associations) section of *OData Representation*.
+You can select how you want to represent associations. For more information, see the [Associations](/refguide9/odata-representation/#associations) section of *OData Representation*.
 
 ### 3.2 Export
 
@@ -110,16 +110,16 @@ The OpenAPI JSON file contains the service's REST contract in [OpenAPI 3.0](http
 
 ### 3.3 Security {#security}
 
-You can configure security for the OData service when [App Security](/refguide/app-security/) is enabled.
+You can configure security for the OData service when [App Security](/refguide9/app-security/) is enabled.
 
 #### 3.3.1 Requires Authentication {#authentication}
 
 Select whether clients need to authenticate or not. Select **No** to allow access to the resources without restrictions. Select **Yes** to be able to select which authentication methods to support.
 
-Even when you choose **Yes**, you can still expose OData resources to anonymous users. For detailed information on allowing anonymous users, see [Anonymous User Role](/refguide/anonymous-users/).
+Even when you choose **Yes**, you can still expose OData resources to anonymous users. For detailed information on allowing anonymous users, see [Anonymous User Role](/refguide9/anonymous-users/).
 
 {{% alert color="info" %}}
-The **Authentication** section of a published OData service is only visible when you have enabled [app security](/refguide/app-security/).
+The **Authentication** section of a published OData service is only visible when you have enabled [app security](/refguide9/app-security/).
 {{% /alert %}}
 
 #### 3.3.2 Authentication Methods {#authentication-methods}
@@ -159,9 +159,9 @@ xmlHttp.send(null);
 
 Specify which microflow to use for custom authentication.
 
-The microflow may take an [HttpRequest](/refguide/http-request-and-response-entities/#http-request) as a parameter, so it can inspect the incoming request.
+The microflow may take an [HttpRequest](/refguide9/http-request-and-response-entities/#http-request) as a parameter, so it can inspect the incoming request.
 
-The microflow may also take an [HttpResponse](/refguide/http-request-and-response-entities/#http-response) as a parameter. When the microflow sets the status code of this response to something other then **200**, this value is returned and the operation will not be executed. Any headers set on the response are returned (except when the microflow returns an empty user).
+The microflow may also take an [HttpResponse](/refguide9/http-request-and-response-entities/#http-response) as a parameter. When the microflow sets the status code of this response to something other then **200**, this value is returned and the operation will not be executed. Any headers set on the response are returned (except when the microflow returns an empty user).
 
 The authentication microflow should return a User.
 
@@ -182,7 +182,7 @@ To set up authentication with Mendix SSO, do the following:
 
 #### 3.3.3 Allowed Roles
 
-The allowed roles define which [module role](/refguide/module-security/#module-role) a user must have to be able to access the service. This option is only available when **Requires authentication** is set to **Yes**.
+The allowed roles define which [module role](/refguide9/module-security/#module-role) a user must have to be able to access the service. This option is only available when **Requires authentication** is set to **Yes**.
 
 {{% alert color="warning" %}}
 Web service users cannot access OData services.
@@ -229,9 +229,9 @@ The Swagger UI feature was introduced in Studio Pro [9.17.0](/releasenotes/studi
 While the API documentation for OData resources is enabled by default, access to it may be restricted by the administrator for apps running in production.
 {{% /alert %}}
 
-For details on how to filter the OData response, refer to [OData Query Options](/refguide/odata-query-options/).
+For details on how to filter the OData response, refer to [OData Query Options](/refguide9/odata-query-options/).
 
-For details on how Mendix attributes are represented in OData, refer to [OData Representation](/refguide/odata-representation/).
+For details on how Mendix attributes are represented in OData, refer to [OData Representation](/refguide9/odata-representation/).
 
 When exposing entities through OData, the entities are retrieved from the Mendix database in a streaming fashion, to avoid out-of-memory errors in the Mendix Runtime.
 

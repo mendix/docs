@@ -1,11 +1,11 @@
 ---
 title: "Decision"
-url: /refguide/decision/
+url: /refguide9/decision/
 weight: 1
 tags: ["studio pro", "decision", "exclusive split"]
 aliases:
-    - /refguide/exclusive-split.html
-    - /refguide/exclusive-split
+    - /refguide9/exclusive-split.html
+    - /refguide9/exclusive-split
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
@@ -17,7 +17,7 @@ A decision is an element that makes a choice based on a condition and follows on
 
 An example of decision properties is represented in the image below:
 
-{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/decisions/decision/decision-properties.png"   width="50%"  >}}
+{{< figure src="/attachments/refguide9/modeling/application-logic/microflows-and-nanoflows/decisions/decision/decision-properties.png"   width="50%"  >}}
 
 The decision properties pane consists of the following sections:
 
@@ -29,7 +29,7 @@ The decision properties pane consists of the following sections:
 
 ### 3.1 Caption
 
-For more information, see the [Caption](/refguide/microflow-element-common-properties/#caption) section in *Common Properties*.
+For more information, see the [Caption](/refguide9/microflow-element-common-properties/#caption) section in *Common Properties*.
 
 ### 3.2 Decision Type {#decision-type}
 
@@ -42,19 +42,19 @@ For more information, see the [Caption](/refguide/microflow-element-common-prope
 
 ### 3.3 Error Handling Type
 
-For more information, see the [Error Handling Type](/refguide/microflow-element-common-properties/#error-handling) section in *Common Properties*.
+For more information, see the [Error Handling Type](/refguide9/microflow-element-common-properties/#error-handling) section in *Common Properties*.
 
 ## 4 Expression Section {#expression}
 
-The **Expression** section is shown in the decision properties pane if the [Decision Type](#decision-type) property is set to **Expression**. The expression entered here is used to define the condition of the decision. For more information on expressions, see [Microflow Expressions](/refguide/expressions/).
+The **Expression** section is shown in the decision properties pane if the [Decision Type](#decision-type) property is set to **Expression**. The expression entered here is used to define the condition of the decision. For more information on expressions, see [Microflow Expressions](/refguide9/expressions/).
 
-The expression should result in a Boolean or an [enumeration](/refguide/enumerations/). 
+The expression should result in a Boolean or an [enumeration](/refguide9/enumerations/). 
 
 ### 4.1 Boolean Result
 
 For an expression resulting in a Boolean, two flows are possible: **true** and **false**. For example, you can use an expression resulting in a Boolean to decide if a customer can get a discount by checking their membership status. The expression in this example is `$Customer/Membership`.
 
-{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/decisions/decision/decision-boolean.png" width="500" >}}
+{{< figure src="/attachments/refguide9/modeling/application-logic/microflows-and-nanoflows/decisions/decision/decision-boolean.png" width="500" >}}
 
 ### 4.2 Enumeration Result
 
@@ -64,20 +64,20 @@ For example, if you want to assign a different meeting URL based on the working 
     
 In the example below, the microflow parameter is *MeetingRegistration*. Depending on where the employee works, a different meeting URL is assigned. If an employee did not select a working location when registering for the meeting, the flow labelled **(empty)** is followed and an error message is shown to the end-user (the employee in this case).
 
-{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/decisions/decision/decision-enumeration.png" width="600" >}}
+{{< figure src="/attachments/refguide9/modeling/application-logic/microflows-and-nanoflows/decisions/decision/decision-enumeration.png" width="600" >}}
 
 Since you want to go in a different direction for each value of the enumeration, you only need to use the attribute containing the enumeration. So the expression in this example is `$MeetingRegistration/WorkingLocation`. 
     
-Afterwards, you can merge the three flows followed by a meeting URL into one flow (for more information, see  [Merge](/refguide/merge/)). Then you only need to [commit](/refguide/committing-objects/) the registration once and have one [Close page](/refguide/committing-objects/) activity after the merge. 
+Afterwards, you can merge the three flows followed by a meeting URL into one flow (for more information, see  [Merge](/refguide9/merge/)). Then you only need to [commit](/refguide9/committing-objects/) the registration once and have one [Close page](/refguide9/committing-objects/) activity after the merge. 
 
 ## 5 Rule Section {#rule}
 
-The **Rule** section is shown in the decision properties pane if the [Decision Type](#decision-type) property is set to **Rule**. A [rule](/refguide/rules/) can be selected to define the condition of the decision. You can use the outcome of the rule for the decision instead of calling a sub-microflow and using the returned variable of that sub-microflow.
+The **Rule** section is shown in the decision properties pane if the [Decision Type](#decision-type) property is set to **Rule**. A [rule](/refguide9/rules/) can be selected to define the condition of the decision. You can use the outcome of the rule for the decision instead of calling a sub-microflow and using the returned variable of that sub-microflow.
 
 The properties of the **Rule** decision type are the following ones:
 
 * **Rule** – allows you to select a rule.
 
-* **Parameter** – for each parameter of the rule an argument needs to be specified using [expressions](/refguide/expressions/). For example, a rule that determines whether a customer deserves a certain status will have a customer object as a parameter.
+* **Parameter** – for each parameter of the rule an argument needs to be specified using [expressions](/refguide9/expressions/). For example, a rule that determines whether a customer deserves a certain status will have a customer object as a parameter.
 
-    {{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/decisions/decision/rule-properties.png"   width="350"  >}}
+    {{< figure src="/attachments/refguide9/modeling/application-logic/microflows-and-nanoflows/decisions/decision/rule-properties.png"   width="350"  >}}

@@ -1,6 +1,6 @@
 ---
 title: "Delete External Object"
-url: /refguide/delete-external-object/
+url: /refguide9/delete-external-object/
 tags: ["studio pro", "integration activity", "delete external object"]
 ---
 {{% alert color="warning" %}}
@@ -35,7 +35,7 @@ This setting defines how changes are reflected in the pages presented to the end
 
 ## 3 After the Activity
 
-After this activity, the `$latestHttpResponse` variable (of the [HttpResponse](/refguide/http-request-and-response-entities/#http-response) type) is available to inspect the response returned by the service.
+After this activity, the `$latestHttpResponse` variable (of the [HttpResponse](/refguide9/http-request-and-response-entities/#http-response) type) is available to inspect the response returned by the service.
 
 {{% alert color="info" %}}
 The feature to set `$latestHttpResponse` was introduced in Studio Pro [9.15.0](/releasenotes/studio-pro/9.15/).

@@ -1,6 +1,6 @@
 ---
 title: "Stories Pane"
-url: /refguide/stories-pane/
+url: /refguide9/stories-pane/
 weight: 60
 description: "Describes the Stories pane in Mendix Studio Pro."
 tags: ["Studio Pro", "stories", "stories pane"]
@@ -18,7 +18,7 @@ If you use Epics, only the stories of the current Sprint will be shown in the **
 
 The **Stories** pane consists of the top bar with various buttons and a table:
 
-{{< figure src="/attachments/refguide/modeling/menus/view-menu/stories-pane/stories-pane.png" alt="Stories Pane Example" >}}
+{{< figure src="/attachments/refguide9/modeling/menus/view-menu/stories-pane/stories-pane.png" alt="Stories Pane Example" >}}
 
 The table contains following columns:
 
@@ -61,7 +61,7 @@ When you view the details of a story or task, the **Story Details** pop-up windo
 * **Story points** – the story points assigned to the story/task 
 * **Description** – the description of the story/task
 
-    {{< figure src="/attachments/refguide/modeling/menus/view-menu/stories-pane/story-details.png" alt="Story Details" >}}
+    {{< figure src="/attachments/refguide9/modeling/menus/view-menu/stories-pane/story-details.png" alt="Story Details" >}}
 
 ### 2.3 Showing Completed Stories {#show-completed-stories}
 
@@ -73,7 +73,7 @@ If the story is created from a feedback item, you can open a document which the 
 
 To open the document, either click the **Open document** button in the top bar or the corresponding icon in the table:
 
-{{< figure src="/attachments/refguide/modeling/menus/view-menu/stories-pane/open-document-icon.png" alt="Open document icon" >}}
+{{< figure src="/attachments/refguide9/modeling/menus/view-menu/stories-pane/open-document-icon.png" alt="Open document icon" >}}
 
 For more information on how to create a story on the basis of a feedback item and add it to your backlog, see the [Adding a Feedback Item to Your Backlog](/developerportal/collaborate/feedback/#adding) section in *Feedback Management*.
 
@@ -92,4 +92,4 @@ To change the status of a task, tick or clear the check box in the **Status** co
 
 * [Stories](/developerportal/collaborate/stories/)
 * [Feedback Management](/developerportal/collaborate/feedback/)
-* [View Menu](/refguide/view-menu/)
+* [View Menu](/refguide9/view-menu/)

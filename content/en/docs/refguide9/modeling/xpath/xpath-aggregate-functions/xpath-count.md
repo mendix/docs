@@ -1,6 +1,6 @@
 ---
 title: "XPath count"
-url: /refguide/xpath-count/
+url: /refguide9/xpath-count/
 tags: ["studio pro"]
 ---
 

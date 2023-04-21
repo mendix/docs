@@ -1,6 +1,6 @@
 ---
 title: "Unlimited String Behavior"
-url: /refguide/unlimited-string-behavior/
+url: /refguide9/unlimited-string-behavior/
 tags: ["studio pro", "strings", "sort", "case", "query", "constraint", "validation rule", "domain model"]
 weight: 20
 ---

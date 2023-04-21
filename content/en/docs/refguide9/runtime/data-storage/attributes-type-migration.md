@@ -1,6 +1,6 @@
 ---
 title: "Attribute Type Migration"
-url: /refguide/attributes-type-migration/
+url: /refguide9/attributes-type-migration/
 weight: 10
 tags: ["studio pro"]
 ---
@@ -27,7 +27,7 @@ Key | Means
 **\*<sup><small>note</small></sup>** | Conversion is not always possible, or data will be changed during conversion. See related note for more information. If conversion is not possible, the behavior is the same as for "**X**", below.
 **X** | Conversion not possible. The original column will be removed and a new column will be created with default values for the existing rows.
 
-{{< figure src="/attachments/refguide/runtime/data-storage/attributes-type-migration/conversion-table.png" alt="Table of conversions - click to enlarge" >}}
+{{< figure src="/attachments/refguide9/runtime/data-storage/attributes-type-migration/conversion-table.png" alt="Table of conversions - click to enlarge" >}}
 (*Click the image to enlarge*)
 
 ### 2.3 Manual Conversion

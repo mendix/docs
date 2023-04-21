@@ -1,7 +1,7 @@
 ---
 title: "Adding a Workflow to an Existing App: Using Workflow Commons"
 linktitle: "Add Workflow to Existing App"
-url: /refguide/workflow-setting-up-app/
+url: /refguide9/workflow-setting-up-app/
 description: "Describes how to use Workflow Commons in an existing app in Mendix Studio Pro."
 weight: 40
 tags: ["studio pro", "workflow", "task", "onboarding"]
@@ -35,7 +35,7 @@ Depending on the required user roles for your application, you may have the need
 2. Link the user role to the **Administrator** module role in Workflow Commons.
 3. Link the user role to both the **User** and **WorkflowAdministrator** module roles in the System module.
 
-Finally, go to the Workflows tab in your [app settings](/refguide/app-settings/#workflows) and select the same user entity as the one you are using in Workflow Commons. You can then use the properties of this entity to filter the users that can pick up a task in the task's user assignment property. For more information on user task properties, see [User Task](/refguide/user-task/).
+Finally, go to the Workflows tab in your [app settings](/refguide9/app-settings/#workflows) and select the same user entity as the one you are using in Workflow Commons. You can then use the properties of this entity to filter the users that can pick up a task in the task's user assignment property. For more information on user task properties, see [User Task](/refguide9/user-task/).
 
 ## 4 Customizing Workflow Commons
 
@@ -51,4 +51,4 @@ We recommend the following best practices when working with workflows:
 ## 6 Read More
 
 * [Workflow Commons](/appstore/modules/workflow-commons/)
-* [Workflows](/refguide/workflows/)
+* [Workflows](/refguide9/workflows/)

@@ -1,11 +1,11 @@
 ---
 title: "App Settings"
-url: /refguide/app-settings/
+url: /refguide9/app-settings/
 weight: 10
 description: "Settings which apply to the app as a whole."
 tags: ["app", "configuration", "runtime", "Studio Pro", "languages", "certificate", "theme", "hashing", "hashing algorithm"]
 aliases:
-    - /refguide/project-settings/
+    - /refguide9/project-settings/
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
@@ -13,7 +13,7 @@ aliases:
 
 In the **App Settings** dialog box, you can alter the settings that are applicable to the whole app:
 
-{{< figure src="/attachments/refguide/modeling/app-explorer/app/app-settings/app-settings-configuration.png" >}}
+{{< figure src="/attachments/refguide9/modeling/app-explorer/app/app-settings/app-settings-configuration.png" >}}
 
 The categories described below are available.
 
@@ -21,7 +21,7 @@ The categories described below are available.
 
 A configuration is a group of settings. You can define any number of configurations. The active configuration (meaning, the one that will be used when running your application) is determined by the drop-down menu in the toolbar of Studio Pro.
 
-For more information on settings in a configuration, see [Configuration](/refguide/configuration/).
+For more information on settings in a configuration, see [Configuration](/refguide9/configuration/).
 
 ## 3 Runtime Tab
 
@@ -59,7 +59,7 @@ Here you can select a microflow which performs the checks on a running app that 
 
 The result of each check is returned as a string, which is displayed in the [Developer Portal](/developerportal/deploy/environments/). When the microflow returns an empty string, the application is healthy; otherwise, the string presents an explanation of why the application is not healthy.
 
-This microflow gets called every 10 seconds to check if the app is still healthy. This is done by executing it using m2ee on the admin port of your app. For more information, see the section [Health Check](/refguide/monitoring-mendix-runtime/#check-health) in *Monitoring Mendix Runtime*.
+This microflow gets called every 10 seconds to check if the app is still healthy. This is done by executing it using m2ee on the admin port of your app. For more information, see the section [Health Check](/refguide9/monitoring-mendix-runtime/#check-health) in *Monitoring Mendix Runtime*.
 
 {{% alert color="info" %}}
 
@@ -179,7 +179,7 @@ Default: *Yes*
 
 ## 4 Languages Tab {#languages-tab}
 
-For more information about using different languages in your app, see [Language Menu](/refguide/translatable-texts/).
+For more information about using different languages in your app, see [Language Menu](/refguide9/translatable-texts/).
 
 ### 4.1 Default Language
 
@@ -200,7 +200,7 @@ Certificates are used to connect to web services over HTTPS when the following r
 
 These certificates can be imported into Studio Pro using the **Import** button. Certificate authority files usually have a *.crt* extension, and client certificates usually have a *.p12* or *.pfx* extension. After importing, use **View details** to acquire more information concerning the certificate.
 
-Client certificates added here will be used whenever a server accepts a client certificate. If you upload more than one client certificate, one of them will be chosen based on the requirements of the server. If you need more control over client certificates, you should not upload the certificates here, but use the [Runtime customization](/refguide/custom-settings/) *ClientCertificates*, *ClientCertificatePasswords*, and *ClientCertificateUsages* settings.
+Client certificates added here will be used whenever a server accepts a client certificate. If you upload more than one client certificate, one of them will be chosen based on the requirements of the server. If you need more control over client certificates, you should not upload the certificates here, but use the [Runtime customization](/refguide9/custom-settings/) *ClientCertificates*, *ClientCertificatePasswords*, and *ClientCertificateUsages* settings.
 
 {{% alert color="warning" %}}
 
@@ -237,13 +237,13 @@ For background information, see [Transport Layer Security (TLS) Renegotiation Is
 
 ### 6.1 UI Resources Package
 
-The look and feel of a Mendix application is governed by the [UI resources package](/refguide/ui-resources-package/). This package supplies the app with all the required theme information accompanied by matching page templates and building blocks. The module which is designated as the UI resources package is governed by the **UI resources package** setting. Generally, this is automatically updated when a new UI resources package is imported. However, with this setting, the desired module can also be set manually.
+The look and feel of a Mendix application is governed by the [UI resources package](/refguide9/ui-resources-package/). This package supplies the app with all the required theme information accompanied by matching page templates and building blocks. The module which is designated as the UI resources package is governed by the **UI resources package** setting. Generally, this is automatically updated when a new UI resources package is imported. However, with this setting, the desired module can also be set manually.
 
 ### 6.2 Theme ZIP File
 
 {{% alert color="warning" %}}
 
-[Deprecated] The use of a ZIP file to configure an app's theme is deprecated. A [UI resources package](/refguide/ui-resources-package/) is the preferred method of sharing themes.
+[Deprecated] The use of a ZIP file to configure an app's theme is deprecated. A [UI resources package](/refguide9/ui-resources-package/) is the preferred method of sharing themes.
 
 {{% /alert %}}
 
@@ -261,7 +261,7 @@ Switching from a ZIP file to a UI resources package is straightforward:
 
 Modules that contain theme styling should be marked as UI resources modules. To do so, right-click the **Module {name}** in the App Explorer, then click **Mark as UI resources module**. This will give the modules a green icon, which makes it easy to distinguish theme modules from other modules, and also influences the order in which styling will be applied from those modules:
 
-{{< figure src="/attachments/refguide/modeling/app-explorer/app/app-settings/green-module.png" alt="green module" >}}
+{{< figure src="/attachments/refguide9/modeling/app-explorer/app/app-settings/green-module.png" alt="green module" >}}
 
 ### 6.4 Ordering UI Resource Modules
 
@@ -269,13 +269,13 @@ When a module contains styling (SCSS/CSS), be sure it is added to the compiled C
 
 You can set an explicit order in the theme settings (**App Settings** > **Theme**). This contains a list of all modules that are marked as UI resource modules, and allows you to set the explicit order in which they are added to the CSS file. Note that the lower a module is ordered in the list, the higher its precedence. For example, an app that uses a company theme module could be ordered as follows:
 
-{{< figure src="/attachments/refguide/modeling/app-explorer/app/app-settings/app-theme-settings.png" alt="app theme settings" >}}
+{{< figure src="/attachments/refguide9/modeling/app-explorer/app/app-settings/app-theme-settings.png" alt="app theme settings" >}}
 
 ## 7 Workflows Tab {#workflows}
 
 ### 7.1 User Entity
 
-**User entity** defines the entity which is used in [assigning a user task](/refguide/user-task/#user-assignment). If you assign a user task using an XPath, you can use attributes of this entity. If you are using a microflow, the entity defines the return type the microflows expects. For more information, see the [User Task Assignment](/refguide/user-task/#user-assignment) section in *User Task*.
+**User entity** defines the entity which is used in [assigning a user task](/refguide9/user-task/#user-assignment). If you assign a user task using an XPath, you can use attributes of this entity. If you are using a microflow, the entity defines the return type the microflows expects. For more information, see the [User Task Assignment](/refguide9/user-task/#user-assignment) section in *User Task*.
 
 ### 7.2 Optimization
 
@@ -309,11 +309,11 @@ Security settings of workflows and user tasks allow you to access workflow or us
 
 #### 7.3.1 Workflow State Change {#workflow-state-change}
 
-A microflow selected for this setting will start every time a workflow changes its state, for example, when the workflow is completed or has failed. This setting is app-wide, you can override it by setting a workflow-specific microflow in the [workflow properties](/refguide/workflow-properties/#events).
+A microflow selected for this setting will start every time a workflow changes its state, for example, when the workflow is completed or has failed. This setting is app-wide, you can override it by setting a workflow-specific microflow in the [workflow properties](/refguide9/workflow-properties/#events).
 
 #### 7.3.2 User Task State Change {#user-task-state-change}
 
-A microflow selected for this setting will start every time a user task changes its state, for example, when a user task is completed or paused. This setting is app-wide, you can override it by setting a workflow-specific microflow in the [workflow properties](/refguide/workflow-properties/#events).
+A microflow selected for this setting will start every time a user task changes its state, for example, when a user task is completed or paused. This setting is app-wide, you can override it by setting a workflow-specific microflow in the [workflow properties](/refguide9/workflow-properties/#events).
 
 ## 8 Deployment Tab {#deployment}
 

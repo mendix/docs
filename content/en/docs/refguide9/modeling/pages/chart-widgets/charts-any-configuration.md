@@ -1,6 +1,6 @@
 ---
 title: "Any Chart Widgets"
-url: /refguide/charts-any-configuration/
+url: /refguide9/charts-any-configuration/
 description: "A reference for the configuration of the Any Chart widget to pass the correct values to plotly. This enables you to draw a wide variety of charts"
 weight: 30
 tags: ["Any Chart", "Options", "Configuration", "Charts", "studio pro"]
@@ -10,7 +10,7 @@ tags: ["Any Chart", "Options", "Configuration", "Charts", "studio pro"]
 
 With **Any Chart**, you can build any chart type that is supported by Plotly.js up to the version mentioned in the widget description in the Marketplace. So if you want to build a chart which is not available as a standard chart widget, such as a 3D chart, Any Chart is your friend.
 
-The configuration of this chart type is complex. For help, you can look at the **building blocks** that are delivered in the [Any Chart](/appstore/modules/any-chart/) module from the Mendix Marketplace. Alternatively, use [How to Use Any Chart](/howto/front-end/charts-any-usage/) or the [Any Chart cheat sheet](/refguide/charts-any-cheat-sheet/) for a quick start.
+The configuration of this chart type is complex. For help, you can look at the **building blocks** that are delivered in the [Any Chart](/appstore/modules/any-chart/) module from the Mendix Marketplace. Alternatively, use [How to Use Any Chart](/howto/front-end/charts-any-usage/) or the [Any Chart cheat sheet](/refguide9/charts-any-cheat-sheet/) for a quick start.
 
 Any Charts are configured with a JSON **Data** array and **Layout** object. The configuration can be set statically, via the **Source attribute** and **Sample data** properties.
 
@@ -36,7 +36,7 @@ This is an unlimited string attribute which is an attribute of the entity which 
 
 In the image below, the **Source attribute** is the *data* attribute of the *ChartContext* entity which is the data view context in which the Any Chart widget is placed.
 
-{{< figure src="/attachments/refguide/modeling/pages/chart-widgets/charts-any-configuration/any-chart-page-placement.png" >}}
+{{< figure src="/attachments/refguide9/modeling/pages/chart-widgets/charts-any-configuration/any-chart-page-placement.png" >}}
 
 The **Source attribute** contains a JSON structure which will merge with, and overwrite, the **Static** data. Commonly, this contains the data which you wish to plot, but it can also overwrite other static elements such as the type of chart, colors of lines, or the orientation of bars in a bar chart.
 

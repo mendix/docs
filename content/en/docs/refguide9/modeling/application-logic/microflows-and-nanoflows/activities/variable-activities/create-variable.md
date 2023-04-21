@@ -1,6 +1,6 @@
 ---
 title: "Create Variable"
-url: /refguide/create-variable/
+url: /refguide9/create-variable/
 tags: ["studio pro", "create variable", "variable", "variable activities"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
@@ -13,13 +13,13 @@ This activity can be used in both **Microflows** and **Nanoflows**.
 
 With this action, you can create a new variable and assign a value to it. For example, you can create a *$Discount* variable and assign a value 0.5 to give customers a 50% discount and use this value to calculate a price for a customer:
 
-{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/variable-activities/create-variable/create-variable.png" alt="Create Variable" >}}
+{{< figure src="/attachments/refguide9/modeling/application-logic/microflows-and-nanoflows/activities/variable-activities/create-variable/create-variable.png" alt="Create Variable" >}}
 
 ## 2 Properties
 
 There are two sets of properties for this activity, those in the dialog box on the left, and those in the properties pane on the right:
 
-{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/variable-activities/create-variable/create-variable-properties.png" alt="Create Variable Properties" >}}
+{{< figure src="/attachments/refguide9/modeling/application-logic/microflows-and-nanoflows/activities/variable-activities/create-variable/create-variable-properties.png" alt="Create Variable Properties" >}}
 
 The **Create variable** properties pane consists of the following sections:
 
@@ -36,11 +36,11 @@ You can also open the dialog box by double-clicking the activity in the microflo
 
 ### 3.1 Data Type
 
-**Data type** defines what type of data is stored in the variable. A variable can have one of the following [data types](/refguide/data-types/): Boolean, Enumeration, Decimal, Integer/Long, or String.
+**Data type** defines what type of data is stored in the variable. A variable can have one of the following [data types](/refguide9/data-types/): Boolean, Enumeration, Decimal, Integer/Long, or String.
 
 ### 3.2 Initial Value
 
-Defines the initial value of the variable. The value is entered using an [expression](/refguide/expressions/) (the result of the microflow expression must match the data type of the variable).
+Defines the initial value of the variable. The value is entered using an [expression](/refguide9/expressions/) (the result of the microflow expression must match the data type of the variable).
 
 ### 3.3 Variable Name
 
@@ -48,8 +48,8 @@ Variable defines the name of the resulting variable. The variable can be used by
 
 ## 4 Common Section {#common}
 
-{{% snippet file="/static/_includes/refguide/microflow-common-section-link.md" %}}
+{{% snippet file="/static/_includes/refguide9/microflow-common-section-link.md" %}}
 
 ## 5 Read More
 
-* [Activities](/refguide/activities/)
+* [Activities](/refguide9/activities/)

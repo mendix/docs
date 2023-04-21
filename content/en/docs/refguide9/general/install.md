@@ -1,6 +1,6 @@
 ---
 title: "Installing Mendix Studio Pro"
-url: /refguide/install/
+url: /refguide9/install/
 linktitle: "Install Mendix Studio Pro"
 category: "General Info"
 weight: 15
@@ -14,9 +14,9 @@ aliases:
 
 ## 1 Introduction
 
-Mendix Studio Pro enables you to build apps on the Mendix Platform. This document will guide you through the steps of installing the [latest version of Studio Pro](https://marketplace.mendix.com/link/studiopro/). For the full list of supported systems and required frameworks, see [System Requirements](/refguide/system-requirements/). 
+Mendix Studio Pro enables you to build apps on the Mendix Platform. This document will guide you through the steps of installing the [latest version of Studio Pro](https://marketplace.mendix.com/link/studiopro/). For the full list of supported systems and required frameworks, see [System Requirements](/refguide9/system-requirements/). 
 
-If you use a Mac device, see [Configuring Parallels](/refguide/using-mendix-studio-pro-on-a-mac/) to configure your Windows virtual machine. 
+If you use a Mac device, see [Configuring Parallels](/refguide9/using-mendix-studio-pro-on-a-mac/) to configure your Windows virtual machine. 
 
 For a deep-dive demonstration of how to install Studio Pro, follow along in this video:
 
@@ -35,24 +35,24 @@ Mendix Studio Pro needs to be installed on your computer before you can start bu
 
 1. Open the downloaded Mendix Studio Pro executable. It is named like this: *Mendix-9.X.X-Setup*. Then click **Next**:
 
-    {{< figure src="/attachments/refguide/general/install/setup-wizard.png"   width="400"  >}}
+    {{< figure src="/attachments/refguide9/general/install/setup-wizard.png"   width="400"  >}}
 
 2. Select **I accept the terms in the License Agreement** and click **Next**:
 
-    {{< figure src="/attachments/refguide/general/install/terms-of-use.png"   width="400"  >}}
+    {{< figure src="/attachments/refguide9/general/install/terms-of-use.png"   width="400"  >}}
 
 3. Select the folder in which you want to install Studio Pro and click **Next**:
 
-    {{< figure src="/attachments/refguide/general/install/select-folder.png"   width="400"  >}}
+    {{< figure src="/attachments/refguide9/general/install/select-folder.png"   width="400"  >}}
 
 4. Enter the start menu shortcuts folder you want to use and click **Next**:
 
-    {{< figure src="/attachments/refguide/general/install/shortcut-folder.png"   width="400"  >}}
+    {{< figure src="/attachments/refguide9/general/install/shortcut-folder.png"   width="400"  >}}
 
 5. Check the desktop option to create a shortcut to Studio Pro on your desktop and click **Next**.
 6. Click **Install** to install Studio Pro on your computer:
 
-    {{< figure src="/attachments/refguide/general/install/ready-to-install.png"   width="400"  >}}
+    {{< figure src="/attachments/refguide9/general/install/ready-to-install.png"   width="400"  >}}
 
 7. If you are asked to restart your computer, make a selection and click **Finish**. Otherwise, check **Launch Mendix 9.X.X** and click **Finish** to finish the installation and launch Studio Pro.
 
@@ -109,5 +109,5 @@ If the **AdoptOpenJDK 11 x64 failed; code 1639** error occurs during installatio
 
 ## 6 Read More
 
-* [Studio Pro Overview](/refguide/studio-pro-overview/)
-* [App Modeling](/refguide/modeling/)
+* [Studio Pro Overview](/refguide9/studio-pro-overview/)
+* [App Modeling](/refguide9/modeling/)

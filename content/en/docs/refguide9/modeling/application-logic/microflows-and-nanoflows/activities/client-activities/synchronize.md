@@ -1,6 +1,6 @@
 ---
 title: "Synchronize"
-url: /refguide/synchronize/
+url: /refguide9/synchronize/
 weight: 70
 tags: ["studio pro", "synchronize", "offline", "client activity"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
@@ -16,29 +16,29 @@ The **Synchronize** activity can be used to synchronize your data between your d
 
 ## 2 Synchronization Modes
 
-All three modes perform synchronization in two phases: upload and download. For more information, see the [Synchronization Behavior](#synchronization-behavior) section below and the [Synchronization types](/refguide/mobile/building-efficient-mobile-apps/offlinefirst-data/synchronization/) section of *Offline Synchronization*.
+All three modes perform synchronization in two phases: upload and download. For more information, see the [Synchronization Behavior](#synchronization-behavior) section below and the [Synchronization types](/refguide9/mobile/building-efficient-mobile-apps/offlinefirst-data/synchronization/) section of *Offline Synchronization*.
 
 ### 2.1 All Objects {#all-objects}
 
-{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/client-activities/synchronize/synchronize.png" alt="Synchronize"   width="200"  >}}
+{{< figure src="/attachments/refguide9/modeling/application-logic/microflows-and-nanoflows/activities/client-activities/synchronize/synchronize.png" alt="Synchronize"   width="200"  >}}
 
 The **All objects** mode synchronizes the entire local database. The server database is updated with the changes from the local database. The local database is updated with the latest data from the server, including the file contents.
 
-The behavior of this mode can be configured through [synchronization configuration](/refguide/mobile/building-efficient-mobile-apps/offlinefirst-data/synchronization/#customizable-synchronization).
+The behavior of this mode can be configured through [synchronization configuration](/refguide9/mobile/building-efficient-mobile-apps/offlinefirst-data/synchronization/#customizable-synchronization).
 
 ### 2.2 Unsynchronized Objects {#unsynchronized-objects}
 
-{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/client-activities/synchronize/synchronize-unsynchronized-objects.png" alt="Synchronize"   width="200"  >}}
+{{< figure src="/attachments/refguide9/modeling/application-logic/microflows-and-nanoflows/activities/client-activities/synchronize/synchronize-unsynchronized-objects.png" alt="Synchronize"   width="200"  >}}
 
 Using the **Unsynchronized objects** mode, all objects with changes committed to the offline database are synchronized. Information about objects deleted since the last synchronization is also sent to the server. For more information, see the [Synchronization Behavior](#synchronization-behavior) section below.
 
 ### 2.3 Selected Objects {#selected-objects}
 
-{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/client-activities/synchronize/synchronize-objects.png" alt="Synchronize"   width="200"  >}}
+{{< figure src="/attachments/refguide9/modeling/application-logic/microflows-and-nanoflows/activities/client-activities/synchronize/synchronize-objects.png" alt="Synchronize"   width="200"  >}}
 
 The **Selected object(s)** mode synchronizes objects partially, based on a selection:
 
-{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/client-activities/synchronize/synchronize-objects-selection.png" alt="Synchronize"   width="600"  >}}
+{{< figure src="/attachments/refguide9/modeling/application-logic/microflows-and-nanoflows/activities/client-activities/synchronize/synchronize-objects-selection.png" alt="Synchronize"   width="600"  >}}
 
 Using this mode, only the selected objects or lists are synchronized. Deleted objects cannot be synchronized using selective synchronization. 
 
@@ -47,7 +47,7 @@ Using this mode, only the selected objects or lists are synchronized. Deleted ob
 This section describes the behavior for the [Unsynchronized objects](#unsynchronized-objects) and [Selected object(s)](#selected-objects) modes.
 
 {{% alert color="warning" %}}
-The settings in [synchronization configuration](/refguide/mobile/building-efficient-mobile-apps/offlinefirst-data/synchronization/#customizable-synchronization) are not applied for the **Unsynchronized objects** and **Selected object(s)** modes.
+The settings in [synchronization configuration](/refguide9/mobile/building-efficient-mobile-apps/offlinefirst-data/synchronization/#customizable-synchronization) are not applied for the **Unsynchronized objects** and **Selected object(s)** modes.
 {{% /alert %}}
 
 In the **Selected object(s)** mode, if the set of objects selected for synchronization contains any objects that have not been committed yet, those objects will be skipped and thus not synchronized.
@@ -68,7 +68,7 @@ The **Synchronize** activity properties consists of the following sections:
 * [Action](#action)
 * [Common](#common)
 
-{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/client-activities/synchronize/synchronize-properties.png" alt="Synchronize Action Properties"   width="300"  >}}
+{{< figure src="/attachments/refguide9/modeling/application-logic/microflows-and-nanoflows/activities/client-activities/synchronize/synchronize-properties.png" alt="Synchronize Action Properties"   width="300"  >}}
 
 ## 5 Action Section {#action}
 
@@ -76,7 +76,7 @@ The **Action** section of the properties pane shows the action associated with t
 
 ## 6 Common Section {#common}
 
-{{% snippet file="/static/_includes/refguide/microflow-common-section-link.md" %}}
+{{% snippet file="/static/_includes/refguide9/microflow-common-section-link.md" %}}
 
 ## 7 Limitations {#limitations}
 
@@ -84,9 +84,9 @@ Running multiple synchronization processes at the same time is not supported, re
 
 If you try to trigger another synchronization process while the synchronization is in progress, the following error message will be shown: "Performing simultaneous synchronizations is not supported. Please try again after the current synchronization is completed."
 
-Such an error can be handled in the nanoflow from which the synchronization attempt was triggered using [error handlers](/refguide/error-handling-in-nanoflows/#errorhandlers-nano).
+Such an error can be handled in the nanoflow from which the synchronization attempt was triggered using [error handlers](/refguide9/error-handling-in-nanoflows/#errorhandlers-nano).
 
 ## 8 Read More
 
-* [Activities](/refguide/activities/)
-* [Offline Synchronization](/refguide/mobile/building-efficient-mobile-apps/offlinefirst-data/synchronization/)
+* [Activities](/refguide9/activities/)
+* [Offline Synchronization](/refguide9/mobile/building-efficient-mobile-apps/offlinefirst-data/synchronization/)

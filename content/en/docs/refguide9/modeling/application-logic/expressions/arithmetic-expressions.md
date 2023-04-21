@@ -1,6 +1,6 @@
 ---
 title: "Arithmetic Expressions"
-url: /refguide/arithmetic-expressions/
+url: /refguide9/arithmetic-expressions/
 weight: 20
 tags: ["studio pro", "expressions", "arithmetic expressions"]
 ---
@@ -166,7 +166,7 @@ the output is:
 
 Adds two numbers.
 
-For the use of the addition symbol for string concatenation, see [String function calls](/refguide/string-function-calls/).
+For the use of the addition symbol for string concatenation, see [String function calls](/refguide9/string-function-calls/).
 
 ### 5.1 Input Parameters
 

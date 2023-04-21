@@ -1,6 +1,6 @@
 ---
 title: "OQL Order by Clause"
-url: /refguide/oql-order-by-clause/
+url: /refguide9/oql-order-by-clause/
 tags: ["studio pro"]
 ---
 
@@ -34,7 +34,7 @@ ORDER BY
 `DESC` specifies that the results must be ordered descending, from the highest to the lowest value.
 
 {{% alert color="info" %}}
-For details on the default ordering behavior of NULL values, see the [NULL Values Order Behavior](/refguide/ordering-behavior/#null-ordering-behavior) section of *Order By Behavior*.
+For details on the default ordering behavior of NULL values, see the [NULL Values Order Behavior](/refguide9/ordering-behavior/#null-ordering-behavior) section of *Order By Behavior*.
 {{% /alert %}}
 
 ## 3 Examples

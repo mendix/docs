@@ -1,6 +1,6 @@
 ---
 title: "JavaScript Action Call"
-url: /refguide/javascript-action-call/
+url: /refguide9/javascript-action-call/
 weight: 20
 description: "This reference explains the properties of the JavaScript action call activity."
 tags: ["javascript", "return", "variable", "studio pro", "action call"]
@@ -13,15 +13,15 @@ This activity can only be used in **Nanoflows**.
 
 ## 1 Introduction
 
-The JavaScript action call activity can be used to call a [JavaScript action](/refguide/javascript-actions/). Arguments can be passed to the action, and the result can be stored.
+The JavaScript action call activity can be used to call a [JavaScript action](/refguide9/javascript-actions/). Arguments can be passed to the action, and the result can be stored.
 
-{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/action-call-activities/javascript-action-call/javascript-call.png" alt="javascript action call properties"   width="200"  >}}
+{{< figure src="/attachments/refguide9/modeling/application-logic/microflows-and-nanoflows/activities/action-call-activities/javascript-action-call/javascript-call.png" alt="javascript action call properties"   width="200"  >}}
 
 ## 2 Properties
 
 There are two sets of properties for this activity, those in the dialog box on the left, and those in the properties pane on the right:
 
-{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/action-call-activities/javascript-action-call/javascript-action-call.png" alt="JavaScript Action Properties" >}}
+{{< figure src="/attachments/refguide9/modeling/application-logic/microflows-and-nanoflows/activities/action-call-activities/javascript-action-call/javascript-action-call.png" alt="JavaScript Action Properties" >}}
 
 The **JavaScript action call** properties pane consists of the following sections:
 
@@ -50,9 +50,9 @@ Click **Edit** next to the parameter to fill in the arguments.
 
 An argument is the input data that you are passing to the JavaScript action. For each JavaScript action parameter, you must supply an argument of the same type. 
 
-The values of the arguments are defined using [expressions](/refguide/expressions/):
+The values of the arguments are defined using [expressions](/refguide9/expressions/):
 
-{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/action-call-activities/java-action-call/argument-edit.png" alt="argument" >}}
+{{< figure src="/attachments/refguide9/modeling/application-logic/microflows-and-nanoflows/activities/action-call-activities/java-action-call/argument-edit.png" alt="argument" >}}
 
 ### 3.3 Return Type {#return-type}
 
@@ -68,11 +68,11 @@ The name of the variable, list, or object returned by the activity. If it is an 
 
 ## 4 Common Section {#common}
 
-{{% snippet file="/static/_includes/refguide/microflow-common-section-link.md" %}}
+{{% snippet file="/static/_includes/refguide9/microflow-common-section-link.md" %}}
 
 ## 5 Read More
 
-* [JavaScript Actions](/refguide/javascript-actions/)
+* [JavaScript Actions](/refguide9/javascript-actions/)
 * [Build JavaScript Actions](/howto/extensibility/build-javascript-actions/)
-* [Nanoflows](/refguide/nanoflows/)
-* [Java Action Call](/refguide/java-action-call/)
+* [Nanoflows](/refguide9/nanoflows/)
+* [Java Action Call](/refguide9/java-action-call/)

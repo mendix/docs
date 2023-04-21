@@ -1,6 +1,6 @@
 ---
 title: "OData Query Options"
-url: /refguide/odata-query-options/
+url: /refguide9/odata-query-options/
 tags: ["OData", "filter", "count", "sort", "select", "page", "studio pro"]
 ---
 
@@ -119,7 +119,7 @@ You can filter on attributes of an associated entity. The way you do this depend
 | Filter on an associated object | `People?$filter=BirthPlace/CityName eq 'Rotterdam'` |
 | Filter on an associated list  | `City?$filter=BornIn/any(person:person/Year le 1919)` |
 
-Filtering on an associated object or list in this way is possible when you [expose associations as a link](/refguide/odata-representation/#associations). It is not possible when you [expose associations as an associated object ID](/refguide/odata-representation/#associations).
+Filtering on an associated object or list in this way is possible when you [expose associations as a link](/refguide9/odata-representation/#associations). It is not possible when you [expose associations as an associated object ID](/refguide9/odata-representation/#associations).
 
 ## 5 Sorting
 
@@ -167,7 +167,7 @@ The body must adhere to *URL encoding* principles. So, for instance, spaces, tab
 
 ### 10.1 Updating Attributes
 
-When a published resource has the [Updatable](/refguide/published-odata-resource/#capabilities) capability, clients can update its attributes and associations by sending a `PATCH` request to the URL of the object (for example, `PATCH /odata/myservice/v1/Employees(8444249301330581)`).
+When a published resource has the [Updatable](/refguide9/published-odata-resource/#capabilities) capability, clients can update its attributes and associations by sending a `PATCH` request to the URL of the object (for example, `PATCH /odata/myservice/v1/Employees(8444249301330581)`).
 
 Specify new values for attributes in the body of the request. Here is an example:
 
@@ -223,7 +223,7 @@ When the association refers to multiple objects, add objects to or remove object
 }
 ```
 
-Clients can only update an association from the entity that is the [owner](/refguide/associations/).
+Clients can only update an association from the entity that is the [owner](/refguide9/associations/).
 
 {{% alert color="info" %}}
 The *updating attributes* functionality was introduced in Studio Pro [9.6.0](/releasenotes/studio-pro/9.6/). The *updating associations* functionality was introduced in Studio Pro [9.8.0](/releasenotes/studio-pro/9.8/).
@@ -231,7 +231,7 @@ The *updating attributes* functionality was introduced in Studio Pro [9.6.0](/re
 
 ## 11 Inserting Objects {#inserting-objects}
 
-When a published resource has the [Insertable](/refguide/published-odata-resource/#capabilities) capability, clients can create new objects by sending a `POST` request to the URL of the entity set (for example, `POST /odata/myservice/v1/Employees`). 
+When a published resource has the [Insertable](/refguide9/published-odata-resource/#capabilities) capability, clients can create new objects by sending a `POST` request to the URL of the entity set (for example, `POST /odata/myservice/v1/Employees`). 
 
 The body of the request may specify attribute and association values just as with updates. There is one difference: when the association refers to multiple objects, objects are specified without using `@delta`. For example:
 
@@ -244,7 +244,7 @@ The body of the request may specify attribute and association values just as wit
 }
 ```
 
-Clients can only set values for an association from the entity that is the [owner](/refguide/associations/).
+Clients can only set values for an association from the entity that is the [owner](/refguide9/associations/).
 
 {{% alert type="info" %}}
 The *inserting objects* functionality was introduced in Studio Pro [9.12.0](/releasenotes/studio-pro/9.12/).
@@ -252,7 +252,7 @@ The *inserting objects* functionality was introduced in Studio Pro [9.12.0](/rel
 
 ## 12 Deleting Objects {#deleting-objects}
 
-When a published resource has the [Deletable](/refguide/published-odata-resource/#capabilities) capability, clients can delete an object by sending a `DELETE` request to the URL of the object (for example, `PATCH /odata/myservice/v1/Employees(8444249301330581)`).
+When a published resource has the [Deletable](/refguide9/published-odata-resource/#capabilities) capability, clients can delete an object by sending a `DELETE` request to the URL of the object (for example, `PATCH /odata/myservice/v1/Employees(8444249301330581)`).
 
 {{% alert type="info" %}}
 The *deleting objects* functionality was introduced in Studio Pro [9.13.0](/releasenotes/studio-pro/9.13/).

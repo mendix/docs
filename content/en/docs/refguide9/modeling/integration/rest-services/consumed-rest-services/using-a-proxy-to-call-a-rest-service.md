@@ -1,6 +1,6 @@
 ---
 title: "Using a Proxy to Call a REST Service"
-url: /refguide/using-a-proxy-to-call-a-rest-service/
+url: /refguide9/using-a-proxy-to-call-a-rest-service/
 weight: 1
 tags: ["studio pro"]
 ---
@@ -21,13 +21,13 @@ If you specify a setting both as a custom setting and as a JVM parameter, the cu
 
 ### 2.1 Custom Settings
 
-REST proxy settings can be configured as custom settings on the **App** > **Settings** > **Configurations** > **Custom** tab. For more information, see the [Custom](/refguide/configuration/#custom) section of *Configurations*.
+REST proxy settings can be configured as custom settings on the **App** > **Settings** > **Configurations** > **Custom** tab. For more information, see the [Custom](/refguide9/configuration/#custom) section of *Configurations*.
 
 ### 2.2 JVM Parameters
 
-REST proxy settings can be configured in the **App** > **Settings** > **Configurations** > **Server** tab > **Extra JVM parameters** field. For more information, see the [Server](/refguide/configuration/#server) section of *Configurations*.
+REST proxy settings can be configured in the **App** > **Settings** > **Configurations** > **Server** tab > **Extra JVM parameters** field. For more information, see the [Server](/refguide9/configuration/#server) section of *Configurations*.
 
-They can also be specified as JVM parameters in your *.m2eerc*. This is useful if you want to use these settings to also [consume web services](/refguide/using-a-proxy-to-call-a-webservice/).
+They can also be specified as JVM parameters in your *.m2eerc*. This is useful if you want to use these settings to also [consume web services](/refguide9/using-a-proxy-to-call-a-webservice/).
 
 ```java
 ...

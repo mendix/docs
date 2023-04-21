@@ -1,6 +1,6 @@
 ---
 title: "Menus"
-url: /refguide/menus/
+url: /refguide9/menus/
 category: "App Modeling"
 description: "Describes Studio Pro menus."
 weight: 20
@@ -11,7 +11,7 @@ tags: ["Studio Pro", "menu", "top bar"]
 
 The top-bar of Studio Pro contains the following menus:
 
-{{< figure src="/attachments/refguide/modeling/menus/menu-bar.png" alt="Menu-bar" >}}
+{{< figure src="/attachments/refguide9/modeling/menus/menu-bar.png" alt="Menu-bar" >}}
 
 * [Switch-to](#switch-to) – allows you to navigate to other parts of the platform
 * [File](#file) – allows you to manage documents and apps
@@ -29,31 +29,31 @@ The **Switch-to** menu is located at the upper left of Studio Pro and is represe
 
 ## 3 File Menu {#file}
 
-Via the **File** menu you can manage documents and apps. For more information on the **File** menu, see [File Menu](/refguide/file-menu/).
+Via the **File** menu you can manage documents and apps. For more information on the **File** menu, see [File Menu](/refguide9/file-menu/).
 
 ## 4 Edit Menu {#edit}
 
-The **Edit** menu allows you to perform editing functions, such as cut/copy/paste. You can also set [preferences](/refguide/preferences-dialog/) via this menu. For more information on the **Edit** menu, see [Edit Menu](/refguide/edit-menu/).
+The **Edit** menu allows you to perform editing functions, such as cut/copy/paste. You can also set [preferences](/refguide9/preferences-dialog/) via this menu. For more information on the **Edit** menu, see [Edit Menu](/refguide9/edit-menu/).
 
 ## 5 View Menu {#view}
 
-The **View** menu allows you to view dockable panes, to enable the full screen mode, and reset the projappect layout. For more information on the **View** menu and its items, see [View Menu](/refguide/view-menu/).
+The **View** menu allows you to view dockable panes, to enable the full screen mode, and reset the projappect layout. For more information on the **View** menu and its items, see [View Menu](/refguide9/view-menu/).
 
 ## 6 App Menu {#app}
 
-In the **App** menu, you can view and/or manipulate settings that are connected to your app and deployment. For more information on the **App** menu, see [App Menu](/refguide/app-menu/).
+In the **App** menu, you can view and/or manipulate settings that are connected to your app and deployment. For more information on the **App** menu, see [App Menu](/refguide9/app-menu/).
 
 ## 7 Run Menu {#run}
 
-The **Run** menu contains actions for deploying and monitoring your app, such as **Publish**, **Run locally**, or **Debugger**. For more information on the **Run** menu, see [Run Menu](/refguide/run-menu/). 
+The **Run** menu contains actions for deploying and monitoring your app, such as **Publish**, **Run locally**, or **Debugger**. For more information on the **Run** menu, see [Run Menu](/refguide9/run-menu/). 
 
 ## 8 Version Control Menu {#version-control}
 
-In the **Version Control** menu, you can view and/or manipulate settings on the version control. For more information on the **Version Control** menu, see [Version Control Menu](/refguide/version-control-menu/).
+In the **Version Control** menu, you can view and/or manipulate settings on the version control. For more information on the **Version Control** menu, see [Version Control Menu](/refguide9/version-control-menu/).
 
 ## 9 Language Menu {#language}
 
-In the **Language** menu, you can add alternative languages to your app so that end-users can see the app in their preferred language. You can also make batch changes to identical texts, even if you are only working in one language. For more information on the **Language** menu, see [Language Menu](/refguide/translatable-texts/).
+In the **Language** menu, you can add alternative languages to your app so that end-users can see the app in their preferred language. You can also make batch changes to identical texts, even if you are only working in one language. For more information on the **Language** menu, see [Language Menu](/refguide9/translatable-texts/).
 
 ## 10 Help Menu {#help}
 
@@ -67,4 +67,4 @@ In the **Language** menu, you can add alternative languages to your app so that 
 
 ## 11 Read More
 
-* [Studio Pro Overview](/refguide/studio-pro-overview/)
+* [Studio Pro Overview](/refguide9/studio-pro-overview/)

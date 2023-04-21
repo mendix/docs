@@ -1,6 +1,6 @@
 ---
 title: "Runtime Deployment"
-url: /refguide/runtime-deployment/
+url: /refguide9/runtime-deployment/
 category: "Mendix Runtime"
 description: "Describes how the Mendix Runtime is deployed."
 weight: 30
@@ -19,7 +19,7 @@ When you have created a Mendix app with no structural errors, you need run it by
 
 Below is a chart showing the processes involved in deploying your app. Each of the processes and components is described below the chart.
 
-{{< figure src="/attachments/refguide/runtime/runtime-deployment/runtime-deployment.png" alt="How Mendix Runtime is deployed" >}}
+{{< figure src="/attachments/refguide9/runtime/runtime-deployment/runtime-deployment.png" alt="How Mendix Runtime is deployed" >}}
 
 ### 2.1 Deployer
 
@@ -69,4 +69,4 @@ It starts the Runtime Server by starting a Java RE and pointing it at the releva
 
 ### 2.11 Runtime Server
 
-This is the interpreter which runs the app. For more information see [Runtime Server](/refguide/runtime-server/).
+This is the interpreter which runs the app. For more information see [Runtime Server](/refguide9/runtime-server/).

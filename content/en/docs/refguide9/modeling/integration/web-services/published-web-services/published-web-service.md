@@ -1,24 +1,24 @@
 ---
 title: "Published Web Service"
-url: /refguide/published-web-service/
+url: /refguide9/published-web-service/
 tags: ["studio pro"]
 ---
 
 ## 1 Introduction
 
-This document describes the properties of a published web service. If you want a general overview of how Mendix publishes microflows as web services, see [Published Web Services](/refguide/published-web-services/).
+This document describes the properties of a published web service. If you want a general overview of how Mendix publishes microflows as web services, see [Published Web Services](/refguide9/published-web-services/).
 
 ## 2 Operations
 
-{{< figure src="/attachments/refguide/modeling/integration/published-web-services/published-web-service/16843888.png" >}}
+{{< figure src="/attachments/refguide9/modeling/integration/published-web-services/published-web-service/16843888.png" >}}
 
 Provide the actual operations of which the web service is composed. Each of these operations is a Microflow.
 
-See [Operations](/refguide/operations/).
+See [Operations](/refguide9/operations/).
 
 ## 3 Settings
 
-{{< figure src="/attachments/refguide/modeling/integration/published-web-services/published-web-service/16843887.png" >}}
+{{< figure src="/attachments/refguide9/modeling/integration/published-web-services/published-web-service/16843887.png" >}}
 
 ### 3.1 Validate Against WSDL
 

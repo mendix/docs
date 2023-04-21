@@ -1,12 +1,12 @@
 ---
 title: "Page Break (Document Template)"
-url: /refguide/page-break-document-template/
+url: /refguide9/page-break-document-template/
 tags: ["studio pro"]
 aliases:
-    - /refguide/Page+Break+(document+template).html
-    - /refguide/page-break-(document-template).html
-    - /refguide/Page+Break+(document+template)
-    - /refguide/page-break-(document-template)
+    - /refguide9/Page+Break+(document+template).html
+    - /refguide9/page-break-(document-template).html
+    - /refguide9/Page+Break+(document+template)
+    - /refguide9/page-break-(document-template)
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
@@ -16,7 +16,7 @@ When inserting a page break, the current page will be cut off after the break an
 
 {{% alert color="info" %}}
 
-{{< figure src="/attachments/refguide/modeling/resources/document-templates/918135.png" >}}
+{{< figure src="/attachments/refguide9/modeling/resources/document-templates/918135.png" >}}
 
 A page break.
 
@@ -24,4 +24,4 @@ A page break.
 
 ## 2 Common Properties
 
-{{% snippet file="/static/_includes/refguide/name-property.md" %}}
+{{% snippet file="/static/_includes/refguide9/name-property.md" %}}

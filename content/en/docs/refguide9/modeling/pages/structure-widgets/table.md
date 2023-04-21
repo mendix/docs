@@ -1,6 +1,6 @@
 ---
 title: "Table"
-url: /refguide/table/
+url: /refguide9/table/
 weight: 60
 tags: ["studio pro", "table", "container widget", "widget"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
@@ -11,11 +11,11 @@ tags: ["studio pro", "table", "container widget", "widget"]
 
 ## 1 Introduction
 
-Tables can be used to give structure to a page. They contain [rows](/refguide/table/#rows), columns, and [cells](/refguide/table/#cells). Each cell can contain widgets. 
+Tables can be used to give structure to a page. They contain [rows](/refguide9/table/#rows), columns, and [cells](/refguide9/table/#cells). Each cell can contain widgets. 
 
 For example, you can create a table with text widgets, a logo, and a data view information as a customer report:
 
-{{< figure src="/attachments/refguide/modeling/pages/structure-widgets/table/table.png" >}}
+{{< figure src="/attachments/refguide9/modeling/pages/structure-widgets/table/table.png" >}}
 
 ## 2 Components
 
@@ -31,7 +31,7 @@ A row has the following properties:
 * **Style** – allows you to specify additional CSS styling
 * **Visible** – allows you to hide an element from a page
 
-For more information on properties listed above, see [Properties Common in the Page Editor](/refguide/common-widget-properties/).
+For more information on properties listed above, see [Properties Common in the Page Editor](/refguide9/common-widget-properties/).
 
 ### 2.2 Cells and Their Properties {#cells}
 
@@ -39,9 +39,9 @@ Each section of a table row or column is called a cell. Cells can contain widget
 
 A cell has the following properties:
 
-* **Class** – allows you to specify one or more cascading style sheet (CSS) classes (for more information on this property, see [Properties Common in the Page Editor](/refguide/common-widget-properties/))
+* **Class** – allows you to specify one or more cascading style sheet (CSS) classes (for more information on this property, see [Properties Common in the Page Editor](/refguide9/common-widget-properties/))
 
-* **Style** – allows you to specify additional CSS styling (for more information on this property, see [Properties Common in the Page Editor](/refguide/common-widget-properties/))
+* **Style** – allows you to specify additional CSS styling (for more information on this property, see [Properties Common in the Page Editor](/refguide9/common-widget-properties/))
 
 * **Cell type** – indicates the type of the cell, the following options are possible:
 
@@ -92,13 +92,13 @@ You can perform the following actions:
 
 To merge cells to the right, left, up, or down, you can also click the corresponding icon:
 
-{{< figure src="/attachments/refguide/modeling/pages/structure-widgets/table/merge-icons.png" alt="Merge Icons" >}}
+{{< figure src="/attachments/refguide9/modeling/pages/structure-widgets/table/merge-icons.png" alt="Merge Icons" >}}
 
 ## 3 Properties
 
 An example of table properties is represented in the image below:
 
-{{< figure src="/attachments/refguide/modeling/pages/structure-widgets/table/table-properties.png" alt="Table Properties"   width="250"  >}}
+{{< figure src="/attachments/refguide9/modeling/pages/structure-widgets/table/table-properties.png" alt="Table Properties"   width="250"  >}}
 
 Table properties consist of the following sections:
 
@@ -109,11 +109,11 @@ Table properties consist of the following sections:
 
 ### 3.1 Common Section {#common}
 
-{{% snippet file="/static/_includes/refguide/common-section-link.md" %}}
+{{% snippet file="/static/_includes/refguide9/common-section-link.md" %}}
 
 ### 3.2 Design Properties Section {#design-properties}
 
-{{% snippet file="/static/_includes/refguide/design-section-link.md" %}} 
+{{% snippet file="/static/_includes/refguide9/design-section-link.md" %}} 
 
 ### 3.3 General Section {#general}
 
@@ -130,7 +130,7 @@ The **Width Unit** defines whether the [Column widths](#column-widths) property 
 
 The **Column widths** property defines the widths of each column as a list of numbers separated by semi-colons. The **Width unit** (described above) determines if these numbers mean percentages or pixels. 
 
-{{< figure src="/attachments/refguide/modeling/pages/structure-widgets/table/width-unit-and-column-widths.png" alt="Width Unit and Column Widths" >}}
+{{< figure src="/attachments/refguide9/modeling/pages/structure-widgets/table/width-unit-and-column-widths.png" alt="Width Unit and Column Widths" >}}
 
 When **Width unit** is set to *Pixels*, you can set column width to the following:
 
@@ -141,10 +141,10 @@ For example, you can you can have three columns of which the first is 200 pixels
 
 ### 3.4 Visibility Section {#visibility}
 
-{{% snippet file="/static/_includes/refguide/visibility-section-link.md" %}}
+{{% snippet file="/static/_includes/refguide9/visibility-section-link.md" %}}
 
 ## 4 Read More
 
-* [Page](/refguide/page/)
-* [Structure](/refguide/structure-widgets/)
-* [Properties Common in the Page Editor](/refguide/common-widget-properties/)
+* [Page](/refguide9/page/)
+* [Structure](/refguide9/structure-widgets/)
+* [Properties Common in the Page Editor](/refguide9/common-widget-properties/)

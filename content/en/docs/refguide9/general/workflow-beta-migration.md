@@ -1,6 +1,6 @@
 ---
 title: "Migrating Workflow Apps"
-url: /refguide/workflow-beta-migration/
+url: /refguide9/workflow-beta-migration/
 linktitle: "Migrate Workflow Apps"
 category: "General Info"
 weight: 25
@@ -10,7 +10,7 @@ tags: ["studio pro", "workflow", "migration", "beta"]
 
 ## 1 Introduction
 
-[Workflows](/refguide/workflows/) were introduced as a Beta feature in Mendix 9. Since then we have received a great feedback from our community with valuable ideas on how to further improve the functionality, these ideas are implemented in Mendix version from 9.6 and above. However, due to [changes in the domain model of the System Module](#system-module), you need to manually migrate your apps that have workflows.
+[Workflows](/refguide9/workflows/) were introduced as a Beta feature in Mendix 9. Since then we have received a great feedback from our community with valuable ideas on how to further improve the functionality, these ideas are implemented in Mendix version from 9.6 and above. However, due to [changes in the domain model of the System Module](#system-module), you need to manually migrate your apps that have workflows.
 
 This document explains how to migrate your existing workflow apps depending on the version you are migrating to. It is meant for advanced Mendix developers, so proceed with caution.
 
@@ -89,7 +89,7 @@ If you did not implement custom UI in your workflow pages, we highly recommend j
 
 #### 3.1.8 Secure Your User Tasks
 
-Securing user tasks now happens through the domain model by setting [entity accesses](/refguide/module-security/#entity-access), and you no longer need to select which module roles are allowed to execute a task. Setting target users remains unchanged.
+Securing user tasks now happens through the domain model by setting [entity accesses](/refguide9/module-security/#entity-access), and you no longer need to select which module roles are allowed to execute a task. Setting target users remains unchanged.
 
 ### 3.2 Migrating Your App from Mendix Version 9.6-9.9 to Mendix Version 9.10 {#migrate-910}
 

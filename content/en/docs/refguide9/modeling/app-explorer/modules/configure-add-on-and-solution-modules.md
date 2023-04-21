@@ -1,7 +1,7 @@
 ---
 title: "Configuring Add-on and Solution Modules for Publishing"
 linktitle: "Publish Add-on and Solution Modules"
-url: /refguide/configure-add-on-and-solution-modules/
+url: /refguide9/configure-add-on-and-solution-modules/
 weight: 20
 tags: ["studio pro", "add-on", "solution", "module", "modules"]
 ---
@@ -45,7 +45,7 @@ To change the **Export level** and mark documents/elements as **Usable**, do the
 4. Navigate to its properties.
 5. Set the **Export level** property to **Usable**:
 
-    {{< figure src="/attachments/refguide/modeling/app-explorer/modules/configure-add-on-and-solution-modules/export-level-property.png" >}}   
+    {{< figure src="/attachments/refguide9/modeling/app-explorer/modules/configure-add-on-and-solution-modules/export-level-property.png" >}}   
 
 You can see that documents/elements that are marked as usable have an **eye icon**, this means the document is a part of the API. The domain model gets an eye icon if any entity is usable. 
 
@@ -71,18 +71,18 @@ Below is the list of documents and elements that can be mark as **Usable**:
 ## 3 Exporting Add-on Modules and Solutions {#export}
 
 {{% alert color="info" %}}
-Before exporting an add-on module or a solution to customers, note that for Studio Pro versions 9.22 and below, English (US) and Dutch language translations are shipped with it by default, and for Studio Pro versions 9.23 and above, only English (US) is shipped by default (for more information, see the [Internationalization Improvements](/releasenotes/studio-pro/9.23/#internationalization-improvements) section of *9.23* Studio Pro release notes). This may be important if your app is in another language (not English (US) or Dutch) and your customers decide to translate the consumed solution or add-on to other languages. To avoid confusion, open [Language](/refguide/translatable-texts/) > **Language Operations** and select the **Delete** operation for English (US) and/or Dutch. For more information on how to perform a certain operation, see [Language Operations](/refguide/language-operations/).
+Before exporting an add-on module or a solution to customers, note that for Studio Pro versions 9.22 and below, English (US) and Dutch language translations are shipped with it by default, and for Studio Pro versions 9.23 and above, only English (US) is shipped by default (for more information, see the [Internationalization Improvements](/releasenotes/studio-pro/9.23/#internationalization-improvements) section of *9.23* Studio Pro release notes). This may be important if your app is in another language (not English (US) or Dutch) and your customers decide to translate the consumed solution or add-on to other languages. To avoid confusion, open [Language](/refguide9/translatable-texts/) > **Language Operations** and select the **Delete** operation for English (US) and/or Dutch. For more information on how to perform a certain operation, see [Language Operations](/refguide9/language-operations/).
 {{% /alert %}}
 
 ### 3.1 Exporting Add-on Module Package
 
 To export the add-on module, right-click it in the App Explorer and select **Export add-on module package**: 
 
-{{< figure src="/attachments/refguide/modeling/app-explorer/modules/configure-add-on-and-solution-modules/export-add-on.png" >}}
+{{< figure src="/attachments/refguide9/modeling/app-explorer/modules/configure-add-on-and-solution-modules/export-add-on.png" >}}
 
 It is possible to add files in an add-on module package, you can select them during export and they will be imported. 
 
-{{< figure src="/attachments/refguide/modeling/app-explorer/modules/configure-add-on-and-solution-modules/select-depencencies-add-on-export.png" >}}
+{{< figure src="/attachments/refguide9/modeling/app-explorer/modules/configure-add-on-and-solution-modules/select-depencencies-add-on-export.png" >}}
 
 {{% alert color="info" %}}
 Selection made above is not saved when exporting the module again, you need to select files for every subsequent export.
@@ -94,7 +94,7 @@ The add-on module gets an *.mxmodule* extension.
 
 Solution package is an app package that will be sold as an out-of-the-box solution and can be used by multiple customers. It has a solution core that consists of solution modules. It can also consist of app modules and add-on modules. For more information on solutions, see [Create Solutions](/appstore/creating-content/sol-solutions-guide/) in the *Marketplace Guide*.
 
-To export the solution package, right-click the name of the app in the **App Explorer** and select **Export app package** or open the **File** menu > **Export App Package**. For more information on exporting, see [Export App Package](/refguide/export-app-package-dialog/).
+To export the solution package, right-click the name of the app in the **App Explorer** and select **Export app package** or open the **File** menu > **Export App Package**. For more information on exporting, see [Export App Package](/refguide9/export-app-package-dialog/).
 
 The solution package gets an *.mxsolution* extension.
 
@@ -111,4 +111,4 @@ If, for some reason, you switch the add-on and solution module to an app module,
 * [Create Solutions](/appstore/creating-content/sol-solutions-guide/)
 * [IP Protection](/appstore/creating-content/sol-ip-protection/)
 * [Use Marketplace Content in Studio Pro](/appstore/general/app-store-content/)
-* [Import and Export Apps, Modules, Widgets, and Documents](/refguide/import-and-export/)
+* [Import and Export Apps, Modules, Widgets, and Documents](/refguide9/import-and-export/)

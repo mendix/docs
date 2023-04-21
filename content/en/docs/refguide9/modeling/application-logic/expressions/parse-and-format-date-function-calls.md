@@ -1,6 +1,6 @@
 ---
 title: "Parse and Format Date Function Calls"
-url: /refguide/parse-and-format-date-function-calls/
+url: /refguide9/parse-and-format-date-function-calls/
 weight: 160
 description: "Describes the functions for parsing Date and time values from strings using a specified pattern or producing a string from a Date and time value in Mendix."
 tags: ["studio pro", "expressions", "parsing", "formatting"]

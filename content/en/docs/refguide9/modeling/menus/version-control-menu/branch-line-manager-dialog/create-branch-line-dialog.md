@@ -1,15 +1,15 @@
 ---
 title: "Create Branch Line"
-url: /refguide/create-branch-line-dialog/
+url: /refguide9/create-branch-line-dialog/
 weight: 10
 tags: ["studio pro", "create branch line"]
 ---
 
 ## 1 Introduction
 
-Use the **Create Branch Line** dialog box to create a new [branch line](/refguide/version-control/#branches) via the **Branch Line Manager**:
+Use the **Create Branch Line** dialog box to create a new [branch line](/refguide9/version-control/#branches) via the **Branch Line Manager**:
 
-{{< figure src="/attachments/refguide/modeling/menus/version-control-menu/branch-line-manager-dialog/create-branch-line-dialog/create-branch-line.png" >}}
+{{< figure src="/attachments/refguide9/modeling/menus/version-control-menu/branch-line-manager-dialog/create-branch-line-dialog/create-branch-line.png" >}}
 
 To view the **Create Branch Line** dialog box,  do the following:
 
@@ -21,7 +21,7 @@ To view the **Create Branch Line** dialog box,  do the following:
 
 The **Create Branch Line** dialog box is displayed.
 
-For more information on how to manage branch lines, see [Branch Line Manager](/refguide/branch-line-manager-dialog/). For information on the version control, see [Version Control](/refguide/version-control/). 
+For more information on how to manage branch lines, see [Branch Line Manager](/refguide9/branch-line-manager-dialog/). For information on the version control, see [Version Control](/refguide9/version-control/). 
 
 ## 2 Create Branch From
 
@@ -61,5 +61,5 @@ Since branch line names must be unique, this option shows the existing branch li
 
 ## 8 Read More
 
-* [Version Control](/refguide/version-control/)
-* [Collaborative Development](/refguide/collaborative-development/)
+* [Version Control](/refguide9/version-control/)
+* [Collaborative Development](/refguide9/collaborative-development/)

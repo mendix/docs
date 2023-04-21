@@ -1,6 +1,6 @@
 ---
 title: "System Requirements"
-url: /refguide/system-requirements/
+url: /refguide9/system-requirements/
 category: "General Info"
 weight: 10
 description: "Presents the system requirements for using the Mendix Platform."
@@ -18,7 +18,7 @@ Mendix Studio Pro has the requirements listed in the following sections.
 
 ### 2.1 Software Specifications
 
-Mendix [Studio Pro](/refguide/modeling/) version 9 is supported on 64-bit versions of Windows 10 release 1809 and above. This also includes Windows 11. MTS versions starting from Mendix Studio Pro 9.6.5 and Mendix Studio 9.9.1 are enabled and tested to run on Apple Silicon Macs such as the M1, which requires [Parallels 17](https://www.parallels.com/) and Windows 11.
+Mendix [Studio Pro](/refguide9/modeling/) version 9 is supported on 64-bit versions of Windows 10 release 1809 and above. This also includes Windows 11. MTS versions starting from Mendix Studio Pro 9.6.5 and Mendix Studio 9.9.1 are enabled and tested to run on Apple Silicon Macs such as the M1, which requires [Parallels 17](https://www.parallels.com/) and Windows 11.
 
 The following frameworks are required. They will be installed automatically by the Studio Pro installer if necessary:
 
@@ -70,7 +70,7 @@ To run a Mendix app, Mendix Studio Pro uses the following ports by default. If y
 * 8090: admin port
 * 8100: sign-in port (for version 9.18 and above)
 
-For more information on ports and modifying Studio Pro's default ports, see [Configurations](/refguide/configuration/) and the [Troubleshooting Common Mobile Issues](/refguide/mobile/getting-started-with-mobile/prerequisites/#troubleshooting) section of *Native App Prerequisites and Troubleshooting*.
+For more information on ports and modifying Studio Pro's default ports, see [Configurations](/refguide9/configuration/) and the [Troubleshooting Common Mobile Issues](/refguide9/mobile/getting-started-with-mobile/prerequisites/#troubleshooting) section of *Native App Prerequisites and Troubleshooting*.
 
 ### 2.2 TortoiseSVN
 
@@ -189,21 +189,21 @@ Mendix tries to support the most recent and patched database server versions fro
 
 Current support:
 
-* [MariaDB](/refguide/mysql/): 10.2, 10.3, 10.4, 10.5, 10.6, 10.11 (please note that support for 10.2 is deprecated and has been removed in Studio Pro versions 9.22.0, 9.18.5, and 9.12.11; it will also be removed in 9.6.17)
+* [MariaDB](/refguide9/mysql/): 10.2, 10.3, 10.4, 10.5, 10.6, 10.11 (please note that support for 10.2 is deprecated and has been removed in Studio Pro versions 9.22.0, 9.18.5, and 9.12.11; it will also be removed in 9.6.17)
 * [Microsoft SQL Server](/developerportal/deploy/mendix-on-windows-microsoft-sql-server/): 2019, 2022
 * [Azure SQL](https://docs.microsoft.com/en-us/sql/t-sql/statements/alter-database-transact-sql-compatibility-level?view=sql-server-2017): v12 compatibility mode 140 or higher
-* [MySQL](/refguide/mysql/): 8.0
-* [Oracle Database](/refguide/oracle/): 19, 21c
+* [MySQL](/refguide9/mysql/): 8.0
+* [Oracle Database](/refguide9/oracle/): 19, 21c
 * PostgreSQL: 11, 12, 13, 14, 15
-* [SAP HANA](/refguide/saphana/): 2.00.040.00.1545918182
-* [IBM DB2](/refguide/db2/): 11.5 for Linux, Unix, and Windows (please note that support for DB2 is deprecated and will be removed in Studio Pro version 10)
+* [SAP HANA](/refguide9/saphana/): 2.00.040.00.1545918182
+* [IBM DB2](/refguide9/db2/): 11.5 for Linux, Unix, and Windows (please note that support for DB2 is deprecated and will be removed in Studio Pro version 10)
 
 {{% alert color="warning" %}}
 Each app must have its own database. Mendix apps cannot share data by sharing the same database.
 
-If you want two apps to share the same database, then you need to share the data from one app to the other using APIs. In Mendix, these are supported by [Data Hub](/data-hub/share-data/) or the REST and OData services described in the [Integration](/refguide/integration/) section of the *Studio Pro Guide*. This is referred to as a microservices architecture.
+If you want two apps to share the same database, then you need to share the data from one app to the other using APIs. In Mendix, these are supported by [Data Hub](/data-hub/share-data/) or the REST and OData services described in the [Integration](/refguide9/integration/) section of the *Studio Pro Guide*. This is referred to as a microservices architecture.
 
-For more information on why data cannot be shared between apps see [Data Storage](/refguide/data-storage/#databases). Use the [Database Replication](/appstore/modules/database-replication/) module if you need to copy the data from one app to another.
+For more information on why data cannot be shared between apps see [Data Storage](/refguide9/data-storage/#databases). Use the [Database Replication](/appstore/modules/database-replication/) module if you need to copy the data from one app to another.
 {{% /alert %}}
 
 ## 9 File Storage {#file-storage}
@@ -270,13 +270,13 @@ Hybrid apps cannot be tested in Android Emulator, only on a real device.
 
 ## 12 MxBuild {#mxbuild}
 
-MxBuild is a Windows and Linux command-line tool that can be used to build a Mendix Deployment Package. For more information, see [MxBuild](/refguide/mxbuild/).
+MxBuild is a Windows and Linux command-line tool that can be used to build a Mendix Deployment Package. For more information, see [MxBuild](/refguide9/mxbuild/).
 
 * Mono v5.20.x or .NET v4.7.2
 * JDK 11
 
 ## 13 mx Command-Line Tool {#mxtool}
 
-The **mx** command-line tool is a Windows and Linux command-line tool that can be used to do useful things with your Mendix app. For more information, see [mx Command-Line Tool](/refguide/mx-command-line-tool/).
+The **mx** command-line tool is a Windows and Linux command-line tool that can be used to do useful things with your Mendix app. For more information, see [mx Command-Line Tool](/refguide9/mx-command-line-tool/).
 
 * Mono v5.20.x or .NET v4.7.2

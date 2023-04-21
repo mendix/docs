@@ -1,6 +1,6 @@
 ---
 title: "Placeholder"
-url: /refguide/placeholder/
+url: /refguide9/placeholder/
 weight: 10
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
@@ -9,20 +9,20 @@ weight: 10
 
 A **placeholder** can be used in two ways:
 
-* In a [layout](/refguide/layout/) to define a "gap" that can be filled in a [page](/refguide/page/) based on that layout
+* In a [layout](/refguide9/layout/) to define a "gap" that can be filled in a [page](/refguide9/page/) based on that layout
 * In a layout that defines the layout as a primary layout
 
 Each placeholder is colored blue with its name displayed in the middle of it. The placeholder named **Main** is always shown in a darker shade of blue. 
 
 For example, the image below shows two placeholders, **Main** and **Other** positioned within a layout grid. 
 
-{{< figure src="/attachments/refguide/modeling/pages/page-resources/layout/placeholder/placeholder.png" alt="Two placeholders in a layout grid. One is labeled 'Main', and one is labeled 'Other'"   width="400"  >}}
+{{< figure src="/attachments/refguide9/modeling/pages/page-resources/layout/placeholder/placeholder.png" alt="Two placeholders in a layout grid. One is labeled 'Main', and one is labeled 'Other'"   width="400"  >}}
 
 ## 2 Properties
 
 An example of placeholder properties is represented in the image below:
 
-{{< figure src="/attachments/refguide/modeling/pages/page-resources/layout/placeholder/placeholder-properties.png" alt="Properties pane for a placeholder" >}}
+{{< figure src="/attachments/refguide9/modeling/pages/page-resources/layout/placeholder/placeholder-properties.png" alt="Properties pane for a placeholder" >}}
 
 A placeholder has a single section, **Misc** and a single property, **Name**.
 
@@ -36,4 +36,4 @@ When a user switches a page from one layout to another, the placeholder names wi
 
 Because of this, user experience can be improved significantly if all of an app's layouts adhere to the same or a similar naming scheme. This will ensure layouts can be alternated freely without having to consider the effect on the content of each individual placeholder. 
 
-The placeholder naming scheme also has an impact on [page templates](/refguide/page-templates/). When creating a new page, the template will map its content based on the names of the placeholders in its preview layout. Consequently, a template might describe the content for a placeholder that is not available in the selected layout. To prevent this, a compatible layout is automatically pre-selected when clicking a page template in the create new page dialog. If an incompatible layout is then selected manually, all the content for the missing placeholders will be discarded. 
+The placeholder naming scheme also has an impact on [page templates](/refguide9/page-templates/). When creating a new page, the template will map its content based on the names of the placeholders in its preview layout. Consequently, a template might describe the content for a placeholder that is not available in the selected layout. To prevent this, a compatible layout is automatically pre-selected when clicking a page template in the create new page dialog. If an incompatible layout is then selected manually, all the content for the missing placeholders will be discarded. 

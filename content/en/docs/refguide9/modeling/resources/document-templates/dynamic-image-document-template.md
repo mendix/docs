@@ -1,12 +1,12 @@
 ---
 title: "Dynamic Image (Document Template)"
-url: /refguide/dynamic-image-document-template/
+url: /refguide9/dynamic-image-document-template/
 tags: ["studio pro"]
 aliases:
-    - /refguide/Dynamic+Image+(document+template).html
-    - /refguide/dynamic-image-(document-template).html
-    - /refguide/Dynamic+Image+(document+template)
-    - /refguide/dynamic-image-(document-template)
+    - /refguide9/Dynamic+Image+(document+template).html
+    - /refguide9/dynamic-image-(document-template).html
+    - /refguide9/Dynamic+Image+(document+template)
+    - /refguide9/dynamic-image-(document-template)
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
@@ -16,7 +16,7 @@ A dynamic image can be used to show a System.Image. If the image is not availabl
 
 {{% alert color="info" %}}
 
-{{< figure src="/attachments/refguide/modeling/resources/document-templates/918132.png" >}}
+{{< figure src="/attachments/refguide9/modeling/resources/document-templates/918132.png" >}}
 A dynamic image inside a table cell, showing the preset default image.
 
 {{% /alert %}}
@@ -41,4 +41,4 @@ The height defines the height of the image in the document. This is set in pixel
 
 ## 3 Common Properties
 
-{{% snippet file="/static/_includes/refguide/name-property.md" %}}
+{{% snippet file="/static/_includes/refguide9/name-property.md" %}}

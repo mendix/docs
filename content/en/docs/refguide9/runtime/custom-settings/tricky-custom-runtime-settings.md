@@ -1,14 +1,14 @@
 ---
 title: "Advanced Custom Settings in Mendix Runtime"
 linktitle: "Advanced Custom Settings"
-url: /refguide/tricky-custom-runtime-settings/
+url: /refguide9/tricky-custom-runtime-settings/
 description: "Describes advanced custom settings in Mendix Runtime and how to configure them."
 tags: ["Support", "custom settings"]
 ---
 
 ## 1 Introduction
 
-There are many custom settings in Mendix, most of which are described in [Runtime Customization](/refguide/custom-settings/).
+There are many custom settings in Mendix, most of which are described in [Runtime Customization](/refguide9/custom-settings/).
 
 However, a few of the more commonly used custom settings can be complicated and have far-reaching implications. That is why we would like to give these settings a bit of special attention and more thoroughly explain the consequences of changing them.
 
@@ -116,4 +116,4 @@ In general, we see that increasing the `ConnectionPoolingMaxActive` value to a (
 
 ## 5 Read More
 
-* [Runtime Customization](/refguide/custom-settings/)
+* [Runtime Customization](/refguide9/custom-settings/)

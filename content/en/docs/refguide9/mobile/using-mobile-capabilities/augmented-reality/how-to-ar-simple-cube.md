@@ -1,6 +1,6 @@
 ---
 title: "Get Started with AR"
-url: /refguide/mobile/using-mobile-capabilities/augmented-reality/how-to-ar-simple-cube/
+url: /refguide9/mobile/using-mobile-capabilities/augmented-reality/how-to-ar-simple-cube/
 weight: 10
 description: Tutorials for setting up and using AR in Mendix Studio Pro.
 aliases:

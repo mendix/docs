@@ -1,6 +1,6 @@
 ---
 title: "Validation Assist"
-url: /refguide/validation-assist/
+url: /refguide9/validation-assist/
 weight: 40
 description: "Describes Mendix Validation Assist on pages."
 tags: ["studio pro", "mendix assist", "validation assist", "bot", "validation bot", "validation", "data validations", "field validation", "form validation"]
@@ -8,7 +8,7 @@ tags: ["studio pro", "mendix assist", "validation assist", "bot", "validation bo
 
 ## 1 Introduction 
 
-The Validation Assist helps you build validation microflows in a more automated way using pre-built expressions.  [Validation rules](https://docs.mendix.com/refguide/validation-rules/) are conditions that should be satisfied before an object is committed. There are different ways to [set up data validations](/refguide/setting-up-data-validation/) in Mendix. Building data validations in microflows is a manual and repetitive task and Validation Assist helps automate it. 
+The Validation Assist helps you build validation microflows in a more automated way using pre-built expressions.  [Validation rules](https://docs.mendix.com/refguide9/validation-rules/) are conditions that should be satisfied before an object is committed. There are different ways to [set up data validations](/refguide9/setting-up-data-validation/) in Mendix. Building data validations in microflows is a manual and repetitive task and Validation Assist helps automate it. 
 
 The main features of the Validation Assist are the following:
 
@@ -44,7 +44,7 @@ The page should contain at least one input widget, for the **Generate validation
 
 The **Generate Validation Microflow** dialog box is where you can configure all validations:
 
-{{< figure src="/attachments/refguide/modeling/mx-assist-studio-pro/mx-validation-assist/generate-validation-microflow-dialog.png" alt="Generate Validation Microflow Dialog Box" >}}
+{{< figure src="/attachments/refguide9/modeling/mx-assist-studio-pro/mx-validation-assist/generate-validation-microflow-dialog.png" alt="Generate Validation Microflow Dialog Box" >}}
 
 The dialog box consists of two sections:
 
@@ -53,7 +53,7 @@ The dialog box consists of two sections:
     * **Microflow** – microflow name
     * **Commit** – defines whether changes should be committed to the database (only for buttons)
     * **Close Page** – defines whether the page should be closed after clicking the button (only for buttons)
-    * **On Event** – defines when to trigger the validation check (only for input widgets), for more information on events, see [On Click Events and Events Section](/refguide/on-click-event/)
+    * **On Event** – defines when to trigger the validation check (only for input widgets), for more information on events, see [On Click Events and Events Section](/refguide9/on-click-event/)
 
 * **Validations** where validations for the microflow are configured. This section contains the following: 
 
@@ -82,11 +82,11 @@ To configure the **Save** button for the use case above, do the following:
 1. Open the page with the form called *Appointment_NewEdit* and right-click the **Save** button in it.
 2. In the drop-down list, select **Generate validation microflow**:
 
-    {{< figure src="/attachments/refguide/modeling/mx-assist-studio-pro/mx-validation-assist/generate-validation-microflow-option.png" alt="Generate Validation Microflow Option" >}}
+    {{< figure src="/attachments/refguide9/modeling/mx-assist-studio-pro/mx-validation-assist/generate-validation-microflow-option.png" alt="Generate Validation Microflow Option" >}}
 
 3. In the **Generate Validation Microflow** dialog box, you can see that **Microflow** properties, for example, a microflow name, and validations were configured for you. Three expressions were added to validations: to check if the name, treatment type, and date and time fields are filled in:
 
-    {{< figure src="/attachments/refguide/modeling/mx-assist-studio-pro/mx-validation-assist/generate-validation-microflow-dialog.png" alt="Generate Validation Microflow Dialog Box" >}}
+    {{< figure src="/attachments/refguide9/modeling/mx-assist-studio-pro/mx-validation-assist/generate-validation-microflow-dialog.png" alt="Generate Validation Microflow Dialog Box" >}}
 
 4. In your app, you already have a validation microflow that checks the selected date and time, you can call the microflow in the current validation. Do the following:
 
@@ -108,24 +108,24 @@ To configure the **Save** button for the use case above, do the following:
 
     1. In the **Generate Validation Microflow** dialog box, select two validations for *Customer_Name* and click **Extract submicroflow**:
 
-        {{< figure src="/attachments/refguide/modeling/mx-assist-studio-pro/mx-validation-assist/extract-sub-microflow.png" alt="Extract Sub-Microflow" >}}
+        {{< figure src="/attachments/refguide9/modeling/mx-assist-studio-pro/mx-validation-assist/extract-sub-microflow.png" alt="Extract Sub-Microflow" >}}
 
     2. In the **Extract Validation Sub Microflow,** click **Extract Microflow**.
 
-        {{< figure src="/attachments/refguide/modeling/mx-assist-studio-pro/mx-validation-assist/extract-sub-microflow-dialog.png" alt="Extract Sub-Microflow Dialog" >}}
+        {{< figure src="/attachments/refguide9/modeling/mx-assist-studio-pro/mx-validation-assist/extract-sub-microflow-dialog.png" alt="Extract Sub-Microflow Dialog" >}}
 
         The microflow is saved separately containing selected validations.
 
 7. In the **Generate Validation Microflow** dialog box, click **Generate microflow**. 
 8. In the **Validation Assist** dialog box, click **Open the microflow** to view the configured microflow:
 
-    {{< figure src="/attachments/refguide/modeling/mx-assist-studio-pro/mx-validation-assist/validation-microflow.png" alt="Validation Microflow" >}}
+    {{< figure src="/attachments/refguide9/modeling/mx-assist-studio-pro/mx-validation-assist/validation-microflow.png" alt="Validation Microflow" >}}
 
 The created microflow is used for the **Save** button to validate all conditions. The sub-microflow can be used on a different page to validate the customer name. 
 You can now  click the **Play** button in the Studio Pro top bar to run your app locally and test validations.
 
 ## 4 Read More 
 
-* [MxAssist Performance Bot](/refguide/mx-assist-performance-bot/)
-* [MxAssist Logic Bot](/refguide/mx-assist-logic-bot/)
-* [Validation Rules](/refguide/validation-rules/)     
+* [MxAssist Performance Bot](/refguide9/mx-assist-performance-bot/)
+* [MxAssist Logic Bot](/refguide9/mx-assist-logic-bot/)
+* [Validation Rules](/refguide9/validation-rules/)     

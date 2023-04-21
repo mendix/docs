@@ -1,6 +1,6 @@
 ---
 title: "Moving from Mendix Studio Pro 8 to 9"
-url: /refguide/moving-from-8-to-9/
+url: /refguide9/moving-from-8-to-9/
 category: "General Info"
 weight: 20
 description: "Provides details on updating your app from Mendix 8 to Mendix 9, including sections on converting your app and deprecated features."
@@ -24,7 +24,7 @@ During the synchronization stage, Mendix 9 will perform a check for the RCSI sta
 
 ## 3 Update from Mendix 8 to 9 for Studio Pro {#studio-pro-upgrade}
 
-The following sub-sections explain the steps to take in converting your app from Mendix 8 to Mendix 9. We recommend you first review the [Breaking Changes](/releasenotes/studio-pro/9.0/#breaking-changes) section of the *Studio Pro 9.0* release notes as well as our updated [System Requirements](/refguide/system-requirements/).
+The following sub-sections explain the steps to take in converting your app from Mendix 8 to Mendix 9. We recommend you first review the [Breaking Changes](/releasenotes/studio-pro/9.0/#breaking-changes) section of the *Studio Pro 9.0* release notes as well as our updated [System Requirements](/refguide9/system-requirements/).
 
 ### 3.1 Back Up Your App
 
@@ -131,7 +131,7 @@ If your pluggable widget or JavaScript action uses libraries that require native
 
 Mendix 9 contains a new XPath query engine called *query engine 9* or QE9, replacing the current engine called *query engine 7* or QE7. There are a few changes in functionality between the query engines:
 
-* If an association is [navigable from both sides](/refguide/association-properties/#navigability), both entities can have access rules defined which declare the readability of the association. For such associations, QE9 will always use the entity on the left of the current XPath to determine accessibility.
+* If an association is [navigable from both sides](/refguide9/association-properties/#navigability), both entities can have access rules defined which declare the readability of the association. For such associations, QE9 will always use the entity on the left of the current XPath to determine accessibility.
 For example: in the query `//Customer[Customer_Address/Address/City = 'Rotterdam']`, the access rules defined in `Customer` will be used for the association, whereas in `//Address[Customer_Address/Customer/Lastname = 'Doe']`, the rules in `Address` will be used for that same association. In QE7 the behavior was not well defined.
 * QE9 has been written to follow the least privilege principle strictly when retrieving data. This might cause less data to be visible to end-users.
 * While not allowed by Studio Pro, it was possible to use a non-boolean attribute as a constraint in a Java action, for example `//Address[City]`. QE7 accepts such queries but, depending on the database, it may give unexpected results. QE9 will reject such queries.
@@ -142,7 +142,7 @@ For example: in the query `//Customer[Customer_Address/Address/City = 'Rotterdam
 Check out how the Mendix community resolves upgrade issues in the following Forum posts:
 
 * [Upgrade from Mendix 8 to Mendix 9](https://forum.mendix.com/link/space/studio-pro/questions/123696) – on *.jar* files and the *userlib* directory
-* [Native app styling difference with Mendix 9 upgrade](https://forum.mendix.com/link/space/mobile/questions/118280) – on [upgrading to Atlas 3](https://docs.mendix.com/refguide/moving-from-atlas-2-to-3/)
+* [Native app styling difference with Mendix 9 upgrade](https://forum.mendix.com/link/space/mobile/questions/118280) – on [upgrading to Atlas 3](https://docs.mendix.com/refguide9/moving-from-atlas-2-to-3/)
 * [Error importing Excel file after upgrade to Mendix 9](https://forum.mendix.com/link/space/studio-pro/questions/117814) – on converting attribute values
 * [Does anyone have experience with upgrading Mx applications from 7 to 9?](https://forum.mendix.com/link/space/studio-pro/questions/112229) – on considerations for moving from 7 to 8 and then 8 to 9
 * [Native Mobile Synchronization Error after Mendix 9 Upgrade](https://forum.mendix.com/link/space/integrations/questions/112173) – on synchronizing objects and security rules

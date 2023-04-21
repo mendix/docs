@@ -1,6 +1,6 @@
 ---
 title: "MySQL/MariaDB"
-url: /refguide/mysql/
+url: /refguide9/mysql/
 weight: 50
 tags: ["studio pro"]
 ---
@@ -25,7 +25,7 @@ If you receive a `SAVEPOINT unnamed does not exist` exception, a deadlock has oc
 
 ## 5 Time Zone Support
 
-Mendix supports functionality to extract a part of a date and time in a query. In XPath, you can use functions like [`hours-from-dateTime`](/refguide/xpath-hours-from-datetime/) and [`week-from-dateTime`](/refguide/xpath-week-from-datetime/). In OQL, you can use functions like [`DATEPART(..)`](/refguide/oql-datepart/) and [`DATEDIFF(..)`](/refguide/oql-datediff/). 
+Mendix supports functionality to extract a part of a date and time in a query. In XPath, you can use functions like [`hours-from-dateTime`](/refguide9/xpath-hours-from-datetime/) and [`week-from-dateTime`](/refguide9/xpath-week-from-datetime/). In OQL, you can use functions like [`DATEPART(..)`](/refguide9/oql-datepart/) and [`DATEDIFF(..)`](/refguide9/oql-datediff/). 
 
 In Mendix, DateTimes are stored in the UTC time zone. For these functions to work correctly, it is important that the database supports converting dates and times from UTC to another time zone. If this is not possible, the functions will operate on the date and time in the UTC time zone. That can lead to incorrect results if the user expects the date to work in their time zone.
 

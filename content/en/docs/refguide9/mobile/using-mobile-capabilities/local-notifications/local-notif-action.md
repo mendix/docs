@@ -1,6 +1,6 @@
 ---
 title: "Part 3: Actions"
-url: /refguide/mobile/using-mobile-capabilities/local-notifications/local-notif-action/
+url: /refguide9/mobile/using-mobile-capabilities/local-notifications/local-notif-action/
 weight: 30
 description: A tutorial for making your push notifications trigger actions when tapped.
 ---
@@ -10,7 +10,7 @@ description: A tutorial for making your push notifications trigger actions when 
 Several apps which use push notifications will also need actions to trigger after a user taps a notification. This step-by-step guide will teach you to make a tapped notification show a specific page.
 
 {{% alert color="warning" %}}
-The Make It Native app is currently experiencing limitations which interfere with notifications. We are currently fixing those limitations. To test your local notification actions, please use a native release app installed on a mobile testing device instead of the Make It Native app. To build a native release app, please complete [Build a Mendix Native App Locally](/refguide/mobile/distributing-mobile-apps/building-native-apps/native-build-locally/) and use that app to test local notification actions.
+The Make It Native app is currently experiencing limitations which interfere with notifications. We are currently fixing those limitations. To test your local notification actions, please use a native release app installed on a mobile testing device instead of the Make It Native app. To build a native release app, please complete [Build a Mendix Native App Locally](/refguide9/mobile/distributing-mobile-apps/building-native-apps/native-build-locally/) and use that app to test local notification actions.
 {{% /alert %}}
 
 ## 2 Prerequisites
@@ -18,8 +18,8 @@ The Make It Native app is currently experiencing limitations which interfere wit
 Before starting this guide, make sure you have completed the following prerequisites:
 
 * Review the [basic differences](https://developer.apple.com/documentation/usernotifications) between local notifications and push notifications
-* Install the [Make It Native](/refguide/getting-the-make-it-native-app/) app on your mobile device
-* Complete the preceding tutorials in this [Use Local Notifications](/refguide/mobile/using-mobile-capabilities/local-notifications/) series
+* Install the [Make It Native](/refguide9/getting-the-make-it-native-app/) app on your mobile device
+* Complete the preceding tutorials in this [Use Local Notifications](/refguide9/mobile/using-mobile-capabilities/local-notifications/) series
 
 ## 3 Setting an Action for When a Notification is Tapped
 
@@ -72,7 +72,7 @@ Great job setting up your notification. Now you can test it:
 4. Tap the notification to navigate to the page you selected.
 5. Tap the **Return to home page** button to navigate back to your home page.
 
-Now you can show pages after notifications are tapped. Next, in [Use Local Notifications Part 4: Data](/refguide/mobile/using-mobile-capabilities/local-notifications/local-notif-data/), you will learn to pass data to such pages.
+Now you can show pages after notifications are tapped. Next, in [Use Local Notifications Part 4: Data](/refguide9/mobile/using-mobile-capabilities/local-notifications/local-notif-data/), you will learn to pass data to such pages.
 
 ## 4 Read More
 

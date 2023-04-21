@@ -1,6 +1,6 @@
 ---
 title: "Creating a Custom Developer App"
-url: /refguide/mobile/distributing-mobile-apps/building-native-apps/how-to-devapps/
+url: /refguide9/mobile/distributing-mobile-apps/building-native-apps/how-to-devapps/
 weight: 40
 description: A tutorial for creating custom developer apps.
 aliases:
@@ -15,8 +15,8 @@ A custom developer app helps you by serving as a replacement for the Make It Nat
 
 ## 2 Prerequisites
 
-* Complete [Get Started with Native Mobile](/refguide/mobile/getting-started-with-mobile/)
-* Complete the Mendix Native Mobile Builder wizard as found in [Build a Mendix Native App Locally](/refguide/mobile/distributing-mobile-apps/building-native-apps/native-build-locally-manually/)
+* Complete [Get Started with Native Mobile](/refguide9/mobile/getting-started-with-mobile/)
+* Complete the Mendix Native Mobile Builder wizard as found in [Build a Mendix Native App Locally](/refguide9/mobile/distributing-mobile-apps/building-native-apps/native-build-locally-manually/)
 
 ## 3 Building Your Developer App {#build-your-developer-app}
 
@@ -76,7 +76,7 @@ There are various ways install an app on a device. Installing using a USB is det
 
 ### 4.2 iOS
 
-By default your custom developer app will be unsigned. To get a signed *IPA*, follow the steps in  [Distributing Native Apps](/refguide/mobile/distributing-mobile-apps/distributing-native-apps/). Your custom developer app branch is named **developer**.
+By default your custom developer app will be unsigned. To get a signed *IPA*, follow the steps in  [Distributing Native Apps](/refguide9/mobile/distributing-mobile-apps/distributing-native-apps/). Your custom developer app branch is named **developer**.
 
 The unsigned output of an iOS build is an *XCArchive* file. *XCArchive* files require manual signing before they are ready to be installed on a device.
 

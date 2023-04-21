@@ -1,6 +1,6 @@
 ---
 title: "Part 1: Local Notifications"
-url: /refguide/mobile/using-mobile-capabilities/local-notifications/native-local-notifications/
+url: /refguide9/mobile/using-mobile-capabilities/local-notifications/native-local-notifications/
 weight: 10
 description: A tutorial for setting up local push notifications which do not use an internet connection.
 ---
@@ -19,10 +19,10 @@ This guide will teach you how to do the following:
 Before starting this guide, make sure you have completed the following prerequisites:
 
 * Review the [basic differences](https://developer.apple.com/documentation/usernotifications) between local notifications and push notifications
-* Install the [Make It Native](/refguide/getting-the-make-it-native-app/) app on your mobile device
+* Install the [Make It Native](/refguide9/getting-the-make-it-native-app/) app on your mobile device
 
 {{% alert color="info" %}}
-To use push notifications with apps created with the Native Builder, make sure you have completed [How To Deploy Your First Mendix Native Mobile App](/howto/mobile/deploying-native-app/) and the guides described in [Push Notifications](/refguide/mobile/using-mobile-capabilities/push-notifications/)
+To use push notifications with apps created with the Native Builder, make sure you have completed [How To Deploy Your First Mendix Native Mobile App](/howto/mobile/deploying-native-app/) and the guides described in [Push Notifications](/refguide9/mobile/using-mobile-capabilities/push-notifications/)
 {{% /alert %}}
 
 ## 3 Creating an App and Configuring Notifications
@@ -174,7 +174,7 @@ Now you can run your app and see if your notification works.
 
     If you did not see a notification, try clicking **Run Locally** to reload your app. Then, tap the **Send Notification** button again.
 
-Congratulations! You can now see local notifications on your device. Next, in [How to Use Local Notifications Part 2: Badges](/refguide/mobile/using-mobile-capabilities/local-notifications/local-notif-badges/), you will learn how to configure notification badges.
+Congratulations! You can now see local notifications on your device. Next, in [How to Use Local Notifications Part 2: Badges](/refguide9/mobile/using-mobile-capabilities/local-notifications/local-notif-badges/), you will learn how to configure notification badges.
 
 ## 4 Read More
 

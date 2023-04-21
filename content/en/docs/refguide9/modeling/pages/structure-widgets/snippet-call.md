@@ -1,6 +1,6 @@
 ---
 title: "Snippet Call"
-url: /refguide/snippet-call/
+url: /refguide9/snippet-call/
 weight: 40
 tags: ["studio pro", "snippet call", "snippet", "common widget"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
@@ -8,15 +8,15 @@ tags: ["studio pro", "snippet call", "snippet", "common widget"]
 
 ## 1 Introduction
 
-The **Snippet call** widget allows you to use a [snippet](/refguide/snippet/) on a [page](/refguide/page/), a [layout](/refguide/layout/), or another snippet:
+The **Snippet call** widget allows you to use a [snippet](/refguide9/snippet/) on a [page](/refguide9/page/), a [layout](/refguide9/layout/), or another snippet:
 
-{{< figure src="/attachments/refguide/modeling/pages/structure-widgets/snippet-call/snippet-call-example.png" alt="Snippet Call Example" >}}
+{{< figure src="/attachments/refguide9/modeling/pages/structure-widgets/snippet-call/snippet-call-example.png" alt="Snippet Call Example" >}}
 
 ## 2 Properties
 
 An example of snippet call properties is represented in the image below:
 
-{{< figure src="/attachments/refguide/modeling/pages/structure-widgets/snippet-call/snippet-call-properties.png" alt="Snippet Call Properties"   width="300"  >}}
+{{< figure src="/attachments/refguide9/modeling/pages/structure-widgets/snippet-call/snippet-call-properties.png" alt="Snippet Call Properties"   width="300"  >}}
 
 Snippet call properties consist of the following sections:
 
@@ -26,11 +26,11 @@ Snippet call properties consist of the following sections:
 
 ### 2.1 Common Section {#common}
 
-{{% snippet file="/static/_includes/refguide/common-section-link.md" %}}
+{{% snippet file="/static/_includes/refguide9/common-section-link.md" %}}
 
 ### 2.2 Design Properties Section {#design-properties}
 
-{{% snippet file="/static/_includes/refguide/design-section-link.md" %}} 
+{{% snippet file="/static/_includes/refguide9/design-section-link.md" %}} 
 
 ### 2.3 General Section {#general}
 
@@ -56,7 +56,7 @@ When you select **Inline snippet**, Studio Pro will analyze the snippet call to 
 * The snippet call will be replaced by the contents of the snippet
 * All references to the snippet parameters will be rewritten to refer to the objects to which they are mapped in the **Snippet settings** of the snippet call 
 
-This is basically the inverse operation of [Extract Snippet](/refguide/snippet/#extract-snippet). 
+This is basically the inverse operation of [Extract Snippet](/refguide9/snippet/#extract-snippet). 
 
 {{% alert color="info" %}}
 After clicking **Inline snippet**, note that the snippet is not automatically deleted — even if the inlined snippet call was the last remaining usage of the snippet.
@@ -64,7 +64,7 @@ After clicking **Inline snippet**, note that the snippet is not automatically de
 
 Not every snippet call can be inlined, because certain configurations cannot be represented correctly outside a snippet. Attempting to inline such a snippet call could result in a consistency error or produce inlined content which does not have the same behavior as the original snippet call. In this case, a warning dialog box is shown to ask whether you want to proceed:
 
-{{< figure src="/attachments/refguide/modeling/pages/structure-widgets/snippet-call/inline-snippet-warning-dialog.png" alt="Warning dialog for Inline snippet" width="600" >}}
+{{< figure src="/attachments/refguide9/modeling/pages/structure-widgets/snippet-call/inline-snippet-warning-dialog.png" alt="Warning dialog for Inline snippet" width="600" >}}
 
 ## 4 Limitations
 
@@ -77,7 +77,7 @@ In such cases, the inlined content needs to be fixed manually by adding or remov
 
 ## 5 Read More
 
-* [Snippet](/refguide/snippet/)
-* [Page](/refguide/page/)
-* [Structure Widgets](/refguide/structure-widgets/)
-* [Properties Common in the Page Editor](/refguide/common-widget-properties/)
+* [Snippet](/refguide9/snippet/)
+* [Page](/refguide9/page/)
+* [Structure Widgets](/refguide9/structure-widgets/)
+* [Properties Common in the Page Editor](/refguide9/common-widget-properties/)

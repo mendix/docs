@@ -1,9 +1,9 @@
 ---
 title: "Native Mobile"
-url: /refguide/mobile/introduction-to-mobile-technologies/native-mobile/
+url: /refguide9/mobile/introduction-to-mobile-technologies/native-mobile/
 weight: 10
 aliases:
-    - /refguide/native-mobile/
+    - /refguide9/native-mobile/
     - /howto/mobile/native-mobile/
 ---
 
@@ -15,7 +15,7 @@ You build Mendix native mobile apps the same way you build web or hybrid apps. Y
 
 ## 2 Styling
 
-Native mobile apps' theming and styling is based on JavaScript. For more information on styling, see [Native Styling](/refguide/native-styling-refguide/). 
+Native mobile apps' theming and styling is based on JavaScript. For more information on styling, see [Native Styling](/refguide9/native-styling-refguide/). 
 
 ## 3 Using Device Capabilities
 

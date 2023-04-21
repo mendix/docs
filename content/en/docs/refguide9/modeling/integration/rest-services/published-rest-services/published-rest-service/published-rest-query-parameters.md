@@ -1,17 +1,17 @@
 ---
 title: "Published REST Query Parameters"
-url: /refguide/published-rest-query-parameters/
+url: /refguide9/published-rest-query-parameters/
 weight: 40
 description: "Parameters for a published REST query"
 tags: ["published REST", "query", "parameters", "Date and Time format", "studio pro"]
 # Merge into published rest service document
 ---
 
-The specification of a [published REST operation](/refguide/published-rest-operation/) includes a microflow that implements the operation. This microflow may take parameters that come from the query string of the request.
+The specification of a [published REST operation](/refguide9/published-rest-operation/) includes a microflow that implements the operation. This microflow may take parameters that come from the query string of the request.
 
 A query parameter can only have a primitive type (Boolean, date and time, decimal, enumeration, integer/long, or string).
 
-Query parameters are added to the end of the path following a question mark in the format `?name=John&age=42`. This is shown in the [example location of the operation](/refguide/published-rest-operation/#example-location).
+Query parameters are added to the end of the path following a question mark in the format `?name=John&age=42`. This is shown in the [example location of the operation](/refguide9/published-rest-operation/#example-location).
 
 These are some additional notes about query parameters:
 

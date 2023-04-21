@@ -1,6 +1,6 @@
 ---
 title: "Version Control FAQ"
-url: /refguide/version-control-faq/
+url: /refguide9/version-control-faq/
 category: "Version Control"
 weight: 30
 description: "Presents and explains several frequently asked questions about version control."
@@ -29,7 +29,7 @@ Mendix adheres to strict security standards and considers you the sole owner of 
 
 ## 5 What Are the Differences between Team Server SVN and Team Server Git?
 
-For information on differences between SVN and Git, see [Migrating to Git: SVN and Git Process Differences](/refguide/svn-git-differences/).
+For information on differences between SVN and Git, see [Migrating to Git: SVN and Git Process Differences](/refguide9/svn-git-differences/).
 
 ## 6 What Are the Advantages of Team Server Git over Team Server SVN? {#git-advantages}
 
@@ -61,7 +61,7 @@ Scrum Masters can migrate an SVN app to Git in the Developer Portal. For more in
 
 ## 10 Can I Use Third-Party Tools to Connect to the Team Server? {#third-party-tools}
 
-Yes, as the Team Server is based on a full implementation of Git or SVN. You can directly use third-party tools like TortoiseSVN, TortoiseGit, or GitHub Desktop. For more information on how to set this up, see the [External Tools](/refguide/using-version-control-in-studio-pro/#external-tools) section in *Using Version Control in Studio Pro*. 
+Yes, as the Team Server is based on a full implementation of Git or SVN. You can directly use third-party tools like TortoiseSVN, TortoiseGit, or GitHub Desktop. For more information on how to set this up, see the [External Tools](/refguide9/using-version-control-in-studio-pro/#external-tools) section in *Using Version Control in Studio Pro*. 
 
 ## 11 Is It Possible to Connect to a Third-Party or On-Premises Version Control Server?
 
@@ -75,12 +75,12 @@ However, in this case the following products and capabilities are not available:
 * [AQM](/addons/aqm-addon/) 
 
 {{% alert color="info" %}}
-For Git, connecting to a third-party Git version control repository is in Beta. For more information about the supported Git repositories, see [Working with Git On-Premises Version Control Server](/refguide/on-premises-git/#preparing-your-repo).
+For Git, connecting to a third-party Git version control repository is in Beta. For more information about the supported Git repositories, see [Working with Git On-Premises Version Control Server](/refguide9/on-premises-git/#preparing-your-repo).
 {{% /alert %}}
 
 ## 12 Will Mendix 9 Support Pull Requests and Peer Reviews? 
 
-Studio Pro supports peer review and merging through the version control functionalities available in Studio Pro. For more information on how to set this process up, see [Using Version Control in Studio Pro](/refguide/using-version-control-in-studio-pro/).
+Studio Pro supports peer review and merging through the version control functionalities available in Studio Pro. For more information on how to set this process up, see [Using Version Control in Studio Pro](/refguide9/using-version-control-in-studio-pro/).
 Currently, Mendix does not support pull or merge requests through the Team Server for Mendix. When using third-party tools it is possible to review the following code extensions:
 
 * code for Java and JavaScript actions

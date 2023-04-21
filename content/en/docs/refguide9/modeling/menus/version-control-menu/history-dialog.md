@@ -1,6 +1,6 @@
 ---
 title: "History"
-url: /refguide/history-dialog/
+url: /refguide9/history-dialog/
 weight: 50
 tags: ["studio pro"]
 ---
@@ -8,7 +8,7 @@ tags: ["studio pro"]
 
 Use the **History** dialog box to look at all the changes that have been committed to a development line of an app. This dialog box is also used when selecting a revision to merge from, create a branch line off of, or create a deployment archive of.
 
-{{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/collaborative-development/history-dialog.png" >}}
+{{< figure src="/attachments/refguide9/version-control/using-version-control-in-studio-pro/collaborative-development/history-dialog.png" >}}
 
 ## 2 Revisions
 
@@ -41,5 +41,5 @@ This tab page shows a list of the files that were changed on disk. You see wheth
 
 ## 7 Read More
 
-* [Version Control](/refguide/version-control/)
-* [Stories Pane](/refguide/stories-pane/)
+* [Version Control](/refguide9/version-control/)
+* [Stories Pane](/refguide9/stories-pane/)

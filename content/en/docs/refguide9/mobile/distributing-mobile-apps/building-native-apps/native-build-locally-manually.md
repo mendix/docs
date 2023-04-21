@@ -1,7 +1,7 @@
 ---
 title: "Build a Mendix Native App Locally Manually"
 linktitle: "Native App Local Manual Build"
-url: /refguide/mobile/distributing-mobile-apps/building-native-apps/native-build-locally-manually/
+url: /refguide9/mobile/distributing-mobile-apps/building-native-apps/native-build-locally-manually/
 weight: 30
 description: Describes how to build your first Mendix native mobile app locally, without using the Mendix Native Mobile Builder.
 aliases:
@@ -105,7 +105,7 @@ Now that you have a copy of the Native Template checked out and ready, you can b
 
 Bundling is the process of packaging everything you created in Studio Pro and making that package ready to be compiled into your native mobile app. Bundling in the case of a React Native app, and hence a Mendix Native App, includes transpiling the business logic and layout of your app into a JavaScript bundle and gathering all your static resources into the correct folder structure. 
 
-For bundling your resources, Mendix Studio Pro comes with a helpful tool called [MxBuild](/refguide/mxbuild/). MxBuild can be found relatively to the location of the Studio Pro executable (for example *C:\Program Files\Mendix\Studio Pro (version)\mxbuild.exe*).
+For bundling your resources, Mendix Studio Pro comes with a helpful tool called [MxBuild](/refguide9/mxbuild/). MxBuild can be found relatively to the location of the Studio Pro executable (for example *C:\Program Files\Mendix\Studio Pro (version)\mxbuild.exe*).
 
 1. Run the following command:
 

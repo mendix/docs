@@ -1,10 +1,10 @@
 ---
 title: "Export App Package"
-url: /refguide/export-app-package-dialog/
+url: /refguide9/export-app-package-dialog/
 weight: 30
 tags: ["studio pro", "export app", "export app package"]
 aliases:
-    - /refguide/export-project-package-dialog/
+    - /refguide9/export-project-package-dialog/
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
@@ -12,11 +12,11 @@ aliases:
 
 You can export an app package (*.mpk*) from Mendix Studio Pro for backup purposes or to share it with other Mendix developers. This is useful if you want to give someone the entire app, or if you need to provide a test app when submitting a ticket.
 
-App packages can be imported again into a new app using the [Import App Package](/refguide/import-app-package-dialog/).
+App packages can be imported again into a new app using the [Import App Package](/refguide9/import-app-package-dialog/).
 
 To export the package, open the **File** menu > **Export App Package** and select the relevant options in the **Export App Package** dialog box:
 
-{{< figure src="/attachments/refguide/modeling/menus/file-menu/export-app-package-dialog/export-app-package.png" alt="Export App Package Dialog Window" >}}
+{{< figure src="/attachments/refguide9/modeling/menus/file-menu/export-app-package-dialog/export-app-package.png" alt="Export App Package Dialog Window" >}}
 
 For more information on what options you can select, see the sections below. 
 
@@ -24,7 +24,7 @@ For more information on what options you can select, see the sections below.
 
 When you have access to publishing add-on modules and solutions, you can select to export you app as the **Solution** or **Source Package**. 
 
-{{< figure src="/attachments/refguide/modeling/menus/file-menu/export-app-package-dialog/export-app-package-types.png" alt="Export App Package Dialog Window with Different Package Types" >}}
+{{< figure src="/attachments/refguide9/modeling/menus/file-menu/export-app-package-dialog/export-app-package-types.png" alt="Export App Package Dialog Window with Different Package Types" >}}
 
 The access can be gained through the [Mendix Partner Program](/appstore/creating-content/partner-program/).
 
@@ -34,7 +34,7 @@ The access can be gained through the [Mendix Partner Program](/appstore/creating
 You can only see the **Solution** and **Source Package** settings when you have access to publishing add-on modules and solutions. The access can be gained through the [Mendix Partner Program](/appstore/creating-content/partner-program/).
 {{% /alert %}}
 
-Choose this type of package if you develop your app as a solution and it has certain documents/elements hidden from consumers. Your app will be exported as a *.mxsolution* file; add-on and solution modules will be converted to the *.mxmodule* format during export. For more information on add-on and solution modules, see [Configuring Add-on and Solution Modules for Publishing](/refguide/configure-add-on-and-solution-modules/).
+Choose this type of package if you develop your app as a solution and it has certain documents/elements hidden from consumers. Your app will be exported as a *.mxsolution* file; add-on and solution modules will be converted to the *.mxmodule* format during export. For more information on add-on and solution modules, see [Configuring Add-on and Solution Modules for Publishing](/refguide9/configure-add-on-and-solution-modules/).
 
 ### 2.2 Source Package
 
@@ -63,5 +63,5 @@ Mendix app packages can be exported to a Mendix package file (*.mpk*).  You can 
 
 ## 5 Read More
 
-* [Import App Package](/refguide/import-app-package-dialog/)
-* [Version Control Menu](/refguide/version-control-menu/)
+* [Import App Package](/refguide9/import-app-package-dialog/)
+* [Version Control Menu](/refguide9/version-control-menu/)

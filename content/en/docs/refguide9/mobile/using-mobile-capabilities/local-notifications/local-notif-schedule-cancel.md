@@ -1,6 +1,6 @@
 ---
 title: "Part 5: Scheduling"
-url: /refguide/mobile/using-mobile-capabilities/local-notifications/local-notif-schedule-cancel/
+url: /refguide9/mobile/using-mobile-capabilities/local-notifications/local-notif-schedule-cancel/
 weight: 50
 description: A tutorial for scheduling and cancelling push notifications.
 ---
@@ -15,8 +15,8 @@ Local notifications should rarely notify a user right after they perform an acti
 Before starting this guide, make sure you have completed the following prerequisites:
 
 * Review the [basic differences](https://developer.apple.com/documentation/usernotifications) between local notifications and push notifications
-* Install the [Make It Native](/refguide/getting-the-make-it-native-app/) app on your mobile device
-* Complete the preceding tutorials in this [Use Local Notifications](/refguide/mobile/using-mobile-capabilities/local-notifications/) series
+* Install the [Make It Native](/refguide9/getting-the-make-it-native-app/) app on your mobile device
+* Complete the preceding tutorials in this [Use Local Notifications](/refguide9/mobile/using-mobile-capabilities/local-notifications/) series
 
 ## 3 Scheduling a Notification
 

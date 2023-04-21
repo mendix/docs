@@ -1,6 +1,6 @@
 ---
 title: "Create List"
-url: /refguide/create-list/
+url: /refguide9/create-list/
 weight: 3
 tags: ["studio pro"]
 ---
@@ -17,7 +17,7 @@ The **Create list** activity creates an empty list.
 
 An example of create list properties is represented in the image below:
 
-{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/list-activities/create-list/create-list-properties.png" alt="create list properties" >}}
+{{< figure src="/attachments/refguide9/modeling/application-logic/microflows-and-nanoflows/activities/list-activities/create-list/create-list-properties.png" alt="create list properties" >}}
 
 There are two sets of properties for this activity, those in the dialog box on the left, and those in the properties pane on the right.
 
@@ -44,4 +44,4 @@ This is the name of the list which can be used by all activities that follow thi
 
 ## 4 Common Section{#common}
 
-{{% snippet file="/static/_includes/refguide/microflow-common-section-link.md" %}}
+{{% snippet file="/static/_includes/refguide9/microflow-common-section-link.md" %}}

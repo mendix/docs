@@ -1,6 +1,6 @@
 ---
 title: "Message Definitions"
-url: /refguide/message-definitions/
+url: /refguide9/message-definitions/
 weight: 5
 tags: ["studio pro"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
@@ -45,7 +45,7 @@ To generate mappings, do the following:
 3. Ensure that the required mapping(s) is selected.
 4. Click **OK**.
 
-    {{< figure src="/attachments/refguide/modeling/integration/message-definitions/generate-mappings.png" alt="General mappings dialog" >}}
+    {{< figure src="/attachments/refguide9/modeling/integration/message-definitions/generate-mappings.png" alt="General mappings dialog" >}}
 
 ## 4 Defining a Message Definition{#message-definition}
 
@@ -55,7 +55,7 @@ In the message definitions document, click **Add** to create a new message defin
 
 The message definition is defined in the **General** tab.
 
-{{< figure src="/attachments/refguide/modeling/integration/message-definitions/message-definition.png" alt="The Message Definition General tab" >}}
+{{< figure src="/attachments/refguide9/modeling/integration/message-definitions/message-definition.png" alt="The Message Definition General tab" >}}
 
 #### 4.1.1 Name
 
@@ -77,8 +77,8 @@ The structure tree shows the attributes and some of the associations of the enti
 | Occurrence | How many times this item can occur for each parent item. | n | |
 | External Name | The name of the XML node or the JSON property. | y | By default, the name of the attribute or (for associations) entity.<br />For a `0..*` occurrence, a letter `s` is added. |
 | External Single Item Name | The XML node that represents a single item. | y | Only relevant for XML when the occurrence is `0..*`<br /> By default, the entity name. |
-| Example value | A typical value for an attribute. | y | For a published REST service, this value shows up in the [interactive documentation](/refguide/published-rest-services/#interactive-documentation).<br />A date/time value is specified in the format `year-month-day` or `year-month-day hour:minute:second`. |
-| Public Documentation | Additional information to be displayed in the [interactive documentation](/refguide/published-rest-services/#interactive-documentation). | y | |
+| Example value | A typical value for an attribute. | y | For a published REST service, this value shows up in the [interactive documentation](/refguide9/published-rest-services/#interactive-documentation).<br />A date/time value is specified in the format `year-month-day` or `year-month-day hour:minute:second`. |
+| Public Documentation | Additional information to be displayed in the [interactive documentation](/refguide9/published-rest-services/#interactive-documentation). | y | |
 
 ### 4.2 Documentation
 

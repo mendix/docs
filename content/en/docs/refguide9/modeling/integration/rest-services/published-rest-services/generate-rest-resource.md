@@ -1,6 +1,6 @@
 ---
 title: "Generating a Published REST Resource"
-url: /refguide/generate-rest-resource/
+url: /refguide9/generate-rest-resource/
 weight: 20
 description: "Generate a published REST resource from an entity"
 tags: ["published REST", "resource", "entity", "operations", "expose", "studio pro"]

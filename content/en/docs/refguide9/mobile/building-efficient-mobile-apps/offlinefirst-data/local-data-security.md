@@ -1,6 +1,6 @@
 ---
 title: "Offline Data Security"
-url: /refguide/mobile/building-efficient-mobile-apps/offlinefirst-data/local-data-security/
+url: /refguide9/mobile/building-efficient-mobile-apps/offlinefirst-data/local-data-security/
 weight: 85
 description: "This documentation describes best practices to keep your offline data secure."
 tags: ["offline-first", "database", "security", "encryption"]
@@ -28,13 +28,13 @@ It is a best practice to synchronize as little data as possible to the device an
 
 The Mendix Client only stores objects and attributes that the current user has read access to. Incomplete or misconfigured access rules on the domain model may cause too much data to be synchronized to the device databases.
 
-To learn more about configuring access rules, see [Access Rules](/refguide/access-rules/).
+To learn more about configuring access rules, see [Access Rules](/refguide9/access-rules/).
 
 ### 3.2 Limiting Data with XPath Constraints
 
 In apps where you want to grant end-users working with objects access to the responsive profile, but you do not wish to grant them access to an offline-first navigation profile, it is possible to limit the amount of data by an XPath constraint using the **Configure Synchronization** screen.
 
-To learn more about customizing the synchronization behavior, see [Customizable Synchronization](/refguide/mobile/building-efficient-mobile-apps/offlinefirst-data/synchronization/#customizable-synchronization).
+To learn more about customizing the synchronization behavior, see [Customizable Synchronization](/refguide9/mobile/building-efficient-mobile-apps/offlinefirst-data/synchronization/#customizable-synchronization).
 
 ### 3.3 Using Non-Persistent Entities
 
@@ -46,7 +46,7 @@ The app keeps the non-persistent objects only in the memory and removes them whe
 
 Suppose you have to store sensitive data on a device and cannot control the operating system your app is running on. In that case, you should enable database encryption for your app. This ensures that all data in the local database is encrypted before storing it on the device. Note that encryption will impact your app's performance. Full synchronization of all clients is required to enable it.
 
-To learn more, see [Encrypting Local Databases](/refguide/mobile/building-efficient-mobile-apps/offlinefirst-data/local-data-security/#encrypting-local-databases)
+To learn more, see [Encrypting Local Databases](/refguide9/mobile/building-efficient-mobile-apps/offlinefirst-data/local-data-security/#encrypting-local-databases)
 
 ### 3.5 Encrypting User Files and Images {#encrypting-files-images}
 
@@ -58,7 +58,7 @@ To learn more, see the [Encrypting User Files](#encrypting-user-files) section b
 
 Studio Pro 9.18 and above allows you to encrypt the local databases of native apps. Database encryption can be enabled using the checkbox in the native mobile navigation profile screen:
 
-{{< figure src="/attachments/refguide/mobile/offline-first/enable-native-db-encryption.png" alt="Encrypt local database checkbox placed at the bottom of the native mobile navigation profile screen" width="450"  >}}
+{{< figure src="/attachments/refguide9/mobile/offline-first/enable-native-db-encryption.png" alt="Encrypt local database checkbox placed at the bottom of the native mobile navigation profile screen" width="450"  >}}
 
 ### 4.1 Prerequisites {#encryption-prerequisites}
 
@@ -84,7 +84,7 @@ Encrypting the existing database is not possible. Therefore, the Mendix Client n
 
 Enabling database encryption and deploying a new version of the Mendix app to the cloud does not affect the existing devices. This setting takes effect once users update their apps, either through OTA or an app update. After the app is updated on the device, it will sign out the current user and start with an empty database. This step may cause unsynchronized data to be lost. 
 
-Consider the [prerequisites above](/refguide/mobile/building-efficient-mobile-apps/offlinefirst-data/local-data-security/#encryption-prerequisites) before enabling database encryption, especially for existing apps
+Consider the [prerequisites above](/refguide9/mobile/building-efficient-mobile-apps/offlinefirst-data/local-data-security/#encryption-prerequisites) before enabling database encryption, especially for existing apps
 
 ### 4.4 Disabling Database Encryption
 
@@ -134,7 +134,7 @@ To locate the database file on iOS, do the following:
 
 Studio Pro 9.22 and above allows you to encrypt the files and images stored in native apps. Enable file encryption by selecting the check box in the **Native mobile** navigation profile tab:
 
-{{< figure src="/attachments/refguide/mobile/offline-first/enable-native-file-encryption.png" alt="Encrypt native file encryption checkbox placed at the bottom of the native mobile navigation profile screen" width="450"  >}}
+{{< figure src="/attachments/refguide9/mobile/offline-first/enable-native-file-encryption.png" alt="Encrypt native file encryption checkbox placed at the bottom of the native mobile navigation profile screen" width="450"  >}}
 
 ### 5.1 Prerequisites
 

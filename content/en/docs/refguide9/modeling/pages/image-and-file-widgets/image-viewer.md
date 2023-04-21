@@ -1,6 +1,6 @@
 ---
 title: "Dynamic Image"
-url: /refguide/image-viewer/
+url: /refguide9/image-viewer/
 weight: 30
 tags: ["studio pro"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
@@ -10,7 +10,7 @@ tags: ["studio pro"]
 
 A dynamic image can be used to display an image or its thumbnail. For example, you can show a profile picture:
 
-{{< figure src="/attachments/refguide/modeling/pages/image-and-file-widgets/image-viewer/image-viewer.png" >}}
+{{< figure src="/attachments/refguide9/modeling/pages/image-and-file-widgets/image-viewer/image-viewer.png" >}}
 
 {{% alert type="info" %}}
 
@@ -30,23 +30,23 @@ Do the following:
 
 3. In the **Generalization** property, click **Select**.
 
-    {{< figure src="/attachments/refguide/modeling/pages/image-and-file-widgets/image-viewer/generalization.png" >}}
+    {{< figure src="/attachments/refguide9/modeling/pages/image-and-file-widgets/image-viewer/generalization.png" >}}
 
 4. In the **Select Entity** dialog box, choose **System.Image** and click the **Select** button.
 
-    {{< figure src="/attachments/refguide/modeling/pages/image-and-file-widgets/image-viewer/select-entity.png" >}}
+    {{< figure src="/attachments/refguide9/modeling/pages/image-and-file-widgets/image-viewer/select-entity.png" >}}
 
 5. Click **OK**. 
 
 Your entity now inherits all properties from the System.Image entity you selected:
 
-{{< figure src="/attachments/refguide/modeling/pages/image-and-file-widgets/image-viewer/entity-example.png" >}}
+{{< figure src="/attachments/refguide9/modeling/pages/image-and-file-widgets/image-viewer/entity-example.png" >}}
 
 ## 3 Properties
 
 An example of dynamic image properties is represented in the image below:
 
-{{< figure src="/attachments/refguide/modeling/pages/image-and-file-widgets/image-viewer/image-viewer-properties.png" alt="Dynamic Image Properties"   width="250"  >}}
+{{< figure src="/attachments/refguide9/modeling/pages/image-and-file-widgets/image-viewer/image-viewer-properties.png" alt="Dynamic Image Properties"   width="250"  >}}
 
 Dynamic image properties consist of the following sections:
 
@@ -59,11 +59,11 @@ Dynamic image properties consist of the following sections:
 
 ### 3.1 Common Section{#common}
 
-{{% snippet file="/static/_includes/refguide/common-section-link.md" %}}
+{{% snippet file="/static/_includes/refguide9/common-section-link.md" %}}
 
 ### 3.2 Design Properties Section {#design-properties}
 
-{{% snippet file="/static/_includes/refguide/design-section-link.md" %}} 
+{{% snippet file="/static/_includes/refguide9/design-section-link.md" %}} 
 
 ### 3.3 Data Source Section {#data-source}
 
@@ -73,7 +73,7 @@ The **Entity (path)** property specifies which object will be shown in the dynam
 
 ### 3.4  Events Section {#events}
 
-{{% snippet file="/static/_includes/refguide/events-section-link.md" %}}
+{{% snippet file="/static/_includes/refguide9/events-section-link.md" %}}
 
 ### 3.5 General Section{#general}
 
@@ -133,10 +133,10 @@ Default: *Thumbnail*
 
 ### 3.6 Visibility Properties{#visibility}
 
-{{% snippet file="/static/_includes/refguide/visibility-section-link.md" %}}
+{{% snippet file="/static/_includes/refguide9/visibility-section-link.md" %}}
 
 ## 4 Read More
 
-* [Page](/refguide/page/)
-* [Images, Videos, and Files](/refguide/image-and-file-widgets/)
-* [Properties Common in the Page Editor](/refguide/common-widget-properties/)
+* [Page](/refguide9/page/)
+* [Images, Videos, and Files](/refguide9/image-and-file-widgets/)
+* [Properties Common in the Page Editor](/refguide9/common-widget-properties/)

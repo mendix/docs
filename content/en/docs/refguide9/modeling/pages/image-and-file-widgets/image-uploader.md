@@ -1,6 +1,6 @@
 ---
 title: "Image Uploader"
-url: /refguide/image-uploader/
+url: /refguide9/image-uploader/
 weight: 50
 tags: ["studio pro", "image uploader", "file widget", "widget"] 
 weight: 50
@@ -15,13 +15,13 @@ An image uploader is used to upload images to the server. It also generates a th
 
 In the example below, an image uploader is placed in a nested data view (the *Profile* entity is a specialization of System.Image):
 
-{{< figure src="/attachments/refguide/modeling/pages/image-and-file-widgets/image-uploader/image-uploader.png" alt="Image Uploader" >}}
+{{< figure src="/attachments/refguide9/modeling/pages/image-and-file-widgets/image-uploader/image-uploader.png" alt="Image Uploader" >}}
 
 ## 2 Properties
 
 An example of image uploader properties is represented in the image below:
 
-{{< figure src="/attachments/refguide/modeling/pages/image-and-file-widgets/image-uploader/image-uploader-properties.png" alt="Image Uploader Properties"   width="250"  >}}
+{{< figure src="/attachments/refguide9/modeling/pages/image-and-file-widgets/image-uploader/image-uploader-properties.png" alt="Image Uploader Properties"   width="250"  >}}
 
 Image uploader properties consist of the following sections:
 
@@ -34,15 +34,15 @@ Image uploader properties consist of the following sections:
 
 ### 2.1 Common Section {#common}
 
-{{% snippet file="/static/_includes/refguide/common-section-link.md" %}}
+{{% snippet file="/static/_includes/refguide9/common-section-link.md" %}}
 
 ### 2.2 Design Properties Section {#design-properties}
 
-{{% snippet file="/static/_includes/refguide/design-section-link.md" %}} 
+{{% snippet file="/static/_includes/refguide9/design-section-link.md" %}} 
 
 ### 2.3 Editability Section {#editability}
 
-{{% snippet file="/static/_includes/refguide/editability-section-link.md" %}}
+{{% snippet file="/static/_includes/refguide9/editability-section-link.md" %}}
 
 ### 2.4 General Section {#general}
 
@@ -56,7 +56,7 @@ Default: *5*
 
 You can specify file extensions that users are allowed to upload. If no extension is specified, all file extensions are allowed. Separate multiple extensions by a semi-colon (for example, `jpeg;png`).
 
-If a file with an extension that is not allowed is selected, a [system text](/refguide/system-texts/) for **File manager/dynamic image** > **Error: incorrect file extension** will be shown below the file manager.
+If a file with an extension that is not allowed is selected, a [system text](/refguide9/system-texts/) for **File manager/dynamic image** > **Error: incorrect file extension** will be shown below the file manager.
 
 Uploaded images are read by the runtime. Mendix use the [TwelveMonkeys ImageIO](https://haraldk.github.io/TwelveMonkeys/) library which supports a wide variety of image formats.
 
@@ -72,11 +72,11 @@ For SVG files, TwelveMonkeys ImageIO itself delegates to the Batik library—whi
 
 ### 2.5 Label Section {#label}
 
-{{% snippet file="/static/_includes/refguide/label-section-link.md" %}}
+{{% snippet file="/static/_includes/refguide9/label-section-link.md" %}}
 
 ### 2.6 Visibility Section {#visibility}
 
-{{% snippet file="/static/_includes/refguide/visibility-section-link.md" %}}
+{{% snippet file="/static/_includes/refguide9/visibility-section-link.md" %}}
 
 ## 3 Example of Image Uploader Usage
 
@@ -92,15 +92,15 @@ Do the following:
 
 3. In the **Generalization** property, click **Select**.
 
-   {{< figure src="/attachments/refguide/modeling/pages/image-and-file-widgets/image-uploader/generalization.png" >}}
+   {{< figure src="/attachments/refguide9/modeling/pages/image-and-file-widgets/image-uploader/generalization.png" >}}
 
 4. In the **Select Entity** dialog box, choose **System.Image** and click the **Select** button.
 
-   {{< figure src="/attachments/refguide/modeling/pages/image-and-file-widgets/image-uploader/select-entity.png" >}}
+   {{< figure src="/attachments/refguide9/modeling/pages/image-and-file-widgets/image-uploader/select-entity.png" >}}
 
 5. Click **OK**. Your entity now inherits all properties from the System.Image entity you selected:
 
-   {{< figure src="/attachments/refguide/modeling/pages/image-and-file-widgets/image-uploader/entity-example.png" >}}
+   {{< figure src="/attachments/refguide9/modeling/pages/image-and-file-widgets/image-uploader/entity-example.png" >}}
 
 6. Open a page or a snippet where you would like to place the image uploader and add a data view there.
 
@@ -108,10 +108,10 @@ Do the following:
 
 8. Place the image uploader inside the data view. You can reference the page example below:
 
-    {{< figure src="/attachments/refguide/modeling/pages/image-and-file-widgets/image-uploader/page-example.png" >}}
+    {{< figure src="/attachments/refguide9/modeling/pages/image-and-file-widgets/image-uploader/page-example.png" >}}
 
 ## 4 Read More
 
-* [Page](/refguide/page/)
-* [Images, Videos, and Files](/refguide/image-and-file-widgets/)
-* [Properties Common in the Page Editor](/refguide/common-widget-properties/)
+* [Page](/refguide9/page/)
+* [Images, Videos, and Files](/refguide9/image-and-file-widgets/)
+* [Properties Common in the Page Editor](/refguide9/common-widget-properties/)

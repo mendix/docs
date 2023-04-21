@@ -1,16 +1,16 @@
 ---
 title: "Pre/Post-Processor Design Patterns"
-url: /refguide/machine-learning-kit/design-patterns/pre-post-processor-patterns/
+url: /refguide9/machine-learning-kit/design-patterns/pre-post-processor-patterns/
 category: Design Patterns
 weight: 35
 tags: ["studio pro", "machine learning", "ml kit", "models", "design patterns"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
-{{% alert color="info" %}}[Machine learning model](/refguide/machine-learning-kit/) support is currently in [Beta](/releasenotes/beta-features/), and is available in Studio Pro [9.23](/releasenotes/studio-pro/9.23/) and above.{{% /alert %}}
+{{% alert color="info" %}}[Machine learning model](/refguide9/machine-learning-kit/) support is currently in [Beta](/releasenotes/beta-features/), and is available in Studio Pro [9.23](/releasenotes/studio-pro/9.23/) and above.{{% /alert %}}
 
 ## 1 Introduction
 
-The [Integrating Models with Pre-processors and Post-processors](/refguide/machine-learning-kit/using-ml-kit/#pre-post-processors) section of *Integrate Machine Learning Models* outlines considerations when importing a machine learning model with advanced processing needs. 
+The [Integrating Models with Pre-processors and Post-processors](/refguide9/machine-learning-kit/using-ml-kit/#pre-post-processors) section of *Integrate Machine Learning Models* outlines considerations when importing a machine learning model with advanced processing needs. 
 
 An ML algorithm typically gets and returns numerical values in various shapes (scalar, vector, matrix, etc.) as input and output. However, the input data in our applications could be used and stored in different formats like string, JPG, PNG, mp3, etc. Similarly, an output of an ML model could not be interpreted by our applications and need to be converted into a different data representation format. Therefore, we need pre- / post-processors to make the necessary data representation conversions in our ML-based applications in order to feed the ML model with the correct input data format and parse the relevant output. Mendix developers have multiple choices when it comes to implementing pre- / post-processors.
 
@@ -33,11 +33,11 @@ Machine learning models cannot interpret categorical data without pre-processing
 
 A preprocessor activity
 
-{{< figure src="/attachments/refguide/modeling/integration/ml-kit/design-patterns/pre-postprocessor-design-patterns/ResNet-pre-processor-Model-Inference-single-activity.png" >}}
+{{< figure src="/attachments/refguide9/modeling/integration/ml-kit/design-patterns/pre-postprocessor-design-patterns/ResNet-pre-processor-Model-Inference-single-activity.png" >}}
 
 Create Variable Activity
 
-{{< figure src="/attachments/refguide/modeling/integration/ml-kit/design-patterns/pre-postprocessor-design-patterns/categorical-numerical-create-variable.png" alt="." >}}
+{{< figure src="/attachments/refguide9/modeling/integration/ml-kit/design-patterns/pre-postprocessor-design-patterns/categorical-numerical-create-variable.png" alt="." >}}
 
 As an example, production quality grade of a bike could be ranging from letter A to F. In order to feed that feature into model, the quality grade enumeration can be converted to ordinal data which holds priority ordering with each variable ranging from 1 to 6.
 
@@ -47,25 +47,25 @@ In a similar scenario, an output of an ML model that is a numerical value might 
 
 A post-processor activity
 
-{{< figure src="/attachments/refguide/modeling/integration/ml-kit/design-patterns/pre-postprocessor-design-patterns/numerical-categorical-postprocessor-activity.png" >}}
+{{< figure src="/attachments/refguide9/modeling/integration/ml-kit/design-patterns/pre-postprocessor-design-patterns/numerical-categorical-postprocessor-activity.png" >}}
 
 Create Variable Activity
 
-{{< figure src="/attachments/refguide/modeling/integration/ml-kit/design-patterns/pre-postprocessor-design-patterns/numerical-categorical-create-variable.png" >}}
+{{< figure src="/attachments/refguide9/modeling/integration/ml-kit/design-patterns/pre-postprocessor-design-patterns/numerical-categorical-create-variable.png" >}}
 
 For instance, the output of the model that is called target_probability which is ranging from 0 and 1 can be converted into a binary value based on a threshold (0.80) value.
 
 #### 1.1.3 Aggregation
 
-Some numerical features can be somewhat summarized using aggregation components. The most common aggregate functions are min(), max(), mean(), count(), sum(), etc. Those features could be very powerful features for use-cases like real-time data flow is a concern on time-series data. [List activities](/refguide/list-activities/) can be useful to calculate such features inside the microflows.
+Some numerical features can be somewhat summarized using aggregation components. The most common aggregate functions are min(), max(), mean(), count(), sum(), etc. Those features could be very powerful features for use-cases like real-time data flow is a concern on time-series data. [List activities](/refguide9/list-activities/) can be useful to calculate such features inside the microflows.
 
 An aggregation activity
 
-{{< figure src="/attachments/refguide/modeling/integration/ml-kit/design-patterns/pre-postprocessor-design-patterns/aggregation-activity.png" >}}
+{{< figure src="/attachments/refguide9/modeling/integration/ml-kit/design-patterns/pre-postprocessor-design-patterns/aggregation-activity.png" >}}
 
 Aggregate List Activity
 
-{{< figure src="/attachments/refguide/modeling/integration/ml-kit/design-patterns/pre-postprocessor-design-patterns/aggregate-list-activity.png" >}}
+{{< figure src="/attachments/refguide9/modeling/integration/ml-kit/design-patterns/pre-postprocessor-design-patterns/aggregate-list-activity.png" >}}
  
 For instance, a new feature (minimum bike age) is calculated via Aggregate List activity and fed into the model.
 
@@ -73,13 +73,13 @@ For instance, a new feature (minimum bike age) is calculated via Aggregate List 
 
 More advanced use cases would require to use the full power of a programming language in order to achieve some complex transformation, into and from the model itself.
 
-If your model has multidimensional numeric inputs and/or outputs, you need to encode these as `strings`, using Base64. In this use case Java Actions will be required. See the [Multidimensional Outputs](/refguide/machine-learning-kit/using-ml-kit/#multidimensional-outputs) section of *Using ML Kit* for more information.
+If your model has multidimensional numeric inputs and/or outputs, you need to encode these as `strings`, using Base64. In this use case Java Actions will be required. See the [Multidimensional Outputs](/refguide9/machine-learning-kit/using-ml-kit/#multidimensional-outputs) section of *Using ML Kit* for more information.
 
 #### 1.2.1 Java Actions for Encoding Features
 
 Consider the following microflow:
 
-{{< figure src="/attachments/refguide/modeling/integration/ml-kit/design-patterns/pre-postprocessor-design-patterns/java-actions-encoding-features-microflow.png" alt="." >}}
+{{< figure src="/attachments/refguide9/modeling/integration/ml-kit/design-patterns/pre-postprocessor-design-patterns/java-actions-encoding-features-microflow.png" alt="." >}}
  
 Below there is a very simple pre-processing that essentially retrieves float values from the Iris entity, converts it InputStream, encodes it as Base64 string, and returns it as the result so that it can be injected into the model later on. See this Random Forest example in our [Mendix ML Kit Demo Repository](https://github.com/mendix/mlkit-example-app/blob/main/javasource/iris_randomforest/actions/PreProcessor.java):
 
@@ -292,7 +292,7 @@ There is nothing to be done inside Studio Pro, as the Mendix Runtime supports it
 
 ResNet Pre-processor and Model Inference in Separate MLKit Activities
 
-{{< figure src="/attachments/refguide/modeling/integration/ml-kit/design-patterns/pre-postprocessor-design-patterns/ResNet-pre-processor-Model-Inference-sep-activities.png" alt="." >}}
+{{< figure src="/attachments/refguide9/modeling/integration/ml-kit/design-patterns/pre-postprocessor-design-patterns/ResNet-pre-processor-Model-Inference-sep-activities.png" alt="." >}}
 
 The below code snippet creates a preprocessor ONNX artifact that contains the necessary feature pre-processor transformation steps by the [ResNet models](https://github.com/onnx/models/tree/main/vision/classification/resnet) that can be found in the ONNX Model Zoo (see in the example below):
 
@@ -349,7 +349,7 @@ ONNX model is represented using protocol buffers. Dealing with ONNX protocol buf
 
 ResNet Pre-processor and Model Inference Combined in a Single MLKit Activity
 
-{{< figure src="/attachments/refguide/modeling/integration/ml-kit/design-patterns/pre-postprocessor-design-patterns/ResNet-pre-processor-Model-Inference-single-activity.png" alt="." >}}
+{{< figure src="/attachments/refguide9/modeling/integration/ml-kit/design-patterns/pre-postprocessor-design-patterns/ResNet-pre-processor-Model-Inference-single-activity.png" alt="." >}}
 
 Another common scenario is merging multiple ONNX artifacts. For instance, an existing pre- / post-processor ONNX artifact can be merged with an existing/pre-trained ONNX model in order to create a single, all-in-one ONNX model that can handle model inference along with the related pre- / post-processing actions. See the example below, taken from the [Pyhton API Overview](https://github.com/onnx/onnx/blob/main/docs/PythonAPIOverview.md) in the ONNX Model Zoo:
 
@@ -377,4 +377,4 @@ Typically, the necessary pre-processing actions of Computer Vision models are qu
 
 Here is an overview of a typical NLP model inference pipeline in microflows.
 
-{{< figure src="/attachments/refguide/modeling/integration/ml-kit/design-patterns/pre-postprocessor-design-patterns/hybrid-activity-microflow.png" >}}
+{{< figure src="/attachments/refguide9/modeling/integration/ml-kit/design-patterns/pre-postprocessor-design-patterns/hybrid-activity-microflow.png" >}}

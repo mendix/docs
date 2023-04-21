@@ -1,6 +1,6 @@
 ---
 title: "List View"
-url: /refguide/list-view/
+url: /refguide9/list-view/
 weight: 30
 tags: ["studio pro"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
@@ -10,7 +10,7 @@ tags: ["studio pro"]
 
 A list view shows a list of objects. For example, you can display a list of all profiles:
 
-{{< figure src="/attachments/refguide/modeling/pages/data-widgets/list-view/list-view-example-profile.png" >}} 
+{{< figure src="/attachments/refguide9/modeling/pages/data-widgets/list-view/list-view-example-profile.png" >}} 
 
 Each object is shown using a template. This template is defined by placing widgets inside the list view's drop-zone. The list of objects shown is determined by a [data source](#data-source).
 
@@ -24,7 +24,7 @@ To address this issue, you can use the repeater widget from [Native Mobile Resou
 
 An example of list view properties is represented in the image below:
 
-{{< figure src="/attachments/refguide/modeling/pages/data-widgets/list-view/list-view-properties.png"   width="250"  >}}
+{{< figure src="/attachments/refguide9/modeling/pages/data-widgets/list-view/list-view-properties.png"   width="250"  >}}
 
 List view properties consist of the following sections:
 
@@ -37,21 +37,21 @@ List view properties consist of the following sections:
 
 ### 2.1 Common Section {#common}
 
-{{% snippet file="/static/_includes/refguide/common-section-link.md" %}}
+{{% snippet file="/static/_includes/refguide9/common-section-link.md" %}}
 
 ### 2.2. Data Source Section {#data-source}
 
-The data source determines which objects will be shown in a list view. For general information on data sources, see [Data Sources](/refguide/data-sources/).
+The data source determines which objects will be shown in a list view. For general information on data sources, see [Data Sources](/refguide9/data-sources/).
 
 #### 2.2.1 Type
 
 The list view supports the following types of data sources: 
 
-* [Database source](/refguide/database-source/) – objects are retrieved directly form the database. The database source can be used in [offline](/refguide/offline-first/) applications. 
-* [XPath source](/refguide/xpath-source/) – objects are retrieved directly form the database
-* [Microflow source](/refguide/microflow-source/) – calculates the list of objects by executing a microflow
-* [Nanoflow source](/refguide/nanoflow-source/) – calculates the list of objects by executing a nanoflow
-* [Association source](/refguide/association-source/) – follows an association to get to objects
+* [Database source](/refguide9/database-source/) – objects are retrieved directly form the database. The database source can be used in [offline](/refguide9/offline-first/) applications. 
+* [XPath source](/refguide9/xpath-source/) – objects are retrieved directly form the database
+* [Microflow source](/refguide9/microflow-source/) – calculates the list of objects by executing a microflow
+* [Nanoflow source](/refguide9/nanoflow-source/) – calculates the list of objects by executing a nanoflow
+* [Association source](/refguide9/association-source/) – follows an association to get to objects
 
 The database and XPath sources retrieve objects from the database and supports searching and sorting. 
 
@@ -59,7 +59,7 @@ The database and XPath sources retrieve objects from the database and supports s
 
 ### 2.3 Design Properties Section{#design-properties}
 
-{{% snippet file="/static/_includes/refguide/design-section-link.md" %}} 
+{{% snippet file="/static/_includes/refguide9/design-section-link.md" %}} 
 
 ### 2.4 General Section {#general}
 
@@ -69,7 +69,7 @@ If this property is set to *Yes*, items in the list view can be edited. The chan
 
 #### 2.4.2 On Click 
 
-An on-click event defines what action is performed when a user clicks a list view row. For more information on on-click events, see [On Click Event](/refguide/on-click-event/). 
+An on-click event defines what action is performed when a user clicks a list view row. For more information on on-click events, see [On Click Event](/refguide9/on-click-event/). 
 
 #### 2.4.3 Page Size {#page-size}
 
@@ -111,7 +111,7 @@ Now if there is a row of type Bicycle the template specific for bicycles will be
 
 ### 2.6 Visibility Section {#visibility}
 
-{{% snippet file="/static/_includes/refguide/visibility-section-link.md" %}}
+{{% snippet file="/static/_includes/refguide9/visibility-section-link.md" %}}
 
 ## 3 Performing Specific Actions
 
@@ -123,7 +123,7 @@ To perform actions on a list view, select it on a page and right-click it. The l
 
 ## 4 Read More
 
-* [Page](/refguide/page/)
-* [Data Containers](/refguide/data-widgets/)
-* [Data Sources](/refguide/data-sources/)
-* [Properties Common in the Page Editor](/refguide/common-widget-properties/)
+* [Page](/refguide9/page/)
+* [Data Containers](/refguide9/data-widgets/)
+* [Data Sources](/refguide9/data-sources/)
+* [Properties Common in the Page Editor](/refguide9/common-widget-properties/)

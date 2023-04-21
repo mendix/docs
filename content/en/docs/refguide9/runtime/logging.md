@@ -1,6 +1,6 @@
 ---
 title: "Logging"
-url: /refguide/logging/
+url: /refguide9/logging/
 category: "Mendix Runtime"
 description: "Describes what the various log levels of the runtime will show as output."
 tags: ["studio pro"]
@@ -41,7 +41,7 @@ This is the most verbose logging level, and can be used if you want even more fi
 
 ## 3 Log Nodes
 
-This section provides some details on specific log nodes used by Mendix. It is recommended that if you write your own [log messages](/refguide/log-message/) you use your own log node names to avoid confusion with the Mendix log messages.
+This section provides some details on specific log nodes used by Mendix. It is recommended that if you write your own [log messages](/refguide9/log-message/) you use your own log node names to avoid confusion with the Mendix log messages.
 
 ### 3.1 Default Mendix Log Nodes {#mendix-nodes}
 

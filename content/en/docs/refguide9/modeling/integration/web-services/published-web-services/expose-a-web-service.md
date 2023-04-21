@@ -28,12 +28,12 @@ This how-to was written based on Studio Pro version 5.20. All the images, names,
 
 ## 3 Data Structure and GUI
 
-1. Create the following **Customer** entity in your domain model (for details on how to create an entity, see [Creating a Basic Data Layer](/refguide/create-a-basic-data-layer/):
+1. Create the following **Customer** entity in your domain model (for details on how to create an entity, see [Creating a Basic Data Layer](/refguide9/create-a-basic-data-layer/):
 
     {{< figure src="/attachments/howto/integration/expose-a-web-service/8945665.png" >}}
 
 2. Create overview and detail pages to manage objects of the **Customer** type (for details on how to create overview and detail pages, see [How to Create Your First Two Overview and Detail Pages](/howto/front-end/create-your-first-two-overview-and-detail-pages/).
-3. Create a menu item to access the customer overview page (for details on how to create menu items, see [Setting Up Navigation](/refguide/setting-up-the-navigation-structure/).
+3. Create a menu item to access the customer overview page (for details on how to create menu items, see [Setting Up Navigation](/refguide9/setting-up-the-navigation-structure/).
 4. Run the application and add some data to expose in the web service.
 
 ## 4 Creating a Published Web Service{#create-published-web-service}
@@ -53,7 +53,7 @@ To create a published web service, follow these steps:
 
         {{< figure src="/attachments/howto/integration/expose-a-web-service/18581713.png" >}}
 
-    * On the **Settings** tab, you can configure the other settings. Do change them before publishing your web service, especially the **Target namespace** (for details on these settings, see [Published Web Service](/refguide/published-web-service/) in the *Studio Pro Guide*):
+    * On the **Settings** tab, you can configure the other settings. Do change them before publishing your web service, especially the **Target namespace** (for details on these settings, see [Published Web Service](/refguide9/published-web-service/) in the *Studio Pro Guide*):
 
         {{< figure src="/attachments/howto/integration/expose-a-web-service/18581712.png" >}}
 
@@ -67,7 +67,7 @@ To create a published web service, follow these steps:
 
 To create the functionality to expose, follow these steps:
 
-1. Create a microflow that retrieves and returns a list of customers from the database (for details on how to create a microflow, see [Triggering a Microflow From a Menu Item](/refguide/triggering-microflow-from-menu-item/)).
+1. Create a microflow that retrieves and returns a list of customers from the database (for details on how to create a microflow, see [Triggering a Microflow From a Menu Item](/refguide9/triggering-microflow-from-menu-item/)).
 2. To make the microflow more exciting, add two input parameters to dynamically set the range settings of the retrieve action. Configure the range options of the retrieve action like this:
 
     {{< figure src="/attachments/howto/integration/expose-a-web-service/18581709.png" >}}

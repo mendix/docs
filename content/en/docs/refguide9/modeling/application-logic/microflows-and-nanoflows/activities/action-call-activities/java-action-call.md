@@ -1,6 +1,6 @@
 ---
 title: "Java Action Call"
-url: /refguide/java-action-call/
+url: /refguide9/java-action-call/
 weight: 10
 tags: ["studio pro", "Java", "java action call", "action call"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
@@ -12,9 +12,9 @@ This activity can only be used in **Microflows**.
 
 ## 1 Introduction
 
-The **Java action call** activity can be used to call a [Java action](/refguide/java-actions/). 
+The **Java action call** activity can be used to call a [Java action](/refguide9/java-actions/). 
 
-{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/action-call-activities/java-action-call/java-action-call.png" alt="Java Action"   width="200"  >}}
+{{< figure src="/attachments/refguide9/modeling/application-logic/microflows-and-nanoflows/activities/action-call-activities/java-action-call/java-action-call.png" alt="Java Action"   width="200"  >}}
 
 Arguments can be passed to the action and the result can be stored.
 
@@ -22,7 +22,7 @@ Arguments can be passed to the action and the result can be stored.
 
 There are two sets of properties for this activity, those in the dialog box on the left, and those in the properties pane on the right:
 
-{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/action-call-activities/java-action-call/java-action-call-properties.png" alt="Java Action Call Properties" >}}
+{{< figure src="/attachments/refguide9/modeling/application-logic/microflows-and-nanoflows/activities/action-call-activities/java-action-call/java-action-call-properties.png" alt="Java Action Call Properties" >}}
 
 The **Java action call** properties pane consists of the following sections:
 
@@ -47,9 +47,9 @@ Click **Edit** next to the parameter to fill in the arguments.
 
 An argument is the input data that you are passing to the Java action. For each Java action parameter, you must supply an argument of the same type. 
 
-The values of the arguments are defined using [expressions](/refguide/expressions/):
+The values of the arguments are defined using [expressions](/refguide9/expressions/):
 
-{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/action-call-activities/java-action-call/argument-edit.png" alt="argument" >}}
+{{< figure src="/attachments/refguide9/modeling/application-logic/microflows-and-nanoflows/activities/action-call-activities/java-action-call/argument-edit.png" alt="argument" >}}
 
 ### 3.3 Return Type
 
@@ -75,8 +75,8 @@ If you want a microflow to call a Java action to run in the background using a t
 2. Identify which task queue it should run in in **Select Task Queue**.
 3. (optionally – in Mendix version 9.10.0 and above) Select an automatic retry strategy.
 
-For more information about task queues, see [Task Queue](/refguide/task-queue/).
+For more information about task queues, see [Task Queue](/refguide9/task-queue/).
 
 ## 4 Common Section {#common}
 
-{{% snippet file="/static/_includes/refguide/microflow-common-section-link.md" %}}
+{{% snippet file="/static/_includes/refguide9/microflow-common-section-link.md" %}}

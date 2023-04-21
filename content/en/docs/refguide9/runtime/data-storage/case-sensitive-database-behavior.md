@@ -1,6 +1,6 @@
 ---
 title: "Case-Sensitive Database Behavior"
-url: /refguide/case-sensitive-database-behavior/
+url: /refguide9/case-sensitive-database-behavior/
 tags: ["studio pro", "strings", "sort", "case", "query", "constraint"]
 weight: 20
 ---
@@ -18,7 +18,7 @@ For the purposes of this document we can divide case sensitive operations into t
 
 * Sorting: Indicates the order in which you want objects to be retrieved (alphabetically ascending or descending).
 * Comparing: These are operations that involve equality or other comparisons directly in queries (for instance, in the query `\\Entity[Attribute = 'a']`)
-* String functions: These are the [contains](/refguide/xpath-contains/), [starts-with](/refguide/xpath-starts-with/), and [ends-with](/refguide/xpath-ends-with/) functions of an XPath.
+* String functions: These are the [contains](/refguide9/xpath-contains/), [starts-with](/refguide9/xpath-starts-with/), and [ends-with](/refguide9/xpath-ends-with/) functions of an XPath.
 
 Unless otherwise indicated below, sorting and comparing strings is case sensitive whereas string functions are case insensitive.
 This is affected by the database, table, or column collation, and sometimes by other database specific options.
@@ -40,7 +40,7 @@ String functions are **case insensitive** as they are implemented using the `ILI
 
 ### 2.3 DB2
 
-Sorting and comparing are **case sensitive**. For versions below 8.14, all operations are **case sensitive**. There is an exception for both version groups where collation is configured to **case insensitive**, which affects all operations. For more information, see the [Making DB2 Case-Insensitive](/refguide/db2/#making) section of *DB2*.
+Sorting and comparing are **case sensitive**. For versions below 8.14, all operations are **case sensitive**. There is an exception for both version groups where collation is configured to **case insensitive**, which affects all operations. For more information, see the [Making DB2 Case-Insensitive](/refguide9/db2/#making) section of *DB2*.
 
 Does not support sorting on string attributes of unlimited length.
 

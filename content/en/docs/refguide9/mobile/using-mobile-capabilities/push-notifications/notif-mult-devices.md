@@ -1,7 +1,7 @@
 ---
 title: "Part 8: Send Notifications to Multiple Devices"
 linktitle: "8. Notifications to Multiple Devices"
-url: /refguide/mobile/using-mobile-capabilities/push-notifications/notif-mult-devices/
+url: /refguide9/mobile/using-mobile-capabilities/push-notifications/notif-mult-devices/
 weight: 90
 description: Learn to send notifications to multiple devices with the Native Mobile Builder.
 aliases:
@@ -20,11 +20,11 @@ Push notifications only work with apps created through the Mendix Native Mobile 
 
 Before starting this section, make sure you have completed the following prerequisite:
 
-* Send one test push notification as described in [Push Notifications](/refguide/mobile/using-mobile-capabilities/push-notifications/)
+* Send one test push notification as described in [Push Notifications](/refguide9/mobile/using-mobile-capabilities/push-notifications/)
 
 If you want to use push notifications with custom apps created with Mendix Native Mobile Builder, make sure you have completed the following prerequisite:
 
-* Complete [Build a Mendix Native App Locally](/refguide/mobile/distributing-mobile-apps/building-native-apps/native-build-locally/)
+* Complete [Build a Mendix Native App Locally](/refguide9/mobile/distributing-mobile-apps/building-native-apps/native-build-locally/)
 
 ## 3 Sending Notifications to Multiple Devices
 
@@ -97,4 +97,4 @@ To send a push notification to all users, use the **SendMessageToUsers** Java ac
 
 ## 5 Troubleshooting Notification Issues
 
-If you run into issues, see the [Troubleshoot Notification Issues](/refguide/mobile/using-mobile-capabilities/push-notifications/notif-send-test/#troubleshoot) section of *Send Your First Test Push Notification*.
+If you run into issues, see the [Troubleshoot Notification Issues](/refguide9/mobile/using-mobile-capabilities/push-notifications/notif-send-test/#troubleshoot) section of *Send Your First Test Push Notification*.

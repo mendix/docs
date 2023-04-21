@@ -1,6 +1,6 @@
 ---
 title: "Create Object"
-url: /refguide/create-object/
+url: /refguide9/create-object/
 weight: 40
 tags: ["studio pro", "create object", "activity"]
 ---
@@ -17,7 +17,7 @@ The **Create object** activity can be used to create an object.
 
 An example of create object properties is represented in the image below:
 
-{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/object-activities/create-object/create-properties.png" alt="create object properties" >}}
+{{< figure src="/attachments/refguide9/modeling/application-logic/microflows-and-nanoflows/activities/object-activities/create-object/create-properties.png" alt="create object properties" >}}
 
 There are two sets of properties for this activity, those in the dialog box on the left, and those in the properties pane on the right.
 
@@ -40,12 +40,12 @@ The entity of which you want to create an object.
 
 ### 3.2 Commit
 
-**Commit** defines the way the object is committed. For more information on committing, see the section [How Commits Work](/refguide/committing-objects/#how-commits-work) in Commit Object(s) .
+**Commit** defines the way the object is committed. For more information on committing, see the section [How Commits Work](/refguide9/committing-objects/#how-commits-work) in Commit Object(s) .
 
 | Option | Description |
 | --- | --- |
-| Yes with event handlers | The object is saved in the database and the [event handlers](/refguide/event-handlers/) are triggered. |
-| Yes without event handlers | The object is saved in the database, but the [event handlers](/refguide/event-handlers/) are not triggered. |
+| Yes with event handlers | The object is saved in the database and the [event handlers](/refguide9/event-handlers/) are triggered. |
+| Yes without event handlers | The object is saved in the database, but the [event handlers](/refguide9/event-handlers/) are not triggered. |
 | No *(default)*  | The object is changed without being saved in the database. |
 
 #### 3.2.1 Commits in Nanoflows
@@ -62,21 +62,21 @@ Default: **No**
 
 If **Refresh in client** is set to **No**, the change is not reflected in any widgets in the client.
 
-If **Commit** and **Refresh in client** are both set to **Yes**, [data sources](/refguide/data-sources/) are reloaded and the new object's values are displayed in relevant widgets.
+If **Commit** and **Refresh in client** are both set to **Yes**, [data sources](/refguide9/data-sources/) are reloaded and the new object's values are displayed in relevant widgets.
 
 #### 3.3.2  Microflow Is Called in an Offline, Native, or Hybrid App
 
 When inside a microflow that is called from an offline, native, or hybrid app, the **Refresh in client** option is ignored and functions as if it was set to **No**.
 
-For more information, see the [Microflows](/refguide/mobile/building-efficient-mobile-apps/offlinefirst-data/best-practices/#microflows) section of Offline-First Data.
+For more information, see the [Microflows](/refguide9/mobile/building-efficient-mobile-apps/offlinefirst-data/best-practices/#microflows) section of Offline-First Data.
 
 #### 3.3.3  Action Is in a Nanoflow
 
-In a nanoflow, the create object action reloads [data sources](/refguide/data-sources/) as if **Refresh in client** was set to **Yes**.
+In a nanoflow, the create object action reloads [data sources](/refguide9/data-sources/) as if **Refresh in client** was set to **Yes**.
 
 ### 3.4 Change Members
 
-You can set the values of members (attributes and associations) of the newly created object to be different from the default value set in the [entity](/refguide/entities/). Values for members are specified with an [expression](/refguide/expressions/) and must be of the same type as the member.
+You can set the values of members (attributes and associations) of the newly created object to be different from the default value set in the [entity](/refguide9/entities/). Values for members are specified with an [expression](/refguide9/expressions/) and must be of the same type as the member.
 
 ### 3.5 Object Name
 
@@ -84,7 +84,7 @@ This is the name of the resulting object which can be used by all activities tha
 
 ## 4 Common Section{#common}
 
-{{% snippet file="/static/_includes/refguide/microflow-common-section-link.md" %}}
+{{% snippet file="/static/_includes/refguide9/microflow-common-section-link.md" %}}
 
 ## 5 What Happens During a Create?
 
@@ -100,7 +100,7 @@ Wherever an object is initialized, all the events are always executed. The defau
     * The object has the **Instantiated** state
     * This influences the behavior in the other object actions
 
-{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/object-activities/create-object/during-creates.png" >}}
+{{< figure src="/attachments/refguide9/modeling/application-logic/microflows-and-nanoflows/activities/object-activities/create-object/during-creates.png" >}}
 
 {{% alert color="info" %}}
 Any changes made to an object are visible in all widgets. This is because changes are stored globally in the client.

@@ -1,13 +1,13 @@
 ---
 title: "Studio Pro Overview"
-url: /refguide/studio-pro-overview/
+url: /refguide9/studio-pro-overview/
 category: "App Modeling"
 description: "Describes Studio Pro in general, for example, tabs, menus, and shortcut keys."
 weight: 10
 tags: ["Studio Pro"]
 aliases:
-    - /refguide/desktop-modeler-overview.html
-    - /refguide/desktop-modeler-overview
+    - /refguide9/desktop-modeler-overview.html
+    - /refguide9/desktop-modeler-overview
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 #This document is mapped to the landing page, update the link there if renaming or moving the doc file.
 ---
@@ -24,7 +24,7 @@ When Studio Pro is open, press <kbd>F1</kbd> to quickly jump to documentation.
 
 This document describes the user interface of Mendix Studio Pro:
 
-{{< figure src="/attachments/refguide/modeling/studio-pro-overview/studio-pro-diagram.png" alt="Studio Pro Diagram" >}}
+{{< figure src="/attachments/refguide9/modeling/studio-pro-overview/studio-pro-diagram.png" alt="Studio Pro Diagram" >}}
 
 ## 2 Top Bar {#top-bar}
 
@@ -36,19 +36,19 @@ The Studio Pro top bar contains the following items:
 
 ### 2.1 Menus {#menus}
 
-In the Studio Pro top bar, you can see several menus, such as **Switch-to** menu, [Edit](/refguide/edit-menu/), [View](/refguide/view-menu/), and [Version Control](/refguide/version-control-menu/). Each menu contains menu items that allow you to perform various actions, for example, to [create a deployment package](/refguide/create-deployment-package-dialog/), set [preferences](/refguide/preferences-dialog/), or view the [**Errors**](/refguide/errors-pane/) pane. 
+In the Studio Pro top bar, you can see several menus, such as **Switch-to** menu, [Edit](/refguide9/edit-menu/), [View](/refguide9/view-menu/), and [Version Control](/refguide9/version-control-menu/). Each menu contains menu items that allow you to perform various actions, for example, to [create a deployment package](/refguide9/create-deployment-package-dialog/), set [preferences](/refguide9/preferences-dialog/), or view the [**Errors**](/refguide9/errors-pane/) pane. 
 
-For more information on menus, see [Menus](/refguide/menus/). 
+For more information on menus, see [Menus](/refguide9/menus/). 
 
 ### 2.2 Run and View App {#run-and-view}
 
 You can deploy your app by clicking the **Publish** or play (**Run locally**) buttons. To view your deployed app, click **View App**. 
 
-{{< figure src="/attachments/refguide/modeling/studio-pro-overview/view-and-publish.png" alt="View and Publish buttons" >}}
+{{< figure src="/attachments/refguide9/modeling/studio-pro-overview/view-and-publish.png" alt="View and Publish buttons" >}}
 
 For more information on deployment in Mendix, see [Deployment](/developerportal/deploy/).
 
-For more information on deploying your app and versioning it, see the [Versioning an App Deployed to the Cloud](/refguide/using-version-control-in-studio-pro/#versioning-app) section in *Using Version Control in Studio Pro*. 
+For more information on deploying your app and versioning it, see the [Versioning an App Deployed to the Cloud](/refguide9/using-version-control-in-studio-pro/#versioning-app) section in *Using Version Control in Studio Pro*. 
 
 ### 2.3 Links and User Profile Menu {#links}
 
@@ -58,7 +58,7 @@ Your profile picture is displayed next to them if you are signed in. When you cl
 
 ## 3 App Structure (App Explorer)
 
-An app consists of individual files (*documents*) and settings that are grouped in folders and [modules](/refguide/modules/). The complete structure of your app can be viewed in the [App Explorer](/refguide/app-explorer/). 
+An app consists of individual files (*documents*) and settings that are grouped in folders and [modules](/refguide9/modules/). The complete structure of your app can be viewed in the [App Explorer](/refguide9/app-explorer/). 
 
 ## 4 Working Area {#working-area}
 
@@ -69,7 +69,7 @@ A working area is a current document tab that you work in. The working area and 
 The documents you view and edit are shown in tabs. 
 
 {{% alert color="info" %}}
-This section describes documents in the working area, not panes that you can open and position around the working area. For more information on behavior of panes, see the [Layout of Panes](/refguide/view-menu/#layout-of-panes) section in *View Menu*.
+This section describes documents in the working area, not panes that you can open and position around the working area. For more information on behavior of panes, see the [Layout of Panes](/refguide9/view-menu/#layout-of-panes) section in *View Menu*.
 {{% /alert %}}
 
 You can have a number of tabs open, just like in a modern web browser. They can be closed, reordered, and shown side by side. 
@@ -80,17 +80,17 @@ Each document has its own save state, history, and future, so undo and redo acti
 
 Dockable panes can be positioned around the working area and contain various elements and settings:
 
-{{< figure src="/attachments/refguide/modeling/studio-pro-overview/pane-example.png" alt="Properties Pane Example" width="300" >}}
+{{< figure src="/attachments/refguide9/modeling/studio-pro-overview/pane-example.png" alt="Properties Pane Example" width="300" >}}
 
-For example, you can view [list of errors](/refguide/errors-pane/) or run [MxAssist Performance bot](/refguide/mx-assist-performance-bot/), configure properties of a specific document or an element, view toolbox. For more information on panes and their layout, see [View Menu](/refguide/view-menu/).
+For example, you can view [list of errors](/refguide9/errors-pane/) or run [MxAssist Performance bot](/refguide9/mx-assist-performance-bot/), configure properties of a specific document or an element, view toolbox. For more information on panes and their layout, see [View Menu](/refguide9/view-menu/).
 
 ## 6 Status Bar {#status-bar}
 
 At the bottom of the Studio Pro main window pane is a status bar. On the left is the current status of Studio Pro:
 
-{{< figure src="/attachments/refguide/modeling/studio-pro-overview/status-bar.png" alt="Status Bar Example" >}}
+{{< figure src="/attachments/refguide9/modeling/studio-pro-overview/status-bar.png" alt="Status Bar Example" >}}
 
-On the right is the currently selected language. If you have set up multiple languages in your app you can change the currently selected language by clicking here. For more information see [Language Menu](/refguide/translatable-texts/).
+On the right is the currently selected language. If you have set up multiple languages in your app you can change the currently selected language by clicking here. For more information see [Language Menu](/refguide9/translatable-texts/).
 
 ## 7 Shortcut Keys
 
@@ -108,7 +108,7 @@ These keys are active within the [Dockable Panes](#panes) and editors, such as t
 
 You can navigate between Studio Pro panes (for example, the domain model editor or the **Errors** pane) using <kbd>Ctrl</kbd> + (<kbd>Shift</kbd>) + <kbd>Tab</kbd>. This opens a selection dialog where you can choose a pane using the mouse, <kbd>Ctrl</kbd> + arrow keys, or <kbd>Ctrl</kbd> + (<kbd>Shift</kbd>) + <kbd>Tab</kbd>. You are taken to the selected pane when you click the main mouse button or release the <kbd>Ctrl</kbd> key.
 
-{{< figure src="/attachments/refguide/modeling/studio-pro-overview/ctrl-tab-navigation.png" >}}
+{{< figure src="/attachments/refguide9/modeling/studio-pro-overview/ctrl-tab-navigation.png" >}}
 
 There are alternative ways to navigate between tabs within panes: 
 
@@ -117,7 +117,7 @@ There are alternative ways to navigate between tabs within panes:
 | <kbd>Ctrl</kbd> + <kbd>1</kbd> - <kbd>0</kbd> | Switch to tab at selected tab position in the current window. |
 | <kbd>Ctrl</kbd> + <kbd>PgUp</kbd> / <kbd>PgDn</kbd> | Switch to next/previous tab in active pane. |
 
-Most menu items also have shortcut keys assigned to them that can be used in all panes. These are shown in the menus, listed in the [Menu Shortcut Keys](#menu-shortcuts) section, below, and also listed on the documentation page for each menu under [Menus](/refguide/menus/).
+Most menu items also have shortcut keys assigned to them that can be used in all panes. These are shown in the menus, listed in the [Menu Shortcut Keys](#menu-shortcuts) section, below, and also listed on the documentation page for each menu under [Menus](/refguide9/menus/).
 
 ##### 7.1.1.2 Editors Only {#editors-only}
 
@@ -214,7 +214,7 @@ The following shortcut keys are available for the debugger:
 
 ### 7.6 Menu Shortcut Keys {#menu-shortcuts}
 
-The following shortcut keys are assigned to menu actions that can be used in all panes. These are also shown in the menus and listed on the documentation page for each menu under [Menus](/refguide/menus/).
+The following shortcut keys are assigned to menu actions that can be used in all panes. These are also shown in the menus and listed on the documentation page for each menu under [Menus](/refguide9/menus/).
 
 | Key | Description |
 | --- | --- |
@@ -251,5 +251,5 @@ The following shortcut keys are assigned to menu actions that can be used in all
 
 ## 8 Read More
 
-* [App Explorer](/refguide/app-explorer/)
-* [Menus](/refguide/menus/)
+* [App Explorer](/refguide9/app-explorer/)
+* [Menus](/refguide9/menus/)

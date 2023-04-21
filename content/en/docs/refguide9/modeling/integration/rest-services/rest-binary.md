@@ -1,6 +1,6 @@
 ---
 title: "Publish and Retrieve Images and Files with REST"
-url: /refguide/send-receive-files-rest/
+url: /refguide9/send-receive-files-rest/
 linktitle: "Images and Files with REST"
 weight: 79
 tags: ["rest", "binary", "send files", "receive files", "OData", "expose", "published REST service", "consume"]
@@ -28,7 +28,7 @@ To publish or retrieve files with REST, do the following:
 We recommend reading the following for some more background:
 
 * [Publishing](/howto/integration/publish-rest-service/) and [consuming](/howto/integration/consume-a-rest-service/) REST services
-* Working with [Images, Videos and Files](/refguide/image-and-file-widgets/) in Studio Pro
+* Working with [Images, Videos and Files](/refguide9/image-and-file-widgets/) in Studio Pro
 
 ## 2 Send Files with REST {#create-service}
 
@@ -36,15 +36,15 @@ Imagine that your app is functioning as a content management system (CMS), and y
 
 ### 2.1 Publishing the Service {#publish-service}
 
-To publish the **System.Image** or **System.Filedocument** entities as a [REST service](/refguide/published-rest-service/), do the following:
+To publish the **System.Image** or **System.Filedocument** entities as a [REST service](/refguide9/published-rest-service/), do the following:
 
 1. Add a new module (or use **MyFirstModule**) and name it **CMS**.
 
 2. Go to the domain model and create a new entity called *MyFile*.
 
-3. Add a **System.Image** or **System.FileDocument** [generalization](/refguide/entities/#generalization) to the *MyFile* entity
+3. Add a **System.Image** or **System.FileDocument** [generalization](/refguide9/entities/#generalization) to the *MyFile* entity
 
-     {{< figure src="/attachments/refguide/modeling/integration/rest-binary/starting-entity.png" >}}
+     {{< figure src="/attachments/refguide9/modeling/integration/rest-binary/starting-entity.png" >}}
 
 4. Generate the overview pages for the file or image entity, then link them to the home page and navigation.
      * Right click on the **System.Image** or **System.FileDocument** entity that you want to publish, and click **Generate overview pages**. 
@@ -60,7 +60,7 @@ To publish the **System.Image** or **System.Filedocument** entities as a [REST s
      * **Post (Create)**
      * **Delete**
 
-     See the [Operations](/refguide/generate-rest-resource/#operations) section of *Generating a Published REST Resource* for a description of each operation.
+     See the [Operations](/refguide9/generate-rest-resource/#operations) section of *Generating a Published REST Resource* for a description of each operation.
 
 7. Click **OK**. 
 
@@ -72,7 +72,7 @@ After you run your app, click the URL in the **Location** field to view the Open
 
 Open your published REST service, then double-click the **Get by** key, or single-click and click **Edit**, to open the **Get by** property details. By default, the **Get by** key will return a binary response. The **Export mapping** is blank because a binary object without an export mapping returns binary content.
 
-{{< figure src="/attachments/refguide/modeling/integration/rest-binary/no-export-mapping.png" >}}
+{{< figure src="/attachments/refguide9/modeling/integration/rest-binary/no-export-mapping.png" >}}
 
 Click **Show** next to the **Microflow** field to view the **MyFirstModule.MyFile_Get_ByKey** microflow. The generated **Get by** key returns a file document.
 
@@ -80,7 +80,7 @@ Click **Show** next to the **Microflow** field to view the **MyFirstModule.MyFil
 
 A `GET` request to the REST endpoint you created (in this example, `http://localhost:8080/rest/cmsapi/v1/myfile/1`) will return the binary for the first uploaded file. We need to specify the expected media type so that it returns the file in the expected way (for example, displaying an image).
 
-In the **GET_ByKey** microflow, specify the media type (or MIME type) in the content headers. To learn more about content headers in microflows, see the **Return a file document** entry in the [Microflow](/refguide/published-rest-operation/#microflow) section of *Published REST Operation*. Detailed steps are explained below.
+In the **GET_ByKey** microflow, specify the media type (or MIME type) in the content headers. To learn more about content headers in microflows, see the **Return a file document** entry in the [Microflow](/refguide9/published-rest-operation/#microflow) section of *Published REST Operation*. Detailed steps are explained below.
 
 See [Common MIME types](https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types/Common_types) for a generic, external list of common content header types.
 
@@ -143,7 +143,7 @@ To do so, do the following:
 
 1. Complete the two steps in the [Retrieve Files with REST](#retrieve-files) section.
 2. Download the [Image](/appstore/widgets/image/) widget from the Mendix Marketplace and import it into your app.
-3. In the [Toolbox](/refguide/view-menu/#toolbox), click **Widgets** and search for "Image".
+3. In the [Toolbox](/refguide9/view-menu/#toolbox), click **Widgets** and search for "Image".
 4. Drag the **Image** widget onto a page.
 5. Double-click the widget you dragged onto your page to open the **Properties**.
 6. In the **Data source** field, select the **Image URL** for **Image type**.
@@ -157,7 +157,7 @@ To do so, do the following:
 
 1. Complete the two steps in the [Retrieve Files with REST](#retrieve-files) section.
 2. Download the [HTML/Javascript Snippet](/appstore/widgets/html-javascript-snippet/) widget from the Mendix Marketplace and import it into your app.
-3. In the [Toolbox](/refguide/view-menu/#toolbox), click **Widgets** and search for "HTMLSnippet".
+3. In the [Toolbox](/refguide9/view-menu/#toolbox), click **Widgets** and search for "HTMLSnippet".
 4. Drag the **HTMLSnippet** widget onto a page.
 5. Double-click the widget you dragged onto your page to open the **Properties**.
 6. In the **Content Type** field, ensure that **HTML** is selected.
@@ -171,7 +171,7 @@ To do so, do the following:
 
 You can call a REST service in a microflow, then store the binary response in an entity.
 
-Retrieving files in a microflow uses the [Call REST service](/refguide/call-rest-action/) action. For step-by-step instructions for calling a REST service in a microflow, see [Consume a REST Service](/howto/integration/consume-a-rest-service/).
+Retrieving files in a microflow uses the [Call REST service](/refguide9/call-rest-action/) action. For step-by-step instructions for calling a REST service in a microflow, see [Consume a REST Service](/howto/integration/consume-a-rest-service/).
 
 To retrieve files using a microflow, do the following:
 

@@ -1,6 +1,6 @@
 ---
 title: "Text Box"
-url: /refguide/text-box/
+url: /refguide9/text-box/
 weight: 10
 tags: ["studio pro", "data"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
@@ -8,7 +8,7 @@ tags: ["studio pro", "data"]
 
 ## 1 Introduction
 
-A text box is used to display and, optionally, allow the end-user to edit the value of an attribute from an object in a textual form. It can be used to display attributes of the following [data types](/refguide/data-types/):
+A text box is used to display and, optionally, allow the end-user to edit the value of an attribute from an object in a textual form. It can be used to display attributes of the following [data types](/refguide9/data-types/):
 
 * Autonumber
 * Decimal
@@ -17,17 +17,17 @@ A text box is used to display and, optionally, allow the end-user to edit the va
 * Long
 * String
 
-A text box must be placed in a [data container](/refguide/data-widgets/) and displays an attribute of the object(s) retrieved by that container. The name of the attribute to be displayed is shown inside the text box, between square brackets, and colored blue.
+A text box must be placed in a [data container](/refguide9/data-widgets/) and displays an attribute of the object(s) retrieved by that container. The name of the attribute to be displayed is shown inside the text box, between square brackets, and colored blue.
 
 For example, the following text box allows the end-user to see, and set, the **Name** of a customer.
 
-{{< figure src="/attachments/refguide/modeling/pages/input-widgets/text-box/text-box.png" >}}
+{{< figure src="/attachments/refguide9/modeling/pages/input-widgets/text-box/text-box.png" >}}
 
 ## 2 Properties
 
 An example of text box properties is represented in the image below:
 
-{{< figure src="/attachments/refguide/modeling/pages/input-widgets/text-box/text-box-properties.png"   width="250"  >}}
+{{< figure src="/attachments/refguide9/modeling/pages/input-widgets/text-box/text-box-properties.png"   width="250"  >}}
 
 Text box properties consist of the following sections:
 
@@ -55,19 +55,19 @@ The autocomplete property specifies if a text box should have autocomplete enabl
 
 ### 2.2 Common Section{#common}
 
-{{% snippet file="/static/_includes/refguide/common-section-link.md" %}}
+{{% snippet file="/static/_includes/refguide9/common-section-link.md" %}}
 
 ### 2.3 Data Source Section{#data-source}
 
-{{% snippet file="/static/_includes/refguide/data-source-section-link.md" %}}
+{{% snippet file="/static/_includes/refguide9/data-source-section-link.md" %}}
 
 ### 2.4 Design Properties Section{#design-properties}
 
-{{% snippet file="/static/_includes/refguide/design-section-link.md" %}} 
+{{% snippet file="/static/_includes/refguide9/design-section-link.md" %}} 
 
 ### 2.5 Editability Section{#editability}
 
-{{% snippet file="/static/_includes/refguide/editability-section-link.md" %}}
+{{% snippet file="/static/_includes/refguide9/editability-section-link.md" %}}
 
 ### 2.6 Events Section{#events}
 
@@ -75,7 +75,7 @@ The autocomplete property specifies if a text box should have autocomplete enabl
 
 The on change event property specifies an action that will be executed when the value has been changed and gets submitted. A value will be submitted when pressing the <kbd>Enter</kbd> key or leaving the widget, either by using the <kbd>Tab</kbd> key or by clicking another widget.
 
-{{% snippet file="/static/_includes/refguide/events-section-link.md" %}}
+{{% snippet file="/static/_includes/refguide9/events-section-link.md" %}}
 
 #### 2.6.2 On Change Behaviour
 
@@ -99,13 +99,13 @@ This option allows makes it so users trigger an on change event while they are t
 
 With **While user is entering data**, users now can adjust one more property called **Apply after (ms)** (described above). This will reduce the amount of the calls made for an on change event, thus improving app performance.
 
-{{% snippet file="/static/_includes/refguide/events-section-link.md" %}}
+{{% snippet file="/static/_includes/refguide9/events-section-link.md" %}}
 
 #### 2.6.3 On Enter Event
 
 The on enter event property specifies an action that will be executed when the widget is entered, either by using the <kbd>Tab</kbd> key or by clicking it with the mouse.
 
-{{% snippet file="/static/_includes/refguide/events-section-link.md" %}}
+{{% snippet file="/static/_includes/refguide9/events-section-link.md" %}}
 
 #### 2.6.4 On Leave Event
 
@@ -113,13 +113,13 @@ The on leave event property specifies an action that will be executed when leavi
 
 This differs from the [On change](#on-change) property in that the event will always be triggered, even if the value has not been changed.
 
-{{% snippet file="/static/_includes/refguide/events-section-link.md" %}}
+{{% snippet file="/static/_includes/refguide9/events-section-link.md" %}}
 
 #### 2.6.5 On Enter Key Press Event
 
 The on enter key press event property specifies an action that will be executed when the focus is inside the widget  and the <kbd>Enter</kbd> key is pressed. In a web application the widget will keep focus after the action gets executed.
 
-{{% snippet file="/static/_includes/refguide/events-section-link.md" %}}
+{{% snippet file="/static/_includes/refguide9/events-section-link.md" %}}
 
 ### 2.7 Formatting Section{#formatting}
 
@@ -129,7 +129,7 @@ The formatting section applies only to the way that numeric attributes are displ
 * Integer
 * Long
 
-{{% snippet file="/static/_includes/refguide/numeric-formatting-link.md" %}}
+{{% snippet file="/static/_includes/refguide9/numeric-formatting-link.md" %}}
 
 ### 2.8 General Section{#general}
 
@@ -190,18 +190,18 @@ This option is only available in native pages.
 
 ### 2.9 Label Section{#label}
 
-{{% snippet file="/static/_includes/refguide/label-section-link.md" %}}
+{{% snippet file="/static/_includes/refguide9/label-section-link.md" %}}
 
 ### 2.10 Validation Section{#validation}
 
-{{% snippet file="/static/_includes/refguide/widget-validation-link.md" %}}
+{{% snippet file="/static/_includes/refguide9/widget-validation-link.md" %}}
 
 ### 2.11 Visibility Section{#visibility}
 
-{{% snippet file="/static/_includes/refguide/visibility-section-link.md" %}}
+{{% snippet file="/static/_includes/refguide9/visibility-section-link.md" %}}
 
 ## 3 Read More
 
-* [Data Types](/refguide/data-types/)  
-* [Data View](/refguide/data-view/)
-* [Attributes](/refguide/attributes/)
+* [Data Types](/refguide9/data-types/)  
+* [Data View](/refguide9/data-view/)
+* [Attributes](/refguide9/attributes/)

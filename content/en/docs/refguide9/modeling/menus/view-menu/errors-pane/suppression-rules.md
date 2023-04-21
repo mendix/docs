@@ -1,6 +1,6 @@
 ---
 title: "Suppression Rules"
-url: /refguide/suppression-rules/
+url: /refguide9/suppression-rules/
 weight: 10
 description: "Describes suppression rules for warnings in Studio Pro."
 tags: ["Studio Pro", "consistency errors", "checks", "warnings"]
@@ -10,7 +10,7 @@ tags: ["Studio Pro", "consistency errors", "checks", "warnings"]
 
 When you work on an app, Studio Pro performs consistency checks, which may result in warnings. Warnings identify issues that are not critical, but point to something that might be a problem. These warnings are shown in the **Errors** pane.
 
-{{< figure src="/attachments/refguide/modeling/menus/view-menu/errors-pane/suppression-rules/errors-pane-with-warnings.png" alt="Warnings in the Errors pane" >}}
+{{< figure src="/attachments/refguide9/modeling/menus/view-menu/errors-pane/suppression-rules/errors-pane-with-warnings.png" alt="Warnings in the Errors pane" >}}
 
 While warnings can be valuable, there are some situations where you might want to disable them, such as the following ones:
 
@@ -26,7 +26,7 @@ Suppression rules are for one user and for one instance of an app. The warnings 
 
 Suppression rules are stored locally in the app directory, in a file called *project-settings.user.json*. When committing your changes to the Team Server, Studio Pro will ignore this file. 
 
-{{< figure src="/attachments/refguide/modeling/menus/view-menu/errors-pane/suppression-rules/windows-explorer-showing-settings-files.png" alt="The settings file shown in Windows Explorer" >}}
+{{< figure src="/attachments/refguide9/modeling/menus/view-menu/errors-pane/suppression-rules/windows-explorer-showing-settings-files.png" alt="The settings file shown in Windows Explorer" >}}
 
 However, it is possible to export and import suppression rules manually. For more information on how to export and import warning, see [Exporting Your Suppression Rules](#export) and [Importing Your Suppression Rules](#import) sections. 
 
@@ -34,7 +34,7 @@ However, it is possible to export and import suppression rules manually. For mor
 
 From the **Errors** pane, you can suppress a warning for a document, a module, or the entire app:
 
-{{< figure src="/attachments/refguide/modeling/menus/view-menu/errors-pane/suppression-rules/suppressing-warning.png" alt="Suppressing a Warning" >}}
+{{< figure src="/attachments/refguide9/modeling/menus/view-menu/errors-pane/suppression-rules/suppressing-warning.png" alt="Suppressing a Warning" >}}
 
 ### 3.1 Suppressing a Warning for a Specific Document
 
@@ -93,7 +93,7 @@ To manually add a new rule, follow the steps below:
 2. In the **Manage Suppression Rules** dialog box, select the **New** button.
 3. In the **Add Suppression Rule** dialog box, set the necessary options to add the rule (for more information on settings, see the [Rule Setting](#rule-settings) section.  
 
-    {{< figure src="/attachments/refguide/modeling/menus/view-menu/errors-pane/suppression-rules/new-warning-window.png" alt="Rules window - add suppression" >}}
+    {{< figure src="/attachments/refguide9/modeling/menus/view-menu/errors-pane/suppression-rules/new-warning-window.png" alt="Rules window - add suppression" >}}
 
 4. Confirm your choice by clicking **OK**.
 5. Click **OK** in the **Manage Suppression Rules** dialog box to save your changes.
@@ -108,7 +108,7 @@ To edit an existing rule, follow the steps below:
 2. In the **Manage Suppression Rules** dialog box, select the **Edit** button.
 3. In the **Edit Suppression Rule** dialog box, edit options to change the rule (for more information on settings, see the [Suppression Rule Settings](#rule-settings) section. 
 
-    {{< figure src="/attachments/refguide/modeling/menus/view-menu/errors-pane/suppression-rules/rule-settings-window.png" alt="Rule settings window" >}}
+    {{< figure src="/attachments/refguide9/modeling/menus/view-menu/errors-pane/suppression-rules/rule-settings-window.png" alt="Rule settings window" >}}
 
 4. Confirm your choice by clicking **OK**.
 5. Click **OK** in the **Manage Suppression Rules** dialog box to save your changes.
@@ -134,7 +134,7 @@ To import suppression rules, do the following:
 4. Click **Open** to select the file.
 5. In a confirmation pop-up window, click **OK** to dismiss it:
 
-    {{< figure src="/attachments/refguide/modeling/menus/view-menu/errors-pane/suppression-rules/confirmation-dialog-after-rules-imported.png" alt="Import rules confirmation" >}}
+    {{< figure src="/attachments/refguide9/modeling/menus/view-menu/errors-pane/suppression-rules/confirmation-dialog-after-rules-imported.png" alt="Import rules confirmation" >}}
 
 6. Click **OK** in the **Manage Suppression Rules** dialog box. 
 
@@ -151,7 +151,7 @@ To export your suppression rules, do the following:
 4. Click the **Save** button to save the exported rules.
 5. In a confirmation pop-up window, click **OK** to dismiss it:
 
-    {{< figure src="/attachments/refguide/modeling/menus/view-menu/errors-pane/suppression-rules/confirmation-dialog-after-rules-exported.png" alt="Export rules confirmation" >}}
+    {{< figure src="/attachments/refguide9/modeling/menus/view-menu/errors-pane/suppression-rules/confirmation-dialog-after-rules-exported.png" alt="Export rules confirmation" >}}
 
 6. Click **OK** in the **Manage Suppression Rules** dialog box. 
 
@@ -170,5 +170,5 @@ The table below describes the available settings:
 
 ## 6 Read More {#read-more}
 
-* [Errors Pane](/refguide/errors-pane/)
-* [Consistency Errors](/refguide/consistency-errors/)
+* [Errors Pane](/refguide9/errors-pane/)
+* [Consistency Errors](/refguide9/consistency-errors/)

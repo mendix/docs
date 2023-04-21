@@ -1,9 +1,9 @@
 ---
 title: "Progressive Web App"
-url: /refguide/mobile/introduction-to-mobile-technologies/progressive-web-app/
+url: /refguide9/mobile/introduction-to-mobile-technologies/progressive-web-app/
 weight: 20
 aliases:
-    - /refguide/progressive-web-app/
+    - /refguide9/progressive-web-app/
 ---
 
 ## 1 Introduction
@@ -31,15 +31,15 @@ PWAs have the following limitations on iOS:
 * Offline data is not supported for PWAs on iOS
 {{% /alert %}}
 
-To create a full offline-first PWA, choose and add one of the following profiles (depending on which form factor you need): Responsive Web Offline, Phone Web Offline, or Tablet Web Offline. For more information about offline-first apps, see the [Offline-First Guide](/refguide/offline-first/).
+To create a full offline-first PWA, choose and add one of the following profiles (depending on which form factor you need): Responsive Web Offline, Phone Web Offline, or Tablet Web Offline. For more information about offline-first apps, see the [Offline-First Guide](/refguide9/offline-first/).
 
 {{% alert color="info" %}}
-Offline-first progressive web apps have some restrictions to make sure they can fully work offline. For more information, see [Offline Best Practices](/refguide/mobile/building-efficient-mobile-apps/offlinefirst-data/best-practices/).
+Offline-first progressive web apps have some restrictions to make sure they can fully work offline. For more information, see [Offline Best Practices](/refguide9/mobile/building-efficient-mobile-apps/offlinefirst-data/best-practices/).
 {{% /alert %}}
 
 Within the navigation profiles the following PWA features can be configured:
 
-{{< figure src="/attachments/refguide/mobile/progressive-web-app/settings.png" alt="PWA settings"   width="350"  >}}
+{{< figure src="/attachments/refguide9/mobile/progressive-web-app/settings.png" alt="PWA settings"   width="350"  >}}
 
 To be able to fully test PWA functionalities, the app needs to be deployed to the cloud. This is because the service worker is only enabled in the cloud over HTTPS.
 
@@ -63,13 +63,13 @@ Note that all pages and images reachable in the navigation profile are loaded by
 
 PWAs can be directly viewed and tested in the browser on your machine or device. Via the **View** menu you can directly open the PWA profiles in your browser:
 
-{{< figure src="/attachments/refguide/mobile/progressive-web-app/view-menu.png" alt="View menu" >}}
+{{< figure src="/attachments/refguide9/mobile/progressive-web-app/view-menu.png" alt="View menu" >}}
 
 You can also open PWA profiles on your device via the **View on your device** option:
 
-{{< figure src="/attachments/refguide/mobile/progressive-web-app/view-dialog.png" alt="View menu"   width="350"  >}}
+{{< figure src="/attachments/refguide9/mobile/progressive-web-app/view-dialog.png" alt="View menu"   width="350"  >}}
 
-Note that if you are running on a Mac with Parallels, make sure that port 8080 (or whichever port you have configured for your app) is forwarded and that you use your Mac IP instead of the Virtual Machine’s IP. For more information on Mendix and Parallels, see [Configuring Parallels](/refguide/using-mendix-studio-pro-on-a-mac/).
+Note that if you are running on a Mac with Parallels, make sure that port 8080 (or whichever port you have configured for your app) is forwarded and that you use your Mac IP instead of the Virtual Machine’s IP. For more information on Mendix and Parallels, see [Configuring Parallels](/refguide9/using-mendix-studio-pro-on-a-mac/).
 
 {{% alert color="info" %}}
 When previewing or testing an offline-first PWA locally, an internet connection is always required to load the app. After initial loading, the app behaves fully offline, but it can not be reloaded without a connection. Once the app is deployed to the cloud, end-users can always load it without a connection after the first visit.
@@ -131,11 +131,11 @@ For more information on the available properties in the web app manifest, read t
 
 Offline-first PWAs use long-lived sessions, which keep users logged in for a longer period even after their apps are closed. By default, users will be logged out after 7 days of inactivity. This can be customized using the *LongLivedSessionTimeout* runtime setting.
 
-For more information on sessions and how to customize the timeout, see the [Session Duration](/refguide/tricky-custom-runtime-settings/#session-duration) section of the *Advanced Custom Settings in Mendix Runtime Reference Guide*.
+For more information on sessions and how to customize the timeout, see the [Session Duration](/refguide9/tricky-custom-runtime-settings/#session-duration) section of the *Advanced Custom Settings in Mendix Runtime Reference Guide*.
 
 ## 6 Accessing Device Features
 
-Browsers offer access to device features through APIs that can be leveraged in PWAs. These device features can be used by available widgets and nanoflow actions. It is also possible to leverage additional device features by extending the platform using [JavaScript Actions](/refguide/javascript-actions/) or [Pluggable Widgets](/howto/extensibility/pluggable-widgets/).
+Browsers offer access to device features through APIs that can be leveraged in PWAs. These device features can be used by available widgets and nanoflow actions. It is also possible to leverage additional device features by extending the platform using [JavaScript Actions](/refguide9/javascript-actions/) or [Pluggable Widgets](/howto/extensibility/pluggable-widgets/).
 
 This table lists the most used device features and APIs, and also documents their compatibility with common browsers:
 
@@ -143,32 +143,32 @@ This table lists the most used device features and APIs, and also documents thei
 
 * Fully compatible:
 
-    {{< figure src="/attachments/refguide/mobile/progressive-web-app/check-mark.svg" alt="Fully compatible" >}}
+    {{< figure src="/attachments/refguide9/mobile/progressive-web-app/check-mark.svg" alt="Fully compatible" >}}
 
 * Compatible only when using HTTPS protocol:
 
-    {{< figure src="/attachments/refguide/mobile/progressive-web-app/warning.svg" alt="Compatible when using HTTPS" >}}
+    {{< figure src="/attachments/refguide9/mobile/progressive-web-app/warning.svg" alt="Compatible when using HTTPS" >}}
 
 * Not compatible:
 
-    {{< figure src="/attachments/refguide/mobile/progressive-web-app/cross-mark.svg" alt="Not compatible" >}}
+    {{< figure src="/attachments/refguide9/mobile/progressive-web-app/cross-mark.svg" alt="Not compatible" >}}
 
 | Feature | Chrome/Edge | Firefox | Safari |
 |---------|-----------|-------|------|
-| [Camera](https://developer.mozilla.org/en-US/docs/Web/API/MediaDevices) | {{< figure src="/attachments/refguide/mobile/progressive-web-app/check-mark.svg" alt="Fully compatible" >}} | {{< figure src="/attachments/refguide/mobile/progressive-web-app/check-mark.svg" alt="Fully compatible" >}} | {{< figure src="/attachments/refguide/mobile/progressive-web-app/warning.svg" alt="Compatible when using HTTPS" >}} |
-| [Payment](https://developer.mozilla.org/en-US/docs/Web/API/Payment_Request_API) | {{< figure src="/attachments/refguide/mobile/progressive-web-app/warning.svg" alt="Compatible when using HTTPS" >}} | {{< figure src="/attachments/refguide/mobile/progressive-web-app/cross-mark.svg" alt="Not compatible" >}} | {{< figure src="/attachments/refguide/mobile/progressive-web-app/warning.svg" alt="Compatible when using HTTPS" >}} |
-| [Credentials (Biometrics)](https://developer.mozilla.org/en-US/docs/Web/API/Navigator/credentials) | {{< figure src="/attachments/refguide/mobile/progressive-web-app/warning.svg" alt="Compatible when using HTTPS" >}} | {{< figure src="/attachments/refguide/mobile/progressive-web-app/warning.svg" alt="Compatible when using HTTPS" >}} | {{< figure src="/attachments/refguide/mobile/progressive-web-app/cross-mark.svg" alt="Not compatible" >}} |
-| [Push Notifications](https://developer.mozilla.org/en-US/docs/Web/API/Push_API) | {{< figure src="/attachments/refguide/mobile/progressive-web-app/warning.svg" alt="Compatible when using HTTPS" >}} | {{< figure src="/attachments/refguide/mobile/progressive-web-app/warning.svg" alt="Compatible when using HTTPS" >}} | {{< figure src="/attachments/refguide/mobile/progressive-web-app/cross-mark.svg" alt="Not compatible" >}} |
-| [Permissions](https://developer.mozilla.org/en-US/docs/Web/API/Navigator/permissions) | {{< figure src="/attachments/refguide/mobile/progressive-web-app/check-mark.svg" alt="Fully compatible" >}} | {{< figure src="/attachments/refguide/mobile/progressive-web-app/check-mark.svg" alt="Fully compatible" >}} | {{< figure src="/attachments/refguide/mobile/progressive-web-app/cross-mark.svg" alt="Not compatible" >}} |
-| [Foreground Detection](https://developer.mozilla.org/en-US/docs/Web/API/Page_Visibility_API) | {{< figure src="/attachments/refguide/mobile/progressive-web-app/check-mark.svg" alt="Fully compatible" >}} | {{< figure src="/attachments/refguide/mobile/progressive-web-app/check-mark.svg" alt="Fully compatible" >}} | {{< figure src="/attachments/refguide/mobile/progressive-web-app/check-mark.svg" alt="Fully compatible" >}} |
-| [Bluetooth](https://developer.mozilla.org/en-US/docs/Web/API/Bluetooth) | {{< figure src="/attachments/refguide/mobile/progressive-web-app/warning.svg" alt="Compatible when using HTTPS" >}} | {{< figure src="/attachments/refguide/mobile/progressive-web-app/cross-mark.svg" alt="Not compatible" >}} | {{< figure src="/attachments/refguide/mobile/progressive-web-app/cross-mark.svg" alt="Not compatible" >}} |
-| [File Access](https://developer.mozilla.org/en-US/docs/Web/API/File) | {{< figure src="/attachments/refguide/mobile/progressive-web-app/check-mark.svg" alt="Fully compatible" >}} | {{< figure src="/attachments/refguide/mobile/progressive-web-app/check-mark.svg" alt="Fully compatible" >}} | {{< figure src="/attachments/refguide/mobile/progressive-web-app/check-mark.svg" alt="Fully compatible" >}} |
-| [Geo Location](https://developer.mozilla.org/en-US/docs/Web/API/Navigator/geolocation) | {{< figure src="/attachments/refguide/mobile/progressive-web-app/warning.svg" alt="Compatible when using HTTPS" >}} | {{< figure src="/attachments/refguide/mobile/progressive-web-app/warning.svg" alt="Compatible when using HTTPS" >}} | {{< figure src="/attachments/refguide/mobile/progressive-web-app/warning.svg" alt="Compatible when using HTTPS" >}} |
-| [Battery](https://developer.mozilla.org/en-US/docs/Web/API/Navigator/getBattery) | {{< figure src="/attachments/refguide/mobile/progressive-web-app/check-mark.svg" alt="Fully compatible" >}} | {{< figure src="/attachments/refguide/mobile/progressive-web-app/cross-mark.svg" alt="Not compatible" >}} | {{< figure src="/attachments/refguide/mobile/progressive-web-app/cross-mark.svg" alt="Not compatible" >}} |
-| [Share](https://developer.mozilla.org/en-US/docs/Web/API/Navigator/share) | {{< figure src="/attachments/refguide/mobile/progressive-web-app/warning.svg" alt="Compatible when using HTTPS" >}} | {{< figure src="/attachments/refguide/mobile/progressive-web-app/warning.svg" alt="Compatible when using HTTPS" >}} | {{< figure src="/attachments/refguide/mobile/progressive-web-app/warning.svg" alt="Compatible when using HTTPS" >}} |
-| [Vibrate](https://developer.mozilla.org/en-US/docs/Web/API/Navigator/vibrate) | {{< figure src="/attachments/refguide/mobile/progressive-web-app/check-mark.svg" alt="Fully compatible" >}} | {{< figure src="/attachments/refguide/mobile/progressive-web-app/check-mark.svg" alt="Fully compatible" >}} | {{< figure src="/attachments/refguide/mobile/progressive-web-app/cross-mark.svg" alt="Not compatible" >}} |
-| [Memory](https://developer.mozilla.org/en-US/docs/Web/API/Navigator/deviceMemory) | {{< figure src="/attachments/refguide/mobile/progressive-web-app/check-mark.svg" alt="Fully compatible" >}} | {{< figure src="/attachments/refguide/mobile/progressive-web-app/cross-mark.svg" alt="Not compatible" >}} | {{< figure src="/attachments/refguide/mobile/progressive-web-app/cross-mark.svg" alt="Not compatible" >}} |
-| [Connection](https://developer.mozilla.org/en-US/docs/Web/API/NetworkInformation) | {{< figure src="/attachments/refguide/mobile/progressive-web-app/check-mark.svg" alt="Fully compatible" >}} | {{< figure src="/attachments/refguide/mobile/progressive-web-app/check-mark.svg" alt="Fully compatible" >}} | {{< figure src="/attachments/refguide/mobile/progressive-web-app/cross-mark.svg" alt="Not compatible" >}} |
+| [Camera](https://developer.mozilla.org/en-US/docs/Web/API/MediaDevices) | {{< figure src="/attachments/refguide9/mobile/progressive-web-app/check-mark.svg" alt="Fully compatible" >}} | {{< figure src="/attachments/refguide9/mobile/progressive-web-app/check-mark.svg" alt="Fully compatible" >}} | {{< figure src="/attachments/refguide9/mobile/progressive-web-app/warning.svg" alt="Compatible when using HTTPS" >}} |
+| [Payment](https://developer.mozilla.org/en-US/docs/Web/API/Payment_Request_API) | {{< figure src="/attachments/refguide9/mobile/progressive-web-app/warning.svg" alt="Compatible when using HTTPS" >}} | {{< figure src="/attachments/refguide9/mobile/progressive-web-app/cross-mark.svg" alt="Not compatible" >}} | {{< figure src="/attachments/refguide9/mobile/progressive-web-app/warning.svg" alt="Compatible when using HTTPS" >}} |
+| [Credentials (Biometrics)](https://developer.mozilla.org/en-US/docs/Web/API/Navigator/credentials) | {{< figure src="/attachments/refguide9/mobile/progressive-web-app/warning.svg" alt="Compatible when using HTTPS" >}} | {{< figure src="/attachments/refguide9/mobile/progressive-web-app/warning.svg" alt="Compatible when using HTTPS" >}} | {{< figure src="/attachments/refguide9/mobile/progressive-web-app/cross-mark.svg" alt="Not compatible" >}} |
+| [Push Notifications](https://developer.mozilla.org/en-US/docs/Web/API/Push_API) | {{< figure src="/attachments/refguide9/mobile/progressive-web-app/warning.svg" alt="Compatible when using HTTPS" >}} | {{< figure src="/attachments/refguide9/mobile/progressive-web-app/warning.svg" alt="Compatible when using HTTPS" >}} | {{< figure src="/attachments/refguide9/mobile/progressive-web-app/cross-mark.svg" alt="Not compatible" >}} |
+| [Permissions](https://developer.mozilla.org/en-US/docs/Web/API/Navigator/permissions) | {{< figure src="/attachments/refguide9/mobile/progressive-web-app/check-mark.svg" alt="Fully compatible" >}} | {{< figure src="/attachments/refguide9/mobile/progressive-web-app/check-mark.svg" alt="Fully compatible" >}} | {{< figure src="/attachments/refguide9/mobile/progressive-web-app/cross-mark.svg" alt="Not compatible" >}} |
+| [Foreground Detection](https://developer.mozilla.org/en-US/docs/Web/API/Page_Visibility_API) | {{< figure src="/attachments/refguide9/mobile/progressive-web-app/check-mark.svg" alt="Fully compatible" >}} | {{< figure src="/attachments/refguide9/mobile/progressive-web-app/check-mark.svg" alt="Fully compatible" >}} | {{< figure src="/attachments/refguide9/mobile/progressive-web-app/check-mark.svg" alt="Fully compatible" >}} |
+| [Bluetooth](https://developer.mozilla.org/en-US/docs/Web/API/Bluetooth) | {{< figure src="/attachments/refguide9/mobile/progressive-web-app/warning.svg" alt="Compatible when using HTTPS" >}} | {{< figure src="/attachments/refguide9/mobile/progressive-web-app/cross-mark.svg" alt="Not compatible" >}} | {{< figure src="/attachments/refguide9/mobile/progressive-web-app/cross-mark.svg" alt="Not compatible" >}} |
+| [File Access](https://developer.mozilla.org/en-US/docs/Web/API/File) | {{< figure src="/attachments/refguide9/mobile/progressive-web-app/check-mark.svg" alt="Fully compatible" >}} | {{< figure src="/attachments/refguide9/mobile/progressive-web-app/check-mark.svg" alt="Fully compatible" >}} | {{< figure src="/attachments/refguide9/mobile/progressive-web-app/check-mark.svg" alt="Fully compatible" >}} |
+| [Geo Location](https://developer.mozilla.org/en-US/docs/Web/API/Navigator/geolocation) | {{< figure src="/attachments/refguide9/mobile/progressive-web-app/warning.svg" alt="Compatible when using HTTPS" >}} | {{< figure src="/attachments/refguide9/mobile/progressive-web-app/warning.svg" alt="Compatible when using HTTPS" >}} | {{< figure src="/attachments/refguide9/mobile/progressive-web-app/warning.svg" alt="Compatible when using HTTPS" >}} |
+| [Battery](https://developer.mozilla.org/en-US/docs/Web/API/Navigator/getBattery) | {{< figure src="/attachments/refguide9/mobile/progressive-web-app/check-mark.svg" alt="Fully compatible" >}} | {{< figure src="/attachments/refguide9/mobile/progressive-web-app/cross-mark.svg" alt="Not compatible" >}} | {{< figure src="/attachments/refguide9/mobile/progressive-web-app/cross-mark.svg" alt="Not compatible" >}} |
+| [Share](https://developer.mozilla.org/en-US/docs/Web/API/Navigator/share) | {{< figure src="/attachments/refguide9/mobile/progressive-web-app/warning.svg" alt="Compatible when using HTTPS" >}} | {{< figure src="/attachments/refguide9/mobile/progressive-web-app/warning.svg" alt="Compatible when using HTTPS" >}} | {{< figure src="/attachments/refguide9/mobile/progressive-web-app/warning.svg" alt="Compatible when using HTTPS" >}} |
+| [Vibrate](https://developer.mozilla.org/en-US/docs/Web/API/Navigator/vibrate) | {{< figure src="/attachments/refguide9/mobile/progressive-web-app/check-mark.svg" alt="Fully compatible" >}} | {{< figure src="/attachments/refguide9/mobile/progressive-web-app/check-mark.svg" alt="Fully compatible" >}} | {{< figure src="/attachments/refguide9/mobile/progressive-web-app/cross-mark.svg" alt="Not compatible" >}} |
+| [Memory](https://developer.mozilla.org/en-US/docs/Web/API/Navigator/deviceMemory) | {{< figure src="/attachments/refguide9/mobile/progressive-web-app/check-mark.svg" alt="Fully compatible" >}} | {{< figure src="/attachments/refguide9/mobile/progressive-web-app/cross-mark.svg" alt="Not compatible" >}} | {{< figure src="/attachments/refguide9/mobile/progressive-web-app/cross-mark.svg" alt="Not compatible" >}} |
+| [Connection](https://developer.mozilla.org/en-US/docs/Web/API/NetworkInformation) | {{< figure src="/attachments/refguide9/mobile/progressive-web-app/check-mark.svg" alt="Fully compatible" >}} | {{< figure src="/attachments/refguide9/mobile/progressive-web-app/check-mark.svg" alt="Fully compatible" >}} | {{< figure src="/attachments/refguide9/mobile/progressive-web-app/cross-mark.svg" alt="Not compatible" >}} |
 
 For more information on browser support for certain device features, see the third-party website [Can I Use](https://caniuse.com/).
 

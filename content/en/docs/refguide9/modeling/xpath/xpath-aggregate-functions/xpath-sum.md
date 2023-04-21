@@ -1,6 +1,6 @@
 ---
 title: "XPath sum"
-url: /refguide/xpath-sum/
+url: /refguide9/xpath-sum/
 tags: ["studio pro"]
 ---
 

@@ -1,6 +1,6 @@
 ---
 title: "MxBuild"
-url: /refguide/mxbuild/
+url: /refguide9/mxbuild/
 category: "General Info"
 weight: 50
 description: "Describes MxBuild, which is a command-line tool for building and deploying Mendix Apps."
@@ -34,7 +34,7 @@ Any public version of Studio Pro in this  [Studio Pro Releases List](https://mar
 
 You can extract the files using your favorite archival tool, such as [7-Zip](https://www.7-zip.org/).
 
-For details on the system requirements for MxBuild, see [System Requirements](/refguide/system-requirements/#mxbuild).
+For details on the system requirements for MxBuild, see [System Requirements](/refguide9/system-requirements/#mxbuild).
 
 {{% alert color="info" %}}
 Except where specifically mentioned, the examples used in this document are for Windows.
@@ -136,7 +136,7 @@ The following table describes the various properties of the *problems* JSON obje
 | --- | --- |
 | `name` | A unique identifier of the problem or `null` when the consistency check is not yet defined in the Mendix Metamodel. |
 | `severity` | Describes the type of problem: `Warning`, `Error`, or `Deprecation`. |
-| `message` | The description of the problem. This is the same as the message in the [Errors pane](/refguide/errors-pane/) of Mendix Studio Pro. |
+| `message` | The description of the problem. This is the same as the message in the [Errors pane](/refguide9/errors-pane/) of Mendix Studio Pro. |
 | `locations` | Contains zero or more objects that describe the location in the Mendix app where the problem occurs (see the following table). |
 
 The location(s) associated with the problem have the following properties:

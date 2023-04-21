@@ -1,6 +1,6 @@
 ---
 title: "Log Message"
-url: /refguide/log-message/
+url: /refguide9/log-message/
 weight: 70
 tags: ["studio pro", "logging activity", "logging activities", "log message"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
@@ -14,13 +14,13 @@ This activity can be used in both **Microflows** and **Nanoflows**.
 
 With the **Log message** activity you can create messages that appear in the log of your Mendix application:
 
-{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/log-message/log-message.png" alt="Log Message" >}}
+{{< figure src="/attachments/refguide9/modeling/application-logic/microflows-and-nanoflows/activities/log-message/log-message.png" alt="Log Message" >}}
 
 ## 2 Properties
 
 There are two sets of properties for this activity, those in the dialog box on the left, and those in the properties pane on the right:
 
-{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/log-message/log-message-properties.png" alt="Log Message Properties" width="900" >}}
+{{< figure src="/attachments/refguide9/modeling/application-logic/microflows-and-nanoflows/activities/log-message/log-message-properties.png" alt="Log Message Properties" width="900" >}}
 
 The **Log message** properties pane consists of the following sections:
 
@@ -37,16 +37,16 @@ You can also open the dialog box by double-clicking the activity in the microflo
 
 ### 3.1 Log Level
 
-The log level defines the severity of the log message. In the [Studio Pro Console pane](/refguide/view-menu/#console), messages have a different color and an icon for some log levels.
+The log level defines the severity of the log message. In the [Studio Pro Console pane](/refguide9/view-menu/#console), messages have a different color and an icon for some log levels.
 
 | Option | Icon | Description |
 | --- | --- | --- |
 | Trace |   | Used for detailed execution traces. |
 | Debug |   | Used to debug execution. |
 | Info  *(default)*  |   | Used to log informative messages. |
-| Warning | {{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/log-message/warning.png" alt="Warning"   width="15%"  >}} | Used to log warnings. These messages appear in orange. |{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/log-message/warning.png" alt="Warning"   width="15%"  >}}{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/log-message/warning.png" alt="Warning"   width="15%"  >}}
-| Error | {{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/log-message/error.png" alt="Error" width="15%" >}} | Used to log error messages. These messages appear in red. |
-| Critical | {{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/log-message/critical-error.png" alt="Critical Error" width="15%" >}} | Used to log critical errors. These messages appear in white on red. |
+| Warning | {{< figure src="/attachments/refguide9/modeling/application-logic/microflows-and-nanoflows/activities/log-message/warning.png" alt="Warning"   width="15%"  >}} | Used to log warnings. These messages appear in orange. |{{< figure src="/attachments/refguide9/modeling/application-logic/microflows-and-nanoflows/activities/log-message/warning.png" alt="Warning"   width="15%"  >}}{{< figure src="/attachments/refguide9/modeling/application-logic/microflows-and-nanoflows/activities/log-message/warning.png" alt="Warning"   width="15%"  >}}
+| Error | {{< figure src="/attachments/refguide9/modeling/application-logic/microflows-and-nanoflows/activities/log-message/error.png" alt="Error" width="15%" >}} | Used to log error messages. These messages appear in red. |
+| Critical | {{< figure src="/attachments/refguide9/modeling/application-logic/microflows-and-nanoflows/activities/log-message/critical-error.png" alt="Critical Error" width="15%" >}} | Used to log critical errors. These messages appear in white on red. |
 
 ### 3.2 Log Node Name {#log-node-name}
 
@@ -54,10 +54,10 @@ The log level defines the severity of the log message. In the [Studio Pro Consol
 This property is only available in microflows.
 {{% /alert %}}
 
-The log node name is a microflow expression that defines the source of the log message. For example, if you log messages from an email module, the log node name could be *Email module*. Use your own log node names as this avoids confusion with messages from the Mendix runtime which are written to the Mendix log nodes. The Mendix log nodes are listed in the [Default Mendix Log Nodes](/refguide/logging/#mendix-nodes) section of *Logging*.
+The log node name is a microflow expression that defines the source of the log message. For example, if you log messages from an email module, the log node name could be *Email module*. Use your own log node names as this avoids confusion with messages from the Mendix runtime which are written to the Mendix log nodes. The Mendix log nodes are listed in the [Default Mendix Log Nodes](/refguide9/logging/#mendix-nodes) section of *Logging*.
 
 {{% alert color="info" %}}
-You can only set custom [log node levels](/developerportal/deploy/environments-details/#log-levels) for the environment if your app has posted a message to that log node. It is therefore recommended that you send an initial message to all your custom log nodes in an [after startup microflow](/refguide/app-settings/#after-startup).
+You can only set custom [log node levels](/developerportal/deploy/environments-details/#log-levels) for the environment if your app has posted a message to that log node. It is therefore recommended that you send an initial message to all your custom log nodes in an [after startup microflow](/refguide9/app-settings/#after-startup).
 {{% /alert %}}
 
 ### 3.3 Template
@@ -66,7 +66,7 @@ A **Template** defines the message text. The template can contain parameters tha
 
 ### 3.4 Parameters
 
-For each parameter in the template you define a microflow expression of which the value will be inserted at the position of the parameter. Parameters need to be entered using [expressions](/refguide/expressions/) resulting in a string.
+For each parameter in the template you define a microflow expression of which the value will be inserted at the position of the parameter. Parameters need to be entered using [expressions](/refguide9/expressions/) resulting in a string.
 
 {{% alert color="info" %}}
 
@@ -84,4 +84,4 @@ This option also applies to `$latestSoapFault`. If you define an error handler f
 
 ## 4 Common Section {#common}
 
-{{% snippet file="/static/_includes/refguide/microflow-common-section-link.md" %}}
+{{% snippet file="/static/_includes/refguide9/microflow-common-section-link.md" %}}

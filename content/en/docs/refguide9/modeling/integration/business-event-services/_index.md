@@ -1,6 +1,6 @@
 ---
 title: "Business Event Services"
-url: /refguide/business-event-services/
+url: /refguide9/business-event-services/
 weight: 49
 description: "Overview of business event services in Studio Pro"
 tags: ["studio pro", "consumed business event", "published business event"]
@@ -30,7 +30,7 @@ Business event services in Studio Pro 9.18 through 9.23 are published by one app
 
 A **Published Business Event Service** is the document defining various events, like a REST API spec. To add a published business event service, right-click on a module in your app and go to **Add other** > **Published Business Event Service**. The published business event service document is open in Studio Pro:
 
-{{< figure src="/attachments/refguide/modeling/integration/business-event-services/published-business-event-service.png" >}}
+{{< figure src="/attachments/refguide9/modeling/integration/business-event-services/published-business-event-service.png" >}}
 
 See the [Creating a Published Business Event Service](/appstore/modules/business-events/#create-be) section of *Mendix Business Events* for more extensive documentation.
 
@@ -38,7 +38,7 @@ See the [Creating a Published Business Event Service](/appstore/modules/business
 
 To subscribe to a business event, you first need to create a **Consumed Business Event Service**. Right-click on a module in your app and go to **Add other** > **Consumed Business Event Service**. The published business event service document is open in Studio Pro:
 
-{{< figure src="/attachments/refguide/modeling/integration/business-event-services/consumed-business-event-service.png" >}}
+{{< figure src="/attachments/refguide9/modeling/integration/business-event-services/consumed-business-event-service.png" >}}
 
 See the [Create a Consumed Business Event Service](/appstore/modules/business-events/#consume-be) section of *Mendix Business Events* for more extensive documentation.
 
@@ -50,7 +50,7 @@ Business event services in Studio Pro 9.24 and above are defined centrally by on
 
 To create a new business service in Studio Pro 9.24 and above, right-click on a module in your app and go to **Add other** > **Business event service** > **Create a new business event service**. The business event service document is open in Studio Pro:
 
-{{< figure src="/attachments/refguide/modeling/integration/business-event-services/new-business-event-service.png" >}}
+{{< figure src="/attachments/refguide9/modeling/integration/business-event-services/new-business-event-service.png" >}}
 
 See the [Creating a New Business Event Service](/appstore/modules/business-events/#two-way-be-create) section of *Mendix Business Events* for more extensive documentation.
 
@@ -58,6 +58,6 @@ See the [Creating a New Business Event Service](/appstore/modules/business-event
 
 To create a new business service in Studio Pro 9.24 and above, right-click on a module in your app and go to **Add other** > **Business event service** > **Use an existing business event service**. After importing the YAML file, the business event service document is open in Studio Pro:
 
-{{< figure src="/attachments/refguide/modeling/integration/business-event-services/existing-business-event-service.png" >}}
+{{< figure src="/attachments/refguide9/modeling/integration/business-event-services/existing-business-event-service.png" >}}
 
 See the [Using an Existing Business Event Service](/appstore/modules/business-events/#two-way-be-existing) section of *Mendix Business Events* for more extensive documentation.

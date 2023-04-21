@@ -1,6 +1,6 @@
 ---
 title: "Getting Started with Mobile"
-url: /refguide/mobile/getting-started-with-mobile/
+url: /refguide9/mobile/getting-started-with-mobile/
 category: Mobile
 weight: 10
 description: Create a native mobile Mendix app and view it on a mobile device using the Make It Native test app.
@@ -27,11 +27,11 @@ The Blank Native Mobile App also includes six modules:
 Before starting this guide, make sure you have completed the following prerequisites:
 
 * Have a mobile device to test your native mobile app 
-* For information on device requirements, see [System Requirements](/refguide/system-requirements/)
+* For information on device requirements, see [System Requirements](/refguide9/system-requirements/)
 * If you wish to use an emulator for Android mobile testing, install a product such as [Bluestacks](https://www.bluestacks.com/nl/index.html) or [Genymotion](https://www.genymotion.com/) (your emulator must have Google Play services supported)
 
 {{% alert color="warning" %}}
-Android devices running MIUI (Xiaomi/Redmi devices) are not supported as Mendix test devices. They can run a production version of your Mendix app, but not the development version based on the [Make It Native App](/releasenotes/mobile/make-it-native-9/) or a [custom developer app](/refguide/mobile/distributing-mobile-apps/building-native-apps/how-to-devapps/).
+Android devices running MIUI (Xiaomi/Redmi devices) are not supported as Mendix test devices. They can run a production version of your Mendix app, but not the development version based on the [Make It Native App](/releasenotes/mobile/make-it-native-9/) or a [custom developer app](/refguide9/mobile/distributing-mobile-apps/building-native-apps/how-to-devapps/).
 {{% /alert %}}
 
 ## 3 Creating a New App Based on the Quickstart App {#quickstartapp}
@@ -107,7 +107,7 @@ For more detailed instructions on debugging a native mobile app, see [Debug Nati
 
 ## 4 Read More
 
-* [Native App Prerequisites and Troubleshooting](/refguide/mobile/getting-started-with-mobile/prerequisites/)
+* [Native App Prerequisites and Troubleshooting](/refguide9/mobile/getting-started-with-mobile/prerequisites/)
 * [How to Build Pluggable Widgets](/howto/extensibility/pluggable-widgets/)
-* [Native Mobile Styling Guide](/refguide/native-styling-refguide/)
+* [Native Mobile Styling Guide](/refguide9/native-styling-refguide/)
 * [How to Debug Native Mobile Apps (Advanced)](/howto/mobile/native-debug/)

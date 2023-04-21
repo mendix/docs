@@ -1,6 +1,6 @@
 ---
 title: "Image Collection"
-url: /refguide/image-collection/
+url: /refguide9/image-collection/
 weight: 5
 description: "Why and how to create an image collection"
 tags: ["Studio Pro", "Images", "Image Collection"]
@@ -10,12 +10,12 @@ tags: ["Studio Pro", "Images", "Image Collection"]
 
 If you want to use your own static images within an application, for example for branding or to give your buttons a unique feel, you will need to store them in your app. To do this, you create an **image collection** where you can store your images.
 
-For information on how to use images in your app, see [Images](/refguide/images/).
+For information on how to use images in your app, see [Images](/refguide9/images/).
 
-Remember that, if you want to use the same set of custom images in several apps, you can export and import complete image collections, with their images. For more information, see [Importing and Exporting Apps, Modules, Widgets, and Documents](/refguide/import-and-export/).
+Remember that, if you want to use the same set of custom images in several apps, you can export and import complete image collections, with their images. For more information, see [Importing and Exporting Apps, Modules, Widgets, and Documents](/refguide9/import-and-export/).
 
 {{% alert color="warning" %}}
-Too many large static images in your app can lead to performance issues. If you need a lot of large images, you can store them in your database (see [Dynamic Image](/refguide/image-viewer/) for more information).
+Too many large static images in your app can lead to performance issues. If you need a lot of large images, you can store them in your database (see [Dynamic Image](/refguide9/image-viewer/) for more information).
 {{% /alert %}}
 
 ## 2 Adding an Image Collection
@@ -30,7 +30,7 @@ To add an image collection, do the following.
 
 You can perform the following actions within image collections using the icons at the top of the image collection tab.
 
-{{< figure src="/attachments/refguide/modeling/pages/page-resources/image-collection/actions.png" alt="Image collection actions" >}}
+{{< figure src="/attachments/refguide9/modeling/pages/page-resources/image-collection/actions.png" alt="Image collection actions" >}}
 
 Some of the actions can be applied to multiple images. You can select all images with <kbd>Ctrl</kbd>+<kbd>A</kbd>, or multiple images by combining your click with <kbd>Ctrl</kbd> or <kbd>Shift</kbd>
 

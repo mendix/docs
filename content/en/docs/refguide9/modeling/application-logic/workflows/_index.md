@@ -1,6 +1,6 @@
 ---
 title: "Workflows"
-url: /refguide/workflows/
+url: /refguide9/workflows/
 weight: 20
 tags: ["workflow", "workflows", "Studio Pro"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
@@ -12,7 +12,7 @@ Workflow is a visual language in Mendix Studio and Studio Pro that allows you to
 
 ## 2 Workflow Elements
 
-A workflow is composed of elements that you can use in the workflow editor: you can either see them in the working area (start and end events, a parameter), or drag them from **Toolbox** to the flow. For more information, see [Workflow Elements](/refguide/workflow-elements/). 
+A workflow is composed of elements that you can use in the workflow editor: you can either see them in the working area (start and end events, a parameter), or drag them from **Toolbox** to the flow. For more information, see [Workflow Elements](/refguide9/workflow-elements/). 
 
 ## 3 Performing Basic Functions
 
@@ -28,7 +28,7 @@ You can perform the following basic functions when working on workflows:
 
 To open a workflow in Studio Pro, do the following:
 
-1. In the [App Explorer](/refguide/app-explorer/), open a module where this workflow is located.
+1. In the [App Explorer](/refguide9/app-explorer/), open a module where this workflow is located.
 2. Navigate to the workflow’s location inside the module and double-click the workflow.
 
 The selected workflow is opened.
@@ -37,18 +37,18 @@ The selected workflow is opened.
 
 To add a workflow to your app, do the following:
 
-1. In the [App Explorer](/refguide/app-explorer/), right-click the module or a folder you want to create a page in and select **Add workflow**.
+1. In the [App Explorer](/refguide9/app-explorer/), right-click the module or a folder you want to create a page in and select **Add workflow**.
 2. In the **Add workflow** dialog box, fill in Name and click **OK**:
 
-    {{< figure src="/attachments/refguide/modeling/application-logic/workflows/add-workflow-dialog.jpg" alt="Adding Workflow" >}}
+    {{< figure src="/attachments/refguide9/modeling/application-logic/workflows/add-workflow-dialog.jpg" alt="Adding Workflow" >}}
 
-The workflow is created and the **WorkflowInstance** entity is added to the domain model. For more information on the **WorkflowInstance** entity, see [Workflow Parameters](/refguide/workflow-parameters/).
+The workflow is created and the **WorkflowInstance** entity is added to the domain model. For more information on the **WorkflowInstance** entity, see [Workflow Parameters](/refguide9/workflow-parameters/).
 
 ### 3.3 Deleting a Workflow
 
 To delete a workflow, do the following:
 
-1. In the [App Explorer](/refguide/app-explorer/), select a workflow you would like to delete and right-click it.
+1. In the [App Explorer](/refguide9/app-explorer/), select a workflow you would like to delete and right-click it.
 2. In the displayed list, select **Delete** and confirm your choice by clicking **Delete** in the pop-up dialog.
 
 The selected workflow is deleted. 
@@ -87,7 +87,7 @@ When using cut/copy/paste, note the following:
 
 The following elements cannot be cut, copied or pasted in the workflow editor:
 
-* Workflow (this can be only be done in the [App Explorer](/refguide/app-explorer/#2-performing-basic-functions))
+* Workflow (this can be only be done in the [App Explorer](/refguide9/app-explorer/#2-performing-basic-functions))
 * WorkflowContext
 * Start activity
 * End activity (the final **End activity** which is at the end of the workflow)
@@ -107,7 +107,7 @@ You can trigger a workflow [from a page](#trigger-page) or [via a microflow](#tr
 
 #### 3.7.1 Triggering a Workflow from a Page {#trigger-page}
 
-To start the workflow, you can add a widget with a specific on-click event on a page. For more information on on-click events, see [On Click Event and Events Section](/refguide/on-click-event/).
+To start the workflow, you can add a widget with a specific on-click event on a page. For more information on on-click events, see [On Click Event and Events Section](/refguide9/on-click-event/).
 
 Do the following:
 
@@ -122,7 +122,7 @@ You have configured the button to trigger the workflow.
 
 #### 3.7.2 Triggering a Workflow via a Microflow {#trigger-microflow}
 
-To trigger a workflow via a microflow, you can add a **Call workflow** activity to the microflow. For more information on this activity, see [Workflow Call](/refguide/workflow-call/).  
+To trigger a workflow via a microflow, you can add a **Call workflow** activity to the microflow. For more information on this activity, see [Workflow Call](/refguide9/workflow-call/).  
 
 Do the following:
 
@@ -133,7 +133,7 @@ Do the following:
 5. Set **Workflow** to to the workflow you would like to trigger.
 6. Set **Context object** to the workflow context:
 
-    {{< figure src="/attachments/refguide/modeling/application-logic/workflows/call-workflow-example.png" alt="Call Workflow Example" width="500">}}
+    {{< figure src="/attachments/refguide9/modeling/application-logic/workflows/call-workflow-example.png" alt="Call Workflow Example" width="500">}}
 
 7. Click **OK**.
 
@@ -149,14 +149,14 @@ You can find the following workflow-related entities in the System module:
     * **Name** and **Title** are **Name** and **Title** properties of the workflow
     * **IsObsolete** is a Boolean that is marked as true when you delete your workflow 
     * **IsLocked** is a Boolean that is marked as true when you lock your workflow and marked as false when you unlock your workflow
-    In the case that you delete the workflow, the workflow still stays in the database (and you will still be able to create reports with it), but Mendix marks that it does not exist anymore. For more information on properties, see [Workflow Properties](/refguide/workflow-properties/). 
+    In the case that you delete the workflow, the workflow still stays in the database (and you will still be able to create reports with it), but Mendix marks that it does not exist anymore. For more information on properties, see [Workflow Properties](/refguide9/workflow-properties/). 
 
-* **WorkflowUserTaskDefinition** – Represents your [user tasks](/refguide/user-task/) and [system activities](/refguide/call-microflow/) in the database. It contains two attributes, where **Name** is a **Name** property of the user task or a system activity, and **IsObsolete** is a Boolean that is marked as true when you delete a user task/system activity from your workflow. They still stay in the database (and you will still be able to create reports with them), but Mendix marks that they do not exist anymore. 
+* **WorkflowUserTaskDefinition** – Represents your [user tasks](/refguide9/user-task/) and [system activities](/refguide9/call-microflow/) in the database. It contains two attributes, where **Name** is a **Name** property of the user task or a system activity, and **IsObsolete** is a Boolean that is marked as true when you delete a user task/system activity from your workflow. They still stay in the database (and you will still be able to create reports with them), but Mendix marks that they do not exist anymore. 
 * **Workflow** – A representation of a running workflow, so every time when the new workflow is started, the Runtime creates a new instance.
 * **WorkflowUserTask** – This entity is created when the Runtime executes the user task and an end-user chooses an action (for example, clicks an **Approve** button to approve a request). This entity can be used for workflow overview pages and in an application logic.
-* **WorkflowJumpToDetails** – This non-persistent entity is generated by the [Generate Jump-to Option](/refguide/generate-jump-to-options/) microflow action and contains information on the workflow instance and activities where the workflow can jump to.
-* **WorkflowCurrentActivity** – This non-persistent entity represents data generated by the [Generate Jump-to Option](/refguide/generate-jump-to-options/) microflow action and contains information on the current activity of the workflow instance.
-* **WorkflowActivityDetails** – This non-persistent entity represents data generated by the [Generate Jump-to Option](/refguide/generate-jump-to-options/) microflow action and contains information on activities of the workflow instance.
+* **WorkflowJumpToDetails** – This non-persistent entity is generated by the [Generate Jump-to Option](/refguide9/generate-jump-to-options/) microflow action and contains information on the workflow instance and activities where the workflow can jump to.
+* **WorkflowCurrentActivity** – This non-persistent entity represents data generated by the [Generate Jump-to Option](/refguide9/generate-jump-to-options/) microflow action and contains information on the current activity of the workflow instance.
+* **WorkflowActivityDetails** – This non-persistent entity represents data generated by the [Generate Jump-to Option](/refguide9/generate-jump-to-options/) microflow action and contains information on activities of the workflow instance.
 
 ## 5 Workflow Variables
 
@@ -169,23 +169,23 @@ The list of variables is described below:
 
 For more information on workflow-related entities in the System module, see the [Workflow Entities in the System Module](#workflow-entities) section above. 
 
-For example, you can use these variables as parameters in the **Task name** and **Task description** properties of a user task. For more information, see [User Task](/refguide/user-task/). 
+For example, you can use these variables as parameters in the **Task name** and **Task description** properties of a user task. For more information, see [User Task](/refguide9/user-task/). 
 
 ## 6 Workflow-Specific Activities in Microflows
 
-You can add workflow-related activities to your microflows. For more information on these activities, see [Workflow Activities](/refguide/workflow-activities/). 
+You can add workflow-related activities to your microflows. For more information on these activities, see [Workflow Activities](/refguide9/workflow-activities/). 
 
 ## 7 Workflow-Specific On-Click Events on Pages
 
-You can trigger workflows or user tasks from pages via specific on-click events configured on widgets. For more details, see [On Click Event and Events Section](/refguide/on-click-event/).
+You can trigger workflows or user tasks from pages via specific on-click events configured on widgets. For more details, see [On Click Event and Events Section](/refguide9/on-click-event/).
 
 ## 8 Workflow Commons Module
 
 The **Workflow Commons** module is a workflow specific module that has preconfigured page templates, pages, dashboards, etc. It can save you a lot of time during development. You can either download it from the Marketplace or use one of the app templates when creating a new app in the Developer Portal. These templates already contain the **Workflows Commons** module.
 
-For more information on how to configure the **Workflow Commons** in an existing app, see [Adding a Workflow to an Existing App with Workflow Commons](/refguide/workflow-setting-up-app/).
+For more information on how to configure the **Workflow Commons** in an existing app, see [Adding a Workflow to an Existing App with Workflow Commons](/refguide9/workflow-setting-up-app/).
 
 ## 9 Read More
 
-* [Adding a Workflow to an Existing App with Workflow Commons](/refguide/workflow-setting-up-app/)
-* [Jumping to Different Activities in a Workflow](/refguide/jump-to/)
+* [Adding a Workflow to an Existing App with Workflow Commons](/refguide9/workflow-setting-up-app/)
+* [Jumping to Different Activities in a Workflow](/refguide9/jump-to/)

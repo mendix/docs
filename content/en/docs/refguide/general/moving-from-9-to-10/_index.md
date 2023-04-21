@@ -67,7 +67,7 @@ Be sure to update these key widgets, resources, and actions:
 
 In general you should not remove and re-import modules unless this is recommended in the component's release notes. If you do remove and re-import a component, you may lose data or configuration related to the component.
 
-## 6. Reviewing and Testing Your App
+## 6 Reviewing and Testing Your App
 
 Finally, review the sections below and ensure that you have made all the changes necessary. Test the app for any unexpected results.
 
@@ -75,8 +75,43 @@ Finally, review the sections below and ensure that you have made all the changes
 Congratulations! Your app has been successfully upgraded to Studio Pro 10 and you can continue working as normal.
 {{% /alert %}}
 
-# OLD CONTENT
+## 7 Notable and Breaking Changes
 
+### 7.1 Legacy Scheduled Events
+
+Legacy scheduled events (namely, those that are non-repeating or have a start time) are no longer supported. These were already visible as a deprecation warning in Studio Pro 9, and this has now changed to an error. The error describes the issue and how to fix it. The Mendix Runtime will fail to start if legacy scheduled events exist.
+
+### 7.2 Runtime API Changes
+
+Most of the Java API calls that were deprecated in Mendix 9 have been removed. If you were still using such methods in your Java actions, you must replace or delete them. To check which calls were deprecated, see the [Mendix 9 Server Runtime API](https://apidocs.rnd.mendix.com/9/runtime/index.html).
+
+Additionally, refer to the [Studio Pro 10 release notes](/releasenotes/studio-pro/10.0/) for more Runtime API change details.
+
+### 7.3 XPath Query Engine Updates
+
+With Studio Pro 9, we introduced a new query engine. During that introduction, some behavior changed (as described in the [XPath Query Engine 9](/refguide/moving-from-8-to-9/#query-engine-9) section of *Moving from Mendix Studio Pro 8 to 9*). 
+
+In Studio Pro 10, there are some improvements to consistency and behavior:
+
+* Ranges that are collections of ranges are handled correctly. Prior to Studio Pro 10, the processing stopped at a `NULL` value in a collection (and did not process any range after that).
+* In Studio Pro 9 and below, Long paths in the conditions of outer joins did not work correctly and yielded an incorrect result. This was because the predicate was moved from the `ON` clause to the `WHERE` clause. As of Studio Pro 10, it is prohibited to use associations in the `ON` clause of an outer `JOIN` (meaning, `LEFT JOIN`, `RIGHT JOIN`, or `FULL JOIN`).
+* Prior to Studio Pro 10, the operator in a binary expression with a collection or range as (right-hand) operand was ignored. Regardless of the operator, it was interpreted as `IN`. As of Studio Pro 10, this is no longer the case, and an exception is thrown for all operators other than `IN` or `=`. Please note this includes `!=`, which is not supported.
+
+### 7.4 Range Expressions
+
+The follEwing function invocations are always true or false:
+
+- Comparisons to `RANGEBEGIN` with a range having a `NULL` lower bound
+- Comparisons to `RANGEEND` with a range having a `NULL` upper bound
+- `IN` with an infinite range (i.e. `NULL` for both lower and upper bound)
+
+Prior to Mendix 10 these functions would be removed from a predicate, which is not always correct. For example `predicate OR` `attribute >` `RANGEBEGIN((NULL, 42))` is equivalent to `predicate OR True`, which is not the same as just `predicate` (with the range function removed).
+As of Mendix 10 the tautology range functions are no longer removed, but simply substituted by `True` or `False`. Subsequently the expressions are optimized where possible (e.g. `x OR True` becomes `True`, `x AND False` becomes `False` and `NOT(True)` becomes `False`.
+
+# NEW CONTENT
+
+
+# OLD CONTENT
 
 ## 4 Runtime API Changes
 

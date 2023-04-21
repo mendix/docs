@@ -2,6 +2,7 @@
 title: "SDK Introduction"
 url: /apidocs-mxsdk/mxsdk/sdk-intro/
 category: "Mendix Platform SDK"
+description: "Describes what Mendix Platform SDK and Model SDK are and how to set them up quickly."
 weight: 1
 tags: ["SDK", "Mendix SDK", "Platform SDK", "Model SDK", "metadata"]
 #When content is updated here, it should also be updated on https://developers.mendix.com/sdk/, contact Ben.

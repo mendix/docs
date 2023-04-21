@@ -1,15 +1,11 @@
 ---
-title: "Moving from Mendix Studio Pro 9 to 10"
-url: /refguide/moving-from-9-to-10/
+title: "Upgrading from Mendix Studio Pro 9 to 10"
+url: /refguide/upgrading-from-9-to-10/
 category: "General Info"
 weight: 20
 description: "Provides details on upgrading your app from Mendix 9 to Mendix10, including sections on converting your app and deprecated features."
 tags: ["studio pro", "upgrade", "forum", "community"]
 ---
-
-# TO ADD?
-
-* Mention the way Studio has changed? Mention other major product changes as well.
 
 ## 1 Introduction
 

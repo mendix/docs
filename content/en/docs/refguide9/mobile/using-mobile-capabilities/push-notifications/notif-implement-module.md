@@ -5,7 +5,7 @@ url: /refguide9/mobile/using-mobile-capabilities/push-notifications/notif-implem
 weight: 30
 description: Tutorial for implementing the push notification module.
 aliases:
-    - /howto/mobile/notif-implement-module/
+    - /howto9/mobile/notif-implement-module/
 ---
 
 ## 1 Introduction

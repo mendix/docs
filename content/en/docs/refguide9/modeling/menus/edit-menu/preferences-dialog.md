@@ -29,7 +29,7 @@ You can select one of the following options:
 * **App and UI resources modules** (*Default*) – This option targets developers who would like to create or edit UI resources modules, e.g. to build or extend your design system/theme. This option also adds a **Styling** folder to modules that are marked as UI resources, containing the files from the corresponding **themesource** folder.
 * **App and all modules** – Additionally to the option above, this one adds a **Styling** folder to all modules, regardless of whether they are marked as UI resources or not.
 
-For more information about the styling editor, see the [Using the Styling Editor](/howto/front-end/customize-styling-new/#styling-editor) section in *How to Customize Styling*.
+For more information about the styling editor, see the [Using the Styling Editor](/howto9/front-end/customize-styling-new/#styling-editor) section in *How to Customize Styling*.
 
 ### 2.2 Error List
 

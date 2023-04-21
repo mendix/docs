@@ -6,7 +6,7 @@ weight: 110
 description: "Describes three examples as well as best practices on configuring string concatenation."
 tags: ["microflow", "logic", "string", "concatenation"]
 aliases:
-    - /howto/logic-business-rules/string-concatenation/
+    - /howto9/logic-business-rules/string-concatenation/
 ---
 
 ## 1 Introduction

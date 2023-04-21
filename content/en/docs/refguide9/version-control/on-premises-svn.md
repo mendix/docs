@@ -6,7 +6,7 @@ weight: 50
 description: "Introduces how to work with SVN on-premises version control server."
 tags: ["on-premises", "svn", "version control"]
 aliases:
-    - /howto/collaboration-requirements-management/on-premises-svn-howto/
+    - /howto9/collaboration-requirements-management/on-premises-svn-howto/
 ---
 
 ## 1 Introduction

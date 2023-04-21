@@ -104,5 +104,5 @@ You can now preview your app and test your page.
 ## 6 Read More
 
 * [Page](/refguide9/page/)
-* [Create Your First Two Overview and Detail Pages](/howto/front-end/create-your-first-two-overview-and-detail-pages/)
+* [Create Your First Two Overview and Detail Pages](/howto9/front-end/create-your-first-two-overview-and-detail-pages/)
 * [Creating a Basic Data Layer](/refguide9/create-a-basic-data-layer/)

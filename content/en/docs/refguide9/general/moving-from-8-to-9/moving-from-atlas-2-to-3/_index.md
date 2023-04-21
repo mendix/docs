@@ -27,7 +27,7 @@ The sections after the upgrade instructions reference known issues and some trou
 
 Before upgrading, please note that in Atlas 3 all hybrid content is removed because hybrid profiles are deprecated in Mendix 9. If your app requires hybrid content, we recommend not upgrading to Atlas 3 unless you have created all your own hybrid content separate from Atlas’.
 
-Before you start the upgrade process, it may help if you consult the folder structure changes introduced in Atlas 3 by reading the [File and Folder Structure](/howto/front-end/customize-styling-new/#file-and-folder) section of *How to Customize Styling*. 
+Before you start the upgrade process, it may help if you consult the folder structure changes introduced in Atlas 3 by reading the [File and Folder Structure](/howto9/front-end/customize-styling-new/#file-and-folder) section of *How to Customize Styling*. 
 
 ### 2.1 Upgrading Your Theme Directory {#upgrade-theme-directory}
 
@@ -460,7 +460,7 @@ When you have completed the sections above, you may have errors in your error li
 
     {{< figure src="/attachments/refguide9/general/moving-from-8-to-9/moving-from-atlas-2-to-3/7-errors.png" >}}
 
-* If you have **Design property X is not supported by your theme** errors, it either means a design property has been removed in Atlas 3 or you need to add your own design properties to the new file structure as instructed in the [migrating custom defined design properties](#upgrade-design-properties) section above. To suppress the error, right-click the error, then select **Remove property**. To check how to extend your design properties, please follow [How to Extend Design Properties](/howto/front-end/extend-design-properties/).
+* If you have **Design property X is not supported by your theme** errors, it either means a design property has been removed in Atlas 3 or you need to add your own design properties to the new file structure as instructed in the [migrating custom defined design properties](#upgrade-design-properties) section above. To suppress the error, right-click the error, then select **Remove property**. To check how to extend your design properties, please follow [How to Extend Design Properties](/howto9/front-end/extend-design-properties/).
 
     {{< figure src="/attachments/refguide9/general/moving-from-8-to-9/moving-from-atlas-2-to-3/8-errors-background.png" >}}
 

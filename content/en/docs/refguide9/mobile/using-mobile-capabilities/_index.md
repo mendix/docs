@@ -5,7 +5,7 @@ category: Mobile
 weight: 40
 description: Implement native mobile features in Mendix Studio Pro.
 aliases:
-    - /howto/mobile/implementation/
+    - /howto9/mobile/implementation/
 ---
 
 ## 1 Introduction

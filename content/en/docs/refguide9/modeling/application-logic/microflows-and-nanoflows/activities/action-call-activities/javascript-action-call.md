@@ -73,6 +73,6 @@ The name of the variable, list, or object returned by the activity. If it is an 
 ## 5 Read More
 
 * [JavaScript Actions](/refguide9/javascript-actions/)
-* [Build JavaScript Actions](/howto/extensibility/build-javascript-actions/)
+* [Build JavaScript Actions](/howto9/extensibility/build-javascript-actions/)
 * [Nanoflows](/refguide9/nanoflows/)
 * [Java Action Call](/refguide9/java-action-call/)

@@ -6,7 +6,7 @@ weight: 2
 description: "Describes how to create a data grid with a microflow data source which retrieves data from a REST service, and then add server-side paging and sorting to it."
 tags: [ "microflow", "data grid", "rest service", "server-side" ]
 aliases:
-    - /howto/logic-business-rules/server-side-paging/
+    - /howto9/logic-business-rules/server-side-paging/
 ---
 
 ## 1 Introduction
@@ -22,12 +22,12 @@ This how-to will teach you how to do the following:
 
 Before starting this how-to, make sure you have completed the following prerequisites:
 
-* If you are not familiar with using data from REST services, read [Consume a REST Service](/howto/integration/consume-a-rest-service/)
+* If you are not familiar with using data from REST services, read [Consume a REST Service](/howto9/integration/consume-a-rest-service/)
 * Install Studio Pro version [8.2.0 or above](https://marketplace.mendix.com/link/studiopro/)
 
 ## 3 Creating a Microflow Data Source
 
-In this section, you will create a JSON structure and import mapping for a REST service. To do this, complete the first four sections of [Consume a REST Service](/howto/integration/consume-a-rest-service/) — (until **Adding an Input Entity to the Domain Model** is done). 
+In this section, you will create a JSON structure and import mapping for a REST service. To do this, complete the first four sections of [Consume a REST Service](/howto9/integration/consume-a-rest-service/) — (until **Adding an Input Entity to the Domain Model** is done). 
 
 You must complete these steps with one crucial change: you must use this REST service URL for your JSON snippet: `https://my-json-server.typicode.com/mendix/howto-api-data/airports`.
 
@@ -223,6 +223,6 @@ Deploy your app again and navigate to the page with your data grid. Enter a valu
 
 ## 8 Read More
 
-* [Consume a REST Service](/howto/integration/consume-a-rest-service/)
+* [Consume a REST Service](/howto9/integration/consume-a-rest-service/)
 * [JSON Structures Guide](/refguide9/json-structures/)
 * [Consumed REST Services Guide](/refguide9/consumed-rest-services/)

@@ -6,7 +6,7 @@ weight: 4
 description: "Describes how to define access rules for an entity using an XPath constraint."
 tags: ["microflow", "logic", "access rule", "xpath"]
 aliases:
-    - /howto/logic-business-rules/define-access-rules-using-xpath/
+    - /howto9/logic-business-rules/define-access-rules-using-xpath/
 ---
 
 ## 1 Introduction
@@ -30,17 +30,17 @@ To prepare the data structure, GUI, and example data, follow these steps:
     {{< figure src="/attachments/refguide9/modeling/xpath/define-access-rules-using-xpath/18581378.png" >}}
 
     For more information on creating a domain model, see [Creating a Basic Data Layer](/refguide9/create-a-basic-data-layer/).
-2. Create overview and detail pages to manage the **Customer** and **Order** objects (for more information on creating these pages, see [How to Create Your First Two Overview and Detail Pages](/howto/front-end/create-your-first-two-overview-and-detail-pages/)).
+2. Create overview and detail pages to manage the **Customer** and **Order** objects (for more information on creating these pages, see [How to Create Your First Two Overview and Detail Pages](/howto9/front-end/create-your-first-two-overview-and-detail-pages/)).
 3. Create menu items to access the **Order** and **Customer** overview pages (for more information on creating menu items, see [Setting Up Navigation](/refguide9/setting-up-the-navigation-structure/)).
-4. Set the **Security level** of you application to **Production** (for more information, see [How to Create a Secure App](/howto/security/create-a-secure-app/)).
+4. Set the **Security level** of you application to **Production** (for more information, see [How to Create a Secure App](/howto9/security/create-a-secure-app/)).
 
     {{< figure src="/attachments/refguide9/modeling/xpath/define-access-rules-using-xpath/18581008.png" >}}
 
-5. Enter *FinancialAdministrator* for the **Name** of the new user role on the **User roles** tab (for more information on adding roles, see [How to Create a Secure App](/howto/security/create-a-secure-app/):
+5. Enter *FinancialAdministrator* for the **Name** of the new user role on the **User roles** tab (for more information on adding roles, see [How to Create a Secure App](/howto9/security/create-a-secure-app/):
 
     {{< figure src="/attachments/refguide9/modeling/xpath/define-access-rules-using-xpath/18581005.png" >}}
 
-6. Give both module roles access to all your created pages, and create separate read and write access rights to all your created entities (for more information on how to set the entity access, see [How to Create a Secure App](/howto/security/create-a-secure-app/)):
+6. Give both module roles access to all your created pages, and create separate read and write access rights to all your created entities (for more information on how to set the entity access, see [How to Create a Secure App](/howto9/security/create-a-secure-app/)):
 
     {{< figure src="/attachments/refguide9/modeling/xpath/define-access-rules-using-xpath/18580997.png" >}}
 

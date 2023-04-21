@@ -5,7 +5,7 @@ url: /refguide9/mobile/using-mobile-capabilities/push-notifications/notif-implem
 weight: 60
 description: Tutorial for implementing push notifications in a native app.
 aliases:
-    - /howto/mobile/notif-implement-native/
+    - /howto9/mobile/notif-implement-native/
 ---
 
 ## 1 Introduction

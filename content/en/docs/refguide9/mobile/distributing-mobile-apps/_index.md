@@ -7,7 +7,7 @@ weight: 50
 description: "Distribute native mobile apps."
 tags: ["distribution", "native", "app stores", "ios", "android"]
 aliases:
-    - /howto/mobile/distribution/
+    - /howto9/mobile/distribution/
 ---
 
 ## 1 Introduction

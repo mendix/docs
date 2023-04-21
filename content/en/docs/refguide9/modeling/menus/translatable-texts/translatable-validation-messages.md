@@ -5,7 +5,7 @@ weight: 140
 description: "Describes how to use translatable validation messages."
 tags: ["validation", "microflow", "translate"]
 aliases:
-    - /howto/logic-business-rules/translatable-validation-messages/
+    - /howto9/logic-business-rules/translatable-validation-messages/
 ---
 
 ## 1 Introduction

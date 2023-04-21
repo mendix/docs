@@ -21,7 +21,7 @@ Before installing Studio Pro 9, please read [System Requirements](/refguide9/sys
 
 If you have been using Studio Pro version 8, we recommend reading [Moving from Mendix Studio Pro 8 to 9](/refguide9/moving-from-8-to-9/).
 
-If you are looking for step-by-step guides on performing various Mendix actions, browse the [Studio Pro 9 How-tos](/howto/).
+If you are looking for step-by-step guides on performing various Mendix actions, browse the [Studio Pro 9 How-tos](/howto9/).
 
 ## 2 Studio Pro Functionality
 
@@ -33,7 +33,7 @@ Modeling an app is the process of creating an app and involves creating pages, a
 
 ### 2.2 Testing 
 
-When it comes to testing your application, you first need to decide what you are going to test: integration with external services, app logic (microflows), etc. For more information on how to test your application, see [Testing](/howto/testing/). 
+When it comes to testing your application, you first need to decide what you are going to test: integration with external services, app logic (microflows), etc. For more information on how to test your application, see [Testing](/howto9/testing/). 
 
 ### 2.3 Deploying 
 

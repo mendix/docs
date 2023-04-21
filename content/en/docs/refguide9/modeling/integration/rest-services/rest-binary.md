@@ -27,7 +27,7 @@ To publish or retrieve files with REST, do the following:
 
 We recommend reading the following for some more background:
 
-* [Publishing](/howto/integration/publish-rest-service/) and [consuming](/howto/integration/consume-a-rest-service/) REST services
+* [Publishing](/howto9/integration/publish-rest-service/) and [consuming](/howto9/integration/consume-a-rest-service/) REST services
 * Working with [Images, Videos and Files](/refguide9/image-and-file-widgets/) in Studio Pro
 
 ## 2 Send Files with REST {#create-service}
@@ -171,7 +171,7 @@ To do so, do the following:
 
 You can call a REST service in a microflow, then store the binary response in an entity.
 
-Retrieving files in a microflow uses the [Call REST service](/refguide9/call-rest-action/) action. For step-by-step instructions for calling a REST service in a microflow, see [Consume a REST Service](/howto/integration/consume-a-rest-service/).
+Retrieving files in a microflow uses the [Call REST service](/refguide9/call-rest-action/) action. For step-by-step instructions for calling a REST service in a microflow, see [Consume a REST Service](/howto9/integration/consume-a-rest-service/).
 
 To retrieve files using a microflow, do the following:
 

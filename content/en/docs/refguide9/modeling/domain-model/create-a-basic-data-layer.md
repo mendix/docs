@@ -5,7 +5,7 @@ weight: 60
 description: "Describes how to create entities and attributes, add enumerations, create associations, and configure the delete behavior for associations with Studio Pro."
 tags: ["data layer", "domain model", "entities", "enumerations", "associations"]
 aliases:
-    - /howto/data-models/create-a-basic-data-layer/
+    - /howto9/data-models/create-a-basic-data-layer/
 ---
 
 ## 1 Introduction
@@ -129,5 +129,5 @@ Delete behavior includes objects which are in memory. This means that cascading 
 
 ## 7 Read More
 
-* [Denormalize Data to Improve Performance](/howto/data-models/denormalize-data-to-improve-performance/)
+* [Denormalize Data to Improve Performance](/howto9/data-models/denormalize-data-to-improve-performance/)
 * [Setting Up Data Validation](/refguide9/setting-up-data-validation/)

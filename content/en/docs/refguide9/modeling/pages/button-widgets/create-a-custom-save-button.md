@@ -5,7 +5,7 @@ url: /refguide9/creating-a-custom-save-button/
 description: "Describes how to create a custom save button by utilizing microflows."
 tags: ["microflow", "logic", "save button"]
 aliases:
-    - /howto/logic-business-rules/create-a-custom-save-button/
+    - /howto9/logic-business-rules/create-a-custom-save-button/
 ---
 
 ## 1 Introduction
@@ -20,7 +20,7 @@ Before you continue, make sure you have completed the following:
 
     {{< figure src="/attachments/refguide9/modeling/pages/button-widgets/create-a-custom-save-button/entity-customer.png" width="200px" >}}
 
-2. Create a **Customer_Detail** page for the **Customer** entity (for more information, see [Create overview and detail pages](/howto/front-end/create-your-first-two-overview-and-detail-pages/)).
+2. Create a **Customer_Detail** page for the **Customer** entity (for more information, see [Create overview and detail pages](/howto9/front-end/create-your-first-two-overview-and-detail-pages/)).
 
     {{< figure src="/attachments/refguide9/modeling/pages/button-widgets/create-a-custom-save-button/detail-page-customer.png" width="400px" >}}
 

@@ -5,7 +5,7 @@ url: /refguide9/mobile/using-mobile-capabilities/push-notifications/notif-build-
 weight: 70
 description: Tutorial for building a native app with push notifications enabled.
 aliases:
-    - /howto/mobile/notif-build-native/
+    - /howto9/mobile/notif-build-native/
 ---
 
 ## 1 Introduction

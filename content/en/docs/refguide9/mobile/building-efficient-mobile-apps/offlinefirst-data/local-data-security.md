@@ -5,7 +5,7 @@ weight: 85
 description: "This documentation describes best practices to keep your offline data secure."
 tags: ["offline-first", "database", "security", "encryption"]
 aliases:
-    - /howto/mobile/encryption-database/
+    - /howto9/mobile/encryption-database/
 ---
 
 ## 1 Introduction

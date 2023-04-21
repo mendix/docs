@@ -51,7 +51,7 @@ A model pre-processor makes some data available for the first model, and the out
 
 ### 1.3 Machine Learning MaaS (Model as a Service) {#maas}
 
-A common pattern in machine learning deployment is using a microservice or a service. While Studio Pro supports monolith applications with its security and speed advantages, creating a microservice is possible by servers [publishing a REST service](/howto/integration/publish-rest-service/) and clients [calling the service](/refguide9/call-rest-action/). 
+A common pattern in machine learning deployment is using a microservice or a service. While Studio Pro supports monolith applications with its security and speed advantages, creating a microservice is possible by servers [publishing a REST service](/howto9/integration/publish-rest-service/) and clients [calling the service](/refguide9/call-rest-action/). 
 
 In this way, the AI-powered smart app can be split into two Mendix apps: one to host the ML model, and one to process and use the predictions. This is a good approach for use cases where the ML model is complex and requires heavy computing power, or when the ML model is owned and maintained by another team. Another advantage is that you can update the ML model without the need for deploying the Mendix client app.
 

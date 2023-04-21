@@ -4,7 +4,7 @@ url: /refguide9/mobile/using-mobile-capabilities/push-notifications/
 weight: 40
 description: Tutorials for configuring push and local notifications.
 aliases:
-    - /howto/mobile/notifications/
+    - /howto9/mobile/notifications/
 ---
 
 ## 1 Introduction {#intro}

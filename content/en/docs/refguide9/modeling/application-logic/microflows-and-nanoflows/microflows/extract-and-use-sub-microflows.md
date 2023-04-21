@@ -5,7 +5,7 @@ weight: 5
 description: "Describes how to break down a large microflow into more manageable parts."
 tags: ["microflow", "sub-microflow", "extract"]
 aliases:
-    - /howto/logic-business-rules/extract-and-use-sub-microflows/
+    - /howto9/logic-business-rules/extract-and-use-sub-microflows/
 ---
 
 ## 1 Introduction

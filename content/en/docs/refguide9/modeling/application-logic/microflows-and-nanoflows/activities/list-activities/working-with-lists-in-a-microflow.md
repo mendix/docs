@@ -41,7 +41,7 @@ Before you continue, you should first set up a test app, and populate it with te
 
     {{< figure src="/attachments/refguide9/modeling/xpath/define-access-rules-using-xpath/18581378.png" alt="Customer and Order entities with one-to-many association" >}}
 
-2. Create [overview and detail pages](/howto/front-end/create-your-first-two-overview-and-detail-pages/) to manage the **Customer** and **Order** objects.
+2. Create [overview and detail pages](/howto9/front-end/create-your-first-two-overview-and-detail-pages/) to manage the **Customer** and **Order** objects.
 3. Create [menu items](/refguide9/setting-up-the-navigation-structure/#menu-items) to access the **Customer** and **Order** overview pages.
 4. Add the following **Customer** data to your app:
     | Name | Address | Zip code | City |

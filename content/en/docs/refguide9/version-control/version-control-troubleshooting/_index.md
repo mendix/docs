@@ -6,7 +6,7 @@ weight: 20
 description: "Presents a list of problems and fixes for version control issues."
 tags: ["version control", "troubleshoot", "Studio Pro", "Subversion", "TortoiseSVN"]
 aliases:
-    - /howto/collaboration-requirements-management/troubleshoot-version-control-issues/
+    - /howto9/collaboration-requirements-management/troubleshoot-version-control-issues/
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 

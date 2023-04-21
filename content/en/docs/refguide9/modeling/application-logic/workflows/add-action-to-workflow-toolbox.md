@@ -6,7 +6,7 @@ description: "Describes how to expose a microflow as a workflow action in Mendix
 weight: 80
 tags: ["studio pro", "workflow", "task", "onboarding"]
 aliases:
-    - /howto/logic-business-rules/add-action-to-workflow-toolbox/
+    - /howto9/logic-business-rules/add-action-to-workflow-toolbox/
 ---
 
 ## 1 Introduction 

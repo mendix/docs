@@ -4,7 +4,7 @@ url: /refguide9/mobile/introduction-to-mobile-technologies/native-mobile/
 weight: 10
 aliases:
     - /refguide9/native-mobile/
-    - /howto/mobile/native-mobile/
+    - /howto9/mobile/native-mobile/
 ---
 
 ## 1 Introduction

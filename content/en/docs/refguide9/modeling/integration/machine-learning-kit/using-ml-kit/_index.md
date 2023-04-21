@@ -253,7 +253,7 @@ Machine learning models might be placed in the core of a Mendix application that
 
 In the section below, there are tips for Mendix developers to get insights about inference calls in the development and production phases. You might need to observe the inputs/outputs of a model that is used in an *ML Kit* activity, assess the performance (latency) of making a prediction, or debug an individual pre/post-processing unit on a test sample to verify that the Microflow works and to catch potential bugs in development time before rolling out the application to the production environments.
 
-See the [Monitoring and Troubleshooting](/howto/monitoring-troubleshooting/) guide for general monitoring and troubleshooting tips in Studio Pro.
+See the [Monitoring and Troubleshooting](/howto9/monitoring-troubleshooting/) guide for general monitoring and troubleshooting tips in Studio Pro.
 
 ### 5.1 Troubleshooting
 
@@ -298,7 +298,7 @@ A similar log message can also be placed after pre-processing actions to observe
 
 In general, the transformation of the multidimensional arrays is subject to Java Actions. Exploiting debugging tools or using logging mechanisms inside the Java Actions will help you debug the state of the variables. 
 
-For more information, see [Debug Java Actions](/howto/monitoring-troubleshooting/debug-java-actions/).
+For more information, see [Debug Java Actions](/howto9/monitoring-troubleshooting/debug-java-actions/).
  
 ## 6 Known Issues
 

@@ -8,7 +8,7 @@ tags: ["best practice", "performance", "community"]
 aliases:
     - /howtogeneral/bestpractices/best-practices-for-app-performance-in-mendix-7.html
     - /howtogeneral/bestpractices/best-practices-for-app-performance-in-mendix-7
-    - /howto/general/community-best-practices-for-app-performance/
+    - /howto9/general/community-best-practices-for-app-performance/
 ---
 
 ## 1 Introduction

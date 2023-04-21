@@ -135,7 +135,7 @@ For more information on sessions and how to customize the timeout, see the [Sess
 
 ## 6 Accessing Device Features
 
-Browsers offer access to device features through APIs that can be leveraged in PWAs. These device features can be used by available widgets and nanoflow actions. It is also possible to leverage additional device features by extending the platform using [JavaScript Actions](/refguide9/javascript-actions/) or [Pluggable Widgets](/howto/extensibility/pluggable-widgets/).
+Browsers offer access to device features through APIs that can be leveraged in PWAs. These device features can be used by available widgets and nanoflow actions. It is also possible to leverage additional device features by extending the platform using [JavaScript Actions](/refguide9/javascript-actions/) or [Pluggable Widgets](/howto9/extensibility/pluggable-widgets/).
 
 This table lists the most used device features and APIs, and also documents their compatibility with common browsers:
 

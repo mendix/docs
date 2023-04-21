@@ -7,7 +7,7 @@ weight: 18
 description: "Describes how to start making Mendix apps on your Mac device."
 tags: ["Native", "Parallels", "Mac", "Mobile"]
 aliases:
-    - /howto/general/using-mendix-studio-pro-on-a-mac/
+    - /howto9/general/using-mendix-studio-pro-on-a-mac/
 ---
 
 ## 1 Introduction

@@ -6,7 +6,7 @@ description: "Describes how to configure a workflow in Mendix Studio Pro."
 weight: 70
 tags: ["studio pro", "workflow", "task", "onboarding"]
 aliases:
-    - /howto/logic-business-rules/workflow-how-to-configure/
+    - /howto9/logic-business-rules/workflow-how-to-configure/
 ---
 
 ## 1 Introduction 

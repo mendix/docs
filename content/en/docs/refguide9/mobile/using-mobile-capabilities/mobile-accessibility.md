@@ -46,7 +46,7 @@ For iOS, users can enable or disable hints through the device's VoiceOver settin
 
 The native button widget is accessible by default and the screen reader caption will match the button's caption by default. You can override that through the button's properties:
 
-{{< figure src="/attachments/howto/mobile/native-mobile/implementation/mobile-accessibility/buttonAccessibility.png" alt="accessible button"   width="350"  >}}
+{{< figure src="/attachments/howto9/mobile/native-mobile/implementation/mobile-accessibility/buttonAccessibility.png" alt="accessible button"   width="350"  >}}
 
 ### 3.3 Testing Screen Reader Accessibility
 

@@ -4,7 +4,7 @@ url: /refguide9/mobile/distributing-mobile-apps/building-native-apps/
 weight: 20
 description: Describes how to deploy your first Mendix native mobile app with the Mendix Native Mobile Builder.
 aliases:
-    - /howto/mobile/build-native-apps/
+    - /howto9/mobile/build-native-apps/
 ---
 
 These step-by-step guides will teach you to build native mobile applications and more. Many of these guides use the Mendix Native Mobile Builder UI tool included in Mendix Studio Pro v8.15 and above:

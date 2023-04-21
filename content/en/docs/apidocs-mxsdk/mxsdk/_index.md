@@ -3,7 +3,6 @@ title: "SDK Documentation"
 url: /apidocs-mxsdk/mxsdk/
 description_list: true
 tags: ["sdk", "platform sdk", "model sdk"]
-description: "Describes the structure of SDK documentation."
 ---
 
 ## 1 Introduction

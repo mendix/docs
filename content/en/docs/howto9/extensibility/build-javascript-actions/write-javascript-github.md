@@ -1,7 +1,7 @@
 ---
 title: "Build JavaScript Actions: Part 2 (Advanced)"
 linktitle: "2. Build JavaScript Actions"
-url: /howto/extensibility/write-javascript-github/
+url: /howto9/extensibility/write-javascript-github/
 weight: 20
 description: "This advanced how-to will teach you to make a JavaScript action which can search for GitHub users."
 tags: ["widget", "search", "GitHub", "JavaScript", "API", "JavaScript-API"]
@@ -9,7 +9,7 @@ tags: ["widget", "search", "GitHub", "JavaScript", "API", "JavaScript-API"]
 
 ## 1 Introduction
 
-Nanoflows are even more powerful with pluggable nanoflow actions — called JavaScript actions. [How to Build JavaScript Actions: Part 1 (Basic)](/howto/extensibility/write-javascript-actions/) shows you how to create a JavaScript TextToSpeech action, expose it as a nanoflow action, and then use it in a demo. In this advanced how-to you will learn to call a REST service, use a generic return type, and make an API to enhance the power of your JavaScript actions.
+Nanoflows are even more powerful with pluggable nanoflow actions — called JavaScript actions. [How to Build JavaScript Actions: Part 1 (Basic)](/howto9/extensibility/write-javascript-actions/) shows you how to create a JavaScript TextToSpeech action, expose it as a nanoflow action, and then use it in a demo. In this advanced how-to you will learn to call a REST service, use a generic return type, and make an API to enhance the power of your JavaScript actions.
 
 This how-to will teach you how to do the following:
 
@@ -33,13 +33,13 @@ In [Creating a "Search GitHub User" JavaScript Action](#create-a-search) below, 
 
 This how-to comes paired with an app package prepared for you by Mendix. To download and import the package, follow the steps below:
 
-1. [Download an *.mpk* file with an app package](/attachments/howto/extensibility/build-javascript-actions/write-javascript-github/JavaScript_Actions_How_To_Advanced.mpk).
+1. [Download an *.mpk* file with an app package](/attachments/howto9/extensibility/build-javascript-actions/write-javascript-github/JavaScript_Actions_How_To_Advanced.mpk).
 2. In Mendix Studio Pro click on **Open app** from **My apps** page.
 3. Select the **Locally on disk** option.
 4. In a file browser dialog box, browse to the directory downloaded *.mpk* file and double-click it (or select it and click **Open**).
 5. Select **New Mendix Team Server**, name your app *JavaScriptActionsHowToAdvanced*, select a **Project Directory**, and click **OK**:
 
-    {{< figure src="/attachments/howto/extensibility/build-javascript-actions/write-javascript-github/import-package.png" alt="import package" >}}
+    {{< figure src="/attachments/howto9/extensibility/build-javascript-actions/write-javascript-github/import-package.png" alt="import package" >}}
 
 ## 4 Creating a “Search GitHub User” JavaScript Action {#create-a-search}
 
@@ -48,23 +48,23 @@ To create a JavaScript action that can search for users on GitHub, follow the st
 1. In the **App Explorer**, right-click the module you would like to add a new JavaScript action to and select **Add other** >**JavaScript action**.
 2. Name it *SearchGitHubUsers*:
 
-    {{< figure src="/attachments/howto/extensibility/build-javascript-actions/write-javascript-github/name-js-action.png" alt="name javascript action" >}}
+    {{< figure src="/attachments/howto9/extensibility/build-javascript-actions/write-javascript-github/name-js-action.png" alt="name javascript action" >}}
 
     You can now start creating the API for **SearchGitHubUsers**, an action which consists of parameters and a return type.
 
 3. Your **SearchGitHubUsers** JavaScript action only requires a single parameter. Create it by clicking **Parameters** > **Add**. Name the parameter *Query,* and add an extended **Description** if desired. 
 
-    {{< figure src="/attachments/howto/extensibility/build-javascript-actions/write-javascript-github/name-query.png" alt="parameter name" >}}
+    {{< figure src="/attachments/howto9/extensibility/build-javascript-actions/write-javascript-github/name-query.png" alt="parameter name" >}}
 
 4. Set the **Return type** to **List**, and set **Entity** as the **GithubUser** entity:
 
-    {{< figure src="/attachments/howto/extensibility/build-javascript-actions/write-javascript-github/return-entity.png" alt="return type and entity" >}}
+    {{< figure src="/attachments/howto9/extensibility/build-javascript-actions/write-javascript-github/return-entity.png" alt="return type and entity" >}}
 
     With these parameter and return type settings, a successful search will return a list of **GithubUser** objects containing login names, avatars, URLs, and more.
 
 5. Click the **Code** tab to begin editing the JavaScript action. Mendix Studio Pro has created a default template using the parameters and return type you provided:
 
-    {{< figure src="/attachments/howto/extensibility/build-javascript-actions/write-javascript-github/default-code.png" alt="default code" >}}
+    {{< figure src="/attachments/howto9/extensibility/build-javascript-actions/write-javascript-github/default-code.png" alt="default code" >}}
 
     You can only add code between `// BEGIN USER CODE` and `// END USER CODE`. Any code outside this block will be lost. Source code is stored in your app folder under **javascriptsource/(module name)/actions/(action name).js**. 
 
@@ -184,18 +184,18 @@ To create a JavaScript action that can search for users on GitHub, follow the st
     3. Provide the name *UserEntity*. <br/>
     4. Click **OK**:
 
-    {{< figure src="/attachments/howto/extensibility/build-javascript-actions/write-javascript-github/add-user-entity.png" alt="add user entity" >}}
+    {{< figure src="/attachments/howto9/extensibility/build-javascript-actions/write-javascript-github/add-user-entity.png" alt="add user entity" >}}
 
 13. Open the **General** tab again and add a new parameter of the type **Entity**. Select **Fill in a type parameter**, then from the **Type parameter** drop-down menu select **Type parameter 'UserEntity'**. This will couple the input entity with the generic type parameter:
 
-    {{< figure src="/attachments/howto/extensibility/build-javascript-actions/write-javascript-github/couple-input-with-generic.png" alt="couple input with generic" >}}
+    {{< figure src="/attachments/howto9/extensibility/build-javascript-actions/write-javascript-github/couple-input-with-generic.png" alt="couple input with generic" >}}
 
 14. In **Return type** > **Entity** do the following: <br/>
     1. Click **Select**. <br/>
     2. Select **Type Parameters** > **UserEntity**. <br/>
     3. Click **OK**:
 
-    {{< figure src="/attachments/howto/extensibility/build-javascript-actions/write-javascript-github/select-user-entity.png" alt="select user entity" >}}
+    {{< figure src="/attachments/howto9/extensibility/build-javascript-actions/write-javascript-github/select-user-entity.png" alt="select user entity" >}}
 
 15. Your final step is updating the code. The new `userEntity` parameter has already been added. In the `mx.data.create` function, set `userEntity` as the `entity` to be created. Then, add some documentation for future reference:
 
@@ -258,15 +258,15 @@ To create a JavaScript action that can search for users on GitHub, follow the st
 
 16. You have just implemented an advanced JavaScript action! Start using the action in your nanoflows by adding a **JavaScript action call**, and then selecting the newly created **SearchGitHubUsers** action:
 
-    {{< figure src="/attachments/howto/extensibility/build-javascript-actions/write-javascript-github/select-searchgithub-users.png" alt="select search GitHub users" >}}
+    {{< figure src="/attachments/howto9/extensibility/build-javascript-actions/write-javascript-github/select-searchgithub-users.png" alt="select search GitHub users" >}}
 
     Optionally, you can expose the JavaScript action as a nanoflow action. When you do, you can choose a **Caption**, **Category**, and **Icon**. Note that your icon image will need to be in an existing [image collection](/refguide/image-collection/):
 
-    {{< figure src="/attachments/howto/extensibility/build-javascript-actions/write-javascript-github/nanoflow-options.png" alt="nanoflow options" >}}
+    {{< figure src="/attachments/howto9/extensibility/build-javascript-actions/write-javascript-github/nanoflow-options.png" alt="nanoflow options" >}}
 
     It will then appear in the **Toolbox** window when editing a nanoflow:
 
-    {{< figure src="/attachments/howto/extensibility/build-javascript-actions/write-javascript-github/toolbox-window.png" alt="toolbox window" >}}
+    {{< figure src="/attachments/howto9/extensibility/build-javascript-actions/write-javascript-github/toolbox-window.png" alt="toolbox window" >}}
 
 17. To test your JavaScript action, do the following: <br/>
     1. Add the **SearchGitHubUsers** action to the search nanoflow then double-click it. <br/>
@@ -275,7 +275,7 @@ To create a JavaScript action that can search for users on GitHub, follow the st
     4. To display the results in the user interface, type *UserList* into the **List** field. <br/>
     5. Your finished **Call JavaScript Action** will look like this:
 
-    {{< figure src="/attachments/howto/extensibility/build-javascript-actions/write-javascript-github/variable-display.png" alt="list display" >}}
+    {{< figure src="/attachments/howto9/extensibility/build-javascript-actions/write-javascript-github/variable-display.png" alt="list display" >}}
 
 18. To edit your **Change object** activity, do the following: <br/>
     1. Double-click your **Change object** activity. <br/>
@@ -284,25 +284,25 @@ To create a JavaScript action that can search for users on GitHub, follow the st
     4. Select **HowTo.GithubSearch_GithubUser(ListofHowTo.GithubUser)** from the **Member** drop-down menu. <br/>
     5. Type *$UserList* into the **Value** field and click **OK**. <br/>
 
-        {{< figure src="/attachments/howto/extensibility/build-javascript-actions/write-javascript-github/edit-change-item.png" alt="edit change" >}}
+        {{< figure src="/attachments/howto9/extensibility/build-javascript-actions/write-javascript-github/edit-change-item.png" alt="edit change" >}}
 
     6. Your finished **Change object** action will look like this:
 
-    {{< figure src="/attachments/howto/extensibility/build-javascript-actions/write-javascript-github/change-object-final.png" alt="change object" >}}
+    {{< figure src="/attachments/howto9/extensibility/build-javascript-actions/write-javascript-github/change-object-final.png" alt="change object" >}}
 
 19. Run your app, then use your new search action to find a GitHub user:
 
-    {{< figure src="/attachments/howto/extensibility/build-javascript-actions/write-javascript-github/find-user.png" alt="find user" >}}
+    {{< figure src="/attachments/howto9/extensibility/build-javascript-actions/write-javascript-github/find-user.png" alt="find user" >}}
 
 20. If your app did not function correctly, consult the **Solution** folder to see correct versions of the nanoflow and JavaScript action:
 
-    {{< figure src="/attachments/howto/extensibility/build-javascript-actions/write-javascript-github/solution.png" alt="solution" >}}
+    {{< figure src="/attachments/howto9/extensibility/build-javascript-actions/write-javascript-github/solution.png" alt="solution" >}}
 
 Congratulations! Using the power of JavaScript actions, your app can search for any GitHub user.
 
 ## 5 Read More
 
-* [Build JavaScript Actions: Part 1 (Basic)](/howto/extensibility/write-javascript-actions/)
+* [Build JavaScript Actions: Part 1 (Basic)](/howto9/extensibility/write-javascript-actions/)
 * [Mendix Client API](https://apidocs.rnd.mendix.com/8/client/index.html)
 * [JavaScript Actions](/refguide/javascript-actions/)
 * JavaScript Resources

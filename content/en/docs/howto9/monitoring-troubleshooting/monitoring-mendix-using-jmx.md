@@ -1,6 +1,6 @@
 ---
 title: "Monitor Mendix Using JMX"
-url: /howto/monitoring-troubleshooting/monitoring-mendix-using-jmx/
+url: /howto9/monitoring-troubleshooting/monitoring-mendix-using-jmx/
 category: "Monitoring and Troubleshooting"
 weight: 10
 description: "Describes how to start the Mendix Runtime with JMX, and expose management information and app-specific statistics with an MBean."
@@ -143,7 +143,7 @@ import com.mendix.core.Core;
 
 Now you're able to see the result of the values exposed by this MBean in the JConsole:
 
-{{< figure src="/attachments/howto/monitoring-troubleshooting/monitoring-mendix-using-jmx/18580003.png" >}}
+{{< figure src="/attachments/howto9/monitoring-troubleshooting/monitoring-mendix-using-jmx/18580003.png" >}}
 
 ## 5 MBean Exposing App-Specific Statistics
 
@@ -153,13 +153,13 @@ The idea is that you will have a Java Action that you can call in a microflow wh
 
 ## 6 Read More
 
-* [Find the Root Cause of Runtime Errors](/howto/monitoring-troubleshooting/finding-the-root-cause-of-runtime-errors/)
-* [Clear Warning Messages](/howto/monitoring-troubleshooting/clear-warning-messages/)
-* [Test Web Services Using SoapUI](/howto/testing/testing-web-services-using-soapui/)
-* [Monitor Mendix Using JMX](/howto/monitoring-troubleshooting/monitoring-mendix-using-jmx/)
-* [Debug Java Actions Remotely](/howto/monitoring-troubleshooting/debug-java-actions-remotely/)
-* [Log Levels](/howto/monitoring-troubleshooting/log-levels/)
-* [Debug Java Actions](/howto/monitoring-troubleshooting/debug-java-actions/)
+* [Find the Root Cause of Runtime Errors](/howto9/monitoring-troubleshooting/finding-the-root-cause-of-runtime-errors/)
+* [Clear Warning Messages](/howto9/monitoring-troubleshooting/clear-warning-messages/)
+* [Test Web Services Using SoapUI](/howto9/testing/testing-web-services-using-soapui/)
+* [Monitor Mendix Using JMX](/howto9/monitoring-troubleshooting/monitoring-mendix-using-jmx/)
+* [Debug Java Actions Remotely](/howto9/monitoring-troubleshooting/debug-java-actions-remotely/)
+* [Log Levels](/howto9/monitoring-troubleshooting/log-levels/)
+* [Debug Java Actions](/howto9/monitoring-troubleshooting/debug-java-actions/)
 * [Debugging Microflows and Nanoflows](/refguide/debug-microflows-and-nanoflows/)
 * [Debugging Microflows Remotely](/refguide/debug-microflows-remotely/)
-* [Debug Java Actions Remotely](/howto/monitoring-troubleshooting/debug-java-actions-remotely/)
+* [Debug Java Actions Remotely](/howto9/monitoring-troubleshooting/debug-java-actions-remotely/)

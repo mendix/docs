@@ -1,6 +1,6 @@
 ---
 title: "Integration"
-url: /howto/integration/
+url: /howto9/integration/
 weight: 70
 description: "Presents a list of how-tos about integrating Mendix applications with other systems and services."
 no_list: false

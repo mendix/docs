@@ -1,6 +1,6 @@
 ---
 title: "Testing"
-url: /howto/testing/
+url: /howto9/testing/
 weight: 100
 description: "Presents test-related how-tos and blogs written by Mendix professionals."
 no_list: false

@@ -1,6 +1,6 @@
 ---
 title: "Data Models"
-url: /howto/data-models/
+url: /howto9/data-models/
 weight: 50
 description: "Presents a list of how-tos on creating data layers and setting up data validation."
 no_list: false

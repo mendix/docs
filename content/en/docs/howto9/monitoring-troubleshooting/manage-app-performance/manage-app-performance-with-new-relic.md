@@ -1,6 +1,6 @@
 ---
 title: "Manage App Performance with New Relic"
-url: /howto/monitoring-troubleshooting/manage-app-performance-with-new-relic/
+url: /howto9/monitoring-troubleshooting/manage-app-performance-with-new-relic/
 weight: 2
 tags: ["monitoring", "troubleshooting", "performance", "new relic"]
 ---
@@ -38,14 +38,14 @@ The following steps are only relevant for on-premises deployments (if you are de
 
 1. Sign in to New Relic and create a new application:
 
-    {{< figure src="/attachments/howto/monitoring-troubleshooting/manage-app-performance/manage-app-performance-with-new-relic/19398929.png" >}}
+    {{< figure src="/attachments/howto9/monitoring-troubleshooting/manage-app-performance/manage-app-performance-with-new-relic/19398929.png" >}}
 2. Select Java:
 
-    {{< figure src="/attachments/howto/monitoring-troubleshooting/manage-app-performance/manage-app-performance-with-new-relic/19398930.png" >}}
+    {{< figure src="/attachments/howto9/monitoring-troubleshooting/manage-app-performance/manage-app-performance-with-new-relic/19398930.png" >}}
 
 3. Download the Java agent archive and save your license key:
 
-    {{< figure src="/attachments/howto/monitoring-troubleshooting/manage-app-performance/manage-app-performance-with-new-relic/19398932.png" >}}
+    {{< figure src="/attachments/howto9/monitoring-troubleshooting/manage-app-performance/manage-app-performance-with-new-relic/19398932.png" >}}
 
 4. Add your license key to the *newrelic.yml* file from the downloaded archive as described here: [https://docs.newrelic.com/docs/agents/java-agent/installation/java-agent-manual-installation#h2-download-files](https://docs.newrelic.com/docs/agents/java-agent/installation/java-agent-manual-installation#h2-download-files).
 
@@ -72,22 +72,22 @@ To the `javaopts` list in your *m2ee.yaml* file, add "-javaagent:<path-to-javaag
 1. Open your Mendix application, and click **Settings** in the **App Explorer**.
 2. Open a configuration:
 
-    {{< figure src="/attachments/howto/monitoring-troubleshooting/manage-app-performance/manage-app-performance-with-new-relic/19398903.png" >}}
+    {{< figure src="/attachments/howto9/monitoring-troubleshooting/manage-app-performance/manage-app-performance-with-new-relic/19398903.png" >}}
 
 3. In the **Extra JVM parameters** field on the **Server** tab, add: `-javaagent:<path-to-javaagent>javaagent.jar`:
 
-    {{< figure src="/attachments/howto/monitoring-troubleshooting/manage-app-performance/manage-app-performance-with-new-relic/19398904.png" >}}
+    {{< figure src="/attachments/howto9/monitoring-troubleshooting/manage-app-performance/manage-app-performance-with-new-relic/19398904.png" >}}
 
 ## 4 Transactions
 
 After completing the steps described above, all the requests handled by your Mendix application should become visible together with various graphs and statistics:
 
-{{< figure src="/attachments/howto/monitoring-troubleshooting/manage-app-performance/manage-app-performance-with-new-relic/19398943.png" >}} 
+{{< figure src="/attachments/howto9/monitoring-troubleshooting/manage-app-performance/manage-app-performance-with-new-relic/19398943.png" >}} 
 
 ## 5 Databases
 
 Your database calls and queries will now be visible on the database page:
-{{< figure src="/attachments/howto/monitoring-troubleshooting/manage-app-performance/manage-app-performance-with-new-relic/19398944.png" >}} 
+{{< figure src="/attachments/howto9/monitoring-troubleshooting/manage-app-performance/manage-app-performance-with-new-relic/19398944.png" >}} 
 
 ## 6 Further Documentation
 
@@ -95,8 +95,8 @@ For more information on New Relic, see the [New Relic documentation](https://doc
 
 ## 7 Read More
 
-* [Find the Root Cause of Runtime Errors](/howto/monitoring-troubleshooting/finding-the-root-cause-of-runtime-errors/)
-* [Clear Warning Messages in Mendix](/howto/monitoring-troubleshooting/clear-warning-messages/)
-* [Monitor Mendix Using JMX](/howto/monitoring-troubleshooting/monitoring-mendix-using-jmx/)
-* [Debug Java Actions Remotely](/howto/monitoring-troubleshooting/debug-java-actions-remotely/)
+* [Find the Root Cause of Runtime Errors](/howto9/monitoring-troubleshooting/finding-the-root-cause-of-runtime-errors/)
+* [Clear Warning Messages in Mendix](/howto9/monitoring-troubleshooting/clear-warning-messages/)
+* [Monitor Mendix Using JMX](/howto9/monitoring-troubleshooting/monitoring-mendix-using-jmx/)
+* [Debug Java Actions Remotely](/howto9/monitoring-troubleshooting/debug-java-actions-remotely/)
 * [Telemetry Configuration](https://github.com/mendix/cf-mendix-buildpack#telemetry-configuration) in the *cf-mendix-buildpack* repo on GitHub

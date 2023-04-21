@@ -1,6 +1,6 @@
 ---
 title: "Clear Warning Messages"
-url: /howto/monitoring-troubleshooting/clear-warning-messages/
+url: /howto9/monitoring-troubleshooting/clear-warning-messages/
 category: "Monitoring and Troubleshooting"
 weight: 1
 description: "Describes how to eliminate design-time warnings by viewing and clearing warning messages."
@@ -20,11 +20,11 @@ This how-to will teach you how to do the following:
 
 Warning messages can be seen in the **Error List** tab of Studio Pro (by default shown at the bottom of Studio Pro). Note that the **Warnings** box must be selected for them to display.
 
-{{< figure src="/attachments/howto/monitoring-troubleshooting/clear-warning-messages/18579992.png" >}}
+{{< figure src="/attachments/howto9/monitoring-troubleshooting/clear-warning-messages/18579992.png" >}}
 
 If this tab is not visible, it can be displayed via the **View** menu by selecting the **Error List** option:
 
-{{< figure src="/attachments/howto/monitoring-troubleshooting/clear-warning-messages/18579991.png" >}}
+{{< figure src="/attachments/howto9/monitoring-troubleshooting/clear-warning-messages/18579991.png" >}}
 
 To get more information, double-click or right-click the warning.
 
@@ -171,13 +171,13 @@ Variable ‘Variable’ is never used.
 
 ## 4 Read More
 
-* [Find the Root Cause of Runtime Errors](/howto/monitoring-troubleshooting/finding-the-root-cause-of-runtime-errors/)
-* [Test Web Services Using SoapUI](/howto/testing/testing-web-services-using-soapui/)
-* [Monitor Mendix Using JMX](/howto/monitoring-troubleshooting/monitoring-mendix-using-jmx/)
-* [Debug Java Actions Remotely](/howto/monitoring-troubleshooting/debug-java-actions-remotely/)
-* [Configure Log Levels](/howto/monitoring-troubleshooting/log-levels/)
+* [Find the Root Cause of Runtime Errors](/howto9/monitoring-troubleshooting/finding-the-root-cause-of-runtime-errors/)
+* [Test Web Services Using SoapUI](/howto9/testing/testing-web-services-using-soapui/)
+* [Monitor Mendix Using JMX](/howto9/monitoring-troubleshooting/monitoring-mendix-using-jmx/)
+* [Debug Java Actions Remotely](/howto9/monitoring-troubleshooting/debug-java-actions-remotely/)
+* [Configure Log Levels](/howto9/monitoring-troubleshooting/log-levels/)
 * [Debugging Microflows and Nanoflows](/refguide/debug-microflows-and-nanoflows/)
-* [Debug Java Actions](/howto/monitoring-troubleshooting/debug-java-actions/)
+* [Debug Java Actions](/howto9/monitoring-troubleshooting/debug-java-actions/)
 * [Debugging Microflows Remotely](/refguide/debug-microflows-remotely/)
 
 Several warnings relate to improper security. For more information on this, see [App Security](/refguide/app-security/) in the *Studio Pro Guide*.

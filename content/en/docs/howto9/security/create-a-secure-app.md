@@ -1,6 +1,6 @@
 ---
 title: "Create a Secure App"
-url: /howto/security/create-a-secure-app/
+url: /howto9/security/create-a-secure-app/
 category: "Security"
 weight: 10
 description: "Describes how to turn your application security on and how to configure it to secure the data."
@@ -23,7 +23,7 @@ This how-to will teach you how to do the following:
 Before starting with this how-to, make sure you have completed the following prerequisites:
 
 * Know how to create a domain model (for details, see [Creating a Basic Data Layer](/refguide/create-a-basic-data-layer/))
-* Know how to create overview and detail pages (for details, see [How to Create Your First Two Overview and Details Pages](/howto/front-end/create-your-first-two-overview-and-detail-pages/))
+* Know how to create overview and detail pages (for details, see [How to Create Your First Two Overview and Details Pages](/howto9/front-end/create-your-first-two-overview-and-detail-pages/))
 * Know how to create menu items (for details, see [Setting Up Navigation](/refguide/setting-up-the-navigation-structure/))
 * Know how to add action buttons (for details, see [Buttons](/refguide/button-widgets/))
 
@@ -33,35 +33,35 @@ To see the results of this how-to, you must set up a test project with test data
 
 1. Create the following domain model:
 
-    {{< figure src="/attachments/howto/security/create-a-secure-app/18581378.png" >}}
+    {{< figure src="/attachments/howto9/security/create-a-secure-app/18581378.png" >}}
 
 2. Create overview and detail pages to manage objects of **Customer** and **Order** type.
 3. Create menu items to access the **Customer** and **Order** overview pages.
 4. Add a new microflow by right-clicking your module and selecting **Add** > **Microflow**:
 5. Name the microflow *IVK_SetOrderToComplete*:
 
-    {{< figure src="/attachments/howto/security/create-a-secure-app/8946808.png" >}}
+    {{< figure src="/attachments/howto9/security/create-a-secure-app/8946808.png" >}}
 
 6. Save the new menu item by clicking **OK**. You should see an empty microflow like this:
 
-    {{< figure src="/attachments/howto/security/create-a-secure-app/8946316.png" >}}
+    {{< figure src="/attachments/howto9/security/create-a-secure-app/8946316.png" >}}
 
 7. Add an **Action** button to the toolbar of the orders overview:
 
-    {{< figure src="/attachments/howto/security/create-a-secure-app/8946696.png" >}}
+    {{< figure src="/attachments/howto9/security/create-a-secure-app/8946696.png" >}}
 
 8. Double-click the new button and in the button's properties editor, enter *Set Processing to Complete* for the **Caption**.
 9. Set **On click** to **Call a microflow**, and then select the **IVK_SetOrderToComplete** microflow you just created:
 
-    {{< figure src="/attachments/howto/security/create-a-secure-app/8946804.png" >}}
+    {{< figure src="/attachments/howto9/security/create-a-secure-app/8946804.png" >}}
 
 10. Add the following customer data to your app:
 
-    {{< figure src="/attachments/howto/security/create-a-secure-app/18581374.png" >}}
+    {{< figure src="/attachments/howto9/security/create-a-secure-app/18581374.png" >}}
 
 11. Add the following order data to your app:
 
-    {{< figure src="/attachments/howto/security/create-a-secure-app/18581373.png" >}}
+    {{< figure src="/attachments/howto9/security/create-a-secure-app/18581373.png" >}}
 
 ## 4 Setting the Security Level to Prototype/Demo {#prototype}
 
@@ -71,16 +71,16 @@ To set the security level to prototype/demo, follow these steps:
 
 1. Open the app **Security**:
 
-    {{< figure src="/attachments/howto/security/create-a-secure-app/18581561.png" >}}
+    {{< figure src="/attachments/howto9/security/create-a-secure-app/18581561.png" >}}
 
     This will open the **App Security** properties editor.
 2. Switch the **Security level** to **Prototype / demo**:
 
-    {{< figure src="/attachments/howto/security/create-a-secure-app/18581559.png" >}}
+    {{< figure src="/attachments/howto9/security/create-a-secure-app/18581559.png" >}}
 
 3. Go to the **Administrator** tab and set the primary administrator **Password**:
 
-    {{< figure src="/attachments/howto/security/create-a-secure-app/18581565.png" >}}
+    {{< figure src="/attachments/howto9/security/create-a-secure-app/18581565.png" >}}
 
 ### 4.1 Creating Module Roles Within a Module
 
@@ -92,15 +92,15 @@ To create module roles within a module, follow these steps:
 
 2. On the **Module Security Type 'Security'** properties editor, click **New**:
 
-    {{< figure src="/attachments/howto/security/create-a-secure-app/18581556.png" >}}
+    {{< figure src="/attachments/howto9/security/create-a-secure-app/18581556.png" >}}
 
 3. In the **New Module Role** dialog box, enter *Administrator* for the module role **Name**:
 
-    {{< figure src="/attachments/howto/security/create-a-secure-app/18581555.png" >}}
+    {{< figure src="/attachments/howto9/security/create-a-secure-app/18581555.png" >}}
 
 4. Create the **User** module role:
 
-    {{< figure src="/attachments/howto/security/create-a-secure-app/18581554.png" >}}
+    {{< figure src="/attachments/howto9/security/create-a-secure-app/18581554.png" >}}
 
 ### 4.2 Connecting the User Roles to Module Roles
 
@@ -109,19 +109,19 @@ The two module roles that have been created should be assigned to a user role. W
 1. Open the app **Security.**
 2. On the **App Security** dialog box, go to the **User roles** tab and double-click the **Administrator** user role:
 
-    {{< figure src="/attachments/howto/security/create-a-secure-app/18581553.png" >}}
+    {{< figure src="/attachments/howto9/security/create-a-secure-app/18581553.png" >}}
 
 3. In the **Module roles** section of the **User Role 'Administrator'** properties editor, click **Edit**:
 
-    {{< figure src="/attachments/howto/security/create-a-secure-app/18581552.png" >}}
+    {{< figure src="/attachments/howto9/security/create-a-secure-app/18581552.png" >}}
 
 4. In the **Select Module Roles** pop-up window, select the **Administrator** module role for all the modules:
 
-    {{< figure src="/attachments/howto/security/create-a-secure-app/18581550.png" >}}
+    {{< figure src="/attachments/howto9/security/create-a-secure-app/18581550.png" >}}
 
 5. Repeat steps 2–4 for the **User** user role:
 
-    {{< figure src="/attachments/howto/security/create-a-secure-app/18581548.png" >}}
+    {{< figure src="/attachments/howto9/security/create-a-secure-app/18581548.png" >}}
 
 ### 4.3 Configuring the Page and Microflow Access of a Module
 
@@ -131,15 +131,15 @@ To configure the page and microflow access of a module, follow these steps:
 
 2. Open the **Page access** tab:
 
-    {{< figure src="/attachments/howto/security/create-a-secure-app/18581547.png" >}}
+    {{< figure src="/attachments/howto9/security/create-a-secure-app/18581547.png" >}}
 
 3. Check the pages according to the example shown here:
 
-    {{< figure src="/attachments/howto/security/create-a-secure-app/18581546.png" >}}
+    {{< figure src="/attachments/howto9/security/create-a-secure-app/18581546.png" >}}
 
 4. On the **Microflow access** tab, check the microflows according to the example shown here:
 
-    {{< figure src="/attachments/howto/security/create-a-secure-app/18581544.png" >}}
+    {{< figure src="/attachments/howto9/security/create-a-secure-app/18581544.png" >}}
 
 5. Deploy the application.
 6. Create new users with different roles.
@@ -154,11 +154,11 @@ To set the security level to production, follow these steps:
 
 1. Open the app **Security**:
 
-    {{< figure src="/attachments/howto/security/create-a-secure-app/18581561.png" >}}
+    {{< figure src="/attachments/howto9/security/create-a-secure-app/18581561.png" >}}
 
 2. On the **App Security** dialog box, switch the security level to **Production**:
 
-    {{< figure src="/attachments/howto/security/create-a-secure-app/18581543.png" >}}
+    {{< figure src="/attachments/howto9/security/create-a-secure-app/18581543.png" >}}
 
 ### 5.1 Configuring Form Entity Access
 
@@ -168,7 +168,7 @@ To configure the form entity access, follow these steps:
 
 2. On the **Module Security Type 'Security'** dialog box, open the **Entity Access** tab:
 
-    {{< figure src="/attachments/howto/security/create-a-secure-app/18581541.png" >}}
+    {{< figure src="/attachments/howto9/security/create-a-secure-app/18581541.png" >}}
 
 3. Click **New** to create access rules for the **Role Administrator** module. Make sure you allow an administrator to read/write all and restrict some of the user's read/write rights so that you can clearly see the difference in these roles.
 
@@ -180,7 +180,7 @@ To create access roles for the Administrator module role, follow these steps:
 
 1. Select all the entities and click **OK**:
 
-    {{< figure src="/attachments/howto/security/create-a-secure-app/18581539.png" >}}
+    {{< figure src="/attachments/howto9/security/create-a-secure-app/18581539.png" >}}
 
 2. Set up the rule configuration:
     * **Rule applies to the following module roles**: **Administrator**
@@ -188,7 +188,7 @@ To create access roles for the Administrator module role, follow these steps:
     * **Allow deleting existing objects**: true
     * **Member read and write rights**: **Read, Write**
 
-    {{< figure src="/attachments/howto/security/create-a-secure-app/18581572.png" >}}
+    {{< figure src="/attachments/howto9/security/create-a-secure-app/18581572.png" >}}
 
 3. Click **OK**.
 
@@ -204,11 +204,11 @@ To create access roles for the User module role, follow these steps:
 
 1. On the **Module Security Type 'Security"'** dialog box, click **New** to create a new access rule for the User module role:
 
-    {{< figure src="/attachments/howto/security/create-a-secure-app/18581538.png" >}}
+    {{< figure src="/attachments/howto9/security/create-a-secure-app/18581538.png" >}}
 
 2. Select the **Customer** entity and click **OK**:
 
-    {{< figure src="/attachments/howto/security/create-a-secure-app/18581536.png" >}}
+    {{< figure src="/attachments/howto9/security/create-a-secure-app/18581536.png" >}}
 
 3. Set up the rule configuration:
     * **Rule applies to the following module roles**: **User**
@@ -218,7 +218,7 @@ To create access roles for the User module role, follow these steps:
 
     {{% alert color="warning" %}}Be careful when setting default rights. If a new attribute or association is added, it will automatically have the designated access, which may not be what you want. See the [Access Rights](/refguide/access-rules/#access-rights) section of *Access Rules* for more details.{{% /alert %}}
 
-    {{< figure src="/attachments/howto/security/create-a-secure-app/18581535.png" >}}
+    {{< figure src="/attachments/howto9/security/create-a-secure-app/18581535.png" >}}
 
 4. Adjust the rule for the **Order** and set up the rule configuration:
     * **Rule applies to the following module roles**: **User**
@@ -227,9 +227,9 @@ To create access roles for the User module role, follow these steps:
     * **Default rights for new members**: Read, Write
     * **Access rights** for each member: **Read, Write**
 
-    {{< figure src="/attachments/howto/security/create-a-secure-app/18581534.png" >}} 
+    {{< figure src="/attachments/howto9/security/create-a-secure-app/18581534.png" >}} 
 
-    {{< figure src="/attachments/howto/security/create-a-secure-app/18581533.png" >}}
+    {{< figure src="/attachments/howto9/security/create-a-secure-app/18581533.png" >}}
 
 5. Deploy the application.
 6. Sign in with the different users and test the differences in your application. 
@@ -244,15 +244,15 @@ An XPath constraint can be used to constrain the set of objects to which the acc
 
 1. Click the **Accounts** in the **Administration** menu:
 
-    {{< figure src="/attachments/howto/security/create-a-secure-app/18581532.png" >}}
+    {{< figure src="/attachments/howto9/security/create-a-secure-app/18581532.png" >}}
 
 2. On the **Accounts** screen, click **New user**:
 
-    {{< figure src="/attachments/howto/security/create-a-secure-app/18581530.png" >}}
+    {{< figure src="/attachments/howto9/security/create-a-secure-app/18581530.png" >}}
 
 3. Add an account with a user role named **User**:
 
-    {{< figure src="/attachments/howto/security/create-a-secure-app/18581528.png" >}}
+    {{< figure src="/attachments/howto9/security/create-a-secure-app/18581528.png" >}}
 
 4. Click **Save**.
 
@@ -260,29 +260,29 @@ An XPath constraint can be used to constrain the set of objects to which the acc
 
 1. Double-click the **Order** entity:
 
-    {{< figure src="/attachments/howto/security/create-a-secure-app/18581527.png" >}}
+    {{< figure src="/attachments/howto9/security/create-a-secure-app/18581527.png" >}}
 
 2. On the **Properties of Entity 'MyFirstModule.Order'** editor, open the **Access rules** tab:
 
-    {{< figure src="/attachments/howto/security/create-a-secure-app/18581525.png" >}}
+    {{< figure src="/attachments/howto9/security/create-a-secure-app/18581525.png" >}}
 
 3. Double-click the **User** module role to open the **Edit Access Rule of Entity 'MyFirstModule.Order'** editor and select the **XPath constraint** tab:
 
-    {{< figure src="/attachments/howto/security/create-a-secure-app/18581523.png" >}}
+    {{< figure src="/attachments/howto9/security/create-a-secure-app/18581523.png" >}}
 
 4. To constrain the access of the financial administrator to only the open orders, add the following XPath statement:
 
-    {{< figure src="/attachments/howto/security/create-a-secure-app/18581522.png" >}}
+    {{< figure src="/attachments/howto9/security/create-a-secure-app/18581522.png" >}}
 
 5. Click **OK**. The properties editor of your Order entity should look like this:
 
-    {{< figure src="/attachments/howto/security/create-a-secure-app/18581521.png" >}}
+    {{< figure src="/attachments/howto9/security/create-a-secure-app/18581521.png" >}}
 
 6. Re-deploy your application.
 7. If you sign in with the Test User account, you will see that only orders with the **Order status** of **Open** are shown in the overview:
 
-    {{< figure src="/attachments/howto/security/create-a-secure-app/18581520.png" >}}
+    {{< figure src="/attachments/howto9/security/create-a-secure-app/18581520.png" >}}
 
 ## 7 Read More
 
-* [Set Up Anonymous User Security](/howto/security/set-up-anonymous-user-security/)
+* [Set Up Anonymous User Security](/howto9/security/set-up-anonymous-user-security/)

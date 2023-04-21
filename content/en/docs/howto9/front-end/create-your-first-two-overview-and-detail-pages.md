@@ -1,7 +1,7 @@
 ---
 title: "Create Your First Two Overview and Detail Pages"
 linktitle: "Create Overview and Detail Pages"
-url: /howto/front-end/create-your-first-two-overview-and-detail-pages/
+url: /howto9/front-end/create-your-first-two-overview-and-detail-pages/
 category: "Front End"
 weight: 25
 description: "Describes how to create overview and detail pages, and how to configure navigation and security."
@@ -23,7 +23,7 @@ Before starting with this how-to, make sure you have completed the following pre
 
 * Set up a basic data structure by reading [Creating a Basic Data Layer](/refguide/create-a-basic-data-layer/):
 
-    {{< figure src="/attachments/howto/front-end/create-your-first-two-overview-and-detail-pages/18582175.png" >}}
+    {{< figure src="/attachments/howto9/front-end/create-your-first-two-overview-and-detail-pages/18582175.png" >}}
 
 ## 3 Creating Overview and Detail Pages Automatically
 
@@ -53,28 +53,28 @@ To create a new overview page and add it to your app, follow these steps:
 4. Select *Sidebar_Full_Responsive* as the navigation layout.
 5. Click **Blank**, then select the **Blank** page template and click **OK**:
 
-    {{< figure src="/attachments/howto/front-end/create-your-first-two-overview-and-detail-pages/18581337.png" >}}
+    {{< figure src="/attachments/howto9/front-end/create-your-first-two-overview-and-detail-pages/18581337.png" >}}
 
 6. Click **Data Grid** in the menu bar of the page builder to select the data grid widget:
 
-    {{< figure src="/attachments/howto/front-end/create-your-first-two-overview-and-detail-pages/18581335.png" >}}
+    {{< figure src="/attachments/howto9/front-end/create-your-first-two-overview-and-detail-pages/18581335.png" >}}
 
 7. Click inside the page editor to create the data grid widget:
 
-    {{< figure src="/attachments/howto/front-end/create-your-first-two-overview-and-detail-pages/18581334.png" >}}
+    {{< figure src="/attachments/howto9/front-end/create-your-first-two-overview-and-detail-pages/18581334.png" >}}
 
 8. Right-click the data grid and select **Select Entity**.
 9. Select the **Customer** entity in the **Select Data Source** pop-up window and click **Select**:
 
-    {{< figure src="/attachments/howto/front-end/create-your-first-two-overview-and-detail-pages/18581345.png" >}}
+    {{< figure src="/attachments/howto9/front-end/create-your-first-two-overview-and-detail-pages/18581345.png" >}}
 
 10. Click **OK** to auto-fill the data grid with search fields and columns:
 
-    {{< figure src="/attachments/howto/front-end/create-your-first-two-overview-and-detail-pages/18581343.png" >}}
+    {{< figure src="/attachments/howto9/front-end/create-your-first-two-overview-and-detail-pages/18581343.png" >}}
 
 You should now have an overview page with a data grid like this:
 
-{{< figure src="/attachments/howto/front-end/create-your-first-two-overview-and-detail-pages/18581330.png" >}}
+{{< figure src="/attachments/howto9/front-end/create-your-first-two-overview-and-detail-pages/18581330.png" >}}
 
 ### 4.1 Creating the Detail Page
 
@@ -84,26 +84,26 @@ To create a new detail page manually, follow these steps:
 2. Select **PopupLayout** as the **Navigation layout**.
 3. Select **Form Horizontal** and then click **OK**:
 
-    {{< figure src="/attachments/howto/front-end/create-your-first-two-overview-and-detail-pages/18581327.png" >}} 
+    {{< figure src="/attachments/howto9/front-end/create-your-first-two-overview-and-detail-pages/18581327.png" >}} 
 
 4. Right-click **New** on the data grid on the overview page again and select **Go to page**:
 
-    {{< figure src="/attachments/howto/front-end/create-your-first-two-overview-and-detail-pages/18581326.png" >}}
+    {{< figure src="/attachments/howto9/front-end/create-your-first-two-overview-and-detail-pages/18581326.png" >}}
 
     You should now have a detail page like this:
 
-    {{< figure src="/attachments/howto/front-end/create-your-first-two-overview-and-detail-pages/18581325.png" >}}
+    {{< figure src="/attachments/howto9/front-end/create-your-first-two-overview-and-detail-pages/18581325.png" >}}
 
 ## 5 Navigation and Security
 
 Now create a navigation item for your overview page to start using it. For details on Setting Up Navigation, see [Setting Up Navigation](/refguide/setting-up-the-navigation-structure/).
 
-If you switched on security for this application, you also need to configure page access on both the overview and detail pages. For more information, see [How to Create a Secure App](/howto/security/create-a-secure-app/).
+If you switched on security for this application, you also need to configure page access on both the overview and detail pages. For more information, see [How to Create a Secure App](/howto9/security/create-a-secure-app/).
 
 ## 6 Read More
 
-* [UI Design](/howto/front-end/atlas-ui/)
-* [Use Layouts and Snippets](/howto/front-end/layouts-and-snippets/)
+* [UI Design](/howto9/front-end/atlas-ui/)
+* [Use Layouts and Snippets](/howto9/front-end/layouts-and-snippets/)
 * [Setting Up Navigation](/refguide/setting-up-the-navigation-structure/)
-* [Find the Root Cause of Runtime Errors](/howto/monitoring-troubleshooting/finding-the-root-cause-of-runtime-errors/)
+* [Find the Root Cause of Runtime Errors](/howto9/monitoring-troubleshooting/finding-the-root-cause-of-runtime-errors/)
 * [Page](/refguide/page/)

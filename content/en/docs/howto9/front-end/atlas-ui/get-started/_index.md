@@ -1,6 +1,6 @@
 ---
 title: "Get Started"
-url: /howto/front-end/get-started/
+url: /howto9/front-end/get-started/
 weight: 10
 tags: ["Atlas", "UI", "UX", "user experience", "design"]
 ---
@@ -27,7 +27,7 @@ Atlas UI has a philosophy based on the core principles described below. These pr
 
 Our UI library is fully integrated into Mendix Studio. After choosing a navigation layout in Mendix Studio, you can find page templates, building blocks, and widgets directly in your Toolbox. These UI elements form the foundation of your app.
 
-{{< figure src="/attachments/howto/front-end/atlas-ui/get-started/designelements.png" alt="Atlas UI design elements" >}}
+{{< figure src="/attachments/howto9/front-end/atlas-ui/get-started/designelements.png" alt="Atlas UI design elements" >}}
 
 1. **Navigation Layouts** — When building a Mendix app, the first thing you do is choose a navigation layout. These layouts are the frame within which your dynamic pages are housed, and they provide consistent structure throughout your app.
 
@@ -49,8 +49,8 @@ When Mendix releases a new version of these modules, these can be updated as reg
 
 ## 5 Customizing Default Look and Feel
 
-Mendix apps come out of the box with the default Atlas look and feel, which can be customized using [Studio's theme customizer](/studio/theme-customizer/), by [changing the theme settings](/howto/front-end/customize-styling-new/), and by [adding custom styling](/howto/front-end/customize-styling-new/). Next to that, it is possible to implement your own Design System or UI Kit as described in [Create a Company Design System](/howto/front-end/create-a-company-design-system/).
+Mendix apps come out of the box with the default Atlas look and feel, which can be customized using [Studio's theme customizer](/studio/theme-customizer/), by [changing the theme settings](/howto9/front-end/customize-styling-new/), and by [adding custom styling](/howto9/front-end/customize-styling-new/). Next to that, it is possible to implement your own Design System or UI Kit as described in [Create a Company Design System](/howto9/front-end/create-a-company-design-system/).
 
 ## 6 Re-Using Designs Across Apps
 
-To enable re-use and consistency it is possible to create UI modules that contain styling, design properties, page templates, building blocks and layouts. This can be used to implement the company brand as a re-usable module as described in  [Create a Company Design System](/howto/front-end/create-a-company-design-system/) or to group certain UI functionality together.
+To enable re-use and consistency it is possible to create UI modules that contain styling, design properties, page templates, building blocks and layouts. This can be used to implement the company brand as a re-usable module as described in  [Create a Company Design System](/howto9/front-end/create-a-company-design-system/) or to group certain UI functionality together.

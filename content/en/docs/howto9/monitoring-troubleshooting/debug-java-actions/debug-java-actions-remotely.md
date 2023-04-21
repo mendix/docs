@@ -1,6 +1,6 @@
 ---
 title: "Debug Java Actions Remotely"
-url: /howto/monitoring-troubleshooting/debug-java-actions-remotely/
+url: /howto9/monitoring-troubleshooting/debug-java-actions-remotely/
 tags: ["monitoring", "troubleshooting", "java action", "debug"]
 ---
 
@@ -15,7 +15,7 @@ This how-to will teach you how to do the following:
 
 ## 2 Editing the Server Configuration with Extra JVM Parameters
 
-In this section, you will learn how to configure the security at the [Prototype / demo](/howto/security/create-a-secure-app/#prototype) level. Be aware that this level of security is only applicable for development/demo purposes. This level is available for the quick development of demo applications. It simulates security without the more complex configuration of data access. When deploying to the [Mendix Cloud](/developerportal/deploy/mendix-cloud-deploy/), setting [Production](/howto/security/create-a-secure-app/#production) security is mandatory.
+In this section, you will learn how to configure the security at the [Prototype / demo](/howto9/security/create-a-secure-app/#prototype) level. Be aware that this level of security is only applicable for development/demo purposes. This level is available for the quick development of demo applications. It simulates security without the more complex configuration of data access. When deploying to the [Mendix Cloud](/developerportal/deploy/mendix-cloud-deploy/), setting [Production](/howto9/security/create-a-secure-app/#production) security is mandatory.
 
 To edit the server configuration with extra JVM parameters, follow these steps:
 
@@ -23,7 +23,7 @@ To edit the server configuration with extra JVM parameters, follow these steps:
 2. Edit the configuration on the **Configurations** tab.
 3. Go to the **Server** tab of the configuration, add the following line to the **Extra JVM parameters** field: `-agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=5005`
 
-    {{< figure src="/attachments/howto/monitoring-troubleshooting/debug-java-actions/debug-java-actions-remotely/18580063.png" >}}
+    {{< figure src="/attachments/howto9/monitoring-troubleshooting/debug-java-actions/debug-java-actions-remotely/18580063.png" >}}
 
 4. Run your application.
 
@@ -37,7 +37,7 @@ To configure IntelliJ, follow these steps:
 2. Place some breakpoints in your Java code.
 3. Start debugging.
 
-{{< figure src="/attachments/howto/monitoring-troubleshooting/debug-java-actions/debug-java-actions-remotely/intellij_rundebug_configurations.png" >}}
+{{< figure src="/attachments/howto9/monitoring-troubleshooting/debug-java-actions/debug-java-actions-remotely/intellij_rundebug_configurations.png" >}}
 
 To configure Eclipse, follow these steps:
 
@@ -51,8 +51,8 @@ To configure Eclipse, follow these steps:
 
 ## 4 Read More
 
-* [Find the Root Cause of Runtime Errors](/howto/monitoring-troubleshooting/finding-the-root-cause-of-runtime-errors/)
-* [Clear Warning Messages in Mendix](/howto/monitoring-troubleshooting/clear-warning-messages/)
-* [Test Web Services Using SoapUI](/howto/testing/testing-web-services-using-soapui/)
-* [Monitor Mendix Using JMX](/howto/monitoring-troubleshooting/monitoring-mendix-using-jmx/)
-* [Debug Java Actions](/howto/monitoring-troubleshooting/debug-java-actions/)
+* [Find the Root Cause of Runtime Errors](/howto9/monitoring-troubleshooting/finding-the-root-cause-of-runtime-errors/)
+* [Clear Warning Messages in Mendix](/howto9/monitoring-troubleshooting/clear-warning-messages/)
+* [Test Web Services Using SoapUI](/howto9/testing/testing-web-services-using-soapui/)
+* [Monitor Mendix Using JMX](/howto9/monitoring-troubleshooting/monitoring-mendix-using-jmx/)
+* [Debug Java Actions](/howto9/monitoring-troubleshooting/debug-java-actions/)

@@ -1,6 +1,6 @@
 ---
 title: "Debug a Hybrid Mobile Application"
-url: /howto/monitoring-troubleshooting/debug-a-hybrid-mobile-application/
+url: /howto9/monitoring-troubleshooting/debug-a-hybrid-mobile-application/
 category: "Monitoring and Troubleshooting"
 weight: 5
 description: "Describes how to debug a Mendix app that is running in the Mendix Developer App on your mobile phone."
@@ -33,7 +33,7 @@ From your console, start weinre with the following parameters: `weinre --boundHo
 
 Click the settings icon in the upper-right corner of the screen to configure your debugger:
 
-{{< figure src="/attachments/howto/monitoring-troubleshooting/debug-a-hybrid-mobile-application/18580021.png" >}}
+{{< figure src="/attachments/howto9/monitoring-troubleshooting/debug-a-hybrid-mobile-application/18580021.png" >}}
 
 On the configure screen, fill in the same settings that you used to start weinre, which should be `http://1.2.3.4:9090` (wherein `1.2.3.4` is your local IP).
 
@@ -41,12 +41,12 @@ You can now navigate to the same address on your local browser to start the debu
 
 ## 5 Read More
 
-* [Find the Root Cause of Runtime Errors](/howto/monitoring-troubleshooting/finding-the-root-cause-of-runtime-errors/)
-* [Clear Warning Messages in Mendix](/howto/monitoring-troubleshooting/clear-warning-messages/)
-* [Test Web Services Using SoapUI](/howto/testing/testing-web-services-using-soapui/)
-* [Monitor Mendix Using JMX](/howto/monitoring-troubleshooting/monitoring-mendix-using-jmx/)
-* [Debug Java Actions Remotely](/howto/monitoring-troubleshooting/debug-java-actions-remotely/)
-* [Log Levels](/howto/monitoring-troubleshooting/log-levels/)
+* [Find the Root Cause of Runtime Errors](/howto9/monitoring-troubleshooting/finding-the-root-cause-of-runtime-errors/)
+* [Clear Warning Messages in Mendix](/howto9/monitoring-troubleshooting/clear-warning-messages/)
+* [Test Web Services Using SoapUI](/howto9/testing/testing-web-services-using-soapui/)
+* [Monitor Mendix Using JMX](/howto9/monitoring-troubleshooting/monitoring-mendix-using-jmx/)
+* [Debug Java Actions Remotely](/howto9/monitoring-troubleshooting/debug-java-actions-remotely/)
+* [Log Levels](/howto9/monitoring-troubleshooting/log-levels/)
 * [Debugging Microflows and Nanoflows](/refguide/debug-microflows-and-nanoflows/)
-* [Debug Java Actions](/howto/monitoring-troubleshooting/debug-java-actions/)
+* [Debug Java Actions](/howto9/monitoring-troubleshooting/debug-java-actions/)
 * [Debugging Microflows Remotely](/refguide/debug-microflows-remotely/)

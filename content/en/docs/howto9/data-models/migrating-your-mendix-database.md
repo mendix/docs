@@ -1,6 +1,6 @@
 ---
 title: "Migrate Your Mendix Database"
-url: /howto/data-models/migrating-your-mendix-database/
+url: /howto9/data-models/migrating-your-mendix-database/
 category: "Data Models"
 weight: 10
 description: "Describes how to migrate a non-PostgreSQL database to a PostgreSQL database, export a PostgreSQL database, and perform other actions for database migration."
@@ -46,11 +46,11 @@ These settings can be configured as follows:
 
 * Studio Pro – in **App Explorer**, expand **App**, double-click **Settings**, edit a configuration, and go to the **Custom** tab:
 
-    {{< figure src="/attachments/howto/data-models/migrating-your-mendix-database/19398970.png" >}} 
+    {{< figure src="/attachments/howto9/data-models/migrating-your-mendix-database/19398970.png" >}} 
 
 * Service Console – click an app in the left pane, click **Configuration**, click **Advanced**, then see **Custom Mendix settings**:
 
-    {{< figure src="/attachments/howto/data-models/migrating-your-mendix-database/19398971.png" >}} 
+    {{< figure src="/attachments/howto9/data-models/migrating-your-mendix-database/19398971.png" >}} 
 
 * m2ee-tools – add the custom settings to the mxruntime section (for more information, see [Full Documented m2ee](https://github.com/mendix/m2ee-tools/blob/develop/examples/full-documented-m2ee.yaml))
 
@@ -82,7 +82,7 @@ To do this, perform the following steps:
     * **User name** – the user name of a database administrator in your local PostgreSQL
     * **Password** – the password for the user specified above
 
-    {{< figure src="/attachments/howto/data-models/migrating-your-mendix-database/postgresql-config.png" >}}
+    {{< figure src="/attachments/howto9/data-models/migrating-your-mendix-database/postgresql-config.png" >}}
 
     Your new configuration will be set as the active configuration.
 
@@ -157,7 +157,7 @@ To do this, perform the following steps:
 
     as shown in the highlighted image below:
 
-    {{< figure src="/attachments/howto/data-models/migrating-your-mendix-database/sap-postgres-config.png" >}}
+    {{< figure src="/attachments/howto9/data-models/migrating-your-mendix-database/sap-postgres-config.png" >}}
 
 4. Create an environment using the SAP HANA database service using Mendix Developer Portal.
 5. Deploy the mda, but **do not start the application**.

@@ -1,6 +1,6 @@
 ---
 title: "Manage App Performance"
-url: /howto/monitoring-troubleshooting/manage-app-performance/
+url: /howto9/monitoring-troubleshooting/manage-app-performance/
 category: "Monitoring and Troubleshooting"
 weight: 12
 description: "Describes how to manage app performance by using New Relic."
@@ -26,6 +26,6 @@ For apps deployed to the Mendix Cloud, only Datadog, AppDynamics, and Dynatrace 
 Outside the Mendix Cloud, you can use the following monitoring tools:
 
 * Datadog
-* New Relic – see [Manage App Performance with New Relic](/howto/monitoring-troubleshooting/manage-app-performance-with-new-relic/)
+* New Relic – see [Manage App Performance with New Relic](/howto9/monitoring-troubleshooting/manage-app-performance-with-new-relic/)
 * Dynatrace – for example on [SAP Business Technology Platform](https://docs.mendix.com/developerportal/deploy/sap-cloud-platform/#runtime-tab)
 * Other tools – you can see these under [Telemetry Configuration](https://github.com/mendix/cf-mendix-buildpack#telemetry-configuration) in the Mendix *Cloud Foundry Buildback*.

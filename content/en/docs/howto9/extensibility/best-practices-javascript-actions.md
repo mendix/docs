@@ -1,7 +1,7 @@
 ---
 title: "Implement Best Practices for JavaScript Actions"
 linktitle: "JavaScript Actions Best Practices"
-url: /howto/extensibility/best-practices-javascript-actions/
+url: /howto9/extensibility/best-practices-javascript-actions/
 category: "Extensibility"
 weight: 60
 description: "Describes how to create high-quality JavaScript actions, use common implementation patterns, design better APIs, and use JavaScript actions in nanoflows."
@@ -358,7 +358,7 @@ Explaining the Fetch API code:
 
 * As this is an async function, error handling at all three steps: fetch, parse JSON, and accessing the data can be done inside a single `try...catch` block (for a more detailed explanation, see the [MDN documentation for error handling with async/await](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Asynchronous/Async_await#adding_error_handling)).
 
-* For more information on building a JavaScript action rest consume function, see [Build JavaScript Actions: Part 2 (Advanced)](/howto/extensibility/write-javascript-github/).
+* For more information on building a JavaScript action rest consume function, see [Build JavaScript Actions: Part 2 (Advanced)](/howto9/extensibility/write-javascript-github/).
 
 #### 2.3.3 Understanding Common Promise Functions
 
@@ -426,7 +426,7 @@ JavaScript Actions can be used in a nanoflow with a JavaScript action call activ
 
 Use **Category** to group actions, **Icon** and **Image** to give the exposed nanoflow action easy recognition inside the nanoflow:
 
-{{< figure src="/attachments/howto/extensibility/best-practices-javascript-actions/narrow-expose.png" alt="exposed nanoflow with info" width="650" >}}
+{{< figure src="/attachments/howto9/extensibility/best-practices-javascript-actions/narrow-expose.png" alt="exposed nanoflow with info" width="650" >}}
 
 ### 3.3 Publishing JavaScript Actions
 
@@ -470,7 +470,7 @@ Initially, JavaScript actions' source code is not loaded. Their source code will
 
 After the file is loaded, breakpoints can be set in the code by clicking the inline number (**A**, in the screenshot below). Alternatively, select **Pause on caught exceptions**  could be used to find issues (**B**). As a last resort, you could alter the source code by adding the line `debugger;` (**C**). This statement will start the debugging tools the first time the action is executed, and will apply a breakpoint:
 
-{{< figure src="/attachments/howto/extensibility/best-practices-javascript-actions/debugging.png" alt="debugging"   width="500"  >}}
+{{< figure src="/attachments/howto9/extensibility/best-practices-javascript-actions/debugging.png" alt="debugging"   width="500"  >}}
 
 ## 6 Understanding Bad Practices {#badpractice}
 
@@ -484,7 +484,7 @@ Not all capabilities are recommended for use. Consider the side effects that an 
 
 ## 7 Read More
 
-* [Build JavaScript Actions](/howto/extensibility/build-javascript-actions/)
+* [Build JavaScript Actions](/howto9/extensibility/build-javascript-actions/)
 * [JavaScript Actions](/refguide/javascript-actions/)
 * [Mendix Client API](https://apidocs.rnd.mendix.com/7/client/index.html)
 * JavaScript basics:

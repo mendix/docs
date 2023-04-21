@@ -1,7 +1,7 @@
 ---
 title: "Build JavaScript Actions: Part 1 (Basic)"
 linktitle: "1. Build JavaScript Actions"
-url: /howto/extensibility/write-javascript-actions/
+url: /howto9/extensibility/write-javascript-actions/
 weight: 10
 description: "This how-to will teach you to create a JavaScript action."
 tags: ["widget", "TexttoSpeech", "SpeechtoText", "JavaScript", "API", "JavaScript-API"]
@@ -27,19 +27,19 @@ To create a JavaScript action that can synthesize text to speech, follow these s
 1. In the **App Explorer**, right-click the module you would like to add a new JavaScript action to and select **Add other** >**JavaScript action**.
 2. Give the JavaScript action a descriptive name:
 
-    {{< figure src="/attachments/howto/extensibility/build-javascript-actions/write-javascript-actions/descriptivename.png" alt="naming dialog" >}}
+    {{< figure src="/attachments/howto9/extensibility/build-javascript-actions/write-javascript-actions/descriptivename.png" alt="naming dialog" >}}
 
     You can now start creating the API for the JavaScript action, which consists of parameters and a return type.
 
 3. Your **TextToSpeech** action only requires a single parameter. Create it by clicking the **Add** button in the top left corner. Give the parameter a name and add an extended description if desired:
 
-    {{< figure src="/attachments/howto/extensibility/build-javascript-actions/write-javascript-actions/jsactiondescription.png" alt="javascript action description field" >}}
+    {{< figure src="/attachments/howto9/extensibility/build-javascript-actions/write-javascript-actions/jsactiondescription.png" alt="javascript action description field" >}}
 
     You can leave the **Return type** at the default Boolean value. That means that the action will return `false` if no text is provided, and return `true` after it has successfully spoken the provided text.
   
 4. Next, click the **Code** tab to begin editing the JavaScript action. Now you can start writing the actual action. Mendix Studio Pro already created a default template for you, using the parameters and return type we provided:
 
-    {{< figure src="/attachments/howto/extensibility/build-javascript-actions/write-javascript-actions/code.png" alt="text to speech code" >}}
+    {{< figure src="/attachments/howto9/extensibility/build-javascript-actions/write-javascript-actions/code.png" alt="text to speech code" >}}
 
     You can only add code between `// BEGIN USER CODE` and `// END USER CODE`. Any code outside this block will be lost. The source code is stored in your app folder under **javascriptsource** > **(module name)** > **actions** > **(action name).js**. This JavaScript action will be asynchronous, so you will be using promises to return values (for details about using promises, see Mozilla's [Using promises](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Using_promises) guide). 
 
@@ -122,27 +122,27 @@ To create a JavaScript action that can synthesize text to speech, follow these s
 
 9. You have just implemented your first JavaScript action! You can start using the action in your nanoflows by adding a **JavaScript action call** and selecting the newly created **SpeechToText** action: 
 
-    {{< figure src="/attachments/howto/extensibility/build-javascript-actions/write-javascript-actions/selectjsactioncalldetail.png" alt="select text to speech action" >}}
+    {{< figure src="/attachments/howto9/extensibility/build-javascript-actions/write-javascript-actions/selectjsactioncalldetail.png" alt="select text to speech action" >}}
 
     Optionally, you can expose the JavaScript action as a nanoflow action. When you do, you can choose a **Caption**, **Category**, and **Icon**. Note that to choose an icon your image will need to be included in an existing [image collection](/refguide/image-collection/). 
 
-    {{< figure src="/attachments/howto/extensibility/build-javascript-actions/write-javascript-actions/exposeasnanoflow.png" alt="add caption category and icon" >}}
+    {{< figure src="/attachments/howto9/extensibility/build-javascript-actions/write-javascript-actions/exposeasnanoflow.png" alt="add caption category and icon" >}}
 
     It will then appear in the **Toolbox** window when editing a nanoflow: 
 
-    {{< figure src="/attachments/howto/extensibility/build-javascript-actions/write-javascript-actions/iconintoolbox.png" alt="text to speech in nanoflow" >}}
+    {{< figure src="/attachments/howto9/extensibility/build-javascript-actions/write-javascript-actions/iconintoolbox.png" alt="text to speech in nanoflow" >}}
 
 10. Now for a JavaScript action test run! First, make a nanoflow which features your new JavaScript action. Right-click your folder in the **App Explorer** and click **Add nanoflow**. Then, add an action to your nanoflow, select **call a nanoflow action**, and select your JavaScript action. You will see a window which will let you edit the JavaScript action. Click the **Edit** button of the **Input Text** and type *‘Hello world'*. Then, set **Use return value** to *No* radio button.
 
-    {{< figure src="/attachments/howto/extensibility/build-javascript-actions/write-javascript-actions/calljsactionnanoflow.png" alt="edit text in call javascript action dialog" >}}
+    {{< figure src="/attachments/howto9/extensibility/build-javascript-actions/write-javascript-actions/calljsactionnanoflow.png" alt="edit text in call javascript action dialog" >}}
 
 11. Now you are going to put your new nanoflow to work. On a page of your app, make an action button by clicking **Add widget** in the top center toolbar. Then, under **Buttons**, select **Call nanoflow button**. Select your new nanoflow when prompted. 
 12. Click a place on your page to drop your new button where you want it. With the button now on your page, you can test your work. Run your model, click your new button, and if your sound is on you should be greeted by the voice you programmed! 
 
 ## 3 Read More{#read-more}
 
-* [Build JavaScript Actions: Part 2 (Advanced)](/howto/extensibility/write-javascript-github/)
-* [Implement Best Practices for JavaScript Actions](/howto/extensibility/best-practices-javascript-actions/)
+* [Build JavaScript Actions: Part 2 (Advanced)](/howto9/extensibility/write-javascript-github/)
+* [Implement Best Practices for JavaScript Actions](/howto9/extensibility/best-practices-javascript-actions/)
 * [JavaScript Actions](/refguide/javascript-actions/)
 * [Mendix Client API](https://apidocs.rnd.mendix.com/8/client/index.html) 
 * JavaScript Resources:

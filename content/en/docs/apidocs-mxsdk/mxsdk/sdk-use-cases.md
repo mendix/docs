@@ -3,6 +3,7 @@ title: "SDK Use Cases"
 url: /apidocs-mxsdk/mxsdk/sdk-use-cases/
 category: "Mendix Platform SDK"
 weight: 2
+description: "Describes the use cases for Mendix SDK."
 ---
 
 ## 1 Introduction

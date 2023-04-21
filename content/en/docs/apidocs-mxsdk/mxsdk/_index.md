@@ -3,6 +3,7 @@ title: "SDK Documentation"
 url: /apidocs-mxsdk/mxsdk/
 description_list: true
 tags: ["sdk", "platform sdk", "model sdk"]
+description: "Presents documentation for Mendix SDKs, including Mendix Platform SDK and Mendix Model SDK."
 ---
 
 ## 1 Introduction

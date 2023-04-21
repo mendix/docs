@@ -7,7 +7,7 @@ description: "Provides details on upgrading your app from Mendix 9 to Mendix10, 
 tags: ["studio pro", "upgrade", "forum", "community"]
 ---
 
-## TO ADD?
+# TO ADD?
 
 * Mention the way Studio has changed? Mention other major product changes as well.
 
@@ -19,39 +19,43 @@ Mendix Studio Pro 10 is a [major version](/releasenotes/studio-pro/lts-mts/#majo
 Mendix Studio Pro [10.0](/releasenotes/studio-pro/10.0/) is currently in Beta. The GA release is in June, 2023, as scheduled in the [Studio Pro release timeline](/releasenotes/studio-pro/lts-mts/#major-version).
 {{% /alert %}}
 
+### 1.1 Upgrading from Studio Pro 9 to Studio Pro 10
+
 The sections below describe upgrading from Studio Pro 9 to Studio Pro 10.
 
-{{% alert color="warning" %}}
-If your app is on Studio Pro version below 9, you must sequentially. That means you must go from 7 to 8 (see details in [Moving from Desktop Modeler Version 7 to Studio Pro 8](https://docs.mendix.com/refguide8/moving-from-7-to-8/), from 8 to 9 (see details in [Moving from Mendix Studio Pro 8 to 9](/refguide/moving-from-8-to-9/), and finally from 9 to 10. 
-{{% /alert %}}
-
-{{% alert color="info" %}}
-To check what Studio Pro version your app running on Mendix Cloud is currently on, refer to the [Control Center dashboard](/developerportal/control-center/#dashboard). Alternatively, contact your Customer Success Manager to find out how to check the Mendix version of your app.
-{{% /alert %}}
+Mendix recommends reviewing the [Breaking Changes](/releasenotes/studio-pro/10.0/#breaking-changes) section of the *Studio Pro 10.0* release notes as well as the updated [System Requirements](/refguide/system-requirements/).
 
 More information on upgrading can be found in [Migrating Your Native App to Mx10](). [**GET LINK**]
 
-# OLD CONTENT
+### 1.2 Upgrading from Older Versions of Studio Pro
 
-## 3 Update from Mendix 8 to 9 for Studio Pro {#studio-pro-upgrade}
+If your app is on a Studio Pro version below 9, you must sequentially. That means you must go from 7 to 8 (see details in [Moving from Desktop Modeler Version 7 to Studio Pro 8](https://docs.mendix.com/refguide8/moving-from-7-to-8/), from 8 to 9 (see details in [Moving from Mendix Studio Pro 8 to 9](/refguide/moving-from-8-to-9/), and finally from 9 to 10. 
 
-The following sub-sections explain the steps to take in converting your app from Mendix 8 to Mendix 9. We recommend you first review the [Breaking Changes](/releasenotes/studio-pro/9.0/#breaking-changes) section of the *Studio Pro 9.0* release notes as well as our updated [System Requirements](/refguide/system-requirements/).
+To check what Studio Pro version your app running on Mendix Cloud is currently on, refer to the [Control Center dashboard](/developerportal/control-center/#dashboard). Alternatively, contact your Customer Success Manager to find out how to check the Mendix version of your app.
 
-### 3.1 Back Up Your App
+# NEW NOTES
+
+- Save Your Version 9 App
+- Upgrade Your App to Version 10
+- Upgrade All Widgets and Modules
+- Review and Test Your App
+
+# NEW CONTENT
+
+
+## 2 Backing Up Your App
 
 Make sure that you have either committed your latest changes to Team Server, or created a backup of your local app before you start the conversion.
 
-### 3.2 Upgrade to the Latest Release of Version 8
+## 3 Upgrading to the Latest Release of Version 9
 
-{{% alert color="warning" %}}
-It is technically required for you to upgrade your app to Mendix 8.12 first to be able to update it to Mendix 9. However, we recommend you update to the latest version of Mendix 8: [8.18](/releasenotes/studio-pro/8.18/).
-{{% /alert %}}
+Mendix recommends upgrading your app to Studio Pro [9.24](/releasenotes/studio-pro/9.24/) first to be able to update it to Mendix 10.
 
-To upgrade to Mendix 8.18, follow these steps:
+To upgrade to Studio Pro 9.24, follow these steps:
 
-1. Download the latest patch release of Studio Pro [8.18](/releasenotes/studio-pro/8.18/).
-1. Open your app in Studio Pro v8.18.
-1. Allow it to upgrade the app, if necessary.
+1. Download the latest patch release of Studio Pro [9.24](/releasenotes/studio-pro/9.24/).
+2. Open your app in Studio Pro 9.24.
+3. Allow Studio Pro to upgrade the app and fix any errors.
 
 ### 3.3 Review Your Mendix 8 App
 
@@ -60,6 +64,15 @@ Review your app in combination with the sections below and assess if further act
 You should run your app, test all functionality, and ensure it works without error. If you app uses app services, you should remove them before upgrading as app services are deprecated in Mendix 9.
 
 You should also fix any depreciation warnings you see both in development in Studio Pro, as well as in the runtime using your console and browser console.
+
+# OLD CONTENT
+
+
+
+
+
+
+
 
 ### 3.4 Save Your Version 8 App
 

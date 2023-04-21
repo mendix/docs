@@ -321,7 +321,7 @@ In case of errors the exit code consists of 3 digits XYZ:
 
 ### 3.7 mx set-app-version Command [version 9.24.2+]
 
-The mx set-app-version command allows you to set the version of your solution ([publisher side](/appstore/creating-content/sol-solutions-guide))
+The mx set-app-version command allows you to set the version of your [solution when building it](/appstore/creating-content/sol-solutions-guide).
 
 #### 3.7.1 Usage
 
@@ -347,7 +347,7 @@ For VERSION enter a version in [SemVer](https://semver.org) format
 
 This command uses common format exit codes for all app-version related commands.
 
-The command outputs a version requested. If there is no errors, exit code is 0
+The command outputs a version requested. If there is no errors, exit code is 0.
 
 In case of errors the exit code consists of 3 digits XYZ:
 
@@ -365,7 +365,7 @@ In case of errors the exit code consists of 3 digits XYZ:
 
  1: File not found
  
- 2: Project too old
+ 2: App too old
  
  3: Distribution is not enabled
  

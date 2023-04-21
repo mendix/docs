@@ -1,26 +1,32 @@
 ---
-title: "Moving from Mendix Studio Pro 8 to 9"
-url: /refguide/moving-from-8-to-9/
+title: "Moving from Mendix Studio Pro 9 to 10"
+url: /refguide/moving-from-9-to-10/
 category: "General Info"
 weight: 20
-description: "Provides details on updating your app from Mendix 8 to Mendix 9, including sections on converting your app and deprecated features."
+description: "Provides details on upgrading your app from Mendix 9 to Mendix10, including sections on converting your app and deprecated features."
 tags: ["studio pro", "upgrade", "forum", "community"]
 ---
 
 ## 1 Introduction
 
+### NEW NOTES
+
+- Mention you cannot upgrade from 8 to 10, you must do 8 to 9 then 9 to 10.
+- Mention the way Studio has changed? Mention other major product changes as well.
+- Link to the child documents of this document go here (e.g. Migrating Your Native App to Mx10)
+- Refer to LTS, MTS, and Monthly Releases
+- Include details on how to check SP version you’re currently on (from this feedback): 
+    - For apps running on Mendix Cloud, navigate to the Control Center dashboard, which includes an overview of which Studio Pro/Mendix versions internal and external members are using for apps
+    - For apps not running on Mendix Cloud: can you do this in SP?
+    - Alternatively, contact your CSM to find out how to check the Mendix version of your apps
+
+### OLD CONTENT
+
 Mendix Studio Pro 9 and Mendix Studio 9 give you powerful new tools to enhance your apps. For the full list of changes, see the Studio Pro 9 and Studio 9 release notes. If you want to upgrade an existing Studio Pro 8 or Studio 8 app to its respective 9 version, please check the information below:
 
-* If you are upgrading your app in Studio from Mendix 8 to 9, see [Upgrading from Mendix 8 to 9 for Studio](#studio-upgrade) below.
 * If you are converting your app from Studio Pro 8 to Studio Pro 9, see [Changing Your App Before Upgrading to Studio Pro 9](#studio-pro-upgrade) below.
 
-## 2 Upgrading from Mendix 8 to 9 for Studio {#studio-upgrade}
-
-### 2.1 Turn On RCSI for MS SQL Server
-
-In order to improve performance and reduce the chance of deadlocks, Mendix 9 requires MS SQL Server to be used with **Read Committed Snapshot Isolation** (RCSI) turned **ON**. 
-
-During the synchronization stage, Mendix 9 will perform a check for the RCSI status and could abort the process if it is not **ON** and the database user lacks the necessary privileges to do so automatically.
+# OLD CONTENT
 
 ## 3 Update from Mendix 8 to 9 for Studio Pro {#studio-pro-upgrade}
 
@@ -75,10 +81,6 @@ Be sure to update these key widgets, resources, and actions:
 * [Data Grid 2](https://marketplace.mendix.com/link/component/116540)
 
 In general you should not remove and reimport modules, unless this is recommended in the release notes. If you do remove and reimport them, you may lose data or configuration related to the module.
-
-### 3.7 Update Atlas Module (Optional)
-
-Mendix 9 comes with a new Atlas theme including new page templates and building blocks. To get this theme, you can download the [Atlas Core](https://marketplace.mendix.com/link/component/117187), [Atlas Web Content](https://marketplace.mendix.com/link/component/117183) and [Atlas Native Content](https://marketplace.mendix.com/link/component/117175) module packages from the Marketplace.
 
 ### 3.8 Review and Test Your App
 
@@ -137,20 +139,6 @@ For example: in the query `//Customer[Customer_Address/Address/City = 'Rotterdam
 * While not allowed by Studio Pro, it was possible to use a non-boolean attribute as a constraint in a Java action, for example `//Address[City]`. QE7 accepts such queries but, depending on the database, it may give unexpected results. QE9 will reject such queries.
 * While not supported or documented, it is possible to use a query like `//Customer/Customer_Address/Address` in a Java action. If an instance of `Address` is reachable from multiple `Customer` instances, QE7 would return the instance of `Address` multiple times. QE9 will return each matching instance of `Address` only once.
 
-## 8 Relevant Forum Posts
-
-Check out how the Mendix community resolves upgrade issues in the following Forum posts:
-
-* [Upgrade from Mendix 8 to Mendix 9](https://forum.mendix.com/link/space/studio-pro/questions/123696) – on *.jar* files and the *userlib* directory
-* [Native app styling difference with Mendix 9 upgrade](https://forum.mendix.com/link/space/mobile/questions/118280) – on [upgrading to Atlas 3](https://docs.mendix.com/refguide/moving-from-atlas-2-to-3/)
-* [Error importing Excel file after upgrade to Mendix 9](https://forum.mendix.com/link/space/studio-pro/questions/117814) – on converting attribute values
-* [Does anyone have experience with upgrading Mx applications from 7 to 9?](https://forum.mendix.com/link/space/studio-pro/questions/112229) – on considerations for moving from 7 to 8 and then 8 to 9
-* [Native Mobile Synchronization Error after Mendix 9 Upgrade](https://forum.mendix.com/link/space/integrations/questions/112173) – on synchronizing objects and security rules
-* [Unable to Upgrade App from Mendix 8.18.7 to 9.4.0](https://forum.mendix.com/link/space/studio-pro/questions/109310) – on problems with Mendix Team Server and Git
-* [Mendix Native 8 to 9 Upgrade Deployment Structure Error](https://forum.mendix.com/link/space/deployment/questions/106428) – on deployment file structures and Marketplace component directories
-* [MX 9.5.0 Upgrade error from MX 8.18.8: The type cache does not contain a type with qualified name WebServices$ProvidedService](https://forum.mendix.com/link/space/studio-pro/questions/109620) – on upgrading with app services
-* [Error while upgrading to Mx 9](https://forum.mendix.com/link/space/studio-pro/questions/105907) – on upgrading with app services
-
 ## 9 Read More
 
-* [Studio Pro 9 Release Notes](/releasenotes/studio-pro/9.0/)
+* [Studio Pro 10 Release Notes](/releasenotes/studio-pro/10.0/)

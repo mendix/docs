@@ -9,7 +9,7 @@ tags: ["test", "testing", "testng"]
 
 ## 1 Introduction
 
-Automated tests can be created with different tools, depending on the type of tests. Integration tests can be created with [SoapUI](/howto9/testing/testing-web-services-using-soapui/), unit tests with the [Unit Testing](/refguide/testing-microflows-with-unit-testing-module/) module, and UI tests with [Selenium IDE](/howto9/testing/testing-mendix-applications-using-selenium-ide/). With Selenium IDE you can create scripts to aid in automation-aided exploratory testing. If you’re looking to create robust, browser-based tests, you should look into using a testing framework with Selenium.
+Automated tests can be created with different tools, depending on the type of tests. Integration tests can be created with [SoapUI](/howto9/testing/testing-web-services-using-soapui/), unit tests with the [Unit Testing](/refguide9/testing-microflows-with-unit-testing-module/) module, and UI tests with [Selenium IDE](/howto9/testing/testing-mendix-applications-using-selenium-ide/). With Selenium IDE you can create scripts to aid in automation-aided exploratory testing. If you’re looking to create robust, browser-based tests, you should look into using a testing framework with Selenium.
 
 TestNG is a Java testing framework that can be used to drive Selenium. In this how-to you will learn how to create an automated test with TestNG.
 

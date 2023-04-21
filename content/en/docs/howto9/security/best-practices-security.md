@@ -111,8 +111,8 @@ Choosing *Yes* comes with the benefits of having the time zone and language sett
 
 APIs that do require authentication have either two or three options to fulfill that requirement, based on whether they are Published Web Services or OData/REST endpoints.
 
-All these authentication options will later be combined with the API's [Allowed Roles](/refguide/published-rest-service/#allowed-roles) configuration.
-Allowed roles can be any of the roles you have defined in [User Roles](/refguide/user-roles/), including the role assigned to Anonymous users.
+All these authentication options will later be combined with the API's [Allowed Roles](/refguide9/published-rest-service/#allowed-roles) configuration.
+Allowed roles can be any of the roles you have defined in [User Roles](/refguide9/user-roles/), including the role assigned to Anonymous users.
 
 {{% alert color="warning" %}}
 Assigning an Anonymous user role as one of the API's allowed roles is similar as choosing *No* at **Requires authentication**.
@@ -136,7 +136,7 @@ Credentials provided in the basic auth header will be checked as follows:
 #### 5.2.2 Authentication Option 2, Active Session{#active}
 
 {{% alert color="info" %}}
-This authentication option is not available for Published Web Services and can only be used in apps which are not [Offline-First](/refguide/offline-first/). 
+This authentication option is not available for Published Web Services and can only be used in apps which are not [Offline-First](/refguide9/offline-first/). 
 {{% /alert %}}
 
 If you choose this option, the API will expect a "X-Csrf-Token" HTTP request header to be set on each incoming request. This authentication option is particularly interesting for custom JavaScript and widget implementations.
@@ -149,9 +149,9 @@ If you choose this option, the API passes the HttpRequest including all the atta
 
 This functionality allows you, for example, to contact an external Identity Provider or verify the access to the API endpoint and resource based on scopes and claims encoded in a JWT token.
 
-After the request has been authenticated, the role-based security model of Mendix will be applied to the microflows that are executed as the result of the API endpoint, resources, and paths that have been configured. If [Apply entity access](/refguide/microflow/#security) has been turned on, the API call will also check for read/write access to the requested entities and attributes before returning any data. 
+After the request has been authenticated, the role-based security model of Mendix will be applied to the microflows that are executed as the result of the API endpoint, resources, and paths that have been configured. If [Apply entity access](/refguide9/microflow/#security) has been turned on, the API call will also check for read/write access to the requested entities and attributes before returning any data. 
 
-To understand the full authentication flow, take a closer look at [Published REST Request Routing](/refguide/published-rest-routing/).
+To understand the full authentication flow, take a closer look at [Published REST Request Routing](/refguide9/published-rest-routing/).
 
 ### 5.3 Limiting API Access through IP Restrictions and Certificates
 
@@ -186,7 +186,7 @@ By default, Mendix forces a strong password policy. The same password policy tha
 
 It is very tempting to simplify the password constraints for development purposes (for example, making it possible to use a single character to login). However, we recommend avoiding this approach so that deployments will continue to force a strong password policy.
 
-The password policy can be set by via the guidelines described in [Password Policy](/refguide/password-policy/).
+The password policy can be set by via the guidelines described in [Password Policy](/refguide9/password-policy/).
 
 ## 9 Renaming the Administrator User
 

@@ -71,7 +71,7 @@ To create an automated test by using the record button in Selenium IDE, follow t
 
 3. Enter a name for your new Selenium project (for example, *CompanyExpenses*).
 4. Enter the URL for your Company Expenses app's login screen (`http://localhost:8080/login.html`), then click **START RECORDING**. This will open up your app in a new browser window. The Selenium IDE is now recording.
-5. Sign in with default [administrator credentials](/refguide/administrator/#administrator-properties): 
+5. Sign in with default [administrator credentials](/refguide9/administrator/#administrator-properties): 
     * **User name**: MxAdmin
     * **Password**: 1
 

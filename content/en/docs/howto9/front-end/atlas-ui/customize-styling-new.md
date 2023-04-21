@@ -30,7 +30,7 @@ The styling editor is based on the editor that powers Visual Studio Code and is 
 
 {{< figure src="/attachments/howto9/front-end/atlas-ui/customize-styling-new/styling-editor.png" alt="styling editor" >}}
 
-By default, Studio Pro shows styling files on the app level and from UI resources modules, such as **Atlas_Core**. This can be changed in [preferences](/refguide/preferences-dialog/) (Edit > **Preferences** > **General** > **Interface**) or by simply right-clicking **Styling** in the App Explorer:
+By default, Studio Pro shows styling files on the app level and from UI resources modules, such as **Atlas_Core**. This can be changed in [preferences](/refguide9/preferences-dialog/) (Edit > **Preferences** > **General** > **Interface**) or by simply right-clicking **Styling** in the App Explorer:
 
 {{< figure src="/attachments/howto9/front-end/atlas-ui/customize-styling-new/styling-editor-settings.png" alt="styling editor settings" >}}
 
@@ -272,7 +272,7 @@ Mendix monitors the file system in the **theme** and **themesource** folders for
 
 If **Enable developer mode** is enabled, and changes are made in the JavaScript styling files, the app automatically reloads with the new styling. 
 
-For more information, see the Getting the [Make It Native App Reference Guide](/refguide/getting-the-make-it-native-app/).
+For more information, see the Getting the [Make It Native App Reference Guide](/refguide9/getting-the-make-it-native-app/).
 
 ## 6 File and Folder Structure {#file-and-folder}
 
@@ -349,7 +349,7 @@ For native mobile apps the React Native framework is used to combine all the Jav
 
 If there are errors during the bundling, these will be shown in Studio Pro and the Make it Native app. For details on the error, it can be helpful to look at the native packager logs in *{Mendix app directory}/deployment/log/native_packager_log.txt*.
 
-For more details on styling native mobile apps see the [Native Mobile Styling](/refguide/native-styling-refguide/) Reference Guide.
+For more details on styling native mobile apps see the [Native Mobile Styling](/refguide9/native-styling-refguide/) Reference Guide.
 
 ## 8 Disabling default styling from Atlas Core {#disable-default}
 

@@ -35,7 +35,7 @@ By excluding a UI element, you can no longer use it across your app.
 
 ### 2.1 Excluding Layouts and Page Templates
 
-By excluding [layouts](/refguide/layout/) and [page templates](/refguide/page-templates/), developers can no longer use them to create a new page. Here is a small example of how to exclude Atlas Core layouts and page templates:
+By excluding [layouts](/refguide9/layout/) and [page templates](/refguide9/page-templates/), developers can no longer use them to create a new page. Here is a small example of how to exclude Atlas Core layouts and page templates:
 
 ```json
 {
@@ -54,7 +54,7 @@ Existing pages with the banned designs will continue to work.
 
 ### 2.2 Excluding Building Blocks
 
-Similar to layouts and page templates, excluding the [building blocks](/refguide/building-block/) will hide them from the page editor toolbox. Here is a small example of how to exclude Atlas Web Content building blocks:
+Similar to layouts and page templates, excluding the [building blocks](/refguide9/building-block/) will hide them from the page editor toolbox. Here is a small example of how to exclude Atlas Web Content building blocks:
 
 ```json
 {

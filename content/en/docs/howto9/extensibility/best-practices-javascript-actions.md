@@ -150,7 +150,7 @@ function CameraStart(targetSize, pictureSource, correctOrientation, waterMark) {
 }
 ```
 
-For more detail on input types, see [JavaScript Actions](/refguide/javascript-actions/). For more information on choosing correct input types, see the [Better APIs](#betterapis) section below.
+For more detail on input types, see [JavaScript Actions](/refguide9/javascript-actions/). For more information on choosing correct input types, see the [Better APIs](#betterapis) section below.
 
 ### 2.2 Coding the Actions
 
@@ -263,7 +263,7 @@ The actual list of plugins use can be found in *config.xml* inside your deployme
 
 ### 2.3 Understanding Returns
 
-The JavaScript action can specify a return type such as Integer, DateTime, Object, List of object, and Generics. For more information on returns, see [JavaScript Actions](/refguide/javascript-actions/).
+The JavaScript action can specify a return type such as Integer, DateTime, Object, List of object, and Generics. For more information on returns, see [JavaScript Actions](/refguide9/javascript-actions/).
 
 Actions can be synchronous or asynchronous. Synchronous actions will directly return the value and finish executing. An asynchronous action will return a promise, and will continue to execute and finish at a later time. The nanoflow will continue to execute when the promise is resolved.
 
@@ -458,7 +458,7 @@ Well-documented actions are easier to reuse. Consider the following when documen
 
 An extensive test app can help make a JavaScript action more robust. Within a test app, try to create all possible variations of the input, accounting for empty inputs and error cases that should be handled.
 
-When testing, make sure you to check all compatible platforms (web, hybrid, and native). The web should handle the Mendix browser compatibility. For further information about compatibility, see the [Browsers](/refguide/system-requirements/#browsers) section of *System Requirements*. 
+When testing, make sure you to check all compatible platforms (web, hybrid, and native). The web should handle the Mendix browser compatibility. For further information about compatibility, see the [Browsers](/refguide9/system-requirements/#browsers) section of *System Requirements*. 
 
 When an action is not compatible with the platform, make sure it can be checked with an additional action before running into an error. For example, employ a `CheckCameraSupport` action before starting a camera. When an action is called but not compatible, it should fail gracefully or display a clear error message. 
 
@@ -485,7 +485,7 @@ Not all capabilities are recommended for use. Consider the side effects that an 
 ## 7 Read More
 
 * [Build JavaScript Actions](/howto9/extensibility/build-javascript-actions/)
-* [JavaScript Actions](/refguide/javascript-actions/)
+* [JavaScript Actions](/refguide9/javascript-actions/)
 * [Mendix Client API](https://apidocs.rnd.mendix.com/7/client/index.html)
 * JavaScript basics:
     * [Mozilla JavaScript Basics](https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/JavaScript_basics)

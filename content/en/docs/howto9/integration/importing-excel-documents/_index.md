@@ -15,10 +15,10 @@ Adding large amounts of data to your application (for example, reference data or
 
 Before starting this how-to, make sure you know how to do the following:
 
-* Create domain models (see [Creating a Basic Data Layer](/refguide/create-a-basic-data-layer/))
+* Create domain models (see [Creating a Basic Data Layer](/refguide9/create-a-basic-data-layer/))
 * Create overview and detail pages (see [How to Create Your First Two Overview and Detail Pages](/howto9/front-end/create-your-first-two-overview-and-detail-pages/))
-* Create menu items (see [Setting Up Navigation](/refguide/setting-up-the-navigation-structure/))
-* Create microflows (see [Triggering a Microflow From a Menu Item](/refguide/triggering-microflow-from-menu-item/)
+* Create menu items (see [Setting Up Navigation](/refguide9/setting-up-the-navigation-structure/))
+* Create microflows (see [Triggering a Microflow From a Menu Item](/refguide9/triggering-microflow-from-menu-item/)
 * Add Marketplace content to your app (see [How to Use Marketplace Content in Studio Pro](/appstore/general/app-store-content/))
 * Secure your applications (see [How to Create a Secure App](/howto9/security/create-a-secure-app/))
 

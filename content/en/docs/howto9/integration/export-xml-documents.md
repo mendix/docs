@@ -20,10 +20,10 @@ This how-to will teach you how to do the following:
 
 Before you can start exporting XML documents, you need data in your application that is used during the export. You first need to set up the data structure and GUI to maintain the customer data. Then you'll create the actual export logic and the corresponding export mapping. So, you need to know how to do the following:
 
-* Create a domain model (for more information, see [Creating a Basic Data Layer](/refguide/create-a-basic-data-layer/))
-* Create a custom file document (for more information, see [File Manager](/refguide/file-manager/))
+* Create a domain model (for more information, see [Creating a Basic Data Layer](/refguide9/create-a-basic-data-layer/))
+* Create a custom file document (for more information, see [File Manager](/refguide9/file-manager/))
 * Create overview and detail pages (for more information, see [How to Create Your First Two Overview and Detail Pages](/howto9/front-end/create-your-first-two-overview-and-detail-pages/))
-* Create menu items, (for more information, see [Setting Up Navigation](/refguide/setting-up-the-navigation-structure/))
+* Create menu items, (for more information, see [Setting Up Navigation](/refguide9/setting-up-the-navigation-structure/))
 
 Before starting this how-to, make sure you have completed the following prerequisites:
 

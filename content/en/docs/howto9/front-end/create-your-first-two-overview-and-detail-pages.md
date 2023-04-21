@@ -21,7 +21,7 @@ This how-to will teach you how to do the following:
 
 Before starting with this how-to, make sure you have completed the following prerequisite:
 
-* Set up a basic data structure by reading [Creating a Basic Data Layer](/refguide/create-a-basic-data-layer/):
+* Set up a basic data structure by reading [Creating a Basic Data Layer](/refguide9/create-a-basic-data-layer/):
 
     {{< figure src="/attachments/howto9/front-end/create-your-first-two-overview-and-detail-pages/18582175.png" >}}
 
@@ -96,7 +96,7 @@ To create a new detail page manually, follow these steps:
 
 ## 5 Navigation and Security
 
-Now create a navigation item for your overview page to start using it. For details on Setting Up Navigation, see [Setting Up Navigation](/refguide/setting-up-the-navigation-structure/).
+Now create a navigation item for your overview page to start using it. For details on Setting Up Navigation, see [Setting Up Navigation](/refguide9/setting-up-the-navigation-structure/).
 
 If you switched on security for this application, you also need to configure page access on both the overview and detail pages. For more information, see [How to Create a Secure App](/howto9/security/create-a-secure-app/).
 
@@ -104,6 +104,6 @@ If you switched on security for this application, you also need to configure pag
 
 * [UI Design](/howto9/front-end/atlas-ui/)
 * [Use Layouts and Snippets](/howto9/front-end/layouts-and-snippets/)
-* [Setting Up Navigation](/refguide/setting-up-the-navigation-structure/)
+* [Setting Up Navigation](/refguide9/setting-up-the-navigation-structure/)
 * [Find the Root Cause of Runtime Errors](/howto9/monitoring-troubleshooting/finding-the-root-cause-of-runtime-errors/)
-* [Page](/refguide/page/)
+* [Page](/refguide9/page/)

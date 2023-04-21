@@ -260,7 +260,7 @@ To create a JavaScript action that can search for users on GitHub, follow the st
 
     {{< figure src="/attachments/howto9/extensibility/build-javascript-actions/write-javascript-github/select-searchgithub-users.png" alt="select search GitHub users" >}}
 
-    Optionally, you can expose the JavaScript action as a nanoflow action. When you do, you can choose a **Caption**, **Category**, and **Icon**. Note that your icon image will need to be in an existing [image collection](/refguide/image-collection/):
+    Optionally, you can expose the JavaScript action as a nanoflow action. When you do, you can choose a **Caption**, **Category**, and **Icon**. Note that your icon image will need to be in an existing [image collection](/refguide9/image-collection/):
 
     {{< figure src="/attachments/howto9/extensibility/build-javascript-actions/write-javascript-github/nanoflow-options.png" alt="nanoflow options" >}}
 
@@ -304,7 +304,7 @@ Congratulations! Using the power of JavaScript actions, your app can search for 
 
 * [Build JavaScript Actions: Part 1 (Basic)](/howto9/extensibility/write-javascript-actions/)
 * [Mendix Client API](https://apidocs.rnd.mendix.com/8/client/index.html)
-* [JavaScript Actions](/refguide/javascript-actions/)
+* [JavaScript Actions](/refguide9/javascript-actions/)
 * JavaScript Resources
     * [JavaScript Basics](https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/JavaScript_basics)
     * [Promises](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise)

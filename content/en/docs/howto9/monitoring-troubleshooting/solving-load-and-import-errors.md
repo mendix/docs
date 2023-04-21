@@ -38,7 +38,7 @@ Before trying to solve the problems, it is useful to discover the origin of the 
 
 ### 3.1 Is This a Team Server App?
 
-If your app is a [Team Server](/developerportal/collaborate/team-server/) app, and you just did a [download or update](/refguide/using-version-control-in-studio-pro/) from the server, the problem may have been added in a revision that was recently committed to the Team Server. You can check who made the most recent commit via the [Team Server](/developerportal/collaborate/team-server/) menu item in the [Developer Portal](https://sprintr.home.mendix.com).
+If your app is a [Team Server](/developerportal/collaborate/team-server/) app, and you just did a [download or update](/refguide9/using-version-control-in-studio-pro/) from the server, the problem may have been added in a revision that was recently committed to the Team Server. You can check who made the most recent commit via the [Team Server](/developerportal/collaborate/team-server/) menu item in the [Developer Portal](https://sprintr.home.mendix.com).
 
 If the latest change on your branch line was committed by someone other than yourself, please inform the person about the problem.
 
@@ -62,8 +62,8 @@ The most likely cause for these kinds of errors is a faulty script that was run 
 * [Debug a Hybrid Mobile Application](/howto9/monitoring-troubleshooting/debug-a-hybrid-mobile-application/)
 * [Debugging Java Actions](/howto9/monitoring-troubleshooting/debug-java-actions/)
 * [Debugging Java actions remotely](/howto9/monitoring-troubleshooting/debug-java-actions-remotely/)
-* [Debugging Microflows and Nanoflows](/refguide/debug-microflows-and-nanoflows/)
-* [Debugging Microflows Remotely](/refguide/debug-microflows-remotely/)
+* [Debugging Microflows and Nanoflows](/refguide9/debug-microflows-and-nanoflows/)
+* [Debugging Microflows Remotely](/refguide9/debug-microflows-remotely/)
 * [Finding the Root Cause of Runtime Errors](/howto9/monitoring-troubleshooting/finding-the-root-cause-of-runtime-errors/)
 * [Log Levels](/howto9/monitoring-troubleshooting/log-levels/)
 * [Monitoring Mendix using JMX](/howto9/monitoring-troubleshooting/monitoring-mendix-using-jmx/)

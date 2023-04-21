@@ -9,7 +9,7 @@ tags: ["widget", "TexttoSpeech", "SpeechtoText", "JavaScript", "API", "JavaScrip
 
 ## 1 Introduction
 
-Nanoflows are more powerful with pluggable nanoflow actions — called JavaScript actions. With JavaScript actions, the standard set of actions can be extended with new functionality. A JavaScript action is a reusable action based on JavaScript that runs in the client just like the nanoflow, and can use capabilities such as HTML5 browser functions, Cordova plugins, and React Native modules. JavaScript actions are similar to [Java actions](/refguide/java-actions/), but run on the client instead of the server. To share them inside your organization, JavaScript actions can be distributed and downloaded through the private [Mendix Marketplace](https://marketplace.mendix.com/).
+Nanoflows are more powerful with pluggable nanoflow actions — called JavaScript actions. With JavaScript actions, the standard set of actions can be extended with new functionality. A JavaScript action is a reusable action based on JavaScript that runs in the client just like the nanoflow, and can use capabilities such as HTML5 browser functions, Cordova plugins, and React Native modules. JavaScript actions are similar to [Java actions](/refguide9/java-actions/), but run on the client instead of the server. To share them inside your organization, JavaScript actions can be distributed and downloaded through the private [Mendix Marketplace](https://marketplace.mendix.com/).
 
 This how-to will teach you how to do the following:
 
@@ -124,7 +124,7 @@ To create a JavaScript action that can synthesize text to speech, follow these s
 
     {{< figure src="/attachments/howto9/extensibility/build-javascript-actions/write-javascript-actions/selectjsactioncalldetail.png" alt="select text to speech action" >}}
 
-    Optionally, you can expose the JavaScript action as a nanoflow action. When you do, you can choose a **Caption**, **Category**, and **Icon**. Note that to choose an icon your image will need to be included in an existing [image collection](/refguide/image-collection/). 
+    Optionally, you can expose the JavaScript action as a nanoflow action. When you do, you can choose a **Caption**, **Category**, and **Icon**. Note that to choose an icon your image will need to be included in an existing [image collection](/refguide9/image-collection/). 
 
     {{< figure src="/attachments/howto9/extensibility/build-javascript-actions/write-javascript-actions/exposeasnanoflow.png" alt="add caption category and icon" >}}
 
@@ -143,7 +143,7 @@ To create a JavaScript action that can synthesize text to speech, follow these s
 
 * [Build JavaScript Actions: Part 2 (Advanced)](/howto9/extensibility/write-javascript-github/)
 * [Implement Best Practices for JavaScript Actions](/howto9/extensibility/best-practices-javascript-actions/)
-* [JavaScript Actions](/refguide/javascript-actions/)
+* [JavaScript Actions](/refguide9/javascript-actions/)
 * [Mendix Client API](https://apidocs.rnd.mendix.com/8/client/index.html) 
 * JavaScript Resources:
     * [JavaScript basics](https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/JavaScript_basics)

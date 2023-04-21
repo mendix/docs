@@ -122,4 +122,4 @@ Make sure the names of the databases are not the same or make a copy of your own
 ## 9 Read More
 
 * [Stories](/developerportal/collaborate/stories/)
-* [Version Control](/refguide/version-control/)
+* [Version Control](/refguide9/version-control/)

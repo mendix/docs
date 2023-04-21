@@ -28,9 +28,9 @@ This how to describes how you can build the following microflow actions:
 
     {{< figure src="/attachments/howto9/extensibility/howto-datastorage-api/image001.png" alt="Microflow actions toolbox" >}}
 
-For more information on Java programming for Mendix, see [Java Programming](/refguide/java-programming/).
+For more information on Java programming for Mendix, see [Java Programming](/refguide9/java-programming/).
 
-For more information on calling Java actions from a microflow, see [Java Actions](/refguide/java-actions/).
+For more information on calling Java actions from a microflow, see [Java Actions](/refguide9/java-actions/).
 
 ## 2 Retrieving Advanced Xpath
 

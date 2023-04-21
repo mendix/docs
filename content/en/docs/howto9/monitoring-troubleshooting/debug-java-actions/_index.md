@@ -22,7 +22,7 @@ Before starting this how-to, make sure you have completed the following prerequi
 
 * Install [Eclipse](https://eclipse.org/)
 * Add a Java action and open the app in Eclipse
-* Read [Extending Your Application with Custom Java](/refguide/extending-your-application-with-custom-java/)
+* Read [Extending Your Application with Custom Java](/refguide9/extending-your-application-with-custom-java/)
 * Deploy the application for Eclipse by selecting **Deploy for Eclipse** from the app menu in Studio Pro (you should redo this every time you make changes in Studio Pro):
     {{< figure src="/attachments/howto9/monitoring-troubleshooting/debug-java-actions/18581045.png" >}}
 
@@ -67,6 +67,6 @@ Before starting this how-to, make sure you have completed the following prerequi
 * [Monitor Mendix Using JMX](/howto9/monitoring-troubleshooting/monitoring-mendix-using-jmx/)
 * [Debug Java Actions Remotely](/howto9/monitoring-troubleshooting/debug-java-actions-remotely/)
 * [Log Levels](/howto9/monitoring-troubleshooting/log-levels/)
-* [Debugging Microflows and Nanoflows](/refguide/debug-microflows-and-nanoflows/)
-* [Debugging Microflows Remotely](/refguide/debug-microflows-remotely/)
-* [Java Actions](/refguide/java-actions/)
+* [Debugging Microflows and Nanoflows](/refguide9/debug-microflows-and-nanoflows/)
+* [Debugging Microflows Remotely](/refguide9/debug-microflows-remotely/)
+* [Java Actions](/refguide9/java-actions/)

@@ -160,6 +160,6 @@ The idea is that you will have a Java Action that you can call in a microflow wh
 * [Debug Java Actions Remotely](/howto9/monitoring-troubleshooting/debug-java-actions-remotely/)
 * [Log Levels](/howto9/monitoring-troubleshooting/log-levels/)
 * [Debug Java Actions](/howto9/monitoring-troubleshooting/debug-java-actions/)
-* [Debugging Microflows and Nanoflows](/refguide/debug-microflows-and-nanoflows/)
-* [Debugging Microflows Remotely](/refguide/debug-microflows-remotely/)
+* [Debugging Microflows and Nanoflows](/refguide9/debug-microflows-and-nanoflows/)
+* [Debugging Microflows Remotely](/refguide9/debug-microflows-remotely/)
 * [Debug Java Actions Remotely](/howto9/monitoring-troubleshooting/debug-java-actions-remotely/)

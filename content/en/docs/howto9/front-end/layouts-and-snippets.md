@@ -165,7 +165,7 @@ At the heart of the navigation model in Mendix, are three device types: Desktop,
 
 When a user visits a Mendix application, they are automatically redirected to the home page of the appropriate device type (for details, see the section [Redirection to Device Types](#RedirectiontoDeviceTypes)).
 
-For more information on navigation profiles, see [Navigation in Mendix](/refguide/navigation/).
+For more information on navigation profiles, see [Navigation in Mendix](/refguide9/navigation/).
 
 ### 5.7 Menu Document
 
@@ -207,6 +207,6 @@ In addition, a snippet can define an entity that serves as a context for the wid
 
 * [Atlas UI](/howto9/front-end/atlas-ui/)
 * [Use Layouts and Snippets](/howto9/front-end/layouts-and-snippets/)
-* [Setting Up Navigation](/refguide/setting-up-the-navigation-structure/)
+* [Setting Up Navigation](/refguide9/setting-up-the-navigation-structure/)
 * [Create Your First Two Overview and Detail Pages](/howto9/front-end/create-your-first-two-overview-and-detail-pages/)
 * [Find the Root Cause of Runtime Errors](/howto9/monitoring-troubleshooting/finding-the-root-cause-of-runtime-errors/)

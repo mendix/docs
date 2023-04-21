@@ -176,8 +176,8 @@ Variable ‘Variable’ is never used.
 * [Monitor Mendix Using JMX](/howto9/monitoring-troubleshooting/monitoring-mendix-using-jmx/)
 * [Debug Java Actions Remotely](/howto9/monitoring-troubleshooting/debug-java-actions-remotely/)
 * [Configure Log Levels](/howto9/monitoring-troubleshooting/log-levels/)
-* [Debugging Microflows and Nanoflows](/refguide/debug-microflows-and-nanoflows/)
+* [Debugging Microflows and Nanoflows](/refguide9/debug-microflows-and-nanoflows/)
 * [Debug Java Actions](/howto9/monitoring-troubleshooting/debug-java-actions/)
-* [Debugging Microflows Remotely](/refguide/debug-microflows-remotely/)
+* [Debugging Microflows Remotely](/refguide9/debug-microflows-remotely/)
 
-Several warnings relate to improper security. For more information on this, see [App Security](/refguide/app-security/) in the *Studio Pro Guide*.
+Several warnings relate to improper security. For more information on this, see [App Security](/refguide9/app-security/) in the *Studio Pro Guide*.

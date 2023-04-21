@@ -20,7 +20,7 @@ This how-to will teach you how to do the following:
 
 Before starting this how-to, make sure you have completed the following prerequisites:
 
-* Creating a [basic data layer](/refguide/create-a-basic-data-layer/)
+* Creating a [basic data layer](/refguide9/create-a-basic-data-layer/)
 
 ## 3 Denormalization
 
@@ -31,7 +31,7 @@ To show the total order amount, there are two options:
 * First option: create a calculated attribute in the Customer entity to compute the total order amount
     * The drawback of this option is that the calculated attributes bring down the performance of overview pages
 * Second option: create a persistable attribute in the Customer entity that stores the total order amount in the database – this is called denormalization
-    * The drawback of this option is that the redundant data needs to be kept in sync (but this is easy with Mendix [event handlers](/refguide/event-handlers/))
+    * The drawback of this option is that the redundant data needs to be kept in sync (but this is easy with Mendix [event handlers](/refguide9/event-handlers/))
 
 To enable denormalization, follow these steps:
 
@@ -145,10 +145,10 @@ Now the application is ready to store redundant data, but you still need to keep
 
 ## 5 Read More
 
-* [Creating a Basic Data Layer](/refguide/create-a-basic-data-layer/)
-* [Setting Up Data Validation](/refguide/setting-up-data-validation/)
+* [Creating a Basic Data Layer](/refguide9/create-a-basic-data-layer/)
+* [Setting Up Data Validation](/refguide9/setting-up-data-validation/)
 * [Find the Root Cause of Runtime Errors](/howto9/monitoring-troubleshooting/finding-the-root-cause-of-runtime-errors/)
 * [Stories](/developerportal/collaborate/stories/)
-* [Defining Access Rules Using XPath](/refguide/define-access-rules-using-xpath/)
-* [Attributes](/refguide/attributes/)
-* [Event Handlers](/refguide/event-handlers/)
+* [Defining Access Rules Using XPath](/refguide9/define-access-rules-using-xpath/)
+* [Attributes](/refguide9/attributes/)
+* [Event Handlers](/refguide9/event-handlers/)

@@ -33,37 +33,31 @@ If your app is on a Studio Pro version below 9, you must sequentially. That mean
 
 To check what Studio Pro version your app running on Mendix Cloud is currently on, refer to the [Control Center dashboard](/developerportal/control-center/#dashboard). Alternatively, contact your Customer Success Manager to find out how to check the Mendix version of your app.
 
-# NEW NOTES
-
-- Save Your Version 9 App
-- Upgrade Your App to Version 10
-- Upgrade All Widgets and Modules
-- Review and Test Your App
-
-# NEW CONTENT
-
-
 ## 2 Backing Up Your App
 
 Make sure that you have either committed your latest changes to Team Server, or created a backup of your local app before you start the conversion.
 
-## 3 Upgrading to the Latest Release of Version 9
+## 3 Preparing Your App in Studio Pro 9.24
 
-Mendix recommends upgrading your app to Studio Pro [9.24](/releasenotes/studio-pro/9.24/) first to be able to update it to Mendix 10.
+Mendix recommends preparing your app in Studio Pro [9.24](/releasenotes/studio-pro/9.24/) first to be able to upgrade it to Mendix 10.
 
-To upgrade to Studio Pro 9.24, follow these steps:
+To prepare your app in Studio Pro 9.24, follow these steps:
 
 1. Download the latest patch release of Studio Pro [9.24](/releasenotes/studio-pro/9.24/).
 2. Open your app in Studio Pro 9.24.
-3. Allow Studio Pro to upgrade the app and fix any errors.
+3. Allow Studio Pro to update the app.
+4. Run your app, test all functionality, and ensure it works without error. 
+5. Fix any depreciation warnings you see both in development in Studio Pro as well as in the Mendix Runtime using your console and browser console.
+6. Review your app in combination with the sections below and assess if further action needs to be taken before upgrading to Studio Pro 10.
+7. Back up or commit your 9.24 app so that you can return to it if necessary.
 
-### 3.3 Review Your Mendix 8 App
+Your app is now ready to be upgraded to Mendix 9. You can now close the app in Studio Pro 9.
 
-Review your app in combination with the sections below and assess if further action needs to be taken before upgrading to Mendix 9.
+## 4 Upgrading to Studio Pro 10
 
-You should run your app, test all functionality, and ensure it works without error. If you app uses app services, you should remove them before upgrading as app services are deprecated in Mendix 9.
+Open your app in Studio Pro 10 and allow Studio Pro to update your app to version 10. Mendix will update your app for you automatically.
 
-You should also fix any depreciation warnings you see both in development in Studio Pro, as well as in the runtime using your console and browser console.
+Review all error messages and messages about deprecated items, then make changes where necessary.
 
 # OLD CONTENT
 
@@ -74,17 +68,9 @@ You should also fix any depreciation warnings you see both in development in Stu
 
 
 
-### 3.4 Save Your Version 8 App
 
-Backup or commit your app so that you can return to it if necessary.
 
-Your app is now ready to be upgraded to Mendix 9. You can now close the app in Studio Pro 8.
 
-### 3.5 Upgrade Your App to Version 9
-
-Open your app in Studio Pro 9 and allow Studio Pro to update your app to version 9. Mendix will upgrade your app for you automatically.
-
-Review all error messages and messages about deprecated items and make changes where necessary.
 
 ### 3.6 Upgrade All Widgets and Modules {#upgrade-widgets}
 

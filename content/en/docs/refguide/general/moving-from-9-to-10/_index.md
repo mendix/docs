@@ -99,69 +99,16 @@ In Studio Pro 10, there are some improvements to consistency and behavior:
 
 ### 7.4 Range Expressions
 
-The follEwing function invocations are always true or false:
+The following function invocations are always `True` or `False`:
 
-- Comparisons to `RANGEBEGIN` with a range having a `NULL` lower bound
-- Comparisons to `RANGEEND` with a range having a `NULL` upper bound
-- `IN` with an infinite range (i.e. `NULL` for both lower and upper bound)
+* Comparisons to `RANGEBEGIN` with a range having a `NULL` lower bound
+* Comparisons to `RANGEEND` with a range having a `NULL` upper bound
+* `IN` with an infinite range (meaning, `NULL` for both lower and upper bound)
 
-Prior to Mendix 10 these functions would be removed from a predicate, which is not always correct. For example `predicate OR` `attribute >` `RANGEBEGIN((NULL, 42))` is equivalent to `predicate OR True`, which is not the same as just `predicate` (with the range function removed).
-As of Mendix 10 the tautology range functions are no longer removed, but simply substituted by `True` or `False`. Subsequently the expressions are optimized where possible (e.g. `x OR True` becomes `True`, `x AND False` becomes `False` and `NOT(True)` becomes `False`.
+Prior to Studio Pro 10, these functions were removed from a predicate, which was not always correct. For example, `predicate OR` `attribute >` `RANGEBEGIN((NULL, 42))` is equivalent to `predicate OR True`, which is not the same as just `predicate` (with the range function removed).
 
-# NEW CONTENT
+As of Studio Pro 10, the tautology range functions are no longer removed, but simply substituted by `True` or `False`. Subsequently, the expressions are optimized where possible (for example, `x OR True` becomes `True`, `x AND False` becomes `False`, and `NOT(True)` becomes `False`).
 
-
-# OLD CONTENT
-
-## 4 Runtime API Changes
-
-Most of the Java API calls that were deprecated in Mendix 8 have been removed. If you were still using such methods in your Java actions, you must replace or delete them. To check which calls were depreciated, click the **Mendix 8 Server Runtime API** link in our [Runtime API Documentation](/apidocs-mxsdk/apidocs/runtime-api/).
-
-Additionally, refer to the Mendix Studio Pro 9.02 Release notes for more Runtime API change details.
-
-### 4.1 Changes to Database Uniqueness
-
-Before Mendix 9, Mendix could ensure data uniqueness using either the Mendix runtime or by relying on the database engine itself. Starting with Mendix 9, **Database** will be the only option. 
-
-If your app is still using Mendix runtime for uniqueness validation, then you should set the custom runtime setting `DataStorage.EnableDiagnostics` to `true`  to check for potential data redundancy issues that might exist in the database. 
-
-If any are found, an error like **An error occured while initializing the Runtime: Detected unique constraing violation...** will be logged. To solve this, your app will have to be prepared before moving to Mendix 9. You can obtain the tools you need by [submitting a support request](/developerportal/support/submit-support-request/).
-
-### 4.2 Mendix Object Changed Flag
-
-In Mendix 9.5 and above, when you change an object member, the member state becomes 'CHANGED' even if the old value and the new value are the same. This also affects `objectHasChanged` and `memberHasChanged` Java actions of the Community Commons module.
-
-For example, you have a committed object `$User` with `$User/Name = 'Alice'`. Setting `$User/Name` to `'Alice'` results in the member state becoming 'CHANGED' even though the name is the same. Previously, this would have resulted in the member state remaining 'UNCHANGED'.
-
-## 5 Testing Native Mobile Apps
-
-To test and preview native mobile apps in Mendix 9, you must download the Mendix 9 version of the Make It Native app:
-
-* Download Make It Native 9 for Android in the [Google Play Store](https://play.google.com/store/apps/details?id=com.mendix.developerapp.mx9)
-* Download Make It Native 9 for iOS in the [Apple App Store](https://apps.apple.com/nl/app/make-it-native/id1542182000)
-
-For best results with native apps, make sure you have updated the [Native Mobile Resources](https://marketplace.mendix.com/link/component/109513) module as described in the [Upgrade All Widgets and Modules](#upgrade-widgets) section above.
-
-## 6 Client API Changes
-
-Client APIs that were deprecated and marked for removal in Mendix 9 were indeed removed. Libraries like `big.js`, `react`, `react-native`, and a few others shipped with the Client have been updated to latest version. This might affect your custom and pluggable widgets and to JavaScript actions. Please refer to the [Breaking Changes](/releasenotes/studio-pro/9.0/#breaking-changes) section of the *Studio Pro 9.0* release notes for more details.
-
-## 7 Native Dependencies
-
-Mendix 9 native apps no longer include non-essential native libraries like `react-native-maps`, `react-native-ble-plx`, `react-native-geocoder`, and others by default. Instead, new functionality of declaring native dependencies for components has been introduced in Mendix 9. Every pluggable widget or JavaScript action must declare which native libraries it uses. This way, native apps can be bundled with only the libraries they need while unnecessary libraries are not included.
-
-If your pluggable widget or JavaScript action uses libraries that require native linking, please update your widgets and actions in order to define those native libraries as dependencies for your components. Read more about native dependencies in [Declaring Native Dependencies](/apidocs-mxsdk/apidocs/pluggable-widgets-native-dependencies/).
-
-## 8 XPath Query Engine 9 {#query-engine-9}
-
-Mendix 9 contains a new XPath query engine called *query engine 9* or QE9, replacing the current engine called *query engine 7* or QE7. There are a few changes in functionality between the query engines:
-
-* If an association is [navigable from both sides](/refguide/association-properties/#navigability), both entities can have access rules defined which declare the readability of the association. For such associations, QE9 will always use the entity on the left of the current XPath to determine accessibility.
-For example: in the query `//Customer[Customer_Address/Address/City = 'Rotterdam']`, the access rules defined in `Customer` will be used for the association, whereas in `//Address[Customer_Address/Customer/Lastname = 'Doe']`, the rules in `Address` will be used for that same association. In QE7 the behavior was not well defined.
-* QE9 has been written to follow the least privilege principle strictly when retrieving data. This might cause less data to be visible to end-users.
-* While not allowed by Studio Pro, it was possible to use a non-boolean attribute as a constraint in a Java action, for example `//Address[City]`. QE7 accepts such queries but, depending on the database, it may give unexpected results. QE9 will reject such queries.
-* While not supported or documented, it is possible to use a query like `//Customer/Customer_Address/Address` in a Java action. If an instance of `Address` is reachable from multiple `Customer` instances, QE7 would return the instance of `Address` multiple times. QE9 will return each matching instance of `Address` only once.
-
-## 9 Read More
+## 8 Read More
 
 * [Studio Pro 10 Release Notes](/releasenotes/studio-pro/10.0/)

@@ -22,7 +22,9 @@ The sections below describe upgrading from Studio Pro 9 to Studio Pro 10.
 
 Mendix recommends reviewing the [Breaking Changes](/releasenotes/studio-pro/10.0/#breaking-changes) section of the *Studio Pro 10.0* release notes as well as the updated [System Requirements](/refguide/system-requirements/).
 
+{{% todo %}}
 More information on upgrading can be found in [Migrating Your Native App to Mx10](). [**GET LINK**]
+{{% / todo %}}
 
 ### 1.2 Upgrading from Older Versions of Studio Pro
 
@@ -62,9 +64,9 @@ To minimize the chance of problems, you should update all the widgets, modules, 
 
 Check if there is a newer version of your component available in the Marketplace. Read the version release notes in the Marketplace to see whether you need to perform specific actions when upgrading.
 
-Be sure to update these key widgets, resources, and actions:
-
-[**VERIFY - ANYTHING TO INCLUDE HERE**]
+{{% todo %}}
+Be sure to update these key widgets, resources, and actions: [**VERIFY - ANYTHING TO INCLUDE HERE**]
+{{% / todo %}}
 
 In general you should not remove and re-import modules unless this is recommended in the component's release notes. If you do remove and re-import a component, you may lose data or configuration related to the component.
 

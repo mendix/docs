@@ -230,7 +230,7 @@ For server-based installations, the following storage types mounted by the OS ar
 Internet Explorer is not supported in Studio Pro 10.
 {{% /alert %}}
 
-## 10 Mobile Operating Systems {#mobileos} {{% todo %}}[Update for Mx 10?]{{% /todo %}}
+## 10 Mobile Operating Systems {#mobileos}
 
 For native and progressive web apps built with Mendix the following operating system versions are supported:
 

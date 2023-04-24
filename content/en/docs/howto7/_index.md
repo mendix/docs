@@ -3,7 +3,7 @@ title: "Mendix 7 How-tos"
 url: /howto7/
 notoc: true
 description: "Step-by-step guides on various Mendix topics that will teach you how to build and customize apps."
-weight: 85
+weight: 90
 no_list: false
 description_list: true
 cascade:

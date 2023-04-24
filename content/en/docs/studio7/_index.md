@@ -2,7 +2,7 @@
 title: "Mendix 7 Studio Guide"
 url: /studio7/
 tags: ["studio", "web modeler"]
-weight: 90
+weight: 95
 cascade:
     - space: "Mendix 7 Studio Guide"
     - mendix_version: "7"

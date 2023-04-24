@@ -22,10 +22,6 @@ The sections below describe upgrading from Studio Pro 9 to Studio Pro 10.
 
 Mendix recommends reviewing the [Breaking Changes](/releasenotes/studio-pro/10.0/#breaking-changes) section of the *Studio Pro 10.0* release notes as well as the updated [System Requirements](/refguide/system-requirements/).
 
-{{% todo %}}
-More information on upgrading can be found in [Migrating Your Native App to Mx10](). [**GET LINK**]
-{{% / todo %}}
-
 ### 1.2 Upgrading from Older Versions of Studio Pro
 
 If your app is on a Studio Pro version below 9, you must sequentially. That means you must go from 7 to 8 (see details in [Moving from Desktop Modeler Version 7 to Studio Pro 8](https://docs.mendix.com/refguide8/moving-from-7-to-8/), from 8 to 9 (see details in [Moving from Mendix Studio Pro 8 to 9](/refguide/moving-from-8-to-9/), and finally from 9 to 10. 

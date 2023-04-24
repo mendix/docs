@@ -31,6 +31,8 @@ The following are usage scenarios that would be achievable with the OIDC Broker.
 * Mendix customers that want to build an IAM Broker solution that would hide the complexity of a multitude of Mendix apps from their corporate IdP.  By having those apps delegate authentication to the broker and have the broker delegate authentication to their IdP, only one OAuth client needs to be configured at their IdP.  A deployment pipeline (deployment agent) can register additional Mendix apps with the IAM Broker in an automated fashion via an API. 
 * Mendix Solution Vendors (MSVs) who want to simplify the microservice architecture of their solution from the customer by using the IAM Broker as a single IAM integration point for their customers.
 
+See [End-User Account Creation in OIDC Provider](#end-user-account), below for more information on how these two use cases are implemented.
+
 ### 1.2 Features and Limitations
 
 The OIDC Provider has the following features and limitations:
@@ -235,7 +237,7 @@ The scopes you configure are not added automatically to the “scopes_supported�
     
     {{% alert color="info" %}}The default implementation of `OpenIDConnectProvider.SUB_CustomScope` grants any requested scope provided it is associated with client (your Mendix app). It does not do any validation of the end user.{{% /alert %}}
 
-##### 3.3.3.2 Configuration of the OIDC Provider to Propagate the End-User’s Identity with Custom Claims
+##### 3.3.3.2 Configuration of the OIDC Provider to Propagate the End-User’s Identity with Custom Claims{#propagate-custom-claims}
 
 Typically you want to propagate the end-user’s identity from the OIDC Provider to your Mendix app. Although the basic user attributes like ‘email address’ and ‘user name’ may be sufficient, your app may need more information about the end-user. User attributes like ‘department’ or ‘job-title’ may be used for business logic, including decentralized authorization.
 
@@ -400,21 +402,22 @@ The OIDC Provider module is one such central component and you can communicate t
 
 Using OAuth scopes is the recommended approach since it is the standard OAuth solution. With Mendix, we advise you to think of an app’s user roles as being the same as OAuth scope values.  By adhering to this logic, you can develop apps with any user roles without having to decide and agree on custom attributes. You can customize the OIDC SSO module with microflows which parse the tokens from the OIDC Provider module and apply user roles to enforce the authorization indicated in the token.
 
-### 7.3 End-User Accounts in OIDC Provider
+### 7.3 End-User Account Creation in OIDC Provider{#end-user-account}
 
-# Account creation in OIDC Provider
+Since the OIDC Provider issues access tokens for end-users that are logged in, it needs to record end-users as objects in the app which contains the OIDC Provider module.
 
-Since the OIDC Provider issues access tokens for users that are logged in, it needs user related objects in your Provider app. The OIDC Provider module introduces the AccountDetail object into your Provider app. The OIDC Provider module uses the MendixUserID attribute from this object to populate the “sub” claim in ~~ID-token~~ access token. For any other user claims you want to include in your ~~ID-token~~ access token, you need to create a microflow as described in section “3.3.3.2 Configuration …. Custom claims” .
+The OIDC Provider module adds the `AccountDetail` entity into your Provider app. It uses the `MendixUserID` attribute of `AccountDetail` to populate the “sub” claim in the access token. For any other user claims you want to include in your access token, you need to create a microflow as described in [Configuration of the OIDC Provider to Propagate the End-User’s Identity with Custom Claims](#propagate-custom-claims), above.
 
-There are two ways in OIDC Provider to get accounts created
+There are two ways in OIDC Provider to get create accounts:
 
-1. **In first use case, regarding our IAM brokering use case**
-    Accounts which can be used by OIDC provider are synced from IDP directly into IAM broker application. In this case, AccountDetail object is created for every account object when the user tries to login. This is automatically handled by code without any configuration.
+#### 7.3.1 When Using IAM Brokering
+
+In this case, accounts which can be used by OIDC provider are synced from your IdP directly into the IAM broker application. In this case, an `AccountDetail` object is created for every account object when the end-user tries to login. This is automatically handled by code without any configuration.
     
-    *Why AccountDetail object should be created for every Account object?*
-    Access token has a "sub" claim which gets value from "MendixUserID" attribute available in AccountDetail entity.
+This means that the access token will contain a "sub" claim which gets value from the `MendixUserID` attribute of the `AccountDetail` entity.
     
-2. **With AccountDetail page from OIDCProvider module**
-    This is second use case where OIDCProvider can be used separately as an IDP without building IAM structure.
-    In this case, Admin can create Users(Accounts) using AccountDetail page which is available in OIDCProvider. This page is to create AccountDetail objects which automatically creates Account objects in the app to represent the AccountDetail as accounts
+#### 7.3.2 Using the AccountDetail Page of the  OIDC Provider Module
 
+This is the case where the OIDC Provider module can be used separately as an IDP without building an IAM structure.
+
+Where there is no IAM brokering functionality, the administrator can create end-users (Accounts) using the AccountDetail page in the OIDC Provider module. This page creates `AccountDetail` objects which automatically create `Account` objects in the app to represent the AccountDetails as accounts.

@@ -20,7 +20,7 @@ Mendix Studio only supports apps built in Mendix 9.20 and below. Apps built with
 
 ## 1 Introduction 
 
-The Mendix Platform includes [Mendix Studio](/studio/general/) in addition to [Mendix Studio Pro](/refguide/modeling/). Studio is a collaborative, no-code, web-based application development environment. It enables business developers and users with minimal coding or software development experience to create web and mobile applications without having to know how to code.
+The Mendix Platform includes [Mendix Studio](/studio/general/) in addition to [Mendix Studio Pro](/refguide9/modeling/). Studio is a collaborative, no-code, web-based application development environment. It enables business developers and users with minimal coding or software development experience to create web and mobile applications without having to know how to code.
 
 Studio enables you to do the following: 
 

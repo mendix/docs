@@ -72,7 +72,7 @@ A microflow parameter that has the *List* or *Object* type indicates a body para
 
 An operation microflow may also take an [HttpRequest](/refguide/http-request-and-response-entities/#http-request) parameter. You can add this parameter if you want to inspect the requested URL and headers.
 
-To set the status code, reason phrase, and headers, add an [HttpResponse](/refguide/http-request-and-response-entities/#http-response) object parameter and set the attributes of that object, or return an *HttpResponse*.
+To set the status code and headers, add an [HttpResponse](/refguide/http-request-and-response-entities/#http-response) object parameter and set the attributes of that object, or return an *HttpResponse*. Setting a custom reason phrase on the `HttpResponse` object has no effect; the runtime always returns the default reason phrase for the status code.
 
 The result of the microflow is the result of the operation and can include the following:
 
@@ -87,7 +87,7 @@ The result of the microflow is the result of the operation and can include the f
 3. **Return a primitive** – when the microflow returns a value, for example, a string, integer, or Boolean, then the response to the operation will be that value.
     {{% alert color="info" %}}If the microflow returns a non-empty value, the *Content* attribute of the *HttpResponse* object is ignored. If the microflow returns an empty value, then the *Content* of the *HttpResponse* is taken as the result. {{% /alert %}}
 
-4. **Return an** [HttpResponse](/refguide/http-request-and-response-entities/#http-response) – in the *HttpResponse*, you can set the status code, reason phrase, and content (as a string). You can fill the content with, for example, the result of a mapping or a string from another source. You can also add headers to the response. 
+4. **Return an** [HttpResponse](/refguide/http-request-and-response-entities/#http-response) – in the *HttpResponse*, you can set the status code and content (as a string). You can fill the content with, for example, the result of a mapping or a string from another source. You can also add headers to the response. 
     {{% alert color="info" %}}One important header to set is *Content-Type*. Do not return an *empty* *HttpResponse* because that will always result in an error.{{% /alert %}}
 
 If the microflow throws an unhandled exception, the response is **500: Internal server error**.

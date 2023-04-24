@@ -23,7 +23,7 @@ The *Mendix Studio Pro 10 Guide* covers important topics concerning [Studio Pro]
 
 Before installing Studio Pro 10, please read [System Requirements](/refguide/system-requirements/). For information on how to install Studio Pro, see [Installing Mendix Studio Pro](/refguide/install/).
 
-If you have been using Studio Pro version 9, we recommend reading [Moving from Mendix Studio Pro 9 to 10](/refguide/moving-from-8-to-9/).
+If you have been using Studio Pro version 9, we recommend reading [Moving from Mendix Studio Pro 9 to 10](/refguide/upgrading-from-9-to-10/).
 
 If you are looking for step-by-step guides on performing various Mendix actions, browse the [Studio Pro 10 How-tos](/howto/).
 

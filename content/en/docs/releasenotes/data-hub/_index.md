@@ -565,7 +565,7 @@ These release notes cover changes made to the [Mendix Data Hub Catalog](/data-hu
 
 #### Fixes
 
-* We fixed an issue where searching in the [Data Hub pane](/refguide/data-hub-pane/) in Studio Pro caused an error.
+* We fixed an issue where searching in the [Data Hub pane](/refguide9/data-hub-pane/) in Studio Pro caused an error.
 
 ### September 23rd, 2021
 

@@ -76,10 +76,7 @@ After you configure the authentication profile for Amazon SNS, you can implement
 2. In the **App Explorer**, right-click on the name of your module, and then click **Add microflow**.
 3. Enter a name for your microflow, for example, *ACT_ListTopics*, and then click **OK**.
 4. In the **App Explorer**, in the **AmazonSNSConnector** section, find the **ListTopics** activity.
-5. Drag the **ListTopics** activity onto the work area of your microflow and double-click on it to configure the required parameters.
-
-    For the `ListTopics` activity, you must specify the AWS Region and add your `Credentials`. To get your `Credentials` object, add the **Credentials_GenerateFromConstants** microflow in front of your `ListTopics` activity so that you can pass the `Credentials` object as an input parameter of the `ListTopics` activity.
-
+5. Drag the **ListTopics** activity onto the work area of your microflow.
 6. In the **Toolbox** pane, search for the **Retrieve** activity and drag it onto the microflow area.
 7. Position the **Retrieve** activity between the **ListTopics** activity and the microflow end event.
 8. Double-click the **Retrieve** activity.
@@ -99,14 +96,6 @@ The domain model is a data model that describes the information in your applicat
 | Name | Description |
 | --- | --- |
 | `Topic` | This generalization entity represents information on topics inside the Amazon SNS environment. The [ARN](https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html) (Amazon Resource Name) attribute represents an ID in Amazon SNS. The **Name** attribute represents the name of the topic. |
-| `CreateTopicRequest` | This entity is used for creating a Topic. Required values: Name. Note that if the topic is a fifo topic, the name must end in ".fifo". It must also contain a CreateTopicAttribute with key FifoTopic and value "true" |
-| `CreateTopicAttribute` | Specialization of TopicAttribute containing all attributes that will be added to the topic | 
-| `TopicTag` | Specialization of Tag containing all tags that will be added to a topic. At most 50 tags can be added to a single topic |
-| `Tag` | Entity for adding tags to keep track of what expenses belong where | 
-| `UsageTopicAttribute` | Usage entity for adding topic attributes. This entity itself will not hold any data, but it will point to a specialization of the AbstractTopicAttribute entity. This will contain the attribute that will be added to the topic | 
-| `AbstractTopicAttribute` | Abstract entity for adding Topic Attributes. Warning, do not use the Abstract entity itself, instead, you should always use one of its specializations. `AbstractTopicAttribute` has the following specializations: `ContentBasedDeduplication`, `FifoTopic`, `DeliveryPolicy`, `DeliveryName`, `Policy`, `SignatureVersion`, `TracingConfig`, `KmsMasterKeyId`, `DisplayName` |
-
-
 
 ### 4.2 Enumerations
 
@@ -175,24 +164,13 @@ This activity returns a `ListTopicsResponse` object with objects from the follow
 | `ListTopicsResponse` |  | This entity is the response for the Amazon SNS `ListTopics` action. It holds a list of ListTopicsTopic objects. |
 | `ListTopicsTopic` | `AmazonSNSConnector.Topic` | This entity holds information on the retrieved Topic. The attributes it contains are **ARN**, which reflects the name of the resource inside the Amazon environment, and **Name**, which reflects the name of the Topic.  |
 
-#### 4.3.2 PublishBatch
+#### 4.3.2 Publish
 
-The `Publish` Amazon SNS action allows you to publish up to 10 messages to all those subscribed to a given Topic.  It requires a valid AWS Region and a PublishRequest object, containing a Topic object that can contain up to 10 message objects. The output of the action is PublishBatchResponse object containing information on whether or not the messages was successfully delivered to the SNS topic.
-
-The input and output for this service are shown in the table below:
-
-| Input | Output |
-| --- | --- |
-| `AWS_Region (Enumeration)` | `PublishBatchResponse` |
-| `PublishRequest (Object)` | |
-
-#### 4.3.3 CreateTopic
-
-The `CreateTopic` Amazon SNS action allows you to create a new topic, it requires a valid AWS Region and a CreateTopicRequest. The CreateTopicRequest must contain a topic name, and can contain attributes and tags. The output is a CreateTopicResponse that contains the newly created topics ARN
+The `Publish` Amazon SNS activity allows you to publish a message to all those subscribed to a given Topic. It requires a valid AWS Region and a `PublishRequest` object, containing both a Message object and a Topic object. The output of the action is a Boolean value which represents whether the operation was successful.
 
 The input and output for this service are shown in the table below:
 
 | Input | Output |
 | --- | --- |
-| `AWS_Region (Enumeration)` | `CreateTopicResponse` |
-| `CreateTopicRequest (Object)` | |
+| `AWS_Region (Enumeration)` | `IsPublished (Boolean)` |
+| `PublishRequest (Object)` |  |

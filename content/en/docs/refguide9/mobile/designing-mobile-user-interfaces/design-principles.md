@@ -1,11 +1,11 @@
 ---
 title: "Design Principles"
-url: /refguide/mobile/designing-mobile-user-interfaces/design-principles/
+url: /refguide9/mobile/designing-mobile-user-interfaces/design-principles/
 weight: 10
 description: "This document will teach you how to build a native mobile app's UI."
 tags: ["design", "styling"]
 aliases:
-    - /howto/mobile/ui-best-practices/
+    - /howto9/mobile/ui-best-practices/
 ---
 
 ## 1 Introduction
@@ -72,7 +72,7 @@ The design properties are located in *theme/settings-native.json*, and more info
 
 #### 3.2.3 Creating the App Layouts
 
-The default Atlas theme comes pre-bundled with a set of layouts. If these do not fit your app’s design, you can create or customize the layouts and name them accordingly. Do not change the supplied layouts. Either create a separate module with the custom layouts, page templates, and building blocks or [create your own](/howto/front-end/create-a-company-design-system/).
+The default Atlas theme comes pre-bundled with a set of layouts. If these do not fit your app’s design, you can create or customize the layouts and name them accordingly. Do not change the supplied layouts. Either create a separate module with the custom layouts, page templates, and building blocks or [create your own](/howto9/front-end/create-a-company-design-system/).
 
 #### 3.2.4 Creating Building Blocks for Common UI Structures
 
@@ -110,7 +110,7 @@ Try to avoid very specific class names. Very specific class names are often only
 
 By changing styling in the **core** folder you risk incurring errors the next time you update Atlas. Updating Atlas might also be more difficult. 
 
-A large part of your app's overall styling can be changed in *theme/native/custom-variables.js*. However, if more changes are needed you could extend a widget’s default styling or define the default styling yourself. For more information, see [How to Extend Design Properties](/howto/front-end/extend-design-properties/).
+A large part of your app's overall styling can be changed in *theme/native/custom-variables.js*. However, if more changes are needed you could extend a widget’s default styling or define the default styling yourself. For more information, see [How to Extend Design Properties](/howto9/front-end/extend-design-properties/).
 
 ### 4.4 Favoring Design Properties Over Including Properties
 
@@ -135,5 +135,5 @@ It is a common pitfall to keep adding classes to a single file. However, this wi
 
 ## 5 Read More
 
-* [Native Mobile Styling Guide](/refguide/native-styling-refguide/)
-* [How to Style Your Mendix Native Mobile App](/refguide/mobile/designing-mobile-user-interfaces/native-styling/)
+* [Native Mobile Styling Guide](/refguide9/native-styling-refguide/)
+* [How to Style Your Mendix Native Mobile App](/refguide9/mobile/designing-mobile-user-interfaces/native-styling/)

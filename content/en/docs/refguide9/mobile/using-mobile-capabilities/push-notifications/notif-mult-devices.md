@@ -1,11 +1,11 @@
 ---
 title: "Part 8: Send Notifications to Multiple Devices"
 linktitle: "8. Notifications to Multiple Devices"
-url: /refguide/mobile/using-mobile-capabilities/push-notifications/notif-mult-devices/
+url: /refguide9/mobile/using-mobile-capabilities/push-notifications/notif-mult-devices/
 weight: 90
 description: Learn to send notifications to multiple devices with the Native Mobile Builder.
 aliases:
-    - /howto/mobile/notif-mult-devices/
+    - /howto9/mobile/notif-mult-devices/
 ---
 
 ## 1 Introduction
@@ -20,11 +20,11 @@ Push notifications only work with apps created through the Mendix Native Mobile 
 
 Before starting this section, make sure you have completed the following prerequisite:
 
-* Send one test push notification as described in [Push Notifications](/refguide/mobile/using-mobile-capabilities/push-notifications/)
+* Send one test push notification as described in [Push Notifications](/refguide9/mobile/using-mobile-capabilities/push-notifications/)
 
 If you want to use push notifications with custom apps created with Mendix Native Mobile Builder, make sure you have completed the following prerequisite:
 
-* Complete [Build a Mendix Native App Locally](/refguide/mobile/distributing-mobile-apps/building-native-apps/native-build-locally/)
+* Complete [Build a Mendix Native App Locally](/refguide9/mobile/distributing-mobile-apps/building-native-apps/native-build-locally/)
 
 ## 3 Sending Notifications to Multiple Devices
 
@@ -34,12 +34,12 @@ What if you want to send messages to all your users' devices with a single butto
 
 Create a microflow *ACT_SendProductToAllDevices* with the following elements:
 
-{{< figure src="/attachments/howto/mobile/native-mobile/implementation/notifications/notif-mult-devices/SendProductToAll.png" alt="SendProductToAll"    width="400"  >}}
+{{< figure src="/attachments/howto9/mobile/native-mobile/implementation/notifications/notif-mult-devices/SendProductToAll.png" alt="SendProductToAll"    width="400"  >}}
 
 1. Add a *Product* data parameter to your microflow.
 2. Retrieve the *PushNotifications.Device* entity list from a database:
 
-    {{< figure src="/attachments/howto/mobile/native-mobile/implementation/notifications/notif-mult-devices/retrieveDevices.png" alt="retrieveDevices"    width="400"  >}}
+    {{< figure src="/attachments/howto9/mobile/native-mobile/implementation/notifications/notif-mult-devices/retrieveDevices.png" alt="retrieveDevices"    width="400"  >}}
 
 3. Drag the **PrepareMessageData** microflow from *PushNotifications/_USE ME/API* onto **ACT_SendProductToAllDevices** and configure the following:<br />
     1. Title: *myTitle*.<br />
@@ -49,7 +49,7 @@ Create a microflow *ACT_SendProductToAllDevices* with the following elements:
     1. ActionName: *sendProduct*.<br />
     1. ContextObjectGuid: *empty*:
 
-    {{< figure src="/attachments/howto/mobile/native-mobile/implementation/notifications/notif-mult-devices/prepareMessageData.png" alt="prepareMessageData"    width="400"  >}}
+    {{< figure src="/attachments/howto9/mobile/native-mobile/implementation/notifications/notif-mult-devices/prepareMessageData.png" alt="prepareMessageData"    width="400"  >}}
 
     **ContextObjectGuid** is set to empty since you will pass the object itself to the **SendMessageToDevices** Java action where it will be retrieved automatically. 
 
@@ -58,11 +58,11 @@ Create a microflow *ACT_SendProductToAllDevices* with the following elements:
     1. **Device param**: **$Devices**.<br />
     1. **Context object**: **$Product**:
 
-    {{< figure src="/attachments/howto/mobile/native-mobile/implementation/notifications/notif-mult-devices/sendMessagesJava.png" alt="sendMessagesJava"    width="400"  >}}
+    {{< figure src="/attachments/howto9/mobile/native-mobile/implementation/notifications/notif-mult-devices/sendMessagesJava.png" alt="sendMessagesJava"    width="400"  >}}
 
 5. Go to **Product_NewEdit** and drag **ACT_SendProductToAllDevices** inside of that page's data view:
 
-    {{< figure src="/attachments/howto/mobile/native-mobile/implementation/notifications/notif-mult-devices/sendProductToAllButton.png" alt="sendProductToAllButton"    width="400"  >}}
+    {{< figure src="/attachments/howto9/mobile/native-mobile/implementation/notifications/notif-mult-devices/sendProductToAllButton.png" alt="sendProductToAllButton"    width="400"  >}}
 
 ### 3.2 Testing the Implementation
 
@@ -97,4 +97,4 @@ To send a push notification to all users, use the **SendMessageToUsers** Java ac
 
 ## 5 Troubleshooting Notification Issues
 
-If you run into issues, see the [Troubleshoot Notification Issues](/refguide/mobile/using-mobile-capabilities/push-notifications/notif-send-test/#troubleshoot) section of *Send Your First Test Push Notification*.
+If you run into issues, see the [Troubleshoot Notification Issues](/refguide9/mobile/using-mobile-capabilities/push-notifications/notif-send-test/#troubleshoot) section of *Send Your First Test Push Notification*.

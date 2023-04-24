@@ -1,12 +1,12 @@
 ---
 title: "Configuring String Concatenation"
 linktitle: "Configure String Concatenation"
-url: /refguide/string-concatenation/
+url: /refguide9/string-concatenation/
 weight: 110
 description: "Describes three examples as well as best practices on configuring string concatenation."
 tags: ["microflow", "logic", "string", "concatenation"]
 aliases:
-    - /howto/logic-business-rules/string-concatenation/
+    - /howto9/logic-business-rules/string-concatenation/
 ---
 
 ## 1 Introduction
@@ -31,7 +31,7 @@ An inefficient example is to check for text and create combined messages based o
 
 Reference this microflow:
 
-{{< figure src="/attachments/refguide/modeling/application-logic/string-concatenation/bco_contactperson_createfullname_inefficient.jpg" >}}
+{{< figure src="/attachments/refguide9/modeling/application-logic/string-concatenation/bco_contactperson_createfullname_inefficient.jpg" >}}
 
 ## 3 A Single Expression
 
@@ -57,7 +57,7 @@ else '')
 
 Reference this microflow:
 
-{{< figure src="/attachments/refguide/modeling/application-logic/string-concatenation/bco_contactperson_createfullname_hardtoread.jpg" >}}
+{{< figure src="/attachments/refguide9/modeling/application-logic/string-concatenation/bco_contactperson_createfullname_hardtoread.jpg" >}}
 
 ## 4 Best Practices for Expression Breakdown
 
@@ -71,4 +71,4 @@ trim(  $ContactPerson/Fullname + ' ' + trim(  $ContactPerson/Firstname ) )
 
 Reference this microflow:
 
-{{< figure src="/attachments/refguide/modeling/application-logic/string-concatenation/bco_contactperson_createfullname.jpg" >}}
+{{< figure src="/attachments/refguide9/modeling/application-logic/string-concatenation/bco_contactperson_createfullname.jpg" >}}

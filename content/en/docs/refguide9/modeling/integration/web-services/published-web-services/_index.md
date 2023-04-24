@@ -1,6 +1,6 @@
 ---
 title: "Published Web Services"
-url: /refguide/published-web-services/
+url: /refguide9/published-web-services/
 weight: 30
 tags: ["studio pro"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
@@ -8,7 +8,7 @@ tags: ["studio pro"]
 
 ## 1 Introduction
 
-This document describes published web services. If you're looking for specific information on the published web services screen, you can check the [Published web service](/refguide/published-web-service/) documentation.
+This document describes published web services. If you're looking for specific information on the published web services screen, you can check the [Published web service](/refguide9/published-web-service/) documentation.
 
 You can publish your own web services in a Mendix application. Published web services are based on [SOAP 1.1](https://www.w3.org/TR/2000/NOTE-SOAP-20000508/). These web services are made up of operations. Other applications can then call operations of this webservice and you can return a result. This result is based on a microflow that will be executed when the webservice is called.
 

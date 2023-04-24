@@ -1,11 +1,11 @@
 ---
 title: "Table (Document Template)"
-url: /refguide/table-document-template/
+url: /refguide9/table-document-template/
 aliases:
-    - /refguide/table-(document-template).html
-    - /refguide/Table+(document+template.html
-    - /refguide/table-(document-template)
-    - /refguide/Table+(document+template
+    - /refguide9/table-(document-template).html
+    - /refguide9/Table+(document+template.html
+    - /refguide9/table-(document-template)
+    - /refguide9/Table+(document+template
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
@@ -17,7 +17,7 @@ Tables can be used both inside and outside the data view or templategrid widgets
 
 {{% alert color="info" %}}
 
-{{< figure src="/attachments/refguide/modeling/resources/document-templates/918134.png" >}}
+{{< figure src="/attachments/refguide9/modeling/resources/document-templates/918134.png" >}}
 
 This table has four rows and three columns. The last row contains a data view with another table.
 
@@ -31,7 +31,7 @@ A column in a table.
 
 ### 2.2 Row
 
-A row in a table. See [Row (document template)](/refguide/row-document-template/).
+A row in a table. See [Row (document template)](/refguide9/row-document-template/).
 
 ## 3 Appearance Properties
 
@@ -55,8 +55,8 @@ Cell padding specifies the space between the content of the cell and the cell wa
 
 ### 3.4 Style
 
-For details, see [Style](/refguide/style/).
+For details, see [Style](/refguide9/style/).
 
 ## 4 Common Properties
 
-{{% snippet file="/static/_includes/refguide/name-property.md" %}}
+{{% snippet file="/static/_includes/refguide9/name-property.md" %}}

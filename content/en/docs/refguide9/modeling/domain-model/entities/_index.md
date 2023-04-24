@@ -1,6 +1,6 @@
 ---
 title: "Entities"
-url: /refguide/entities/
+url: /refguide9/entities/
 weight: 10
 tags: ["domain model", "entity", "entities", "attribute", "validation rule", "even handler", "access rule", "studio pro"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
@@ -12,9 +12,9 @@ An entity usually represents a class of real-world objects, such as customers, i
 
 For example, the object representing the CD 'Exodus' could be an instance of the entity 'CD'.
 
-{{< figure src="/attachments/refguide/modeling/domain-model/entities/example-entity.png" alt="Example of a CD entity" >}} 
+{{< figure src="/attachments/refguide9/modeling/domain-model/entities/example-entity.png" alt="Example of a CD entity" >}} 
 
-The properties or features of an entity are described using [attributes](/refguide/attributes/). An attribute represents a small piece of information about an entity, such as the name or birth date of a person.
+The properties or features of an entity are described using [attributes](/refguide9/attributes/). An attribute represents a small piece of information about an entity, such as the name or birth date of a person.
 
 For example, you have a collection of CDs like the one in the table below:
 
@@ -32,27 +32,27 @@ The entity type defines how the data is handled and there are two types:
 * [Persistable entity](#persistable-entity) 
 * [Non-persistable entity](#non-persistable-entity)
 
-{{< figure src="/attachments/refguide/modeling/domain-model/entities/type-of-entities.jpg" >}}
+{{< figure src="/attachments/refguide9/modeling/domain-model/entities/type-of-entities.jpg" >}}
 
 {{% alert color="info" %}}
-You can also use data sources from other applications in your app through the [Data Hub](/refguide/data-hub-pane/) pane. These data sources are represented in the domain model as *external entities* which are displayed as purple entity containers in the domain model.
+You can also use data sources from other applications in your app through the [Data Hub](/refguide9/data-hub-pane/) pane. These data sources are represented in the domain model as *external entities* which are displayed as purple entity containers in the domain model.
 
-For further information see [External Entities](/refguide/external-entities/).
+For further information see [External Entities](/refguide9/external-entities/).
 {{% /alert %}}
 
 ### 2.1 Persistable Entity {#persistable-entity}
 
-When an entity is declared persistable, a database table is created for the entity. These type of entities are colored *blue* in the domain model. For more information on persistable entities, see [Persistability](/refguide/persistability/).
+When an entity is declared persistable, a database table is created for the entity. These type of entities are colored *blue* in the domain model. For more information on persistable entities, see [Persistability](/refguide9/persistability/).
 
 ### 2.2 Non-Persistable Entity {#non-persistable-entity}
 
-Non-persistable entities are stored in the runtime memory and never get committed to the database. These type of entities are colored *orange* in the domain model. For more information on persistable entities, see [Persistability](/refguide/persistability/).
+Non-persistable entities are stored in the runtime memory and never get committed to the database. These type of entities are colored *orange* in the domain model. For more information on persistable entities, see [Persistability](/refguide9/persistability/).
 
 ## 3 Properties {#properties}
 
 An example of the entity properties is represented in the image below:
 
-{{< figure src="/attachments/refguide/modeling/domain-model/entities/entity-properties.png"   width="300"  >}}
+{{< figure src="/attachments/refguide9/modeling/domain-model/entities/entity-properties.png"   width="300"  >}}
 
 Entity properties consist of the following sections:
 
@@ -62,14 +62,14 @@ Entity properties consist of the following sections:
 * [System members](#system-members)
 
 {{% alert color="info" %}}
-For more information, see the [Properties](/refguide/external-entities/#properties) section of *External Entities*.
+For more information, see the [Properties](/refguide9/external-entities/#properties) section of *External Entities*.
 {{% /alert %}}
 
 ### 3.1 Access Rules Section {#access-rules}
 
 #### 3.1.1 Access Rules
 
-For more information on access rules, see [Access Rules](/refguide/access-rules/).
+For more information on access rules, see [Access Rules](/refguide9/access-rules/).
 
 ### 3.2 Documentation Section {#documentation}
 
@@ -88,7 +88,7 @@ The name has to be unique only within a module domain model. You can have two en
 #### 3.3.2 Export Level 
 
 {{% alert color="info" %}}
-**Export level** is only available for add-on and solution modules. For more information on types of modules, see the [Module Types](/refguide/modules/#module-types) section in *Modules*. 
+**Export level** is only available for add-on and solution modules. For more information on types of modules, see the [Module Types](/refguide9/modules/#module-types) section in *Modules*. 
 
 This property will not be shown for attributes if the entity is set to **Hidden**, all attributes will be hidden automatically and cannot be set to **Usable**.
 {{% /alert %}}
@@ -112,9 +112,9 @@ One important use of this feature is to derive functionality from the **System**
 
 For example, this property can be used in a situation where, you have a **Student** entity and a **Professor** entity, which have some generic properties. They both have a name, telephone number, and email address and can be a member of one or more courses. Both entities are *generalized* in the **Member** entity. Conversely, this means that the **Member** entity is *specialized* in the **Student** and **Professor** entities.
 
-{{< figure src="/attachments/refguide/modeling/domain-model/entities/917900.png" >}}
+{{< figure src="/attachments/refguide9/modeling/domain-model/entities/917900.png" >}}
 
-For more information, and a discussion on the relative merits of using generalization or associations, see [Generalization vs 1-1 Associations](/refguide/generalization-and-association/).
+For more information, and a discussion on the relative merits of using generalization or associations, see [Generalization vs 1-1 Associations](/refguide9/generalization-and-association/).
 
 #### 3.3.4 Image {#image}
 
@@ -122,7 +122,7 @@ The image property can be used to associate the entity with an image. In the dom
 
 #### 3.3.5 Persistable
 
-Define whether instances of this entity can be stored in the database. For more information, see [Persistability](/refguide/persistability/).
+Define whether instances of this entity can be stored in the database. For more information, see [Persistability](/refguide9/persistability/).
 
 ### 3.4 System Members Properties{#system-members}
 
@@ -178,15 +178,15 @@ This property defines whether the entity has the system association 'changedBy'.
 
 You can also edit an entity by opening the entity properties dialog box.
 
-{{< figure src="/attachments/refguide/modeling/domain-model/entities/example-entity.png" alt="Example of a CD entity" >}}
+{{< figure src="/attachments/refguide9/modeling/domain-model/entities/example-entity.png" alt="Example of a CD entity" >}}
 
 In addition to the properties described above, there are also tabs which allow you to edit the following:
 
-* [Attributes](/refguide/attributes/)
-* [Associations](/refguide/associations/)
-* [Validation Rules](/refguide/validation-rules/)
-* [Event Handlers](/refguide/event-handlers/)
-* [Indexes](/refguide/indexes/)
-* [Access Rules](/refguide/access-rules/)
+* [Attributes](/refguide9/attributes/)
+* [Associations](/refguide9/associations/)
+* [Validation Rules](/refguide9/validation-rules/)
+* [Event Handlers](/refguide9/event-handlers/)
+* [Indexes](/refguide9/indexes/)
+* [Access Rules](/refguide9/access-rules/)
 
 See the detailed pages for each of these tabs for more information.

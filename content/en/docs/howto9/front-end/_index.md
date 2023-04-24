@@ -1,6 +1,6 @@
 ---
 title: "Front End"
-url: /howto/front-end/
+url: /howto9/front-end/
 weight: 30
 description: "Presents a list of how-tos to create great user experiences and a user-friendly graphical user interface (GUI) for your app."
 no_list: false

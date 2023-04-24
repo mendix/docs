@@ -1,6 +1,6 @@
 ---
 title: "Monitoring and Troubleshooting"
-url: /howto/monitoring-troubleshooting/
+url: /howto9/monitoring-troubleshooting/
 weight: 110
 description: "Presents a list of how-tos about monitoring or troubleshooting Mendix applications."
 tags: ["monitoring", "troubleshooting"]

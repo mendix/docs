@@ -1,11 +1,11 @@
 ---
 title: "Static Image"
-url: /refguide/image/
+url: /refguide9/image/
 weight: 20
 tags: ["studio pro", "image", "image widget"]
 aliases:
-    - /refguide/image-property.html
-    - /refguide/image-property
+    - /refguide9/image-property.html
+    - /refguide9/image-property
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
@@ -15,43 +15,43 @@ The **Static image** widget can be used to show a static image on a page, layout
 
 For example, you can configure an image clicking which a page with customer details opens:
 
-{{< figure src="/attachments/refguide/modeling/pages/image-and-file-widgets/image/image-example.png" alt="Image Example" >}}
+{{< figure src="/attachments/refguide9/modeling/pages/image-and-file-widgets/image/image-example.png" alt="Image Example" >}}
 
 {{% alert color="info" %}}
-If you want to dynamically show different images based on data, you need to add [dynamic image](/refguide/image-viewer/) on your page.
+If you want to dynamically show different images based on data, you need to add [dynamic image](/refguide9/image-viewer/) on your page.
 {{% /alert %}}
 
 ## 2 Properties
 
 An example of static image properties is represented in the image below:
 
-{{< figure src="/attachments/refguide/modeling/pages/image-and-file-widgets/image/image-properties.png" alt="Image Properties"   width="300"  >}}
+{{< figure src="/attachments/refguide9/modeling/pages/image-and-file-widgets/image/image-properties.png" alt="Image Properties"   width="300"  >}}
 
 Static image properties consist of the following sections:
 
 * [Common](#common)
 * [Design Properties](#design-properties)
-* [Events](/refguide/events/)
+* [Events](/refguide9/events/)
 * [General](#general)
 * [Visibility](#visibility)
 
 ### 2.1 Common Section {#common}
 
-{{% snippet file="/static/_includes/refguide/common-section-link.md" %}}
+{{% snippet file="/static/_includes/refguide9/common-section-link.md" %}}
 
 ### 2.2 Design Properties Section {#design-properties}
 
-{{% snippet file="/static/_includes/refguide/design-section-link.md" %}} 
+{{% snippet file="/static/_includes/refguide9/design-section-link.md" %}} 
 
 ### 2.3 Events Section {#events}
 
-For information on the Events section and its properties, see [On Click Event and Events Section](/refguide/on-click-event/). 
+For information on the Events section and its properties, see [On Click Event and Events Section](/refguide9/on-click-event/). 
 
 ### 2.4 General Section {#general}
 
 #### 2.4.1 Image
 
-The file name that this widget shows. For more information on when to use images and supported formats, see [Images](/refguide/images/).
+The file name that this widget shows. For more information on when to use images and supported formats, see [Images](/refguide9/images/).
 
 #### 2.4.2 Width Unit
 
@@ -99,11 +99,11 @@ Default: *Yes*
 
 ### 2.5 Visibility Section {#visibility}
 
-{{% snippet file="/static/_includes/refguide/visibility-section-link.md" %}}
+{{% snippet file="/static/_includes/refguide9/visibility-section-link.md" %}}
 
 ## 3 Converting to a Dynamic Image
 
-You can convert a static image to a dynamic image that allows you to display dynamic data. For more information on dynamic image and its properties, see [Dynamic Image](/refguide/image-viewer/). 
+You can convert a static image to a dynamic image that allows you to display dynamic data. For more information on dynamic image and its properties, see [Dynamic Image](/refguide9/image-viewer/). 
 
 To convert an image widget into a dynamic image, do the following:
 
@@ -114,6 +114,6 @@ The **Static image** widget is converted to the dynamic image and you can config
 
 ## 4 Read More
 
-* [Page](/refguide/page/)
-* [Images, Videos, and Files](/refguide/image-and-file-widgets/)
-* [Properties Common in the Page Editor](/refguide/common-widget-properties/)
+* [Page](/refguide9/page/)
+* [Images, Videos, and Files](/refguide9/image-and-file-widgets/)
+* [Properties Common in the Page Editor](/refguide9/common-widget-properties/)

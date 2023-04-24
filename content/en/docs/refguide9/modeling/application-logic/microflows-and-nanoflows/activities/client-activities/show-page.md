@@ -1,11 +1,11 @@
 ---
 title: "Show Page"
-url: /refguide/show-page/
+url: /refguide9/show-page/
 weight: 50
 tags: ["studio pro", "show page", "client activity"]
 aliases:
-    - /refguide/Show+Page.html
-    - /refguide/Show+Page
+    - /refguide9/Show+Page.html
+    - /refguide9/Show+Page
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
@@ -14,7 +14,7 @@ This activity can be used in both **Microflows** and **Nanoflows**.
 {{% /alert %}}
 
 {{% alert color="warning" %}}
-This action is ignored and does not work when a microflow is called from an offline native or hybrid app. For more information, see the [Microflows](/refguide/mobile/building-efficient-mobile-apps/offlinefirst-data/best-practices/#microflows) section of *Offline-First Data*.
+This action is ignored and does not work when a microflow is called from an offline native or hybrid app. For more information, see the [Microflows](/refguide9/mobile/building-efficient-mobile-apps/offlinefirst-data/best-practices/#microflows) section of *Offline-First Data*.
 {{% /alert %}}
 
 ## 1 Introduction
@@ -23,13 +23,13 @@ With this activity, you can show a selected page to an end-user. Mendix apps run
 
 You can directly drag a page from the **App Explorer** into your microflow:
 
-{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/client-activities/show-page/show-page-from-app-explorer.png" >}}
+{{< figure src="/attachments/refguide9/modeling/application-logic/microflows-and-nanoflows/activities/client-activities/show-page/show-page-from-app-explorer.png" >}}
 
 ## 2 Properties
 
 There are two sets of properties for this activity, those in the dialog box on the left, and those in the properties pane on the right:
 
-{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/client-activities/show-page/show-page-properties.png" >}}
+{{< figure src="/attachments/refguide9/modeling/application-logic/microflows-and-nanoflows/activities/client-activities/show-page/show-page-properties.png" >}}
 
 The **Show page** properties pane consists of the following sections:
 
@@ -46,7 +46,7 @@ You can also open the dialog box by double-clicking the activity in the microflo
 
 ### 3.1 Page
 
-The [page](/refguide/page/) that is displayed to an end-user. If the page has parameters, the [Parameters](#parameters) section allows you to specify the which objects should be passed to the page.
+The [page](/refguide9/page/) that is displayed to an end-user. If the page has parameters, the [Parameters](#parameters) section allows you to specify the which objects should be passed to the page.
 
 To create a new page that **Show page** activity will show, click the **Select** button > **New**. Studio Pro will ask you whether you want to pass a variable as an argument to the new page. If you select a variable to pass, Studio Pro will automatically create a page parameter of that type and a data view to edit that object.
 
@@ -54,7 +54,7 @@ To create a new page that **Show page** activity will show, click the **Select**
 
 By default the title of the page is determined by the page title property of the page. You can replace this title with a custom title if necessary.
 
-This feature allows you to re-use the same page for the **New** and **Edit** buttons of a [data grid](/refguide/data-grid/). By simply setting the titles to, for example, *New Customer* and *Edit Customer*, you can save yourself the trouble of duplicating pages.
+This feature allows you to re-use the same page for the **New** and **Edit** buttons of a [data grid](/refguide9/data-grid/). By simply setting the titles to, for example, *New Customer* and *Edit Customer*, you can save yourself the trouble of duplicating pages.
 
 ### 3.3 Close Pages {#close-pages}
 
@@ -77,13 +77,13 @@ Often you need to have control of page history, for example to show the correct 
 
 ### 3.4 Parameters Section {#parameters}
 
-Depending on the selected page, you will see a list of its parameters. For each parameter, you can configure a variable or expression to specify which object should be passed to it. These objects are used by [data views](/refguide/data-view/) with a page parameter data source. If only one variable of the expected type for a certain parameter is available, that variable is automatically filled in.
+Depending on the selected page, you will see a list of its parameters. For each parameter, you can configure a variable or expression to specify which object should be passed to it. These objects are used by [data views](/refguide9/data-view/) with a page parameter data source. If only one variable of the expected type for a certain parameter is available, that variable is automatically filled in.
 
 ## 4 Common Section{#common}
 
-{{% snippet file="/static/_includes/refguide/microflow-common-section-link.md" %}}
+{{% snippet file="/static/_includes/refguide9/microflow-common-section-link.md" %}}
 
 ## 5 Read More
 
-* [Activities](/refguide/activities/)
-* [Native Navigation](/refguide/native-navigation/)
+* [Activities](/refguide9/activities/)
+* [Native Navigation](/refguide9/native-navigation/)

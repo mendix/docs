@@ -1,6 +1,6 @@
 ---
 title: "Anonymous Users"
-url: /refguide/anonymous-users/
+url: /refguide9/anonymous-users/
 weight: 40
 tags: ["studio pro", "anonymous users", "app security", "security"]
 ---
@@ -13,7 +13,7 @@ You can use anonymous users to allow end-users access your application without h
 
 Open **App Security** > the **Anonymous users** tab to access the properties:
 
-{{< figure src="/attachments/refguide/modeling/app-explorer/security/app-security/anonymous-users/anonymous-users-tab.png" >}}
+{{< figure src="/attachments/refguide9/modeling/app-explorer/security/app-security/anonymous-users/anonymous-users-tab.png" >}}
 
 The properties of anonymous users are described in the table below:
 
@@ -24,8 +24,8 @@ The properties of anonymous users are described in the table below:
 
 ## 3 Read More
 
-* [App Security](/refguide/app-security/)
-* [User Roles](/refguide/user-roles/)
-* [Administrator](/refguide/administrator/)
-* [Demo Users](/refguide/demo-users/)
-* [Password Policy](/refguide/password-policy/)
+* [App Security](/refguide9/app-security/)
+* [User Roles](/refguide9/user-roles/)
+* [Administrator](/refguide9/administrator/)
+* [Demo Users](/refguide9/demo-users/)
+* [Password Policy](/refguide9/password-policy/)

@@ -1,6 +1,6 @@
 ---
 title: "Event Handlers"
-url: /refguide/event-handlers/
+url: /refguide9/event-handlers/
 weight: 50
 tags: ["domain model", "entity", "event handler", "studio pro"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
@@ -26,17 +26,17 @@ If your handler relies on the event having already been applied to another objec
 
 For example, say your **Customer** entity has a **Postcode** attribute and you want to check that this is always valid. If there are multiple places where this can be changed, you can add a *Before Commit* event which calls a microflow **BCo_Customer_Postcode** which checks that the postcode is valid every time a Customer object is committed and prevents the object being committed if the postcode is invalid.
 
-{{< figure src="/attachments/refguide/modeling/domain-model/entities/event-handlers/customer-event-handlers.png" alt="Example of adding a before commit event handler to the Customer entity" >}}
+{{< figure src="/attachments/refguide9/modeling/domain-model/entities/event-handlers/customer-event-handlers.png" alt="Example of adding a before commit event handler to the Customer entity" >}}
 
-For more information on using event handlers for data validation, see [Setting Up Data Validation](/refguide/setting-up-data-validation/).
+For more information on using event handlers for data validation, see [Setting Up Data Validation](/refguide9/setting-up-data-validation/).
 
 ## 2 Properties
 
-You can add and edit event handlers for an entity from the [entity dialog box](/refguide/entities/#dialog-box).
+You can add and edit event handlers for an entity from the [entity dialog box](/refguide9/entities/#dialog-box).
 
 An example of the event handler properties is represented in the image below:
 
-{{< figure src="/attachments/refguide/modeling/domain-model/entities/event-handlers/event-handler-properties.png" >}}
+{{< figure src="/attachments/refguide9/modeling/domain-model/entities/event-handlers/event-handler-properties.png" >}}
 
 Event handler properties consist of the following sections:
 
@@ -55,8 +55,8 @@ Event handler properties consist of the following sections:
 
 | Value | Description |
 | --- | --- |
-| Create | The microflow is executed when an object of this entity is created. This happens when the user clicks **Create** on a grid or when an object is created in a microflow. In a [create](/refguide/create-object/) action in a microflow, an after create action is executed after the object is initialized with the attributes' default values, but before any change items specified in the action are applied. |
-| Commit | The microflow is executed when an object of this entity is committed. This happens when the user clicks **Save** on a page or when an object is committed in a microflow. For more information, see the [Security](/refguide/nanoflows/#security) section of *Nanoflows*. |
+| Create | The microflow is executed when an object of this entity is created. This happens when the user clicks **Create** on a grid or when an object is created in a microflow. In a [create](/refguide9/create-object/) action in a microflow, an after create action is executed after the object is initialized with the attributes' default values, but before any change items specified in the action are applied. |
+| Commit | The microflow is executed when an object of this entity is committed. This happens when the user clicks **Save** on a page or when an object is committed in a microflow. For more information, see the [Security](/refguide9/nanoflows/#security) section of *Nanoflows*. |
 | Delete | The microflow is executed when an object of this entity is deleted. This happens when a user clicks **Delete** in a grid or when an object is deleted in a microflow. |
 | Rollback | The microflow is executed when an object of this entity is rolled back. This happens when a user clicks **Cancel** on a page or when an object is rolled back in a microflow. |
 
@@ -98,5 +98,5 @@ Default: *Yes*
 
 ## 3 Read More
 
-* [How to Denormalize Data to Improve Performance](/howto/data-models/denormalize-data-to-improve-performance/)
-* [Setting Up Data Validation](/refguide/setting-up-data-validation/)
+* [How to Denormalize Data to Improve Performance](/howto9/data-models/denormalize-data-to-improve-performance/)
+* [Setting Up Data Validation](/refguide9/setting-up-data-validation/)

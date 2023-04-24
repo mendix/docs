@@ -1,6 +1,6 @@
 ---
 title: "Extensibility"
-url: /howto/extensibility/
+url: /howto9/extensibility/
 description: "Presents a selection of how-tos that explain how to use connectors and adapters from the Marketplace."
 weight: 80
 no_list: false

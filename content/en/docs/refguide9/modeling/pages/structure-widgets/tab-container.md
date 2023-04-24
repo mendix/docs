@@ -1,11 +1,11 @@
 ---
 title: "Tab Container"
-url: /refguide/tab-container/
+url: /refguide9/tab-container/
 weight: 40
 tags: ["studio pro", "tab container", "tab page", "container widget", "widget"]
 aliases:
-    - /refguide/tab-page.html
-    - /refguide/tab-page
+    - /refguide9/tab-page.html
+    - /refguide9/tab-page
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 #The anchor <tab-page> below is mapped, so it should not be removed or changed.
 ---
@@ -14,13 +14,13 @@ aliases:
 
 Tab containers are used to show information categorized into tabs. This can be very useful if the amount of information that has to be displayed is larger than the amount of space on the screen.
 
-{{< figure src="/attachments/refguide/modeling/pages/structure-widgets/tab-container/tab-container.png" alt="Tab Container" >}}
+{{< figure src="/attachments/refguide9/modeling/pages/structure-widgets/tab-container/tab-container.png" alt="Tab Container" >}}
 
 ## 2 Properties
 
 An example of tab container properties is represented in the image below:
 
-{{< figure src="/attachments/refguide/modeling/pages/structure-widgets/tab-container/tab-container-properties.png" alt="Tab Container Properties"   width="250"  >}}
+{{< figure src="/attachments/refguide9/modeling/pages/structure-widgets/tab-container/tab-container-properties.png" alt="Tab Container Properties"   width="250"  >}}
 
 Tab container properties consist of the following sections:
 
@@ -30,15 +30,15 @@ Tab container properties consist of the following sections:
 
 ### 2.1 Common Section {#common}
 
-{{% snippet file="/static/_includes/refguide/common-section-link.md" %}}
+{{% snippet file="/static/_includes/refguide9/common-section-link.md" %}}
 
 ### 2.2 Design Properties Section {#design-properties}
 
-{{% snippet file="/static/_includes/refguide/design-section-link.md" %}} 
+{{% snippet file="/static/_includes/refguide9/design-section-link.md" %}} 
 
 ### 2.3 Visibility Section {#visibility}
 
-{{% snippet file="/static/_includes/refguide/visibility-section-link.md" %}}
+{{% snippet file="/static/_includes/refguide9/visibility-section-link.md" %}}
 
 ## 3 Tab Page {#tab-page}
 
@@ -64,6 +64,6 @@ This property is not supported on native mobile pages.
 
 ## 4 Read More
 
-* [Page](/refguide/page/)
-* [Structure](/refguide/structure-widgets/)
-* [Properties Common in the Page Editor](/refguide/common-widget-properties/)
+* [Page](/refguide9/page/)
+* [Structure](/refguide9/structure-widgets/)
+* [Properties Common in the Page Editor](/refguide9/common-widget-properties/)

@@ -1,6 +1,6 @@
 ---
 title: "Language Settings"
-url: /refguide/language-settings/
+url: /refguide9/language-settings/
 weight: 50
 tags: ["studio pro", "translation", "languages", "translatable text", "add language", "date format", "completeness"]
 ---
@@ -9,12 +9,12 @@ tags: ["studio pro", "translation", "languages", "translatable text", "add langu
 
 Mendix is designed to be used by users in multiple languages. The **Languages** tab of the **App Settings** allows you to select which languages your app will support.
 
-{{< figure src="/attachments/refguide/modeling/menus/translatable-texts/language-settings/app-settings.png" width="550px">}}
+{{< figure src="/attachments/refguide9/modeling/menus/translatable-texts/language-settings/app-settings.png" width="550px">}}
 
 You can reach this tab in two ways:
 
 1. Select the menu option **Language > Language Settings…**.
-2. Open the **App{Name} > Settings** dialog box from the [App Explorer](/refguide/app-explorer/) and select the **Language** tab.
+2. Open the **App{Name} > Settings** dialog box from the [App Explorer](/refguide9/app-explorer/) and select the **Language** tab.
 
 ## 2 Setting Default Language
 
@@ -31,7 +31,7 @@ The initial default language is *English, United States*.
 
 You can add as many languages as you like from the list of supported languages by clicking **Add**, selecting the desired language, and clicking **OK**.
 
-{{< figure src="/attachments/refguide/modeling/menus/translatable-texts/language-settings/add-language.png" width="500px">}}
+{{< figure src="/attachments/refguide9/modeling/menus/translatable-texts/language-settings/add-language.png" width="500px">}}
 
 Most languages will be added with an empty dictionary, although some translations have already been set up in the Dutch dictionary. 
 
@@ -39,11 +39,11 @@ Most languages will be added with an empty dictionary, although some translation
 
 You can set each language in your app to have additional settings.
 
-{{< figure src="/attachments/refguide/modeling/menus/translatable-texts/language-settings/edit-language.png" width="550px" alt="Edit Language" >}}
+{{< figure src="/attachments/refguide9/modeling/menus/translatable-texts/language-settings/edit-language.png" width="550px" alt="Edit Language" >}}
 
 ### 4.1 Check Completeness
 
-If you check the **Check completeness** box, you will get a warning (or error) message in the [Errors pane](/refguide/errors-pane/) for every text which has no entry in this language's dictionary.
+If you check the **Check completeness** box, you will get a warning (or error) message in the [Errors pane](/refguide9/errors-pane/) for every text which has no entry in this language's dictionary.
 
 If this is the default language, the **Check completeness** box will be checked and you will not be able to uncheck it.
 
@@ -59,7 +59,7 @@ Type a format string in the relevant box and you will see an example of how a da
 
 Click **Edit…** to open a dialog box which will provide a full reference for the format string:
 
-{{< figure src="/attachments/refguide/modeling/menus/translatable-texts/language-settings/date-format.png" width="550px" alt="Date edit dialog" >}}
+{{< figure src="/attachments/refguide9/modeling/menus/translatable-texts/language-settings/date-format.png" width="550px" alt="Date edit dialog" >}}
 
 ## 5 List of Supported Languages {#supported-languages}
 

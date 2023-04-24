@@ -1,6 +1,6 @@
 ---
 title: "OQL UPPER"
-url: /refguide/oql-upper/
+url: /refguide9/oql-upper/
 tags: ["studio pro"]
 ---
 

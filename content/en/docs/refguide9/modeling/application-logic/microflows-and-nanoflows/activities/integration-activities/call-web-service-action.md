@@ -1,6 +1,6 @@
 ---
 title: "Call Web Service"
-url: /refguide/call-web-service-action/
+url: /refguide9/call-web-service-action/
 tags: ["studio pro", "integration activity", "call web service"]
 weight: 20
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
@@ -12,13 +12,13 @@ This activity can only be used in **Microflows**.
 
 ## 1 Introduction
 
-The **Call web service** activity can be used to call one of the [imported web service](/refguide/consumed-web-services/) operations. You can specify whether or not to use authentication, what the request should look like and how the response of the web service should be handled.
+The **Call web service** activity can be used to call one of the [imported web service](/refguide9/consumed-web-services/) operations. You can specify whether or not to use authentication, what the request should look like and how the response of the web service should be handled.
 
 ## 2 Properties
 
 An example of call web service properties is represented in the image below:
 
-{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/integration-activities/call-web-service-action/properties.png" alt="call web service properties" >}}
+{{< figure src="/attachments/refguide9/modeling/application-logic/microflows-and-nanoflows/activities/integration-activities/call-web-service-action/properties.png" alt="call web service properties" >}}
 
 There are two sets of properties for this activity, those in the dialog box on the left, and those in the properties pane on the right.
 
@@ -45,7 +45,7 @@ The properties dialog box consists of five tabs:
 
 ## 4 Operation Tab{#operation}
 
-{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/integration-activities/call-web-service-action/operation-tab.png" >}}
+{{< figure src="/attachments/refguide9/modeling/application-logic/microflows-and-nanoflows/activities/integration-activities/call-web-service-action/operation-tab.png" >}}
 
 ### 4.1 Operation
 
@@ -65,7 +65,7 @@ When calling a web service using a call web service activity, the location of th
 
 ### 4.3 Location
 
-**Location** defines the address of the web service if you override the location. The location needs to be entered using an [expression](/refguide/expressions/) which results in a valid URL string.
+**Location** defines the address of the web service if you override the location. The location needs to be entered using an [expression](/refguide9/expressions/) which results in a valid URL string.
 
 ### 4.4 Use Timeout on Request
 
@@ -95,7 +95,7 @@ Setting this setting to yes can greatly decrease performance!
 When consuming a WSDL that uses encoding, turning on validation will lead to a consistency error, because it is not WS-I compliant.
 {{% /alert %}}
 
-Schema validation is not supported when you configure the [consumed web service](/refguide/consumed-web-service/) to send binary data as attachments.
+Schema validation is not supported when you configure the [consumed web service](/refguide9/consumed-web-service/) to send binary data as attachments.
 
 Default: *No*
 
@@ -125,13 +125,13 @@ The options are:
 When you select **Override**, you can configure which client certificate will be used. Click **Edit** to specify the **Client certificate identifier**. This identifier can be set in different places, depending on where you deploy the app:
 
 * When you deploy the app in the Mendix cloud, set the **Client certificate identifier** to the desired **WEB SERVICE CALL NAME** when [pinning a client certificate](/developerportal/deploy/certificates/#outgoing-client-certificates).
-* When you deploy the app elsewhere, the identifier is set in the custom setting [ClientCertificateUsages](/refguide/custom-settings/#CACertificates). For testing locally, this can be set as a custom server setting in a [Configuration](/refguide/configuration/#custom).
+* When you deploy the app elsewhere, the identifier is set in the custom setting [ClientCertificateUsages](/refguide9/custom-settings/#CACertificates). For testing locally, this can be set as a custom server setting in a [Configuration](/refguide9/configuration/#custom).
 
 When this identifier is not set for the environment where your app is deployed (either not pinned or not present in *ClientCertificateUsages*), the default settings will be used (as if **Use app settings** were selected).
 
 ## 5 HTTP Headers Tab{#http-headers}
 
-{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/integration-activities/call-web-service-action/http-headers.png" >}}
+{{< figure src="/attachments/refguide9/modeling/application-logic/microflows-and-nanoflows/activities/integration-activities/call-web-service-action/http-headers.png" >}}
 
 ### 5.1 Use HTTP Authentication
 
@@ -139,11 +139,11 @@ Use HTTP authentication defines whether the basic authentication should be used.
 
 ### 5.2 User Name
 
-User name defines the user name that will be used to authenticate over HTTP. The user name needs to be entered using [expressions](/refguide/expressions/). The microflow expression should result in a string.
+User name defines the user name that will be used to authenticate over HTTP. The user name needs to be entered using [expressions](/refguide9/expressions/). The microflow expression should result in a string.
 
 ### 5.3 Password
 
-Password defines the password that will be used to authenticate over HTTP. The password needs to be entered using [expressions](/refguide/expressions/). The microflow expression should result in a string.
+Password defines the password that will be used to authenticate over HTTP. The password needs to be entered using [expressions](/refguide9/expressions/). The microflow expression should result in a string.
 
 ### 5.4 Custom HTTP Headers
 
@@ -155,21 +155,21 @@ For the request header, Studio Pro provides some common XML structures in a drop
 
 ## 7 SOAP Request Body Tab {#request-body}
 
-{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/integration-activities/call-web-service-action/soap-request-body-tab.png" >}}
+{{< figure src="/attachments/refguide9/modeling/application-logic/microflows-and-nanoflows/activities/integration-activities/call-web-service-action/soap-request-body-tab.png" >}}
 
 The XML for the request parts (header and body) can be generated in several ways, chosen through the dropdown at the top of the page, that are described in the following sections.
 
 ### 7.1 Export Mapping for Entire Request
 
-Using this option, a single [Export Mapping](/refguide/export-mappings/) can be used to generate the XML for the request part. You can choose the export mapping to use for the request part and, if applicable, the object or list that you want to use as parameter for the mapping.
+Using this option, a single [Export Mapping](/refguide9/export-mappings/) can be used to generate the XML for the request part. You can choose the export mapping to use for the request part and, if applicable, the object or list that you want to use as parameter for the mapping.
 
 ### 7.2 Simple Expressions for Each Request Parameter
 
 This option for request parts can be used when all children of the XML element of the request part occur at most once and are primitive values. If that is not the case, this option is disabled and cannot be used.
 
-Using this option you need to supply an argument value for all elements of a primitive type (parameters). Argument values need to be entered using [expressions](/refguide/expressions/) resulting in the same data type as the parameter.
+Using this option you need to supply an argument value for all elements of a primitive type (parameters). Argument values need to be entered using [expressions](/refguide9/expressions/) resulting in the same data type as the parameter.
 
-{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/integration-activities/call-web-service-action/req-param.png" >}}
+{{< figure src="/attachments/refguide9/modeling/application-logic/microflows-and-nanoflows/activities/integration-activities/call-web-service-action/req-param.png" >}}
 
 For primitive parameters (both optional and nillable) that do not have an export mapping, you can choose to send empty values by setting **Send empty values** to **Yes, as null**.
 
@@ -193,17 +193,17 @@ The template for the XML request can contain parameters that are written as a nu
 
 #### 7.4.2 Parameters
 
-For each parameter in the template, you can specify its value using a [microflow expression](/refguide/expressions/) resulting in a string value. This value will be inserted at the position of the parameter.
+For each parameter in the template, you can specify its value using a [microflow expression](/refguide9/expressions/) resulting in a string value. This value will be inserted at the position of the parameter.
 
 ## 8 SOAP Response Tab{#response}
 
-{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/integration-activities/call-web-service-action/soap-response-tab.png" >}}
+{{< figure src="/attachments/refguide9/modeling/application-logic/microflows-and-nanoflows/activities/integration-activities/call-web-service-action/soap-response-tab.png" >}}
 
-If the data type is a complex XML structure it can be mapped to entities using a [Import Mapping](/refguide/import-mappings/). If it is primitive data, it can be stored in a variable immediately. The response does not have to be used though; it can also be ignored if you are not interested in it.
+If the data type is a complex XML structure it can be mapped to entities using a [Import Mapping](/refguide9/import-mappings/). If it is primitive data, it can be stored in a variable immediately. The response does not have to be used though; it can also be ignored if you are not interested in it.
 
 ### 8.1 Mapping
 
-If you are using complex XML structures you can choose the [Import Mapping](/refguide/import-mappings/) that will be used to transform the XML into objects.
+If you are using complex XML structures you can choose the [Import Mapping](/refguide9/import-mappings/) that will be used to transform the XML into objects.
 
 ### 8.2 If No Object Was Found
 
@@ -219,9 +219,9 @@ Indicates whether the resulting objects should be committed to the database, and
 
 | Option | Description |
 | --- | --- |
-| Yes | The objects are saved in the database and the [event handlers](/refguide/event-handlers/) are triggered. |
-| Yes without events | The objects are saved in the database, but the [event handlers](/refguide/event-handlers/) are not triggered (default). |
-| No | The objects are created without being saved in the database. You will need a [commit action](/refguide/committing-objects/) to save them. |
+| Yes | The objects are saved in the database and the [event handlers](/refguide9/event-handlers/) are triggered. |
+| Yes without events | The objects are saved in the database, but the [event handlers](/refguide9/event-handlers/) are not triggered (default). |
+| No | The objects are created without being saved in the database. You will need a [commit action](/refguide9/committing-objects/) to save them. |
 
 ### 8.5 Range (If the Mapping Returns a List)
 
@@ -247,4 +247,4 @@ The name for the output that will hold the result of the operation.
 
 ## 9 Common Section{#common}
 
-{{% snippet file="/static/_includes/refguide/microflow-common-section-link.md" %}}
+{{% snippet file="/static/_includes/refguide9/microflow-common-section-link.md" %}}

@@ -1,6 +1,6 @@
 ---
 title: "Container"
-url: /refguide/container/
+url: /refguide9/container/
 weight: 20
 tags: ["studio pro", "container", "structure", "widget"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
@@ -10,7 +10,7 @@ tags: ["studio pro", "container", "structure", "widget"]
 
 A container is a layout element that can be used to simultaneously style, hide, drag, or delete a group of widgets placed in it:
 
-{{< figure src="/attachments/refguide/modeling/pages/structure-widgets/container/container.png" alt="Container Example" >}}
+{{< figure src="/attachments/refguide9/modeling/pages/structure-widgets/container/container.png" alt="Container Example" >}}
 
 In a browser, it is rendered as a simple `div` element by default. It is also possible to render a container as one of HTML5 semantic elements (for example, `section`, `main`, `article`, `nav`).
 
@@ -18,7 +18,7 @@ In a browser, it is rendered as a simple `div` element by default. It is also po
 
 An example of container properties is represented in the image below:
 
-{{< figure src="/attachments/refguide/modeling/pages/structure-widgets/container/container-properties.png" alt="Container Properties"   width="300"  >}}
+{{< figure src="/attachments/refguide9/modeling/pages/structure-widgets/container/container-properties.png" alt="Container Properties"   width="300"  >}}
 
 Container properties consist of the following sections:
 
@@ -40,11 +40,11 @@ This property specifies whether to hide the container from screen readers or not
 
 ### 2.2 Common Section {#common}
 
-{{% snippet file="/static/_includes/refguide/common-section-link.md" %}}
+{{% snippet file="/static/_includes/refguide9/common-section-link.md" %}}
 
 ### 2.3 Design Properties Section{#design-properties}
 
-{{% snippet file="/static/_includes/refguide/design-section-link.md" %}} 
+{{% snippet file="/static/_includes/refguide9/design-section-link.md" %}} 
 
 ### 2.4 General Section {#general}
 
@@ -73,14 +73,14 @@ The **Render mode** determines which HTML5 tag will be used to show the containe
 
 The **On-click** property specifies the action that will be executed when the user clicks the container (either with their mouse pointer or by pressing the <kbd>Enter</kbd> or <kbd>Space</kbd> keys when the container is in focus).
 
-{{% snippet file="/static/_includes/refguide/events-section-link.md" %}}
+{{% snippet file="/static/_includes/refguide9/events-section-link.md" %}}
 
 ### 2.6 Visibility Section {#visibility}
 
-{{% snippet file="/static/_includes/refguide/visibility-section-link.md" %}}
+{{% snippet file="/static/_includes/refguide9/visibility-section-link.md" %}}
 
 ## 4 Read More
 
-* [Page](/refguide/page/)
-* [Structure](/refguide/structure-widgets/)
-* [Properties Common in the Page Editor](/refguide/common-widget-properties/)
+* [Page](/refguide9/page/)
+* [Structure](/refguide9/structure-widgets/)
+* [Properties Common in the Page Editor](/refguide9/common-widget-properties/)

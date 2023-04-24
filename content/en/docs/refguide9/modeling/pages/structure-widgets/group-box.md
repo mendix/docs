@@ -1,6 +1,6 @@
 ---
 title: "Group Box"
-url: /refguide/group-box/
+url: /refguide9/group-box/
 weight: 30
 tags: ["studio pro", "group box", "container widget", "widget"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
@@ -12,13 +12,13 @@ tags: ["studio pro", "group box", "container widget", "widget"]
 
 A group box can be used to visually group related widgets together. Group boxes are displayed as a frame around nested widgets with an optional header. Group boxes can be configured to collapse and expand dynamically.
 
-{{< figure src="/attachments/refguide/modeling/pages/structure-widgets/group-box/group-box.jpg" >}}
+{{< figure src="/attachments/refguide9/modeling/pages/structure-widgets/group-box/group-box.jpg" >}}
 
 ## 2 Properties
 
 An example of group box properties is represented in the image below:
 
-{{< figure src="/attachments/refguide/modeling/pages/structure-widgets/group-box/group-box-properties.png" alt="Group Box Properties"   width="300"  >}}
+{{< figure src="/attachments/refguide9/modeling/pages/structure-widgets/group-box/group-box-properties.png" alt="Group Box Properties"   width="300"  >}}
 
 Group box properties consist of the following sections:
 
@@ -29,11 +29,11 @@ Group box properties consist of the following sections:
 
 ### 2.1 Common Section {#common}
 
-{{% snippet file="/static/_includes/refguide/common-section-link.md" %}}
+{{% snippet file="/static/_includes/refguide9/common-section-link.md" %}}
 
 ### 2.2 Design Properties Section {#design-properties}
 
-{{% snippet file="/static/_includes/refguide/design-section-link.md" %}} 
+{{% snippet file="/static/_includes/refguide9/design-section-link.md" %}} 
 
 ### 2.3 General Section {#general}
 
@@ -61,10 +61,10 @@ Possible values of this property are the following:
 
 ### 2.4 Visibility Section {#visibility}
 
-{{% snippet file="/static/_includes/refguide/visibility-section-link.md" %}}
+{{% snippet file="/static/_includes/refguide9/visibility-section-link.md" %}}
 
 ## 3 Read More
 
-* [Page](/refguide/page/)
-* [Structure](/refguide/structure-widgets/)
-* [Properties Common in the Page Editor](/refguide/common-widget-properties/)
+* [Page](/refguide9/page/)
+* [Structure](/refguide9/structure-widgets/)
+* [Properties Common in the Page Editor](/refguide9/common-widget-properties/)

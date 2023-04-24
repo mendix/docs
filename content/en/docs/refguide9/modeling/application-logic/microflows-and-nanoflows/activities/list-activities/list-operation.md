@@ -1,6 +1,6 @@
 ---
 title: "List Operation"
-url: /refguide/list-operation/
+url: /refguide9/list-operation/
 weight: 4
 tags: ["studio pro"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
@@ -12,7 +12,7 @@ This activity can be used in both **Microflows** and **Nanoflows**.
 
 ## 1 Introduction
 
-The **List operation** activity can perform various actions on a list. The result of the action is returned as a new list in contrast to the [Change list](/refguide/change-list/) activity.
+The **List operation** activity can perform various actions on a list. The result of the action is returned as a new list in contrast to the [Change list](/refguide9/change-list/) activity.
 
 The actions which can be performed are:
 
@@ -36,7 +36,7 @@ See below for details on these actions.
 
 An example of list operation properties is represented in the image below:
 
-{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/list-activities/list-operation/list-operation-properties.png" alt="list operation properties" >}}
+{{< figure src="/attachments/refguide9/modeling/application-logic/microflows-and-nanoflows/activities/list-activities/list-operation/list-operation-properties.png" alt="list operation properties" >}}
 
 There are two sets of properties for this activity, those in the dialog box on the left, and those in the properties pane on the right.
 
@@ -119,4 +119,4 @@ This is the name of the resulting List, Object, or Boolean variable. The result 
 
 ## 4 Common Section {#common}
 
-{{% snippet file="/static/_includes/refguide/microflow-common-section-link.md" %}}
+{{% snippet file="/static/_includes/refguide9/microflow-common-section-link.md" %}}

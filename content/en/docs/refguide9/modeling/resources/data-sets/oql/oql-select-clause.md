@@ -1,6 +1,6 @@
 ---
 title: "OQL Select Clause"
-url: /refguide/oql-select-clause/
+url: /refguide9/oql-select-clause/
 tags: ["studio pro"]
 ---
 
@@ -31,7 +31,7 @@ SELECT [ DISTINCT ]
 
 ### 2.3 entity_name.*and from_alias.*
 
-`entity_name.*` and `from_alias.*` specify that all attributes of the specified entity or expression of the `FROM` clause should be returned. `entity_name` can be optionally put in double quotes. If the entity name is a reserved OQL word (like `Order` or `Group`), double quotes are mandatory. For more information, see the [Reserved Words](/refguide/oql/#reserved-oql-words) section in *OQL*.
+`entity_name.*` and `from_alias.*` specify that all attributes of the specified entity or expression of the `FROM` clause should be returned. `entity_name` can be optionally put in double quotes. If the entity name is a reserved OQL word (like `Order` or `Group`), double quotes are mandatory. For more information, see the [Reserved Words](/refguide9/oql/#reserved-oql-words) section in *OQL*.
 
 ```sql {linenos=false}
 SELECT Sales.Customer.* FROM Sales.Customer
@@ -53,7 +53,7 @@ SELECT "Sales.Order".* FROM "Sales.Order"
 SELECT Name AS CustomerName, LastName AS CustomerLastName, Birthday, Category FROM Sales.Customer
 ```
 
-For more information, see [OQL Expressions](/refguide/oql-expressions/).
+For more information, see [OQL Expressions](/refguide9/oql-expressions/).
 
 ### 2.5 column_alias
 

@@ -1,6 +1,6 @@
 ---
 title: "Integration"
-url: /refguide/integration/
+url: /refguide9/integration/
 category: "App Modeling"
 weight: 110
 no_list: false

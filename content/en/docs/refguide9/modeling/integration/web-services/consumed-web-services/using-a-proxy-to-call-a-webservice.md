@@ -1,6 +1,6 @@
 ---
 title: "Using a Proxy to Call a Web Service"
-url: /refguide/using-a-proxy-to-call-a-webservice/
+url: /refguide9/using-a-proxy-to-call-a-webservice/
 ---
 
 ## 1 Introduction

@@ -1,13 +1,13 @@
 ---
 title: "Microflow Source"
-url: /refguide/microflow-source/
+url: /refguide9/microflow-source/
 tags: ["studio pro", "microflow source", "data source"]
 weight: 40
 ---
 
 ## 1 Introduction
 
-In most cases, you use the **Database**, **XPath**, or **Association** data sources to fill a [data widget](/refguide/data-widgets/). For example, if the properties of a data grid require an object of an entity selected in the data grid, the data grid gets its objects from a database query. Another example is that a nested template grid can retrieve its objects over an association. However, sometimes the target objects need to adhere to very specific criteria, or different objects are shown under different circumstances that cannot be handled by an [XPath](/refguide/xpath-constraints/). In these situations a **Microflow** data source may be required.
+In most cases, you use the **Database**, **XPath**, or **Association** data sources to fill a [data widget](/refguide9/data-widgets/). For example, if the properties of a data grid require an object of an entity selected in the data grid, the data grid gets its objects from a database query. Another example is that a nested template grid can retrieve its objects over an association. However, sometimes the target objects need to adhere to very specific criteria, or different objects are shown under different circumstances that cannot be handled by an [XPath](/refguide9/xpath-constraints/). In these situations a **Microflow** data source may be required.
 
 When a data widget with a microflow data source is displayed in the browser or refreshed, it runs the designated microflow and displays the return value. The manner in which the objects are acquired in the microflow is entirely up to you, which allows for unlimited control over what objects to return.
 
@@ -21,17 +21,17 @@ When **Microflow** is selected as the data source, this is regarded as "indirect
 
 In this scenario, you have a data grid that needs to display a list of potential orders based on the order type:
 
-{{< figure src="/attachments/refguide/modeling/pages/data-widgets/data-sources/microflow-source/data-grid-microflow-source.jpg" alt="Microflow Data Source for a Data Grid"   width="400"  >}}
+{{< figure src="/attachments/refguide9/modeling/pages/data-widgets/data-sources/microflow-source/data-grid-microflow-source.jpg" alt="Microflow Data Source for a Data Grid"   width="400"  >}}
 
 If the **OrderType** of the **Order** entity is set to **Cars**, then the data grid should display all the **Products** for which the Boolean **Motorized** is set to true. If the **OrderType** is **Bicycles**, only objects for which **Motorized** is set to false need be shown. Finally, if **OrderType** is empty, the data grid should remain empty.
 
-{{< figure src="/attachments/refguide/modeling/pages/data-widgets/data-sources/microflow-source/entities-example.jpg" alt="Entities Example" >}}
+{{< figure src="/attachments/refguide9/modeling/pages/data-widgets/data-sources/microflow-source/entities-example.jpg" alt="Entities Example" >}}
 
 Because of the mismatch in attribute types, this cannot be constrained by XPath, so a microflow data source is required. 
 
 The microflow for this scenario should look like this:
 
-{{< figure src="/attachments/refguide/modeling/pages/data-widgets/data-sources/microflow-source/microflow-nanoflow-example.jpg" alt="Microflow Example" >}}
+{{< figure src="/attachments/refguide9/modeling/pages/data-widgets/data-sources/microflow-source/microflow-nanoflow-example.jpg" alt="Microflow Example" >}}
 
 This microflow does the following:
 
@@ -59,4 +59,4 @@ This duplicates the [Microflow](#microflow) specified above.
 
 ## 4 Read More
 
-* [Data Containers](/refguide/data-widgets/)
+* [Data Containers](/refguide9/data-widgets/)

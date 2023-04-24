@@ -1,6 +1,6 @@
 ---
 title: "Mobile Accessibility"
-url: /refguide/mobile/using-mobile-capabilities/mobile-accessibility/
+url: /refguide9/mobile/using-mobile-capabilities/mobile-accessibility/
 weight: 87
 description: "This guide allows you to customize accessibility for native mobile applications."
 tags: ["accessibility", "JavaScript", "native", "mobile"]
@@ -17,7 +17,7 @@ This guide only applies to native mobile apps.
 Before starting this guide, make sure you have completed the following prerequisites:
 
 * Install Mendix Studio Pro version **9.22.0** or above
-* Complete the [Prerequisites](/refguide/mobile/distributing-mobile-apps/building-native-apps/deploying-native-app/#prerequisites) section of *Deploy Your First Mendix Native Mobile App*
+* Complete the [Prerequisites](/refguide9/mobile/distributing-mobile-apps/building-native-apps/deploying-native-app/#prerequisites) section of *Deploy Your First Mendix Native Mobile App*
 * Make sure you are using [Make It Native 9 app](/releasenotes/mobile/make-it-native-parent/)
 
 ## 3 Setting up Accessibility for Mendix Native Widgets
@@ -46,7 +46,7 @@ For iOS, users can enable or disable hints through the device's VoiceOver settin
 
 The native button widget is accessible by default and the screen reader caption will match the button's caption by default. You can override that through the button's properties:
 
-{{< figure src="/attachments/howto/mobile/native-mobile/implementation/mobile-accessibility/buttonAccessibility.png" alt="accessible button"   width="350"  >}}
+{{< figure src="/attachments/howto9/mobile/native-mobile/implementation/mobile-accessibility/buttonAccessibility.png" alt="accessible button"   width="350"  >}}
 
 ### 3.3 Testing Screen Reader Accessibility
 

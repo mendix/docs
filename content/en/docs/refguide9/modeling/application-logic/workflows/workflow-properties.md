@@ -1,13 +1,13 @@
 ---
 title: "Workflow Properties"
-url: /refguide/workflow-properties/
+url: /refguide9/workflow-properties/
 weight: 10
 tags: ["workflow", "workflows", "workflow properties", "Studio Pro"]
 ---
 
 ## 1 Introduction
 
-This document describes workflow properties. For details on what workflows are for and what kind of elements you can use there, see [Workflows](/refguide/workflows/).
+This document describes workflow properties. For details on what workflows are for and what kind of elements you can use there, see [Workflows](/refguide9/workflows/).
 
 ## 2 Workflow Properties
 
@@ -22,7 +22,7 @@ Workflow properties consist of the following sections:
 
 ### 2.1 Admin Page Section {#admin-page} 
 
-**Override admin page** is an optional page used for displaying an instance of the workflow to the workflow admin. This overrides a generic page used to display any workflow instances in the app, for example, when you have a **Show workflow admin page** set as an [on-click event](/refguide/on-click-event/#show-workflow-page) or as a [microflow action](/refguide/show-workflow-page/) and would like to override the page selected for this event/action. 
+**Override admin page** is an optional page used for displaying an instance of the workflow to the workflow admin. This overrides a generic page used to display any workflow instances in the app, for example, when you have a **Show workflow admin page** set as an [on-click event](/refguide9/on-click-event/#show-workflow-page) or as a [microflow action](/refguide9/show-workflow-page/) and would like to override the page selected for this event/action. 
 
 If you generate the page using the templates in **Workflows Commons** module, these templates contain necessary data containers and associated context entity.
 
@@ -73,13 +73,13 @@ To add a parameter to the **Workflow name** or the **Workflow description**, do 
 2. In the **Edit workflow name** dialog box > **Parameters** section, click the **New** button. 
 3. In the **Template Parameter (String)** dialog box, specify the expression, and confirm your choice. 
 
-    {{< figure src="/attachments/refguide/modeling/application-logic/workflows/workflow-properties/specifying-attribute.png" alt="Specifying the Attribute" >}}
+    {{< figure src="/attachments/refguide9/modeling/application-logic/workflows/workflow-properties/specifying-attribute.png" alt="Specifying the Attribute" >}}
 
     {{% alert color="info" %}}Make sure that the attribute you use in the expression is of the string type.{{% /alert %}}
 
 4. In the **Template** setting, write the text you would like to display and type **Index** of the parameter you would like to include. In the example below, to include a full name of the new hire being onboarded, you need to use {1} index:
 
-    {{< figure src="/attachments/refguide/modeling/application-logic/workflows/workflow-properties/edit-workflow-name.png" alt="Edit Workflow Name Dialog Box" >}}
+    {{< figure src="/attachments/refguide9/modeling/application-logic/workflows/workflow-properties/edit-workflow-name.png" alt="Edit Workflow Name Dialog Box" >}}
 
 ##### 2.3.3.2 Performing Other Actions on Parameters
 
@@ -92,12 +92,12 @@ In addition to adding new parameters, you can perform the following actions on p
 
 ### 2.4 Events {#events}
 
-**Events** section properties allow you to override app-wide events in the **App Settings** and to set a workflow-specific microflow that will be triggered on a state change of the current workflow and its user tasks. For more information on app-wide events, see the [Events](/refguide/app-settings/#events) section in *App Settings*.
+**Events** section properties allow you to override app-wide events in the **App Settings** and to set a workflow-specific microflow that will be triggered on a state change of the current workflow and its user tasks. For more information on app-wide events, see the [Events](/refguide9/app-settings/#events) section in *App Settings*.
 
 #### 2.4.1 Workflow State Change {#workflow-state-change}
 
 {{% alert color="info" %}}
-This setting overrides the app-wide setting in the **App Settings**. For more information see the [Workflow State Change](/refguide/app-settings/#workflow-state-change) section in *App Settings*.
+This setting overrides the app-wide setting in the **App Settings**. For more information see the [Workflow State Change](/refguide9/app-settings/#workflow-state-change) section in *App Settings*.
 {{% /alert %}}
 
 **Workflow state change** allows you to select a microflow that is triggered when the state of the current workflow has changed, for example, when the workflow is in progress or completed. 
@@ -105,7 +105,7 @@ This setting overrides the app-wide setting in the **App Settings**. For more in
 #### 2.4.2 User Task State Change {#user-task-state-change}
 
 {{% alert color="info" %}}
-This setting overrides the app-wide setting in the **App Settings**. For more information see the [User Task State Change](/refguide/app-settings/#user-task-state-change) section in *App Settings*.
+This setting overrides the app-wide setting in the **App Settings**. For more information see the [User Task State Change](/refguide9/app-settings/#user-task-state-change) section in *App Settings*.
 {{% /alert %}}
 
 **User task state change** allows you to select a microflow that is triggered when the state of a user task in the current workflow has changed, for example, when the a user task is completed or has failed. 
@@ -120,4 +120,4 @@ This setting overrides the app-wide setting in the **App Settings**. For more in
 
 ## 3 Read More
 
-* [Workflows](/refguide/workflows/)
+* [Workflows](/refguide9/workflows/)

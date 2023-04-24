@@ -1,14 +1,14 @@
 ---
 title: "Hybrid Mobile (Deprecated)"
-url: /refguide/mobile/introduction-to-mobile-technologies/hybrid-mobile/
+url: /refguide9/mobile/introduction-to-mobile-technologies/hybrid-mobile/
 weight: 30
 description: Learn how to set up hybrid apps.
 aliases:
-    - /refguide/hybrid-mobile/
-    - /howto/mobile/hybrid-mobile/
-    - /howto/mobile/build-hybrid-apps/
-    - /howto/mobile/setting-up-hybrid-push-notifications/
-    - /howto/mobile/push-notifications/
+    - /refguide9/hybrid-mobile/
+    - /howto9/mobile/hybrid-mobile/
+    - /howto9/mobile/build-hybrid-apps/
+    - /howto9/mobile/setting-up-hybrid-push-notifications/
+    - /howto9/mobile/push-notifications/
 ---
 
 ## 1 Introduction

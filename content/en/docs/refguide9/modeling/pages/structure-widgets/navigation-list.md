@@ -1,6 +1,6 @@
 ---
 title: "Navigation List"
-url: /refguide/navigation-list/
+url: /refguide9/navigation-list/
 weight: 70
 tags: ["studio pro", "navigation list", "container widget", "widget"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
@@ -16,13 +16,13 @@ A navigation list can be used to attach an action to an entire row when a user c
 
 For example, clicking one row can open a page, clicking another one can execute a microflow. 
 
-{{< figure src="/attachments/refguide/modeling/pages/structure-widgets/navigation-list/navigation-list.png" alt="Navigation List" >}}
+{{< figure src="/attachments/refguide9/modeling/pages/structure-widgets/navigation-list/navigation-list.png" alt="Navigation List" >}}
 
 ## 2 Properties
 
 An example of navigation list properties is represented in the image below:
 
-{{< figure src="/attachments/refguide/modeling/pages/structure-widgets/navigation-list/navigation-list-properties.png" alt="Navigation List Properties"   width="250"  >}}
+{{< figure src="/attachments/refguide9/modeling/pages/structure-widgets/navigation-list/navigation-list-properties.png" alt="Navigation List Properties"   width="250"  >}}
 
 Navigation list properties consist of the following sections:
 
@@ -32,15 +32,15 @@ Navigation list properties consist of the following sections:
 
 ### 2.1 Common Section {#common}
 
-{{% snippet file="/static/_includes/refguide/common-section-link.md" %}}
+{{% snippet file="/static/_includes/refguide9/common-section-link.md" %}}
 
 ### 2.2 Design Properties Section {#design-properties}
 
-{{% snippet file="/static/_includes/refguide/design-section-link.md" %}} 
+{{% snippet file="/static/_includes/refguide9/design-section-link.md" %}} 
 
 ### 2.3 Visibility Section {#visibility}
 
-{{% snippet file="/static/_includes/refguide/visibility-section-link.md" %}}
+{{% snippet file="/static/_includes/refguide9/visibility-section-link.md" %}}
 
 ## 3 Navigation List Item
 
@@ -50,22 +50,22 @@ A row in a navigation list is a navigation list item. You can set a separate **O
 
 #### 3.1.1 Common Section
 
-{{% snippet file="/static/_includes/refguide/common-section-link.md" %}}
+{{% snippet file="/static/_includes/refguide9/common-section-link.md" %}}
 
 #### 3.1.2 General Section
 
-In the **General** section, you can set a specific on click event for each navigation list item. An on click event defines what action is performed when a user clicks a row. For more information on on click events, see [On Click Event and Events Section](/refguide/on-click-event/).
+In the **General** section, you can set a specific on click event for each navigation list item. An on click event defines what action is performed when a user clicks a row. For more information on on click events, see [On Click Event and Events Section](/refguide9/on-click-event/).
 
 {{% alert color="info" %}}
-Microflows set as an on click event for a navigation list item have no **Execution**, **Confirmation**, or **Advanced** microflow settings. For more information on calling a microflow, see [On Click Event and Events Section](/refguide/on-click-event/#call-microflow). 
+Microflows set as an on click event for a navigation list item have no **Execution**, **Confirmation**, or **Advanced** microflow settings. For more information on calling a microflow, see [On Click Event and Events Section](/refguide9/on-click-event/#call-microflow). 
 {{% /alert %}}
 
 #### 3.1.3 Visibility Section
 
-{{% snippet file="/static/_includes/refguide/visibility-section-link.md" %}}
+{{% snippet file="/static/_includes/refguide9/visibility-section-link.md" %}}
 
 ## 4 Read More
 
-* [Page](/refguide/page/)
-* [Structure](/refguide/structure-widgets/)
-* [Properties Common in the Page Editor](/refguide/common-widget-properties/)
+* [Page](/refguide9/page/)
+* [Structure](/refguide9/structure-widgets/)
+* [Properties Common in the Page Editor](/refguide9/common-widget-properties/)

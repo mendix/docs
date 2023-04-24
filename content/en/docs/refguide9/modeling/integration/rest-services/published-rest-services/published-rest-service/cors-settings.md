@@ -1,6 +1,6 @@
 ---
 title: "CORS Settings for Published REST Services"
-url: /refguide/cors-settings/
+url: /refguide9/cors-settings/
 weight: 60
 description: "Additional options for controlling access to a published REST service"
 tags: ["CORS", "security", "origin", "domain", "access", "studio pro"]
@@ -12,7 +12,7 @@ tags: ["CORS", "security", "origin", "domain", "access", "studio pro"]
 
 Cross-Origin Resource Sharing (CORS) uses additional HTTP headers to tell a browser to give access to selected resources from a server in a different origin (domain).
 
-When you enable CORS in a [published REST service](/refguide/published-rest-service/), by default all websites on all servers are allowed to access your service. The **CORS Settings** dialog box allows you to configure this type of access on a more detailed level.
+When you enable CORS in a [published REST service](/refguide9/published-rest-service/), by default all websites on all servers are allowed to access your service. The **CORS Settings** dialog box allows you to configure this type of access on a more detailed level.
 
 ## 2 Allowed Origins
 

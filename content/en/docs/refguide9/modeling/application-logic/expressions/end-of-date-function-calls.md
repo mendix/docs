@@ -1,6 +1,6 @@
 ---
 title: "End-of Date Function Calls"
-url: /refguide/end-of-date-function-calls/
+url: /refguide9/end-of-date-function-calls/
 weight: 98
 description: Describes end-of date function calls in Studio Pro expressions.
 tags: ["studio pro", "expressions", "end-of date function"]
@@ -14,9 +14,9 @@ This function is only available for Mendix Studio Pro 9.18.0 and above.
 
 End-of date function calls calculate the end of the day, week, month, or year and return the value.
 
-The first parameter can be an attribute of an entity of type **Date and time**, a variable of type **Date and time**, or a **Date and time** value created using a [Date Creation](/refguide/date-creation/) function.
+The first parameter can be an attribute of an entity of type **Date and time**, a variable of type **Date and time**, or a **Date and time** value created using a [Date Creation](/refguide9/date-creation/) function.
 
-You can also calculate the end of a time period from the specified date. For more information, see [Begin-of Date Function Calls](/refguide/begin-of-date-function-calls/).
+You can also calculate the end of a time period from the specified date. For more information, see [Begin-of Date Function Calls](/refguide9/begin-of-date-function-calls/).
 
 ## 2 endOfDay
 
@@ -148,5 +148,5 @@ The output is:
 
 ## 6 Read More
 
-* [Date Creation](/refguide/date-creation/)
-* [Begin-of Date Function Calls](/refguide/begin-of-date-function-calls/)
+* [Date Creation](/refguide9/date-creation/)
+* [Begin-of Date Function Calls](/refguide9/begin-of-date-function-calls/)

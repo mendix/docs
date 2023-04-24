@@ -1,16 +1,16 @@
 ---
 title: "Part 1: Add Module Dependencies"
 linktitle: "1. Add Module Dependencies"
-url: /refguide/mobile/using-mobile-capabilities/push-notifications/notif-add-module-depends/
+url: /refguide9/mobile/using-mobile-capabilities/push-notifications/notif-add-module-depends/
 weight: 20
 description: Tutorial for adding push notification module dependencies.
 aliases:
-    - /howto/mobile/notif-add-module-depends/
+    - /howto9/mobile/notif-add-module-depends/
 ---
 
 ## 1 Introduction
 
-This section will help you add module dependencies for the [Push Notifications Connector](/appstore/modules/push-notifications/) module. You only need to install the modules your use case requires. Once your app has the modules it needs, you may move on to [Implement the Push Notifications Module](/refguide/mobile/using-mobile-capabilities/push-notifications/notif-implement-module/).
+This section will help you add module dependencies for the [Push Notifications Connector](/appstore/modules/push-notifications/) module. You only need to install the modules your use case requires. Once your app has the modules it needs, you may move on to [Implement the Push Notifications Module](/refguide9/mobile/using-mobile-capabilities/push-notifications/notif-implement-module/).
 
 ## 2 Implementing the Encryption Module
 

@@ -1,15 +1,15 @@
 ---
 title: "Date Creation"
-url: /refguide/date-creation/
+url: /refguide9/date-creation/
 weight: 90
 tags: ["studio pro", "expression", "date creation", "expressions"]
 ---
 
 ## 1 Introduction
 
-Dates can be created with the `dateTime` and `dateTimeUTC` functions. The difference between them is that  `dateTime` uses the calendar of the session used in the function call, and `dateTimeUTC` uses the UTC calendar. The system session runs as UTC by default, except for scheduled events, which can be configured in the [Scheduled Event Time Zone](/refguide/app-settings/#scheduled) section of **App Settings**.
+Dates can be created with the `dateTime` and `dateTimeUTC` functions. The difference between them is that  `dateTime` uses the calendar of the session used in the function call, and `dateTimeUTC` uses the UTC calendar. The system session runs as UTC by default, except for scheduled events, which can be configured in the [Scheduled Event Time Zone](/refguide9/app-settings/#scheduled) section of **App Settings**.
 
-This function does not accept variable or attribute parameters, only fixed values. To create a date using parameters, use the [parseDateTime](/refguide/parse-and-format-date-function-calls/#parsedatetime-utc) function.
+This function does not accept variable or attribute parameters, only fixed values. To create a date using parameters, use the [parseDateTime](/refguide9/parse-and-format-date-function-calls/#parsedatetime-utc) function.
 
 ## 2 Values
 

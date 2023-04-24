@@ -1,6 +1,6 @@
 ---
 title: "Create Custom Error Pages"
-url: /howto/front-end/custom-error-page/
+url: /howto9/front-end/custom-error-page/
 category: "Front End"
 weight: 55
 description: "Describes how to create a custom error page for a more tailored user experience."
@@ -21,7 +21,7 @@ The different files serve different purposes:
 
 If you do not create these files, the default error page will be used for each scenario:
 
-{{< figure src="/attachments/howto/front-end/custom-error-page/custom-error-page.png" >}}
+{{< figure src="/attachments/howto9/front-end/custom-error-page/custom-error-page.png" >}}
 
 This how-to will teach you how to do the following:
 
@@ -38,7 +38,7 @@ Before starting this how-to, make sure you have completed the following prerequi
 ## 3 Creating a Custom Error Page
 
 {{% alert color="info" %}}
-If you are using Atlas 2, consider [upgrading](/refguide/moving-from-atlas-2-to-3/). If you cannot, follow the instructions below but create the **error_page** folder in your **theme** folder directly.
+If you are using Atlas 2, consider [upgrading](/refguide9/moving-from-atlas-2-to-3/). If you cannot, follow the instructions below but create the **error_page** folder in your **theme** folder directly.
 {{% /alert %}}
 
 If you are using Atlas 3, do the following:
@@ -46,19 +46,19 @@ If you are using Atlas 3, do the following:
 1. Open the local folder of your app.
 2. Go to **theme**:
 
-    {{< figure src="/attachments/howto/front-end/custom-error-page/theme.png" >}}
+    {{< figure src="/attachments/howto9/front-end/custom-error-page/theme.png" >}}
 
 3. Go to **web**:
 
-    {{< figure src="/attachments/howto/front-end/custom-error-page/web.png" >}}
+    {{< figure src="/attachments/howto9/front-end/custom-error-page/web.png" >}}
 
 4. Create a new folder named *error_page*:
 
-    {{< figure src="/attachments/howto/front-end/custom-error-page/error-page.png" >}}
+    {{< figure src="/attachments/howto9/front-end/custom-error-page/error-page.png" >}}
 
 5. In the **error_page** folder, place your *offline.html* file:
 
-    {{< figure src="/attachments/howto/front-end/custom-error-page/offline.png" >}}
+    {{< figure src="/attachments/howto9/front-end/custom-error-page/offline.png" >}}
 
     Optionally, you can also create *404.html* and *403.html* pages.
 

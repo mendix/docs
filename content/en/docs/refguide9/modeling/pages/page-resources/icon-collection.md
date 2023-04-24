@@ -1,6 +1,6 @@
 ---
 title: "Icon Collection"
-url: /refguide/icon-collection/
+url: /refguide9/icon-collection/
 weight: 5
 description: "This guide shows you why and how to create an icon collection."
 tags: ["Studio Pro", "Icons", "Icon Collection"]
@@ -10,7 +10,7 @@ tags: ["Studio Pro", "Icons", "Icon Collection"]
 
 You can create an icon collection to manage the icons you can use in your app. This is useful if you have a collection of your own brand's icons, as well as if your app uses third-party icons. Icon collections are created from a font.
 
-If you want to use the same set of icons across several apps, you can export and import complete icon collections. For more information, see [Importing and Exporting Apps, Modules, Widgets, and Documents](/refguide/import-and-export/).
+If you want to use the same set of icons across several apps, you can export and import complete icon collections. For more information, see [Importing and Exporting Apps, Modules, Widgets, and Documents](/refguide9/import-and-export/).
 
 ## 2 Adding an Icon Collection
 
@@ -24,7 +24,7 @@ To add an icon collection, do the following:
 
 You can perform the following actions within icon collections using the buttons at the top of the icon collection tab:
 
-{{< figure src="/attachments/refguide/modeling/pages/page-resources/icon-collection/actions.png" alt="Icon collection actions" >}}
+{{< figure src="/attachments/refguide9/modeling/pages/page-resources/icon-collection/actions.png" alt="Icon collection actions" >}}
 
 Some of the actions can be applied to multiple icons. You can select all icons using <kbd>Ctrl</kbd>+<kbd>A</kbd>, or select multiple icons by combining your click with <kbd>Ctrl</kbd> or <kbd>Shift</kbd>
 
@@ -58,9 +58,9 @@ You can easily convert your font data into this format is by either using a text
 
 After loading the data from a file or your clipboard, you will see a preview of the data before it is applied. Make sure to check the list, as it will also mention any potential problems that might cause a specific line to be ignored:
 
-{{< figure src="/attachments/refguide/modeling/pages/page-resources/icon-collection/excel.png" alt="Editing Icon Data in an Excel sheet" >}}
+{{< figure src="/attachments/refguide9/modeling/pages/page-resources/icon-collection/excel.png" alt="Editing Icon Data in an Excel sheet" >}}
 
-{{< figure src="/attachments/refguide/modeling/pages/page-resources/icon-collection/import-icon-data.png" alt="The imported Icon Data" >}}
+{{< figure src="/attachments/refguide9/modeling/pages/page-resources/icon-collection/import-icon-data.png" alt="The imported Icon Data" >}}
 
 ### 3.3 Configure
 

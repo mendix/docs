@@ -1,6 +1,6 @@
 ---
 title: "OQL LOWER"
-url: /refguide/oql-lower/
+url: /refguide9/oql-lower/
 tags: ["studio pro"]
 ---
 

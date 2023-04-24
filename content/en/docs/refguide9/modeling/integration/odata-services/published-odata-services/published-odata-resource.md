@@ -1,9 +1,9 @@
 ---
 title: "Published OData Resource"
-url: /refguide/published-odata-resource/
+url: /refguide9/published-odata-resource/
 tags: ["studio pro", "OData"]
 aliases:
-    - /refguide/published-odata-attribute
+    - /refguide9/published-odata-attribute
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details. 
 
 ---
@@ -12,7 +12,7 @@ aliases:
 
 This document describes the properties of a published OData resource. 
 
-For an overview of OData services, see [Published OData Services](/refguide/published-odata-services/).
+For an overview of OData services, see [Published OData Services](/refguide9/published-odata-services/).
 
 ## 2 Adding or Editing a Resource
 
@@ -34,7 +34,7 @@ In the **Public documentation** tab, you can provide a summary and a description
 
 {{% alert color="info" %}}
 
-[IBM DB2](/refguide/db2/) does not support read-isolated data retrieval operations that are non-blocking in a multi-user environment. Therefore, the data retrieved by OData might not be 100% consistent if the same data rows are modified concurrently by another user. 
+[IBM DB2](/refguide9/db2/) does not support read-isolated data retrieval operations that are non-blocking in a multi-user environment. Therefore, the data retrieved by OData might not be 100% consistent if the same data rows are modified concurrently by another user. 
 
 {{% /alert %}}
 
@@ -68,7 +68,7 @@ Use **Exposed entity name** in the **Edit published resource** window to customi
 
 {{% alert color="info" %}}
 
-Location URIs must be unique. Exposing two different resources at the same location will result in a [consistency error](/refguide/consistency-errors/).
+Location URIs must be unique. Exposing two different resources at the same location will result in a [consistency error](/refguide9/consistency-errors/).
 
 {{% /alert %}}
 
@@ -108,7 +108,7 @@ Default: *10000*
 
 ## 8 Key {#key}
 
-Every entity in Mendix has an [ID](/refguide/odata-representation/#id-representation) that is used internally to store the object in the database. However, this ID is not stable over time, since it can change in certain scenarios (such as data migration). That means that a published OData resource should not use the ID as a key, and needs to have a combination of attributes that form a key instead. The attribute(s) can be of type **Integer**, **Long**, **String**, or **AutoNumber**.
+Every entity in Mendix has an [ID](/refguide9/odata-representation/#id-representation) that is used internally to store the object in the database. However, this ID is not stable over time, since it can change in certain scenarios (such as data migration). That means that a published OData resource should not use the ID as a key, and needs to have a combination of attributes that form a key instead. The attribute(s) can be of type **Integer**, **Long**, **String**, or **AutoNumber**.
 
 Select a combination of attributes with the following constraints:
 
@@ -116,9 +116,9 @@ Select a combination of attributes with the following constraints:
 * Required – If one of the key attribute values is empty, you cannot find an object with it anymore.
 * Stable over time – The attribute values used for the key should not change, so that you can find it again later.
 
-Having an [index](/refguide/indexes/) for the key attribute(s) makes retrieving objects by key perform better.
+Having an [index](/refguide9/indexes/) for the key attribute(s) makes retrieving objects by key perform better.
 
-You can set unique and required constraints using [validation rules](/refguide/validation-rules/).
+You can set unique and required constraints using [validation rules](/refguide9/validation-rules/).
 
 {{% alert color="info" %}}
 Selecting a single attribute as a key was introduced in Studio Pro [9.17.0](/releasenotes/studio-pro/9.17/). Selecting multiple attributes as a key was introduced in Studio Pro [9.19.0](/releasenotes/studio-pro/9.19/).
@@ -149,9 +149,9 @@ When the app receives a request to insert a new object, it does the following:
 
 This is the behavior when you choose the action **Write to database**.
 
-You can also choose the **Call a microflow** action to use your own logic. Specify a microflow that takes the entity as a parameter, and optionally a [System.HttpRequest](/refguide/http-request-and-response-entities/) parameter. In the microflow, you can use the [Commit](/refguide/committing-objects/) activity to commit the changes to the database. 
+You can also choose the **Call a microflow** action to use your own logic. Specify a microflow that takes the entity as a parameter, and optionally a [System.HttpRequest](/refguide9/http-request-and-response-entities/) parameter. In the microflow, you can use the [Commit](/refguide9/committing-objects/) activity to commit the changes to the database. 
 
-In the publishing app, you can use a validation message action to report a validation error. The client app can include a custom error handler on the [Send External Object](/refguide/send-external-object/) activity to handle the error. If the microflow reports [validation feedback](/refguide/validation-feedback/), the runtime informs the client that the request has failed. For more information, see [OData query options](/refguide/odata-query-options/#updating-objects).
+In the publishing app, you can use a validation message action to report a validation error. The client app can include a custom error handler on the [Send External Object](/refguide9/send-external-object/) activity to handle the error. If the microflow reports [validation feedback](/refguide9/validation-feedback/), the runtime informs the client that the request has failed. For more information, see [OData query options](/refguide9/odata-query-options/#updating-objects).
 
 {{% alert color="info" %}}
 This **Call a microflow** action was introduced in Studio Pro [9.11.0](/releasenotes/studio-pro/9.11/). The *Insertable* capability was introduced in Studio Pro [9.12.0](/releasenotes/studio-pro/9.12/).
@@ -164,7 +164,7 @@ A published OData resource is always readable.
 There are two options to handle an incoming GET request for an OData resource:
 
 1. **Read from database** – This action will parse the incoming OData query to a database query and retrieve the data from the database. This is the default action for *Readable* section. This action is not applicable to non-persistable entities, because non-persistable entities cannot be retrieved from the database.
-2. **Call a microflow** – This action will call a microflow. You can specify your custom logic in this microflow to return a list of objects that correspond to the incoming request. See the [Handle a GET Request with a Microflow](/refguide/wrap-services-odata/#handle-get-request) in *Wrap Services, APIs, or Databases with OData*.
+2. **Call a microflow** – This action will call a microflow. You can specify your custom logic in this microflow to return a list of objects that correspond to the incoming request. See the [Handle a GET Request with a Microflow](/refguide9/wrap-services-odata/#handle-get-request) in *Wrap Services, APIs, or Databases with OData*.
 
 You can also set the [query options](#query-options) for each request.
 
@@ -180,17 +180,17 @@ When the app receives a request to change values, it does the following:
 
 This is the behavior when you choose the action **Write to database**.
 
-You can also choose the **Call a microflow** action to use your own logic. Specify a microflow that takes the entity as a parameter, and optionally a [System.HttpRequest](/refguide/http-request-and-response-entities/) parameter. In the microflow, you can use the [Commit](/refguide/committing-objects/) activity to commit the changes to the database. 
+You can also choose the **Call a microflow** action to use your own logic. Specify a microflow that takes the entity as a parameter, and optionally a [System.HttpRequest](/refguide9/http-request-and-response-entities/) parameter. In the microflow, you can use the [Commit](/refguide9/committing-objects/) activity to commit the changes to the database. 
 
-In the publishing app, you can use a validation message action to report a validation error. The client app can include a custom error handler on the [Send External Object](/refguide/send-external-object/) activity to handle the error. If the microflow reports [validation feedback](/refguide/validation-feedback/), the runtime informs the client that the request has failed. For more information, see [OData query options](/refguide/odata-query-options/#updating-objects).
+In the publishing app, you can use a validation message action to report a validation error. The client app can include a custom error handler on the [Send External Object](/refguide9/send-external-object/) activity to handle the error. If the microflow reports [validation feedback](/refguide9/validation-feedback/), the runtime informs the client that the request has failed. For more information, see [OData query options](/refguide9/odata-query-options/#updating-objects).
 
 ### 9.4 Deletable {#deletable}
 
 Select the check box for **Deletable** to indicate that clients can delete the values of attributes and associations.
 
-Choose whether the object should be deleted from the database directly, or whether to call a microflow. Specify a microflow that takes the entity as a parameter, and optionally a [System.HttpRequest](/refguide/http-request-and-response-entities/) parameter. In the microflow, you can use the [Delete](/refguide/deleting-objects/) activity to delete the object from the database. 
+Choose whether the object should be deleted from the database directly, or whether to call a microflow. Specify a microflow that takes the entity as a parameter, and optionally a [System.HttpRequest](/refguide9/http-request-and-response-entities/) parameter. In the microflow, you can use the [Delete](/refguide9/deleting-objects/) activity to delete the object from the database. 
 
-You can use a validation message to report a validation error if you are performing, for example, a soft delete. If the microflow reports [validation feedback](/refguide/validation-feedback/), the runtime informs the client that the request has failed.
+You can use a validation message to report a validation error if you are performing, for example, a soft delete. If the microflow reports [validation feedback](/refguide9/validation-feedback/), the runtime informs the client that the request has failed.
 
 {{% alert type="info" %}}
 The *Deletable* capability was introduced in Studio Pro [9.13.0](/releasenotes/studio-pro/9.13/).

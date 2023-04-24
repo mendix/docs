@@ -1,6 +1,6 @@
 ---
 title: "Password Policy"
-url: /refguide/password-policy/
+url: /refguide9/password-policy/
 weight: 50
 tags: ["studio pro", "password policy", "app security", "security"]
 ---
@@ -13,7 +13,7 @@ You can specify a number of requirements for passwords. These requirements will 
 
 To set password policy properties, open **App Security** > the **Password policy** tab:
 
-{{< figure src="/attachments/refguide/modeling/app-explorer/security/app-security/password-policy/password-policy-tab.png" >}}
+{{< figure src="/attachments/refguide9/modeling/app-explorer/security/app-security/password-policy/password-policy-tab.png" >}}
 
 Password policy properties are described in the table below:
 
@@ -26,8 +26,8 @@ Password policy properties are described in the table below:
 
 ## 3 Read More
 
-* [App Security](/refguide/app-security/)
-* [User Roles](/refguide/user-roles/)
-* [Administrator](/refguide/administrator/)
-* [Demo Users](/refguide/demo-users/)
-* [Anonymous Users](/refguide/anonymous-users/)
+* [App Security](/refguide9/app-security/)
+* [User Roles](/refguide9/user-roles/)
+* [Administrator](/refguide9/administrator/)
+* [Demo Users](/refguide9/demo-users/)
+* [Anonymous Users](/refguide9/anonymous-users/)

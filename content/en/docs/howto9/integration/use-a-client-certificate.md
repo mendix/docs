@@ -1,6 +1,6 @@
 ---
 title: "Use a Client Certificate"
-url: /howto/integration/use-a-client-certificate/
+url: /howto9/integration/use-a-client-certificate/
 category: "Integration"
 description: "Describes how to configure your app to authenticate using a client certificate."
 tags: ["integration", "web service", "client certificate"]
@@ -12,7 +12,7 @@ tags: ["integration", "web service", "client certificate"]
 
 Some services require you to authenticate using a client certificate. This how-to describes how to configure your app to do this.
 
-Let's assume that you already have an app that calls a service. For details on how to configure this, have a look at [How to Consume a REST Service](/howto/integration/consume-a-rest-service/) or [How to Consume a Simple Web Service](/howto/integration/consume-a-simple-web-service/).
+Let's assume that you already have an app that calls a service. For details on how to configure this, have a look at [How to Consume a REST Service](/howto9/integration/consume-a-rest-service/) or [How to Consume a Simple Web Service](/howto9/integration/consume-a-simple-web-service/).
 
 This how-to will teach you how to do the following:
 
@@ -46,7 +46,7 @@ This is an example:
 
 A complete configuration may look like this:
 
-{{< figure src="/attachments/howto/integration/use-a-client-certificate/example-custom-settings.png" >}}
+{{< figure src="/attachments/howto9/integration/use-a-client-certificate/example-custom-settings.png" >}}
 
 You can use an empty path for `ClientCertificateUsages` to specify that you do not want to use a client certificate, even when the server accepts one. To do this, you need to add the **Value** `{"<endpoint>":""}` (replace `<endpoint>` with the actual endpoint).
 

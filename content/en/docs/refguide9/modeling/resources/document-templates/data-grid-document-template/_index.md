@@ -1,12 +1,12 @@
 ---
 title: "Data Grid (Document Template)"
-url: /refguide/data-grid-document-template/
+url: /refguide9/data-grid-document-template/
 tags: ["studio pro"]
 aliases:
-    - /refguide/Data+Grid+(document+template).html
-    - /refguide/data-grid-(document-template).html
-    - /refguide/Data+Grid+(document+template)
-    - /refguide/data-grid-(document-template)
+    - /refguide9/Data+Grid+(document+template).html
+    - /refguide9/data-grid-(document-template).html
+    - /refguide9/Data+Grid+(document+template)
+    - /refguide9/data-grid-(document-template)
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
@@ -16,7 +16,7 @@ The data grid shows a list of objects in a grid. For example, a data grid can sh
 
 {{% alert color="info" %}}
 
-{{< figure src="/attachments/refguide/modeling/resources/document-templates/data-grid-document-template/918138.png" >}}
+{{< figure src="/attachments/refguide9/modeling/resources/document-templates/data-grid-document-template/918138.png" >}}
 
 A data grid showing a list of orders with a description and the referenced customer name.
 
@@ -26,11 +26,11 @@ A data grid showing a list of orders with a description and the referenced custo
 
 ### 2.1 Columns
 
-See [Columns (document template)](/refguide/columns-document-template/).
+See [Columns (document template)](/refguide9/columns-document-template/).
 
 ### 2.2 Sort Bar
 
-See [Sort Bar](/refguide/sort-bar/).
+See [Sort Bar](/refguide9/sort-bar/).
 
 ## 3 Appearance Properties
 
@@ -56,13 +56,13 @@ With striping enabled you can set the properties of even and uneven data grid ro
 
 ### 3.5 Style
 
-See [Style](/refguide/style/)
+See [Style](/refguide9/style/)
 
 ## 4 Common Properties
 
 ### 4.1 Name
 
-The internal name of the widget. You can use this to give sensible names to widgets. The name property also appears in the generated HTML: the widget DOM element automatically includes the class '`mx-name-{NAME}`', which can be useful for [Selenium testing](/howto/integration/selenium-support/).
+The internal name of the widget. You can use this to give sensible names to widgets. The name property also appears in the generated HTML: the widget DOM element automatically includes the class '`mx-name-{NAME}`', which can be useful for [Selenium testing](/howto9/integration/selenium-support/).
 
 ## 5 Data Source Properties
 

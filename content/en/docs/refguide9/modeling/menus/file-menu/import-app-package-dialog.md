@@ -1,11 +1,11 @@
 ---
 title: "Import App Package"
-url: /refguide/import-app-package-dialog/
+url: /refguide9/import-app-package-dialog/
 weight: 40
 description: "Describes the Import App Package process and Import App Package dialog box."
 tags: ["studio pro", "import app package"]
 aliases:
-    - /refguide/import-project-package-dialog/
+    - /refguide9/import-project-package-dialog/
 ---
 ## 1 Introduction
 
@@ -17,9 +17,9 @@ To import an app package, do the following:
 2. Browse to the *.mpk* file you would like to import.
 3. Select the relevant options in the **Import App Package** dialog box and click **OK**. For more information on what options you can select, see the sections below. 
 
-    {{< figure src="/attachments/refguide/modeling/menus/file-menu/import-app-package-dialog/import-app-package.png" alt="Import App Package Dialog Window" >}}
+    {{< figure src="/attachments/refguide9/modeling/menus/file-menu/import-app-package-dialog/import-app-package.png" alt="Import App Package Dialog Window" >}}
 
-App packages can be created using [Export App Package](/refguide/export-app-package-dialog/).
+App packages can be created using [Export App Package](/refguide9/export-app-package-dialog/).
 
 ## 2 Where Should We Store Your App?
 
@@ -58,4 +58,4 @@ Use this field to choose the directory where the app files of the app will be st
 ## 4 Read More
 
 * [Team Server](/developerportal/collaborate/team-server/)
-* [Export App Package](/refguide/export-project-package-dialog/)
+* [Export App Package](/refguide9/export-project-package-dialog/)

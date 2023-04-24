@@ -1,6 +1,6 @@
 ---
 title: "Login Behavior"
-url: /refguide/login-behavior/
+url: /refguide9/login-behavior/
 category: "Mendix Runtime"
 description: "Describes default and customized login behavior in the Mendix Runtime."
 tags: ["Runtime", "login", "studio pro"]
@@ -10,7 +10,7 @@ tags: ["Runtime", "login", "studio pro"]
 
 A user is blocked after three consecutive bad login attempts, regardless of the time between the login attempts. The failed login count is reset after a successful login attempt or when a blocked user is unblocked. Blocking users only occurs when the app security level is set to **Production**.
 
-Users that have been blocked for at least five minutes are unblocked each time the cluster manager runs and, at that point, the failed login count is reset to 0. By default, the cluster manager runs every five minutes. This interval can be changed using  [Runtime customization](/refguide/custom-settings/) to change the `ClusterManagerActionInterval` setting.
+Users that have been blocked for at least five minutes are unblocked each time the cluster manager runs and, at that point, the failed login count is reset to 0. By default, the cluster manager runs every five minutes. This interval can be changed using  [Runtime customization](/refguide9/custom-settings/) to change the `ClusterManagerActionInterval` setting.
 
 {{% alert color="warning" %}}
 The cluster manager does more than just unblocking users. For example, it also removes expired sessions. So changing this interval has a broader impact.
@@ -67,4 +67,4 @@ Login behavior can be customized by implementing a custom Java action and regist
     }
     ```
 
-1. Update the [After Startup](/refguide/app-settings/#after-startup) microflow to invoke the Java action which replaces the `LoginAction`.
+1. Update the [After Startup](/refguide9/app-settings/#after-startup) microflow to invoke the Java action which replaces the `LoginAction`.

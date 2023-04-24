@@ -1,16 +1,16 @@
 ---
 title: "Error Handling in Microflows"
-url: /refguide/error-handling-in-microflows/
+url: /refguide9/error-handling-in-microflows/
 weight: 4
 tags: ["error", "error handling", "rollback", "microflow", "logic"]
 aliases:
-    - /howto/logic-business-rules/set-up-error-handling
+    - /howto9/logic-business-rules/set-up-error-handling
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
 ## 1 Introduction
 
-In a [microflow](/refguide/microflows/), microflow elements ([activities](/refguide/activities/), [decisions](/refguide/decisions/), or [loops](/refguide/loop/)) can sometimes fail and produce an error. If you do nothing, Mendix will report the error with a system error message and roll back all the changes. However, you can also change this behavior and handle errors yourself.
+In a [microflow](/refguide9/microflows/), microflow elements ([activities](/refguide9/activities/), [decisions](/refguide9/decisions/), or [loops](/refguide9/loop/)) can sometimes fail and produce an error. If you do nothing, Mendix will report the error with a system error message and roll back all the changes. However, you can also change this behavior and handle errors yourself.
 
 This document introduces different error handling options in microflows and explains how they work using simple examples. An example of how combined custom error handling works is also given in [An Example of Combined Error Handling](#example).
 
@@ -25,12 +25,12 @@ There are four error handling options:
 * **Custom without rollback**
 * **Continue**
 
-Except for the **Rollback** option, which is the default, the other three are all custom error handling options. For **Custom with rollback** and **Custom without rollback**, you can create an additional flow from the microflow elements (activities or decisions) from which the error is returned and mark this flow as an error handling flow. You can end this flow with an [error event](/refguide/error-event/) or an [end event](/refguide/end-event/). Hence, we introduce these two custom error handling options based on what event terminates the error handling flow.
+Except for the **Rollback** option, which is the default, the other three are all custom error handling options. For **Custom with rollback** and **Custom without rollback**, you can create an additional flow from the microflow elements (activities or decisions) from which the error is returned and mark this flow as an error handling flow. You can end this flow with an [error event](/refguide9/error-event/) or an [end event](/refguide9/end-event/). Hence, we introduce these two custom error handling options based on what event terminates the error handling flow.
 
 {{% alert color="info" %}}
 In the error handling flow, you can include activities that update the database. Custom error handling does not affect newly created objects there, but if you try to update the status of an existing object that was created outside of this flow and that was rolled back because of custom error handling, then an error will occur.
 
-You can also include decisions in the error handling flow based on what you want. It is recommended to put a [Log message activity](/refguide/log-message/) in the error handling flow to log the error and present a custom error message to the end-user.
+You can also include decisions in the error handling flow based on what you want. It is recommended to put a [Log message activity](/refguide9/log-message/) in the error handling flow to log the error and present a custom error message to the end-user.
 {{% /alert %}}
 
 It is important to know that when a microflow is started by an end-user (for example, by clicking a button), a savepoint is always created at the very beginning of the microflow. This is the case for **Microflow 1** in all the following examples. Knowing how savepoints are created and function is key to understanding how error handling works.
@@ -41,7 +41,7 @@ In the following subsections, we introduce the functionality of each error handl
 
 In this example, the error handling in **Microflow 2** is the default: **Rollback**.
 
-{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/microflows/error-handling-in-microflows/default-roll-back.png" width="600px" >}}
+{{< figure src="/attachments/refguide9/modeling/application-logic/microflows-and-nanoflows/microflows/error-handling-in-microflows/default-roll-back.png" width="600px" >}}
 
 When **Microflow 1** starts with a button click, a savepoint is created at the very beginning of **Microflow 1**. When an error occurs in **Microflow 2**,  the default error handling is to roll back all changes to the state of this savepoint (so all changes are reverted), the microflow is aborted, the error is logged, and a system error message is shown to the end-user.
 
@@ -51,7 +51,7 @@ When **Microflow 1** starts with a button click, a savepoint is created at the v
 
 In this example, the error handling in **Microflow 2** is set to **Custom with rollback** and the error handling flow ends with an error event.
 
-{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/microflows/error-handling-in-microflows/with-roll-back-error-event.png" width="600px" >}}
+{{< figure src="/attachments/refguide9/modeling/application-logic/microflows-and-nanoflows/microflows/error-handling-in-microflows/with-roll-back-error-event.png" width="600px" >}}
 
 When **Microflow 1** starts with a button click, a savepoint is created at the very beginning of **Microflow 1**. When an error occurs in **Microflow 2**, everything rolls back to the state of this savepoint because the error handling is set to **Custom with rollback**. Hence, changes made in **Create Order** and in **Create Customer** are both reverted. A custom error is logged using a **Log message** activity. After that, the error event throws an error to terminate **Microflow 2**, and **Microflow 1** will terminate because there is no custom error handing there.
 
@@ -59,19 +59,19 @@ When **Microflow 1** starts with a button click, a savepoint is created at the v
 
 In this example, the error handling in **Microflow 2** is set to **Custom with rollback** and the error handling flow ends with an end event.
 
-{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/microflows/error-handling-in-microflows/with-roll-back-end-event.png" width="600px" >}}
+{{< figure src="/attachments/refguide9/modeling/application-logic/microflows-and-nanoflows/microflows/error-handling-in-microflows/with-roll-back-end-event.png" width="600px" >}}
 
 When **Microflow 1** starts with a button click, a savepoint is created at the very beginning of **Microflow 1**. When an error occurs in **Microflow 2**, everything rolls back to the state of this savepoint because the error handling is set to **Custom with rollback**. Hence, changes made in **Create Order** and in **Create Customer** are both reverted. A custom error is logged using a **Log message** activity.
 
 ### 2.3 Error Handling - Custom without Rollback
 
-Setting **Custom without rollback** will not stop data changes within the activity which failed from being rolled back. For example, if a [Call REST Service](/refguide/call-rest-action/) returns an error, any data the REST call retrieved will not be kept.
+Setting **Custom without rollback** will not stop data changes within the activity which failed from being rolled back. For example, if a [Call REST Service](/refguide9/call-rest-action/) returns an error, any data the REST call retrieved will not be kept.
 
 #### 2.3.1 Error Handling Which Ends with an Error Event
 
 In this example, the error handling in **Microflow 2** is set to **Custom without rollback** and the error handling flow ends with an error event.
 
-{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/microflows/error-handling-in-microflows/without-roll-back-error-event.png" width="600px" >}}
+{{< figure src="/attachments/refguide9/modeling/application-logic/microflows-and-nanoflows/microflows/error-handling-in-microflows/without-roll-back-error-event.png" width="600px" >}}
 
 When **Microflow 1** starts with a button click, a savepoint is created at the very beginning of **Microflow 1**. Another savepoint is created right before **GenerateError** because the error handling is set to **Custom without rollback**. When an error occurs in **Microflow 2**, changes made in **Create Order** are at this moment still kept because of the savepoint right before **GenerateError**. A custom error is logged using a **Log message** activity. After that, the error event throws an error to terminate **Microflow 2** and rolls back everything to the state of **savepoint 1** which is at the very beginning of **Microflow 1**. Hence, changes made in **Create Customer** and in **Create Order** are both reverted.
 
@@ -83,7 +83,7 @@ Using custom error handling without rollback and ending the error handling flow 
 
 In this example, the error handling in **Microflow 2** is set to **Custom without rollback** and the error handling flow ends with an end event.
 
-{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/microflows/error-handling-in-microflows/without-roll-back-end-event.png" width="600px" >}}
+{{< figure src="/attachments/refguide9/modeling/application-logic/microflows-and-nanoflows/microflows/error-handling-in-microflows/without-roll-back-end-event.png" width="600px" >}}
 
 When **Microflow 1** starts with a button click, a savepoint is created at the very beginning of **Microflow 1**. Another savepoint is created right before **GenerateError** because the error handling is set to **Custom without rollback**. When an error occurs in **Microflow 2**, changes made in **Create Order** are kept because of the savepoint right before **GenerateError**. A custom error is logged using a **Log message** activity. **Microflow 1** does not receive the error and continues to its end. Changes made in **Create Customer** are kept.
 
@@ -93,11 +93,11 @@ The **Continue** option can only be set on a microflow call or on a loop.
 
 In this example, the error handling in **Microflow 2** is set to **Continue**.
 
-{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/microflows/error-handling-in-microflows/continue.png" width="600px" >}}
+{{< figure src="/attachments/refguide9/modeling/application-logic/microflows-and-nanoflows/microflows/error-handling-in-microflows/continue.png" width="600px" >}}
 
 When **Microflow 1** starts with a button click, a savepoint is created at the very beginning of **Microflow 1**. Another savepoint is created right before **GenerateError** because the error handling is set to **Continue**. When the error in **Microflow 2** occurs, the microflow continues as if nothing happened. Changes made in **Create Customer** and **Create Order** are both kept. No error message is logged and no message is displayed to the end-user.
 
-Data changes within the activity which returns an error (for example, within an iteration of a [loop](/refguide/loop/)) will always be rolled back. It is only data changes outside the activity returning the error which will be kept.
+Data changes within the activity which returns an error (for example, within an iteration of a [loop](/refguide9/loop/)) will always be rolled back. It is only data changes outside the activity returning the error which will be kept.
 
 {{% alert color="warning" %}}
 You should be very careful with using the **Continue** option since it can make it very difficult to understand when something goes wrong. Where possible, try to use **Custom without rollback** instead and log the error message.
@@ -107,7 +107,7 @@ You should be very careful with using the **Continue** option since it can make 
 
 In this example, the error handling on the **GenerateError** activity in **Microflow 2** and on the call of **Microflow 2** are both set to **Custom without rollback**. The error handling flow in **Microflow 2** ends with an error event. 
 
-{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/microflows/error-handling-in-microflows/combination-without-roll-back-error-event.png" width="600px" >}}
+{{< figure src="/attachments/refguide9/modeling/application-logic/microflows-and-nanoflows/microflows/error-handling-in-microflows/combination-without-roll-back-error-event.png" width="600px" >}}
 
 There are three savepoints. When **Microflow 1** starts with a button click, a savepoint is created at the very beginning of **Microflow 1**. Another savepoint is created right before the call of **Microflow 2**, and the third savepoint is created right before **GenerateError** - this is because the error handling on the **GenerateError** activity in **Microflow 2** and on the call of **Microflow 2** are both set to **Custom without rollback**.
 
@@ -131,7 +131,7 @@ In microflows that apply entity access, you may not be able to inspect the attri
 
 ### 4.1 Inspecting REST Errors
 
-If the error is a REST fault (an error that occurs as a result of a REST call), the result of the the call will be stored in `$latestHttpResponseVariable` which is an object of type `HttpResponse`.  This object is available in your custom error flows and you can use it to write more focused messages to the log or to make other decisions within the error flow. For more information, see the [Response Tab](/refguide/call-rest-action/#response) section in *Call REST Service*.
+If the error is a REST fault (an error that occurs as a result of a REST call), the result of the the call will be stored in `$latestHttpResponseVariable` which is an object of type `HttpResponse`.  This object is available in your custom error flows and you can use it to write more focused messages to the log or to make other decisions within the error flow. For more information, see the [Response Tab](/refguide9/call-rest-action/#response) section in *Call REST Service*.
 
 ### 4.2 Inspecting SOAP Errors
 
@@ -164,4 +164,4 @@ Consider the following best practices for error handling:
 
 ## 6 Read More
 
-* [Error Handling in Nanoflows](/refguide/error-handling-in-nanoflows/)
+* [Error Handling in Nanoflows](/refguide9/error-handling-in-nanoflows/)

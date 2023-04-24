@@ -1,6 +1,6 @@
 ---
 title: "Optimizing Native Startup"
-url: /refguide/mobile/building-efficient-mobile-apps/native-startup/
+url: /refguide9/mobile/building-efficient-mobile-apps/native-startup/
 weight: 15
 description: "Describes optimizing native app startup times by tailoring the way your app syncs data."
 tags: ["native", "startup", "performance", "optimization"]
@@ -19,7 +19,7 @@ Four major things take place when the launch screen is shown:
 3. An initial full sync is executed.
 4. If you have a nanoflow as home page, it will be executed.
 
-You can inspect what is actually happening by enabling Trace logs for the various `Client_` log-nodes (most important are `Client_Startup` and `Client_Synchronization`). For more details see [Mobile Logging](/refguide/mobile/building-efficient-mobile-apps/logging/).
+You can inspect what is actually happening by enabling Trace logs for the various `Client_` log-nodes (most important are `Client_Startup` and `Client_Synchronization`). For more details see [Mobile Logging](/refguide9/mobile/building-efficient-mobile-apps/logging/).
 
 ## 3 Application Initialization
 
@@ -27,7 +27,7 @@ Application initialization should not take long in most scenarios. However, it i
 
 ## 4 Over-the-Air Updates
 
-OTA updates let you upgrade your native client from the cloud without installing an updated version on the cloud. You can enable OTA updates in the native navigation profile. Once enabled, each time you publish your Mendix app an OTA bundle is generated and published as well. For more details see [Updating Native Apps](/refguide/mobile/distributing-mobile-apps/overtheair-updates/).
+OTA updates let you upgrade your native client from the cloud without installing an updated version on the cloud. You can enable OTA updates in the native navigation profile. Once enabled, each time you publish your Mendix app an OTA bundle is generated and published as well. For more details see [Updating Native Apps](/refguide9/mobile/distributing-mobile-apps/overtheair-updates/).
 
 The Mendix Client checks for a new OTA update each time end-users start their native mobile apps. If there is no new OTA update the app starts as usual. If there is a new OTA update, the client downloads and installs it automatically. If the size of the OTA package is large, this may slow startup performance as downloading large packages takes time.
 
@@ -37,13 +37,13 @@ You can an OTA bundle's size by downloading it via a link like this from a deplo
 
 ## 5 Initial Synchronization
 
-Synchronization ensures that the changes to domain model objects on the client and the runtime are kept in sync. Full synchronization ensures that all changes from the client are sent to the runtime, and all entities that are configured to synchronize “All Objects” are sent to the client. For more details see [Offline Synchronization](/refguide/mobile/building-efficient-mobile-apps/offlinefirst-data/synchronization/).
+Synchronization ensures that the changes to domain model objects on the client and the runtime are kept in sync. Full synchronization ensures that all changes from the client are sent to the runtime, and all entities that are configured to synchronize “All Objects” are sent to the client. For more details see [Offline Synchronization](/refguide9/mobile/building-efficient-mobile-apps/offlinefirst-data/synchronization/).
 
 The initial full sync cannot be skipped. Therefore, for data-heavy apps it is important to control the sync behavior and use **All Objects** and **By Xpath** sparingly. 
 
 It is often better to use **Nothing (preserve data)** and synchronize (using a microflow and Sync-To-Device) only when the data is accessed or refreshed. Excluding file documents and images from startup synchronization and then synchronizing them lazily on-demand can boost your app's performance significantly. 
 
-If you need to synchronize files and images on startup, ensure their size is small. In most cases, image sizes can be reduced by lowering their resolution. You can refer to the **Client_Startup** log node’s logs to see how long your startup synchronization took. For more information on Native Logging, see [Logging in Native Apps](/refguide/mobile/building-efficient-mobile-apps/logging/).
+If you need to synchronize files and images on startup, ensure their size is small. In most cases, image sizes can be reduced by lowering their resolution. You can refer to the **Client_Startup** log node’s logs to see how long your startup synchronization took. For more information on Native Logging, see [Logging in Native Apps](/refguide9/mobile/building-efficient-mobile-apps/logging/).
 
 ## 6 Nanoflow Home Page
 

@@ -1,13 +1,13 @@
 ---
 title: "External Entities"
-url: /refguide/external-entities/
+url: /refguide9/external-entities/
 weight: 15
 tags: ["domain model", "entity", "entities", "attribute", "external entities", "event handler", "access rule", "studio pro", "consumed OData Service"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 ## 1 Introduction
 
-External entities can be added to the Domain Model through the [Data Hub pane](/refguide/data-hub-pane/). They are displayed as *purple* entity containers in the Domain Model. External entities represent the link to the datasets that are made available through the shared data sources registered in [Mendix Data Hub](/data-hub/). Data sources are collections of entity sets (that are referred to as datasets) are published in OData services. 
+External entities can be added to the Domain Model through the [Data Hub pane](/refguide9/data-hub-pane/). They are displayed as *purple* entity containers in the Domain Model. External entities represent the link to the datasets that are made available through the shared data sources registered in [Mendix Data Hub](/data-hub/). Data sources are collections of entity sets (that are referred to as datasets) are published in OData services. 
 
 Datasets are maintained and updated in the source application. You can integrate or consume these datasets through external entities in your app development, and any changes to the data in the originating app is automatically updated in the consuming apps. 
 
@@ -33,20 +33,20 @@ To add an external entity to your app model, follow these steps:
     * the **Consumed OData Service** document that contains details of the OData service and the metadata; the logo displayed identifies the originating app of the service
     * the **OData Location** that specifies the location constants for the service
 
-        {{< figure src="/attachments/refguide/modeling/domain-model/external-entities/consumed-service-docs.png" alt=" Virtual Entity and OData Service files" >}}
+        {{< figure src="/attachments/refguide9/modeling/domain-model/external-entities/consumed-service-docs.png" alt=" Virtual Entity and OData Service files" >}}
 
 {{% alert color="info" %}}
 When you drag an entity that is associated with an entity from the same service already in your Domain Model, the association will be displayed and established between the entities. For more information on associations between external entities, see [Associations](#properties).
 {{% /alert %}}
 
-For further information, see [Consumed OData Service](/refguide/consumed-odata-service/).
+For further information, see [Consumed OData Service](/refguide9/consumed-odata-service/).
 
 The consumed entities of the current app are listed in the **Used in your App** section of the **Data Hub** pane:
 
-{{< figure src="/attachments/refguide/modeling/domain-model/external-entities/data-hub-app.png" alt=" Virtual Entity and OData Service files" >}}
+{{< figure src="/attachments/refguide9/modeling/domain-model/external-entities/data-hub-app.png" alt=" Virtual Entity and OData Service files" >}}
 
 {{% alert color="info" %}}
-When a new version of a consumed service becomes available in the Data Hub Catalog, this will be indicated in the **Data Hub** pane by an update arrow next to the service name. For more information, see the [Updating or Switching a Consumed OData Service](/refguide/consumed-odata-service/#updating) section in *Consumed OData Service*.
+When a new version of a consumed service becomes available in the Data Hub Catalog, this will be indicated in the **Data Hub** pane by an update arrow next to the service name. For more information, see the [Updating or Switching a Consumed OData Service](/refguide9/consumed-odata-service/#updating) section in *Consumed OData Service*.
 {{% /alert %}}
 
 You can make local changes to the properties of external entities that only affect how the data is used and presented in the consuming app. All other properties are defined in the source application and cannot be changed. When multiple external entities from the same OData service are used in a module or app, associations between the entities (made in the source app) will automatically be made in the local module.
@@ -69,7 +69,7 @@ Changes that are made to the properties of external entities are made only in th
 
 This tab displays the general properties of the external entity. The values that are defined in the originating app are displayed but but cannot be edited. The values that can be edited will only apply to the local app:
 
-{{< figure src="/attachments/refguide/modeling/domain-model/external-entities/external-entity-properties.png" alt="External Entity Properties" >}}
+{{< figure src="/attachments/refguide9/modeling/domain-model/external-entities/external-entity-properties.png" alt="External Entity Properties" >}}
 
 * **Name** – the name of the entity in the local app
 * **Original name** – this is read-only and shows the name of the entity as defined in the consumed OData service
@@ -77,9 +77,9 @@ This tab displays the general properties of the external entity. The values that
 
 ### 2.2 Attributes {#attributes}
 
-The [attributes](/refguide/attributes/) that have been exposed in the OData service for the external entity are listed here. All changes that are made to the attributes and the attribute list are applied to the local instance of the entity. As they are consumed, these changes will not affect the metadata of the consumed service that the entity is exposed in or the attributes of the entity in the originating app.
+The [attributes](/refguide9/attributes/) that have been exposed in the OData service for the external entity are listed here. All changes that are made to the attributes and the attribute list are applied to the local instance of the entity. As they are consumed, these changes will not affect the metadata of the consumed service that the entity is exposed in or the attributes of the entity in the originating app.
 
-{{% alert color="info" %}}In the [Data Hub Pane](/refguide/data-hub-pane/#association-attributes) the associations and attributes that are not supported in your Mendix model are shown as non-selectable (gray) and will not be included when you drag them into the domain model or be included in the entity properties. For more information see [Data Hub Pane](/refguide/data-hub-pane/#association-attributes).{{% /alert %}}
+{{% alert color="info" %}}In the [Data Hub Pane](/refguide9/data-hub-pane/#association-attributes) the associations and attributes that are not supported in your Mendix model are shown as non-selectable (gray) and will not be included when you drag them into the domain model or be included in the entity properties. For more information see [Data Hub Pane](/refguide9/data-hub-pane/#association-attributes).{{% /alert %}}
 
 The following operations can be done on the displayed attribute list:
 
@@ -91,7 +91,7 @@ The following operations can be done on the displayed attribute list:
 
 The **Edit Attribute** box can be used for specifying a local name for the attribute and adding a local description.
 
-{{< figure src="/attachments/refguide/modeling/domain-model/external-entities/edit-attributes.png" alt="Edit attributes" >}}
+{{< figure src="/attachments/refguide9/modeling/domain-model/external-entities/edit-attributes.png" alt="Edit attributes" >}}
 
 * **General Tab**
     * **Name** – a local name for the attribute can be specified.
@@ -102,15 +102,15 @@ The **Edit Attribute** box can be used for specifying a local name for the attri
 
 ### 2.3 Associations {#associations}
 
-This tab displays the associations that the external entity has with other entities that are exposed in the same service and also any associations that have been made with local entities. For further details on association properties in Studio Pro see [Association Tab Properties](/refguide/association-member-properties/).
+This tab displays the associations that the external entity has with other entities that are exposed in the same service and also any associations that have been made with local entities. For further details on association properties in Studio Pro see [Association Tab Properties](/refguide9/association-member-properties/).
 
-If the entity contains [one-way navigable associations](/refguide/association-properties/#one-way-navigable), there is a note at the top of the dialog box. 
+If the entity contains [one-way navigable associations](/refguide9/association-properties/#one-way-navigable), there is a note at the top of the dialog box. 
 
-{{< figure src="/attachments/refguide/modeling/domain-model/external-entities/external-entity-associations.png" alt="Edit attributes" >}}
+{{< figure src="/attachments/refguide9/modeling/domain-model/external-entities/external-entity-associations.png" alt="Edit attributes" >}}
 
 The following apply for all associations with the external entity:
 
-**Navigability icon** – an icon indicating whether an association is [one-way navigable](/refguide/association-properties/#one-way-navigable)
+**Navigability icon** – an icon indicating whether an association is [one-way navigable](/refguide9/association-properties/#one-way-navigable)
 **Name** – name of the association as displayed in the current app
 **Type** – read-only for associations between two external entities
 **Owner** – read-only for associations between two external entities
@@ -133,7 +133,7 @@ If you want to connect two external entities that are not connected in the origi
 
 When you **Edit** an association that is included for two entities exposed in the same OData service, the following properties are displayed and the only local change that can be made is the local Name:
 
-{{< figure src="/attachments/refguide/modeling/domain-model/external-entities/association-properties.png" alt="Edit external associations" >}}
+{{< figure src="/attachments/refguide9/modeling/domain-model/external-entities/association-properties.png" alt="Edit external associations" >}}
 
 * **Name** – local name of the association
 * **Original Name** – read-only name of the association given to it in the originating app
@@ -141,9 +141,9 @@ When you **Edit** an association that is included for two entities exposed in th
 * **Multiplicity** – read-only multiplicity values from the originating app
 * **Documentation** – go to this tab to add a local description for the external entity association
 
-If the association is [one-way navigable](/refguide/association-properties/#one-way-navigable), there is a note at the top of the dialog box.
+If the association is [one-way navigable](/refguide9/association-properties/#one-way-navigable), there is a note at the top of the dialog box.
 
-{{< figure src="/attachments/refguide/modeling/domain-model/external-entities/association-properties-one-way-navigable.png" alt="Edit external associations one-way navigable" >}}
+{{< figure src="/attachments/refguide9/modeling/domain-model/external-entities/association-properties-one-way-navigable.png" alt="Edit external associations one-way navigable" >}}
 
 ### 2.3.2 Connecting Two External Entities
 
@@ -161,33 +161,33 @@ Using external entities in production environments requires both publishers and 
 
 Publishers of an OData service set the type of authentication needed for it to be consumed. The following authentication methods are available:
 
-* [Username and password](/refguide/published-odata-services/#username-password) (basic authentication)
-* [Active session](/refguide/published-odata-services/#authentication-active-session)
-* [Custom](/refguide/published-odata-services/#authentication-microflow) (calling an authentication microflow)
-    * [Mendix SSO](/refguide/published-odata-services/#authentication-mendix-sso)
+* [Username and password](/refguide9/published-odata-services/#username-password) (basic authentication)
+* [Active session](/refguide9/published-odata-services/#authentication-active-session)
+* [Custom](/refguide9/published-odata-services/#authentication-microflow) (calling an authentication microflow)
+    * [Mendix SSO](/refguide9/published-odata-services/#authentication-mendix-sso)
     * Other (add your own, using a custom module for example)
 
-For details on the types of authentication methods and how to set them up, see the [Security](/refguide/published-odata-services/#security) section of *Published OData Services*. 
+For details on the types of authentication methods and how to set them up, see the [Security](/refguide9/published-odata-services/#security) section of *Published OData Services*. 
 
 ### 3.2 Consuming External Entities with Authentication
 
-When an external entity is used in an app module through the Data Hub pane, a [consumed OData service](/refguide/consumed-odata-service/) document is added specifying the details of the consumed service. This is the API to the publishing app and the data associated with the entity.
+When an external entity is used in an app module through the Data Hub pane, a [consumed OData service](/refguide9/consumed-odata-service/) document is added specifying the details of the consumed service. This is the API to the publishing app and the data associated with the entity.
 
 If the service you are consuming requires authentication, you will need to add authentication credentials. Consumers of an OData service in an external entity can contact the owner of the data source to check the required authentication method and credentials. 
 
 Learn more about adding authentication information to a consumed OData service:
 
-* Configuring [username and password](/refguide/consumed-odata-service/#authentication) consuming apps
-* Using [HTTP headers](/refguide/consumed-odata-service/#http-headers) for consuming custom authentication methods
-* Consuming a service that uses [Mendix SSO][/refguide/consumed-odata-service/#authenticate-mendix-sso]
+* Configuring [username and password](/refguide9/consumed-odata-service/#authentication) consuming apps
+* Using [HTTP headers](/refguide9/consumed-odata-service/#http-headers) for consuming custom authentication methods
+* Consuming a service that uses [Mendix SSO][/refguide9/consumed-odata-service/#authenticate-mendix-sso]
 
 ## 4 External Entity Limitations {#limitations}
 
 External entities are the endpoints that are defined in the published OData service from the originating app. The consumed OData service document displays the values from the service metadata when the external entity is used through the **Data Hub** pane. The datasets associated with the entities are maintained in the originating apps.
 
-External entities cannot be committed. Use the [Send External Object activity](/refguide/send-external-object/) to persist changes to external entities. This means the following:
+External entities cannot be committed. Use the [Send External Object activity](/refguide9/send-external-object/) to persist changes to external entities. This means the following:
 
 * The **Commit** activity does not work. Use **Send External Object** instead.
-* On pages, the [Save button](/refguide/button-widgets/) and the [Save Changes event](/refguide/on-click-event/#save-changes) do not work when the page contains widgets that update external entities. Call a microflow that persists the changes using **Send External Object** instead.
+* On pages, the [Save button](/refguide9/button-widgets/) and the [Save Changes event](/refguide9/on-click-event/#save-changes) do not work when the page contains widgets that update external entities. Call a microflow that persists the changes using **Send External Object** instead.
 
 For more details on consuming services and exposed entities, including operations that can be performed on external entities, see [Consume Registered Assets](/data-hub/data-hub-catalog/consume/) in the *Data Hub Guide*.

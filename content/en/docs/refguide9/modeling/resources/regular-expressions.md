@@ -1,6 +1,6 @@
 ---
 title: "Regular Expressions"
-url: /refguide/regular-expressions/
+url: /refguide9/regular-expressions/
 weight: 70
 tags: ["studio pro", "regular expressions", "regular expression"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
@@ -8,7 +8,7 @@ tags: ["studio pro", "regular expressions", "regular expression"]
 
 ## 1 Introduction
 
-A regular expression resource document is used in the [validation rules](/refguide/validation-rules/) of an entity to describe a set of criteria that a string must match.
+A regular expression resource document is used in the [validation rules](/refguide9/validation-rules/) of an entity to describe a set of criteria that a string must match.
 
 A regular expression has the properties described below.
 
@@ -16,7 +16,7 @@ A regular expression has the properties described below.
 
 ### 2.1 Name
 
-The name can be used to refer to the regular expression from a [validation rule](/refguide/validation-rules/) of an entity.
+The name can be used to refer to the regular expression from a [validation rule](/refguide9/validation-rules/) of an entity.
 
 ### 2.2 Documentation
 

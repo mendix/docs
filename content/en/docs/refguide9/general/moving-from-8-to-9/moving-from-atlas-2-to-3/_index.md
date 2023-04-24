@@ -1,13 +1,13 @@
 ---
 title: "Migrate From Atlas 2 To Atlas 3"
-url: /refguide/moving-from-atlas-2-to-3/
+url: /refguide9/moving-from-atlas-2-to-3/
 weight: 6
 tags: ["Atlas", "UI", "UX", "user experience", "design"]
 ---
 
 ## 1 Introduction
 
-Atlas 3 brings a new degree of power and sophistication to styling in Mendix. To upgrade from Atlas 2 to Atlas 3, see the [Upgrade from Atlas 2 to Atlas 3](#upgrade) section below. To view a high-level summary of the changes Atlas 3 brings to Mendix, see the [Atlas 3 Change Summary Reference Guide](/refguide/atlas3-change-summary/).
+Atlas 3 brings a new degree of power and sophistication to styling in Mendix. To upgrade from Atlas 2 to Atlas 3, see the [Upgrade from Atlas 2 to Atlas 3](#upgrade) section below. To view a high-level summary of the changes Atlas 3 brings to Mendix, see the [Atlas 3 Change Summary Reference Guide](/refguide9/atlas3-change-summary/).
 
 To upgrade from Atlas 2 to Atlas 3, you must complete the [Upgrading from Atlas 2 to Atlas 3](#upgrade) section below. If you have *NOT* added custom styling into your Atlas, completing these subsections is all you need to do: 
 
@@ -27,7 +27,7 @@ The sections after the upgrade instructions reference known issues and some trou
 
 Before upgrading, please note that in Atlas 3 all hybrid content is removed because hybrid profiles are deprecated in Mendix 9. If your app requires hybrid content, we recommend not upgrading to Atlas 3 unless you have created all your own hybrid content separate from Atlas’.
 
-Before you start the upgrade process, it may help if you consult the folder structure changes introduced in Atlas 3 by reading the [File and Folder Structure](/howto/front-end/customize-styling-new/#file-and-folder) section of *How to Customize Styling*. 
+Before you start the upgrade process, it may help if you consult the folder structure changes introduced in Atlas 3 by reading the [File and Folder Structure](/howto9/front-end/customize-styling-new/#file-and-folder) section of *How to Customize Styling*. 
 
 ### 2.1 Upgrading Your Theme Directory {#upgrade-theme-directory}
 
@@ -35,11 +35,11 @@ To upgrade your theme directory to Atlas 3 specifications, please complete the f
 
 1. Rename you Atlas 2 **theme** directory. We suggest naming it to *theme_atlas2*:
 
-    {{< figure src="/attachments/refguide/general/moving-from-8-to-9/moving-from-atlas-2-to-3/atlas2-themefolder.png" alt="Atlas2 folder" >}}
+    {{< figure src="/attachments/refguide9/general/moving-from-8-to-9/moving-from-atlas-2-to-3/atlas2-themefolder.png" alt="Atlas2 folder" >}}
 
 1. Download the Atlas 3 [theme.zip](https://github.com/mendix/widgets-resources/releases/download/atlas-ui-theme-dist/theme.zip) and extract it into the root of your Mendix app folder. The folder structure should look similar to the example below. **Mendix app root**, then **theme**, then **web** and **native**:
 
-    {{< figure src="/attachments/refguide/general/moving-from-8-to-9/moving-from-atlas-2-to-3/atlas3-themefolder.png" alt="Atlas 3 folder" >}}
+    {{< figure src="/attachments/refguide9/general/moving-from-8-to-9/moving-from-atlas-2-to-3/atlas3-themefolder.png" alt="Atlas 3 folder" >}}
 
 ### 2.2  Migrating UI Content {#upgrade-ui-content}
 
@@ -54,31 +54,31 @@ To upgrade your theme directory to Atlas 3 specifications, please complete the f
 1. If you have modified any of the Atlas UI content found in **Atlas UI Resources** (for example building blocks, page templates, or layouts) it is recommended to move the UI content you have modified to another user defined module within your app. *Skip this step* if you have not modifed any of Atlas UI's content.
 1. Rename the **Atlas_UI_Resources** module to **Atlas_Core** in Studio Pro by right-clicking the module then clicking **Rename**:
 
-    {{< figure src="/attachments/refguide/general/moving-from-8-to-9/moving-from-atlas-2-to-3/2-rename.png" >}}
+    {{< figure src="/attachments/refguide9/general/moving-from-8-to-9/moving-from-atlas-2-to-3/2-rename.png" >}}
 
 1. Download [Atlas Core](https://marketplace.mendix.com/link/component/117187) from the Marketplace and replace the existing **Atlas_UI_Resources** renamed to **Atlas_Core**:
 
-    {{< figure src="/attachments/refguide/general/moving-from-8-to-9/moving-from-atlas-2-to-3/3-import.png" >}}
+    {{< figure src="/attachments/refguide9/general/moving-from-8-to-9/moving-from-atlas-2-to-3/3-import.png" >}}
 
 #### 2.2.2 Adding Atlas Web Content to Your App
 
 1. Download [Atlas Web Content](https://marketplace.mendix.com/link/component/117183) from Marketplace
 
-    {{< figure src="/attachments/refguide/general/moving-from-8-to-9/moving-from-atlas-2-to-3/atlas3-change-summary/atlas-web-content-marketplace.png" alt="Atlas web content" >}}
+    {{< figure src="/attachments/refguide9/general/moving-from-8-to-9/moving-from-atlas-2-to-3/atlas3-change-summary/atlas-web-content-marketplace.png" alt="Atlas web content" >}}
 
 1. **Atlas Web Content** will appear as a new module inside **Marketplace Modules**
 
-    {{< figure src="/attachments/refguide/general/moving-from-8-to-9/moving-from-atlas-2-to-3/atlas-web-content-folder-structure.png" alt="Atlas web content folder"   width="250"  >}}
+    {{< figure src="/attachments/refguide9/general/moving-from-8-to-9/moving-from-atlas-2-to-3/atlas-web-content-folder-structure.png" alt="Atlas web content folder"   width="250"  >}}
 
 #### 2.2.3 Adding Atlas Native Content to Your App
 
 1. Download [Atlas Native Content](https://marketplace.mendix.com/link/component/117175) from Marketplace:
 
-    {{< figure src="/attachments/refguide/general/moving-from-8-to-9/moving-from-atlas-2-to-3/atlas3-change-summary/atlas-native-content-marketplace.png" alt="Atlas native content" >}}
+    {{< figure src="/attachments/refguide9/general/moving-from-8-to-9/moving-from-atlas-2-to-3/atlas3-change-summary/atlas-native-content-marketplace.png" alt="Atlas native content" >}}
 
 1. **Atlas Native Content** will appear as a new module inside **Marketplace Modules**:
 
-    {{< figure src="/attachments/refguide/general/moving-from-8-to-9/moving-from-atlas-2-to-3/atlas-native-content-folder.png" alt="Atlas native content folder"   width="300"  >}}
+    {{< figure src="/attachments/refguide9/general/moving-from-8-to-9/moving-from-atlas-2-to-3/atlas-native-content-folder.png" alt="Atlas native content folder"   width="300"  >}}
 
 ### 2.3 Migrating Your Web Styling {#upgrade-web-styling}
 
@@ -436,7 +436,7 @@ When you have completed the sections above, you may have errors in your error li
 
 * For errors relating to renamed design properties, right-click a related error and click **Updated all renamed design properties in project**:
 
-    {{< figure src="/attachments/refguide/general/moving-from-8-to-9/moving-from-atlas-2-to-3/4-errors.png" alt="errors" >}}
+    {{< figure src="/attachments/refguide9/general/moving-from-8-to-9/moving-from-atlas-2-to-3/4-errors.png" alt="errors" >}}
 
 * For errors about the **Phone** or **Tablet** navigation profile no longer existing, right-click the error and select **Go to** which will navigate you to the widget that points to a missing Phone or Tablet profile — use one of these methods to solve the error:
     * Delete the layout
@@ -446,7 +446,7 @@ When you have completed the sections above, you may have errors in your error li
 
     Note that navigation profiles have changed in Mendix 9. See the [Mendix 9 Release Notes](/releasenotes/studio-pro/9.0/) for more information.
 
-    {{< figure src="/attachments/refguide/general/moving-from-8-to-9/moving-from-atlas-2-to-3/5-nav.png" >}}
+    {{< figure src="/attachments/refguide9/general/moving-from-8-to-9/moving-from-atlas-2-to-3/5-nav.png" >}}
 
 * If you are using Hybrid phone profiles, please make sure you change them to their equivalent web profiles by clicking **Change profile type** in your navigation profile:
     * Hybrid tablet app offline → Tablet web offline
@@ -454,21 +454,21 @@ When you have completed the sections above, you may have errors in your error li
     * Hybrid phone app offline → Phone web offline
     * Hybrid phone app online → Phone web
 
-    {{< figure src="/attachments/refguide/general/moving-from-8-to-9/moving-from-atlas-2-to-3/6-hybrid-phone.png" >}}
+    {{< figure src="/attachments/refguide9/general/moving-from-8-to-9/moving-from-atlas-2-to-3/6-hybrid-phone.png" >}}
 
 * If you are using Badge, Progress Circle, Progress Bar, or Maps widgets, please make sure you update the definitions of the widgets and reconfigure following the new properties added for each widget:
 
-    {{< figure src="/attachments/refguide/general/moving-from-8-to-9/moving-from-atlas-2-to-3/7-errors.png" >}}
+    {{< figure src="/attachments/refguide9/general/moving-from-8-to-9/moving-from-atlas-2-to-3/7-errors.png" >}}
 
-* If you have **Design property X is not supported by your theme** errors, it either means a design property has been removed in Atlas 3 or you need to add your own design properties to the new file structure as instructed in the [migrating custom defined design properties](#upgrade-design-properties) section above. To suppress the error, right-click the error, then select **Remove property**. To check how to extend your design properties, please follow [How to Extend Design Properties](/howto/front-end/extend-design-properties/).
+* If you have **Design property X is not supported by your theme** errors, it either means a design property has been removed in Atlas 3 or you need to add your own design properties to the new file structure as instructed in the [migrating custom defined design properties](#upgrade-design-properties) section above. To suppress the error, right-click the error, then select **Remove property**. To check how to extend your design properties, please follow [How to Extend Design Properties](/howto9/front-end/extend-design-properties/).
 
-    {{< figure src="/attachments/refguide/general/moving-from-8-to-9/moving-from-atlas-2-to-3/8-errors-background.png" >}}
+    {{< figure src="/attachments/refguide9/general/moving-from-8-to-9/moving-from-atlas-2-to-3/8-errors-background.png" >}}
 
 * If you have errors saying **Unknown option X for design property**, it means the design property option has been removed in Atlas 3. Use one of the following methods to solve the error: 
     * Set the design property to its default option: right-click the error, then select **Set property X to default**
-    * Search for the design property option's CSS class in *theme_atlas2/settings.json* for web and *theme_atlas2/settings-native.json* for native, then add it to the applicable [widget's style property](/refguide/common-widget-properties/#style)  
+    * Search for the design property option's CSS class in *theme_atlas2/settings.json* for web and *theme_atlas2/settings-native.json* for native, then add it to the applicable [widget's style property](/refguide9/common-widget-properties/#style)  
 
-    {{< figure src="/attachments/refguide/general/moving-from-8-to-9/moving-from-atlas-2-to-3/9-set-prop.png" >}}
+    {{< figure src="/attachments/refguide9/general/moving-from-8-to-9/moving-from-atlas-2-to-3/9-set-prop.png" >}}
 
 * If you have errors saying **Nanoflow commons/Native mobile resources are not compatible** get the new major versions from **Marketplace**.
 
@@ -478,11 +478,11 @@ When you have completed the sections above, you may have errors in your error li
 
 In Mendix 9 the Hybrid profile is deprecated. In Atlas 3 all hybrid content is removed. When upgrading from Atlas 2 to Atlas 3, you may have errors about pages used as the default home page for a hybrid profile which no longer exists:
 
-{{< figure src="/attachments/refguide/general/moving-from-8-to-9/moving-from-atlas-2-to-3/10-edge.png" >}}
+{{< figure src="/attachments/refguide9/general/moving-from-8-to-9/moving-from-atlas-2-to-3/10-edge.png" >}}
 
 To fix this, right-click the error then select **Go to Navigation profile ‘HybridPhone’** and change the default home page:
 
-{{< figure src="/attachments/refguide/general/moving-from-8-to-9/moving-from-atlas-2-to-3/set-hybrid-nav.png" >}}
+{{< figure src="/attachments/refguide9/general/moving-from-8-to-9/moving-from-atlas-2-to-3/set-hybrid-nav.png" >}}
 
 ## 5 Troubleshooting Common Atlas Problems {#troubleshoot}
 
@@ -498,5 +498,5 @@ To troubleshoot common Atlas problems, do the following:
 
 * [Atlas 3 Website](https://www.mendix.com/atlas/)
 * [Atlas Design System App](https://atlasdesignsystem.mendixcloud.com/)
-* [Atlas 3 Change Summary](/refguide/atlas3-change-summary/)
+* [Atlas 3 Change Summary](/refguide9/atlas3-change-summary/)
 * [Studio Pro 9 Release Notes](/releasenotes/studio-pro/9.0/)

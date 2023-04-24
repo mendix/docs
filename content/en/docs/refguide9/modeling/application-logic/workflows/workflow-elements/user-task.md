@@ -1,6 +1,6 @@
 ---
 title: "User Task"
-url: /refguide/user-task/
+url: /refguide9/user-task/
 weight: 30
 tags: ["workflow", "workflows", "user task", "task", "Studio Pro"]
 ---
@@ -11,11 +11,11 @@ User task allows you to assign a workflow task to a certain user or a group of u
 
 For example, you can add filters and assign a task to users with the Manager role:
 
-{{< figure src="/attachments/refguide/modeling/application-logic/workflows/workflow-elements/user-task/user-task.jpg" alt="User Task Example" width="200">}}
+{{< figure src="/attachments/refguide9/modeling/application-logic/workflows/workflow-elements/user-task/user-task.jpg" alt="User Task Example" width="200">}}
 
 When the workflow reaches the user task activity, the task is created and will be displayed in the Task inbox if you are using the **Workflow Commons** module:
 
-{{< figure src="/attachments/refguide/modeling/application-logic/workflows/workflow-elements/user-task/task-inbox.jpg" alt="Task Inbox" >}}
+{{< figure src="/attachments/refguide9/modeling/application-logic/workflows/workflow-elements/user-task/task-inbox.jpg" alt="Task Inbox" >}}
 
 ## 2 Properties
 
@@ -69,13 +69,13 @@ To add a parameter to the **Task name** or the **Task description**, do the foll
 
 3. In the **Template Parameter (String)** dialog box, specify the expression, and confirm your choice:
 
-    {{< figure src="/attachments/refguide/modeling/application-logic/workflows/workflow-elements/user-task/parameter-example.jpg" alt="Parameter Example" >}}
+    {{< figure src="/attachments/refguide9/modeling/application-logic/workflows/workflow-elements/user-task/parameter-example.jpg" alt="Parameter Example" >}}
 
     {{% alert color="info" %}}Make sure that the attribute you use in the expression is of the string type.{{% /alert %}}
 
 4. In the **Template** setting, write the text you would like to display and type **Index** of the parameter you would like to include. For example, you can add a template for the **Task description** specifying the name of the workflow and what the workflow due date is :
 
-    {{< figure src="/attachments/refguide/modeling/application-logic/workflows/workflow-elements/user-task/task-description-example.jpg" alt="Task Description Example" >}} 
+    {{< figure src="/attachments/refguide9/modeling/application-logic/workflows/workflow-elements/user-task/task-description-example.jpg" alt="Task Description Example" >}} 
 
 ##### 2.2.3.2 Performing Other Actions on Parameters
 
@@ -118,10 +118,10 @@ Possible options of this property are described in the table below:
 
 | Option    | Description                                                  |
 | --------- | ------------------------------------------------------------ |
-| XPath     | Allows you to filter users who should be assigned the user task. For example, you can assign a certain task only to users with the Manager user role. You can use attributes of the **User Entity** set in [App Settings](/refguide/app-settings/#workflows). |
-| Microflow | Allows you to assign the user task to certain users. Using microflow you can check, for example, which users have the right to approve user tasks and are currently not on vacation and assign the task only to users who passed the check.<br />The return type of the microflow should be the **User Entity** set in [App Settings](/refguide/app-settings/#workflows). |
+| XPath     | Allows you to filter users who should be assigned the user task. For example, you can assign a certain task only to users with the Manager user role. You can use attributes of the **User Entity** set in [App Settings](/refguide9/app-settings/#workflows). |
+| Microflow | Allows you to assign the user task to certain users. Using microflow you can check, for example, which users have the right to approve user tasks and are currently not on vacation and assign the task only to users who passed the check.<br />The return type of the microflow should be the **User Entity** set in [App Settings](/refguide9/app-settings/#workflows). |
 
-In case **User Assigment** (using an XPath or a microflow) results in an empty list of users (0 users), the workflow fails. For more information on how to handle this kind of issues, see the [Operation](/refguide/change-workflow-state/#operation) section in *Change Workflow State*.
+In case **User Assigment** (using an XPath or a microflow) results in an empty list of users (0 users), the workflow fails. For more information on how to handle this kind of issues, see the [Operation](/refguide9/change-workflow-state/#operation) section in *Change Workflow State*.
 
 #### 2.8.2 XPath Constraint
 
@@ -137,4 +137,4 @@ Enables automatically assigning a user task when a single user is targeted. This
 
 ## 3 Read More
 
-* [Workflows](/refguide/workflows/)
+* [Workflows](/refguide9/workflows/)

@@ -1,12 +1,12 @@
 ---
 title: "Native App Prerequisites and Troubleshooting" 
 linktitle: "Prerequisites and Troubleshooting"
-url: /refguide/mobile/getting-started-with-mobile/prerequisites/
+url: /refguide9/mobile/getting-started-with-mobile/prerequisites/
 weight: 10
 description: Troubleshoot common issues associated with building and running native mobile apps.
 aliases:
-    - /refguide/getting-the-make-it-native-app/
-    - /howto/mobile/common-issues/
+    - /refguide9/getting-the-make-it-native-app/
+    - /howto9/mobile/common-issues/
 ---
 
 ## 1 Introduction
@@ -22,7 +22,7 @@ The Make It Native app allows developers to preview, test, and debug native mobi
 
 This app is available for both Android and iOS devices.
 
-For information on which mobile operating systems are supported by the Make It Native app, see the [Mobile Operating Systems](/refguide/system-requirements/#mobileos) section of *System Requirements*.
+For information on which mobile operating systems are supported by the Make It Native app, see the [Mobile Operating Systems](/refguide9/system-requirements/#mobileos) section of *System Requirements*.
 
 ### 2.1 Direct Download Links {#direct-links}
 
@@ -30,7 +30,7 @@ For Make it Native 9 apps, download the following Android or iOS Make It Native 
 
 |                                  Android                                  |                                iOS                                |
 | :-----------------------------------------------------------------------: | :---------------------------------------------------------------: |
-| {{< figure src="/attachments/refguide/mobile/native-mobile/getting-the-make-it-native-app/android-min-qr-code.png" alt="Android QR Code" >}} | {{< figure src="/attachments/refguide/mobile/native-mobile/getting-the-make-it-native-app/ios-min-qr-code.png" alt="iOS QR Code" >}} |
+| {{< figure src="/attachments/refguide9/mobile/native-mobile/getting-the-make-it-native-app/android-min-qr-code.png" alt="Android QR Code" >}} | {{< figure src="/attachments/refguide9/mobile/native-mobile/getting-the-make-it-native-app/ios-min-qr-code.png" alt="iOS QR Code" >}} |
 |   [Link](https://play.google.com/store/apps/details?id=com.mendix.developerapp.mx9&hl=en_US&gl=US)    |        [Link](https://apps.apple.com/us/app/make-it-native-9/id1542182000)         |
 
 ## 3 Troubleshooting Common Mobile Issues {#troubleshooting}
@@ -43,7 +43,7 @@ To troubleshoot issues related to the Make it Native app, see the sections below
 
 #### 3.1.1 Port Issues
 
-We recommend keeping the **Runtime port** in your [configuration](/refguide/configuration/#server) on **8080**. If you change it, do not change it to **8083**, because that is designated for app packaging.
+We recommend keeping the **Runtime port** in your [configuration](/refguide9/configuration/#server) on **8080**. If you change it, do not change it to **8083**, because that is designated for app packaging.
 
 #### 3.1.2 Wifi Network Settings
 
@@ -55,11 +55,11 @@ Depending on your device settings and network characteristics, the Make it Nativ
 
 * **Unable to load script**:
 
-    {{< figure src="/attachments/howto/mobile/native-mobile/get-started/common-issues/unabletoloadscript.png" alt="unable to load script"   width="250"  >}}
+    {{< figure src="/attachments/howto9/mobile/native-mobile/get-started/common-issues/unabletoloadscript.png" alt="unable to load script"   width="250"  >}}
 
 * **Cannot detect your runtime**:
 
-    {{< figure src="/attachments/howto/mobile/native-mobile/get-started/common-issues/min-error-firewall.png" alt="cannot detect runtime"   width="250"  >}}
+    {{< figure src="/attachments/howto9/mobile/native-mobile/get-started/common-issues/min-error-firewall.png" alt="cannot detect runtime"   width="250"  >}}
 
 These failures are often caused by a firewall blocking your device from accessing your laptop. In such cases, attempts to open the runtime URL from a mobile browser will also fail. To mitigate these issues, please make sure your firewall allows incoming traffic to your laptop on the runtime and native packing ports (8080 and 8083 by default). Instructions on how to do this differ per firewall. We recommend you consult your firewall administrator.
 
@@ -73,7 +73,7 @@ For the Windows Defender firewall, the most common firewall, do the following:
     1. For each Node.js entry, note their values in the **Program** column. They should all have a green check mark in front of them.<br /> 
     1. If the **Program** column shows a Mendix installation directory, then there should be a green icon in front of the entry. If this is not the case, double-click the entry and select **Allow the connection**:
 
-    {{< figure src="/attachments/howto/mobile/native-mobile/get-started/common-issues/inboundrules.png" alt="inbound rules"   width="350"  >}}
+    {{< figure src="/attachments/howto9/mobile/native-mobile/get-started/common-issues/inboundrules.png" alt="inbound rules"   width="350"  >}}
 
 1. Windows distinguishes between two types of networks: private and public. Windows Defender Firewall applies stricter regulations for public networks. If, and only if, you are connected to a trusted network, configure the network as **Private** on your computer.
 
@@ -96,7 +96,7 @@ If your company has strict network policies which do not allow you to open the p
 
 #### 3.1.6 Use Make It Native 9 with an Older Version of Mendix 9 {#use-MIN-older}
 
-The latest version of Make It Native 9 is only compatible with versions of Mendix 9.24.0 and above. To develop with older versions of Mendix 9, you can create a custom developer app by following [this guide](/refguide/mobile/distributing-mobile-apps/building-native-apps/how-to-devapps/). Note that a custom developer app can be used to develop multiple older Mendix apps as long as no custom dependencies are introduced.
+The latest version of Make It Native 9 is only compatible with versions of Mendix 9.24.0 and above. To develop with older versions of Mendix 9, you can create a custom developer app by following [this guide](/refguide9/mobile/distributing-mobile-apps/building-native-apps/how-to-devapps/). Note that a custom developer app can be used to develop multiple older Mendix apps as long as no custom dependencies are introduced.
 
 Until June 2023, Mendix is also providing a special version of the Make It Native 9 app that is compatible with older versions of Mendix 9. To install the special MIN 9 app, do the following:
 
@@ -117,4 +117,4 @@ For Android:
 
 ### 3.2 Configure Parallels
 
-To use Studio Pro on a Mac device, you will first need to install and configure Parallels. For more information, see [Configuring Parallels](/refguide/using-mendix-studio-pro-on-a-mac/).
+To use Studio Pro on a Mac device, you will first need to install and configure Parallels. For more information, see [Configuring Parallels](/refguide9/using-mendix-studio-pro-on-a-mac/).

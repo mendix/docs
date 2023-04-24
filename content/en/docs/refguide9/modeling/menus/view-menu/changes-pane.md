@@ -1,6 +1,6 @@
 ---
 title: "Changes Pane"
-url: /refguide/changes-pane/
+url: /refguide9/changes-pane/
 weight: 20
 description: "Describes the Changes pane in Mendix Studio Pro."
 tags: ["Studio Pro", "changes", "changes pane"]
@@ -20,16 +20,16 @@ This pane consists of the following:
 
 The top bar of the top level of the **Changes** pane consists of various buttons:
 
-{{< figure src="/attachments/refguide/modeling/menus/view-menu/changes-pane/changes-top-bar.png" alt="Top Bar of the Changes Pane" >}}
+{{< figure src="/attachments/refguide9/modeling/menus/view-menu/changes-pane/changes-top-bar.png" alt="Top Bar of the Changes Pane" >}}
 
 Buttons allow you to perform the following actions:
 
 * **Back** – goes back up one level; at the top level, this button is disabled
 * **Go to** – opens a zoomed-in level and opens up the selected document 
 * **Tasks** – allows you to perform specific actions such as reverting the change to the latest commit, or solving conflicts
-* **Update** – retrieves latest changes from the repository (for more information on the update concept, see the [Update](/refguide/version-control/#update) section in *Version Control*) 
-* **Commit** – commits your changes to the repository and starts a new revision (for more information on the commit concept, see the [Commit](/refguide/version-control/#commit) section in *Version Control*)
-* **History** – opens the **History** dialog box that shows the changes made on the current development line of the app (for more information on history, see [History](/refguide/history-dialog/))
+* **Update** – retrieves latest changes from the repository (for more information on the update concept, see the [Update](/refguide9/version-control/#update) section in *Version Control*) 
+* **Commit** – commits your changes to the repository and starts a new revision (for more information on the commit concept, see the [Commit](/refguide9/version-control/#commit) section in *Version Control*)
+* **History** – opens the **History** dialog box that shows the changes made on the current development line of the app (for more information on history, see [History](/refguide9/history-dialog/))
 
 The **Back** and **Go to** buttons are common throughout all the levels, while other buttons will only apply to a specific one.
 
@@ -37,7 +37,7 @@ The **Back** and **Go to** buttons are common throughout all the levels, while o
 
 The top level of the **Changes** pane is a grid listing changed documents, for example, a page or a nanoflow:
 
-{{< figure src="/attachments/refguide/modeling/menus/view-menu/changes-pane/changes-top-level.png" alt="Top Level of the Changes Pane" >}}
+{{< figure src="/attachments/refguide9/modeling/menus/view-menu/changes-pane/changes-top-level.png" alt="Top Level of the Changes Pane" >}}
 
 The grid contains information on the following items:
 
@@ -72,7 +72,7 @@ Each of them contains their own set of buttons.
 
 The zoomed-in level for modified documents is split into two grids, with elements on the left and changed properties on the right. If no properties were changed for an element, for example, when an element was added or deleted, the right grid will be empty:
 
-{{< figure src="/attachments/refguide/modeling/menus/view-menu/changes-pane/element-added.png" alt="No Properties to Show" >}}
+{{< figure src="/attachments/refguide9/modeling/menus/view-menu/changes-pane/element-added.png" alt="No Properties to Show" >}}
 
 The toolbar at this level contains the following buttons:
 
@@ -102,7 +102,7 @@ The toolbar at this level contains the following buttons:
 
 * **Back** – takes you back to the top level
 * **Go to** – takes you directly to the selected element
-* **Merge** – start the merge process — instructions for resolving conflicts are in the document [New Merge Algorithm with Fine-Grained Conflict Resolution](/refguide/new-merge-algorithm/) 
+* **Merge** – start the merge process — instructions for resolving conflicts are in the document [New Merge Algorithm with Fine-Grained Conflict Resolution](/refguide9/new-merge-algorithm/) 
 * **Show purely visual changes** – shows visual changes, such as dragging an entity to a new location in the domain model
 
 The grid on the left contains the following columns
@@ -118,11 +118,11 @@ The grid on the right contains the following columns:
 * **Mine** – the change to the property that was made on the current development line
 * **Theirs** – the change to the property that was made on the other development line
 
-{{< figure src="/attachments/refguide/modeling/menus/view-menu/changes-pane/new-merge-algorithm-conflicts.png" alt="Example of conflicts format of changes pane" >}}
+{{< figure src="/attachments/refguide9/modeling/menus/view-menu/changes-pane/new-merge-algorithm-conflicts.png" alt="Example of conflicts format of changes pane" >}}
 
 ### 4.3 Merge Mode{#merge-mode}
 
-When you click **Merge** to start the merge mode, you will see options to resolve the conflicts. For more information on resolving resolving conflicts see [New Merge Algorithm with Fine-Grained Conflict Resolution](/refguide/new-merge-algorithm/).
+When you click **Merge** to start the merge mode, you will see options to resolve the conflicts. For more information on resolving resolving conflicts see [New Merge Algorithm with Fine-Grained Conflict Resolution](/refguide9/new-merge-algorithm/).
 
 The document you are working on can be edited while in merge mode to allow you to resolve the conflict successfully.
 
@@ -141,9 +141,9 @@ The toolbar will change to show the following buttons:
 
 The left and right panes will contain the same information as in [Zoomed-In Level for Conflicted Documents](#conflicts), above.
 
-{{< figure src="/attachments/refguide/modeling/menus/view-menu/changes-pane/new-merge-algorithm-resolve-mode.png" alt="Example of conflicts resolution format of changes pane" >}}
+{{< figure src="/attachments/refguide9/modeling/menus/view-menu/changes-pane/new-merge-algorithm-resolve-mode.png" alt="Example of conflicts resolution format of changes pane" >}}
 
 ## 5 Read More
 
-* [Studio Pro Overview](/refguide/studio-pro-overview/)
-* [Version Control](/refguide/version-control/) 
+* [Studio Pro Overview](/refguide9/studio-pro-overview/)
+* [Version Control](/refguide9/version-control/) 

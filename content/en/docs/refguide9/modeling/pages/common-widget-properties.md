@@ -1,10 +1,10 @@
 ---
 title: "Properties Common in the Page Editor"
-url: /refguide/common-widget-properties/
+url: /refguide9/common-widget-properties/
 weight: 120
 tags: ["studio pro", "widget properties", "properties", "common", "widget", "classes"]
 aliases:
-    - /refguide/Conditions
+    - /refguide9/Conditions
 #Common Section and Visibility section anchors are used in links of common-section-link and visibility-section-link snippets. If moving or renaming them, do not forget to update snippets.
 ---
 
@@ -24,19 +24,19 @@ The Screen reader caption property allows information to be read by screen reade
 
 The **Screen reader caption** property can be set on the following widgets:
 
-* [Text Box](/refguide/text-box/)
-* [Text Area](/refguide/text-area/)
-* [Drop-down](/refguide/drop-down/)
-* [Check Box](/refguide/check-box/)
-* [Radio Buttons](/refguide/radio-buttons/)
-* [Date Picker](/refguide/date-picker/)
-* [File Manager](/refguide/file-manager/)
-* [Reference Selector](/refguide/reference-selector/)
-* [Input Reference Set Selector](/refguide/input-reference-set-selector/)
+* [Text Box](/refguide9/text-box/)
+* [Text Area](/refguide9/text-area/)
+* [Drop-down](/refguide9/drop-down/)
+* [Check Box](/refguide9/check-box/)
+* [Radio Buttons](/refguide9/radio-buttons/)
+* [Date Picker](/refguide9/date-picker/)
+* [File Manager](/refguide9/file-manager/)
+* [Reference Selector](/refguide9/reference-selector/)
+* [Input Reference Set Selector](/refguide9/input-reference-set-selector/)
 
 ## 3 Common Section{#common-properties}
 
-{{< figure src="/attachments/refguide/modeling/pages/common-widget-properties/common-section.png" alt="Common Section" >}}
+{{< figure src="/attachments/refguide9/modeling/pages/common-widget-properties/common-section.png" alt="Common Section" >}}
 
 ### 3.1 Name{#name}
 
@@ -62,19 +62,19 @@ Styling is applied in the following order:
 
 You can see which widgets in a page have styling applied via the class or style property by clicking the <strong>Show styles</strong> button.
 
-{{< figure src="/attachments/refguide/modeling/pages/common-widget-properties/show-styles.png" >}}
+{{< figure src="/attachments/refguide9/modeling/pages/common-widget-properties/show-styles.png" >}}
 
 ### 3.4 Style{#style}
 
 The style property allows you to specify additional CSS styling. If a class is also specified, this styling is applied *after* the class. For example, `>background-color:lightblue; color:red;` will result in red text on a blue background:
 
-{{< figure src="/attachments/refguide/modeling/pages/common-widget-properties/style-example.png" >}}
+{{< figure src="/attachments/refguide9/modeling/pages/common-widget-properties/style-example.png" >}}
 
 ### 3.5 Dynamic Classes{#dynamicclasses}
 
-The dynamic classes property allows you to specify one or more cascading stylesheet (CSS) class like the class property, but based on an [expression](/refguide/expressions/). This allows you to dynamically construct classes based on data from an enclosing data container. The dynamic classes constructed in the expression are appended to the classes defined in the [`Class`](#class) property.
+The dynamic classes property allows you to specify one or more cascading stylesheet (CSS) class like the class property, but based on an [expression](/refguide9/expressions/). This allows you to dynamically construct classes based on data from an enclosing data container. The dynamic classes constructed in the expression are appended to the classes defined in the [`Class`](#class) property.
 
-{{< figure src="/attachments/refguide/modeling/pages/common-widget-properties/dynamic-classes.png" >}}
+{{< figure src="/attachments/refguide9/modeling/pages/common-widget-properties/dynamic-classes.png" >}}
 
 {{% alert color="info" %}}
 The dynamic classes property was introduced in Mendix Studio Pro v8.14.
@@ -88,7 +88,7 @@ Some widgets, for example snippets and building blocks, have a **Documentation**
 
 ## 4 Data Source Section{#data-source}
 
-{{< figure src="/attachments/refguide/modeling/pages/common-widget-properties/data-source-section.png" alt="Data Source Section" >}}
+{{< figure src="/attachments/refguide9/modeling/pages/common-widget-properties/data-source-section.png" alt="Data Source Section" >}}
 
 ### 4.1 Attribute(Path)
 
@@ -98,12 +98,12 @@ This property identifies an attribute which is used in an input widget.
 
 With the following widgets, the Attribute (Path) specifies the attribute which is being changed (or displayed) by the widget:
 
-* [Text Box](/refguide/text-box/)
-* [Text Area](/refguide/text-area/)
-* [Drop-down](/refguide/drop-down/)
-* [Check Box](/refguide/check-box/)
-* [Radio Buttons](/refguide/radio-buttons/)
-* [Date Picker](/refguide/date-picker/)
+* [Text Box](/refguide9/text-box/)
+* [Text Area](/refguide9/text-area/)
+* [Drop-down](/refguide9/drop-down/)
+* [Check Box](/refguide9/check-box/)
+* [Radio Buttons](/refguide9/radio-buttons/)
+* [Date Picker](/refguide9/date-picker/)
 
 The attribute can be one of the following:
 
@@ -119,9 +119,9 @@ You can edit attributes of any enclosing data container including grandparent da
 
 For widgets which manipulate associations, the Attribute (Path) specifies an attribute which is from an entity which is reachable from the current data container using an association. This applies to the following input elements:
 
-* [Reference Selector](/refguide/reference-selector/)
-* [Reference Set Selector](/refguide/reference-set-selector/)
-* [Input Reference Set Selector](/refguide/input-reference-set-selector/)
+* [Reference Selector](/refguide9/reference-selector/)
+* [Reference Set Selector](/refguide9/reference-set-selector/)
+* [Input Reference Set Selector](/refguide9/input-reference-set-selector/)
 
 For these widgets, only an **Attribute path** can be selected. In other words, the selected attribute must be from an entity associated with the data container entity by following an association, of the type which matches the widget, through the domain model.
 
@@ -129,7 +129,7 @@ For these widgets, only an **Attribute path** can be selected. In other words, t
 For these widgets you are selecting an association to another object. The attribute should therefore indicate uniquely to the end-user which object is being selected.
 {{% /alert %}}
 
-The attribute can be of one of the following [data types](/refguide/data-types/):
+The attribute can be of one of the following [data types](/refguide9/data-types/):
 
 * Autonumber
 * Date and Time
@@ -141,7 +141,7 @@ The attribute can be of one of the following [data types](/refguide/data-types/)
 
 ## 5 Editability Section{#editability}
 
-{{< figure src="/attachments/refguide/modeling/pages/common-widget-properties/editability-section.png" alt="Common Section" >}}
+{{< figure src="/attachments/refguide9/modeling/pages/common-widget-properties/editability-section.png" alt="Common Section" >}}
 
 ### 5.1 Editable
 
@@ -166,12 +166,12 @@ When selected, this enables the widget when a particular attribute has a certain
 
 #### 5.2.2 Based on Expression
 
-When selected, this enables the widget when a provided [expression](/refguide/expressions/) evaluates to true. The object of the containing data container is available inside an expression as the `$currentObject` variable.
+When selected, this enables the widget when a provided [expression](/refguide9/expressions/) evaluates to true. The object of the containing data container is available inside an expression as the `$currentObject` variable.
 
 The expression provided is evaluated in the browser and, currently, does not support all the functions that are available in microflows. The autocomplete function will only list those functions which are supported.
 
 {{% alert color="info" %}}
-As the expression is evaluated in the browser, we advise against using "secret" values (like access keys) in it. In particular, we disallow usages of [constants](/refguide/constants/).
+As the expression is evaluated in the browser, we advise against using "secret" values (like access keys) in it. In particular, we disallow usages of [constants](/refguide9/constants/).
 {{% /alert %}}
 
 ### 5.3 Read-Only Style
@@ -190,7 +190,7 @@ This property determines how the widget is rendered if it is read-only.
 
 ## 6 Label Section {#label}
 
-{{< figure src="/attachments/refguide/modeling/pages/common-widget-properties/label-section.png" alt="Label Section" >}}
+{{< figure src="/attachments/refguide9/modeling/pages/common-widget-properties/label-section.png" alt="Label Section" >}}
 
 A label can be used to described the purpose of the widget to the user. The label is shown next to the widget in the user interface. If a label is configured, the widget will be rendered in the browser wrapped in a form group. See [Bootstrap documentation](http://getbootstrap.com/css/#forms).
 
@@ -216,7 +216,7 @@ For each parameter in the template, you define an attribute of the context entit
 
 ## 7 Formatting Section{#numeric-formatting}
 
-{{< figure src="/attachments/refguide/modeling/pages/common-widget-properties/numeric-formatting-section.png" alt="Numeric Formatting Section" >}}
+{{< figure src="/attachments/refguide9/modeling/pages/common-widget-properties/numeric-formatting-section.png" alt="Numeric Formatting Section" >}}
 
 Formatting describes the way that numeric attributes are displayed. These are attributes of the following data types:
 
@@ -238,7 +238,7 @@ There are three options, described below:
 This mode only applies to attributes of type Decimal.
 {{% /alert %}}
 
-If set to *Fixed*, the decimal part always will be displayed with the number of places specified in the [Decimal precision](#decimal-precision) property. The value will be rounded using the method defined in the [Rounding](/refguide/app-settings/#rounding) section of **App Settings**.
+If set to *Fixed*, the decimal part always will be displayed with the number of places specified in the [Decimal precision](#decimal-precision) property. The value will be rounded using the method defined in the [Rounding](/refguide9/app-settings/#rounding) section of **App Settings**.
 
 If set to *Auto*, the whole decimal part of the attribute value will be displayed. No decimal part will be be displayed if the attribute value is an integer.
 
@@ -264,7 +264,7 @@ This only applies to attributes of type Decimal and is available only when the [
 
 The precision of a value describes the number of decimal places that are used to express that value. This property indicates the number of decimal places (the number of digits following the point).
 
-The way that the number is rounded when displayed is defined in the [Rounding](/refguide/app-settings/#rounding) section of **App Settings**.
+The way that the number is rounded when displayed is defined in the [Rounding](/refguide9/app-settings/#rounding) section of **App Settings**.
 
 Default: *2*
 
@@ -284,7 +284,7 @@ For example, with **Group digits** set to `true`, the number `1100100.01` will b
 
 ## 8 Validation Section{#validation}
 
-{{< figure src="/attachments/refguide/modeling/pages/common-widget-properties/validation-section.png" alt="Validation Section" >}}
+{{< figure src="/attachments/refguide9/modeling/pages/common-widget-properties/validation-section.png" alt="Validation Section" >}}
 
 Input elements can include validation to ensure that data is correct before it is used by the app.
 
@@ -297,7 +297,7 @@ There are two settings in the validation section which are described below:
 
 This property indicates whether this widget value should be validated and, if so, how. These are the possible options:
 
-* No validation – the data has to be the correct [data type](/refguide/data-types/) for the widget, but otherwise there is no further validation
+* No validation – the data has to be the correct [data type](/refguide9/data-types/) for the widget, but otherwise there is no further validation
 * A [predefined validation](#predefined-validation) – see description below
 * A [custom validation](#custom-validation) – see description below
 
@@ -313,7 +313,7 @@ The possible values of a predefined validation are the following:
 
 #### 8.1.2 Custom Validation{#custom-validation}
 
-Custom validation is an expression that follows the [Microflow expression](/refguide/expressions/) syntax.
+Custom validation is an expression that follows the [Microflow expression](/refguide9/expressions/) syntax.
 
 There are a number of variables you can use in your expression:
 
@@ -330,13 +330,13 @@ Default: *(none)*
 
 ### 8.2 Message
 
-This property determines the message that is shown to the user if widget validation is enabled and has failed. This is a translatable text (for more information, see [Language Menu](/refguide/translatable-texts/)).
+This property determines the message that is shown to the user if widget validation is enabled and has failed. This is a translatable text (for more information, see [Language Menu](/refguide9/translatable-texts/)).
 
 For example, if an address field is required, the validation message for the text box of the address could be something like, `The address is required.`
 
 ## 9 Visibility Section {#visibility-properties}
 
-{{< figure src="/attachments/refguide/modeling/pages/common-widget-properties/visibility-section.png" alt="Visibility Section" >}}
+{{< figure src="/attachments/refguide9/modeling/pages/common-widget-properties/visibility-section.png" alt="Visibility Section" >}}
 
 ### 9.1 Visible
 
@@ -364,13 +364,13 @@ When selected, this shows the widget while a particular attribute has a certain 
 
 ##### 9.1.1.2 Based on Expression{#visibility-based-on-expression}
 
-When selected, this shows the widget while a provided [expression](/refguide/expressions/) evaluates to true. The object of the containing data container is available inside an expression as a `$currentObject` variable. The expression can access objects of all the data containers enclosing that data container widget. These objects are available under the name of the widget they originate from (for example, `$dataView1`).
+When selected, this shows the widget while a provided [expression](/refguide9/expressions/) evaluates to true. The object of the containing data container is available inside an expression as a `$currentObject` variable. The expression can access objects of all the data containers enclosing that data container widget. These objects are available under the name of the widget they originate from (for example, `$dataView1`).
 
 For example, you might want a button to only be visible if a condition is met. Assume the object has an attribute called `myAttribute`, and you want the button to be visible only if `myAttribute` actually has a value stored. To achieve this goal put this expression into the field: `$currentObject/myAttribute != empty`.
 
-{{< figure src="/attachments/refguide/modeling/pages/common-widget-properties/visibility-example.png" alt="Visibility Example" >}}
+{{< figure src="/attachments/refguide9/modeling/pages/common-widget-properties/visibility-example.png" alt="Visibility Example" >}}
 
-Note that the expression is evaluated in the browser, and hence, we advise against using "secret" values (like access keys) in it. In particular, we disallow usages of [constants](/refguide/constants/). Also, client-side expressions currently do not support all the functions that are available in the microflows. Please refer to an autocomplete list to know what functions are supported in your version.
+Note that the expression is evaluated in the browser, and hence, we advise against using "secret" values (like access keys) in it. In particular, we disallow usages of [constants](/refguide9/constants/). Also, client-side expressions currently do not support all the functions that are available in the microflows. Please refer to an autocomplete list to know what functions are supported in your version.
 
 #### 9.1.2 Module Roles
 

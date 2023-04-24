@@ -1,14 +1,14 @@
 ---
 title: "UI Resources Package"
-url: /refguide/ui-resources-package/
+url: /refguide9/ui-resources-package/
 tags: ["studio pro", "ui resources"]
 ---
 
 ## 1 Introduction
 
-The UI resources package is a specific [module](/refguide/modules/) marked by a green icon in the App Explorer, that determines the app's look and feel. It does this in two distinct ways. First, the package supplies the app with all the page documents required to create well-designed, consistent pages, such as [page templates](/refguide/page-templates/) and [building blocks](/refguide/building-block/). Second, the package contains theme information, which allows users to easily switch out themes that complement the accompanying page documents. 
+The UI resources package is a specific [module](/refguide9/modules/) marked by a green icon in the App Explorer, that determines the app's look and feel. It does this in two distinct ways. First, the package supplies the app with all the page documents required to create well-designed, consistent pages, such as [page templates](/refguide9/page-templates/) and [building blocks](/refguide9/building-block/). Second, the package contains theme information, which allows users to easily switch out themes that complement the accompanying page documents. 
 
-Which module is set as the UI resources package is governed by the **UI resources package** setting in the **Theme** tab of the [App Settings settings](/refguide/project-settings/). This setting will automatically be updated if a new UI resources package is imported. 
+Which module is set as the UI resources package is governed by the **UI resources package** setting in the **Theme** tab of the [App Settings settings](/refguide9/project-settings/). This setting will automatically be updated if a new UI resources package is imported. 
 
 The core concept of a UI resources package as an easily shared source of design utilities works best if the contents of the module is restricted to page templates and building blocks. Adding pages, microflows, and entities is possible and can be useful, but it also forces users to use static resources that may not be ideally suited to their specific application. Consequently, when they inevitably feel the need to tweak those resources to their requirements, the package can no longer be easily updated and maintained by the original designer.
 

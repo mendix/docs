@@ -1,7 +1,7 @@
 ---
 title: "Execute an SQL Statement on an External Database"
 linktitle: "Execute SQL on External Database"
-url: /howto/integration/execute-an-sql-statement-on-an-external-database/
+url: /howto9/integration/execute-an-sql-statement-on-an-external-database/
 category: "Integration"
 weight: 17
 description: "Describes how to execute an SQL statement on relational external databases using Database Connector."
@@ -59,7 +59,7 @@ To use an **Execute statement** action in a microflow, follow these steps:
 
 2. Drag the **Execute statement** action into your microflow: 
 
-    {{< figure src="/attachments/howto/integration/execute-an-sql-statement-on-an-external-database/19399123.png" >}}
+    {{< figure src="/attachments/howto9/integration/execute-an-sql-statement-on-an-external-database/19399123.png" >}}
 
 3. Configure the statement:
     * Provide all the valid arguments to the statement action
@@ -68,7 +68,7 @@ To use an **Execute statement** action in a microflow, follow these steps:
     * Specify the **Output Variable name**
         * In the example below, the variable is **amountOfUpdatedRows**, which is the  output of the SQL statement; this is also the output of the SQL statement provided for the **Sql** argument within the connector
 
-    {{< figure src="/attachments/howto/integration/execute-an-sql-statement-on-an-external-database/19399146.png" >}}
+    {{< figure src="/attachments/howto9/integration/execute-an-sql-statement-on-an-external-database/19399146.png" >}}
 
     The statement action's result is either an **Integer** or a **Long** value, which usually represents the amount of affected rows.
 

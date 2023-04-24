@@ -1,6 +1,6 @@
 ---
 title: "OQL Where Clause"
-url: /refguide/oql-where-clause/
+url: /refguide9/oql-where-clause/
 tags: ["studio pro", "queries", "where"]
 ---
 
@@ -18,7 +18,7 @@ WHERE <constraint>
 
 `<constraint>` is an expression for which the value always equals true. Expressions consist of simple comparisons using operators, functions, keywords or system variables.
 
-For more information, see [OQL Expressions](/refguide/oql-expressions/).
+For more information, see [OQL Expressions](/refguide9/oql-expressions/).
 
 ## 3 Examples
 

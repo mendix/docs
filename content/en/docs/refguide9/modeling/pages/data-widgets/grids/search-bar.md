@@ -1,25 +1,25 @@
 ---
 title: "Search Bar"
-url: /refguide/search-bar/
+url: /refguide9/search-bar/
 weight: 40
 tags: ["studio pro", "search bar", "comparison search field", "drop down search field", "range search field", "grid"]
 aliases:
-    - /refguide/comparison-search-field.html
-    - /refguide/drop-down-search-field.html
-    - /refguide/range-search-field.html
-    - /refguide/comparison-search-field
-    - /refguide/drop-down-search-field
-    - /refguide/range-search-field
+    - /refguide9/comparison-search-field.html
+    - /refguide9/drop-down-search-field.html
+    - /refguide9/range-search-field.html
+    - /refguide9/comparison-search-field
+    - /refguide9/drop-down-search-field
+    - /refguide9/range-search-field
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
 ## 1 Introduction
 
-The search bar contains search fields that allow the end-user to quickly find the information they need in a [data grid](/refguide/data-grid/) or [template grid](/refguide/template-grid/).
+The search bar contains search fields that allow the end-user to quickly find the information they need in a [data grid](/refguide9/data-grid/) or [template grid](/refguide9/template-grid/).
 
 To add a search field to the search bar, right-click within the search bar in your data grid and choose **Add search field** > [Type of the search field](#search-field-type). 
 
-{{< figure src="/attachments/refguide/modeling/pages/data-widgets/grids/search-bar/add-search-field.png" >}}
+{{< figure src="/attachments/refguide9/modeling/pages/data-widgets/grids/search-bar/add-search-field.png" >}}
 
 ## 2 Search Field Types {#search-field-type}
 
@@ -43,7 +43,7 @@ Search field properties depend on the type of the search field.
 
 An example of drop-down search field properties properties is represented in the image below:
 
-{{< figure src="/attachments/refguide/modeling/pages/data-widgets/grids/search-bar/search-field-properties.png" alt="Search Field Properties"   width="250"  >}}
+{{< figure src="/attachments/refguide9/modeling/pages/data-widgets/grids/search-bar/search-field-properties.png" alt="Search Field Properties"   width="250"  >}}
 
 Search field properties consist of the following sections:
 
@@ -52,7 +52,7 @@ Search field properties consist of the following sections:
 
 ### 3.1 Common Section {#common}
 
-Properties as **Name**, **Caption**, and **Type** are common for most of the widgets. {{% snippet file="/static/_includes/refguide/common-section-link.md" %}}
+Properties as **Name**, **Caption**, and **Type** are common for most of the widgets. {{% snippet file="/static/_includes/refguide9/common-section-link.md" %}}
 
 However, there are additional properties that are described in the sections below.
 
@@ -64,7 +64,7 @@ However, there are additional properties that are described in the sections belo
 Search input formatting must be an exact day. Custom date formatting is not limited.
 {{% /alert %}}
 
-{{% snippet file="/static/_includes/refguide/custom-date-format-tokens.md" %}}
+{{% snippet file="/static/_includes/refguide9/custom-date-format-tokens.md" %}}
 
 #### 3.1.2 Placeholder Text
 
@@ -193,5 +193,5 @@ Default: *Smaller*
 
 ## 4 Read More
 
-* [Data Grid](/refguide/data-grid/)
-* [Template Grid](/refguide/template-grid/)
+* [Data Grid](/refguide9/data-grid/)
+* [Template Grid](/refguide9/template-grid/)

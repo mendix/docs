@@ -1,6 +1,6 @@
 ---
 title: "Add a Native Mobile App"
-url: /refguide/quickstart-part2/
+url: /refguide9/quickstart-part2/
 weight: 20
 description: "Learn the basics of making a native mobile app."
 tags: ["microflows", "widgets", "app", "nanoflow", "app development"]
@@ -8,7 +8,7 @@ tags: ["microflows", "widgets", "app", "nanoflow", "app development"]
 
 ## 1 Introduction 
 
-This document is Part 2 of the [Quickstart](/refguide/quickstart-guide/) guide for building an app. Here you will be adding on to the app created in [Part 1: Build a Responsive Web App](/refguide/quickstart-part1/). If you decided to skip Part 1, you can [download a copy of its completed app package](https://quickstartguidev1.s3.eu-west-2.amazonaws.com/Quickstart_App.mpk) in order to start this document right away.
+This document is Part 2 of the [Quickstart](/refguide9/quickstart-guide/) guide for building an app. Here you will be adding on to the app created in [Part 1: Build a Responsive Web App](/refguide9/quickstart-part1/). If you decided to skip Part 1, you can [download a copy of its completed app package](https://quickstartguidev1.s3.eu-west-2.amazonaws.com/Quickstart_App.mpk) in order to start this document right away.
 
 In this document you will learn to use a native mobile navigation profile. Apps built in the native mobile profile are typically installed natively on your iOS or Android device (usually via an app store).
 
@@ -20,28 +20,28 @@ Mendix native mobile apps are native mobile apps based on React Native. These ap
 
 Native mobile apps are offline first and only fetch data from the server when programmed to do so. By completing this guide, you will become acquainted with the following Mendix native mobile concepts:
 
-* [Offline-first design](/refguide/mobile/building-efficient-mobile-apps/offlinefirst-data/)
-* [Data synchronization](/refguide/mobile/building-efficient-mobile-apps/offlinefirst-data/synchronization/) between mobile devices and web apps
-* [Nanoflows](/refguide/nanoflows/): the native mobile JavaScript equivalent to microflows)
-* Using custom [JavaScript actions](/refguide/javascript-actions/) in your nanoflows
+* [Offline-first design](/refguide9/mobile/building-efficient-mobile-apps/offlinefirst-data/)
+* [Data synchronization](/refguide9/mobile/building-efficient-mobile-apps/offlinefirst-data/synchronization/) between mobile devices and web apps
+* [Nanoflows](/refguide9/nanoflows/): the native mobile JavaScript equivalent to microflows)
+* Using custom [JavaScript actions](/refguide9/javascript-actions/) in your nanoflows
 
 ## 2 Prerequisites
 
 Before starting this guide, make sure you have completed the following prerequisite:
 
-* Read through [Part 1: Build a Responsive Web App](/refguide/quickstart-part1/)
-* Download the [Make It Native 9](/refguide/getting-the-make-it-native-app/) app on your mobile device
-* If you are working on a Mac, please complete [Configuring Parallels](/refguide/using-mendix-studio-pro-on-a-mac/) to install Studio Pro on your Mac
+* Read through [Part 1: Build a Responsive Web App](/refguide9/quickstart-part1/)
+* Download the [Make It Native 9](/refguide9/getting-the-make-it-native-app/) app on your mobile device
+* If you are working on a Mac, please complete [Configuring Parallels](/refguide9/using-mendix-studio-pro-on-a-mac/) to install Studio Pro on your Mac
 
 ### 2.1 Downloading the Make It Native 9 App
 
-The [Make it Native 9](/refguide/getting-the-make-it-native-app/) mobile app is available for Android and iOS devices. Once installed, the app lets you quickly test your native mobile app as you develop it. 
+The [Make it Native 9](/refguide9/getting-the-make-it-native-app/) mobile app is available for Android and iOS devices. Once installed, the app lets you quickly test your native mobile app as you develop it. 
 
 Specifically, the Make it Native 9 app connects to your local development machine’s running copy of your app and then displays your app inside its mobile testing environment. This lets you make changes to your app on your development machine, then instantly see those changes in the mobile app.
 
 ## 3 Creating a Native Mobile Picture App
 
-Starting in Studio Pro, open the page **Home_Native** by double-clicking it in the App Explorer or by pressing <kbd>CTRL</kbd> + <kbd>G</kbd> to open your **Go to** menu and search for the page. The **Go to** menu is used for quick navigation in the app—for more Mendix shortcuts see [Edit Menu](/refguide/edit-menu/).
+Starting in Studio Pro, open the page **Home_Native** by double-clicking it in the App Explorer or by pressing <kbd>CTRL</kbd> + <kbd>G</kbd> to open your **Go to** menu and search for the page. The **Go to** menu is used for quick navigation in the app—for more Mendix shortcuts see [Edit Menu](/refguide9/edit-menu/).
 
 {{% alert type="info" %}}
 The **Home_Native** page has a different icon than the **Home_Web** page. Mendix uses these icons to help you develop the right aspect of your app.
@@ -49,17 +49,17 @@ The **Home_Native** page has a different icon than the **Home_Web** page. Mendix
 
 You should see this in Studio Pro:
 
-{{< figure src="/attachments/refguide/quickstart-guide/part2/studio-pro-check.png" width="450px" alt="What you should see">}}
+{{< figure src="/attachments/refguide9/quickstart-guide/part2/studio-pro-check.png" width="450px" alt="What you should see">}}
 
 The content on the page comes pre-made as a part of the template. To get started, do the following:
 
 1. Delete everything from the page.
-1. Add a **List view** to the page via the Toolbox. A list view works like the template grid (used in [Part 1](/refguide/quickstart-part1/)) except it can scroll, which is better for mobile users.
+1. Add a **List view** to the page via the Toolbox. A list view works like the template grid (used in [Part 1](/refguide9/quickstart-part1/)) except it can scroll, which is better for mobile users.
 1. Right-click the list view, then click **Select data source**, 
 1. Leave the **Type** as **Database**, click **Select** next to **Entity**, and search for the **Picture** entity. 
 1. When prompted to automatically fill the contents of the list view, click **No**:
 
-    {{< figure src="/attachments/refguide/quickstart-guide/part2/list-view-fill.png" width="450px" alt="List view">}}
+    {{< figure src="/attachments/refguide9/quickstart-guide/part2/list-view-fill.png" width="450px" alt="List view">}}
 
 ### 3.1 Creating the User Interface
 
@@ -68,7 +68,7 @@ Next you are going to create the user interface for your native app:
 1. Right-click the empty space inside the list view and select **Add building block**.
 1. Search for and select the **Image** building block under **Cards**.
 
-Just as in [Part 1](/refguide/quickstart-part1/), you must replace the auto-generated content with your content from the database.
+Just as in [Part 1](/refguide9/quickstart-part1/), you must replace the auto-generated content with your content from the database.
 
 Start by replacing the static image with the image the user uploads to the database:
 
@@ -83,7 +83,7 @@ Your images will now be displayed from the database, but the labels on the page 
 1. In the new window, replace the caption field with the place holder *{1}*. 
 1. Then click **Parameter** > **New** to add a new parameter and select the **Title** attribute:
 
-    {{< figure src="/attachments/refguide/quickstart-guide/part2/add-title-param.png" width="450px" alt="Configure edit button">}}
+    {{< figure src="/attachments/refguide9/quickstart-guide/part2/add-title-param.png" width="450px" alt="Configure edit button">}}
 
 1. Repeat the steps for the second label beneath the **Tile** field, this time linking it to the **Description** attribute instead.
 
@@ -95,7 +95,7 @@ Your app needs a button which allows the user to take a picture. Instead of a re
 
 1. Drag the **Floating action button** from the **Toolbox** onto the page:
 
-    {{< figure src="/attachments/refguide/quickstart-guide/part2/floating-action-button.png" width="450px" alt="Floating action button">}}
+    {{< figure src="/attachments/refguide9/quickstart-guide/part2/floating-action-button.png" width="450px" alt="Floating action button">}}
 
     The location is managed in the widget's properties, so it does not matter where the widget is placed on the page. You can place it above the list view and still have it display in the bottom-right corner by configuring the widget correctly.
 
@@ -105,9 +105,9 @@ Your app needs a button which allows the user to take a picture. Instead of a re
 1. Set the on click action is set to **Call a nanoflow**.
 1. Click **Nanoflow** > **Select** then create a new nanoflow called **ACT_TakeNewPicture**:
 
-    {{< figure src="/attachments/refguide/quickstart-guide/part2/make-pic-nano.png" width="450px" alt="New nanoflow">}}
+    {{< figure src="/attachments/refguide9/quickstart-guide/part2/make-pic-nano.png" width="450px" alt="New nanoflow">}}
 
-[Nanoflows](/refguide/nanoflows/) are the native mobile equivalent of microflows, but with several key differences. Nanoflows are offline-first, meaning they can execute without an online data connection. Therefore certain functionality like calling a REST API, which is available in microflows, is not in nanoflows. This is because nanoflows are based on JavaScript and execute on mobile devices instead of the server. 
+[Nanoflows](/refguide9/nanoflows/) are the native mobile equivalent of microflows, but with several key differences. Nanoflows are offline-first, meaning they can execute without an online data connection. Therefore certain functionality like calling a REST API, which is available in microflows, is not in nanoflows. This is because nanoflows are based on JavaScript and execute on mobile devices instead of the server. 
 
 Nanoflows also interact with the database on the user's mobile device, which is a copy of the server's database. All database transactions need to be synchronized from the device to the server in order for the data to reflect online.
 
@@ -117,7 +117,7 @@ As you look at your new **ACT_TakeNewPicture** nanoflow, do the following:
 1. Double-click the create object action and select the entity type as **Picture**, then click **OK**. 
 1. Drag a **Take Picture** action from the **Toolbox** into the nanoflow after the create object activity:
 
-    {{< figure src="/attachments/refguide/quickstart-guide/part2/add-activities.png" width="450px" alt="Take picture action">}}
+    {{< figure src="/attachments/refguide9/quickstart-guide/part2/add-activities.png" width="450px" alt="Take picture action">}}
 
 1. Configure the **Take Picture** action by double-clicking it and configuring the properties like this:
     1. Picture: $NewPicture
@@ -128,7 +128,7 @@ As you look at your new **ACT_TakeNewPicture** nanoflow, do the following:
     1. Use return value: yes
     1. Variable name: PictureTaken
 
-    {{< figure src="/attachments/refguide/quickstart-guide/part2/config-take-pic.png" width="450px" alt="Configure take picture">}}
+    {{< figure src="/attachments/refguide9/quickstart-guide/part2/config-take-pic.png" width="450px" alt="Configure take picture">}}
 
 Finally you need to create a page in which the user can view and edit their new picture:
 
@@ -142,7 +142,7 @@ Finally you need to create a page in which the user can view and edit their new 
 
 You should see the new page:
 
-{{< figure src="/attachments/refguide/quickstart-guide/part2/native-pic-page.png" width="450px" alt="New page">}}
+{{< figure src="/attachments/refguide9/quickstart-guide/part2/native-pic-page.png" width="450px" alt="New page">}}
 
 Just like before, you need to validate that the user has entered the title and description. Instead of validating that data in a nanoflow, you can simply configure validation on the text boxes themselves:
 
@@ -156,36 +156,36 @@ The final thing to do is ensure all the data captured by the user is synchronize
 1. Double-click the **Save** button. 
 1. Set **Auto-synchronize** to **Yes**:
 
-    {{< figure src="/attachments/refguide/quickstart-guide/part2/edit-button-props.png" width="450px" alt="Auto sync set to yes">}}
+    {{< figure src="/attachments/refguide9/quickstart-guide/part2/edit-button-props.png" width="450px" alt="Auto sync set to yes">}}
 
 All done! You can now run your app and test all the features you have built. To test your native mobile app without creating a deployable package, do the following:
 
 1. Open the Make it Native app on your mobile device.
 1. Click the drop-down menu in Studio Pro and select **View app on your device**.
 1. Click the **View Native Mobile App** tab.
-1. Scan the QR code with the Make it Native app on your mobile device to begin testing (Mac users: be sure to use forward ports 8080/8083 as [explained here](/refguide/using-mendix-studio-pro-on-a-mac/)):
+1. Scan the QR code with the Make it Native app on your mobile device to begin testing (Mac users: be sure to use forward ports 8080/8083 as [explained here](/refguide9/using-mendix-studio-pro-on-a-mac/)):
 
-    {{< figure src="/attachments/refguide/quickstart-guide/part2/min-qr.png" width="300px" alt="Scan QR code">}}
+    {{< figure src="/attachments/refguide9/quickstart-guide/part2/min-qr.png" width="300px" alt="Scan QR code">}}
 
-This will automatically begin testing. If you have issues, see [this troubleshooting guide](/refguide/mobile/getting-started-with-mobile/prerequisites/) for troubleshooting information.
+This will automatically begin testing. If you have issues, see [this troubleshooting guide](/refguide9/mobile/getting-started-with-mobile/prerequisites/) for troubleshooting information.
 
 When we tested our native mobile photo app, we were lucky to sight a stegosaurus nearby:
 
-{{< figure src="/attachments/refguide/quickstart-guide/part2/mobile-pic-1.png" width="200px" alt="stegosaurus 1">}}
-{{< figure src="/attachments/refguide/quickstart-guide/part2/mobile-pic-2.png" width="200px" alt="stegosaurus 2">}}
-{{< figure src="/attachments/refguide/quickstart-guide/part2/mobile-pic-3.png" width="200px" alt="stegosaurus 3">}}
+{{< figure src="/attachments/refguide9/quickstart-guide/part2/mobile-pic-1.png" width="200px" alt="stegosaurus 1">}}
+{{< figure src="/attachments/refguide9/quickstart-guide/part2/mobile-pic-2.png" width="200px" alt="stegosaurus 2">}}
+{{< figure src="/attachments/refguide9/quickstart-guide/part2/mobile-pic-3.png" width="200px" alt="stegosaurus 3">}}
 
 After taking a photo with your native mobile app and tapping the **Save** button, you should be able to see your new pictures automatically appear in the responsive profile after reloading the page in your browser:
 
-{{< figure src="/attachments/refguide/quickstart-guide/part2/responsive-app.png" width="450px" alt="Browser view">}}
+{{< figure src="/attachments/refguide9/quickstart-guide/part2/responsive-app.png" width="450px" alt="Browser view">}}
 
 Congratulations on successfully completing Part 2 of the quickstart guide! You are definitely on your way to succeed with the Mendix Platform.
 
-For more information on building and deploying apps with Mendix, see [Building Native Apps](/refguide/mobile/distributing-mobile-apps/building-native-apps/). Put simply, Mendix lets you [build an app for distribution](/refguide/mobile/distributing-mobile-apps/building-native-apps/native-build-locally/) and get it running on a native device. After you develop further, you can [debug native app issues](/refguide/mobile/distributing-mobile-apps/native-debug/) to improve your users' experience. Then, you can add [custom fonts](/refguide/mobile/designing-mobile-user-interfaces/images-icons-and-fonts/) to make your app feel more like your brand. And if you ever need help, we have [troubleshooting help](/refguide/mobile/getting-started-with-mobile/prerequisites/) for you just in case.
+For more information on building and deploying apps with Mendix, see [Building Native Apps](/refguide9/mobile/distributing-mobile-apps/building-native-apps/). Put simply, Mendix lets you [build an app for distribution](/refguide9/mobile/distributing-mobile-apps/building-native-apps/native-build-locally/) and get it running on a native device. After you develop further, you can [debug native app issues](/refguide9/mobile/distributing-mobile-apps/native-debug/) to improve your users' experience. Then, you can add [custom fonts](/refguide9/mobile/designing-mobile-user-interfaces/images-icons-and-fonts/) to make your app feel more like your brand. And if you ever need help, we have [troubleshooting help](/refguide9/mobile/getting-started-with-mobile/prerequisites/) for you just in case.
 
 ## 5 Read More
 
 * [Mendix Academy](https://academy.mendix.com/) – complete learning paths to build general Mendix skills
     * [Crash Course](https://academy.mendix.com/link/paths/82/Crash-Course) – the course we recommend for new users who are also experienced developers
 * [Mendix Documentation](https://docs.mendix.com/) – learn about the parts of Mendix which interest you most
-* [General Info](/refguide/general/) – learn more about the fundamentals of Studio Pro
+* [General Info](/refguide9/general/) – learn more about the fundamentals of Studio Pro

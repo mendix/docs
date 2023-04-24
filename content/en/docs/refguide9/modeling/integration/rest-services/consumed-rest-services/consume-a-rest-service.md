@@ -1,6 +1,6 @@
 ---
 title: "Consume a REST Service"
-url: /howto/integration/consume-a-rest-service/
+url: /howto9/integration/consume-a-rest-service/
 category: "Integration"
 weight: 9
 description: "Describes how to integrate an existing system or a legacy system into a Mendix app by calling a REST service in a microflow."
@@ -10,7 +10,7 @@ description: "Describes how to get information from a REST service."
 
 ## 1 Introduction
 
-In your Mendix app, you can use information from REST services. This how-to shows you how to do that through an example in which you create an app that retrieves Wikipedia pages from a REST service. The resulting app is [available for download](/attachments/howto/integration/consume-a-rest-service/WikipediaApi.mpk).
+In your Mendix app, you can use information from REST services. This how-to shows you how to do that through an example in which you create an app that retrieves Wikipedia pages from a REST service. The resulting app is [available for download](/attachments/howto9/integration/consume-a-rest-service/WikipediaApi.mpk).
 
 This how-to will teach you how to do the following:
 
@@ -25,20 +25,20 @@ We will start by providing Studio Pro as an example of what the REST service ret
 1. Open your browser and go to [https://en.wikipedia.org/api/rest_v1/page/summary/Tahiti](https://en.wikipedia.org/api/rest_v1/page/summary/Tahiti).
 2. This calls the REST service with a GET request – the result is the summary of the [Tahiti page on Wikipedia](https://en.wikipedia.org/wiki/Tahiti) in the JSON format:
 
-    {{< figure src="/attachments/howto/integration/consume-a-rest-service/get-call-result.png" alt="Screenshot of the result of the rest call" >}}
+    {{< figure src="/attachments/howto9/integration/consume-a-rest-service/get-call-result.png" alt="Screenshot of the result of the rest call" >}}
 
 3. Select the **Raw Data** tab and copy the whole whole JSON snippet.
-4. Create a module and name it *RESTconsume*. Add the new [JSON structure](/refguide/json-structures/) to your module: right-click the module in the **App Explorer** and select **Add other** > **JSON structure**. 
+4. Create a module and name it *RESTconsume*. Add the new [JSON structure](/refguide9/json-structures/) to your module: right-click the module in the **App Explorer** and select **Add other** > **JSON structure**. 
 5. Enter a **Name** for the structure: *JSON_structure* and click **OK**.
 6. In the **JSON Structure** dialog box, paste the JSON snippet in the **General** tab and click **Refresh** in the **Structure** section. This analyzes the structure of the JSON snippet and provides a representation of it.
 
-    {{< figure src="/attachments/howto/integration/consume-a-rest-service/json-structure.png" >}}
+    {{< figure src="/attachments/howto9/integration/consume-a-rest-service/json-structure.png" >}}
 
 7. Click **OK**
 
 ## 3 Creating an Import Mapping {#create-import-mapping}
 
-An [import mapping](/refguide/import-mappings/) specifies how the JSON relates to [entities](/refguide/entities/). You can map the the JSON to any entity you like. The following steps describe how to generate the entities and create an import mapping:
+An [import mapping](/refguide9/import-mappings/) specifies how the JSON relates to [entities](/refguide9/entities/). You can map the the JSON to any entity you like. The following steps describe how to generate the entities and create an import mapping:
 
 1. Right-click the module in the **App Explorer** and select **Add other** > **Import Mapping**.
 2. Enter a **Name** for the import mapping: *Import_mapping* and click **OK**.
@@ -46,7 +46,7 @@ An [import mapping](/refguide/import-mappings/) specifies how the JSON relates t
 4. Double-click **JSON_structure** in the **Select JSON Structure** dialog box.
 5. Click **Expand all** and then click **Check all**.
 
-    {{< figure src="/attachments/howto/integration/consume-a-rest-service/import-mapping.png" >}}
+    {{< figure src="/attachments/howto9/integration/consume-a-rest-service/import-mapping.png" >}}
 
 6. Click **OK**. The **Import_mapping** document is displayed and the JSON structure is on the right.
 7. Click **Map automatically** in the editor toolbar. 
@@ -69,19 +69,19 @@ To add an input entity to the domain model, follow these steps:
 6. On the **Attributes** tab, click **New** to add a string attribute,  name it *Title*, then click **OK**.
 7. Drag an association from **Input** to **Summary**.
 
-    {{< figure src="/attachments/howto/integration/consume-a-rest-service/domain-model.png" >}}
+    {{< figure src="/attachments/howto9/integration/consume-a-rest-service/domain-model.png" >}}
 
 8. Double-click **Import_mapping** in the **App Explorer** and from the **Connector** pane, drag **Input** as the input parameter for the input mapping.
 9. Double-click **Summary**.
 10. In the **Map entity 'Summary' from schema object element 'Root** dialog box, **Set association** to **Yes** and select the **RESTconsume_input_Summary** for the **Association** to enable the import mapping to set the association:
 
-    {{< figure src="/attachments/howto/integration/consume-a-rest-service/map-entity-from-input-mapping.png" alt="map entity from input mapping" >}}
+    {{< figure src="/attachments/howto9/integration/consume-a-rest-service/map-entity-from-input-mapping.png" alt="map entity from input mapping" >}}
 
 11. Click **OK**. 
 
 ## 5 Calling the REST Service in a Microflow {#call-microflow}
 
-You will now call the REST service in a [microflow](/refguide/microflows/) to build the integration with Wikipedia. The input parameter for the microflow is **Input** and this is associated with **Summary**.
+You will now call the REST service in a [microflow](/refguide9/microflows/) to build the integration with Wikipedia. The input parameter for the microflow is **Input** and this is associated with **Summary**.
 
 To call the REST service in a microflow, follow these steps:
 
@@ -91,13 +91,13 @@ To call the REST service in a microflow, follow these steps:
 4. Right-click and select **Add** > **Activity** and insert this to the microflow. Double-click the activity and select  **Call REST service** to change the type of action.
 5. In the **Call REST** dialog box, click **Edit** for the **Location** and add the following to **Template**: `https://en.wikipedia.org/api/rest_v1/page/summary/{1}`, with the parameter being the Title attribute from the **Input** parameter `$Input/Title`. Click **OK**.
 
-    {{< figure src="/attachments/howto/integration/consume-a-rest-service/location.png" >}}
+    {{< figure src="/attachments/howto9/integration/consume-a-rest-service/location.png" >}}
 
 6. In the **Response** tab, the response has to be mapped using the import mapping. For **Response handling** select **Apply import mapping**.
 7. For **Mapping**, click **Select** and double-click **Import_mapping**. For the **Parameter**, select **Input**. 
 8. For **Output** select **Yes** for **Store in variable** and specify *Summary* for the **Variable name**.
 
-    {{< figure src="/attachments/howto/integration/consume-a-rest-service/response.png" >}}
+    {{< figure src="/attachments/howto9/integration/consume-a-rest-service/response.png" >}}
 
 9. Click **OK**.
 10. Right-click after the **Call REST service** object and select **Insert** > **Activity** and double-click it and change it to a **Change object**.
@@ -107,15 +107,15 @@ To call the REST service in a microflow, follow these steps:
 14. On the **Edit Change Item** dialog box, for **Member**, select **RESTconsume.Input_Summary (RESTconsume.Summary)**.
 15. Under **Value**, enter `$Summary`.
 
-    {{< figure src="/attachments/howto/integration/consume-a-rest-service/set-association.png" >}}
+    {{< figure src="/attachments/howto9/integration/consume-a-rest-service/set-association.png" >}}
 
 16. Click **OK**.
 
-    {{< figure src="/attachments/howto/integration/consume-a-rest-service/change-object.png" >}}
+    {{< figure src="/attachments/howto9/integration/consume-a-rest-service/change-object.png" >}}
 
 17. Click **OK**. You have created microflow that takes the title of an article as input and associates it with its summary.
 
-    {{< figure src="/attachments/howto/integration/consume-a-rest-service/microflow.png" >}}
+    {{< figure src="/attachments/howto9/integration/consume-a-rest-service/microflow.png" >}}
 
 You have successfully consumed a REST service and created a microflow to show the results. The rest of this how-to describes how to use this microflow in an app so that you can see the REST call in action.
 
@@ -141,7 +141,7 @@ To create a page for this app, follow these steps:
 16. For **Show label**, select **No**, then click **OK**.
 17. Delete the **Save** and **Cancel** buttons.
 
-    {{< figure src="/attachments/howto/integration/consume-a-rest-service/page.png" >}}
+    {{< figure src="/attachments/howto9/integration/consume-a-rest-service/page.png" >}}
 
 ## 7 Filling in the Create Input Microflow {#createinput}
 
@@ -160,10 +160,10 @@ Congratulations! You can now start your app and get summaries from Wikipedia.
 
 ## 8 Read More
 
-* [Consume a Complex Web Service](/howto/integration/consume-a-complex-web-service/)
-* [Consume a Simple Web Service](/howto/integration/consume-a-simple-web-service/)
-* [Export XML Documents](/howto/integration/export-xml-documents/)
-* [Import XML Documents](/howto/integration/importing-xml-documents/)
-* [Import Excel Documents](/howto/integration/importing-excel-documents/)
-* [Expose a Web Service](/howto/integration/expose-a-web-service/)
-* [Expose Data to BI Tools Using OData](/howto/integration/exposing-data-to-bi-tools-using-odata/)
+* [Consume a Complex Web Service](/howto9/integration/consume-a-complex-web-service/)
+* [Consume a Simple Web Service](/howto9/integration/consume-a-simple-web-service/)
+* [Export XML Documents](/howto9/integration/export-xml-documents/)
+* [Import XML Documents](/howto9/integration/importing-xml-documents/)
+* [Import Excel Documents](/howto9/integration/importing-excel-documents/)
+* [Expose a Web Service](/howto9/integration/expose-a-web-service/)
+* [Expose Data to BI Tools Using OData](/howto9/integration/exposing-data-to-bi-tools-using-odata/)

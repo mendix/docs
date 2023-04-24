@@ -1,6 +1,6 @@
 ---
 title: "XPath Operators"
-url: /refguide/xpath-operators/
+url: /refguide9/xpath-operators/
 tags: ["studio pro"]
 ---
 

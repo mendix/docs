@@ -1,6 +1,6 @@
 ---
 title: "Page Editor Consistency Errors"
-url: /refguide/consistency-errors-pages/
+url: /refguide9/consistency-errors-pages/
 weight: 10
 description: "Describes consistency errors in Mendix Studio Pro and the way to fix them."
 tags: ["Studio Pro", "consistency errors", "checks", "errors", "pages"]
@@ -19,11 +19,11 @@ Some errors have error codes and if these errors are described in documentation,
 
 ## 2 List View Consistency Errors 
 
-If you do not configure a [data source](/refguide/data-sources/) for a [list view](/refguide/list-view/) properly, you will get consistency errors. 
+If you do not configure a [data source](/refguide9/data-sources/) for a [list view](/refguide9/list-view/) properly, you will get consistency errors. 
 
 The scheme below shows that the data source of the list view has been set to **Database**, but the entity that needs to be retrieved from the database has not been specified. This results in a consistency error. 
 
-{{< figure src="/attachments/refguide/modeling/menus/view-menu/errors-pane/consistency-errors/consistency-errors-pages/list-view-error.png" alt="Data Source Consistency Error Scheme" >}}
+{{< figure src="/attachments/refguide9/modeling/menus/view-menu/errors-pane/consistency-errors/consistency-errors-pages/list-view-error.png" alt="Data Source Consistency Error Scheme" >}}
 
 The table below describes the most common errors which can occur when configuring a list view,  the causes of these errors, and ways to fix them. 
 
@@ -36,11 +36,11 @@ The table below describes the most common errors which can occur when configurin
 
 ## 3 Data View Consistency Errors 
 
-If you do not configure a [data source](/refguide/data-sources/) for a [data view](/refguide/data-view/) properly, you will get consistency errors.
+If you do not configure a [data source](/refguide9/data-sources/) for a [data view](/refguide9/data-view/) properly, you will get consistency errors.
 
 For example, you have selected **Listen to widget** as the data source, but you have not selected the specific **List widget** you are listening to.
 
-{{< figure src="/attachments/refguide/modeling/menus/view-menu/errors-pane/consistency-errors/consistency-errors-pages/data-view-no-list-widget.png" alt="Data View With no List Widget Configured" >}}
+{{< figure src="/attachments/refguide9/modeling/menus/view-menu/errors-pane/consistency-errors/consistency-errors-pages/data-view-no-list-widget.png" alt="Data View With no List Widget Configured" >}}
 
 The table below describes the most common errors you can come across when configuring a data view,  causes of these errors, and ways to fix them. 
 
@@ -72,13 +72,13 @@ The errors that you can get when a page or snippet is expecting a context that i
 
 When a page expects a context that is not passed to it from a calling page or a microflow, you will get consistency errors. 
 
-For example, the **Customers** page contains a list view with a list of all customer names (**Customer** is set as **Entity** in the **Data Source** properties), and a **Details** button outside of the list view (placed in a [container](/refguide/container/) only). The **Details** button opens a **Customer Details** page when a user clicks it (the **On Click Action** for the button is set to **Page**). 
+For example, the **Customers** page contains a list view with a list of all customer names (**Customer** is set as **Entity** in the **Data Source** properties), and a **Details** button outside of the list view (placed in a [container](/refguide9/container/) only). The **Details** button opens a **Customer Details** page when a user clicks it (the **On Click Action** for the button is set to **Page**). 
 
-{{< figure src="/attachments/refguide/modeling/menus/view-menu/errors-pane/consistency-errors/consistency-errors-pages/customers-page.png" alt="Button Properties on the Customers Page" >}}
+{{< figure src="/attachments/refguide9/modeling/menus/view-menu/errors-pane/consistency-errors/consistency-errors-pages/customers-page.png" alt="Button Properties on the Customers Page" >}}
 
 However, the **Customer Details** page has a data view that expects an object *Customer* to be passed to it. In other words, this page needs to get data first to be able to display it. 
 
-{{< figure src="/attachments/refguide/modeling/menus/view-menu/errors-pane/consistency-errors/consistency-errors-pages/data-view-customer.png" alt="Data View Expects the Customer Object" >}}
+{{< figure src="/attachments/refguide9/modeling/menus/view-menu/errors-pane/consistency-errors/consistency-errors-pages/data-view-customer.png" alt="Data View Expects the Customer Object" >}}
 
 As this object is not passed to it from the **Customers** page, you get a consistency error.
 
@@ -94,7 +94,7 @@ If you want the **Customer Details** page to open the details of a specific cust
 1. Open the **Customers** page.
 2. Drag the **Details** button inside the list view.
 
-    {{< figure src="/attachments/refguide/modeling/menus/view-menu/errors-pane/consistency-errors/consistency-errors-pages/details-button-inside-the-list-view.png" alt="The Details Button Example" >}}
+    {{< figure src="/attachments/refguide9/modeling/menus/view-menu/errors-pane/consistency-errors/consistency-errors-pages/details-button-inside-the-list-view.png" alt="The Details Button Example" >}}
 
 Now the button gets the object of type *Customer* from the list view on the **Customers** page, and it will be passed to the **Customer Details** page. As a result, the details of a particular customer is displayed on the **Customer Details** page. 
 
@@ -107,7 +107,7 @@ If you want to create a new customer and fill in the customer's details on the *
 3. Set **Customer** as **Entity**.
 4. Set **Customer Details** as **Page**.
 
-    {{< figure src="/attachments/refguide/modeling/menus/view-menu/errors-pane/consistency-errors/consistency-errors-pages/button-create-object.png" alt="On Click Event Example" >}}
+    {{< figure src="/attachments/refguide9/modeling/menus/view-menu/errors-pane/consistency-errors/consistency-errors-pages/button-create-object.png" alt="On Click Event Example" >}}
 
 5. Change the button's caption from **Details** to **Add**, as this button will now create a new customer instead of showing the details of an existing customer.
 
@@ -123,7 +123,7 @@ If a widget opens a page and this widget is inside a data container of entity X,
 
 For example, you have a **Details** button on the **Engineers** page that opens the **Tasks** page:
 
-{{< figure src="/attachments/refguide/modeling/menus/view-menu/errors-pane/consistency-errors/consistency-errors-pages/engineers-page.png" alt="A Button on Engineers Page" >}}
+{{< figure src="/attachments/refguide9/modeling/menus/view-menu/errors-pane/consistency-errors/consistency-errors-pages/engineers-page.png" alt="A Button on Engineers Page" >}}
 
 The button is placed inside a list view; the list view's data source is set to entity *Engineer* in **Properties** > **Data Source**.
 
@@ -131,13 +131,13 @@ The Tasks page has a data view on it, but the data view's data source is set to 
 
 This means that data view expects the object of type *SmartTask* passed to it, but the **Engineers** page is passing the object of type *Engineer*.
 
-{{< figure src="/attachments/refguide/modeling/menus/view-menu/errors-pane/consistency-errors/consistency-errors-pages/tasks-page-list-view.png" alt="Data Source Example" >}}
+{{< figure src="/attachments/refguide9/modeling/menus/view-menu/errors-pane/consistency-errors/consistency-errors-pages/tasks-page-list-view.png" alt="Data Source Example" >}}
 
 To fix this error you can do one of the following:
 
 * Place the **Details** button in a data container that will pass the correct type of data to the page:
 
-  {{< figure src="/attachments/refguide/modeling/menus/view-menu/errors-pane/consistency-errors/consistency-errors-pages/details-button.png"   width="350"  >}}
+  {{< figure src="/attachments/refguide9/modeling/menus/view-menu/errors-pane/consistency-errors/consistency-errors-pages/details-button.png"   width="350"  >}}
 
 * Select another page for the button that will not expect any object to be passed to it, or will expect the object of type *Engineer*
 * Change the data source of the data view on the **Tasks** page to entity *Engineer*
@@ -159,11 +159,11 @@ Some of the most common errors of this type are described in the table below:
 
 When you set a microflow or a nanoflow as an on-click event for a widget, and this microflow expects an argument (for example, an object) that is not available, this will result in an error. 
 
-For example, on a page named *Customers* you have a button that calls a microflow (that is an [On click event](/refguide/on-click-event/) of the button is set to *Microflow*).
+For example, on a page named *Customers* you have a button that calls a microflow (that is an [On click event](/refguide9/on-click-event/) of the button is set to *Microflow*).
 
 However, the microflow contains a parameter *Customer*:
 
-{{< figure src="/attachments/refguide/modeling/menus/view-menu/errors-pane/consistency-errors/consistency-errors-pages/microflow-parameter.png" >}}
+{{< figure src="/attachments/refguide9/modeling/menus/view-menu/errors-pane/consistency-errors/consistency-errors-pages/microflow-parameter.png" >}}
 
 The microflow parameter expects an argument *Customer*, and since this argument is not available on the page where the button is located, it results in an error. 
 
@@ -172,7 +172,7 @@ To fix it, do the following:
 1. Open the *Customers* page and drag a data container onto it. For example, you can drag and drop a list view.
 2. Set the data source type of the list view to *Database* and set **Entity (path)** to *Customer*.
 
-    {{< figure src="/attachments/refguide/modeling/menus/view-menu/errors-pane/consistency-errors/consistency-errors-pages/data-source-list-view.png" >}}
+    {{< figure src="/attachments/refguide9/modeling/menus/view-menu/errors-pane/consistency-errors/consistency-errors-pages/data-source-list-view.png" >}}
 
 3. Place the button inside the list view.
 
@@ -182,15 +182,15 @@ Now the *Customer* object is available on the page and it matches the microflow 
 
 When you set a microflow or nanoflow as an on-click event for a widget, and this microflow/nanoflow expects a certain argument, but a different argument is available to the widget, this will result in an error. 
 
-For example, on a page named *Customers* you have a button that calls a microflow (that is an [On click event](/refguide/on-click-event/) of the button is set to *Microflow*).
+For example, on a page named *Customers* you have a button that calls a microflow (that is an [On click event](/refguide9/on-click-event/) of the button is set to *Microflow*).
 
 The microflow contains a parameter *Customer*:
 
-{{< figure src="/attachments/refguide/modeling/menus/view-menu/errors-pane/consistency-errors/consistency-errors-pages/microflow-parameter.png" >}}
+{{< figure src="/attachments/refguide9/modeling/menus/view-menu/errors-pane/consistency-errors/consistency-errors-pages/microflow-parameter.png" >}}
 
 On the *Customers* page you also have a data container, for example, a data view, that has an object *Photo* available. That means that the data source type of the data view is set to *Context* and **Entity (path)** is set to *Photo*:
 
-{{< figure src="/attachments/refguide/modeling/menus/view-menu/errors-pane/consistency-errors/consistency-errors-pages/data-view-data-source.png" >}}
+{{< figure src="/attachments/refguide9/modeling/menus/view-menu/errors-pane/consistency-errors/consistency-errors-pages/data-view-data-source.png" >}}
 
 As the microflow has the parameter *Customer*, and the data view has the object *Photo*, they are conflicting and resulting into an error.
 
@@ -198,11 +198,11 @@ The best way to fix this error is to either change the microflow to accept *Phot
 
 ## 6 Input Widget Consistency Errors
 
-The most common errors for input elements, their causes, and ways to fix them are described in the table below. For more information on input elements, see [Input Elements](/refguide/input-widgets/). 
+The most common errors for input elements, their causes, and ways to fix them are described in the table below. For more information on input elements, see [Input Elements](/refguide9/input-widgets/). 
 
 | Error Code | Message in the Error Pane                                    | Cause of the Error                                           | Way to Fix                                                   |
 | ---------- | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| CE0544     | This widget can only function inside a data container. Move it into a data view, list view or template grid. | You have added an input widget to a page, but it is not inside a data container. Input elements need to refer to an attribute of a specific entity type. And entities are only available via data containers. For more information about input elements, see [Input Elements](/refguide/input-widgets/). | Place this widget into a data container: a data view, list view, or template grid. |
+| CE0544     | This widget can only function inside a data container. Move it into a data view, list view or template grid. | You have added an input widget to a page, but it is not inside a data container. Input elements need to refer to an attribute of a specific entity type. And entities are only available via data containers. For more information about input elements, see [Input Elements](/refguide9/input-widgets/). | Place this widget into a data container: a data view, list view, or template grid. |
 | CE0545     | Select an attribute for this {widget name}.                  | You have added an input widget, and it is inside a data container, but an attribute is not selected for it. | Right-click the widget, click **Select Attribute** in the drop-down list, and set an attribute; or open widget's properties > the **Data source** section and set an attribute in the **Attribute (path)** field. |
 |            | Association {Name} must be a reference (not a reference set) | You have added a reference selector, and then you changed the association from reference type to reference set (from one-to-many or one-to-one to many-to-many). | Open your domain model, find the association you have selected for the reference selector, and change it to a one-to-many association. Note that changing the domain model can result in other errors. To avoid changing the domain model, you might want to use another widget instead of the reference selector.<br />For more information on how to fix this error for the reference selector, see the [Incorrect Multiplicity for a Reference Selector](#incorrect-multiplicity-reference) section |
 |            | Association {Name} must be a reference set (not a reference) | You have added an input reference set selector, and then you changed the association from reference set type to reference (from many-to-many to one-to-many or one-to-one). | Open your domain model, find the association you have selected for the input reference set selector, and change it to a many-to-many association. Note that changing the domain model can result in other errors. To avoid changing the domain model, you might want to use another widget instead of the reference set selector. <br />For more information on how to fix the consistency error for the reference set selector and input reference set selector, see the [Incorrect Multiplicity for a Reference Set Selector and an Input Reference Set Selector](#incorrect-multiplicity-reference-set) section. |
@@ -210,11 +210,11 @@ The most common errors for input elements, their causes, and ways to fix them ar
 
 ### 6.1 Incorrect Multiplicity for a Reference Selector {#incorrect-multiplicity-reference}
 
-A reference selector is a widget that is used to display and edit one-to-many or one-to-one associations. For more information on the widget, see [Reference Selector](/refguide/reference-selector/).  
+A reference selector is a widget that is used to display and edit one-to-many or one-to-one associations. For more information on the widget, see [Reference Selector](/refguide9/reference-selector/).  
 
-For example, you have several employees who are associated with one city where they work. This is a one-to-many association: multiple *Employees* objects are associated with one *City* object.  Associations that refer to a single object in this manner are *references*, as opposed to *reference sets*, in which multiple objects can refer to multiple other objects. In a reference, the "single object" side of the association is always the association's owner. For more information on associations and their types, see [Associations](/refguide/associations/).
+For example, you have several employees who are associated with one city where they work. This is a one-to-many association: multiple *Employees* objects are associated with one *City* object.  Associations that refer to a single object in this manner are *references*, as opposed to *reference sets*, in which multiple objects can refer to multiple other objects. In a reference, the "single object" side of the association is always the association's owner. For more information on associations and their types, see [Associations](/refguide9/associations/).
 
-{{< figure src="/attachments/refguide/modeling/menus/view-menu/errors-pane/consistency-errors/consistency-errors-pages/many-to-one-association.png" alt="One-to-many Association" >}}
+{{< figure src="/attachments/refguide9/modeling/menus/view-menu/errors-pane/consistency-errors/consistency-errors-pages/many-to-one-association.png" alt="One-to-many Association" >}}
 
 If you have the wrong type of association, you will get a consistency error: *Association {Name} must be a reference (not a reference set)*.
 
@@ -223,7 +223,7 @@ To fix this error, do the following:
 1. Open your domain model and double-click the association that you are using for the reference selector.
 2. In **Properties of Association** dialog box, change **Multiplicity** to one-to-many (in our example, multiple 'Employee' objects are associated with one 'City' objects).
 
-    {{< figure src="/attachments/refguide/modeling/menus/view-menu/errors-pane/consistency-errors/consistency-errors-pages/one-to-many-multiplicity.png" alt="Multiplicity for One-to-many Association" >}}
+    {{< figure src="/attachments/refguide9/modeling/menus/view-menu/errors-pane/consistency-errors/consistency-errors-pages/one-to-many-multiplicity.png" alt="Multiplicity for One-to-many Association" >}}
 
 3. Click **OK** to save changes.
 
@@ -235,11 +235,11 @@ You have changed the association multiplicity and fixed the error.
 
 ### 6.2 Incorrect Multiplicity for a Reference Set Selector and an Input Reference Set Selector {#incorrect-multiplicity-reference-set}
 
-Reference set selector and input set selector are widgets that are used to display and edit many-to-many associations. For more information on these widgets, see [Reference Set Selector](/refguide/reference-set-selector/) and [Input Reference Set Selector](/refguide/input-reference-set-selector/). 
+Reference set selector and input set selector are widgets that are used to display and edit many-to-many associations. For more information on these widgets, see [Reference Set Selector](/refguide9/reference-set-selector/) and [Input Reference Set Selector](/refguide9/input-reference-set-selector/). 
 
-For example, you have several employees who can visit customers in different cities during the week. Thus, many employees are associated with many cities, this is a many-to-many association between an *Employee* entity and a *City* entity (multiple employees are associated with multiple cities). Associations that refer to multiple objects in this manner are *reference set*. For more information on associations and their types, see [Associations](/refguide/associations/). 
+For example, you have several employees who can visit customers in different cities during the week. Thus, many employees are associated with many cities, this is a many-to-many association between an *Employee* entity and a *City* entity (multiple employees are associated with multiple cities). Associations that refer to multiple objects in this manner are *reference set*. For more information on associations and their types, see [Associations](/refguide9/associations/). 
 
-{{< figure src="/attachments/refguide/modeling/menus/view-menu/errors-pane/consistency-errors/consistency-errors-pages/many-to-many-association.png" alt="Many-to-many Association" >}}
+{{< figure src="/attachments/refguide9/modeling/menus/view-menu/errors-pane/consistency-errors/consistency-errors-pages/many-to-many-association.png" alt="Many-to-many Association" >}}
 
 If you have a wrong type of association, you will get the following errors:
 
@@ -251,7 +251,7 @@ To fix the error, do the following:
 1. Open your domain model and double-click the association that you are using for the reference set selector or the input reference set selector and do the following: <br/>
 2. In **Properties of Association** dialog box, change **Multiplicity** to many-to-many (in our example, multiple 'Employee' objects are associated with multiple 'City' objects).
 
-    {{< figure src="/attachments/refguide/modeling/menus/view-menu/errors-pane/consistency-errors/consistency-errors-pages/changing-multiplicity.png" alt="Multiplicity for Many-to-many Association" >}}
+    {{< figure src="/attachments/refguide9/modeling/menus/view-menu/errors-pane/consistency-errors/consistency-errors-pages/changing-multiplicity.png" alt="Multiplicity for Many-to-many Association" >}}
 
 3. Click **OK** to save changes.
 
@@ -263,14 +263,14 @@ You have changed the association multiplicity and fixed the error.
 
 ## 7 Images, Videos and Files Consistency Errors
 
-Images, videos and files should be placed in a data container, otherwise you will get consistency errors. Another way to fix consistency errors is to place these widgets in a snippet and configure the snippet. For more information on images, videos and files , see [Images, Videos, and Files](/refguide/image-and-file-widgets/). 
+Images, videos and files should be placed in a data container, otherwise you will get consistency errors. Another way to fix consistency errors is to place these widgets in a snippet and configure the snippet. For more information on images, videos and files , see [Images, Videos, and Files](/refguide9/image-and-file-widgets/). 
 
 | Error code | Message in the Error Pane                                    | Cause of the Error                                           | Way to Fix                                                   |
 | ---------- | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
-|            | A [file manager](/refguide/file-manager/) must be placed in a data view or  snippet that is connected to the entity ‘System.FileDocument’ or a specialization. | You have added a file manager to a page, but it is not inside a data view or a snippet that is configured properly. | Place this widget into a data container. If you want to place it into a snippet, mind that you need to configure it properly: either set System.FileDocument (or its specialization) as an entity for this snippet or place the snippet in a data container. |
-|            | An [image uploader](/refguide/image-uploader/) must be placed in a data view or snippet that is connected to the entity ‘System.Image’ or a specialization. | You have added an image uploader to a page, but it is not inside a data view or a snippet that is configured properly. | Place this widget into a data container. If you want to place it into a snippet, mind that you need to configure it properly: set System.Image (or its specialization) as an entity for this snippet or place the snippet in a data container. |
-|            | Move this widget into a data container, for example a data view or list view. | You have added a [dynamic image](/refguide/image-viewer/) to your page, but it is not inside a data view or a list view. | Place this widget inside a data view or a list view.         |
-| CE0489     | Select an entity for the data source of this [dynamic image](/refguide/image-viewer/). | You have added a dynamic image to a page, it is placed inside a data view or a list view, but an entity for the dynamic image is not specified. | Open dynamic image properties > the **Data source** section and select an entity in the **Entity (path)** field. |
+|            | A [file manager](/refguide9/file-manager/) must be placed in a data view or  snippet that is connected to the entity ‘System.FileDocument’ or a specialization. | You have added a file manager to a page, but it is not inside a data view or a snippet that is configured properly. | Place this widget into a data container. If you want to place it into a snippet, mind that you need to configure it properly: either set System.FileDocument (or its specialization) as an entity for this snippet or place the snippet in a data container. |
+|            | An [image uploader](/refguide9/image-uploader/) must be placed in a data view or snippet that is connected to the entity ‘System.Image’ or a specialization. | You have added an image uploader to a page, but it is not inside a data view or a snippet that is configured properly. | Place this widget into a data container. If you want to place it into a snippet, mind that you need to configure it properly: set System.Image (or its specialization) as an entity for this snippet or place the snippet in a data container. |
+|            | Move this widget into a data container, for example a data view or list view. | You have added a [dynamic image](/refguide9/image-viewer/) to your page, but it is not inside a data view or a list view. | Place this widget inside a data view or a list view.         |
+| CE0489     | Select an entity for the data source of this [dynamic image](/refguide9/image-viewer/). | You have added a dynamic image to a page, it is placed inside a data view or a list view, but an entity for the dynamic image is not specified. | Open dynamic image properties > the **Data source** section and select an entity in the **Entity (path)** field. |
 
 ## 8 Image Widget Consistency Errors
 
@@ -278,11 +278,11 @@ A consistency error for an image widget is described in the table below:
 
 | Error code | Message in the Error Pane | Cause of the Error                                           | Way to Fix                                                   |
 | ---------- | ------------------------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
-|            | No image selected         | You have added an image widget to a page, but do not select an image itself. | Open the image properties >**General** > **Image** and select an image. For more information on an image widget, see [Image](/refguide/image/). |
+|            | No image selected         | You have added an image widget to a page, but do not select an image itself. | Open the image properties >**General** > **Image** and select an image. For more information on an image widget, see [Image](/refguide9/image/). |
 
 ## 9 On Click Event Consistency Errors 
 
-You can specify an [On click event](/refguide/on-click-event/) for different widgets, for example, for buttons or images. 
+You can specify an [On click event](/refguide9/on-click-event/) for different widgets, for example, for buttons or images. 
 
 The most common consistency errors are connected with not configuring the on click event. 
 
@@ -298,4 +298,4 @@ Icon collections have configurable class names, icon prefixes, and icon names. T
 
 ## 11 Read More
 
-* [Pages](/refguide/pages/) 
+* [Pages](/refguide9/pages/) 

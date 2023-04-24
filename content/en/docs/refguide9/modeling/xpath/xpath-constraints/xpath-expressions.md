@@ -1,6 +1,6 @@
 ---
 title: "XPath Expressions"
-url: /refguide/xpath-expressions/
+url: /refguide9/xpath-expressions/
 tags: ["studio pro"]
 ---
 
@@ -16,7 +16,7 @@ There are three types of expressions usable for constraints:
 
 ## 2 Comparisons
 
-A comparison expression consists of two attributes or values separated by a comparison [operator](/refguide/xpath-operators/) like `=`, `<=`, or `>`.
+A comparison expression consists of two attributes or values separated by a comparison [operator](/refguide9/xpath-operators/) like `=`, `<=`, or `>`.
 
 ### 2.1 Examples
 
@@ -81,7 +81,7 @@ The following query retrieves the same customer as the previous query:
 
 If two sides of a comparison (`=`, `!=`, `<`, `<=`, `>`, `>=`) have different types, one of the sides may be converted implicitly to the type of the other side.
 
-If one of the sides is a plain value (a literal, a microflow variable or a [system variable](/refguide/xpath-keywords-and-system-variables/#3-system-variables)) and the other side is an attribute to be queried, the value is converted to the type of the attribute. For example, the line below will convert the string `'42'` to the number `42` before executing the query:
+If one of the sides is a plain value (a literal, a microflow variable or a [system variable](/refguide9/xpath-keywords-and-system-variables/#3-system-variables)) and the other side is an attribute to be queried, the value is converted to the type of the attribute. For example, the line below will convert the string `'42'` to the number `42` before executing the query:
 
 ```java {linenos=false}
 //Sales.Order[TotalPrice >= '42']
@@ -114,7 +114,7 @@ Conversions work in the following way:
 
 ## 3 Functions
 
-For information on the available functions, see [XPath Constraint Functions](/refguide/xpath-constraint-functions/).
+For information on the available functions, see [XPath Constraint Functions](/refguide9/xpath-constraint-functions/).
 
 ## 4 Exist-Expressions {#exist}
 

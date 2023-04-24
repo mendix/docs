@@ -1,11 +1,11 @@
 ---
 title: "Extracting and Using Sub-Microflows"
-url: /refguide/extracting-and-using-sub-microflows/
+url: /refguide9/extracting-and-using-sub-microflows/
 weight: 5
 description: "Describes how to break down a large microflow into more manageable parts."
 tags: ["microflow", "sub-microflow", "extract"]
 aliases:
-    - /howto/logic-business-rules/extract-and-use-sub-microflows/
+    - /howto9/logic-business-rules/extract-and-use-sub-microflows/
 ---
 
 ## 1 Introduction
@@ -30,7 +30,7 @@ This document teaches you how to do the following:
 
 You can create a sub-microflow by extracting a part of an existing microflow. The following example microflow checks to see if a registration has a trainee assigned and a registration date. If the registration passes both checks, the registration is committed to the database.
 
-{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/microflows/extracting-and-using-sub-microflows/example-complex-microflow.png" alt="An example of a complex microflow for validating an object and committing it to a database" >}}
+{{< figure src="/attachments/refguide9/modeling/application-logic/microflows-and-nanoflows/microflows/extracting-and-using-sub-microflows/example-complex-microflow.png" alt="An example of a complex microflow for validating an object and committing it to a database" >}}
 
 In this scenario, it makes sense to create a sub-microflow for the validation steps. If you do this, you can reuse this sub-microflow in other microflows if you need to validate a registration again.
 
@@ -38,26 +38,26 @@ To extract the validation steps into a sub-microflow, follow these steps:
 
 1. Select the area that you want to capture and use as a sub-microflow.
 
-    {{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/microflows/extracting-and-using-sub-microflows/select-an-area.png" alt="Selecting an area to use as a sub-microflow" >}}
+    {{< figure src="/attachments/refguide9/modeling/application-logic/microflows-and-nanoflows/microflows/extracting-and-using-sub-microflows/select-an-area.png" alt="Selecting an area to use as a sub-microflow" >}}
 
 2. Right-click an item in the selection, and then select **Extract submicroflow**.
 
-    {{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/microflows/extracting-and-using-sub-microflows/select-Extract-submicroflow.png" alt="Selecting the Extract submicroflow menu option" >}}
+    {{< figure src="/attachments/refguide9/modeling/application-logic/microflows-and-nanoflows/microflows/extracting-and-using-sub-microflows/select-Extract-submicroflow.png" alt="Selecting the Extract submicroflow menu option" >}}
 
 3. In the **Add microflow** dialog box, enter a name for the sub-microflow.
 
-    {{% alert color="info" %}}As a best practice, use a consistent naming scheme that clearly identifies the microflow, for example, *Sub_{MicroflowDescription}*. For more information, see [Microflow Naming Conventions](/refguide/dev-best-practices/#microflow-naming-conventions).{{% /alert %}}
+    {{% alert color="info" %}}As a best practice, use a consistent naming scheme that clearly identifies the microflow, for example, *Sub_{MicroflowDescription}*. For more information, see [Microflow Naming Conventions](/refguide9/dev-best-practices/#microflow-naming-conventions).{{% /alert %}}
 
 4. Click **OK**.
 5. Open the sub-microflow by right-clicking the sub-microflow call and selecting **Go to microflow**.
 
-    {{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/microflows/extracting-and-using-sub-microflows/submicroflow-in-parent-microflow.png" alt="Multiple actions replaced with a microflow action" >}}
+    {{< figure src="/attachments/refguide9/modeling/application-logic/microflows-and-nanoflows/microflows/extracting-and-using-sub-microflows/submicroflow-in-parent-microflow.png" alt="Multiple actions replaced with a microflow action" >}}
 
 6. Make any other required configuration changes depending on the contents of the sub-microflow. 
 
     For example, the sub-microflow shown in the image below does not return anything, so the sub-microflow call cannot be used in the **Is Valid?** check that immediately follows it.
 
-    {{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/microflows/extracting-and-using-sub-microflows/example-submicroflow.png" alt="Sample sub-microflow for registration validation" >}}
+    {{< figure src="/attachments/refguide9/modeling/application-logic/microflows-and-nanoflows/microflows/extracting-and-using-sub-microflows/example-submicroflow.png" alt="Sample sub-microflow for registration validation" >}}
 
     To stop or continue your microflow based on the sub-microflow's outcome, right-click the **Create Boolean Variable** activity and select **Set $isValid as return value**.
 
@@ -78,8 +78,8 @@ To reuse an existing microflow, follow these steps:
 1. In the **App Explorer**, find the microflow that you want to reuse as a sub-microflow.
 2. Drag it onto the working area of another microflow, as shown in the following:
 
-{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/microflows/extracting-and-using-sub-microflows/reuse-microflow.gif" alt="Dragging a microflow onto the working area of another microflow" >}}
+{{< figure src="/attachments/refguide9/modeling/application-logic/microflows-and-nanoflows/microflows/extracting-and-using-sub-microflows/reuse-microflow.gif" alt="Dragging a microflow onto the working area of another microflow" >}}
 
 ## 4 Read More
 
-* [Microflows](/refguide/microflows/)
+* [Microflows](/refguide9/microflows/)

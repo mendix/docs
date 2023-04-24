@@ -1,6 +1,6 @@
 ---
 title: "Scheduled Events – Task Queue"
-url: /refguide/scheduled-events-task-queue/
+url: /refguide9/scheduled-events-task-queue/
 weight: 10
 description: "Options for configuring scheduled events"
 tags: ["Scheduled Event", "Execution properties", "Timing", "intervals", "scheduling issues", "time zones", "daylight saving", "task queue"]
@@ -28,7 +28,7 @@ Scheduled events can be tested locally, but they will not be run if your app is 
 
 | Property | Description |
 | --- | --- |
-| Microflow | The microflow that is executed when the scheduled event is executed. It should have no parameters and is run with all rights (see [Microflow](/refguide/microflow/)). |
+| Microflow | The microflow that is executed when the scheduled event is executed. It should have no parameters and is run with all rights (see [Microflow](/refguide9/microflow/)). |
 | Enabled | The microflow is only executed if the scheduled event is enabled. This setting only applies when running from Studio Pro or from Eclipse. On production environments, scheduled events are enabled/disabled via the platform tools (for example the Developer Portal or Windows Service Console). |
 
 ## 4 Timing Properties
@@ -134,7 +134,7 @@ This allows you to run the event every hour, or number of hours. It also allows 
 
 Example times will be shown in the dialog to illustrate the effects of the offset.
 
-{{< figure src="/attachments/refguide/modeling/resources/scheduled-events/hourly-event.png" >}}
+{{< figure src="/attachments/refguide9/modeling/resources/scheduled-events/hourly-event.png" >}}
 
 ### 4.6 Minutes Properties {#minutes}
 

@@ -1,6 +1,6 @@
 ---
 title: "Layout"
-url: /refguide/layout/
+url: /refguide9/layout/
 weight: 10
 tags: ["studio pro", "layout widgets", "layout", "page template", "pages"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
@@ -8,11 +8,11 @@ tags: ["studio pro", "layout widgets", "layout", "page template", "pages"]
 
 ## 1 Introduction
 
-Layouts specify what comes where. Each [page](/refguide/page/) is based on a layout. The layout contains widgets and structures that return on every page based on that layout. For example, it is common to put a menu bar widget in a layout so that the menu is visible on all pages.
+Layouts specify what comes where. Each [page](/refguide9/page/) is based on a layout. The layout contains widgets and structures that return on every page based on that layout. For example, it is common to put a menu bar widget in a layout so that the menu is visible on all pages.
 
-{{< figure src="/attachments/refguide/modeling/pages/page-resources/layout/layout-example.png"   width="400"  >}}
+{{< figure src="/attachments/refguide9/modeling/pages/page-resources/layout/layout-example.png"   width="400"  >}}
 
-A layout consists of content and [placeholders](/refguide/placeholder/). The content is everything that should be present in every page that uses the layout, from navigation bars to sign-out buttons. Placeholders are empty areas that later form the canvas for any pages that make use of the layout. The layout content remains the same in every page, but the placeholders cover what is unique to every individual page. 
+A layout consists of content and [placeholders](/refguide9/placeholder/). The content is everything that should be present in every page that uses the layout, from navigation bars to sign-out buttons. Placeholders are empty areas that later form the canvas for any pages that make use of the layout. The layout content remains the same in every page, but the placeholders cover what is unique to every individual page. 
 
 Layouts can be based on other layouts, in which case the generic layout is referred to as the primary layout. If a layout has a primary layout, it can use the placeholders defined in the primary layout to create a more specialized configuration. If a page is based on this specialized layout, it makes use of the placeholders defined in the new layout, ignoring those of the primary layout. This chain can be as long as is necessary, with a generic layout used throughout the app  as a primary layout for a more specific data input layout which is, in turn, used as a primary layout for a specialized edit user layout. 
 
@@ -26,7 +26,7 @@ Mendix will intelligently detect if pages share a layout, so no user input is re
 
 An example of layout properties is represented in the image below:
 
-{{< figure src="/attachments/refguide/modeling/pages/page-resources/layout/layout-properties.png" alt="Example of the layout properties pane"   width="250"  >}}
+{{< figure src="/attachments/refguide9/modeling/pages/page-resources/layout/layout-properties.png" alt="Example of the layout properties pane"   width="250"  >}}
 
 Layout properties consist of the following sections:
 
@@ -36,7 +36,7 @@ Layout properties consist of the following sections:
 
 ### 2.1 Common Section{#common}
 
-{{% snippet file="/static/_includes/refguide/common-section-link.md" %}}
+{{% snippet file="/static/_includes/refguide9/common-section-link.md" %}}
 
 ### 2.2 Designer Section{#designer}
 
@@ -58,7 +58,7 @@ Default value: *600*
 
 **Platform** can only be set when a layout is created.
 
-{{< figure src="/attachments/refguide/modeling/pages/page-resources/layout/add-layout.png" alt="Dialog for adding a new layout" >}}
+{{< figure src="/attachments/refguide9/modeling/pages/page-resources/layout/add-layout.png" alt="Dialog for adding a new layout" >}}
 
 The values for the platform property are:
 
@@ -69,7 +69,7 @@ For existing layouts, the value is read-only.
 
 #### 2.3.2 Master Layout
 
-**Master layout** specifies a layout on which this layout is based. If no primary layout is specified, the layout contains a single widget (for example, a [scroll container](/refguide/scroll-container/)) that defines the structure of pages based on this layout. If a primary layout is specified, this layout fills the gaps defined by the primary layout. You can introduce new gaps in this layout by using [placeholders](/refguide/placeholder/).
+**Master layout** specifies a layout on which this layout is based. If no primary layout is specified, the layout contains a single widget (for example, a [scroll container](/refguide9/scroll-container/)) that defines the structure of pages based on this layout. If a primary layout is specified, this layout fills the gaps defined by the primary layout. You can introduce new gaps in this layout by using [placeholders](/refguide9/placeholder/).
 
 #### 2.3.3 Layout Type {#layout-type}
 
@@ -96,10 +96,10 @@ The **layout type**, determines the purpose of the layout and how a page using t
 
 Layouts can contain the following widgets:
 
-* [Layout grid](/refguide/layout-grid/)
-* [Scroll container](/refguide/scroll-container/)
-* [Placeholder](/refguide/placeholder/)
-* [Header](/refguide/header/)
-* [Sidebar toggle](/refguide/sidebar-toggle-button/)
+* [Layout grid](/refguide9/layout-grid/)
+* [Scroll container](/refguide9/scroll-container/)
+* [Placeholder](/refguide9/placeholder/)
+* [Header](/refguide9/header/)
+* [Sidebar toggle](/refguide9/sidebar-toggle-button/)
 
 Placeholder, header, and sidebar toggle are unique to layouts, whilst Layout grids and scroll containers can also be used on pages.

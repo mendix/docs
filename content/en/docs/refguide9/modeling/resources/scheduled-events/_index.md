@@ -1,6 +1,6 @@
 ---
 title: "Scheduled Events"
-url: /refguide/scheduled-events/
+url: /refguide9/scheduled-events/
 weight: 80
 description: "Options for configuring scheduled events"
 tags: ["Scheduled Event", "Execution properties", "Timing", "intervals", "scheduling issues", "time zones", "daylight saving"]
@@ -21,7 +21,7 @@ Scheduled events can be tested locally, but they will not be run if your app is 
 
 Until Mendix 9.12.0 scheduled events only execute on the cluster leader node, with an at-most-once guarantee, which means that they will not be executed if something happens to the cluster leader node. Also, these scheduled events do not support proper monthly and yearly events and potentially suffer from a shift of one hour due to daylight saving. These 'legacy' scheduled events are deprecated and will no longer be supported from Mendix 10.
 
-As of Mendix 9.12.0 scheduled events have been improved and are being executed using the [task queue](/refguide/task-queue/), providing an at-least-once guarantee. They will be executed by an arbitrary node in the cluster and support monthly and yearly events properly.
+As of Mendix 9.12.0 scheduled events have been improved and are being executed using the [task queue](/refguide9/task-queue/), providing an at-least-once guarantee. They will be executed by an arbitrary node in the cluster and support monthly and yearly events properly.
 
 Most importantly, you can no longer specify a specific date and time for task queue-based scheduled events — all events will recur at the specified time, depending on the schedule you set up.
 
@@ -29,13 +29,13 @@ In addition, these recurring events will now work as expected in the face of day
 
 Mendix versions 9.12.0 and above supports the following schedule types:
 
-* **Legacy** – the type that existing before Mendix 9.12.0 — see [Legacy scheduled events](/refguide/scheduled-events-legacy/)
-* **Yearly** – an event that occurs once a year on a specific day or date and at a specified time — see [Yearly scheduled events](/refguide/scheduled-events-task-queue/#yearly)
-* **Monthly** – an event that occurs every so many months on a specific day and at a specified time — see [Monthly scheduled events](/refguide/scheduled-events-task-queue/#monthly)
-* **Weekly** – an event that occurs weekly on specific days and at a specified time — see [Weekly scheduled events](/refguide/scheduled-events-task-queue/#weekly)
-* **Daily** – an event that occurs daily at a specified time — see [Daily scheduled events](/refguide/scheduled-events-task-queue/#daily)
-* **Hourly** – an event that occurs every so many hours — see [Hourly scheduled events](/refguide/scheduled-events-task-queue/#hourly)
-* **Minutes** – an event that occurs every so many minutes — see [Minute scheduled events](/refguide/scheduled-events-task-queue/#minutes)
+* **Legacy** – the type that existing before Mendix 9.12.0 — see [Legacy scheduled events](/refguide9/scheduled-events-legacy/)
+* **Yearly** – an event that occurs once a year on a specific day or date and at a specified time — see [Yearly scheduled events](/refguide9/scheduled-events-task-queue/#yearly)
+* **Monthly** – an event that occurs every so many months on a specific day and at a specified time — see [Monthly scheduled events](/refguide9/scheduled-events-task-queue/#monthly)
+* **Weekly** – an event that occurs weekly on specific days and at a specified time — see [Weekly scheduled events](/refguide9/scheduled-events-task-queue/#weekly)
+* **Daily** – an event that occurs daily at a specified time — see [Daily scheduled events](/refguide9/scheduled-events-task-queue/#daily)
+* **Hourly** – an event that occurs every so many hours — see [Hourly scheduled events](/refguide9/scheduled-events-task-queue/#hourly)
+* **Minutes** – an event that occurs every so many minutes — see [Minute scheduled events](/refguide9/scheduled-events-task-queue/#minutes)
 
 ## 3 Migration{#migration}
 
@@ -43,7 +43,7 @@ When migrating to version [9.12.0](/releasenotes/studio-pro/9.12/#9120) or above
 
 The following cases cannot be converted automatically when the model is upgraded to Mendix version 9.12.0 or above:
 
-* The event is not repeating — remove the scheduled event or use the [Java API](/refguide/task-queue/#queuing) to schedule a one-time action — we no-longer support non-repeating scheduled events.
+* The event is not repeating — remove the scheduled event or use the [Java API](/refguide9/task-queue/#queuing) to schedule a one-time action — we no-longer support non-repeating scheduled events.
 * The event has a start-time in the future, which we'll stop supporting — change the start-time to a date in the past or switch to a task queue based scheduled event.
 * The event has interval type Month or Year, which is translated to 31 and 365 days respectively — use the Monthly or Yearly type instead.
 * The event has interval type Seconds — use a schedule event with a 1-minute interval instead — we no-longer support scheduled events which repeat in less than a minute.

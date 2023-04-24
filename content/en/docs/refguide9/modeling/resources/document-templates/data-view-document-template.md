@@ -1,12 +1,12 @@
 ---
 title: "Data View (Document Template)"
-url: /refguide/data-view-document-template/
+url: /refguide9/data-view-document-template/
 tags: ["studio pro"]
 aliases:
-    - /refguide/Data+View+(document+template).html
-    - /refguide/data-view-(document-template).html
-    - /refguide/Data+View+(document+template)
-    - /refguide/data-view-(document-template)
+    - /refguide9/Data+View+(document+template).html
+    - /refguide9/data-view-(document-template).html
+    - /refguide9/Data+View+(document+template)
+    - /refguide9/data-view-(document-template)
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
@@ -16,7 +16,7 @@ The data view is used for showing the contents of exactly one object. If, for ex
 
 {{% alert color="info" %}}
 
-{{< figure src="/attachments/refguide/modeling/resources/document-templates/data-view-document-template/918139.png" >}}
+{{< figure src="/attachments/refguide9/modeling/resources/document-templates/data-view-document-template/918139.png" >}}
 
 A data view showing orderline information.
 
@@ -24,7 +24,7 @@ A data view showing orderline information.
 
 ## 2 Common Properties
 
-{{% snippet file="/static/_includes/refguide/name-property.md" %}}
+{{% snippet file="/static/_includes/refguide9/name-property.md" %}}
 
 ## 3 Data Source Properties
 

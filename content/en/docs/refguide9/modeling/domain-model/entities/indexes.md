@@ -1,6 +1,6 @@
 ---
 title: "Indexes"
-url: /refguide/indexes/
+url: /refguide9/indexes/
 weight: 60
 tags: ["domain model", "entity", "attribute", "index", "studio pro"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
@@ -12,10 +12,10 @@ tags: ["domain model", "entity", "attribute", "index", "studio pro"]
 
 Indexes can be added and edited from the **Indexes** tab of the entity properties.
 
-{{< figure src="/attachments/refguide/modeling/domain-model/entities/indexes/index-properties.png" alt="Example of index tab" >}}
+{{< figure src="/attachments/refguide9/modeling/domain-model/entities/indexes/index-properties.png" alt="Example of index tab" >}}
 
 {{% alert color="info" %}}
-Index properties are read-only for external entities. For further details, see [External Entities](/refguide/external-entities/).
+Index properties are read-only for external entities. For further details, see [External Entities](/refguide9/external-entities/).
 {{% /alert %}}
 
 ## 2 Important Considerations
@@ -26,7 +26,7 @@ Indexes are ordered, which means that when you create an index on two or more at
 
 ### 2.2 Indexes on System Members
 
-If you choose to store an entity's `owner` and `changedBy` system members, an index is created. This is not so for the `createdDate` and `changedDate` system members. In addition, an index is created for the automatically generated attribute `id`. See [Domain Model](/refguide/domain-model/) for more information about the implementation of these attributes.
+If you choose to store an entity's `owner` and `changedBy` system members, an index is created. This is not so for the `createdDate` and `changedDate` system members. In addition, an index is created for the automatically generated attribute `id`. See [Domain Model](/refguide9/domain-model/) for more information about the implementation of these attributes.
 
 ### 2.3 Indexes on Non-Persistable Entities
 
@@ -40,7 +40,7 @@ Changing and deleting objects of an entity with indexes takes longer, because th
 
 Customers are usually retrieved by a combination of ZIP code and house number. So, *one* index is set on the combination of the attributes:
 
-{{< figure src="/attachments/refguide/modeling/domain-model/entities/indexes/customer-index-example.png" >}}
+{{< figure src="/attachments/refguide9/modeling/domain-model/entities/indexes/customer-index-example.png" >}}
 
 The objects are retrieved by the following OQL query – note that the order of the attributes in the `WHERE` clause is the same as the order of the attributes for the index:
 

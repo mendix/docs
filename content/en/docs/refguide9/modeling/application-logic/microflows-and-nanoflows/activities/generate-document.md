@@ -1,6 +1,6 @@
 ---
 title: "Generate Document"
-url: /refguide/generate-document/
+url: /refguide9/generate-document/
 weight: 80
 description: "Describes generating documents from a microflow. "
 tags: ["PDF", "document", "document template", "HTML", "Microsoft Word", "ODT", "studio pro", "generate document"]
@@ -13,9 +13,9 @@ This activity can only be used in **Microflows**.
 
 ## 1 Introduction
 
-The **Generate document** activity is used to write a document to a file, based on a [document template](/refguide/document-templates/). 
+The **Generate document** activity is used to write a document to a file, based on a [document template](/refguide9/document-templates/). 
 
-{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/generate-document/generate-document.png" alt="Generate Document" >}}
+{{< figure src="/attachments/refguide9/modeling/application-logic/microflows-and-nanoflows/activities/generate-document/generate-document.png" alt="Generate Document" >}}
 
 For more information on which types of documents can be created, see [Document Type](#document-type).
 
@@ -23,7 +23,7 @@ For more information on which types of documents can be created, see [Document T
 
 There are two sets of properties for this activity, those in the dialog box on the left, and those in the properties pane on the right:
 
-{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/generate-document/generate-document-properties.png" alt="Generate Document Properties" >}}
+{{< figure src="/attachments/refguide9/modeling/application-logic/microflows-and-nanoflows/activities/generate-document/generate-document-properties.png" alt="Generate Document Properties" >}}
 
 The **Generate document** properties pane consists of the following sections:
 
@@ -49,7 +49,7 @@ The language in which the titles and labels of the document should appear is des
 | Option | Description |
 | --- | --- |
 | Current user *(default)*  | Use the language of the current user. |
-| Project default | Use the default language that is specified in the [App Settings](/refguide/app-settings/). |
+| Project default | Use the default language that is specified in the [App Settings](/refguide9/app-settings/). |
 | Variable | Use the language stored in the selected object, which must be of type *System.Language*. |
 
 ### 3.3 Document Type{#document-type}
@@ -71,7 +71,7 @@ The document type specifies the type of the generated document.
 
 ### 3.5 Template
 
-Template defines which [document template](/refguide/document-templates/) is used to generate the file. Depending on the selected document template one or more [arguments](#argument) need to be specified. 
+Template defines which [document template](/refguide9/document-templates/) is used to generate the file. Depending on the selected document template one or more [arguments](#argument) need to be specified. 
 
 ### 3.6 Arguments
 
@@ -87,8 +87,8 @@ The type of the argument used in the document template that is read-only.
 
 #### 3.5.3 Argument {#argument}
 
-The **Edit argument** button allows you to edit the argument value.  An argument is the input data that you are passing to the document template. For each document template parameter (for each non-nested data view and data grid), you must supply an argument of the same type. The values of the arguments are expressed using [expressions](/refguide/expressions/).
+The **Edit argument** button allows you to edit the argument value.  An argument is the input data that you are passing to the document template. For each document template parameter (for each non-nested data view and data grid), you must supply an argument of the same type. The values of the arguments are expressed using [expressions](/refguide9/expressions/).
 
 ## 4 Common Section {#common}
 
-{{% snippet file="/static/_includes/refguide/microflow-common-section-link.md" %}}
+{{% snippet file="/static/_includes/refguide9/microflow-common-section-link.md" %}}

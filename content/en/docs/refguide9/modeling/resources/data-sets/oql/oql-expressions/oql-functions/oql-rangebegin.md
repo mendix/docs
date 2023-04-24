@@ -1,6 +1,6 @@
 ---
 title: "OQL RANGEBEGIN"
-url: /refguide/oql-rangebegin/
+url: /refguide9/oql-rangebegin/
 tags: ["studio pro"]
 ---
 
@@ -8,7 +8,7 @@ tags: ["studio pro"]
 
 The `RANGEBEGIN` function extracts the initial value of a range parameter.
 
-`RANGEBEGIN` and [RANGEEND](/refguide/oql-rangeend/) are OQL functions that use a parameter, and OQL parameters are only available in [datasets](/refguide/data-sets/) (which are used for generating a report). When you create a page and add a report that has a dataset, you can use `RANGEBEGIN` and `RANGEEND` in that dataset.
+`RANGEBEGIN` and [RANGEEND](/refguide9/oql-rangeend/) are OQL functions that use a parameter, and OQL parameters are only available in [datasets](/refguide9/data-sets/) (which are used for generating a report). When you create a page and add a report that has a dataset, you can use `RANGEBEGIN` and `RANGEEND` in that dataset.
 
 ## 2 Syntax
 

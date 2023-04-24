@@ -1,19 +1,19 @@
 ---
 title: "Microflow Properties"
-url: /refguide/microflow/
+url: /refguide9/microflow/
 weight: 1
 tags: ["microflow", "entity access"]
 ---
 
 ## 1 Introduction
 
-This document describes the properties of a microflow. If you want to see what microflows are for and what kind of elements they contain, you can check [Microflows](/refguide/microflows/). If you want to know about the settings of the **Call a microflow** event action, you can check [Microflow Settings](/refguide/on-click-event/#microflow-settings).
+This document describes the properties of a microflow. If you want to see what microflows are for and what kind of elements they contain, you can check [Microflows](/refguide9/microflows/). If you want to know about the settings of the **Call a microflow** event action, you can check [Microflow Settings](/refguide9/on-click-event/#microflow-settings).
 
 ## 2 Properties
 
 An example of microflow properties is represented in the image below:
 
-{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/microflows/microflow/microflow-properties.png" alt="Microflow Properties"   width="250"  >}}
+{{< figure src="/attachments/refguide9/modeling/application-logic/microflows-and-nanoflows/microflows/microflow/microflow-properties.png" alt="Microflow Properties"   width="250"  >}}
 
 Microflow properties consist of the following sections:
 
@@ -33,7 +33,7 @@ Microflow properties consist of the following sections:
 
 {{% alert color="info" %}}
 
-This property is only available for add-on and solution modules. For more information on types of modules, see the [Module Types](/refguide/modules/#module-types) section in *Modules*. 
+This property is only available for add-on and solution modules. For more information on types of modules, see the [Module Types](/refguide9/modules/#module-types) section in *Modules*. 
 
 {{% /alert %}}
 
@@ -73,7 +73,7 @@ Disallowing concurrent execution of a microflow can be useful if a microflow wou
 
 #### 2.3.1 Return Type
 
-The return type defines what information the microflow returns. The caller of the microflow will get a result of this type. See [Data Types](/refguide/data-types/) for the possible return types.
+The return type defines what information the microflow returns. The caller of the microflow will get a result of this type. See [Data Types](/refguide9/data-types/) for the possible return types.
 
 {{% alert color="info" %}}
 To indicate whether or not an object should be committed, you can use Boolean as the return type of the microflow.
@@ -83,7 +83,7 @@ To indicate whether or not an object should be committed, you can use Boolean as
 
 #### 2.4.1 Apply Entity Access
 
-**Apply entity access** indicates whether entity access based on the current user is applied when performing operations on objects. Setting this to yes limits the objects that are retrieved by the [retrieve action](/refguide/retrieve/) to only those that the current user is allowed to see. Similarly, when reading and writing attributes and associations the entity access of the current user is applied. Conversely, if entity access is not applied, all operations are allowed and all objects are retrieved.
+**Apply entity access** indicates whether entity access based on the current user is applied when performing operations on objects. Setting this to yes limits the objects that are retrieved by the [retrieve action](/refguide9/retrieve/) to only those that the current user is allowed to see. Similarly, when reading and writing attributes and associations the entity access of the current user is applied. Conversely, if entity access is not applied, all operations are allowed and all objects are retrieved.
 
 | Option | Description |
 | --- | --- |
@@ -100,13 +100,13 @@ Microflows that apply entity access have an **Entity Access** tag in the editor.
 
 #### 2.4.2 Allowed Roles
 
-**Allowed roles** defines which [module role](/refguide/module-security/#module-role) the user must have to be able to execute the microflow.
+**Allowed roles** defines which [module role](/refguide9/module-security/#module-role) the user must have to be able to execute the microflow.
 
 {{% alert color="warning" %}}
 These roles are only checked when the microflow is executed from the client. A microflow is always allowed to call another microflow, and these roles are not checked then.
 {{% /alert %}}
 
-For more information, see [Module Security](/refguide/module-security/).
+For more information, see [Module Security](/refguide9/module-security/).
 
 ### 2.5 Usage Section {#usage}
 
@@ -122,15 +122,15 @@ Default: *No*
 
 This property is accessible by right-clicking in the microflow and selecting **Properties**.
 
-{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/microflows/microflow/microflow-expose.jpg" alt="Expose as Microflow Action" width="550" >}}
+{{< figure src="/attachments/refguide9/modeling/application-logic/microflows-and-nanoflows/microflows/microflow/microflow-expose.jpg" alt="Expose as Microflow Action" width="550" >}}
 
 By selecting the **Expose as microflow action**  option, you can expose the microflow as a microflow action and use the return type of the microflow to generate outcomes / paths in the workflow. Exposing the microflow will make it appear in the **Toolbox** when you are editing a microflow in the category of your choice. When this action is used in a microflow, it will show the provided caption and icon.
 
-The **Caption** and **Category** of the workflow action are required, but the **Icon** and **Image** are optional. The image in the **Icon** property is used for the list view of the **Toolbox**, and the image in the **Image** property – for the toolbox tile view. For more information, see the [Toolbox](/refguide/view-menu/#toolbox) section in the **View Menu**.
+The **Caption** and **Category** of the workflow action are required, but the **Icon** and **Image** are optional. The image in the **Icon** property is used for the list view of the **Toolbox**, and the image in the **Image** property – for the toolbox tile view. For more information, see the [Toolbox](/refguide9/view-menu/#toolbox) section in the **View Menu**.
 
 The required size for the icon is 64x64 pixels, and 256x192 pixels for the image; the required image format for both is PNG. 
 
-A separate icon and image can be provided for the [dark mode](/refguide/preferences-dialog/#dark-mode) of Studio Pro to fit its color scheme.
+A separate icon and image can be provided for the [dark mode](/refguide9/preferences-dialog/#dark-mode) of Studio Pro to fit its color scheme.
 
 {{% alert type="info" %}}
 
@@ -144,15 +144,15 @@ If only icon is specified, the icon image will be used for the toolbox tile view
 
 This property is accessible by right-clicking in the microflow and selecting **Properties**.
 
-{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/microflows/microflow/workflow-expose.jpg" alt="Expose As Workflow Action" width="550" >}}
+{{< figure src="/attachments/refguide9/modeling/application-logic/microflows-and-nanoflows/microflows/microflow/workflow-expose.jpg" alt="Expose As Workflow Action" width="550" >}}
 
-By selecting the **Expose as workflow action** option, you can expose the microflow as a [workflow](/refguide/workflows/) action. Exposing the workflow will make it appear in the **Toolbox** of a [workflow editor](/refguide/workflows/) in the category of your choice. When this action is used in a workflow, it will show the provided caption and icon.
+By selecting the **Expose as workflow action** option, you can expose the microflow as a [workflow](/refguide9/workflows/) action. Exposing the workflow will make it appear in the **Toolbox** of a [workflow editor](/refguide9/workflows/) in the category of your choice. When this action is used in a workflow, it will show the provided caption and icon.
 
-The **Caption** and **Category** of the workflow action are required, but the **Icon** and **Image** are optional. The image in the **Icon** property is used for the list view of the **Toolbox**, and the image in the **Image** property – for the toolbox tile view. For more information, see the [Toolbox](/refguide/view-menu/#toolbox) section in the *View Menu*.
+The **Caption** and **Category** of the workflow action are required, but the **Icon** and **Image** are optional. The image in the **Icon** property is used for the list view of the **Toolbox**, and the image in the **Image** property – for the toolbox tile view. For more information, see the [Toolbox](/refguide9/view-menu/#toolbox) section in the *View Menu*.
 
 The required size for the icon is 64x64 pixels, and 256x192 pixels for the image; the required image format for both is PNG. 
 
-A separate icon and image can be provided for the [dark mode](/refguide/preferences-dialog/#dark-mode) of Studio Pro to fit its color scheme.
+A separate icon and image can be provided for the [dark mode](/refguide9/preferences-dialog/#dark-mode) of Studio Pro to fit its color scheme.
 
 {{% alert type="info" %}}
 

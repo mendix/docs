@@ -1,12 +1,12 @@
 ---
 title: "Solve Load and Import Errors"
-url: /howto/monitoring-troubleshooting/solving-load-and-import-errors/
+url: /howto9/monitoring-troubleshooting/solving-load-and-import-errors/
 category: "Monitoring and Troubleshooting"
 weight: 11
 description: "Describes how to solve problems that may occur when opening an app."
 tags: ["monitoring", "troubleshooting", "load", "import", "error"]
 aliases:
-    - /howto/solving-load-and-import-errors.html
+    - /howto9/solving-load-and-import-errors.html
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
@@ -16,7 +16,7 @@ This how-to will help you to solve problems that may occur when opening an app i
 
 One possible cause of errors that prevent loading is the usage of the [Mendix Model SDK](/apidocs-mxsdk/mxsdk/) for creating or editing the app. With the Mendix Model SDK it's possible to edit your app in such a way that its format becomes invalid, and in the process preventing Studio Pro from opening it. When this happens the following message is shown:
 
-{{< figure src="/attachments/howto/monitoring-troubleshooting/solving-load-and-import-errors/18580055.png" >}}
+{{< figure src="/attachments/howto9/monitoring-troubleshooting/solving-load-and-import-errors/18580055.png" >}}
 
 Read on to find out how to determine the origin of these errors, and possible ways to solve them.
 
@@ -24,7 +24,7 @@ Read on to find out how to determine the origin of these errors, and possible wa
 
 Click the **Details >>** button to show the actual errors that occurred while loading your app:
 
-{{< figure src="/attachments/howto/monitoring-troubleshooting/solving-load-and-import-errors/18580052.png" >}}
+{{< figure src="/attachments/howto9/monitoring-troubleshooting/solving-load-and-import-errors/18580052.png" >}}
 
 These detailed messages tell you the following:
 
@@ -38,7 +38,7 @@ Before trying to solve the problems, it is useful to discover the origin of the 
 
 ### 3.1 Is This a Team Server App?
 
-If your app is a [Team Server](/developerportal/collaborate/team-server/) app, and you just did a [download or update](/refguide/using-version-control-in-studio-pro/) from the server, the problem may have been added in a revision that was recently committed to the Team Server. You can check who made the most recent commit via the [Team Server](/developerportal/collaborate/team-server/) menu item in the [Developer Portal](https://sprintr.home.mendix.com).
+If your app is a [Team Server](/developerportal/collaborate/team-server/) app, and you just did a [download or update](/refguide9/using-version-control-in-studio-pro/) from the server, the problem may have been added in a revision that was recently committed to the Team Server. You can check who made the most recent commit via the [Team Server](/developerportal/collaborate/team-server/) menu item in the [Developer Portal](https://sprintr.home.mendix.com).
 
 If the latest change on your branch line was committed by someone other than yourself, please inform the person about the problem.
 
@@ -58,12 +58,12 @@ The most likely cause for these kinds of errors is a faulty script that was run 
 
 ## 5 Read More
 
-* [Clearing Warning Messages in Mendix](/howto/monitoring-troubleshooting/clear-warning-messages/)
-* [Debug a Hybrid Mobile Application](/howto/monitoring-troubleshooting/debug-a-hybrid-mobile-application/)
-* [Debugging Java Actions](/howto/monitoring-troubleshooting/debug-java-actions/)
-* [Debugging Java actions remotely](/howto/monitoring-troubleshooting/debug-java-actions-remotely/)
-* [Debugging Microflows and Nanoflows](/refguide/debug-microflows-and-nanoflows/)
-* [Debugging Microflows Remotely](/refguide/debug-microflows-remotely/)
-* [Finding the Root Cause of Runtime Errors](/howto/monitoring-troubleshooting/finding-the-root-cause-of-runtime-errors/)
-* [Log Levels](/howto/monitoring-troubleshooting/log-levels/)
-* [Monitoring Mendix using JMX](/howto/monitoring-troubleshooting/monitoring-mendix-using-jmx/)
+* [Clearing Warning Messages in Mendix](/howto9/monitoring-troubleshooting/clear-warning-messages/)
+* [Debug a Hybrid Mobile Application](/howto9/monitoring-troubleshooting/debug-a-hybrid-mobile-application/)
+* [Debugging Java Actions](/howto9/monitoring-troubleshooting/debug-java-actions/)
+* [Debugging Java actions remotely](/howto9/monitoring-troubleshooting/debug-java-actions-remotely/)
+* [Debugging Microflows and Nanoflows](/refguide9/debug-microflows-and-nanoflows/)
+* [Debugging Microflows Remotely](/refguide9/debug-microflows-remotely/)
+* [Finding the Root Cause of Runtime Errors](/howto9/monitoring-troubleshooting/finding-the-root-cause-of-runtime-errors/)
+* [Log Levels](/howto9/monitoring-troubleshooting/log-levels/)
+* [Monitoring Mendix using JMX](/howto9/monitoring-troubleshooting/monitoring-mendix-using-jmx/)

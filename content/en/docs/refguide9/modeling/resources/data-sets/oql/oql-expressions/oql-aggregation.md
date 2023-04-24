@@ -1,6 +1,6 @@
 ---
 title: "OQL Aggregation"
-url: /refguide/oql-aggregation/
+url: /refguide9/oql-aggregation/
 tags: ["studio pro"]
 ---
 

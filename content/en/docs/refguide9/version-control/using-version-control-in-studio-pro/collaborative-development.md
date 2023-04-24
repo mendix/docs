@@ -1,6 +1,6 @@
 ---
 title: "Collaborative Development with Studio"
-url: /refguide/collaborative-development/
+url: /refguide9/collaborative-development/
 category: "Version Control"
 weight: 20
 description: "Describes the process of collaborative development between Mendix Studio Pro and Mendix Studio."
@@ -14,7 +14,7 @@ From Mendix 9.21, we only support collaborative development between Studio Pro u
 
 ## 1 Introduction 
 
-Collaborative development is the process of sharing app model changes when a team of more than one person is working on the app. Collaborative development allows the team members to work together on one app in Mendix Studio Pro and Mendix Studio, and easily synchronize changes using [version control](/refguide/version-control/). Studio Pro can be used to work on different branches of an app, while Studio can be enabled for one of these branches. 
+Collaborative development is the process of sharing app model changes when a team of more than one person is working on the app. Collaborative development allows the team members to work together on one app in Mendix Studio Pro and Mendix Studio, and easily synchronize changes using [version control](/refguide9/version-control/). Studio Pro can be used to work on different branches of an app, while Studio can be enabled for one of these branches. 
 
 {{% alert color="info" %}}
 If you get a **Mendix Studio is not enabled for this app yet** message when opening your app in Studio, make sure you enable a development line for it. For more information, see [Enabling Studio for a Development Line](#active-branch).
@@ -24,19 +24,19 @@ If you get a **Mendix Studio is not enabled for this app yet** message when open
 
 ### 2.1 Work in Studio and Studio Pro
 
-The figure below shows how two developers might collaborate on a [Studio-enabled](/refguide/version-control/#studio-enabled) development line of an app. One developer is working in Studio, and one in Studio Pro. They both work on the same development line (for example, the main line). For information on collaborative development from the Studio perspective, see [Collaborative Development in Studio](/studio/collaborative-development/). 
+The figure below shows how two developers might collaborate on a [Studio-enabled](/refguide9/version-control/#studio-enabled) development line of an app. One developer is working in Studio, and one in Studio Pro. They both work on the same development line (for example, the main line). For information on collaborative development from the Studio perspective, see [Collaborative Development in Studio](/studio/collaborative-development/). 
 
-{{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/collaborative-development/image1.png" >}}
+{{< figure src="/attachments/refguide9/version-control/using-version-control-in-studio-pro/collaborative-development/image1.png" >}}
 
 Changes from Studio Pro and Studio are stored in the respective working copies: on the local machine for Studio Pro and in the cloud for Studio.
 
-{{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/collaborative-development/image4.png" >}}
+{{< figure src="/attachments/refguide9/version-control/using-version-control-in-studio-pro/collaborative-development/image4.png" >}}
 
 ### 2.2 Work in Studio Pro 
 
 Another developer opens the app for the first time in Studio Pro. The user is notified if Studio is enabled for this development line:
 
-{{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/collaborative-development/collaborative-development-enabled-notification.png" alt="Collaborative Development Enabled Notification" >}}
+{{< figure src="/attachments/refguide9/version-control/using-version-control-in-studio-pro/collaborative-development/collaborative-development-enabled-notification.png" alt="Collaborative Development Enabled Notification" >}}
 
 A new revision (state 2) is created on the Team Server from the current state of the Studio working copy. It is downloaded to the local machine as the working copy for Studio Pro. Studio is locked temporarily so that the Studio working copy is stable while it is copied.
 
@@ -44,13 +44,13 @@ The developer works in Studio Pro on the local working copy of the app. There is
 
 The developer can commit this to the Team Server repository at any time to make a new revision (state 3). This revision is copied into the Studio working copy and the developer using Studio will get the changes automatically.
 
-{{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/collaborative-development/image3.png" >}}
+{{< figure src="/attachments/refguide9/version-control/using-version-control-in-studio-pro/collaborative-development/image3.png" >}}
 
 ### 2.3 Work in Studio 
 
 The developer works on the app in Studio. They start with the app in state 1, this can be a new app or a revision of the app. Changes are made continuously to the working copy for Studio, stored in the cloud.
 
-{{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/collaborative-development/image2.png" >}}
+{{< figure src="/attachments/refguide9/version-control/using-version-control-in-studio-pro/collaborative-development/image2.png" >}}
 
 Multiple users can view the app in Studio at the same time, but only one Studio user can edit it and other Studio users are in read-only mode. 
 
@@ -64,7 +64,7 @@ All the changes from the Studio working copy are put into a new revision on the 
 
 If there are conflicts, the developer using Studio Pro will have to resolve them before they can commit the changes to the Team Server repository.
 
-{{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/collaborative-development/image5.png" >}}
+{{< figure src="/attachments/refguide9/version-control/using-version-control-in-studio-pro/collaborative-development/image5.png" >}}
 
 ### 2.5 Commit Changes to Team Server Repository
 
@@ -80,7 +80,7 @@ If there are no merge conflicts, the updated Studio Pro working copy is committe
 
 If there are conflicts, the developer using Studio Pro will need to resolve these. Studio will be unlocked, without receiving any of the changes from Studio Pro, while they do this. The developer using Studio Pro then needs to commit again, and the process starts from the beginning (Studio is locked ready for a new revision to be committed from the Studio Working Copy).
 
-{{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/collaborative-development/image6.png" >}}
+{{< figure src="/attachments/refguide9/version-control/using-version-control-in-studio-pro/collaborative-development/image6.png" >}}
 
 ## 3 Managing Studio on Development Lines {#managing-studio}
 
@@ -103,11 +103,11 @@ To enable Studio for a development line or switch it to another development line
 
 1. Click **Version Control** > **Manage Branch Lines**. In the **Branch Line Manager** dialog box, you can see that the development line that Studio is enabled for (if any) is marked with a globe icon in the first column.
 
-    {{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/collaborative-development/globe-icon.png" alt="Globe Icon in the Branch Line Manager" >}}
+    {{< figure src="/attachments/refguide9/version-control/using-version-control-in-studio-pro/collaborative-development/globe-icon.png" alt="Globe Icon in the Branch Line Manager" >}}
 
 2. Select the line you want to enable Studio for and click **Enable for Studio**.
 
-    {{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/collaborative-development/enable-another-branch.png" alt="Branch Line Manager - Enabling Another Branch" >}} 
+    {{< figure src="/attachments/refguide9/version-control/using-version-control-in-studio-pro/collaborative-development/enable-another-branch.png" alt="Branch Line Manager - Enabling Another Branch" >}} 
 
 The development line for Studio has been selected.   
 
@@ -136,6 +136,6 @@ If you do not have any branch line enabled for Studio, collaborative development
 
 ## 5 Read More
 
-* [Version Control](/refguide/version-control/)
-* [Troubleshooting Collaborative Development](/refguide/collaborative-development-troubleshooting/)
+* [Version Control](/refguide9/version-control/)
+* [Troubleshooting Collaborative Development](/refguide9/collaborative-development-troubleshooting/)
 * [Collaborative Development in Studio](/studio/collaborative-development/)

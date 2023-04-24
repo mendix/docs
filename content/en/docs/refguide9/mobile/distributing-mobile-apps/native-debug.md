@@ -1,11 +1,11 @@
 ---
 title: "Debugging Native Apps"
-url: /refguide/mobile/distributing-mobile-apps/native-debug/
+url: /refguide9/mobile/distributing-mobile-apps/native-debug/
 weight: 40
 description: "A guide for debugging native mobile apps using the Make It Native app."
 tags: ["debug", "testing"]
 aliases:
-    - /howto/mobile/native-debug/
+    - /howto9/mobile/native-debug/
 ---
 
 ## 1 Introduction
@@ -33,11 +33,11 @@ If Chrome launches but does not load your app, check that your app is running in
 
 You should see this page:
 
-{{< figure src="/attachments/howto/mobile/native-mobile/distribution/build-native-apps/native-debug/debug-waiting.png" alt="debug waiting" >}}
+{{< figure src="/attachments/howto9/mobile/native-mobile/distribution/build-native-apps/native-debug/debug-waiting.png" alt="debug waiting" >}}
 
 If the status remains at **Waiting**, use the reload command (pictured above) to refresh your app. The **Waiting** status should change and indicate an **active** session:
 
-{{< figure src="/attachments/howto/mobile/native-mobile/distribution/build-native-apps/native-debug/debug-active.png" alt="debug active" >}}
+{{< figure src="/attachments/howto9/mobile/native-mobile/distribution/build-native-apps/native-debug/debug-active.png" alt="debug active" >}}
 
 Your browser's debugging tools should be pointing to your app. Now, you can debug your app like you would any other web app. 
 
@@ -61,7 +61,7 @@ Open your native app in iOS Simulator or Android emulator and then do the follow
 2. Run `npx react-devtools@^3`.
 3. React Developer Tools will launch and connect to Simulator. You can now inspect and modify the React Native elements the same way you could modify HTML elements in Chrome:
 
-    {{< figure src="/attachments/howto/mobile/native-mobile/distribution/build-native-apps/native-debug/simulator-rn-dev.png" alt="debug simulator"   width="350"  >}}
+    {{< figure src="/attachments/howto9/mobile/native-mobile/distribution/build-native-apps/native-debug/simulator-rn-dev.png" alt="debug simulator"   width="350"  >}}
 
 4. In the Make It Native App, use a three-finger tap to **Toggle Element Inspector** and enable enhanced inspection capabilities.
 
@@ -76,7 +76,7 @@ To use the Make It Native app with React Developer Tools, do the following:
 5. Run `npx react-devtools@^3`.
 6. React Developer Tools will launch and connect to your device. You can now inspect and modify the React Native elements the same way you could modify HTML elements in Chrome:
 
-    {{< figure src="/attachments/howto/mobile/native-mobile/distribution/build-native-apps/native-debug/min-app-rn-devtools.png" alt="debug min app"   width="350"  >}}
+    {{< figure src="/attachments/howto9/mobile/native-mobile/distribution/build-native-apps/native-debug/min-app-rn-devtools.png" alt="debug min app"   width="350"  >}}
 
 ## 3 Debugging Your Styling
 
@@ -99,7 +99,7 @@ After running `react-devtools` you will see the React developer tools GUI. To us
 
 When your Mendix app is crashing or the logging in Mendix Studio Pro is incomplete, you might want to dive into your operating system's log files for information. There are two options:
 
-1. You could start the app in [XCode or Android Studio](/refguide/mobile/distributing-mobile-apps/building-native-apps/native-build-locally/#building-app-project), either of which will give you more information and allow you to set breakpoint and inspect variable values. This approach is a bit more cumbersome. 
+1. You could start the app in [XCode or Android Studio](/refguide9/mobile/distributing-mobile-apps/building-native-apps/native-build-locally/#building-app-project), either of which will give you more information and allow you to set breakpoint and inspect variable values. This approach is a bit more cumbersome. 
 1. Get the log files directly from your device.
 
 The first approach is self-explanatory. For information on getting log files directly from your device, however, see below.

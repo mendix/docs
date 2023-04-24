@@ -1,19 +1,19 @@
 ---
 title: "Page Properties"
-url: /refguide/page-properties/
+url: /refguide9/page-properties/
 weight: 10
 tags: ["studio pro", "page", "properties"]
 ---
 
 ## 1 Introduction
 
-This document describes page properties. For details on what pages are for and what kind of widgets can be placed on them, see [Pages](/refguide/pages/).
+This document describes page properties. For details on what pages are for and what kind of widgets can be placed on them, see [Pages](/refguide9/pages/).
 
 ## 2 Properties {#properties}
 
 An example of page properties is represented in the image below:
 
-{{< figure src="/attachments/refguide/modeling/pages/page/page-properties/page-properties.png" alt="Page Properties"   width="250"  >}}
+{{< figure src="/attachments/refguide9/modeling/pages/page/page-properties/page-properties.png" alt="Page Properties"   width="250"  >}}
 
 Page properties consist of the following sections:
 
@@ -26,13 +26,13 @@ Page properties consist of the following sections:
 
 ### 2.1 Common Section {#common}
 
-{{% snippet file="/static/_includes/refguide/common-section-link.md" %}}
+{{% snippet file="/static/_includes/refguide9/common-section-link.md" %}}
 
 ### 2.2 Data Section {#data}
 
 #### 2.2.1 Parameters {#parameters}
 
-The list of parameters that this page expects. These parameters can be used by [data views](/refguide/data-view/) with a page parameter data source.
+The list of parameters that this page expects. These parameters can be used by [data views](/refguide9/data-view/) with a page parameter data source.
 
 A page parameter is an input that needs to be passed from the calling page, microflow, or nanoflow to the current page. Page parameters determine information that can be reused on the page. For example, if you want to build an **Employee_Details_Edit** page, the page will have a parameter **Employee**. Thus when this page is called an Employee object needs to be passed to it to show the corresponding Employee data.
 
@@ -40,7 +40,7 @@ You can also use multiple page parameters in v9.18 and above. Multiple page para
 
 ### 2.3 Designer Section {#designer}
 
-{{% snippet file="/static/_includes/refguide/designer-properties.md" %}}
+{{% snippet file="/static/_includes/refguide9/designer-properties.md" %}}
 
 ### 2.4 General Section {#general}
 
@@ -65,13 +65,13 @@ The **Layout type**, determines the purpose of the page and how it is opened.
 
 #### 2.4.3 Layout
 
-The [layout](/refguide/layout/) on which this page is based.
+The [layout](/refguide9/layout/) on which this page is based.
 
 #### 2.4.4 Title {#title}
 
-The title of the page that is shown using the [page title widget](/refguide/page-title/). If the page is shown in a pop-up window, the title appears in the title bar of the pop-up. 
+The title of the page that is shown using the [page title widget](/refguide9/page-title/). If the page is shown in a pop-up window, the title appears in the title bar of the pop-up. 
 
-The title can be overridden. For example, the [Create button](/refguide/control-bar/) and the [Edit button](/refguide/control-bar/) of a data grid can refer to the same page, but they override the titles to **New** and **Edit**, respectively.
+The title can be overridden. For example, the [Create button](/refguide9/control-bar/) and the [Edit button](/refguide9/control-bar/) of a data grid can refer to the same page, but they override the titles to **New** and **Edit**, respectively.
 
 #### 2.4.5 URL {#url}
 
@@ -93,9 +93,9 @@ In simple e-commerce applications, the URLs can be configured as follows:
 
 #### 2.5.1 Visible For
 
-This property defines for what module roles the page is visible. This has an effect on [menus and navigation widgets](/refguide/menu-widgets/) and on buttons that are visible only if allowed (for example, an [action button](/refguide/button-widgets/) for editing).
+This property defines for what module roles the page is visible. This has an effect on [menus and navigation widgets](/refguide9/menu-widgets/) and on buttons that are visible only if allowed (for example, an [action button](/refguide9/button-widgets/) for editing).
 
-For more information, see [Module Security](/refguide/module-security/).
+For more information, see [Module Security](/refguide9/module-security/).
 
 ### 2.6 Pop-Up Section {#pop-up}
 

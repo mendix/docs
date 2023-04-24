@@ -1,6 +1,6 @@
 ---
 title: "System Texts"
-url: /refguide/system-texts/
+url: /refguide9/system-texts/
 tags: ["studio pro", "system text"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
@@ -11,7 +11,7 @@ System texts are texts that are shown to end-users by the server or the client. 
 
 ## 2 Languages
 
-In the [App Settings](/refguide/project-settings/) you can manage the available languages of your application. For each language you can specify the translation of the system texts. If you do not provide a translation the text will be shown in the default language.
+In the [App Settings](/refguide9/project-settings/) you can manage the available languages of your application. For each language you can specify the translation of the system texts. If you do not provide a translation the text will be shown in the default language.
 
 ## 3 Parameters
 

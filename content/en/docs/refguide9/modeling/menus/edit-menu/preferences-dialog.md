@@ -1,6 +1,6 @@
 ---
 title: "Preferences"
-url: /refguide/preferences-dialog/
+url: /refguide9/preferences-dialog/
 weight: 50
 tags: ["studio pro", "preferences", "settings", "edit menu"]
 ---
@@ -9,7 +9,7 @@ tags: ["studio pro", "preferences", "settings", "edit menu"]
 
 The **Preferences** option in the menu opens a dialog box where you can set user-specific preferences which apply to the whole of Studio Pro:
 
-{{< figure src="/attachments/refguide/modeling/menus/edit-menu/preferences-dialog/preferences.png" alt="Preferences" width="600" >}}
+{{< figure src="/attachments/refguide9/modeling/menus/edit-menu/preferences-dialog/preferences.png" alt="Preferences" width="600" >}}
 
 ## 2 General Tab {#general}
 
@@ -29,7 +29,7 @@ You can select one of the following options:
 * **App and UI resources modules** (*Default*) – This option targets developers who would like to create or edit UI resources modules, e.g. to build or extend your design system/theme. This option also adds a **Styling** folder to modules that are marked as UI resources, containing the files from the corresponding **themesource** folder.
 * **App and all modules** – Additionally to the option above, this one adds a **Styling** folder to all modules, regardless of whether they are marked as UI resources or not.
 
-For more information about the styling editor, see the [Using the Styling Editor](/howto/front-end/customize-styling-new/#styling-editor) section in *How to Customize Styling*.
+For more information about the styling editor, see the [Using the Styling Editor](/howto9/front-end/customize-styling-new/#styling-editor) section in *How to Customize Styling*.
 
 ### 2.2 Error List
 
@@ -67,7 +67,7 @@ Gradle is necessary to deploy Mendix applications if the **Build using Gradle** 
 
 #### 2.4.1 Default App Directory
 
-This is the directory where new apps are stored. It is used in the [App Settings](/refguide/new-app/#app-settings) dialog box when you create a new app. If a different directory is selected in the **App Settings** dialog box, that directory is stored as the new default app directory.
+This is the directory where new apps are stored. It is used in the [App Settings](/refguide9/new-app/#app-settings) dialog box when you create a new app. If a different directory is selected in the **App Settings** dialog box, that directory is stored as the new default app directory.
 
 ### 3 Mendix Assist Tab
 
@@ -75,16 +75,16 @@ This is the directory where new apps are stored. It is used in the [App Settings
 
 The **Logic Bot** tab contains the following settings:
 
-* **Enable MxAssist Logic Bot** – when enabled, [MxAssist Logic Bot](/refguide/mx-assist-logic-bot/) is activated and can give you suggestions for microflow activities. You can also switch MxAssist Logic Bot on and off in the top right corner of the microflow editor.
+* **Enable MxAssist Logic Bot** – when enabled, [MxAssist Logic Bot](/refguide9/mx-assist-logic-bot/) is activated and can give you suggestions for microflow activities. You can also switch MxAssist Logic Bot on and off in the top right corner of the microflow editor.
 * **Show Suggestions for System Variables** – when enabled, MxAssist Logic Bot will include system objects in its suggestions (for example, it can suggest that you change system objects like currentUser or currentSession).
 
 #### 3.2 Performance Bot
 
 The **Performance Bot** tab contains the following settings:
 
-* **Show recommendation in editors** – when enabled, [MxAssist Performance Bot](/refguide/mx-assist-performance-bot/) highlights elements that contain performance issues in visual editors.
+* **Show recommendation in editors** – when enabled, [MxAssist Performance Bot](/refguide9/mx-assist-performance-bot/) highlights elements that contain performance issues in visual editors.
 
-* **Automatically run an inspection after opening an app** – when enabled, [MxAssist Performance Bot](/refguide/mx-assist-performance-bot/) automatically runs an inspection when an app is opened. If the app contains errors, the inspection will not run.
+* **Automatically run an inspection after opening an app** – when enabled, [MxAssist Performance Bot](/refguide9/mx-assist-performance-bot/) automatically runs an inspection when an app is opened. If the app contains errors, the inspection will not run.
 
 ## 4 Model Tab
 
@@ -98,7 +98,7 @@ This setting defines the default response to the question whether to automatical
 
 #### 5.1.1 Executable
 
-This is the path and name of the program that is used to view the details of file changes in the [commit dialog box](/refguide/commit-dialog/).
+This is the path and name of the program that is used to view the details of file changes in the [commit dialog box](/refguide9/commit-dialog/).
 
 For example, you can see how to set up file comparison for Visual Studio Code below: 
 
@@ -135,7 +135,7 @@ Select **Enable automatic repository optimization** to run Git repository optimi
 
 #### 5.3.4 Number of Commits
 
-This option is available when [Enable automatic repository optimization](#optimization) is on. Studio Pro keeps track of the number of commits made in the local repository. You can manually specify the minimum number of them to tell when to start background optimization. For more information, see [Git Storage Optimization](/refguide/git-storage-optimization-dialog/).
+This option is available when [Enable automatic repository optimization](#optimization) is on. Studio Pro keeps track of the number of commits made in the local repository. You can manually specify the minimum number of them to tell when to start background optimization. For more information, see [Git Storage Optimization](/refguide9/git-storage-optimization-dialog/).
 
 #### 5.3.5 Enable Private Version Control with Git 
 
@@ -167,7 +167,7 @@ This functionality is currently available in Studio Pro 9.24.
 
 ### 7.1 Default Page Editor {#default-page-editor}
 
-This option sets the default page editor mode that your page opens in: **Structure mode** or **Design mode**. For more information on page editor modes, see the [Page Editor Modes](/refguide/page/#page-editor-modes) section in *Page*.
+This option sets the default page editor mode that your page opens in: **Structure mode** or **Design mode**. For more information on page editor modes, see the [Page Editor Modes](/refguide9/page/#page-editor-modes) section in *Page*.
 
 ## 8 New Features Tab {#new-features}
 
@@ -199,7 +199,7 @@ Default: *disabled*
 
 ### 8.3 New Merge Algorithm with Fine-Grained Conflict Resolution
 
-With this option, you can enable the new merge algorithm that is used when you update your app or merge changes in it. For more information on the algorithm, see [New Merge Algorithm with Fine-Grained Conflict Resolution](/refguide/new-merge-algorithm/).
+With this option, you can enable the new merge algorithm that is used when you update your app or merge changes in it. For more information on the algorithm, see [New Merge Algorithm with Fine-Grained Conflict Resolution](/refguide9/new-merge-algorithm/).
 
 Default: *enabled*
 
@@ -215,5 +215,5 @@ Default: *disabled*
 
 ## 9 Read More
 
-* [Upload to Version Control Server](/refguide/upload-to-version-control-dialog/)
-* [Working with an On-Premises Version Control Server](/refguide/on-premises-svn/)
+* [Upload to Version Control Server](/refguide9/upload-to-version-control-dialog/)
+* [Working with an On-Premises Version Control Server](/refguide9/on-premises-svn/)

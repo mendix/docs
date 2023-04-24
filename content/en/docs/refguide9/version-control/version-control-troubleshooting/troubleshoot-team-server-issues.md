@@ -1,6 +1,6 @@
 ---
 title: "Troubleshooting Team Server Issues"
-url: /refguide/troubleshoot-team-server-issues/
+url: /refguide9/troubleshoot-team-server-issues/
 linktitle: "Team Server Issues"
 weight: 30
 description: "Presents a list of problems and fixes for Team Server issues."
@@ -29,7 +29,7 @@ If you use SVN for version control you also need the following:
 
 Mendix Studio Pro connects to `https://teamserver.sprintr.com/` and with the domains shown in the diagram below over HTTPS on port 443. These domains should be added to the firewall white list:
 
-{{< figure src="/attachments/refguide/version-control/troubleshoot-version-control-issues/networkaccessmendixplatform.png" alt="Domains home.mendix.com, cloud.mendix.com, and git.api.mendix.com (or teamserver.sprintr.com in case of SVN) need to be accessible on port 443 from your network" >}}
+{{< figure src="/attachments/refguide9/version-control/troubleshoot-version-control-issues/networkaccessmendixplatform.png" alt="Domains home.mendix.com, cloud.mendix.com, and git.api.mendix.com (or teamserver.sprintr.com in case of SVN) need to be accessible on port 443 from your network" >}}
 
 You can look up the IP address of `https://teamserver.sprintr.com/` or `https://git.api.mendix.com/`.
 
@@ -43,4 +43,4 @@ Contact your network administrator and give them this information to allow them 
 
 ## 3 Read More
 
-* [Version Control FAQ](/refguide/version-control-faq/)
+* [Version Control FAQ](/refguide9/version-control-faq/)

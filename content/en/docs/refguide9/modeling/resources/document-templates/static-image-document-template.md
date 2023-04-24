@@ -1,12 +1,12 @@
 ---
 title: "Static Image (Document Template)"
-url: /refguide/static-image-document-template/
+url: /refguide9/static-image-document-template/
 tags: ["studio pro"]
 aliases:
-    - /refguide/Static+Image+(document+template).html
-    - /refguide/static-image-(document-template).html
-    - /refguide/Static+Image+(document+template)
-    - /refguide/static-image-(document-template)
+    - /refguide9/Static+Image+(document+template).html
+    - /refguide9/static-image-(document-template).html
+    - /refguide9/Static+Image+(document+template)
+    - /refguide9/static-image-(document-template)
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
@@ -16,7 +16,7 @@ A static image shows a predefined image. It can be put either inside or outside 
 
 {{% alert color="info" %}}
 
-{{< figure src="/attachments/refguide/modeling/resources/document-templates/918133.png" >}}
+{{< figure src="/attachments/refguide9/modeling/resources/document-templates/918133.png" >}}
 
 A static image inside a table cell.
 
@@ -38,4 +38,4 @@ The height defines the height of the image in the document. This is set in pixel
 
 ## 3 Common Properties
 
-{{% snippet file="/static/_includes/refguide/name-property.md" %}}
+{{% snippet file="/static/_includes/refguide9/name-property.md" %}}

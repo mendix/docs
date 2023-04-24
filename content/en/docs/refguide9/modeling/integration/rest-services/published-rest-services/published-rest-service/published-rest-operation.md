@@ -1,6 +1,6 @@
 ---
 title: "Published REST Operation"
-url: /refguide/published-rest-operation/
+url: /refguide9/published-rest-operation/
 weight: 10
 description: "Options to configure a published REST operation."
 tags: ["Published REST", "operation", "method", "path", "example location", "mapping", "operation parameters", "how to"]
@@ -10,17 +10,17 @@ tags: ["Published REST", "operation", "method", "path", "example location", "map
 
 ## 1 Introduction
 
-A published REST operation is part of a [published REST resource](/refguide/published-rest-resource/) and defines an endpoint that a client can call to GET, PUT, POST, PATCH, or DELETE items from the resource.
+A published REST operation is part of a [published REST resource](/refguide9/published-rest-resource/) and defines an endpoint that a client can call to GET, PUT, POST, PATCH, or DELETE items from the resource.
 
 In the **Published REST Service** document you can add items to be included in the service as **Resources**:
 
-{{< figure src="/attachments/refguide/modeling/integration/published-rest-services/published-rest-service/published-rest-operation/publshed-rest-service.png" alt="Published REST Service" >}}
+{{< figure src="/attachments/refguide9/modeling/integration/published-rest-services/published-rest-service/published-rest-operation/publshed-rest-service.png" alt="Published REST Service" >}}
 
 ## 2 Operation Definition
 
 When you **Add** or **Edit** a resource, you can define the resource in the **Operation** definition dialog box for the selected item as follows:
 
-{{< figure src="/attachments/refguide/modeling/integration/published-rest-services/published-rest-service/published-rest-operation/operation-definition.png" alt="REST Operation" >}}
+{{< figure src="/attachments/refguide9/modeling/integration/published-rest-services/published-rest-service/published-rest-operation/operation-definition.png" alt="REST Operation" >}}
 
 ### 2.1 General
 
@@ -42,9 +42,9 @@ The method specifies the type of operation that is performed by the microflow. F
 
 The location where the operation can be reached starts with the URL of the resource and the **Operation path** specifies the remainder of the path for the operation. You can leave it empty to use the location of the resource.
 
-You can use [path parameters](/refguide/published-rest-path-parameters/) to capture part of the location as a microflow parameter or as a parameter to the import mapping. Specify path parameters in the operation path between `{` and `}`. The value that is in the URL for the path parameter will be passed to the microflow or the import mapping.
+You can use [path parameters](/refguide9/published-rest-path-parameters/) to capture part of the location as a microflow parameter or as a parameter to the import mapping. Specify path parameters in the operation path between `{` and `}`. The value that is in the URL for the path parameter will be passed to the microflow or the import mapping.
 
-The **Method** and **Operation path** define the operation that is executed for a given request URL as described in [Published Rest Routing](/refguide/published-rest-routing/).
+The **Method** and **Operation path** define the operation that is executed for a given request URL as described in [Published Rest Routing](/refguide9/published-rest-routing/).
 
 #### 2.1.3 Example Location{#example-location}
 
@@ -54,11 +54,11 @@ The **Example Location** gives an example of a URL on which the operation can be
 
 An operation can have the following parameters:
 
-* [Query parameters](/refguide/published-rest-query-parameters/), which are at the end of the URL in the form of `?name1=value1&name2=value2`
+* [Query parameters](/refguide9/published-rest-query-parameters/), which are at the end of the URL in the form of `?name1=value1&name2=value2`
 
     {{% alert color="info" %}}When a microflow parameter is not in the path and is not an object, then it is considered to be a query parameter.{{% /alert %}}
 
-* [Path parameters](/refguide/published-rest-path-parameters/), which form part of the path of the URL
+* [Path parameters](/refguide9/published-rest-path-parameters/), which form part of the path of the URL
 * A body parameter (optional), which is in the body of the request to the operation 
 
     {{% alert color="info" %}}The **GET**, **HEAD**, and **DELETE** operations do not have a body parameter.{{% /alert %}}
@@ -70,9 +70,9 @@ A microflow for an operation takes these operation parameters as input.
 
 A microflow parameter that has the *List* or *Object* type indicates a body parameter. You can specify an import mapping to convert the incoming JSON or XML. A parameter of the *FileDocument* type (or that inherits from a *FileDocument*) is special: It can also be used for form parameters, and an import mapping is not needed.
 
-An operation microflow may also take an [HttpRequest](/refguide/http-request-and-response-entities/#http-request) parameter. You can add this parameter if you want to inspect the requested URL and headers.
+An operation microflow may also take an [HttpRequest](/refguide9/http-request-and-response-entities/#http-request) parameter. You can add this parameter if you want to inspect the requested URL and headers.
 
-To set the status code, reason phrase, and headers, add an [HttpResponse](/refguide/http-request-and-response-entities/#http-response) object parameter and set the attributes of that object, or return an *HttpResponse*.
+To set the status code, reason phrase, and headers, add an [HttpResponse](/refguide9/http-request-and-response-entities/#http-response) object parameter and set the attributes of that object, or return an *HttpResponse*.
 
 The result of the microflow is the result of the operation and can include the following:
 
@@ -80,14 +80,14 @@ The result of the microflow is the result of the operation and can include the f
    a. Use the [Content-Type](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Type) header to specify the file's MIME type.
    b. Use the [Content-Disposition](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Disposition) header to specify the file name and to indicate whether the file should be downloaded as an attachment.
    c. Use additional HTTP response headers to communicate other information about the file.
-   See the [Setting Up the MIME Type](/refguide/send-receive-files-rest/#set-mime-type) section of *Publish and Consume Images and Files with REST* for more information.
+   See the [Setting Up the MIME Type](/refguide9/send-receive-files-rest/#set-mime-type) section of *Publish and Consume Images and Files with REST* for more information.
 
 2. **Return a** ***list*** **or an** ***object*** – specify an export mapping to convert it to XML or JSON.
 
 3. **Return a primitive** – when the microflow returns a value, for example, a string, integer, or Boolean, then the response to the operation will be that value.
     {{% alert color="info" %}}If the microflow returns a non-empty value, the *Content* attribute of the *HttpResponse* object is ignored. If the microflow returns an empty value, then the *Content* of the *HttpResponse* is taken as the result. {{% /alert %}}
 
-4. **Return an** [HttpResponse](/refguide/http-request-and-response-entities/#http-response) – in the *HttpResponse*, you can set the status code, reason phrase, and content (as a string). You can fill the content with, for example, the result of a mapping or a string from another source. You can also add headers to the response. 
+4. **Return an** [HttpResponse](/refguide9/http-request-and-response-entities/#http-response) – in the *HttpResponse*, you can set the status code, reason phrase, and content (as a string). You can fill the content with, for example, the result of a mapping or a string from another source. You can also add headers to the response. 
     {{% alert color="info" %}}One important header to set is *Content-Type*. Do not return an *empty* *HttpResponse* because that will always result in an error.{{% /alert %}}
 
 If the microflow throws an unhandled exception, the response is **500: Internal server error**.
@@ -96,19 +96,19 @@ When security is enabled, then then microflow needs to have at least one role co
 
 #### 2.1.5 Deprecated
 
-Check this box to mark the operation as deprecated in the service's OpenApi (Swagger) documentation page as described in the [Documentation](/refguide/published-rest-services/#interactive-documentation) section of [Published REST services](/refguide/published-rest-services/). This informs clients not to use it anymore.
+Check this box to mark the operation as deprecated in the service's OpenApi (Swagger) documentation page as described in the [Documentation](/refguide9/published-rest-services/#interactive-documentation) section of [Published REST services](/refguide9/published-rest-services/). This informs clients not to use it anymore.
 
 #### 2.1.6 Parameters
 
-You can **Add**, **Update** or **Delete** the parameters of the operation which is described in [Operation Parameters for Published REST](/refguide/published-rest-operation-parameter/).
+You can **Add**, **Update** or **Delete** the parameters of the operation which is described in [Operation Parameters for Published REST](/refguide9/published-rest-operation-parameter/).
 
 ##### 2.1.6.1 Import Mapping {#import-mapping}
 
-For a body parameter, you can select an [import mapping](/refguide/import-mappings/) that converts the body of the request into an object. All object and list parameters except file documents must have an import mapping selected. 
+For a body parameter, you can select an [import mapping](/refguide9/import-mappings/) that converts the body of the request into an object. All object and list parameters except file documents must have an import mapping selected. 
 
 To select an import mapping, double-click the parameter or click **Edit** in the grid after you select the parameter. When selecting the import mapping, you can also choose the commit behavior of the mapping: you can choose to either commit, commit without events, or not commit imported objects.
 
-You can select an import mapping that takes no parameter, or an import mapping that takes a primitive parameter (for example, string, integer). If you select an import mapping with a primitive parameter, you need to have exactly one [path parameter](/refguide/published-rest-path-parameters/) with the same type. That path parameter will be passed to the import mapping.
+You can select an import mapping that takes no parameter, or an import mapping that takes a primitive parameter (for example, string, integer). If you select an import mapping with a primitive parameter, you need to have exactly one [path parameter](/refguide9/published-rest-path-parameters/) with the same type. That path parameter will be passed to the import mapping.
 
 You can indicate what should happen **if no object was found** when the import mapping has checked the box **decide this at the place where the mapping gets used**.
 
@@ -116,7 +116,7 @@ If you select an import mapping that supports both XML and JSON (for example, a 
 
 Valid requests must contain a *Content-Type* header. See [Recognized media types](#table1) for a list of media types that are understood by the import mapping. If an unsupported content type is used, the operation will result in a "**400 Bad Request**" response.
 
-The import mapping is also used to generate object schemas for operation responses in [OpenAPI (Swagger) documentation page](/refguide/published-rest-services/#interactive-documentation) based on [JSON Schema](/refguide/published-rest-service-json-schema/)
+The import mapping is also used to generate object schemas for operation responses in [OpenAPI (Swagger) documentation page](/refguide9/published-rest-services/#interactive-documentation) based on [JSON Schema](/refguide9/published-rest-service-json-schema/)
 
 #### 2.1.7 Response
 
@@ -150,11 +150,11 @@ If you select an export mapping that supports both XML and JSON (for example, a 
 
 * When there is no *Accept* header or the *Accept* header does not contain a recognizable media type, then the operation returns JSON and the *Content-Type* is *application/json*.
 
-The export mapping is also used to generate object schemas for operation responses in the [OpenAPI (Swagger) documentation page](/refguide/published-rest-services/#interactive-documentation) based on the [JSON schema](/refguide/published-rest-service-json-schema/).
+The export mapping is also used to generate object schemas for operation responses in the [OpenAPI (Swagger) documentation page](/refguide9/published-rest-services/#interactive-documentation) based on the [JSON schema](/refguide9/published-rest-service-json-schema/).
 
 ### 2.2 Public Documentation
 
-In the **Public Documentation** tab you can specify the documentation that will be used in the service's [OpenAPI (Swagger) documentation page](/refguide/published-rest-services/#interactive-documentation).
+In the **Public Documentation** tab you can specify the documentation that will be used in the service's [OpenAPI (Swagger) documentation page](/refguide9/published-rest-services/#interactive-documentation).
 
 #### 2.2.1 Summary {#summary}
 
@@ -162,4 +162,4 @@ Provide a short description of what the operation does.
 
 #### 2.2.2 Description {#description}
 
-Enter a complete overview of what the operation does. You can use [GitHub-flavored markdown](/refguide/gfm-syntax/) syntax to style the text.
+Enter a complete overview of what the operation does. You can use [GitHub-flavored markdown](/refguide9/gfm-syntax/) syntax to style the text.

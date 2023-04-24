@@ -1,6 +1,6 @@
 ---
 title: "View Menu"
-url: /refguide/view-menu/
+url: /refguide9/view-menu/
 description: "Describes the View Menu in Studio Pro."
 weight: 20
 tags: ["view menu", "pane", "connector", "console", "find results", "widget developer console", "documentation pane", "full screen", "distraction free", "reset layout"]
@@ -12,19 +12,19 @@ Studio Pro supports a number of dockable window panes, such as the **Changes** a
 
 Via this menu you can also enable or disable the [full screen mode](#full-screen) or [reset the layout](#reset-layout) of your app to the default.  
 
-{{< figure src="/attachments/refguide/modeling/menus/view-menu/view-menu.png" alt="View Menu" >}}
+{{< figure src="/attachments/refguide9/modeling/menus/view-menu/view-menu.png" alt="View Menu" >}}
 
 ## 2 Layout of Panes {#layout-of-panes}
 
 You can change the default layout of panes and arrange them in the layout you like.
 
 {{% alert color="info" %}}
-Note that this section describes the behavior of panes, not the behavior of documents in the working area. For more information on the behavior of documents open in the working area, see the [Document Tabs](/refguide/studio-pro-overview/#documents) section in *Studio Pro Overview*.
+Note that this section describes the behavior of panes, not the behavior of documents in the working area. For more information on the behavior of documents open in the working area, see the [Document Tabs](/refguide9/studio-pro-overview/#documents) section in *Studio Pro Overview*.
 {{% /alert %}}
 
 When you drag a pane, you can see arrows that indicate where you can position this pane. You can position the pane either inside the current pane (arrows grouped together) or make it full-window height or width (individual arrows on the borders). Each position is labelled and explained below:
 
-{{< figure src="/attachments/refguide/modeling/menus/view-menu/interaction-with-panes.png" >}}
+{{< figure src="/attachments/refguide9/modeling/menus/view-menu/interaction-with-panes.png" >}}
 
 1. Within the current *pane* you can position a pane in one of the following ways:
 
@@ -51,15 +51,15 @@ Menu items of the **View** menu are described in sections below.
 
 ### 3.1 App Explorer
 
-The [App Explorer](/refguide/app-explorer/) pane displays the complete structure of your app, including all the documents inside the modules. By default, the active document is always selected, so you can quickly see where the document you are editing is in the tree. You can change this behavior in **Edit** > [Preferences](/refguide/preferences-dialog/). 
+The [App Explorer](/refguide9/app-explorer/) pane displays the complete structure of your app, including all the documents inside the modules. By default, the active document is always selected, so you can quickly see where the document you are editing is in the tree. You can change this behavior in **Edit** > [Preferences](/refguide9/preferences-dialog/). 
 
 ### 3.2 Changes
 
-For version control-enabled apps (meaning, those with [Team Server](/developerportal/collaborate/team-server/) or other SVN servers), the [Changes pane](/refguide/changes-pane/) shows the local changes to the app since the last commit. You can commit changes, update to the latest revision, and view the history from here. 
+For version control-enabled apps (meaning, those with [Team Server](/developerportal/collaborate/team-server/) or other SVN servers), the [Changes pane](/refguide9/changes-pane/) shows the local changes to the app since the last commit. You can commit changes, update to the latest revision, and view the history from here. 
 
 This pane has two levels, so when you zoom into a changed document, you can review all the changes within that document without going back and forth between levels. The zoomed-in level of the pane is split into two grids, with elements on the left and properties on the right. Selecting an element on the left presents the changed properties on the right:
 
-<video width="640" height="360" controls src="/attachments/refguide/view-menu/changes.mp4">VIDEO</video>
+<video width="640" height="360" controls src="/attachments/refguide9/view-menu/changes.mp4">VIDEO</video>
 
 ### 3.3 Connector {#connector}
 
@@ -67,11 +67,11 @@ The **Connector** pane displays elements that can be connected to the currently 
 
 ### 3.4 Console {#console}
 
-The **Console** pane displays the output of the [Mendix Runtime](/refguide/runtime/) while running an application.
+The **Console** pane displays the output of the [Mendix Runtime](/refguide9/runtime/) while running an application.
 
 ### 3.5 Data Hub {#data-hub}
 
-The [Data Hub pane](/refguide/data-hub-pane/) enables you to browse the [Data Hub Catalog](/data-hub/data-hub-catalog/) and use registered data sources that are available for your organization in your app development. You can add [external entities](/refguide/external-entities/) to your app via this pane and see entities and data sources already consumed in your app. 
+The [Data Hub pane](/refguide9/data-hub-pane/) enables you to browse the [Data Hub Catalog](/data-hub/data-hub-catalog/) and use registered data sources that are available for your organization in your app development. You can add [external entities](/refguide9/external-entities/) to your app via this pane and see entities and data sources already consumed in your app. 
 
 ### 3.6 Documentation
 
@@ -79,7 +79,7 @@ The **Documentation** pane displays the documentation for the currently selected
 
 ### 3.7 Error List
 
-The [Errors pane](/refguide/errors-pane/) displays the [errors](/refguide/consistency-errors/), warnings, and deprecations that exist in your app.
+The [Errors pane](/refguide9/errors-pane/) displays the [errors](/refguide9/consistency-errors/), warnings, and deprecations that exist in your app.
 
 ### 3.8 Find Results
 
@@ -93,11 +93,11 @@ For details on using Mendix Marketplace components in your app modeling, see [Ho
 
 ### 3.10 MxAssist Performance Bot {#mx-bot}
 
-For details on this intelligent virtual co-developer bot, see [MxAssist Performance Bot](/refguide/mx-assist-performance-bot/).
+For details on this intelligent virtual co-developer bot, see [MxAssist Performance Bot](/refguide9/mx-assist-performance-bot/).
 
 ### 3.11 Page Explorer
 
-[Page Explorer](/refguide/page-explorer/) gives a quick overview of the page layout and allows you to view and edit nested containers in the [Design mode](/refguide/page/#design-mode).
+[Page Explorer](/refguide9/page-explorer/) gives a quick overview of the page layout and allows you to view and edit nested containers in the [Design mode](/refguide9/page/#design-mode).
 
 ### 3.12 Properties {#properties}
 
@@ -105,11 +105,11 @@ The **Properties** pane displays the properties of the currently selected elemen
 
 ### 3.13 Stories
 
-For [Team Server](/developerportal/collaborate/team-server/) app, the **Stories** pane shows the [stories](/developerportal/collaborate/stories/) of the current [Sprint](/developerportal/collaborate/stories/). For more information on the **Stories** pane and how to interact with it, see [Stories Pane](/refguide/stories-pane/). 
+For [Team Server](/developerportal/collaborate/team-server/) app, the **Stories** pane shows the [stories](/developerportal/collaborate/stories/) of the current [Sprint](/developerportal/collaborate/stories/). For more information on the **Stories** pane and how to interact with it, see [Stories Pane](/refguide9/stories-pane/). 
 
 ### 3.14 Toolbox {#toolbox}
 
-The **Toolbox** pane displays the tools that can be used in the current editor. For example, in a page you can insert all kinds of widgets (for example, [data containers](/refguide/data-widgets/)) by dragging them from the **Toolbox** onto your page.
+The **Toolbox** pane displays the tools that can be used in the current editor. For example, in a page you can insert all kinds of widgets (for example, [data containers](/refguide9/data-widgets/)) by dragging them from the **Toolbox** onto your page.
 
 The **Toolbox** has a tile view showing larger icons and a list view showing a list of elements. You can switch between the tile and list view modes at the lower-right corner of the **Toolbox**. 
 
@@ -119,7 +119,7 @@ This console helps you debug the configuration code of your widget that is respo
 
 ### 3.16 Debug Windows
 
-For more information on debugging, see [Debugging Microflows and Nanoflows](/refguide/debug-microflows-and-nanoflows/).
+For more information on debugging, see [Debugging Microflows and Nanoflows](/refguide9/debug-microflows-and-nanoflows/).
 
 #### 3.16.1 Breakpoints
 
@@ -151,7 +151,7 @@ Resets the layout of dockable window panes to factory defaults.
 
 ## 4 Read More
 
-* [Changes Pane](/refguide/changes-pane/)
-* [Errors Pane](/refguide/errors-pane/)
-* [App Explorer](/refguide/app-explorer/)
-* [Studio Pro Overview](/refguide/studio-pro-overview/)
+* [Changes Pane](/refguide9/changes-pane/)
+* [Errors Pane](/refguide9/errors-pane/)
+* [App Explorer](/refguide9/app-explorer/)
+* [Studio Pro Overview](/refguide9/studio-pro-overview/)

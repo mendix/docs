@@ -1,24 +1,24 @@
 ---
 title: "App Security"
-url: /refguide/app-security/
+url: /refguide9/app-security/
 weight: 10
 tags: ["studio pro", "security", "app security"]
 aliases:
-    - /refguide/project-security/
+    - /refguide9/project-security/
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 #The anchor password-policy below is mapped, so it should not be removed or changed
 ---
 
 ## 1 Introduction
 
-In **App Security**, you can switch security on or off for the whole app. You can also configure security settings related to the app, such as user roles, administrator credentials, demo users, anonymous users, and password policy. To be able to configure, for example, [security per module](/refguide/module-security/) or [access rule for entities](/refguide/access-rules/), you need to switch the app security on first. 
+In **App Security**, you can switch security on or off for the whole app. You can also configure security settings related to the app, such as user roles, administrator credentials, demo users, anonymous users, and password policy. To be able to configure, for example, [security per module](/refguide9/module-security/) or [access rule for entities](/refguide9/access-rules/), you need to switch the app security on first. 
 
 To configure the app security, open **App Explorer** > **App** > **Security**, and the dialog box will open:
 
-{{< figure src="/attachments/refguide/modeling/app-explorer/security/app-security/app-security-dialog.png" >}}
+{{< figure src="/attachments/refguide9/modeling/app-explorer/security/app-security/app-security-dialog.png" >}}
 
 {{% alert color="info" %}}
-For more general information on security, see [Security](/refguide/security/).
+For more general information on security, see [Security](/refguide9/security/).
 {{% /alert %}}
 
 ## 2 Security Level {#security-level}
@@ -84,25 +84,25 @@ Additionally, at the **Production** security level, the status of entity access 
 
 ## 4 User Roles {#user-roles}
 
-A user role aggregates a number of access rights on data, pages, and microflows. An end-user of the application is assigned one or more user roles by an administrator, and gets all access rights that these user roles represent. For more information, see [User Roles](/refguide/user-roles/).
+A user role aggregates a number of access rights on data, pages, and microflows. An end-user of the application is assigned one or more user roles by an administrator, and gets all access rights that these user roles represent. For more information, see [User Roles](/refguide9/user-roles/).
 
 ## 5 Administrator {#administrator}
 
-In the **Administrator** tab of **App Security**, you can change the default credentials and a user role for the Administrator user. For more information, see [Administrator](/refguide/administrator/). 
+In the **Administrator** tab of **App Security**, you can change the default credentials and a user role for the Administrator user. For more information, see [Administrator](/refguide9/administrator/). 
 
 ## 6 Demo Users {#demo-users}
 
-Demo users are a demonstration of each [user role](/refguide/user-roles/) existing in your app. You can use demo users to test what your app looks like for each user role or to demonstrate your app to other people. For more information, see [Demo Users](/refguide/demo-users/). 
+Demo users are a demonstration of each [user role](/refguide9/user-roles/) existing in your app. You can use demo users to test what your app looks like for each user role or to demonstrate your app to other people. For more information, see [Demo Users](/refguide9/demo-users/). 
 
 ## 7 Anonymous Users {#anonymous-users}
 
-Anonymous users allow end-users access your application without having to sign in. You can restrict the data that anonymous users can access by assigning a specific user role to them. For more information, see [Anonymous Users](/refguide/anonymous-users/).
+Anonymous users allow end-users access your application without having to sign in. You can restrict the data that anonymous users can access by assigning a specific user role to them. For more information, see [Anonymous Users](/refguide9/anonymous-users/).
 
 ## 8 Password Policy {#password-policy}
 
-Specify the password requirements when users create their accounts and set passwords for them. For example, you can set the minimum length of the password, if it must contain digits or an upper case characters. For more information, see [Password Policy](/refguide/password-policy/). 
+Specify the password requirements when users create their accounts and set passwords for them. For example, you can set the minimum length of the password, if it must contain digits or an upper case characters. For more information, see [Password Policy](/refguide9/password-policy/). 
 
 ## 9 Read More
 
-* [Security](/refguide/security/)
-* [Module Security](/refguide/module-security/)
+* [Security](/refguide9/security/)
+* [Module Security](/refguide9/module-security/)

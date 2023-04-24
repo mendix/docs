@@ -1,6 +1,6 @@
 ---
 title: "XPath true"
-url: /refguide/xpath-true/
+url: /refguide9/xpath-true/
 tags: ["studio pro"]
 ---
 

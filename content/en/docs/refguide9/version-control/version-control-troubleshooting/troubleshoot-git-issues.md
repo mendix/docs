@@ -1,6 +1,6 @@
 ---
 title: "Solving Known Git Issues"
-url: /refguide/troubleshoot-git-issues/
+url: /refguide9/troubleshoot-git-issues/
 linktitle: "Known Git Issues"
 weight: 20
 description: "Describes a list of problems and fixes for Git version control issues."
@@ -15,7 +15,7 @@ This document describes known issues with Git version control and the ways to fi
 
 You may encounter the following issues:
 
-* **Proxy servers are not supported** — we do not support connecting to Git repositories from behind a proxy server yet (for a workaround, see the [Proxy Support](/refguide/svn-git-differences/#proxy-support) section in *Differences between Git and SVN*)
+* **Proxy servers are not supported** — we do not support connecting to Git repositories from behind a proxy server yet (for a workaround, see the [Proxy Support](/refguide9/svn-git-differences/#proxy-support) section in *Differences between Git and SVN*)
 * **Getting an Oops pop-up menu when setting a name and an email for Git in the Preferences dialog box or while committing** — the problem might occur if there is no global Git config file on the PC yet. To fix this issue, you can use the Git command line client and do the following:
     * Specify the user name:
     `git config --global user.name "<Name>"`
@@ -37,7 +37,7 @@ When filing a Git support issue with Mendix Support, attach the log files doing 
 
 1. Navigate to the **Help** menu > **Open Log File Directory**:
 
-    {{< figure src="/attachments/refguide/version-control/on-premises-git/troubleshoot-git-issues/open-log-file-directory-menu.png" alt="Download from Version Control Server dialog" >}}
+    {{< figure src="/attachments/refguide9/version-control/on-premises-git/troubleshoot-git-issues/open-log-file-directory-menu.png" alt="Download from Version Control Server dialog" >}}
 
 2. Copy the file called *log.txt* into your ticket. You can also attach additional *log.X.txt* files if they exist.
 

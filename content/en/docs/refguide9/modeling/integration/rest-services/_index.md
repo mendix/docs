@@ -1,6 +1,6 @@
 ---
 title: "REST Services"
-url: /refguide/integration/rest-services/
+url: /refguide9/integration/rest-services/
 category: "Integration"
 weight: 51
 description: "Introduces REST."
@@ -17,13 +17,13 @@ Representational state transfer (REST) is an approach to consuming or exposing r
 
 To publish REST services, see:
 
-* [Published REST Services](/refguide/published-rest-services/), an overview in the Studio Pro guide
-* [Publish a REST Service](/howto/integration/publish-rest-service/) for step-by-step instructions
-* [HttpRequest and HttpResponse System Entities](/refguide/http-request-and-response-entities/), an overview of these system entities in your domain model
+* [Published REST Services](/refguide9/published-rest-services/), an overview in the Studio Pro guide
+* [Publish a REST Service](/howto9/integration/publish-rest-service/) for step-by-step instructions
+* [HttpRequest and HttpResponse System Entities](/refguide9/http-request-and-response-entities/), an overview of these system entities in your domain model
 
 To consume REST services, see:
 
-* [Consumed REST Services](/refguide/consumed-rest-services/), an overview in the Studio Pro guide
-* [Call REST Service](/refguide/call-rest-action/), a description of the microflow action
-* [Consume a REST Service](/howto/integration/consume-a-rest-service/) for step-by-step instructions
-* [HttpRequest and HttpResponse System Entities](/refguide/http-request-and-response-entities/), an overview of these system entities in your domain model
+* [Consumed REST Services](/refguide9/consumed-rest-services/), an overview in the Studio Pro guide
+* [Call REST Service](/refguide9/call-rest-action/), a description of the microflow action
+* [Consume a REST Service](/howto9/integration/consume-a-rest-service/) for step-by-step instructions
+* [HttpRequest and HttpResponse System Entities](/refguide9/http-request-and-response-entities/), an overview of these system entities in your domain model

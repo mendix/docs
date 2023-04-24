@@ -1,6 +1,6 @@
 ---
 title: "XPath Keywords and System Variables"
-url: /refguide/xpath-keywords-and-system-variables/
+url: /refguide9/xpath-keywords-and-system-variables/
 tags: ["studio pro", "BeginOfCurrent", "system variables"]
 ---
 
@@ -23,7 +23,7 @@ This query returns all the customers whose name is not known to the system:
 //Sales.Customer[Name = NULL]
 ```
 
-These keywords can only be used in conjunction with attributes. The existence of associations cannot be confirmed in this manner. For more information on how to constrain on associations, see [XPath Constraint Functions](/refguide/xpath-constraint-functions/).
+These keywords can only be used in conjunction with attributes. The existence of associations cannot be confirmed in this manner. For more information on how to constrain on associations, see [XPath Constraint Functions](/refguide9/xpath-constraint-functions/).
 
 ## 3 System Variables
 
@@ -46,7 +46,7 @@ These will be created for each user role in your app. Here is an example:
 
 Here is an example for retrieving that user role: 
 
-{{< figure src="/attachments/refguide/modeling/xpath/xpath-constraints/xpath-keywords-and-system-variables/user-role.png" >}}
+{{< figure src="/attachments/refguide9/modeling/xpath/xpath-constraints/xpath-keywords-and-system-variables/user-role.png" >}}
 
 ### 3.3 Time-Related
 

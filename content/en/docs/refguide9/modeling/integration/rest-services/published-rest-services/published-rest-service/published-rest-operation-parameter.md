@@ -1,6 +1,6 @@
 ---
 title: "Operation Parameters for Published REST"
-url: /refguide/published-rest-operation-parameter/
+url: /refguide9/published-rest-operation-parameter/
 weight: 20
 description: "Configure a published REST Operation by adding parameters to an operation "
 tags: ["published REST", "operation", "parameter", "resource", "mapping", "not found", "commit"]
@@ -19,8 +19,8 @@ When you add or edit a parameter in a published REST operation, you can specify 
 
 Specify where the parameter comes from. Possible values are the following:
 
-* **Query** – When the request contains a query string such as `?name=John&age=42`, you can pass these to the microflow by adding query parameters. For more information, see [Published REST Query Parameters](/refguide/published-rest-query-parameters/).
-* **Path** – The operation path can contain parameters as well. If you add a path parameter, make sure you add it to the operation path as well. For more information, see [Published REST Path Parameters](/refguide/published-rest-path-parameters/).
+* **Query** – When the request contains a query string such as `?name=John&age=42`, you can pass these to the microflow by adding query parameters. For more information, see [Published REST Query Parameters](/refguide9/published-rest-query-parameters/).
+* **Path** – The operation path can contain parameters as well. If you add a path parameter, make sure you add it to the operation path as well. For more information, see [Published REST Path Parameters](/refguide9/published-rest-path-parameters/).
 * **Body** – The microflow can have 0 or 1 body parameters. A body parameter is taken from the body of the request. If the body is a file document or an image, its contents will be filled with the body of the request. If the body parameter is another type of object or a list, an import mapping is needed to convert the body content of the request into an object or a list. `GET`, `HEAD`, and `OPTIONS` operations should not have body parameters.
 * **Header** – The value of a header parameter is taken from the (first) request header with that name.
 * **Form** – The value of a form parameter is taken from the body part with that name (these are available for `multipart/form-data` requests).
@@ -51,7 +51,7 @@ You can use an import mapping that takes a primitive parameter (string, integer,
 
 This sets the behavior of the operation when a find operation does not find an existing object.
 
-If the top-level of an [import mapping](/refguide/import-mappings/) has **Decide this at the place where the mapping gets used** unchecked, then the behavior is set in the import mapping.
+If the top-level of an [import mapping](/refguide9/import-mappings/) has **Decide this at the place where the mapping gets used** unchecked, then the behavior is set in the import mapping.
 
 If the import mapping has **Decide this at the place where the mapping gets used** checked, then you can define the **If no object was found** action in the REST operation itself. This means you can use the same import mapping in multiple operations, but have a different behavior for each of them. The options are:
 
@@ -69,6 +69,6 @@ You can indicate whether the import mapping should commit the objects that it cr
 
 ## 4 Public Documentation
 
-Provide a **Description** of the parameter. You can use [GitHub-flavored Markdown](/refguide/gfm-syntax/) for rich text.
+Provide a **Description** of the parameter. You can use [GitHub-flavored Markdown](/refguide9/gfm-syntax/) for rich text.
 
-This is used in the service's [OpenAPI (Swagger) documentation page](/refguide/published-rest-services/#interactive-documentation).
+This is used in the service's [OpenAPI (Swagger) documentation page](/refguide9/published-rest-services/#interactive-documentation).

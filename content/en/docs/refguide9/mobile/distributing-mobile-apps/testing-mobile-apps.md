@@ -1,10 +1,10 @@
 ---
 title: "Testing Native Apps"
-url: /refguide/mobile/distributing-mobile-apps/testing-mobile-apps/
+url: /refguide9/mobile/distributing-mobile-apps/testing-mobile-apps/
 weight: 50
 description: This guide will teach you how to write end-to-end tests once and run them on both platforms using Appium.
 aliases:
-    - /howto/mobile/testing-mendix-native-apps-using-appium/
+    - /howto9/mobile/testing-mendix-native-apps-using-appium/
 ---
 
 ## 1 Introduction
@@ -37,7 +37,7 @@ However, the default Appium Android driver (UIAutomator2) is unable to read the 
 
 To set up Appium Desktop for native iOS testing, do the following:
 
-1. Build a native iOS app for your Mendix app (see [Building Native Apps](/refguide/mobile/distributing-mobile-apps/building-native-apps/) for more information).
+1. Build a native iOS app for your Mendix app (see [Building Native Apps](/refguide9/mobile/distributing-mobile-apps/building-native-apps/) for more information).
 1. Build the WebDriverAgent project that is shipped with your Appium Desktop installation as described [here](http://appium.io/docs/en/advanced-concepts/wda-custom-server/). For Appium Desktop, the WDA project can be found in */Applications/Appium.app/Contents/Resources/app/node_modules/appium/node_modules/appium-webdriveragent*.
 1. Start Appium Desktop
 1. Click **Start Server**.
@@ -62,7 +62,7 @@ To set up Appium Desktop for native iOS testing, do the following:
 To set up Appium Desktop for native Android testing, do the following:
 
 1. Add the Espresso dependencies by following the setup instructions [here](https://developer.android.com/training/testing/espresso/setup).
-1. Build a native Android app for your Mendix app (See [Building Native Apps](/refguide/mobile/distributing-mobile-apps/building-native-apps/) for more information).
+1. Build a native Android app for your Mendix app (See [Building Native Apps](/refguide9/mobile/distributing-mobile-apps/building-native-apps/) for more information).
 1. Start Appium Desktop.
 1. Click **Start Server**.
 1. On the new screen, click the **Start Inspector Session** magnifier image in the top-right.
@@ -116,4 +116,4 @@ Once you have the capabilities you want that work with Appium Desktop, you can a
 
 ## 7 Read More
 
-* [Building, Testing, and Distributing Apps](/refguide/mobile/distributing-mobile-apps/)
+* [Building, Testing, and Distributing Apps](/refguide9/mobile/distributing-mobile-apps/)

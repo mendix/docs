@@ -1,6 +1,6 @@
 ---
 title: "Microflows and Nanoflows"
-url: /refguide/microflows-and-nanoflows/
+url: /refguide9/microflows-and-nanoflows/
 weight: 10
 description: "Presents an overview of microflows and nanoflows."
 tags: ["studio pro", "microflow", "nanoflow"]
@@ -14,13 +14,13 @@ Microflows run in the runtime server and can therefore not be used in offline ap
 
 Explore the documentation for details on microflow and nanoflow definitions, properties, and usages.
 
-* [Microflows](/refguide/microflows/)
-* [Nanoflows](/refguide/nanoflows/)
-* [Sequence Flow](/refguide/sequence-flow/)
-* [Activities](/refguide/activities/)
-* [Decisions](/refguide/decisions/)
-* [Annotation](/refguide/annotation/)
-* [Parameter](/refguide/parameter/)
-* [Loop](/refguide/loop/)
-* [Events](/refguide/events/)
-* [Common Properties](/refguide/microflow-element-common-properties/)
+* [Microflows](/refguide9/microflows/)
+* [Nanoflows](/refguide9/nanoflows/)
+* [Sequence Flow](/refguide9/sequence-flow/)
+* [Activities](/refguide9/activities/)
+* [Decisions](/refguide9/decisions/)
+* [Annotation](/refguide9/annotation/)
+* [Parameter](/refguide9/parameter/)
+* [Loop](/refguide9/loop/)
+* [Events](/refguide9/events/)
+* [Common Properties](/refguide9/microflow-element-common-properties/)

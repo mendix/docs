@@ -1,6 +1,6 @@
 ---
 title: "XPath year-from-dateTime"
-url: /refguide/xpath-year-from-datetime/
+url: /refguide9/xpath-year-from-datetime/
 tags: ["studio pro"]
 ---
 

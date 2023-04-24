@@ -1,11 +1,11 @@
 ---
 title: "Part 5: Implement Push Notifications in Your Native App"
 linktitle: "5. Push Notifications in Native App"
-url: /refguide/mobile/using-mobile-capabilities/push-notifications/notif-implement-native/
+url: /refguide9/mobile/using-mobile-capabilities/push-notifications/notif-implement-native/
 weight: 60
 description: Tutorial for implementing push notifications in a native app.
 aliases:
-    - /howto/mobile/notif-implement-native/
+    - /howto9/mobile/notif-implement-native/
 ---
 
 ## 1 Introduction
@@ -39,7 +39,7 @@ If you already had an **App events** widget on your homepage, follow these steps
 
 The snippet also adds the **Notifications** widget which lets users interact with the notifications the app receives.
 
-By default this widget is configured with an **Example** action. It uses a non-persistable entity ([NPE](/refguide/persistability/#non-persistable)) that stores data received from the notifications. It then uses that data in the nanoflow upon receiving or opening the notification. Use this example to make your own actions. 
+By default this widget is configured with an **Example** action. It uses a non-persistable entity ([NPE](/refguide9/persistability/#non-persistable)) that stores data received from the notifications. It then uses that data in the nanoflow upon receiving or opening the notification. Use this example to make your own actions. 
 
 ## 4 Customizing Offline Synchronization
 
@@ -53,4 +53,4 @@ To ensure push notification integration executes properly on your native app you
 
 This will ensure that the correct objects are synchronized to your native apps.
 
-Now that you have everything set up, it is time to deploy your native app. See [Build a Native Mobile App with Push Notifications](/refguide/mobile/using-mobile-capabilities/push-notifications/notif-build-native/) for instructions on enabling push notifications when building a native app. 
+Now that you have everything set up, it is time to deploy your native app. See [Build a Native Mobile App with Push Notifications](/refguide9/mobile/using-mobile-capabilities/push-notifications/notif-build-native/) for instructions on enabling push notifications when building a native app. 

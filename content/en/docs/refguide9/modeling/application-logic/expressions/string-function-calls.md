@@ -1,6 +1,6 @@
 ---
 title: "String Function Calls"
-url: /refguide/string-function-calls/
+url: /refguide9/string-function-calls/
 weight: 80
 description: "Describes the functions for converting and inspecting strings in Mendix."
 tags: ["studio pro", "string function calls", "expression", "expressions"]
@@ -9,7 +9,7 @@ tags: ["studio pro", "string function calls", "expression", "expressions"]
 
 ## 1 Introduction
 
-This document describes functions that are used to convert and inspect [strings](/refguide/data-types/). Note that these functions never change the string itself, they only return a new value.
+This document describes functions that are used to convert and inspect [strings](/refguide9/data-types/). Note that these functions never change the string itself, they only return a new value.
 
 Strings are surrounded by quotes. If the string contains a quote, it should be escaped by another quote. For example: `'this isn''t funny'`.
 
@@ -467,14 +467,14 @@ The input parameters are described in the table below:
 | Regular expression to match | String |
 
 {{% alert color="info" %}}
-The regular expression must be provided as a string. Although it uses the same format for regular expressions, you cannot use a [regular expression](/refguide/regular-expressions/) resource document in this function.
+The regular expression must be provided as a string. Although it uses the same format for regular expressions, you cannot use a [regular expression](/refguide9/regular-expressions/) resource document in this function.
 {{% /alert %}}
 
 {{% alert color="warning" %}}
 
 Please note that this function call uses the regular expression language provided by the current platform:
 
-* When used inside a [microflow](/refguide/microflow/) – Java's regular expressions (for details, see [Class Pattern documentation](https://docs.oracle.com/javase/8/docs/api/java/util/regex/Pattern.html))
+* When used inside a [microflow](/refguide9/microflow/) – Java's regular expressions (for details, see [Class Pattern documentation](https://docs.oracle.com/javase/8/docs/api/java/util/regex/Pattern.html))
 * When used in the client – JavaScript's regular expressions (for details, see [Regular Expressions documentation](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions))
 
 {{% /alert %}}
@@ -527,14 +527,14 @@ The input parameters are described in the table below:
 | The string to be substituted for each match (this does not support backreferences, substitutions, or captures) | String |
 
 {{% alert color="info" %}}
-The regular expression must be provided as a string. Although it uses the same format for regular expressions, you cannot use a [regular expression](/refguide/regular-expressions/) resource document in this function.
+The regular expression must be provided as a string. Although it uses the same format for regular expressions, you cannot use a [regular expression](/refguide9/regular-expressions/) resource document in this function.
 {{% /alert %}}
 
 {{% alert color="warning" %}}
 
 Please note that this function call uses the regular expression language provided by the current platform:
 
-* When used inside [microflows](/refguide/microflows/) – Java's regular expressions (for details, see [Class Pattern](https://docs.oracle.com/javase/8/docs/api/java/util/regex/Pattern.html))
+* When used inside [microflows](/refguide9/microflows/) – Java's regular expressions (for details, see [Class Pattern](https://docs.oracle.com/javase/8/docs/api/java/util/regex/Pattern.html))
 * When used in the client – JavaScript's regular expressions (for details, see [Regular Expressions](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions))
 
 {{% /alert %}}
@@ -588,14 +588,14 @@ The input parameters are described in the table below:
 | The string to be substituted for the first match (this does not support backreferences, substitutions, or captures) | String |
 
 {{% alert color="info" %}}
-The regular expression must be provided as a string. Although it uses the same format for regular expressions, you cannot use a [regular expression](/refguide/regular-expressions/) resource document in this function.
+The regular expression must be provided as a string. Although it uses the same format for regular expressions, you cannot use a [regular expression](/refguide9/regular-expressions/) resource document in this function.
 {{% /alert %}}
 
 {{% alert color="warning" %}}
 
 Please note that this function call uses the regular expression language provided by the current platform:
 
-* When used inside a [microflow](/refguide/microflow/) – Java's regular expressions (for details, see [Class Pattern documentation](https://docs.oracle.com/javase/8/docs/api/java/util/regex/Pattern.html))
+* When used inside a [microflow](/refguide9/microflow/) – Java's regular expressions (for details, see [Class Pattern documentation](https://docs.oracle.com/javase/8/docs/api/java/util/regex/Pattern.html))
 * When used in the client – JavaScript's regular expressions (for details, see [Regular Expressions documentation](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions))
 
 {{% /alert %}}

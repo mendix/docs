@@ -1,12 +1,12 @@
 ---
 title: "Setting Up Navigation"
 linktitle: "Set Up Navigation"
-url: /refguide/setting-up-the-navigation-structure/
+url: /refguide9/setting-up-the-navigation-structure/
 category: "General Info"
 description: "Describes how to configure the navigation structure in Studio Pro."
 tags: ["studio pro", "navigation", "menu", "how to"]
 aliases:
-    - /howto/general/setting-up-the-navigation-structure/
+    - /howto9/general/setting-up-the-navigation-structure/
 ---
 ## 1 Introduction
 
@@ -27,7 +27,7 @@ Do the following:
 
     1. Click **Add navigation profile**, select the profile type depending on the type of the interface you are working on:
 
-        {{< figure src="/attachments/refguide/modeling/app-explorer/app/navigation/setting-up-the-navigation-structure/add-navigation-profile.jpg" >}}
+        {{< figure src="/attachments/refguide9/modeling/app-explorer/app/navigation/setting-up-the-navigation-structure/add-navigation-profile.jpg" >}}
 
     2. Click **OK**.
 
@@ -55,16 +55,16 @@ Follow the steps below:
 4. In the **Role-based home pages** dialog box, click **New**.
 5. Select a user role to create a new setting, for example, select the **Administrator** role:
 
-    {{< figure src="/attachments/refguide/modeling/app-explorer/app/navigation/setting-up-the-navigation-structure/select-user-role.png" >}}
+    {{< figure src="/attachments/refguide9/modeling/app-explorer/app/navigation/setting-up-the-navigation-structure/select-user-role.png" >}}
 
 6. Click **Select**.
 7. After you have selected the user role, click the **Select target** button.
 
-    {{< figure src="/attachments/refguide/modeling/app-explorer/app/navigation/setting-up-the-navigation-structure/select-target.png" >}}
+    {{< figure src="/attachments/refguide9/modeling/app-explorer/app/navigation/setting-up-the-navigation-structure/select-target.png" >}}
 
 8. Select the home page for selected user role, for example, the **Account_Overview** page:
 
-    {{< figure src="/attachments/refguide/modeling/app-explorer/app/navigation/setting-up-the-navigation-structure/select-page.png" >}}
+    {{< figure src="/attachments/refguide9/modeling/app-explorer/app/navigation/setting-up-the-navigation-structure/select-page.png" >}}
 
 9. Click **Select**.
 
@@ -94,11 +94,11 @@ You can create menu items for your navigation. Do the following:
 4. Enter a **Caption** for your menu item. In the example below, the menu item is named *Customer Overview* after a page this menu item will open.
 5. Select a page or microflow as a target:
 
-    {{< figure src="/attachments/refguide/modeling/app-explorer/app/navigation/setting-up-the-navigation-structure/new-menu-item.png" >}}
+    {{< figure src="/attachments/refguide9/modeling/app-explorer/app/navigation/setting-up-the-navigation-structure/new-menu-item.png" >}}
 
 6. Click **OK** to save the menu item.
 
-In the overview of menu items you can see the name of the menu item, the target page/microflow, and the user role are the necessary settings to be configured for the menu item. The user roles are derived from the [page and microflow access settings](/refguide/module-security/). 
+In the overview of menu items you can see the name of the menu item, the target page/microflow, and the user role are the necessary settings to be configured for the menu item. The user roles are derived from the [page and microflow access settings](/refguide9/module-security/). 
 
 You can restructure the menu by dragging and dropping menu items.
 
@@ -109,24 +109,24 @@ Now that you have created a menu structure, it is time to start using it on page
 1. Open a page.
 2. Click **Add widget** and select **Menu bar**:
 
-    {{< figure src="/attachments/refguide/modeling/app-explorer/app/navigation/setting-up-the-navigation-structure/select-menu-bar.png" >}}
+    {{< figure src="/attachments/refguide9/modeling/app-explorer/app/navigation/setting-up-the-navigation-structure/select-menu-bar.png" >}}
 
 3. Select a place on the page to add the widget.
 
-    {{< figure src="/attachments/refguide/modeling/app-explorer/app/navigation/setting-up-the-navigation-structure/add-widget.png" >}}
+    {{< figure src="/attachments/refguide9/modeling/app-explorer/app/navigation/setting-up-the-navigation-structure/add-widget.png" >}}
 
 4. Open the **Properties** pane.
 5. In **General** > **Menu source**, select **Project navigation**. This is the navigation structure defined in the navigation editor. (You can also add additional menu structures using menu documents.)
 
-    {{< figure src="/attachments/refguide/modeling/app-explorer/app/navigation/setting-up-the-navigation-structure/menu-bar-properties.png" >}}
+    {{< figure src="/attachments/refguide9/modeling/app-explorer/app/navigation/setting-up-the-navigation-structure/menu-bar-properties.png" >}}
 
 6. In **Profile**, select the profile type depending on the device type. **Responsive** is selected by default.  
 
 The menu widget is now showing the navigation items created in the navigation editor.
 
-To avoid adding the menu widget on every page in your app,  you can use a layout. With layouts you can define a structure for pages in your app. You can define where the menu should be rendered and you can simply reuse that layout for all or several pages. For more information on how to use layouts, see [How to Use Layouts and Snippets](/howto/front-end/layouts-and-snippets/).
+To avoid adding the menu widget on every page in your app,  you can use a layout. With layouts you can define a structure for pages in your app. You can define where the menu should be rendered and you can simply reuse that layout for all or several pages. For more information on how to use layouts, see [How to Use Layouts and Snippets](/howto9/front-end/layouts-and-snippets/).
 
 ## 7 Read More
 
-* [Atlas UI](/howto/front-end/atlas-ui/)
-* [Create Your First Two Overview and Detail Pages](/howto/front-end/create-your-first-two-overview-and-detail-pages/)
+* [Atlas UI](/howto9/front-end/atlas-ui/)
+* [Create Your First Two Overview and Detail Pages](/howto9/front-end/create-your-first-two-overview-and-detail-pages/)

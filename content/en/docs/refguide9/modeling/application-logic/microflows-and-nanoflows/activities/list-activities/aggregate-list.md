@@ -1,6 +1,6 @@
 ---
 title: "Aggregate List"
-url: /refguide/aggregate-list/
+url: /refguide9/aggregate-list/
 weight: 1
 tags: ["studio pro", "aggregate", "sum", "average", "count", "minimum", "maximum", "microflow"]
 #To update screenshots of these microflows in Studio Pro, use the Microflow Screenshots app.
@@ -24,7 +24,7 @@ The **Aggregate list** activity can be used to calculate aggregated values over 
 
 An example of **Aggregate list** properties is represented in the image below:
 
-{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/list-activities/aggregate-list/aggregate-list-properties.png" alt="aggregate list properties" >}}
+{{< figure src="/attachments/refguide9/modeling/application-logic/microflows-and-nanoflows/activities/list-activities/aggregate-list/aggregate-list-properties.png" alt="aggregate list properties" >}}
 
 There are two sets of properties for this activity, those in the dialog box on the left, and those in the properties pane on the right.
 
@@ -71,11 +71,11 @@ The name of the variable in which the result of the aggregation is stored. This 
 
 ## 4 Common Section{#common}
 
-{{% snippet file="/static/_includes/refguide/microflow-common-section-link.md" %}}
+{{% snippet file="/static/_includes/refguide9/microflow-common-section-link.md" %}}
 
 ## 5 Optimizing Aggregate Activities
 
-In some apps, it is necessary to evaluate large datasets in a microflow (for example, for reporting purposes). If there are a lot of [retrieves](/refguide/retrieve/) and aggregates on large datasets in a microflow, it is easy to run into performance or memory problems. 
+In some apps, it is necessary to evaluate large datasets in a microflow (for example, for reporting purposes). If there are a lot of [retrieves](/refguide9/retrieve/) and aggregates on large datasets in a microflow, it is easy to run into performance or memory problems. 
 
 This section describes how Mendix Runtime optimizes **Aggregate list** activities with large datasets and some recommended approaches for optimization. 
 
@@ -83,7 +83,7 @@ When a database **Retrieve** activity is only used once in one **Aggregate list*
 
 For instance, in this microflow, the Mendix Runtime merges the two activities into one single count query:
 
-{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/list-activities/aggregate-list/one-single-retrieve-query.png" width="500px" >}}
+{{< figure src="/attachments/refguide9/modeling/application-logic/microflows-and-nanoflows/activities/list-activities/aggregate-list/one-single-retrieve-query.png" width="500px" >}}
 
 ### 5.1 Examples for When Optimization is Not Applied
 
@@ -91,7 +91,7 @@ If you reuse the same list for multiple **Aggregates list** activities, an optim
 
 For instance, in this example, the same list is used multiple times, and hence the Mendix Runtime no longer merges the activities:
 
-{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/list-activities/aggregate-list/not-merged-activities.png" >}}
+{{< figure src="/attachments/refguide9/modeling/application-logic/microflows-and-nanoflows/activities/list-activities/aggregate-list/not-merged-activities.png" >}}
 
 If the list is not merged into a single query, all these records are kept in memory. Basically, this has the same effect as when you iterate over the list. If you iterate over the list, you have to think about the memory consumption, meaning that you cannot retrieve 10,000 objects with a single retrieve query. To prevent memory errors (for example, heap space or GC limit overhead), you should not use a list multiple times in a microflow unless you use a limit and offset.
 
@@ -99,7 +99,7 @@ If the list is not merged into a single query, all these records are kept in mem
 
 If you do want to use the list more than once and you also want the optimized query, do two separate retrieves. As shown in the following example, an optimized query is applied and you can use the second retrieve in your microflow.
 
-{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/list-activities/aggregate-list/two-separate-retrieves.png" >}}
+{{< figure src="/attachments/refguide9/modeling/application-logic/microflows-and-nanoflows/activities/list-activities/aggregate-list/two-separate-retrieves.png" >}}
 
 When an average is calculated within an optimized SQL query, the rounding mode configured in the app settings is not respected. The result that is returned is rounded by the database according to the database settings. If the rounding mode setting for the app is essential for the result, you can retrieve the sum and count separately and perform the division in the microflow.
 
@@ -107,4 +107,4 @@ Since the Mendix Runtime merges list retrieve and aggregate activities, you do n
 
 ## 6 Read More
 
-* [Retrieve Activities](/refguide/retrieve/)
+* [Retrieve Activities](/refguide9/retrieve/)

@@ -61,7 +61,11 @@ To minimize the chance of problems, you should update all the widgets, modules, 
 Check if there is a newer version of your component available in the Marketplace. Read the version release notes in the Marketplace to see if you need to perform specific actions when upgrading.
 
 {{% todo %}}
-Be sure to update these key widgets, resources, and actions: [**VERIFY - ANYTHING TO INCLUDE HERE**]
+Be sure to update these key widgets, resources, and actions: 
+[Native Mobile Resources](https://marketplace.mendix.com/link/component/109513)
+[Nanoflow Commons](https://marketplace.mendix.com/link/component/109515)
+[Community Commons](https://marketplace.mendix.com/link/component/170)
+[Data Widgets](https://marketplace.mendix.com/link/component/116540)
 {{% / todo %}}
 
 In general you should not remove and re-import modules unless this is recommended in the component's release notes. If you do remove and re-import a component, you may lose data or configuration related to the component.

@@ -8,8 +8,6 @@ tags: ["studio pro"]
 
 Use the **History** dialog box to look at all the changes that have been committed to a development line of an app. This dialog box is also used when selecting a revision to merge from, create a branch line off of, or create a deployment archive of.
 
-{{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/collaborative-development/history-dialog.png" >}}
-
 ## 2 Revisions
 
 Each line in the grid represents a revision in the repository. For each revision the following information is shown:

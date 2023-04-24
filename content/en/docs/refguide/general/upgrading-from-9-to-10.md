@@ -10,7 +10,7 @@ tags: ["studio pro", "upgrade", "runtime", "xpath"]
 
 ## 1 Introduction
 
-Mendix Studio Pro 10 is a [major version](/releasenotes/studio-pro/lts-mts/#major-version) release that provides powerful tools for building your apps and brings a host of improvements and fixes. For the full list of changes, see the [Studio Pro 10 release notes](/releasenotes/studio-pro/10.0/) release notes.
+Mendix Studio Pro 10 is a [major version](/releasenotes/studio-pro/lts-mts/#major-version) release that provides powerful tools for building your apps and brings a host of improvements and fixes. For the full list of changes, see the [Studio Pro 10 release notes](/releasenotes/studio-pro/10.0/).
 
 {{% alert color="warning" %}}
 Mendix Studio Pro [10.0](/releasenotes/studio-pro/10.0/) is currently in Beta. The GA release is in June, 2023, as scheduled in the [Studio Pro release timeline](/releasenotes/studio-pro/lts-mts/#major-version).
@@ -28,9 +28,9 @@ More information on upgrading can be found in [Migrating Your Native App to Mx10
 
 ### 1.2 Upgrading from Older Versions of Studio Pro
 
-If your app is on a Studio Pro version below 9, you must sequentially. That means you must go from 7 to 8 (see details in [Moving from Desktop Modeler Version 7 to Studio Pro 8](https://docs.mendix.com/refguide8/moving-from-7-to-8/), from 8 to 9 (see details in [Moving from Mendix Studio Pro 8 to 9](/refguide/moving-from-8-to-9/), and finally from 9 to 10. 
+If your app is on a Studio Pro version below 9, you must upgrade sequentially. That means you must go from 7 to 8 (see details in [Moving from Desktop Modeler Version 7 to Studio Pro 8](https://docs.mendix.com/refguide8/moving-from-7-to-8/), from 8 to 9 (see details in [Moving from Mendix Studio Pro 8 to 9](/refguide/moving-from-8-to-9/), and finally from 9 to 10. 
 
-To check what Studio Pro version your app running on Mendix Cloud is currently on, refer to the [Control Center dashboard](/developerportal/control-center/#dashboard). Alternatively, contact your Customer Success Manager to find out how to check the Mendix version of your app.
+If your app is running on Mendix Cloud, you can check what version the app is currently on by referring to the [Control Center dashboard](/developerportal/control-center/#dashboard). Alternatively, contact your Customer Success Manager to find out how to check the Mendix version of your app.
 
 ## 2 Backing Up Your App
 

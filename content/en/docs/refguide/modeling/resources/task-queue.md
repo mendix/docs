@@ -182,9 +182,8 @@ Internally, a scheduled or running task is represented by the Mendix entity `Sys
 
 Tasks that have been processed, that is have completed or failed, are saved as objects of entity type `System.ProcessedQueueTask`. These objects are at the user's disposal. They might be used, for example, to do the following:
 
-1. Reschedule failed tasks if desired (this should be done by creating new task(s)),
-2. Verify that tasks have run successfully, or
-3. Debug the application in case of errors.
+1. Verify that tasks have run successfully, or
+2. Debug the application in case of errors.
 
 `System.ProcessedQueueTasks` objects are by default never deleted. The user is free to delete them when desired.
 If you are using Mendix version 9.9.0 or above, you can use the `com.mendix.core.ProcessedTasksCleanupAge` runtime setting if automatic cleanup is desired.

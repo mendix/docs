@@ -17,6 +17,12 @@ For information on the current status of deployment to Mendix Cloud and any plan
 
 ## 2023
 
+### April 20th, 2023
+
+#### Improvements
+
+* We have updated the [Splunk](/developerportal/operate/splunk-metrics/) integration to send app metadata to the Splunk Cloud Platform, together with the ability to add custom tags.
+
 ### March 16th, 2023
 
 #### Improvements

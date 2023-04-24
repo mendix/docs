@@ -11,7 +11,7 @@ cascade:
     - mendix_version: "9"
     - old_content: true
     - sitemap:
-        priority: 0.7
+        priority: 0.3
 #This document is mapped to the landing page, update the link there if renaming or moving the doc file.
 ---
 

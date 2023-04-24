@@ -9,7 +9,7 @@ cascade:
     - old_content: true
     - hide_feedback: true
     - sitemap:
-        priority: 0.3
+        priority: 0.2
 ---
 
 {{% alert color="warning" %}}

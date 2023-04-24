@@ -11,7 +11,7 @@ cascade:
     - mendix_version: "9"
     - old_content: true
     - sitemap:
-        priority: 0.8
+        priority: 0.4
 ---
 
 ## 1 Introduction

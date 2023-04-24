@@ -194,7 +194,7 @@ To the theme folder, add a *.json* file named *com.mendix.charts*. The JSON shou
 }
 ```
 
-For guidance on how to set up chart theming see: [How to Use the Charts Theme](/howto9/front-end/charts-theme/).
+For guidance on how to set up chart theming see: [How to Use the Charts Theme](/appstore/widgets/charts-theme/).
 
 {{% alert color="info" %}}
 

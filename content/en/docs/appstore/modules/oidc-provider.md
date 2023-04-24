@@ -399,3 +399,22 @@ The OIDC Provider module is one such central component and you can communicate t
 * using a custom user claim
 
 Using OAuth scopes is the recommended approach since it is the standard OAuth solution. With Mendix, we advise you to think of an app’s user roles as being the same as OAuth scope values.  By adhering to this logic, you can develop apps with any user roles without having to decide and agree on custom attributes. You can customize the OIDC SSO module with microflows which parse the tokens from the OIDC Provider module and apply user roles to enforce the authorization indicated in the token.
+
+### 7.3 End-User Accounts in OIDC Provider
+
+# Account creation in OIDC Provider
+
+Since the OIDC Provider issues access tokens for users that are logged in, it needs user related objects in your Provider app. The OIDC Provider module introduces the AccountDetail object into your Provider app. The OIDC Provider module uses the MendixUserID attribute from this object to populate the “sub” claim in ~~ID-token~~ access token. For any other user claims you want to include in your ~~ID-token~~ access token, you need to create a microflow as described in section “3.3.3.2 Configuration …. Custom claims” .
+
+There are two ways in OIDC Provider to get accounts created
+
+1. **In first use case, regarding our IAM brokering use case**
+    Accounts which can be used by OIDC provider are synced from IDP directly into IAM broker application. In this case, AccountDetail object is created for every account object when the user tries to login. This is automatically handled by code without any configuration.
+    
+    *Why AccountDetail object should be created for every Account object?*
+    Access token has a "sub" claim which gets value from "MendixUserID" attribute available in AccountDetail entity.
+    
+2. **With AccountDetail page from OIDCProvider module**
+    This is second use case where OIDCProvider can be used separately as an IDP without building IAM structure.
+    In this case, Admin can create Users(Accounts) using AccountDetail page which is available in OIDCProvider. This page is to create AccountDetail objects which automatically creates Account objects in the app to represent the AccountDetail as accounts
+

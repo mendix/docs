@@ -10,12 +10,6 @@ tags: ["task queue", "process queue", "parallel", "scheduling", "microflow"]
 
 Using a **Task Queue** allows you to run microflows or Java actions asynchronously while controlling the number of tasks that are executed simultaneously by assigning them to a task queue. You can configure the task queue to control the maximum load put on your application by these tasks during peak usage while still ensuring all microflows and Java actions are eventually executed.
 
-### 1.1 Replacing the Process Queue module
-
-This way of executing tasks in the background supersedes the earlier [Process Queue](/appstore/modules/process-queue/) Marketplace module.
-
-See the section [Replacing Process Queue](#process-queue), below, for more information on the differences between the two mechanisms.
-
 ## 2 Configuration
 
 Microflows or Java actions can be scheduled to run in the background when they are initiated using a **Call Microflow** or **Call Java Action** action in Studio Pro, or through the Java API.

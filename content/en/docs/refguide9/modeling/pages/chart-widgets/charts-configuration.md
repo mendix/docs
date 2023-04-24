@@ -58,7 +58,7 @@ Add series and configure their properties, each series represents a dataset. For
     * **Static/Dynamic**: Choose whether there is a fixed number of data series (lines, for example), or whether the number of data series is variable and will be decided by the app.
     * **Entity**: The entity from which the data values will be retrieved
     * **Data source**: the data source type for the series: *Database*, *Microflow* or *REST endpoint*
-    * **REST URL**: Relative or full URL to REST endpoint. For more information on setting up a REST endpoint see [REST Charts](/howto9/front-end/charts-basic-rest/)
+    * **REST URL**: Relative or full URL to REST endpoint. For more information on setting up a REST endpoint see [REST Charts](/appstore/widgets/charts-basic-rest/)
     * **XPath constraint**: The constraint on the data from the entity (used when the data source is Database)
     * **Microflow**: A microflow that returns a list object with data values
 

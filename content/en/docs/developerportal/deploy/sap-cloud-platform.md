@@ -295,7 +295,7 @@ SAP BTP [has a limit of 1.5 GB](https://help.sap.com/viewer/65de2977205c403bbc10
     {{< figure src="/attachments/developerportal/deploy/sap-cloud-platform/start-application.png" >}}
 
     {{% alert color="info" %}}This will bind any services which are in the status **Services To Be Bound**.{{% /alert %}}
- 
+
 7. When the application has been started you will receive a confirmation message. Click **OK** and you will be taken to the Environment Details page for the selected environment. See [Environment Details](#EnvironmentDetails), below.
 
     {{< figure src="/attachments/developerportal/deploy/sap-cloud-platform/application-started.png" >}}
@@ -405,8 +405,6 @@ Click **Change** to change the **App URL** for this environment.
 Click **Change** to change the **Redirect URLs**. Redirect URLs are custom URLs (for example, `appname.subdomain.domain.com`) where the user will be redirected after signing on using XSUAA, instead of being redirected to the generated URL (for example, `appname.cfapps.eu10.hana.ondemand.com`) of the app.
 
 #### 7.1.8 Change Mendix Studios Target
-
-{{% todo %}}[Verify: Will this setting be deleted?]{{% /todo %}}
 
 You can see if this is the current target environment to which apps will be published from Mendix Studio. If this is not the current target environment for Mendix Studio, click **Change** to make it the target.
 

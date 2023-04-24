@@ -9,11 +9,14 @@ description_list: true
 cascade:
     - space: "Studio Pro 10 Guide"
     - mendix_version: "10"
-    - banner: "Mendix 10 is currently in Beta. For more information about Beta releases and features, see [Beta releases](/releasenotes/beta-features/)."
+    - banner: "Mendix 10 is currently in Beta."
     - sitemap:
         priority: 0.8
 ---
 
+{{% alert color="warning" %}}
+Mendix 10 is currently in Beta. For more information about Beta releases and features, see [Beta releases](/releasenotes/beta-features/).
+{{% /alert %}}
 ## 1 Introduction
 
 The *Mendix Studio Pro 10 Guide* covers important topics concerning [Studio Pro](/refguide/modeling/), the [Mendix Runtime](/refguide/runtime/), and other components of the Mendix Platform.

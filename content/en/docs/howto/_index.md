@@ -9,6 +9,7 @@ description_list: true
 cascade:
     - space: "Studio Pro 10 How-tos"
     - mendix_version: "10"
+    - banner: "Mendix 10 is currently in Beta. For more information about Beta releases and features, see [Beta releases](/releasenotes/beta-features/)."
     - sitemap:
         priority: 0.7
 #This document is mapped to the landing page, update the link there if renaming or moving the doc file.

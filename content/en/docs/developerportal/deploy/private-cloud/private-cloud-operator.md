@@ -155,6 +155,7 @@ spec:
       {
         …
       }
+  runtimeLeaderSelection: assigned # Optional, can be omitted : specify how the leader node will be selected
 ```
 
 You need to make the following changes:
@@ -205,6 +206,7 @@ You need to make the following changes:
 * **environmentVariables**: – set the environment variables for the Mendix app container, and JVM arguments through the `JAVA_TOOL_OPTIONS` environment variable
 * **clientCertificates**: – specify client certificates to be used for TLS calls to Web Services and REST services
 * **runtimeMetricsConfiguration**: – specify how metrics should be collected — any non-empty values will override [default values](/developerportal/deploy/private-cloud-cluster/#customize-runtime-metrics) from `OperatorConfiguration` — see [Monitoring Environments in Mendix for Private Cloud](/developerportal/deploy/private-cloud-monitor/) for details on how to monitor your environment
+* **runtimeLeaderSelection**: – specify how the leader replica should be selected - valid options are `assigned` (default mode: the `master` deployment will run one leader replica) and `none` (do not run any leader replicas, `master` deployment is scaled down to zero)
 
 #### 3.2.1 Setting App Constants{#set-app-constants}
 

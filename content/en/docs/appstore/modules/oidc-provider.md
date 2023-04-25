@@ -153,7 +153,7 @@ To check that this works, you will need a tool for testing APIs (such as [Postma
             "backchannel_logout_uri" : http://localhost:8081/logout,
             "post_logout_redirect_uris" : [http://localhost:8081/logout],
             "grant_types": [ "authorization_code" ],
-            "scope": "openid"
+            "scope": "User"
         }
         ```
 
@@ -168,7 +168,7 @@ To check that this works, you will need a tool for testing APIs (such as [Postma
     "authorization_code",
     ],
     "client_secret_expires_at": 0,
-    "scope": "openid",
+    "scope": "User",
     "client_secret": "ClientSecret",
     "redirect_uris": [
     "http://localhost:8081/oauth/v2/callback"

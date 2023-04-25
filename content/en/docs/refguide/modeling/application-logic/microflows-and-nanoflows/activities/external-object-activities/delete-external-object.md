@@ -11,10 +11,6 @@ These activities can only be used in **Microflows**.
 
 The **Delete external object** activity can be used to delete an external object. It sends a DELETE request to the publishing app.
 
-{{% alert type="info" %}}
-This activity was introduced in Studio Pro [9.12.0](/releasenotes/studio-pro/9.12/).
-{{% /alert %}}
-
 ### 1.1 Entity Access
 
 When the microflow has **Apply entity access** set to **Yes**, only users with *delete* entity access can execute this activity. Users without *delete* entity access will see an error message.
@@ -36,7 +32,3 @@ This setting defines how changes are reflected in the pages presented to the end
 ## 3 After the Activity
 
 After this activity, the `$latestHttpResponse` variable (of the [HttpResponse](/refguide/http-request-and-response-entities/#http-response) type) is available to inspect the response returned by the service.
-
-{{% alert color="info" %}}
-The feature to set `$latestHttpResponse` was introduced in Studio Pro [9.15.0](/releasenotes/studio-pro/9.15/).
-{{% /alert %}}

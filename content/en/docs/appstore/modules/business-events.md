@@ -124,10 +124,10 @@ The handler microflow attached to it triggers each event where you can build you
 
 Upgrade your apps to Studio Pro [9.24](/releasenotes/studio-pro/9.24/) and above to enjoy the most recent business event behavior. When you upgrade, the following happens:
 
-* [Published business event](/refguide/business-event-services/#published-event-service-doc) service documents are converted to created business event service documents.
+* [Published business event](/refguide9/business-event-services/#published-event-service-doc) service documents are converted to created business event service documents.
     * The created service document allows it to publish events.
     * The other app's implementation will be to subscribe to events.
-* [Consumed business event](/refguide/business-event-services/#consumed-event-service-doc) service documents are converted to documents that use a business events service.
+* [Consumed business event](/refguide9/business-event-services/#consumed-event-service-doc) service documents are converted to documents that use a business events service.
     * They will be able to subscribe to events.
 
 ### 4.2 Using Business Events (Studio Pro 9.24 and Above) {#two-way-be}
@@ -223,7 +223,7 @@ Once you have created a service in [Studio Pro 9.18 through 9.23](#one-way-be) o
 
 Business events are defined using entities specializing the **PublishedBusinessEvent** entity that is included in the Mendix Business Events module. 
 
-1. In your [Domain Model](/studio/domain-models/), double-click the entity you want to publish as a business event to display the entity properties.
+1. In your [Domain Model](/refguide/domain-model/), double-click the entity you want to publish as a business event to display the entity properties.
 2. In the **Generalization** field, click **Select** and select the **PublishedBusinessEvent** entity. 
 
 The base values for your entity are taken from the **PublishedBusinessEvent**, and your entity will behave like a specialized entity. For more information, see [Generalization, Specializations and Inheritance](/refguide/generalization-and-association/).
@@ -450,4 +450,4 @@ Check out the following release blogs for more information about business events
 * [Mendix Studio Pro 9.18 release blog](https://www.mendix.com/blog/mendix-release-9-18-next-level-performance/) 
 * [Mendix Studio Pro 9.24 release blog](https://www.mendix.com/blog/mendix-release-9-24-what-a-ride-it-has-been/) 
 
-See also [Business Event Services](/refguide/business-event-services/), the Studio Pro 9 guide entry about the business event service documents.
+For more information about the business event service documents, see [Business Event Services](/refguide/business-event-services/) in the *Studio Pro Guide*.

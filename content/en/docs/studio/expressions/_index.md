@@ -93,127 +93,127 @@ You have a [user task](/studio/workflows-user-task/) in a workflow and would lik
 
 ## 3 Expression Types {#expression-types}
 
-The list of expressions that are used in Studio the most is represented below. For the full list of available expressions, see [Expressions](/refguide/expressions/) in the *Studio Pro Guide*.
+The list of expressions that are used in Studio the most is represented below. For the full list of available expressions, see [Expressions](/refguide9/expressions/) in the *Studio Pro Guide*.
 
 ### 3.1 Unary Expressions
 
-* [Unary minus ( - )](/refguide/unary-expressions/)
+* [Unary minus ( - )](/refguide9/unary-expressions/)
 
 ### 3.2 Arithmetic Expressions
 
-* [Multiplication ( * )](/refguide/arithmetic-expressions/)
-* [Division ( div or : )](/refguide/arithmetic-expressions/)
-* [Modulo ( mod )](/refguide/arithmetic-expressions/)
-* [Addition ( + )](/refguide/arithmetic-expressions/)
-* [Subtraction ( - )](/refguide/arithmetic-expressions/)
+* [Multiplication ( * )](/refguide9/arithmetic-expressions/)
+* [Division ( div or : )](/refguide9/arithmetic-expressions/)
+* [Modulo ( mod )](/refguide9/arithmetic-expressions/)
+* [Addition ( + )](/refguide9/arithmetic-expressions/)
+* [Subtraction ( - )](/refguide9/arithmetic-expressions/)
 
 ### 3.3 Relational Expressions
 
-* [Less than ( < )](/refguide/relational-expressions/)
-* [Greater than ( > )](/refguide/relational-expressions/)
-* [Less than or equal to ( <= )](/refguide/relational-expressions/)
-* [Greater than or equal to ( >= )](/refguide/relational-expressions/)
-* [Is equal to ( = )](/refguide/relational-expressions/)
-* [Is not equal to ( != )](/refguide/relational-expressions/)
+* [Less than ( < )](/refguide9/relational-expressions/)
+* [Greater than ( > )](/refguide9/relational-expressions/)
+* [Less than or equal to ( <= )](/refguide9/relational-expressions/)
+* [Greater than or equal to ( >= )](/refguide9/relational-expressions/)
+* [Is equal to ( = )](/refguide9/relational-expressions/)
+* [Is not equal to ( != )](/refguide9/relational-expressions/)
 
 ### 3.5 Boolean Expressions
 
-* [and](/refguide/boolean-expressions/)
-* [or](/refguide/boolean-expressions/)
-* [not](/refguide/boolean-expressions/)
+* [and](/refguide9/boolean-expressions/)
+* [or](/refguide9/boolean-expressions/)
+* [not](/refguide9/boolean-expressions/)
 
 ### 3.6 Mathematical Function Calls
 
-* [`max`](/refguide/mathematical-function-calls/) – the maximum of a list of numbers
-* [`min`](/refguide/mathematical-function-calls/) – the minimum of a list of numbers
-* [`round`](/refguide/mathematical-function-calls/) – rounds a number to a certain precision
-* [`random`](/refguide/mathematical-function-calls/) – random number generation
-* [`floor`](/refguide/mathematical-function-calls/) – the rounding of a floating-point number down
-* [`ceil`](/refguide/mathematical-function-calls/) – the rounding of a floating-point number up
-* [`pow`](/refguide/mathematical-function-calls/) – the exponentiation
-* [`abs`](/refguide/mathematical-function-calls/) – the absolute value
+* [`max`](/refguide9/mathematical-function-calls/) – the maximum of a list of numbers
+* [`min`](/refguide9/mathematical-function-calls/) – the minimum of a list of numbers
+* [`round`](/refguide9/mathematical-function-calls/) – rounds a number to a certain precision
+* [`random`](/refguide9/mathematical-function-calls/) – random number generation
+* [`floor`](/refguide9/mathematical-function-calls/) – the rounding of a floating-point number down
+* [`ceil`](/refguide9/mathematical-function-calls/) – the rounding of a floating-point number up
+* [`pow`](/refguide9/mathematical-function-calls/) – the exponentiation
+* [`abs`](/refguide9/mathematical-function-calls/) – the absolute value
 
 ### 3.7 String Function Calls
 
-* [`toUpperCase`](/refguide/string-function-calls/) – converts the string to upper-case
-* [`toLowerCase`](/refguide/string-function-calls/) – converts the string to lower-case
-* [`length`](/refguide/string-function-calls/) – the string length
-* [`substring`](/refguide/string-function-calls/) – gets a part of a string
-* [`find`](/refguide/string-function-calls/) – gets a sub-string position
-* [`findLast`](/refguide/string-function-calls/) – gets the last sub-string position
-* [`contains`](/refguide/string-function-calls/) – contains the sub-string
-* [`startsWith`](/refguide/string-function-calls/)  – determines whether a string starts with the specified sub-string
-* [`endsWith`](/refguide/string-function-calls/) – determines whether a string ends with the specified sub-string
-* [`trim`](/refguide/string-function-calls/) – removes the leading and trailing whitespace
-* [`replaceAll`](/refguide/string-function-calls/) – replaces the occurrences of a sub-string
-* [`replaceFirst`](/refguide/string-function-calls/) – replaces the first occurrence of a sub-string
-* [`String concatenation ( + )`](/refguide/string-function-calls/) – concatenates strings
+* [`toUpperCase`](/refguide9/string-function-calls/) – converts the string to upper-case
+* [`toLowerCase`](/refguide9/string-function-calls/) – converts the string to lower-case
+* [`length`](/refguide9/string-function-calls/) – the string length
+* [`substring`](/refguide9/string-function-calls/) – gets a part of a string
+* [`find`](/refguide9/string-function-calls/) – gets a sub-string position
+* [`findLast`](/refguide9/string-function-calls/) – gets the last sub-string position
+* [`contains`](/refguide9/string-function-calls/) – contains the sub-string
+* [`startsWith`](/refguide9/string-function-calls/)  – determines whether a string starts with the specified sub-string
+* [`endsWith`](/refguide9/string-function-calls/) – determines whether a string ends with the specified sub-string
+* [`trim`](/refguide9/string-function-calls/) – removes the leading and trailing whitespace
+* [`replaceAll`](/refguide9/string-function-calls/) – replaces the occurrences of a sub-string
+* [`replaceFirst`](/refguide9/string-function-calls/) – replaces the first occurrence of a sub-string
+* [`String concatenation ( + )`](/refguide9/string-function-calls/) – concatenates strings
 
 ### 3.8 Date Creation
 
-* [`dateTime`](/refguide/date-creation/) – creating a date value using the server's calendar
+* [`dateTime`](/refguide9/date-creation/) – creating a date value using the server's calendar
 
 ### 3.9 Begin-of Date Function Calls
 
-* [`BeginOfDay`](/refguide/begin-of-date-function-calls/) – calculates the beginning of the day compared to the initial date
-* [`BeginOfWeek`](/refguide/begin-of-date-function-calls/) – calculates the beginning of the week compared to the initial date
-* [`BeginOfMonth`](/refguide/begin-of-date-function-calls/) – calculates the beginning of the month compared to the initial date
-* [`BeginOfYear`](/refguide/begin-of-date-function-calls/) – calculates the beginning of the year compared to the initial date
+* [`BeginOfDay`](/refguide9/begin-of-date-function-calls/) – calculates the beginning of the day compared to the initial date
+* [`BeginOfWeek`](/refguide9/begin-of-date-function-calls/) – calculates the beginning of the week compared to the initial date
+* [`BeginOfMonth`](/refguide9/begin-of-date-function-calls/) – calculates the beginning of the month compared to the initial date
+* [`BeginOfYear`](/refguide9/begin-of-date-function-calls/) – calculates the beginning of the year compared to the initial date
 
 ### 3.10 End-of Date Function Calls
 
-* [`EndOfDay`](/refguide/end-of-date-function-calls/) – calculates the end of the day compared to the initial date
-* [`EndOfWeek`](/refguide/end-of-date-function-calls/) – calculates the end of the week compared to the initial date
-* [`EndOfMonth`](/refguide/end-of-date-function-calls/) – calculates the end of the month compared to the initial date
-* [`EndOfYear`](/refguide/end-of-date-function-calls/) – calculates the end of the year compared to the initial date
+* [`EndOfDay`](/refguide9/end-of-date-function-calls/) – calculates the end of the day compared to the initial date
+* [`EndOfWeek`](/refguide9/end-of-date-function-calls/) – calculates the end of the week compared to the initial date
+* [`EndOfMonth`](/refguide9/end-of-date-function-calls/) – calculates the end of the month compared to the initial date
+* [`EndOfYear`](/refguide9/end-of-date-function-calls/) – calculates the end of the year compared to the initial date
 
 ### 3.11 Between Date Function Calls
 
-* [`millisecondsBetween`](/refguide/between-date-function-calls/) – the milliseconds between two dates
-* [`secondsBetween`](/refguide/between-date-function-calls/) – the seconds between two dates
-* [`minutesBetween`](/refguide/between-date-function-calls/) – the minutes between two dates
-* [`hoursBetween`](/refguide/between-date-function-calls/) – the hours between two dates
-* [`daysBetween`](/refguide/between-date-function-calls/) – the days between two dates
-* [`weeksBetween`](/refguide/between-date-function-calls/) – the weeks between two dates
-* [`calendarMonthsBetween`](/refguide/between-date-function-calls/) - the months between two dates
-* [`calendarYearsBetween`](/refguide/between-date-function-calls/) - the years between two dates
+* [`millisecondsBetween`](/refguide9/between-date-function-calls/) – the milliseconds between two dates
+* [`secondsBetween`](/refguide9/between-date-function-calls/) – the seconds between two dates
+* [`minutesBetween`](/refguide9/between-date-function-calls/) – the minutes between two dates
+* [`hoursBetween`](/refguide9/between-date-function-calls/) – the hours between two dates
+* [`daysBetween`](/refguide9/between-date-function-calls/) – the days between two dates
+* [`weeksBetween`](/refguide9/between-date-function-calls/) – the weeks between two dates
+* [`calendarMonthsBetween`](/refguide9/between-date-function-calls/) - the months between two dates
+* [`calendarYearsBetween`](/refguide9/between-date-function-calls/) - the years between two dates
 
 ### 3.12 Add Date Function Calls
 
-* [`addMilliseconds`](/refguide/add-date-function-calls/) – adds milliseconds to a date
-* [`addSeconds`](/refguide/add-date-function-calls/) – adds seconds to a date
-* [`addMinutes`](/refguide/add-date-function-calls/) – adds minutes to a date
-* [`addHours`](/refguide/add-date-function-calls/) – adds hours to a date
-* [`addDays`](/refguide/add-date-function-calls/) – adds days to a date
-* [`addWeeks`](/refguide/add-date-function-calls/) – adds weeks to a date
-* [`addMonths`](/refguide/add-date-function-calls/) – adds months to a date
-* [`addQuarters`](/refguide/add-date-function-calls/) – adds quarters to a date
-* [`addYears`](/refguide/add-date-function-calls/) – adds years to a date
+* [`addMilliseconds`](/refguide9/add-date-function-calls/) – adds milliseconds to a date
+* [`addSeconds`](/refguide9/add-date-function-calls/) – adds seconds to a date
+* [`addMinutes`](/refguide9/add-date-function-calls/) – adds minutes to a date
+* [`addHours`](/refguide9/add-date-function-calls/) – adds hours to a date
+* [`addDays`](/refguide9/add-date-function-calls/) – adds days to a date
+* [`addWeeks`](/refguide9/add-date-function-calls/) – adds weeks to a date
+* [`addMonths`](/refguide9/add-date-function-calls/) – adds months to a date
+* [`addQuarters`](/refguide9/add-date-function-calls/) – adds quarters to a date
+* [`addYears`](/refguide9/add-date-function-calls/) – adds years to a date
 
 ### 3.13 Subtract Date Function Calls
 
-* [`subtractMilliseconds`](/refguide/subtract-date-function-calls/) – subtracts milliseconds from a date
-* [`subtractSeconds`](/refguide/subtract-date-function-calls/) – subtracts seconds from a date
-* [`subtractMinutes`](/refguide/subtract-date-function-calls/) – subtracts minutes from a date
-* [`subtractHours`](/refguide/subtract-date-function-calls/) – subtracts hours from a date
-* [`subtractDays`](/refguide/subtract-date-function-calls/) – subtracts days from a date
-* [`subtractWeeks`](/refguide/subtract-date-function-calls/) – subtracts weeks from a date
-* [`subtractMonths`](/refguide/subtract-date-function-calls/)  – subtracts months from a date
-* [`subtractQuarters`](/refguide/subtract-date-function-calls/) – subtracts quarters from a date
-* [`subtractYears`](/refguide/subtract-date-function-calls/) – subtracts years from a date
+* [`subtractMilliseconds`](/refguide9/subtract-date-function-calls/) – subtracts milliseconds from a date
+* [`subtractSeconds`](/refguide9/subtract-date-function-calls/) – subtracts seconds from a date
+* [`subtractMinutes`](/refguide9/subtract-date-function-calls/) – subtracts minutes from a date
+* [`subtractHours`](/refguide9/subtract-date-function-calls/) – subtracts hours from a date
+* [`subtractDays`](/refguide9/subtract-date-function-calls/) – subtracts days from a date
+* [`subtractWeeks`](/refguide9/subtract-date-function-calls/) – subtracts weeks from a date
+* [`subtractMonths`](/refguide9/subtract-date-function-calls/)  – subtracts months from a date
+* [`subtractQuarters`](/refguide9/subtract-date-function-calls/) – subtracts quarters from a date
+* [`subtractYears`](/refguide9/subtract-date-function-calls/) – subtracts years from a date
 
 ### 3.14 Format Date Function Calls
 
-* [`formatDateTime[UTC]`](/refguide/parse-and-format-date-function-calls/) – converts a date value to a string
-* [`formatTime[UTC]`](/refguide/parse-and-format-date-function-calls/) – converts the time part of a date value to a string
-* [`formatDate[UTC]`](/refguide/parse-and-format-date-function-calls/) – converts the date part of a date value to a string
+* [`formatDateTime[UTC]`](/refguide9/parse-and-format-date-function-calls/) – converts a date value to a string
+* [`formatTime[UTC]`](/refguide9/parse-and-format-date-function-calls/) – converts the time part of a date value to a string
+* [`formatDate[UTC]`](/refguide9/parse-and-format-date-function-calls/) – converts the date part of a date value to a string
 
 ### 3.15 Parse & Format Decimal Function Calls
 
-* [`formatDecimal`](/refguide/parse-and-format-decimal-function-calls/) – converts a decimal to a string 
+* [`formatDecimal`](/refguide9/parse-and-format-decimal-function-calls/) – converts a decimal to a string 
 
 ## 4 Read More
 
 * [Microflows](/studio/microflows/)
 * [Workflows](/studio/workflows/)
-* [Expressions](/refguide/expressions/)
+* [Expressions](/refguide9/expressions/)

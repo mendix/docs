@@ -96,9 +96,9 @@ There are different versions of the module, depending on which version of Mendix
 * Mendix version 7 – SAML module version 1.17.1
 * Mendix version 8 – SAML module version 2.3.1
 * Mendix version 9 (upgraded from version 8) – SAML module version 3.3.8
-* Mendix version 9 (new app using Atlas version 3.0) – SAML module version 3.3.9
+* Mendix version 9 and above (new app using Atlas version 3.0) – SAML module version 3.3.9
 
-For Mendix 9, the versions for new apps (odd-numbered patch versions) differ from those for upgrading from Mendix version 8 (even numbered patch versions) as they have the newer version of Atlas UI (version 3). This is because using Atlas 3 with an app upgraded from Mendix version 8.x (which uses Atlas version 2) would result in issues because the templates for the SAML module pages would not exist.
+For Mendix version 9 and above, the versions for new apps (odd-numbered patch versions) differ from those for upgrading from Mendix version 8 (even numbered patch versions) as they have the newer version of Atlas UI (version 3). This is because using Atlas 3 with an app upgraded from Mendix version 8.x (which uses Atlas version 2) would result in issues because the templates for the SAML module pages would not exist.
 
 ## 2 Installation
 
@@ -112,7 +112,7 @@ By default, the SAML module will be installed as the **SAML20** module in your a
     * **DefaultLogoutPage** – Removing the sign-out button is recommended, but if you choose to keep it, the end-user will be redirected to a page. You can choose where the end-user is redirected to (for example, back to `/SSO/` or your `login.html` page). Every user signed in via SAML is redirected to this location when they are logged out.
     * **SSOLandingPage** – Set this if you redirect the `index.html` to log into your app automatically. See [Using SSOLandingPage](#ssolandingpage) for further information about this.
     * **HybridAppLoginTimeOutInMinutes** –
-        * If you use the default login handler in your [hybrid mobile](/refguide/hybrid-mobile/) app, you must change the `com.mendix.webui.HybridAppLoginTimeOut` custom runtime setting to change the validity of the authentication token used by the hybrid mobile app.
+        * If you use the default login handler in your [hybrid mobile](/refguide9/mobile/introduction-to-mobile-technologies/hybrid-mobile/) app, you must change the `com.mendix.webui.HybridAppLoginTimeOut` custom runtime setting to change the validity of the authentication token used by the hybrid mobile app.
         * If you use the SAML module in your hybrid app, you must change the `SAML20.HybridAppLoginTimeOutInMinutes` constant to change the validity of the authentication token used by the hybrid mobile app.
         * If you use both the default login handler and the SAML module in your hybrid app, you must change both so that they match. This is because, when you use the SAML module for SSO in your Mendix app, the authentication token is not created by the Mendix runtime, which uses the custom runtime setting. Instead, the authentication token is created by the Java code in the SAML module. This Java code does not have access to the custom runtime setting value, and thus requires the constant value to be set.
     
@@ -127,7 +127,7 @@ By default, the SAML module will be installed as the **SAML20** module in your a
 You can use single sign on to automatically sign users in to your app by redirecting every user accessing `index.html` to the Mendix `/SSO/` endpoint. To do this, you need to add `<meta http-equiv="refresh" content="0;URL=/SSO/" />` to the `index.html` file.
 
 {{% alert color="info" %}}
-For Mendix version 9, there is no `index.html` file, so you need to create this file first. You can find instructions on how to do this in the [Customizing index.html (Web)](/howto/front-end/customize-styling-new/#custom-web) section of *Customize Styling*.
+For Mendix version 9 and above, there is no `index.html` file, so you need to create this file first. You can find instructions on how to do this in the [Customizing index.html (Web)](/howto/front-end/customize-styling-new/#custom-web) section of *Customize Styling*.
 {{% /alert %}}
 
 If you use this method, do not forget to set the **SSOLandingPage** constant to a value different than `index.html`. Otherwise, the app will come back to `index.html` which will be redirected again to single sign on, resulting in an endless loop. **SSOLandingPage** specifies a different landing page so the end-user does not end up on `index.html` again after a login attempt. We recommend that you change this constant to `/index3.html` and create an `index3.html` page in your `/theme` folder and copy contents of the original `index.html` (without the added redirect) into it. The authenticated end-user will then land on `index3.html` which will display the content of the app. If the user authentication fails, the user will be directed to the **DefaultLoginPage** instead. 
@@ -259,7 +259,7 @@ The following settings control user provisioning:
 {{% alert color="info" %}}
 These settings are only available in the following versions of the module (depending on which Mendix version you are using)
 
-* v3.1.8/v3.1.9 and above for Mendix version 9
+* v3.1.8/v3.1.9 and above for Mendix version 9 and above
 * v2.2.0 and above for Mendix version 8
 * v1.16.4 and above for Mendix version 7
 {{% /alert %}}
@@ -275,7 +275,7 @@ These settings are only available in the following versions of the module (depen
 
 * **Enable delegated authentication** *(deprecated)* - See [Enable Delegated Authentication](#delegated-auth), below, for information on when you might set this.
 
-* **Enable mobile authentication Token** - If you are using a [hybrid mobile](/refguide/hybrid-mobile/) app and you enable this, you can log in to your Mendix hybrid mobile app after the app is closed, using an auth token cookie. Only check this if you are using SAML on a hybrid mobile app. Note that this functionality also requires changes to the hybrid app package as described in [How To Implement SSO on a Hybrid App with Mendix and SAML](/howto8/mobile/implement-sso-on-a-hybrid-app-with-mendix-and-saml/).
+* **Enable mobile authentication Token** - If you are using a [hybrid mobile](/refguide9/mobile/introduction-to-mobile-technologies/hybrid-mobile/) app and you enable this, you can log in to your Mendix hybrid mobile app after the app is closed, using an auth token cookie. Only check this if you are using SAML on a hybrid mobile app. Note that this functionality also requires changes to the hybrid app package as described in [How To Implement SSO on a Hybrid App with Mendix and SAML](/howto8/mobile/implement-sso-on-a-hybrid-app-with-mendix-and-saml/).
 
 #### 3.2.5 Authentication Context
 
@@ -357,7 +357,7 @@ See [Custom Behavior](#customuserprovisioning), below, for more information.
 
 These settings are only available in the following versions of the module (depending on which Mendix version you are using)
 
-* v3.1.8/v3.1.9 and above for Mendix version 9
+* v3.1.8/v3.1.9 and above for Mendix version 9 and above
 * v2.2.0 and above for Mendix version 8
 * v1.16.4 and above for Mendix version 7
 
@@ -379,7 +379,7 @@ Checking this box will force the SAML IdP  to (re)authenticate end-users, even i
 
 #### 4.3.3 Enable Mobile Authentication Token
 
-If you are using a [hybrid mobile](/refguide/hybrid-mobile/) app and you enable this, you can sign in to your Mendix hybrid mobile app after the app is closed, using an authentication token cookie. Only check this if you are using SAML on a hybrid mobile app. Note that this functionality also requires changes to the hybrid app package as described in [How To Implement SSO on a Hybrid App with Mendix and SAML](/howto8/mobile/implement-sso-on-a-hybrid-app-with-mendix-and-saml/).
+If you are using a [hybrid mobile](/refguide9/mobile/introduction-to-mobile-technologies/hybrid-mobile/) app and you enable this, you can sign in to your Mendix hybrid mobile app after the app is closed, using an authentication token cookie. Only check this if you are using SAML on a hybrid mobile app. Note that this functionality also requires changes to the hybrid app package as described in [How To Implement SSO on a Hybrid App with Mendix and SAML](/howto8/mobile/implement-sso-on-a-hybrid-app-with-mendix-and-saml/).
 
 #### 4.3.4 Enable Delegated Authentication {#delegated-auth}
 
@@ -402,7 +402,7 @@ In-session authentication is a process that takes place within a session that wa
 
 In-session authentication at the SAML IdP is only available in the following versions of the module (depending on which Mendix version you are using)
 
-* v3.3.0/v3.3.1 and above for Mendix version 9
+* v3.3.0/v3.3.1 and above for Mendix version 9 and above
 * v2.3.0 and above for Mendix version 8
 
 Usage of the in-session authentication changes the user roles that apply to the current session. If your app is configured with multiple IDP configurations, the in-session authentication will use the same SAML IDP as the initial (non-anonymous) session. If there is no current session, the end-user can select their IDP. In-session authentication uses the setting `ForceAuthn=true`, which means that the IdP will always authenticate an end-user even if the IdP already has a session for that end-user.
@@ -460,7 +460,7 @@ To use artifact binding, select ARTIFACT_BINDING option for **Response protocol 
 
 Using artifact binding for SAML responses at the SAML IdP is only available in the following versions of the module (depending on which Mendix version you are using)
 
-* v3.3.0/v3.3.1 and above for Mendix version 9
+* v3.3.0/v3.3.1 and above for Mendix version 9 and above
 * v2.3.0 and above for Mendix version 8
 
 #### 4.4.2 Use AssertionConsumerService Concept
@@ -496,7 +496,7 @@ Although the typical use case for requesting attributes is to obtain information
 
 Requesting user attributes at the SAML IdP is only available in the following versions of the module (depending on which Mendix version you are using)
 
-* v3.3.0/v3.3.1 and above for Mendix version 9
+* v3.3.0/v3.3.1 and above for Mendix version 9 and above
 * v2.3.0 and above for Mendix version 8
 
 ## 5 Advanced Configuration
@@ -564,9 +564,9 @@ When enabling the log node SSO to show trace messages, you can find detailed inf
 * **"Unable to validate Response, see SAMLRequest overview for detailed response. Error: An error occurred while committing user: p:'johndoe@company.com'/u:'JoHnDoE@CoMpAnY.CoM'"** – All user names passing through the SAML module are converted to lower-case, so make sure all the existing user names and new user names are also converted to lower-case. This is because certain systems are not case-sensitive (for example, Active Directory).
 * **“Could not create a session for the provided user principal.”** – This error can be shown if the IdP configuration does not contain any application attributes for the entity where the user (and user principal) is to be found (and stored).
 
-### 6.2 Troubleshooting an Endless Redirect Loop in Mendix Version 9
+### 6.2 Troubleshooting an Endless Redirect Loop in Mendix version 9 and Above
 
-When using the [SAML](/appstore/modules/saml/) module for SSO in Mendix 9 and above, you might get stuck in an endless redirect loop. This is because the default value for SameSite cookies is `"Strict"`, and the session cookies cannot be forwarded.
+When using the [SAML](/appstore/modules/saml/) module for SSO in Mendix version 9 and above, you might get stuck in an endless redirect loop. This is because the default value for SameSite cookies is `"Strict"`, and the session cookies cannot be forwarded.
 
 To avoid this issue, make sure your IdP (identity provider) and your app are in the same domain, and thus on the same site. For example, if your app is on `app.domain.com` and you open the deep link `app.domain.com/link/test`, then you are redirected to your IdP to sign in on `idp.domain.com/SSO`. After you sign in successfully, you are sent back to `app.domain.com/SSO/assertion`. Finally, you are forwarded to `app.domain.com/link/test`. Since your requests always stay on the same site, the cookie can be forwarded each time.
 

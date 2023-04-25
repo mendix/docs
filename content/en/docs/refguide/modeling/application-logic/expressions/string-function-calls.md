@@ -474,7 +474,7 @@ The regular expression must be provided as a string. Although it uses the same f
 
 Please note that this function call uses the regular expression language provided by the current platform:
 
-* When used inside a [microflow](/refguide/microflow/) – Java's regular expressions (for details, see [Class Pattern documentation](https://docs.oracle.com/javase/8/docs/api/java/util/regex/Pattern.html))
+* When used inside a [microflow](/refguide/microflow/) – Java's regular expressions (for details, see [Class Pattern documentation](https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/regex/Pattern.html))
 * When used in the client – JavaScript's regular expressions (for details, see [Regular Expressions documentation](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions))
 
 {{% /alert %}}
@@ -534,7 +534,7 @@ The regular expression must be provided as a string. Although it uses the same f
 
 Please note that this function call uses the regular expression language provided by the current platform:
 
-* When used inside [microflows](/refguide/microflows/) – Java's regular expressions (for details, see [Class Pattern](https://docs.oracle.com/javase/8/docs/api/java/util/regex/Pattern.html))
+* When used inside [microflows](/refguide/microflows/) – Java's regular expressions (for details, see [Class Pattern](https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/regex/Pattern.html))
 * When used in the client – JavaScript's regular expressions (for details, see [Regular Expressions](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions))
 
 {{% /alert %}}
@@ -595,7 +595,7 @@ The regular expression must be provided as a string. Although it uses the same f
 
 Please note that this function call uses the regular expression language provided by the current platform:
 
-* When used inside a [microflow](/refguide/microflow/) – Java's regular expressions (for details, see [Class Pattern documentation](https://docs.oracle.com/javase/8/docs/api/java/util/regex/Pattern.html))
+* When used inside a [microflow](/refguide/microflow/) – Java's regular expressions (for details, see [Class Pattern documentation](https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/regex/Pattern.html))
 * When used in the client – JavaScript's regular expressions (for details, see [Regular Expressions documentation](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions))
 
 {{% /alert %}}

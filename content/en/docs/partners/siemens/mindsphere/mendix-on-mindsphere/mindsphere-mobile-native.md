@@ -102,7 +102,7 @@ Now, you need to make some configuration changes in the app itself.
 
 In the **App Explorer** open the configuration of the app store module **MindsphereSingleSignOn**:
 
-{{< figure src="/attachments/partners/siemens/mindsphere/mendix-on-mindsphere/mindsphere-mobile-native/StudioPro_SSO_configuration.png" alt="Studio SSO configuration" >}}
+{{< figure src="/attachments/partners/siemens/mindsphere/mendix-on-mindsphere/mindsphere-mobile-native/StudioPro_SSO_configuration.png" alt="Studio Pro SSO configuration" >}}
 
 Change these constants:
 
@@ -125,7 +125,7 @@ In this section you will create your own custom development app and register a d
 
 In principle, you have to follow the description of how to create a [Custom Development App](/refguide/mobile/distributing-mobile-apps/building-native-apps/how-to-devapps/), and install it on your device or emulator as described there. There is only one additional thing required for the MindSphere integration. The **custom_scheme** specified in the Developer Cockpit app registration process needs to be provided as the **Deep link** in the **App capabilities** section.
 
-{{< figure src="/attachments/partners/siemens/mindsphere/mendix-on-mindsphere/mindsphere-mobile-native/StudioPro_NativeBuilder.png" alt="Studio SSO configuration" >}}
+{{< figure src="/attachments/partners/siemens/mindsphere/mendix-on-mindsphere/mindsphere-mobile-native/StudioPro_NativeBuilder.png" alt="Studio Pro SSO configuration" >}}
 
 ### 2.4 Try out your application
 

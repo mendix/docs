@@ -48,7 +48,7 @@ Before starting this how-to, make sure you have the following prerequisites:
 * The Mendix server distribution corresponding with your Mendix Studio Pro version (see the [Mendix Marketplace](https://marketplace.mendix.com/link/studiopro/))
 * A database with sufficient security rights
 
-    * Suitable database servers are IBM DB2, MariaDB, MS SQL Server, MySQL, Oracle Database and PostgreSQL. See [System Requirements](/refguide/system-requirements/#databases) for more information
+    * Suitable database servers are MariaDB, MS SQL Server, MySQL, Oracle Database and PostgreSQL. See [System Requirements](/refguide/system-requirements/#databases) for more information
 
 * A local or domain user with the *“log on as a service”* local security policy set
 

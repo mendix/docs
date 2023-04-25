@@ -44,7 +44,7 @@ Multiplicity shows the owner and the direction of association if the association
 You can swap the direction of the multiplicity if its type is one-to-many or many-to-many. In this case you will change the owner of association.
 
 {{% alert color="info" %}}
-For more details on the reasoning underlying associations, ownership, and multiplicity, see the [Introduction](/refguide/associations/#intro) section of *Associations* in the *Studio Pro Guide*.
+For more details on the reasoning underlying associations, ownership, and multiplicity, see the [Introduction](/refguide9/associations/#intro) section of *Associations* in the *Studio Pro Guide*.
 {{% /alert %}}
 
 ## 4 Delete Behavior {#delete-behavior}
@@ -57,7 +57,7 @@ Delete behavior defines what should happen to the associated object when an obje
 | Delete {name of entity} object(s) as well                    | When an object is deleted, the associated object(s) are also deleted. |
 | Delete {name of entity} object only if it is not associated with {name of other entity} object(s) | An object can only be deleted if it is not associated with any other object(s). <br />You can also specify an error message for your end-users when they try to delete an object that is associated with other entity's objects. For example: "You cannot delete this location, because a course is associated with it." |
 
-For examples of delete behavior configuring, see [Delete Behavior](/refguide/create-a-basic-data-layer/#delete-behavior) section in *Creating a Basic Data Layer*.
+For examples of delete behavior configuring, see [Delete Behavior](/refguide9/create-a-basic-data-layer/#delete-behavior) section in *Creating a Basic Data Layer*.
 
 ## 5 Cross-Module Associations {#cross-module-associations}
 

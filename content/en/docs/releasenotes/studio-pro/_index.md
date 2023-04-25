@@ -12,6 +12,7 @@ aliases:
 
 These are the [Mendix Studio Pro](/refguide/) major version release notes:
 
+* [10](/releasenotes/studio-pro/10/)
 * [9](/releasenotes/studio-pro/9/)
 * [8](/releasenotes/studio-pro/8/)
 * [7](/releasenotes/studio-pro/7/)

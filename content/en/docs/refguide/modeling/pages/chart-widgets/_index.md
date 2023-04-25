@@ -34,7 +34,7 @@ Note that only features up to version 1.47.4 of plotly.js can be used when confi
 
 **Dynamic Series Chart**
 
-From version 1.4 of the basic charts you can create charts with a variable number of data series. For instructions on how to do this, see [How to Create a Dynamic Series Chart](/howto/front-end/charts-dynamic-series/).
+From version 1.4 of the basic charts you can create charts with a variable number of data series. For instructions on how to do this, see [How to Create a Dynamic Series Chart](/appstore/widgets/charts-dynamic-series/).
 
 ## 3 Any Chart {#any-chart}
 

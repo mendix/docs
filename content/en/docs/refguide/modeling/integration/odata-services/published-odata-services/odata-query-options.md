@@ -225,10 +225,6 @@ When the association refers to multiple objects, add objects to or remove object
 
 Clients can only update an association from the entity that is the [owner](/refguide/associations/).
 
-{{% alert color="info" %}}
-The *updating attributes* functionality was introduced in Studio Pro [9.6.0](/releasenotes/studio-pro/9.6/). The *updating associations* functionality was introduced in Studio Pro [9.8.0](/releasenotes/studio-pro/9.8/).
-{{% /alert %}}
-
 ## 11 Inserting Objects {#inserting-objects}
 
 When a published resource has the [Insertable](/refguide/published-odata-resource/#capabilities) capability, clients can create new objects by sending a `POST` request to the URL of the entity set (for example, `POST /odata/myservice/v1/Employees`). 
@@ -246,14 +242,6 @@ The body of the request may specify attribute and association values just as wit
 
 Clients can only set values for an association from the entity that is the [owner](/refguide/associations/).
 
-{{% alert type="info" %}}
-The *inserting objects* functionality was introduced in Studio Pro [9.12.0](/releasenotes/studio-pro/9.12/).
-{{% /alert %}}
-
 ## 12 Deleting Objects {#deleting-objects}
 
 When a published resource has the [Deletable](/refguide/published-odata-resource/#capabilities) capability, clients can delete an object by sending a `DELETE` request to the URL of the object (for example, `PATCH /odata/myservice/v1/Employees(8444249301330581)`).
-
-{{% alert type="info" %}}
-The *deleting objects* functionality was introduced in Studio Pro [9.13.0](/releasenotes/studio-pro/9.13/).
-{{% /alert %}}

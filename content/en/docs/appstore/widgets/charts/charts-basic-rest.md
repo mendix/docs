@@ -104,5 +104,5 @@ To use the REST Data source endpoint in your chart, follow these steps:
 ## 6 Read More
 
 * [Use Chart Data Source REST](/howto/front-end/charts-basic-create/)
-* [Use Any Chart](/howto/front-end/charts-any-usage/)
+* [Use Any Chart](/appstore/widgets/charts-any-usage/)
 * [Use Theme Charts](/howto/front-end/charts-theme/)

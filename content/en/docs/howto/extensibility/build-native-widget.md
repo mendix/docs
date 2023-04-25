@@ -1092,8 +1092,6 @@ First change the widget property configuration:
     2. Rename the file to *GroupBox.icon.png*
     3. Add the file to the *src* folder which contains the *xml* file
 
-    {{% alert color="info" %}}This functionality was introduced in Studio Pro v9.6. To show a widget icon in Studio Pro v9.5 or below, the icon needs to be added to the *xml* file. To do this, follow the steps from the [Mendix 8](/howto8/extensibility/build-native-widget/#adding-a-collapsible-property) version of this document.{{% /alert %}}
-
 Now support this section's two features with your display component:
 
 1. Navigate to the display component **src/components/GroupBox.tsx**.

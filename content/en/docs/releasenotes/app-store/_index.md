@@ -11,6 +11,17 @@ These release notes cover changes made to the [Mendix Marketplace](/appstore/).
 
 ## 2022
 
+### March 23rd, 2023
+
+#### New Features
+
+On top of open-source community-supported content, we are introducing an additional layer of support through our [Mendix Component Partner program](/appstore/creating-content/partner-program/). Partner members can now bring their components to the Mendix Marketplace under terms that guarantee full support to customers:
+
+* Partners are free to select an existing open-source license, or they can select a commercial option with the corresponding license and present that.
+* Partners commit to providing support to customers under an SLA (meaning, under terms specified by the partner). Customers can rely on this SLA for support if something goes wrong. A partner-supported [component details page](/appstore/general/app-store-overview/#details) contains a reference to the partner's support portal or the partner's support contact email.
+
+You can find and use partner-supported components on the [Marketplace homepage](https://marketplace.mendix.com/) under **From our partners** and by selecting the [Partner](/appstore/general/app-store-content-support/#category) **Support** level in the search box. A partner-supported component details page has an explicit indicator (a crown), which makes it easy to distinguish from community-supported content.
+
 ### October 25th, 2022
 
 #### New Features
@@ -141,7 +152,7 @@ If you are using Studio Pro on a Mac with Parallels, see [this update](https://k
 
 #### Fixes
 
-* <a name="windows-service"></a>We fixed the issue with downloading the Windows Service. 
+* <a id="windows-service"></a>We fixed the issue with downloading the Windows Service. 
 * We fixed a minor bug for anonymous users.
 
 ### April 7th, 2021

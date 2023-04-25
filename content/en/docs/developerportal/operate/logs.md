@@ -36,11 +36,11 @@ Logs on the Mendix Cloud are rotated and archived every day. The logs are kept f
 
 {{< figure src="/attachments/developerportal/operate/logs/log-v4.png" alt="Logs Page" >}}
 
-Action Button | Performs the Action
-:---|:---
-Download Archived Log | download a log selected from the list underneath 
-Download Current Log | download the log which is currently being written to
-View Live Log | view today's log on the screen
+| Action Button | Performs the Action |
+| :--- | :--- |
+| Download App Log | download an application log selected from the list underneath — the current log is the first one listed  |
+| Download Access Log | download a log of who has created a user session on the app on the date selected from the list underneath |
+| View Live Log | view today's log on the screen |
 
 ## 3 Apps on SAP Business Technology Platform
 
@@ -74,7 +74,11 @@ The Kibana user guide is available here: [Kibana User Guide](https://www.elastic
 
 ## 4 Free App
 
-Logs are not available for Free Apps. You will see a sample screen.
+Logs are not available for Free Apps. You will see a sample screen on the logs page. You only have access to a live log of your deployed free app, on the **Environments** page, under **View Live Log**. 
+
+{{% alert color="info" %}}
+If you have set up custom log messages, you will only be able to see messages up to Info log level. Debug and Trace log messages will not be shown in the live log.
+{{% /alert %}}
 
 ## 5 App Deployed to Other Clouds
 

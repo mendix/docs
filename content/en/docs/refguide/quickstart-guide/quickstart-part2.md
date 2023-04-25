@@ -41,7 +41,7 @@ Specifically, the Make it Native 9 app connects to your local development machin
 
 ## 3 Creating a Native Mobile Picture App
 
-Starting in Studio Pro, open the page **Home_Native** by double-clicking it in the App Explorer or by pressing <kbd>CTRL</kbd> + <kbd>G</kbd> to open your **Go to** menu and search for the page. The **Go to** menu is used for quick navigation in the project—for more Mendix shortcuts see [Edit Menu](/refguide/edit-menu/).
+Starting in Studio Pro, open the page **Home_Native** by double-clicking it in the App Explorer or by pressing <kbd>CTRL</kbd> + <kbd>G</kbd> to open your **Go to** menu and search for the page. The **Go to** menu is used for quick navigation in the app—for more Mendix shortcuts see [Edit Menu](/refguide/edit-menu/).
 
 {{% alert type="info" %}}
 The **Home_Native** page has a different icon than the **Home_Web** page. Mendix uses these icons to help you develop the right aspect of your app.

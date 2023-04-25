@@ -114,7 +114,7 @@ The **Test Cases** menu has three tabs:
 | --- | --- |
 | **Repository** | Here you create and store all your test cases, test suites, and custom actions. It is the ATS filing system, the heart of ATS. |
 | **Test Data** | Where you can create folders, actions, and enumerations.  |
-| **Stories** | Where you can access the sprints of your app. |
+| **Stories** | Where you can access the Sprints of your app. |
 
 In this how-to, only the **Repository** tab is described. 
 

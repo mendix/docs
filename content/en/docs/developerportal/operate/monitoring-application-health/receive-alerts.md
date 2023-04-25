@@ -35,10 +35,7 @@ There are two ways to start receiving alerts:
 The Technical Contact can grant you the **Receive Alerts** permission by following these steps:
 
 1. Go to the [Developer Portal](http://sprintr.home.mendix.com).
-2. Open the **Switch to** menu and click **Cloud**.
-
-    {{< figure src="/attachments/developerportal/operate/monitoring-application-health/receive-alerts/cloud-nodes.png" >}}
-
+2. Open the [Switch to menu](/developerportal/#navigation) and select **Cloud**.
 3. Open the node by clicking **Details**.
 4. Click **Security** in the left-hand menu.
 5. Switch to the **Node Permissions** tab.
@@ -51,14 +48,20 @@ The Technical Contact can grant you the **Receive Alerts** permission by followi
 You can manage the alerts by yourself, follow these steps:
 
 1. Go to the [Developer Portal](http://sprintr.home.mendix.com).
-2. Open the **Switch to** menu and click **Cloud**.
+2. Open the [Switch to menu](/developerportal/#navigation) and select **Cloud**.
 3. Open the node by clicking **Details**.
 4. Click **Alerts** in the left-hand menu. 
 5. Select the check box of **Email Alerts**.  It is possible to set this option separately for each environment. The changes will be automatically saved.
 
     {{< figure src="/attachments/developerportal/operate/monitoring-application-health/receive-alerts/email-alerts.png" >}}
 
-## 4 Read More
+## 4 Issue: Receiving Too Many Alerts
+
+Under some circumstances, a critical alert in one instance of a multi-instance app will cause emails to be sent out constantly. The other instances of your app will continue to run without reporting issues, so it will appear to be working.
+
+If you cannot resolve the issue in the instance reporting the critical error, you will need to restart your app to ensure that all instances are healthy. Otherwise you will continue to receive regular email alerts.
+
+## 5 Read More
 
 * [Alerts](/developerportal/operate/monitoring-application-health/)
 * [Trends in the Mendix Cloud](/developerportal/operate/trends-v4/)

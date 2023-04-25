@@ -19,7 +19,9 @@ Amazon DynamoDB helps improve your app by giving you the tools to build scalable
 
 ### 1.2 Prerequisites {#prerequisites}
 
-To use the Amazon DynamoDB connector, you must first install and configure the following modules:
+The Amazon DynamoDB connector requires Mendix Studio Pro version 9.18.0 or above.
+
+To use the Amazon DynamoDB connector, you must also install and configure the following modules:
 
 * [AWS Authentication connector version 2.0 or higher](https://marketplace.mendix.com/link/component/120333) - This connector is required to authenticate with Amazon Web Services (AWS). It is crucial for the Amazon DynamoDB connector to function correctly. For more information about installing and configuring the AWS Authentication connector, see [AWS Authentication](/appstore/connectors/aws/aws-authentication/).
 * [Community Commons module](https://marketplace.mendix.com/link/component/170) - This module is required to parse the `creationDateTime` attribute as returned by the `DescribeTable` activity.
@@ -52,7 +54,7 @@ In order to use the Amazon DynamoDB service, you must authenticate with AWS. To 
 
 7. Depending on your selected authentication type, configure the required parameters for the **StaticCredentials** or **SessionCredentials**.
 
-    | Credentials type | Parameter | Value |
+    | Credentials type | Constant | Value |
     | --- | --- | --- |
     | Any | **UseStaticCredentials** | **true** if you want to use static credentials, or **false** for session credentials |
     | **StaticCredentials** | **AccessKey** | Access key ID [created in IAM](/appstore/connectors/aws/aws-authentication/#prerequisites)  |
@@ -164,9 +166,9 @@ After you configure the authentication profile for Amazon DynamoDB, you can impl
     {{< figure src="/attachments/appstore/connectors/aws-dynamodb/listview.png" alt="The List view widget">}}
 
 46. In the **Select Data Source** dialog, set the **Type** to **Microflow**.
-47. In the **Entity (path)** field, select the **DS_ListTables** microflow.
+47. In the **Microflow** field, select the **DS_ListTables** microflow.
 48. Click **OK**, and then click **Yes**.
-49. In the **Properties** pane for the page, in the **Security** section, select a user role that should be allowed to run the microflow.
+49. In the **Properties** pane for the page, in the **Navigation** > **Visible for** section, select a user role that should be allowed to run the microflow.
 50. In the **App Explorer**, double-click the **Navigation** for your app.
 51. In the Menu section, click **New Item**.
 52. In the **New Menu Item** dialog, configure the following settings:
@@ -180,6 +182,7 @@ After you configure the authentication profile for Amazon DynamoDB, you can impl
 53. Click **OK**.
 
     {{< figure src="/attachments/appstore/connectors/aws-dynamodb/microflow2.png" alt="The microflow after mapping the properties">}}
+54. Click the **Run locally** icon to preview your app and validate your results. For more information, see [Studio Pro Overview: Run and View App](/refguide/studio-pro-overview/#menus).
 
 ## 4 Technical Reference
 
@@ -239,6 +242,7 @@ An enumeration is a predefined list of values that can be used as an attribute t
 | `Binary` | **Binary** | The enumeration element that reflects native data type of a binary file expressed as a string |
 
 #### 4.2.5 `ENUM_ComparisonOperator`
+
 For more information on using comparison operators, please visit [Amazon DynamoDB docs](https://docs.aws.amazon.com/amazondynamodb/latest/APIReference/API_Condition.html).
 | Name | Caption | Description |
 | --- | --- | --- |

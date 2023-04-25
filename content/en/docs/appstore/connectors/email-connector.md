@@ -1,5 +1,5 @@
 ---
-title: "Email Connector"
+title: "Email"
 url: /appstore/connectors/email-connector/
 category: "Connectors"
 description: "Describes the configuration and usage of the Email Connector module, which is available in the Mendix Marketplace."
@@ -9,14 +9,15 @@ tags: ["marketplace", "marketplace component", "imap", "pop3", "email", "encrypt
 
 ## 1 Introduction
 
-The [Email](https://marketplace.mendix.com/link/component/120739) connector allows you to send and receive emails on your own email server, and adds new features like sending signed and encrypted emails.
+The [Email](https://marketplace.mendix.com/link/component/120739) connector allows you to send and receive emails on your own email server, and includes features like sending signed and encrypted emails.
 
 ### 1.1 Features
 
 The Email connector includes the following features:
 
-* Configuration of multiple accounts
-    * Supports basic authentication and [creating an account with OAuth 2.0](#create-oauth) to configure Microsoft Azure AD accounts
+* Configuration of multiple email accounts
+    * Supports basic authentication and [creating an account with OAuth 2.0](#create-oauth) to configure Microsoft Azure AD accounts.
+    * Supports shared mailboxes using basic and OAuth 2.0 authentication.
 * Digital signatures and encryption
 * Email templates
 
@@ -37,7 +38,7 @@ Before you use the Email connector in your app, do the following:
 1. Download and [configure](/appstore/modules/model-reflection/#configuration) the latest version of [Mx Model Reflection](https://marketplace.mendix.com/link/component/69) module. If you have the module already, ensure that it is up-to-date.
 2. Download and [configure](/appstore/modules/encryption/#configuration) the latest version of the [Encryption](https://marketplace.mendix.com/link/component/1011) module. If you have the module already, ensure that it is up-to-date.
 3. Remove any existing email modules ([IMAP/POP3](/appstore/modules/imap/) or [Email Module with Templates](/appstore/modules/email-with-templates/)).
-4. Check for and remove orphaned JAR files from any old email modules in the *userlib* subdirectory (for example, *javax.mail-1.6.2.jar* and *activation-1.1.jar*).
+4. Check for and remove orphaned JAR files from any old email modules in the *userlib* subdirectory (including *javax.mail-1.6.2.jar*, *activation-1.1.jar*, and *commons-email.jar*).
 5. [Clean the deployment directory](/refguide/app-menu/#clean-deployment-directory) before running the app.
 
 ### 1.2.1 Migrating from Another Module
@@ -74,11 +75,17 @@ Once you run your Studio Pro app, you can start configuring your email accounts 
 
 ### 3.1 Adding Email Account {#adding-email-account}
 
-When you run your app to use this module for the first time, and earlier data is not present, you will see a welcome screen with an account setup wizard. Click on `Get Started` button and follow the steps to add email account. 
+When you run your app to use this module for the first time, and earlier data is not present, you will see a welcome screen with an account setup wizard. Click on **Get Started** button and follow the steps to add email accounts. The wizard takes you through 3 stages to configure either your primary email account or a shared mailbox.
 
-On the Email Connector dashboard, click on `Add Email Account` and follow the wizard.
+1. Choose the authentication method that you want to use, either **Basic Credentials** or **Azure AD** (OAuth 2.0).
+2. Choose if you want to either configure the **Primary** account or **Shared Mailbox**.
+3. Choose the protocols for sending and receiving emails.
 
-You can add and configure an email account in the Email Connector using basic authentication and OAuth 2.0 for Microsoft Azure AD accounts. To configure OAuth 2.0 accounts, see [Creating an Account Using Microsoft Azure OAuth 2.0](#create-oauth). The account configuration wizard supports automatic and manual configurations.
+You can add and configure an email account in the Email Connector using basic authentication and OAuth 2.0 for Microsoft Azure AD accounts. You can also add and configure "Shared Mailbox" using Basic & OAuth 2.0 authentitcation. To configure OAuth 2.0 accounts, see [Creating an Account Using Microsoft Azure OAuth 2.0](#create-oauth). The account configuration wizard supports automatic and manual configurations for Sending and Receiving emails.
+
+{{% alert color="info" %}}
+You can configure either your primary email account or shared mailbox in the wizard, but not both (primary and shared) at the same time. To add a primary and a shared mailbox, go through the wizard twice; first to configure your primary account, and then to configure the shared mailbox. You can choose to only configure a shared mailbox, although for your primary email account is needed to configure it.
+{{% /alert %}}
 
 #### 3.1.1 Automatic Configuration
 
@@ -286,7 +293,6 @@ If you already have an email account configured using basic authentication in yo
     * Associate the existing email account with newly created OAuth provider.
     * Navigate to the **EmailConnector_Overview** page and handle the warning messages visible for desired email account.
 
-
 ### 5.3 Deploying to On-Premises Cloud Environments
 
 When deploying [on premises](/developerportal/deploy/on-premises-design/) running [Microsoft Windows](/developerportal/deploy/deploy-mendix-on-microsoft-windows/), you nede to add a rule for a URL redirect.
@@ -302,7 +308,7 @@ For more information, see the [Reverse Proxy Inbound Rules](/developerportal/dep
 
 ### 5.4 Configuring Local Email Clients
 
-Configuring local clients, like [PaperCut](https://www.papercut.com/), is supported. If using a tool like PaperCut, do the following:
+Configuring local clients, like [PaperCut](https://github.com/ChangemakerStudios/Papercut-SMTP), is supported. If using a tool like PaperCut, do the following:
 
 1. Follow the steps for [adding an email account](#adding-email-account). 
 2. Automatic configuration will not work for local clients, so continue with manual configuration in the wizard.

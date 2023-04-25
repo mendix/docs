@@ -67,7 +67,7 @@ With regions, you divide the layout container into sections in order to position
 
 #### 3.2.3 Placeholders
 
-A placeholder can be used in a layout to define an area that can be filled in in a page based on that layout or in another layout defining that layout as the master layout.
+A placeholder can be used in a layout to define an area that can be filled in in a page based on that layout or in another layout defining that layout as the primary layout.
 
 {{< figure src="/attachments/howto8/front-end/layouts-and-snippets/placeholders.png" >}} 
 
@@ -75,7 +75,7 @@ When the area is filled in a page, this will be the content area of that page, s
 
 #### 3.2.4 Inheritance
 
-A layout can also be based on another layout, which is called the "master layout" in this context. If a layout is based on a master layout, the layout can fill the areas defined by the master layout and define new area using placeholders. Pages that use a layout based on a master layout will only see the areas defined by the layout, not those of the master layout.
+A layout can also be based on another layout, which is called the "primary layout" in this context. If a layout is based on a primary layout, the layout can fill the areas defined by the primary layout and define new area using placeholders. Pages that use a layout based on a primary layout will only see the areas defined by the layout, not those of the primary layout.
 
 ## 4 Desktop, Tablet, or Mobile?
 
@@ -97,9 +97,9 @@ These are some layout examples:
 
     {{< figure src="/attachments/howto8/front-end/layouts-and-snippets/basic-mobile.png" >}}
 
-* Master layout with added menu:
+* Primary layout with added menu:
 
-    {{< figure src="/attachments/howto8/front-end/layouts-and-snippets/master.png" >}}
+    {{< figure src="/attachments/howto8/front-end/layouts-and-snippets/primary.png" >}}
 
 {{% alert color="info" %}}
 
@@ -163,7 +163,7 @@ At the heart of the navigation model in Mendix, are three device types: Desktop,
 
 {{< figure src="/attachments/howto8/front-end/layouts-and-snippets/device-profiles.png" >}}
 
-When a user visits a Mendix application, she is automatically redirected to the home page of the appropriate device type (for details, see the section [Redirection to Device Types](#RedirectiontoDeviceTypes)).
+When a user visits a Mendix application, they are automatically redirected to the home page of the appropriate device type (for details, see the section [Redirection to Device Types](#RedirectiontoDeviceTypes)).
 
 For more information on navigation profiles, see [Navigation in Mendix](/refguide8/navigation/).
 

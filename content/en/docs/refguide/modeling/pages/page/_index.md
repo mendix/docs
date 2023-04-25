@@ -117,8 +117,6 @@ To cut/copy/paste you can use the following shortcuts:
 
 {{% alert color="info" %}}
 You can cut/copy/paste elements on a page to different apps in Studio Pro if they have the same Mendix version. However, you cannot cut/copy/paste the whole page.
-
-You cannot cut/copy/paste from Studio Pro to Studio.
 {{% /alert %}}
 
 To delete an element from a page, select this element and press <kbd>Delete</kbd> or right-click an element and select **Delete** in a drop-down menu. 
@@ -131,8 +129,8 @@ To change the parameters of the page, click the **Parameters** button in the top
 
 There are two different ways to edit your page:
 
-* [Structure Mode](#structure-mode), which clearly shows the relationship between page elements, together with additional information about each element
-* [Design Mode](#design-mode), a WYSIWYG (**W**hat **Y**ou **S**ee **I**s **W**hat **Y**ou **G**et) editor which better reflects what the page will look like when it is published
+* [Structure mode](#structure-mode), which clearly shows the relationship between page elements, together with additional information about each element
+* [Design mode](#design-mode), a WYSIWYG (**W**hat **Y**ou **S**ee **I**s **W**hat **Y**ou **G**et) editor which better reflects what the page will look like when it is published
 
 You can toggle between the modes by clicking the **Design mode** or **Structure mode** button on the right of the top bar.
 
@@ -147,7 +145,7 @@ Both modes allow you to edit your page by doing the following:
 * Viewing and editing properties of each widget in the **Properties** pane
 * Opening a **Properties** dialog box from the menu you get when you right-click the widget
 
-Additionally, the [Page Explorer](/refguide/page-explorer/) can be used in combination with Structure Mode or Design Mode, which shows a tree view of your page structure and contains the same editing capabilities.
+Additionally, the [Page Explorer](/refguide/page-explorer/) can be used in combination with Structure mode or Design mode, which shows a tree view of your page structure and contains the same editing capabilities.
 
 ### 3.1 Structure Mode {#structure-mode}
 
@@ -176,7 +174,7 @@ In **Design mode**, the page is laid out as it will appear when published so tha
 It is recommended to use it in combination with the [Page Explorer](/refguide/page-explorer/), which allows to see and select structural elements that are hidden in Design mode due to styling.
 {{% /alert %}}
 
-For example, the example page shown in [Structure Mode](#structure-mode), above, will look like this in **Design mode** for a desktop:
+For example, the example page shown in [Structure mode](#structure-mode), above, will look like this in **Design mode** for a desktop:
 
 {{< figure src="/attachments/refguide/modeling/pages/page/design-mode-example.png" alt="Design mode page as displayed on a tablet" >}}
 

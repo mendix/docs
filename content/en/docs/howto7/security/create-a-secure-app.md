@@ -76,7 +76,7 @@ To set the security level to prototype/demo, follow these steps:
 
     {{< figure src="/attachments/howto7/security/create-a-secure-app/18581559.png" >}}
 
-3. Go to the **Administrator** tab and set the master administrator **Password**:
+3. Go to the **Administrator** tab and set the primary administrator **Password**:
 
     {{< figure src="/attachments/howto7/security/create-a-secure-app/18581565.png" >}}
 
@@ -178,7 +178,7 @@ To configure the form entity access, follow these steps:
 
 ### 5.2 Creating Access Rules for the Administrator Module Role
 
-You will now create access rules for the Administrator module role. Since this role represents an administrator, let’s assume that he/she is allowed to create, delete, read, and write everything, so you can create the rules in a quick batch.
+You will now create access rules for the Administrator module role. Since this role represents an administrator, let’s assume they are allowed to create, delete, read, and write everything, so you can create the rules in a quick batch.
 
 To create access roles for the Administrator module role, follow these steps:
 
@@ -202,7 +202,7 @@ A separate access rule will be created for all entities when the module role is 
 
 ### 5.3 Creating Access Rules for the User Module Role
 
-Next you have to create access rules for the User module role. Since this role represents a user with limited access, let’s assume he/she is only allowed to read most data and is allowed to write some of the Order data. This means you have to configure all the access rules individually.
+Next you have to create access rules for the User module role. Since this role represents a user with limited access, let’s assume they are only allowed to read most data and is allowed to write some of the Order data. This means you have to configure all the access rules individually.
 
 To create access roles for the User module role, follow these steps:
 

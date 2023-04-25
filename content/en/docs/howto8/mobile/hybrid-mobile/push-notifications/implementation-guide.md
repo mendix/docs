@@ -44,7 +44,7 @@ To include these dependencies, download them from the Marketplace in a way simil
 
 {{% alert color="info" %}}
 
-If your project is using an older version of the [Encryption](/appstore/modules/encryption/) module, it might trigger an error for referencing a non-existent layout. You can fix this by assigning the master layout of the **Encryption.ResponsiveLayout_Certificate** layout to another layout (please note that in this specific use case, it is not important which layout is used). This does not apply to version 1.3.1 and above.
+If your project is using an older version of the [Encryption](/appstore/modules/encryption/) module, it might trigger an error for referencing a non-existent layout. You can fix this by assigning the primary layout of the **Encryption.ResponsiveLayout_Certificate** layout to another layout (please note that in this specific use case, it is not important which layout is used). This does not apply to version 1.3.1 and above.
 
 {{< figure src="/attachments/howto8/mobile/hybrid-mobile/push-notifications/implementation-guide/20217886.jpg" >}}
 

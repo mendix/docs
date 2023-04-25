@@ -10,7 +10,7 @@ tags: ["studio pro"]
 
 A **text area** is used to display and, optionally, allow the end-user to edit the value of an attribute of [data type](/refguide/data-types/) *String*. It differs from a [text box](/refguide/text-box/) In that the value can be displayed over several lines.
 
-A text area must be placed in a [data widget](/refguide/data-widgets/) and displays an attribute of the object(s) retrieved by that widget. The name of the attribute to be displayed is shown inside the text area, between square brackets, and colored blue.
+A text area must be placed in a [data container](/refguide/data-widgets/) and displays an attribute of the object(s) retrieved by that container. The name of the attribute to be displayed is shown inside the text area, between square brackets, and colored blue.
 
 For example, the following text area allows the end-user to see, and set, the **Notes** about a contact.
 
@@ -113,7 +113,7 @@ Default: *No*
 
 #### 2.6.2 Number of Lines
 
-**Number of lines** determines the size of the text area, based on the height of the lines. If the text in the text area contains more lines, a scrollbar will enable the end-user to see it all. This property is only used if **Grow automatically** is set to *No*.
+**Number of lines** determines the size of the text area, based on the height of the lines. If the text in the text area contains more lines, a scroll bar will enable the end-user to see it all. This property is only used if **Grow automatically** is set to *No*.
 
 Default: *5*
 

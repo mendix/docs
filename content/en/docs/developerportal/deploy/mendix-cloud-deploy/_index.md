@@ -35,7 +35,7 @@ A Free App has a number of limitations compared to a licensed app. The main limi
 | App vCPUs | 0.5 | Depends on your [pricing plan](#plans). |
 | Scheduled events | Are not run. | Are run and can be configured from the Developer Portal. |
 | Environments | Single environment in the Mendix Cloud. | A node in the cloud which has one or more environments, for example, production, acceptance, and test. |
-| Deployment | Can only be deployed to the cloud from Mendix Studio or Studio Pro. | Can be deployed from the Studios, or from the Developer Portal. |
+| Deployment | Can only be deployed to the cloud from Mendix Studio Pro. | Can be deployed from Mendix Studio Pro, from the Developer Portal, or through an API. |
 | Custom domains | Not available. | Can be configured from the Developer Portal. |
 | Access restriction profiles | Not available. | Can be configured from the Developer Portal. |
 | Client certificates | Not available. | Can be configured from the Developer Portal. |
@@ -44,7 +44,7 @@ A Free App has a number of limitations compared to a licensed app. The main limi
 | Runtime settings | Not available. | Configurable through runtime and settings in the Developer Portal. |
 | Scalability | Only one instance and a fixed amount (1 GiB) of memory. | Configurable in the Developer Portal. |
 | Metrics, alerts, and log levels | Not available. | Available. |
-| Historic archived logs | Not available, only live logs are available. | Available. |
+| Historic app logs | Not available, only live logs are available. | Available. |
 | Backups | Performed daily, cannot be triggered manually. Stored up to two weeks. |Performed daily, can also be created manually. Kept for up to one year, depending on your plan. |
 | Support | No support. | Depending on license option. |
 
@@ -101,9 +101,11 @@ Apps that run on the Mendix Cloud are automatically given their own URLs. The fo
 
 | License type | Environment | URL format | Example URL |
 | --- | --- | --- | --- |
-| Licensed app | production | Depends on the region:<br /> `{name of your app}.mendixcloud.com`<br />or<br />`{name of your app}.apps.{region}.mendixcloud.com` | `myappname.mendixcloud.com`, <br /> `myappname.apps.ap-3a.mendixcloud.com` |
-| Licensed app | test, acceptance, flexible environments | `{name of your app}-{environment type}.mendixcloud.com` | `myappname-accp.mendixcloud.com` |
+| Licensed app | production | Depends on the region:<br /> `{name of your app}.mendixcloud.com`*<br />or<br />`{name of your app}.apps.{region}.mendixcloud.com`\* | `myappname.mendixcloud.com`, <br /> `myappname.apps.ap-3a.mendixcloud.com` |
+| Licensed app | test, acceptance, flexible environments | Depends on the region:<br /> `{name of your app}-{environment type}.mendixcloud.com`*<br />or<br />`{name of your app}-{environment type}.apps.{region}.mendixcloud.com`\* | `myappname-accp.mendixcloud.com`, <br /> `myappname-accp.apps.ap-3a.mendixcloud.com` |
 | Free App | N/A | `{name of your app}.mxapps.io` | `myfreeappname.mxapps.io` |
+
+{{% alert color="info" %}}*The URL of an app on some clusters in a region contains `apps.{region}`. You can only select the region for your app, but not the cluster.{{% /alert %}}
 
 You can customize a URL by adding [custom domains](/developerportal/deploy/custom-domains/).
 
@@ -203,8 +205,6 @@ With a Free App, you can deploy your app to the Mendix Cloud from Studio or Stud
 * Alternatively, in the top bar of Studio Pro, click **Run** or **Publish**.
 
     {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/runapp.png" alt="The Run icon and the Publish button" >}}
-
-* Instead of Studio Pro, you can also deploy your app from Studio. For more information, see the [Publishing Your App](/studio/publishing-app/#publishing-your-app) section of *Previewing and Publishing Your App*.
 
 ## 3 Status of Deployment
 

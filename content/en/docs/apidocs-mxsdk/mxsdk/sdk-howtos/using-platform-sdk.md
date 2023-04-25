@@ -15,9 +15,9 @@ This how-to provides guidance on using the Platform SDK to do the following:
 * [Create a temporary working copy](#creating-temp)
 * [Open the working copy model](#opening-working-copy)
 * [Commit a temporary working copy](#committing)
-* [Change the Platfrom SDK configurations](#changing)
+* [Change the Platform SDK configurations](#changing)
 
-## 2 Platfrom Client
+## 2 Platform Client
 
 The entry point for the Mendix Platform SDK is `MendixPlatformClient`. In most cases, you will need to instantiate a new object from this class:
 
@@ -124,9 +124,9 @@ You can pass the following options to `commitToRepository`:
 | `targetCommitId` | This commit ID will be set to the working copy base commit ID if not specified. |
 | `force` | Set to `true` to commit to a branch that is different from the working copy's base branch. |
 
-## 10 Changing the Platfrom SDK Configurations {#changing}
+## 10 Changing the Platform SDK Configurations {#changing}
 
-By default, the Platform SDK reads your personal access token from the environment variable (for more details, see [How to Set Up your Personal Access Token](/apidocs-mxsdk/mxsdk/setup-your-pat/)). However, you can change this configuration. For example, you can load it from a file, as in this example:
+By default, the Platform SDK reads your personal access token from the environment variable (for more details, see [How to Set Up your Personal Access Token](/apidocs-mxsdk/mxsdk/set-up-your-pat/)). However, you can change this configuration. For example, you can load it from a file, as in this example:
 
 ```ts
 setPlatformConfig({

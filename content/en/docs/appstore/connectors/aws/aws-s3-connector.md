@@ -19,7 +19,9 @@ Amazon Simple Storage Service (Amazon S3) is an object storage service offering 
 
 ### 1.2  Prerequisites
 
-The Amazon S3 connector requires the [AWS Authentication connector version 2.0 or higher](https://marketplace.mendix.com/link/component/120333) to authenticate with Amazon Web Services (AWS). For more information about installing and configuring the AWS Authentication connector, see [AWS Authentication](/appstore/connectors/aws/aws-authentication/).
+The Amazon S3 connector requires Mendix Studio Pro version 9.18.0 or above.
+
+To authenticate with Amazon Web Service (AWS), you must also install and configure the [AWS authentication connector version 2.0 or higher](https://marketplace.mendix.com/link/component/120333). For more information about installing and configuring the AWS Authentication connector, see [AWS Authentication](/appstore/connectors/aws/aws-authentication/).
 
 ## 2 Installation
 
@@ -29,9 +31,9 @@ Follow the instructions in [How to Use Marketplace Content in Studio Pro](/appst
 
 After you install the connector, you can find it in the **App Explorer**, in the **AWSS3Connector** section. The connector provides a [domain model](#domain-model) and several [activities](#activities) that you can use to connect your app to one or more Amazon S3 buckets. Each activity can be implemented by using it in a microflow. To ensure that your app can connect to the AWS service, you must also configure AWS authentication for the connector.
 
-### 3.1 Whitelisting Mendix Public Cloud IPs for Amazon S3 Access Points
+### 3.1 Safelisting Mendix Public Cloud IPs for Amazon S3 Access Points
 
-If your application is hosted on Mendix Public Cloud, and your S3 buckets are secured with [Amazon access points](https://docs.aws.amazon.com/AmazonS3/latest/userguide/access-points.html), you must whitelist the [Mendix IP Addresses](/developerportal/deploy/mendix-ip-addresses/) to allow access.
+If your application is hosted on Mendix Public Cloud, and your S3 buckets are secured with [Amazon access points](https://docs.aws.amazon.com/AmazonS3/latest/userguide/access-points.html), you must safelist the [Mendix IP Addresses](/developerportal/deploy/mendix-ip-addresses/) to allow access.
 
 ### 3.2 Configuring a Microflow for an AWS Service
 

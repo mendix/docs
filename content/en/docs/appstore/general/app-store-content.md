@@ -34,9 +34,11 @@ There are three ways to install a Marketplace component, which are described in 
 
 ### 2.1 Downloading Content from Within Studio Pro {#downloading}
 
-{{% alert color="info" %}}The details below cover the updated Marketplace in Studio Pro that is available from version [9.19](/releasenotes/studio-pro/9.19/#updated-marketplace). For details on downloading content in older versions of Studio Pro, see the [For Older Versions of Studio Pro](#older) section below.{{% /alert %}}
+#### 2.1.1 For Studio Pro Versions 9.19 and Above
 
-{{% alert color="info" %}}This procedure works for all types of Marketplace components{{% /alert %}}
+{{% alert color="info" %}}This procedure works for all types of Marketplace components, unless you are using Studio Pro China Edition.{{% /alert %}}
+
+To download content in Studio Pro versions [9.19](/releasenotes/studio-pro/9.19/) and above, follow these steps:
 
 1. Open Studio Pro and sign in with your Mendix credentials.
 2. Open the app in which you want to install the component from the Marketplace.
@@ -61,7 +63,7 @@ There are three ways to install a Marketplace component, which are described in 
 
     The details presented here correspond to what you see on the [component details page](/appstore/general/app-store-overview/#details) in the online Mendix Marketplace.
 
-6. <a name="step-six"></a>Click **Download** to download the latest version of the component (for widgets, version compatibility is not applicable). Or, if you want to download an older component version, go to the **Releases** tab and **Download** the desired version.
+6. <a id="step-six"></a>Click **Download** to download the latest version of the component (for widgets, version compatibility is not applicable). Or, if you want to download an older component version, go to the **Releases** tab and **Download** the desired version.
     * If you download a widget,  a pop-up window states the module was successfully imported; click **OK**, and you can find the imported widget in the **Toolbox**
     * If you download a module or a connector, the **Import Module** dialog box opens, where you should perform the following steps:
         1. Select one of these options:
@@ -75,9 +77,9 @@ There are three ways to install a Marketplace component, which are described in 
         2. Configure the necessary settings based on your storage choice.
         3. Click **OK**. After the app is downloaded, it opens automatically in Studio Pro.
 
-#### 2.1.1 For Older Versions of Studio Pro {#older}
+#### 2.1.1 For Studio Pro Versions 9.18 and Below
 
-These steps cover downloading content from the Marketplace available in Studio Pro version 9.18 and below:
+To download content in Studio Pro versions [9.18](/releasenotes/studio-pro/9.18/) and below, follow these steps:
 
 1. Open Studio Pro and sign in with your Mendix credentials.
 2. Open the app in which you want to install the component from the Marketplace.
@@ -217,7 +219,7 @@ To update the module in your app to a newer version, follow these steps::
 
 Each module that you download from the Marketplace is different. Some modules can cause errors because they are connected to other modules. For example, after you download the [Database Replication](/appstore/modules/database-replication/) module, you also need to download the [Mx Model Reflection](/appstore/modules/model-reflection/) module to accomplish the configuration. If you run into any problems, always check the **Documentation** tab on the page of this module in the Marketplace for installation guidelines and details on any dependencies.
 
-Keep in mind that some modules you can download may come with their own [user roles](/studio/settings-security/). If the **Security level** of your app is set to **Prototype/demo** or **Production**, you need to map the module roles to the applicable user roles in your app.
+Keep in mind that some modules you can download may come with their own user roles. If the **Security level** of your app is set to **Prototype/demo** or **Production**, you need to map the module roles to the applicable user roles in your app.
 
 ### 3.3  Using a Starter App
 

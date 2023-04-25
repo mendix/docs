@@ -20,10 +20,6 @@ A user's home page can vary based on their [user roles](/refguide/user-roles/).
 At the heart of the navigation model in Mendix, these are the available profiles:
 
 * Responsive
-* Hybrid tablet app online
-* Hybrid tablet app offline
-* Hybrid phone
-* Hybrid phone app offline
 * Tablet web
 * Phone web
 * Native phone
@@ -36,24 +32,11 @@ The device type of the currently logged-in user is available in [microflows](/re
 
 Every app always has one profile of a Responsive type which cannot be deleted. This is the default profile used by a Mendix app. This profile can be used to make web applications.
 
-### 2.2 Hybrid Profiles {#hybrid-profiles}
-
-A Mendix app can be installed on a tablet or phone as an app by creating a [local build](/howto8/mobile/build-hybrid-locally/) hybrid package. Hybrid profiles can be accessed from such a locally built app. Hybrid app profiles are determined by device type (phone or tablet) and by the offline accessibility feature enabled (online or offline). If no profile exists with the requested combination, an error will be displayed in the app.
-
-Hybrid offline apps are designed to allow users to continue using their Mendix app even when they have no internet connection. However, certain restrictions apply. For an overview of the ramifications of running an offline device profile, see [Offline First](/refguide/offline-first/).
-
-Four different hybrid profiles are available:
-
-* Hybrid tablet app online
-* Hybrid tablet app offline
-* Hybrid phone
-* Hybrid phone app offline
-
-### 2.3 Tablet Web
+### 2.2 Tablet Web
 
 All the users accessing a Mendix app from a browser on a tablet will automatically be redirected to a profile of the Tablet web type. If no profile exists of that type, the user will be redirected to the Responsive profile. This profile can be used to make web applications.
 
-### 2.4 Phone Web
+### 2.3 Phone Web
 
 All the users accessing the Mendix app from a browser on a phone will automatically be redirected to a profile of the Phone web type. If no profile exists of that type, the user will be redirected to the Responsive profile. This profile can be used to make web applications.
 
@@ -75,7 +58,7 @@ Mendix Runtime automatically redirects users to the home page of the appropriate
 
 To configure the regular expressions used to match phone or tablet users, see [Runtime Customization](/refguide/custom-settings/).
 
-It is also possible to force the client to use a specific profile by adding a `profile` query string parameter to the URL when visiting a Mendix application. The possible values are the names of the profiles, which are Responsive, Tablet, Phone, HybridTablet, and HybridPhone. For example:
+It is also possible to force the client to use a specific profile by adding a `profile` query string parameter to the URL when visiting a Mendix application. The possible values are the names of the profiles, which are Responsive, Tablet, and Phone. For example:
 
 `https://myapp.mendixcloud.com/index.html?profile=Responsive`
 
@@ -105,7 +88,7 @@ The default home page indicates which [page](/refguide/page/) or [microflow](/re
 The default home page is visible to all unauthenticated users.
 {{% /alert %}}
 
-#### 4.2.2 Role-Based Home Pages
+#### 4.2.2 Role-Based Home Pages{#role-based}
 
 By using role-based home pages, you can show different home pages for different users. If a user logs in, the first role-based home page of which the user role matches the user role of the user is displayed. If no match is found, the default home page is used.
 

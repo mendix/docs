@@ -16,7 +16,7 @@ cascade:
 
 ## 1 What Is the Developer Portal?
 
-The [Developer Portal](http://sprintr.home.mendix.com) is one of the three key components of the Mendix Platform. The other two are [Mendix Studio Pro](/refguide/modeling/) and [Mendix Studio](/studio/). In the Developer Portal, Mendix developers can collaborate, deploy, and manage their apps, and manage their company and users. 
+The [Developer Portal](http://sprintr.home.mendix.com) is one of the key components of the Mendix Platform. In the Developer Portal, Mendix developers can collaborate, deploy, and manage their apps, and manage their company and users. 
 
 The Developer Portal also offers open, well-defined APIs, enabling third-party developers to integrate their own widgets and plugins. For more information, see [API Documentation](/apidocs-mxsdk/apidocs/).
 
@@ -24,7 +24,7 @@ The Developer Portal also offers open, well-defined APIs, enabling third-party d
 
 To create a new app click **Create App**, which will open a page where you can choose a starting pointing for your new app:
 
-{{< figure src="/attachments/developerportal/create-app.png" >}}
+{{< figure src="/attachments/developerportal/create-app.png" width="150" >}}
 
 On the right side of the top bar, you can search and access your [Mendix Profile](/developerportal/community-tools/mendix-profile/). You can also click the **+** icon to create a new app.
 
@@ -34,12 +34,11 @@ A notification in the form of a red dot next to **Get Started with Mendix** will
 
 On the left side of the top bar, you open an access menu by clicking the **Switch to** menu:
 
-{{< figure src="/attachments/developerportal/switcher.png"   width="300"  >}}
+{{< figure src="/attachments/developerportal/switcher.png" width="300" >}}
 
 You can then access the following parts of the Mendix Platform:
 
 * **Mendix Home** – the [My Apps](/developerportal/#my-apps) page
-* [Studio](/studio/)
 * **Get Studio Pro** – the [Studio Pro](/refguide/) download page in the [Mendix Marketplace](/appstore/)
 * **Cloud**  – the [Nodes](/developerportal/deploy/node-permissions/) page, which shows a list of all the licensed Mendix Cloud nodes to which you have access
     * Clicking **Details** on this page opens the [Environments](/developerportal/deploy/environments/) page for the app that is deployed to a node
@@ -65,7 +64,7 @@ If you want to turn on the old navigation/header, click your avatar and toggle *
 
 The **My Apps** page shows you a summary of your apps:
 
-{{< figure src="/attachments/developerportal/apps-tiles.jpg" alt="Apps tiles" >}}
+{{< figure src="/attachments/developerportal/app-tiles.png" alt="Apps tiles" >}}
 
 **All** displays all the apps for which you are a [Team](/developerportal/collaborate/team/) member. Any apps you pin with the pin icon will appear in the **Pinned** tab. 
 
@@ -82,12 +81,14 @@ By clicking the ellipsis (**…**) in the app tile, you can quickly perform a nu
 
 The actions available depend on the app selected:
 
-* **Edit in Mendix Studio**
 * **Edit in Mendix Studio Pro**
-* **Stop Watching** – disables notifications for the app
 * **Leave App** – allows you to leave the app
 
+To stop watching an app and disable notifications for that app, click the eye symbol so that you see the tooltip **You are not watching this app**. To return to watching that app, click the eye symbol so that you see the tooltip **You are watching this app**.
+
 To go to the [licensed environments](/developerportal/deploy/environments/) of your deployed app, click the cloud icon in the lower-right corner of the app tile.
+
+The **Pending Invites** tab presents the pending invitations to apps that you have received (which you can **Accept** or **Decline**) in addition to the invitations you have sent. 
 
 ## 4 My Company's Apps and Buzz {#my-company-apps}
 
@@ -101,9 +102,7 @@ You can also sort the order of the apps here.
 
 If you click an app for which you are a team member, you will be taken to the app [Buzz](/developerportal/collaborate/buzz/).
 
-If you click an app for which you are not an team member, you will see the app details:
-
-{{< figure src="/attachments/developerportal/app-details.png" alt="Example of app details"   width="400"  >}}
+If you click an app for which you are not an team member, you will see the app details.
 
 For details on **Company Buzz**, see the [Company Buzz](/developerportal/collaborate/buzz/#company-buzz) section of *Buzz*.
 

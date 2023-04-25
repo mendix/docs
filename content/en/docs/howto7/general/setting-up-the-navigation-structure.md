@@ -36,7 +36,7 @@ This section will explain how to set the default home page. Please note that thi
 
     Now every time a user signs in to the application, the selected page/microflow is shown/triggered.
 
-## <a name="Setupthenavigationstructure-Settherolebasedhomepage" rel="nofollow"></a>3 Setting a Role Based Home Page
+## 3 Setting a Role Based Home Page {#Setupthenavigationstructure-Settherolebasedhomepage}
 
 In many cases you want users with different roles to see different home pages. This can be easily achieved with Mendix by use of Role-based home pages. You don't need to configure home pages for every role, because the default home page works as a fall-back mechanism. This section will explain how to set role based home pages.
 
@@ -59,7 +59,7 @@ In many cases you want users with different roles to see different home pages. T
 
     Now every time a user with the **Administrator** user role signs in to the application, the corresponding page 'Account_Overview' is shown. Users with different roles will be redirected to the default home page.
 
-## <a name="Setupthenavigationstructure-Createmenuitems" rel="nofollow"></a>4 Creating menu items
+## 4 Creating menu items {#Setupthenavigationstructure-Createmenuitems}
 
 This section will explain how to create menu items.
 
@@ -76,7 +76,7 @@ This section will explain how to create menu items.
 
     In the overview of menu items you can see the caption of the menu item, the target form or microflow and which user role is needed to be able to see the menu item. The user roles are derived from the page and microflow access settings in the security model. You can restructure the menu by dragging and dropping menu items.
 
-## <a name="Setupthenavigationstructure-Addnavigationmenutopages" rel="nofollow"></a>5 Adding navigation menu to pages
+## 5 Adding navigation menu to pages {#Setupthenavigationstructure-Addnavigationmenutopages}
 
 Now that you've created a menu structure it's time to start using it on pages.
 

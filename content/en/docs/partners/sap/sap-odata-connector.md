@@ -101,7 +101,7 @@ This domain model generally works in the same way as a Mendix domain model, with
 * Every object is based on an entity which is a specialization of the ComplexType, FunctionParameters, or OdataObject entity. The OdataObject entity adds a **meta_objectURI** string, which is the URI of the object and can be used in entity manipulation actions, and a **meta_etag** string that identifies a state of the object. This is used by the OData service when you try to change data to check if it has been changed since it was retrieved by your app.
 * Many objects have attributes which end in …Deferred. These contain URIs which will return a list of objects of an entity type which is associated with the current object. For example: in the domain model above, the **Product** entity contains an attribute **ToSupplierDeferred**. This will contain a URI which can be used to return the **BusinessPartner** associated with the current **Product** object via the **ToSupplier_Product_BusinessPartner** association.
 
-#### 2.3.2 OData Connector for SAP Solutions Domain Model<a name='ConnectorDM'></a>
+#### 2.3.2 OData Connector for SAP Solutions Domain Model {#ConnectorDM}
 
 In addition to the SAP Service Domain Model, there is a domain model which is used internally by the OData Connector for SAP solutions to control the connection between your Mendix app and the SAP back-end. The domain model consists of entities and their relationships represented by associations.
 
@@ -316,9 +316,9 @@ This action refreshes local data which is cached in objects within the Mendix do
     * Return type - Boolean
     * Variable - the name which you would like to give to the Boolean variable which indicates the success or failure of the refresh action.
 
-#### 3.1.8 Update
+#### 3.1.8 Update {#update-put}
 
-The Update operation changes the attributes of an existing entity instance in the SAP back-end system using the OData service.
+The Update operation uses the HTTP PUT method to change the attributes of an existing entity instance in the SAP back-end system using the OData service. If your use case requires that you use the HTTP PATCH method instead, see [Update_PATCH](#update-patch).
 
 {{< figure src="/attachments/partners/sap/sap-odata-connector/update-params.png" >}}
 
@@ -331,6 +331,18 @@ The Update operation changes the attributes of an existing entity instance in th
     * Variable - the name which you would like to give to the Boolean variable indicating the success or failure of the update action
 
 For example, this connector can update details of a product using the **GWSAMPLE_BASIC** service.
+
+#### 3.1.9 Update_PATCH {#update-patch}
+
+The Update_PATCH operation uses the HTTP PATCH method to change the attributes of an existing entity instance in the SAP back-end system using the OData service. If your use case requires that you use the HTTP PUT method instead, see [Update](#update-put).
+
+* Input
+    * Odata object (required) - The Mendix representation of the object containing the updated data which you wish to update.
+    * Destination – a string containing the name of the destination. This matches the name of the destination as set up in the SAP BTP cockpit. If you are not using an SAP Destination Service, set it to *empty*
+    * Request Parameters - This is used to override the default behavior of the action in responding to conditions such as timeouts and HTTP responses. To keep the standard behavior, set it to *empty*
+* Output
+    * Return type - Boolean
+    * Variable - the name which you would like to give to the Boolean variable indicating the success or failure of the update action
 
 ### 3.2 Helper Actions {#HelperActions}
 

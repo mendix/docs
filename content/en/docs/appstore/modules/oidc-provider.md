@@ -107,6 +107,7 @@ You now need to configure the OIDC Provider and Administration modules in the IA
     | Runtime Instances | Open page 'Administration.RunteimInstances' | Administrator |
     | My Account | Call microflow 'Administration.ManageMyAccount' | User |
     | OpenID Connect | Open page 'OpenIDConnectProvider.OpenIDConnect_Dashboard' | Administrator |
+    | Mx Objects | Open page 'MxModelReflection.MxObjects_Overview' | Administrator |
 
 ### 3.3 Configure OIDC Provider
 
@@ -120,7 +121,10 @@ The rest of the configuration can be performed through the app.
 1. Open the **Server Keys** tab.
 1. Click **New Key**.
 1. Open the **Scopes** tab.
-1. Create a **New** scope with the **Scope type** set to **Standard**.
+1. Create **New** scopes with the **Scope type** set to **Standard**.
+
+    This page sets up a single list of all the scopes that are known to the OIDC Provider module. For each client, you can then choose the scopes used by that specific client.
+
 1. Open the **Clients** tab.
 1. Click **New Client Registration**.
 
@@ -246,10 +250,7 @@ To pass this additional information, you need to create custom claims. You can d
 1. Create a microflow which returns a value to the claim.
 1. Run (publish) your app.
 1. Sign in to your app as an Administrator.
-
-    {{% todo %}}Where was MxObjects set up? I don't think we have any navigation to this page set up in 3.2?{{% /todo %}}
-
-1. Open the MxObjects overview page and synchronize the required modules to see the new microflow.
+1. Open the **Mx Objects** overview page and synchronize the required modules to see the new microflow.
 1. Follow the navigation item OpenID Connect to open the page `OpenIDConnectDashboard`.
 1. Switch to the Custom claims tab of your registered client.
 1. Create a new claim.
@@ -274,11 +275,13 @@ Some examples of existing claims are:
 * exp
 * iat
 * nonce
-* com.mendix.user.language
-* com.mendix.user.entity
-* com.mendix.user.attributes
-* com.mendix.user.timezone
-* com.mendix.user.roles
+* com.mendix.user.language¹
+* com.mendix.user.entity¹
+* com.mendix.user.attributes¹
+* com.mendix.user.timezone¹
+* com.mendix.user.roles¹
+
+*¹ The claims starting com.mendix.user are an alpha feature and may be deprecated in a future release in favor of standard claims specified by OIDC protocol. The OIDC SSO (client) module does not process these claims.*
 {{% /alert %}}
 
 ## 4 Configuring an OIDC Client

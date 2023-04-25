@@ -126,7 +126,7 @@ The rest of the configuration can be performed through the app.
 1. Open the **Scopes** tab.
 1. Create **New** scopes with the **Scope type** set to **Standard**.
 
-    This page sets up a single list of all the scopes that are known to the OIDC Provider module. For each client, you can then choose the scopes used by that specific client.
+    This page sets up a single list of all the scopes that are known to the OIDC Provider module. For each client, you can then choose the scopes used by that specific client. See [Configuring Centralized Authorization](#configuring-authorization) for more information on what scopes you should set.
 
 1. Open the **Clients** tab.
 1. Click **New Client Registration**.

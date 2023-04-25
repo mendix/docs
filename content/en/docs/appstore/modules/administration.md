@@ -11,21 +11,21 @@ tags: ["marketplace", "marketplace component", "administration", "user managemen
 
 The [Administration](https://marketplace.mendix.com/link/component/23513) module contains the administration functionality, which allows you to manage local accounts and to view app statistics, such as runtime information, sessions, and schedules events.
 
-## 1.1 Features
+### 1.1 Features
 
 * Support managing user accounts
-* Provide a read-only overview to show the following information
-    * all active sessions
-    * all schedules events
-    * all runtime instances
+* Provide a read-only overview to show the following information:
+    * All active sessions
+    * All schedules events
+    * All runtime instances
 * Support viewing runtime statistics
 
-## 1.2 Dependencies
+### 1.2 Dependencies
 
 * [Atlas UI Resources](https://marketplace.mendix.com/link/component/104730)
 * [Mendix SSO](https://marketplace.mendix.com/link/component/111349): required for the Administration module versions 1.3.X (for example 1.3.2) and 2.1.X (for example 2.1.2)
 
-## 2. Installation
+## 2 Installation
 
 Follow the instructions in [How to Use Marketplace Content in Studio Pro](https://docs.mendix.com/appstore/general/app-store-content/) to import the Administration module into your app.
 

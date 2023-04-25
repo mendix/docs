@@ -12,7 +12,7 @@ tags: ["marketplace", "marketplace component", "OIDC", "IdP", "identity provider
 
 {{% todo %}}Add link to module in Marketplace{{% /todo %}}
 
-The [OIDC Provider](https://example.com) can be used to build a Mendix app that acts as an Identity provider(IdP) for other apps. This app then acts as an IAM broker, providing a Single Sign-On (SSO) experience for the end-users of those applications.
+The [OIDC Provider](https://example.com) can be used to build a Mendix app that acts as an OpenID provider for other apps, providing a Single Sign-On (SSO) experience for the end-users of those applications. This app could also delegate authentication of end-users to another Identity provider (IdP), causing it to act as an IAM broker.
 
 The module supports responsive browser-based applications and has been tested with applications that use the OIDC SSO module. This module can be used in Mendix version 9.22.0 and above.
 
@@ -29,7 +29,7 @@ You can also set up your users manually in your app, using the Mendix Administra
 The following are usage scenarios that would be achievable with the OIDC Broker.
 
 * Mendix customers that want to build an IAM Broker solution that would hide the complexity of a multitude of Mendix apps from their corporate IdP.  By having those apps delegate authentication to the broker and have the broker delegate authentication to their IdP, only one OAuth client needs to be configured at their IdP.  A deployment pipeline (deployment agent) can register additional Mendix apps with the IAM Broker in an automated fashion via an API. 
-* Mendix Solution Vendors (MSVs) who want to simplify the microservice architecture of their solution from the customer by using the IAM Broker as a single IAM integration point for their customers.
+* Mendix Solution Vendors (MSVs) may want to hide the microservice architecture of their solution from the customer. By building an IAM Broker they can offer their customers a single SSO integration point.
 
 See [End-User Account Creation in OIDC Provider](#end-user-account), below for more information on how these two use cases are implemented.
 
@@ -39,14 +39,18 @@ The OIDC Provider has the following features and limitations:
 
 **Features**
 
+* allows for registration of Mendix apps via the client registration endpoint
+* works/integrates with the platform-supported [OIDC SSO](/appstore/modules/oidc/) module
 * It supports responsive web applications, using the common OAuth Authorization Code grant.
-* Your apps can be registered as an OIDC client with the OIDC Provider using the client registration API or client configuration screen.
-* It publishes a well-known endpoint to communicate endpoints and other IdP characteristics to client applications. This can be used by clients to retrieve the keys needed to validate ID-tokens that they receive.
+* Your apps can be registered as an OIDC client with the OIDC Provider using the client registration API or client configuration screen. The client registration API allows you to register your client automatically when using a CI/CD deployment pipeline.
+* It publishes a well-known endpoint to communicate endpoints and other IdP characteristics to client applications. Mendix apps using the OIDC SSO module will consume this endpoint to perform actions like retrieving the keys needed to validate ID-tokens that they receive.
 * It supports the OIDC ‘nonce’ parameter, PKCE, and multiple client authentication methods ( client_secret_post, client_secret_basic) as security features.
     
 **Limitations**
 
-* The hybrid and client credential grants are not supported, although the OIDC Provider may contain some (rudimentary) implementation to support them.
+* The hybrid resource owner password credentials, and client credential grants are not supported, although the OIDC Provider may contain some (rudimentary) implementation to support them.
+* The OIDC Provider module ignores "email", "phone" and "profile" scope values (as specified by OIDC specs) when the client includes these in a authentication request . Instead, the OIDC Provider module will include user claims in an ID-token based on a custom microflow, regardless of the scopes in the request.
+* Front channel and back-channel logout are implemented as alpha features.
 * The current implementation of setting custom claims in the generated ID-tokens is not working properly in this release as the custom attribute names that you would define is incorrectly set in the ID-token. If you want to set custom claims, you will have to customize the OIDC Provider module.
 
 ### 1.3 Dependencies
@@ -88,7 +92,7 @@ To configure the app security, do the following:
 
 ### 3.2 Configure App Modules
 
-You now need to configure the OIDC Provider and Administration modules in the IAM Broker app.
+Every end-user that is known in Admin module also needs to be known in the OIDC Provider module. Access has to be given to allow an OIDCProvier.AccountDetail record to be created for every Administration.Account record when the end-user signs in. This can be achieved by the following steps:
 
 1. Open the **Domain model** of the **Administration** module.
 1. Edit the **Account** entity.

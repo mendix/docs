@@ -95,7 +95,7 @@ The URL for downloading the SP metadata of your app is independent of the value 
     {{% alert color="warning" %}}The SAML module writes configuration data to a file document on the file storage to read it later. Without external file storage, this configuration will be lost when you restart your app. The SAML module will not work correctly without reading the configuration data from the file storage.
     {{% /alert %}}
 
-* For apps running on a Microsoft Windows environment, add the following rule to the [Microsoft Internet Information Services Server Configuration](#configure-msiis):
+* For apps running on a Microsoft Windows environment, add the following rule to the [Microsoft Internet Information Services Server Configuration](/developerportal/deploy/deploy-mendix-on-microsoft-windows/#configure-msiis):
 
     ```xml {linenos=false}
     <rule name="sso">

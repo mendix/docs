@@ -15,8 +15,9 @@ cascade:
 ---
 
 {{% alert color="warning" %}}
-Mendix 10 is currently in Beta. For more information about Beta releases and features, see [Beta releases](/releasenotes/beta-features/).
+Mendix 10 is currently in Beta. For more information about Beta releases and features, see [Beta Releases](/releasenotes/beta-features/).
 {{% /alert %}}
+
 ## 1 Introduction
 
 The *Mendix Studio Pro 10 Guide* covers important topics concerning [Studio Pro](/refguide/modeling/), the [Mendix Runtime](/refguide/runtime/), and other components of the Mendix Platform.

@@ -237,7 +237,7 @@ The **Free Environments** tab presents details on your company's free environmen
 ## 11 Entitlements {#entitlements}
 
 {{% alert color="info" %}}
-This feature is currently in Beta. For more information about Beta features, see [Beta releases](/releasenotes/beta-features/).
+This feature is currently in Beta. For more information about Beta features, see [Beta Releases](/releasenotes/beta-features/).
 {{% /alert %}}
 
 The **Entitlements** page is a self-service tool that displays the transactions (such as purchases of cloud credits, or provisioning of new environments) registered for your organization. You can use the page to monitor your resource entitlements and your consumption of cloud credits.

@@ -16,8 +16,9 @@ cascade:
 ---
 
 {{% alert color="warning" %}}
-Mendix 10 is currently in Beta. For more information about Beta releases and features, see [Beta releases](/releasenotes/beta-features/).
+Mendix 10 is currently in Beta. For more information about Beta releases and features, see [Beta Releases](/releasenotes/beta-features/).
 {{% /alert %}}
+
 ## 1 Introduction
 
 Browse the *Studio Pro 10 How-tos* to find step-by-step guides that will teach you how to build and customize apps with Mendix.

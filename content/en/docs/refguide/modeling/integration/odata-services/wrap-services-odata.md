@@ -116,10 +116,6 @@ When you use a microflow to provide data, any security constraints are applied t
 
         If the **ODataResponse** is present as a microflow parameter, then it will return the **Count** attribute value regardless of the result list of objects. Otherwise, it will return -1 for not defined, which is the default value. A **Count** value of 0 means that there no record.
 
-{{% alert color="info" %}}
-In Studio Pro [9.17](/releasenotes/studio-pro/9.17/) and above, the count value can be stored in the `ODataResponse` object.
-{{% /alert %}}
-
 ## 5 Key Selection When Exposing Entities as OData Resources {#select-key}
 
 Select which attribute(s) to use as a [key](/refguide/published-odata-resource/#key) when exposing an entity as Published OData Resource so that clients will be able to identify objects returned by the service.

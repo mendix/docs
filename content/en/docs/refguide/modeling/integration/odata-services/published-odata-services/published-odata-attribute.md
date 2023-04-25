@@ -40,8 +40,6 @@ The type of the attribute.
 
 This field is shown when the type is an enumeration that was previously exposed as a string, and only for OData version 4. Change the value to **Enumeration** to publish the enumeration. This informs clients of the possible values of this attribute.
 
-In Studio Pro 9.23 and below, enumeration attributes were published as strings.
-
 ### 2.7 Capabilities
 
 Select **Sortable** to allow clients to sort results based on this attribute.

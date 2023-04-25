@@ -18,26 +18,25 @@ Mendix Studio Pro has the requirements listed in the following sections.
 
 ### 2.1 Software Specifications
 
-Mendix [Studio Pro](/refguide/modeling/) version 9 is supported on 64-bit versions of Windows 10 release 1809 and above. This also includes Windows 11. MTS versions starting from Mendix Studio Pro 9.6.5 and Mendix Studio 9.9.1 are enabled and tested to run on Apple Silicon Macs such as the M1, which requires [Parallels 17](https://www.parallels.com/) and Windows 11.
+Mendix [Studio Pro](/refguide/modeling/) 10 is supported on 64-bit versions of Windows 10 release 1809 and above. This also includes Windows 11. Studio Pro 10 versions are enabled and tested to run on Apple Silicon Macs such as the M1, which requires [Parallels 17](https://www.parallels.com/) and Windows 11.
 
 The following frameworks are required. They will be installed automatically by the Studio Pro installer if necessary:
 
 * Microsoft .NET 6.0.x desktop runtime (x64) and all applicable Windows security patches
-* Microsoft Visual C++ 2015 Redistributable Package (x64)
+* Redistributable Package (x64)
 * Microsoft Visual C++ 2019 Redistributable Package (x64)
-* A Java Developer Kit (JDK) version 11 - the flavor which will be installed, if Java 11 is not already installed on your machine, depends on which version of Studio Pro you are installing
-    * AdoptOpenJDK 11 (x64) – for Mendix versions below 9.14.0
-    * Adoptium Temurin JDK 11 (x64) – for Mendix versions from 9.14.0 and below 9.18.0
-    * Eclipse Temurin JDK 11 (x64)– for Mendix versions 9.18.0 and above
+* A Java Developer Kit (JDK) version 11 - the flavor which will be installed, if Java 11 is not already installed on your machine, you are installing:
+    * Eclipse Temurin JDK 11 (x64)
     
     Oracle JDK 11 can also be used if this is already installed.
 * Git for Windows (x64)
 * Mendix Native Mobile Builder
 * Microsoft Edge WebView2 Evergreen Runtime (x64)
 
-If you are running Studio Pro on an ARM64 device (for example, an M1 Mac), you need the following version of .NET 6 in addition to the x64 version listed above:
+When you are running Studio Pro on a Parallels virtual machine on an ARM64 device (for example, an M1 Mac), you need the following dependencies in addition to the x64 version listed above:
 
 * .NET 6 Desktop Runtime (arm64)
+* Microsoft Edge WebView2 Evergreen Runtime (arm64)
 
 {{% alert color="info" %}}
 You can choose which JDK is used for building and running locally via the **Edit** > **Preferences** menu item in Studio Pro.
@@ -68,7 +67,7 @@ To run a Mendix app, Mendix Studio Pro uses the following ports by default. If y
 * 8080: runtime port
 * 8083: mobile packager
 * 8090: admin port
-* 8100: sign-in port (for version 9.18 and above)
+* 8100: sign-in port
 
 For more information on ports and modifying Studio Pro's default ports, see [Configurations](/refguide/configuration/) and the [Troubleshooting Common Mobile Issues](/refguide/mobile/getting-started-with-mobile/prerequisites/#troubleshooting) section of *Native App Prerequisites and Troubleshooting*.
 
@@ -136,32 +135,24 @@ The [Team Server](/developerportal/collaborate/team-server/) is implemented usin
 * The HTTP port (TCP 80) needs to be open
 * WebDAV (verbs within the HTTP protocol) needs to be enabled on the proxy server (if any)
 
-## 4 Mendix Studio
-
-[Mendix Studio](/studio/) is optimized for use with Google Chrome. While Chrome is the officially supported browser, you can also use Mendix Studio with other popular browsers like Mozilla Firefox, Apple Safari, and Microsoft Edge. 
-
-{{% alert color="info" %}}
-The browser you use needs to have JavaScript turned on.
-{{% /alert %}}
-
-## 5 Cloud Foundry
+## 4 Cloud Foundry
 
 The [Mendix Cloud Foundry buildpack](https://github.com/mendix/cf-mendix-buildpack) supports Cloud Foundry versions v9 and above. 
 
-## 6 Docker
+## 5 Docker
 
 The [Mendix Docker buildpack](https://github.com/mendix/docker-mendix-buildpack) supports Docker version 18.09.0 and above. 
 
-### 6.1 Kubernetes
+### 5.1 Kubernetes
 
 The Mendix Docker buildpack supports the following Kubernetes versions: 
 
 * Kubernetes version v1.12 and above
 * Red Hat OpenShift v3.11 and v4.2 and above
 
-## 7 Server
+## 6 Server
 
-### 7.1 Operating System {#server-os}
+### 6.1 Operating System {#server-os}
 
 * Microsoft Windows Server 2008 SP2 and above
 * The following Unix-like operating systems:
@@ -169,34 +160,29 @@ The Mendix Docker buildpack supports the following Kubernetes versions:
     * Red Hat Enterprise Linux 6, Red Hat Enterprise Linux 7, and Red Hat Enterprise Linux 8
     * CentOS 6, CentOS 7
 
-### 7.2 Web Server
+### 6.2 Web Server
 
 * Microsoft Internet Information Services 7 and above
 * Nginx (tested with versions included in Debian Jessie and Debian Jessie Backports)
 * Apache
 
-### 7.3 Java {#java}
+### 6.3 Java {#java}
 
 When running Mendix on a server, you will need Java Runtime Environment (JRE) 11. To download an OpenJDK distribution from Adoptium, see [Adoptium Installation](https://adoptium.net/temurin/releases). To download a commercial Oracle distribution, see [Java SE Downloads](http://www.oracle.com/technetwork/java/javase/downloads/index.html).
 
-{{% alert color="info" %}}
-There is an issue since Java 7 that causes timeouts when using web services with a certain amount of data. You can circumvent this issue by adding the VM params `-Djava.net.preferIPv4Stack=true`. Mendix Studio Pro will do this for you, but if you are running Mendix on premises on a Windows server, you will need to do this yourself. For more information about this issue, see [Possible Bug in Java 7](https://community.oracle.com/tech/developers/discussion/comment/9987709).
-{{% /alert %}}
-
-## 8 Databases {#databases}
+## 7 Databases {#databases}
 
 Mendix tries to support the most recent and patched database server versions from database vendors. We aim to add support for a new vendor version two minor Mendix versions after the vendor has released it. Dropping support for a database will be announced in the release notes at the date the vendor drops support. We will drop support two minor Mendix versions later.
 
 Current support:
 
-* [MariaDB](/refguide/mysql/): 10.2, 10.3, 10.4, 10.5, 10.6, 10.11 (please note that support for 10.2 is deprecated and will be removed in Studio Pro versions 9.22.0, 9.18.5, 9.12.11, and 9.6.17)
+* [MariaDB](/refguide/mysql/): 10.3, 10.4, 10.5, 10.6, 10.11
 * [Microsoft SQL Server](/developerportal/deploy/mendix-on-windows-microsoft-sql-server/): 2019, 2022
 * [Azure SQL](https://docs.microsoft.com/en-us/sql/t-sql/statements/alter-database-transact-sql-compatibility-level?view=sql-server-2017): v12 compatibility mode 140 or higher
 * [MySQL](/refguide/mysql/): 8.0
 * [Oracle Database](/refguide/oracle/): 19, 21c
 * PostgreSQL: 11, 12, 13, 14, 15
 * [SAP HANA](/refguide/saphana/): 2.00.040.00.1545918182
-* [IBM DB2](/refguide/db2/): 11.5 for Linux, Unix, and Windows (please note that support for DB2 is deprecated and will be removed in Studio Pro version 10)
 
 {{% alert color="warning" %}}
 Each app must have its own database. Mendix apps cannot share data by sharing the same database.
@@ -206,9 +192,9 @@ If you want two apps to share the same database, then you need to share the data
 For more information on why data cannot be shared between apps see [Data Storage](/refguide/data-storage/#databases). Use the [Database Replication](/appstore/modules/database-replication/) module if you need to copy the data from one app to another.
 {{% /alert %}}
 
-## 9 File Storage {#file-storage}
+## 8 File Storage {#file-storage}
 
-### 9.1 Storage Services for Containers
+### 8.1 Storage Services for Containers
 
 For container-based deployments using Docker, Kubernetes, or Cloud Foundry, the following storage services are supported:
 
@@ -220,7 +206,7 @@ For container-based deployments using Docker, Kubernetes, or Cloud Foundry, the 
 
 For container-mounted storage in Kubernetes, provided by an external storage class, see also [Use Docker with Minikube](/developerportal/deploy/run-mendix-on-kubernetes/).
 
-### 9.2 Storage Types for Servers
+### 8.2 Storage Types for Servers
 
 For server-based installations, the following storage types mounted by the OS are supported:
 
@@ -229,7 +215,7 @@ For server-based installations, the following storage types mounted by the OS ar
 * GFS
 * Local Storage 
 
-## 10 Browsers {#browsers}
+## 9 Browsers {#browsers}
 
 * Google Chrome (latest stable desktop and Android versions)
 * Mozilla Firefox (latest stable desktop version)
@@ -237,36 +223,26 @@ For server-based installations, the following storage types mounted by the OS ar
 * Microsoft Edge (latest stable desktop version)
 
 {{% alert color="warning" %}}
-Internet Explorer is no longer supported in Studio Pro 9. As the market is moving away from Internet Explorer and Mendix continues to align with the best practices of the modern web ecosystem, we have dropped support for Internet Explorer 11. This allows us to keep in line with user expectations. Removing support has already improved app loading times and performance, and it will enable us to continue making improvements and innovating using modern web features.<br />
-<br />
-As of Studio Pro 9, app end-users still using IE will be shown an **Unsupported Browser** message stating that upgrading to a modern browser is required. You can [customize this message](/howto/front-end/customize-styling-new/#customize-unsupported-browsers) to meet your needs.<br />
-<br />
-If you still need to support IE11, note that Studio Pro [8](/releasenotes/studio-pro/8.18/) and [7](/releasenotes/studio-pro/7.23/) will continue supporting IE11. Mendix recommends using Studio Pro 8 or 7 until your app end-users have upgraded their browsers.
+Internet Explorer is not supported in Studio Pro 10.
 {{% /alert %}}
 
-## 11 Mobile Operating Systems {#mobileos}
+## 10 Mobile Operating Systems {#mobileos}
 
-For native and hybrid apps built with Mendix the following operating system versions are supported:
+For native and progressive web apps built with Mendix the following operating system versions are supported:
 
 * Latest version of iOS
 * Latest three versions of Android
 
 Only devices running on these operating system versions receive up-to-date security fixes from their vendors and thus minimize being vulnerable to known exploits.
 
-You can build native and hybrid apps with Mendix that run on older operating system versions than the ones we support. However, to receive official Mendix support you must demonstrate that your problem also occurs on a supported operating system version.
+You can build native and progressive web apps with Mendix that run on older operating system versions than the ones we support. However, to receive official Mendix support you must demonstrate that your problem also occurs on a supported operating system version.
 
-We recommend the following minimum hardware requirements for all mobile devices running native and hybrid Mendix apps:
+We recommend the following minimum hardware requirements for all mobile devices running native and progressive web Mendix apps:
 
 * CPU: minimum 2 cores with 2 GHz
 * Memory: minimum 2 GB
 
 Depending on your app's complexity, these minimum hardware requirements might not be sufficient and should be adjusted.
-
-### 11.1 Hybrid Apps Preview
-
-Using a hybrid preview feature is not the same as testing an app on a phone or simulator. A hybrid preview only shows a resized view of an app to give an impression of what that app might look like on a mobile device. Some hybrid app functionality will not be supported in this browser view. Full tests always need to be done on a device or emulator. Offline apps can only be previewed in Google Chrome.
-
-Hybrid apps cannot be tested in Android Emulator, only on a real device.
 
 ## 12 MxBuild {#mxbuild}
 
@@ -275,7 +251,7 @@ MxBuild is a Windows and Linux command-line tool that can be used to build a Men
 * Mono v5.20.x or .NET v4.7.2
 * JDK 11
 
-## 13 mx Command-Line Tool {#mxtool}
+## 12 mx Command-Line Tool {#mxtool}
 
 The **mx** command-line tool is a Windows and Linux command-line tool that can be used to do useful things with your Mendix app. For more information, see [mx Command-Line Tool](/refguide/mx-command-line-tool/).
 

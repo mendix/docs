@@ -6,9 +6,9 @@ description: "These release notes showcase each release of the iOS and Android M
 tags: ["Native", "Android", "iOS", "Apple", "mendix 8"]
 ---
 
-For more information on the Make It Native app, see [Getting the Make It Native App](/refguide/getting-the-make-it-native-app/).
+For more information on the Make It Native app, see [Getting the Make It Native App](/refguide9/getting-the-make-it-native-app/).
 
-You can download the Make It Native app for [iOS](https://apps.apple.com/app/make-it-native/id1334081181) or [Android](/refguide/getting-the-make-it-native-app/).
+You can download the Make It Native app for [iOS](https://apps.apple.com/app/make-it-native/id1334081181) or [Android](/refguide9/getting-the-make-it-native-app/).
 
 ## Android 2.2.2 / iOS 2.2.2
 
@@ -76,7 +76,7 @@ Due to upgrades to our dependencies, neither version of Make It Native 2.0.0 is 
 {{% alert color="info" %}}
 If you are working in Mendix Studio Pro 8.8 or higher, you must update your Make It Native app to this version. 
 
-For older versions of Studio Pro please install the appropriate legacy app [here](/refguide/getting-the-make-it-native-app/).
+For older versions of Studio Pro please install the appropriate legacy app [here](/refguide9/getting-the-make-it-native-app/).
 {{% /alert %}}
 
 ### New Features

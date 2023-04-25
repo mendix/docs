@@ -253,14 +253,6 @@ Below is an example of using an external dependency based on [pdf-lib](https://g
     // BEGIN EXTRA CODE
     ```
 
-#### 2.2.7 Understanding Hybrid App External Dependencies
-
-The Mendix hybrid app ships with a large set of plugins by default. For more details on default plugins, see the [November 20th, 2018 Version Upgrades](/releasenotes/mobile/hybrid-app/#upgrades-20) section of the *Hybrid App Base and Template* release notes.
-
-It is also possible to add new plugins during a mobile build.
-
-The actual list of plugins use can be found in *config.xml* inside your deployment package.
-
 ### 2.3 Understanding Returns
 
 The JavaScript action can specify a return type such as Integer, DateTime, Object, List of object, and Generics. For more information on returns, see [JavaScript Actions](/refguide/javascript-actions/).
@@ -458,7 +450,7 @@ Well-documented actions are easier to reuse. Consider the following when documen
 
 An extensive test app can help make a JavaScript action more robust. Within a test app, try to create all possible variations of the input, accounting for empty inputs and error cases that should be handled.
 
-When testing, make sure you to check all compatible platforms (web, hybrid, and native). The web should handle the Mendix browser compatibility. For further information about compatibility, see the [Browsers](/refguide/system-requirements/#browsers) section of *System Requirements*. 
+When testing, make sure you to check all compatible platforms (web and native). The web should handle the Mendix browser compatibility. For further information about compatibility, see the [Browsers](/refguide/system-requirements/#browsers) section of *System Requirements*. 
 
 When an action is not compatible with the platform, make sure it can be checked with an additional action before running into an error. For example, employ a `CheckCameraSupport` action before starting a camera. When an action is called but not compatible, it should fail gracefully or display a clear error message. 
 

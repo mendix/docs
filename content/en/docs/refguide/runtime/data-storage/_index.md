@@ -55,3 +55,19 @@ You now try to deploy `Order Viewer` to use the same database as `Order Processi
 If you want to share data between apps, you should set up a *microservices* architecture. In short, identify one app which you want to use to store the data. This app will now do all the creating, reading, updating, and deleting of the data. It will publish an API to allow other apps to access the data using, for example, [OData](/refguide/published-odata-services/) or [Data Hub](/data-hub/share-data/). Other apps can then consume this API to use the data. This ensures that there is only one source for the data and that it is kept consistent.
 
 An alternative is to copy the data to another app, for example using the [Database Replication](/appstore/modules/database-replication/) module. This however, will be a snapshot of your data at the time you replicate it and changes to the data made in the original app will not be reflected in your new app.
+
+## 4 Database Transactions and Locking
+
+### 4.1 Database Record Locks
+
+Mendix does not use read locks on the database. Therefore, object reads can always be performed. A database write lock is put in place for the first object commit. If there are overlapping update transactions on the same object, the first update transaction puts a write lock on the database object. The next update transaction waits until the first one finishes before executing. However, if the first update process takes an inordinate amount of time, it may cause a timeout.
+
+When users or microflows make changes to database records, all changes will execute in a transaction. Write locks are placed on individual records the moment they are committed. Until this point no locks will be placed on the data. For more information on the differences between transaction commits and object commits, see the [How Commits Work](/refguide/committing-objects/#how-commits-work) section in *Commit Object(s)*.
+
+When the record gets locked, as long as the transaction is executing, no other users or processes are able to change the data. The uncommitted information is not visible for others. The changed data becomes available for other users to read only after the transaction completes. While the transaction is running, other users are able to read and change the previously persisted version of the data. Any changes from other processes will be applied when the transaction completes and the initial write lock is lifted, overwriting the previous changes.
+
+### 4.2 Transaction Isolation
+
+To ensure data validity and improve database performance in a multiuser environment, Mendix isolates concurrent database transactions. Isolation is done by using the `Read Committed` isolation level. This is the default isolation setting for PostgreSQL databases. Mendix relies on the implementation of `Read Committed` in the database. If you use a different database, the results of `Read Committed` might vary due to a different implementation of the isolation level.
+
+For more information on how `Read Committed` works in PostgreSQL, see [PostgreSQL Read Committed documentation](https://www.postgresql.org/docs/12/transaction-iso.html#XACT-READ-COMMITTED).

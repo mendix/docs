@@ -13,7 +13,7 @@ aliases:
 Guides in this section will help you implement key features of native apps and/or progressive web apps (PWAs).
 
 * [Deep Links](/refguide/mobile/using-mobile-capabilities/deep-links/): native apps can define a custom URL scheme (for instance, `my-app://`) that allows other apps to access pages and functionalities of the app
-* [Internationalize Mobile Apps](/refguide/mobile/using-mobile-capabilities/): this guide allows your end-user to change the interface language on their mobile device within a Mendix mobile app
+* [Internationalize Mobile Apps](/refguide/mobile/using-mobile-capabilities/native-language-change/): this guide allows your end-user to change the interface language on their mobile device within a Mendix mobile app
 * [Location and Maps](/refguide/mobile/using-mobile-capabilities/location-and-maps/): native apps can access the user location and display native maps inside the application
 * [Push Notifications](/refguide/mobile/using-mobile-capabilities/push-notifications/): native apps can present a notification to the user that is triggered by the runtime even if the app is not running
 * [Local Notifications](/refguide/mobile/using-mobile-capabilities/location-and-maps/): in addition to push notifications, native apps can schedule notifications to be shown at a specific time even if the app is not running

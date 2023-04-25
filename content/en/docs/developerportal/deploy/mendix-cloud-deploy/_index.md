@@ -35,7 +35,7 @@ A Free App has a number of limitations compared to a licensed app. The main limi
 | App vCPUs | 0.5 | Depends on your [pricing plan](#plans). |
 | Scheduled events | Are not run. | Are run and can be configured from the Developer Portal. |
 | Environments | Single environment in the Mendix Cloud. | A node in the cloud which has one or more environments, for example, production, acceptance, and test. |
-| Deployment | Can only be deployed to the cloud from Mendix Studio or Studio Pro. | Can be deployed from the Studios, or from the Developer Portal. |
+| Deployment | Can only be deployed to the cloud from Mendix Studio Pro. | Can be deployed from Mendix Studio Pro, from the Developer Portal, or through an API. |
 | Custom domains | Not available. | Can be configured from the Developer Portal. |
 | Access restriction profiles | Not available. | Can be configured from the Developer Portal. |
 | Client certificates | Not available. | Can be configured from the Developer Portal. |
@@ -205,8 +205,6 @@ With a Free App, you can deploy your app to the Mendix Cloud from Studio or Stud
 * Alternatively, in the top bar of Studio Pro, click **Run** or **Publish**.
 
     {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/runapp.png" alt="The Run icon and the Publish button" >}}
-
-* Instead of Studio Pro, you can also deploy your app from Studio. For more information, see the [Publishing Your App](/studio/publishing-app/#publishing-your-app) section of *Previewing and Publishing Your App*.
 
 ## 3 Status of Deployment
 

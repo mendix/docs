@@ -2,7 +2,7 @@
 title: "Data Hub Catalog"
 url: /data-hub/data-hub-catalog/
 description: "Describes the processes and properties of Data Hub Catalog."
-weight: 30
+weight: 1
 no_list: false
 description_list: true
 tags: ["data hub", "data hub catalog"]
@@ -10,14 +10,14 @@ tags: ["data hub", "data hub catalog"]
 
 ## 1 Introduction
 
-The Data Hub Catalog is a development tool provided in the Mendix Cloud. OData REST services provided by Mendix Apps running in the Mendix Cloud, [published OData services](/refguide/published-odata-services/), will automatically be registered in the Catalog upon deployment. This provides you with an up-to-date view of all the OData REST APIs published and consumed by your Mendix apps. These assets can be [curated](/data-hub/data-hub-catalog/curate/) registered assets are curated in the Data Hub Catalog to ensure that they are exposed to the relevant users and can be found easily. The [Data Hub Landscape](/data-hub/data-hub-landscape/), part of the Catalog, is a graphical representation of the relationship between apps and services.
+The Data Hub Catalog is a development tool provided in the Mendix Cloud. OData REST services provided by Mendix Apps running in the Mendix Cloud, [published OData services](/refguide/published-odata-services/), will automatically be registered in the Catalog upon deployment. This provides you with an up-to-date view of all the OData REST APIs published and consumed by your Mendix apps. These assets can be [curated](/data-hub/data-hub-catalog/curate/) in the Data Hub Catalog to ensure that they are exposed to the relevant users and can be found easily. The [Data Hub Landscape](/data-hub/data-hub-landscape/), part of the Catalog, is a graphical representation of the relationship between apps and services.
 
 {{% alert color="info" %}}
 If you deploy your Mendix apps in an alternative environment, like on-prem or private cloud, you can use the Data Hub Catalog APIs to register your apps and services in the Data Hub Catalog to enable visibility of your deployed APIs. For information about using Data Hub for local deployment, see [Data Hub without Mendix Cloud](/data-hub/data-hub-without-mendix-cloud/).{{% /alert %}}
 
 ## 2 Data Hub Catalog Home {#data-hub-home}
 
-From the Data Hub Catalog [Home](https://hub.mendix.com) screen, you can carry out the major functions of Data Hub. You can navigate to the following tabs:
+From the Data Hub Catalog [Home](https://hub.mendix.com) screen, you can navigate to the following tabs:
 
 * **Home** – search in the Data Hub Catalog, manually register a service from different applications, select from the most popular services
 * **Catalog** – [search](/data-hub/data-hub-catalog/search/) for registered assets in the search pane and see details of the metadata of selected asset
@@ -72,7 +72,7 @@ You can add tags and descriptions, edit app owners, and toggle discoverability t
 
 ## 4 Information Available in the Data Hub Catalog
 
-In the Data Hub Catalog, all the information for registered assets is displayed in the [Catalog search details](/data-hub/data-hub-catalog/search/#search-details) screen. This information comes from the metadata in the OData service contract, and also from additional metadata that is added when registered assets are curated. Registered assets can be curated by owners, [Data Hub curators](/data-hub/#curator), and [Mendix Admins](/data-hub/#admin).
+In the Data Hub Catalog, all the information for registered assets is displayed in the [Catalog search details](/data-hub/data-hub-catalog/search/#search-details) screen. This information comes from the metadata in the OData service contract, and also from additional metadata that is added when registered assets are curated. Registered assets can be curated by owners, [Data Hub curators](/data-hub/data-hub-catalog/manage-data-sources/user-roles/#curator), and [Mendix Admins](/data-hub/data-hub-catalog/manage-data-sources/user-roles/#admin).
 
 The information that is registered for data sources and exposed datasets are as follows:
 

@@ -7,6 +7,16 @@ Build status:
 * production [![Build Status](https://secure.travis-ci.org/mendix/docs.png?branch=production)](https://app.travis-ci.com/github/mendix/docs)
 * development [![Build Status](https://secure.travis-ci.org/mendix/docs.png?branch=development)](https://app.travis-ci.com/github/mendix/docs)
 
+## Working in the Mx10 Private Repo
+
+To make Mx10 Beta 1 updates here, please do the following:
+
+1. Create a separate branch off of the `mx-10-branch`.
+    1. Do not commit directly to `development` or `production`!
+2. Make your documentation changes.
+3. Create a pull request with those changes. Make sure you chose the `mx-10-branch` as the base branch.
+4. Your component’s dedicated technical writer will be assigned to review your work.
+
 ## Contribute
 
 Want to contribute? Take a look at [How to Contribute to the Mendix Documentation](https://docs.mendix.com/developerportal/community-tools/contribute-to-the-mendix-documentation). It will guide you through the process of submitting updates to the docs directly from Github or from a local branch.

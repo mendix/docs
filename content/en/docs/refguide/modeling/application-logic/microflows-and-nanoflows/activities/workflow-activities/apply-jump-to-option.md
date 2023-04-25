@@ -7,9 +7,6 @@ tags: ["studio pro", "workflow", "jump-to option", "apply jump-to option"]
 
 {{% alert color="warning" %}}
 This activity can only be used in **Microflows**.
-
-This activity was introduced in Studio Pro [9.17.0](/releasenotes/studio-pro/9.17/#9170). 
-
 {{% /alert %}}
 
 ## 1 Introduction

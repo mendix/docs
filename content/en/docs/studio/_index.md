@@ -2,10 +2,11 @@
 title: "Studio 9 Guide"
 url: /studio/
 tags: ["studio", "web modeler"]
-weight: 65
+weight: 67
 cascade:
     - space: "Studio 9 Guide"
     - mendix_version: "9"
+    - old_content: true
     - sitemap:
         priority: 0.4
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.

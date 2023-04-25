@@ -54,7 +54,7 @@ Mendix Studio Pro will run on any machine which can run the [minimum requirement
 * **RAM** – 4GB
 * **Display Resolution** –  1080p (1920x1080)
 
-### 2.1 Firewall Settings {#firewall-settings}
+### 2.3 Firewall Settings {#firewall-settings}
 
 Studio Pro needs access to the following URLs in order to work. If your firewall is blocking these, you will need to safelist them:
 
@@ -71,7 +71,7 @@ To run a Mendix app, Mendix Studio Pro uses the following ports by default. If y
 
 For more information on ports and modifying Studio Pro's default ports, see [Configurations](/refguide/configuration/) and the [Troubleshooting Common Mobile Issues](/refguide/mobile/getting-started-with-mobile/prerequisites/#troubleshooting) section of *Native App Prerequisites and Troubleshooting*.
 
-### 2.2 TortoiseSVN
+### 2.4 TortoiseSVN
 
 If you want to use TortoiseSVN in combination with Studio Pro, download the latest version from the [TortoiseSVN](https://tortoisesvn.net/) website.
 
@@ -81,13 +81,13 @@ Mendix Studio Pro uses the Subversion 1.9 working copy. Previous versions of the
 Always use the version of TortoiseSVN which matches your app model. If you open a local model from Mendix version 7.x with the latest version of TortoiseSVN **you will no longer be able to open it in Mendix**.
 {{% /alert %}}
 
-### 2.3 File Locations
+### 2.5 File Locations
 
 For active development and running your application locally, your app folder should be on local drive (such as C:) or on a network folder that has been mapped to a [Windows drive letter](https://support.microsoft.com/en-us/windows/map-a-network-drive-in-windows-10-29ce55d1-34e3-a7e2-4801-131475f9557d).
 
-### 2.4 Supported Git Service Providers {#supported-providers}
+### 2.6 Supported Git Service Providers {#supported-providers}
 
-#### 2.4.1 Azure Repos and Azure DevOps Server 
+#### 2.6.1 Azure Repos and Azure DevOps Server 
 
 We support both Microsoft’s [Azure Repos](https://azure.microsoft.com/en-us/services/devops/repos/) hosted Git service, and Azure DevOps Server (former Team Foundation Server) which is an on-premises solution for hosting your Git repos on private infrastructure.
 
@@ -95,7 +95,7 @@ To get a PAT for your user account, see the [Use personal access tokens](https:/
 
 You need `Code (full)` permission for your token.
 
-##### 2.4.2 GitHub 
+##### 2.6.2 GitHub 
 
 We support GitHub’s hosting solutions, including the free GitHub.com cloud-hosted service and GitHub Enterprise, both hosted (Enterprise Cloud) and on-premises (Enterprise Server).
 
@@ -103,7 +103,7 @@ To get a PAT for your user account, see the [Creating a personal access token](h
 
 You need `repo` permissions for your token.
 
-##### 2.4.3 GitLab 
+##### 2.6.3 GitLab 
 
 We support all tiers of GitLab’s service, including GitLab.com, GitLab Community Edition, and GitLab Enterprise Edition.
 
@@ -111,7 +111,7 @@ To get a PAT for your user account , see the [Personal access tokens](https://do
 
 You need `write_repository` permission for the token.
 
-##### 2.4.4 BitBucket 
+##### 2.6.4 BitBucket 
 
 We support all tiers of Atlassian’s BitBucket service, including BitBucket.org, BitBucket Server, and BitBucket Data Center on-premises solutions.
 
@@ -123,7 +123,7 @@ BitBucket Server and BitBucket Data Center, on the other hand, still use the ter
 
 In both cases you need `repository write` permission.
 
-### 2.5 Graphics Card
+### 2.7 Graphics Card
 
 If you are using the Intel® UHD Graphics 630 graphics processor, please ensure that you are using [driver version 27.20.100.9664](https://www.catalog.update.microsoft.com/Search.aspx?q=Intel(R)+UHD+Graphics+630) or above.
 
@@ -244,7 +244,7 @@ We recommend the following minimum hardware requirements for all mobile devices 
 
 Depending on your app's complexity, these minimum hardware requirements might not be sufficient and should be adjusted.
 
-## 12 MxBuild {#mxbuild}
+## 11 MxBuild {#mxbuild}
 
 MxBuild is a Windows and Linux command-line tool that can be used to build a Mendix Deployment Package. For more information, see [MxBuild](/refguide/mxbuild/).
 

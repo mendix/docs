@@ -35,24 +35,20 @@ Mendix Studio Pro needs to be installed on your computer before you can start bu
 
 1. Open the downloaded Mendix Studio Pro executable. It is named like this: *Mendix-10.X.X-Setup*. Then click **Next**:
 
-    {{< figure src="/attachments/refguide/general/install/setup-wizard.png"   width="400"  >}}
+    {{< figure src="/attachments/refguide/general/install/setup-wizard.png"   width="500"  >}}
 
-2. Select **I accept the terms in the License Agreement** and click **Next**:
-
-    {{< figure src="/attachments/refguide/general/install/terms-of-use.png"   width="400"  >}}
+2. Select **I accept the terms in the License Agreement** and click **Next**.
 
 3. Select the folder in which you want to install Studio Pro and click **Next**:
 
-    {{< figure src="/attachments/refguide/general/install/select-folder.png"   width="400"  >}}
+    {{< figure src="/attachments/refguide/general/install/select-folder.png"   width="500"  >}}
 
 4. Enter the start menu shortcuts folder you want to use and click **Next**:
 
-    {{< figure src="/attachments/refguide/general/install/shortcut-folder.png"   width="400"  >}}
+    {{< figure src="/attachments/refguide/general/install/shortcut-folder.png"   width="500"  >}}
 
 5. Check the desktop option to create a shortcut to Studio Pro on your desktop and click **Next**.
-6. Click **Install** to install Studio Pro on your computer:
-
-    {{< figure src="/attachments/refguide/general/install/ready-to-install.png"   width="400"  >}}
+6. Click **Install** to install Studio Pro on your computer.
 
 7. If you are asked to restart your computer, make a selection and click **Finish**. Otherwise, check **Launch Mendix 10.X.X** and click **Finish** to finish the installation and launch Studio Pro.
 

@@ -11,7 +11,7 @@ tags: ["studio pro"]
 
 ## 1 Introduction
 
-Do you want to connect your app to the internet? Learn how to do this by following these how-to's.
+Do you want to connect your app to the internet? Learn how to do this by following these how-tos.
 
 We want to create a large network of Mendix apps, so let's start integrating!
 

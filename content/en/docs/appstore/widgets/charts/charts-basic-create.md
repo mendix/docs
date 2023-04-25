@@ -107,5 +107,5 @@ To view the chart, follow these steps:
 ## 4 Read More
 
 * [Use a Chart With a REST Data Source](/howto/front-end/charts-basic-rest/)
-* [Use Any Chart](/howto/front-end/charts-any-usage/)
+* [Use Any Chart](/appstore/widgets/charts-any-usage/)
 * [Use Charts Themes](/howto/front-end/charts-theme/)

@@ -47,7 +47,7 @@ Add series and configure their properties, each series represents a dataset. For
 
     In this case, new series can be added by clicking the **Series > New** button in the **Chart properties** tab.
 
-    {{% alert color="info" %}}From version 1.4 of charts you can create charts with a variable number of data series. For instructions on how to do this, see [How to Create a Dynamic Series Chart](/howto/front-end/charts-dynamic-series/).{{% /alert %}}
+    {{% alert color="info" %}}From version 1.4 of charts you can create charts with a variable number of data series. For instructions on how to do this, see [How to Create a Dynamic Series Chart](/appstore/widgets/charts-dynamic-series/).{{% /alert %}}
 
 1. Data source<a id="data-source"></a>
 

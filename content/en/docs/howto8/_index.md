@@ -3,7 +3,7 @@ title: "Studio Pro 8 How-tos"
 url: /howto8/
 description: "Step-by-step guides on various Mendix topics that will teach you how to build and customize apps."
 tags: ["studio pro"]
-weight: 65
+weight: 72
 no_list: false
 description_list: true
 cascade:
@@ -12,7 +12,7 @@ cascade:
     - old_content: true
     - hide_feedback: true
     - sitemap:
-        priority: 0.3
+        priority: 0.2
 #This document is mapped to the landing page, update the link there if renaming or moving the doc file.
 ---
 

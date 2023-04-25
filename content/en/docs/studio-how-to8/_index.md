@@ -2,14 +2,14 @@
 title: "Studio 8 How-tos"
 url: /studio-how-to8/
 tags: ["studio", "how to"]
-weight: 75
+weight: 80
 cascade:
     - space: "Studio 8 How-tos"
     - mendix_version: "8"
     - old_content: true
     - hide_feedback: true
     - sitemap:
-        priority: 0.3
+        priority: 0.2
 ---
 
 {{% alert color="warning" %}}

@@ -9,7 +9,7 @@ aliases:
 ---
 ## 1 Introduction
 
-In Mendix Studio Pro v9.16 and above native mobile apps are able to send logs to the [Mendix Runtime](/refguide/runtime/). Read this guide for information on native app logging configuration.
+Native mobile apps are able to send logs to the [Mendix Runtime](/refguide/runtime/). Read this guide for information on native app logging configuration.
 
 {{% alert color="warning" %}}
 Please note the following current limitations regarding native client logs:
@@ -73,7 +73,7 @@ The following log nodes are used by Mendix when writing log messages:
 
 {{% alert color="warning" %}}
 
-* From Mendix Studio Pro 9.18.1 and above log messages are filtered based on the log levels set in the Cloud Portal app.
+* Log messages are filtered based on the log levels set in the Cloud Portal app.
 * Enabling the `trace` log level may cause too many logs to be sent to the [Mendix Runtime](/refguide/runtime/), so it should not be kept enabled for long periods of time.
 {{% /alert %}}
 

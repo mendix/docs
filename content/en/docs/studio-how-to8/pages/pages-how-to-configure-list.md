@@ -62,7 +62,7 @@ You would like to open a page with opportunity contact list and its details from
 
 The page is created. In the responsive (Desktop) view, a list is displayed on the left and list item details are displayed on the right:
 
-{{< figure src="/attachments/studio-how-to8/pages/pages-how-to-configure-list/master-details.png" >}} 
+{{< figure src="/attachments/studio-how-to8/pages/pages-how-to-configure-list/primary-details.png" >}} 
 
 ## 4 Configuring the List
 

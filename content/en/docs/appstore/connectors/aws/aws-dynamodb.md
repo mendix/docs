@@ -19,7 +19,9 @@ Amazon DynamoDB helps improve your app by giving you the tools to build scalable
 
 ### 1.2 Prerequisites {#prerequisites}
 
-To use the Amazon DynamoDB connector, you must first install and configure the following modules:
+The Amazon DynamoDB connector requires Mendix Studio Pro version 9.18.0 or above.
+
+To use the Amazon DynamoDB connector, you must also install and configure the following modules:
 
 * [AWS Authentication connector version 2.0 or higher](https://marketplace.mendix.com/link/component/120333) - This connector is required to authenticate with Amazon Web Services (AWS). It is crucial for the Amazon DynamoDB connector to function correctly. For more information about installing and configuring the AWS Authentication connector, see [AWS Authentication](/appstore/connectors/aws/aws-authentication/).
 * [Community Commons module](https://marketplace.mendix.com/link/component/170) - This module is required to parse the `creationDateTime` attribute as returned by the `DescribeTable` activity.

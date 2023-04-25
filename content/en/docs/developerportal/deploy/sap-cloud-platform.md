@@ -295,7 +295,7 @@ SAP BTP [has a limit of 1.5 GB](https://help.sap.com/viewer/65de2977205c403bbc10
     {{< figure src="/attachments/developerportal/deploy/sap-cloud-platform/start-application.png" >}}
 
     {{% alert color="info" %}}This will bind any services which are in the status **Services To Be Bound**.{{% /alert %}}
- 
+
 7. When the application has been started you will receive a confirmation message. Click **OK** and you will be taken to the Environment Details page for the selected environment. See [Environment Details](#EnvironmentDetails), below.
 
     {{< figure src="/attachments/developerportal/deploy/sap-cloud-platform/application-started.png" >}}
@@ -338,7 +338,7 @@ The environment details page contains the following four tabs:
 * [General](#general-tab) – how the application is deployed on SAP BTP
 * [Model Options](#model-options-tab) – application constants and scheduled events
 * [Services](#binding-services) – Cloud Foundry service management
-* [Runtime](#runtime-tab) – custom environment variables which define "User-Provided Variables" in SAP cloud foundry environment — pre-defined variables can be used to control the behavior of the Mendix Runtime
+* [Runtime](#runtime-tab) – custom environment variables which define **User-Provided Variables** in SAP cloud foundry environment — pre-defined variables can be used to control the behavior of the Mendix Runtime
 
 Open the environment details by clicking **Details** on an environment on the Environments page of the Development Portal. You will also be taken to this page when you successfully deploy or transport your app.
 

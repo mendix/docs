@@ -25,7 +25,7 @@ Atlas UI has a philosophy based on the core principles described below. These pr
 
 ## 3 Design Elements
 
-Our UI library is fully integrated into Mendix Studio. After choosing a navigation layout in Mendix Studio, you can find page templates, building blocks, and widgets directly in your Toolbox. These UI elements form the foundation of your app.
+Our UI library is fully integrated into Mendix Studio Pro. After creating a page and selecting a layout in Mendix Studio Pro, you can find building blocks, and widgets directly in your Toolbox. These UI elements form the foundation of your app.
 
 {{< figure src="/attachments/howto/front-end/atlas-ui/get-started/designelements.png" alt="Atlas UI design elements" >}}
 
@@ -49,7 +49,7 @@ When Mendix releases a new version of these modules, these can be updated as reg
 
 ## 5 Customizing Default Look and Feel
 
-Mendix apps come out of the box with the default Atlas look and feel, which can be customized using [Studio's theme customizer](/studio/theme-customizer/), by [changing the theme settings](/howto/front-end/customize-styling-new/), and by [adding custom styling](/howto/front-end/customize-styling-new/). Next to that, it is possible to implement your own Design System or UI Kit as described in [Create a Company Design System](/howto/front-end/create-a-company-design-system/).
+Mendix apps come out of the box with the default Atlas look and feel, which can be customized by [changing the theme settings](/howto/front-end/customize-styling-new/) and by [adding custom styling](/howto/front-end/customize-styling-new/). Next to that, it is possible to implement your own Design System or UI Kit as described in [Create a Company Design System](/howto/front-end/create-a-company-design-system/).
 
 ## 6 Re-Using Designs Across Apps
 

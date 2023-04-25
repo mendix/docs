@@ -35,10 +35,7 @@ There are two ways to start receiving alerts:
 The Technical Contact can grant you the **Receive Alerts** permission by following these steps:
 
 1. Go to the [Developer Portal](http://sprintr.home.mendix.com).
-2. Open the **Switch to** menu and click **Cloud**.
-
-    {{< figure src="/attachments/developerportal/operate/monitoring-application-health/receive-alerts/cloud-nodes.png" >}}
-
+2. Open the [Switch to menu](/developerportal/#navigation) and select **Cloud**.
 3. Open the node by clicking **Details**.
 4. Click **Security** in the left-hand menu.
 5. Switch to the **Node Permissions** tab.
@@ -51,7 +48,7 @@ The Technical Contact can grant you the **Receive Alerts** permission by followi
 You can manage the alerts by yourself, follow these steps:
 
 1. Go to the [Developer Portal](http://sprintr.home.mendix.com).
-2. Open the **Switch to** menu and click **Cloud**.
+2. Open the [Switch to menu](/developerportal/#navigation) and select **Cloud**.
 3. Open the node by clicking **Details**.
 4. Click **Alerts** in the left-hand menu. 
 5. Select the check box of **Email Alerts**.  It is possible to set this option separately for each environment. The changes will be automatically saved.

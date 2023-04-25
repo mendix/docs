@@ -29,7 +29,7 @@ In Mendix Studio and Mendix Studio Pro, every widget must have a name configured
 
 ### 3.2 Class
 
-A user can specify multiple classes for every widget. They can do this either directly by configuring a [class](/refguide/common-widget-properties/#class) property in the Studios, or by using design properties. In web apps, the Mendix Platform creates a CSS class string from the configuration and passes it as a `string` `class` prop to every client component. Unfortunately, React Native does not have similar support for classes. Therefore in native mobile apps a component will not receive `class` prop, but a `style` prop instead.
+A user can specify multiple classes for every widget. They can do this either directly by configuring a [class](/refguide/common-widget-properties/#class) property in  Studio Pro, or by using design properties. In web apps, the Mendix Platform creates a CSS class string from the configuration and passes it as a `string` `class` prop to every client component. Unfortunately, React Native does not have similar support for classes. Therefore in native mobile apps a component will not receive `class` prop, but a `style` prop instead.
 
 ### 3.3 Style
 
@@ -239,7 +239,7 @@ interface MyListWidgetsProps {
 The following code sample shows how to call `myListAction` on the first element from the `myDataSource`.
 
 ```ts
-const actionOnFirstItem = this.props.myDataSource.myListAction(this.props.myDataSource.item[0]);
+const actionOnFirstItem = this.props.myListAction(this.props.myDataSource.item[0]);
 
 actionOnFirstItem.execute();
 ```

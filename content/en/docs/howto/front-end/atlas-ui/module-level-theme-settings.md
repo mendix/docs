@@ -3,14 +3,14 @@ title: "Configure Module-Level Theme Settings"
 url: /howto/front-end/module-level-theme-settings/
 weight: 25
 description: "Understand the advanced options of module-level theme settings."
-tags: ["build", "app", "studio", "studio pro", "style", "styling"]
+tags: ["build", "app", "studio pro", "style", "styling"]
 ---
 
 ## 1 Introduction
 
 Atlas UI gives you a powerful tool to build a modern user experience. However, the flexibility of Mendix does not stop you from making your design system from scratch. This document will introduce you to the advanced options that module-level theme settings provide. For more information on making a theme module, see the [Create a Theme Module](/howto/front-end/customize-styling-new/#create-theme-mod) section of *Customize Styling*.
 
-The module-level theme settings enable you to control the theme system behavior in Studio and Studio Pro. As the name implies, you have a separate settings file for each module which you can find under **themesource/{your-module}/settings.json**.
+The module-level theme settings enable you to control the theme system behavior in Studio Pro. As the name implies, you have a separate settings file for each module which you can find under **themesource/{your-module}/settings.json**.
 
 If you wish for further guidance on front-end best practices, see [Implement Best Practices for UX Design](/howto/front-end/ux-best-practices/). 
 

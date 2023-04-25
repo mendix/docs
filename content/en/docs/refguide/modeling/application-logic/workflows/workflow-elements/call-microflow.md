@@ -15,10 +15,9 @@ tags: ["workflow", "workflows", "call microflow", "Studio Pro"]
 
 Call microflow properties consist of the following sections:
 
-* [Common](#common)
 * [General](#general)
 * [Outcomes](#outcomes)
-* [Parameters](#parameters)
+* [Common](#common)
 
 ### 2.1 Common Section {#common}
 
@@ -37,10 +36,6 @@ The microflow that is called by this element.
 ### 2.3 Outcomes Section {#outcomes}
 
 **Outcomes** depends on the return type and values of the microflow. For example, when there is not return type, you have a single outcome; for the Boolean, you have **true** and **false** outcomes; and for the enumeration – an outcome per each enumeration value and an empty one when the value is unassigned. 
-
-### 2.4 Parameters Section {#parameters}
-
-Parameters of the selected microflow. Depending on the selected microflow, you will see a list of its parameters. Parameters pass data to the element. To view **Parameters**, click the ellipsis icon next to the property name. 
 
 ## 3 Read More
 

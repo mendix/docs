@@ -14,7 +14,7 @@ tags: ["marketplace", "marketplace component", "OIDC", "IdP", "identity provider
 
 The [OIDC Provider](https://example.com) can be used to build a Mendix app that acts as an Identity provider(IdP) for other apps. This app then acts as an IAM broker, providing a Single Sign-On (SSO) experience for the end-users of those applications.
 
-The module supports responsive browser-based applications and has been tested with applications that use the OIDC SSO module. This module can be used in Mendix version 9.12.5 and above.
+The module supports responsive browser-based applications and has been tested with applications that use the OIDC SSO module. This module can be used in Mendix version 9.22.0 and above.
 
 The idea is that you set up a single Mendix app which uses the [OIDC SSO](https://marketplace.mendix.com/link/component/120371) module to authenticate end-users with your central IdP. The same app also acts as an OIDC provider for your other apps to use as the IdP for OIDC SSO. This means it is working as an IAM (Identity and Access Management) broker for authentication and, optionally, authorization. You can easily add or remove apps from the IAM Broker app within the Mendix ecosystem using an API without each app and relevant user roles having to be added to your central IdP. However, you retain all the benefits of your central IdP in controlling on- and offboarding of users.
 
@@ -51,7 +51,7 @@ The OIDC Provider has the following features and limitations:
 
 ### 1.3 Dependencies
 
-This module requires your app to be using Mendix 9.12.5+ or higher
+This module requires your app to be using Mendix 9.22.0 or higher
 The following modules need to be imported into your app
 
 * [Community Commons](https://marketplace.mendix.com/link/component/170) – see [Community Commons](/appstore/modules/community-commons-function-library/) documentation
@@ -188,11 +188,10 @@ If you cannot use automatic registration, you can register the client manually.
     * **Client ID** – a unique string which identifies this client
     * **Alias** – usually the same as *Client Name* but can be different
     * **Client Secret** – the client password to allow the client to authenticate to the OIDC Provider module
-    * **Post Logout redirect URI** – for example, for testing a local OIDC Provider app on port `8081`, `http://localhost:8081/logout` 
-    * **Redirect URI** – for example, for testing a local OIDC Provider app on port `8081`, `http://localhost:8081/oauth/v2/callback`
+    * **Post Logout redirect URI** – the fully qualified logout url, `<appurl>/logout` — for example, for testing a local OIDC SSO app on port `8081`, `http://localhost:8081/logout`
+    * **Redirect URI** – for example, for testing a local OIDC SSO app on port `8081`, `http://localhost:8081/oauth/v2/callback`
     * **Back channel logout session support**
     * **Front channel Logout URI**
-    * **Requires PKCE** – this needs to be enabled in both the client and the server to use PKCE
 
 #### 3.3.3 Configuring Centralized Authorization{#configuring-authorization}
 

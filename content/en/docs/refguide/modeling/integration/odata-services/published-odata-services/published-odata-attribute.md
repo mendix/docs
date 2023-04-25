@@ -16,7 +16,7 @@ The **Edit published attribute** dialog allows you to edit the properties of an 
 
 ### 2.1 Exposed Name
 
-The exposed name is the name of the attribute as it appears to clients of the service.
+The exposed name is the name of the attribute as it appears to clients of the service. This cannot be the same as the exposed name of the entity.
 
 ### 2.2 Can Be Empty
 

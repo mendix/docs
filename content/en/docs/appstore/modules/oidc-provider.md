@@ -51,7 +51,6 @@ The OIDC Provider has the following features and limitations:
 * The hybrid resource owner password credentials, and client credential grants are not supported, although the OIDC Provider may contain some (rudimentary) implementation to support them.
 * The OIDC Provider module ignores "email", "phone" and "profile" scope values (as specified by OIDC specs) when the client includes these in a authentication request . Instead, the OIDC Provider module will include user claims in an ID-token based on a custom microflow, regardless of the scopes in the request.
 * Front channel and back-channel logout are implemented as alpha features.
-* The current implementation of setting custom claims in the generated ID-tokens is not working properly in this release as the custom attribute names that you would define is incorrectly set in the ID-token. If you want to set custom claims, you will have to customize the OIDC Provider module.
 
 ### 1.3 Dependencies
 
@@ -153,7 +152,7 @@ To check that this works, you will need a tool for testing APIs (such as [Postma
             "redirect_uris" : [ http://localhost:8081/oauth/v2/callback ],
             "backchannel_logout_uri" : http://localhost:8081/logout,
             "post_logout_redirect_uris" : [http://localhost:8081/logout],
-            "grant_types": [ "authorization_code","password" ],
+            "grant_types": [ "authorization_code" ],
             "scope": "openid"
         }
         ```
@@ -167,7 +166,6 @@ To check that this works, you will need a tool for testing APIs (such as [Postma
     ],
     "grant_types": [
     "authorization_code",
-    "password"
     ],
     "client_secret_expires_at": 0,
     "scope": "openid",
@@ -271,7 +269,7 @@ Some examples of existing claims are:
 
     If the claim with ‘scope’ is created, the scope value in access token and id-token gets overwritten with the claim value
 
-* …..aud
+* aud
 * sub
 * iss
 * name

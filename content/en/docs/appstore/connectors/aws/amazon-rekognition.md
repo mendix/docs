@@ -29,6 +29,10 @@ The Amazon Rekognition connector requires Mendix Studio Pro version 9.18.0 or ab
 
 To authenticate with Amazon Web Service (AWS), you must also install and configure the [AWS authentication connector version 2.1 or higher](https://marketplace.mendix.com/link/component/120333). For more information about installing and configuring the AWS Authentication connector, see [AWS Authentication](/appstore/connectors/aws/aws-authentication/).
 
+### 1.3 Example
+
+{{% youtube h_R1mMtkfd8 %}}
+
 ## 2 Installation
 
 Follow the instructions in [How to Use Marketplace Content in Studio Pro](/appstore/general/app-store-content/) to import the Amazon Rekognition connector into your app.

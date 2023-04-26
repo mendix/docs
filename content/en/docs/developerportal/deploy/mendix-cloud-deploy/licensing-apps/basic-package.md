@@ -94,3 +94,17 @@ Linking your app to your licensed node is done in the same way as for any other 
 It will take 7-14 days to prepare your invoice. This will be sent to the address that you entered as the **invoice Email Address**.
 
 Our payment terms are 30 days.
+
+## 6 Renew Payment Method
+
+Before the licenses are renewed for your company, Mendix checks if your company's payment method is still valid. If it is expired, you will receive an email that asks you to update your company's payment method on the **Billing Accounts** page.
+
+{{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/licensing-apps/basic-package/billing-accounts-page.png" alt="billing accounts page" >}}
+
+The **Billing Accounts** page shows the details of your company's existing billing accounts. These accounts are on the company level. If your company has multiple billing accounts, you can select a billing account from the drop-down list on the page.
+
+You can find **Payment Method** at the bottom of the page. Depending on the payment method, you see either an invoice or the credit card data.
+
+{{% alert color="info" %}}You might have used different credit cards with the same billing account when purchasing premium content at the marketplace in the past. These cards are not shown here. Only the last credit card which is registered as the credit card for your company's billing account is shown here. This card will also be used for the renewal of the existing subscriptions.{{% /alert %}}
+
+If the credit card is expired, the credit card data is shown in red. To update the credit card data, click **Update**, fill in the new credit card data, and then click **Update Details**.

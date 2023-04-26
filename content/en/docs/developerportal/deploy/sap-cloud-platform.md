@@ -732,8 +732,6 @@ A more detailed description of the reason why the environment creation failed wi
 
 Note that if you are the last person to leave a Mendix app you can delete the app. However, this will not delete the app or resources on SAP BTP. To leave the app, find it on the [My Apps](https://sprintr.home.mendix.com/link/myapps) page in the **Developer Portal**, and then click **Leave app**.
 
-{{< figure src="/attachments/developerportal/deploy/sap-cloud-platform/leave-app.png" >}}
-
 If you are the last member of the app development team, you will be asked if you want to delete the app.
 
 {{< figure src="/attachments/developerportal/deploy/sap-cloud-platform/delete-app.png" >}}

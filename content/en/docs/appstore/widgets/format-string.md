@@ -8,7 +8,7 @@ tags: ["marketplace", "marketplace component", "widget", "format string", "platf
 ---
 
 {{% alert color="warning" %}}
-This widget is deprecated. For an alternative, see [ABC]().
+This widget is deprecated. For an alternative, see [Text](/refguide/text/) or [HTML Element](/appstore/widgets/htmlelement/) depending on your use case.
 {{% /alert %}}
 
 ## 1 Introduction

@@ -90,6 +90,7 @@ The URL for downloading the SP metadata of your app is independent of the value 
 ### 1.4 Prerequisites {#dependencies}
 
 * Install and configure the [Mx Model Reflection](/appstore/modules/model-reflection/) module.
+* Install and configure the [Encryption](/appstore/modules/encryption/) module – this is needed to encrypt the key store passwords in version 3.5.0 and above of the SAML module.
 * For apps running outside of the Mendix Cloud, make sure you have [external file storage](/refguide/system-requirements/#file-storage) configured.
 
     {{% alert color="warning" %}}The SAML module writes configuration data to a file document on the file storage to read it later. Without external file storage, this configuration will be lost when you restart your app. The SAML module will not work correctly without reading the configuration data from the file storage.
@@ -218,7 +219,7 @@ The XML for the SP metadata is signed. If you make any changes to the metadata (
 
 The following settings apply to this IdP configuration:
 
-* **Alias** – The alias for your IDP can be used in the URL of the application to indicate the IdP configuration that should be used during login. There are no validations on this field (except that it is required), but you should make sure that this alias is compatible with usage in an URL (meaning, no `/`, `&`, `?`, or special character that could get lost in the communication).
+* **Alias** – The alias for your IDP can be used in the URL of the application to indicate the IdP configuration that should be used during login. The alias must be unique, but you should also make sure that this alias is compatible with usage in an URL (meaning, no `/`, `&`, `?`, or special character that could get lost in the communication).
 * **Log SAML Requests** – Determines whether all requests and login attempts should be logged and stored in an entity.
 
 #### 3.2.3 Identity Provider Metadata{#idp-metadata}

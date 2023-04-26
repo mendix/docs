@@ -250,7 +250,7 @@ In Portfolio Management, you can do the following
 #### New Features
 
 * We added the option to watch and unwatch an app. You can find this option on the [General Settings](/developerportal/collaborate/general-settings/) page for an app as well as when you click the ellipsis (**...**) in an app tile on the [My Apps](/developerportal/#my-apps) page. Watching an app means that you will receive feedback notifications for this app, while unwatching an app turns off the notifications.
-* We introduced the [Billing Accounts](/developerportal/control-center/#billing-accounts) page in Control Center where Mendix Admin can update the payment card information for their company at any time.
+* We introduced the **Billing Accounts** page in Control Center where Mendix Admin can update the payment card information for their company at any time.
 
 #### Fixes
 

@@ -95,7 +95,7 @@ It will take 7-14 days to prepare your invoice. This will be sent to the address
 
 Our payment terms are 30 days.
 
-## 6 Renew Payment Method
+## 6 Renewing Payment Method
 
 Before the licenses are renewed for your company, Mendix checks if your company's payment method is still valid. If it is expired, you will receive an email that asks you to update your company's payment method on the **Billing Accounts** page.
 

@@ -42,7 +42,7 @@ You need to provide your own [xs-security.json](https://help.sap.com/viewer/4505
 
 You then have two options:
 
-### 3.1 Use the XSUAA Configurator
+### 3.1 Use the XSUAA Configurator {#configurator}
 
 The **XSUAA Configurator** provides a user friendly interface to create the JSON required to configure the XSUAA service. It can be uploaded automatically for you, or you can download the file and upload it manually.
 

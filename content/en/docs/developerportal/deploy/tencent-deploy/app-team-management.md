@@ -22,7 +22,7 @@ On the left side of the top bar, you open an access menu by clicking the **切�
 
 You can then access the following parts of the Mendix Platform:
 
-* [Studio](/studio/)
+* * [Studio](/studio/)
 * **下载 Studio Pro** – opens the Studio Pro China Edition download page
 * **我的应用** – opens the page with [a summary of your apps](#my-apps)
 * **集群管理** – opens the page for [cluster management](/developerportal/deploy/tencent-deploy/#overview)
@@ -40,7 +40,6 @@ Click an app tile to see more details about the app.
 
 By clicking the ellipsis (**…**) in the app tile, you can quickly perform a number of actions:
 
-* Open the app in Studio
 * Open the app in Studio Pro
 * Archive the app – This allows you to archive the app, provided you are the only team member. You will be warned of the consequences and asked for confirmation before the app is archived. Any apps you archived will appear in the **归档** tab. 
 * Delete the app – This allows you to delete your app, provided you are the only team member. You will be warned of the consequences and asked for confirmation before the app is deleted.

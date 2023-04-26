@@ -2,7 +2,7 @@
 title: "Data Hub Catalog"
 url: /data-hub/data-hub-catalog/
 description: "Describes the processes and properties of Data Hub Catalog."
-weight: 30
+weight: 1
 no_list: false
 description_list: true
 tags: ["data hub", "data hub catalog"]
@@ -17,7 +17,7 @@ If you deploy your Mendix apps in an alternative environment, like on-prem or pr
 
 ## 2 Data Hub Catalog Home {#data-hub-home}
 
-From the Data Hub Catalog [Home](https://hub.mendix.com) screen, you can carry out the major functions of Data Hub. You can navigate to the following tabs:
+From the Data Hub Catalog [Home](https://hub.mendix.com) screen, you can navigate to the following tabs:
 
 * **Home** – search in the Data Hub Catalog, manually register a service from different applications, select from the most popular services
 * **Catalog** – [search](/data-hub/data-hub-catalog/search/) for registered assets in the search pane and see details of the metadata of selected asset
@@ -72,7 +72,7 @@ You can add tags and descriptions, edit app owners, and toggle discoverability t
 
 ## 4 Information Available in the Data Hub Catalog
 
-In the Data Hub Catalog, all the information for registered assets is displayed in the [Catalog search details](/data-hub/data-hub-catalog/search/#search-details) screen. This information comes from the metadata in the OData service contract, and also from additional metadata that is added when registered assets are curated. Registered assets can be curated by owners, [Data Hub curators](/data-hub/#curator), and [Mendix Admins](/data-hub/#admin).
+In the Data Hub Catalog, all the information for registered assets is displayed in the [Catalog search details](/data-hub/data-hub-catalog/search/#search-details) screen. This information comes from the metadata in the OData service contract, and also from additional metadata that is added when registered assets are curated. Registered assets can be curated by owners, [Data Hub curators](/data-hub/data-hub-catalog/manage-data-sources/user-roles/#curator), and [Mendix Admins](/data-hub/data-hub-catalog/manage-data-sources/user-roles/#admin).
 
 The information that is registered for data sources and exposed datasets are as follows:
 

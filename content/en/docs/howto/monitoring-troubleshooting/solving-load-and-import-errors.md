@@ -59,7 +59,6 @@ The most likely cause for these kinds of errors is a faulty script that was run 
 ## 5 Read More
 
 * [Clearing Warning Messages in Mendix](/howto/monitoring-troubleshooting/clear-warning-messages/)
-* [Debug a Hybrid Mobile Application](/howto/monitoring-troubleshooting/debug-a-hybrid-mobile-application/)
 * [Debugging Java Actions](/howto/monitoring-troubleshooting/debug-java-actions/)
 * [Debugging Java actions remotely](/howto/monitoring-troubleshooting/debug-java-actions-remotely/)
 * [Debugging Microflows and Nanoflows](/refguide/debug-microflows-and-nanoflows/)

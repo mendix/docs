@@ -13,7 +13,7 @@ aliases:
 
 ## 1 Introduction {#studio-overview}
 
-Mendix Studio is the place where you can create, view and edit your Mendix applications without going into technical details. For this purpose you can use [Studio Pro](/refguide/modeling/) and [develop apps together with Studio Pro users](/studio/collaborative-development/) anytime. 
+Mendix Studio is the place where you can create, view and edit your Mendix applications without going into technical details. For this purpose you can use [Studio Pro](/refguide9/modeling/) and [develop apps together with Studio Pro users](/studio/collaborative-development/) anytime. 
 
 With Studio you can create and edit applications in your browser without installing software on your PC.   
 

@@ -37,7 +37,7 @@ Before starting this guide, make sure you have completed the following prerequis
 For iOS builds:
 
 * Have a Mac OS X machine 
-* Install [XCode 11.7](https://apps.apple.com/us/app/xcode/id497799835?mt=12) and [CocoaPods](https://guides.cocoapods.org/using/getting-started.html) 
+* Install the latest version of [XCode](https://developer.apple.com/xcode/resources/) and [CocoaPods](https://guides.cocoapods.org/using/getting-started.html) 
 
 For Android Builds:
 
@@ -143,6 +143,10 @@ In the sections below you can see the basic steps to get an app up and running o
 During this process, do not accept any suggestions to update to latest Gradle or Kotlin version.
 {{% /alert %}}
 
+{{% alert color="info" %}}
+During development in Android Studio, if you select the **devDebug** build variant your application will reload changes automatically without redeploying the package.
+{{% /alert %}}
+
 To build an Android app with Android Studio, do the following:
 
 1. Run `npm install` (for NPM v7 and above run `npm install --legacy-peer-deps`) in the app root to install the required dependencies.
@@ -184,9 +188,9 @@ After the build succeeds the app should be running on the selected device and co
 
 ## 6 Adding Dependencies{#adding-dependencies}
 
-Mendix Studio Pro 9 and later support a new format for widgets and JS actions, allowing them to define them Native Dependencies required. Mendix Native Mobile Builder, is able to derive the Native Dependencies required from the app and automatically adds them to the package.json of the app's Native Template. This works with all auto-linkable Native Dependencies. 
+Mendix Studio Pro supports a new format for widgets and JS actions, allowing them to define them Native Dependencies required. Mendix Native Mobile Builder, is able to derive the Native Dependencies required from the app and automatically adds them to the package.json of the app's Native Template. This works with all auto-linkable Native Dependencies. 
 
-In some cases though, like when a dependency isn't derivable by its use case, like from a widget or JS action, or the dependency requires extra additions, like an elaborated initialisation process that can't be described via the auto-linking protocol, you will have to modify your app and add it manually.
+In some cases though, like when a dependency is not derivable by its use case (such as from a widget or JS action) or the dependency requires extra additions (like an elaborated initialisation process that cannot be described via the auto-linking protocol) you will have to modify your app and add it manually.
 
 Mendix native mobile apps are build on top of React Native. Therefore, any React Native module can be added and used in an app. The same rules apply as with any React Native app.
 

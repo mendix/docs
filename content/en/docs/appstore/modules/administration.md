@@ -11,29 +11,29 @@ tags: ["marketplace", "marketplace component", "administration", "user managemen
 
 The [Administration](https://marketplace.mendix.com/link/component/23513) module contains the administration functionality, which allows you to manage local accounts and to view app statistics, such as runtime information, sessions, and schedules events.
 
-## 1.1 Features
+### 1.1 Features
 
 * Support managing user accounts
-* Provide a read-only overview to show the following information
-    * all active sessions
-    * all schedules events
-    * all runtime instances
+* Provide a read-only overview to show the following information:
+    * All active sessions
+    * All schedules events
+    * All runtime instances
 * Support viewing runtime statistics
 
-## 1.2 Dependencies
+### 1.2 Dependencies
 
 * [Atlas UI Resources](https://marketplace.mendix.com/link/component/104730)
-* [Mendix SSO](https://marketplace.mendix.com/link/component/111349)
+* [Mendix SSO](https://marketplace.mendix.com/link/component/111349): required for the Administration module versions 1.3.X (for example 1.3.2) and 2.1.X (for example 2.1.2)
 
-## 2. Installation
+## 2 Installation
 
 Follow the instructions in [How to Use Marketplace Content in Studio Pro](https://docs.mendix.com/appstore/general/app-store-content/) to import the Administration module into your app.
 
-## 3 Using the Administration Module with Mendix SSO
+## 3 Using Supporting Microflows with Mendix SSO                                                               {#use-with-mendix-sso}
 
-To use the Administration module with Mendix SSO, perform the following steps:
+The [Administration](https://marketplace.mendix.com/link/component/23513) module versions 1.3.X (for example 1.3.2) and 2.1.X (for example 2.1.2) contain a set of microflows to configure Mendix SSO to use **Administration.Account** as the user entity. To use the supporting microflows with Mendix SSO, perform the following steps:
 
-1. Make sure that your project contains the Mendix SSO module. If it doesn't, import the [Mendix SSO](https://marketplace.mendix.com/link/component/111349) module from the Marketplace.
+1. Make sure that your app contains the Mendix SSO module. If it does not, import the [Mendix SSO](https://marketplace.mendix.com/link/component/111349) module from the Marketplace.
 
 2. Configure the **MendixSSO_AfterStartup** microflow from the Administration module as the [after startup](/refguide/app-settings/#after-startup) microflow. If there is already an after startup microflow, do not replace it, but add the **MendixSSO_AfterStartup** microflow as a sub-microflow in the existing microflow.
 

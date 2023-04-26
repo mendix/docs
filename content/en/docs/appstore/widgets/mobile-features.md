@@ -13,7 +13,7 @@ This widget is deprecated.
 
 ## 1 Introduction
 
-The [Mobile Features](https://marketplace.mendix.com/link/component/48902/) widget can be placed in a page layout and used in [hybrid mobile](/refguide/hybrid-mobile/) applications.
+The [Mobile Features](https://marketplace.mendix.com/link/component/48902/) widget can be placed in a page layout and used in hybrid mobile applications.
 
 ### 1.1 Typical Use Cases
 

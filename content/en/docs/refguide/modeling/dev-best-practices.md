@@ -55,7 +55,7 @@ Always store secret information in a safe place. A safe place is the database. U
 
 Using either the default value of a constant or the project's configuration setting is unsafe. Both these places are readable by others and visible in the version management copies made by SVN. 
 
-## 3 Naming Conventions
+## 3 Naming Conventions {#naming-conventions}
 
 ### 3.1 Modules
 

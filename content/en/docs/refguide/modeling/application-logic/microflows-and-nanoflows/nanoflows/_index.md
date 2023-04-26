@@ -155,11 +155,7 @@ Nanoflows are executed in the context of the current user. Any operation for whi
 
 ## 7 Converting a Nanoflow to a Microflow {#convert-to-microflow}
 
-{{% alert color="info" %}}
-This feature was introduced in Studio Pro [9.24.0](/releasenotes/studio-pro/9.24/#9240).
-{{% /alert %}}
-
-To convert a nanoflow to a microflow, right-click anywhere in the nanoflow editor and select **Convert to microflow**.
+To convert a nanoflow to a microflow, you have two options. The first option is to right-click anywhere in the nanoflow editor and select **Convert to microflow**. Alternatively, in the **App Explorer**, right-click on the name of the nanoflow you want to convert, and select **Convert to microflow**.
 
 {{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/nanoflows/convert-to-microflow.PNG" alt="Convert to microflow" width="550px" >}}
 

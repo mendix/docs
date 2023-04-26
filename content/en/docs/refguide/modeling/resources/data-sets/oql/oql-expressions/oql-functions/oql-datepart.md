@@ -26,10 +26,6 @@ DATEPART ( datepart , date_expression [, timezone ] )
 
 ### 2.3 timezone
 
-{{% alert color="info" %}}
-The optional `timezone` parameter is available in [Studio Pro 9.22.0](/releasenotes/studio-pro/9.22/) and above. 
-{{% /alert %}}
-
 `timezone` specifies the time zone to use for the retrieval. This parameter is optional and defaults to the local time zone. It should be a string literal containing an IANA time zone. GMT offset time zones are not supported.
 
 ## 3 Example{#oql-datepart-example}

@@ -8,7 +8,7 @@ tags: ["marketplace", "marketplace component", "atlas ui", "atlas ui resources",
 ---
 
 {{% alert color="warning" %}}
-This module is deprecated. For an alternative, see [ABC]().
+This module is deprecated, as it pertains to Atlas 2. We recommend that you [Migrate From Atlas 2 To Atlas 3](/refguide9/moving-from-atlas-2-to-3/).
 {{% /alert %}}
 
 ## 1 Introduction

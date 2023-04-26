@@ -10,7 +10,7 @@ tags: ["SAP", "Fiori", "UI", "resources", "Native"]
 
 ## 1 Introduction
 
-The [SAP Horizon Native UI Resources module](!TO BE ADDED) allows you to design your native mobile app pages with SAP Horizon-styled widgets and building blocks as part of your layout. The module uses the Horizon theme. Based on the selected mobile theme, your app will use the light or dark version of the theme.
+The [SAP Horizon Native UI Resources module](https://marketplace.mendix.com/link/component/210026) allows you to design your native mobile app pages with SAP Horizon-styled widgets and building blocks as part of your layout. The module uses the Horizon theme. Based on the selected mobile theme, your app will use the light or dark version of the theme.
 
 The SAP Horizon Native UI Resources module includes the following resources:
 

@@ -345,52 +345,68 @@ For the OS Bar to work correctly in your Mendix app, the following script has to
 ```javascript
    <script>
 		// MindSphere specific part-3: OS Bar related code
-		var loadMendix = function() {
-			// dojoConfig needs to be defined before loading mxui.js
-			dojoConfig = {
-				isDebug: false,
-				baseUrl: 'mxclientsystem/dojo/',
-				cacheBust: '{{cachebust}}',
-				rtlRedirect: 'index-rtl.html',
-			};
-			// make sure that the mxui.js is loaded after /rest/os-bar/v1/loader to prevent problems with the height calculation of some elements
-			(function(d2, script2) {
-				script2 = d2.createElement('script');
-				script2.src = 'mxclientsystem/mxui/mxui.js?{{cachebust}}';
-				script2.async = true;
-				d2.getElementsByTagName('body')[0].appendChild(script2);
-			})(document);
-		};
+		var loadMendix = function () {
+            // dojoConfig needs to be defined before loading mxui.js
+            dojoConfig = {
+                isDebug: false,
+                baseUrl: 'mxclientsystem/dojo/',
+                cacheBust: '{{cachebust}}',
+                rtlRedirect: 'index-rtl.html',
+            };
+            // make sure that the mxui.js is loaded after /rest/os-bar/v1/loader to prevent problems with the height calculation of some elements
+            (function (d2, script2) {
+                script2 = d2.createElement('script');
+                script2.src = 'mxclientsystem/mxui/mxui.js?{{cachebust}}';
+                script2.async = true;
+                d2.getElementsByTagName('body')[0].appendChild(script2);
+            })(document);
+        };
+        var onError = function (d1) {
+            var body = d1.getElementsByTagName('body')[0];
+            var content = d1.getElementById('content');
+            var html =
+                '<osbar-root id="OSBarErrorText" class="mdsp_osbf_outer">' +
+                '<div class="mdsp_osbf_inner">MindSphere OSBar could not be loaded. Please check your ' +
+                '<a title="Proxy Settings" class="mdsp_osbf_link" target="_blank" rel="noopener" href="https://docs.mendix.com/partners/siemens/mindsphere-development-considerations#localtesting"> proxy settings</a>' +
+                '<span> or the OSBarURL in the MindSphereOSBarConnector</span>' +
+                '</div>' +
+                '</osbar-root>';
 
-		(function(d1, script1) {
-			script1 = d1.createElement('script');
-			script1.type = 'text/javascript';
-			script1.async = true;
-			script1.onload = function() {
-				_mdsp.init({
-					appId: 'content',
-					appInfoPath: '/rest/os-bar/v1/config',
-					initialize: true,
-				});
-				loadMendix();
-			};
-			script1.onerror = function() {
-				var body = d1.getElementsByTagName('body')[0];
-				var html =
-					'<osbar-root id="OSBarErrorText" class="mdsp_osbf_outer">' +
-						'<div class="mdsp_osbf_inner">MindSphere OSBar could not be loaded. Please check your ' +
-							'<a title="Proxy Settings" class="mdsp_osbf_link" target="_blank" rel="noopener" href="https://docs.mendix.com/partners/siemens/mindsphere-development-considerations#localtesting"> proxy settings</a>' +
-							'<span> or the OSBarURL in the MindSphereOSBarConnector</span>' +
-						'</div>' +
-					'</osbar-root>';
+            body.insertAdjacentHTML('afterbegin', html);
+            body.className = body.className + " mdsp_osbf_body";
+            content.className = content.className + "_mdsp_osbf_content";
+            loadMendix();
+        };
 
-				body.insertAdjacentHTML('afterbegin', html);
-				body.className = body.className + " mdsp_osbf_body"
-				loadMendix();
-			};
-			script1.src = '/rest/os-bar/v1/osbar.loader.js';
-			d1.getElementsByTagName('head')[0].appendChild(script1);
-		})(document);
+        var initOsBar = function (url, d1, script1) {
+            script1 = d1.createElement('script');
+            script1.type = 'text/javascript';
+            script1.async = true;
+            script1.onload = function () {
+                _mdsp.init({
+                    appId: 'content',
+                    appInfoPath: '/rest/os-bar/v1/config',
+                    initialize: true,
+                });
+                loadMendix();
+            };
+            script1.onerror = () => onError(d1);
+            script1.src = url;
+            d1.getElementsByTagName('head')[0].appendChild(script1);
+        };
+
+        (async function () {
+            try {
+                const resp = await window.fetch('/rest/os-bar/v1/osbar.url');
+                const body = await resp.json();
+                if (body.osBarUrl) {
+                    initOsBar(body.osBarUrl, document);
+                }
+            } catch (error) {
+                onError(document);
+            }
+
+        })();
 		// MindSphere specific part-3: ends
 	</script>
 ```

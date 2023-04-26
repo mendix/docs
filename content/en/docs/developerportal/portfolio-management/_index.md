@@ -9,9 +9,7 @@ tags: ["Portfolio Management"]
 
 ## 1 Introduction
 
-The [Portfolio Management](https://portfolio.mendix.com) tool enables staying informed about projects and managing them in the different development stages. It provides portfolio managers, business stakeholders, and developers with everything they need to collaborate effectively in one place and bring project ideas to the Mendix Platform.
-
-{{% alert type="info" %}}The Portfolio Management app is available to all Mendix Cloud customers. Mendix Admins can access all portfolios within their company.{{% /alert %}}
+Available to all Mendix Cloud customers, the [Portfolio Management](https://portfolio.mendix.com) tool enables staying informed about projects and managing them in the different development stages. It provides portfolio managers, business stakeholders, and developers with everything they need to collaborate effectively in one place and bring project ideas to the Mendix Platform.
 
 To start the Portfolio Management app, go to the Developer Portal, open the [Switch to menu](/developerportal/), and select **Portofolio**.
 

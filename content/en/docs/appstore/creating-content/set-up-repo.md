@@ -23,7 +23,7 @@ Before starting with this how-to, make sure you have completed the following pre
 
 ## 3 Creating Your Repo
 
-First of all, your repo needs a name. You should use the same name that will be used for the item published in the [Mendix Marketplace](https://marketplace.mendix.com/). Use UpperCamelCase to replace the spaces (for example, *My first app* becomes *Mendix/MyFirstApp* on GitHub).
+First of all, your repo needs a name. You should use the same name that will be used for the item published in the [Mendix Marketplace](https://marketplace.mendix.com/). Use UpperCamelCase to replace the spaces (for example, *MyFirstApp*).
 
 The description should say what the item does. This description can also be used in the Mendix Marketplace.
 

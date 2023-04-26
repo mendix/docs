@@ -1,0 +1,21 @@
+// Style alert boxes.
+
+.alert {
+    font-weight: $font-weight-normal; // NK - adjusted for use with multiple Noto Sans weights
+    //background: $white; // NK - turns off explicit color set, now it's inherited from bootstrap _alerts.scss
+    color: inherit;
+    border-radius: 0;
+
+    @each $color, $value in $theme-colors {
+        &-#{$color} {
+            & .alert-heading {
+                color: $value;
+            }
+
+            border-style: solid;
+            border-color: $value;
+            border-width: 0 0 0 4px;
+            background-color: fade-out($value, 0.75%); // NK - adds faded gradient to alert backgrounds
+        }
+    }
+}

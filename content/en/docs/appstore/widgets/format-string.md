@@ -7,6 +7,10 @@ tags: ["marketplace", "marketplace component", "widget", "format string", "platf
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
+{{% alert color="warning" %}}
+This widget is deprecated. For an alternative, see [Text](/refguide/text/) or [HTML Element](/appstore/widgets/htmlelement/) depending on your use case.
+{{% /alert %}}
+
 ## 1 Introduction
 
 The [Format String](https://marketplace.mendix.com/link/component/264/) widget adds a user-defined string to your page, taking object attributes as input parameters.

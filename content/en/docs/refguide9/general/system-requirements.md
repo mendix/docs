@@ -88,6 +88,19 @@ For active development and running your application locally, your app folder sho
 
 ### 2.6 Supported Git Service Providers {#supported-providers}
 
+Git service providers have size limitations related to commits and repositories.
+
+Studio Pro does not support Large File Storage (LFS) for any provider.
+
+You can find a list of known limitations below, however, we advise you to check the most up-to-date limitations on respective web sites before considering using a certain service provider.
+
+| Vendor      | Repository Size Limit                      | Push Limit      | Non-LFS File Size Limit | LFS File Size Limit |
+| ----------- | ------------------------------------------ | --------------- | ----------------------- | ------------------- |
+| GitHub      | Warnings on 5 GB, 100 GB theoretical limit | Information n/a | 100 MB (warning 50 MB)  | 5 GB                |
+| GitLab      | 5 GB (free) and 250 GB (enterprise)        | 5 GB            | None                    | 5 GB                |
+| Azure Repos | 250 GB                                     | 5 GB            | None                    | 50 GB               |
+| Bitbucket   | 4 GB                                       | 3.5 GB          | None                    | 10 + 100 GB         |
+
 #### 2.6.1 Azure Repos and Azure DevOps Server 
 
 We support both Microsoft’s [Azure Repos](https://azure.microsoft.com/en-us/services/devops/repos/) hosted Git service, and Azure DevOps Server (former Team Foundation Server) which is an on-premises solution for hosting your Git repos on private infrastructure.

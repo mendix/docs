@@ -1567,7 +1567,7 @@ Vertical pod autoscaling cannot be combined with horizontal pod autoscaling.
 
 ### 5.7 Log format
 
-#### 5.7.1 Runtime log format
+#### 5.7.1 Runtime log format{#runtime-log-format}
 
 Mendix Operator version 2.11.0 or above allows to specify the log format of Mendix apps.
 
@@ -1593,6 +1593,12 @@ You can set `runtimeLogFormatType` to one of the following values:
   ```json
   {"node":"M2EE","level":"INFO","message":"Added admin request handler '/prometheus' with servlet class 'com.mendix.metrics.prometheus.PrometheusServlet'","timestamp":1679409374607}
   ```
+
+{{% alert color="warning" %}}
+In the `json` format newline characters will be sent as `\n` (as specified in the [JSON spec](https://www.json.org/json-en.html)).
+You might need to configure you log viewer tool to display `\n` as line breaks.
+For example, to correctly display newline characters in Grafana, use the [Escape newlines](https://github.com/grafana/grafana/pull/31352) button.
+{{% /alert %}}
 
 ## 6 Cluster and Namespace Management
 

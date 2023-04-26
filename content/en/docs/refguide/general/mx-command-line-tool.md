@@ -258,7 +258,7 @@ If there are conflicts during the merge, you have to resolve those by opening th
 
 ### 3.6 mx show-app-version Command [version 9.24.2+]
 
-The mx show-app-version command allows you to see the version of your solution ([publisher side](/appstore/creating-content/sol-solutions-guide)) and version of a solution package your app is based on ([consumer side](/appstore/creating-content/sol-solutions-impl))
+The mx show-app-version command allows you to see the [publisher-side](/appstore/creating-content/sol-solutions-guide) version of your solution (meaning, the version of the solution that you develop) and the [consumer-side](/appstore/creating-content/sol-solutions-impl) version of the solution package that your app is based on (meaning, the version of the solution package when you consumed the solution).
 
 #### 3.6.1 Usage
 
@@ -287,37 +287,39 @@ For MPR-FILE enter a *.mpr* file.
 
 This command uses common format exit codes for all app-version related commands.
 
-The command outputs a version requested. If there is no errors, exit code is 0
+The command outputs a version requested. If there is no errors, exit code is 0.
 
 In case of errors the exit code consists of 3 digits XYZ:
 
 **X:** determines the error type:
 
- 1: Parameter validation error
+ 1: Parameter validation error.
  
- 2: Output related error
+ 2: Output-related error.
  
- 3: Errors related to the execution of the operation
+ 3: Errors related to the execution of the operation.
  
-**Y:** The number of the parameter the error is related to (if applicable).
+**Y:** is the number of the parameter the error is related to (if applicable).
 
-**Z:** Error details:
+**Z:** determines the following error details:
 
- 1: File not found
+ 1: File not found.
  
- 2: Project too old
+ 2: App is too old.
  
- 3: Distribution is not enabled
+ 3: Distribution is not enabled.
  
- 4: Version is not in SemVer format
+ 4: Version is not in the SemVer format.
  
- 5: App was not initialized from a solution package
+ 5: App was not initialized from a solution package.
+ 
+ The table below shows return codes and their meaning:
 
 | Return Code | Description                                                  |
 | ----------- | ------------------------------------------------------------ |
 | 0           | No errors 													 |
 | 315         | if -b was specified but the app is not based on a solution.  |
-| 313         | if -b was not specified but Distribution as a solution is not enabled for the app  |
+| 313         | if -b was not specified but distribution as a solution is not enabled for the app.  |
 
 ### 3.7 mx set-app-version Command [version 9.24.2+]
 
@@ -353,25 +355,27 @@ In case of errors the exit code consists of 3 digits XYZ:
 
 **X:** determines the error type:
 
- 1: Parameter validation error
+ 1: Parameter validation error.
  
- 2: Output related error
+ 2: Output-related error.
  
- 3: Errors related to the execution of the operation
+ 3: Errors related to the execution of the operation.
  
 **Y:** The number of the parameter the error is related to (if applicable).
 
-**Z:** Error details:
+**Z:** determines error details:
 
- 1: File not found
+ 1: File is not found.
  
- 2: App too old
+ 2: App is too old.
  
- 3: Distribution is not enabled
+ 3: Distribution is not enabled.
  
- 4: Version is not in SemVer format
+ 4: Version is not in the SemVer format.
  
- 5: App was not initialized from a solution package
+ 5: App was not initialized from a solution package.
+ 
+ The table below shows return codes and their meaning:
 
 | Return Code | Description                                                  |
 | ----------- | ------------------------------------------------------------ |

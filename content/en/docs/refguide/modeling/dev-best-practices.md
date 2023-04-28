@@ -8,7 +8,7 @@ description: "Describes Mendix best practices for developing Mendix applications
 tags: ["best practice", "development", "develop", "reusable", "prefix"]
 aliases:
     - /howto/general/dev-best-practices/
-#Academy are SMEs for verification, they discuss and link to this doc in training
+#Academy are SMEs for verification, they use/link to this doc in training; microflow prefix naming convention from ES and Academy
 ---
 
 ## 1 Introduction

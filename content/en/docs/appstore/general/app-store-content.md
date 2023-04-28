@@ -215,6 +215,14 @@ To update the module in your app to a newer version, follow these steps::
 
 3. Check the **userlib** folder in your app directory for duplicate Java libraries. If your **userlib** folder contains multiple versions of the same Java library, it is usually safe to delete the old ones and keep only the new one.
 
+##### 3.2.1.1 Maintaining Added Translations in an Updated Module
+
+In the scenario where you have an app with multiple languages, import a Marketplace module that only comes with one language, manually add translations for the additional languages you need, and you then need to update the Marketplace module, you can maintain the additional translations by following these steps:
+
+1. Maintain the translations for the module by [exporting them to Excel](/refguide/batch-translate/#export).
+2. Update the module via the steps described above.
+3. Import the maintained translations [from Excel](/refguide/batch-translate/#export).
+
 #### 3.2.2 Configuring the Module
 
 Each module that you download from the Marketplace is different. Some modules can cause errors because they are connected to other modules. For example, after you download the [Database Replication](/appstore/modules/database-replication/) module, you also need to download the [Mx Model Reflection](/appstore/modules/model-reflection/) module to accomplish the configuration. If you run into any problems, always check the **Documentation** tab on the page of this module in the Marketplace for installation guidelines and details on any dependencies.

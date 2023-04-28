@@ -17,7 +17,7 @@ Access to this functionality is currently limited and can be gained through the 
 
 ## 2 Why IP Protection?
 
-Reusable solutions, app services, connectors, and other modules contain IP in the form of app model content like microflows that is reusable and which can be monetized. When you build a business around these types of sellable content, there is a risk associated with the loss of your IP. If customers copy your IP without compensating you as the publisher, then you lose out on part of your potential revenue.
+Reusable solutions, app services, connectors, and other modules contain IP in the form of app model content (for example, microflows) that is reusable and that can be monetized. When you build a business around these types of sellable content, there is a risk associated with the loss of your IP. If customers copy your IP without compensating you as the publisher, then you lose out on part of your potential revenue.
 
 Therefore, when distributing such content, it is desirable to hide parts of the implementation from the eyes of your customers while making sure that the functionality can be used through well-designed APIs.
 

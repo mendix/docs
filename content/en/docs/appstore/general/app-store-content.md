@@ -175,6 +175,14 @@ To add a widget using the **Add widget** option from the toolbar, follow these s
 
 To update the widget in your app to a newer version, go to the Marketplace to download the right version, and [install](#install) it in your app.
 
+##### 3.1.2.1 Maintaining Added Translations in a Widget to Update
+
+In the scenario where you have an app with multiple languages, import a Marketplace widget that only comes with one language, manually add translations for the additional languages you need, and you then need to update the Marketplace widget, you can maintain the additional translations by following these steps:
+
+1. Maintain the translations for the widget by [exporting them to Excel](/refguide/batch-translate/#export).
+2. Update the widget via the steps described above.
+3. Import the maintained translations [from Excel](/refguide/batch-translate/#export).
+
 #### 3.1.3 Configuring the Widget
 
 After you place the widget in your page, some new errors can appear in the [Errors](/refguide/errors-pane/) pane. That is because you still need to configure the widget. In this procedure, we use the Ratings widget as an example.
@@ -215,7 +223,7 @@ To update the module in your app to a newer version, follow these steps::
 
 3. Check the **userlib** folder in your app directory for duplicate Java libraries. If your **userlib** folder contains multiple versions of the same Java library, it is usually safe to delete the old ones and keep only the new one.
 
-##### 3.2.1.1 Maintaining Added Translations in an Updated Module
+##### 3.2.1.1 Maintaining Added Translations in a Module to Update
 
 In the scenario where you have an app with multiple languages, import a Marketplace module that only comes with one language, manually add translations for the additional languages you need, and you then need to update the Marketplace module, you can maintain the additional translations by following these steps:
 

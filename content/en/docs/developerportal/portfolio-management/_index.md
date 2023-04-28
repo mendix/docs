@@ -9,33 +9,57 @@ tags: ["Portfolio Management"]
 
 ## 1 Introduction
 
-Available to all Mendix Cloud customers, the [Portfolio Management](https://portfolio.mendix.com) tool enables staying informed about projects and managing them in the different development stages. It provides portfolio managers, business stakeholders, and developers with everything they need to collaborate effectively in one place and bring project ideas to the Mendix Platform.
+The [Portfolio Management](https://portfolio.mendix.com) tool is available to all Mendix Cloud customers. It enables staying informed about projects and managing them in the different development stages. It provides portfolio managers, business stakeholders, and developers with everything they need to collaborate effectively in one place and bring project ideas to the Mendix Platform.
 
 To start the Portfolio Management app, go to the Developer Portal, open the [Switch to menu](/developerportal/), and select **Portofolio**.
 
-## 2 Projects Overview {#projects-overview}
+## 2 Portfolio Landscape Overview
 
-After you start the Portfolio Management app, you see all the portfolios of your company. 
+When you start the Portfolio Management app for the first time, you see an introduction page for the tool. Click **Visit Portfolio Management** to open the **Portfolio Landscape Overview** page. From then on, when you start the Portfolio Management app, the **Portfolio Landscape Overview** page opens directly. Clicking **Learn more about Portfolio Management** brings you back to the introduction page.
 
-{{< figure src="/attachments/developerportal/portfolio-management/landing-page.png" >}}
+The **Portfolio Landscape Overview** page contains two sections: **My Portfolios** and **Company Portfolios**.
 
-{{% alert type="info" %}}When a Mendix Admin starts the Portfolio Management app for the first time and if their company has no portfolio, the system will automatically create a portfolio for the company.{{% /alert %}}
+**My Portfolios** shows all the portfolios to which you have access. **Company Portfolios** show all the portfolios in your company that are discoverable and to which you do not have access.
 
-Click a portfolio to open the **Project Overview** page, which gives an overview of all the projects in this portfolio.
+{{% alert color="info" %}}Whether a portfolio is discoverable in the **Company Portfolios** section depends on its **Privacy Settings** when [Portfolio Settings](#portfolio-settings).{{% /alert %}}
 
-{{< figure src="/attachments/developerportal/portfolio-management/projects-overview.png" >}}
+Each portfolio is presented in a card. On a portfolio card, you can see the name of the portfolio, the company to which it belongs, the privacy settings, and the portfolio managers (maximum four managers per portfolio).
 
-{{% alert type="info" %}}For the Beta version, it is only possible to have one portfolio board for an organization. We aim to provide the capability to create multiple portfolio boards in later versions. Stay tuned.{{% /alert %}}
+### 2.1 Creating a New Portfolio {#create-portfolio}
+
+1. On the upper-right corner of the **Portfolio landscape Overview** page, click **New Portfolio**. The **New Portfolio** dialog box opens.
+
+2. Enter **Portfolio Name** and **Description** for the new portfolio.
+
+3. For **Privacy Settings**, select **Private** or **Restricted**:
+
+   * The default setting is **Private**. If you select this, the portfolio is hidden on the **Company Portfolios** section, and people who want to access it need an invitation.
+
+   * If you select **Restricted**, the portfolio is shown on the **Company Portfolios** section on the **Portfolio Landscape Overview** page, but people who want to access it still need an invitation.
+
+     {{% alert color="info" %}}A Mendix Admin needs to approve the change of private settings. They will receive a notification about your request and can approve or reject it from the Control Center.{{% /alert %}}
+
+4. For **Prioritization Model**, select [WSJF Prioritization](/developerportal/portfolio-management/#wsjf) or [RICE Prioritization](/developerportal/portfolio-management/#rice).
+
+5. From the **Currency** drop-down list, select the default currency for this portfolio.
+
+6. Click **Create**.
+
+The portfolio is created. You are the first portfolio manager of this portfolio. You can start inviting other people.
+
+## 3 Projects Overview {#projects-overview}
+
+On the **Portfolio Landscape Overview **page, when you click a portfolio, the **Project Overview** page opens. It gives an overview of all the projects in this portfolio.
 
 On the top of the page, you can search for a project in the search bar.
 
 On the upper-right corner, you can use the **Filters** to filter projects. Using the drop-down list next to the **Filters**, you can [change your view](#change-view). Clicking the **Create New Project** button allows you to [create a new project](#create-new-project).
 
-### 2.1 Creating a New Project {#create-new-project}
+### 3.1 Creating a New Project {#create-new-project}
 
 In the Portfolio Management app, the term "Project" refers to a software project that you manage as you work along the development lifecycle. An app can be the result of multiple projects (if the app is complex and big) or only one project. For progress tracking, we recommend you to break down an app into smaller projects whenever possible.
 
-{{% alert type="info" %}}Only Portfolio Managers can create a new project. For more information on roles and permissions, see [Access Management](#access-management).{{% /alert %}}
+{{% alert type="info" %}}Both Portfolio Managers and Contributors can create new projects. Only Viewers cannot create a project. For more information on roles and permissions, see [Access Management](#access-management).{{% /alert %}}
 
 To create a new project and add project details to it, do as follows:
 
@@ -47,7 +71,7 @@ To create a new project and add project details to it, do as follows:
 6. [Add comments.](#add-comments)
 7. [Save project details.](#save-details)
 
-#### 2.1.1 Creating the Project {#create-project}
+#### 3.1.1 Creating the Project {#create-project}
 
 To create a new project, follow these steps:
 
@@ -56,9 +80,9 @@ To create a new project, follow these steps:
 3. Enter the **Project Name** and the **Stage** in which the project is. 
 4. Click **Create Project**. The project is created and appears on the **Projects Overview** page. The **Edit Project** side pane opens on the right side of the page where you can add the details of the new project.
 
-Now you can proceed to [add planning information](#add-planning-information).
+Now you can proceed to [add general information](#add-general-information).
 
-#### 2.1.2 Adding General Information {#add-general-information}
+#### 3.1.2 Adding General Information {#add-general-information}
 
 To add general information to your project, follow these steps:
 
@@ -84,9 +108,9 @@ To add general information to your project, follow these steps:
 
 6. If you want to add attachments, click **+** to add them. Once an attachment is added, all the users can open and download it.
 
-Now you can proceed to [add prioritization information](#add-prioritization-information).
+Now you can proceed to [add planning information](#add-planning-information).
 
-##### 2.1.2.1 Managing Tags {#manage-tags}
+##### 3.1.2.1 Managing Tags {#manage-tags}
 
 While you are in the process of [adding general information](#add-general-information), you can manage tags as follows:
 
@@ -116,7 +140,7 @@ To delete an existing tag, do as follows:
 2. Click the delete icon. The **Confirmation** dialog box opens.
 3. Click **Delete Tag**.
 
-#### 2.1.3 Adding Planning Information {#add-planning-information}
+#### 3.1.3 Adding Planning Information {#add-planning-information}
 
 In the **Edit Project** side pane, click **Planning** to show all the fields in this section. Set the following dates in this section:
 
@@ -124,7 +148,9 @@ In the **Edit Project** side pane, click **Planning** to show all the fields in 
 * **Start Date** – the time when the first actions are taken to start implementation
 * **Go-Live date** – the time when the app is expected to be up and running
 
-#### 2.1.4 Adding Prioritization Information {#add-prioritization-information}
+Now you can proceed to [add prioritization information](#add-prioritization-information).
+
+#### 3.1.4 Adding Prioritization Information {#add-prioritization-information}
 
 In the **Edit Project** side pane, click **Prioritization** to show all the fields in this section. Set the values for the fields in this section.
 
@@ -132,7 +158,9 @@ In the **Edit Project** side pane, click **Prioritization** to show all the fiel
 The title of this section can be **Prioritization: WSJF Model** or **Prioritization: RICE Model**, depending on the prioritization model selected on the [Portfolio Settings](#portfolio-settings) page. For more information about the prioritization models and the components of each model, see the [WSJF](/developerportal/portfolio-management/prioritization-models/#wsjf) section or the [RICE](/developerportal/portfolio-management/prioritization-models/#rice) section in *Prioritization Models Supported by Portfolio Management.*
 {{% /alert %}}
 
-#### 2.1.5 Adding Estimated Value {#add-estimated-value}
+Now you can proceed to [add estimated value](#add-estimated-value).
+
+#### 3.1.5 Adding Estimated Value {#add-estimated-value}
 
 In the **Edit Project** side pane, click **Estimated Value** to show all the fields in this section. These fields can solidify your business case and drive internal adoption, and help you map the realized value upon completion. Enter information in the following fields in this section:
 
@@ -146,17 +174,17 @@ If the project creates more than one type of value, click **Add Value** to add m
 
 Now you can proceed to [add comments](#add-comments).
 
-#### 2.1.6 Adding Comments {#add-comments}
+#### 3.1.6 Adding Comments {#add-comments}
 
 If you want to add a comment, click **Comments** in the **Edit Project** side pane, and then click **Post Comment** after you add the comment.
 
 Now you can proceed to [save project details](#save-details).
 
-#### 2.1.7 Saving Project Details {#save-details}
+#### 3.1.7 Saving Project Details {#save-details}
 
 At the bottom of the **Edit Project** side pane, click **Save**. Now all the details are saved for the new project that you just created.
 
-### 2.2 Changing Your View {#change-view}
+### 3.2 Changing Your View {#change-view}
 
 To change your view on the **Projects Overview** page, click the drop-down list on the upper-right corner, and then select one of the following views:
 
@@ -166,7 +194,7 @@ To change your view on the **Projects Overview** page, click the drop-down list 
 * [List view](#list-view)
 * [WSJF Prioritization](#wsjf) or [RICE Prioritization](#rice) (the section you see here depends on the prioritization model selected in [Portfolio Settings](#portfolio-settings))
 
-#### 2.2.1 Kanban View {#kanban-view}
+#### 3.2.1 Kanban View {#kanban-view}
 
 In Kanban view, all the projects are represented by project cards, and are categorized in different columns. A column indicates a the stage that a project is currently in. To move a project to a different stage, hover over the project card, and then click the **>** or **<** icon on the left or right side of the card. 
 
@@ -178,9 +206,10 @@ Each project card shows the following information:
 
 {{< figure src="/attachments/developerportal/portfolio-management/project-card.png" >}}
 
-* ① Project name  – clicking this opens a [side pane](#view-project) that shows project details
-* ② Ellipsis icon (**...**) – clicking this opens a pop-up menu that enables you to [edit](#edit-delete-project), [archive](#archive-project), or [delete](#edit-delete-project) the project
-    * Only Portfolio Managers can edit, archive, or delete a project (for more information on roles and permissions, see [Access Management](#access-management))
+* ① Project name  – Clicking this opens a [side pane](#view-project) that shows project details.
+* ② Ellipsis icon (**...**) – Clicking this opens a pop-up menu that enables you to [edit](#edit-delete-project), [archive](#archive-project), or [delete](#edit-delete-project) the project.
+  
+    {{% alert type="info" %}}Both Portfolio Managers and Contributors can edit, archive, or delete a project, but Viewers cannot do these actions. For more information on roles and permissions, see [Access Management](#access-management)).{{% /alert %}}
 * ③ Tags for the project – these tags are used to classify the project (tags can be used, for example, to indicate the types of projects)
 * ④ Department – the department to which the project belongs
 * ⑤ Calendar icon – hovering over the icon shows the following defined dates of the project lifecycle:
@@ -190,7 +219,7 @@ Each project card shows the following information:
 * ⑥ Icon of the linked app – clicking this shows the information about the Mendix app that is linked with the project
 * ⑦ Avatar of the project owner – hovering over the avatar shows the name of the project owner
 
-#### 2.2.2 List View {#list-view}
+#### 3.2.2 List View {#list-view}
 
 In the list view, projects are shown in a list.  Clicking the header of a column sequences the projects using the values in that column.
 
@@ -208,9 +237,10 @@ The list contains the following information:
 * **Linked App** – clicking this shows the information about the Mendix app linked with the project
 * **Owner** –  shows the name of the project owner
 * Ellipsis icon (**...**) – clicking this opens a pop-up menu that enables you to [edit](#edit-delete-project), [archive](#archive-project), or [delete](#edit-delete-project) the project
-    * Only Portfolio Managers can edit, archive, or delete a project (for more information on roles and permissions, see [Access Management](#access-management))
+  
+    {{% alert type="info" %}}Both Portfolio Managers and Contributors can edit, archive, or delete a project, but Viewers cannot do these actions. For more information on roles and permissions, see [Access Management](#access-management)).{{% /alert %}}
 
-#### 2.2.3 WSJF Prioritization {#wsjf}
+#### 3.2.3 WSJF Prioritization {#wsjf}
 
 {{% alert type="info" %}}For more information about WSJF and each individual component of WSJF, see the [WSJF](/developerportal/portfolio-management/prioritization-models/#wsjf) section in *Prioritization Models Supported by Portfolio Management*.{{% /alert %}}
 
@@ -231,7 +261,7 @@ The list contains the following information:
 * Ellipsis icon (**...**) – clicking this opens a pop-up menu that enables you to [edit](#edit-delete-project), [archive](#archive-project), or [delete](#edit-delete-project) the project ()
     * Only Portfolio Managers can edit, archive, or delete a project (for more information on roles and permissions, see [Access Management](#access-management))
 
-#### 2.2.4 RICE Prioritization {#rice}
+#### 3.2.4 RICE Prioritization {#rice}
 
 {{% alert type="info" %}}For more information about RICE and each individual component of RICE, see the [RICE](/developerportal/portfolio-management/prioritization-models/#rice) section in *Prioritization Models Supported by Portfolio Management*.{{% /alert %}}
 
@@ -254,9 +284,10 @@ The list contains the following information:
 * Icon of the linked app – clicking this shows the information about the Mendix app that is linked with the project
 * Avatar of the project owner – hovering over the avatar shows the name of the project owner
 * Ellipsis icon (**...**) – clicking this opens a pop-up menu that enables you to [edit](#edit-delete-project), [archive](#archive-project), or [delete](#edit-delete-project) the project
-    * Only Portfolio Managers can edit, archive, or delete a project (for more information on roles and permissions, see [Access Management](#access-management)) 
+  
+    {{% alert type="info" %}}Both Portfolio Managers and Contributors can edit, archive, or delete a project, but Viewers cannot do these actions. For more information on roles and permissions, see [Access Management](#access-management)).{{% /alert %}}
 
-### 2.3 Viewing Project Details {#view-project}
+### 3.3 Viewing Project Details {#view-project}
 
 On the **Project Overview** page, if you click a project, a side pane opens on the right side to show project details.
 
@@ -265,25 +296,27 @@ On the upper-right corner of the pane, there is a link icon, an ellipsis icon (*
 {{< figure src="/attachments/developerportal/portfolio-management/side-pane.png" >}}
 
 {{% alert type="info" %}}
-Only Portfolio Managers can edit, archive, or delete a project. For more information on roles and permissions, see [Access Management](#access-management).
+
+Both Portfolio Managers and Contributors can edit, archive, or delete a project, but Viewers cannot do these actions. For more information on roles and permissions, see [Access Management](#access-management).
+
 {{% /alert %}}
 
 When you view project details, you can only **Post Comment**. You cannot change any other information. To change other information, you need to [edit the project](#edit-delete-project).
 
-### 2.4 Editing or Deleting a Project {#edit-delete-project}
+### 3.4 Editing or Deleting a Project {#edit-delete-project}
 
 {{% alert type="info" %}}
-Only Portfolio Managers can edit or delete an existing project. For more information on roles and permissions, see [Access Management](#access-management).
+Both Portfolio Managers and Contributors can edit or delete an existing project. but Viewers cannot do these actions. For more information on roles and permissions, see [Access Management](#access-management).
 {{% /alert %}}
 
 To edit or delete a project, go to the **Projects Overview** page, click the ellipsis icon (**...**) for that project, and then select **Edit** or **Delete**. Alternatively, you can also click the ellipsis icon (**...**) in the [side pane](#view-project) where you view project details, and then select **Edit** or **Delete**.
 
-### 2.5 Archiving a Project {#archive-project}
+### 3.5 Archiving a Project {#archive-project}
 
 When a project is finished or the project is not relevant for the current time being, you can archive a project.
 
 {{% alert type="info" %}}
-Only Portfolio Managers can archive a project. For more information on roles and permissions, see [Access Management](#access-management).
+Both Portfolio Managers and Contributors can archive a project. Only Viewers cannot do this action. For more information on roles and permissions, see [Access Management](#access-management).
 {{% /alert %}}
 
 To archive a project, perform the following steps:
@@ -295,7 +328,7 @@ To archive a project, perform the following steps:
 
 A pop-up window opens and tells you that the project is successfully archived. Once the project is archived, you can find it on the [Archived Projects](#archived-projects) page.
 
-## 3 Archived Projects {#archived-projects}
+## 4 Archived Projects {#archived-projects}
 
 The **Archived Projects** page shows all the projects that are archived. You can search for a project in the search bar. 
 
@@ -308,14 +341,20 @@ The list contains the following information:
     {{% alert type="info" %}}When you view the details of a archived project, you can only **Post Comment**. You cannot edit any other information.{{% /alert %}}
 
 * **Department** – the department to which the project belongs
-* **Stage** – which stage the project is currently in
-* **Archiving reason** – the reason why the project was archived
-* **Archived date** – the date when the project was archived
-* **Archived by** – the name of the person who archived the project
-* Ellipsis (**...**) icon – clicking this opens a pop-up menu that enables you to [restore](#restore-delete-archived-project) or [delete](#restore-delete-archived-project) the archived project
-    Only Portfolio Managers can restore or delete a project (for more information on roles and permissions, see [Access Management](#access-management))
 
-### 3.1 Restoring or Deleting an Archived Project {#restore-delete-archived-project}
+* **Stage** – which stage the project is currently in
+
+* **Archiving reason** – the reason why the project was archived
+
+* **Archived date** – the date when the project was archived
+
+* **Archived by** – the name of the person who archived the project
+
+* Ellipsis (**...**) icon – clicking this opens a pop-up menu that enables you to [restore](#restore-delete-archived-project) or [delete](#restore-delete-archived-project) the archived project
+  
+    {{% alert type="info" %}}Both Portfolio Managers and Contributors can restore or delete a project. Only Viewers cannot do these actions. For more information on roles and permissions, see [Access Management](#access-management).{{% /alert %}}
+
+### 4.1 Restoring or Deleting an Archived Project {#restore-delete-archived-project}
 
 {{% alert type="info" %}}
 Only Portfolio Managers can restore or delete an archived project. For more information on roles and permissions, see [Access Management](#access-management).
@@ -325,7 +364,7 @@ To restore or delete an archived project, go to the **Archived Projects** page, 
 
 Alternatively, to delete an archived project, you can also click the ellipsis icon (**...**) in the side pane where you view the archived project details, and then select **Delete**.
 
-## 4 Access Management {#access-management}
+## 5 Access Management {#access-management}
 
 The **Access Management** page shows all the users who have access to this portfolio. 
 
@@ -333,19 +372,16 @@ The **Access Management** page shows all the users who have access to this portf
 
 There are three access roles: **Portfolio Managers**, **Contributors**, and **Viewers**.
 
-{{% alert type="info" %}}
-Mendix Admins are by default Portfolio Managers.
-{{% /alert %}}
-
 The table below shows the permissions of Portfolio Managers, Contributors and Viewers:
 
 | Action | Portfolio Manager | Contributor | Viewer |
 | --- | --- | --- | --- |
 | Invite new users | {{< figure src="/attachments/developerportal/portfolio-management/check-mark.svg" >}} | {{< figure src="/attachments/developerportal/portfolio-management/cross-mark.svg" >}} | {{< figure src="/attachments/developerportal/portfolio-management/cross-mark.svg" >}} |
-| Remove user permissions and roles | {{< figure src="/attachments/developerportal/portfolio-management/check-mark.svg" >}}{{% alert type="info" %}}A Portfolio Manager cannot remove the permissions and role of another Portfolio Manager if the latter is a Mendix Admin.{{% /alert %}} | {{< figure src="/attachments/developerportal/portfolio-management/cross-mark.svg" >}} | {{< figure src="/attachments/developerportal/portfolio-management/cross-mark.svg" >}} |
-| Update user permissions and roles | {{< figure src="/attachments/developerportal/portfolio-management/check-mark.svg" >}}{{% alert type="info" %}}A Portfolio Manager cannot update the permissions and role of another Portfolio Manager if the latter is a Mendix Admin.{{% /alert %}} | {{< figure src="/attachments/developerportal/portfolio-management/cross-mark.svg" >}} | {{< figure src="/attachments/developerportal/portfolio-management/cross-mark.svg" >}} |
+| Remove user permissions and roles | {{< figure src="/attachments/developerportal/portfolio-management/check-mark.svg" >}} | {{< figure src="/attachments/developerportal/portfolio-management/cross-mark.svg" >}} | {{< figure src="/attachments/developerportal/portfolio-management/cross-mark.svg" >}} |
+| Update user permissions and roles | {{< figure src="/attachments/developerportal/portfolio-management/check-mark.svg" >}} | {{< figure src="/attachments/developerportal/portfolio-management/cross-mark.svg" >}} | {{< figure src="/attachments/developerportal/portfolio-management/cross-mark.svg" >}} |
 | View user access information | {{< figure src="/attachments/developerportal/portfolio-management/check-mark.svg" >}} | {{< figure src="/attachments/developerportal/portfolio-management/check-mark.svg" >}} | {{< figure src="/attachments/developerportal/portfolio-management/check-mark.svg" >}} |
 | Manage portfolio settings | {{< figure src="/attachments/developerportal/portfolio-management/check-mark.svg" >}} | {{< figure src="/attachments/developerportal/portfolio-management/cross-mark.svg" >}} | {{< figure src="/attachments/developerportal/portfolio-management/cross-mark.svg" >}} |
+| Delete Portfolios | {{< figure src="/attachments/developerportal/portfolio-management/check-mark.svg" >}} | {{< figure src="/attachments/developerportal/portfolio-management/cross-mark.svg" >}} | {{< figure src="/attachments/developerportal/portfolio-management/cross-mark.svg" >}} |
 | Create new projects | {{< figure src="/attachments/developerportal/portfolio-management/check-mark.svg" >}} | {{< figure src="/attachments/developerportal/portfolio-management/check-mark.svg" >}} | {{< figure src="/attachments/developerportal/portfolio-management/cross-mark.svg" >}} |
 | Edit existing projects | {{< figure src="/attachments/developerportal/portfolio-management/check-mark.svg" >}} | {{< figure src="/attachments/developerportal/portfolio-management/check-mark.svg" >}} | {{< figure src="/attachments/developerportal/portfolio-management/cross-mark.svg" >}} |
 | Archive and restore projects | {{< figure src="/attachments/developerportal/portfolio-management/check-mark.svg" >}} | {{< figure src="/attachments/developerportal/portfolio-management/check-mark.svg" >}} | {{< figure src="/attachments/developerportal/portfolio-management/cross-mark.svg" >}} |
@@ -379,36 +415,51 @@ For users within your company, if they have a Mendix account, their **Status** w
 
 ### 4.2 Editing and Deleting a User
 
-If you hover over a row, you can see the edit icon (pencil) or the delete icon (trashcan) at the end of a row. 
+At the end of the row, click the Ellipsis (**...**), and then select the corresponding action.
 
 {{< figure src="/attachments/developerportal/portfolio-management/edit-delete-user.png" >}}
 
-To update the permissions and the role of a user, click the edit icon. To delete a user, click the delete icon.
-
-## 5 Portfolio Settings {#portfolio-settings}
+## 6 Portfolio Settings {#portfolio-settings}
 
 {{% alert color="info" %}}The **Portfolio Settings** page is only available for Portfolio Managers.{{% /alert %}}
 
-On the **Portfolio Settings** page, Portfolio Managers can customize the options for the following items:
+### 6.1 Changing Portfolio Settings
 
-* **Prioritization Model**
-* **Currency**
-* **Departments**
-* **Countries**
+On the **Portfolio Settings** page, Portfolio Managers can change the following settings:
+
+* **Portofolio Name**
+* **Portfolio Description**
+* **Privacy Settings** – A Mendix Admin needs to approve the change of private settings. They will receive a notification about your request and can approve or reject it from the Control Center.
+
 * **Stages**  – click the **^** icon or the **v** icon to move a stage upwards or downwards
 
     {{< figure src="/attachments/developerportal/portfolio-management/move-upwards-downwards.png" >}}
 
+* **Prioritization Model**
+
+* **Currency**
+
+* **Departments**
+
+* **Countries**
+
 * **Scope Estimation - Use Cases**
+
 * **Expected Value - Types**
-* **Main Details - Departments**
 
-To add an option, click **Add Department**, **Add Country**, **Add Stage**, **Add Use Case**, or **Add Value Type** below the corresponding list.
-
-To delete or edit an existing option, hover over the option to show the **Delete** button or the **Edit** button at the end of row, and then click the corresponding button.
+To delete or edit an existing option for a setting, hover over the option to show the **Delete** button or the **Edit** button at the end of row, and then click the corresponding button.
 
 {{< figure src="/attachments/developerportal/portfolio-management/delete-edit-stage.png" >}}
 
-## 6 Read More
+To add an option for a setting, click **Add Department**, **Add Country**, **Add Stage**, **Add Use Case**, or **Add Value Type** below the corresponding list.
+
+### 6.2 Deleting a Portfolio
+
+1. On the Portfolio Settings page, click **Delete** at the bottom of the page. The **Delete Portfolio?** Dialog box opens.
+2. Read the warning carefully. Deleting a portfolio means that you permanently delete the portfolio, including all the data in it. This change cannot be reverted.
+3. If you decide to continue, type **DELETE** in the text box.
+4. Click **Delete**. The portfolio is permanently deleted.
+
+## 7 Read More
 
 * [Prioritization Models Supported by Portfolio Management](/developerportal/portfolio-management/prioritization-models/)

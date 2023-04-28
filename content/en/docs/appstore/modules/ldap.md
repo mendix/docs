@@ -103,7 +103,7 @@ Configure your app by doing the following:
 1. Run the app.
 1. Sign in as an LDAP administrator and open your LDAP servers overview.
 1. Click **New** to configure a new LDAP connection. This adds a new server configuration. If you have an existing configuration, you can select it and click **Edit**. It’s also possible to **Delete** a configuration.
-1. Fill in the fields on the tabs in the configuration screen. You will need to perform a [Server Configuration](https://paper.dropbox.com/doc/LDAP-synchronization-module-product-documentation--Bsh6TPVpbrPxG5WxySrcfboIAg-h8OYLo5AiSLPBPcv4Yyw9#:h2=3.2.1-Server-Configuration) for each LDAP connection. You then need to perform the following steps to add further information to configure an LDAP connection depending on its type (note that not all steps will be applicable in every configuration):
+1. Fill in the fields on the tabs in the configuration screen. You will need to perform a [Server Configuration](#server-configuration) for each LDAP connection. You then need to perform the following steps to add further information to configure an LDAP connection depending on its type (note that not all steps will be applicable in every configuration):
 
     1. Fill out the server configuration as described in the next section.
     1. Do one of the following:
@@ -134,7 +134,7 @@ Once you have the LDAP configuration form, fill in the following properties to m
 If LDAP is enabled for this connection (**LDAP enabled** is checked), you must fill in the following properties:
 
 * **Paths where to find users** – Here, you can select one or more directories from which end-users will be imported. Clicking **Browse LDAP**  shows you the LDAP root directory. You can browse for the directory where the users are located. When you find a directory that lists the users you want to import as a sub-directory, click **Use this directory as import location**. If you cannot browse the LDAP, click **Manual add** to specify a path from which to import users.
-* **LDAP type** – Set the type of action that should be done for this LDAP connection. Depending on this type, you will need to add further information as described in [LDAP Type Configurations](https://paper.dropbox.com/doc/LDAP-synchronization-module-product-documentation--Bsh6TPVpbrPxG5WxySrcfboIAg-h8OYLo5AiSLPBPcv4Yyw9#:h2=3.2.2-LDAP-Type-Configurations), below. The LDAP type can be one of the following:
+* **LDAP type** – Set the type of action that should be done for this LDAP connection. Depending on this type, you will need to add further information as described in [LDAP Type Configurations](#ldap-type-configurations), below. The LDAP type can be one of the following:
 
     * **Import users** – Import and synchronize the end-users specified the configuration. This will make the end-user information available in your Mendix app.
     * **Only authenticate users** – This will only authenticate existing Mendix end-users against the LDAP server, but it will not synchronize any information. If an end-user is not known in Mendix, they cannot sign in.
@@ -144,7 +144,7 @@ If LDAP is enabled for this connection (**LDAP enabled** is checked), you must f
 * **Domain suffix** – This is a concatenation of the LDAP root directory fields. It is used to authenticate end-users and will be concatenated to the Mendix user name to form the LDAP user name. At Mendix, this results in `@mendixdomain.local`.
 * **User roles WITHOUT LDAP authentication** – This property identifies which user roles are not authenticated against LDAP. End-users that have at least one of these roles will not be authenticated against LDAP, but will instead use their Mendix app password to sign in. Note that end-users with the **Administrator** user role will never be authenticated against LDAP.
 
-#### 3.2.2 LDAP Type Configurations
+#### 3.2.2 LDAP Type Configurations{#ldap-type-configurations}
 
 Depending on the **LDAP Type** you have selected, you must add further information on one of the following tabs.
 

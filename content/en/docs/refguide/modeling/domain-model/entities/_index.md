@@ -153,7 +153,11 @@ The 'changedDate' property is updated when a value is set. Setting an attribute 
 {{% /alert %}}
 
 {{% alert color="info" %}}
-We do not support displaying this system member of the System.User entity or its specializations in a data grid directly.
+A data grid cannot directly display this system member of the System.User entity or its specializations.
+{{% /alert %}}
+
+{{% alert color="warning" %}}
+The `changedDate` value will not be updated if you update the entity directly in Java using calls which resolve to use the [`com.mendix.systemwideinterfaces.core.IMendixObject.setValue​(IContext context, java.lang.String memberName, java.lang.Object value)`](https://apidocs.rnd.mendix.com/10/runtime/com/mendix/systemwideinterfaces/core/IMendixObject.html#setValue(com.mendix.systemwideinterfaces.core.IContext,java.lang.String,java.lang.Object)) method (for example, `Entity.setValue(IContext, String)`). If you need `changedDate` to be updated when using Java, use the [`com.mendix.core.Core.change​(IContext context, IMendixObject object, java.util.Map<java.lang.String,​java.lang.String> changes)`](https://apidocs.rnd.mendix.com/10/runtime/com/mendix/core/Core.html#change(com.mendix.systemwideinterfaces.core.IContext,com.mendix.systemwideinterfaces.core.IMendixObject,java.util.Map)) method.
 {{% /alert %}}
 
 #### 3.4.3 Store 'owner' {#store-owner}

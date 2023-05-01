@@ -84,11 +84,11 @@ This API allows you to programmatically create an app in your company space and 
 
 For details, see [Project API](/apidocs-mxsdk/apidocs/projects-api/).
 
-## 14 Runtime API {#runtime}
+## 14 Mendix Runtime API {#runtime}
 
 All the functionality and information from both the application model and [Mendix Runtime](/refguide/runtime/) is accessible via this API.
 
-Continue on to the [Runtime API](/apidocs-mxsdk/apidocs/runtime-api/).
+Continue on to the [Mendix Runtime API](/apidocs-mxsdk/apidocs/runtime-api/).
 
 ## 15 Stories API
 

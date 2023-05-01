@@ -181,7 +181,7 @@ In the scenario where you have an app with multiple languages in which you need 
 
 1. Maintain the translations for the widget by [exporting them to Excel](/refguide/batch-translate/#export).
 2. Update the widget via the steps described above.
-3. Import the maintained translations [from Excel](/refguide/batch-translate/#import).
+3. [Import](/refguide/batch-translate/#import) the maintained translations from the Excel.
 
 #### 3.1.3 Configuring the Widget
 
@@ -229,7 +229,7 @@ In the scenario where you have an app with multiple languages in which you need 
 
 1. Maintain the translations for the module by [exporting them to Excel](/refguide/batch-translate/#export).
 2. Update the module via the steps described above.
-3. Import the maintained translations [from Excel](/refguide/batch-translate/#import).
+3. [Import](/refguide/batch-translate/#import) the maintained translations from the Excel.
 
 #### 3.2.2 Configuring the Module
 

@@ -8,7 +8,7 @@ no_list: false
 description_list: true
 cascade:
     - space: "Studio Pro 8 Guide"
-    - mendix_version: "8"
+    - mendix_version: 8
     - old_content: true
     - hide_feedback: true
     - sitemap:

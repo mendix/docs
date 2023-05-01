@@ -5,7 +5,7 @@ tags: ["studio", "web modeler"]
 weight: 75
 cascade:
     - space: "Studio 8 Guide"
-    - mendix_version: "8"
+    - mendix_version: 8
     - old_content: true
     - hide_feedback: true
     - sitemap:

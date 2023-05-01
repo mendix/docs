@@ -22,7 +22,7 @@ On the left side of the top bar, you open an access menu by clicking the **切�
 
 You can then access the following parts of the Mendix Platform:
 
-* * [Studio](/studio/)
+    * * [Studio](/studio/)
 * **下载 Studio Pro** – opens the Studio Pro China Edition download page
 * **我的应用** – opens the page with [a summary of your apps](#my-apps)
 * **集群管理** – opens the page for [cluster management](/developerportal/deploy/tencent-deploy/#overview)

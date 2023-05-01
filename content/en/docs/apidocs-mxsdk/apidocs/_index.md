@@ -15,5 +15,3 @@ aliases:
 The API documentation is divided into the sections described below.
 
 ## 2 Documents in this Category
-
-

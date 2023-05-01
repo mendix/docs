@@ -17,17 +17,20 @@ The ONNX community provides an ML model repository, called [ONNX Model Zoo](http
 Below, you can find the list of ONNX models in the ONNX Model Zoo. You can use these pre-trained models to build your business use cases similar to the ones listed above, or other types of use cases for your business.
 
 Vision
+
 * [Image Classification](https://github.com/onnx/models#image_classification)
 * [Object Detection and Image Segmentation](https://github.com/onnx/models#object_detection)
 * [Body, Face, and Gesture Analysis](https://github.com/onnx/models#body_analysis)
 * [Image Manipulation](https://github.com/onnx/models#image_manipulation)
 
 Language
+
 * [Machine Comprehension](https://github.com/onnx/models#machine_comprehension)
 * [Machine Translation](https://github.com/onnx/models#machine_translation)
 * [Language Modelling](https://github.com/onnx/models#language_modelling)
 
 Other
+
 * [Visual Question Answering and Dialogue](https://github.com/onnx/models#visual_qna)
 * [Speech and Audio Processing](https://github.com/onnx/models#speech)
 * [Other interesting models](https://github.com/onnx/models#others)

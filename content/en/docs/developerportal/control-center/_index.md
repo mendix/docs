@@ -295,7 +295,6 @@ To quickly change the [Technical Contact](/developerportal/collaborate/app-roles
 You may only have one Technical Contact per app. When you change the Technical Contact, both the new and the old contact receive a notification email about the change.
 {{% /alert %}}
 
-
 ## 13 Data Hub {#data-hub}
 
 An organization's Data Hub requires governance of the data-sharing policy down to the practical details of curating registered assets. A Mendix Admin can oversee these functions and also assign curators that can perform governance tasks for their apps.

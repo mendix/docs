@@ -38,6 +38,7 @@ When you import an add-on module, it shows up in the **Add-ons** folder in the A
 {{< figure src="/attachments/refguide/modeling/app-explorer/modules/consume-add-on-modules-and-solutions/protected-microflow.png" >}}
 
 You also might not see the full domain model of the module, only entities, attributes, and associations that were specifically exposed by the publisher. The visible parts of the domain model are intended to be reused; hidden elements are not needed for proper use of the module.
+
 ## 6 Deleting a Consumed Add-on Module 
 
 To delete an add-on module, do one of the following:

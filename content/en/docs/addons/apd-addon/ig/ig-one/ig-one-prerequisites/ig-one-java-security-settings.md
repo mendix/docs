@@ -46,7 +46,7 @@ To reroute java util logging the following permission is needed
 
 * `permission java.util.logging.LoggingPermission "control"; // for java util`
 
-To use explain plan, to execute JDBC queries and to use measurements based on JDBC queries the following permission is needed:
+To use explain plan, to run JDBC queries and to use measurements based on JDBC queries the following permission is needed:
 
 * `permission java.net.SocketPermission "<server>:<port>", "connect"; // for JDBC`
 

@@ -19,10 +19,6 @@ It is also possible to nest **Call Workflow** activities, i.e. to use **Call wor
 
 ## 2 Properties
 
-An example of call workflow properties is represented in the image below:
-
-{{< figure src="/attachments/refguide/modeling/application-logic/workflows/workflow-elements/call-workflow/call-workflow-properties.jpg" alt="Call Workflow Properties" width="250">}}
-
 Call workflow properties consist of the following sections:
 
 * [General](#general)

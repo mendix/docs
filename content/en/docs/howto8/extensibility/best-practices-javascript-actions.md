@@ -249,7 +249,7 @@ Below is an example of using an external dependency based on [pdf-lib](https://g
     // Other code you write will be lost the next time you deploy the project.
     import { Big } from "big.js";
     import { PDFDocument } from "pdf-lib"
-
+    
     // BEGIN EXTRA CODE
     ```
 
@@ -477,7 +477,7 @@ Not all capabilities are recommended for use. Consider the side effects that an 
 
 * [Build JavaScript Actions](/howto8/extensibility/build-javascript-actions/)
 * [JavaScript Actions](/refguide8/javascript-actions/)
-* [Mendix Client API](/apidocs-mxsdk/apidocs/client-api/.html)
+* [Mendix Client API](/apidocs-mxsdk/apidocs/client-api/)
 * JavaScript basics:
     * [Mozilla JavaScript Basics](https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/JavaScript_basics)
     * [Promises](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise)

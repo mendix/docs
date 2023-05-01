@@ -33,5 +33,14 @@ Committing non-persistable entities records the current attribute values and ass
 
 ### 3.1 Creating Non-Persistable Entities
 
-Non-persistable entities can be created either on the client or the runtime, depending on their configuration. When a non-persistable entity does not have an event handler attached, does not contain any calculated attributes, and has no read-only attributes (as they cannot be written to client-side), it is created on the client side without sending a request to the runtime. This allows for faster object creation and reduced server load. Otherwise, a request is sent to the runtime to create the object, ensuring that the event handler is executed, calculated attributes are properly initialized.
+Non-persistable entities can be created either on the Mendix client or the runtime server, depending on their properties.
 
+A non-persistable entity is created on the client side, without sending a request to the runtime, if it:
+
+* does not have an event handler attached
+* does not contain any calculated attributes
+* has no read-only attributes (as they cannot be written to client-side)
+
+This allows for faster object creation and reduced server load.
+
+Otherwise, a request is sent to the runtime server to create the object, ensuring that the event handler is executed and calculated attributes are properly initialized.

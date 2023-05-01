@@ -25,14 +25,15 @@ You can also apply the concept of IP protection to protect your modules from bei
 
 ## 3 Always use a legal framework on top of technical restrictions
 
-Using IP Protection and [Solution Modules](/refguide/module-settings/#solution-module) it is possible to hide the implementation in Studio Pro. This helps to protect your IP and prevent others from duplicating it. However, it does not prevent people from reverse engineering how specific logic is built, or analyzing the parts of the application that they do have access to. Therefore make sure to have the right _terms and conditions_ in place to protect your IP, which also allows you to act on any misuse of your application.
+Using IP Protection and [Solution Modules](/refguide/module-settings/#solution-module) the implementation is hidden in Studio Pro and from the Model SDK. This helps to protect your IP and prevent others from duplicating it. However, it does not prevent people from reverse engineering how specific logic is built, or analyzing the parts of the application that they do have access to. Therefore make sure to have the right _terms and conditions_ in place to protect your IP, which also allows you to act on any misuse of your application.
 
 ## 4 What Should Be Protected?
 
-Not all parts of a component need to be protected. It is often desirable to protect the following:
+Not all parts of a component need to be protected to allow for [adaptability](/appstore/creating-content/sol-development/#3-three-parts-protected-core-vs-adaptability). It is often desirable to protect the following:
 
 -   **The core IP of the solution** – analyze the business logic (for example, scheduling or planning algorithms), complex data mappings, business rules, and decision logic that needs protection
 -   **Custom usage metering** – ensure that the metering is tamper-proof (whether done accidentally or intentionally)
+-   **Entitlement management** - control the use of your solution against a valid subscription
 -   **Any part of the solution that the customer should never modify** – hide implementation details behind APIs to ensure customers or implementation teams focusing on extensions are not distracted by implementation details
 
 ## 5 Applying IP Protection Effectively
@@ -63,7 +64,7 @@ Customers that adapt a solution with this kind of IP protection see only a well-
 
 ### 5.3 Protecting Component Types
 
-#### 5.3.1 Protecting Solutions
+#### 5.3.1 Protecting Adaptive Solutions
 
 Adaptive solutions that will be customized by your customer, by a third-party implementation partner, or even by your own professional services teams can benefit from IP protection. By protecting the common core that is shared across customers, maintenance efforts are brought under control and the core is protected from accidental (or intentional) changes.
 
@@ -74,6 +75,10 @@ To protect your solutions, follow these steps:
 3. Define clear APIs between the common core and the flexible shell. This ensures good architecture so that the core does not need to be adjusted and can be extended with limited effort.
 
 Approach this iteratively, as it is often very hard to define these boundaries “right first time.” Instead, open up as little as possible and increase API surface with incremental releases.
+
+#### 5.3.2 Protecting a full solution model
+
+Regardless of how the Mendix model is designed (with or without Solution Modules), implementation can always be hidden by sharing the MDA with the customer instead. This will allow for custom deployment, without being able to open the Mendix model.
 
 #### 5.3.2 Protecting App Services, Connectors, and Modules
 

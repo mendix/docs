@@ -187,6 +187,28 @@ Below is an explanation of the possibilities for what other apps can do and what
 3. Click **Done** to exit the wizard and view the defined service document. 
 
      **Export AsyncAPI Document** exports the YAML file of the business event service so that other apps can [use your newly created service](#two-way-be-existing).
+     
+##### 4.2.1.2 Attribute types
+
+Attribute types for business events relate to attribute types of entities, but not all attribute types are supported for business events. Unsupported attribute types:
+
+    AutoNumber
+
+    Binary
+
+    Hased string
+
+    Enumeration: see bellow
+
+For 9.24 and earlier all types were supported implicitly because a business event was defined by an entity. The unsupported types were from the perspective of the consumer received as plain string.
+
+Enumeration attribute type
+
+For 9.24 Consumers see enumerations as plain string. The names of the enumeration items are the values that are transmitted by the event broker to the subscribers.
+
+For 9.24 enumerations can not be modelled for new services but for converted earlier apps the functionality is maintained.
+
+For Mx10: enumerations are fully supported. The enumeration attribute type can be modelled, the enumeration items are stored in the exported async api document, when imported a new enumeration document will be created with the name '<attributeName>Enum’. The Caption and Image field are not transmitted to the importer of the Async Api document. Captions and images can be provided manually and will not cause conflicts when an Async api document is re-imported.
 
 #### 4.2.2 Using an Existing Business Event Service {#two-way-be-existing}
 

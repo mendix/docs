@@ -3,7 +3,7 @@ title: "Projects API"
 url: /apidocs-mxsdk/apidocs/projects-api/
 category: "API Documentation"
 description: "This API allows you to programmatically create an app in your company space and move working copies between the Mendix Team Server and the Model Server."
-weight: 50
+weight: 85
 ---
 
 ## 1 Introduction

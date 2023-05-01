@@ -3,7 +3,7 @@ title: "Feedback API"
 url: /apidocs-mxsdk/apidocs/feedback-api/
 category: "API Documentation"
 description: "Presents details for using this API to build on top of the feedback management functionality of the Mendix Platform and to connect your own feedback gathering tool."
-weight: 35
+weight: 50
 tags: ["Feedback", "Developer Portal", "API"]
 ---
 

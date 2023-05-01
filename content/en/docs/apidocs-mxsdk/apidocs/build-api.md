@@ -3,7 +3,7 @@ title: "Build API"
 url: /apidocs-mxsdk/apidocs/build-api/
 category: "API Documentation"
 description: "An API that enables triggering and managing deployment package builds and getting information about existing deployment packages." 
-weight: 10
+weight: 15
 tags: ["API", "Build Server", "Team Server", "Deployment package", "Mendix Cloud"]
 ---
 

@@ -4,7 +4,7 @@ url: /apidocs-mxsdk/apidocs/private-cloud-deploy-api/
 type: swagger
 category: "API Documentation"
 description: "This API allows you to manage application environments deployed to your private cloud using the Mendix Operator."
-weight: 38
+weight: 60
 ---
 
 ## 1 Introduction

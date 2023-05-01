@@ -3,7 +3,7 @@ title: "Pluggable Widgets API"
 url: /apidocs-mxsdk/apidocs/pluggable-widgets/
 category: "API Documentation"
 description: "This API helps you to understand pluggable widgets, how they extend app  functionality, and how they can be built to interact with Mendix's APIs."
-weight: 45
+weight: 80
 tags: ["Widget", "Pluggable", "Custom", "JavaScript", "React"]
 aliases:
     - /apidocs-mxsdk/apidocs/pluggable-parent-9

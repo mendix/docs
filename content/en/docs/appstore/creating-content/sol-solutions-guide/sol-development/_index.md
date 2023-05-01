@@ -59,7 +59,7 @@ There are three main stages a solution goes through during its lifecycle:
 | Phase     | Party                                          | Purpose                                                                                                                               |
 | --------- | ---------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------- |
 | Build     | ISV                                            | Create a solution that's designed for adaptation. New versions are periodically released.                                             |
-| Implement | ISV, the Customer or an implementation partner | Adapt the solution to the individual customer's need. Including changes on UI, data, logic or integration into the customer landscape |
+| Implement | ISV, the Customer or an implementation partner | Adapt the solution to the individual customer's need and apply upgrades. Including changes on UI, data, logic or integration into the customer landscape |
 | Consume   | Customer                                       | Production usage of the application by the customer. Functional admins can perform day-to-day tasks                                   |
 
 The customer implementation is a separate, _upgradable_ model instance (fork) per customer, that shares generic functionality from the original Solution model, that's deployed to separate cloud resources. This allows the implementation team to fully customize all non IP protected functionality.

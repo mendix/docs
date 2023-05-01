@@ -486,7 +486,7 @@ Not all capabilities are recommended for use. Consider the side effects that an 
 
 * [Build JavaScript Actions](/howto9/extensibility/build-javascript-actions/)
 * [JavaScript Actions](/refguide9/javascript-actions/)
-* [Mendix Client API](https://apidocs.rnd.mendix.com/7/client/index.html)
+* [Mendix Client API](/apidocs-mxsdk/apidocs/client-api/)
 * JavaScript basics:
     * [Mozilla JavaScript Basics](https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/JavaScript_basics)
     * [Promises](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise)

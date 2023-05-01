@@ -82,7 +82,7 @@ $Measurement/ValueLong - $Measurement_1/ValueLong
 
 ## 4 Tester Tab
 
-The tester will execute the measurement and test the trigger (if enabled) to verify the expressions.
+The tester will run the measurement and test the trigger (if enabled) to verify the expressions.
 
 {{< figure src="/attachments/addons/apd-addon/rg-apd/rg-one-apm/rg-one-measurements-tool/Measurement_Tester.png" >}}
 

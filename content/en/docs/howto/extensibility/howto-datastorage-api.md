@@ -15,7 +15,7 @@ Mendix Studio Pro supports two query languages to retrieve data:
 * XPath as an easy to use query language to retrieve objects
 * OQL is a SQL based language, more focused on powerful reporting facilities
 
-You can use these query languages in Mendix Studio Pro, but both languages are also available through a Java API. You can use these APIs to implement powerful reusable microflow actions. In addition to XPath and OQL, the Mendix APIs also enable you to use standard SQL on your Mendix database.
+You can use these query languages in Mendix Studio Pro, but both languages are also available through the [Mendix Runtime Java API](https://docs.mendix.com/apidocs-mxsdk/apidocs/runtime-api/). You can use these APIs to implement powerful reusable microflow actions. In addition to XPath and OQL, the Mendix APIs also enable you to use standard SQL on your Mendix database.
 
 This how to describes how you can build the following microflow actions:
 
@@ -54,7 +54,7 @@ Finally, you should define how you want to display the microflow in the microflo
 
 {{< figure src="/attachments/howto/extensibility/howto-datastorage-api/image007.png" >}}
 
-The implementation of this Java action is pretty straight forward; you can use the [Core.retrieveXPathQuery](https://apidocs.rnd.mendix.com/7/runtime/com/mendix/core/Core.html#retrieveXPathQuery-com.mendix.systemwideinterfaces.core.IContext-java.lang.String-) API to execute your XPath expression and return a list of Mendix objects.
+The implementation of this Java action is pretty straight forward; you can use the [Core.retrieveXPathQuery](https://apidocs.rnd.mendix.com/10/runtime/com/mendix/core/Core.html#retrieveXPathQuery-com.mendix.systemwideinterfaces.core.IContext-java.lang.String-) API to execute your XPath expression and return a list of Mendix objects.
 
 The implementation also validates that the list returned contains objects of the entity specified.
 

@@ -85,9 +85,9 @@ Legacy scheduled events (namely, those that are non-repeating or have a start ti
 
 ### 7.2 Runtime API Changes
 
-Most of the Java API calls that were deprecated in Mendix 9 have been removed. If you were still using such methods in your Java actions, you must replace or delete them. To check which calls were deprecated, see the [Mendix 9 Server Runtime API](https://apidocs.rnd.mendix.com/9/runtime/index.html).
+Most of the Mendix Runtime Java API calls that were deprecated in Mendix 9 have been removed. If you were still using such methods in your Java actions, you must replace or delete them. To check which calls were deprecated, see the [Mendix 9 Runtime API](https://apidocs.rnd.mendix.com/9/runtime/index.html).
 
-Additionally, refer to the [Studio Pro 10 release notes](/releasenotes/studio-pro/10.0/) for more Runtime API change details.
+Additionally, refer to the [Studio Pro 10 release notes](/releasenotes/studio-pro/10.0/) for more Mendix Runtime API change details.
 
 ### 7.3 XPath Query Engine Updates
 

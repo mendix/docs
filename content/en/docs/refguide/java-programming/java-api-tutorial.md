@@ -1,5 +1,5 @@
 ---
-title: "Using the Java API"
+title: "Using the Mendix Runtime Java API"
 url: /refguide/java-api-tutorial/
 category: "Java Programming"
 weight: 4

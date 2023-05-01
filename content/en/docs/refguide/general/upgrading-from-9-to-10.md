@@ -40,7 +40,7 @@ To prepare your app in Studio Pro 9.24, follow these steps:
 
 1. Download the latest patch release of Studio Pro [9.24](/releasenotes/studio-pro/9.24/).
 2. Open your app in Studio Pro 9.24.
-3. Allow Studio Pro to update the app.
+3. Allow Studio Pro to update and convert the app.
 4. Run your app, test all functionality, and ensure it works without error. 
 5. Fix any depreciation warnings you see both in development in Studio Pro as well as in the Mendix Runtime using your console and browser console.
 6. Review your app in combination with the sections below and assess if further action is needed before upgrading to Studio Pro 10.
@@ -50,7 +50,7 @@ Your app is now ready to be upgraded to Mendix 10. You can now close the app in 
 
 ## 4 Upgrading to Studio Pro 10
 
-Open your app in Studio Pro 10 and allow Studio Pro to update your app to version 10. Mendix will update your app for you automatically.
+Open your app in Studio Pro 10 and allow Studio Pro to update and convert your app to version 10. Mendix will update your app for you automatically.
 
 Review all error messages and messages about deprecated items, then make changes where necessary.
 

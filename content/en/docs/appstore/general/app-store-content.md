@@ -177,7 +177,7 @@ To update the widget in your app to a newer version, go to the Marketplace to do
 
 ##### 3.1.2.1 Maintaining Added Translations in a Widget to Update
 
-In the scenario where you have an app with multiple languages, import a Marketplace widget that only comes with one language, manually add translations for the additional languages you need, and you then need to update the Marketplace widget, you can maintain the additional translations by following these steps:
+In the scenario where you have an app with multiple languages in which you need to update an imported Marketplace module that only comes with one language and where you have manually added translations for the additional languages you need, you can maintain the additional translations by following these steps:
 
 1. Maintain the translations for the widget by [exporting them to Excel](/refguide/batch-translate/#export).
 2. Update the widget via the steps described above.

@@ -5,7 +5,7 @@ tags: ["studio", "web modeler"]
 weight: 95
 cascade:
     - space: "Mendix 7 Studio Guide"
-    - mendix_version: "7"
+    - mendix_version: 7
     - old_content: true
     - hide_feedback: true
     - sitemap:

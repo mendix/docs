@@ -174,123 +174,140 @@ To help you work with the AWS IoT Twinmaker connector, the following sections of
 | PropertyGroupResponse | | PropertyGroupResponse.<br><br>See also https://docs.aws.amazon.com/iot-twinmaker/latest/apireference/API_PropertyGroupResponse.html and https://sdk.amazonaws.com/java/api/latest/software/amazon/awssdk/services/iottwinmaker/model/PropertyGroupResponse.html |
 | ComponentTypePropertyGroupResponse | AWSTwinMakerConnector.PropertyGroupResponse | PropertyGroupResponse associated with a ComponentType<br><br>See also https://docs.aws.amazon.com/iot-twinmaker/latest/apireference/API_PropertyGroupResponse.html and https://sdk.amazonaws.com/java/api/latest/software/amazon/awssdk/services/iottwinmaker/model/PropertyGroupResponse.html |
 
-Back to top
-Entity 'GetEntityRequest'
-Request entity to retrieve information about aTwinMaker-Entity.
+#### 4.1.1 Entity GetEntityRequest
+
+Request entity to retrieve information about a TwinMaker-Entity.
 
 See also https://docs.aws.amazon.com/iot-twinmaker/latest/apireference/API_GetEntity.html and https://sdk.amazonaws.com/java/api/latest/software/amazon/awssdk/services/iottwinmaker/model/GetEntityRequest.html
-Attributes
 
-| Name        | Type               | Default value | Documentation                      |
-| ----------- | ------------------ | ------------- | ---------------------------------- |
-| EntityID    | String (unlimited) |               | Required: The ID of the entity.    |
-| WorkspaceID | String (unlimited) |               | Required: The ID of the workspace. |
+##### 4.1.1.1 Attributes
 
-Associations
-Entity 'GetEntityRequest' does not own any associations.
-Back to top
-Entity 'GetEntityResponse'
+| Name | Type | Default value | Documentation |
+| --- | --- | --- | --- |
+| EntityID | String (unlimited) | | Required: The ID of the entity. |
+| WorkspaceID | String (unlimited) | | Required: The ID of the workspace. |
+
+##### 4.1.1.2 Associations
+
+Entity GetEntityRequest does not have any associations.
+
+#### 4.1.2 Entity GetEntityResponse
+
 Entity with reponse of retrieving information about a TwinMaker-Entity.
 
 See also https://docs.aws.amazon.com/iot-twinmaker/latest/apireference/API_GetEntity.html and https://sdk.amazonaws.com/java/api/latest/software/amazon/awssdk/services/iottwinmaker/model/GetEntityResponse.html
-Attributes
 
-| Name             | Type               | Default value | Documentation                                                                    |
-| ---------------- | ------------------ | ------------- | -------------------------------------------------------------------------------- |
-| CreationDateTime | Date and time      |               | The date and time when the entity was created.                                   |
-| Description      | String (unlimited) |               | The description of the entity.                                                   |
-| EntityID         | String (unlimited) |               | The ID of the entity.                                                            |
-| EntityName       | String (unlimited) |               | The name of the entity.                                                          |
-| HasChildEntities | Boolean            | false         | A Boolean value that specifies whether the entity has associated child entities. |
-| ParentEntityID   | String (unlimited) |               | The ID of the parent entity for this entity.                                     |
-| SyncSource       | String (unlimited) |               | The syncSource of the sync job, if this entity was created by a sync job.        |
-| UpdateDateTime   | Date and time      |               | The date and time when the entity was last updated.                              |
-| WorkspaceID      | String (unlimited) |               | The ID of the workspace.                                                         |
+##### 4.1.2.1 Attributes
 
-Associations
+| Name | Type | Default value | Documentation |
+| --- | --- | --- | --- |
+| CreationDateTime | Date and time | | The date and time when the entity was created. |
+| Description | String (unlimited) | | The description of the entity. |
+| EntityID | String (unlimited) | | The ID of the entity. |
+| EntityName | String (unlimited) | | The name of the entity. |
+| HasChildEntities | Boolean | false | A Boolean value that specifies whether the entity has associated child entities. |
+| ParentEntityID | String (unlimited) | | The ID of the parent entity for this entity. |
+| SyncSource | String (unlimited) | | The syncSource of the sync job, if this entity was created by a sync job. |
+| UpdateDateTime | Date and time | | The date and time when the entity was last updated. |
+| WorkspaceID | String (unlimited) | | The ID of the workspace. |
 
-| Name                                      | Connected to                                  | Multiplicity | Documentation |
-| ----------------------------------------- | --------------------------------------------- | ------------ | ------------- |
-| GetEntityResponse_GetEntityResponseStatus | AWSTwinMakerConnector.GetEntityResponseStatus | OneToMany    |               |
-| GetEntityResponse_ComponentResponse       | AWSTwinMakerConnector.ComponentResponse       | ManyToMany   |               |
+##### 4.1.2.2 Associations
 
-Back to top
-Entity 'ComponentResponse'
-Enitity for the components in the entity.
+| Name | Connected to | Multiplicity | Documentation |
+| --- | --- | --- | --- |
+| GetEntityResponse_GetEntityResponseStatus | AWSTwinMakerConnector.GetEntityResponseStatus | OneToMany | |
+| GetEntityResponse_ComponentResponse | AWSTwinMakerConnector.ComponentResponse | ManyToMany | |
+
+#### 4.1.3 Entity ComponentResponse
+
+Entity for the components in the entity.
+
 Component name is used as unique key within this list.
 
 See also https://docs.aws.amazon.com/iot-twinmaker/latest/apireference/API_ComponentResponse.html and https://sdk.amazonaws.com/java/api/latest/software/amazon/awssdk/services/iottwinmaker/model/ComponentResponse.html
-Attributes
 
-| Name           | Type               | Default value | Documentation                                                                         |
-| -------------- | ------------------ | ------------- | ------------------------------------------------------------------------------------- |
-| Key            | String (unlimited) |               | Unique identieir, key within list of components.<br>Currently component name is used. |
-| ComponentName  | String (unlimited) |               | The name of the component.                                                            |
-| ComponenTypeID | String (unlimited) |               | The ID of the component type.                                                         |
-| DefinentIn     | String (unlimited) |               | The name of the property definition set in the request.                               |
-| Description    | String (unlimited) |               | The description of the component type.                                                |
-| SyncSource     | String (unlimited) |               | The syncSource of the sync job, if this entity was created by a sync job.             |
+##### 4.1.3.1 Attributes
 
-Associations
+| Name | Type | Default value | Documentation |
+| --- | --- | --- | --- |
+| Key | String (unlimited) | | Unique identifier, key within list of components.<br>Currently component name is used. |
+| ComponentName  | String (unlimited) | | The name of the component. |
+| ComponenTypeID | String (unlimited) | | The ID of the component type. |
+| DefinentIn | String (unlimited) | | The name of the property definition set in the request. |
+| Description | String (unlimited) | | The description of the component type. |
+| SyncSource | String (unlimited) | | The syncSource of the sync job, if this entity was created by a sync job. |
 
-| Name                                             | Connected to                                         | Multiplicity | Documentation |
-| ------------------------------------------------ | ---------------------------------------------------- | ------------ | ------------- |
-| ComponentResponse_ComponentPropertyGroupResponse | AWSTwinMakerConnector.ComponentPropertyGroupResponse | ManyToMany   |               |
-| ComponentResponse_ComponentResponseStatus        | AWSTwinMakerConnector.ComponentResponseStatus        | OneToMany    |               |
-| ComponentResponse_PropertyResponse               | AWSTwinMakerConnector.PropertyResponse               | ManyToMany   |               |
+##### 4.1.3.2 Associations
 
-Back to top
-Entity 'PropertyResponse'
+| Name | Connected to | Multiplicity | Documentation |
+| --- | --- | --- | --- |
+| ComponentResponse_ComponentPropertyGroupResponse | AWSTwinMakerConnector.ComponentPropertyGroupResponse | ManyToMany | |
+| ComponentResponse_ComponentResponseStatus | AWSTwinMakerConnector.ComponentResponseStatus | OneToMany | |
+| ComponentResponse_PropertyResponse | AWSTwinMakerConnector.PropertyResponse | ManyToMany | |
+
+#### 4.1.4 Entity PropertyResponse
+
 Entity containing information about a property response.
+
 Property name is used as unique key
 
 See also https://docs.aws.amazon.com/iot-twinmaker/latest/apireference/API_PropertyResponse.html and https://sdk.amazonaws.com/java/api/latest/software/amazon/awssdk/services/iottwinmaker/model/PropertyResponse.html
-Attributes
 
-| Name | Type               | Default value | Documentation |
-| ---- | ------------------ | ------------- | ------------- |
-| Key  | String (unlimited) |               |               |
+##### 4.1.4.1 Attributes
 
-Associations
+| Name | Type | Default value | Documentation |
+| --- | --- | --- | --- |
+| Key | String (unlimited) | | |
 
-| Name                                                        | Connected to                                                     | Multiplicity | Documentation |
-| ----------------------------------------------------------- | ---------------------------------------------------------------- | ------------ | ------------- |
-| PropertyResponse_PropertyResponsePropertyDefinitionResponse | AWSTwinMakerConnector.PropertyResponsePropertyDefinitionResponse | OneToMany    |               |
-| PropertyResponse_PropertyResponseDataValue                  | AWSTwinMakerConnector.PropertyResponseDataValue                  | OneToMany    |               |
+##### 4.1.4.2 Associations
 
-Back to top
-Entity 'PropertyResponsePropertyDefinitionResponse'
+| Name | Connected to | Multiplicity | Documentation |
+| --- | --- | --- | --- |
+| PropertyResponse_PropertyResponsePropertyDefinitionResponse | AWSTwinMakerConnector.PropertyResponsePropertyDefinitionResponse | OneToMany  | |
+| PropertyResponse_PropertyResponseDataValue | AWSTwinMakerConnector.PropertyResponseDataValue | OneToMany | |
+
+#### 4.1.5 Entity PropertyResponsePropertyDefinitionResponse
+
 Entity containing data of a property definition.
 
 See also https://docs.aws.amazon.com/iot-twinmaker/latest/apireference/API_PropertyDefinitionResponse.html and https://sdk.amazonaws.com/java/api/latest/software/amazon/awssdk/services/iottwinmaker/model/PropertyDefinitionResponse.html
-Generalization
+
+#### 4.1.5.1 Generalization
+
 AWSTwinMakerConnector.PropertyDefinitionResponse
-Attributes
+
+##### 4.1.5.2 Attributes
+
 Entity 'PropertyResponsePropertyDefinitionResponse' has no attributes.
-Associations
 
-| Name                                                           | Connected to                                              | Multiplicity | Documentation |
-| -------------------------------------------------------------- | --------------------------------------------------------- | ------------ | ------------- |
-| PropertyDefinitionResponse_Configuration                       | AWSTwinMakerConnector.Configuration                       | ManyToMany   |               |
-| PropertyDefinitionResponse_DataType                            | AWSTwinMakerConnector.DataType                            | OneToMany    |               |
-| PropertyDefinitionResponse_PropertyDefinitionResponseDataValue | AWSTwinMakerConnector.PropertyDefinitionResponseDataValue | OneToMany    |               |
+##### 4.1.5.3 Associations
 
-Back to top
-Entity 'ComponentPropertyGroupResponse'
+| Name | Connected to | Multiplicity | Documentation |
+| --- | --- | --- | --- |
+| PropertyDefinitionResponse_Configuration | AWSTwinMakerConnector.Configuration | ManyToMany | |
+| PropertyDefinitionResponse_DataType | AWSTwinMakerConnector.DataType | OneToMany | |
+| PropertyDefinitionResponse_PropertyDefinitionResponseDataValue | AWSTwinMakerConnector.PropertyDefinitionResponseDataValue | OneToMany | |
+
+#### 4.1.6 Entity ComponentPropertyGroupResponse
+
 PropertyGroupResponse associated with a ComponentType
 
 See also https://docs.aws.amazon.com/iot-twinmaker/latest/apireference/API_PropertyGroupResponse.html and https://sdk.amazonaws.com/java/api/latest/software/amazon/awssdk/services/iottwinmaker/model/PropertyGroupResponse.html
-Generalization
+
+#### 4.1.6.1 Generalization
+
 AWSTwinMakerConnector.PropertyGroupResponse
-Attributes
+
+##### 4.1.6.2 Attributes
+
 Entity 'ComponentPropertyGroupResponse' has no attributes.
-Associations
 
-| Name                               | Connected to                       | Multiplicity | Documentation |
-| ---------------------------------- | ---------------------------------- | ------------ | ------------- |
-| PropertyGroupResponse_PropertyName | AWSTwinMakerConnector.PropertyName | ManyToMany   |               |
+##### 4.1.6.3 Associations
 
-Back to top
+| Name | Connected to | Multiplicity | Documentation |
+| --- | --- | --- | --- |
+| PropertyGroupResponse_PropertyName | AWSTwinMakerConnector.PropertyName | ManyToMany | |
+
 Entity 'PropertyName'
 The names of properties.
 Attributes

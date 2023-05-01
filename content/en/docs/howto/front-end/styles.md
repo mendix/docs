@@ -2,7 +2,7 @@
 title: "Implement Styles"
 url: /howto/front-end/styles/
 category: "Front End"
-description: "Presents details on using class names for text colors, buttons, and other style elements."
+description: "Describes details on using class names for text colors, buttons, and other style elements."
 weight: 45
 tags: ["style", "class name", "user interface", "front end", "classes"]
 ---
@@ -158,4 +158,3 @@ Many of these classes are part of Bootstrap. For more information about classes 
 ## 11 Read More
 
 * [Mendix Atlas UI](https://www.mendix.com/atlas/)
-

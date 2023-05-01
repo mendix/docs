@@ -37,7 +37,7 @@ Please note the limitation that the database viewer built into Studio Pro (as de
 
 ### 2.1 Firewall Settings
 
-Studio Pro needs access to the following URLs in order to work. If your firewall is currently blocking these, you will need to whitelist them.
+Studio Pro needs access to the following URLs in order to work. If your firewall is currently blocking these, you will need to safelist them.
 
 * `*.mendix.com`
 * `*.mendixcloud.com`
@@ -50,7 +50,7 @@ If you want to use TortoiseSVN in combination with Studio Pro, download the late
 {{% alert color="warning" %}}
 Mendix Studio Pro uses the Subversion 1.9 working copy. Previous versions of the Mendix Desktop Modeler used a Subversion 1.7 working copy. These working copy versions **are not compatible**.
 
-Always use the version of TortoiseSVN which matches your app model. If you open a local model from Mendix version 7.x or 6.x with the latest version of TortoiseSVN **you will no longer be able to open it in Mendix**.
+Always use the version of TortoiseSVN which matches your app model. If you open a local model from Mendix version 7.x with the latest version of TortoiseSVN **you will no longer be able to open it in Mendix**.
 {{% /alert %}}
 
 ### 2.3 Graphics Card
@@ -118,12 +118,12 @@ Mendix tries to support the most recent and patched database server versions fro
 Current support:
 
 * [IBM DB2](/refguide8/db2/) 11.5 for Linux, Unix, and Windows
-* [MariaDB](/refguide8/mysql/) 10.2, 10.3, 10.4, 10.5, 10.6
-* [Microsoft SQL Server](/developerportal/deploy/mendix-on-windows-microsoft-sql-server/) 2017, 2019
+* [MariaDB](/refguide8/mysql/) 10.2, 10.3, 10.4, 10.5, 10.6, 10.11
+* [Microsoft SQL Server](/developerportal/deploy/mendix-on-windows-microsoft-sql-server/) 2019, 2022
 * [Azure SQL](https://docs.microsoft.com/en-us/sql/t-sql/statements/alter-database-transact-sql-compatibility-level?view=sql-server-2017) v12 compatibility mode 140 or higher
 * [MySQL](/refguide8/mysql/) 8.0
-* [Oracle Database](/refguide8/oracle/) 19
-* PostgreSQL 9.6, 10, 11, 12, 13, 14
+* [Oracle Database](/refguide8/oracle/) 19, 21c
+* PostgreSQL 11, 12, 13, 14, 15
 * [SAP HANA](/refguide8/saphana/) 2.00.040.00.1545918182
 
 {{% alert color="warning" %}}
@@ -142,9 +142,9 @@ For container-based deployments using Docker, Kubernetes, or Cloud Foundry, the 
 * SAP AWS S3 Object Storage
 * SAP Azure Blob Storage
 
-For container-mounted storage in Kubernetes, provided by an external storage class, see also [Run Mendix on Kubernetes](/developerportal/deploy/run-mendix-on-kubernetes/).
+For container-mounted storage in Kubernetes, provided by an external storage class, see also [Use Docker with Minikube](/developerportal/deploy/run-mendix-on-kubernetes/).
 
-###  9.2 Storage types for Servers
+### 9.2 Storage types for Servers
 
 For server-based installations, the following storage types mounted by the OS are supported:
 
@@ -167,10 +167,21 @@ Using a hybrid preview is not the same as using an emulator. A hybrid preview on
 
 ## 12 Mobile Operating Systems {#mobileos}
 
-For Mendix apps and the [Mendix Developer App](/refguide8/getting-the-mendix-app/):
+For native and hybrid apps built with Mendix (and the [Mendix Developer App](/refguide8/getting-the-mendix-app/)) the following operating system versions are supported:
 
-* iOS 12 and above
-* Android 5.0 and above
+* Latest version of iOS
+* Latest three versions of Android
+
+Only devices running on these operating system versions receive up-to-date security fixes from their vendors and thus minimize being vulnerable to known exploits.
+
+You can build native and hybrid apps with Mendix that run on older operating system versions than the ones we support. However, to receive official Mendix support you must demonstrate that your problem also occurs on a supported operating system version.
+
+We recommend the following minimum hardware requirements for all mobile devices running native and hybrid Mendix apps:
+
+* CPU: minimum 2 cores with 2 GHz
+* Memory: minimum 2 GB
+
+Depending on your app's complexity, these minimum hardware requirements might not be sufficient and should be adjusted.
 
 ## 13 MxBuild {#mxbuild}
 

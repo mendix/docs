@@ -1,7 +1,6 @@
 ---
 title: "1"
 url: /releasenotes/add-ons/apm-1/
-parent: "apd"
 weight: 3
 no_list: false
 simple_list: true

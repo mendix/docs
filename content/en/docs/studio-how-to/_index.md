@@ -2,17 +2,18 @@
 title: "Studio 9 How-tos"
 url: /studio-how-to/
 tags: ["studio", "how to"]
-weight: 25
+weight: 69
 cascade:
     - space: "Studio 9 How-tos"
     - mendix_version: "9"
+    - old_content: true
     - sitemap:
-        priority: 0.7
+        priority: 0.4
 ---
 
 {{% alert color="warning" %}}
 
-The **Studio 9 How-tos** space describes Mendix Studio functionality that corresponds to Mendix version 9. It describes the latest Studio functionality and features.
+Mendix Studio only supports apps built in Mendix 9.20 and below. Apps built with Mendix 9.21 or above can be opened with Studio Pro. For more information, see the blog post [Coming in 2023: The Merging of Studio and Studio Pro](https://www.mendix.com/blog/coming-in-2023-the-merging-of-studio-and-studio-pro/).
 
 {{% /alert %}}
 

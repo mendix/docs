@@ -1,7 +1,6 @@
 ---
 title: "Working with Vector Graphics"
 url: /refguide8/native-svg/
-parent: "native-mobile"
 weight: 80
 description: "Learn how to integrate SVGs into your native mobile apps."
 tags: ["native", "svg", "images", "mobile", "vector", "vector graphics"]
@@ -16,6 +15,8 @@ When building a native mobile application, you may want to use vector images for
 When exporting an SVG from an editor, you will often produce an SVG with several unnecessary elements. These elements increase file size, decrease performance, and can cause unwanted side effects. Therefore it is recommended that you run your SVG through an SVG-optimization tool. 
 
 To optimize your SVGs, you can either run them through an online tool such as [SVGOMG](https://jakearchibald.github.io/svgomg/) or use a local tool such as [SVGO](https://github.com/svg/svgo).
+
+{{% alert color="info" %}}Some users have experienced an issue where SVGs are not visible in the Make It Native testing app. When deploying changed SVG images, it may be necessary to clean the deployment folder first. In Studio Pro, click on **App** > **Clean Deployment Directory**. When recompiling, any new images will now become visible in the Make It Native app.{{% /alert %}}
 
 ## 3 Unsupported Elements
 
@@ -113,7 +114,7 @@ export const PluggableWidget = () => (
 
 If you want to use SVG elements directly in your pluggable widget, see the [react-native-svg](https://github.com/react-native-community/react-native-svg) library.
 
-## 5 Read More
+## 6 Read More
 
 * [Build a Pluggable Native Widget](/howto8/extensibility/build-native-widget/)
 * [Atlas UI](/howto8/front-end/atlas-ui/)

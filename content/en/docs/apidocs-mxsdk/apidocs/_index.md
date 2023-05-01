@@ -1,7 +1,7 @@
 ---
 title: "API Documentation"
 url: /apidocs-mxsdk/apidocs/
-description: "The Mendix Platform API documentation is divided into sections such as Runtime, Client, Feedback, and Deploy."
+description: "Presents an overview of the Mendix Platform API documentation, such as Runtime, Client, Feedback, and Deploy."
 weight: 10
 aliases:
     - /apidocs/index.html
@@ -23,7 +23,6 @@ Continue reading in [Authentication](/apidocs-mxsdk/apidocs/authentication/).
 This API enables retrieving information (branches, commits) of application models stored in our [Team Server](/developerportal/collaborate/team-server/).
 
 For details, see [App Repository API](/apidocs-mxsdk/apidocs/app-repository-api/).
-
 
 ## 4 Build API {#build-api}
 
@@ -61,11 +60,11 @@ Use this API to build on top of the [feedback management](/developerportal/colla
 
 For details, see [Feedback API](/apidocs-mxsdk/apidocs/feedback-api/).
 
-## 10 Model SDK & Platform SDK
+## 10 Model SDK and Platform SDK
 
 Use these SDKs to gain access to the inner-workings of a Mendix app.
 
-For details, see [Model SDK & Platform SDK](/apidocs-mxsdk/apidocs/model-platform-sdk/).
+For details, see [Model SDK and Platform SDK](/apidocs-mxsdk/apidocs/model-platform-sdk/).
 
 ## 11 Permissions API
 
@@ -108,9 +107,3 @@ For details, see [Team Server API](/apidocs-mxsdk/apidocs/team-server-api/).
 Use this API to integrate your company's user management systems with the Mendix Platform. You can then create and manage user accounts and groups as well as define group policies for your applications.
 
 For details, see [User Management API](/apidocs-mxsdk/apidocs/user-management-api/).
-
-## 18 Webhooks
-
-Webhooks allow you to build or set up Mendix Platform connectors that subscribe to certain events on the [Developer Portal](/developerportal/).
-
-Continue reading in [Webhooks](/apidocs-mxsdk/apidocs/webhooks-sprints/).

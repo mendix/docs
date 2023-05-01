@@ -54,9 +54,9 @@ These are the [Mendix Platform SDK](/apidocs-mxsdk/mxsdk/) release notes, includ
 
 ## 1.0.2
 
-*   Minimum Model SDK dependency has been set to 1.0.2.
-*   We now rely on Model SDK default Model API endpoint instead of setting it explicitly.
+* Minimum Model SDK dependency has been set to 1.0.2.
+* We now rely on Model SDK default Model API endpoint instead of setting it explicitly.
 
 ## 1.0.1
 
-*   We upgraded a peer dependency on Mendix Model SDK to 1.0.0 so 1.0.1 and later are supported.
+* We upgraded a peer dependency on Mendix Model SDK to 1.0.0 so 1.0.1 and later are supported.

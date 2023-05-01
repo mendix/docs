@@ -16,7 +16,7 @@ Mendix 7 contains a completely new build approach for clustering. The main featu
 
 Clustering support is built natively into our Cloud Foundry buildpack implementation. This means that you can simply scale up using Cloud Foundry. The buildpack ensures that your system automatically starts behaving as a cluster.
 
-Clustering is also supported on Kubernetes, but you will have to use a *StatefulSet*. There is more information on this in the *Some Notes on Scaling* section [How to Run Mendix on Kubernetes](/developerportal/deploy/run-mendix-on-kubernetes/#scaling).
+Clustering is also supported on Kubernetes, but you will have to use a *StatefulSet*. There is more information on this in the *Some Notes on Scaling* section [Use Docker with Minikube](/developerportal/deploy/run-mendix-on-kubernetes/#scaling).
 
 ## 3 Cluster Infrastructure
 
@@ -31,8 +31,8 @@ This means that a Mendix Cluster requires a Load Balancer to distribute the load
 Mendix Runtime has the concept of a cluster leader. This is a single node within a Mendix Runtime cluster that performs cluster management activities. Those activities are:
 
 * `Session Expiration handling` - removing sessions after they have expired (not been used for a configured timespan)
-	* For version [7.23.4](/releasenotes/studio-pro/7.23/#7234) and above – each node expires its sessions (after not having been used for a configured timespan) and the cluster leader removes the sessions persisted in the database; in exceptional cases (for example, a node crash), some sessions may not be removed from the database, in which case the cluster leader performs a clean-up of the sessions
-	* For version [7.23.3](/releasenotes/studio-pro/7.23/#7233) and below – the cluster leader removes sessions after they have expired (having not been used for a configured timespan)
+    * For version [7.23.4](/releasenotes/studio-pro/7.23/#7234) and above – each node expires its sessions (after not having been used for a configured timespan) and the cluster leader removes the sessions persisted in the database; in exceptional cases (for example, a node crash), some sessions may not be removed from the database, in which case the cluster leader performs a clean-up of the sessions
+    * For version [7.23.3](/releasenotes/studio-pro/7.23/#7233) and below – the cluster leader removes sessions after they have expired (having not been used for a configured timespan)
 * `Cluster node expiration handling` - removing cluster nodes after they have expired (not giving a heartbeat for a configured timespan)
 * `Background job expiration handling` - removing data about background jobs after the information has expired (older than a specific timespan)
 * `Unblocking blocked users`

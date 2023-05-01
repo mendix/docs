@@ -1,7 +1,6 @@
 ---
 title: "2.10"
 url: /releasenotes/add-ons/ats-2.10/
-parent: "ats-2"
 weight: 90
 ---
 
@@ -15,7 +14,6 @@ The option to receive alerts when a scheduled test is done is a feature that rec
 
 For more details, see [Schedules](/addons/ats-addon/rg-two-schedule/) in the *ATS 2 Reference Guide*.
 
-
 ### Better Integration with Browserstack
 
 After the great reception of the **Recording** tab in ATS, we decided to invest more time into integrating Browserstack and ATS by adding the features described below.
@@ -27,7 +25,7 @@ These are the new features on Browserstack side:
 * Individual test case executions in Browserstack (meaning, **Sessions**) now correctly display the test case name instead of the job name. For test cases with an attached dataset, the test case name is suffixed with the index of the dataset record.
 * Test case executions in Browserstack now show the result from ATS.
 
-  {{< figure src="/attachments/releasenotes/add-ons/ats/ats-2/ats-2.10/browserstack.png" alt="Browserstack-ATS integration" >}}
+    {{< figure src="/attachments/releasenotes/add-ons/ats/ats-2/ats-2.10/browserstack.png" alt="Browserstack-ATS integration" >}}
 
 These are the new features on the ATS side:
 
@@ -37,7 +35,6 @@ These are the new features on the ATS side:
 {{< figure src="/attachments/releasenotes/add-ons/ats/ats-2/ats-2.10/lookup.gif" alt="Browserstack-ATS integration" >}}
 
 This table compares the nomenclature:
-
 
 | ATS              | Browserstack |
 | ---              | ---          |

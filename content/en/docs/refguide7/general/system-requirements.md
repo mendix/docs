@@ -61,13 +61,13 @@ The browser you use needs to have JavaScript turned on.
 
 ### 5.3 Database Server
 
-* [IBM DB2](/refguide7/db2/) 11.1, 11.5 for Linux, Unix, and Windows
-* [MariaDB](/refguide7/mysql/) 10.2, 10.3, 10.4, 10.5, 10.6
-* [Microsoft SQL Server](/developerportal/deploy/mendix-on-windows-microsoft-sql-server/) 2017, 2019
+* [IBM DB2](/refguide7/db2/) 11.5 for Linux, Unix, and Windows
+* [MariaDB](/refguide7/mysql/) 10.2, 10.3, 10.4, 10.5, 10.6, 10.11
+* [Microsoft SQL Server](/developerportal/deploy/mendix-on-windows-microsoft-sql-server/) 2019, 2021
 * Azure SQL v12 (support is not independently verified and is available only through compatible versions of SQL Server)
 * [MySQL](/refguide7/mysql/) 8.0
-* [Oracle Database](/refguide7/oracle/) 12c Release 2, 19
-* PostgreSQL 10, 11, 12, 13, 14
+* [Oracle Database](/refguide7/oracle/) 19, 21c
+* PostgreSQL 11, 12, 13, 14, 15 (please note that support for 10 is deprecated and will be removed in Studio Pro version 7.23.35)
 * [SAP HANA](/refguide7/saphana/) 2.00.040.00.1545918182
 
 ### 5.4 Java
@@ -104,16 +104,27 @@ Using a hybrid preview is not the same as using an emulator. A hybrid preview on
 
 ## 7 Mobile Operating Systems
 
-For Mendix apps and the [Mendix Developer App](/refguide7/getting-the-mendix-app/):
+For hybrid apps built with Mendix (and the [Mendix Developer App](/refguide7/getting-the-mendix-app/)) the following operating system versions are supported:
 
-* iOS 9 and above
-* Android 5.0 and above
+* Latest version of iOS
+* Latest three versions of Android
+
+Only devices running on these operating system versions receive up-to-date security fixes from their vendors and thus minimize being vulnerable to known exploits.
+
+You can build hybrid apps with Mendix that run on older operating system versions than the ones we support. However, to receive official Mendix support you must demonstrate that your problem also occurs on a supported operating system version.
+
+We recommend the following minimum hardware requirements for all mobile devices running hybrid Mendix apps:
+
+* CPU: minimum 2 cores with 2 GHz
+* Memory: minimum 2 GB
+
+Depending on your app's complexity, these minimum hardware requirements might not be sufficient and should be adjusted.
 
 ## 8 MxBuild{#mxbuild}
 
 MxBuild is a Windows and Linux command-line tool that can be used to build a Mendix Deployment Package. See [MxBuild](/refguide7/mxbuild/) for more information.
 
-### 8.1 Mendix Version 7.1 & Above
+### 8.1 Mendix Version 7.1 and Above
 
 * Mono v4.6.x or .NET v4.6.2
 * JDK 8.

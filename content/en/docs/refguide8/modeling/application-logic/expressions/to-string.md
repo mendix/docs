@@ -1,7 +1,6 @@
 ---
 title: "To String"
 url: /refguide8/to-string/
-parent: "expressions"
 weight: 130
 tags: ["studio pro", "to string", "expression", "expressions"]
 ---
@@ -32,36 +31,36 @@ The input parameters are described in the table below:
 
 If you use the following input:
 
-```java
+```java {linenos=false}
 toString(1.4)
 ```
 
 The output is:
 
-```java
+```java {linenos=false}
 '1.4'
 ```
 
 If you type in an input with a Date and time type:
 
-```java
+```java {linenos=false}
 toString(dateTime(2007))
 ```
 
 The output is:
 
-```java
+```java {linenos=false}
 'Mon Jan 01 00:00:00 CET 2007'
 ```
 
 If you type in an input with a Boolean:
 
-```java
+```java {linenos=false}
 toString(true)
 ```
 
 The output is:
 
-```java
+```java {linenos=false}
 'true'
 ```

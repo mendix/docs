@@ -1,7 +1,6 @@
 ---
 title: "JVM Browser"
 url: /addons/apd-addon/rg-one-jvm-browser/
-parent: "rg-one-apm"
 ---
 
 ## 1 Introduction

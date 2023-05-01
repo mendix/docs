@@ -1,7 +1,6 @@
 ---
 title: "2.18"
 url: /releasenotes/add-ons/ats-2.18/
-parent: "ats-2"
 weight: 82
 ---
 

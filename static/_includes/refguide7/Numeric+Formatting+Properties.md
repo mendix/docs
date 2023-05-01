@@ -12,11 +12,11 @@ This mode only applies to the Decimal, Float (deprecated), and Currency (depreca
 
 </div>
 
-If set to _Fixed_, the decimal part always will be displayed with the number of places specified in the **Decimal precision** property. The value will be rounded to the nearest decimal if the length of the decimal part in the attribute value exceeds the number of decimal places.
+If set to *Fixed*, the decimal part always will be displayed with the number of places specified in the **Decimal precision** property. The value will be rounded to the nearest decimal if the length of the decimal part in the attribute value exceeds the number of decimal places.
 
-If set to _Auto_, the whole decimal part of the attribute value will be displayed. No decimal part will be be displayed if the attribute value is an integer.
+If set to *Auto*, the whole decimal part of the attribute value will be displayed. No decimal part will be be displayed if the attribute value is an integer.
 
-_Default value:_ Fixed
+*Default value:* Fixed
 
 #### Examples
 
@@ -40,10 +40,10 @@ This only applies to the Decimal, Float (deprecated), and Currency (deprecated) 
 
 The precision of a value describes the number of digits that are used to express that value. This property indicates the number of decimal places (the number of digits following the point).
 
-_Default value:_ 2
+*Default value:* 2
 
 ### Group Digits
 
 For ease of reading, numbers with many digits before the decimal separator may be divided into groups using a delimiter. This property indicates whether the user will see these groups.
 
-_Default value:_ False
+*Default value:* False

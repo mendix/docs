@@ -1,7 +1,6 @@
 ---
 title: "Call REST Service Action"
 url: /refguide7/call-rest-action/
-parent: "microflow-activities"
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
@@ -121,7 +120,7 @@ This section is applicable when the HTTP response status code is not successful 
 
 When the **Store message body in $latestHttpResponse variable** option is selected, `$latestHttpResponse/Content` will be set with the response body. It might contain some useful information provided by the server (for example, why the authentication is rejected).
 
-### 5.4 $latestHttpResponse Variable<a name="latesthttpresponse"></a>
+### 5.4 $latestHttpResponse Variable {#latesthttpresponse}
 
 The `$latestHttpResponse` variable is of the [HttpResponse](/refguide7/http-request-and-response-entities/#http-response) type. It is available after a Call REST activity.
 

@@ -1,10 +1,8 @@
 ---
 title: "Gallery"
 url: /appstore/modules/gallery/
-parent: "data-widgets"
 description: "Describes the configuration and usage of the Gallery widget, which is available in the Mendix Marketplace."
 tags: ["marketplace", "marketplace component", "gallery", "list view", "platform support"]
-
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
@@ -17,10 +15,6 @@ Here is an example of a Gallery widget using filters:
 {{< figure src="/attachments/appstore/modules/data-widgets/gallery/example.png" alt="Example of gallery using filter and sort"   width="300"  >}}
 
 ### 1.2 Advanced Options
-
-{{% alert color="info" %}}
-The **Enable advanced options** toggle is available in Mendix Studio. In Mendix Studio Pro these advanced options are always available.
-{{% /alert %}}
 
 The gallery has an option to enable advanced options. When this option is toggled on, it enables numerous features to customize your gallery:
 
@@ -53,7 +47,7 @@ Defines the amount of data shown for each page or the limit to be presented when
 
 #### 2.3.2 Pagination
 
-You can choose between paging buttons (button being presented below or above the grid) or virtual scrolling (mechanism that automatically loads data when the users reaches the bottom of the scrollbar). 
+You can choose between paging buttons (button being presented below or above the grid) or virtual scrolling (mechanism that automatically loads data when the users reaches the bottom of the scroll bar). 
 
 #### 2.3.3 Position of Paging Buttons
 

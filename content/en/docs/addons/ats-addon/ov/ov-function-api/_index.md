@@ -1,7 +1,6 @@
 ---
 title: "Using the Function API"
 url: /addons/ats-addon/ov-function-api/
-parent: "ov"
 weight: 5
 ---
 

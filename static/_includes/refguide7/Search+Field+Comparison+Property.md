@@ -13,4 +13,4 @@ The value entered by the end user (or the default value in the case of hidden an
 | Smaller or equal | Is the attribute value smaller than or equal to the entered value? | Text, Date |
 | Smaller | Is the attribute value smaller than the entered value? | Text, Date |
 
-_Default value:_ Equal
+*Default value:* Equal

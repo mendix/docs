@@ -1,7 +1,6 @@
 ---
 title: "Nanoflows"
 url: /refguide7/nanoflows/
-parent: "application-logic"
 weight: 20
 description: "Presents an overview of all the elements that can be used in a nanoflow."
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
@@ -79,7 +78,7 @@ A nanoflow is composed of elements. The following categories are used:
 * [Activities](#activities) are the actions that are executed in a nanoflow
 * [Artifacts](#artifacts) provide the nanoflow with input and allow comments to be made
 
-### 5.1 Events<a name="events"></a>
+### 5.1 Events {#events}
 
 Events represent the start and end points of a nanoflow and special operations in a loop.
 
@@ -90,7 +89,7 @@ Events represent the start and end points of a nanoflow and special operations i
 | {{< figure src="/attachments/refguide7/desktop-modeler/application-logic/microflows/918115.png" link="/refguide7/continue-event/" >}} | [Continue event](/refguide7/continue-event/) | Used to stop the current iteration of a loop and continue with the next iteration. Please note that continue events can only be used inside a [loop](/refguide7/loop/). |
 | {{< figure src="/attachments/refguide7/desktop-modeler/application-logic/microflows/918026.png" link="/refguide7/break-event/" >}} | [Break Event](/refguide7/break-event/) | Used to stop iterating over the list of objects and to continue with the rest of the flow after the loop. Please note that break events can only be used inside a [loop](/refguide7/loop/). |
 
-### 5.2 Flows<a name="flows"></a>
+### 5.2 Flows {#flows}
 
 Flows form the connection between elements.
 
@@ -99,7 +98,7 @@ Flows form the connection between elements.
 | {{< figure src="/attachments/refguide7/desktop-modeler/application-logic/microflows/917883.png" link="/refguide7/sequence-flow/" >}} | [Sequence flow](/refguide7/sequence-flow/) | An arrow that links events, activities, splits, and merges with each other. Together they define the order of execution within a nanoflow. |
 | {{< figure src="/attachments/refguide7/desktop-modeler/application-logic/microflows/917688.png" link="/refguide7/annotation-flow/" >}} | [Annotation flow](/refguide7/annotation-flow/) | A connection that can be used to connect an annotation to another element. |
 
-### 5.3 Gateways<a name="gateways"></a>
+### 5.3 Gateways {#gateways}
 
 Gateways deal with making choices and merging different paths.
 
@@ -108,7 +107,7 @@ Gateways deal with making choices and merging different paths.
 | {{< figure src="/attachments/refguide7/desktop-modeler/application-logic/microflows/917726.png" link="/refguide7/exclusive-split/" >}} | [Exclusive split](/refguide7/exclusive-split/) | Makes a decision based on a condition and follows one and only one of the outgoing flows. Please note that there is no parallell execution in nanoflows. |
 | {{< figure src="/attachments/refguide7/desktop-modeler/application-logic/microflows/918116.png" link="/refguide7/merge/" >}} | [Merge](/refguide7/merge/) | Can be used to combine multiple sequence flows into one. If a choice is made in a nanoflow and afterwards some common work needs to be done, you can combine the two (or more) paths using a merge. |
 
-### 5.4 Activities<a name="activities"></a>
+### 5.4 Activities {#activities}
 
 Activities are the actions that are executed in a nanoflow.
 
@@ -158,7 +157,7 @@ Client activities can be used to have the web client of your application perform
 | --- | --- | --- |
 | {{< figure src="/attachments/refguide7/desktop-modeler/application-logic/microflows/917804.png" link="/refguide7/loop/" >}} | [Loop](/refguide7/loop/) | A looped activity is used to iterate over a list of objects. For every object the flow inside the looped activity is executed. A looped activity can contain all elements used in nanoflows, with the exception of start and stop events. The flow starts at the first element with no incoming flows. |
 
-### 5.6 Artifacts<a name="artifacts"></a>
+### 5.6 Artifacts {#artifacts}
 
 Artifacts provide the nanoflow with input and allow comments to be made.
 

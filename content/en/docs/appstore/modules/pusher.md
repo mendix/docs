@@ -2,7 +2,7 @@
 title: "Pusher"
 url: /appstore/modules/pusher/
 category: "Modules"
-description: " "
+description: "Describes the configuration and usage of the Pusher module, which is available in the Mendix Marketplace."
 tags: ["marketplace", "marketplace component", "pusher", "platform support"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
@@ -29,14 +29,14 @@ The listening widget can only listen when the page is active, so the widget cann
 
 * External service [Pusher](https://pusher.com/) – the module is built around the Pusher [Channels](https://pusher.com/channels) product; Pusher is a paid service, but there is a generous [free Sandbox plan](https://pusher.com/channels/pricing):
 
-	| Detail | Sandbox |
-	| --- | --- |
-	| Price | Free |
-	| Connections | 100 Max |
-	| Number of channels | Unlimited |
-	| Messages | 200k / Day |
-	| Support | Limited |
-	| Protection | SSL |
+    | Detail | Sandbox |
+    | --- | --- |
+    | Price | Free |
+    | Connections | 100 Max |
+    | Number of channels | Unlimited |
+    | Messages | 200k / Day |
+    | Support | Limited |
+    | Protection | SSL |
 
 ## 2 Setting Up the Pusher App
 
@@ -45,11 +45,11 @@ To set up the necessary Pusher app, follow these steps:
 1. Sign up at [Pusher](https://dashboard.pusher.com/accounts/sign_up).
 2. From the dashboard, create an app
 3. On the **Channels Apps** page, select the new app. The keys are shown in **App Keys**.
-4.  Copy the key information into the following **Pusher** module constants:
-	* `app_id` – `Pusher_App_ID`
-	* `key` –` Pusher_Key`
-	* `secret` – `Pusher_Secret`
-	* `cluster` – `Pusher_Cluster`
+4. Copy the key information into the following **Pusher** module constants:
+    * `app_id` – `Pusher_App_ID`
+    * `key` –`Pusher_Key`
+    * `secret` – `Pusher_Secret`
+    * `cluster` – `Pusher_Cluster`
 
 {{% alert color="info" %}}
 Make sure you have different apps (keys) created for each app and environment (development, acceptance, and production). When the credentials are shared, messages could go across environments and have unwanted side effects. The configuration can also be set per developer via **App Settings** > **Edit** configuration > [Constants](/refguide/configuration/#constants).
@@ -61,13 +61,13 @@ To use this module after importing it from the Marketplace, follow these steps:
 
 1. Add the **Pusher User** [module role](/refguide/module-security/#module-role) to the relevant app security [user role](/refguide/security/#user-role).
 2. Update the constants in the **Configuration** folder with the keys of the app.
-3.  Create a microflow to execute the **Notify** action with the following input parameters:
-	* Key settings
-	* **Action name** same as configured in the widget
-	* The context object of the widget
+3. Create a microflow to execute the **Notify** action with the following input parameters:
+    * Key settings
+    * **Action name** same as configured in the widget
+    * The context object of the widget
 4. Place the widget in a page within a [data view](/refguide/data-view/), where the context should match the parameter object.
-5.  In the **Action list**, add an action in which the **Action name** matches the action name parameter provided in the **Notify** action.
-6.  Select a microflow or nanoflow the execute the action.
+5. In the **Action list**, add an action in which the **Action name** matches the action name parameter provided in the **Notify** action.
+6. Select a microflow or nanoflow the execute the action.
 
 This diagram describes updating an object via the Notify action:
 

@@ -1,7 +1,6 @@
 ---
 title: "Introduction to ATS"
 url: /addons/ats-addon/ov-introduction/
-parent: "ov"
 weight: 1
 ---
 

@@ -1,7 +1,6 @@
 ---
 title: "OQL CAST"
 url: /refguide7/oql-cast/
-parent: "oql-functions"
 ---
 
 ## 1 Introduction
@@ -10,27 +9,27 @@ The CAST function converts an expression to a specific data type.
 
 The syntax is as follows:
 
-```
+```sql {linenos=false}
 CAST ( expression AS data_type )
 ```
 
 * `expression` – specifies the expression to convert
 * `data_type` – specifies the data type to convert the expression to; the data type can be one of the following:
-  * BOOLEAN
-  * DATETIME
-  * DECIMAL
-  * FLOAT (deprecated)
-  * INTEGER
-  * LONG
-  * STRING
+    * BOOLEAN
+    * DATETIME
+    * DECIMAL
+    * FLOAT (deprecated)
+    * INTEGER
+    * LONG
+    * STRING
 
 ## 2 Supported Conversions
 
 The table below describes which CAST conversions are supported:
 
-*  ✔ – the conversion is supported
-*  ✔* – the conversion is supported, but the behavior differs per database (see remarks below)
-*  ✘ – the conversion is not supported
+* ✔ – the conversion is supported
+* ✔* – the conversion is supported, but the behavior differs per database (see remarks below)
+* ✘ – the conversion is not supported
 
 | From \ To | BOOLEAN | DATETIME | DECIMAL | INTEGER | FLOAT | LONG | STRING (unlimited) | STRING (limited) |
 |------| :------: | :------: | :------: | :------: | :------: | :------: | :------: | :------: |

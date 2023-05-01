@@ -1,8 +1,9 @@
 ---
 title: "App Node Requests"
 url: /developerportal/support/new-app-node-request-template/
+description: "Describes how to deploy a new licensed node in the Mendix Cloud or on-premises/virtual private cloud."
 category: "Mendix Support"
-weight: 3
+weight: 30
 tags: ["Support", "app node", "node", "license", "subscription secret"]
 aliases:
     - /developerportal/support/new-app-request-template.html
@@ -28,11 +29,7 @@ Fill in all the required details for this new licensed app node in the [Request 
 
 Mendix Support will contact the [Technical Contact](/developerportal/collaborate/app-roles/#technical-contact) for the app via a ticket in the [Mendix Support Portal](https://support.mendix.com), and provide the app details. Mendix Support will also check if your request matches your entitlement to resources (number of apps, cloud resources).
 
-If you have an app deployed to **SAP** and need a *Subscription Secret*, you need to choose the **Hosting type** *Virtual Private Cloud* and then, on the subsequent screen choose **Hosting type** *Cloud Foundry* and **Virtual Private Cloud Name** *SAP Cloud Platform*.  
-
-{{% alert color="info" %}}
-Apps in the IBM Cloud Portal are licensed in a different way – see [IBM Cloud](/developerportal/deploy/ibm-cloud/) for more information.
-{{% /alert %}}
+If you have an app deployed to **SAP** and need a *Subscription Secret*, you need to choose the **Hosting type** *Virtual Private Cloud* and then, on the subsequent screen choose **Hosting type** *Cloud Foundry* and **Virtual Private Cloud Name** *SAP BTP*.  
 
 ## 3 Resizing an Existing Environment{#resize}
 
@@ -48,11 +45,9 @@ Resizing operations will require your app to be restarted and it will be offline
 
 ## 4 Offboarding an Environment{#offboard}
 
-If you no longer need an environment, you can request Mendix Support to offboard it. Alternatively, you can reuse it for another app — see [Linking Your App to a Licensed Node](/developerportal/deploy/licensing-apps/#licensed-node) in *Licensing Mendix Cloud Apps* for more information.
+If you no longer need an environment, you can offboard it. Alternatively, you can reuse it for another app — see [Linking Your App to a Licensed Node](/developerportal/deploy/licensing-apps/#licensed-node) in *Licensing Mendix Cloud Apps* for more information.
 
-You can offboard a single environment or an entire node (all three of the test, acceptance, and production environments for example) by filling in all the required details in the [Offboard Environment](https://offboard.mendix.com/index.html) app. If you cannot use the app for any reason, please raise a ticket with [Mendix Support](https://support.mendix.com).
-
-Mendix Support will contact the [Technical Contact](/developerportal/collaborate/app-roles/#technical-contact) for the app via a ticket in the [Mendix Support Portal](https://support.mendix.com) to confirm the details and timing.
+You can offboard a single environment or an entire node (all three of the test, acceptance, and production environments for example) by filling in all the required details in the [Offboard Environment](https://offboard.mendix.com/index.html) app. Only the Technical Contact of the application can request (and confirm) the offboarding. Once the offboarding is confirmed, the process will take place automatically. If you cannot use the Offboard Environment app for any reason, please raise a ticket with [Mendix Support](https://support.mendix.com).
 
 Offboarding will remove access to everything related to the node. If you want to access any data or other information, then you will need to ensure this is backed up outside the Mendix Developer Portal. The following will be removed:
 

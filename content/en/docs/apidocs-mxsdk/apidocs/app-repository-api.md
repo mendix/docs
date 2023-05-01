@@ -13,7 +13,7 @@ The App Repository API enables retrieving information (branches, commits) of app
 
 Below is the base URL for all App Repository API endpoints:
 
-```
+```http {linenos=false}
 https://repository.api.mendix.com/v1
 ```
 
@@ -30,7 +30,7 @@ All available endpoints are shown in the following table:
 
 ## 4 Authentication
 
-The App Repository API requires a Personal Access Token (PAT) as the authentication method. For details on how to get a PAT, see [Create a Personal Access Token with Warden](/developerportal/community-tools/warden/). When you define the new PAT, you need to choose at least this scope: `mx:modelrepository:repo:read`.
+The App Repository API requires a personal access token (PAT) as the authentication method. For details on how to get a PAT, see the [Personal Access Tokens](/developerportal/community-tools/mendix-profile/#pat) section of *Mendix Profile*. When you define the new PAT, you need to choose at least this scope: `mx:modelrepository:repo:read`.
 
 ## 5 Error response
 
@@ -52,7 +52,8 @@ This is the generic error response format. The payload example format applies to
 | `errorMessage` | String | A short, human-readable message explaining the error. |
 
 Payload Example:
-```
+
+```json
 {
     "errorCode": "RS400",
     "errorMessage": "Please provide valid input to execute this request. Invalid app id"
@@ -250,6 +251,7 @@ Authorization: MxToken hZUPhAV4ELPrRm7U7JAKf5BnxJk6q7dcsvFdw6ZR4wRYdv7egHjwHEYBw
 |Content-Type|`application/json; charset=utf-8`|
 
 #### 6.3.3 Response Payload {#response-payload}
+
 An object with the following key-value pairs:
 
 |Name|Type|Description|
@@ -295,6 +297,7 @@ The response is paginated using cursor-based pagination.
 HTTP Method: GET
  URL: https://repository.api.mendix.com/v1/repositories/<AppId>/branches/<Name>/commits
 ```
+
 #### 6.4.1 Request
 
 ##### 6.4.1.1 Path Parameters

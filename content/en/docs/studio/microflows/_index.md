@@ -16,14 +16,14 @@ Mendix Studio has a lot of built-in logic that works out of the box (for example
 
 You need to use microflows for the following cases:
 
-*  To change/extend the standard behavior of buttons
+* To change/extend the standard behavior of buttons
 * To add custom logic to your application
 * To integrate with other systems, databases, web services, etc.
 
 Examples of using microflows can be the following:
 
-*  You check the values that an end-user has entered, and you either show the end-user an error message or another page
-*  You are creating a to-do list and you want to use custom logic when the status of an item on the list has changed
+* You check the values that an end-user has entered, and you either show the end-user an error message or another page
+* You are creating a to-do list and you want to use custom logic when the status of an item on the list has changed
 
 To view the microflows of your app in Studio, click the **Microflows** icon in the left menu bar:
 
@@ -64,9 +64,7 @@ You can perform the following basic functions when working on microflows:
 To open a microflow in Studio, do the following:
 
 1. Click the microflow icon in the left menu bar.
-
 2. In the displayed list of microflows, select the one you want to open and click it.
-
 
 The selected microflow is opened.
 
@@ -75,13 +73,13 @@ The selected microflow is opened.
 To create a new microflow and to start building custom logic, do the following:
 
 1. Click the **Microflow** icon in the left menu bar. 
-2.  Select the module you would like to add a new microflow to and click the plus icon next to this module. 
+2. Select the module you would like to add a new microflow to and click the plus icon next to this module. 
 
     {{< figure src="/attachments/studio/microflows/new-microflow.png" alt="Adding New Microflow" >}}
-    
+
     For more information on what modules are, see [Domain Model](/studio/domain-models/).
 
-3.  Fill in the name of the microflow in the pop-up dialog and click **Create**.
+3. Fill in the name of the microflow in the pop-up dialog and click **Create**.
 
     {{< figure src="/attachments/studio/microflows/new-microflow-dialog.png" alt="Create New Microflow Dialog" >}}    
 
@@ -92,8 +90,7 @@ The new microflow is created, you can now add logic using events and activities.
 To duplicate a microflow, do the following:
 
 1. Click the **Microflows** icon in the left menu bar.
-
-2.  In the side panel, click the ellipsis icon and select **Duplicate** in the drop-down menu:
+2. In the side panel, click the ellipsis icon and select **Duplicate** in the drop-down menu:
 
     {{< figure src="/attachments/studio/microflows/duplicate-microflow.png" alt="Duplication a Microflow"   width="350"  >}}
 
@@ -104,8 +101,7 @@ The microflow is duplicated.
 To copy and paste a microflow, do the following:
 
 1. Click the **Microflows** icon in the left menu bar.
-
-2.  In the side panel, click the ellipsis icon and select **Copy to clipboard** in the drop-down menu:
+2. In the side panel, click the ellipsis icon and select **Copy to clipboard** in the drop-down menu:
 
     {{< figure src="/attachments/studio/microflows/copy-microflow.png" alt="Copying a Microflow"   width="350"  >}}
 
@@ -120,13 +116,12 @@ To delete a microflow in Studio, do one of the following:
 1. Open the microflow you want to delete and follow the steps below:
 
     1. Open the **Properties** tab.
-
     2. Click **Delete** at the bottom of the **Properties** tab.
 
 2. Click the **Microflows** icon in the left menu bar and do the following:
 
     1. In the side panel, click the ellipsis icon and select **Delete** in the drop-down menu:
-    
+
         {{< figure src="/attachments/studio/microflows/delete-microflow.png" alt="Delete Microflow"   width="350"  >}}
 
 ### 3.6 Adding a New Event or Activity {#add-elements}
@@ -136,7 +131,7 @@ To add a new activity or event to the microflow, do the following:
 1. Open the microflow you want to add the event or activity to.
 2. Open the **Toolbox** tab.
 3. Select the event or activity in the **General**, **Object Activities** or **Client Activities** section.
-4. Drag and drop the event or activity in the microflow. 
+4. Drag the event or activity into the microflow. 
 
 ### 3.7 Disabling an Activity {#disable}
 
@@ -145,7 +140,6 @@ You can disable an activity from the flow, which means that when running your mi
 To disable an activity, do the following:
 
 1. Select the activity you would like to disable from the flow.
-
 2. In the **Properties** tab, click the **More** icon at the bottom (next to the **Delete** button):
 
     {{< figure src="/attachments/studio/microflows/disable-activity.png" alt="Disabling an Activity" >}}
@@ -156,7 +150,7 @@ The activity is excluded from the flow. You can re-enable the activity back in t
 
 ## 4 Toolbox Elements {#microflows-toolbox}
 
-The **Toolbox** tab contains elements that you can drag and drop on to a microflow. Below is a categorized overview of all elements. The following sections are used:
+The **Toolbox** tab contains elements that you can drag into a microflow. Below is a categorized overview of all elements. The following sections are used:
 
 * [General](#microflow-general-section)
 * [Object Activities](#microflow-object-activities)
@@ -164,6 +158,8 @@ The **Toolbox** tab contains elements that you can drag and drop on to a microfl
 * [Workflow Activities](#microflow-workflow-activities)
 * [Workflow Administration](#workflow-administration)
 * [Variable Activities](#microflow-variable-activities)
+
+Microflow and Java actions can be exposed in Studio Pro as custom actions for the microflow toolbox  in both Studio and Studio Pro. This feature can be used when you would like to provide a set of standard actions specific to your company to developers. For example, you can distribute a set of communication actions using your company’s specific e-mail connector. Actions that are exposed appear in the custom category in the **Toolbox**. For more information on exposing a microflow or Java action in Studio Pro, see the [Expose as Microflow Action](/refguide9/microflow/#expose-as-microflow) section in *Microflow Properties* and  the [Expose as Microflow Action](/refguide9/java-actions/#expose-microflow-action) section in *Java Actions*.
 
 ### 4.1 General {#microflow-general-section}
 
@@ -176,14 +172,14 @@ Elements available in the **General** section are described in the table below.
 | Element                         | Description                                                  |
 | ------------------------------- | ------------------------------------------------------------ |
 | Annotation                      | An annotation is an element that can be used to put comments in a microflow. |
-| Break Event                     | A break event is used in loops only to stop iterating over a list of objects and continue with the rest of the flow in the microflow. For more information on the break event, see [Break Event](/refguide/break-event/) in the *Studio Pro Guide*. |
+| Break Event                     | A break event is used in loops only to stop iterating over a list of objects and continue with the rest of the flow in the microflow. For more information on the break event, see [Break Event](/refguide9/break-event/) in the *Studio Pro Guide*. |
 | Call Microflow                  | **Call Microflow** allows you to call a microflow from another microflow and reuse its logic and return values. |
-| Continue Event                  | A continue event is used in loops only to stop the current iteration and start the iteration of the next object. For more information on the continue event, see [Continue Event](/refguide/continue-event/) in the *Studio Pro Guide*. |
-| End Event                       | An end event defines the location where the microflow will stop. There can be more than one end event, for example when a [Decision](/studio/microflows-decision/) is used in the microflow. So, the number of end events depends on the number of possible outcomes of the microflow. For more information on the end event, see [End Event](/refguide/end-event/) in the *Studio Pro Guide*. |
+| Continue Event                  | A continue event is used in loops only to stop the current iteration and start the iteration of the next object. For more information on the continue event, see [Continue Event](/refguide9/continue-event/) in the *Studio Pro Guide*. |
+| End Event                       | An end event defines the location where the microflow will stop. There can be more than one end event, for example when a [Decision](/studio/microflows-decision/) is used in the microflow. So, the number of end events depends on the number of possible outcomes of the microflow. For more information on the end event, see [End Event](/refguide9/end-event/) in the *Studio Pro Guide*. |
 | [Decision](/studio/microflows-decision/) | A decision splits the flow and should be used if you want to add conditions. For example, if you want to show different order forms for customers with different grades. <br />This element is based on a condition and will result in several outgoing flows, one for every possible outcome. The microflow checks the condition and follows one of the flows. For more information on a decision and its properties, see [Decision](/studio/microflows-decision/). |
 | [Loop](/studio/microflows-loop/)         | A loop is used to iterate over a list of objects and perform actions on each item of the list. For example, you can retrieve a list of orders from your database, then loop over this list and mark orders as processed. For more information on a loop and its properties, see [Loop](/studio/microflows-loop/). |
-| Merge                           | A merge can be used to combine flows into one.  If previously you split the microflow flow (for example, when adding a decision) and now one and the same action needs to be executed for these separated flows, you can combine the two (or more) paths using a merge. For more information, see [Merge](/refguide/merge/) in the *Studio Pro Guide*. |
-| Parameter                       | A parameter is an input data for the microflow and can be used in any activity in the microflow. For more information on parameters, see [Parameter](/refguide/parameter/) in the *Studio Pro Guide*. |
+| Merge                           | A merge can be used to combine flows into one.  If previously you split the microflow flow (for example, when adding a decision) and now one and the same action needs to be executed for these separated flows, you can combine the two (or more) paths using a merge. For more information, see [Merge](/refguide9/merge/) in the *Studio Pro Guide*. |
+| Parameter                       | A parameter is an input data for the microflow and can be used in any activity in the microflow. For more information on parameters, see [Parameter](/refguide9/parameter/) in the *Studio Pro Guide*. |
 
 ### 4.2 Object Activities {#microflow-object-activities}
 
@@ -195,12 +191,12 @@ The **Object Activities** are described in the table below.
 
 | Activity       | Description                                                  |
 | -------------- | ------------------------------------------------------------ |
-| Aggregate List | **Aggregate List** can be used to calculate aggregated values such as the maximum, minimum, sum, average, and total amount of objects over a list of data objects. For more information, see [Aggregate List](/refguide/aggregate-list/) in the *Studio Pro Guide*. |
-| Change Object  | **Change Object** can be used to change an existing data object or properties of this object. For more information, see [Change Object](/refguide/change-object/) in the *Studio Pro Guide*. |
-| Commit         | **Commit** saves changes you have not saved in the database yet. For more information, see [Commit](/refguide/committing-objects/) in the *Studio Pro Guide*. |
-| Create Object  | **Create Object** can be used to create a data object. For more information, see [Create Object](/refguide/create-object/) in the *Studio Pro Guide*. |
-| Delete         | **Delete Object** can be used to delete one data object or a list of objects. For more information, see [Delete](/refguide/deleting-objects/) in the *Studio Pro Guide*. |
-| Retrieve       | **Retrieve** can be used to get one or more objects, either by getting another object through an [association](/studio/domain-models-association-properties/), or by retrieving objects from the database. For more information, see [Retrieve](/refguide/retrieve/) in the *Studio Pro Guide*. |
+| Aggregate List | **Aggregate List** can be used to calculate aggregated values such as the maximum, minimum, sum, average, and total amount of objects over a list of data objects. For more information, see [Aggregate List](/refguide9/aggregate-list/) in the *Studio Pro Guide*. |
+| Change Object  | **Change Object** can be used to change an existing data object or properties of this object. For more information, see [Change Object](/refguide9/change-object/) in the *Studio Pro Guide*. |
+| Commit         | **Commit** saves changes you have not saved in the database yet. For more information, see [Commit](/refguide9/committing-objects/) in the *Studio Pro Guide*. |
+| Create Object  | **Create Object** can be used to create a data object. For more information, see [Create Object](/refguide9/create-object/) in the *Studio Pro Guide*. |
+| Delete         | **Delete Object** can be used to delete one data object or a list of objects. For more information, see [Delete](/refguide9/deleting-objects/) in the *Studio Pro Guide*. |
+| Retrieve       | **Retrieve** can be used to get one or more objects, either by getting another object through an [association](/studio/domain-models-association-properties/), or by retrieving objects from the database. For more information, see [Retrieve](/refguide9/retrieve/) in the *Studio Pro Guide*. |
 
 ### 4.3 Client Activities Section {#microflow-client-activities}
 
@@ -212,10 +208,10 @@ The **Client Activities** are described in the table below.
 
 | Activity       | Description                                                  |
 | -------------- | ------------------------------------------------------------ |
-| Close Page     | **Close Page** activity closes the currently open page. For more information, see [Close Page](/refguide/close-page/) in the *Studio Pro Guide*. |
-| Show Home Page | The **Show Home Page** action navigates to the home page. It goes to the same page as the end-user goes to after signing in and respects role-based home pages. For more information, see [Show Home Page](/refguide/show-home-page/) in the *Studio Pro Guide*. <br />For details on setting the home page, see [Navigation Document](/studio/navigation/). |
-| Show Message   | With the **Show Message** action you can show a blocking or non-blocking message to an end-user. (Non-blocking message lets users continue their work in the app with the pop-up window open, while the blocking message does not let the user continue work until the pop-up window is closed.) For more information, see [Show Message](/refguide/show-message/) in the *Studio Pro Guide*. |
-| Show Page      | With the **Show Page** action you can show a page to the end-user. For more information, see [Show Page](/refguide/show-page/) in the *Studio Pro Guide*. |
+| Close Page     | **Close Page** activity closes the currently open page. For more information, see [Close Page](/refguide9/close-page/) in the *Studio Pro Guide*. |
+| Show Home Page | The **Show Home Page** action navigates to the home page. It goes to the same page as the end-user goes to after signing in and respects role-based home pages. For more information, see [Show Home Page](/refguide9/show-home-page/) in the *Studio Pro Guide*. <br />For details on setting the home page, see [Navigation Document](/studio/navigation/). |
+| Show Message   | With the **Show Message** action you can show a blocking or non-blocking message to an end-user. (Non-blocking message lets users continue their work in the app with the pop-up window open, while the blocking message does not let the user continue work until the pop-up window is closed.) For more information, see [Show Message](/refguide9/show-message/) in the *Studio Pro Guide*. |
+| Show Page      | With the **Show Page** action you can show a page to the end-user. For more information, see [Show Page](/refguide9/show-page/) in the *Studio Pro Guide*. |
 
 ### 4.4 Workflow Activities {#microflow-workflow-activities}
 
@@ -248,8 +244,8 @@ The **Variable Activities** are described in the table below:
 
 | Activity        | Description                                                  |
 | --------------- | ------------------------------------------------------------ |
-| Change Variable | **Change Variable** changes the value of an existing variable in the current microflow. For more information, see [Change Variable](/refguide/change-variable/) in the *Studio Pro Guide*. |
-| Create Variable | With the **Create Variable** activity you can create a variable and assign a value to it. The variable can be used to store, change, and reuse a value in activities of the microflow. For more information, see [Create Variable](/refguide/create-variable/) in the *Studio Pro Guide*. |
+| Change Variable | **Change Variable** changes the value of an existing variable in the current microflow. For more information, see [Change Variable](/refguide9/change-variable/) in the *Studio Pro Guide*. |
+| Create Variable | With the **Create Variable** activity you can create a variable and assign a value to it. The variable can be used to store, change, and reuse a value in activities of the microflow. For more information, see [Create Variable](/refguide9/create-variable/) in the *Studio Pro Guide*. |
 
 For example, you can first create a variable named *Discount* to a microflow, and then change the variable Discount depending on the type of the customer's grade. You can give a discount for customers with Gold and Silver grades. 
 
@@ -273,7 +269,7 @@ When configuring the activities of microflows you will notice icons above or und
 | Entity                | {{< figure src="/attachments/studio/microflows/entity-icon.png" alt="Entity icon" >}}       | Indicates that the data source for the activity is an entity. |
 | Value                 | {{< figure src="/attachments/studio/microflows/simple-value-icon.png" alt="Value Icon" >}}  | Indicates that the data source for the activity is a simple value, such as decimal, Boolean, date and time, etc. |
 | Commit                | {{< figure src="/attachments/studio/microflows/commit-icon.png" alt="Commit Icon" >}}       | Indicates that the object will be committed. *Committing* means that the changes will be saved in the database. This can be useful, for example, when you want an object *NewCustomer* to be saved and updated in the database. |
-| Commit without events | {{< figure src="/attachments/studio/microflows/commit-with-no-events-icon.png" alt="Commit Without Events Icon" >}} | Indicates that the object will be committed but without events. This means that the object will be saved in the database, but event handlers will not be triggered. For more information on event handlers, see [Event Handlers](/refguide/event-handlers/) in the *Studio Pro Guide* |
+| Commit without events | {{< figure src="/attachments/studio/microflows/commit-with-no-events-icon.png" alt="Commit Without Events Icon" >}} | Indicates that the object will be committed but without events. This means that the object will be saved in the database, but event handlers will not be triggered. For more information on event handlers, see [Event Handlers](/refguide9/event-handlers/) in the *Studio Pro Guide* |
 | Refresh in Client     | {{< figure src="/attachments/studio/microflows/refresh-in-client-icon.png" alt="Refresh in Client Icon" >}} | Indicates that the result of the activity will be displayed to an end-user. |
 
 ## 7 Main Documents in This Category

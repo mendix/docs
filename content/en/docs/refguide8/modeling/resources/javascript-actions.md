@@ -1,7 +1,6 @@
 ---
 title: "JavaScript Actions"
 url: /refguide8/javascript-actions/
-parent: "resources"
 weight: 20
 description: "This reference guide details the ways JavaScript Actions can extend the functionality of your Mendix app."
 tags: ["javascript", "javascript action", "parameter", "studio pro"]

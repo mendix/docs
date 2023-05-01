@@ -25,4 +25,3 @@ Testing is a vital component when creating a Mendix application. In this categor
 ## 4 Webinar
 
 * [The Quality Assurance Mindset in Mendix](http://ww2.mendix.com/expert-webinar-quality-assurance.html)
-

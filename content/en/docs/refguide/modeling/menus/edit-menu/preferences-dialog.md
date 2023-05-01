@@ -1,7 +1,6 @@
 ---
 title: "Preferences"
 url: /refguide/preferences-dialog/
-parent: "edit-menu"
 weight: 50
 tags: ["studio pro", "preferences", "settings", "edit menu"]
 ---
@@ -10,7 +9,7 @@ tags: ["studio pro", "preferences", "settings", "edit menu"]
 
 The **Preferences** option in the menu opens a dialog box where you can set user-specific preferences which apply to the whole of Studio Pro:
 
-{{< figure src="/attachments/refguide/modeling/menus/edit-menu/preferences-dialog/preferences.png" alt="Preferences" >}}
+{{< figure src="/attachments/refguide/modeling/menus/edit-menu/preferences-dialog/preferences.png" alt="Preferences" width="600" >}}
 
 ## 2 General Tab {#general}
 
@@ -54,6 +53,22 @@ The JDK is necessary to run Mendix applications, because the Mendix Runtime is w
 
 Enable this setting to increase the speed at which a running application is updated after changes have been made in Studio Pro. When only pages, layouts or snippets have been changed, an entire restart of the application is skipped to decrease deployment time. Also, no Java compilation is performed when no relevant files have changed.
 
+#### 2.3.3 Build Using Gradle {#gradle}
+
+Enable this setting to build you app using Gradle. If this setting is disabled Ant is used instead.
+
+#### 2.3.4 Gradle Directory
+
+A directory where Gradle is located on the computer that you use to deploy the application. The correct directory is usually located automatically.
+
+Gradle is necessary to deploy Mendix applications if the **Build using Gradle** setting is enabled.
+
+### 2.4 Disk Location
+
+#### 2.4.1 Default App Directory
+
+This is the directory where new apps are stored. It is used in the [App Settings](/refguide/new-app/#app-settings) dialog box when you create a new app. If a different directory is selected in the **App Settings** dialog box, that directory is stored as the new default app directory.
+
 ### 3 Mendix Assist Tab
 
 #### 3.1 Logic Bot
@@ -65,8 +80,11 @@ The **Logic Bot** tab contains the following settings:
 
 #### 3.2 Performance Bot
 
-The **Performance Bot** tab contains the **Show recommendation in editors** setting. When enabled, [MxAssist Performance Bot](/refguide/mx-assist-performance-bot/) highlights elements that contain performance issues in visual editors. 
+The **Performance Bot** tab contains the following settings:
 
+* **Show recommendation in editors** – when enabled, [MxAssist Performance Bot](/refguide/mx-assist-performance-bot/) highlights elements that contain performance issues in visual editors.
+
+* **Automatically run an inspection after opening an app** – when enabled, [MxAssist Performance Bot](/refguide/mx-assist-performance-bot/) automatically runs an inspection when an app is opened. If the app contains errors, the inspection will not run.
 
 ## 4 Model Tab
 
@@ -82,6 +100,12 @@ This setting defines the default response to the question whether to automatical
 
 This is the path and name of the program that is used to view the details of file changes in the [commit dialog box](/refguide/commit-dialog/).
 
+For example, you can see how to set up file comparison for Visual Studio Code below: 
+
+```text {linenos=false}
+{path to VS Code}/Code.exe --wait --diff "{0}" "{1}"
+```
+
 #### 5.1.2 Argument Pattern
 
 This is the pattern from which the arguments are derived that are passed to the file comparison program. The following two placeholders can be used in this pattern:
@@ -89,11 +113,31 @@ This is the pattern from which the arguments are derived that are passed to the 
 * `{0}` – this is replaced with the name of the original file before the arguments are passed to the file comparison program
 * `{1}` – this is replaced with the name of the changed file before the arguments are passed to the file comparison program
 
-### 5.2 Enable Private Version Control with Subversion {#enable}
+### 5.2 Subversion 
+
+#### 5.2.1 Enable Private Version Control with Subversion {#enable}
 
 Select this option when you want to work on an app that is not stored in [Mendix Team Server](/developerportal/collaborate/team-server/), but in another Subversion server to which you have access. This will allow you to specify the location of the app on the Subversion server when opening, downloading, or uploading the app.
 
-### 5.3 Enable Private Version Control with Git 
+### 5.3 Git 
+
+#### 5.3.1 Name
+
+Specify your name for Git to use it in commit messages and make them more informative.
+
+#### 5.3.2 Email
+
+Specify your email for Git to use it in commit messages and make them more informative.
+
+#### 5.3.3 Enable Automatic Repository Optimization {#optimization}
+
+Select **Enable automatic repository optimization** to run Git repository optimization automatically on a regular basis. This helps you maintain the storage structure providing benefits from both performance and repository size perspectives. 
+
+#### 5.3.4 Number of Commits
+
+This option is available when [Enable automatic repository optimization](#optimization) is on. Studio Pro keeps track of the number of commits made in the local repository. You can manually specify the minimum number of them to tell when to start background optimization. For more information, see [Git Storage Optimization](/refguide/git-storage-optimization-dialog/).
+
+#### 5.3.5 Enable Private Version Control with Git 
 
 Select this option when you want to work on an app that is not stored in [Mendix Team Server](/developerportal/collaborate/team-server/), but in a private Git server to which you have access. This will allow you to specify the location of the app on the Git server when opening, downloading, or uploading the app. In this section, you also need to specify name and email values that will be used to identify your commits with Git.
 
@@ -103,7 +147,21 @@ Select this option when you want to work on an app that is not stored in [Mendix
 
 Sometimes the computer running Studio Pro cannot access the internet directly, but has to connect to a proxy server that requires authentication. If this is the case, then these settings can be used to specify the user name and password to connect to the proxy server.
 
-## 7 New Features Tab {#new-features}
+### 6.2 Usage Data {#usage-data}
+
+When the **Send Studio Pro usage data to Mendix** setting is enabled, Studio Pro sends usage data to Mendix that allows Mendix to identify issues and improve the user experience. The usage data does not contain sensitive information. It is possible to disable this feature, but it may affect the behavior of some features, prevent Mendix from identifying issues reported by the user, or affect tracking issues that are not reported yet. This setting is machine-specific and changing this feature does not affect any existing installed version.
+
+### 6.2 Rendering {#rendering}
+
+Hardware and driver issues may cause performance problems when running Studio Pro. These issues can appear in form of dialogs opening and closing much slower than expected, and general slowness of the UI. In case the hardware problems cannot be solved, it is possible to mitigate these issues by turning the **Enable software rendering mode** setting on. Enabling this setting requires a restart of Studio Pro to take effect. Running the application with this setting on may increase the CPU usage.
+
+## 7 Work Environment Tab
+
+### 7.1 Default Page Editor {#default-page-editor}
+
+This option sets the default page editor mode that your page opens in: **Structure mode** or **Design mode**. For more information on page editor modes, see the [Page Editor Modes](/refguide/page/#page-editor-modes) section in *Page*.
+
+## 8 New Features Tab {#new-features}
 
 The **New features** tab allows you to turn new features on and off. These are features which are being worked on but are either not yet developed sufficiently to remove the previous version, or which are currently optional.
 
@@ -111,41 +169,43 @@ The **New features** tab allows you to turn new features on and off. These are f
 You need to restart Studio Pro for changes to these settings to take effect.
 {{% /alert %}}
 
-### 7.1 Dark Mode Preview {#dark-mode}
+### 8.1 Browser Sign In
+
+The **Use your default browser to sign in** option allows you to use your default browser to sign into Studio Pro. If there is an active Mendix session in your browser, you will be signed in with this session.
+
+Default: *enabled*
+
+### 8.2 Dark Mode Preview {#dark-mode}
+
+{{% alert color="info" %}}
+This functionality is currently in [Beta](/releasenotes/beta-features/).
+{{% /alert %}}
 
 The **Dark mode** option allows you to preview to the dark mode of the Studio Pro user interface. 
 
 {{% alert color="info" %}}
-Not all screens of Studio Pro support the dark mode yet.
+Not all screens of Studio Pro support dark mode yet.
 {{% /alert %}}
 
 Default: *disabled*
 
-### 7.2 New Version of My App Screen 
-
-With this option, you can enable the new version of **My Apps** screen. Should you find any issues in the new version, you can switch back to the old version by clearing this check box.
-
-Default: *enabled*
-
-### 7.3 New Merge Algorithm with Fine-Grained Conflict Resolution
+### 8.3 New Merge Algorithm with Fine-Grained Conflict Resolution
 
 With this option, you can enable the new merge algorithm that is used when you update your app or merge changes in it. For more information on the algorithm, see [New Merge Algorithm with Fine-Grained Conflict Resolution](/refguide/new-merge-algorithm/).
 
 Default: *enabled*
 
-### 7.4 Team Server Git {#git}
+### 8.4 Properties Pane {#properties}
 
-With this option, Studio Pro starts using the Git version of the Team Server. Your apps will be created with a Git Version Control back end and will be built and deployed to a Git-oriented infrastructure. 
-
-{{% alert color="warning" %}}
-This is a Beta feature, and not yet suited for production usage. For more information on Beta products, see [Beta Releases](/releasenotes/beta-features/). 
+{{% alert color="info" %}}
+This functionality is currently in [Beta](/releasenotes/beta-features/).
 {{% /alert %}}
 
-After applying this setting, you need to restart Studio Pro.
+The **New Properties pane preview** option allows you to enable the overhauled UI for viewing and changing properties in Studio Pro.
 
 Default: *disabled*
 
-## 8 Read More
+## 9 Read More
 
 * [Upload to Version Control Server](/refguide/upload-to-version-control-dialog/)
-* [How to Work with an On-Premises Version Control Server](/howto/collaboration-requirements-management/on-premises-svn-howto/)
+* [Working with an On-Premises Version Control Server](/refguide/on-premises-svn/)

@@ -1,7 +1,6 @@
 ---
 title: "Microflows"
 url: /refguide8/microflows/
-parent: "application-logic"
 weight: 10
 description: "Presents an overview of all the elements that can be used in a microflow."
 tags: ["studio pro"]
@@ -30,13 +29,13 @@ The graphical notation of microflows is based on the [Business Process Model and
 
 A microflow is composed of elements. Below is a categorized overview of all elements. The following categories are used:
 
-*   [Events](#events) represent start and endpoints of a microflow and special operations in a loop.
-*   [Flows](#flows) form the connection between elements.
-*   [Decisions](#decisions) deal with making choices and merging different paths again.
-*   [Activities](#activities) are the actions that are executed in a microflow.
-*   [Loop](/refguide8/loop/) is used to iterate over a list of objects.
-*   [Parameter](#parameter) is data that serves as input for the microflow.
-*   [Annotation](#annotation) is an element that can be used to put comments in a microflow.
+* [Events](#events) represent start and endpoints of a microflow and special operations in a loop.
+* [Flows](#flows) form the connection between elements.
+* [Decisions](#decisions) deal with making choices and merging different paths again.
+* [Activities](#activities) are the actions that are executed in a microflow.
+* [Loop](/refguide8/loop/) is used to iterate over a list of objects.
+* [Parameter](#parameter) is data that serves as input for the microflow.
+* [Annotation](#annotation) is an element that can be used to put comments in a microflow.
 
 ### 2.1 Events{#events}
 
@@ -126,5 +125,5 @@ The microflow editor offers keyboard support for navigating and manipulating mic
 
 If you want to see what happens while a microflow is executing, you can use the microflow debugger. See the following how-tos:
 
-*   [Debugging Microflows](/howto8/monitoring-troubleshooting/debug-microflows/)
-*   [Debugging Microflows Remotely](/howto8/monitoring-troubleshooting/debug-microflows-remotely/)
+* [Debugging Microflows](/howto8/monitoring-troubleshooting/debug-microflows/)
+* [Debugging Microflows Remotely](/howto8/monitoring-troubleshooting/debug-microflows-remotely/)

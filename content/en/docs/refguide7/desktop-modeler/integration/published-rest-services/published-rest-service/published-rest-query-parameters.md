@@ -1,7 +1,6 @@
 ---
 title: "Published REST Query Parameters"
 url: /refguide7/published-rest-query-parameters/
-parent: "published-rest-service"
 weight: 40
 description: "Parameters for a published REST query"
 tags: ["published REST", "query", "parameters", "Date and Time format"]

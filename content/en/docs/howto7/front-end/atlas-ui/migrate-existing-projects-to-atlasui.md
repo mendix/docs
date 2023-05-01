@@ -1,7 +1,6 @@
 ---
 title: "Migrate Existing Apps to Atlas UI"
 url: /howto7/front-end/migrate-existing-projects-to-atlasui/
-parent: "atlas-ui"
 weight: 20
 tags: ["Atlas", "UI", "UX", "user experience"]
 ---
@@ -31,7 +30,7 @@ To replace the UI Framework, follow these steps:
 
 1. Delete the **UI_Resources** module.
 2. Download and import the [Atlas UI Resources](/appstore/modules/atlas-ui-resources/) module from the Mendix Marketplace.
-3.  When the Atlas UI Resources module is downloaded from the Mendix Marketplace, it will be found in **App Store modules**:
+3. When the Atlas UI Resources module is downloaded from the Mendix Marketplace, it will be found in **App Store modules**:
 
     {{< figure src="/attachments/howto7/front-end/atlas-ui/migrate-existing-projects-to-atlasui/migrate_dm_appstore.png" >}}
 
@@ -63,6 +62,6 @@ Several Mendix apps have a custom theme. If this is the case for your app, your 
 
 * [How to Get Started with Atlas UI](/howto7/front-end/get-started-with-atlasui/)
 * [How to Create Company Atlas UI Resources](/howto7/front-end/create-company-atlas-ui-resources/)
-* [How to Create Custom Preview Images for Building Blocks & Page Templates](/howto7/front-end/create-custom-preview-images-for-building-blocks-and-page-templates/)
+* [How to Create Custom Preview Images for Building Blocks and Page Templates](/howto7/front-end/create-custom-preview-images-for-building-blocks-and-page-templates/)
 * [How to Extend Design Properties to Customize the Web Modeler Experience](/howto7/front-end/extend-design-properties-to-customize-the-web-modeler-experience/)
 * [How to Share Company Atlas UI Resources](/howto7/front-end/share-company-atlas-ui-resources/)

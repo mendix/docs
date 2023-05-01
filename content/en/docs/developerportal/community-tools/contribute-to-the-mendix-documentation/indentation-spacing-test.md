@@ -1,15 +1,14 @@
 ---
-title: "Indentation & Spacing Test"
+title: "Indentation and Spacing Test"
 url: /developerportal/community-tools/indentation-spacing-test/
 draft: true
 description: "Various test cases for rendering of indents and spaces"
-banner: "This is a draft and will not be rendered in the production website. 
-Use this page to test how spacing and indents will render with various elements and shortcodes."
+banner: "This is a draft and will not be rendered in the production website. Use this page to test how spacing and indents will render with various elements and shortcodes. Linting has been disabled for this file."
 ---
-
+<!-- markdownlint-disable-file -->
 ## Heading 2
 
-Paragraph text here.
+Paragraph text here. extra space 
 
 ### Heading 3
 
@@ -127,6 +126,7 @@ DO NOT USE TABS
 
 1. First list item
 2. Second list item
+
 ```
 Code blocks do NOT need a line break to work. Not part of list indent.
 ```
@@ -135,6 +135,7 @@ Code blocks do NOT need a line break to work. Not part of list indent.
 
 1. First list item
 2. Second list item
+
     ```
     Code blocks do NOT need trailing spaces to be indented.
     Indents must be spaces, not tabs, otherwise a bug shows in rendering an extra '`' symbol.
@@ -212,7 +213,23 @@ Lists in alerts:
 
 ### 2.2 TODOs and Comments
 
-[//]: # Comments do NOT work. Use todo shortcode instead: \{\{% todo %\}\}[ToDo comment text, only visible in development]\{\{% /todo %\}\}
+Two ways to add comments:
+
+1. With empty Markdown relative link
+
+    ```text
+    [//]: # "my comment here"
+
+    OR
+
+    [//]: # (my other comment here)
+    ```
+
+1. Use todo shortcode, which will output the comment into the Travis log:
+
+    ```text
+    {{%/* todo */%}}[ToDo comment text, only visible in development]{{%/* /todo */%}}
+    ```
 
 ### 2.3 Details
 
@@ -257,6 +274,12 @@ A table with list items:
 | Numbered list | Bullet point list |
 | --- | --- |
 | <ol><li>numbered item</li><li>numbered item</li><li>numbered item</li></ol> | <ul><li>bullet point</li><li>bullet point</li><li>bullet point</li></ul> |
+
+### 2.7 Anchors in Tables
+
+| Table Heading 1 | Table Heading 2 <a id="myanchor" href="#myanchor">My anchor here!</a> |
+| --- | --- |
+| table cell 1 | table cell 2 <a id="myanchor2" href="#myanchor2">My anchor 2 here!</a>  |
 
 ## 3 Section Spacing Tests<br />==================={#spacing}
 
@@ -353,3 +376,32 @@ A new list
     1. Subitem 3
     1. Subitem 4
 1. Item 3
+
+## Test Buttons
+
+{{% button color="info" href="https://getbootstrap.com/docs/4.6/components/buttons/" text="Info" title="What do you think of this button?" %}}
+
+{{% button color="success" href="https://getbootstrap.com/docs/4.6/components/buttons/" text="Success" title="What do you think of this button?" %}}
+
+{{% button color="danger" href="https://getbootstrap.com/docs/4.6/components/buttons/" text="Danger" title="What do you think of this button?" %}}
+
+{{% button color="warning" href="https://getbootstrap.com/docs/4.6/components/buttons/" text="Warning" title="What do you think of this button?" %}}
+
+{{% button color="light" href="https://getbootstrap.com/docs/4.6/components/buttons/" text="Light" title="What do you think of this button?" %}}
+
+{{% button color="dark" href="https://getbootstrap.com/docs/4.6/components/buttons/" text="Dark" title="What do you think of this button?" %}}
+
+{{% button color="link" href="https://getbootstrap.com/docs/4.6/components/buttons/" text="Link" title="What do you think of this button?" %}}
+
+{{% button color="outline-info" href="https://getbootstrap.com/docs/4.6/components/buttons/" text="Info" title="What do you think of this button?" %}}
+
+{{% button color="outline-success" href="https://getbootstrap.com/docs/4.6/components/buttons/" text="Success" title="What do you think of this button?" %}}
+
+{{% button color="outline-danger" href="https://getbootstrap.com/docs/4.6/components/buttons/" text="Danger" title="What do you think of this button?" %}}
+
+{{% button color="outline-warning" href="https://getbootstrap.com/docs/4.6/components/buttons/" text="Warning" title="What do you think of this button?" %}}
+
+{{% button color="outline-light" href="https://getbootstrap.com/docs/4.6/components/buttons/" text="Light" title="What do you think of this button?" %}}
+
+{{% button color="outline-dark" href="https://getbootstrap.com/docs/4.6/components/buttons/" text="Dark" title="What do you think of this button?" %}}
+

@@ -23,7 +23,7 @@ Below is a chart showing the processes involved in deploying your app. Each of t
 
 ### 2.1 Deployer
 
-This is initiated by the Mendix Cloud Portal to manage the deployment of an app.
+This is initiated by the Mendix Cloud facilities to manage the deployment of an app.
 
 ### 2.2 Docker Environment
 
@@ -70,4 +70,3 @@ It starts the Runtime Server by starting a Java RE and pointing it at the releva
 ### 2.11 Runtime Server
 
 This is the interpreter which runs the app. For more information see [Runtime Server](/refguide8/runtime-server/).
-

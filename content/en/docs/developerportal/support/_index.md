@@ -1,9 +1,11 @@
 ---
 title: "Mendix Support"
 url: /developerportal/support/
-description: ""
-tags: ["Support", "SLA", "standard", "premium"]
-weight: 30
+description: "Provides information on how to obtain support for your Mendix apps."
+weight: 35
+no_list: false 
+description_list: true
+tags: ["support", "sla", "standard", "premier", "platform"]
 aliases:
     - /howtogeneral/support/index.html
 ---
@@ -40,9 +42,17 @@ The Premier Support package contains the following for customers on the Mendix P
 
 Please contact [Mendix Support](https://support.mendix.com/) or your Customer Success Manager if you want to know more.
 
+### 1.3 Extended Support {#extended-support}
+
+Extended Support is available as a product for the oldest major Mendix version where support is scheduled to end upon release of a new major version. With this product, support according to the SLA for the oldest version is available from the GA release date of the newest major version in a six-month package that you can purchase once or twice (for a maximum duration of one year). 
+
+For example, support for Mx7 is scheduled to end upon the release of Mx10 GA. However, if you have purchased Extended Support, Mx7 remains supported for either six months or one year from the release date of Mx10 GA.
+
+Please contact your Customer Success Manager or [Mendix Support](https://support.mendix.com/hc/en-us) if you want to know more.
+
 ## 2 Finding Your Answers
 
-We expect that many questions and issues can be solved by reading the [Mendix Documentation](https://docs.mendix.com/) and by exploring the [Mendix Forum](https://forum.mendix.com/). If you cannot find the answer to your question in one of these locations, you can submit a question, incident, or change request to Mendix Support. We will act as the focal point for issues on Mendix Studio and Studio Pro, your applications, and the [Developer Portal](https://home.mendix.com/). We will forward the issue to the second- and third-line if necessary.
+We expect that many questions and issues can be solved by reading the [Mendix Documentation](https://docs.mendix.com/) and by exploring the [Mendix Forum](https://forum.mendix.com/). If you cannot find the answer to your question in one of these locations, you can submit a question, incident, or change request to Mendix Support. We will act as the focal point for issues on Mendix Studio Pro, your applications, and the [Developer Portal](https://home.mendix.com/). We will forward the issue to the second- and third-line if necessary.
 
 ## 3 Feature Requests
 
@@ -75,7 +85,7 @@ Please read more about this in [Control Center](/developerportal/control-center/
 
 ### 5.2 Technical Contacts
 
-You need to appoint a [technical contact](/developerportal/collaborate/app-roles/#technical-contact) for each of your applications running in the Mendix Public Cloud and Cloud Dedicated. The technical contact checks the performance of the applications in the Developer Portal and receives alerts from the Mendix Developer Portal based on errors and warnings in the application. It is possible to have other team members receive these alerts as well.
+You need to appoint a [Technical Contact](/developerportal/collaborate/app-roles/#technical-contact) for each of your applications running in the Mendix Public Cloud and Cloud Dedicated. The Technical Contact checks the performance of the applications in the Developer Portal and receives alerts from the Mendix Developer Portal based on errors and warnings in the application. It is possible to have other team members receive these alerts as well.
 Reading these alerts carefully and acting upon them is important, as they can affect the performance of your app. For more information on alerts, see [Alerts](/developerportal/operate/monitoring-application-health/).
 
 ### 5.3 Training
@@ -122,7 +132,7 @@ In the diagrams below, the following colors are used:
 
 {{< figure src="/attachments/developerportal/support/legend.png"   width="50%"  >}}
 
-### 9.1 Mendix Public & Dedicated Cloud
+### 9.1 Mendix Public and Dedicated Cloud
 
 The Mendix Public and Dedicated Clouds are an integrated part of the Mendix Platform and are therefore fully supported as described in the SLA.
 Mendix Support has access to app health, logs, graphs and monitoring.
@@ -151,11 +161,11 @@ Mendix Support does not have access to app health, logs, graphs and monitoring �
 
 {{< figure src="/attachments/developerportal/support/tencent.png"   width="40%"  >}}
 
-### 9.5 Cloud Foundry / Docker & Kubernetes / Traditional Architectures
+### 9.5 Cloud Foundry / Docker and Kubernetes / Traditional Architectures
 
 Mendix is compatible with all the well-known cloud providers: IBM Cloud, Microsoft Azure, Amazon Web Services (AWS), Red Hat OpenShift, and Google Cloud Platform.
 Depending on the Cloud architecture a Mendix application is built using the [Mendix Cloud Foundry buildpack](https://github.com/mendix/cf-mendix-buildpack), the [Mendix Docker Buildpack](https://github.com/mendix/docker-mendix-buildpack) or to a Unix-like or Windows server.
-Check our [System Requirements](/refguide/system-requirements/) for the supported components of any Cloud Foundry / Docker & Kubernetes / traditional architecture.
+Check our [System Requirements](/refguide/system-requirements/) for the supported components of any Cloud Foundry / Docker and Kubernetes / traditional architecture.
 
 Mendix Support does not have access to app health, logs, graphs and monitoring. If you run into issues or want to ask a question on these supported components, please always provide relevant logs, data and your own analysis that explains why you suspect the issue is caused by one of our supported components.
 
@@ -165,7 +175,7 @@ Mendix Support does not have access to app health, logs, graphs and monitoring. 
 
 These are the components of the Mendix stack described in the section above. Please read an extensive description of the [Mendix architecture](https://www.mendix.com/evaluation-guide/enterprise-capabilities/architecture-intro) in the Evaluation Guide.
 
-### 10.1 Database, File Storage & Network
+### 10.1 Database, File Storage, and Network
 
 The database component includes the database service and the creating, storing, downloading, uploading, and restoring of backups.
 The file storage component refers to the file storage service and the creating, storing, downloading, uploading, and restoring of backups.
@@ -183,9 +193,9 @@ Only when running on the Mendix Public Cloud or Cloud Dedicated, can Mendix Supp
 
 The container runtime platform refers to the platform for managing, creating, destroying and scaling of runtime containers. In the Mendix Public Cloud and Cloud Dedicated Cloud Foundry is used.
 
-Only when running on the Mendix Public Cloud or Cloud Dedicated, can Mendix Support diagnose this component. When running on SAP BTP or IBM Cloud, the selected third party can diagnose this component.
+Only when running on the Mendix Public Cloud or Cloud Dedicated, can Mendix Support diagnose this component. When running on SAP BTP, the selected third party can diagnose this component.
 
-### 10.4 Buildpack, m2ee & Service Console
+### 10.4 Buildpack, m2ee, and Service Console
 
 The Mendix buildpacks for [Cloud Foundry](https://github.com/mendix/cf-mendix-buildpack) and [Docker](https://github.com/mendix/docker-mendix-buildpack) are available in GitHub repositories. The documentation for the buildpacks and m2ee tools is contained within these GitHub repositories and, because they are released under an Open Source license, the code can be inspected and the functionality and options can be understood by customers who wish to use these buildpacks.
 
@@ -205,7 +215,7 @@ The application operation component is used for stopping and starting environmen
 
 Only when running on the Mendix Public Cloud, Cloud Dedicated, Private Cloud Connected or SAP BTP through the Developer Portal, can Mendix Support diagnose this components.
 
-### 10.6 Logs & Metrics
+### 10.6 Logs and Metrics
 
 The logs component takes care of viewing and downloading application log files.
 The metrics component refers to viewing application metrics.
@@ -239,10 +249,4 @@ Mendix Support needs application logs to diagnose these components. Because Mend
 This includes the implementation and configuration of features, and the data and files in the Mendix app itself.
 These components are not accessible for Mendix Support and issues in the application are out of the scope of Mendix Support, although we will gladly assist in case of questions.
 
-## 11 Main Documents in This Category
-
-* [Prepare Your App for Support](/developerportal/support/prepare-your-project/) – shows you how to configure project authorization to select the affected app(s) in the Mendix Support Portal
-* [Submit a Support Request](/developerportal/support/submit-support-request/) – presents the details necessary for Mendix Support to process your request
-* [Make a New App Node Request](/developerportal/support/new-app-node-request-template/) – describes how to deploy a new licensed node in the Mendix Cloud or on-premises/virtual private cloud
-* [Support Ticket Priority](/developerportal/support/ticket-priority/) – describes how priority levels are determined for Mendix Support
-* [Support Escalation Process](/developerportal/support/escalation-management-process/) – describes how a support request can be escalated to bring your issue to closure
+## 11 Documents in This Category

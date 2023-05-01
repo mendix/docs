@@ -1,5 +1,6 @@
 ---
-title: "Implement a Simple CICD Pipeline with Mendix APIs"
+title: "Implement a Simple CI/CD Pipeline with Mendix APIs"
+linktitle: "Implement CI/CD Pipeline"
 url: /howto7/integration/implement-cicd-pipeline/
 category: "Integration"
 tags: ["cicd", "continuous", "integration", "delivery", "deployment", "automation", "testing"]
@@ -74,7 +75,7 @@ If the environment is running, you need to stop it. To do this, use the [Stop En
 
 #### 3.3.3 Deploying/Transporting the Package
 
-To deploy/transport a package to the environment, use the [Transporting a Deployment Package to an Environment API call](/apidocs-mxsdk/apidocs/deploy-api/#transport-deployment-package).
+To deploy/transport a package to the environment, use the [Transport a Deployment Package to an Environment API call](/apidocs-mxsdk/apidocs/deploy-api/#transport-deployment-package).
 
 For this action, you need the `PackageId` from section [3.2.2 Building the Package](#BuildPackage).
 
@@ -107,7 +108,6 @@ First, you need to start the tests.
 When the tests are completed (check the status for when completed is `true`), you can see how many tests ran, how long they took to run, how many failed, which ones failed, and what the reasons were for failing.
 
 {{< figure src="/attachments/howto7/integration/implement-cicd-pipeline/11UnitTestsStatus.png" >}}
-
 
 {{% alert color="info" %}}
 

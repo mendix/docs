@@ -1,7 +1,7 @@
 ---
 title: "Debug Microflows"
 url: /howto8/monitoring-troubleshooting/debug-microflows/
-category: "Monitoring & Troubleshooting"
+category: "Monitoring and Troubleshooting"
 weight: 2
 tags: ["monitoring", "troubleshooting", "debug", "microflow"]
 ---
@@ -20,7 +20,7 @@ This how-to will teach you how to do the following:
 Before starting this how-to, make sure you have completed the following prerequisites:
 
 * Read [How to Create a Basic Data Layer](/howto8/data-models/create-a-basic-data-layer/)
-* Read [How to Create Your First Two Overview & Detail Pages](/howto8/front-end/create-your-first-two-overview-and-detail-pages/)
+* Read [How to Create Your First Two Overview and Detail Pages](/howto8/front-end/create-your-first-two-overview-and-detail-pages/)
 
 ## 3 Debugging Overview
 
@@ -52,11 +52,11 @@ Breakpoints are points in a microflow where the application will halt execution.
     {{< figure src="/attachments/howto8/monitoring-troubleshooting/debug-microflows/18580020.png" >}}
 
     You can open an overview of all the breakpoints by going to **View** > **Breakpoints**:
-    
+
     {{< figure src="/attachments/howto8/monitoring-troubleshooting/debug-microflows/18580019.png" >}}
 
     In the **Breakpoints** pane, you can enable, disable, and delete breakpoints. You can also configure a breakpoint condition and open the microflow that contains that breakpoint:
-    
+
     {{< figure src="/attachments/howto8/monitoring-troubleshooting/debug-microflows/18580017.png" >}}
 
 ## 5 Debugging
@@ -69,14 +69,14 @@ Breakpoints are points in a microflow where the application will halt execution.
 
     {{< figure src="/attachments/howto8/monitoring-troubleshooting/debug-microflows/18580010.png" >}}
 
-4.  Open the **Debugger** pane from the **View** menu:
+4. Open the **Debugger** pane from the **View** menu:
 
     {{< figure src="/attachments/howto8/monitoring-troubleshooting/debug-microflows/18580009.png" >}}
 
     The debugger can be used to go through the microflow step by step:
 
     {{< figure src="/attachments/howto8/monitoring-troubleshooting/debug-microflows/18580008.png" >}}
-    
+
 5. You have the following options on this pane:
     * Click **Step into** or **Step over** to move to the next step in the microflow (note that the difference between **Step into** and **Step over** is only noticeable if you run into a microflow call activity or a loop)
         * **Step into** means that the debugger steps into the sub microflow or loop
@@ -104,9 +104,9 @@ To use breakpoint conditions, follow these steps:
 
 1. Right-click the activity or decision in the microflow with a breakpoint and select **Edit breakpoint condition**:
     {{< figure src="/attachments/howto8/monitoring-troubleshooting/debug-microflows/18580018.png" >}}
-2.  Use the expression below to make sure this breakpoint only interrupts the microflow if you are executing it yourself (replace `YourUserName` with your own user name):
+2. Use the expression below to make sure this breakpoint only interrupts the microflow if you are executing it yourself (replace `YourUserName` with your own user name):
 
-    ```java
+    ```java {linenos=false}
     $currentUser/name = 'YourUserName'
     ```
 

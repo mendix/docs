@@ -3,15 +3,16 @@ title: "Studio Pro 8 Guide"
 url: /refguide8/
 description: "The various sections of the Mendix Studio Pro Guide provide details on the features and functionality of the Mendix Platform."
 tags: ["studio pro"]
-weight: 60
+weight: 70
 no_list: false
 description_list: true
 cascade:
     - space: "Studio Pro 8 Guide"
     - mendix_version: "8"
     - old_content: true
+    - hide_feedback: true
     - sitemap:
-        priority: 0.4
+        priority: 0.3
 ---
 
 ## 1 Introduction
@@ -57,6 +58,3 @@ Mobile app development allows you to create native mobile and hybrid apps and an
 ## 6 Guide Categories
 
 The *Studio Pro 8 Guide* is divided into the following categories:
-
-
-

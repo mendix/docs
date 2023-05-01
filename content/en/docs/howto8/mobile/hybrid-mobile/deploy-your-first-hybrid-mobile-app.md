@@ -1,7 +1,6 @@
 ---
 title: "Deploy Your First Hybrid Mobile App"
 url: /howto8/mobile/deploy-your-first-hybrid-mobile-app/
-parent: "hybrid-mobile"
 weight: 50
 tags: ["mobile", "deploy"]
 ---

@@ -1,7 +1,6 @@
 ---
 title: "File Manager"
 url: /refguide8/file-manager/
-parent: "file-widgets"
 tags: ["studio pro", "file manager", "file widget", "widget"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
@@ -82,6 +81,10 @@ If a file with an extension that is not allowed is selected, a [system text](/re
 
 {{% alert color="warning" %}}
 The feature to allow extensions is not meant as a security feature, as the file manager widget does not check the contents of a file to see if they match the provided extension. For more information, see the [Scanning Uploaded Files for Malicious Content](/howto8/security/best-practices-security/#scanning-for-malicious-content) section of *How to Implement Best Practices for App Security*.
+{{% /alert %}}
+
+{{% alert color="warning" %}}
+Although it is **not** in the list of approved file extensions, File Manager erroneously allows the *.xls* extension. This happens when the *.xlsx* extension is in the accepted list and an *.xls* file is selected from the **All files** option. This is due to your operating system's way of handling the **All files** option, and it cannot be changed.
 {{% /alert %}}
 
 #### 2.4.4 Show File in Browser

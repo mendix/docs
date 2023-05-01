@@ -1,7 +1,6 @@
 ---
-title: "Parse & Format Date Function Calls"
+title: "Parse and Format Date Function Calls"
 url: /refguide8/parse-and-format-date-function-calls/
-parent: "expressions"
 weight: 160
 description: "Describes the functions for parsing Date and time values from strings using a specified pattern or producing a string from a Date and time value in Mendix."
 tags: ["studio pro", "expressions", "parsing", "formatting"]
@@ -19,7 +18,7 @@ For details on all pattern possibilities, see [Class SimpleDateFormat](https://d
 
 ## 2 parseDateTime[UTC] {#parsedatetime-utc}
 
-Takes a string and parses it. If it fails and a default value is specified, it returns the default value. Otherwise, an error occurs. The function `parseDateTime` uses the user's timezone and `parseDateTimeUTC` uses the UTC calendar.
+Takes a string and parses it. If it fails and a default value is specified, it returns the default value. Otherwise, an error occurs. The function `parseDateTime` uses the user's time zone and `parseDateTimeUTC` uses the UTC calendar.
 
 ### 2.1 Input Parameters
 

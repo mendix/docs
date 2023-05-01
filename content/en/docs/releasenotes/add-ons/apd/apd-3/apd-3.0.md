@@ -1,7 +1,6 @@
 ---
 title: "3.0"
 url: /releasenotes/add-ons/apd-3.0/
-parent: "apd-3"
 ---
 
 ## 3.0.0
@@ -30,4 +29,4 @@ With the growth of our customer base, we felt the need to work on the architectu
 
 * We keep adding support for the latest Mendix releases.
 * We improved the safeguards in the APD agent. These safeguards are there to make sure the APD agent does not use too many resources and does not affect the system too much.
-* We improved the she safeguard for memory usage used to clear the buffer and stop the agent. This was not wanted on occasional memory spikes, so we enhanced this feature to pause and not stop on a memory spike. APD then resumes collecting statistics after 10 minutes, thus giving the system a chance to recover from whatever was causing the memory use and to continue doing its invaluable work.
+* We improved the safeguard for memory usage used to clear the buffer and stop the agent. This was not wanted on occasional memory spikes, so we enhanced this feature to pause and not stop on a memory spike. APD then resumes collecting statistics after 10 minutes, thus giving the system a chance to recover from whatever was causing the memory use and to continue doing its invaluable work.

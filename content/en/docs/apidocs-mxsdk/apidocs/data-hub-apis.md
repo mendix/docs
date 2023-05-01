@@ -2,9 +2,9 @@
 title: "Data Hub APIs"
 url: /apidocs-mxsdk/apidocs/data-hub-apis/
 category: "API Documentation"
-description: "This document describes the Data Hub APIs and generating the Personal Access Token."
+description: "This document describes the Data Hub APIs and generating the personal access token."
 weight: 20
-tags: ["data hub", "Data Hub API", "Warden", "authentication", "personal access token"]
+tags: ["data hub", "Data Hub API", "authentication", "personal access token"]
 ---
 
 ## 1 Introduction
@@ -15,31 +15,37 @@ The [Data Hub APIs](https://datahub-spec.s3.eu-central-1.amazonaws.com/index.htm
 * [Registration API](#registration) — register and update data sources to the organization's Mendix Data Hub
 * [Transform API](#transform) — for Mendix users deploying to a non-Mendix environment, generate the request bodies to register data sources published from your Mendix app
 
-{{% alert color="warning" %}}
-The Data Hub API v2 is now deprecated and will be removed. You should update your calls to this API and use the latest [Search](#search) and [Registration](#registration) API URLs.
+{{% alert color="info" %}}
+At this time, the **Try it out** feature on the OpenAPI specs does not work.
 {{% /alert %}}
 
-{{% alert color="info" %}}
-The interactive features of the OpenAPI interface are not operational, so the **Try it out** feature does not work.
-{{% /alert %}}
+### 1.1 Authentication and Access Rights
 
-{{% alert color="info" %}}
-Note that curation rights apply to some API activities. 
-{{% /alert %}}
+The Data Hub APIs support OAuth2.0 and personal access tokens. For more inforamtion, see the [Personal Access Tokens](/developerportal/community-tools/mendix-profile/#pat) section of *Mendix Profile*.
+
+To view authentication instructions for each API, open the OpenAPI spec and click **Authorize** on the upper right of the screen. Supported authentication methods are documented there. As mentioned above, the **Try it out** feature does not work.
+
+Curation rights apply to some API activities.
 
 ## 2 Search API {#search}
 
-The [Search API](https://datahub-spec.s3.eu-central-1.amazonaws.com/search_v4.html) enables users to search and retrieve assets that are registered in Data Hub that satisfy the specified search criteria. For an example API call, see the [Search via the API](/data-hub/data-hub-catalog/search/#search-api) section of *How to Search in the Data Hub Catalog*.
+The [Search API](https://datahub-spec.s3.eu-central-1.amazonaws.com/search_v4.html) enables users to search and retrieve assets that are registered in Data Hub that satisfy the specified search criteria.
+
+You can paginate through search results with an offset, which allows you to limit the number of results and specify how many to skip. 
+
+For step-by-step instructions and an example API call, see the [Search via the API](/data-hub/data-hub-catalog/search/#search-api) section of *How to Search in the Data Hub Catalog*. 
 
 ## 3 Registration API {#registration}
 
-The [Registration API](https://datahub-spec.s3.eu-central-1.amazonaws.com/registration_v4.html) can be used to register applications, environments, and services or data sources. See an example API call at [Register an Application](https://docs.mendix.com/data-hub/data-hub-catalog/register-data#register-application).
+The [Registration API](https://datahub-spec.s3.eu-central-1.amazonaws.com/registration_v4.html) can be used to register applications, environments, and services or data sources. 
 
 The API includes the following:
 
 * `POST` methods for registering new assets where a UUID is generated and returned for the asset in the response body
-* `PUT` calls to *update* assets for existing UUIDs or create new applications and environments for new UUIDs
+* `PUT` calls to *update* assets for existing UUIDs or create new applications and environments for new UUIDs. If existing endpoints are not present in a `PUT` call, these endpoints will be deleted.
 * `DELETE` calls to *delete* applications
+
+For step-by-step instructions, see the [Registering a Service Through the Data Hub Catalog Registration API](/data-hub/data-hub-catalog/register-data/#registration-api) section in *Register OData Resources in the Data Hub Catalog*.
 
 ## 4 Transform API {#transform}
 

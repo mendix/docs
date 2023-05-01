@@ -62,14 +62,15 @@ However, the cloud edit library requires an additional property override. The DF
 
 The cloud does not allow the properties to be specified using the system properties. Therefore, you will need to specify these through Java, and before initializing any of the JCIFS classes, you will need to specify the exact `Config` options. This can be done by using the following line of code:
 
-```
+```text {linenos=false}
 jcifs.Config.setProperty("jcifs.smb.client.dfs.disabled","false");
 ```
+
 For more details on all the properties, see here: [http://jcifs.samba.org/src/docs/api/overview-summary.html#scp](http://jcifs.samba.org/src/docs/api/overview-summary.html#scp).
 
 ## 4 Further Documentation
 
-*   [http://jcifs.samba.org/](http://jcifs.samba.org/)
+* [http://jcifs.samba.org/](http://jcifs.samba.org/)
 
 ## 5 Read More
 

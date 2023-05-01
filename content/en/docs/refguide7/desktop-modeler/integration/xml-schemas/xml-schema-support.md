@@ -1,7 +1,6 @@
 ---
 title: "XML Schema Support"
 url: /refguide7/xml-schema-support/
-parent: "xml-schemas"
 ---
 
 
@@ -19,8 +18,6 @@ Mendix derives the input/output formats for XML import/export and for calling SO
 | any | No |
 | anyAttribute | No |
 | list | No |
-
-
 
 There are two kinds of XML mappings in Mendix: import mapping, which translates XML data to Mendix objects, and export mapping, which does the opposite. Import mappings are used when importing XML files using the 'Import XML' activity in microflows, and for processing the response of a web service call. Export mappings are used for exporting XML files in microflows and for generating the XML for the request of a web service call.
 

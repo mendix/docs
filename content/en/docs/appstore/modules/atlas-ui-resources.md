@@ -7,6 +7,10 @@ tags: ["marketplace", "marketplace component", "atlas ui", "atlas ui resources",
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
+{{% alert color="warning" %}}
+This module is deprecated, as it pertains to Atlas 2. If you are still using Atlas 2, we recommend that you [Migrate From Atlas 2 To Atlas 3](/refguide9/moving-from-atlas-2-to-3/).
+{{% /alert %}}
+
 ## 1 Introduction
 
 The [Atlas UI Resources](https://marketplace.mendix.com/link/component/104730/) help you to speed up your app design process by using custom templates, building blocks, and widget, and making them your own.
@@ -19,9 +23,9 @@ Use this module to brand your Atlas UI app with your own brand or customer brand
 
 * Navigation layouts
 * Page templates
-	* Responsive templates
-	* Tablet templates
-	* Phone templates
+    * Responsive templates
+    * Tablet templates
+    * Phone templates
 * Building blocks
 * Custom widgets
 * Image library

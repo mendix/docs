@@ -1,5 +1,6 @@
 ---
-title: "Set & Change a Value for Different Activities in the Microflows"
+title: "Set and Change a Value for Different Activities in the Microflows"
+linktitle: "Set and Change Value"
 url: /studio7/microflows-setting-and-changing-value/
 category: "Microflows"
 weight: 50
@@ -27,16 +28,16 @@ For more information on the functions of these activities, see [Microflows](/stu
 
 ## 2 Setting the Initial Value for Create Object and Changing the Value for Change Object
 
- To set the initial value or change the value of an object, do the following:
+To set the initial value or change the value of an object, do the following:
 
 1. Add the **Create Object**/**Change Object** activity to a microflow. For more information, see section [4 Adding New Event or Activity](/studio7/microflows/#adding-activity-to-microflow) in *Microflows*.
 2. Click the activity to view its properties.
-3.  Select the data source for the activity, then click **Add New Value**
+3. Select the data source for the activity, then click **Add New Value**
 
     {{< figure src="/attachments/studio7/microflows/microflows-setting-and-changing-value/add-new-value.png" >}}
 
 4. In the **Set initial value**/**Change value dialog**, select an attribute or association.
-5.  Set the initial value (for **Create Object**) or assign a new value (for **Change Object**) in **Variables/Attributes**, **Constant** or **Expression** tabs.  For more information on these tabs, see section [5 Common Elements](#set-value-common-elements).
+5. Set the initial value (for **Create Object**) or assign a new value (for **Change Object**) in **Variables/Attributes**, **Constant** or **Expression** tabs.  For more information on these tabs, see section [5 Common Elements](#set-value-common-elements).
 
     {{< figure src="/attachments/studio7/microflows/microflows-setting-and-changing-value/set-initial-value-object-dialog.png" >}}
 
@@ -46,11 +47,11 @@ To set the initial value or change the value of a variable, do the following:
 
 1. Add the **Create Variable**/**Change Variable** activity to a microflow. For more information, see section [4 Adding New Event or Activity](/studio7/microflows/#adding-activity-to-microflow) in *Microflows*.
 2. Click the activity to view its properties.
-3.  Select the data type for the activity, then click **Set initial value** / **Change value**
+3. Select the data type for the activity, then click **Set initial value** / **Change value**
 
     {{< figure src="/attachments/studio7/microflows/microflows-setting-and-changing-value/set-initial-value-var.png" >}}
 
-4.  Set the initial value (for **Create Variable**) or assign a new value (for **Change Variable**) in **Variables / Attributes**, **Constant** or **Expression** tabs.  For more information on these tabs, see section [5 Common Elements](#set-value-common-elements).
+4. Set the initial value (for **Create Variable**) or assign a new value (for **Change Variable**) in **Variables / Attributes**, **Constant** or **Expression** tabs.  For more information on these tabs, see section [5 Common Elements](#set-value-common-elements).
 
     {{< figure src="/attachments/studio7/microflows/microflows-setting-and-changing-value/change-value-var-dialog.png" >}}
 
@@ -60,15 +61,15 @@ The return value is the value that is returned to the flow or a widget that call
 
 1. Add the **End Event** to a microflow or select the existing end event. For more information, see section [4 Adding New Event or Activity](/studio7/microflows/#adding-activity-to-microflow) in *Microflows*.
 2. Click the event to view its properties.
-3.  Set the **Returns** option to **Value**.
+3. Set the **Returns** option to **Value**.
 
     {{< figure src="/attachments/studio7/microflows/microflows-setting-and-changing-value/end-event-returns-value-setting.png" >}}
 
-4.  Select the data type, then click **Value** to configure it.
+4. Select the data type, then click **Value** to configure it.
 
     {{< figure src="/attachments/studio7/microflows/microflows-setting-and-changing-value/configure-return-value.png" >}}
 
-5.  Set the return value in **Variables/Attributes**, **Constant** or **Expression** tabs. For more information, see section [5 Common Elements](#set-value-common-elements).
+5. Set the return value in **Variables/Attributes**, **Constant** or **Expression** tabs. For more information, see section [5 Common Elements](#set-value-common-elements).
 
     {{< figure src="/attachments/studio7/microflows/microflows-setting-and-changing-value/configure-retuen-value-dialog.png" >}}
 

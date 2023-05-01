@@ -1,7 +1,6 @@
 ---
 title: "2.19"
 url: /releasenotes/add-ons/ats-2.19/
-parent: "ats-2"
 weight: 81
 ---
 

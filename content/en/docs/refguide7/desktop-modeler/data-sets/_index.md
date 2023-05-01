@@ -14,13 +14,13 @@ Datasets have the following fields:
 
 ## General
 
-*   _Description_: The description of the dataset, this is only relevant as documentation.
+* *Description*: The description of the dataset, this is only relevant as documentation.
 
 ## Source
 
-*   _OQL query_: The [OQL query](/refguide7/oql/) which defines the dataset.
+* *OQL query*: The [OQL query](/refguide7/oql/) which defines the dataset.
 
-*   _Java action_: The interface of the Java action which returns a dataset. The columns and [data types](/refguide7/data-types/) of the columns need to be specified in the Desktop Modeler. Based on this specification the Desktop Modeler will create a template for this action.
+* *Java action*: The interface of the Java action which returns a dataset. The columns and [data types](/refguide7/data-types/) of the columns need to be specified in the Desktop Modeler. Based on this specification the Desktop Modeler will create a template for this action.
 
 The following shows an example OQL query that calculates the aggregated total order amount for all orders of a customer for a specific group of customers:
 
@@ -44,13 +44,13 @@ In OQL, parameters can be called using a **$** symbol, for example: **$Month**.
 
 A parameter has the following configurable properties:
 
-*   _Name_: The name of the parameter
+* *Name*: The name of the parameter
 
-*   _Type_: The type of the parameter: Object, Enumeration or a primitive (for example, DateTime, Float, Integer, Boolean, etc). See [Data Types](/refguide7/data-types/) for the possible parameter types.
+* *Type*: The type of the parameter: Object, Enumeration or a primitive (for example, DateTime, Float, Integer, Boolean, etc). See [Data Types](/refguide7/data-types/) for the possible parameter types.
 
-*   _Constraints_: The constraints on a parameter. These constraints influence which values can be selected for parameter input values by the end user. Constraints can be associated with user roles in the dataset security. There are two type of constraints: ranges which apply to numeric and date parameters and XPath constraints which apply to object parameters.
+* *Constraints*: The constraints on a parameter. These constraints influence which values can be selected for parameter input values by the end user. Constraints can be associated with user roles in the dataset security. There are two type of constraints: ranges which apply to numeric and date parameters and XPath constraints which apply to object parameters.
 
-* _Ranges_: When a parameter is defined as a range the drop-down box in the report shows each range instead of all values within the ranges. Currency (deprecated), float (deprecated) and decimal parameters are always ranges.
+* *Ranges*: When a parameter is defined as a range the drop-down box in the report shows each range instead of all values within the ranges. Currency (deprecated), float (deprecated) and decimal parameters are always ranges.
 
 **XPath constraints**
 

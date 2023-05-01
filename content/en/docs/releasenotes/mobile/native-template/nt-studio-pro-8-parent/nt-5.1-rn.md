@@ -1,10 +1,32 @@
 ---
 title: "Native Template 5.1"
 url: /releasenotes/mobile/nt-5.1-rn/
-parent: "nt-studio-pro-8-parent"
 weight: 20
 description: "Native Template 5.1 release notes."
 ---
+
+{{% alert color="warning" %}}
+Native Template versions [5.0](/releasenotes/mobile/nt-5.0-rn/) and [5.1](/releasenotes/mobile/nt-5.1-rn/) are no longer receiving updates. Also, Native Template does not work for versions below 8.18.9. 
+
+Please use a Native Template version [compatible](/releasenotes/mobile/nt-studio-pro-8-parent/) with the latest Studio Pro [8.18.x](/releasenotes/studio-pro/8.18/) patch release.
+{{% /alert %}}
+
+## 5.1.21
+
+**Release date: December 27th, 2022**
+
+### Fixes
+
+* We changed the order of repositories in Android builds to fix an issue with jitpack.io.
+
+## 5.1.20
+
+**Release date: November 9th, 2022**
+
+### Fixes
+
+* We fixed an issue related to a recent React Native release that caused Android build failures. (Tickets 170385, 170396, 170398, and 170469)
+* We fixed an issue which affected Android apps built locally using Apple M1 machines.
 
 ## 5.1.19
 
@@ -46,7 +68,7 @@ iOS 15 requires you to recompile your apps with XCode 13. This release bumps the
 
 * We improved the capability configurations by adding an implementation for the `appCenterOTA` capability. This removes the previous need to have `Codepush` bundled with every application even when over-the-air support is not enabled via the Native Mobile App Builder.
 * We bumped `react-native-codepush` dependency to `6.4.1` due to security concerns on the previous version.
-* We removed support for the deprecated Fabric & Crashlytics module.
+* We removed support for the deprecated Fabric and Crashlytics module.
 
 ## 5.1.13
 
@@ -67,7 +89,7 @@ iOS 15 requires you to recompile your apps with XCode 13. This release bumps the
 
 ### Improvements
 
-* Custom developer apps now fully support deep links. This allows you to use custom developer apps to test deeplink use cases. For more information, see [How to Create a Custom Developer App](/howto/mobile/how-to-devapps/) and [How to Set Up Deep Links in Native Mobile Apps](/howto/mobile/native-deep-link/).
+* Custom developer apps now fully support deep links. This allows you to use custom developer apps to test deeplink use cases. For more information, see [Create a Custom Developer App](/refguide9/mobile/distributing-mobile-apps/building-native-apps/how-to-devapps/) and [Set Up Deep Links in Native Mobile Apps](/refguide9/mobile/using-mobile-capabilities/deep-links/).
 
 ### Breaking Change
 

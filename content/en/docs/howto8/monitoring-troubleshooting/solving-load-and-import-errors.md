@@ -1,7 +1,7 @@
 ---
-title: "Solve Load & Import Errors"
+title: "Solve Load and Import Errors"
 url: /howto8/monitoring-troubleshooting/solving-load-and-import-errors/
-category: "Monitoring & Troubleshooting"
+category: "Monitoring and Troubleshooting"
 weight: 11
 tags: ["monitoring", "troubleshooting", "load", "import", "error"]
 aliases:
@@ -58,12 +58,12 @@ The most likely cause for these kinds of errors is a faulty script that was run 
 
 ## 5 Read More
 
-*   [Clearing Warning Messages in Mendix](/howto8/monitoring-troubleshooting/clear-warning-messages/)
-*   [Debug a Hybrid Mobile Application](/howto8/monitoring-troubleshooting/debug-a-hybrid-mobile-application/)
-*   [Debugging Java Actions](/howto8/monitoring-troubleshooting/debug-java-actions/)
-*   [Debugging Java actions remotely](/howto8/monitoring-troubleshooting/debug-java-actions-remotely/)
-*   [Debugging Microflows](/howto8/monitoring-troubleshooting/debug-microflows/)
-*   [Debugging Microflows Remotely](/howto8/monitoring-troubleshooting/debug-microflows-remotely/)
-*   [Finding the Root Cause of Runtime Errors](/howto8/monitoring-troubleshooting/finding-the-root-cause-of-runtime-errors/)
-*   [Log Levels](/howto8/monitoring-troubleshooting/log-levels/)
-*   [Monitoring Mendix using JMX](/howto8/monitoring-troubleshooting/monitoring-mendix-using-jmx/)
+* [Clearing Warning Messages in Mendix](/howto8/monitoring-troubleshooting/clear-warning-messages/)
+* [Debug a Hybrid Mobile Application](/howto8/monitoring-troubleshooting/debug-a-hybrid-mobile-application/)
+* [Debugging Java Actions](/howto8/monitoring-troubleshooting/debug-java-actions/)
+* [Debugging Java actions remotely](/howto8/monitoring-troubleshooting/debug-java-actions-remotely/)
+* [Debugging Microflows](/howto8/monitoring-troubleshooting/debug-microflows/)
+* [Debugging Microflows Remotely](/howto8/monitoring-troubleshooting/debug-microflows-remotely/)
+* [Finding the Root Cause of Runtime Errors](/howto8/monitoring-troubleshooting/finding-the-root-cause-of-runtime-errors/)
+* [Log Levels](/howto8/monitoring-troubleshooting/log-levels/)
+* [Monitoring Mendix using JMX](/howto8/monitoring-troubleshooting/monitoring-mendix-using-jmx/)

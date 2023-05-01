@@ -1,17 +1,16 @@
 ---
 title: "Branch Line Manager"
 url: /refguide/branch-line-manager-dialog/
-parent: "version-control-menu"
 weight: 80
 tags: ["studio pro", "manage branch lines", "branch line manager"]
 ---
 
 ## 1 Introduction
 
-The **Branch Line Manager** is used to manage the [branch lines](/refguide/version-control/#branches) of an app that are stored on a version control server.
+The **Branch Line Manager** is used to manage the [branch lines](/refguide/version-control/#branches) of an app that are stored on a version control server. You can create or delete branch lines for your app. 
 
 {{< figure src="/attachments/refguide/modeling/menus/version-control-menu/branch-line-manager-dialog/branch-line-manager.png" alt="Team Server Branch Line Manager" >}}
-	
+
 To view the **Branch Line Manager** dialog box, open **Version Control** > **Manage Branch Lines**.
 
 A branch line allows independent development from other development lines. There are two main reasons for creating a branch line:
@@ -37,11 +36,6 @@ For more information about the Mendix Team Server, see [Team Server](/developerp
 
 In the **App repository address** field, enter the address of the app you want to manage and click **Connect** to load the available branches from the repository.
 
-## 3 Managing Branch Lines
-
-In the **Branch Line Manager**, you can create and delete branch lines, and enable and disable Mendix Studio for the app. For more information on how to perform these actions, see the [Managing Studio on Development Lines](/refguide/collaborative-development/#managing-studio) and [Managing Development Lines](/refguide/collaborative-development/#managing-branches) sections in *Collaborative Development*. 
-
-## 4 Read More
+## 3 Read More
 
 * [Version Control](/refguide/version-control/)
-* [Collaborative Development](/refguide/collaborative-development/)

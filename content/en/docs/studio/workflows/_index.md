@@ -22,7 +22,7 @@ Workflows are a visual way of processing logic in your application. A workflow l
 {{< figure src="/attachments/studio/workflows/workflow-example.jpg" alt="Workflow Example" >}}
 
 {{% alert type="note" %}}
-Workflows are available in Studio from **Mendix version 9.12.1**. If you have an app with workflow functionality below this version, this app is most likely to be created in Studio Pro and requires a manual migration. For more information on how to migrate your app using Studio Pro, see [Migrate Workflow Apps](/refguide/workflow-beta-migration/). 
+Workflows are available in Studio from **Mendix version 9.12.1**. If you have an app with workflow functionality below this version, this app is most likely to be created in Studio Pro and requires a manual migration. For more information on how to migrate your app using Studio Pro, see [Migrating Workflow Apps](/refguide9/workflow-beta-migration/). 
 {{% /alert %}}
 
 ## 2 Performing Basic Functions
@@ -42,10 +42,9 @@ You can perform the following basic functions when configuring workflows:
 To enable workflow functionality, do the following:
 
 1. Click the workflow icon in the left menu bar.
-
 2. Before enabling workflows, you need to enable security. Click **Enable Security**:
 
-   {{< figure src="/attachments/studio/workflows/enable-security.png" alt="Enable Security" >}}
+    {{< figure src="/attachments/studio/workflows/enable-security.png" alt="Enable Security" >}}
 
 3. After security is enabled, click **Enable Workflows**.
 
@@ -54,6 +53,7 @@ Workflows are enabled in your app and you can create a workflow.
 ### 2.2 Creating a Workflow {#create}
 
 There are two ways to create a workflow: 
+
 * [Using a wizard to build an approval workflow](/studio-how-to/workflow-how-to-configure-using-wizard/) – the wizard helps you create the Approval Request workflow. If your workflow falls under the approval request use case, for example, approving vacation days for your employees, this is a good starting point that sets the whole app automatically for you – not only the workflow itself but also pages and navigation
 * [Setting the workflow up manually](/studio-how-to/workflow-how-to-configure/) – if your use case does not fall under an approval request, then you can configure your workflow manually instead of using the wizard
 
@@ -62,9 +62,7 @@ There are two ways to create a workflow:
 To open a workflow in Studio, do the following:
 
 1. Click the workflow icon in the left menu bar.
-
 2. In the displayed list of workflows, select the one you want to open and click it:
-
 
 The selected workflow is opened.
 
@@ -73,7 +71,6 @@ The selected workflow is opened.
 To duplicate a workflow, do the following:
 
 1. Click the **Workflows** icon in the left menu bar.
-
 2. In the side panel, click the ellipsis icon and select **Duplicate** in the drop-down menu:
 
     {{< figure src="/attachments/studio/workflows/duplicate.jpg" alt="Duplicate a Workflow" >}}
@@ -85,7 +82,6 @@ The workflow is duplicated.
 To copy and paste a workflow, do the following:
 
 1. Click the **Workflows** icon in the left menu bar.
-
 2. In the side panel, click the ellipsis icon and select **Copy to clipboard** in the drop-down menu:
 
     {{< figure src="/attachments/studio/workflows/copy.jpg" alt="Copy a Workflow" >}}
@@ -101,10 +97,10 @@ To delete a workflow in Studio, do one of the following:
 1. Open the workflow you want to delete and follow the steps below:
     1. Open the **Properties** tab.
     2. Click **Delete** at the bottom of the **Properties** tab.
-    
+
 2. Click the workflows icon in the left menu bar and do the following:
     1. In the side panel, click the ellipsis icon and select **Delete** in the drop-down menu:
-    
+
         {{< figure src="/attachments/studio/workflows/delete-workflow.jpg" alt="Delete a Workflow" >}}
 
 The selected workflow is deleted. 
@@ -114,30 +110,57 @@ The selected workflow is deleted.
 To add an element to a workflow, do the following:
 
 1. Open the **Toolbox** tab.
-2. Select an element you would like to add and drag and drop this element in the workflow path.
+2. Select an element you would like to add and drag this element onto the workflow path.
 
 The selected element is added.
 
-### 2.8 Triggering a Workflow
+### 2.8 Cutting/Coping/Pasting Elements in a Workflow
+
+To cut/copy/paste elements, use <kbd>Ctrl</kbd> + <kbd>X</kbd> /  <kbd>Ctrl</kbd> + <kbd>C</kbd> / <kbd>Ctrl</kbd> + <kbd>V</kbd> or  <kbd>Cmd</kbd> + <kbd>X</kbd> /  <kbd>Cmd</kbd> + <kbd>C</kbd> / <kbd>Cmd</kbd> + <kbd>V</kbd>.
+
+When using cut/copy/paste, note the following:
+
+* When cutting or copying an element, the clipboard contains the whole structure of the element. For example, when copying a **User Task** with **Outcomes** which contain activities, the **User Task** and the **Outcomes** and its activities are copied. 
+    
+    Note that copying a **User Task** or a **Microflow** does not create a copy of the elements that are being referenced. Instead, the copied element will have the same references as the original. For example, when the original **User Task** has a task page configured, the copied **User Task** refers to the same task page.
+* When no element is selected in the workflow, the clipboard content is pasted at the end of the workflow.
+* When the start event is selected, the clipboard content is pasted at the start of the workflow.
+* When an activity is selected, the clipboard content is pasted under the selected activity.
+* When a flow is selected, the clipboard content is pasted at the beginning of the selected flow.
+* When the clipboard contents has an **Annotation**, it can only be pasted into the workflow or into individual activities that support annotations.
+* Pasting an activity after an **End** or **Jump** activity results in a consistency error as an **End** or **Jump** activity should be placed at the end of a flow.
+* Pasting activity can result in a consistency error when the next activity becomes unreachable by either placing an **End** or **Jump** activity in front of it or when all flows before a merge end with an **End** or **Jump** activity.
+
+#### 2.8.1 Elements that Cannot be Cut, Copied or Pasted
+
+The following elements cannot be cut, copied or pasted in the workflow editor:
+
+* Workflow (you can do it via the left menu bar; for more information, see the [Copying and Pasting a Workflow](#copy-paste) section above)
+* WorkflowContext
+* Start activity
+* End activity (the final **End activity** which is at the end of the workflow)
+* Outcomes (meaning outcomes of different outgoing flows from an activity that can have several flows, for example, a Decision)
+
+### 2.9 Triggering a Workflow
 
 You can trigger a workflow [from a page](#trigger-page) or [via a microflow](#trigger-microflow). 
 
-#### 2.8.1 Triggering a Workflow from a Page {#trigger-page}
+#### 2.9.1 Triggering a Workflow from a Page {#trigger-page}
 
 To start the workflow, you can add a widget with a specific on-click action on a page. For more information on on-click actions, see [Events Section](/studio/page-editor-widgets-events-section/).
 
 Do the following:
 
 1. Open a page from where you would like to trigger a workflow.
-2. Drag and drop a widget that has on-click action in its properties (for example, a button) inside the data container with the workflow entity. 
-4. Open button's properties > **Events** section. 
-5. Set **On Click Action** to **More**.
-6. Set **Action** to **Call Workflow**. 
-7. Set **Workflow** to the workflow you would like to trigger.
+2. Drag a widget that has on-click action in its properties (for example, a button) into the data container with the workflow entity. 
+3. Open button's properties > **Events** section. 
+4. Set **On Click Action** to **More**.
+5. Set **Action** to **Call Workflow**. 
+6. Set **Workflow** to the workflow you would like to trigger.
 
 You have configured the button to trigger the workflow.
 
-#### 2.8.2 Triggering a Workflow via a Microflow {#trigger-microflow}
+#### 2.9.2 Triggering a Workflow via a Microflow {#trigger-microflow}
 
 To trigger a workflow via a microflow, you can add a **Call workflow** activity to the microflow. For more information on this activity, see [Workflow Activities](/studio/microflows/#microflow-workflow-activities) section in *Microflows*.  
 
@@ -145,7 +168,7 @@ Do the following:
 
 1. Open a microflow that will trigger a workflow.
 2. Make sure the microflow has a necessary parameter with the **Workflow Context** entity. 
-3. In the **Toolbox**, find **Call workflow** activity and drag and drop it to the microflow.
+3. In the **Toolbox**, find **Call workflow** activity and drag it into the microflow.
 4. Open the activity properties.
 5. Set **Workflow** to to the workflow you would like to trigger.
 6. Set **Workflow Object** to the workflow context.
@@ -177,6 +200,8 @@ The **Toolbox** tab contains elements that you can drag and drop on a path. Belo
 * [User actions](#user-actions)
 * [System actions](#system)
 
+A microflow action can be exposed in Studio Pro as a custom action in the workflow toolbox in both Studio and Studio Pro. This functionality is particularly useful if you plan to reuse the microflow logic several times. Actions that are exposed appear in the custom category in the **Toolbox**. For more information on exposing a microflow action in the workflow toolbox, see [Adding a Custom Action to the Workflow Toolbox](/refguide9/add-action-to-workflow-toolbox/) in *Studio Pro 9 How-tos*.
+
 ### 5.1 General {#general}
 
 Elements in the **General** section help you control the workflow path, for example, add parallel paths or end them:
@@ -187,11 +212,12 @@ The elements of this section are described in the table below:
 
 | Element                                                      | Description                                                  |
 | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| Start event                                                  | The starting point of a workflow. Workflows are triggered either by the [Call workflow](/studio/page-editor-widgets-events-section/#call-workflow) on-click event on pages or by the [Workflow call](/studio/microflows/#microflow-workflow-activities) action in microflows. <br />Click the start event to open [workflow properties](/studio/workflow-properties/). |
-| [Decision](/studio/workflows-general-activities/#decision)  | Makes a choice based on a condition and follows one and only one of the outgoing paths. |
-| [Jump activity](/studio/workflows-general-activities/#jump) | Allows you to jump to other activities in the workflow.      |
-| [Parallel split](/studio/workflows-general-activities/#parallel-split) | Adds two or more parallel paths to your workflow.            |
-| [End activity](/studio/workflows-general-activities/#end)   | Ends the path of the workflow                                |
+| Start event                                                  | Start event is the starting point of a workflow. Workflows are triggered either by the [Call workflow](/studio/page-editor-widgets-events-section/#call-workflow) on-click event on pages or by the [Workflow call](/studio/microflows/#microflow-workflow-activities) action in microflows. <br />Click the start event to open [workflow properties](/studio/workflow-properties/). |
+| [Annotation](/studio/workflows-general-activities/#annotation) | **Annotation** is used to put comments to a flow.            |
+| [Decision](/studio/workflows-general-activities/#decision)   | **Decision** makes a choice based on a condition and follows one and only one of the outgoing paths. |
+| [Jump activity](/studio/workflows-general-activities/#jump)  | The **Jump** activity allows you to jump to other activities in the workflow. |
+| [Parallel split](/studio/workflows-general-activities/#parallel-split) | **Parallel split** adds two or more parallel paths to your workflow. |
+| [End activity](/studio/workflows-general-activities/#end)    | End activity ends the path of the workflow                   |
 
 ### 5.2 User Actions {#user-actions}
 
@@ -201,7 +227,7 @@ The elements of this section are described in the table below:
 
 ### 5.3 System Actions {#system}
 
-[Call microflow](/studio/workflow-system-actions/) activity calls a selected microflow. You can use this activity to add application logic to the path of the workflow that does not need user interaction. 
+The elements of this section allow you to [call a microflow](/studio/workflow-system-actions/#call-microflow) or [call another workflow](/studio/workflow-system-actions/#call-workflow):
 
 {{< figure src="/attachments/studio/workflows/system-actions.jpg" alt="System Actions" >}}
 

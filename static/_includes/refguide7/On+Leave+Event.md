@@ -15,7 +15,7 @@ The on-leave property optionally specifies an action that will be executed when 
 | Synchronize | Synchronizes the data stored locally on your device with the server database. |
 | Sign out | Signs out the currently signed-in user. When no user is signed in, pressing this button has no effect. |
 
-_Default value:_ Do nothing
+*Default value:* Do nothing
 
 #### Page (Only for "Show a page") {#on-leave-page}
 
@@ -48,7 +48,7 @@ This specifies the type of action triggered when pressing the button. These are 
 | Call | Start a phone call. |
 | Text | Send a text message. |
 
-_Default value:_ Web
+*Default value:* Web
 
 #### Address (Only for "Open link") {#on-leave-address}
 

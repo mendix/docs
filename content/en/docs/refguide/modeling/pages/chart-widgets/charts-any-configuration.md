@@ -1,7 +1,6 @@
 ---
 title: "Any Chart Widgets"
 url: /refguide/charts-any-configuration/
-parent: "chart-widgets"
 description: "A reference for the configuration of the Any Chart widget to pass the correct values to plotly. This enables you to draw a wide variety of charts"
 weight: 30
 tags: ["Any Chart", "Options", "Configuration", "Charts", "studio pro"]
@@ -11,7 +10,7 @@ tags: ["Any Chart", "Options", "Configuration", "Charts", "studio pro"]
 
 With **Any Chart**, you can build any chart type that is supported by Plotly.js up to the version mentioned in the widget description in the Marketplace. So if you want to build a chart which is not available as a standard chart widget, such as a 3D chart, Any Chart is your friend.
 
-The configuration of this chart type is complex. For help, you can look at the **building blocks** that are delivered in the [Any Chart](/appstore/modules/any-chart/) module from the Mendix Marketplace. Alternatively, use [How to Use Any Chart](/howto/front-end/charts-any-usage/) or the [Any Chart cheat sheet](/refguide/charts-any-cheat-sheet/) for a quick start.
+The configuration of this chart type is complex. For help, you can look at the **building blocks** that are delivered in the [Any Chart](/appstore/modules/any-chart/) module from the Mendix Marketplace. Alternatively, use [How to Use Any Chart](/appstore/widgets/charts-any-usage/) or the [Any Chart cheat sheet](/refguide/charts-any-cheat-sheet/) for a quick start.
 
 Any Charts are configured with a JSON **Data** array and **Layout** object. The configuration can be set statically, via the **Source attribute** and **Sample data** properties.
 

@@ -1,7 +1,6 @@
 ---
 title: "Java Action Call"
 url: /refguide/java-action-call/
-parent: "action-call-activities"
 weight: 10
 tags: ["studio pro", "Java", "java action call", "action call"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
@@ -74,7 +73,7 @@ If you want a microflow to call a Java action to run in the background using a t
 
 1. Check **Execute this Java action in a Task Queue**.
 2. Identify which task queue it should run in in **Select Task Queue**.
-3. (optionally – in Mendix version 9.10.0 and above) Select an automatic retry strategy.
+3. (optionally) Select an automatic retry strategy.
 
 For more information about task queues, see [Task Queue](/refguide/task-queue/).
 

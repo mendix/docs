@@ -1,7 +1,6 @@
 ---
 title: "Consumed OData Services"
 url: /refguide8/consumed-odata-services/
-parent: "integration"
 description: "Overview of consumed OData services for Studios"
 tags: ["studio pro"]
 ---
@@ -17,10 +16,6 @@ Data can be published from an app for use by other apps through [published OData
 Mendix Data Hub enables integration of available data sources from different sources in an organization into your Mendix apps.  OData services that are registered in the [Data Hub Catalog](/data-hub/data-hub-catalog/) expose entities that can be dragged and dropped into your domain model through the [Data Hub pane](/refguide8/data-hub-pane/) as external entities. The OData service document that is added to your project provides the information for retrieving the metadata for the service and exposed entities.
 
 For further details on the consumed OData service document and updating consumed OData services in your project, see [Consumed OData Service](/refguide8/consumed-odata-service/).
-
-{{% alert color="info" %}}
-Mendix Data Hub is a licensed product. Using external entities to consume OData services requires a license, and the type of license you have will define how many data records can be consumed.  For further details, see the [Data Hub License Limitations](/refguide8/consumed-odata-service-requirements/#license-limitations) section of *Consumed OData Service Requirements*. To find out more about your Data Hub license, contact [Mendix Support](https://support.mendix.com).
-{{% /alert %}}
 
 For details on the features that a published OData service must support and how the conversion from and to the Mendix data model works, see [Consumed OData Service Requirements](/refguide8/consumed-odata-service-requirements/).
 
@@ -55,6 +50,10 @@ If the metadata contract at the specified service endpoint is different to the c
 {{< figure src="/attachments/refguide8/modeling/integration/consumed-odata-services/consumed-odata-service/project-pane-update-available.png" alt="update service project-pane" >}}
 
 This means that the consumed service will have to be **Updated** to the new contract. If this is not done, then this will result in errors when data has to be retrieved from the endpoint based on an outdated contract. Changes in consumed OData service contracts is further described in [Updating or Switching a Consumed OData Service](/refguide8/consumed-odata-service/#updating).
+
+#### 2.2.1 Limitations {#consumed-odata-service-limitations}
+
+When you update a [consumed OData service](/refguide8/consumed-odata-service/) with a new version from Mendix Data Hub, but close the document without saving, the blue arrow icon will no longer be shown to notify you about the available update for that service. Close your app and open it again and the error will be resolved.
 
 ## 3 Runtime Considerations
 

@@ -13,7 +13,7 @@ aliases:
 
 ## 1 Introduction {#studio-overview}
 
-Mendix Studio is the place where you can create, view and edit your Mendix applications without going into technical details. For this purpose you can use [Studio Pro](/refguide/modeling/) and [develop apps together with Studio Pro users](/studio/collaborative-development/) anytime. 
+Mendix Studio is the place where you can create, view and edit your Mendix applications without going into technical details. For this purpose you can use [Studio Pro](/refguide9/modeling/) and [develop apps together with Studio Pro users](/studio/collaborative-development/) anytime. 
 
 With Studio you can create and edit applications in your browser without installing software on your PC.   
 
@@ -27,18 +27,20 @@ You can open Mendix Studio via [Developer Portal](#opening-studio-via-dev-portal
 
 ### 2.1 Opening Studio via Developer Portal {#opening-studio-via-dev-portal}
 
-You can edit an app in Mendix Studio by opening it in the [Developer Portal](https://home.mendix.com) and clicking **Edit in Studio**:
-
-{{< figure src="/attachments/studio/general/edit-app.jpg" alt="Edit in Studio"   width="350"  >}}
+In the [Developer Portal](https://home.mendix.com), you can open Mendix Studio by clicking **Edit in Studio** in the [app tile](/developerportal/#my-apps).
 
 ### 2.2 Opening Studio via Studio Pro {#opening-via-studio-pro}
+
+{{% alert color="info" %}}
+This option is only available for apps with Mendix version 9.20 or below.
+{{% /alert %}}
 
 You can also open your app in Studio via Studio Pro. Do the following:
 
 1. In Studio Pro, open the app in that you want to view in Studio.
-2.  Click the globe icon in the top right corner (only available if Studio is enabled).
+2. Click the globe icon in the top right corner (only available if Studio is enabled).
 
-	{{< figure src="/attachments/studio/general/globe-icon.png" alt="Globe Icon" >}}
+    {{< figure src="/attachments/studio/general/globe-icon.png" alt="Globe Icon" >}}
 
 The app opens in Studio.
 
@@ -48,13 +50,12 @@ After clicking **Edit in Studio** you may need to upgrade your app to the latest
 
 {{< figure src="/attachments/studio/general/upgrade.png" alt="Upgrade"   width="350"  >}}
 
-You may also see a top bar suggesting an upgrade to the next Mendix version. For more information on Studio upgrades and Mendix versions, see [Studio Ranges & Mendix Versions](/studio/general-versions/).
+You may also see a top bar suggesting an upgrade to the next Mendix version. For more information on Studio upgrades and Mendix versions, see [Studio Ranges and Mendix Versions](/studio/general-versions/).
 
 {{% alert color="info" %}}
-When you upgrade your app in Studio to the latest  Mendix version, you will need to upgrade your app in the Studio Pro to the same version as well. 
+When you upgrade your app in Studio to the latest Mendix version, you will need to upgrade your app in Studio Pro to the same version as well. 
 
 If you are working in a team with others, it is wise to check with your team members if everyone is OK to upgrade the app to the latest Mendix version. 
-
 {{% /alert %}}
 
 ## 4 Switching App Modes
@@ -117,7 +118,7 @@ The top menu bar items are described in the table below:
 | Recent documents drop-down menu | A document that you are currently viewing is displayed in this option. When you click the drop-down menu, documents that you have recently viewed are displayed in the list. Click the document to open it. |
 | [Language drop-down list](/studio/language-support/) | If you have several languages enabled in Studio Pro, you can see a language drop-down list with languages that you can translate your app to. |
 | [Preview button](/studio/publishing-app/) | Shows you what your app will look like after it is published. |
-| [Publish button](/studio/publishing-app/) | You can publish your app with this button. Click **Publish** > **Update** to publish the latest changes you made in Studio. For more information, see [Previewing & Publishing Your App](/studio/publishing-app/) |
+| [Publish button](/studio/publishing-app/) | You can publish your app with this button. Click **Publish** > **Update** to publish the latest changes you made in Studio. For more information, see [Previewing and Publishing Your App](/studio/publishing-app/) |
 | [Checks button](/studio/checks/) | Displays consistency errors (if any) that prevent your app from being previewed and published. For more information on errors, see [Consistency Errors](/studio/consistency-errors/).<br />You can also use <kbd>C</kbd> shortcut to view the **Checks** panel. |
 | Help icon | Opens the **Help & Learning** side menu, where you can find just-in-time help – videos and how-to's that will provide you explanations and instructions in the context of your current task. For example, when working in the domain model, you will see videos and how-to's on the domain model, entities, and attributes as a recommended topic for you. However, you can also browse through the categories and other topics that cover all the main features in Studio. |
 | **More Options** icon | Provides additional information. You will find the following:<ul><li>**About** – shows the information on the [Studio version and Mendix version](/studio/general-versions/) </li><li>**Keyboard Shortcuts** – opens the list of shortcuts in Studio</li><li>**Take a Product Tour** – starts a  the guided product introduction tour and shows you around Studio</li><li>**Contact Mendix Support** – a link to the [Mendix Support Portal](https://support.mendix.com/)</li><li>**Mendix Assist Is ON** – a setting that enables/disables [Mendix Assist](/studio/mx-assist/)</li><li>**Open App Buzz** – takes you to the [App Buzz](/developerportal/collaborate/buzz/#app-buzz) in the Developer Portal</li><li>**Edit in Studio Pro** – opens your app in Studio Pro</li></ul> |
@@ -144,11 +145,10 @@ Mind the following characteristics when using cut/copy/paste:
 
 * You can cut/copy/paste elements within one visual editor; that means that you can cut/copy/paste elements within one page or to other pages in Studio, and copy microflow activities within one microflow or to other microflows
 * You can cut/copy/paste elements to different apps in Studio if they have the same Mendix version
-* You cannot copy/paste pages, microflows, or workflows, only elements of a page or a microflow 
+* You cannot copy/paste pages, microflows, or workflows, only elements of a page, microflow or a workflow 
 * You cannot cut/copy/paste from Studio to Studio Pro or vice versa
 
 ## 9 Main Documents in This Category
 
-* [Studio Ranges & Mendix Versions](/studio/general-versions/) – explains how Studio version correlates to the Mendix version
+* [Studio Ranges and Mendix Versions](/studio/general-versions/) – explains how Studio version correlates to the Mendix version
 * [Translating Your App to Multiple Languages](/studio/language-support/) – describes how to translate you app to multiple languages
-

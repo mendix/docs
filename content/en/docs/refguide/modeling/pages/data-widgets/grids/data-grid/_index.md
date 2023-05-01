@@ -1,7 +1,6 @@
 ---
 title: "Data Grid"
 url: /refguide/data-grid/
-parent: "grids"
 weight: 10
 tags: ["studio pro", "data grid", "grid", "data widget"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
@@ -16,6 +15,8 @@ A data grid shows a list of objects in a table format. For example, a data grid 
 {{< figure src="/attachments/refguide/modeling/pages/data-widgets/grids/data-grid/data-grid.png" >}}
 Using controls provided by the data grid you can browse, search, and edit those objects.
 
+Any changes made to an object are visible in all widgets. This is because changes are stored globally in the client. See [Object Activities](/refguide/object-activities/) for more information.
+
 ## 2 Components
 
 A data grid contains the following components: 
@@ -23,8 +24,8 @@ A data grid contains the following components:
 1. [Search bar](/refguide/search-bar/) – allows end-users to search for objects in the data grid
 2. [Control bar](/refguide/control-bar/) – allows you to control the objects displayed in the data grid by means of buttons
 3. [Sort bar](/refguide/sort-bar/) – allows end-users to sort items in the data grid 
-4.  [Grid Columns](/refguide/columns/) – allows end-users to set properties for a data grid column
-	{{< figure src="/attachments/refguide/modeling/pages/data-widgets/grids/data-grid/data-grid-components.png" >}}
+4. [Grid Columns](/refguide/columns/) – allows end-users to set properties for a data grid column
+    {{< figure src="/attachments/refguide/modeling/pages/data-widgets/grids/data-grid/data-grid-components.png" >}}
 
 ## 3 Properties
 

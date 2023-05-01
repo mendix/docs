@@ -1,7 +1,6 @@
 ---
 title: "Upload to Version Control Server"
 url: /refguide8/upload-to-version-control-dialog/
-parent: "version-control-menu"
 weight: 70
 tags: ["studio pro"]
 aliases:
@@ -31,7 +30,7 @@ You can create a new app on [Mendix Team Server](/developerportal/collaborate/te
 * Select **New Mendix Team Server**
 * Enter the name for the new Team Server project and repository in the **App name** field
 
-	{{< figure src="/attachments/refguide8/modeling/menus/version-control-menu/upload-to-version-control-dialog/new-team-server-app.png" alt="Enter App name for New Mendix Team Server" >}}
+    {{< figure src="/attachments/refguide8/modeling/menus/version-control-menu/upload-to-version-control-dialog/new-team-server-app.png" alt="Enter App name for New Mendix Team Server" >}}
 
 ### 2.2 Existing Mendix Team Server
 
@@ -42,7 +41,7 @@ You can only upload to an existing repository if the repository is currently emp
 * Select **Existing Mendix Team Server**
 * Select the **Team Server App** from the list
 
-	{{< figure src="/attachments/refguide8/modeling/menus/version-control-menu/upload-to-version-control-dialog/existing-team-server-app.png" alt="Select existing mendix Team Server" >}}
+    {{< figure src="/attachments/refguide8/modeling/menus/version-control-menu/upload-to-version-control-dialog/existing-team-server-app.png" alt="Select existing mendix Team Server" >}}
 
 ### 2.3 Private Server
 
@@ -50,7 +49,7 @@ This option is only available when support for other servers is enabled in **Edi
 
 {{< figure src="/attachments/refguide8/modeling/menus/version-control-menu/upload-to-version-control-dialog/enable-private-version-control.png" alt="Enable private version control in advanced preferences" >}}
 
-<a name="private-server"></a>If you select **Private server**, enter the address of the repository to which you want to upload your app in the **App repository address** field.
+<a id="private-server"></a>If you select **Private server**, enter the address of the repository to which you want to upload your app in the **App repository address** field.
 
 {{< figure src="/attachments/refguide8/modeling/menus/version-control-menu/upload-to-version-control-dialog/private-server-app.png" alt="Enable private version control in advanced preferences" >}}
 

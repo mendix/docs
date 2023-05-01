@@ -1,7 +1,6 @@
 ---
 title: "Input Reference Set Selector"
 url: /refguide/input-reference-set-selector/
-parent: "input-widgets"
 weight: 90
 tags: ["studio pro"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
@@ -13,7 +12,7 @@ tags: ["studio pro"]
 
 An **input reference set selector** is used to allow the end-user to display or select the value(s) of a many-to-many (reference set) [association](/refguide/associations/) by selecting the associated object(s).
 
-An input reference set selector must be placed in a [data widget](/refguide/data-widgets/).
+An input reference set selector must be placed in a [data container](/refguide/data-widgets/).
 
 For example, you could group customers into groups, and each customer could belong to several groups. Each Group can have many customers. The entities **Customer** and **Group** have a many-to-many (reference set) relationship. An input reference set selector can be used to select the groups the customer belongs to.
 
@@ -83,7 +82,7 @@ The select page property determines which page is displayed when the input refer
 
 If an input reference set selector is never editable, a select page is not required.
 
-See the [Show a Page](/refguide/on-click-event/#show-page) section of *On Click Event & Events Section*. Note that select pages must have a [pop-up layout](/refguide/layout/#layout-type).
+See the [Show a Page](/refguide/on-click-event/#show-page) section of *On Click Event and Events Section*. Note that select pages must have a [pop-up layout](/refguide/layout/#layout-type).
 
 {{% alert color="info" %}}
 You can generate a new page to show by right-clicking the widget and selecting **Generate select page…**.

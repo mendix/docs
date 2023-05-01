@@ -1,7 +1,6 @@
 ---
 title: "Import App Package"
 url: /refguide/import-app-package-dialog/
-parent: "file-menu"
 weight: 40
 description: "Describes the Import App Package process and Import App Package dialog box."
 tags: ["studio pro", "import app package"]
@@ -15,10 +14,8 @@ To create a new app from a Mendix app package (*.mpk*) file, you need to import 
 To import an app package, do the following:
 
 1. Select the **File** menu in the top bar > **Import App Package** 
-
 2. Browse to the *.mpk* file you would like to import.
-
-3.  Select the relevant options in the **Import App Package** dialog box and click **OK**. For more information on what options you can select, see the sections below. 
+3. Select the relevant options in the **Import App Package** dialog box and click **OK**. For more information on what options you can select, see the sections below. 
 
     {{< figure src="/attachments/refguide/modeling/menus/file-menu/import-app-package-dialog/import-app-package.png" alt="Import App Package Dialog Window" >}}
 
@@ -45,9 +42,7 @@ For more information about the Mendix Team Server, see [Team Server](/developerp
 ### 2.2 Private Server {#private-server}
 
 {{% alert color="info" %}}
-
 The **Private server** option is only available when support for other SVN servers is enabled: **Edit** >**Preferences** > **Version Control** > **Enable private version control**. 
-
 {{% /alert %}}
 
 In the **App repository address** field, enter the address of the repository you want to upload your app to.

@@ -1,8 +1,7 @@
 ---
-title: "XPath Keywords & System Variables"
+title: "XPath Keywords and System Variables"
 url: /refguide/xpath-keywords-and-system-variables/
-parent: "xpath-constraints"
-tags: ["studio pro", "BeginOfCurrent"]
+tags: ["studio pro", "BeginOfCurrent", "system variables"]
 ---
 
 ## 1 Overview
@@ -20,7 +19,7 @@ Either of these keywords can be used to check whether an attribute has a value (
 
 This query returns all the customers whose name is not known to the system:
 
-```java
+```java {linenos=false}
 //Sales.Customer[Name = NULL]
 ```
 
@@ -68,6 +67,14 @@ The following tokens can be used to obtain a date and time value:
 | `[%BeginOfCurrentDayUTC%]` | The date and time at the beginning of the current day in UTC. |
 | `[%EndOfCurrentDay%]` | The date and time at the end of the current day. |
 | `[%EndOfCurrentDayUTC%]` | The date and time at the end of the current day in UTC. |
+| `[%BeginOfYesterday%]` | The date and time at the beginning of yesterday. |
+| `[%BeginOfYesterdayUTC%]` | The date and time at the beginning of yesterday in UTC. |
+| `[%EndOfYesterday%]` | The date and time at the end of yesterday. |
+| `[%EndOfYesterdayUTC%]` | The date and time at the end of yesterday in UTC. |
+| `[%BeginOfTomorrow%]` | The date and time at the beginning of tomorrow. |
+| `[%BeginOfTomorrowUTC%]` | The date and time at the beginning of tomorrow in UTC. |
+| `[%EndOfTomorrow%]` | The date and time at the end of tomorrow. |
+| `[%EndOfTomorrowUTC%]` | The date and time at the end of tomorrow in UTC. |
 | `[%BeginOfCurrentWeek%]` | The date and time at the beginning of the current week. |
 | `[%BeginOfCurrentWeekUTC%]` | The date and time at the beginning of the current week in UTC. |
 | `[%EndOfCurrentWeek%]` | The date and time at the end of the current week. |
@@ -101,27 +108,28 @@ These variables must be used as string values and placed between two quotes. Tim
 
 This query returns only customers who have registered since the beginning of this week:
 
-```java
+```java {linenos=false}
 //Sales.Customer[DateRegistered >= '[%BeginOfCurrentWeek%]']
 ```
 
 This query returns only customers who have registered this week:
 
-```java
+```java {linenos=false}
 //Sales.Customer[DateRegistered >= '[%BeginOfCurrentWeek%]' and DateRegistered < '[%EndOfCurrentWeek%]']
 ```
 
 This query returns only customers who have registered in the past three years:
 
-```java
+```java {linenos=false}
 //Sales.Customer[DateRegistered > '[%BeginOfCurrentDay%] - 3 * [%YearLength%]']
 ```
 
 This query returns users with the role "Administrator":
 
-```java
+```java {linenos=false}
 //System.User[System.UserRoles = '[%UserRole_Administrator%]']
 ```
+
 {{% alert color="info" %}}
 Because system variables are written as a string (between quotes), it is not possible to use parentheses to group expressions.
 {{% /alert %}}

@@ -1,7 +1,6 @@
 ---
 title: "Java Actions"
 url: /refguide/java-actions/
-parent: "resources"
 weight: 10
 description: "Describes using Java Actions to extend the functionality of your Mendix app."
 tags: ["studio pro"]

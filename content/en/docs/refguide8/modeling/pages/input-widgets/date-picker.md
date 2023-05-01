@@ -1,7 +1,6 @@
 ---
 title: "Date Picker"
 url: /refguide8/date-picker/
-parent: "input-widgets"
 weight: 60
 tags: ["studio pro"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
@@ -124,5 +123,5 @@ Placeholder text will not be displayed if a native date picker is available (tha
 
 ## 3 Read More
 
-*   [Data View](/refguide8/data-view/)
-*   [Attributes](/refguide8/attributes/)
+* [Data View](/refguide8/data-view/)
+* [Attributes](/refguide8/attributes/)

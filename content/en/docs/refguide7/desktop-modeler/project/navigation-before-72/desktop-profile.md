@@ -1,7 +1,6 @@
 ---
 title: "Desktop Profile"
 url: /refguide7/desktop-profile/
-parent: "navigation-before-72"
 description: "Describes the desktop profile, which is the default profile used by a Mendix app for Mendix versions 7.0 and 7.1."
 ---
 

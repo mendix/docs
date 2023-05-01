@@ -2,7 +2,7 @@
 title: "Mendix Client"
 url: /refguide/mendix-client/
 category: "Mendix Runtime"
-description: "A description of the Mendix Client part of the runtime and how it functions"
+description: "Describes the Mendix Client part of the Mendix Runtime and how it functions."
 weight: 20
 tags: ["runtime", "mendix client", "offline-first", "browser", "javascript", "nanoflows", "widgets", "launch"]
 ---
@@ -15,7 +15,7 @@ This description of the Mendix Client is based on using the Runtime Server of an
 
 ## 2 Description {#description}
 
-The Mendix Client is a part of every application built with Mendix: web, mobile, and hybrid.
+The Mendix Client is a part of every application built with Mendix: both web and mobile.
 
 For **web applications**, Mendix Client acts as a single page application. This means that all paging is handled by the Mendix Client, rather than being separate pages served using different URLs. Mendix Client is bootstrapped by loading a `mxui.js` script from an HTML page provided by the *theme*.
 
@@ -24,12 +24,10 @@ For **mobile applications** Mendix Client acts as a React Native application. Th
 The three supported types of wrappers for mobile applications are as follows:
 
 * [Make It Native app](/refguide/getting-the-make-it-native-app/)
-* [Custom Developer apps](/howto/mobile/how-to-devapps/)
-* [Native apps](/howto/mobile/deploying-native-app/)
+* [Custom developer apps](/refguide/mobile/distributing-mobile-apps/building-native-apps/how-to-devapps/)
+* [Native apps](/refguide/mobile/introduction-to-mobile-technologies/native-mobile/)
 
-The first two of these load a bundle dynamically, while the last one includes a pre-packaged bundle that can be [updated](/howto/mobile/how-to-ota/) later.
-
-A **Hybrid application**, for most purposes, can be treated as an app running in a browser. In this case, however, the browser is embedded in a mobile application and has access to some features of a mobile device through [Cordova](https://cordova.apache.org/) plugins. We recommend that you use a native mobile app rather than a hybrid app if you want to make Mendix apps which run on mobile devices.
+The first two of these load a bundle dynamically, while the last one includes a pre-packaged bundle that can be [updated](/refguide/mobile/distributing-mobile-apps/overtheair-updates/) later.
 
 Below is a chart showing the components of the Mendix Client. Each of the components is described below the chart.
 
@@ -181,32 +179,20 @@ In a browser, the environment is built on an initial page, the "shell", on which
 When the end-user launches an app in the browser, it triggers the following flow.
 
 1. The end-user enters the URL of the app in the browser.
-
 2. The browser loads the HTML web page ("shell").
-
 3. The web page loads and starts the Mendix Client, together with the core widgets.
-
 4. The Mendix Client loads any custom widgets.
-
 5. The Mendix Client contacts the Runtime Server and authenticates the end-user.
-
 6. The Mendix Client gets any additional configuration required from the Runtime Server.
-
 
     *The Mendix Client is now ready to start interacting with the end-user and will repeat the following steps for as long as the end-user’s session continues.*
 
 7. The Mendix Client loads the page definition.
-
 8. The Mendix Client loads pluggable widgets used on the page.
-
 9. The Mendix Client retrieves any data required from the Runtime Server.
-
 10. The Mendix Client builds the page.
-
 11. The Mendix Client displays the page to the end-user.
-
 12. The Mendix Client processes input from the end-user and repeats the steps above to show the correct page.
-
 
 #### 4.1.2 Location of Mendix Client Resources
 
@@ -218,7 +204,7 @@ When the app is deployed, the static resources are placed in a structure referre
 * widgets – both native and web core widgets which are used by this app
 * page definitions – xml page definitions which tell the Mendix Client what the pages for this app look like
 
-#### 4.1.3 Cookies
+#### 4.1.3 Cookies{#cookies}
 
 When the Mendix client is running, it sets a number of technical cookies to record information about the session. These can include:
 | Name  | Source | Purpose | Path | Duration | HttpOnly | 
@@ -233,7 +219,6 @@ When the Mendix client is running, it sets a number of technical cookies to reco
 | **reloginReason** | Runtime | Used to let the client know that a relogin reason should be displayed on the sign in page | `/` | until user closes their browser (session cookie) |  `true` | 
 | **XASSESSIONID**<sup><small>2</small></sup> | Runtime | Holds the ID of the user's session | `/` | 1 year for offline sessions<sup><small>1</small></sup>, otherwise based on the session timeout |  `true` | 
 
-
 <sup><small>1</small></sup>*Offline sessions* are sessions created for users using an offline or native mobile [navigation profile](/refguide/navigation/#profiles).
 
 <sup><small>2</small></sup>The name of the **XASSESSIONID** can be changed by changing the value of the **com.mendix.core.SessionIdCookieName** [custom setting](/refguide/custom-settings/).
@@ -245,19 +230,13 @@ The flow when launching a native mobile app is different from launching in a bro
 The flow described here is for production apps. During development, the flow is not the same. This enables you to do faster deployments and online debugging.
 
 1. The end-user opens the app on their device. This is a project specific shell app, which runs natively on iOS or Android. It is released to the app store appropriate for the device. If a new version of the app is downloaded to the device, the app will behave as if the end-user has opened it for the first time, even if it was already open on their device.
-
 2. The shell app loads a native bundle. This is the equivalent of the Mendix Client resources used by the Mendix Client running in a browser. It contains, for example, the Mendix Client code and page definitions. However, it is held locally on the device rather than centrally with the Runtime Server.
-
 3. If there is not a valid authentication token on the device, the Mendix Client contacts the Runtime Server and authenticates the end-user and gets any additional configuration required from the Runtime Server.
-
 4. If this is the first time the app has been started, or the first time after an update to the app, the Mendix Client performs a synchronization with the Runtime Server.
-
 5. The Mendix Client checks the resources stored in Visual Studio App Center for updates to the native bundle. This enables the app to keep up-to-date without needing to download new versions of the app from the app store.
 
     *The Mendix Client is now ready to start interacting with the end-user and will repeat the following steps for as long as the continues to run.*
 
 6. The Mendix Client prepares a page using the data on the device.
-
 7. The Mendix Client presents the page to the end-user.
-
 8. The Mendix Client reacts to the end-user input.

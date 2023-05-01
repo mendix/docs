@@ -9,5 +9,3 @@ simple_list: true
 ---
 
 These are the release notes for the Mendix Desktop Modeler version 7:
-
-

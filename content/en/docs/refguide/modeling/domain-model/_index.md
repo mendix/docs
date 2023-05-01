@@ -3,6 +3,7 @@ title: "Domain Model"
 url: /refguide/domain-model/
 category: "App Modeling"
 weight: 30
+description: "Introduces the domain model in Studio Pro."
 tags: ["domain model", "entity", "association", "annotation", "studio pro"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
@@ -61,3 +62,7 @@ The entity 'Order' is stored in the table 'module$order' which is shown below. I
 | --- | --- | --- |
 | 5 | 5 | 2009-11-27 09:56:45.099 |
 | 8 | 8 | 2008-04-01 08:10:45.053 |
+
+## 3 Read More
+
+* [Creating a Basic Data Layer](/refguide/create-a-basic-data-layer/)

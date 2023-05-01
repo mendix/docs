@@ -1,8 +1,9 @@
 ---
-title: "Use Layouts & Snippets"
+title: "Use Layouts and Snippets"
 url: /howto/front-end/layouts-and-snippets/
 category: "Front End"
 weight: 30
+description: "Describes how to create pages using layouts and snippets."
 tags: ["front end"]
 ---
 
@@ -67,7 +68,7 @@ With regions, you divide the layout container into sections in order to position
 
 #### 3.2.3 Placeholders
 
-A placeholder can be used in a layout to define an area that can be filled in in a page based on that layout or in another layout defining that layout as the master layout.
+A placeholder can be used in a layout to define an area that can be filled in in a page based on that layout or in another layout defining that layout as the primary layout.
 
 {{< figure src="/attachments/howto/front-end/layouts-and-snippets/placeholders.png" >}} 
 
@@ -75,7 +76,7 @@ When the area is filled in a page, this will be the content area of that page, s
 
 #### 3.2.4 Inheritance
 
-A layout can also be based on another layout, which is called the "master layout" in this context. If a layout is based on a master layout, the layout can fill the areas defined by the master layout and define new area using placeholders. Pages that use a layout based on a master layout will only see the areas defined by the layout, not those of the master layout.
+A layout can also be based on another layout, which is called the "primary layout" in this context. If a layout is based on a primary layout, the layout can fill the areas defined by the primary layout and define new area using placeholders. Pages that use a layout based on a primary layout will only see the areas defined by the layout, not those of the primary layout.
 
 ## 4 Desktop, Tablet, or Mobile?
 
@@ -89,29 +90,27 @@ Be careful with how you design these layouts. For example, in the mobile apps, y
 
 These are some layout examples:
 
-*  Basic layout for responsive/desktop pages:
+* Basic layout for responsive/desktop pages:
 
-	{{< figure src="/attachments/howto/front-end/layouts-and-snippets/basic-desktop.png" >}}
+    {{< figure src="/attachments/howto/front-end/layouts-and-snippets/basic-desktop.png" >}}
 
 * Basic layout for mobile pages:
 
-	{{< figure src="/attachments/howto/front-end/layouts-and-snippets/basic-mobile.png" >}}
+    {{< figure src="/attachments/howto/front-end/layouts-and-snippets/basic-mobile.png" >}}
 
-* Master layout with added menu:
+* Primary layout with added menu:
 
-	{{< figure src="/attachments/howto/front-end/layouts-and-snippets/master.png" >}}
+    {{< figure src="/attachments/howto/front-end/layouts-and-snippets/primary.png" >}}
 
 {{% alert color="info" %}}
-
 By adjusting the canvas width, you can emulate the end-user's view of the page in Studio Pro. For example, the desktop layout has a canvas width of 800, and the default phone layouts have a width of 500. The property canvas width only applies to the view in Studio Pro, and the actual width of the page depends on the opened browser or the optional pop-up window size.
-
 {{% /alert %}}
 
 After defining the structure of the layout with the layout container(s), the region's content must be defined. This can either be done per page, with page-specific elements (for example, by adding data containers in the empty areas), or within the layout in order to define the elements that will be used on each page with this layout. It is common that this will be the general app navigation or specific navigation for a specific function. All the widgets can be used, except data and input elements, since they need a source. 
 
-Two of the most useful widget types are menus & navigation and snippets. You will learn more about those two types below.
+Two of the most useful widget types are menus and navigation, and snippets. You will learn more about those two types below.
 
-## 5 Menus & Navigation
+## 5 Menus and Navigation
 
 ### 5.1 Menu Bar
 
@@ -159,7 +158,7 @@ At the heart of the navigation model in Mendix, are three device types: Desktop,
 * **Tablet web**
 * **Tablet web offline**
 * **Phone web**
-* **Phone web**
+* **Phone web offline**
 * **Native mobile (tablet & phone)**
 
 {{< figure src="/attachments/howto/front-end/layouts-and-snippets/device-profiles.png" >}}
@@ -208,6 +207,6 @@ In addition, a snippet can define an entity that serves as a context for the wid
 
 * [Atlas UI](/howto/front-end/atlas-ui/)
 * [Use Layouts and Snippets](/howto/front-end/layouts-and-snippets/)
-* [Set Up the Navigation Structure](/howto/general/setting-up-the-navigation-structure/)
-* [Create Your First Two Overview & Detail Pages](/howto/front-end/create-your-first-two-overview-and-detail-pages/)
+* [Setting Up Navigation](/refguide/setting-up-the-navigation-structure/)
+* [Create Your First Two Overview and Detail Pages](/howto/front-end/create-your-first-two-overview-and-detail-pages/)
 * [Find the Root Cause of Runtime Errors](/howto/monitoring-troubleshooting/finding-the-root-cause-of-runtime-errors/)

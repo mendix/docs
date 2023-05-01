@@ -1,7 +1,6 @@
 ---
 title: "Drop-Down"
 url: /refguide8/drop-down/
-parent: "input-widgets"
 weight: 30
 tags: ["Drop-down", "input", "page", "widget", "enumeration", "studio pro"]
 aliases:
@@ -110,5 +109,5 @@ For example, the drop-down that allows the end-user to select the region allocat
 
 ## 3 Read More
 
-*   [Data View](/refguide8/data-view/)
-*   [Attributes](/refguide8/attributes/)
+* [Data View](/refguide8/data-view/)
+* [Attributes](/refguide8/attributes/)

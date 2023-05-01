@@ -3,6 +3,7 @@ title: "ATS Reference Guides"
 url: /addons/ats-addon/rg-ats/
 category: "ATS"
 weight: 2
+description: "Presents a list of ATS reference guides for each ATS version."
 ---
 
 ## 1 Introduction
@@ -13,4 +14,3 @@ The *ATS Reference Guides* are organized according to the ATS version.
 
 * [ATS 2 Reference Guide](/addons/ats-addon/rg-two-ats/)
 * [ATS 1 Reference Guide](/addons/ats-addon/rg-one-ats/)
-

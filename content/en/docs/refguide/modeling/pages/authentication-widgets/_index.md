@@ -1,7 +1,6 @@
 ---
 title: "Authentication"
 url: /refguide/authentication-widgets/
-parent: "pages"
 weight: 55
 tags: ["authentication", "widgets", "studio pro", "login", "password"]
 ---
@@ -25,7 +24,7 @@ The **Authentication** category contains the following widgets:
 * [Sign-in button](/refguide/sign-in-button/) – sends a user’s login id and password to the server for authentication
     {{< figure src="/attachments/refguide/modeling/pages/authentication-widgets/sign-in-button-example.png" alt="Sign-In Button Example" >}}
 
-* **Sign-out button** – signs the currently signed-in user out. The sign-out button is a button with an on-click event set to **Sign out**. For more information on on-click events, see the [On Click Event & Events Section](/refguide/on-click-event/). For details on button properties. see [Button Properties](/refguide/button-properties/).
+* **Sign-out button** – signs the currently signed-in user out. The sign-out button is a button with an on-click event set to **Sign out**. For more information on on-click events, see the [On Click Event and Events Section](/refguide/on-click-event/). For details on button properties. see [Button Properties](/refguide/button-properties/).
 
 * [Validation message](/refguide/validation-message/) – informs a user about authentication failures if any
 

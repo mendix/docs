@@ -1,7 +1,6 @@
 ---
 title: "Drop-Down"
 url: /refguide7/drop_down/
-parent: "input-widgets"
 tags: ["Drop-down", "input", "page", "widget", "enumeration"]
 aliases:
     - /refguide7/drop-down-widget.html
@@ -13,10 +12,9 @@ A drop-down is an [input widget](/refguide7/input-widgets/) that can be used to 
 
 {{% alert color="info" %}}
 
- {{< figure src="/attachments/refguide7/desktop-modeler/pages/input-widgets/drop_down/drop-down.png" >}}
+{{< figure src="/attachments/refguide7/desktop-modeler/pages/input-widgets/drop_down/drop-down.png" >}}
 
 This drop-down widget allows the user to select their favorite color.
-
 {{% /alert %}}
 
 ## General Properties
@@ -26,15 +24,11 @@ This drop-down widget allows the user to select their favorite color.
 This property represents the caption for the empty option in the drop-down shown to the user. This is a translatable text. For more details, see [Translatable Texts](/refguide7/translatable-texts/).
 
 {{% alert color="info" %}}
-
 Filling out the caption for an empty option improves the user experience of your application. It also helps screen-reader users to operate the application easily. For example, the drop-down that represents the color selection for a car could have a caption reading "Select a color".
-
 {{% /alert %}}
 
 {{% alert color="info" %}}
-
 The empty option caption is available from Mendix 7.2.0.
-
 {{% /alert %}}
 
 ## Validation Properties
@@ -81,5 +75,5 @@ The empty option caption is available from Mendix 7.2.0.
 
 ## Read More
 
-*   [Data View](/refguide7/data-view/)
-*   [Attributes](/refguide7/attributes/)
+* [Data View](/refguide7/data-view/)
+* [Attributes](/refguide7/attributes/)

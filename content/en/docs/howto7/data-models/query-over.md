@@ -36,5 +36,3 @@ This constraint will return all the Groups with an association to the group that
 If you do not specify the [reversed()] expression the query will be interpreted from left to right and since the ChildGroup is configured on the left side of the association the child groups could have been returned.  
 
 {{< figure src="/attachments/howto7/data-models/query-over/18581634.png" >}}
-
-

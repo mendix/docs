@@ -1,7 +1,6 @@
 ---
 title: "Enumeration"
 url: /studio/domain-models-enumeration/
-parent: "domain-models"
 description: "Describes enumerations in Mendix Studio."
 tags: ["studio", "domain model", "attributes", "enumeration"]
 ---
@@ -27,25 +26,23 @@ An enumeration is configured when you add an attribute of the enumeration type t
 To create a new enumeration, do the following: 
 
 1. Open your [domain model](/studio/domain-models/).
-
 2. Select an entity you want to create the attribute for. For more information on how to create the entity, see the [Adding New Entities](/studio/domain-models/#adding-new-entities) section in *Domain Models Overview*.
+3. To create a new attribute of the enumeration type, click **New attribute** and do the following:<br />
+    1. Set the attribute **Name**. In our example, the name of the attribute is *Grade*.<br />
+    1. Set the [Type](/studio/domain-models-attributes/) to **Enumeration**.<br />
+    1. Click **Select enumeration**.<br />d. In the **Select enumeration** dialog box, click the plus icon in the top right corner.<br/>
+    1. In the **Create new enumeration** dialog box, click **Add Item** to add possible options of the enumeration (**Name** is filled out automatically and is the same as the attribute name).<br />
 
-3.  To create a new attribute of the enumeration type, click **New attribute** and do the following:<br />
-    a. Set the attribute **Name**. In our example, the name of the attribute is *Grade*.<br />
-    b. Set the [Type](/studio/domain-models-attributes/) to **Enumeration**.<br />
-    c. Click **Select enumeration**.<br />d. In the **Select enumeration** dialog box, click the plus icon in the top right corner.<br/>
-    e. In the **Create new enumeration** dialog box, click **Add Item** to add possible options of the enumeration (**Name** is filled out automatically and is the same as the attribute name).<br />
+        {{< figure src="/attachments/studio/work-with-data/domain-models/domain-models-enumeration/new-enumeration-add-item.png" >}}<br />
 
-    {{< figure src="/attachments/studio/work-with-data/domain-models/domain-models-enumeration/new-enumeration-add-item.png" >}}<br />
+    1. Fill out the name for the **Caption** (**Name** is filled out automatically). In the example below, you need to fill out  *Bronze*, as one of three possible items of the enumeration: Bronze, Silver, and Gold. <br />
 
-    f. Fill out the name for the **Caption** (**Name** is filled out automatically). In the example below, you need to fill out  *Bronze*, as one of three possible items of the enumeration: Bronze, Silver, and Gold. <br />
+        {{< figure src="/attachments/studio/work-with-data/domain-models/domain-models-enumeration/new-enumeration-add-item-bronze.png" >}}<br />
 
-    {{< figure src="/attachments/studio/work-with-data/domain-models/domain-models-enumeration/new-enumeration-add-item-bronze.png" >}}<br />
+    1. Click **Add Item** and repeat the step above to create other enumeration items.<br />
+    1. Click **Create** to close the dialog box and create the new attribute.
 
-    g. Click **Add Item** and repeat the step above to create other enumeration items.<br />
-    h. Click **Create** to close the dialog box and create the new attribute.
-
-    {{< figure src="/attachments/studio/work-with-data/domain-models/domain-models-enumeration/new-enumeration-bronze-silver-gold.png" >}}
+        {{< figure src="/attachments/studio/work-with-data/domain-models/domain-models-enumeration/new-enumeration-bronze-silver-gold.png" >}}
 
 The attribute and the enumeration items are created.
 
@@ -54,20 +51,18 @@ The attribute and the enumeration items are created.
 You can also set an existing enumeration for attributes of the enumeration type. Do the following:
 
 1. Open your [domain model](/studio/domain-models/).
-
 2. Select an entity you want to create the attribute for. For more information on how to create the entity, see section [3 Adding New Entities](/studio/domain-models/#adding-new-entities) in *Domain Models Overview*.
+3. To create a new attribute of the enumeration type, click **New attribute** and do the following:<br />
 
-3.  To create a new attribute of the enumeration type, click **New attribute** and do the following:<br />
+    1. Set the attribute **Name**. In our example, the name of the attribute is *Grade*.<br />
+    1. Set the [Type](/studio/domain-models-attributes/) to **Enumeration**.<br />
+    1. Click **Select enumeration**.<br />
 
-    a. Set the attribute **Name**. In our example, the name of the attribute is *Grade*.<br />
-    b. Set the [Type](/studio/domain-models-attributes/) to **Enumeration**.<br />
-    c. Click **Select enumeration**.<br />
+        {{< figure src="/attachments/studio/work-with-data/domain-models/domain-models-enumeration/new-attribute-select-enumeration.png" >}} <br/>
 
-    {{< figure src="/attachments/studio/work-with-data/domain-models/domain-models-enumeration/new-attribute-select-enumeration.png" >}} <br/>
+    1. In the **Select enumeration** dialog box, the existing enumerations are displayed in the list. Click the one you want to use, then click **Select**.<br />
 
-    d. In the **Select enumeration** dialog box, the existing enumerations are displayed in the list. Click the one you want to use, then click **Select**.<br />
-
-    {{< figure src="/attachments/studio/work-with-data/domain-models/domain-models-enumeration/selecting-existing-enumeration.png" >}}
+        {{< figure src="/attachments/studio/work-with-data/domain-models/domain-models-enumeration/selecting-existing-enumeration.png" >}}
 
 The existing enumeration is selected for the attribute of the enumeration type. 
 
@@ -76,14 +71,10 @@ The existing enumeration is selected for the attribute of the enumeration type.
 You can copy and paste an enumeration to another Studio app. Follow the steps below:
 
 1. Open your [domain model](/studio/domain-models/).
-
 2. Select the attribute of the enumeration type and click **Enumeration** in its properties.
-
 3. In the **Select Enumeration** dialog box, select the enumeration you would like to copy and click the ellipsis icon.
-
 4. Select the **Copy to clipboard** option in the drop-down menu. 
 {{< figure src="/attachments/studio/work-with-data/domain-models/domain-models-enumeration/copy-to-clipboard.png" alt="Copy Enumeration" >}}
-
 5. Open a different module or Studio app, navigate to a domain model and press <kbd>Ctrl</kbd> + <kbd>V</kbd>.
 
 The enumeration is pasted. For more information on copy/paste function in Studio, see the [Copy/Paste Pages, Microflows, and Enumerations](/studio/general/#copy-paste-documents) section in *General Info*.
@@ -93,12 +84,10 @@ The enumeration is pasted. For more information on copy/paste function in Studio
 To duplicate an enumeration, follow the steps below:
 
 1. Open your [domain model](/studio/domain-models/).
-
 2. Select the attribute of the enumeration type and click **Enumeration** in its properties.
 
 3. In the **Select Enumeration** dialog box, select the enumeration you would like to duplicate and click the ellipsis icon.
-
-4.  Select the **Duplicate** option in the drop-down menu. 
+4. Select the **Duplicate** option in the drop-down menu. 
 
     {{< figure src="/attachments/studio/work-with-data/domain-models/domain-models-enumeration/duplicate.png" alt="Duplicate Enumeration" >}}
 
@@ -111,11 +100,8 @@ The enumeration is duplicated.
 To delete an enumeration, follow the steps below:
 
 1. Open your [domain model](/studio/domain-models/).
-
 2. Select the attribute of the enumeration type and click **Enumeration** in its properties.
-
 3. In the **Select Enumeration** dialog box, select the enumeration you would like to delete and click the ellipsis icon.
-
 4. Select the **Delete** option in the drop-down menu:
 
     {{< figure src="/attachments/studio/work-with-data/domain-models/domain-models-enumeration/delete-enumeration.png" alt="Delete Enumeration" >}}

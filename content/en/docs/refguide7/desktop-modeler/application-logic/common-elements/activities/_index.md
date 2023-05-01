@@ -1,7 +1,6 @@
 ---
 title: "Activities"
 url: /refguide7/activities/
-parent: "common-elements"
 ---
 
 Activities represent the actions that are executed in a microflow.

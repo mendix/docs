@@ -1,7 +1,6 @@
 ---
 title: "Common Elements"
 url: /refguide7/common-elements/
-parent: "application-logic"
 weight: 30
 description: "Presents an overview of the elements that can be used in microflows and nanoflows."
 ---

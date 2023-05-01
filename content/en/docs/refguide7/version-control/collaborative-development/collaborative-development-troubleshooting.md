@@ -1,7 +1,6 @@
 ---
 title: "Troubleshooting Collaborative Development"
 url: /refguide7/collaborative-development-troubleshooting/
-parent: "collaborative-development"
 description: "Describes troubleshooting for collaborative development between the Mendix Desktop Modeler and the Mendix Web Modeler"
 tags: ["desktop modeler", "collaborative development", "troubleshooting", "troubleshoot"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
@@ -31,13 +30,13 @@ Normally, the Web Modeler working copy is synchronized with the Desktop Modeler 
 
 You can do one of the following:
 
-1.  **Merge** (recommended)–  the Desktop Modeler will try to merge the unsynchronized changes from the Web Modeler automatically. Your local changes (if any) will be combined with the Web Modeler changes. The changes from the Web Modeler are stored in an automatically created branch to ensure that there no changes lost in the process. The branch is visible in the branch line manager. This process can result in one of the following: <br/>
+1. **Merge** (recommended)–  the Desktop Modeler will try to merge the unsynchronized changes from the Web Modeler automatically. Your local changes (if any) will be combined with the Web Modeler changes. The changes from the Web Modeler are stored in an automatically created branch to ensure that there no changes lost in the process. The branch is visible in the branch line manager. This process can result in one of the following: <br/>
 
-	a.  If the merge process finishes successfully (without conflicts) the created branch is merged to your working copy and you get the Web Modeler changes. You need to review the merged changes and commit them to get the Web Modeler and the Desktop Modeler in sync again. And afterwards you can delete the automatically-created branch.<br/>
+    1. If the merge process finishes successfully (without conflicts) the created branch is merged to your working copy and you get the Web Modeler changes. You need to review the merged changes and commit them to get the Web Modeler and the Desktop Modeler in sync again. And afterwards you can delete the automatically-created branch.<br/>
 
-	b. If there are any merge conflicts found in the process, you need to resolve them and commit the changes afterwards. Once you resolve the conflicts and commit the changes, you can delete this automatically-created branch.<br/>
+    1. If there are any merge conflicts found in the process, you need to resolve them and commit the changes afterwards. Once you resolve the conflicts and commit the changes, you can delete this automatically-created branch.<br/>
 
-	{{< figure src="/attachments/refguide7/version-control/collaborative-development/collaborative-development-troubleshooting/automatically-created-branch.png" >}}
+        {{< figure src="/attachments/refguide7/version-control/collaborative-development/collaborative-development-troubleshooting/automatically-created-branch.png" >}}
 
 2. **Resolve Later** –  the changes can be merged later. In the meanwhile, changes from the Web Modeler and the Team Server development line will not be kept in sync. In this case, the dialog will appear again when committing/updating/merging changes. 
 
@@ -49,17 +48,17 @@ When the Web Modeler enabled branch with the commit outside the Desktop Modeler 
 
 You can choose one of the following:
 
-1.  **Cancel Merge** (recommended) – you can cancel the process and try to synchronize with the Web Modeler first. Do the following:<br/>
-	a.  Open the Web Modeler enabled development line<br/>
-	b.  The warning described in section [3 The Desktop Modeler & the Web Modeler Are Out of Sync](#out-of-sync) will be displayed.<br/>
+1. **Cancel Merge** (recommended) – you can cancel the process and try to synchronize with the Web Modeler first. Do the following:<br/>
+    1. Open the Web Modeler enabled development line<br/>
+    1. The warning described in section [3 The Desktop Modeler and the Web Modeler Are Out of Sync](#out-of-sync) will be displayed.<br/>
 
-	{{< figure src="/attachments/refguide7/version-control/collaborative-development/collaborative-development-troubleshooting/changes-are-out-of-sync.png" >}}<br/>
+        {{< figure src="/attachments/refguide7/version-control/collaborative-development/collaborative-development-troubleshooting/changes-are-out-of-sync.png" >}}<br/>
 
-	c. Click **Merge** to synchronize the changes with the Web Modeler.<br/>
+    1. Click **Merge** to synchronize the changes with the Web Modeler.<br/>
 
-	d. Open the previous branch and do the merge again. 
+    1. Open the previous branch and do the merge again. 
 
-2. **Merge Anyway** – the merge will continue without changes from the Web Modeler. In this case only the changes from the Desktop Modeler will be included. The Desktop Modeler and the Web Modeler will be out of sync, and you will need to resolve this issue later. See section [3 The Desktop Modeler & the Web Modeler Are Out of Sync](#out-of-sync)
+2. **Merge Anyway** – the merge will continue without changes from the Web Modeler. In this case only the changes from the Desktop Modeler will be included. The Desktop Modeler and the Web Modeler will be out of sync, and you will need to resolve this issue later. See section [3 The Desktop Modeler and the Web Modeler Are Out of Sync](#out-of-sync)
 
 ## 5 The Repository Service Is Unavailable
 
@@ -75,7 +74,7 @@ You can do one of the following:
 
 1. **Cancel** (recommended) – the operation will be cancelled, you can try again later, when the network problems are solved 
 
-2. **Proceed** – the update process will continue, but the changes from the Web Modeler will not be retrieved. The Desktop Modeler and the Web Modeler will be out of sync, and you will need to resolve this issue later. See section [3 The Desktop Modeler & the Web Modeler Are Out of Sync](#out-of-sync)
+2. **Proceed** – the update process will continue, but the changes from the Web Modeler will not be retrieved. The Desktop Modeler and the Web Modeler will be out of sync, and you will need to resolve this issue later. See section [3 The Desktop Modeler and the Web Modeler Are Out of Sync](#out-of-sync)
 
 ## 6 Another Operation Is in Progress
 
@@ -86,7 +85,7 @@ When your team members initiate a blocking operation (commit/update/merge Web Mo
 You can do one of the following:
 
 1. **Cancel** (recommended) – the operation will be cancelled. We recommend you to do an update in a few minutes so that you get the latest changes and your working copy and the Web Modeler will be in sync
-2. **Proceed** – the update process will continue, but the changes from Web Modeler will not be retrieved. The Desktop Modeler and the Web Modeler will be out of sync, and you will need to resolve this issue later. See section [3 The Desktop Modeler & the Web Modeler Are Out of Sync](#out-of-sync)
+2. **Proceed** – the update process will continue, but the changes from Web Modeler will not be retrieved. The Desktop Modeler and the Web Modeler will be out of sync, and you will need to resolve this issue later. See section [3 The Desktop Modeler and the Web Modeler Are Out of Sync](#out-of-sync)
 
 ## 7 Read More
 

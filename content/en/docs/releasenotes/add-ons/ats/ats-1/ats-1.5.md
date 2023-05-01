@@ -1,7 +1,6 @@
 ---
 title: "1.5"
 url: /releasenotes/add-ons/ats-1.5/
-parent: "ats-1"
 weight: 100
 ---
 
@@ -13,7 +12,7 @@ weight: 100
 
 Automated testing should be available to anyone on the Mendix Platform. That’s why we put a high focus on user experience. With this release we’ve made a big step by creating a new theme and redesigning many parts of the user interface.
 
-We’ve created the new, modern and appealing theme based on the Mendix UI Framework. With the new look & feel we can not only present data in a better and nicer way, we also put visual focus to where it’s really needed.
+We’ve created the new, modern and appealing theme based on the Mendix UI Framework. With the new look and feel we can not only present data in a better and nicer way, we also put visual focus to where it’s really needed.
 
 Several pages and dialogs have been redesigned to improve user flow and reduce the number of clicks. A new landing page dashboard gives you a quick overview of your projects and their status right after login. Open a project from there and the project dashboard shows you detailed data and your user stories. Adding a new test case to a user story is now only one click away. And by using a template for the new test case you are able to save even more time.
 

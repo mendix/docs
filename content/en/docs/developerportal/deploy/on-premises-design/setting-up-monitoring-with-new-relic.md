@@ -1,7 +1,6 @@
 ---
 title: "Monitoring with New Relic"
 url: /developerportal/deploy/setting-up-monitoring-with-new-relic/
-parent: "on-premises-design"
 description: "How to install Mendix behind a load balancer for high availability"
 weight: 30
 tags: ["new relic", "on-premises", "monitoring", "setup"]
@@ -14,11 +13,7 @@ tags: ["new relic", "on-premises", "monitoring", "setup"]
 
 ## 1 Introduction
 
-When setting up a Mendix application on premises, you can set up advanced monitoring with New Relic. This works with both Windows and Linux deployments.
-
-{{% alert color="warning" %}}
-New Relic is currently in private beta, and thus not supported. We plan to offer full support for New Relic during 2022.
-{{% /alert %}}
+When setting up a Mendix application on premises, you can set up advanced monitoring with New Relic. This works with both Windows and Linux deployments. It is not supported in the Mendix Cloud.
 
 ## 2 Prerequisites
 
@@ -36,7 +31,7 @@ Add `-javaagent:/PATH/TO/NEWRELIC.JAR` to your java options in the *m2ee.yaml* f
 
 The configuration section in *m2ee.yaml* should look like this:
 
-```
+```yml
  javaopts: [
  "-Dfile.encoding=UTF-8", "-XX:MaxPermSize=64M", "-Xmx256M", "-Xms256M",
  "-Djava.io.tmpdir=/path/to/project/data/tmp",

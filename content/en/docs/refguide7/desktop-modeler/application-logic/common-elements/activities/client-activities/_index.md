@@ -1,7 +1,6 @@
 ---
 title: "Client Activities"
 url: /refguide7/client-activities/
-parent: "activities"
 ---
 
 ## Close Page

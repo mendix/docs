@@ -1,7 +1,6 @@
 ---
 title: "9.0"
 url: /releasenotes/sdk/metamodel-9.0/
-parent: "metamodel-9"
 weight: 100
 ---
 
@@ -21,7 +20,7 @@ weight: 100
 
 * We intoduced the `queue` property.
 
-#### WorkflowCallAction, SetTaskOutcomeAction, OpenUserTaskAction & OpenWorkflowAction (Elements)
+#### WorkflowCallAction, SetTaskOutcomeAction, OpenUserTaskAction, and OpenWorkflowAction (Elements)
 
 * We removed the experimental status of these elements.
 
@@ -44,7 +43,7 @@ weight: 100
 * We removed the experimental status of this element.
 * We introduced the `defaultPage` property.
 
-#### CallWorkflowClientAction, OpenUserTaskClientAction & SetTaskOutcomeClientAction (Element)
+#### CallWorkflowClientAction, OpenUserTaskClientAction, and SetTaskOutcomeClientAction (Element)
 
 * We removed the experimental status of these elements.
 
@@ -54,7 +53,7 @@ weight: 100
 
 * We removed the experimental status of this model unit.
 
-#### JumpToActivity, UserTaskEvent, NoEvent & MicroflowBasedEvent (Element)
+#### JumpToActivity, UserTaskEvent, NoEvent, and MicroflowBasedEvent (Element)
 
 * We introduced these elements.
 
@@ -68,7 +67,7 @@ weight: 100
 * We removed the experimental status of this element.
 * We introduced the `onCreatedEvent` property.
 
-#### Flow, CallWorkflowActivity, ConditionOutcomeActivity, EndWorkflowActivity, ExclusiveSplitActivity, ParallelSplitActivity, CallMicroflowTask, MicroflowCallParameterMapping, UserSource, XPathBasedUserSource, Outcome, UserTaskOutcome, ParallelSplitOutcome, ConditionOutcome, BooleanConditionOutcome, EnumerationValueConditionOutcome, VoidConditionOutcome & MicroflowBasedUserSource (Elemenst)
+#### Flow, CallWorkflowActivity, ConditionOutcomeActivity, EndWorkflowActivity, ExclusiveSplitActivity, ParallelSplitActivity, CallMicroflowTask, MicroflowCallParameterMapping, UserSource, XPathBasedUserSource, Outcome, UserTaskOutcome, ParallelSplitOutcome, ConditionOutcome, BooleanConditionOutcome, EnumerationValueConditionOutcome, VoidConditionOutcome, and MicroflowBasedUserSource (Elemenst)
 
 * We removed the experimental status of these elements.
 
@@ -76,7 +75,7 @@ weight: 100
 
 ### Microflows
 
-#### LoopSource, IterableList & WhileLoopCondition (Elements)
+#### LoopSource, IterableList, and WhileLoopCondition (Elements)
 
 * We introduced these elements.
 
@@ -101,7 +100,7 @@ weight: 100
 
 ### Microflows
 
-#### ExpressionListOperation, FilterByExpression & FindByExpression (Elements)
+#### ExpressionListOperation, FilterByExpression, and FindByExpression (Elements)
 
 * We introduced these elements. 
 
@@ -131,11 +130,11 @@ weight: 100
 
 * We introduced the `workflowActionInfo` property.
 
-#### WorkflowCallAction, SetTaskOutcomeAction, OpenUserTaskAction & OpenWorkflowAction (Element)
+#### WorkflowCallAction, SetTaskOutcomeAction, OpenUserTaskAction, and OpenWorkflowAction (Element)
 
 * We introduced these elements.
 
-#### AppServiceCallAction & AppServiceCallParameterMapping (Elements)
+#### AppServiceCallAction and AppServiceCallParameterMapping (Elements)
 
 * We deleted these elements.
 
@@ -151,7 +150,7 @@ weight: 100
 
 ### AppServices
 
-#### AppServiceAction, AppServiceActionParameter, Msd, MsdAssociation, MsdAttribute, MsdDomainModel, MsdEntity, MsdEnumeration, MsdEnumerationContainer, MsdEnumerationValue, MsdMetadata, MsdMicroflow, MsdMicroflowParameter, MsdText & MsdVersion (Elements)
+#### AppServiceAction, AppServiceActionParameter, Msd, MsdAssociation, MsdAttribute, MsdDomainModel, MsdEntity, MsdEnumeration, MsdEnumerationContainer, MsdEnumerationValue, MsdMetadata, MsdMicroflow, MsdMicroflowParameter, MsdText, and MsdVersion (Elements)
 
 * We deleted these elements.
 
@@ -191,7 +190,7 @@ weight: 100
 
 * We introduced the `templateCategory` and `templateCategoryWeight` properties. 
 
-#### WorkflowTemplateType, UserTaskTemplateType, WorkflowOverviewTemplateType, CallWorkflowClientAction, OpenUserTaskClientAction, OpenWorkflowClientAction & SetTaskOutcomeClientAction (Elements)
+#### WorkflowTemplateType, UserTaskTemplateType, WorkflowOverviewTemplateType, CallWorkflowClientAction, OpenUserTaskClientAction, OpenWorkflowClientAction, and SetTaskOutcomeClientAction (Elements)
 
 * We introduced these elements.
 
@@ -201,7 +200,7 @@ weight: 100
 
 * We introduced this model unit.
 
-#### Flow, WorkflowActivity, CallWorkflowActivity, ConditionOutcomeActivity, EndWorkflowActivity, ExclusiveSplitActivity, ParallelSplitActivity, CallMicroflowTask, MicroflowCallParameterMapping, UserTask, UserSource, XPathBasedUserSource, MicroflowBasedUserSource, Outcome, UserTaskOutcome, ParallelSplitOutcome, ConditionOutcome, BooleanConditionOutcome, EnumerationValueConditionOutcome & VoidConditionOutcome (Elements)
+#### Flow, WorkflowActivity, CallWorkflowActivity, ConditionOutcomeActivity, EndWorkflowActivity, ExclusiveSplitActivity, ParallelSplitActivity, CallMicroflowTask, MicroflowCallParameterMapping, UserTask, UserSource, XPathBasedUserSource, MicroflowBasedUserSource, Outcome, UserTaskOutcome, ParallelSplitOutcome, ConditionOutcome, BooleanConditionOutcome, EnumerationValueConditionOutcome, and VoidConditionOutcome (Elements)
 
 * We introduced these elements.
 
@@ -209,11 +208,11 @@ weight: 100
 
 ### DomainModels
 
-#### EntityCapabilities, AttributeCapabilities & AssociationCapabilities (Elements)
+#### EntityCapabilities, AttributeCapabilities, and AssociationCapabilities (Elements)
 
 * We deleted these elements.
 
-#### Entity, Attribute & AssociationBase (Elements)
+#### Entity, Attribute, and AssociationBase (Elements)
 
 * We deleted the `capabilities` property.
 
@@ -235,6 +234,6 @@ weight: 100
 
 ### Reports
 
-#### ReportChart & ReportChartSeries (Elements)
+#### ReportChart and ReportChartSeries (Elements)
 
 * We deleted these elements.

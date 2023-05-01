@@ -1,11 +1,10 @@
 ---
-title: "Migrating data in Private Cloud environments (preview)"
+title: "Migrating Data in Private Cloud Environments (Preview)"
+linktitle: "Migrate Data (Preview)"
 url: /developerportal/deploy/private-cloud-data-transfer/
-parent: "private-cloud"
 description: "Describes how to migrate data between Private Cloud environments"
-weight: 32
+weight: 60
 tags: ["Backup", "Restore", "Data transfer", "Migration", "Private Cloud", "Environment"]
-#To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 ---
 
 ## 1 Introduction
@@ -17,8 +16,11 @@ The Private Cloud data migration tool allows you to:
 * export the database and files from a Private Cloud environment into a backup file
 * import the database and files from a previously exported backup file into an environment
 
-The Private Cloud data migration tool is compatible with [backup files](/developerportal/operate/restore-backup/#format-of-backup-file) from Mendix Cloud V4,
-allowing you to transfer application data between Mendix Cloud V4 and Mendix for Private Cloud.
+The Private Cloud data migration tool is compatible with [backup files](/developerportal/operate/restore-backup/#format-of-backup-file) from the Mendix Cloud, allowing you to transfer application data between the Mendix Cloud and Mendix for Private Cloud.
+
+{{% alert color="info" %}}
+Although this tool can also be used to backup and restore your Mendix for Private Cloud databases and files regularly, we recommend that you implement your own backup and restore processes which take advantage of the tools provided by your database vendor or cloud provider.
+{{% /alert %}}
 
 ## 2 Prerequisites
 
@@ -29,7 +31,7 @@ The following database is supported:
 * PostgreSQL (any version [supported by Mendix for Private Cloud](/developerportal/deploy/private-cloud-supported-environments/))  
 
 {{% alert color="warning" %}}
-To remain compatible with Mendix Cloud V4 backups, other databases types (such as SQL Server) are not supported.
+To remain compatible with Mendix Cloud backups, other databases types (such as SQL Server) are not supported.
 
 To convert a database to a different type, you would need to use a temporary, intermediate environment with a PostgreSQL database and use the [built-in](/howto/data-models/migrating-your-mendix-database/) Mendix Runtime `SourceDatabase` features to convert the database to or from PostgreSQL.
 {{% /alert %}}
@@ -45,9 +47,9 @@ The data transfer tool needs the following:
 
 * [pg_dump](https://www.postgresql.org/docs/12/app-pgdump.html) and [pg_restore](https://www.postgresql.org/docs/12/app-pgrestore.html) binaries in a location listed in the system path
 * Network access to the PostgreSQL server and S3/Minio storage
-  * If the database is running inside the cluster or on a Virtual Private Cloud (VPC), it might not be reachable from outside the cluster
+    * If the database is running inside the cluster or on a Virtual Private Cloud (VPC), it might not be reachable from outside the cluster
 * Permissions to call the Kubernetes API
-  * These calls are used to get the database and file storage credentials for an environment
+    * These calls are used to get the database and file storage credentials for an environment
 
 In most cases, this means the data transfer tool cannot run from a local machine and needs to run in a Kubernetes pod acting as a [jump server](https://en.wikipedia.org/wiki/Jump_server) (a [jump pod(#jump-pod)).
 
@@ -73,23 +75,23 @@ The tool will use the current user’s kubeconfig and Kubernetes credentials (or
 
 To create a backup file, use the following command:
 
-```shell
+```shell {linenos=false}
 ./mxpc-data-migration backup -n <namespace> -e <environment> -f <file>
 ```
 
-- `-n <namespace>` - the namespace containing the environment
-- `-e <environment>` - the environment to backup
-- `-f <file>` - destination file where the backup should be saved
+* `-n <namespace>` - the namespace containing the environment
+* `-e <environment>` - the environment to backup
+* `-f <file>` - destination file where the backup should be saved
 
 To restore a backup file into your environment, use the following command:
 
-```shell
+```shell {linenos=false}
 ./mxpc-data-migration restore -n <namespace> -e <environment> -f <file>
 ```
 
-- `-n <namespace>` - the namespace containing the environment
-- `-e <environment>` - the environment where the data should be restored
-- `-f <file>` - backup file (in a [Mendix Cloud V4 format](/developerportal/operate/restore-backup/#format-of-backup-file)) that should be restored into the destination environment
+* `-n <namespace>` - the namespace containing the environment
+* `-e <environment>` - the environment where the data should be restored
+* `-f <file>` - backup file (in a [Mendix Cloud format](/developerportal/operate/restore-backup/#format-of-backup-file)) that should be restored into the destination environment
 
 ### 3.3 Running the Data Transfer in a Jump Pod{#jump-pod}
 
@@ -208,10 +210,10 @@ rm /tmp/mendix-backup-restore.yaml
 
 * It is not possible to export/import only the database or only files. The import/export process will always export or import the database together with any files.
 * When exporting data, all files from the bucket will be included. This may include:
-  * files from other environments (in case of a shared bucket),
-  * files deleted from the Mendix app, but which still exist in the bucket.
+    * files from other environments (in case of a shared bucket),
+    * files deleted from the Mendix app, but which still exist in the bucket.
 * The export/import tool needs access to the Kubernetes API to get credentials for a specific environment.
 * If `pg_restore` fails for any reason, the data import process is terminated immediately with an error.
 * It is not possible to configure TLS trust settings.
-  * For PostgreSQL, the tool will try to use SSL, but will trust any server certificate. If the database doesn't support SSL, the tool will switch to an unencrypted connection.
-  * For Minio and S3, TLS will be used if the environment's storage plan has an `https://` endpoint URL.
+    * For PostgreSQL, the tool will try to use SSL, but will trust any server certificate. If the database doesn't support SSL, the tool will switch to an unencrypted connection.
+    * For Minio and S3, TLS will be used if the environment's storage plan has an `https://` endpoint URL.

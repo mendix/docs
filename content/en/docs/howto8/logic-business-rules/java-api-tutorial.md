@@ -1,7 +1,7 @@
 ---
 title: "Use the Java API"
 url: /howto8/logic-business-rules/java-api-tutorial/
-category: "Logic & Business Rules"
+category: "Logic and Business Rules"
 weight: 13
 tags: ["microflow", "logic", "java", "API"]
 ---
@@ -117,7 +117,7 @@ After this, all `Attachments` belonging to one `GenericObject` have been copied 
 * [Trigger a Microflow From a Menu Item](/howto8/logic-business-rules/trigger-microflow-from-menu-item/)
 * [Define Access Rules Using XPath](/howto8/logic-business-rules/define-access-rules-using-xpath/)
 * [Extend Your Application with Custom Java](/howto8/logic-business-rules/extending-your-application-with-custom-java/)
-* [Extract & Use Sub-Microflows](/howto8/logic-business-rules/extract-and-use-sub-microflows/)
+* [Extract and Use Sub-Microflows](/howto8/logic-business-rules/extract-and-use-sub-microflows/)
 * [Optimize Microflow Aggregates](/howto8/logic-business-rules/optimizing-microflow-aggregates/)
 * [Optimize Retrieve Activities](/howto8/logic-business-rules/optimizing-retrieve-activities/)
 * [Set Up Error Handling](/howto8/logic-business-rules/set-up-error-handling/)

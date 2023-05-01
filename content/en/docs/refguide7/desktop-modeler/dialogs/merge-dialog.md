@@ -1,7 +1,6 @@
 ---
 title: "Merge Dialog"
 url: /refguide7/merge-dialog/
-parent: "dialogs"
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
@@ -10,9 +9,7 @@ parent: "dialogs"
 With the **Merge** dialog box you can [merge](/refguide7/version-control/) changes from a branch line to the main line. For example, a fix that you applied in a maintenance branch line can be merged back to the main line so that you do not have to apply the fix by hand again. Also if you completed developing a large feature in a separate branch line you can use merge to incorporate that feature into the main line.
 
 {{% alert color="warning" %}}
-
 Before continuing with the merge action, make sure that you are currently working in the development line that you want to merge to.
-
 {{% /alert %}}
 
 The following merge scenarios are supported:
@@ -41,10 +38,8 @@ Choose the branch line that you want to merge. It is not necessary to select ind
 
 While normally you would only merge (revisions of) a branch line to the main line, the advanced merge scenario offers the possibility to merge from the main line to a branch line, or from one branch line to another.
 
- {{% alert color="warning" %}}
-
+{{% alert color="warning" %}}
 This scenario may be used for merge actions that are only needed in exceptional circumstances. Use this option with caution.
-
 {{% /alert %}}
 
 ### 4.1 Branch Line

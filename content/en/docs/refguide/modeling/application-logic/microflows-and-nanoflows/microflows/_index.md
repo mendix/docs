@@ -1,7 +1,6 @@
 ---
 title: "Microflows"
 url: /refguide/microflows/
-parent: "microflows-and-nanoflows"
 weight: 10
 description: "Presents an overview of all the elements that can be used in a microflow."
 tags: ["studio pro"]
@@ -16,9 +15,9 @@ Microflows run in the runtime server and can therefore not be used in offline ap
 
 This page is a summary of the elements which make up a microflow, together with their visual representation within the microflow. It also covers [keyboard support](#keyboard) when editing microflows.
 
-{{% alert color="info" %}}
-For the properties of the microflow itself, see [Microflow Properties](/refguide/microflow/).
-{{% /alert %}}
+For the properties of the microflow itself, see [Microflow Properties](/refguide/microflow/). For more best practice details, see [Microflow Naming Conventions](/refguide/dev-best-practices/#microflow-naming-conventions), [Microflow General Best Practices](/refguide/dev-best-practices/#microflow-dev-best-practices), and [Microflow Best Practices from the Community](/refguide/community-best-practices-for-app-performance/#microflow-community-best-practices).
+
+For information on using microflows as data sources, see [Microflow Source](/refguide/microflow-source/).
 
 ## 2 Microflow Notation
 
@@ -26,13 +25,13 @@ The graphical notation of microflows is based on the [Business Process Model and
 
 A microflow is composed of elements. Below is a categorized overview of all elements. The following categories are used:
 
-*   [Events](#events) represent start and endpoints of a microflow and special operations in a loop.
-*   [Flows](#flows) form the connection between elements.
-*   [Decisions](#decisions) deal with making choices and merging different paths again.
-*   [Activities](#activities) are the actions that are executed in a microflow.
-*   [Loop](/refguide/loop/) is used to iterate over a list of objects.
-*   [Parameter](#parameter) is data that serves as input for the microflow.
-*   [Annotation](#annotation) is an element that can be used to put comments in a microflow.
+* [Events](#events) represent start and endpoints of a microflow and special operations in a loop.
+* [Flows](#flows) form the connection between elements.
+* [Decisions](#decisions) deal with making choices and merging different paths again.
+* [Activities](#activities) are the actions that are executed in a microflow.
+* [Loop](/refguide/loop/) is used to iterate over a list of objects.
+* [Parameter](#parameter) is data that serves as input for the microflow.
+* [Annotation](#annotation) is an element that can be used to put comments in a microflow.
 
 ### 2.1 Events{#events}
 
@@ -122,5 +121,13 @@ The microflow editor offers keyboard support for navigating and manipulating mic
 
 If you want to see what happens while a microflow is executing, you can use the microflow debugger. See the following how-tos:
 
-*   [Debugging Microflows and Nanoflows](/howto/monitoring-troubleshooting/debug-microflows-and-nanoflows/)
-*   [Debugging Microflows Remotely](/howto/monitoring-troubleshooting/debug-microflows-remotely/)
+* [Debugging Microflows and Nanoflows](/refguide/debug-microflows-and-nanoflows/)
+* [Debugging Microflows Remotely](/refguide/debug-microflows-remotely/)
+
+## 5 Converting a Microflow to a Nanoflow {#convert-to-nanoflow}
+
+To convert a microflow to a nanoflow, you have two options. The first option is to right-click anywhere in the microflow editor and select **Convert to nanoflow**. Alternatively, in the **App Explorer**, right-click on the name of the microflow you want to convert, and select **Convert to nanoflow**.
+
+{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/microflows/convert-to-nanoflow.PNG" alt="Convert to nanoflow" width="550px" >}}
+
+A new nanoflow is created and added to the same directory, and you can get consistency errors if there are actions that are not supported by nanoflows.

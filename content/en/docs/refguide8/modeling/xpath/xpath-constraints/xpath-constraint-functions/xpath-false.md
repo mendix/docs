@@ -1,7 +1,6 @@
 ---
 title: "XPath False"
 url: /refguide8/xpath-false/
-parent: "xpath-constraint-functions"
 tags: ["studio pro"]
 ---
 

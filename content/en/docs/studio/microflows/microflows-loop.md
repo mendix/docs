@@ -15,7 +15,7 @@ The loop is visualized as a frame. The flow inside the loop is executed for each
 
 {{< figure src="/attachments/studio/microflows/microflows-loop/loop.png" >}}
 
-The loop can contain all types of elements used in microflows, except for start and end events. Additionally, only a loop can contain [break events](/refguide/break-event/) and [continue events](/refguide/continue-event/). A break event is used in loops only to stop iterating over a list of objects and continue with the rest of the flow in a microflow. A continue event is used in loops only to stop the current iteration and start the iteration of the next object.
+The loop can contain all types of elements used in microflows, except for start and end events. Additionally, only a loop can contain [break events](/refguide9/break-event/) and [continue events](/refguide9/continue-event/). A break event is used in loops only to stop iterating over a list of objects and continue with the rest of the flow in a microflow. A continue event is used in loops only to stop the current iteration and start the iteration of the next object.
 
 ## 2 Loop Properties
 
@@ -23,9 +23,9 @@ Loop properties consists of the **Data Source** section and are described below:
 
 * **Loop Over** – a variable that is a list of items you will loop through
 
-*  **Loop Variable Name** – refers to the name of the list item that is currently being worked on
+* **Loop Variable Name** – refers to the name of the list item that is currently being worked on
 
-	{{< figure src="/attachments/studio/microflows/microflows-loop/loop-properties.png" alt="Data Source Properties of a Loop"   width="350"  >}}
+    {{< figure src="/attachments/studio/microflows/microflows-loop/loop-properties.png" alt="Data Source Properties of a Loop"   width="350"  >}}
 
 ## 3 Configuring a Loop {#loop-example}
 
@@ -42,18 +42,16 @@ Make sure you have the following prerequisites:
 To configure a loop, do the following:
 
 1. Open a microflow you want to add a loop to.
-
 2. First of all, you need to get the list of orders to loop over. Do the following: 
 
-    1. In the **Toolbox**, select **Retrieve**, drag and drop it to the microflow. 
-
+    1. In the **Toolbox**, select **Retrieve**, drag it into the microflow. 
     2. In **Properties** > the **Data Source** section, select **From Database**, and set *Order* as an entity for this activity. (The **Range** property is set to **All** by default): 
 
         {{< figure src="/attachments/studio/microflows/microflows-loop/retrieve-properties.png" alt="Retrieve Object Properties"   width="350"  >}}
 
 3. As you have retrieved the list of orders you can work on, you now need to create a loop and logic for it. Do the following: 
 
-    1. In the **Toolbox**, select **Loop**, drag and drop it to the microflow. 
+    1. In the **Toolbox**, select **Loop**, drag it into the microflow. 
 
         {{< figure src="/attachments/studio/microflows/microflows-loop/loop-added.png" alt="Loop is Added" >}}
 
@@ -63,10 +61,8 @@ To configure a loop, do the following:
 
 4. Now you can add the activity that will change the status of each order to *Processed*. This means that the activities you add inside the loop will be performed on each object (each order). Do the following:
 
-    1. In the **Toolbox**, select **Change Object**, drag and drop it inside the loop .
-
+    1. In the **Toolbox**, select **Change Object**, drag it into the loop .
     2. In **Properties** > the **Data Source** section for the **Change Object** activity, set **Object** to **Order**.
-
     3. When the **Change Members** option appears, click **Add New Value**.
 
         {{< figure src="/attachments/studio/microflows/microflows-loop/change-object-properties.png" alt="Change Object Properties in Loop Example" >}}
@@ -75,9 +71,9 @@ To configure a loop, do the following:
 
     1. Set **Select an Attribute or Association** to **Processed (Boolean)**.
     2. Set the **New value** of this attribute to *true*.
-    
+
         {{< figure src="/attachments/studio/microflows/microflows-loop/change-value-dialogue-example.png" alt="Example of Change Value Dialog Window" >}}
-    
+
     3. Click **Add** to save the changes. 
 
 As a result, you have a list of orders retrieved to your microflow, and a loop that iterates over this list. The activity inside the loop sets the status of each order to processed. 

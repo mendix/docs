@@ -1,7 +1,6 @@
 ---
 title: "Date Picker"
 url: /refguide7/date-picker/
-parent: "input-widgets"
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
@@ -87,5 +86,5 @@ The placeholder text is shown if the date attribute is empty. It can be used to 
 
 ## 9 Read More
 
-*   [Data View](/refguide7/data-view/)
-*   [Attributes](/refguide7/attributes/)
+* [Data View](/refguide7/data-view/)
+* [Attributes](/refguide7/attributes/)

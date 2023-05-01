@@ -2,7 +2,6 @@
 title: "Mendix Cloud HTTP Request Headers"
 linktitle: "HTTP Request Headers"
 url: /developerportal/deploy/mendix-cloud-request-headers/
-parent: "mendix-cloud-deploy"
 weight: 36
 description: "Describes which HTTP request headers are available in the Mendix Cloud."
 tags: ["Deploy", "Mendix Cloud", "headers", "HTTP Request Headers", "X-Real-IP", "SSL-Protocol", "SSL-Cipher", "SSL-Client-S-DN"]
@@ -40,5 +39,7 @@ The following headers are set by the Mendix Cloud. If any of these are present i
 | **SSL-Protocol**                            | `TLSv1.3`, `TLSv1.2`, `TLSv1.1`, `TLSv1`                     | The TLS encryption protocol used for the HTTPS connection. |
 | **SSL-Cipher**                              | `ECDHE-RSA-AES256-GCM-SHA384`                                | The TLS ciphers used for the HTTPS connection. |
 | **SSL-Client-S-DN**                         | `CN=Hans van Kranenburg,OU=RnD,O=Mendix,C=NL`                | The Subject DN string of the client certificate for an established TLS connection according to [RFC 2253](https://tools.ietf.org/html/rfc2253). |
+| **SSL-Client-Fingerprint**                  | `74e034c13a38003b433605f5a13062eb816e467e`                   | The SHA1 fingerprint of the client certificate for an established TLS connection. |
+| **SSL-Client-Serial**                       | `02`                                                         | The serial number of the client certificate for an established TLS connection. |
 
 There may be additional headers set by the Mendix Cloud, which are not documented in the list above. The presence of these headers, and the values they have, must not be relied on. They are for internal use only and are not subject to the deprecation handling described below.

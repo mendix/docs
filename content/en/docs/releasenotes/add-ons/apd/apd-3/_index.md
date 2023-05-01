@@ -1,7 +1,6 @@
 ---
 title: "3"
 url: /releasenotes/add-ons/apd-3/
-parent: "apd"
 weight: 1
 no_list: false
 simple_list: true

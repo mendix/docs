@@ -1,5 +1,6 @@
 ---
 title: "Scaffold a Widget with the Yeoman Widget Generator"
+linktitle: "Scaffold Widget with Yeoman"
 url: /howto7/widget-development/scaffold-a-widget-with-the-yeoman-widget-generator/
 category: "Widget Development"
 tags: ["widget", "develop widget", "scaffold", "yeoman"]
@@ -92,7 +93,7 @@ To update the widget, press **F4** in the Modeler or select **Project** > **Sync
 
 The `grunt build` will clean your */dist/* and */test/widgets/* folders and will only destroy your custom widget. It will place a new one, built from the */src/* folder.
 
-## 5 Troubleshooting<a name="Troubleshooting"></a>
+## 5 Troubleshooting {#Troubleshooting}
 
 ### 5.1 Installing Dependencies Results in Errors
 
@@ -121,4 +122,3 @@ The solution is to go to the `WidgetName` element and replace it with your own w
 3. Remove `WidgetName`.
 
 Repeat these steps for all five of the errors.
-

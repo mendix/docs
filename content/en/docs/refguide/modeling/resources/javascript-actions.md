@@ -1,7 +1,6 @@
 ---
 title: "JavaScript Actions"
 url: /refguide/javascript-actions/
-parent: "resources"
 weight: 20
 description: "This reference guide details the ways JavaScript Actions can extend the functionality of your Mendix app."
 tags: ["javascript", "javascript action", "parameter", "studio pro"]
@@ -90,7 +89,7 @@ The return parameter type determines the type of data a JavaScript action return
 JavaScript actions can be for a specific platform, they have an optional platform property with the following values:
 
 * All *(default)*
-* Web – can be used in a browser or hybrid mobile app
+* Web – can be used in a browser or web app
 * Native – can be used in a native mobile app
 
 When using a JavaScript action for a specific platform in a nanoflow, it will restrict the platform for that nanoflow. For example, only native pages can be opened in a nanoflow that contains a JavaScript action where the platform is set to **Native**.

@@ -1,7 +1,6 @@
 ---
 title: "Debug Native Mobile Apps (Advanced)"
 url: /howto8/mobile/native-debug/
-parent: "build-native-apps"
 weight: 40
 description: A how-to for debugging native mobile apps using the Make It Native app.
 tags: ["native", "mobile", "debug", "Make It Native"]
@@ -24,7 +23,7 @@ To start a debugging session, do the following:
 When the Make It Native app finishes loading your app, do the following:
 
 1. Open the developer menu by using a three-finger long press.
-2.  Tap **Enable Remote js Debugging**.
+2. Tap **Enable Remote js Debugging**.
 
 Your mobile app should start reloading, and a Chrome window should launch on your desktop pointing to a debugging address. Change the address in your browser's navigation bar to *localhost:8083/debugger-ui* manually and go to that page.
 
@@ -58,10 +57,10 @@ Open your native app in iOS Simulator or Android emulator and then do the follow
 
 1. Select **Enable dev mode** on your native app.
 2. Run `npx react-devtools@^3`.
-3.  React Developer Tools will launch and connect to Simulator. You can now inspect and modify the React Native elements the same way you could modify HTML elements in Chrome:
+3. React Developer Tools will launch and connect to Simulator. You can now inspect and modify the React Native elements the same way you could modify HTML elements in Chrome:
 
-	{{< figure src="/attachments/howto8/mobile/native-mobile/build-native-apps/native-debug/simulator-rn-dev.png" alt="debug simulator"   width="350"  >}}
-	
+    {{< figure src="/attachments/howto8/mobile/native-mobile/build-native-apps/native-debug/simulator-rn-dev.png" alt="debug simulator"   width="350"  >}}
+
 4. In the Make It Native App, use a three-finger tap to **Toggle Element Inspector** and enable enhanced inspection capabilities.
 
 #### 2.1.2 Debugging with the Make It Native App
@@ -75,7 +74,7 @@ To use the Make It Native app with React Developer Tools, do the following:
 5. Run `adb reverse tcp:8097 tcp:8097` to allow the applet to interact  with your device.
 6. React Developer Tools will launch and connect to your device. You can now inspect and modify the React Native elements the same way you could modify HTML elements in Chrome:
 
-	{{< figure src="/attachments/howto8/mobile/native-mobile/build-native-apps/native-debug/min-app-rn-devtools.png" alt="debug min app"   width="350"  >}}
+    {{< figure src="/attachments/howto8/mobile/native-mobile/build-native-apps/native-debug/min-app-rn-devtools.png" alt="debug min app"   width="350"  >}}
 
 ## 3 Debugging Your Styling
 
@@ -107,10 +106,10 @@ The first approach is self-explanatory. For information on getting log files dir
 
 The Android Debug Bridge (ADB) can get the log files via command line (specifically logcat) by following these steps:
 
-1.  Set up your phone:<br />
-	a. If not already, enable **Developer Mode** by opening **Settings** > **System** and tap 7 times om the **Build Number**.<br />
-	b. In **Settings** open the **Developer Options**.<br />
-	c. Enable **USB Debugging**.
+1. Set up your phone:<br />
+    1. If not already, enable **Developer Mode** by opening **Settings** > **System** and tap 7 times om the **Build Number**.<br />
+    1. In **Settings** open the **Developer Options**.<br />
+    1. Enable **USB Debugging**.
 1. Download the [Latest Android Tools](https://dl.google.com/android/repository/platform-tools-latest-windows.zip) for Windows.
 1. Unzip the files in a working directory, for example **C:\adb**.
 1. Open a command line tool the in the working directory.

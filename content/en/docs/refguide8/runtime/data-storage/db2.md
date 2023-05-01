@@ -1,7 +1,6 @@
 ---
 title: "DB2"
 url: /refguide8/db2/
-parent: "data-storage"
 weight: 40
 tags: ["studio pro"]
 ---

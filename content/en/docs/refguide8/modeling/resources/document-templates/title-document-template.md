@@ -1,7 +1,6 @@
 ---
 title: "Title (Document Template)"
 url: /refguide8/title-document-template/
-parent: "document-templates"
 tags: ["studio pro"]
 aliases:
     - /refguide8/title-(document-template).html
@@ -32,4 +31,3 @@ For details, see [Style](/refguide8/style/).
 ## 3 Common Properties
 
 {{% snippet file="/static/_includes/refguide8/name-property.md" %}}
-

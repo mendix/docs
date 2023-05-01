@@ -1,7 +1,6 @@
 ---
 title: "Footer (Document Template)"
 url: /refguide7/footer-document-template/
-parent: "document-templates"
 aliases:
     - /refguide7/Footer+(document+template).html
     - /refguide7/footer-(document-template).html

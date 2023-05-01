@@ -1,7 +1,6 @@
 ---
 title: "OQL Parameters"
 url: /refguide8/oql-parameters/
-parent: "oql-expressions"
 tags: ["studio pro"]
 ---
 

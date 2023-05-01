@@ -2,7 +2,6 @@
 title: "Scheduled Events"
 url: /refguide7/scheduled-events/
 category: "Desktop Modeler"
-#menu_order: 
 description: "Options for configuring scheduled events"
 tags: ["Scheduled Event", "Execution properties", "Timing", "intervals", "scheduling issues", "time zones", "daylight saving"]
 ---
@@ -102,7 +101,7 @@ parseInteger( formatDateTime( [%CurrentDateTime%], 'dd') ) = 15
 // This will run the scheduled event on the 1th and 15th of the month
 ```
 
-Or as [Herbert Vujik](https://mxforum.mendix.com/questions/6934/How-are-monthly-Scheduled-Events-planned#10518) suggests, use this expression for running it on the last day of the month:
+Or as [Herbert Vujik](https://forum.mendix.com/link/questions/6934) suggests, use this expression for running it on the last day of the month:
 
 ```java
 formatDateTime([%CurrentDateTime%], 'dd') = formatDateTime([%EndOfCurrentMonth%], 'dd') 
@@ -112,6 +111,6 @@ In addition to Monthly scheduled events, you also want to be careful when schedu
 
 Whenever you set up an event to run every day at a certain time, it will start at exactly the specified time. However, after this it will run at a fixed interval (internally this is calculated back to run every X nanoseconds). This means that a daily event runs every 24 hours. Therefore, if the time changes because of daylight saving, your event **could** be an hour off.
 
-But this is only applicable depending on the locale (timezone) your server is hosted in. No matter what option you pick from your perspective, if you are in a country that adapts daylight savings, you will notice the scheduled event run an hour off schedule. When scheduling an event to start at a certain UTC time, the platform technically won't have a problem, because UTC doesn't know daylight saving. However your users will still experience the event to run at a different hour.
+But this is only applicable depending on the locale (time zone) your server is hosted in. No matter what option you pick from your perspective, if you are in a country that adapts daylight savings, you will notice the scheduled event run an hour off schedule. When scheduling an event to start at a certain UTC time, the platform technically won't have a problem, because UTC doesn't know daylight saving. However your users will still experience the event to run at a different hour.
 
 Unfortunately there isn't a great workaround for this issue. You could create a similar solution as described above. This can be done with the same type of expressions, except instead of using date format expression 'dd', you should use 'HH' (0-23 hours), or 'kk' (1-24 hours).

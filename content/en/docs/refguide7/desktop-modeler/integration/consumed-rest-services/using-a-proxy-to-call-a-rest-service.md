@@ -1,7 +1,6 @@
 ---
 title: "Using a Proxy to Call a REST Service"
 url: /refguide7/using-a-proxy-to-call-a-rest-service/
-parent: "consumed-rest-services"
 ---
 
 In some cases you will be stuck behind a firewall and thus unable to call a REST service directly. This document shows you how to configure your app to use a proxy to call such services.

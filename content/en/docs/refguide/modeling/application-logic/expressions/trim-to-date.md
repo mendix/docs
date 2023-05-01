@@ -1,7 +1,6 @@
 ---
 title: "Trim to Date"
 url: /refguide/trim-to-date/
-parent: "expressions"
 weight: 120
 tags: ["studio pro", "trim to date", "expression", "expressions"]
 ---
@@ -154,7 +153,7 @@ The output is:
 
 This function is used to trim the date to months, rounding off all days to zero.
 
-`trimToMonths` uses the user's timezone and `trimToMonthsUTC` uses the UTC timezone.
+`trimToMonths` uses the user's time zone and `trimToMonthsUTC` uses the UTC time zone.
 
 ### 6.1 Input Parameters
 

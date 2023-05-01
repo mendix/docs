@@ -1,7 +1,6 @@
 ---
 title: "Drop-Down"
 url: /refguide/drop-down/
-parent: "input-widgets"
 weight: 30
 tags: ["Drop-down", "input", "page", "widget", "enumeration", "studio pro"]
 aliases:
@@ -14,7 +13,7 @@ aliases:
 
 A **drop-down** is used to display and, optionally, allow the end-user to edit the value of an attribute of [data type](/refguide/data-types/) *enumeration*.
 
-A drop-down must be placed in a [data widget](/refguide/data-widgets/) and displays an attribute of the object(s) retrieved by that widget. The name of the attribute to be displayed is shown inside the drop-down, between square brackets, and colored blue.
+A drop-down must be placed in a [data container](/refguide/data-widgets/) and displays an attribute of the object(s) retrieved by that container. The name of the attribute to be displayed is shown inside the drop-down, between square brackets, and colored blue.
 
 {{% alert color="info" %}}
 A drop-down should not be confused with a [reference selector](/refguide/reference-selector/), which is used to select an [association](/refguide/associations/) to another object.
@@ -106,5 +105,5 @@ For example, the drop-down that allows the end-user to select the region allocat
 
 ## 3 Read More
 
-*   [Data View](/refguide/data-view/)
-*   [Attributes](/refguide/attributes/)
+* [Data View](/refguide/data-view/)
+* [Attributes](/refguide/attributes/)

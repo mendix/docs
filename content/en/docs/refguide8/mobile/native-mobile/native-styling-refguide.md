@@ -1,7 +1,6 @@
 ---
 title: "Native Mobile Styling"
 url: /refguide8/native-styling-refguide/
-parent: "native-mobile"
 weight: 20
 description: "This reference guide will contextualize the style elements Mendix uses in native mobile apps, as well as explain the classes and style properties of Mendix’s widgets."
 tags: ["Native", "Class", "Design", "Property", "Style", "Widget", "studio pro"]
@@ -325,7 +324,7 @@ The widget’s style properties are structured as follows:
 | `container` | This has all ViewStyle properties.   |   |
 | `containerDisabled` | Same properties as `container` | Overrides `container` styles if the text box is non-editable. |
 | `input` | This has all TextStyle properties. |  |
-| `input` | `autoCapitalize` | This automatically capitalizes certain characters when the user types:<br><br>* `characters`: capitalizes all characters<br>* `words`: capitalizes the first letter of each word<br>* `sentences`: capitalizes the first letter of each sentence (default)<br>* `none`: capitalizes nothing |
+| `input` | `autoCapitalize` | This automatically capitalizes certain characters when the user types:<br><br>*`characters`: capitalizes all characters<br>* `words`: capitalizes the first letter of each word<br>*`sentences`: capitalizes the first letter of each sentence (default)<br>* `none`: capitalizes nothing |
 | `input` | `placeholderTextColor` | This is the text color of the placeholder string. |
 | `input` | `selectionColor` | This is the highlight and cursor color of the text input. |
 | `input` | `underlineColorAndroid` | This is the color of the `input` underline. |
@@ -609,7 +608,7 @@ The navigation style properties are as follows:
 | `bottomBar` | `container` | This has all ViewStyle properties. |
 | `bottomBar` | `label` | This has all TextStyle properties. |
 | `bottomBar` | `selectedLabel` | This has all TextStyle properties. |
-| `bottomBar` | `icon` | This has all ViewStyle properties. |
+| `bottomBar` | `icon` | This has all TextStyle properties. |
 | `bottomBar` | `selectedIcon` | This has all ViewStyle properties. |
 | `progressOverlay` | `background` | This has all ViewStyle properties. |
 | `progressOverlay` | `container` | This has all ViewStyle properties. |
@@ -1143,11 +1142,11 @@ The bottom sheet widget creates a set of options while blocking interaction with
 
 * Modal bottom sheet:
 
-	{{< figure src="/attachments/refguide8/mobile/native-mobile/native-styling-refguide/modal-bottom-sheet.gif" alt="modal bottom sheet"   width="350"  >}}
+    {{< figure src="/attachments/refguide8/mobile/native-mobile/native-styling-refguide/modal-bottom-sheet.gif" alt="modal bottom sheet"   width="350"  >}}
 
 * Expanding bottom sheet:
 
-	{{< figure src="/attachments/refguide8/mobile/native-mobile/native-styling-refguide/expanding-bottom-sheet.gif" alt="expanding bottom sheet"   width="350"  >}}
+    {{< figure src="/attachments/refguide8/mobile/native-mobile/native-styling-refguide/expanding-bottom-sheet.gif" alt="expanding bottom sheet"   width="350"  >}}
 
 The widget’s style properties are as follows:
 
@@ -1232,7 +1231,6 @@ A main object has four objects.
 | dangerStyle |  This has all TextStyle properties.                 | Styles all basic menu items which have the `danger` style selected.                                  |
 | customStyle |  This has all TextStyle properties.                 | Styles all basic menu items which have the `custom` style selected.                                  |
 
-
 #### CustomItemStyle
 
 | Element                   | Style Properties |  Description                                      |
@@ -1279,7 +1277,7 @@ The widget’s style properties are as follows:
 
 Main object has to have three objects called `container`, `cardLayout`, and `fullWidthLayout`. `cardLayout` and `fullWidthLayout` will be applied automatically depending on selected layout in widget properties.
 
-```
+```text
 export myCarouselStyle = {
     container: ViewStyle  //
     cardLayout: ...LayoutStyle,

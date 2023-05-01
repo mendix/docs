@@ -1,7 +1,6 @@
 ---
 title: "To string"
 url: /refguide7/to-string/
-parent: "expressions"
 ---
 
 

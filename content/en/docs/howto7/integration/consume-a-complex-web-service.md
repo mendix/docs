@@ -37,11 +37,11 @@ To import a web service using the wizard, follow these steps:
     {{< figure src="/attachments/howto7/integration/consume-a-complex-web-service/18581787.png" >}}
 
 3. On the **Import Web Service** dialog box, select **Create new imported web service** and click **Next**.
-4.  For **WSDL source** in the **Web service Description** section of the **New Web Service Operation** dialog box, select the WSDL to be used for this imported web service. You can either use a **URL** (for example, http://webservices.oorsprong.org/websamples.countryinfo/CountryInfoService.wso?WSDL) or load a **file** from your computer.
+4. For **WSDL source** in the **Web service Description** section of the **New Web Service Operation** dialog box, select the WSDL to be used for this imported web service. You can either use a **URL** (for example, http://webservices.oorsprong.org/websamples.countryinfo/CountryInfoService.wso?WSDL) or load a **file** from your computer.
 
     {{< figure src="/attachments/howto7/integration/consume-a-complex-web-service/18581785.png" >}}
 
-5.  Click **Next** to fetch the services and operations in the WSDL.
+5. Click **Next** to fetch the services and operations in the WSDL.
 
     {{< figure src="/attachments/howto7/integration/consume-a-complex-web-service/port.png" >}}
 
@@ -79,13 +79,12 @@ To import a web service directly, follow these steps:
 
 1. Right-click a module and select **Add Other** > **Consumed web service**.
 2. Add a name for the new consumed web service.
-3.  In the **Consumed Web Service** wizard, on the **General** tab, enter the WSDL to be used for this imported web service. You can use a **URL** or load a **File** from your computer.
+3. In the **Consumed Web Service** wizard, on the **General** tab, enter the WSDL to be used for this imported web service. You can use a **URL** or load a **File** from your computer.
 
     {{< figure src="/attachments/howto7/integration/consume-a-complex-web-service/18581780.png" >}}
 
-
-3. Click **Import** to fetch the services and operations in the WSDL.
-4. Review the **Services** and **Operations** available to the imported web service:
+4. Click **Import** to fetch the services and operations in the WSDL.
+5. Review the **Services** and **Operations** available to the imported web service:
 
     {{< figure src="/attachments/howto7/integration/consume-a-complex-web-service/18581779.png" >}}
 
@@ -99,11 +98,7 @@ To configure the web service call, follow these steps:
 
     {{< figure src="/attachments/howto7/integration/consume-a-complex-web-service/18581778.png" >}}
 
-    {{% alert color="info" %}}
-
-    Make sure the microflow either creates the variables required as arguments for the web service call or has those passed to it.
-
-    {{% /alert %}}
+    {{% alert color="info" %}}Make sure the microflow either creates the variables required as arguments for the web service call or has those passed to it.{{% /alert %}}
 
 2. If you are creating your own microflow, add the Call Web Service activity to the microflow. For details on how to add activities to microflows, see [Activities](/refguide7/activities/) in the Mendix Reference Guide.
 3. Double-click the activity to open the **Call Web Service** wizard and in the **Operation** section, click **Select...** for **Operation**.
@@ -115,7 +110,7 @@ To configure the web service call, follow these steps:
     * Use the **Simple** option if the imported web service requires only primitive arguments:
 
         {{< figure src="/attachments/howto7/integration/consume-a-complex-web-service/18581791.png" >}}
-    
+
     * Use the **Export mappings for each request parameter** or **Export mapping for the entire request** options if the domain model entities need to be mapped to XML elements
     * Use the **Custom** option for the definition of a custom XML body with parameters:
 
@@ -133,9 +128,9 @@ To configure the web service call, follow these steps:
     * If the return is a primitive, you can store it in a variable that you can name in the **Store in variable** field:
 
         {{< figure src="/attachments/howto7/integration/consume-a-complex-web-service/18581789.png" >}}
-        
+
     * If you want to ignore the return, select the **Ignore** option
-8.  Your imported web service is now ready to be used in your application.
+8. Your imported web service is now ready to be used in your application.
 
 ## 5 Read More
 

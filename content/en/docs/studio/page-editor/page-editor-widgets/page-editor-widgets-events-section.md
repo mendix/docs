@@ -1,7 +1,6 @@
 ---
 title: "Events Section"
 url: /studio/page-editor-widgets-events-section/
-parent: "page-editor-widgets"
 weight: 70
 description: "Describes the Events section in widgets properties in Mendix Studio."
 tags: ["studio", "page editor", "widgets", "on click action", "events"]
@@ -132,22 +131,17 @@ The following properties are specific for this action:
 
 * **Link Type** – specifies the action the link performs. Possible values for **Link Type** are the following: 
 
-  * **Web** – Navigates to a website.
+    * **Web** – Navigates to a website.
+    * **Email** – Composes an email.
+    * **Phone Call** – Starts a phone call.
+    * **Text Message** – Sends a text message.
 
-  * **Email** – Composes an email.
-
-  * **Phone Call** – Starts a phone call.
-
-  * **Text Message** – Sends a text message.
-
-    {{% alert color="info" %}}When you configure **Email**, **Phone Call** or **Message** options, the corresponding default app will be opened on the device when the action is triggered, for example, the default email client will be opened to compose a message.
-    
-    {{%/alert %}}
+    {{% alert color="info" %}}When you configure **Email**, **Phone Call** or **Message** options, the corresponding default app will be opened on the device when the action is triggered, for example, the default email client will be opened to compose a message.{{%/alert %}}
 
 * **Source** – Depends on the chosen link type and whether you want to use a literal value or to use the value of an attribute. Possible values for **Source** are the following:
 
-  * **Use literal value** – You can fill a value out (Specify **Url** for **Web**, **Recipient** for **Email**, and **Phone Number** for **Phone Cal**l and **Message**).
-  * **Use attribute** – If you select **Database**>**Entity** as a data source for the list view,  you can choose the attribute of a string type that belongs to the entity or create a new one (when the **Use attribute** option is configured, you do not need to fill out any information manually, it will be updated dynamically).
+    * **Use literal value** – You can fill a value out (Specify **Url** for **Web**, **Recipient** for **Email**, and **Phone Number** for **Phone Cal**l and **Message**).
+    * **Use attribute** – If you select **Database**>**Entity** as a data source for the list view,  you can choose the attribute of a string type that belongs to the entity or create a new one (when the **Use attribute** option is configured, you do not need to fill out any information manually, it will be updated dynamically).
 
 ### 2.13 Delete Object Action {#delete-object-action}
 
@@ -160,7 +154,6 @@ If you place the **Delete Object** in a list view, the corresponding list view i
 For example, you have a page with a list view showing customer names. A **Delete** button is placed inside the list next to each name. Thus, if you click **Delete** in a line that says "Peter", this customer and all customer's details will be deleted. 
 
 {{< figure src="/attachments/studio/page-editor/page-editor-widgets/page-editor-widgets-events-section/list-view-delete.png"   width="350"  >}}
-
 
 #### 2.13.2 Delete Object Action in a Data View
 

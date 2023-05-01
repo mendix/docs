@@ -1,7 +1,6 @@
 ---
 title: "Open App"
 url: /refguide/open-app-dialog/
-parent: "file-menu"
 weight: 20
 description: "Describes the Open App flow and the Open App dialog box"
 tags: ["studio pro", "open app"]

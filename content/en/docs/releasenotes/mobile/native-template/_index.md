@@ -3,15 +3,16 @@ title: "Native Template"
 url: /releasenotes/mobile/native-template/
 category: "Mobile"
 weight: 12
-toc-level: 1
 description: "Native Template release notes."
 ---
 
-For more information on native mobile app development, see the [native-template](https://github.com/mendix/native-template/) repository and [How to Deploy Your First Mendix Native Mobile App](/howto/mobile/deploying-native-app/). Below you can see the current versions in active development and which Mendix Studio Pro versions they correspond with.
+
+For more information on native mobile app development, see the [native-template](https://github.com/mendix/native-template/) repository and [Deploy Your First Mendix Native Mobile App](/refguide9/mobile/distributing-mobile-apps/building-native-apps/deploying-native-app/) guide. Below you can see the current versions in active development and which Mendix Studio Pro versions they correspond with.
 
 Compatible with Studio Pro 9:
 
-* Native Template versions of [6](/releasenotes/mobile/nt-6-rn/) are compatible with apps built using Studio Pro [9.0](/releasenotes/studio-pro/9.0/) and above. 
+* Native Template versions of [7](/releasenotes/mobile/nt-7-rn/) are compatible with apps built using Studio Pro [9.24](/releasenotes/studio-pro/9.24/) and above. 
+* Native Template versions of [6](/releasenotes/mobile/nt-6-rn/) are compatible with apps built using Studio Pro [9.0](/releasenotes/studio-pro/9.0/)-[9.23](/releasenotes/studio-pro/9.23/). 
 
 Compatible with Studio Pro 8:
 

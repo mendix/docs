@@ -1,7 +1,6 @@
 ---
 title: "Input Element Widgets"
 url: /studio7/page-editor-widgets-input-elements/
-parent: "page-editor-widgets"
 description: "Describes input widgets in Mendix Studio."
 weight: 20
 tags: ["studio", "page editor", "input widgets", "widgets"]
@@ -77,7 +76,7 @@ Specific properties of the input elements are described in the table below:
 | Input Element | Property           | Description                                                  |
 | ------------- | ------------------ | ------------------------------------------------------------ |
 | Text Area     | Grow Automatically | When enabled, the text area grows automatically depending on the amount if text filled out in it. <br />*This property is disabled by default.* |
-| Text Area     | Number of Lines    | This property is only displayed when the **Grow Automatically** option is disabled.  The number of lines determine how many lines the text area shows at the same time. If the text in the text area contains more lines you will have to use a scrollbar to see it all. <br />Default value for the **Number of Lines** option: 5 |
+| Text Area     | Number of Lines    | This property is only displayed when the **Grow Automatically** option is disabled.  The number of lines determine how many lines the text area shows at the same time. If the text in the text area contains more lines you will have to use a scroll bar to see it all. <br />Default value for the **Number of Lines** option: 5 |
 | Radio Buttons | Orientation        | This property defines whether the radio buttons are displayed in your app horizontally or vertically. <br />Default value for **Orientation**: Horizontal. |
 
 ## 4 Input Validation Section
@@ -91,7 +90,7 @@ The **Input Validation** section properties are described in the table below:
 | Property                                 | Description                                                  |
 | ---------------------------------------- | ------------------------------------------------------------ |
 | Validation Type                          | This property indicates whether a value filled in a widget should be validated. Possible options are the following:<br /><ul><li>**None** – a value is not required, the widget can be left empty</li><li>**Required** – the widget cannot be empty, end-users need to fill a value in it</li><li>**Custom** – can be set only in Studio Pro. However, if a custom validation has been set in Studio Pro, you can specify or change a [message](#validation-message) for the custom validation</li></ul> |
-| <a name="validation-message"></a>Message | A message that is shown to end-users when **Validation Type** is **Required** or **Custom** and when the validation has failed. |
+| <a id="validation-message"></a>Message | A message that is shown to end-users when **Validation Type** is **Required** or **Custom** and when the validation has failed. |
 
 ## 5 Design Section {#input-elements-design}
 

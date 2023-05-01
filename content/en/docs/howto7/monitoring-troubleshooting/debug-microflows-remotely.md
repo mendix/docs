@@ -1,7 +1,7 @@
 ---
 title: "Debug Microflows Remotely"
 url: /howto7/monitoring-troubleshooting/debug-microflows-remotely/
-category: "Monitoring & Troubleshooting"
+category: "Monitoring and Troubleshooting"
 weight: 3
 tags: ["monitoring", "troubleshooting", "debug", "microflow", "remote"]
 ---
@@ -36,8 +36,7 @@ Debugging in production is not recommended. However, if you are debugging in the
 
 {{% /alert %}}
 
-<a name="EnablingDebuggingintheCloud"></a>
-### 3.1 Enabling Debugging in the Cloud
+### 3.1 Enabling Debugging in the Cloud {#EnablingDebuggingintheCloud}
 
 1. Open your browser, go to the [Developer Portal](http://sprintr.home.mendix.com), and log in with your Mendix ID.
 
@@ -65,7 +64,7 @@ Once you have the unique URL and password, there are two methods for connecting 
 
 {{% alert color="warning" %}}
 
-If you do not see an overview similar to the one below, then you do not have sufficient cloud permissions to deploy packages into the cloud or to debug in the cloud. Contact the technical contact or the project Scrum Master in your project to get sufficient permissions.
+If you do not see an overview similar to the one below, then you do not have sufficient cloud permissions to deploy packages into the cloud or to debug in the cloud. Contact the Technical Contact or the project Scrum Master in your project to get sufficient permissions.
 
 {{% /alert %}}
 

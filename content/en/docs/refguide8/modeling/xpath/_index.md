@@ -19,11 +19,11 @@ XPath queries can be written both in Studio Pro, for example when you want to sp
 
 Examples of XPath queries are:
 
-*   `//Sales.Customer`
+* `//Sales.Customer`
     Retrieve all customers.
-*   `//Sales.Customer[Name='Jansen']`
+* `//Sales.Customer[Name='Jansen']`
     Retrieve all customers with name 'Jansen'.
-*   `avg(//Sales.Order[IsPaid = true()]/TotalPrice)`
+* `avg(//Sales.Order[IsPaid = true()]/TotalPrice)`
     Retrieve the average of the total prices of all paid orders.
 
 {{% alert color="warning" %}}
@@ -67,21 +67,21 @@ For details, see [XPath Operators](/refguide8/xpath-operators/).
 The following XPath functions are available:
 
 * [XPath functions](/refguide8/xpath-query-functions/):
-	* [avg](/refguide8/xpath-avg/)
-	* [count](/refguide8/xpath-count/)
-	* [max](/refguide8/xpath-max/)
-	* [min](/refguide8/xpath-min/)
-	* [sum](/refguide8/xpath-sum/)
+    * [avg](/refguide8/xpath-avg/)
+    * [count](/refguide8/xpath-count/)
+    * [max](/refguide8/xpath-max/)
+    * [min](/refguide8/xpath-min/)
+    * [sum](/refguide8/xpath-sum/)
 * [Constraint functions](/refguide8/xpath-constraint-functions/):
-	* [contains](/refguide8/xpath-contains/)
-	* [starts-with](/refguide8/xpath-starts-with/)
-	* [ends-with](/refguide8/xpath-ends-with/)
-	* [not](/refguide8/xpath-not/)
-	* [true](/refguide8/xpath-true/)
-	* [false](/refguide8/xpath-false/)
+    * [contains](/refguide8/xpath-contains/)
+    * [starts-with](/refguide8/xpath-starts-with/)
+    * [ends-with](/refguide8/xpath-ends-with/)
+    * [not](/refguide8/xpath-not/)
+    * [true](/refguide8/xpath-true/)
+    * [false](/refguide8/xpath-false/)
+
 ## 6 Example
 
 **How to find the right path to XPath**
 
 {{% youtube sdabUY-w4ZU %}}
-

@@ -2,7 +2,8 @@
 title: "Migrate Your Mendix Database"
 url: /howto/data-models/migrating-your-mendix-database/
 category: "Data Models"
-weight: 7
+weight: 10
+description: "Describes how to migrate a non-PostgreSQL database to a PostgreSQL database, export a PostgreSQL database, and perform other actions for database migration."
 tags: ["database", "migrate", "PostgreSQL", "export", "import"]
 ---
 
@@ -33,21 +34,21 @@ To do this, start your app on the database you would like to copy the data to. T
 
 The most commonly used custom settings for database migration are:
 
-*   SourceDatabaseType (HSQLDB, MYSQL, ORACLE, POSTGRESQL, SQLSERVER)
-*   SourceDatabaseHost
-*   SourceDatabaseName
-*   SourceDatabaseUserName
-*   SourceDatabasePassword
+* SourceDatabaseType (HSQLDB, MYSQL, ORACLE, POSTGRESQL, SQLSERVER)
+* SourceDatabaseHost
+* SourceDatabaseName
+* SourceDatabaseUserName
+* SourceDatabasePassword
 
 For more information on the full list of available settings, see [Runtime Customization](/refguide/custom-settings/).
 
 These settings can be configured as follows:
 
-*  Studio Pro – in **App Explorer**, expand **App**, double-click **Settings**, edit a configuration, and go to the **Custom** tab:
+* Studio Pro – in **App Explorer**, expand **App**, double-click **Settings**, edit a configuration, and go to the **Custom** tab:
 
     {{< figure src="/attachments/howto/data-models/migrating-your-mendix-database/19398970.png" >}} 
 
-*  Service Console – click an app in the left pane, click **Configuration**, click **Advanced**, then see **Custom Mendix settings**:
+* Service Console – click an app in the left pane, click **Configuration**, click **Advanced**, then see **Custom Mendix settings**:
 
     {{< figure src="/attachments/howto/data-models/migrating-your-mendix-database/19398971.png" >}} 
 
@@ -60,7 +61,7 @@ Database migration is handled by Mendix as a normal database synchronization pha
 {{% /alert %}}
 
 {{% alert color="warning" %}}
-Before the data copying process starts, the main database structure will be generated based on the source database structure. This is necessary to make sure all the data is copied without any problems, especially in cases where the source database has a larger element value than what the current domain model specifies.
+Before the data copying process starts, the main database structure will be generated based on the source database structure. This is necessary to make sure all the data is copied without any problems, especially in cases where the source database has a larger element value than the current domain model specifies.
 
 The source database structure and data do not change as part of the migration.
 {{% /alert %}}
@@ -72,11 +73,8 @@ You can configure Studio Pro to use a PostgreSQL database instead of the inbuilt
 To do this, perform the following steps:
 
 1. Open your **App** > **Settings**.
-
 2. Click **New** to add a new configuration from the **Configurations** tab.
-
 3. Give your configuration a new **Name**.
-
 4. On the **Database** tab, set the following values:
     * **Type** – **PostgreSQL**
     * **Database name** – *default*
@@ -87,6 +85,7 @@ To do this, perform the following steps:
     {{< figure src="/attachments/howto/data-models/migrating-your-mendix-database/postgresql-config.png" >}}
 
     Your new configuration will be set as the active configuration.
+
 5. Ensure that PostgreSQL is running locally on the correct port.
 6. Run your app locally. Provided your PostgreSQL database is empty, your app will configure the database to support the domain model of your app.
 
@@ -96,7 +95,7 @@ If you already have the database, for example a test database in the cloud, you 
 
 ## 4 Migrating a Non-PostgreSQL Database to a PostgreSQL Database
 
-The Mendix Cloud V4 environment only uses PostgreSQL as a database server. The recommended way is to migrate your existing on-premises non-PostgreSQL source database to a new on-premises PostgreSQL target database. 
+The Mendix Cloud environment only uses PostgreSQL as a database server. The recommended way is to migrate your existing on-premises non-PostgreSQL source database to a new on-premises PostgreSQL target database. 
 
 The source database is the database with the data that you would like to migrate to the cloud. The target PostgreSQL database should be completely empty, as in, it should not contain any tables. In the Mendix app the active configuration in Settings should point to the target database, and you should add the Custom configuration settings for the source database as explained above in the overview.
 
@@ -108,7 +107,7 @@ To export a PostgreSQL database, refer to either the [pg_dump](https://www.postg
 
 ### 4.2 Uploading an Exported PostgreSQL Database to a Mendix Cloud Database
 
-Use the Developer Portal to upload the migrated, exported database backup to the Mendix Cloud V4. This can be accessed using the Nodes page in the Developer Portal. Perform the following steps:
+Use the Developer Portal to upload the migrated, exported database backup to the Mendix Cloud. This can be accessed using the Nodes page in the Developer Portal. Perform the following steps:
 
 1. Select your app.
 2. Click **Backups** in the left-hand menu
@@ -144,7 +143,7 @@ If you have a Mendix application running on SAP BTP with PostgreSQL as the datab
 
 To do this, perform the following steps:
 
-1. Sign in to the SAP BTP Cloud Foundry environment (containing the PostgreSQL service) using the Cloud Foundry command line.
+1. Sign in to the SAP BTP, Cloud Foundry environment (containing the PostgreSQL service) using the Cloud Foundry command line.
 2. Get the PostgreSQL service instance details from the environment variables of the application using the following command:
 
     `cf env {application-name}`
@@ -162,7 +161,7 @@ To do this, perform the following steps:
 
 4. Create an environment using the SAP HANA database service using Mendix Developer Portal.
 5. Deploy the mda, but **do not start the application**.
-6. Sign in to the SAP BTP Cloud Foundry environment (containing the SAP HANA service) using the Cloud Foundry command line.
+6. Sign in to the SAP BTP, Cloud Foundry environment (containing the SAP HANA service) using the Cloud Foundry command line.
 7. Set the following runtime properties in the SAP HANA environment using the command line. Use the values from the PostgreSQL instance values you noted above.
 
     ```bash

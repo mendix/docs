@@ -1,7 +1,6 @@
 ---
 title: "DB2"
 url: /refguide7/db2/
-parent: "data-storage"
 weight: 40
 ---
 

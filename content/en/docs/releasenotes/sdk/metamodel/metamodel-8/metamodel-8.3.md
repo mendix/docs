@@ -1,7 +1,6 @@
 ---
 title: "8.3"
 url: /releasenotes/sdk/metamodel-8.3/
-parent: "metamodel-8"
 weight: 98
 ---
 
@@ -27,13 +26,13 @@ weight: 98
 
 ### Microflows
 
-#### JavaActionCallAction & MicroflowCallAction (Elements)
+#### JavaActionCallAction and MicroflowCallAction (Elements)
 
 * We introduced the `outputVariableNameRuntime` property.
 
 ### Rest
 
-#### PublishedODataService & PublishedRestService (ModelUnits)
+#### PublishedODataService and PublishedRestService (ModelUnits)
 
 * We introduced the `authenticationTypesRuntime` property for **Authentication types supported by this service**.
 

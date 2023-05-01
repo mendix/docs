@@ -1,7 +1,7 @@
 ---
-title: "Navigation in Mendix Versions 7.2 & 7.3"
+title: "Navigation in Mendix Versions 7.2 and 7.3"
+linktitle: "Navigation in 7.2 and 7.3"
 url: /refguide7/navigation-in-72-and-73/
-parent: "project"
 description: "Describes the concept of navigation in apps and the properties of a profile for Mendix versions 7.2 and 7.3."
 ---
 
@@ -57,7 +57,7 @@ The Mendix app can be installed on a tablet or phone as an app by creating a Pho
 
 Hybrid offline apps are designed to allow users to continue using their Mendix app even when they have no internet connection. However, certain restrictions apply. For an overview of the ramifications of running an offline device profile, see [Offline](/refguide7/offline/).
 
-## 3 Redirection to Profiles<a name="Redirection"></a>
+## 3 Redirection to Profiles {#Redirection}
 
 Mendix Runtime automatically redirects users to the home page of the appropriate device type based on the device they are using. This happens by examining the `User-Agent` string that is sent by the device's browser. Hybrid apps do not use this mechanism, as they are referred to by name. The default configuration for this redirection is as follows:
 
@@ -65,7 +65,7 @@ Mendix Runtime automatically redirects users to the home page of the appropriate
 | --- | --- |
 | Android.*Mobile&#124;iPhone&#124;iPod&#124;BlackBerry | Phone |
 | Android&#124;iPad | Tablet |
-| _(other)_ | Responsive |
+| *(other)* | Responsive |
 
 To configure the regular expressions used to match phone or tablet users, see [Custom Settings](/refguide7/custom-settings/).
 

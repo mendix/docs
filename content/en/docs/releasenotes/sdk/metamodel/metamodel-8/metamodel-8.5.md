@@ -60,7 +60,7 @@ weight: 96
 
 ### CustomWidgets
 
-#### CustomWidgetDatabaseSource & CustomWidgetXPathSource (Elements)
+#### CustomWidgetDatabaseSource and CustomWidgetXPathSource (Elements)
 
 * We introduced these elements.
 

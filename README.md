@@ -7,6 +7,16 @@ Build status:
 * production [![Build Status](https://secure.travis-ci.org/mendix/docs.png?branch=production)](https://app.travis-ci.com/github/mendix/docs)
 * development [![Build Status](https://secure.travis-ci.org/mendix/docs.png?branch=development)](https://app.travis-ci.com/github/mendix/docs)
 
+## Working in the Mx10 Private Repo
+
+To make Mx10 Beta 1 updates here, please do the following:
+
+1. Create a separate branch off of the `mx-10-branch`.
+    1. Do not commit directly to `development` or `production`!
+2. Make your documentation changes.
+3. Create a pull request with those changes. Make sure you chose the `mx-10-branch` as the base branch.
+4. Your component’s dedicated technical writer will be assigned to review your work.
+
 ## Contribute
 
 Want to contribute? Take a look at [How to Contribute to the Mendix Documentation](https://docs.mendix.com/developerportal/community-tools/contribute-to-the-mendix-documentation). It will guide you through the process of submitting updates to the docs directly from Github or from a local branch.
@@ -51,3 +61,5 @@ See the [Hugo Server](https://gohugo.io/commands/hugo_server/) documentation for
 #### Potential Issues
 
 If you are using a Mac, you might get an error `too many open files` or `fatal error: pipe failed`. By default, your Mac is probably set to restrict the number of open files. You will need to override this, see [Docsy known issues](https://www.docsy.dev/docs/getting-started/#known-issues) for more information.
+
+If your system has a low memory limit, add the `--renderToDisk` parameter to the Hugo command, for example `hugo server --environment development --renderToDisk`. With this option, Hugo will only load pages on demand; without the `--renderToDisk` option, Hugo will load all documentation into memory for faster access.

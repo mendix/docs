@@ -1,7 +1,6 @@
 ---
 title: "Microflow Consistency Errors"
 url: /studio/consistency-errors-microflows/
-parent: "consistency-errors"
 weight: 30
 description: "Describes microflow consistency errors in Mendix Studio and the way to fix them."
 tags: ["studio", "consistency errors", "checks", "errors", "microflow"]
@@ -13,18 +12,15 @@ tags: ["studio", "consistency errors", "checks", "errors", "microflow"]
 
 In this document, we explain how to solve the most common consistency errors that can occur when configuring microflows in Mendix Studio. For more information on microflows, see [Microflows](/studio/microflows/).
 
-An example of a consistency error is when you set a drag and drop a **Create Object** activity to the microflow, but do not specify what entity should be used as a data source to create the object. 
+An example of a consistency error is when you drag a **Create Object** activity into the microflow, but do not specify what entity should be used as a data source to create the object. 
 
 {{< figure src="/attachments/studio/checks/consistency-errors/consistency-errors-microflows/microflow-error-example.png" alt="Microflow Error Example" >}}
 
 {{% alert color="info" %}}
-
 This document does not describe all the errors, as there are a lot of errors that can occur, some of which are simple and do not need extra explanation, others are rare and/or heavily dependent on a use-case. 
-
 {{% /alert %}}
 
 Some errors have error codes and if these errors are described in documentation, Studio has a clickable link to the corresponding document. Others do not have an error code, in this case, you can manually search whether a particular error is described in documentation (you can search by a message you see in the **Checks** panel).
-
 
 ## 2 Properties Not Set Consistency Errors {#properties-not-set}
 
@@ -75,8 +71,8 @@ Some consistency errors may be connected with settings in Mendix Studio Pro. The
 
 | Error Code | Text in the Checks Panel                                     | Element/ Activity | Cause of an Error                                            | Way to Fix                                                   |
 | ---------- | ------------------------------------------------------------ | ----------------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
-|            | The selected microflow {name of the microflow} no longer exists. | Microflow         | You have deleted a microflow that is selected in Studio Pro > **App Settings** > **Runtime** > **After startup** or **Before shutdown** options. For more information on **After startup** /**Before shutdown** microflows, see the [After-Startup and Before-Shutdown Microflows](/refguide/clustered-mendix-runtime/#startup-shutdown-microflows) section in Clustered Mendix Runtime in the *Runtime category*. | There two ways to fix the error: <ul><li>In Studio: create a microflow with the same name</li><li>In Studio Pro: open **App** > **Settings**, in the **App Settings** pop-up dialog  open the **Runtime** tab and either select a different microflow for **After startup** / **Before shutdown** options, or set these options to **None**.</li></ul> |
-| CE0142     | After startup microflow should return a Boolean.             | Microflow         | This microflow is selected in Studio Pro > **App Settings** > **Runtime** > **After startup** or **Before shutdown** options, and should return a Boolean. For more information on **After startup** /**Before shutdown** microflows, see the [After-Startup and Before-Shutdown Microflows](/refguide/clustered-mendix-runtime/#startup-shutdown-microflows) section in *Clustered Mendix Runtime*. | Open the properties of the microflow's end event > the **Return Value** section, select **Value** option > set **Data Type** to Boolean and configure the **Value**. |
+|            | The selected microflow {name of the microflow} no longer exists. | Microflow         | You have deleted a microflow that is selected in Studio Pro > **App Settings** > **Runtime** > **After startup** or **Before shutdown** options. For more information on **After startup** /**Before shutdown** microflows, see the [After-Startup and Before-Shutdown Microflows](/refguide9/clustered-mendix-runtime/#startup-shutdown-microflows) section in Clustered Mendix Runtime in the *Runtime category*. | There two ways to fix the error: <ul><li>In Studio: create a microflow with the same name</li><li>In Studio Pro: open **App** > **Settings**, in the **App Settings** pop-up dialog  open the **Runtime** tab and either select a different microflow for **After startup** / **Before shutdown** options, or set these options to **None**.</li></ul> |
+| CE0142     | After startup microflow should return a Boolean.             | Microflow         | This microflow is selected in Studio Pro > **App Settings** > **Runtime** > **After startup** or **Before shutdown** options, and should return a Boolean. For more information on **After startup** /**Before shutdown** microflows, see the [After-Startup and Before-Shutdown Microflows](/refguide9/clustered-mendix-runtime/#startup-shutdown-microflows) section in *Clustered Mendix Runtime*. | Open the properties of the microflow's end event > the **Return Value** section, select **Value** option > set **Data Type** to Boolean and configure the **Value**. |
 
 ## 5 Read More
 

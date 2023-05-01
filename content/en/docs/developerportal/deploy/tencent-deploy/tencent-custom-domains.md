@@ -1,7 +1,6 @@
 ---
 title: "Custom Domains on Tencent"
 url: /developerportal/deploy/tencent-custom-domains/
-parent: "tencent-deploy"
 weight: 10
 description: "How to configure custom domains on the Tencent platform as well as generate, upload, and renew certificates for HTTPS connections."
 tags: ["Custom Domain","Tencent Cloud", "certificates"]
@@ -97,7 +96,6 @@ Custom domain certificates (or just "certificates") are managed at the *applicat
 If you do not have an SSL/TLS certificate, you can purchase one from the Tencent cloud **SSL certificate** (SSL 证书) product or apply for a free certificate.
 
 {{< figure src="/attachments/developerportal/deploy/tencent-deploy/tencent-custom-domains/get-signed-certificate.png" >}}
-
 
 ### 4.2 Uploading the Custom Domain Certificate{#Uploading}
 

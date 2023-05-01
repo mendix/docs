@@ -1,7 +1,6 @@
 ---
 title: "Placeholder"
 url: /refguide7/placeholder/
-parent: "layout-widgets"
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
@@ -10,7 +9,7 @@ parent: "layout-widgets"
 A placeholder can be used in two ways:
 
 * In a [layout](/refguide7/layout/) to define a "gap" that can be filled in a [page](/refguide7/page/) based on that layout
-* In a layout that defines the layout as a master layout
+* In a layout that defines the layout as a primary layout
 
 ## 2 Common Properties
 

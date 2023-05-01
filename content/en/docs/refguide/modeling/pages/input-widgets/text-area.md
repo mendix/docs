@@ -1,7 +1,6 @@
 ---
 title: "Text Area"
 url: /refguide/text-area/
-parent: "input-widgets"
 weight: 20
 tags: ["studio pro"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
@@ -11,7 +10,7 @@ tags: ["studio pro"]
 
 A **text area** is used to display and, optionally, allow the end-user to edit the value of an attribute of [data type](/refguide/data-types/) *String*. It differs from a [text box](/refguide/text-box/) In that the value can be displayed over several lines.
 
-A text area must be placed in a [data widget](/refguide/data-widgets/) and displays an attribute of the object(s) retrieved by that widget. The name of the attribute to be displayed is shown inside the text area, between square brackets, and colored blue.
+A text area must be placed in a [data container](/refguide/data-widgets/) and displays an attribute of the object(s) retrieved by that container. The name of the attribute to be displayed is shown inside the text area, between square brackets, and colored blue.
 
 For example, the following text area allows the end-user to see, and set, the **Notes** about a contact.
 
@@ -60,10 +59,6 @@ The on change property specifies an action that will be executed when leaving th
 {{% snippet file="/static/_includes/refguide/events-section-link.md" %}}
 
 #### 2.5.2 On Change Behavior
-
-{{% alert type="info" %}}
-Will be available in Studio Pro 9.14.
-{{% /alert %}}
 
 The on change behavior property lets users select how **on change** is handled in Studio Pro via the following options: 
 
@@ -118,7 +113,7 @@ Default: *No*
 
 #### 2.6.2 Number of Lines
 
-**Number of lines** determines the size of the text area, based on the height of the lines. If the text in the text area contains more lines, a scrollbar will enable the end-user to see it all. This property is only used if **Grow automatically** is set to *No*.
+**Number of lines** determines the size of the text area, based on the height of the lines. If the text in the text area contains more lines, a scroll bar will enable the end-user to see it all. This property is only used if **Grow automatically** is set to *No*.
 
 Default: *5*
 
@@ -161,6 +156,14 @@ The autocomplete property specifies if a text area should have autocomplete enab
 {{% alert color="info" %}}This option is only available in native pages.{{% /alert %}}
 {{% alert color="info" %}}In Android when autocomplete is turned off it will remove support for new lines.{{% /alert %}}
 
+#### 2.6.8 AutoFocus {#autofocus}
+
+If `true`, the text area will be rendered focused with the device keyboard opened.
+
+{{% alert color="info" %}}
+This option is only available in native pages.
+{{% /alert %}}
+
 ### 2.7 Label Section{#label}
 
 {{% snippet file="/static/_includes/refguide/label-section-link.md" %}}
@@ -175,5 +178,5 @@ The autocomplete property specifies if a text area should have autocomplete enab
 
 ## 3 Read More
 
-*   [Data view](/refguide/data-view/)
-*   [Attributes](/refguide/attributes/)
+* [Data view](/refguide/data-view/)
+* [Attributes](/refguide/attributes/)

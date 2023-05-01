@@ -1,7 +1,6 @@
 ---
 title: "Creating Your Own Documents"
 url: /refguide7/how-to-create-your-own-documents/
-parent: "document-templates"
 description: "This documentation will give you insight into creating documents with Mendix."
 tags: ["Document", "Generate", "Word", "PDF"]
 ---
@@ -21,9 +20,9 @@ Before we start, we recommend you first read the following two Mendix Reference 
 
 Before you start producing a document with Mendix, it is advisable to make a draft version of the document you want to produce. You can sketch something on a piece of paper or ask your customer to provide you with an example. Either way, it is good to have in mind what you want to achieve.
 
-Using your desired document, you can choose a strategy for producing it. Mendix offers numerous options for producing documents using the out-of-the-box document template functionality, but you may find that the Mendix features are not sufficient to generate your document. Don’t worry. For an alternative way of producing documents with Mendix, see [Alternative Way of Creating Documents](#Alternative).
+Using your desired document, you can choose a strategy for producing it. Mendix offers numerous options for producing documents using the out-of-the-box document template functionality.
 
-For our example, we’ve concluded that the Mendix functionality does suffice. So, let’s have a look at how this works with an example.
+Let’s have a look at how this works with an example.
 
 ## 3 The Business Case
 
@@ -125,6 +124,7 @@ Now, your **Generate document** configuration should look like this:
 {{< figure src="/attachments/refguide7/desktop-modeler/document-templates/how-to-create-your-own-documents/2018-03-01_14-12-03.png" >}}
 
 The document template is now configured, and the microflow is ready to be used. If we call this microflow as a sub-microflow, you can add a download activity in the main microflow. This microflow could 
+
 * call the sub-microflow to create the document
 * retrieve the created document, and
 * download the file:
@@ -136,9 +136,3 @@ This is the resulting document:
 {{< figure src="/attachments/refguide7/desktop-modeler/document-templates/how-to-create-your-own-documents/15_Result.png" >}}
 
 In this example, you retrieved the **OrderLine** information via the **Entity (path)** data source. An alternative way of doing this would be to use a microflow that returns objects for the list presentation. If you do this, make sure to add the correct user role(s) to the microflows that are being used as data source microflows within the document template.
-
-## 5 Alternative Way of Creating Documents<a name="Alternative"></a>
-
-The other way to generate documents is via a Java API called IText. This Java library is free to use.
-
-For more information on this way of working, see [iText Developers](http://developers.itextpdf.com/developers-home).

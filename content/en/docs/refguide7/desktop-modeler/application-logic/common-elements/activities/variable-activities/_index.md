@@ -1,7 +1,6 @@
 ---
 title: "Variable Activities"
 url: /refguide7/variable-activities/
-parent: "activities"
 ---
 
 

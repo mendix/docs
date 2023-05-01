@@ -1,7 +1,6 @@
 ---
 title: "Input Elements"
 url: /studio8/page-editor-widgets-input-elements/
-parent: "page-editor-widgets"
 description: "Describes input widgets in Mendix Studio."
 weight: 20
 tags: ["studio", "page editor", "input elements", "input widgets", "widgets"]
@@ -31,9 +30,7 @@ You can find the description of input elements available in Studio in the table 
 | Radio Buttons | Radio buttons are used to allow users select the option from a number of preset ones. For example, users can select from several possible locations for picking an order up. |
 
 {{% alert color="info" %}}
-
 Apart from the standard input widgets, you can also [download widgets from the Mendix Marketplace](https://marketplace.mendix.com/) to your app. For more information, see the [Widgets by Origin](/studio8/page-editor-widgets/#widgets-by-origin) section in *Widgets*.
-
 {{% /alert %}}
 
 ## 3 Properties
@@ -95,10 +92,7 @@ Editability indicates whether the end-user will be able to change the value disp
 
 * **Conditional** – the widget is editable only if specified conditions are met based on an attribute value (for more information, see  [Attribute-Based](#attribute-based) and [Attribute Values](#attribute-values) sections below) or based on an expression. You can create a condition based on an expression in Studio Pro only (for details, see the [Editability Section](/refguide8/common-widget-properties/#editability) in *Properties Common in the Page Editor*)
 
-	{{% alert color="info" %}}If an attribute set for the widget's data source is of the AutoNumber type, the widget is set into read-only mode by default and the **Editability** setting itself is disabled, because attributes of this type are generated automatically.
-	
-	{{%/alert %}}
-	
+    {{% alert color="info" %}}If an attribute set for the widget's data source is of the AutoNumber type, the widget is set into read-only mode by default and the **Editability** setting itself is disabled, because attributes of this type are generated automatically.{{%/alert %}}
 
 #### 3.3.4 Attribute-Based {#attribute-based}
 
@@ -107,15 +101,11 @@ The **Attribute-Based** property is only shown when [Conditional Editability](#e
 **Attribute-Based** conditional editability allows you to show widgets only when they match a certain value of the selected attribute. 
 
 {{% alert color="info" %}}
-
 The attribute must be of the Boolean or enumeration type.
-
 {{%/alert %}} 
 
 {{% alert color="info" %}}
-
 You can only configure attribute-based conditional editability when a widget is placed in a data container: a data view or a list view. For more information on how to place widgets on a page, see [Adding Elements on a Page](/studio8/page-editor/#adding-elements) section in *Pages*. 
-
 {{%/alert %}}
 
 #### 3.3.5 Attribute Values {#attribute-values}
@@ -133,14 +123,14 @@ Specific properties of the input elements are described in the table below:
 | Input Element | Property           | Description                                                  |
 | ------------- | ------------------ | ------------------------------------------------------------ |
 | Text Area     | Grow Automatically | When enabled, the text area grows automatically depending on the amount if text filled out in it. <br />*This property is disabled by default.* |
-| Text Area     | Number of Lines    | This property is only displayed when the **Grow Automatically** option is disabled.  The number of lines determine how many lines the text area shows at the same time. If the text in the text area contains more lines you will have to use a scrollbar to see it all. <br />Default value for the **Number of Lines** option: 5 |
+| Text Area     | Number of Lines    | This property is only displayed when the **Grow Automatically** option is disabled.  The number of lines determine how many lines the text area shows at the same time. If the text in the text area contains more lines you will have to use a scroll bar to see it all. <br />Default value for the **Number of Lines** option: 5 |
 | Radio Buttons | Orientation        | This property defines whether the radio buttons are displayed in your app horizontally or vertically. <br />Default value for **Orientation**: Horizontal. |
 
 ### 3.4 Format Section {#format}
 
 The **Format** section is specific for the **Date Picker** widget only. 
 
- The **Format** section properties are described in the table below:
+The **Format** section properties are described in the table below:
 
 | Property       | Description                                                  |
 | -------------- | ------------------------------------------------------------ |
@@ -153,13 +143,12 @@ In **Input Validation**, you can specify whether the widget's value should be va
 
 {{< figure src="/attachments/studio8/page-editor/page-editor-widgets/page-editor-widgets-input-elements/Validation-type-required.png"   width="350"  >}}
 
-
 The **Input Validation** section properties are described in the table below:
 
 | Property                                 | Description                                                  |
 | ---------------------------------------- | ------------------------------------------------------------ |
 | Validation Type                          | This property indicates whether a value filled in a widget should be validated. Possible options are the following:<br /><ul><li>**None** – a value is not required, the widget can be left empty</li><li>**Required** – the widget cannot be empty, end-users need to fill a value in it</li><li>**Custom** – can be set only in Studio Pro. However, if a custom validation has been set in Studio Pro, you can specify or change a [message](#validation-message) for the custom validation</li></ul> |
-| <a name="validation-message"></a>Message | A message that is shown to end-users when **Validation Type** is **Required** or **Custom** and when the validation has failed. |
+| <a id="validation-message"></a>Message | A message that is shown to end-users when **Validation Type** is **Required** or **Custom** and when the validation has failed. |
 
 ### 3.6 Conditional Visibility Section {#visibility}
 

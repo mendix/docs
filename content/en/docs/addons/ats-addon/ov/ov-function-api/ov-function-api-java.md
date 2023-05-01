@@ -1,7 +1,6 @@
 ---
 title: "Function API with Java"
 url: /addons/ats-addon/ov-function-api-java/
-parent: "ov-function-api"
 weight: 2
 ---
 
@@ -13,7 +12,7 @@ Java is the undisputed champion when it comes to automated UI testing (for examp
 Before you start writing tests, you need to import the ATS Java library. We have made this step painless by packaging all the dependencies in a single *.jar* file.
 {{% /alert %}}
 
-## 2 Creating a Driver & Connecting to ATS
+## 2 Creating a Driver and Connecting to ATS
 
 ```java
 import static org.junit.Assert.*;
@@ -88,7 +87,6 @@ public void firstTest() {
 ```
 
 Alternatively, values can be asserted using `junit.Assert`:
-
 
 ```java
 @Test

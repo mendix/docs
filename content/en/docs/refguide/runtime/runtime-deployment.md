@@ -2,7 +2,7 @@
 title: "Runtime Deployment"
 url: /refguide/runtime-deployment/
 category: "Mendix Runtime"
-description: "A description of how the Mendix Runtime is deployed"
+description: "Describes how the Mendix Runtime is deployed."
 weight: 30
 tags: ["runtime", "deploy", "mxbuild", "runtime server", "m2ee"]
 ---
@@ -23,7 +23,7 @@ Below is a chart showing the processes involved in deploying your app. Each of t
 
 ### 2.1 Deployer
 
-This is initiated by the Mendix Cloud Portal to manage the deployment of an app.
+This is initiated by the Mendix Cloud portal to manage the deployment of an app.
 
 ### 2.2 Docker Environment
 
@@ -31,7 +31,7 @@ This is the docker environment specification which specifies the docker environm
 
 ### 2.3 Project MPK
 
-This is the app model as created by Studio Pro or Studio. It cannot be directly interpreted by the Mendix Runtime.
+This is the app model as created by Studio Pro. It cannot be directly interpreted by the Mendix Runtime.
 
 ### 2.4 MX Build
 
@@ -60,7 +60,7 @@ This data repository stores components of the deployment process such as version
 
 ### 2.9 Java RE
 
-This is the Java Runtime Environment (JRE) used to run the Runtime Server. The version of the JRE depends on the version of the Runtime Server. For example, Mendix 7 runs on JRE version 8, and Mendix 8 runs on JRE version 11.
+This is the Java Runtime Environment (JRE) used to run the Runtime Server. The version of the JRE depends on the version of the Runtime Server. For example, Mendix 10 runs on JRE version 11.
 
 ### 2.10 M2ee
 
@@ -70,4 +70,3 @@ It starts the Runtime Server by starting a Java RE and pointing it at the releva
 ### 2.11 Runtime Server
 
 This is the interpreter which runs the app. For more information see [Runtime Server](/refguide/runtime-server/).
-

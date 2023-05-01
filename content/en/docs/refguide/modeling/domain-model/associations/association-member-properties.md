@@ -1,7 +1,6 @@
 ---
 title: "Association Tab Properties"
 url: /refguide/association-member-properties/
-parent: "associations"
 weight: 15
 tags: ["domain model", "association", "studio pro"]
 ---
@@ -76,9 +75,9 @@ So, for a one-to-many association the *many* end owns the association to ensure 
 
 An association is recorded in the object which owns it. If both objects own the association, then the association is recorded with both objects. You can see examples of where the associations are recorded in the [Association Examples](/refguide/associations/#examples) section of *Associations*.
 
-Where the association is recorded has an important impact on the user of reference and reference set selectors in your app. The selector can only be inside a data view containing the _owning_ object. This is because it is only when you commit the owning object that the association is recorded.
+Where the association is recorded has an important impact on the user of reference and reference set selectors in your app. The selector can only be inside a data view containing the *owning* object. This is because it is only when you commit the owning object that the association is recorded.
 
-For example, imagine you have a many-to-many association, **Customer_Group**, between **Customer** and **Group** owned by the Customer entity. You can put an input reference set selector to select Groups from within a Customer data view. However you _cannot_ put an input reference set selector to select Customers from within a Group data view.
+For example, imagine you have a many-to-many association, **Customer_Group**, between **Customer** and **Group** owned by the Customer entity. You can put an input reference set selector to select Groups from within a Customer data view. However you *cannot* put an input reference set selector to select Customers from within a Group data view.
 
 {{< figure src="/attachments/refguide/modeling/domain-model/associations/association-member-properties/input-reference-set-selector.png" alt="Selecting Group objects through an input reference set selector in a Customer data view" >}}
 
@@ -88,7 +87,7 @@ If both ends own the association, you can overcome this limitation. However, thi
 Recording the association on only one of the entities does not affect your ability to navigate the association from both ends. However, it may be slower to navigate from the non-owning end.
 {{% /alert %}}
 
-### 2.4 Type & Owner Relationship with Multiplicity & Navigability {#types}
+### 2.4 Type and Owner Relationship with Multiplicity and Navigability {#types}
 
 **Type** and **Owner** properties of an entity are related to [Multiplicity](/refguide/association-properties/#multiplicity) and [Navigability](/refguide/association-properties/#navigability) properties of an association. When you change **Type** or **Owner**, you change **Multiplicity** and **Navigability** as well. 
 

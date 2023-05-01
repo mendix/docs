@@ -1,7 +1,6 @@
 ---
 title: "APM 2 Installation Guide"
 url: /addons/apd-addon/ig-two/
-parent: "ig"
 weight: 1
 aliases:
     - /apm/installation-guide.html
@@ -42,7 +41,4 @@ To upgrade an APM 2 agent follow these steps
 
 ## 4 Security
 
-Please read the following steps and apply if needed.
-
-1. In Cloud v3, allow the request handler `/apm`.
-2. The agent initiates all communication to the [APM 2 manager](https://apmmanager100.mendixcloud.com) in HTTPS over port 443. So for some on premise installation a firewall might need to be opened.
+The agent initiates all communication to the [APM 2 manager](https://apmmanager100.mendixcloud.com) in HTTPS over port 443. So for some on premise installation a firewall might need to be opened.

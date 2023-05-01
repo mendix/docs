@@ -1,7 +1,6 @@
 ---
 title: "Commit"
 url: /refguide/commit-dialog/
-parent: "version-control-menu"
 weight: 20
 tags: ["studio pro"]
 ---

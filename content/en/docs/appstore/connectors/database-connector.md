@@ -21,7 +21,7 @@ The **Execute statement** action works internally in the same manner as the **Ex
 
 * [HikariCP](https://github.com/brettwooldridge/HikariCP), a high-performance JDBC connection pool
 
-## 2 Prerequisites
+## 2 Prerequisites {#prerequisites}
 
 These are the prerequisites for using this connector:
 
@@ -29,10 +29,14 @@ These are the prerequisites for using this connector:
 * The user name for logging into the database, relative to the database URL address
 * The password for logging into the database, relative to the database URL address
 * The JDBC driver libraries (*.jar* extension) for the databases you want to connect to must be placed inside the **userlib** directory of your Mendix application
-	* For example, if you want to connect to Amazon RDS PostgreSQL database (`jdbc:postgresql://xyz-rds-instance.ccnapcvoeosh.eu-west-1.rds.amazonaws.com:5432/postgres`), you need to place the PostgreSQL JDBC driver *.jar* inside the **userlib** folder
-	* For more information, see the [Common JDBC Drivers](#links) section below
+    * For example, if you want to connect to Amazon RDS PostgreSQL database (`jdbc:postgresql://xyz-rds-instance.ccnapcvoeosh.eu-west-1.rds.amazonaws.com:5432/postgres`), you need to place the PostgreSQL JDBC driver *.jar* inside the **userlib** folder
+    * For more information, see the [Common JDBC Drivers](#links) section below
 * Specific to the `Execute` query action: an entity in the domain model that can be used for the results of the executed query
-	* For example, a query like `select name, number from stock` has two columns (of the string and integer type, respectively), so in order to use the **Execute query** action, you have to add an entity in the domain model that has the same attributes as the columns in the query
+    * For example, a query like `select name, number from stock` has two columns (of the string and integer type, respectively), so in order to use the **Execute query** action, you have to add an entity in the domain model that has the same attributes as the columns in the query
+
+{{% alert color="info" %}}
+Ensure that you follow these prerequisites, particularly adding the *.jar* files for the database to which you want to connect into the *userlib* folder, to avoid connection errors.
+{{% /alert %}}
 
 ## 3 Getting Started
 
@@ -40,7 +44,7 @@ Once you have imported the Database Connector into your app, you will have the *
 
 {{< figure src="/attachments/appstore/connectors/database-connector/database-connector-in-toolbox.png" >}}
 
-### 3.1 Executing Queries & Statements
+### 3.1 Executing Queries and Statements
 
 #### 3.1.1 Usage
 
@@ -53,6 +57,14 @@ For both queries and statements, the difference between the parameterized and re
 {{% alert color="info" %}}
 The parameterized actions are only available with Database Connector versions 3.0.0 and above. For these, it is necessary to use Mendix [8.6.0](/releasenotes/studio-pro/8.6/#860).
 {{% /alert %}}
+
+##### 3.1.1.1 Execute Query Action {#execute-query}
+
+To use the **Execute query** action, you need to create an actual object of the entity that will reflect the structure of the result set. The action requires this object for mapping. It is an empty object with the purpose of passing on the structure (because Java actions cannot access the model).
+
+##### 3.1.1.2 Execute Statement Action
+
+See [Execute an SQL Statement on an External Database](/howto/integration/execute-an-sql-statement-on-an-external-database/) for detailed instructions on using this action.
 
 #### 3.1.2 Results
 
@@ -142,13 +154,17 @@ The many-to-many-association with `DatabaseConnector.Parameter` is also used her
 * [MySQL](https://dev.mysql.com/downloads/connector/j/)
 * [Oracle Database](https://www.oracle.com/database/technologies/appdev/jdbc-downloads.html)
 * [OrientDB](https://orientdb.org/)
-* [PostgreSQL](https://jdbc.postgresql.org/download.html)
+* [PostgreSQL](https://jdbc.postgresql.org/download)
 * [Presto](https://prestodb.github.io/docs/current/installation/jdbc.html)
 * [SQLite](https://www.sqlite.org/src/tree?ci=trunk)
 
 {{% alert color="info" %}}
 If you intend to connect to SQL Server using integrated security, please be aware that the JDBC driver in the **userlib** folder needs to match the version supplied with the Mendix Platform (via the **runtime/bundles/** folder inside the Mendix installation directory).
 {{% /alert %}}
+
+### 5.1 Errors
+
+Errors can often be resolved by adding missing *.jar* dependencies to the *userlib* folder in the module. See the [Prerequisites](#prerequisites) section for further information.
 
 ## 6 Developing This Marketplace Component
 

@@ -1,7 +1,6 @@
 ---
 title: "Radio Buttons"
 url: /refguide7/radio-buttons/
-parent: "input-widgets"
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
@@ -12,7 +11,7 @@ The **Radio Buttons** widget is an [input widget](/refguide7/input-widgets/) tha
 
 {{< figure src="/attachments/refguide7/desktop-modeler/pages/input-widgets/radio-buttons/radio-buttons.png" >}}
 
-These radio buttons are used to indicate whether the user wants to receive the newsletter (boolean, rendered horizontally) and to select his/her favorite color (enumeration, rendered vertically).
+These radio buttons are used to indicate whether the user wants to receive the newsletter (boolean, rendered horizontally) and to select their favorite color (enumeration, rendered vertically).
 
 {{% /alert %}}
 
@@ -22,7 +21,7 @@ These radio buttons are used to indicate whether the user wants to receive the n
 
 This property defines whether the radio buttons are rendered horizontally or vertically.
 
-_Default value:_ Horizontal
+*Default value:* Horizontal
 
 ## Validation Properties
 
@@ -64,5 +63,5 @@ _Default value:_ Horizontal
 
 ## Read More
 
-*   [Data view](/refguide7/data-view/)
-*   [Attributes](/refguide7/attributes/)
+* [Data view](/refguide7/data-view/)
+* [Attributes](/refguide7/attributes/)

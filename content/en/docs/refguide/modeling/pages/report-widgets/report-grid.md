@@ -1,13 +1,12 @@
 ---
 title: "Report Grid"
 url: /refguide/report-grid/
-parent: "report-widgets"
 weight: 10
 tags: ["studio pro"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 {{% alert color="info" %}}
-This widget been deprecated in version 9.0 and will be marked for removal in a future version.
+This widget has been deprecated and will be marked for removal in the future.
 {{% /alert %}}
 {{% alert color="warning" %}}
 The report grid widget is not supported on native mobile pages.

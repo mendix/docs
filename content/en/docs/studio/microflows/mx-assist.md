@@ -20,9 +20,7 @@ Mendix Assist is enabled by default and is displayed as a blue dot in a flow of 
 {{< figure src="/attachments/studio/microflows/mx-assist/mendix-assist-icon.png" >}}
 
 {{% alert color="info" %}}
-
-It is possible to add activities in a regular way without using Mendix Assist. 
-
+It is possible to add activities in a regular way without using Mendix Assist.
 {{% /alert %}}
 
 Click the bow-tie to view Mendix Assist recommendations. 
@@ -32,9 +30,7 @@ Click the bow-tie to view Mendix Assist recommendations.
 Mendix Assist lists the top five recommendations from the most probable to less probable ones for the particular microflow. Click the suggestion to proceed with it and insert it into a microflow. For more information, see the [Adding Activities and Elements with Mendix Assist](#add-activities) section.
 
 {{% alert color="info" %}}
-
-Some activities still need to be configured in **Properties** to function correctly. This concerns activities such as **Create Object**, when you need to set entity and attribute values manually.  
-
+Some activities still need to be configured in **Properties** to function correctly. This concerns activities such as **Create Object**, when you need to set entity and attribute values manually.
 {{% /alert %}}
 
 Once you have selected an activity or an event to insert to the microflow using Mendix Assist, the
@@ -67,7 +63,7 @@ You can also enable/disable Mendix Assist by clicking the **More Options** icon 
 
 {{% alert color="info" %}}
 If you disable Mendix Assist, the information dialog will be disabled as well. Once you re-enable Mendix Assist, the information dialog is also re-enabled. 
-{{% /alert %}}    
+{{% /alert %}}
 
 ## 4 Adding Activities and Elements with Mendix Assist {#add-activities}
 
@@ -78,10 +74,8 @@ You can add various activities using Mendix Assist. Depending on the complexity 
 To add an activity (such as **Change Object**, **Show Page**, **Create Object**, etcetera), do the following:
 
 1. Click a blue Mendix Assist dot in a microflow.
-
 2. Browse the suggestions and select the activity you need.
-
-3.  Click the selected activity to add it to the flow.
+3. Click the selected activity to add it to the flow.
 
     {{< figure src="/attachments/studio/microflows/mx-assist/mx-assist-list.png"   width="350"  >}}
 
@@ -94,17 +88,14 @@ Adding a check means that you will add a **Decision** with Boolean attribute typ
 {{< figure src="/attachments/studio/microflows/mx-assist/check-added.png" >}}
 
 {{% alert color="info" %}}
-
 If you do not have a variable or/and the attributes of the Boolean type, this option will not be
 listed in the suggestions.
-
 {{% /alert %}}
 
 To add the check, do the following:
 
 1. Click a blue Mendix Assist dot in a microflow.
-
-2.  Find **Add a check** in the suggestions.
+2. Find **Add a check** in the suggestions.
 
     {{< figure src="/attachments/studio/microflows/mx-assist/adding-check.png"   width="350"  >}}
 
@@ -113,9 +104,7 @@ To add the check, do the following:
 The decision is added to the microflow. 
 
 {{% alert color="info" %}}
-
 The number of options for the check depend on the number of variables of Boolean type in your microflow and on the number of attributes of Boolean type in your domain model. For more information, see [Domain Model](/studio/domain-models/) and [Attributes](/studio/domain-models-attributes/). You can also add a check if an object exists microflow.
-
 {{% /alert %}}
 
 ### 4.3 Adding a Decision
@@ -125,7 +114,6 @@ When you add a decision via Mendix Assist that means you add a decision with att
 To add the decision, do the following:
 
 1. Click a blue Mendix Assist dot in a microflow.
-
 2. Find **Add a decision** in the suggestions and select it.
 
     {{< figure src="/attachments/studio/microflows/mx-assist/adding-decision.png"   width="350"  >}}
@@ -133,9 +121,7 @@ To add the decision, do the following:
 The decision is added to the microflow.
 
 {{% alert color="info" %}}
-
 The number of options for **Add a decision** depend on the number of parameters with enumeration data type in your microflow. For more information, see [Domain Model in Studio](/studio/domain-models/) and [Attributes](/studio/domain-models-attributes/).
-
 {{% /alert %}}
 
 ## 5 Read More

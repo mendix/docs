@@ -1,7 +1,6 @@
 ---
 title: "Validation Feedback"
 url: /refguide7/validation-feedback/
-parent: "client-activities"
 aliases:
     - /refguide7/Validation+Feedback.html
     - /refguide7/Validation+Feedback

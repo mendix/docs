@@ -1,7 +1,6 @@
 ---
 title: "Page Consistency Errors"
 url: /studio8/consistency-errors-pages/
-parent: "consistency-errors"
 weight: 10
 description: "Describes consistency errors in the page editor in Mendix Studio and the way to fix them."
 tags: ["studio", "consistency errors", "checks", "errors", "page editor"]
@@ -15,9 +14,7 @@ In this document, we explain how to solve the most common consistency errors tha
 An example of a consistency error is when you do not specify the entity property of a data view on a page. 
 
 {{% alert color="info" %}}
-
 This document does not describe *all* the errors, as there are a lot of errors that can occur, some of which are simple and do not need extra explanation, others are rare and/or heavily dependent on a use-case. 
-
 {{% /alert %}}
 
 Some errors have error codes and if these errors are described in documentation, Studio has a clickable link to the corresponding document. Others do not have an error code, in this case, you can manually search whether a particular error is described in documentation (you can search by a message you see in the **Checks** panel).
@@ -49,7 +46,6 @@ The table below describes the most common errors you can come across when config
 | CE0488     | No entity configured for the data source of this data view. Select an entity or change the data source. | **Context** is selected as a data source for a data view, but the **Entity** property is not specified. | Do one of the following: <ul><li>Open the data view's properties> **Data Source** and select an entity in the **Entity** field</li><li>Change the type of the data source</li></ul> |
 |            | No microflow configured for the data source of this data view. Select a microflow or change the data source. | A data source is set to **Microflow**, but no specific microflow is selected. | Do one of the following: <ul><li>Open the data view's properties> **Data Source** and select an entity in the **Microflow** field</li><li>Change the type of the data source</li></ul> |
 | CE0536     | No list widget configured for the data source of this data view. Select a widget or change the data source. | The **List widget** option is configured as a data source for a data view, but you have not specified the list you would like the data view to listen to. | Do one of the following: <ul><li>Create a list view on the same page, configure it, and select it as the list widget for the data view</li><li>Change the type of the data source</li></ul> |
-
 
 ## 4 Context Not Available Consistency Errors
 
@@ -88,11 +84,9 @@ As the **Details** button to the **Customers** page is outside a data container 
 If you want the **Customer Details** page to open the details of a specific customer, this means you want to pass a specific object to the page. As we already have a list view with the customers list on the **Customers** page, we can fix this error the following way:
 
 1. Open the **Customers** page.
-
-2.  Drag the **Details** button inside the list view.
+2. Drag the **Details** button inside the list view.
 
     {{< figure src="/attachments/studio8/checks/consistency-errors/consistency-errors-pages/list-view-content.png" alt="List View Example"   width="350"  >}}
-
 
 Now the button gets the object of type *Customer* from the list view on the **Customers** page, and it will be passed to the **Customer Details** page. As a result, the details of a particular customer is displayed on the **Customer Details** page. 
 
@@ -101,10 +95,9 @@ Now the button gets the object of type *Customer* from the list view on the **Cu
 If you want to create a new customer and fill in the customer's details on the **Customers Details** page, you can do the following:
 
 1. Open the **Customers** page.
-
 2. Open properties for the **Details** button > the **Events** section and enable the **Create Object** option.
 
-     {{< figure src="/attachments/studio8/checks/consistency-errors/consistency-errors-pages/create-object-option-enabled.png" alt="Create Object Option Enabled"   width="350"  >}}
+    {{< figure src="/attachments/studio8/checks/consistency-errors/consistency-errors-pages/create-object-option-enabled.png" alt="Create Object Option Enabled"   width="350"  >}}
 
 3. Set **Customer** as **Entity**.
 
@@ -153,7 +146,7 @@ When you set a microflow as an on-click action for a widget, and this microflow 
 
 For example, on a page named *Customers* you have a button that calls a microflow (that is an **On Click Action** of the button is set to *Microflow*):
 
- {{< figure src="/attachments/studio8/checks/consistency-errors/consistency-errors-pages/button-on-click-action.png" >}}
+{{< figure src="/attachments/studio8/checks/consistency-errors/consistency-errors-pages/button-on-click-action.png" >}}
 
 However, the microflow contains a parameter *Customer*:
 
@@ -163,9 +156,8 @@ The microflow parameter expects an object *Customer*, and since this object is n
 
 To fix it, do the following:
 
-1.  Open the *Customers* page and drag and drop a data container on it. For example, you can drag and drop a list view.
-
-2.  Set the data source of the list view to *Database* and set **Entity** to *Customer*.
+1. Open the *Customers* page and drag a data container onto it. For example, you can drag and drop a list view.
+2. Set the data source of the list view to *Database* and set **Entity** to *Customer*.
 
     {{< figure src="/attachments/studio8/checks/consistency-errors/consistency-errors-pages/list-view-data-source.png" >}}
 
@@ -199,7 +191,7 @@ The most common errors for [input elements](/studio8/page-editor-widgets-input-e
 
 | Error Code | Message in the Checks Panel                                  | Cause of the Error                                           | Way to Fix                                                   |
 | ---------- | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| CE0544     | This widget can only function inside a data container. Move it into a data view, list view or template grid. | You have added an input widget to a page, but it is not inside a data view or a list view. | There are two ways to fix the error: <ul><li>When you do not have a specific data view or list view available yet: open widget's properties > **Data Source** and click **Wrap with a new data view**, the input widget will be automatically placed inside a new data view.</li><li>When you already have a data view or a list view which this input element relates to: drag and drop the input element inside the data view or the list view</li></ul> |
+| CE0544     | This widget can only function inside a data container. Move it into a data view, list view or template grid. | You have added an input widget to a page, but it is not inside a data view or a list view. | There are two ways to fix the error: <ul><li>When you do not have a specific data view or list view available yet: open widget's properties > **Data Source** and click **Wrap with a new data view**, the input widget will be automatically placed inside a new data view.</li><li>When you already have a data view or a list view which this input element relates to: drag the input element inside the data view or the list view</li></ul> |
 | CE0545     | Select an attribute for this {name of the input element}.    | You have added an input element and it is inside a data container, but the attribute  which this input element is connected to is not selected. | Open the widget's properties > **Data Source** and select an attribute in the **Attribute** field. |
 
 ## 7 Image Widget Consistency Errors
@@ -215,7 +207,7 @@ Errors for static and dynamic images are described in the table below.
 | Error Code | Message in the Checks Panel                                  | Cause of the Error                                           | Way to Fix                                                   |
 | ---------- | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
 | CE0436     | No image selected.                                           | You have added a static image widget on a page, but the image itself is not selected. | Open image properties > the **General** section and click **Select Image**. You can either select a default image or upload your own one. |
-|            | Move this widget into a data container, for example a data view or list view. | You have added a dynamic image to a page, but it is not inside a data view or a list view. | Open image properties > the **General** section and click **Wrap with a new data view**, the image will be automatically placed inside a new data view. You can also add a list view or a data view to the page and drag and drop a dynamic image inside it. |
+|            | Move this widget into a data container, for example a data view or list view. | You have added a dynamic image to a page, but it is not inside a data view or a list view. | Open image properties > the **General** section and click **Wrap with a new data view**, the image will be automatically placed inside a new data view. You can also add a list view or a data view to the page and drag a dynamic image inside it. |
 | CE0489     | Select an entity for the data source of this image viewer.   | You have added a dynamic image to a page, the dynamic image is placed inside a data view or a list view, but an entity for the image is not specified. | Open image properties > the **General** section and select an entity in the **Entity** field. |
 
 ## 8 On Click Action Consistency Errors 
@@ -228,7 +220,7 @@ The most common consistency errors appear when you do not configure the on click
 
 To fix the consistency errors, finish configuring the on click action (for example, for an on click action *Page*, select a particular page that should open), or change the on click action to another one. 
 
-##  9 Read More
+## 9 Read More
 
 * [Pages](/studio8/page-editor/)
 * [Navigation Consistency Errors](/studio8/consistency-errors-navigation/)

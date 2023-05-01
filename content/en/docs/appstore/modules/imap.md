@@ -7,6 +7,10 @@ tags: ["marketplace", "marketplace component", "imap", "pop3", "incoming email",
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
+{{% alert color="info" %}}
+This module is deprecated. Check out the [Email connector](/appstore/connectors/email-connector/) as an alternative.
+{{% /alert %}}
+
 ## 1 Introduction
 
 The [IMAP/POP3 Incoming Email](https://marketplace.mendix.com/link/component/1042/) module enables your app to retrieve emails from POP3, POP3S, IMAP, and IMAPS servers. In order for Mendix to act on incoming email, you can implement this module and model all the actions around it.
@@ -19,24 +23,28 @@ The [IMAP/POP3 Incoming Email](https://marketplace.mendix.com/link/component/104
 
 * Configuration of multiple accounts
 * Supported protocols:
-	* POP3 and POP3S
-	* IMAP and IMAPS
+    * POP3 and POP3S
+    * IMAP and IMAPS
 * Actions to be performed after receiving emails:
-	* Delete from server
-	* Move to a folder (for example, an archive)
+    * Delete from server
+    * Move to a folder (for example, an archive)
 * Subscribe to incoming email
-	* Supports the IMAP and IMAPS protocol only
-	* A microflow can be configured to execute for new incoming email
+    * Supports the IMAP and IMAPS protocol only
+    * A microflow can be configured to execute for new incoming email
 * Unsubscribe from incoming email
-	* Removes the subscription (if it exists)
+    * Removes the subscription (if it exists)
 
 ## 2 Configuration
 
-The basic setup and reception of emails can be done using the **EmailAccount_Overview** page, which is in the **ExamplePages** folder under **USE_ME**. Link this page in your app to configure the email server.
+The basic setup and reception of emails can be done using the **EmailAccount_Overview** page, which is in the **Pages** folder under **USE_ME**. Link this page in your app to configure the email server.
 
-Provide a value for the `EncryptionKey` constant available in the **USE_ME** folder for email account password encryption. 
+Provide a value for the `EncryptionKey` constant available in the **Constants** folder under **USE_ME**  for email account password encryption. 
 
-### 2.1 Account Settings
+### 2.1 Module Security and Roles
+
+The module comes with a default **IMAPPOP3Admin** module role. Access rights for this role have been set with wider use-cases in mind. Check that the access rights fit your use case and security requirements before linking the module role to User Roles in [App Security](/refguide/app-security/).
+
+### 2.2 Account Settings
 
 The **Account Settings** window includes the following options:
 
@@ -44,6 +52,10 @@ The **Account Settings** window includes the following options:
 * When **Replicate everything in [Folder Name]** is not checked, the module will fetch the number of emails defined in **Number of emails to retrieve from server** configuration based on the selected **Fetch strategy**.
 * When **Replicate everything in [Folder Name]** is checked, then module will fetch all the emails (in order of oldest to newest) from that folder in batch size as mentioned in **Email Batch Size** configuration.
 * The **Timeout** field is the connection timeout for sending and receiving email operations. This can be set in the **Email Account** object.
+
+{{% alert color="info" %}}
+Some **Account Settings** might be unavailable in earlier Mendix versions.
+{{% /alert %}}
 
 ## 3 Usage
 
@@ -56,3 +68,33 @@ Using a Java action in a microflow requires an email account for input. Please m
 {{% alert color="info" %}}
 In the **Private** folder, we provide microflows to support what we have built and provide guidance for your own needs. Any changes you make to these will be overwritten if you upgrade to a new version.
 {{% /alert %}}
+
+## 4 Configuring Microsoft Azure Active Directory (AD) OAuth 2.0 {#configure-azure-ad}
+
+You can configure your account to authenticate with Microsoft Azure AD OAuth 2.0. You can only add one OAuth 2.0 configuration for each app.
+
+Click the **Add Account** button to add a new account, and select the option **Configure using Microsoft Azure AD**. If the account is already registered on the Azure portal, the required fields will already be filled in. If not, or if you need to make changes, you will need to register your app on the Azure portal.
+
+### 4.1 Registering Your App on the Azure Portal
+
+To register your app, follow Microsoft's [Tutorial: Register an app with Azure Active Directory](https://docs.microsoft.com/en-us/power-apps/developer/data-platform/walkthrough-register-app-azure-active-directory).
+
+While registering, set the redirect URI to `https://(yourapp_domain)/callback/azure`.
+
+### 4.2 Enable Permissions in the Azure Portal
+
+On the [Azure portal](https://portal.azure.com/), ensure that you have the following permissions enabled under **API permissions** tab on the sidebar:
+
+{{< figure src="/attachments/appstore/modules/imap/azure-permissions.png" >}}
+
+### 4.3 Client ID, Tenant ID, and Client Secret 
+
+The **IMAP/POP3 Incoming Email** module requires a **Client ID**, **Tenant ID** and **Client Secret**. These will be available on the [Azure portal](https://portal.azure.com/) once you have registered your app.
+
+### 4.4 Configure After-Startup Microflow
+
+To configure the After-Startup microflow in Studio Pro, do the following:
+
+1. In the **App Explorer**, go to **Settings** and open **App Settings**.
+2. Go to the **Runtime** tab.
+3. In **After-Startup**, select the **ASU_RegisterHandlers** microflow.

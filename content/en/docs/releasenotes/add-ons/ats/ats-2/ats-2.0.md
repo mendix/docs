@@ -1,7 +1,6 @@
 ---
 title: "2.0"
 url: /releasenotes/add-ons/ats-2.0/
-parent: "ats-2"
 weight: 100
 ---
 
@@ -13,7 +12,7 @@ weight: 100
 
 Getting started with ATS has never been easier. We’ve put a lot of effort into ensuring that the onboarding of new users is as smooth as possible. Existing users can enjoy zero maintenance and a well-known user interface.
 
-We accomplished this by providing a single, multi-tenant SaaS instance of ATS in the Mendix Cloud. This instance comes with the same styling and usability as the Mendix Cloud Portal.
+We accomplished this by providing a single, multi-tenant SaaS instance of ATS in the Mendix Cloud. This instance comes with the same styling and usability as the Mendix Cloud facilities.
 
 #### Application Test Suite as a Service
 
@@ -35,7 +34,7 @@ After login, the ATS dashboard shows all your licensed apps. From there, you can
 
 When you open the new ATS, it will look very familiar.
 
-Earlier this year, Mendix released a restyled version of the Mendix Cloud Portal. We liked it so much that we decided to adopt it for ATS.
+Earlier this year, Mendix released a restyled version of the Mendix Cloud facilities. We liked it so much that we decided to adopt it for ATS.
 
 There is more than just new styling. We have simplified the navigation structure and reduced the number of screens. Finally, the most important screens have been completely rebuilt. These are described in the sections below.
 
@@ -116,11 +115,11 @@ The following terminology has changed:
 * "package" --&gt; "folder"
 * "project" --&gt; "app"
 * data types:
-  * "integer" --&gt; "number"
-  * "string" --&gt; "text"
-  * "enumeration" --&gt; "drop-down"
-  * "web element" --&gt; "page element"
-  * "undefined" --&gt; "any"
+    * "integer" --&gt; "number"
+    * "string" --&gt; "text"
+    * "enumeration" --&gt; "drop-down"
+    * "web element" --&gt; "page element"
+    * "undefined" --&gt; "any"
 * "test run" --&gt; "job"
 
 There are new statuses and results in the test runner:

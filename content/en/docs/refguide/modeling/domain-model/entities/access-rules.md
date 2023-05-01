@@ -1,7 +1,6 @@
 ---
 title: "Access Rules"
 url: /refguide/access-rules/
-parent: "entities"
 weight: 70
 tags: ["domain model", "entity", "access rule", "xpath constraint", "module role", "studio pro"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
@@ -23,11 +22,15 @@ The **System.User** entity has inbuilt access rules where access is given to its
 
 ## 2 Defining Access Rules
 
-Access rules are defined via entity's **Properties** > **Access rules**, or on the **Access rules** tab of the entity dialog. 
+There are two ways to view access rules:
 
-{{< figure src="/attachments/refguide/modeling/domain-model/entities/access-rules/access-rules-section.png" alt="Access Rules for Entities" >}}
+* Via entity's **Properties** > **Access rules**: 
 
-{{< figure src="/attachments/refguide/modeling/domain-model/entities/access-rules/access-rules-tab.png" alt="Access Rules for Entities" >}}
+    {{< figure src="/attachments/refguide/modeling/domain-model/entities/access-rules/access-rules-section.png" alt="Access Rules for Entities" width="250px" >}}
+
+* Via the **Access rules** tab of the entity dialog box:
+
+    {{< figure src="/attachments/refguide/modeling/domain-model/entities/access-rules/access-rules-tab.png" alt="Access Rules for Entities" width="550px" >}}
 
 {{% alert color="info" %}}
 The **Access rules** section is visible only if the [App Security](/refguide/app-security/) is set to **Production**.
@@ -35,7 +38,7 @@ The **Access rules** section is visible only if the [App Security](/refguide/app
 
 An example of the access rules properties is represented in the image below:
 
-{{< figure src="/attachments/refguide/modeling/domain-model/entities/access-rules/access-rules-properties.png" alt="Access Rules for Entities" >}}
+{{< figure src="/attachments/refguide/modeling/domain-model/entities/access-rules/access-rules-properties.png" alt="Access Rules for Entities" width="700px" >}}
 
 Access rules properties consist of the following sections:
 
@@ -49,6 +52,14 @@ Access rules properties consist of the following sections:
 In **Documentation**, you can describe the intention of the access rule. This helps to keep access rules comprehensible, especially in the case of non-trivial XPath constraints.
 
 ### 2.2 Rule Applies to the Following Module Roles Section {#module-roles}
+
+{{% alert color="info" %}}
+To apply an access rule to an entity, you need to have at least one of the following Access rights selected:
+
+* Allow creating new objects
+* Allow deleting existing objects
+* An Entity Member (attribute or association) with `Read` or `Read, Write` rights
+{{% /alert %}}
 
 #### 2.2.1 Roles
 
@@ -74,7 +85,7 @@ If **Allow deleting existing objects** is checked, users are allowed to delete e
 
 The set of objects that can be deleted can be limited by using an [XPath constraint](#xpath-constraint).
 
-#### 2.3.2 Member Read & Write Rights Section
+#### 2.3.2 Member Read and Write Rights Section
 
 **Member read and write rights** define the access rights for every member ([attribute](/refguide/attributes/) or [association](/refguide/associations/)) of the entity. These access rights indicate whether users are allowed to view and/or edit the member's value. The set of objects to which these rights apply can be limited by using an [XPath constraint](#xpath-constraint).
 
@@ -104,7 +115,7 @@ If a user cannot view the value of an attribute because of security constraints,
 
 An [XPath constraint](/refguide/xpath-constraints/) can be used to constrain the set of objects to which the access rule applies. If the constraint rule is true, the rule applies to that object. If the XPath constraint is empty, the rule applies to all objects of the entity.
 
-{{< figure src="/attachments/refguide/modeling/domain-model/entities/access-rules/access-rule-xpath-tab.png" >}}
+{{< figure src="/attachments/refguide/modeling/domain-model/entities/access-rules/access-rule-xpath-tab.png" width="450px" >}}
 
 {{% alert color="warning" %}}
 XPath constraints can only be applied to persistable entities as they are applied by the database. Defining XPath constraints for non-persistable entities results in consistency errors.
@@ -131,11 +142,12 @@ The **Path to user...** button adds an XPath constraint so the access rule is on
 ```
 
 As an example:
+
 1. Assume that the **Customer** entity is a specialization of the **User** entity. The **Order** entity is associated with the **Customer** entity via the **Order_Customer** association.
 2. Assume that a logged-in customer is only allowed to view their orders, but is not allowed to view the orders of other customers.
 The XPath constraint can be constructed easily using the **Path to user...** button by selecting the **Customer** entity in the **Order** entity access rule.
 
-{{< figure src="/attachments/refguide/modeling/domain-model/entities/access-rules/access-rule-order-xpath.png" >}}
+{{< figure src="/attachments/refguide/modeling/domain-model/entities/access-rules/access-rule-order-xpath.png" width="1000px" >}}
 
 Because of this XPath constraint, access defined in the **Access rights** tab is only applied to orders for which the customer is the current user.
 
@@ -147,7 +159,7 @@ Access rules are abstract descriptions of access rights. To apply them they need
 
 ### 3.1 New Objects
 
-When a new object is created, or when a new object is sent to the runtime server as part of a request, all XPath constraints are assumed to evaluate as `true`. This evaluation result is stored in memory and valid for the lifetime of the request. Committing the object does _not_ lead to access rules or XPath rules being re-evaluated.
+When a new object is created, or when a new object is sent to the runtime server as part of a request, all XPath constraints are assumed to evaluate as `true`. This evaluation result is stored in memory and valid for the lifetime of the request. Committing the object does *not* lead to access rules or XPath rules being re-evaluated.
 
 ### 3.2 Objects Stored in the Database
 

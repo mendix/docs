@@ -1,7 +1,6 @@
 ---
 title: "Starting Microflows"
 url: /refguide7/starting-microflows/
-parent: "page-concepts"
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
@@ -13,17 +12,17 @@ Mendix allows for microflows to be triggered in pages by a variety of widgets. T
 | --- | --- | --- |
 | Action button (data view) | On click | Data view object |
 | Data view | Data source | Object of the data view containing this data view |
-| Action button (grid)<sup><a name="ref1" href="#fn1">1</a></sup> | On click | Grid selection or clicked row (as an object or as a list, depending on the [selection mode](/refguide7/data-grid/)) |
+| Action button (grid)<sup><a id="ref1" href="#fn1">1</a></sup> | On click | Grid selection or clicked row (as an object or as a list, depending on the [selection mode](/refguide7/data-grid/)) |
 | Reference set selector | On change | Data view object |
-| Input widget<sup><a name="ref2" href="#fn2">2</a></sup> | On change | Data view object |
+| Input widget<sup><a id="ref2" href="#fn2">2</a></sup> | On change | Data view object |
 | Input widget | On enter | Data view object |
 | Input widget | On leave | Data view object |
 | Image viewer | On click | Image viewer object |
 | Action button | On click | Enclosing data view object, if available |
 | Reference selector | Data source | Data view object |
 
-<small><sup><a name="fn1" href="#ref1" title="Jump back to footnote 1 in the text.">1</a></sup> The following grid widgets have grid action buttons: *data grid*; *template grid*; and *reference set selector*.</small><br/>
-<small><sup ><a name="fn2" href="#ref2" title="Jump back to footnote 2 in the text.">2</a></sup> The following widgets are input widgets: *check box*; *date picker*; *drop-down*; *text area*; and *text box*.</small>
+<small><sup><a id="fn1" href="#ref1" title="Jump back to footnote 1 in the text.">1</a></sup> The following grid widgets have grid action buttons: *data grid*; *template grid*; and *reference set selector*.</small><br/>
+<small><sup ><a id="fn2" href="#ref2" title="Jump back to footnote 2 in the text.">2</a></sup> The following widgets are input widgets: *check box*; *date picker*; *drop-down*; *text area*; and *text box*.</small>
 
 ## 2 Microflow
 
@@ -64,7 +63,7 @@ Set the duration only to asynchronous if you experience problems. Sometimes if a
 | Synchronous | The client waits until the microflow is done executing. |
 | Asynchronous | The client executes the microflow and starts polling to determine whether the microflow is done executing. |
 
-_Default value_: Synchronous
+*Default value*: Synchronous
 
 ### 4.2 Show Progress Bar
 
@@ -82,7 +81,7 @@ The progress message is shown along with the progress bar if the progress bar is
 
 ## 5 Confirmation
 
-If a microflow is triggered by a button you have the option to ask for confirmation before proceeding with the microflow. This is useful in cases where an operation modifies or deletes a lot of data or when it takes a lot of time to complete. The user will be prompted with a question whether he/she wants to continue with this operation.
+If a microflow is triggered by a button you have the option to ask for confirmation before proceeding with the microflow. This is useful in cases where an operation modifies or deletes a lot of data or when it takes a lot of time to complete. The user will be prompted with a question whether they want to continue with this operation.
 
 Note: the title of the confirmation pop-up is determined by a system text (category 'Message dialog title').
 
@@ -90,7 +89,7 @@ Note: the title of the confirmation pop-up is determined by a system text (categ
 
 Here you can specify whether you want to ask for confirmation or not.
 
-_Default value_: No
+*Default value*: No
 
 ### 5.2 Question
 
@@ -110,16 +109,16 @@ This is the caption for the button that cancels the execution of the microflow. 
 
 This property specifies whether the selection of the data or template grid should be maintained after executing the microflow.
 
-_Default value:_ No
+*Default value:* No
 
 ### 6.2 Abort on Validation Errors
 
 For microflows that are used within a data view, you can specify whether you want to perform page validations before executing the microflow. There are two kind of page validations:
 
-1.  Required: the input field must be given a value.
-2.  Maximum length: the input field must not exceed a given length.
+1. Required: the input field must be given a value.
+2. Maximum length: the input field must not exceed a given length.
 
-By using this property you can perform page validations _before_ executing the microflow. If the validations fail, the microflow will not be executed.
+By using this property you can perform page validations *before* executing the microflow. If the validations fail, the microflow will not be executed.
 
 | Value | Description |
 | --- | --- |
@@ -127,4 +126,4 @@ By using this property you can perform page validations _before_ executing the m
 | Only for this widget | This will prevent the microflow from executing on validation errors of the specific widget. |
 | No | The microflow will always be executed. |
 
-_Default value:_ Yes
+*Default value:* Yes

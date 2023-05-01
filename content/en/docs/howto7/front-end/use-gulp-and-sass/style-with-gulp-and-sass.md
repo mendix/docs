@@ -1,7 +1,6 @@
 ---
-title: "Start Styling with Gulp & Sass"
+title: "Start Styling with Gulp  Sass"
 url: /howto7/front-end/style-with-gulp-and-sass/
-parent: "use-gulp-and-sass"
 weight: 2
 tags: ["gulp", "sass", "ux", "front end"]
 ---
@@ -9,7 +8,7 @@ tags: ["gulp", "sass", "ux", "front end"]
 ## 1 Introduction
 
 {{% alert color="info" %}}
-This how-to is based on the blog post [How Do I Start Styling In Mendix (Gulp & Sass)](https://medium.com/@jasonteunissen/how-do-i-start-styling-in-mendix-gulp-sass-6b37ddaf8de6) by Jason Teunissen, UX Consultant at [Appronto](https://developer.mendixcloud.com/link/partnerprofile/8870).
+This how-to is based on the blog post [How Do I Start Styling In Mendix (Gulp  Sass)](https://medium.com/@jasonteunissen/how-do-i-start-styling-in-mendix-gulp-sass-6b37ddaf8de6) by Jason Teunissen, UX Consultant at [Appronto](https://developer.mendixcloud.com/link/partnerprofile/8870).
 {{% /alert %}}
 
 You can use [Gulp](https://gulpjs.com/) to watch the files for any changes you make when styling with Sass. Gulp triggers auto-refresh by default so that your changes are immediately visible in the browser.
@@ -23,7 +22,7 @@ This how-to will teach you how to do the following:
 
 Before starting this how-to, make sure you have completed the following prerequisites:
 
-* Complete [How to Set Up Gulp & Sass](/howto7/front-end/set-up-sass/)
+* Complete [How to Set Up Gulp  Sass](/howto7/front-end/set-up-sass/)
 
 ## 3 Setting Up the Gulp Project
 
@@ -32,7 +31,7 @@ To set up the Gulp project, follow these steps:
 1. Download *gulp.zip* from [mendix/ux-theming](https://github.com/mendix/ux-theming/releases).
 2. Unzip the folder into your app's root folder.
 3. In your terminal, go to your app root folder by typing `cd`, then drag your root file into the terminal. Please note that if you do this on Windows and you encounter errors with installing the dependencies, open your CMD or PowerShell as Administrator.
-4. <a name="34"></a>Install the dependencies by typing `npm install`.
+4. <a id="34"></a>Install the dependencies by typing `npm install`.
 
 {{< figure src="/attachments/howto7/front-end/use-gulp-and-sass/style-with-gulp-and-sass/cd.png" >}}
 
@@ -52,7 +51,7 @@ If you are using Parallels on Mac, you can access your Mendix app on your Mac br
 
 And that's it! Now you are ready to start styling your Mendix app with Sass.
 
-## 5 Development & Production
+## 5 Development and Production
 
 When running `npm run dev`, Sass will compile the CSS files unminified and with source-mapping. This helps in debugging the styling, as a modern browser will point to the *.scss* file where a rule is specified.
 
@@ -67,7 +66,7 @@ If you have [TortoiseSVN](/refguide7/using-version-control-in-the-dm/#tortoisesv
 {{< figure src="/attachments/howto7/front-end/use-gulp-and-sass/style-with-gulp-and-sass/svn-ignore.jpg" >}}
 
 {{% alert color="warning" %}}
-Always use the version of TortoiseSVN which matches your app model. If you open a local model from Mendix version 7.x or 6.x with the latest version of TortoiseSVN, **you will no longer be able to open it in Mendix**.
+Always use the version of TortoiseSVN which matches your app model. If you open a local model from Mendix version 7.x with the latest version of TortoiseSVN, **you will no longer be able to open it in Mendix**.
 {{% /alert %}}
 
 ## 7 Troubleshooting
@@ -76,5 +75,5 @@ If you encounter issues using this setup, please read the [Troubleshooting](http
 
 ## 8 Read More
 
-* [How Do I Start Styling In Mendix (Gulp & Sass)](https://medium.com/@jasonteunissen/how-do-i-start-styling-in-mendix-gulp-sass-6b37ddaf8de6)
+* [How Do I Start Styling In Mendix (Gulp  Sass)](https://medium.com/@jasonteunissen/how-do-i-start-styling-in-mendix-gulp-sass-6b37ddaf8de6)
 * [mendix / ux-theming](https://github.com/mendix/ux-theming)

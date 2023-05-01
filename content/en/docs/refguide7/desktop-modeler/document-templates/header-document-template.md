@@ -1,7 +1,6 @@
 ---
 title: "Header (Document Template)"
 url: /refguide7/header-document-template/
-parent: "document-templates"
 aliases:
     - /refguide7/Header+(document+template).html
     - /refguide7/header-(document-template).html

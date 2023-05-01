@@ -1,11 +1,10 @@
 ---
 title: "1.11"
 url: /releasenotes/add-ons/apm-1.11/
-parent: "apm-1"
 weight: 95
 ---
 
-## <a name="1.11.1"></a>1.11.1
+## 1.11.1 {#1.11.1}
 
 This is a release with bug fixes. It is for Mendix 6.2 and above.
 
@@ -52,4 +51,3 @@ Customers wanted one button to configure the entire system to production or non-
 * The JDBC settings for MSSQL were by default not correct after installation. This has been fixed.
 * Trap errors often occur together, so now there is a **Previous** and **Next** button inside a trap to save some clicks.
 * Java action parameters have been renamed to prevent errors when Mendix generates different names in different versions of the platform or in different deployments. Mendix does so to avoid conflicts in Java due to generated proxies, but the consequence is an error in the model due to APM. We have now prevented this.
-

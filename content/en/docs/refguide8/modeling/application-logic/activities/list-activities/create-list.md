@@ -1,7 +1,6 @@
 ---
 title: "Create List"
 url: /refguide8/create-list/
-parent: "list-activities"
 weight: 3
 tags: ["studio pro"]
 ---

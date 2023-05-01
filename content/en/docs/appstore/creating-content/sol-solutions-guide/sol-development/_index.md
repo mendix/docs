@@ -1,7 +1,6 @@
 ---
-title: "Developing Solutions"
+title: "Develop Solutions"
 url: /appstore/creating-content/sol-development/
-parent: "sol-solutions-guide"
 weight: 20
 description: "Presents documentation for developing solutions"
 tags: [ "solutions", "development", "adaptive solutions" ]
@@ -11,12 +10,11 @@ tags: [ "solutions", "development", "adaptive solutions" ]
 
 This section provides information and best practices on how to develop solutions on the Mendix Platform that are ready to be sold on the Mendix Marketplace.
 
-While [Mendix best practices for development](/howto/general/dev-best-practices/) apply, there are additional considerations when architecting and developing a Mendix solution. The overview of [Architecting Adaptive Solutions](/appstore/creating-content/sol-architecting/) is a good starting point. 
+While [Mendix best practices for development](/refguide/dev-best-practices/) apply, there are additional considerations when architecting and developing a Mendix solution. The overview of [Architect Adaptive Solutions](/appstore/creating-content/sol-architecting/) is a good starting point. 
 
-Then, continue reading about [Applying IP Protection](/appstore/creating-content/sol-ip-protection/) to make your solution ready to sell to customers.
+Then, read [Apply IP Protection](/appstore/creating-content/sol-ip-protection/) to make your solution ready to sell to customers.
 
 ## 2 Documents in This Section
 
-* [Architecting Adaptive Solutions](/appstore/creating-content/sol-architecting/)
-* [Applying IP Protection](/appstore/creating-content/sol-ip-protection/)
-
+* [Architect Adaptive Solutions](/appstore/creating-content/sol-architecting/)
+* [Apply IP Protection](/appstore/creating-content/sol-ip-protection/)

@@ -1,7 +1,6 @@
 ---
-title: "HttpRequest & HttpResponse System Entities"
+title: "HttpRequest and HttpResponse System Entities"
 url: /refguide7/http-request-and-response-entities/
-parent: "integration"
 ---
 
 ## 1 Introduction

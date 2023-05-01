@@ -1,7 +1,6 @@
 ---
 title: "OQL Group by Clause"
 url: /refguide/oql-group-by-clause/
-parent: "oql"
 tags: ["studio pro"]
 ---
 
@@ -42,19 +41,18 @@ GROUP BY Sales.Address/City
 This query returns the sum of the total prices of all orders per city:
 
 ```sql
-SELECT SUM(Sales.Order/TotalPrice)
-FROM Sales.Order
-INNER JOIN Sales.Order/Sales.Customer_Order/Sales.Customer/Sales.Customer_Address/Sales.Address
+SELECT SUM(Sales."Order"/TotalPrice)
+FROM Sales."Order"
+INNER JOIN Sales."Order"/Sales.Customer_Order/Sales.Customer/Sales.Customer_Address/Sales.Address
 GROUP BY Sales.Address/City
 ```
 
 This query returns the sum of the total prices of all orders per city for which the sum is greater than 1000.00 or the City is Losdun:
 
 ```sql
-SELECT SUM(Sales.Order/TotalPrice)
-FROM Sales.Order
-INNER JOIN Sales.Order/Sales.Customer_Order/Sales.Customer/Sales.Customer_Address/Sales.Address
+SELECT SUM(Sales."Order"/TotalPrice)
+FROM Sales."Order"
+INNER JOIN Sales."Order"/Sales.Customer_Order/Sales.Customer/Sales.Customer_Address/Sales.Address
 GROUP BY Sales.Address/City
-HAVING SUM(Sales.Order/TotalPrice) > 1000.0 OR Sales.Address/City = 'Losdun'
+HAVING SUM(Sales."Order"/TotalPrice) > 1000.0 OR Sales.Address/City = 'Losdun'
 ```
-

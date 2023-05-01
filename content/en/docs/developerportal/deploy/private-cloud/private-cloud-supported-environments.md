@@ -1,11 +1,9 @@
 ---
 title: "Supported Providers"
 url: /developerportal/deploy/private-cloud-supported-environments/
-parent: "private-cloud"
 description: "Describes which providers are supported by Mendix for Private Cloud"
-weight: 50
+weight: 100
 tags: ["Private Cloud", "Cluster", "Operator", "Deploy", "Provider", "Registry", "Database"]
-#To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 ---
 
 ## 1 Introduction
@@ -20,6 +18,9 @@ This document covers which providers and services are officially supported by th
 We currently support deploying to the following Kubernetes cluster types:
 
 * [Amazon Elastic Kubernetes Service](https://aws.amazon.com/eks/) (EKS)
+{{% alert color="info" %}}
+If you want to deploy your app to Amazon EKS, consider using the Mendix for Amazon EKS Reference Deployment. For more information, see [Mendix for Amazon EKS—Terraform module](https://aws.amazon.com/solutions/partners/terraform-modules/mendix-eks/).
+{{% /alert %}}
 * [Azure Kubernetes Service](https://azure.microsoft.com/en-us/services/kubernetes-service/)
 * [Red Hat OpenShift Container Platform](https://www.openshift.com/)
 * [MicroK8s](https://microk8s.io/)
@@ -35,8 +36,8 @@ If deploying to Red Hat OpenShift, you need to specify that specifically when cr
 
 Mendix for Private Cloud Operator `v2.*.*` is the latest version which officially supports:
 
-* Kubernetes versions 1.19 through 1.23
-* OpenShift 4.6 through 4.10
+* Kubernetes versions 1.19 through 1.26
+* OpenShift 4.6 through 4.11
 
 {{% alert color="warning" %}}
 Kubernetes 1.22 is a [new release](https://kubernetes.io/blog/2021/08/04/kubernetes-1-22-release-announcement/) which removes support for several deprecated APIs and features.
@@ -113,11 +114,14 @@ It is possible to have username/password authentication or to push without authe
 
 ### 3.2 Externally Hosted Registry
 
-Externally hosted registries are supported if they allow username/password authentication. This includes:
+Externally hosted [OCI compliant](https://github.com/opencontainers/distribution-spec/blob/main/spec.md) registries are supported if they allow username/password authentication. This includes:
 
 * [Docker Hub](https://hub.docker.com/)
 * [quay.io](https://quay.io/)
 * [Azure Container Registry](https://azure.microsoft.com/en-us/services/container-registry/) (ACR)
+* [JFROG Artifactory](https://jfrog.com/artifactory/)
+* [Sonatype Nexus](https://www.sonatype.com/products/nexus-repository)
+* [Harbor](https://goharbor.io)
 
 When using ACR in combination with Azure Kubernetes Service, it is possible to set up [native authentication](https://docs.microsoft.com/en-us/azure/aks/cluster-container-registry-integration#create-a-new-aks-cluster-with-acr-integration) for pulling images from ACR.
 
@@ -147,8 +151,6 @@ The EKS cluster should be configured so that it can [pull images from ECR](https
 [Google Cloud Platform](https://cloud.google.com/) provides [artifact registry](https://cloud.google.com/artifact-registry) and [container-registry](https://cloud.google.com/container-registry).
 
 Mendix Operator supports registry authentication with [workload identity](https://cloud.google.com/kubernetes-engine/docs/how-to/workload-identity). The Mendix Operator will need a kubernetes service account [bound](https://cloud.google.com/kubernetes-engine/docs/how-to/workload-identity#authenticating_to) to a [google service account](https://cloud.google.com/iam/docs/service-accounts) with permissions to authenticate to a registry.
-
-
 
 ## 4 Databases
 
@@ -233,6 +235,7 @@ This refers to a SQL Server database which is automatically provisioned by the O
 The following Microsoft SQL Server editions are supported:
 
 * SQL Server 2017
+* SQL Server 2019
 
 The following managed Microsoft SQL Server databases are supported:
 
@@ -366,6 +369,7 @@ Mendix for Private Cloud is compatible with the following ingress controllers:
 * [Traefik](https://traefik.io/traefik/)
 * [AWS Application Load Balancer](https://docs.aws.amazon.com/eks/latest/userguide/alb-ingress.html)
 * [Ingress for External HTTP(S) Load Balancing](https://cloud.google.com/kubernetes-engine/docs/concepts/ingress-xlb)
+* [Azure Application Gateway Ingress Controller](https://learn.microsoft.com/en-us/azure/application-gateway/ingress-controller-overview)
 
 For ingress, it is possible to do the following:
 
@@ -405,7 +409,7 @@ Mendix for Private Cloud can create Services that are compatible with:
 * [AWS Network Load Balancer](https://docs.aws.amazon.com/eks/latest/userguide/network-load-balancing.html)
 * AWS Classic Load Balancer
 
-### 6.4 Service mesh support
+### 6.4 Service Mesh Support
 
 Starting with Mendix Operator v2.5.0, the following service meshes can be enabled for the entire Mendix for Private Cloud namespace:
 

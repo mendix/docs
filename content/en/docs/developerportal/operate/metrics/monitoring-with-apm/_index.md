@@ -3,22 +3,24 @@ title: "Monitoring Your Mendix Apps with an APM Tool"
 linktitle: "Monitoring with APM"
 url: /developerportal/operate/monitoring-with-apm/
 weight: 30
-description: "How to use an APM (Application Performance Monitoring) tool to monitor your Mendix Cloud v4 app."
-tags: ["Datadog", "Mendix Cloud", "v4", "monitoring", "analysis", "Saas", "AppDynamics", "APM"]
+description: "How to use an APM (Application Performance Monitoring) tool to monitor your Mendix Cloud app."
+tags: ["Datadog", "Mendix Cloud", "monitoring", "analysis", "Saas", "AppDynamics", "APM", "Splunk", "Dynatrace"]
 ---
 
 ## 1 Introduction
 
 There are a number of application performance monitoring (APM) tools for cloud applications which are available through a Software-as-a-service-based (Saas-based) data analytics platform. They provide comprehensive monitoring of servers, databases, tools, and services.
 
-Mendix provides out-of-the-box configuration to use Datadog and AppDynamics to provide additional monitoring for your Mendix Apps running on the Mendix Cloud.
+Mendix provides out-of-the-box configuration to use Datadog, AppDynamics, Dynatrace, and Splunk Cloud Platform to provide additional monitoring for your Mendix Apps running on the Mendix Cloud.
 
 {{% alert color="info" %}}
-Monitoring using an APM tool is only available to apps running on Mendix Cloud v4.
+[AppDynamics](https://www.appdynamics.com/) application monitoring is fully supported in Mendix version 9.7 and above. For older supported versions, only the basic AppDynamics Java Agent metrics are available, along with the `postgresql` and `mx.client` namespaces.
 
-[AppDynamics](https://www.appdynamics.com/) application monitoring is fully supported in Mendix version 9.7 and above. For older supported versions, only the basic AppDynamics Java Agent metrics are available, along with the `postgresql` and `mx.client` namespaces. 
+[Dynatrace](https://www.dynatrace.com/) OneAgent is used to collect metrics. Additionally, in Mendix version 9.7 and above, custom application runtime and database metrics are supported.
 
 [Datadog](https://www.datadoghq.com/) logging and application metrics are supported in Mendix version 7.15 and above.
+
+[Splunk Cloud Platform](https://www.splunk.com/en_us/products/splunk-cloud-platform.html) is supported for analyzing runtime application logs.
 {{% /alert %}}
 
 This document explains what information can be provided to a Saas-based data analytics platform.
@@ -27,14 +29,20 @@ For details on how to add a specific APM tool to your app, see one of the follow
 
 * [AppDynamics for the Mendix Cloud](/developerportal/operate/appdynamics-metrics/)
 * [Datadog for the Mendix Cloud](/developerportal/operate/datadog-metrics/)
+* [Dynatrace for Mendix Cloud](/developerportal/operate/dynatrace-metrics/)
+* [Splunk for the Mendix Cloud](/developerportal/operate/splunk-metrics/)
 
 A summary of the useful metrics provided by Mendix is in the section [Summary of Mendix Metrics](#summary), below.
 
-{{% alert color="warning" %}}
-Monitoring using an APM tool is not supported in the deprecated Mendix Cloud v3, nor in default deployment buildpacks for other cloud platforms.
+{{% alert color="info" %}}
+For support on other cloud deployment options, such as Private Cloud, refer to their dedicated [documentation pages](/developerportal/deploy/private-cloud-monitor/).
 {{% /alert %}}
 
 ## 2 What Information Can Mendix Supply to a Saas-based Data Analytics Platform?
+
+{{% alert color="info" %}}
+The integration with Splunk Cloud Platform currently sends only runtime application logs. It does not include other monitoring information.
+{{% /alert %}}
 
 Mendix provides two types of monitoring data:
 
@@ -56,9 +64,7 @@ Once you have configured your data analytics platform for your app, it will auto
 The metrics from your app's environment are supplied in the following namespaces:
 
 * commons.pool2 – database connection pool metrics
-* database – metrics on the database performance
 * jetty – metrics from the ingress controller of the app
-* jmx – metrics from the Mendix runtime
 * jvm – metrics from the Java virtual machine in which the Mendix runtime runs
 * postgresql – database metrics specific to PostgreSQL databases
 * system – metrics from the base system running on the platform or PaaS — in Datadog these are disabled by default, but can be enabled using the [`DD_ENABLE_CHECKS`](/developerportal/operate/datadog-metrics/#system-metrics) environment variable.
@@ -83,7 +89,7 @@ The following metrics are useful when monitoring the performance of your Mendix 
 * postgresql.max_connections
 * postgresql.percent_usage_connections
 
-Note that the absolute values are often not useful, but looking at trends over time can indicate performance issues or future action which might be required. Some of these trends are similar to those described in [Trends in Mendix Cloud v4](/developerportal/operate/trends-v4/).
+Note that the absolute values are often not useful, but looking at trends over time can indicate performance issues or future action which might be required. Some of these trends are similar to those described in [Trends in the Mendix Cloud](/developerportal/operate/trends-v4/).
 
 ## 4 App Metrics {#app-metrics}
 
@@ -112,6 +118,7 @@ A timing/histogram value for REST requests.
 ##### 4.1.1.4 mx.client.time
 
 The time it takes to handle a request to a request handler used by the web UI. You can get results for all of the following types of request
+
 * REST, ODATA, SOAP **doc** requests
 * `/xas` requests (general queries for data in data grids, sending changes to the server, and triggering the execution of microflows)
 * File upload/download requests
@@ -195,7 +202,7 @@ The following Mendix *request handler* calls will be passed:
 | `FileRequestHandler` | File upload/download requests | `mx.client.time` |
 | `PageUrlRequestHandler` | `/p` requests | `mx.client.time` |
 
-You can find help in analyzing some of these values in [Trends in Mendix Cloud v4](/developerportal/operate/trends-v4/).
+You can find help in analyzing some of these values in [Trends in the Mendix Cloud](/developerportal/operate/trends-v4/).
 </details>
 
 **<details><summary><sup><small>[2]</small></sup> Activities (click to see list)</summary>**
@@ -218,6 +225,7 @@ The following Mendix *activities* can be passed:
 * `CallWebService`
 * `ImportWithMapping`
 * `ExportWithMapping`
+
 </details>
 
 **Example**
@@ -259,7 +267,7 @@ You pass the configuration to the metrics agent by adding a *Custom Runtime Sett
 2. Click **Details** next to the environment you have configured for Datadog.
 3. Add a **Custom Environment Variable** *METRICS_AGENT_CONFIG* with the value of the JSON required for your configuration.
 
-	{{< figure src="/attachments/developerportal/operate/metrics/datadog-metrics/datadog_metricsagentconfig.png" >}}
+    {{< figure src="/attachments/developerportal/operate/metrics/datadog-metrics/datadog_metricsagentconfig.png" >}}
 
 4. Click **Save**.
 5. Restart your app to apply the new settings if you have already connected your node to your data analytics. If you are in the process of connecting your node, you must *redeploy* your application to apply the changes.

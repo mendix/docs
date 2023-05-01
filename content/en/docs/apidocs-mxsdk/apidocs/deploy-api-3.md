@@ -3,7 +3,7 @@ title: "Deploy API – Version 3"
 url: /apidocs-mxsdk/apidocs/deploy-api-3/
 type: swagger
 category: "API Documentation"
-description: "Version 2 of APIs which can be used to deploy Mendix apps to licensed nodes"
+description: "This API can be used to deploy Mendix apps to licensed nodes, manage application environments in the Mendix Cloud, retrieve statuses, start and stop applications, and deploy or transport new model versions to application environments."
 weight: 27
 tags: ["API", "deploy", "licensed", "deployment", "cloud"]
 ---
@@ -32,7 +32,7 @@ Select the following as **Deployment Mendix Cloud** scopes:
 
 * `mx:deployment:read` – to perform `GET` operations
 * `mx:deployment:write` – to perform all operations (`GET`, `POST`, `PUT`, and `DELETE`)
- 
+
 Store the generated value `{GENERATED_PAT}` somewhere safe so you can use it to authorize your Mendix for Private Cloud API calls.
 
 ### 2.2 Using the PAT

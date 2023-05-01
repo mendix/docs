@@ -3,15 +3,18 @@ title: "Webhooks for Stories and Sprints"
 linktitle: "Webhooks for Stories/Sprints"
 url: /apidocs-mxsdk/apidocs/webhooks-sprints/
 category: "API Documentation"
+description: "These webhooks allow you to build or set up Mendix Platform connectors that subscribe to certain events on the Developer Portal."
 weight: 75
 ---
 
 ## 1 Introduction
 
 {{% alert color="warning" %}}
-The webhook payloads described in this document are for app stories and Sprints. These webhooks were enabled via **General Settings** > **Webhooks** or via your app.
-
 The webhooks for stories and Sprints have been deprecated. For more information, see the deprecation note in the [Webhooks](/developerportal/collaborate/general-settings/#webhooks) section of *General Settings*.
+{{% /alert %}}
+
+{{% alert color="warning" %}}
+The webhook payloads described in this document are for app stories and Sprints. These webhooks were enabled via **General Settings** > **Webhooks** or via your app.
 {{% /alert %}}
 
 {{% alert color="info" %}}

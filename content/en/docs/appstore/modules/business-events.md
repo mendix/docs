@@ -200,14 +200,14 @@ The business event service document is open in Studio Pro:
 
 ##### 4.2.2.1 Publishing and Subscribing to Business Events
 
-After following the instructions [Using an Existing Business Event Service](#two-way-be-create), you can publish or subscribe (or both, depending on the [service definitions](#add-be-definitions)) in the following ways:
+After following the instructions in [Using an Existing Business Event Service](#two-way-be-create), you can publish or subscribe (or both, depending on the [service definitions](#add-be-definitions)) in the following ways:
 
 * Open the business service document and click **Add**
 * **Drag and drop** the business event from the **Data Hub pane** to your domain model
 
 To publish a business event service, you need to use it in a microflow.
 
-##### 4.2.2.1.1 Automatically Created Event Handler Microflow and Entity {#two-way-be-handler}
+#### 4.2.3 Automatically Created Event Handler Microflow and Entity {#two-way-be-handler}
 
 When you click **Add** to add the events from the document into your module, Studio Pro will automatically create a **persistable** consumed entity within your domain model and an **Event Handler** microflow (**Handle_BE**) to manage the flow of the event after delivery. The **Event Handler** microflow is created in the same directory as your service. 
 
@@ -260,7 +260,7 @@ The **PublishedBusinessEvent** and **ConsumedBusinessEvent** entities are necess
 * **DeadLetterQueue**: This persistent entity within the Domain Model of the Business Events Module is used for generating a historical record of events that are generated for business event activities that were not successful or had errors when received by the consumer and can be referred to for troubleshooting. You can query the DeadLetterQueue entity to determine which received events could not be processed.
 * **Outbox**: This entity is used to store the event prior to being sent.  This entity is connected to the microflow where a Business event is triggered.  If the microflow fails, the entity will be removed as part of the same transaction. If the event broker is down at runtime, business events will accumulate in the **Outbox**. They will be retried at increasing intervals for 48 hours, and they will fail after that time. Once an event is successfully delivered, it gets deleted from the **Outbox**.
 
-#### 4.3.4 Dead Letter Queue for Failed Messages {#dead-letter-queue}
+#### 4.3.3 Dead Letter Queue for Failed Messages {#dead-letter-queue}
 
 Every time a business event is received, it is transformed to match the Entity created as part of the Subscription. When the Entity within the Business Event has changed based on the imported AsyncAPI doucment, it can render the Entity unable to be processed. In such a scenario the Business Event will fail into a **Dead Letter Queue** which contains the representation of the Entity within the data column.
 

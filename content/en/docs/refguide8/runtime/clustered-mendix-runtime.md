@@ -46,13 +46,13 @@ Mendix Runtime has the concept of a cluster leader. This is a single node within
 
 These activities are only performed by the cluster leader. If the cluster leader is not running, the cluster will still function. However, the activities listed above will not be performed.
 
-The Cloud Foundry Buildpack determines which cluster node becomes the cluster leader and which become cluster slaves.
+The Cloud Foundry Buildpack determines which cluster node becomes the cluster leader and which become cluster followers.
 
 ## 5 Cluster Startup
 
 Individual nodes in a cluster can be started and stopped with no impact on the uptime of the app. However, when you deploy a new version of the app the whole cluster is restarted and the cluster leader determines whether database synchronization is required. This means that there will be some downtime when the app is deployed while this is done.
 
-If database synchronization is required, all the cluster slaves will wait until the cluster leader finishes the database synchronization. When the database synchronization has finished, all the cluster nodes will become fully functional.
+If database synchronization is required, all the cluster followers will wait until the cluster leader finishes the database synchronization. When the database synchronization has finished, all the cluster nodes will become fully functional.
 
 If no database synchronization is required, all the cluster nodes will become fully functional directly after startup.
 

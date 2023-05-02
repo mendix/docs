@@ -16,7 +16,7 @@ This document explains how you can create a custom **Save** button on a detail p
 
 Before you continue, make sure you have completed the following:
 
-1. Create a **Customer** entity with the attribute **Name** in your domain model (for more information, see [Create a basic data layer](/howto/data-models/create-a-basic-data-layer/)).
+1. Create a **Customer** entity with the attribute **Name** in your domain model (for more information, see [Creating a basic data layer](/refguide/create-a-basic-data-layer/)).
 
     {{< figure src="/attachments/refguide/modeling/pages/button-widgets/create-a-custom-save-button/entity-customer.png" width="200px" >}}
 
@@ -89,7 +89,4 @@ Congratulations! You have customized the **Save** button using a microflow:
 
 ## 5 Read More
 
-* [Microflows](/refguide/microflows/)
-* [Microflow Activities](/refguide/activities/)
-* [Working With Lists in a Microflow](/refguide/working-with-lists-in-a-microflow/)
-* [Extracting and Using Sub-Microflows](/refguide/extracting-and-using-sub-microflows/)
+* [Advanced Validation with a Custom Save Button](/refguide/setting-up-data-validation/#custom-validation-save-button)

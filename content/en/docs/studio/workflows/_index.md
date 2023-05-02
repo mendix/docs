@@ -22,7 +22,7 @@ Workflows are a visual way of processing logic in your application. A workflow l
 {{< figure src="/attachments/studio/workflows/workflow-example.jpg" alt="Workflow Example" >}}
 
 {{% alert type="note" %}}
-Workflows are available in Studio from **Mendix version 9.12.1**. If you have an app with workflow functionality below this version, this app is most likely to be created in Studio Pro and requires a manual migration. For more information on how to migrate your app using Studio Pro, see [Migrating Workflow Apps](/refguide/workflow-beta-migration/). 
+Workflows are available in Studio from **Mendix version 9.12.1**. If you have an app with workflow functionality below this version, this app is most likely to be created in Studio Pro and requires a manual migration. For more information on how to migrate your app using Studio Pro, see [Migrating Workflow Apps](/refguide9/workflow-beta-migration/). 
 {{% /alert %}}
 
 ## 2 Performing Basic Functions
@@ -114,11 +114,38 @@ To add an element to a workflow, do the following:
 
 The selected element is added.
 
-### 2.8 Triggering a Workflow
+### 2.8 Cutting/Coping/Pasting Elements in a Workflow
+
+To cut/copy/paste elements, use <kbd>Ctrl</kbd> + <kbd>X</kbd> /  <kbd>Ctrl</kbd> + <kbd>C</kbd> / <kbd>Ctrl</kbd> + <kbd>V</kbd> or  <kbd>Cmd</kbd> + <kbd>X</kbd> /  <kbd>Cmd</kbd> + <kbd>C</kbd> / <kbd>Cmd</kbd> + <kbd>V</kbd>.
+
+When using cut/copy/paste, note the following:
+
+* When cutting or copying an element, the clipboard contains the whole structure of the element. For example, when copying a **User Task** with **Outcomes** which contain activities, the **User Task** and the **Outcomes** and its activities are copied. 
+    
+    Note that copying a **User Task** or a **Microflow** does not create a copy of the elements that are being referenced. Instead, the copied element will have the same references as the original. For example, when the original **User Task** has a task page configured, the copied **User Task** refers to the same task page.
+* When no element is selected in the workflow, the clipboard content is pasted at the end of the workflow.
+* When the start event is selected, the clipboard content is pasted at the start of the workflow.
+* When an activity is selected, the clipboard content is pasted under the selected activity.
+* When a flow is selected, the clipboard content is pasted at the beginning of the selected flow.
+* When the clipboard contents has an **Annotation**, it can only be pasted into the workflow or into individual activities that support annotations.
+* Pasting an activity after an **End** or **Jump** activity results in a consistency error as an **End** or **Jump** activity should be placed at the end of a flow.
+* Pasting activity can result in a consistency error when the next activity becomes unreachable by either placing an **End** or **Jump** activity in front of it or when all flows before a merge end with an **End** or **Jump** activity.
+
+#### 2.8.1 Elements that Cannot be Cut, Copied or Pasted
+
+The following elements cannot be cut, copied or pasted in the workflow editor:
+
+* Workflow (you can do it via the left menu bar; for more information, see the [Copying and Pasting a Workflow](#copy-paste) section above)
+* WorkflowContext
+* Start activity
+* End activity (the final **End activity** which is at the end of the workflow)
+* Outcomes (meaning outcomes of different outgoing flows from an activity that can have several flows, for example, a Decision)
+
+### 2.9 Triggering a Workflow
 
 You can trigger a workflow [from a page](#trigger-page) or [via a microflow](#trigger-microflow). 
 
-#### 2.8.1 Triggering a Workflow from a Page {#trigger-page}
+#### 2.9.1 Triggering a Workflow from a Page {#trigger-page}
 
 To start the workflow, you can add a widget with a specific on-click action on a page. For more information on on-click actions, see [Events Section](/studio/page-editor-widgets-events-section/).
 
@@ -133,7 +160,7 @@ Do the following:
 
 You have configured the button to trigger the workflow.
 
-#### 2.8.2 Triggering a Workflow via a Microflow {#trigger-microflow}
+#### 2.9.2 Triggering a Workflow via a Microflow {#trigger-microflow}
 
 To trigger a workflow via a microflow, you can add a **Call workflow** activity to the microflow. For more information on this activity, see [Workflow Activities](/studio/microflows/#microflow-workflow-activities) section in *Microflows*.  
 
@@ -173,7 +200,7 @@ The **Toolbox** tab contains elements that you can drag and drop on a path. Belo
 * [User actions](#user-actions)
 * [System actions](#system)
 
-A microflow action can be exposed in Studio Pro as a custom action in the workflow toolbox in both Studio and Studio Pro. This functionality is particularly useful if you plan to reuse the microflow logic several times. Actions that are exposed appear in the custom category in the **Toolbox**. For more information on exposing a microflow action in the workflow toolbox, see [Adding a Custom Action to the Workflow Toolbox](/refguide/add-action-to-workflow-toolbox/) in *Studio Pro 9 How-tos*.
+A microflow action can be exposed in Studio Pro as a custom action in the workflow toolbox in both Studio and Studio Pro. This functionality is particularly useful if you plan to reuse the microflow logic several times. Actions that are exposed appear in the custom category in the **Toolbox**. For more information on exposing a microflow action in the workflow toolbox, see [Adding a Custom Action to the Workflow Toolbox](/refguide9/add-action-to-workflow-toolbox/) in *Studio Pro 9 How-tos*.
 
 ### 5.1 General {#general}
 

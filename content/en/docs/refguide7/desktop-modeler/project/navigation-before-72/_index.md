@@ -30,7 +30,7 @@ The device type of a currently logged-in user is available in [microflows](/refg
 
 The hybrid tablet and hybrid phone profiles are different from the other profiles in that they do more than simply redirect users based on their device type. These profiles are designed to allow users to continue using their Mendix application even when they have no internet connection, though certain restrictions apply. For an overview of the ramifications of running an offline device profile, see [Offline](/refguide7/offline/).
 
-## 4 Redirection to Profiles<a name="Redirection"></a>
+## 4 Redirection to Profiles {#Redirection}
 
 Mendix Runtime automatically redirects users to the home page of the appropriate device type based on the device they are using. This happens by examining the User-Agent string that is sent by the device's browser. The default configuration for this redirection is as follows:
 

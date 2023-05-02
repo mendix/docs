@@ -37,7 +37,7 @@ Please note the limitation that the database viewer built into Studio Pro (as de
 
 ### 2.1 Firewall Settings
 
-Studio Pro needs access to the following URLs in order to work. If your firewall is currently blocking these, you will need to whitelist them.
+Studio Pro needs access to the following URLs in order to work. If your firewall is currently blocking these, you will need to safelist them.
 
 * `*.mendix.com`
 * `*.mendixcloud.com`
@@ -118,12 +118,12 @@ Mendix tries to support the most recent and patched database server versions fro
 Current support:
 
 * [IBM DB2](/refguide8/db2/) 11.5 for Linux, Unix, and Windows
-* [MariaDB](/refguide8/mysql/) 10.2, 10.3, 10.4, 10.5, 10.6
-* [Microsoft SQL Server](/developerportal/deploy/mendix-on-windows-microsoft-sql-server/) 2019
+* [MariaDB](/refguide8/mysql/) 10.2, 10.3, 10.4, 10.5, 10.6, 10.11
+* [Microsoft SQL Server](/developerportal/deploy/mendix-on-windows-microsoft-sql-server/) 2019, 2022
 * [Azure SQL](https://docs.microsoft.com/en-us/sql/t-sql/statements/alter-database-transact-sql-compatibility-level?view=sql-server-2017) v12 compatibility mode 140 or higher
 * [MySQL](/refguide8/mysql/) 8.0
-* [Oracle Database](/refguide8/oracle/) 19
-* PostgreSQL 11, 12, 13, 14
+* [Oracle Database](/refguide8/oracle/) 19, 21c
+* PostgreSQL 11, 12, 13, 14, 15
 * [SAP HANA](/refguide8/saphana/) 2.00.040.00.1545918182
 
 {{% alert color="warning" %}}

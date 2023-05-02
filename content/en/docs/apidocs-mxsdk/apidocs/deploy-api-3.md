@@ -3,8 +3,8 @@ title: "Deploy API – Version 3"
 url: /apidocs-mxsdk/apidocs/deploy-api-3/
 type: swagger
 category: "API Documentation"
-description: "Version 2 of APIs which can be used to deploy Mendix apps to licensed nodes"
-weight: 27
+description: "Deploy API v3 can be used to deploy Mendix apps to licensed nodes, manage application environments in the Mendix Cloud, retrieve statuses, start and stop applications, and deploy or transport new model versions to application environments."
+weight: 40
 tags: ["API", "deploy", "licensed", "deployment", "cloud"]
 ---
 
@@ -22,15 +22,17 @@ The V3 Deploy API only supports the endpoints listed here. For all other API cal
 
 ## 2 Authentication{#authentication}
 
-Authentication for the Deploy API v3 uses a Personal Access Token (PAT).
+Authentication for the Deploy API v3 uses a personal access token (PAT).
 
 ### 2.1 Generating a PAT
 
-Go to https://warden.mendix.com/ and follow the instructions in [Create a Personal Access Token with Warden](/developerportal/community-tools/warden/). Select the following as **Deployment Mendix Cloud** scopes:
+To generate a PAT, see the [Personal Access Tokens](/developerportal/community-tools/mendix-profile/#pat) section of *Mendix Profile*.
+
+Select the following as **Deployment Mendix Cloud** scopes:
 
 * `mx:deployment:read` – to perform `GET` operations
 * `mx:deployment:write` – to perform all operations (`GET`, `POST`, `PUT`, and `DELETE`)
- 
+
 Store the generated value `{GENERATED_PAT}` somewhere safe so you can use it to authorize your Mendix for Private Cloud API calls.
 
 ### 2.2 Using the PAT
@@ -54,10 +56,10 @@ The {appId} in version 3 is retrieved as the {ProjectId} from the version 1 API.
 
 ### 3.1 Using the API to Change the Technical Contact
 
-The following steps will change the technical contact of the app identified by the UUID {appId}.
+The following steps will change the Technical Contact of the app identified by the UUID {appId}.
 
-1. Set up your authentication PAT. You must have permission to change the technical contact of the app.
-1. Create a request body containing the userId of the new technical contact. For example, to make jane.doe@domain.tld the new technical contact, provide a body as shown below:
+1. Set up your authentication PAT. You must have permission to change the Technical Contact of the app.
+1. Create a request body containing the userId of the new Technical Contact. For example, to make jane.doe@domain.tld the new Technical Contact, provide a body as shown below:
 
     ```json {linenos=false}
     {
@@ -67,7 +69,7 @@ The following steps will change the technical contact of the app identified by t
     }
     ```
 
-1. Call `PATCH /apps/{appId}` to update the technical contact for your app. For example:
+1. Call `PATCH /apps/{appId}` to update the Technical Contact for your app. For example:
 
     ```http {linenos=false}
     PATCH /apps/80a28d6e-c5fc-43d9-87c2-d7d56b07542e

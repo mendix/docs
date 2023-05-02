@@ -4,6 +4,59 @@ url: /releasenotes/add-ons/ats-2.28/
 weight: 72
 ---
 
+## 2.28.10
+
+**Release date: April 11th, 2023**
+
+### Improvements
+
+* We upgraded to Mendix [8.18.24](/releasenotes/studio-pro/8.18/#81824) for security fixes.
+
+### Fixes
+
+* We fixed a styling issue that caused a button to be missplaced.
+* We fixed an issue that caused users to see all the import runs across their apps instead of their current app.
+* We fixed an issue that caused the **App Admin** panel to not display any environments or Selenium hubs.
+
+## 2.28.9
+
+**Release date: March 28th, 2023**
+
+### Fixes
+
+* We fixed an issue that caused the dashboard not to show all recently run test suites and test cases.
+* We fixed an issue that caused the **Confirm subscription** link to show a message stating something went wrong when confirming the subscription, even when the subscription was successfully confirmed.
+* We fixed an issue that caused the **Search** panel to show custom actions from another app the user was a member of when editing a test case or custom action.
+* We fixed an issue that caused newly created drop-down values not to appear initially on a new input parameter.
+* We fixed an issue that caused the discontinued **ATSelenium** Selenium hub to be used when running a test case or test suite with default values.
+
+## 2.28.8
+
+**Release date: March 7th, 2023**
+
+### Fixes
+
+* When (un)subscribing to schedules, the browser showed HTML instead of rendering it as a page. This has been fixed.
+* We fixed an issue where a "Wrong browser" notification was not shown when trying to record steps in Microsoft Edge. As Edge is Chromium-based, it did not detect that the browser was not the Chrome browser.
+* We fixed an issue where old test-case and test-suite executions were not deleted after 90 days, despite the log retention time being set to 90 days.
+* On sign-up, links to the privacy statement and terms and conditions no longer return a 404 error.
+
+## 2.28.7
+
+**Release date: January 31st, 2023**
+
+### Fixes
+
+* We fixed an issue with the Desktop Recorder, which caused it to stop recording any actions when clicking in the recorder browser.
+
+## 2.28.6
+
+**Release date: January 17th, 2023**
+
+### Fixes
+
+* We fixed an issue that occurred when copying a test case that had a data set and even though the copy had the data set associated, it did not use the data set values.
+
 ## 2.28.5
 
 **Release date: January 3rd, 2023**

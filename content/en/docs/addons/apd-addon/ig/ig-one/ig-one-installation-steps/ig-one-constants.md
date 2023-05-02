@@ -13,7 +13,7 @@ The following constants are used:
 * `APMAgent.InstanceIndex` (default 0) is used only for on premise load balanced situations to give each instance a unique number.
 * `APMAgent.MaxRunningMicroflowsInDialog` (default 10) to determine how many microflows are loaded in the  running microflows dialog of the performance tool.
 * `APMAgent.MetricHistory` (default 5) to set the number of previous measurements kept in cache in the measurements tool for use in expressions.
-* `APMAgent.NotifyMicroflowName` (default APMAgent.SampleNotifyMicroflow_LogMessage) to define a microflow that is executed on the trigger notify action.
+* `APMAgent.NotifyMicroflowName` (default APMAgent.SampleNotifyMicroflow_LogMessage) to define a microflow that is run on the trigger notify action.
 * `APMAgent.PerformanceToolWaitTimeForMicroflowToFinish` (default 10) seconds to wait for started microflows  to finish on stop recording. Only used for GUI button to stop, no when a protection kicks in.
 * `APMAgent.CompanyName` (default '<company name constant>') is used in the license.
 * `APMAgent.PrintAllOnStartup` (default false) is used to choose if `AfterStartup` should write all JMX data  to the Mendix log. This can be handy for debugging.

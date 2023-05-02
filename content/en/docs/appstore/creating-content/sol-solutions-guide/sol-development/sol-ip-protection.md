@@ -1,8 +1,9 @@
 ---
-title: "Apply IP Protection"
+title: "Apply Intellectual Property Protection"
+linktitle: "Apply IP Protection"
 url: /appstore/creating-content/sol-ip-protection/
 weight: 2
-description: "Protect intellectual property in Solutions, App Services and Connectors"
+description: "Protect intellectual property in solutions, app services, and connectors"
 tags: ["adaptive solutions", "ip protection"]
 ---
 
@@ -11,12 +12,12 @@ tags: ["adaptive solutions", "ip protection"]
 Because subscriptions for solutions, app services, connectors, and modules are sold on the Mendix Marketplace, you will have intellectual property (IP) protection concerns as a publisher. You will want to protect the IP contained within the model that makes up the content you are selling. In addition, you will want to protect any custom usage metering so that customers cannot accidentally (or intentionally) disable usage metering. Therefore, it is a good idea to consider applying at least some IP protection in your Marketplace components.
 
 {{% alert color="info" %}}
-Access to this functionality is currently limited and can be gained through the [Mendix Vendor Program](/appstore/creating-content/vendor-program/).
+Access to this functionality is currently limited and can be gained through the [Mendix Component Partner Program](/appstore/creating-content/partner-program/) and the [Mendix Commercial Solution Partner Program](https://www.mendix.com/partners/become-a-partner/isv-program/).
 {{% /alert %}}
 
 ## 2 Why IP Protection?
 
-Reusable solutions, app services, connectors, and other modules contain IP in the form of app model content like microflows that is reusable and which can be monetized. When you build a business around these types of sellable content, there is a risk associated with the loss of your IP. If customers copy your IP without compensating you as the publisher, then you lose out on part of your potential revenue.
+Reusable solutions, app services, connectors, and other modules contain IP in the form of app model content (for example, microflows) that is reusable and that can be monetized. When you build a business around these types of sellable content, there is a risk associated with the loss of your IP. If customers copy your IP without compensating you as the publisher, then you lose out on part of your potential revenue.
 
 Therefore, when distributing such content, it is desirable to hide parts of the implementation from the eyes of your customers while making sure that the functionality can be used through well-designed APIs.
 

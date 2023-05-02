@@ -1,5 +1,5 @@
 ---
-title: "XPath Min"
+title: "XPath min"
 url: /refguide/xpath-min/
 tags: ["studio pro"]
 ---

@@ -22,7 +22,7 @@ Before starting this how-to, make sure you have completed the following prerequi
 * You have a licensed cloud node
 * You have the correct [Node Permissions](/developerportal/deploy/node-permissions/)
 
-## 3 Create a Backup
+## 3 Creating a Backup
 
 Follow these steps to create a backup archive of a licensed app:
 

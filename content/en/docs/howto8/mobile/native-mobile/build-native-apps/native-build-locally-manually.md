@@ -36,7 +36,7 @@ Before starting this how-to, make sure you have completed the following prerequi
 For iOS builds:
 
 * Have a Mac OS X machine 
-* Install [XCode 11.7](https://apps.apple.com/us/app/xcode/id497799835?mt=12) and [CocoaPods](https://guides.cocoapods.org/using/getting-started.html) 
+* Install the latest version of [XCode](https://developer.apple.com/xcode/resources/) and [CocoaPods](https://guides.cocoapods.org/using/getting-started.html) 
 
 For Android Builds:
 
@@ -188,7 +188,7 @@ To build an iOS app with a Mac running Intel Silicon, do the following:
 
 The iOS project is using CocoaPods for its dependency management. For more information on installing the CocoaPods dependency manager on your machine see this CocoaPods [documentation](https://cocoapods.org/#install).
 
-<a name="resume-ios"></a>Now that you have completed one of the two paths listed above, you can resume building your iOS app:
+<a id="resume-ios"></a>Now that you have completed one of the two paths listed above, you can resume building your iOS app:
 
 1. Open *.xcodeworkspace* using XCode.
 1. Navigate to **Signing and Capabilities** and choose your **Team** from the drop-down menu:

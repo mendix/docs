@@ -13,7 +13,7 @@ aliases:
 
 ## 1 Introduction {#studio-overview}
 
-Mendix Studio is the place where you can create, view and edit your Mendix applications without going into technical details. For this purpose you can use [Studio Pro](/refguide/modeling/) and [develop apps together with Studio Pro users](/studio/collaborative-development/) anytime. 
+Mendix Studio is the place where you can create, view and edit your Mendix applications without going into technical details. For this purpose you can use [Studio Pro](/refguide9/modeling/) and [develop apps together with Studio Pro users](/studio/collaborative-development/) anytime. 
 
 With Studio you can create and edit applications in your browser without installing software on your PC.   
 
@@ -27,11 +27,13 @@ You can open Mendix Studio via [Developer Portal](#opening-studio-via-dev-portal
 
 ### 2.1 Opening Studio via Developer Portal {#opening-studio-via-dev-portal}
 
-You can edit an app in Mendix Studio by opening it in the [Developer Portal](https://home.mendix.com) and clicking **Edit in Studio**:
-
-{{< figure src="/attachments/studio/general/edit-app.jpg" alt="Edit in Studio"   width="350"  >}}
+In the [Developer Portal](https://home.mendix.com), you can open Mendix Studio by clicking **Edit in Studio** in the [app tile](/developerportal/#my-apps).
 
 ### 2.2 Opening Studio via Studio Pro {#opening-via-studio-pro}
+
+{{% alert color="info" %}}
+This option is only available for apps with Mendix version 9.20 or below.
+{{% /alert %}}
 
 You can also open your app in Studio via Studio Pro. Do the following:
 
@@ -143,7 +145,7 @@ Mind the following characteristics when using cut/copy/paste:
 
 * You can cut/copy/paste elements within one visual editor; that means that you can cut/copy/paste elements within one page or to other pages in Studio, and copy microflow activities within one microflow or to other microflows
 * You can cut/copy/paste elements to different apps in Studio if they have the same Mendix version
-* You cannot copy/paste pages, microflows, or workflows, only elements of a page or a microflow 
+* You cannot copy/paste pages, microflows, or workflows, only elements of a page, microflow or a workflow 
 * You cannot cut/copy/paste from Studio to Studio Pro or vice versa
 
 ## 9 Main Documents in This Category

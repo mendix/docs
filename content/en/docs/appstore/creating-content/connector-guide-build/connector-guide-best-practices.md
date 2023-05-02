@@ -168,7 +168,7 @@ Depending on your module's functionality, you might need to store data in the en
 
 Actions that may be batched or divided over multiple threads due to a large load or volume should be offloaded to the [task queue](/refguide/task-queue/). Using this method, you can offload multiple tasks at once to multiple instances and over multiple threads. You can also run these tasks in the background without the user request waiting for it. Make sure that the end-user is aware that something is going on by setting a certain Task Status, or maybe implementing a progress log.
 
-If you are using Studio Pro [8.18](/releasenotes/studio-pro/8.18/) or older, you can consider using the process queue. See the [Replacing Process Queue](/refguide/task-queue/#process-queue) section of *Task Queue* for the difference between these functionalities.
+If you are using Studio Pro [8.18](/releasenotes/studio-pro/8.18/) or older, you can consider using the process queue. See the [Replacing Process Queue](/refguide9/task-queue/#process-queue) section of *Task Queue* for the difference between these functionalities.
 
 ### 3.6 ConnectionDetails Entity
 
@@ -204,7 +204,7 @@ Any dependencies your module has should be well documented including the minimum
 
 ### 3.11 IP Protection
 
-Right now, you will not be able to protect your IP or prevent end-users from changing any logic that you ship in a module using Mendix tooling. Access to this functionality is currently limited and can be gained through the [Mendix Vendor Program](/appstore/creating-content/vendor-program/).
+For members of the [Mendix Partner Program](/appstore/creating-content/partner-program/) and the [Mendix Commercial Solution Partner Program](https://www.mendix.com/partners/become-a-partner/isv-program/), protecting your intellectual property (IP) or preventing end-users from changing any logic that you ship in a module using Mendix tooling is possible. For details, see [How to Apply IP Protection](/appstore/creating-content/sol-ip-protection/).
 
 If protecting your IP or preventing end-users from changing your logic is not a requirement, you can use all the tooling that Mendix provides to build a connector using available Mendix tools. If you want IP protection today, you need to implement the sensitive parts of the module in a hidden Java library. 
 

@@ -2,14 +2,14 @@
 title: "Mendix 7 Studio Guide"
 url: /studio7/
 tags: ["studio", "web modeler"]
-weight: 90
+weight: 95
 cascade:
     - space: "Mendix 7 Studio Guide"
-    - mendix_version: "7"
+    - mendix_version: 7
     - old_content: true
     - hide_feedback: true
     - sitemap:
-        priority: 0.3
+        priority: 0.1
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 

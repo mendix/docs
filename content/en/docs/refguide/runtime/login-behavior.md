@@ -17,11 +17,49 @@ The cluster manager does more than just unblocking users. For example, it also r
 {{% /alert %}}
 
 {{% alert color="info" %}}
-In versions of Mendix below 9.11.0, the cluster manager will unblock *all* blocked users when it runs, even if they have been blocked for less than five minutes.
+Cluster manager behavior currently cannot be changed.
 {{% /alert %}}
 
 ## 2 Customizing Login Behavior
 
-Login behavior can be customized by implementing a custom Java action and registering it to be used instead of the default login action.
+Login behavior can be customized by implementing a custom Java action and registering it to be used instead of the default login action. To do this you need to perform the following steps, saving the updated Java in the `javasource` folder of your app.
 
-Cluster manager behavior currently cannot be changed.
+1. Create a subclass of `UserAction<ISession>` similar to following:
+
+    ```Java {linenos=false}
+    public class CustomLoginAction extends UserAction<ISession> {
+      private final Map<String, ?> params;
+
+      public CustomLoginAction(IContext context, java.util.Map<String, ? extends Object> params) {
+        super(context);
+        this.params = params;
+      }
+
+      @Override
+      public ISession executeAction() throws Exception {
+        // perform custom login steps using info received in param
+        ...
+      }
+    }
+    ```
+
+1. Create a new java action that replaces the `LoginAction` with our custom one:
+
+    ```Java {linenos=false}
+    public java.lang.Void executeAction() throws Exception
+    {
+    Core.addUserAction(CustomLoginAction.class);
+    
+    UserActionListener<LoginAction> loginActionListener = new UserActionListener<>(LoginAction.class) {
+        @Override
+        public boolean check(LoginAction loginAction) {
+        return true;
+        }
+    };
+    
+    loginActionListener.addReplaceEvent(CustomLoginAction.class.getName());
+    Core.getListenersRegistry().addListener(loginActionListener);
+    }
+    ```
+
+1. Update the [After Startup](/refguide/app-settings/#after-startup) microflow to invoke the Java action which replaces the `LoginAction`.

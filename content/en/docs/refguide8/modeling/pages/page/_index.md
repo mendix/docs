@@ -135,8 +135,8 @@ To delete an element from a page, select this element and press <kbd>Delete</kbd
 
 There are two different ways to edit your page:
 
-* [Structure Mode](#structure-mode), the default editor which clearly shows the relationship between page elements, together with additional information about each element
-* [Design Mode](#design-mode), a WYSIWYG (**W**hat **Y**ou **S**ee **I**s **W**hat **Y**ou **G**et) editor which better reflects what the page will look like when it is published
+* [Structure mode](#structure-mode), the default editor which clearly shows the relationship between page elements, together with additional information about each element
+* [Design mode](#design-mode), a WYSIWYG (**W**hat **Y**ou **S**ee **I**s **W**hat **Y**ou **G**et) editor which better reflects what the page will look like when it is published
 
 You can switch to the WYSIWYG editor from the default editor by clicking the **Design mode** button in the page editor.
 You can return to the structural editor by clicking **Structure mode**.
@@ -172,7 +172,7 @@ In **Structure mode**, the page widgets are laid out so that it is easy to see t
 
 In **Design mode**, the page is laid out as it will appear when published so that it is easy to see the spatial relationship between the elements.
 
-For example, the example page shown in [Structure Mode](#structure-mode), above, will look like this in **Design mode** for a tablet:
+For example, the example page shown in [Structure mode](#structure-mode), above, will look like this in **Design mode** for a tablet:
 
 {{< figure src="/attachments/refguide8/modeling/pages/page/design-mode-example.png" alt="Design mode page as displayed on a tablet" >}}
 

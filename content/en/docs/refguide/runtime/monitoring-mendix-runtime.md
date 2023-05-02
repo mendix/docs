@@ -19,7 +19,7 @@ For deployments to other platforms (for example Mendix for Private Cloud) you do
 For deployments to the Mendix Cloud, you can get the same information from various pages in the Developer Portal. For more information see:
 
 * [Metrics](/developerportal/operate/metrics/)
-* [Trends in Mendix Cloud v4](/developerportal/operate/trends-v4/)
+* [Trends in the Mendix Cloud](/developerportal/operate/trends-v4/)
 * [Running Now Metrics](/developerportal/operate/troubleshooting-mxcloud-runningnow/)
 {{% /alert %}}
 
@@ -259,9 +259,9 @@ Memory statistics should only be interpreted by experts, lack of detailed knowle
 
 {{% /alert %}}
 
-Represents the number of bytes allocated to the specified memory sections. For a general explanation, see the [Oracle documentation on tuning garbage collection](http://docs.oracle.com/javase/8/docs/technotes/guides/vm/gctuning/). For the heap and non-heap fields see the [memory usage](https://docs.oracle.com/javase/8/docs/api/java/lang/management/MemoryUsage.html) page.
+Represents the number of bytes allocated to the specified memory sections. For a general explanation, see the [Oracle documentation on tuning garbage collection](https://docs.oracle.com/en/java/javase/11/gctuning/introduction-garbage-collection-tuning.html). For the heap and non-heap fields see the [memory usage](https://docs.oracle.com/en/java/javase/11/docs/api/java.management/java/lang/management/MemoryUsage.html) page.
 
-The "memorypools" section contains an ordered list of all the memory pools exactly as we receive them from the JVM with some fields of the [MemoryPoolMxBean](http://docs.oracle.com/javase/8/docs/api/java/lang/management/MemoryPoolMXBean.html):
+The "memorypools" section contains an ordered list of all the memory pools exactly as we receive them from the JVM with some fields of the [MemoryPoolMxBean](https://docs.oracle.com/en/java/javase/11/docs/api/java.management/java/lang/management/MemoryPoolMXBean.html):
 
 * "usage" – returns an estimate of the memory usage of this memory pool (in bytes)
 * "is_heap" – is this memory pool part of the heap or not?

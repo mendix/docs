@@ -19,11 +19,9 @@ See [App Roles](/developerportal/collaborate/app-roles/) to learn more about the
 
 ## 2 Viewing Your Nodes{#nodes}
 
-To find a list of all the Mendix Cloud nodes to which you have access, click the **Switch-to** menu in the Developer Portal and choose **Cloud**.
+To find a list of all the Mendix Cloud licensed nodes to which you have access, open the [Switch to menu](/developerportal/#navigation) and select **Cloud**.
 
-{{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/node-permissions/go-to-nodes-page.png" alt="Licensed Mendix Cloud nodes" >}}
-
-You will see a list of all your nodes:
+You will see a list of all your licensed nodes:
 
 {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/node-permissions/nodes-list.png" alt="Licensed Mendix Cloud nodes" >}}
 
@@ -76,7 +74,7 @@ With Manage Permissions, team members other than the Technical Contact can chang
 Only the Technical Contact can grant this permission to other team members.
 {{% /alert %}}
 
-#### 3.3.2 Transport Rights
+#### 3.3.2 Transport Rights{#transport-rights}
 
 With Transport Rights you can deploy new versions of the application to the node. You can also create new deployment packages, stop and start the environment, and change configuration settings such as constants and scheduled events.
 
@@ -129,6 +127,6 @@ In addition, all changes to node permissions will be logged on the activity log.
 
 A cloud node has a single Technical Contact. They manage the cloud node and can edit the privileges of regular team members.
 
-The Technical Contact can give the technical contact role to another team member. Click **Change to Technical Contact** under the user who should be the new Technical Contact. After this, the new user has the Technical Contact role, the old user does not.
+The Technical Contact can give the Technical Contact role to another team member. Click **Change to Technical Contact** under the user who should be the new Technical Contact. After this, the new user has the Technical Contact role, the old user does not.
 
 For full details on this role, see the [Technical Contact](/developerportal/collaborate/app-roles/#technical-contact) section of *App Roles*.

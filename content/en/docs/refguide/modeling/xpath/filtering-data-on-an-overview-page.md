@@ -29,7 +29,7 @@ This how-to will teach you how to do the following:
 
 For this how-to, it is necessary that you set up a test app with test data. To do so, follow these steps:
 
-1. Follow the guide [Create a Basic Data Layer](/howto/data-models/create-a-basic-data-layer/) and create the following domain model:
+1. Follow the guide [Creating a Basic Data Layer](/refguide/create-a-basic-data-layer/) and create the following domain model:
 
     {{< figure src="/attachments/refguide/modeling/xpath/define-access-rules-using-xpath/18581378.png" >}}
 

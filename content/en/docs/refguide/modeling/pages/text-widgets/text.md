@@ -72,7 +72,7 @@ You can use the formatter functions in the expression editor when using expressi
 
 To use parameters, do the following:
 
-1. Place the **Text** widget in a context of an entity, as in, inside a [data widget](/refguide/data-widgets/).
+1. Place the **Text** widget in a context of an entity, as in, inside a [data container](/refguide/data-widgets/).
 2. Double-click the **Caption** setting in the text widget properties.
 3. In the **Edit Caption** dialog box > **Parameters** section click **New**:
 

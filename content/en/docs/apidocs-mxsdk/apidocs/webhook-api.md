@@ -1,9 +1,9 @@
 ---
-title: "Deploy API – Version 3"
-url: /apidocs-mxsdk/apidocs/deploy-api-3/
+title: "Webhook API"
+url: /apidocs-mxsdk/apidocs/webhook/
 type: swagger
 category: "API Documentation"
-description: "Version 2 of APIs which can be used to deploy Mendix apps to licensed nodes"
+description: "Description of Webhook API which can be used to manage webhooks."
 weight: 27
 tags: ["API", "deploy", "licensed", "deployment", "cloud"]
 ---
@@ -37,6 +37,16 @@ Authorization: MxToken 7LJE…vk
 To authenticate calls when using the Open API specification below, click **Authorize** and use the value `MxToken {GENERATED_PAT}`.
 
 ## 3 Examples
+
+### 3.1 Using the API to Get a Webhooks Endpoint
+
+### 3.2 Using the API to List Webhooks Endpoint
+
+### 3.3 Using the API to Create Webhook Endpoint
+
+### 3.4 Using the API to Edit a Webhook Endpoint
+
+### 3.5 Using the API to Delete a Webhook Endpoint
 
 ## 4 API Reference
 

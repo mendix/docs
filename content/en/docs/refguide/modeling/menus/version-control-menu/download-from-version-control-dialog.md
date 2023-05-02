@@ -27,7 +27,7 @@ If **Enable private version control with Git** is set in the app [Preferences](/
 
 ### 2.1 Mendix Team Server
 
-Use the **Team Server App** dropdown to choose the app you want to download.
+Use the **Team Server App** dropdown to choose the Git app you want to download.
 
 For more information about the Mendix Team Server, see [Team Server](/developerportal/collaborate/team-server/).
 

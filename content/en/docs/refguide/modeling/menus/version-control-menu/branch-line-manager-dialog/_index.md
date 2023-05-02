@@ -28,7 +28,7 @@ This option is only available when support for private Git servers is enabled in
 
 ### 2.1 Team Server App {#team-server-app}
 
-Select the Team Server app for which you want to manage the branch lines. If you have an app open in Studio Pro, it will be selected automatically. However, you can also manage branch lines without opening an app first, in which case no app will be selected.
+Select the Team Server Git app for which you want to manage the branch lines. If you have an app open in Studio Pro, it will be selected automatically. However, you can also manage branch lines without opening an app first, in which case no app will be selected.
 
 For more information about the Mendix Team Server, see [Team Server](/developerportal/collaborate/team-server/).
 

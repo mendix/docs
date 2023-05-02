@@ -152,7 +152,7 @@ The business event service document is open in Studio Pro:
 
 In the [next section](#add-be-definitions), you will define the information included in your events, as well as what the service will implement.
 
-##### 4.2.1.1 Define Business Events {#add-be-definitions}
+##### 4.2.1.1 Adding Event Definitions {#add-be-definitions}
 
 To define what information is included in your events, as well as what the service will implement, click **Add** in the open service document:
 
@@ -162,13 +162,13 @@ Start with the first step, seen in the image below:
 
 {{< figure src="/attachments/appstore/modules/business-events/wizard-step-1.png" >}}
 
-*Step 1: Define what information is included in this event*
+* **Step 1: Define what information is included in this event**
 
 In the **General** section, provide the **Event name** and **Description** to let others know what the service is about.
 
 In the **Attributes** section, click **Add** to define attributes. Changes you make here later might lead to breaking changes if the entity the attribute belongs to is consumed, though related entities will be updated automatically.
 
-*Step 2: Decide what other apps can do and what service this will implement*
+* ***Step 2: Decide what other apps can do and what service this will implement**
 
 Under *Other apps can*, you can select how other apps can use the service. *This Business Events service implements* section defines whether the service will be responsible for publishing events, subscribing to events, or both. 
 

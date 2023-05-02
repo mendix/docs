@@ -10,7 +10,7 @@ aliases:
 
 ## 1 Introduction
 
-This document explains how you can create a basic data layer for your application with Mendix. Each application can have multiple [modules](/refguide/modules/), and each module has its own domain model. All the domain models together define the data layer of the application. 
+This document explains how you can configure a domain model for your application with Mendix. Each application can have multiple [modules](/refguide/modules/), and each module has its own domain model. All the domain models together define the data layer of the application. 
 
 A [domain model](/refguide/domain-model/) consists of entities and associations. An entity is the blueprint for an object in your application, like the **Customer** and **Order** entities mentioned in the following sections. 
 
@@ -22,6 +22,8 @@ This document teaches you how to do the following:
 * Add enumerations
 * Create associations
 * Delete association behavior
+
+This document also presents an example of a complete [use case](#example-use-case).
 
 ## 2 Creating Entities and Attributes {#create-entity}
 
@@ -127,7 +129,40 @@ To configure the delete behavior, double-click the **Order_Customer** associatio
 Delete behavior includes objects which are in memory. This means that cascading delete or prevention of delete applies, even if the associated object has not been committed.
 {{% /alert %}}
 
-## 7 Read More
+## 7 An Example of a Complete Use Case {#example-use-case}
+
+In the above sections, you learn the basics of how to configure a domain model. In the following example, a complete use case is presented: you are configuring the domain model for an online shopping app.
+
+An example of the domain model for the online shopping app is shown below:
+
+{{< figure src="/attachments/refguide/modeling/domain-model/create-a-basic-data-layer/domain-model-online-shop.png" alt="Domain Model online shopping app" >}}
+
+For this online shopping app, you need to define the following information and create the corresponding entities for the domain model:
+
+* The customer information is presented by the following entity:
+
+    * **Customer** - general information about the customer, such as their name, address, email, and so on
+
+* The product information is divided into the following entities:
+
+    * **Product** – general information about the product, such as its name, description, price, and so on
+    * **Product_Image** – each product has an image, but you do not create it as an attribute. You need to create a special type of entity that allows you to store images. For more information, see [Image Uploader](/refguide/image-uploader/)
+
+* The order information is divided into the following entities:
+
+    * **Order** – general information about the order, such as its status, order number, name of the customer and their address, and so on
+    * **Order line** – items ordered, their quantity and price
+    * **Order confirmation** – confirmation that is sent to the customer that the order is placed
+
+You also need to define how these entities are connected to each other. For more information, see [Associations](/studio/domain-models-association-properties/). The following explains how each entity is associated:
+
+* **Product_Image** and **Product** have a one-to-one association - one product image is connected to only one product
+* **Order** and **Customer** have a one-to-many association - an order is placed by a customer. Several orders can be connected to one customer
+* **Product** and **Order_Line** have a one-to-many association - the **Order_Line** uses information about the product. One product can be associated with several order lines
+* **Order** and **Order_Line** have a one-to-many association - one order can contain multiple items (order lines) in it
+* **Order** and **Order_Confirmation** have a one-to-one association - one order confirmation is issued per order
+
+## 8 Read More
 
 * [Denormalize Data to Improve Performance](/howto/data-models/denormalize-data-to-improve-performance/)
 * [Setting Up Data Validation](/refguide/setting-up-data-validation/)

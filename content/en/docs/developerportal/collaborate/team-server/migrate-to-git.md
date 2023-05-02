@@ -10,7 +10,7 @@ tags: ["Studio Pro", "Team Server", "migration", "Git", "migrate"]
 
 Scrum Masters can migrate apps from SVN version control system to Git. For more information on version control, see [Version Control](/refguide/version-control/) in the *Studio Pro Guide*. 
 
-Git is a more modern version control system that has several advantages over SVN. For more information on advantages of Git, see the [What Are the Advantages of Team Server Git over Team Server SVN?](/refguide/version-control-faq/#git-advantages) section in *Version Control FAQ*.
+Git is a more modern version control system that has several advantages over SVN. For more information, see [Version Control FAQ](/refguide/version-control-faq/).
 
 ## 2 Apps Eligible for Migration
 
@@ -79,4 +79,3 @@ Migration failure may be also caused by the naming of your branches. You can res
 
 * [Version Control](/refguide/version-control/)
 * [Version Control FAQ](/refguide/version-control-faq/)
-* [Migrating from SVN to Git: Steps After Migration and Process Differences](/refguide/svn-git-differences/)

@@ -354,7 +354,7 @@ In the list, you can see the following items:
 
 * Ellipsis icon (**...**) – Clicking the icon opens a pop-up menu with the following items:
 
-  * **Access management** – Selecting this brings you to the [Access Management](#acess-management) page.
+  * **Access management** – Selecting this brings you to the [Access Management](#access-management) page.
 
   * **Delete** – Selecting this allows you to [delete the portfolio](#delete-portfolio) and all the data in the portfolio permanently.
 
@@ -413,7 +413,7 @@ In the list, you can see the following items:
 
 * Ellipsis icon (**...**) – Clicking the icon opens a pop-up menu with the following items:
 
-  * **Access management** – Selecting this brings you to the [Access Management](#acess-management) page.
+  * **Access management** – Selecting this brings you to the [Access Management](#access-management) page.
 
   * **Delete** – Selecting this allows you to [delete the portfolio](#delete-portfolio) and all the data in the portfolio permanently.
 

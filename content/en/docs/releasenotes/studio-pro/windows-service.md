@@ -207,7 +207,8 @@ Mendix Service Console 4 manages all your Mendix 3 and 4 apps within one applica
 Installation
 
 Execute the new installer to install the Mendix Service Console on your system. Do not install it in the locations you earlier extract the Mendix Service Console ZIP file to. Starting with this version apps no longer have their own service console; this new Mendix Service Console manages all your apps!
-Import of old apps
+
+**Import of old apps**
 
 Import all your old apps one by one. All project, log and backup files will remain in the same old locations. Only the settings will be saved to a new location and you have to add Mendix distributions again. Only do a reinstall of the service when the app runs successfully with a normal start. After a reinstall of the service (and if the service starts correctly), the old Mendix Service Console for that app can be removed.
 Licensing changes

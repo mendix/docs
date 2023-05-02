@@ -121,9 +121,10 @@ If you are using the SAP Cloud Connector to connect to your SAP backend system, 
 
 1. In the **App Explorer**, click **SAPBAPIConnector** > **USE_ME** > **Config**.
 2. Edit the following values:
-        ***BAPIServiceTimeout** - Specify a timeout value for the HTTP client to receive a response from the*bapi-service*deployed on SAP BTP. By default, this value is set to*20 seconds*.
-        * **BAPIServiceURL** - Specify the URL of the *bapi-service* deployed on SAP BTP.
-        * **UseRFCDestination** - Set to **true**.
+
+    * **BAPIServiceTimeout** - Specify a timeout value for the HTTP client to receive a response from the *bapi-service* deployed on SAP BTP. By default, this value is set to *20 seconds*.
+    * **BAPIServiceURL** - Specify the URL of the *bapi-service* deployed on SAP BTP.
+    * **UseRFCDestination** - Set to **true**.
 
 ### 4.2 Configuring the Connection Details for Direct Connections to the SAP Backend System {#sap-connection-details}
 

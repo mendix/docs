@@ -89,7 +89,7 @@ iOS 15 requires you to recompile your apps with XCode 13. This release bumps the
 
 ### Improvements
 
-* Custom developer apps now fully support deep links. This allows you to use custom developer apps to test deeplink use cases. For more information, see [Create a Custom Developer App](/refguide/mobile/distributing-mobile-apps/building-native-apps/how-to-devapps/) and [Set Up Deep Links in Native Mobile Apps](/refguide/mobile/using-mobile-capabilities/deep-links/).
+* Custom developer apps now fully support deep links. This allows you to use custom developer apps to test deeplink use cases. For more information, see [Create a Custom Developer App](/refguide9/mobile/distributing-mobile-apps/building-native-apps/how-to-devapps/) and [Set Up Deep Links in Native Mobile Apps](/refguide9/mobile/using-mobile-capabilities/deep-links/).
 
 ### Breaking Change
 

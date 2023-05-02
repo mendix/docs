@@ -24,7 +24,7 @@ The basic package has the following features.
 * Runs in the Mendix Cloud
 * Supports between five and a hundred (5-100) users
 * Can be paid for via invoice only
-* Has a limited amount of resources and a single cloud environment on the Mendix Cloud, together with the ability to preview and test in Studio Pro and Studio. The cloud environment has the following features:
+* Has a limited amount of resources and a single cloud environment on the Mendix Cloud, together with the ability to preview and test in Studio Pro. The cloud environment has the following features:
     * 1 GiB App RAM
     * 0.25 vCPU
     * 1 GiB database schema as a part of a shared database — your schema is private to your app and some database monitoring graphs are not available (see [Trends in the Mendix Cloud](/developerportal/operate/trends-v4/) for more information)
@@ -94,3 +94,17 @@ Linking your app to your licensed node is done in the same way as for any other 
 It will take 7-14 days to prepare your invoice. This will be sent to the address that you entered as the **invoice Email Address**.
 
 Our payment terms are 30 days.
+
+## 6 Renewing Payment Method
+
+Before the licenses are renewed for your company, Mendix checks if your company's payment method is still valid. If it is expired, you will receive an email that asks you to update your company's payment method on the **Billing Accounts** page.
+
+{{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/licensing-apps/basic-package/billing-accounts-page.png" alt="billing accounts page" >}}
+
+The **Billing Accounts** page shows the details of your company's existing billing accounts. These accounts are on the company level. If your company has multiple billing accounts, you can select a billing account from the drop-down list on the page.
+
+You can find **Payment Method** at the bottom of the page. Depending on the payment method, you see either an invoice or the credit card data.
+
+{{% alert color="info" %}}You might have used different credit cards with the same billing account when purchasing premium content at the marketplace in the past. These cards are not shown here. Only the last credit card which is registered as the credit card for your company's billing account is shown here. This card will also be used for the renewal of the existing subscriptions.{{% /alert %}}
+
+If the credit card is expired, the credit card data is shown in red. To update the credit card data, click **Update**, fill in the new credit card data, and then click **Update Details**.

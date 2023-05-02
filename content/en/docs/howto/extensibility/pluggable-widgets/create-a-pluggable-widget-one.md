@@ -91,7 +91,7 @@ The generator will ask you a few questions during setup. Answer the questions by
 * Mendix App path: *../../*
 * Programming language: **TypeScript**
 * Which type of components do you want to use? **Class Components** 
-* Widget type: **For web and hybrid mobile apps**
+* Widget type: **For web mobile apps**
 * Widget template: **Empty widget (recommended for more experienced developers)**
 * Unit tests: **No**
 * End-to-end tests: **No**
@@ -223,7 +223,7 @@ Open the *(YourMendixApp)/CustomWidgets/TextBox* folder in your IDE of choice (a
 
     {{< figure src="/attachments/howto/extensibility/pluggable-widgets/create-a-pluggable-widget-one/updateallwidgets.png" >}}
 
-    {{% alert color="info" %}}The widgets in Studio and Studio Pro are not automatically updated. First, run the `npm start` command again. To refresh your widgets, press F4 or select **App** > **Synchronize App Directory** from the Studio Pro menu to reload the widgets from the file system. Finally, right-click the widget and select Update all widgets to update the newly-changed properties in the widget.{{% /alert %}}
+    {{% alert color="info" %}}The widgets Studio Pro are not automatically updated. First, run the `npm start` command again. To refresh your widgets, press F4 or select **App** > **Synchronize App Directory** from the Studio Pro menu to reload the widgets from the file system. Finally, right-click the widget and select Update all widgets to update the newly-changed properties in the widget.{{% /alert %}}
 
 8. When running the app, the new widget is already functional. The first text box is a standard Text box widget and the second is your pluggable web widget. When data is changed in the first input and the cursor is moved to the next widget, the data of your widget is also updated: 
 
@@ -383,7 +383,7 @@ The value from the attribute can be displayed and updated using the other input,
 
 Congratulations, you have now made a fully functional input widget!
 
-Continue with the next tutorial to learn how to add validation feedback, custom validations, and an on-change event activity. You will also learn how to handle a read-only state, improve web accessibility, and make a Mendix Studio or Mendix Studio Pro preview.
+Continue with the next tutorial to learn how to add validation feedback, custom validations, and an on-change event activity. You will also learn how to handle a read-only state, improve web accessibility, and make a Mendix Studio Pro preview.
 
 ## 4 Read More
 

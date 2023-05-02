@@ -18,10 +18,6 @@ The main *difference* between an add-on and a solution module is their purpose. 
 
 Solution modules are *always part of a solution* – any Mendix app that is suitable to be sold to multiple different customers. Solution modules are dependent on each other and are inseparable. Solutions modules form the **solution core** of the solution. 
 
-{{% alert color="info" %}}
-Add-on and solution modules are not supported in Mendix Studio.
-{{% /alert %}}
-
 ## 2 Configuring Add-on and Solution Modules
 
 You can mark a standard module (app module) as an add-on or solution module at any time, but we recommend to do so right-away when you start developing. We also recommend changing the module version for add-on and solution modules every time you make changes to them. 
@@ -71,7 +67,7 @@ Below is the list of documents and elements that can be mark as **Usable**:
 ## 3 Exporting Add-on Modules and Solutions {#export}
 
 {{% alert color="info" %}}
-Before exporting an add-on module or a solution to customers, note that for Studio Pro versions 9.22 and below, English (US) and Dutch language translations are shipped with it by default, and for Studio Pro versions 9.23 and above, only English (US) is shipped by default (for more information, see the [Internationalization Improvements](/releasenotes/studio-pro/9.23/#internationalization-improvements) section of *9.23* Studio Pro release notes). This may be important if your app is in another language (not English (US) or Dutch) and your customers decide to translate the consumed solution or add-on to other languages. To avoid confusion, open [Language](/refguide/translatable-texts/) > **Language Operations** and select the **Delete** operation for English (US) and/or Dutch. For more information on how to perform a certain operation, see [Language Operations](/refguide/language-operations/).
+Before exporting an add-on module or a solution to customers, note that only English (US) is shipped by default. This may be important if your app is in another language (not English (US)) and your customers decide to translate the consumed solution or add-on to other languages. To avoid confusion, open [Language](/refguide/translatable-texts/) > **Language Operations** and select the **Delete** operation for English (US). For more information on how to perform a certain operation, see [Language Operations](/refguide/language-operations/).
 {{% /alert %}}
 
 ### 3.1 Exporting Add-on Module Package

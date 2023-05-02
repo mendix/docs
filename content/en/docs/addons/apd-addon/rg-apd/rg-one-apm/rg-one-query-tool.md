@@ -25,4 +25,4 @@ Additionally its possible to perform JDBC(pure SQL) queries to get information f
 
 To use a query for measurements the query should either return 1 result or if a query results in multiple rows the first column is used as a unique identifier:
 
-Under search ment option Search Query History you see all statements executed from the GUI. Collect measurement queries are not added to the history as they result into measurements.
+Under search ment option Search Query History you see all statements run from the GUI. Collect measurement queries are not added to the history as they result into measurements.

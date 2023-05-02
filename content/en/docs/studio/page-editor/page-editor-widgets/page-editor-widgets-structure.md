@@ -249,7 +249,7 @@ For example, your team member in Studio Pro has created a snippet and added a cu
 
 {{< figure src="/attachments/studio/page-editor/page-editor-widgets/page-editor-widgets-structure/snippet-example.jpg"   width="500"  >}}
 
-While you can call (use) snippets on your pages in Studio, you cannot create, change, or delete them. For more information on snippets in Studio Pro, see [Snippet](/refguide/snippet/).
+While you can call (use) snippets on your pages in Studio, you cannot create, change, or delete them. For more information on snippets in Studio Pro, see [Snippet](/refguide9/snippet/).
 
 {{% alert color="info" %}}
 The **Snippet** widget is not displayed if your  does not contain any snippets. 

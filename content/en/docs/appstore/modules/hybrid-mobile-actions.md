@@ -7,6 +7,10 @@ tags: ["marketplace", "marketplace component", "platform support", "hybrid mobil
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
+{{% alert color="warning" %}}
+This module is deprecated. We recommend you build a native or progressive web app instead. For more information, see [Introduction to Mobile Technologies](/refguide/mobile/introduction-to-mobile-technologies/).
+{{% /alert %}}
+
 ## 1 Introduction
 
 The [Hybrid Mobile Actions](https://marketplace.mendix.com/link/component/112063/) module contains the following nanoflow actions that can be used for hybrid mobile applications:

@@ -19,10 +19,6 @@ While using Team Server is the recommended for most Mendix developers, you may p
 This document does not describe how to set up a Git server from scratch; typically, this will be taken care of by the IT department of your organization.
 {{% /alert %}}
 
-{{% alert color="warning" %}}
-You will not be able to use Mendix Studio for collaborative development if you use an on-premises version control server. Collaborative development between Studio and Studio Pro will only work if you use the Mendix Team Server.
-{{% /alert %}}
-
 ## 2 Prerequisites
 
 Make sure you have completed the following prerequisites:

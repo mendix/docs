@@ -8,7 +8,7 @@ description: "Describes Mendix best practices for developing Mendix applications
 tags: ["best practice", "development", "develop", "reusable", "prefix"]
 aliases:
     - /howto/general/dev-best-practices/
-#Academy are SMEs for verification, they discuss and link to this doc in training
+#Academy are SMEs for verification, they use/link to this doc in training; microflow prefix naming convention from ES and Academy
 ---
 
 ## 1 Introduction
@@ -55,7 +55,7 @@ Always store secret information in a safe place. A safe place is the database. U
 
 Using either the default value of a constant or the project's configuration setting is unsafe. Both these places are readable by others and visible in the version management copies. 
 
-## 3 Naming Conventions
+## 3 Naming Conventions {#naming-conventions}
 
 ### 3.1 Modules
 

@@ -6,11 +6,11 @@ weight: 15
 tags: ["studio pro", "machine learning", "ml kit", "models", "integration"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
-{{% alert color="info" %}}Machine learning model support is currently in [Beta](/releasenotes/beta-features/), and is available in Studio Pro [9.23](/releasenotes/studio-pro/9.23/) and above.{{% /alert %}}
+{{% alert color="info" %}}Machine learning model support is currently in [Beta](/releasenotes/beta-features/).{{% /alert %}}
 
 ## 1 Introduction
 
-Studio Pro [9.23](/releasenotes/studio-pro/9.23/) and above supports machine learning (ML) model integration in Mendix apps. Collectively called the *Machine Learning (ML) Kit*, this functionality allows Mendix developers to deploy an ML model built using common ML framework and language into the Mendix Runtime.
+Studio Pro supports machine learning (ML) model integration in Mendix apps. Collectively called the *Machine Learning (ML) Kit*, this functionality allows Mendix developers to deploy an ML model built using common ML framework and language into the Mendix Runtime.
 
 {{% alert color="info" %}}Check out a demo app and Jupyter notebook examples in our [Demo for Mendix ML Kit](https://github.com/mendix/mlkit-example-app) repository for further information on working with machine learning models in Mendix.{{% /alert %}}
 
@@ -160,7 +160,6 @@ This [Random Forest example](https://www.kaggle.com/code/prashant111/random-fore
 The pre-processor is essentially a standard Java Action that creates the multidimensional input for your model and in this case, encodes the data into a string with Base64 (see line 14 below). Another important step is to convert the Decimal data type into float, as the ONNX format uses that data type. But this may vary along models and implementations.
 
 See the following pre-processor example in our [Mendix ML Kit Demo Repository](https://github.com/mendix/mlkit-example-app/blob/main/javasource/iris_randomforest/actions/PreProcessor.java):
-
 
 ```
     @java.lang.Override

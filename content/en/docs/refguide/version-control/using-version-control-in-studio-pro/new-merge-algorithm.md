@@ -21,7 +21,7 @@ A new merge algorithm with fine-grained conflict resolution is used when you upd
 Make sure that you repository is in a clean state: everything has been committed and there are no outstanding changes or conflicts. 
 {{% /alert %}}
 
-The new algorithm is enabled by default in Studio Pro 9. If you encounter issues, you can revert back to the old algorithm with the following steps:
+The new algorithm is enabled by default in Studio Pro 10. If you encounter issues, you can revert back to the old algorithm with the following steps:
 
 1. In the Studio Pro top bar, go to **Edit** > **Preferences** > **New features**. 
 2. In the **New features** section, disable the **New merge algorithm with fine-grained conflict resolution** option.

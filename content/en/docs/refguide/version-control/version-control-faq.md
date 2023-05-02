@@ -9,13 +9,11 @@ tags: ["git", "teamserver", "byo-git"]
 
 ## 1 Introduction
 
-[Mendix Team Server](/developerportal/collaborate/team-server/) is the Mendix-hosted environment that stores all Mendix apps. It facilitates versioning your apps by integrating them into a version control system. Mendix Studio and Mendix Studio Pro integrate into the Team Server allowing you to create and update apps, commit changes, and merge model versions in one click.
+[Mendix Team Server](/developerportal/collaborate/team-server/) is the Mendix-hosted environment that stores all Mendix apps. It facilitates versioning your apps by integrating them into a version control system. Mendix Studio Pro integrates with the Team Server allowing you to create and update apps, commit changes, and merge model versions with one click.
 
 ## 2 What Version Control System Is Team Server Built On? {#which-team-server}
 
 Mendix Team Server is based on proven technology. Initially it was based only on top of Subversion (SVN), also called Team Server SVN. Starting from Mendix version 10, the Team Server only supports storing apps using Git technology, referred to as Team Server Git. 
-
-Mendix 7 and 8 only have support for Team Server SVN, and as long as these major versions are available, support for Team Server SVN will be maintained.
 
 ## 3 How Much Storage Space Is Provided with Team Server?
 

@@ -629,14 +629,11 @@ The created bundles need to be copied to the right place in the Native Template 
 
 ## 7 Deriving the App's Native Dependencies
 
-Mendix Studio Pro 9 introduced Native Dependency resolution for pluggable widgets and Javascript actions. For more information, see [Declaring Native Dependencies
-](/apidocs-mxsdk/apidocs/pluggable-widgets-native-dependencies/). Prior to Studio Pro 9 Mendix Studio Pro was shipping with a set of core dependencies which are now are removed. 
+Mendix Studio Pro includes Native Dependency resolution for pluggable widgets and Javascript actions. For more information, see [Declaring Native Dependencies](/apidocs-mxsdk/apidocs/pluggable-widgets-native-dependencies/).
 
-As you develop, you may add more Mendix Studio Pro 9 compatible modules, widgets, and actions to your app. This means and more dependencies 
-will be added that will also need be declared in your app's Native Template prior to building the native apps. 
+As you develop, you may add more Mendix Studio Pro compatible modules, widgets, and actions to your app. This means and more dependencies will be added that will also need be declared in your app's Native Template prior to building the native apps. 
 
-As this dependency management is required for your app's initial setup, we suggest you use the Mendix Native Mobile Builder to configure your app.
-The Mendix Native Mobile builder is capable of deriving required dependencies and linking them with your app's Native Template. 
+As this dependency management is required for your app's initial setup, we suggest you use the Mendix Native Mobile Builder to configure your app. The Mendix Native Mobile builder is capable of deriving required dependencies and linking them with your app's Native Template. 
 
 ## 8 Continuous Integration Testing Guidelines
 

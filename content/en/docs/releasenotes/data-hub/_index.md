@@ -11,6 +11,12 @@ These release notes cover changes made to the [Mendix Data Hub Catalog](/data-hu
 
 ## 2023
 
+### April 13th, 2023
+
+#### Fixes
+
+* We fixed an issue where the page was flickering when selecting an object in the search results.
+
 ### April 6th, 2023
 
 #### Improvements
@@ -559,7 +565,7 @@ These release notes cover changes made to the [Mendix Data Hub Catalog](/data-hu
 
 #### Fixes
 
-* We fixed an issue where searching in the [Data Hub pane](/refguide/data-hub-pane/) in Studio Pro caused an error.
+* We fixed an issue where searching in the [Data Hub pane](/refguide9/data-hub-pane/) in Studio Pro caused an error.
 
 ### September 23rd, 2021
 

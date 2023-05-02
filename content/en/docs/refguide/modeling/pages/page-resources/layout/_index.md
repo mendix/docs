@@ -62,7 +62,7 @@ Default value: *600*
 
 The values for the platform property are:
 
-* Web *(default)* – these layouts are used for pages which are going to be displayed in a browser or hybrid mobile app
+* Web *(default)* – these layouts are used for pages which are going to be displayed in a browser or web app
 * Native – these layouts are used for pages which are going to be displayed in a native mobile app
 
 For existing layouts, the value is read-only.

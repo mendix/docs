@@ -28,10 +28,6 @@ week-from-dateTime ( attribute [, timezone ] )
 
 ### 2.2 timezone
 
-{{% alert color="info" %}}
-The optional `timezone` parameter is available in [Studio Pro 9.22.0](/releasenotes/studio-pro/9.22/) and above. 
-{{% /alert %}}
-
 `timezone` specifies the time zone to use for the extraction. This parameter is optional and defaults to the local time zone. It should be a string literal containing an IANA time zone or `'UTC'`. GMT offset time zones are not supported.
 
 ## 3 Examples
@@ -63,4 +59,3 @@ PostgreSQL, Oracle, and MySQL follow [ISO 8601](https://en.wikipedia.org/wiki/IS
 Other databases have a more specific behavior:
 
 * [SQL Server](https://docs.microsoft.com/en-us/sql/t-sql/functions/datepart-transact-sql?view=sql-server-ver15)
-* [DB2](https://www.ibm.com/support/knowledgecenter/en/SSEPEK_10.0.0/sqlref/src/tpc/db2z_bif_week.html)

@@ -48,7 +48,7 @@ Before starting this how-to, make sure you have the following prerequisites:
 * The Mendix server distribution corresponding with your Mendix Studio Pro version (see the [Mendix Marketplace](https://marketplace.mendix.com/link/studiopro/))
 * A database with sufficient security rights
 
-    * Suitable database servers are IBM DB2, MariaDB, MS SQL Server, MySQL, Oracle Database and PostgreSQL. See [System Requirements](/refguide/system-requirements/#databases) for more information
+    * Suitable database servers are MariaDB, MS SQL Server, MySQL, Oracle Database and PostgreSQL. See [System Requirements](/refguide/system-requirements/#databases) for more information
 
 * A local or domain user with the *“log on as a service”* local security policy set
 
@@ -123,7 +123,7 @@ To deploy a Mendix app using the Mendix Service Console, follow these steps:
 
 10. Click **Finish** and start the application.
 
-## 5 Configuring the Microsoft Internet Information Services Server
+## 5 Configuring the Microsoft Internet Information Services Server{#configure-msiis}
 
 To configure the MS IIS server, follow the steps in the sections below.
 

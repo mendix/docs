@@ -16,7 +16,7 @@ The **Edit published attribute** dialog allows you to edit the properties of an 
 
 ### 2.1 Exposed Name
 
-The exposed name is the name of the attribute as it appears to clients of the service.
+The exposed name is the name of the attribute as it appears to clients of the service. This cannot be the same as the exposed name of the entity.
 
 ### 2.2 Can Be Empty
 
@@ -39,10 +39,6 @@ The type of the attribute.
 ### 2.6 Exposed As
 
 This field is shown when the type is an enumeration that was previously exposed as a string, and only for OData version 4. Change the value to **Enumeration** to publish the enumeration. This informs clients of the possible values of this attribute.
-
-{{% alert color="info" %}}
-The *enumerations* feature was introduced in Studio Pro [9.24.0](/releasenotes/studio-pro/9.24/). In earlier versions, enumeration attributes were published as strings.
-{{% /alert %}}
 
 ### 2.7 Capabilities
 

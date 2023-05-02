@@ -7,7 +7,7 @@ no_list: false
 description_list: true
 cascade:
     - space: "Data Hub Guide"
-    - mendix_version: ""
+    - mendix_version: 10
 tags: ["data hub", "data hub catalog", "data hub landscape", "external entities", "external users"]
 aliases:
     - /data-hub/data-catalog/index.html

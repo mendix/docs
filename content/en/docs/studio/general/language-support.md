@@ -13,7 +13,7 @@ Delivering your Mendix app in multiple languages is an important capability when
 
 {{% alert color="info" %}}
 
-Translating your app to other languages is available in Mendix Studio if multiple languages were set up in your app in Mendix Studio Pro. For more information on language settings, see [Language Menu](/refguide/translatable-texts/) in *Studio Pro 9 Guide*.  
+Translating your app to other languages is available in Mendix Studio if multiple languages were set up in your app in Mendix Studio Pro. For more information on language settings, see [Language Menu](/refguide9/translatable-texts/) in *Studio Pro 9 Guide*.  
 
 {{% /alert %}}
 
@@ -65,4 +65,4 @@ You can translate the following widgets and elements in your app:
 ## 5 Read More
 
 * [General Info](/studio/general/)
-* [Language Menu](/refguide/translatable-texts/)
+* [Language Menu](/refguide9/translatable-texts/)

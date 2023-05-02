@@ -15,5 +15,3 @@ Common tasks for users who want to consume data sources from the Catalog include
 * Understanding how sources are related in the [Landscape](/data-hub/data-hub-landscape/)
 
 For an overview on consuming data sources, see [Consume Registered Assets](/data-hub/data-hub-catalog/consume/). 
-
-

@@ -51,7 +51,7 @@ You can create a new portfolio as follows:
 
 The portfolio is created. You are the first portfolio manager of this portfolio. You can start [inviting other people](#add-users) to the portfolio.
 
-### 2.2 Opening a Portfolio
+### 2.2 Opening a Portfolio {#open-portfolio}
 
 In the **Portfolio Landscape Overview** page, when you click a portfolio card in the **My Portfolios** section, you open the portfolio. On the left menu, you can find the following items:
 

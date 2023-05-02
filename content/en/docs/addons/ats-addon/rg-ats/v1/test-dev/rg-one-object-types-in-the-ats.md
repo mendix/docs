@@ -10,7 +10,7 @@ In ATS, a test can consist of test cases, test suites and actions. There are als
 
 ## 2 Test Case
 
-Test cases are being built up by actions and are designed to test one specific requirement of your app. Since actions are Mendix agnostic, you can use a working test case on different Mendix versions of your app – given you did not add any changes to the app, of course. Your test cases are therefore reusable, reducing the regression test effort significantly. Test cases can be executed by ATS (actions can’t).
+Test cases are being built up by actions and are designed to test one specific requirement of your app. Since actions are Mendix agnostic, you can use a working test case on different Mendix versions of your app – given you did not add any changes to the app, of course. Your test cases are therefore reusable, reducing the regression test effort significantly. Test cases can be completed by ATS (actions can’t).
 
 Test cases are built by utilizing a set of predefined actions, allowing to easily create and manage software test cases.
 

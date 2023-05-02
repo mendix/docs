@@ -47,7 +47,7 @@ The following steps explain how to schedule test cases:
 5. Set the desired **Schedule Test Settings**: 
 
     * **Active** - Activate/Deactivate the event
-    * **After** - Set time when event is first executed
+    * **After** - Set time when event is first run
     * **Repeat** – Repeat/Not repeat the event
     * **Every** - Set interval to repeat the event
 
@@ -93,7 +93,7 @@ The following steps explain how to schedule test suites:
 5. Set the desired **Schedule Test Settings**:
 
     * **Active** - Activate/Deactivate the event
-    * **After** - Set time when event is first executed
+    * **After** - Set time when event is first run
     * **Repeat** – Repeat/Not repeat the event
     * **Every** - Set interval to repeat the event
 

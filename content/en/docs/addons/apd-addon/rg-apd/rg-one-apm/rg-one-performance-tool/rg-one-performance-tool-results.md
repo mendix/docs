@@ -28,7 +28,7 @@ When a microflow has a loop, this will also be visible in the action grid. It is
 
 {{< figure src="/attachments/addons/apd-addon/rg-apd/rg-one-apm/rg-one-performance-tool/rg-one-performance-tool-results/Loop_Action.png" >}}
 
-To get a complete overview of a microflow or action, select a microflow from the grid and click **Show tree**. This will give a tree view of the microflow and all related actions and sub-microflows that were executed. The **Change parameters** button can be  used to filter the results.
+To get a complete overview of a microflow or action, select a microflow from the grid and click **Show tree**. This will give a tree view of the microflow and all related actions and sub-microflows that were run. The **Change parameters** button can be  used to filter the results.
 
 {{< figure src="/attachments/addons/apd-addon/rg-apd/rg-one-apm/rg-one-performance-tool/rg-one-performance-tool-results/Tree_View.png" >}}
 

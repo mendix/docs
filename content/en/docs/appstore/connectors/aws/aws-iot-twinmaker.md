@@ -308,17 +308,20 @@ Entity 'ComponentPropertyGroupResponse' has no attributes.
 | --- | --- | --- | --- |
 | PropertyGroupResponse_PropertyName | AWSTwinMakerConnector.PropertyName | ManyToMany | |
 
-Entity 'PropertyName'
+#### 4.1.7  Entity PropertyName
+
 The names of properties.
-Attributes
 
-| Name         | Type               | Default value | Documentation    |
-| ------------ | ------------------ | ------------- | ---------------- |
-| PropertyName | String (unlimited) |               | Name of property |
+##### 4.1.7.1 Attributes
 
-Associations
+| Name | Type | Default value | Documentation |
+| --- | --- | --- | --- |
+| PropertyName | String (unlimited) | | Name of property |
+
+##### 4.1.7.2 Associations
+
 Entity 'PropertyName' does not own any associations.
-Back to top
+
 Entity 'Status'
 Entity that represents the status of an entity, component, component type, or workspace.
 

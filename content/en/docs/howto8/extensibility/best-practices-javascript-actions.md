@@ -196,7 +196,7 @@ mx.data.create({
 });
 ```
 
-For more information on creating objects, consult the [Create](https://apidocs.rnd.mendix.com/7/client/mx.data.html#.create) section of the *Mendix Client API*.
+For more information on creating objects, consult the [Create](https://apidocs.rnd.mendix.com/8/client/mx.data.html#.create) section of the *Mendix Client API*.
 
 #### 2.2.4 Changing Objects
 
@@ -209,7 +209,7 @@ mxobj.get("Name");               // "Henry"
 mxobj.getOriginalValue("Name")   // "Fred"
 ```
 
-For more information on changing objects, consult the [Set](https://apidocs.rnd.mendix.com/7/client/mendix_lib_MxObject.html#set) section of the *Mendix Client API*.
+For more information on changing objects, consult the [Set](https://apidocs.rnd.mendix.com/8/client/mendix_lib_MxObject.html#set) section of the *Mendix Client API*.
 
 #### 2.2.5 Loading Platform-Shipped Dependencies
 
@@ -222,10 +222,10 @@ var lang = require("mendix/lang");
 
 The following libraries are provided by the Mendix Client:
 
-* [mendix/lang](https://apidocs.rnd.mendix.com/7/client/module-mendix_lang.html)
-* [mendix/validator](https://apidocs.rnd.mendix.com/7/client/module-mendix_validator.html)
-* [mxui/dom](https://apidocs.rnd.mendix.com/7/client/module-mxui_dom.html)
-* [mxui/html/parser](https://apidocs.rnd.mendix.com/7/client/module-mxui_html_parser.html)
+* [mendix/lang](https://apidocs.rnd.mendix.com/8/client/module-mendix_lang.html)
+* [mendix/validator](https://apidocs.rnd.mendix.com/8/client/module-mendix_validator.html)
+* [mxui/dom](https://apidocs.rnd.mendix.com/8/client/module-mxui_dom.html)
+* [mxui/html/parser](https://apidocs.rnd.mendix.com/8/client/module-mxui_html_parser.html)
 
 While there are Dojo and Document Object Model (DOM) functions available, they are not recommended. For more information on Dojo and DOM functions, see the [Understanding Bad Practice](#badpractice) section of this document below. 
 

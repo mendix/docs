@@ -9,6 +9,16 @@ tags: ["API", "deploy", "licensed", "deployment", "cloud"]
 
 ## 1 Introduction
 
+The Mendix Webhook API allows you to manage [webhooks](/developerportal/deploy/webhooks/).
+
+You can use the API to do the following:
+
+* List all webhooks
+* Get a webhook
+* Create a webhook
+* Edit a webhook
+* Delete a web hook
+
 ## 2 Authentication{#authentication}
 
 Authentication for the Deploy API v3 uses a personal access token (PAT).
@@ -39,13 +49,9 @@ To authenticate calls when using the Open API specification below, click **Autho
 
 ### 3.1 Using the API to Get a Webhooks Endpoint
 
-### 3.2 Using the API to List Webhooks Endpoint
+### 3.1 Using the API to Create and Update a Webhook Endpoint
 
-### 3.3 Using the API to Create Webhook Endpoint
-
-### 3.4 Using the API to Edit a Webhook Endpoint
-
-### 3.5 Using the API to Delete a Webhook Endpoint
+### 3.3 Using the API to Delete a Webhook Endpoint
 
 ## 4 API Reference
 

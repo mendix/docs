@@ -3,7 +3,6 @@ title: "Webhook API"
 url: /apidocs-mxsdk/apidocs/webhook/
 type: swagger
 category: "API Documentation"
-description: "Description of Webhook API which can be used to manage webhooks."
 weight: 27
 tags: ["API", "deploy", "licensed", "deployment", "cloud"]
 ---

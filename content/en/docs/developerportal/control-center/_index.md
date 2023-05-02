@@ -358,6 +358,8 @@ In the list, you can see the following items:
 
   * **Delete** – Selecting this allows you to [delete the portfolio](#delete-portfolio) and all the data in the portfolio permanently.
 
+If a portfolio has an alert icon (**⚠**), that means it no longer has a Portfolio Manager. You can assign a Portfolio Manager or delete the portfolio. All the portfolios that no longer have a Portfolio Manager are listed on the [Alerts](#alerts) tab.
+
 #### 15.1.1 Access Management {#access-management}
 
 After you click the Ellipsis icon(**...**) on the list of the **Portfolios** page and select **Access Management**, the **Access Managemen**t page opens.
@@ -389,7 +391,7 @@ Deleting a portfolio means that you permanently delete the portfolio, including 
 
 If you decide to continue, type **DELETE** in the text box, and click **Delete**.
 
-### 15.2 Alerts
+### 15.2 Alerts {#alerts}
 
 The **Alerts** tab lists all the portfolios that no longer have a Portfolio Manager. You can assign new Portfolio Managers to a portfolio or delete the portfolio by clicking the Ellipsis icon (**...**) on the list and selecting the corresponding item.
 

@@ -36,11 +36,11 @@ Error log:
 
 When building up or after finishing your test case, you want to run your test case in order to see if it works as intended.
 
-The test case activities are executed based on the test step type. The test step type is used to control the execution flow of the activities execution. There are three types of test steps which are:
+The test case activities are completed based on the test step type. The test step type is used to control the execution flow of the activities execution. There are three types of test steps which are:
 
 **Setup**
 
-These are executed before starting the regular test run
+These are completed before starting the regular test run
 
 **Regular**
 
@@ -48,4 +48,4 @@ Regular test steps
 
 **Teardown**
 
-Executed after the test run. If the test run fails because of an error these test steps are still executed.
+Executed after the test run. If the test run fails because of an error these test steps are still completed.

@@ -1,6 +1,6 @@
 ---
-title: "Build REST APIs with OData"
-url: /refguide/build-odata-apis/
+title: "Implement REST Best Practices with OData"
+url: /refguide/implement-odata-apis/
 weight: 75
 tags: ["connectors", "data hub", "studio pro", "build", "API", "REST", "connector guide", "odata", "published odata services", "integration"]
 ---
@@ -28,18 +28,18 @@ Now, OData may not be the most popular way to implement REST APIs, but its value
 
 We’ll use the following domain model as an example. (Don’t worry, API first will also be discussed in this article). REST apis, and especially OData apis often provide access to data within the app. Mendix OData APIs are excellent for providing APIs for entities, but can also be used for accessing other types of data. This is illustrated later in this article. 
 
-![](https://paper-attachments.dropboxusercontent.com/s_A7C365B156C73FE0E73A206FAF1622E045C694DFEDFC4EA12B065B4B4F20286D_1675863725292_image.png)
+![](https://paper-attachments.dropboxusercontent.com/s_A7C365B156C73FE0E73A206FAF1622E045C694DFEDFC4EA12B065B4B4F20286D_1675863725292_image.png) implement-odata-apis
 
 # Implementing your REST APIs using OData
 
 To provide an Odata REST API for an entity you can add it from the domain model, or in the published odata service document. Here you an also select which attributes and associations are available in the API.
 
-![](https://paper-attachments.dropboxusercontent.com/s_A7C365B156C73FE0E73A206FAF1622E045C694DFEDFC4EA12B065B4B4F20286D_1675864696474_image.png)
+![](https://paper-attachments.dropboxusercontent.com/s_A7C365B156C73FE0E73A206FAF1622E045C694DFEDFC4EA12B065B4B4F20286D_1675864696474_image.png) select-attributes-associations
 
 
 For every published resources you can define what functionality is available (create = POST, read = GET, update = PATCH, delete =DELETE ), and some other capabilities like if counting the results is supported, skipping results (skip) and limiting the number of results returned (top). 
 
-![](https://paper-attachments.dropboxusercontent.com/s_A7C365B156C73FE0E73A206FAF1622E045C694DFEDFC4EA12B065B4B4F20286D_1675863872703_image.png)
+![](https://paper-attachments.dropboxusercontent.com/s_A7C365B156C73FE0E73A206FAF1622E045C694DFEDFC4EA12B065B4B4F20286D_1675863872703_image.png) edit-published-resource
 
 
 The setup of this document guides you to have a resource first approach to building REST apis, where you first define the resource you want to expose, and then define which standard operations you want to provide on these resources. Insertable enables POST, readable is a GET, updatable is a PATCH, and deletable will result in a DELETE http operation. As you can see, this guides you into using the HTTP operations in the right way, resulting in a better REST API.
@@ -48,22 +48,22 @@ The setup of this document guides you to have a resource first approach to build
 
 When you start your app you can will have a swagger documentation and test page.
 
-![](https://paper-attachments.dropboxusercontent.com/s_A7C365B156C73FE0E73A206FAF1622E045C694DFEDFC4EA12B065B4B4F20286D_1675872655152_image.png)
+![](https://paper-attachments.dropboxusercontent.com/s_A7C365B156C73FE0E73A206FAF1622E045C694DFEDFC4EA12B065B4B4F20286D_1675872655152_image.png) swagger-doc
 
 
 The test page lists all accepted parameters, and example payloads, both for regular responses, as well as for error payloads.
 
-![](https://paper-attachments.dropboxusercontent.com/s_A7C365B156C73FE0E73A206FAF1622E045C694DFEDFC4EA12B065B4B4F20286D_1676369088675_image.png)
+![](https://paper-attachments.dropboxusercontent.com/s_A7C365B156C73FE0E73A206FAF1622E045C694DFEDFC4EA12B065B4B4F20286D_1676369088675_image.png) test-page
 
 
 Json schema description of all the payload types is also provided.
 
-![](https://paper-attachments.dropboxusercontent.com/s_A7C365B156C73FE0E73A206FAF1622E045C694DFEDFC4EA12B065B4B4F20286D_1676370666126_image.png)
+![](https://paper-attachments.dropboxusercontent.com/s_A7C365B156C73FE0E73A206FAF1622E045C694DFEDFC4EA12B065B4B4F20286D_1676370666126_image.png) json-schema
 
 
 And finally you have an OpenAPI version 3.0.1 contract out of the box.
 
-![](https://paper-attachments.dropboxusercontent.com/s_A7C365B156C73FE0E73A206FAF1622E045C694DFEDFC4EA12B065B4B4F20286D_1676368969489_image.png)
+![](https://paper-attachments.dropboxusercontent.com/s_A7C365B156C73FE0E73A206FAF1622E045C694DFEDFC4EA12B065B4B4F20286D_1676368969489_image.png) openapi-contract
 
 # Rich and flexible way to retrieve data puts the client in control
 
@@ -71,13 +71,13 @@ OData REST APIs work as you would expect a REST API to function. Here are some e
 
 Fetching all customers:
 
-![](https://paper-attachments.dropboxusercontent.com/s_A7C365B156C73FE0E73A206FAF1622E045C694DFEDFC4EA12B065B4B4F20286D_1675871307299_image.png)
+![](https://paper-attachments.dropboxusercontent.com/s_A7C365B156C73FE0E73A206FAF1622E045C694DFEDFC4EA12B065B4B4F20286D_1675871307299_image.png) fetch-all-customers
 
 ## Get resource by id
 
 Fetching a single Customer resource can be done by providing the id between brackets. OData also supports using multi-field ids by proving the required attributes as a key value list between the brackets.
 
-![](https://paper-attachments.dropboxusercontent.com/s_A7C365B156C73FE0E73A206FAF1622E045C694DFEDFC4EA12B065B4B4F20286D_1675872753246_image.png)
+![](https://paper-attachments.dropboxusercontent.com/s_A7C365B156C73FE0E73A206FAF1622E045C694DFEDFC4EA12B065B4B4F20286D_1675872753246_image.png) fetch-single-customer
 
 ## Filter, sort, paginate and select the data you need
 
@@ -92,7 +92,7 @@ The following url parameters are available:
 
 The following example illustrates how you can combine filtering, sorting, pagination and attribute selection.
 
-![](https://paper-attachments.dropboxusercontent.com/s_A7C365B156C73FE0E73A206FAF1622E045C694DFEDFC4EA12B065B4B4F20286D_1675930677250_image.png)
+![](https://paper-attachments.dropboxusercontent.com/s_A7C365B156C73FE0E73A206FAF1622E045C694DFEDFC4EA12B065B4B4F20286D_1675930677250_image.png) filter-sort-page-attribute
 
 
 Alternatively you can specify the query in the payload of a POST call, which can be useful if you have a long complex query.
@@ -102,12 +102,12 @@ Alternatively you can specify the query in the payload of a POST call, which can
 
 If you selected ‘insertable’ in the API definition, new resources can be created using POST. Successfully created of data will automatically result in a 201 status code, and a ‘Location’ header provides the URL of the resulting resource, as is best practice for REST APIs.
 
-![](https://paper-attachments.dropboxusercontent.com/s_A7C365B156C73FE0E73A206FAF1622E045C694DFEDFC4EA12B065B4B4F20286D_1675872843570_image.png)
+![](https://paper-attachments.dropboxusercontent.com/s_A7C365B156C73FE0E73A206FAF1622E045C694DFEDFC4EA12B065B4B4F20286D_1675872843570_image.png) insert-new-data
 
 
 Using the returned location header to query the new resource at its endpoint.
 
-![](https://paper-attachments.dropboxusercontent.com/s_A7C365B156C73FE0E73A206FAF1622E045C694DFEDFC4EA12B065B4B4F20286D_1675872888661_image.png)
+![](https://paper-attachments.dropboxusercontent.com/s_A7C365B156C73FE0E73A206FAF1622E045C694DFEDFC4EA12B065B4B4F20286D_1675872888661_image.png) query-resource-endpoint
 
 
 **Use of the Prefer header is also supported**

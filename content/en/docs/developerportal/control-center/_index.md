@@ -326,7 +326,7 @@ The list has the following columns:
 
 ## 15 Portfolios
 
-The **Portfolios** page gives the governance feature that enables you to manage the portfolios in your company. This page contains three tabs: [All Portfolios](#all-portfolios), [Alerts](#alerts), and [Privacy Requests](#private-requests).
+The **Portfolios** page gives the governance feature that enables you to manage the portfolios in your company. This page contains three tabs: [All Portfolios](#all-portfolios), [Alerts](#alerts), and [Privacy Requests](#privacy-requests).
 
 {{% alert color="info" %}}
 
@@ -417,7 +417,7 @@ In the list, you can see the following items:
 
   * **Delete** – Selecting this allows you to [delete the portfolio](#delete-portfolio) and all the data in the portfolio permanently.
 
-### 15.3 Privacy Requests
+### 15.3 Privacy Requests {#privacy-requests}
 
 On the **Privacy Requests** tab, you can decide whether the change of portfolios privacy settings needs to be approved by a Mendix Admin (by default, the change does not need to be approved by a Mendix Admin).
 

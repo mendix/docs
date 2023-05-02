@@ -346,8 +346,8 @@ In the list, you can see the following items:
 * **Managers** – This shows the number of portfolio managers in this portfolio.
 * **Members** – This shows the number of users who have access to this portfolio.
 * **Privacy** – This shows the current privacy setting of the portfolio.
-  * **Private** – If the privacy setting is private, the portfolio is not discoverable in the **Company Portfolios** section in the [Portfolio Landscape Overview](/developer-portal/portfolio-management/#portfolio-landscape) page of the Portfolio Management app. People who want to access a private portfolio need an invitation.
-  * **Restricted** – If the privacy setting is private, the portfolio is not discoverable in the **Company Portfolios** section in the [Portfolio Landscape Overview](/developer-portal/portfolio-management/#portfolio-landscape) page of the Portfolio Management app. People who want to access a restricted portfolio need an invitation.
+  * **Private** – If the privacy setting is private, the portfolio is not discoverable in the **Company Portfolios** section in the [Portfolio Landscape Overview](/developerportal/portfolio-management/#portfolio-landscape) page of the Portfolio Management app. People who want to access a private portfolio need an invitation.
+  * **Restricted** – If the privacy setting is private, the portfolio is not discoverable in the **Company Portfolios** section in the [Portfolio Landscape Overview](/developerportal/portfolio-management/#portfolio-landscape) page of the Portfolio Management app. People who want to access a restricted portfolio need an invitation.
   
 * **Created** – This shows date on which the portfolio was created.
 * **Last Modified** – This shows date on which the portfolio was last modified.
@@ -379,7 +379,7 @@ The **Access Management** page lists all users who have access to the portfolio.
   * **Edit** – Selecting this allows you to change the role of the user.
   * **Remove** – Selecting this allow you to remove the user from the portfolio.
 
-#### 15.1.2 Deleting a Portfolio
+#### 15.1.2 Deleting a Portfolio {#delete-portfolio}
 
 After you click the Ellipsis icon(**...**) on the list of the **Portfolios** page and select **Delete**, the **Delete Portfolio** Dialog box opens. 
 

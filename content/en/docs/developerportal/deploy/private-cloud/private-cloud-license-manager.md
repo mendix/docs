@@ -4,8 +4,13 @@ linktitle: "PCLM – License Manager"
 url: /developerportal/deploy/private-cloud-license-manager/
 description: "Describes setting up a license server and applying licenses to your Mendix app namespaces in private cloud"
 weight: 47
+banner: "Private Cloud License Manager is currently in Beta."
 tags: ["Deploy", "Private Cloud", "Licensing", "PCLM", "License Server", "License Bundle"]
 ---
+
+{{% alert color="warning" %}}
+Private Cloud License Manager is currently in Beta. For more information about Beta releases and features, see [Beta Releases](/releasenotes/beta-features/).
+{{% /alert %}}
 
 ## 1 Introduction
 
@@ -21,17 +26,18 @@ The PCLM runs as a Kubernetes service on your cluster. This means that it can be
 
 To install and use the PCLM, you need the following prerequisites:
 
-* a Mendix for Private Cloud cluster
-* administrative rights to a Kubernetes namespace to install PCLM server (a dedicated namespace is recommended). This can be within your Mendix for Private Cloud cluster, or in another cluster which is accessible over HTTP
-* a Postgres or SQLServer database server and within it:
-    * a dedicated database with remote access which will be used to store your licenses, user authorization details, and usage information
+* A Mendix for Private Cloud cluster
+* Mendix Operator in version 2.10 or above
+* Administrative rights to a Kubernetes namespace to install PCLM server (a dedicated namespace is recommended). This can be within your Mendix for Private Cloud cluster, or in another cluster which is accessible over HTTP
+* A Postgres or SQLServer database server and within it:
+    * A dedicated database with remote access which will be used to store your licenses, user authorization details, and usage information
         * Public accessibility must be set to yes
         * Database server must allow inbound connections
         * Database must be called `mxlicenses`
-    * a dedicated administrator user role with all grants over this database (including the `Create Table` server role, and `Select`, `Insert`, `Update`, `Delete`, and `Truncate` database roles for the tables that are created)
-* kubectl or the OpenShift CLI
-* the mx-pclm-cli tool
-* the default password for the PCLM server `administrator` account – you will receive this together with your copy of the PCLM server
+    * A dedicated administrator user role with all grants over this database (including the `Create Table` server role, and `Select`, `Insert`, `Update`, `Delete`, and `Truncate` database roles for the tables that are created)
+* Kubectl or the OpenShift CLI
+* The mx-pclm-cli tool
+* The default password for the PCLM server `administrator` account – you will receive this together with your copy of the PCLM server
 
 {{% alert color="info" %}}
 The PCLM server will not create the database for the licenses, you need to create this yourself using the guidance above.

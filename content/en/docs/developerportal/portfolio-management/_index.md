@@ -13,7 +13,7 @@ The [Portfolio Management](https://portfolio.mendix.com) tool is available to al
 
 To start the Portfolio Management app, go to the Developer Portal, open the [Switch to menu](/developerportal/), and select **Portofolio**.
 
-## 2 Portfolio Landscape Overview
+## 2 Portfolio Landscape Overview {#portfolio-landscape}
 
 When you start the Portfolio Management app for the first time, an introduction page opens. After you read the introduction, click **Visit Portfolio Management** to open the **Portfolio Landscape Overview** page. From then on, when you start the Portfolio Management app, the **Portfolio Landscape Overview** page opens directly. Clicking **Learn more about Portfolio Management** brings you back to the introduction page.
 
@@ -37,9 +37,9 @@ You can create a new portfolio as follows:
 
 3. For **Privacy Settings**, select **Private** or **Restricted**:
 
-   * The default setting is **Private**. If you select **Private**, the portfolio is hidden in the **Company Portfolios** section, and people who want to access it need an invitation.
+   * The default setting is **Private**. If you select **Private**, the portfolio is not discoverable in the **Company Portfolios** section. People who want to access a private portfolio need an invitation.
 
-   * If you select **Restricted**, the portfolio is shown in the **Company Portfolios** section on the **Portfolio Landscape Overview** page, and people who want to access it still need an invitation.
+   * If you select **Restricted**, the portfolio is discoverable in the **Company Portfolios** section on the **Portfolio Landscape Overview** page. People who want to access a restricted portfolio need an invitation.
 
      {{% alert color="info" %}}A Mendix Admin needs to approve the change of private settings. They will receive a notification about your request and can approve or reject your request from the Control Center.{{% /alert %}}
 
@@ -275,7 +275,7 @@ The list contains the following information:
 * **Size** – This is the job size of the project. You can select **XL**, **L**, **M**, **S**, or **XS**.
 * **Score** – This is the WSJF score of the project.
 * Ellipsis icon (**...**) – Clicking this opens a pop-up menu that enables you to [edit](#edit-delete-project), [archive](#archive-project), or [delete](#edit-delete-project) the project.
-    
+  
     {{% alert type="info" %}}Both Portfolio Managers and Contributors can edit, archive, or delete a project. Only Viewers cannot do these actions. For more information on roles and permissions, see [Access Management](#access-management).{{% /alert %}}
 
 #### 3.2.4 RICE Prioritization {#rice}
@@ -288,7 +288,7 @@ The list contains the following information:
 
 * **Project** – Clicking this opens a [side pane](#view-project) that shows project details.
 * **Stage** – This shows which stage the project is currently in.
-    
+  
     {{% alert type="info" %}}A Portfolio Manager can set up custom stages for projects on the [Portfolio Settings](#portfolio-settings) page.{{% /alert %}}
 * **Reach** – This is the estimated number of relevant users that the project may affect within a time period. You must enter an integer in this field.
 * **Impact** – This is the estimated amount of impact that the project may have on individual users. You can select **Massive**, **High**, **Medium**, **Low**, or **Minimal**.

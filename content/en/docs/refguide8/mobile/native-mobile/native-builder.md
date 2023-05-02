@@ -301,15 +301,15 @@ In rare cases, errors might occur after the bundling process has completed. This
 
 ### 3.9 --app-icon-path
 
-This parameter specifies an app icon file. The image must be a *.png* file, and have a resolution of 1024x1024. Mendix will do the resizing for you. If a file path is not provided, default app icons will be provided by branch **master**.
+This parameter specifies an app icon file. The image must be a *.png* file, and have a resolution of 1024x1024. Mendix will do the resizing for you. If a file path is not provided, default app icons will be provided by branch **main**.
 
 ### 3.10 --app-round-icon-path
 
-This parameter specifies an app round icon file which is specific to Android. The image must be a *.png* file, and have a resolution of 1024x1024. Mendix will do the resizing for you. If a file path is not provided, default app icons will be provided by branch **master**.
+This parameter specifies an app round icon file which is specific to Android. The image must be a *.png* file, and have a resolution of 1024x1024. Mendix will do the resizing for you. If a file path is not provided, default app icons will be provided by branch **main**.
 
 ### 3.11 --app-splash-screen-path
 
-This parameter specifies an app splash file. The image must be a *.png* file, and have a resolution of 1440x2560. Mendix will do the resizing for you. If a file path is not provided, default app splash images will be provided by branch **master**.
+This parameter specifies an app splash file. The image must be a *.png* file, and have a resolution of 1440x2560. Mendix will do the resizing for you. If a file path is not provided, default app splash images will be provided by branch **main**.
 
 ### 3.12 --build-number
 
@@ -331,13 +331,13 @@ This parameter provides additional details when the Native Builder incurs errors
 
 ### 4.1 Custom Native Code
 
-If you have custom native dependencies or code, you can include them in your app by merging your changes to the **master** branch of the GitHub repository which the Native Builder is making. Every build branches off from **master** and your changes will be included. Remember to synchronize your repository occasionally to get the latest changes from Mendix native template.
+If you have custom native dependencies or code, you can include them in your app by merging your changes to the **main** branch of the GitHub repository which the Native Builder is making. Every build branches off from **main** and your changes will be included. Remember to synchronize your repository occasionally to get the latest changes from Mendix native template.
 
 For more information on syncing your repository, see [When to Regenerate Your Native Template](#sync-your-repository) below.
 
 ### 4.2 Custom App Center Configuration
 
-In App Center you can configure your builds at the branch level. If no configuration is available for branch **master**, Native Builder will create a default configuration. If a configuration is already present, it will not be modified by the tool. When a branch for a build is initialized, the configuration of **master** is copied over. Consecutive builds will not alter this branch's configuration. This is to avoid overriding your custom configuration unless the `regenerate` command is used.
+In App Center you can configure your builds at the branch level. If no configuration is available for branch **main**, Native Builder will create a default configuration. If a configuration is already present, it will not be modified by the tool. When a branch for a build is initialized, the configuration of **main** is copied over. Consecutive builds will not alter this branch's configuration. This is to avoid overriding your custom configuration unless the `regenerate` command is used.
 
 ### 4.3 Custom Developer App
 

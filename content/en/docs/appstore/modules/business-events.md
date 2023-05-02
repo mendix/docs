@@ -152,19 +152,15 @@ The business event service document is open in Studio Pro:
 
 In the [next section](#add-be-definitions), you will define the information included in your events, as well as what the service will implement.
 
-##### 4.2.1.1 Defining Business Events {#add-be-definitions}
+##### 4.2.1.1 Define Business Events {#add-be-definitions}
 
-To start defining what information is included in your events, as well as what the service will implement, do the following:
+To define what information is included in your events, as well as what the service will implement, click **Add** in the open service document:
 
-1. Click **Add** in the open service document:
+{{< figure src="/attachments/appstore/modules/business-events/add-event-definition.png" >}}
 
-     {{< figure src="/attachments/appstore/modules/business-events/add-event-definition.png" >}}
+Start with the first step, seen in the image below:
 
-     The **Add business event** wizard opens:
-
-     {{< figure src="/attachments/appstore/modules/business-events/wizard-step-1.png" >}}
-
-2. Go through Steps 1 and 2 of the wizard.
+{{< figure src="/attachments/appstore/modules/business-events/wizard-step-1.png" >}}
 
 *Step 1: Define what information is included in this event*
 
@@ -184,9 +180,9 @@ Below is an explanation of the possibilities for what other apps can do and what
 | Subscribe to events | Publishing events | Subscribing to events | When publishing, **PublishedBusinessEvent** entity and handler microflow <br>If subscribing, a **ConsumedBusinessEvent** entity |
 | Publish events and<br>Subscribe to events | [Nothing required: if apps can do both, there is no obligation for the service to implement anything] | Publishing events and/or subscribing to events | If no service implementations are selected, then nothing created <br>If publishing, **PublishedBusinessEvent** entity and handler microflow <br>If subscribing, a **ConsumedBusinessEvent** entity <br>If both, then both entities and the handler microflow are created 
 
-3. Click **Done** to exit the wizard and view the defined service document. 
+Click **Done** to exit the wizard and view the defined service document. 
 
-     **Export AsyncAPI Document** exports the YAML file of the business event service so that other apps can [use your newly created service](#two-way-be-existing).
+**Export AsyncAPI Document** exports the YAML file of the business event service so that other apps can [use your newly created service](#two-way-be-existing).
 
 #### 4.2.2 Using an Existing Business Event Service {#two-way-be-existing}
 

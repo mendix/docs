@@ -2,8 +2,8 @@
 title: "Data Hub APIs"
 url: /apidocs-mxsdk/apidocs/data-hub-apis/
 category: "API Documentation"
-description: "This document describes the Data Hub APIs and generating the personal access token."
-weight: 20
+description: "Describes the Data Hub APIs (which are for registering data sources from other business applications) and how to generate the personal access token."
+weight: 25
 tags: ["data hub", "Data Hub API", "authentication", "personal access token"]
 ---
 

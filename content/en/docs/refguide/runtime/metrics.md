@@ -329,7 +329,7 @@ You can use activities to provide custom metrics from your app. See [Metrics Act
 
 ## 5 Java API {#java-api}
 
-Micrometer metrics can be accessed through [Java Runtime APIs](https://docs.mendix.com/apidocs-mxsdk/apidocs/runtime-api/) as well inside Mendix. This can be achieved by using the custom runtime setting `com.mendix.metrics.Type`. This setting defaults to `micrometer`.
+Micrometer metrics can be accessed through [Mendix Runtime Java APIs](https://docs.mendix.com/apidocs-mxsdk/apidocs/runtime-api/) as well inside Mendix. This can be achieved by using the custom runtime setting `com.mendix.metrics.Type`. This setting defaults to `micrometer`.
 
 * Custom Runtime Setting – **Name**: `com.mendix.metrics.Type`
 * **Value**: `micrometer`
@@ -371,7 +371,7 @@ It is recommended to use a common prefix that uniquely defines your organisation
 The following deprecated usages will be removed in the future releases,
 
 1. Setting `com.mendix.metrics.Type` to `logger` and `statsd` is deprecated. You will get a warning message to advise you to start using the `micrometer` metric type.
-2. The [`Core.metrics()` Java Runtime API methods](https://apidocs.rnd.mendix.com/10/runtime/com/mendix/metrics/Metrics.html) `counter()`, `timer()`, `gauges()`, and `sets()` are deprecated.
+2. The [`Core.metrics()` Mendix Runtime Java API methods](https://apidocs.rnd.mendix.com/10/runtime/com/mendix/metrics/Metrics.html) `counter()`, `timer()`, `gauges()`, and `sets()` are deprecated.
 
 ## 6 Logging {#logging}
 

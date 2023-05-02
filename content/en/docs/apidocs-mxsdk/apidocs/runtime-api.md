@@ -2,7 +2,8 @@
 title: "Mendix Runtime API"
 url: /apidocs-mxsdk/apidocs/runtime-api/
 category: "API Documentation"
-weight: 55
+description: "All the functionality and information from both the application model and Mendix Runtime is accessible via this API."
+weight: 65
 tags: ["Runtime API", "API"]
 ---
 

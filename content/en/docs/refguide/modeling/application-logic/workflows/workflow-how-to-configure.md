@@ -266,16 +266,10 @@ The manager of a new employee will get a task to specify devices for the new hir
 
 12. Only the Manager role can access and interact with the **SpecifyDeviceAndLocation_Workflow** page, so restricting the access to this page is the next step. Navigate to the page properties and do the following:
 
-    1. In the **Visible for** property, click the ellipsis icon.
-    2. In the **Select Module Roles** dialog box, select **Manager** and click **OK**:
+     1. In the **Visible for** property, click the ellipsis icon.
+     2. In the **Select Module Roles** dialog box, select **Manager** and click **OK**:
 
-        {{< figure src="/attachments/refguide/modeling/application-logic/workflows/workflow-how-to-configure/select-module-roles.png" alt="Select Module Roles" >}}
-
-13. A microflow called **DS_WorkflowUserTask_GetEmployee_OnboardingContext** was created together with the **SpecifyDeviceAndLocation_Workflow** page. This microflow retrieves data of user tasks. You need to set up security for this microflow. In the App Explorer, double-click the **DS_WorkflowUserTask_GetEmployee_OnboardingContext** microflow to open it. {{% todo %}}[Is this still true?]{{% /todo %}}
-
-14. Navigate to microflow properties and click **Allowed roles**.
-
-15. In the **Select Module Roles** dialog box, select **Manager** and **Facilities** and click OK.
+         {{< figure src="/attachments/refguide/modeling/application-logic/workflows/workflow-how-to-configure/select-module-roles.png" alt="Select Module Roles" >}}
 
 Great job! You have configured the user task for the Manager role:
 

@@ -120,7 +120,7 @@ Your apps are now available in the *C:\native-builder\builds* folder, where you 
 
 ### 3.3 Installing a Dependency in Your Custom Developer App {#installing-dependency-app}
 
-In this section you will install the external library [react-native-nfc-manager](https://www.npmjs.com/package/react-native-nfc-manager) which makes adding NFC functionality easier. Mendix Studio Pro 8.6 is based on *React Native version 0.59*, which will influence the selected version of the library. You will make all changes to the **master** branch, because with each build a new branch is created (`build/{number}`) from **master** with your latest changes.
+In this section you will install the external library [react-native-nfc-manager](https://www.npmjs.com/package/react-native-nfc-manager) which makes adding NFC functionality easier. Mendix Studio Pro 8.6 is based on *React Native version 0.59*, which will influence the selected version of the library. You will make all changes to the **main** branch, because with each build a new branch is created (`build/{number}`) from **main** with your latest changes.
 
 The dependency is split into two parts: the native operating system part and the client JavaScript part. To add the dependency for the app, do the following:
 
@@ -185,7 +185,7 @@ For more information about linking, see the following resources:
 
 * Facebook's React Native [Linking Documentation](https://facebook.github.io/react-native/docs/linking)
 * The Medium post [Demystifying React Native Modules Linking](https://engineering.brigad.co/demystifying-react-native-modules-linking-964399ec731b)
-* The GitHub React Native community post [Autolinking](https://github.com/react-native-community/cli/blob/master/docs/autolinking.md)
+* The GitHub React Native community post [Autolinking](https://github.com/react-native-community/cli/blob/main/docs/autolinking.md)
 
 #### 3.3.3 Using the Modules {#using-modules}
 

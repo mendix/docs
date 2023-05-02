@@ -33,7 +33,7 @@ A custom developer app helps you by serving as a replacement for the Make It Nat
     ```
 
     This command does the following: <br />
-    1. Creates a branch named `developer` based on the commited changes to your `master` <br />
+    1. Creates a branch named `developer` based on the commited changes to your `primary` <br />
     1. Starts a build using the developer app flavors for your project
 4. Wait until the Native Builder completes your builds.
 

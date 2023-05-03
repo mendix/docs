@@ -19,11 +19,11 @@ For information on the current status of deployment to Mendix for Private Cloud 
 
 * We have updated components to use Go 1.19 and the latest dependency versions, in order to improve security score ratings for all container images.
 * We fixed an issue where applying a custom TLS trust config in [non-interactive mode](/developerportal/deploy/private-cloud-cli-non-interactive/) failed.
-* We added a `runtimeLeaderSelection` option that allows to run an environment without a leader replica - so that an app can be deployed into multiple regions.
+* We added a `runtimeLeaderSelection` option that allows you to run an environment without a leader replica - so that an app can be deployed into multiple regions.
 * We refactored the way the Mendix Runtime is launched. This removes the need to use Bash and Curl to start the Runtime.
-* It's now possible choose between plaintext and JSON formats for Mendix app logs.
+* It is now possible to choose between plaintext and JSON formats for Mendix app logs.
 * We have extended the options for configuring Ceph RADOS storage buckets. It is now possible to share a bucket between multiple environments.
-* We've updated the list of supported platforms to include OpenShift 4.12.
+* We have updated the list of supported platforms to include OpenShift 4.12.
 
 ### April 25th, 2023
 

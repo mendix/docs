@@ -21,3 +21,4 @@ For more general guidelines on how to create a page, drag elements onto it, see 
 * [Filter and Sort Items in a List](/studio-how-to/pages-how-to-filter-and-sort/) – teaches you how to set up a filter for a list of items and sort these items
 * [Enable End-Users to Attach Images](/studio-how-to/pages-how-to-attach-images/) – shows how to enable your end-users to attach images
 * [Configure File Upload and Download](/studio-how-to/pages-how-to-attach-files/) – describes how to enable your end-users upload and download files
+* [Configure a Delete Object Button](/studio-how-to/pages-how-to-configure-delete-object/) – shows how to configure a delete object button in a list view and a data view

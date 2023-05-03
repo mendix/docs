@@ -114,7 +114,7 @@ The **Test Cases** menu has three tabs:
 | --- | --- |
 | **Repository** | Here you create and store all your test cases, test suites, and custom actions. It is the ATS filing system, the heart of ATS. |
 | **Test Data** | Where you can create folders, actions, and enumerations.  |
-| **Stories** | Where you can access the sprints of your app. |
+| **Stories** | Where you can access the Sprints of your app. |
 
 In this how-to, only the **Repository** tab is described. 
 
@@ -286,7 +286,7 @@ When you click **Run**, the **Test Runs** page will open.
 
 {{< figure src="/attachments/addons/ats-addon/ht/v2/ht-two-getting-started/test-runs-page.png" >}}
 
-Once your test case/suite is executed, the result is shown here.
+Once your test case/suite is run, the result is shown here.
 
 You have now finished the getting started guide for ATS. We advice to read next [How-to Install the ATS Helper and Recorder](/addons/ats-addon/ht-two-install-ats-helper-recorder/).
 

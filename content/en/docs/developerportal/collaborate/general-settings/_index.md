@@ -35,7 +35,6 @@ These tabs are only available for users with the **App Settings** permission:
 * **Cloud Settings**
 * **API Keys**
 * **Project Management**
-* **Webhooks**
 * **History**
 
 ## 2 General {#general}
@@ -58,18 +57,11 @@ Only users with the **App Settings** permission can change the description of th
 
 On the **Access Management** tab, you can manage and invite app users. App users are end-users who can access the deployed app on specific environments. They can use and test your deployed app, and provide feedback.
 
-To manage users or invite users for an app deployed on a specific environment, click **Mange Users** or **Invite Users** for that environment. For more information, see the [Mange Users](#manage-users) and [Invite Users](#invite-users) section below.
-
-{{% alert color="info" %}}
-You can also manage app users from Studio, by clicking **Manage Users** on the **Settings > Roles and Permissions** page within Studio.
-{{% /alert %}}
+To manage users or invite users for an app deployed on a specific environment, click **Mange Users** or **Invite Users** for that environment. For more information, see the [Manage Users](#manage-users) and [Invite Users](#invite-users) section below.
 
 On the tab, you can only see the environments that satisfy these requirements:
 
-* [Mendix Single Sign-On](/developerportal/deploy/mendix-sso/) is implemented:
-    * In Studio, SSO is automatically implemented for your app by enabling security for your app – for details, see the [Security Overview](/studio/settings-security/#overview) section of *Security, Roles and Permissions*
-    * In Studio Pro, SSO can be implemented via the [Mendix SSO](/appstore/modules/mendix-sso/) module (for more information, see [Mendix Single Sign-On](/developerportal/deploy/mendix-sso/))
-* If you manage user roles from Studio, your app should be published (for more information see the [Managing App Users](/studio/settings-security/#managing-app-users) section of *Security, Roles and Permissions* )
+* [Mendix Single Sign-On](/developerportal/deploy/mendix-sso/) is implemented in the app using the [Mendix SSO](/appstore/modules/mendix-sso/) module (for more information, see [Mendix Single Sign-On](/developerportal/deploy/mendix-sso/))
 * Your user role allows you to manage other users (for more information, see the [User Management Properties](/refguide/user-roles/#user-management) section of *User Roles*)
 
 ### 3.1 Manage Users {#manage-users}
@@ -78,7 +70,7 @@ When you click **Manage Users** for your environment, a dialog box opens with a 
 
 To remove an app user from the environment, click **Remove** by their name.
 
-To edit an app user's roles, click **Edit** by their name. Permissions for these roles (for example, **User** or **Administrator**) correspond to what you have configured for your app's user roles in [App Security](/refguide/app-security/#user-roles) in Mendix Studio Pro or [Roles and Permissions](/studio/settings-security/#roles-and-permissions) in Mendix Studio. If you have created a customized role, you need to publish the app before you are able to see and assign it here.
+To edit an app user's roles, click **Edit** by their name. Permissions for these roles (for example, **User** or **Administrator**) correspond to what you have configured for your app's user roles in [App Security](/refguide/app-security/#user-roles) in Mendix Studio Pro. If you have created a customized role, you need to publish the app before you are able to see and assign it here.
 
 {{% alert color="info" %}}
 If an app user has been granted access to an app environment through a [group](/developerportal/control-center/#groups), only a Mendix Admin can remove them from that environment (by removing them from that group) or edit the roles granted by that group policy.
@@ -91,7 +83,7 @@ To invite new app users to your app, click **Invite Users** for that environment
 1. Enter the email addresses of the end-users you want to invite.
 2. Click **Include your app team** to include invitations to all the members of your [Team](/developerportal/collaborate/team/). This may be useful, because people invited to join your team are not added as app users automatically.
 3. Click **Add to invitee list**.
-4. Select the role for the App User (for example, **User** or **Administrator**). Permissions for these roles correspond to what you have configured for your app's user roles in [App Security](/refguide/app-security/#user-roles) in Mendix Studio Pro or [Roles and Permissions](/studio/settings-security/#roles-and-permissions) in Mendix Studio. If you have created a customized role, you need to publish the app before you are able to see and assign it here.
+4. Select the role for the App User (for example, **User** or **Administrator**). Permissions for these roles correspond to what you have configured for your app's user roles in [App Security](/refguide/app-security/#user-roles) in Mendix Studio Pro. If you have created a customized role, you need to publish the app before you are able to see and assign it here.
 5. Click **Next** to send the invitation.
 
 The invitee will receive an email asking them to authorize access to their Mendix account on this screen.
@@ -153,32 +145,38 @@ It is possible to migrate all or part of your content from [Stories](/developerp
 
 ## 7 Webhooks {#webhooks}
 
-{{% alert color="info" %}}
-Only users with the **App Settings** permission can manage webhooks.
+{{% alert color="warning" %}}
+This tab is for webhooks for stories and Sprints, and it is deprecated. This tab will be removed and these webhooks will be discontinued later in 2023. It is no longer possible to add new webhook configurations for stories and Sprints to your apps, but existing configurations will remain active and can still be edited. 
 {{% /alert %}}
 
-{{% alert color="info" %}}You will only see the **Webhooks** tab if you have **Mendix Stories** turned on in the [Project Management](#project-management) tab (click **Switch to Mendix Stories** if necessary).{{% /alert %}}
+{{% alert color="info" %}}
+You can also set webhooks for your app to trigger endpoints when changes are made to deployment packages or models held in the git Team Server. For details, see [Webhooks](/developerportal/deploy/webhooks/).
+{{% /alert %}}
 
-Click the **Webhooks** tab to manage your app's webhooks. A webhook enables the Developer Portal to talk to another website and post updated Developer Portal content (for example, Sprint updates and new stories) to that website. For example, if you want to follow the changes in your app, you can create a service with a certain [URL](#url) that keeps track of the data, and then changes in the app in the Developer Portal are sent to that URL.
+{{% alert color="info" %}}
+This tab is only visible if you already have webhooks for stories and Sprints created, you are a **Scrum Master**, and you have **Mendix Stories** turned on in the [Project Management](#project-management) tab.
+{{% /alert %}}
+
+Open the **Webhooks** tab to manage your app's webhooks for stories and Sprints. A webhook enables the Developer Portal to talk to another website and post updated Developer Portal content (for example, Sprint updates and new stories) to that website. For example, if you want to follow the changes in your app, you can create a service with a certain [URL](#url) that keeps track of the data, and then changes in the app in the Developer Portal are sent to that URL.
 
 {{< figure src="/attachments/developerportal/collaborate/general-settings/webhooks-list.png" width="800"  >}}
 
-After clicking **New Webhook** to create a new webhook, fill in the following details:
+After clicking **New Webhook** to create a new webhook for stories and sprints, fill in the following details:
 
-* **Name** – the name of the webhook
-* <a id="url"></a>**URL** – the URL to which the webhook will connect 
-* **Secret** – the secret used by the Developer Portal to sign the data payload in order to identify the source of the data to the receiving URL (this appears when creating and editing a webhook, but it will not be displayed on the **Webhooks settings** page)
+* **Name** – the name of the webhook for stories and Sprints
+* <a id="url"></a>**URL** – the URL to which the webhook for stories and Sprints will connect 
+* **Secret** – the secret used by the Developer Portal to sign the data payload in order to identify the source of the data to the receiving URL (this appears when creating and editing a webhook for stories and Sprints, but it will not be displayed on the **Webhooks settings** page)
 * **Version** – the version of the webhooks feature to be used
-* **Events** – what types of data will be sent via the webhook (you must select at least one; this appears when creating and editing a webhook, but it will not be displayed on the **Webhooks settings** page)
+* **Events** – what types of data will be sent via the webhook for stories and Sprints (you must select at least one; this appears when creating and editing a webhook for stories and Sprints, but it will not be displayed on the **Webhooks settings** page)
     * [Sprints](/developerportal/collaborate/stories/#story-actions)
     * [Stories](/developerportal/collaborate/stories/)
 
-To edit the above details for an existing webhook, click **Edit**.
+To edit the above details for an existing webhook for stories and Sprints, click **Edit**.
 
-To delete an existing webhook, click **Delete**.
+To delete an existing webhook for stories and Sprints, click **Delete**.
 
 {{% alert color="info" %}}
-For details on the technical configuration of webhooks, see [Webhooks](/apidocs-mxsdk/apidocs/webhooks-sprints/) in the *API Documentation*.
+For details on the technical configuration of webhooks for stories and sprints, see [Webhooks for Stories and Sprints](/apidocs-mxsdk/apidocs/webhooks-sprints/) in the *API Documentation*.
 {{% /alert %}}
 
 ## 8 History {#history}

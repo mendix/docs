@@ -10,13 +10,13 @@ Data Driven Testing in ATS allows you to run tests using tables of data directly
 
 Please see the Data Driven testing section for information on how to create datasets to use in your tests.
 
-To use your datasets in test cases you need to select a *Master dataset* under the *Test Data* tab inside a test case. You can only select one master dataset at a time per test case. Your selected dataset affects which fields you can use as parameters in your selected test case. You can only choose fields that are in the selected master dataset.
+To use your datasets in test cases you need to select a *Master dataset* under the *Test Data* tab inside a test case. You can only select one primary dataset at a time per test case. Your selected dataset affects which fields you can use as parameters in your selected test case. You can only choose fields that are in the selected primary dataset.
 
 ## 2 Page
 
 When you run a test with a dataset field set as a parameter a new test will be run for every record in the dataset.
 
-{{< figure src="/attachments/addons/ats-addon/rg-ats/v1/test-dev/rg-one-data-driven-tests/21168190.png" alt="Set master dataset inside a test case" >}}
+{{< figure src="/attachments/addons/ats-addon/rg-ats/v1/test-dev/rg-one-data-driven-tests/21168190.png" alt="Set primary dataset inside a test case" >}}
 
 The page also gives an overview over the selected dataset:
 
@@ -34,7 +34,7 @@ There are 2 error types that can occur when setting a dataset:
 
 **Missing fields**
 
-Shows fields that are not in the selected master dataset that are currently used in the test case.
+Shows fields that are not in the selected primary dataset that are currently used in the test case.
 
 **Incompatible datatypes**
 
@@ -46,7 +46,7 @@ For each error the test step and parameter are listed so they can be easily iden
 If you change the selected dataset the system will remember your set parameters and will match them again if you select a dataset containing the same field names.
 {{% /alert %}}
 
-When you have selected a master dataset you can use the the contained field as input values for your test steps.
+When you have selected a primary dataset you can use the the contained field as input values for your test steps.
 
 {{< figure src="/attachments/addons/ats-addon/rg-ats/v1/test-dev/rg-one-data-driven-tests/21168192.png" alt="Setting a filed as input value" >}}
 

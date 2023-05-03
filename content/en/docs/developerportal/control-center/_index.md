@@ -41,7 +41,7 @@ These are some examples of what you can find on the dashboard:
 
 ## 3 Apps {#apps}
 
-### 3.1 Active and Deactivated Apps
+### 3.1 Active and Deactivated Apps {#active-deactivated}
 
 #### 3.1.1 Overview {#overview}
 
@@ -50,7 +50,11 @@ On the **Active Apps** tab and the **Deactivated Apps** tab, you can see an over
 When you select one or more apps via the check boxes in the list, a context menu appears at the bottom of the screen with options for exporting app details to an *.xlsx* file, deactivating apps (on the **Active Apps** tab) or activating apps (on the **Deactivated Apps** tab), and deleting an app.
 
 {{% alert color="info" %}}
-Deleting and deactivating apps is currently not supported for licensed apps or apps that are not running on the Mendix Cloud. In the overview, you can only deactivate or activate up to 20 apps and delete one app in one go.
+Deleting and deactivating apps is currently not supported for licensed apps or apps that are not running on the Mendix Cloud.
+{{% /alert %}}
+
+{{% alert color="info" %}}
+In the overview, you can activate or deactivate up to 100 apps at a time and delete 1 app at a time.
 {{% /alert %}}
 
 The consequences of deactivating and deleting an app are as below:
@@ -134,13 +138,29 @@ When you select groups in the list or members or accessible apps in the group de
 
 ## 6 Company Settings {#company}
 
-### 6.1 Company Details
+### 6.1 Company Details {#company-details}
 
 On the **Company Details** tab of this page, you can edit your **Company Name** and **Description**.
 
-You can also request new **Company Email Domains** by clicking **Add Domain**, upon which a request is sent to [Mendix Support](/developerportal/support/). Once a domain is added, every user who signs up to Mendix with that email domain will be assigned to your company.
+You can request new **Company Email Domains** by clicking **Add Domain**, upon which a request is sent to [Mendix Support](/developerportal/support/). Once a domain is added, every user who signs up to Mendix with that email domain will be assigned to your company.
 
 If you have [configured single sign on using BYOIDP](/developerportal/control-center/set-up-sso-byoidp/), you will have to wait until the domain has been added, then deactivate and reactivate BYOIDP to pick up the new email domain. It is not possible to add email domains which do not use single sign-on if it is activated for your company.
+
+{{< figure src="/attachments/developerportal/control-center/company-email-domains.png" width="650px" >}}
+
+You can also provide a specific **Security Contact** who is informed if there are critical security issues with the Mendix Platform and platform-supported Marketplace components. Mendix strongly recommends applying a team email address or a functional mailbox instead of a personal individual email address.
+
+After you click **Add security contact** and add the required **Name** and **Email** address, a confirmation email is sent to the proposed contact. The recipient has seven days to click the link in the email and validate the Security Contact request. After seven days, the pending request is automatically removed. If the recipient has not received the confirmation email but is still within the seven-day validation timeframe, you can click **Resend confirmation email**.
+
+For an existing **Security Contact**, there are two menu options available:
+
+{{< figure src="/attachments/developerportal/control-center/security-contact.png" >}}
+
+Click **Edit** to edit the Security Contact's **Name**.
+
+Click **Delete** to delete the existing Security Contact. This is the first step in changing a validated Security Contact. After you make the deletion, you can add the new Security Contact.
+
+For more information on security issues, see [Security Advisories](/releasenotes/security-advisories/).
 
 ### 6.2 Mendix Admins
 
@@ -214,31 +234,80 @@ These links will open in a new browser tab.
 
 The **Free Environments** tab presents details on your company's free environments.
 
-## 11 Billing Accounts {#billing-accounts}
+## 11 Entitlements {#entitlements}
 
-Before the licenses are renewed for your company, Mendix checks if your company's payment method is still valid. If it is expired, you will receive an email that asks you to update your company's payment method on the **Billing Accounts** page.
+{{% alert color="info" %}}
+This feature is currently in Beta. For more information about Beta features, see [Beta Releases](/releasenotes/beta-features/).
+{{% /alert %}}
 
-{{< figure src="/attachments/developerportal/control-center/billing-accounts-page.png" alt="billing accounts page" >}}
+The **Entitlements** page is a self-service tool that displays the transactions (such as purchases of cloud credits, or provisioning of new environments) registered for your organization. You can use the page to monitor your resource entitlements and your consumption of cloud credits.
 
-The **Billing Accounts** page shows the details of your company's existing billing accounts. These accounts are on the company level. If your company has multiple billing accounts, you can select a billing account from the drop-down list on the page.
+{{< figure src="/attachments/developerportal/control-center/entitlements.png" alt="entitlements page" >}}
 
-You can find **Payment Method** at the bottom of the page. Depending on the payment method, you see either an invoice or the credit card data.
+## 12 Deployed Apps {#deployed-apps}
 
-{{% alert color="info" %}}You might have used different credit cards with the same billing account when purchasing premium content at the marketplace in the past. These cards are not shown here. Only the last credit card which is registered as the credit card for your company's billing account is shown here. This card will also be used for the renewal of the existing subscriptions.{{% /alert %}}
+{{% alert color="info" %}}
+This feature is currently in Beta. For more information about Beta features, see [Beta Releases](/releasenotes/beta-features/).
+{{% /alert %}}
 
-If the credit card is expired, the credit card data is shown in red. To update the credit card data, click **Update**, fill in the new credit card data, and then click **Update Details**.
+The **Deployed Apps Overview** page is a self-service tool that enables you to provision and offboard environments.
 
-## 12 Data Hub {#data-hub}
+The **Deployed Apps Overview** page shows a list of all the apps within your company. You can use it to view an app's name, ID, technical contact, or status. The page has separate tabs for **Mendix Cloud Apps** and **Free Apps**.
+
+{{< figure src="/attachments/developerportal/control-center/apps-overview.png" alt="Deployed Apps - apps overview" >}}
+
+You can click the name of an app to see a list of environments available for the app.
+
+{{< figure src="/attachments/developerportal/control-center/cloud-provisioning.png" alt="cloud provisioning page for an app" >}}
+
+Click the icon in the top right corner to access the following pages that allow you to [make requests to Mendix Support](/developerportal/support/submit-support-request/#submitting):
+
+* [Resize Environment](/developerportal/support/new-app-node-request-template/#resize) – requests a container size change
+* [Offboard Environment](/developerportal/support/new-app-node-request-template/#offboard) – requests that an app is offboarded
+
+### 12.1 Adding a New Environment
+
+To add a new environment for your app, click the name of an app, and then click the **Add Environment** button. You must specify the following information:
+
+* **Environment Name** – Enter a name for your new environment. The name must be unique (that is, your app cannot have more than one environment with the same name).
+* **Resource Pack** – Select the resources required for the new environment. The page displays the resources included in each resource pack, and their cost in cloud credits.
+* **Production Environment** – Indicate whether the environment will be used for production.
+
+{{< figure src="/attachments/developerportal/control-center/new-environment.png" alt="adding a new environment" >}}
+
+### 12.2 Offboarding an Environment
+
+To offboard an environment, click **Offboard**, which is available for stopped environments. After that, confirm that you have made any necessary backups, and type *Offboard* to confirm.
+
+{{< figure src="/attachments/developerportal/control-center/offboarding.png" alt="confirming the offboarding" >}}
+
+{{% alert color="warning" %}}
+Offboarding an environment deletes it permanently. You are responsible for making a backup of the environment in case you need it in the future.
+{{% /alert %}}
+
+### 12.3 Changing the Technical Contact of an App
+
+To quickly change the [Technical Contact](/developerportal/collaborate/app-roles/#technical-contact) for your app, click **Edit** by the name of the contact.
+
+{{< figure src="/attachments/developerportal/control-center/edit-technical-contact.png" alt="changing the technical contact" >}}
+
+{{% alert color="info" %}}
+You may only have one Technical Contact per app. When you change the Technical Contact, both the new and the old contact receive a notification email about the change.
+{{% /alert %}}
+
+## 13 Data Hub {#data-hub}
 
 An organization's Data Hub requires governance of the data-sharing policy down to the practical details of curating registered assets. A Mendix Admin can oversee these functions and also assign curators that can perform governance tasks for their apps.
 
 For details on these tasks, see [Data Hub Administration](/developerportal/control-center/data-hub-admin/).
 
-## 13 Marketplace Content {#marketplace-content}
+## 14 Marketplace Content {#marketplace-content}
+
+{{% alert color="info" %}}
+This page will be removed in June 2023.
+{{% /alert %}}
 
 The **Marketplace Content** page offers a dashboard where you can manage the visibility of public and [private Marketplace components](/appstore/general/app-store-overview/#company-content) in Studio for your company's users. Currently, you can only configure the visibility of widgets. 
-
-{{< figure src="/attachments/developerportal/control-center/marketplace-content.png" >}}
 
 The list shows all the Marketplace components for which you have the curation options. This list includes all the public Marketplace components that can be used in Studio and all the private Marketplace components of your company. You can configure whether any of these components is visible in Studio to your company's users (whether components appear in the **Toolbox** in Studio).
 
@@ -254,4 +323,4 @@ The list has the following columns:
 * **Content Last Updated** – This shows the date when a component was last updated. The most recently updated component is shown on top.
 * **Studio Visibility** – You can toggle the button to configure whether the component is visible in Studio's **Toolbox** to your company's users. 
 
-## 14 Documents in This Category
+## 15 Documents in This Category

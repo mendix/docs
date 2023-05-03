@@ -105,7 +105,7 @@ SDK version 2.2.0 and 2.2.1 were unpublished because they were published in a br
 | Impact | Description |
 | --- | --- |
 | Minor | Added support for Mendix 6.4.0 |
-| Low | Working copies that are connected to sprintr projects can now be deployed and their runtime status can be requested |
+| Low | Working copies that are connected to projects can now be deployed and their runtime status can be requested |
 | Low | Unit-loading now has an extra optional forceRefresh option. If set, it will then bypass the Mendix MOdel SDK cache, and get the fresh unit straight from the source/server. |
 | Minor | All classes that could be useful for reflection on the model are now exposed through `mendixmodelsdk`, so imports from `mendixmodelsdk/dist/sdk/internal/...` should no longer be needed. |
 | Minor | Private members (starting with an underscore `_`) were not available in the docs but were available in the public typings and therefore in the IDEs. This has been fixed. It should never be necessary to access these members. However, if you did access them you now need to access the object to `any` before the typechecker allows you to access these members. The method `allProperties()` is now available on all structures for reflection purposes. |

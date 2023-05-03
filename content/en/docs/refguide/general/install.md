@@ -33,7 +33,7 @@ Mendix Studio Pro can be installed on your machine with a Windows executable fil
 
 Mendix Studio Pro needs to be installed on your computer before you can start building apps. Follow these steps to install Mendix Studio Pro:
 
-1. Open the downloaded Mendix Studio Pro executable. It is named like this: *Mendix-9.X.X-Setup*. Then click **Next**:
+1. Open the downloaded Mendix Studio Pro executable. It is named like this: *Mendix-10.X.X-Setup*. Then click **Next**:
 
     {{< figure src="/attachments/refguide/general/install/setup-wizard.png"   width="400"  >}}
 
@@ -54,7 +54,7 @@ Mendix Studio Pro needs to be installed on your computer before you can start bu
 
     {{< figure src="/attachments/refguide/general/install/ready-to-install.png"   width="400"  >}}
 
-7. If you are asked to restart your computer, make a selection and click **Finish**. Otherwise, check **Launch Mendix 9.X.X** and click **Finish** to finish the installation and launch Studio Pro.
+7. If you are asked to restart your computer, make a selection and click **Finish**. Otherwise, check **Launch Mendix 10.X.X** and click **Finish** to finish the installation and launch Studio Pro.
 
 ## 4 Troubleshooting {#troubleshooting}
 
@@ -63,15 +63,12 @@ Sometimes you can run into problems when installing Studio Pro. One work-around 
 The prerequisites are the following:
 
 * [Microsoft .NET Desktop Runtime 6.0.x](https://dotnet.microsoft.com/en-us/download/dotnet/6.0) – we recommend using version 6.0.6 or above
-* Java JDK
-
-    * For Mendix Studio Pro version 9.18.0 and above – [Eclipse Temurin JDK 11 (x64)](https://github.com/adoptium/temurin11-binaries/releases)
-    * For Mendix Studio Pro versions above 9.14.0 but below 9.18.0 – [Adoptium Temurin Java SDK](https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.14.1%2B1/OpenJDK11U-jdk_x64_windows_hotspot_11.0.14.1_1.msi)
-    * For Mendix Studio Pro versions below 9.14.0 – [AdoptOpenJDK 11](https://cdn.mendix.com/installer/AdoptOpenJDK/OpenJDK11U-jdk_x64_windows_hotspot_11.0.3_7.msi)
+* [Eclipse Temurin JDK 11 (x64)](https://github.com/adoptium/temurin11-binaries/releases)
 * [Microsoft Visual C++ 2015 and 2019 Redistributable Package](https://aka.ms/vs/16/release/vc_redist.x64.exe)
 * [Mendix Native Mobile Builder one-click Installer](https://appdev-mx-cdn.s3.amazonaws.com/native-builders/latest.exe)
 * [Git for Windows (x64)](https://git-scm.com/download/win)
-* [Microsoft Edge WebView2 Evergreen Runtime (x64) (Evergreen Bootstrapper version)](https://developer.microsoft.com/en-us/microsoft-edge/webview2/)
+* [Microsoft Edge WebView2 Evergreen Runtime (x64 or ARM64) (Evergreen Standalone Installer version)](https://developer.microsoft.com/en-us/microsoft-edge/webview2/)
+* [Gradle 7.6 or above](https://services.gradle.org/distributions/gradle-7.6-bin.zip)
 
 Based on the error message you get from the installer you can decide to install a single prerequisite, or you can try to manually install them all.
 
@@ -89,13 +86,12 @@ It is possible to prepare the prerequisite installers beforehand, so that the Me
 4. Download the prerequisites listed in the [Troubleshooting](#troubleshooting) section above and move them into the **Dependencies** folder.
 5. Rename the following dependencies:
     * The Microsoft .NET Desktop Runtime 6.0.x executable (*dotnet.exe*) to *windowsdesktop-runtime-6.0-x64.exe*
-    * The Java Development Kit 11 (x64) *msi* (for example, *OpenJDK11U-jdk_x64_windows_hotspot_11.0.3_7.msi*) to one of the following, depending on the Studio Pro version:
-        * *adoptiumjdk_11_x64.msi* – for versions 9.14.0 and above
-        * *adoptopenjdk_11_x64.msi* – for versions 9.13.x and below
+    * The Java Development Kit 11 (x64) *msi* (for example, *OpenJDK11U-jdk_x64_windows_hotspot_11.0.3_7.msi*) to *adoptiumjdk_11_x64.msi*
     * The Visual C++ Redistributable for Visual Studio 2019 (x64) executable (for example, *VC_redist.x64.exe*) to *vcredist2019_x64.exe*
     * The `latest` executable to *mendix_native_mobile_builder.exe*
     * The *Git-{version}-64-bit.exe* executable to *git_for_windows_installer.exe*
     * Do not rename the Microsoft Edge WebView2 Evergreen Runtime installer *MicrosoftEdgeWebview2Setup.exe*, keep it as is
+    * The Gradle zip file should be named *gradle-7.6-bin.zip*
 
 6. Run the installer as described in the [Installing Mendix Studio Pro](#install) section above.
 

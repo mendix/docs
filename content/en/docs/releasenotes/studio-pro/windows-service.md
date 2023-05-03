@@ -12,6 +12,17 @@ To download the Windows Service, go to the [Get Studio Pro](https://marketplace.
 
 ## 4.7
 
+### 4.7.1
+
+**Release date: February 24th, 2023**
+
+* Add possibility to add extra logsubscribers in the Settings.yaml file. See https://github.com/mendix/m2ee-tools/blob/v7.2.3/examples/full-documented-m2ee.yaml#L392 for more information. Compared to that information, the 'Logging' property has to start with an uppercase letter, so 'Logging:' instead of 'logging:'. The loglevel setting as described is not supported for the Windows Service.
+* We replaced the modified YAML parser YamlSerializer 0.9.0.2 by YamlDotNet 12.3.1.
+* We updated the Newtonsoft Json.NET library from version 13.0.1 to 13.0.2.
+* We have added build number information to the version information of the executables and the subject field of the MSI installer file.
+
+### 4.7.0
+
 **Release date: August 26th, 2022**
 
 * We fixed an exception which occurred when updating an app where files with a path exceeding 260 characters are overwritten. (Ticket 142021)
@@ -196,7 +207,8 @@ Mendix Service Console 4 manages all your Mendix 3 and 4 apps within one applica
 Installation
 
 Execute the new installer to install the Mendix Service Console on your system. Do not install it in the locations you earlier extract the Mendix Service Console ZIP file to. Starting with this version apps no longer have their own service console; this new Mendix Service Console manages all your apps!
-Import of old apps
+
+**Import of old apps**
 
 Import all your old apps one by one. All project, log and backup files will remain in the same old locations. Only the settings will be saved to a new location and you have to add Mendix distributions again. Only do a reinstall of the service when the app runs successfully with a normal start. After a reinstall of the service (and if the service starts correctly), the old Mendix Service Console for that app can be removed.
 Licensing changes

@@ -123,7 +123,7 @@ To add a database service to your app, follow these steps:
 
 1. Navigate to the space where you created your app. The environment for the app you created is there, but it isn't running yet. This is because it doesn't have any services attached to it.
 2. Find the list of services which you can add. This may be in a **Service Marketplace** or you may need to **Add Service** to get a list of services you can add. Note that services are provided to spaces, not to individual apps.
-3. Select a database which is supported by Mendix. Supported databases include PostgreSQL, DB2, DashDB, Compose For PostgreSQL, ClearDB MySQL, and ElephantSQL (PostgreSQL as a service)
+3. Select a database which is supported by Mendix. Supported databases include PostgreSQL, DashDB, Compose For PostgreSQL, ClearDB MySQL, and ElephantSQL (PostgreSQL as a service)
 
     {{< figure src="/attachments/developerportal/deploy/cloud-foundry-deploy/marketplaces.png" >}}
 

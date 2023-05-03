@@ -11,9 +11,9 @@ tags: ["studio pro"]
 
 Nanoflows are similar to [microflows](/refguide/microflows/), in that they allow you to express the logic of your application. However, they do have some specific benefits (for example, they run directly on the browser/device and can be used in an offline app). Furthermore, most of the actions run directly on the device, so there is also a speed benefit for logic which does not need access to the server.
 
-{{% alert color="info" %}}
-This page is an overview of all the elements that can be used in a nanoflow. For the properties of the nanoflow itself, see [Nanoflow Properties](/refguide/nanoflow/).
-{{% /alert %}}
+This page is an overview of all the elements that can be used in a nanoflow. For the properties of the nanoflow itself, see [Nanoflow Properties](/refguide/nanoflow/). 
+
+For information on using nanoflows as data sources, see [Nanoflow Source](/refguide/nanoflow-source/).
 
 ## 2 When to Use Nanoflows
 
@@ -149,6 +149,14 @@ The nanoflow editor offers keyboard support for navigating and manipulating the 
 | <kbd>End</kbd> | Cycles through the end events. |
 | Context-menu key or <kbd>Shift</kbd> + <kbd>F10</kbd> | Opens the context menu for the currently selected element. |
 
-## 6 Security
+## 6 Security {#security}
 
 Nanoflows are executed in the context of the current user. Any operation for which the user is unauthorized will fail. For instance, when objects are retrieved in a nanoflow, only the ones for which the current user has read access will be returned. Committing an object only succeeds when the current user has write access for all changes.
+
+## 7 Converting a Nanoflow to a Microflow {#convert-to-microflow}
+
+To convert a nanoflow to a microflow, you have two options. The first option is to right-click anywhere in the nanoflow editor and select **Convert to microflow**. Alternatively, in the **App Explorer**, right-click on the name of the nanoflow you want to convert, and select **Convert to microflow**.
+
+{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/nanoflows/convert-to-microflow.PNG" alt="Convert to microflow" width="550px" >}}
+
+A new microflow is created and added to the same directory, and you can get consistency errors if there are actions that are not supported by microflows.

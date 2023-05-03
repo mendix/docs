@@ -17,16 +17,11 @@ A *solution* is a Mendix app that has out-of-the-box solution suitable for multi
 
 When consuming add-on modules and solutions, you may come across the following limitations:
 
-* Add-on and solution modules are not supported in Mendix Studio; it should be disabled for your app, when you consume an add-on module or a solution. 
 * When debugging add-on and solution modules, you cannot step into microflows, debugging will automatically use **Step Over**.
 * If app modules and add-on modules or solutions have conflicting custom widgets, you are prompted with a warning showing the sources of the conflicts (module and widget package names) to find a workaround. An automatic fix is not implemented.
 * When a constant is hidden, you cannot configure its value in the **App settings**. For more information on app settings, see the [Configuration Tab](/refguide/app-settings/#configurations) section in *App Settings*. 
 
 ## 3 Importing an Add-on Module 
-
-{{% alert color="warning" %}}
-When consuming an add-on or a solution, Studio should be disabled for your app. 
-{{% /alert %}}
 
 There are several ways to import an add-on module from the Marketplace. For more information, see the [Installing Marketplace Content](/appstore/general/app-store-content/#install) section in *Use Marketplace Content in Studio Pro*.
 
@@ -43,10 +38,6 @@ When you import an add-on module, it shows up in the **Add-ons** folder in the A
 {{< figure src="/attachments/refguide/modeling/app-explorer/modules/consume-add-on-modules-and-solutions/protected-microflow.png" >}}
 
 You also might not see the full domain model of the module, only entities, attributes, and associations that were specifically exposed by the publisher. The visible parts of the domain model are intended to be reused; hidden elements are not needed for proper use of the module.
-
-{{% alert color="warning" %}}
-Mendix Studio does not currently support add-on modules, you will not be able to open apps that use add-on modules in Studio.
-{{% /alert %}}
 
 ## 6 Deleting a Consumed Add-on Module 
 

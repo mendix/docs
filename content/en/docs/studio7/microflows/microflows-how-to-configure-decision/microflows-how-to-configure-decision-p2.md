@@ -112,6 +112,6 @@ To embed the microflow with a decision (the attribute of the Boolean type), do t
 12. Open the page **Order_form_for_silver_customers** and repeat steps 4-11.
 13. Open the page **Order_form_for_gold_customers** and repeat steps 4-11.
 
-Congratulations! Now when the user clicks **Place order**, only the customers who are not blocked will be able to proceed. If the user is blocked, he will get an error message. 
+Congratulations! Now when the user clicks **Place order**, only the customers who are not blocked will be able to proceed. If the user is blocked, they will get an error message. 
 
 You can preview and publish. For more information, see [Previewing and Publishing Your App](/studio7/publishing-app/).

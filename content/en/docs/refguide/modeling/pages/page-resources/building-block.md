@@ -32,7 +32,7 @@ The display name determines the name of the building block that will appear in t
 
 ### 4.2 Image
 
-The image selected will appear in the **Building Blocks** tab of Studio's **Toolbox** and Studio Pro's **Toolbox** in **Tile View**. Selecting a representative image will allow users to easily distinguish between building blocks. If left blank, Studio will display a generic default image. Any image selected will be scaled down to 200x200 pixels.
+The image selected will appear in Studio Pro's **Toolbox** in **Tile View**. Selecting a representative image will allow users to easily distinguish between building blocks. If left blank, Studio Pro will display a generic default image. Any image selected will be scaled down to 200x200 pixels.
 
 ### 4.3 Category
 
@@ -44,4 +44,4 @@ The category weight determines the order of categories inside the **Toolbox** (i
 
 ### 4.5 Documentation URL
 
-The documentation URL can be used to link to a documentation page for the building block. These links will appear in the **Building Blocks** tab of Studio's **Toolbox**.
+The documentation URL can be used to link to a documentation page for the building block. These links will appear in the **Building Blocks** tab of Studio's **Toolbox**. {{% todo %}}[Update to SP?]{{% /todo %}}

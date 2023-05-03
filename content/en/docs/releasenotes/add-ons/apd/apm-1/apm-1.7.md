@@ -71,7 +71,7 @@ This version supports Mendix 6.2.0 and above only. Also only on java 8.
 
 ### Bug fixes and minor changes
 
-* Added a warning when you change a log level and the log tool is not running, so the user understands that his change has no immediate effect.
+* Added a warning when you change a log level and the log tool is not running, so the user understands that their change has no immediate effect.
 * Fixed catching an error when a trigger in the measurements tool has an error in the expression.
 * In Mendix 6.6+ there was an issue with validations in the installation Wizard. This is fixed.
 * An issue with a field length in the performance tool tree is fixed

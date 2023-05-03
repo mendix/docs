@@ -59,4 +59,3 @@ PostgreSQL, Oracle, and MySQL follow [ISO 8601](https://en.wikipedia.org/wiki/IS
 Other databases have a more specific behavior:
 
 * [SQL Server](https://docs.microsoft.com/en-us/sql/t-sql/functions/datepart-transact-sql?view=sql-server-ver15)
-* [DB2](https://www.ibm.com/support/knowledgecenter/en/SSEPEK_10.0.0/sqlref/src/tpc/db2z_bif_week.html)

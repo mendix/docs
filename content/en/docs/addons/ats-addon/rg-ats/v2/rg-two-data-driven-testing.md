@@ -28,9 +28,9 @@ Fields can have following data types: text or number.
 
 To use your datasets in test cases, you need to select a **Master dataset** under the **Test Data** tab inside a test case. Click the arrow to open the **Select Data Set** dialog box.
 
-{{< figure src="/attachments/addons/ats-addon/rg-ats/v2/rg-two-data-driven-testing/master-data-set.png" >}}
+{{< figure src="/attachments/addons/ats-addon/rg-ats/v2/rg-two-data-driven-testing/primary-data-set.png" >}}
 
-You can only select one master dataset at a time per test case. Your selected dataset affects which fields you can use as parameters in your selected test case. You can only choose fields that are in the selected master dataset. On execution, ATS picks the corresponding record values for each field.
+You can only select one primary dataset at a time per test case. Your selected dataset affects which fields you can use as parameters in your selected test case. You can only choose fields that are in the selected primary dataset. On execution, ATS picks the corresponding record values for each field.
 
 {{% alert color="info" %}}
 If you connect a dataset with a test case, ATS executes a session for each record row in the dataset. For example, if there are three rows, ATS executes three sessions.
@@ -63,7 +63,7 @@ ATS lists the test step and parameter for each error for easy identification.
 
 ### 5.1 Missing fields
 
-For this type of error, fields are shown that are not in the selected master dataset currently used in the test case.
+For this type of error, fields are shown that are not in the selected primary dataset currently used in the test case.
 
 ### 5.2 Incompatible Data Types
 

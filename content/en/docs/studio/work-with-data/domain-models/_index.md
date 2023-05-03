@@ -62,10 +62,10 @@ You can add different type of entities to your domain model:
 
 Entities have the following properties:
 
-* **General** properties define the name of the entity and its [persistability](/refguide/persistability/):
+* **General** properties define the name of the entity and its [persistability](/refguide9/persistability/):
 
     * **Name** – defines the name of the entity
-    * **Persistable** – defines whether objects of the entity are stored in the database (for more information on persistability, see [Persistability](/refguide/persistability/) in the *Studio Pro Guide*)
+    * **Persistable** – defines whether objects of the entity are stored in the database (for more information on persistability, see [Persistability](/refguide9/persistability/) in the *Studio Pro Guide*)
 
     {{< figure src="/attachments/studio/work-with-data/domain-models/entity-general-properties.png" alt="General Properties of an Entity" >}}
 
@@ -200,7 +200,7 @@ At the bottom of the tab you can see the **Delete** button.
 You can manage the following properties of an entity:
 
 * The **Name** of the entity
-* [Persistability](/refguide/persistability/) of the entity
+* [Persistability](/refguide9/persistability/) of the entity
 
     {{< figure src="/attachments/studio/work-with-data/domain-models/entity-properties.png" >}}
 

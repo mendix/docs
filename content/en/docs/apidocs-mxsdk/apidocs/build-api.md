@@ -2,8 +2,8 @@
 title: "Build API"
 url: /apidocs-mxsdk/apidocs/build-api/
 category: "API Documentation"
-description: "An API to allow the triggering of deployment package builds, and to get information about existing deployment packages."
-weight: 10
+description: "An API that enables triggering and managing deployment package builds and getting information about existing deployment packages." 
+weight: 15
 tags: ["API", "Build Server", "Team Server", "Deployment package", "Mendix Cloud"]
 ---
 
@@ -14,6 +14,8 @@ The Build API only works for apps which are deployed to the Mendix Cloud.
 ## 1 Introduction
 
 The Build API allows you to manage deployment packages and create new deployment packages using our build server. You will need the information from the [Teamserver API](/apidocs-mxsdk/apidocs/team-server-api/) as input for these API calls. You will also need to provide authentication for each call; this is described in [Authentication](/apidocs-mxsdk/apidocs/authentication/).
+
+You can use webhooks to trigger CI/CD pipelines which use this API. These are described in [Webhooks](/developerportal/deploy/webhooks/).
 
 The image below provides a domain model representation of the concepts discussed below and how these are related:
 
@@ -248,10 +250,16 @@ URL: https://deploy.mendix.com/api/1/apps/<AppId>/packages
 
 ##### 2.5.1.2 Payload
 
+The payload depends on whether the app is held in a [git repository or an SVN repository](/refguide/version-control-faq/#which-team-server).
+
 An object with the following key-value pairs:
 
-* *Branch* (String) : Name of the branch. This is 'trunk' for the main line or 'branches/*branch name*' for a specific branch.
-* *Revision* (Long) : Number of the revision to build a package from.
+* *Branch* (String) : Name of the branch.
+    * For SVN, this is 'trunk' for the main line or 'branches/*branch name*' for a specific branch.
+    * For git, this is 'main' for the main line or 'branches/*branch name*' for a specific branch.
+* *Revision* (String) : Number of the revision to build a package from.
+    * For SVN, this is an integer reflecting the revision number.
+    * For git, this is the commit hash. The API will accept either the short commit hash or the full commit hash.
 * *Version* (String) : Package version. This will also be the name of the tag on the project team server.
 * *Description* (String) : Description of the package.
 

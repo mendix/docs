@@ -19,7 +19,7 @@ If you were using a lot of large Java libraries in Java 6 (Mendix 4) or Java 7 (
 
 ### 2.2 java.lang.StackOverflowError
 
-Your application is not going to recover from one of these bad boys. When you encounter one of these while running your Mendix application it is practically always going to be caused by an infinite loop. You can easily recreate this by creating a microflow called *Microflow* with a single Call Microflow action and selecting the microflow called *Microflow*. The infinite loop will crash your app and produce a stack overflow error.
+Your application is not going to recover from one of these errors. When you encounter one of these while running your Mendix application it is practically always going to be caused by an infinite loop. You can easily recreate this by creating a microflow called *Microflow* with a single Call Microflow action and selecting the microflow called *Microflow*. The infinite loop will crash your app and produce a stack overflow error.
 
 ### 2.3 java.lang.OutOfMemoryError: Java heap space
 

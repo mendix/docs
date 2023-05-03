@@ -9,10 +9,6 @@ aliases:
     - /howto/collaboration-requirements-management/on-premises-git-howto/
 ---
 
-{{% alert color="warning" %}}
-This functionality is in Beta. For more information on Beta products, see [Beta Releases](/releasenotes/beta-features/).
-{{% /alert %}}
-
 ## 1 Introduction
 
 When developing Mendix applications, changes to these applications are stored in a version control system. This system is called [Team Server](/developerportal/collaborate/team-server/) and is part of the Mendix Platform. This means that the application's files are stored in the Mendix online environment. For more information, see the [Version Control Reference Guide](/refguide/version-control/).
@@ -21,10 +17,6 @@ While using Team Server is the recommended for most Mendix developers, you may p
 
 {{% alert color="info" %}}
 This document does not describe how to set up a Git server from scratch; typically, this will be taken care of by the IT department of your organization.
-{{% /alert %}}
-
-{{% alert color="warning" %}}
-You will not be able to use Mendix Studio for collaborative development if you use an on-premises version control server. Collaborative development between Studio and Studio Pro will only work if you use the Mendix Team Server.
 {{% /alert %}}
 
 ## 2 Prerequisites
@@ -69,7 +61,7 @@ To interact with this private repository from Studio Pro, you need a link to the
 
 ### 4.2 Preparing Studio Pro for Git {#preparing-git-support}
 
-To use Git, you need to activate the Git support in Studio Pro by navigating to **Edit** > **Preferences** > **Version Control** and selecting **Enable private version control with Git**. The name and email values will be used to identify your commit:
+To use on-premise Git, you need to configure name and email values that will be used to identify your commit in Studio Pro by navigating to **Edit** > **Preferences** > **Version Control**:
 
 {{< figure src="/attachments/refguide/version-control/on-premises-git/preferences-git.png" alt="Preferences dialog" >}}
 

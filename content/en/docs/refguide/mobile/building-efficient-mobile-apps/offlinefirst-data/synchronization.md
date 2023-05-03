@@ -65,9 +65,6 @@ The upload phase executes the following operations:
 
 1. <a id="upload-step-one"></a>As the local database can be modified only by committing or deleting an object, such an object can be either a new object created while offline or an existing object previously synced from the server. The upload phase detects which objects have been committed to the local database since the last sync. The detection logic differs per sync type. For **Synchronize all**, all committed objects in the local database are checked. For **Synchronize objects**, all committed objects from the list of selected objects are checked.
 2. <a id="upload-step-two"></a>There might be objects deleted from the device database since the last sync. The upload phase checks which objects have been deleted.
-
-    {{% alert color="warning" %}}Deleting an object from the device database is only supported in Studio Pro 9.7 and higher.{{% /alert %}}
-
 3. <a id="upload-step-three"></a>If there are any changed or new file objects their content is uploaded to the server and stored there temporarily. Each file is uploaded in a separate network request. If a file upload fails, the whole sync is aborted without causing any changes to the server or device database.
 4. <a id="upload-step-four"></a>All the changed and new objects are sent to the server, and the content of the files is linked to the objects. The server performs referential integrity validation of the objects (for more information, see the [Dangling References](#dangling-references) section below). The objects are committed to the server database. Information about deleted objects is also sent to the server so the server can delete them from its database too. This step is performed in a single network request.
 5. <a id="upload-step-five"></a>Any configured before- or after-commit or before- or after-delete event handlers on these objects will run on the server as usual: after the data has been uploaded and before the device database is updated. 
@@ -101,20 +98,31 @@ These settings are not applied for [selective synchronization](#selective-sync).
 
 By default, Mendix automatically determines which objects need to be synchronized as mentioned in [Synchronization](#synchronization).
 
-Depending on the use-case, more fine-grained synchronization controls might be required. Therefore, it is possible to change the download behavior for an entity. You can choose between the following options:
+Depending on the use-case, more fine-grained synchronization controls might be required. Therefore, it is possible to change the synchronization mode for an entity. You can choose between the following options:
 
 * **All Objects** – Download all objects applying the regular security constraints.
 * **By XPath** – Only download the objects which match the [XPath Constraints](/refguide/xpath-constraints/) in addition to the regular security constraints. This means all previously synchronized objects that do not match the XPath constraint will be removed.
 * **Nothing (clear data)** – Do not download any objects automatically, but do clear the data stored in the database for this entity when performing a synchronization (this can be useful in cases where the objects should only be uploaded, for example a `Feedback` entity).
 * **Nothing (preserve data)** – Do not download any objects automatically, and do not clear the data stored in the database for this entity when performing a synchronization  (this can be useful in cases where you want have full control over the synchronization and should be used in combination with the [Synchronize to device](/refguide/synchronize-to-device/) or [Synchronize](/refguide/synchronize/) activity with specific objects selected).
+* **Never** – When an entity is set to `Never`, its objects will not be synchronized between the runtime and the offline database during a Startup Synchronization, [Synchronize all Objects](/refguide/synchronize/#all-objects), or [Synchronize Unsynchronized Objects](/refguide/synchronize/#unsynchronized-objects). Alternatively, the objects can still be synchronized using [Synchronize to device](/refguide/synchronize-to-device/) or [Synchronize selected object(s)](/refguide/synchronize/#selected-objects), but you will be in control when and what is synchronized.
 
 If you have custom widgets or JavaScript actions which use an entity that cannot be detected by Studio Pro in your offline-first profile (because its only used in the code), you can use customizable synchronization to include such entities.
 
-{{< figure src="/attachments/refguide/mobile/offline-first/custom-sync.png" alt="custom synchronization"   width="450"  >}}
+{{< figure src="/attachments/refguide/mobile/offline-first/custom-synchronization-configs.png" alt="custom synchronization"   width="450"  >}}
 
 ### 2.5 Limitations
 
-Running multiple synchronization processes at the same time is not supported, regardless the of the type (**full** or **selective**). For more information, see the [Limitations](/refguide/synchronize/#limitations) section of the *Synchronize Guide*.
+Please be aware of the following limitation affecting synchronization: 
+
+* Running multiple synchronization processes at the same time is not supported, regardless the of the type (**full** or **selective**). For more information, see the [Limitations](/refguide/synchronize/#limitations) section of the *Synchronize Guide*.
+* An entity configured with the **Never** synchronization mode is not allowed to be associated with either of the following:
+    * An entity that is not used in offline.
+    * An entity that is configured with a synchronization mode other than **Never**.
+* File and Image documents are not supported for entities configured with the **Never** synchronization mode.
+* An entity configured with **Never** synchronization mode is not allowed to have generalization from either of the following:
+    * An entity that is not used in offline.
+    * An entity that is configured with a synchronization mode other than **Never**.
+* Deleted objects configured with **Never** will be ignored during Startup Synchronization, [Synchronize all Objects](/refguide/synchronize/#all-objects), or [Synchronize Unsynchronized Objects](/refguide/synchronize/#unsynchronized-objects).
 
 ### 2.6 Error Handling {#error-handling}
 
@@ -122,7 +130,7 @@ During synchronization, errors might occur. This section describes how Mendix ha
 
 #### 2.6.1 Network-Related Errors {#network-errors}
 
-Synchronization requires a connection to the server, so during synchronization, errors may occur due to failing or poor network connections. Network errors may involve a dropped connection or a timeout. By default, the timeout for synchronization is 30 seconds per network request for hybrid mobile apps. For native apps, there is no default timeout, and the timeout is determined by the platform and OS version.
+Synchronization requires a connection to the server, so during synchronization, errors may occur due to failing or poor network connections. Network errors may involve a dropped connection or a timeout. For native apps, there is no default timeout, and the timeout is determined by the platform and OS version.
 
 The synchronization is atomic, which means that either everything or nothing is synchronized. Exceptions are described in the [Model- or Data-Related Errors](#othererrors) section below.
 
@@ -159,7 +167,7 @@ The client downloads the contents of file objects during synchronization. Errors
 In these cases, synchronization fails. When it fails due to a connection error the client can retry. If it fails for other reasons, such as broken file content, the root cause must be fixed.
 
 {{% alert color="info" %}}
-In Mendix Studio Pro v9.17 and above, the client handles file download errors gracefully. Specifically, this means two things. 
+In Mendix Studio Pro, the client handles file download errors gracefully. Specifically, this means two things. 
 
 Firstly, when a connection error occurs while downloading a file, the synchronization fails. The nanoflow or end-user can retry later when the connection is stable.
 
@@ -170,7 +178,7 @@ Secondly, the client will skip the file object and continue synchronization for 
 
 #### 2.6.4 Dangling References {#dangling-references}
 
-During synchronization the server performs referential integrity validation of the new or changed objects that are being synchronized to the server. his validation ensures that none of the synchronized objects have associations pointing to an object that exists only on the device. If an association does not satisfy this condition, it is a dangling reference.
+During synchronization, the server performs referential integrity validation of the new or changed objects that are being synchronized to the server. This validation ensures that none of the synchronized objects have associations pointing to an object that exists only on the device. If an association does not satisfy this condition, it is a dangling reference.
 
 For example, when a committed `City` object refers to an uncommitted `Country` object, synchronizing the `City` object alone will yield an invalid `Country` object reference, which will trigger a dangling reference error upon synchronization.
 

@@ -3,8 +3,8 @@ title: "Deploy API – Version 3"
 url: /apidocs-mxsdk/apidocs/deploy-api-3/
 type: swagger
 category: "API Documentation"
-description: "Version 2 of APIs which can be used to deploy Mendix apps to licensed nodes"
-weight: 27
+description: "Deploy API v3 can be used to deploy Mendix apps to licensed nodes, manage application environments in the Mendix Cloud, retrieve statuses, start and stop applications, and deploy or transport new model versions to application environments."
+weight: 40
 tags: ["API", "deploy", "licensed", "deployment", "cloud"]
 ---
 
@@ -22,15 +22,17 @@ The V3 Deploy API only supports the endpoints listed here. For all other API cal
 
 ## 2 Authentication{#authentication}
 
-Authentication for the Deploy API v3 uses a Personal Access Token (PAT).
+Authentication for the Deploy API v3 uses a personal access token (PAT).
 
 ### 2.1 Generating a PAT
 
-Go to https://warden.mendix.com/ and follow the instructions in [Create a Personal Access Token with Warden](/developerportal/community-tools/warden/). Select the following as **Deployment Mendix Cloud** scopes:
+To generate a PAT, see the [Personal Access Tokens](/developerportal/community-tools/mendix-profile/#pat) section of *Mendix Profile*.
+
+Select the following as **Deployment Mendix Cloud** scopes:
 
 * `mx:deployment:read` – to perform `GET` operations
 * `mx:deployment:write` – to perform all operations (`GET`, `POST`, `PUT`, and `DELETE`)
- 
+
 Store the generated value `{GENERATED_PAT}` somewhere safe so you can use it to authorize your Mendix for Private Cloud API calls.
 
 ### 2.2 Using the PAT

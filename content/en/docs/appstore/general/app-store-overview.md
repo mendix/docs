@@ -27,9 +27,7 @@ The home page is your entry point to the various parts of the Mendix Marketplace
 * Click **Add Content** to [share new Marketplace content](/appstore/general/share-app-store-content/) you have developed
 * Explore various [industry solutions](#industry) and[content types](#types).
 
-{{< figure src="/attachments/appstore/general/app-store-overview/home-page.jpg" >}}
-
-<a id="industry"></a>The Marketplace offers **Industry** solutions for manufacturing, financial services, and other industries.
+{{< figure src="/attachments/appstore/general/app-store-overview/home-page.png" >}}
 
 <a id="types"></a>The Marketplace offers the following **Content Types**:
 
@@ -43,17 +41,19 @@ The home page is your entry point to the various parts of the Mendix Marketplace
 | [Widgets](/appstore/widgets/) | Widgets are single user-interface elements like containers, drop-down menus, and buttons. Select a widget, configure it, and add it to pages and snippets in your app. |
 | **Platform Services** | These services for Mendix Platform integration accessible through the Marketplace include [Data Hub](/data-hub/). |
 
+<a id="industry"></a>The Marketplace offers **Industry** solutions for manufacturing, financial services, and other industries.
+
 The following filter options are also available:
 
+* **Rating**
 * **Compatibility**
 * **Tags**
-* **Rating**
 
 ## 3 Component Details Page {#details}
 
 Clicking the tile of a Marketplace component will bring you to its details page with the sections described below.
 
-{{< figure src="/attachments/appstore/general/app-store-overview/component-details.jpg" >}}
+{{< figure src="/attachments/appstore/general/app-store-overview/component-details.png" >}}
 
 ### 3.1 Header and Usage
 
@@ -67,16 +67,18 @@ The header for a component presents the following details:
 * **Download** – click this to download the component
     * This is only available for components that have a file attached (meaning, all shared Studio Pro components, but not promotions)
     * The best practice is to download a component from the Marketplace functionality built into Studio Pro, because it then downloads directly into Studio Pro (for details on importing downloaded Marketplace content into Studio Pro, see the [Installing Marketplace Content](/appstore/general/app-store-content/#install) section in *Use Marketplace Content in Studio Pro*))
-* The **Premium** label is applied to components like solutions that require a subscription; some premium services also offer a free trial based on a predefined quota/limit
-    * These components have a **Subscribe** button to configure your subscription (by selecting a specific plan and setting a **Technical Owner**) and a **Try for Free** button to start your free trial
-    * If your company has an active subscription, click **Buy More** to buy more instances on the same or different plan.
-    * If you have an active subscription or trial, click **View status** to go to the [Company Subscriptions](#company-subscriptions) page
-    * These components also have a [Pricing](#tabs) tab
-* The **Request Demo** and **Contact Sales** buttons are only available for [industry solutions](#types)
-  <a id="usage"></a>The **Usage** section presents  the following information (depending on the type of component):
-    * The latest **Version** number of the component
-    * The Studio Pro version that the component **Requires** to work
-    * The type of [license](/appstore/general/share-app-store-content/#license) for the component
+* The premium icon is applied to components that are supported by a partner:
+
+    {{< figure src="/attachments/appstore/general/app-store-overview/premium.png"  width="50"  >}}
+
+    * These components have a **Contact Us** button for setting up your subscription with the partner
+    * If you already have an active subscription or trial, click **View status** to go to the [Company Subscriptions](#company-subscriptions) page
+
+<a id="usage"></a>The **Usage** section presents  the following information (depending on the type of component):
+
+* The latest **Version** number of the component
+* The Studio Pro version that the component **Requires** to work
+* The type of [license](/appstore/general/share-app-store-content/#license) for the component
 
 The **Publisher** section presents the name of the company who created the component as well as the **Date** when the component was first published.
 
@@ -203,10 +205,6 @@ On this page, you can see all the content your company has published. Click the 
 {{< figure src="/attachments/appstore/general/app-store-overview/company-content.png" >}}
 
 The options in this menu are the same as described for the context menu for the [My Content](#my-content) section above. However, the **Edit a version** and **Unpublish a version** options are only available for your own versions of company content.
-
-{{% alert color="info" %}}
-As a Mendix Admin in Control Center, you can also curate the Marketplace content you want to make available to your company's users in Mendix Studio. For more information, see the [Marketplace Content](/developerportal/control-center/#marketplace-content) section of *Control Center*.
-{{% /alert %}}
 
 ### 4.8 Company Subscriptions {#company-subscriptions}
 

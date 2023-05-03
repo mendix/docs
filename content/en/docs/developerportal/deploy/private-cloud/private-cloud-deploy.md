@@ -670,6 +670,14 @@ Before sending logs to support, please make sure that there they don't contain a
 To provide enough detail to work on an issue without disclosing sensitive information, you may want to redact some of the information in the log, or only keep messages from a specific time period.
 {{% /alert %}}
 
+### 7.6 Network Errors when Using an Istio Service Mesh
+
+When an Istio service mesh is enabled in a namespace, every pod's traffic is routed through an Istio sidecar (Envoy). This sidecar is added to every app pod, and Envoy needs some time (a few seconds) to fetch its configuration from Istio. Until Envoy configures itself, any outgoing traffic in that pod is blocked (denied) by Envoy. This can cause issues with task pods such as the image builder and database or file provisioners - any attempts to open a network connection will fail until Envoy is fully started.
+
+To fix this issue, enable the `holdApplicationUntilProxyStarts: true` setting in the Istio [proxy config](https://istio.io/latest/docs/reference/config/istio.mesh.v1alpha1/#ProxyConfig). With this option, containers are only started once the Istio sidecar is ready to accept network traffic.
+
+For more information, see https://github.com/istio/istio/pull/24737.
+
 ## 8 How the Operator Deploys Your App {#how-operator-deploys}
 
 The Mendix Operator is another app within your private cloud namespace. It is triggered when you provide a CR file. This can either be through the Developer Portal, for a connected cluster, or through the command line, for a standalone cluster. The process looks like this:

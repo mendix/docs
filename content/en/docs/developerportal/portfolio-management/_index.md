@@ -15,33 +15,33 @@ To start the Portfolio Management app, go to the Developer Portal, open the [Swi
 
 ## 2 Portfolio Landscape Overview {#portfolio-landscape}
 
-When you start the Portfolio Management app for the first time, an introduction page opens. After you read the introduction, click **Visit Portfolio Management** to open the **Portfolio Landscape Overview** page. From then on, when you start the Portfolio Management app, the **Portfolio Landscape Overview** page opens directly. Clicking **Learn more about Portfolio Management** brings you back to the introduction page.
+When you start the Portfolio Management app for the first time, an introduction page opens. The introduction page describes the new features and gives helpful information. You can click **Visit Portfolio Management** to open the **Portfolio Landscape Overview** page. After that, when you start the Portfolio Management app, the **Portfolio Landscape Overview** page directly opens. You can click **Learn more about Portfolio Management** to go back to the introduction page.
 
-On the **Portfolio Landscape Overview** page, each portfolio is presented in a card. On a portfolio card, you can see the name of the portfolio, the company to which it belongs, the privacy settings, and the avatars of the portfolio managers (each portfolio can have at maximum four managers).
+On the **Portfolio Landscape Overview** page, each portfolio is presented in a card. On a portfolio card, you can see the name of the portfolio, the company to which it belongs, the privacy settings, and the avatars of Portfolio Managers.
 
 The **Portfolio Landscape Overview** page contains two sections: **My Portfolios** and **Company Portfolios**.
 
 **My Portfolios** shows all the portfolios to which you have access. Clicking a portfolio card [opens the portfolio](#open-portfolio).
 
-**Company Portfolios** show all the portfolios in your company that are discoverable and to which you do not have access. Clicking a portfolio card show more details about the portfolio.
+**Company Portfolios** show all the portfolios in your company that are discoverable and to which you do not have access. Clicking a portfolio card shows more details about the portfolio.
 
 {{% alert color="info" %}}Whether a portfolio is discoverable in the **Company Portfolios** section depends on its **Privacy Settings** in the [Portfolio Settings](#portfolio-settings).{{% /alert %}}
 
 ### 2.1 Creating a New Portfolio {#create-portfolio}
 
-You can create a new portfolio as follows:
+On the **Portfolio landscape Overview** page, you can create a new portfolio as follows:
 
-1. On the upper-right corner of the **Portfolio landscape Overview** page, click **New Portfolio**. The **New Portfolio** dialog box opens.
+1. On the upper-right corner of the page, click **New Portfolio**. The **New Portfolio** dialog box opens.
 
 2. Enter **Portfolio Name** and **Description** for the new portfolio.
 
 3. For **Privacy Settings**, select **Private** or **Restricted**:
 
-   * The default setting is **Private**. If you select **Private**, the portfolio is not discoverable in the **Company Portfolios** section. People who want to access a private portfolio need an invitation.
+   * **Private** – If the portfolio is private, it is not discoverable in the **Company Portfolios** section in the [Portfolio Landscape Overview](#portfolio-landscape) page of the Portfolio Management app. People who want to access a private portfolio need an invitation.
 
-   * If you select **Restricted**, the portfolio is discoverable in the **Company Portfolios** section on the **Portfolio Landscape Overview** page. People who want to access a restricted portfolio need an invitation.
+   * **Restricted** – If a portfolio is restricted, it is discoverable in the **Company Portfolios** section in the [Portfolio Landscape Overview](#portfolio-landscape) page of the Portfolio Management app. People who want to access a private portfolio need an invitation.
 
-     {{% alert color="info" %}}A Mendix Admin needs to approve the change of private settings. They will receive a notification about your request and can approve or reject your request from the Control Center.{{% /alert %}}
+     {{% alert color="info" %}}If the [Privacy Requests](/developerportal/control-center/#privacy-requests) setting is enabled in the Control Center, a Mendix Admin needs to approve any change for privacy settings that you make. In that case, they will receive a notification about your change request and can approve or reject your request from the Control Center.{{% /alert %}}
 
 4. For **Prioritization Model**, select [WSJF Prioritization](/developerportal/portfolio-management/#wsjf) or [RICE Prioritization](/developerportal/portfolio-management/#rice).
 
@@ -49,11 +49,11 @@ You can create a new portfolio as follows:
 
 6. Click **Create**.
 
-The portfolio is created. You are the first portfolio manager of this portfolio. You can start [inviting other people](#add-users) to the portfolio.
+The portfolio is created. You are the first Portfolio Manager of this portfolio. You can start [inviting other people](#add-users) to the portfolio.
 
 ### 2.2 Opening a Portfolio {#open-portfolio}
 
-In the **Portfolio Landscape Overview** page, when you click a portfolio card in the **My Portfolios** section, you open the portfolio. On the left menu, you can find the following items:
+In the **Portfolio Landscape Overview** page, when you click a portfolio card in the **My Portfolios** section,  the portfolio opens. On the left menu, you can find the following items:
 
 * [Projects Overview](#projects-overview)
 * [Archived Projects](#archived-projects)
@@ -64,15 +64,15 @@ Clicking each item opens the corresponding page. You can find the description of
 
 ## 3 Projects Overview {#projects-overview}
 
+In the Portfolio Management app, the term "Project" refers to a software project that you manage as you work along the development lifecycle. An app can be the result of multiple projects (if the app is complex and big) or only one project. For progress tracking, we recommend you to break down an app into smaller projects whenever possible.
+
 The **Project Overview** page gives an overview of all the projects in this portfolio.
 
-On the top of the page, you can search for a project in the search bar.
+In the search box, you can search for a project by the project name.
 
 On the upper-right corner, you can use the **Filters** to filter projects. Using the drop-down list next to the **Filters**, you can [change your view](#change-view). Clicking the **Create New Project** button allows you to [create a new project](#create-new-project).
 
 ### 3.1 Creating a New Project {#create-new-project}
-
-In the Portfolio Management app, the term "Project" refers to a software project that you manage as you work along the development lifecycle. An app can be the result of multiple projects (if the app is complex and big) or only one project. For progress tracking, we recommend you to break down an app into smaller projects whenever possible.
 
 {{% alert type="info" %}}Both Portfolio Managers and Contributors can create new projects. Only Viewers cannot create a project. For more information on roles and permissions, see [Access Management](#access-management).{{% /alert %}}
 
@@ -93,7 +93,7 @@ To create a new project, follow these steps:
 1. Go to the **Projects Overview** page.
 2. Click **Create New Project**.
 3. Enter the **Project Name** and the **Stage** in which the project is. 
-4. Click **Create Project**. The project is created and appears on the **Projects Overview** page. The **Edit Project** side pane opens on the right side of the page where you can add the details of the new project.
+4. Click **Create Project**. The project is created and appears in the **Projects Overview** page. The **Edit Project** side pane opens on the right side of the page where you can add the details of the new project.
 
 Now you can proceed to [add general information](#add-general-information).
 
@@ -101,7 +101,7 @@ Now you can proceed to [add general information](#add-general-information).
 
 To add general information to your project, follow these steps:
 
-1. In the **Edit Project** side pane, select **Tags** for the project. You can use tags to classify your projects, for example by departments or types. You can select existing tags, or create new tags. 
+1. In the **Edit Project** side pane, select **Tags** for the project. You can use tags to classify your projects, for example by departments or types. You can select existing tags or create new tags. 
 
     {{% alert color="info" %}}For more information about how to create new tags, edit existing tags, or delete existing tags, see the [Managing Tags](#manage-tags) section.{{% /alert %}}
 
@@ -112,9 +112,7 @@ To add general information to your project, follow these steps:
 
         {{% alert color="info" %}}If a field has the **ⓘ** icon next to it like the **Link Existing App** field, then you can check out the description of this field by hovering over the **ⓘ** icon.{{% /alert %}}
 
-    2. Select the app that you want to link to the project.
-
-        If you woud like to see more information about a linked app, click the app name after it is linked.
+    2. Select the app that you want to link to the project. If you woud like to see more information about a linked app, click the app name after it is linked.
 
 4. Set the **Owner** for the project.
 5. Select the **Stage**, **Department**, **Country**, and **Use Case** for the project.
@@ -177,13 +175,14 @@ Now you can proceed to [add estimated value](#add-estimated-value).
 
 #### 3.1.5 Adding Estimated Value {#add-estimated-value}
 
-In the **Edit Project** side pane, click **Estimated Value** to show all the fields in this section. These fields can solidify your business case and drive internal adoption, and help you map the realized value upon completion. Enter information in the following fields in this section:
+In the **Edit Project** side pane, click **Estimated Value** to show all the fields in this section. These fields can solidify your business case and drive internal adoption, and help you map the realized value upon completion. Add information in the following fields in this section:
 
-* **Type of Value** – the type of the value that is created by the project
-    * A Portfolio Manager can customize the options for **Type of Value** on the [Portfolio Settings](#portfolio-settings) page
-* **Frequency** – indicates whether the value is **Once-off** or **Recurring**
-* **Value** – the amount of the value in numbers; use a comma every third digit from the right (for example, *1,000,000*)
-* **Additional Information** – nter anything that can help clarify how estimated value may impact the overall costs of the project
+* **Type of Value** – Select the type of the value that is created by the project.
+    
+    {{% alert color="info" %}}A Portfolio Manager can customize the options for **Type of Value** on the [Portfolio Settings](#portfolio-settings) page.{{% /alert %}}
+* **Frequency** – Select whether the value is **Once-off** or **Recurring**.
+* **Value** – Enter the amount of the value in numbers. Use a comma every third digit from the right (for example, *1,000,000*)
+* **Additional Information** – Enter anything that can help clarify how estimated value may impact the overall costs of the project.
 
 If the project creates more than one type of value, click **Add Value** to add more value. After you enter all values, the system shows the **Sum of Recurring Values** and the **Sum of One-Off Values**.
 
@@ -418,11 +417,19 @@ The table below shows the permissions of Portfolio Managers, Contributors and Vi
 {{% alert color="info" %}}Only [Portfolio Managers](#access-management) can add new users.{{% /alert %}}
 
 1. Go to **Access Management**.
+
 2. On the upper-right corner, click **Add New Users**.
+
 3. In the dialog box, enter the **Email Address** of the user who you want to invite. They can be someone within your company or outside your company. For users outside your company, their names and profile pictures are not displayed.
+
 4. Select an **Access Role** for the user – **Portfolio Manager**, **Contributor**, or **Viewer**. This determines the user's access level to all the projects in this portfolio.
+
+   {{% alert color="info" %}}Each portfolio can have at maximum four Portfolio Managers.{{% /alert %}}
+
 5. Click **Add to List**.
+
 6. Repeat steps 2 and 4 until you add all the users.
+
 7. Click **Send Invites**.
 
 The users that you added now appear on the **Access Management** page. 
@@ -433,21 +440,33 @@ For users within your company, if they have a Mendix account, their **Status** w
 
 ### 5.2 Editing and Deleting a User
 
-At the end of the row, click the Ellipsis (**...**), and then select the corresponding action.
+At the end of the row, click the Ellipsis icon (**...**), and then select the corresponding action.
 
 {{< figure src="/attachments/developerportal/portfolio-management/edit-delete-user.png" >}}
 
 ## 6 Portfolio Settings {#portfolio-settings}
 
-{{% alert color="info" %}}The **Portfolio Settings** page is only available for Portfolio Managers.{{% /alert %}}
+{{% alert color="info" %}}
+
+The **Portfolio Settings** page is only available for Portfolio Managers.
+
+{{% /alert %}}
 
 ### 6.1 Changing Portfolio Settings
 
 On the **Portfolio Settings** page, Portfolio Managers can change the following settings:
 
 * **Portfolio Name** – Click **Edit Portfolio Details** to change the portfolio name.
+
 * **Portfolio Description** – Click **Edit Portfolio Details** to change the portfolio description.
-* **Privacy Settings** – Click **Request Privacy Change** to make the change request. A Mendix Admin needs to approve the change. They will receive a notification about your request and can approve or reject your request from the Control Center. You can cancel a pending request by clicking **Cancel Request**.
+
+* **Privacy Settings** – Click **Request Privacy Change** to change privacy settings. You can set the settings to **Private** or **Restricted**.
+
+    * **Private** – A private portfolio is not discoverable in the **Company Portfolios** section in the [Portfolio Landscape Overview](#portfolio-landscape) page of the Portfolio Management app. People who want to access a private portfolio need an invitation.
+
+    * **Restricted** – A restricted portfolio is discoverable in the **Company Portfolios** section in the [Portfolio Landscape Overview](#portfolio-landscape) page of the Portfolio Management app. People who want to access a private portfolio need an invitation.
+
+        {{% alert color="info" %}}If the [Privacy Requests](/developerportal/control-center/#privacy-requests) setting is enabled in the Control Center, a Mendix Admin needs to approve any change for privacy settings that you make. In that case, they will receive a notification about your change request and can approve or reject your request from the Control Center. You can cancel a pending request by clicking **Cancel Request**.{{% /alert %}}
 
 * **Stages**  – Click the **^** icon or the **v** icon to move a stage upwards or downwards.
 

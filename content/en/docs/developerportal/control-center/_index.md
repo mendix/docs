@@ -326,7 +326,9 @@ The list has the following columns:
 
 ## 15 Portfolios
 
-The **Portfolios** page gives the governance feature that enables you to manage the portfolios in your company. This page contains three tabs: [All Portfolios](#all-portfolios), [Alerts](#alerts), and [Privacy Requests](#privacy-requests).
+The **Portfolios** page offers the governance feature for portfolio management in your company. You can have an overview of all portfolios in your company, manage portfolio access, delete portfolios, reject or approve requests for privacy setting changes. 
+
+The **Portfolios** page contains three tabs: [All Portfolios](#all-portfolios), [Alerts](#alerts), and [Privacy Requests](#privacy-requests).
 
 {{% alert color="info" %}}
 
@@ -336,37 +338,37 @@ As a Mendix Admin, you cannot directly see the content of a portfolio. You need 
 
 ### 15.1 All Portfolios {#all-portfolios}
 
-The **All Portfolios** tab lists all portfolios in your company. Here you can [manage portfolio access](#access-management) and delete portfolios.
+The **All Portfolios** tab lists all portfolios in your company. Here you can [manage portfolio access](#access-management) and [delete portfolios](#delete-portfolio).
 
 In the list, you can see the following items:
 
 {{% todo %}}Check the column name against the finalized UI{{% /todo %}}
 
 * **Name** – This is the name of the portfolio. Clicking the name opens a pop-up window that shows the general information of the portfolio and the list of the Portfolio Managers.
-* **Managers** – This shows the number of portfolio managers in this portfolio.
+* **Managers** – This shows the number of Portfolio Managers in this portfolio.
 * **Members** – This shows the number of users who have access to this portfolio.
-* **Privacy** – This shows the current privacy setting of the portfolio.
-  * **Private** – If the privacy setting is private, the portfolio is not discoverable in the **Company Portfolios** section in the [Portfolio Landscape Overview](/developerportal/portfolio-management/#portfolio-landscape) page of the Portfolio Management app. People who want to access a private portfolio need an invitation.
-  * **Restricted** – If the privacy setting is private, the portfolio is not discoverable in the **Company Portfolios** section in the [Portfolio Landscape Overview](/developerportal/portfolio-management/#portfolio-landscape) page of the Portfolio Management app. People who want to access a restricted portfolio need an invitation.
+* **Privacy** – This shows the current privacy settings of the portfolio.
+  * **Private** –  A private portfolio is not discoverable in the **Company Portfolios** section in the [Portfolio Landscape Overview](/developerportal/portfolio-management/#portfolio-landscape) page of the Portfolio Management app. People who want to access a private portfolio need an invitation.
+  * **Restricted** – A restricted portfolio is discoverable in the **Company Portfolios** section in the [Portfolio Landscape Overview](/developerportal/portfolio-management/#portfolio-landscape) page of the Portfolio Management app. People who want to access a restricted portfolio need an invitation.
   
-* **Created** – This shows date on which the portfolio was created.
-* **Last Modified** – This shows date on which the portfolio was last modified.
+* **Created** – This shows the date on which the portfolio was created.
+* **Last Modified** – This shows the date on which the portfolio was last modified.
 
 * Ellipsis icon (**...**) – Clicking the icon opens a pop-up menu with the following items:
 
   * **Access management** – Selecting this brings you to the [Access Management](#access-management) page.
 
-  * **Delete** – Selecting this allows you to [delete the portfolio](#delete-portfolio) and all the data in the portfolio permanently.
+  * **Delete** – Selecting this allows you to [delete the portfolio](#delete-portfolio) permanently together with all the data in the portfolio.
 
-If a portfolio has an alert icon (**⚠**), that means it no longer has a Portfolio Manager. You can assign a Portfolio Manager or delete the portfolio. All the portfolios that no longer have a Portfolio Manager are listed on the [Alerts](#alerts) tab.
+If a portfolio has an alert icon (**⚠**), that means it no longer has a Portfolio Manager. You can assign a Portfolio Manager or delete the portfolio. All the portfolios that no longer have a Portfolio Manager are also listed on the [Alerts](#alerts) tab.
 
 #### 15.1.1 Access Management {#access-management}
 
-After you click the Ellipsis icon(**...**) on the list of the **Portfolios** page and select **Access Management**, the **Access Managemen**t page opens.
+After you click the Ellipsis icon (**...**) in the list on the [All Portfolios](#all-portfolios) tab or the [Alerts](#alerts) tab, you can choose **Access Management** to open the **Access Management** page.
 
-You can invite a new user using their email address by clicking **Add Users** on the upper-right corner.
+The **Add Users** button on the upper-right corner allows you to invite new users to the portfolio using their email addresses.
 
-The **Access Management** page lists all users who have access to the portfolio. In the list, you can see the following items:
+The list shows all users who have access to the portfolio. In the list, you can see the following items:
 
 {{% todo %}}Check the column name against the finalized UI{{% /todo %}}
 
@@ -377,19 +379,19 @@ The **Access Management** page lists all users who have access to the portfolio.
 * **Role** – This shows the role of the user.
 * Ellipsis icon (**...**) – Clicking the icon opens a pop-up menu with the following items:
   * **Edit** – Selecting this allows you to change the role of the user.
-  * **Remove** – Selecting this allow you to remove the user from the portfolio.
+  * **Remove** – Selecting this allows you to remove the user from the portfolio.
 
 #### 15.1.2 Deleting a Portfolio {#delete-portfolio}
 
-After you click the Ellipsis icon(**...**) on the list of the **Portfolios** page and select **Delete**, the **Delete Portfolio** Dialog box opens. 
+After you click the Ellipsis icon (**...**) in the list on the [All Portfolios](#all-portfolios) tab or the [Alerts](#alerts) tab, you can choose **Delete** to delete the portfolio.
 
 {{% alert color="warning" %}}
 
-Deleting a portfolio means that you permanently delete the portfolio, including all the data in it. This change cannot be reverted. 
+Deleting a portfolio means that you permanently delete the portfolio, including all the data in the portfolio. This change cannot be reverted. 
 
 {{% /alert %}}
 
-If you decide to continue, type **DELETE** in the text box, and click **Delete**.
+The **Delete Portfolio** dialog box opens. If you decide to continue, type **DELETE** in the text box, and click **Delete**.
 
 ### 15.2 Alerts {#alerts}
 
@@ -401,32 +403,33 @@ In the list, you can see the following items:
 
 * **Portfolio** – This is the name of the portfolio. Clicking the name opens a pop-up window that shows the general information of the portfolio and the list of the Portfolio Managers.
 
-* **Managers** – This shows the number of portfolio managers in this portfolio
+* **Managers** – This shows the number of Portfolio Managers in this portfolio.
 
-* **Members** – This shows the number of users who have access to the portfolio
+* **Members** – This shows the number of users who have access to the portfolio.
 
-* **Privacy** – This shows privacy setting that is currently applied for the portfolio
+* **Privacy** – This shows the current privacy settings of the portfolio.
+  * **Private** –  A private portfolio is not discoverable in the **Company Portfolios** section in the [Portfolio Landscape Overview](/developerportal/portfolio-management/#portfolio-landscape) page of the Portfolio Management app. People who want to access a private portfolio need an invitation.
+  * **Restricted** – A restricted portfolio is discoverable in the **Company Portfolios** section in the [Portfolio Landscape Overview](/developerportal/portfolio-management/#portfolio-landscape) page of the Portfolio Management app. People who want to access a restricted portfolio need an invitation.
 
-* **Created** – This shows date on which the portfolio was created
-
-* **Last Modified** – This shows date on which the portfolio was last modified
+* **Created** – This shows the date on which the portfolio was created.
+* **Last Modified** – This shows the date on which the portfolio was last modified.
 
 * Ellipsis icon (**...**) – Clicking the icon opens a pop-up menu with the following items:
 
   * **Access management** – Selecting this brings you to the [Access Management](#access-management) page.
 
-  * **Delete** – Selecting this allows you to [delete the portfolio](#delete-portfolio) and all the data in the portfolio permanently.
+  * **Delete** – Selecting this allows you to [delete the portfolio](#delete-portfolio) permanently together with all the data in the portfolio.
 
 ### 15.3 Privacy Requests {#privacy-requests}
 
-On the **Privacy Requests** tab, you can decide whether the change of portfolios privacy settings needs to be approved by a Mendix Admin (by default, the change does not need to be approved by a Mendix Admin).
+On the **Privacy Requests** tab, you can decide whether the change of portfolios privacy settings needs to be approved by a Mendix Admin. By default, these changes do not need to be approved by a Mendix Admin.
 
-This list shows all the pending change requests. You can see the following items:
+The list shows all the pending change requests. You can see the following items:
 
 - **Portfolio** – This shows the name of the portfolio.
 - **Requested By** – This shows the name of the user who made the request.
-- **From** – This is current privacy setting.
-- **To** – This is the new privacy setting that is being requested.
+- **From** – This shows current privacy settings.
+- **To** – This shows the new privacy settings that are being requested.
 - **Date** – This shows the date on which the request was made.
 - **Reject** – Clicking this rejects the change request. When you reject a request, optionally you can fill in a reason to inform the person who made the request.
 - **Approve** – Clicking this approves the request.

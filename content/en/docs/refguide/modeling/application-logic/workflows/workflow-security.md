@@ -15,7 +15,7 @@ When configuring security for workflows, you need to set up the following:
 * [Page access](#page-access)
 * [Targeted users](#target-users)
 
-A combination of entity access, page access, and the User Assignment property help you make sure that targeted users will be able to view user tasks and their data.
+A combination of entity access, page access, and targeted users help you make sure that targeted users will be able to view user tasks and their data.
 
 ## 2 Configuring Entity Access {#entity-access}
 
@@ -33,7 +33,7 @@ For more information on the page access, see the [Page Access](/refguide/module-
 
 ## 4 Configuring Targeted Users {#target-users}
 
-The **System.WorkflowUserTask** entity is used in the inbox and task pages and has two similar XPath constraints for User and Administrator roles. To view these constraints, open the **System** module > domain model > **System.WorkflowUserTask** entity properties > **Access rules** tab > **XPath constraint** tab):
+The **System.WorkflowUserTask** entity is used in the inbox and task pages and has two similar XPath constraints for User and Administrator roles. To view these constraints, open the **System** module > domain model > **System.WorkflowUserTask** entity properties > **Access rules** tab > **XPath constraint** tab:
 
 {{< figure src="/attachments/refguide/modeling/application-logic/workflows/workflow-security/system-workflow-user-task.png" alt="XPath for the Workflow User Task Entity in the System Module"  width="650">}}
 
@@ -59,6 +59,6 @@ If the user does not see the user task, check the following:
 
 2. Make sure that the user role has the page access for the page configured for the user task. Open the page > page properties > **Visible for** property to check that.
 
-3. Make sure that the XPath specified for the **User assignment** property does not restrict the user role in viewing the task. Open workflow > user task properties > **Assign task using** property to check it.
+3. Make sure that the XPath specified for the **Target users using** property does not restrict the user role in viewing the task. Open workflow > user task properties > **Target users using** property to check it.
 
-4. Conditions specified in the XPath constraint of the **System.WorkflowUserTask** entity are met. For more information, see the [Configuring User Assignment](#user-assignment) section above.
+4. Conditions specified in the XPath constraint of the **System.WorkflowUserTask** entity are met. For more information, see the [Configuring Targeted Users](#target-users) section above.

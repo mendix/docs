@@ -58,7 +58,7 @@ Specifies the expression used to assign the user task. This option is displayed 
 
 Specifies the microflow used to assign the user task. This option is displayed only when the [Target users using](#target-users) is set to **Microflow**.   
 
-#### 2.2.5 Auto-Assign When Targeting Results In One User {#auto-assign}
+#### 2.2.4 Auto-Assign When Targeting Results In One User {#auto-assign}
 
 Enables automatically assigning a user task when a single user is targeted. This option is displayed only when the [Target users using](#target-users) is set to **XPath** or **Microflow**. 
 

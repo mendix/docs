@@ -64,7 +64,7 @@ The tables below list all the built-in functions of ATS. There is one table per 
 | Assert Active Tab Caption | TabContainer | Asserts a certain value for the caption of an active tab page. |
 | Assert BooleanSlider Value | BooleanSlider | Deprecated in favor of **Assert Value**.<br /> Asserts that the BooleanSlider is set to the given value. |
 | Assert BootstrapRTE Value | BootstrapRTE | Deprecated in favor of **Assert Value**.<br /> Asserts that the BootstrapRTE value is equal to the given value. |
-| Assert Checkbox Set Selector Value | Checkbox Set Selector | Finds the check-box-by-entity attribute and asserts that the checkbox is set to the given value. |
+| Assert Checkbox Set Selector Value | Checkbox Set Selector | Finds the checkbox-by-entity attribute and asserts that the checkbox is set to the given value. |
 | Assert Checkbox Value | CheckBox | Asserts the value of a checkbox. |
 | Assert CKEditor Value | CKEditor | Deprecated in favor of **Assert Value**.<br /> Compares the CKEditor value with the given value. |
 | Assert Grid Selector Value | Grid Selector | Asserts the value of checkbox/radio button for a given column and row captions in a grid selector. |
@@ -111,7 +111,7 @@ The tables below list all the built-in functions of ATS. There is one table per 
 | Set ListView Search | ListView | Sets the ListView search text. |
 | Sort DataGrid | DataGrid | Sorts a data grid by the given column. |
 | Toggle BooleanSlider Value | BooleanSlider | Toggles the value of the Booleanslider. |
-| Toggle Checkbox Set Selector | Checkbox Set Selector | Finds a check-box by a given entity attribute and inverses the value. |
+| Toggle Checkbox Set Selector | Checkbox Set Selector | Finds a checkbox by a given entity attribute and inverses the value. |
 | Toggle Checkbox Set Selector (all) | Checkbox Set Selector | Inverses the **Select all** checkbox. |
 | Toggle Checkbox Value | Checkbox | Clicks a checkbox to toggle its value. |
 | Toggle Grid Selector Checkbox Value | Grid Selector | Inverses the checkbox found by a given column and row caption. |

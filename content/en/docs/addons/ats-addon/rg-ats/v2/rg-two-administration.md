@@ -57,7 +57,7 @@ A tenant administrator can change the full name of an account and the password. 
 When editing accounts, you can set accounts to inactive or block them, which will deactivate the account. 
 
 {{% alert color="info" %}}
-When a user attempts to log in with an incorrect password a certain number of times in a certain amount of time, according to Mendix regulations, that account will be marked as blocked by the system. As a tenant administrator, you can unblock accounts by toggling the **Blocked** check box.
+When a user attempts to log in with an incorrect password a certain number of times in a certain amount of time, according to Mendix regulations, that account will be marked as blocked by the system. As a tenant administrator, you can unblock accounts by toggling the **Blocked** checkbox.
 {{% /alert %}}
 
 ## 5 Managing Apps

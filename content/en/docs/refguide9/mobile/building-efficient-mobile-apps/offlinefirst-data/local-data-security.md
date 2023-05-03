@@ -74,7 +74,7 @@ Local database encryption works in Native Template v6.3.0 and higher. If this se
 
 ### 4.2 Enabling Database Encryption for New Apps
 
-Suppose you are working on a new Mendix app that you have not released to your users before. In that case, you can check the check box shown above and use the latest version of the native template to build and release your app.
+Suppose you are working on a new Mendix app that you have not released to your users before. In that case, you can check the checkbox shown above and use the latest version of the native template to build and release your app.
 
 ### 4.3 Enabling Database Encryption for Existing Apps
 
@@ -132,7 +132,7 @@ To locate the database file on iOS, do the following:
 
 ## 5 Encrypting User Files {#encrypting-user-files}
 
-Studio Pro 9.22 and above allows you to encrypt the files and images stored in native apps. Enable file encryption by selecting the check box in the **Native mobile** navigation profile tab:
+Studio Pro 9.22 and above allows you to encrypt the files and images stored in native apps. Enable file encryption by selecting the checkbox in the **Native mobile** navigation profile tab:
 
 {{< figure src="/attachments/refguide9/mobile/offline-first/enable-native-file-encryption.png" alt="Encrypt native file encryption checkbox placed at the bottom of the native mobile navigation profile screen" width="450"  >}}
 

@@ -86,7 +86,7 @@ Using XCode can be easier than the Cordova CLI due to XCode's friendly visual in
 
     {{< figure src="/attachments/howto8/mobile/hybrid-mobile/build-hybrid-apps/build-hybrid-locally/setup-signing-wrong.png" alt="Signing screen with errors"   width="400"  >}}
 
-1. Both **Debug** and **Release** might have been configured for **Automatically manage signing**. Clear both check boxes to switch to manual signing. The screen should change to the following:
+1. Both **Debug** and **Release** might have been configured for **Automatically manage signing**. Clear both checkboxes to switch to manual signing. The screen should change to the following:
 
     {{< figure src="/attachments/howto8/mobile/hybrid-mobile/build-hybrid-apps/build-hybrid-locally/setup-signing-correct.png" alt="Signing screen correctly configured"   width="400"  >}}
 

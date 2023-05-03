@@ -5,7 +5,7 @@ url: /addons/ats-addon/rg-one-find-checkbox-set-selector-all/
 
 ## 1 Description
 
-Finds the select all check box. 
+Finds the select all checkbox. 
 
 ## 2 Supported Widgets
 
@@ -13,7 +13,7 @@ Finds the select all check box.
 
 ## 3 Usage
 
-Pass the name of the widget you want to get the select all check box from.
+Pass the name of the widget you want to get the select all checkbox from.
 
 ## 4 Input Parameters
 
@@ -25,4 +25,4 @@ Widget Name | String | Yes | The name of the widget.
 
 Name | Datatype | Description
 ---- | --------- | ---------------
-Widget | WebElement | The found check box.
+Widget | WebElement | The found checkbox.

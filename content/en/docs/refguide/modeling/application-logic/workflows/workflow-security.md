@@ -13,7 +13,7 @@ When configuring security for workflows, you need to set up the following:
 
 * [Entity access](#entity-access)
 * [Page access](#page-access)
-* [User assignment](#user-assignment)
+* [Targeted users](#target-users)
 
 A combination of entity access, page access, and the User Assignment property help you make sure that targeted users will be able to view user tasks and their data.
 
@@ -31,7 +31,7 @@ The combination of entity access and page access makes sure that only dedicated 
 
 For more information on the page access, see the [Page Access](/refguide/module-security/#page-access) section in *Module Security*.
 
-## 4 Configuring User Assignment {#user-assignment}
+## 4 Configuring Targeted Users {#target-users}
 
 The **System.WorkflowUserTask** entity is used in the inbox and task pages and has two similar XPath constraints for User and Administrator roles. To view these constraints, open the **System** module > domain model > **System.WorkflowUserTask** entity properties > **Access rules** tab > **XPath constraint** tab):
 
@@ -49,7 +49,7 @@ This means that the currently logged in user can see WorkflowUserTask data only 
 
 In the user task properties, you specify what user is targeted for the task (i.e. what user will see the task in the inbox) by writing an XPath expression or a microflow. You can set filters there and specify that only a certain user role can receive a task in their inbox, for example, only users from an IT department. However, the conditions for the **System.WorkflowUserTask** entity mentioned above should be met for the user to see the task. 
 
-For more information on user assignment, see the [User Assignment](/refguide/user-task/#user-assignment) section in *User Task*.
+For more information on user assignment, see the [Targeted Users Section](/refguide/user-task/#users) section in *User Task*.
 
 ## 5 Why the User Does Not See the User Task
 

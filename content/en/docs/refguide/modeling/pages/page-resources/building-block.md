@@ -42,3 +42,6 @@ The category is used to group building blocks inside the **Toolbox**.
 
 The category weight determines the order of categories inside the **Toolbox** (in ascending order). If building blocks with the same category have different category weights, the lowest is used to determine the position.
 
+### 4.5 Documentation URL
+
+The documentation URL can be used to link to a documentation page for the building block. These links will appear in the **Building Blocks** tab of Studio's **Toolbox**. {{% todo %}}[Update to SP?]{{% /todo %}}

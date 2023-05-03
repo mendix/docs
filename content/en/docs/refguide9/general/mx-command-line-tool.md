@@ -258,7 +258,7 @@ If there are conflicts during the merge, you have to resolve those by opening th
 
 ### 3.6 mx show-app-version Command [version 9.24.2+]
 
-The mx show-app-version command allows you to see the [publisher-side](/appstore/creating-content/sol-solutions-guide) version of your solution (meaning, the version of the solution that you develop) and the [consumer-side](/appstore/creating-content/sol-solutions-impl) version of the solution package that your app is based on (meaning, the version of the solution package when you consumed the solution).
+The mx show-app-version command allows you to see the [publisher-side](/appstore/creating-content/sol-solutions-guide/) version of your solution (meaning, the version of the solution that you develop) and the [consumer-side](/appstore/creating-content/sol-solutions-impl/) version of the solution package that your app is based on (meaning, the version of the solution package when you consumed the solution).
 
 #### 3.6.1 Usage
 
@@ -323,7 +323,7 @@ In case of errors the exit code consists of 3 digits XYZ:
 
 ### 3.7 mx set-app-version Command [version 9.24.2+]
 
-The mx set-app-version command allows you to set the version of your [solution when building it](/appstore/creating-content/sol-solutions-guide).
+The mx set-app-version command allows you to set the version of your [solution when building it](/appstore/creating-content/sol-solutions-guide/).
 
 #### 3.7.1 Usage
 

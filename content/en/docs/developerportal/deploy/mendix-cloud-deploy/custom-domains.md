@@ -152,7 +152,7 @@ To upload the custom domain certificate, follow these steps:
 
 2. Click **Upload Certificate, Chain and Key**.
 
-    {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/custom-domains/upload-certificate.png" >}}
+    {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/custom-domains/newcustomdomain.png" >}}
 
 3. Type a **Description** for the certificate.
 

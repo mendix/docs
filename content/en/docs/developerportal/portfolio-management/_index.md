@@ -74,7 +74,7 @@ On the upper-right corner, you can use the **Filters** to filter projects. Using
 
 ### 3.1 Creating a New Project {#create-new-project}
 
-{{% alert type="info" %}}Both Portfolio Managers and Contributors can create new projects. Only Viewers cannot create a project. For more information on roles and permissions, see [Access Management](#access-management).{{% /alert %}}
+{{% alert type="info" %}}Both Portfolio Managers and Contributors can create new projects. Only Viewers cannot do this action. For more information on roles and permissions, see [Access Management](#access-management).{{% /alert %}}
 
 To create a new project and add project details to it, do as follows:
 
@@ -93,7 +93,7 @@ To create a new project, follow these steps:
 1. Go to the **Projects Overview** page.
 2. Click **Create New Project**.
 3. Enter the **Project Name** and the **Stage** in which the project is. 
-4. Click **Create Project**. The project is created and appears in the **Projects Overview** page. The **Edit Project** side pane opens on the right side of the page where you can add the details of the new project.
+4. Click **Create Project**. The project is created and appears on the **Projects Overview** page. The **Edit Project** side pane opens on the right side of the page where you can add the details of the new project.
 
 Now you can proceed to [add general information](#add-general-information).
 
@@ -178,8 +178,9 @@ Now you can proceed to [add estimated value](#add-estimated-value).
 In the **Edit Project** side pane, click **Estimated Value** to show all the fields in this section. These fields can solidify your business case and drive internal adoption, and help you map the realized value upon completion. Add information in the following fields in this section:
 
 * **Type of Value** – Select the type of the value that is created by the project.
-    
+  
     {{% alert color="info" %}}A Portfolio Manager can customize the options for **Type of Value** on the [Portfolio Settings](#portfolio-settings) page.{{% /alert %}}
+    
 * **Frequency** – Select whether the value is **Once-off** or **Recurring**.
 * **Value** – Enter the amount of the value in numbers. Use a comma every third digit from the right (for example, *1,000,000*)
 * **Additional Information** – Enter anything that can help clarify how estimated value may impact the overall costs of the project.
@@ -224,6 +225,7 @@ Each project card shows the following information:
 * ② Ellipsis icon (**...**) – Clicking this opens a pop-up menu that enables you to [edit](#edit-delete-project), [archive](#archive-project), or [delete](#edit-delete-project) the project.
   
     {{% alert type="info" %}}Both Portfolio Managers and Contributors can edit, archive, or delete a project. Only Viewers cannot do these actions. For more information on roles and permissions, see [Access Management](#access-management).{{% /alert %}}
+    
 * ③ Tags for the project – these tags are used to classify the project (tags can be used, for example, to indicate the types of projects)
 * ④ Department – the department to which the project belongs
 * ⑤ Calendar icon – hovering over the icon shows the following defined dates of the project lifecycle:
@@ -289,6 +291,7 @@ The list contains the following information:
 * **Stage** – This shows which stage the project is currently in.
   
     {{% alert type="info" %}}A Portfolio Manager can set up custom stages for projects on the [Portfolio Settings](#portfolio-settings) page.{{% /alert %}}
+    
 * **Reach** – This is the estimated number of relevant users that the project may affect within a time period. You must enter an integer in this field.
 * **Impact** – This is the estimated amount of impact that the project may have on individual users. You can select **Massive**, **High**, **Medium**, **Low**, or **Minimal**.
 * **Confidence** – This indicates how confident you are about your Impact and Reach estimates. You can select **High**, **Medium**, or **Low**.
@@ -374,7 +377,7 @@ The list contains the following information:
 ### 4.1 Restoring or Deleting an Archived Project {#restore-delete-archived-project}
 
 {{% alert type="info" %}}
-Both Portfolio Managers and Contributors can restore or delete an archived project. Only Viewers cannot do this action. For more information on roles and permissions, see [Access Management](#access-management).
+Both Portfolio Managers and Contributors can restore or delete an archived project. Only Viewers cannot do these actions. For more information on roles and permissions, see [Access Management](#access-management).
 {{% /alert %}}
 
 To restore or delete an archived project, go to the **Archived Projects** page, click the ellipsis icon (**...**) for that project, and then select **Restore** or **Delete**. After you restore an archived project, it goes back to the [Projects Overview](#projects-overview) page.
@@ -417,19 +420,14 @@ The table below shows the permissions of Portfolio Managers, Contributors and Vi
 {{% alert color="info" %}}Only [Portfolio Managers](#access-management) can add new users.{{% /alert %}}
 
 1. Go to **Access Management**.
-
 2. On the upper-right corner, click **Add New Users**.
-
 3. In the dialog box, enter the **Email Address** of the user who you want to invite. They can be someone within your company or outside your company. For users outside your company, their names and profile pictures are not displayed.
+4.  Select an **Access Role** for the user – **Portfolio Manager**, **Contributor**, or **Viewer**. This determines the user's access level to all the projects in this portfolio.
 
-4. Select an **Access Role** for the user – **Portfolio Manager**, **Contributor**, or **Viewer**. This determines the user's access level to all the projects in this portfolio.
-
-   {{% alert color="info" %}}Each portfolio can have at maximum four Portfolio Managers.{{% /alert %}}
+    {{% alert color="info" %}}Each portfolio can have at maximum four Portfolio Managers.{{% /alert %}}
 
 5. Click **Add to List**.
-
 6. Repeat steps 2 and 4 until you add all the users.
-
 7. Click **Send Invites**.
 
 The users that you added now appear on the **Access Management** page. 
@@ -466,7 +464,7 @@ On the **Portfolio Settings** page, Portfolio Managers can change the following 
 
     * **Restricted** – A restricted portfolio is discoverable in the **Company Portfolios** section in the [Portfolio Landscape Overview](#portfolio-landscape) page of the Portfolio Management app. People who want to access a private portfolio need an invitation.
 
-        {{% alert color="info" %}}If the [Privacy Requests](/developerportal/control-center/#privacy-requests) setting is enabled in the Control Center, a Mendix Admin needs to approve any change for privacy settings that you make. In that case, they will receive a notification about your change request and can approve or reject your request from the Control Center. You can cancel a pending request by clicking **Cancel Request**.{{% /alert %}}
+        {{% alert color="info" %}}If the [Privacy Requests](/developerportal/control-center/#privacy-requests) setting is switched on in the Control Center, a Mendix Admin needs to approve any change that you make for the privacy settings. In that case, they will receive a notification about your request and can approve or reject your request from the Control Center. You can cancel a pending request by clicking **Cancel Request**.{{% /alert %}}
 
 * **Stages**  – Click the **^** icon or the **v** icon to move a stage upwards or downwards.
 
@@ -492,10 +490,12 @@ To add an option for a setting, click **Add Department**, **Add Country**, **Add
 
 ### 6.2 Deleting a Portfolio
 
-1. On the Portfolio Settings page, click **Delete** at the bottom of the page. The **Delete Portfolio** Dialog box opens.
+1. On the **Portfolio Settings** page, click **Delete** at the bottom of the page. The **Delete Portfolio** Dialog box opens.
 2. Read the warning carefully. Deleting a portfolio means that you permanently delete the portfolio, including all the data in it. This change cannot be reverted.
 3. If you decide to continue, type **DELETE** in the text box.
 4. Click **Delete**. The portfolio is permanently deleted.
+
+{{% alert color="info" %}}A Mendix Admin can also delete a portfolio in the [Portofolios](/developerportal/control-center/#delete-portfolio) section of the Control Center.{{% /alert %}}
 
 ## 7 Read More
 

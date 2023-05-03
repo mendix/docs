@@ -18,31 +18,33 @@ The following are facts about user management in a Mendix app:
 
 This document teaches you how to do the following:
 
-* Retrieve the current user in a microflow through the **Administration** module in Mendix
+* Retrieve the current user in a microflow using the **Administration** module in Mendix
 
 ## 2 Prerequisites
 
 Before you continue, make sure you have completed the following:
 
 * Install the latest version of Studio Pro
-* Read about the [Administration](/appstore/modules/administration/) module in the *Studio Pro Guide*.
-* Understand the basics about [microflows](/refguide/microflows/).
+* Read about the [Administration](/appstore/modules/administration/) module in the *Studio Pro Guide*
+* Understand the basics about [microflows](/refguide/microflows/)
 
 ## 3 Retrieving the Current User
 
-To retrieve the current user through the **Administration** module, do the following:
+To retrieve the current user using the **Administration** module, do the following:
 
 1. Open your microflow editor.
 2. Navigate to the **Toolbox** and search for the **Retrieve** activity.
 3. Drag the **Retrieve** activity into your microflow.
 4. Double-click the **Retrieve** activity to open its properties.
 5. Choose **From database** as the **Source**.
-6. Click **Select** for **Entity** and do the following:
-    * In the **Select Entity** dialog box, go to **Marketplace modules** > **Administration** > **Account**, and select **Account** as the **Entity**.
+6. Click **Select...** for **Entity** and do the following:
+    * In the **Select Entity** dialog box, go to **Marketplace modules** > **Administration** > **Account**, and select **Account** as the **Entity**
 7. Choose **First** as the **Range**.
-8. In the **XPath Constraint** box, type in `[id = $currentUser]`, and click **OK**.
+8. In the **XPath Constraint** box, type in `[id = $currentUser]` and click **OK**.
 
 Now you have the microflow that retrieves the current user!
+
+{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/microflows/retrieving-current-user/retrieving-current-user.png" width="600px" >}}
 
 ## 4 Read More
 

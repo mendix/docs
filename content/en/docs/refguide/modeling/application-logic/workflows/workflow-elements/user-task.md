@@ -76,13 +76,7 @@ The **Due date** section properties are described in the table below:
 
 ### 2.4 Events Section {#events}
 
-**Events** section allows you to 
-
-| Option         | Description                                                  |
-| -------------- | ------------------------------------------------------------ |
-| On created     |                                                              |
-| Do nothing     | Nothing is executed immediately after the user task instance in created. |
-| Call microflow | Allows you to select a microflow that is executed immediately after the user task instance in created. You can use this setting for a microflow that will send an email notification about the user task to the assigned users. |
+**On Created** event allows you to select a microflow that is executed immediately after users have been determined for a newly created task instance. You can use this setting for a microflow that will send an email notification about the user task to the assigned users.
 
 ### 2.5 Outcomes Section {#outcomes}
 

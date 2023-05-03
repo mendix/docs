@@ -27,7 +27,7 @@ Only a user with the Scrum Master role can migrate an app. For more information,
 
 {% alert color="warning" %}}
 
-At this moment we are limited in our ability to migration large SVN repositories. If the full SVN repository, including all history and branches exceeds approximately 80GB, it will likely fail. We are working on solutions to both notify when this is the case, and extend our migration capabilities to work with these repository types.
+At this moment we are limited in our ability to migrate large SVN repositories. If the full SVN repository including all history and branches exceeds approximately 80GB, migration will likely fail. We are working on solutions to both notify you when this issue applies to you and to extend our migration capabilities for large repositories.
 
 {{% /alert %}}
 

@@ -42,11 +42,11 @@ User task properties consist of the following sections:
 
 Possible options of this property are described in the table below:
 
-| Option        | Description                                                  |
-| ------------- | ------------------------------------------------------------ |
-| XPath         | Allows you to filter users who should be assigned the user task. For example, you can assign a certain task only to users with the Manager user role. You can use attributes of the **User Entity** set in [App Settings](/refguide/app-settings/#workflows). |
+| Option        | Description                                                                                                                                                                                                                                                                                                                                                               |
+| ------------- |---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| XPath         | Allows you to filter users who should be assigned the user task. For example, you can assign a certain task only to users with the Manager user role. You can use attributes of the **User Entity** set in [App Settings](/refguide/app-settings/#workflows).                                                                                                             |
 | Microflow     | Allows you to assign the user task to certain users. Using microflow you can check, for example, which users have the right to approve user tasks and are currently not on vacation and assign the task only to users who passed the check.<br />The return type of the microflow should be the **User Entity** set in [App Settings](/refguide/app-settings/#workflows). |
-| No assignment |                                                              |
+| No assignment | Allows you to not assign the user task to certain users immediately. This can be useful when you, for example, want the user task to be created but have an administrator target it to certain users at a later point in time.                                                                                                                                            |
 
 In case **Target users using** (an XPath or a microflow) results in an empty list of users (0 users), the workflow fails. For more information on how to handle this kind of issues, see the [Operation](/refguide/change-workflow-state/#operation) section in *Change Workflow State*.
 
@@ -64,27 +64,24 @@ Enables automatically assigning a user task when a single user is targeted. This
 
 ### 2.3 Due Date Section {#due-date}
 
-{{% todo %}}[Needs update]{{% /todo %}}
+**Due Date** is stored in the System module on the **UserTask** entity as an attribute and its data can be dynamically displayed in the running app. For example, you can use it to set a deadline for the user task and display it in your app. However, this is not an automatic reminder but rather a deadline you reference when keeping track of the user task. If you are using the **Workflow Commons** module, **Due Date** is used in page templates and preconfigured dashboards.
 
-**Due by** is stored in the System module on the **UserTask** entity as an attribute and its data can be dynamically displayed in the running app. For example, you can use it to set a deadline for the user task and display it in your app. However, this is not an automatic reminder but rather a deadline you reference when keeping track of the user task. If you are using the **Workflow Commons** module, **Due by** is used in page templates and preconfigured dashboards. 
+The **Due Date** section properties are described in the table below:
 
-| Option      | Description |
-| ----------- | ----------- |
-| No due date |             |
-| Due date    |             |
-| Expression  |             |
+| Property   | Description                                                  |
+| ---------- | ------------------------------------------------------------ |
+| None       | No due date is set.                                          |
+| Duration   | You can set the deadline for the user task with the **Due In** option, which indicates the number of hours, days, or weeks the task is due in. Possible values of the property are the following ones:<br /><ul><li>Hour(s)</li><li>Day(s)</li><li>Week(s)</li> </ul> |
+| Expression | You can set a due date for the user task writing an expression. For example, to set a due date to tomorrow, you can use `addDays([%CurrentDateTime%], 1)`. |
 
 ### 2.4 Events Section {#events}
 
-{{% todo %}}[Needs update]{{% /todo %}}
-
 **Events** section allows you to
 
-| Option         | Description                                                  |
-| -------------- | ------------------------------------------------------------ |
-| On created     | Allows you to select a microflow that is executed immediately after users have been determined for a newly created task instance. You can use this setting for a microflow that will send an email notification about the user task to the assigned users. |
-| Do nothing     |                                                              |
-| Call microflow |                                                              |
+| Option         | Description                                                                                                                                                                                                                    |
+|----------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Call microflow | Allows you to select a microflow that is executed immediately after the user task instance in created. You can use this setting for a microflow that will send an email notification about the user task to the assigned users. |
+| Do nothing     | Nothing is executed immediately after the user task instance in created.                                                                                                                                                       |                                                            |
 
 ### 2.5 Outcomes Section {#outcomes}
 
@@ -100,7 +97,7 @@ If you generate the page using the templates in the **Workflows Commons** module
 
 #### 2.7.1 Task Name
 
-**Task name** is stored in the System module on the **UserTask** entity as an attribute and its data can be dynamically displayed in the running app. If you are using the **Workflow Commons** module, the **Task name** is used in page templates and on preconfigured pages to identify the task. 
+**Task Name** is stored in the System module on the **UserTask** entity as an attribute and its data can be dynamically displayed in the running app. If you are using the **Workflow Commons** module, the **Task name** is used in page templates and on preconfigured pages to identify the task. 
 
 For more information on using parameters, see the [Parameters](#parameters) section below.
 

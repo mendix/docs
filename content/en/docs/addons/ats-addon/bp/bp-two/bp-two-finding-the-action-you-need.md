@@ -58,9 +58,9 @@ The solution in this situation is to use the following search term: "Find Datagr
 
 #### 2.2.2 Example 2
 
-In this example, you want to find the check box in a simple check box set selector widget. You cannot use the Find/Assert Widget action here, because the check box does not have its own `mx-name`. It is part of the simple check box set selector widget.
+In this example, you want to find the checkbox in a simple checkbox set selector widget. You cannot use the Find/Assert Widget action here, because the checkbox does not have its own `mx-name`. It is part of the simple checkbox set selector widget.
 
-The solution in this situation is to use the following search term: "Find Simple Checkbox Set Selector". ATS checks all the actions and returns those that match these words. There is an action called [Find Simple Checkbox Set Selector](/addons/ats-addon/rg-one-find-simple-checkbox-set-selector/), which finds the check box based on the `widget name` of the entire widget and the value displayed by the check box.
+The solution in this situation is to use the following search term: "Find Simple Checkbox Set Selector". ATS checks all the actions and returns those that match these words. There is an action called [Find Simple Checkbox Set Selector](/addons/ats-addon/rg-one-find-simple-checkbox-set-selector/), which finds the checkbox based on the `widget name` of the entire widget and the value displayed by the checkbox.
 
 {{< figure src="/attachments/addons/ats-addon/bp/bp-two/bp-two-finding-the-action-you-need/find-simple-checkbox-set-selector-example.png" >}}
 
@@ -146,7 +146,7 @@ If you cannot click a widget because it has no unique name or because it is not 
 
 ## 4 Setting an Input Widget
 
-In ATS, there are several actions for setting an input widget, from a simple action that covers most situations to check boxes inside tables. The first part of this section explains the generic action for setting an input widget, and the second part explains the actions that set a more specific input widget. The last part of the section provides a summary of the first two parts. The magic word while searching for an action that can handle an input widget is "Set."
+In ATS, there are several actions for setting an input widget, from a simple action that covers most situations to checkboxes inside tables. The first part of this section explains the generic action for setting an input widget, and the second part explains the actions that set a more specific input widget. The last part of the section provides a summary of the first two parts. The magic word while searching for an action that can handle an input widget is "Set."
 
 ### 4.1 Generic Action
 
@@ -170,9 +170,9 @@ ATS also has a few specific actions for setting an input widget. To find these, 
 
 #### 4.2.1 Example 1
 
-In this example, you want to set the value of a check box widget, but you want to set it to a specific state. You cannot use the Set Value action because it does not work.
+In this example, you want to set the value of a checkbox widget, but you want to set it to a specific state. You cannot use the Set Value action because it does not work.
 
-The solution in this situation is to use the following search term: "Set Checkbox". ATS checks all the actions and returns those that match these words. There is an action called [Set Checkbox Value](/addons/ats-addon/rg-one-set-checkbox-value/), which uses the `mx-name` of the widget and the Boolean value you set to check or clear the check box.
+The solution in this situation is to use the following search term: "Set Checkbox". ATS checks all the actions and returns those that match these words. There is an action called [Set Checkbox Value](/addons/ats-addon/rg-one-set-checkbox-value/), which uses the `mx-name` of the widget and the Boolean value you set to check or clear the checkbox.
 
 {{< figure src="/attachments/addons/ats-addon/bp/bp-two/bp-two-finding-the-action-you-need/set-checkbox-value-action-search.png" >}}
 

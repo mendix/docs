@@ -117,7 +117,7 @@ To fix this error you can either place a button within a list view that will pas
 
 ## 5 Input Elements Consistency Errors
 
-The most common errors for [input elements](/studio7/page-editor-widgets-input-elements/) (such as, a text box, a drop-down, a check box, etcetera) , their causes, and ways to fix them are described in the table below. 
+The most common errors for [input elements](/studio7/page-editor-widgets-input-elements/) (such as, a text box, a drop-down, a checkbox, etcetera) , their causes, and ways to fix them are described in the table below. 
 
 | Error Code | Text in the Checks Panel                                     | Cause of an Error                                            | Way to Fix                                                   |
 | ---------- | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |

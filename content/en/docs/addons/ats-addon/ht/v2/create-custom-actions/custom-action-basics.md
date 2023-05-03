@@ -55,7 +55,7 @@ To use the **Extract Action** button, follow these steps:
 
 1. Open your app in ATS and go to **Test Cases**.
 2. Select a test case or action and open it.
-3. Select the test steps you want to combine in a custom action by clicking the check box in front of the step.
+3. Select the test steps you want to combine in a custom action by clicking the checkbox in front of the step.
 4. Click **Extract Action**:
 
     {{< figure src="/attachments/addons/ats-addon/ht/v2/create-custom-actions/custom-action-basics/test-case-extract-action.png" >}}

@@ -5,7 +5,7 @@ url: /addons/ats-addon/rg-one-get-checkbox-set-selector-value-all/
 
 ## 1 Description
 
-Returns the "select all" check box value.
+Returns the "select all" checkbox value.
 
 ## 2 Supported Widgets
 
@@ -13,7 +13,7 @@ Returns the "select all" check box value.
 
 ## 3 Usage
 
-Pass the name of the widget you want to get the select all check box value from.
+Pass the name of the widget you want to get the select all checkbox value from.
 
 ## 4 Input Parameters
 
@@ -25,4 +25,4 @@ Widget Name | String | Yes | The name of the widget.
 
 Name | Datatype | Description
 ---- | --------- | ---------------
-Checked | Boolean | The current value of the check box.
+Checked | Boolean | The current value of the checkbox.

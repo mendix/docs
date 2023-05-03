@@ -50,7 +50,7 @@ The **General** section properties of are described in the table below:
 | General Section Property           | Description                                                  |
 | ---------------------------------- | ------------------------------------------------------------ |
 | Form Orientation                   | Determines the position of the [input element labels](/studio8/page-editor-widgets-input-elements/#show-label) inside the data view. You can choose the following orientation: <ul><li>**Horizontal** – the labels will be placed next to the input elements</li><li>**Vertical** – the labels will be placed above the input widgets</li></ul> Note that a data view with a vertical orientation cannot be placed inside a data view with a horizontal orientation. In that case, the form will be rendered horizontally. |
-| Read-Only *(disabled by default)*  | When enabled, all [input elements](/studio8/page-editor-widgets-input-elements/) (for example, a text area, a check box) in the data view will be in read-only mode. |
+| Read-Only *(disabled by default)*  | When enabled, all [input elements](/studio8/page-editor-widgets-input-elements/) (for example, a text area, a checkbox) in the data view will be in read-only mode. |
 | Show Footer *(enabled by default)* | A footer is an area at the bottom of the document, usually containing information common for all pages, such as copyrights. |
 
 ### 2.3 Conditional Visibility {#visibility-data-view}
@@ -98,7 +98,7 @@ In the **General** section, you can select the number of rows to be displayed on
 
     {{< figure src="/attachments/studio8/page-editor/page-editor-widgets/page-editor-data-view-list-view/load-more-list-view.png"   width="400"  >}}
 
-* **Read-Only** (enabled by default) – when enabled, all [input elements](/studio8/page-editor-widgets-input-elements/) (for example, a text area, a check box) in the list view will be in read-only mode
+* **Read-Only** (enabled by default) – when enabled, all [input elements](/studio8/page-editor-widgets-input-elements/) (for example, a text area, a checkbox) in the list view will be in read-only mode
 
 ### 3.4 Conditional Visibility Section {#visibility-list-view}
 

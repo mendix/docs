@@ -3,7 +3,7 @@ title: "List View Controls"
 url: /appstore/widgets/list-view-controls/
 category: "Widgets"
 description: "Describes the configuration and usage of the List View Controls widget, which is available in the Mendix Marketplace."
-tags: ["marketplace", "marketplace component", "widget", "list view control", "check box filter", "platform support", "list"]
+tags: ["marketplace", "marketplace component", "widget", "list view control", "checkbox filter", "platform support", "list"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
@@ -39,7 +39,7 @@ This widget enables filtering a list view at runtime with various constraints.
 * Filter items by attribute
 * Filter items by XPath
 * Configure filter actions when the widget is checked or unchecked
-* Set a checked check box as default
+* Set a checked checkbox as default
 * Support for multiple filters on the same list view
 
 ### 2.2 Configuration

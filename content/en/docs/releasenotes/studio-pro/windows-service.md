@@ -40,7 +40,7 @@ To download the Windows Service, go to the [Get Studio Pro](https://marketplace.
 **Release date: February 8th, 2021**
 
 * <a id="46ki"></a>We now find a correct AdoptOpenJDK version for [Studio Pro 8](/releasenotes/studio-pro/8.0/) and above if that is not configured yet.
-* We changed the `Update-MxApp` cmdlet so that it no longer applies file access rights. Normally, you only need to do this once, so the Mendix Service Console will do this when you add a new app. If you still want this on an existing app, you can update the app manually in the Service Console and use the check box on the **Update App** form to apply the user rights again. For more information, see the release note about this check box for version [4.5.1](#451) below. (Ticket 67514)
+* We changed the `Update-MxApp` cmdlet so that it no longer applies file access rights. Normally, you only need to do this once, so the Mendix Service Console will do this when you add a new app. If you still want this on an existing app, you can update the app manually in the Service Console and use the checkbox on the **Update App** form to apply the user rights again. For more information, see the release note about this checkbox for version [4.5.1](#451) below. (Ticket 67514)
 * We now allow you to not configure the main location of the files when starting the Mendix Service Console for the first time. The application will be closed in that case.
 * We fixed an issue where errors during the download or extraction of the server distribution file were not shown.
 * We fixed an issue with the download of the server distribution file that started to fail recently, because the currently used .NET Framework version does not support the server TLS version by default.
@@ -67,7 +67,7 @@ To download the Windows Service, go to the [Get Studio Pro](https://marketplace.
 **Release date: June 5th, 2018**
 
 * We upgraded the target Microsoft .NET Framework version from 4.5 to 4.5.2.
-* We added a check box to the **Update App** form so that you are able to configure whether you want to apply the correct user rights on some deployment folders. This is enabled by default for new apps, but disabled by default when you upgrade an existing app.
+* We added a checkbox to the **Update App** form so that you are able to configure whether you want to apply the correct user rights on some deployment folders. This is enabled by default for new apps, but disabled by default when you upgrade an existing app.
 * We now show more information during the update process of an app.
 * We updated the DotNetZip library from version 1.10.1 to 1.11.0. This library is used for making backups and extracting deployment archives.
 * We removed our dependency on the Microsoft.VisualBasic.PowerPacks library.
@@ -279,7 +279,7 @@ Now each app has its own license, even if it runs under the same user account as
 * Ticket 11120: Mendix Windows Service did not restart after reboot.
 * Ticket 11159: Now a user friendly message will be shown if the Mendix Service Console cannot be started because service pack 1 of .NET Framework 3.5 is not installed.
 * Ticket 11160: Fixed the user picker dialog for computers without domain.
-* Now the password text boxes will be unreadable by default. Added a Show password check box, as known in the Modeler. Please be aware that the passwords will be saved unencrypted in the settings file, as before.
+* Now the password text boxes will be unreadable by default. Added a Show password checkbox, as known in the Modeler. Please be aware that the passwords will be saved unencrypted in the settings file, as before.
 * Improved error message when the following operating system error does occur: 'The requested operation requires elevation'.
 * Small user interface changes.
 

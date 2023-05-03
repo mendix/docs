@@ -187,7 +187,7 @@ The best way to fix this error is to either change the microflow to accept *Phot
 
 ## 6 Input Element Consistency Errors
 
-The most common errors for [input elements](/studio8/page-editor-widgets-input-elements/) (such as, a text box, a drop-down, a check box, etcetera) , their causes, and ways to fix them are described in the table below. 
+The most common errors for [input elements](/studio8/page-editor-widgets-input-elements/) (such as, a text box, a drop-down, a checkbox, etcetera) , their causes, and ways to fix them are described in the table below. 
 
 | Error Code | Message in the Checks Panel                                  | Cause of the Error                                           | Way to Fix                                                   |
 | ---------- | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |

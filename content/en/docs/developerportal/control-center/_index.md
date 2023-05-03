@@ -338,7 +338,7 @@ As a Mendix Admin, you cannot directly see the content of a portfolio. You need 
 
 ### 15.1 All Portfolios {#all-portfolios}
 
-The **All Portfolios** tab lists all portfolios in your company. Here you can [manage portfolio access](#access-management) and [delete portfolios](#delete-portfolio).
+The **All Portfolios** tab lists all portfolios in your company. Here you can [manage portfolio access](#access-management) and [delete portfolios](#delete-portfolio). In the search box, you can search for a portfolio by its name.
 
 In the list, you can see the following items:
 
@@ -365,6 +365,8 @@ If a portfolio has an alert icon (**⚠**), that means it no longer has a Portfo
 #### 15.1.1 Access Management {#access-management}
 
 After you click the Ellipsis icon (**...**) in the list on the [All Portfolios](#all-portfolios) tab or the [Alerts](#alerts) tab, you can choose **Access Management** to open the **Access Management** page.
+
+In the search box, you can search for a user by the user name, email, company, status or role.
 
 The **Add Users** button on the upper-right corner allows you to invite new users to the portfolio using their email addresses.
 

@@ -18,7 +18,7 @@ The following are facts about user management in a Mendix app:
 
 This document teaches you how to do the following:
 
-* Retrieve the current user in a microflow using the **Administration** module in Mendix
+* Retrieve the current user in a microflow using the **Account** entity from the **Administration** module in Mendix
 
 ## 2 Prerequisites
 
@@ -30,7 +30,7 @@ Before you continue, make sure you have completed the following:
 
 ## 3 Retrieving the Current User
 
-To retrieve the current user using the **Administration** module, do the following:
+To retrieve the current user using the **Account** entity from the **Administration** module, do the following:
 
 1. Open your microflow editor.
 2. Navigate to the **Toolbox** and search for the **Retrieve** activity.
@@ -39,7 +39,7 @@ To retrieve the current user using the **Administration** module, do the followi
 5. Choose **From database** as the **Source**.
 6. Click **Select...** for **Entity** and do the following:
     * In the **Select Entity** dialog box, go to **Marketplace modules** > **Administration** > **Account**, and select **Account** as the **Entity**
-7. Choose **First** as the **Range**.
+7. Choose **First** as the **Range**. This is because when retrieving the current user using `[id = $currentUser]`, only one **Account** object will be returned.
 8. In the **XPath Constraint** box, type in `[id = $currentUser]` and click **OK**.
 
 Now you have the microflow that retrieves the current user!

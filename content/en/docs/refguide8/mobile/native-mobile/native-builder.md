@@ -378,7 +378,7 @@ The Native Template is tightly tied to the version of Studio Pro you are running
 
 **The Build Configuration is Overridden with the Default** — While Native Builder is checking to identify if the branch it is building has been manually configured, it may detect false positives. This could lead to your custom configuration getting overridden. If that happens, consider running the build directly using App Center and skip using the Native Builder for this branch.
 
-**Unknown Error** — If you do not understand an error, you can sign in to App Center and delete the build configuration for the **master** branch. Then run Native Builder again. The tool will recreate the default build configuration for **master** and your branch.
+**Unknown Error** — If you do not understand an error, you can sign in to App Center and delete the build configuration for the **main** branch. Then run Native Builder again. The tool will recreate the default build configuration for **main** and your branch.
 
 ### 6.3 Unknown Errors
 

@@ -88,9 +88,9 @@ In addition to adding new parameters, you can perform the following actions on p
 
 ### 2.3 Due Date Section {#due-date}
 
-**Due Date** is stored in the System module on the **UserTask** entity as an attribute and its data can be dynamically displayed in the running app. For example, you can use it to set a deadline for the user task and display it in your app. However, this is not an automatic reminder but rather a deadline you reference when keeping track of the user task. If you are using the **Workflow Commons** module, **Due Date** is used in page templates and preconfigured dashboards.
+**Due date** is stored in the System module on the **UserTask** entity as an attribute and its data can be dynamically displayed in the running app. For example, you can use it to set a deadline for the user task and display it in your app. However, this is not an automatic reminder but rather a deadline you reference when keeping track of the user task. If you are using the **Workflow Commons** module, **Due Date** is used in page templates and preconfigured dashboards.
 
-The **Due Date** section properties are described in the table below:
+The **Due date** section properties are described in the table below:
 
 | Property   | Description                                                                                                                                                                                                                                                           |
 |------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|

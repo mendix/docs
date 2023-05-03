@@ -1,5 +1,5 @@
 ---
-title: "Checkbox"
+title: "Check Box"
 url: /refguide8/check-box/
 weight: 40
 tags: ["studio pro"]
@@ -12,7 +12,7 @@ tags: ["studio pro"]
 
 ## 1 Introduction
 
-A **checkbox** is used to display and, optionally, allow the end-user to edit the value of an attribute of [data type](/refguide8/data-types/) *Boolean*. It displays a tick if the value is true and remain empty if it is false.
+A **Check box** widget is used to display and, optionally, allow the end-user to edit the value of an attribute of [data type](/refguide8/data-types/) *Boolean*. It displays a tick if the value is true and remain empty if it is false.
 
 {{% alert color="info" %}}In native mobile applications, the checkbox widget is rendered as a toggle.{{% /alert %}}
 
@@ -86,5 +86,5 @@ This differs from the [On change](#on-change) property in that the event will al
 
 ## 3 Read More
 
-* [Data view](/refguide8/data-view/)
+* [Data View](/refguide8/data-view/)
 * [Attributes](/refguide8/attributes/)

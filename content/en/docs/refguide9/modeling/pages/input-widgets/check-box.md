@@ -1,5 +1,5 @@
 ---
-title: "Checkbox"
+title: "Check Box"
 url: /refguide9/check-box/
 weight: 40
 tags: ["studio pro"]
@@ -8,7 +8,7 @@ tags: ["studio pro"]
 
 ## 1 Introduction
 
-A **checkbox** is used to display and, optionally, allow the end-user to edit the value of an attribute of [data type](/refguide9/data-types/) *Boolean*. It displays a tick if the value is true and remain empty if it is false. 
+A **Check box** widget is used to display and, optionally, allow the end-user to edit the value of an attribute of [data type](/refguide9/data-types/) *Boolean*. It displays a tick if the value is true and remain empty if it is false. 
 
 {{% alert color="info" %}}In native mobile applications, the checkbox widget can be rendered as either a switch (default) or a checkbox. If checkbox, it displays a tick if the value is true and remains empty if it is false. If switch, it displays a track with right-positioned thumb button if the value is true and a left-positioned thumb button if it is false.{{% /alert %}}
 
@@ -87,5 +87,5 @@ The render mode property determines whether the widget renders as a switch or a 
 
 ## 3 Read More
 
-* [Data view](/refguide9/data-view/)
+* [Data View](/refguide9/data-view/)
 * [Attributes](/refguide9/attributes/)

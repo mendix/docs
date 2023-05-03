@@ -24,7 +24,7 @@ Business events help you automate the resulting actions when something happens i
 * Making an appointment with a service provider in an appointment app, then needing it to be added to the scheduling app of the service provider
 * Customers placing an order in a webshop, and other apps need to take follow-up actions like scheduling shipment, sending the invoice, and reordering inventory stock
 
-### 1.2 Pre-Requisites
+### 1.2 Prerequisites
 
 To use Mendix Business Events, you will need the following:
 

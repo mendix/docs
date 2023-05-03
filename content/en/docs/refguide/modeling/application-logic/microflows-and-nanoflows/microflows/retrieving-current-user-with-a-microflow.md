@@ -22,7 +22,7 @@ This document teaches you how to do the following:
 
 ## 2 Prerequisites
 
-Before you continue, make sure you have done the following:
+Before you continue, make sure you have completed the following:
 
 * Install the latest version of Studio Pro
 * Read about the [Administration](/appstore/modules/administration/) module in the *Studio Pro Guide*.
@@ -47,3 +47,4 @@ Now you have the microflow that retrieves the current user!
 ## 4 Read More
 
 * [XPath Constraints](/refguide/xpath-constraints/)
+* [XPath Keywords and System Variables](/refguide/xpath-keywords-and-system-variables/)

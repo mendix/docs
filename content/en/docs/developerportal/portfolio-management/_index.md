@@ -41,7 +41,7 @@ On the **Portfolio landscape Overview** page, you can create a new portfolio as 
 
    * **Restricted** – If a portfolio is restricted, it is discoverable in the **Company Portfolios** section in the [Portfolio Landscape Overview](#portfolio-landscape) page of the Portfolio Management app. People who want to access a private portfolio need an invitation.
 
-     {{% alert color="info" %}}If the [Privacy Requests](/developerportal/control-center/#privacy-requests) setting is enabled in the Control Center, a Mendix Admin needs to approve any change for privacy settings that you make. In that case, they will receive a notification about your change request and can approve or reject your request from the Control Center.{{% /alert %}}
+     {{% alert color="info" %}}If the [Privacy Requests](/developerportal/control-center/#privacy-requests) setting is switched on in the Control Center, a Mendix Admin needs to approve the privacy settings that you select. In that case, they will receive a notification about your request and can approve or reject your request from the Control Center.{{% /alert %}}
 
 4. For **Prioritization Model**, select [WSJF Prioritization](/developerportal/portfolio-management/#wsjf) or [RICE Prioritization](/developerportal/portfolio-management/#rice).
 
@@ -53,14 +53,14 @@ The portfolio is created. You are the first Portfolio Manager of this portfolio.
 
 ### 2.2 Opening a Portfolio {#open-portfolio}
 
-In the **Portfolio Landscape Overview** page, when you click a portfolio card in the **My Portfolios** section,  the portfolio opens. On the left menu, you can find the following items:
+In the **Portfolio Landscape Overview** page, when you click a portfolio card in the **My Portfolios** section,  the portfolio opens. Clicking a menu item on the left menu bar opens the corresponding page:
 
 * [Projects Overview](#projects-overview)
 * [Archived Projects](#archived-projects)
 * [Access Management](#access-management)
 * [Portfolio Settings](#portfolio-settings) (only available for Portfolio Managers)
 
-Clicking each item opens the corresponding page. You can find the description of each page in the sections below.
+These pages are described in the sections below.
 
 ## 3 Projects Overview {#projects-overview}
 

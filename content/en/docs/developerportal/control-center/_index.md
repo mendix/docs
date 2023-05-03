@@ -326,7 +326,7 @@ The list has the following columns:
 
 ## 15 Portfolios
 
-The **Portfolios** page offers the governance feature for portfolio management in your company. You can have an overview of all portfolios in your company, manage portfolio access, delete portfolios, reject or approve requests for privacy setting changes. 
+The **Portfolios** page offers the governance feature for [portfolio management](/developerportal/portfolio-management/) in your company. You can have an overview of all portfolios in your company, manage portfolio access, delete portfolios, reject or approve requests for privacy setting changes. 
 
 The **Portfolios** page contains three tabs: [All Portfolios](#all-portfolios), [Alerts](#alerts), and [Privacy Requests](#privacy-requests).
 

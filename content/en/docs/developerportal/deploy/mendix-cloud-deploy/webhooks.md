@@ -120,7 +120,7 @@ You can use Mendix to verify your webhook, using functions available in the [Com
 
 1. Ensure that your app contains the Community Commons module.
 1. Retrieve a list of `System.HttpHeader` objects over the association `$HttpRequest/HttpHeaders` using the HttpRequest from the webhook.
-1. Obtain the `webhook-id`, `webhook-timestamp`, and `webhook-signature` by using a *Find by expression* **List operation** on the list of `System.HttpHeader` objects. You can use an expression like `toLowerCase($currentObject/Key) = toLowerCase("webhook-id")` and extract the `/Value` attribute.
+1. Obtain the `webhook-id`, `webhook-timestamp`, and `webhook-signature` headers by using a *Find by expression* **List operation** on the list of `System.HttpHeader` objects. You can use an expression like `toLowerCase($currentObject/Key) = 'webhook-id'` and extract the `/Value` attribute.
 1. Create a string variable consisting of the `webhook-id`, `webhook-timestamp`, and the `Content` attribute of the `$HttpRequest` separated by points (`.`). For example `$WebhookId + '.'+ $WebhookTimestamp + '.' + $HttpRequest/Content`.
 1. Hash the string variable you just created using the Community Commons action **Generate HMAC SHA256 hash** and the validation secret you set when creating the webhook.
 1. Prefix this hashed string with the prefix from the webhook signature, for example `v1,`.

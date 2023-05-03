@@ -83,6 +83,21 @@ To send your runtime information to Datadog, you need to provide the Datadog API
 9. Return to the **Environments** page for your app and *Deploy* or *Transport* your app into the selected environment.
 
     {{% alert color="warning" %}}Your app must be **redeployed** before it is started as additional dependencies need to be included.<br/><br/>Restarting the app is not sufficient to start sending data to Datadog.{{% /alert %}}
+    
+### 2.3 Install the Mendix integration{#install-integration}
+
+In the Datadog marketplace, there is an integration containing an example dashboard for monitoring your Mendix apps. This dashboard shows what metrics are available for your Mendix app and how you can display them. You can use this dashboard as a starting point for your own dashboard: you can customize it by adding or removing metrics and changing the way they are displayed.
+
+Once you have connected your node to Datadog, you can install the Mendix integration from the Datadog Marketplace by doing the following:
+
+1. Sign in to your Datadog account.
+2. Go to **Integrations > Marketplace**.
+3. Search for *Mendix*. You can also find the integration [here](https://app.datadoghq.eu/marketplace/integration/mendix?search=mendix).
+4. Click **Install Integration** to install the integration.
+5. Go to **Dashboards > Dashboard List** and open the *Mendix Application Overview* dashboard.
+6. Select a Mendix app, environment, and instance on the top left to view data.
+
+If you want to customize the dashboard you should clone it and modify the clone. Alternatively, you can build your own dashboard from scratch.
 
 ## 3 Tagging Metrics for Datadog
 

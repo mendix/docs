@@ -17,7 +17,7 @@ The [List View Controls](https://marketplace.mendix.com/link/component/105694/) 
 
 These are the available list view widgets:
 
-* [Check box filter](#check-box-filter) – filters a list view with various constraints when checked or unchecked
+* [Checkbox filter](#check-box-filter) – filters a list view with various constraints when checked or unchecked
 * [Drop-down filter](#drop-down-filter) – filters a list view with various options that can be selected from a drop-down
 * [Drop-down sort](#drop-down-sort) – adds an interactive sort to your list view.
 * [Header sort](#header-sort) – adds sorting behavior to the headers of a list view.
@@ -30,7 +30,7 @@ If an entity in a list view has an attribute populated by a microflow, it will c
 
 {{% /alert %}}
 
-## 2 Check Box Filter Widget {#check-box-filter}
+## 2 Checkbox Filter Widget {#check-box-filter}
 
 This widget enables filtering a list view at runtime with various constraints.
 

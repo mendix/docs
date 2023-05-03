@@ -419,7 +419,7 @@ The widget’s render hierarchy is as follows for uniform:
 | `selectedItem` | This has all TextStyle properties | Styles the selected item in dropdown menu (with Studio Pro v8.11).|
 | `selectedItemContainer` | This has all ViewStyle properties | Styles the selected item's container in dropdown menu (with Studio Pro v8.11).|
 
-### 6.4 Check Box 
+### 6.4 Checkbox 
 
 A checkbox input widget can be used to display and edit Boolean attributes and is rendered as a switch. This is how a checkbox widget could look in an app:
 

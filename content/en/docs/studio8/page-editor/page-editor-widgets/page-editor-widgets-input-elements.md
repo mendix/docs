@@ -26,7 +26,7 @@ You can find the description of input elements available in Studio in the table 
 | Text Area     | A text area is used to enter, edit, and display a long text that can take several lines, for example, the description of a product. |
 | Date Picker   | A date picker is used to allow end-users select a date in a calendar, for example, when selecting a day for a delivery. |
 | Drop-Down     | A drop-down widget is used to allow end-users pick an option from the preset list of options. For example, users can select a color of a product.<br />You can also use this widget to display and select associations. You need a many-to-one association in the domain model (for more information, see [Associations](/studio8/domain-models-association-properties/)). For example, if a customer has several addresses, the user can select a delivery address from them. In this example, several addresses can be associated with one customer (many-to-one association). |
-| Check Box     | A checkbox widget is used to allow users to mark a value as true or false. For example, users can tick a box to sign up for the newsletter. |
+| Checkbox     | A checkbox widget is used to allow users to mark a value as true or false. For example, users can tick a box to sign up for the newsletter. |
 | Radio Buttons | Radio buttons are used to allow users select the option from a number of preset ones. For example, users can select from several possible locations for picking an order up. |
 
 {{% alert color="info" %}}
@@ -49,10 +49,10 @@ A date picker has a specific [Format](#format) section.
 ### 3.1 Type Option {#type}
 
 {{% alert color="info" %}}
-This option is only available for **Text Box**, **Text Area**, **Radio Buttons**, **Check Box**, and **Drop-Down** widgets.
+This option is only available for **Text Box**, **Text Area**, **Radio Buttons**, **Checkbox**, and **Drop-Down** widgets.
 {{% /alert %}}
 
-The **Type** option allows you to quickly change the type of one input element to a similar one: you can change a **Text Box** to a **Text Area** and vice versa, and change **Radio Buttons** to a **Check Box** or a **Drop-Down** and vice versa:
+The **Type** option allows you to quickly change the type of one input element to a similar one: you can change a **Text Box** to a **Text Area** and vice versa, and change **Radio Buttons** to a **Checkbox** or a **Drop-Down** and vice versa:
 
 {{< figure src="/attachments/studio8/page-editor/page-editor-widgets/page-editor-widgets-input-elements/input-widget-type.jpg" alt="Type Option" >}}
 
@@ -67,7 +67,7 @@ The **Type** option allows you to quickly change the type of one input element t
 | Date Picker        | Date and Time                                                |
 | Drop-Down          | Enumeration, Associations                                    |
 | Reference Selector | Autonumber, Date and Time, Decimal, Enumeration, Integer, Long, String |
-| Check Box          | Boolean                                                      |
+| Checkbox          | Boolean                                                      |
 | Radio Buttons      | Boolean, Enumeration                                         |
 
 ### 3.3 General Section {#input-elements-general}

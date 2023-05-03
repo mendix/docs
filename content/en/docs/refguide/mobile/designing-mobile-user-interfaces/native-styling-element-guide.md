@@ -467,7 +467,7 @@ export const DropDown = {
 
 The default class to style all text areas is named `DropDown`.
 
-### 6.4 Check Box
+### 6.4 Checkbox
 
 A checkbox input widget can be used to display and edit Boolean attributes and is rendered as either a switch or a checkbox. This is how a checkbox widget in switch render mode looks by default:
 

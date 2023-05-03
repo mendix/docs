@@ -1,5 +1,5 @@
 ---
-title: "Check Box"
+title: "Checkbox"
 url: /refguide8/check-box/
 weight: 40
 tags: ["studio pro"]
@@ -28,7 +28,7 @@ An example of checkbox properties is represented in the image below:
 
 {{< figure src="/attachments/refguide8/modeling/pages/input-widgets/check-box/check-box-properties.png"   width="250"  >}}
 
-Check box properties consist of the following sections:
+Checkbox properties consist of the following sections:
 
 * [Common](#common)
 * [Data source](#data-source)

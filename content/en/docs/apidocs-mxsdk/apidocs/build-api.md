@@ -103,7 +103,7 @@ Retrieves a specific deployment package that is available for a specific app tha
 
 ```http
 HTTP Method: GET
-URL: https://deploy.mendix.com/api/1/apps/<AppId>/packages/<PackageId>
+URL: https://deploy.mendix.com/api/1/apps/<AppId>/packages/<PackageId>?url=<Boolean>
 ```
 
 #### 2.2.2 Request
@@ -112,11 +112,12 @@ URL: https://deploy.mendix.com/api/1/apps/<AppId>/packages/<PackageId>
 
 * *AppId* (String) : Subdomain name of an app.
 * *PackageId* (String) : Id of the deployment package.
+* *url* (Boolean) *(default: false)*: Indicates whether the API should return a URL pointing to the location of the package.
 
 ##### 2.2.2.2 Example
 
 ```http
-GET /api/1/apps/calc/packages/b3d14e53-2654-4534-b374-9179a69ef3cf HTTP/1.1
+GET /api/1/apps/calc/packages/b3d14e53-2654-4534-b374-9179a69ef3cf?url=true HTTP/1.1
 Host: deploy.mendix.com
 Accept: */*
 Mendix-Username: richard.ford51@example.com
@@ -141,6 +142,10 @@ An object with the following key-value pairs:
     * Uploading
     * Failed
 * *Size* (Long) : Size of the package in bytes
+* *Url* (object): A json object containing the following:
+
+    * *Location*: The URL pointing to the package file.
+    * *TTL*: How long the URL is valid (in seconds).
 
 ##### 2.2.3.1 Error Codes
 
@@ -153,14 +158,18 @@ An object with the following key-value pairs:
 
 ```json
 {
-     "Name" :  "Main line-2.5.4.63.mda" ,
-     "Status" :  "Succeeded" ,
-     "Description" :  "Add scientific mode" ,
-     "Creator" :  "Richard Ford" ,
-     "CreationDate" :  1404990271835 ,
-     "Version" :  "2.5.4.63" ,
-     "PackageId" :  "b3d14e53-2654-4534-b374-9179a69ef3cf" ,
-     "Size" :  3.0571174621582031
+    "Name" :  "Main line-2.5.4.63.mda" ,
+    "Status" :  "Succeeded" ,
+    "Description" :  "Add scientific mode" ,
+    "Creator" :  "Richard Ford" ,
+    "CreationDate" :  1404990271835 ,
+    "Version" :  "2.5.4.63" ,
+    "PackageId" :  "b3d14e53-2654-4534-b374-9179a69ef3cf" ,
+    "Size" :  3.0571174621582031
+    "Url": {
+        "Location": "https://url/to/download/the/package/file",
+        "TTL": 900
+    }
 }
 ```
 
@@ -199,7 +208,11 @@ Mendix-ApiKey:  26587896-1cef-4483-accf-ad304e2673d6
 | 404 | PACKAGE_NOT_FOUND | Package or build job not found. |
 | 409 | PACKAGE_IN_USE | Package is still in use. |
 
-### 2.4 Download Package
+### 2.4 Download Package{#download-package}
+
+{{% alert color="warning" %}}
+The **Download Package** call of the build API is deprecated. Please use [Retrieve Package](#retrieve-package) with the `url=true` parameter instead.
+{{% /alert %}}
 
 Downloads a specific deployment package that is available for a specific app that the authenticated user has access to as a regular user. This package can be found if you click **Details** on an app in the **Nodes** screen in the Mendix Platform.
 

@@ -74,8 +74,6 @@ public java.util.List<IMendixObject> executeAction() throws Exception
 }
 ```
 
-{{< figure src="/attachments/howto/extensibility/howto-datastorage-api/image009.png" >}}
-
 Now you have a new microflow action in the toolbox that you can use in your microflows.
 
 Here’s an example domain model with two entities: Department and Employee.

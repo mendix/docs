@@ -368,7 +368,7 @@ The format of non-custom claims in the ID-token is as follows:
 The OIDC provider module sets a cookie as a means to persist the session in the user’s browser. If the cookie is not properly set, this may lead to problems. For example, when the OIDC Provider module is used to build an IAM Broker, no session is established and the broker may initiate a new session at the upstream IdP, which results in an ‘infinite loop’ of redirects via the user’s browser.
 To ensure the cookie is properly set, the runtime setting com.mendix.core.SameSiteCookies must have value None. See [Environment Details](https://docs.mendix.com/developerportal/deploy/environments-details/#4222-applying-a-different-samesite-setting) for more information how to set the correct value for SameSite runtime setting. Note that the default value for this setting has changed, see [Release Notes](https://docs.mendix.com/releasenotes/studio-pro/8.11/).
 
-## 7 About Authorization
+## 7 About Authorization{#about-authorization}
 
 When you are building Mendix apps you need to make two architectural decisions in the area of end-user access:
 

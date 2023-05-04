@@ -97,8 +97,8 @@ Before you publish our app, you need to make sure it is protected with a usernam
 1. In **Project explorer**, double-click **Project** > **Security**.
 2. For **Security level**, select **Prototype/demo**.
 3. Click **Edit module security**.
-4. Go to the **Page access** tab and check all the check boxes.
-5. Go to the **Microflow access** tab and check all the check boxes, then click **OK**.
+4. Go to the **Page access** tab and check all the checkboxes.
+5. Go to the **Microflow access** tab and check all the checkboxes, then click **OK**.
 6. Go to the **Administrator** tab.
 7. Type a password, and then click **OK**.
 

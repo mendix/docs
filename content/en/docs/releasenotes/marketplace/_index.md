@@ -13,11 +13,16 @@ These release notes cover changes made to the [Mendix Marketplace](/appstore/).
 
 ## 2023
 
-### May 9th, 2023
+### April 20th, 2023
 
 #### New Features
 
-* We are excited to announce a new feature that allows you to transfer Drafts between people within the same company. With this feature, you can now easily collaborate on [your Mendix drafts](/appstore/general/app-store-overview/#my-drafts) with your colleagues, even if a colleague is not available to work on a draft that they originally made. You can easily transfer ownership of a Draft to yourself as long as you are part of the same company. This allows team members to continue working on the same Draft even if someone is out of the office.
+* You can now filter Marketplace content for **Public** or **Private** components via the **Visibility** filter.
+
+#### Improvements
+
+* The **Compatibility** filter now only allows for major Mendix versions.
+* The **Support** section of the [component details page](/appstore/general/app-store-overview/#details) now includes a link to [Marketplace Content Support](/appstore/general/app-store-content-support/).
 
 ### March 23rd, 2023
 

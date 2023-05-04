@@ -49,7 +49,7 @@ In the user settings, you can configure the home page to be one of the following
 
 These are the settings on the **User settings** dialog box":
 
-* **Guide on login** determines if on login, the tour guide dialog box is opened (the check box at the bottom of that dialog box unchecks this setting)
+* **Guide on login** determines if on login, the tour guide dialog box is opened (the checkbox at the bottom of that dialog box unchecks this setting)
 * **Paging size** determines the chunk size in statistics and performance grids
 * **Statistics period** determines if the statistics by default open with hourly or daily data
 * **Time zone** determines your time zone for the proper representation of date/time information

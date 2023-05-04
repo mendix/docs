@@ -33,7 +33,7 @@ With the type icons on the left side of the item name, you can identify at a gla
 
     {{< figure src="/attachments/addons/ats-addon/rg-ats/v2/rg-two-repository/action-icon.png" >}}
 
-If you want to cut, copy, or delete an item in the repository, you can do so by marking it with the check-box. After that, the actions become available.
+If you want to cut, copy, or delete an item in the repository, you can do so by marking it with the checkbox. After that, the actions become available.
 
 {{< figure src="/attachments/addons/ats-addon/rg-ats/v2/rg-two-repository/repository-actions.png" >}}
 

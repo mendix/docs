@@ -20,7 +20,7 @@ Set the application on which the test will be run.
 
 **Selenium Hub**
 
-Set the Selenium hub on which the test will be executed.
+Set the Selenium hub on which the test will be completed.
 
 **Browser**
 

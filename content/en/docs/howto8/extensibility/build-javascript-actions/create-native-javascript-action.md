@@ -185,7 +185,7 @@ For more information about linking, see the following resources:
 
 * Facebook's React Native [Linking Documentation](https://facebook.github.io/react-native/docs/linking)
 * The Medium post [Demystifying React Native Modules Linking](https://engineering.brigad.co/demystifying-react-native-modules-linking-964399ec731b)
-* The GitHub React Native community post [Autolinking](https://github.com/react-native-community/cli/blob/master/docs/autolinking.md)
+* The GitHub React Native community post [Autolinking](https://github.com/react-native-community/cli/blob/main/docs/autolinking.md)
 
 #### 3.3.3 Using the Modules {#using-modules}
 

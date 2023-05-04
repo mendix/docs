@@ -5,14 +5,12 @@ category: "Modules"
 description: "Describes the configuration and usage of the OIDC Provider module, which is available in the Mendix Marketplace."
 tags: ["marketplace", "marketplace component", "OIDC", "IdP", "identity provider", "platform support", "Provider"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
-# Linked from https://marketplace.mendix.com/link/component/+++++++
+# Linked from https://marketplace.mendix.com/link/component/210202
 ---
 
 ## 1 Introduction
 
-{{% todo %}}Add link to module in Marketplace{{% /todo %}}
-
-The [OIDC Provider](https://example.com) can be used to build a Mendix app that acts as an OpenID provider for other apps, providing a Single Sign-On (SSO) experience for the end-users of those applications. This app could also delegate authentication of end-users to another Identity provider (IdP), causing it to act as an IAM broker.
+The [OIDC Provider](https://marketplace.mendix.com/link/component/210202) can be used to build a Mendix app that acts as an OpenID provider for other apps, providing a Single Sign-On (SSO) experience for the end-users of those applications. This app could also delegate authentication of end-users to another Identity provider (IdP), causing it to act as an IAM broker.
 
 The module supports responsive browser-based applications and has been tested with applications that use the OIDC SSO module. This module can be used in Mendix version 9.22.0 and above.
 

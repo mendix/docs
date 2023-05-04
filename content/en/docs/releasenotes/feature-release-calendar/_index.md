@@ -1,6 +1,6 @@
 ---
 title: "Feature Release Calendar"
-url: /releasenotes/mx-world-2021/
+url: /releasenotes/feature-release-calendar/
 tags: ["mendix world", "announcements", "features", "feature release", "products", "features and products", "calendar"]
 weight: 60
 #notoc: true

@@ -48,4 +48,4 @@ Regular test steps
 
 **Teardown**
 
-Executed after the test run. If the test run fails because of an error these test steps are still completed.
+Completed after the test run. If the test run fails because of an error these test steps are still completed.

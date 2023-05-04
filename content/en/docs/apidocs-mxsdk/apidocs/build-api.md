@@ -165,7 +165,7 @@ An object with the following key-value pairs:
     "CreationDate" :  1404990271835 ,
     "Version" :  "2.5.4.63" ,
     "PackageId" :  "b3d14e53-2654-4534-b374-9179a69ef3cf" ,
-    "Size" :  3.0571174621582031
+    "Size" :  15342295S,
     "Url": {
         "Location": "https://url/to/download/the/package/file",
         "TTL": 900

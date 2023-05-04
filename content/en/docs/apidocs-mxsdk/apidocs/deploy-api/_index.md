@@ -487,7 +487,7 @@ Retrieves the deployed package of a specific environment that is connected to a 
 
 ```bash
 HTTP Method: GET
-URL: https://deploy.mendix.com/api/1/apps/<AppId>/environments/<Mode>/package
+URL: https://deploy.mendix.com/api/1/apps/<AppId>/environments/<Mode>/package?url=<Boolean>
 ```
 
 #### 3.9.2 Request
@@ -496,11 +496,12 @@ URL: https://deploy.mendix.com/api/1/apps/<AppId>/environments/<Mode>/package
 
 * *AppId* (String): Sub-domain name of an app.
 * *Mode* (String): The mode of the environment of the app. An environment with this mode should exist.
+* *url* (Boolean) *(default: false)*: Indicates whether the API should return a URL pointing to the location of the package.
 
 **Example Request**
 
 ```bash
-GET /api/1/apps/calc/environments/Acceptance/package
+GET /api/1/apps/calc/environments/Acceptance/package?url=true
 Host: deploy.mendix.com
 
 Content-Type: application/json
@@ -522,6 +523,10 @@ An object with the following key-value pairs:
 * *Status* (String): Status of the package. A package is ready to use if the status is 'Succeeded'.
     Possible values: Succeeded, Queued, Building, Uploading and Failed.
 * *Size* (Long): Size of the package in bytes.
+* *Url* (object): A json object containing the following:
+
+    * *Location*: The URL pointing to the package file.
+    * *TTL*: How long the URL is valid (in seconds).
 
 **Error Codes**
 
@@ -535,15 +540,19 @@ An object with the following key-value pairs:
 
 ```json
 {
-     "Status" :  "Succeeded",
-     "CreationDate" :  1404990271835,
-     "ExpiryDate": null,
-     "Description" :  "Add scientific mode" ,
-     "Version" :  "2.5.4.63" ,
-     "Size" :  3.0571174621582031,
-     "PackageId" :  "b3d14e53-2654-4534-b374-9179a69ef3cf" ,
-     "Creator" :  "Richard Ford" ,
-     "Name" :  "Main line-2.5.4.63.mda"
+    "Status" :  "Succeeded",
+    "CreationDate" :  1404990271835,
+    "ExpiryDate": null,
+    "Description" :  "Add scientific mode" ,
+    "Version" :  "2.5.4.63" ,
+    "Size" :  15342295,
+    "PackageId" :  "b3d14e53-2654-4534-b374-9179a69ef3cf" ,
+    "Creator" :  "Richard Ford" ,
+    "Name" :  "Main line-2.5.4.63.mda",
+    "Url": {
+        "Location": "https://url/to/download/the/package/file",
+        "TTL": 900
+    }
 }
 ```
 

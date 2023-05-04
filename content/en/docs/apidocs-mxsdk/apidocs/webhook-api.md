@@ -17,11 +17,11 @@ You can use the API to do the following:
 * Get a webhook
 * Create a webhook
 * Update a webhook
-* Delete a web hook
+* Delete a webhook
 
 ## 2 Authentication{#authentication}
 
-Authentication for the Deploy API v3 uses a personal access token (PAT).
+Authentication for the Webhook API uses a personal access token (PAT).
 
 ### 2.1 Generating a PAT
 

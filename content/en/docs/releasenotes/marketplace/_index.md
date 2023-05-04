@@ -13,7 +13,7 @@ These release notes cover changes made to the [Mendix Marketplace](/appstore/).
 
 ## 2023
 
-### May 9th, 2023
+### May 25th, 2023
 
 #### New Features
 

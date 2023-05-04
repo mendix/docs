@@ -13,6 +13,16 @@ These release notes cover changes made to the [Mendix Marketplace](/appstore/).
 
 ## 2023
 
+### April 20th, 2023
+
+#### New Features
+* **Visibility filter**: filter marketplace components on public or private by using the "Visibility" filter.
+* **Portable Version**: use Studio Pro without installing by downloading the portable version from the [Studio Pro download page](https://marketplace.mendix.com/link/studiopro/).
+
+#### Improvements
+* **Compatibility filter**: the "Compatibility" filter now only allows for major Mendix versions.
+* **Support**: the detail page now includes a link to the [Marketplace Content Support page](https://docs.mendix.com/appstore/general/app-store-content-support/).
+
 ### March 23rd, 2023
 
 #### New Features

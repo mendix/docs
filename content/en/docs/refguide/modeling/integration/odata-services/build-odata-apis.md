@@ -113,45 +113,45 @@ Using the returned location header to query the new resource at its endpoint.
 **Use of the Prefer header is also supported**
 Instead of doing the two API calls illustrated above, POST followed by GET, you also have the option to use the Prefer header. If you give this the value of “return=representation”, the resulting resource will be returned automatically, saving you one API call.
 
-![](https://paper-attachments.dropboxusercontent.com/s_A7C365B156C73FE0E73A206FAF1622E045C694DFEDFC4EA12B065B4B4F20286D_1678714748564_image.png)
+![](https://paper-attachments.dropboxusercontent.com/s_A7C365B156C73FE0E73A206FAF1622E045C694DFEDFC4EA12B065B4B4F20286D_1678714748564_image.png) prefer-header
 
 
 **Creating resources with associations**
 If you want to create a new resource associated to another resource, you can refer to the id of the resource in your payload.
 
-![](https://paper-attachments.dropboxusercontent.com/s_A7C365B156C73FE0E73A206FAF1622E045C694DFEDFC4EA12B065B4B4F20286D_1678887622503_image.png)
+![](https://paper-attachments.dropboxusercontent.com/s_A7C365B156C73FE0E73A206FAF1622E045C694DFEDFC4EA12B065B4B4F20286D_1678887622503_image.png) create-resources-associations
 
 ## Modify existing data
 
 Updating of resources is provided using the HTTP PATCH operation. Mendix will automatically handle updating the entity, no need to implement a microflow to handle this. You do have the option to use a microflow if you want to enrich the default behavior, e.g., to add additional validations. Validation rules defined on the entity will be respected automatically, so validation microflows are only needed if you want to do validation more complex than this.
 
-![](https://paper-attachments.dropboxusercontent.com/s_A7C365B156C73FE0E73A206FAF1622E045C694DFEDFC4EA12B065B4B4F20286D_1675872999585_image.png)
+![](https://paper-attachments.dropboxusercontent.com/s_A7C365B156C73FE0E73A206FAF1622E045C694DFEDFC4EA12B065B4B4F20286D_1675872999585_image.png) modify-existing-data-1
 
-![](https://paper-attachments.dropboxusercontent.com/s_A7C365B156C73FE0E73A206FAF1622E045C694DFEDFC4EA12B065B4B4F20286D_1675873026002_image.png)
+![](https://paper-attachments.dropboxusercontent.com/s_A7C365B156C73FE0E73A206FAF1622E045C694DFEDFC4EA12B065B4B4F20286D_1675873026002_image.png) modify-existing-data-2
 
 ## Delete data
 
 Deleting is provided using the DELETE operation.
 
-![](https://paper-attachments.dropboxusercontent.com/s_A7C365B156C73FE0E73A206FAF1622E045C694DFEDFC4EA12B065B4B4F20286D_1675873068955_image.png)
+![](https://paper-attachments.dropboxusercontent.com/s_A7C365B156C73FE0E73A206FAF1622E045C694DFEDFC4EA12B065B4B4F20286D_1675873068955_image.png) - delete-operation
 
 # Automatic use of standard HTTP error codes
 
 OData APIs automatically return the correct HTTP status code, e.g., a 404 if a specified resource cannot be found.
 
 
-![](https://paper-attachments.dropboxusercontent.com/s_A7C365B156C73FE0E73A206FAF1622E045C694DFEDFC4EA12B065B4B4F20286D_1675873193102_image.png)
+![](https://paper-attachments.dropboxusercontent.com/s_A7C365B156C73FE0E73A206FAF1622E045C694DFEDFC4EA12B065B4B4F20286D_1675873193102_image.png) standard-error-codes
 
 ## Validation rules
 
 When changing data with POST, PUT or DELETE, validation rules specified on the underlying entities are applied automatically. A failed validation rule will result in a HTTP status code 422, the error message will be included in the response payload.
 
-![](https://paper-attachments.dropboxusercontent.com/s_A7C365B156C73FE0E73A206FAF1622E045C694DFEDFC4EA12B065B4B4F20286D_1675873397541_image.png)
+![](https://paper-attachments.dropboxusercontent.com/s_A7C365B156C73FE0E73A206FAF1622E045C694DFEDFC4EA12B065B4B4F20286D_1675873397541_image.png) validation-rules
 
 
 The validation rules on customer define that both Firstname and Lastname are mandatory. When you try to create a new customer without a Lastname, this will fail with status code 422, and the error message as defined in the validation rule will be returned in the response.
 
-![](https://paper-attachments.dropboxusercontent.com/s_A7C365B156C73FE0E73A206FAF1622E045C694DFEDFC4EA12B065B4B4F20286D_1675873351031_image.png)
+![](https://paper-attachments.dropboxusercontent.com/s_A7C365B156C73FE0E73A206FAF1622E045C694DFEDFC4EA12B065B4B4F20286D_1675873351031_image.png) error-422
 
 ## Validation microflows 
 
@@ -159,44 +159,44 @@ The above illustrates how errors are handled when using entity validation rules,
 
 Here’s an example of a validation microflow for the customer entity. On a save button right click and select generate validation microflow.
 
-![](https://paper-attachments.dropboxusercontent.com/s_A7C365B156C73FE0E73A206FAF1622E045C694DFEDFC4EA12B065B4B4F20286D_1676054128858_image.png)
+![](https://paper-attachments.dropboxusercontent.com/s_A7C365B156C73FE0E73A206FAF1622E045C694DFEDFC4EA12B065B4B4F20286D_1676054128858_image.png) generate-validation-microflow
 
 
 Resulting validation microflow looks like this. Notice the use of *show validation message* activity to set the errors to be shown in the UI in this generated validation microflow. This microflow will be called in the insert microflow displayed below.
 
-![](https://paper-attachments.dropboxusercontent.com/s_A7C365B156C73FE0E73A206FAF1622E045C694DFEDFC4EA12B065B4B4F20286D_1676054230652_image.png)
+![](https://paper-attachments.dropboxusercontent.com/s_A7C365B156C73FE0E73A206FAF1622E045C694DFEDFC4EA12B065B4B4F20286D_1676054230652_image.png) validation-microflow
 
 
 Next we’ll specify that we want to use a microflow to handle insert of a new Customer resource via the OData API. This microflow will be called whenever a client does a POST operation on the endpoint of the resource.
 
-![](https://paper-attachments.dropboxusercontent.com/s_A7C365B156C73FE0E73A206FAF1622E045C694DFEDFC4EA12B065B4B4F20286D_1676054731019_image.png)
+![](https://paper-attachments.dropboxusercontent.com/s_A7C365B156C73FE0E73A206FAF1622E045C694DFEDFC4EA12B065B4B4F20286D_1676054731019_image.png) specify-use-microflow
 
 
 In the insert microflow we simply call the generated validation microflow and commit the object if the validation succeeds. 
 
-![](https://paper-attachments.dropboxusercontent.com/s_A7C365B156C73FE0E73A206FAF1622E045C694DFEDFC4EA12B065B4B4F20286D_1676054694396_image.png)
+![](https://paper-attachments.dropboxusercontent.com/s_A7C365B156C73FE0E73A206FAF1622E045C694DFEDFC4EA12B065B4B4F20286D_1676054694396_image.png) insert-microflow
 
 
 If validation fails the *show validation message* texts are provided automatically in the response payload:
 
-![](https://paper-attachments.dropboxusercontent.com/s_A7C365B156C73FE0E73A206FAF1622E045C694DFEDFC4EA12B065B4B4F20286D_1676054511602_image.png)
+![](https://paper-attachments.dropboxusercontent.com/s_A7C365B156C73FE0E73A206FAF1622E045C694DFEDFC4EA12B065B4B4F20286D_1676054511602_image.png) validation-response-payload
 
 # Optimize performance
 
 OData enables you to exactly specify which attributes you need, so other attributes are not included in the response. This helps reduce the size of the response message. To reduce the number of round-trips, associated objects can be included in the response using the $expand expression.
 
-![](https://paper-attachments.dropboxusercontent.com/s_A7C365B156C73FE0E73A206FAF1622E045C694DFEDFC4EA12B065B4B4F20286D_1675873666945_image.png)
+![](https://paper-attachments.dropboxusercontent.com/s_A7C365B156C73FE0E73A206FAF1622E045C694DFEDFC4EA12B065B4B4F20286D_1675873666945_image.png) expand-expression
 
 
 You can use select and expand in combination with filters, sorting, top and skip as discussed above.
 
-![](https://paper-attachments.dropboxusercontent.com/s_A7C365B156C73FE0E73A206FAF1622E045C694DFEDFC4EA12B065B4B4F20286D_1676105444511_image.png)
+![](https://paper-attachments.dropboxusercontent.com/s_A7C365B156C73FE0E73A206FAF1622E045C694DFEDFC4EA12B065B4B4F20286D_1676105444511_image.png) sort-top-skip
 
 
 For long queries it might be useful to place the query in the request body. You can do this by using POST, and adding $query to the endpoint. 
 
 
-![](https://paper-attachments.dropboxusercontent.com/s_A7C365B156C73FE0E73A206FAF1622E045C694DFEDFC4EA12B065B4B4F20286D_1676105604049_image.png)
+![](https://paper-attachments.dropboxusercontent.com/s_A7C365B156C73FE0E73A206FAF1622E045C694DFEDFC4EA12B065B4B4F20286D_1676105604049_image.png) long-queries
 
 
 You’ll notice that you now have something that is very similar to how you would use GraphQL, where you can query a graph of objects, and limit the attributes returned to only those that you need. 
@@ -217,44 +217,44 @@ For these situations you can use NPEs. You first define a resource model using N
 
 In this example we want to expose a single REST resource that combines data from the Customer entity and the Address entity, so it joins data from both entities, and also combines the Firstname and Lastname attributes into a single attribute Fullname. We also only want to provide the home address information, and exclude other address types.
 
-![](https://paper-attachments.dropboxusercontent.com/s_A7C365B156C73FE0E73A206FAF1622E045C694DFEDFC4EA12B065B4B4F20286D_1675895988776_image.png)
+![](https://paper-attachments.dropboxusercontent.com/s_A7C365B156C73FE0E73A206FAF1622E045C694DFEDFC4EA12B065B4B4F20286D_1675895988776_image.png) expose-single-resource-domain-model
 
 
 We start by adding the CustomerHomeAddress NPE as a resource to the OData service.
 
-![](https://paper-attachments.dropboxusercontent.com/s_A7C365B156C73FE0E73A206FAF1622E045C694DFEDFC4EA12B065B4B4F20286D_1675895872508_image.png)
+![](https://paper-attachments.dropboxusercontent.com/s_A7C365B156C73FE0E73A206FAF1622E045C694DFEDFC4EA12B065B4B4F20286D_1675895872508_image.png) customer-home-address-npe
 
 
 In mendix you can use an OQL Dataset to define the query to fetch this information from your entities.
 
-![](https://paper-attachments.dropboxusercontent.com/s_A7C365B156C73FE0E73A206FAF1622E045C694DFEDFC4EA12B065B4B4F20286D_1675896086992_image.png)
+![](https://paper-attachments.dropboxusercontent.com/s_A7C365B156C73FE0E73A206FAF1622E045C694DFEDFC4EA12B065B4B4F20286D_1675896086992_image.png) oql-database
 
 
 Next we need to define a microflow that will fetch the correct data when a user does a GET on the CustomerHomeAddress resource:
 
-![](https://paper-attachments.dropboxusercontent.com/s_A7C365B156C73FE0E73A206FAF1622E045C694DFEDFC4EA12B065B4B4F20286D_1675895840011_image.png)
+![](https://paper-attachments.dropboxusercontent.com/s_A7C365B156C73FE0E73A206FAF1622E045C694DFEDFC4EA12B065B4B4F20286D_1675895840011_image.png) get-microflow
 
 
 The microflow uses a Java action to translate the OData query to an OQL expression using the OQL Dataset as the base query. This ensures filtering, sorting, paging will work as expected.
 
-![](https://paper-attachments.dropboxusercontent.com/s_A7C365B156C73FE0E73A206FAF1622E045C694DFEDFC4EA12B065B4B4F20286D_1675895940853_image.png)
+![](https://paper-attachments.dropboxusercontent.com/s_A7C365B156C73FE0E73A206FAF1622E045C694DFEDFC4EA12B065B4B4F20286D_1675895940853_image.png) translate-to-odl-expression
 
 
 You can now do a REST GET call, defining which attributes you need, how you want it sorted, and how many objects you need.
 
-![](https://paper-attachments.dropboxusercontent.com/s_A7C365B156C73FE0E73A206FAF1622E045C694DFEDFC4EA12B065B4B4F20286D_1675895760563_image.png)
+![](https://paper-attachments.dropboxusercontent.com/s_A7C365B156C73FE0E73A206FAF1622E045C694DFEDFC4EA12B065B4B4F20286D_1675895760563_image.png) get-call
 
 
 The result is that you have decoupled your REST resource from your domain model Persistent Entities: you can change your entities and use the OQL query to ensure the exposed data remains backwards compatible.
 
 The Java action used above add the OData query to the original OQL query is as follows:
 
-![](https://paper-attachments.dropboxusercontent.com/s_A7C365B156C73FE0E73A206FAF1622E045C694DFEDFC4EA12B065B4B4F20286D_1676284412127_image.png)
+![](https://paper-attachments.dropboxusercontent.com/s_A7C365B156C73FE0E73A206FAF1622E045C694DFEDFC4EA12B065B4B4F20286D_1676284412127_image.png) view-log-line-details
 
 
 With some formatting it’s better readable. The original OQL query is used as a subquery (inline view) for the OData query. As is illustrated here, all the expressions will be pushed down into the database, and benefit from the performance of the database optimizer.
 
-![](https://paper-attachments.dropboxusercontent.com/s_A7C365B156C73FE0E73A206FAF1622E045C694DFEDFC4EA12B065B4B4F20286D_1676301766285_image.png)
+![](https://paper-attachments.dropboxusercontent.com/s_A7C365B156C73FE0E73A206FAF1622E045C694DFEDFC4EA12B065B4B4F20286D_1676301766285_image.png) subquery
 
 # No actions in path
 
@@ -264,12 +264,12 @@ If you think of the input parameters of your logic as the REST resource, it’s 
 
 This example shows a CustomerEmailRequest entity, that a client can create using an API. The API will execute the logic to send the customer an email when this resource is created. 
 
-![](https://paper-attachments.dropboxusercontent.com/s_A7C365B156C73FE0E73A206FAF1622E045C694DFEDFC4EA12B065B4B4F20286D_1676275381470_image.png)
+![](https://paper-attachments.dropboxusercontent.com/s_A7C365B156C73FE0E73A206FAF1622E045C694DFEDFC4EA12B065B4B4F20286D_1676275381470_image.png) create-customer-email-request-entity
 
 
 Next we define the logic as the insert (POST) action.
 
-![](https://paper-attachments.dropboxusercontent.com/s_A7C365B156C73FE0E73A206FAF1622E045C694DFEDFC4EA12B065B4B4F20286D_1676023504737_image.png)
+![](https://paper-attachments.dropboxusercontent.com/s_A7C365B156C73FE0E73A206FAF1622E045C694DFEDFC4EA12B065B4B4F20286D_1676023504737_image.png) define-insert-action
 
 
 There’s one other [best practice](https://learn.microsoft.com/en-us/azure/architecture/best-practices/api-design#asynchronous-operations) you want to consider when doing this: for operations that take a while to complete, you should consider running them asynchronously. This means that you tell the client the request has been received, that it’s not yet completely processed but that you’ll do it in the background. In Mendix you can use a Task Queue to schedule the logic to be run in the background. In the meantime the client can GET the resource to see what the status is.
@@ -277,17 +277,17 @@ There’s one other [best practice](https://learn.microsoft.com/en-us/azure/arch
 The last activity of the insert microflow calls the SendCustomerEmail microflow using the TaskQueue:
 
 
-![](https://paper-attachments.dropboxusercontent.com/s_A7C365B156C73FE0E73A206FAF1622E045C694DFEDFC4EA12B065B4B4F20286D_1676023643853_image.png)
+![](https://paper-attachments.dropboxusercontent.com/s_A7C365B156C73FE0E73A206FAF1622E045C694DFEDFC4EA12B065B4B4F20286D_1676023643853_image.png) task-queue
 
 
 Example of calling the send customer email logic. The POST response provides the location where the client can retrieve the status of the request.
 
-![](https://paper-attachments.dropboxusercontent.com/s_A7C365B156C73FE0E73A206FAF1622E045C694DFEDFC4EA12B065B4B4F20286D_1676023692823_image.png)
+![](https://paper-attachments.dropboxusercontent.com/s_A7C365B156C73FE0E73A206FAF1622E045C694DFEDFC4EA12B065B4B4F20286D_1676023692823_image.png) call-send-email-logic
 
 
 When we GET the resource from the location provided, we can see that the status has value *Sent*, indicating that the logic has completed.
 
-![](https://paper-attachments.dropboxusercontent.com/s_A7C365B156C73FE0E73A206FAF1622E045C694DFEDFC4EA12B065B4B4F20286D_1676023726548_image.png)
+![](https://paper-attachments.dropboxusercontent.com/s_A7C365B156C73FE0E73A206FAF1622E045C694DFEDFC4EA12B065B4B4F20286D_1676023726548_image.png) get-resource-sent
 
 # Versioning
 
@@ -296,7 +296,7 @@ Reliable versioning is key for APIs. Client applications should trust your API n
 With OData, similar to REST APIs in Mendix, you have full control over how you define your versions. By default Mendix suggests to use semantic versioning, adding the major version number to the url. If you need to introduce breaking changes, simply duplicate the entire OData service, change the major version and you are good to go.
 
 
-![](https://paper-attachments.dropboxusercontent.com/s_A7C365B156C73FE0E73A206FAF1622E045C694DFEDFC4EA12B065B4B4F20286D_1676056489860_image.png)
+![](https://paper-attachments.dropboxusercontent.com/s_A7C365B156C73FE0E73A206FAF1622E045C694DFEDFC4EA12B065B4B4F20286D_1676056489860_image.png) versioning
 
 
 This approach ensures client applications can migrate at their own pace, as you’ll both have the old version and the new major version of the API in your application. Once all client applications have migrated you can remove the old API from your application.

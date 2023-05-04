@@ -23,6 +23,16 @@ To see the current status of the Mendix Developer Portal and Control Center, see
 
 * We fixed an issue where under certain circumstances you were not able to retry to [migrate your repository to Git](/developerportal/collaborate/migrate-to-git/) if the first try resulted in errors.
 * We fixed an issue where a redirect to a user story that is linked to a feedback item would result in an error if this story is hosted by [Epics](/developerportal/collaborate/epics/).
+* Now you can select multiple stories on the Planning page to:
+   * Move them to a different section (Backlog, Refinement, To Do, or Next Sprint, Active Sprint)
+   * Archive
+   * Delete
+* You can also use keyboard shortcuts:
+   * Ctrl + A - Select all
+   * Ctrl + D - Deselect all
+   * Ctrl + click - Select multiple
+   * Shift + click - Select range
+* If you see the hand pointer, then you're selecting stories - otherwise it will open the relevant story detail page.
 
 ### April 20th, 2023
 

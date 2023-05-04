@@ -545,10 +545,10 @@ An object with the following key-value pairs:
     "ExpiryDate": null,
     "Description" :  "Add scientific mode" ,
     "Version" :  "2.5.4.63" ,
-    "Size" :  3.0571174621582031,
+    "Size" :  15342295,
     "PackageId" :  "b3d14e53-2654-4534-b374-9179a69ef3cf" ,
     "Creator" :  "Richard Ford" ,
-    "Name" :  "Main line-2.5.4.63.mda"
+    "Name" :  "Main line-2.5.4.63.mda",
     "Url": {
         "Location": "https://url/to/download/the/package/file",
         "TTL": 900

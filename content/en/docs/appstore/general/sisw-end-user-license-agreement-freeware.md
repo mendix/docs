@@ -1,5 +1,6 @@
 ---
 title: "SISW End User License Agreement for Freeware"
+linktitle: "SISW EULA for Freeware"
 category: "General Info"
 weight: 5
 description: "Describes SISW end user license agreement terms and conditions."

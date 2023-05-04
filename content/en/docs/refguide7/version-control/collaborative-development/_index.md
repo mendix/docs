@@ -59,11 +59,7 @@ When the Desktop Modeler user wants to deploy the app to the cloud, they click t
 
 {{% /alert %}}
 
-## 3 Web Modeler Perspective
-
-For information on collaborative development from the Web Modeler perspective, see [Collaborative Development in the Web Modeler](/studio7/general-collaborative-development/) in the *Web Modeler Guide*. 
-
-## 4 Desktop Modeler Perspective
+## 3 Desktop Modeler Perspective
 
 When you connect to a project which has collaborative development turned on, you see which development line (the main line or a branch line) the Web Modeler is enabled for. 
 
@@ -71,13 +67,13 @@ Click the drop-down to select another line or click **OK** to open the currently
 
 {{< figure src="/attachments/refguide7/version-control/collaborative-development/open-app-dialog.png" alt="Open App Dialog Window" >}}
 
-### 4.1 Merging Latest Changes
+### 3.1 Merging Latest Changes
 
 To merge the latest changes stored in the Team Server (from both Web Modeler users and other Desktop Modeler users), open **Changes** and click **Update**.
 
 {{< figure src="/attachments/refguide7/version-control/collaborative-development/update-button.png" alt="Update Option" >}}
 
-### 4.2 Merging Latest Changes
+### 3.2 Merging Latest Changes
 
 To commit your latest project changes and make them available to other users, open **Changes** and click **Commit**. The process of deploying your app (when you click the **Run** button) will also trigger a commit. 
 
@@ -89,21 +85,21 @@ We recommend you update your project and commit changes often to avoid multiple 
 
 If your project has conflicts, the Web Modeler will be unlocked without receiving your changes. You need to resolve the conflicts in the Desktop Modeler first to be able to complete the merge and commit again. 
 
-Your changes will be sent to the Web Modeler automatically if there are no conflicts. For more information on the collaborative development process in the Web Modeler, see [Collaborative Development in the Web Modeler](/studio7/general-collaborative-development/) in the *Web Modeler Guide*.
+Your changes will be sent to the Web Modeler automatically if there are no conflicts.
 
-### 4.3 Viewing History of Commits
+### 3.3 Viewing History of Commits
 
 You can see all the changes committed to the current development line via **Project** > **More Versioning** > **History**
 
 {{< figure src="/attachments/refguide7/version-control/collaborative-development/history.png" alt="History Dialog Box" >}}
 
-## 5 Managing Development Lines in the Desktop Modeler {#managing-branches}
+## 4 Managing Development Lines in the Desktop Modeler {#managing-branches}
 
 In the Desktop Modeler, you can enable the Web Modeler for a development line (the main line or a branch line). You can also create and delete branch lines. 
 
 For collaborative development you need to enable the Web Modeler for one of development lines. 
 
-### 5.1 Enabling the Web Modeler for a Development Line {#active-branch-for-the-wm}
+### 4.1 Enabling the Web Modeler for a Development Line {#active-branch-for-the-wm}
 
 To share your model changes between the Web Modeler and the Desktop Modeler, you need to enable the Web Modeler for one of development lines. 
 
@@ -130,7 +126,7 @@ The development line for the Web Modeler has been selected.
 
 When you switch the Web Modeler to another development line, the Web Modeler gets locked for a few moments during this process, a pop-up dialog is shown to its users that the Desktop Modeler user is changing the line for the Web Modeler. All changes from the Web Modeler are committed to the current development line, and only after that the line is changed. 
 
-### 5.2 Creating a New Branch Line
+### 4.2 Creating a New Branch Line
 
 To create a new branch line, do the following: 
 
@@ -154,7 +150,7 @@ To create a new branch line, do the following:
 
 You have created a new branch line.   
 
-### 5.3 Deleting a Branch Line
+### 4.3 Deleting a Branch Line
 
 To delete a branch line, do the following:
 
@@ -172,8 +168,7 @@ You cannot delete the Web Modeler enabled branch. If you need to delete this bra
 
 {{% /alert %}}
 
-## 6 Read More
+## 5 Read More
 
 * [Version Control](/refguide7/version-control/)
 * [Troubleshooting Collaborative Development](/refguide7/collaborative-development-troubleshooting/)
-* [Collaborative Development in the Web Modeler](/studio7/general-collaborative-development/)

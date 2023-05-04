@@ -174,7 +174,7 @@ Publish your app by following Apple's [Overview of publishing an app](https://he
 
 ## 7 Preparing and Publishing for Android{#publishing-for-android}
 
-If you plan on publishing an Android app, read Google's overview of [the Android app publishing process](http://developer.android.com/tools/publishing/publishing_overview.html). Before submitting your app to an app store, [review the launch checklist](http://developer.android.com/distribute/tools/launch-checklist.html). Google provides information on [publishing your app in the Google Play Store](https://developer.android.com/studio8/publish).
+If you plan on publishing an Android app, read Google's overview of [the Android app publishing process](http://developer.android.com/tools/publishing/publishing_overview.html). Before submitting your app to an app store, [review the launch checklist](http://developer.android.com/distribute/tools/launch-checklist.html).
 
 If you are just testing your app, you do not need to create a keystore. You can continue with the next section [Enabling your Mobile Test Device for an Android Binary (APK)](#download-apk) below. 
 

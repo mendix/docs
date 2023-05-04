@@ -13,6 +13,17 @@ These release notes cover changes made to the [Mendix Marketplace](/appstore/).
 
 ## 2023
 
+### April 20th, 2023
+
+#### New Features
+
+* You can now filter Marketplace content for **Public** or **Private** components via the **Visibility** filter.
+
+#### Improvements
+
+* The **Compatibility** filter now only allows for major Mendix versions.
+* The **Support** section of the [component details page](/appstore/general/app-store-overview/#details) now includes a link to [Marketplace Content Support](/appstore/general/app-store-content-support/).
+
 ### March 23rd, 2023
 
 #### New Features

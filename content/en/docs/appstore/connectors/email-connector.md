@@ -170,7 +170,7 @@ The input parameters are the following:
 
 * **Data Object** – entity object from which you want to extract the placeholder tokens (if you want to retrieve from multiple objects, then create a [Non-Persistable Entity](/refguide/persistability/#non-persistable)
 * **Email template** – email template from which email message object is created and sent
-* **Queued** – when *true*, email message will be stored in the **EmailMessage** entity with status as **QUEUED** queued and user can sent it later using scheduled event or future. You can use microflow **SE_SendQueuedEmails** to create scheduled events.
+* **Queued** – when *true*, email message will be stored in the **EmailMessage** entity with status as **QUEUED** and user can send it later using a scheduled event. You can use microflow **SE_SendQueuedEmails** to create scheduled events. The user also has an option to create a TASK_Queue and execute this Microflow in the TASK_Queue to minimize the system resource usage. Using a TASK_Queue, the user can decide the number of threads, node or cluster-wide  scope, time interval and other parameters for the same.
 
 Refer to sample microflow **Sample_ACT_CreateEmailFromTemplateAndThenSend**. This sample Microflow demonstrate how to use **CreateEmailFromTemplate** Java action and set attachments to EmailMessage in addition to attachments provided by EmailTemplate.
 
@@ -181,7 +181,7 @@ When modeling your app in Studio Pro, use the  **SendEmailWithTemplate** Java ac
 * **Data Object** – entity object from which you want to extract the placeholder tokens (if you want to retrieve from multiple objects, then create a [Non-Persistable Entity](/refguide/persistability/#non-persistable)
 * **Email account** – email account consisting of outgoing email configuration
 * **Email template** – email template from which email message object is created and sent
-* **Queued** – when *true*, email message will be stored in the **EmailMessage** entity with status as **QUEUED** queued and user can sent it later using scheduled event or future. You can use microflow **SE_SendQueuedEmails** to create scheduled events.
+* **Queued** – when *true*, email message will be stored in the **EmailMessage** entity with status as **QUEUED** and user can send it later using a  scheduled event. You can use microflow **SE_SendQueuedEmails** to create scheduled events. The user also has an option to create a TASK_Queue and execute this Microflow in the TASK_Queue to minimize the system resource usage. Using a TASK_Queue, the user can decide the number of threads, node or cluster-wide  scope, time interval and other parameters for the same.
 
 Refer to sample microflow **Sample_ACT_SendEmailWithTemplate**. To use **To**, **CC**, or **BCC** during runtime, change the **EmailTemplate** object and set the desired values for the attributes, then pass the same **EmailTemplate** object as a parameter to the Java action.
 

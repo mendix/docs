@@ -13,6 +13,12 @@ These release notes cover changes made to the [Mendix Marketplace](/appstore/).
 
 ## 2023
 
+### May 9th, 2023
+
+#### New Features
+
+* We are excited to announce a new feature that allows you to transfer Drafts between people within the same company. With this feature, you can now easily collaborate on [your Mendix drafts](/appstore/general/app-store-overview/#my-drafts) with your colleagues, even if a colleague is not available to work on a draft that they originally made. You can easily transfer ownership of a Draft to yourself as long as you are part of the same company. This allows team members to continue working on the same Draft even if someone is out of the office.
+
 ### April 20th, 2023
 
 #### New Features

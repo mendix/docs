@@ -18,7 +18,6 @@ These release notes cover changes made to the [Mendix Marketplace](/appstore/).
 #### New Features
 
 * You can now filter Marketplace content for **Public** or **Private** components via the **Visibility** filter.
-* You can now use Studio Pro without installing it by downloading the portable version from the [Studio Pro download page](https://marketplace.mendix.com/link/studiopro/).
 
 #### Improvements
 

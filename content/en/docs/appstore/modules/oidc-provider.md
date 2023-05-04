@@ -49,7 +49,6 @@ The OIDC Provider has the following features and limitations:
 * The hybrid resource owner password credentials, and client credential grants are not supported, although the OIDC Provider may contain some (rudimentary) implementation to support them.
 * The OIDC Provider module ignores "email", "phone" and "profile" scope values (as specified by OIDC specs) when the client includes these in a authentication request . Instead, the OIDC Provider module will include user claims in an ID-token based on a custom microflow, regardless of the scopes in the request.
 * Front channel and back-channel logout are implemented as alpha features.
-* The current implementation of setting custom claims in the generated ID-tokens is not working properly in this release as the custom attribute names that you would define is incorrectly set in the ID-token. If you want to set custom claims, you will have to customize the OIDC Provider module.
 
 ### 1.3 Dependencies
 
@@ -125,7 +124,7 @@ The rest of the configuration can be performed through the app.
 1. Open the **Scopes** tab.
 1. Create **New** scopes with the **Scope type** set to **Standard**.
 
-    This page sets up a single list of all the scopes that are known to the OIDC Provider module. For each client, you can then choose the scopes used by that specific client.
+    This page sets up a single list of all the scopes that are known to the OIDC Provider module. For each client, you can then choose the scopes used by that specific client. See [Configuring Centralized Authorization](#configuring-authorization) for more information on what scopes you should set.
 
 1. Open the **Clients** tab.
 1. Click **New Client Registration**.
@@ -151,8 +150,8 @@ To check that this works, you will need a tool for testing APIs (such as [Postma
             "redirect_uris" : [ http://localhost:8081/oauth/v2/callback ],
             "backchannel_logout_uri" : http://localhost:8081/logout,
             "post_logout_redirect_uris" : [http://localhost:8081/logout],
-            "grant_types": [ "authorization_code","password" ],
-            "scope": "openid"
+            "grant_types": [ "authorization_code" ],
+            "scope": "User"
         }
         ```
 
@@ -165,10 +164,9 @@ To check that this works, you will need a tool for testing APIs (such as [Postma
     ],
     "grant_types": [
     "authorization_code",
-    "password"
     ],
     "client_secret_expires_at": 0,
-    "scope": "openid",
+    "scope": "User",
     "client_secret": "ClientSecret",
     "redirect_uris": [
     "http://localhost:8081/oauth/v2/callback"
@@ -269,7 +267,7 @@ Some examples of existing claims are:
 
     If the claim with ‘scope’ is created, the scope value in access token and id-token gets overwritten with the claim value
 
-* …..aud
+* aud
 * sub
 * iss
 * name

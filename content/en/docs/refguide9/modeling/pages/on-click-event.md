@@ -93,7 +93,7 @@ The **Show a page** event opens the specified page. Select the page which opens 
   
 * **Page title** – the page you open can be given a unique title, depending on where you open it from. This allows you to re-use the same page for different purposes. For example, by setting the title to **New Customer** from one button and **Edit Customer** from another, you can use the same page for editing new and existing customers.
 
-  This option is activated by checking the **Override page title** check box.
+  This option is activated by checking the **Override page title** checkbox.
 
 * **Page arguments** – a list of parameters of the selected page and the objects that will be passed to each of them.
 

@@ -201,6 +201,7 @@ The default configuration would then be:
 ## 4 Customizing Object Grids {#customize-object-grids}
 
 An object grid for object properties can be customized. To do this, the property needs to have `objectHeaders` configured, which will be used as column headers. Each object also needs to have `captions` configured for the grid to be filled.
+
 ### 4.1 Example
 
 If you wished to use data point structure detailed above to visualize geographic coordinates, you might want to add the suffixes `° N` and `° W` to the numeric **x** and **y** values so the grid will look like this (values below are purely hypothetical):

@@ -11,7 +11,6 @@ These activities can only be used in **Microflows**.
 
 The **Send external object** activity can be used to persist changes to an external object. It can be used to send objects that have been first retrieved and then changed, or to to send newly created objects.
 
-
 ## 2 Using the **Send external object** Activity
 
 Use this activity with [updatable exernal entities](#updatable-entities) to send objects that have been first retrieved and then changed, or with [creatable external entities](#creatable-entities) to send newly created objects.

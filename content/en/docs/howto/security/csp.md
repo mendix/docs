@@ -43,7 +43,7 @@ window.dojoConfig = {
 	blankGif: "mxclientsystem/dojo/resources/blank.gif"
 };
 
-if (!document.cookie || !document.cookie.match(/(^|;)originURI=/gi))
+if (!document.cookie || !document.cookie.match(/(^|;) *originURI=/gi))
 	document.cookie = "originURI=/login.html" + (window.location.protocol === "https:" ? ";SameSite=None;Secure" : "");
 ```
 

@@ -22,4 +22,4 @@ Name | Datatype | Required | Description
 Widget Name | String | Yes | The name of the Grid Selector widget.
 Column Caption | String | Yes | The column caption of the radio button cell.
 Row Caption | String | Yes | The row caption of the radio button cell.
-Checked | Boolean | Yes | The value for the check box you want to set (true or false).
+Checked | Boolean | Yes | The value for the checkbox you want to set (true or false).

@@ -17,6 +17,13 @@ For information on the current status of deployment to Mendix Cloud and any plan
 
 ## 2023
 
+### May 4th, 2023
+
+* In the Build and Deploy APIs, we have added a link to download packages from the Developer Portal. This is controlled by a parameter on the following API calls:
+    * [Retrieve Package](/apidocs-mxsdk/apidocs/build-api/#retrieve-package) in the Build API
+    * [Retrieve Environment Package](/apidocs-mxsdk/apidocs/deploy-api/#retrieve-environment-package) in the Deploy API
+* We have deprecated the [Download Package](/apidocs-mxsdk/apidocs/build-api/#download-package) call in the Build API.
+
 ### April 20th, 2023
 
 #### Improvements

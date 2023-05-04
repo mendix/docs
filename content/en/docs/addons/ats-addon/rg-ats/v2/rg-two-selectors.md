@@ -52,7 +52,7 @@ The following table shows a few selectors from the JQuery set that you can use i
 | Pattern          | Name              | Meaning                                  |
 | ---------------- | ----------------- | ---------------------------------------- |
 | :animated        | Animated Selector | Selects all the elements that are in the progress of an animation at the time the selector is run. |
-| :checkbox        | Checkbox Selector | Selects all the elements of the check box type.   |
+| :checkbox        | Checkbox Selector | Selects all the elements of the checkbox type.   |
 | :input           | Input Selector    | Selects all the inputs, text area, select, and button elements. |
 | :has(*selector*) | Has Selector      | Selects elements that contain at least one element that matches the specified *selector*. |
 | :parent          | Parent Selector   | Select all the elements that have at least one child node (either an element or text). |

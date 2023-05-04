@@ -79,4 +79,3 @@ You can do one of the following:
 ## 7 Read More
 
 * [Version Control](/refguide8/version-control/) 
-* [Collaborative Development in Studio](/studio8/collaborative-development/)

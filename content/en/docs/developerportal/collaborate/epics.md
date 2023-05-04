@@ -161,9 +161,9 @@ The story details dialog box shows the following items:
 The **Planning** page shows all your stories. At the top of the page, you can find the following items:
 
 * **...** – Clicking the icon opens the option to import stories using an Excel file.
-  * For more information, see the [Import Stories](#import-stories) section.
+    * For more information, see the [Import Stories](#import-stories) section.
 * **Settings icon** – This enables changing settings.
-  * For more information, see the [Settings](#settings) section.
+    * For more information, see the [Settings](#settings) section.
 
 * **Create Epic** – This enables creating an epic.
 * **Create Story** – This enables creating a story.
@@ -454,9 +454,9 @@ When you click the Sprint icon in a row of an archived story on the **Archived**
 * When the Sprint was archived
 * When the Sprint started and ended
 * Summary of the Sprint
-  * How many stories were completed
-  * How many stories were uncompleted
-  * Breakdown of completed points
+    * How many stories were completed
+    * How many stories were uncompleted
+    * Breakdown of completed points
 * Sprint goal
 * Whether the Sprint goal was reached
 * Who archived the Sprint (shown under **Archived by**)

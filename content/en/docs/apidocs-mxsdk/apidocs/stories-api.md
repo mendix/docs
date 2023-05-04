@@ -2,7 +2,8 @@
 title: "Stories API"
 url: /apidocs-mxsdk/apidocs/stories-api/
 category: "API Documentation"
-weight: 60
+description: "Use this API to extend the requirements and project management capabilities of the Mendix Platform or connect third-party service management and project management tools."
+weight: 90
 ---
 
 ## 1 Introduction

@@ -43,11 +43,7 @@ The collaborative development process between Studio Pro and Studio consists of 
 When the Studio Pro user wants to deploy the app to the cloud, they click the **Run** button. The commit is done automatically during this process and step five is executed. 
 {{% /alert %}}
 
-## 3 Studio Perspective
-
-For information on collaborative development from the Studio perspective, see [Collaborative Development in Studio](/studio8/collaborative-development/). 
-
-## 4 Studio Pro Perspective
+## 3 Studio Pro Perspective
 
 When you connect to a project which has collaborative development turned on, you see which development line (the main line or a branch line) Studio is enabled for. 
 
@@ -55,13 +51,13 @@ Click the drop-down to select another line or click **OK** to open the currently
 
 {{< figure src="/attachments/refguide8/version-control/collaborative-development/open-app-dialog.png" alt="Open App Dialog Window" >}}
 
-### 4.1 Merging Latest Changes
+### 3.1 Merging Latest Changes
 
 To merge the latest changes stored in the Team Server (from both Studio users and other Studio Pro users), open **Changes** and click **Update**.
 
 {{< figure src="/attachments/refguide8/version-control/collaborative-development/update-button.png" alt="Update Option" >}}
 
-### 4.2 Committing Latest Changes
+### 3.2 Committing Latest Changes
 
 To commit your latest project changes and make them available to other users, open **Changes** and click **Commit**. The process of deploying your app (when you click the **Run** button) will also trigger a commit. 
 
@@ -71,21 +67,21 @@ We recommend you update your project and commit changes often to avoid multiple 
 
 If your project has conflicts, Studio will be unlocked without receiving your changes. You need to resolve the conflicts in Studio Pro first to be able to complete the merge and commit again. 
 
-Your changes will be sent to Studio automatically if there are no conflicts. For more information on the collaborative development process in Studio, see [Collaborative Development in Studio](/studio8/collaborative-development/).
+Your changes will be sent to Studio automatically if there are no conflicts.
 
-### 4.3 Viewing History of Commits
+### 3.3 Viewing History of Commits
 
 You can see all the changes committed to the current development line via **Version Control** > **History**:
 
 {{< figure src="/attachments/refguide8/version-control/collaborative-development/history-dialog.png" alt="History Dialog Box" >}}
 
-## 5 Managing Development Lines in Studio Pro {#managing-branches}
+## 4 Managing Development Lines in Studio Pro {#managing-branches}
 
 In Studio Pro, you can enable or disable Studio for a development line (the main line or a branch line). You can also create and delete branch lines. 
 
 For collaborative development you need to enable Studio for one of development lines. 
 
-### 5.1 Enabling Studio for a Development Line {#active-branch}
+### 4.1 Enabling Studio for a Development Line {#active-branch}
 
 To share your model changes between Studio and Studio Pro, you need to enable Studio for one of development lines. 
 
@@ -112,7 +108,7 @@ The development line for Studio has been selected.
 
 When you switch Studio to another development line, Studio gets locked for a few moments during this process, a pop-up dialog is shown to its users that the Studio Pro user is changing the line for Studio. All changes from Studio are committed to the current development line, and only after that is the line changed. 
 
-### 5.2 Disabling Studio for a Development Line
+### 4.2 Disabling Studio for a Development Line
 
 If Studio is enabled for a development line, you can disable it. 
 
@@ -129,7 +125,7 @@ To disable Studio, do the following:
 
 Studio is disabled for your project.
 
-### 5.2 Creating a New Branch Line
+### 4.3 Creating a New Branch Line
 
 To create a new branch line, do the following: 
 
@@ -149,7 +145,7 @@ To create a new branch line, do the following:
 
 You have created a new branch line.   
 
-### 5.3 Deleting a Branch Line
+### 4.4 Deleting a Branch Line
 
 To delete a branch line, do the following:
 
@@ -164,8 +160,7 @@ You have deleted the branch.
 You cannot delete a Studio enabled branch. If you need to delete this branch, enable Studio for another line, and only then delete the branch. 
 {{% /alert %}}
 
-## 6 Read More
+## 5 Read More
 
 * [Version Control](/refguide8/version-control/)
 * [Troubleshooting Collaborative Development](/refguide8/collaborative-development-troubleshooting/)
-* [Collaborative Development in Studio](/studio8/collaborative-development/)

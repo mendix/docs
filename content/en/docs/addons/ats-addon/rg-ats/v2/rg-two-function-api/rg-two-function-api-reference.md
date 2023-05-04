@@ -9,14 +9,14 @@ For a Mendix widget input a selection, checkbox, number, text value or a date.
 
 | Function Name | Description |
 | ---- | ---- |
-| [Set Checkbox Set Selector Value](#SetCheckboxSetSelectorValue) | Checks/clears a check box in a set selector by given entity attribute value. |
-| [Set Checkbox Set Selector Value (all)](#SetCheckboxSetSelectorValueAll) | Checks/clears the 'select all' check box. |
-| [Set Checkbox Value](#SetCheckboxValue) | Sets the value of a check box. |
+| [Set Checkbox Set Selector Value](#SetCheckboxSetSelectorValue) | Checks/clears a checkbox in a set selector by given entity attribute value. |
+| [Set Checkbox Set Selector Value (all)](#SetCheckboxSetSelectorValueAll) | Checks/clears the 'select all' checkbox. |
+| [Set Checkbox Value](#SetCheckboxValue) | Sets the value of a checkbox. |
 | [Set File Manager](#SetFileManager) | Set a file manager to the given file path to upload a file. |
-| [Set Grid Selector Checkbox Value](#SetGridSelectorCheckboxValue) | Checks/clears a check box for a given column and row caption in a grid selector widget. |
+| [Set Grid Selector Checkbox Value](#SetGridSelectorCheckboxValue) | Checks/clears a checkbox for a given column and row caption in a grid selector widget. |
 | [Set Grid Selector Radiobutton checked](#SetGridSelectorRadiobuttonChecked) | Selects the radio button for a given column and row caption in a grid selector widget. |
 | [Set Row Cell Value](#SetRowCellValue) | Sets the cell value for a particular column in a data grid row. |
-| [Set Simple Checkbox Set Selector Value](#SetSimpleCheckboxSetSelectorValue) | Checks/clears the check box for a given entity attribute value. |
+| [Set Simple Checkbox Set Selector Value](#SetSimpleCheckboxSetSelectorValue) | Checks/clears the checkbox for a given entity attribute value. |
 | [Set Value](#SetValue) | Sets a value to a widget. Supported widgets: text box, text area, drop-down, radio button, date picker, reference selector, search input text, search input drop-down, OnChange Inputbox, CKEditor For Mendix BooleanSlider, BootstrapWysiwygEditor (Bootstrap RTE), InputReferenceSelector, RadiobuttonList. |
 | [Set Value (by index)](#SetValueByIndex) | Sets the value of drop-down widgets by index. Supported widgets: drop-down, reference selector, search input drop-down, EnumSelect. |
 
@@ -28,7 +28,7 @@ SetCheckboxSetSelectorValue
 
 #### Description
 
-Checks/clears a check box in a set selector by given entity attribute value.
+Checks/clears a checkbox in a set selector by given entity attribute value.
 
 ### Input Parameters
 
@@ -37,7 +37,7 @@ Checks/clears a check box in a set selector by given entity attribute value.
 | Widget Name | WidgetName | String | *Required* The name that was assigned in Studio Pro to that widget, for example, 'textBox1'. Use the 'ATS Helper' bookmarklet to see the names of different widgets in you page. For further qualification you can additionally put in the names of surrounding widgets  separated by a single space, for example, 'dataView1 textBox1'. |
 | Column Caption | ColumnCaption | String | *Required* Used to identify a column by it's caption in a set/grid selector widget. The caption should match the label as shown in the browser. |
 | Value | Value | String | *Required* The entitiy attribute value which is used to find the correct row in the widget. |
-| Checked | Checked | Boolean | *Required* If true then checks the check box/radio button, otherwise clears it. |
+| Checked | Checked | Boolean | *Required* If true then checks the checkbox/radio button, otherwise clears it. |
 
 #### Return Value
 
@@ -51,14 +51,14 @@ SetCheckboxSetSelectorValueAll
 
 #### Description
 
-Checks/clears the 'select all' check box.
+Checks/clears the 'select all' checkbox.
 
 #### Input Parameters
 
 | Name | Key | Datatype | Description |
 | ---- | ---- | ---- | ---- |
 | Widget Name | WidgetName | String | *Required* The name that was assigned in Studio Pro to that widget, for example, 'textBox1'. Use the 'ATS Helper' bookmarklet to see the names of different widgets in you page. For further qualification you can additionally put in the names of surrounding widgets  separated by a single space, for example, 'dataView1 textBox1'. |
-| Checked | Checked | Boolean | *Required* If true then checks the check box/radio button, otherwise clears it. |
+| Checked | Checked | Boolean | *Required* If true then checks the checkbox/radio button, otherwise clears it. |
 
 #### Return value
 
@@ -72,14 +72,14 @@ SetCheckboxValue
 
 #### Description
 
-Sets the value of a check box.
+Sets the value of a checkbox.
 
 #### Input Parameters
 
 | Name | Key | Datatype | Description |
 | ---- | ---- | ---- | ---- |
 | Widget Name | WidgetName | String | *Required* The name that was assigned in Studio Pro to that widget, for example, 'textBox1'. Use the 'ATS Helper' bookmarklet to see the names of different widgets in you page. For further qualification you can additionally put in the names of surrounding widgets  separated by a single space, for example, 'dataView1 textBox1'. |
-| Value | Value | Boolean | *Required* If true then checks the check box/radio button, otherwise clears it. |
+| Value | Value | Boolean | *Required* If true then checks the checkbox/radio button, otherwise clears it. |
 | Search Context | SearchContext | WebElement | *Optional* Limits the search of the widget to this web element and its children. Can be used to dynamically restrict the search at runtime,  for instance to a certain template grid item. |
 
 #### Return value
@@ -116,7 +116,7 @@ SetGridSelectorCheckboxValue
 
 #### Description
 
-Checks/clears a check box for a given column and row caption in a grid selector widget.
+Checks/clears a checkbox for a given column and row caption in a grid selector widget.
 
 #### Input Parameters
 
@@ -125,7 +125,7 @@ Checks/clears a check box for a given column and row caption in a grid selector 
 | Widget Name | WidgetName | String | *Required* The name that was assigned in Studio Pro to that widget, for example, 'textBox1'. Use the 'ATS Helper' bookmarklet to see the names of different widgets in you page. For further qualification you can additionally put in the names of surrounding widgets  separated by a single space, for example, 'dataView1 textBox1'. |
 | Column Caption | ColumnCaption | String | *Required* Used to identify a column by it's caption in a set/grid selector widget. The caption should match the label as shown in the browser. |
 | Row Caption | RowCaption | String | *Required* Used to identify a row by it's caption in a grid selector widget. The caption should match the label as shown in the browser. |
-| Checked | Checked | Boolean | *Required* If true then checks the check box/radio button, otherwise clears it. |
+| Checked | Checked | Boolean | *Required* If true then checks the checkbox/radio button, otherwise clears it. |
 
 #### Return Value
 
@@ -183,7 +183,7 @@ SetSimpleCheckboxSetSelectorValue
 
 #### Description
 
-Checks/clears the check box for a given entity attribute value.
+Checks/clears the checkbox for a given entity attribute value.
 
 #### Input Parameters
 
@@ -191,7 +191,7 @@ Checks/clears the check box for a given entity attribute value.
 | ---- | ---- | ---- | ---- |
 | Widget Name | WidgetName | String | *Required* The name that was assigned in Studio Pro to that widget, for example, 'textBox1'. Use the 'ATS Helper' bookmarklet to see the names of different widgets in you page. For further qualification you can additionally put in the names of surrounding widgets  separated by a single space, for example, 'dataView1 textBox1'. |
 | Value | Value | String | *Required* The entitiy attribute value which is used to find the correct row in the widget. |
-| Checked | Checked | Boolean | *Required* If true then checks the check box/radio button, otherwise clears it. |
+| Checked | Checked | Boolean | *Required* If true then checks the checkbox/radio button, otherwise clears it. |
 
 #### Return Value
 
@@ -259,13 +259,13 @@ Read text, dates, numbers and selections from Mendix widgets.
 | [Get Row Cell Value](#GetRowCellValue) | Gets the cell value of a data grid row for a given column name. |
 | [Get Total Item/Row Count](#GetTotalItemRowCount) | Returns the total grid count from the paging status. Does not work if pagination is not shown. Supported widgets: data grid, template grid, list view. |
 | [Get Visible Item/Row Count](#GetVisibleItemRowCount) | Returns the number of currently visible items/rows in a data grid, template grid or a list view. |
-| [Get Checkbox Value](#GetCheckboxValue) | Returns true if the check box is checked, false otherwise. |
+| [Get Checkbox Value](#GetCheckboxValue) | Returns true if the checkbox is checked, false otherwise. |
 | [Get Index](#GetIndex) | Gets the index of selected values in a drop-down menu. The returned index is 0 based, meaning the first element has index 0, the second element has index 1 etc. Supported widgets: drop-down, reference selector, search input drop-down. |
 | [Groupbox is Collapsed](#GroupboxIsCollapsed) | Returns true if the group box is collapsed, false otherwise. |
-| [Get Checkbox Set Selector Value](#GetCheckboxSetSelectorValue) | Finds a check box by column caption and cell value and returns its value. The returned value is 'true' when the check box is checked, false otherwise. |
-| [Get Checkbox Set Selector Value (all)](#GetCheckboxSetSelectorValueAll) | Returns the 'select all' check box value. The returned value is 'true' when the check box is checked, false otherwise. |
-| [Get Simple Checkbox Set Selector Value](#GetSimpleCheckboxSetSelectorValue) | Returns the current value of a check box in a set selector widget found by entity attribute value. The returned value is 'true' when the check box is checked, false otherwise. |
-| [Get Grid Selector Box Value](#GetGridSelectorBoxValue) | Returns the current value of check box/radio button for a given row and column captions in a grid selector. The returned value is 'true' if the check box/radio button is checked, false otherwise. |
+| [Get Checkbox Set Selector Value](#GetCheckboxSetSelectorValue) | Finds a checkbox by column caption and cell value and returns its value. The returned value is 'true' when the checkbox is checked, false otherwise. |
+| [Get Checkbox Set Selector Value (all)](#GetCheckboxSetSelectorValueAll) | Returns the 'select all' checkbox value. The returned value is 'true' when the checkbox is checked, false otherwise. |
+| [Get Simple Checkbox Set Selector Value](#GetSimpleCheckboxSetSelectorValue) | Returns the current value of a checkbox in a set selector widget found by entity attribute value. The returned value is 'true' when the checkbox is checked, false otherwise. |
+| [Get Grid Selector Box Value](#GetGridSelectorBoxValue) | Returns the current value of checkbox/radio button for a given row and column captions in a grid selector. The returned value is 'true' if the checkbox/radio button is checked, false otherwise. |
 | [Get Dialog Message Text](#GetDialogMessageText) | Get the text from message and confirmation dialogs. |
 
 ### Get Validation Message {#GetValidationMessage}
@@ -434,7 +434,7 @@ GetCheckboxValue
 
 #### Description
 
-Returns true if the check box is checked, false otherwise.
+Returns true if the checkbox is checked, false otherwise.
 
 #### Input Parameters
 
@@ -501,9 +501,9 @@ GetCheckboxSetSelectorValue
 
 #### Description
 
-Finds a check box by column caption and cell value and returns its value.   
+Finds a checkbox by column caption and cell value and returns its value.   
 
-The returned value is 'true' when the check box is checked, false otherwise.
+The returned value is 'true' when the checkbox is checked, false otherwise.
 
 #### Input Parameters
 
@@ -515,7 +515,7 @@ The returned value is 'true' when the check box is checked, false otherwise.
 
 #### Return Value
 
-*Boolean* If true then checks the check box/radio button, otherwise clears it.
+*Boolean* If true then checks the checkbox/radio button, otherwise clears it.
 
 ### Get Checkbox Set Selector Value (all) {#GetCheckboxSetSelectorValueAll}
 
@@ -525,9 +525,9 @@ GetCheckboxSetSelectorValueAll
 
 #### Description
 
-Returns the 'select all' check box value.   
+Returns the 'select all' checkbox value.   
 
-The returned value is 'true' when the check box is checked, false otherwise.
+The returned value is 'true' when the checkbox is checked, false otherwise.
 
 #### Input Parameters
 
@@ -537,7 +537,7 @@ The returned value is 'true' when the check box is checked, false otherwise.
 
 #### Return Value
 
-*Boolean* If true then checks the check box/radio button, otherwise clears it.
+*Boolean* If true then checks the checkbox/radio button, otherwise clears it.
 
 ### Get Simple Checkbox Set Selector Value {#GetSimpleCheckboxSetSelectorValue}
 
@@ -547,9 +547,9 @@ GetSimpleCheckboxSetSelectorValue
 
 #### Description
 
-Returns the current value of a check box in a set selector widget found by entity attribute value.   
+Returns the current value of a checkbox in a set selector widget found by entity attribute value.   
 
-The returned value is 'true' when the check box is checked, false otherwise.
+The returned value is 'true' when the checkbox is checked, false otherwise.
 
 #### Input Parameters
 
@@ -560,7 +560,7 @@ The returned value is 'true' when the check box is checked, false otherwise.
 
 #### Return Value
 
-*Boolean* If true then checks the check box/radio button, otherwise clears it.
+*Boolean* If true then checks the checkbox/radio button, otherwise clears it.
 
 ### Get Grid Selector Box Value {#GetGridSelectorBoxValue}
 
@@ -570,9 +570,9 @@ GetGridSelectorBoxValue
 
 #### Description
 
-Returns the current value of check box/radio button for a given row and column captions in a grid selector.   
+Returns the current value of checkbox/radio button for a given row and column captions in a grid selector.   
 
-The returned value is 'true' if the check box/radio button is checked, false otherwise.
+The returned value is 'true' if the checkbox/radio button is checked, false otherwise.
 
 #### Input Parameters
 
@@ -584,7 +584,7 @@ The returned value is 'true' if the check box/radio button is checked, false oth
 
 #### Return Value
 
-*Boolean* If true then checks the check box/radio button, otherwise clears it.
+*Boolean* If true then checks the checkbox/radio button, otherwise clears it.
 
 ### Get Dialog Message Text {#GetDialogMessageText}
 
@@ -614,13 +614,13 @@ Check if a Mendix widget value such as text and selection match an expected valu
 | ----------------- | -------------- |
 | [Assert Validation Message](#AssertValidationMessageNegetable) | Asserts that the validation message for a certain widget contains the specified text. |
 | [Assert Active Tab Name](#AssertActiveTabNameNegetable) | Assert a certain value for the name of the active tab page. |
-| [Assert Checkbox Value](#AssertCheckboxValueNegetable) | Assert the value of a check box. |
+| [Assert Checkbox Value](#AssertCheckboxValueNegetable) | Assert the value of a checkbox. |
 | [Assert Value](#AssertValueNegetable) | Asserts the current value of all supported widgets. Supported widgets: text box, text area, drop-down, radio button, date picker, reference selector, search input text, search input drop-down, label, input reference set selector, OnChange Inputbox, BooleanSlider, BootstrapWysiwygEditor (Bootstrap RTE), CKEditor For Mendix, InputReferenceSelector, RadiobuttonList,  Switch, AutoComplete, Format String, Custom String. |
 | [Dropdown has Option](#DropdownHasOption) | Returns true if the given value is available in a drop-down menu. Supported widgets: drop-down, reference selector, search input drop-down. |
-| [Assert Checkbox Set Selector Value](#AssertCheckboxSetSelectorValue) | Finds a check box by entity attribute value and asserts that the check box is set to a given value. |
-| [Assert Checkbox Set Selector Value](#AssertCheckboxSetSelectorValueNegetable) | Finds a check box by entity attribute value and asserts that the check box is set to a given value. |
-| [Assert Simple Checkbox Set Selector Value](#AssertSimpleCheckboxSetSelectorValueNegetable) | Asserts that the check box found by given entity attribute value is checked/cleared. |
-| [Assert Grid Selector Value](#AssertGridSelectorValueNegetable) | Asserts the value of check box/radio button for a given column and row captions in a grid selector. |
+| [Assert Checkbox Set Selector Value](#AssertCheckboxSetSelectorValue) | Finds a checkbox by entity attribute value and asserts that the checkbox is set to a given value. |
+| [Assert Checkbox Set Selector Value](#AssertCheckboxSetSelectorValueNegetable) | Finds a checkbox by entity attribute value and asserts that the checkbox is set to a given value. |
+| [Assert Simple Checkbox Set Selector Value](#AssertSimpleCheckboxSetSelectorValueNegetable) | Asserts that the checkbox found by given entity attribute value is checked/cleared. |
+| [Assert Grid Selector Value](#AssertGridSelectorValueNegetable) | Asserts the value of checkbox/radio button for a given column and row captions in a grid selector. |
 
 ### Assert Validation Message {#AssertValidationMessageNegetable}
 
@@ -676,14 +676,14 @@ AssertCheckboxValueNegetable
 
 #### Description
 
-Assert the value of a check box.
+Assert the value of a checkbox.
 
 #### Input Parameters
 
 | Name | Key | Datatype | Description |
 | ----- | ---- | ---------- | -------------- |
 | Widget Name | WidgetName | String | *Required* The name that was assigned in Studio Pro to that widget, for example, 'textBox1'. Use the 'ATS Helper' bookmarklet to see the names of different widgets in you page. For further qualification you can additionally put in the names of surrounding widgets  separated by a single space, for example, 'dataView1 textBox1'. |
-| Value | Value | Boolean | *Required* Expected status of the check box. A checked check box corresponds to 'true'. |
+| Value | Value | Boolean | *Required* Expected status of the checkbox. A checked checkbox corresponds to 'true'. |
 | Search Context | SearchContext | WebElement | *Optional* Limits the search of the widget to this web element and its children. Can be used to dynamically restrict the search at runtime,  for instance to a certain template grid item. |
 | Negate | NegateParameter | Boolean | *Required* Negetes the asssert |
 
@@ -748,7 +748,7 @@ AssertCheckboxSetSelectorValue
 
 #### Description
 
-Finds a check box by entity attribute value and asserts that the check box is set to a given value.
+Finds a checkbox by entity attribute value and asserts that the checkbox is set to a given value.
 
 #### Input Parameters
 
@@ -757,7 +757,7 @@ Finds a check box by entity attribute value and asserts that the check box is se
 | Widget Name | WidgetName | String | *Required* The name that was assigned in Studio Pro to that widget, for example, 'textBox1'. Use the 'ATS Helper' bookmarklet to see the names of different widgets in you page. For further qualification you can additionally put in the names of surrounding widgets  separated by a single space, for example, 'dataView1 textBox1'. |
 | Column Caption | ColumnCaption | String | *Required* Used to identify a column by it's caption in a set/grid selector widget. The caption should match the label as shown in the browser. |
 | Value | Value | String | *Required* The entitiy attribute value which is used to find the correct row in the widget. |
-| Checked | Checked | Boolean | *Required* Expected status of a check box/radio button. A checked check box(radio button corresponds to the value 'true'. |
+| Checked | Checked | Boolean | *Required* Expected status of a checkbox/radio button. A checked checkbox(radio button corresponds to the value 'true'. |
 
 #### Return Value
 
@@ -771,7 +771,7 @@ AssertCheckboxSetSelectorValueNegetable
 
 #### Description
 
-Finds a check box by entity attribute value and asserts that the check box is set to a given value.
+Finds a checkbox by entity attribute value and asserts that the checkbox is set to a given value.
 
 #### Input Parameters
 
@@ -780,7 +780,7 @@ Finds a check box by entity attribute value and asserts that the check box is se
 | Widget Name | WidgetName | String | *Required* The name that was assigned in Studio Pro to that widget, for example, 'textBox1'. Use the 'ATS Helper' bookmarklet to see the names of different widgets in you page. For further qualification you can additionally put in the names of surrounding widgets  separated by a single space, for example, 'dataView1 textBox1'. |
 | Column Caption | ColumnCaption | String | *Required* Used to identify a column by it's caption in a set/grid selector widget. The caption should match the label as shown in the browser. |
 | Value | Value | String | *Required* The entitiy attribute value which is used to find the correct row in the widget. |
-| Checked | Checked | Boolean | *Required* Expected status of a check box/radio button. A checked check box(radio button corresponds to the value 'true'. |
+| Checked | Checked | Boolean | *Required* Expected status of a checkbox/radio button. A checked checkbox(radio button corresponds to the value 'true'. |
 | Negate | NegateParameter | Boolean | *Required* Negetes the asssert |
 
 #### Return Value
@@ -795,7 +795,7 @@ AssertSimpleCheckboxSetSelectorValueNegetable
 
 #### Description
 
-Asserts that the check box found by given entity attribute value is checked/cleared.
+Asserts that the checkbox found by given entity attribute value is checked/cleared.
 
 #### Input Parameters
 
@@ -803,7 +803,7 @@ Asserts that the check box found by given entity attribute value is checked/clea
 | ----- | ---- | ---------- | -------------- |
 | Widget Name | WidgetName | String | *Required* The name that was assigned in Studio Pro to that widget, for example, 'textBox1'. Use the 'ATS Helper' bookmarklet to see the names of different widgets in you page. For further qualification you can additionally put in the names of surrounding widgets  separated by a single space, for example, 'dataView1 textBox1'. |
 | Value | Value | String | *Required* The entitiy attribute value which is used to find the correct row in the widget. |
-| Checked | Checked | Boolean | *Required* Expected status of a check box/radio button. A checked check box(radio button corresponds to the value 'true'. |
+| Checked | Checked | Boolean | *Required* Expected status of a checkbox/radio button. A checked checkbox(radio button corresponds to the value 'true'. |
 | Negate | NegateParameter | Boolean | *Required* Negetes the asssert |
 
 #### Return Value
@@ -818,7 +818,7 @@ AssertGridSelectorValueNegetable
 
 #### Description
 
-Asserts the value of check box/radio button for a given column and row captions in a grid selector.
+Asserts the value of checkbox/radio button for a given column and row captions in a grid selector.
 
 #### Input Parameters
 
@@ -827,7 +827,7 @@ Asserts the value of check box/radio button for a given column and row captions 
 | Widget Name | WidgetName | String | *Required* The name that was assigned in Studio Pro to that widget, for example, 'textBox1'. Use the 'ATS Helper' bookmarklet to see the names of different widgets in you page. For further qualification you can additionally put in the names of surrounding widgets  separated by a single space, for example, 'dataView1 textBox1'. |
 | Column Caption | ColumnCaption | String | *Required* Used to identify a column by it's caption in a set/grid selector widget. The caption should match the label as shown in the browser. |
 | Row Caption | RowCaption | String | *Required* Used to identify a row by it's caption in a grid selector widget. The caption should match the label as shown in the browser. |
-| Checked | Checked | Boolean | *Required* Expected status of a check box/radio button. A checked check box(radio button corresponds to the value 'true'. |
+| Checked | Checked | Boolean | *Required* Expected status of a checkbox/radio button. A checked checkbox(radio button corresponds to the value 'true'. |
 | Negate | NegateParameter | Boolean | *Required* Negetes the asssert |
 
 #### Return Value
@@ -847,10 +847,10 @@ Find Mendix widgets and their child elements in the browser window by identifier
 | [Find Item/Row (by child element)](#FindItemRowByChildElement) | Returns a row/item of a template grid, data grid or list view, which contains the specified element. |
 | [Find/Assert Selected Item/Row](#FindSelectedItemRowNegetable) | Finds/asserts the first selected item/row as a web element. |
 | [Find/Assert Widget](#FindAssertWidgetNegetable) | Finds/asserts a Mendix widget by its given name and optionally value.  |
-| [Find/Assert Checkbox Set Selector](#FindCheckboxSetSelectorNegetable) | Finds/asserts a check box by a given cell value and column caption. Returns the first match. |
+| [Find/Assert Checkbox Set Selector](#FindCheckboxSetSelectorNegetable) | Finds/asserts a checkbox by a given cell value and column caption. Returns the first match. |
 | [Find Checkbox Set Selector (all)](#FindCheckboxSetSelectorAll) | Returns the 'select all' checkbox for a set selector widget. |
-| [Find/Assert Simple Checkbox Set Selector](#FindSimpleCheckboxSetSelectorNegetable) | Finds/asserts the check box by the given entity attribute value. |
-| [Find/Assert Grid Selector](#FindGridSelectorNegetable) | Finds/asserts a check box/radio button for a given column and row captions in a grid selector widget. |
+| [Find/Assert Simple Checkbox Set Selector](#FindSimpleCheckboxSetSelectorNegetable) | Finds/asserts the checkbox by the given entity attribute value. |
+| [Find/Assert Grid Selector](#FindGridSelectorNegetable) | Finds/asserts a checkbox/radio button for a given column and row captions in a grid selector widget. |
 | [Find/Assert Dialog](#FindAssertDialogNegetable) | Finds/asserts a dialog by title or type. Supported widgets: window, dialog message, confirmation dialog. |
 
 ### Find/Assert Widget Child Node {#FindWidgetChildNodeNegetable}
@@ -1041,7 +1041,7 @@ FindCheckboxSetSelectorNegetable
 
 #### Description
 
-Finds/asserts a check box by a given cell value and column caption. Returns the first match.
+Finds/asserts a checkbox by a given cell value and column caption. Returns the first match.
 
 #### Input Parameters
 
@@ -1084,7 +1084,7 @@ FindSimpleCheckboxSetSelectorNegetable
 
 #### Description
 
-Finds/asserts the check box by the given entity attribute value.
+Finds/asserts the checkbox by the given entity attribute value.
 
 #### Input Parameters
 
@@ -1106,7 +1106,7 @@ FindGridSelectorNegetable
 
 #### Description
 
-Finds/asserts a check box/radio button for a given column and row captions in a grid selector widget.
+Finds/asserts a checkbox/radio button for a given column and row captions in a grid selector widget.
 
 #### Input Parameters
 
@@ -1164,11 +1164,11 @@ Interact with data grid controls (for example, search), menu items and group-box
 | [Open GroupBox](#OpenGroupBox) | Opens a group box. |
 | [Sort DataGrid](#SortDataGrid) | Sorts a data grid by a given column. |
 | [Toggle BooleanSlider Value](#ToggleBooleanSliderValue) | Toggles the value of a Booleanslider. |
-| [Toggle Checkbox Set Selector](#ToggleCheckboxSetSelector) | Finds a check box by a given entity attribute and inverses the value. |
-| [Toggle Checkbox Set Selector (all)](#ToggleCheckboxSetSelectorAll) | Inverses the 'select all' check box. |
-| [Toggle Checkbox Value](#ToggleCheckboxValue) | Clicks on a check box to toggle its value. |
-| [Toggle Grid Selector Checkbox Value](#ToggleGridSelectorCheckboxValue) | Inverses the check box found by a given column and row caption. |
-| [Toggle Simple Checkbox Set Selector Value](#ToggleSimpleCheckboxSetSelectorValue) | Inverses the value of the check box found by a given entity attribute value. |
+| [Toggle Checkbox Set Selector](#ToggleCheckboxSetSelector) | Finds a checkbox by a given entity attribute and inverses the value. |
+| [Toggle Checkbox Set Selector (all)](#ToggleCheckboxSetSelectorAll) | Inverses the 'select all' checkbox. |
+| [Toggle Checkbox Value](#ToggleCheckboxValue) | Clicks on a checkbox to toggle its value. |
+| [Toggle Grid Selector Checkbox Value](#ToggleGridSelectorCheckboxValue) | Inverses the checkbox found by a given column and row caption. |
+| [Toggle Simple Checkbox Set Selector Value](#ToggleSimpleCheckboxSetSelectorValue) | Inverses the value of the checkbox found by a given entity attribute value. |
 | [Cancel Dialog](#CancelDialog) | Clicks 'Cancel' on a confirmation dialog. The dialog can optionally be constrained by name or type. |
 | [Close Dialog](#CloseDialog) | Clicks the 'X' button on a confirmation, error, warning or info dialog box. The dialog can optionally be constrained by name or type. |
 | [Confirm Dialog](#ConfirmDialog) | Clicks the 'Proceed/Ok' button on a confirmation, error, warning or info dialog box. The dialog can optionally be constrained by name or type. |
@@ -1395,7 +1395,7 @@ ToggleCheckboxSetSelector
 
 #### Description
 
-Finds a check box by a given entity attribute and inverses the value.
+Finds a checkbox by a given entity attribute and inverses the value.
 
 #### Input Parameters
 
@@ -1417,7 +1417,7 @@ ToggleCheckboxSetSelectorAll
 
 #### Description
 
-Inverses the 'select all' check box.
+Inverses the 'select all' checkbox.
 
 #### Input Parameters
 
@@ -1437,7 +1437,7 @@ ToggleCheckboxValue
 
 #### Description
 
-Clicks on a check box to toggle its value.
+Clicks on a checkbox to toggle its value.
 
 #### Input Parameters
 
@@ -1458,7 +1458,7 @@ ToggleGridSelectorCheckboxValue
 
 #### Description
 
-Inverses the check box found by a given column and row caption.
+Inverses the checkbox found by a given column and row caption.
 
 #### Input Parameters
 
@@ -1480,7 +1480,7 @@ ToggleSimpleCheckboxSetSelectorValue
 
 #### Description
 
-Inverses the value of the check box found by a given entity attribute value.
+Inverses the value of the checkbox found by a given entity attribute value.
 
 #### Input Parameters
 
@@ -1748,7 +1748,7 @@ Uses the Selenium web driver to interact with the browser and the native html el
 | [Get Selected Option Text](#GetSelectedOptionText) | Returns the text of the first selected option in a select element. |
 | [Get Text](#GetText) | Get the visible, meaning, not hidden by CSS, innerText of this element, including sub-elements, without any leading or trailing whitespace. |
 | [Is Element Displayed](#IsElementDisplayed) | Returns true if an element is displayed, meaning, visible. |
-| [Is Selected](#IsSelected) | Check whether a check box is selected. |
+| [Is Selected](#IsSelected) | Check whether a checkbox is selected. |
 | [Maximize](#Maximize) | Maximizes the current browser window. |
 | [Switch to Window](#SwitchToWindow) | Switch to window via its identifier. An error is thrown if the window is not found. |
 | [Switch to Next Window](#SwitchToNextWindow) | Switch to the next open window. An error is thrown if there is only one window. Returns the window handle, meaning, identifier, of the new active window. |
@@ -2172,7 +2172,7 @@ IsSelected
 
 #### Description
 
-Check whether a check box is selected.
+Check whether a checkbox is selected.
 
 #### Input Parameters
 

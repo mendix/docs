@@ -41,7 +41,7 @@ Store the generated value `{GENERATED_PAT}` somewhere safe so you can use it to 
 Each request must contain an `Authorization` header with the value `MxToken {GENERATED_PAT}`. For example:
 
 ```http {linenos=false}
-GET /api/v3/clusters HTTP/1.1
+GET /apps/80a28d6e-c5fc-43d9-87c2-d7d56b07542/webhooks HTTP/1.1
 Authorization: MxToken 7LJE…vk
 ```
 
@@ -61,14 +61,14 @@ The following procedure will create a webhook endpoint and update the webhook en
    POST /apps/80a28d6e-c5fc-43d9-87c2-d7d56b07542e/webhooks
    ```
 
-   The API call returns `id`, `name`, `url`, `eventTypes`, `isActive`, `validationSecret` and `headers` of the new webhook, together with a `200` code.
+   The API call returns `id`, `name`, `url`, `eventTypes`, `isActive`, `validationSecret` and `headers` of the new webhook, together with status code `200`.
 
-3. To update the new wehbook, call `/apps/{app-id}/webhooks/{webhook-id}`, with a request body. For example:
+3. To update the new webhook, call `PUT /apps/{app-id}/webhooks/{webhook-id}`, with a request body. For example:
 
     *  API call:
 
         ```http {linenos=false}
-        POST /apps/80a28d6e-c5fc-43d9-87c2-d7d56b07542e/webhooks/msg_2M605iBQRge9hTgpYg7fKXQubaw
+        PUT /apps/80a28d6e-c5fc-43d9-87c2-d7d56b07542e/webhooks/msg_2M605iBQRge9hTgpYg7fKXQubaw
         ```
     *  Request body:
 
@@ -90,9 +90,8 @@ The following procedure will create a webhook endpoint and update the webhook en
         }
         ```
 
-        If the update succeeds, you should receive a `202` code.
+    If the update succeeds, you should receive status code `202`. You can get the updated webhook details by calling `GET apps/{app-id}/webhooks/{webhook-id}`.
 
-    {{% todo %}}Use get webhook to double-check the updated info?{{% /todo %}}
 
 ## 4 API Reference
 

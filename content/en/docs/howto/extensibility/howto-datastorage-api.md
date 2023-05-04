@@ -54,9 +54,25 @@ Finally, you should define how you want to display the microflow in the microflo
 
 {{< figure src="/attachments/howto/extensibility/howto-datastorage-api/image007.png" >}}
 
-The implementation of this Java action is pretty straight forward; you can use the [Core.retrieveXPathQuery](https://apidocs.rnd.mendix.com/7/runtime/com/mendix/core/Core.html#retrieveXPathQuery-com.mendix.systemwideinterfaces.core.IContext-java.lang.String-) API to execute your XPath expression and return a list of Mendix objects.
+The implementation of this Java action is pretty straight forward; you can use the [Core.createXPathQuery](https://apidocs.rnd.mendix.com/10/runtime/com/mendix/core/Core.html#createXPathQuery(java.lang.String)) API to execute your XPath expression and return a list of Mendix objects.
 
 The implementation also validates that the list returned contains objects of the entity specified.
+
+```java {linenos=false}
+@Override
+public java.util.List<IMendixObject> executeAction() throws Exception
+{
+    //BEGIN USER CODE
+    List<IMendixObject> result = null;
+    result = Core.createXPathQuery(this.XPath).execute(getContext());
+    if (!result.isEmpty() && !result.get(0).getMetaObject().getName().equals(this.ResultEntity)) {
+        throw new MendixRuntimeException(String.format("Unexpected result entity: %s vs %s",
+            result.get(0).getMetaObject().getName(), this.ResultEntity));
+    }
+    return result;
+    // END USER CODE
+}
+```
 
 {{< figure src="/attachments/howto/extensibility/howto-datastorage-api/image009.png" >}}
 

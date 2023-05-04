@@ -181,7 +181,7 @@ These release notes cover changes made to the [Mendix Data Hub Catalog](/data-hu
 
 #### Improvements
 
-* You can now filter by content you own in the Catalog. Click **Filter** to add filters, and select the **Owned by me** check box in the **Ownership** section.
+* You can now filter by content you own in the Catalog. Click **Filter** to add filters, and select the **Owned by me** checkbox in the **Ownership** section.
 
 ### September 15th, 2022
 

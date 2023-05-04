@@ -5,7 +5,7 @@ url: /addons/ats-addon/rg-one-find-simple-checkbox-set-selector/
 
 ## 1 Description
 
-Finds the check box by the given value.
+Finds the checkbox by the given value.
 
 ## 2 Supported Widgets
 
@@ -13,17 +13,17 @@ Finds the check box by the given value.
 
 ## 3 Usage
 
-Pass the name of the widget and the value connected to the check box.
+Pass the name of the widget and the value connected to the checkbox.
 
 ## 4 Input Parameters
 
 Name | Datatype | Required | Description
 ---- | -------- | -------- | ---------------
 Widget Name | String | Yes | The name of the Simple Checkbox Set Selector widget.
-Value | String | Yes | The value connected to the check box.
+Value | String | Yes | The value connected to the checkbox.
 
 ## 5 Return Value
 
 Name | Datatype | Description
 ---- | --------- | ---------------
-Checkbox | WebElement | The found check box.
+Checkbox | WebElement | The found checkbox.

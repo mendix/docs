@@ -197,7 +197,7 @@ This upgrade of the hybrid app package includes an upgrade to v2 of the [Cordova
 
 As a result of this, Mendix hybrid apps that employ push notifications can no longer be built directly using the Phonegap Build method. Instead, you will need to prepare the hybrid app package locally by following the [Do It Yourself](/developerportal/deploy/mobileapp/#doing-it-yourself) section of the *Mobile App Guide*.
 
-If your app does not employ push notifications, you can still use the Phonegap Build workflow. Please make sure you clear the **Push Notifications** check box in the **Permissions** section of the **Deploy** > [Mobile App](/developerportal/deploy/mobileapp/) page in the Developer Portal.
+If your app does not employ push notifications, you can still use the Phonegap Build workflow. Please make sure you clear the **Push Notifications** checkbox in the **Permissions** section of the **Deploy** > [Mobile App](/developerportal/deploy/mobileapp/) page in the Developer Portal.
 
 #### Other Fixes
 

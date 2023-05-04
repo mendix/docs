@@ -67,7 +67,7 @@ The [Team Server](/developerportal/collaborate/team-server/) is implemented usin
 
 ## 4 Mendix Studio
 
-[Mendix Studio](/studio8/) is optimized for use with Google Chrome. While Chrome is the officially supported browser, you can also use Mendix Studio with other popular browsers like Mozilla Firefox, Apple Safari, and Microsoft Edge. 
+Mendix Studio is optimized for use with Google Chrome. While Chrome is the officially supported browser, you can also use Mendix Studio with other popular browsers like Mozilla Firefox, Apple Safari, and Microsoft Edge. 
 
 {{% alert color="info" %}}
 The browser you use needs to have JavaScript turned on.

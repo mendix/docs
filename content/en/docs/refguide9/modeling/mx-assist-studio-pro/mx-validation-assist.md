@@ -30,7 +30,7 @@ The Validation Assist is activated by default in the page elements where data va
     * **Text box**
     * **Text area**
     * **Drop-down**
-    * **Check box**
+    * **Checkbox**
     * **Radio button**
     * **Date picker**
     * **Reference selector**

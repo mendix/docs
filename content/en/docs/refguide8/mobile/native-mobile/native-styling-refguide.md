@@ -419,11 +419,11 @@ The widget’s render hierarchy is as follows for uniform:
 | `selectedItem` | This has all TextStyle properties | Styles the selected item in dropdown menu (with Studio Pro v8.11).|
 | `selectedItemContainer` | This has all ViewStyle properties | Styles the selected item's container in dropdown menu (with Studio Pro v8.11).|
 
-### 6.4 Check Box 
+### 6.4 Checkbox 
 
-A check box input widget can be used to display and edit Boolean attributes and is rendered as a switch. This is how a check box widget could look in an app:
+A checkbox input widget can be used to display and edit Boolean attributes and is rendered as a switch. This is how a checkbox widget could look in an app:
 
-{{< figure src="/attachments/refguide8/mobile/native-mobile/native-styling-refguide/check-box.png" alt="check box"   width="350"  >}}
+{{< figure src="/attachments/refguide8/mobile/native-mobile/native-styling-refguide/check-box.png" alt="checkbox"   width="350"  >}}
 
 The widget’s style properties structure is as follows:
 
@@ -455,13 +455,13 @@ The widget’s style properties structure is as follows:
 | `input` | `thumbColorOn` | Color of the foreground switch grip when turned on. If this is set on iOS, the switch grip will lose its drop shadow. |
 | `input` | `thumbColorOff` | Color of the foreground switch grip when turned off. If this is set on iOS, the switch grip will lose its drop shadow. |
 | `inputError` | This has the same properties as `input` | Overrides `input` styles if there are validation errors. |
-| `inputDisabled` | This has the same properties as `input` | Overrides `input` styles if the check box is non-editable. |
+| `inputDisabled` | This has the same properties as `input` | Overrides `input` styles if the checkbox is non-editable. |
 | `label` | This has all TextStyle properties   |  |
 | `label` | `numberOfLines` | The maximum number of lines to wrap the label text. If the text is any longer it will be cut off with an ellipsis. Defaults to `1`. |
-| `labelDisabled` | Same properties as `label` | Overrides `label` styles if the check box is non-editable. |
+| `labelDisabled` | Same properties as `label` | Overrides `label` styles if the checkbox is non-editable. |
 | `validationMessage` | This has all TextStyle properties.   |  |
 
-The default class to style all check box inputs is named `Checkbox`.
+The default class to style all checkbox inputs is named `Checkbox`.
 
 ### 6.5 Date Picker
 

@@ -230,14 +230,14 @@ Repeat this process for all the dataset fields you want to connect.
 
 ## 8 Data-Driven Results
 
-The following steps explain how to read and understand the results of a data-driven test case. An example is used in which the data-driven test case is already executed.
+The following steps explain how to read and understand the results of a data-driven test case. An example is used in which the data-driven test case is already run.
 
 1. Open your app and click the **Test Runs** menu item.
 2. Click the result of the data-driven test case.
 
     {{< figure src="/attachments/addons/ats-addon/ht/v2/ht-two-create-datadriven-test-case/test-runs-data-driven-test-case.png" >}}
 
-    This opens the **Result Log** page, where ATS displays the result of each executed record.
+    This opens the **Result Log** page, where ATS displays the result of each run record.
 
 3. Click one of the results:
 

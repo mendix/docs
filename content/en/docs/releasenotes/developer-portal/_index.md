@@ -17,6 +17,13 @@ To see the current status of the Mendix Developer Portal and Control Center, see
 
 ## 2023
 
+### May 4th, 2023
+
+#### Fixes
+
+* We fixed an issue where under certain circumstances you were not able to retry to [migrate your repository to Git](/developerportal/collaborate/migrate-to-git/) if the first try resulted in errors.
+* We fixed an issue where a redirect to a user story that is linked to a feedback item would result in an error if this story is hosted by [Epics](/developerportal/collaborate/epics/).
+
 ### April 20th, 2023
 
 #### Improvements
@@ -33,11 +40,11 @@ To see the current status of the Mendix Developer Portal and Control Center, see
 #### Improvements
 
 * We added the following features to [Epics](/developerportal/collaborate/epics/):
-  * You can now add, rename, and delete tags, as well as change tag colors (21 colors to choose from!).
-  * You can now create, link, or remove stories directly from an epic.
-  * The address bar in your browser now shows the link to the exact board, story, and epic, so you can bookmark individual pages and easily come back to them.
-  * If you use Scrum, you can now see a summary of your completed sprint on the [archived Sprint details](/developerportal/collaborate/epics/#archived-sprint-details) page. You can see how many stories were completed and uncompleted, as well as the breakdown of completed points in the Sprint.
-  * You can now [import](/developerportal/collaborate/epics/#import-stories) and [export](/developerportal/collaborate/epics/#export-archived-stories) stories using Excel files.
+    * You can now add, rename, and delete tags, as well as change tag colors (21 colors to choose from!).
+    * You can now create, link, or remove stories directly from an epic.
+    * The address bar in your browser now shows the link to the exact board, story, and epic, so you can bookmark individual pages and easily come back to them.
+    * If you use Scrum, you can now see a summary of your completed sprint on the [archived Sprint details](/developerportal/collaborate/epics/#archived-sprint-details) page. You can see how many stories were completed and uncompleted, as well as the breakdown of completed points in the Sprint.
+    * You can now [import](/developerportal/collaborate/epics/#import-stories) and [export](/developerportal/collaborate/epics/#export-archived-stories) stories using Excel files.
 
 #### Fixes
 

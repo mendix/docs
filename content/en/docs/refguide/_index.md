@@ -8,7 +8,7 @@ no_list: false
 description_list: true
 cascade:
     - space: "Studio Pro 10 Guide"
-    - mendix_version: "10"
+    - mendix_version: 10
     - banner: "Mendix 10 is currently in Beta."
     - sitemap:
         priority: 0.8

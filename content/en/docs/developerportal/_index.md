@@ -8,7 +8,7 @@ no_list: false
 description_list: true
 cascade:
     - space: "Developer Portal Guide"
-    - mendix_version: ""
+    - mendix_version: 10
 #To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 #This document is mapped to the landing page, update the link there if renaming or moving the doc file.

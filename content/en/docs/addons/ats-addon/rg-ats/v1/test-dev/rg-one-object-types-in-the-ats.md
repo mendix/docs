@@ -10,7 +10,7 @@ In ATS, a test can consist of test cases, test suites and actions. There are als
 
 ## 2 Test Case
 
-Test cases are being built up by actions and are designed to test one specific requirement of your app. Since actions are Mendix agnostic, you can use a working test case on different Mendix versions of your app – given you did not add any changes to the app, of course. Your test cases are therefore reusable, reducing the regression test effort significantly. Test cases can be executed by ATS (actions can’t).
+Test cases are being built up by actions and are designed to test one specific requirement of your app. Since actions are Mendix agnostic, you can use a working test case on different Mendix versions of your app – given you did not add any changes to the app, of course. Your test cases are therefore reusable, reducing the regression test effort significantly. Test cases can be completed by ATS (actions can’t).
 
 Test cases are built by utilizing a set of predefined actions, allowing to easily create and manage software test cases.
 
@@ -24,4 +24,4 @@ An action describes a clearly defined set of steps in a test case. Actions exist
 
 ## 4 Test Suite
 
-Test suites are basically lists that can contain other test suites as well as test cases. You can even mix test suites and test cases within the same test suite. Test suites are very handy to organize your test cases contextually and let them run in sequence. If one element of test suite fails, the test suite will continue to run the following elements. The failed test case will be marked as such in the *Reporting*. You can schedule test suites in the same way as you can schedule test cases. Please note that you need to respect the order of test suite elements, since those elements will be executed in strict sequence and thus need to fit together logically.
+Test suites are basically lists that can contain other test suites as well as test cases. You can even mix test suites and test cases within the same test suite. Test suites are very handy to organize your test cases contextually and let them run in sequence. If one element of test suite fails, the test suite will continue to run the following elements. The failed test case will be marked as such in the *Reporting*. You can schedule test suites in the same way as you can schedule test cases. Please note that you need to respect the order of test suite elements, since those elements will be completed in strict sequence and thus need to fit together logically.

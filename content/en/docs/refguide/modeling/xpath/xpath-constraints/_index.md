@@ -7,7 +7,7 @@ tags: ["studio pro"]
 
 ## 1 Introduction
 
-A constraint can be added to any Xpath query to filter the data retrieved. It should always take the form of a valid [expression](/refguide/xpath-expressions/). This should consist of one or more variables combined with [operators](/refguide/xpath-operators/), [functions](/refguide/xpath-constraint-functions/), [keywords or system variables](/refguide/xpath-keywords-and-system-variables/).
+A constraint can be added to any XPath query to filter the data retrieved. It should always take the form of a valid [expression](/refguide/xpath-expressions/). This should consist of one or more variables combined with [operators](/refguide/xpath-operators/), [functions](/refguide/xpath-constraint-functions/), [keywords or system variables](/refguide/xpath-keywords-and-system-variables/).
 
 For example, this query retrieves all customers whose name is equal to Jansen:
 
@@ -23,7 +23,7 @@ The syntax of XPath queries differs between Studio Pro and Java environments. In
 
 The following example shows how you should perform an XPath query in Studio Pro. You **Select** the entity `Sales.Customer` and then write the XPath constraint `[Name='Jansen']`:
 
-{{< figure src="/attachments/refguide/modeling/xpath/XPath-constraint-example.png" alt="Xpath constraint example in Studio Pro" width="400px" >}}
+{{< figure src="/attachments/refguide/modeling/xpath/XPath-constraint-example.png" alt="XPath constraint example in Studio Pro" width="400px" >}}
 
 Multiple constraints can be added to a single query, this is true for all queries with the exception of the `id` query. This is most commonly done by the simple expedient of opening a new set of brackets after closing the first.
 

@@ -86,7 +86,7 @@ The APM Measurements tool is measurements to linking business logic and is bridg
 
 The measurements can be used to trigger events on thresholds. For example, if more than 80% memory is used or if more than 80% of the CPU is used, a trigger fires. At some customers, support has configured a trigger on a model change so they are informed when a new deployment is done.
 
-The trigger can be to trap logging, or to execute a microflow, for example, to send an email or to make a heap dump.
+The trigger can be to trap logging, or to run a microflow, for example, to send an email or to make a heap dump.
 
 {{< figure src="/attachments/addons/apd-addon/rg-apd/rg-one-apm/Measurements_Tool.png" >}}
 

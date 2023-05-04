@@ -270,7 +270,7 @@ When you click **Run**, the **Monitoring / Results** page will open.
 
 {{< figure src="/attachments/addons/ats-addon/ht/v1/ht-one-getting-started/monitoring-results-pending.png" >}}
 
-Once your test case is executed, the result is shown here. For more information on results, see [Monitoring](/addons/ats-addon/rg-one-monitoring/).
+Once your test case is run, the result is shown here. For more information on results, see [Monitoring](/addons/ats-addon/rg-one-monitoring/).
 
 You have now finished the getting started guide for ATS. Please check the [how-to's](/addons/ats-addon/ht-one/) and [best practices](/addons/ats-addon/bp-one/) for more information.
 

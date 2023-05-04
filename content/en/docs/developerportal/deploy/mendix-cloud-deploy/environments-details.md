@@ -311,7 +311,7 @@ If you have issues which appear to be related to a content security policy, you 
 
 If you are deploying your apps to [Mendix Cloud Dedicated](/developerportal/deploy/#mendix-cloud-dedicated), all outgoing IP addresses are allowed by default.
 
-If you clear the **Allow all outgoing connections** check box, you can define which IP addresses and ports can be used for outgoing connections.
+If you clear the **Allow all outgoing connections** checkbox, you can define which IP addresses and ports can be used for outgoing connections.
 
 You can add or edit a number of different IP address and port combinations. Any ranges which have already been set up are listed here. You can do the following:
 

@@ -30,7 +30,7 @@ On the test step settings you can configure the following:
 
 **Change Action**
 
-Change the action that is executed in this step
+Change the action that is completed in this step
 
 **Open Action**
 

@@ -5,7 +5,7 @@ url: /addons/ats-addon/rg-one-get-simple-checkbox-set-selector-value/
 
 ## 1 Description
 
-Returns the current value of the found check box.
+Returns the current value of the found checkbox.
 
 ## 2 Supported Widgets
 
@@ -13,17 +13,17 @@ Returns the current value of the found check box.
 
 ## 3 Usage
 
-Pass the name of the widget and the value connected to the check box.
+Pass the name of the widget and the value connected to the checkbox.
 
 ## 4 Input Parameters
 
 Name | Datatype | Required | Description
 ---- | -------- | -------- | ---------------
 Widget Name | String | Yes | The name of the Simple Checkbox Set Selector widget.
-Value | String | yes | The value connected to the check box.
+Value | String | yes | The value connected to the checkbox.
 
 ## 5 Return Value
 
 Name | Datatype | Description
 ---- | --------- | ---------------
-Checked | Boolean | The current value of the check box.
+Checked | Boolean | The current value of the checkbox.

@@ -59,7 +59,7 @@ Some examples of questions you should ask yourself are:
 * How do I find the widget using visual components?
 * How do I trigger an event? (Clicking, entering text, etc.)
 
-Another example is with a check box. Do not set it using the JavaScript check function, but click it, because that's what a user would do. If you want to set the check box based on its current state, use the precondition and the click action. By doing this, you invest time in a more complex solution to save time later.
+Another example is with a checkbox. Do not set it using the JavaScript check function, but click it, because that's what a user would do. If you want to set the checkbox based on its current state, use the precondition and the click action. By doing this, you invest time in a more complex solution to save time later.
 
 ## 5 Building It Generically
 

@@ -187,6 +187,7 @@ $brand-danger: #e33f4e;
 You can now export the **mytheme** module from Studio Pro to re-use in your apps. Note that you need to add the `@import …` line to *theme/web/custom-variables.scss* for every app that imports the module. Therefore, we recommend you create a company starter app containing this change.
 
 To test the theme for all the widgets, page templates, and building blocks it can be helpful to use the Atlas Design System app as discussed in [Create a Company Design System](/howto/front-end/create-a-company-design-system/).
+
 #### 4.3.2 Native Mobile
 
 As an example, the following variables in *theme/native/custom-variables.js* will be made into a re-usable theme module:

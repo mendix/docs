@@ -70,7 +70,6 @@ The most commonly used attribute types can be used in your app. The types of the
 | String, Guid                   | String |
 | (Other)                        | (Ignored) |
 
-
 {{% alert color="warning" %}}
 When the OData endpoint contains operations, these are not imported in the consumed OData service. You can use a [Call REST service](/refguide/call-rest-action/) activity to call these operations.
 {{% /alert %}}
@@ -106,4 +105,3 @@ When you publish a self-referencing association, you can only publish one side o
 ### 3.6 Enumerations
 
 Enumeration types that have one or more members with a name that is not a valid [enumeration value name](/refguide/enumerations/#312-name) are not supported.
-

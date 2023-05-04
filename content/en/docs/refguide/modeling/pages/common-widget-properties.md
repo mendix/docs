@@ -27,7 +27,7 @@ The **Screen reader caption** property can be set on the following widgets:
 * [Text Box](/refguide/text-box/)
 * [Text Area](/refguide/text-area/)
 * [Drop-down](/refguide/drop-down/)
-* [Check Box](/refguide/check-box/)
+* [Checkbox](/refguide/check-box/)
 * [Radio Buttons](/refguide/radio-buttons/)
 * [Date Picker](/refguide/date-picker/)
 * [File Manager](/refguide/file-manager/)
@@ -101,7 +101,7 @@ With the following widgets, the Attribute (Path) specifies the attribute which i
 * [Text Box](/refguide/text-box/)
 * [Text Area](/refguide/text-area/)
 * [Drop-down](/refguide/drop-down/)
-* [Check Box](/refguide/check-box/)
+* [Checkbox](/refguide/check-box/)
 * [Radio Buttons](/refguide/radio-buttons/)
 * [Date Picker](/refguide/date-picker/)
 

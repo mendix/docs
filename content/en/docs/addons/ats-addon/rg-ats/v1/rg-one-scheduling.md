@@ -7,7 +7,7 @@ Scheduling allows to plan the execution of test cases and test suites at defined
 
 {{< figure src="/attachments/addons/ats-addon/rg-ats/v1/rg-one-scheduling/21168214.png" alt="Scheduler page" >}}
 
-Select a test case or test suite from the search dialog, provide a schedule date and time as well as a valid run configuration and application under test and click Save to add the item to the list of scheduled items. If the test case or test suite execution shall take place repeatedly, you can provide an interval after which the repeating will take place. The item will then repeatedly be executed until you mark it as inactive or until you remove the interval settings.
+Select a test case or test suite from the search dialog, provide a schedule date and time as well as a valid run configuration and application under test and click Save to add the item to the list of scheduled items. If the test case or test suite execution shall take place repeatedly, you can provide an interval after which the repeating will take place. The item will then repeatedly be completed until you mark it as inactive or until you remove the interval settings.
 
 {{< figure src="/attachments/addons/ats-addon/rg-ats/v1/rg-one-scheduling/newSchedule.png" alt="New schedule dialog" >}}
 
@@ -23,7 +23,7 @@ Set event to repeat after a set time
 
 **After**
 
-Set time when event is first executed
+Set time when event is first run
 
 **Every**
 
@@ -35,7 +35,7 @@ Set the application on which the test is run
 
 **Selenium Hub**
 
-Set the Selenium hub on which the test is executed
+Set the Selenium hub on which the test is run
 
 **Browser**
 

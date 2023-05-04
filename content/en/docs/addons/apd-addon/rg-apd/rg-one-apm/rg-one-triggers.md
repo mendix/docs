@@ -62,7 +62,7 @@ These are only visible with special permissions:
 
 ### 3.3 Trigger Continuation Tab
 
-The continuation tab enables configuration of what happens after the trigger has fired and the action has been executed.
+The continuation tab enables configuration of what happens after the trigger has fired and the action has been run.
 
 {{< figure src="/attachments/addons/apd-addon/rg-apd/rg-one-apm/rg-one-triggers/Trigger_Continuation.png" >}}
 

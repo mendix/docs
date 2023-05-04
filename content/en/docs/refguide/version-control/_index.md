@@ -42,6 +42,7 @@ Within the [Team Server](#team-server) each app is stored in a repository. This 
 A revision is the version of your app at a moment in time, stored on the [Team Server](#team-server).
 
 Each revision of your app is given a unique alphanumeric identifier which enables you to find it in future. A new revision is created from Studio Pro when the app is committed to the repository.
+
 ### 2.4 Working Copy {#working-copy}
 
 A working copy is the version of your app which is currently being worked on in Studio Pro. There is one working copy for each development line of the app. This model is held locally, on each computer where development work is taking place.

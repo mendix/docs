@@ -26,7 +26,7 @@ In the **Message** field, enter a message describing the changes you have made. 
 
 ### 4.1 Related Stories {#stories}
 
-On the **Related stories** tab page, select the check boxes next to the stories that are related to your commit. We recommend small sets of changes so that there is usually just one related story.
+On the **Related stories** tab page, select the checkboxes next to the stories that are related to your commit. We recommend small sets of changes so that there is usually just one related story.
 
 ### 4.2 Changes in Model
 

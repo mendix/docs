@@ -1565,6 +1565,40 @@ We recommend using *horizontal* pod autoscaling to adjust environments to meet d
 Vertical pod autoscaling cannot be combined with horizontal pod autoscaling.
 {{% /alert %}}
 
+### 5.7 Log format
+
+#### 5.7.1 Runtime log format{#runtime-log-format}
+
+Mendix Operator version 2.11.0 or above allows you to specify the log format used by Mendix apps.
+
+To specify the log format, add a `runtimeLogFormatType` entry to `OperatorConfiguration`:
+
+```yaml
+apiVersion: privatecloud.mendix.com/v1alpha1
+kind: OperatorConfiguration
+spec:
+  # ...
+  # Other configuration options values
+  # Optional: log format type
+  runtimeLogFormatType: json
+```
+
+You can set `runtimeLogFormatType` to one of the following values:
+
+* **plain**: – default option, produces plaintext logs in the following format:
+    ```
+    2023-03-21 14:36:14.607 INFO - M2EE: Added admin request handler '/prometheus' with servlet class 'com.mendix.metrics.prometheus.PrometheusServlet'
+    ```
+* **json**: – produces JSON logs in the following format:
+    ```json
+    {"node":"M2EE","level":"INFO","message":"Added admin request handler '/prometheus' with servlet class 'com.mendix.metrics.prometheus.PrometheusServlet'","timestamp":1679409374607}
+    ```
+
+{{% alert color="warning" %}}
+In the `json` format, newline characters will be sent as `\n` (as specified in the [JSON spec](https://www.json.org/json-en.html)). You might need to configure your log viewer tool to display `\n` as line breaks.
+For example, to correctly display newline characters in Grafana, use the [Escape newlines](https://github.com/grafana/grafana/pull/31352) button.
+{{% /alert %}}
+
 ## 6 Cluster and Namespace Management
 
 Once it is configured, you can manage your cluster and namespaces through the Developer Portal.

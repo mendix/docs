@@ -25,7 +25,7 @@ To integrate this in a Mendix app with the Mendix [Machine Learning Kit](/refgui
 
 2. This creates a model mapping, as displayed in this image:
 
-{{< figure src="/attachments/refguide/modeling/integration/ml-kit/ml-kit/logistic-regression/output-type.png" alt="Example of a logistic regression." >}}
+    {{< figure src="/attachments/refguide/modeling/integration/ml-kit/ml-kit/logistic-regression/output-type.png" alt="Example of a logistic regression." >}}
 
 3. Resolve any errors by [configuring dynamic tensor shapes](/refguide/machine-learning-kit/using-ml-kit/#dynamic-shapes).
 
@@ -35,15 +35,15 @@ Once you have imported the model, you can start working with it by calling it in
 
 1. Use the [Call ML model](/refguide/call-ml-model/) activity to call it in a microflow:
 
-{{< figure src="/attachments/refguide/modeling/integration/ml-kit/ml-kit/logistic-regression/call-ml-mapping.png" >}}
+    {{< figure src="/attachments/refguide/modeling/integration/ml-kit/ml-kit/logistic-regression/call-ml-mapping.png" >}}
 
 2. Create pre-processed inputs with **Create object** activity for inference inside your Mendix app. This activity is used for the first part in order to transfer entities from the domain model to the ML model input object:
 
-{{< figure src="/attachments/refguide/modeling/integration/ml-kit/ml-kit/logistic-regression/create-object.png" alt="Details of the log message in a microflow example." >}}
+    {{< figure src="/attachments/refguide/modeling/integration/ml-kit/ml-kit/logistic-regression/create-object.png" alt="Details of the log message in a microflow example." >}}
 
 3. You can then consume the inference output with microflow [expressions](/refguide/expressions/), using a **Create variable** activity:
 
-{{< figure src="/attachments/refguide/modeling/integration/ml-kit/ml-kit/logistic-regression/create-variable.png" alt="Details of the log message in a microflow example." >}}
+    {{< figure src="/attachments/refguide/modeling/integration/ml-kit/ml-kit/logistic-regression/create-variable.png" alt="Details of the log message in a microflow example." >}}
 
 The complete microflow for making the inference is below:
 

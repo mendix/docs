@@ -70,13 +70,13 @@ Customer shall not, unless permitted by the Export Regulations or respective gov
 
 Customer will not, without advance written authorization from SISW, use Freeware or Derivative Works for the development or production of integrated circuits at any semiconductor fabrication facility located in China meeting the criteria specified in the U.S. Export Administration Regulations, 15 C.F.R. 744.23.
 
-### 11.5 Information. Upon request by SISW
+### 11.5 Information
 
-Customer shall promptly provide SISW with all information pertaining to users, the intended use, and the location of use, or the final destination (in the case of Hardware, Documentation and technology) of the Freeware or Derivative Works. Customer will notify SISW prior to Customer disclosing any information to SISW that is defense-related or requires controlled or special handling pursuant to applicable government regulations and will use the disclosure tools and methods specified by SISW.
+Upon request by SISW, Customer shall promptly provide SISW with all information pertaining to users, the intended use, and the location of use, or the final destination (in the case of Hardware, Documentation and technology) of the Freeware or Derivative Works. Customer will notify SISW prior to Customer disclosing any information to SISW that is defense-related or requires controlled or special handling pursuant to applicable government regulations and will use the disclosure tools and methods specified by SISW.
 
 ### 11.6 Indemnification
 
-Customer will indemnify and hold harmless SISW, its affiliates, subcontractors, and their representatives against any claims, damages, fines, and costs (including attorney’s fees and expenses) relating in any way to Customer’s noncompliance with this Section 0, including Customer’s and its users’ and third party business partners’ violation or alleged violation of any Export Regulations and Customer will compensate SISW for all losses and expenses resulting thereof.
+Customer will indemnify and hold harmless SISW, its affiliates, subcontractors, and their representatives against any claims, damages, fines, and costs (including attorney’s fees and expenses) relating in any way to Customer’s noncompliance with this Section 11, including Customer’s and its users’ and third party business partners’ violation or alleged violation of any Export Regulations and Customer will compensate SISW for all losses and expenses resulting thereof.
 
 ### 11.7 Reservation
 

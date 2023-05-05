@@ -130,7 +130,7 @@ To configure the delete behavior, double-click the **Order_Customer** associatio
 Delete behavior includes objects which are in memory. This means that cascading delete or prevention of delete applies, even if the associated object has not been committed.
 {{% /alert %}}
 
-## 7 An example for Defining a Domain Model {#example-domain-model}
+## 7 An Example for Defining a Domain Model {#example-domain-model}
 
 In the above sections, you learn the basics of how to configure a domain model. In this section, we present an example for how you can define the domain model for an online shopping app.
 

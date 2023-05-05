@@ -196,9 +196,9 @@ In Studio Pro 9.24 and below, all types were supported implicitly because a busi
 
 ###### 4.2.1.2.1 Enumeration Attribute Type {#enum-att-type}
 
-In Studio Pro 9.24, consumers see enumerations as plain string. The names of the enumeration items are the values that are transmitted by the event broker to the subscribers. Enumerations cannot be modelled for new services in Studio Pro 9.24, but for converted earlier apps the functionality is maintained.
+In Studio Pro [9.24](/releasenotes/studio-pro/9.24/), consumers see enumerations as a plain string. The names of the enumeration items are the values that are transmitted by the event broker to the subscribers. Enumerations cannot be modelled for new services in Studio Pro 9.24, but for converted earlier apps the functionality is maintained.
 
-In Studio Pro 10 and above, enumerations are fully supported. The enumeration attribute type can be modelled, the enumeration items are stored in the exported async api document, when imported a new enumeration document will be created with the name '<attributeName>Enum’. The Caption and Image field are not transmitted to the importer of the Async Api document. Captions and images can be provided manually and will not cause conflicts when an Async api document is re-imported.
+In Studio Pro 10 and above, enumerations are fully supported. The enumeration attribute type can be modelled, the enumeration items are stored in the exported AsyncAPI document, when imported a new enumeration document will be created with the name '<attributeName>Enum’. The **Caption** and **Image** fields are not transmitted to the importer of the AsyncAPI document. Captions and images can be provided manually and will not cause conflicts when an AsyncAPI document is re-imported.
 
 #### 4.2.2 Using an Existing Business Event Service {#two-way-be-existing}
 
@@ -278,7 +278,7 @@ The **PublishedBusinessEvent** and **ConsumedBusinessEvent** entities are necess
 
 #### 4.3.3 Dead Letter Queue for Failed Messages {#dead-letter-queue}
 
-Every time a business event is received, it is transformed to match the Entity created as part of the Subscription. When the Entity within the Business Event has changed based on the imported AsyncAPI doucment, it can render the Entity unable to be processed. In such a scenario the Business Event will fail into a **Dead Letter Queue** which contains the representation of the Entity within the data column.
+Every time a business event is received, it is transformed to match the Entity created as part of the Subscription. When the Entity within the Business Event has changed based on the imported AsyncAPI document, it can render the Entity unable to be processed. In such a scenario the Business Event will fail into a **Dead Letter Queue** which contains the representation of the Entity within the data column.
 
 The most important fields in this entity to be checked when there are errors include the following:
 

@@ -325,7 +325,7 @@ The `GetPropertyValueRequestSelectedProperty` entity does not have any associati
 
 The `PropertyFilterDataValue` entity represents the value associated with this property filter.
 
-See also [DataValue](https://docs.aws.amazon.com/iot-twinmaker/latest/apireference/API_DataValue.html) and [Class DataValue](https://sdk.amazonaws.com/java/api/latest/software/amazon/awssdk/services/iottwinmaker/model/DataValue.html).
+For more information, see [DataValue](https://docs.aws.amazon.com/iot-twinmaker/latest/apireference/API_DataValue.html) and [Class DataValue](https://sdk.amazonaws.com/java/api/latest/software/amazon/awssdk/services/iottwinmaker/model/DataValue.html).
 
 ##### 4.1.14.1 Generalization
 
@@ -345,7 +345,7 @@ The `PropertyFilterDataValue` entity does not have any attributes.
 
 The `GetPropertyValueHistoryResponse` entity contains the response for retrieving information about the history of a time series property value for a component, component type, entity, or workspace.
 
-See also [GetPropertyValueHistory](https://docs.aws.amazon.com/iot-twinmaker/latest/apireference/API_GetPropertyValueHistory.html) and [Class GetPropertyValueHistory](https://sdk.amazonaws.com/java/api/latest/software/amazon/awssdk/services/iottwinmaker/model/GetPropertyValueHistoryResponse.html).
+For more information, see [GetPropertyValueHistory](https://docs.aws.amazon.com/iot-twinmaker/latest/apireference/API_GetPropertyValueHistory.html) and [Class GetPropertyValueHistory](https://sdk.amazonaws.com/java/api/latest/software/amazon/awssdk/services/iottwinmaker/model/GetPropertyValueHistoryResponse.html).
 
 ##### 4.1.15.1 Attributes
 
@@ -363,7 +363,7 @@ See also [GetPropertyValueHistory](https://docs.aws.amazon.com/iot-twinmaker/lat
 
 The `PropertyValueHistory` contains the history of values for a time series property.
 
-See also [PropertyValueHistory](https://docs.aws.amazon.com/iot-twinmaker/latest/apireference/API_PropertyValueHistory.html) and [Class PropertyValueHistory](https://sdk.amazonaws.com/java/api/latest/software/amazon/awssdk/services/iottwinmaker/model/PropertyValueHistory.html).
+For more information, see [PropertyValueHistory](https://docs.aws.amazon.com/iot-twinmaker/latest/apireference/API_PropertyValueHistory.html) and [Class PropertyValueHistory](https://sdk.amazonaws.com/java/api/latest/software/amazon/awssdk/services/iottwinmaker/model/PropertyValueHistory.html).
 
 ##### 4.1.16.1 Attributes
 
@@ -380,7 +380,7 @@ The `PropertyValueHistory` entity does not have any attributes.
 
 The `PropertyValue` contains information about a value for a time series property.
 
-See also [PropertyValue](https://docs.aws.amazon.com/iot-twinmaker/latest/apireference/API_PropertyValue.html) and [Class PropertyValue](https://sdk.amazonaws.com/java/api/latest/software/amazon/awssdk/services/iottwinmaker/model/PropertyValue.html).
+For more information, see [PropertyValue](https://docs.aws.amazon.com/iot-twinmaker/latest/apireference/API_PropertyValue.html) and [Class PropertyValue](https://sdk.amazonaws.com/java/api/latest/software/amazon/awssdk/services/iottwinmaker/model/PropertyValue.html).
 
 ##### 4.1.17.1 Generalization
 
@@ -439,7 +439,7 @@ Entity `ExternalPropertyID` does not have any associations.
 
 The `GetPropertyValueRequest` entity contains the request to get the property values for a component, component type, entity, or workspace.
 
-For more information, see [GetPropertyValueRequest](https://docs.aws.amazon.com/iot-twinmaker/latest/apireference/API_GetPropertyValue.html) and [Class GetPropertyValueRequest](https://sdk.amazonaws.com/java/api/latest/software/amazon/awssdk/services/iottwinmaker/model/GetPropertyValueRequest.html).
+For more information, see [GetPropertyValue](https://docs.aws.amazon.com/iot-twinmaker/latest/apireference/API_GetPropertyValue.html) and [Class GetPropertyValueRequest](https://sdk.amazonaws.com/java/api/latest/software/amazon/awssdk/services/iottwinmaker/model/GetPropertyValueRequest.html).
 
 ##### 4.1.20.1 Attributes
 
@@ -485,20 +485,18 @@ For more information, see [OrderBy](https://docs.aws.amazon.com/iot-twinmaker/la
 
 | Name | Type | Default value | Description |
 | --- | --- | --- | --- |
-| `PropertyName` | String (unlimited) | | The property to order on. |
+| `PropertyName` | String (unlimited) | | The property to order on |
 | `Order` | Enumeration `Order` | | Set order of results |
 
 ##### 4.1.22.2 Associations
 
-Entity `OrderBy` does not have any associations.
+The `OrderBy`entity does not have any associations.
 
-#### 4.1.23 Entity TabularConditionPropertyFilter
+#### 4.1.23 TabularConditionPropertyFilter
 
-Entity that filters items returned by a property request.
+The `TabularConditionPropertyFilter` entity filters the items returned by a property request. You can filter the request by using various logical operators and a key-value format.
 
-You can filter the request using various logical operators and a key-value format.
-
-See also https://docs.aws.amazon.com/iot-twinmaker/latest/apireference/API_PropertyFilter.html and https://sdk.amazonaws.com/java/api/latest/software/amazon/awssdk/services/iottwinmaker/model/PropertyFilter.html
+For more information, see [PropertyFilter](https://docs.aws.amazon.com/iot-twinmaker/latest/apireference/API_PropertyFilter.html) and [Class PropertyFilter](https://sdk.amazonaws.com/java/api/latest/software/amazon/awssdk/services/iottwinmaker/model/PropertyFilter.html).
 
 ##### 4.1.23.1 Generalization
 
@@ -506,20 +504,19 @@ The generalization of this entity is `AWSTwinMakerConnector.PropertyFilter`.
 
 ##### 4.1.23.2 Attributes
 
-Entity `TabularConditionPropertyFilter` does not have any attributes.
-Associations
+The `TabularConditionPropertyFilter` entity does not have any attributes.
+
+##### 4.1.23.3 Associations
 
 | Name | Connected to | Multiplicity | Description |
 | --- | --- | --- | --- |
 | `PropertyFilter_PropertyFilterDataValue` | `AWSTwinMakerConnector.PropertyFilterDataValue` | OneToMany | |
 
-#### 4.1.24 Entity EntityGetPropertyValueHistoryRequestPropertyFilter
+#### 4.1.24 EntityGetPropertyValueHistoryRequestPropertyFilter
 
-Optional. Entity that filters items returned by a property request.
+Optional. The `EntityGetPropertyValueHistoryRequestPropertyFilter` entity filters the items returned by a property request. You can filter the request by using various logical operators and a key-value format.
 
-You can filter the request using various logical operators and a key-value format.
-
-See also https://docs.aws.amazon.com/iot-twinmaker/latest/apireference/API_PropertyFilter.html and https://sdk.amazonaws.com/java/api/latest/software/amazon/awssdk/services/iottwinmaker/model/PropertyFilter.html
+For more information, see [PropertyFilter](https://docs.aws.amazon.com/iot-twinmaker/latest/apireference/API_PropertyFilter.html) and [Class PropertyFilter](https://sdk.amazonaws.com/java/api/latest/software/amazon/awssdk/services/iottwinmaker/model/PropertyFilter.html).
 
 ##### 4.1.24.1 Generalization
 
@@ -535,11 +532,11 @@ Entity `EntityGetPropertyValueHistoryRequestPropertyFilter` does not have any at
 | --- | --- | --- | --- |
 | `PropertyFilter_PropertyFilterDataValue` | `AWSTwinMakerConnector.PropertyFilterDataValue` | OneToMany | |
 
-#### 4.1.25 Entity PropertyResponseDataValue
+#### 4.1.25 PropertyResponseDataValue
 
-The current value of the property.
+The `PropertyResponseDataValue` entity represents the current value of the property.
 
-See also https://docs.aws.amazon.com/iot-twinmaker/latest/apireference/API_DataValue.html and https://sdk.amazonaws.com/java/api/latest/software/amazon/awssdk/services/iottwinmaker/model/DataValue.html
+For more information, see [DataValue](https://docs.aws.amazon.com/iot-twinmaker/latest/apireference/API_DataValue.html) and [Class DataValue](https://sdk.amazonaws.com/java/api/latest/software/amazon/awssdk/services/iottwinmaker/model/DataValue.html).
 
 ##### 4.1.25.1 Generalization
 
@@ -547,7 +544,7 @@ The generalization of this entity is `AWSTwinMakerConnector.DataValueUsage`.
 
 ##### 4.1.25.2 Attributes
 
-Entity `PropertyResponseDataValue` does not have any attributes.
+The `PropertyResponseDataValue` entity does not have any attributes.
 
 ##### 4.1.25.3 Associations
 
@@ -555,11 +552,11 @@ Entity `PropertyResponseDataValue` does not have any attributes.
 | --- | --- | --- | --- |
 | `AbstractDataValue_DataValueUsage` | `AWSTwinMakerConnector.DataValueUsage` | OneToOne | |
 
-#### 4.1.26 Entity GetEntityResponseStatus
+#### 4.1.26 GetEntityResponseStatus
 
-The current status of the entity.
+The `GetEntityResponseStatus` entity represents the current status of the entity.
 
-See also https://docs.aws.amazon.com/iot-twinmaker/latest/apireference/API_Status.html and https://sdk.amazonaws.com/java/api/latest/software/amazon/awssdk/services/iottwinmaker/model/Status.html
+For more information, see [Status](https://docs.aws.amazon.com/iot-twinmaker/latest/apireference/API_Status.html) and [Class Status](https://sdk.amazonaws.com/java/api/latest/software/amazon/awssdk/services/iottwinmaker/model/Status.html).
 
 ##### 4.1.26.1 Generalization
 
@@ -567,7 +564,7 @@ The generalization of this entity is `AWSTwinMakerConnector.Status`.
 
 ##### 4.1.26.2 Attributes
 
-Entity `GetEntityResponseStatus` does not have any attributes.
+The `GetEntityResponseStatus` entity does not have any attributes.
 
 ##### 4.1.26.3 Associations
 
@@ -575,11 +572,11 @@ Entity `GetEntityResponseStatus` does not have any attributes.
 | --- | --- | --- | --- |
 | `Status_ErrorDetails` | `AWSTwinMakerConnector.ErrorDetails` | OneToMany | |
 
-#### 4.1.27 Entity ComponentResponseStatus
+#### 4.1.27 ComponentResponseStatus
 
-The status of the component type.
+The `ComponentResponseStatus` entity represents the status of the component type.
 
-See also https://docs.aws.amazon.com/iot-twinmaker/latest/apireference/API_Status.html and https://sdk.amazonaws.com/java/api/latest/software/amazon/awssdk/services/iottwinmaker/model/Status.html
+For more information, see [Status](https://docs.aws.amazon.com/iot-twinmaker/latest/apireference/API_Status.html) and [Class Status](https://sdk.amazonaws.com/java/api/latest/software/amazon/awssdk/services/iottwinmaker/model/Status.html).
 
 ##### 4.1.27.1 Generalization
 
@@ -587,7 +584,7 @@ The generalization of this entity is `AWSTwinMakerConnector.Status`.
 
 ##### 4.1.27.2 Attributes
 
-Entity `ComponentResponseStatus` does not have any attributes.
+The `ComponentResponseStatus` entity does not have any attributes.
 
 ##### 4.1.27.3 Associations
 
@@ -595,11 +592,11 @@ Entity `ComponentResponseStatus` does not have any attributes.
 | --- | --- | --- | --- |
 | `Status_ErrorDetails` | `AWSTwinMakerConnector.ErrorDetails` | OneToMany | |
 
-#### 4.1.28 Entity GetPropertyValueResponse
+#### 4.1.28 GetPropertyValueResponse
 
 Response of getting the property values for a component, component type, entity, or workspace.
 
-See also https://docs.aws.amazon.com/iot-twinmaker/latest/apireference/API_GetPropertyValue.html and https://sdk.amazonaws.com/java/api/latest/software/amazon/awssdk/services/iottwinmaker/model/GetPropertyValueResponse.html
+For more information, see [GetPropertyValue](https://docs.aws.amazon.com/iot-twinmaker/latest/apireference/API_GetPropertyValue.html) and [Class GetPropertyValueResponse](amazonaws.com/java/api/latest/software/amazon/awssdk/services/iottwinmaker/model/GetPropertyValueResponse.html).
 
 ##### 4.1.28.1 Attributes
 
@@ -614,29 +611,30 @@ See also https://docs.aws.amazon.com/iot-twinmaker/latest/apireference/API_GetPr
 | `GetPropertyValueResponse_PropertyValueLatest` | `AWSTwinMakerConnector.PropertyValueLatest` | ManyToMany | |
 | `GetPropertyValueResponse_Table` | `AWSTwinMakerConnector.Table` | ManyToMany | |
 
-#### 4.1.29 Entity PropertyValueLatest
+#### 4.1.29 PropertyValueLatest
 
-This maps the property name as key to the latest property value and property information (definition).
+The `PropertyValueLatest` entity maps the property name as key to the latest property value and property information (definition).
 
-See also https://docs.aws.amazon.com/iot-twinmaker/latest/apireference/API_PropertyLatestValue.html and https://sdk.amazonaws.com/java/api/latest/software/amazon/awssdk/services/iottwinmaker/model/PropertyLatestValue.html
-Attributes
+For more information, see [PropertyLatestValue](https://docs.aws.amazon.com/iot-twinmaker/latest/apireference/API_PropertyLatestValue.html) and [Class PropertyLatestValue](https://sdk.amazonaws.com/java/api/latest/software/amazon/awssdk/services/iottwinmaker/model/PropertyLatestValue.html).
+
+##### 4.1.29.1 Attributes
 
 | Name | Type | Default value | Description |
 | --- | --- | --- | --- |
 | `Key` | String (unlimited) | | The property name is used as key. |
 
-##### 4.1.29.1 Associations
+##### 4.1.29.2 Associations
 
 | Name | Connected to | Multiplicity | Description |
 | --- | --- | --- | --- |
 | `PropertyValueLatest_DataValueUsagePropertyLatestValue` | `AWSTwinMakerConnector.DataValueUsagePropertyLatestValue` | OneToMany | |
 | `PropertyValueLatest_EntityPropertyReferencePropertyLatestValue` | `AWSTwinMakerConnector.EntityPropertyReferencePropertyLatestValue` | OneToMany | |
 
-#### 4.1.30 Entity EntityPropertyReferencePropertyLatestValue
+#### 4.1.30 EntityPropertyReferencePropertyLatestValue
 
-This entity specifies information about a property.
+The `EntityPropertyReferencePropertyLatestValue` entity specifies information about a property.
 
-See also https://docs.aws.amazon.com/iot-twinmaker/latest/apireference/API_EntityPropertyReference.html and https://sdk.amazonaws.com/java/api/latest/software/amazon/awssdk/services/iottwinmaker/model/EntityPropertyReference.html
+For more information, see [EntityPropertyReference](https://docs.aws.amazon.com/iot-twinmaker/latest/apireference/API_EntityPropertyReference.html) and [Class EntityPropertyReference](https://sdk.amazonaws.com/java/api/latest/software/amazon/awssdk/services/iottwinmaker/model/EntityPropertyReference.html).
 
 ##### 4.1.30.1 Generalization
 
@@ -644,7 +642,7 @@ The generalization of this entity is `AWSTwinMakerConnector.EntityPropertyRefere
 
 ##### 4.1.30.2 Attributes
 
-Entity `EntityPropertyReferencePropertyLatestValue` does not have any attributes.
+The `EntityPropertyReferencePropertyLatestValue` entity does not have any attributes.
 
 ##### 4.1.30.3 Associations
 
@@ -652,11 +650,11 @@ Entity `EntityPropertyReferencePropertyLatestValue` does not have any attributes
 | --- | --- | --- | --- |
 | `EntityPropertyReference_ExternalPropertyID` | `AWSTwinMakerConnector.ExternalPropertyID` | ManyToMany | |
 
-#### 4.1.31 Entity GetPropertyValueHistoryResponseEntityPropertyReference
+#### 4.1.31 GetPropertyValueHistoryResponseEntityPropertyReference
 
-Unique identification of a TwinMaker entity property.
+The `GetPropertyValueHistoryResponseEntityPropertyReference` entity represents a unique identification of a TwinMaker entity property.
 
-See also https://docs.aws.amazon.com/iot-twinmaker/latest/apireference/API_EntityPropertyReference.html and https://sdk.amazonaws.com/java/api/latest/software/amazon/awssdk/services/iottwinmaker/model/EntityPropertyReference.html
+For more information, see [EntityPropertyReference](https://docs.aws.amazon.com/iot-twinmaker/latest/apireference/API_EntityPropertyReference.html) and [Class EntityPropertyReference](https://sdk.amazonaws.com/java/api/latest/software/amazon/awssdk/services/iottwinmaker/model/EntityPropertyReference.html).
 
 ##### 4.1.31.1 Generalization
 
@@ -664,7 +662,7 @@ The generalization of this entity is `AWSTwinMakerConnector.EntityPropertyRefere
 
 ##### 4.1.31.2 Attributes
 
-Entity `GetPropertyValueHistoryResponseEntityPropertyReference` does not have any attributes.
+The `GetPropertyValueHistoryResponseEntityPropertyReference` entity does not have any attributes.
 
 ##### 4.1.31.3 Associations
 
@@ -672,11 +670,11 @@ Entity `GetPropertyValueHistoryResponseEntityPropertyReference` does not have an
 | --- | --- | --- | --- |
 | `EntityPropertyReference_ExternalPropertyID` | `AWSTwinMakerConnector.ExternalPropertyID` | ManyToMany | |
 
-#### 4.1.32 Entity DataValueUsagePropertyLatestValue
+#### 4.1.32 DataValueUsagePropertyLatestValue
 
-The latest value of the property.
+The `DataValueUsagePropertyLatestValue` entity represents the latest value of a property.
 
-See also https://docs.aws.amazon.com/iot-twinmaker/latest/apireference/API_DataValue.html and https://sdk.amazonaws.com/java/api/latest/software/amazon/awssdk/services/iottwinmaker/model/DataValue.html
+For more information, see [DataValue](https://docs.aws.amazon.com/iot-twinmaker/latest/apireference/API_DataValue.html) and [Class DataValue](https://sdk.amazonaws.com/java/api/latest/software/amazon/awssdk/services/iottwinmaker/model/DataValue.html).
 
 ##### 4.1.32.1 Generalization
 
@@ -684,7 +682,7 @@ The generalization of this entity is `AWSTwinMakerConnector.DataValueUsage`.
 
 ##### 4.1.32.2 Attributes
 
-Entity `DataValueUsagePropertyLatestValue` does not have any attributes.
+The `DataValueUsagePropertyLatestValue` entity does not have any attributes.
 
 ##### 4.1.32.3 Associations
 
@@ -692,15 +690,15 @@ Entity `DataValueUsagePropertyLatestValue` does not have any attributes.
 | --- | --- | --- | --- |
 | `AbstractDataValue_DataValueUsage` | `AWSTwinMakerConnector.DataValueUsage` | OneToOne | |
 
-#### 4.1.33 Entity Table
+#### 4.1.33 Table
 
-A table of property values.
+The `Table` entity represents a table of property values.
 
-See https://docs.aws.amazon.com/iot-twinmaker/latest/apireference/API_GetPropertyValue.html#tm-GetPropertyValue-response-tabularPropertyValues and https://sdk.amazonaws.com/java/api/latest/software/amazon/awssdk/services/iottwinmaker/model/GetPropertyValueResponse.html#tabularPropertyValues()
+For more information, see [tabularPropertyValues (1)](https://docs.aws.amazon.com/iot-twinmaker/latest/apireference/API_GetPropertyValue.html#tm-GetPropertyValue-response-tabularPropertyValues) and [tabularPropertyValues (2)](https://sdk.amazonaws.com/java/api/latest/software/amazon/awssdk/services/iottwinmaker/model/GetPropertyValueResponse.html#tabularPropertyValues()).
 
 ##### 4.1.33.1 Attributes
 
-Entity `Table` does not have any attributes.
+The `Table` entity does not have any attributes.
 
 ##### 4.1.33.2 Associations
 
@@ -708,15 +706,15 @@ Entity `Table` does not have any attributes.
 | --- | --- | --- | --- |
 | `Table_Row` | `AWSTwinMakerConnector.Row` | ManyToMany | |
 
-#### 4.1.34 Entity Row
+#### 4.1.34 Row
 
-Row (array) inside a table of property values.
+The `Row` entity represents a row (array) inside a table of property values.
 
-See also https://docs.aws.amazon.com/iot-twinmaker/latest/apireference/API_GetPropertyValue.html#tm-GetPropertyValue-response-tabularPropertyValues and https://sdk.amazonaws.com/java/api/latest/software/amazon/awssdk/services/iottwinmaker/model/GetPropertyValueResponse.html#tabularPropertyValues()
+For more information, see [tabularPropertyValues (1)](https://docs.aws.amazon.com/iot-twinmaker/latest/apireference/API_GetPropertyValue.html#tm-GetPropertyValue-response-tabularPropertyValues) and [tabularPropertyValues (2)](https://sdk.amazonaws.com/java/api/latest/software/amazon/awssdk/services/iottwinmaker/model/GetPropertyValueResponse.html#tabularPropertyValues()).
 
 ##### 4.1.34.1 Attributes
 
-Entity `Row` does not have any attributes.
+The `Row` entity does not have any attributes.
 
 ##### 4.1.34.2 Associations
 
@@ -724,9 +722,9 @@ Entity `Row` does not have any attributes.
 | --- | --- | --- | --- |
 | `Row_Column` | `AWSTwinMakerConnector.Column` | ManyToMany | |
 
-#### 4.1.35 Entity Column
+#### 4.1.35 Column
 
-Column with the property value. Propertyname is used as key.
+The `Column` entity represents a column with the property value. The property name is used as key.
 
 ##### 4.1.35.1 Generalization
 
@@ -744,17 +742,17 @@ The generalization of this entity is `AWSTwinMakerConnector.DataValueUsage`.
 | --- | --- | --- | --- |
 | `AbstractDataValue_DataValueUsage` | `AWSTwinMakerConnector.DataValueUsage` | OneToOne | |
 
-#### 4.1.36 Entity ListEntitiesRequest
+#### 4.1.36 ListEntitiesRequest
 
-Entity as request for retrieving the list of all TwinMaker entities in a workspace.
+The `ListEntitiesRequest` entity represents a request for retrieving the list of all TwinMaker entities in a workspace.
 
-See also https://docs.aws.amazon.com/iot-twinmaker/latest/apireference/API_ListEntities.html and https://sdk.amazonaws.com/java/api/latest/software/amazon/awssdk/services/iottwinmaker/model/ListEntitiesRequest.html
+For more information, see [ListEntities](https://docs.aws.amazon.com/iot-twinmaker/latest/apireference/API_ListEntities.html) and [Class ListEntitiesRequest](https://sdk.amazonaws.com/java/api/latest/software/amazon/awssdk/services/iottwinmaker/model/ListEntitiesRequest.html).
 
 ##### 4.1.36.1 Attributes
 
 | Name | Type | Default value | Description |
 | --- | --- | --- | --- |
-| `MaxResults` | Integer | | Optional. The maximum number of results to return at one time. Note that there is a max value, see https://sdk.amazonaws.com/java/api/latest/software/amazon/awssdk/services/iottwinmaker/model/ListEntitiesRequest.html#maxResults() |
+| `MaxResults` | Integer | | Optional. The maximum number of results to return at one time. For more information, about the maximum value that you can set, see [ListEntitiesRequest](https://sdk.amazonaws.com/java/api/latest/software/amazon/awssdk/services/iottwinmaker/model/ListEntitiesRequest.html#maxResults()). |
 | `NextToken` | String (unlimited) | | Optional. The string that specifies the next page of results. |
 | `WorkspaceID` | String (unlimited) | | Required. The ID of the workspace. |
 
@@ -764,11 +762,11 @@ See also https://docs.aws.amazon.com/iot-twinmaker/latest/apireference/API_ListE
 | --- | --- | --- | --- |
 | `ListEntitiesRequest_AbstractEntityFilter` | `AWSTwinMakerConnector.AbstractEntityFilter` | OneToMany | |
 
-#### 4.1.37 Entity ListEntitiesResponse
+#### 4.1.37 ListEntitiesResponse
 
-Entity containing the list of all TwinMaker entities in a workspace.
+The `ListEntitiesResponse` entity contains the list of all TwinMaker entities in a workspace.
 
-See also https://docs.aws.amazon.com/iot-twinmaker/latest/apireference/API_ListEntities.html and https://sdk.amazonaws.com/java/api/latest/software/amazon/awssdk/services/iottwinmaker/model/ListEntitiesResponse.html
+For more information, see [ListEntities](https://docs.aws.amazon.com/iot-twinmaker/latest/apireference/API_ListEntities.html) and [ListEntitiesResponse](https://sdk.amazonaws.com/java/api/latest/software/amazon/awssdk/services/iottwinmaker/model/ListEntitiesResponse.html).
 
 ##### 4.1.37.1 Attributes
 
@@ -782,11 +780,11 @@ See also https://docs.aws.amazon.com/iot-twinmaker/latest/apireference/API_ListE
 | --- | --- | --- | --- |
 | `ListEntitiesResponse_EntitySummary` | `AWSTwinMakerConnector.EntitySummary` | ManyToMany | |
 
-#### 4.1.38 Entity EntitySummary
+#### 4.1.38 EntitySummary
 
-Entity containing information of a TwinMaker entity.
+The `EntitySummary` entity contains information about a TwinMaker entity.
 
-See also https://docs.aws.amazon.com/iot-twinmaker/latest/apireference/API_EntitySummary.html and https://sdk.amazonaws.com/java/api/latest/software/amazon/awssdk/services/iottwinmaker/model/EntitySummary.html
+For more information, see [EntitySummary](https://docs.aws.amazon.com/iot-twinmaker/latest/apireference/API_EntitySummary.html) and [Class EntitySummary](https://sdk.amazonaws.com/java/api/latest/software/amazon/awssdk/services/iottwinmaker/model/EntitySummary.html).
 
 ##### 4.1.38.1 Attributes
 
@@ -806,11 +804,11 @@ See also https://docs.aws.amazon.com/iot-twinmaker/latest/apireference/API_Entit
 | --- | --- | --- | --- |
 | `EntitySummary_EntityStatu`s | `AWSTwinMakerConnector.EntityStatus` | OneToMany | |
 
-#### 4.1.39 Entity EntityStatus
+#### 4.1.39 EntityStatus
 
-The current status of the TwinMaker entity.
+The `EntityStatus` entity contains the current status of the TwinMaker entity.
 
-See also https://docs.aws.amazon.com/iot-twinmaker/latest/apireference/API_Status.html and https://sdk.amazonaws.com/java/api/latest/software/amazon/awssdk/services/iottwinmaker/model/Status.html
+For more information, see [Status](https://docs.aws.amazon.com/iot-twinmaker/latest/apireference/API_Status.html) and [Class Status](https://sdk.amazonaws.com/java/api/latest/software/amazon/awssdk/services/iottwinmaker/model/Status.html).
 
 ##### 4.1.39.1 Generalization
 
@@ -818,7 +816,7 @@ The generalization of this entity is `AWSTwinMakerConnector.Status`.
 
 ##### 4.1.39.2 Attributes
 
-Entity `EntityStatus` does not have any attributes.
+The `EntityStatus` entity does not have any attributes.
 
 ##### 4.1.39.3 Associations
 
@@ -826,29 +824,29 @@ Entity `EntityStatus` does not have any attributes.
 | --- | --- | --- | --- |
 | `Status_ErrorDetails` | `AWSTwinMakerConnector.ErrorDetails` | OneToMany | |
 
-#### 4.1.40 Entity ListScenesRequest
+#### 4.1.40 ListScenesRequest
 
-Entity with request to get the list of available scenes in a workspace.
+The `ListScenesRequest` entity represents the request to get the list of available scenes in a workspace.
 
-See also https://docs.aws.amazon.com/iot-twinmaker/latest/apireference/API_ListScenes.html and https://sdk.amazonaws.com/java/api/latest/software/amazon/awssdk/services/iottwinmaker/model/ListScenesRequest.html
+For more information, see [ListScenes](https://docs.aws.amazon.com/iot-twinmaker/latest/apireference/API_ListScenes.html) and [ListScenesRequest](https://sdk.amazonaws.com/java/api/latest/software/amazon/awssdk/services/iottwinmaker/model/ListScenesRequest.html).
 
 ##### 4.1.40.1 Attributes
 
 | Name | Type | Default value | Description |
 | --- | --- | --- | --- |
-| `MaxResults` | Integer | | Optional. Specifies the maximum number of results to retrieve. Note that there is a max value, see https://sdk.amazonaws.com/java/api/latest/software/amazon/awssdk/services/iottwinmaker/model/ListScenesRequest.html#maxResults() |
+| `MaxResults` | Integer | | Optional. Specifies the maximum number of results to retrieve. For more information about the maximum value that you can set, see [maxResults](https://sdk.amazonaws.com/java/api/latest/software/amazon/awssdk/services/iottwinmaker/model/ListScenesRequest.html#maxResults()). |
 | `NextToken` | String (unlimited) | | Optional. The string that specifies the next page of results. |
 | `WorkspaceID` | String (unlimited) | | Required. The ID of the workspace that contains the scenes. |
 
 ##### 4.1.40.2 Associations
 
-Entity `ListScenesRequest` does not have any associations.
+The `ListScenesRequest` entity does not have any associations.
 
-#### 4.1.41 Entity ListScenesResponse
+#### 4.1.41 ListScenesResponse
 
-Entity containing the list of scenes in a workspace.
+The `ListScenesResponse` entity contains the list of scenes in a workspace.
 
-See also https://docs.aws.amazon.com/iot-twinmaker/latest/apireference/API_ListScenes.html and https://sdk.amazonaws.com/java/api/latest/software/amazon/awssdk/services/iottwinmaker/model/ListScenesResponse.html
+For more information, see [ListScenes](https://docs.aws.amazon.com/iot-twinmaker/latest/apireference/API_ListScenes.html) and [ListScenesResponse]https://sdk.amazonaws.com/java/api/latest/software/amazon/awssdk/services/iottwinmaker/model/ListScenesResponse.html.
 
 ##### 4.1.41.1 Attributes
 
@@ -862,11 +860,11 @@ See also https://docs.aws.amazon.com/iot-twinmaker/latest/apireference/API_ListS
 | --- | --- | --- | --- |
 | `ListScenesResponse_SceneSummary` | AWSTwinMakerConnector.SceneSummary | ManyToMany | |
 
-#### 4.1.42 Entity SceneSummary
+#### 4.1.42 SceneSummary
 
-Entity containing information about a scene.
+The `SceneSummary` entity contains information about a scene.
 
-See also https://docs.aws.amazon.com/iot-twinmaker/latest/apireference/API_SceneSummary.html and https://sdk.amazonaws.com/java/api/latest/software/amazon/awssdk/services/iottwinmaker/model/SceneSummary.html
+For more information, see [SceneSummary](https://docs.aws.amazon.com/iot-twinmaker/latest/apireference/API_SceneSummary.html) and [Class SceneSummary](https://sdk.amazonaws.com/java/api/latest/software/amazon/awssdk/services/iottwinmaker/model/SceneSummary.html).
 
 ##### 4.1.42.1 Attributes
 
@@ -881,30 +879,30 @@ See also https://docs.aws.amazon.com/iot-twinmaker/latest/apireference/API_Scene
 
 ##### 4.1.42.2 Associations
 
-Entity `SceneSummary` does not have any associations.
+The `SceneSummary` entity does not have any associations.
 
-#### 4.1.43 Entity GetSceneRequest
+#### 4.1.43 GetSceneRequest
 
-Entity containing the request to get a specific scene
+The `GetSceneRequest` entity contains the request to get a specific scene.
 
-See also https://docs.aws.amazon.com/iot-twinmaker/latest/apireference/API_GetScene.html and https://sdk.amazonaws.com/java/api/latest/software/amazon/awssdk/services/iottwinmaker/model/GetSceneRequest.html
+For more information, see [GetScene](https://docs.aws.amazon.com/iot-twinmaker/latest/apireference/API_GetScene.html) and [GetSceneRequest](https://sdk.amazonaws.com/java/api/latest/software/amazon/awssdk/services/iottwinmaker/model/GetSceneRequest.html).
 
 ##### 4.1.43.1 Attributes
 
 | Name | Type | Default value | Description |
 | --- | --- | --- | --- |
-| `SceneID` | String (unlimited) | | Required. ID of the scene to retrieve |
-| `WorkspaceID` | String (unlimited) | | Required. ID of the workspace to search for the scene |
+| `SceneID` | String (unlimited) | | Required. The ID of the scene to retrieve. |
+| `WorkspaceID` | String (unlimited) | | Required. The ID of the workspace to search for the scene. |
 
 ##### 4.1.43.2 Associations
 
-Entity `GetSceneRequest` does not have any associations.
+The `GetSceneRequest` entity does not have any associations.
 
-#### 4.1.44 Entity GetSceneResponse
+#### 4.1.44 GetSceneResponse
 
-Entity containing the reponse of getting a specific scene.
+The `GetSceneResponse` entity contains the reponse of getting a specific scene.
 
-See also https://docs.aws.amazon.com/iot-twinmaker/latest/apireference/API_GetScene.html and https://sdk.amazonaws.com/java/api/latest/software/amazon/awssdk/services/iottwinmaker/model/GetSceneResponse.html
+For more information, see [GetScene](https://docs.aws.amazon.com/iot-twinmaker/latest/apireference/API_GetScene.html) and [GetSceneResponse](https://sdk.amazonaws.com/java/api/latest/software/amazon/awssdk/services/iottwinmaker/model/GetSceneResponse.html).
 
 ##### 4.1.44.1 Attributes
 
@@ -915,7 +913,7 @@ See also https://docs.aws.amazon.com/iot-twinmaker/latest/apireference/API_GetSc
 | `CreationDateTime` | Date and time | | The date and time when the scene was created. |
 | `Description` | String (unlimited) | | The description of the scene. |
 | `SceneID` | String (unlimited) | | The ID of the scene. |
-| `UpdateDateTime` | Date and time | | The date and time when the scene was last updated |
+| `UpdateDateTime` | Date and time | | The date and time when the scene was last updated. |
 | `WorkspaceID` | String (unlimited) | | The ID of the workspace that contains the scene. |
 
 ##### 4.1.44.2 Associations
@@ -924,11 +922,11 @@ See also https://docs.aws.amazon.com/iot-twinmaker/latest/apireference/API_GetSc
 | --- | --- | --- | --- |
 | `GetSceneResponse_Capability` | `AWSTwinMakerConnector.Capability` | ManyToMany | |
 
-#### 4.1.45 Entity 'Capability'
+#### 4.1.45 Capability
 
-A list of capabilities that the scene uses to render.
+The `Capability` entity represents the list of capabilities that the scene uses to render.
 
-See also https://docs.aws.amazon.com/iot-twinmaker/latest/apireference/API_GetScene.html#API_GetScene_ResponseElements and https://sdk.amazonaws.com/java/api/latest/software/amazon/awssdk/services/iottwinmaker/model/GetSceneResponse.html#capabilities()
+For more information, see [Response Elements](https://docs.aws.amazon.com/iot-twinmaker/latest/apireference/API_GetScene.html#API_GetScene_ResponseElements) and [capabilities](https://sdk.amazonaws.com/java/api/latest/software/amazon/awssdk/services/iottwinmaker/model/GetSceneResponse.html#capabilities()).
 
 ##### 4.1.45.1 Attributes
 
@@ -938,11 +936,11 @@ See also https://docs.aws.amazon.com/iot-twinmaker/latest/apireference/API_GetSc
 
 ##### 4.1.45.2 Associations
 
-Entity `Capability` does not have any associations.
+The `Capability` entity does not have any associations.
 
-#### 4.1.46 Entity CustomParentIDEntityFilter
+#### 4.1.46 CustomParentIDEntityFilter
 
-Filter to only retrieve TwinMaker entities which are a child of a specific TwinMaker entity parent.
+The `CustomParentIDEntityFilter` entity provides a filter to only retrieve TwinMaker entities which are children of a specific TwinMaker entity parent.
 
 ##### 4.1.46.1 Generalization
 
@@ -956,11 +954,11 @@ The generalization of this entity is `AWSTwinMakerConnector.AbstractEntityFilter
 
 ##### 4.1.46.3 Associations
 
-Entity `CustomParentIDEntityFilter` does not have any associations.
+The `CustomParentIDEntityFilter` entity does not have any associations.
 
-#### 4.1.47 Entity RootEntityFilter
+#### 4.1.47 RootEntityFilter
 
-Filter to only retrieve root TwinMaker entities, so without a parent.
+The `RootEntityFilter` entity provides a filter to only retrieve root TwinMaker entities (that is, entities without a parent).
 
 ##### 4.1.47.1 Generalization
 
@@ -968,31 +966,33 @@ The generalization of this entity is `AWSTwinMakerConnector.AbstractEntityFilter
 
 ##### 4.1.47.2 Attributes
 
-Entity `RootEntityFilter` does not have any attributes.
+The `RootEntityFilter` does not have any attributes.
 
 ##### 4.1.47.3 Associations
 
-Entity `RootEntityFilter` does not have any associations.
+Entity `RootEntityFilter` entity does not have any associations.
 
-#### 4.1.48 Entity AbstractEntityFilter
+#### 4.1.48 AbstractEntityFilter
 
-Do not use this entity, instead use one of its specializations
+{{% alert color="warning" %}}
+Do not use this entity directly. Instead, use one of its specializations.
+{{% /alert %}}
 
-An object that filters items in a list of TwinMaker entities.
+The `AbstractEntityFilter` entity represents an object that filters items in a list of TwinMaker entities.
 
-See also https://sdk.amazonaws.com/java/api/latest/software/amazon/awssdk/services/iottwinmaker/model/ListEntitiesFilter.html
+For more information, see [ListEntitiesFilter](https://sdk.amazonaws.com/java/api/latest/software/amazon/awssdk/services/iottwinmaker/model/ListEntitiesFilter.html).
 
 ##### 4.1.48.1 Attributes
 
-Entity `AbstractEntityFilter` does not have any attributes.
+The `AbstractEntityFilter` entity does not have any attributes.
 
 ##### 4.1.48.2 Associations
 
-Entity `AbstractEntityFilter` does not have any associations.
+The `AbstractEntityFilter` entity does not have any associations.
 
-#### 4.1.49 Entity CustomExternalIDEntityFilter
+#### 4.1.49 CustomExternalIDEntityFilter
 
-Filter to only retrieve TwinMaker entities with a given External Id.
+The `CustomExternalIDEntityFilter` entity provides a filter to only retrieve TwinMaker entities with a given External Id.
 
 ##### 4.1.49.1 Generalization
 
@@ -1006,11 +1006,11 @@ The generalization of this entity is `AWSTwinMakerConnector.AbstractEntityFilter
 
 ##### 4.1.49.3 Associations
 
-Entity `CustomExternalIDEntityFilter` does not have any associations.
+The `CustomExternalIDEntityFilter` entity does not have any associations.
 
-#### 4.1.50 Entity CustomComponentTypeIDEntityFilter
+#### 4.1.50 CustomComponentTypeIDEntityFilter
 
-Filter to only retrieve TwinMaker entities of a specific component type.
+The `CustomComponentTypeIDEntityFilter` entity provides a filter to only retrieve TwinMaker entities of a specific component type.
 
 ##### 4.1.50.1 Generalization
 
@@ -1020,23 +1020,25 @@ The generalization of this entity is `AWSTwinMakerConnector.AbstractEntityFilter
 
 | Name | Type | Default value | Description |
 | --- | --- | --- | --- |
-| `FilterValue` | String (unlimited) | | Value for the CompontentType id of the TwinMaker entities to filter on. |
+| `FilterValue` | String (unlimited) | | Value for the CompontentType ID of the TwinMaker entities to filter on. |
 
 ##### 4.1.50.3 Associations
 
-Entity `CustomComponentTypeIDEntityFilter` does not have any associations.
+The `CustomComponentTypeIDEntityFilter` entity does not have any associations.
 
-#### 4.1.51 Entity AbstractDataValue
+#### 4.1.51 AbstractDataValue
 
-Abstract object that specifies a value, or values, for a property.
+The `AbstractDataValue` entity is an abstract object that specifies a value, or values, for a property.
 
-Do not use this Entity! - Use a specialization instead.
+{{% alert color="warning" %}}
+Do not use this entity directly. Instead, use one of its specializations.
+{{% /alert %}}
 
-See also https://docs.aws.amazon.com/iot-twinmaker/latest/apireference/API_DataValue.html and https://sdk.amazonaws.com/java/api/latest/software/amazon/awssdk/services/iottwinmaker/model/DataValue.html
+For more information, see [DataValue](https://docs.aws.amazon.com/iot-twinmaker/latest/apireference/API_DataValue.html) and [Class DataValue](https://sdk.amazonaws.com/java/api/latest/software/amazon/awssdk/services/iottwinmaker/model/DataValue.html).
 
 ##### 4.1.51.1 Attributes
 
-Entity `AbstractDataValue` does not have any attributes.
+The `AbstractDataValue` entity does not have any attributes.
 
 ##### 4.1.51.2 Associations
 
@@ -1044,9 +1046,9 @@ Entity `AbstractDataValue` does not have any attributes.
 | --- | --- | --- | --- |
 | `AbstractDataValue_DataValueUsage` | `AWSTwinMakerConnector.DataValueUsage` | OneToOne | |
 
-#### 4.1.52 Entity DataValueMap
+#### 4.1.52 DataValueMap
 
-Entity that represents a map (containing name-value pairs) as data value.
+The `DataValueMap` entity that represents a map of name-value pairs as a data value.
 
 ##### 4.1.52.1 Generalization
 
@@ -1054,7 +1056,7 @@ The generalization of this entity is `AWSTwinMakerConnector.AbstractDataValue`.
 
 ##### 4.1.52.2 Attributes
 
-Entity `DataValueMap` does not have any attributes.
+The `DataValueMap` entity does not have any attributes.
 
 ##### 4.1.52.3 Associations
 
@@ -1063,17 +1065,15 @@ Entity `DataValueMap` does not have any attributes.
 | `DataValueMap_DataValueUsageMapEntry` | `AWSTwinMakerConnector.DataValueUsageMapEntry` | ManyToMany | |
 | `AbstractDataValue_DataValueUsage` | `AWSTwinMakerConnector.DataValueUsage` | OneToOne | |
 
-#### 4.1.53 Entity DataValueUsage
+#### 4.1.53 DataValueUsage
 
-Entity that specifies a value, or values, for a property.
+The `DataValueUsage` entity specifies a value, or values, for a property. This entity can be used as the starting point for using a data value of a property.
 
-This enitty can be used as starting point for using a data value of a property.
-
-See also https://docs.aws.amazon.com/iot-twinmaker/latest/apireference/API_DataValue.html and https://sdk.amazonaws.com/java/api/latest/software/amazon/awssdk/services/iottwinmaker/model/DataValue.html
+For more information, see [DataValue](https://docs.aws.amazon.com/iot-twinmaker/latest/apireference/API_DataValue.html) and [Class DataValue](https://sdk.amazonaws.com/java/api/latest/software/amazon/awssdk/services/iottwinmaker/model/DataValue.html).
 
 ##### 4.1.53.1 Attributes
 
-Entity 'DataValueUsage' does not have any attributes.
+The `DataValueUsage` entity does not have any attributes.
 
 ##### 4.1.53.2 Associations
 
@@ -1081,9 +1081,9 @@ Entity 'DataValueUsage' does not have any attributes.
 | --- | --- | --- | --- |
 | `AbstractDataValue_DataValueUsage` | `AWSTwinMakerConnector.DataValueUsage` | OneToOne | |
 
-#### 4.1.54 Entity DataValueBoolean
+#### 4.1.54 DataValueBoolean
 
-DataValue of type Boolean.
+The `DataValueBoolean` entity represents a DataValue of the type Boolean.
 
 ##### 4.1.54.1 Generalization
 
@@ -1101,9 +1101,9 @@ The generalization of this entity is `AWSTwinMakerConnector.AbstractDataValue`.
 | --- | --- | --- | --- |
 | `AbstractDataValue_DataValueUsage` | `AWSTwinMakerConnector.DataValueUsage` | OneToOne | |
 
-#### 4.1.55 Entity DataValueInt
+#### 4.1.55 DataValueInt
 
-DataValue of type Integer.
+The `DataValueInt` entity represents a DataValue of the type Integer.
 
 ##### 4.1.55.1 Generalization
 
@@ -1113,17 +1113,17 @@ The generalization of this entity is `AWSTwinMakerConnector.AbstractDataValue`.
 
 | Name | Type | Default value | Description |
 | --- | --- | --- | --- |
-| Value | Integer | | |
+| `Value` | Integer | | |
 
 ##### 4.1.55.3 Associations
 
 | Name | Connected to | Multiplicity | Description |
 | --- | --- | --- | --- |
-| `AbstractDataValue_DataValueUsage`  `AWSTwinMakerConnector.DataValueUsage` | OneToOne | |
+| `AbstractDataValue_DataValueUsage` | `AWSTwinMakerConnector.DataValueUsage` | OneToOne | |
 
-#### 4.1.56 Entity DataValueLong
+#### 4.1.56 DataValueLong
 
-DataValue of type Long.
+The `DataValueLong` entity represents a DataValue of the type Long.
 
 ##### 4.1.56.1 Generalization
 
@@ -1141,9 +1141,9 @@ The generalization of this entity is `AWSTwinMakerConnector.AbstractDataValue`.
 | --- | --- | --- | --- |
 | `AbstractDataValue_DataValueUsage` | `AWSTwinMakerConnector.DataValueUsage` | OneToOne | |
 
-#### 4.1.57 Entity DataValueList
+#### 4.1.57 DataValueList
 
-Entity that represents a list as data value.
+The `DataValueList` entity represents a list as a data value.
 
 ##### 4.1.57.1 Generalization
 
@@ -1151,7 +1151,7 @@ The generalization of this entity is `AWSTwinMakerConnector.AbstractDataValue`.
 
 ##### 4.1.57.2 Attributes
 
-Entity `DataValueList` does not have any attributes.
+The `DataValueList` entity does not have any attributes.
 
 ##### 4.1.57.3 Associations
 
@@ -1160,11 +1160,11 @@ Entity `DataValueList` does not have any attributes.
 | `DataValueList_DataValueUsageListEntry` | `AWSTwinMakerConnector.DataValueUsageListEntry` | ManyToMany | |
 | `AbstractDataValue_DataValueUsage` | `AWSTwinMakerConnector.DataValueUsage` | OneToOne | |
 
-#### 4.1.58 Entity DataValueRelationship
+#### 4.1.58 DataValueRelationship
 
-DataValue of type Relationship that associates a component and an entity.
+The `DataValueRelationship` entity represents a DataValue of the type Relationship that associates a component and an entity.
 
-See also https://docs.aws.amazon.com/iot-twinmaker/latest/apireference/API_RelationshipValue.html and https://sdk.amazonaws.com/java/api/latest/software/amazon/awssdk/services/iottwinmaker/model/RelationshipValue.html
+For more information, see [RelationshipValue](https://docs.aws.amazon.com/iot-twinmaker/latest/apireference/API_RelationshipValue.html) and [Class RelationshipValue](https://sdk.amazonaws.com/java/api/latest/software/amazon/awssdk/services/iottwinmaker/model/RelationshipValue.html).
 
 ##### 4.1.58.1 Generalization
 
@@ -1183,9 +1183,9 @@ The generalization of this entity is `AWSTwinMakerConnector.AbstractDataValue`.
 | --- | --- | --- | --- |
 | `AbstractDataValue_DataValueUsage` | `AWSTwinMakerConnector.DataValueUsage` | OneToOne | |
 
-#### 4.1.59 Entity DataValueString
+#### 4.1.59 DataValueString
 
-DataValue of type String.
+he `DataValueString` entity represents a DataValue of the type String.
 
 ##### 4.1.59.1 Generalization
 
@@ -1203,11 +1203,9 @@ The generalization of this entity is `AWSTwinMakerConnector.AbstractDataValue`.
 | --- | --- | --- | --- |
 | `AbstractDataValue_DataValueUsage` | `AWSTwinMakerConnector.DataValueUsage` | OneToOne | |
 
-#### 4.1.60 Entity DataValueUsageMapEntry
+#### 4.1.60 DataValueUsageMapEntry
 
-Entity representing one entry of a map, so one key-value pair.
-
-It is a specialization of the DataValueUsage as the value can be of any data value type.
+The `DataValueUsageMapEntry` entity represents one entry of a map, that is, a key-value pair. The entity is a specialization of the `DataValueUsage` entity, as the value can be of any data value type.
 
 ##### 4.1.60.1 Generalization
 
@@ -1225,9 +1223,9 @@ The generalization of this entity is `AWSTwinMakerConnector.DataValueUsage`.
 | --- | --- | --- | --- |
 | `AbstractDataValue_DataValueUsage` | `AWSTwinMakerConnector.DataValueUsage` | OneToOne | |
 
-#### 4.1.61 Entity DataValueDecimal
+#### 4.1.61 DataValueDecimal
 
-DataValue of type Decimal.
+The `DataValueDecimal` entity represents a DataValue of the type Decimal.
 
 ##### 4.1.61.1 Generalization
 
@@ -1245,13 +1243,15 @@ The generalization of this entity is `AWSTwinMakerConnector.AbstractDataValue`.
 | --- | --- | --- | --- |
 | `AbstractDataValue_DataValueUsage` | `AWSTwinMakerConnector.DataValueUsage` | OneToOne | |
 
-#### 4.1.62 Entity AbstractQuery
+#### 4.1.62 AbstractQuery
 
-Optional. Abstract Entity: Do not use this AbstractQuery! A specialization Query must be used instead.
+{{% alert color="warning" %}}
+The `AbstractQuery` entity is an abstract entity. Do not use this entity directly. Instead, use a specialization query.
+{{% /alert %}}
 
 ##### 4.1.62.1 Attributes
 
-Entity `AbstractQuery` does not have any attributes.
+The `AbstractQuery` entity does not have any attributes.
 
 ##### 4.1.62.2 Associations
 
@@ -1259,34 +1259,34 @@ Entity `AbstractQuery` does not have any attributes.
 | --- | --- | --- | --- |
 | `AbstractQuery_GetPropertyValueHistoryRequest` | `AWSTwinMakerConnector.GetPropertyValueHistoryRequest` | OneToOne | |
 
-#### 4.1.63 Entity ListWorkspacesRequest
+#### 4.1.63 ListWorkspacesRequest
 
-Entity as request to get the list of workspaces in the current account..
+The `ListWorkspacesRequest` entity represents a request to get the list of workspaces in the current account.
 
-See also https://docs.aws.amazon.com/iot-twinmaker/latest/apireference/API_ListWorkspaces.html and https://sdk.amazonaws.com/java/api/latest/software/amazon/awssdk/services/iottwinmaker/model/ListWorkspacesRequest.html
+For more information, see [ListWorkspaces](https://docs.aws.amazon.com/iot-twinmaker/latest/apireference/API_ListWorkspaces.html) and [ListWorkspacesRequest](https://sdk.amazonaws.com/java/api/latest/software/amazon/awssdk/services/iottwinmaker/model/ListWorkspacesRequest.html).
 
 ##### 4.1.63.1 Attributes
 
 | Name | Type | Default value | Description |
 | --- | --- | --- | --- |
-| `MaxResults` | Integer | | Optional. The maximum number of results to return at one time. Note that there is a max value, see https://sdk.amazonaws.com/java/api/latest/software/amazon/awssdk/services/iottwinmaker/model/ListWorkspacesRequest.html#maxResults() |
+| `MaxResults` | Integer | | Optional. The maximum number of results to return at one time. For more information about the maximum value that you can set, see [maxResults](https://sdk.amazonaws.com/java/api/latest/software/amazon/awssdk/services/iottwinmaker/model/ListWorkspacesRequest.html#maxResults()). |
 | `NextToken` | String (unlimited) | | Optional. The string that specifies the next page of results. |
 
 ##### 4.1.63.2 Associations
 
-Entity `ListWorkspacesRequest` does not have any associations.
+The `ListWorkspacesRequest` entity does not have any associations.
 
-#### 4.1.64 Entity ListComponentTypeRequest
+#### 4.1.64 ListComponentTypeRequest
 
-Request entity to lists all component types in a workspace.
+The `ListComponentTypeRequest` entity represents a request to lists all component types in a workspace.
 
-See also https://docs.aws.amazon.com/iot-twinmaker/latest/apireference/API_ListComponentTypes.html and https://sdk.amazonaws.com/java/api/latest/software/amazon/awssdk/services/iottwinmaker/model/ListComponentTypesRequest.html
+For more information, see [ListComponentTypes](https://docs.aws.amazon.com/iot-twinmaker/latest/apireference/API_ListComponentTypes.html) and [ListComponentTypesRequest](https://sdk.amazonaws.com/java/api/latest/software/amazon/awssdk/services/iottwinmaker/model/ListComponentTypesRequest.html).
 
 ##### 4.1.64.1 Attributes
 
 | Name | Type | Default value | Description |
 | --- | --- | --- | --- |
-| `MaxResults` | Integer | | Optional. The maximum number of results to return at one time. Note that there is a max value, see https://sdk.amazonaws.com/java/api/latest/software/amazon/awssdk/services/iottwinmaker/model/ListComponentTypesRequest.html#maxResults() |
+| `MaxResults` | Integer | | Optional. The maximum number of results to return at one time. For more information about the maximum value that you can set, see [maxResults](https://sdk.amazonaws.com/java/api/latest/software/amazon/awssdk/services/iottwinmaker/model/ListComponentTypesRequest.html#maxResults()). |
 | `NextToken` | String (unlimited) | | Optional. The string that specifies the next page of results. |
 | `WorkspaceID` | String (unlimited) | | Required. The ID of the workspace. |
 
@@ -1294,11 +1294,11 @@ See also https://docs.aws.amazon.com/iot-twinmaker/latest/apireference/API_ListC
 
 | Name | Connected to | Multiplicity | Description |
 | --- | --- | --- | --- |
-| `ListComponentTypeRequest_AbstractListComponentTypeFilter` | `AWSTwinMakerConnector.AbstractListComponentTypeFilter` | ManyToMany | A list of objects that filter the request. https://sdk.amazonaws.com/java/api/latest/software/amazon/awssdk/services/iottwinmaker/model/ListComponentTypesRequest.html#filters() |
+| `ListComponentTypeRequest_AbstractListComponentTypeFilter` | `AWSTwinMakerConnector.AbstractListComponentTypeFilter` | ManyToMany | A list of objects that filter the request. For more information, see [filters](https://sdk.amazonaws.com/java/api/latest/software/amazon/awssdk/services/iottwinmaker/model/ListComponentTypesRequest.html#filters()). |
 
-#### 4.1.65 Entity EntitySpecificQuery
+#### 4.1.65 EntitySpecificQuery
 
-Optional. To be used for TwinMaker entity-specific queries. So to retrieve information about the history of a time series property value for a specific TwinMaker entity and component.
+Optional. Use the `EntitySpecificQuery` entity for TwinMaker entity-specific queries, for example, to retrieve information about the history of a time series property value for a specific TwinMaker entity and component.
 
 ##### 4.1.65.1 Generalization
 
@@ -1308,8 +1308,8 @@ The generalization of this entity is `AWSTwinMakerConnector.AbstractQuery`.
 
 | Name | Type | Default value | Description |
 | --- | --- | --- | --- |
-| `EntityID` | String (unlimited) | | Required. ID of TwinMaker entity |
-| `ComponentName` | String (unlimited) | | Identification name of component |
+| `EntityID` | String (unlimited) | | Required. ID of TwinMaker entity. |
+| `ComponentName` | String (unlimited) | | Identification name of component. |
 
 ##### 4.1.65.3 Associations
 
@@ -1317,11 +1317,11 @@ The generalization of this entity is `AWSTwinMakerConnector.AbstractQuery`.
 | --- | --- | --- | --- |
 | `AbstractQuery_GetPropertyValueHistoryRequest` | `AWSTwinMakerConnector.GetPropertyValueHistoryRequest` | OneToOne | |
 
-#### 4.1.66 Entity ListWorkspacesResponse
+#### 4.1.66 ListWorkspacesResponse
 
-Entity with the list of workspaces in the current account..
+The `ListWorkspacesResponse` entity represents the list of workspaces in the current account.
 
-See also https://docs.aws.amazon.com/iot-twinmaker/latest/apireference/API_ListWorkspaces.html and https://sdk.amazonaws.com/java/api/latest/software/amazon/awssdk/services/iottwinmaker/model/ListWorkspacesResponse.html
+For more information, see [ListWorkspaces](https://docs.aws.amazon.com/iot-twinmaker/latest/apireference/API_ListWorkspaces.html) and [ListWorkspacesResponse](https://sdk.amazonaws.com/java/api/latest/software/amazon/awssdk/services/iottwinmaker/model/ListWorkspacesResponse.html).
 
 ##### 4.1.66.1 Attributes
 
@@ -1335,25 +1335,25 @@ See also https://docs.aws.amazon.com/iot-twinmaker/latest/apireference/API_ListW
 | --- | --- | --- | --- |
 | `ListWorkspacesResponse_WorkspaceSummary` | `AWSTwinMakerConnector.WorkspaceSummary` | ManyToMany | |
 
-#### 4.1.67  Entity AbstractListComponentTypeFilter
+#### 4.1.67  AbstractListComponentTypeFilter
 
-Do not use this entity, instead use one of its specializations
+{{% alert color="warning" %}}
+Do not use this entity directly. Instead, use one of its specializations.
+{{% /alert %}}
 
-An object that filters items in a list of component types.
-
-https://sdk.amazonaws.com/java/api/latest/software/amazon/awssdk/services/iotTwinMaker/model/ListComponentTypesFilter.html
+The `AbstractListComponentTypeFilter` entity represents an object that filters items in a list of component types. For more information, see [ListComponentTypesFilter](https://sdk.amazonaws.com/java/api/latest/software/amazon/awssdk/services/iotTwinMaker/model/ListComponentTypesFilter.html).
 
 ##### 4.1.67.1 Attributes
 
-Entity `AbstractListComponentTypeFilter` does not have any attributes.
+The `AbstractListComponentTypeFilter` entity does not have any attributes.
 
 ##### 4.1.67.2 Associations
 
-Entity `AbstractListComponentTypeFilter` does not have any associations.
+The `AbstractListComponentTypeFilter` entity does not have any associations.
 
-#### 4.1.68 Entity CrossEntityQuery
+#### 4.1.68 CrossEntityQuery
 
-Optional. To be used for TwinMaker cross-entity queries. So to retrieve information about the history of a time series property value for all components of a specific type within a workspace. Filters can be applied to the limit the number of components or to target specific components.
+Optional. Use the `CrossEntityQuery` entity for TwinMaker cross-entity queries, for example, to retrieve information about the history of a time series property value for all components of a specific type within a workspace. Filters can be applied to the limit the number of components or to target specific components.
 
 ##### 4.1.68.1 Generalization
 
@@ -1363,7 +1363,7 @@ The generalization of this entity is `AWSTwinMakerConnector.AbstractQuery`.
 
 | Name | Type | Default value | Description |
 | --- | --- | --- | --- |
-| `ComponenTypeID` | String (unlimited) | | The id of the component type. |
+| `ComponenTypeID` | String (unlimited) | | The ID of the component type. |
 
 ##### 4.1.68.3 Associations
 
@@ -1371,11 +1371,11 @@ The generalization of this entity is `AWSTwinMakerConnector.AbstractQuery`.
 | --- | --- | --- | --- |
 | `AbstractQuery_GetPropertyValueHistoryRequest` | `AWSTwinMakerConnector.GetPropertyValueHistoryRequest` | OneToOne | |
 
-#### 4.1.69 Entity WorkspaceSummary
+#### 4.1.69 WorkspaceSummary
 
-Entity that contains information about a workspace.
+The `WorkspaceSummary` entity contains information about a workspace.
 
-See also https://docs.aws.amazon.com/iot-twinmaker/latest/apireference/API_WorkspaceSummary.html and https://sdk.amazonaws.com/java/api/latest/software/amazon/awssdk/services/iottwinmaker/model/WorkspaceSummary.html
+For more information, see [WorkspaceSummary](https://docs.aws.amazon.com/iot-twinmaker/latest/apireference/API_WorkspaceSummary.html) and [Class WorkspaceSummary](https://sdk.amazonaws.com/java/api/latest/software/amazon/awssdk/services/iottwinmaker/model/WorkspaceSummary.html).
 
 ##### 4.1.69.1 Attributes
 
@@ -1389,13 +1389,13 @@ See also https://docs.aws.amazon.com/iot-twinmaker/latest/apireference/API_Works
 
 ##### 4.1.69.2 Associations
 
-Entity `WorkspaceSummary` does not have any associations.
+The `WorkspaceSummary` entity does not have any associations.
 
-#### 4.1.70 Entity ExtendsFromFilter
+#### 4.1.70 ExtendsFromFilter
 
-Entity for filters containing the component type that the component types in the list extend.
+The `ExtendsFromFilter` entity represents filters containing the component type that the component types in the list extend.
 
-See also https://docs.aws.amazon.com/iot-twinmaker/latest/apireference/API_ListComponentTypesFilter.html and https://sdk.amazonaws.com/java/api/latest/software/amazon/awssdk/services/iottwinmaker/model/ListComponentTypesFilter.html#extendsFrom()
+For more information, see [ListComponentTypesFilter](https://docs.aws.amazon.com/iot-twinmaker/latest/apireference/API_ListComponentTypesFilter.html) and [extendsFrom](https://sdk.amazonaws.com/java/api/latest/software/amazon/awssdk/services/iottwinmaker/model/ListComponentTypesFilter.html#extendsFrom()).
 
 ##### 4.1.70.1 Generalization
 
@@ -1405,15 +1405,15 @@ The generalization of this entity is `AWSTwinMakerConnector.AbstractListComponen
 
 | Name | Type | Default value | Description |
 | --- | --- | --- | --- |
-| `ExtendsFrom` | String (unlimited) | | The component type that the component types in the list extend (so the parent type). |
+| `ExtendsFrom` | String (unlimited) | | The component type that the component types in the list extend (that is, the parent type). |
 
 ##### 4.1.70.3 Associations
 
-Entity `ExtendsFromFilter` does not have any associations.
+The `ExtendsFromFilter` entity does not have any associations.
 
-#### 4.1.71 Entity SelectedProperty
+#### 4.1.71 SelectedProperty
 
-Entity to represent a selected property, e.g. the properties whose values the operation returns.
+The `SelectedProperty` entity represents a selected property, for example, the properties whose values the operation returns.
 
 ##### 4.1.71.1 Attributes
 
@@ -1423,13 +1423,13 @@ Entity to represent a selected property, e.g. the properties whose values the op
 
 ##### 4.1.71.2 Associations
 
-Entity `SelectedProperty` does not have any associations.
+The `SelectedProperty` entity does not have any associations.
 
-#### 4.1.72 Entity IsAbstractFilter
+#### 4.1.72 IsAbstractFilter
 
-Entity for filters containing a Boolean value that specifies whether the component types in the list are abstract.
+The `IsAbstractFilter` entity represents filters containing a Boolean value that specifies whether the component types in the list are abstract.
 
-See also https://docs.aws.amazon.com/iot-twinmaker/latest/apireference/API_ListComponentTypesFilter.html and https://sdk.amazonaws.com/java/api/latest/software/amazon/awssdk/services/iottwinmaker/model/ListComponentTypesFilter.html#isAbstract()
+For more information, see [ListComponentTypesFilter](https://docs.aws.amazon.com/iot-twinmaker/latest/apireference/API_ListComponentTypesFilter.html) and [isAbstract](https://sdk.amazonaws.com/java/api/latest/software/amazon/awssdk/services/iottwinmaker/model/ListComponentTypesFilter.html#isAbstract()).
 
 ##### 4.1.72.1 Generalization
 
@@ -1443,13 +1443,13 @@ The generalization of this entity is `AWSTwinMakerConnector.AbstractListComponen
 
 ##### 4.1.72.3 Associations
 
-Entity `IsAbstractFilter` does not have any associations.
+The `IsAbstractFilter` entity does not have any associations.
 
-#### 4.1.73 Entity GetPropertyValueHistoryRequestSelectedProperty
+#### 4.1.73 GetPropertyValueHistoryRequestSelectedProperty
 
-Required. The TwinMaker property to return values of. In TwinMaker, this property must be marked as a time-series property.
+Required. The `GetPropertyValueHistoryRequestSelectedProperty` entity represents the TwinMaker property whose values you want to return. In TwinMaker, this property must be marked as a time-series property.
 
-See also https://docs.aws.amazon.com/iot-twinmaker/latest/apireference/API_GetPropertyValue.html#API_GetPropertyValue_RequestBody and https://sdk.amazonaws.com/java/api/latest/software/amazon/awssdk/services/iottwinmaker/model/GetPropertyValueRequest.html#selectedProperties()
+For more information, see [Request Body](https://docs.aws.amazon.com/iot-twinmaker/latest/apireference/API_GetPropertyValue.html#API_GetPropertyValue_RequestBody) and [selectedProperties](https://sdk.amazonaws.com/java/api/latest/software/amazon/awssdk/services/iottwinmaker/model/GetPropertyValueRequest.html#selectedProperties()).
 
 ##### 4.1.73.1 Generalization
 
@@ -1457,17 +1457,17 @@ The generalization of this entity is `AWSTwinMakerConnector.SelectedProperty`.
 
 ##### 4.1.73.2 Attributes
 
-Entity `GetPropertyValueHistoryRequestSelectedProperty` does not have any attributes.
+The `GetPropertyValueHistoryRequestSelectedProperty` entity does not have any attributes.
 
 ##### 4.1.73.3 Associations
 
-Entity `GetPropertyValueHistoryRequestSelectedProperty` does not have any associations.
+The `GetPropertyValueHistoryRequestSelectedProperty` entity does not have any associations.
 
-#### 4.1.74 Entity NamespaceFilter
+#### 4.1.74 NamespaceFilter
 
-Entity for filters containing the namespace to which the component types in the list belong.
+The `NamespaceFilter` entity represents filters containing the namespace to which the component types in the list belong.
 
-See also https://docs.aws.amazon.com/iot-twinmaker/latest/apireference/API_ListComponentTypesFilter.html and https://sdk.amazonaws.com/java/api/latest/software/amazon/awssdk/services/iottwinmaker/model/ListComponentTypesFilter.html#namespace()
+For more information, see [ListComponentTypesFilter](https://docs.aws.amazon.com/iot-twinmaker/latest/apireference/API_ListComponentTypesFilter.html) and [namespace](https://sdk.amazonaws.com/java/api/latest/software/amazon/awssdk/services/iottwinmaker/model/ListComponentTypesFilter.html#namespace()).
 
 ##### 4.1.74.1 Generalization
 
@@ -1481,13 +1481,13 @@ The generalization of this entity is `AWSTwinMakerConnector.AbstractListComponen
 
 ##### 4.1.74.3 Associations
 
-Entity `NamespaceFilter` does not have any associations.
+The `NamespaceFilter` entity does not have any associations.
 
-#### 4.1.75 Entity ListComponentTypeResponse
+#### 4.1.75 ListComponentTypeResponse
 
-Response entity containing the list all component types in a workspace.
+The `ListComponentTypeResponse` entity is a response entity containing the list of all component types in a workspace.
 
-See also https://docs.aws.amazon.com/iot-twinmaker/latest/apireference/API_ListComponentTypes.html and https://sdk.amazonaws.com/java/api/latest/software/amazon/awssdk/services/iottwinmaker/model/ListComponentTypesResponse.html
+For more information, see [ListComponentTypes](https://docs.aws.amazon.com/iot-twinmaker/latest/apireference/API_ListComponentTypes.html) and [ListComponentTypesResponse](https://sdk.amazonaws.com/java/api/latest/software/amazon/awssdk/services/iottwinmaker/model/ListComponentTypesResponse.html).
 
 ##### 4.1.75.1 Attributes
 
@@ -1503,11 +1503,11 @@ See also https://docs.aws.amazon.com/iot-twinmaker/latest/apireference/API_ListC
 | --- | --- | --- | --- |
 | `ListComponentTypeResponse_ComponentTypeSummary` | `AWSTwinMakerConnector.ComponentTypeSummary` | ManyToMany | |
 
-#### 4.1.76 Entity ComponentTypeSummary
+#### 4.1.76 ComponentTypeSummary
 
-Contains the information for the retrieved ComponentTypes.
+The `ComponentTypeSummary` entity contains information about the retrieved ComponentTypes.
 
-See also https://docs.aws.amazon.com/iot-twinmaker/latest/apireference/API_ComponentTypeSummary.html and https://sdk.amazonaws.com/java/api/latest/software/amazon/awssdk/services/iottwinmaker/model/ComponentTypeSummary.html
+For more information, see [ComponentTypeSummary](https://docs.aws.amazon.com/iot-twinmaker/latest/apireference/API_ComponentTypeSummary.html) and [Class ComponentTypeSummary](https://sdk.amazonaws.com/java/api/latest/software/amazon/awssdk/services/iottwinmaker/model/ComponentTypeSummary.html).
 
 ##### 4.1.76.1 Attributes
 
@@ -1526,11 +1526,11 @@ See also https://docs.aws.amazon.com/iot-twinmaker/latest/apireference/API_Compo
 | --- | --- | --- | --- |
 | `ComponentTypeSummary_ListComponentTypeStatus` | `AWSTwinMakerConnector.ListComponentTypeStatus` | OneToMany | |
 
-#### 4.1.77 Entity ListComponentTypeStatus
+#### 4.1.77 ListComponentTypeStatus
 
-The current status of the component type.
+The `ListComponentTypeStatus` entity represents the current status of the component type.
 
-See also https://docs.aws.amazon.com/iot-twinmaker/latest/apireference/API_Status.html and https://sdk.amazonaws.com/java/api/latest/software/amazon/awssdk/services/iottwinmaker/model/Status.html
+For more information, see [Status](https://docs.aws.amazon.com/iot-twinmaker/latest/apireference/API_Status.html) and [Class Status](https://sdk.amazonaws.com/java/api/latest/software/amazon/awssdk/services/iottwinmaker/model/Status.html).
 
 ##### 4.1.77.1 Generalization
 
@@ -1538,7 +1538,7 @@ The generalization of this entity is `AWSTwinMakerConnector.Status`.
 
 ##### 4.1.77.2 Attributes
 
-Entity `ListComponentTypeStatus` does not have any attributes.
+The `ListComponentTypeStatus` entity does not have any attributes.
 
 ##### 4.1.77.3 Associations
 
@@ -1546,13 +1546,11 @@ Entity `ListComponentTypeStatus` does not have any attributes.
 | --- | --- | --- | --- |
 | `Status_ErrorDetails` | `AWSTwinMakerConnector.ErrorDetails` | OneToMany | |
 
-#### 4.1.78 Entity GetComponentTypeRequest
+#### 4.1.78 GetComponentTypeRequest
 
-Entity containing request to retrieves information about a specific componentType.
+The `GetComponentTypeRequest` entity contains the request to retrieve information about a specific componentType.
 
-Required. `WorkspaceID` and `ComponentTypeID`
-
-See also https://docs.aws.amazon.com/iot-twinmaker/latest/apireference/API_GetComponentType.html and https://sdk.amazonaws.com/java/api/latest/software/amazon/awssdk/services/iottwinmaker/model/GetComponentTypeRequest.html
+For more information, see [GetComponentType](https://docs.aws.amazon.com/iot-twinmaker/latest/apireference/API_GetComponentType.html) and [GetComponentTypeRequest](https://sdk.amazonaws.com/java/api/latest/software/amazon/awssdk/services/iottwinmaker/model/GetComponentTypeRequest.html).
 
 ##### 4.1.78.1 Attributes
 
@@ -1563,13 +1561,11 @@ See also https://docs.aws.amazon.com/iot-twinmaker/latest/apireference/API_GetCo
 
 ##### 4.1.78.2 Associations
 
-Entity `GetComponentTypeRequest` does not have any associations.
+The `GetComponentTypeRequest` entity does not have any associations.
 
-#### 4.1.79 Entity DataValueUsageListEntry
+#### 4.1.79 DataValueUsageListEntry
 
-Entity representing one list entry.
-
-It is a specialization of the DataValueUsage as the value can be of any data value type.
+The `DataValueUsageListEntry` entity represents one entry in a list. This entity is a specialization of the `DataValueUsage` entity, as the value can be of any data value type.
 
 ##### 4.1.79.1 Generalization
 
@@ -1577,7 +1573,7 @@ The generalization of this entity is `AWSTwinMakerConnector.DataValueUsage`.
 
 ##### 4.1.79.2 Attributes
 
-Entity `DataValueUsageListEntry` does not have any attributes.
+The `DataValueUsageListEntry` entity does not have any attributes.
 
 ##### 4.1.79.3 Associations
 
@@ -1585,11 +1581,11 @@ Entity `DataValueUsageListEntry` does not have any attributes.
 | --- | --- | --- | --- |
 | `AbstractDataValue_DataValueUsage` | `AWSTwinMakerConnector.DataValueUsage` | OneToOne | |
 
-#### 4.1.80 Entity GetComponentTypeResponse
+#### 4.1.80 GetComponentTypeResponse
 
-Entity containing information on the requested ComponentType.
+The `GetComponentTypeResponse` entity contains information on the requested ComponentType.
 
-See also https://docs.aws.amazon.com/iot-twinmaker/latest/apireference/API_GetComponentType.html and https://sdk.amazonaws.com/java/api/latest/software/amazon/awssdk/services/iottwinmaker/model/GetComponentTypeResponse.html
+For more information, see [GetComponentType](https://docs.aws.amazon.com/iot-twinmaker/latest/apireference/API_GetComponentType.html) and [GetComponentTypeResponse](https://sdk.amazonaws.com/java/api/latest/software/amazon/awssdk/services/iottwinmaker/model/GetComponentTypeResponse.html).
 
 ##### 4.1.80.1 Attributes
 
@@ -1617,25 +1613,25 @@ See also https://docs.aws.amazon.com/iot-twinmaker/latest/apireference/API_GetCo
 | `GetComponentTypeResponse_ComponentTypeStatus` | `AWSTwinMakerConnector.ComponentTypeStatus` | OneToMany | |
 | `GetComponentTypeResponse_ComponentTypePropertyGroupResponse` | `AWSTwinMakerConnector.ComponentTypePropertyGroupResponse` | ManyToMany | |
 
-#### 4.1.81 Entity GetWorkspaceRequest
+#### 4.1.81 GetWorkspaceRequest
 
-Entity for requesting details of a workspace
+The `GetWorkspaceRequest` entity can be used to request the details of a workspace.
 
-See also https://docs.aws.amazon.com/iot-twinmaker/latest/apireference/API_GetWorkspace.html and https://sdk.amazonaws.com/java/api/latest/software/amazon/awssdk/services/iottwinmaker/model/GetWorkspaceRequest.html
+For more information, see [GetWorkspace](https://docs.aws.amazon.com/iot-twinmaker/latest/apireference/API_GetWorkspace.html) and [GetWorkspaceRequest](https://sdk.amazonaws.com/java/api/latest/software/amazon/awssdk/services/iottwinmaker/model/GetWorkspaceRequest.html).
 
 ##### 4.1.81.1 Attributes
 
 | Name | Type | Default value | Description |
 | --- | --- | --- | --- |
-| `WorkspaceID` | String (unlimited) | | Required. ID of the workspace |
+| `WorkspaceID` | String (unlimited) | | Required. The ID of the workspace. |
 
 ##### 4.1.81.2 Associations
 
-Entity `GetWorkspaceRequest` does not have any associations.
+The `GetWorkspaceRequest` entity does not have any associations.
 
-#### 4.1.82 Entity ExtendsFrom
+#### 4.1.82 ExtendsFrom
 
-The name of the parent component type that this component type extends
+The `ExtendsFrom` entity represents the name of the parent component type that this component type extends.
 
 ##### 4.1.82.1 Attributes
 
@@ -1645,13 +1641,13 @@ The name of the parent component type that this component type extends
 
 ##### 4.1.82.2 Associations
 
-Entity `ExtendsFrom` does not have any associations.
+The `ExtendsFrom` entity does not have any associations.
 
-#### 4.1.83 Entity GetWorkspaceResponse
+#### 4.1.83 GetWorkspaceResponse
 
-Entity containing the details of a workspace.
+The `GetWorkspaceResponse` entity contains the details of a workspace.
 
-See also https://docs.aws.amazon.com/iot-twinmaker/latest/apireference/API_GetWorkspace.html and https://sdk.amazonaws.com/java/api/latest/software/amazon/awssdk/services/iottwinmaker/model/GetWorkspaceResponse.html
+For more information, see [GetWorkspace](https://docs.aws.amazon.com/iot-twinmaker/latest/apireference/API_GetWorkspace.html) and [GetWorkspaceResponse](https://sdk.amazonaws.com/java/api/latest/software/amazon/awssdk/services/iottwinmaker/model/GetWorkspaceResponse.html).
 
 ##### 4.1.83.1 Attributes
 
@@ -1667,13 +1663,13 @@ See also https://docs.aws.amazon.com/iot-twinmaker/latest/apireference/API_GetWo
 
 ##### 4.1.83.2 Associations
 
-Entity 'GetWorkspaceResponse' does not have any associations.
+The `GetWorkspaceResponse` entity does not have any associations.
 
-#### 4.1.84 Entity FunctionResponse
+#### 4.1.84 FunctionResponse
 
-Function response.
+The `FunctionResponse` entity represents a function response.
 
-See https://docs.aws.amazon.com/iot-twinmaker/latest/apireference/API_FunctionResponse.html and https://sdk.amazonaws.com/java/api/latest/software/amazon/awssdk/services/iottwinmaker/model/FunctionResponse.html
+For more information, see [FunctionResponse](https://docs.aws.amazon.com/iot-twinmaker/latest/apireference/API_FunctionResponse.html) and [Class FunctionResponse](https://sdk.amazonaws.com/java/api/latest/software/amazon/awssdk/services/iottwinmaker/model/FunctionResponse.html).
 
 ##### 4.1.84.1 Attributes
 
@@ -1690,11 +1686,11 @@ See https://docs.aws.amazon.com/iot-twinmaker/latest/apireference/API_FunctionRe
 | `FunctionResponse_RequiredProperty` | `AWSTwinMakerConnector.RequiredProperty` | ManyToMany | |
 | `FunctionResponse_DataConnector` | `AWSTwinMakerConnector.DataConnector` | OneToMany | |
 
-#### 4.1.85 Entity ComponentTypePropertyDefinitionResponse
+#### 4.1.85 ComponentTypePropertyDefinitionResponse
 
-Property definitions in the component type.
+The `ComponentTypePropertyDefinitionResponse` entity represents the property definitions in the component type.
 
-See also https://docs.aws.amazon.com/iot-twinmaker/latest/apireference/API_PropertyDefinitionResponse.html and https://sdk.amazonaws.com/java/api/latest/software/amazon/awssdk/services/iottwinmaker/model/PropertyDefinitionResponse.html
+For more information, see [PropertyDefinitionResponse](https://docs.aws.amazon.com/iot-twinmaker/latest/apireference/API_PropertyDefinitionResponse.html) and [Class PropertyDefinitionResponse](https://sdk.amazonaws.com/java/api/latest/software/amazon/awssdk/services/iottwinmaker/model/PropertyDefinitionResponse.html).
 
 ##### 4.1.85.1 Generalization
 
@@ -1714,11 +1710,11 @@ The generalization of this entity is `AWSTwinMakerConnector.PropertyDefinitionRe
 | `PropertyDefinitionResponse_DataType` | `AWSTwinMakerConnector.DataType` | OneToMany | |
 | `PropertyDefinitionResponse_PropertyDefinitionResponseDataValue` | `AWSTwinMakerConnector.PropertyDefinitionResponseDataValue` | OneToMany | |
 
-#### 4.1.86 Entity ComponentTypeStatus
+#### 4.1.86 ComponentTypeStatus
 
-The current status of the component type.
+The `ComponentTypeStatus` entity represents the current status of the component type.
 
-See also https://docs.aws.amazon.com/iot-twinmaker/latest/apireference/API_Status.html and https://sdk.amazonaws.com/java/api/latest/software/amazon/awssdk/services/iottwinmaker/model/Status.html
+For more information, see [Status](https://docs.aws.amazon.com/iot-twinmaker/latest/apireference/API_Status.html) and [Class Status](https://sdk.amazonaws.com/java/api/latest/software/amazon/awssdk/services/iottwinmaker/model/Status.html).
 
 ##### 4.1.86.1 Generalization
 
@@ -1726,7 +1722,7 @@ The generalization of this entity is `AWSTwinMakerConnector.Status`.
 
 ##### 4.1.86.2 Attributes
 
-Entity `ComponentTypeStatus` does not have any attributes.
+The `ComponentTypeStatus` entity does not have any attributes.
 
 ##### 4.1.86.3 Associations
 
@@ -1734,9 +1730,9 @@ Entity `ComponentTypeStatus` does not have any attributes.
 | --- | --- | --- | --- |
 | `Status_ErrorDetails` | `AWSTwinMakerConnector.ErrorDetails` | OneToMany | |
 
-#### 4.1.87 Entity RequiredProperty
+#### 4.1.87 RequiredProperty
 
-The required properties of the function.
+The `RequiredProperty` entity represents the required properties of the function.
 
 ##### 4.1.87.1 Attributes
 
@@ -1746,19 +1742,19 @@ The required properties of the function.
 
 ##### 4.1.87.2 Associations
 
-Entity `RequiredProperty` does not have any associations.
+The `RequiredProperty` entity does not have any associations.
 
-#### 4.1.88 Entity DataConnector
+#### 4.1.88 DataConnector
 
-The data connector of the function.
+The `DataConnector` entity represents the data connector of the function.
 
-See also https://docs.aws.amazon.com/iot-twinmaker/latest/apireference/API_DataConnector.html and https://sdk.amazonaws.com/java/api/latest/software/amazon/awssdk/services/iottwinmaker/model/DataConnector.html
+For more information, see https://docs.aws.amazon.com/iot-twinmaker/latest/apireference/API_DataConnector.html and https://sdk.amazonaws.com/java/api/latest/software/amazon/awssdk/services/iottwinmaker/model/DataConnector.html
 
 ##### 4.1.88.1 Attributes
 
 | Name | Type | Default value | Description |
 | --- | --- | --- | --- |
-| `IsNative` | Boolean | false | A Boolean value that specifies whether the data connector is native to IoT TwinMaker. |
+| `IsNative` | Boolean | false | A Boolean value that specifies whether the data connector is native to AWS IoT TwinMaker. |
 
 ##### 4.1.88.2 Associations
 
@@ -1766,11 +1762,11 @@ See also https://docs.aws.amazon.com/iot-twinmaker/latest/apireference/API_DataC
 | --- | --- | --- | --- |
 | `DataConnector_LambdaFunction` | `AWSTwinMakerConnector.LambdaFunction` | OneToMany | |
 
-#### 4.1.89 Entity LambdaFunction
+#### 4.1.89 LambdaFunction
 
-The Lambda function associated with this data connector.
+The `LambdaFunction` entity represents the Lambda function associated with this data connector.
 
-See also https://docs.aws.amazon.com/iot-twinmaker/latest/apireference/API_LambdaFunction.html and https://sdk.amazonaws.com/java/api/latest/software/amazon/awssdk/services/iottwinmaker/model/LambdaFunction.html
+For more information, see [LambdaFunction](https://docs.aws.amazon.com/iot-twinmaker/latest/apireference/API_LambdaFunction.html) and [Class LambdaFunction](https://sdk.amazonaws.com/java/api/latest/software/amazon/awssdk/services/iottwinmaker/model/LambdaFunction.html).
 
 ##### 4.1.89.1 Attributes
 
@@ -1780,19 +1776,19 @@ See also https://docs.aws.amazon.com/iot-twinmaker/latest/apireference/API_Lambd
 
 ##### 4.1.89.2 Associations
 
-Entity `LambdaFunction` does not have any associations.
+The `LambdaFunction` entity does not have any associations.
 
-#### 4.1.90 Entity PropertyDefinitionResponse
+#### 4.1.90 PropertyDefinitionResponse
 
-An object that contains response data from a property definition request.
+The `PropertyDefinitionResponse` entity represents an object that contains response data from a property definition request.
 
-See also https://docs.aws.amazon.com/iot-twinmaker/latest/apireference/API_PropertyDefinitionResponse.html and https://sdk.amazonaws.com/java/api/latest/software/amazon/awssdk/services/iottwinmaker/model/PropertyDefinitionResponse.html
+For more information, see [PropertyDefinitionResponse](https://docs.aws.amazon.com/iot-twinmaker/latest/apireference/API_PropertyDefinitionResponse.html) and [Class PropertyDefinitionResponse](https://sdk.amazonaws.com/java/api/latest/software/amazon/awssdk/services/iottwinmaker/model/PropertyDefinitionResponse.html).
 
 ##### 4.1.90.1 Attributes
 
 | Name | Type | Default value | Description |
 | --- | --- | --- | --- |
-| `DisplayName` | String (unlimited) | | A friendly name for the property. |
+| `DisplayName` | String (unlimited) | | A user-friendly name for the property. |
 | `IsExternalID` | Boolean | false | A Boolean value that specifies whether the property ID comes from an external data store. |
 | `IsFinal` | Boolean | false | A Boolean value that specifies whether the property definition can be updated. |
 | `IsImported` | Boolean | false | A Boolean value that specifies whether the property definition is imported from an external data store. |
@@ -1809,34 +1805,34 @@ See also https://docs.aws.amazon.com/iot-twinmaker/latest/apireference/API_Prope
 | `PropertyDefinitionResponse_DataType` | `AWSTwinMakerConnector.DataType` | OneToMany | |
 | `PropertyDefinitionResponse_PropertyDefinitionResponseDataValue` | `AWSTwinMakerConnector.PropertyDefinitionResponseDataValue` | OneToMany | |
 
-#### 4.1.91 Entity Configuration
+#### 4.1.91 Configuration
 
-A mapping that specifies configuration information about the property with key-value pairs.
+The `Configuration` entity is a mapping that specifies configuration information about the property with key-value pairs.
 
-See also https://docs.aws.amazon.com/iot-twinmaker/latest/apireference/API_PropertyDefinitionResponse.html#API_PropertyDefinitionResponse_Contents and https://sdk.amazonaws.com/java/api/latest/software/amazon/awssdk/services/iottwinmaker/model/PropertyDefinitionResponse.html#configuration()
+For more information, see [PropertyDefinitionResponse Contents](https://docs.aws.amazon.com/iot-twinmaker/latest/apireference/API_PropertyDefinitionResponse.html#API_PropertyDefinitionResponse_Contents) and [configuration](https://sdk.amazonaws.com/java/api/latest/software/amazon/awssdk/services/iottwinmaker/model/PropertyDefinitionResponse.html#configuration()).
 
 ##### 4.1.91.1 Attributes
 
 | Name | Type | Default value | Description |
 | --- | --- | --- | --- |
-| `Key` | String (unlimited) | | Name of key/attribute |
-| `Value` | String (unlimited) | | Value of key/attribute |
+| `Key` | String (unlimited) | | Name of key or attribute |
+| `Value` | String (unlimited) | | Value of key or attribute |
 
 ##### 4.1.91.2 Associations
 
-Entity `Configuration` does not have any associations.
+The `Configuration` entity does not have any associations.
 
-#### 4.1.92 Entity DataType
+#### 4.1.92 DataType
 
-An object that contains information about the data type.
+The `DataType` entity contains information about the data type.
 
-See also https://docs.aws.amazon.com/iot-twinmaker/latest/apireference/API_DataType.html and https://sdk.amazonaws.com/java/api/latest/software/amazon/awssdk/services/iottwinmaker/model/DataType.html
+For more information, see [DataType](https://docs.aws.amazon.com/iot-twinmaker/latest/apireference/API_DataType.html) and [Class DataType](https://sdk.amazonaws.com/java/api/latest/software/amazon/awssdk/services/iottwinmaker/model/DataType.html).
 
 ##### 4.1.92.1 Attributes
 
 | Name | Type | Default value | Description |
 | --- | --- | --- | --- |
-| `_Type` | Enumeration `_Type` | | The underlying type of the data type. See also https://docs.aws.amazon.com/iot-twinmaker/latest/apireference/API_DataType.html#API_DataType_Contents and https://sdk.amazonaws.com/java/api/latest/software/amazon/awssdk/services/iottwinmaker/model/Type.html |
+| `_Type` | Enumeration `_Type` | | The underlying type of the data type. For more information, see [DataType Contents](https://docs.aws.amazon.com/iot-twinmaker/latest/apireference/API_DataType.html#API_DataType_Contents) and [Type](https://sdk.amazonaws.com/java/api/latest/software/amazon/awssdk/services/iottwinmaker/model/Type.html). |
 | `UnitOfMeasure` | String (unlimited) | | The unit of measure used in this data type. |
 
 ##### 4.1.92.2 Associations
@@ -1847,28 +1843,32 @@ See also https://docs.aws.amazon.com/iot-twinmaker/latest/apireference/API_DataT
 | `DataType_DataType_Nested` | `AWSTwinMakerConnector.DataType` | OneToMany | |
 | `DataType_AllowedDataValue` | `AWSTwinMakerConnector.AllowedDataValue` | ManyToMany | |
 
-#### 4.1.93 Entity Relationship
+#### 4.1.93 Relationship
 
-An object that specifies a relationship with another component type.
+The `Relationship` entity specifies a relationship with another component type.
 
-See also https://docs.aws.amazon.com/iot-twinmaker/latest/apireference/API_Relationship.html and https://sdk.amazonaws.com/java/api/latest/software/amazon/awssdk/services/iottwinmaker/model/Relationship.html
+For more information, see [Relationship](https://docs.aws.amazon.com/iot-twinmaker/latest/apireference/API_Relationship.html) and [Class Relationship](https://sdk.amazonaws.com/java/api/latest/software/amazon/awssdk/services/iottwinmaker/model/Relationship.html).
 
 ##### 4.1.93.1 Attributes
 
 | Name | Type | Default value | Description |
 | --- | --- | --- | --- |
-| `RelationshipType` | String (unlimited) | | The type of the relationship, descripton of relationship. |
+| `RelationshipType` | String (unlimited) | | The type or description of the relationship. |
 | `TargetComponentTypeID` | String (unlimited) | | The ID of the target component type associated with this relationship. |
 
 ##### 4.1.93.2 Associations
 
-Entity `Relationship` does not have any associations.
+The `Relationship` entity does not have any associations.
 
-#### 4.1.94 Entity PropertyDefinitionResponseDataValue
+#### 4.1.94 PropertyDefinitionResponseDataValue
 
 PropertyDefinitionResponseDataValueUsage contains the default value of a PropertyDefinitionResponse
 
-See https://docs.aws.amazon.com/iot-twinmaker/latest/apireference/API_PropertyDefinitionResponse.html#API_PropertyDefinitionResponse_Contents, https://sdk.amazonaws.com/java/api/latest/software/amazon/awssdk/services/iottwinmaker/model/PropertyDefinitionResponse.html#defaultValue() and https://sdk.amazonaws.com/java/api/latest/software/amazon/awssdk/services/iottwinmaker/model/DataValue.html
+For more information, see the following articles:
+
+* [PropertyDefinitionResponse Contents](https://docs.aws.amazon.com/iot-twinmaker/latest/apireference/API_PropertyDefinitionResponse.html#API_PropertyDefinitionResponse_Contents)
+* [defaultValue](https://sdk.amazonaws.com/java/api/latest/software/amazon/awssdk/services/iottwinmaker/model/PropertyDefinitionResponse.html#defaultValue())
+* [DataValue](https://sdk.amazonaws.com/java/api/latest/software/amazon/awssdk/services/iottwinmaker/model/DataValue.html)
 
 ##### 4.1.94.1 Generalization
 
@@ -1876,7 +1876,7 @@ The generalization of this entity is `AWSTwinMakerConnector.DataValueUsage`.
 
 ##### 4.1.94.2 Attributes
 
-Entity `PropertyDefinitionResponseDataValue` does not have any attributes.
+The `PropertyDefinitionResponseDataValue` entity does not have any attributes.
 
 ##### 4.1.94.3 Associations
 
@@ -1884,13 +1884,16 @@ Entity `PropertyDefinitionResponseDataValue` does not have any attributes.
 | --- | --- | --- | --- |
 | `AbstractDataValue_DataValueUsage` | `AWSTwinMakerConnector.DataValueUsage` | OneToOne | |
 
-#### 4.1.95 Entity AllowedDataValue
+#### 4.1.95 AllowedDataValue
 
-The allowed values for this data type.
+The AllowedDataValue entity represents the allowed values for this data type.
 
-See also https://docs.aws.amazon.com/iot-twinmaker/latest/apireference/API_DataType.html#API_DataType_Contents and https://docs.aws.amazon.com/iot-twinmaker/latest/apireference/API_DataValue.html
+For more information, see the following articles:
 
-And https://sdk.amazonaws.com/java/api/latest/software/amazon/awssdk/services/iottwinmaker/model/DataType.html#allowedValues() and https://sdk.amazonaws.com/java/api/latest/software/amazon/awssdk/services/iottwinmaker/model/DataValue.html
+* [DataType Contents](https://docs.aws.amazon.com/iot-twinmaker/latest/apireference/API_DataType.html#API_DataType_Contents)
+* [DataValue](https://docs.aws.amazon.com/iot-twinmaker/latest/apireference/API_DataValue.html)
+* [allowedValues](https://sdk.amazonaws.com/java/api/latest/software/amazon/awssdk/services/iottwinmaker/model/DataType.html#allowedValues())
+* [DataValue](https://sdk.amazonaws.com/java/api/latest/software/amazon/awssdk/services/iottwinmaker/model/DataValue.html)
 
 ##### 4.1.95.1 Generalization
 
@@ -1898,7 +1901,7 @@ The generalization of this entity is `AWSTwinMakerConnector.DataValueUsage`.
 
 ##### 4.1.95.2 Attributes
 
-Entity `AllowedDataValue` does not have any attributes.
+The `AllowedDataValue` entity does not have any attributes.
 
 ##### 4.1.95.3 Associations
 
@@ -1906,11 +1909,11 @@ Entity `AllowedDataValue` does not have any attributes.
 | --- | --- | --- | --- |
 | `AbstractDataValue_DataValueUsage` | `AWSTwinMakerConnector.DataValueUsage` | OneToOne | |
 
-#### 4.1.96 Entity PropertyGroupResponse
+#### 4.1.96 PropertyGroupResponse
 
-Property Group Response
+The `PropertyGroupResponse` entity represents the property group response.
 
-See also https://docs.aws.amazon.com/iot-twinmaker/latest/apireference/API_PropertyGroupResponse.html and https://sdk.amazonaws.com/java/api/latest/software/amazon/awssdk/services/iottwinmaker/model/PropertyGroupResponse.html
+For more information, see [PropertyGroupResponse](https://docs.aws.amazon.com/iot-twinmaker/latest/apireference/API_PropertyGroupResponse.html) and [Class PropertyGroupResponse](https://sdk.amazonaws.com/java/api/latest/software/amazon/awssdk/services/iottwinmaker/model/PropertyGroupResponse.html).
 
 ##### 4.1.96.1 Attributes
 
@@ -1918,7 +1921,7 @@ See also https://docs.aws.amazon.com/iot-twinmaker/latest/apireference/API_Prope
 | --- | --- | --- | --- |
 | `Key` | String (unlimited) | | Name of the property group, used as key, identifier. |
 | `GroupType` | Enumeration `GroupType` | | The group type. |
-| `IsInherited` | Boolean | false | A Boolean value that specifies whether the property group is inherited from a parent entity |
+| `IsInherited` | Boolean | false | A Boolean value that specifies whether the property group is inherited from a parent entity. |
 
 ##### 4.1.96.2 Associations
 
@@ -1926,11 +1929,11 @@ See also https://docs.aws.amazon.com/iot-twinmaker/latest/apireference/API_Prope
 | --- | --- | --- | --- |
 | `PropertyGroupResponse_PropertyName` | `AWSTwinMakerConnector.PropertyName` | ManyToMany | |
 
-#### 4.1.97 Entity ComponentTypePropertyGroupResponse
+#### 4.1.97 ComponentTypePropertyGroupResponse
 
-PropertyGroupResponse associated with a ComponentType.
+The `ComponentTypePropertyGroupResponse` represents the `PropertyGroupResponse` associated with a `ComponentType`.
 
-See also https://docs.aws.amazon.com/iot-twinmaker/latest/apireference/API_PropertyGroupResponse.html and https://sdk.amazonaws.com/java/api/latest/software/amazon/awssdk/services/iottwinmaker/model/PropertyGroupResponse.html
+For more information, see [PropertyGroupResponse](https://docs.aws.amazon.com/iot-twinmaker/latest/apireference/API_PropertyGroupResponse.html) and [Class PropertyGroupResponse](https://sdk.amazonaws.com/java/api/latest/software/amazon/awssdk/services/iottwinmaker/model/PropertyGroupResponse.html).
 
 ##### 4.1.97.1 Generalization
 
@@ -1938,7 +1941,7 @@ The generalization of this entity is `AWSTwinMakerConnector.PropertyGroupRespons
 
 ##### 4.1.97.2 Attributes
 
-Entity `ComponentTypePropertyGroupResponse` does not have any attributes.
+The `ComponentTypePropertyGroupResponse` entity does not have any attributes.
 
 ##### 4.1.97.3 Associations
 
@@ -2070,7 +2073,7 @@ Activities define the actions that are executed in a microflow or a nanoflow.
 
 Retrieves the list of all TwinMaker entities in a workspace.
 
-See also https://docs.aws.amazon.com/iot-twinmaker/latest/apireference/API_ListEntities.html
+For more information, see [ListEntities](https://docs.aws.amazon.com/iot-twinmaker/latest/apireference/API_ListEntities.html).
 
 ##### 4.3.1.1 Parameters
 
@@ -2081,13 +2084,13 @@ See also https://docs.aws.amazon.com/iot-twinmaker/latest/apireference/API_ListE
 
 ##### 4.3.1.2 Return type
 
-A`WSTwinMakerConnector.ListEntitiesResponse`
+This activity returns an `AWSTwinMakerConnector.ListEntitiesResponse` entity.
 
 #### 4.3.2 Microflow GetWorkspace
 
-Retrieves details of a workspace
+Retrieves details of a workspace.
 
-See also https://docs.aws.amazon.com/iot-twinmaker/latest/apireference/API_GetWorkspace.html
+For more information, see [GetWorkspace](https://docs.aws.amazon.com/iot-twinmaker/latest/apireference/API_GetWorkspace.html).
 
 ##### 4.3.2.1 Parameters
 
@@ -2098,13 +2101,12 @@ See also https://docs.aws.amazon.com/iot-twinmaker/latest/apireference/API_GetWo
 
 ##### 4.3.2.2 Return type
 
-`AWSTwinMakerConnector.GetWorkspaceResponse`
-
+This activity returns an `AWSTwinMakerConnector.GetWorkspaceResponse` entity.
 #### 4.3.3 Microflow GetEntity
 
-Retrieve information about a TwinMaker entity.
+Retrieves information about a TwinMaker entity.
 
-See also https://docs.aws.amazon.com/iot-twinmaker/latest/apireference/API_GetEntity.html
+For more information, see [GetEntity](https://docs.aws.amazon.com/iot-twinmaker/latest/apireference/API_GetEntity.html).
 
 ##### 4.3.3.1 Parameters
 
@@ -2115,13 +2117,13 @@ See also https://docs.aws.amazon.com/iot-twinmaker/latest/apireference/API_GetEn
 
 ##### 4.3.3.2 Return type
 
-`AWSTwinMakerConnector.GetEntityResponse`
+This activity returns an `AWSTwinMakerConnector.GetEntityResponse` entity.
 
 #### 4.3.4 Microflow GetPropertyValue
 
-Get the property values for a component, component type, entity, or workspace.
+Gets the property values for a component, component type, entity, or workspace.
 
-See also https://docs.aws.amazon.com/iot-twinmaker/latest/apireference/API_GetPropertyValue.html
+For more information, see [GetPropertyValue](https://docs.aws.amazon.com/iot-twinmaker/latest/apireference/API_GetPropertyValue.html).
 
 ##### 4.3.4.1 Parameters
 
@@ -2132,13 +2134,13 @@ See also https://docs.aws.amazon.com/iot-twinmaker/latest/apireference/API_GetPr
 
 ##### 4.3.4.2 Return type
 
-`AWSTwinMakerConnector.GetPropertyValueResponse`
+This activity returns an `AWSTwinMakerConnector.GetPropertyValueResponse` entity.
 
 #### 4.3.5 Microflow GetComponentType
 
 Retrieves information about a specific component type.
 
-See also https://docs.aws.amazon.com/iot-twinmaker/latest/apireference/API_GetComponentType.html
+For more information, see [GetComponentType](https://docs.aws.amazon.com/iot-twinmaker/latest/apireference/API_GetComponentType.html).
 
 ##### 4.3.5.1 Parameters
 
@@ -2149,15 +2151,15 @@ See also https://docs.aws.amazon.com/iot-twinmaker/latest/apireference/API_GetCo
 
 ##### 4.3.5.2 Return type
 
-`AWSTwinMakerConnector.GetComponentTypeResponse`
+This activity returns an `AWSTwinMakerConnector.GetComponentTypeResponse` entity.
 
 #### 4.3.6 Microflow GetPropertyValueHistory
 
-Retrieve information about the history of a time series property value for a component, component type, twinmaker entity, or workspace.
+Retrieves information about the history of a time series property value for a component, component type, twinmaker entity, or workspace.
 
-You must specify a value for workspaceId. For TwinMaker entity-specific queries, specify values for componentName and entityId. For cross-entity quries, specify a value for componentTypeId.
+You must specify a value for *workspaceId*. For TwinMaker entity-specific queries, specify values for ****componentName* and *entityId*. For cross-entity quries, specify a value for *componentTypeId.*
 
-See also https://docs.aws.amazon.com/iot-TwinMaker/latest/apireference/API_GetPropertyValueHistory.html
+For more information, see [GetPropertyValueHistory](https://docs.aws.amazon.com/iot-TwinMaker/latest/apireference/API_GetPropertyValueHistory.html).
 
 ##### 4.3.6.1 Parameters
 
@@ -2168,13 +2170,13 @@ See also https://docs.aws.amazon.com/iot-TwinMaker/latest/apireference/API_GetPr
 
 ##### 4.3.6.2 Return type
 
-`AWSTwinMakerConnector.GetPropertyValueHistoryResponse`
+This activity returns an `AWSTwinMakerConnector.GetPropertyValueHistoryResponse` entity.
 
 #### 4.3.7 Microflow ListWorkspaces
 
 Retrieves the list of workspaces in the current account.
 
-See also https://docs.aws.amazon.com/iot-TwinMaker/latest/apireference/API_ListWorkspaces.html
+For more information, see [ListWorkspaces](https://docs.aws.amazon.com/iot-TwinMaker/latest/apireference/API_ListWorkspaces.html).
 
 ##### 4.3.7.1 Parameters
 
@@ -2185,13 +2187,13 @@ See also https://docs.aws.amazon.com/iot-TwinMaker/latest/apireference/API_ListW
 
 ##### 4.3.7.2 Return type
 
-`AWSTwinMakerConnector.ListWorkspacesResponse`
+This activity returns an `AWSTwinMakerConnector.ListWorkspacesResponse` entity.
 
 #### 4.3.8 Microflow ListComponentTypes
 
 Lists all component types in a workspace.
 
-See also https://docs.aws.amazon.com/iot-twinmaker/latest/apireference/API_ListComponentTypes.html
+For more information, see [ListComponentTypes](https://docs.aws.amazon.com/iot-twinmaker/latest/apireference/API_ListComponentTypes.html).
 
 ##### 4.3.8.1 Parameters
 
@@ -2202,13 +2204,13 @@ See also https://docs.aws.amazon.com/iot-twinmaker/latest/apireference/API_ListC
 
 ##### 4.3.8.2 Return type
 
-`AWSTwinMakerConnector.ListComponentTypeResponse`
+This activity returns an `AWSTwinMakerConnector.ListComponentTypeResponse` entity.
 
 #### 4.3.9 Microflow GetScene
 
-Get information about a specific scene
+Gets information about a specific scene.
 
-See also https://docs.aws.amazon.com/iot-twinmaker/latest/apireference/API_GetScene.html
+For more information, see [GetScene](https://docs.aws.amazon.com/iot-twinmaker/latest/apireference/API_GetScene.html).
 
 ##### 4.3.9.1 Parameters
 
@@ -2219,13 +2221,13 @@ See also https://docs.aws.amazon.com/iot-twinmaker/latest/apireference/API_GetSc
 
 ##### 4.3.9.2 Return type
 
-`AWSTwinMakerConnector.GetSceneResponse`
+This activity returns an `AWSTwinMakerConnector.GetSceneResponse` entity.
 
 #### 4.3.10 Microflow ListScenes
 
 Retrieves the list of scenes in a workspace.
 
-See also https://docs.aws.amazon.com/iot-twinmaker/latest/apireference/API_ListScenes.html
+For more information, see [ListScenes](https://docs.aws.amazon.com/iot-twinmaker/latest/apireference/API_ListScenes.html).
 
 ##### 4.3.10.1 Parameters
 
@@ -2236,5 +2238,5 @@ See also https://docs.aws.amazon.com/iot-twinmaker/latest/apireference/API_ListS
 
 ##### 4.3.10.2 Return type
 
-`AWSTwinMakerConnector.ListScenesResponse`
+This activity returns an `AWSTwinMakerConnector.ListScenesResponse` entity.
 

@@ -1,7 +1,7 @@
 ---
 title: "ML Kit Activities"
 url: /refguide/ml-kit-activities/
-weight: 45
+weight: 82
 tags: ["studio pro"]
 ---
 {{% alert color="info" %}}[Machine learning model](/refguide/machine-learning-kit/) support is currently in [Beta](/releasenotes/beta-features/).{{% /alert %}}

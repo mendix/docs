@@ -114,5 +114,3 @@ Workflow activities are used in relation to workflows and their user tasks.
 | {{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/workflow-call.png" link="/refguide/workflow-call/" >}} | [Workflow call](/refguide/workflow-call/)                 | Triggers the selected workflow.                              |
 
 ## 13 External Object Activities
-
-## 14 Business Event Activities

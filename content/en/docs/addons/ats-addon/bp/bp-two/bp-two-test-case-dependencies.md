@@ -41,7 +41,7 @@ To get to a functionality, you have to walk through four different pages. This i
 
 ## 3 Why You Must Not Use Test Case Dependencies {#why}
 
-This chapter explains why you must not use dependencies between test cases by defining the impact on your tests. The criteria for a good test case is used. The first example of the first chapter is used, in which there are the TC.01 - Create New Expense and TC.02 - Delete Expense test cases, but TC.02 can only be executed after TC.01.
+This chapter explains why you must not use dependencies between test cases by defining the impact on your tests. The criteria for a good test case is used. The first example of the first chapter is used, in which there are the TC.01 - Create New Expense and TC.02 - Delete Expense test cases, but TC.02 can only be run after TC.01.
 
 | Aspect       | Consequence of Having Dependencies |
 | :----------- | :--------------------------------- |
@@ -114,7 +114,7 @@ This table presents aspects against the good test case criteria:
 
 | Aspect       | Result                             |
 | :----------- | :--------------------------------- |
-| Availability | <ul><li>There is no dependency to other test cases. But if one of the scenarios within the test case fails, the other scenarios will not be executed.</li></ul> |
+| Availability | <ul><li>There is no dependency to other test cases. But if one of the scenarios within the test case fails, the other scenarios will not be run.</li></ul> |
 | Speed        | <ul><li>No parallelization is possible, because there is only one test case. But, you save the time of having the same setup procedure in multiple test cases.</li></ul> |
 | Reliability  | <ul><li>The more scenarios you put into a single test case, the less reliable your outcomes will be, because there can be side-effects between the scenarios.</li></ul> |
 | Precision, <br> Understandability, <br> Analyzability, <br> Lack of ambiguity | <ul><li>If the test case fails, you always need to check the test log to find out the scenario in which the cause of this failure is located.</li></ul> |

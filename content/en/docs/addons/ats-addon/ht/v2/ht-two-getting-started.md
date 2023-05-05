@@ -286,7 +286,7 @@ When you click **Run**, the **Test Runs** page will open.
 
 {{< figure src="/attachments/addons/ats-addon/ht/v2/ht-two-getting-started/test-runs-page.png" >}}
 
-Once your test case/suite is executed, the result is shown here.
+Once your test case/suite is run, the result is shown here.
 
 You have now finished the getting started guide for ATS. We advice to read next [How-to Install the ATS Helper and Recorder](/addons/ats-addon/ht-two-install-ats-helper-recorder/).
 

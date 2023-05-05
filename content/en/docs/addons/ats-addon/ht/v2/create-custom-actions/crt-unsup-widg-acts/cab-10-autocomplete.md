@@ -146,7 +146,7 @@ To create the action structure, follow these steps:
 
     To make your action generic, it must also work in the situation when AutoComplete is on. In this case it is a necessity, because the widget is not supported if the action does not cover all situations.
 
-    Use the following logic: *If the drop-down is present, then you click the option, and if the drop-down is not present, the find and click are not executed*.
+    Use the following logic: *If the drop-down is present, then you click the option, and if the drop-down is not present, the find and click are not completed*.
 
 19. Click the precondition box in test step 8 and add the *Find Element by Sizzle* action. Use the results element to verify if the drop-down menu is open. It is one of the class names you used earlier: `.select2-result`. Next, enter the `:visible` selector in the filter selector parameter. And last, set the timeout to 2000 milliseconds. The default timeout is 10 seconds. Setting the timeout to 2 seconds makes the precondition action faster if it fails. You should only alter the timeout if it is a precondition. Also, keep in mind that 2 seconds is the minimum advised. The precondition will look like this:
 
@@ -156,7 +156,7 @@ To create the action structure, follow these steps:
 
     {{< figure src="/attachments/addons/ats-addon/ht/v2/create-custom-actions/crt-unsup-widg-acts/cab-10-autocomplete/clickdoubleclick-action-option.png" >}}
 
-21. There is only one issue left, and it is that if test step 8 fails, test step 9 also fails. Therefore, you must add a precondition to the Click/Doubleclick action. Use the following logic: *If test step 8 fails or is not executed, then don’t execute test step 9*.
+21. There is only one issue left, and it is that if test step 8 fails, test step 9 also fails. Therefore, you must add a precondition to the Click/Doubleclick action. Use the following logic: *If test step 8 fails or is not completed, then don’t execute test step 9*.
 22. Click the precondition box at test step 9 and add the *Assert not null* action. Then, connect the output of test step 8. This way, ATS only executes test step 9 if test step 8 was successful. It looks like this:
 
     {{< figure src="/attachments/addons/ats-addon/ht/v2/create-custom-actions/crt-unsup-widg-acts/cab-10-autocomplete/clickdoubleclick-action-option-precondition.png" >}}

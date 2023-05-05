@@ -11,7 +11,18 @@ aliases:
 
 These release notes cover changes made to the [Mendix Marketplace](/appstore/).
 
-## 2022
+## 2023
+
+### April 20th, 2023
+
+#### New Features
+
+* You can now filter Marketplace content for **Public** or **Private** components via the **Visibility** filter.
+
+#### Improvements
+
+* The **Compatibility** filter now only allows for major Mendix versions.
+* The **Support** section of the [component details page](/appstore/general/app-store-overview/#details) now includes a link to [Marketplace Content Support](/appstore/general/app-store-content-support/).
 
 ### March 23rd, 2023
 
@@ -23,6 +34,8 @@ On top of open-source community-supported content, we are introducing an additio
 * Partners commit to providing support to customers under an SLA (meaning, under terms specified by the partner). Customers can rely on this SLA for support if something goes wrong. A partner-supported [component details page](/appstore/general/app-store-overview/#details) contains a reference to the partner's support portal or the partner's support contact email.
 
 You can find and use partner-supported components on the [Marketplace homepage](https://marketplace.mendix.com/) under **From our partners** and by selecting the [Partner](/appstore/general/app-store-content-support/#category) **Support** level in the search box. A partner-supported component details page has an explicit indicator (a crown), which makes it easy to distinguish from community-supported content.
+
+## 2022
 
 ### October 25th, 2022
 

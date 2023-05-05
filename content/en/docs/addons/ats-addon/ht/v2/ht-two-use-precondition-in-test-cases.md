@@ -7,7 +7,7 @@ tags: ["ATS", "testing"]
 
 ## 1 Introduction
 
-To create more logic in test cases and more difficult test situations ATS has the possibility to add preconditions. These preconditions are added to test steps in your test cases. Maybe you have an application that sometimes shows a dialog after you log in with your open or new orders. If you do not know in advance whether you see the dialog after you log in, that makes it difficult to prepare test cases that always work. You sometimes need the **Close Dialog** action but not always. To make sure your test cases do not fail due to the presence (or absence) of the Dialog, you add a precondition to the **Find/Assert Dialog** action. If a dialog is present then the precondition is successful and ATS executes the underlying test step **Close Dialog**. In case no dialog is found the precondition fails and ATS does not execute the underlying test step **Close Dialog**. Not executed means that ATS continues with the next step.
+To create more logic in test cases and more difficult test situations ATS has the possibility to add preconditions. These preconditions are added to test steps in your test cases. Maybe you have an application that sometimes shows a dialog after you log in with your open or new orders. If you do not know in advance whether you see the dialog after you log in, that makes it difficult to prepare test cases that always work. You sometimes need the **Close Dialog** action but not always. To make sure your test cases do not fail due to the presence (or absence) of the Dialog, you add a precondition to the **Find/Assert Dialog** action. If a dialog is present then the precondition is successful and ATS executes the underlying test step **Close Dialog**. In case no dialog is found the precondition fails and ATS does not execute the underlying test step **Close Dialog**. Not run means that ATS continues with the next step.
 
 This how-to uses the Mendix Company Expenses app as an example. In this how-to, you create a test case that clicks on a specific expense to view the details. Unfortunately, we do not know on which page of the data grid that expense is present. So, the test case searches for that expense on the first page of the data grid. If the expense is present ATS clicks on it. If the expense is not present ATS clicks on the next button to go to the next page of the data grid. On the next page, ATS checks again if the expense is present and, if so, clicks on it.  
 
@@ -70,7 +70,7 @@ The following steps explain how to create a test case with preconditions:
 
     {{< figure src="/attachments/addons/ats-addon/ht/v2/ht-two-use-precondition-in-test-cases/click-doubleclick-action.png" >}}
 
-    By adding the **Assert not equalTo** action as precondition the underlying action is only executed if the expense is found in the previous step. If step 3 is not executed then the output of step 3 is empty. The **Assert not equalTo** action then asserts empty with empty, which are equal to each other, so the precondition fails and the actual test step is not executed. 
+    By adding the **Assert not equalTo** action as precondition the underlying action is only run if the expense is found in the previous step. If step 3 is not completed then the output of step 3 is empty. The **Assert not equalTo** action then asserts empty with empty, which are equal to each other, so the precondition fails and the actual test step is not run. 
 
     These two steps are enough to only double-click the expense in case the expense is present on the page. But if the expense is not present on the page ATS does not execute the double-click. The next step is to make ATS search the next page in the data grid for the expense and click it if found.
 
@@ -83,7 +83,7 @@ The following steps explain how to create a test case with preconditions:
 
     {{< figure src="/attachments/addons/ats-addon/ht/v2/ht-two-use-precondition-in-test-cases/click-widget-action.png" >}}
 
-    ATS only executes the underlying action if the expense is **not** found in step 3 because you added the **Assert equalTo** action as precondition. If step 3 is not executed the output of step 3 is empty. The **Assert equalTo** action then asserts empty with empty, which are equal to each other, so the precondition is successful and the test step is executed.
+    ATS only executes the underlying action if the expense is **not** found in step 3 because you added the **Assert equalTo** action as precondition. If step 3 is not completed the output of step 3 is empty. The **Assert equalTo** action then asserts empty with empty, which are equal to each other, so the precondition is successful and the test step is completed.
 
 17. Add the **Find/Assert DataGrid Row** action to be able to find the expense on this page. Use the same values as in the previous **Find/Assert DataGrid Row** action.
 18. Add the **Assert equalTo** action as a precondition and use the outcome of step 3 in the **Object 1** input parameter:

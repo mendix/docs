@@ -34,7 +34,7 @@ Configure the following options in the **New CI/CD Template** dialog box:
 |------|-------------|
 | Name | By default, the name of the test case/test suite. Customizable. |
 | Environment | The environment to test. |
-| Selenium Hub | The Selenium hub where the test is executed. |
+| Selenium Hub | The Selenium hub where the test is completed. |
 | Browser | The browser that is used for the test: Firefox or Chrome.|
 
 For supported Selenium hubs, like Browserstack, further options are available. For more details, see [Supported Selenium Hub Provider](/addons/ats-addon/rg-two-supported-selenium-hub-provider/).
@@ -141,8 +141,8 @@ You must include the following information in the request:
 | JobID | The unique ID of the job returned by the Run Job service. |
 | AppID | The ID of your Mendix app. |
 | IncludeExecutionFlags¹| Indicates whether to include execution flags (canceled, warning) in the response. |
-| IncludeExecutionResultBreakdown¹ | Indicates whether to include the number of passed/failed/not executed test cases in the response. |
-| IncludeDetailsPerTestCase¹ | Indicates whether to include details (for example, name, result, duration) for each test case that was executed in the response. |
+| IncludeExecutionResultBreakdown¹ | Indicates whether to include the number of passed/failed/not run test cases in the response. |
+| IncludeDetailsPerTestCase¹ | Indicates whether to include details (for example, name, result, duration) for each test case that was run in the response. |
 
 ¹ Optional. If left out, defaults to `false`.
 
@@ -172,7 +172,7 @@ Basic example, only returns the status and result (and error message if there is
 
 ##### 3.2.2.2 Example
 
-Example which also returns the number of passed/failed/not executed test cases:
+Example which also returns the number of passed/failed/not run test cases:
 
 ```xml
 <soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tns="http://www.mendix.com/">
@@ -231,8 +231,8 @@ The following table shows the data contained in the response of the **Get Job St
 | ErrorMessage | Contains the error message if the test failed to start. Empty if the test started successfully. |
 | ExecutionResult | Result of the execution: **Passed** or **Failed**. |
 | ExecutionFlags¹ | Status of the canceled and warning flags for the job. |
-| ExecutionResultBreakdown¹ | Number of test cases in this job that passed, failed, and were not executed. |
-| ExecutionDetailsPerTestCase¹ | Name, result (**Passed**,**Failed**,**Not_Executed**), duration, and error message² for each executed test case. |
+| ExecutionResultBreakdown¹ | Number of test cases in this job that passed, failed, and were not run. |
+| ExecutionDetailsPerTestCase¹ | Name, result (**Passed**,**Failed**,**Not_Executed**), duration, and error message² for each completed test case. |
 
 ¹ Optional, only returned if the corresponding **Include** statement was set to true in the request.  
 ² Error messages are only included for not passed testcases where a simple and short error message can be generated.  

@@ -39,7 +39,7 @@ The results of your test cases are displayed as the following labels:
 
 | Label| Meaning |
 | ---- | ------- |
-| Passed | The test was executed successfully. |
+| Passed | The test was completed successfully. |
 | Failed | The test has failed. |
 | Not Executed| The execution of this test was skipped or it has not been run yet. |
 

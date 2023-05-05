@@ -39,7 +39,7 @@ Log nodes are created when the first log message occurs for this node in Mendix.
 
 The **Max messages to store** can limit the amount of records in the database. There are two things that can happen when the maximum is reached:
 
-* The log tool can stop if the check box **On max stop?** is checked.
+* The log tool can stop if the checkbox **On max stop?** is checked.
 * The log tool can start removing the oldest records (comparable to a log file that rotates or is rolling over).
 
 ### 3.2 Notes

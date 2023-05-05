@@ -49,7 +49,7 @@ The Cloud Foundry Buildpack determines which cluster node becomes the cluster le
 
 Individual nodes in a cluster can be started and stopped with no impact on the uptime of the app. However, when you deploy a new version of the app the whole cluster is restarted and the cluster leader determines whether database synchronization is required. This means that there will be some downtime when the app is deployed while this is done.
 
-If database synchronization is required, all the cluster followers will wait until the cluster leader finishes the database synchronization. When the database synchronization has finished, all the cluster nodes will become fully functional.
+If database synchronization is required, all the cluster slaves will wait until the cluster leader finishes the database synchronization. When the database synchronization has finished, all the cluster nodes will become fully functional.
 
 If no database synchronization is required, all the cluster nodes will become fully functional directly after startup.
 

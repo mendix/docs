@@ -43,7 +43,7 @@ Mendix Runtime has the concept of a cluster leader. This is a single node within
 
 These activities are only performed by the cluster leader. If the cluster leader is not running, the cluster will still function. However, the activities listed above will not be performed.
 
-The Cloud Foundry Buildpack determines which cluster node becomes the cluster leader and which become cluster followers.
+The Cloud Foundry Buildpack determines which cluster node becomes the cluster leader and which become cluster slaves.
 
 ## 5 Cluster Startup
 

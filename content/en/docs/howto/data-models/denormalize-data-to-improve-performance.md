@@ -20,7 +20,7 @@ This how-to will teach you how to do the following:
 
 Before starting this how-to, make sure you have completed the following prerequisites:
 
-* [Configuring a domain model](/refguide/configuring-a-domain-model/)
+* [Configure a domain model](/refguide/configuring-a-domain-model/)
 
 ## 3 Denormalization
 

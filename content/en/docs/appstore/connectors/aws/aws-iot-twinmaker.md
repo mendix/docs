@@ -261,7 +261,7 @@ For more information, see [GetPropertyValueHistory](https://docs.aws.amazon.com/
 ##### 4.1.10.2 Associations
 
 | Name | Connected to | Multiplicity | Description |
-| --- | --- | --- |
+| --- | --- | --- | --- |
 | `GetPropertyValueHistoryRequest_InterpolationParameters` | `AWSTwinMakerConnector.InterpolationParameters` | OneToMany | |
 | `GetPropertyValueHistoryRequest_EntityGetPropertyValueHistoryRequestPropertyFilter` |` AWSTwinMakerConnector.EntityGetPropertyValueHistoryRequestPropertyFilter` | ManyToMany | |
 | `AbstractQuery_GetPropertyValueHistoryRequest` | `AWSTwinMakerConnector.GetPropertyValueHistoryRequest` | OneToOne | |
@@ -846,7 +846,7 @@ The `ListScenesRequest` entity does not have any associations.
 
 The `ListScenesResponse` entity contains the list of scenes in a workspace.
 
-For more information, see [ListScenes](https://docs.aws.amazon.com/iot-twinmaker/latest/apireference/API_ListScenes.html) and [ListScenesResponse]https://sdk.amazonaws.com/java/api/latest/software/amazon/awssdk/services/iottwinmaker/model/ListScenesResponse.html.
+For more information, see [ListScenes](https://docs.aws.amazon.com/iot-twinmaker/latest/apireference/API_ListScenes.html) and [ListScenesResponse](https://sdk.amazonaws.com/java/api/latest/software/amazon/awssdk/services/iottwinmaker/model/ListScenesResponse.html)
 
 ##### 4.1.41.1 Attributes
 
@@ -1748,7 +1748,7 @@ The `RequiredProperty` entity does not have any associations.
 
 The `DataConnector` entity represents the data connector of the function.
 
-For more information, see https://docs.aws.amazon.com/iot-twinmaker/latest/apireference/API_DataConnector.html and https://sdk.amazonaws.com/java/api/latest/software/amazon/awssdk/services/iottwinmaker/model/DataConnector.html
+For more information, see [DataConnector](https://docs.aws.amazon.com/iot-twinmaker/latest/apireference/API_DataConnector.html) and [Class DataConnector](https://sdk.amazonaws.com/java/api/latest/software/amazon/awssdk/services/iottwinmaker/model/DataConnector.html).
 
 ##### 4.1.88.1 Attributes
 

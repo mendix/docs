@@ -846,7 +846,7 @@ The `ListScenesRequest` entity does not have any associations.
 
 The `ListScenesResponse` entity contains the list of scenes in a workspace.
 
-For more information, see [ListScenes](https://docs.aws.amazon.com/iot-twinmaker/latest/apireference/API_ListScenes.html) and [ListScenesResponse](https://sdk.amazonaws.com/java/api/latest/software/amazon/awssdk/services/iottwinmaker/model/ListScenesResponse.html)
+For more information, see [ListScenes](https://docs.aws.amazon.com/iot-twinmaker/latest/apireference/API_ListScenes.html) and [ListScenesResponse](https://sdk.amazonaws.com/java/api/latest/software/amazon/awssdk/services/iottwinmaker/model/ListScenesResponse.html).
 
 ##### 4.1.41.1 Attributes
 

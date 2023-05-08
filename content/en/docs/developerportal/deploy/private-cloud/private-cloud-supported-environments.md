@@ -171,7 +171,7 @@ It doesn't require any external database or provider and is great for quick test
 {{% alert color="info" %}}
 An app using an ephemeral database will lose all data if its environment is stopped or restarted.
 
-An app with an ephemeral database cannot have more than one replica. Only the first (primary) replica will be able to start.
+An app with an ephemeral database cannot have more than one replica. Only the first (leader) replica will be able to start.
 {{% /alert %}}
 
 ### 4.2 Standard PostgreSQL Database
@@ -208,7 +208,7 @@ Azure PostgreSQL databases require additional firewall configuration to allow co
 Some managed PostgreSQL databases might have restrictions or require additional configuration.
 
 {{% alert color="info" %}}
-To use a PostgreSQL database, the Mendix Operator requires a primary account with permissions to create new users and databases.
+To use a PostgreSQL database, the Mendix Operator requires a Superuser account with root privileges and permissions to create new users and databases.
 
 For every Mendix app environment, a new database schema and user (role) will be created so that the app can only access its own data.
 {{% /alert %}}

@@ -2,16 +2,16 @@
 title: "Quickstart"
 url: /refguide/quickstart-guide/
 weight: 9
-description: "Presents how-to's for building an app in Studio Pro quickly and easily."
+description: "Presents tutorials for building an app in Studio Pro quickly and easily."
 tags: ["hello world", "microflows", "widgets", "app", "nanoflow", "app development"]
 ---
 
-Welcome to the Mendix quickstart guide for building an app! These how-to's cover the essentials of Mendix development:
+Welcome to the Mendix quickstart guide for building an app! These tutorials cover the essentials of Mendix development:
 
 * [Part 1: Build a Responsive Web App](/refguide/quickstart-part1/)
 * [Part 2: Add a Native Mobile App](/refguide/quickstart-part2/)
 
-Each how-to should take about 25 minutes to complete. 
+Each tutorial should take about 25 minutes to complete. 
 
 While you can start with Part 2, we recommend you read Part 1 to understand the basics of Mendix.
 

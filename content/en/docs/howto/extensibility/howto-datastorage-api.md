@@ -65,7 +65,7 @@ public java.util.List<IMendixObject> executeAction() throws Exception
     //BEGIN USER CODE
     List<IMendixObject> result = null;
     result = Core.createXPathQuery(this.XPath).execute(getContext());
-    if (!result.isEmpty() && !result.get(0).getMetaObject().getName().equals(this.ResultEntity)) {
+    if (!result.isEmpty() && !result.get(0).isInstanceOf(this.ResultEntity)) {
         throw new MendixRuntimeException(String.format("Unexpected result entity: %s vs %s",
             result.get(0).getMetaObject().getName(), this.ResultEntity));
     }

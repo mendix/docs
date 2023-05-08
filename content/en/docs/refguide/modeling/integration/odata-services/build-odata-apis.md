@@ -9,23 +9,17 @@ tags: ["connectors", "data hub", "studio pro", "build", "API", "REST", "connecto
 
 Companies with a large portfolio of custom built REST APIs use a set of [best practices](#best-practices) to ensure these APIs provide the required functionality in a predictable way. 
 
-You have full control of all these aspects when creating a published REST service in Mendix. However, there’s a faster way to build REST APIs in Mendix that comply with a widely supported set of REST best practices: [Published OData services](/refguide/published-odata-services/). If you plan to create a large number of APIs, using OData to implement REST can save you a lot of time while ensuring consistency across your APIs.
+You have full control of all these aspects when creating a published REST service in Mendix. However, there is a faster way to build REST APIs in Mendix that comply with a widely supported set of REST best practices: [Published OData services](/refguide/published-odata-services/). If you plan to create a large number of APIs, using OData to implement REST can save you a lot of time while ensuring consistency across your APIs.
 
-This document will illustrate through a number of examples how [published OData services](/refguide/published-odata-services/) in Studio Pro help you build better REST APIs faster and easier.
-
-### 1.1 Example Domain Model
-
-This document use the following domain model as an example. (Don’t worry, API first will also be discussed in this article). REST apis, and especially OData apis often provide access to data within the app. Mendix OData APIs are excellent for providing APIs for entities, but can also be used for accessing other types of data. This is illustrated later in this article. 
-
-![](https://paper-attachments.dropboxusercontent.com/s_A7C365B156C73FE0E73A206FAF1622E045C694DFEDFC4EA12B065B4B4F20286D_1675863725292_image.png) implement-odata-apis
+This document illustrates examples of how [published OData services](/refguide/published-odata-services/) in Studio Pro help you build better REST APIs faster and easier.
 
 ## 2 Common REST API Best Practices {#best-practices}
 
 REST API best practices usually include some of the following:
 
 * **Use JSON** – JSON is easy to read, libraries to process it are available in most languages. However, don’t forget RESTful HTTP supports content negotiation, so using binary images, PDF or even MS-word content-type is also REST and often better than converting binary to JSON.
-* **Use nouns not verbs, i.e., resource first, no actions in path** – APIs should be resource based instead of action based to improve decoupling: all interactions assume resources and a limited set of standardized operations.
-* **A resource has an id** – Every resource has a unique path where it can be retrieve or updated.
+* **Use nouns not verbs (resource-first, no actions in path)** – APIs should be resource based instead of action based to improve decoupling: all interactions assume resources and a limited set of standardized operations.
+* **A resource has an ID** – Every resource has a unique path where it can be retrieve or updated.
 * **A resource has a uniform interface, i.e., correct use of http operation** – Use the standardized set of HTTP operations to work with your resources: GET (retrieve), POST (create/insert), PUT (replace), PATCH (update), DELETE.
 * **Name collections with plurals** – An endpoint that can return more than one resource should indicate that by have the resource name in plural.
 * **Use of standard HTTP status codes** – HTTP has standardized status codes for most situations, good REST APIs use these. Status codes work the same way across applications, application specific errors should be handled in the payload.
@@ -33,9 +27,13 @@ REST API best practices usually include some of the following:
 * **Use filtering, sorting & pagination** – To ensure best possible performance, and to limit resource usage, enable clients to flexibly define exactly what data they need. This also helps to decouple the client and the service, as not all clients have the same needs. Enabling the client to define what is needed, helps to serve more types of clients.
 * **Secure your APIs** – Apps shouldn’t be able to access more information than they are allowed to see.
 
+## 3 Implementing REST APIs with OData
 
+This document use the following domain model as an example. (Don’t worry, API first will also be discussed in this article.) REST apis, and especially OData apis often provide access to data within the app. Mendix OData APIs are excellent for providing APIs for entities, but can also be used for accessing other types of data. This is illustrated later in this article. 
 
-## Implementing REST APIs with OData
+![](https://paper-attachments.dropboxusercontent.com/s_A7C365B156C73FE0E73A206FAF1622E045C694DFEDFC4EA12B065B4B4F20286D_1675863725292_image.png) implement-odata-apis
+
+### 3.1 Published OData Service Document
 
 To provide an Odata REST API for an entity you can add it from the domain model, or in the published odata service document. Here you an also select which attributes and associations are available in the API.
 
@@ -47,9 +45,9 @@ For every published resources you can define what functionality is available (cr
 ![](https://paper-attachments.dropboxusercontent.com/s_A7C365B156C73FE0E73A206FAF1622E045C694DFEDFC4EA12B065B4B4F20286D_1675863872703_image.png) edit-published-resource
 
 
-The setup of this document guides you to have a resource first approach to building REST apis, where you first define the resource you want to expose, and then define which standard operations you want to provide on these resources. Insertable enables POST, readable is a GET, updatable is a PATCH, and deletable will result in a DELETE http operation. As you can see, this guides you into using the HTTP operations in the right way, resulting in a better REST API.
+This document presents a resource-first approach to building REST APIs, where you first define the resource you want to expose, and then define which standard operations you want to provide on these resources. Insertable enables POST, readable is a GET, updatable is a PATCH, and deletable will result in a DELETE http operation. This guides you into using the HTTP operations in the right way, resulting in a better REST API.
 
-## OpenApi version 3 contract and test page
+### OpenApi version 3 contract and test page
 
 When you start your app you can will have a swagger documentation and test page.
 

@@ -46,7 +46,7 @@ Each solution is useable as is, but it can also be adapted to become even more s
 
 ## 2 The Solution Lifecycle
 
-This image presents the typical solution value chain containg:
+This image presents the typical solution value chain containing:
 
 -   The 3 fases a solution goes through: "building the solution core", "implementation for a customer" and "production usage",
 -   Who's involved in what phase,
@@ -63,6 +63,8 @@ There are three main stages a solution goes through during its lifecycle:
 | Consume   | Customer                                       | Production usage of the application by the customer. Functional admins can perform day-to-day tasks                                   |
 
 The customer implementation is a separate, _upgradable_ model instance (fork) per customer, that shares generic functionality from the original Solution model, that's deployed to separate cloud resources. This allows the implementation team to fully customize all non IP protected functionality.
+
+Note that it’s at the solution developer's discretion to determine who can implement a solution, who can access the model and whether their delivery model is Software as a Service or a solution template with a subscription on updates.
 
 {{< figure src="/attachments/appstore/creating-content/sol-solutions-guide/sol-development/solution-deployment.png" alt="Adaptive Solution Deployment"  width="50%" >}}
 

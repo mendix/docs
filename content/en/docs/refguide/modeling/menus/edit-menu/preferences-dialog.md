@@ -183,12 +183,6 @@ Not all screens of Studio Pro support dark mode yet.
 
 Default: *disabled*
 
-### 8.2 New Merge Algorithm with Fine-Grained Conflict Resolution
-
-With this option, you can enable the new merge algorithm that is used when you update your app or merge changes in it. For more information on the algorithm, see [New Merge Algorithm with Fine-Grained Conflict Resolution](/refguide/new-merge-algorithm/).
-
-Default: *enabled*
-
 ## 9 Read More
 
 * [Upload to Version Control Server](/refguide/upload-to-version-control-dialog/)

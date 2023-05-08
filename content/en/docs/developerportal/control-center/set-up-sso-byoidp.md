@@ -7,10 +7,6 @@ description: "Describes how you can use your company IdP to authenticate to Mend
 tags: ["BYOIDP", "IdP", "Bring Your Own IdP", "Microsoft Azure", "SSO", "Single Sign-on"]
 ---
 
-{{% alert color="info" %}}
-This feature is currently in [Beta](/releasenotes/beta-features/).
-{{% /alert %}}
-
 ## 1 Introduction
 
 The Mendix Cloud solution offers an Identity Provider (IdP) that allows users to sign in to:
@@ -18,7 +14,9 @@ The Mendix Cloud solution offers an Identity Provider (IdP) that allows users to
 * Mendix Platform services
 * Mendix applications that have been built with [Mendix SSO](/appstore/modules/mendix-sso/)
 
-Rather than using Mendix credentials to login, it is also possible to set up an identity federation between the Mendix Platform and your corporate IdP. In other words, you can Bring-Your-Own-IDentity-Provider (which Mendix calls BYOIDP), sometimes referred to as ‘customer IdP’.
+This allows you to provide your end-users with an end-to-end SSO experience by setting up an identity federation between the Mendix Platform and your corporate Identity Provider (IdP). 
+
+Mendix calls this feature BYOIDP (Bring-Your-Own-IDentity-Provider), sometimes referred to as 'customer IdP' OR 'customer IdP SSO'. It is available for any app using the [standard or premium packages](https://www.mendix.com/pricing/).
 
 Benefits of using the BYOIDP SSO are:
 

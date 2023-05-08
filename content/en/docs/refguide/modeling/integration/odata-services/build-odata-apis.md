@@ -13,6 +13,12 @@ You have full control of all these aspects when creating a published REST servic
 
 This document will illustrate through a number of examples how [published OData services](/refguide/published-odata-services/) in Studio Pro help you build better REST APIs faster and easier.
 
+### 1.1 Example Domain Model
+
+This document use the following domain model as an example. (Don’t worry, API first will also be discussed in this article). REST apis, and especially OData apis often provide access to data within the app. Mendix OData APIs are excellent for providing APIs for entities, but can also be used for accessing other types of data. This is illustrated later in this article. 
+
+![](https://paper-attachments.dropboxusercontent.com/s_A7C365B156C73FE0E73A206FAF1622E045C694DFEDFC4EA12B065B4B4F20286D_1675863725292_image.png) implement-odata-apis
+
 ## 2 Common REST API Best Practices {#best-practices}
 
 REST API best practices usually include some of the following:
@@ -29,11 +35,7 @@ REST API best practices usually include some of the following:
 
 
 
-We’ll use the following domain model as an example. (Don’t worry, API first will also be discussed in this article). REST apis, and especially OData apis often provide access to data within the app. Mendix OData APIs are excellent for providing APIs for entities, but can also be used for accessing other types of data. This is illustrated later in this article. 
-
-![](https://paper-attachments.dropboxusercontent.com/s_A7C365B156C73FE0E73A206FAF1622E045C694DFEDFC4EA12B065B4B4F20286D_1675863725292_image.png) implement-odata-apis
-
-# Implementing your REST APIs using OData
+## Implementing REST APIs with OData
 
 To provide an Odata REST API for an entity you can add it from the domain model, or in the published odata service document. Here you an also select which attributes and associations are available in the API.
 

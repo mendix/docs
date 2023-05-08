@@ -3,7 +3,7 @@ title: "Build a Responsive Web App"
 url: /refguide/quickstart-part1/
 weight: 10
 description: "Learn the basics of making an app in a Responsive Web profile."
-tags: ["microflows", "widgets", "app", "nanoflow", "app development"]
+tags: ["hello world", "microflows", "widgets", "app", "nanoflow", "app development"]
 ---
 
 ## 1 Introduction 

@@ -3,7 +3,7 @@ title: "Add a Native Mobile App"
 url: /refguide/quickstart-part2/
 weight: 20
 description: "Learn the basics of making a native mobile app."
-tags: ["microflows", "widgets", "app", "nanoflow", "app development"]
+tags: ["hello world", "microflows", "widgets", "app", "nanoflow", "app development"]
 ---
 
 ## 1 Introduction 

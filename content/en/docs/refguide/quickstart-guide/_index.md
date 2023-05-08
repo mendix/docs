@@ -3,7 +3,7 @@ title: "Quickstart"
 url: /refguide/quickstart-guide/
 weight: 9
 description: "Presents tutorials on how to build an app in Studio Pro quickly and easily."
-tags: ["microflows", "widgets", "app", "nanoflow", "app development"]
+tags: ["hello world", "microflows", "widgets", "app", "nanoflow", "app development"]
 ---
 
 ## 1 Introduction 

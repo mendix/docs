@@ -7,24 +7,27 @@ tags: ["connectors", "data hub", "studio pro", "build", "API", "REST", "connecto
 
 ## 1 Introduction
 
-Almost every company that has a large portfolio of custom built REST APIs has also created a set of best practices to ensure these APIs provide the required functionality in a predictable way.
+Companies with a large portfolio of custom built REST APIs use a set of [best practices](#best-practices) to ensure these APIs provide the required functionality in a predictable way. 
 
-These best practices usually include some of the following:
+You have full control of all these aspects when creating a published REST service in Mendix. However, there’s a faster way to build REST APIs in Mendix that comply with a widely supported set of REST best practices: [Published OData services](/refguide/published-odata-services/). If you plan to create a large number of APIs, using OData to implement REST can save you a lot of time while ensuring consistency across your APIs.
 
-- **Use Json** - Json is easy to read, libraries to process it are available in most languages. However, don’t forget RESTful HTTP supports content negotiation, so using binary images, PDF or even MS-word content-type is also REST and often better than converting binary to json.
-- **Use nouns not verbs, i.e., resource first, no actions in path** - APIs should be resource based instead of action based to improve decoupling: all interactions assume resources and a limited set of standardized operations.
-- **A resource has an id** - Every resource has a unique path where it can be retrieve or updated.
-- **A resource has a uniform interface, i.e., correct use of http operation** - Use the standardized set of HTTP operations to work with your resources: GET (retrieve), POST (create/insert), PUT (replace), PATCH (update), DELETE.
-- **Name collections with plurals -** An endpoint that can return more than one resource should indicate that by have the resource name in plural.
-- **Use of standard HTTP status codes** - HTTP has standardized status codes for most situations, good REST APIs use these. Status codes work the same way across applications, application specific errors should be handled in the payload.
-- V**ersioning and compatibility** - usually specifies versioning should be date based or semantic versioning with the major version part of the url. Clients should assume changes to an endpoint are always backwards compatible. In case of breaking changes, a new endpoint including a new major version number should be used.
-- **Use filtering, sorting & pagination** - To ensure best possible performance, and to limit resource usage, enable clients to flexibly define exactly what data they need. This also helps to decouple the client and the service, as not all clients have the same needs. Enabling the client to define what is needed, helps to serve more types of clients.
-- **Secure your APIs** - Apps shouldn’t be able to access more information than they are allowed to see.
-# OData simplifies building better REST APIs
+This document will illustrate through a number of examples how [published OData services](/refguide/published-odata-services/) in Studio Pro help you build better REST APIs faster and easier.
 
-You have full control of all these aspects when creating a published REST service in Mendix. However, there’s a faster way to build REST APIs in Mendix that comply with a widely supported set of REST best practices: Published OData REST services. Especially if you plan to create a large number of APIs, using OData to implement REST can save you a lot of time, while at the same time ensuring consistency across your APIs.
+## 2 Common REST API Best Practices {#best-practices}
 
-Now, OData may not be the most popular way to implement REST APIs, but its value should not be underestimated. This article will illustrate through a number of examples how Mendix Published OData Services help you build better REST APIs faster and easier.
+REST API best practices usually include some of the following:
+
+* **Use JSON** – JSON is easy to read, libraries to process it are available in most languages. However, don’t forget RESTful HTTP supports content negotiation, so using binary images, PDF or even MS-word content-type is also REST and often better than converting binary to JSON.
+* **Use nouns not verbs, i.e., resource first, no actions in path** – APIs should be resource based instead of action based to improve decoupling: all interactions assume resources and a limited set of standardized operations.
+* **A resource has an id** – Every resource has a unique path where it can be retrieve or updated.
+* **A resource has a uniform interface, i.e., correct use of http operation** – Use the standardized set of HTTP operations to work with your resources: GET (retrieve), POST (create/insert), PUT (replace), PATCH (update), DELETE.
+* **Name collections with plurals** – An endpoint that can return more than one resource should indicate that by have the resource name in plural.
+* **Use of standard HTTP status codes** – HTTP has standardized status codes for most situations, good REST APIs use these. Status codes work the same way across applications, application specific errors should be handled in the payload.
+* **Versioning and compatibility** – usually specifies versioning should be date based or semantic versioning with the major version part of the url. Clients should assume changes to an endpoint are always backwards compatible. In case of breaking changes, a new endpoint including a new major version number should be used.
+* **Use filtering, sorting & pagination** – To ensure best possible performance, and to limit resource usage, enable clients to flexibly define exactly what data they need. This also helps to decouple the client and the service, as not all clients have the same needs. Enabling the client to define what is needed, helps to serve more types of clients.
+* **Secure your APIs** – Apps shouldn’t be able to access more information than they are allowed to see.
+
+
 
 We’ll use the following domain model as an example. (Don’t worry, API first will also be discussed in this article). REST apis, and especially OData apis often provide access to data within the app. Mendix OData APIs are excellent for providing APIs for entities, but can also be used for accessing other types of data. This is illustrated later in this article. 
 
@@ -56,7 +59,7 @@ The test page lists all accepted parameters, and example payloads, both for regu
 ![](https://paper-attachments.dropboxusercontent.com/s_A7C365B156C73FE0E73A206FAF1622E045C694DFEDFC4EA12B065B4B4F20286D_1676369088675_image.png) test-page
 
 
-Json schema description of all the payload types is also provided.
+JSON schema description of all the payload types is also provided.
 
 ![](https://paper-attachments.dropboxusercontent.com/s_A7C365B156C73FE0E73A206FAF1622E045C694DFEDFC4EA12B065B4B4F20286D_1676370666126_image.png) json-schema
 

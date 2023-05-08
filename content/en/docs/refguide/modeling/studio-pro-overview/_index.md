@@ -253,3 +253,5 @@ The following shortcut keys are assigned to menu actions that can be used in all
 
 * [App Explorer](/refguide/app-explorer/)
 * [Menus](/refguide/menus/)
+* [Best Practices for Development](/refguide/dev-best-practices/)
+* [Best Practices for App Performance](/refguide/community-best-practices-for-app-performance/)

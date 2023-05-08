@@ -14,11 +14,11 @@ When you complete Part 1, you will have a photo album app that will allow users 
 
 ### 1.1 Getting to Know Mendix
 
-This tutorial will teach you several key Mendix concepts, such how to add an entity to the [domain model](/refguide/domain-model/) (a visual model that describes your app's information or data in an abstract way), create some basic pages which use building blocks and design properties, and model your first microflow. 
+This how-to will teach you several key Mendix concepts, such how to add an entity to the [domain model](/refguide/domain-model/) (a visual model that describes your app's information or data in an abstract way), create some basic pages which use building blocks and design properties, and model your first microflow. 
 
 A [microflow](/refguide/microflows/) is a visual way of expressing logic or code which is compiled into executable code at runtime. Microflows are commonly used to perform actions such as creating and changing objects, showing pages, and making choices.
 
-[Mendix Studio Pro](https://marketplace.mendix.com/link/studiopro/) is the Mendix integrated development environment (IDE) for professional developers. Use the latest version of Studio Pro when completing the tutorial. Some of the screenshots in this guide might look a little different than your product, but we recommend you use the latest version of Studio Pro for ease and security.
+[Mendix Studio Pro](https://marketplace.mendix.com/link/studiopro/) is the Mendix integrated development environment (IDE) for professional developers. Use the latest version of Studio Pro when completing the how-to. Some of the screenshots in this guide might look a little different than your product, but we recommend you use the latest version of Studio Pro for ease and security.
 
 Every app created with us automatically provisions a [Free Cloud Environment](/developerportal/deploy/mendix-cloud-deploy/#free-app) the first time it is deployed, so you do not have to waste time provisioning a testing environment.
 
@@ -271,11 +271,8 @@ Launching your app compiles your app locally on your development machine, your l
 
 Congratulations! You successfully completed Part 1 of the quickstart guide. You have your first Mendix app to prove it, and it works on almost any device. Well done! 
 
+## 8 Continuing with the Next How-to
+
 To continue learning, see Part 2: [Add a Native Mobile App](/refguide/quickstart-part2/).
 
-## 8 Read More
 
-* [Mendix Academy](https://academy.mendix.com/) – complete learning paths to build general Mendix skills
-    * [Crash Course](https://academy.mendix.com/link/paths/82/Crash-Course) – the course we recommend for new users who are also experienced developers
-* [Mendix Documentation](https://docs.mendix.com/) – learn about the parts of Mendix which interest you most
-* [General Info](/refguide/general/) – learn more about the fundamentals of Studio Pro

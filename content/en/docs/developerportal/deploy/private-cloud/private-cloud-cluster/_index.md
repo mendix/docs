@@ -1119,10 +1119,10 @@ The Deployment object that controls the pod of a given Mendix application contai
 The Deployment object as a name in the following format:
 
 ```shell {linenos=false}
-<internal environment name>-main
+<internal environment name>-master
 ```
 
-Below is an example of the Deployment definition of an app. In this example, the Deployment definition is called `b8nn6lq5-main`:
+Below is an example of the Deployment definition of an app. In this example, the Deployment definition is called `b8nn6lq5-master`:
 
 ```yaml
 apiVersion: apps/v1
@@ -1146,7 +1146,7 @@ spec:
       labels:
         app: b8nn6lq5
         component: mendix-app
-        node-type: main
+        node-type: master
     spec:
       automountServiceAccountToken: false
       containers:

@@ -71,9 +71,89 @@ After you configure the authentication profile for AWS IoT TwinMaker, you can im
     {{< figure src="/attachments/appstore/connectors/aws-iot-twinmaker/addentity.png" alt="Adding a new entity to the domain model">}}
 
 3. Open the new entity by double-clicking on it.
-4. Enter a name for the entity, for example, `ListWorkspaceRequest`.
+4. Name the entity **ListWorkspaceRequest**.
+5. If you want to specify additional, optional attributes for the entity, in the **Attributes** section, click **New**, and then configure the attributes as required:
 
-Create a ListWorkspaceRequest entity, call the ListWorkspaceRequest microflow action with the created entity as an input. IoT TwinMaker will return all workspaces it finds (at most 250, by default 25).
+    * `MaxResults` - An optional **Integer**-type attribute. It specifies the maximum number of results to return at one time. For more information about the maximum value that you can set, see [maxResults](https://sdk.amazonaws.com/java/api/latest/software/amazon/awssdk/services/iottwinmaker/model/ListWorkspacesRequest.html#maxResults()).
+    * `NextToken` - An optional **String (unlimited)**-type attribute. It specifies the next page of results.
+
+    The parameters that you need to configure depend on the contents of the response that an activity expects. The **ListWorkspace** activity used in this example expects the `ListWorkspaceRequest` entity as a parameter. Other activities require different parameters. For more information, see [Activities](#activities).
+
+6. In the **App Explorer**, right-click on the name of your module, and then click **Add microflow**.
+    
+    {{< figure src="/attachments/appstore/connectors/aws-iot-twinmaker/addmicroflow.png" alt="Adding a microflow">}}
+
+7. Enter a name for your microflow, for example, *DS_ListWorkspaces*, and then click **OK**.
+8. In the **App Explorer**, in the **AWSTwinMakerConnector** > **Microflows** section, find the **ListWorkspaces** activity.
+9. Drag the **ListWorkspaces** activity onto the work area of your microflow.
+10. In the **Properties** pane for the microflow, in the **Security** section, select a user role that should be allowed to run the microflow.
+11. Double-click the **ListWorkspaces** activity to configure the required parameters.
+  
+    For the `ListWorkspaces` activity, you must specify the region for which you want to retrieve the tables. Other activities may have different required parameters.
+12. Click **Edit parameter value**, edit the **AWS_Region** parameter, and change **Type** to **Expression**.
+13. In the expression builder, type `AWS_Region`, and then press **Ctrl+Space**.
+14. In the autocomplete dialog, select **AWSTwinMakerConnector.AWS_Region**, then type *.* and select your AWS region from the list.
+
+    {{< figure src="/attachments/appstore/connectors/aws-dynamodb/awsregions.png" alt="The list of AWS regions">}}
+    
+    For a list of available AWS regions, see [AWS Region](#aws-region).
+15. Click **OK**, and then click **OK** again.
+16. In the **Toolbox** pane, search for the **Retrieve** activity and drag it onto the microflow area.
+17. Position the **Retrieve** activity between the **ListWorkspaces** activity and the microflow end event.
+
+    {{< figure src="/attachments/appstore/connectors/aws-iot-twinmaker/microflow.png" alt="The microflow with the Retrieve activity added">}}
+
+18. Double-click the **Retrieve** activity.
+19. In the **Association** section, click **Select**.
+20. In the **Select Association** dialog box, expand the **Variable** item, and then select **ListWorkspacesResponse** as the association.
+
+    {{< figure src="/attachments/appstore/connectors/aws-iot-twinmaker/selectassociation.png" alt="Selecting the association">}}
+
+21. Click **OK**.
+22. In the **Toolbox** pane, search for the **Create list** activity and drag it onto the microflow area.
+23. Position the **Create list** activity between the microflow start event and the **ListWorkspaces** activity.
+
+    {{< figure src="/attachments/appstore/connectors/aws-iot-twinmaker/createlist.png" alt="The microflow with the Create list activity added">}}
+
+24. Double-click the **Create list** activity.
+25. In the **Entity** section, click **Select**.
+26. In the **Select Entity** dialog box, select the **ListWorkspaceRequest** entity that you previously added to your domain model.
+27. In the **Toolbox** pane, search for the **Loop** activity and drag it onto the microflow area.
+28. Position the **Loop** activity before the microflow end event.
+29. Double-click the **Loop** activity.
+30. In the **Iterate over** list, select **ListWorkspacesRequestList**.
+31. In the **Toolbox** pane, search for the **Create object** activity and drag it inside the loop area.
+
+    {{< figure src="/attachments/appstore/connectors/aws-iot-twinmaker/createobject.png" alt="The microflow with the Create activity added">}}
+
+32. Double-click the **Create object** activity.
+33. In the **Entity** section, click **Select**.
+34. In the **Select Entity** dialog box, select the entity that you previously added to your domain model, and then click **Select**.
+35. In the **Toolbox** pane, search for the **Change List** activity and drag it inside the loop area, to the right of the **Create Object** activity.
+36. Double-click the **Change List** activity, and then set the following values:
+    * **Type** - **Add**
+    * **Value** - The created object
+37. Double-click the end event of your microflow, and then set the following values:
+    * **Type** - **List**
+    * **Entity** - The entity that you previously added to your domain model
+38. Right-click the **Create List** activity, and then click **Set ListWorkspacesRequest** as return value.
+39. In the **App Explorer**, right-click on the name of your module, and then click **Add page**.
+40. In the **Lists** category, select the **List** template for the page.
+41. Enter a name for your page, for example, *Workspaces_Overview*, and then click **OK**.
+42. On the page, double-click the **List view** widget.
+43. In the **Select Data Source** dialog, set the **Type** to **Microflow**.
+44. In the **Microflow** field, select the **DS_ListWorkspaces** microflow.
+45. Click **OK**, and then click **Yes**.
+46. In the **Properties** pane for the page, in the **Navigation** > **Visible for** section, select a user role that should be allowed to run the microflow.
+47. In the **App Explorer**, double-click the **Navigation** for your app.
+48. In the **Menu**** section, click **New Item**.
+49. In the **New Menu Item** dialog, configure the following settings:
+    * **Caption** - A caption for the navigation item, for example, *Workspace*
+    * **Icon** - An icon that will be displayed for this page in the navigation for your app
+    * **On click** - **Show a page**
+    * **Page** - Your **Table_Overview** page
+50. Click **OK**.
+51. Click the **Run locally** icon to preview your app and validate your results. AWS IoT TwinMaker will return the workspaces it finds (by default 25, but you can increase it up to 250 workspaces by using the `MaxResults` attribute). For more information, see [Studio Pro Overview: Run and View App](/refguide/studio-pro-overview/#menus).
 
 ## 4 Technical Reference
 
@@ -1266,7 +1346,7 @@ The `AbstractQuery` entity does not have any attributes.
 | --- | --- | --- | --- |
 | `AbstractQuery_GetPropertyValueHistoryRequest` | `AWSTwinMakerConnector.GetPropertyValueHistoryRequest` | OneToOne | |
 
-#### 4.1.63 ListWorkspacesRequest {##list-workspace}
+#### 4.1.63 ListWorkspacesRequest
 
 The `ListWorkspacesRequest` entity represents a request to get the list of workspaces in the current account.
 
@@ -2004,7 +2084,7 @@ The available interpolation types for interpolating results. For now, only one i
 | `UPDATING` | UPDATING |
 | `UNKNOWN_TO_SDK_VERSION` | UNKNOWN_TO_SDK_VERSION |
 
-#### 4.2.6 Enumeration AWS_Region
+#### 4.2.6 Enumeration AWS_Region {#aws-region}
 
 | Name | Caption |
 | --- | --- |
@@ -2179,7 +2259,7 @@ For more information, see [GetPropertyValueHistory](https://docs.aws.amazon.com/
 
 This activity returns an `AWSTwinMakerConnector.GetPropertyValueHistoryResponse` entity.
 
-#### 4.3.7 Microflow ListWorkspaces
+#### 4.3.7 Microflow ListWorkspaces  {#list-workspace}
 
 Retrieves the list of workspaces in the current account.
 

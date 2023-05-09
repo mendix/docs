@@ -354,7 +354,7 @@ In the list, you can see the following items:
 * **Created** – This shows the date on which the portfolio was created.
 * **Last Modified** – This shows the date on which the portfolio was last modified.
 
-* Ellipsis icon (**...**) – Clicking the icon opens a pop-up menu with the following items:
+* Ellipsis (**...**) – Clicking the button opens a menu with the following items:
 
   * **Access management** – Selecting this brings you to the [Access Management](#access-management) page.
 
@@ -364,7 +364,7 @@ If a portfolio has an alert icon (**⚠**), that means it no longer has a Portfo
 
 #### 15.1.1 Access Management {#access-management}
 
-After you click the Ellipsis icon (**...**) in the list on the [All Portfolios](#all-portfolios) tab or the [Alerts](#alerts) tab, you can choose **Access Management** to open the **Access Management** page.
+After you click the ellipsis button (**...**) in the list on the [All Portfolios](#all-portfolios) tab or the [Alerts](#alerts) tab, you can choose **Access Management** to open the **Access Management** page.
 
 In the search box, you can search for a user by the user name, email, company, status or role.
 
@@ -381,13 +381,13 @@ The list shows all users who have access to the portfolio. In the list, you can 
     * **Active** – The user has access to the portfolio.
     * **Pending** – The user still needs to accept the invitation to the portfolio.
 * **Role** – This shows the portfolio access role of the user. For more information about different roles and permissions, see the [Access Management](/developerportal/portfolio-management/#access-management) section in *Portfolio Management*.
-*  Ellipsis icon (**...**) – Clicking the icon opens a pop-up menu with the following items:
+*  Ellipsis (**...**) – Clicking the button opens a menu with the following items:
     * **Edit** – Selecting this allows you to change the role of the user.
     * **Remove** – Selecting this allows you to remove the user from the portfolio.
 
 #### 15.1.2 Deleting a Portfolio {#delete-portfolio}
 
-After you click the Ellipsis icon (**...**) in the list on the [All Portfolios](#all-portfolios) tab or the [Alerts](#alerts) tab, you can choose **Delete** to delete the portfolio.
+After you click the ellipsis button (**...**) in the list on the [All Portfolios](#all-portfolios) tab or the [Alerts](#alerts) tab, you can choose **Delete** to delete the portfolio.
 
 {{% alert color="warning" %}}
 
@@ -399,7 +399,7 @@ The **Delete Portfolio** dialog box opens. If you decide to continue, type **DEL
 
 ### 15.2 Alerts {#alerts}
 
-The **Alerts** tab lists all the portfolios that no longer have a Portfolio Manager. You can assign new Portfolio Managers to a portfolio or delete the portfolio by clicking the Ellipsis icon (**...**) on the list and selecting the corresponding item.
+The **Alerts** tab lists all the portfolios that no longer have a Portfolio Manager. You can assign new Portfolio Managers to a portfolio or delete the portfolio by clicking the ellipsis button (**...**) on the list and selecting the corresponding item.
 
 {{% todo %}}Check the column name against the finalized UI{{% /todo %}}
 
@@ -418,7 +418,7 @@ In the list, you can see the following items:
 * **Created** – This shows the date on which the portfolio was created.
 * **Last Modified** – This shows the date on which the portfolio was last modified.
 
-* Ellipsis icon (**...**) – Clicking the icon opens a pop-up menu with the following items:
+* Ellipsis (**...**) – Clicking the icon opens a menu with the following items:
 
   * **Access management** – Selecting this brings you to the [Access Management](#access-management) page.
 

@@ -144,7 +144,7 @@ To create a new tag, do as follows:
 1. Click **Add Tag**. A text box appears, with a colored circle indicating the color of the new tag.
 2. In the text box, enter the name for the new tag.
 3. If you want to change the color of the new tag, click the colored circle and select a different color.
-4. Click the check mark icon to save the new tag.
+4. Click the checkmark icon to save the new tag.
 
 To edit an existing tag, do as follows:
 
@@ -226,7 +226,7 @@ Each project card shows the following information:
 {{< figure src="/attachments/developerportal/portfolio-management/project-card.png" >}}
 
 * ① Project name  – Clicking this opens a [side pane](#view-project) that shows project details.
-* ② Ellipsis icon (**...**) – Clicking this opens a pop-up menu that enables you to [edit](#edit-delete-project), [archive](#archive-project), or [delete](#edit-delete-project) the project.
+* ② Ellipsis (**...**) – Clicking this button opens a menu that enables you to [edit](#edit-delete-project), [archive](#archive-project), or [delete](#edit-delete-project) the project.
   
     {{% alert type="info" %}}Both Portfolio Managers and Contributors can edit, archive, or delete a project. Only Viewers cannot do these actions. For more information on roles and permissions, see [Access Management](#access-management).{{% /alert %}}
     
@@ -256,7 +256,7 @@ The list contains the following information:
 * **Go-Live Date** – the time when the app is expected to be up and running
 * **Linked App** – clicking this shows the information about the Mendix app linked with the project
 * **Owner** –  shows the name of the project owner
-* Ellipsis icon (**...**) – clicking this opens a pop-up menu that enables you to [edit](#edit-delete-project), [archive](#archive-project), or [delete](#edit-delete-project) the project
+* Ellipsis (**...**) – clicking this button opens a menu that enables you to [edit](#edit-delete-project), [archive](#archive-project), or [delete](#edit-delete-project) the project
   
     {{% alert type="info" %}}Both Portfolio Managers and Contributors can edit, archive, or delete a project. Only Viewers cannot do these actions. For more information on roles and permissions, see [Access Management](#access-management).{{% /alert %}}
 
@@ -279,7 +279,7 @@ The list contains the following information:
 * **Risk Reduction** – This indicates how much this project will help mitigate or reduce future risks. You can select **Highest**, **High**, **Medium**, **Low**, or **Lowest**.
 * **Size** – This is the job size of the project. You can select **XL**, **L**, **M**, **S**, or **XS**.
 * **Score** – This is the WSJF score of the project.
-* Ellipsis icon (**...**) – Clicking this opens a pop-up menu that enables you to [edit](#edit-delete-project), [archive](#archive-project), or [delete](#edit-delete-project) the project.
+* Ellipsis (**...**) – Clicking this button opens a menu that enables you to [edit](#edit-delete-project), [archive](#archive-project), or [delete](#edit-delete-project) the project.
   
     {{% alert type="info" %}}Both Portfolio Managers and Contributors can edit, archive, or delete a project. Only Viewers cannot do these actions. For more information on roles and permissions, see [Access Management](#access-management).{{% /alert %}}
 
@@ -307,7 +307,7 @@ The list contains the following information:
     * **Go-Live Date** – This is the time when the app is expected to be up and running.
 * Icon of the linked app – Clicking this shows the information about the Mendix app that is linked with the project.
 * Avatar of the project owner – Hovering over the avatar shows the name of the project owner.
-* Ellipsis icon (**...**) – Clicking this opens a pop-up menu that enables you to [edit](#edit-delete-project), [archive](#archive-project), or [delete](#edit-delete-project) the project.
+* Ellipsis (**...**) – Clicking this button opens a menu that enables you to [edit](#edit-delete-project), [archive](#archive-project), or [delete](#edit-delete-project) the project.
   
     {{% alert type="info" %}}Both Portfolio Managers and Contributors can edit, archive, or delete a project. Only Viewers cannot do these actions. For more information on roles and permissions, see [Access Management](#access-management)).{{% /alert %}}
 
@@ -315,7 +315,7 @@ The list contains the following information:
 
 On the **Project Overview** page, if you click a project, a side pane opens on the right side to show project details.
 
-On the upper-right corner of the pane, there is a link icon and an ellipsis icon (**…**). Clicking the link icon copies the link to the project. Clicking the ellipsis icon opens a pop-up menu that allows you to [edit](#edit-delete-project), [archive](#archive-project), or [delete](#edit-delete-project) the project.
+On the upper-right corner of the pane, there is a link icon and an ellipsis button (**…**). Clicking the link icon copies the link to the project. Clicking the ellipsis button opens a menu that allows you to [edit](#edit-delete-project), [archive](#archive-project), or [delete](#edit-delete-project) the project.
 
 {{% alert type="info" %}}
 
@@ -333,7 +333,7 @@ When you view project details, you can only **Post Comment**. You cannot change 
 Both Portfolio Managers and Contributors can edit or delete an existing project. Only Viewers cannot do these actions. For more information on roles and permissions, see [Access Management](#access-management).
 {{% /alert %}}
 
-To edit or delete a project, go to the **Projects Overview** page, click the ellipsis icon (**...**) for that project, and then select **Edit** or **Delete**. Alternatively, you can also click the ellipsis icon (**...**) in the [side pane](#view-project) where you view project details, and then select **Edit** or **Delete**.
+To edit or delete a project, go to the **Projects Overview** page, click the ellipsis button (**...**) for that project, and then select **Edit** or **Delete**. Alternatively, you can also click the ellipsis button (**...**) in the [side pane](#view-project) where you view project details, and then select **Edit** or **Delete**.
 
 ### 3.5 Archiving a Project {#archive-project}
 
@@ -345,7 +345,7 @@ Both Portfolio Managers and Contributors can archive a project. Only Viewers can
 
 To archive a project, perform the following steps:
 
-1. On the **Projects Overview** page, click the ellipsis icon (**...**) for that project, and then select **Archive**. Alternatively, you can also click the ellipsis icon (**...**) in the [side pane](#view-project) where you view project details, and then select **Archive**.
+1. On the **Projects Overview** page, click the ellipsis button (**...**) for that project, and then select **Archive**. Alternatively, you can also click the ellipsis button (**...**) in the [side pane](#view-project) where you view project details, and then select **Archive**.
 2. In the dialog box that opens, select the reason why the project is archived: **Completed**, **Canceled**, **On Hold** or **Other Reason**, and also enter any information that other people should know about this change, and then click **Archive**.
 
     {{< figure src="/attachments/developerportal/portfolio-management/archive-dialog-box.png" >}}
@@ -374,7 +374,7 @@ The list contains the following information:
 
 * **Archived by** – the name of the person who archived the project
 
-* Ellipsis (**...**) icon – clicking this opens a pop-up menu that enables you to [restore](#restore-delete-archived-project) or [delete](#restore-delete-archived-project) the archived project
+* Ellipsis (**...**) icon – clicking this opens a menu that enables you to [restore](#restore-delete-archived-project) or [delete](#restore-delete-archived-project) the archived project
   
     {{% alert type="info" %}}Both Portfolio Managers and Contributors can restore or delete a project. Only Viewers cannot do these actions. For more information on roles and permissions, see [Access Management](#access-management).{{% /alert %}}
 
@@ -384,9 +384,9 @@ The list contains the following information:
 Both Portfolio Managers and Contributors can restore or delete an archived project. Only Viewers cannot do these actions. For more information on roles and permissions, see [Access Management](#access-management).
 {{% /alert %}}
 
-To restore or delete an archived project, go to the **Archived Projects** page, click the ellipsis icon (**...**) for that project, and then select **Restore** or **Delete**. After you restore an archived project, it goes back to the [Projects Overview](#projects-overview) page.
+To restore or delete an archived project, go to the **Archived Projects** page, click the ellipsis button (**...**) for that project, and then select **Restore** or **Delete**. After you restore an archived project, it goes back to the [Projects Overview](#projects-overview) page.
 
-Alternatively, to delete an archived project, you can also click the ellipsis icon (**...**) in the side pane where you view the archived project details, and then select **Delete**.
+Alternatively, to delete an archived project, you can also click the ellipsis button (**...**) in the side pane where you view the archived project details, and then select **Delete**.
 
 ## 5 Access Management {#access-management}
 
@@ -440,7 +440,7 @@ For users within your company, if they have a Mendix account, their **Status** w
 
 ### 5.2 Editing and Deleting a User
 
-At the end of the row, click the Ellipsis icon (**...**), and then select the corresponding action.
+At the end of the row, click the ellipsis button (**...**), and then select the corresponding action.
 
 {{< figure src="/attachments/developerportal/portfolio-management/edit-delete-user.png" >}}
 

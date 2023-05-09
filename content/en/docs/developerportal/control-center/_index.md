@@ -326,7 +326,7 @@ The list has the following columns:
 
 ## 15 Portfolios
 
-The **Portfolios** page offers the governance feature for [portfolio management](/developerportal/portfolio-management/) in your company. You can have an overview of all portfolios in your company, manage portfolio access, delete portfolios, reject or approve requests for privacy setting changes. 
+The **Portfolios** page offers the governance features for [portfolio management](/developerportal/portfolio-management/) in your company. You can have an overview of all portfolios in your company, manage portfolio access, delete portfolios, reject or approve requests for privacy setting changes. 
 
 The **Portfolios** page contains three tabs: [All Portfolios](#all-portfolios), [Alerts](#alerts), and [Privacy Requests](#privacy-requests).
 
@@ -344,7 +344,7 @@ In the list, you can see the following items:
 
 {{% todo %}}Check the column name against the finalized UI{{% /todo %}}
 
-* **Name** – This is the name of the portfolio. Clicking the name opens a pop-up window that shows the general information of the portfolio and the list of the Portfolio Managers.
+* **Portfolio Name** – This is the name of the portfolio. Clicking the name opens a pop-up window that shows the general information of the portfolio and the list of the Portfolio Managers.
 * **Managers** – This shows the number of Portfolio Managers in this portfolio.
 * **Members** – This shows the number of users who have access to this portfolio.
 * **Privacy** – This shows the current privacy settings of the portfolio.
@@ -377,11 +377,13 @@ The list shows all users who have access to the portfolio. In the list, you can 
 * **User Name** – This shows the user name.
 * **Email** – This shows the email of the user.
 * **Company** – This shows the company where the user works.
-* **Status** – This shows the status of the user.
-* **Role** – This shows the role of the user.
-* Ellipsis icon (**...**) – Clicking the icon opens a pop-up menu with the following items:
-  * **Edit** – Selecting this allows you to change the role of the user.
-  * **Remove** – Selecting this allows you to remove the user from the portfolio.
+*  **Status** – This shows the status of the portfolio access of the user.
+    * **Active** – The user has access to the portfolio.
+    * **Pending** – The user still needs to accept the invitation to the portfolio.
+* **Role** – This shows the portfolio access role of the user. For more information about different roles and permissions, see the [Access Management](/developerportal/portfolio-management/#access-management) section in *Portfolio Management*.
+*  Ellipsis icon (**...**) – Clicking the icon opens a pop-up menu with the following items:
+    * **Edit** – Selecting this allows you to change the role of the user.
+    * **Remove** – Selecting this allows you to remove the user from the portfolio.
 
 #### 15.1.2 Deleting a Portfolio {#delete-portfolio}
 
@@ -403,7 +405,7 @@ The **Alerts** tab lists all the portfolios that no longer have a Portfolio Mana
 
 In the list, you can see the following items:
 
-* **Portfolio** – This is the name of the portfolio. Clicking the name opens a pop-up window that shows the general information of the portfolio and the list of the Portfolio Managers.
+* **Portfolio Name** – This is the name of the portfolio. Clicking the name opens a pop-up window that shows the general information of the portfolio and the list of the Portfolio Managers.
 
 * **Managers** – This shows the number of Portfolio Managers in this portfolio.
 
@@ -424,16 +426,16 @@ In the list, you can see the following items:
 
 ### 15.3 Privacy Requests {#privacy-requests}
 
-On the **Privacy Requests** tab, you can decide whether the change of portfolios privacy settings needs to be approved by a Mendix Admin. By default, these changes do not need to be approved by a Mendix Admin.
+On the **Privacy Requests** tab, you can decide whether a Mendix Admin needs to approve the creation of a restricted portfolio or the change from a private portfolio to a restricted one. This setting is switched off by default. If this setting is switched on, as a Mendix Admin, you automatically get a notification in the Control Center whenever someone creates a restricted portfolio or whenever someone changes a private portfolio to a restricted one. You can approve or reject their requests.
 
-The list shows all the pending change requests. You can see the following items:
+You can view all the pending requests on the **Privacy Requests** tab. Each request contains the following items:
 
-- **Portfolio** – This shows the name of the portfolio.
+- **Portfolio Name** – This shows the name of the portfolio.
 - **Requested By** – This shows the name of the user who made the request.
 - **From** – This shows current privacy settings.
 - **To** – This shows the new privacy settings that are being requested.
 - **Date** – This shows the date on which the request was made.
-- **Reject** – Clicking this rejects the change request. When you reject a request, optionally you can fill in a reason to inform the person who made the request.
+- **Reject** – Clicking this rejects the request. When you reject a request, optionally you can fill in a reason to inform the person who made the request.
 - **Approve** – Clicking this approves the request.
 
 {{% alert color="warning" %}}

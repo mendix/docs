@@ -4,6 +4,16 @@ url: /releasenotes/add-ons/ats-2.28/
 weight: 72
 ---
 
+## 2.28.11
+
+**Release date: May 9th, 2023**
+
+### Fixes
+
+* We fixed an issue causing Testsuite results not correctly displayed in case it had a failed data driven testcase execution.
+* We fixed an issue causing Testsuite results to show double the number of activity executed.
+* We fixed an issue causing the user always having to reset the Access key when updating a selenium hub.
+
 ## 2.28.10
 
 **Release date: April 11th, 2023**

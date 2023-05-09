@@ -13,7 +13,7 @@ The [AWS IoT TwinmMaker](https://marketplace.mendix.com/link/component/209624) c
 
 ### 1.1 Typical Use Cases
 
-AWS IoT TwinMaker makes it easier for developers to create digital twins of real-world systems such as buildings, factories, industrial equipment, and production lines. AWS IoT TwinMaker provides the tools you need to build digital twins to help you optimize building operations, increase production output, and improve equipment performance. With the ability to use existing data from multiple sources, create virtual representations of any physical environment, and combine existing 3D models with real-world data, you can now harness digital twins to create a holistic view of your operations faster and with less effort.
+AWS IoT TwinMaker makes it easier for developers to create digital twins of real-world systems such as buildings, factories, industrial equipment, and production lines. AWS IoT TwinMaker provides the tools you need to build digital twins to help you optimize building operations, increase production output, and improve equipment performance. With the ability to use existing data from multiple sources, create virtual representations of any physical environment, and combine existing 3D models with real-world data, you can now harness digital twins to create a holistic view of your operations faster and with less effort. When used with your Mendix app, the AWS IoT TwinMaker connector enables you to build actionable dashboards on top of AWS IoT Twinmaker, and build applications on top of the service with little coding experience required.
 
 ### 1.2 Prerequisites {#prerequisites}
 

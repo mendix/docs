@@ -293,7 +293,7 @@ When we GET the resource from the location provided, we can see that the status 
 
 {{< figure src="/attachments/refguide/modeling/integration/build-odata-apis/get-resource-sent.png" >}} 
 
-# Versioning
+## Versioning
 
 Reliable versioning is key for APIs. Client applications should trust your API not to make any incompatible changes that will cause the client app to malfunction. This means that any change you make to an API should always be backwards compatible. Breaking changes can only be introduced in new APIs, offering your clients a period of time where they can migrate from the old version to the new version. This means you need to the ability to run 2 versions of the same API side by side.
 

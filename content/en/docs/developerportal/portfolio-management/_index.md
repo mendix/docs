@@ -41,7 +41,7 @@ On the **Portfolio Landscape Overview** page, you can create a new portfolio as 
 
    * **Restricted** – If a portfolio is restricted, it is discoverable in the **Company Portfolios** section in the [Portfolio Landscape Overview](#portfolio-landscape) page of the Portfolio Management app. People who want to access a private portfolio need an invitation.
 
-     {{% alert color="info" %}}If the [Privacy Requests](/developerportal/control-center/#privacy-requests) setting is switched on in the Control Center, a Mendix Admin needs to approve if you want to create a restricted portfolio. In that case, a Mendix Admin will receive a notification about your request and can approve or reject your request from the Control Center. The **Private Settings** of the portfolio will be **Private** until a Mendix Admin approves your request.{{% /alert %}}
+     {{% alert color="info" %}}If the [Privacy Requests](/developerportal/control-center/#privacy-requests) setting is switched on in the Control Center, a Mendix Admin needs to approve if you want to create a restricted portfolio. In that case, a Mendix Admin will receive a notification about your request and can approve or reject your request from the [Control Center](#developerportal-control-center/#privacy-requests). The **Private Settings** of the portfolio will be **Private** until a Mendix Admin approves your request.{{% /alert %}}
 
 4. For **Prioritization Model**, select [WSJF Prioritization](/developerportal/portfolio-management/#wsjf) or [RICE Prioritization](/developerportal/portfolio-management/#rice).
 
@@ -68,7 +68,7 @@ These pages are described in the sections below.
 
 ## 3 Projects Overview {#projects-overview}
 
-In the Portfolio Management app, the term "Project" represents a business objective or strategic goal, and could span across multiple apps. The result of a project could be a component of a complex app or multiple apps. For progress tracking, we recommend you to break down an app into smaller projects whenever possible.
+In the Portfolio Management app, the term "Project" represents a business objective or strategic goal, and could span across multiple apps. A project can be related to  multiple apps or just one small part of a big app. For progress tracking, we recommend you to break down an app into smaller projects whenever possible.
 
 The **Project Overview** page gives an overview of all the projects in this portfolio.
 
@@ -405,7 +405,7 @@ The table below shows the permissions of Portfolio Managers, Contributors and Vi
 | Update user permissions and roles | {{< figure src="/attachments/developerportal/portfolio-management/check-mark.svg" >}} | {{< figure src="/attachments/developerportal/portfolio-management/cross-mark.svg" >}} | {{< figure src="/attachments/developerportal/portfolio-management/cross-mark.svg" >}} |
 | View user access information | {{< figure src="/attachments/developerportal/portfolio-management/check-mark.svg" >}} | {{< figure src="/attachments/developerportal/portfolio-management/check-mark.svg" >}} | {{< figure src="/attachments/developerportal/portfolio-management/check-mark.svg" >}} |
 | Manage portfolio settings | {{< figure src="/attachments/developerportal/portfolio-management/check-mark.svg" >}} | {{< figure src="/attachments/developerportal/portfolio-management/cross-mark.svg" >}} | {{< figure src="/attachments/developerportal/portfolio-management/cross-mark.svg" >}} |
-| Delete Portfolios | {{< figure src="/attachments/developerportal/portfolio-management/check-mark.svg" >}} | {{< figure src="/attachments/developerportal/portfolio-management/cross-mark.svg" >}} | {{< figure src="/attachments/developerportal/portfolio-management/cross-mark.svg" >}} |
+| Delete the Portfolio | {{< figure src="/attachments/developerportal/portfolio-management/check-mark.svg" >}} | {{< figure src="/attachments/developerportal/portfolio-management/cross-mark.svg" >}} | {{< figure src="/attachments/developerportal/portfolio-management/cross-mark.svg" >}} |
 | Create new projects | {{< figure src="/attachments/developerportal/portfolio-management/check-mark.svg" >}} | {{< figure src="/attachments/developerportal/portfolio-management/check-mark.svg" >}} | {{< figure src="/attachments/developerportal/portfolio-management/cross-mark.svg" >}} |
 | Edit existing projects | {{< figure src="/attachments/developerportal/portfolio-management/check-mark.svg" >}} | {{< figure src="/attachments/developerportal/portfolio-management/check-mark.svg" >}} | {{< figure src="/attachments/developerportal/portfolio-management/cross-mark.svg" >}} |
 | Archive and restore projects | {{< figure src="/attachments/developerportal/portfolio-management/check-mark.svg" >}} | {{< figure src="/attachments/developerportal/portfolio-management/check-mark.svg" >}} | {{< figure src="/attachments/developerportal/portfolio-management/cross-mark.svg" >}} |

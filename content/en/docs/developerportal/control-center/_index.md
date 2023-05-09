@@ -426,7 +426,7 @@ In the list, you can see the following items:
 
 ### 15.3 Privacy Requests {#privacy-requests}
 
-On the **Privacy Requests** tab, you can decide whether a Mendix Admin needs to approve the creation of a restricted portfolio or the change from a private portfolio to a restricted one. This setting is switched off by default. If this setting is switched on, as a Mendix Admin, you automatically get a notification in the Control Center whenever someone creates a restricted portfolio or whenever someone changes a private portfolio to a restricted one. You can approve or reject their requests.
+On the **Privacy Requests** tab, you can decide whether a Mendix Admin needs to approve the creation of a restricted portfolio or any change of privacy settings of an existing portfolio. This setting is switched off by default. If this setting is switched on, as a Mendix Admin, you automatically get a notification in the Control Center whenever someone creates a restricted portfolio or whenever someone changes the privacy settings of an existing portfolio. You can approve or reject their requests.
 
 You can view all the pending requests on the **Privacy Requests** tab. Each request contains the following items:
 

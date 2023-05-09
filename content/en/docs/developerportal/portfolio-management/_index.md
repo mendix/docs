@@ -41,7 +41,7 @@ On the **Portfolio Landscape Overview** page, you can create a new portfolio as 
 
    * **Restricted** – If a portfolio is restricted, it is discoverable in the **Company Portfolios** section in the [Portfolio Landscape Overview](#portfolio-landscape) page of the Portfolio Management app. People who want to access a private portfolio need an invitation.
 
-     {{% alert color="info" %}}If the [Privacy Requests](/developerportal/control-center/#privacy-requests) setting is switched on in the Control Center, a Mendix Admin needs to approve if you want to set the **Private Settings** of a portfolio to **Restricted**. In that case, a Mendix Admin will receive a notification about your request and can approve or reject your request from the Control Center. The **Private Settings** of the portfolio will be **Private** until a Mendix Admin approves your request.{{% /alert %}}
+     {{% alert color="info" %}}If the [Privacy Requests](/developerportal/control-center/#privacy-requests) setting is switched on in the Control Center, a Mendix Admin needs to approve if you want to create a restricted portfolio. In that case, a Mendix Admin will receive a notification about your request and can approve or reject your request from the Control Center. The **Private Settings** of the portfolio will be **Private** until a Mendix Admin approves your request.{{% /alert %}}
 
 4. For **Prioritization Model**, select [WSJF Prioritization](/developerportal/portfolio-management/#wsjf) or [RICE Prioritization](/developerportal/portfolio-management/#rice).
 
@@ -466,7 +466,7 @@ On the **Portfolio Settings** page, Portfolio Managers can change the following 
 
     * **Restricted** – A restricted portfolio is discoverable in the **Company Portfolios** section in the [Portfolio Landscape Overview](#portfolio-landscape) page of the Portfolio Management app. People who want to access a private portfolio need an invitation.
 
-    {{% alert color="info" %}}If the [Privacy Requests](/developerportal/control-center/#privacy-requests) setting is switched on in the Control Center, a Mendix Admin needs to approve if you change **Privacy Settings** from **Private** to **Restricted**. In that case, a Mendix Admin will receive a notification about your request and can approve or reject your request from the Control Center. You can cancel a pending request by clicking **Cancel Request**.{{% /alert %}}
+    {{% alert color="info" %}}If the [Privacy Requests](/developerportal/control-center/#privacy-requests) setting is switched on in the Control Center, a Mendix Admin needs to approve any change of **Privacy Settings**. In that case, a Mendix Admin will receive a notification about your change request and can approve or reject your request from the Control Center. You can cancel a pending request by clicking **Cancel Request**.{{% /alert %}}
 
 * **Stages**  – Click the **^** icon or the **v** icon to move a stage upwards or downwards.
 

@@ -65,7 +65,6 @@ In order to use the AWS IoT TwinMaker service, you must authenticate with AWS. T
 
 After you configure the authentication profile for AWS IoT TwinMaker, you can implement the functions of the connector by using the provided activities in microflows. For example, to list all workspaces, implement the ListWorkspace activity by doing the following steps:
 
-[!!! TO DO]
 Create a ListWorkspaceRequest entity, call the ListWorkspaceRequest microflow action with the created entity as an input. IoT TwinMaker will return all workspaces it finds (at most 250, by default 25).
 
 ## 4 Technical Reference

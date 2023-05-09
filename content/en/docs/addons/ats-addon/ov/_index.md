@@ -16,4 +16,4 @@ This section presents general information on ATS.
 * [Compatibility](/addons/ats-addon/ov-compatibility/)
 * [Deployment Options](/addons/ats-addon/ov-deployment/)
 * [Maintenance](/addons/ats-addon/ov-maintenance/)
-* [Function API](/addons/ats-addon/ov-function-api/)
+

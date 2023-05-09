@@ -12,7 +12,6 @@ These are the main documents in this category:
 * [Action](/addons/ats-addon/rg-two-action/)
 * [ATS Helper](/addons/ats-addon/rg-two-ats-helper/)
 * [Data-Driven Testing](/addons/ats-addon/rg-two-data-driven-testing/)
-* [Function API](/addons/ats-addon/rg-two-function-api/)
 * [Test Case](/addons/ats-addon/rg-two-test-case/)
 * [Test Run](/addons/ats-addon/rg-two-test-run/)
 * [Test Step](/addons/ats-addon/rg-two-test-step/)

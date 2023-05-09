@@ -63,7 +63,15 @@ In order to use the AWS IoT TwinMaker service, you must authenticate with AWS. T
 
 ### 3.2 Configuring a Microflow for an AWS Service
 
-After you configure the authentication profile for AWS IoT TwinMaker, you can implement the functions of the connector by using the provided activities in microflows. For example, to list all workspaces, implement the ListWorkspace activity by doing the following steps:
+After you configure the authentication profile for AWS IoT TwinMaker, you can implement the functions of the connector by using the provided activities in microflows. For example, to list all workspaces, implement the [ListWorkspace](#list-workspace) activity by doing the following steps:
+
+1. In the **App Explorer**, find and open the domain model for your app.
+2. Right-click on the working area of the domain model, and then click **Add entity**.
+
+    {{< figure src="/attachments/appstore/connectors/aws-iot-twinmaker/addentity.png" alt="Adding a new entity to the domain model">}}
+
+3. Open the new entity by double-clicking on it.
+4. Enter a name for the entity, for example, `ListWorkspaceRequest`.
 
 Create a ListWorkspaceRequest entity, call the ListWorkspaceRequest microflow action with the created entity as an input. IoT TwinMaker will return all workspaces it finds (at most 250, by default 25).
 
@@ -1258,7 +1266,7 @@ The `AbstractQuery` entity does not have any attributes.
 | --- | --- | --- | --- |
 | `AbstractQuery_GetPropertyValueHistoryRequest` | `AWSTwinMakerConnector.GetPropertyValueHistoryRequest` | OneToOne | |
 
-#### 4.1.63 ListWorkspacesRequest
+#### 4.1.63 ListWorkspacesRequest {##list-workspace}
 
 The `ListWorkspacesRequest` entity represents a request to get the list of workspaces in the current account.
 

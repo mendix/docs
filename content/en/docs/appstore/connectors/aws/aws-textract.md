@@ -163,6 +163,8 @@ The domain model is a data model that describes the information in your applicat
 
 ### 4.2 Enumerations {#enumerations}
 
+An enumeration is a predefined list of values that can be used as an attribute type.
+
 #### 4.2.1 RelationshipType
 
 | Name | Caption |
@@ -174,14 +176,14 @@ The domain model is a data model that describes the information in your applicat
 | `TITLE` | TITLE |
 | `ANSWER` | ANSWER |
 
-4.2.2 TextType
+#### 4.2.2 TextType
 
 | Name | Caption |
 | --- | --- |
 | `PRINTED` | PRINTED |
 | `HANDWRITING` | HANDWRITING |
 
-4.2.3 EntityTypes
+#### 4.2.3 EntityTypes
 
 | Name | Caption |
 | --- | --- |
@@ -189,9 +191,9 @@ The domain model is a data model that describes the information in your applicat
 | `VALUE` | VALUE |
 | `COLUMN_HEADER` | COLUMN_HEADER |
 
-4.2.4 AWS_Region
+#### 4.2.4 AWS_Region
 
-For a list of supported regions, see [Service endpoints](https://docs.aws.amazon.com/general/latest/gr/textract.html#textract_region).
+This enumeration contains a list of supported AWS regions. For more information, see [Service endpoints](https://docs.aws.amazon.com/general/latest/gr/textract.html#textract_region).
 
 | Name | Caption |
 | --- | --- |

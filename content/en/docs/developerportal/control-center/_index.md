@@ -370,7 +370,7 @@ In the search box, you can search for a user by the user name, email, company, s
 
 The **Add Users** button on the upper-right corner allows you to invite new users to the portfolio using their email addresses.
 
-The list shows all users who have access to the portfolio. In the list, you can see the following items:
+The list shows all users who have access to the portfolio and any pending portfolio invites. In the list, you can see the following items:
 
 {{% todo %}}Check the column name against the finalized UI{{% /todo %}}
 
@@ -426,9 +426,9 @@ In the list, you can see the following items:
 
 ### 15.3 Privacy Requests {#privacy-requests}
 
-On the **Privacy Requests** tab, you can decide whether a Mendix Admin needs to approve the creation of a restricted portfolio or any change of privacy settings of an existing portfolio. This setting is switched off by default. If this setting is switched on, as a Mendix Admin, you automatically get a notification in the Control Center whenever someone creates a restricted portfolio or changes the privacy settings of an existing portfolio. You can approve or reject their requests.
+On the **Privacy Requests** tab, you can decide whether a Mendix Admin needs to approve the creation of a restricted portfolio or any change of privacy settings of an existing portfolio. You can use the **Admins curate the restricted portfolios** toggle to switch it on and off. This toggle is switched off by default. If the toggle is switched on, as a Mendix Admin, you automatically get a [notification](/developerportal/#notifications) whenever someone creates a restricted portfolio or changes the privacy settings of an existing portfolio. 
 
-You can view all the pending requests on the **Privacy Requests** tab. Each request contains the following items:
+On the **Privacy Requests** tab, you can view all the pending requests. You can approve or reject a request here. Every request contains the following items:
 
 - **Portfolio Name** – This shows the name of the portfolio.
 - **Requested By** – This shows the name of the user who made the request.
@@ -438,7 +438,7 @@ You can view all the pending requests on the **Privacy Requests** tab. Each requ
 - **Reject** – Clicking this rejects the request. When you reject a request, optionally you can fill in a reason to inform the person who made the request.
 - **Approve** – Clicking this approves the request.
 
-{{% alert color="warning" %}}
+{{% alert color="info" %}}
 After a request is either rejected or approved, a notification is sent to the person who made the request. If the Mendix Admin fills in the reason for the rejection, the reason is also shown to the requester.
 {{% /alert %}}
 

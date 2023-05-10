@@ -331,7 +331,7 @@ When you view project details, you can only **Post Comment**. You cannot change 
 Both Portfolio Managers and Contributors can edit or delete an existing project. Only Viewers cannot do these actions. For more information on roles and permissions, see [Access Management](#access-management).
 {{% /alert %}}
 
-To edit or delete a project, go to the **Projects Overview** page, click the ellipsis button (**...**) for that project, and then select **Edit** or **Delete**. Alternatively, you can also click the ellipsis button (**...**) in the [side pane](#view-project) where you view project details, and then select **Edit** or **Delete**.
+To edit or delete a project, go to the **Projects Overview** page, click the ellipsis button (**...**) for that project, and then select **Edit** or **Delete**. Alternatively, you can also click the ellipsis button in the [side pane](#view-project) where you view project details, and then select **Edit** or **Delete**.
 
 ### 3.5 Archiving a Project {#archive-project}
 
@@ -358,20 +358,15 @@ The **Archived Projects** page shows all the projects that are archived. You can
 
 The list contains the following information:
 
-* **Project Name** – Clicking it opens a side pane that shows the details of the archived project as well as why the project was archived, additional comments, who archived the project, and when.
+*  **Project Name** – Clicking it opens a side pane that shows the details of the archived project as well as why the project was archived, additional comments, who archived the project, and when.
 
     {{% alert type="info" %}}When you view the details of a archived project, you can only **Post Comment**. You cannot edit any other information.{{% /alert %}}
 
 * **Department** – the department to which the project belongs
-
 * **Stage** – which stage the project is currently in
-
 * **Archiving reason** – the reason why the project was archived
-
 * **Archived date** – the date when the project was archived
-
 * **Archived by** – the name of the person who archived the project
-
 * Ellipsis (**...**) icon – clicking this opens a menu that enables you to [restore](#restore-delete-archived-project) or [delete](#restore-delete-archived-project) the archived project
   
     {{% alert type="info" %}}Both Portfolio Managers and Contributors can restore or delete a project. Only Viewers cannot do these actions. For more information on roles and permissions, see [Access Management](#access-management).{{% /alert %}}
@@ -425,7 +420,6 @@ The table below shows the permissions of Portfolio Managers, Contributors and Vi
 2. On the upper-right corner, click **Add New Users**.
 3. In the dialog box, enter the **Email Address** of the user who you want to invite. They can be someone within your company or outside your company. For users outside your company, their names and profile pictures are not displayed.
 4.  Select an **Access Role** for the user – **Portfolio Manager**, **Contributor**, or **Viewer**. This determines the user's access level to all the projects in this portfolio.
-
 5. Click **Add to List**.
 6. Repeat steps 2 and 4 until you add all the users.
 7. Click **Send Invites**.
@@ -455,31 +449,23 @@ The **Portfolio Settings** page is only available for Portfolio Managers.
 On the **Portfolio Settings** page, Portfolio Managers can change the following settings:
 
 * **Portfolio Name** – Click **Edit Portfolio Details** to change the portfolio name.
-
 * **Portfolio Description** – Click **Edit Portfolio Details** to change the portfolio description.
+*  **Privacy Settings** – You can set the settings to **Private** or **Restricted**.
 
-* **Privacy Settings** – You can set the settings to **Private** or **Restricted**.
-
-    * **Private** – A private portfolio is not discoverable in the **Company Portfolios** section in the [Portfolio Landscape Overview](#portfolio-landscape) page of the Portfolio Management app. People who want to access a private portfolio need an invitation.
-
-    * **Restricted** – A restricted portfolio is discoverable in the **Company Portfolios** section in the [Portfolio Landscape Overview](#portfolio-landscape) page of the Portfolio Management app. People who want to access a private portfolio need an invitation.
+    * **Private** – A private portfolio is not discoverable in the **Company Portfolios** section of the [Portfolio Landscape Overview](#portfolio-landscape) page in the Portfolio Managent app. People who want to access a private portfolio need an invitation.
+    * **Restricted** – A restricted portfolio is discoverable in the **Company Portfolios** section of the [Portfolio Landscape Overview](#portfolio-landscape) page in the Portfolio Management app. People who want to access a private portfolio need an invitation.
 
     {{% alert color="info" %}}If the [Admins curate the restricted portfolios](/developerportal/control-center/#privacy-requests) toggle is turned on in the Control Center, a Mendix Admin needs to approve any change of **Privacy Settings**. In that case, a Mendix Admin will receive a notification about your change request and can approve or reject your request from the Control Center. You can cancel a pending request by clicking **Cancel Request**.{{% /alert %}}
 
-* **Stages**  – Click the **^** button or the **v** button to move a stage upwards or downwards.
+*  **Stages** – Click the **^** button or the **v** button to move a stage upwards or downwards.
 
     {{< figure src="/attachments/developerportal/portfolio-management/move-upwards-downwards.png" >}}
 
 * **Prioritization Model**
-
 * **Currency**
-
 * **Departments**
-
 * **Countries**
-
 * **Scope Estimation - Use Cases**
-
 * **Expected Value - Types**
 
 To delete or edit an existing option for a setting, hover over the option to show the **Delete** button or the **Edit** button at the end of row, and then click the corresponding button.
@@ -492,7 +478,7 @@ To add an option for a setting, click **Add Department**, **Add Country**, **Add
 
 1. On the **Portfolio Settings** page, click **Delete** at the bottom of the page. The **Delete Portfolio** Dialog box opens.
 2. Read the warning carefully. Deleting a portfolio means that you permanently delete the portfolio, including all the data in it. This change cannot be reverted.
-3. If you decide to continue, type **DELETE** in the text box.
+3. If you decide to continue, type *DELETE* in the text box.
 4. Click **Delete**. The portfolio is permanently deleted.
 
 {{% alert color="info" %}}A Mendix Admin can also delete a portfolio in the [Portfolios](/developerportal/control-center/#delete-portfolio) section of the Control Center.{{% /alert %}}

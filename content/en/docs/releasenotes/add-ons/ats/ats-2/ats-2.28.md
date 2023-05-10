@@ -10,9 +10,9 @@ weight: 72
 
 ### Fixes
 
-* We fixed an issue causing Testsuite results not correctly displayed in case it had a failed data driven testcase execution.
-* We fixed an issue causing Testsuite results to show double the number of activity executed.
-* We fixed an issue causing the user always having to reset the Access key when updating a selenium hub.
+* We fixed an issue that caused the incorrect display of test suite results when they had a failed data-driven test case execution.
+* We fixed an issue that caused test suite results to show double the number of activities executed.
+* We fixed an issue that made the user have to reset the access key when updating a Selenium hub.
 
 ## 2.28.10
 

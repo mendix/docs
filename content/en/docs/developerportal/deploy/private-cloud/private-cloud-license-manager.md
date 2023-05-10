@@ -285,7 +285,13 @@ mx-pclm-cli config-namespace -n <operator-ns> \
    -u <admin-user> \
    -p <admin-password>
 ```   
-The default secret name is `mendix-operator-pclm`. If PCLM was previously configured manually, the existing secret name is used. Below is the yaml file format for the secret.
+The default secret name is `mendix-operator-pclm`. If PCLM was previously configured manually, the existing secret name is used. 
+
+#### 7.1.1 Sample Yaml Files
+
+Below are sample yaml files for the secrets, with the changes applied after running the above command. You do not need to make those changes manually; to configure the Mendix Operator and Agent, it is enough to run the above command.
+
+##### 7.1.1.1 Mendix Operator
    
 ```yaml
 apiVersion: v1
@@ -317,11 +323,31 @@ Where:
 
 * `<secret-name>` – the default secret name is `mendix-operator-pclm`
 * `<pclm-http-url>` – is the HTTP REST endpoint of the PCLM server
-   
+
+##### 7.1.1.2 Mendix Agent
+
+```yaml
+apiVersion: v1
+kind: Secret
+type: Opaque
+metadata:
+  name: <secret-name>
+data:
+  username: <base64-encoded username>
+  password: <base64-encoded password>
+  server-url: <base64-encoded PCLM URL>
+```
+
+Where:
+
+* `<secret-name>` – the default secret name is `mendix-agent-pclm`
+* `<username>` – is a user of *operator* or *admin* type
+* `<password>` – is the password for the chosen username
+* `<server-url>` – is the URL of the PCLM server
 
 ### 7.2 Applying Licenses
 
-Once you have patched the Mendix Operator, all app environments which are controlled through the operator will have licenses applied automatically.
+Once you have patched the Mendix Operator, restart your environment. All app environments which are controlled through the operator will have licenses applied automatically after the restart.
 
 {{% alert color="info" %}}
 You cannot choose which environments will be licensed. If you have more environments controlled through the operator than licenses, some environments will not be licensed. You can see which environments have been licensed using the instructions in [Verifying That the Licenses Are Applied](#verify), below.

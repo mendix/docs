@@ -89,12 +89,12 @@ After you configure the authentication profile for AWS IoT TwinMaker, you can im
 10. In the **Properties** pane for the microflow, in the **Security** section, select a user role that should be allowed to run the microflow.
 11. Double-click the **ListWorkspaces** activity to configure the required parameters.
   
-    For the `ListWorkspaces` activity, you must specify the region for which you want to retrieve the tables. Other activities may have different required parameters.
+    For the `ListWorkspaces` activity, you must make a **ListWorkspaceRequest**, as well as specify the region for which you want to retrieve the tables. Other activities may have different required parameters.
 12. Click **Edit parameter value**, edit the **AWS_Region** parameter, and change **Type** to **Expression**.
 13. In the expression builder, type `AWS_Region`, and then press **Ctrl+Space**.
 14. In the autocomplete dialog, select **AWSTwinMakerConnector.AWS_Region**, then type *.* and select your AWS region from the list.
 
-    {{< figure src="/attachments/appstore/connectors/aws-dynamodb/awsregions.png" alt="The list of AWS regions">}}
+    {{< figure src="/attachments/appstore/connectors/aws-iot-twinmaker/awsregions.png" alt="The list of AWS regions">}}
     
     For a list of available AWS regions, see [AWS Region](#aws-region).
 15. Click **OK**, and then click **OK** again.
@@ -146,7 +146,7 @@ After you configure the authentication profile for AWS IoT TwinMaker, you can im
 45. Click **OK**, and then click **Yes**.
 46. In the **Properties** pane for the page, in the **Navigation** > **Visible for** section, select a user role that should be allowed to run the microflow.
 47. In the **App Explorer**, double-click the **Navigation** for your app.
-48. In the **Menu**** section, click **New Item**.
+48. In the **Menu** section, click **New Item**.
 49. In the **New Menu Item** dialog, configure the following settings:
     * **Caption** - A caption for the navigation item, for example, *Workspace*
     * **Icon** - An icon that will be displayed for this page in the navigation for your app
@@ -2244,7 +2244,7 @@ This activity returns an `AWSTwinMakerConnector.GetComponentTypeResponse` entity
 
 Retrieves information about the history of a time series property value for a component, component type, twinmaker entity, or workspace.
 
-You must specify a value for *workspaceId*. For TwinMaker entity-specific queries, specify values for ****componentName* and *entityId*. For cross-entity quries, specify a value for *componentTypeId.*
+You must specify a value for *workspaceId*. For TwinMaker entity-specific queries, specify values for *componentName* and *entityId*. For cross-entity quries, specify a value for *componentTypeId.*
 
 For more information, see [GetPropertyValueHistory](https://docs.aws.amazon.com/iot-TwinMaker/latest/apireference/API_GetPropertyValueHistory.html).
 

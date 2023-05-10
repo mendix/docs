@@ -440,7 +440,7 @@ For users within your company, if they have a Mendix account, their **Status** w
 
 ### 5.2 Editing and Deleting a User
 
-At the end of the row, click the ellipsis button (**...**), and then select the corresponding action. To update the permissions and the role of a user, click **Edit**. To delete a user, click **Delete**.
+At the end of the row, click the ellipsis button (**...**), and then select the corresponding action. To update the permissions and the role of a user, click **Edit**. To remove a user from the portfolio, click **Remove**.
 
 {{< figure src="/attachments/developerportal/portfolio-management/edit-delete-user.png" >}}
 

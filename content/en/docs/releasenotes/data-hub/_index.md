@@ -15,11 +15,11 @@ These release notes cover changes made to the [Mendix Data Hub Catalog](/data-hu
 
 #### Improvements
 
-* We improved clarity of Authentication Details section in Data Source datils page.
+* We made the authentication details on the [data source details](/data-hub/data-hub-catalog/search/#service-details) page more user-friendly.
 
 #### Fixes
 
-* Fixed an issue where deleteing entity consumption resulted in an error which also impacted the deployment of Odata service
+* We fixed an issue that impacted the deployment of an OData service.
 
 ### April 13th, 2023
 

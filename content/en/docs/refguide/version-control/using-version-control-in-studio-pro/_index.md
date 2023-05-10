@@ -391,23 +391,23 @@ When using external tools, you might be asked to authenticate separately to Team
 
 Connecting to Git is done using a personal access token (PAT). Connecting to SVN can either be done using a PAT or your Mendix credentials.
 
-For information on how to create a PAT, see the [Personal Access Tokens](/developerportal/community-tools/mendix-profile/#pat) section of *Mendix Profile*. The PAT must include the scope `mx:modelrepository:write`.
+For information on how to create a PAT, see the [Personal Access Tokens](/developerportal/community-tools/mendix-profile/#pat) section of *Mendix Profile*.
 
 To connect to Git you need to use the following URL and credentials:
 
 * URL: `https://git.api.mendix.com/<your AppID>.git`
 * Username: your Mendix account username (alternatively, you can use the word *pat* as your username)
-* Password: the PAT you created
+* Password: the PAT you created – the PAT must include the scopes `mx:modelrepository:repo:write`, `mx:modelrepository:repo:read`, and/or `mx:modelrepository:write` under *Model Repository*
 
 To connect to SVN using a PAT you need to use the following URL and credentials:
 
-* URL: `https://svn.home.mendix.com/<your AppID>/`
+* URL: `https://svn.home.mendix.com/<your AppID>`
 * Username: your Mendix account username
-* Password: the PAT you created
+* Password: the PAT you created — the PAT must include the scope `mx:modelrepository:write` under *Model Server*
 
 To connect to SVN using your Mendix credentials you need to use the following URL and credentials:
 
-* URL: `https://teamserver.sprintr.com/<your AppID>/`
+* URL: `https://teamserver.sprintr.com/<your AppID>`
 * Username: your Mendix account username
 * Password: your Mendix account password
 

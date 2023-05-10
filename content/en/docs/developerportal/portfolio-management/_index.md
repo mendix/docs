@@ -70,7 +70,7 @@ These pages are described in the sections below.
 
 In the Portfolio Management app, the term "Project" represents a business objective or strategic goal, and could span across multiple apps. A project can be related to  multiple apps or just one small part of a big app. For progress tracking, we recommend you to break down an app into smaller projects whenever possible.
 
-The **Project Overview** page gives an overview of all the projects in this portfolio.
+The **Projects Overview** page gives an overview of all the projects in this portfolio.
 
 In the search box, you can search for a project by the project name.
 
@@ -313,7 +313,7 @@ The list contains the following information:
 
 ### 3.3 Viewing Project Details {#view-project}
 
-On the **Project Overview** page, if you click a project, a side pane opens on the right side to show project details.
+On the **Projects Overview** page, if you click a project, a side pane opens on the right side to show project details.
 
 On the upper-right corner of the pane, there is a link icon and an ellipsis button (**…**). Clicking the link icon copies the link to the project. Clicking the ellipsis button opens a menu that allows you to [edit](#edit-delete-project), [archive](#archive-project), or [delete](#edit-delete-project) the project.
 

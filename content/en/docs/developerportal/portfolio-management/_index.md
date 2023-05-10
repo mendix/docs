@@ -25,28 +25,24 @@ The **Portfolio Landscape Overview** page contains two sections: **My Portfolios
 
 **Company Portfolios** show all the portfolios in your company that are discoverable and to which you do not have access. Clicking a portfolio card shows more details about the portfolio.
 
-{{% alert color="info" %}}Whether a portfolio is discoverable in the **Company Portfolios** section depends on its **Privacy Settings** in the [Portfolio Settings](#portfolio-settings).{{% /alert %}}
+{{% alert color="info" %}}Whether a portfolio is discoverable in the **Company Portfolios** section depends on its **Privacy Settings** on the [Portfolio Settings](#portfolio-settings) page.{{% /alert %}}
 
 ### 2.1 Creating a New Portfolio {#create-portfolio}
 
 On the **Portfolio Landscape Overview** page, you can create a new portfolio as follows:
 
 1. On the upper-right corner of the page, click **New Portfolio**. The **New Portfolio** dialog box opens.
-
 2. Enter **Portfolio Name** and **Description** for the new portfolio.
+3.  For **Privacy Settings**, select **Private** or **Restricted**:
 
-3. For **Privacy Settings**, select **Private** or **Restricted**:
+    * **Private** – If the portfolio is private, it is not discoverable in the **Company Portfolios** section of the [Portfolio Landscape Overview](#portfolio-landscape) page in the Portfolio Management app. People who want to access a private portfolio need an invitation.
 
-   * **Private** – If the portfolio is private, it is not discoverable in the **Company Portfolios** section in the [Portfolio Landscape Overview](#portfolio-landscape) page of the Portfolio Management app. People who want to access a private portfolio need an invitation.
-
-   * **Restricted** – If a portfolio is restricted, it is discoverable in the **Company Portfolios** section in the [Portfolio Landscape Overview](#portfolio-landscape) page of the Portfolio Management app. People who want to access a private portfolio need an invitation.
+    * **Restricted** – If a portfolio is restricted, it is discoverable in the **Company Portfolios** section of the [Portfolio Landscape Overview](#portfolio-landscape) page in the Portfolio Management app. People who want to access a private portfolio need an invitation.
 
      {{% alert color="info" %}}If the [Admins curate the restricted portfolios](/developerportal/control-center/#privacy-requests) toggle is turned on in the Control Center, a Mendix Admin needs to approve if you want to create a restricted portfolio. In that case, a Mendix Admin will receive a notification about your request and can approve or reject your request from the [Control Center](#developerportal-control-center/#privacy-requests). The **Private Settings** of the portfolio will be **Private** until a Mendix Admin approves your request.{{% /alert %}}
 
 4. For **Prioritization Model**, select [WSJF Prioritization](/developerportal/portfolio-management/#wsjf) or [RICE Prioritization](/developerportal/portfolio-management/#rice).
-
 5. From the **Currency** drop-down list, select the default currency for this portfolio.
-
 6. Click **Create**.
 
 The portfolio is created. You are the first Portfolio Manager of this portfolio. You can start [inviting other people](#add-users) to the portfolio.

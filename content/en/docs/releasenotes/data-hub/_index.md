@@ -11,6 +11,16 @@ These release notes cover changes made to the [Mendix Data Hub Catalog](/data-hu
 
 ## 2023
 
+### May 11th, 2023
+
+#### Improvements
+
+* We improved clarity of Authentication Details section in Data Source datils page.
+
+#### Fixes
+
+* Fixed an issue where deleteing entity consumption resulted in an error which also impacted the deployment of Odata service
+
 ### April 13th, 2023
 
 #### Fixes

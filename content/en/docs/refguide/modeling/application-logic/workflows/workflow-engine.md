@@ -164,55 +164,61 @@ It is advised to not leave **Failed** or **Incompatible** workflows as **Failed*
 
 ### 4 User Tasks in Workflows
 
-User task activities represent actions that have to be completed by a user. Therefore, user tasks can only be completed by named users in Mendix. User tasks are shown in a Task Inbox from which they can be completed.
+User task activities represent actions that have to be completed by a user. Therefore, user tasks can only be completed by named users in Mendix. User tasks are shown in a Task Inbox page from which they can be completed.
 
-**Task Inbox**
-The Task Inbox shows objects from the `System.WorkflowUserTask` entity. The access rules allow to select only `InProgress` user tasks that either target the current user (the current user is part of the `System.WorkflowUserTask_TargetUsers` association) or are assigned to the current user (the current user is set in the `System.WorkflowUserTask_Assignee` association). See for details the access rules of the **System.WorkflowUserTask** entity.
+#### 4.1 Task Inbox
+The Task Inbox page shows objects from the **System.WorkflowUserTask** entity. The access rules allow to select only `InProgress` user tasks that either target the current user (the current user is part of the **System.WorkflowUserTask_TargetUsers** association) or are assigned to the current user (the current user is set in the **System.WorkflowUserTask_Assignee** association). For more information, see the access rules of the **System.WorkflowUserTask** entity.
 
 In case you want to show specific information from the **Workflow Context** object in the Task Inbox, there are two options:
 
 1. Use the **Task Name** and/or **Task** **Description** in the task properties to contain that information.
 2. Build a workflow context-specific Task Inbox that only shows tasks from workflows that have this specific Workflow Context. In this case, we advice to use the user task state-change events to store the information in a custom entity to show in the task inbox.
 
-The ‘Show user task page’ microflow activity can be used to open the user task page that is configured in the user task activity of the workflow of the given `System.WorkflowUserTask` object.
+The **Show user task page** microflow activity can be used to open the user task page that is configured in the user task activity of the workflow of the given **System.WorkflowUserTask** object.
 
-**User** **T****ask** **S****tates**
-The user task states are stored in the `State` attribute of the `System.WorkflowUserTask` entity. This attribute uses the `System.WorkflowUserTaskState` enumeration to have a fixed set of states. These states represent the different technical states a user task can have. 
+#### 4.2 User Task States
+The user task states are stored in the **State** attribute of the **System.WorkflowUserTask** entity. This attribute uses the System.WorkflowUserTaskState enumeration to have a fixed set of states. These states represent the different technical states a user task can have. 
 
 ![User Task State Diagram](https://paper-attachments.dropboxusercontent.com/s_F9C0B36CF51B2FD27B415E2407CD6E6F45530165C305D7F61AAEEBF12F367F4E_1678117694371_User+Task+State+Diagram-2.svg)
 
 
-Notes: 
+Note the following: 
 
-- the transitions from `InProgress` to `Paused` (and vice-versa), from any state into `Aborted`, and from `Failed` into the Created state are caused by actions on the Workflow (Workflow Pause/Unpause, Workflow Abort or Workflow Retry).
-- the state transitions from `Created` to `InProgress`, from `Completed` to the end state, from `Aborted` to the end state happen automatically when the actions that are part of the state are finished.
-- the end state (red circle) means that the user task is deleted.
-- the yellow boxes are not concrete states, but mean that any state inside the box can transition following the outgoing arrow and can transition back into the previous state by following the incoming arrow.
+- Transitions from **InProgress** to **Paused** (and vice-versa), from any state into **Aborted**, and from **Failed** into the **Created** state are a result of actions on the workflow (Pause/Unpause, Abort, or Retry).
+- State transitions from **Created** to **InProgress**, from **Completed** to the end state, from **Aborted** to the end state happen automatically when the actions that are part of the state are finished.
+- The end state (red circle) means that the user task is deleted.
+- Yellow boxes are not concrete states, but mean that any state inside the box can transition following the outgoing arrow and can transition back into the previous state by following the incoming arrow.
 
-In the table below you can find the description of different states:
+In the table below, you can find the description of different states:
 
-| State        | Description                                                                                                                                                                                                                                                                                                                    |
-| ------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `Created`    | This is the initial state after creation. User tasks have this state until users have been targeted and the on-created event microflow (when specified) has been successfully completed. User tasks in this state are not visible in the Task Inbox yet.                                                                       |
-| `InProgress` | User tasks in this state are visible in the Task Inbox of targeted or assigned users and can be completed.                                                                                                                                                                                                                     |
-| `Paused`     | When a workflow instance is paused, the user tasks of the workflow instance are also paused. The user tasks are not visible in the Task Inbox.                                                                                                                                                                                 |
-| `Completed`  | When a user task is completed, it gets the `Completed` state. After execution of the state-change microflow, this user task instance is deleted.                                                                                                                                                                               |
-| `Aborted`    | When a workflow gets aborted or a user task activity gets aborted (for example, because the workflow gets restarted or the ‘Apply Jump-To Option’ is used to change the workflow to another activity), a user task gets the state `Aborted`. After execution of the state-change microflow, the user task instance is deleted. |
-| `Failed`     | When user targeting fails, or the on-create microflow or on-state-change microflow fails, the user task gets the state `Failed`. This state also triggers an on-state-change microflow. <br><br>From Mendix 9.24 onwards user tasks are deleted after becoming `Failed`.                                                       |
+| State      | Description                                                  |
+| ---------- | ------------------------------------------------------------ |
+| Created    | This is the initial state after creation. User tasks have this state until users have been targeted and the on-created event microflow (when specified) has been successfully completed. User tasks in this state are not visible in the Task Inbox yet. |
+| InProgress | User tasks in this state are visible in the Task Inbox of targeted or assigned users and can be completed. |
+| Paused     | When a workflow instance is paused, the user tasks of the workflow instance are also paused. The user tasks are not visible in the Task Inbox. |
+| Completed  | When a user task is completed, it gets the **Completed** state. After execution of the state-change microflow, this user task instance is deleted. |
+| Aborted    | When a workflow gets aborted or a user task activity gets aborted (for example, because the workflow gets restarted or the **Apply jump-to option** is used to change the workflow to another activity), a user task gets the **Aborted** state. After execution of the state-change microflow, the user task instance is deleted. |
+| Failed     | When user targeting fails or the on-create microflow or on-state-change microflow fails, the user task gets the **Failed** state. This state also triggers an on-state-change microflow. |
 
-Note that when the workflow instance becomes incompatible, this does not affect user task states (although the user tasks will disappear from the Task Inbox until the workflow instance is fixed).
+{{% alert color="info" %}}
 
-Note that when no user task state change microflow is configured, the user task instance is deleted as soon as the `Completed` or `Aborted` state is reached (and also `Failed` state in versions below Studio Pro 9.24).
+When the workflow instance becomes incompatible, this does not affect user task states (although the user tasks will disappear from the Task Inbox until the workflow instance is fixed).
 
-Note that there will be no user task state change microflow executed for the `Created` state. It will only be executed for all other state changes.
+When no user task state change microflow is configured, the user task instance is deleted as soon as the **Completed** or **Aborted** state is reached.
 
-**Mitigation options for failed user tasks**
-The most common reason for a user task to fail is because the user targeting resulted in no users. In Studio Pro 9.24 and above the way to handle those user tasks has changed. As user task instances are no longer deleted when they are failed they can be corrected and then retried by retrying the workflow. A failing user targeting can be corrected by adding users to the **System.WorkflowUserTask_TargetUsers** association. In Workflow Commons this is implemented in the Admin Dashboard section by an ability for app administrators to assign users to a user task.
-Upon retry, the workflow engine will recognize that the user task has targeted users and will continue to execute the workflow from that point.
+There will be no user task state change microflow executed for the **Created** state. It will only be executed for all other state changes.
 
-Another solution may be to use a microflow for user targeting. In case no users are returned from the user targeting query, then you can decide to select some known, fixed user (for example, an administrator, to ensure at least one user is targeted). This way, that user gets targeted and the workflow will suspend execution waiting till that user completes the user task. The administrator can then manually re-target the user task to correct the user task and allow the user task to continue automatically. Alternatively, it is also possible to target a user which can handle the user task in absence of the intended targeted users of course (without re-targeting the user task).
+{{% /alert %}}
 
-Other reasons for the user task to fail are failures during execution of the on-create microflow or during execution of the State Change microflow. Depending on the error description the administrator may be able to fix the cause and retry the workflow.
+#### 4.2 Mitigation Options for Failed User Tasks
 
-It’s advised to not leave failed user tasks as failed in the system. Either fix the user tasks and retry the workflow or abort the workflow. This is important to prevent the **System.WorkflowUserTask** entity table from growing as it will slow down the Task Inbox.
+The most common reason for a user task to fail is because the user targeting resulted in no users. As user task instances are no longer deleted when they are failed they can be corrected and then retried by retrying the workflow. A failing user targeting can be corrected by adding users to the **System.WorkflowUserTask_TargetUsers** association. In Workflow Commons this is implemented in the Admin Dashboard where administrators to assign users to a user task.
+
+Upon retry, the Workflow Engine recognizes that the user task has targeted users and continues to execute the workflow from that point.
+
+Another solution may be to use a microflow for user targeting. In case no users are returned from the user targeting query, you can decide to select some known, fixed user (for example, an administrator, to ensure at least one user is targeted). This way, that user gets targeted and the workflow will suspend execution waiting till that user completes the user task. The administrator can then manually re-target the user task to correct the user task and allow the user task to continue automatically. Alternatively, it is also possible to target a user which can handle the user task in absence of the intended targeted users of course (without re-targeting the user task).
+
+Other reasons for the user task to fail are failures during execution of the on-create microflow or during execution of the **Change workflow state** microflow. Depending on the error description the administrator may be able to fix the cause and then retry the workflow.
+
+It is advised to not leave failed user tasks as failed in the system. Either fix the user tasks and retry the workflow or abort the workflow. This is important to prevent the **System.WorkflowUserTask** entity table from growing as it will slow down the Task Inbox.
 

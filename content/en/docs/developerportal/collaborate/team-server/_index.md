@@ -29,18 +29,23 @@ In the **Versioning with Git** section, Scrum Masters can migrate apps from SVN 
 
 The **Team Server URL** can be used to directly access your app content. On SVN you can see all the files and branches of your app. The URL can have the following form:
 
-* `https://teamserver.sprintr.com/<your AppID>/` if it is an SVN-enabled app
 * `https://git.api.mendix.com/<your AppID>.git` if it is a Git-enabled app
+* `https://teamserver.sprintr.com/<your AppID>/` if it is an SVN-enabled app that you access using your Mendix credentials
+
+    {{% alert color="info" %}}If you cannot use your Mendix credentials to access an SVN Team Server (for example, if your company has enabled [BYOIDP SSO](/developerportal/control-center/set-up-sso-byoidp/)), you cannot browse your SVN repository online.<br/><br/>You can still retrieve information from the SVN repository by making HTTP calls to `https://svn.home.mendix.com/<your AppID>/` and using basic authentication as described below.
+    {{% /alert %}}
+
+If you are connecting to Git, or connecting to SVN using a PAT, you need to create a PAT as described in the [Personal Access Tokens](/developerportal/community-tools/mendix-profile/#pat) section of *Mendix Profile*. The PAT must include the scope `mx:modelrepository:write`.
+
+When connecting, your username is your Mendix account username, and your password is the PAT you created. When connecting to Git, you can also use the word *pat* as your username.
 
 {{% alert color="info" %}}
 You may have to add the final slash (`/`) manually to follow the link. You may also be asked to re-enter your Mendix credentials. Single sign-on (SSO) is not yet implemented for the Team Server. 
-
-Connecting to Git is done via a personal access token (PAT). For information on how to create a PAT, see the [Personal Access Tokens](/developerportal/community-tools/mendix-profile/#pat) section of *Mendix Profile*.
-
-When connecting, your username is your Mendix account username, and your password is the personal access token you created. Alternatively, you can use the word *pat* as your username.
 {{% /alert %}}
 
-## 3 Revision History {#revision-history}
+### 3.1 Accessing 
+
+## 4 Revision History {#revision-history}
 
 For each revision, you can see the following information:
 
@@ -53,7 +58,7 @@ For each revision, you can see the following information:
 
 You can also access the revision history in Studio Pro. For more information, see the [History](/refguide/using-version-control-in-studio-pro/#history) section in *Using Version Control in Studio Pro*.
 
-## 4 Revision Details
+## 5 Revision Details
 
 When you click **Details** for a revision, you can see the stories related to that revision.
 
@@ -61,7 +66,7 @@ Related stories will only appear if you select them in the **Commit** dialog box
 
 {{< figure src="/attachments/developerportal/collaborate/team-server/commit-story.png" >}}
 
-## 5 Read More
+## 6 Read More
 
 * [Version Control FAQ](/refguide/version-control-faq/)
 * [App Roles](/developerportal/collaborate/app-roles/)

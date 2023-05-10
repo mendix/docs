@@ -132,34 +132,38 @@ The entities in the table below describe all generalizations. These are (re-)use
 
 An enumeration is a predefined list of values that can be used as an attribute type.
 
-#### 4.3.1 `QualityFilter`
+#### 4.3.1 QualityFilter
+
+This enumeration specifies how much filtering is applied, for example, to identify faces. If the quality filter is applied, then low-quality results are filtered out.
+
+| **Name** | **Caption** | **Description** |
+| --- | --- | --- |
+| `NONE` | NONE | No quality filtering is applied. |
+| `AUTO` | AUTO | Amazon Rekognition automatically selects the level of quality filtering that is applied. |
+| `LOW` | LOW | A low level of quality filtering is applied. |
+| `MEDIUM` | MEDIUM | A medium level of quality filtering is applied. |
+| `HIGH` | HIGH | A high level of quality filtering is applied. |
+
+#### 3.3.2 AWS_Region {#aws_region}
+
+This enumeration provides a list of available AWS regions.
 
 | **Name** | **Caption** |
 | --- | --- |
-| `NONE` | NONE |
-| `AUTO` | AUTO |
-| `LOW` | LOW |
-| `MEDIUM` | MEDIUM |
-| `HIGH` | HIGH |
-
-#### 3.3.2 `AWS_Region` {#aws_region}
-
-| **Name** | **Caption** |
-| --- | --- |
-| `us_east_2` | us-east-2 |
-| `us_east_1` | us-east-1 |
-| `us_west_1` | us-west-1 |
-| `us_west_2` | us-west-2 |
-| `ap_south_1` | ap-south-1 |
-| `ap_northeast_2` | ap-northeast-2 |
-| `ap_southeast_1` | ap-southeast-1 |
-| `ap_southeast_2` | ap-southeast-2 |
-| `ap_northeast_1` | ap-northeast-1 |
-| `ca_central_1` | ca-central-1 |
-| `eu_central_1` | eu-central-1 |
-| `eu_west_1` | eu-west-1 |
-| `eu_west_2` | eu-west-2 |
-| `us_gov_west_1` | us-gov-west-1 |
+| `us_east_2` | **us-east-2** |
+| `us_east_1` | **us-east-1** |
+| `us_west_1` | **us-west-1** |
+| `us_west_2` | **us-west-2** |
+| `ap_south_1` | **ap-south-1** |
+| `ap_northeast_2` | **ap-northeast-2** |
+| `ap_southeast_1` | **ap-southeast-1** |
+| `ap_southeast_2` | **ap-southeast-2** |
+| `ap_northeast_1` | **ap-northeast-1** |
+| `ca_central_1` | **ca-central-1** |
+| `eu_central_1` | **eu-central-1** |
+| `eu_west_1` | **eu-west-1** |
+| `eu_west_2` | **eu-west-2** |
+| `us_gov_west_1` | **us-gov-west-1** |
 
 ### 4.4 Activities {#activities}
 

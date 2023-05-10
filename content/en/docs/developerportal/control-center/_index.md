@@ -348,7 +348,7 @@ In the list, you can see the following items:
 * **Managers** – This shows the number of Portfolio Managers in this portfolio.
 * **Members** – This shows the number of users who have access to this portfolio.
 *  **Privacy** – This shows the current privacy settings of the portfolio.
-    
+   
     * **Private** –  A private portfolio is not discoverable in the **Company Portfolios** section of the [Portfolio Landscape Overview](/developerportal/portfolio-management/#portfolio-landscape) page in the Portfolio Management app. People who want to access a private portfolio need an invitation.
     * **Restricted** – A restricted portfolio is discoverable in the **Company Portfolios** section of the [Portfolio Landscape Overview](/developerportal/portfolio-management/#portfolio-landscape) page in the Portfolio Management app. People who want to access a restricted portfolio need an invitation.
   
@@ -418,8 +418,8 @@ In the list, you can see the following items:
 * **Members** – This shows the number of users who have access to the portfolio.
 
 * **Privacy** – This shows the current privacy settings of the portfolio.
-  * **Private** –  A private portfolio is not discoverable in the **Company Portfolios** section in the [Portfolio Landscape Overview](/developerportal/portfolio-management/#portfolio-landscape) page of the Portfolio Management app. People who want to access a private portfolio need an invitation.
-  * **Restricted** – A restricted portfolio is discoverable in the **Company Portfolios** section in the [Portfolio Landscape Overview](/developerportal/portfolio-management/#portfolio-landscape) page of the Portfolio Management app. People who want to access a restricted portfolio need an invitation.
+  * **Private** –  A private portfolio is not discoverable in the **Company Portfolios** section of the [Portfolio Landscape Overview](/developerportal/portfolio-management/#portfolio-landscape) page in the Portfolio Management app. People who want to access a private portfolio need an invitation.
+  * **Restricted** – A restricted portfolio is discoverable in the **Company Portfolios** section of the [Portfolio Landscape Overview](/developerportal/portfolio-management/#portfolio-landscape) page in the Portfolio Management app. People who want to access a restricted portfolio need an invitation.
 
 * **Created** – This shows the date on which the portfolio was created.
 * **Last Modified** – This shows the date on which the portfolio was last modified.

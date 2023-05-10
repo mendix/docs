@@ -259,8 +259,8 @@ Here, you can select your AUT and Selenium hub for ATS to use.
 | Field | Description |
 | --- | --- |
 | **Application** | Select the app you want to test. |
-| **Selenium Hub** | Select the Selenium Hub you want to use to execute the test case. |
-| **Browser** | Select the browser that the Selenium Hub uses to execute the test case. Please note that these are the supported browsers. |
+| **Selenium Hub** | Select the Selenium hub you want to use to execute the test case. |
+| **Browser** | Select the browser that the Selenium hub uses to execute the test case. Please note that these are the supported browsers. |
 
 Now click **Run** again in the upper-right corner to execute the test case against the provided parameters. For more information on the run configuration, see [Run Configuration](/addons/ats-addon/rg-one-test-run/).
 

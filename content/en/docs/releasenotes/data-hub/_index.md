@@ -15,7 +15,7 @@ These release notes cover changes made to the [Mendix Data Hub Catalog](/data-hu
 
 #### Improvements
 
-* We made the authentication details on the [data source details](/data-hub/data-hub-catalog/search/#service-details) page more user-friendly.
+* We made the authentication details on the [data source details](/data-hub/data-hub-catalog/search/#service-details) page more user friendly.
 
 #### Fixes
 

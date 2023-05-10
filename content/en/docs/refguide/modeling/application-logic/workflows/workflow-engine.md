@@ -13,7 +13,7 @@ The Workflow Engine is the Runtime engine to execute workflows. This document de
 
 In the domain model of the System module, there are several workflow engine-related entities:
 
-![](https://paper-attachments.dropboxusercontent.com/s_F9C0B36CF51B2FD27B415E2407CD6E6F45530165C305D7F61AAEEBF12F367F4E_1674562244773_Pasted_Image_24_01_2023__13_10.png)
+{{< figure src="/attachments/refguide/modeling/application-logic/workflows/workflow-engine/workflow-data.png" >}}
 
 
 These entities are populated by the Workflow Engine, some on the start of the app, others – while running workflows. The entities can be divided into the following groups:
@@ -143,7 +143,7 @@ The [Jump activity](/refguide/jump-activity/) allows the workflow to jump to ano
 The workflow states are stored in the **State** attribute of the **System.Workflow** entity. This attribute uses the System.WorkflowState enumeration to have a fixed set of states. These states represent different technical states a workflow instance can have. 
 In the picture below, you see two yellow boxes with outgoing and incoming arrows. The yellow boxes are not concrete states, they mean that any state inside the box can transition following the outgoing arrow and can transition back into the previous state by following the incoming arrow.
 
-![Workflow instance State Diagram](https://paper-attachments.dropboxusercontent.com/s_F9C0B36CF51B2FD27B415E2407CD6E6F45530165C305D7F61AAEEBF12F367F4E_1678115723459_Workflow+states.svg)
+{{< figure src="/attachments/refguide/modeling/application-logic/workflows/workflow-engine/workflow-states.png" >}}
 
 
 In the table below, you can find description of these states and allowed actions for each state:
@@ -179,7 +179,7 @@ The **Show user task page** microflow activity can be used to open the user task
 #### 4.2 User Task States
 The user task states are stored in the **State** attribute of the **System.WorkflowUserTask** entity. This attribute uses the System.WorkflowUserTaskState enumeration to have a fixed set of states. These states represent the different technical states a user task can have. 
 
-![User Task State Diagram](https://paper-attachments.dropboxusercontent.com/s_F9C0B36CF51B2FD27B415E2407CD6E6F45530165C305D7F61AAEEBF12F367F4E_1678117694371_User+Task+State+Diagram-2.svg)
+{{< figure src="/attachments/refguide/modeling/application-logic/workflows/workflow-engine/user-task-states.png" >}}
 
 
 Note the following: 

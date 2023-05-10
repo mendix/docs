@@ -245,9 +245,10 @@ The list contains the following information:
 
 * **Project name** – Clicking this opens a [side pane](#view-project) that shows project details.
 * **Department** – This shows the department to which the project belongs.
-* **Stage** – This shows the stage the project is currently in.
+*  **Stage** – This shows the stage the project is currently in.
+   
+    {{% alert type="info" %}}A Portfolio Manager can set up custom stages for projects on the [Portfolio Settings](#portfolio-settings) page.{{% /alert %}}
     
-    * A Portfolio Manager can set up custom stages for projects on the [Portfolio Settings](#portfolio-settings) page.
 * **Intake** – This shows the time when the project is accepted based on business requirements.
 * **Start Date** – This shows the time when the first actions are taken to start implementation.
 * **Go-Live Date** – This shows the time when the app is expected to be up and running.

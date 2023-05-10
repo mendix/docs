@@ -196,8 +196,8 @@ The Amazon `DetectCustomLabels` service detects custom labels in a supplied imag
 The input and output for this service are shown in the table below:
 
 | Input | Output |
-| --- |
-| - `MinConfidence` (Integer/Long)<br />- `MaxResults` (Integer/Long)<br />- `ProjectARN` (String)<br />- `Image` (Image) | \- Custom label |
+| --- | --- |
+| `MinConfidence` (Integer/Long); `MaxResults` (Integer/Long); `ProjectARN` (String); `Image` (Image) | Custom label |
 
 This activity returns a list of `DetectCustomLabels` objects and associated objects as shown in the table below:
 

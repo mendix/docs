@@ -197,7 +197,7 @@ The input and output for this service are shown in the table below:
 
 | Input | Output |
 | --- | --- |
-| `MinConfidence` (Integer/Long); `MaxResults` (Integer/Long); `ProjectARN` (String); `Image` (Image) | Custom label |
+| `MinConfidence` (Integer/Long, value should be between 0 and 100); `MaxResults` (Integer/Long, minimum value of 0); `ProjectARN` (String); `Image` (Image) | Custom label |
 
 This activity returns a list of `DetectCustomLabels` objects and associated objects as shown in the table below:
 
@@ -266,7 +266,7 @@ The input and output for this service are shown in the table below:
 
 | Input | Output |
 | --- | --- |
-| `MinConfidence` (Integer/Long); `Image` (Image) | An array or object of detected moderation label(s) |
+| `MinConfidence` (Integer/Long, value should be between 0 and 100); `Image` (Image) | An array or object of detected moderation label(s) |
 
 This activity returns a list of `DetectModerationLabels` objects and associated objects as shown in the table below:
 
@@ -285,7 +285,7 @@ The input and output for this service are shown in the table below:
 
 | Input | Output |
 | --- | --- |
-| `MinConfidence` (Integer/Long); `MaxLabels` (Integer/Long); `Image` (Image) | An array or object of detected label(s) |
+| `MinConfidence` (Integer/Long, value should be between 0 and 100); `MaxLabels` (Integer/Long, minimum value of 0); `Image` (Image) | An array or object of detected label(s) |
 
 This activity returns a list of `DetectLabels` objects with associated objects as shown in the table below:
 

@@ -277,7 +277,7 @@ Assume that the operator is running in the namespace `<operator-ns>`.
 
 ### 7.1 Storing Operator User Credentials and Configuring the Mendix Operator
 
-The credentials you have created for an operator or admin type user need to be stored in the repository. You also need to patch the Mendix Operator with the location of pclm server and credentials for accessing the PCLM server. To do this, you can use the below mx-pclm-cli command:
+The credentials you have created for an operator or admin type user need to be stored in the repository. You also need to patch the Mendix Operator and Agent with the location of the PCLM server, and the credentials for accessing the PCLM server. To do this, you can use the below mx-pclm-cli command:
    
 ```bash {linenos=false}
 mx-pclm-cli config-namespace -n <operator-ns> \
@@ -293,9 +293,9 @@ kind: Secret
 type: Opaque
 metadata:
   name: <secret-name>
-stringData:
-  username: <username>
-  password: <password>
+data:
+  username: <base64-encoded username>
+  password: <base64-encoded password>
 ```
 
 Where:
@@ -428,6 +428,8 @@ Once you have configured the Mendix Operator running in a specific `<namespace>`
 ```bash {linenos=false}
 kubectl -n <namespace> scale deployment mendix-operator --replicas=0
 kubectl -n <namespace> scale deployment mendix-operator --replicas=1
+kubectl -n <namespace> scale deployment mendix-agent --replicas=0
+kubectl -n <namespace> scale deployment mendix-agent --replicas=1
 ```
 
 This restarts the Mendix Operator, and associated Mendix App Runtimes, and configures both with licenses fetched from the PCLM server.

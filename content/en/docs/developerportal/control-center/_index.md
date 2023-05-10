@@ -326,7 +326,7 @@ The list has the following columns:
 
 ## 15 Portfolios
 
-The **Portfolios** page offers the governance features for [portfolio management](/developerportal/portfolio-management/) in your company. You can have an overview of all portfolios in your company, manage portfolio access, delete portfolios, reject or approve requests for privacy setting changes. 
+The **Portfolios** page offers governance features for [portfolio management](/developerportal/portfolio-management/) in your company. You can have an overview of all portfolios in your company, manage portfolio access, delete portfolios, reject or approve requests for changes of portfolio privacy settings. 
 
 The **Portfolios** page contains three tabs: [All Portfolios](#all-portfolios), [Alerts](#alerts), and [Privacy Requests](#privacy-requests).
 
@@ -347,11 +347,13 @@ In the list, you can see the following items:
 * **Portfolio Name** – This is the name of the portfolio. Clicking the name opens a pop-up window that shows the general information of the portfolio and the list of the Portfolio Managers.
 * **Managers** – This shows the number of Portfolio Managers in this portfolio.
 * **Members** – This shows the number of users who have access to this portfolio.
-* **Privacy** – This shows the current privacy settings of the portfolio.
-  * **Private** –  A private portfolio is not discoverable in the **Company Portfolios** section in the [Portfolio Landscape Overview](/developerportal/portfolio-management/#portfolio-landscape) page of the Portfolio Management app. People who want to access a private portfolio need an invitation.
-  * **Restricted** – A restricted portfolio is discoverable in the **Company Portfolios** section in the [Portfolio Landscape Overview](/developerportal/portfolio-management/#portfolio-landscape) page of the Portfolio Management app. People who want to access a restricted portfolio need an invitation.
+*  **Privacy** – This shows the current privacy settings of the portfolio.
+    
+    * **Private** –  A private portfolio is not discoverable in the **Company Portfolios** section of the [Portfolio Landscape Overview](/developerportal/portfolio-management/#portfolio-landscape) page in the Portfolio Management app. People who want to access a private portfolio need an invitation.
+    * **Restricted** – A restricted portfolio is discoverable in the **Company Portfolios** section of the [Portfolio Landscape Overview](/developerportal/portfolio-management/#portfolio-landscape) page in the Portfolio Management app. People who want to access a restricted portfolio need an invitation.
   
 * **Created** – This shows the date on which the portfolio was created.
+
 * **Last Modified** – This shows the date on which the portfolio was last modified.
 
 * Ellipsis (**...**) – Clicking the button opens a menu with the following items:
@@ -360,17 +362,21 @@ In the list, you can see the following items:
 
   * **Delete** – Selecting this allows you to [delete the portfolio](#delete-portfolio) permanently together with all the data in the portfolio.
 
-If a portfolio has an alert icon (**⚠**), that means it no longer has a Portfolio Manager. You can assign a Portfolio Manager or delete the portfolio. All the portfolios that no longer have a Portfolio Manager are also listed on the [Alerts](#alerts) tab.
+{{% alert color="info" %}}
+
+If a portfolio has an alert icon (**⚠**), that means it no longer has a Portfolio Manager. You can assign new Portfolio Managers to the portfolio or delete the portfolio. All the portfolios that no longer have a Portfolio Manager are also listed on the [Alerts](#alerts) tab.
+
+{{% /alert %}}
 
 #### 15.1.1 Access Management {#access-management}
 
 After you click the ellipsis button (**...**) in the list on the [All Portfolios](#all-portfolios) tab or the [Alerts](#alerts) tab, you can choose **Access Management** to open the **Access Management** page.
 
-In the search box, you can search for a user by the user name, email, company, status or role.
+In the search box, you can search for a user by the user name, email, company, status, or role.
 
 The **Add Users** button on the upper-right corner allows you to invite new users to the portfolio using their email addresses.
 
-The list shows all users who have access to the portfolio and any pending portfolio invites. In the list, you can see the following items:
+The list shows all users who have access to the portfolio as well as the pending portfolio invitations. In the list, you can see the following items:
 
 {{% todo %}}Check the column name against the finalized UI{{% /todo %}}
 
@@ -395,7 +401,7 @@ Deleting a portfolio means that you permanently delete the portfolio, including 
 
 {{% /alert %}}
 
-The **Delete Portfolio** dialog box opens. If you decide to continue, type **DELETE** in the text box, and click **Delete**.
+The **Delete Portfolio** dialog box opens. If you decide to continue, type *DELETE* in the text box, and click **Delete**.
 
 ### 15.2 Alerts {#alerts}
 
@@ -432,14 +438,14 @@ On the **Privacy Requests** tab, you can view all the pending requests. You can 
 
 - **Portfolio Name** – This shows the name of the portfolio.
 - **Requested By** – This shows the name of the user who made the request.
-- **From** – This shows current privacy settings.
+- **From** – This shows the current privacy settings.
 - **To** – This shows the new privacy settings that are being requested.
 - **Date** – This shows the date on which the request was made.
-- **Reject** – Clicking this rejects the request. When you reject a request, optionally you can fill in a reason to inform the person who made the request.
+- **Reject** – Clicking this rejects the request. When you reject a request, optionally you can fill in a reason to inform the requester.
 - **Approve** – Clicking this approves the request.
 
 {{% alert color="info" %}}
-After a request is either rejected or approved, a notification is sent to the person who made the request. If the Mendix Admin fills in the reason for the rejection, the reason is also shown to the requester.
+After a request is either rejected or approved, a notification is sent to the requester. If the Mendix Admin fills in the reason for the rejection, the reason is also shown to the requester.
 {{% /alert %}}
 
 ## 16 Documents in This Category

@@ -69,7 +69,7 @@ The [layout](/refguide/layout/) on which this page is based.
 
 #### 2.4.4 Title {#title}
 
-The title of the page that is shown using the [page title widget](/refguide/page-title/). If the page is shown in a pop-up window, the title appears in the title bar of the pop-up. 
+The title of the page that is shown using the [page title widget](/refguide/page-title/). If the page is shown in a pop-up window, the title appears in the title bar of the pop-up.
 
 The title can be overridden. For example, the [Create button](/refguide/control-bar/) and the [Edit button](/refguide/control-bar/) of a data grid can refer to the same page, but they override the titles to **New** and **Edit**, respectively.
 
@@ -77,17 +77,19 @@ The title can be overridden. For example, the [Create button](/refguide/control-
 
 The URL of the page can be used to directly navigate to the page (for example, from external links or bookmarks). It will be shown in the address bar of the browser when you visit the page. When navigating to a page without a URL configured, the last visited URL is shown. Note that the full URL of the page will be the base URL of your application followed by `/p` and then by the configured URL of the page (for example, `http://example.mendixcloud.com/p/home_page`).
 
-Pages with a parameter can also have URLs. The URL property of such pages should contain the `{Id}` path segment at the end. In the browser, the `{Id}` segment will be replaced with the actual identifier of an entity.
+Pages with parameters can also have URLs. For those pages all page parameters should be present in the URL. This is done by defining which attribute of each page parameter should be used in the URL. The syntax for this is the name of the page parameter followed by a `/` and then the name of the attribute that should be used, placed between curly brackets. For example, in the URL `/product/{Product/Name}` the `Name` attribute of the page parameter `Product` will be used in the URL. Any attribute of type `Boolean`, `Decimal`, `Enumeration`, `Integer`, `Long` or `String` can be used in the URL. Next to this `Id` can be used as an attribute to include the identifier of the entitiy in the URL, for example: `/product/{Product/Id}`.
 
 {{% alert color="warning" %}}
-Page URLs are not supported for pages with multiple parameters.
+Page URLs are not supported for pages with NPE parameters
 {{%/alert %}}
 
 In simple e-commerce applications, the URLs can be configured as follows:
 
-* */orders/* – the URL for a page with a data grid for `Orders` (in a browser, the URL will look like `http://example.mendixcloud.com/p/orders/`)
+- _/orders/_ – the URL for a page with a data grid for `Orders` (in a browser, the URL will look like `http://example.mendixcloud.com/p/orders/`)
 
-* */order/{Id}* – the URL for a page with data from a particular `Order` (in a browser, the URL will look like `http://example.mendixcloud.com/p/order/3212449487634321`, wherein `3212449487634321` is the unique identifier of the `Order`)
+- _/order/{Order/Id}_ – the URL for a page with data from a particular `Order` (in a browser, the URL will look like `http://example.mendixcloud.com/p/order/3212449487634321`, wherein `3212449487634321` is the unique identifier of the `Order`)
+
+- _/category/{Category/Code}/product/{Product/Name}_ - the URL for a page that shows a product and a category (in a browser, the URL will look like `http://example.mendixcloud.com/p/category/tools/product/hammer` wherein `tools` is used to retrieve the `Category` by its `Code` and `hammer` is used to retrieve the `Product` by its `Name`)
 
 ### 2.5 Navigation Section {#navigation}
 
@@ -121,7 +123,7 @@ Default: *Yes*
 
 #### 2.6.4 Close Action
 
-Configures the behavior of a button that closes the pop-up page. The default behavior of the pop-up close button is to rollback any changes and close the pop-up window. 
+Configures the behavior of a button that closes the pop-up page. The default behavior of the pop-up close button is to rollback any changes and close the pop-up window.
 
 If you want to customize the behavior of the pop-up close button, you can point to a button on the page. When the pop-up close button is clicked, it will then act as if the selected button is clicked. If the selected button is not available the pop-up close button will revert back to the default behavior.
 

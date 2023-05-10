@@ -39,7 +39,7 @@ On the **Portfolio Landscape Overview** page, you can create a new portfolio as 
 
     * **Restricted** – If a portfolio is restricted, it is discoverable in the **Company Portfolios** section of the [Portfolio Landscape Overview](#portfolio-landscape) page in the Portfolio Management app. People who want to access a private portfolio need an invitation.
 
-     {{% alert color="info" %}}If the [Admins curate the restricted portfolios](/developerportal/control-center/#privacy-requests) toggle is turned on in the Control Center, a Mendix Admin needs to approve if you want to create a restricted portfolio. In that case, a Mendix Admin will receive a notification about your request and can approve or reject your request from the [Control Center](#developerportal-control-center/#privacy-requests). The **Private Settings** of the portfolio will be **Private** until a Mendix Admin approves your request.{{% /alert %}}
+     {{% alert color="info" %}}If the [Admins curate the restricted portfolios](/developerportal/control-center/#privacy-requests) toggle is turned on in the Control Center, a Mendix Admin needs to approve the creation of a restricted portfolio. In that case, a Mendix Admin will receive a notification about your request and can approve or reject your request from the [Control Center](#developerportal-control-center/#privacy-requests). The **Private Settings** of the portfolio will be **Private** until a Mendix Admin approves your request.{{% /alert %}}
 
 4. For **Prioritization Model**, select [WSJF Prioritization](/developerportal/portfolio-management/#wsjf) or [RICE Prioritization](/developerportal/portfolio-management/#rice).
 5. From the **Currency** drop-down list, select the default currency for this portfolio.
@@ -64,7 +64,7 @@ These pages are described in the sections below.
 
 ## 3 Projects Overview {#projects-overview}
 
-In the Portfolio Management app, the term "Project" represents a business objective or strategic goal, and could span across multiple apps. A project can be related to  multiple apps or just one small part of a big app. For progress tracking, we recommend you to break down an app into smaller projects whenever possible.
+In the Portfolio Management app, the term "Project" represents a business objective or strategic goal, and could span across multiple apps. A project can be related to multiple apps or just one small part of a big app. For progress tracking, we recommend you to break down an app into smaller projects whenever possible.
 
 The **Projects Overview** page gives an overview of all the projects in this portfolio.
 
@@ -243,16 +243,17 @@ In the list view, projects are shown in a list.  Clicking the header of a column
 
 The list contains the following information:
 
-* **Project name** – clicking this opens a [side pane](#view-project) that shows project details
-* **Department** – the department to which the project belongs
-* **Stage** – the stage the project is currently in
-    * A Portfolio Manager can set up custom stages for projects on the [Portfolio Settings](#portfolio-settings) page
-* **Intake** – the time when the project is accepted based on business requirements
-* **Start Date** – the time when the first actions are taken to start implementation
-* **Go-Live Date** – the time when the app is expected to be up and running
-* **Linked App** – clicking this shows the information about the Mendix app linked with the project
-* **Owner** –  shows the name of the project owner
-* Ellipsis (**...**) – clicking this button opens a menu that enables you to [edit](#edit-delete-project), [archive](#archive-project), or [delete](#edit-delete-project) the project
+* **Project name** – Clicking this opens a [side pane](#view-project) that shows project details.
+* **Department** – This shows the department to which the project belongs.
+* **Stage** – This shows the stage the project is currently in.
+    
+    * A Portfolio Manager can set up custom stages for projects on the [Portfolio Settings](#portfolio-settings) page.
+* **Intake** – This shows the time when the project is accepted based on business requirements.
+* **Start Date** – This shows the time when the first actions are taken to start implementation.
+* **Go-Live Date** – This shows the time when the app is expected to be up and running.
+* **Linked App** – Clicking this shows the information about the Mendix app linked with the project.
+* **Owner** –  This shows the name of the project owner.
+* Ellipsis (**...**) – Clicking this button opens a menu that enables you to [edit](#edit-delete-project), [archive](#archive-project), or [delete](#edit-delete-project) the project.
   
     {{% alert type="info" %}}Both Portfolio Managers and Contributors can edit, archive, or delete a project. Only Viewers cannot do these actions. For more information on roles and permissions, see [Access Management](#access-management).{{% /alert %}}
 
@@ -311,7 +312,7 @@ The list contains the following information:
 
 On the **Projects Overview** page, if you click a project, a side pane opens on the right side to show project details.
 
-On the upper-right corner of the pane, there is a link icon and an ellipsis button (**…**). Clicking the link icon copies the link to the project. Clicking the ellipsis button opens a menu that allows you to [edit](#edit-delete-project), [archive](#archive-project), or [delete](#edit-delete-project) the project.
+On the upper-right corner of the pane, there is a link button and an ellipsis button (**…**). Clicking the link button copies the link to the project. Clicking the ellipsis button opens a menu that allows you to [edit](#edit-delete-project), [archive](#archive-project), or [delete](#edit-delete-project) the project.
 
 {{% alert type="info" %}}
 
@@ -464,7 +465,7 @@ On the **Portfolio Settings** page, Portfolio Managers can change the following 
 
     {{% alert color="info" %}}If the [Admins curate the restricted portfolios](/developerportal/control-center/#privacy-requests) toggle is turned on in the Control Center, a Mendix Admin needs to approve any change of **Privacy Settings**. In that case, a Mendix Admin will receive a notification about your change request and can approve or reject your request from the Control Center. You can cancel a pending request by clicking **Cancel Request**.{{% /alert %}}
 
-* **Stages**  – Click the **^** icon or the **v** icon to move a stage upwards or downwards.
+* **Stages**  – Click the **^** button or the **v** button to move a stage upwards or downwards.
 
     {{< figure src="/attachments/developerportal/portfolio-management/move-upwards-downwards.png" >}}
 

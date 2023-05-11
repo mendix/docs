@@ -136,23 +136,27 @@ After you configure the authentication profile for AWS IoT TwinMaker, you can im
     * **Type** - **List**
     * **Entity** - **{module name}.MyWorkspace**
     * **Return value** - *$MyWorkspaceList*
-44. In the **App Explorer**, right-click on the name of your module, and then click **Add page**.
-45. In the **Lists** category, select the **List** template for the page.
-46. Enter a name for your page, for example, *Workspaces_Overview*, and then click **OK**.
-47. On the page, double-click the **List view** widget.
-48. In the **Select Data Source** dialog, set the **Type** to **Microflow**.
-49. In the **Microflow** field, select the **DS_ListWorkspaces** microflow.
-50. Click **OK**, and then click **Yes**.
-51. In the **Properties** pane for the page, in the **Navigation** > **Visible for** section, select a user role that should be allowed to run the microflow.
-52. In the **App Explorer**, double-click the **Navigation** for your app.
-53. In the **Menu** section, click **New Item**.
-54. In the **New Menu Item** dialog, configure the following settings:
-    * **Caption** - A caption for the navigation item, for example, *Workspace*
-    * **Icon** - An icon that will be displayed for this page in the navigation for your app
-    * **On click** - **Show a page**
-    * **Page** - Your **Table_Overview** page
-55. Click **OK**.
-56. Click the **Run locally** icon to preview your app and validate your results. AWS IoT TwinMaker will return the workspaces it finds (by default 25, but you can increase it up to 250 workspaces by using the `MaxResults` attribute). For more information, see [Studio Pro Overview: Run and View App](/refguide/studio-pro-overview/#menus).
+
+    {{< figure src="/attachments/appstore/connectors/aws-iot-twinmaker/fullmicroflow.png" alt="The complete microflow">}}
+
+44. Provide a way for users of your app to trigger the microflow by doing the following steps:
+    1. In the **App Explorer**, right-click on the name of your module, and then click **Add page**.
+    2. In the **Lists** category, select the **List** template for the page.
+    3. Enter a name for your page, for example, *Workspaces_Overview*, and then click **OK**.
+    4. On the page, double-click the **List view** widget.
+    5. In the **Select Data Source** dialog, set the **Type** to **Microflow**.
+    6. In the **Microflow** field, select the **DS_ListWorkspaces** microflow.
+    7. Click **OK**, and then click **Yes**.
+    8. In the **Properties** pane for the page, in the **Navigation** > **Visible for** section, select a user role that should be allowed to run the microflow.
+    9. In the **App Explorer**, double-click the **Navigation** for your app.
+    10. In the **Menu** section, click **New Item**.
+    11. In the **New Menu Item** dialog, configure the following settings:
+        * **Caption** - A caption for the navigation item, for example, *Workspace*
+        * **Icon** - An icon that will be displayed for this page in the navigation for your app
+        * **On click** - **Show a page**
+        * **Page** - Your **Table_Overview** page
+    12. Click **OK**.
+45. Click the **Run locally** icon to preview your app and validate your results. AWS IoT TwinMaker will return the workspaces it finds (by default 25, but you can increase it up to 250 workspaces by using the `MaxResults` attribute). For more information, see [Studio Pro Overview: Run and View App](/refguide/studio-pro-overview/#menus).
 
 ## 4 Technical Reference
 

@@ -405,7 +405,7 @@ Gradle can handle managing Java dependencies and running [JUnit](http://junit.or
 
 #### 6.2.2 Using the Java Unit Test Reference
 
-Mendix apps need `Core` classes, and the [Core API](https://apidocs.rnd.mendix.com/9/runtime/com/mendix/core/Core.html) allows you to do things that you usually do in a microflow, like committing an object. `CoreProxy` serves as a mockable layer between your Java logic and the `Core` API. 
+Mendix apps need `Core` classes, and the **Class Core** [Runtime API](/apidocs-mxsdk/apidocs/runtime-api/) allows you to do things that you usually do in a microflow, like committing an object. `CoreProxy` serves as a mockable layer between your Java logic and the **Core** API. 
 
 Our [Java unit test reference](https://Github.com/mendixlabs/javaunittestreference) is available to help you through this process. `MendixUnitTestBase.java` is extendable and reusable for your own purposes. When extended, it enables Mockito on your test classes and mocks `Core` API behavior.  This does the following:
 

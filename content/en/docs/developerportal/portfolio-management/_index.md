@@ -39,7 +39,7 @@ On the **Portfolio Landscape Overview** page, you can create a new portfolio as 
 
     * **Restricted** – If a portfolio is restricted, it is discoverable in the **Company Portfolios** section of the [Portfolio Landscape Overview](#portfolio-landscape) page in the Portfolio Management app. People who want to access a private portfolio need an invitation.
 
-     {{% alert color="info" %}}If the [Admins curate the restricted portfolios](/developerportal/control-center/#privacy-requests) toggle is turned on in the Control Center, a Mendix Admin needs to approve the creation of a restricted portfolio. In that case, a Mendix Admin will receive a notification about your request and can approve or reject your request from the [Control Center](/developerportal/control-center/#privacy-requests). The **Private Settings** of the portfolio will be **Private** until a Mendix Admin approves your request.{{% /alert %}}
+     {{% alert color="info" %}}If the toggle on the [Privacy Requests](/developerportal/control-center/#privacy-requests) tab is turned on in the Control Center, a Mendix Admin needs to approve the creation of a restricted portfolio. In that case, a Mendix Admin will receive a notification about your request and can approve or reject your request from the [Control Center](/developerportal/control-center/#privacy-requests). The **Private Settings** of the portfolio will be **Private** until a Mendix Admin approves your request.{{% /alert %}}
 
 4. For **Prioritization Model**, select [WSJF Prioritization](/developerportal/portfolio-management/#wsjf) or [RICE Prioritization](/developerportal/portfolio-management/#rice).
 5. From the **Currency** drop-down list, select the default currency for this portfolio.
@@ -455,7 +455,7 @@ On the **Portfolio Settings** page, Portfolio Managers can change the following 
     * **Private** – A private portfolio is not discoverable in the **Company Portfolios** section of the [Portfolio Landscape Overview](#portfolio-landscape) page in the Portfolio Managent app. People who want to access a private portfolio need an invitation.
     * **Restricted** – A restricted portfolio is discoverable in the **Company Portfolios** section of the [Portfolio Landscape Overview](#portfolio-landscape) page in the Portfolio Management app. People who want to access a private portfolio need an invitation.
 
-    {{% alert color="info" %}}If the [Admins curate the restricted portfolios](/developerportal/control-center/#privacy-requests) toggle is turned on in the Control Center, a Mendix Admin needs to approve any change of **Privacy Settings**. In that case, a Mendix Admin will receive a notification about your change request and can approve or reject your request from the Control Center. You can cancel a pending request by clicking **Cancel Request**.{{% /alert %}}
+    {{% alert color="info" %}}If the toggle on the [Privacy Requests](/developerportal/control-center/#privacy-requests) tab is turned on in the Control Center, a Mendix Admin needs to approve any change of **Privacy Settings**. In that case, a Mendix Admin will receive a notification about your change request and can approve or reject your request from the Control Center. You can cancel a pending request by clicking **Cancel Request**.{{% /alert %}}
 
 *  **Stages** – Click the **^** button or the **v** button to move a stage upwards or downwards.
 

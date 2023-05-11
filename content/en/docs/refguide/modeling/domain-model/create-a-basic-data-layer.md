@@ -161,7 +161,7 @@ Based on the description above, you can divide your data into the following elem
 * Product
 * Order
 
-In the following sections, we explain how to represent the data you want to include in your app with entities and their attributes in the domain model and how you should set up the associations between the entities. 
+The following sections show how to represent the data you want to include in your app with entities and their attributes in the domain model and how you should set up the associations between the entities. 
 
 An example of the domain model for the online shopping app is shown below:
 
@@ -178,7 +178,7 @@ An example of the domain model for the online shopping app is shown below:
 * The product information should be divided into the following entities:
 
     * **Product** – general information about the product, such as its name, description, and price
-    * **Product_Image** – each product has an image, but you do not create it as an attribute. You need to create an entity that is a specialization of the **System.Image** entity to allow you to store images. For an example on how the **System.Image** entity is used for displaying images on a page, see [Image Uploader](/refguide/image-uploader/)
+    * **Product_Image** – each product has an image, but you do not create it as an attribute. You need to create an entity that is a specialization of the **System.Image** entity to allow you to store images. For an example on how to use the specialization of the **System.Image** entity to display images on a page, see [Image Uploader](/refguide/image-uploader/)
 
 * The order information should be divided into the following entities:
 

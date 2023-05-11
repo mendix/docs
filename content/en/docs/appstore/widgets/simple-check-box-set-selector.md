@@ -27,4 +27,4 @@ After importing the widget into your app, add it to a [data view](/refguide/data
 
 ## 3 Read More
 
-* [Simple Checkbox Set Selector](/addons/ats-addon/rg-one-simple-checkbox-set-selector/) for ATS in the *Quality Add-ons Guide*
+* [Simple Checkbox Set Selector](/appstore/supported-add-ons/ats/rg-one-simple-checkbox-set-selector/) for ATS in the *Quality Add-ons Guide*

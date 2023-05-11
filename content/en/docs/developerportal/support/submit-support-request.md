@@ -59,7 +59,7 @@ To submit a request with Mendix Support, follow these steps:
         {{% alert color="info" %}}This URL change will apply to *all* your environments for this app. For example, the production environment will be *something.mendixcloud.com* and the acceptance environment will be *something-accp.mendixcloud.com*.{{% /alert %}}
 
     * **Standard Change: Assign Mendix Admin** – make an existing Mendix user the [Mendix Admin](/developerportal/control-center/#company)
-    * **Standard Change: Request ATS License** – obtain a license to use ATS (for more information on this product, see [ATS](/addons/ats-addon/))
+    * **Standard Change: Request ATS License** – obtain a license to use ATS (for more information on this product, see [ATS](/appstore/supported-add-ons/ats/))
     * **Standard Change: Request APD License** – obtain a license to use APD (for more information on this product, see [APD](/appstore/modules/apd/))
     * **Standard Change: Reset Google authenticator** – reset the Google authenticator if you are using it for [2FA](/developerportal/deploy/two-factor-authentication/) (for example, when you get a new phone)
     * **Standard Change** – other changes which can be made on the platform, but for which you do not have access
@@ -71,7 +71,7 @@ To submit a request with Mendix Support, follow these steps:
         * **App - Development** – issues/questions regarding developing your app (for example, with your [domain model](/refguide/domain-model/), [widgets](/refguide/data-widgets/), or [logic](/refguide/application-logic/))
         * **App - Deployment** – issues/questions regarding deploying your app (for example, when the app cannot be [deployed](/developerportal/deploy/) or will not start)
         * **App - Operations** – issues/questions regarding running a deployed app (for example, when the app crashes or shows errors in the [log](/developerportal/operate/logs/))
-        * **App - Add-on** – issues/questions regarding one of the Mendix add-ons (such as [ATS](/addons/ats-addon/), [APD](/appstore/modules/apd/), or [AQM](/addons/aqm-addon/))
+        * **App - Add-on** – issues/questions regarding one of the Mendix add-ons (such as [ATS](/appstore/supported-add-ons/ats/), [APD](/appstore/modules/apd/), or [AQM](/addons/aqm-addon/))
         * **App - Security** - issues/questions regarding the security of your Mendix app
             Please read the section [Requirements for Security Support Tickets](#security-tickets) before raising an app security ticket. Following these guidelines ensures that your ticket can be progressed as efficiently as possible.
         * **App - Other** – any other issues/questions regarding your own app that you are developing on the Mendix Platform

@@ -40,4 +40,4 @@ To use this widget, place it in the context of an object that has a Boolean attr
 
 ## 4 Read More
 
-* [CAB.02 - Switch](/addons/ats-addon/ht-two-cab-02-switch/)
+* [CAB.02 - Switch](/appstore/supported-add-ons/ats/ht-two-cab-02-switch/)

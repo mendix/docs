@@ -20,7 +20,7 @@ This document teaches you how to do the following:
 
 Before you continue, you should first set up a test app, and populate it with test data. To do so, follow these steps:
 
-1. Create a [domain model](/refguide/create-a-basic-data-layer/) with the following entities:
+1. Create a [domain model](/refguide/configuring-a-domain-model/) with the following entities:
     * **Customer**
         | Attribute name | Attribute type |
         | --- | --- |

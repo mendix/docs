@@ -93,7 +93,7 @@ After you configure the authentication profile for Amazon Rekognition, you can i
 
 ## 4 Technical Reference
 
-To help you work with the Amazon DynamoDB connector, the following sections of this document list the available entities, enumerations, and activities that you can use in your application.
+To help you work with the Amazon DynamoDB connector, the following sections of this document list the available [constants](#constants), [entities](#domain-model), [enumerations](#enumerations), [activities](#activities), and [JavaScript actions](#js-actions) that you can use in your application.
 
 ### 4.1 Constants {#constants}
 
@@ -144,7 +144,7 @@ This enumeration specifies how much filtering is applied, for example, to identi
 | `MEDIUM` | MEDIUM | A medium level of quality filtering is applied. |
 | `HIGH` | HIGH | A high level of quality filtering is applied. |
 
-#### 3.3.2 AWS_Region {#aws_region}
+#### 4.3.2 AWS_Region {#aws_region}
 
 This enumeration provides a list of available AWS regions.
 
@@ -211,7 +211,7 @@ This activity returns a list of `DetectCustomLabels` objects and associated obje
 | `BoundingBoxDetectCustomLabel` | `AmazonRekognitionConnector.BoundingBox` | This entity contains the bounding box results for the `DetectCustomLabels` activity. It includes the left (x) coordinates, top (y) coordinates, and the image's width and height. It is a specialization of the `BoundingBox` generalization entity. |
 | `PolygonDetectCustomLabel` | `AmazonRekognitionConnector.Polygon` | This entity contains the polygon results for the `DetectCustomLabels` activity. It includes left (x) and top (y) coordinates. It is a specialization of the `Polygon` generalization entity. An array of `Point` objects, `Polygon`, is returned by `DetectText` and `DetectCustomLabels` or used to define regions of interest in Amazon Rekognition Video operations such as `CreateStreamProcessor`. `Polygon` represents a fine-grained polygon around a detected item. |
 
-#### 3.4.3 Detect Faces – Default
+#### 4.4.3 Detect Faces – Default
 
 The Amazon `DetectFaces` service detects faces within an image that is provided as input.
 
@@ -377,3 +377,11 @@ This activity returns a `RecognizeCelebrities` object with results as shown in t
 | `FaceRecognizedCelebrity` | `AmazonRekognitionConnector.FaceCelebrity` | This entity provides information about the celebrity's face, such as its location in the image. It is a specialization of the `FaceCelebrity` generalization entity. |
 | `Celebrity` | | This entity provides information about a celebrity recognized by the `RecognizeCelebrities` operation. It includes an identifier, a confidence, and a name. The identifier is an unique identifier for the recognized celebrity. The confidence is that of Amazon Rekognition service that it recognizes a celebrity. The name is that of the recognized celebrity. |
 | `LandmarkRecognizeCelebrity` | `AmazonRekognitionConnector.Landmark` | This entity contains the landmark results for the `RecognizeCelebrities` activity. It includes its type and left (x) and top (y) coordinates. It is a specialization of the `Landmark` generalization entity. |
+
+### 4.5 JavaScript Actions {#js-actions}
+
+JavaScript actions are [tbd]
+
+#### 4.5.1 JS_AddBoundingBox
+
+[tbd]

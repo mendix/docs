@@ -342,8 +342,6 @@ The **All Portfolios** tab lists all portfolios in your company. Here you can [m
 
 In the list, you can see the following items:
 
-{{% todo %}}Check the column name against the finalized UI{{% /todo %}}
-
 * **Portfolio Name** – This is the name of the portfolio. Clicking the name opens a pop-up window that shows the general information of the portfolio and the list of the Portfolio Managers.
 * **Managers** – This shows the number of Portfolio Managers in this portfolio.
 * **Members** – This shows the number of users who have access to this portfolio.
@@ -378,8 +376,6 @@ The **Add Users** button on the upper-right corner allows you to invite new user
 
 The list shows all users who have access to the portfolio as well as the pending portfolio invitations. In the list, you can see the following items:
 
-{{% todo %}}Check the column name against the finalized UI{{% /todo %}}
-
 * **User Name** – This shows the user name.
 * **Email** – This shows the email of the user.
 * **Company** – This shows the company where the user works.
@@ -406,8 +402,6 @@ The **Delete Portfolio** dialog box opens. If you decide to continue, type *DELE
 ### 15.2 Alerts {#alerts}
 
 The **Alerts** tab lists all the portfolios that no longer have a Portfolio Manager. You can assign new Portfolio Managers to a portfolio or delete the portfolio by clicking the ellipsis button (**...**) on the list and selecting the corresponding item.
-
-{{% todo %}}Check the column name against the finalized UI{{% /todo %}}
 
 In the list, you can see the following items:
 

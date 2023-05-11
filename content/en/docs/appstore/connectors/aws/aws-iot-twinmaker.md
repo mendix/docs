@@ -71,7 +71,7 @@ After you configure the authentication profile for AWS IoT TwinMaker, you can im
     {{< figure src="/attachments/appstore/connectors/aws-iot-twinmaker/addentity.png" alt="Adding a new entity to the domain model">}}
 
 3. Open the new entity by double-clicking on it.
-4. Name the entity **ListWorkspaceRequest**.
+4. Name the entity **WorkspaceSummary**.
 5. If you want to specify additional, optional attributes for the entity, in the **Attributes** section, click **New**, and then configure the attributes as required:
 
     * `MaxResults` - An optional **Integer**-type attribute. It specifies the maximum number of results to return at one time. For more information about the maximum value that you can set, see [maxResults](https://sdk.amazonaws.com/java/api/latest/software/amazon/awssdk/services/iottwinmaker/model/ListWorkspacesRequest.html#maxResults()).
@@ -98,26 +98,23 @@ After you configure the authentication profile for AWS IoT TwinMaker, you can im
     
     For a list of available AWS regions, see [AWS Region](#aws-region).
 15. Click **OK**, and then click **OK** again.
-16. In the **Toolbox** pane, search for the **Retrieve** activity and drag it onto the microflow area.
-17. Position the **Retrieve** activity between the **ListWorkspaces** activity and the microflow end event.
+16. In the **Toolbox** pane, search for the **Create object** activity and drag it onto the microflow area.
+17. Position the **Create Object** activity between the microflow start event and the **ListWorkspaces** activity.
+18. Double-click the **List Workspaces** activity.
+19. Click **Edit parameter value**, edit the **ListWorkspacesRequest** parameter, and let it auto-fill.
+20. In the **Object name** field, enter *ListWorkspacesResponse*, and then click **OK**.
+21. In the **Toolbox** pane, search for the **Retrieve** activity and drag it onto the microflow area.
+22. Position the **Retrieve** activity between the **ListWorkspaces** activity and the microflow end event.
 
     {{< figure src="/attachments/appstore/connectors/aws-iot-twinmaker/microflow.png" alt="The microflow with the Retrieve activity added">}}
 
-18. Double-click the **Retrieve** activity.
-19. In the **Association** section, click **Select**.
-20. In the **Select Association** dialog box, expand the **Variable** item, and then select **ListWorkspacesResponse** as the association.
+23. Double-click the **Retrieve** activity.
+24. In the **Association** section, click **Select**.
+25. In the **Select Association** dialog box, select **ListWorkspacesResponse_WorkspaceSummary** as the association.
 
     {{< figure src="/attachments/appstore/connectors/aws-iot-twinmaker/selectassociation.png" alt="Selecting the association">}}
 
-21. Click **OK**.
-22. In the **Toolbox** pane, search for the **Create list** activity and drag it onto the microflow area.
-23. Position the **Create list** activity between the microflow start event and the **ListWorkspaces** activity.
-
-    {{< figure src="/attachments/appstore/connectors/aws-iot-twinmaker/createlist.png" alt="The microflow with the Create list activity added">}}
-
-24. Double-click the **Create list** activity.
-25. In the **Entity** section, click **Select**.
-26. In the **Select Entity** dialog box, select the **ListWorkspaceRequest** entity that you previously added to your domain model.
+26. Click **OK**.
 27. In the **Toolbox** pane, search for the **Loop** activity and drag it onto the microflow area.
 28. Position the **Loop** activity before the microflow end event.
 29. Double-click the **Loop** activity.

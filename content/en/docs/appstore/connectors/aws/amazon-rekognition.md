@@ -386,4 +386,4 @@ JavaScript actions provide an additional way to extend the functionality of your
 
 #### 4.5.1 JS_AddBoundingBox
 
-[tbd]
+The `AddBoundingBox` JavaScript action can be used to draw a rectangle around the labels that have been found on an image.

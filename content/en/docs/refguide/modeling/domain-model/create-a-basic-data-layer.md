@@ -130,20 +130,30 @@ To configure the delete behavior, double-click the **Order_Customer** associatio
 Delete behavior includes objects which are in memory. This means that cascading delete or prevention of delete applies, even if the associated object has not been committed.
 {{% /alert %}}
 
-## 7 An Example for Defining a Domain Model {#example-domain-model}
+## 7 An Example of Defining a Domain Model {#example-domain-model}
 
 In the above sections, you learn the basics of how to configure a domain model. In this section, we present an example for how you can define the domain model for an online shopping app.
 
 ### 7.1 Defining What Data to Include
 
-Understanding the typical process helps you define what data to include to your domain model. A brief workflow for new customers of the online shopping app looks the following way:
+Understanding the typical process helps you define what data to include to your domain model. The workflow for new customers of the online shopping app looks the following way:
 
-1. A customer registers in the online shopping app and enters required details about themselves, such as their name and address.
-2. When registration is complete, an unique ID is assigned to the customer. 
-3. The customer browses through products with the products' details and images.
+1. A customer registers in the online shopping app and enters the following details:
+    1. Full name
+    2. Address
+    3. Email
+    4. Date of birth
+2. When registration is complete, a *unique ID* is assigned to the customer. 
+3. The customer browses through *products* and the following product details are displayed:
+    1. Product image 
+    2. Name
+    3. Description 
+    4. Availability
+    5. Price 
+    6. Vendor
+    7. Unique product ID 
 4. The customer adds products to a shopping cart. 
-5. In the shopping cart, every item is presented as a separate line showing its quantity and price.
-6. The customer checks the order, pays it, and gets a confirmation with the order details and the date the order is purchased on. 
+5. In the shopping cart, every item is presented as a separate line showing *quantity* and *price* per line. The customer checks the order, pays it, and gets a *confirmation* with the *order details* and the *date* the order is purchased on. 
 
 Based on the description above, you can divide your data into the following elements: 
 
@@ -151,7 +161,7 @@ Based on the description above, you can divide your data into the following elem
 * Product
 * Order
 
-After you have decided what information to include in your domain model, you still need to decide what kind of entities should be created in the domain model that can represent the information, and how these entities are connected to each other. In the following sections, we explain how to define the entities and their associataions for this online shopping app.
+In the following sections, we explain how to represent the data you want to include in your app with entities and their attributes in the domain model and how you should set up the associations between the entities. 
 
 An example of the domain model for the online shopping app is shown below:
 
@@ -168,7 +178,7 @@ An example of the domain model for the online shopping app is shown below:
 * The product information should be divided into the following entities:
 
     * **Product** – general information about the product, such as its name, description, and price
-    * **Product_Image** – each product has an image, but you do not create it as an attribute. You need to create an entity that is a specialization of the **System.Image** entity to allow you to store images. For more information, see [Image Uploader](/refguide/image-uploader/)
+    * **Product_Image** – each product has an image, but you do not create it as an attribute. You need to create an entity that is a specialization of the **System.Image** entity to allow you to store images. For an example on how the **System.Image** entity is used for displaying images on a page, see [Image Uploader](/refguide/image-uploader/)
 
 * The order information should be divided into the following entities:
 

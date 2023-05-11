@@ -4,6 +4,8 @@ url: /releasenotes/add-ons/apm-1.6/
 weight: 100
 ---
 
+
+
 ## 1.6.0
 
 The theme for this version is Mendix 6 and a visual trend on microflow statistics to show at Mendix World.

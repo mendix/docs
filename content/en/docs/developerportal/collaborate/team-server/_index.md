@@ -32,13 +32,13 @@ The **Team Server URL** can be used to directly access your app content. On SVN 
 * `https://git.api.mendix.com/<your AppID>.git` if it is a Git-enabled app
 * `https://teamserver.sprintr.com/<your AppID>/` if it is an SVN-enabled app that you access using your Mendix credentials
 
-    {{% alert color="info" %}}If you cannot use your Mendix credentials to access an SVN Team Server (for example, if your company has enabled [BYOIDP SSO](/developerportal/control-center/set-up-sso-byoidp/)), you will need to use the URL `https://svn.home.mendix.com/<your AppID>/` and use basic authentication with your PAT as described below.
+    {{% alert color="info" %}}If you cannot use your Mendix credentials to access the SVN Team Server (for example, if your company has enabled [BYOIDP SSO](/developerportal/control-center/set-up-sso-byoidp/)), you will need to use the URL `https://svn.home.mendix.com/<your AppID>/` and use basic authentication with your PAT as described below.
     {{% /alert %}}
 
-If you are connecting to Git, or connecting to SVN using a PAT, you need to create a PAT as described in the [Personal Access Tokens](/developerportal/community-tools/mendix-profile/#pat) section of *Mendix Profile*. The PAT must include the following scopes:
+If you are connecting to Git or to SVN using a PAT, you need to create a PAT as described in the [Personal Access Tokens](/developerportal/community-tools/mendix-profile/#pat) section of *Mendix Profile*. The PAT must include the following scopes:
 
 * `mx:modelrepository:repo:write`, `mx:modelrepository:repo:read`, and/or `mx:modelrepository:write` under *Model Repository* – for accessing the Git Team Server
-* `mx:modelrepository:write` under *Model Server* – for accessing the SVN Team Server
+* `mx:modelrepository:write` under *Model Repository* – for accessing the SVN Team Server
 
 When connecting, your username is your Mendix account username, and your password is the PAT you created. When connecting to Git, you can also use the word *pat* as your username.
 

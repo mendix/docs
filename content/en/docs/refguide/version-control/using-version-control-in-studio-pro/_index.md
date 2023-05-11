@@ -403,7 +403,7 @@ To connect to SVN using a PAT you need to use the following URL and credentials:
 
 * URL: `https://svn.home.mendix.com/<your AppID>`
 * Username: your Mendix account username
-* Password: the PAT you created — the PAT must include the scope `mx:modelrepository:write` under *Model Server*
+* Password: the PAT you created — the PAT must include the scope `mx:modelrepository:write` under *Model Repository*
 
 To connect to SVN using your Mendix credentials you need to use the following URL and credentials:
 

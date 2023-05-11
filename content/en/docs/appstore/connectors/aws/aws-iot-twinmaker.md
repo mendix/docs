@@ -71,13 +71,8 @@ After you configure the authentication profile for AWS IoT TwinMaker, you can im
     {{< figure src="/attachments/appstore/connectors/aws-iot-twinmaker/addentity.png" alt="Adding a new entity to the domain model">}}
 
 3. Open the new entity by double-clicking on it.
-4. Name the entity **WorkspaceSummary**.
-5. If you want to specify additional, optional attributes for the entity, in the **Attributes** section, click **New**, and then configure the attributes as required:
-
-    * `MaxResults` - An optional **Integer**-type attribute. It specifies the maximum number of results to return at one time. For more information about the maximum value that you can set, see [maxResults](https://sdk.amazonaws.com/java/api/latest/software/amazon/awssdk/services/iottwinmaker/model/ListWorkspacesRequest.html#maxResults()).
-    * `NextToken` - An optional **String (unlimited)**-type attribute. It specifies the next page of results.
-
-    The parameters that you need to configure depend on the contents of the response that an activity expects. The **ListWorkspace** activity used in this example expects the `ListWorkspaceRequest` entity as a parameter. Other activities require different parameters. For more information, see [Activities](#activities).
+4. Name the entity **MyWorkspace**.
+5. In the **Attributes** section, click **New**, and then add a String-type attribute named *WorkspaceID*.
 
 6. In the **App Explorer**, right-click on the name of your module, and then click **Add microflow**.
     
@@ -98,9 +93,9 @@ After you configure the authentication profile for AWS IoT TwinMaker, you can im
     
     For a list of available AWS regions, see [AWS Region](#aws-region).
 15. Click **OK**, and then click **OK** again.
-16. In the **Toolbox** pane, search for the **Create object** activity and drag it onto the microflow area.
-17. Position the **Create Object** activity between the microflow start event and the **ListWorkspaces** activity.
-18. Double-click the **List Workspaces** activity.
+16. In the **Toolbox** pane, search for the **Create Object** activity, drag it onto the microflow area, and position it between the microflow start event and the **ListWorkspaces** activity.
+17. Double-click the **Create Object** activity, and then enter *NewListWorkspacesRequest* in the **Object name** field.
+18. Double-click the **ListWorkspaces** activity.
 19. Click **Edit parameter value**, edit the **ListWorkspacesRequest** parameter, and let it auto-fill.
 20. In the **Object name** field, enter *ListWorkspacesResponse*, and then click **OK**.
 21. In the **Toolbox** pane, search for the **Retrieve** activity and drag it onto the microflow area.
@@ -109,48 +104,55 @@ After you configure the authentication profile for AWS IoT TwinMaker, you can im
     {{< figure src="/attachments/appstore/connectors/aws-iot-twinmaker/microflow.png" alt="The microflow with the Retrieve activity added">}}
 
 23. Double-click the **Retrieve** activity.
-24. In the **Association** section, click **Select**.
-25. In the **Select Association** dialog box, select **ListWorkspacesResponse_WorkspaceSummary** as the association.
+24. In the **Association** section, click **Select**, and then select **ListWorkspacesResponse_WorkspaceSummary** as the association.
 
     {{< figure src="/attachments/appstore/connectors/aws-iot-twinmaker/selectassociation.png" alt="Selecting the association">}}
 
-26. Click **OK**.
-27. In the **Toolbox** pane, search for the **Loop** activity and drag it onto the microflow area.
-28. Position the **Loop** activity before the microflow end event.
-29. Double-click the **Loop** activity.
-30. In the **Iterate over** list, select **ListWorkspacesRequestList**.
-31. In the **Toolbox** pane, search for the **Create object** activity and drag it inside the loop area.
-
-    {{< figure src="/attachments/appstore/connectors/aws-iot-twinmaker/createobject.png" alt="The microflow with the Create activity added">}}
-
-32. Double-click the **Create object** activity.
-33. In the **Entity** section, click **Select**.
-34. In the **Select Entity** dialog box, select the entity that you previously added to your domain model, and then click **Select**.
-35. In the **Toolbox** pane, search for the **Change List** activity and drag it inside the loop area, to the right of the **Create Object** activity.
-36. Double-click the **Change List** activity, and then set the following values:
+25. In the **List name** field, enter *WorkspaceSummaryList*, and then click **OK**.
+26. In the **Toolbox** pane, search for the **Create List** activity, drag it onto the microflow area, and then position it after the **Retrieve** activity.
+27. Double-click the **Create List** activity.
+28. In the **Action** section, click **Select**, and then select **{module name}.MyWorkspace** as the action.
+29. In the **List name** field, enter *MyWorkspaceList*, and then click **OK**.
+30. In the **Toolbox** pane, search for the **Loop** activity, drag it onto the microflow area, and then position it before the microflow end event.
+31. Double-click the **Loop** activity.
+32. In the **Iterate over** list, select **WorkspaceSummaryList**.
+33. In the **Loop object name** field, enter *IteratorWorkspaceSummary*.
+34. In the **Toolbox** pane, search for the **Create Object** activity and drag it inside the loop area.
+35. Double-click the **Create Object** activity.
+36. In the **Entity** section, click **Select**, and then select **{module name}.MyWorkspace** as the entity.
+37. In the list of parameters, click **New**.
+38. Configure the parameter in the following way:
+    1. In the **Member** field, select **WorkspaceID**.
+    2. In the **Value** field, enter *$IteratorWorkspaceSummary/WorkspaceID*.
+    3. Click **OK**.
+39. In the **Object name** field, enter *NewMyWorkspace*, and then click **OK**.
+40. In the **Toolbox** pane, search for the **Change List** activity and drag it inside the loop area, to the right of the **Create Object** activity.
+41. Connect the **Create Object** activity to the **Change List** activity.
+42. Double-click the **Change List** activity, and then set the following values:
+    * **List** - **MyWorkspaceList**
     * **Type** - **Add**
-    * **Value** - The created object
-37. Double-click the end event of your microflow, and then set the following values:
+    * **Value** - *$NewMyWorkspace*
+43. Double-click the end event of your microflow, and then set the following values:
     * **Type** - **List**
-    * **Entity** - The entity that you previously added to your domain model
-38. Right-click the **Create List** activity, and then click **Set ListWorkspacesRequest** as return value.
-39. In the **App Explorer**, right-click on the name of your module, and then click **Add page**.
-40. In the **Lists** category, select the **List** template for the page.
-41. Enter a name for your page, for example, *Workspaces_Overview*, and then click **OK**.
-42. On the page, double-click the **List view** widget.
-43. In the **Select Data Source** dialog, set the **Type** to **Microflow**.
-44. In the **Microflow** field, select the **DS_ListWorkspaces** microflow.
-45. Click **OK**, and then click **Yes**.
-46. In the **Properties** pane for the page, in the **Navigation** > **Visible for** section, select a user role that should be allowed to run the microflow.
-47. In the **App Explorer**, double-click the **Navigation** for your app.
-48. In the **Menu** section, click **New Item**.
-49. In the **New Menu Item** dialog, configure the following settings:
+    * **Entity** - **{module name}.MyWorkspace**
+    * **Return value** - *$MyWorkspaceList*
+44. In the **App Explorer**, right-click on the name of your module, and then click **Add page**.
+45. In the **Lists** category, select the **List** template for the page.
+46. Enter a name for your page, for example, *Workspaces_Overview*, and then click **OK**.
+47. On the page, double-click the **List view** widget.
+48. In the **Select Data Source** dialog, set the **Type** to **Microflow**.
+49. In the **Microflow** field, select the **DS_ListWorkspaces** microflow.
+50. Click **OK**, and then click **Yes**.
+51. In the **Properties** pane for the page, in the **Navigation** > **Visible for** section, select a user role that should be allowed to run the microflow.
+52. In the **App Explorer**, double-click the **Navigation** for your app.
+53. In the **Menu** section, click **New Item**.
+54. In the **New Menu Item** dialog, configure the following settings:
     * **Caption** - A caption for the navigation item, for example, *Workspace*
     * **Icon** - An icon that will be displayed for this page in the navigation for your app
     * **On click** - **Show a page**
     * **Page** - Your **Table_Overview** page
-50. Click **OK**.
-51. Click the **Run locally** icon to preview your app and validate your results. AWS IoT TwinMaker will return the workspaces it finds (by default 25, but you can increase it up to 250 workspaces by using the `MaxResults` attribute). For more information, see [Studio Pro Overview: Run and View App](/refguide/studio-pro-overview/#menus).
+55. Click **OK**.
+56. Click the **Run locally** icon to preview your app and validate your results. AWS IoT TwinMaker will return the workspaces it finds (by default 25, but you can increase it up to 250 workspaces by using the `MaxResults` attribute). For more information, see [Studio Pro Overview: Run and View App](/refguide/studio-pro-overview/#menus).
 
 ## 4 Technical Reference
 

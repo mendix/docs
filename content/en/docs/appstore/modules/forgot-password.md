@@ -11,7 +11,7 @@ tags: ["marketplace", "marketplace component", "forgot password", "password", "l
 
 The [Forgot Password](https://marketplace.mendix.com/link/component/1296/) module enables the users to sign up and also to reset their password. It works with the local accounts which are managed within your Mendix app. These are the best choice when you do not want to use a Single Sign On (SSO) solution to integrate with your existing Identity and Access Management (IAM) infrastructure.
 
-This module allows the end-user to enter their email address, and an email will be sent with a confirmation link. The end-user then opens the link and gets the option to reset their password in both scenarios (Sign up and Forgot password). In the sign up case, the end-user will also be asked to provide their name.
+This module allows the end-user to enter their email address, and an email will be sent with a confirmation link. The end-user then opens the link and gets the option to reset their password in both scenarios (Sign up and Forgot password). In the sign up case, the end-user will also be asked to provide their name. For version 5.3.0 of the module and above, you can specify different templates to be sent, depending on the language in which the end-user has chosen to see the app.
 
 {{% alert color="info" %}}
 Versions of the Forgot Password module below 4.1.0 (Mendix version 8) and 5.1.0 (Mendix version 9 and above) have a dependency on the deprecated [Email Module with Templates](/appstore/modules/email-with-templates/) module. We recommend that you upgrade to a later version using the instructions in [Migrate from Email Module with Templates to Email Connector](#migrate-email), below.
@@ -95,11 +95,15 @@ In these instructions, it is assumed that your main module is `MyFirstModule`. I
         The `Nav_GuestHomePage` microflow is the home page for an anonymous user. This microflow will either show the Login Page or trigger the deep link process which performs the reset password function.
     * Add the menu item `ForgotPasswordConfiguration` to the app navigation. This item should open the page `ForgotPassword.ForgotPasswordConfiguration_Edit` and be assigned to the `Administrator` user role.
         {{% alert color="warning" %}}The `ForgotPasswordConfiguration` page should be accessible to the administrator only. It allows the administrator to configure the email template and deep link, and it shows all the open password reset requests.{{% /alert %}}
+1. If you are using version 5.3.0 or above of the Forgot Password module, open [Module Security](/refguide/module-security/#entity-access) for the **Email_Connector** module in the **Marketplace Modules** and, in the **Entity Access** tab, give read-only access to the `EmailTemplateLanguage_EmailTemplate` association to the module role `Email_Connector.EmailConnectorAdmin`.
 1. Run the application.
 1. Login as `demo_administrator` from [Demo Users](/refguide/demo-users/) and choose the **ForgotPasswordConfiguration** menu item.
 1. In the **Reset Password Email** tab, do the following:
-    * Click **SMTP settings** to configure or validate SMTP settings for the [Email Connector](/appstore/connectors/email-connector/) or [Email with Templates](/appstore/modules/email-with-templates/) module (depending on the version of the Forgot Password module)
-    * Click **Reset email template** and provide the details for the email sent when an end-user has forgotten their password
+    * Click **SMTP settings** to configure or validate SMTP settings for the [Email Connector](/appstore/connectors/email-connector/) or [Email with Templates](/appstore/modules/email-with-templates/) module (depending on the version of the Forgot Password module).
+    * Click **Reset email template** and provide the details for the email sent when an end-user has forgotten their password.
+
+        For version 5.3.0 and above, you can link each template to a [language](/refguide/language-settings/) you have added to your app. If there is no template explicitly associated with the end-user's language, the template which is not associated with a language will be used.
+
         {{< figure src="/attachments/appstore/modules/forgot-password/email-template.png" >}}
 1. In the **Signup Email** tab, provide the details for the email sent when an end-user wants to sign up to use the app.
 

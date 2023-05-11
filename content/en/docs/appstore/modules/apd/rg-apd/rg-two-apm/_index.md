@@ -1,6 +1,6 @@
 ---
 title: "APM 2 Reference Guide"
-url: /addons/apd-addon/rg-two-apm/
+url: /appstore/modules/apd/rg-two-apm/
 weight: 1
 aliases:
     - /apm/reference-guide/rg-2/reference-guide-2.html
@@ -13,15 +13,15 @@ The Application Performance Monitor (APM) is a solution that helps you to analyz
 
 This is the reference guide for CLEVR APM 2 for Mendix. It has the following chapters:
 
-* [Apps](/addons/apd-addon/rg-two-apps/)
-* [Environments](/addons/apd-addon/rg-two-environments/)
-* [Dashboard](/addons/apd-addon/rg-two-dashboard/)
-* [Logs](/addons/apd-addon/rg-two-logs/)
-* [Performance Statistics](/addons/apd-addon/rg-two-statistics/)
-* [Performance Recorder](/addons/apd-addon/rg-two-recorder/)
-* [Settings](/addons/apd-addon/rg-two-settings/)
+* [Apps](/appstore/modules/apd/rg-two-apps/)
+* [Environments](/appstore/modules/apd/rg-two-environments/)
+* [Dashboard](/appstore/modules/apd/rg-two-dashboard/)
+* [Logs](/appstore/modules/apd/rg-two-logs/)
+* [Performance Statistics](/appstore/modules/apd/rg-two-statistics/)
+* [Performance Recorder](/appstore/modules/apd/rg-two-recorder/)
+* [Settings](/appstore/modules/apd/rg-two-settings/)
 
-{{< figure src="/attachments/addons/apd-addon/rg-apd/rg-two-apm/APM_Powered_logo.png" >}}
+{{< figure src="/attachments/appstore/modules/apd/rg-apd/rg-two-apm/APM_Powered_logo.png" >}}
 
 The sections below provide a short explanation of APM along with its features and possible uses.
 
@@ -47,7 +47,7 @@ Mendix APM collects statistical data about microflows, client API requests, and 
 
 In development, it is advised to add checking in APM to the generic definition of done.
 
-{{< figure src="/attachments/addons/apd-addon/rg-apd/rg-two-apm/statistics_history.png" >}}
+{{< figure src="/attachments/appstore/modules/apd/rg-apd/rg-two-apm/statistics_history.png" >}}
 
 ## 4 The Performance Recorder to Collect Individual Traces
 

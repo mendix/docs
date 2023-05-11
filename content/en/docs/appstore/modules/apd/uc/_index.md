@@ -1,6 +1,6 @@
 ---
 title: "APM Use Cases"
-url: /addons/apd-addon/uc/
+url: /appstore/modules/apd/uc/
 category: "APD"
 description: "Presents useful APD/APM use cases for each APD/APM version."
 ---
@@ -11,6 +11,6 @@ The *APD Use Cases* are organized according to the APD version.
 
 ## 2 Main Documents in This Section
 
-* [APD 3 Use Cases](/addons/apd-addon/uc-three/)
-* [APM 2 Use Cases](/addons/apd-addon/uc-two/)
-* [APM 1 Use Case](/addons/apd-addon/uc-one/)
+* [APD 3 Use Cases](/appstore/modules/apd/uc-three/)
+* [APM 2 Use Cases](/appstore/modules/apd/uc-two/)
+* [APM 1 Use Case](/appstore/modules/apd/uc-one/)

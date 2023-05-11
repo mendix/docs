@@ -1,6 +1,6 @@
 ---
 title: "APM 1 Reference Guide"
-url: /addons/apd-addon/rg-one-apm/
+url: /appstore/modules/apd/rg-one-apm/
 weight: 2
 ---
 
@@ -10,17 +10,17 @@ The Application Performance Monitor (APM) is a solution that helps to analyze pe
 
 This is the reference guide for the CLEVR APM for Mendix. It has the following chapters:
 
-* [Dashboard](/addons/apd-addon/rg-one-dashboard/)
-* [Configuration](/addons/apd-addon/rg-one-configuration/)
-* [Log Tool](/addons/apd-addon/rg-one-log-tool/)
-* [Trap Tool](/addons/apd-addon/rg-one-trap-tool/)
-* [Statistics Tool](/addons/apd-addon/rg-one-statistics-tool/)
-* [Performance Tool](/addons/apd-addon/rg-one-performance-tool/)
-* [JVM Browser](/addons/apd-addon/rg-one-jvm-browser/)
-* [Measurements Tool](/addons/apd-addon/rg-one-measurements-tool/)
-* [Triggers](/addons/apd-addon/rg-one-triggers/)
-* [Query Tool](/addons/apd-addon/rg-one-query-tool/)
-* [Load Test Recorder](/addons/apd-addon/rg-one-load-test-recorder/)
+* [Dashboard](/appstore/modules/apd/rg-one-dashboard/)
+* [Configuration](/appstore/modules/apd/rg-one-configuration/)
+* [Log Tool](/appstore/modules/apd/rg-one-log-tool/)
+* [Trap Tool](/appstore/modules/apd/rg-one-trap-tool/)
+* [Statistics Tool](/appstore/modules/apd/rg-one-statistics-tool/)
+* [Performance Tool](/appstore/modules/apd/rg-one-performance-tool/)
+* [JVM Browser](/appstore/modules/apd/rg-one-jvm-browser/)
+* [Measurements Tool](/appstore/modules/apd/rg-one-measurements-tool/)
+* [Triggers](/appstore/modules/apd/rg-one-triggers/)
+* [Query Tool](/appstore/modules/apd/rg-one-query-tool/)
+* [Load Test Recorder](/appstore/modules/apd/rg-one-load-test-recorder/)
 
 The sections below provide an introduction to APM. There is an explanation of what APM is, which tools are in the APM suite, and what they are used for. APM consists of the following tools:
 
@@ -58,7 +58,7 @@ The APM Statistics tool collects statistical data about microflows and client AP
 
 This is the statistics tool (for load balanced environments you see the server where the microflow runs):
 
-{{< figure src="/attachments/addons/apd-addon/rg-apd/rg-one-apm/Overview.png" >}}
+{{< figure src="/attachments/appstore/modules/apd/rg-apd/rg-one-apm/Overview.png" >}}
 
 ## 4 The Performance Tool to Record Microflows
 
@@ -66,15 +66,15 @@ When support wants to investigate a performance issue, either proactively throug
 
 This is the call tree, which provides an overview of what happens, showing the called microflows and one iteration of a loop, filtered by duration:
 
-{{< figure src="/attachments/addons/apd-addon/rg-apd/rg-one-apm/Performance_Tool_Tree_View.png" >}}
+{{< figure src="/attachments/appstore/modules/apd/rg-apd/rg-one-apm/Performance_Tool_Tree_View.png" >}}
 
 Below is the performance tool output. You can double-click all actions and in the case of a microflow call, you can browse to the next microflow. In the case of loops you will see the individual iterations.
 
-{{< figure src="/attachments/addons/apd-addon/rg-apd/rg-one-apm/Performance_Tool_Browse_Microflow.png" >}}
+{{< figure src="/attachments/appstore/modules/apd/rg-apd/rg-one-apm/Performance_Tool_Browse_Microflow.png" >}}
 
 This is the SQL statements during an action:
 
-{{< figure src="/attachments/addons/apd-addon/rg-apd/rg-one-apm/Performance_Tool_Browse_Actions.png" >}}
+{{< figure src="/attachments/appstore/modules/apd/rg-apd/rg-one-apm/Performance_Tool_Browse_Actions.png" >}}
 
 ## 5 The Trap Tool Is Your Flight Data Recorder
 
@@ -88,7 +88,7 @@ The measurements can be used to trigger events on thresholds. For example, if mo
 
 The trigger can be to trap logging, or to run a microflow, for example, to send an email or to make a heap dump.
 
-{{< figure src="/attachments/addons/apd-addon/rg-apd/rg-one-apm/Measurements_Tool.png" >}}
+{{< figure src="/attachments/appstore/modules/apd/rg-apd/rg-one-apm/Measurements_Tool.png" >}}
 
 ## 7 JVM Browser
 

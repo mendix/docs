@@ -1,6 +1,6 @@
 ---
 title: "Upgrade Steps"
-url: /addons/apd-addon/ig-one-upgrade-steps/
+url: /appstore/modules/apd/ig-one-upgrade-steps/
 weight: 4
 ---
 

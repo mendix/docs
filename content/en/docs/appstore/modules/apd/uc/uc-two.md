@@ -1,6 +1,6 @@
 ---
 title: "APM 2 Use Cases"
-url: /addons/apd-addon/uc-two/
+url: /appstore/modules/apd/uc-two/
 weight: 10
 ---
 

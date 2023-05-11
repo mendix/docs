@@ -1,6 +1,6 @@
 ---
 title: "APM 2 Installation Guide"
-url: /addons/apd-addon/ig-two/
+url: /appstore/modules/apd/ig-two/
 weight: 1
 aliases:
     - /apm/installation-guide.html
@@ -14,7 +14,7 @@ This is the installation guide for CLEVR APM 2.
 Note the following:
 
 * Before using APM 2, create a database backup and have a backup deployment ready
-* APM 1 and 2 can be installed side-by-side (to uninstall the APM 1 module, see [Uninstall Steps](/addons/apd-addon/ig-one-uninstall-steps/)
+* APM 1 and 2 can be installed side-by-side (to uninstall the APM 1 module, see [Uninstall Steps](/appstore/modules/apd/ig-one-uninstall-steps/)
 
 ## 2 Installation
 
@@ -23,7 +23,7 @@ To install APM 2, follow these steps:
 1. Arrange a license for the app to use APM.
 2. In a browser, log in to the APM Manager at [https://apmmanager100.mendixcloud.com](https://apmmanager100.mendixcloud.com) using your Mendix account.
 3. Select your app in the dashboard.
-4. In the environments dashboard, select the **New Environment** tile. If you are a Scrum Master of the Mendix app, you can add test, acceptance, and production environments. If you are not, you can only add Mendix Studio Pro environments. For more detailed information, see the [Environments overview](/addons/apd-addon/rg-two-environments/) documentation.
+4. In the environments dashboard, select the **New Environment** tile. If you are a Scrum Master of the Mendix app, you can add test, acceptance, and production environments. If you are not, you can only add Mendix Studio Pro environments. For more detailed information, see the [Environments overview](/appstore/modules/apd/rg-two-environments/) documentation.
 5. Choose an environment name.
 6. Click **Save and generate API key**, then use this key as the value for the **APMAgent.APMAPIKey** constant in step 10.
 7. In Studio Pro with your app, import the [Mendix Application Performance Monitor](https://marketplace.mendix.com/link/component/6127/) module from the Mendix Marketplace.

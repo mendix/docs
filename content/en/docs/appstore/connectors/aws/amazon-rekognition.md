@@ -99,6 +99,8 @@ To help you work with the Amazon DynamoDB connector, the following sections of t
 
 Constants are used to define configuration values. All activities are exported as microflow activities that can directly be added to a microflow. Make sure the constants are configured correctly as shown in the table below, so the connector can authenticate the request with AWS.
 
+For more information, see [Constants](/refguide/constants/).
+
 | Name | Value |
 | --- | --- |
 | `AWSRekognitionConnector.AWS_ClientCertificateID` | The ID for the ClientCertificate used to sign the authentication requests. (Link to Auth v2 docs) |
@@ -130,7 +132,7 @@ The entities in the table below describe all generalizations. These are (re-)use
 
 ### 4.3 Enumerations {#enumerations}
 
-An enumeration is a predefined list of values that can be used as an attribute type.
+An enumeration is a predefined list of values that can be used as an attribute type. For more information, see [Enumerations](/refguide/enumerations/).
 
 #### 4.3.1 QualityFilter
 
@@ -167,7 +169,7 @@ This enumeration provides a list of available AWS regions.
 
 ### 4.4 Activities {#activities}
 
-Activities define the actions that are executed in a microflow or a nanoflow.
+Activities define the actions that are executed in a microflow or a nanoflow. For more information, see [Activities](/refguide/activities/).
 
 #### 4.4.1 Compare Face
 
@@ -380,7 +382,7 @@ This activity returns a `RecognizeCelebrities` object with results as shown in t
 
 ### 4.5 JavaScript Actions {#js-actions}
 
-JavaScript actions are [tbd]
+JavaScript actions provide an additional way to extend the functionality of your application. For more information, see [JavaScript Actions](/refguide/javascript-actions/).
 
 #### 4.5.1 JS_AddBoundingBox
 

@@ -9,7 +9,7 @@ tags: ["BYOIDP", "IdP", "Bring Your Own IdP", "Microsoft Azure", "SSO", "Single 
 
 ## 1 Introduction
 
-The Mendix Cloud contains an Identity Provider (IdP) that allows users to sign in to:
+The Mendix Platform contains an Identity Provider (IdP) that allows users to sign in to:
 
 * Mendix platform services
 * Applications in the Mendix Cloud that have been built using [Mendix SSO](/appstore/modules/mendix-sso/)
@@ -41,16 +41,15 @@ BYOIDP SSO has the following features:
 * Mendix platform services, Studio Pro, and Mendix apps using Mendix SSO can delegate authentication to your IdP.
 * Authentication will be delegated for any user that has an email address where the email-domain is associated with your company. This includes service accounts (for example non-personal accounts used for consuming APIs) that may have been created on the Mendix Platform. 
 * When you add a domain to your company account, it is automatically added to the active IdP configuration. 
-* Users with domains which are not part of your company are unaffected. They still have access based on the way they normally sign in to Mendix.
+* External users (with domains that are not part of your company) are unaffected. They still have access based on the way they normally sign in to Mendix.
 * Routing of the login process to your IdP is based on the user's email domain (as entered in the Mendix login screen). If you have invited users from other organisations to your projects in Mendix (or contractors), enabling the BYOIDP will not affect the way those users are authenticated since they're associated with a different email domain.
 * When BYOIDP is used, a session at Mendix will be valid for 1 hour. After the session is expired, Mendix will request a new ID_token from your IdP. If the user still has a session at your IdP, the token will be issued without any user input and the platform user continues to have access to the Mendix Platform. The effect of this mechanism is that users have access to the Mendix Platform as long as the session at your IdP is valid.
-* Applications built with Mendix SSO can delegate authentication to your IdP. Such applications can use an 'idp_hint' to pre-select the IdP and bypass the Mendix login screen. 
 
 #### 1.2.3 Technical Integration
 
 BYOIDP SSO integrates with the Mendix Platform using the following techniques:
 
-* BYOIDP uses the IdP's OIDC well-known/discovery endpoint to retrieve the URLs for the authorization endpoint, the token endpoint, and the jwks endpoint.
+* BYOIDP uses the IdP's OIDC (OpenID Connect) well-known/discovery endpoint to retrieve the URLs for the authorization endpoint, the token endpoint, and the jwks endpoint.
 * The user's email address is used to associate a user's existing account within Mendix with the user's account at your IdP. This means that any existing Mendix account is linked to their IdP account for authentication, rather than a new Mendix account being created for them.
 
     This assumes that the IdP returns an email address to Mendix during SSO which the user previously used to sign-up and login to Mendix. If the email address that is returned to Mendix is not recognized, then the user will be offered the sign-up option to enable them to create a new account.
@@ -73,14 +72,14 @@ BYOIDP SSO integrates with the Mendix Platform using the following techniques:
 
 * When the Company Admin activates the 'BYOIDP configuration', Mendix scrambles the Mendix passwords for all impacted users. De-activation of the feature doesn't roll-back those changes. If you deactivate BYOIDP SSO, users have to reset their Mendix password before being able to login with their Mendix account.
 * Your conditional access policies in AzureAD may block Studio Pro logins for versions of Mendix below 9.18, as these make use of an embedded browser. If you are using Microsoft's Intune for MDM/MAM and versions of Mendix below 9.18, you may not want to activate BYOIDP for this reason.
-* You cannot associate multiple Mendix accounts (e.g. an Admin account and a regular account) with a single identity in your IdP. If such a mapping is needed it needs to be catered for in your IdP.
+* You cannot associate multiple Mendix accounts (e.g. an Admin account and a regular account) with a single identity in your IdP.
 
 ## 2 Prerequisites
 
 To set up an IdP configuration for the Mendix Platform and your Mendix app, you will need the following:
 
-* A subscription to an OpenID Connect compliant IdP. Validate that your IdP supports OpenID Connect
-    * If you are using Azure AD, Okta, Auth0, or ADFS you will be OK
+* A subscription to an OIDC compliant IdP. Validate that your IdP supports OIDC.
+    * If you are using Azure AD, Okta, Auth0, [Ping Identity](https://www.pingidentity.com), or ADFS you will be OK
     * a full list of compliant providers can be found in the [OpenID Certified OpenID Providers](https://openid.net/certification/)
 * The URL for the so-called *well-known endpoint* of your IdP, where configuration details can be retrieved
     * The IdP's well-known endpoint must have a URL for the JWKS endpoint
@@ -104,7 +103,7 @@ When adding a configuration, you will need to provide the information described 
 
 * **Redirect URL** – the callback URL to the Developer Portal that your IdP needs to send the authenticated user to.
 * **OpenID Connect well-known endpoint URL** – the endpoint at your IdP from which the Mendix Platform can retrieve the configuration metadata, including all necessary endpoints and public key location information.
-    If your IdP supports multiple protocols, make sure you enter the OpenID Connect endpoint.
+    If your IdP supports multiple protocols, make sure you enter the OIDC endpoint.
 * **Client ID** – the ID of the Developer Portal registration in your IdP.
 * **Client secret** – the password or secret of the Developer Portal registration in your IdP. Enter this once. After saving your configuration it will no longer be shown to you. See [Changing the Client Secret](#client-secret), below, for information about changing this value once your configuration is active.
 * **Scopes** – selecting a scope to configure the data Mendix is allowed to read from your IdP. Mendix uses this data to map the user's identity in your IdP environment with a corresponding identity in the Developer Portal. The scope `OpenID` is required. In some cases, depending on your IdP, other scopes are necessary to fully map the user's identity.
@@ -113,7 +112,7 @@ When adding a configuration, you will need to provide the information described 
 
 ### 3.2 Testing Your Configuration
 
-Once you have configured the endpoint and the scope, you are ready to perform the first test of your configuration. This test will perform a round trip from the Mendix Platform to your IdP and back to the platform. The test will be performed in a new tab page of your browser so your browser must allow popup windows.
+Once you have configured the endpoint and the scopes, you are ready to perform the first test of your configuration. This test will perform a round trip from the Mendix Platform to your IdP and back to the platform. The test will be performed in a new tab page of your browser so your browser must allow popup windows.
 
 {{< figure src="/attachments/developerportal/control-center/set-up-sso-byoidp/customer-idp-wizard-page-3.png" >}}
 
@@ -142,7 +141,7 @@ If your test fails, see the [Troubleshooting](#troubleshooting) section for advi
 
 Before activating your BYOIDP configuration, ensure you have read the [Considerations](#considerations) section, below.
 
-When you are ready, you can activate the IdP configuration from the overview page. Although the changes start to come into effect immediately, updating your users will take some time depending on the number of users in your company. Your users will start to benefit from logging into the Mendix Developer Portal with the same credentials as they use in the IdP. Any user passwords currently held in the Mendix Platform will be scrambled to prevent the users bypassing your IdP authentication.
+When you are ready, you can activate the IdP configuration from the overview page. This will have an immediate effect on the interactive login process. Mendix will also scramble the platform passwords which will take some time depending on the number of users in your company. Once all the passwords are scrambled, users will no longer be able to use these for direct access to the Team Server for apps using SVN for version control.
 
 ## 6 Deactivating
 
@@ -150,7 +149,7 @@ You can deactivate the IdP configuration at any time. Although the changes start
 
 ## 7 Microsoft Azure AD
 
-Microsoft Azure AD is one of the most used IdP's, and supports OpenID Connect. To help you setup with Azure, follow the steps in this small tutorial.
+Microsoft Azure AD is one of the most used IdP's, and supports OIDC. To help you setup with Azure, follow the steps in this small tutorial.
 
 1. Sign in to your Azure Active Directory portal and follow **Azure Active Directory** > **App registrations**.
 

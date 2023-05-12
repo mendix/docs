@@ -227,7 +227,7 @@ Due to these simplifications, a lot of minor features may have been simplified, 
 
 ## 1.12.1
 
-This release is identical to [1.11.1](/releasenotes/add-ons/apm-1.11/#1.11.1), but it is for Mendix 7.0.2 and above.
+This release is identical to 1.11.1, but it is for Mendix 7.0.2 and above.
 
 ### Other Fixes
 
@@ -236,7 +236,7 @@ This release is identical to [1.11.1](/releasenotes/add-ons/apm-1.11/#1.11.1), b
 
 ## 1.12.0
 
-This release is identical to the [1.11.0](/releasenotes/add-ons/apm-1.11/) release, but it is for Mendix 7.0.2 and above.
+This release is identical to the 1.11.0 release, but it is for Mendix 7.0.2 and above.
 
 ### Other Fixes
 

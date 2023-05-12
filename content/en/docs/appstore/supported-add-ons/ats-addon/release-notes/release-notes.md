@@ -199,7 +199,7 @@ You can change your theme by clicking your profile image and selecting one of th
 
 * **System** (default) – match the theme to your operating system preference
 * **Dark** – use a dark theme (NEW!)
-* **Light** – use a light theme (this is the standard theme that we have used since ATS [2.0](/releasenotes/add-ons/ats-2.0/))
+* **Light** – use a light theme (this is the standard theme that we have used since ATS 2.0.
 
 ### Item Locking
 
@@ -370,7 +370,7 @@ To make this process even faster and skip one click, we added the option to run 
 * We fixed a bug where ATS did not correctly click a radio button.
 * Due to a bug, cutting elements whose total length exceeded 200 characters resulted in an error. This is no longer allowed and is preceded by a warning message.
 * We fixed a bug where clicking an association radio button list was not properly recorded or executed.
-* We fixed a bug introduced in [2.17.1](/releasenotes/add-ons/ats-2.17/#2171) where unique names no longer included list item names.
+* We fixed a bug introduced in 2.17.1 where unique names no longer included list item names.
 
 ## 2.17.1 {#2171}
 
@@ -1317,7 +1317,7 @@ The following features have been removed as a result of design decisions:
 
 ### Minor Fixes
 
-Many bug fixes and small changes have been maded, including everything from the 1.8 branch. For an overview of these changes, see [1.8](/releasenotes/add-ons/ats-1.8/).
+Many bug fixes and small changes have been maded, including everything from the 1.8 branch. For an overview of these changes, see 1.8.
 
 ## 1.8.8
 

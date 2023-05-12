@@ -31,7 +31,7 @@ REST API best practices usually include some of the following:
 
 This document use the following domain model as an example: 
 
-{{< figure src="/attachments/refguide/modeling/integration/build-odata-apis/implement-odata-apis.png" >}}
+{{< figure src="/attachments/refguide/modeling/integration/build-odata-apis/example-domain-model.png" >}}
 
 REST APIs, and especially OData APIs, often provide access to data within the app. Mendix OData APIs are excellent for providing APIs for entities, but can also be used for accessing other types of data. See the [API-First](#api-first) section to learn about decoupling APIs from the domain model. 
 
@@ -41,7 +41,7 @@ REST APIs, and especially OData APIs, often provide access to data within the ap
 
 ### 2.1 Published OData Service Document
 
-To provide an Odata REST API for an entity, add it from the domain model, or in the [published OData service](/refguide/published-odata-service/) document. In this document, you also select which attributes and associations are available in the API:
+To provide an Odata REST API for an entity, add it from the domain model, or in the [published OData service](/refguide/published-odata-services/) document. In this document, you also select which attributes and associations are available in the API:
 
 {{< figure src="/attachments/refguide/modeling/integration/build-odata-apis/select-attributes-associations.png" >}} 
 
@@ -84,7 +84,7 @@ Fetching all customers:
 
 ### 3.1 Getting a Resource by ID
 
-Fetching a single Customer resource can be done by providing the id between brackets. OData also supports using multi-field ids by proving the required attributes as a key value list between the brackets.
+Fetch a single Customer resource by providing the ID between brackets. OData also supports using multi-field IDs by proving the required attributes as a key value list between the brackets.
 
 {{< figure src="/attachments/refguide/modeling/integration/build-odata-apis/fetch-single-customer.png" >}} 
 
@@ -92,7 +92,7 @@ Fetching a single Customer resource can be done by providing the id between brac
 
 OData standardizes how you specify which resources you’re interested in. This provides the client with the tools to ensure that the response payload is as small as possible. It also ensures that the Mendix service implementation will be able to push down the filtering, sorting and pagination into the database, ensuring use of the database query optimizer and available indexes to optimize performance.
 
-The following url parameters are available:
+The following URL parameters are available:
 
 * **$filter** - Define [filter expressions](https://docs.mendix.com/refguide/odata-query-options/#4-filtering) for the resource attributes, include equals, not equal, smaller, larger, contains, etc.
 * **$top, $skip** - How many resource to skip and how many to return. Helps implement client side pagination.

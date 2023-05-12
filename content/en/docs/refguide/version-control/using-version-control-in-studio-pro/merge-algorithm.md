@@ -4,13 +4,13 @@ linktitle: "Merge Algorithm and Conflict Resolution"
 url: /refguide/merge-algorithm/
 category: "Version Control"
 weight: 10
-description: "Introduces a new merge algorithm and describes how to enable it to resolve conflicts."
+description: "Describes a merge algorithm and how it resolves conflicts."
 tags: ["merge", "algorithm", "conflict", "resolution"]
 ---
 
 ## 1 Introduction
 
-A merge algorithm with fine-grained conflict resolution is used when you update your app or merge changes in it. The new merge algorithm has the following features:
+A merge algorithm with fine-grained conflict resolution is used when you update your app or merge changes in it. The merge algorithm has the following features:
 
 * **Fine-grained conflict resolution** – When there are conflicting changes in a document, you do not have to choose between whole documents: resolving a conflict using your change or using their change. Instead, you can resolve conflicts at the level of individual elements, such as widgets, entities, attributes, or microflow actions. Also, all non-conflicting changes from both sides are accepted automatically.
 * **No conflicts on parallel changes to lists of widgets** – When two developers make changes to widgets in the same document there is no conflict, the changes are combined. However, if the changes are made too close to the same place in the document, a **list order conflict** is reported that reminds the developer who is merging the changes to decide on the final order of the widgets in the list. 
@@ -19,7 +19,7 @@ A merge algorithm with fine-grained conflict resolution is used when you update 
 
 A page document in your app is designed as shown below:
 
-{{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/new-merge-algorithm/new-merge-algorithm-base-page.png" alt="Original page" >}}
+{{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/merge-algorithm/-base-page.png" alt="Original page" >}}
 
 Your colleague makes the following changes in the main line:
 
@@ -30,7 +30,7 @@ Your colleague makes the following changes in the main line:
 
 Your colleague's new document layout is shown below:
 
-{{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/new-merge-algorithm/new-merge-algorithm-main-page.png" alt="Main line page" >}}
+{{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/merge-algorithm/-main-page.png" alt="Main line page" >}}
 
 You make the following changes on a branch line:
 
@@ -39,7 +39,7 @@ You make the following changes on a branch line:
 
 Your page is now laid out as shown below:
 
-{{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/new-merge-algorithm/new-merge-algorithm-branch-page.png" alt="Branch line page" >}}
+{{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/merge-algorithm/-branch-page.png" alt="Branch line page" >}}
 
 ## 3 Resolving Conflicts
 
@@ -48,11 +48,11 @@ When you merge changes, the new algorithm shows you the following conflicts:
 1. The text that both sides changed. 
 2. A **list order conflict**. Both of you added widgets to the bottom layout grid. The merge algorithm cannot guess the right order for the two new widgets and it reports the list order conflict. This is a reminder for you (the developer who is doing the merge) to look at the final layout and confirm the order. 
 
-    {{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/new-merge-algorithm/new-merge-algorithm-conflicts.png" alt="New algorithm conflicts" >}}
+    {{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/merge-algorithm/-conflicts.png" alt="New algorithm conflicts" >}}
 
 To start the resolution process, click the **Merge** button. The page is opened in a special mode with an orange bar at the top:
 
-{{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/new-merge-algorithm/new-merge-algorithm-orange-tab.png" alt="Document with orange bar" >}}
+{{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/merge-algorithm/-orange-tab.png" alt="Document with orange bar" >}}
 
 The following non-conflicting changes have already been applied to the page:
 
@@ -65,7 +65,7 @@ The following non-conflicting changes have already been applied to the page:
 
 For the first conflict, you can inspect changes and decide which version to apply. Select one of the three lines that represent the conflict and choose **Resolve using Mine** or **Resolve using Theirs**. 
 
-{{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/new-merge-algorithm/new-merge-algorithm-resolve-mode.png" alt="Conflict resolution mode" >}}
+{{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/merge-algorithm/-resolve-mode.png" alt="Conflict resolution mode" >}}
 
 You will see the document update immediately after you click the button. If you are not satisfied with your choice, you can use undo to go back and try another option. 
 
@@ -85,11 +85,11 @@ You can also decide to delete one of the widgets or add a new one. The document 
 
 After resolving the second conflict, the bar at the top will turn green to indicate that all conflicts have been resolved:
 
-{{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/new-merge-algorithm/new-merge-algorithm-all-conflicts-resolved.PNG" alt="All conflicts resolved" >}}
+{{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/merge-algorithm/-all-conflicts-resolved.PNG" alt="All conflicts resolved" >}}
 
 Some changes will make it impossible to resolve conflicts using **mine** or **theirs**. For example, if you have not resolved the first conflict yet and you delete the *Home* text widget, you cannot resolve the first conflict any more, because the widget is simply not there. At that point, you can only mark the conflict as resolved:
 
-{{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/new-merge-algorithm/new-merge-algorithm-cannot-resolve.PNG" alt="Conflict cannot be resolved" >}}
+{{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/merge-algorithm/-cannot-resolve.PNG" alt="Conflict cannot be resolved" >}}
 
 ### 3.3 Finishing Conflict Resolution
 

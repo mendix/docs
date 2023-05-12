@@ -10,7 +10,6 @@ tags: ["studio pro", "unlock workflow", "workflow unlock"]
 
 This activity can only be used in **Microflows**.
 
-This activity was introduced in Studio Pro [9.23.0](/releasenotes/studio-pro/9.23/#9230).
 {{% /alert %}}
 
 ## 1 Introduction
@@ -49,9 +48,9 @@ You can open a dialog box to configure this action by clicking the ellipsis (**â
 
 You can also open the dialog box by double-clicking the activity in the microflow or right-clicking the activity and selecting **Properties**.
 
-### 3.1 Input type {#workflow}
+### 3.1 Input Type {#workflow}
 
-This option allows you to choose between a workflow document (which can be selected from the document explorer) or a workflow object (which is provided at runtime) to target the workflow you want to unlock. 
+This option allows you to choose between a workflow document (which can be selected from the document explorer) and a workflow object (which is provided at Runtime) to target the workflow you want to unlock. 
 
 ### 3.2 Workflow {#workflow}
 

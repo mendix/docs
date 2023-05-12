@@ -18,13 +18,13 @@ This document shows how [published OData services](/refguide/published-odata-ser
 REST API best practices usually include some of the following:
 
 * **Use JSON** – JSON is easy to read, libraries to process it are available in most languages. 
-* **Use nouns, not verbs (resource-first, no actions in path)** – APIs should be resource based instead of action based to improve decoupling: all interactions assume resources and a limited set of standardized operations.
+* **Use nouns, not verbs (resource-first, no actions in path)** – APIs should be resource-based instead of action-based to improve decoupling: all interactions assume resources and a limited set of standardized operations.
 * **A resource has an ID** – Every resource has a unique path where it can be retrieved or updated. See the [Retrieving Data](#retrieving-data) section in this document.
 * **A resource has a uniform interface (for example, the correct use of an HTTP operation)** – Use the standardized set of HTTP operations to work with your resources: GET (retrieve), POST (create/insert), PUT (replace), PATCH (update), DELETE. See the [Creating and Changing Data with Full CRUD](#creating-changing-data) section in this document.
 * **Name collections with plurals** – An endpoint that can return more than one resource should indicate that by have the resource name in plural.
 * **Use of standard HTTP status codes** – HTTP has standardized status codes for most situations, good REST APIs use these. Status codes work the same way across applications, application specific errors should be handled in the payload. See the [Automatic Standard HTTP Error Codes](#http-codes) section in this document.
-* **Use filtering, sorting, and pagination** – To ensure best possible performance, and to limit resource usage, enable clients to flexibly define exactly what data they need. This also helps to decouple the client and the service, as not all clients have the same needs. Enabling the client to define what is needed, helps to serve more types of clients. See the [Filtering, Sorting, Paginating, and Selecting Data](#filter-sort-page-select-data) section in this document.
-* **Versioning and compatibility** – usually specifies versioning should be date based or semantic versioning with the major version part of the url. Clients should assume changes to an endpoint are always backwards compatible. In case of breaking changes, a new endpoint including a new major version number should be used. See the [Versioning](#versioning) section in this document.
+* **Use filtering, sorting, and pagination** – To ensure best possible performance, and to limit resource usage, these features enable clients to flexibly define exactly what data they need. They also help to decouple the client and the service, as not all clients have the same needs. Enabling the client to define what is needed, helps to serve more types of clients. See the [Filtering, Sorting, Paginating, and Selecting Data](#filter-sort-page-select-data) section in this document.
+* **Versioning and compatibility** – Versioning usually should be date-based, or semantic versioning should include the major version part of the URL. Clients should assume changes to an endpoint are always backwards compatible. In case of breaking changes, a new endpoint including a new major version number should be used. See the [Versioning](#versioning) section in this document.
 * **Secure APIs** – Apps should not be able to access more information than they are allowed to see.
 
 ### 1.2 Starting Point: Example Domain Model
@@ -37,11 +37,11 @@ REST APIs, and especially OData APIs, often provide access to data within the ap
 
 ## 2 Creating OData APIs {#creating-odata-apis}
 
-
+Create OData APIs by right-clicking on an entity > **Expose as OData resource**, or right-clicking on a module > **Add other** > **Published OData service**. 
 
 ### 2.1 Published OData Service Document
 
-To provide an Odata REST API for an entity, add it from the domain model, or in the [published OData service](/refguide/published-odata-services/) document. In this document, you also select which attributes and associations are available in the API:
+In the [published OData service](/refguide/published-odata-services/) document, you also select which attributes and associations are available in the API:
 
 {{< figure src="/attachments/refguide/modeling/integration/build-odata-apis/select-attributes-associations.png" >}} 
 
@@ -49,7 +49,7 @@ For every published resource, you can define what functionality is available:
 
 * **Create** = POST
 * **Read** = GET
-* **Update** = PATCH, 
+* **Update** = PATCH
 * **Delete** = DELETE 
 
 You can also define other capabilities, like if counting the results is supported, and whether you **skip** results or limiting the number of results returned (**top**): 
@@ -66,7 +66,7 @@ The test page lists all accepted parameters, and example payloads, both for regu
 
 {{< figure src="/attachments/refguide/modeling/integration/build-odata-apis/test-page.png" >}} 
 
-A [JSON schema] description of all the payload types is also provided:
+A JSON schema description of all the payload types is also provided:
 
 {{< figure src="/attachments/refguide/modeling/integration/build-odata-apis/json-schema.png" >}} 
 
@@ -78,64 +78,110 @@ You also have an OpenAPI 3.0.1 contract:
 
 OData REST APIs work as you would expect a REST API to function. Here are some examples using the [REST Client](https://marketplace.visualstudio.com/items?itemName=humao.rest-client) plugin in Visual Studio Code.
 
-Fetching all customers:
+### 3.1 Fetching All Resources
+
+The image below shows an example of fetching all customers in a call:
 
 {{< figure src="/attachments/refguide/modeling/integration/build-odata-apis/fetch-all-customers.png" >}} 
 
 ### 3.1 Getting a Resource by ID
 
-Fetch a single Customer resource by providing the ID between brackets. OData also supports using multi-field IDs by proving the required attributes as a key value list between the brackets.
+Fetch a single **Customer** resource by providing the ID between brackets. OData also supports using multi-field IDs by proving the required attributes as a key value list between the brackets:
 
 {{< figure src="/attachments/refguide/modeling/integration/build-odata-apis/fetch-single-customer.png" >}} 
 
 ### 3.2 Filtering, Sorting, Paginating, and Selecting Data {#filter-sort-page-select-data}
 
-OData standardizes how you specify which resources you’re interested in. This provides the client with the tools to ensure that the response payload is as small as possible. It also ensures that the Mendix service implementation will be able to push down the filtering, sorting and pagination into the database, ensuring use of the database query optimizer and available indexes to optimize performance.
+OData standardizes how you specify which resources that you are interested in. This provides the client with the tools to ensure that the response payload is as small as possible. It also ensures that the Mendix service implementation will be able to push down the filtering, sorting, and pagination into the database. This uses the database query optimizer and available indexes to optimize performance.
 
 The following URL parameters are available:
 
-* **$filter** - Define [filter expressions](https://docs.mendix.com/refguide/odata-query-options/#4-filtering) for the resource attributes, include equals, not equal, smaller, larger, contains, etc.
-* **$top, $skip** - How many resource to skip and how many to return. Helps implement client side pagination.
-* **$orderby -** How to sort the resources in the response payload
-* **$select -** Which attributes of the resource to return
+* **$filter** – This defines [filter expressions](https://docs.mendix.com/refguide/odata-query-options/#4-filtering) for the resource attributes (equals, not equal, smaller, larger, contains, etc.).
+* **$top**, **$skip** – This indicates how many resource to skip and how many to return, helping to implement client-side pagination.
+* **$orderby** – This defines how to sort the resources in the response payload.
+* **$select** – This defines which attributes of the resource to return.
 
-The following example illustrates how you can combine filtering, sorting, pagination and attribute selection.
+The following example illustrates how you can combine filtering, sorting, pagination and attribute selection:
 
 {{< figure src="/attachments/refguide/modeling/integration/build-odata-apis/filter-sort-page-attribute.png" >}} 
 
-Alternatively you can specify the query in the payload of a POST call, which can be useful if you have a long complex query.
+Alternatively, you can specify the query in the payload of a POST call, which can be useful if you have a long complex query.
 
 ## 4 Creating and Changing Data with Full CRUD {#creating-changing-data}
 
+Published OData services in Mendix allow you to easily create and change data.
+
 ### 4.1 Inserting New Data
 
-If you selected ‘insertable’ in the API definition, new resources can be created using POST. Successfully created of data will automatically result in a 201 status code, and a ‘Location’ header provides the URL of the resulting resource, as is best practice for REST APIs.
+If you selected **nsertable** in the API definition, new resources can be created using POST. Successfully created data will automatically result in a 201 status code, and a **Location** header provides the URL of the resulting resource, as is best practice for REST APIs"
 
 {{< figure src="/attachments/refguide/modeling/integration/build-odata-apis/insert-new-data.png" >}} 
 
-
-Using the returned location header to query the new resource at its endpoint.
+This uses the returned location header to query the new resource at its endpoint:
 
 {{< figure src="/attachments/refguide/modeling/integration/build-odata-apis/query-resource-endpoint.png" >}} 
 
 #### 4.1.1 Using a Prefer Header
 
-Instead of doing the two API calls illustrated above, POST followed by GET, you also have the option to use the Prefer header. If you give this the value of “return=representation”, the resulting resource will be returned automatically, saving you one API call.
+Instead of doing the two API calls illustrated above, POST followed by GET, you also have the option to use the **Prefer** header. If you give this the value of `return=representation`, the resulting resource will be returned automatically, resulting in one less API call:
 
 {{< figure src="/attachments/refguide/modeling/integration/build-odata-apis/prefer-header.png" >}} 
 
 #### 4.1.2 Creating Resources with Associations
-If you want to create a new resource associated to another resource, you can refer to the id of the resource in your payload.
+
+If you want to create a new resource associated to another resource, you can refer to the ID of the resource in your payload:
 
 {{< figure src="/attachments/refguide/modeling/integration/build-odata-apis/create-resources-associations.png" >}} 
 
 ### 4.2 Modifying Existing Data
 
-Updating of resources is provided using the HTTP PATCH operation. Mendix will automatically handle updating the entity, no need to implement a microflow to handle this. You do have the option to use a microflow if you want to enrich the default behavior, e.g., to add additional validations. Validation rules defined on the entity will be respected automatically, so validation microflows are only needed if you want to do validation more complex than this.
+Updating of resources is provided using the PATCH operation. Mendix will automatically handle updating the entity; there is no need to implement a microflow to handle this. 
+
+Example of a PATCH request:
 
 {{< figure src="/attachments/refguide/modeling/integration/build-odata-apis/modify-existing-data-1.png" >}} 
 
+And a subsequent GET request:
+
 {{< figure src="/attachments/refguide/modeling/integration/build-odata-apis/modify-existing-data-2.png" >}} 
+
+You have the option to use a microflow if you want to enrich the default behavior, including adding additional validations. Validation rules defined on the entity will be respected automatically, so validation microflows are only needed if you want to do validation more complex than this.
+
+#### 4.2.1 Validation Rules
+
+When changing data with POST, PUT or DELETE, validation rules specified on the underlying entities are applied automatically. A failed validation rule will result in a HTTP status code 422, the error message will be included in the response payload:
+
+{{< figure src="/attachments/refguide/modeling/integration/build-odata-apis/validation-rules.png" >}} 
+
+The validation rules on customer define that both `Firstname` and `Lastname` are mandatory. When you try to create a new customer without a last name, this will fail with status code 422, and the error message as defined in the validation rule will be returned in the response:
+
+{{< figure src="/attachments/refguide/modeling/integration/build-odata-apis/error-422.png" >}} 
+
+#### 4.2.2 Validation Microflows 
+
+The above illustrates how errors are handled when using entity validation rules, but you can also reuse the generated validation microflows. The following example shows a validation microflow for the customer entity. 
+
+1. On a save button, right-click and select **Generate validation microflow**:
+
+{{< figure src="/attachments/refguide/modeling/integration/build-odata-apis/generate-validation-microflow.png" >}} 
+
+Tesulting validation microflow looks like this:
+
+{{< figure src="/attachments/refguide/modeling/integration/build-odata-apis/validation-microflow.png" >}} 
+
+The use of *show validation message* activity to set the errors to be shown in the UI in this generated validation microflow. This microflow will be called in the insert microflow displayed below.
+
+2. Specify that you want to use a microflow to handle insert of a new Customer resource via the OData API. This microflow will be called whenever a client does a POST operation on the endpoint of the resource:
+
+{{< figure src="/attachments/refguide/modeling/integration/build-odata-apis/specify-use-microflow.png" >}} 
+
+3. In the insert microflow, call the generated validation microflow and commit the object if the validation succeeds:
+
+{{< figure src="/attachments/refguide/modeling/integration/build-odata-apis/insert-microflow.png" >}} 
+
+If validation fails, the *show validation message* texts are provided automatically in the response payload:
+
+{{< figure src="/attachments/refguide/modeling/integration/build-odata-apis/validation-response-payload.png" >}} 
 
 ### 4.3 Deleting Data
 
@@ -149,80 +195,41 @@ OData APIs automatically return the correct HTTP status code, like a 404 if a sp
 
 {{< figure src="/attachments/refguide/modeling/integration/build-odata-apis/standard-error-codes.png" >}} 
 
-### 4.5 Error Handling with Validation Rules
-
-When changing data with POST, PUT or DELETE, validation rules specified on the underlying entities are applied automatically. A failed validation rule will result in a HTTP status code 422, the error message will be included in the response payload.
-
-{{< figure src="/attachments/refguide/modeling/integration/build-odata-apis/validation-rules.png" >}} 
-
-
-The validation rules on customer define that both Firstname and Lastname are mandatory. When you try to create a new customer without a Lastname, this will fail with status code 422, and the error message as defined in the validation rule will be returned in the response.
-
-{{< figure src="/attachments/refguide/modeling/integration/build-odata-apis/error-422.png" >}} 
-
-### 4.6 Error Handling Validation Microflows 
-
-The above illustrates how errors are handled when using entity validation rules, but you can also reuse the generated validation microflows.
-
-Here’s an example of a validation microflow for the customer entity. On a save button right click and select generate validation microflow.
-
-{{< figure src="/attachments/refguide/modeling/integration/build-odata-apis/generate-validation-microflow.png" >}} 
-
-
-Resulting validation microflow looks like this. Notice the use of *show validation message* activity to set the errors to be shown in the UI in this generated validation microflow. This microflow will be called in the insert microflow displayed below.
-
-{{< figure src="/attachments/refguide/modeling/integration/build-odata-apis/validation-microflow.png" >}} 
-
-
-Next we’ll specify that we want to use a microflow to handle insert of a new Customer resource via the OData API. This microflow will be called whenever a client does a POST operation on the endpoint of the resource.
-
-{{< figure src="/attachments/refguide/modeling/integration/build-odata-apis/specify-use-microflow.png" >}} 
-
-
-In the insert microflow we simply call the generated validation microflow and commit the object if the validation succeeds. 
-
-{{< figure src="/attachments/refguide/modeling/integration/build-odata-apis/insert-microflow.png" >}} 
-
-
-If validation fails the *show validation message* texts are provided automatically in the response payload:
-
-{{< figure src="/attachments/refguide/modeling/integration/build-odata-apis/validation-response-payload.png" >}} 
-
 ## 5 Performance
 
-OData enables you to exactly specify which attributes you need, so other attributes are not included in the response. This helps reduce the size of the response message. To reduce the number of round-trips, associated objects can be included in the response using the $expand expression.
+OData enables you to exactly specify which attributes you need, so that other attributes are not included in the response. This reduces the size of the response message. To reduce the number of round-trips, associated objects can be included in the response using the `$expand` expression:
 
 {{< figure src="/attachments/refguide/modeling/integration/build-odata-apis/expand-expression.png" >}} 
 
-
-You can use select and expand in combination with filters, sorting, top and skip as discussed above.
+You can use select and expand in combination with filters, sorting, top and skip as discussed in [Filtering, Sorting, Paginating, and Selecting Data](#filter-sort-page-select-data).
 
 {{< figure src="/attachments/refguide/modeling/integration/build-odata-apis/sort-top-skip.png" >}} 
 
-
-For long queries it might be useful to place the query in the request body. You can do this by using POST, and adding $query to the endpoint. 
-
+For long queries, place the query in the request body. You can do this by using POST, and adding `$query` to the endpoint. 
 
 {{< figure src="/attachments/refguide/modeling/integration/build-odata-apis/long-queries.png" >}} 
 
-
-You’ll notice that you now have something that is very similar to how you would use GraphQL, where you can query a graph of objects, and limit the attributes returned to only those that you need. 
+You now have something that is very similar to how you would use GraphQL, where you can query a graph of objects, and limit the attributes returned to only those that you need. 
 
 ## 6 API-First: Decoupling APIs from Domain Model {#api-first}
 
-In some cases you may not want to directly publish APIs for your persistent entities:
+You may not want to directly publish APIs for your persistent entities because of the following:
 
-* If you want to **decouple** your API resources from your entities
-* If you want to define your services **API first**. 
-* If your data isn’t stored in the database of your app but in a **3rd party datasource**
+* You want to decouple your API resources from your entities
+* You want to define your services API-first
+* Your data is not stored in the database of your app, but in a third-party data source
 
-Regarding API first, [there are two ways to approach this](https://blog.stoplight.io/api-first-vs.-api-design-first-a-comprehensive-guide): the first states you should always start by defining a contract, e.g., an OpenApi document, the second states that it is more about setting the use case and developer experience of using your APIs first.
+There are two ways to take an API-first approach, as explained in the [API-First vs. API Design-First: A Comprehensive Guide](https://blog.stoplight.io/api-first-vs.-api-design-first-a-comprehensive-guide):
+1. You should always start by defining a contract, like an OpenAPI document.
+2. You should set the use case and developer experience of using your APIs first.
 
-The first is not something supported by Mendix OData services, unless the contract is also based on OData. The second however, is not tied to a specific tool. You could start by defining your APIs on a whiteboard, in a word document, or any other tool. The main challenge is to define a resource model that makes sense to your API users.
+The first is not something supported by Mendix OData services, unless the contract is also based on OData. The second, however, is not tied to a specific tool. You could start by defining your APIs on a whiteboard, in a text document, or any other tool. The main challenge is to define a resource model that makes sense to your API users.
 
-For these situations you can use NPEs. You first define a resource model using NPEs, expose these as OData resource, and then model microflows to map you NPE resources to the actual source data. This will be more effort than using PEs, as you’ll need to handle the OData query options in the microflow. Smart use of custom Java actions can simplify this though, as the following example illustrates.
+### 6.1 Defining a Resource Model
 
-### 6.1 Combining Data from Two Entities
+Define a resource model using [non-persistent entities](/refguide/persistability/), expose these as OData resource, and then model microflows to map you NPE resources to the actual source data. This will be more effort than using PEs, as you’ll need to handle the OData query options in the microflow. Smart use of custom Java actions can simplify this though, as the following example illustrates.
+
+### 6.1.1 Combining Data from Two Entities
 
 In this example we want to expose a single REST resource that combines data from the Customer entity and the Address entity, so it joins data from both entities, and also combines the Firstname and Lastname attributes into a single attribute Fullname. We also only want to provide the home address information, and exclude other address types.
 
@@ -265,7 +272,7 @@ With some formatting it’s better readable. The original OQL query is used as a
 
 {{< figure src="/attachments/refguide/modeling/integration/build-odata-apis/subquery.png" >}} 
 
-### 6.2 Defining Logic in an Insert Microflow
+### 6.1.2 Defining Logic in an Insert Microflow
 
 You may wonder how you are supposed to provide logic in a REST api, if REST best practices specify you should only use the default http operations insert, update, retrieve or delete?
 
@@ -280,14 +287,13 @@ Next we define the logic as the insert (POST) action.
 
 {{< figure src="/attachments/refguide/modeling/integration/build-odata-apis/define-insert-action.png" >}} 
 
-### 6.3 Running Operations Asynchronously 
+### 6.2 Running Operations Asynchronously 
 
 There’s one other [best practice](https://learn.microsoft.com/en-us/azure/architecture/best-practices/api-design#asynchronous-operations) you want to consider when doing this: for operations that take a while to complete, you should consider running them asynchronously. This means that you tell the client the request has been received, that it’s not yet completely processed but that you’ll do it in the background. In Mendix you can use a Task Queue to schedule the logic to be run in the background. In the meantime the client can GET the resource to see what the status is.
 
 The last activity of the insert microflow calls the SendCustomerEmail microflow using the TaskQueue:
 
 {{< figure src="/attachments/refguide/modeling/integration/build-odata-apis/task-queue.png" >}} 
-
 
 Example of calling the send customer email logic. The POST response provides the location where the client can retrieve the status of the request.
 
@@ -300,14 +306,15 @@ When we GET the resource from the location provided, we can see that the status 
 
 ## 7 Versioning {#versioning}
 
-Reliable versioning is key for APIs. Client applications should trust your API not to make any incompatible changes that will cause the client app to malfunction. This means that any change you make to an API should always be backwards compatible. Breaking changes can only be introduced in new APIs, offering your clients a period of time where they can migrate from the old version to the new version. This means you need to the ability to run 2 versions of the same API side by side.
+Reliable versioning is important for APIs. Client applications should trust your API not to make any incompatible changes that will cause the client app to malfunction. Any change you make to an API should always be backwards-compatible. Breaking changes can only be introduced in new APIs, offering your clients a period of time where they can migrate from the old version to the new version. This means you need to the ability to run 2 versions of the same API side by side.
 
-With OData, similar to REST APIs in Mendix, you have full control over how you define your versions. By default Mendix suggests to use semantic versioning, adding the major version number to the url. If you need to introduce breaking changes, simply duplicate the entire OData service, change the major version and you are good to go.
+With OData, similar to REST APIs in Mendix, you have full control over how you define your versions. By default, Mendix suggests to use [semantic versioning](https://semver.org/), adding the major version number to the URL. 
 
+If you need to introduce breaking changes, duplicate the entire OData service and change the major version:
 
 {{< figure src="/attachments/refguide/modeling/integration/build-odata-apis/versioning.png" >}} 
 
-This approach ensures client applications can migrate at their own pace, as you’ll both have the old version and the new major version of the API in your application. Once all client applications have migrated you can remove the old API from your application.
+This approach ensures client applications can migrate at their own pace, because you will have the old version and the new major version of the API in your application. Once all client applications have migrated, you can remove the old API from your application.
 
 ## 8 Read More
 

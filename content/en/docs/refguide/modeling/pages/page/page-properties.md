@@ -79,6 +79,8 @@ The URL of the page can be used to directly navigate to the page (for example, f
 
 Pages with parameters can also have URLs. For those pages all page parameters should be present in the URL. This is done by defining which attribute of each page parameter should be used in the URL. The syntax for this is the name of the page parameter followed by a `/` and then the name of the attribute that should be used, placed between curly brackets. For example, in the URL `/product/{Product/Name}` the `Name` attribute of the page parameter `Product` will be used in the URL (in a browser, the URL will look like `http://example.mendixcloud.com/p/product/hammer`). Any attribute of type `Boolean`, `Decimal`, `Enumeration`, `Integer`, `Long` or `String` can be used in the URL. Next to this `Id` can be used as an attribute to include the identifier of the entity in the URL, for example: `/product/{Product/Id}`.
 
+{{< figure src="/attachments/refguide/modeling/pages/page/page-url-dialog.png" alt="page url dialog" >}}
+
 {{% alert color="warning" %}}
 Page URLs are not supported for pages that have non-persistable entities as parameters
 {{%/alert %}}

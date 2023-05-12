@@ -1,8 +1,569 @@
 ---
 title: "Release Notes"
-url: _______
+url: /appstore/supported-add-ons/ats/release-notes/
 weight: 100
 ---
+
+## 2.28.11
+
+**Release date: May 9th, 2023**
+
+### Fixes
+
+* We fixed an issue that caused the incorrect display of test suite results when they had a failed data-driven test case execution.
+* We fixed an issue that caused test suite results to show double the number of activities executed.
+* We fixed an issue that made the user have to reset the access key when updating a Selenium hub.
+
+## 2.28.10
+
+**Release date: April 11th, 2023**
+
+### Improvements
+
+* We upgraded to Mendix [8.18.24](/releasenotes/studio-pro/8.18/#81824) for security fixes.
+
+### Fixes
+
+* We fixed a styling issue that caused a button to be missplaced.
+* We fixed an issue that caused users to see all the import runs across their apps instead of their current app.
+* We fixed an issue that caused the **App Admin** panel to not display any environments or Selenium hubs.
+
+## 2.28.9
+
+**Release date: March 28th, 2023**
+
+### Fixes
+
+* We fixed an issue that caused the dashboard not to show all recently run test suites and test cases.
+* We fixed an issue that caused the **Confirm subscription** link to show a message stating something went wrong when confirming the subscription, even when the subscription was successfully confirmed.
+* We fixed an issue that caused the **Search** panel to show custom actions from another app the user was a member of when editing a test case or custom action.
+* We fixed an issue that caused newly created drop-down values not to appear initially on a new input parameter.
+* We fixed an issue that caused the discontinued **ATSelenium** Selenium hub to be used when running a test case or test suite with default values.
+
+## 2.28.8
+
+**Release date: March 7th, 2023**
+
+### Fixes
+
+* When (un)subscribing to schedules, the browser showed HTML instead of rendering it as a page. This has been fixed.
+* We fixed an issue where a "Wrong browser" notification was not shown when trying to record steps in Microsoft Edge. As Edge is Chromium-based, it did not detect that the browser was not the Chrome browser.
+* We fixed an issue where old test-case and test-suite executions were not deleted after 90 days, despite the log retention time being set to 90 days.
+* On sign-up, links to the privacy statement and terms and conditions no longer return a 404 error.
+
+## 2.28.7
+
+**Release date: January 31st, 2023**
+
+### Fixes
+
+* We fixed an issue with the Desktop Recorder, which caused it to stop recording any actions when clicking in the recorder browser.
+
+## 2.28.6
+
+**Release date: January 17th, 2023**
+
+### Fixes
+
+* We fixed an issue that occurred when copying a test case that had a data set and even though the copy had the data set associated, it did not use the data set values.
+
+## 2.28.5
+
+**Release date: January 3rd, 2023**
+
+### Fixes
+
+* We fixed a generic error that occurred when trying to add a test case/suite to a test suite.
+* We fixed false positives from the Find/Assert DataGrid Row action.
+* We fixed a UI issue that caused the **Save** and **Cancel** buttons in a pop-up window to not be clickable when the zoom level was greater than 100%.
+
+## 2.28.4
+
+**Release date: December 6th, 2022**
+
+### Fixes
+
+* We applied security fixes related to administrators.
+
+## 2.28.3
+
+**Release date: November 29th, 2022**
+
+### Fixes
+
+* We applied security fixes related to administrators.
+
+## 2.28.2
+
+**Release date: November 9th, 2022**
+
+### Fixes
+
+* We applied security fixes related to used libraries.
+* We fixed an issue where videos of run test suites and test cases were not loaded.
+
+## 2.28.1
+
+**Release date: October 25th, 2022**
+
+### Fixes
+
+* We applied security fixes related to used libraries.
+
+## 2.28.0
+
+**Release date: October 11th, 2022**
+
+### Fixes
+
+* We fixed a UI error that occurred when deleting a scheduled test case/suite.
+* We fixed recording of TabContainer, NavigationListItem, and InputReferenceSetSelector for Studio Pro 9.
+* We added support for the drop-down container (as the replacement for the custom `DropDownDivConverter` widget in Studio Pro 9).
+
+## 2.27.0
+
+**Release date: July 25th, 2022**
+
+### Fixes
+
+* We fixed an issue that caused **Assert Value** to fail due to the mismatch of new lines.
+* We fixed **Set Value** and **Get Value**.
+* We fixed the Switch widget not being recorded in Studio Pro 9.
+* We fixed an issue where clicking the navigation menu was not recorded in Studio Pro 9.
+
+### Improvements 
+
+* We added execution support for the Tree Node and Gallery Marketplace widgets.
+
+## 2.26.0
+
+**Release date: July 5th, 2022**
+
+### Fixes
+
+* We fixed an issue about the loss of dataset fields and parameter bindings that occurred when copy-pasting or duplicating custom actions.
+* ATS now prevents editing while updating parameters to prevent possible data loss.
+* ATS now shows a waiting pop-up window while fetching the fields of custom actions, which can be useful when there are lots of parameters in a custom action.
+
+### Improvements 
+
+* ATS now support [Data Grid 2](/appstore/modules/data-grid-2/).
+
+## 2.25.1
+
+**Release date: April 27th, 2022**
+
+### Fixes
+
+* We fixed a bug that occurred when modifying a test case and linking the test case to a story.
+* We fixed a typo in the generic error message.
+
+## 2.25.0
+
+**Release date: November 2nd, 2021**
+
+### Improvements 
+
+* The ATS source code and model has been upgraded to Mendix [8.18.7](/releasenotes/studio-pro/8.18/#8187).
+* The ATS Job running web service no longer needs a username and password combination to authenticate the requests. The API token is enough to authenticate the request.
+
+## 2.24.0
+
+**Release date: April 8th, 2021**
+
+### Mendix 9 Support
+
+With this release, ATS officially supports testing apps that are built with Mendix 9. This includes both recording test steps and executing tests.
+
+### Improvements
+
+* We added a confirmation dialog box when extracting steps into a reusable action. This is to prevent accidentally extracting an action.
+
+### Fixes
+
+* We fixed a bug where values did not accept more than 500 characters. (CP13883)
+* We fixed a bug where setting the value for test steps based on an input parameter in a custom action caused an error to be thrown. (CP13922)
+* We fixed a bug where ATSelenium was not available as a Selenium provider for newly onboarded apps.
+* We fixed a bug where values in test steps were not shown correctly if they included special HTML characters.
+* We fixed a bug where auto-suggestions for Boolean, any, and enumeration fields did not suggest all possible constant values.
+
+## 2.23.0
+
+**Release date: March 2nd, 2021**
+
+### Dark Theme Support
+
+In the ATS team, we often have fierce debates about light vs dark themes. Luckily, with this new feature, you also have the option to choose for yourself what theme you prefer.
+
+You can change your theme by clicking your profile image and selecting one of the following options:
+
+* **System** (default) – match the theme to your operating system preference
+* **Dark** – use a dark theme (NEW!)
+* **Light** – use a light theme (this is the standard theme that we have used since ATS [2.0](/releasenotes/add-ons/ats-2.0/))
+
+### Item Locking
+
+As a web-based tool, ATS has many advantages. For one, there is no need to install ATS. However, this also comes with some challenges, one of which is that there is no local repository system. This means that changes are done directly to the project-wide repository. So, if two testers are working on a test case, strange things can happen, like test steps being out of order.
+
+To prevent such incidents, we no longer allow two users to edit a test case simultaneously. If you try to open a test case that is currently being edited by another user, ATS will stop you and show a clear message. The same goes for test suites and custom actions.
+
+### Improvements
+
+* The **Extract action** dialog box has been renamed to **Set details** to avoid confusion.
+* All functions that return a web element have had that output parameter renamed to be more consistent. ATS does not distinguish between different types of web elements, and we hope the new naming makes that clearer.
+* We fixed several styling issues, most notably, support for responsive mode. On smaller screns, the side menu will now collapse into a slide-over that can be toggled via a hamburger menu. The primary use for this is the recording screen, where you might want to have the recording and the app that you are recording side by side.
+* The **Import**/**New** buttons on the repository have now been split into two separate buttons instead of a single action button.
+
+### Fixes
+
+* We fixed a bug where a scheduled test did not start without giving any error message.
+* Changes to a dataset name and description were sometimes not saved correctly. This also caused linked test cases to fail. Both issues have now been fixed.
+* Due to a bug, a job that failed during the initial stage did not show any logs. This has been fixed. 
+* The **Value** drop-down menu closed intermittently. We have made changes to the widget to avoid this as much as possible.
+* We fixed a bug where importing failed for a test case that had a step using the output value of a previous step that was a custom action.
+* We fixed an issue where the **Log off** button did not work and instead showed some JSON. It now works correctly by first logging the user out of their current ATS session and then redirecting them to the Mendix Developer Portal.
+* The links to the documentation and the desktop recorder have both been fixed.
+
+## 2.22.0
+
+**Release date: January 19th, 2021**
+
+### Reworked Value Entry Widget
+
+Due to increased feedback from users, we have overhauled the widget used to enter test step values. Here are the main changes:
+
+* Major speed improvements – instead of checking for values every time, the widget now caches the possible values leading to a more fluent experience.  
+* Literal values are editable – when the selected value is a literal string (for example, `button1`), then clicking to edit the value keeps this literal value so it can easily be edited in place (which means that changing `button1` to `button2` is much easier compared to before, when the entire string had to be retyped).
+* Pressing <kbd>Enter</kbd> saves the currently selected value – it is no longer necessary to manually click the recommended value, as pressing <kbd>Enter</kbd> now automatically selects it.
+
+We hope you enjoy these improvements and that they help you speed up your work with ATS.
+
+### More Warnings for Fewer Errors
+
+Test cases in ATS are dynamic with values that come from parameters, datasets, and previous test steps. In this release, we added checks for all of these to ensure that when you delete a test step, for example, its output (meaning, its return value) is not used in subsequent steps. If the value is used, a warning is shown that allows you to cancel the operation. The same applies when removing or deleting datasets and the parameters of a custom action. Disabling test steps is also covered by this check. 
+
+### Improvements
+
+* ATS now adds new icons to indicate if a step is a custom action and/or if the step has a precondition. The icons are visible when editing a test case or action. Also, the **Open** button is no longer shown for test steps that cannot be opened.
+* We have made some architecture changes that should improve performance when editing actions, test cases, and test suites.
+* ATS now clearly separates the input from output parameters when editing a test step. The output parameter type is also shown and the confusing **Required/optional** label has been changed to **Possibly empty** for optional output values.
+* When selecting a value for a test step that references an output value of another step, ATS now shows if that step is disabled. The output values for disabled test steps are always `empty`.
+
+### Fixes
+
+* We fixed a bug where copying a disabled test step resulted in an enabled test step.
+
+## 2.21.0
+
+**Release date: December 1st, 2020**
+
+### New Features
+
+* In an effort to reduce the amount of user clicks, ATS now shows the **Most commonly used** functions when the search dialog box is open for a test step. Use this to quickly select a function.
+* It is now possible to add comments in test cases and custom actions using the new **Comment** function. This function will be ignored during execution and only serves as a way to add more information to your tests.
+
+### Improvements
+
+* The ATS favicon has been updated with the ATS logo. This should make it easier to make out ATS in the browser if there are multiple tabs open.
+* Test configuration no longer shows all settings by default. Only the most frequently changed settings are shown, and the rest are under a new **Advanced** toggle button.
+* We have added extra caching for function meta information. This should make editing test cases a bit faster.
+* The test case and action logs now show the time of execution in the same format and time zone to avoid confusion.
+* It is now possible to cancel a job from a logs page. The **Run** button is now replaced with a **Cancel** button if the test case/suite is still running. There is a known issue with this canceling, where the job might continue after canceling, and this is currently under investigation.
+* On the logs page, the **Run** button has been renamed to **Rerun**. The behavior of this button was also changed so that it runs the same test again with the same configuration. To run the test with a different configuration, a new button called **Configure and rerun** has been added as a drop-down menu option.
+* We have refactored the recording page in an effort to improve performance, especially when recording long test cases with many steps.
+
+### Fixes
+
+* We fixed a bug where the recorder showed an error if too many events were recorded in a short span of time (usually caused by double/triple clicking). As a consequence, if many events are recorded in a short span of time, there might be a noticeable delay before the events appear in the recording screen. Let us know if this happens often.
+* A bug where schedules with a schedule time set in the past were set to disabled without a message has been fixed. Now, a message is corectly shown.
+* Due to a bug, it was not possible to download a recording from ATSelenium. This is now fixed.
+* We fixed a bug where the **Get Visible Item/Row Count** function returned the wrong result for a data grid. (CP 11186)
+* We investigated an issue concerning duplicate parameters in test steps. Additional checks were added to prevent this from happening in the future. (CP 11189)
+* A bug that caused the **Run** button to still be active for running test cases has been fixed. (CP 11307)
+
+## 2.20.1
+
+**Release date: August 24th, 2020**
+
+### Fixes
+
+* We fixed a bug where running a test case for the first time showed a message to select a Selenium hub instead of pre-selecting the default Selenium hub.
+* Due to a bug, if an error occurred while starting a job, a generic error was thrown instead of collecting the error as part of the job log. This is now fixed.
+
+## 2.20.0
+
+**Release date: August 17th, 2020**
+
+### Built-in Selenium (Preview)
+
+One of the biggest hurdles when starting with ATS is setting up a Selenium instance. Finally, we are now offering this out-of the box. Every enteprise licensed app will include a pre-configured Selenium hub for free that can run up to three parallel sesions (one session for single-app licenses). Please note that this is a preview feature, and the main goal is to gather feedback before it is officially released and is subject to change without notice.
+
+### Live View (Preview)
+
+When using the built-in Selenium, we now provide a live view of the running Selenium sessions in ATS. Use this to monitor how your test is progressing in real time.
+
+### Start Testing Faster
+
+The main goal of ATS is to test your Mendix application. Therefore, with this release, we tried to reduce any the extra configuration around running tests.
+
+#### Fetch Environment Information from the Developer Portal
+
+ATS now fetches information such as the name and URL of existing app environments for an app from the [Developer Portal](/developerportal/).
+
+To distinguish these environments from ones that are manually managed, the name is suffixed with `(Sprintr)` and an additional flag is added.
+
+These environments are not editable and will be updated daily.
+
+We hope this makes it easier to start using ATS on new apps.
+
+{{% alert color="info" %}}
+This feature is only available for licensed Mendix apps and only if the user **smartdigitalfactory@clevr.nl** is invited to the app.
+{{% /alert %}}
+
+#### Configure a Default Selenium Hub and Environment
+
+When starting a new test case/suite, it was always required to select an environment and a Selenium hub for that execution. 
+
+To speed this up, we added the option to choose a default hub and environment. They can be configured from the app settings page. The built-in Selenium will be set as a default.
+
+#### Run with Default Settings
+
+Related to the above point, if both a default Selenium hub and environment are configured, then a test case can be started without having to select anything.
+
+To make this process even faster and skip one click, we added the option to run tests directly without going through the configuration screen.
+
+### Results Page Improvements
+
+* When starting a test, the view no longer goes to the **Test Runs** page but to the **Results** page for that specific test instead.
+* The **Results** page received a new progress indicator that shows how many of the tests are passed, failed, or not executed.
+
+### Other Changes
+
+* We upgraded to the latest [Mendix SSO](/appstore/modules/mendix-sso/) version, which includes some security patches.
+
+## 2.19.0
+
+**Release date: June 9th 2020**
+
+### License Improvements
+
+* In the last thirty days before a license expires, a message will now appear in the **My Apps** screen.
+* After a license expires, the app will now continue to be visible in the **My Apps** screen with a message saying **License expired**. At this point, it will not be possible to open the app or run any tests. However, all data is still kept for some time and will be available again if you decide to extend the license.
+* Testers without any licensed apps were up to now not allowed to use ATS. From now on, if a tester had a license for an app in the past, they will be allowed to visit ATS and see a list of apps that were licensed.
+* In total, we have tried to make the expiry of a license more transparent and improve the user experience around it.
+
+### Fixes
+
+* We fixed a bug where it was not possible to log in to ATS without clearing browser cookies.
+
+## 2.18.0
+
+**Release date: May 14th, 2020**
+
+### Improvements
+
+* ATS now supports the recording and execution of clicking on containers and list views. 
+
+### Fixes
+
+* We fixed a bug where ATS did not record clicking a drop-down `div` converter.
+* We fixed a bug where ATS did not correctly click a radio button.
+* Due to a bug, cutting elements whose total length exceeded 200 characters resulted in an error. This is no longer allowed and is preceded by a warning message.
+* We fixed a bug where clicking an association radio button list was not properly recorded or executed.
+* We fixed a bug introduced in [2.17.1](/releasenotes/add-ons/ats-2.17/#2171) where unique names no longer included list item names.
+
+## 2.17.1 {#2171}
+
+**Release date: May 4th, 2020**
+
+### Improvements
+
+* When running test cases/suites, it no longer possible to queue an unlimited number of them. Instead, up to 5 items can be queued/running at one time. Any additional test cases/suites will be automatically canceled with a warning. This affects test cases/suites that are started manually, scheduled, or started by CI/CD.
+
+### Fixes
+
+* When running scheduled test cases/suites, if there was a problem running one of the schedules, this blocked the execution of all scheduled items. This is now fixed so that an error in one schedule does not block other schedules from running.
+
+## 2.17.0
+
+**Release date: April 30th, 2020**
+
+### Mendix 8.9 Compatibility
+
+Apps built with [Mendix 8.9](/releasenotes/studio-pro/8.9/) can now be tested and recorded using ATS.
+
+### Improvements
+
+* When trying to click an element that is off screen, ATS automatically scrolls to that element before clicking it. In the past, this scrolling was always intended to align the element to either the top or bottom of the screen. This is not very natural and caused problems (for example, when sticky headers or footers were used). Now, scrolling will try to put the element to click in the center of the screen before proceeding with the click.
+* When copying an element with a very long name that would cause the new name to go over the limit for name length, we now show a warning message.
+
+### Fixes
+
+* Due to the use of an outdated appium library, it was not possible to test a web application on mobile. This is now fixed.
+
+## 2.16.0
+
+**Release date: October 16th, 2019**
+
+### Mendix 8.2.2 Compatibility
+
+Apps built with [Mendix 8.2.2](/releasenotes/studio-pro/8.2/#822) can now be tested using ATS.
+
+### Fixes
+
+* Due to a bug, clicking on the navigation menu was not always recorded, or it was recorded with a missing caption. This has been fixed.
+* From Mendix 8.0, buttons rendered as links were not recorded properly. This has been fixed.
+* When clicking menu items, navigation items, and radio buttons, there was a problem if the caption contained characters such as `"#$%&'()*+,.\/`. These characters have a special meaning in the style selector language that ATS uses. We fixed this by escaping the special characters.
+* Due to a bug, a disabled step in a custom action was still executed when the action was run. This has been fixed.
+
+## 2.15.0
+
+**Release date: September 26th, 2019**
+
+### Desktop Recorder
+
+A new recorder has been released for ATS. For more information, see [Desktop Recorder](/appstore/supported-add-ons/ats/rg-two-recorder/).
+
+### Improvements
+
+When deleting an action that is being used somewhere else, a warning is now shown in the **Confirm Delete** pop-up window.
+
+## 2.14.1
+
+**Release date: September 18th, 2019**
+
+### Fixes
+
+* We fixed an issue where clicking an item in the sidebar menu did not work as expected when the menu item did not have an icon.
+
+## 2.14.0
+
+**Release date: September 17th, 2019**
+
+### Improvements
+
+* You can now customize the starting page per app. You can choose this to be the **Dashboard**, **Test cases**, or **Test runs**.
+* By popular request, we simplified the usage of XPath as a way to find elements. The function `Find/Assert Element by XPath` is now available under the **Web** category.
+
+### Fixes
+
+* We fixed an issue where clicking an item in the sidebar menu did not work as expected when the menu was collapsed.
+* Due to a bug in the Mozilla Firefox web driver, clicking a data grid row did not work correctly for this browser. We have implemented a workaround for this until the issue is addressed by Mozilla Firefox.
+
+## 2.13.2
+
+**Release date: August 4th, 2019**
+
+### Mendix 8 Compatibility
+
+Apps built with [Studio Pro 8](/releasenotes/studio-pro/8/) can now be tested using ATS.
+
+### Fixes
+
+* Since the update to Selenium v3.14, the click coordinates behavior was changed to refer from the center of the web element instead of the upper-left corner. Because we like to keep the behavior of our functions consistent between upgrades, we implemented an offset to make sure that **Click Coordinates** works with respect to the upper-left corner. (Ticket 8752)
+* We fixed an issue introduced in 2.13 where error logs were missing for data-driven test cases. (Ticket 8760)
+* We fixed a minor issue where the warning tooltip showed the same text multiple times.
+
+## 2.13.1
+
+**Release date: August 1st, 2019**
+
+### Fixes
+
+* We fixed an issue where test suites within test suites did not finish properly.
+* We fixed an issue where click coordinates did not work properly if the elements were outisde the viewport.
+
+## 2.13.0
+
+**Release date: July 31st, 2019**
+
+### Upgraded Selenium from Version 3.8 to 3.141.59
+
+This lets ATS run tests on the latest browser versions, which provides improvements in both speed and stability.
+
+If you are using Browserstack or Saucelabs, ATS will automatically use the new version, and you do not have to do anything. 
+
+If you are using another Selenium hub, we highly recommend updating it to use Selenium version 3.141.59, as the current version will no longer be supported. You can the download Selenium version 3.141.59 [here](https://www.seleniumhq.org/download/).
+
+### Improvements
+
+* We improved the performance when processing test results.
+* The **Error Log** tab now shows the exact date and time when a test case was started and when it finished with execution.
+
+### Fixes
+
+* In some cases, the automatic wait did not work correctly for Mozilla Firefox. This is now fixed.
+* We fixed an issue where the **Test Runs** page did not load.
+
+## 2.12.0
+
+**Release date: July 21st, 2019**
+
+### Test Step Settings
+
+We are very excited to bring you new features that are geared towards making it easier to create and modify tests with ATS. With this release, we are adding settings for test steps that allow you to do the following:
+
+* Disable a test step
+* Abort execution on not passed
+* Negate the assert in a test case 
+
+#### Disabling a Test Step
+
+This feature lets you temporarily disable a test step without deleting it. This is similar to commenting out lines of code. Use this to test how the test script behaves without certain steps. If it turns out that the step is needed, simple enable it again. This feature can be used in test suites, test cases, and actions.
+
+#### Abort Execution on Not Passed
+
+We have often seen that large test suites need a kind of setup script at the beggining that creates certain data and other conditions. When case this script fails, it makes no sense to continue with the execution of the test suite anymore. This is exaclty the scenario that we had in mind when we created this feature. When a step is flaged as abort not passed, if it is not passed any subsequent test, the steps will not be executed. This saves time and money. The feature is only available for test suites with sequential execution.
+
+#### Negate Test Result
+
+Most of the time, tests assert the presence of elements on a page and assert that text or number have an expected value. However, sometimes there is a need to assert the opposite (meaning, assert that an element is NOT on the page) or that a text does not have a certain value. This is now possible with the negate toggle. 
+
+This is a complete list of all the functions that can be negated:
+
+* `Logic`
+    * `Assert Contains String`
+    * `Assert endsWith`
+    * `Assert startsWith`
+    * `Assert equalTo` – `Assert not equalTo`, `assert null`, `assert not null`, `assert not true`, and `assert not false` have all been deprecated in favor of `Assert equalTo`; if these functions were used in a test case or action, they have been automatically replaced with an `Assert equalTo` with the correct `Negate` value
+    * `Assert equalToIgnoringCase`
+    * `Assert equalToIgnoringWhitespace`
+* `Web`
+    * `Assert Element Attribute Equals`
+    * `Assert Element Matches Selector`
+    * `Find Element`
+    * `Find Element By Id`
+    * `Find Element By CSS`
+    * `Find Element By Sizzle`
+* `Mendix`
+    * `Assert Current Page Title`
+* `Widget:Find`
+    * `Find Checkbox Set Selector`
+    * `Find DataGrid Row`
+    * `Find/Assert Dialog`
+    * `Find Grid Selector`
+    * `Find Item/Row`
+    * `Find Menu Item`
+    * `Find Selected Item/Row`
+    * `Find Widget Child Node`
+    * `Find/Assert Widget`
+* `Widget:Assert`
+    * `Assert Active Tab Name`
+    * `Assert Checkbox Set Selector Value`
+    * `Assert Checkbox Value`
+    * `Assert Grid Selector Value`
+    * `Assert Simple Checkbox Set Selector Value`
+    * `Assert Validation Message`
+
+#### Improvements
+
+* We reduced the timeout for **Set Value** from 60 seconds to 5 seconds. This helps a test to fail faster when a widget is not found or not editable.
+
+#### Fixes
+
+* We fixed a bug where the function name was not shown for a test step with no parameters (for test cases and actions). 
+* We fixed a bug where in rare circumstances logs were missing for test cases.
+* We fixed a bug where ATS did not wait for the page to load after logging in.
 
 ## 2.11.2
 

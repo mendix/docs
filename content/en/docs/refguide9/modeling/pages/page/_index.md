@@ -147,7 +147,7 @@ Both modes allow you to edit your page by doing the following:
 * Viewing and editing properties of each widget in the **Properties** pane
 * Opening a **Properties** dialog box from the menu you get when you right-click the widget
 
-Additionally, the [Page Explorer](/refguide9/page-explorer/) can be used in combination with Structure mode or Design mode, which shows a tree view of your page structure and contains the same editing capabilities.
+Additionally, the [Page Explorer](/refguide9/page-explorer/) can be used in combination with **Structure mode** or Design mode, which shows a tree view of your page structure and contains the same editing capabilities.
 
 ### 3.1 Structure Mode {#structure-mode}
 

@@ -65,14 +65,14 @@ Here is an example of hiding button containing columns to be hidden:
 {{< figure src="/attachments/appstore/modules/data-widgets/data-grid-2/hiding.png" alt="Example of hiding button containing columns to be hidden" >}}
 
 {{% alert color="info" %}}
-When a column is marked as “Yes, hidden by default” it will render differently in **Structure mode** and Design mode and to indicate that the column is hidden. **When running the application, the column will in fact be hidden by default**. 
+When a column is marked as “Yes, hidden by default” it will render differently in **Structure mode** and **Design mode** and to indicate that the column is hidden. **When running the application, the column will in fact be hidden by default**. 
 {{% /alert %}}
 
 Here is an example containing a column with **Yes, hidden by default** in **Structure mode**:
 
 {{< figure src="/attachments/appstore/modules/data-widgets/data-grid-2/hidden-columns-structure-mode.png" alt="Example containing a column with “Yes, hidden by default” in Structure mode" >}}
 
-Here is an example containing a column with **Yes, hidden by default** in Design mode:
+Here is an example containing a column with **Yes, hidden by default** in **Design mode**:
 
 {{< figure src="/attachments/appstore/modules/data-widgets/data-grid-2/hidden-columns-design-mode.png" alt="Example containing a column with “Yes, hidden by default” in Design mode" >}}
 

@@ -147,18 +147,18 @@ Both modes allow you to edit your page by doing the following:
 * Viewing and editing properties of each widget in the **Properties** pane
 * Opening a **Properties** dialog box from the menu you get when you right-click the widget
 
-Additionally, the [Page Explorer](/refguide9/page-explorer/) can be used in combination with **Structure mode** or Design mode, which shows a tree view of your page structure and contains the same editing capabilities.
+Additionally, the [Page Explorer](/refguide9/page-explorer/) can be used in combination with **Structure mode** or **Design mode**, which shows a tree view of your page structure and contains the same editing capabilities.
 
 ### 3.1 Structure Mode {#structure-mode}
 
-In **Structure mode**, the page widgets are laid out so that it is easy to see the logical relationship between them. It has the following features which are not available in Design mode:
+In **Structure mode**, the page widgets are laid out so that it is easy to see the logical relationship between them. It has the following features which are not available in **Design mode**:
 
 * You can zoom a page in or out using the **Zoom** drop-down menu in the upper-right corner of a page
 * Widgets are shown with additional information easily visible – for example, data sources for data grids and the width assigned to columns
 
     {{< figure src="/attachments/refguide9/modeling/pages/page/structure-mode-info.png" alt="Structure mode info" >}}
 
-* Each widget has a drop-zone before/above and after/below it – this makes it easier to place widgets correctly when they appear close together in Design mode
+* Each widget has a drop-zone before/above and after/below it – this makes it easier to place widgets correctly when they appear close together in **Design mode**
 * Right-click a drop-zone allows you to insert a widget into it
 * The top bar of the page consists of icons representing the most frequently used widgets – these cannot be dragged, but are positioned by clicking a drop-zone after selecting the widget (the last two open a dialog box that lets you choose an element from a list of widgets/building blocks)
 
@@ -173,7 +173,7 @@ In **Structure mode**, the page widgets are laid out so that it is easy to see t
 In **Design mode**, the page is laid out as it will appear when published so that it is easy to see the spatial relationship between the elements. 
 
 {{% alert color="info" %}}
-It is recommended to use it in combination with the [Page Explorer](/refguide9/page-explorer/), which allows to see and select structural elements that are hidden in Design mode due to styling.
+It is recommended to use it in combination with the [Page Explorer](/refguide9/page-explorer/), which allows to see and select structural elements that are hidden in **Design mode** due to styling.
 {{% /alert %}}
 
 For example, the example page shown in [Structure mode](#structure-mode), above, will look like this in **Design mode** for a desktop:
@@ -182,7 +182,7 @@ For example, the example page shown in [Structure mode](#structure-mode), above,
 
 It has the following features which are not available in **Structure mode**:
 
-* The widgets are shown as they will be on the page – for example two text widgets which are laid out vertically in structural mode may actually be laid out horizontally when the app is published, and this will be reflected in Design mode
+* The widgets are shown as they will be on the page – for example two text widgets which are laid out vertically in structural mode may actually be laid out horizontally when the app is published, and this will be reflected in **Design mode**
 * The page layout can be seen for different device modes – for example phone or browser by clicking the appropriate device mode button:
 
     {{< figure src="/attachments/refguide9/modeling/pages/page/design-factor.png" alt="Show styles button" >}}

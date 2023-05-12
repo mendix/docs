@@ -17,15 +17,15 @@ This document shows how [published OData services](/refguide/published-odata-ser
 
 REST API best practices usually include some of the following:
 
-* **Use JSON** – JSON is easy to read, libraries to process it are available in most languages. However, don’t forget RESTful HTTP supports content negotiation, so using binary images, PDF or even MS-word content-type is also REST and often better than converting binary to JSON.
+* **Use JSON** – JSON is easy to read, libraries to process it are available in most languages. 
 * **Use nouns, not verbs (resource-first, no actions in path)** – APIs should be resource based instead of action based to improve decoupling: all interactions assume resources and a limited set of standardized operations.
-* **A resource has an ID** – Every resource has a unique path where it can be retrieve or updated.
-* **A resource has a uniform interface (for example, the correct use of an HTTP operation)** – Use the standardized set of HTTP operations to work with your resources: GET (retrieve), POST (create/insert), PUT (replace), PATCH (update), DELETE.
+* **A resource has an ID** – Every resource has a unique path where it can be retrieved or updated. See the [Retrieving Data](#retrieving-data) section in this document.
+* **A resource has a uniform interface (for example, the correct use of an HTTP operation)** – Use the standardized set of HTTP operations to work with your resources: GET (retrieve), POST (create/insert), PUT (replace), PATCH (update), DELETE. See the [Creating and Changing Data with Full CRUD](#creating-changing-data) section in this document.
 * **Name collections with plurals** – An endpoint that can return more than one resource should indicate that by have the resource name in plural.
-* **Use of standard HTTP status codes** – HTTP has standardized status codes for most situations, good REST APIs use these. Status codes work the same way across applications, application specific errors should be handled in the payload.
-* **Versioning and compatibility** – usually specifies versioning should be date based or semantic versioning with the major version part of the url. Clients should assume changes to an endpoint are always backwards compatible. In case of breaking changes, a new endpoint including a new major version number should be used.
-* **Use filtering, sorting, and pagination** – To ensure best possible performance, and to limit resource usage, enable clients to flexibly define exactly what data they need. This also helps to decouple the client and the service, as not all clients have the same needs. Enabling the client to define what is needed, helps to serve more types of clients.
-* **Secure your APIs** – Apps shouldn’t be able to access more information than they are allowed to see.
+* **Use of standard HTTP status codes** – HTTP has standardized status codes for most situations, good REST APIs use these. Status codes work the same way across applications, application specific errors should be handled in the payload. See the [Automatic Standard HTTP Error Codes](#http-codes) section in this document.
+* **Use filtering, sorting, and pagination** – To ensure best possible performance, and to limit resource usage, enable clients to flexibly define exactly what data they need. This also helps to decouple the client and the service, as not all clients have the same needs. Enabling the client to define what is needed, helps to serve more types of clients. See the [Filtering, Sorting, Paginating, and Selecting Data](#filter-sort-page-select-data) section in this document.
+* **Versioning and compatibility** – usually specifies versioning should be date based or semantic versioning with the major version part of the url. Clients should assume changes to an endpoint are always backwards compatible. In case of breaking changes, a new endpoint including a new major version number should be used. See the [Versioning](#versioning) section in this document.
+* **Secure APIs** – Apps should not be able to access more information than they are allowed to see.
 
 ### 1.2 Starting Point: Example Domain Model
 
@@ -35,7 +35,9 @@ This document use the following domain model as an example:
 
 REST APIs, and especially OData APIs, often provide access to data within the app. Mendix OData APIs are excellent for providing APIs for entities, but can also be used for accessing other types of data. See the [API-First](#api-first) section to learn about decoupling APIs from the domain model. 
 
-## 2 Implementing REST APIs with OData
+## 2 Creating OData APIs {#creating-odata-apis}
+
+
 
 ### 2.1 Published OData Service Document
 
@@ -72,9 +74,9 @@ You also have an OpenAPI 3.0.1 contract:
 
 {{< figure src="/attachments/refguide/modeling/integration/build-odata-apis/openapi-contract.png" >}} 
 
-## 3 Retrieving Data 
+## 3 Retrieving Data {#retrieving-data}
 
-OData REST APIs work as you would expect a REST API to function. Here are some examples using the [REST plugin in Visual Studio Code.](https://marketplace.visualstudio.com/items?itemName=humao.rest-client)
+OData REST APIs work as you would expect a REST API to function. Here are some examples using the [REST Client](https://marketplace.visualstudio.com/items?itemName=humao.rest-client) plugin in Visual Studio Code.
 
 Fetching all customers:
 
@@ -86,7 +88,7 @@ Fetching a single Customer resource can be done by providing the id between brac
 
 {{< figure src="/attachments/refguide/modeling/integration/build-odata-apis/fetch-single-customer.png" >}} 
 
-### 3.2 Filtering, Sorting, Paginating, and Selecting Data
+### 3.2 Filtering, Sorting, Paginating, and Selecting Data {#filter-sort-page-select-data}
 
 OData standardizes how you specify which resources you’re interested in. This provides the client with the tools to ensure that the response payload is as small as possible. It also ensures that the Mendix service implementation will be able to push down the filtering, sorting and pagination into the database, ensuring use of the database query optimizer and available indexes to optimize performance.
 
@@ -103,7 +105,7 @@ The following example illustrates how you can combine filtering, sorting, pagina
 
 Alternatively you can specify the query in the payload of a POST call, which can be useful if you have a long complex query.
 
-## 4 Creating and Changing Data with Full CRUD
+## 4 Creating and Changing Data with Full CRUD {#creating-changing-data}
 
 ### 4.1 Inserting New Data
 
@@ -141,13 +143,13 @@ Deleting is provided using the DELETE operation.
 
 {{< figure src="/attachments/refguide/modeling/integration/build-odata-apis/delete-operation.png" >}} 
 
-### 4.4 Automatic Standard HTTP Error Codes
+### 4.4 Automatic Standard HTTP Error Codes {#http-codes}
 
 OData APIs automatically return the correct HTTP status code, like a 404 if a specified resource cannot be found.
 
 {{< figure src="/attachments/refguide/modeling/integration/build-odata-apis/standard-error-codes.png" >}} 
 
-### 4.5 Validation rules
+### 4.5 Error Handling with Validation Rules
 
 When changing data with POST, PUT or DELETE, validation rules specified on the underlying entities are applied automatically. A failed validation rule will result in a HTTP status code 422, the error message will be included in the response payload.
 
@@ -158,7 +160,7 @@ The validation rules on customer define that both Firstname and Lastname are man
 
 {{< figure src="/attachments/refguide/modeling/integration/build-odata-apis/error-422.png" >}} 
 
-### 4.6 Validation microflows 
+### 4.6 Error Handling Validation Microflows 
 
 The above illustrates how errors are handled when using entity validation rules, but you can also reuse the generated validation microflows.
 
@@ -296,7 +298,7 @@ When we GET the resource from the location provided, we can see that the status 
 
 {{< figure src="/attachments/refguide/modeling/integration/build-odata-apis/get-resource-sent.png" >}} 
 
-## 7 Versioning
+## 7 Versioning {#versioning}
 
 Reliable versioning is key for APIs. Client applications should trust your API not to make any incompatible changes that will cause the client app to malfunction. This means that any change you make to an API should always be backwards compatible. Breaking changes can only be introduced in new APIs, offering your clients a period of time where they can migrate from the old version to the new version. This means you need to the ability to run 2 versions of the same API side by side.
 
@@ -306,3 +308,9 @@ With OData, similar to REST APIs in Mendix, you have full control over how you d
 {{< figure src="/attachments/refguide/modeling/integration/build-odata-apis/versioning.png" >}} 
 
 This approach ensures client applications can migrate at their own pace, as you’ll both have the old version and the new major version of the API in your application. Once all client applications have migrated you can remove the old API from your application.
+
+## 8 Read More
+
+* [OData Services](/refguide/integration/odata-services/)
+* [Wrap Services, APIs, or Databases with OData](/refguide/wrap-services-odata/)
+* [Integration](/refguide/integration/)

@@ -16,13 +16,13 @@ If you plan to create a large number of APIs, using [published OData services](/
 REST API best practices usually include some of the following:
 
 * **Use JSON** – JSON is easy to read, libraries to process it are available in most languages. However, don’t forget RESTful HTTP supports content negotiation, so using binary images, PDF or even MS-word content-type is also REST and often better than converting binary to JSON.
-* **Use nouns not verbs (resource-first, no actions in path)** – APIs should be resource based instead of action based to improve decoupling: all interactions assume resources and a limited set of standardized operations.
+* **Use nouns, not verbs (resource-first, no actions in path)** – APIs should be resource based instead of action based to improve decoupling: all interactions assume resources and a limited set of standardized operations.
 * **A resource has an ID** – Every resource has a unique path where it can be retrieve or updated.
 * **A resource has a uniform interface, i.e., correct use of http operation** – Use the standardized set of HTTP operations to work with your resources: GET (retrieve), POST (create/insert), PUT (replace), PATCH (update), DELETE.
 * **Name collections with plurals** – An endpoint that can return more than one resource should indicate that by have the resource name in plural.
 * **Use of standard HTTP status codes** – HTTP has standardized status codes for most situations, good REST APIs use these. Status codes work the same way across applications, application specific errors should be handled in the payload.
 * **Versioning and compatibility** – usually specifies versioning should be date based or semantic versioning with the major version part of the url. Clients should assume changes to an endpoint are always backwards compatible. In case of breaking changes, a new endpoint including a new major version number should be used.
-* **Use filtering, sorting & pagination** – To ensure best possible performance, and to limit resource usage, enable clients to flexibly define exactly what data they need. This also helps to decouple the client and the service, as not all clients have the same needs. Enabling the client to define what is needed, helps to serve more types of clients.
+* **Use filtering, sorting, and pagination** – To ensure best possible performance, and to limit resource usage, enable clients to flexibly define exactly what data they need. This also helps to decouple the client and the service, as not all clients have the same needs. Enabling the client to define what is needed, helps to serve more types of clients.
 * **Secure your APIs** – Apps shouldn’t be able to access more information than they are allowed to see.
 
 ## 2 Implementing REST APIs with OData
@@ -31,42 +31,40 @@ This document use the following domain model as an example:
 
 {{< figure src="/attachments/refguide/modeling/integration/build-odata-apis/implement-odata-apis.png" >}}
 
-REST APIs, and especially OData APIs often provide access to data within the app. Mendix OData APIs are excellent for providing APIs for entities, but can also be used for accessing other types of data. This is illustrated later in this article. 
-
-See the [API-First](#api-first) section to learn about decoupling APIs from the domain model. 
+REST APIs, and especially OData APIs, often provide access to data within the app. Mendix OData APIs are excellent for providing APIs for entities, but can also be used for accessing other types of data. See the [API-First](#api-first) section to learn about decoupling APIs from the domain model. 
 
 ### 3.1 Published OData Service Document
 
-To provide an Odata REST API for an entity you can add it from the domain model, or in the published odata service document. Here you an also select which attributes and associations are available in the API.
+To provide an Odata REST API for an entity, add it from the domain model, or in the [published OData service](/refguide/published-odata-service/) document. In this document, you also select which attributes and associations are available in the API:
 
 {{< figure src="/attachments/refguide/modeling/integration/build-odata-apis/select-attributes-associations.png" >}} 
 
+For every published resource, you can define what functionality is available: 
 
-For every published resources you can define what functionality is available (create = POST, read = GET, update = PATCH, delete =DELETE ), and some other capabilities like if counting the results is supported, skipping results (skip) and limiting the number of results returned (top). 
+* **Create** = POST
+* **Read** = GET
+* **Update** = PATCH, 
+* **Delete** = DELETE 
+
+You can also define other capabilities, like if counting the results is supported, and whether you **skip** results or limiting the number of results returned (**top**): 
 
 {{< figure src="/attachments/refguide/modeling/integration/build-odata-apis/edit-published-resource.png" >}} 
 
+### 3.2 OpenAPI 3 Contract and Test Page
 
-This document presents a resource-first approach to building REST APIs, where you first define the resource you want to expose, and then define which standard operations you want to provide on these resources. Insertable enables POST, readable is a GET, updatable is a PATCH, and deletable will result in a DELETE http operation. This guides you into using the HTTP operations in the right way, resulting in a better REST API.
-
-### OpenApi version 3 contract and test page
-
-When you start your app you can will have a swagger documentation and test page.
+When you start your app, you see a Swagger documentation and test page:
 
 {{< figure src="/attachments/refguide/modeling/integration/build-odata-apis/swagger-doc.png" >}} 
 
-
-The test page lists all accepted parameters, and example payloads, both for regular responses, as well as for error payloads.
+The test page lists all accepted parameters, and example payloads, both for regular responses, as well as for error payloads:
 
 {{< figure src="/attachments/refguide/modeling/integration/build-odata-apis/test-page.png" >}} 
 
-
-JSON schema description of all the payload types is also provided.
+A [JSON schema] description of all the payload types is also provided:
 
 {{< figure src="/attachments/refguide/modeling/integration/build-odata-apis/json-schema.png" >}} 
 
-
-And finally you have an OpenAPI version 3.0.1 contract out of the box.
+You also have an OpenAPI 3.0.1 contract:
 
 {{< figure src="/attachments/refguide/modeling/integration/build-odata-apis/openapi-contract.png" >}} 
 

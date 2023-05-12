@@ -1,6 +1,7 @@
 ---
-title: "Release Notes"
+title: "ATS Release Notes"
 url: /appstore/supported-add-ons/ats/release-notes/
+description: "The release notes for Mendix Application Test Suite (ATS) with details on new features, bug fixes, and known issues."
 weight: 100
 ---
 

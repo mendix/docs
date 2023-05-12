@@ -9,7 +9,9 @@ tags: ["connectors", "data hub", "studio pro", "build", "API", "REST", "connecto
 
 Companies with a large portfolio of custom built REST APIs use a set of [best practices](#best-practices) to ensure these APIs provide the required functionality in a predictable way. You have full control of all these aspects when creating a [published REST service](/refguide/published-rest-service/) in Mendix. 
 
-If you plan to create a large number of APIs, using [published OData services](/refguide/published-odata-services/) to implement REST can save you a lot of time while ensuring consistency across your APIs. This document shows how [published OData services](/refguide/published-odata-services/) in Studio Pro help you build APIs that implement REST best practices.
+If you plan to create a large number of APIs, using [published OData services](/refguide/published-odata-services/) to implement REST can save you a lot of time while ensuring consistency across your APIs. 
+
+This document shows how [published OData services](/refguide/published-odata-services/) in Studio Pro help you build APIs that implement REST best practices.
 
 ### 1.1 Common REST API Best Practices {#best-practices}
 
@@ -18,7 +20,7 @@ REST API best practices usually include some of the following:
 * **Use JSON** – JSON is easy to read, libraries to process it are available in most languages. However, don’t forget RESTful HTTP supports content negotiation, so using binary images, PDF or even MS-word content-type is also REST and often better than converting binary to JSON.
 * **Use nouns, not verbs (resource-first, no actions in path)** – APIs should be resource based instead of action based to improve decoupling: all interactions assume resources and a limited set of standardized operations.
 * **A resource has an ID** – Every resource has a unique path where it can be retrieve or updated.
-* **A resource has a uniform interface, i.e., correct use of http operation** – Use the standardized set of HTTP operations to work with your resources: GET (retrieve), POST (create/insert), PUT (replace), PATCH (update), DELETE.
+* **A resource has a uniform interface (for example, the correct use of an HTTP operation)** – Use the standardized set of HTTP operations to work with your resources: GET (retrieve), POST (create/insert), PUT (replace), PATCH (update), DELETE.
 * **Name collections with plurals** – An endpoint that can return more than one resource should indicate that by have the resource name in plural.
 * **Use of standard HTTP status codes** – HTTP has standardized status codes for most situations, good REST APIs use these. Status codes work the same way across applications, application specific errors should be handled in the payload.
 * **Versioning and compatibility** – usually specifies versioning should be date based or semantic versioning with the major version part of the url. Clients should assume changes to an endpoint are always backwards compatible. In case of breaking changes, a new endpoint including a new major version number should be used.
@@ -139,9 +141,9 @@ Deleting is provided using the DELETE operation.
 
 {{< figure src="/attachments/refguide/modeling/integration/build-odata-apis/delete-operation.png" >}} 
 
-### 4.4 Automatic Sard HTTP Error Codes
+### 4.4 Automatic Standard HTTP Error Codes
 
-OData APIs automatically return the correct HTTP status code, e.g., a 404 if a specified resource cannot be found.
+OData APIs automatically return the correct HTTP status code, like a 404 if a specified resource cannot be found.
 
 {{< figure src="/attachments/refguide/modeling/integration/build-odata-apis/standard-error-codes.png" >}} 
 

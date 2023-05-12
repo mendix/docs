@@ -18,7 +18,6 @@ This feedback comes from different sources:
 
 * Submitted via the [Mendix Feedback widget](/appstore/modules/mendix-feedback/)
 * Submitted on the **Feedback** page itself (for details, see the [Actions](#actions) section, below)
-* Submitted in Mendix Studio (for more information, see [Buzz](/studio/collaboration-buzz/)) in the *Studio Guide*
 
 {{% alert color="info" %}}When new feedback is submitted for your app, you will also get a notification. You can check the notification by clicking the [Notifications](/developerportal/#notifications) icon. If you no longer would like to receive feedback notifications for a specific app, go to the [Team](/developerportal/collaborate/team/) page for this app, and then change your role to a role that does not have the permission **Can edit 'Stories, Documents and Feedback'**.{{% /alert %}}
 

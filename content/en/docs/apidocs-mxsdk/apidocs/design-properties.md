@@ -2,8 +2,8 @@
 title: "Design Properties API"
 url: /apidocs-mxsdk/apidocs/design-properties/
 category: "API Documentation"
-description: "This guide outlines how design properties work and can help you create custom design properties."
-weight: 30
+description: "This API guide outlines how design properties work in Atlas UI and can help you create custom design properties."
+weight: 45
 tags: ["styling", "design", "classes", "design properties"]
 ---
 
@@ -19,17 +19,11 @@ Design properties are a special set of settings shipped together with a Mendix t
 
 In Studio Pro, you can see which design properties are available for a widget either in the **Properties** pane or in the widget's settings dialog box under the **Appearance** tab. 
 
-In Studio, you can see design properties in the **Design** section of a widget's properties pane (for more information, see the [Design Section Reference Guide](/studio/page-editor-widgets-design-section/)).
-
 ## 2 Using Design Properties
 
 While styling Mendix apps, users must often apply the same set of CSS or native styling classes to widgets on different pages again and again. This work is time consuming and vulnerable to human error as you edit text fields in order to apply classes to a widget.
 
 Design properties can make this work easier and safer. By configuring your own custom design properties, a certain styling can be applied to a widget in a few clicks.
-
-{{% alert color="info" %}}
-Mendix Studio does not have any class editing interface. This means that in Studio, design properties are the only way to alter the visual behavior of a certain element.
-{{% /alert %}}
 
 ## 3 Design Property Types
 
@@ -98,7 +92,7 @@ Use this code to further simplify the above example:
 
 As you can see from the structure above, design properties are defined as a *JSON* object where keys (`DivContainer` and `Button` for example) are widget types and values are *JSON* arrays containing sets of design properties applicable for that widget type. To learn more about this subject, see the [Widget Types](#widget-types) section below. Note that you can add multiple class names in a property.
 
-Every design property from the array is also represented as a *JSON* object. As described earlier there are two types of design properties: **Toggle** and **Dropdown**. Both types share common fields such as `name`, `type`, and `description`. Those names determine how a design property appears to a user in Mendix Studio and Mendix Studio Pro. Below you can look at examples of design properties of both types and check how they look in the Studios.
+Every design property from the array is also represented as a *JSON* object. As described earlier there are two types of design properties: **Toggle** and **Dropdown**. Both types share common fields such as `name`, `type`, and `description`. Those names determine how a design property appears to a user in Mendix Studio Pro. Below you can look at examples of design properties of both types.
 
 Here is an example of a **Toggle** design property:
 

@@ -16,7 +16,7 @@ This activity can be used in both **Microflows** and **Nanoflows**.
 {{% /alert %}}
 
 {{% alert color="warning" %}}
-This action is ignored and does not work when a microflow is called from an offline, native, or hybrid app. For more information, see the [Microflows](/refguide/mobile/building-efficient-mobile-apps/offlinefirst-data/best-practices/#microflows) section of *Offline Best Practices*.
+This action is ignored and does not work when a microflow is called from an offline or native app. For more information, see the [Microflows](/refguide/mobile/building-efficient-mobile-apps/offlinefirst-data/best-practices/#microflows) section of *Offline Best Practices*.
 {{% /alert %}}
 
 ## 1 Introduction

@@ -13,6 +13,32 @@ For information on the current status of deployment to Mendix for Private Cloud 
 
 ## 2023
 
+### May 3rd, 2023
+
+#### Mendix Operator v2.11.0 {#2.11.0}
+
+* We have updated components to use Go 1.19 and the latest dependency versions, in order to improve security score ratings for all container images.
+* We fixed an issue where applying a custom TLS trust config in [non-interactive mode](/developerportal/deploy/private-cloud-cli-non-interactive/) failed.
+* We added a `runtimeLeaderSelection` option that allows you to run an environment without a leader replica - so that an app can be deployed into multiple regions.
+* We refactored the way the Mendix Runtime is launched. This removes the need to use Bash and Curl to start the Runtime.
+* It is now possible to choose between plaintext and JSON formats for Mendix app logs.
+* We have extended the options for configuring Ceph RADOS storage buckets. It is now possible to share a bucket between multiple environments.
+* We have updated the list of supported platforms to include OpenShift 4.12.
+
+### April 25th, 2023
+
+#### Portal Improvements
+
+* We have improved the error message that displays when invalid values are provided in the custom core resources.
+* We have added a message in the namespace plan section that displays when a namespace is configured with a secret store.
+* We have improved the look and feel of the Private Cloud portal.
+* We now allow the upload of deployment packages larger than 500 MB (up until 1024 MB) from the user interface. (Ticket 180884)
+
+#### Deploy API
+
+* We have fixed an issue where the environment list could not be retrieved successfully when the app internal ID was shorter than 8 characters.
+* We have fixed an issue where upper-case letters in an email ID would prevent members invited to a cluster manager or namespace from retrieving the environments.
+
 ### April 13th, 2023
 
 #### Portal Enhancements
@@ -167,7 +193,7 @@ Your build may fail if you try to deploy the same deployment package more than o
 
 * We now allow sorting of namespaces in the namespace selection list of the Create environment flow.
 * Newly-created environments will always run in Production mode (the DTAP mode is set to `P`) – you can no longer choose the purpose of your environment.
-    * This means that all apps must have [app security](/refguide/app-security/) set to `Production`.
+    * This means that all apps must have [app security](/refguide9/app-security/) set to `Production`.
 * We have made the **Subscription Secret** field optional – if no subscription secret is provided the app will be considered a trial app.
 * We now allow you to retrieve up to 100 branches for a project when creating a deployment package in the portal.
 

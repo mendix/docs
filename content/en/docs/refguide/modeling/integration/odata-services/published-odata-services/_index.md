@@ -12,14 +12,9 @@ In Studio Pro, entities can be exposed as [OData resources](/refguide/published-
 
 A published OData service is a REST service with an OpenAPI contract, which means that OpenAPI compatible REST clients can easily interact with it. 
 
-The standards used for OData in Mendix are:
+The standard used for OData in Mendix is [OData version 4](http://www.odata.org/documentation), which returns data in JSON format.
 
-* [OData version 3](http://www.odata.org/documentation/odata-version-3-0), which returns data in Atom XML format.
-* [OData version 4](http://www.odata.org/documentation), which returns data in JSON format.
-
-{{% alert color="info" %}}
-The OData version 4 feature was introduced in Studio Pro [9.4.0](/releasenotes/studio-pro/9.4/).
-{{% /alert %}}
+The option to publish [OData version 3](http://www.odata.org/documentation/odata-version-3-0) services, which return data in Atom XML format, is deprecated and will be removed in a future version.
 
 Not all parts of the standard are implemented. If something is not documented here, it is has not yet been added.
 
@@ -64,10 +59,6 @@ This list gives an overview of all [enumerations](/refguide/enumerations/) that 
 
 Click **Edit** to change the exposed name of the enumeration (the name as it appears to clients of the service) and to provide documentation.
 
-{{% alert color="info" %}}
-The *enumerations* feature was introduced in Studio Pro [9.24.0](/releasenotes/studio-pro/9.24/). In earlier versions, enumeration attributes were published as strings.
-{{% /alert %}}
-
 ### 2.6.1 Enumeration Details
 
 This list gives an overview of the values of the published enumeration.
@@ -83,10 +74,6 @@ Use the **Refresh** button when the enumeration values have changed to update th
 ### 3.1.1 OData Version
 
 You can choose between OData 4 (recommended) and OData 3. One of the main differences is that OData 4 services return results in JSON, and OData 3 services return results in XML.
-
-{{% alert color="info" %}}
-This setting was introduced in Studio Pro [9.4.0](/releasenotes/studio-pro/9.4/). In earlier versions, all published OData services were OData 3.
-{{% /alert %}}
 
 ### 3.1.2 Associations
 
@@ -220,10 +207,6 @@ Default value: *No*
 ### 6.1 General
 
 Once your app is published, a list of the published OData services will be available on the root URL of the app followed by `/odata-doc/`. For example, `http://localhost:8080/odata-doc/`. For each OData 4 service, there is a link to a Swagger UI page that shows an interactive documentation page on which users can interact with the service.
-
-{{% alert color="info" %}}
-The Swagger UI feature was introduced in Studio Pro [9.17.0](/releasenotes/studio-pro/9.17/).
-{{% /alert %}}
 
 {{% alert color="warning" %}}
 While the API documentation for OData resources is enabled by default, access to it may be restricted by the administrator for apps running in production.

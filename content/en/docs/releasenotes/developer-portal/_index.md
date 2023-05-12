@@ -17,16 +17,39 @@ To see the current status of the Mendix Developer Portal and Control Center, see
 
 ## 2023
 
+### May 4th, 2023
+
+#### New Features 
+
+* In [Epics](/developerportal/collaborate/epics/), you can now select multiple stories on the [Planning](/developerportal/collaborate/epics/#planning) page, and then move them to a different category, archive them, or delete them in one go.
+* In  [Epics](/developerportal/collaborate/epics/), you can now use [keyboard shortcuts](/developerportal/collaborate/epics/#keyboard-shortcuts) to select stories on the **Planning** page.
+
+#### Fixes
+
+* We fixed an issue where under certain circumstances you were not able to retry to [migrate your repository to Git](/developerportal/collaborate/migrate-to-git/) if the first try resulted in errors.
+* We fixed an issue where a redirect to a user story that is linked to a feedback item would result in an error if this story is hosted by [Epics](/developerportal/collaborate/epics/).
+
+### April 20th, 2023
+
+#### Improvements
+
+* We added a pre-condition check to the [Git migration](/developerportal/collaborate/migrate-to-git/) process. We will inform you of any errors in the check, so that you can resolve them before proceeding with the migration.
+* If your app is between versions 9.0 and 9.11, we now alert you to upgrade and become eligible to migrate. You see, we really want you to migrate to Git!
+
+#### Fixes
+
+* We fixed an issue where authors of a [feedback](/developerportal/collaborate/feedback/) item would receive notifications on that item even though they specifically set the system not to send any notifications.
+
 ### April 13th, 2023
 
 #### Improvements
 
 * We added the following features to [Epics](/developerportal/collaborate/epics/):
-  * You can now add, rename, and delete tags, as well as change tag colors (21 colors to choose from!).
-  * You can now create, link, or remove stories directly from an epic.
-  * The address bar in your browser now shows the link to the exact board, story, and epic, so you can bookmark individual pages and easily come back to them.
-  * If you use Scrum, you can now see a summary of your completed sprint on the [archived Sprint details](/developerportal/collaborate/epics/#archived-sprint-details) page. You can see how many stories were completed and uncompleted, as well as the breakdown of completed points in the Sprint.
-  * You can now [import](/developerportal/collaborate/epics/#import-stories) and [export](/developerportal/collaborate/epics/#export-archived-stories) stories using Excel files.
+    * You can now add, rename, and delete tags, as well as change tag colors (21 colors to choose from!).
+    * You can now create, link, or remove stories directly from an epic.
+    * The address bar in your browser now shows the link to the exact board, story, and epic, so you can bookmark individual pages and easily come back to them.
+    * If you use Scrum, you can now see a summary of your completed sprint on the [archived Sprint details](/developerportal/collaborate/epics/#archived-sprint-details) page. You can see how many stories were completed and uncompleted, as well as the breakdown of completed points in the Sprint.
+    * You can now [import](/developerportal/collaborate/epics/#import-stories) and [export](/developerportal/collaborate/epics/#export-archived-stories) stories using Excel files.
 
 #### Fixes
 
@@ -187,7 +210,7 @@ In Portfolio Management, you can do the following
 
 #### New Features
 
-* We introduced a self-service option for Team Server SVN that allows Scrum Masters to permanently migrate eligible apps to Git. For more information on what apps are eligible for migration and on the migration process, see [Migrate to Git](/developerportal/collaborate/migrate-to-git/). For more information on steps after the migration and process differences between Git and SVN, see [Migrating from SVN to Git: Steps After Migration and Process Differences](/refguide/svn-git-differences/).
+* We introduced a self-service option for Team Server SVN that allows Scrum Masters to permanently migrate eligible apps to Git. For more information on what apps are eligible for migration and on the migration process, see [Migrate to Git](/developerportal/collaborate/migrate-to-git/). For more information on steps after the migration and process differences between Git and SVN, see [Migrating from SVN to Git: Steps After Migration and Process Differences](/refguide9/svn-git-differences/).
 
 ### November 10th, 2022
 
@@ -239,7 +262,7 @@ In Portfolio Management, you can do the following
 #### New Features
 
 * We added the option to watch and unwatch an app. You can find this option on the [General Settings](/developerportal/collaborate/general-settings/) page for an app as well as when you click the ellipsis (**...**) in an app tile on the [My Apps](/developerportal/#my-apps) page. Watching an app means that you will receive feedback notifications for this app, while unwatching an app turns off the notifications.
-* We introduced the [Billing Accounts](/developerportal/control-center/#billing-accounts) page in Control Center where Mendix Admin can update the payment card information for their company at any time.
+* We introduced the **Billing Accounts** page in Control Center where Mendix Admin can update the payment card information for their company at any time.
 
 #### Fixes
 
@@ -400,7 +423,7 @@ In Portfolio Management, you can do the following
 
 #### Improvements
 
-* The apps displayed on the **My Apps** tab that appears when starting Studio Pro are pulled from the [My Apps](/developerportal/#my-apps) page in Developer Portal. In Studio Pro versions below [9.6.0](/releasenotes/studio-pro/9.6/), the **My Apps** tab will no longer display [Git for version control](/refguide/branch-line-manager-dialog/#byo-server-app) apps, as Git integration is not supported. In Studio Pro versions 9.6.0 and above, both Git-enabled and SVN-enabled apps are displayed.
+* The apps displayed on the **My Apps** tab that appears when starting Studio Pro are pulled from the [My Apps](/developerportal/#my-apps) page in Developer Portal. In Studio Pro versions below [9.6.0](/releasenotes/studio-pro/9.6/), the **My Apps** tab will no longer display [Git for version control](/refguide9/branch-line-manager-dialog/#byo-server-app) apps, as Git integration is not supported. In Studio Pro versions 9.6.0 and above, both Git-enabled and SVN-enabled apps are displayed.
 
 ### February 10th, 2022
 
@@ -447,7 +470,7 @@ In Portfolio Management, you can do the following
 
 #### Improvements
 
-* The arrival of [Git support](/refguide/branch-line-manager-dialog/#byo-server-app) means that a new version of the [Platform SDK](/apidocs-mxsdk/mxsdk/) is in order. We made some changes to the Developer Portal to accommodate this new version, which is currently being tested and will be published soon.
+* The arrival of [Git support](/refguide9/branch-line-manager-dialog/#byo-server-app) means that a new version of the [Platform SDK](/apidocs-mxsdk/mxsdk/) is in order. We made some changes to the Developer Portal to accommodate this new version, which is currently being tested and will be published soon.
 * We introduced a new version of the [Feedback API](/apidocs-mxsdk/apidocs/feedback-api/) that will be used by a new generation of [Feedback widgets](/appstore/modules/mendix-feedback/) coming to the Marketplace soon.
 * Until now, you were not able to delete or deactivate an app if it was still deployed to an environment, regardless of whether it was a licensed environment or a sandbox for a Free App. We changed this behavior so that the only check is on whether the environment is licensed. A consequence of this change is that the cloud icon on the app tiles on the [My Apps](/developerportal/#my-apps) page is only displayed if your app is deployed to a licensed node.
 
@@ -621,7 +644,7 @@ In Portfolio Management, you can do the following
 
 #### New Features
 
-* It is now possible to create a new app with the [workflows](/refguide/workflows/) functionality more deeply integrated in the creation flow.
+* It is now possible to create a new app with the [workflows](/refguide9/workflows/) functionality more deeply integrated in the creation flow.
 
 #### Fixes
 

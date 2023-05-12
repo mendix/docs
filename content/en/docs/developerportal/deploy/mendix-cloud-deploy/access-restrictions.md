@@ -60,7 +60,7 @@ Once the CA is uploaded, you will see a tree containing the root certificate and
 
 {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/access-restrictions/ca-profile.png" >}}
 
-Select the check box next to each intermediate or root certificate you want to use. Client certificates will be accepted if they are signed by any checked certificate. If more than one certificate in a branch is checked (for example the root certificate and an intermediate certificate) the client certificate will be accepted if it is signed by any of the checked certificates.
+Select the checkbox next to each intermediate or root certificate you want to use. Client certificates will be accepted if they are signed by any checked certificate. If more than one certificate in a branch is checked (for example the root certificate and an intermediate certificate) the client certificate will be accepted if it is signed by any of the checked certificates.
 
 {{% alert color="warning" %}}
 If you do not select any certificates then all the certificates will be valid.

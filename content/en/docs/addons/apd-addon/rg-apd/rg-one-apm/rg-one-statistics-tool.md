@@ -29,7 +29,7 @@ The statistics can be started or stopped using the start/stop buttons in the **S
 
 In the manual statistics section it is possible to create a snapshot of statistics. This snapshot can be used to compare with other snapshots or to gain insight in statistics for a certain duration. By using the **Reset snapshot** button, the statistics will be reset. With the **Store snapshot** button, the statistics will be saved to a stored snapshot in the database.
 
-**Note**: By default, the result is sorted by **Total (ms)**. This will give a overview of the actions and microflows on which the application spent the most time. The average (**Avg**) is **Total (ms)** divided by **Count**. Sorted on **Avg**, the actions and microflows with the longest average duration can be found. Sorted on **Count** the actions and microflows that were executed the most can be found. The results can also be sorted on **Last run** to see what microflows have been executed recently.
+**Note**: By default, the result is sorted by **Total (ms)**. This will give a overview of the actions and microflows on which the application spent the most time. The average (**Avg**) is **Total (ms)** divided by **Count**. Sorted on **Avg**, the actions and microflows with the longest average duration can be found. Sorted on **Count** the actions and microflows that were run the most can be found. The results can also be sorted on **Last run** to see what microflows have been run recently.
 
 ## 5 Running Actions
 

@@ -41,7 +41,7 @@ The **Measurement configuration** tab allows you to do the following:
 * **Calculate with expression**
     * If yes, the **Expression** field appears (see below for the expression details)
     * If yes, the **Parameter** field appears (this parameter can be used in the expression)
-* Set the **Frequency (s)** that the measurement is executed in seconds
+* Set the **Frequency (s)** that the measurement is run in in seconds
 * **Store in database** stores the measurement in the database
 * You can only measure for triggers; for charts you need the database to be stored in the database
 * The **Remove data after (days)** configures the automatic cleanup (purge) of the data
@@ -82,7 +82,7 @@ $Measurement/ValueLong - $Measurement_1/ValueLong
 
 ## 4 Tester Tab
 
-The tester will execute the measurement and test the trigger (if enabled) to verify the expressions.
+The tester will run the measurement and test the trigger (if enabled) to verify the expressions.
 
 {{< figure src="/attachments/addons/apd-addon/rg-apd/rg-one-apm/rg-one-measurements-tool/Measurement_Tester.png" >}}
 

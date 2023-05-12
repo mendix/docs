@@ -168,7 +168,7 @@ Depending on your module's functionality, you might need to store data in the en
 
 Actions that may be batched or divided over multiple threads due to a large load or volume should be offloaded to the [task queue](/refguide/task-queue/). Using this method, you can offload multiple tasks at once to multiple instances and over multiple threads. You can also run these tasks in the background without the user request waiting for it. Make sure that the end-user is aware that something is going on by setting a certain Task Status, or maybe implementing a progress log.
 
-If you are using Studio Pro [8.18](/releasenotes/studio-pro/8.18/) or older, you can consider using the process queue. See the [Replacing Process Queue](/refguide/task-queue/#process-queue) section of *Task Queue* for the difference between these functionalities.
+If you are using Studio Pro [8.18](/releasenotes/studio-pro/8.18/) or older, you can consider using the process queue. See the [Replacing Process Queue](/refguide9/task-queue/#process-queue) section of *Task Queue* for the difference between these functionalities.
 
 ### 3.6 ConnectionDetails Entity
 
@@ -405,7 +405,7 @@ Gradle can handle managing Java dependencies and running [JUnit](http://junit.or
 
 #### 6.2.2 Using the Java Unit Test Reference
 
-Mendix apps need `Core` classes, and the [Core API](https://apidocs.rnd.mendix.com/9/runtime/com/mendix/core/Core.html) allows you to do things that you usually do in a microflow, like committing an object. `CoreProxy` serves as a mockable layer between your Java logic and the `Core` API. 
+Mendix apps need `Core` classes, and the **Class Core** [Runtime API](/apidocs-mxsdk/apidocs/runtime-api/) allows you to do things that you usually do in a microflow, like committing an object. `CoreProxy` serves as a mockable layer between your Java logic and the **Core** API. 
 
 Our [Java unit test reference](https://Github.com/mendixlabs/javaunittestreference) is available to help you through this process. `MendixUnitTestBase.java` is extendable and reusable for your own purposes. When extended, it enables Mockito on your test classes and mocks `Core` API behavior.  This does the following:
 

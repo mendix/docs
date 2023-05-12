@@ -47,7 +47,7 @@ These are some examples of what you can find on the dashboard:
 
 On the **Active Apps** tab and the **Deactivated Apps** tab, you can see an overview of the active and deactivated apps that belong to your company.
 
-When you select one or more apps via the check boxes in the list, a context menu appears at the bottom of the screen with options for exporting app details to an *.xlsx* file, deactivating apps (on the **Active Apps** tab) or activating apps (on the **Deactivated Apps** tab), and deleting an app.
+When you select one or more apps via the checkboxes in the list, a context menu appears at the bottom of the screen with options for exporting app details to an *.xlsx* file, deactivating apps (on the **Active Apps** tab) or activating apps (on the **Deactivated Apps** tab), and deleting an app.
 
 {{% alert color="info" %}}
 Deleting and deactivating apps is currently not supported for licensed apps or apps that are not running on the Mendix Cloud.
@@ -220,7 +220,7 @@ The **Paid Environments** tab on this page presents an overview of the licensed 
 
 {{< figure src="/attachments/developerportal/control-center/cloud.jpg" >}}
 
-When you select one or more environments via the check boxes on the **Paid Environments** or **Free Environments** tab, a context menu appears at the bottom of the screen with the option for exporting environment details to an *.xlsx* file.
+When you select one or more environments via the checkboxes on the **Paid Environments** or **Free Environments** tab, a context menu appears at the bottom of the screen with the option for exporting environment details to an *.xlsx* file.
 
 There are links to three other pages from this tab to allow you to [make requests to Mendix Support](/developerportal/support/submit-support-request/#submitting) to do the following:
 
@@ -237,7 +237,7 @@ The **Free Environments** tab presents details on your company's free environmen
 ## 11 Entitlements {#entitlements}
 
 {{% alert color="info" %}}
-This feature is currently in Beta. For more information about Beta features, see [Beta releases](/releasenotes/beta-features/).
+This feature is currently in Beta. For more information about Beta features, see [Beta Releases](/releasenotes/beta-features/).
 {{% /alert %}}
 
 The **Entitlements** page is a self-service tool that displays the transactions (such as purchases of cloud credits, or provisioning of new environments) registered for your organization. You can use the page to monitor your resource entitlements and your consumption of cloud credits.
@@ -295,27 +295,13 @@ To quickly change the [Technical Contact](/developerportal/collaborate/app-roles
 You may only have one Technical Contact per app. When you change the Technical Contact, both the new and the old contact receive a notification email about the change.
 {{% /alert %}}
 
-## 13 Billing Accounts {#billing-accounts}
-
-Before the licenses are renewed for your company, Mendix checks if your company's payment method is still valid. If it is expired, you will receive an email that asks you to update your company's payment method on the **Billing Accounts** page.
-
-{{< figure src="/attachments/developerportal/control-center/billing-accounts-page.png" alt="billing accounts page" >}}
-
-The **Billing Accounts** page shows the details of your company's existing billing accounts. These accounts are on the company level. If your company has multiple billing accounts, you can select a billing account from the drop-down list on the page.
-
-You can find **Payment Method** at the bottom of the page. Depending on the payment method, you see either an invoice or the credit card data.
-
-{{% alert color="info" %}}You might have used different credit cards with the same billing account when purchasing premium content at the marketplace in the past. These cards are not shown here. Only the last credit card which is registered as the credit card for your company's billing account is shown here. This card will also be used for the renewal of the existing subscriptions.{{% /alert %}}
-
-If the credit card is expired, the credit card data is shown in red. To update the credit card data, click **Update**, fill in the new credit card data, and then click **Update Details**.
-
-## 14 Data Hub {#data-hub}
+## 13 Data Hub {#data-hub}
 
 An organization's Data Hub requires governance of the data-sharing policy down to the practical details of curating registered assets. A Mendix Admin can oversee these functions and also assign curators that can perform governance tasks for their apps.
 
 For details on these tasks, see [Data Hub Administration](/developerportal/control-center/data-hub-admin/).
 
-## 15 Marketplace Content {#marketplace-content}
+## 14 Marketplace Content {#marketplace-content}
 
 {{% alert color="info" %}}
 This page will be removed in June 2023.
@@ -337,4 +323,4 @@ The list has the following columns:
 * **Content Last Updated** – This shows the date when a component was last updated. The most recently updated component is shown on top.
 * **Studio Visibility** – You can toggle the button to configure whether the component is visible in Studio's **Toolbox** to your company's users. 
 
-## 16 Documents in This Category
+## 15 Documents in This Category

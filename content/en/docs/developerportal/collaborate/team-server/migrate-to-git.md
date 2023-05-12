@@ -8,7 +8,7 @@ tags: ["Studio Pro", "Team Server", "migration", "Git", "migrate"]
 
 ## 1 Introduction
 
-Scrum Masters can migrate apps from SVN version control system to Git. For more information on version control, see [Version Control](/refguide/version-control/) in *Studio Pro 9 Guide*. 
+Scrum Masters can migrate apps from SVN version control system to Git. For more information on version control, see [Version Control](/refguide/version-control/) in the *Studio Pro Guide*. 
 
 Git is a more modern version control system that has several advantages over SVN. For more information on advantages of Git, see the [What Are the Advantages of Team Server Git over Team Server SVN?](/refguide/version-control-faq/#git-advantages) section in *Version Control FAQ*.
 
@@ -22,6 +22,12 @@ To be able to migrate your app to Git, your app needs to meet the following crit
 {{% alert type="info" %}}
 
 Only a user with the Scrum Master role can migrate an app. For more information, see [App Roles](/developerportal/collaborate/app-roles/). 
+
+{{% /alert %}}
+
+{{% alert color="warning" %}}
+
+At this moment we are limited in our ability to migrate large SVN repositories. If the full SVN repository including all history and branches exceeds approximately 80GB, migration will likely fail. We are working on solutions to both notify you when this issue applies to you and to extend our migration capabilities for large repositories.
 
 {{% /alert %}}
 

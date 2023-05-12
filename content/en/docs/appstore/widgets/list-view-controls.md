@@ -3,7 +3,7 @@ title: "List View Controls"
 url: /appstore/widgets/list-view-controls/
 category: "Widgets"
 description: "Describes the configuration and usage of the List View Controls widget, which is available in the Mendix Marketplace."
-tags: ["marketplace", "marketplace component", "widget", "list view control", "check box filter", "platform support", "list"]
+tags: ["marketplace", "marketplace component", "widget", "list view control", "checkbox filter", "platform support", "list"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
@@ -17,7 +17,7 @@ The [List View Controls](https://marketplace.mendix.com/link/component/105694/) 
 
 These are the available list view widgets:
 
-* [Check box filter](#check-box-filter) – filters a list view with various constraints when checked or unchecked
+* [Checkbox filter](#checkbox-filter) – filters a list view with various constraints when checked or unchecked
 * [Drop-down filter](#drop-down-filter) – filters a list view with various options that can be selected from a drop-down
 * [Drop-down sort](#drop-down-sort) – adds an interactive sort to your list view.
 * [Header sort](#header-sort) – adds sorting behavior to the headers of a list view.
@@ -30,7 +30,7 @@ If an entity in a list view has an attribute populated by a microflow, it will c
 
 {{% /alert %}}
 
-## 2 Check Box Filter Widget {#check-box-filter}
+## 2 Checkbox Filter Widget {#checkbox-filter}
 
 This widget enables filtering a list view at runtime with various constraints.
 
@@ -39,7 +39,7 @@ This widget enables filtering a list view at runtime with various constraints.
 * Filter items by attribute
 * Filter items by XPath
 * Configure filter actions when the widget is checked or unchecked
-* Set a checked check box as default
+* Set a checked checkbox as default
 * Support for multiple filters on the same list view
 
 ### 2.2 Configuration

@@ -8,7 +8,7 @@ tags: ["connectors", "data hub", "studio pro", "build", "connector guide", "conn
 
 ## 1 Introduction
 
-Features released in Studio Pro [9.17](/releasenotes/studio-pro/9.17/) expand on existing OData capabilities in Studio Pro. These features allow you to wrap any non-OData service, API, or database with OData, ensuring compatibility with the [Mendix Data Hub](/data-hub/) ([external entities](/refguide/external-entities/) and the [Data Hub Catalog](/data-hub/data-hub-catalog/)). 
+Features in Studio Pro 10 allow you to wrap any non-OData service, API, or database with OData, ensuring compatibility with the [Mendix Data Hub](/data-hub/) ([external entities](/refguide/external-entities/) and the [Data Hub Catalog](/data-hub/data-hub-catalog/)). 
 
 You can also use these features to more easily [build connectors](/appstore/creating-content/connector-guide-build/) that access external data. This set of features adds to the tools described in [Introducing the Mendix Connector Kit](https://www.mendix.com/blog/introducing-mendix-connector-kit/), and are collectively referred to as *Connector Kit 2.0*.
 
@@ -24,7 +24,7 @@ Before you read this guide, do the following:
 
 * Learn how [published](/refguide/published-odata-services/) and [consumed](/refguide/consumed-odata-services/) OData services work in Studio Pro
 * Read the [Build Connectors](/appstore/creating-content/connector-guide-build/) guide
-* Install Studio Pro [9.17](/releasenotes/studio-pro/9.17/) and above
+* Install the latest version of Studio Pro
 
 ## 2 Why Wrap with OData?
 
@@ -116,10 +116,6 @@ When you use a microflow to provide data, any security constraints are applied t
 
         If the **ODataResponse** is present as a microflow parameter, then it will return the **Count** attribute value regardless of the result list of objects. Otherwise, it will return -1 for not defined, which is the default value. A **Count** value of 0 means that there no record.
 
-{{% alert color="info" %}}
-In Studio Pro [9.16](/releasenotes/studio-pro/9.16/) and below, the inline count value will be retrieved from the count microflow. For Studio Pro [9.17](/releasenotes/studio-pro/9.17/) and above, the count value can be stored in the `ODataResponse` object.
-{{% /alert %}}
-
 ## 5 Key Selection When Exposing Entities as OData Resources {#select-key}
 
 Select which attribute(s) to use as a [key](/refguide/published-odata-resource/#key) when exposing an entity as Published OData Resource so that clients will be able to identify objects returned by the service.
@@ -140,7 +136,7 @@ A key icon represents attributes that are part of the key.
 
 You can use tools like Postman or Visual Studio Code to test your published OData services. These tools can help you call the OData service and validate its output.
 
-Another way to test published OData services is with the user interfaces of [OpenAPI](/refguide/published-odata-services/#openapi), released in Studio Pro [9.17](/releasenotes/studio-pro/9.17/).
+Another way to test published OData services is with the user interfaces of [OpenAPI](/refguide/published-odata-services/#openapi).
 
 ## 7 Usage Examples {#usage}
 
@@ -148,7 +144,7 @@ The following examples are possible ways to use OData to connect to external dat
 
 ### 7.1 Third-Party Service Connector {#3rd-party}
 
-You can use the features released in Studio Pro [9.17](/releasenotes/studio-pro/9.17/) to build a connector that wraps a third-party service API as OData. 
+You can use the features described in this document to build a connector that wraps a third-party service API as OData. 
 
 For example, say you want to build an app that works with the [Twitter v2 REST API](https://developer.twitter.com/en/docs/twitter-api/getting-started/about-twitter-api). You would like a simple app where you can enter the ID of a Twitter user and view their latest tweets and followers. 
 
@@ -164,7 +160,7 @@ On February 9, 2023, Twitter will drop support for free API access and will offe
 To build your app, you first need to do the following:
 
 * [Register as a Twitter Developer](https://developer.twitter.com/en/portal)
-* Download Studio Pro [9.17](/releasenotes/studio-pro/9.17/) or above
+* Download the most recent version of Studio Pro
 
 #### 7.1.2 Building the Connector {#twitter-connector}
 
@@ -215,7 +211,7 @@ Ensure that you have created microflows for all entities used in your connector.
 
 ## 7.2 Updatable Operational Data Stores {#operational-data-stores}
 
-Wrapped OData APIs can function as an operational data store, or as a [Data Layer](/refguide/create-a-basic-data-layer/) for other Mendix apps. For example, you have one Mendix app where you define a central data model that is being used by multiple frontend apps. This central app gets data from different backend systems, caches it, and makes it available as a unified model to the frontend apps. With OData, can provide full read-write APIs to your frontend apps. To ensure data consistency, you can use [OData as a data source microflows](#odata-data-sources) to update your backend systems when a front-end app changes data through an OData API.
+Wrapped OData APIs can function as an operational data store, or as a [Data Layer](/refguide/configuring-a-domain-model/) for other Mendix apps. For example, you have one Mendix app where you define a central data model that is being used by multiple frontend apps. This central app gets data from different backend systems, caches it, and makes it available as a unified model to the frontend apps. With OData, can provide full read-write APIs to your frontend apps. To ensure data consistency, you can use [OData as a data source microflows](#odata-data-sources) to update your backend systems when a front-end app changes data through an OData API.
 
 Operational data stores are often used to unify and cache external data used by multiple apps. Reasons for this include the following:
 

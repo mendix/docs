@@ -82,9 +82,9 @@ A **file manager** allows end-users to upload and/or download files. For example
 
 The file manager must be placed inside a data view or a list view that has a file entity as their data source.  For more information on file entities, see the [Types of Entities](/studio/domain-models/#entity-types) section in *Domain Model*. 
 
-The default maximum size of files and images that can be uploaded/downloaded is 5 MB. You can change the maximum size in Studio Pro. For more information on properties in Studio Pro, see [File Manager](/refguide/file-manager/) and [Image Uploader](/refguide/image-uploader/).  
+The default maximum size of files and images that can be uploaded/downloaded is 5 MB. You can change the maximum size in Studio Pro. For more information on properties in Studio Pro, see [File Manager](/refguide9/file-manager/) and [Image Uploader](/refguide9/image-uploader/).  
 
-All file extensions are allowed for image uploader and file manager unless specified otherwise in Studio Pro. For more information on properties in Studio Pro, see [File Manager](/refguide/file-manager/) and [Image Uploader](/refguide/image-uploader/). 
+All file extensions are allowed for image uploader and file manager unless specified otherwise in Studio Pro. For more information on properties in Studio Pro, see [File Manager](/refguide9/file-manager/) and [Image Uploader](/refguide9/image-uploader/). 
 
 ### 3.1 Data Source Section
 

@@ -5,7 +5,7 @@ url: /addons/ats-addon/rg-one-toggle-simple-checkbox-set-selector-value/
 
 ## 1 Description
 
-Inverts the value of the check box found by the given value connected to the check box.
+Inverts the value of the checkbox found by the given value connected to the checkbox.
 
 ## 2 Supported Widgets
 
@@ -13,11 +13,11 @@ Inverts the value of the check box found by the given value connected to the che
 
 ## 3 Usage
 
-Pass the name of the widget and the value connected to the check box.
+Pass the name of the widget and the value connected to the checkbox.
 
 ## 4 Input Parameters
 
 Name | Datatype | Required | Description
 ---- | -------- | -------- | ---------------
 Widget Name | String | Yes | The name of the Simple Checkbox Set Selector widget.
-Value | String | Yes | The value connected to the check box.
+Value | String | Yes | The value connected to the checkbox.

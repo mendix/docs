@@ -268,8 +268,8 @@ Here, you can select your Environment and Selenium hub for ATS to use.
 | Field | Description |
 | --- | --- |
 | **Environment** | Select the app you want to test. |
-| **Selenium Hub** | Select the Selenium Hub you want to use to execute the test case. |
-| **Browser** | Select the browser that the Selenium Hub uses to execute the test case. Please note that these are the supported browsers. |
+| **Selenium Hub** | Select the Selenium hub you want to use to execute the test case. |
+| **Browser** | Select the browser that the Selenium hub uses to execute the test case. Please note that these are the supported browsers. |
 
 When you select a supported selenium provider like Browserstack additional options appear, the **Platform Settings**.
 
@@ -286,7 +286,7 @@ When you click **Run**, the **Test Runs** page will open.
 
 {{< figure src="/attachments/addons/ats-addon/ht/v2/ht-two-getting-started/test-runs-page.png" >}}
 
-Once your test case/suite is executed, the result is shown here.
+Once your test case/suite is run, the result is shown here.
 
 You have now finished the getting started guide for ATS. We advice to read next [How-to Install the ATS Helper and Recorder](/addons/ats-addon/ht-two-install-ats-helper-recorder/).
 

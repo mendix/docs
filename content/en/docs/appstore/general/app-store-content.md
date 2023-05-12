@@ -175,6 +175,14 @@ To add a widget using the **Add widget** option from the toolbar, follow these s
 
 To update the widget in your app to a newer version, go to the Marketplace to download the right version, and [install](#install) it in your app.
 
+##### 3.1.2.1 Maintaining Added Translations in a Widget to Update
+
+In the scenario where you have an app with multiple languages in which you need to update an imported Marketplace widget that only comes with one language and where you have manually added translations for the additional languages you need, you can maintain the additional translations by following these steps:
+
+1. Maintain the translations for the widget by [exporting them to Excel](/refguide/batch-translate/#export).
+2. Update the widget via the steps described above.
+3. [Import](/refguide/batch-translate/#import) the maintained translations from the Excel.
+
 #### 3.1.3 Configuring the Widget
 
 After you place the widget in your page, some new errors can appear in the [Errors](/refguide/errors-pane/) pane. That is because you still need to configure the widget. In this procedure, we use the Ratings widget as an example.
@@ -215,11 +223,19 @@ To update the module in your app to a newer version, follow these steps::
 
 3. Check the **userlib** folder in your app directory for duplicate Java libraries. If your **userlib** folder contains multiple versions of the same Java library, it is usually safe to delete the old ones and keep only the new one.
 
+##### 3.2.1.1 Maintaining Added Translations in a Module to Update
+
+In the scenario where you have an app with multiple languages in which you need to update an imported Marketplace module that only comes with one language and where you have manually added translations for the additional languages you need, you can maintain the additional translations by following these steps:
+
+1. Maintain the translations for the module by [exporting them to Excel](/refguide/batch-translate/#export).
+2. Update the module via the steps described above.
+3. [Import](/refguide/batch-translate/#import) the maintained translations from the Excel.
+
 #### 3.2.2 Configuring the Module
 
 Each module that you download from the Marketplace is different. Some modules can cause errors because they are connected to other modules. For example, after you download the [Database Replication](/appstore/modules/database-replication/) module, you also need to download the [Mx Model Reflection](/appstore/modules/model-reflection/) module to accomplish the configuration. If you run into any problems, always check the **Documentation** tab on the page of this module in the Marketplace for installation guidelines and details on any dependencies.
 
-Keep in mind that some modules you can download may come with their own [user roles](/studio/settings-security/). If the **Security level** of your app is set to **Prototype/demo** or **Production**, you need to map the module roles to the applicable user roles in your app.
+Keep in mind that some modules you can download may come with their own user roles. If the **Security level** of your app is set to **Prototype/demo** or **Production**, you need to map the module roles to the applicable user roles in your app.
 
 ### 3.3  Using a Starter App
 

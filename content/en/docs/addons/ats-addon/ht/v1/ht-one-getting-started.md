@@ -259,8 +259,8 @@ Here, you can select your AUT and Selenium hub for ATS to use.
 | Field | Description |
 | --- | --- |
 | **Application** | Select the app you want to test. |
-| **Selenium Hub** | Select the Selenium Hub you want to use to execute the test case. |
-| **Browser** | Select the browser that the Selenium Hub uses to execute the test case. Please note that these are the supported browsers. |
+| **Selenium Hub** | Select the Selenium hub you want to use to execute the test case. |
+| **Browser** | Select the browser that the Selenium hub uses to execute the test case. Please note that these are the supported browsers. |
 
 Now click **Run** again in the upper-right corner to execute the test case against the provided parameters. For more information on the run configuration, see [Run Configuration](/addons/ats-addon/rg-one-test-run/).
 
@@ -270,7 +270,7 @@ When you click **Run**, the **Monitoring / Results** page will open.
 
 {{< figure src="/attachments/addons/ats-addon/ht/v1/ht-one-getting-started/monitoring-results-pending.png" >}}
 
-Once your test case is executed, the result is shown here. For more information on results, see [Monitoring](/addons/ats-addon/rg-one-monitoring/).
+Once your test case is run, the result is shown here. For more information on results, see [Monitoring](/addons/ats-addon/rg-one-monitoring/).
 
 You have now finished the getting started guide for ATS. Please check the [how-to's](/addons/ats-addon/ht-one/) and [best practices](/addons/ats-addon/bp-one/) for more information.
 

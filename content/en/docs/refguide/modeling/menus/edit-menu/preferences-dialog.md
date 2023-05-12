@@ -151,17 +151,9 @@ Sometimes the computer running Studio Pro cannot access the internet directly, b
 
 When the **Send Studio Pro usage data to Mendix** setting is enabled, Studio Pro sends usage data to Mendix that allows Mendix to identify issues and improve the user experience. The usage data does not contain sensitive information. It is possible to disable this feature, but it may affect the behavior of some features, prevent Mendix from identifying issues reported by the user, or affect tracking issues that are not reported yet. This setting is machine-specific and changing this feature does not affect any existing installed version.
 
-{{% alert color="info" %}}
-This functionality is currently available in Studio Pro 9.22 and above.
-{{% /alert %}}
-
 ### 6.2 Rendering {#rendering}
 
 Hardware and driver issues may cause performance problems when running Studio Pro. These issues can appear in form of dialogs opening and closing much slower than expected, and general slowness of the UI. In case the hardware problems cannot be solved, it is possible to mitigate these issues by turning the **Enable software rendering mode** setting on. Enabling this setting requires a restart of Studio Pro to take effect. Running the application with this setting on may increase the CPU usage.
-
-{{% alert color="info" %}}
-This functionality is currently available in Studio Pro 9.24.
-{{% /alert %}}
 
 ## 7 Work Environment Tab
 
@@ -177,13 +169,7 @@ The **New features** tab allows you to turn new features on and off. These are f
 You need to restart Studio Pro for changes to these settings to take effect.
 {{% /alert %}}
 
-### 8.1 Browser Sign In
-
-The **Use your default browser to sign in** option allows you to use your default browser to sign into Studio Pro. If there is an active Mendix session in your browser, you will be signed in with this session.
-
-Default: *enabled*
-
-### 8.2 Dark Mode Preview {#dark-mode}
+### 8.1 Dark Mode Preview {#dark-mode}
 
 {{% alert color="info" %}}
 This functionality is currently in [Beta](/releasenotes/beta-features/).
@@ -194,22 +180,6 @@ The **Dark mode** option allows you to preview to the dark mode of the Studio Pr
 {{% alert color="info" %}}
 Not all screens of Studio Pro support dark mode yet.
 {{% /alert %}}
-
-Default: *disabled*
-
-### 8.3 New Merge Algorithm with Fine-Grained Conflict Resolution
-
-With this option, you can enable the new merge algorithm that is used when you update your app or merge changes in it. For more information on the algorithm, see [New Merge Algorithm with Fine-Grained Conflict Resolution](/refguide/new-merge-algorithm/).
-
-Default: *enabled*
-
-### 8.4 Properties Pane {#properties}
-
-{{% alert color="info" %}}
-This functionality is currently in [Beta](/releasenotes/beta-features/).
-{{% /alert %}}
-
-The **New Properties pane preview** option allows you to enable the overhauled UI for viewing and changing properties in Studio Pro.
 
 Default: *disabled*
 

@@ -8,7 +8,7 @@ no_list: false
 description_list: true
 cascade:
     - space: "Developer Portal Guide"
-    - mendix_version: ""
+    - mendix_version: 10
 #To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 #This document is mapped to the landing page, update the link there if renaming or moving the doc file.
@@ -16,7 +16,7 @@ cascade:
 
 ## 1 What Is the Developer Portal?
 
-The [Developer Portal](http://sprintr.home.mendix.com) is one of the three key components of the Mendix Platform. The other two are [Mendix Studio Pro](/refguide/modeling/) and [Mendix Studio](/studio/). In the Developer Portal, Mendix developers can collaborate, deploy, and manage their apps, and manage their company and users. 
+The [Developer Portal](http://sprintr.home.mendix.com) is one of the key components of the Mendix Platform. In the Developer Portal, Mendix developers can collaborate, deploy, and manage their apps, and manage their company and users. 
 
 The Developer Portal also offers open, well-defined APIs, enabling third-party developers to integrate their own widgets and plugins. For more information, see [API Documentation](/apidocs-mxsdk/apidocs/).
 
@@ -81,8 +81,7 @@ By clicking the ellipsis (**…**) in the app tile, you can quickly perform a nu
 
 The actions available depend on the app selected:
 
-* **Edit in Studio**
-* **Edit in Studio Pro**
+* **Edit in Mendix Studio Pro**
 * **Leave App** – allows you to leave the app
 
 To stop watching an app and disable notifications for that app, click the eye symbol so that you see the tooltip **You are not watching this app**. To return to watching that app, click the eye symbol so that you see the tooltip **You are watching this app**.

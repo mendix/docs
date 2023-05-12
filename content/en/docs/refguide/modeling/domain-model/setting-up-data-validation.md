@@ -10,7 +10,7 @@ aliases:
 
 ## 1 Introduction
 
-This document explains how you can set up data validation with Mendix. Make sure you have set up a basic data structure, otherwise there is no data to validate. For more information on how to set up a basic data structure, see [Creating a Basic Data Layer](/refguide/create-a-basic-data-layer/).
+This document explains how you can set up data validation with Mendix. Make sure you have set up a basic data structure, otherwise there is no data to validate. For more information on how to set up a basic data structure, see [Configuring a Domain Model](/refguide/configuring-a-domain-model/).
 
 ## 2 Data Validation on Entity Level
 
@@ -22,7 +22,7 @@ Validation rules can only be applied on entities that are [persistable](/refguid
 
 To add validation rules on entity level, follow the steps below:
 
-1. Open your [domain model](/refguide/create-a-basic-data-layer/) in Studio Pro.
+1. Open your [domain model](/refguide/configuring-a-domain-model/) in Studio Pro.
 2. Double-click a persistable entity to open its properties.
 3. Go to the **Validation rules** tab.
 
@@ -67,7 +67,7 @@ Validation rules are great for simple validations, but Mendix also offers ways t
 
 This section explains how you can validate data using the **Before Commit** event. To do so, follow these steps:
 
-1. Open your [domain model](/refguide/create-a-basic-data-layer/) in Studio Pro.
+1. Open your [domain model](/refguide/configuring-a-domain-model/) in Studio Pro.
 2. Double-click an entity to open its properties.
 3. Go to the **Event handlers** tab.
 4. Click **New** to start configuring a new event handler for this entity.
@@ -92,7 +92,9 @@ Validating user input can also be achieved by overriding the default **Save** bu
 
 There are two ways to configure a custom **Save** button for data validation. 
 
+{{% alert color="info" %}}
 You can do this with the help of [Validation Assist](/refguide/validation-assist/). With Validation Assist, you can build validation microflows automatically by using pre-built expressions. For more information on how to use the Validation Assist, see the [Using Validation Assist to Build Data Validations](/refguide/validation-assist/#3-using-validation-assist-to-build-data-validations) section in *Validation Assist*. 
+{{% /alert %}}
 
 You can also configure a custom **Save** button manually. To do so, follow these steps:
 

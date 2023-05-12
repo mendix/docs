@@ -17,6 +17,19 @@ For information on the current status of deployment to Mendix Cloud and any plan
 
 ## 2023
 
+### May 4th, 2023
+
+* In the Build and Deploy APIs, we have added a link to download packages from the Developer Portal. This is controlled by a parameter on the following API calls:
+    * [Retrieve Package](/apidocs-mxsdk/apidocs/build-api/#retrieve-package) in the Build API
+    * [Retrieve Environment Package](/apidocs-mxsdk/apidocs/deploy-api/#retrieve-environment-package) in the Deploy API
+* We have deprecated the [Download Package](/apidocs-mxsdk/apidocs/build-api/#download-package) call in the Build API.
+
+### April 20th, 2023
+
+#### Improvements
+
+* We have updated the [Splunk](/developerportal/operate/splunk-metrics/) integration to send app metadata to the Splunk Cloud Platform, together with the ability to add custom tags.
+
 ### March 16th, 2023
 
 #### Improvements
@@ -260,7 +273,7 @@ New Certificate Details: <https://crt.sh/?id=6940402070>
 #### Improvements
 
 * We added log entries to the activity log to record changes to members of the app team and any changes to the [permissions](/developerportal/deploy/node-permissions/) that team members have.
-* We now display any documentation associated with [scheduled events](/refguide/scheduled-events-legacy/#common-properties) in the [Model Options tab](/developerportal/deploy/environments-details/#model-options) of the environment details.
+* We now display any documentation associated with [scheduled events](/refguide9/scheduled-events-legacy/#common-properties) in the [Model Options tab](/developerportal/deploy/environments-details/#model-options) of the environment details.
 
 #### Fixes
 
@@ -435,7 +448,7 @@ Any clients that use IPv6 to connect to applications which have configured Acces
 #### Improvements
 
 * We added the ability to completely clear all the data from your database running in a licensed environment.
-* We removed the ability to publish **App Services**. These have been deprecated for some time. You should use a [Published Web Service](/refguide/published-web-services/) or a [Published REST Service](/refguide/published-rest-service/) instead.
+* We removed the ability to publish **App Services**. These have been deprecated for some time. You should use a [Published Web Service](/refguide9/published-web-services/) or a [Published REST Service](/refguide9/published-rest-service/) instead.
 
 #### Fix
 
@@ -632,8 +645,8 @@ SSL/TLS ciphers that are still supported for HTTPS connections after December 1s
 
 #### Fixes
 
-* We fixed issues related to the [Deploy to Licensed Cloud Node](/refguide/app-menu/#deploy) flow in Mendix Studio Pro:
-    * We rolled back the restriction for Mendix Cloud v3 apps in the [Deploy to Licensed Cloud Node](/refguide/app-menu/#deploy) flow in Mendix Studio Pro.
+* We fixed issues related to the [Deploy to Licensed Cloud Node](/refguide9/app-menu/#deploy) flow in Mendix Studio Pro:
+    * We rolled back the restriction for Mendix Cloud v3 apps in the [Deploy to Licensed Cloud Node](/refguide9/app-menu/#deploy) flow in Mendix Studio Pro.
     * We improved the error messages for Mendix Cloud v4 apps that appear when you deploy from Studio Pro with no [Mendix Studios Target](/developerportal/deploy/studio-deployment-settings/#target) set or you do not have sufficient privileges to deploy to the Studios target.
     * We fixed an issue where you were able to log in as a **Demo User** to the Studios target. Please note that in this scenario, you have to clear the Studios target and redeploy to the affected environment. The target can then be set after redeploying. (Ticket 106312)
 
@@ -643,7 +656,7 @@ SSL/TLS ciphers that are still supported for HTTPS connections after December 1s
 
 * We improved the error handling and feedback of the scale app functionality for Mendix Cloud v4. (Ticket 103304) 
 * We fixed an issue where some customers were not able to access the [Deploy APIs](/apidocs-mxsdk/apidocs/deploy-api/). (Ticket 103241)
-* We have modified the [Deploy to Licensed Cloud Node](/refguide/app-menu/#deploy) flow in Mendix Studio Pro. When **Deploy to Licensed Cloud Node** is selected in Mendix Studio Pro, your application will automatically be deployed to the *Mendix Studios Target* environment of your licensed node. This deployment will include a restart of that environment. It is now only possible to deploy Mendix Cloud v4 applications which have a [Mendix Studios Target](/developerportal/deploy/studio-deployment-settings/#target) set. Please note that you will get an error message if you deploy from Studio Pro when no **Mendix Studios Target** is set.
+* We have modified the [Deploy to Licensed Cloud Node](/refguide9/app-menu/#deploy) flow in Mendix Studio Pro. When **Deploy to Licensed Cloud Node** is selected in Mendix Studio Pro, your application will automatically be deployed to the *Mendix Studios Target* environment of your licensed node. This deployment will include a restart of that environment. It is now only possible to deploy Mendix Cloud v4 applications which have a [Mendix Studios Target](/developerportal/deploy/studio-deployment-settings/#target) set. Please note that you will get an error message if you deploy from Studio Pro when no **Mendix Studios Target** is set.
 
 #### Fixes
 
@@ -680,7 +693,7 @@ SSL/TLS ciphers that are still supported for HTTPS connections after December 1s
 
 * We resolved an issue where deactivated users were still shown in the [Node Permissions](/developerportal/deploy/node-permissions/) tab of the Security page for an app. (Tickets 90744 95319, 97722, 98474, 99978, 100493, 101595, 103007, and 103549)
 * We resolved an issue where you could not change the role of the inbuilt administrator account for apps deployed to the cloud. (Tickets 87013 and 87605)
-    {{% alert color="info" %}}You will still need to change the password of the administrator account for the new role to be assigned to the administrator. See the [User Role](/refguide/administrator/#user-role) section of *Administrator* for more information{{% /alert %}}
+    {{% alert color="info" %}}You will still need to change the password of the administrator account for the new role to be assigned to the administrator. See the [User Role](/refguide9/administrator/#user-role) section of *Administrator* for more information{{% /alert %}}
 * We resolved an issue where an incorrect debugger password could be displayed for Mendix Cloud **v4** when the **Show Debugger Information** button was clicked on the Environment Details page. (Ticket 99469)
 
 ### July 2nd, 2020

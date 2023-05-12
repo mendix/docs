@@ -34,7 +34,6 @@ In this tab, you can find the following information about your environment:
 * **Environment ID** – the unique identifier of this environment
 * **Custom domains** – any [custom domains](/developerportal/deploy/custom-domains/) of the app
 * **Java Version** – Oracle version 1.8 or AdoptOpenJDK version 8
-* **Mendix Studios Target** – if **Yes**, it means that Mendix Studio and Studio Pro deploy apps to this environment; for more information, see [Studio Deployment Settings](/developerportal/deploy/studio-deployment-settings/)
 * **Plan** – this indicates the type of plan covered by this license
 * **Instances** – this shows a summary of the number and memory allocation of instances of this environment – for more information, see the [Scaling - Mendix Cloud](#scaling) section below
 * **Database Version** – the PostgreSQL version supporting the database
@@ -312,7 +311,7 @@ If you have issues which appear to be related to a content security policy, you 
 
 If you are deploying your apps to [Mendix Cloud Dedicated](/developerportal/deploy/#mendix-cloud-dedicated), all outgoing IP addresses are allowed by default.
 
-If you clear the **Allow all outgoing connections** check box, you can define which IP addresses and ports can be used for outgoing connections.
+If you clear the **Allow all outgoing connections** checkbox, you can define which IP addresses and ports can be used for outgoing connections.
 
 You can add or edit a number of different IP address and port combinations. Any ranges which have already been set up are listed here. You can do the following:
 

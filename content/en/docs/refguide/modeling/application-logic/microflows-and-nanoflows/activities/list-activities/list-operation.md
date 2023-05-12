@@ -103,10 +103,6 @@ These operations take a list and filter it based on an expression. Inside the ex
 
 #### 3.1.5 Range {#range}
 
-{{% alert color="info" %}}
-This list operation action was introduced in Studio Pro 9.24.
-{{% /alert %}}
-
 This operation takes a list and filters it based on two expressions: `offset` and `amount`.
 
 | Operation | Description | Result Type |

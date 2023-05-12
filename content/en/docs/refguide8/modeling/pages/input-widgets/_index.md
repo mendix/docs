@@ -34,9 +34,9 @@ There are several different input widgets, these are used for different [data ty
 
     {{< figure src="/attachments/refguide8/modeling/pages/input-widgets/drop-down.png" alt="Drop down containing region attribute" >}}
 
-* [Check Box](/refguide8/check-box/) – shows the current value of and, optionally, allows end-users to set a *Boolean* attribute to `true` or `false`:
+* [Checkbox](/refguide8/check-box/) – shows the current value of and, optionally, allows end-users to set a *Boolean* attribute to `true` or `false`:
 
-    {{< figure src="/attachments/refguide8/modeling/pages/input-widgets/check-box.png" alt="Check box showing personal attribute" >}}
+    {{< figure src="/attachments/refguide8/modeling/pages/input-widgets/check-box.png" alt="Checkbox showing personal attribute" >}}
 
 * [Radio Buttons](/refguide8/radio-buttons/) – shows the current value of and, optionally, allows end-users to pick an option from a list of options in an *enumeration* attribute or the value of a *Boolean* attribute:
 

@@ -38,10 +38,6 @@ Vocabulary annotations can be used in a service to indicate features that are no
 * **Updatable** – an entity marked as `Updatable="true"` with `DeltaUpdateSupported="true"` and `UpdateMethod="2"` will make the entity updatable in the domain model. That means, for example, that you can model pages that change attributes values and associated objects, and that you can use the entity in the [Change Object](/refguide/change-object/) activity. For updatable entities, the annotations `NonUpdatableProperties` and `NonUpdatableNavigationProperties` list the (navigation)properties that cannot be updated.
 * **Deletable** - an entity marked as `Deletable="true"` can be used in the [Delete External Object](/refguide/delete-external-object/) activity.
 
-{{% alert type="info" %}}
-The **Insertable** and **Deletable** functionalities were introduced in Studio Pro [9.12.0](/releasenotes/studio-pro/9.12/).
-{{% /alert %}}
-
 An entity can only be used when it is accessible through an entity set.
 
 Furthermore, an entity can only be used if it is uniquely identifiable with a key. The key can consist of one or more properties, as long as the following conditions are met:
@@ -49,10 +45,6 @@ Furthermore, an entity can only be used if it is uniquely identifiable with a ke
 * The properties cannot be nullable (so they must have `isNullable="false"` specified).
 * Only the following types are allowed: `Byte`, `SByte`, `Int16`, `Int32`, `Int64`, `Boolean`, `Decimal`, `Single`, `Double`, and `String`.
 * If the type of a key property is `String`, it must have a limited  (maximum) length specified. This is because not all databases support indexes on strings of unlimited length. It is sufficient if  a `MaxLength` is specified in the contract. However, if a `MaxLength` is not specified in the contract, and you know that the string is limited in length, you can still use the entity by specifying the maximum length of the attribute in the the domain model.
-
-{{% alert color="info" %}}
-This feature of using entities with keys that do not have a maximum length specified in the contract applies to version 9.3.0 and above. In previous versions of Studio Pro, you must change the contract to ensure that `MaxLength` is specified.
-{{% /alert %}}
 
 {{% alert color="info" %}}
 The list above for supported key fields does not include `Date` or `DateTime` data types.
@@ -77,10 +69,6 @@ The most commonly used attribute types can be used in your app. The types of the
 | Int64                          | Long |
 | String, Guid                   | String |
 | (Other)                        | (Ignored) |
-
-{{% alert type="info" %}}
-Support for enumerations was introduced in Studio Pro [9.24.0](/releasenotes/studio-pro/9.24/).
-{{% /alert %}}
 
 {{% alert color="warning" %}}
 When the OData endpoint contains operations, these are not imported in the consumed OData service. You can use a [Call REST service](/refguide/call-rest-action/) activity to call these operations.
@@ -117,4 +105,3 @@ When you publish a self-referencing association, you can only publish one side o
 ### 3.6 Enumerations
 
 Enumeration types that have one or more members with a name that is not a valid [enumeration value name](/refguide/enumerations/#312-name) are not supported.
-

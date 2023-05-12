@@ -275,7 +275,7 @@ You can set an explicit order in the theme settings (**App Settings** > **Theme*
 
 ### 7.1 User Entity
 
-**User entity** defines the entity which is used in [assigning a user task](/refguide/user-task/#user-assignment). If you assign a user task using an XPath, you can use attributes of this entity. If you are using a microflow, the entity defines the return type the microflows expects. For more information, see the [User Task Assignment](/refguide/user-task/#user-assignment) section in *User Task*.
+**User entity** defines the entity which is used in [target-users-using](/refguide/user-task/#target-users). If you assign a user task using an XPath, you can use attributes of this entity. If you are using a microflow, the entity defines the return type the microflows expects. For more information, see the [Targeted Users Section](/refguide/user-task/#users) section in *User Task*.
 
 ### 7.2 Optimization
 

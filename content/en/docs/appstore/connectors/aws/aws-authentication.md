@@ -33,6 +33,10 @@ You can implement the above authentication types by means of adding a correspond
 If you plan to use AWS Authentication with a [platform-supported AWS connector](/appstore/aws-connectors/), refer to the documentation provided with the connector for more information about the required authentication type.
 {{% /alert %}}
 
+### 1.2 Example
+
+{{% youtube b3uQONB3yoY %}}
+
 ## 2 Prerequisites {#prerequisites}
 
 Before you can use the AWS Authentication connector, you must first configure the required setting in AWS. Depending on the authentication type that you plan to use, you may need to prepare the following items:
@@ -234,3 +238,7 @@ In this example, a `SigV4Builder` activity is created and associated with a `Cre
 These entities are used as input for the `GetSigV4Headers` Java action, which returns a response in the form of a `SigV4Header` entity.
 
 The values set in the response entity are used as request headers in the REST call to AWS.
+
+#### 5 Read More
+
+* [Securely Connect with the AWS Authentication Connector](https://www.mendix.com/blog/securely-connect-with-the-aws-authentication-connector/)

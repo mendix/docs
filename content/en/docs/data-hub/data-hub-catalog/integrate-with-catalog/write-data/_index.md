@@ -31,7 +31,7 @@ Note the following terminology differences described in the table below:
 
 Before starting this how-to, make sure you have completed the following prerequisites:
 
-* Install Studio Pro version [9.13.0 or above](https://marketplace.mendix.com/link/studiopro/)
+* Install the most recent version of Studio Pro
 * Understand how read-only external entities behave by reading [How to Share Data Between Apps](/data-hub/share-data/)
 
 ## 3 Exposing OData Contracts in Mendix Studio Pro

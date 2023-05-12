@@ -47,11 +47,11 @@ The object which you want to use as a context. It should be of the entity type s
 
 ### 3.3 Use Return Value 
 
-This property determines if the returned value from the called workflow should be available in the rest of the current microflow. If **Use return value** is set to *Yes*, you will need to fill in the [name](https://docs.mendix.com/refguide/microflow-call/#name) of the variable, object, or list returned by the activity.
+This property determines if the returned value from the called workflow should be available in the rest of the current microflow. If **Use return value** is set to Yes, you will need to fill in the [variable name](refguide/microflow-call/#name) of the workflow object returned by the activity.
 
-### 3.4 Variable Name, Object Name, or List Name {#name}
+### 3.4 Variable Name {#name}
 
-The name of the variable, list, or object returned by the activity.
+The name of the variable returned by the activity.
 
 ## 4 Common Section {#common}
 

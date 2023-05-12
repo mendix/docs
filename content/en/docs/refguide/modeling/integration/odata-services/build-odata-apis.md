@@ -27,7 +27,7 @@ REST API best practices usually include some of the following:
 * **Versioning and compatibility** – Versioning usually should be date-based, or semantic versioning should include the major version part of the URL. Clients should assume changes to an endpoint are always backwards compatible. In case of breaking changes, a new endpoint including a new major version number should be used. See the [Versioning](#versioning) section in this document.
 * **Secure APIs** – Apps should not be able to access more information than they are allowed to see.
 
-### 1.2 Starting Point: Example Domain Model
+### 1.2 Starting Point: Example Domain Model {#starting-domain-model}
 
 This document use the following domain model as an example: 
 
@@ -211,7 +211,7 @@ For long queries, place the query in the request body. You can do this by using 
 
 You now have something that is very similar to how you would use GraphQL, where you can query a graph of objects, and limit the attributes returned to only those that you need. 
 
-## 6 API-First: Decoupling APIs from Domain Model {#api-first}
+## 6 API-First: Decoupling APIs from the Domain Model {#api-first}
 
 You may not want to directly publish APIs for your persistent entities because of the following:
 
@@ -227,80 +227,75 @@ The first is not something supported by Mendix OData services, unless the contra
 
 ### 6.1 Defining a Resource Model
 
-Define a resource model using [non-persistent entities](/refguide/persistability/), expose these as OData resource, and then model microflows to map you NPE resources to the actual source data. This will be more effort than using PEs, as you’ll need to handle the OData query options in the microflow. Smart use of custom Java actions can simplify this though, as the following example illustrates.
+Define a resource model using [non-persistent entities](/refguide/persistability/), expose these as OData resource, and then model microflows to map you NPE resources to the actual source data. This will be more effort than using PEs, as you’ll need to handle the OData query options in the microflow. Use of custom Java actions can simplify this, as explained in [Combining Data from Two Entities](#two-entities).
 
-### 6.1.1 Combining Data from Two Entities
+### 6.2 Combining Data from Two Entities {#two-entities}
 
-In this example we want to expose a single REST resource that combines data from the Customer entity and the Address entity, so it joins data from both entities, and also combines the Firstname and Lastname attributes into a single attribute Fullname. We also only want to provide the home address information, and exclude other address types.
+Refer to the [example domain model](#example-domain-model) mentioned earlier in this document.
+
+In this example, you can expose a single REST resource that combines data from the **Customer** entity and the **Address** entity. It will join data from both entities, and also combine the `Firstname` and `Lastname` attributes into a single attribute, `Fullname`. We want to provide the home address information, and exclude other address types:
 
 {{< figure src="/attachments/refguide/modeling/integration/build-odata-apis/expose-single-resource-domain-model.png" >}} 
 
-
-We start by adding the CustomerHomeAddress NPE as a resource to the OData service.
+1. Add the CustomerHomeAddress NPE as a resource to the OData service:
 
 {{< figure src="/attachments/refguide/modeling/integration/build-odata-apis/customer-home-address-npe.png" >}} 
 
-
-In mendix you can use an OQL Dataset to define the query to fetch this information from your entities.
+2. You can use an OQL Dataset to define the query to fetch this information from your entities:
 
 {{< figure src="/attachments/refguide/modeling/integration/build-odata-apis/oql-database.png" >}} 
 
-
-Next we need to define a microflow that will fetch the correct data when a user does a GET on the CustomerHomeAddress resource:
+3. Define a microflow that will fetch the correct data when a user does a GET on the CustomerHomeAddress resource:
 
 {{< figure src="/attachments/refguide/modeling/integration/build-odata-apis/get-microflow.png" >}} 
 
-
-The microflow uses a Java action to translate the OData query to an OQL expression using the OQL Dataset as the base query. This ensures filtering, sorting, paging will work as expected.
+The microflow uses a Java action to translate the OData query to an OQL expression using the OQL Dataset as the base query. This ensures that filtering, sorting, and paging work as expected.
 
 {{< figure src="/attachments/refguide/modeling/integration/build-odata-apis/translate-to-odl-expression.png" >}} 
 
-
-You can now do a REST GET call, defining which attributes you need, how you want it sorted, and how many objects you need.
+4. You can now do a REST GET call, defining which attributes you need, how you want it sorted, and how many objects you need:
 
 {{< figure src="/attachments/refguide/modeling/integration/build-odata-apis/get-call.png" >}} 
 
-
-The result is that you have decoupled your REST resource from your domain model Persistent Entities: you can change your entities and use the OQL query to ensure the exposed data remains backwards compatible.
+5. The result is that you have decoupled your REST resource from your domain model Persistent Entities. You can change your entities and use the OQL query to ensure the exposed data remains backwards compatible.
 
 The Java action used above add the OData query to the original OQL query is as follows:
 
 {{< figure src="/attachments/refguide/modeling/integration/build-odata-apis/view-log-line-details.png" >}} 
 
-
-With some formatting it’s better readable. The original OQL query is used as a subquery (inline view) for the OData query. As is illustrated here, all the expressions will be pushed down into the database, and benefit from the performance of the database optimizer.
+With some formatting, it can be more readable. The original OQL query is used as a subquery (inline view) for the OData query. All the expressions will be pushed down into the database, and benefit from the performance of the database optimizer:
 
 {{< figure src="/attachments/refguide/modeling/integration/build-odata-apis/subquery.png" >}} 
 
-### 6.1.2 Defining Logic in an Insert Microflow
+### 6.3 Defining Logic in an Insert Microflow
 
-You may wonder how you are supposed to provide logic in a REST api, if REST best practices specify you should only use the default http operations insert, update, retrieve or delete?
+How you are supposed to provide logic in a REST API, if REST best practices specify that you should only use the default HTTP operations (insert, update, retrieve or delete)?
 
-If you think of the input parameters of your logic as the REST resource, it’s easy to see that executing logic can simply be modeled by handling the logic in the insert microflow. This way you execute the logic when a client POSTs a new resource to your API. 
+Consider the input parameters of your logic as the REST resource. In this way, executing logic can be modeled by handling the logic in the insert microflow. This way you execute the logic when a client POSTs a new resource to your API. 
 
-This example shows a CustomerEmailRequest entity, that a client can create using an API. The API will execute the logic to send the customer an email when this resource is created. 
+This example shows a `CustomerEmailRequest` entity, that a client can create using an API. 
+
+1. The API will execute the logic to send the customer an email when this resource is created:
 
 {{< figure src="/attachments/refguide/modeling/integration/build-odata-apis/create-customer-email-request-entity.png" >}} 
 
-
-Next we define the logic as the insert (POST) action.
+2. Define the logic as the insert (POST) action:
 
 {{< figure src="/attachments/refguide/modeling/integration/build-odata-apis/define-insert-action.png" >}} 
 
-### 6.2 Running Operations Asynchronously 
+### 6.4 Running Operations Asynchronously 
 
-There’s one other [best practice](https://learn.microsoft.com/en-us/azure/architecture/best-practices/api-design#asynchronous-operations) you want to consider when doing this: for operations that take a while to complete, you should consider running them asynchronously. This means that you tell the client the request has been received, that it’s not yet completely processed but that you’ll do it in the background. In Mendix you can use a Task Queue to schedule the logic to be run in the background. In the meantime the client can GET the resource to see what the status is.
+Consider running operations that take awhile to complete [asynchronously](https://learn.microsoft.com/en-us/azure/architecture/best-practices/api-design#asynchronous-operations). This means that you tell the client that the request has been received, that it is not yet completely processed, but that you’ll do it in the background. In Mendix, you can use a [Task Queue](/refguide/task-queue/) to schedule the logic to be run in the background. In the meantime, the client can GET the resource to see what the status is.
 
-The last activity of the insert microflow calls the SendCustomerEmail microflow using the TaskQueue:
+The last activity of the insert microflow calls the SendCustomerEmail microflow using the task queue:
 
 {{< figure src="/attachments/refguide/modeling/integration/build-odata-apis/task-queue.png" >}} 
 
-Example of calling the send customer email logic. The POST response provides the location where the client can retrieve the status of the request.
+The POST response provides the location where the client can retrieve the status of the request:
 
 {{< figure src="/attachments/refguide/modeling/integration/build-odata-apis/call-send-email-logic.png" >}} 
 
-
-When we GET the resource from the location provided, we can see that the status has value *Sent*, indicating that the logic has completed.
+When you GET the resource from the location provided, the status has the value *Sent*, indicating that the logic has completed:
 
 {{< figure src="/attachments/refguide/modeling/integration/build-odata-apis/get-resource-sent.png" >}} 
 

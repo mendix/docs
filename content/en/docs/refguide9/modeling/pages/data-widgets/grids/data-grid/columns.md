@@ -25,6 +25,10 @@ Grid column properties consist of the following sections:
 
 {{% snippet file="/static/_includes/refguide9/common-section-link.md" %}}
 
+{{% alert color="info" %}}
+Dynamic classes specified on grid columns will only be applied on the table columns (the `col` elements) but not on individual table cells (the `td` elements). 
+{{% /alert %}}
+
 ### 2.2 Data Source Section {#data-source}
 
 #### 2.2.1 Attribute (Path)

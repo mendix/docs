@@ -2,6 +2,7 @@
 title: "APD Reference Guides"
 url: /appstore/modules/apd/rg-apd/
 category: "APD"
+weight: 30
 description: "Presents a list of APD/APM reference guides for each APD/APM version."
 ---
 

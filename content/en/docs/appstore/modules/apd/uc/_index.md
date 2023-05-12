@@ -1,6 +1,7 @@
 ---
 title: "APM Use Cases"
 url: /appstore/modules/apd/uc/
+weight: 20
 category: "APD"
 description: "Presents useful APD/APM use cases for each APD/APM version."
 ---

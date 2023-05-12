@@ -1,7 +1,8 @@
 ---
-title: "Release Notes"
+title: "APD Release Notes"
 url: /appstore/modules/apd/release-notes
-weight: 10
+description: "The release notes for Mendix Application Performance Diagnostics (APD) with details on new features, bug fixes, and known issues."
+weight: 40
 ---
 
 {{% alert color="info" %}}

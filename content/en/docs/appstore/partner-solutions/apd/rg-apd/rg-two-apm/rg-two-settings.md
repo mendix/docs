@@ -1,11 +1,11 @@
 ---
 title: "Settings"
-url: /appstore/modules/apd/rg-two-settings/
+url: //appstore/partner-solutions/apd/rg-two-settings/
 ---
 
 The settings displayed in this screenshot are available for an environment:
 
-{{< figure src="/attachments/appstore/modules/apd/rg-apd/rg-two-apm/rg-two-settings/settings.png" >}}
+{{< figure src="/attachments//appstore/partner-solutions/apd/rg-apd/rg-two-apm/rg-two-settings/settings.png" >}}
 
 By default, the best options are already selected for the most common situations. The following settings can be changed:
 
@@ -28,8 +28,8 @@ By default, the best options are already selected for the most common situations
 * **Generate API key**
 * **Delete this environment** – Clicking this button will delete the environment from the APM manager.
 
-When you generate an API key for a runtime/Mendix Studio Pro environment, you see this key only once, so copy-paste and use it immediately. For more information about the installation, see the [APM 2 Installation Guide](/appstore/modules/apd/ig-two/).
+When you generate an API key for a runtime/Mendix Studio Pro environment, you see this key only once, so copy-paste and use it immediately. For more information about the installation, see the [APM 2 Installation Guide](//appstore/partner-solutions/apd/ig-two/).
 
-{{< figure src="/attachments/appstore/modules/apd/rg-apd/rg-two-apm/rg-two-settings/api_key_dialog.png" >}}
+{{< figure src="/attachments//appstore/partner-solutions/apd/rg-apd/rg-two-apm/rg-two-settings/api_key_dialog.png" >}}
 
 Click **Copy** to copy the API key to the clipboard.

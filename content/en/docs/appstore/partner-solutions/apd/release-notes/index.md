@@ -1,6 +1,6 @@
 ---
 title: "APD Release Notes"
-url: /appstore/modules/apd/release-notes
+url: //appstore/partner-solutions/apd/release-notes
 description: "The release notes for Mendix Application Performance Diagnostics (APD) with details on new features, bug fixes, and known issues."
 weight: 40
 ---
@@ -15,7 +15,7 @@ For newer release notes, see the **Releases** tab of [Mendix Application Perform
 
 ### APM Renamed to Application Performance Diagnostics (APD)
 
-APM has been renamed to [Application Performance Diagnostics (APD)](/appstore/modules/apd/rg-three-apd/), since that better covers the functionality and since APD can work side-by-side with other APM solutions.
+APM has been renamed to [Application Performance Diagnostics (APD)](//appstore/partner-solutions/apd/rg-three-apd/), since that better covers the functionality and since APD can work side-by-side with other APM solutions.
 
 ### SMART Digital Factory APIs
 

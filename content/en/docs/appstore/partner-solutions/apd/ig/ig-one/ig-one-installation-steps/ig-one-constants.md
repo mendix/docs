@@ -1,6 +1,6 @@
 ---
 title: "Constants"
-url: /appstore/modules/apd/ig-one-constants/
+url: //appstore/partner-solutions/apd/ig-one-constants/
 ---
 This appendix describes the constants used in the APMAgent. You are advised to use the defaults with the exception of the CompanyName constant.
 

@@ -1,6 +1,6 @@
 ---
 title: "APM 1 Installation Guide"
-url: /appstore/modules/apd/ig-one/
+url: //appstore/partner-solutions/apd/ig-one/
 weight: 2
 ---
 
@@ -10,10 +10,10 @@ This document describes the installation and uninstallation of the APM tool. The
 
 Read all the details here:
 
-* [Prerequisites](/appstore/modules/apd/ig-one-prerequisites/)
-* [Installation Steps](/appstore/modules/apd/ig-one-installation-steps/)
-* [Upgrade Steps](/appstore/modules/apd/ig-one-upgrade-steps/)
-* [Uninstall Steps](/appstore/modules/apd/ig-one-uninstall-steps/)
+* [Prerequisites](//appstore/partner-solutions/apd/ig-one-prerequisites/)
+* [Installation Steps](//appstore/partner-solutions/apd/ig-one-installation-steps/)
+* [Upgrade Steps](//appstore/partner-solutions/apd/ig-one-upgrade-steps/)
+* [Uninstall Steps](//appstore/partner-solutions/apd/ig-one-uninstall-steps/)
 
 ## 2 Installation for the Experienced User
 

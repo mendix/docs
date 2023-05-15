@@ -7,7 +7,7 @@ tags: ["connectors", "data hub", "studio pro", "build", "API", "REST", "connecto
 
 ## 1 Introduction
 
-Companies with a large portfolio of custom built REST APIs use a set of [best practices](#best-practices) to ensure these APIs provide the required functionality in a predictable way. You have full control of all these aspects when creating a [published REST service](/refguide/published-rest-service/) in Mendix. 
+Companies with a large portfolio of custom built REST APIs use a set of [best practices](#best-practices) to ensure these APIs provide the required functionality in a predictable way. You have full control of all these aspects when creating a [published REST service](/refguide/published-rest-service/) in Mendix Studio Pro. 
 
 If you plan to create a large number of APIs, using [published OData services](/refguide/published-odata-services/) to implement REST can save you a lot of time while ensuring consistency across your APIs. 
 
@@ -17,7 +17,7 @@ This document shows how [published OData services](/refguide/published-odata-ser
 
 REST API best practices usually include some of the following:
 
-* **Use JSON** – JSON is easy to read, libraries to process it are available in most languages. 
+* **Use JSON** – JSON is easy to read, and libraries to process it are available in most languages. 
 * **Use nouns, not verbs (resource-first, no actions in path)** – APIs should be resource-based instead of action-based to improve decoupling: all interactions assume resources and a limited set of standardized operations.
 * **A resource has an ID** – Every resource has a unique path where it can be retrieved or updated. See the [Retrieving Data](#retrieving-data) section in this document.
 * **A resource has a uniform interface (for example, the correct use of an HTTP operation)** – Use the standardized set of HTTP operations to work with your resources: GET (retrieve), POST (create/insert), PUT (replace), PATCH (update), DELETE. See the [Creating and Changing Data with Full CRUD](#creating-changing-data) section in this document.
@@ -52,21 +52,21 @@ For every published resource, you can define what functionality is available:
 * **Update** = PATCH
 * **Delete** = DELETE 
 
-You can also define other capabilities, like if counting the results is supported, and whether you **skip** results or limiting the number of results returned (**top**): 
+You can also define other capabilities, like if you can count results (using a `$count` query), skip results (using a `$skip` query), or limit the number of results returned (usimg a `$top` query): 
 
 {{< figure src="/attachments/refguide/modeling/integration/build-odata-apis/edit-published-resource.png" >}} 
 
 ### 2.2 OpenAPI 3 Contract and Test Page
 
-When you start your app, you see a Swagger documentation and test page:
+When you start your app, you see the Swagger UI documentation and test page:
 
 {{< figure src="/attachments/refguide/modeling/integration/build-odata-apis/swagger-doc.png" >}} 
 
-The test page lists all accepted parameters, and example payloads, both for regular responses, as well as for error payloads:
+The test page lists all accepted parameters, and example payloads, for regular responses and for error payloads:
 
 {{< figure src="/attachments/refguide/modeling/integration/build-odata-apis/test-page.png" >}} 
 
-A JSON schema description of all the payload types is also provided:
+It also provides a JSON schema of all the payload types:
 
 {{< figure src="/attachments/refguide/modeling/integration/build-odata-apis/json-schema.png" >}} 
 
@@ -84,15 +84,17 @@ The image below shows an example of fetching all customers in a call:
 
 {{< figure src="/attachments/refguide/modeling/integration/build-odata-apis/fetch-all-customers.png" >}} 
 
-### 3.1 Getting a Resource by ID
+### 3.1 Getting a Resource by Identifier
 
-Fetch a single **Customer** resource by providing the ID between brackets. OData also supports using multi-field IDs by proving the required attributes as a key value list between the brackets:
+Fetch a single **Customer** resource by providing the identifier between brackets:
 
 {{< figure src="/attachments/refguide/modeling/integration/build-odata-apis/fetch-single-customer.png" >}} 
 
+OData also supports using multi-field IDs by providing the required attributes as a key value list between the brackets.
+
 ### 3.2 Filtering, Sorting, Paginating, and Selecting Data {#filter-sort-page-select-data}
 
-OData standardizes how you specify which resources that you are interested in. This provides the client with the tools to ensure that the response payload is as small as possible. It also ensures that the Mendix service implementation will be able to push down the filtering, sorting, and pagination into the database. This uses the database query optimizer and available indexes to optimize performance.
+OData standardizes how to specify which resources to consume. This provides the client with the tools to ensure that the response payload is as small as possible. It also ensures that the Mendix Runtime service implementation will be able to push down the filtering, sorting, and pagination into the database. This uses the database query optimizer and available indexes to optimize performance.
 
 The following URL parameters are available:
 
@@ -109,11 +111,11 @@ Alternatively, you can specify the query in the payload of a POST call, which ca
 
 ## 4 Creating and Changing Data with Full CRUD {#creating-changing-data}
 
-Published OData services in Mendix allow you to easily create and change data.
+Published OData services in Studo Pro allow you to easily create and change data.
 
 ### 4.1 Inserting New Data
 
-If you selected **nsertable** in the API definition, new resources can be created using POST. Successfully created data will automatically result in a 201 status code, and a **Location** header provides the URL of the resulting resource, as is best practice for REST APIs"
+If you selected **Insertable** in the API definition, clients can create new resources using POST. Successfully created data will automatically result in a 201 status code, and a **Location** header provides the URL of the resulting resource, as is best practice for REST APIs."
 
 {{< figure src="/attachments/refguide/modeling/integration/build-odata-apis/insert-new-data.png" >}} 
 
@@ -123,7 +125,7 @@ This uses the returned location header to query the new resource at its endpoint
 
 #### 4.1.1 Using a Prefer Header
 
-Instead of doing the two API calls illustrated above, POST followed by GET, you also have the option to use the **Prefer** header. If you give this the value of `return=representation`, the resulting resource will be returned automatically, resulting in one less API call:
+Instead of doing the two API calls illustrated above, POST followed by GET, you also have the option to use the **Prefer** header. If you give this the value of `return=representation`, the resulting resource will be returned automatically, resulting in one fewer API call:
 
 {{< figure src="/attachments/refguide/modeling/integration/build-odata-apis/prefer-header.png" >}} 
 
@@ -135,7 +137,7 @@ If you want to create a new resource associated to another resource, you can ref
 
 ### 4.2 Modifying Existing Data
 
-Updating of resources is provided using the PATCH operation. Mendix will automatically handle updating the entity; there is no need to implement a microflow to handle this. 
+Updating of resources is provided using the PATCH operation. Mendix Runtime will automatically handle updating the entity; there is no need to implement a microflow to handle this. 
 
 Example of a PATCH request:
 
@@ -191,7 +193,7 @@ Deleting is provided using the DELETE operation.
 
 ### 4.4 Automatic Standard HTTP Error Codes {#http-codes}
 
-OData APIs automatically return the correct HTTP status code, like a 404 if a specified resource cannot be found.
+OData APIs automatically return the correct HTTP status code, like a 404, if a specified resource cannot be found.
 
 {{< figure src="/attachments/refguide/modeling/integration/build-odata-apis/standard-error-codes.png" >}} 
 
@@ -213,7 +215,7 @@ You now have something that is very similar to how you would use GraphQL, where 
 
 ## 6 API-First: Decoupling APIs from the Domain Model {#api-first}
 
-You may not want to directly publish APIs for your persistent entities because of the following:
+You may not want to directly publish APIs for your persistable entities because of the following:
 
 * You want to decouple your API resources from your entities
 * You want to define your services API-first
@@ -227,7 +229,7 @@ The first is not something supported by Mendix OData services, unless the contra
 
 ### 6.1 Defining a Resource Model
 
-Define a resource model using [non-persistent entities](/refguide/persistability/), expose these as OData resource, and then model microflows to map you NPE resources to the actual source data. This will be more effort than using PEs, as you’ll need to handle the OData query options in the microflow. Use of custom Java actions can simplify this, as explained in [Combining Data from Two Entities](#two-entities).
+Define a resource model using [non-persistable entities](/refguide/persistability/), expose these as OData resources, and then model microflows to map these resources to the actual source data. This will be more effort than using persistable entities, as you’ll need to handle the OData query options in the microflow. Use of custom Java actions can simplify this, as explained in [Combining Data from Two Entities](#two-entities).
 
 ### 6.2 Combining Data from Two Entities {#two-entities}
 
@@ -237,7 +239,7 @@ In this example, you can expose a single REST resource that combines data from t
 
 {{< figure src="/attachments/refguide/modeling/integration/build-odata-apis/expose-single-resource-domain-model.png" >}} 
 
-1. Add the CustomerHomeAddress NPE as a resource to the OData service:
+1. Add the `CustomerHomeAddress` entity as a resource to the OData service:
 
 {{< figure src="/attachments/refguide/modeling/integration/build-odata-apis/customer-home-address-npe.png" >}} 
 
@@ -259,7 +261,7 @@ The microflow uses a Java action to translate the OData query to an OQL expressi
 
 5. The result is that you have decoupled your REST resource from your domain model Persistent Entities. You can change your entities and use the OQL query to ensure the exposed data remains backwards compatible.
 
-The Java action used above add the OData query to the original OQL query is as follows:
+The Java action used above adds the OData query to the original OQL query as follows:
 
 {{< figure src="/attachments/refguide/modeling/integration/build-odata-apis/view-log-line-details.png" >}} 
 
@@ -285,7 +287,7 @@ This example shows a `CustomerEmailRequest` entity, that a client can create usi
 
 ### 6.4 Running Operations Asynchronously 
 
-Consider running operations that take awhile to complete [asynchronously](https://learn.microsoft.com/en-us/azure/architecture/best-practices/api-design#asynchronous-operations). This means that you tell the client that the request has been received, that it is not yet completely processed, but that you’ll do it in the background. In Mendix, you can use a [Task Queue](/refguide/task-queue/) to schedule the logic to be run in the background. In the meantime, the client can GET the resource to see what the status is.
+Consider running operations that take awhile to complete [asynchronously](https://learn.microsoft.com/en-us/azure/architecture/best-practices/api-design#asynchronous-operations). This means that you tell the client that the request has been received, that it is not yet completely processed, but that you’ll do it in the background. In Mendix Studio Pro, you can use a [Task Queue](/refguide/task-queue/) to schedule the logic to be run in the background. In the meantime, the client can GET the resource to see what the status is.
 
 The last activity of the insert microflow calls the SendCustomerEmail microflow using the task queue:
 
@@ -301,9 +303,9 @@ When you GET the resource from the location provided, the status has the value *
 
 ## 7 Versioning {#versioning}
 
-Reliable versioning is important for APIs. Client applications should trust your API not to make any incompatible changes that will cause the client app to malfunction. Any change you make to an API should always be backwards-compatible. Breaking changes can only be introduced in new APIs, offering your clients a period of time where they can migrate from the old version to the new version. This means you need to the ability to run 2 versions of the same API side by side.
+Reliable versioning is important for APIs. Client applications should trust your API not to make any incompatible changes that will cause the client app to malfunction. Any change you make to an API should always be backwards-compatible, though backwards-incompatible changes can be made in a new major version. Breaking changes can only be introduced in a new major version, offering your clients a period of time where they can migrate from the old version to the new version. This means you need to the ability to run 2 versions of the same API side by side.
 
-With OData, similar to REST APIs in Mendix, you have full control over how you define your versions. By default, Mendix suggests to use [semantic versioning](https://semver.org/), adding the major version number to the URL. 
+With OData, similar to REST APIs in Mendix, you have full control over how you define your versions. By default, we suggest using [semantic versioning](https://semver.org/), adding the major version number to the URL. 
 
 If you need to introduce breaking changes, duplicate the entire OData service and change the major version:
 

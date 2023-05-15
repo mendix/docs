@@ -18,9 +18,9 @@ In the domain model of the System module, there are several workflow engine-rela
 
 These entities are populated by the Workflow Engine, some on the start of the app, others – while running workflows. The entities can be divided into the following groups:
 
-- [Definition-related entities](#definition) (populated when the app starts)
-- [Instance-related entities](#instance) (populated while running workflows)
-- [Action-related entities](#action) (that fulfill a specific action)
+* [Definition-related entities](#definition) (populated when the app starts)
+* [Instance-related entities](#instance) (populated while running workflows)
+* [Action-related entities](#action) (that fulfill a specific action)
 
 The workflow engine stores the state of the workflow instances in the database. It also uses a couple of internal, hidden entities to store the details about the workflow execution progress. These entities are not described in this document, but can be seen when exploring the tables in the database. These entities are hidden intentionally  as they should not be used outside the workflow engine, for example, to be displayed in pages or used in microflows. 
 
@@ -61,6 +61,7 @@ When a workflow instance finishes, the object stays in the database. Removing co
 Security-wise, users with the **Administrator** role can access all instances. Other users can access them only when they are an assigned or a targeted user in one of the associated **System.WorkflowUserTask** instances (you can set that in the [access rules](/refguide/access-rules/) of the **System.Workflow** entity). If other users need to access the **System.Workflow** data, the app developer needs to set [state-change event](/refguide/workflow-properties/#workflow-state-change) in [App Settings](/refguide/app-settings/#events) or in [workflow properties](/refguide/workflow-properties/#events) to copy the data to other entities with more specific security constraints (For an example, see the *OCh_Workflow_State* microflow in the [Workflow Commons](/appstore/modules/workflow-commons/) module).
 
 {{% alert color="warning" %}}
+
 For an app developer, it is allowed to change the **Name**, **Description**, and **DueDate** members of **System.Workflow** instances. Other attributes or outgoing associations should not be changed.
 
 {{% /alert %}}
@@ -73,18 +74,20 @@ The **System.WorkflowUserTask_TargetUsers** is populated based on the [Targeted 
 
 If during the process of targeting users [on-created event](/refguide/user-task/#events) and user task state-change event (set in [App Settings](/refguide/app-settings/#events) or in [workflow properties](/refguide/workflow-properties/#events)) succeed, the **State** changes to **In Progress**. If one of them fail, the **State** is set to **Failed**. After the user task state is set to **Failed**, the workflow state will be changed to **Failed**. 
 
-Failed workflows can be retried using the **Retry workflow** option of the [Change Workflow State microflow activity](https://docs.mendix.com/refguide/change-workflow-state/#operation). This option will attempt to run the user task from the point it failed. When the user task failed because no users were targeted, it is possible to manually correct user targeting and then use the **Retry Workflow** option to set the workflow into the in-progress state again.
+Failed workflows can be retried using the **Retry workflow** option of the [Change Workflow State microflow activity](https://docs.mendix.com/refguide/change-workflow-state/#operation). This option will attempt to run the user task from the point it failed. When the user task failed because no users were targeted, it is possible to manually correct user targeting and then use the **Retry workflow** option to set the workflow into the in-progress state again.
 
 The **System.WorkflowUserTask** entity is used for the Task Inbox. To keep the Task Inbox performant, user task objects are deleted when they are no longer necessary. This happens when the user task state becomes **Completed** or **Aborted**.
 
 Security-wise, users with the **Administrator** role can access all instances. Other users can access only an instance they were targeted for (you can set it in the access rules of the **System.WorkflowUserTask** entity). If other users need to access the System.Workflow data, the app developer needs to set the [User task state change property](/refguide/workflow-properties/#user-task-state-change) in workflow properties to copy the data to other entities with more specific security constraints (you can reference the *OCh_WorkflowUserTask_State* microflow as an example from the [Workflow Commons](/appstore/modules/workflow-commons/) module).
 
 {{% alert color="warning" %}}
+
 As an app developer you can change the **Name**, **Description**, **DueDate**, **System.WorkflowUserTask_TargetUsers**, and **System.WorkflowUserTask_Assignee** members of **System.WorkflowUserTask** instances. Other attributes or outgoing associations should not be changed.
 
 {{% /alert %}}
 
 #### 2.2.3 System.WorkflowUserTaskOutcome
+
 When a user selects an outcome for a user task, this information is stored as an object in the `System.WorkflowUserTaskOutcome` entity. The user selecting an outcome is stored in the **System.WorkflowUserTaskOutcome_User** association, the user task is stored in the **System.WorkflowUserTaskOutcome_WorkflowUserTask** association, the outcome and the time are stored in the attributes of **System.WorkflowUserTaskOutcome**.
 
 Security-wise, users with the Administrator role can access all instances. Other users can access them only when they are an assigned or a targeted user of the associated user task. If other users need to access the System.Workflow data, the app developer needs to set state-change events in [App Settings](/refguide/app-settings/#events) or in [workflow properties](/refguide/workflow-properties/#events) to copy the data to other entities with more specific security constraints. 
@@ -112,11 +115,12 @@ During execution the System.Workflow object record gets locked beforehand. This 
 
 The execution of a workflow will load the workflow instance and will try to advance the workflow from the current activity. If this is not possible (the prerequisites for advancing an activity have not been met yet), or when the workflow reaches another activity that has to wait for completion, the workflow is suspended and it stores the new state in the database. The execution of that workflow instance will then stop and the engine may continue executing other workflow instances. As soon as something happens in the system that may allow a workflow instance to advance again, a workflow execution task will be queued to execute that workflow instance again, which may advance that workflow instance further. When the workflow engine reaches the **End** activity, the workflow execution will stop and the state of the workflow instance will become **Completed**. 
 
-Before execution, the Workflow Engine verifies whether a workflow is compatible with the latest workflow definition of the app model. If version conflicts are found, the workflow instance becomes incompatible (the **State** attribute becomes **Incompatible** and the **Reason** attribute will contain the description of the conflicts). Next to an **In-Progress** or **Paused** workflow becoming incompatible, it is also possible that an incompatible workflow returns to its previous in-progress/paused state. For more information, see [Workflow Versioning and Conflict Mitigation](https://docs.mendix.com/refguide/workflow-versioning/).
+Before execution, the Workflow Engine verifies whether a workflow is compatible with the latest workflow definition of the app model. If version conflicts are found, the workflow instance becomes incompatible (the **State** attribute becomes **Incompatible** and the **Reason** attribute will contain the description of the conflicts). Next to an **In-Progress** or **Paused** workflow becoming incompatible, it is also possible that an incompatible workflow returns to its previous in-progress/paused state. For more information, see [Workflow Versioning and Conflict Mitigation](/refguide/workflow-versioning/).
 
 Only workflow instances with the **State** attribute being **InProgress** are executed.
 
 #### 3.2.1 When Are Workflows Queued for Execution?
+
 The Workflow Engine queues workflow instances for execution automatically. This happens at the following stages:
 
 - After workflow instantiation

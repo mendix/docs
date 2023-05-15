@@ -110,7 +110,7 @@ Integration activities can be used to integrate with other systems, for example 
 
 | Graphic | Name | Description |
 | --- | --- | --- |
-| {{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/call-ML-model.png" alt="call ML model" link="/refguide/call-ml-model/" width="100px" >}} | [Call ML model](/refguide/call-ml-model/) *(only in microflows)* | Allows you to call an [ML model mapping](/refguide/ml-model-mapping/) document. |
+| {{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/call-ml-model.png" alt="call ml model" link="/refguide/call-ml-model/" width="100px" >}} | [Call ML model](/refguide/call-ml-model/) *(only in microflows)* | Allows you to call an [ML model mapping](/refguide/ml-model-mapping/) document. |
 
 ## 12 Workflow Activities
 
@@ -118,10 +118,16 @@ Workflow activities are used in relation to workflows and their user tasks.
 
 | Graphic | Name | Description |
 | --- | ---| --- |
+| {{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/apply-jump-to-option.png" link="/refguide/apply-jump-to-option/" width="160px" >}} | [Apply Jump-To Option](/refguide/apply-jump-to-option/) | Allows the workflow to jump to a selected activity. This activity should be used after the [Generate Jump-To Options](/refguide/generate-jump-to-options/) activity that generates the list of possible workflow activities the workflow can jump to. |
+| {{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/workflow-call.png" link="/refguide/workflow-call/" width="160px" >}} | [Call workflow](/refguide/workflow-call/) | Triggers the selected workflow. |
+| {{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/change-workflow-state.png" link="/refguide/change-workflow-state/" width="160px" >}} | [Change workflow state](/refguide/change-workflow-state/) | Allows you to add **Abort**, **Continue**, **Pause**, **Unpause**, **Restart**, and **Retry** operations to a workflow and control workflow instances. |
 | {{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/complete-task.png" link="/refguide/complete-task/" width="160px" >}} | [Complete task](/refguide/complete-task/) | Sets which outcome the [user task](/refguide/user-task/) should follow. For example, this activity can be used to complete a user task using a microflow with custom validations. |
+| {{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/generate-jump-to-options.png" link="/refguide/generate-jump-to-options/" width="160px" >}} | [Generate Jump-To Options](/refguide/generate-jump-to-options/) | Allows you to generate a list of workflow activities where the workflow can jump to as its next step. The [Apply Jump-To Option](/refguide/apply-jump-to-option/) activity should be used after the Generate Jump-To Options to let the workflow continue from the selected activity. |
+| {{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/retrieve-workflow-context.png" link="/refguide/retrieve-workflow-context/" width="160px" >}} | [Retrieve workflow context](/refguide/retrieve-workflow-context/) | Allows you to retrieve the selected [Workflow Context](/refguide/workflow-parameters/) entity. |
 | {{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/open-task-page.png" link="/refguide/show-task-page/" width="160px" >}} | [Show user task page](/refguide/show-task-page/) | Opens a user task page specified in [user task properties](/refguide/user-task/). |
 | {{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/open-workflow-page.png" link="/refguide/show-workflow-page/" width="160px" >}} | [Show workflow admin page](/refguide/show-workflow-page/) | Opens a workflow overview page. |
-| {{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/workflow-call.png" link="/refguide/workflow-call/" width="160px" >}} | [Call workflow](/refguide/workflow-call/) | Triggers the selected workflow. |
+| {{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/lock-workflow.png" link="/refguide/lock-workflow/" width="160px" >}} | [Lock Workflow](/refguide/lock-workflow/) | Allows you to lock a workflow. |
+| {{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/unlock-workflow.png" link="/refguide/unlock-workflow/" width="160px" >}} | [Unlock Workflow](/refguide/unlock-workflow/) | Allows you to unlock a workflow. |
 
 ## 13 External Object Activities
 

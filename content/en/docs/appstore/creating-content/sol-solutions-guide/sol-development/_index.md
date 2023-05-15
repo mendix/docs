@@ -1,26 +1,26 @@
 ---
-title: "Develop Adaptive Solutions"
+title: "Develop Adaptable Solutions"
 url: /appstore/creating-content/sol-development/
 weight: 20
 description: "Presents documentation for developing solutions"
-tags: ["solutions", "development", "adaptive solutions"]
+tags: ["solutions", "development", "adaptive solutions", "adaptable solutions"]
 ---
 
 ## 1 Introduction
 
-This section provides information and best practices on how to develop adaptive solutions on the Mendix Platform that are ready to be sold on the Mendix Marketplace.
+This section provides information and best practices on how to develop adaptable solutions on the Mendix Platform that are ready to be sold on the Mendix Marketplace.
 
-While [Mendix best practices for development](/refguide/dev-best-practices/) apply, there are additional considerations when architecting and developing a Mendix solution. The overview of [Architect Adaptive Solutions](/appstore/creating-content/sol-architecting/) is a good starting point.
+While [Mendix best practices for development](/refguide/dev-best-practices/) apply, there are additional considerations when architecting and developing a Mendix solution. The overview of [Architect Adaptable Solutions](/appstore/creating-content/sol-architecting/) is a good starting point.
 
-## 2 What is an Adaptive Solution?
+## 2 What is an Adaptable Solution?
 
-In an adaptive solution, up to 20% of the _end solution_ can be adapted through customizations, extensions, integrations, or new customer-specific modules. Instead of being tied to a prescriptive software-as-a-service (SaaS) solution that _only_ allows for configuration at runtime, adaptive solutions allow for design-time adaptation through model-level changes to cater to the needs of your specific implementation.
+In an adaptable solution, up to 20% of the _end solution_ can be adapted through customizations, extensions, integrations, or new customer-specific modules. Instead of being tied to a prescriptive software-as-a-service (SaaS) solution that _only_ allows for configuration at runtime, adaptable solutions allow for design-time adaptation through model-level changes to cater to the needs of your specific implementation.
 
-{{< figure src="/attachments/appstore/creating-content/sol-solutions-guide/sol-development/sol-architecting/adaptive-solution-architecture.png" alt="Adaptive Solution architecture" >}}
+{{< figure src="/attachments/appstore/creating-content/sol-solutions-guide/sol-development/sol-architecting/adaptable-solution-architecture.png" alt="Adaptable Solution architecture" >}}
 
 ## 2.1 Use cases
 
-Adaptive Solutions as a concept work both for ISVs (e.g. in the [Commercial Solution program](/appstore/creating-content/comm-sol-partner-program/)) as well as in the enterprise context.
+Adaptable Solutions as a concept work both for ISVs (e.g. in the [Commercial Solution program](/appstore/creating-content/comm-sol-partner-program/)) as well as in the enterprise context.
 
 ### 2.1.1 ISV Commercial Solutions
 
@@ -28,13 +28,13 @@ ISVs can create and sell solutions which can be adapted for every individual cus
 
 ### 2.1.2 Enterprise context
 
-In larger enterprises there's the typical situation in which different departments or regionals have the same need, but are also (slightly) different from each other. Adaptive Solutions allow for centralized development of the core solution, while different teams can make adaptations themselves. Through upgrades the centralized team can push common functionality to the different teams. An IP-protected and immutable core will ensure that the implementation teams only adapt what's needed, to minimize the impact of upgrades and adaptation effort.
+In larger enterprises there's the typical situation in which different departments or regionals have the same need, but are also (slightly) different from each other. Adaptable Solutions allow for centralized development of the core solution, while different teams can make adaptations themselves. Through upgrades the centralized team can push common functionality to the different teams. An IP-protected and immutable core will ensure that the implementation teams only adapt what's needed, to minimize the impact of upgrades and adaptation effort.
 
-<!-- ### 2.1 Adaptive Solution Examples
+<!-- ### 2.1 Adaptable Solution Examples
 
-An adaptive solution is a solution where each customer gets an instance of the solution based on a common core. This instance is adapted to the customer’s specific needs and context, and integrated with the customer’s existing IT landscape.
+An adaptable solution is a solution where each customer gets an instance of the solution based on a common core. This instance is adapted to the customer’s specific needs and context, and integrated with the customer’s existing IT landscape.
 
-The Mendix Marketplace contains numerous adaptive solutions, for example:
+The Mendix Marketplace contains numerous adaptable solutions, for example:
 
 -   [Mendix PLM for Fashion and Retail](https://marketplace.mendix.com/link/component/118343)
 -   [Siemens FSM](https://marketplace.mendix.com/link/component/117710)
@@ -57,7 +57,7 @@ The Solution value chain and lifecycle consists of 3 important phases:
 
 This can be visualized as follows:
 
-{{< figure src="/attachments/appstore/creating-content/sol-solutions-guide/sol-development/solution-lifecycle.png" alt="Adaptive Solution Lifecycle" >}}
+{{< figure src="/attachments/appstore/creating-content/sol-solutions-guide/sol-development/solution-lifecycle.png" alt="Adaptable Solution Lifecycle" >}}
 
 ### 2.1 Implementation as separate model instance and cloud node
 
@@ -65,7 +65,7 @@ The customer implementation is a separate, _upgradable_ model instance (fork) pe
 
 Note that it’s at the solution developer's discretion to determine who can implement a solution, who can access the model and whether their delivery model is Software as a Service or a solution template with a subscription on updates.
 
-{{< figure src="/attachments/appstore/creating-content/sol-solutions-guide/sol-development/solution-deployment.png" alt="Adaptive Solution Deployment"  width="50%" >}}
+{{< figure src="/attachments/appstore/creating-content/sol-solutions-guide/sol-development/solution-deployment.png" alt="Adaptable Solution Deployment"  width="50%" >}}
 
 For more details on this read the [architectural recommendations on implementation per customer](/appstore/creating-content/sol-architecting/#3-implementation-per-customer).
 

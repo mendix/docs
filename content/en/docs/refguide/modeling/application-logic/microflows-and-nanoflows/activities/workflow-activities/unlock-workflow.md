@@ -8,10 +8,6 @@ tags: ["studio pro", "unlock workflow", "workflow unlock"]
 
 {{% alert color="warning" %}}
 This activity can only be used in **Microflows**.
-<<<<<<< HEAD
-
-=======
->>>>>>> development
 {{% /alert %}}
 
 ## 1 Introduction

@@ -185,9 +185,9 @@ And a subsequent GET request:
 
 {{< figure src="/attachments/refguide/modeling/integration/build-odata-apis/modify-existing-data-2.png" >}} 
 
-You have the option to use a microflow if you want to enrich the default behavior, including adding additional validations. Validation rules defined on the entity will be respected automatically, so validation microflows are only needed if you want to do validation more complex than this.
+[Validation rules](#validation-rules) defined on the entity will be respected automatically. You can use a [validation microflow](#validation-microflows) if you want to enrich the default behavior, including adding additional validations. 
 
-#### 4.2.1 Validation Rules
+#### 4.2.1 Validation Rules {#validation-rules}
 
 When changing data with POST, PUT or DELETE, validation rules specified on the underlying entities are applied automatically. A failed validation rule will result in a HTTP status code 422, the error message will be included in the response payload:
 
@@ -197,9 +197,9 @@ The validation rules on customer define that both `Firstname` and `Lastname` are
 
 {{< figure src="/attachments/refguide/modeling/integration/build-odata-apis/error-422.png" >}} 
 
-#### 4.2.2 Validation Microflows 
+#### 4.2.2 Validation Microflows {#validation-microflows}
 
-The above illustrates how errors are handled when using entity validation rules, but you can also reuse the generated validation microflows. The following example shows a validation microflow for the customer entity. 
+You can also generate and reuse the generated validation microflows. The following example shows a validation microflow for the customer entity. 
 
 1. On a save button, right-click and select **Generate validation microflow**:
 

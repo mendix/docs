@@ -80,7 +80,11 @@ OData REST APIs work as you would expect a REST API to function. Here are some e
 
 ### 3.1 Fetching All Resources
 
-The image below shows an example of fetching all customers in a call:
+The following call is an example of fetching all customers:
+
+`GET http://localhost:8080/odata/CustomerApi/v1/Customers`
+
+The response is as follows:
 
 {{< figure src="/attachments/refguide/modeling/integration/build-odata-apis/fetch-all-customers.png" >}} 
 

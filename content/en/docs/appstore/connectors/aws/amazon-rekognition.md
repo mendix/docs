@@ -93,7 +93,7 @@ After you configure the authentication profile for Amazon Rekognition, you can i
 
 ## 4 Technical Reference
 
-To help you work with the Amazon DynamoDB connector, the following sections of this document list the available [constants](#constants), [entities](#domain-model), [enumerations](#enumerations), [activities](#activities), and [JavaScript actions](#js-actions) that you can use in your application.
+To help you work with the Amazon Rekognition connector, the following sections of this document list the available [constants](#constants), [entities](#domain-model), [enumerations](#enumerations), [activities](#activities), and [JavaScript actions](#js-actions) that you can use in your application.
 
 ### 4.1 Constants {#constants}
 

@@ -82,7 +82,9 @@ OData REST APIs work as you would expect a REST API to function. Here are some e
 
 The following call is an example of fetching all customers:
 
-`GET http://localhost:8080/odata/CustomerApi/v1/Customers`
+```
+GET http://localhost:8080/odata/CustomerApi/v1/Customers
+```
 
 The response is as follows:
 
@@ -91,6 +93,12 @@ The response is as follows:
 ### 3.1 Getting a Resource by Identifier
 
 Fetch a single **Customer** resource by providing the identifier between brackets:
+
+```
+GET http://localhost:8080/odata/CustomerApi/v1/Customers(1)
+```
+
+The response is as follows:
 
 {{< figure src="/attachments/refguide/modeling/integration/build-odata-apis/fetch-single-customer.png" >}} 
 

@@ -78,7 +78,9 @@ Defines which type of aggregation is applied.
 
 3.3 Return type
 
-This option is only visible for if the Function is Reduce.
+This option is only visible if the Function is Reduce. The type selected here will be the type of the output variable, the type of the 'Initial expression' and the type of the 'Expression'. In the example shown below the 'Return type' is String with the 'Initial value' being `'Product names: '` and the expression being `$currentResult + $currentObject/Name`.
+
+{{<figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/list-activities/aggregate-list/aggregate-list-reduce-example.png" width="500px" alt="Aggregate list reduce example" >}}
 
 3.3 Aggregate with
 
@@ -90,11 +92,11 @@ When using the `Count` function, it is not necessary to select an attribute or e
 
 ### 3.4 Attribute
 
-Defines which attribute of the objects in the list is used to aggregate over. This must be a numeric attribute (Long, Integer, or Decimal).
+Defines which attribute of the objects in the list is used to aggregate over. This must be a numeric attribute (Long, Integer, or Decimal). This option is only visible if 'Aggregate with' is set to 'attribute'.
 
 ### 3.4 Initial value
 
-This option is only visible for if the Function is Reduce. The expression here will be used as the initial value for the aggregation. When aggregating with Reduce over an empty list the result will be this value. Oherwise this value will be the value of `$currentResult` when the 'Expression' is evaluated for the first time.
+This option is only visible for if the 'Function' is Reduce. The expression here will be used as the initial value for the aggregation. When aggregating with Reduce over an empty list the result will be this value. Oherwise this value will be the value of `$currentResult` when the 'Expression' is evaluated for the first item.
 
 ### 3.4 Expression
 

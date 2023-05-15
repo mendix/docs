@@ -1,11 +1,11 @@
 ---
-title: "Supported Add-ons"
+title: "Partner Solutions"
 url: /appstore/partner-solutions/
-description: "Presents details on the supported add-ons available in the Mendix Marketplace."
+description: "Presents details on the partner solutions available in the Mendix Marketplace."
 weight: 70
 no_list: false
 description_list: true
-tags: ["marketplace", "marketplace component", "supported add-on", "qsm"]
+tags: ["marketplace", "marketplace component", "partner solution", "qas", "ats", "apd", "qsm"]
 ---
 
 ## 1 Introduction

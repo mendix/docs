@@ -57,7 +57,7 @@ You can also open the dialog box by double-clicking the activity in the microflo
 
 ### 3.1 Input Type {#workflow}
 
-This option allows you to choose between a workflow document (which can be selected from the document explorer) and a workflow object (which is provided at Runtime) to target the workflow you want to lock.
+This option allows you to choose between a workflow document (the one that you usually select in the **App Explorer** of your app) and a workflow object provided by the Runtime) to target the workflow you want to lock.
 
 ### 3.2 Workflow {#workflow}
 

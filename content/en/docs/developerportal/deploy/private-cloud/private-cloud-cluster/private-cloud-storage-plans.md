@@ -100,6 +100,13 @@ At the moment, it's not possible to read configuration of an existing Storage Pl
 If you've created a Storage Plan in the past and would like to update it (for example, to change the admin credentials), you will need to fill in the Storage Plan details and use the same name as the currently existing Storage Plan.
 The only way to update a Storage Plan configuration is by overwriting it with an updated version.
 
+{{% alert color="warning" %}}
+Each storage plan (database or blob file bucket) needs to have a unique name.
+If you create a plan that uses a name that already in use, this new plan will overwrite an existing plan.
+
+When you configure a new namespace, make sure that the database and blob file storage plans use unique, different names.
+{{% /alert %}}
+
 ## 2 Database Plans{#database}
 
 A database plan tells the Operator how the Mendix app needs to connect to a database when it is deployed. Although the database plan might be valid, there also has to be a database instance for it to connect to. This database instance may be created when the database plan is applied, or it may be an existing database instance which the database plan identifies.
@@ -257,7 +264,7 @@ In the SQL Server plan configuration, enter the following details:
 * **Username** is the username for the admin user - used by the Mendix Operator to create/delete tenants for app environments.
 * **Password** is the username for the admin user - used by the Mendix Operator to create/delete tenants for app environments.
 * **Strict TLS** specifies if TLS should always be validated.
-  * Enabling this option will enable full TLS certificate validation and require encryption when connecting to the PostgreSQL server. If the SQL Server server has a self-signed certificate, you will also need to configure [custom TLS](#custom-tls) so that the self-signed certificate is accepted. Azure SQL supports Strict TLS without any extra TLS configuration.
+  * Enabling this option will enable full TLS certificate validation and require encryption when connecting to SQL Server. If the SQL Server server has a self-signed certificate, you will also need to configure [custom TLS](#custom-tls) so that the self-signed certificate is accepted. Azure SQL supports Strict TLS without any extra TLS configuration.
   * Disabling this option will attempt to connect with TLS, but skip certificate validation. If TLS is not supported, it will fall back to an unencrypted connection.
 * **Is Azure SQL Server** opens additional options that are only available when using Azure SQL (instead of a standalone SQL Server):
   * **Elastic Pool** specifies an existing Elastic Pool to use (can be left empty if the new app's database should not be using an elastic pool)

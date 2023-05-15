@@ -19,18 +19,17 @@ A merge algorithm with fine-grained conflict resolution is used when you update 
 
 A page document in your app is designed as shown below:
 
-{{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/merge-algorithm/-base-page.png" alt="Original page" >}}
+{{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/merge-algorithm/merge-algorithm-base-page.png" alt="Original page" >}}
 
 Your colleague makes the following changes in the main line:
 
 * The text *Home* is changed to *Welcome!*
-* A Mendix logo is added above the text *Welcome!*
 * The subtitle *Welcome to your new app* is deleted
 * A text *Write some text here* is added to the bottom layout grid
 
 Your colleague's new document layout is shown below:
 
-{{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/merge-algorithm/-main-page.png" alt="Main line page" >}}
+{{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/merge-algorithm/merge-algorithm-main-page.png" alt="Main line page" >}}
 
 You make the following changes on a branch line:
 
@@ -39,33 +38,33 @@ You make the following changes on a branch line:
 
 Your page is now laid out as shown below:
 
-{{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/merge-algorithm/-branch-page.png" alt="Branch line page" >}}
+{{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/merge-algorithm/merge-algorithm-branch-page.png" alt="Branch line page" >}}
 
 ## 3 Resolving Conflicts
 
 When you merge changes, the new algorithm shows you the following conflicts:
 
 1. The text that both sides changed. 
+
 2. A **list order conflict**. Both of you added widgets to the bottom layout grid. The merge algorithm cannot guess the right order for the two new widgets and it reports the list order conflict. This is a reminder for you (the developer who is doing the merge) to look at the final layout and confirm the order. 
 
-    {{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/merge-algorithm/-conflicts.png" alt="New algorithm conflicts" >}}
+    {{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/merge-algorithm/merge-algorithm-conflicts.png" alt="Merge algorithm conflicts" >}}
 
-To start the resolution process, click the **Merge** button. The page is opened in a special mode with an orange bar at the top:
+To start solving conflicts first choose an approach for all conflicts that merge algorithm will apply:
 
-{{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/merge-algorithm/-orange-tab.png" alt="Document with orange bar" >}}
+* **Interactive Merge** – combines both changes where possible
+* **Resolve using my whole document** – uses only changes from your branch and applies them to all conflicted documents
+* **Resolve using their whole document** – uses only changes from the other branch and applies them to all conflicted documents
 
-The following non-conflicting changes have already been applied to the page:
-
-* The Mendix logo is added above the text *Home* (main line)
-* The subtitle is deleted (main line)
-* The text widget is added to the bottom layout grid (main line)
-* A data grid is added to the bottom layout grid (branch line)
+In this example, **Interactive Merge** was selected to resolve conflicts.
 
 ### 3.1 Resolving the First Conflict
 
-For the first conflict, you can inspect changes and decide which version to apply. Select one of the three lines that represent the conflict and choose **Resolve using Mine** or **Resolve using Theirs**. 
+**Interactive Merge** described above was selected for conflict resolution. Changes were partially combined and you can revise each conflict individually. 
 
-{{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/merge-algorithm/-resolve-mode.png" alt="Conflict resolution mode" >}}
+For the first conflict, you can inspect changes and decide which version to apply. Select one of the lines that represent the conflict and choose **Resolve using Mine** or **Resolve using Theirs**.
+
+{{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/merge-algorithm/merge-algorithm-resolve-mode.png" alt="Conflict resolution mode" >}}
 
 You will see the document update immediately after you click the button. If you are not satisfied with your choice, you can use undo to go back and try another option. 
 
@@ -83,13 +82,9 @@ The second conflict is a list order conflict. It is a reminder to take a look at
 
 You can also decide to delete one of the widgets or add a new one. The document is fully editable while resolving conflicts. 
 
-After resolving the second conflict, the bar at the top will turn green to indicate that all conflicts have been resolved:
+After resolving the second conflict, the bar at the top will turn green to indicate that all conflicts have been resolved.
 
-{{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/merge-algorithm/-all-conflicts-resolved.PNG" alt="All conflicts resolved" >}}
-
-Some changes will make it impossible to resolve conflicts using **mine** or **theirs**. For example, if you have not resolved the first conflict yet and you delete the *Home* text widget, you cannot resolve the first conflict any more, because the widget is simply not there. At that point, you can only mark the conflict as resolved:
-
-{{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/merge-algorithm/-cannot-resolve.PNG" alt="Conflict cannot be resolved" >}}
+Some changes will make it impossible to resolve conflicts using **mine** or **theirs**. For example, if you have not resolved the first conflict yet and you delete the *Home* text widget, you cannot resolve the first conflict any more, because the widget is simply not there. At that point, you can only mark the conflict as resolved.
 
 ### 3.3 Finishing Conflict Resolution
 

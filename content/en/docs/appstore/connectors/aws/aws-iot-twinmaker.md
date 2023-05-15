@@ -94,7 +94,7 @@ After you configure the authentication profile for AWS IoT TwinMaker, you can im
     For a list of available AWS regions, see [AWS Region](#aws-region).
 15. Click **OK**, and then click **OK** again.
 16. In the **Toolbox** pane, search for the **Create Object** activity, drag it onto the microflow area, and position it between the microflow start event and the **ListWorkspaces** activity.
-17. Double-click the **Create Object** activity, and then enter *NewListWorkspacesRequest* in the **Object name** field.
+17. Double-click the **Create Object** activity, and then select **AWSTwinMakerConnector.ListWorkspacesRequest** as the entity.
 18. Double-click the **ListWorkspaces** activity.
 19. Click **Edit parameter value**, edit the **ListWorkspacesRequest** parameter, and let it auto-fill.
 20. In the **Object name** field, enter *ListWorkspacesResponse*, and then click **OK**.

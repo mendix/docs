@@ -1,10 +1,10 @@
 ---
-title: "Architect Adaptive Solutions"
+title: "Architect Adaptable Solutions"
 url: /appstore/creating-content/sol-architecting/
 linktitle: "Architect Solutions"
 weight: 1
 description: "Architect a solution for adaptation"
-tags: ["solutions", "adaptive solutions", "architecting solutions"]
+tags: ["solutions", "adaptive solutions", "adaptable solutions", "architecting solutions"]
 ---
 
 ## 1 Introduction
@@ -105,14 +105,14 @@ This is an exception to the cyclic dependency rule, a Solution Module may have a
 {{% /alert %}}
 
 {{% alert color="info" %}}
-Be sure to configure the [Solution](/refguide/app-settings/#solution) tab of **App Settings** to allow for distribution as an adaptive solution and creating Solution modules.
+Be sure to configure the [Solution](/refguide/app-settings/#solution) tab of **App Settings** to allow for distribution as an adaptable solution and creating Solution modules.
 {{% /alert %}}
 
 ### 4.2 Designing the Interfaces
 
 When designing the interfaces of your solutions, you should do the following:
 
--   Split your adaptive solution architecture into the [three main functional parts](/appstore/creating-content/sol-development/#3-three-parts-protected-core-vs-adaptability)
+-   Split your adaptable solution architecture into the [three main functional parts](/appstore/creating-content/sol-development/#3-three-parts-protected-core-vs-adaptability)
 -   Think about which parts of the shared core are reusable in other parts:
     -   Define which shared logic should be reusable and define entry points to the shared logic as APIs
     -   Define which entities (data/state) are required in which parts of the functionality

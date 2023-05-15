@@ -95,5 +95,5 @@ To ensure that the intellectual property (IP) that is created during the "Build"
 
 ## 6 Documents in This Section
 
--   [Architect Adaptive Solutions](/appstore/creating-content/sol-architecting/)
+-   [Architect Adaptable Solutions](/appstore/creating-content/sol-architecting/)
 -   [Apply IP Protection](/appstore/creating-content/sol-ip-protection/)

@@ -17,7 +17,7 @@ This page provides information and guidance on how to set up and upgrade a solut
 
 This image presents the typical solution lifecycle:
 
-{{< figure src="/attachments/appstore/creating-content/sol-solutions-impl-guide/solution-lifecycle.png" alt="Adaptive Solution Lifecycle" >}}
+{{< figure src="/attachments/appstore/creating-content/sol-solutions-impl-guide/solution-lifecycle.png" alt="Adaptable Solution Lifecycle" >}}
 
 There are three main stages a solution goes through during its lifecycle:
 
@@ -36,6 +36,6 @@ For details on the upgrade procedure for a solution that has been set up correct
 ## 4 Read More
 
 * [Develop a Solution](/appstore/creating-content/sol-development/)
-* [Architect an Adaptive Solution](/appstore/creating-content/sol-architecting/)
+* [Architect an Adaptable Solution](/appstore/creating-content/sol-architecting/)
 * [Set Up a Solution](/appstore/creating-content/sol-set-up/)
 * [Upgrade a Solution](/appstore/creating-content/sol-upgrade/)

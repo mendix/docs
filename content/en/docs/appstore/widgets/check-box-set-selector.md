@@ -48,4 +48,4 @@ You must designate at least one **Display Attribute** (with **Header text** and 
 
 ## 3 Read More
 
-* [Checkbox Set Selector (ATS)](/appstore/supported-add-ons/ats/rg-one-checkbox-set-selector/)
+* [Checkbox Set Selector (ATS)](/appstore/partner-solutions/ats/rg-one-checkbox-set-selector/)

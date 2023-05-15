@@ -95,9 +95,10 @@ Security-wise, users with the Administrator role can access all instances. Other
 Action-related entities are entities that refer to jumping to different activities in a workflow. For more information, see [Jumping to Different Activities in a Workflow](/refguide/jump-to/).
 
 ## 3 Workflow Execution
+
 ### 3.1 Instantiation
 
-A workflow is instantiated in the Mendix Runtime server using the **Call Workflow** microflow activity, a client action or the corresponding Java API. Upon instantiation, the System.Workflow object is created and persisted and a workflow execution task is queued to run the workflow instance. As the execution is asynchronous, it does not start directly, it starts after the current transaction is successfully completed. Therefore, the microflow activity, the client action or Java API call will return instantly, before the workflow execution has actually started. 
+Workflow execution uses the Task Queue mechanism in Mendix to run a process. A workflow is instantiated in the Mendix Runtime server using the **Call Workflow** microflow activity, a client action or the corresponding Java API. Upon instantiation, the System.Workflow object is created and persisted and a workflow execution task is queued to run the workflow instance. As the execution is asynchronous, it does not start directly, it starts after the current transaction is successfully completed. Therefore, the microflow activity, the client action or Java API call will return instantly, before the workflow execution has actually started. 
 
 Upon instantiation, the **Start** activity of the workflow becomes the current activity.
 
@@ -105,7 +106,7 @@ As the Workflow Engine executes tasks asynchronously, you cannot have it present
 
 ### 3.2 Execution
 
-Workflow execution uses the Task Queue mechanism in Mendix to run a process. The user running the workflow is the System user. That is the reason why you cannot use the current user in XPath constraints in workflows. This is also the reason why you cannot have user interactions (such as **Show Page** microflow activity or **Show Message** microflow activity) in microflows called from workflows. 
+The user running the workflow is the System user. That is the reason why you cannot use the current user in XPath constraints in workflows. This is also the reason why you cannot have user interactions (such as **Show Page** microflow activity or **Show Message** microflow activity) in microflows called from workflows. 
 
 During execution the System.Workflow object record gets locked beforehand. This way concurrent execution and changes to the workflow instance outside the Workflow Engine that executes the workflow are prohibited. 
 
@@ -135,6 +136,8 @@ In case one of these workflow-related tasks fail (the workflow execution fails o
 
 All microflows that are run as part of the workflow are executed as an asynchronous microflow via the task queue. Therefore, microflow execution does not have an impact on the workflow (except that when it finishes successfully, the workflow can continue with the next activity and when it fails, the workflow is marked as failed). This also means that the transaction scope of such microflows only encompass the microflow execution itself.
 
+Failed workflows can be retried using the **Retry workflow** option of the [Change Workflow State microflow activity](/refguide/change-workflow-state/#operation). This option will attempt to run the user task from the point it failed. When the user task failed because no users were targeted, it is possible to manually correct user targeting and then use the **Retry Workflow** option to set the workflow into the in-progress state again.
+
 #### 3.2.4 Measures Against Endless Loops
 
 The [Jump activity](/refguide/jump-activity/) allows the workflow to jump to another activity of the same workflow. Jumping back to an earlier activity can create endless loops if defined incorrectly. To prevent endless loops occupying the Workflow Engine, the Workflow Engine executes only a limited amount of activities in the workflow (default number is 50, but it can be changed using the custom Runtime Server setting `com.mendix.workflow.MaxActivityExecutions`). When the limit is reached, the workflow execution stops and the workflow instance is queued for re-execution (which means that it is put at the end of the queue). This queuing mechanism allows other workflow instances to proceed. 
@@ -161,33 +164,33 @@ In case you want the workflow to store different functional states depending on 
 
 It is advised to not leave **Failed** or **Incompatible** workflows as **Failed** or **Incompatible**. Either solve the problem for those workflows or abort them to ensure that the data in the system stays up-to-date and the tables in the database remain smaller as user tasks will stay in the **System.WorkflowUserTask** table while the workflow instance is **Failed** or **Incompatible**.
 
-
 ### 4 User Tasks in Workflows
 
 User task activities represent actions that have to be completed by a user. Therefore, user tasks can only be completed by named users in Mendix. User tasks are shown in a Task Inbox page from which they can be completed.
 
 #### 4.1 Task Inbox
+
 The Task Inbox page shows objects from the **System.WorkflowUserTask** entity. The access rules allow to select only `InProgress` user tasks that either target the current user (the current user is part of the **System.WorkflowUserTask_TargetUsers** association) or are assigned to the current user (the current user is set in the **System.WorkflowUserTask_Assignee** association). For more information, see the access rules of the **System.WorkflowUserTask** entity.
 
 In case you want to show specific information from the **Workflow Context** object in the Task Inbox, there are two options:
 
-1. Use the **Task Name** and/or **Task** **Description** in the task properties to contain that information.
+1. Use the **Task Name** and/or **Task Description** in the task properties to contain that information.
 2. Build a workflow context-specific Task Inbox that only shows tasks from workflows that have this specific Workflow Context. In this case, we advice to use the user task state-change events to store the information in a custom entity to show in the task inbox.
 
 The **Show user task page** microflow activity can be used to open the user task page that is configured in the user task activity of the workflow of the given **System.WorkflowUserTask** object.
 
 #### 4.2 User Task States
+
 The user task states are stored in the **State** attribute of the **System.WorkflowUserTask** entity. This attribute uses the System.WorkflowUserTaskState enumeration to have a fixed set of states. These states represent the different technical states a user task can have. 
 
 {{< figure src="/attachments/refguide/modeling/application-logic/workflows/workflow-engine/user-task-states.png" >}}
 
-
 Note the following: 
 
-- Transitions from **InProgress** to **Paused** (and vice-versa), from any state into **Aborted**, and from **Failed** into the **Created** state are a result of actions on the workflow (Pause/Unpause, Abort, or Retry).
-- State transitions from **Created** to **InProgress**, from **Completed** to the end state, from **Aborted** to the end state happen automatically when the actions that are part of the state are finished.
-- The end state (red circle) means that the user task is deleted.
-- Yellow boxes are not concrete states, but mean that any state inside the box can transition following the outgoing arrow and can transition back into the previous state by following the incoming arrow.
+* Transitions from **InProgress** to **Paused** (and vice-versa), from any state into **Aborted**, and from **Failed** into the **Created** state are a result of actions on the workflow (Pause/Unpause, Abort, or Retry).
+* State transitions from **Created** to **InProgress**, from **Completed** to the end state, from **Aborted** to the end state happen automatically when the actions that are part of the state are finished.
+* The end state (red circle) means that the user task is deleted.
+* Yellow boxes are not concrete states, but mean that any state inside the box can transition following the outgoing arrow and can transition back into the previous state by following the incoming arrow.
 
 In the table below, you can find the description of different states:
 

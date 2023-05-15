@@ -14,7 +14,7 @@ While [Mendix best practices for development](/refguide/dev-best-practices/) app
 
 ## 2 What is an Adaptive Solution?
 
-In an adaptive solution, up to 20% of the _end solution_ can be adapted through customizations, extensions, integrations, or new customer-specific modules. Instead of being tied to a prescriptive software-as-a-service (SaaS) solution that only allows for configuration at runtime, adaptive solutions allow for design-time adaptation through model-level changes to cater to the needs of your specific implementation.
+In an adaptive solution, up to 20% of the _end solution_ can be adapted through customizations, extensions, integrations, or new customer-specific modules. Instead of being tied to a prescriptive software-as-a-service (SaaS) solution that _only_ allows for configuration at runtime, adaptive solutions allow for design-time adaptation through model-level changes to cater to the needs of your specific implementation.
 
 {{< figure src="/attachments/appstore/creating-content/sol-solutions-guide/sol-development/sol-architecting/adaptive-solution-architecture.png" alt="Adaptive Solution architecture" >}}
 
@@ -46,29 +46,28 @@ Each solution is useable as is, but it can also be adapted to become even more s
 
 ## 2 The Solution Lifecycle
 
-This image presents the typical solution value chain containing:
+The Solution value chain and lifecycle consists of 3 important phases:
 
--   The 3 fases a solution goes through: "building the solution core", "implementation for a customer" and "production usage",
--   Who's involved in what phase,
--   The interaction of the dev-ops, feedback & upgrade cycles for the different phases.
+| Phase     | Party                                          | Purpose                                                                                                                               
+| --------- | ---------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------- |
+| Build the solution core     | ISV                                            | Create a solution that's designed for adaptation. New versions are periodically released.                                             |
+| Implement for a customer | ISV, the Customer or an implementation partner | Adapt the solution to the individual customer's need and apply upgrades. Including changes on UI, data, logic or integration into the customer landscape |
+| Consume in production | Customer                                       | Production usage of the application by the customer. Functional admins can perform day-to-day tasks                                   |
+
+
+This can be visualized as follows:
 
 {{< figure src="/attachments/appstore/creating-content/sol-solutions-guide/sol-development/solution-lifecycle.png" alt="Adaptive Solution Lifecycle" >}}
 
-There are three main stages a solution goes through during its lifecycle:
+### 2.1 Implementation as separate model instance and cloud node
 
-| Phase     | Party                                          | Purpose                                                                                                                               |
-| --------- | ---------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------- |
-| Build     | ISV                                            | Create a solution that's designed for adaptation. New versions are periodically released.                                             |
-| Implement | ISV, the Customer or an implementation partner | Adapt the solution to the individual customer's need and apply upgrades. Including changes on UI, data, logic or integration into the customer landscape |
-| Consume   | Customer                                       | Production usage of the application by the customer. Functional admins can perform day-to-day tasks                                   |
-
-The customer implementation is a separate, _upgradable_ model instance (fork) per customer, that shares generic functionality from the original Solution model, that's deployed to separate cloud resources. This allows the implementation team to fully customize all non IP protected functionality.
+The customer implementation is a separate, _upgradable_ model instance (fork) per customer, that shares generic functionality from the original Solution model, that's deployed to separate cloud resources. This allows the implementation team to fully customize all non IP protected functionality. Not all customer implementations require changes to the model. In those cases the original model can be deployed as is.
 
 Note that it’s at the solution developer's discretion to determine who can implement a solution, who can access the model and whether their delivery model is Software as a Service or a solution template with a subscription on updates.
 
 {{< figure src="/attachments/appstore/creating-content/sol-solutions-guide/sol-development/solution-deployment.png" alt="Adaptive Solution Deployment"  width="50%" >}}
 
-For more details on this read [INSERT LINK HERE](/appstore/creating-content/sol-development/sol-architecting/).
+For more details on this read the [architectural recommendations on implementation per customer](/appstore/creating-content/sol-architecting/#3-implementation-per-customer).
 
 ## 3 Three parts: protected core vs adaptability
 
@@ -82,7 +81,7 @@ For the customer production usage they are all part of the same model, and will 
 
 {{< figure src="/attachments/appstore/creating-content/sol-solutions-guide/sol-development/solution-three-parts.png" alt="3 parts of the adaptable solution">}}
 
-These different parts work together in the customer implementation. It is important to maintain the distinction because theres an inherent tradeoff: what's part of the common core and IP protected, cannot be adapted or modified, while what can be adapted, can never be protected. This boundary can be created at a fine grained level. All adaptation (both extensions and adaptable core) can make use of functionality from the common core. To read more about this, please read: [INSERT LINK HERE](/appstore/creating-content/sol-development/sol-architecting/).
+These different parts work together in the customer implementation. It is important to maintain the distinction because theres an inherent tradeoff: what's part of the common core and IP protected, cannot be adapted or modified, while what can be adapted, can never be protected. This boundary can be created at a fine grained level. All adaptation (both extensions and adaptable core) can make use of functionality from the common core. To read more about this, please read: [application design](/appstore/creating-content/sol-architecting/#4-application-design).
 
 | Part                         | IP Protected | Responsibility                                                            | Upgradable              | Purpose                                                                                                                                                                         |
 | ---------------------------- | ------------ | ------------------------------------------------------------------------- | ----------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |

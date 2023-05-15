@@ -80,7 +80,7 @@ Approach this iteratively, as it is often very hard to define these boundaries â
 
 Regardless of how the Mendix model is designed (with or without Solution Modules), implementation can always be hidden by sharing the MDA with the customer instead. This will allow for custom deployment, without being able to open the Mendix model.
 
-#### 5.3.2 Protecting App Services, Connectors, and Modules
+#### 5.3.3 Protecting App Services, Connectors, and Modules
 
 App services, connectors, and modules that are made available on the Marketplace often contain intellectual property and custom [usage metering](#metering). It is important to protect that content.
 

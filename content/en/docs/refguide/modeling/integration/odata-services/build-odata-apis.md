@@ -117,6 +117,12 @@ The following URL parameters are available:
 
 The following example illustrates how you can combine filtering, sorting, pagination and attribute selection:
 
+```
+GET http://localhost:8080/odata/CustomerApi/v1/Customers?$filter=contains(Lastname, 'a')&$orderby=CompanyName&$select=FirstName,Lastname,CompanyName&$top=2&skip=1
+```
+
+The response is follows:
+
 {{< figure src="/attachments/refguide/modeling/integration/build-odata-apis/filter-sort-page-attribute.png" >}} 
 
 Alternatively, you can specify the query in the payload of a POST call, which can be useful if you have a long complex query.

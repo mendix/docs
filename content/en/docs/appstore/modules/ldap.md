@@ -9,7 +9,7 @@ tags: ["marketplace", "marketplace component", "ldap", "IdP", "identity provider
 
 ## 1 Introduction
 
-The [LDAP module](https://marketplace.mendix.com/link/component/210270) is a client-side implementation of the Lightweight Directory Access Protocol (LDAP) to allow your app to communicate with an LDAP server. It can be used in a Mendix app to synchronize end-users, their group memberships, and their status from an LDAP server such as Microsoft AD.
+The [LDAP](https://marketplace.mendix.com/link/component/210270) module is a client-side implementation of the Lightweight Directory Access Protocol (LDAP) to allow your app to communicate with an LDAP server. It can be used in a Mendix app to synchronize end-users, their group memberships, and their status from an LDAP server such as Microsoft AD.
 
 You can also use the LDAP module to validate usernames and passwords for authentication purposes. However, the recommended option for end-user authentication is to use the [OIDC SSO](https://marketplace.mendix.com/link/component/120371/Mendix/OIDC-SSO) or [SAML](https://marketplace.mendix.com/link/component/1174/Mendix/SAML) module. Your app could, for example, use LDAP for user synchronization in combination the SAML module to authenticate your app’s end-users.
 

@@ -271,11 +271,8 @@ Launching your app compiles your app locally on your development machine, your l
 
 Congratulations! You successfully completed Part 1 of the quickstart guide. You have your first Mendix app to prove it, and it works on almost any device. Well done! 
 
+## 8 Continuing with the Next Tutorial
+
 To continue learning, see Part 2: [Add a Native Mobile App](/refguide/quickstart-part2/).
 
-## 8 Read More
 
-* [Mendix Academy](https://academy.mendix.com/) – complete learning paths to build general Mendix skills
-    * [Crash Course](https://academy.mendix.com/link/paths/82/Crash-Course) – the course we recommend for new users who are also experienced developers
-* [Mendix Documentation](https://docs.mendix.com/) – learn about the parts of Mendix which interest you most
-* [General Info](/refguide/general/) – learn more about the fundamentals of Studio Pro

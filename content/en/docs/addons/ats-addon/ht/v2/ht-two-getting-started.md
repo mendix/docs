@@ -268,8 +268,8 @@ Here, you can select your Environment and Selenium hub for ATS to use.
 | Field | Description |
 | --- | --- |
 | **Environment** | Select the app you want to test. |
-| **Selenium Hub** | Select the Selenium Hub you want to use to execute the test case. |
-| **Browser** | Select the browser that the Selenium Hub uses to execute the test case. Please note that these are the supported browsers. |
+| **Selenium Hub** | Select the Selenium hub you want to use to execute the test case. |
+| **Browser** | Select the browser that the Selenium hub uses to execute the test case. Please note that these are the supported browsers. |
 
 When you select a supported selenium provider like Browserstack additional options appear, the **Platform Settings**.
 

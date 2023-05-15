@@ -261,7 +261,7 @@ To do this:
     {{< figure src="/attachments/partners/siemens/mindsphere/mendix-on-mindsphere/mindsphere-development-considerations/css-icon.png" alt="Add an icon as CSS" >}}
 
 {{% alert color="info" %}}
-You will not see the icon in Studio Pro when it is in *Structure mode*. Switch to *Design mode* to confirm that you have selected the correct icon.
+You will not see the icon in Studio Pro when it is in **Structure mode**. Switch to **Design mode** to confirm that you have selected the correct icon.
 
 You can only add one icon per element.
 {{% /alert %}}

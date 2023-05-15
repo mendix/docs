@@ -11,10 +11,10 @@ This how-to explains how to configure a selenium hub in ATS. There are four sele
 
 This how-to will teach you how to do the following:
 
-* Configure a Browserstack Selenium Hub
-* Configure a Saucelabs Selenium Hub
-* Configure a Testingbot Selenium Hub
-* Configure a Custom Selenium Hub
+* Configure a Browserstack Selenium hub
+* Configure a Saucelabs Selenium hub
+* Configure a Testingbot Selenium hub
+* Configure a Custom Selenium hub
 
 ## 2 Prerequisites
 
@@ -43,7 +43,7 @@ The **Select Provider** dialog box opens. Here you select one of the four config
 
 ## 4 Custom Capabilities
 
-Each selenium provider allows the user to set certain custom capabilities. The custom capabilities are used to set specific conditions. ATS uses these custom capabilities when you execute a test case or test suite. For example, Selecting 'Chrome' as your browser is a custom capability. ATS will then execute the test case or test suite using Chrome. The different selenium providers allow for different custom capabilities. How to select custom capabilities is explained for each Selenium Hub in the corresponding chapter.
+Each selenium provider allows the user to set certain custom capabilities. The custom capabilities are used to set specific conditions. ATS uses these custom capabilities when you execute a test case or test suite. For example, Selecting 'Chrome' as your browser is a custom capability. ATS will then execute the test case or test suite using Chrome. The different selenium providers allow for different custom capabilities. How to select custom capabilities is explained for each Selenium hub in the corresponding chapter.
 
 Some examples of custom capabilities are:
 
@@ -112,7 +112,7 @@ To set a custom capability for Browserstack follow these steps:
 
     {{< figure src="/attachments/addons/ats-addon/ht/v2/ht-two-configure-a-selenium-hub/new-selenium-hub-dialog-browserstack-with-name-capability.png" >}}
 
-You now configured your Browserstack Selenium Hub. You can create as many variations as you like. When multiple people use the same Browserstack account, you can use the name capability to keep the test runs separated.
+You now configured your Browserstack Selenium hub. You can create as many variations as you like. When multiple people use the same Browserstack account, you can use the name capability to keep the test runs separated.
 
 {{< figure src="/attachments/addons/ats-addon/ht/v2/ht-two-configure-a-selenium-hub/finished-browserstack-selenium-hub.png" >}}
 
@@ -173,7 +173,7 @@ To set a custom capability for SauceLabs follow these steps:
 
     {{< figure src="/attachments/addons/ats-addon/ht/v2/ht-two-configure-a-selenium-hub/new-selenium-hub-dialog-saucelabs-with-name-capability.png" >}}
 
-    You now configured your SauceLabs Selenium Hub. You can create as many variations as you like. When multiple people use the same SauceLabs account, you can use the name capability to keep the test runs separated.
+    You now configured your SauceLabs Selenium hub. You can create as many variations as you like. When multiple people use the same SauceLabs account, you can use the name capability to keep the test runs separated.
 
     {{< figure src="/attachments/addons/ats-addon/ht/v2/ht-two-configure-a-selenium-hub/finished-saucelabs-selenium-hub.png" >}}
 
@@ -234,7 +234,7 @@ To set a custom capability for Testingbot follow these steps:
 
     {{< figure src="/attachments/addons/ats-addon/ht/v2/ht-two-configure-a-selenium-hub/new-selenium-hub-dialog-testingbot-with-name-capability.png" >}}
 
-You now configured your Testingbot Selenium Hub. You can create as many variations as you like. When multiple people use the same Testingbot account, you can use the name capability to keep the test runs separated.
+You now configured your Testingbot Selenium hub. You can create as many variations as you like. When multiple people use the same Testingbot account, you can use the name capability to keep the test runs separated.
 
 {{< figure src="/attachments/addons/ats-addon/ht/v2/ht-two-configure-a-selenium-hub/finished-testingbot-selenium-hub.png" >}}
 
@@ -263,7 +263,7 @@ Leave the **New Selenium Hub** dialog box open for the next section.
 
 Setting a custom capability in your custom selenium is possible but must be configured on the server itself.
 
-You now configured your Custom Selenium Hub. You can create as many variations as you like.
+You now configured your custom Selenium hub. You can create as many variations as you like.
 
 {{< figure src="/attachments/addons/ats-addon/ht/v2/ht-two-configure-a-selenium-hub/finished-custom-selenium-hub.png" >}}
 

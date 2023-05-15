@@ -54,14 +54,18 @@ BYOIDP SSO integrates with the Mendix Platform using the following techniques:
 
     This assumes that the IdP returns an email address to Mendix during SSO which the user previously used to sign-up and login to Mendix. If the email address that is returned to Mendix is not recognized, then the user will be offered the sign-up option to enable them to create a new account.
 
-* The authentication/authorization request to your IdP typically requests the 'openid' and 'profile' scopes as defined by OIDC. The request does not include a scope to request authorization for the user to use the platform or part of the platform. Your IdP may apply coarse grained access rules based on the client_id for the Mendix Platform.
+* BYOIDP SSO makes an authentication request to your IdP which means that only the 'openid' and 'profile' scope values are requested, as defined by OIDC. The request does not explicitly ask for authorisation for specific platform roles such as 'developer', 'Mendix Administrator', 'technical contact'. You can set up your IdP, however, to apply coarse-grained access rules based on the client_id for the Mendix platform to deny access to the Mendix platform for certain groups of employees.
 * Mendix provides support for two client authentication methods: client_secret_post (client credentials in the payload) or client_secret_basic (basic authentication credentials in http header). If the IdP supports both methods, client_secret_post is used.
 * Mendix includes the `login_hint` parameter in requests to your IdP This allows the IdP to pre-populate the login screen with the user's email address, which gives a better user experience. Your IdP may choose to ignore the hint. After receiving a positive response, Mendix does not do any validation if the logged-in user matches the login_hint.
 * Whether or not end-users signing in to the Mendix Platform have to use 2FA does not change the [Two-Factor Authentication](/developerportal/deploy/two-factor-authentication/) which protects sensitive activities on Mendix Cloud nodes. This remains in place and works independently of BYOIDP SSO.
 
 ### 1.3 Limitations
 
-* Your IdP must support OIDC (Microsoft Azure AD is one example of such an IdP).
+BYOIDP SSO has the following limitations.
+
+* If the end-user's email address is changed in your IdP, Mendix may not recognize it as the same account and will ask the end-user to set up a new Mendix account.
+* `login_hint` is not optional and is always sent as part of authentication requests to the IdP.
+* BYOIDP SSO only supports OIDC and does not support other protocols such as SAML.
 * Your Mendix app must be built using Mendix version 7.23 or above.
 * Once BYOIDP is activated, direct access to [Team Server](/developerportal/collaborate/team-server/) is no longer possible using a username and password. To access code repositories from a pipeline, you need to use a Personal Access Token (PAT).
 * Mendix Platform APIs which require a PAT can use one which is created by a platform user. You cannot directly set up service accounts within Mendix once BYOIDP SSO is activated. You can set up a service-like account to consume Mendix platform APIs in one of the following ways:
@@ -106,7 +110,7 @@ When adding a configuration, you will need to provide the information described 
     If your IdP supports multiple protocols, make sure you enter the OIDC endpoint.
 * **Client ID** – the ID of the Developer Portal registration in your IdP.
 * **Client secret** – the password or secret of the Developer Portal registration in your IdP. Enter this once. After saving your configuration it will no longer be shown to you. See [Changing the Client Secret](#client-secret), below, for information about changing this value once your configuration is active.
-* **Scopes** – selecting a scope to configure the data Mendix is allowed to read from your IdP. Mendix uses this data to map the user's identity in your IdP environment with a corresponding identity in the Developer Portal. The scope `OpenID` is required. In some cases, depending on your IdP, other scopes are necessary to fully map the user's identity.
+* **Scopes** – selecting a scope to configure the data Mendix is allowed to read from your IdP. Mendix uses this data to map the user's identity in your IdP environment with a corresponding identity in the Developer Portal. The scope `OpenID` is required. Typically the scopes "profile" and "email" are also needed to get the end-user's email address and name, which are required for SSO to fully map the end-user's identity. Your IdP may provide additional scopes you can use.
 
     {{< figure src="/attachments/developerportal/control-center/set-up-sso-byoidp/customer-idp-wizard-page-2.png" >}}
 
@@ -228,7 +232,7 @@ If the client secret is still active, you can do one of the following:
     
 If the client secret has expired, you can ask Mendix Support to update the client secret of your active IdP configuration.
 
-If this is unsuccessful, Mendix Support will need to deactivate the active IdP configuration. This means that you (and your users) will need to reset and then use your platform password. Once you have access to the platform, you can set up your IdP configuration again.
+If this is unsuccessful, you can ask Mendix Support to deactivate the active IdP configuration. This means that you (and your users) without active sessions will no longer have access and will need to reset and then use your platform password. Once you have access to the platform, you can set up your IdP configuration again.
 
 ### 8.4 Mendix Version
 

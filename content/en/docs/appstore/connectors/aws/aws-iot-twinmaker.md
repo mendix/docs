@@ -686,7 +686,7 @@ The `ComponentResponseStatus` entity does not have any attributes.
 
 Response of getting the property values for a component, component type, entity, or workspace.
 
-For more information, see [GetPropertyValue](https://docs.aws.amazon.com/iot-twinmaker/latest/apireference/API_GetPropertyValue.html) and [Class GetPropertyValueResponse](amazonaws.com/java/api/latest/software/amazon/awssdk/services/iottwinmaker/model/GetPropertyValueResponse.html).
+For more information, see [GetPropertyValue](https://docs.aws.amazon.com/iot-twinmaker/latest/apireference/API_GetPropertyValue.html) and [Class GetPropertyValueResponse](https://sdk.amazonaws.com/java/api/latest/software/amazon/awssdk/services/iottwinmaker/model/GetPropertyValueResponse.html).
 
 ##### 4.1.28.1 Attributes
 

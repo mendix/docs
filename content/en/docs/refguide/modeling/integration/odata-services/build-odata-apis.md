@@ -135,9 +135,29 @@ Published OData services in Studo Pro allow you to easily create and change data
 
 If you selected **Insertable** in the API definition, clients can create new resources using POST. Successfully created data will automatically result in a 201 status code, and a **Location** header provides the URL of the resulting resource, as is best practice for REST APIs."
 
+Here is an example of a POST call:
+
+```
+POST http://localhost:8080/odata/CustomerApi/v1/Customers
+
+{
+    "Firstname": "Jimmy",
+    "Lastname": "Smooth",
+    "Title": "Engineer",
+    "CompanyName": "CustKo"
+}
+```
+
+The response is as follows:
+
 {{< figure src="/attachments/refguide/modeling/integration/build-odata-apis/insert-new-data.png" >}} 
 
-This uses the returned location header to query the new resource at its endpoint:
+The following GET request uses the returned location header to query the new resource at its endpoint:
+
+```
+GET http://localhost:8080/odata/CustomerApi/v1/Customers(5)
+
+The response is as follows:
 
 {{< figure src="/attachments/refguide/modeling/integration/build-odata-apis/query-resource-endpoint.png" >}} 
 

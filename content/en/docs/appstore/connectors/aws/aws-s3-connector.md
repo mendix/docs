@@ -1,209 +1,326 @@
 ---
 title: "Amazon S3"
-url: /appstore/connectors/aws/aws-s3-connector/
-description: "Describes the configuration and usage of the Amazon S3 connector, which is available in the Mendix Marketplace. Amazon Simple Storage Service (Amazon S3) is an object storage service offering industry-leading scalability, data availability, security, and performance."
+url: /appstore/connectors/aws/amazon-S3/
+description: "Describes the configuration and usage of the Amazon S3 connector from the Mendix Marketplace. Amazon Simple Storage Service (Amazon S3) is an object storage service offering industry-leading scalability, data availability, security, and performance."
 weight: 20
-tags: ["marketplace", "marketplace component", "aws", "s3", "connector"]
-aliases:
-    - /appstore/connectors/aws-s3-connector/
-#If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details. 
+tags: ["marketplace", "marketplace component", "aws", "amazon", "s3", "connector"]
 ---
 
 ## 1 Introduction
 
-The [Amazon S3](https://marketplace.mendix.com/link/component/120340) connector allows your app to use AWS S3 buckets directly.
+The [Amazon S3 connector](https://marketplace.mendix.com/link/component/120340) enables you to connect your app to [Amazon S3](https://aws.amazon.com/s3/) and easily store objects.
 
 ### 1.1 Typical Use Cases
 
-Amazon Simple Storage Service (Amazon S3) is an object storage service offering industry-leading scalability, data availability, security, and performance. Customers of all sizes and industries can store and protect any amount of data for virtually any use case, such as data lakes, cloud-native applications, and mobile apps. With cost-effective storage classes and easy-to-use management features, you can optimize costs, organize data, and configure fine-tuned access controls to meet specific business, organizational, and compliance requirements.
+Amazon Simple Storage Service (Amazon S3) is an object storage service offering industry-leading scalability, data availability, security, and performance. Customers of all sizes and industries can store and protect any amount of data for virtually any use case, such as data lakes, cloud-native applications, and mobile apps. With cost-effective storage classes and easy-to-use management features, you can optimize costs, organize data, and configure fine-tuned access controls to meet specific business, organizational, and compliance requirements. Some typical use cases of Amazon EventBridge are:
 
-### 1.2  Prerequisites
+* Build a data lake: Run big data analytics, artificial intelligence (AI), machine learning (ML), and high performance computing (HPC) applications to unlock data insights.
+* Back up and restore critical data: Meet Recovery Time Objectives (RTO), Recovery Point Objectives (RPO), and compliance requirements with S3’s robust replication features.
+* Archive data at the lowest cost: Move data archives to the Amazon S3 Glacier storage classes to lower costs, eliminate operational complexities, and gain new insights.
+* Run cloud-native applications: Build fast, powerful mobile and web-based cloud-native apps that scale automatically in a highly available configuration.
 
-The Amazon S3 connector requires Mendix Studio Pro version 9.18.0 or above.
+### 1.2 Prerequisites {#prerequisites}
 
-To authenticate with Amazon Web Service (AWS), you must also install and configure the [AWS authentication connector version 2.0 or higher](https://marketplace.mendix.com/link/component/120333). For more information about installing and configuring the AWS Authentication connector, see [AWS Authentication](/appstore/connectors/aws/aws-authentication/).
+The Amazon S3 connector requires the [AWS authentication connector version 2.1 or higher](https://marketplace.mendix.com/link/component/120333) to authenticate with Amazon Web Services (AWS). It is crucial for the Amazon EventBridge connector to function correctly. For more information about installing and configuring the AWS Authentication connector, see see [AWS Authentication](/appstore/connectors/aws/aws-authentication/).
 
 ## 2 Installation
 
-Follow the instructions in [How to Use Marketplace Content in Studio Pro](/appstore/general/app-store-content/) to import the Amazon S3 connector into your app.
+Follow the instructions in [How to Use Marketplace Content in Studio Pro](/appstore/general/app-store-content/) to import the Amazon EventBridge connector into your app.
 
 ## 3 Configuration
 
-After you install the connector, you can find it in the **App Explorer**, in the **AWSS3Connector** section. The connector provides a [domain model](#domain-model) and several [activities](#activities) that you can use to connect your app to one or more Amazon S3 buckets. Each activity can be implemented by using it in a microflow. To ensure that your app can connect to the AWS service, you must also configure AWS authentication for the connector.
+After you install the connector, you can find it in the App Explorer, in the AmazonEventBridgeConnector section. The connector provides a [domain model](#domain-model) and several [activities](#activities) that you can use to connect your app to Amazon EventBridge. Each activity can be implemented by using it in a microflow. To ensure that your app can connect to the AWS service, you must also configure AWS authentication for the connector.
 
-### 3.1 Safelisting Mendix Public Cloud IPs for Amazon S3 Access Points
+### 3.1 Configuring AWS Authentication
 
-If your application is hosted on Mendix Public Cloud, and your S3 buckets are secured with [Amazon access points](https://docs.aws.amazon.com/AmazonS3/latest/userguide/access-points.html), you must safelist the [Mendix IP Addresses](/developerportal/deploy/mendix-ip-addresses/) to allow access.
+In order to use the Amazon EventBridge service, you must authenticate with AWS. To do so, you must set up a configuration profile in your Mendix app. After you set up the configuration profile, the connector module handles the authentication internally.
+
+1. Ensure that you have installed and configured the AWS Authentication connector, as mentioned in [Prerequisites](#prerequisites).
+2. Decide whether you want to use session or static credentials to authenticate.
+The Amazon EventBridge connector supports both session and static credentials. By default, the connector is pre-configured to use static credentials, but you may want to switch to session credentials, for example, to increase the security of your app. For an overview of both authentication methods, see [AWS Authentication](/appstore/connectors/aws/aws-authentication/).
+3. In the App Explorer, double-click the Settings for your app.
+{{< figure src="/attachments/appstore/connectors/aws-eventbridge/eventbridge_open_settings.png” alt="The Settings option in the App Explorer">}}
+4. In the App Settings dialog, in the Configurations tab, edit or create an authentication profile.
+If you have multiple sets of AWS credentials, or if you want to use both static and session credentials for different use cases, create separate authentication profiles for each set of credentials.
+5. In the Edit Configuration dialog, in the Constants tab, click New to add the constants required for the configuration.
+6. In the Select Constants dialog, find and expand the AmazonEventBridgeConnector > ConnectionDetails section.
+{{< figure src="/attachments/appstore/connectors/aws-dynamodb/eventbridge_edit_configuration.png" alt="The SessionCredentials and StaticCredentials items in the ConnectionDetails section">}}
+7. Depending on your selected authentication type, configure the required parameters for the StaticCredentials or SessionCredentials.
+   
+| Credentials type | Parameter | Value | 
+| --- | --- | --- | 
+| Any | UseStaticCredentials | true if you want to use static credentials, or false for session credentials | 
+| StaticCredentials | AccessKey | Access key ID [created in IAM](/appstore/connectors/aws/aws-authentication/#prerequisites) | 
+| StaticCredentials | SecretKey | Secret key [created in IAM](/appstore/connectors/aws/aws-authentication/#prerequisites) | 
+| SessionCredentials | Role ARN | [ARN](https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html) of the AWS role that the connector should assume | 
+| SessionCredentials | Profile ARN | ARN of the profile [created in IAM Roles Anywhere](/appstore/connectors/aws/aws-authentication/#prerequisites) | 
+| SessionCredentials | Trust Anchor ARN | ARN of the trust anchor [created in IAM Roles Anywhere](/appstore/connectors/aws/aws-authentication/#prerequisites) | 
+| SessionCredentials | Client Certificate Identifier | The Client Certificate Pin visible in the Outgoing Certificates section on the Network tab in the Mendix Cloud environment | 
+| SessionCredentials | Duration | Duration for which the session token should be valid; after the duration passes, the validity of the session credentials expires | 
+| SessionCredentials | Session Name | An identifier for the session |
 
 ### 3.2 Configuring a Microflow for an AWS Service
-
-After you configure the authentication profile for Amazon S3, you can implement the functions of the connector by using the provided activities in microflows. To quickly configure the connection to Amazon S3 by using an example microflow, perform the following steps:
-
-1. Optional: If you have not configured your default AWS region before, click **App** > **Marketplace modules** > **AWSS3Connector** > **_USE_ME** > **AWS_Default_Region**, and then select the region of your choice.
-
-    This step is not required, but you may wish to perform it for one of the following reasons:
-
-    * To reduce latency by choosing a region which is geographically close to you
-    * To choose a region to which you have access, if you do not have access to some regions
-
-    {{% alert color="info" %}}
-    For technical reasons, you cannot set AWS_Default_Region to `aws-global` or `us-east-1`.
-    {{% /alert %}}
-
-2. Create a microflow with session or static credentials authentication. For more information, see [AWS Authentication](/appstore/connectors/aws/aws-authentication/).
-3. In the App Explorer, in **App** > **Marketplace modules** > **AWSS3Connector** > **Examples**, find an example microflow that performs a function which you want to use in your app.
-
-    For example, if you want to get the contents of an object in the S3 bucket, find the **SUB_GetObject** example microflow. For more information about the activities that the microflows can perform, see [Activities](#activities).
-
-4. Drag the example microflow onto the working area of the microflow that you created in step 2, and position it after the **GetSessionCredentials** activity.
-5. Double-click on the microflow activity that you added in step 4.
-
-    The example microflow opens.
-
-6. Configure the required parameters.
-
-    For example, for the **SUB_GetObject** example microflow, you must configure the S3 object that you want to access.
-
-To help you work with the Amazon S3 connector, the following sections of this document list the available entities and activities that you can use in your application.
 
 ## 4 Technical Reference
 
 To help you work with the Amazon S3 connector, the following sections of this document list the available entities, enumerations, and activities that you can use in your application.
 
-### 4.1 Domain Model {#domain-model}
+### 4.1 Constants {#constants}
+
+Constants are used to define configuration values. All activities are exported as microflow activities that can directly be added to a microflow. Make sure the constants are configured correctly as shown in the table below, so the connector can authenticate the request with AWS. For more information, see [Configuring AWS Authentication](#authentication).
+
+| Name | Description |
+| --- | --- |
+| `AmazonS3Connector.ClientCertificateID` | The ID for the `ClientCertificate` used to sign the authentication requests. | 
+|`AmazonS3Connector.ProfileARN` | The `ProfileARN` for the [IAM Roles Anywhere](https://docs.aws.amazon.com/rolesanywhere/latest/userguide/introduction.html) profile that has access to the Amazon Polly service | 
+|`AmazonS3Connector.RoleARN` | The `RoleARN` of the IAM Role that has access to the Polly service. | 
+|`AmazonS3Connector.TrustAnchorARN` | The `TrustAnchorARN` of the TrustAnchor configured in IAM Roles Anywhere that is used for the configured role | 
+|`AmazonS3Connector.UseStaticCredentials` | The `UseStaticCredentials` Boolean value defines if the connector uses the provided static credentials (`AccessKey` and `SecretKeyID`) over the session-based credentials | 
+|`AmazonS3Connector.AccessKey` | The `AccessKey` from an AWS account able to use this service | 
+|`AmazonS3Connector.SecretKeyID` | The `SecretKeyID` from an AWS Account able to use this service |
+
+### 4.2 Domain Model {#domain-model}
 
 The domain model is a data model that describes the information in your application domain in an abstract way. For more information, see [Domain Model](/refguide/domain-model/).
 
-The domain model used by the Amazon S3 connector is shown below.
+The entities in the table below describe all generalizations. These are reused by the different models for the specific microflow activities or for storing connection details.
 
-{{< figure src="/attachments/appstore/connectors/aws-s3-connector/domain-model.png" >}}
+#### 4.2.1 S3Object {#s3object}
 
-When using the [Java activities](#activities), results are stored as objects of the following entity types. These objects can be passed to other Java activities to specify on which objects an activity is to be performed.
-
-| Entity | Description |
+| Attribute | Description | 
 | --- | --- |
-| Bucket | Bucket information |
-| Prefix | Information about prefixes used by a bucket |
-| S3Object | Information about objects in a bucket |
-| Document | The content of an S3 object |
+| ETag | Describes the entity tag is a hash of the object |
+| Key | Describes the name that has been assigned to an object |
+| LastModified | Describes the creation date of the object |
+| Size | Describes the size in bytes of the object |
+| StorageClass | Describes the class of the storage used to store the object |
 
-The entities are either not persistable, or have the `DeleteAfterDownload` flag set so that they are automatically deleted from the database. Because of that, you do not need remove the resulting objects yourself.
+#### 4.2.2 CreateBucketRequest {#createbucketrequest}
 
-### 4.2 Activities {#activities}
+| Attribute | Description | 
+| --- | --- |
+| BucketName | Describes the name of the bucket to create |
+| ACL | Describes the canned ACL (access control list) to apply to the bucket |
 
-Activities define the actions that are executed in a microflow or a nanoflow. For the Amazon S3 connector, they represent the actions that can be performed on S3 buckets.
+#### 4.2.3 PutObjectRequest {#putobjectrequest}
 
-#### 4.2.1 List Bucket
+| Attribute | Description | 
+| --- | --- |
+| BucketName | Describes the name of the bucket to put the object in|
+| Key| Describes the unique identifier for the object that needs to be put |
 
-This activity lists all the S3 buckets which are available for the supplied AWS credentials.
+#### 4.2.4 GetObjectRequest {#getobjectrequest}
 
-**Parameters**
+| Attribute | Description | 
+| --- | --- |
+| BucketName | Describes the name of the bucket to get the object from |
+| Key | Describes the object's key |
 
-* Object of entity type `Credentials` – obtained from the [AWS Authentication](/appstore/connectors/aws/aws-authentication/) connector
+#### 4.2.5 GetObjectResponse {#getobjectresponse}
 
-**Returns**
 
-* List of objects of entity type `Bucket`
+| Attribute | Description | 
+| --- | --- |
+| Key | Describes the object's key |
 
-#### 4.2.2 List Prefix
+#### 4.2.6 DeleteObjectRequest {#deleteobjectrequest}
 
-This activity lists all the [prefixes](https://docs.aws.amazon.com/AmazonS3/latest/userguide/using-prefixes.html) used to organize objects in an S3 bucket.
+| Attribute | Description | 
+| --- | --- |
+| BucketName | Describes the name of the bucket to create |
+| Key | Describes the object's key |
 
-**Parameters**
+#### 4.2.7 ListBucketRequest {#listbucketrequest}
 
-* Object of entity type `Credentials` – obtained from the [AWS Authentication](/appstore/connectors/aws/aws-authentication/) connector
-* Object of entity type `Bucket` – the bucket that you are querying
+| Attribute | Description | 
+| --- | --- |
+| NoAttributes | The object doesn’t contain any attributes but is associated with the ‘Bucket’ object|
 
-**Returns**
+#### 4.2.8 Bucket {#bucket}
 
-* List of objects of entity type `Prefix` which are in the bucket you supplied as a parameter
+| Attribute | Description | 
+| --- | --- |
+| BucketName | Describes the name of the bucket |
+| CreationDate | Describes the creation date of the bucket |
 
-#### 4.2.3 List Object
+#### 4.2.9 ListObjectsRequest {#listobjectsrequest}
 
-This activity lists all the objects in an S3 bucket.
+| Attribute | Description | 
+| --- | --- |
+| BucketName | Describes the name of the bucket that includes the desired list of the objects |
+| Delimiter | Describes a character you use to group keys |
+| MaxKeys | Describes  the maximum number of keys returned in the response. By default the action returns up to 1,000 key names. The response might contain fewer keys but will never contain more |
+| Prefix | Describes the prefix that can be used to limit the response to keys that begin with the specified prefix |
+| ContinuationToken | Describes to the Amazon S3 service that the list is being continued on this bucket with a token |
+| StartAfter | Describes where you want Amazon S3 to start listing from. Amazon S3 starts listing after this specified key. StartAfter can be any key in the bucket |
 
-**Parameters**
+#### 4.2.10 ListObjectsRespose {#listobjectsresponse}
 
-* Object of entity type `Credentials` – obtained from the [AWS Authentication](/appstore/connectors/aws/aws-authentication/) connector
-* Object of entity type `Bucket` – the bucket that you are querying
+| Attribute | Description | 
+| --- | --- |
+| IsTruncated | Describes whether all results were returned. This value is set to false if that is the case, otherwise it is set to true |
+| KeyCount | Describes the number of keys returned with this request. KeyCount will always be less than or equal to the MaxKeys field. Say you ask for 50 keys, your result will include 50 keys or fewer |
+| NextContinuationToken | Describes whether there are more keys in the bucket that can be listed. The next list requests to Amazon S3 can be continued with this NextContinuationToken. NextContinuationToken is obfuscated and is not a real key |
 
-**Returns**
+#### 4.2.11 ListedObject {#listedobject}
 
-* List of objects of entity type `S3Object` which are in the bucket that you supplied as a parameter
+| Attribute | Description | 
+| --- | --- |
+| No Attributes | Is a generalization of the S3 Object|
 
-#### 4.2.4 Get Object
+#### 4.2.12 CommonPrefix {#commonprefix}
 
-This activity returns the contents of a single object defined by an object of entity type `S3Object`.
+| Attribute | Description | 
+| --- | --- |
+| Prefix | Describes the name of the prefix |
 
-**Parameters**
+#### 4.2.13 CopyObjectRequest {#copyobjectrequest}
 
-* Object of entity type `Credentials` – obtained from the [AWS Authentication](/appstore/connectors/aws/aws-authentication/) connector
-* Object of type `S3Object` – the object which you want to download; must contain the `Key` of the object and be associated with the desired `Bucket`
+| --- | --- |
+| SourceBucketName | Describes the name of the source bucket| 
+| SourceKey | Describes the source Key of the object |
+| DestinationBucketName | Describes the name of the target bucket |
+| DestinationKey | Describes the target Key of the object |
 
-**Returns**
+#### 4.2.14 DeleteBucketRequest {#deletebucketrequest}
 
-* Object of type `Document` – contains the content of the S3 object requested
+| --- | --- |
+| BucketName | Describes the name of the bucket to be deleted | 
 
-#### 4.2.5 Put Object
+#### 4.2.15 MoveObjectRequest {#moveobjectrequest}
 
-This activity puts the contents of a `Document` object into a single object defined by an object of entity type `S3Object`. The name of the object is the `Name` attribute of the `Document`. This activity can update an existing object, or it can create a new object.
+| --- | --- |
+| SourceBucketName | Describes the name of the source bucket| 
+| DestinationBucketName | Describes the name of the target bucket |
+| DestinationKey | Describes the target Key of the object |
 
-**Parameters**
+### 4.3 Enumerations
 
-* Object of entity type `Credentials` – obtained from the [AWS Authentication](/appstore/connectors/aws/aws-authentication/) connector
-* Object of type `Document` – contains the data you want to upload to AWS S3 Storage; the `Name` attribute of the document contains the [Key](https://docs.aws.amazon.com/AmazonS3/latest/userguide/object-keys.html) of the S3 object where the content is put
-* Object of type `Bucket` – the destination bucket where you want to upload the object
+An enumeration is a predefined list of values that can be used as an attribute type. For the Amazon EventBridge connector, enumerations list values such as the list of available AWS regions.
 
-**Returns**
+#### 4.3.1 AWS_Region {#aws-region}
 
-* Boolean – `true` if object was successfully put, otherwise `false`
+| Name | Caption | 
+| --- | --- | 
+| us_east_2 | US East (Ohio) | 
+| us_east_1 | US East (N. Virginia) | 
+| us_west_1 | US West (N. California) | 
+| us_west_2 | US West (Oregon) | 
+| af_south_1 | Africa (Cape Town) | 
+| ap_east_1 | Asia Pacific (Hong Kong) | 
+| ap_southeast_3 | Asia Pacific (Jakarta) | 
+| ap_south_1 | Asia Pacific (Mumbai) | 
+| ap_northeast_3 | Asia Pacific (Osaka) | 
+| ap_northeast_2 | Asia Pacific (Seoul) | 
+| ap_southeast_1 | Asia Pacific (Singapore) | 
+| ap_southeast_2 | Asia Pacific (Sydney) | 
+| ap_northeast_1 | Asia Pacific (Tokyo) | 
+| ca_central_1 | Canada (Central) | 
+| eu_central_1 | Europe (Frankfurt) | 
+| eu_west_1 | Europe (Ireland) | 
+| eu_west_2 | Europe (London) | 
+| eu_south_1 | Europe (Milan) | 
+| eu_west_3 | Europe (Paris) | 
+| eu_north_1 | Europe (Stockholm) | 
+| me_south_1 | Middle East (Bahrain) | 
+| sa_east_1 | South America (São Paulo) |
 
-#### 4.2.6 Delete Object
+#### 4.3.2 ENUM_BucketCannedACL {#enum-bucketcannedacl}
 
-This activity deletes a single object defined by an object of entity type `S3Object`.
+| Name | Caption | Description |
+| --- | --- | --- |
+| AUTHENTICATED_READ | AUTHENTICATED_READ | Selecting this enumeration value grants the owner full access and the group of authenticated users get read access |
+| PRIVATE | _PRIVATE | Selecting this enumeration value grants the solely the owner full access |
+| PUBLIC_READ | PUBLIC_READ | Selecting this enumeration value grants the owner full access and others read access |
+| PUBLIC_READ_WRITE | PUBLIC_READ_WRITE | Selecting this enumeration value grants the owner full access and others read and write access (this is not recommended by AWS) |
 
-**Parameters**
+#### 4.3.3 ENUM_StorageClass {#enum-storageclass}
 
-* Object of entity type `Credentials` – obtained from the [AWS Authentication](/appstore/connectors/aws/aws-authentication/) connector
-* Object of type `S3Object` – the S3 object which you want to delete; the object must contain the [Key](https://docs.aws.amazon.com/AmazonS3/latest/userguide/object-keys.html) of the S3 object and be associated with the `Bucket` it is in
+| Name | Caption | Description |
+| --- | --- | --- |
+| STANDARD | STANDARD | (Default) Selecting this enumeration value stores an object according to the standard class |
+| REDUCED_REDUNDANCY | REDUCED_REDUNDANCY | Selecting this enumeration value stores an object according to the RRS (reduced redundancy storage) class |
+| GLACIER | GLACIER | Selecting this enumeration value stores an object according to the glacier class |
+| STANDARD_IA | STANDARD_IA | Selecting this enumeration value stores an object according to the standard-IA (infrequent access) class |
+| ONEZONE_IA | ONEZONE_IA | Selecting this enumeration value stores an object according to the one zone-IA (infrequent access) class |
+| INTELLIGENT_TIERING | INTELLIGENT_TIERING | Selecting this enumeration value stores an object according to the intelligent tiering class |
+| DEEP_ARCHIVE | DEEP_ARCHIVE | Selecting this enumeration value stores an object according to the glacier deep archive class |
+| OUTPOSTS | OUTPOSTS | Selecting this enumeration value stores an object according to the outposts (on-premise) class |
+| GLACIER_IR | GLACIER_IR | Selecting this enumeration value stores an object according to the glacier instant retrieval (IR) class |
+| UNKNOWN_TO_SDK_VERSION | UNKNOWN_TO_SDK_VERSION | This enumeration value is returned when the S3 service returns a value unknown to the SDK |
 
-**Returns**
+### 4.4 Activities {#activities} 
 
-* Boolean – `true` if object was successfully deleted, otherwise `false`
+Activities define the actions that are executed in a microflow or a nanoflow.
 
-#### 4.2.7 Move Object
+#### 4.4.1 CreateBucket {#createbucket}
 
-This activity moves an object from one bucket to another bucket. The new object has the same key as the original object, and the original object is deleted.
+The `CreateBucket` Amazon S3 action allows you to create a new S3 Bucket. It requires a valid `AWS_Region` parameter and a `CreateBucketRequest` object and returns a `CreateBucketResponse` object. The input and output for this service are shown in the table below: 
 
-{{% alert color="info" %}}
-You cannot change the key of an existing object. To do this, you should:
+| Input | Output | 
+| --- | --- | 
+| `CreateBucketRequest` | `CreateBucketResponse` |
 
-* Get the object
-* Update the `Document/Name`
-* Put the object with its new name (key)
-* Delete the original object
-{{% /alert %}}
+#### 4.4.2 PutObject {#putobject}
 
-**Parameters**
+The `PutObject` Amazon S3 actions allows you put an object into a specified S3 bucket. It requires a valid `AWS_Region`, a `PutObjectRequest` object and a ‘FileDocument’ object. It returns a boolean which indicates if the action was successful. The input and output for this service are shown in the table below: 
 
-* Object of entity type `Credentials` – obtained from the [AWS Authentication](/appstore/connectors/aws/aws-authentication/) connector
-* Object of type `S3Object` – the S3 object which you want to delete; the object must contain the [Key](https://docs.aws.amazon.com/AmazonS3/latest/userguide/object-keys.html) of the S3 object and be associated with the `Bucket` it is in
-* Object of type `Bucket` – the destination bucket to which you want to move the object
+| Input | Output | 
+| --- | --- | 
+| `PutObjectRequest` | `Boolean` |
 
-**Returns**
+#### 4.4.3 DeleteObject {#deleteobject}
 
-* Boolean – `true` if object was successfully moved, otherwise `false`
+The `DeleteObject` Amazon S3 actions allows you delete an object from a specified S3 bucket. It requires a valid `AWS_Region` and a `DeleteObjectRequest` object. It returns a boolean which indicates if the action was successful. The input and output for this service are shown in the table below: 
 
-#### 4.2.8 Copy Object
+| Input | Output | 
+| --- | --- | 
+| `DeleteObjectRequest` | `Boolean` |
 
-This activity copies an object from one bucket to another bucket.  The new object has the same key as the original object and the original object remains in its original bucket.
+#### 4.4.4 ListBuckets {#listbuckets}
 
-**Parameters**
+The `ListBuckets` Amazon S3 actions allows you retrieve a list of all buckets in one’s Amazon S3 environment. It requires a valid `AWS_Region` and a `ListBucketsRequest `object. It returns a` ListBucketsResponse` object. The input and output for this service are shown in the table below: 
 
-* Object of entity type `Credentials` – obtained from the [AWS Authentication](/appstore/connectors/aws/aws-authentication/) connector
-* Object of type `S3Object` – the S3 object which you want to delete; the object must contain the [Key](https://docs.aws.amazon.com/AmazonS3/latest/userguide/object-keys.html) of the S3 object and be associated with the `Bucket` it is in
-* Object of type `Bucket` – the destination bucket to which you want to copy the object
+| Input | Output | 
+| --- | --- | 
+| `ListBucketsRequest` | `ListBucketsResponse` |
 
-**Returns**
+#### 4.4.5 ListObjects {#listobjects}
 
-* Boolean – `true` if object was successfully copied, otherwise `false`
+The `ListObjects` Amazon S3 actions allows you retrieve a list of the metadata of the objects for a specified bucket in one’s Amazon S3 environment. It requires a valid `AWS_Region` and a `ListObjectsRequest` object. It returns a `ListObjectsResponse` object. The input and output for this service are shown in the table below: 
+
+| Input | Output | 
+| --- | --- | 
+| `ListObjectsRequest` | `ListObjectsResponse` |
+
+#### 4.4.6 DeleteBucket {#deletebucket}
+
+The `DeleteBucket` Amazon S3 actions allows you delete a bucket. It requires a valid `AWS_Region` parameter, a `DeleteBucketRequest` object and `Credentials` object. It returns a boolean which indicates if the action was successful. The input and output for this service are shown in the table below: 
+
+| Input | Output | 
+| --- | --- | 
+| `DeleteBucketRequest` | `Boolean` |
+
+#### 4.4.7 GetObject {#getObject}
+
+The `GetObject` Amazon S3 actions allows you to get an object from the s3 simple storage service. It requires a valid `AWS_Region`, a 'Credentials' object and a `GetObjectRequest` object. It returns a `GetObjectResponse` object which is a 'FileDocument' generalization object. The input and output for this service are shown in the table below: 
+
+| Input | Output | 
+| --- | --- | 
+| `GetObjectRequest` | `GetObjectResponse` |
+
+#### 4.4.8 CopyObject {#copyobject}
+
+The `CopyObject` Amazon S3 actions allows you copy an s3 object placed within a bucket or prefix to an other bucket or prefix. It requires a valid `AWS_Region` parameter, a 'Credentials' object and a `CopyObjectRequest` object. It returns a boolean. The input and output for this service are shown in the table below: 
+
+| Input | Output | 
+| --- | --- | 
+| `CopyObjectRequest` | `Boolean` |
+
+#### 4.4.9 MoveObject {#moveobject}
+
+The `MoveObject` Amazon S3 actions allows you move an s3 object between buckets or prefixes. It requires a valid `AWS_Region` parameter, a 'Credentials' object and a `MoveObjectRequest` object. It returns a boolean. The input and output for this service are shown in the table below: 
+
+| Input | Output | 
+| --- | --- | 
+| `MoveObjectRequest` | `Boolean` |

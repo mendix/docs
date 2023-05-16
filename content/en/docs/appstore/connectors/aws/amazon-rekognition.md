@@ -196,7 +196,7 @@ The Amazon `DetectCustomLabels` service detects custom labels in a supplied imag
 The input and output for this service are shown in the table below:
 
 | Input | Output |
-| --- |
+| --- | --- |
 | - `MinConfidence` (Integer/Long)<br />- `MaxResults` (Integer/Long)<br />- `ProjectARN` (String)<br />- `Image` (Image) | \- Custom label |
 
 This activity returns a list of `DetectCustomLabels` objects and associated objects as shown in the table below:
@@ -207,7 +207,7 @@ This activity returns a list of `DetectCustomLabels` objects and associated obje
 | `BoundingBoxDetectCustomLabel` | `AmazonRekognitionConnector.BoundingBox` | This entity contains the bounding box results for the `DetectCustomLabels` activity. It includes the left (x) coordinates, top (y) coordinates, and the image's width and height. It is a specialization of the `BoundingBox` generalization entity. |
 | `PolygonDetectCustomLabel` | `AmazonRekognitionConnector.Polygon` | This entity contains the polygon results for the `DetectCustomLabels` activity. It includes left (x) and top (y) coordinates. It is a specialization of the `Polygon` generalization entity. An array of `Point` objects, `Polygon`, is returned by `DetectText` and `DetectCustomLabels` or used to define regions of interest in Amazon Rekognition Video operations such as `CreateStreamProcessor`. `Polygon` represents a fine-grained polygon around a detected item. |
 
-#### 3.4.3 Detect Faces – Default
+#### 4.4.3 Detect Faces – Default
 
 The Amazon `DetectFaces` service detects faces within an image that is provided as input.
 

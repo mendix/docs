@@ -61,6 +61,8 @@ If you have multiple sets of AWS credentials, or if you want to use both static 
 
 ### 3.2 Configuring a Microflow for an AWS Service
 
+
+
 ## 4 Technical Reference
 
 To help you work with the Amazon S3 connector, the following sections of this document list the available entities, enumerations, and activities that you can use in your application.
@@ -100,7 +102,6 @@ The entities in the table below describe all generalizations. These are reused b
 | Attribute | Description | 
 | --- | --- |
 | BucketName | Describes the name of the bucket to create |
-| ACL | Describes the canned ACL (access control list) to apply to the bucket |
 
 #### 4.2.3 PutObjectRequest {#putobjectrequest}
 
@@ -117,7 +118,6 @@ The entities in the table below describe all generalizations. These are reused b
 | Key | Describes the object's key |
 
 #### 4.2.5 GetObjectResponse {#getobjectresponse}
-
 
 | Attribute | Description | 
 | --- | --- |
@@ -224,15 +224,6 @@ An enumeration is a predefined list of values that can be used as an attribute t
 | eu_north_1 | Europe (Stockholm) | 
 | me_south_1 | Middle East (Bahrain) | 
 | sa_east_1 | South America (São Paulo) |
-
-#### 4.3.2 ENUM_BucketCannedACL {#enum-bucketcannedacl}
-
-| Name | Caption | Description |
-| --- | --- | --- |
-| AUTHENTICATED_READ | AUTHENTICATED_READ | Selecting this enumeration value grants the owner full access and the group of authenticated users get read access |
-| PRIVATE | _PRIVATE | Selecting this enumeration value grants the solely the owner full access |
-| PUBLIC_READ | PUBLIC_READ | Selecting this enumeration value grants the owner full access and others read access |
-| PUBLIC_READ_WRITE | PUBLIC_READ_WRITE | Selecting this enumeration value grants the owner full access and others read and write access (this is not recommended by AWS) |
 
 #### 4.3.3 ENUM_StorageClass {#enum-storageclass}
 

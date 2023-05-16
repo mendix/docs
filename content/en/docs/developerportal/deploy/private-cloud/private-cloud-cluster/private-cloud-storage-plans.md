@@ -118,8 +118,17 @@ When you configure a new namespace, make sure that the database and blob file st
 The storage plan does not include any functionality for backing up or restoring files used by your app. It is your responsibility to ensure that appropriate provision is made for backing up and restoring these files using the tools provided by your storage and/or cloud provider.
 {{% /alert %}}
 
-{{% alert color="info" %}}
 You can only create up to one database and one blob file storage plan when running the `mxpc-cli` Configuration Tool. Run the configuration tool multiple time to create additional database and blob file storage plans.
+
+If the screen (terminal) cannot fit all elements, some UI elements might overflow and become hidden.
+We recommend opening the `mxpc-cli` Configuration Tool in fullscreen mode, or to at least increase the terminal window size to 180x60.
+
+{{% alert color="warning" %}}
+If you delete an environment, make sure that it's completely deleted - `kubectl -n {namespace} get storageinstance {environment-name}-file` and `kubectl get storageinstance {environment-name}-database` should return a _not found_ response.
+
+Otherwise, you will need to check the reason why the environment's database or blob file storage is not being deleted, and do a [manual cleanup](/developerportal/deploy/private-cloud-deploy/#delete-storage) if necessary.
+
+Until the cleanup is done, you should not create a new environment that uses the same name as the environment that's still being deleted.
 {{% /alert %}}
 
 ## 2 Database Plans{#database}
@@ -397,7 +406,7 @@ The easiest option is [ephemeral](#blob-ephemeral) file storage. The contents of
 
 For a cloud vendor-agnostic solution, [MinIO](#blob-minio) is easiest option to use - if the MinIO server license terms are acceptable.
 
-To use a solution hosted by your cloud vendor, choose [Amazon S3](#blob-s3), **Azure Blob Storage** or **Google Cloud Storage**.
+To use a solution hosted by your cloud vendor, choose [Amazon S3](#blob-s3), [Azure Blob Storage](#blob-azure) or [Google Cloud Storage](#blob-gcp-storage-bucket).
 
 **Ceph RADOS** allows to use a pre-created bucket from an S3-compatible vendor. This option also works with other S3-compatible storage options (not listed in this document)
 
@@ -442,7 +451,7 @@ The **MinIO** plan offers a good balance between automation, ease of use and sec
 * (Only if _Prevent Data Deletion_ is not enabled) Delete that environment's bucket and its contents.
 * Delete that environment's IAM user.
 * Delete that environment's policy.
-* Delete that environment's Kubernetes database credentials secret.
+* Delete that environment's Kubernetes blob file storage credentials secret.
 
 {{% alert color="info" %}}
 To use TLS, specify the MinIO URL with an `https` schema, for example `https://minio.local:9000`. If MinIO has a self-signed certificate, you'll also need to configure [custom TLS](#custom-tls) so that the self-signed certificate is accepted.
@@ -485,7 +494,7 @@ The **Ephemeral** plan will enable you to quickly set up your environment and de
 
 **Delete workflow** (what the Mendix Operator will do when an existing environment is deleted):
 
-* Delete that environment's Kubernetes database credentials secret.
+* Delete that environment's Kubernetes blob file storage credentials secret.
 
 ### 3.3 Amazon S3{#blob-s3}
 
@@ -609,8 +618,7 @@ This option allows to share an existing bucket between environments, and isolate
 
 * (Only if _Prevent Data Deletion_ is not enabled) Delete files from that environment's prefix (directory). Files from other apps (in other prefixes/directories) will not be affected.
 * Delete that environment's IAM user.
-* Delete that environment's policy.
-* Delete that environment's Kubernetes database credentials secret.
+* Delete that environment's Kubernetes blob file storage credentials secret.
 
 **Configuring this plan**
 
@@ -677,7 +685,7 @@ All apps (environments) will use the same S3 bucket and an IAM user account.
 
 **Delete workflow** (what the Mendix Operator will do when an existing environment is deleted):
 
-* Delete that environment's Kubernetes database credentials secret.
+* Delete that environment's Kubernetes blob file storage credentials secret.
 
 **Configuring this plan**
 
@@ -694,279 +702,377 @@ In the Amazon S3 plan configuration, enter the following details:
 Be sure to follow the naming guidelines for prefixes as described in the [AWS S3 documentation](https://docs.aws.amazon.com/AmazonS3/latest/userguide/object-keys.html).
 {{% /alert %}}
 
-**S3 (create bucket and account with inline policy)** will connect to an AWS account to create S3 buckets and associated IAM user accounts. Each app environment will receive a dedicated S3 bucket and an IAM user account with an inline policy which only has access to that specific S3 bucket. The Mendix Operator will use a **management IAM user account** to create and delete S3 buckets and IAM user accounts. You will need to provide all the information relating to your Amazon S3 storage such as plan name, region, access key, and secret key.
+#### 3.3.3 Create bucket and account with inline policy{#s3-create-bucket-account-inline-policy}
 
-To enable this mode, select the following options: **Create S3 Bucket per environment**, **Create account (IAM user) per environment**, **Create inline policy**.
+<text class="badge badge-pill badge-primary">Automated</text> <text class="badge badge-pill badge-primary">On-Demand</text>
 
-The **management IAM user account** needs to have the following IAM policy (replace `<account_id>` with your AWS account number):
+This option will create an S3 bucket and IAM account for every new environment.
 
-```json
-{
-    "Version": "2012-10-17",
-    "Statement": [
-        {
-            "Sid": "bucketPermissions",
-            "Effect": "Allow",
-            "Action": [
-                "s3:CreateBucket",
-                "s3:DeleteBucket"
-            ],
-            "Resource": "arn:aws:s3:::mendix-*"
-        },
-        {
-            "Sid": "iamPermissions",
-            "Effect": "Allow",
-            "Action": [
-                "iam:DeleteAccessKey",
-                "iam:PutUserPolicy",
-                "iam:DeleteUserPolicy",
-                "iam:DeleteUser",
-                "iam:CreateUser",
-                "iam:CreateAccessKey"
-            ],
-            "Resource": [
-                "arn:aws:iam::<account_id>:user/mendix-*"
-            ]
-        }
-    ]
-}
-```
-
-{{% alert color="info" %}}
-If the plan name already exists you will receive an error that it cannot be created. This is not a problem, you can continue to use the plan, and it will now have the new configuration.
+{{% alert color="warning" %}}
+We don't recommend using this option, as it's not possible to customize the bucket settings (encryption or default file access).
+In addition, this option needs IAM admin permissions to create inline policies - which might not be acceptable in regulated environments.
+This option is primarily here for historical reasons.
+Instead, we recommend using the [Create account with existing policy](#s3-create-account-existing-policy) option if you need automation.
 {{% /alert %}}
 
-{{% alert color="info" %}}
-To use this plan, [upgrade](/developerportal/deploy/private-cloud-upgrade-guide/) the Mendix Operator to version 1.8.0 or later.
-{{% /alert %}}
+**Prerequisites**
 
-**S3 (create bucket and account with existing policy)** will connect to an AWS account to create S3 buckets and associated IAM user accounts. Each app environment will receive a dedicated S3 bucket and an IAM user account. An existing policy, which you specify, will be attached to the account. The Mendix Operator will use a **management IAM user account** to create and delete S3 buckets and IAM user accounts. You will need to provide all the information relating to your Amazon S3 storage such as plan name, region, policy ARN, access key, and secret key.
-
-To enable this mode, select the following options: **Create S3 Bucket per environment**, **Create account (IAM user) per environment**.
-
-Create an IAM policy that will be attached to IAM user accounts and copy its Policy ARN (specify this value in the **Attach Policy ARN** field):
-
-```json
-{
-    "Version": "2012-10-17",
-    "Statement": [
-        {
-            "Sid": "AllowListingOfUserFolder",
-            "Action": [
-                "s3:ListBucket"
-            ],
-            "Effect": "Allow",
-            "Resource": [
-                "arn:aws:s3:::${aws:username}"
-            ],
-            "Condition": {
-                "StringLike": {
-                    "s3:prefix": [
-                        "${aws:username}/*",
-                        "${aws:username}"
-                    ]
-                }
+* An "admin" user account - with the following policy (replace `<account_id>` with your AWS account number):
+    ```json
+    {
+        "Version": "2012-10-17",
+        "Statement": [
+            {
+                "Sid": "bucketPermissions",
+                "Effect": "Allow",
+                "Action": [
+                    "s3:CreateBucket",
+                    "s3:DeleteBucket"
+                ],
+                "Resource": "arn:aws:s3:::mendix-*"
+            },
+            {
+                "Sid": "iamPermissions",
+                "Effect": "Allow",
+                "Action": [
+                    "iam:DeleteAccessKey",
+                    "iam:PutUserPolicy",
+                    "iam:DeleteUserPolicy",
+                    "iam:DeleteUser",
+                    "iam:CreateUser",
+                    "iam:CreateAccessKey"
+                ],
+                "Resource": [
+                    "arn:aws:iam::<account_id>:user/mendix-*"
+                ]
             }
-        },
-        {
-            "Sid": "AllowAllS3ActionsInUserFolder",
-            "Effect": "Allow",
-            "Resource": [
-                "arn:aws:s3:::${aws:username}/${aws:username}/*"
-            ],
-            "Action": [
-                "s3:AbortMultipartUpload",
-                "s3:DeleteObject",
-                "s3:GetObject",
-                "s3:ListMultipartUploadParts",
-                "s3:PutObject"
-            ]
-        }
-    ]
-}
-```
+        ]
+    }
+    ```
 
-The **management IAM user account** needs to have the following IAM policy (replace `<account_id>` with your AWS account number, and `<policy_arn>` with the Policy ARN):
+**Limitations**
 
-```json
-{
-    "Version": "2012-10-17",
-    "Statement": [
-        {
-            "Sid": "LimitedAttachmentPermissions",
-            "Effect": "Allow",
-            "Action": [
-                "iam:AttachUserPolicy",
-                "iam:DetachUserPolicy"
-            ],
-            "Resource": "*",
-            "Condition": {
-                "ArnEquals": {
-                    "iam:PolicyArn": [
-                        "<policy_arn>"
-                    ]
+* Access/Secret keys used by existing environments can only be rotated manually.
+* It's not possible to customize how an S3 bucket is created (for example, encryption or default file access).
+* It's not possible to customize how the inline IAM policy is created.
+
+**Environment Isolation**
+
+* Every environment has its own IAM user.
+* Every environment has its own S3 bucket, which can only be accessed by that environment's IAM user.
+
+**Create workflow** (what the Mendix Operator will do when a new environment is created):
+
+* Generate a new IAM username and S3 bucket name for the environment.
+* Create a new S3 bucket for the environment.
+* Create the new IAM user with an inline policy - allowing that user to access the environment's S3 bucket.
+* Create a Kubernetes secret to provide connection details to the new app environment - to automatically configure the new environment.
+
+**Delete workflow** (what the Mendix Operator will do when an existing environment is deleted):
+
+* (Only if _Prevent Data Deletion_ is not enabled) Delete the environment's bucket and all of its contents.
+* Delete that environment's IAM user and inline policy.
+* Delete that environment's Kubernetes blob file storage credentials secret.
+
+**Configuring this plan**
+
+In the Amazon S3 plan configuration, enter the following details:
+
+* **Create bucket per environment** - checked.
+* **Create account (IAM user) per environment** - checked.
+* **Bucket region** - the region where buckets will be created, for example `eu-west-1`.
+* **Create inline policy** - checked.
+* **Access Key** and **Secret Key** credentials for the "admin" user account.
+
+#### 3.3.4 Create bucket and account with existing policy{#s3-create-bucket-account-existing-policy}
+
+<text class="badge badge-pill badge-primary">Automated</text> <text class="badge badge-pill badge-primary">On-Demand</text>
+
+This option will create an S3 bucket and IAM account for every new environment.
+
+{{% alert color="warning" %}}
+We don't recommend using this option, as it's not possible to customize the bucket settings (encryption or default file access).
+This option is primarily here for historical reasons.
+Instead, we recommend using the [Create account with existing policy](#s3-create-account-existing-policy) option if you need automation.
+{{% /alert %}}
+
+**Prerequisites**
+
+* An _environment template_ policy (will be attached to every new environment's user) - allowing access to the environment's S3 bucket:
+
+    ```json
+    {
+        "Version": "2012-10-17",
+        "Statement": [
+            {
+                "Sid": "AllowListingOfUserFolder",
+                "Action": [
+                    "s3:ListBucket"
+                ],
+                "Effect": "Allow",
+                "Resource": [
+                    "arn:aws:s3:::${aws:username}"
+                ],
+                "Condition": {
+                    "StringLike": {
+                        "s3:prefix": [
+                            "${aws:username}/*",
+                            "${aws:username}"
+                        ]
+                    }
                 }
+            },
+            {
+                "Sid": "AllowAllS3ActionsInUserFolder",
+                "Effect": "Allow",
+                "Resource": [
+                    "arn:aws:s3:::${aws:username}/${aws:username}/*"
+                ],
+                "Action": [
+                    "s3:AbortMultipartUpload",
+                    "s3:DeleteObject",
+                    "s3:GetObject",
+                    "s3:ListMultipartUploadParts",
+                    "s3:PutObject"
+                ]
             }
-        },
-        {
-            "Sid": "iamPermissions",
-            "Effect": "Allow",
-            "Action": [
-                "iam:DeleteAccessKey",
-                "iam:DeleteUser",
-                "iam:CreateUser",
-                "iam:CreateAccessKey"
-            ],
-            "Resource": [
-                "arn:aws:iam::<account_id>:user/mendix-*"
-            ]
-        },
-        {
-            "Sid": "bucketPermissions",
-            "Effect": "Allow",
-            "Action": [
-                "s3:CreateBucket",
-                "s3:DeleteBucket"
-            ],
-            "Resource": "arn:aws:s3:::mendix-*"
-        }
-    ]
-}
-```
+        ]
+    }
+    ```
 
-{{% alert color="info" %}}
-If the plan name already exists you will receive an error that it cannot be created. This is not a problem, you can continue to use the plan, and it will now have the new configuration.
-{{% /alert %}}
+* An "admin" user account - with the following policy (replace `<account_id>` with your AWS account number, and `<policy_arn>` with the Policy ARN):
 
-{{% alert color="info" %}}
-To use this plan, [upgrade](/developerportal/deploy/private-cloud-upgrade-guide/) the Mendix Operator to version 1.8.0 or later.
-{{% /alert %}}
-
-**S3 (create account with inline policy)** will connect to an AWS account to IAM user accounts. Each app environment will receive a dedicated IAM user account with an inline policy. This inline policy only allows access to objects in the existing S3 bucket if the object name prefix matches the environment's account name (IAM user name). The Mendix Operator will use a **management IAM user account** to create and delete IAM user accounts. You will need to provide all the information relating to your Amazon S3 storage such as plan name, bucket name, region, access key, and secret key.
-
-To enable this mode, select the following options: **Create account (IAM user) per environment**, **Create Inline Policy**.
-
-The **management IAM user account** needs to have the following IAM policy (replace `<account_id>` with your AWS account number):
-
-```json
-{
-    "Version": "2012-10-17",
-    "Statement": [
-        {
-            "Sid": "iamPermissions",
-            "Effect": "Allow",
-            "Action": [
-                "iam:DeleteAccessKey",
-                "iam:PutUserPolicy",
-                "iam:DeleteUserPolicy",
-                "iam:DeleteUser",
-                "iam:CreateUser",
-                "iam:CreateAccessKey"
-            ],
-            "Resource": [
-                "arn:aws:iam::<account_id>:user/mendix-*"
-            ]
-        }
-    ]
-}
-```
-
-{{% alert color="info" %}}
-If the plan name already exists you will receive an error that it cannot be created. This is not a problem, you can continue to use the plan, and it will now have the new configuration.
-{{% /alert %}}
-
-{{% alert color="info" %}}
-To use this plan, [upgrade](/developerportal/deploy/private-cloud-upgrade-guide/) the Mendix Operator to version 1.8.0 or later.
-{{% /alert %}}
-
-**S3 (create account with existing policy)** will connect to an AWS account to IAM user accounts. Each app environment will receive a dedicated IAM user account. The specified existing policy will be attached to the account and should only allow access to objects in the existing S3 bucket if the object name prefix matches the environment's account name (IAM user name). The Mendix Operator will use a **management IAM user account** to create and delete IAM user accounts. You will need to provide all the information relating to your Amazon S3 storage such as plan name, bucket name, region, policy ARN, access key, and secret key.
-
-To enable this mode, select the following options: **Create account (IAM user) per environment**.
-
-Create an IAM policy that will be attached to app environment IAM user accounts (replacing `<bucket_name>` with the name of the existing bucket) and copy its Policy ARN (specify this value in the **Attach Policy ARN** field):
-
-```json
-{
-    "Version": "2012-10-17",
-    "Statement": [
-        {
-            "Sid": "AllowListingOfUserFolder",
-            "Action": [
-                "s3:ListBucket"
-            ],
-            "Effect": "Allow",
-            "Resource": [
-                "arn:aws:s3:::<bucket_name>"
-            ],
-            "Condition": {
-                "StringLike": {
-                    "s3:prefix": [
-                        "${aws:username}/*",
-                        "${aws:username}"
-                    ]
+    ```json
+    {
+        "Version": "2012-10-17",
+        "Statement": [
+            {
+                "Sid": "LimitedAttachmentPermissions",
+                "Effect": "Allow",
+                "Action": [
+                    "iam:AttachUserPolicy",
+                    "iam:DetachUserPolicy"
+                ],
+                "Resource": "*",
+                "Condition": {
+                    "ArnEquals": {
+                        "iam:PolicyArn": [
+                            "<policy_arn>"
+                        ]
+                    }
                 }
+            },
+            {
+                "Sid": "iamPermissions",
+                "Effect": "Allow",
+                "Action": [
+                    "iam:DeleteAccessKey",
+                    "iam:DeleteUser",
+                    "iam:CreateUser",
+                    "iam:CreateAccessKey"
+                ],
+                "Resource": [
+                    "arn:aws:iam::<account_id>:user/mendix-*"
+                ]
+            },
+            {
+                "Sid": "bucketPermissions",
+                "Effect": "Allow",
+                "Action": [
+                    "s3:CreateBucket",
+                    "s3:DeleteBucket"
+                ],
+                "Resource": "arn:aws:s3:::mendix-*"
             }
-        },
-        {
-            "Sid": "AllowAllS3ActionsInUserFolder",
-            "Effect": "Allow",
-            "Resource": [
-                "arn:aws:s3:::<bucket_name>/${aws:username}/*"
-            ],
-            "Action": [
-                "s3:AbortMultipartUpload",
-                "s3:DeleteObject",
-                "s3:GetObject",
-                "s3:ListMultipartUploadParts",
-                "s3:PutObject"
-            ]
-        }
-    ]
-}
-```
+        ]
+    }
+    ```
 
-The **management IAM user account** needs to have the following IAM policy (replace `<account_id>` with your AWS account number, and `<policy_arn>` with the Policy ARN):
+**Limitations**
 
-```json
-{
-    "Version": "2012-10-17",
-    "Statement": [
-        {
-            "Sid": "LimitedAttachmentPermissions",
-            "Effect": "Allow",
-            "Action": [
-                "iam:AttachUserPolicy",
-                "iam:DetachUserPolicy"
-            ],
-            "Resource": "*",
-            "Condition": {
-                "ArnEquals": {
-                    "iam:PolicyArn": [
-                        "<policy_arn>"
-                    ]
-                }
-            }
-        },
-        {
-            "Sid": "iamPermissions",
-            "Effect": "Allow",
-            "Action": [
-                "iam:DeleteAccessKey",
-                "iam:DeleteUser",
-                "iam:CreateUser",
-                "iam:CreateAccessKey"
-            ],
-            "Resource": [
-                "arn:aws:iam::<account_id>:user/mendix-*"
-            ]
-        }
-    ]
-}
-```
+* Access/Secret keys used by existing environments can only be rotated manually.
+* It's not possible to customize how an S3 bucket is created (for example, encryption or default file access).
 
-{{% alert color="info" %}}
-If the plan name already exists you will receive an error that it cannot be created. This is not a problem, you can continue to use the plan, and it will now have the new configuration.
+**Environment Isolation**
+
+* Every environment has its own IAM user.
+* Every environment has its own S3 bucket, which can only be accessed by that environment's IAM user.
+  * The _environment template_ policy uses the IAM username as a template - so that a user can only access an S3 bucket that matches the IAM username.
+* The Mendix Operator doesn't need permissions to create IAM policies.
+
+**Create workflow** (what the Mendix Operator will do when a new environment is created):
+
+* Generate a new IAM username and S3 bucket name for the environment.
+* Create a new S3 bucket for the environment.
+* Create the new IAM user and attach the _environment template_ policy to this user.
+* Create a Kubernetes secret to provide connection details to the new app environment - to automatically configure the new environment.
+
+**Delete workflow** (what the Mendix Operator will do when an existing environment is deleted):
+
+* (Only if _Prevent Data Deletion_ is not enabled) Delete the environment's bucket and all of its contents.
+* Delete that environment's IAM user.
+* Delete that environment's Kubernetes blob file storage credentials secret.
+
+**Configuring this plan**
+
+In the Amazon S3 plan configuration, enter the following details:
+
+* **Create bucket per environment** - checked.
+* **Create account (IAM user) per environment** - checked.
+* **Bucket region** - the region where buckets will be created, for example `eu-west-1`.
+* **Create inline policy** - unchecked.
+* **Attach policy ARN** - the _environment template_ policy ARN; this is the policy that will be attached to every environment's user.
+* **Access Key** and **Secret Key** credentials for the "admin" user account.
+
+#### 3.3.5 Create account with inline policy{#s3-create-account-inline-policy}
+
+<text class="badge badge-pill badge-primary">Automated</text> <text class="badge badge-pill badge-primary">On-Demand</text>
+
+This option allows to share an existing bucket between environments, and isolates environments from accessing each other's data.
+
+{{% alert color="warning" %}}
+We don't recommend using this option, as it needs IAM admin permissions to create inline policies - which might not be acceptable in regulated environments.
+This option is primarily here for historical reasons.
+Instead, we recommend using the [Create account with existing policy](#s3-create-account-existing-policy) option if you need automation.
 {{% /alert %}}
+
+**Prerequisites**
+
+* An S3 bucket.
+* An "admin" user account - with the following policy (replace `<account_id>` with your AWS account number):
+
+    ```json
+    {
+        "Version": "2012-10-17",
+        "Statement": [
+            {
+                "Sid": "iamPermissions",
+                "Effect": "Allow",
+                "Action": [
+                    "iam:DeleteAccessKey",
+                    "iam:PutUserPolicy",
+                    "iam:DeleteUserPolicy",
+                    "iam:DeleteUser",
+                    "iam:CreateUser",
+                    "iam:CreateAccessKey"
+                ],
+                "Resource": [
+                    "arn:aws:iam::<account_id>:user/mendix-*"
+                ]
+            }
+        ]
+    }
+    ```
+
+**Limitations**
+
+* Access/Secret keys used by existing environments can only be rotated manually.
+* It's not possible to customize how the inline IAM policy is created.
+
+**Environment Isolation**
+
+* Every environment has its own IAM user.
+* The S3 bucket is shared. 
+  * The Mendix Operator will generate an IAM policy for every user that only allows access to files in a specific prefix (directory) in the bucket.
+* The Mendix Operator doesn't need permissions to create new buckets, only to create IAM users and inline policies.
+
+**Create workflow** (what the Mendix Operator will do when a new environment is created):
+
+* Generate a new IAM username.
+* Create the new IAM user with an inline policy - allowing that user to access the environment's S3 bucket.
+* Create a Kubernetes secret to provide connection details to the new app environment - to automatically configure the new environment.
+
+**Delete workflow** (what the Mendix Operator will do when an existing environment is deleted):
+
+* (Only if _Prevent Data Deletion_ is not enabled) Delete files from that environment's prefix (directory). Files from other apps (in other prefixes/directories) will not be affected.
+* Delete that environment's IAM user.
+* Delete that environment's Kubernetes blob file storage credentials secret.
+
+**Configuring this plan**
+
+In the Amazon S3 plan configuration, enter the following details:
+
+* **Create bucket per environment** - unchecked.
+* **Create account (IAM user) per environment** - checked.
+* **Bucket region** - the existing shared bucket's region, for example `eu-west-1`.
+* **Bucket name** - the existing shared bucket's name, for example `mendix-apps-production-example`.
+* **Create inline policy** - checked.
+* **Access Key** and **Secret Key** credentials for the "admin" user account.
+
+#### 3.3.6 Create account with inline policy{#s3-create-account-inline-policy}
+
+<text class="badge badge-pill badge-primary">Automated</text> <text class="badge badge-pill badge-primary">On-Demand</text>
+
+This option allows to share an existing bucket between environments, and isolates environments from accessing each other's data.
+
+{{% alert color="warning" %}}
+We don't recommend using this option, as it needs IAM admin permissions to create inline policies - which might not be acceptable in regulated environments.
+This option is primarily here for historical reasons.
+Instead, we recommend using the [Create account with existing policy](#s3-create-account-existing-policy) option if you need automation.
+{{% /alert %}}
+
+**Prerequisites**
+
+* An S3 bucket.
+* An "admin" user account - with the following policy (replace `<account_id>` with your AWS account number):
+
+    ```json
+    {
+        "Version": "2012-10-17",
+        "Statement": [
+            {
+                "Sid": "iamPermissions",
+                "Effect": "Allow",
+                "Action": [
+                    "iam:DeleteAccessKey",
+                    "iam:PutUserPolicy",
+                    "iam:DeleteUserPolicy",
+                    "iam:DeleteUser",
+                    "iam:CreateUser",
+                    "iam:CreateAccessKey"
+                ],
+                "Resource": [
+                    "arn:aws:iam::<account_id>:user/mendix-*"
+                ]
+            }
+        ]
+    }
+    ```
+
+**Limitations**
+
+* Access/Secret keys used by existing environments can only be rotated manually.
+* It's not possible to customize how the inline IAM policy is created.
+
+**Environment Isolation**
+
+* Every environment has its own IAM user.
+* The S3 bucket is shared. 
+  * The Mendix Operator will generate an IAM policy for every user that only allows access to files in a specific prefix (directory) in the bucket.
+* The Mendix Operator doesn't need permissions to create new buckets, only to create IAM users and inline policies.
+
+**Create workflow** (what the Mendix Operator will do when a new environment is created):
+
+* Generate a new IAM username.
+* Create the new IAM user with an inline policy - allowing that user to access the environment's S3 bucket.
+* Create a Kubernetes secret to provide connection details to the new app environment - to automatically configure the new environment.
+
+**Delete workflow** (what the Mendix Operator will do when an existing environment is deleted):
+
+* (Only if _Prevent Data Deletion_ is not enabled) Delete files from that environment's prefix (directory). Files from other apps (in other prefixes/directories) will not be affected.
+* Delete that environment's IAM user.
+* Delete that environment's Kubernetes blob file storage credentials secret.
+
+**Configuring this plan**
+
+In the Amazon S3 plan configuration, enter the following details:
+
+* **Create bucket per environment** - unchecked.
+* **Create account (IAM user) per environment** - checked.
+* **Bucket region** - the existing shared bucket's region, for example `eu-west-1`.
+* **Bucket name** - the existing shared bucket's name, for example `mendix-apps-production-example`.
+* **Create inline policy** - checked.
+* **Access Key** and **Secret Key** credentials for the "admin" user account.
 
 **Azure Blob storage Container (existing)** will connect to an existing Azure Blob storage Container with the provided storage account name and key. All apps will use the same Container bucket and account credentials. You will need to provide all the information about your Azure Blob storage such as plan name, account name, account key, and container name.
 

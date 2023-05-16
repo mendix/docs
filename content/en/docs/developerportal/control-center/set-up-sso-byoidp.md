@@ -11,7 +11,7 @@ tags: ["BYOIDP", "IdP", "Bring Your Own IdP", "Microsoft Azure", "SSO", "Single 
 
 The Mendix Platform contains an Identity Provider (IdP) that allows users to sign in to:
 
-* Mendix platform services
+* Mendix Platform services
 * Applications in the Mendix Cloud that have been built using [Mendix SSO](/appstore/modules/mendix-sso/)
 
 You can use this to provide your end-users with an end-to-end SSO experience by setting up an identity federation between the Mendix Platform and your corporate IdP. 
@@ -38,7 +38,7 @@ When a user who has BYOIDP SSO enabled attempts to sign in to the Mendix Platfor
 
 BYOIDP SSO has the following features:
 
-* Mendix platform services, Studio Pro, and Mendix apps using Mendix SSO can delegate authentication to your IdP.
+* Mendix Platform services, Studio Pro, and Mendix apps using Mendix SSO can delegate authentication to your IdP.
 * Authentication will be delegated for any user that has an email address where the email-domain is associated with your company. This includes service accounts (for example non-personal accounts used for consuming APIs) that may have been created on the Mendix Platform. 
 * When you add a domain to your company account, it is automatically added to the active IdP configuration. 
 * External users (with domains that are not part of your company) are unaffected. They still have access based on the way they normally sign in to Mendix.
@@ -54,7 +54,7 @@ BYOIDP SSO integrates with the Mendix Platform using the following techniques:
 
     This assumes that the IdP returns an email address to Mendix during SSO which the user previously used to sign-up and login to Mendix. If the email address that is returned to Mendix is not recognized, then the user will be offered the sign-up option to enable them to create a new account.
 
-* BYOIDP SSO makes an authentication request to your IdP which means that only the 'openid' and 'profile' scope values are requested, as defined by OIDC. The request does not explicitly ask for authorisation for specific platform roles such as 'developer', 'Mendix Administrator', 'technical contact'. You can set up your IdP, however, to apply coarse-grained access rules based on the client_id for the Mendix platform to deny access to the Mendix platform for certain groups of employees.
+* BYOIDP SSO makes an authentication request to your IdP which means that only the 'openid' and 'profile' scope values are requested, as defined by OIDC. The request does not explicitly ask for authorisation for specific platform roles such as 'developer', 'Mendix Administrator', 'technical contact'. You can set up your IdP, however, to apply coarse-grained access rules based on the client_id for the Mendix Platform to deny access to the Mendix Platform for certain groups of employees.
 * Mendix provides support for two client authentication methods: client_secret_post (client credentials in the payload) or client_secret_basic (basic authentication credentials in http header). If the IdP supports both methods, client_secret_post is used.
 * Mendix includes the `login_hint` parameter in requests to your IdP This allows the IdP to pre-populate the login screen with the user's email address, which gives a better user experience. Your IdP may choose to ignore the hint. After receiving a positive response, Mendix does not do any validation if the logged-in user matches the login_hint.
 * Whether or not end-users signing in to the Mendix Platform have to use 2FA does not change the [Two-Factor Authentication](/developerportal/deploy/two-factor-authentication/) which protects sensitive activities on Mendix Cloud nodes. This remains in place and works independently of BYOIDP SSO.
@@ -68,7 +68,7 @@ BYOIDP SSO has the following limitations.
 * BYOIDP SSO only supports OIDC and does not support other protocols such as SAML.
 * Your Mendix app must be built using Mendix version 7.23 or above.
 * Once BYOIDP is activated, direct access to [Team Server](/developerportal/collaborate/team-server/) is no longer possible using a username and password. To access code repositories from a pipeline, you need to use a Personal Access Token (PAT).
-* Mendix Platform APIs which require a PAT can use one which is created by a platform user. You cannot directly set up service accounts within Mendix once BYOIDP SSO is activated. You can set up a service-like account to consume Mendix platform APIs in one of the following ways:
+* Mendix Platform APIs which require a PAT can use one which is created by a platform user. You cannot directly set up service accounts within Mendix once BYOIDP SSO is activated. You can set up a service-like account to consume Mendix Platform APIs in one of the following ways:
 
     * Use a personal account as if it were a service account
     * Create a service account in the company IdP
@@ -225,7 +225,7 @@ Access to Team Server through other mechanisms, such as via Studio Pro or using 
 
 Once you have set up BYOIDP SSO, you may want to change the 'client secret' that is used by the Mendix Platform to communicate securely with the SSO.
 
-If the client secret is still active, you can do one of the following:
+If the client secret is still active or you (an administrator) still have an active session on the Mendix Platform, you can do one of the following:
 
 * Clone the existing active IdP configuration, update the secret in there and then activate the clone. This avoids updating all the users, etc. This is the preferred option.
 * Disable the IdP configuration, update the secret and then enable it again.
@@ -248,11 +248,11 @@ If you have issues using BYOIDP, the following suggestions give an initial guide
 
 ### 9.1 Wrong Client Credentials
 
-Without proper exchange of `client_id` and `client_secret` between the IdP and Mendix platform, Mendix cannot authenticate at the /token endpoint and delegated login will fail. This can happen when the wrong client credentials are supplied.
+Without proper exchange of `client_id` and `client_secret` between the IdP and Mendix Platform, Mendix cannot authenticate at the /token endpoint and delegated login will fail. This can happen when the wrong client credentials are supplied.
 
 ### 9.2 Wrong Authentication Method
 
-If the wrong authentication method is configured for Mendix platform as a client to your IdP login will fail.
+If the wrong authentication method is configured for the Mendix Platform as a client to your IdP login will fail.
 
 Mendix supports two client authentication methods: `client_secret_post` (client credentials in the payload) or `client_secret_basic` (basic authentication; credentials in http authorization header). If the IdP indicates support for both methods at the well-known endpoint, Mendix will use `client_secret_post`. If the client configuration at your IdP for the Mendix Platform sets a different client authentication method, the IdP may reject Mendix to authenticate itself as a client to the /token endpoint and delegated login will fail.
 

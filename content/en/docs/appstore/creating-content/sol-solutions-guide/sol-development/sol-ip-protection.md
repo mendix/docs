@@ -115,4 +115,13 @@ These are the best practices for usage metering:
 -   Have a legal agreement for your solution or app service in place that includes a clause requiring the customer to ensure that any custom usage metering functions as intended
     -   This means that, even in the case where for some reason you cannot protect the metering implementation at the technical level, you are still covered at the legal level
 
+### 5.5 Entitlement management
+
+Applying IP protection will prevent that people consuming your solution can inspect details of the model and copy implementation thereof. On top of that, it is recommended to consider implementing *entitlement management*. Every implementation can have a cryptographically signed license key which will allow the application to validate what entitlements are available for this implementation. This will prevent misuse and can enable features like:
+* Free evaluation of the product on localhost
+* Freemium models using Free Apps on *.mxapps.io
+* Multiple editions of your product by enabling specific functionality or rate limiting specific actions
+* Expiration of license key in time
+* Validity of license key for specific runtime URLs
+
 <!-- TODO: Provide examples -->

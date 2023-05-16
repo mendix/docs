@@ -170,14 +170,14 @@ This property not available if you enable "Custom content" for the column
 
 {{< figure src="/attachments/appstore/modules/data-widgets/data-grid-2/tooltip-prop.png" alt="Example of wrap text" >}}
 
-### 4.9 Association filter
+### 4.9 Association Filter {#association-filter}
 
 * **Reference** — this property defines the association that will be used for filtering. When set, it enables filtering over association with the Drop-down filter. Drop-down filter will prioritize this property over `Attribute` property.
 * **Data source** — defines data source for filter options. The data source should return list of all possible entities that could be associated with a parent.
 * **Option caption** — the expression that will be used as caption for the option.
 
 {{% alert color="info" %}}
-This column configuration is intended to be used in conjunction with [Drop-down Filter](#72-drop-down-filter). Other filter types don't support association filtering.
+This column configuration is intended to be used in conjunction with [Drop-down Filter](#drop-down-filter). Other filter types don't support association filtering.
 {{% /alert %}}
 
 ## 5 Rows
@@ -278,7 +278,7 @@ In this section you can select a **Saved attribute** in order to save the curren
 
 In this section you can select an action to be executed **On change** by the filter value. This means every time the user types or selects a value it will be executed.
 
-### 7.2 Drop-Down Filter
+### 7.2 Drop-Down Filter {#drop-down-filter}
 
 {{< figure src="/attachments/appstore/modules/data-widgets/data-grid-2/dropdown-filter.png" alt="Example of default drop-down filter" >}}
 
@@ -286,7 +286,7 @@ In this section you can select an action to be executed **On change** by the fil
 
 {{< figure src="/attachments/appstore/modules/data-widgets/data-grid-2/dropdown-filter-settings.png" alt="Example of settings for drop-down filter" >}}
 
-When Drop-down filter is used in conjunction with [Association filter](#49-association-filter) data grid configuration, only **Automatic options** are supported. Any custom options will be ignored. Please check [Association filter](#49-association-filter) section to learn how to enable association filtering.
+When a drop-down filter is used in conjunction with an Association Filter data grid configuration, only **Automatic options** are supported. Any custom options will be ignored. To enable association filtering, see the [Association Filter](#association-filter) section.
 
 When adding a new option, the following properties are required:
 
@@ -425,7 +425,7 @@ If a filter is being used and its type does not match with any selected attribut
 {{% /alert %}}
 
 {{% alert color="warn" %}}
-There cannot be more than one filter of the same type in the data grid header. For example, if data grid header already has a `Number Filter` adding another `Number Filter` will cause incorrect data filtering.
+There cannot be more than one filter of the same type in the data grid header. For example, if a data grid header already has a `Number Filter`, adding another `Number Filter` will cause incorrect data filtering.
 {{% /alert %}}
 
 ## 8 Configuration

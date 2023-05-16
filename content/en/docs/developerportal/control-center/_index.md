@@ -323,7 +323,7 @@ The list has the following columns:
 * **Content Last Updated** – This shows the date when a component was last updated. The most recently updated component is shown on top.
 * **Studio Visibility** – You can toggle the button to configure whether the component is visible in Studio's **Toolbox** to your company's users. 
 
-## 15 Portfolios
+## 15 Portfolios {#portfolios}
 
 The **Portfolios** page offers governance features for [portfolio management](/developerportal/portfolio-management/) in your company. You can have an overview of all portfolios in your company, manage portfolio access, delete portfolios, reject or approve requests for changes of portfolio privacy settings. 
 

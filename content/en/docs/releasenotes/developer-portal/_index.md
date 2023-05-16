@@ -17,6 +17,15 @@ To see the current status of the Mendix Developer Portal and Control Center, see
 
 ## 2023
 
+### May 17th, 2023
+
+#### New Features
+
+* We have upgraded our [Portfolio Management](/developerportal/portfolio-management) tool with new features:
+  * You can now have multiple portfolios at the same time!
+  * You can now create portfolios with different levels of visibility to people in your company: private or restricted.
+* We have added the [Portfolios](#developerportal/control-center/#portfolios) page to the Control Center which provides Mendix Admins with governance features for portfolio management in your company.
+
 ### May 4th, 2023
 
 #### New Features 

@@ -84,7 +84,7 @@ This option is only visible if the Function is Reduce. The type selected here wi
 
 3.3 Aggregate with
 
-This option is only visible for if the Function is Average, Minimum, Maximum or Sum. For those function you can here define if you want to aggregate with an attribute or an expression. For All, Any and Reduce this option is hidden because they only support expressions.
+This option is only visible if the Function is Average, Minimum, Maximum or Sum. For those functions, you can define if you want to aggregate using an attribute or an expression.
 
 {{% alert color="info" %}}
 When using the `Count` function, it is not necessary to select an attribute or enter an expression, as it simply counts the number of objects in the list.

@@ -42,7 +42,6 @@ BYOIDP SSO has the following features:
 * Authentication will be delegated for any user that has an email address where the email-domain is associated with your company. This includes service accounts (for example non-personal accounts used for consuming APIs) that may have been created on the Mendix Platform. 
 * When you add a domain to your company account, it is automatically added to the active IdP configuration. 
 * External users (with domains that are not part of your company) are unaffected. They still have access based on the way they normally sign in to Mendix.
-* Routing of the login process to your IdP is based on the user's email domain (as entered in the Mendix login screen). If you have invited users from other organisations to your projects in Mendix (or contractors), enabling the BYOIDP will not affect the way those users are authenticated since they're associated with a different email domain.
 * When BYOIDP is used, a session at Mendix will be valid for 1 hour. After the session is expired, Mendix will request a new ID_token from your IdP. If the user still has a session at your IdP, the token will be issued without any user input and the platform user continues to have access to the Mendix Platform. The effect of this mechanism is that users have access to the Mendix Platform as long as the session at your IdP is valid.
 
 #### 1.2.3 Technical Integration

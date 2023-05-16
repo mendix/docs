@@ -102,7 +102,7 @@ To send events to an event bus in your AWS environment, implement the [PutEvents
     For a list of available AWS regions, see [AWS_Region](#aws-region).
 
 9. Click **OK**.
-10. Repeat steps 3-9 for the **Credentials_GenerateFromConstants** microflow.
+10. Configure the **Credentials_GenerateFromConstants** microflow.
 11. Open a page that contains a data view to show all the parameters of the `PutEventsResponse` object and its associated `ResponseEntry` objects, which is the response of the **PutEvents** activity.
 12. Configure a method to trigger the *ACT_ PutEvents* microflow. 
     For example, you can associate the activity with a custom button on a page in your app. For an example of how this can be implemented, see [Creating a Custom Save Button with a Microflow](/refguide/creating-a-custom-save-button/).
@@ -143,7 +143,7 @@ To configure your Mendix app to receive events, perform the following steps:
     For a list of available AWS regions, see [AWS_Region](#aws-region).
 
 10. Click **OK**.
-11. Repeat steps 3-10 for the **Credentials_GenerateFromConstants** microflow. 
+11. Configure the **Credentials_GenerateFromConstants** microflow. 
 12. Configure a method to trigger the *ASU_System* microflow. As a best practice, consider adding the microflow to the **Runtime settings** of your app and add this as the *After startup** microflow. For an example of how a different trigger method can be implemented, see [Creating a Custom Save Button with a Microflow](/refguide/creating-a-custom-save-button/).
 
     {{< figure src="static/attachments/appstore/connectors/aws-eventbridge/eventbridge_register_configure_asu.png" >}}

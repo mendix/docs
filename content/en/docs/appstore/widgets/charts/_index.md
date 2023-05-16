@@ -364,7 +364,7 @@ This object will be merged with default settings and passed to the underlying [P
 ## 7 Legacy Chart Widget Documentation {#legacy-widget-docs}
 
 {{% alert color="warning" %}}
-This widget is experiencing rendering issues in Studio Pro's Design mode. The behavior is under investigation.
+This widget is experiencing rendering issues in Studio Pro's **Design mode**. The behavior is under investigation.
 {{% /alert %}}
 
 ### 7.1 Introduction

@@ -11,6 +11,16 @@ These release notes cover changes made to the [Mendix Data Hub Catalog](/data-hu
 
 ## 2023
 
+### May 11th, 2023
+
+#### Improvements
+
+* We made the authentication details on the [data source details](/data-hub/data-hub-catalog/search/#service-details) page more user friendly.
+
+#### Fixes
+
+* We fixed an issue that impacted the deployment of an OData service.
+
 ### April 13th, 2023
 
 #### Fixes

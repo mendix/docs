@@ -36,7 +36,7 @@ See below for details on these actions.
 
 An example of list operation properties is represented in the image below:
 
-{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/list-activities/list-operation/list-operation-properties.png" alt="list operation properties" >}}
+{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/list-activities/list-operation/list-operation-properties.png" alt="list operation properties" width="650px" >}}
 
 There are two sets of properties for this activity, those in the dialog box on the left, and those in the properties pane on the right.
 

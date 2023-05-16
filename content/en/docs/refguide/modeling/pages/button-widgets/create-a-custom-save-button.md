@@ -16,7 +16,7 @@ This document explains how you can create a custom **Save** button on a detail p
 
 Before you continue, make sure you have completed the following:
 
-1. Create a **Customer** entity with the attribute **Name** in your domain model (for more information, see [Creating a basic data layer](/refguide/create-a-basic-data-layer/)).
+1. Create a **Customer** entity with the attribute **Name** in your domain model (for more information, see [Configuring a Domain Model](/refguide/configuring-a-domain-model/)).
 
     {{< figure src="/attachments/refguide/modeling/pages/button-widgets/create-a-custom-save-button/entity-customer.png" width="200px" >}}
 
@@ -38,13 +38,9 @@ The detail page you just created has a default **Save** button. To recreate the 
     {{< figure src="/attachments/refguide/modeling/pages/button-widgets/create-a-custom-save-button/customer-save.png" width="400px" >}}
 
 7. After the button is created, open its **Properties** pane.
-8. Change the **Caption** property to *Save*:
+8. In the **General** section, set the **Caption** as *Save*, and choose a floppy disk as the **Icon**:
 
-    {{< figure src="/attachments/refguide/modeling/pages/button-widgets/create-a-custom-save-button/button-properties.png" >}}
-
-9. Set a floppy disk as the **Icon**:
-
-    {{< figure src="/attachments/refguide/modeling/pages/button-widgets/create-a-custom-save-button/icon.png" >}}
+    {{< figure src="/attachments/refguide/modeling/pages/button-widgets/create-a-custom-save-button/button-properties.png" width="300px" >}}
 
 You have created a button that calls a microflow.
 
@@ -67,7 +63,7 @@ The button you just created calls a microflow that does not do anything yet. To 
 7. Open the **Toolbox**, and find the **Close page** activity there.
 8. Drag the **Close page** activity into the flow after the **Commit object(s)** activity:
 
-    {{< figure src="/attachments/refguide/modeling/pages/button-widgets/create-a-custom-save-button/close-page-activity.png" width="400px ">}}
+    {{< figure src="/attachments/refguide/modeling/pages/button-widgets/create-a-custom-save-button/close-page-activity.png" width="400px" >}}
 
 You have recreated the default **Save** button logic.
 

@@ -29,6 +29,7 @@ The SAP Horizon Native UI Resources module requires the following modules:
 
 * [Atlas Core](https://marketplace.mendix.com/link/component/117187)
 * [Atlas Native Content](https://marketplace.mendix.com/link/component/117175)
+* [Native Mobile Resources](https://marketplace.mendix.com/link/component/109513)
 
 ## 3 Installation
 

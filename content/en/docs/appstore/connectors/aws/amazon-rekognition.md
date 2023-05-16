@@ -11,7 +11,7 @@ aliases:
 
 ## 1 Introduction
 
-The [Amazon Rekognition connector](https://marketplace.mendix.com/link/component/204717) provides a way for you to enrich your Mendix app with AI image analysis capabilities by implementing [Amazon Rekognition](https://aws.amazon.com/rekognition/).
+The [Amazon Rekognition](https://marketplace.mendix.com/link/component/204717) connector provides a way for you to enrich your Mendix app with AI image analysis capabilities by implementing [Amazon Rekognition](https://aws.amazon.com/rekognition/).
 
 ### 1.1 Typical Use Cases
 
@@ -203,6 +203,7 @@ The input and output for this service are shown in the table below:
 
 | Input | Output |
 | --- | --- |
+
 | `MinConfidence` (Integer/Long, value should be between 0 and 100); `MaxResults` (Integer/Long, minimum value of 0); `ProjectARN` (String); `Image` (Image) | Custom label |
 
 This activity returns a list of `DetectCustomLabels` objects and associated objects as shown in the table below:

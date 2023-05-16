@@ -4,7 +4,7 @@ url: /developerportal/portfolio-management/
 weight: 25
 description: "Describes the Portfolio Management app in Control Center."
 tags: ["Portfolio Management"]
-#If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
+#The anchor #portfolios-settings below is mapped, so it should not be removed or changed. If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
 ## 1 Introduction

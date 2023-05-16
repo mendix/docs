@@ -1074,31 +1074,124 @@ In the Amazon S3 plan configuration, enter the following details:
 * **Create inline policy** - checked.
 * **Access Key** and **Secret Key** credentials for the "admin" user account.
 
-**Azure Blob storage Container (existing)** will connect to an existing Azure Blob storage Container with the provided storage account name and key. All apps will use the same Container bucket and account credentials. You will need to provide all the information about your Azure Blob storage such as plan name, account name, account key, and container name.
+### 3.4 Azure Blob storage{#blob-azure}
 
-{{% alert color="info" %}}
-Configuration parameters will not be validated and will be provided to the Mendix app as-is. If the arguments are not valid or there's an issue with permissions, the Mendix Runtime will fail to start the and deployment will appear to hang with **Replicas running** and **Runtime** showing a spinner.
-{{% /alert %}}
+<text class="badge badge-pill badge-primary">Basic</text> <text class="badge badge-pill badge-primary">On-Demand</text> <text class="badge badge-pill badge-primary">Dedicated</text>
 
-{{% alert color="info" %}}
+This option allows to attach an existing Azure Blob Storage container and credentials (account name and secret key) to one or more environments.
+All apps (environments) will use the same Azure Blob Storage container and credentials.
 
-If you select *Yes* to the *Can this storage be used by multiple environments?* question, all environments using that Storage Plan will be using the same account name and account keys keys and will have identical permissions.
-All apps using will write into the root directory of same Azure Blob storage Container.
+**Prerequisites**
 
-To avoid compromising security, answer *No* to the *Can this storage be used by multiple environments?* question. This way, only one app will be able to use this Storage Plan, and attaching another app to the same storage plan will not be possible.
+* An Azure Blob storage container and credentials to access it.
 
-{{% /alert %}}
+**Limitations**
 
-{{% alert color="info" %}}
-If the plan name already exists you will receive an error that it cannot be created. This is not a problem, you can continue to use the plan, and it will now have the new configuration.
-{{% /alert %}}
+* Access/Secret keys used by existing environments can only be rotated manually.
+* No isolation between environments using this blob storage plan (if the plan **Type** is `On-Demand`).
+* Configuration parameters will not be validated and will be provided to the Mendix app as-is. If the arguments are not valid or there is an issue with permissions, the Mendix Runtime will fail to start the and deployment will appear to hang with **Replicas running** and **Runtime** showing a spinner.
 
-{{% alert color="info" %}}
-To use this plan, [upgrade](/developerportal/deploy/private-cloud-upgrade-guide/) the Mendix Operator to version 1.1.0 or later.
-{{% /alert %}}
+**Environment Isolation**
 
-**Google Cloud Storage bucket** will connect to an existing Google cloud bucket. You need to create the bucket, get the credentials from the service account, and fill in all the details into the StoragePlan. You will need to provide all the information about your Google cloud storage such as plan name, endpoint, access key, and secret key.
+* The Azure Blob storage container and credentials are shared between all environments using this plan.
+* An environment can access data from other environments using this Storage Plan.
+* All environments will store their data in the root directory of the blob storage container.
+* By using the `Dedicated` **Type**, this plan switches into **Dedicated** mode - so that only one environment can use it.
 
-{{% alert color="info" %}}
-Please note that the bucket for the Google cloud needs to be created manually. Mx4PC will not create the Google cloud bucket. The format of the endpoint should be *https://storage.googleapis.com/<bucket-name>*. Keep in mind that the all the apps will be created in a separate folder in the bucket.
-{{% /alert %}}
+**Create workflow** (what the Mendix Operator will do when a new environment is created):
+
+* Create a Kubernetes secret to provide connection details to the new app environment - to automatically configure the new environment.
+
+**Delete workflow** (what the Mendix Operator will do when an existing environment is deleted):
+
+* Delete that environment's Kubernetes blob file storage credentials secret.
+
+**Configuring this plan**
+
+In the Azure Blob plan configuration, enter the following details:
+
+* **Account Name** and **Account Key** credentials for the blob storage container.
+* **Container name** - name of the blob storage container..
+* **Type** - specifies is the container can be shared between environments (create an <text class="badge badge-pill badge-primary">On-Demand</text> storage plan); or that the container can only be used by one environment (create a <text class="badge badge-pill badge-primary">Dedicated</text> storage plan). To increase security and prevent environments from being able to access each other's data, select `Dedicated`.
+
+### 3.5 Google Cloud Storage{#blob-gcp-storage-bucket}
+
+<text class="badge badge-pill badge-primary">Basic</text> <text class="badge badge-pill badge-primary">On-Demand</text> <text class="badge badge-pill badge-primary">Dedicated</text>
+
+This option allows to attach an existing GCP Cloud Storage bucket and credentials (access and secret keys) to one or more environments.
+All apps (environments) will use the same GCP Cloud Storage bucket and credentials (access and secret keys).
+
+**Prerequisites**
+
+* A GCP Cloud Storage bucket bucket.
+* An Access and Secret key with permissions to access the bucket.
+
+**Limitations**
+
+* Access/Secret keys used by existing environments can only be rotated manually.
+* No isolation between environments using this blob storage plan (if the plan **Type** is `On-Demand`).
+* Configuration parameters will not be validated and will be provided to the Mendix app as-is. If the arguments are not valid or there is an issue with permissions, the Mendix Runtime will fail to start the and deployment will appear to hang with **Replicas running** and **Runtime** showing a spinner.
+
+**Environment Isolation**
+
+* The GCP Cloud Storage bucket and credentials (access and secret keys) are shared between all environments using this plan.
+* An environment can access data from other environments using this Storage Plan.
+* By using the `Dedicated` **Type**, this plan switches into **Dedicated** mode - so that only one environment can use it.
+
+**Create workflow** (what the Mendix Operator will do when a new environment is created):
+
+* Generate a unique prefix based on the environment's name, so that each environment stores files in a separate prefix (directory).
+* Create a Kubernetes secret to provide connection details to the new app environment - to automatically configure the new environment.
+
+**Delete workflow** (what the Mendix Operator will do when an existing environment is deleted):
+
+* Delete that environment's Kubernetes blob file storage credentials secret.
+
+**Configuring this plan**
+
+In the GCP Cloud Storage plan configuration, enter the following details:
+
+* **Endpoint** - the GCP bucket's endpoint address, for example `https://storage.googleapis.com/<bucket-name>`.
+* **Access Key** and **Secret Key** credentials to access the bucket.
+* **Type** - specifies is the container can be shared between environments (create an <text class="badge badge-pill badge-primary">On-Demand</text> storage plan); or that the container can only be used by one environment (create a <text class="badge badge-pill badge-primary">Dedicated</text> storage plan). To increase security and prevent environments from being able to access each other's data, select `Dedicated`.
+
+### 3.6 Ceph{#blob-ceph}
+
+<text class="badge badge-pill badge-primary">Basic</text> <text class="badge badge-pill badge-primary">On-Demand</text> <text class="badge badge-pill badge-primary">Dedicated</text>
+
+This option allows to attach an existing Ceph or S3-compatible bucket and credentials (access and secret keys) to one or more environments.
+All apps (environments) will use the same bucket and credentials (access and secret keys).
+
+**Prerequisites**
+
+* A Ceph or S3-compatible bucket.
+* An Access and Secret key with permissions to access the bucket.
+
+**Limitations**
+
+* Access/Secret keys used by existing environments can only be rotated manually.
+* No isolation between environments using this blob storage plan (if the plan **Type** is `On-Demand`).
+* Configuration parameters will not be validated and will be provided to the Mendix app as-is. If the arguments are not valid or there is an issue with permissions, the Mendix Runtime will fail to start the and deployment will appear to hang with **Replicas running** and **Runtime** showing a spinner.
+
+**Environment Isolation**
+
+* The Ceph or S3-compatible bucket and credentials (access and secret keys) are shared between all environments using this plan.
+* An environment can access data from other environments using this Storage Plan.
+* By using the `Dedicated` **Type**, this plan switches into **Dedicated** mode - so that only one environment can use it.
+
+**Create workflow** (what the Mendix Operator will do when a new environment is created):
+
+* Generate a unique prefix based on the environment's name, so that each environment stores files in a separate prefix (directory).
+* Create a Kubernetes secret to provide connection details to the new app environment - to automatically configure the new environment.
+
+**Delete workflow** (what the Mendix Operator will do when an existing environment is deleted):
+
+* Delete that environment's Kubernetes blob file storage credentials secret.
+
+**Configuring this plan**
+
+In the Ceph plan configuration, enter the following details:
+
+* **Endpoint** - the Ceph bucket's endpoint address, for example `https://ceph-instance.local:9000/<bucket-name>`.
+* **Access Key** and **Secret Key** credentials to access the bucket.
+* **Type** - specifies is the container can be shared between environments (create an <text class="badge badge-pill badge-primary">On-Demand</text> storage plan); or that the container can only be used by one environment (create a <text class="badge badge-pill badge-primary">Dedicated</text> storage plan). To increase security and prevent environments from being able to access each other's data, select `Dedicated`.

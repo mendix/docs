@@ -76,13 +76,13 @@ Defines which type of aggregation is applied.
 | Any     | If an expression is true for at least any of the object in the list of objects |
 | Reduce  | Allows for a custom aggregation to be defined                                  |
 
-3.3 Return type
+### 3.3 Return type
 
 This option is only visible if the Function is Reduce. The type selected here will be the type of the output variable, the type of the 'Initial expression' and the type of the 'Expression'. In the example shown below the 'Return type' is String with the 'Initial value' being `'Product names: '` and the expression being `$currentResult + $currentObject/Name`.
 
 {{<figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/list-activities/aggregate-list/aggregate-list-reduce-example.png" width="500px" alt="Aggregate list reduce example" >}}
 
-3.3 Aggregate with
+### 3.4 Aggregate with
 
 This option is only visible if the Function is Average, Minimum, Maximum or Sum. For those functions, you can define if you want to aggregate using an attribute or an expression.
 
@@ -90,21 +90,21 @@ This option is only visible if the Function is Average, Minimum, Maximum or Sum.
 When using the `Count` function, it is not necessary to select an attribute or enter an expression, as it simply counts the number of objects in the list.
 {{% /alert %}}
 
-### 3.4 Attribute
+### 3.5 Attribute
 
 Defines which attribute of the objects in the list is used to aggregate over. This must be a numeric attribute (Long, Integer, or Decimal). This option is only visible if 'Aggregate with' is set to 'attribute'.
 
-### 3.4 Initial value
+### 3.6 Initial value
 
 This option is only visible for if the 'Function' is Reduce. The expression here will be used as the initial value for the aggregation. When aggregating with Reduce over an empty list the result will be this value. Oherwise this value will be the value of `$currentResult` when the 'Expression' is evaluated for the first item.
 
-### 3.4 Expression
+### 3.7 Expression
 
 This expression is evaluated for each item in the list of objects and its result is used for the aggregation. Its type must be numeric (Long, Integer, or Decimal) for Average, Minimum, Maximum and Sum. For Any and All the type of this expression must be a Boolean. For Reduce its type must the of the type that is selected in 'Return type'.
 
 In this expression the variable `$currentObject` will contain the item of the list of objects that is currently being processed. If the function is 'Reduce' `$currentResult` will hold the latest accumelated result (the resulting value of this expression being the next value of `$currentResult`).
 
-### 3.5 Variable Name
+### 3.8 Variable Name
 
 The name of the variable in which the result of the aggregation is stored. This variable will have a numeric data type if the aggregation function is either Sum, Average, Count, Minimum or Maximum. The type wil be Bool if the aggregation function is Any or All. For Reduce the type is the type that is defined in 'Return type'.
 

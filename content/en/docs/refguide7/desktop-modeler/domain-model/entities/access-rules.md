@@ -38,7 +38,7 @@ The module roles to which this access rule applies have a checkmark in the box b
 
 ### Allow creating new objects
 
-If this check box is checked, users are allowed to create new objects of this entity.
+If this checkbox is checked, users are allowed to create new objects of this entity.
 
 ### Allow deleting existing objects
 

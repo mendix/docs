@@ -33,6 +33,10 @@ You can implement the above authentication types by means of adding a correspond
 If you plan to use AWS Authentication with a [platform-supported AWS connector](/appstore/aws-connectors/), refer to the documentation provided with the connector for more information about the required authentication type.
 {{% /alert %}}
 
+### 1.2 Example
+
+{{% youtube b3uQONB3yoY %}}
+
 ## 2 Prerequisites {#prerequisites}
 
 Before you can use the AWS Authentication connector, you must first configure the required setting in AWS. Depending on the authentication type that you plan to use, you may need to prepare the following items:
@@ -97,7 +101,13 @@ The client certificate that you added now shows as **Currently enabled**.
 After enabling the certificate, you can now configure the microflow that authenticates your session in AWS. You can do this by adding the **GetSessionCredentials** activity to a microflow.
 
 {{% alert color="info" %}}
-The following steps are required if you are building your own connector, or if you want to implement a [community-supported connector](/appstore/general/app-store-content-support/#category) that does not come with its own authentication microflows. If you want to use the AWS Authentication connector with an existing [platform-supported AWS connector](/appstore/aws-connectors/), skip this procedure and refer to the documentation of the connector that you want to use.
+The steps described below are required for the following use cases:
+
+* If you are implementing the [AWS S3 connector](/appstore/connectors/aws/aws-s3-connector/)
+* If you are building your own connector 
+* If you want to implement a [community-supported connector](/appstore/general/app-store-content-support/#category) that does not come with its own exposed microflow action that includes handling authentication. 
+
+If you want to use the AWS Authentication connector with an existing [platform-supported AWS connector](/appstore/aws-connectors/) other than the AWS S3 connector, skip this procedure and refer to the documentation of the connector that you want to use.
 {{% /alert %}}
 
 1. Open your app in Studio Pro.
@@ -127,7 +137,13 @@ The following steps are required if you are building your own connector, or if y
 To run the AWS Authentication connector locally using Studio Pro, you must add the client certificate as a runtime configuration in Studio Pro.
 
 {{% alert color="info" %}}
-The following steps are required if you are building your own connector, or if you want to implement a [community-supported connector](/appstore/general/app-store-content-support/#category) that does not come with its own authentication microflows. If you want to use the AWS Authentication connector with an existing [platform-supported AWS connector](/appstore/aws-connectors/), skip this procedure and refer to the documentation of the connector that you want to use.
+The steps described below are required for the following use cases:
+
+* If you are implementing the [AWS S3 connector](/appstore/connectors/aws/aws-s3-connector/)
+* If you are building your own connector 
+* If you want to implement a [community-supported connector](/appstore/general/app-store-content-support/#category) that does not come with its own exposed microflow action that includes handling authentication. 
+
+If you want to use the AWS Authentication connector with an existing [platform-supported AWS connector](/appstore/aws-connectors/) other than the AWS S3 connector, skip this procedure and refer to the documentation of the connector that you want to use.
 {{% /alert %}}
 
 1. In Studio Pro, open the **App Settings** dialog box, and then go to the **Configurations** tab.
@@ -136,7 +152,7 @@ The following steps are required if you are building your own connector, or if y
 
    {{< figure src="/attachments/appstore/connectors/aws-authentication/custom-settings.png" >}}
 
-   {{% alert color="info" %}}Fore more information, see [Runtime Customisation](/refguide/custom-settings/).{{% /alert %}}
+   {{% alert color="info" %}}Fore more information, see [Runtime Customization](/refguide/custom-settings/).{{% /alert %}}
 
 4. Click **OK**.
 5. Go to the microflow that uses the **GetSessionCredentials** activity, and then double-click the **GetSessionCredentials** activity to open the **GetSessionCredentials** dialog box.
@@ -149,7 +165,13 @@ The following steps are required if you are building your own connector, or if y
 Static credentials use a mechanism with an access key and a secret. The credentials do not have a specific validity duration, so they do not expire automatically. This authentication method is recommended for test and demo apps, or in cases where you are not able to set up and configure session credentials.
 
 {{% alert color="info" %}}
-The following steps are required if you are building your own connector, or if you want to implement a [community-supported connector](/appstore/general/app-store-content-support/#category) that does not come with its own authentication microflows. If you want to use the AWS Authentication connector with an existing [platform-supported AWS connector](/appstore/aws-connectors/), skip this procedure and refer to the documentation of the connector that you want to use.
+The steps described below are required for the following use cases:
+
+* If you are implementing the [AWS S3 connector](/appstore/connectors/aws/aws-s3-connector/)
+* If you are building your own connector 
+* If you want to implement a [community-supported connector](/appstore/general/app-store-content-support/#category) that does not come with its own exposed microflow action that includes handling authentication. 
+
+If you want to use the AWS Authentication connector with an existing [platform-supported AWS connector](/appstore/aws-connectors/) other than the AWS S3 connector, skip this procedure and refer to the documentation of the connector that you want to use.
 {{% /alert %}}
 
 To create static credentials with the **GetStaticCredentials** activity in your app, perform the following steps:
@@ -183,21 +205,15 @@ You can view the domain model in the **App Explorer** in the **AWS Authenticatio
     
     | Name | Description |
     | --- | --- |
-    | `Service` | The service that you want to connect to, for example, S3 |
-    | `Method` | REST methods, for example, `GET` |
+    | `ServiceName` | The service that you want to connect to, for example, S3 |
+    | `HTTPMethod` | HTTP methods, for example, `GET` |
+    | `URIPrefix` | Optional prefix for services that require a prefix in their endpoint URL; leave blank if your service does not require a prefix |
     | `Region` | The AWS region where your service resides |
     | `Path` | URI from domain to query; enter `\` to leave blank |
     | `RequestBody` | The body of your request; signature version 4 headers require that the request body as part of the signing process, before you make the actual call. |
     
-    {{< figure src="/attachments/appstore/connectors/aws-authentication/sigv4builder.png" >}}
-
 * `SigV4Parameter` - This entity contains the key-value pairs which you can use as REST headers, or as `QueryParameters`. The key-value pairs can be used to create the headers, for example, `Content-JSON`, or to define the contents of the query, for example, the `Action` parameter in EC2 calls.
-    
-    {{< figure src="/attachments/appstore/connectors/aws-authentication/sigv4parameters.png" >}}
-
 * `SigV4Headers` - This entity is the output of the GetSigV4Headers Java action. It is used to create request headers in the custom HTTP REST call which you make towards AWS.
-
-    {{< figure src="/attachments/appstore/connectors/aws-authentication/sigv4headers.png" >}}
 
 #### 4.3.2 `GetSigV4SignedHeaders` Java Action {#java-action}
 
@@ -222,3 +238,7 @@ In this example, a `SigV4Builder` activity is created and associated with a `Cre
 These entities are used as input for the `GetSigV4Headers` Java action, which returns a response in the form of a `SigV4Header` entity.
 
 The values set in the response entity are used as request headers in the REST call to AWS.
+
+#### 5 Read More
+
+* [Securely Connect with the AWS Authentication Connector](https://www.mendix.com/blog/securely-connect-with-the-aws-authentication-connector/)

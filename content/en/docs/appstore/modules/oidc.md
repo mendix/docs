@@ -10,7 +10,7 @@ tags: ["marketplace", "marketplace component", "OIDC", "IdP", "identity provider
 
 ## 1 Introduction
 
-The [OpenID Connect (OIDC) SSO module](https://marketplace.mendix.com/link/component/120371) allows end-users of your Mendix app to login via Single Sign-on (SSO) using the OIDC protocol.  Besides delegating end-user authentication (OIDC), your app can also delegate authorization (OAuth).
+The [OpenID Connect (OIDC) SSO](https://marketplace.mendix.com/link/component/120371) module allows end-users of your Mendix app to login via Single Sign-on (SSO) using the OIDC protocol.  Besides delegating end-user authentication (OIDC), your app can also delegate authorization (OAuth).
 
 OIDC is an extension of OAuth2 that propagates the end-user's identity to your application.
 
@@ -78,7 +78,7 @@ The OIDC SSO module does not yet support
 
 ## 2 Dependencies
 
-The OIDC module requires your app to be using Mendix 8.18+ or later. (Mendix 9 compatible).
+The OIDC module requires your app to be using Mendix 8.18 or above.
 
 It requires the following Marketplace modules to be included in your app:
 
@@ -124,14 +124,14 @@ To migrate from Mendix 8.18.x to Mendix 9.8.1 or above, follow the steps below:
 
 1. Open your app in the latest patch version of Mendix 8.18 and allow it to be upgraded.
 2. Save the upgraded version of the app.
-3. Review the guidance in [Moving from Mendix Studio Pro 8 to 9](/refguide/moving-from-8-to-9/).
+3. Review the guidance in [Moving from Mendix Studio Pro 8 to 9](/refguide9/moving-from-8-to-9/).
 4. Open your app in Mendix 9.8.1 or above and allow it to be upgraded.
 5. Import the “OIDC SSO” Platform Edition module from the Marketplace.
 6. Import the “Mx Model Reflection” module from Marketplace.
 7. In the dialog **Security** > **User roles**, select *Administrator* and click **Edit**.
 8. Enable `MxModelReflection.ModelAdministrator` and close the dialog boxes with the **OK** button.
 9. You can see some errors in the Errors tab. To resolve these errors, import the “Atlas Core” module from the Marketplace.
-10. If you still have errors, review the information in [Migrate From Atlas 2 To Atlas 3](/refguide/moving-from-atlas-2-to-3/) and use it to resolve the issues.
+10. If you still have errors, review the information in [Migrate From Atlas 2 To Atlas 3](/refguide9/moving-from-atlas-2-to-3/) and use it to resolve the issues.
 11. Delete the “Atlas_UI_Resources” module from your app. Your app is now using themes from the Atlas Core Module.
 12. Update the “Administration”, “MendixSSO”, and “Native Mobile Resources” modules to the latest version by importing them from the Marketplace.
 
@@ -148,7 +148,7 @@ This section shows you how to configure your app to use OIDC for SSO.
 
 ### 4.1 Configuring Roles
 
-Ensure that you have allocated the following user roles to the OIDC module roles
+Ensure that you have allocated the following user roles to the OIDC module roles:
 
 | User Role | OIDC Module Role |
 | --- | --- |
@@ -164,6 +164,8 @@ You may have to add the *Anonymous* user role if it does not exist already.
 
 ### 4.2 Allowing Anonymous Users
 
+The OIDC module supports multiple OIDC/OAuth-compatible IdPs. To allow your end-users to choose from a number of different IdPs, or to have the option to log back into the app after they have logged out, you will need to give them access to the app before they have signed in to the app. Therefore, you need to give anonymous users access to your app.
+
 In the **Anonymous** tab of the app security settings, do the following:
 
 1. Set **Allow anonymous users** to **Yes**
@@ -174,6 +176,8 @@ In the **Anonymous** tab of the app security settings, do the following:
 ### 4.3 Configuring Navigation
 
 The OIDC SSO module works without a specified sign-in page. Therefore, in the navigation section of your app, set **Sign-in page** (in the **Authentication** section) to *(none)*.
+
+To allow your end-users to choose from a number of different IdPs, or to have the option to log back into the app after they have logged out, set a **Role-based home page** for role **Anonymous** to **OIDC.Login_Web_Button**. See [Role-Based Home Pages](/refguide/navigation/#role-based) in *Navigation* for more information.
 
 In addition, administrators will need to have access to configure OIDC and also manage end-users. You can do this by including the pages `Administration.Account_Overview` and `OIDC.OIDC_Client_Overview` into the app navigation, or a separate administration page.
 
@@ -208,6 +212,59 @@ To get the Microsoft Identity Platform to issue access tokens you can pass to yo
 1. In the **App roles** tab, add the user roles you want to authorize using either the user role name, or the user role UUID. This adds the configured user roles to the roles claim in the access token. 
 
 By adding a custom claim to the App Registration’s Expose an API tab and requesting that scope when we acquire tokens, the Microsoft Identity Platform will now generate access tokens that can be validated using the `/jwks` URI.
+
+#### 5.1.3 Amazon Cognito Provider Configuration
+
+To configure Amazon Cognito for the OIDC SSO module, follow these steps:
+
+1. Optional: If you are using the AWS test environment with Amazon Cognito set as the user pool, you must verify the email addresses by doing the following steps:
+    1. In Amazon SES, click **Configuration** > **Verified identities**.
+    2. On the **Verified identities** page, in the **Identities** section, click **Create identity**.
+    3. Verify the email address or addresses that you want to use for the user pool
+
+        {{< figure src="/attachments/appstore/connectors/aws-cognito/verifyemail.png" alt="The Verified identities page in Amazon SES">}}
+
+2. Create a user pool for Amazon Cognito by doing the following steps:
+    1. In the Amazon Console, open the Amazon Cognito service.
+    2. Select the region where you want to create the user pool, and then click **Create user pool**.
+    3. Follow the **Create user pool** wizard to configure the sign-in and sign-up, security requirements, and message delivery.
+    4. In the **Integrate your app** step of the wizard, enter a name for your user pool and leave the other settings as default.
+
+        {{< figure src="/attachments/appstore/connectors/aws-cognito/userpoolname.png" alt="The Integrate your app step in the Create user pool wizard">}}
+    
+    5. Review and create the user pool.
+
+3. Add users to the user pool by doing the following steps:
+    1. In Amazon Cognito, on the **User pools** page, find and open the user pool that you created.
+    2. On the **Users** tab of the user pool, click **Create user**.
+    3. Specify a verified email and a password.
+
+        {{< figure src="/attachments/appstore/connectors/aws-cognito/addusers.png" alt="The Users tab of a user pool">}}
+
+4. Configure the app integration by doing the following steps:
+    1. Go to the **App integration** tab of the user pool that you created.
+    2. In the **App clients and analytics** section, click **Create app client**.
+    
+        {{< figure src="/attachments/appstore/connectors/aws-cognito/createappclient.png" alt="The Create app client button on the App integration page">}}
+
+    3. On the **Create app client** page, configure the following settings:
+        * **App type** - **Public client**
+        * **App client name** - Enter a descriptive app client name
+        * **Client secret** - Select **Generate a client secret**
+        * **Authentication flows** - Select **ALLOW_USER_PASSWORD_AUTH**
+        * **Authentication flow session duration** - Enter a value from *3* to *15*
+        * **Allowed callback URLs** - Enter a URL in the following format: `https://{your Mendix app URL}]/oauth/v2/callback`
+        * **Allowed sign-out URLs** - This setting is optional, and you may leave it blank
+        * **Identity providers** - Select **Cognito user pool**
+        * **OAuth 2.0 grant types** - Select **Authorization code grant**
+    4. Save your changes.
+    5. Open the app client that you created.
+    6. In the **App client information** section, copy the **Client ID** and the **Client secret**, and save them in a secure location.
+
+        {{< figure src="/attachments/appstore/connectors/aws-cognito/idsecret.png" alt="The Client ID and Client secret on the App client information page">}}
+
+    7. Go back to the user pool that you created.
+    8. On the **App integration** tab, in the **Domain** section, copy the **Cognito domain** and save it in a secure location.
 
 ### 5.2 OIDC Client Configuration{#client-configuration}
 
@@ -255,6 +312,32 @@ For Azure AD access to APIs through an access token, in addition to the configur
 1. Edit the Azure AD configuration and add the custom scope to **Selected scopes**.
 
 Now, you can acquire tokens which can be validated using JWKS URI.
+
+#### 5.2.3 Amazon Cognito Client Configuration
+
+After you configure the necessary settings in Amazon Cognito, you must add the endpoint URLs to your Mendix app, and then add a button to sign in with Amazon Cognito.
+
+1. In your Mendix app, configure a new OIDC client, as described in [OIDC SSO: OIDC Client Configuration](/appstore/modules/oidc/#client-configuration). Make sure to configure the following settings:
+    * **Alias** - Enter a descriptive name to identify your app
+    * **Client ID** - Enter the app client ID that you obtained from the user pool in Amazon Cognito
+    * **Client secret** - Enter the client secret that you obtained from the user pool in Amazon Cognito
+    * **Client authentication method** - Select **client_secret_post**
+    * **Automatic Configuration URL** - Enter a URL in the following format: `https://cognito-idp.{the region where you created the user pool}.amazonaws.com/{your user pool ID}/.well-known/openid-configuration`
+    
+    For more information, see [User pool OIDC and hosted UI API endpoints reference](https://docs.aws.amazon.com/cognito/latest/developerguide/cognito-userpools-server-contract-reference.html).
+
+2. Click **Import Configuration** to automatically fill the other endpoints.
+
+    {{< figure src="/attachments/appstore/connectors/aws-cognito/filledendpoints.png" alt="Sample endpoint URLs">}}
+
+3. Click **Save**.
+4. Add an Amazon Cognito sign in button to a page in your app.
+    
+    You can achieve this by adding the **ACT_StartWebSignIn_Default** nanoflow to the button. For more information about creating custom buttons, see [Creating a Custom Save Button with a Microflow](/refguide/creating-a-custom-save-button/).
+
+    {{< figure src="/attachments/appstore/connectors/aws-cognito/samplelogin.png" alt="Sample endpoint URLs">}}
+
+Users who are part of the user pool you created in Amazon Cognito can now log in with their Amazon Cognito user name and password.
 
 ## 6 User Provisioning
 

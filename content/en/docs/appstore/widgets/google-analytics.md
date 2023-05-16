@@ -7,6 +7,10 @@ tags: ["marketplace", "marketplace component", "widget", "google analytics", "ev
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
+{{% alert color="warning" %}}
+This widget is deprecated.
+{{% /alert %}}
+
 ## 1 Introduction
 
 The [Google Analytics](https://marketplace.mendix.com/link/component/105/) widget enables tracking page views and custom events with Google Analytics. If you have an e-commerce application, you can also use this widget to keep track of your transactions.
@@ -38,9 +42,9 @@ This widget combines a built-in microflow trigger with the [EventTracker](#event
 
 ### 3.3 MasterPageTracker
 
-Typically, you want to start with the MasterPageTracker widget by adding it to your master layout. By doing this, all the pages in your Mendix app will be tracked by Google Analytics. You will need to provide the widget with the tracker ID (`UA-XXX-XX`) that you should receive when configuring your Google Analytics account. The MasterPageTracker widget will use the combination of module name and page name in Mendix as the URL to be reported to Google Analytics (for example, a page in the X module that is named Y will be registered as /X/Y in Google Analytics; note that you can also define a prefix for the URL).
+Typically, you want to start with the MasterPageTracker widget by adding it to your primary layout. By doing this, all the pages in your Mendix app will be tracked by Google Analytics. You will need to provide the widget with the tracker ID (`UA-XXX-XX`) that you should receive when configuring your Google Analytics account. The MasterPageTracker widget will use the combination of module name and page name in Mendix as the URL to be reported to Google Analytics (for example, a page in the X module that is named Y will be registered as /X/Y in Google Analytics; note that you can also define a prefix for the URL).
 
-By having a MasterPageTracker widget in the master layout, you do not need to define the tracker ID (`UA-XXX-XX`) in each [AdvancedPageTracker](#advancedpagetracker) or [PageTracker](#pagetracker) anymore, since they will use the one from MasterPageTracker.
+By having a MasterPageTracker widget in the primary layout, you do not need to define the tracker ID (`UA-XXX-XX`) in each [AdvancedPageTracker](#advancedpagetracker) or [PageTracker](#pagetracker) anymore, since they will use the one from MasterPageTracker.
 
 {{% alert color="info" %}}
 MasterPageTracker should only be used once in your Mendix application.

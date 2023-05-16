@@ -136,7 +136,7 @@ If you select an export mapping that supports both XML and JSON (for example, a 
 
 * When the microflow sets the *Content-Type* header parameter with a media type that is XML, then the operation returns XML as given in the table below.
 
-    <a name="table1">**Recognized media types**</a>
+    <a id="table1">**Recognized media types**</a>
 
     | Media Type                   | Recognized As |
     | ---                          | --- |

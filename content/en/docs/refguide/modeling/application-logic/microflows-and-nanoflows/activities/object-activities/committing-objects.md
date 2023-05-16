@@ -21,7 +21,7 @@ A Mendix commit does not always behave like a database commit. See [How Commits 
 
 An example of commit object(s) properties is represented in the image below:
 
-{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/object-activities/committing-objects/commit-properties.png" alt="commit object(s) properties" width="700px" >}}
+{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/object-activities/committing-objects/commit-properties.png" alt="commit object(s) properties" width="650px" >}}
 
 There are two sets of properties for this activity, those in the dialog box on the left, and those in the properties pane on the right.
 
@@ -84,9 +84,9 @@ If **Refresh in client** is set to **No**, the change is not reflected in the cl
 
 If set to **Yes**, the object is refreshed across the client, which includes reloading the relevant [data sources](/refguide/data-sources/).
 
-#### 3.3.2 Microflow is Called in an Offline, Native, or Hybrid App
+#### 3.3.2 Microflow is Called in an Offline or Native App
 
-When inside a microflow that is called from an offline, native, or hybrid app, the **Refresh in client** option is ignored and functions as if it was set to **No**.
+When inside a microflow that is called from an offline or native app, the **Refresh in client** option is ignored and functions as if it was set to **No**.
 
 For more information, see the [Microflows](/refguide/mobile/building-efficient-mobile-apps/offlinefirst-data/best-practices/#microflows) section of Offline-First Data.
 

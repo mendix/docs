@@ -1,7 +1,7 @@
 ---
 title: "Decision"
 url: /refguide/decision/
-weight: 3
+weight: 1
 tags: ["studio pro", "decision", "exclusive split"]
 aliases:
     - /refguide/exclusive-split.html
@@ -11,7 +11,7 @@ aliases:
 
 ## 1 Introduction
 
-A decision is an element that makes a choice based on a condition and follows one and only one of the outgoing sequence flows. For example, you need to use a decision to show different order forms for the customers with different grades, or to prevent a blocked customer from making orders.
+A decision is an element that makes a choice based on a condition and follows one and only one of the outgoing sequence flows. For example, you can use a decision to decide whether a customer gets a discount or not. You can also use a decision to assign a different online meeting URL to an employee based on which time zone they work in. 
 
 ## 2 Properties
 
@@ -22,14 +22,16 @@ An example of decision properties is represented in the image below:
 The decision properties pane consists of the following sections:
 
 * [Common](#common)
+* [Expression](#expression)
+* [Rule](#rule)
 
-### 2.1 Common {#common}
+## 3 Common Section {#common}
 
-#### 2.1.1 Caption
+### 3.1 Caption
 
 For more information, see the [Caption](/refguide/microflow-element-common-properties/#caption) section in *Common Properties*.
 
-#### 2.1.2 Decision Type
+### 3.2 Decision Type {#decision-type}
 
 **Decision type** defines whether an expression or a rule is used to define conditions of the decision. Possible decision types are described in the table below:
 
@@ -38,25 +40,41 @@ For more information, see the [Caption](/refguide/microflow-element-common-prope
 | [Expression](#expression) | Expressions can be used to create or change an object or a variable based on logic. |
 | [Rule](#rule) | A rule is a special kind of microflow, the outcomes of which can be used in a decision instead of calling a sub-microflow and using the return variable of that sub-microflow. The idea is that complicated decisions can be consolidated in rules and reused in various places. |
 
-##### 2.1.2.1 Expression {#expression}
+### 3.3 Error Handling Type
 
-If the **Type** property is set to **Expression**, the expression entered here is used to define the condition of the decision. For more information on expressions, see [Microflow Expressions](/refguide/expressions/).
+For more information, see the [Error Handling Type](/refguide/microflow-element-common-properties/#error-handling) section in *Common Properties*.
 
-The expression should result in a Boolean or an enumeration. 
+## 4 Expression Section {#expression}
 
-For the expression resulting in a Boolean, two flows are possible: **true** and **false**. For example, you can use the expression resulting in a Boolean if you want to check whether a customer's email is verified or not.
+The **Expression** section is shown in the decision properties pane if the [Decision Type](#decision-type) property is set to **Expression**. The expression entered here is used to define the condition of the decision. For more information on expressions, see [Microflow Expressions](/refguide/expressions/).
 
-The number of conditions available for the enumeration type depends on the corresponding enumeration values. There is also the *empty* condition available for enumeration: if the enumeration parameter or an attribute of an object is unassigned, the sequence flow with the caption **(empty)** is followed.
+The expression should result in a Boolean or an [enumeration](/refguide/enumerations/). 
 
-If you want to open a different order form per customer grade you can use a decision. The microflow parameter is *Customer*. Depending on what grade the customer has, a different sequence flow is followed and a different order form is opened. If an end-user needs to select a customer grade but does not do that, the flow labelled **(empty)** is followed and an error message is shown to the end-user.
+### 4.1 Boolean Result
 
-{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/decisions/decision/decision-example.png"   width="400"  >}}
+For an expression resulting in a Boolean, two flows are possible: **true** and **false**. For example, you can use an expression resulting in a Boolean to decide if a customer can get a discount by checking their membership status. The expression in this example is `$Customer/Membership`.
 
-Since you want to go in a different direction for each value of the enumeration, you only need to use the attribute containing the enumeration. So the expression in the example above is`$Customer/Grade`. 
+{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/decisions/decision/decision-boolean.png" width="500" >}}
 
-##### 2.2.2.2 Rule {#rule}
+### 4.2 Enumeration Result
 
-If the **Type** property is set to **Rule**, a [rule](/refguide/rules/) can be selected to define the condition of the decision. You can use the outcome of the rule for the decision instead of calling a sub-microflow and using the return variable of that sub-microflow.
+The number of conditions available for the enumeration type depends on the corresponding enumeration values. There is also the *empty* condition available for enumeration: if the enumeration parameter or an attribute of an object is unassigned, a sequence flow with the caption **(empty)** is followed.
+
+For example, if you want to assign a different meeting URL based on the working location of an employee, you can use an expression resulting in an enumeration. 
+    
+In the example below, the microflow parameter is *MeetingRegistration*. Depending on where the employee works, a different meeting URL is assigned. If an employee did not select a working location when registering for the meeting, the flow labelled **(empty)** is followed and an error message is shown to the end-user (the employee in this case).
+
+{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/decisions/decision/decision-enumeration.png" width="600" >}}
+
+Since you want to go in a different direction for each value of the enumeration, you only need to use the attribute containing the enumeration. So the expression in this example is `$MeetingRegistration/WorkingLocation`. 
+    
+Afterwards, you can merge the three flows followed by a meeting URL into one flow (for more information, see  [Merge](/refguide/merge/)). Then you only need to [commit](/refguide/committing-objects/) the registration once and have one [Close page](/refguide/committing-objects/) activity after the merge. 
+
+## 5 Rule Section {#rule}
+
+The **Rule** section is shown in the decision properties pane if the [Decision Type](#decision-type) property is set to **Rule**. A [rule](/refguide/rules/) can be selected to define the condition of the decision. You can use the outcome of the rule for the decision instead of calling a sub-microflow and using the returned variable of that sub-microflow.
+
+{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/decisions/decision/rule-properties.png"   width="350"  >}}
 
 The properties of the **Rule** decision type are the following ones:
 
@@ -64,8 +82,3 @@ The properties of the **Rule** decision type are the following ones:
 
 * **Parameter** – for each parameter of the rule an argument needs to be specified using [expressions](/refguide/expressions/). For example, a rule that determines whether a customer deserves a certain status will have a customer object as a parameter.
 
-    {{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/decisions/decision/rule-properties.png"   width="350"  >}}
-
-#### 2.1.3 Error Handling Type
-
-For more information, see the [Error Handling Type](/refguide/microflow-element-common-properties/#error-handling) section in *Common Properties*.

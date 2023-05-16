@@ -35,7 +35,7 @@ Internationalization with Mendix's mobile apps is fairly simple. You will use tw
 {{% alert color="info" %}}
 This guide requires the following nanoflow actions: 
 
-* **Clear cached session data** – This action clears saved session data from the local storage for offline native app and PWAs. This nanoflow action is only compatible with Studio Pro v9.14 and above. Therefore, please use Studio Pro v9.14.0 or above.
+* **Clear cached session data** – This action clears saved session data from the local storage for offline native app and PWAs.
 * **Reload** – This action reloads web and native apps.
 {{% /alert %}}
 

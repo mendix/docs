@@ -5,7 +5,7 @@ weight: 7
 description: "Describes the environmental details of your app and how to manage the environment."
 tags: ["Deploy","App","Environment","Developer Portal"]
 #To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
-#The anchor #connection-whitelist below is mapped from the Developer Portal (Mendix Cloud Environment Details), so it should not be removed or changed.
+#The anchor #connection-safelist below is mapped from the Developer Portal (Mendix Cloud Environment Details), so it should not be removed or changed.
 #The anchor #services below is mapped from the Developer Portal (Mendix Cloud Environment Details), so it should not be removed or changed.
 ---
 
@@ -34,9 +34,8 @@ In this tab, you can find the following information about your environment:
 * **Environment ID** – the unique identifier of this environment
 * **Custom domains** – any [custom domains](/developerportal/deploy/custom-domains/) of the app
 * **Java Version** – Oracle version 1.8 or AdoptOpenJDK version 8
-* **Mendix Studios Target** – if **Yes**, it means that Mendix Studio and Studio Pro deploy apps to this environment; for more information, see [Studio Deployment Settings](/developerportal/deploy/studio-deployment-settings/)
-* **Plan** – for Mendix Cloud v4, this indicates the type of plan covered by this license
-* **Instances** – for Mendix Cloud v4, this shows a summary of the number and memory allocation of instances of this environment – for more information, see the [Scaling - Mendix Cloud v4](#scaling) section below
+* **Plan** – this indicates the type of plan covered by this license
+* **Instances** – this shows a summary of the number and memory allocation of instances of this environment – for more information, see the [Scaling - Mendix Cloud](#scaling) section below
 * **Database Version** – the PostgreSQL version supporting the database
 * **Region** – the region where the app is hosted
 * **Secondary Backup Location** – the region where the backup is stored
@@ -54,9 +53,9 @@ On the right side of the screen, you can find the following action buttons:
 * **Show Logged in Users** 
 * **Change Admin Password** – this changes the password for the built-in [administrator](/refguide/administrator/) account; the new password is applied immediately, without the need for a restart, and forces the administrator to pick up any new [roles](/refguide/administrator/#user-role) assigned in the app deployment package
 * **View Live Log**
-* **Show debugger information** – Shows the settings needed to connect the debugger in Studio Pro to your app. For Mendix Cloud v4, the debugger is always enabled. For more information on debugging in the cloud, see [How To Debug Microflows Remotely](/refguide/debug-microflows-remotely/).
+* **Show debugger information** – Shows the settings needed to connect the debugger in Studio Pro to your app. For more information on debugging in the cloud, see [How To Debug Microflows Remotely](/refguide/debug-microflows-remotely/).
 
-{{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/environments-details/actions-v4.png" alt="A screenshot of the available actions with v4-specific actions on the bottom">}}
+{{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/environments-details/actions-v4.png" alt="A screenshot of the available actions">}}
 
 {{% alert color="info" %}}
 During a [maintenance window](/developerportal/deploy/maintenance-windows/), you cannot start, restart, or stop your app.
@@ -81,7 +80,7 @@ To clear the environment, follow these steps:
 
 {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/environments-details/clear-environment.png" alt="Clear Environment options and confirmation"   width="400"  >}}
 
-### 2.2 Naming of Environments – Flexible Environments in Mendix Cloud v4 {#naming}
+### 2.2 Naming of Environments – Flexible Environments in the Mendix Cloud {#naming}
 
 If you are the [Technical Contact](/developerportal/collaborate/app-roles/#technical-contact) of the app, you can rename the environments.
 
@@ -107,14 +106,14 @@ In **Scaling**, there are two sliders that you can control:
 
 * Use the **Instances** slider to increase or decrease the number of instances from one to four
     * The instances are meant for improved resiliency and increased processing power
-    * The minimum amount of RAM per instances is 1 GB; you can spread the RAM among four instances if you have more than 1 GB of RAM 
+    * The minimum amount of RAM per instances is 1 GiB; you can spread the RAM among four instances if you have more than 1 GiB of RAM 
 * Use the **Memory per instance** slider to increase or decrease the memory amount per instance
 
 The **Total Allocated Memory** is a process circle that shows how much memory is currently used for scaling.
 
-{{% alert color="info" %}}The maximum value for **Memory per instance** equals the **Total Allocated Memory** of your plan, but it cannot exceed 32 GB. The maximum number of instances changes according to the **Memory per instance** you have chosen in such a way that `Max instances x Memory per instance = Total Allocated Memory`.{{% /alert %}}
+{{% alert color="info" %}}The maximum value for **Memory per instance** equals the **Total Allocated Memory** of your plan, but it cannot exceed 32 GiB. The maximum number of instances changes according to the **Memory per instance** you have chosen in such a way that `Max instances x Memory per instance = Total Allocated Memory`.{{% /alert %}}
 
-If you have 1 GB RAM of the **Total Allocated Memory**, you have one instance available to store your memory. To scale your memory over multiple instances, you need more memory.
+If you have 1 GiB RAM of the **Total Allocated Memory**, you have one instance available to store your memory. To scale your memory over multiple instances, you need more memory.
 
 ### 2.4 Overviews {#overviews}
 
@@ -221,7 +220,7 @@ HTTP Headers allows you to set the values of selected HTTP response headers. The
 This replaces the option to prevent embedding your app in an iframe with more flexible options to set HTTP Headers.
 {{% /alert %}}
 
-Mendix Cloud v4 supports the following HTTP headers in the Developer Portal:
+The Mendix Cloud supports the following HTTP headers in the Developer Portal:
 
 | Header | Description | Additional Information |
 | --- | --- | --- |
@@ -308,11 +307,11 @@ default-src 'self' ; script-src 'self' 'unsafe-inline' 'unsafe-eval' ; connect-s
 
 If you have issues which appear to be related to a content security policy, you can use the console of your browser to investigate them.
 
-### 4.3 Outgoing Connections Whitelisting (Mendix Cloud Dedicated){#connection-whitelist}
+### 4.3 Outgoing Connections Safelisting (Mendix Cloud Dedicated){#connection-safelist}
 
 If you are deploying your apps to [Mendix Cloud Dedicated](/developerportal/deploy/#mendix-cloud-dedicated), all outgoing IP addresses are allowed by default.
 
-If you clear the **Allow all outgoing connections** check box, you can define which IP addresses and ports can be used for outgoing connections.
+If you clear the **Allow all outgoing connections** checkbox, you can define which IP addresses and ports can be used for outgoing connections.
 
 You can add or edit a number of different IP address and port combinations. Any ranges which have already been set up are listed here. You can do the following:
 
@@ -321,14 +320,14 @@ You can add or edit a number of different IP address and port combinations. Any 
 * Select an existing range and click **Edit** to edit an existing range
 * Select an existing range, click **Delete**, and then confirm that you want to delete this range
 
-#### 4.3.1 Managing a Whitelist Range
+#### 4.3.1 Managing a Safelist Range
 
-For each range where you define whitelisted IP addresses and ports, you can enter the following information:
+For each range where you define safelisted IP addresses and ports, you can enter the following information:
 
 * **Name** – Enter a name to identify this range, for example, *192 Group*.
-* **IP** – Specify an inclusive range of whitelisted IP addresses in IPv4 format, for example, *142.251.39.1* to *142.251.39.255*. All the IP addresses must be in a public range, see [Valid IP Ranges](#valid-ip), below. All addresses between the **Start** address and the **End** address are whitelisted, including the start and end addresses. If you only want to whitelist a single address, make the start and end addresses the same.
-* **Port** – Specify an inclusive range of ports which are whitelisted for the IP range above, for example, *80* to *5000*. You can use several whitelist entries if you want to whitelist different port ranges for the same IP range.
-* **Protocol** – Select whether the whitelisting is for **TCP**, **UDP**, or **ALL** traffic.
+* **IP** – Specify an inclusive range of safelisted IP addresses in IPv4 format, for example, *142.251.39.1* to *142.251.39.255*. All the IP addresses must be in a public range, see [Valid IP Ranges](#valid-ip), below. All addresses between the **Start** address and the **End** address are safelisted, including the start and end addresses. If you only want to safelist a single address, make the start and end addresses the same.
+* **Port** – Specify an inclusive range of ports which are safelisted for the IP range above, for example, *80* to *5000*. You can use several safelist entries if you want to safelist different port ranges for the same IP range.
+* **Protocol** – Select whether the safelisting is for **TCP**, **UDP**, or **ALL** traffic.
 * **Description** – Enter an optional description of this IP range, for example which API it supports.
 
 Click **Save** to save your range. The new values are applied within a few minutes without needing an app restart.

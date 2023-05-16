@@ -22,7 +22,7 @@ This how-to will teach you how to do the following:
 
 Before starting with this how-to, make sure you have completed the following prerequisites:
 
-* Know how to create a domain model (for details, see [How to Create a Basic Data Layer](/howto/data-models/create-a-basic-data-layer/))
+* Know how to create a domain model (for details, see [Creating a Basic Data Layer](/refguide/configuring-a-domain-model/))
 * Know how to create overview and detail pages (for details, see [How to Create Your First Two Overview and Details Pages](/howto/front-end/create-your-first-two-overview-and-detail-pages/))
 * Know how to create menu items (for details, see [Setting Up Navigation](/refguide/setting-up-the-navigation-structure/))
 * Know how to add action buttons (for details, see [Buttons](/refguide/button-widgets/))
@@ -78,7 +78,7 @@ To set the security level to prototype/demo, follow these steps:
 
     {{< figure src="/attachments/howto/security/create-a-secure-app/18581559.png" >}}
 
-3. Go to the **Administrator** tab and set the master administrator **Password**:
+3. Go to the **Administrator** tab and set the primary administrator **Password**:
 
     {{< figure src="/attachments/howto/security/create-a-secure-app/18581565.png" >}}
 
@@ -174,7 +174,7 @@ To configure the form entity access, follow these steps:
 
 ### 5.2 Creating Access Rules for the Administrator Module Role
 
-You will now create access rules for the Administrator module role. Since this role represents an administrator, let’s assume that he/she is allowed to create, delete, read, and write everything, so you can create the rules in a quick batch.
+You will now create access rules for the Administrator module role. Since this role represents an administrator, let’s assume that they are allowed to create, delete, read, and write everything, so you can create the rules in a quick batch.
 
 To create access roles for the Administrator module role, follow these steps:
 
@@ -198,7 +198,7 @@ A separate access rule will be created for all entities when the module role is 
 
 ### 5.3 Creating Access Rules for the User Module Role
 
-Next you have to create access rules for the User module role. Since this role represents a user with limited access, let’s assume he/she is only allowed to read most data and is allowed to write some of the Order data. This means you have to configure all the access rules individually.
+Next you have to create access rules for the User module role. Since this role represents a user with limited access, let’s assume they are only allowed to read most data and is allowed to write some of the Order data. This means you have to configure all the access rules individually.
 
 To create access roles for the User module role, follow these steps:
 

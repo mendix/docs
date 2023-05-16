@@ -3,6 +3,8 @@ title: "Properties Common in the Page Editor"
 url: /refguide/common-widget-properties/
 weight: 120
 tags: ["studio pro", "widget properties", "properties", "common", "widget", "classes"]
+aliases:
+    - /refguide/Conditions
 #Common Section and Visibility section anchors are used in links of common-section-link and visibility-section-link snippets. If moving or renaming them, do not forget to update snippets.
 ---
 
@@ -25,7 +27,7 @@ The **Screen reader caption** property can be set on the following widgets:
 * [Text Box](/refguide/text-box/)
 * [Text Area](/refguide/text-area/)
 * [Drop-down](/refguide/drop-down/)
-* [Check Box](/refguide/check-box/)
+* [Checkbox](/refguide/check-box/)
 * [Radio Buttons](/refguide/radio-buttons/)
 * [Date Picker](/refguide/date-picker/)
 * [File Manager](/refguide/file-manager/)
@@ -99,7 +101,7 @@ With the following widgets, the Attribute (Path) specifies the attribute which i
 * [Text Box](/refguide/text-box/)
 * [Text Area](/refguide/text-area/)
 * [Drop-down](/refguide/drop-down/)
-* [Check Box](/refguide/check-box/)
+* [Checkbox](/refguide/check-box/)
 * [Radio Buttons](/refguide/radio-buttons/)
 * [Date Picker](/refguide/date-picker/)
 

@@ -24,7 +24,7 @@ The **Aggregate list** activity can be used to calculate aggregated values over 
 
 An example of **Aggregate list** properties is represented in the image below:
 
-{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/list-activities/aggregate-list/aggregate-list-properties.png" alt="aggregate list properties" >}}
+{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/list-activities/aggregate-list/aggregate-list-properties.png" alt="aggregate list properties" width="650px" >}}
 
 There are two sets of properties for this activity, those in the dialog box on the left, and those in the properties pane on the right.
 

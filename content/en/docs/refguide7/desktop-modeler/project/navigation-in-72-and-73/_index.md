@@ -57,7 +57,7 @@ The Mendix app can be installed on a tablet or phone as an app by creating a Pho
 
 Hybrid offline apps are designed to allow users to continue using their Mendix app even when they have no internet connection. However, certain restrictions apply. For an overview of the ramifications of running an offline device profile, see [Offline](/refguide7/offline/).
 
-## 3 Redirection to Profiles<a name="Redirection"></a>
+## 3 Redirection to Profiles {#Redirection}
 
 Mendix Runtime automatically redirects users to the home page of the appropriate device type based on the device they are using. This happens by examining the `User-Agent` string that is sent by the device's browser. Hybrid apps do not use this mechanism, as they are referred to by name. The default configuration for this redirection is as follows:
 

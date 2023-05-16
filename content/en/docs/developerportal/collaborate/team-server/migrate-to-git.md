@@ -8,7 +8,7 @@ tags: ["Studio Pro", "Team Server", "migration", "Git", "migrate"]
 
 ## 1 Introduction
 
-Scrum masters can migrate apps from SVN version control system to Git. For more information on version control, see [Version Control](/refguide/version-control/) in *Studio Pro 9 Guide*. 
+Scrum Masters can migrate apps from SVN version control system to Git. For more information on version control, see [Version Control](/refguide/version-control/) in the *Studio Pro Guide*. 
 
 Git is a more modern version control system that has several advantages over SVN. For more information on advantages of Git, see the [What Are the Advantages of Team Server Git over Team Server SVN?](/refguide/version-control-faq/#git-advantages) section in *Version Control FAQ*.
 
@@ -21,13 +21,29 @@ To be able to migrate your app to Git, your app needs to meet the following crit
 
 {{% alert type="info" %}}
 
-Only a user with the Scrum master role can migrate an app. For more information, see [App Roles](/developerportal/collaborate/app-roles/). 
+Only a user with the Scrum Master role can migrate an app. For more information, see [App Roles](/developerportal/collaborate/app-roles/). 
+
+{{% /alert %}}
+
+{{% alert color="warning" %}}
+
+At this moment we are limited in our ability to migrate large SVN repositories. If the full SVN repository including all history and branches exceeds approximately 80GB, migration will likely fail. We are working on solutions to both notify you when this issue applies to you and to extend our migration capabilities for large repositories.
 
 {{% /alert %}}
 
 ## 3 How Migration Works
 
+If your app is eligible for migration and your team role is Scrum Master, you see a notification on possible migration at the top of all pages within the **Collaborate** section. Click **Migrate to Git** to start migration:
+
+{{< figure src="/attachments/developerportal/collaborate/team-server/migrate-to-git/migrate-to-git.jpg" >}}
+
 During migration all app history, including revisions for all branches, is copied from SVN to Git. 
+
+{{% alert type="info" %}}
+
+Deleted SVN branches are not mapped to Git branches by the migration process. If the deleted branch was not merged to a non-deleted branch prior to the migration, all commits are lost.
+
+{{% /alert %}}
 
 Access to SVN is disabled as soon as migration starts to prevent developers from making changes to SVN that will not be copied. If migration fails for any reason, it is rolled back and access to SVN is restored.
 
@@ -46,7 +62,11 @@ Inform your team members that they should commit their changes before migration.
 
 ## 4 Steps After Migration
 
-After migration is completed all developers need to check out (re-download) the app from Team Server and remove existing local copies, since developers can no longer interact with SVN. For more information, see [Migrating from SVN to Git: Steps After Migration and Process Differences](/refguide/svn-git-differences/).
+After migration, existing local copies are no longer linked to a working version control system. To be able to work on your app and store your changes in the version control system, you need to check out (re-download) the app from Team Server. Do the following:
+
+1. Open Studio Pro, select the app that was migrated to Git (you can identify it by a Git icon), and click **Open** in Studio Pro to download the Git version of your app. Once this is completed you can make changes and store them in version control system.
+
+2. Remove previous local copies of the app to avoid working on the wrong app version.
 
 ## 5 If Migration Failed
 

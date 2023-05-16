@@ -98,7 +98,21 @@ Integration activities can be used to integrate with other systems, for example 
 | --- | --- | --- |
 | {{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/generate-document.png" alt="generate document" link="/refguide/generate-document/" >}} | [Generate document](/refguide/generate-document/) *(only in microflows)* | Allows you to create a document of a certain type based on a [template](/refguide/document-templates/). |
 
-## 10 Workflow Activities
+## 10 Metrics Activities
+
+| Graphic | Name | Description |
+| --- | --- | --- |
+|   | [Counter](/refguide/metrics-counter/) | Allows you to increment a counter by the specified value. |
+|   | [Increment Counter](/refguide/metrics-increment-counter/) | Allows you to increment a counter by 1. |
+|   | [Gauge](/refguide/metrics-gauge/) | Allows you to specify the value of a gauge. |
+
+## 11 ML Kit Activities
+
+| Graphic | Name | Description |
+| --- | --- | --- |
+|  | [Call ML model](/refguide/call-ml-model/) *(only in microflows)* | Allows you to call an [ML model mapping](/refguide/ml-model-mapping/) document. |
+
+## 12 Workflow Activities
 
 Workflow activities are used in relation to workflows and their user tasks. 
 
@@ -108,3 +122,10 @@ Workflow activities are used in relation to workflows and their user tasks.
 | {{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/open-task-page.png" link="/refguide/show-task-page/" >}} | [Show user task page](/refguide/show-task-page/)          | Opens a user task page specified in [user task properties](/refguide/user-task/). |
 | {{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/open-workflow-page.png" link="/refguide/show-workflow-page/" >}} | [Show workflow admin page](/refguide/show-workflow-page/) | Opens a workflow overview page.                              |
 | {{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/workflow-call.png" link="/refguide/workflow-call/" >}} | [Workflow call](/refguide/workflow-call/)                 | Triggers the selected workflow.                              |
+
+## 13 External Object Activities
+
+| Graphic | Name | Description |
+| --- | --- | --- |
+|   | [Delete external object](/refguide/delete-external-object/) | Allows you to delete an external object. |
+|   | [Send external object](/refguide/send-external-object/) | Allows you to send an external object. |

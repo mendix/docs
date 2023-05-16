@@ -50,8 +50,7 @@ The password is used to sign into the application as the Administrator. You can 
 
 #### 2.1.3 User Role
 
-The user role assigned to the Administrator. For more information, see [Security, Roles, and Permissions](/studio8/settings-security/).
-Default: *Administrator*
+The user role assigned to the Administrator.
 
 {{% alert color="info" %}}
 The administrator is always created and has the System.Administrator role by default. The System.Administrator role allows users of your application to be managed.

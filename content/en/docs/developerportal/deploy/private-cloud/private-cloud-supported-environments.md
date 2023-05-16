@@ -18,6 +18,9 @@ This document covers which providers and services are officially supported by th
 We currently support deploying to the following Kubernetes cluster types:
 
 * [Amazon Elastic Kubernetes Service](https://aws.amazon.com/eks/) (EKS)
+{{% alert color="info" %}}
+If you want to deploy your app to Amazon EKS, consider using the Mendix for Amazon EKS Reference Deployment. For more information, see [Mendix for Amazon EKS—Terraform module](https://aws.amazon.com/solutions/partners/terraform-modules/mendix-eks/).
+{{% /alert %}}
 * [Azure Kubernetes Service](https://azure.microsoft.com/en-us/services/kubernetes-service/)
 * [Red Hat OpenShift Container Platform](https://www.openshift.com/)
 * [MicroK8s](https://microk8s.io/)
@@ -33,8 +36,8 @@ If deploying to Red Hat OpenShift, you need to specify that specifically when cr
 
 Mendix for Private Cloud Operator `v2.*.*` is the latest version which officially supports:
 
-* Kubernetes versions 1.19 through 1.25
-* OpenShift 4.6 through 4.10
+* Kubernetes versions 1.19 through 1.26
+* OpenShift 4.6 through 4.12
 
 {{% alert color="warning" %}}
 Kubernetes 1.22 is a [new release](https://kubernetes.io/blog/2021/08/04/kubernetes-1-22-release-announcement/) which removes support for several deprecated APIs and features.
@@ -168,7 +171,7 @@ It doesn't require any external database or provider and is great for quick test
 {{% alert color="info" %}}
 An app using an ephemeral database will lose all data if its environment is stopped or restarted.
 
-An app with an ephemeral database cannot have more than one replica. Only the first (master) replica will be able to start.
+An app with an ephemeral database cannot have more than one replica. Only the first (leader) replica will be able to start.
 {{% /alert %}}
 
 ### 4.2 Standard PostgreSQL Database
@@ -205,7 +208,7 @@ Azure PostgreSQL databases require additional firewall configuration to allow co
 Some managed PostgreSQL databases might have restrictions or require additional configuration.
 
 {{% alert color="info" %}}
-To use a PostgreSQL database, the Mendix Operator requires a master account with permissions to create new users and databases.
+To use a PostgreSQL database, the Mendix Operator requires a Superuser account with root privileges and permissions to create new users and databases.
 
 For every Mendix app environment, a new database schema and user (role) will be created so that the app can only access its own data.
 {{% /alert %}}
@@ -244,7 +247,7 @@ Amazon and Azure SQL servers require additional firewall configuration to allow 
 Some managed SQL Server databases might have restrictions or require additional configuration.
 
 {{% alert color="info" %}}
-To use a SQL Server database, the Mendix Operator requires a master account with permissions to create new users and databases.
+To use a SQL Server database, the Mendix Operator requires Superuser account with permissions to create new users and databases.
 
 For every Mendix app environment, a new database, user and login will be created so that the app can only access its own data.
 

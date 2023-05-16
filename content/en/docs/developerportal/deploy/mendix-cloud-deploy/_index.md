@@ -31,20 +31,20 @@ A Free App has a number of limitations compared to a licensed app. The main limi
 | --- | --- | --- |
 | Number of users | Unlimited users for regular Free Apps; six concurrent users for unlicensed app running on another cloud platform, for example, SAP BTP. | Depends on your [pricing plan](#plans)¹. |
 | Sleep mode | Goes into sleep mode after an hour or so of inactivity and automatically resumes when a user accesses it. All your data is retained while the app is in sleep mode. | Does not have a sleep mode. |
-| Disk storage | 0.5 GB Database and 1 GB Files. | Depends on your [pricing plan](#plans). |
+| Disk storage | 0.5 GiB Database and 1 GiB Files. | Depends on your [pricing plan](#plans). |
 | App vCPUs | 0.5 | Depends on your [pricing plan](#plans). |
 | Scheduled events | Are not run. | Are run and can be configured from the Developer Portal. |
 | Environments | Single environment in the Mendix Cloud. | A node in the cloud which has one or more environments, for example, production, acceptance, and test. |
-| Deployment | Can only be deployed to the cloud from Mendix Studio or Studio Pro. | Can be deployed from the Studios, or from the Developer Portal. |
+| Deployment | Can only be deployed to the cloud from Mendix Studio Pro. | Can be deployed from Mendix Studio Pro, from the Developer Portal, or through an API. |
 | Custom domains | Not available. | Can be configured from the Developer Portal. |
 | Access restriction profiles | Not available. | Can be configured from the Developer Portal. |
 | Client certificates | Not available. | Can be configured from the Developer Portal. |
 | Starting and stopping your app manually | Not available. | Available in the Developer Portal. |
 | Constants | Defined in Studio Pro. | Configurable through environment variables in the Developer Portal. |
 | Runtime settings | Not available. | Configurable through runtime and settings in the Developer Portal. |
-| Scalability | Only one instance and a fixed amount (1 GB) of memory. | Configurable in the Developer Portal. |
+| Scalability | Only one instance and a fixed amount (1 GiB) of memory. | Configurable in the Developer Portal. |
 | Metrics, alerts, and log levels | Not available. | Available. |
-| Historic archived logs | Not available, only live logs are available. | Available. |
+| Historic app logs | Not available, only live logs are available. | Available. |
 | Backups | Performed daily, cannot be triggered manually. Stored up to two weeks. |Performed daily, can also be created manually. Kept for up to one year, depending on your plan. |
 | Support | No support. | Depending on license option. |
 
@@ -87,7 +87,7 @@ Each environment can only run a single version of an app. Additionally, all the 
 
 ### 1.3 Flexible Environments {#flexible-environments}
 
-If the standard environments that you get with a licensed app are not sufficient for your requirements, you can request a Mendix Cloud v4 node with *Flexible Environments*. With Flexible Environments you can specify how many environments you want in your node and you can decide what they should be called.
+If the standard environments that you get with a licensed app are not sufficient for your requirements, you can request a Mendix Cloud node with *Flexible Environments*. With Flexible Environments you can specify how many environments you want in your node and you can decide what they should be called.
 
 ### 1.4 Database
 
@@ -101,9 +101,11 @@ Apps that run on the Mendix Cloud are automatically given their own URLs. The fo
 
 | License type | Environment | URL format | Example URL |
 | --- | --- | --- | --- |
-| Licensed app | production | Depends on the region:<br /> `{name of your app}.mendixcloud.com`<br />or<br />`{name of your app}.apps.{region}.mendixcloud.com` | `myappname.mendixcloud.com`, <br /> `myappname.apps.ap-3a.mendixcloud.com` |
-| Licensed app | test, acceptance, flexible environments | `{name of your app}-{environment type}.mendixcloud.com` | `myappname-accp.mendixcloud.com` |
+| Licensed app | production | Depends on the region:<br /> `{name of your app}.mendixcloud.com`*<br />or<br />`{name of your app}.apps.{region}.mendixcloud.com`\* | `myappname.mendixcloud.com`, <br /> `myappname.apps.ap-3a.mendixcloud.com` |
+| Licensed app | test, acceptance, flexible environments | Depends on the region:<br /> `{name of your app}-{environment type}.mendixcloud.com`*<br />or<br />`{name of your app}-{environment type}.apps.{region}.mendixcloud.com`\* | `myappname-accp.mendixcloud.com`, <br /> `myappname-accp.apps.ap-3a.mendixcloud.com` |
 | Free App | N/A | `{name of your app}.mxapps.io` | `myfreeappname.mxapps.io` |
+
+{{% alert color="info" %}}*The URL of an app on some clusters in a region contains `apps.{region}`. You can only select the region for your app, but not the cluster.{{% /alert %}}
 
 You can customize a URL by adding [custom domains](/developerportal/deploy/custom-domains/).
 
@@ -204,8 +206,6 @@ With a Free App, you can deploy your app to the Mendix Cloud from Studio or Stud
 
     {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/runapp.png" alt="The Run icon and the Publish button" >}}
 
-* Instead of Studio Pro, you can also deploy your app from Studio. For more information, see the [Publishing Your App](/studio/publishing-app/#publishing-your-app) section of *Previewing and Publishing Your App*.
-
 ## 3 Status of Deployment
 
 The Mendix status page ([https://status.mendix.com/](https://status.mendix.com/)) shows the current status of Mendix services. If you have issues with deployment, you can check the Mendix status page to see if deployment is operational (under **Mendix Services**) or if there are other Mendix issues which may be affecting your deployment.
@@ -237,45 +237,45 @@ The Standard resource packs listed below can be used with both Standard and Prem
 
 | Pack | App RAM | App vCPU | DB RAM | DB vCPU | DB Storage | File Storage |
 | --- | --- | --- | --- | --- | --- | --- |
-| XS21 | 1 GB | 0.25 | 1 GB | 2 | 5 GB | 10 GB |
-| S21 | 2 GB | 0.5 | 2 GB | 2 | 10 GB | 20 GB |
-| M21 | 4 GB | 1 | 4 GB | 2 | 20 GB | 40 GB |
-| L21 | 8 GB | 2 | 8 GB | 2 | 40 GB | 80 GB |
-| XL21 | 16 GB | 4 | 16 GB | 4 | 80 GB | 160 GB |
-| XXL21 | 32 GB | 8 | 32 GB | 4 | 160 GB | 320 GB |
-| XXXL21 | 64 GB | 16 | 64 GB | 8 | 320 GB | 640 GB |
-| XXXXL21 | 128 GB | 32 | 128 GB | 16 | 640 GB | 1280 GB |
+| XS21 | 1 GiB | 0.25 | 1 GiB | 2 | 5 GiB | 10 GiB |
+| S21 | 2 GiB | 0.5 | 2 GiB | 2 | 10 GiB | 20 GiB |
+| M21 | 4 GiB | 1 | 4 GiB | 2 | 20 GiB | 40 GiB |
+| L21 | 8 GiB | 2 | 8 GiB | 2 | 40 GiB | 80 GiB |
+| XL21 | 16 GiB | 4 | 16 GiB | 4 | 80 GiB | 160 GiB |
+| XXL21 | 32 GiB | 8 | 32 GiB | 4 | 160 GiB | 320 GiB |
+| XXXL21 | 64 GiB | 16 | 64 GiB | 8 | 320 GiB | 640 GiB |
+| XXXXL21 | 128 GiB | 32 | 128 GiB | 16 | 640 GiB | 1280 GiB |
 
 The Premium resource packs listed below can only be purchased with a Premium plan.
 
 | Pack | App RAM | App vCPU | DB RAM | DB vCPU | DB Storage | File Storage |
 | --- | --- | --- | --- | --- | --- | --- |
-| S21 | 2 GB | 0.5 | 2 GB | 2 | 10 GB | 20 GB |
-| M21 | 4 GB | 1 | 4 GB | 2 | 20 GB | 40 GB |
-| L21 | 8 GB | 2 | 8 GB | 2 | 40 GB | 80 GB |
-| XL21 | 16 GB | 4 | 16 GB | 4 | 80 GB | 160 GB |
-| XXL21 | 32 GB | 8 | 32 GB | 4 | 160 GB | 320 GB |
-| XXXL21 | 64 GB | 16 | 64 GB | 8 | 320 GB | 640 GB |
-| XXXXL21 | 128 GB | 32 | 128 GB | 16 | 640 GB | 1280 GB |
+| S21 | 2 GiB | 0.5 | 2 GiB | 2 | 10 GiB | 20 GiB |
+| M21 | 4 GiB | 1 | 4 GiB | 2 | 20 GiB | 40 GiB |
+| L21 | 8 GiB | 2 | 8 GiB | 2 | 40 GiB | 80 GiB |
+| XL21 | 16 GiB | 4 | 16 GiB | 4 | 80 GiB | 160 GiB |
+| XXL21 | 32 GiB | 8 | 32 GiB | 4 | 160 GiB | 320 GiB |
+| XXXL21 | 64 GiB | 16 | 64 GiB | 8 | 320 GiB | 640 GiB |
+| XXXXL21 | 128 GiB | 32 | 128 GiB | 16 | 640 GiB | 1280 GiB |
 
 The legacy cloud resource packs listed below are still being used but are not available to new customers. 
 
 | Legacy Pack | App RAM | App vCPU | DB RAM | DB vCPU | DB Storage | File Storage |
 | --- | --- | --- | --- | --- | --- | --- |
-| S20 | 2 GB | 0.5 | 2 GB | 1  | 10 GB | 20 GB |
-| M20 | 4 GB | 1 | 4 GB | 1  | 20 GB | 40 GB |
-| L20 | 8 GB | 2 | 8 GB | 1  | 40 GB | 80 GB |
-| XL20 | 16 GB | 4 | 16 GB | 2  | 80 GB | 160 GB |
-| XXL20 | 32 GB | 8 | 32 GB | 2  | 160 GB | 320 GB |
-| Strato | 2 GB | 0.5 | 1 GB | 0.5  | 5 GB | 20 GB |
-| Meso | 2 GB | 0.5 | 8 GB | 2  | 20 GB | 20 GB |
-| Iono | 8 GB | 2 | 8 GB | 2  | 20 GB | 80 GB |
-| Magneto | 16 GB | 4  | 16 GB | 4  | 80 GB | 320 GB |
-| S | 1 GB | 0.5  | 1 GB | 0.5  | 5 GB | 5 GB |
-| M | 2 GB | 0.5  | 2 GB | 1  | 10 GB | 10 GB |
-| L | 4 GB | 1  | 4 GB | 2  | 20 GB | 20 GB |
-| XL | 8 GB | 2  | 8 GB | 2  | 40 GB | 40 GB |
-| XXL | 16 GB | 4  | 16 GB | 4  | 80 GB | 80 GB |
+| S20 | 2 GiB | 0.5 | 2 GiB | 1  | 10 GiB | 20 GiB |
+| M20 | 4 GiB | 1 | 4 GiB | 1  | 20 GiB | 40 GiB |
+| L20 | 8 GiB | 2 | 8 GiB | 1  | 40 GiB | 80 GiB |
+| XL20 | 16 GiB | 4 | 16 GiB | 2  | 80 GiB | 160 GiB |
+| XXL20 | 32 GiB | 8 | 32 GiB | 2  | 160 GiB | 320 GiB |
+| Strato | 2 GiB | 0.5 | 1 GiB | 0.5  | 5 GiB | 20 GiB |
+| Meso | 2 GiB | 0.5 | 8 GiB | 2  | 20 GiB | 20 GiB |
+| Iono | 8 GiB | 2 | 8 GiB | 2  | 20 GiB | 80 GiB |
+| Magneto | 16 GiB | 4  | 16 GiB | 4  | 80 GiB | 320 GiB |
+| S | 1 GiB | 0.5  | 1 GiB | 0.5  | 5 GiB | 5 GiB |
+| M | 2 GiB | 0.5  | 2 GiB | 1  | 10 GiB | 10 GiB |
+| L | 4 GiB | 1  | 4 GiB | 2  | 20 GiB | 20 GiB |
+| XL | 8 GiB | 2  | 8 GiB | 2  | 40 GiB | 40 GiB |
+| XXL | 16 GiB | 4  | 16 GiB | 4  | 80 GiB | 80 GiB |
 
 {{% alert color="info" %}}
 You can have a pack using a fraction of a vCPU as several environments can run, completely isolated from each other, on a single virtual machine.

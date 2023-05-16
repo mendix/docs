@@ -18,7 +18,7 @@ The **Synchronize** activity can be used to synchronize your data between your d
 
 All three modes perform synchronization in two phases: upload and download. For more information, see the [Synchronization Behavior](#synchronization-behavior) section below and the [Synchronization types](/refguide/mobile/building-efficient-mobile-apps/offlinefirst-data/synchronization/) section of *Offline Synchronization*.
 
-### 2.1 All Objects
+### 2.1 All Objects {#all-objects}
 
 {{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/client-activities/synchronize/synchronize.png" alt="Synchronize"   width="200"  >}}
 

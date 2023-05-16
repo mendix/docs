@@ -23,12 +23,9 @@ Amazon Polly allows you to synthesize text to speech, with 96 voices supporting 
 
 ### 1.2 Prerequisites {#prerequisites}
 
-The Amazon Polly Connector requires the [AWS authentication connector version 2.1 or higher](https://marketplace.mendix.com/link/component/120333) to authenticate with Amazon Web Services (AWS). for more information about installing and configuring the AWS Authentication Connector see [AWS Authentication](/appstore/connectors/aws/aws-authentication/).
+The Amazon Polly connector requires Mendix Studio Pro version 9.18.0 or above.
 
-### 1.3 Dependencies
-
-* AWS Authentication Connector
-* Mendix Studio Pro 9.18.0
+To authenticate with Amazon Web Service (AWS), you must also install and configure the [AWS authentication connector version 2.1 or higher](https://marketplace.mendix.com/link/component/120333). For more information about installing and configuring the AWS Authentication connector, see [AWS Authentication](/appstore/connectors/aws/aws-authentication/).
 
 ## 2 Installation
 
@@ -47,18 +44,18 @@ In order to use the Amazon Polly service, you must authenticate with AWS. To do 
     The Amazon Polly connector supports both session and static credentials. By default, the connector is pre-configured to use static credentials, but you may want to switch to session credentials, for example, to increase the security of your app. For an overview of both authentication methods, see [AWS Authentication](/appstore/connectors/aws/aws-authentication/).
 3. In the **App Explorer**, double-click the **Settings** for your app.
 
-    {{< figure src="/attachments/appstore/connectors/aws-dynamodb/appsettings.png" alt="The Settings option in the App Explorer">}}
+    {{< figure src="/attachments/appstore/connectors/aws-polly/polly_open_settings.png" alt="The Settings option in the App Explorer">}}
 
 4. In the **App Settings** dialog, in the **Configurations** tab, edit or create an authentication profile.
     If you have multiple sets of AWS credentials, or if you want to use both static and session credentials for different use cases, create separate authentication profiles for each set of credentials.
 5. In the **Edit Configuration** dialog, in the **Constants** tab, click **New** to add the constants required for the configuration.
 6. In the **Select Constants** dialog, find and expand the **AmazonPollyConnector** > **ConnectionDetails** section.
 
-    {{< figure src="/attachments/appstore/connectors/aws-dynamodb/credentials.png" alt="The SessionCredentials and StaticCredentials items in the ConnectionDetails section">}}
+    {{< figure src="/attachments/appstore/connectors/aws-polly/polly_edit_configuration.png" alt="The SessionCredentials and StaticCredentials items in the ConnectionDetails section">}}
 
 7. Depending on your selected authentication type, configure the required parameters for the **StaticCredentials** or **SessionCredentials**.
 
-    | Credentials type | Parameter | Value |
+    | Credentials type | Constant | Value |
     | --- | --- | --- |
     | Any | **UseStaticCredentials** | **true** if you want to use static credentials, or **false** for session credentials |
     | **StaticCredentials** | **AccessKey** | Access key ID [created in IAM](/appstore/connectors/aws/aws-authentication/#prerequisites)  |
@@ -82,20 +79,29 @@ After you configure the authentication profile for Amazon Polly, you can impleme
     
     For the `SynthesizeSpeech` activity, you must add your own entity that inherits from `System.FileDocument` to store the contents of the audio in and specify the AWS Region. You must then add your `SynthesizeSpeechRequest` entity in your microflow as the last parameter. This entity requires the following parameters:
 
-    * `OutputFormat` - MP3, OGG_VORBIS, or PCM. JSON is not yet supported by the connector.
-    * `SampleRate` - The valid values for MP3 and OGG_VORBIS are *8000*, *16000*, *22050*, and *24000*. The valid values for PCM are *8000* and *16000*.
-    * `VoiceID` - The selected voice for the output of the text.
     * `Text` - The actual string of text that needs to be translated.
+    * `OutputFormat` - MP3, OGG_VORBIS, or PCM. JSON is not yet supported by the connector.
+    * `Engine` - The enumeration parameter that specifies which engine (*standard* or *neural*) will be used by Amazon Polly during speech synthesis. It is set automatically to *standard* in the connector when a `SynthesizeSpeechRequest` object is created, but can be modified by the user.
+    * `VoiceID` - The selected voice for the output of the text.
+
+    The following parameters are optional:
+    * `TextType` - The enumeration parameter to specify if the input text is plain text or SSML. If left empty, the default value is plain text.
+    * `SampleRate` - The valid values for MP3 and OGG_VORBIS are *8000*, *16000*, *22050*, and *24000*. The valid values for PCM are *8000* and *16000*. The default values are used by Amazon Polly, if not given.
+    * `LanguageCode` - Language code of the voice. This parameter is only necessary if you are using a voice that can use multiple languages. If left empty, the default value for that voice is used. 
+    
+    For more information on Amazon Polly voices and their engines, see [Voices in Amazon Polly](https://docs.aws.amazon.com/polly/latest/dg/voicelist.html).
 6. In the **Edit parameters** section, edit the **AWS_Region** parameter, and provide a value by using a variable or an expression. For a list of available AWS regions, see [AWS_Region](#aws-region).
 7. Click **OK**.
 8. Open a page that contains a widget for playing audio, for example, the [Play Audio](https://marketplace.mendix.com/link/component/120804) widget.
 9. Configure the widget to use the `FileDocument` configured in the **SynthesizeSpeech** activity.
 10. Configure a method to trigger the `ACT_SynthesizeSpeech` activity. 
     For example, you can associate the activity with a custom button on a page in your app. For an example of how this can be implemented, see [Creating a Custom Save Button with a Microflow](/refguide/creating-a-custom-save-button/).
+    
+## 4 Technical Reference
 
 To help you work with the Amazon Translate connector, the following sections of this document list the available entities, constants, activities, and enumerations that you can use in your application.
 
-### 3.3 Constants
+### 4.1 Constants
 
 Constants are used to define configuration values. All activities are exported as microflow activities that can directly be added to a microflow. Make sure the constants are configured correctly as shown in the table below, so the connector can authenticate the request with AWS. For more information, see [Configuring AWS Authentication](#authentication).
 
@@ -110,19 +116,45 @@ Constants are used to define configuration values. All activities are exported a
 | `AmazonPollyConnector.AccessKey` | The `AccessKey` from an AWS account able to use this service |
 | `AmazonPollyConnector.SecretKey` | The `SecretKey` from an AWS Account able to use this service |
 
-### 3.4 Domain Model
+### 4.2 Domain Model
 
 The domain model is a data model that describes the information in your application domain in an abstract way. For more information, see [Domain Model](/refguide/domain-model/).
 
-| Name | Description |
-| --- | --- |
-| `Voice` | The Voice entity is a representation of an Amazon Polly voice. It contains the unique identifier for a voice (`VoiceID`) that is required for `SynthesizeSpeech` activities. It also contains additional information on a voice like the name, language and gender. |
+#### 4.2.1 Voice {#voice}
 
-### 3.5 Enumerations
+The `Voice` entity is a representation of an Amazon Polly voice. It contains the unique identifier for a voice (`VoiceID`) that is required for `SynthesizeSpeech` activities. It also contains additional information on a voice like the name, language and gender.
+
+| Attribute | Description |
+| --- | --- |
+| `VoiceID` | ID assigned by Amazon Polly that is specified when calling the [SynthesizeSpeech](#synthesize-speech) action (string)|
+| `Name` | Name of the voice (string)|
+| `LanguageName` | Name of the language in English (string)|
+| `LanguageCode` | The language code of the voice (string)|
+| `Gender` | Gender of the voice. (string)|
+
+#### 4.2.2 DescribeVoicesResponse
+
+The `DescribeVoicesResponse` entity is the response for the [DescribeVoices](#describe-voices) action. The action also returns a list of `DescribeVoice` objects associated with the `DescribeVoicesResponse` object. The `DescribeVoice` entity inherits from the voice entity and contains all its attributes. For more information on the attributes, see [Voice](#voice).
+
+#### 4.2.3 SynthesizeSpeechRequest
+
+The `SynthesizeSpeechRequest` entity is used when calling the [SynthesizeSpeech](#synthesize-speech) action. 
+
+| Attribute | Description |
+| --- | --- |
+| `Text` | Text to synthesize (string)|
+| `TextType` | It is used to specify whether the input text is plain text or SSML. If left empty, the default value is 'plain text' (enum)|
+| `OutputFormat` | The format that the output should be encoded (enum)|
+| `SampleRate` | The sample rate for speech syhthesis (string)|
+| `Engine` | The engine that will be used during speech synthesis (enum)|
+| `VoiceID` | The ID of the voice (string)|
+| `LanguageCode` | The language code of the voice (string)|
+
+### 4.3 Enumerations
 
 An enumeration is a predefined list of values that an be used as an attribute type.
 
-#### 3.5.1 `OutputFormat`
+#### 4.3.1 `OutputFormat`
 
 The format in which the returned output will be encoded. For audio streams, this must be MP3, OGG_VORBIS, or PCM. JSON is currently not supported.
 
@@ -132,7 +164,7 @@ The format in which the returned output will be encoded. For audio streams, this
 | OGG_VORBIS | OGG_VORBIS |
 | PCM        | PCM        |
 
-#### 3.5.2 `Engine`
+#### 4.3.2 `Engine`
 
 Specifies the engines (standard or neural) that are supported by a given voice.
 
@@ -141,14 +173,14 @@ Specifies the engines (standard or neural) that are supported by a given voice.
 | Standard | standard |
 | Neural | neural |
 
-#### 3.5.3 `TextType`
+#### 4.3.3 `TextType`
 
 | Name | Caption |
 | --- | --- |
 | PlainText | PlainText |
 | SSML | SSML |
 
-#### 3.5.4 `AWS_Region` {#aws-region}
+#### 4.3.4 `AWS_Region` {#aws-region}
 
 | Name | Caption |
 | --- | --- |
@@ -175,19 +207,23 @@ Specifies the engines (standard or neural) that are supported by a given voice.
 | me_south_1 | Middle East (Bahrain) |
 | sa_east_1 | South America (São Paulo) |
 
-### 3.6 Activities
+### 4.4 Activities
 
 Activities define the actions that are executed in a microflow or a nanoflow.
 
-#### 3.6.1 Synthesize Speech {#synthesize-speech}
+#### 4.4.1 Synthesize Speech {#synthesize-speech}
 
 The `SynthesizeSpeech` activity allows you to synthesize a string of text into an audio file. It requires a `SynthesizeSpeechRequest` entity containing the required information, and a `TargetFileDocument` (`System.FileDocument` or its specialization) to contain the response of the `SynthesizeSpeech` activity. It also requires the `AWS_Region` in which the Polly service should be called.
 
 The `SynthesizeSpeech` activity has no return value, instead the input parameter TargetFileDocument contains the synthesized speech.
 
-#### 3.6.2 DescribeVoices
+#### 4.4.2 DescribeVoices {#describe-voices}
 
 The `DescribeVoices` activity returns the list of voices from the Amazon Polly service. It requires an `AWS_Region` parameter to get the list of supported voices from the given AWS region.
 The voices can be used in the `Synthesize Speech` activity to synthesize a piece of text to speech with the right voice. 
 
-The `DescribeVoices` activity returns a `DescribeVoicesResponse` entity containing a list of `DescribeVoice` entities.
+The `DescribeVoices` activity returns a `DescribeVoicesResponse` entity containing a list of `DescribeVoice` entities. Examples of the returned `DescribeVoice` objects can be seen below. 
+
+ {{< figure src="/attachments/appstore/connectors/aws-polly/polly-example-voices.png" alt="Examples of available voices for Amazon Polly">}}
+
+For more Amazon Polly voices and their information, see [Voices in Amazon Polly](https://docs.aws.amazon.com/polly/latest/dg/voicelist.html).

@@ -52,7 +52,7 @@ Please contact your Customer Success Manager or [Mendix Support](https://support
 
 ## 2 Finding Your Answers
 
-We expect that many questions and issues can be solved by reading the [Mendix Documentation](https://docs.mendix.com/) and by exploring the [Mendix Forum](https://forum.mendix.com/). If you cannot find the answer to your question in one of these locations, you can submit a question, incident, or change request to Mendix Support. We will act as the focal point for issues on Mendix Studio and Studio Pro, your applications, and the [Developer Portal](https://home.mendix.com/). We will forward the issue to the second- and third-line if necessary.
+We expect that many questions and issues can be solved by reading the [Mendix Documentation](https://docs.mendix.com/) and by exploring the [Mendix Forum](https://forum.mendix.com/). If you cannot find the answer to your question in one of these locations, you can submit a question, incident, or change request to Mendix Support. We will act as the focal point for issues on Mendix Studio Pro, your applications, and the [Developer Portal](https://home.mendix.com/). We will forward the issue to the second- and third-line if necessary.
 
 ## 3 Feature Requests
 
@@ -85,7 +85,7 @@ Please read more about this in [Control Center](/developerportal/control-center/
 
 ### 5.2 Technical Contacts
 
-You need to appoint a [technical contact](/developerportal/collaborate/app-roles/#technical-contact) for each of your applications running in the Mendix Public Cloud and Cloud Dedicated. The technical contact checks the performance of the applications in the Developer Portal and receives alerts from the Mendix Developer Portal based on errors and warnings in the application. It is possible to have other team members receive these alerts as well.
+You need to appoint a [Technical Contact](/developerportal/collaborate/app-roles/#technical-contact) for each of your applications running in the Mendix Public Cloud and Cloud Dedicated. The Technical Contact checks the performance of the applications in the Developer Portal and receives alerts from the Mendix Developer Portal based on errors and warnings in the application. It is possible to have other team members receive these alerts as well.
 Reading these alerts carefully and acting upon them is important, as they can affect the performance of your app. For more information on alerts, see [Alerts](/developerportal/operate/monitoring-application-health/).
 
 ### 5.3 Training

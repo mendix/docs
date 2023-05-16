@@ -41,11 +41,11 @@ In the 8.18.1 example, the second number (**18**) indicates the minor version.
 
 A minor version is generally released every month. It includes new features and fixes, but it does not include breaking changes.
 
-### 1.3 Patch Version
+### 1.3 Patch Version {#patch-version}
 
 In the 8.18.1 example, the third number (**1**) indicates the patch version. 
 
-A patch version is released on an as-needed basis. It includes security fixes and critical bug fixes, but it does not include new features or breaking changes.
+A patch version is released on an as-needed basis. It includes security fixes and critical bug fixes, but it does not include new features or breaking changes (unless these address security issues).
 
 ## 2 Long-Term Support Version (LTS) {#lts}
 
@@ -53,6 +53,7 @@ An LTS version is the latest minor version before a new major version is release
 
 These are the current LTS versions of Studio Pro:
 
+* [9.24](/releasenotes/studio-pro/9.24/) (started in March, 2023)
 * [8.18](/releasenotes/studio-pro/8.18/) (started in March, 2021)
 * [7.23](/releasenotes/studio-pro/7.23/) (started in February, 2019)
 
@@ -93,7 +94,7 @@ These are the current MTS versions for Studio Pro:
 * [9.6](/releasenotes/studio-pro/9.6/) (started in September, 2021)
 
 {{% alert color="info" %}}
-Older MTS versions (for example, 9.6) remain supported until the next LTS version has been released.
+Older MTS versions (for example, 9.6) remain supported until the next major version has been released for General Availability (for example, 10).
 {{% /alert %}}
 
 If you are on an innovation track with your development and need to get the latest and greatest Mendix has to offer every month, then upgrade to an MTS and stay on that version with its patch releases until the next MTS version is released.

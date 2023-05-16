@@ -18,7 +18,7 @@ Before starting this section, make sure you have completed the following prerequ
 
 * Have a Firebase account (https://firebase.google.com)
 
-## 3 Setting up a Firebase Project
+## 3 Setting Up a Firebase Project
 
 There are two possible scenarios: you can create a new FCM project, or you can update your existing GCM project to FCM. Both scenarios are described below.
 

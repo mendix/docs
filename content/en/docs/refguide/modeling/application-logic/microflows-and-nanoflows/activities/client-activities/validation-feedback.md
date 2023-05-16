@@ -14,7 +14,7 @@ This activity can be used in both **Microflows** and **Nanoflows**.
 {{% /alert %}}
 
 {{% alert color="warning" %}}
-This action is ignored and does not work when a microflow is called from an offline, native, or hybrid app. For more information, see the [Microflows](/refguide/mobile/building-efficient-mobile-apps/offlinefirst-data/best-practices/#microflows) section of *Offline-First Data*.
+This action is ignored and does not work when a microflow is called from an offline or native app. For more information, see the [Microflows](/refguide/mobile/building-efficient-mobile-apps/offlinefirst-data/best-practices/#microflows) section of *Offline-First Data*.
 {{% /alert %}}
 
 ## 1 Introduction
@@ -27,7 +27,7 @@ The **Validation feedback** activity does a validation check, and if this check 
 
 There are two sets of properties for this activity, those in the dialog box on the left, and those in the properties pane on the right:
 
-{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/client-activities/validation-feedback/validation-feedback-properties.png" alt="Validation Feedback Properties" >}}
+{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/client-activities/validation-feedback/validation-feedback-properties.png" alt="Validation Feedback Properties" width="650px" >}}
 
 The **Validation feedback** properties pane consists of the following sections:
 

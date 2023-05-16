@@ -11,6 +11,74 @@ These release notes cover changes made to the [Mendix Data Hub Catalog](/data-hu
 
 ## 2023
 
+### May 11th, 2023
+
+#### Improvements
+
+* We made the authentication details on the [data source details](/data-hub/data-hub-catalog/search/#service-details) page more user friendly.
+
+#### Fixes
+
+* We fixed an issue that impacted the deployment of an OData service.
+
+### April 13th, 2023
+
+#### Fixes
+
+* We fixed an issue where the page was flickering when selecting an object in the search results.
+
+### April 6th, 2023
+
+#### Improvements
+
+* We improved the clarity and accuracy of some UI texts.
+
+### March 16th, 2023
+
+#### Fixes
+
+* We fixed an issue on the Catalog Admin page that displayed incorrect counts of data sources registered in the company.
+* We fixed an error that occured when no authentication is selected while registering a data source.
+
+### February 27th, 2023
+
+#### Fixes
+
+* We fixed an issue that was generating endpoint URLs leading to `404 not found` errors when deploying an app in Studio Pro.
+
+### February 23rd, 2023
+
+#### Improvements
+
+* On the [Search](/data-hub/data-hub-catalog/search/) page, there are no default search filters anymore and filters are persistent per search session.
+
+### February 16th, 2023
+
+#### Improvements
+
+* We added a link to the Marketplace module under authentication details that implements the specified authentication method.
+
+### February 9th, 2023
+
+#### Improvements
+
+* We added a user-friendly interface for `404 not found` errors in a REST deeplink API.
+
+#### Fixes
+
+* We fixed an issue with cropping images when uploading an application icon.
+* We fixed an issue where authentication details of a data source were not visible to users without curation rights.
+
+### February 2nd, 2023
+
+#### Improvements
+
+* You can now select relevant Mendix Marketplace module for an [authentication](/data-hub/data-hub-catalog/register-data/#authentication) type. See the [Selecting an Authentication Method](/data-hub/data-hub-catalog/register-data/#authentication) section of *Register OData Resources in the Data Hub Catalog* for more information on the authentication types.
+
+#### Fixes
+
+* We fixed a bug that was causing the creation of an application using the [Registration API](/apidocs-mxsdk/apidocs/data-hub-apis/#registration) to fail.
+
 ### January 12th, 2023
 
 #### Improvements
@@ -123,7 +191,7 @@ These release notes cover changes made to the [Mendix Data Hub Catalog](/data-hu
 
 #### Improvements
 
-* You can now filter by content you own in the Catalog. Click **Filter** to add filters, and select the **Owned by me** check box in the **Ownership** section.
+* You can now filter by content you own in the Catalog. Click **Filter** to add filters, and select the **Owned by me** checkbox in the **Ownership** section.
 
 ### September 15th, 2022
 
@@ -507,13 +575,13 @@ These release notes cover changes made to the [Mendix Data Hub Catalog](/data-hu
 
 #### Fixes
 
-* We fixed an issue where searching in the [Data Hub pane](/refguide/data-hub-pane/) in Studio Pro caused an error.
+* We fixed an issue where searching in the [Data Hub pane](/refguide9/data-hub-pane/) in Studio Pro caused an error.
 
 ### September 23rd, 2021
 
 #### Data Hub Free Edition
 
-* The Data Hub Free edition is now available to all Mendix users! Publish your data sources in the Data Hub Catalog, curate them, and then consume them in another application. Learn more about it [here](/data-hub/#data-hub-licences).
+* The Data Hub Free edition is now available to all Mendix users! Publish your data sources in the Data Hub Catalog, curate them, and then consume them in another application.
 
 #### Fixes
 

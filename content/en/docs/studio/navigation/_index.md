@@ -32,7 +32,7 @@ To create a new menu item, do the following:
 A new menu item or a sub-item is added to the navigation.
 
 {{% alert color="info" %}}
-In Studio, you are viewing and editing a Responsive type of the navigation profile, while there are more types of profiles in Studio Pro. For more information on profiles in Studio Pro, see the [Profiles](/refguide/navigation/#profiles) section in *Navigation* in the *Studio Pro Guide*. 
+In Studio, you are viewing and editing a Responsive type of the navigation profile, while there are more types of profiles in Studio Pro. For more information on profiles in Studio Pro, see the [Profiles](/refguide9/navigation/#profiles) section in *Navigation* in the *Studio Pro Guide*. 
 {{% /alert %}}
 
 For more information on how to configure navigation in your app, see [How to Configure a Navigation Bar](/studio-how-to/navigation-how-to-configure/).

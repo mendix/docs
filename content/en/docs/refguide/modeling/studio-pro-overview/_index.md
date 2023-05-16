@@ -26,7 +26,7 @@ This document describes the user interface of Mendix Studio Pro:
 
 {{< figure src="/attachments/refguide/modeling/studio-pro-overview/studio-pro-diagram.png" alt="Studio Pro Diagram" >}}
 
-## 2 Top Bar
+## 2 Top Bar {#top-bar}
 
 The Studio Pro top bar contains the following items:
 
@@ -44,21 +44,23 @@ For more information on menus, see [Menus](/refguide/menus/).
 
 You can deploy your app by clicking the **Publish** or play (**Run locally**) buttons. To view your deployed app, click **View App**. 
 
+{{< figure src="/attachments/refguide/modeling/studio-pro-overview/view-and-publish.png" alt="View and Publish buttons" >}}
+
 For more information on deployment in Mendix, see [Deployment](/developerportal/deploy/).
 
 For more information on deploying your app and versioning it, see the [Versioning an App Deployed to the Cloud](/refguide/using-version-control-in-studio-pro/#versioning-app) section in *Using Version Control in Studio Pro*. 
 
 ### 2.3 Links and User Profile Menu {#links}
 
-You can find links to the [Mendix Studio](/studio/) (if enabled), [Developer Portal](/developerportal/), and [Marketplace](/appstore/) in the upper-right corner of Studio Pro.
+You can find links to the [Developer Portal](/developerportal/) and [Marketplace](/appstore/) in the upper-right corner of Studio Pro.
 
 Your profile picture is displayed next to them if you are signed in. When you click the profile picture, the drop-down menu is displayed with your full name and email, as well as links to your user profile, My Apps screen, and signing out option. 
 
-## 3 App Structure
+## 3 App Structure (App Explorer)
 
 An app consists of individual files (*documents*) and settings that are grouped in folders and [modules](/refguide/modules/). The complete structure of your app can be viewed in the [App Explorer](/refguide/app-explorer/). 
 
-## 4 Working Area
+## 4 Working Area {#working-area}
 
 A working area is a current document tab that you work in. The working area and its settings differs depending on the editor (for example, pages, microflows, domain model editors) and type of the document. 
 
@@ -76,19 +78,23 @@ Each document has its own save state, history, and future, so undo and redo acti
 
 ## 5 Dockable Panes {#panes}
 
-Dockable panes can be positioned around the working area and contain various elements and settings. For example, you can view list of errors, configure properties of a specific document or an element, view toolbox. Panes are opened via [Menus](/refguide/menus/).
+Dockable panes can be positioned around the working area and contain various elements and settings:
 
-## 6 Status Bar
+{{< figure src="/attachments/refguide/modeling/studio-pro-overview/pane-example.png" alt="Properties Pane Example" width="300" >}}
 
-At the bottom of the Studio Pro main window pane is a status bar.
+For example, you can view [list of errors](/refguide/errors-pane/) or run [MxAssist Performance bot](/refguide/mx-assist-performance-bot/), configure properties of a specific document or an element, view toolbox. For more information on panes and their layout, see [View Menu](/refguide/view-menu/).
 
-On the left is the current status of Studio Pro.
+## 6 Status Bar {#status-bar}
+
+At the bottom of the Studio Pro main window pane is a status bar. On the left is the current status of Studio Pro:
+
+{{< figure src="/attachments/refguide/modeling/studio-pro-overview/status-bar.png" alt="Status Bar Example" >}}
 
 On the right is the currently selected language. If you have set up multiple languages in your app you can change the currently selected language by clicking here. For more information see [Language Menu](/refguide/translatable-texts/).
 
 ## 7 Shortcut Keys
 
-This section summarizes the shortcut keys available in Studio Pro. It is broken into sections which indicate where you can use the keys.
+This section summarizes the shortcut keys available in Studio Pro. It is divided into sections which indicate where you can use the keys.
 
 ### 7.1 General Shortcut Keys
 
@@ -247,3 +253,5 @@ The following shortcut keys are assigned to menu actions that can be used in all
 
 * [App Explorer](/refguide/app-explorer/)
 * [Menus](/refguide/menus/)
+* [Best Practices for Development](/refguide/dev-best-practices/)
+* [Best Practices for App Performance](/refguide/community-best-practices-for-app-performance/)

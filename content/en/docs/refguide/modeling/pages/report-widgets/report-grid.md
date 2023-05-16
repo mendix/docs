@@ -6,7 +6,7 @@ tags: ["studio pro"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 {{% alert color="info" %}}
-This widget been deprecated in version 9.0 and will be marked for removal in a future version.
+This widget has been deprecated and will be marked for removal in the future.
 {{% /alert %}}
 {{% alert color="warning" %}}
 The report grid widget is not supported on native mobile pages.
@@ -18,7 +18,7 @@ A **Report grid** shows data retrieved from the database using a [Data set](/ref
 
 The difference between a data grid and a report grid is that you can use a data grid to edit the data shown. A report grid will only display data. However, in a report grid, you can create additional information by merging and processing attributes when you define the data set which retrieves the data.
 
-The report grid is displayed in structure mode with the data set source shown between square brackets and colored blue. The data fields returned by the data set are shown in the report grid columns, under the column captions. See [Report Grid Column Data Source](#column-data-source) for information on how to assign a data field to a column.
+The report grid is displayed in **Structure mode** with the data set source shown between square brackets and colored blue. The data fields returned by the data set are shown in the report grid columns, under the column captions. See [Report Grid Column Data Source](#column-data-source) for information on how to assign a data field to a column.
 
 {{< figure src="/attachments/refguide/modeling/pages/report-widgets/report-grid/report-grid.png" alt="Report grid in structure mode" >}}
 

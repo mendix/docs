@@ -101,9 +101,7 @@ Ability to edit the parameters was introduced in version 7.17.0
 
 In this list, you can add, update or delete the [parameters of the operation](/refguide7/published-rest-operation-parameter/).
 
-<a name="import-mapping"></a>
-
-### 2.6.1 Import Mapping
+### 2.6.1 Import Mapping {#import-mapping}
 
 {{% alert color="info" %}}
 
@@ -156,7 +154,7 @@ If you select an export mapping that supports both XML and JSON (for instance, a
 | *application/json*           | JSON |
 | anything ending with *+json* | JSON |
 
-<a name="table1"></a>**Table 1: Recognized media types**
+<a id="table1"></a>**Table 1: Recognized media types**
 
 The export mapping is also used to generate object schemas for operation responses in the [OpenAPI (Swagger) documentation page](/refguide7/published-rest-services/#interactive-documentation) based on the [JSON schema](/refguide7/published-rest-service-json-schema/).
 

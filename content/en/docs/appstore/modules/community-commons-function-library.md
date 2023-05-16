@@ -15,7 +15,7 @@ The [Community Commons](https://marketplace.mendix.com/link/component/170/) modu
 
 All the functions in this package can be invoked using a [Java action call](/refguide/java-action-call/) in a microflow or from your own Java code by calling `communitycommons.<Action Folder>.<Action name>;` (for example, `communitycommons.StringUtils.hash("Mendix", 20);`).
 
-The module contains one constant: `CommunityCommons.MergeMultiplePdfs_MaxAtOnce`. This is used in the `MergeMultiplePdfs` Java action to restrict the number of PDFs processed at the same time. The default restriction is 10 files at once for Mendix Cloud v4-compatibility. If you need to merge more than 10 files, increase the number here. Setting the value to `<= 0` means unlimited.
+The module contains one constant: `CommunityCommons.MergeMultiplePdfs_MaxAtOnce`. This is used in the `MergeMultiplePdfs` Java action to restrict the number of PDFs processed at the same time. The default restriction is 10 files at once for Mendix Cloud compatibility. If you need to merge more than 10 files, increase the number here. Setting the value to `<= 0` means unlimited.
 
 ## 3 Function List
 
@@ -54,7 +54,7 @@ The module contains one constant: `CommunityCommons.MergeMultiplePdfs_MaxAtOnce`
 * `AssertTrue` – This is shorthand for checking something and throwing an error if that something is not true. This function saves creating three microflow items for things that MUST be true.
 * `CreateUserIfNotExists` – This microflow creates a user with a predefined password and role. This is useful during startup for integration purposes. The user always gets updated, even if the user already exists.
 * `Delay` – This causes a request to sleep for a number of milliseconds. This is useful for preventing brute force attacks or simulating latency delays.
-* `GetCFInstanceIndex` – This returns the Cloud Foundry instance index that is set during the deployment of the app in a cloud-native environment. Returns `0` for the leader instance, `1` or higher for slave instances, or `-1` when the environment variable could not be read (when running locally or on premises).
+* `GetCFInstanceIndex` – This returns the Cloud Foundry instance index that is set during the deployment of the app in a cloud-native environment. Returns `0` for the leader instance, `1` or higher for follower instances, or `-1` when the environment variable could not be read (when running locally or on premises).
 * `GetApplicationUrl` – This returns the runtime URL of this application.
 * `GetRuntimeVersion` – This returns the runtime version of this application.
 * `RetrieveURL` – This retrieves data (such as an HTML page) from an URL using the HTTP protocol and returns it as string.
@@ -73,8 +73,8 @@ The module contains one constant: `CommunityCommons.MergeMultiplePdfs_MaxAtOnce`
 ### 3.7 ORM
 
 * `CommitWithoutEvents` – This commits an object but without events.
-* <a name="clone"></a>`Clone` – This clones the objects.
-* <a name="deepclone"></a>`DeepClone` – This clones the objects, their associations, and their referred objects. For more information, see the [Limitations](#limitations) section below.
+* <a id="clone"></a>`Clone` – This clones the objects.
+* <a id="deepclone"></a>`DeepClone` – This clones the objects, their associations, and their referred objects. For more information, see the [Limitations](#limitations) section below.
 * `GetGUID` – This returns the global unique identifier (GUID) or the ID of an object.
 * `GetOriginalValueAsString` – This returns the original value of an object member, that is, the last committed value.
 * `GetTypeAsString` – This returns the actual type of an entity. Useful as an alternative way to split upon inheritance or as input for other functions in this module.

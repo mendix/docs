@@ -1,5 +1,5 @@
 ---
-title: "XPath Max"
+title: "XPath max"
 url: /refguide/xpath-max/
 tags: ["studio pro"]
 ---

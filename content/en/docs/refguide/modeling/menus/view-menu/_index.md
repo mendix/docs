@@ -91,7 +91,7 @@ There are two **Find Results** panes. If you lock the results of the first pane,
 
 For details on using Mendix Marketplace components in your app modeling, see [How to Use Marketplace Content in Studio Pro](/appstore/general/app-store-content/).
 
-### 3.10 MxAssist Performance Bot
+### 3.10 MxAssist Performance Bot {#mx-bot}
 
 For details on this intelligent virtual co-developer bot, see [MxAssist Performance Bot](/refguide/mx-assist-performance-bot/).
 
@@ -99,7 +99,7 @@ For details on this intelligent virtual co-developer bot, see [MxAssist Performa
 
 [Page Explorer](/refguide/page-explorer/) gives a quick overview of the page layout and allows you to view and edit nested containers in the [Design mode](/refguide/page/#design-mode).
 
-### 3.12 Properties
+### 3.12 Properties {#properties}
 
 The **Properties** pane displays the properties of the currently selected element. This is where a lot of editing in Studio Pro takes place.
 
@@ -115,7 +115,7 @@ The **Toolbox** has a tile view showing larger icons and a list view showing a l
 
 ### 3.15 Widget Developer Console
 
-This console helps you debug the configuration code of your widget that is responsible for conditionally visible properties, custom consistency checks, and Structure mode preview. This console shows logs from the `getProperties`, `getPreview`, `check`, and `getCustomCaption` functions, which can be defined inside the new configuration module (for more information, see the [Widget Developer Console](/apidocs-mxsdk/apidocs/pluggable-widgets-config-api/#widget-dev-console) section of *Configuration Module API for Pluggable Widgets*). 
+This console helps you debug the configuration code of your widget that is responsible for conditionally visible properties, custom consistency checks, and **Structure mode** preview. This console shows logs from the `getProperties`, `getPreview`, `check`, and `getCustomCaption` functions, which can be defined inside the new configuration module (for more information, see the [Widget Developer Console](/apidocs-mxsdk/apidocs/pluggable-widgets-config-api/#widget-dev-console) section of *Configuration Module API for Pluggable Widgets*). 
 
 ### 3.16 Debug Windows
 

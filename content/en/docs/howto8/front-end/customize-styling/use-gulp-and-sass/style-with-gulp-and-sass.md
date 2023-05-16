@@ -35,7 +35,7 @@ To set up the Gulp project, follow these steps:
 1. Download *gulp.zip* from [mendix/ux-theming](https://github.com/mendix/ux-theming/releases).
 2. Unzip the folder into your project's root folder.
 3. In your terminal, go to your project root folder by typing `cd`, then drag your root file into the terminal. Please note that if you do this on Windows and you encounter errors with installing the dependencies, open your CMD or PowerShell as Administrator.
-4. <a name="34"></a>Install the dependencies by typing `npm install`:
+4. <a id="34"></a>Install the dependencies by typing `npm install`:
 
     {{< figure src="/attachments/howto8/front-end/customize-styling/use-gulp-and-sass/style-with-gulp-and-sass/cd.png" >}}
 

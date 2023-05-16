@@ -46,7 +46,7 @@ The stack trace is a list of method calls from the point when the application wa
 
 In the Modeler, log messages that include a stack trace are marked with a paperclip icon. Double-clicking this icon shows the stack trace.
 
-### 2.2 Level<a name="Level"></a>
+### 2.2 Level {#Level}
 
 The log level defines the severity of the log message. In the Modeler, this is represented by different colors and an icon. 
 

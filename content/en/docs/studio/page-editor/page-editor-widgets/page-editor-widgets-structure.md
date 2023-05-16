@@ -113,7 +113,7 @@ In the **General** section of a row you can select the number of columns in it, 
 
         {{< figure src="/attachments/studio/page-editor/page-editor-widgets/page-editor-widgets-structure/adding-new-column.png" alt="Adding New Column"   width="300"  >}}
 
-* <a name="align-columns"></a>**Align Columns Vertically** – aligns all columns in the row vertically, you can select the following options:
+* <a id="align-columns"></a>**Align Columns Vertically** – aligns all columns in the row vertically, you can select the following options:
 
     {{< figure src="/attachments/studio/page-editor/page-editor-widgets/page-editor-widgets-structure/align-columns.png"   width="280"  >}}
 
@@ -249,7 +249,7 @@ For example, your team member in Studio Pro has created a snippet and added a cu
 
 {{< figure src="/attachments/studio/page-editor/page-editor-widgets/page-editor-widgets-structure/snippet-example.jpg"   width="500"  >}}
 
-While you can call (use) snippets on your pages in Studio, you cannot create, change, or delete them. For more information on snippets in Studio Pro, see [Snippet](/refguide/snippet/).
+While you can call (use) snippets on your pages in Studio, you cannot create, change, or delete them. For more information on snippets in Studio Pro, see [Snippet](/refguide9/snippet/).
 
 {{% alert color="info" %}}
 The **Snippet** widget is not displayed if your  does not contain any snippets. 

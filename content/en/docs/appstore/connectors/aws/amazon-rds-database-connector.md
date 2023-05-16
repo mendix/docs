@@ -34,7 +34,7 @@ To configure the Mendix Database Connector for Amazon RDS, follow these steps:
     3. Click **Edit inbound rules**.
     4. Click **Add rule**.
     5. Select **PostgreSQL** as the database type.
-    6. Select the IP address of your Mendix app as the source. If your app is hosted on Mendix Cloud, see [Mendix IP Addresses: Outgoing IP](/developerportal/deploy/mendix-ip-addresses/#outgoing) for a list of addresses to whitelist.
+    6. Select the IP address of your Mendix app as the source. If your app is hosted on Mendix Cloud, see [Mendix IP Addresses: Outgoing IP](/developerportal/deploy/mendix-ip-addresses/#outgoing) for a list of addresses to safe-list.
     7. Save the security group rule.
 3. Download the Database module and import it into your Mendix app. For more information, see [Database](/appstore/connectors/database-connector/).
 4. Configure the Database module to [connect to AWS RDS](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_ConnectToPostgreSQLInstance.html#USER_ConnectToPostgreSQLInstance.JDBCDriverPostgreSQL) by doing the following steps:
@@ -56,11 +56,9 @@ To configure the Mendix Database Connector for Amazon RDS, follow these steps:
             last_name VARCHAR(50) NOT NULL)
         ```
 
-{{< figure src="/attachments/appstore/connectors/aws-rds/setup.jpg" alt="The Execute Statement configuration dialog" >}}
+    {{< figure src="/attachments/appstore/connectors/aws-rds/setup.jpg" alt="The Execute Statement configuration dialog" >}}
 
-{{% alert color="info" %}}
-For the PostgresSQL database, you do not need to download the JDBC jar file because the library exists in the *userlib* folder.
-{{% /alert %}}
+    {{% alert color="info" %}}For the PostgresSQL database, you do not need to download the JDBC jar file because the library exists in the *userlib* folder.{{% /alert %}}
 
 5. Run your Mendix application and trigger the microflow that you configured.
 6. Verify that your Amazon RDS PostgreSQL database contains a new employee table.

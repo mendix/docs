@@ -43,7 +43,7 @@ The section properties are described in the table below:
 
 #### 2.1.2 Parameters Section {#parameters}
 
-Input parameters pass data to the element. Currently the parameters can only be selected and configured in Studio Pro. For more information, see [Call Microflow](/refguide/call-microflow/).
+Input parameters pass data to the element. Currently the parameters can only be selected and configured in Studio Pro. For more information, see [Call Microflow](/refguide9/call-microflow/).
 
 #### 2.1.3 Outcomes Section {#outcomes}
 

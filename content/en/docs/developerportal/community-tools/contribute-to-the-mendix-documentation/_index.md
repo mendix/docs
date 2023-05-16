@@ -1,8 +1,7 @@
 ---
 title: "Contribute to the Documentation"
 url: /developerportal/community-tools/contribute-to-the-mendix-documentation/
-category: "Community Tools"
-weight: 10
+weight: 1
 description: "Describes how to add and edit Mendix documentation as a Mendix community member."
 tags: ["documentation", "community"]
 #If moving or renaming this doc file, update the link in the site footer and links in the mendix/docs repo. See Mapping to Products for more details.
@@ -21,13 +20,13 @@ All documentation contributions may be edited to conform to our internal style g
 {{% /alert %}}
 
 {{% alert color="info" %}}
-**Quick guide to making a documentation change**
+**Quick guide to making a documentation change:**
 
 1. Fork the **development** branch of the [mendix / docs](https://github.com/mendix/docs) repository.
 2. Make your changes.
 3. Create a pull request with our **development** branch as the base.
 
-For a quick lesson on how to fork a repo and create a pull request, watch [How to Contribute to Someone's GitHub Repository (Fork/Pull Request)](https://www.youtube.com/watch?v=yr6IzOGoMsQ).
+For a details on how to fork a repo and create a pull request, watch [How to Contribute to Someone's GitHub Repository (Fork/Pull Request)](https://www.youtube.com/watch?v=yr6IzOGoMsQ).
 {{% /alert %}}
 
 This how-to will teach you how to do the following:
@@ -91,16 +90,15 @@ To submit a new how-to or *Studio Pro Guide* page to the Mendix documentation, s
 Follow these guidelines and conventions when writing:
 
 * Reference and use our [Documentation Writing Guidelines](/developerportal/community-tools/documentation-writing-guidelines/)
-* Make sure the document files comply with these naming conventions:
-    * Markdown file names should have the same name as the title of the page (for example, if the page is titled "Create Your App," the filename should be `create-your-app.md`)
-    * Document file names should always be lower-case with a hyphen (`-`) between each word
-    * Do not use spaces or any other symbols in the file name (for example, `&`), as these will not be accepted
+* Markdown file names should have the same name as the title of the page (for example, if the page is titled "Create Your App," the filename should be `create-your-app.md`)
+* Document file names should always be lower-case with a hyphen (`-`) between each word
+* Do not use spaces or any other symbols in the file name (for example, `&`), as these will not be accepted
 * Make sure the image files comply with these naming conventions:
-    * Image file names should always be lower-case with a hyphen (`-`) between each word
-    * Do not use spaces or any other symbols in the file name (for example, `&`), as these will not be accepted
-    * Make sure the image files have names that make sense so it is easy to find them
-    * Save the image files in a sub-folder in the **attachments** folder for the category in which the document is located (this sub-folder should have the same name as the document file name you are working on)
-    * The following image extensions are allowed: *.png* (preferred), *.jpg*, *.gif*
+* Image file names should always be lower-case with a hyphen (`-`) between each word
+* Do not use spaces or any other symbols in the file name (for example, `&`), as these will not be accepted
+* Make sure the image files have names that make sense so it is easy to find them
+* Save the image files in a sub-folder in the [attachments](https://github.com/mendix/docs/tree/development/static/attachments) folder for the location of the document (this sub-folder should have the same name as the document file name you are working on)
+* The following image extensions are allowed: *.png* (preferred), *.jpg*, *.gif*
 
 ### 5.3 Submitting Your Work
 

@@ -35,7 +35,7 @@ If you specify the `ORDER BY` clause, a `NULL` value always comes first before a
 
 If you specify the `ORDER BY` clause, `NULL` values by default are ordered as less than values that are not `NULL`. Using the `ASC` order, a `NULL` value comes before any non-`NULL` value. Using the `DESC` order, the `NULL` comes last.
 
-#### 3.1.3 DB2, ORACLE, and POSTGRESQL
+#### 3.1.3 ORACLE, and POSTGRESQL
 
 If you specify the `ORDER BY` clause, `NULL` values by default are ordered as more than values that are not `NULL`. Using the `ASC` order, a `NULL` value comes after any non-`NULL` value. Using the `DESC` order, the `NULL` comes first.
 
@@ -43,9 +43,9 @@ If you specify the `ORDER BY` clause, `NULL` values by default are ordered as mo
 
 This table presents the `NULLs` default sort ordering provided by different database types:
 
-| NULL Ordering Behavior/Database Types  | DB2 | HSQLDB | MARIADB/ MYSQL | ORACLE | POSTGRESQL | SAP HANA | SQL SERVER |
+| NULL Ordering Behavior/Database Types  | HSQLDB | MARIADB/ MYSQL | ORACLE | POSTGRESQL | SAP HANA | SQL SERVER |
 |---------------------:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
-| **ASC NULLS FIRST** |  | ✔ | ✔ |  |   | ✔ | ✔ |
-| **ASC NULLS LAST**| ✔ |  |  |  ✔ |  ✔| | |
-| **DESC NULLS FIRST**| ✔ | ✔ |   | ✔  | ✔| | |
-| **DESC NULLS LAST**|  |  | ✔ |   |  | ✔ | ✔ |
+| **ASC NULLS FIRST** | ✔ | ✔ |  |   | ✔ | ✔ |
+| **ASC NULLS LAST**|  |  |  ✔ |  ✔| | |
+| **DESC NULLS FIRST**| ✔ |   | ✔  | ✔| | |
+| **DESC NULLS LAST**| | ✔ |   |  | ✔ | ✔ |

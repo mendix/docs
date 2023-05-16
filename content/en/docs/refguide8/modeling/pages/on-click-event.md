@@ -83,7 +83,7 @@ The **Show a page** event opens the specified page. Select the page which opens 
 
 * **Page title** – the page you open can be given a unique title, depending on where you open it from. This allows you to re-use the same page for different purposes. For example, by setting the title to **New Customer** from one button and **Edit Customer** from another, you can use the same page for editing new and existing customers.
 
-    This option is activated by checking the **Override page title** check box in the **Edit** dialog box:
+    This option is activated by checking the **Override page title** checkbox in the **Edit** dialog box:
 
     {{< figure src="/attachments/refguide8/modeling/pages/on-click-event/page-title-property.png" alt="Page Title Property" >}}
 
@@ -179,6 +179,10 @@ For example, *Do not empty*.
 ##### 3.3.2.10 Maintain Selection After Microflow
 
 For buttons which call a microflow from inside a grid, **Maintain selection after microflow** specifies whether the current selection of rows in the grid should be maintained after executing the microflow.
+
+{{% alert color="warning" %}}
+If the data in the grid is updated, selection on the *not* visible pages is lost if the items are selected via an approach other than a **Select all** button. Therefore, consider this feature carefully when implementing it in an app with multiple pages.
+{{%/alert %}}
 
 ##### 3.3.2.11 Abort on Validation Errors
 

@@ -12,17 +12,17 @@ Mendix allows for microflows to be triggered in pages by a variety of widgets. T
 | --- | --- | --- |
 | Action button (data view) | On click | Data view object |
 | Data view | Data source | Object of the data view containing this data view |
-| Action button (grid)<sup><a name="ref1" href="#fn1">1</a></sup> | On click | Grid selection or clicked row (as an object or as a list, depending on the [selection mode](/refguide7/data-grid/)) |
+| Action button (grid)<sup><a id="ref1" href="#fn1">1</a></sup> | On click | Grid selection or clicked row (as an object or as a list, depending on the [selection mode](/refguide7/data-grid/)) |
 | Reference set selector | On change | Data view object |
-| Input widget<sup><a name="ref2" href="#fn2">2</a></sup> | On change | Data view object |
+| Input widget<sup><a id="ref2" href="#fn2">2</a></sup> | On change | Data view object |
 | Input widget | On enter | Data view object |
 | Input widget | On leave | Data view object |
 | Image viewer | On click | Image viewer object |
 | Action button | On click | Enclosing data view object, if available |
 | Reference selector | Data source | Data view object |
 
-<small><sup><a name="fn1" href="#ref1" title="Jump back to footnote 1 in the text.">1</a></sup> The following grid widgets have grid action buttons: *data grid*; *template grid*; and *reference set selector*.</small><br/>
-<small><sup ><a name="fn2" href="#ref2" title="Jump back to footnote 2 in the text.">2</a></sup> The following widgets are input widgets: *check box*; *date picker*; *drop-down*; *text area*; and *text box*.</small>
+<small><sup><a id="fn1" href="#ref1" title="Jump back to footnote 1 in the text.">1</a></sup> The following grid widgets have grid action buttons: *data grid*; *template grid*; and *reference set selector*.</small><br/>
+<small><sup ><a id="fn2" href="#ref2" title="Jump back to footnote 2 in the text.">2</a></sup> The following widgets are input widgets: *checkbox*; *date picker*; *drop-down*; *text area*; and *text box*.</small>
 
 ## 2 Microflow
 
@@ -81,7 +81,7 @@ The progress message is shown along with the progress bar if the progress bar is
 
 ## 5 Confirmation
 
-If a microflow is triggered by a button you have the option to ask for confirmation before proceeding with the microflow. This is useful in cases where an operation modifies or deletes a lot of data or when it takes a lot of time to complete. The user will be prompted with a question whether he/she wants to continue with this operation.
+If a microflow is triggered by a button you have the option to ask for confirmation before proceeding with the microflow. This is useful in cases where an operation modifies or deletes a lot of data or when it takes a lot of time to complete. The user will be prompted with a question whether they want to continue with this operation.
 
 Note: the title of the confirmation pop-up is determined by a system text (category 'Message dialog title').
 

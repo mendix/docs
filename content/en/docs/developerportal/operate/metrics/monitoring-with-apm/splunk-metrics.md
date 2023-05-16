@@ -3,14 +3,14 @@ title: "Splunk for the Mendix Cloud"
 url: /developerportal/operate/splunk-metrics/
 parent: "metrics"
 weight: 30
-description: "How to configure Mendix Cloud v4 to send your runtime application logs Splunk Cloud Platform."
-tags: ["Splunk Cloud Platform", "Mendix Cloud", "v4", "monitoring", "analysis", "logs"]
+description: "How to configure the Mendix Cloud to send your runtime application logs Splunk Cloud Platform."
+tags: ["Splunk Cloud Platform", "Mendix Cloud", "monitoring", "analysis", "logs"]
 #To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 ---
 
 ## 1 Introduction
 
-[Splunk Cloud Platform](https://www.splunk.com/en_us/products/splunk-cloud-platform.html) is a monitoring and analysis tool for cloud applications. This document explains how to configure your Mendix Cloud v4 app to send the runtime application logs to Splunk Cloud Platform to provide additional search, analysis, and visualization of your runtime application logs.
+[Splunk Cloud Platform](https://www.splunk.com/en_us/products/splunk-cloud-platform.html) is a monitoring and analysis tool for cloud applications. This document explains how to configure your Mendix Cloud app to send the runtime application logs to Splunk Cloud Platform to provide additional search, analysis, and visualization of your runtime application logs.
 
 {{% alert color="info" %}}
 Mendix provides integration with [Splunk Cloud Platform](https://www.splunk.com/en_us/products/splunk-cloud-platform.html) – it does not currently integrate with other Splunk monitoring products.
@@ -29,6 +29,8 @@ To use Splunk Cloud Platform, and to send data to Splunk Cloud Platform from you
 * A licensed Mendix app of which you are the [Technical Contact](/developerportal/collaborate/app-roles/#technical-contact)
 
 ## 3 Connect Node to Splunk Cloud Platform{#connect-node}
+
+### 3.1 Set up Splunk integration on the Developer Portal
 
 To send your runtime information to Splunk Cloud Platform, you need to set it up using environment variables in the Developer Portal.
 
@@ -62,6 +64,34 @@ To send your runtime information to Splunk Cloud Platform, you need to set it up
 5. Return to the **Environments** page for your app and *Deploy* or *Transport* your app into the selected environment.
 
     {{% alert color="warning" %}}Your app must be **redeployed** the first time you set up the Splunk Cloud Platform integration as additional dependencies need to be included.<br/><br/>Restarting the app is not sufficient to start sending data to Splunk Cloud Platform.{{% /alert %}}
+
+### 3.2 Metadata
+
+In addition to the runtime application logs, the following JSON-formatted metadata is automatically sent to the Splunk Cloud Platform:
+
+* `environment_id` - unique identifier of the environment
+* `instance_index` - number of the application instance
+* `hostname` - name of the application host
+* `application_name` - default application name, retrieved from domain name
+* `model_version` - model version of the Mendix runtime
+* `runtime_version` - version of the Mendix runtime
+
+You can filter the data by these fields.
+
+### 3.3 Custom tags
+
+You can also set up custom tags in the following format `key:value`. We recommend that you add the following custom tags:
+
+* `app:{app_name}` – this enables you to identify all logs sent from your app (for example, **app:customermanagement**)
+* `env:{environment_name}` – this enables you to identify logs sent from a particular environment so you can separate out production logs from test logs (for example, **env:accp**)
+
+To set these tags, do the following:
+
+1. Go to the **Environments** page of your app in the *Developer Portal*.
+2. Click **Details** to select an environment you are monitoring with Splunk. 
+3. Open the **Tags** tab.
+4. Add a **Tag** – this is the string which is sent to Splunk as a tag.
+5. **Restart** the application.
 
 ## 4 Additional Information{#additional-info}
 

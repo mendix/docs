@@ -35,7 +35,7 @@ With the User Mapping properties you can grant the user access to the different 
 
 The Mendix Runtime keeps the database consistent. This means that the runtime validates the database structure at the start-up and automatically generates the SQL scripts to update the table structure. The Mendix Service Console provides you with the option to execute these scripts directly on the database. The Mendix Runtime requires the usage of the schema ‘dbo’
 
-The recommended database role is `db_owner`. If you choose not to assign the `db_owner` role to the user, the following roles should be assigned. The roles `db_datareader`, `db_datawriter` and execute procedure permission on `usp_nextsequencevalue` are the minimum permission the user should get so he can read and write in the contents of all the tables.
+The recommended database role is `db_owner`. If you choose not to assign the `db_owner` role to the user, the following roles should be assigned. The roles `db_datareader`, `db_datawriter` and execute procedure permission on `usp_nextsequencevalue` are the minimum permissions the user should get so they can read and write in the contents of all the tables.
 You can give the execute procedure permission using the following command:
 
 `GRANT EXECUTE ON OBJECT::usp_nextsequencevalue TO <YourDatabaseUser>`

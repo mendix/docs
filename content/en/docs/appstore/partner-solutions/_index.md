@@ -10,6 +10,6 @@ tags: ["marketplace", "marketplace component", "partner solution", "qas", "ats",
 
 ## 1 Introduction
 
-These supported add-ons can be used for testing the quality of your apps.
+These partner solutions can be used for testing the quality of your apps.
 
 ## 2 Documents in This Category

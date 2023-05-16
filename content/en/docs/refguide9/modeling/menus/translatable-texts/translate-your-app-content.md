@@ -232,7 +232,7 @@ To set up the completeness check, do the following:
 
 1. Go to **Language > Language Settings**. The **App Settings** dialog box opens.
 2. In the grid, double-click the language for which you want to set the completeness check. The **Edit Language** dialog box opens.
-3. Select the **Check completeness** check box.
+3. Select the **Check completeness** checkbox.
 4. Click **OK** to close the **Edit Language** dialog box. 
 5. In the **App Settings** dialog box, click **OK** to save the changes and close the dialog box. You then receive warnings about all text which has not been translated into that language. There is always a completeness check for the default language.
 

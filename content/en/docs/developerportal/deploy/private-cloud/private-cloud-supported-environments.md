@@ -37,7 +37,7 @@ If deploying to Red Hat OpenShift, you need to specify that specifically when cr
 Mendix for Private Cloud Operator `v2.*.*` is the latest version which officially supports:
 
 * Kubernetes versions 1.19 through 1.26
-* OpenShift 4.6 through 4.11
+* OpenShift 4.6 through 4.12
 
 {{% alert color="warning" %}}
 Kubernetes 1.22 is a [new release](https://kubernetes.io/blog/2021/08/04/kubernetes-1-22-release-announcement/) which removes support for several deprecated APIs and features.
@@ -171,7 +171,7 @@ It doesn't require any external database or provider and is great for quick test
 {{% alert color="info" %}}
 An app using an ephemeral database will lose all data if its environment is stopped or restarted.
 
-An app with an ephemeral database cannot have more than one replica. Only the first (master) replica will be able to start.
+An app with an ephemeral database cannot have more than one replica. Only the first (leader) replica will be able to start.
 {{% /alert %}}
 
 ### 4.2 Standard PostgreSQL Database
@@ -208,7 +208,7 @@ Azure PostgreSQL databases require additional firewall configuration to allow co
 Some managed PostgreSQL databases might have restrictions or require additional configuration.
 
 {{% alert color="info" %}}
-To use a PostgreSQL database, the Mendix Operator requires a master account with permissions to create new users and databases.
+To use a PostgreSQL database, the Mendix Operator requires a Superuser account with root privileges and permissions to create new users and databases.
 
 For every Mendix app environment, a new database schema and user (role) will be created so that the app can only access its own data.
 {{% /alert %}}
@@ -247,7 +247,7 @@ Amazon and Azure SQL servers require additional firewall configuration to allow 
 Some managed SQL Server databases might have restrictions or require additional configuration.
 
 {{% alert color="info" %}}
-To use a SQL Server database, the Mendix Operator requires a master account with permissions to create new users and databases.
+To use a SQL Server database, the Mendix Operator requires Superuser account with permissions to create new users and databases.
 
 For every Mendix app environment, a new database, user and login will be created so that the app can only access its own data.
 

@@ -71,7 +71,7 @@ To restore the database, follow these steps:
     * Take tail-log backup before the restore is selected if it is necessary for the point in time that you have selected
         * You do not need to modify this setting, but you can choose to backup the tail of the log even if it is not required
     * Restore operations may fail if there are active connections to the database
-        * Check the **Close existing connections** option to ensure that all active connections between Management Studio and the database are closed (this check box sets the database to single user mode before performing the restore operations and sets the database to multi-user mode when complete)
+        * Check the **Close existing connections** option to ensure that all active connections between Management Studio and the database are closed (this checkbox sets the database to single user mode before performing the restore operations and sets the database to multi-user mode when complete)
     * Select **Prompt before restoring each backup** if you wish to be prompted between each restore operation
         * This is not usually necessary unless the database is large and you wish to monitor the status of the restore operation
 9. Click **OK**.

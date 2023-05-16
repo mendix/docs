@@ -41,7 +41,7 @@ In the 8.18.1 example, the second number (**18**) indicates the minor version.
 
 A minor version is generally released every month. It includes new features and fixes, but it does not include breaking changes.
 
-### 1.3 Patch Version
+### 1.3 Patch Version {#patch-version}
 
 In the 8.18.1 example, the third number (**1**) indicates the patch version. 
 

@@ -8,7 +8,7 @@ description: "Describes Mendix best practices for developing Mendix applications
 tags: ["best practice", "development", "develop", "reusable", "prefix"]
 aliases:
     - /howto/general/dev-best-practices/
-#Academy are SMEs for verification, they discuss and link to this doc in training
+#Academy are SMEs for verification, they use/link to this doc in training; microflow prefix naming convention from ES and Academy
 ---
 
 ## 1 Introduction
@@ -308,7 +308,7 @@ When using inheritance (specialization/generalization), it is recommended to use
 
 #### 4.1.3 Delete Behavior
 
-[Delete behavior](/refguide/create-a-basic-data-layer/#delete-behavior) must be specified where possible. Delete behavior must, however, never be relied upon when deleting large amounts of data. For performance reasons it is better to explicitly delete dependent objects when doing batch deletes.
+[Delete behavior](/refguide/configuring-a-domain-model/#delete-behavior) must be specified where possible. Delete behavior must, however, never be relied upon when deleting large amounts of data. For performance reasons it is better to explicitly delete dependent objects when doing batch deletes.
 
 #### 4.1.4 Event Handlers
 

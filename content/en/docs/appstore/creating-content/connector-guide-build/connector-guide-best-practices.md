@@ -405,7 +405,7 @@ Gradle can handle managing Java dependencies and running [JUnit](http://junit.or
 
 #### 6.2.2 Using the Java Unit Test Reference
 
-Mendix apps need `Core` classes, and the [Core API](https://apidocs.rnd.mendix.com/9/runtime/com/mendix/core/Core.html) allows you to do things that you usually do in a microflow, like committing an object. `CoreProxy` serves as a mockable layer between your Java logic and the `Core` API. 
+Mendix apps need `Core` classes, and the **Class Core** [Runtime API](/apidocs-mxsdk/apidocs/runtime-api/) allows you to do things that you usually do in a microflow, like committing an object. `CoreProxy` serves as a mockable layer between your Java logic and the **Core** API. 
 
 Our [Java unit test reference](https://Github.com/mendixlabs/javaunittestreference) is available to help you through this process. `MendixUnitTestBase.java` is extendable and reusable for your own purposes. When extended, it enables Mockito on your test classes and mocks `Core` API behavior.  This does the following:
 
@@ -432,7 +432,6 @@ When calling a REST service, you can run into an error. This can be one of two t
 1. Error with a response
 2. Error without a response
    
-
 If there is no response, the default error handling is enough. This will typically occur when the endpoint is down or when you get a timeout.
 
 If there is a response the error message will contain the error code and the reason, but not the message. For that reason, add an additional log message with the response and then rethrow the error. Add details about the request that will help the developer.

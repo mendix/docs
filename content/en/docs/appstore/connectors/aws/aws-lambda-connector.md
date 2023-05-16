@@ -104,6 +104,7 @@ This activity lists all the Lambda functions which are available for the supplie
 #### 4.2.2 InvokeFunction
 
 This activity invokes a [Lambda function](https://docs.aws.amazon.com/lambda/latest/dg/lambda-functions.html).
+By default, this function invokes Lambda functions synchronously. To invoke an asynchronous Lambda function, make sure to update the `InvokeAsynchronous` attribute of the `InvokeFunctionRequest` entity to `true`.
 
 **Parameters**
 

@@ -21,11 +21,11 @@ Mendix also offers an [OIDC SSO](/appstore/modules/oidc/) module if you want to 
 
 Examples of the use of the SAML module include the following:
 
-* authenticating against your Microsoft Active Directory server in a secure manner utilizing the SAML capabilities of Active Directory Federation Services (ADFS) — the SAML protocol allows for the encryption of all information transferred between the two servers, so VPN connections, LDAP, or Kerberos authentication are no longer needed
-* implementing SSO in your Mendix App through a Shibboleth identity Provider
-* identifying the end-users of your Mendix app through SAML-enabled national identity schemes such as eHerkenning, a Dutch eID scheme for B2B or B2G scenarios, or DigiD, which gives Dutch citizens access to (semi) governmental services
+* Authenticating against your Microsoft Active Directory server in a secure manner utilizing the SAML capabilities of Active Directory Federation Services (ADFS) — the SAML protocol allows for the encryption of all information transferred between the two servers, so VPN connections, LDAP, or Kerberos authentication are no longer needed
+* Implementing SSO in your Mendix App through a Shibboleth identity Provider
+* Identifying the end-users of your Mendix app through SAML-enabled national identity schemes such as eHerkenning, a Dutch eID scheme for B2B or B2G scenarios, or DigiD, which gives Dutch citizens access to (semi) governmental services
     {{% alert color="info" %}}Some of these identity schemes use optional features of SAML which are not yet supported in the SAML SSO module — see [Limitations](#limitations) for more information{{% /alert %}}
-* authenticating within a Mendix session — for example requiring end-users to re-authenticate shortly before they are allowed to do critical transaction in your app or having a second user authenticate within the context of the first user’s session in your Mendix app
+* Authenticating within a Mendix session — for example requiring end-users to re-authenticate shortly before they are allowed to do critical transaction in your app or having a second user authenticate within the context of the first user’s session in your Mendix app
 
 ### 1.2 Features
 
@@ -60,6 +60,8 @@ For easy configurability, the SAML module offers the following:
 
 The SAML module keeps a log/audit trail of login attempts. These can be downloaded.
 
+The SAML module allows you to have an SSO connection with multiple SAML IdPs. Each IdP can have its own keypair.
+
 ### 1.3 Limitations{#limitations}
 
 The Mendix SAML SSO module does not support the following:
@@ -68,10 +70,12 @@ The Mendix SAML SSO module does not support the following:
 * Enhanced Client/Proxy SSO profile
 * HTTP artifact binding for SAML requests
 
+When using SSO connections with multiple IdP's, the SAML EntityID for your app will be shared with all connected IdPs. The SAML module does not allow you to configure different EntityID's for each of your connected IdPs.
+
 Some SAML services, such as eHerkenning and DigID in the Netherlands, use optional features of SAML which are not yet supported by the Mendix SAML SSO module. These include:
 
 * Signature included as a query string parameter in URL (for HTTP-REDIRECT)
-* restriction of RelayState to 80 characters (i.e. SAML SSO may generate RelayState values that exceed 80 characters)
+* Restriction of RelayState to 80 characters (i.e. SAML SSO may generate RelayState values that exceed 80 characters)
 * ProviderName
 * Scoping
 * RequestedAuthnContext in the SAML requests
@@ -83,30 +87,59 @@ If you want to connect your app to multiple SAML IdPs, you cannot use different 
 
 The URL for downloading the SP metadata of your app is independent of the value of the EntityID that you configure for your app (see [Configuring Service Provider](#configure-sp)) and which is included in the SP metadata. Instead, the metadata URL is based on the alias for the connected IDP where the SP metadata will be used.
 
-### 1.4 Dependencies{#dependencies}
+### 1.4 Prerequisites {#dependencies}
 
-{{% alert color="warning" %}}
-If you are running your app outside of the Mendix Cloud, make sure you have [external file storage](/refguide/system-requirements/#file-storage) configured. The SAML module writes configuration data to a file document on the file storage to read it later. Without external file storage, this configuration will be lost when you restart your app. The SAML module will not work correctly without reading the configuration data from the file storage.
-{{% /alert %}}
+* Install and configure the [Mx Model Reflection](/appstore/modules/model-reflection/) module.
+* Install and configure the [Encryption](/appstore/modules/encryption/) module – this is needed to encrypt the key store passwords in version 3.5.0 and above of the SAML module.
+* For apps running outside of the Mendix Cloud, make sure you have [external file storage](/refguide/system-requirements/#file-storage) configured.
 
-* [Mx Model Reflection](/appstore/modules/model-reflection/)
+    {{% alert color="warning" %}}The SAML module writes configuration data to a file document on the file storage to read it later. Without external file storage, this configuration will be lost when you restart your app. The SAML module will not work correctly without reading the configuration data from the file storage.
+    {{% /alert %}}
 
-There are different versions of the module, depending on which version of Mendix you are using. These versions may change, see the versions available in the [SAML module](https://marketplace.mendix.com/link/component/1174/).
+* For apps running on a Microsoft Windows environment, add the following rule to the [Microsoft Internet Information Services Server Configuration](/developerportal/deploy/deploy-mendix-on-microsoft-windows/#configure-msiis):
 
-* Mendix version 7 – SAML module version 1.17.1
-* Mendix version 8 – SAML module version 2.3.1
-* Mendix version 9 (upgraded from version 8) – SAML module version 3.3.8
-* Mendix version 9 and above (new app using Atlas version 3.0) – SAML module version 3.3.9
-
-For Mendix version 9 and above, the versions for new apps (odd-numbered patch versions) differ from those for upgrading from Mendix version 8 (even numbered patch versions) as they have the newer version of Atlas UI (version 3). This is because using Atlas 3 with an app upgraded from Mendix version 8.x (which uses Atlas version 2) would result in issues because the templates for the SAML module pages would not exist.
+    ```xml {linenos=false}
+    <rule name="sso">
+        <match url="^(sso/)(.*)" />
+        <action type="Rewrite" url="http://localhost:8080/{R:1}{R:2}" />
+    </rule>
+    ```
 
 ## 2 Installation
+
+There are different versions of the SAML module, depending on which version of Mendix you are using. To find and install the correct release, follow these steps:
+
+1. In Mendix Marketplace, search for the [SAML module](https://marketplace.mendix.com/link/component/1174/).
+1. In the **Releases** tab, find the correct release for your Mendix version:
+
+    * For Mendix version 9, there are interleaved odd- and even-numbered patch releases that contain the same changes and require the same Mendix version (for example, SAML module version 3.4.0 and 3.4.1 have the same functionality and require Mendix version 9.22.0 or above). 
+    
+        The even-numbered releases (for example, 3.4.0) are intended for apps that were originally built on an earlier version of Mendix, and then upgraded to Mendix version 9. 
+        
+        The odd-numbered releases (for example, 3.4.1) are for new apps that were built using Mendix version 9 and are using the 3.0 version of Atlas UI. 
+        
+        {{% alert color="info" %}}Using Atlas 3.0 with an app upgraded from Mendix version 8 (which uses Atlas version 2) would result in issues because the templates for the SAML module pages would not exist. Because of that, you must ensure that you download the correct release for your new or upgraded app.
+        {{% /alert %}}
+    
+    * For Mendix version 8, look for releases in the **2.x** range. For example, if your Mendix version is 8.18.7, download the 2.2.3 release of the SAML module.
+    * For Mendix version 7, look for releases in the **1.x** range. For example, if your Mendix version is 7.23.21, download the 1.16.7 release of the SAML module.
+
+1. Click on a release to see the minimum Mendix version it supports. For example, release 3.3.13 supports Mendix versions 9.12.5 and above. 
+
+    It is recommended that you use the highest version of the module which supports your Mendix version (for example, if you are using Mendix 9.22.0 you would preferably use at least release 3.4.0 of the module).
+
+    {{< figure src="/attachments/appstore/modules/saml/saml-versions.png" alt="A SAML module release with the supported Mendix version highlighted">}}
+
+1. To download the required release, click the **Download** link by the number of the release.
+1. Follow the instructions in [How to Use Marketplace Content in Studio Pro](/appstore/general/app-store-content/) to import the SAML module into your app.
+
+### 2.1 Post-Installation Configuration Steps
 
 By default, the SAML module will be installed as the **SAML20** module in your app’s Marketplace modules. You can find all microflows and other configuration elements in this module.
 
 1. Configure the **Startup** microflow in the SAML module (**SAML20.Startup**) to run as (part of) the [After startup](/refguide/app-settings/#after-startup) microflow. This microflow will initialize the custom request handler `/SSO/` (please note the importance of using the final `/` for all instances of `/SSO/`), validate all IdP configurations, and prepare the configuration entities required during the configuration.
-1. If you have set up path based access restrictions in your cloud (for example [Path-Based Access Restrictions](/developerportal/deploy/environments-details/#path-based-restrictions) in the Mendix Cloud), ensure that access to `/SSO/` is allowed.
-1. Add the **OpenConfiguration** microflow to the navigation, and then allow the administrator to access this page.
+1. If you have set up path-based access restrictions in your cloud (for example [Path-Based Access Restrictions](/developerportal/deploy/environments-details/#path-based-restrictions) in the Mendix Cloud), ensure that access to `/SSO/` is allowed.
+1. Add the **OpenConfiguration** microflow to the navigation, and then allow the administrator to access this microflow.
 1. Review and configure all the constants:
     * **DefaultLoginPage** – You can specify a different login page here for when the login process fails. When the end-user cannot be authenticated in the external IdP, a button will appear, and by clicking this button, they will be redirected to the specified login page. If this is left blank, an unauthenticated user will be redirected to `/login.html`.
     * **DefaultLogoutPage** – Removing the sign-out button is recommended, but if you choose to keep it, the end-user will be redirected to a page. You can choose where the end-user is redirected to (for example, back to `/SSO/` or your `login.html` page). Every user signed in via SAML is redirected to this location when they are logged out.
@@ -151,52 +184,18 @@ The base URL used for the links in your SP metadata is determined by the **Appli
 You can choose what you want to enter for the **Entity Id**, **Organization**, and **Contact person**. The SAML module imposes no restrictions and doesn’t apply any validations. The SAML core specification recommends that you “use a URL containing its own domain name to identify itself“ as the value of the EntityID of your app.
 
 * **Log available days** – If **Log SAML Requests** is checked in the IdP configuration, all login attempts are tracked in the **SAMLRequest** and **SSOLog** entities. This setting configures how long those records are kept before removing them. A scheduled event runs daily to remove all the files outside that date range. This value is mandatory. If it is set to 0, all records will be removed daily.
-* **Use Encryption** – This setting controls the encryption and signing of messages being exchanged between your app (as an SP) and the IdP. This is in addition to the encryption provided by using a secure HTTPS connection. For security and privacy reasons it is recommended that you enable this. Limitations in your IdP may be a reason not to enable it, but this should typically not be the case.
+* **Use Encryption** *Versions of the SAML module below 3.5* – This setting controls the encryption and signing of messages being exchanged between your app (as an SP) and the IdP.
+    {{% alert color="info" %}}
+From version 3.5 of the SAML module, this functionality can be set independently for each IdP you configure and has been moved to the IdP-specific settings.
 
-    If you choose to use encryption, you will need to select the appropriate values:
-
-    * **Encryption method** – `SHA1 - RSA` or `SHA256 - RSA`
-    * **Encryption key length** – 1024 or 2048 bits
-
-    Enabling encryption has the following effects on messages being exchanged:
-
-    * all the messages between your app and the IdP will be encrypted, this requires the IdP’s metadata to contain a KeyDescriptor having ‘use’ value ‘encryption’ or empty — see [Identity Provider Metadata](#idp-metadata) for more information
-    * all the messages between your app and the IdP will be signed. The SP metadata exported from your app will have `AuthnRequestSigned` with value `true`. This corresponds to IdPs whose metadata have `WantAuthnRequestSigned` with value `true`
-    * in SAML SSO module versions 1.17.3 and above, 2.3.0 and above, and 3.3.0 and above, your IdP is expected to sign all SAML assertions sent to your app. The SP metadata will have `WantAssertionsSigned` with value `true`. Any assertions that are not properly signed will be rejected. SAML’s signature inheritance is supported as well; if the SAML response message is signed by the IdP, it is not necessary for the assertion to be signed as well
-
-    See [Managing the Keys and Key Store](#keystore), below, for additional information and options related to encryption and signing keys.
+See [Encryption Settings](#encryption-settings), below, for additional information and options related to encryption and signing keys.
+    {{% /alert %}}
 
 {{% alert color="info" %}}
 The SP metadata that you supply to the IdP is only available after you have configured the [IdP-specific settings](#idp-specific-settings) following the instructions below.
 {{% /alert %}}
 
-#### 3.1.1 Managing the Keys and Key Store{#keystore}
-
-SAML implements encryption and signing using asymmetric keys. If encryption is enabled, all the certificates required for encryption are stored in the key store. When you choose **Use encryption** a key store is automatically created using the URL of the application, or the custom EntityID, and shown as the **Key store alias**.
-
-The key-pair(s) for your app (as an SP) can be self-generated by the SAML module or you can upload keypair certificate(s) provided by your IdP. 
-
-You can usually leave the key store settings as the default. The SAML module will generate distinct key pairs for signing and encryption. The self-generated key pairs are used for all IdPs, if your app is configured to use multiple IdPs.
-
-However, there may be a requirement to use a specific key store.
-
-{{% alert color="warning" %}}
-Resetting the key store or uploading another key store will require you to export the SP metadata and import it to all applicable IdPs.
-
-It is currently not possible to have different key pairs for communication with different IdPs; the same SP key pair will be used with all configured IdPs.
-{{% /alert %}}
-
-If you want to upload a key pair certificate, click **Upload** to upload a key store file. Use the **Entity Id** as the the alias of the key store.
-
-Click **Reset** to return the key store settings to their defaults. 
-
-Click **Download** to download the key store file and use it when configuring other SAML SPs.
-
-{{% alert color="info" %}}
-Remember to set the new key store password in the `KeystorePassword` constant of your app.
-{{% /alert %}}
-
-### 3.2 Configuring the IdP-Specific Settings{#idp-specific-settings}
+### 3.2 Creating the IdP-Specific Settings{#idp-specific-settings}
 
 Each IdP (entity descriptor) should have its own configuration set. Every IdP can be configured and enabled separately. All changes made in the configuration are immediately applied when you save the configuration. 
 
@@ -220,7 +219,7 @@ The XML for the SP metadata is signed. If you make any changes to the metadata (
 
 The following settings apply to this IdP configuration:
 
-* **Alias** – The alias for your IDP can be used in the URL of the application to indicate the IdP configuration that should be used during login. There are no validations on this field (except that it is required), but you should make sure that this alias is compatible with usage in an URL (meaning, no `/`, `&`, `?`, or special character that could get lost in the communication).
+* **Alias** – The alias for your IDP can be used in the URL of the application to indicate the IdP configuration that should be used during login. The alias must be unique, but you should also make sure that this alias is compatible with usage in an URL (meaning, no `/`, `&`, `?`, or special character that could get lost in the communication).
 * **Log SAML Requests** – Determines whether all requests and login attempts should be logged and stored in an entity.
 
 #### 3.2.3 Identity Provider Metadata{#idp-metadata}
@@ -498,6 +497,53 @@ Requesting user attributes at the SAML IdP is only available in the following ve
 
 * v3.3.0/v3.3.1 and above for Mendix version 9 and above
 * v2.3.0 and above for Mendix version 8
+
+### 4.6 Encryption Settings{#encryption-settings}
+
+* **Enable better security for app** (or *Use encryption*) – This setting controls the encryption and signing of messages being exchanged between your app (as an SP) and the IdP. This is in addition to the encryption provided by using a secure HTTPS connection. For security and privacy reasons it is enabled by default. When using the POST binding ensure the security/encryption settings remain enabled. When using the artifact binding on the responses, or if there are limitations in your IdP, it is possible to disable the security/encryption setting but we do not recommend this.
+
+    When you use encryption, you will need to set the following values:
+
+    * **What algorithm do you want to use to sign messages** (or *Encryption method*) – `SHA1 - RSA` or `SHA256 - RSA`
+    * **Encryption key length** – 1024 or 2048 bits
+
+    Enabling encryption has the following effects on messages being exchanged:
+
+    * all the messages between your app and the IdP will be encrypted, this requires the IdP’s metadata to contain a KeyDescriptor having ‘use’ value ‘encryption’ or empty — see [Identity Provider Metadata](#idp-metadata) for more information
+    * all the messages between your app and the IdP will be signed. The SP metadata exported from your app will have `AuthnRequestSigned` with value `true`. This corresponds to IdPs whose metadata have `WantAuthnRequestSigned` with value `true`
+    * in SAML SSO module versions 1.17.3 and above, 2.3.0 and above, and 3.3.0 and above, your IdP is expected to sign all SAML assertions sent to your app. The SP metadata will have `WantAssertionsSigned` with value `true`. Any assertions that are not properly signed will be rejected. SAML’s signature inheritance is supported as well; if the SAML response message is signed by the IdP, it is not necessary for the assertion to be signed as well
+
+    See [Managing the Keys and Key Store](#keystore), below, for additional information and options related to encryption and signing keys.
+
+#### 4.6.1 Managing the Keys and Key Store{#keystore}
+
+SAML implements encryption and signing using asymmetric keys. If encryption is enabled, all the certificates required for encryption are stored in the key store. When you choose **Enable better security for app** (or **Use encryption**) a key store is automatically created using the URL of the application, or the custom EntityID. Below version 3.5.0 it is shown as the **Key store alias**.
+
+The key-pair(s) for your app (as an SP) can be self-generated by the SAML module or you can upload keypair certificate(s) provided by your IdP. 
+
+{{% alert color="warning" %}}
+For version 3.5.0 and above, there are separate key pairs generated for each IdP, for versions below that, the self-generated key pairs are used for all IdPs, if your app is configured to use multiple IdPs.
+{{% /alert %}}
+
+You can usually leave the key store settings as the default. The SAML module will generate distinct key pairs for signing and encryption. The module will generate new key pairs in the following situations:
+
+* when the IdP encryption is enabled and no keypair is available, or the keypair is invalid
+* when the IdP encryption key length is changed
+* when you attempt to upload a keypair and the upload fails for any reason
+
+However, there may be a requirement to use a specific key store. If you want to upload a key pair certificate, click **Upload** to upload a key store file. Use the **Entity Id** as the the alias of the key store.
+
+{{% alert color="info" %}}
+For versions below 3.5.0 only:
+
+* Resetting the key store or uploading another key store will require you to export the SP metadata and import it to all applicable IdPs.
+* Click **Reset** to return the key store settings to their defaults
+* Click **Download** to download the key store file and use it when configuring other SAML SPs.
+{{% /alert %}}
+
+{{% alert color="warning" %}}
+Remember to set the new key store password in the `KeystorePassword` constant of your app.
+{{% /alert %}}
 
 ## 5 Advanced Configuration
 

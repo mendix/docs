@@ -65,7 +65,7 @@ In most cases, this setting can be ignored, and the default **Use project settin
 
 ### 2.5 Authentication
 
-The **Use HTTP authentication** check box specifies if basic authentication should be used. If checked, you have to specify the following details:
+The **Use HTTP authentication** checkbox specifies if basic authentication should be used. If checked, you have to specify the following details:
 
 * **User name** – defines the user name that will be used for authentication
 * **Password** – defines the password that will be used for authentication

@@ -12,7 +12,7 @@ Using a **Task Queue** allows you to run microflows or Java actions asynchronous
 
 ## 2 Configuration
 
-Microflows or Java actions can be scheduled to run in the background when they are initiated using a **Call Microflow** or **Call Java Action** action in Studio Pro, or through the Java API.
+Microflows or Java actions can be scheduled to run in the background when they are initiated using a **Call Microflow** or **Call Java Action** action in Studio Pro, or through the Mendix Runtime Java API.
 
 ### 2.1 Tasks Running in Task Queues
 
@@ -168,7 +168,7 @@ This grace period is applied twice during the [shutdown](#shutdown) (described b
 
 Besides scheduling and executing tasks, the Mendix Platform keeps track of tasks that have been executed in the background: for example, which completed and which failed.
 
-Internally, a scheduled or running task is represented by the Mendix entity `System.QueuedTask`. In a high performance setting, this entity should *not* be used directly by user code, because the underlying database table is heavily used. For example counting how many `System.QueuedTask` objects exist at the moment will lock the table and might cause a serious slowdown in task processing. You should also not Write directly to `System.QueuedTask`. Instead, mark a task for background execution in the **Call Microflow** or **Call Java Action** activity or using the Java API.
+Internally, a scheduled or running task is represented by the Mendix entity `System.QueuedTask`. In a high performance setting, this entity should *not* be used directly by user code, because the underlying database table is heavily used. For example counting how many `System.QueuedTask` objects exist at the moment will lock the table and might cause a serious slowdown in task processing. You should also not Write directly to `System.QueuedTask`. Instead, mark a task for background execution in the **Call Microflow** or **Call Java Action** activity or using the Mendix Runtime Java API.
 
 Tasks that have been processed, that is have completed or failed, are saved as objects of entity type `System.ProcessedQueueTask`. These objects are at the user's disposal. They might be used, for example, to do the following:
 
@@ -189,7 +189,7 @@ In case where **Apply entity access** is set to *true*, the following rules appl
 
 There is one exception to the above rules:
 
-* When a system context is used to schedule the task using the [Java API](https://apidocs.rnd.mendix.com/10/runtime/com/mendix/core/actionmanagement/ActionCallBuilder.html#executeInBackground(com.mendix.systemwideinterfaces.core.IContext,java.lang.String)), the task will be executed in a new system context, regardless of the **Apply entity access** setting.
+* When a system context is used to schedule the task using the [Mendix Runtime Java API](https://apidocs.rnd.mendix.com/10/runtime/com/mendix/core/actionmanagement/ActionCallBuilder.html#executeInBackground(com.mendix.systemwideinterfaces.core.IContext,java.lang.String)), the task will be executed in a new system context, regardless of the **Apply entity access** setting.
 
 ### 2.10 Task Status
 

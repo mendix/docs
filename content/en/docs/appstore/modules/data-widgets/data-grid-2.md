@@ -65,14 +65,14 @@ Here is an example of hiding button containing columns to be hidden:
 {{< figure src="/attachments/appstore/modules/data-widgets/data-grid-2/hiding.png" alt="Example of hiding button containing columns to be hidden" >}}
 
 {{% alert color="info" %}}
-When a column is marked as “Yes, hidden by default” it will render differently in Structure mode and Design mode and to indicate that the column is hidden. **When running the application, the column will in fact be hidden by default**. 
+When a column is marked as “Yes, hidden by default” it will render differently in **Structure mode** and **Design mode** and to indicate that the column is hidden. **When running the application, the column will in fact be hidden by default**. 
 {{% /alert %}}
 
-Here is an example containing a column with **Yes, hidden by default** in Structure mode:
+Here is an example containing a column with **Yes, hidden by default** in **Structure mode**:
 
 {{< figure src="/attachments/appstore/modules/data-widgets/data-grid-2/hidden-columns-structure-mode.png" alt="Example containing a column with “Yes, hidden by default” in Structure mode" >}}
 
-Here is an example containing a column with **Yes, hidden by default** in Design mode:
+Here is an example containing a column with **Yes, hidden by default** in **Design mode**:
 
 {{< figure src="/attachments/appstore/modules/data-widgets/data-grid-2/hidden-columns-design-mode.png" alt="Example containing a column with “Yes, hidden by default” in Design mode" >}}
 
@@ -112,7 +112,7 @@ Here is an example of column properties:
 
 **Custom Content** allows users to drop widgets into the data grid and use the column attribute value to show custom content. After selecting this option you will be given dropzones in which to drop your widgets.
 
-Here is an example of custom content using new Badge widget in Structure mode:
+Here is an example of custom content using new Badge widget in **Structure mode**:
 
 {{< figure src="/attachments/appstore/modules/data-widgets/data-grid-2/column-custom-content.png" alt="Example of custom content using new Badge widget in Structure mode" >}}
 
@@ -208,7 +208,7 @@ Also the desired attribute must be filterable. For example, not a value which is
 
 {{< figure src="/attachments/appstore/modules/data-widgets/data-grid-2/settings-show-column-filters.png" alt="Settings for data grid 2" >}}
 
-Here is an example of dropzones for filters in Structure mode:
+Here is an example of dropzones for filters in **Structure mode**:
 
 {{< figure src="/attachments/appstore/modules/data-widgets/data-grid-2/dropzones-for-filters.png" alt="Example of dropzones for filters in Structure mode" >}}
 

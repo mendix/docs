@@ -2,12 +2,11 @@
 title: "Pluggable Widgets API"
 url: /apidocs-mxsdk/apidocs/pluggable-widgets/
 category: "API Documentation"
-description: A guide for understanding pluggable widgets.
-weight: 45
+description: "This API helps you to understand pluggable widgets, how they extend app  functionality, and how they can be built to interact with Mendix's APIs."
+weight: 80
 tags: ["Widget", "Pluggable", "Custom", "JavaScript", "React"]
 aliases:
- - /apidocs-mxsdk/apidocs/pluggable-parent-9
-
+    - /apidocs-mxsdk/apidocs/pluggable-parent-9
 ---
 
 ## 1 Introduction
@@ -18,7 +17,7 @@ You are in control of a pluggable widget's appearance and behavior. Customize a 
 
 Pluggable widgets, like core widgets, can have properties which a Mendix developer can (and sometimes must) configure every time the widget is used in Mendix Studio Pro. You can define these properties by making a widget definition XML file (for more information on widget definition XML files, see the [Widget Definition XML File](#widget-definition) section below).
 
-Pluggable widgets can also include a preview component for when they are previewed in Studio Pro's Design mode.
+Pluggable widgets can also include a preview component for when they are previewed in Studio Pro's **Design mode**.
 
 For information on which libraries Mendix supports when developing pluggable widgets, see the [Pluggable Widgets](/refguide/mendix-client/#pluggable-widgets) section of *Mendix Client*.
 
@@ -57,7 +56,7 @@ A widget package file is just a ZIP archive containing the following things:
 * A *package.xml* file describing the whole package
 * A widget definition XML file, preferably located in *{widgetName}.xml* where `widgetName` is the last part of widget [ID](#widget-id)
 * A client component of a widget located, for example, in  *com/mendix/widget/MyProgressCircle.js* for a widget with the ID `com.mendix.widget.MyProgressCircle`
-* Optionally, a widget preview Studio Pro’s Design mode located in *{widgetName}.editorPreview.js*
+* Optionally, a widget preview Studio Pro’s **Design mode** located in *{widgetName}.editorPreview.js*
 * Optionally, widget icons (which must be the PNG format):
     * *{widgetName}.icon.png* sets the widget icon inside the Studio Pro toolbox in list view (the ideal image size is 64x64 pixels, but other sizes will be resized to fit)
     * *{widgetName}.icon.dark.png* sets the dark-mode equivalent to *{widgetName}.icon.png*

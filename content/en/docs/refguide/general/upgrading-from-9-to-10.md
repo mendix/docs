@@ -40,7 +40,7 @@ To prepare your app in Studio Pro 9.24, follow these steps:
 
 1. Download the latest patch release of Studio Pro [9.24](/releasenotes/studio-pro/9.24/).
 2. Open your app in Studio Pro 9.24.
-3. Allow Studio Pro to update the app.
+3. Allow Studio Pro to update and convert the app.
 4. Run your app, test all functionality, and ensure it works without error. 
 5. Fix any depreciation warnings you see both in development in Studio Pro as well as in the Mendix Runtime using your console and browser console.
 6. Review your app in combination with the sections below and assess if further action is needed before upgrading to Studio Pro 10.
@@ -50,7 +50,7 @@ Your app is now ready to be upgraded to Mendix 10. You can now close the app in 
 
 ## 4 Upgrading to Studio Pro 10
 
-Open your app in Studio Pro 10 and allow Studio Pro to update your app to version 10. Mendix will update your app for you automatically.
+Open your app in Studio Pro 10 and allow Studio Pro to update and convert your app to version 10. Mendix will update your app for you automatically.
 
 Review all error messages and messages about deprecated items, then make changes where necessary.
 
@@ -83,11 +83,11 @@ Congratulations! Your app has been successfully upgraded to Studio Pro 10 and yo
 
 Legacy scheduled events (namely, those that are non-repeating or have a start time) are no longer supported. These were already visible as a deprecation warning in Studio Pro 9, and this has now changed to an error. The error describes the issue and how to fix it. The Mendix Runtime will fail to start if legacy scheduled events exist.
 
-### 7.2 Runtime API Changes
+### 7.2 Mendix Runtime API Changes
 
-Most of the Java API calls that were deprecated in Mendix 9 have been removed. If you were still using such methods in your Java actions, you must replace or delete them. To check which calls were deprecated, see the [Mendix 9 Server Runtime API](https://apidocs.rnd.mendix.com/9/runtime/index.html).
+Most of the Mendix Runtime Java API calls that were deprecated in Mendix 9 have been removed. If you were still using such methods in your Java actions, you must replace or delete them. To check which calls were deprecated, see the [Mendix 9 Runtime API](https://apidocs.rnd.mendix.com/9/runtime/index.html).
 
-Additionally, refer to the [Studio Pro 10 release notes](/releasenotes/studio-pro/10.0/) for more Runtime API change details.
+Additionally, refer to the [Studio Pro 10 release notes](/releasenotes/studio-pro/10.0/) for more Mendix Runtime API change details.
 
 ### 7.3 XPath Query Engine Updates
 

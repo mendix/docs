@@ -49,7 +49,7 @@ This information is also covered in [Expert Series: Kickstart Your Widget Develo
 
 ### 3.4 Interacting with Mendix Runtime
 
-Widgets have the ability to get data from the Runtime, manipulate objects, show validations, and set references. This is done through the Client API. For the latest version of the this API, see [Client API](https://apidocs.rnd.mendix.com/7/client).
+Widgets have the ability to get data from the Runtime, manipulate objects, show validations, and set references. This is done through the Client API. For the latest version of the this API, see [Client API](/apidocs-mxsdk/apidocs/client-api/).
 
 ### 3.5 Configuring the Widget in Mendix
 

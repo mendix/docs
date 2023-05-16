@@ -1656,6 +1656,7 @@ On the namespace management page, there are a number of tabs which allow you to 
 * Installation
 * Additional information
 * Customization
+* PCLM Statistics
 
 See the sections below for more information.
 
@@ -1862,6 +1863,35 @@ If you want to use the secret store for custom runtime settings or MxApp constan
 Enabling the Development Mode option will allow users to change the type of an environment to Development.
 
 {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/Customization.png" >}}
+
+#### 6.2.8 PCLM Statistics
+
+This tab shows information such as List of License Claim, Operator and Runtime License List.
+
+When type is selected as Claim, a list of license will be shown which will show the licenses from license bundle which are claimed in the namespace.
+
+{{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/LicenseClaim.png" >}}
+
+When type is selected as Operator, a list of all the Operator license in the bundle will be shown.
+
+{{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/OperatorList.png" >}}
+
+When type is selected as Runtime, a list of all the Operator license in the bundle will be shown.
+
+{{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/RuntimeList.png" >}}
+
+By selecting the Export in Excel, you can also export the above lists.
+
+If you would like to see the license payload, you can click on Show License Payload.
+
+{{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/LicensePayload.png" >}}
+
+{{% alert color="info" %}}
+If you want to use the PCLM, the Mendix Operator must be in version 2.11.0 or later.
+{{% /alert %}}
+
+For more information, see [PrivateCloudLicenseManager](/developerportal/deploy/private-cloud-cluster/private-cloud-license-manager.md) documentation.
+
 
 ## 7 Current Limitations
 

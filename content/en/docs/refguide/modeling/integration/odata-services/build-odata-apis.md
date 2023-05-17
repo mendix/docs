@@ -381,7 +381,7 @@ Define a resource model using [non-persistable entities](/refguide/persistabilit
 
 ### 6.2 Combining Data from Two Entities {#two-entities}
 
-Refer to the [example domain model](#example-domain-model) for this example.
+Refer to the [example domain model](#starting-domain-model) for this section.
 
 In this example, you can expose a single REST resource that combines data from the **Customer** entity and the **Address** entity. It will join data from both entities, and also combine the `Firstname` and `Lastname` attributes into a single attribute, `Fullname`. We want to provide the home address information, and exclude other address types:
 

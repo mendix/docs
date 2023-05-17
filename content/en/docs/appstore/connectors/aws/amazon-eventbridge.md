@@ -121,7 +121,7 @@ To configure your Mendix app to receive events, perform the following steps:
 3. In the **App Explorer**, in the **AmazonEventBridgeConnector** section, find the **RegisterMyMendixApp** microflow.
 4. Drag the **RegisterMyMendixApp** microflow onto the microflow you are working on.
 
-    {{< figure src="/attachments/appstore/connectors/aws-eventbridge/eventbridge_register_add_register_app.png" >}}
+    {{< figure src="/attachments/appstore/connectors/aws-eventbridge/register_app.png" >}}
 
 5. In the **App Explorer**, in the **AmazonEventBridgeConnector** section, find the **APIKey** constant and define the API key that will be used for the authentication of your connection.
 
@@ -154,13 +154,13 @@ To configure your Mendix app to receive events, perform the following steps:
     1. In the **App Explorer**, in the **AmazonEventBridgeConnector** section, find the **CreateConfiguration** Java action.
     2. Drag as many **CreateConfiguration** Java actions as different types of events you might receive onto the microflow you are working on.
 
-        {{< figure src="/attachments/appstore/connectors/aws-eventbridge/eventbridge_register_add_configuration.png" >}}
+        {{< figure src="/attachments/appstore/connectors/aws-eventbridge/add_config.png" >}}
 
     3. Double-click the **CreateConfiguration** Java actions to configure the required parameters.
 
         For the **CreateConfiguration** Java action, you must specify the `EventType` and `CallbackMicroflow` parameters. The `EventType` parameter must be the event type of one of the events your app will receive, and the `CallbackMicroflow` parameter must be a callback microflow with an `HttpRequest` object as its input parameter. The microflow will be called when an event with the given event type has been received.
 
-        {{< figure src="/attachments/appstore/connectors/aws-eventbridge/eventbridge_register_edit_configuration.png" >}}
+        {{< figure src="/attachments/appstore/connectors/aws-eventbridge/edit_config.png" >}}
 
 14. Ensure that the Event Bus which you are using contains a Rule that propagates an event to your Mendix app's API destination. You can configure the relevant settings in the settings of your Event Bus in the AWS console.
 

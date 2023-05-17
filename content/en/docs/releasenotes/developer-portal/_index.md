@@ -21,7 +21,7 @@ To see the current status of the Mendix Developer Portal and Control Center, see
 
 #### Improvements
 
-* We changed the default project logo
+* We changed the default app logo.
 
 ### May 17th, 2023
 

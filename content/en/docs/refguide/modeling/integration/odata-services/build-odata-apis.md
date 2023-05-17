@@ -311,25 +311,55 @@ The response returns `HTTP/1.1 204 No Content`.
 
 ### 4.4 Automatic Standard HTTP Error Codes {#http-codes}
 
-OData APIs automatically return the correct HTTP status code, like a 404, if a specified resource cannot be found.
+OData APIs automatically return the correct HTTP status code, like a 404, if a specified resource cannot be found. See the following DELETE request:
+
+```
+DELETE http://localhost:8080/odata/CustomerApi/v1/Customers(5)
+```
+
+The response is as follows:
 
 {{< figure src="/attachments/refguide/modeling/integration/build-odata-apis/standard-error-codes.png" >}} 
 
 ## 5 Performance
 
-OData enables you to exactly specify which attributes you need, so that other attributes are not included in the response. This reduces the size of the response message. To reduce the number of round-trips, associated objects can be included in the response using the `$expand` expression:
+OData enables you to exactly specify which attributes you need, so that other attributes are not included in the response. This reduces the size of the response message. 
+
+To reduce the number of round-trips, associated objects can be included in the response using the `$expand` expression. See the following GET request:
+
+```
+GET http://localhost:8080/odata/CustomerApi/v1/Customers(1)?$expand=Addresses,Notes
+```
+
+The response is as follows:
 
 {{< figure src="/attachments/refguide/modeling/integration/build-odata-apis/expand-expression.png" >}} 
 
-You can use select and expand in combination with filters, sorting, top and skip as discussed in [Filtering, Sorting, Paginating, and Selecting Data](#filter-sort-page-select-data).
+You can use select and expand in combination with filters, sorting, top and skip as discussed in [Filtering, Sorting, Paginating, and Selecting Data](#filter-sort-page-select-data). See the following GET request:
+
+```
+GET http://localhost:8080/odata/CustomerApi/v1/Customers
+            ?$select=CustomerId,Lastname
+            &$expand=Addresses($select=AddressId,City),Notes($select=NoteId,Note)
+            &$filter=contains(FirstName,'a')
+            &$orderby=CustomerId+desc
+            &$top=1
+```
 
 {{< figure src="/attachments/refguide/modeling/integration/build-odata-apis/sort-top-skip.png" >}} 
 
-For long queries, place the query in the request body. You can do this by using POST, and adding `$query` to the endpoint. 
+For long queries, place the query in the request body. You can do this by using POST, and adding `$query` to the endpoint. See the following POST request:
+
+```
+POST http://localhost/8080/odata/CustomerApi/v1/Customers/$query
+Content-Type: text/plain
+```
+
+The response is as follows:
 
 {{< figure src="/attachments/refguide/modeling/integration/build-odata-apis/long-queries.png" >}} 
 
-You now have something that is very similar to how you would use GraphQL, where you can query a graph of objects, and limit the attributes returned to only those that you need. 
+This result is very similar to using GraphQL, where you can query a graph of objects, and limit the attributes returned to only those that you need. 
 
 ## 6 API-First: Decoupling APIs from the Domain Model {#api-first}
 

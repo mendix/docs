@@ -12,7 +12,6 @@ These are the main documents in this category:
 * [Action](/appstore/partner-solutions/ats/rg-two-action/)
 * [ATS Helper](/appstore/partner-solutions/ats/rg-two-ats-helper/)
 * [Data-Driven Testing](/appstore/partner-solutions/ats/rg-two-data-driven-testing/)
-* [Function API](/appstore/partner-solutions/ats/rg-two-function-api/)
 * [Test Case](/appstore/partner-solutions/ats/rg-two-test-case/)
 * [Test Run](/appstore/partner-solutions/ats/rg-two-test-run/)
 * [Test Step](/appstore/partner-solutions/ats/rg-two-test-step/)

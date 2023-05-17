@@ -156,6 +156,7 @@ The following GET request uses the returned location header to query the new res
 
 ```
 GET http://localhost:8080/odata/CustomerApi/v1/Customers(5)
+```
 
 The response is as follows:
 

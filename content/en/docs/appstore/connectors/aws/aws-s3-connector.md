@@ -14,10 +14,10 @@ The [Amazon S3 connector](https://marketplace.mendix.com/link/component/120340) 
 
 Amazon Simple Storage Service (Amazon S3) is an object storage service offering industry-leading scalability, data availability, security, and performance. Customers of all sizes and industries can store and protect any amount of data for virtually any use case, such as data lakes, cloud-native applications, and mobile apps. With cost-effective storage classes and easy-to-use management features, you can optimize costs, organize data, and configure fine-tuned access controls to meet specific business, organizational, and compliance requirements. Some typical use cases of Amazon EventBridge are:
 
-* Build a data lake: Run big data analytics, artificial intelligence (AI), machine learning (ML), and high performance computing (HPC) applications to unlock data insights.
-* Back up and restore critical data: Meet Recovery Time Objectives (RTO), Recovery Point Objectives (RPO), and compliance requirements with S3’s robust replication features.
-* Archive data at the lowest cost: Move data archives to the Amazon S3 Glacier storage classes to lower costs, eliminate operational complexities, and gain new insights.
-* Run cloud-native applications: Build fast, powerful mobile and web-based cloud-native apps that scale automatically in a highly available configuration.
+* Build a data lake - Run big data analytics, artificial intelligence (AI), machine learning (ML), and high performance computing (HPC) applications to unlock data insights.
+* Back up and restore critical data - Meet Recovery Time Objectives (RTO), Recovery Point Objectives (RPO), and compliance requirements with S3's robust replication features.
+* Archive data at the lowest cost - Move data archives to the Amazon S3 Glacier storage classes to lower costs, eliminate operational complexities, and gain new insights.
+* Run cloud-native applications - Build fast, powerful mobile and web-based cloud-native apps that scale automatically in a highly available configuration.
 
 ### 1.2 Prerequisites {#prerequisites}
 
@@ -29,7 +29,7 @@ Follow the instructions in [How to Use Marketplace Content in Studio Pro](/appst
 
 ## 3 Configuration
 
-After you install the connector, you can find it in the App Explorer, in the AmazonEventBridgeConnector section. The connector provides a [domain model](#domain-model) and several [activities](#activities) that you can use to connect your app to Amazon EventBridge. Each activity can be implemented by using it in a microflow. To ensure that your app can connect to the AWS service, you must also configure AWS authentication for the connector.
+After you install the connector, you can find it in the **App Explorer**, in the **AmazonEventBridgeConnector** section. The connector provides a [domain model](#domain-model) and several [activities](#activities) that you can use to connect your app to Amazon EventBridge. Each activity can be implemented by using it in a microflow. To ensure that your app can connect to the AWS service, you must also configure AWS authentication for the connector.
 
 ### 3.1 Configuring AWS Authentication
 
@@ -37,29 +37,39 @@ In order to use the Amazon EventBridge service, you must authenticate with AWS. 
 
 1. Ensure that you have installed and configured the AWS Authentication connector, as mentioned in [Prerequisites](#prerequisites).
 2. Decide whether you want to use session or static credentials to authenticate.
-The Amazon EventBridge connector supports both session and static credentials. By default, the connector is pre-configured to use static credentials, but you may want to switch to session credentials, for example, to increase the security of your app. For an overview of both authentication methods, see [AWS Authentication](/appstore/connectors/aws/aws-authentication/).
-3. In the App Explorer, double-click the Settings for your app.
-{{< figure src="/attachments/appstore/connectors/aws-eventbridge/eventbridge_open_settings.png" alt="The Settings option in the App Explorer">}}
-4. In the App Settings dialog, in the Configurations tab, edit or create an authentication profile.
-If you have multiple sets of AWS credentials, or if you want to use both static and session credentials for different use cases, create separate authentication profiles for each set of credentials.
-5. In the Edit Configuration dialog, in the Constants tab, click New to add the constants required for the configuration.
-6. In the Select Constants dialog, find and expand the AmazonEventBridgeConnector > ConnectionDetails section.
-{{< figure src="/attachments/appstore/connectors/aws-dynamodb/eventbridge_edit_configuration.png" alt="The SessionCredentials and StaticCredentials items in the ConnectionDetails section">}}
-7. Depending on your selected authentication type, configure the required parameters for the StaticCredentials or SessionCredentials.
+
+    The Amazon EventBridge connector supports both session and static credentials. By default, the connector is pre-configured to use static credentials, but you may want to switch to session credentials, for example, to increase the security of your app. For an overview of both authentication methods, see [AWS Authentication](/appstore/connectors/aws/aws-authentication/).
+
+3. In the **App Explorer**, double-click the **Settings** for your app.
+    
+    {{< figure src="/attachments/appstore/connectors/aws-eventbridge/eventbridge_open_settings.png" alt="The Settings option in the App Explorer">}}
+
+4. In the **App Settings dialog**, in the **Configurations** tab, edit or create an authentication profile.
+    
+    If you have multiple sets of AWS credentials, or if you want to use both static and session credentials for different use cases, create separate authentication profiles for each set of credentials.
+
+5. In the **Edit Configuration** dialog, in the **Constants** tab, click **New** to add the constants required for the configuration.
+6. In the **Select Constants** dialog, find and expand the **AmazonEventBridgeConnector** > **ConnectionDetails** section.
+
+    {{< figure src="/attachments/appstore/connectors/aws-dynamodb/eventbridge_edit_configuration.png" alt="The SessionCredentials and StaticCredentials items in the ConnectionDetails section">}}
+
+7. Depending on your selected authentication type, configure the required parameters for the **StaticCredentials** or **SessionCredentials**.
    
-| Credentials type | Parameter | Value | 
-| --- | --- | --- | 
-| Any | UseStaticCredentials | true if you want to use static credentials, or false for session credentials | 
-| StaticCredentials | AccessKey | Access key ID [created in IAM](/appstore/connectors/aws/aws-authentication/#prerequisites) | 
-| StaticCredentials | SecretKey | Secret key [created in IAM](/appstore/connectors/aws/aws-authentication/#prerequisites) | 
-| SessionCredentials | Role ARN | [ARN](https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html) of the AWS role that the connector should assume | 
-| SessionCredentials | Profile ARN | ARN of the profile [created in IAM Roles Anywhere](/appstore/connectors/aws/aws-authentication/#prerequisites) | 
-| SessionCredentials | Trust Anchor ARN | ARN of the trust anchor [created in IAM Roles Anywhere](/appstore/connectors/aws/aws-authentication/#prerequisites) | 
-| SessionCredentials | Client Certificate Identifier | The Client Certificate Pin visible in the Outgoing Certificates section on the Network tab in the Mendix Cloud environment | 
-| SessionCredentials | Duration | Duration for which the session token should be valid; after the duration passes, the validity of the session credentials expires | 
-| SessionCredentials | Session Name | An identifier for the session |
+    | Credentials type | Parameter | Value |
+    | --- | --- | --- |
+    | Any | **UseStaticCredentials** | **true** if you want to use static credentials, or **false** for session credentials |
+    | **StaticCredentials** | **AccessKey** | Access key ID [created in IAM](/appstore/connectors/aws/aws-authentication/#prerequisites)  |
+    | **StaticCredentials** | **SecretKey** | Secret key [created in IAM](/appstore/connectors/aws/aws-authentication/#prerequisites) |
+    | **SessionCredentials** | **Role ARN** | [ARN](https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html) of the AWS role that the connector should assume |
+    | **SessionCredentials** | **Profile ARN** | ARN of the profile [created in IAM Roles Anywhere](/appstore/connectors/aws/aws-authentication/#prerequisites) |
+    | **SessionCredentials** | **Trust Anchor ARN** | ARN of the trust anchor [created in IAM Roles Anywhere](/appstore/connectors/aws/aws-authentication/#prerequisites) |
+    | **SessionCredentials** | **Client Certificate Identifier** | The **Client Certificate Pin** visible in the **Outgoing Certificates** section on the **Network** tab in the Mendix Cloud environment |
+    | **SessionCredentials** | **Duration** | Duration for which the session token should be valid; after the duration passes, the validity of the session credentials expires |
+    | **SessionCredentials** | **Session Name** | An identifier for the session |
 
 ### 3.2 Configuring a Microflow for an AWS Service
+
+After you configure the authentication profile for Amazon S3, you can implement the functions of the connector by using the provided activities in microflows. For example, 
 
 
 
@@ -91,108 +101,108 @@ The entities in the table below describe all generalizations. These are reused b
 
 | Attribute | Description | 
 | --- | --- |
-| ETag | Describes the entity tag is a hash of the object |
-| Key | Describes the name that has been assigned to an object |
-| LastModified | Describes the creation date of the object |
-| Size | Describes the size in bytes of the object |
-| StorageClass | Describes the class of the storage used to store the object |
+| `ETag` | Describes the entity tag is a hash of the object |
+| `Key` | Describes the name that has been assigned to an object |
+| `LastModified` | Describes the creation date of the object |
+| `Size` | Describes the size in bytes of the object |
+| `StorageClass` | Describes the class of the storage used to store the object |
 
 #### 4.2.2 CreateBucketRequest {#createbucketrequest}
 
 | Attribute | Description | 
 | --- | --- |
-| BucketName | Describes the name of the bucket to create |
+| `BucketName` | Describes the name of the bucket to create |
 
 #### 4.2.3 PutObjectRequest {#putobjectrequest}
 
 | Attribute | Description | 
 | --- | --- |
-| BucketName | Describes the name of the bucket to put the object in|
-| Key| Describes the unique identifier for the object that needs to be put |
+| `BucketName` | Describes the name of the bucket to put the object in|
+| `Key`| Describes the unique identifier for the object that needs to be put |
 
 #### 4.2.4 GetObjectRequest {#getobjectrequest}
 
 | Attribute | Description | 
 | --- | --- |
-| BucketName | Describes the name of the bucket to get the object from |
-| Key | Describes the object's key |
+| `BucketName` | Describes the name of the bucket to get the object from |
+| `Key` | Describes the object's key |
 
 #### 4.2.5 GetObjectResponse {#getobjectresponse}
 
 | Attribute | Description | 
 | --- | --- |
-| Key | Describes the object's key |
+| `Key` | Describes the object's key |
 
 #### 4.2.6 DeleteObjectRequest {#deleteobjectrequest}
 
 | Attribute | Description | 
 | --- | --- |
-| BucketName | Describes the name of the bucket to create |
-| Key | Describes the object's key |
+| `BucketName` | Describes the name of the bucket to create |
+| `Key` | Describes the object's key |
 
 #### 4.2.7 ListBucketRequest {#listbucketrequest}
 
 | Attribute | Description | 
 | --- | --- |
-| NoAttributes | The object doesn’t contain any attributes but is associated with the ‘Bucket’ object|
+| N/A | The object does not contain any attributes, but is associated with the `Bucket` object|
 
 #### 4.2.8 Bucket {#bucket}
 
 | Attribute | Description | 
 | --- | --- |
-| BucketName | Describes the name of the bucket |
-| CreationDate | Describes the creation date of the bucket |
+| `BucketName` | Describes the name of the bucket |
+| `CreationDate` | Describes the creation date of the bucket |
 
 #### 4.2.9 ListObjectsRequest {#listobjectsrequest}
 
 | Attribute | Description | 
 | --- | --- |
-| BucketName | Describes the name of the bucket that includes the desired list of the objects |
-| Delimiter | Describes a character you use to group keys |
-| MaxKeys | Describes  the maximum number of keys returned in the response. By default the action returns up to 1,000 key names. The response might contain fewer keys but will never contain more |
-| Prefix | Describes the prefix that can be used to limit the response to keys that begin with the specified prefix |
-| ContinuationToken | Describes to the Amazon S3 service that the list is being continued on this bucket with a token |
-| StartAfter | Describes where you want Amazon S3 to start listing from. Amazon S3 starts listing after this specified key. StartAfter can be any key in the bucket |
+| `BucketName` | Describes the name of the bucket that includes the desired list of the objects |
+| `Delimiter` | Describes a character you use to group keys |
+| `MaxKeys` | Describes  the maximum number of keys returned in the response. By default the action returns up to 1,000 key names. The response might contain fewer keys but will never contain more |
+| `Prefix` | Describes the prefix that can be used to limit the response to keys that begin with the specified prefix |
+| `ContinuationToken` | Describes to the Amazon S3 service that the list is being continued on this bucket with a token |
+| `StartAfter` | Describes where you want Amazon S3 to start listing from. Amazon S3 starts listing after this specified key. `StartAfter` can be any key in the bucket |
 
 #### 4.2.10 ListObjectsRespose {#listobjectsresponse}
 
 | Attribute | Description | 
 | --- | --- |
-| IsTruncated | Describes whether all results were returned. This value is set to false if that is the case, otherwise it is set to true |
-| KeyCount | Describes the number of keys returned with this request. KeyCount will always be less than or equal to the MaxKeys field. Say you ask for 50 keys, your result will include 50 keys or fewer |
-| NextContinuationToken | Describes whether there are more keys in the bucket that can be listed. The next list requests to Amazon S3 can be continued with this NextContinuationToken. NextContinuationToken is obfuscated and is not a real key |
+| `IsTruncated` | Describes whether all results were returned. This value is set to **false** if that is the case, otherwise it is set to **true** |
+| `KeyCount` | Describes the number of keys returned with this request. `KeyCount` will always be less than or equal to the `MaxKeys` field. For example, if you ask for 50 keys, your result will include 50 keys or fewer |
+| `NextContinuationToken` | Describes whether there are more keys in the bucket that can be listed. The next list requests to Amazon S3 can be continued with this `NextContinuationToken`. `NextContinuationToken` is obfuscated and is not a real key |
 
 #### 4.2.11 ListedObject {#listedobject}
 
 | Attribute | Description | 
 | --- | --- |
-| No Attributes | Is a generalization of the S3 Object|
+| N/A | Is a generalization of the S3 object|
 
 #### 4.2.12 CommonPrefix {#commonprefix}
 
 | Attribute | Description | 
 | --- | --- |
-| Prefix | Describes the name of the prefix |
+| `Prefix` | Describes the name of the prefix |
 
 #### 4.2.13 CopyObjectRequest {#copyobjectrequest}
 
 | --- | --- |
-| SourceBucketName | Describes the name of the source bucket| 
-| SourceKey | Describes the source Key of the object |
-| DestinationBucketName | Describes the name of the target bucket |
-| DestinationKey | Describes the target Key of the object |
+| `SourceBucketName` | Describes the name of the source bucket| 
+| `SourceKey` | Describes the source Key of the object |
+| `DestinationBucketName` | Describes the name of the target bucket |
+| `DestinationKey` | Describes the target Key of the object |
 
 #### 4.2.14 DeleteBucketRequest {#deletebucketrequest}
 
 | --- | --- |
-| BucketName | Describes the name of the bucket to be deleted | 
+| `BucketName` | Describes the name of the bucket to be deleted | 
 
 #### 4.2.15 MoveObjectRequest {#moveobjectrequest}
 
 | --- | --- |
-| SourceBucketName | Describes the name of the source bucket| 
-| DestinationBucketName | Describes the name of the target bucket |
-| DestinationKey | Describes the target Key of the object |
+| `SourceBucketName` | Describes the name of the source bucket| 
+| `DestinationBucketName` | Describes the name of the target bucket |
+| `DestinationKey` | Describes the target `Key` of the object |
 
 ### 4.3 Enumerations
 

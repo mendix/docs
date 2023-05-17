@@ -75,13 +75,13 @@ The title can be overridden. For example, the [Create button](/refguide/control-
 
 #### 2.4.5 URL {#url}
 
-The URL of the page can be used to directly navigate to the page (for example, from external links or bookmarks). It will be shown in the address bar of the browser when you visit the page. When navigating to a page without a URL configured, the last visited URL is shown. Note that the full URL of the page will be the base URL of your application followed by `/p` and then by the configured URL of the page (for example, `http://example.mendixcloud.com/p/home_page`).
+A page's URL allows end users to directly navigate to the page (for example, from external links or bookmarks). It will be shown in the address bar of the browser when you visit the page. When navigating to a page without a URL configured, the last visited URL is shown. Note that the full URL of the page will be the base URL of your application followed by `/p` and then by the configured URL of the page (for example, `http://example.mendixcloud.com/p/home_page`).
 
 Pages with parameters can also have URLs. For those pages, all page parameters must be present in the URL. To do this, define which attribute of each page parameter you want to be used in the URL. The syntax for this is the name of the page parameter, a `/`, and then the name of the attribute that should be used placed between curly brackets. 
 
 For example, in the URL `/product/{Product/Name}` the `Name` attribute of the page parameter `Product` will be used in the URL (in a browser, the URL appears as `http://example.mendixcloud.com/p/product/hammer`). Any attribute of type `Boolean`, `Decimal`, `Enumeration`, `Integer`, `Long`, or `String` can be used in the URL. 
 
-Next to this `Id` can be used as an attribute to include the identifier of the entity in the URL. This would appear as `/product/{Product/Id}` for example. In the page URL dialog box, the configured URL is shown together with an example URL (with example values filled in for the parameters), and also shows which XPath queries the runtime will use to retrieve the page parameters. See this example URL in a dialog box:
+Next to this, you can use `Id` as an attribute to include the identifier of the entity in the URL. This would appear as `/product/{Product/Id}` for example. In the page URL dialog box, the configured URL is shown together with an example URL (with example values filled in for the parameters), and also shows which XPath queries the runtime will use to retrieve the page parameters. See this example URL in a dialog box:
 
 {{< figure src="/attachments/refguide/modeling/pages/page/page-url-dialog.png" alt="page url dialog" >}}
 

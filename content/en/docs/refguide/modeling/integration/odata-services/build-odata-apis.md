@@ -121,7 +121,7 @@ The following example illustrates how you can combine filtering, sorting, pagina
 GET http://localhost:8080/odata/CustomerApi/v1/Customers?$filter=contains(Lastname, 'a')&$orderby=CompanyName&$select=FirstName,Lastname,CompanyName&$top=2&skip=1
 ```
 
-The response is follows:
+The response is as follows:
 
 {{< figure src="/attachments/refguide/modeling/integration/build-odata-apis/filter-sort-page-attribute.png" >}} 
 
@@ -164,7 +164,23 @@ The response is as follows:
 
 #### 4.1.1 Using a Prefer Header
 
-Instead of doing the two API calls illustrated above, POST followed by GET, you also have the option to use the **Prefer** header. If you give this the value of `return=representation`, the resulting resource will be returned automatically, resulting in one fewer API call:
+Instead of doing the two API calls illustrated above, POST followed by GET, you also have the option to use the **Prefer** header. If you give this the value of `return=representation`, the resulting resource will be returned automatically, resulting in one fewer API call.
+
+See this example of a POST call with a `Prefer` header:
+
+```
+POST http://localhost:8080/odata/CustomerApi/v1/Customers
+Prefer: return=representation
+
+{
+    "FirstName": "Alexis",
+    "Lastname": "Sweeper",
+    "Title": "Ir.",
+    "CompanyName": "GadgetsAndBeers"
+}
+```
+
+The following is the response:
 
 {{< figure src="/attachments/refguide/modeling/integration/build-odata-apis/prefer-header.png" >}} 
 
@@ -198,9 +214,25 @@ Updating of resources is provided using the PATCH operation. Mendix Runtime will
 
 Example of a PATCH request:
 
+```
+PATCH http://localhost:8080/odata/CustomerApi/v1/Customers(5)
+
+{
+    "FirstName": "Jimmy2"
+}
+```
+
+The response is as follows:
+
 {{< figure src="/attachments/refguide/modeling/integration/build-odata-apis/modify-existing-data-1.png" >}} 
 
 And a subsequent GET request:
+
+```
+GET http://localhost:8080/odata/CustomerApi/v1/Customers(5)
+```
+
+The response is as follows:
 
 {{< figure src="/attachments/refguide/modeling/integration/build-odata-apis/modify-existing-data-2.png" >}} 
 
@@ -212,7 +244,19 @@ When changing data with POST, PUT or DELETE, validation rules specified on the u
 
 {{< figure src="/attachments/refguide/modeling/integration/build-odata-apis/validation-rules.png" >}} 
 
-The validation rules on customer define that both `Firstname` and `Lastname` are mandatory. When you try to create a new customer without a last name, this will fail with status code 422, and the error message as defined in the validation rule will be returned in the response:
+The validation rules on customer define that both `Firstname` and `Lastname` are mandatory. When you try to create a new customer without a last name, this will fail with status code 422, and the error message as defined in the validation rule will be returned in the response. See the following POST request:
+
+```
+POST http://localhost:8080/odata/CustomerApi/v1/Customers
+
+{
+    "FirstName": "Jimmy",
+    "Title": "Engineer",
+    "CompanyName": "CustKo"
+}
+```
+
+The response is as follows:
 
 {{< figure src="/attachments/refguide/modeling/integration/build-odata-apis/error-422.png" >}} 
 
@@ -238,15 +282,32 @@ The use of *show validation message* activity to set the errors to be shown in t
 
 {{< figure src="/attachments/refguide/modeling/integration/build-odata-apis/insert-microflow.png" >}} 
 
-If validation fails, the *show validation message* texts are provided automatically in the response payload:
+If validation fails, the *show validation message* texts are provided automatically in the response payload. See the following POST request:
+
+```
+POST http://localhost:8080/odata/CustomerApi/v1/Customers
+
+{
+    "FirstName": "Boris",
+    "Lastname": "Smith",
+    "Title": "",
+    "CompanyName": ""
+}
+```
+
+The response is as follows:
 
 {{< figure src="/attachments/refguide/modeling/integration/build-odata-apis/validation-response-payload.png" >}} 
 
 ### 4.3 Deleting Data
 
-Deleting is provided using the DELETE operation.
+Deleting is provided using the DELETE operation. See the following DELETE request:
 
-{{< figure src="/attachments/refguide/modeling/integration/build-odata-apis/delete-operation.png" >}} 
+```
+DELETE http://localhost:8080/odata/CustomerApi/v1/Customers(5)
+```
+
+The response returns `HTTP/1.1 204 No Content`.
 
 ### 4.4 Automatic Standard HTTP Error Codes {#http-codes}
 

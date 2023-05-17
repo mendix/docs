@@ -70,7 +70,7 @@ It also provides a JSON schema of all the payload types:
 
 {{< figure src="/attachments/refguide/modeling/integration/build-odata-apis/json-schema.png" >}} 
 
-You also have an OpenAPI 3.0.1 contract:
+And it provides an OpenAPI 3.0.1 contract:
 
 {{< figure src="/attachments/refguide/modeling/integration/build-odata-apis/openapi-contract.png" >}} 
 
@@ -169,7 +169,25 @@ Instead of doing the two API calls illustrated above, POST followed by GET, you 
 
 #### 4.1.2 Creating Resources with Associations
 
-If you want to create a new resource associated to another resource, you can refer to the ID of the resource in your payload:
+If you want to create a new resource associated to another resource, you can refer to the identifier of the resource in your payload. See the following POST request:
+
+```
+POST http://localhost:8080/odata/CustomerApi/v1/Addresses
+Prefer: return=representation
+
+{ 
+    "Country: "UK",
+    "HouseNumber":"11",
+    "PhoneNumber":"123123",
+    "Zipcode":"13423",
+    "Street":"Mainstreet",
+    "Customer":{"@id":"Customers(11)"}
+    "City":"Bristol",
+    "AddressType":"Home"
+}
+```
+
+The response is as follows:
 
 {{< figure src="/attachments/refguide/modeling/integration/build-odata-apis/create-resources-associations.png" >}} 
 

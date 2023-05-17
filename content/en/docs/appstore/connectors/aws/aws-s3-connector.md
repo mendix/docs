@@ -69,9 +69,34 @@ In order to use the Amazon EventBridge service, you must authenticate with AWS. 
 
 ### 3.2 Configuring a Microflow for an AWS Service
 
-After you configure the authentication profile for Amazon S3, you can implement the functions of the connector by using the provided activities in microflows. For example, 
+After you configure the authentication profile for Amazon S3, you can implement the functions of the connector by using the provided activities in microflows. To quickly configure the connection to Amazon S3 by using an example microflow, perform the following steps:
 
+1. Optional: If you have not configured your default AWS region before, click **App** > **Marketplace modules** > **AWSS3Connector** > **_USE_ME** > **AWS_Default_Region**, and then select the region of your choice.
 
+    This step is not required, but you may wish to perform it for one of the following reasons:
+
+    * To reduce latency by choosing a region which is geographically close to you
+    * To choose a region to which you have access, if you do not have access to some regions
+
+    {{% alert color="info" %}}
+    For technical reasons, you cannot set AWS_Default_Region to `aws-global` or `us-east-1`.
+    {{% /alert %}}
+
+2. Create a microflow with session or static credentials authentication. For more information, see [AWS Authentication](/appstore/connectors/aws/aws-authentication/).
+3. In the App Explorer, in **App** > **Marketplace modules** > **AWSS3Connector** > **Examples**, find an example microflow that performs a function which you want to use in your app.
+
+    For example, if you want to get the contents of an object in the S3 bucket, find the **SUB_GetObject** example microflow. For more information about the activities that the microflows can perform, see [Activities](#activities).
+
+4. Drag the example microflow onto the working area of the microflow that you created in step 2, and position it after the **GetSessionCredentials** activity.
+5. Double-click on the microflow activity that you added in step 4.
+
+    The example microflow opens.
+
+6. Configure the required parameters.
+
+    For example, for the **SUB_GetObject** example microflow, you must configure the S3 object that you want to access.
+
+To help you work with the Amazon S3 connector, the following sections of this document list the available entities and activities that you can use in your application.
 
 ## 4 Technical Reference
 
@@ -206,53 +231,53 @@ The entities in the table below describe all generalizations. These are reused b
 
 ### 4.3 Enumerations
 
-An enumeration is a predefined list of values that can be used as an attribute type. For the Amazon EventBridge connector, enumerations list values such as the list of available AWS regions.
+An enumeration is a predefined list of values that can be used as an attribute type. For more information, see [Enumerations](/refguide/enumerations/).
 
 #### 4.3.1 AWS_Region {#aws-region}
 
 | Name | Caption | 
 | --- | --- | 
-| us_east_2 | US East (Ohio) | 
-| us_east_1 | US East (N. Virginia) | 
-| us_west_1 | US West (N. California) | 
-| us_west_2 | US West (Oregon) | 
-| af_south_1 | Africa (Cape Town) | 
-| ap_east_1 | Asia Pacific (Hong Kong) | 
-| ap_southeast_3 | Asia Pacific (Jakarta) | 
-| ap_south_1 | Asia Pacific (Mumbai) | 
-| ap_northeast_3 | Asia Pacific (Osaka) | 
-| ap_northeast_2 | Asia Pacific (Seoul) | 
-| ap_southeast_1 | Asia Pacific (Singapore) | 
-| ap_southeast_2 | Asia Pacific (Sydney) | 
-| ap_northeast_1 | Asia Pacific (Tokyo) | 
-| ca_central_1 | Canada (Central) | 
-| eu_central_1 | Europe (Frankfurt) | 
-| eu_west_1 | Europe (Ireland) | 
-| eu_west_2 | Europe (London) | 
-| eu_south_1 | Europe (Milan) | 
-| eu_west_3 | Europe (Paris) | 
-| eu_north_1 | Europe (Stockholm) | 
-| me_south_1 | Middle East (Bahrain) | 
-| sa_east_1 | South America (São Paulo) |
+| `us_east_2` | US East (Ohio) | 
+| `us_east_1` | US East (N. Virginia) | 
+| `us_west_1` | US West (N. California) | 
+| `us_west_2` | US West (Oregon) | 
+| `af_south_1` | Africa (Cape Town) | 
+| `ap_east_1` | Asia Pacific (Hong Kong) | 
+| `ap_southeast_3` | Asia Pacific (Jakarta) | 
+| `ap_south_1` | Asia Pacific (Mumbai) | 
+| `ap_northeast_3` | Asia Pacific (Osaka) | 
+| `ap_northeast_2` | Asia Pacific (Seoul) | 
+| `ap_southeast_1` | Asia Pacific (Singapore) | 
+| `ap_southeast_2` | Asia Pacific (Sydney) | 
+| `ap_northeast_1` | Asia Pacific (Tokyo) | 
+| `ca_central_1` | Canada (Central) | 
+| `eu_central_1` | Europe (Frankfurt) | 
+| `eu_west_1` | Europe (Ireland) | 
+| `eu_west_2` | Europe (London) | 
+| `eu_south_1` | Europe (Milan) | 
+| `eu_west_3` | Europe (Paris) | 
+| `eu_north_1` | Europe (Stockholm) | 
+| `me_south_1` | Middle East (Bahrain) | 
+| `sa_east_1` | South America (São Paulo) |
 
 #### 4.3.3 ENUM_StorageClass {#enum-storageclass}
 
 | Name | Caption | Description |
 | --- | --- | --- |
-| STANDARD | STANDARD | (Default) Selecting this enumeration value stores an object according to the standard class |
-| REDUCED_REDUNDANCY | REDUCED_REDUNDANCY | Selecting this enumeration value stores an object according to the RRS (reduced redundancy storage) class |
-| GLACIER | GLACIER | Selecting this enumeration value stores an object according to the glacier class |
-| STANDARD_IA | STANDARD_IA | Selecting this enumeration value stores an object according to the standard-IA (infrequent access) class |
-| ONEZONE_IA | ONEZONE_IA | Selecting this enumeration value stores an object according to the one zone-IA (infrequent access) class |
-| INTELLIGENT_TIERING | INTELLIGENT_TIERING | Selecting this enumeration value stores an object according to the intelligent tiering class |
-| DEEP_ARCHIVE | DEEP_ARCHIVE | Selecting this enumeration value stores an object according to the glacier deep archive class |
-| OUTPOSTS | OUTPOSTS | Selecting this enumeration value stores an object according to the outposts (on-premise) class |
-| GLACIER_IR | GLACIER_IR | Selecting this enumeration value stores an object according to the glacier instant retrieval (IR) class |
-| UNKNOWN_TO_SDK_VERSION | UNKNOWN_TO_SDK_VERSION | This enumeration value is returned when the S3 service returns a value unknown to the SDK |
+| `STANDARD` | **STANDARD** | (Default) Selecting this enumeration value stores an object according to the standard class |
+| `REDUCED_REDUNDANCY` | REDUCED_REDUNDANCY | Selecting this enumeration value stores an object according to the RRS (reduced redundancy storage) class |
+| `GLACIER` | **GLACIER** | Selecting this enumeration value stores an object according to the glacier class |
+| `STANDARD_IA` | **STANDARD_IA** | Selecting this enumeration value stores an object according to the standard-IA (infrequent access) class |
+| `ONEZONE_IA` | **ONEZONE_IA** | Selecting this enumeration value stores an object according to the one zone-IA (infrequent access) class |
+| `INTELLIGENT_TIERING` | **INTELLIGENT_TIERING** | Selecting this enumeration value stores an object according to the intelligent tiering class |
+| `DEEP_ARCHIVE` | **DEEP_ARCHIVE** | Selecting this enumeration value stores an object according to the glacier deep archive class |
+| `OUTPOSTS` | **OUTPOSTS** | Selecting this enumeration value stores an object according to the outposts (on-premise) class |
+| `GLACIER_IR` | **GLACIER_IR** | Selecting this enumeration value stores an object according to the glacier instant retrieval (IR) class |
+| `UNKNOWN_TO_SDK_VERSION` | **UNKNOWN_TO_SDK_VERSION** | This enumeration value is returned when the S3 service returns a value unknown to the SDK |
 
 ### 4.4 Activities {#activities} 
 
-Activities define the actions that are executed in a microflow or a nanoflow.
+Activities define the actions that are executed in a microflow or a nanoflow. For more information, see [Activities](/refguide/activities/).
 
 #### 4.4.1 CreateBucket {#createbucket}
 

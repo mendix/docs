@@ -381,41 +381,47 @@ Define a resource model using [non-persistable entities](/refguide/persistabilit
 
 ### 6.2 Combining Data from Two Entities {#two-entities}
 
-Refer to the [example domain model](#example-domain-model) mentioned earlier in this document.
+Refer to the [example domain model](#example-domain-model) for this example.
 
 In this example, you can expose a single REST resource that combines data from the **Customer** entity and the **Address** entity. It will join data from both entities, and also combine the `Firstname` and `Lastname` attributes into a single attribute, `Fullname`. We want to provide the home address information, and exclude other address types:
 
 {{< figure src="/attachments/refguide/modeling/integration/build-odata-apis/expose-single-resource-domain-model.png" >}} 
 
-1. Add the `CustomerHomeAddress` entity as a resource to the OData service:
+1.  Add the `CustomerHomeAddress` entity as a resource to the OData service:
 
-{{< figure src="/attachments/refguide/modeling/integration/build-odata-apis/customer-home-address-npe.png" >}} 
+     {{< figure src="/attachments/refguide/modeling/integration/build-odata-apis/customer-home-address-npe.png" >}} 
 
-2. You can use an OQL Dataset to define the query to fetch this information from your entities:
+2.  You can use an OQL Dataset to define the query to fetch this information from your entities:
 
-{{< figure src="/attachments/refguide/modeling/integration/build-odata-apis/oql-database.png" >}} 
+     {{< figure src="/attachments/refguide/modeling/integration/build-odata-apis/oql-database.png" >}} 
 
-3. Define a microflow that will fetch the correct data when a user does a GET on the CustomerHomeAddress resource:
+3.  Define a microflow that will fetch the correct data when a user does a GET on the CustomerHomeAddress resource:
 
-{{< figure src="/attachments/refguide/modeling/integration/build-odata-apis/get-microflow.png" >}} 
+     {{< figure src="/attachments/refguide/modeling/integration/build-odata-apis/get-microflow.png" >}} 
 
-The microflow uses a Java action to translate the OData query to an OQL expression using the OQL Dataset as the base query. This ensures that filtering, sorting, and paging work as expected.
+     The microflow uses a Java action to translate the OData query to an OQL expression using the OQL Dataset as the base query. This ensures that filtering, sorting, and paging work as expected.
 
-{{< figure src="/attachments/refguide/modeling/integration/build-odata-apis/translate-to-odl-expression.png" >}} 
+     {{< figure src="/attachments/refguide/modeling/integration/build-odata-apis/translate-to-odl-expression.png" >}} 
 
 4. You can now do a REST GET call, defining which attributes you need, how you want it sorted, and how many objects you need:
 
-{{< figure src="/attachments/refguide/modeling/integration/build-odata-apis/get-call.png" >}} 
+     ```
+     GET http://localhost:8080/odata/CustomerApi/v1/CustomerHomeAddresses?$select=CustomerId,FullName,Street,City&$orderby=City+desc&$top=2
+     ```
+
+     The response is as follows:
+
+     {{< figure src="/attachments/refguide/modeling/integration/build-odata-apis/get-call.png" >}} 
 
 5. The result is that you have decoupled your REST resource from your domain model Persistent Entities. You can change your entities and use the OQL query to ensure the exposed data remains backwards compatible.
 
-The Java action used above adds the OData query to the original OQL query as follows:
+     The Java action used above adds the OData query to the original OQL query as follows:
 
-{{< figure src="/attachments/refguide/modeling/integration/build-odata-apis/view-log-line-details.png" >}} 
+     {{< figure src="/attachments/refguide/modeling/integration/build-odata-apis/view-log-line-details.png" >}} 
 
-With some formatting, it can be more readable. The original OQL query is used as a subquery (inline view) for the OData query. All the expressions will be pushed down into the database, and benefit from the performance of the database optimizer:
+     With some formatting, it can be more readable. The original OQL query is used as a subquery (inline view) for the OData query. All the expressions will be pushed down into the database, and benefit from the performance of the database optimizer:
 
-{{< figure src="/attachments/refguide/modeling/integration/build-odata-apis/subquery.png" >}} 
+     {{< figure src="/attachments/refguide/modeling/integration/build-odata-apis/subquery.png" >}} 
 
 ### 6.3 Defining Logic in an Insert Microflow
 
@@ -441,11 +447,29 @@ The last activity of the insert microflow calls the SendCustomerEmail microflow 
 
 {{< figure src="/attachments/refguide/modeling/integration/build-odata-apis/task-queue.png" >}} 
 
-The POST response provides the location where the client can retrieve the status of the request:
+The POST response provides the location where the client can retrieve the status of the request. See the following POST request:
+
+```
+POST http://localhost:8080/odata/CustomerApi/v1/CustomerEmailRequests
+
+{
+    "Subject":"Test email",
+    "EmailText":"Hello",
+    "CustomerId":1
+}
+```
+
+The response is as follows:
 
 {{< figure src="/attachments/refguide/modeling/integration/build-odata-apis/call-send-email-logic.png" >}} 
 
-When you GET the resource from the location provided, the status has the value *Sent*, indicating that the logic has completed:
+When you GET the resource from the location provided, the status has the value *Sent*, indicating that the logic has completed. See the following GET request:
+
+```
+GET http://localhost:8080/odata/CustomerApi/v1/CustomerEmailRequests(12)
+```
+
+The response is as follows:
 
 {{< figure src="/attachments/refguide/modeling/integration/build-odata-apis/get-resource-sent.png" >}} 
 

@@ -22,6 +22,10 @@ To consume OData services, see:
 
 * [Consumed OData Services](/refguide/consumed-odata-services/), an overview in the Studio Pro guide
 
+To learn about using OData to implement REST best practices, see
+
+* [Build OData APIs with REST Best Practices](/refguide/build-odata-apis/)
+
 To wrap services, APIs, or databases in OData, see:
 
-* [Wrap Services, APIs, or Databases with OData](/refguide/wrap-services-odata/).
+* [Wrap Services, APIs, or Databases with OData](/refguide/wrap-services-odata/)

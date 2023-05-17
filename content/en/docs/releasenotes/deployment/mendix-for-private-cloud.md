@@ -13,6 +13,16 @@ For information on the current status of deployment to Mendix for Private Cloud 
 
 ## 2023
 
+### May 17th, 2023
+
+#### Build API Improvements
+
+* We have changed the top-level entity in the response for GetPackage request to Package.
+
+#### Deploy API Improvements
+
+* We have fixed an issue where adding the same cluster member to an update cluster request more than once was not resulting in an error.
+
 ### May 3rd, 2023
 
 #### Mendix Operator v2.11.0 {#2.11.0}

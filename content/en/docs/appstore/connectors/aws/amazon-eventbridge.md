@@ -121,7 +121,7 @@ To configure your Mendix app to receive events, perform the following steps:
 3. In the **App Explorer**, in the **AmazonEventBridgeConnector** section, find the **RegisterMyMendixApp** microflow.
 4. Drag the **RegisterMyMendixApp** microflow onto the microflow you are working on.
 
-    {{< figure src="static/attachments/appstore/connectors/aws-eventbridge/eventbridge_register_add_register_app.png" >}}
+    {{< figure src="static/attachments/appstore/connectors/aws-eventbridge/register_app.png" >}}
 
 5. In the **App Explorer**, in the **AmazonEventBridgeConnector** section, find the **APIKey** constant and define the API key that will be used for the authentication of your connection.
 

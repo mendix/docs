@@ -100,6 +100,14 @@ This differs from the [on change](#on-change) property in that the event will al
 
 {{% snippet file="/static/_includes/refguide/events-section-link.md" %}}
 
+#### 2.5.5 Close page
+
+The close page property will close the page after the event is triggered.
+
+#### 2.5.6 Auto-synchronize
+
+?????
+
 ### 2.6 General Section{#general}
 
 #### 2.6.1 Grow Automatically

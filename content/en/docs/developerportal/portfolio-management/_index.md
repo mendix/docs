@@ -21,6 +21,8 @@ On the **Portfolio Landscape Overview** page, each portfolio is presented in a c
 
 The **Portfolio Landscape Overview** page contains two sections: **My Portfolios** and **Company Portfolios**. A section only appears if there is at least one portfolio card in that section.
 
+{{< figure src="/attachments/developerportal/portfolio-management/portfolio-landscape-overview.png" >}}
+
 **My Portfolios** shows all the portfolios to which you have access. Clicking a portfolio card [opens the portfolio](#open-portfolio).
 
 **Company Portfolios** show all the portfolios in your company that are discoverable and to which you do not have access. Clicking a portfolio card shows more details about the portfolio.

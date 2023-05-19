@@ -9,7 +9,7 @@ tags: ["adaptive solutions", "adaptable solutions", "ip protection"]
 
 ## 1 Introduction
 
-Because subscriptions for solutions, app services, connectors, and modules are sold on the Mendix Marketplace, you will have intellectual property (IP) protection concerns as a publisher. You will want to protect the IP contained within the model that makes up the content you are selling. In addition, you will want to protect any custom usage metering so that customers cannot accidentally (or intentionally) disable usage metering. Therefore, it is a good idea to consider applying at least some IP protection in your Marketplace components.
+When selling solutions or components that are created in Mendix and for the end customer or a partner will get access to the model, you as a publisher want to consider protecting the IP contained within the model that makes up the content you are selling. In addition, you will want to ensure that developers use the implement as intended and protect any custom usage metering so that customers cannot accidentally (or intentionally) disable usage metering. Therefore, it is a good idea to consider applying at least some IP protection in your solutions and components.
 
 {{% alert color="info" %}}
 Access to this functionality is currently limited and can be gained through the [Mendix Component Partner Program](/appstore/creating-content/partner-program/) and the [Mendix Commercial Solution Partner Program](https://www.mendix.com/partners/become-a-partner/isv-program/).
@@ -17,11 +17,11 @@ Access to this functionality is currently limited and can be gained through the 
 
 ## 2 Why IP Protection?
 
-Reusable solutions, app services, connectors, and other modules contain IP in the form of app model content (for example, microflows) that is reusable and that can be monetized. When you build a business around these types of sellable content, there is a risk associated with the loss of your IP. If customers copy your IP without compensating you as the publisher, then you lose out on part of your potential revenue.
+Reusable solutions, app services, connectors, and other modules contain IP in the form of app model content (for example, microflows) that is reusable and can be monetized. When you build a business around these types of sellable content, there is a risk associated with the loss of your IP. If customers copy your IP without compensating you as the publisher, then you lose out on part of your potential revenue.
 
-Therefore, when distributing such content, it is desirable to hide parts of the implementation from the eyes of your customers while making sure that the functionality can be used through well-designed APIs.
+Therefore, when distributing such content, it is desirable to hide parts of the implementation from the eyes of your customers while making sure that the functionality can be used through well-designed APIs into your module, i.e. through explicitly defined microflows, nanoflows and entities, while all other documents and internal concerns are hidden.
 
-You can also apply the concept of IP protection to protect your modules from being used in your organization and thus avoid the misuse of their functionality. In this case, rather than protecting your IP for monetary reasons, you are protecting your IP to guarantee the functionality is used as intended. This will help streamline your maintenance and upgrade paths.
+You can also apply the concept of IP protection to protect your modules from being modified accidentally or intentionally. In this case, rather than protecting your IP for monetary reasons, you are protecting your IP to guarantee the functionality is used as intended. This will help streamline your maintenance and upgrade paths. This is relevant regardless of whether your application model would be shared with external parties or not.
 
 ## 3 Always use a legal framework on top of technical restrictions
 
@@ -29,7 +29,7 @@ Using IP Protection and [Solution Modules](/refguide/module-settings/#solution-m
 
 ## 4 What Should Be Protected?
 
-Not all parts of a component need to be protected to allow for [adaptability](/appstore/creating-content/sol-development/#3-three-parts-protected-core-vs-adaptability). It is often desirable to protect the following:
+Not all parts of a solution or component need to be protected to allow for [adaptability](/appstore/creating-content/sol-development/#3-three-parts-protected-core-vs-adaptability). It is often desirable to protect the following:
 
 -   **The core IP of the solution** – analyze the business logic (for example, scheduling or planning algorithms), complex data mappings, business rules, and decision logic that needs protection
 -   **Custom usage metering** – ensure that the metering is tamper-proof (whether done accidentally or intentionally)
@@ -49,16 +49,26 @@ Not all parts of a component need to be protected to allow for [adaptability](/a
     -   Create simple interfaces with a limited feature set instead of over-engineering to support everything
     -   Remember that APIs with lots of options are much harder to use, so simplicity is key
     -   Limit API exposure, as it is easier to add more later than to retract interfaces
+    -   Apply proper naming and documentation for clarity and simple documentation
+    -   Consider the unhappy flow with the right validations and error handling
+
+For more details see: [Architect Adaptable Solutions](/appstore/creating-content/sol-architecting)
 
 ### 5.2 Hiding Implementations {#implementation}
 
-Mendix supports the hiding of module implementations as a means to protect your IP. As a publisher, you can control which parts of the app model are visible and editable, and which parts of the app model are hidden from your customers. On top of the hidden model documents and elements, you can define an API to make it possible to reuse the functionality in other parts of the app. In this way, adaptable solutions can have a [common core](/appstore/creating-content/sol-architecting/#three-parts) shared across all customers which is protected, with a flexible shell on top of that which is customized for each customer, either by making model changes or by extending the app with entirely new modules that make use of the APIs of the common core.
+#### 5.2.1 Benefits as publisher
+
+Mendix supports the hiding of module implementations as a means to protect your IP. As a publisher, you can control which parts of the app model are visible and editable, and which parts of the app model are hidden from your consumers. On top of the hidden model documents and elements, you can define an API to make it possible to reuse and extend the functionality in other parts of the app.
+
+In this way, adaptable solutions can have a [common core](/appstore/creating-content/sol-architecting/#three-parts) shared across all customers which is protected, with a adaptable shell on top. The adaptable shell is customized for each customer, either by making model changes into the customizable core or by extending the app with entirely new modules. Both the customizations and extensions make use of the APIs of the common core.
 
 <!-- [TODO: add visual describing 80/20 rule with common core and flexible shell with model customizations & extensions] -->
 
-Customers that adapt a solution with this kind of IP protection see only a well-designed API. This has the following results:
+#### 5.2.2 Benefits as consumer
 
--   Simplified customization and clarification of how and where to extend, because the customer only needs to know those APIs, and it clarifies how and where to extend. This also simplifies the
+Consumers of a solution with this kind of IP protection see only a well-designed API. This has the following results:
+
+-   Simplified customization and clarification of how and where to extend, because the customer only needs to know those APIs, and it clarifies how and where to extend.
 -   Simplified usage of app services, connectors, and other modules, because the implementation details are hidden
 -   Reduced maintenance efforts, because hidden content cannot be altered (this also makes in-place upgrades easier, as there is no need to check whether customizations have been applied)
 
@@ -68,7 +78,7 @@ Customers that adapt a solution with this kind of IP protection see only a well-
 
 Adaptable solutions that will be customized by your customer, by a third-party implementation partner, or even by your own professional services teams can benefit from IP protection. By protecting the common core that is shared across customers, maintenance efforts are brought under control and the core is protected from accidental (or intentional) changes.
 
-To protect your solutions, follow these steps:
+To protect your solutions, we recommend these steps:
 
 1. Identify the shared [common core](/appstore/creating-content/sol-development/#3-three-parts) that will be unchanged across customers and protect it.
 2. Identify the parts that make up the flexible shell that customers might want to adapt.

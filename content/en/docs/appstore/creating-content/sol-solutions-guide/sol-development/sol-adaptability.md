@@ -9,9 +9,9 @@ tags: ["solutions", "adaptive solutions", "adaptable solutions", "best practices
 
 ## 1 Domain Model
 
-### 1.1 Solution module defines core of the data model
+### 1.1 Solution module defines the core of the data model
 
-It's recommended to have the majority of your data model defined within Solution Modules, to ensure stability and keeping a clear separation between what data definitions are coming from the publisher, and what’s added during implementation. This will also allow you to do internal refactoring without having to take all customer instances into account.
+It's recommended to have the majority of your data model defined within Solution Modules, to ensure stability and keeping a clear separation between what entities, attributes and associations are coming from the publisher, and what’s added during implementation. This will also allow you to do internal refactoring without having to take all customer instances into account.
 
 ### 1.2 Extension through Extension entities (Composition pattern or Specializations)
 
@@ -23,6 +23,15 @@ In general it's recommended to use a separate Extension entity, with a 1-n, or 1
 | _Flexibility on security_                                               | Core and Extension have their own security rules. Core rules cannot be overridden     | Specialization allows for redefining security rules, even for entities that are defined inside solution modules                             |
 | _Multiple extension versions (e.g. Vehicle becomes both Car and Train)_ | Setup can be complex                                                                  | More suitable                                                                                                                               |
 | _Offline syncronisation_                                                | Fully supported                                                                       | Restrictions apply: [Offline Best Practices](/refguide/mobile/building-efficient-mobile-apps/offlinefirst-data/best-practices/#inheritance) |
+
+### 1.3 Example
+
+{{< figure src="/attachments/appstore/creating-content/sol-solutions-guide/sol-development/sol-adaptability-best-practices/adaptability-domain-model-example.png" alt="Example of data model extensions"  >}}
+
+- Company is extended through composition, because that's the recommended approach and there are no requirements to reconsider. Additional entities can be created and linked such as the account manager
+- Vehicle is extended through specializations because every customer can have multiple vehicle types (e.g. car & train)
+- Task is extended through a specialization because every customer has very unique requirements on entity access
+- Logo is not extensible
 
 ## 2 Making part of the logic adaptable
 

@@ -1,5 +1,5 @@
 ---
-title: "Develop Adaptable Solutions"
+title: "Introduction into Adaptable Solutions"
 url: /appstore/creating-content/sol-development/
 weight: 20
 description: "Presents documentation for developing solutions"
@@ -10,7 +10,7 @@ tags: ["solutions", "development", "adaptive solutions", "adaptable solutions"]
 
 This section provides information and best practices on how to develop adaptable solutions on the Mendix Platform that are ready to be sold on the Mendix Marketplace.
 
-While [Mendix best practices for development](/refguide/dev-best-practices/) apply, there are additional considerations when architecting and developing a Mendix solution. The overview of [Architect Adaptable Solutions](/appstore/creating-content/sol-architecting/) is a good starting point.
+While [Mendix best practices for development](/refguide/dev-best-practices/) apply, there are additional considerations when [architecting](/appstore/creating-content/sol-architecting/) and developing a Mendix solution.
 
 ## 2 What is an Adaptable Solution?
 
@@ -61,23 +61,23 @@ This can be visualized as follows:
 
 ### 2.1 Implementation as separate model instance and cloud node
 
-The customer implementation is a separate, _upgradable_ model instance (fork) per customer, that shares generic functionality from the original Solution model, that's deployed to separate cloud resources. This allows the implementation team to fully customize all non IP protected functionality. Not all customer implementations require changes to the model. In those cases the original model can be deployed as is.
-
-Note that it’s at the solution developer's discretion to determine who can implement a solution, who can access the model and whether their delivery model is Software as a Service or a solution template with a subscription on updates.
+The customer implementation is a separate, _upgradable_ model instance (fork) per customer, that shares generic functionality from the original Solution model, that's deployed to separate cloud resources.
 
 {{< figure src="/attachments/appstore/creating-content/sol-solutions-guide/sol-development/solution-deployment.png" alt="Adaptable Solution Deployment"  width="50%" >}}
 
+The separate model instance allows the implementation team to fully customize all non IP protected functionality. Not all customer implementations require changes to the model. In those cases the original model can be deployed as is.
+
+Note that it’s at the solution developer's discretion to determine who can implement a solution, who can access the model and whether their delivery model is Software as a Service or a solution template with a subscription on updates.
+
 For more details on this read the [architectural recommendations on implementation per customer](/appstore/creating-content/sol-architecting/#3-implementation-per-customer).
 
-## 3 Three parts: protected core vs adaptability
+## 3 Three parts: core, customizations and extensions
 
-Architecting a solution for adaptation requires an understanding of your customers' needs: You need to know which functional requirements are common across your customers and which are specific to individual customers. This enables splitting the application model into the following three main functional parts:
+Architecting a solution for adaptation requires an understanding of your customers' needs: You need to know which functional requirements are common across your customers and which are specific to individual customers. This enables grouping the modules in the application model into three main functional parts:
 
 -   A shared and immutable common core
 -   Common modules that can be adapted to a customer’s needs
 -   Customer-specific extension modules
-
-For the customer production usage they are all part of the same model, and will all be deployed to the same application container.
 
 {{< figure src="/attachments/appstore/creating-content/sol-solutions-guide/sol-development/solution-three-parts.png" alt="3 parts of the adaptable solution">}}
 

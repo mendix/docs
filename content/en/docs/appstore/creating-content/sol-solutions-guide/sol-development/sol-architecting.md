@@ -11,11 +11,9 @@ tags: ["solutions", "adaptive solutions", "adaptable solutions", "architecting s
 
 The Mendix Platform is well-suited to supporting the development of solutions. Rapid development with Mendix allows for the adaptation of solutions to fit a customer's needs and context, and to integrate with the customer's existing IT landscape.
 
-## 2 Architect a Solution for Adaptation
+## 2 Progressive and Emergent Architecture
 
-### 2.1 Progressive and Emergent Architecture
-
-The goal for architecting a solution for adaptation is a deep understanding and full specification of the correct scoping of the different parts described above (meaning, the immutable core compared with customizable modules or something which needs to be customer-specific). This is a level of knowledge that you will only reach once you are serving a large number of customers.
+The goal for architecting a solution for adaptation is a deep understanding and full specification of the correct scoping of the [three different parts](/appstore/creating-content/sol-development/#3-three-parts-protected-core-vs-adaptability) (meaning, the immutable core compared with customizable modules or something which needs to be customer-specific). This is a level of knowledge that you will only reach once you are serving a large number of customers.
 
 When you start work on a solution for an initial customer or handful of customers, you might not have this thorough understanding yet. Instead, as you deliver the solution to additional customers, you will learn about their needs and will better understand which functionalities will be common and which will be specific.
 

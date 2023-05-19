@@ -12,7 +12,7 @@ The [Amazon S3 connector](https://marketplace.mendix.com/link/component/120340) 
 
 ### 1.1 Typical Use Cases
 
-Amazon Simple Storage Service (Amazon S3) is an object storage service offering industry-leading scalability, data availability, security, and performance. Customers of all sizes and industries can store and protect any amount of data for virtually any use case, such as data lakes, cloud-native applications, and mobile apps. With cost-effective storage classes and easy-to-use management features, you can optimize costs, organize data, and configure fine-tuned access controls to meet specific business, organizational, and compliance requirements. Some typical use cases of Amazon EventBridge are:
+Amazon Simple Storage Service (Amazon S3) is an object storage service offering industry-leading scalability, data availability, security, and performance. Customers of all sizes and industries can store and protect any amount of data for virtually any use case, such as data lakes, cloud-native applications, and mobile apps. With cost-effective storage classes and easy-to-use management features, you can optimize costs, organize data, and configure fine-tuned access controls to meet specific business, organizational, and compliance requirements. Some typical use cases of Amazon S3 are:
 
 * Build a data lake - Run big data analytics, artificial intelligence (AI), machine learning (ML), and high performance computing (HPC) applications to unlock data insights.
 * Back up and restore critical data - Meet Recovery Time Objectives (RTO), Recovery Point Objectives (RPO), and compliance requirements with S3's robust replication features.
@@ -21,37 +21,37 @@ Amazon Simple Storage Service (Amazon S3) is an object storage service offering 
 
 ### 1.2 Prerequisites {#prerequisites}
 
-The Amazon S3 connector requires the [AWS authentication connector version 2.1 or higher](https://marketplace.mendix.com/link/component/120333) to authenticate with Amazon Web Services (AWS). It is crucial for the Amazon EventBridge connector to function correctly. For more information about installing and configuring the AWS Authentication connector, see see [AWS Authentication](/appstore/connectors/aws/aws-authentication/).
+The Amazon S3 connector requires the [AWS authentication connector version 2.1 or higher](https://marketplace.mendix.com/link/component/120333) to authenticate with Amazon Web Services (AWS). It is crucial for the Amazon S3 connector to function correctly. For more information about installing and configuring the AWS Authentication connector, see see [AWS Authentication](/appstore/connectors/aws/aws-authentication/).
 
 ## 2 Installation
 
-Follow the instructions in [How to Use Marketplace Content in Studio Pro](/appstore/general/app-store-content/) to import the Amazon EventBridge connector into your app.
+Follow the instructions in [How to Use Marketplace Content in Studio Pro](/appstore/general/app-store-content/) to import the Amazon S3 connector into your app.
 
 ## 3 Configuration
 
-After you install the connector, you can find it in the **App Explorer**, in the **AmazonEventBridgeConnector** section. The connector provides a [domain model](#domain-model) and several [activities](#activities) that you can use to connect your app to Amazon EventBridge. Each activity can be implemented by using it in a microflow. To ensure that your app can connect to the AWS service, you must also configure AWS authentication for the connector.
+After you install the connector, you can find it in the **App Explorer**, in the **AmazonS3Connector** section. The connector provides a [domain model](#domain-model) and several [activities](#activities) that you can use to connect your app to Amazon S3. Each activity can be implemented by using it in a microflow. To ensure that your app can connect to the AWS service, you must also configure AWS authentication for the connector.
 
 ### 3.1 Configuring AWS Authentication
 
-In order to use the Amazon EventBridge service, you must authenticate with AWS. To do so, you must set up a configuration profile in your Mendix app. After you set up the configuration profile, the connector module handles the authentication internally.
+In order to use the Amazon 3 service, you must authenticate with AWS. To do so, you must set up a configuration profile in your Mendix app. After you set up the configuration profile, the connector module handles the authentication internally.
 
 1. Ensure that you have installed and configured the AWS Authentication connector, as mentioned in [Prerequisites](#prerequisites).
 2. Decide whether you want to use session or static credentials to authenticate.
 
-    The Amazon EventBridge connector supports both session and static credentials. By default, the connector is pre-configured to use static credentials, but you may want to switch to session credentials, for example, to increase the security of your app. For an overview of both authentication methods, see [AWS Authentication](/appstore/connectors/aws/aws-authentication/).
+    The Amazon S3 connector supports both session and static credentials. By default, the connector is pre-configured to use static credentials, but you may want to switch to session credentials, for example, to increase the security of your app. For an overview of both authentication methods, see [AWS Authentication](/appstore/connectors/aws/aws-authentication/).
 
 3. In the **App Explorer**, double-click the **Settings** for your app.
     
-    {{< figure src="/attachments/appstore/connectors/aws-eventbridge/eventbridge_open_settings.png" alt="The Settings option in the App Explorer">}}
+    {{< figure src="/attachments/appstore/connectors/aws-s3-connector/settings.png" alt="The Settings option in the App Explorer">}}
 
 4. In the **App Settings dialog**, in the **Configurations** tab, edit or create an authentication profile.
     
     If you have multiple sets of AWS credentials, or if you want to use both static and session credentials for different use cases, create separate authentication profiles for each set of credentials.
 
 5. In the **Edit Configuration** dialog, in the **Constants** tab, click **New** to add the constants required for the configuration.
-6. In the **Select Constants** dialog, find and expand the **AmazonEventBridgeConnector** > **ConnectionDetails** section.
+6. In the **Select Constants** dialog, find and expand the **AmazonS3Connector** > **ConnectionDetails** section.
 
-    {{< figure src="/attachments/appstore/connectors/aws-dynamodb/eventbridge_edit_configuration.png" alt="The SessionCredentials and StaticCredentials items in the ConnectionDetails section">}}
+    {{< figure src="/attachments/appstore/connectors/aws-s3-connector/constants.png" alt="The SessionCredentials and StaticCredentials items in the ConnectionDetails section">}}
 
 7. Depending on your selected authentication type, configure the required parameters for the **StaticCredentials** or **SessionCredentials**.
    
@@ -69,34 +69,24 @@ In order to use the Amazon EventBridge service, you must authenticate with AWS. 
 
 ### 3.2 Configuring a Microflow for an AWS Service
 
-After you configure the authentication profile for Amazon S3, you can implement the functions of the connector by using the provided activities in microflows. To quickly configure the connection to Amazon S3 by using an example microflow, perform the following steps:
+After you configure the authentication profile for Amazon S3, you can implement the functions of the connector by using the provided activities in microflows. For example, to create a bucked in S3 and then put an object in the bucket, perform the following steps:
 
-1. Optional: If you have not configured your default AWS region before, click **App** > **Marketplace modules** > **AWSS3Connector** > **_USE_ME** > **AWS_Default_Region**, and then select the region of your choice.
+1. In the **App Explorer**, right-click on the name of your module, and then click **Add microflow**.
+2. Enter a name for your microflow, for example, *DS_CreateBucketPutObject*, and then click **OK**.
+3. In the **App Explorer**, in the **AmazonEventBridgeConnector** > **Operations** section, find the **CreateBucket** activity.
+4. Drag the **CreateBucket** activity onto the microflow you are working on.
+5. Double-click the **CreateBucket** activity to configure the required parameters.
+  
+    For the `CreateBucket` activity, you must make a **CreateBucketRequest**, as well as provide the credentials, and specify the region for which you want to retrieve the tables. Other activities may have different required parameters.
 
-    This step is not required, but you may wish to perform it for one of the following reasons:
+6. Click **Edit parameter value**, edit the **AWS_Region** parameter, and change **Type** to **Expression**.
+7. In the expression builder, type `AWS_Region`, and then press **Ctrl+Space**.
+8. In the autocomplete dialog, select **AWSTwinMakerConnector.AWS_Region**, then type *.* and select your AWS region from the list.
 
-    * To reduce latency by choosing a region which is geographically close to you
-    * To choose a region to which you have access, if you do not have access to some regions
+    {{< figure src="/attachments/appstore/connectors/aws-iot-twinmaker/awsregions.png" alt="The list of AWS regions">}}
+    
+    For a list of available AWS regions, see [AWS Region](#aws-region).
 
-    {{% alert color="info" %}}
-    For technical reasons, you cannot set AWS_Default_Region to `aws-global` or `us-east-1`.
-    {{% /alert %}}
-
-2. Create a microflow with session or static credentials authentication. For more information, see [AWS Authentication](/appstore/connectors/aws/aws-authentication/).
-3. In the App Explorer, in **App** > **Marketplace modules** > **AWSS3Connector** > **Examples**, find an example microflow that performs a function which you want to use in your app.
-
-    For example, if you want to get the contents of an object in the S3 bucket, find the **SUB_GetObject** example microflow. For more information about the activities that the microflows can perform, see [Activities](#activities).
-
-4. Drag the example microflow onto the working area of the microflow that you created in step 2, and position it after the **GetSessionCredentials** activity.
-5. Double-click on the microflow activity that you added in step 4.
-
-    The example microflow opens.
-
-6. Configure the required parameters.
-
-    For example, for the **SUB_GetObject** example microflow, you must configure the S3 object that you want to access.
-
-To help you work with the Amazon S3 connector, the following sections of this document list the available entities and activities that you can use in your application.
 
 ## 4 Technical Reference
 

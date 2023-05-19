@@ -1,6 +1,6 @@
 ---
 title: "APM 1 Use Cases"
-url: //appstore/partner-solutions/apd/uc-one/
+url: /appstore/partner-solutions/apd/uc-one/
 weight: 20
 ---
 

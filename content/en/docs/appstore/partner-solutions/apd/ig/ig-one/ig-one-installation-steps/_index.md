@@ -1,18 +1,18 @@
 ---
 title: "Installation Steps"
-url: //appstore/partner-solutions/apd/ig-one-installation-steps/
+url: /appstore/partner-solutions/apd/ig-one-installation-steps/
 weight: 2
 ---
 
 ## 1 Introduction
 
-This section describes the installation of the APM tool. For details on upgrading to a new version, see [Upgrade Steps](//appstore/partner-solutions/apd/ig-one-upgrade-steps/).
+This section describes the installation of the APM tool. For details on upgrading to a new version, see [Upgrade Steps](/appstore/partner-solutions/apd/ig-one-upgrade-steps/).
 
 ## 2 Backup
 
 Did you commit your work to the team server? And did you make a database backup?
 
-{{< figure src="/attachments//appstore/partner-solutions/apd/ig/ig-one/ig-one-installation-steps/Commit.png" >}}
+{{< figure src="/attachments/appstore/partner-solutions/apd/ig/ig-one/ig-one-installation-steps/Commit.png" >}}
 
 If you don't have an SVN client like Tortoise SVN installed, make a copy of the widgets folder in your project.
 
@@ -20,7 +20,7 @@ If you don't have an SVN client like Tortoise SVN installed, make a copy of the 
 
 Import the module APMAgent in the Modeler.
 
-{{< figure src="/attachments//appstore/partner-solutions/apd/ig/ig-one/ig-one-installation-steps/Import_Module_Package.png" >}}
+{{< figure src="/attachments/appstore/partner-solutions/apd/ig/ig-one/ig-one-installation-steps/Import_Module_Package.png" >}}
 
 Write down the widgets in the warning dialog that are overwritten to be able to revert these changes.
 
@@ -28,17 +28,17 @@ Write down the widgets in the warning dialog that are overwritten to be able to 
 
 If you are not using only **English, United States**, copy the **English, United States** language for the APMAgent module to all the languages using **Tools** > **Language Operations** in the Modeler:
 
-{{< figure src="/attachments//appstore/partner-solutions/apd/ig/ig-one/ig-one-installation-steps/Language_Operations_Header.png" >}}
+{{< figure src="/attachments/appstore/partner-solutions/apd/ig/ig-one/ig-one-installation-steps/Language_Operations_Header.png" >}}
 
-{{< figure src="/attachments//appstore/partner-solutions/apd/ig/ig-one/ig-one-installation-steps/Language_Operations_APM.png" >}}
+{{< figure src="/attachments/appstore/partner-solutions/apd/ig/ig-one/ig-one-installation-steps/Language_Operations_APM.png" >}}
 
-{{< figure src="/attachments//appstore/partner-solutions/apd/ig/ig-one/ig-one-installation-steps/Language_Operations_Footer.png" >}}
+{{< figure src="/attachments/appstore/partner-solutions/apd/ig/ig-one/ig-one-installation-steps/Language_Operations_Footer.png" >}}
 
 ## 5 Add Permissions
 
 Add `APMAgent.Admin` permissions to the project **Security** > **User roles** tab for a selected administrator role.
 
-{{< figure src="/attachments//appstore/partner-solutions/apd/ig/ig-one/ig-one-installation-steps/Add_Permissions.png" >}}
+{{< figure src="/attachments/appstore/partner-solutions/apd/ig/ig-one/ig-one-installation-steps/Add_Permissions.png" >}}
 
 **Note:** Do not use the Debug role. This is for developers of the APM tool to test certain features.
 
@@ -50,7 +50,7 @@ Add `APMAgent.Admin` permissions to the project **Security** > **User roles** ta
 
 To use the APM tools, you need to call the APM tool UI. Use the **APMAgent/USE_ME/IVK_OpenConsole** microflow for this. Add a navigation menu item, for example.
 
-{{< figure src="/attachments//appstore/partner-solutions/apd/ig/ig-one/ig-one-installation-steps/Add_To_Navigation.png" >}}
+{{< figure src="/attachments/appstore/partner-solutions/apd/ig/ig-one/ig-one-installation-steps/Add_To_Navigation.png" >}}
 
 ## 7 Optional: Add to After Startup and Before Shutdown
 
@@ -66,7 +66,7 @@ Call `APMAgent\USE_ME\BeforeShutdown` from a before shutdown microflow.
 
 You can find the AfterStartup and BeforeShutdown microflows in the project settings.
 
-{{< figure src="/attachments//appstore/partner-solutions/apd/ig/ig-one/ig-one-installation-steps/Project_Settings_After_Startup.png" >}}
+{{< figure src="/attachments/appstore/partner-solutions/apd/ig/ig-one/ig-one-installation-steps/Project_Settings_After_Startup.png" >}}
 
 ## 8 Configure APMAgent.CompanyName and APMAgent.AppName Constants
 
@@ -88,7 +88,7 @@ See the sample microflow APMAgent.SampleNotifyMicroflow_LogMessage.
 
 You can now start up.
 
-If an error appears, see [After Startup Error](//appstore/partner-solutions/apd/ig-one-after-startup-error/).
+If an error appears, see [After Startup Error](/appstore/partner-solutions/apd/ig-one-after-startup-error/).
 
 Otherwise, log in as Admin and navigate to the APM tool.
 
@@ -96,7 +96,7 @@ Otherwise, log in as Admin and navigate to the APM tool.
 
 After startup for the first time, a small wizard is started:
 
-{{< figure src="/attachments//appstore/partner-solutions/apd/ig/ig-one/ig-one-installation-steps/Welcome_Dialog.png" >}}
+{{< figure src="/attachments/appstore/partner-solutions/apd/ig/ig-one/ig-one-installation-steps/Welcome_Dialog.png" >}}
 
 * If you have received a license request code for this app, you can enter this code in the license request code field.   
 * Use the **Mail license request** button to send a mail with the license request.

@@ -1,6 +1,6 @@
 ---
 title: "APD 3 Reference Guide"
-url: //appstore/partner-solutions/apd/rg-three-apd/
+url: /appstore/partner-solutions/apd/rg-three-apd/
 weight: 1
 ---
 
@@ -14,15 +14,15 @@ In earlier releases, this tool was called Application Performance Monitor (APM).
 
 This is the reference guide for CLEVR's APD 3 for Mendix. It has the following chapters:
 
-* [Apps](//appstore/partner-solutions/apd/rg-three-apps/)
-* [Environments](//appstore/partner-solutions/apd/rg-three-environments/)
-* [Dashboard](//appstore/partner-solutions/apd/rg-three-dashboard/)
-* [Logs](//appstore/partner-solutions/apd/rg-three-logs/)
-* [Performance Statistics](//appstore/partner-solutions/apd/rg-three-statistics/)
-* [Performance Recorder](//appstore/partner-solutions/apd/rg-three-recorder/)
-* [Settings](//appstore/partner-solutions/apd/rg-three-settings/)
+* [Apps](/appstore/partner-solutions/apd/rg-three-apps/)
+* [Environments](/appstore/partner-solutions/apd/rg-three-environments/)
+* [Dashboard](/appstore/partner-solutions/apd/rg-three-dashboard/)
+* [Logs](/appstore/partner-solutions/apd/rg-three-logs/)
+* [Performance Statistics](/appstore/partner-solutions/apd/rg-three-statistics/)
+* [Performance Recorder](/appstore/partner-solutions/apd/rg-three-recorder/)
+* [Settings](/appstore/partner-solutions/apd/rg-three-settings/)
 
-{{< figure src="/attachments//appstore/partner-solutions/apd/rg-apd/rg-three-apd/APD_Powered_logo.png" >}}
+{{< figure src="/attachments/appstore/partner-solutions/apd/rg-apd/rg-three-apd/APD_Powered_logo.png" >}}
 
 The sections below provide a short explanation of APD along with its features and possible uses.
 
@@ -44,11 +44,11 @@ Mendix APD collects statistical data about microflows, client API requests, and 
 
 In development, adding a check of APD to the generic definition of done is advised.
 
-{{< figure src="/attachments//appstore/partner-solutions/apd/rg-apd/rg-three-apd/statistics_history.png" >}}
+{{< figure src="/attachments/appstore/partner-solutions/apd/rg-apd/rg-three-apd/statistics_history.png" >}}
 
 ## 4 Performance Recorder for Collecting Individual Traces
 
-When Support or DevOps wants to investigate a performance issue, they can use the APD [Performance Recorder](//appstore/partner-solutions/apd/rg-three-recorder/). This shows individual actions, loop iterations, and exactly where the obstacles are.
+When Support or DevOps wants to investigate a performance issue, they can use the APD [Performance Recorder](/appstore/partner-solutions/apd/rg-three-recorder/). This shows individual actions, loop iterations, and exactly where the obstacles are.
 
 ## 5 Your Flight Data Recorder
 

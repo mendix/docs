@@ -2,20 +2,8 @@
 title: "Aggregate List"
 url: /refguide/aggregate-list/
 weight: 1
-tags:
-  [
-    "studio pro",
-    "aggregate",
-    "sum",
-    "average",
-    "count",
-    "minimum",
-    "maximum",
-    "all",
-    "any",
-    "reduce",
-    "microflow",
-  ]
+tags: ["studio pro", "aggregate", "sum", "average", "count", "minimum", "maximum", "all", "any", "reduce","microflow"]
+#If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 #To update screenshots of these microflows in Studio Pro, use the Microflow Screenshots app.
 ---
 
@@ -27,14 +15,14 @@ This activity can be used in both **Microflows** and **Nanoflows**.
 
 The **Aggregate list** activity can be used to calculate aggregated values over a list of objects. The aggregated values supported by this activity are:
 
-- average
-- count
-- maximum
-- minimum
-- sum
-- all
-- any
-- reduce
+* sum
+* average
+* count
+* minimum
+* maximum
+* all
+* any
+* reduce
 
 ## 2 Properties
 
@@ -46,10 +34,10 @@ There are two sets of properties for this activity, those in the dialog box on t
 
 The **Aggregate list** properties pane consists of the following sections:
 
-- [Action](#action)
-- [Common](#common)
+* [Action](#action)
+* [Common](#common)
 
-## 3 Action Section{#action}
+## 3 Action Section {#action}
 
 The **Action** section of the properties pane shows the action associated with this activity.
 
@@ -65,26 +53,28 @@ The name of the list to aggregate.
 
 Defines which type of aggregation is applied.
 
-| Value   | Description                                                                    |
-| ------- | ------------------------------------------------------------------------------ |
-| Average | The average of all values of an attribute from the list of objects.            |
-| Count   | The total number of objects in the list.                                       |
-| Minimum | The minimum of all values of an attribute from the list of objects.            |
-| Maximum | The maximum of all values of an attribute from the list of objects.            |
-| Sum     | The sum of all values of an attribute from the list of objects.                |
-| All     | If an expression is true for all objects in the list of objects                |
-| Any     | If an expression is true for at least any of the object in the list of objects |
-| Reduce  | Allows for a custom aggregation to be defined                                  |
+| Value   | Description                                                             |
+| ------- | ------------------------------------------------------------------------|
+| Sum     | The sum of all values of an attribute from the list of objects.         |
+| Average | The average of all values of an attribute from the list of objects.     |
+| Count   | The total number of objects in the list.                                |
+| Minimum | The minimum of all values of an attribute from the list of objects.     |
+| Maximum | The maximum of all values of an attribute from the list of objects.     |
+| All     | If an expression is true for all objects in the list of objects.        |
+| Any     | If an expression is true for any of the objects in the list of objects. |
+| Reduce  | Allows for a custom aggregation to be defined.                          |
 
-### 3.3 Return type
+### 3.3 Return Type
 
-This option is only visible if the Function is Reduce. The type selected here will be the type of the output variable, the type of the 'Initial expression' and the type of the 'Expression'. In the example shown below the 'Return type' is String with the 'Initial value' being `'Product names: '` and the expression being `$currentResult + $currentObject/Name`.
+This option is only visible if the **Function** is **Reduce**. The **Return type** selected here will be the type of the output variable, the type of the **Initial value**, and the type of the **Expression**. 
+
+In the example below, the **Return type** is **String** with the **Initial value** being `'Product names: '` and the **Expression** being `$currentResult + $currentObject/Name`.
 
 {{<figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/list-activities/aggregate-list/aggregate-list-reduce-example.png" width="500px" alt="Aggregate list reduce example" >}}
 
 ### 3.4 Aggregate with
 
-This option is only visible if the Function is Average, Minimum, Maximum or Sum. For those functions, you can define if you want to aggregate using an attribute or an expression.
+This option is only visible if the **Function** is **Average**, **Minimum**, **Maximum** or **Sum**. For those functions, you can define if you want to aggregate using an attribute or an expression.
 
 {{% alert color="info" %}}
 When using the `Count` function, it is not necessary to select an attribute or enter an expression, as it simply counts the number of objects in the list.
@@ -92,21 +82,21 @@ When using the `Count` function, it is not necessary to select an attribute or e
 
 ### 3.5 Attribute
 
-Defines which attribute of the objects in the list is used to aggregate over. This must be a numeric attribute (Long, Integer, or Decimal). This option is only visible if 'Aggregate with' is set to 'attribute'.
+Defines which attribute of the objects in the list is used to aggregate over. This must be a numeric attribute (**Long**, **Integer**, or **Decimal**). This option is only visible if **Aggregate with** is set to **Attribute**.
 
-### 3.6 Initial value
+### 3.6 Initial Value
 
-This option is only visible for if the 'Function' is Reduce. The expression here will be used as the initial value for the aggregation. When aggregating with Reduce over an empty list the result will be this value. Oherwise this value will be the value of `$currentResult` when the 'Expression' is evaluated for the first item.
+This option is only visible if the **Function** is **Reduce**. The expression here will be used as the initial value for the aggregation. When aggregating with **Reduce** over an empty list, the result will be this initial value. Otherwise this initial value will be the value of `$currentResult` when the **Expression** is evaluated for the first item.
 
 ### 3.7 Expression
 
-This expression is evaluated for each item in the list of objects and its result is used for the aggregation. Its type must be numeric (Long, Integer, or Decimal) for Average, Minimum, Maximum and Sum. For Any and All the type of this expression must be a Boolean. For Reduce its type must the of the type that is selected in 'Return type'.
+The expression is evaluated for each item in the list of objects and its result is used for the aggregation. For **Average**, **Minimum**, **Maximum** and **Sum**, its type must be numeric (**Long**, **Integer**, or **Decimal**) . For **Any** and **All**, the type of this expression must be a **Boolean**. For **Reduce**, its type is the same as the type that is defined in **Return type**.
 
-In this expression the variable `$currentObject` will contain the item of the list of objects that is currently being processed. If the function is 'Reduce' `$currentResult` will hold the latest accumelated result (the resulting value of this expression being the next value of `$currentResult`).
+In the expression, the variable `$currentObject` contains the item of the list of objects that is currently being processed. If the function is **Reduce**, the variable `$currentResult` contains the latest accumulated result (the resulting value of this expression is the next value of `$currentResult`).
 
 ### 3.8 Variable Name
 
-The name of the variable in which the result of the aggregation is stored. This variable will have a numeric data type if the aggregation function is either Sum, Average, Count, Minimum or Maximum. The type wil be Bool if the aggregation function is Any or All. For Reduce the type is the type that is defined in 'Return type'.
+The name of the variable in which the result of the aggregation is stored. The variable will have a numeric data type if the aggregation function is **Sum**, **Average**, **Count**, **Minimum** or **Maximum**. The type will be a **Boolean** if the aggregation function is **Any** or **All**. For **Reduce**, the type is same as the type that is defined in **Return type**.
 
 ## 4 Common Section{#common}
 
@@ -146,4 +136,4 @@ Since the Mendix Runtime merges list retrieve and aggregate activities, you do n
 
 ## 6 Read More
 
-- [Retrieve Activities](/refguide/retrieve/)
+* [Retrieve Activities](/refguide/retrieve/)

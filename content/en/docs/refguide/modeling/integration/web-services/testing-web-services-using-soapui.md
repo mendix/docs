@@ -9,7 +9,7 @@ tags: ["test", "testing", "web service", "soapui"]
 
 ## 1 Introduction
 
-You can publish your own webservices in a Mendix application. These webservices consist of operations. Other applications can then call operations of this webservice and you can return a result. This result is based on a microflow that will be executed when the webservice is called. With SoapUI you can create (automated) tests for these webservices.
+You can publish your own web services in a Mendix application. These webservices consist of operations. Other applications can then call operations of this webservice and you can return a result. This result is based on a microflow that will be executed when the web service is called. With SoapUI you can create (automated) tests for these webservices.
 
 This how-to will teach you how to do the following:
 
@@ -26,7 +26,7 @@ Before you can start with this how-to, make sure you have completed the followin
 
 | Software | Version used in this how-to |
 | --- | --- |
-| SoapUI | 5.2.0 |
+| SoapUI | 5.7.0 |
 
 {{% alert color="warning" %}}
 All images, names and steps in this how-to are based on these versions. When using other versions the images and/or names on your screen may be different than the images or names used in this how-to.

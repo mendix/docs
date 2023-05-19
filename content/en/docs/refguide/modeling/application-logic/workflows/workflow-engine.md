@@ -109,9 +109,9 @@ As the Workflow Engine executes tasks asynchronously, you cannot have it present
 
 ### 3.2 Execution
 
-The user running the workflow is the System user. That is the reason why you cannot use the current user in XPath constraints in workflows. This is also the reason why you cannot have user interactions (such as **Show Page** microflow activity or **Show Message** microflow activity) in microflows called from workflows. 
+The user running the workflow is the System user. That is the reason why you cannot use `$currentUser` in XPath constraints in workflows. This is also the reason why you cannot have user interactions (such as **Show Page** microflow activity or **Show Message** microflow activity) in microflows called from workflows. 
 
-During execution the System.Workflow object record gets locked beforehand. This way concurrent execution and changes to the workflow instance outside the Workflow Engine that executes the workflow are prohibited. 
+During execution the System.Workflow object record gets locked beforehand. For example, when a user task is in progress, the workflow is suspended until the user task is completed. This way concurrent execution and changes to the workflow instance outside the Workflow Engine that executes the workflow are prohibited. 
 
 The execution of a workflow will load the workflow instance and will try to advance the workflow from the current activity. If this is not possible (the prerequisites for advancing an activity have not been met yet), or when the workflow reaches another activity that has to wait for completion, the workflow is suspended and it stores the new state in the database. The execution of that workflow instance will then stop and the engine may continue executing other workflow instances. As soon as something happens in the system that may allow a workflow instance to advance again, a workflow execution task will be queued to execute that workflow instance again, which may advance that workflow instance further. When the workflow engine reaches the **End** activity, the workflow execution will stop and the state of the workflow instance will become **Completed**. 
 

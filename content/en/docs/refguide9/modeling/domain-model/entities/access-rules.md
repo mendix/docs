@@ -67,7 +67,7 @@ All module roles are listed, and those to which this access rule applies are che
 
 #### 2.2.2 Select / Deselect All
 
-You can easily select, or deselect, all module roles using this check box.
+You can easily select, or deselect, all module roles using this checkbox.
 
 ### 2.3 Access Rights Tab {#access-rights}
 

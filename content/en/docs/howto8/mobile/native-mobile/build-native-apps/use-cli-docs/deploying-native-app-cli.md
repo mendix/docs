@@ -376,7 +376,7 @@ By default, building for tablets is disabled in XCode. Do the following to enabl
 
     {{< figure src="/attachments/howto8/mobile/native-mobile/build-native-apps/use-cli-docs/deploying-native-app-cli/tablet-workspace.png" alt="select tablet options"   width="300"  >}}
 
-1. Commit these changes to your project's master branch so consecutive builds have the tablet settings enabled.
+1. Commit these changes to your project's primary branch so consecutive builds have the tablet settings enabled.
 
 ##### 6.2.3.2 Directly Change the Files on GitHub
 

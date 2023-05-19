@@ -24,7 +24,7 @@ Business events help you automate the resulting actions when something happens i
 * Making an appointment with a service provider in an appointment app, then needing it to be added to the scheduling app of the service provider
 * Customers placing an order in a webshop, and other apps need to take follow-up actions like scheduling shipment, sending the invoice, and reordering inventory stock
 
-### 1.2 Pre-Requisites
+### 1.2 Prerequisites
 
 To use Mendix Business Events, you will need the following:
 
@@ -152,27 +152,23 @@ The business event service document is open in Studio Pro:
 
 In the [next section](#add-be-definitions), you will define the information included in your events, as well as what the service will implement.
 
-##### 4.2.1.1 Defining Business Events {#add-be-definitions}
+##### 4.2.1.1 Adding Event Definitions {#add-be-definitions}
 
-To start defining what information is included in your events, as well as what the service will implement, do the following:
+To define what information is included in your events, as well as what the service will implement, click **Add** in the open service document:
 
-1. Click **Add** in the open service document:
+{{< figure src="/attachments/appstore/modules/business-events/add-event-definition.png" >}}
 
-     {{< figure src="/attachments/appstore/modules/business-events/add-event-definition.png" >}}
+Start with the first step, seen in the image below:
 
-     The **Add business event** wizard opens:
+{{< figure src="/attachments/appstore/modules/business-events/wizard-step-1.png" >}}
 
-     {{< figure src="/attachments/appstore/modules/business-events/wizard-step-1.png" >}}
-
-2. Go through Steps 1 and 2 of the wizard.
-
-*Step 1: Define what information is included in this event*
+* **Step 1: Define what information is included in this event**
 
 In the **General** section, provide the **Event name** and **Description** to let others know what the service is about.
 
 In the **Attributes** section, click **Add** to define attributes. Changes you make here later might lead to breaking changes if the entity the attribute belongs to is consumed, though related entities will be updated automatically.
 
-*Step 2: Decide what other apps can do and what service this will implement*
+* ***Step 2: Decide what other apps can do and what service this will implement**
 
 Under *Other apps can*, you can select how other apps can use the service. *This Business Events service implements* section defines whether the service will be responsible for publishing events, subscribing to events, or both. 
 
@@ -184,9 +180,9 @@ Below is an explanation of the possibilities for what other apps can do and what
 | Subscribe to events | Publishing events | Subscribing to events | When publishing, **PublishedBusinessEvent** entity and handler microflow <br>If subscribing, a **ConsumedBusinessEvent** entity |
 | Publish events and<br>Subscribe to events | [Nothing required: if apps can do both, there is no obligation for the service to implement anything] | Publishing events and/or subscribing to events | If no service implementations are selected, then nothing created <br>If publishing, **PublishedBusinessEvent** entity and handler microflow <br>If subscribing, a **ConsumedBusinessEvent** entity <br>If both, then both entities and the handler microflow are created 
 
-3. Click **Done** to exit the wizard and view the defined service document. 
+Click **Done** to exit the wizard and view the defined service document. 
 
-     **Export AsyncAPI Document** exports the YAML file of the business event service so that other apps can [use your newly created service](#two-way-be-existing).
+**Export AsyncAPI Document** exports the YAML file of the business event service so that other apps can [use your newly created service](#two-way-be-existing).
 
 #### 4.2.2 Using an Existing Business Event Service {#two-way-be-existing}
 
@@ -204,14 +200,14 @@ The business event service document is open in Studio Pro:
 
 ##### 4.2.2.1 Publishing and Subscribing to Business Events
 
-After following the instructions [Using an Existing Business Event Service](#two-way-be-create), you can publish or subscribe (or both, depending on the [service definitions](#add-be-definitions)) in the following ways:
+After following the instructions in [Using an Existing Business Event Service](#two-way-be-create), you can publish or subscribe (or both, depending on the [service definitions](#add-be-definitions)) in the following ways:
 
 * Open the business service document and click **Add**
 * **Drag and drop** the business event from the **Data Hub pane** to your domain model
 
 To publish a business event service, you need to use it in a microflow.
 
-##### 4.2.2.1.1 Automatically Created Event Handler Microflow and Entity {#two-way-be-handler}
+#### 4.2.3 Automatically Created Event Handler Microflow and Entity {#two-way-be-handler}
 
 When you click **Add** to add the events from the document into your module, Studio Pro will automatically create a **persistable** consumed entity within your domain model and an **Event Handler** microflow (**Handle_BE**) to manage the flow of the event after delivery. The **Event Handler** microflow is created in the same directory as your service. 
 
@@ -246,7 +242,7 @@ Do this using the **Publish business event** activity:
 4. Double-click **Publish business event** to display the **Publish Business Event** property box.
 5. Enter the following information:
     * **Subject**: This can be anything you consider useful, like a short description of what can be expected in the payload, similar to email subject. It will help subscribed apps decide if the event might be useful to them.
-    * **Event Data**: Select the entity that you want to publish in the service that will represent the Business event in the subscribers app. This should be an entity that you have configured to inherit from the **PublishedBusinessEvent** entity in step 1.
+    * **Event Data**: Enter the entity representing the business event that you want to publish. 
     * **Task Queue/Output:** These values are not currently used for Business Events and should be left unchanged.
 
 {{% alert color="info" %}}
@@ -264,7 +260,7 @@ The **PublishedBusinessEvent** and **ConsumedBusinessEvent** entities are necess
 * **DeadLetterQueue**: This persistent entity within the Domain Model of the Business Events Module is used for generating a historical record of events that are generated for business event activities that were not successful or had errors when received by the consumer and can be referred to for troubleshooting. You can query the DeadLetterQueue entity to determine which received events could not be processed.
 * **Outbox**: This entity is used to store the event prior to being sent.  This entity is connected to the microflow where a Business event is triggered.  If the microflow fails, the entity will be removed as part of the same transaction. If the event broker is down at runtime, business events will accumulate in the **Outbox**. They will be retried at increasing intervals for 48 hours, and they will fail after that time. Once an event is successfully delivered, it gets deleted from the **Outbox**.
 
-#### 4.3.4 Dead Letter Queue for Failed Messages {#dead-letter-queue}
+#### 4.3.3 Dead Letter Queue for Failed Messages {#dead-letter-queue}
 
 Every time a business event is received, it is transformed to match the Entity created as part of the Subscription. When the Entity within the Business Event has changed based on the imported AsyncAPI doucment, it can render the Entity unable to be processed. In such a scenario the Business Event will fail into a **Dead Letter Queue** which contains the representation of the Entity within the data column.
 

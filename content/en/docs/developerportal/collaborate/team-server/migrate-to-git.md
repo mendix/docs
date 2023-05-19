@@ -25,6 +25,12 @@ Only a user with the Scrum Master role can migrate an app. For more information,
 
 {{% /alert %}}
 
+{{% alert color="warning" %}}
+
+At this moment we are limited in our ability to migrate large SVN repositories. If the full SVN repository including all history and branches exceeds approximately 80GB, migration will likely fail. We are working on solutions to both notify you when this issue applies to you and to extend our migration capabilities for large repositories.
+
+{{% /alert %}}
+
 ## 3 How Migration Works
 
 If your app is eligible for migration and your team role is Scrum Master, you see a notification on possible migration at the top of all pages within the **Collaborate** section. Click **Migrate to Git** to start migration:

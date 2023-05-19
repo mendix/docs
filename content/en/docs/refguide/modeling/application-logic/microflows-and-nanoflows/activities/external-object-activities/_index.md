@@ -1,7 +1,7 @@
 ---
 title: "External Object Activities"
 url: /refguide/external-object-activities/
-weight: 100
+weight: 90
 tags: ["studio pro"]
 ---
 {{% alert color="warning" %}}

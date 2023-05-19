@@ -519,7 +519,7 @@ When a `dataSource` attribute is specified and configured by the user, it is pas
 |--------------|----------|----------------|----------------------------------------------------------------------------------------------------------------------------------|
 | `type`       | Yes      | String         | Must be `attribute`                                                                                                              |
 | `key`        | Yes      | String         | See [key](#key)                                                                                                                  |
-| `onChange`   | No       | Property Path  | The path to an [`action`](#action) property that will be executed by the Mendix Platform when the value is changed by the widget |
+| `onChange`   | No       | Property Path  | The path to an [`action`](#action) property that will be run by the Mendix Platform when the value is changed by the widget |
 | `required`   | No       | Boolean        | Decides if the property must be specified by the user, `true` by default                                                         |
 | `dataSource` | No       | Property Path  | Specifies the path to a [`datasource`](#datasource) property linked to this attribute property                                   |
 
@@ -588,7 +588,7 @@ When a `dataSource` attribute is specified and configured by the user, it is pas
 |---------------------|----------|----------------|----------------------------------------------------------------------------------------------------------------------------------|
 | `type`              | Yes      | String         | Must be `association`                                                                                                            |
 | `key`               | Yes      | String         | See [key](#key)                                                                                                                  |
-| `onChange`          | No       | Property Path  | The path to an [`action`](#action) property that will be executed by the Mendix Platform when the value is changed by the widget |
+| `onChange`          | No       | Property Path  | The path to an [`action`](#action) property that will be run by the Mendix Platform when the value is changed by the widget |
 | `required`          | No       | Boolean        | Decides if the property must be specified by the user, `true` by default                                                         |
 | `selectableObjects` | Yes      | Property Path  | Specifies the path to a [`datasource`](#datasource) property that will provide selectable objects for the association            |
 | `dataSource`        | No       | Property Path  | Specifies the path to a [`datasource`](#datasource) property linked to this association property                                 |

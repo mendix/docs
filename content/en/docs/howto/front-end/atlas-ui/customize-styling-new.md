@@ -562,6 +562,22 @@ excludeHelpers
 
 By default, Mendix generates the *index.html* (the page that is loaded to start the app) based on the app configuration. In some cases it may be needed to customize this HTML, which can be done by creating a file called *index.html* in the **theme/web** folder. To make sure that your file has the right structure, we recommend you copy *index-example.html* from the **deployment/web** folder to the **theme/web**, rename it to *index.html*, and then use it as a starting point. This file will be created after you have deployed your app locally at least once.
 
+### 9.1 Cache Busting in Mendix
+
+Cache busting is where a browser is told by the web server to re-download page resources (such as images, stylesheets, or JavaScript) because of changes in those resources. Mendix automatically takes care of this by adding dynamic query parameters on top of the resources in *login.html* and *index.html*. Here is an example of the auto-generated cachebust query parameters in a line from */deployment/web/index.html*:
+
+```html {lineos=false}
+<script src="mxclientsystem/mxui/mxui.js?638184496048312490"></script>
+```
+
+Mendix is able to add the `?638184496048312490` query parameter because of the use of a dynamic parameter called `{{cachebust}}` in */deployment/web/index-example.html*, which looks like this:
+
+```html {lineos=false}
+<script src="mxclientsystem/mxui/mxui.js?{{cachebust}}></script>
+```
+
+To ensure cache busting keeps working, whenever you need to customize *index.html* or *login.html*, make sure these files are copied according to the recommendations in [Customizing index.html](#custom-web). Whenever cache busting breaks, it is likely that the query parameters have become hard coded (for example `?638184496048312490`) instead of dynamic (for example `?{{cachebust}}`) due to copying */deployment/web/index.html* instead of the correct filename  */deployment/web/index-example.html*.
+
 ## 10 Customizing Unsupported Browsers (Web) {#customize-unsupported-browsers}
 
 When an end-user opens a Mendix app in an unsupported browser, a page is shown that the current browser is not supported and explain which other browsers can be used. To customize this screen, you can create a custom html file called *unsupported-browser.html* in the **theme/web** folder. If desired, you can copy *unsupported-browser.html* from the **deployment/web** folder to the **theme/web** folder and use it as a starting point. This file will be created after you have deployed your app locally at least once.

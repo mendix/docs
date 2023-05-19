@@ -44,7 +44,7 @@ Attributes of type **Binary** cannot be exported through OData services except f
 
 ### 3.1 Required Validation Rules for Published Attributes
 
-For published OData services, the **Can be empty** check box appears when you edit a published attribute. 
+For published OData services, the **Can be empty** checkbox appears when you edit a published attribute. 
 
 When the checkbox Can be empty is unselected, and there is no **Required** validation rule set, you will be prompted to add a 'required' validation rule or use a before commit microflow to ensure that end-users do not leave it empty.
 
@@ -116,7 +116,7 @@ The **Capabilities** section gives an overview of what operations the resource s
 
 ### 9.1 Insertable
 
-Select the check box for **Insertable** to indicate that clients can insert new objects.
+Select the checkbox for **Insertable** to indicate that clients can insert new objects.
 
 When the app receives a request to insert a new object, it does the following:
 
@@ -144,7 +144,7 @@ You can also set the [query options](#query-options) for each request.
 
 ### 9.3 Updatable {#updatable}
 
-Select the check box for **Updatable** to indicate that clients can update the values of attributes and associations.
+Select the checkbox for **Updatable** to indicate that clients can update the values of attributes and associations.
 
 When the app receives a request to change values, it does the following:
 
@@ -160,7 +160,7 @@ In the publishing app, you can use a validation message action to report a valid
 
 ### 9.4 Deletable {#deletable}
 
-Select the check box for **Deletable** to indicate that clients can delete the values of attributes and associations.
+Select the checkbox for **Deletable** to indicate that clients can delete the values of attributes and associations.
 
 Choose whether the object should be deleted from the database directly, or whether to call a microflow. Specify a microflow that takes the entity as a parameter, and optionally a [System.HttpRequest](/refguide/http-request-and-response-entities/) parameter. In the microflow, you can use the [Delete](/refguide/deleting-objects/) activity to delete the object from the database. 
 

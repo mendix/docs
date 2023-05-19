@@ -378,13 +378,15 @@ Studio Pro adds metadata on the Mendix version of your app to each revision when
 
 When using external tools, you might be asked to authenticate separately to Team Server.
 
-Connecting to Git is done via a personal access token (PAT). For information on how to create a PAT, see the [Personal Access Tokens](/developerportal/community-tools/mendix-profile/#pat) section of *Mendix Profile*.
+Connecting to Git is done using a personal access token (PAT). Connecting to SVN can either be done using a PAT or your Mendix credentials.
 
-You need to use the following credentials:
+For information on how to create a PAT, see the [Personal Access Tokens](/developerportal/community-tools/mendix-profile/#pat) section of *Mendix Profile*.
+
+To connect to Git you need to use the following URL and credentials:
 
 * URL: `https://git.api.mendix.com/<your AppID>.git`
 * Username: your Mendix account username (alternatively, you can use the word *pat* as your username)
-* Password: the personal access token you created
+* Password: the PAT you created – the PAT must include the scopes `mx:modelrepository:repo:write`, `mx:modelrepository:repo:read`, and/or `mx:modelrepository:write` under *Model Repository*
 
 ### 9.3 Adding Files and Directories
 

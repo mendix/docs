@@ -52,7 +52,7 @@ The **Merge Changes Here** option allows you to merge changes that were committe
 
 The **Reverse Merge Changes** option allows locally rolling back changes that were committed to the version control repository. These local changes can then be committed as a new revision.
 
-## 11 Revert All Changes
+## 11 Revert All Changes {#revert-all-changes}
 
 The **Revert All Changes** option allows rolling back all local changes, both in the app and in files on disk, that have been introduced since the last commit.
 

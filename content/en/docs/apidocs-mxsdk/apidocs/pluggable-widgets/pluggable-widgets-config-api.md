@@ -10,7 +10,7 @@ aliases:
 
 ## 1 Introduction
 
-A pluggable widget's configuration module allows for several modeler experience improvements. For example, you can hide widget properties based on conditions, add consistency checks to validate the widget's configuration, and customize your widget's appearance in structure mode.
+A pluggable widget's configuration module allows for several modeler experience improvements. For example, you can hide widget properties based on conditions, add consistency checks to validate the widget's configuration, and customize your widget's appearance in **Structure mode**.
 
 It is usually located in a JavaScript file using the same name as the widget’s XML file, ending with *.editorConfig.js*. For example, next to *TextBox.xml* would be a *TextBox.editorConfig.js*.
 

@@ -19,7 +19,6 @@ Before starting this how-to, make sure you are familiar with the following:
 * CICD
 * Using REST services
 * [Unit Testing](/appstore/modules/unit-testing/) module (only if used in your application)
-* [Application Test Suite](/addons/ats-addon/) (only if used in your application)
 
 ## 3 The Pipeline
 
@@ -117,7 +116,7 @@ You can also (manually) create a web service that exposes the standard junit str
 
 #### 3.4.2 Mendix Application Test Suite (ATS) Tests
 
-ATS has its own [API for CICD](/addons/ats-addon/rg-two-cicd-api/#api). To use this, follow the steps in the **ATS and CI/CD** section of [How to Use ATS in Combination with CI/CD](/addons/ats-addon/ht-two-ats-and-ci-cd/#ats-and-ci-cd).
+ATS has its own API for CICD. 
 
 ### 3.5 Next Steps
 

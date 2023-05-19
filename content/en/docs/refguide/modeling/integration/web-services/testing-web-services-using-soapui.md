@@ -19,7 +19,7 @@ This how-to will teach you how to do the following:
 
 ## 2 Preparation
 
-Before you can start with this how-to, make sure you have completed the following prerequisites.
+Before you start this how-to, make sure you have completed the following prerequisites.
 
 * Download and install [SoapUI](https://www.soapui.org/downloads/soapui.html)
 * Complete the how-to [Exposing a web service](/howto/integration/expose-a-web-service/)

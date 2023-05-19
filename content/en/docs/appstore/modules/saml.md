@@ -112,11 +112,11 @@ There are different versions of the SAML module, depending on which version of M
 1. In Mendix Marketplace, search for the [SAML module](https://marketplace.mendix.com/link/component/1174/).
 1. In the **Releases** tab, find the correct release for your Mendix version:
 
-    * For Mendix version 9, there are interleaved odd- and even-numbered patch releases that contain the same changes and require the same Mendix version (for example, SAML module version 3.4.0 and 3.4.1 have the same functionality and require Mendix version 9.22.0 or above). 
+    * For Mendix version 9 and above, there are interleaved odd- and even-numbered patch releases that contain the same changes and require the same Mendix version (for example, SAML module version 3.4.0 and 3.4.1 have the same functionality and require Mendix version 9.22.0 or above). 
     
-        The even-numbered releases (for example, 3.4.0) are intended for apps that were originally built on an earlier version of Mendix, and then upgraded to Mendix version 9. 
+        The even-numbered releases (for example, 3.4.0) are intended for apps that were originally built on a version of Mendix below 9.0.0, and then upgraded to Mendix version 9. 
         
-        The odd-numbered releases (for example, 3.4.1) are for new apps that were built using Mendix version 9 and are using the 3.0 version of Atlas UI. 
+        The odd-numbered releases (for example, 3.4.1) are for new apps that are built using Mendix version 9.0.0 and above and are using the 3.0 version of Atlas UI. 
         
         {{% alert color="info" %}}Using Atlas 3.0 with an app upgraded from Mendix version 8 (which uses Atlas version 2) would result in issues because the templates for the SAML module pages would not exist. Because of that, you must ensure that you download the correct release for your new or upgraded app.
         {{% /alert %}}
@@ -155,7 +155,7 @@ By default, the SAML module will be installed as the **SAML20** module in your a
 
 1. Sign in to the application and configure the SAML module as described in the [Configuration](#config) section.
 
-### 2.1 Using SSOLandingPage{#ssolandingpage}
+### 2.2 Using SSOLandingPage{#ssolandingpage}
 
 You can use single sign on to automatically sign users in to your app by redirecting every user accessing `index.html` to the Mendix `/SSO/` endpoint. To do this, you need to add `<meta http-equiv="refresh" content="0;URL=/SSO/" />` to the `index.html` file.
 

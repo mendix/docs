@@ -21,7 +21,7 @@ This how-to will teach you how to do the following:
 
 Before starting this how-to, make sure you have completed the following prerequisites:
 
-* Know how to create domain models (for details, see [Creating a Basic Data Layer](/refguide/create-a-basic-data-layer/))
+* Know how to create domain models (for details, see [Configuring a Domain Model](/refguide/configuring-a-domain-model/))
 * Know how to create overview and detail pages (for details, see [How to Create Your First Two Overview and Detail Pages](/howto/front-end/create-your-first-two-overview-and-detail-pages/))
 * Know how to create microflows (for details, see [How to Build Your First Microflow: Hello world!](/refguide/triggering-microflow-from-menu-item/))
 * Understand the concepts behind REST and web services (for more information, see [How to Consume a Complex Web Service](/howto/integration/consume-a-complex-web-service/))

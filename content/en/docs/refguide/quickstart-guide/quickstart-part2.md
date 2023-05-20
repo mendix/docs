@@ -3,7 +3,7 @@ title: "Add a Native Mobile App"
 url: /refguide/quickstart-part2/
 weight: 20
 description: "Learn the basics of making a native mobile app."
-tags: ["microflows", "widgets", "app", "nanoflow", "app development"]
+tags: ["hello world", "microflows", "widgets", "app", "nanoflow", "app development"]
 ---
 
 ## 1 Introduction 
@@ -185,7 +185,7 @@ For more information on building and deploying apps with Mendix, see [Building N
 
 ## 5 Read More
 
-* [Mendix Academy](https://academy.mendix.com/) – complete learning paths to build general Mendix skills
-    * [Crash Course](https://academy.mendix.com/link/paths/82/Crash-Course) – the course we recommend for new users who are also experienced developers
-* [Mendix Documentation](https://docs.mendix.com/) – learn about the parts of Mendix which interest you most
-* [General Info](/refguide/general/) – learn more about the fundamentals of Studio Pro
+* [Studio Pro Overview](/refguide/studio-pro-overview/) – describes Studio Pro tabs, menus, and shortcut keys
+* [Mendix Best Practices for Development](/refguide/dev-best-practices/) – a reference for adopting consistent naming and modeling conventions while developing your Mendix apps
+* [Starting with App from a Spreadsheet](/refguide/app-from-spreadsheet/) – describes importing a Microsoft Excel spreadsheet and building an app using your data
+* [Mendix Academy Crash Course](https://academy.mendix.com/link/paths/82/Crash-Course) – the course we recommend for new Mendix users who are also experienced developers

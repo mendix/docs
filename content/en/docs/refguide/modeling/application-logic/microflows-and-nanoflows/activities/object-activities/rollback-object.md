@@ -21,7 +21,7 @@ When the rollback object activity is performed in a sub-microflow, it rolls back
 
 An example of rollback object properties is represented in the image below:
 
-{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/object-activities/rollback-object/rollback-properties.png" alt="rollback object properties" >}}
+{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/object-activities/rollback-object/rollback-properties.png" alt="rollback object properties" width="650px" >}}
 
 There are two sets of properties for this activity, those in the dialog box on the left, and those in the properties pane on the right.
 

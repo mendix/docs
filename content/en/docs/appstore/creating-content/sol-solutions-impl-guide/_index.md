@@ -5,7 +5,7 @@ linktitle: "Implement Solutions"
 category: "Creating Content"
 weight: 4
 description: "Provides information and guidance on how to implement Mendix solutions."
-tags: ["solutions guide", "adaptive solutions", "solutions", "implement solution", "set up solution", "upgrade solution"]
+tags: ["solutions guide", "adaptable solutions", "solutions", "implement solution", "set up solution", "upgrade solution"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 

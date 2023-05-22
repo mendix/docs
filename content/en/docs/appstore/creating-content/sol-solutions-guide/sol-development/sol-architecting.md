@@ -4,7 +4,7 @@ url: /appstore/creating-content/sol-architecting/
 linktitle: "Architect Solutions"
 weight: 1
 description: "Architect a solution for adaptation"
-tags: ["solutions", "adaptive solutions", "adaptable solutions", "architecting solutions"]
+tags: ["solutions", "adaptable solutions", "adaptable solutions", "architecting solutions"]
 ---
 
 ## 1 Introduction

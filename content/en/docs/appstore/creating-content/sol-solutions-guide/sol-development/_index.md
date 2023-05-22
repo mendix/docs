@@ -3,7 +3,7 @@ title: "Introduction into Adaptable Solutions"
 url: /appstore/creating-content/sol-development/
 weight: 20
 description: "Presents documentation for developing solutions"
-tags: ["solutions", "development", "adaptive solutions", "adaptable solutions"]
+tags: ["solutions", "development", "adaptable solutions", "adaptable solutions"]
 ---
 
 ## 1 Introduction

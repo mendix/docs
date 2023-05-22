@@ -99,10 +99,6 @@ After you configure the authentication profile for Amazon S3, you can implement 
 14. Double-click the **CreateBucket** activity and configure the **CreateBucketRequest** parameter by doing the following steps:
     1. Click **Edit parameter value**.
     2. Edit the **CreateBucketRequest** parameter and let it auto-fill.
-15. In the **Toolbox** pane, search for the **Retrieve** activity, drag it onto the microflow area, and position it between the **CreateBucket** activity and the microflow end event.
-16. Double-click the **Retrieve** activity.
-17. In the **Association** section, click **Select**, and then select **???** as the association.
-
 
 ## 4 Technical Reference
 

@@ -37,7 +37,7 @@ The customer implementation is a separate, _upgradable_ model instance (fork) pe
 
 ### 3.2 Configuration and Adaptation
 
-As discussed in the [lifecycle of a solution](/appstore/creating-content/sol-development/#2-the-solution-lifecycle), the solution can be tailored to the customer’s need. The recommendation is to use:
+As discussed in the [lifecycle of a solution](/appstore/creating-content/sol-development/#lifecycle), the solution can be tailored to the customer’s need. The recommendation is to use:
 
 -   **Runtime configuration** (using Database Settings objects, or Constants) when configuring to the need of customer groups. This should be used for lite configuration & personalization through developer-built flexibility.
     -   Enable/disable business processes

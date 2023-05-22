@@ -32,7 +32,7 @@ ISVs can create and sell solutions that can be adapted for every individual cust
 
 In larger enterprises, a typical situation occurs in which various departments or regionals have the same need, but they are also (slightly) different from each other. Adaptable solutions allow for the centralized development of the core solution while different teams can make adaptations themselves. Through upgrades, the centralized team can push common functionality to the different teams. An IP-protected and immutable core ensures that the implementation teams only adapt what is needed in order to minimize the impact of upgrades and adaptation effort.
 
-## 4 The Solution Lifecycle {#lifecycle}
+## 4 Solution Lifecycle {#lifecycle}
 
 The solution value chain and lifecycle consists of three important phases:
 

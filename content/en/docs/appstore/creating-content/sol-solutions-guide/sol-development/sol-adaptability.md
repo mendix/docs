@@ -9,33 +9,39 @@ tags: ["solutions", "adaptable solutions", "best practices", "adaptability"]
 
 ## 1 Domain Model
 
-### 1.1 Solution Module Defines the Core of the Data Model
+### 1.1 Solution Module Defining the Data Model Core
 
-It's recommended to have the majority of your data model defined within Solution Modules, to ensure stability and keeping a clear separation between what entities, attributes and associations are coming from the publisher, and what’s added during implementation. This will also allow you to do internal refactoring without having to take all customer instances into account.
+Mendix recommends having the majority of your data model defined within solution modules in order to ensure stability. This als helps to maintain a clear separation between which entities, attributes, and associations come from the publisher and what is added during implementation. Finally, this also enables doing internal refactoring without having to take all customer instances into account.
 
 ### 1.2 Extension Through Extension Entities (Composition Pattern or Specializations)
 
-In general it's recommended to use a separate Extension entity, with a 1-n, or 1-1 relationship, owned by the “Core Entity”. This enables adding of additional attributes and associations during the implementation. Using a separate entity also allows for introduction or removal of extension capabilities without large data migration. Alternatively it's possible to use specializations. It's recommended to consider this an alternative when the composition pattern does not solve the need.
+In general, Mendix recommends using a separate extension entity with a one-to-many or one-to-one relationship owned by the core entity. This enables adding additional attributes and associations during the implementation. Using a separate entity also allows for the introduction or removal of extension capabilities without large data migration. 
+
+Alternatively, it is possible to use specializations. Mendix recommends considering this as an alternative when the composition pattern does not solve the need.
 
 | | Composition | Specializations |
 | --- | --- | --- |
-| Easy to apply without data changes | Yes, new Extension objects can be created and linked to already existing core objects | No, objects need to be re-created in order to change entity / specialization type. |
-| Flexibility on security | Core and Extension have their own security rules. Core rules cannot be overridden | Specialization allows for redefining security rules, even for entities that are defined inside solution modules. |
-| Multiple extension versions (e.g. Vehicle becomes both Car and Train) | Setup can be complex | More suitable |
-| Offline syncronisation | Fully supported | Restrictions apply: [Offline Best Practices](/refguide/mobile/building-efficient-mobile-apps/offlinefirst-data/best-practices/#inheritance) |
+| **Easy to apply without data changes** | Yes, new extension objects can be created and linked to already existing core objects. | No, objects need to be re-created in order to change the entity/specialization type. |
+| **Flexibility on security** | Core and extension have their own security rules. Core rules cannot be overridden. | Specialization allows for redefining security rules, even for entities that are defined inside solution modules. |
+| **Multiple extension versions** (for example, `Vehicle` becomes both `Car` and `Train`). | Setup can be complex. | More suitable. |
+| **Offline syncronization** | Fully supported. | Restrictions apply (for details, see [Offline Best Practices](/refguide/mobile/building-efficient-mobile-apps/offlinefirst-data/best-practices/#inheritance)). |
 
 ### 1.3 Example
 
+Here is an example:
+
 {{< figure src="/attachments/appstore/creating-content/sol-solutions-guide/sol-development/sol-adaptability-best-practices/adaptability-domain-model-example.png" alt="Example of data model extensions"  >}}
 
-- Company is extended through composition, because that's the recommended approach and there are no requirements to reconsider. Additional entities can be created and linked such as the account manager
-- Vehicle is extended through specializations because every customer can have multiple vehicle types (e.g. car & train)
-- Task is extended through a specialization because every customer has very unique requirements on entity access
-- Logo is not extensible
+In this example, the following details apply:
+
+* **Company** is extended through composition, because that is the recommended approach and there are no requirements to reconsider. Additional entities can be created and linked (such as, the **AccountManager**).
+* **Vehicle** is extended through specializations, because every customer can have multiple vehicle types (for example, car, train).
+* **Task** is extended through a specialization, because every customer has very unique requirements on entity access.
+* **Logo** is not extensible.
 
 ## 2 Making Part of the Logic Adaptable
 
-Logic (microflows, nanoflows and workflows) can be made adaptable by placing documents into the open application modules. By using “subflows” the developer of the solution can decide whether the entire flow can be adapted, or only specific parts thereof.
+You can make logic (microflows, nanoflows, and workflows) adaptable by placing documents into the open application modules. By using sub-flows, you can decide whether the entire flow can be adapted, or only specific parts thereof.
 
 | Purpose | Calling Flow | Called (Sub-) Flow |
 | --- | --- | --- |
@@ -46,17 +52,17 @@ Logic (microflows, nanoflows and workflows) can be made adaptable by placing doc
 | Split adaptable microflow | Open application module  | Open application module (newly created flow) |
 
 {{% alert color="info" %}}
-Note that all document types can be part of the solution module, but only nanoflows, microflows and java actions can be made usable.
+All document types can be part of the solution module, but only nanoflows, microflows, and Java actions can be made usable.
 {{% /alert %}}
 
 ## 3 Creating an Adaptable UI
 
-The same patterns that can be used for microflows can be used for making pages (partially) adaptable. For this you can use a combination of: hidden pages and editable layouts, pages and snippets
+The same patterns that can be used for microflows can be used for making pages (partially) adaptable. For this, you can use a combination of hidden pages. editable layouts, pages, and snippets.
 
-| | Open application module / UI resource module | Solution module |
+| | Open App Module/UI Resource Module | Solution Module |
 | --- | --- | --- | 
-| Page | Adaptable pages | Core pages can be hidden, called through microflows & nanoflows |
-| Snippet | Making (parts) of the UI adaptable | Core snippets can be hidden as long as it’s for reuse in hidden core pages. |
+| Page | Adaptable pages | Core pages can be hidden, called through microflows and nanoflows |
+| Snippet | Making (parts) of the UI adaptable | Core snippets can be hidden as long as it is for reuse in hidden core pages. |
 | Layout | Main layout for the application <br /><br />Use a solution specific [master layout](/refguide/layout/#232-master-layout) to allow for changing the layout of all (adaptable and hidden) pages by the customer | Core layouts can be hidden and use an adaptable master layout |
 | Building block | Building blocks that are supposed to be used during adaptation need to reside in an open module | Building blocks that are used during development of the core solution can be hidden |
 | SASS files | Define the theme and look and feel of your application | No SASS definition support<br /><br />Usage of existing theme and design properties, additional styling can be done through inline styling only |

@@ -73,19 +73,35 @@ After you configure the authentication profile for Amazon S3, you can implement 
 
 1. In the **App Explorer**, right-click on the name of your module, and then click **Add microflow**.
 2. Enter a name for your microflow, for example, *DS_CreateBucketPutObject*, and then click **OK**.
-3. In the **App Explorer**, in the **AmazonEventBridgeConnector** > **Operations** section, find the **CreateBucket** activity.
+3. In the **App Explorer**, in the **AmazonS3Connector** > **Operations** section, find the **CreateBucket** activity.
 4. Drag the **CreateBucket** activity onto the microflow you are working on.
-5. Double-click the **CreateBucket** activity to configure the required parameters.
-  
-    For the `CreateBucket` activity, you must make a **CreateBucketRequest**, as well as provide the credentials, and specify the region for which you want to retrieve the tables. Other activities may have different required parameters.
+5. Double-click the **CreateBucket** activity and configure the **AWS_Region** parameter by doing the following steps:
+    1. Click **Edit parameter value**, edit the **AWS_Region** parameter, and change **Type** to **Expression**.
+    2. In the expression builder, type `AWS_Region`, and then press **Ctrl+Space**.
+    3. In the autocomplete dialog, select **AWSTwinMakerConnector.AWS_Region**, then type *.* and select your AWS region from the list.
 
-6. Click **Edit parameter value**, edit the **AWS_Region** parameter, and change **Type** to **Expression**.
-7. In the expression builder, type `AWS_Region`, and then press **Ctrl+Space**.
-8. In the autocomplete dialog, select **AWSTwinMakerConnector.AWS_Region**, then type *.* and select your AWS region from the list.
-
-    {{< figure src="/attachments/appstore/connectors/aws-iot-twinmaker/awsregions.png" alt="The list of AWS regions">}}
+        {{< figure src="/attachments/appstore/connectors/aws-iot-twinmaker/awsregions.png" alt="The list of AWS regions">}}
     
-    For a list of available AWS regions, see [AWS Region](#aws-region).
+        For a list of available AWS regions, see [AWS Region](#aws-region).
+
+6. In the **App Explorer**, in the **AmazonS3Connector** > **ConnectionDetails** section, find the **Credentials_GenerateFromConstants** activity.
+7. Drag the **Credentials_GenerateFromConstants** activity onto the microflow you are working on, and position it between the microflow start event and the **CreateBucket** activity.
+8. Double-click the **Credentials_GenerateFromConstants** activity, and then configure the required **AWS_Region** parameter in the same way as described in step 5.
+9. Double-click the **CreateBucket** activity and configure the **Credentials** parameter by doing the following steps:
+    1. Click **Edit parameter value**, edit the **Credentials** parameter, and change **Type** to **Expression**.
+    2. In the expression builder, type `1. Click **Edit parameter value**, edit the **AWS_Region** parameter, and change **Type** to **Expression**.
+    2. In the expression builder, type `$Credentials`.
+10. In the **Toolbox** pane, search for the **Create Object** activity, drag it onto the microflow area, and position it between the **Credentials_GenerateFromConstants** and the **CreateBucket** activity.
+11. Double-click the **Create Object** activity, and then select **AmazonS3Connector.CreateBucketRequest** as the entity.
+12. In the **Member** section, click **New**, and then select **BucketName** as the member.
+13. Configure an expression to generate the names of the buckets created in Amazon S3 by the microflow.
+13. Click **OK**, and then click **OK** again.
+14. Double-click the **CreateBucket** activity and configure the **CreateBucketRequest** parameter by doing the following steps:
+    1. Click **Edit parameter value**.
+    2. Edit the **CreateBucketRequest** parameter and let it auto-fill.
+15. In the **Toolbox** pane, search for the **Retrieve** activity, drag it onto the microflow area, and position it between the **CreateBucket** activity and the microflow end event.
+16. Double-click the **Retrieve** activity.
+17. In the **Association** section, click **Select**, and then select **???** as the association.
 
 
 ## 4 Technical Reference

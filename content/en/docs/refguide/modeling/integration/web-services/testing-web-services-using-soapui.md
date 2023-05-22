@@ -5,6 +5,8 @@ category: "Web Services"
 weight: 30
 description: "Describes how to create a SOAP project with SoapUI, create assertions in SoapUI, and build an automated test using SoapUI."
 tags: ["test", "testing", "web service", "soapui"]
+aliases: 
+    - /howto/testing/testing-web-services-using-soapui/
 ---
 
 ## 1 Introduction

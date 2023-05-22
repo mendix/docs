@@ -3,6 +3,8 @@ title: "Migrate From Atlas 2 To Atlas 3"
 url: /refguide9/moving-from-atlas-2-to-3/
 weight: 6
 tags: ["Atlas", "UI", "UX", "user experience", "design"]
+aliases:
+    - /refguide/moving-from-atlas-2-to-3/
 ---
 
 ## 1 Introduction

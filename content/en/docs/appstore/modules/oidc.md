@@ -137,7 +137,7 @@ To migrate from Mendix 8.18.x to Mendix 9.8.1 or above, follow the steps below:
 
 #### 3.2.2 Replacing Community Edition with Platform Edition on Mendix Version 9
 
-If your app is already developed using Mendix version 9, but uses the community edition of the OIDC SSO module, you can just do the following.
+If your app is already developed using Mendix version 9 or above, but uses the community edition of the OIDC SSO module, you can just do the following.
 
 1. Import the "OIDC" platform edition module from the Marketplace.
 2. Import the "Mx Model Reflection" Module from the Marketplace.

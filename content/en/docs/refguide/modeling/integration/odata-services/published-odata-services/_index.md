@@ -232,6 +232,10 @@ The Mendix runtime returns status codes for OData payloads. The possible status 
 * `401`, `402`, `403`, `404`, `405`, `422` – [Client error responses](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status#client_error_responses)
 * `500` – Mendix default when something goes wrong and it has not been modelled; may or may not be the standard [internal server error](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/500)
 
-## 8 Limitations
+## 8 Publishing OData Services
+
+To publish an OData resource with full CRUD (Create, Read, Update, or Delete functionalitity, or in Studio Pro, **Insertable**, **Readable**, **Updateable**, and **Deleteable**), select the relevent checkboxes in the [Capabilities](/refguide/published-odata-resource/#capabilities) section in the [Published OData Resource](/refguide/published-odata-resource/). You can then [Send](/refguide/send-external-object/) and [Delete](/refguide/delete-external-object/) these resources using [External Object activities](/refguide/external-object-activities/). 
+
+## 9 Limitations
 
 Studio Pro currently does not support publishing media entities with OData services. To learn about consuming media entities with OData, see the [Binary Attributes](/refguide/consumed-odata-service-requirements/#binary-attributes) section of *Consumed OData Service Requirements*. You can also [Publish and Retrieve Images and Files with REST](/refguide/send-receive-files-rest/).

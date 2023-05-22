@@ -32,20 +32,6 @@ ISVs can create and sell solutions that can be adapted for every individual cust
 
 In larger enterprises, a typical situation occurs in which various departments or regionals have the same need, but they are also (slightly) different from each other. Adaptable solutions allow for the centralized development of the core solution while different teams can make adaptations themselves. Through upgrades, the centralized team can push common functionality to the different teams. An IP-protected and immutable core ensures that the implementation teams only adapt what is needed in order to minimize the impact of upgrades and adaptation effort.
 
-<!-- ### 2.1 Adaptable Solution Examples
-
-An adaptable solution is a solution where each customer gets an instance of the solution based on a common core. This instance is adapted to the customer’s specific needs and context, and integrated with the customer’s existing IT landscape.
-
-The Mendix Marketplace contains numerous adaptable solutions, for example:
-
--   [Mendix PLM for Fashion and Retail](https://marketplace.mendix.com/link/component/118343)
--   [Siemens FSM](https://marketplace.mendix.com/link/component/117710)
--   [Omnichannel Integration Layer](https://marketplace.mendix.com/link/component/118344)
-
-Each solution is useable as is, but it can also be adapted to become even more suitable for the customer.
-
-{{< figure src="/attachments/appstore/creating-content/sol-solutions-guide/sol-development/sol-architecting/mendix-plm-for-fashion-and-retail.png" alt="Mendix PLM for Fashion and Retail" >}} -->
-
 ## 4 The Solution Lifecycle {#lifecycle}
 
 The solution value chain and lifecycle consists of three important phases:

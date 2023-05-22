@@ -1,8 +1,8 @@
 ---
-title: "Introduction into Adaptable Solutions"
+title: "Introduction to Adaptable Solutions"
 url: /appstore/creating-content/sol-development/
 weight: 20
-description: "Presents documentation for developing solutions"
+description: "Presents introductory information on adpatable solutions."
 tags: ["solutions", "development", "adaptable solutions", "adaptable solutions"]
 ---
 
@@ -12,23 +12,23 @@ This section provides information and best practices on how to develop adaptable
 
 While [Mendix best practices for development](/refguide/dev-best-practices/) apply, there are additional considerations when [architecting](/appstore/creating-content/sol-architecting/) and developing a Mendix solution.
 
-## 2 What is an Adaptable Solution?
+## 2 What Is an Adaptable Solution?
 
-In an adaptable solution, up to 20% of the _end solution_ can be adapted through customizations, extensions, integrations, or new customer-specific modules. Instead of being tied to a prescriptive software-as-a-service (SaaS) solution that _only_ allows for configuration at runtime, adaptable solutions allow for design-time adaptation through model-level changes to cater to the needs of your specific implementation.
+In an adaptable solution, up to 20% of the end solution can be adapted through customizations, extensions, integrations, or new customer-specific modules. Instead of being tied to a prescriptive software-as-a-service (SaaS) solution that only allows for configuration at runtime, adaptable solutions allow for design-time adaptation through model-level changes to cater to the needs of your specific implementation.
 
 {{< figure src="/attachments/appstore/creating-content/sol-solutions-guide/sol-development/sol-architecting/adaptable-solution-architecture.png" alt="Adaptable Solution architecture" >}}
 
-## 2.1 Use cases
+## 2.1 Use Cases
 
-Adaptable Solutions as a concept work both for ISVs (e.g. in the [Commercial Solution program](/appstore/creating-content/comm-sol-partner-program/)) as well as in the enterprise context.
+As a concept, adaptable solutions work both for ISVs (for example, in the [Mendix Commercial Solution Partner Program](/appstore/creating-content/comm-sol-partner-program/)) and in the enterprise context.
 
 ### 2.1.1 ISV Commercial Solutions
 
-ISVs can create and sell solutions which can be adapted for every individual customer. This allows them to be more relevant to their customers by being able to adapt the application to specific requirements in UI/UX, process, data and integration. The delivered solution is upgradable so the ISV can deliver innovations and improvements.
+ISVs can create and sell solutions that can be adapted for every individual customer. This allows them to be more relevant to their customers by being able to adapt the application to specific requirements in UI/UX, process, data, and integration. The delivered solution is upgradable so the ISV can deliver innovations and improvements.
 
-### 2.1.2 Enterprise context
+### 2.1.2 Enterprise Context
 
-In larger enterprises there's the typical situation in which different departments or regionals have the same need, but are also (slightly) different from each other. Adaptable Solutions allow for centralized development of the core solution, while different teams can make adaptations themselves. Through upgrades the centralized team can push common functionality to the different teams. An IP-protected and immutable core will ensure that the implementation teams only adapt what's needed, to minimize the impact of upgrades and adaptation effort.
+In larger enterprises, a typical situation occurs in which different departments or regionals have the same need, but are also (slightly) different from each other. Adaptable solutions allow for the centralized development of the core solution while different teams can make adaptations themselves. Through upgrades, the centralized team can push common functionality to the different teams. An IP-protected and immutable core ensures that the implementation teams only adapt what is needed in order to minimize the impact of upgrades and adaptation effort.
 
 <!-- ### 2.1 Adaptable Solution Examples
 
@@ -59,7 +59,7 @@ This can be visualized as follows:
 
 {{< figure src="/attachments/appstore/creating-content/sol-solutions-guide/sol-development/solution-lifecycle.png" alt="Adaptable Solution Lifecycle" >}}
 
-### 2.1 Implementation as separate model instance and cloud node
+### 2.1 Implementation as Separate Model Instance and Cloud Node
 
 The customer implementation is a separate, _upgradable_ model instance (fork) per customer, that shares generic functionality from the original Solution model, that's deployed to separate cloud resources.
 
@@ -71,7 +71,7 @@ Note that it’s at the solution developer's discretion to determine who can imp
 
 For more details on this read the [architectural recommendations on implementation per customer](/appstore/creating-content/sol-architecting/#3-implementation-per-customer).
 
-## 3 Three parts: core, customizations and extensions {#three-parts}
+## 3 Three Parts (Core, Customizations, Extensions) {#three-parts}
 
 Architecting a solution for adaptation requires an understanding of your customers' needs: You need to know which functional requirements are common across your customers and which are specific to individual customers. This enables grouping the modules in the application model into three main functional parts:
 
@@ -93,7 +93,7 @@ These different parts work together in the customer implementation. It is import
 
 To ensure that the intellectual property (IP) that is created during the "Build" phase will not be disclosed to implementation teams or customers, you can [apply IP Protection](/appstore/creating-content/sol-ip-protection/). This will also render those components "immutable", making it easier to upgrade because there will never be any merge conflicts.
 
-## 6 Documents in This Section
+## 5 Documents in This Section
 
 -   [Architect Adaptable Solutions](/appstore/creating-content/sol-architecting/)
 -   [Apply IP Protection](/appstore/creating-content/sol-ip-protection/)

@@ -60,7 +60,7 @@ For more details see: [Architect Adaptable Solutions](/appstore/creating-content
 
 Mendix supports the hiding of module implementations as a means to protect your IP. As a publisher, you can control which parts of the app model are visible and editable, and which parts of the app model are hidden from your consumers. On top of the hidden model documents and elements, you can define an API to make it possible to reuse and extend the functionality in other parts of the app.
 
-In this way, adaptable solutions can have a [common core](/appstore/creating-content/sol-architecting/#three-parts) shared across all customers which is protected, with a adaptable shell on top. The adaptable shell is customized for each customer, either by making model changes into the customizable core or by extending the app with entirely new modules. Both the customizations and extensions make use of the APIs of the common core.
+In this way, adaptable solutions can have a [common core](/appstore/creating-content/sol-architecting/#app-design) shared across all customers which is protected, with a adaptable shell on top. The adaptable shell is customized for each customer, either by making model changes into the customizable core or by extending the app with entirely new modules. Both the customizations and extensions make use of the APIs of the common core.
 
 <!-- [TODO: add visual describing 80/20 rule with common core and flexible shell with model customizations & extensions] -->
 

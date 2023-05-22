@@ -79,7 +79,7 @@ If after go-live it becomes necessary to adapt the model for a customer, a solut
 
 _Make sure to test this scenario before applying any customizations, since this only works when the application model is based on the same version of the solution._
 
-## 4 Application design
+## 4 Application design {#app-design}
 
 ### 4.1 Combine the different module types to achieve IP protection & adaptability
 

@@ -21,7 +21,7 @@ This requires an iterative approach, where your understanding of the architectur
 
 <!-- TODO: add graphic of progressive emergent architecture -->
 
-## 3 Implementation per customer
+## 3 Implementation per Customer {#per-customer}
 
 The customer implementation is a separate, _upgradable_ model instance (fork) per customer, that shares generic functionality from the original Solution model, that's deployed to separate cloud resources. This allows the implementation team to fully customize all non IP protected functionality. Not all customer implementations require changes to the model. In those cases the original model can be deployed as is. Depending on the use case the customer gains access to the project as well.
 
@@ -79,7 +79,7 @@ If after go-live it becomes necessary to adapt the model for a customer, a solut
 
 _Make sure to test this scenario before applying any customizations, since this only works when the application model is based on the same version of the solution._
 
-## 4 Application design {#app-design}
+## 4 Application Design {#app-design}
 
 ### 4.1 Combine the different module types to achieve IP protection & adaptability
 

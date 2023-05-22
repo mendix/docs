@@ -2,6 +2,8 @@
 title: "Introduction to Adaptable Solutions"
 url: /appstore/creating-content/sol-development/
 weight: 20
+no_list: false
+description_list: true
 description: "Presents introductory information on adpatable solutions."
 tags: ["solutions", "development", "adaptable solutions", "adaptable solutions"]
 ---
@@ -18,17 +20,17 @@ In an adaptable solution, up to 20% of the end solution can be adapted through c
 
 {{< figure src="/attachments/appstore/creating-content/sol-solutions-guide/sol-development/sol-architecting/adaptable-solution-architecture.png" alt="Adaptable Solution architecture" >}}
 
-## 2.1 Use Cases
+## 3 Use Cases
 
 As a concept, adaptable solutions work both for ISVs (for example, in the [Mendix Commercial Solution Partner Program](/appstore/creating-content/comm-sol-partner-program/)) and in the enterprise context.
 
-### 2.1.1 ISV Commercial Solutions
+### 3.1 ISV Commercial Solutions
 
 ISVs can create and sell solutions that can be adapted for every individual customer. This allows them to be more relevant to their customers by being able to adapt the application to specific requirements in UI/UX, process, data, and integration. The delivered solution is upgradable so the ISV can deliver innovations and improvements.
 
-### 2.1.2 Enterprise Context
+### 3.2 Enterprise Context
 
-In larger enterprises, a typical situation occurs in which different departments or regionals have the same need, but are also (slightly) different from each other. Adaptable solutions allow for the centralized development of the core solution while different teams can make adaptations themselves. Through upgrades, the centralized team can push common functionality to the different teams. An IP-protected and immutable core ensures that the implementation teams only adapt what is needed in order to minimize the impact of upgrades and adaptation effort.
+In larger enterprises, a typical situation occurs in which various departments or regionals have the same need, but they are also (slightly) different from each other. Adaptable solutions allow for the centralized development of the core solution while different teams can make adaptations themselves. Through upgrades, the centralized team can push common functionality to the different teams. An IP-protected and immutable core ensures that the implementation teams only adapt what is needed in order to minimize the impact of upgrades and adaptation effort.
 
 <!-- ### 2.1 Adaptable Solution Examples
 
@@ -44,56 +46,56 @@ Each solution is useable as is, but it can also be adapted to become even more s
 
 {{< figure src="/attachments/appstore/creating-content/sol-solutions-guide/sol-development/sol-architecting/mendix-plm-for-fashion-and-retail.png" alt="Mendix PLM for Fashion and Retail" >}} -->
 
-## 2 The Solution Lifecycle
+## 4 The Solution Lifecycle {#lifecycle}
 
-The Solution value chain and lifecycle consists of 3 important phases:
+The solution value chain and lifecycle consists of three important phases:
 
-| Phase     | Party                                          | Purpose                                                                                                                               
-| --------- | ---------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------- |
-| Build the solution core     | ISV                                            | Create a solution that's designed for adaptation. New versions are periodically released.                                             |
-| Implement for a customer | ISV, the Customer or an implementation partner | Adapt the solution to the individual customer's need and apply upgrades. Including changes on UI, data, logic or integration into the customer landscape |
-| Consume in production | Customer                                       | Production usage of the application by the customer. Functional admins can perform day-to-day tasks                                   |
+| Phase | Party | Purpose |
+| --- | --- | --- |
+| **Building the solution core** | ISV | Create a solution that is designed for adaptation. New versions are periodically released. |
+| **Implementing for a customer** | ISV, the customer, or an implementation partner | Adapt the solution to the individual customer's need and apply upgrades. Include changes to UI, data, logic, or integration in the customer landscape. |
+| **Consuming in production** | Customer | Production usage of the application by the customer. Functional admins can perform day-to-day tasks. |
 
-
-This can be visualized as follows:
+The solution lifecycle can be visualized in this diagram:
 
 {{< figure src="/attachments/appstore/creating-content/sol-solutions-guide/sol-development/solution-lifecycle.png" alt="Adaptable Solution Lifecycle" >}}
 
-### 2.1 Implementation as Separate Model Instance and Cloud Node
+### 4.1 Implementation as a Separate Model Instance and Cloud Node
 
-The customer implementation is a separate, _upgradable_ model instance (fork) per customer, that shares generic functionality from the original Solution model, that's deployed to separate cloud resources.
+The customer implementation is a separate upgradable model instance (fork) per customer that shares generic functionality from the original solution model and that is deployed to separate cloud resources.
 
 {{< figure src="/attachments/appstore/creating-content/sol-solutions-guide/sol-development/solution-deployment.png" alt="Adaptable Solution Deployment"  width="50%" >}}
 
-The separate model instance allows the implementation team to fully customize all non IP protected functionality. Not all customer implementations require changes to the model. In those cases the original model can be deployed as is.
+The separate model instance allows the implementation team to fully customize all [non-IP protected](#ip-protection) functionality. Not all customer implementations require changes to the model. In those cases, the original model can be deployed as is.
 
-Note that it’s at the solution developer's discretion to determine who can implement a solution, who can access the model and whether their delivery model is Software as a Service or a solution template with a subscription on updates.
+{{% alert color="info" %}}
+It is at the solution developer's discretion to determine who can implement a solution, who can access the model, and whether their delivery model is software-as-a-service (SaaS) or a solution template with a subscription for updates.
+{{% /alert %}}
 
-For more details on this read the [architectural recommendations on implementation per customer](/appstore/creating-content/sol-architecting/#3-implementation-per-customer).
+For more details, see the [Implementation per Customer](/appstore/creating-content/sol-architecting/#per-customer) section of *How to Architect Adaptable Solutions*.
 
-## 3 Three Parts (Core, Customizations, Extensions) {#three-parts}
+## 5 Three Parts (Core, Adaptations, Extensions) {#three-parts}
 
-Architecting a solution for adaptation requires an understanding of your customers' needs: You need to know which functional requirements are common across your customers and which are specific to individual customers. This enables grouping the modules in the application model into three main functional parts:
+Architecting a solution for adaptation requires an understanding of your customers' needs. You need to know which functional requirements are common across your customers and which are specific to individual customers. This enables grouping the modules in the application model into three main functional parts:
 
--   A shared and immutable common core
--   Common modules that can be adapted to a customer’s needs
--   Customer-specific extension modules
+* A shared and immutable common core
+* Common modules that can be adapted to a customer’s needs
+* Customer-specific extension modules
 
-{{< figure src="/attachments/appstore/creating-content/sol-solutions-guide/sol-development/solution-three-parts.png" alt="3 parts of the adaptable solution">}}
+{{< figure src="/attachments/appstore/creating-content/sol-solutions-guide/sol-development/solution-three-parts.png" alt="Three parts of the adaptable solution">}}
 
-These different parts work together in the customer implementation. It is important to maintain the distinction because theres an inherent tradeoff: what's part of the common core and IP protected, cannot be adapted or modified, while what can be adapted, can never be protected. This boundary can be created at a fine grained level. All adaptation (both extensions and adaptable core) can make use of functionality from the common core. To read more about this, please read: [application design](/appstore/creating-content/sol-architecting/#4-application-design).
+These different parts work together in the customer implementation. It is important to maintain these distinctions, because there is an inherent tradeoff: What is part of the common core and IP-protected cannot be adapted or modified, while what can be adapted can never be protected. This boundary can be created at a fine-grained level. All adaptation (both extensions and adaptable core) can make use of functionality from the common core. For more information, see the [Application Design](/appstore/creating-content/sol-architecting/#app-design) section of *How to Architect Adaptable Solutions*.
 
-| Part                         | IP Protected | Responsibility                                                            | Upgradable              | Purpose                                                                                                                                                                         |
-| ---------------------------- | ------------ | ------------------------------------------------------------------------- | ----------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Immutable Core               | Yes          | Build team                                                                | Yes, drop-in            | Core of the application<br />e.g., data model, workflow actions, standard integrations                                                                                          |
-| Adaptable Core               | No           | Shared documents: Build team<br />Customer documents: Implementation team | Yes, fine-grained merge | Customer specific changes to the model<br />e.g., workflows, data model extensions, customizable pages &amp; snippets, theming, extendable microflows, translation &amp; jargon |
-| Customer Specific Extensions | No           | Implementation team                                                       | Not needed              | Added features for the customer<br />e.g., Integration with existing systems, additional visualisations                                                                         |
+This table describes the three main functional parts in more detail:
 
-## 4 IP Protection
+| Part | IP-Protected | Responsibility | Upgradable | Purpose |
+| --- | --- | --- | --- | --- |
+| **Immutable common core** | Yes | Build team | Yes, drop-in | Core of the application (for example, data model, workflow actions, standard integrations) |
+| **Adaptable core** | No | Build team for shared documents, implementation team for customer documents | Yes, fine-grained merge | Customer specific changes to the model (for example: workflows, data model extensions, customizable pages and snippets, theming, extendable microflows, translation and jargon) |
+| **Customer-specific extensions** | No | Implementation team | Not needed | Added features for the customer (for example, integration with existing systems, additional visualizations) |
 
-To ensure that the intellectual property (IP) that is created during the "Build" phase will not be disclosed to implementation teams or customers, you can [apply IP Protection](/appstore/creating-content/sol-ip-protection/). This will also render those components "immutable", making it easier to upgrade because there will never be any merge conflicts.
+## 6 IP Protection {#ip-protection}
 
-## 5 Documents in This Section
+To ensure that the intellectual property (IP) that is created during the [building the solution core](#lifecycle) phase is not disclosed to implementation teams or customers, you can [apply IP protection](/appstore/creating-content/sol-ip-protection/). This will also render those components immutable and make it easier to upgrade, as there will never be any merge conflicts.
 
--   [Architect Adaptable Solutions](/appstore/creating-content/sol-architecting/)
--   [Apply IP Protection](/appstore/creating-content/sol-ip-protection/)
+## 7 Documents in This Section

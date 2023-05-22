@@ -29,7 +29,7 @@ Using IP Protection and [Solution Modules](/refguide/module-settings/#solution-m
 
 ## 4 What Should Be Protected?
 
-Not all parts of a solution or component need to be protected to allow for [adaptability](/appstore/creating-content/sol-development/#3-three-parts-protected-core-vs-adaptability). It is often desirable to protect the following:
+Not all parts of a solution or component need to be protected to allow for [adaptability](/appstore/creating-content/sol-development/#three-parts). It is often desirable to protect the following:
 
 -   **The core IP of the solution** – analyze the business logic (for example, scheduling or planning algorithms), complex data mappings, business rules, and decision logic that needs protection
 -   **Custom usage metering** – ensure that the metering is tamper-proof (whether done accidentally or intentionally)
@@ -52,7 +52,7 @@ Not all parts of a solution or component need to be protected to allow for [adap
     -   Apply proper naming and documentation for clarity and simple documentation
     -   Consider the unhappy flow with the right validations and error handling
 
-For more details see: [Architect Adaptable Solutions](/appstore/creating-content/sol-architecting)
+For more details see: [Architect Adaptable Solutions](/appstore/creating-content/sol-architecting/)
 
 ### 5.2 Hiding Implementations {#implementation}
 
@@ -80,7 +80,7 @@ Adaptable solutions that will be customized by your customer, by a third-party i
 
 To protect your solutions, we recommend these steps:
 
-1. Identify the shared [common core](/appstore/creating-content/sol-development/#3-three-parts) that will be unchanged across customers and protect it.
+1. Identify the shared [common core](/appstore/creating-content/sol-development/#three-parts) that will be unchanged across customers and protect it.
 2. Identify the parts that make up the flexible shell that customers might want to adapt.
 3. Define clear APIs between the common core and the flexible shell. This ensures good architecture so that the core does not need to be adjusted and can be extended with limited effort.
 

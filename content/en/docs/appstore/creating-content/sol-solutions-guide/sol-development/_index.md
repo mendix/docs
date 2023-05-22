@@ -71,7 +71,7 @@ Note that it’s at the solution developer's discretion to determine who can imp
 
 For more details on this read the [architectural recommendations on implementation per customer](/appstore/creating-content/sol-architecting/#3-implementation-per-customer).
 
-## 3 Three parts: core, customizations and extensions
+## 3 Three parts: core, customizations and extensions {#three-parts}
 
 Architecting a solution for adaptation requires an understanding of your customers' needs: You need to know which functional requirements are common across your customers and which are specific to individual customers. This enables grouping the modules in the application model into three main functional parts:
 

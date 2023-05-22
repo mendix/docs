@@ -13,7 +13,7 @@ The Mendix Platform is well-suited to supporting the development of solutions. R
 
 ## 2 Progressive and Emergent Architecture
 
-The goal for architecting a solution for adaptation is a deep understanding and full specification of the correct scoping of the [three different parts](/appstore/creating-content/sol-development/#3-three-parts-protected-core-vs-adaptability) (meaning, the immutable core compared with customizable modules or something which needs to be customer-specific). This is a level of knowledge that you will only reach once you are serving a large number of customers.
+The goal for architecting a solution for adaptation is a deep understanding and full specification of the correct scoping of the [three different parts](/appstore/creating-content/sol-development/#three-parts) (meaning, the immutable core compared with customizable modules or something which needs to be customer-specific). This is a level of knowledge that you will only reach once you are serving a large number of customers.
 
 When you start work on a solution for an initial customer or handful of customers, you might not have this thorough understanding yet. Instead, as you deliver the solution to additional customers, you will learn about their needs and will better understand which functionalities will be common and which will be specific.
 
@@ -90,7 +90,7 @@ An adaptable solution can exist of multiple core and adaptable modules. When cre
 | [Solution modules](/refguide/module-settings/#solution-module)      | Immutable common core; Intellectual Property and Core Logic | Hidden                  | “Build” team                                                         |
 | [(Open) application modules](/refguide/module-settings/#app-module) | Adaptable parts of the application                          | Visible, can be changed | Shared between “Build” and “Implement" teams                         |
 |                                                                     | Customer specific additions                                 | Visible                 | “Implement” team                                                     |
-| [UI modules](/refguide/ui-resources-package)                        | Contains theming                                            | Shown, can be changed   | Shared between “Build” and “Implement" teams |
+| [UI modules](/refguide/ui-resources-package/)                        | Contains theming                                            | Shown, can be changed   | Shared between “Build” and “Implement" teams |
 
 Solution modules are unique in the sense that it's not possible to see or alter their implementation details (e.g. view the logic inside a microflow, change the parameters, or edit the data model). They act as a “System” module for your solution.
 
@@ -110,7 +110,7 @@ Be sure to configure the [Solution](/refguide/app-settings/#solution) tab of **A
 
 When designing the interfaces of your solutions, you should do the following:
 
--   Split your adaptable solution architecture into the [three main functional parts](/appstore/creating-content/sol-development/#3-three-parts-protected-core-vs-adaptability)
+-   Split your adaptable solution architecture into the [three main functional parts](/appstore/creating-content/sol-development/#three-parts)
 -   Think about which parts of the shared core are reusable in other parts:
     -   Define which shared logic should be reusable and define entry points to the shared logic as APIs
     -   Define which entities (data/state) are required in which parts of the functionality

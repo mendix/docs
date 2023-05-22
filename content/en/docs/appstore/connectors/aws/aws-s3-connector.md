@@ -69,10 +69,10 @@ In order to use the Amazon 3 service, you must authenticate with AWS. To do so, 
 
 ### 3.2 Configuring a Microflow for an AWS Service
 
-After you configure the authentication profile for Amazon S3, you can implement the functions of the connector by using the provided activities in microflows. For example, to create a bucked in S3 and then put an object in the bucket, perform the following steps:
+After you configure the authentication profile for Amazon S3, you can implement the functions of the connector by using the provided activities in microflows. For example, to create a bucket in S3, perform the following steps:
 
 1. In the **App Explorer**, right-click on the name of your module, and then click **Add microflow**.
-2. Enter a name for your microflow, for example, *DS_CreateBucketPutObject*, and then click **OK**.
+2. Enter a name for your microflow, for example, *DS_CreateBucket*, and then click **OK**.
 3. In the **App Explorer**, in the **AmazonS3Connector** > **Operations** section, find the **CreateBucket** activity.
 4. Drag the **CreateBucket** activity onto the microflow you are working on.
 5. Double-click the **CreateBucket** activity and configure the **AWS_Region** parameter by doing the following steps:

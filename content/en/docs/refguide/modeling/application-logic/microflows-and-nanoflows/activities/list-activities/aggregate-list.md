@@ -86,13 +86,13 @@ Defines which attribute of the objects in the list is used to aggregate over. Th
 
 ### 3.6 Initial Value
 
-This option is only visible if the **Function** is **Reduce**. The expression here will be used as the initial value for the aggregation. When aggregating with **Reduce** over an empty list, the result will be this initial value. Otherwise this initial value will be the value of `$currentResult` when the **Expression** is evaluated for the first item.
+This option is only visible if the **Function** is **Reduce**. The expression you enter in the **Initial value** field will be used first as the initial value for the aggregation. When aggregating with **Reduce** over an empty list, the result of the aggregation will be this initial value. Otherwise, the initial value will be updated to the value of `$currentResult` when the expression in the **Expression** field is evaluated for the first item.
 
 ### 3.7 Expression
 
-The expression is evaluated for each item in the list of objects and its result is used for the aggregation. For **Average**, **Minimum**, **Maximum** and **Sum**, its type must be numeric (**Long**, **Integer**, or **Decimal**) . For **Any** and **All**, the type of this expression must be a **Boolean**. For **Reduce**, its type is the same as the type that is defined in **Return type**.
+The expression you enter in the **Expression** field is evaluated for each item in the list of objects and its result is used for the aggregation. For **Average**, **Minimum**, **Maximum** and **Sum**, its type must be numeric (**Long**, **Integer**, or **Decimal**) . For **Any** and **All**, the type of this expression must be a **Boolean**. For **Reduce**, its type is the same as the type that is defined in **Return type**.
 
-In the expression, the variable `$currentObject` contains the item of the list of objects that is currently being processed. If the function is **Reduce**, the variable `$currentResult` contains the latest accumulated result (the resulting value of this expression is the next value of `$currentResult`).
+In this expression, the variable `$currentObject` contains the item of the list of objects that is currently being processed. If the function is **Reduce**, the variable `$currentResult` contains the latest accumulated result (the resulting value of this expression is the next value of `$currentResult`).
 
 ### 3.8 Variable Name
 

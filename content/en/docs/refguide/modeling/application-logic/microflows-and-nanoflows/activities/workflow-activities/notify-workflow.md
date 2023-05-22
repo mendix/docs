@@ -49,7 +49,7 @@ The workflow instance that will be notified by this activity.
 
 ### 3.2 Activity
 
-The ([caption](/refguide/wait-for-notification/#general) of the) [wait for notification](/refguide/wait-for-notification) workflow activity that pauses the workflow instance. This wait for notification workflow activity needs to be notified so that the workflow can continue.
+The ([caption](/refguide/wait-for-notification/#general) of the) [wait for notification](/refguide/wait-for-notification) workflow activity that suspends the workflow instance. This wait for notification workflow activity needs to be notified so that the workflow can continue.
 
 ### 3.3 Variable Name
 

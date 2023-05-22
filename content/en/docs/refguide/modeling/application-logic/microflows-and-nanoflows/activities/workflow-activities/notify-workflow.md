@@ -10,7 +10,7 @@ tags: ["studio pro", "notify workflow", "workflow notify"]
 This activity can only be used in **Microflows**.
 {{% /alert %}}
 
-## 1 Introduction
+## 1 Introduction {#introduction}
 
 The **Notify workflow** activity can be used to notify a [workflow](/refguide/workflows/) that is suspended on the [Wait for notification](/refguide/wait-for-notification) workflow activity.
 
@@ -55,7 +55,7 @@ The ([caption](/refguide/wait-for-notification/#general) of the) [wait for notif
 
 The name of the variable returned by the activity. This variable will be a Boolean that indicates whether the notification is received or not by the workflow instance.
 
-See the [introduction](#1-introduction) section for more information on the return values.
+For more information on the return values, see the [Introduction](#introduction) section above.
 
 ## 4 Common Section {#common}
 

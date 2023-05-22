@@ -234,7 +234,7 @@ The Mendix runtime returns status codes for OData payloads. The possible status 
 
 ## 8 Publishing OData Services
 
-To publish an OData resource with full CRUD (Create, Read, Update, or Delete functionalitity, or in Studio Pro, **Insertable**, **Readable**, **Updateable**, and **Deleteable**), select the relevent checkboxes in the [Capabilities](/refguide/published-odata-resource/#capabilities) section in the [Published OData Resource](/refguide/published-odata-resource/). You can then [Create](/refguide/create-external-object) and [Delete](/refguide/delete-external-object) these resources using [External Object activities](/refguide/external-object-activities). 
+To publish an OData resource with full CRUD (Create, Read, Update, or Delete functionalitity, or in Studio Pro, **Insertable**, **Readable**, **Updateable**, and **Deleteable**), select the relevent checkboxes in the [Capabilities](/refguide/published-odata-resource/#capabilities) section in the [Published OData Resource](/refguide/published-odata-resource/). You can then [Send](/refguide/send-external-object) and [Delete](/refguide/delete-external-object) these resources using [External Object activities](/refguide/external-object-activities/). 
 
 ## 9 Limitations
 

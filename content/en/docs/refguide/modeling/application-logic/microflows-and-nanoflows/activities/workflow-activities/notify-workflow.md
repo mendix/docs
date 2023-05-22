@@ -16,6 +16,8 @@ The **Notify workflow** activity can be used to notify a [workflow](/refguide/wo
 
 {{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/workflow-activities/notify-workflow/notify-workflow.jpg" width="200" >}}
 
+If the workflow is suspended on the specified wait for notification activity, then this activity will return `true` and the workflow execution will continue further. Otherwise, it will simply return `false`.
+
 {{% alert color="warning" %}}
 When you try to notify a workflow which is already `Completed` or `Aborted`, it will result in a Runtime error. For information on how to handle the error, see [Error Handling in Microflows](/refguide/error-handling-in-microflows/).
 {{% /alert %}}
@@ -53,7 +55,7 @@ The ([caption](/refguide/wait-for-notification/#general) of the) [wait for notif
 
 The name of the variable returned by the activity. This variable will be a Boolean that indicates whether the notification is received or not by the workflow instance.
 
-If the workflow is suspended on the specified wait for notification activity, then this activity will return `true` and the workflow execution will continue further. Otherwise, it will simply return `false`.
+See the [introduction](#1-introduction) section for more information on the return values.
 
 ## 4 Common Section {#common}
 

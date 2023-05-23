@@ -110,8 +110,8 @@ For OQL, many of the same best practices apply as for XPath.
 * Validating against schema slows down the processing.
 * Using sub-transactions for microflows slows down processing.
 
-## 11 MxAssist Performance Bot
+## 11 Best Practice Bot
 
-[MxAssist Performance Bot](/refguide/mx-assist-performance-bot/) can help you find potential improvements to your app for better performance. It can be accessed via **View** > **MxAssist Performance Bot**.
+[Best Practice Bot](/refguide/mx-assist-performance-bot/) can help you find potential improvements to your app in general, including solving performance issues. It can be accessed via **View** > **Best Practice Bot**.
 
-For more information on performance best practices, see [Performance Best Practices](/refguide/performance-best-practices/).
+For more information on performance best practices, see the [Performance Best Practices](/refguide/performance-best-practices/#performance-best-practices) section in *Recommendations from Best Practice Bot*.

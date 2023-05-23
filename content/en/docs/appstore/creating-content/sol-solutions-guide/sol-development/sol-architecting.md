@@ -23,42 +23,44 @@ This requires an iterative approach, where your understanding of the architectur
 
 ## 3 Implementation per Customer {#per-customer}
 
-The customer implementation is a separate, _upgradable_ model instance (fork) per customer, that shares generic functionality from the original Solution model, that's deployed to separate cloud resources. This allows the implementation team to fully customize all non IP protected functionality. Not all customer implementations require changes to the model. In those cases the original model can be deployed as is. Depending on the use case the customer gains access to the project as well.
+The customer implementation is a separate, upgradable model instance (fork) per customer that shares generic functionality from the original solution model and that is deployed to separate cloud resources. This allows the implementation team to fully customize all the functionality that is not IP-protected. Not all customer implementations require changes to the model. In those cases, the original model can be deployed as is. Depending on the use case, the customer gains access to the app as well.
 
 ### 3.1 Summary
 
-| Options | Dedicated Project | Cloud Node per Customer | Customer Access to Developer Portal¹ | Model Access for Customer¹ |
+| Options | Dedicated App | Cloud Node per Customer | Customer Access to Developer Portal¹ | Model Access for Customer¹ |
 | --- | --- | --- | --- | --- |
 | ISV builds, no design-time adaptation needed | No | Optional | No | No |
-| ISV builds and adapts for customer as managed service | Yes | Yes | Optional for collaboration with Feedback and Epics | No |
+| ISV builds and adapts for customer as managed service | Yes | Yes | Optional for collaboration with [Feedback](/developerportal/collaborate/feedback/) and [Epics](/developerportal/collaborate/epics/) | No |
 | Customized by customer or implementation partner | Yes | Yes | Yes, including access to the customer model | Yes |
 
 ¹Including partner that implements on behalf of the customer.
 
 ### 3.2 Configuration and Adaptation
 
-As discussed in the [lifecycle of a solution](/appstore/creating-content/sol-development/#lifecycle), the solution can be tailored to the customer’s need. The recommendation is to use:
+As discussed in the [Solution Lifecycle](/appstore/creating-content/sol-development/#lifecycle) section of *Introduction to Adaptable Solutions*,  the solution can be tailored to the customer’s need. 
 
-* **Runtime configuration** (using Database Settings objects, or Constants) when configuring to the need of customer groups. This should be used for lite configuration & personalization through developer-built flexibility.
+Mendix recommends using the following:
+
+* **Runtime configuration** (using [database setting objects](/refguide/custom-settings/#database-settings), or [constants](/refguide/constants/)) when configuring for the needs of customer groups. This should be used for light configuration and personalization through developer-built flexibility.
     * Enable/disable business processes
-    * Conditionally make capabilities available (e.g. feature toggles)
-    * Parameterize capabilities for groups of customers (e.g. configurable thresholds)
-* **Design-time adaptation** for changing the application model to the needs of individual customers. This should be used for the larger customizations:
-    * Adapting business processes & adding rules
+    * Conditionally make capabilities available (for example, feature toggles)
+    * Parameterize capabilities for groups of customers (for example, configurable thresholds)
+* **Design-time adaptation** for changing the application model to the needs of individual customers. This should be used for the larger customizations in order to do the following:
+    * Adapt business processes and add rules
     * Modify integrations with core systems
-    * Adding customer-specific extensions that need to reside inside the solution application model
-    * (Custom) Integrations
-    *  (larger) UI customizations
+    * Add customer-specific extensions that need to reside inside the solution application model
+    * Complete (custom) Integrations
+    * Make (larger) UI customizations
 
-For some customizations both approaches can be utilized, but we recommend to take into account:
+For some customizations, both approaches can be utilized, but Mendix recommends taking the following into account:
 
 * How easy is it to build and maintain?
 * Is it easy to implement and upgrade afterwards?
 * What is the impact on performance?
 
-In general we recommend design-time, model adaptation over “building Mendix in Mendix”.
+In general, Mendix recommends design-time model adaptation over "building Mendix in Mendix,"
 
-### 3.3 Design-time adaptation
+### 3.3 Design-Time Adaptation
 
 For design-time adaptations we recommend to use the [Solution Initialization](/appstore/creating-content/sol-set-up/) & [Upgrade flow](/appstore/creating-content/sol-upgrade/) to create a dedicated project and Git repository¹ per customer and keep it up to date. This will allow for:
 
@@ -142,13 +144,13 @@ When upgrading a solution to a higher minor or major version the process is:
 <!-- TODO: add howto on platform upgrade -->
 <!-- See also: ![How to Deal with Platform Upgrades and Solution Versioning](https://academy.mendix.com/link/modules/507/lectures/4038/3.3-How-to-Deal-with-Platform-Upgrades-and-Solution-Versioning) -->
 
-### 4.5 Marketplace modules
+### 4.5 Marketplace Modules
 
 Marketplace module with data in the database included in the solution should never be upgraded in the customer implementation, but always through a solution release upgrade. Otherwise this can lead to loss of data.
 
 Example: A solution contains the Excel Importer module. If at any point the customer decides to update the module with a newer version rather than wait for an upgrade from the solution, the customer will later on run into merge conflicts. As soon as they would apply the upgrade from the solution vendor the team server will be unable to properly identify the changes from both sides for the Excel Importer module. If this merge conflict is handled incorrectly, data loss would be the result.
 
-### 4.6 Clean coding
+### 4.6 Clean Coding
 
 In general it is recommended to adhere to [Mendix Best Practices for Development](/refguide/dev-best-practices/) and have clear coding conventions, but for solutions that will be adapted at the model level, this is even more important.
 

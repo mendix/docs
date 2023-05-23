@@ -13,9 +13,9 @@ The Mendix Platform is well-suited to supporting the development of solutions. R
 
 ## 2 Progressive and Emergent Architecture
 
-The goal for architecting a solution for adaptation is a deep understanding and full specification of the correct scoping of the [three different parts](/appstore/creating-content/sol-development/#three-parts) (meaning, the immutable core compared with customizable modules or something which needs to be customer-specific). This is a level of knowledge that you will only reach once you are serving a large number of customers.
+The goal for architecting a solution for adaptation is a deep understanding and full specification of the correct scoping of the [three solution parts](/appstore/creating-content/sol-development/#three-parts) (meaning, the immutable core, customizable modules, and customer-specific components). This is a level of knowledge you will only reach once you are serving a large number of customers.
 
-When you start work on a solution for an initial customer or handful of customers, you might not have this thorough understanding yet. Instead, as you deliver the solution to additional customers, you will learn about their needs and will better understand which functionalities will be common and which will be specific.
+When you start work on a solution for an initial customer or handful of customers, you might not have this thorough understanding. Instead, as you deliver the solution to additional customers, you will learn about their needs and will better understand which functionalities will be common and which will be specific.
 
 This requires an iterative approach, where your understanding of the architectural requirements becomes clearer over time. It also requires a certain level of pragmatism in technical design choices, because you have to accept that you do not know everything up-front and you will have to redo certain design choices as your understanding increases.
 
@@ -27,11 +27,11 @@ The customer implementation is a separate, _upgradable_ model instance (fork) pe
 
 ### 3.1 Summary
 
-| Options                                               | Dedicated project | Cloud node per customer | Customer access to developer portal¹                | Model access for customer¹ |
-| ----------------------------------------------------- | -------------------------------- | --------------------------------- | -------------------------------------------------- | ----------------------------------------- |
-| ISV builds, no design-time adaptation needed          | No                               | Optional                          | No                                                 | No                                        |
-| ISV builds and adapts for customer as managed service | Yes                              | Yes                               | Optional for collaboration with Feedback and Epics | No                                        |
-| Customized by customer or implementation partner      | Yes                              | Yes                               | Yes, including access to the customer model        | Yes                                       |
+| Options | Dedicated Project | Cloud Node per Customer | Customer Access to Developer Portal¹ | Model Access for Customer¹ |
+| --- | --- | --- | --- | --- |
+| ISV builds, no design-time adaptation needed | No | Optional | No | No |
+| ISV builds and adapts for customer as managed service | Yes | Yes | Optional for collaboration with Feedback and Epics | No |
+| Customized by customer or implementation partner | Yes | Yes | Yes, including access to the customer model | Yes |
 
 ¹Including partner that implements on behalf of the customer.
 
@@ -39,22 +39,22 @@ The customer implementation is a separate, _upgradable_ model instance (fork) pe
 
 As discussed in the [lifecycle of a solution](/appstore/creating-content/sol-development/#lifecycle), the solution can be tailored to the customer’s need. The recommendation is to use:
 
--   **Runtime configuration** (using Database Settings objects, or Constants) when configuring to the need of customer groups. This should be used for lite configuration & personalization through developer-built flexibility.
-    -   Enable/disable business processes
-    -   Conditionally make capabilities available (e.g. feature toggles)
-    -   Parameterize capabilities for groups of customers (e.g. configurable thresholds)
--   **Design-time adaptation** for changing the application model to the needs of individual customers. This should be used for the larger customizations:
-    -   Adapting business processes & adding rules
-    -   Modify integrations with core systems
-    -   Adding customer-specific extensions that need to reside inside the solution application model
-    -   (Custom) Integrations
-    -   (larger) UI customizations
+* **Runtime configuration** (using Database Settings objects, or Constants) when configuring to the need of customer groups. This should be used for lite configuration & personalization through developer-built flexibility.
+    * Enable/disable business processes
+    * Conditionally make capabilities available (e.g. feature toggles)
+    * Parameterize capabilities for groups of customers (e.g. configurable thresholds)
+* **Design-time adaptation** for changing the application model to the needs of individual customers. This should be used for the larger customizations:
+    * Adapting business processes & adding rules
+    * Modify integrations with core systems
+    * Adding customer-specific extensions that need to reside inside the solution application model
+    * (Custom) Integrations
+    *  (larger) UI customizations
 
 For some customizations both approaches can be utilized, but we recommend to take into account:
 
--   How easy is it to build and maintain?
--   Is it easy to implement and upgrade afterwards?
--   What is the impact on performance?
+* How easy is it to build and maintain?
+* Is it easy to implement and upgrade afterwards?
+* What is the impact on performance?
 
 In general we recommend design-time, model adaptation over “building Mendix in Mendix”.
 
@@ -62,10 +62,10 @@ In general we recommend design-time, model adaptation over “building Mendix in
 
 For design-time adaptations we recommend to use the [Solution Initialization](/appstore/creating-content/sol-set-up/) & [Upgrade flow](/appstore/creating-content/sol-upgrade/) to create a dedicated project and Git repository¹ per customer and keep it up to date. This will allow for:
 
--   [Full control](/developerportal/collaborate/app-roles/) of who can access the individual customer’s model instance
--   Prevent access to [IP protected](/appstore/creating-content/sol-ip-protection/) content and the development of the original solution template
--   Using all [Collaboration features](/developerportal/collaborate/)
--   Data isolation per customer tenant by having dedicated environments (at least Acceptance and Production).
+* [Full control](/developerportal/collaborate/app-roles/) of who can access the individual customer’s model instance
+* Prevent access to [IP protected](/appstore/creating-content/sol-ip-protection/) content and the development of the original solution template
+* Using all [Collaboration features](/developerportal/collaborate/)
+* Data isolation per customer tenant by having dedicated environments (at least Acceptance and Production).
 
 The customer model instances will run with “IP protection” enabled, meaning that parts of the original solution model can be hidden. Once the solution is published with the protected Solution Models, this implementation hiding cannot be undone by the consumer of the solution model.
 
@@ -85,12 +85,12 @@ _Make sure to test this scenario before applying any customizations, since this 
 
 An adaptable solution can exist of multiple core and adaptable modules. When creating a solution it's important to make a distinction between the different module types and their purpose in the application model:
 
-| Type                                                                | Contains                                                    | Implementation          | Responsibility                                                       |
-| ------------------------------------------------------------------- | ----------------------------------------------------------- | ----------------------- | -------------------------------------------------------------------- |
-| [Solution modules](/refguide/module-settings/#solution-module)      | Immutable common core; Intellectual Property and Core Logic | Hidden                  | “Build” team                                                         |
-| [(Open) application modules](/refguide/module-settings/#app-module) | Adaptable parts of the application                          | Visible, can be changed | Shared between “Build” and “Implement" teams                         |
-|                                                                     | Customer specific additions                                 | Visible                 | “Implement” team                                                     |
-| [UI modules](/refguide/ui-resources-package/)                        | Contains theming                                            | Shown, can be changed   | Shared between “Build” and “Implement" teams |
+| Type | Contains | Implementation | Responsibility |
+| --- | --- | --- | --- |
+| [Solution modules](/refguide/module-settings/#solution-module) | Immutable common core; Intellectual Property and Core Logic | Hidden | “Build” team |
+| [(Open) application modules](/refguide/module-settings/#app-module) | Adaptable parts of the application | Visible, can be changed | Shared between “Build” and “Implement" teams | 
+| | Customer specific additions | Visible | “Implement” team |
+| [UI modules](/refguide/ui-resources-package/) | Contains theming | Shown, can be changed | Shared between “Build” and “Implement" teams |
 
 Solution modules are unique in the sense that it's not possible to see or alter their implementation details (e.g. view the logic inside a microflow, change the parameters, or edit the data model). They act as a “System” module for your solution.
 
@@ -110,14 +110,14 @@ Be sure to configure the [Solution](/refguide/app-settings/#solution) tab of **A
 
 When designing the interfaces of your solutions, you should do the following:
 
--   Split your adaptable solution architecture into the [three main functional parts](/appstore/creating-content/sol-development/#three-parts)
--   Think about which parts of the shared core are reusable in other parts:
-    -   Define which shared logic should be reusable and define entry points to the shared logic as APIs
-    -   Define which entities (data/state) are required in which parts of the functionality
--   Design APIs between common core and extension modules and consider making public only the parts that are explicitly required in other parts of your current architecture — design for today
--   Design APIs for custom-specific modules, focus on current customer requests and their value, and focus on a minimum viable product (MVP) by keeping it small and simple
--   Iterate with customers to evolve the adaptability of the solution by evolving the architecture
-    -   Progressively, the architecture will emerge and become more complex as your solution becomes more successful, so re-architect when necessary
+* Split your adaptable solution architecture into the [three main functional parts](/appstore/creating-content/sol-development/#three-parts)
+* Think about which parts of the shared core are reusable in other parts:
+    * Define which shared logic should be reusable and define entry points to the shared logic as APIs
+    * Define which entities (data/state) are required in which parts of the functionality
+* Design APIs between common core and extension modules and consider making public only the parts that are explicitly required in other parts of your current architecture — design for today
+* Design APIs for custom-specific modules, focus on current customer requests and their value, and focus on a minimum viable product (MVP) by keeping it small and simple
+* Iterate with customers to evolve the adaptability of the solution by evolving the architecture
+    * Progressively, the architecture will emerge and become more complex as your solution becomes more successful, so re-architect when necessary
 
 ### 4.3 Applying IP Protection
 
@@ -127,17 +127,17 @@ IP protection can be used to make parts of the application model and the common 
 
 The [Solution Upgrade](/appstore/creating-content/sol-upgrade/) mechanism requires the application model to be of the same platform version as the version of the solution upgrade package. The recommendation is therefore to:
 
--   Preferrably publish a solution with the latest MTS patch version (e.g. 9.24.x) to allow customer implementations to be upgraded to the latest patch version independently. This helps with decoupling of release cycles in case of a Mendix Platform bug or security update.
--   Never upgrade a solution implementation to a higher minor or major version on its own (e.g. 9.18 to 9.20 or 9 to 10) when the solution is not upgraded.
+* Preferrably publish a solution with the latest MTS patch version (e.g. 9.24.x) to allow customer implementations to be upgraded to the latest patch version independently. This helps with decoupling of release cycles in case of a Mendix Platform bug or security update.
+* Never upgrade a solution implementation to a higher minor or major version on its own (e.g. 9.18 to 9.20 or 9 to 10) when the solution is not upgraded.
 
 When upgrading a solution to a higher minor or major version the process is:
 
--   Upgrade solution to the new version of the Mendix platform.
--   If needed, apply the needed changes to make the application model compatible with the new version of the platform.
--   Create a new solution package.
--   Upgrade the solution implementation to the targeted version of the Mendix Platform and commit. If this causes errors, commit “with errors”.
--   Upgrade the solution, all errors in the part of the application model that came from the solution template should be gone.
--   Apply the needed changes to make the adapted part model compatible with the new version of the platform.
+* Upgrade solution to the new version of the Mendix platform.
+* If needed, apply the needed changes to make the application model compatible with the new version of the platform.
+* Create a new solution package.
+* Upgrade the solution implementation to the targeted version of the Mendix Platform and commit. If this causes errors, commit “with errors”.
+* Upgrade the solution, all errors in the part of the application model that came from the solution template should be gone.
+* Apply the needed changes to make the adapted part model compatible with the new version of the platform.
 
 <!-- TODO: add howto on platform upgrade -->
 <!-- See also: ![How to Deal with Platform Upgrades and Solution Versioning](https://academy.mendix.com/link/modules/507/lectures/4038/3.3-How-to-Deal-with-Platform-Upgrades-and-Solution-Versioning) -->
@@ -158,8 +158,8 @@ The modifiable part of the model that will become editable is logically structur
 
 See the following resources:
 
--   [Mendix Academy - Secure your Commercial Solution](https://academy.mendix.com/link/paths/131/Secure-your-Commercial-Solution)
--   [Implement Best Practices for App Security](https://docs.mendix.com/howto/security/best-practices-security/)
--   [Set Up Anonymous User Security](https://docs.mendix.com/howto/security/set-up-anonymous-user-security/)
+* [Mendix Academy - Secure your Commercial Solution](https://academy.mendix.com/link/paths/131/Secure-your-Commercial-Solution)
+* [Implement Best Practices for App Security](https://docs.mendix.com/howto/security/best-practices-security/)
+* [Set Up Anonymous User Security](https://docs.mendix.com/howto/security/set-up-anonymous-user-security/)
 
 Consider using [Add-on roles](https://academy.mendix.com/link/modules/519/lectures/4099/3.1-When-to-use-add-on-roles) to make it easier to configure the security for your customers.

@@ -105,12 +105,12 @@ Configure the path to the *chrome.exe* executable in the **CustomChromePath** co
     5.  Fill in the fields as follows:
         - In the **Path** field, enter */docgen/*.
         - From the **New Restriction Type** drop-down list, select *Allow all access*.
-    6. Click **Save**. The `/docgen/` path is added to the list.
+    6. Click **Save**. The **/docgen/** path is added to the list.
     7. Restart your application for the new request handler to take effect.
 
 ## 4 Usage
 
-#### 4.1 Generating a Document for the Current User
+#### 4.1 Generating Documents for the Current User
 
 1. Add an entity in your domain model for storing the generated documents. Use **System.FileDocument** as its generalization. Give read access rights for the user roles that should be able to download the document.
 
@@ -141,9 +141,9 @@ Configure the path to the *chrome.exe* executable in the **CustomChromePath** co
 To see the generated document in the browser or download it, you can use the **Download file** microflow action. This will only work if you select *true* for the settings parameter **Wait for result** of the **Generate document from page** action.
 {{% /alert %}}
 
-#### 4.2 Generating a Document as a System Task {#system-task}
+#### 4.2 Generating Documents as a System Task {#system-task}
 
-For scenarios where you want to generate a document using a system context (for example in a scheduled event), the recommended approach is to se up one or more service users for document generation:
+For scenarios where you want to generate documents using a system context (for example in a scheduled event), the recommended approach is to se up one or more service users for document generation:
 
 1. Add a specific app role for document generation to your app, for example **DocGenServiceUser** or **ReadOnly**. In the settings for this new role, assign the **User** module role from the **DocumentGeneration** module to the app role. Also, assign or add the required module roles to allow read access to the relevant data in your app’s modules. 
 
@@ -163,10 +163,10 @@ For scenarios where you want to generate a document using a system context (for 
 We recommend to try to login as the service user at least once, to verify if the service user has the required module roles to login. Depending on your app’s implementation, it might for example be required to assign the `Administration.Account` module role.
 {{% /alert %}}
 
-#### 4.3 Styling
+#### 4.3 Styling Documents
 
-- You can use the **Page break** widget included in this module to structure your document. The **Page break** widget enables you to add page breaks at any place in your document.
-- You can use the **Page orientation** design property to set the page orientation for your document. This property is available in the **Design properties** section in the properties for a page.
-- You can use the **Page size** design property to set the page size for your document. This property is available in the **Design properties** section in the properties for a page.
-- You can use the **Show page numbers** design property to enable page numbers for your document. At the moment, we only support basic page numbers. We will extend and add custom header and footer support at a later stage.
+- You can use the **Page break** widget included in this module to structure your documents. The **Page break** widget enables you to add page breaks at any place in your document.
+- You can use the **Page orientation** design property to set the page orientation for your documents. This property is available in the **Design properties** section in the properties for a page.
+- You can use the **Page size** design property to set the page size for your documents. This property is available in the **Design properties** section in the properties for a page.
+- You can use the **Show page numbers** design property to enable page numbers for your documents. At the moment, we only support basic page numbers. We will extend and add custom header and footer support at a later stage.
 - For advanced styling, you can use the styling editor in Studio Pro to style your documents, for example by using the **@media print** and **@page rules** in your style sheet.

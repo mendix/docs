@@ -152,7 +152,7 @@ If you want to use the AWS Authentication connector with an existing [platform-s
 
    {{< figure src="/attachments/appstore/connectors/aws-authentication/custom-settings.png" >}}
 
-   {{% alert color="info" %}}Fore more information, see [Runtime Customization](/refguide/custom-settings/).{{% /alert %}}
+   {{% alert color="info" %}}For more information, see [Runtime Customization](/refguide/custom-settings/).{{% /alert %}}
 
 4. Click **OK**.
 5. Go to the microflow that uses the **GetSessionCredentials** activity, and then double-click the **GetSessionCredentials** activity to open the **GetSessionCredentials** dialog box.

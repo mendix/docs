@@ -9,6 +9,8 @@ tags: ["solutions", "adaptable solutions", "best practices", "adaptability"]
 
 ## 1 Domain Model
 
+The sections below describe best practices for your solution's domain model.
+
 ### 1.1 Solution Module Defining the Data Model Core
 
 Mendix recommends having the majority of your data model defined within solution modules in order to ensure stability. This als helps to maintain a clear separation between which entities, attributes, and associations come from the publisher and what is added during implementation. Finally, this also enables doing internal refactoring without having to take all customer instances into account.
@@ -57,23 +59,23 @@ All document types can be part of the solution module, but only nanoflows, micro
 
 ## 3 Creating an Adaptable UI
 
-The same patterns that can be used for microflows can be used for making pages (partially) adaptable. For this, you can use a combination of hidden pages. editable layouts, pages, and snippets.
+The same patterns that can be used for microflows can be used for making pages (partially) adaptable. For this, you can use a combination of (hidden) pages, editable layouts, and snippets.
 
 | | Open App Module/UI Resource Module | Solution Module |
 | --- | --- | --- | 
-| Page | Adaptable pages | Core pages can be hidden, called through microflows and nanoflows |
-| Snippet | Making (parts) of the UI adaptable | Core snippets can be hidden as long as it is for reuse in hidden core pages. |
-| Layout | Main layout for the application <br /><br />Use a solution specific [master layout](/refguide/layout/#232-master-layout) to allow for changing the layout of all (adaptable and hidden) pages by the customer | Core layouts can be hidden and use an adaptable master layout |
-| Building block | Building blocks that are supposed to be used during adaptation need to reside in an open module | Building blocks that are used during development of the core solution can be hidden |
-| SASS files | Define the theme and look and feel of your application | No SASS definition support<br /><br />Usage of existing theme and design properties, additional styling can be done through inline styling only |
+| **Page** | Adaptable pages. | Core pages can be hidden and called through microflows and nanoflows. |
+| **Snippet** | Making (parts) of the UI adaptable. | Core snippets can be hidden as long as it is for reuse in hidden core pages. |
+| **Layout** | Main layout for the application. Use a solution-specific [master layout](/refguide/layout/#master-layout) to eanble changing the layout of all (adaptable and hidden) pages by the customer. | Core layouts can be hidden and use an adaptable master layout. |
+| **Building block** | Building blocks that are supposed to be used during adaptation need to reside in an open module. | Building blocks that are used during development of the core solution can be hidden. |
+| **SASS files** | Define the theme and look and feel of your app. | No SASS definition support. Usage of existing theme and design properties as well as additional styling can be done through inline styling only. |
 
 {{% alert color="info" %}}
-The app title, favicon and login pages are always adaptable since they live at project level.
+The app title, favicon, and login pages are always adaptable, since they live at the app level.
 {{% /alert %}}
 
 ### 3.1 Cascading Theming Modules
 
-For solution development it’s recommended to use a layered approach to your theme modules to make them as adaptable as possible (see the [Brand your Adaptable Solution learning path](https://academy.mendix.com/link/paths/130/Brand-your-Adaptive-Solution) which includes how to structure your SASS files).
+For solution development, Mendix recommends using a layered approach to your theme modules to make them as adaptable as possible (for more inforamtion, see the [Brand Your Adaptable Solution](https://academy.mendix.com/link/paths/130/Brand-your-Adaptive-Solution) learning path, which includes details on how to structure your SASS files).
 
 An ISV that maintains multiple adaptable solutions can structure their theme modules in the following way:
 
@@ -82,25 +84,31 @@ An ISV that maintains multiple adaptable solutions can structure their theme mod
 | Atlas Core | Mendix | All ISV solution and customer implementations | Base for all Mendix Apps |
 | ISV theme | ISV (shared UX team) | All ISV solution and customer implementations | Contains the default ISV theming |
 | ISV solution specific | ISV (solution R&D team) | All customer implementations of this particular ISV solution | Additional styling for an individual solution |
-| Customer theme | Customer implementation team | All customer implementations of any solution of the ISV | Overriding ISV specific logic for a customer (e.g. color palette and typography) |
-| Customer app specific | Customer implementation team | Customer implementation of a specific solution of the ISV    | Overriding the styling for a specific customer instance |
+| Customer theme | Customer implementation team | All customer implementations of any solution of the ISV | Overriding ISV-specific logic for a customer (for example, color palette and typography) |
+| Customer app- specific | Customer implementation team | Customer implementation of a specific solution of the ISV | Overriding the styling for a specific customer instance |
 
 {{% alert color="info" %}}
-For an ISV with a single solution this can be reduced to 3 modules (Atlas Core, ISV theming and Customer theming).
+For an ISV with a single solution, this can be reduced to three modules (Atlas Core, ISV theme, and customer theme).
 {{% /alert %}}
 
-In general it’s recommended to be explicit regarding the used design system (and create the relevant building blocks) to allow for a consistent look and feel across the adaptation and core UI.
-
-See also learning path: [Using the Right Components](https://academy.mendix.com/link/modules/510/lectures/4050/2.1-Using-the-Right-Components)
+In general, Mendix recommends being explicit regarding the used design system (and creating the relevant building blocks) to allow for a consistent look and feel across the adaptation and core UI.
 
 ## 4 Using Constants
 
-Note that the default value of a usable constant cannot be overridden at implementation, but the local Studio Pro value can be changed using the [runtime settings](/developerportal/deploy/environments-details/#constants). Constants can always be configured as part of the Environment Settings (including hidden constants).
+The default value of a usable constant cannot be overridden at implementation, but the local Studio Pro value can be changed using the [Mendix Runtime settings](/developerportal/deploy/environments-details/#constants). Constants can always be configured as part of the environment settings (including hidden constants).
 
-See also: [Constants](/refguide/constants/#41-default-value)
+For more information, see [Constant Default Value](/refguide/constants/#default-value) in the *Studio Pro Guide*.
 
 ## 5 Translating the Implementation and Implementing Jargon
 
-In order to make the application translatable during implementation all translatable documents need to be stored in open application modules. Using [batch translate](/refguide/batch-translate/) & [batch replace](/refguide/batch-replace/) features the text can be translated or updated (e.g. to implement jargon by changing a default concept like “Asset” into a customer specific word such as “Car”) during implementation. Note that: only adaptable content can be translated, since protected content is locked down.
+In order to make the application translatable during implementation, all translatable documents need to be stored in open application modules. Using the [batch translate](/refguide/batch-translate/) and [batch replace](/refguide/batch-replace/) features, the text can be translated or updated during implementation. This can be done, for example, to implement jargon by changing a default concept like “Asset” into a customer-specific word such as “Car” .
 
-Variables cannot (easily) be translated, nor can we change a text in a protected microflow (since this is locked down). As a solution for this consider using an editable Enumeration as “Internationalization-map”, combined with the [getCaption](/refguide/enumerations-in-expressions/#2-getcaption) function. 
+{{% alert color="info" %}}
+Only adaptable content can be translated, since protected content is locked down.
+{{% /alert %}}
+
+Variables cannot (easily) be translated, nor can text be changed in a protected microflow (since this is locked down). As a workaround for this, consider using an editable Enumeration as an “internationalization map” combined with the [getCaption](/refguide/enumerations-in-expressions/#get-caption) function. 
+
+## 6 Read More
+
+* [Using the Right Components](https://academy.mendix.com/link/modules/510/lectures/4050/2.1-Using-the-Right-Components)

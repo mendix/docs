@@ -33,7 +33,7 @@ The customer implementation is a separate, upgradable model instance (fork) per 
 | ISV builds and adapts for customer as managed service | Yes | Yes | Optional for collaboration with [Feedback](/developerportal/collaborate/feedback/) and [Epics](/developerportal/collaborate/epics/) | No |
 | Customized by customer or implementation partner | Yes | Yes | Yes, including access to the customer model | Yes |
 
-¹Including partner that implements on behalf of the customer.
+¹Including the partner that implements on behalf of the customer.
 
 ### 3.2 Configuration and Adaptation
 
@@ -58,14 +58,14 @@ For some customizations, both approaches can be utilized, but Mendix recommends 
 * Is it easy to implement and upgrade afterwards?
 * What is the impact on performance?
 
-In general, Mendix recommends design-time model adaptation over "building Mendix in Mendix,"
+In general, Mendix recommends design-time model adaptation over "building Mendix in Mendix."
 
 ### 3.3 Design-Time Adaptation
 
-For design-time adaptations we recommend to use the [Solution Initialization](/appstore/creating-content/sol-set-up/) & [Upgrade flow](/appstore/creating-content/sol-upgrade/) to create a dedicated project and Git repository¹ per customer and keep it up to date. This will allow for:
+For design-time adaptations, Mendix recommends referencing [How to Set Up a Solution](/appstore/creating-content/sol-set-up/) and [How to Upgrade a Solution](/appstore/creating-content/sol-upgrade/) in order to create a dedicated app and Git repository per customer (including the partner that implements on behalf of the customer) and keeping these up to date. This will allow for the following:
 
 * [Full control](/developerportal/collaborate/app-roles/) of who can access the individual customer’s model instance
-* Prevent access to [IP protected](/appstore/creating-content/sol-ip-protection/) content and the development of the original solution template
+* Prevent access to [IP-protected](/appstore/creating-content/sol-ip-protection/) content and the development of the original solution template
 * Using all [Collaboration features](/developerportal/collaborate/)
 * Data isolation per customer tenant by having dedicated environments (at least Acceptance and Production).
 

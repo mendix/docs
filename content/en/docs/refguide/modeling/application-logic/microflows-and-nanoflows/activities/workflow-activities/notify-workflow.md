@@ -12,7 +12,7 @@ This activity can only be used in **Microflows**.
 
 ## 1 Introduction {#introduction}
 
-The **Notify workflow** activity can be used to notify a [workflow](/refguide/workflows/) that is suspended on the [Wait for notification](/refguide/wait-for-notification) workflow activity.
+The **Notify workflow** activity can be used to notify a [workflow](/refguide/workflows/) that is suspended on the [Wait for notification](/refguide/wait-for-notification/) workflow activity.
 
 {{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/workflow-activities/notify-workflow/notify-workflow.jpg" width="200" >}}
 
@@ -49,7 +49,7 @@ The workflow instance that will be notified by this activity.
 
 ### 3.2 Activity
 
-The ([caption](/refguide/wait-for-notification/#general) of the) [wait for notification](/refguide/wait-for-notification) workflow activity that suspends the workflow instance. This wait for notification workflow activity needs to be notified so that the workflow can continue.
+The ([caption](/refguide/wait-for-notification/#general) of the) [wait for notification](/refguide/wait-for-notification/) workflow activity that suspends the workflow instance. This wait for notification workflow activity needs to be notified so that the workflow can continue.
 
 ### 3.3 Variable Name
 

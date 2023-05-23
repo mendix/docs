@@ -14,7 +14,7 @@ Every Mendix app environment needs a database (to store entities), and a blob fi
 
 When an app developer creates a new environment, the Mendix Operator will automatically create ("provision") a database and blob file storage bucket for that environment.
 This way, an app developer doesn't need to install or configure a database - the Mendix Operator automatically prepare the database and blob file storage bucket, and link it with the new environment.
-This way, creating a new enviornment is an easy process.
+Creating a new enviornment can be completely automated, and can be done by an app developer without assistance from the infrastructure team.
 
 The Mendix Operator has a modular architecture and offers a multitude of options how to create and attach databases and blob file storage buckets to environments.
 A _Storage plan_ specifies configuration (a blueprint) how to provide a database or blob file storage bucket to a new environment.
@@ -56,7 +56,7 @@ For example, this option can be used to attach a pre-created S3 bucket or on-pre
 
 <text class="badge badge-pill badge-primary">On-Demand</text> <text class="badge badge-pill badge-primary">Dedicated</text>
 
-**On-Demand** storage plans can be used by any number of environment. These provisioners can provide a database/bucket on-demand to any new environment.
+**On-Demand** storage plans can be used by any number of environments. These provisioners can provide a database/bucket on-demand to any new environment.
 
 **Dedicated** storage plans can only be used by one environment at a time. If a storage plan is marked as dedicated and is already in use by an environment, new environments cannot use it.
 
@@ -121,7 +121,7 @@ The storage plan does not include any functionality for backing up or restoring 
 You can only create up to one database and one blob file storage plan when running the `mxpc-cli` Configuration Tool. Run the configuration tool multiple time to create additional database and blob file storage plans.
 
 If the screen (terminal) cannot fit all elements, some UI elements might overflow and become hidden.
-We recommend opening the `mxpc-cli` Configuration Tool in fullscreen mode, or to at least increase the terminal window size to 180x60.
+We recommend opening the `mxpc-cli` Configuration Tool in fullscreen mode, or to at least increase the terminal window size to 180x60 characters.
 
 {{% alert color="warning" %}}
 If you delete an environment, make sure that it's completely deleted - `kubectl -n {namespace} get storageinstance {environment-name}-file` and `kubectl get storageinstance {environment-name}-database` should return a _not found_ response.
@@ -133,10 +133,12 @@ Until the cleanup is done, you should not create a new environment that uses the
 
 ## 2 Database Plans{#database}
 
-A database plan tells the Operator how the Mendix app needs to connect to a database when it is deployed. Although the database plan might be valid, there also has to be a database instance for it to connect to. This database instance may be created when the database plan is applied, or it may be an existing database instance which the database plan identifies.
+Every Mendix app needs a database to store persistent and non-persistent entities.
+A database plan tells the Operator how to provide a database to a new Mendix app environment.
 
 {{% alert color="warning" %}}
-The database plan does not include any functionality for backing up or restoring data on your database. It is your responsibility to ensure that appropriate provision is made for backing up and restoring your database using the tools provided by your database management system and/or cloud provider.
+The database plan does not include any functionality for backing up or restoring data on your database.
+It is your responsibility to ensure that appropriate planning is made for backing up and restoring your database using the tools provided by your database management system and/or cloud provider.
 {{% /alert %}}
 
 Give your plan a **Name** and choose the **Database Type**. See the information below for more help in setting up plans for the different types of database which are supported by Mendix for Private Cloud.
@@ -149,7 +151,7 @@ Once you have entered the details you can apply two validation checks by clickin
 {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/database-plan-config.png" alt="Database Plan Configuration" >}}
 
 {{% alert color="info" %}}
-You cannot create multiple database plans at the same time. Run the configuration tool multiple time to apply several database plans.
+You cannot create multiple database plans at the same time. Run the configuration tool multiple times to create several database plans.
 {{% /alert %}}
 
 The following **Database Types** are supported:
@@ -162,6 +164,8 @@ The following **Database Types** are supported:
 The easiest option is [ephemeral](#database-ephemeral) databases.
 
 For production-grade databases, the [Postgres](#database-postgres) plan is the most versatile and portable option.
+
+To use a dedicated database, or to have more control over the database connection parameters, use the [JDBC plan](#database-jdbc).
 
 ### 2.1 Postgres{#database-postgres}
 
@@ -183,7 +187,7 @@ If you would like to have more control over database configuration, consider usi
 
 **Environment Isolation**
 
-* Unique user (role) for every environment.
+* Unique user (Postgres role) for every environment.
 * Unique database for every environment.
 * Environment has full access only to its own database, cannot access data from other environments.
 
@@ -303,9 +307,9 @@ In the SQL Server plan configuration, enter the following details:
 * **Host** is the SQL Server (Azure SQL) server hostname, for example `my-database.database.windows.net`
 * **Port** is the SQL Server (Azure SQL) server port number, in most cases this should be set to `1433`.
 * **Username** is the username for the admin user - used by the Mendix Operator to create/delete tenants for app environments.
-* **Password** is the username for the admin user - used by the Mendix Operator to create/delete tenants for app environments.
+* **Password** is the password for the admin user - used by the Mendix Operator to create/delete tenants for app environments.
 * **Strict TLS** specifies if TLS should always be validated.
-  * Enabling this option will enable full TLS certificate validation and require encryption when connecting to SQL Server. If the SQL Server server has a self-signed certificate, you will also need to configure [custom TLS](#custom-tls) so that the self-signed certificate is accepted. Azure SQL supports Strict TLS without any extra TLS configuration.
+  * Enabling this option will enable full TLS certificate validation and require encryption when connecting to SQL Server. If the SQL Server server has a self-signed certificate, you will also need to configure [custom TLS](#custom-tls) so that the self-signed certificate is accepted. Azure SQL supports Strict TLS without any extra TLS configuration - no additional *custom TLS* configuration is required.
   * Disabling this option will attempt to connect with TLS, but skip certificate validation. If TLS is not supported, it will fall back to an unencrypted connection.
 * **Is Azure SQL Server** opens additional options that are only available when using Azure SQL (instead of a standalone SQL Server):
   * **Elastic Pool** specifies an existing Elastic Pool to use (can be left empty if the new app's database should not be using an elastic pool)
@@ -346,7 +350,7 @@ This plan allows to configure and use any database supported by the Mendix Runti
 
 * Passwords can only be rotated manually.
 * A dedicated JDBC database cannot be used by more than one Mendix app.
-* Configuration parameters will not be validated and will be provided to the Mendix app as-is. If the arguments are not valid or there is an issue with permissions, the Mendix Runtime will fail to start the and deployment will appear to hang with **Replicas running** and **Runtime** showing a spinner.
+* Configuration parameters will not be validated and will be provided to the Mendix app as-is. If the arguments are not valid or there is an issue with permissions, the Mendix Runtime will fail to start the and deployment will appear stuck with **Replicas running** and **Runtime** showing a spinner.
 
 **Environment Isolation**
 
@@ -391,6 +395,8 @@ The _Prevent Data Deletion_ option switches the bucket into immutable mode:
 This can increase storage costs, but in exchange removes the need to run file backups.
 To roll back an app environment to an earlier stage, only the database needs to be rolled back.
 All files referenced by that database shapshot are already available in the blob storage bucket.
+
+If _Prevent Data Deletion_ is enabled, you can remove `s3:DeleteObject` and `s3:DeleteBucket` permissions from example IAM policies.
 {{% /alert %}}
 
 The following **Blob File Storage Types** are supported:
@@ -430,7 +436,7 @@ The **MinIO** plan offers a good balance between automation, ease of use and sec
 **Limitations**
 
 * Access/Secret keys used by existing environments can only be rotated manually.
-* The MinIO server needs to be a full-featured MinIO server, or a [MinIO Gateway](https://github.com/MinIO/MinIO/tree/master/docs/gateway) with configured `etcd`. MinIO Gateway without `etcd` can only have one user, and won't support envioronment isolation.
+* The MinIO server needs to be a full-featured MinIO server, or a [MinIO Gateway](https://github.com/MinIO/MinIO/tree/master/docs/gateway) with configured `etcd`. MinIO Gateway without `etcd` can only have one user, and won't support environment isolation.
 
 **Environment Isolation**
 
@@ -481,7 +487,7 @@ The **Ephemeral** plan will enable you to quickly set up your environment and de
 **Limitations**
 
 * Data is lost when the app pod is restarted.
-* If an app has more than one replica, behavior can be unpredictable unless the ingress controller had session affinity.
+* If an app has more than one replica, behavior can be unpredictable unless the ingress controller has session affinity.
 
 **Environment Isolation**
 
@@ -606,12 +612,13 @@ This option allows to share an existing bucket between environments, and isolate
 * The S3 bucket is shared. 
   * The _environment template_ policy uses the IAM username as a template - so that a user can only access a certain prefix (path/directory) in the bucket.
   * In practice, this means that any environment can only access files if those files' prefix matches the environment's IAM username.
+  * An environment cannot access files from other environments.
 * The Mendix Operator doesn't need permissions to create new policies, only to attach a manually created policy.
 
 **Create workflow** (what the Mendix Operator will do when a new environment is created):
 
 * Generate a new IAM username.
-* Create the new IAM user and attach the _environment template_ policy to this user.
+* Create the new IAM user and attach the existing _environment template_ policy to this user.
 * Create a Kubernetes secret to provide connection details to the new app environment - to automatically configure the new environment.
 
 **Delete workflow** (what the Mendix Operator will do when an existing environment is deleted):
@@ -629,8 +636,8 @@ In the Amazon S3 plan configuration, enter the following details:
 * **Bucket region** - the existing shared bucket's region, for example `eu-west-1`.
 * **Bucket name** - the existing shared bucket's name, for example `mendix-apps-production-example`.
 * **Create inline policy** - unchecked.
-* **Attach policy ARN** - the _environment template_ policy ARN; this is the policy that will be attached to every environment's user.
-* **Access Key** and **Secret Key** credentials for the "admin" user account.
+* **Attach policy ARN** - the _environment template_ policy ARN; this is the existing policy that will be attached to every environment's user.
+* **Access Key** and **Secret Key** credentials for the "admin" user account - used to create/delete environment IAM users.
 
 #### 3.3.2 Existing bucket and account{#s3-existing-bucket-account}
 
@@ -668,9 +675,9 @@ All apps (environments) will use the same S3 bucket and an IAM user account.
 **Limitations**
 
 * Access/Secret keys used by existing environments can only be rotated manually.
-* No isolation between environments using this blob storage plan (unless the **Share bucket between environments** option is unchecked).
-* Configuration parameters will not be validated and will be provided to the Mendix app as-is. If the arguments are not valid or there is an issue with permissions, the Mendix Runtime will fail to start the and deployment will appear to hang with **Replicas running** and **Runtime** showing a spinner.
-* To use the **Autogenerate Prefix** option you need Mendix Operator version 2.7.0 or above. See [Upgrading Private Cloud](/developerportal/deploy/private-cloud-upgrade-guide/) for instructions on upgrading the Mendix Operator.
+* No isolation between environments using this blob storage plan (if the **Share bucket between environments** option is checked).
+* Configuration parameters will not be validated and will be provided to the Mendix app as-is. If the arguments are not valid or there is an issue with permissions, the Mendix Runtime will fail to start the and deployment will appear to be stuck with **Replicas running** and **Runtime** showing a spinner.
+* To configure the **Autogenerate Prefix** option you need Mendix Operator version 2.7.0 or above. See [Upgrading Private Cloud](/developerportal/deploy/private-cloud-upgrade-guide/) for instructions on upgrading the Mendix Operator.
 
 **Environment Isolation**
 
@@ -710,7 +717,7 @@ This option will create an S3 bucket and IAM account for every new environment.
 
 {{% alert color="warning" %}}
 We don't recommend using this option, as it's not possible to customize the bucket settings (encryption or default file access).
-In addition, this option needs IAM admin permissions to create inline policies - which might not be acceptable in regulated environments.
+In addition, this option needs admin-like IAM permissions to create inline policies - which might not be acceptable in regulated environments.
 This option is primarily here for historical reasons.
 Instead, we recommend using the [Create account with existing policy](#s3-create-account-existing-policy) option if you need automation.
 {{% /alert %}}
@@ -782,7 +789,7 @@ In the Amazon S3 plan configuration, enter the following details:
 * **Create account (IAM user) per environment** - checked.
 * **Bucket region** - the region where buckets will be created, for example `eu-west-1`.
 * **Create inline policy** - checked.
-* **Access Key** and **Secret Key** credentials for the "admin" user account.
+* **Access Key** and **Secret Key** credentials for the "admin" user account - used to create/delete environment buckets and IAM users.
 
 #### 3.3.4 Create bucket and account with existing policy{#s3-create-bucket-account-existing-policy}
 
@@ -840,7 +847,7 @@ Instead, we recommend using the [Create account with existing policy](#s3-create
     }
     ```
 
-* An "admin" user account - with the following policy (replace `<account_id>` with your AWS account number, and `<policy_arn>` with the Policy ARN):
+* An "admin" user account - with the following policy (replace `<account_id>` with your AWS account number, and `<policy_arn>` with the _environment template_ policy ARN):
 
     ```json
     {
@@ -922,7 +929,7 @@ In the Amazon S3 plan configuration, enter the following details:
 * **Bucket region** - the region where buckets will be created, for example `eu-west-1`.
 * **Create inline policy** - unchecked.
 * **Attach policy ARN** - the _environment template_ policy ARN; this is the policy that will be attached to every environment's user.
-* **Access Key** and **Secret Key** credentials for the "admin" user account.
+* **Access Key** and **Secret Key** credentials for the "admin" user account - used to create/delete environment buckets and IAM users.
 
 #### 3.3.5 Create account with inline policy{#s3-create-account-inline-policy}
 
@@ -931,7 +938,7 @@ In the Amazon S3 plan configuration, enter the following details:
 This option allows to share an existing bucket between environments, and isolates environments from accessing each other's data.
 
 {{% alert color="warning" %}}
-We don't recommend using this option, as it needs IAM admin permissions to create inline policies - which might not be acceptable in regulated environments.
+We don't recommend using this option, as it needs admin-like IAM permissions to create inline policies - which might not be acceptable in regulated environments.
 This option is primarily here for historical reasons.
 Instead, we recommend using the [Create account with existing policy](#s3-create-account-existing-policy) option if you need automation.
 {{% /alert %}}
@@ -974,6 +981,7 @@ Instead, we recommend using the [Create account with existing policy](#s3-create
 * Every environment has its own IAM user.
 * The S3 bucket is shared. 
   * The Mendix Operator will generate an IAM policy for every user that only allows access to files in a specific prefix (directory) in the bucket.
+  * An environment cannot access files from other environments.
 * The Mendix Operator doesn't need permissions to create new buckets, only to create IAM users and inline policies.
 
 **Create workflow** (what the Mendix Operator will do when a new environment is created):
@@ -997,7 +1005,7 @@ In the Amazon S3 plan configuration, enter the following details:
 * **Bucket region** - the existing shared bucket's region, for example `eu-west-1`.
 * **Bucket name** - the existing shared bucket's name, for example `mendix-apps-production-example`.
 * **Create inline policy** - checked.
-* **Access Key** and **Secret Key** credentials for the "admin" user account.
+* **Access Key** and **Secret Key** credentials for the "admin" user account - used to create/delete environment IAM users.
 
 #### 3.3.6 Create account with inline policy{#s3-create-account-inline-policy}
 
@@ -1006,7 +1014,7 @@ In the Amazon S3 plan configuration, enter the following details:
 This option allows to share an existing bucket between environments, and isolates environments from accessing each other's data.
 
 {{% alert color="warning" %}}
-We don't recommend using this option, as it needs IAM admin permissions to create inline policies - which might not be acceptable in regulated environments.
+We don't recommend using this option, as it needs admin-like IAM permissions to create inline policies - which might not be acceptable in regulated environments.
 This option is primarily here for historical reasons.
 Instead, we recommend using the [Create account with existing policy](#s3-create-account-existing-policy) option if you need automation.
 {{% /alert %}}
@@ -1049,6 +1057,7 @@ Instead, we recommend using the [Create account with existing policy](#s3-create
 * Every environment has its own IAM user.
 * The S3 bucket is shared. 
   * The Mendix Operator will generate an IAM policy for every user that only allows access to files in a specific prefix (directory) in the bucket.
+  * An environment cannot access files from other environments.
 * The Mendix Operator doesn't need permissions to create new buckets, only to create IAM users and inline policies.
 
 **Create workflow** (what the Mendix Operator will do when a new environment is created):
@@ -1072,7 +1081,7 @@ In the Amazon S3 plan configuration, enter the following details:
 * **Bucket region** - the existing shared bucket's region, for example `eu-west-1`.
 * **Bucket name** - the existing shared bucket's name, for example `mendix-apps-production-example`.
 * **Create inline policy** - checked.
-* **Access Key** and **Secret Key** credentials for the "admin" user account.
+* **Access Key** and **Secret Key** credentials for the "admin" user account - used to create/delete environment IAM users.
 
 ### 3.4 Azure Blob storage{#blob-azure}
 

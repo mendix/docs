@@ -52,7 +52,7 @@ This way, the Mendix Operator can isolate app environment from one another.
 **Basic** provisioners do not communicate with any APIs, and just generate and attach existing credentials to a new environment.
 For example, a basic provisioner like Ceph will just provide the same credentials to every app environment (with an option to let each environment use its own bucket prefix).
 Basic provisioners don't provide isolation between environments, but in some cases can provide more control over how storage is managed.
-For example, this option can be used to attach a pre-created S3 bucket or Oracle database to a new environment.
+For example, this option can be used to attach a pre-created S3 bucket or on-premise SQL Server database to a new environment.
 
 <text class="badge badge-pill badge-primary">On-Demand</text> <text class="badge badge-pill badge-primary">Dedicated</text>
 

@@ -13,6 +13,17 @@ These release notes cover changes made to the [Mendix Marketplace](/appstore/).
 
 ## 2023
 
+### May 25th, 2023
+
+#### Improvements
+
+* Aligned the UI of the Marketplace with the rest of the platform.
+
+#### Fixes
+
+* We have fixed an issue with the notifications when a new update of a component becomes available.
+* If an email address contained uppercase letter, guests did not have access to the private components that are added to the user groups. This issue has been fixed.
+
 ### April 20th, 2023
 
 #### New Features

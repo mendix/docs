@@ -44,10 +44,9 @@ Mendix does not provide out-of-the-box ways to automatically clean up definition
 
 Security-wise, only users with the **Administrator** role can access definition-related entities.
 
-
 ### 2.2 Instance-Related Entities {#instance}
 
-The Workflow Engine stores execution data in regular entities. The purpose of these entities is to store the state during workflow execution. That purpose dictates the way the entities are stored, i.e. when the information is stored and the standard limited security rules that are configured. In case other information is required from the Workflow Engine (for example, statistical information, this information can be obtained and stored in a desired structure using state-change events in [App Settings](/refguide/app-settings/#events) or in [workflow properties](/refguide/workflow-properties/#events)).
+The Workflow Engine stores execution data in regular entities. The purpose of these entities is to store the state during workflow execution. Only users who are involved in the workflow process have access to these entities. The main purpose of the workflow data is to handle the tasks and process execution and it is unaware of the business context it is running in. All workflow data is aimed at supporting the workflow engine. Business context can be added by a developer via the context entity.
 
 ####  2.2.1 System.Workflow
 

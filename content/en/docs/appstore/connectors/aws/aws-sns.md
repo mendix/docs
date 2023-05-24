@@ -51,7 +51,7 @@ In order to use the Amazon SNS service, you must authenticate with AWS. To do so
 4. In the **App Settings** dialog, in the **Configurations** tab, edit or create an authentication profile.
 
     If you have multiple sets of AWS credentials, or if you want to use both static and session credentials for different use cases, create separate authentication profiles for each set of credentials.
-    
+
 5. In the **Edit Configuration** dialog, in the **Constants** tab, click **New** to add the constants required for the configuration.
 6. In the **Select Constants** dialog, find and expand the **AmazonSNSConnector** > **ConnectionDetails** section.
  
@@ -75,9 +75,9 @@ In order to use the Amazon SNS service, you must authenticate with AWS. To do so
 
 After you configure the authentication profile for Amazon SNS, you can implement the functions of the connector by using the provided activities in microflows.
 
-#### 3.2.1 Subscribe to a topic (email)
+#### 3.2.1 Subscribing to a Topic
 
-To subscribe to a topic in your AWS environment and receive notifications about it, implement the [Subscribe](#subscribe) activity by performing the following steps:
+To subscribe to a topic in your AWS environment and receive email notifications about it, implement the [Subscribe](#subscribe) activity by performing the following steps:
 
 1. In the **App Explorer**, right-click on the name of your module, and then click **Add microflow**.
 
@@ -87,7 +87,8 @@ To subscribe to a topic in your AWS environment and receive notifications about 
 3. In the **App Explorer**, in the **AmazonSNSConnector** section, find the **Subscribe** activity.
 4. Drag the **Subscribe** activity onto the microflow you are working on.
 5. Double-click the **Subscribe** activity to configure the required parameters.
-For the **Subscribe** activity, you must specify the AWS Region, add your `Credentials` and `SubscribeRequest` object. The `SubscribeRequest` object requires the TopicARN of the topic you want to subscribe to and one `EmailEndpoint` object associated with it, which defines the email address you want to subscribe to the topic with. To get your `Credentials` object, add the **Credentials_GenerateFromConstants** microflow in front of your **Subscribe** activity so that you can pass the `Credentials` object as input parameter of the activity.
+
+    For the **Subscribe** activity, you must specify the AWS Region, add your `Credentials` and `SubscribeRequest` object. The `SubscribeRequest` object requires the TopicARN of the topic you want to subscribe to and one `EmailEndpoint` object associated with it, which defines the email address you want to subscribe to the topic with. To get your `Credentials` object, add the **Credentials_GenerateFromConstants** microflow in front of your **Subscribe** activity so that you can pass the `Credentials` object as input parameter of the activity.
 
     {{< figure src="/attachments/appstore/connectors/aws-sns/sns_subscribe_actions.png" alt="Configuring the Subscribe activity">}}
  

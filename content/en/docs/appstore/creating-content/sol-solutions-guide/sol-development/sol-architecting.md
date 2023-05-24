@@ -58,7 +58,7 @@ For some customizations, both approaches can be utilized, but Mendix recommends 
 * Is it easy to implement and upgrade afterwards?
 * What is the impact on performance?
 
-In general, Mendix recommends design-time model adaptation over "building Mendix in Mendix."
+Mendix recommends design-time model adaptation over "building Mendix in Mendix."
 
 ### 3.3 Design-Time Adaptation
 
@@ -149,15 +149,19 @@ For more information, see [How to Deal with Platform Upgrades and Solution Versi
 
 ### 4.5 Marketplace Modules
 
-Marketplace module with data in the database included in the solution should never be upgraded in the customer implementation, but always through a solution release upgrade. Otherwise this can lead to loss of data.
+Marketplace modules with data in the database included in the solution should always be upgraded through a solution release upgrade. They should never be upgraded in the customer implementation, as this can lead to loss of data.
 
-Example: A solution contains the Excel Importer module. If at any point the customer decides to update the module with a newer version rather than wait for an upgrade from the solution, the customer will later on run into merge conflicts. As soon as they would apply the upgrade from the solution vendor the team server will be unable to properly identify the changes from both sides for the Excel Importer module. If this merge conflict is handled incorrectly, data loss would be the result.
+For example, a solution contains a module like the [Excel Importer](/appstore/modules/excel-importer/). If at any point the customer decides to update the module with a newer version rather than wait for an upgrade from the solution, the customer will run into merge conflicts later. As soon as they apply the upgrade from the solution vendor, the Team Server will be unable to properly identify the changes from both sides for the module. If this merge conflict is handled incorrectly, data loss will result.
 
 ### 4.6 Clean Coding
 
-In general it is recommended to adhere to [Mendix Best Practices for Development](/refguide/dev-best-practices/) and have clear coding conventions, but for solutions that will be adapted at the model level, this is even more important.
+Mendix recommends adhering to the [Mendix Best Practices for Development](/refguide/dev-best-practices/) and having clear coding conventions.
 
-The modifiable part of the model that will become editable is logically structured, well named and in which documents have a clear, single purpose. This will make it easier to implement, as well as to release newer versions and predict the impact of changes on existing solution implementations.
+{{% alert color="warning" %}}
+For solutions that will be adapted at the model level, this is even more important.
+{{% /alert %}}
+
+You should ensure the modifiable part of the model that will become editable is logically structured and well named and that the documents have a clear single purpose. This will make it easier to implement as well as to release newer versions and predict the impact of changes on existing solution implementations.
 
 ### 4.7 Security
 

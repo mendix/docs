@@ -38,9 +38,9 @@ The solution value chain and lifecycle consists of three important phases:
 
 | Phase | Party | Purpose |
 | --- | --- | --- |
-| **Building the solution core** | ISV | Create a solution that is designed for adaptation. New versions are periodically released. |
-| **Implementing for a customer** | ISV, the customer, or an implementation partner | Adapt the solution to the individual customer's need and apply upgrades. Include changes to UI, data, logic, or integration in the customer landscape. |
-| **Consuming in production** | Customer | Production usage of the application by the customer. Functional admins can perform day-to-day tasks. |
+| Building the solution core | ISV | Create a solution that is designed for adaptation. New versions are periodically released. |
+| Implementing for a customer | ISV, the customer, or an implementation partner | Adapt the solution to the individual customer's need and apply upgrades. Include changes to UI, data, logic, or integration in the customer landscape. |
+| Consuming in production | Customer | Production usage of the application by the customer. Functional admins can perform day-to-day tasks. |
 
 The solution lifecycle can be visualized in this diagram:
 
@@ -76,9 +76,9 @@ This table describes the three main functional parts in more detail:
 
 | Part | IP-Protected | Responsibility | Upgradable | Purpose |
 | --- | --- | --- | --- | --- |
-| **Immutable common core** | Yes | Build team | Yes, drop-in | Core of the application (for example, data model, workflow actions, standard integrations) |
-| **Adaptable core** | No | Build team for shared documents, implementation team for customer documents | Yes, fine-grained merge | Customer specific changes to the model (for example: workflows, data model extensions, customizable pages and snippets, theming, extendable microflows, translation and jargon) |
-| **Customer-specific extensions** | No | Implementation team | Not needed | Added features for the customer (for example, integration with existing systems, additional visualizations) |
+| Immutable common core | Yes | Build team | Yes, drop-in | Core of the application (for example, data model, workflow actions, standard integrations) |
+| Adaptable core | No | Build team for shared documents, implementation team for customer documents | Yes, fine-grained merge | Customer specific changes to the model (for example: workflows, data model extensions, customizable pages and snippets, theming, extendable microflows, translation and jargon) |
+| Customer-specific extensions | No | Implementation team | Not needed | Added features for the customer (for example, integration with existing systems, additional visualizations) |
 
 ## 6 IP Protection {#ip-protection}
 

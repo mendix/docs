@@ -35,7 +35,7 @@ For details on the upgrade procedure for a solution that has been set up correct
 
 ## 4 Read More
 
-* [Develop a Solution](/appstore/creating-content/sol-development/)
+* [Develop a Solution](/appstore/creating-content/sol-adapt/)
 * [Architect an Adaptable Solution](/appstore/creating-content/sol-architecting/)
 * [Set Up a Solution](/appstore/creating-content/sol-set-up/)
 * [Upgrade a Solution](/appstore/creating-content/sol-upgrade/)

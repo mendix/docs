@@ -1,6 +1,6 @@
 ---
 title: "Introduction to Adaptable Solutions"
-url: /appstore/creating-content/sol-development/
+url: /appstore/creating-content/sol-adapt/
 weight: 20
 no_list: false
 description_list: true
@@ -18,7 +18,7 @@ While [Mendix best practices for development](/refguide/dev-best-practices/) app
 
 In an adaptable solution, up to 20% of the end solution can be adapted through customizations, extensions, integrations, or new customer-specific modules. Instead of being tied to a prescriptive software-as-a-service (SaaS) solution that only allows for configuration at runtime, adaptable solutions allow for design-time adaptation through model-level changes to cater to the needs of your specific implementation.
 
-{{< figure src="/attachments/appstore/creating-content/sol-solutions-guide/sol-development/sol-architecting/adaptable-solution-architecture.png" alt="Adaptable Solution architecture" >}}
+{{< figure src="/attachments/appstore/creating-content/sol-solutions-guide/sol-adapt/sol-architecting/adaptable-solution-architecture.png" alt="Adaptable Solution architecture" >}}
 
 ## 3 Use Cases
 
@@ -44,13 +44,13 @@ The solution value chain and lifecycle consists of three important phases:
 
 The solution lifecycle can be visualized in this diagram:
 
-{{< figure src="/attachments/appstore/creating-content/sol-solutions-guide/sol-development/solution-lifecycle.png" alt="Adaptable Solution Lifecycle" >}}
+{{< figure src="/attachments/appstore/creating-content/sol-solutions-guide/sol-adapt/solution-lifecycle.png" alt="Adaptable Solution Lifecycle" >}}
 
 ### 4.1 Implementation as a Separate Model Instance and Cloud Node
 
 The customer implementation is a separate upgradable model instance (fork) per customer that shares generic functionality from the original solution model and that is deployed to separate cloud resources.
 
-{{< figure src="/attachments/appstore/creating-content/sol-solutions-guide/sol-development/solution-deployment.png" alt="Adaptable Solution Deployment"  width="50%" >}}
+{{< figure src="/attachments/appstore/creating-content/sol-solutions-guide/sol-adapt/solution-deployment.png" alt="Adaptable Solution Deployment"  width="50%" >}}
 
 The separate model instance allows the implementation team to fully customize all [non-IP protected](#ip-protection) functionality. Not all customer implementations require changes to the model. In those cases, the original model can be deployed as is.
 
@@ -68,7 +68,7 @@ Architecting a solution for adaptation requires an understanding of your custome
 * Common modules that can be adapted to a customer’s needs
 * Customer-specific extension modules
 
-{{< figure src="/attachments/appstore/creating-content/sol-solutions-guide/sol-development/solution-three-parts.png" alt="Three parts of the adaptable solution">}}
+{{< figure src="/attachments/appstore/creating-content/sol-solutions-guide/sol-adapt/solution-three-parts.png" alt="Three parts of the adaptable solution">}}
 
 These different parts work together in the customer implementation. It is important to maintain these distinctions, because there is an inherent tradeoff: What is part of the common core and IP-protected cannot be adapted or modified, while what can be adapted can never be protected. This boundary can be created at a fine-grained level. All adaptation (both extensions and adaptable core) can make use of functionality from the common core. For more information, see the [Application Design](/appstore/creating-content/sol-architecting/#app-design) section of *How to Architect Adaptable Solutions*.
 

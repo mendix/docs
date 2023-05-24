@@ -32,7 +32,7 @@ Alternatively, it is possible to use specializations. Mendix recommends consider
 
 Here is an example:
 
-{{< figure src="/attachments/appstore/creating-content/sol-solutions-guide/sol-development/sol-adaptability-best-practices/adaptability-domain-model-example.png" alt="Example of data model extensions"  >}}
+{{< figure src="/attachments/appstore/creating-content/sol-solutions-guide/sol-adapt/sol-adaptability-best-practices/adaptability-domain-model-example.png" alt="Example of data model extensions"  >}}
 
 In this example, the following details apply:
 

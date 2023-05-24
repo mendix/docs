@@ -13,7 +13,7 @@ The Mendix Platform is well-suited to supporting the development of solutions. R
 
 ## 2 Progressive and Emergent Architecture
 
-The goal for architecting a solution for adaptation is a deep understanding and full specification of the correct scoping of the [three solution parts](/appstore/creating-content/sol-development/#three-parts) (meaning, the immutable core, customizable modules, and customer-specific components). This is a level of knowledge you will only reach once you are serving a large number of customers.
+The goal for architecting a solution for adaptation is a deep understanding and full specification of the correct scoping of the [three solution parts](/appstore/creating-content/sol-adapt/#three-parts) (meaning, the immutable core, customizable modules, and customer-specific components). This is a level of knowledge you will only reach once you are serving a large number of customers.
 
 When you start work on a solution for an initial customer or handful of customers, you might not have this thorough understanding. Instead, as you deliver the solution to additional customers, you will learn about their needs and will better understand which functionalities will be common and which will be specific.
 
@@ -35,7 +35,7 @@ The customer implementation is a separate, upgradable model instance (fork) per 
 
 ### 3.2 Configuration and Adaptation
 
-As discussed in the [Solution Lifecycle](/appstore/creating-content/sol-development/#lifecycle) section of *Introduction to Adaptable Solutions*,  the solution can be tailored to the customer’s need. 
+As discussed in the [Solution Lifecycle](/appstore/creating-content/sol-adapt/#lifecycle) section of *Introduction to Adaptable Solutions*,  the solution can be tailored to the customer’s need. 
 
 Mendix recommends using the following:
 
@@ -69,7 +69,7 @@ For design-time adaptations, Mendix recommends referencing [How to Set Up a Solu
 
 The customer model instances will run with [IP protection](/appstore/creating-content/sol-ip-protection/) enabled, meaning that parts of the original solution model can be hidden. Once the solution is published with the protected solution models, this implementation hiding cannot be undone by the consumer of the solution model.
 
-{{< figure src="/attachments/appstore/creating-content/sol-solutions-guide/sol-development/solution-deployment.png" alt="Development and deployment model for Solution Implementation"  width="50%" >}}
+{{< figure src="/attachments/appstore/creating-content/sol-solutions-guide/sol-adapt/solution-deployment.png" alt="Development and deployment model for Solution Implementation"  width="50%" >}}
 
 ### 3.4 Customers Without Adaptation
 
@@ -112,7 +112,7 @@ Be sure to configure the [Solution](/refguide/app-settings/#solution) tab of **A
 
 When designing the interfaces of your solutions, you should do the following:
 
-* Split your adaptable solution architecture into the [three main functional parts](/appstore/creating-content/sol-development/#three-parts)
+* Split your adaptable solution architecture into the [three main functional parts](/appstore/creating-content/sol-adapt/#three-parts)
 * Think about which parts of the shared core are reusable in other parts:
     * Define which shared logic should be reusable, and define entry points to the shared logic as APIs
     * Define which entities (data/state) are required in which parts of the functionality

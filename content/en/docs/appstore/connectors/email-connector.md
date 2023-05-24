@@ -268,7 +268,7 @@ On the [Azure portal](https://portal.azure.com/), ensure that you have the follo
 
 ### 4.8 Queuing Emails
 
-Emails can be queued for sending at a later time. You can send the messages in the **Queued** folder at any time. If sending queued messages fails, the connector will automatically try resending. On the third attempt, any messages that are still failing will move from the **Queued** folder to the **Failed** folder.
+Emails can be queued for sending at a later time. You can send the messages in the **Queued** folder at any time. If sending queued messages fails, the connector will automatically try resending it again until **Max. send attempts** is not reached. Any messages that failed to send till max attempts are moved from **Queued** tab to the **Failed** tab on the overview page.
 
 ## 5 Troubleshooting
 

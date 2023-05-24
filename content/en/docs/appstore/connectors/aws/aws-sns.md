@@ -103,7 +103,7 @@ To subscribe to a topic in your AWS environment and receive email notifications 
 9. Open a page that contains a data view to show all the parameters of the `SubscribeResponse`, which is the response of the **Subscribe** activity.
 10. Configure a method to trigger the *ACT_Subscribe_Email* microflow. For example, you can associate the activity with a custom button on a page in your app. For an example of how this can be implemented, see [Creating a Custom Save Button with a Microflow](/refguide/creating-a-custom-save-button/).
  
-#### 3.2.2 Send message to a topic
+#### 3.2.2 Sending Messages to a Topic
 
 To be able to send a message to a topic so that all endpoints subscribed to that topic will receive the message, implement the [PublishBatch](#publish-batch) activity by performing the following steps:
 

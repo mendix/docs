@@ -46,14 +46,17 @@ This module is still in a Beta version and should be used for testing purposes o
 The document generation functionality is under active development. While we cannot guarantee that there will not be any breaking changes in future releases, we will clearly and timely communicate any breaking changes. We will build in backwards compatibility wherever possible.
 
 - Currently, PDF is the only supported document export format.
-- The `Generate document from page` action does not support multiple page parameters.
+- The `Generate PDF from page` action does not support multiple page parameters.
 - We use a fixed 30 second timeout for the page to finish loading and rendering. A timeout exception is thrown if the page content did not finish loading within 30 seconds.
 - We currently do not enforce strict rate limits. However, take into account the following guidelines:
   - Only set `Wait for result` parameter to *true* for direct user actions. Do not set it to *true* for batch processing. Under heavy load, requests that wait for the result may fail due to strict timeout limitations. 
   - For batch processing, do not exceed 25 documents per minute, to ensure stable performance.
 - When you deploy your app, it needs to be accessible to our cloud service. This requires access to the DocGen request handler which can be configured in the Cloud Portal. If your app is configured to restrict access, for example using IP whitelisting and/or client certificates, our cloud service will not be able to reach your app and the module will not work properly.
-- Objects that are created in the microflow that contains the `Generate document from page` action are not available to use in your document. This is also applicable for changes made to existing objects. The reason is that those changes are not persisted to the database until the whole microflow has finished. The document generation service will access your document in its own context, and therefore have no access to the non-persisted changes.
+  - In addition, we currently only support applications deployed on Mendix cloud. Other deployment scenarios will be supported in a later stage. 
+- Objects that are created in the microflow that contains the `Generate PDF from page` action are not available to use in your document. This is also applicable for changes made to existing objects. The reason is that those changes are not persisted to the database until the whole microflow has finished. The document generation service will access your document in its own context, and therefore have no access to the non-persisted changes.
 - For local development, we use the Chrome or Chromium executable that is available on the development machine. Even though we have not observed these yet, there might be minor differences in PDF output locally vs. when using the cloud service.
+- For deployment, currently only Mendix cloud is supported. Other deployment scenarios will be supported at a later stage.
+- The access (and refresh) tokens used to secure requests to the cloud service are stored unencrypted in the app database. No user roles have read access to these tokens and all communication with the cloud service is encrypted by requiring HTTPS. However, do consider this when sharing a backup of the database with other developers. We will introduce encryption at a later stage.
 
 ### 1.4 Known issues
 
@@ -67,7 +70,12 @@ The document generation functionality is under active development. While we cann
 2. In the **App Explorer**, double-click **Settings**, then go to the **Runtime** tab, and add the **ASu_DocumentGeneration_Initialize** microflow to run after startup. If there is already an after startup microflow, add the **ASu_DocumentGeneration_Initialize** microflow as an action in the existing microflow.
 3. In the **App Explorer**, double-click **Security**, and then set the **Security level** to **Prototype/demo** or **Production**.
 4. In the **App Explorer**, double-click **Security** again, then go to the **User roles** tab, and add the module role **User** from the **DocumentGeneration** module to all app roles that should be able to generate a document.
-5. To clean up the token, enable the scheduled event **SE_Token_Cleanup** to automatically remove expired **Token** objects after a configured offset in days. The offset is configured using the constant **DocumentGeneration.TokenCleanupOffsetInDays** (the default value is 7 days). The scheduled event runs daily at 03:00 UTC.
+5. If you plan on deploying your app to the Mendix cloud:
+
+    1. Add the snippet ‘Snip_AppRegistration’ to a page that is accessible to admin user(s) in your app.
+    2. Enable the scheduled event 'SE_AccessToken_Refresh' to automatically refresh the access token that is used to secure access to the Document Generation Cloud service.
+
+6. To clean up the token, enable the scheduled event **SE_DocumentRequest_Cleanup** to automatically remove expired **Document Request** objects after a configured offset in days. The offset is configured using the constant **DocumentGeneration.RequestCleanupOffsetInDays** (the default value is 7 days). The scheduled event runs daily at 03:00 UTC.
 
 ## 3 Configuration
 
@@ -91,10 +99,16 @@ Configure the path to the *chrome.exe* executable in the **CustomChromePath** co
 
 #### 3.2 Running on the Mendix Cloud
 
+To allow the module to send and receive document generation requests on your Mendix cloud environments, you need to perform the following steps:
+- Enable the 'docgen' request handler
+- Register your app
+
+##### 3.2.1 Enable the ‘docgen’ request handler
+
 1. Configure the API key and API URL that you received in the **API_KEY** and **API_URL** constants respectively in the **_UseMe** > **Configuration** > **Cloud Service** folder.
 2. Make sure that you have the **ASu_DocumentGeneration_Initialize** already configured in your app’s runtime settings, as described in the [Installation](#installation) section.
 3. Make sure that you have the application deployed to the Mendix Cloud.
-4.  To allow the module to send and receive document generation requests in your Mendix Cloud environments, enable the DocGen request handler as follows:
+4. To allow the module to send and receive document generation requests in your Mendix Cloud environments, enable the DocGen request handler as follows:
 
     1. Go to the **Environments** page for the app as follows:
 
@@ -111,6 +125,12 @@ Configure the path to the *chrome.exe* executable in the **CustomChromePath** co
     6. Click **Save**. The **/docgen/** path is added to the list.
     7. Restart your application for the new request handler to take effect.
 
+##### 3.2.2 Register your app
+
+1. Sign in to the app environment you want to register.
+2. Navigate to the page that contains the ‘Snip_AppRegistration’ snippet (see step 5 of section '2. Installation' above). 
+3. Follow the steps on the page to register your app environment.
+
 ## 4 Usage
 
 #### 4.1 Generating Documents for the Current User
@@ -123,7 +143,7 @@ Configure the path to the *chrome.exe* executable in the **CustomChromePath** co
 
 3. Create a microflow that opens the page that you created in the previous step. If you want, you can use **DOC_ExampleDocument_Print** in the **Examples** folder to get started. 
 
-4. Call the **Generate document from page** action from a microflow to render this page as a PDF document:
+4. Call the **Generate PDF from page** action from a microflow to render this page as a PDF document:
     1. Select the microflow you created in the previous step as the page microflow.
 
     2. Select the context object that you want to pass to the page. If the page does not require an input object, select *empty*. 
@@ -141,7 +161,7 @@ Configure the path to the *chrome.exe* executable in the **CustomChromePath** co
 5. Verify that the user which you configured in the **Generate document as** parameter has access to the page microflow created in step 3, as well as access to all relevant data used in the page to be exported.
 
 {{% alert color="info" %}}
-To see the generated document in the browser or download it, you can use the **Download file** microflow action. This will only work if you set the **Wait for result** parameter of the **Generate document from page** action to *true*.
+To see the generated document in the browser or download it, you can use the **Download file** microflow action. This will only work if you set the **Wait for result** parameter of the **Generate PDF from page** action to *true*.
 {{% /alert %}}
 
 #### 4.2 Generating Documents as a System Task {#system-task}
@@ -162,7 +182,7 @@ For scenarios where you want to generate documents using a system context (for e
 
 4. Create a microflow to retrieve and return the configured service user.
 
-5. In the microflow where you call the **Generate document from page** action, add a microflow call to the microflow you created in the previous step, and use the return value (the service user) as input for the **Generate as user** parameter of the action.
+5. In the microflow where you call the **Generate PDF from page** action, add a microflow call to the microflow you created in the previous step, and use the return value (the service user) as input for the **Generate as user** parameter of the action.
 
 {{% alert color="info" %}}
 We recommend to try to log in as the service user at least once, to verify if the service user has the required module roles to login. Depending on your app’s implementation, it might for example be required to assign the `Administration.Account` module role.
@@ -175,3 +195,83 @@ We recommend to try to log in as the service user at least once, to verify if th
 - You can use the **Page size** design property to set the page size for your documents. This property is available in the **Design properties** section in the properties for a page.
 - You can use the **Show page numbers** design property to enable page numbers for your documents. At the moment, we only support basic page numbers. We will extend and add support for custom headers and footers at a later stage.
 - For advanced styling, you can use the styling editor in Studio Pro to style your documents, for example by using the `@media print` and `@page rules` in your style sheet.
+
+## 5 Troubleshooting
+
+#### 5.1 App registration
+
+##### 5.1.1 Invalid developer credentials
+
+If you encounter the Invalid developer credentials message, this means that the developer information as provided in the ‘Email’ and ‘API key’ fields is incorrect. Verify that the provided email address in the ‘Email’ field matches the username in your Mendix developer profile, and that the ‘API key’ that is used is correct and still active.
+
+##### 5.1.2 Invalid app
+
+If you encounter any of the following error messages, this means that the provided ‘App ID’ is either incorrect or that the developer (based on the ‘Email’ and ‘API key’ fields) does not have access to this app.
+
+- Invalid app
+- App not found for the given user
+
+Verify that the ‘App ID’ field is correct, and that the developer account corresponding to the details entered in the ‘Email’ and ‘API key’ fields has access to the given app.
+
+##### 5.1.3 Invalid application URL
+
+If you encounter the Application URL does not match any of the environment URLs message, this means that the app corresponding to the ‘App ID’ field does not contain any environment that matches the URL given in the ‘Application URL’ field. Please verify that the ‘App ID’ and/or 'Application URL’ fields are correct.
+
+##### 5.1.4 Unable to reach app
+
+If you encounter any of the following error messages, the cloud service was unable to reach your app:
+
+- Domain verification failed, unable to reach app
+- Domain verification failed, unable to reach verification endpoint 
+- Domain verification failed, verification endpoint inactive 
+
+Verify that you enabled the 'ASu_DocumentGeneration_Initialize' after startup microflow and allowed access to the 'docgen' request handler. See the steps in section 4 for more information.
+
+##### 5.1.5 Invalid token
+
+If you encounter the Domain verification failed, invalid token message, this means that the cloud service was able to reach your app, but couldn’t verify that this app is currently trying to register. Verify that the application URL matches the current environment.
+
+##### 5.1.6 Other
+
+If you encounter any of the following error messages, an unexpected error occured:
+
+- Project verification failed
+- Domain verification failed, invalid response from verification endpoint
+- Domain verification failed for unknown reason
+
+Verify that your app was not restarted by someone else during the registration process. If not, please reach out to us by creating a support ticket.
+
+#### 5.2 Module usage / runtime issues
+
+In general, we recommend the following steps in case of any issues during runtime:
+
+1. Temporarily set the log level of DocumentGeneration log node to Trace. This should give more insight at what stage the action fails.
+2. Temporarily add the page microflow that is configured in the action to the project navigation (or make it accessible via a button). This can help to verify that the page itself loads correctly, and can for example outline misconfiguration of entity access, widgets, etc. Note: Make sure that you access the page with the same user you provided to the ‘Generate as user’ parameter in the action.
+
+##### 5.2.1 Rendering/styling
+
+In case of issues regarding styling, we recommend to temporarily add the page microflow to your project navigation as explained in step 2 above. Open the page using Chrome and verify if the print version of the page matches the expected page. You can do this by either:
+
+1. Enable print media type emulation, see [the official Chrome documentation](https://developer.chrome.com/docs/devtools/rendering/emulate-css/#emulate-css-media-type-enable-print-preview) (preferred option, as this allows you to inspect the page + styling)
+2. Right click and select ‘Print…’
+
+##### 5.2.2 Local service errors
+
+In case you encounter the Local service exited with error message in your runtime logs, for example:
+
+```
+com.mendix.modules.microflowengine.MicroflowException: com.mendix.systemwideinterfaces.MendixRuntimeException: java.lang.RuntimeException: Local service exited with error
+	at DocumentGenerationTest.ACT_TestDocument_WrongLayout (JavaAction : 'Generate PDF from page')
+```
+
+Recommended steps:
+
+- Temporarily set the log level of DocumentGeneration log node to Trace. This should give more insight at what stage the action fails
+
+##### 5.2.3 Timeout errors
+
+If you encounter the Failed to load page: TimeoutError: waiting for selector `#content .document-content` failed: timeout 30000ms exceeded message in your runtime logs, this means that a timeout occured while the browser was waiting for the configured page to finish loading. This could be caused by:
+
+- Loading the page failed or took too much time; verify that the page loads successfully and does not trigger any client errors by temporarily adding the page to for example the project navigation.
+- The required DocumentLayout or document-content class is not used on the page you try to export.
+- The configured (service) user does not have the applicable access rights to execute the page microflow. In this case, there should be a warning in the logs mentioning User '<username>' attempted to execute the microflow with action name '<page microflow>', but does not have the required permissions.

@@ -15,7 +15,7 @@ This module uses the document generation service on the Mendix Cloud to convert 
 
 You can use the module locally or on the Mendix Cloud.
 
-When running locally, a local service is used to execute the headless browser next to your app. The service and browser are executed only at the moment of generating a document, and are terminated when the document is finished.
+When running locally, a local service is used to run the headless browser next to your app. The service and browser run only at the moment of generating a document, and are terminated when the document is finished.
 
 When running on the Mendix Cloud, the document generation service on the Mendix Cloud is used, which is developed and maintained by Mendix. The cloud service opens the page in a headless browser and sends the resulting PDF back to the module. The diagram below illustrates this process.
 
@@ -31,7 +31,7 @@ When running on the Mendix Cloud, the document generation service on the Mendix 
 
 ### 1.2 Security
 
-When deployed to the Mendix Cloud, the cloud service uses the user that was provided in the `Generate as user` parameter to access the requested page. A short-lived security token is used to authenticate each request. The lifetime of this token can be configured using the constant `TokenLifetimeInSeconds`.
+When deployed to the Mendix Cloud, the cloud service uses the user which was provided in the `Generate as user` parameter to access the requested page. A short-lived security token is used to authenticate each request. The lifetime of this token can be configured using the constant `TokenLifetimeInSeconds`.
 
 The architecture is set up to process every request in a fully isolated context. The cloud service creates a request-specific worker instance for every PDF that is generated and sends the result back to the runtime when finished. After this, the worker instance is destroyed.
 
@@ -58,7 +58,7 @@ The document generation functionality is under active development. While we cann
 ### 1.4 Known issues
 
 - When styling your document, you might see conflicting styles introduced by Atlas Core. These styles are specific to the print media and use the `!important` property. This means you can only override them using `!important` property as well. You can find this property in the file *atlas_core/web/core/\_legacy/bootstrap/_bootstrap.scss*.
-- The `System.Owner` association is currently not set to the user that executed the microflow.
+- The `System.Owner` association is currently not set to the user which has run the microflow.
 - Some widgets, such as the [Charts](/appstore/widgets/charts/) widget, might not be fully loaded if they are rendered before all data is available. We check on pending network requests to prevent this, but this is not 100% reliable.
 
 ## 2 Installation {#installation}
@@ -134,11 +134,11 @@ Configure the path to the *chrome.exe* executable in the **CustomChromePath** co
 
     4. Add a file name. The Java action will append `.pdf` to the generated documents.
 
-    5. Use **$currentUser** for the **Generate as user** parameter. This will generate the document in the context and using the access rights of the user that executes the microflow. To generate the document in a system context, see the section [Running the Generation as a System Task](#system-task) below.
+    5. Use **$currentUser** for the **Generate as user** parameter. This will generate the document in the context and using the access rights of the user which runs the microflow. To generate the document in a system context, see the section [Generating Documents as a System Task](#system-task) below.
 
     6. Set the value for the **Wait for result** parameter. If you set it to *false*, the result object will be available instantly, however, the content will be added at a later stage. set the **Wait for result** parameter to `true` only for direct user actions, and specifically do not set it to `true` for batch processing.
 
-5. Verify that the user that you configured in the **Generate document as** parameter has access to the page microflow created in step 3, as well as access to all relevant data used in the page to be exported.
+5. Verify that the user which you configured in the **Generate document as** parameter has access to the page microflow created in step 3, as well as access to all relevant data used in the page to be exported.
 
 {{% alert color="info" %}}
 To see the generated document in the browser or download it, you can use the **Download file** microflow action. This will only work if you select *true* for the settings parameter **Wait for result** of the **Generate document from page** action.
@@ -150,7 +150,7 @@ For scenarios where you want to generate documents using a system context (for e
 
 1. Add a specific app role for document generation to your app, for example **DocGenServiceUser** or **ReadOnly**. In the settings for this new role, assign the **User** module role from the **DocumentGeneration** module to the app role. Also, assign or add the required module roles to allow read access to the relevant data in your app’s modules. 
 
-2. As a good practice, let Studio Pro generate separate module roles and set strict entity access that only allow read access to the applicable data. In this case, the service user needs to have the **DocumentGeneration.User** module role, while the user that executes the microflow to generate a document does not.
+2. As a good practice, let Studio Pro generate separate module roles and set strict entity access that only allow read access to the applicable data. In this case, the service user needs to have the **DocumentGeneration.User** module role, while the user which runs the microflow to generate a document does not.
 
    {{% alert color="info" %}}Do not use regular user accounts for the **Generate as user** parameter, since this could have side effects, for example changes in the last login date or failures when multiple sessions are disabled and the applicable user logs in at the same time.{{% /alert %}}
 

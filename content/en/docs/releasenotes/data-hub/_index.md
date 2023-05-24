@@ -15,7 +15,7 @@ These release notes cover changes made to the [Mendix Data Hub Catalog](/data-hu
 
 #### Fixes
 
-* We fixed an issue where edits to descriptions through the Catalog UI were not saved
+* We fixed an issue where edits to descriptions in the Catalog UI were not saved.
 
 ### May 11th, 2023
 

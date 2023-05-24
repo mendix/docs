@@ -1,20 +1,16 @@
 ---
-title: "Storage plans"
+title: "Storage Plans"
 url: /developerportal/deploy/private-cloud-storage-plans/
-description: "Describes how to configure storage plans in Mendix for Private Cloud"
+description: "Describes how to configure storage plans in Mendix for Private Cloud."
 weight: 10
-tags: ["Private Cloud", "Storage", "Database", "File", "S3", "Minio", "Postgres", "Azure"]
+tags: ["Private Cloud","Storage","Database","File","S3","Minio","Postgres","Azure"]
 #To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 ---
 
 
 ## 1 Introduction
 
-Every Mendix app environment needs a database (to store entities), and a blob file storage bucket (to store the contents of `System.FileDocument` entities).
-
-When an app developer creates a new environment, the Mendix Operator will automatically create ("provision") a database and blob file storage bucket for that environment.
-This way, an app developer doesn't need to install or configure a database - the Mendix Operator automatically prepare the database and blob file storage bucket, and link it with the new environment.
-Creating a new enviornment can be completely automated, and can be done by an app developer without assistance from the infrastructure team.
+Every Mendix app environment needs a database to store entities, and a blob file storage bucket to store the contents of `System.FileDocument` entities. When an app developer creates a new environment, the Mendix Operator will automatically create (provision) a database and blob file storage bucket for that environment. In this way, an app developer does not need to install or configure a database - the Mendix Operator automatically prepares the database and blob file storage bucket, and links it with the new environment. Creating a new enviornment can be completely automated, and can be done by an app developer without assistance from the infrastructure team.
 
 The Mendix Operator has a modular architecture and offers a multitude of options how to create and attach databases and blob file storage buckets to environments.
 A _Storage plan_ specifies configuration (a blueprint) how to provide a database or blob file storage bucket to a new environment.

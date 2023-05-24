@@ -146,13 +146,13 @@ To see the generated document in the browser or download it, you can use the **D
 
 #### 4.2 Generating Documents as a System Task {#system-task}
 
-For scenarios where you want to generate documents using a system context (for example in a scheduled event), the recommended approach is to set up one or more service users who will generate documents:
+For scenarios where you want to generate documents using a system context (for example in a scheduled event), the recommended approach is to set up one or more service users for document generation.
 
 1. Add a specific app role for service users to your app, for example **DocGenServiceUser** or **ReadOnly**. 
 2. Assign the **User** module role from the **DocumentGeneration** module to the new app role.
 3. Assign or add the required module roles to allow read access to the relevant data in your app’s modules. 
    
-    As a good practice, let Studio Pro generate separate module roles and set strict entity access that only allow read access to the applicable data. In this case, service users need to have the **DocumentGeneration.User** module role, while users who runs the microflow to generate a document does not.
+    As a good practice, let Studio Pro generate separate module roles and set strict entity access that only allows read access to the applicable data. In this case, the service user needs to have the **DocumentGeneration.User** module role, while the user who runs the microflow to generate a document does not.
 
    {{% alert color="info" %}}Do not use regular user accounts for the **Generate as user** parameter, since this could have side effects, for example, changes in the last login date, or failures when multiple sessions are disabled and the applicable user logs in at the same time.{{% /alert %}}
 

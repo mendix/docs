@@ -51,8 +51,7 @@ We recommend using the community-supported [Email Connector migration utility](h
 
 The following widgets are bundled in the module:
 
-* [HTML/JavaScript Snippet](/appstore/widgets/html-javascript-snippet/)
-* [Format String](/appstore/widgets/format-string/)
+* [HTML Element](/appstore/widgets/htmlelement/)
 * [Rich Text](/appstore/widgets/rich-text/)
 * [FileDocumentViewer](https://github.com/mendixlabs/FileDocumentViewer)
 
@@ -63,7 +62,7 @@ If you already have these widgets in your app, and they are not up-to-date, you 
 After you install the [Email Connector](https://marketplace.mendix.com/link/component/120739), configure the following in Studio Pro:
 
 1. Provide a value for the **EncryptionKey** constant provided by the **Encryption** module.
-2. Launch the UI by using the **EmailConnector_OverviewPage** in the **USE_ME** folder.
+2. Launch the UI by using the **ACT_EmailAccount_LaunchEmailConnectorOverview** Microflow in the **USEME/Microflows** folder.
 
 ### 2.1 Module Security and Roles
 
@@ -246,7 +245,7 @@ The input parameter includes the following:
 
 You can configure your account to authenticate with Microsoft Azure AD OAuth 2.0. Multiple OAuth 2.0 providers can be configured per app.
 
-Click **Add Account** button to add a new account, and select the option **Use Microsoft Azure AD**. See [OAuth Provider Configuration Details](#oauth-config-details).  
+If no email accounts are configured then you can create new OAuth configutation from **Add Email Account** wizard by selecting **Azure AD**, else on overview page click on **OAuth Configurations** button to add/delete/edit the configuration. See [OAuth Provider Configuration Details](#oauth-config-details).  
 
 #### 4.7.1 OAuth Provider Configuration Details {#oauth-config-details}
 
@@ -275,7 +274,7 @@ Emails can be queued for sending at a later time. You can send the messages in t
 
 ### 5.1 Sending or Receiving Email
 
-If you encounter any problems with sending or receiving emails, check the **Show error logs** in the **Account Settings** and the debug logs in Studio Pro. If there is nothing in the log file, but you have sent an email and it does not appear in your app, then it is not an error on the connector side.
+If you encounter any problems with sending or receiving emails, check the **Error logs** in the **Account Settings** and the logs in Studio Pro. If there is nothing in the log file, but you have sent an email and it does not appear in your app, then it is not an error on the connector side.
 
 ### 5.1.1 Gmail Accounts
 
@@ -288,10 +287,10 @@ Gmail no longer supports basic authentication (usernames and passwords), but you
 
 If you already have an email account configured using basic authentication in your app, and want to use OAuth 2.0 authentication without removing that email account, do the following: 
 
-1. On the **EmailConnector_Overview** page, click **Add Account** and select the option **Use Microsoft Azure AD**. See [OAuth Provider Configuration Details](#oauth-config-details).  
+1. On the overview page, click on**OAuth Configurations** button to add a new configuration. See [OAuth Provider Configuration Details](#oauth-config-details).  
 2. For the desired email account, set the **isOAuthUsed** attribute from **EmailAccount** entity to **True**.
     * Associate the existing email account with newly created OAuth provider.
-    * Navigate to the **EmailConnector_Overview** page and handle the warning messages visible for desired email account.
+    * Navigate to the overview page and select the desired account from **Manage Accounts** and go to **Account Settings** and then **Server Settings** tab to Re-authenticate Access.
 
 ### 5.3 Deploying to On-Premises Cloud Environments
 

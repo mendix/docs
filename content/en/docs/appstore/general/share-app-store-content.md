@@ -263,11 +263,26 @@ After you click **Publish Content**, your draft will be reviewed by Mendix befor
 
 ### 4.7 Approval Process {#approval}
 
-All components that are to be listed in the [Public Marketplace](#public-app-store) are subject to an approval process to ensure the quality and accuracy of the listing and that the component meets the expectations of users. 
+All components that are to be listed in the [Public Marketplace](#public-app-store) are subject to an approval process to ensure the quality and accuracy of the listing and that the component meets the expectations of users. Component submissions are processed in a queue and reviewed on a first-come, first-served basis within 5 working days after submission.
 
-Component submissions are processed in a queue and reviewed on a first-come, first-served basis within 5 working days after submission. Mendix checks a range of requirements (for example, that the component installs properly and reports no errors, and that the documentation is clear, accurate, and of sufficient detail). 
+{{% alert color="warning" %}}
+Mendix strongly recommends performing the checks below before you submit your component for approval. This will also speed up the approval process.
+{{% /alert %}}
 
-It may sometimes take a few iterations for a component to be approved, depending on the issues identified. To avoid a high number of necessary iterations, make sure you follow the [content development guidelines](#guidelines) before you submit a component for approval.
+Mendix does the following:
+
+* Checks the licenses used in the uploaded *.mpk* files using the [Fossology](https://fossology.osuosl.org/repo/) tool
+    * There should be no use of GPL, LGPL, or MPL licenses
+    * For more details, see the [Providing License Details](/appstore/general/share-app-store-content/#license) section above
+* Checks the *.mpk* file for malware using the [VirusTotal](https://www.virustotal.com/gui/home/upload) tool
+* Checks for third-party vulnerabilities using the [Snyk](https://snyk.io/) tool
+* If the component is a widget, module, connector, or solution template, checks that it can be used without errors in a specific Studio Pro version
+* Checks that the documentation mentions all the details per the template (for example, dependencies, configuration, and how to use the component)
+* Checks the grammar, alignment, and spelling for the component's description and documentation
+* Checks that the logo is related to the component's functionality
+* Checks that the screenshots are related to the configuration required to use your component in the end-user's app
+
+It may sometimes take a few iterations for a component to be approved, depending on the issues identified. To avoid a high number of necessary iterations, make sure you have followed the [content development guidelines](#guidelines) and have performed the checks above before you submit your component for approval.
 
 {{% alert color="info" %}}
 Review and approval by Mendix is required only for the first version of a publicly-listed component. Subsequent versions of a public component do not need review or approval by Mendix.
@@ -276,19 +291,6 @@ Review and approval by Mendix is required only for the first version of a public
 {{% alert color="info" %}}
 [Private Marketplace](#private-app-store) content does not require any review or approval.
 {{% /alert %}}
-
-#### List of Checks
-
-These are the checks that Mendix completes for approval:
-
-1. Check the licenses used in the uploaded *.mpk* files. There should be no usage of GPL, LGPL, or MPL licenses. Licenses can be checked using the [Fossology](https://fossology.osuosl.org/repo/) tool (username is *fossy*and password is *fossy*). For more details on licenses, see the [Providing License Details](/appstore/general/share-app-store-content/#license) section above.
-2. Check the *.mpk* file for malware using the [VirusTotal](https://www.virustotal.com/gui/home/upload) tool.
-3. Third party vulnerability check using Snyk Tool.
-4. If it is a widget/module/connector/Solution template, please check that when it is used in specific Studio Pro version(mentioned while onboarding) works fine without errors.
-5. Documentation should mention all the details as per the template provided while onboarding (dependencies, configuration, how to use it, etc)
-6. Check logo - should be related to functionality of the component.
-7. Screenshots should be related to the configuration required to use your component in consumers app.
-8. Check grammar, alignment and do a spell check for Description and Documentation.
 
 ## 5 Updating Existing Marketplace Content {#updating}
 

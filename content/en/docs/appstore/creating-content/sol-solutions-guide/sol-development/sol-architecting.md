@@ -165,10 +165,9 @@ You should ensure the modifiable part of the model that will become editable is 
 
 ### 4.7 Security
 
-See the following resources:
+For details on security for your solution, see the following resources:
 
-* [Mendix Academy - Secure your Commercial Solution](https://academy.mendix.com/link/paths/131/Secure-your-Commercial-Solution)
-* [Implement Best Practices for App Security](https://docs.mendix.com/howto/security/best-practices-security/)
-* [Set Up Anonymous User Security](https://docs.mendix.com/howto/security/set-up-anonymous-user-security/)
-
-Consider using [Add-on roles](https://academy.mendix.com/link/modules/519/lectures/4099/3.1-When-to-use-add-on-roles) to make it easier to configure the security for your customers.
+* [Implement Best Practices for App Security](/howto/security/best-practices-security/)
+* [Set Up Anonymous User Security](/howto/security/set-up-anonymous-user-security/)
+* [Secure Your Commercial Solution](https://academy.mendix.com/link/paths/131/Secure-your-Commercial-Solution) in Mendix Academy
+* [When to Use Add-on Roles](https://academy.mendix.com/link/modules/519/lectures/4099/3.1-When-to-use-add-on-roles) in Mendix Academy

@@ -62,8 +62,6 @@ Mendix supports the hiding of module implementations as a means to protect your 
 
 In this way, adaptable solutions can have a [common core](/appstore/creating-content/sol-architecting/#app-design) shared across all customers which is protected with an adaptable shell on top. The adaptable shell is customized for each customer, either by making model changes into the customizable core or by extending the app with entirely new modules. Both the customizations and extensions make use of the APIs of the common core.
 
-<!-- [TODO: add visual describing 80/20 rule with common core and flexible shell with model customizations & extensions] -->
-
 #### 5.2.2 For the Consumer
 
 Consumers of a solution with this kind of IP protection see only a well-designed API. This has the following results:
@@ -103,13 +101,9 @@ To protect your app services, connectors, and modules, follow these steps:
 3. Apply the “protect what’s behind the API” principle. Apply IP protection to relieve your customers of concerns about what is happening behind the API.
 4. When not applying IP protection to an entire module or set of modules, at least protect any modules that implement custom usage metering. This will protect against (accidental) tampering by customers.
 
-<!--TODO: Add references to app services & connectors guides - or make this doc generic for creating all content and move out of solutions section?-->
-
 ### 5.4 Protecting Usage Metering {#metering}
 
 To ensure customers do not accidentally or intentionally break usage metering, it is a good practice to hide the implementation of custom usage metering in a protected module.
-
-<!-- TODO: Check limitation: scheduled events can be disabled by the operator of an app. -->
 
 There are two common scenarios for custom usage metering:
 
@@ -137,4 +131,3 @@ Every implementation can have a cryptographically signed license key, which will
 * Expiration of license keys in time
 * Validity of license key for specific runtime URLs
 
-<!-- TODO: Provide examples -->

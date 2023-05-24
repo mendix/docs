@@ -19,8 +19,6 @@ When you start work on a solution for an initial customer or handful of customer
 
 This requires an iterative approach, where your understanding of the architectural requirements becomes clearer over time. It also requires a certain level of pragmatism in technical design choices, because you have to accept that you do not know everything up-front and you will have to redo certain design choices as your understanding increases.
 
-<!-- TODO: add graphic of progressive emergent architecture -->
-
 ## 3 Implementation per Customer {#per-customer}
 
 The customer implementation is a separate, upgradable model instance (fork) per customer that shares generic functionality from the original solution model and that is deployed to separate cloud resources. This allows the implementation team to fully customize all the functionality that is not IP-protected. Not all customer implementations require changes to the model. In those cases, the original model can be deployed as is. Depending on the use case, the customer gains access to the app as well.
@@ -144,8 +142,6 @@ This is the process for upgrading a solution to a higher minor or major version:
 6. Apply the needed changes to make the adapted part model compatible with the new version of the platform.
 
 For more information, see [How to Deal with Platform Upgrades and Solution Versioning](https://academy.mendix.com/link/modules/507/lectures/4038/3.3-How-to-Deal-with-Platform-Upgrades-and-Solution-Versioning) in Mendix Academy.
-
-<!-- TODO: add howto on platform upgrade -->
 
 ### 4.5 Marketplace Modules
 

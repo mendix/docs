@@ -277,6 +277,19 @@ Review and approval by Mendix is required only for the first version of a public
 [Private Marketplace](#private-app-store) content does not require any review or approval.
 {{% /alert %}}
 
+#### List of Checks
+
+These are the checks that Mendix completes for approval:
+
+1. Check the licenses used in the uploaded *.mpk* files. There should be no usage of GPL, LGPL, or MPL licenses. Licenses can be checked using the [Fossology](https://fossology.osuosl.org/repo/) tool (username is *fossy*and password is *fossy*). For more details on licenses, see the [Providing License Details](/appstore/general/share-app-store-content/#license) section above.
+2. Check the *.mpk* file for malware using the [VirusTotal](https://www.virustotal.com/gui/home/upload) tool.
+3. Third party vulnerability check using Snyk Tool.
+4. If it is a widget/module/connector/Solution template, please check that when it is used in specific Studio Pro version(mentioned while onboarding) works fine without errors.
+5. Documentation should mention all the details as per the template provided while onboarding (dependencies, configuration, how to use it, etc)
+6. Check logo - should be related to functionality of the component.
+7. Screenshots should be related to the configuration required to use your component in consumers app.
+8. Check grammar, alignment and do a spell check for Description and Documentation.
+
 ## 5 Updating Existing Marketplace Content {#updating}
 
 After you publish a component in the Mendix Marketplace, it is your responsibility to make sure that components are updated on a regular cadence. This is important so that components work with the latest versions of dependencies (especially Mendix Studio Pro), and it is required so Mendix can ensure the quality of components in the Marketplace. This means you need to monitor, maintain, and evolve the component so that the Marketplace listing is more noticeable, you can build user loyalty, and you can maintain the good reputation of your company. If the component is not updated regularly, the Marketplace listing will be analyzed for removal from public visibility.

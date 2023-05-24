@@ -136,25 +136,27 @@ Configure the path to the *chrome.exe* executable in the **CustomChromePath** co
 
     5. Use **$currentUser** for the **Generate as user** parameter. This will generate the document in the context and using the access rights of the user which runs the microflow. To generate the document in a system context, see the section [Generating Documents as a System Task](#system-task) below.
 
-    6. Set the value for the **Wait for result** parameter. If you set it to *false*, the result object will be available instantly, however, the content will be added at a later stage. set the **Wait for result** parameter to `true` only for direct user actions, and specifically do not set it to `true` for batch processing.
+    6. Set the value for the **Wait for result** parameter. If you set it to *false*, the result object will be available instantly, while the content will be added at a later stage. Set the **Wait for result** parameter to *true* only for direct user actions. Do not set the value to *true* for batch processing.
 
 5. Verify that the user which you configured in the **Generate document as** parameter has access to the page microflow created in step 3, as well as access to all relevant data used in the page to be exported.
 
 {{% alert color="info" %}}
-To see the generated document in the browser or download it, you can use the **Download file** microflow action. This will only work if you select *true* for the settings parameter **Wait for result** of the **Generate document from page** action.
+To see the generated document in the browser or download it, you can use the **Download file** microflow action. This will only work if you set the **Wait for result** parameter of the **Generate document from page** action to *true*.
 {{% /alert %}}
 
 #### 4.2 Generating Documents as a System Task {#system-task}
 
-For scenarios where you want to generate documents using a system context (for example in a scheduled event), the recommended approach is to se up one or more service users for document generation:
+For scenarios where you want to generate documents using a system context (for example in a scheduled event), the recommended approach is to set up one or more service users who will generate documents:
 
-1. Add a specific app role for document generation to your app, for example **DocGenServiceUser** or **ReadOnly**. In the settings for this new role, assign the **User** module role from the **DocumentGeneration** module to the app role. Also, assign or add the required module roles to allow read access to the relevant data in your app’s modules. 
+1. Add a specific app role for service users to your app, for example **DocGenServiceUser** or **ReadOnly**. 
+2. Assign the **User** module role from the **DocumentGeneration** module to the new app role.
+3. Assign or add the required module roles to allow read access to the relevant data in your app’s modules. 
+   
+    As a good practice, let Studio Pro generate separate module roles and set strict entity access that only allow read access to the applicable data. In this case, service users need to have the **DocumentGeneration.User** module role, while users who runs the microflow to generate a document does not.
 
-2. As a good practice, let Studio Pro generate separate module roles and set strict entity access that only allow read access to the applicable data. In this case, the service user needs to have the **DocumentGeneration.User** module role, while the user which runs the microflow to generate a document does not.
+   {{% alert color="info" %}}Do not use regular user accounts for the **Generate as user** parameter, since this could have side effects, for example, changes in the last login date, or failures when multiple sessions are disabled and the applicable user logs in at the same time.{{% /alert %}}
 
-   {{% alert color="info" %}}Do not use regular user accounts for the **Generate as user** parameter, since this could have side effects, for example changes in the last login date or failures when multiple sessions are disabled and the applicable user logs in at the same time.{{% /alert %}}
-
-3. Run the app and create a new local user. Give the user the role that you defined in the previous step and use a strong password. This user will be used to generate documents. When starting with a blank app, you can add the **Administration.Account_Overview** page to manage and create new users. 
+3. Run the app and create a new local user as the service user. Give the service user the app role that you created for document generation and use a strong password. The service user will be used to generate documents. When starting with a blank app, you can add the **Administration.Account_Overview** page to manage and create new users. 
 
    {{% alert color="info" %}}You could also add a **Find or create** microflow to your after startup logic that performs this step automatically.{{% /alert %}}
 
@@ -163,7 +165,7 @@ For scenarios where you want to generate documents using a system context (for e
 5. In the microflow where you call the **Generate document from page** action, add a microflow call to the microflow you created in the previous step, and use the return value (the service user) as input for the **Generate as user** parameter of the action.
 
 {{% alert color="info" %}}
-We recommend to try to login as the service user at least once, to verify if the service user has the required module roles to login. Depending on your app’s implementation, it might for example be required to assign the `Administration.Account` module role.
+We recommend to try to log in as the service user at least once, to verify if the service user has the required module roles to login. Depending on your app’s implementation, it might for example be required to assign the `Administration.Account` module role.
 {{% /alert %}}
 
 #### 4.3 Styling Documents
@@ -171,5 +173,5 @@ We recommend to try to login as the service user at least once, to verify if the
 - You can use the **Page break** widget included in this module to structure your documents. The **Page break** widget enables you to add page breaks at any place in your document.
 - You can use the **Page orientation** design property to set the page orientation for your documents. This property is available in the **Design properties** section in the properties for a page.
 - You can use the **Page size** design property to set the page size for your documents. This property is available in the **Design properties** section in the properties for a page.
-- You can use the **Show page numbers** design property to enable page numbers for your documents. At the moment, we only support basic page numbers. We will extend and add custom header and footer support at a later stage.
-- For advanced styling, you can use the styling editor in Studio Pro to style your documents, for example by using the **@media print** and **@page rules** in your style sheet.
+- You can use the **Show page numbers** design property to enable page numbers for your documents. At the moment, we only support basic page numbers. We will extend and add support for custom headers and footers at a later stage.
+- For advanced styling, you can use the styling editor in Studio Pro to style your documents, for example by using the `@media print` and `@page rules` in your style sheet.

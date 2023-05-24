@@ -125,7 +125,7 @@ Once you have set up an account, you can use it in microflow activities to send 
 
 ### 4.1 Sending Email
 
-When the module is running, click **New** to compose and send new emails.
+When the module is running, click **New Email** to compose and send new emails.
 
 When modeling your app in Studio Pro, use the **SendEmail** Java action to send emails. The input parameters are the following:
 
@@ -138,7 +138,7 @@ The **To**, **Subject**, and **Email Content** fields are mandatory. Multiple em
 
 ### 4.2 Receiving Email
 
-Click **Replicate Emails** to receive emails. Emails will be fetched and processed by server as configured in the email account.
+Click **Fetch Emails** to receive emails. Emails will be fetched and processed by server as configured in the email account.
 
 When modeling your app in Studio Pro, use **RetrieveEmailMessages** Java action. Once this Java action is called at background emails will be fetched over multiple Java threads and would be returned back to user in async manner. Email fetching will continue till the conditions defined in the email account settings at the Mendix side (like fetch Latest 1000 emails etc)
 

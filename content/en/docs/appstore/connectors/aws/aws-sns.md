@@ -77,8 +77,7 @@ To subscribe to a topic in your AWS environment and receive notifications about 
 
 1. In the **App Explorer**, right-click on the name of your module, and then click **Add microflow**.
 
-![](https://paper-attachments.dropboxusercontent.com/s_C316E46256B22A437563F69F9A21D1AEACD201E70533E75172631270F4598573_1684330079272_sns_create_microflow.png)
-
+    {{< figure src="/attachments/appstore/connectors/aws-sns/sns_create_microflow.png" alt="Adding a microflow">}}
 
 2. Enter a name for your microflow, for example, *ACT_Subscribe_Email*, and then click **OK**.
 3. In the **App Explorer**, in the **AmazonSNSConnector** section, find the **Subscribe** activity.
@@ -86,17 +85,14 @@ To subscribe to a topic in your AWS environment and receive notifications about 
 5. Double-click the **Subscribe** activity to configure the required parameters.
 For the **Subscribe** activity, you must specify the AWS Region, add your `Credentials` and `SubscribeRequest` object. The `SubscribeRequest` object requires the TopicARN of the topic you want to subscribe to and one `EmailEndpoint` object associated with it, which defines the email address you want to subscribe to the topic with. To get your `Credentials` object, add the **Credentials_GenerateFromConstants** microflow in front of your **Subscribe** activity so that you can pass the `Credentials` object as input parameter of the activity.
 
-
-![](https://paper-attachments.dropboxusercontent.com/s_C316E46256B22A437563F69F9A21D1AEACD201E70533E75172631270F4598573_1684330102179_sns_subscribe_actions.png)
-
-
+    {{< figure src="/attachments/appstore/connectors/aws-sns/sns_subscribe_actions.png" alt="Configuring the Subscribe activity">}}
  
 6. In the **Edit parameters** section, edit the **AWS_Region** parameter and change **Type** to **Expression**. In the expression builder, type *AWS_Region* and then press **Ctrl+Space**. In the autocomplete dialog, select **AmazonSNSConnector.AWS_Region** , then type . and select your AWS region from the list.
 
-![](https://paper-attachments.dropboxusercontent.com/s_C316E46256B22A437563F69F9A21D1AEACD201E70533E75172631270F4598573_1684330120797_sns_subscribe_aws_region.png)
+    {{< figure src="/attachments/appstore/connectors/aws-sns/sns_subscribe_aws_region.png" alt="Selecting the AWS region">}}
 
+    For a list of available AWS regions, see [AWS_Region](#aws-region).
 
-For a list of available AWS regions, see [AWS_Region](#aws-region).
 7. Click **OK**.
 8. Configure the **Credentials_GenerateFromConstants** microflow.
 9. Open a page that contains a data view to show all the parameters of the `SubscribeResponse`, which is the response of the **Subscribe** activity.
@@ -108,8 +104,7 @@ To be able to send a message to a topic so that all endpoints subscribed to that
 
 1. In the **App Explorer**, right-click on the name of your module, and then click **Add microflow**.
 
-![](https://paper-attachments.dropboxusercontent.com/s_C316E46256B22A437563F69F9A21D1AEACD201E70533E75172631270F4598573_1684330131359_sns_create_microflow.png)
-
+    {{< figure src="/attachments/appstore/connectors/aws-sns/sns_create_microflow.png" alt="Creating a microflow">}}
 
 2. Enter a name for your microflow, for example, *ACT_PublishBatch*, and then click **OK**.
 3. In the **App Explorer**, in the **AmazonSNSConnector** section, find the **PublishBatch** activity.
@@ -117,16 +112,14 @@ To be able to send a message to a topic so that all endpoints subscribed to that
 5. Double-click the **PublishBatch** activity to configure the required parameters.
 For the **PublishBatch** activity, you must specify the AWS Region, add your `Credentials` and `PublishBatchRequest` object. The `PublishBatchRequest` object requires at least one `PublishBatchTopic` object associated with it, which contains the information about the topic you would like to send messages to. This `PublishBatchTopic` must also have a `PublishBatchMessage` object associated with it, which has the details of the message you would like to send. To get your `Credentials` object, add the **Credentials_GenerateFromConstants** microflow in front of your **PublishBatch** activity so that you can pass the `Credentials` object as input parameter of the activity.
 
-![](https://paper-attachments.dropboxusercontent.com/s_C316E46256B22A437563F69F9A21D1AEACD201E70533E75172631270F4598573_1684330136399_sns_publishbatch_actions.png)
-
-
+    {{< figure src="/attachments/appstore/connectors/aws-sns/sns_publishbatch_actions.png" alt="Adding the PublishBatch activity">}}
  
 6. In the **Edit parameters** section, edit the **AWS_Region** parameter and change **Type** to **Expression**. In the expression builder, type *AWS_Region* and then press **Ctrl+Space**. In the autocomplete dialog, select **AmazonSNSConnector.AWS_Region** , then type . and select your AWS region from the list.
 
-![](https://paper-attachments.dropboxusercontent.com/s_C316E46256B22A437563F69F9A21D1AEACD201E70533E75172631270F4598573_1684330143886_sns_publishbatch_aws_region.png)
+    {{< figure src="/attachments/appstore/connectors/aws-sns/sns_publishbatch_aws_region.png" alt="Selecting the AWS region">}}
 
+    For a list of available AWS regions, see [AWS_Region](#aws-region).
 
-For a list of available AWS regions, see [AWS_Region](#aws-region).
 7. Click **OK**.
 8. Configure the **Credentials_GenerateFromConstants** microflow.
 9. Open a page that contains a data view to show all the parameters of the `PublishBatchResponse`, which is the response of the **Subscribe** activity.

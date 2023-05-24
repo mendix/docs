@@ -62,50 +62,52 @@ In general, Mendix recommends design-time model adaptation over "building Mendix
 
 ### 3.3 Design-Time Adaptation
 
-For design-time adaptations, Mendix recommends referencing [How to Set Up a Solution](/appstore/creating-content/sol-set-up/) and [How to Upgrade a Solution](/appstore/creating-content/sol-upgrade/) in order to create a dedicated app and Git repository per customer (including the partner that implements on behalf of the customer) and keeping these up to date. This will allow for the following:
+For design-time adaptations, Mendix recommends referencing [How to Set Up a Solution](/appstore/creating-content/sol-set-up/) and [How to Upgrade a Solution](/appstore/creating-content/sol-upgrade/) in order to create a dedicated app and Git repository per customer (including the partner that implements on behalf of the customer) and keeping these up to date. This allows for the following:
 
-* [Full control](/developerportal/collaborate/app-roles/) of who can access the individual customer’s model instance
-* Prevent access to [IP-protected](/appstore/creating-content/sol-ip-protection/) content and the development of the original solution template
-* Using all [Collaboration features](/developerportal/collaborate/)
-* Data isolation per customer tenant by having dedicated environments (at least Acceptance and Production).
+* Full control of who can access the individual customer’s model instance via [app roles](/developerportal/collaborate/app-roles/) 
+* Preventing access to [IP-protected](/appstore/creating-content/sol-ip-protection/) content and the development of the original solution template
+* Using all [Developer Portal collaboration features](/developerportal/collaborate/)
+* Data isolation per customer tenant by having dedicated environments (at least acceptance and production)
 
-The customer model instances will run with “IP protection” enabled, meaning that parts of the original solution model can be hidden. Once the solution is published with the protected Solution Models, this implementation hiding cannot be undone by the consumer of the solution model.
+The customer model instances will run with [IP protection](/appstore/creating-content/sol-ip-protection/) enabled, meaning that parts of the original solution model can be hidden. Once the solution is published with the protected solution models, this implementation hiding cannot be undone by the consumer of the solution model.
 
 {{< figure src="/attachments/appstore/creating-content/sol-solutions-guide/sol-development/solution-deployment.png" alt="Development and deployment model for Solution Implementation"  width="50%" >}}
 
-### 3.4 Customers without adaptation
+### 3.4 Customers Without Adaptation
 
-It might be the case that not all your customers require model adaptation and they can therefore run on an unmodified version of the “Original Solution Model”. In this case it's recommended to distribute and deploy a Deployment Package (MDA), which also prevents inspection in the Mendix Model and ensures seamless upgrades. This can be combined with [Flexible Environments](/developerportal/deploy/environments/#222-flexible-environments) and/or a multi-tenancy setup.
+It may occur that not all of your customers require model adaptation, so they can run on an unmodified version of the original solution model. In this case, Mendix recommends distributing and deploying a deployment package (MDA), which also prevents inspection in the Mendix model and ensures seamless upgrades. This can be combined with [flexible environments](/developerportal/deploy/environments/#flexible-environments) and/or a multi-tenancy setup.
 
-If after go-live it becomes necessary to adapt the model for a customer, a solution can be initialized. If right after initialization a database backup is restored to the newly created environment, no data loss should happen.
+If after going live it becomes necessary to adapt the model for a customer, a solution can be initialized. If right after initialization a database backup is restored to the newly created environment, no data loss should happen.
 
-_Make sure to test this scenario before applying any customizations, since this only works when the application model is based on the same version of the solution._
+{{% alert color="info" %}}
+Make sure to test this scenario before applying any customizations, since this only works when the application model is based on the same version of the solution.
+{{% /alert %}}
 
 ## 4 Application Design {#app-design}
 
-### 4.1 Combine the different module types to achieve IP protection & adaptability
+### 4.1 Combining Module Types
 
-An adaptable solution can exist of multiple core and adaptable modules. When creating a solution it's important to make a distinction between the different module types and their purpose in the application model:
+An adaptable solution can exist of multiple core and adaptable modules. When creating a solution, it is important to make a distinction between the different module types and their purpose in the application model:
 
 | Type | Contains | Implementation | Responsibility |
 | --- | --- | --- | --- |
-| [Solution modules](/refguide/module-settings/#solution-module) | Immutable common core; Intellectual Property and Core Logic | Hidden | “Build” team |
-| [(Open) application modules](/refguide/module-settings/#app-module) | Adaptable parts of the application | Visible, can be changed | Shared between “Build” and “Implement" teams | 
-| | Customer specific additions | Visible | “Implement” team |
-| [UI modules](/refguide/ui-resources-package/) | Contains theming | Shown, can be changed | Shared between “Build” and “Implement" teams |
+| [Solution modules](/refguide/module-settings/#solution-module) | Immutable common core with intellectual property and core logic | Hidden | Build team |
+| [(Open) application modules](/refguide/module-settings/#app-module) | Adaptable parts of the app | Visible, can be changed | Shared between build and implementation teams | 
+| [UI modules](/refguide/ui-resources-package/) | Contains theming | Shown, can be changed | Shared between build and implementation teams |
+| Customer-specific modules | Customer-specific additions | Visible | Implementation team |
 
-Solution modules are unique in the sense that it's not possible to see or alter their implementation details (e.g. view the logic inside a microflow, change the parameters, or edit the data model). They act as a “System” module for your solution.
+Solution modules are unique in the sense that it is not possible to see or alter their implementation details (for example, viewing the logic inside a microflow, changing the parameters, or editing the data model). They act as a "system" module for your solution.
 
-However, documents can refer back and forth between Solution and App modules. This allows for patterns with partial editability, abstract concepts and an extensible front-end. To make things easy to maintain it is a good practice to keep one adaptable module for each core module that’s marked as a Solution Module. These modules will be tightly coupled, and should be considered as one module: the Core will have dependencies on the adaptable module and vice versa.
+However, documents can refer back and forth between solution and app modules. This allows for patterns with partial editability, abstract concepts, and an extensible front-end. To make things easy to maintain, it is a good practice to keep one adaptable module for each core module that is marked as a solution module. These modules will be tightly coupled, and should be considered as one module, so that the core module will have dependencies on the adaptable module, and vice versa.
 
-Studio Pro enforces consistency during both development and implementation and will provide find usages (while protecting the implementation).
+Studio Pro enforces consistency during both development and implementation, and enables finding usages while protecting the implementation.
 
 {{% alert color="info" %}}
-This is an exception to the cyclic dependency rule, a Solution Module may have an Open Module counterpart while they work together as one module.
+This is an exception to the cyclic dependency rule, in that a solution module may have an open module counterpart while they work together as one module.
 {{% /alert %}}
 
 {{% alert color="info" %}}
-Be sure to configure the [Solution](/refguide/app-settings/#solution) tab of **App Settings** to allow for distribution as an adaptable solution and creating Solution modules.
+Be sure to configure the [Solution](/refguide/app-settings/#solution) tab of **App Settings** to allow for distribution as an adaptable solution and for creating solution modules.
 {{% /alert %}}
 
 ### 4.2 Designing the Interfaces
@@ -114,35 +116,36 @@ When designing the interfaces of your solutions, you should do the following:
 
 * Split your adaptable solution architecture into the [three main functional parts](/appstore/creating-content/sol-development/#three-parts)
 * Think about which parts of the shared core are reusable in other parts:
-    * Define which shared logic should be reusable and define entry points to the shared logic as APIs
+    * Define which shared logic should be reusable, and define entry points to the shared logic as APIs
     * Define which entities (data/state) are required in which parts of the functionality
-* Design APIs between common core and extension modules and consider making public only the parts that are explicitly required in other parts of your current architecture — design for today
+* Design APIs between the common core and extension modules, and consider making public only the parts that are explicitly required in other parts of your current architecture (meaning, design for today)
 * Design APIs for custom-specific modules, focus on current customer requests and their value, and focus on a minimum viable product (MVP) by keeping it small and simple
 * Iterate with customers to evolve the adaptability of the solution by evolving the architecture
     * Progressively, the architecture will emerge and become more complex as your solution becomes more successful, so re-architect when necessary
 
 ### 4.3 Applying IP Protection
 
-IP protection can be used to make parts of the application model and the common core immutable by customers. For practical guidance, see [Apply IP Protection](/appstore/creating-content/sol-ip-protection/).
+IP protection can be used to make parts of the application model and the common core immutable by customers. For practical guidance, see [How to Apply IP Protection](/appstore/creating-content/sol-ip-protection/).
 
 ### 4.4 Mendix Platform Version
 
-The [Solution Upgrade](/appstore/creating-content/sol-upgrade/) mechanism requires the application model to be of the same platform version as the version of the solution upgrade package. The recommendation is therefore to:
+The [solution upgrade](/appstore/creating-content/sol-upgrade/) mechanism requires the application model to be of the same Mendix Platform version as the version of the solution upgrade package. Therefore, Mendix recommends the following:
 
-* Preferrably publish a solution with the latest MTS patch version (e.g. 9.24.x) to allow customer implementations to be upgraded to the latest patch version independently. This helps with decoupling of release cycles in case of a Mendix Platform bug or security update.
-* Never upgrade a solution implementation to a higher minor or major version on its own (e.g. 9.18 to 9.20 or 9 to 10) when the solution is not upgraded.
+* You should preferrably publish a solution with the latest [MTS](/releasenotes/studio-pro/lts-mts/#mts) patch version to allow customer implementations to be upgraded to the latest patch version independently. This helps with decoupling of release cycles in case of a Mendix Platform bug or security update.
+* Never upgrade a solution implementation to a higher minor or major version on its own (for example, 9.18 to 9.20, or 9 to 10, respectively) when the solution is not upgraded.
 
-When upgrading a solution to a higher minor or major version the process is:
+This is the process for upgrading a solution to a higher minor or major version:
 
-* Upgrade solution to the new version of the Mendix platform.
-* If needed, apply the needed changes to make the application model compatible with the new version of the platform.
-* Create a new solution package.
-* Upgrade the solution implementation to the targeted version of the Mendix Platform and commit. If this causes errors, commit “with errors”.
-* Upgrade the solution, all errors in the part of the application model that came from the solution template should be gone.
-* Apply the needed changes to make the adapted part model compatible with the new version of the platform.
+1. Upgrade the solution to the new Mendix version.
+2. If needed, apply the needed changes to make the application model compatible with the new Mendix version.
+3. Create a new solution package.
+4. Upgrade the solution implementation to the targeted Mendix version and commit. If this causes errors, commit with the errors.
+5. Upgrade the solution (all errors in the part of the application model that came from the solution template should be gone).
+6. Apply the needed changes to make the adapted part model compatible with the new version of the platform.
+
+For more information, see [How to Deal with Platform Upgrades and Solution Versioning](https://academy.mendix.com/link/modules/507/lectures/4038/3.3-How-to-Deal-with-Platform-Upgrades-and-Solution-Versioning) in Mendix Academy.
 
 <!-- TODO: add howto on platform upgrade -->
-<!-- See also: ![How to Deal with Platform Upgrades and Solution Versioning](https://academy.mendix.com/link/modules/507/lectures/4038/3.3-How-to-Deal-with-Platform-Upgrades-and-Solution-Versioning) -->
 
 ### 4.5 Marketplace Modules
 

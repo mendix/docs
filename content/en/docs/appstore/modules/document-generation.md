@@ -11,11 +11,13 @@ tags: ["marketplace", "marketplace component", "document generation", "platform 
 
 The [Document Generation](#url-to-be-added) module allows you to generate pixel-perfect PDF documents based on regular pages in your app.
 
-This module uses the document generation service in the Mendix Cloud to convert any regular web page in your app into a PDF document. The result is similar to what you would get when using the "Save as PDF" feature in the print dialog of your browser. 
+This module uses the document generation service on the Mendix Cloud to convert any regular web page in your app into a PDF document. The result is similar to what you would get when using the "Save as PDF" feature in the print dialog box of your browser. 
+
+You can use the module locally or on the Mendix Cloud.
 
 When running locally, a local service is used to execute the headless browser next to your app. The service and browser are executed only at the moment of generating a document, and are terminated when the document is finished.
 
-When running in the cloud, the document generation service in the Mendix Cloud is used, which is developed and maintained by Mendix. The cloud service opens the page in a headless browser and sends the resulting PDF back to the module. The diagram below illustrates this process.
+When running on the Mendix Cloud, the document generation service on the Mendix Cloud is used, which is developed and maintained by Mendix. The cloud service opens the page in a headless browser and sends the resulting PDF back to the module. The diagram below illustrates this process.
 
 {{< figure src="/attachments/appstore/modules/document-generation/request-flow.png" >}}
 
@@ -23,8 +25,8 @@ When running in the cloud, the document generation service in the Mendix Cloud i
 
 - Generate pixel-perfect PDF documents based on regular pages in your app.
 - Make use of the full capabilities of the page editor, including the use of snippets, text templates, conditional visibility based on expressions, dynamic classes, etc.
-- Support adding any existing web widget to your document, or creating your own widgets and use them in your documents.
-- Use “Instant Update” during local development, so that changes to your documents are reflected immediately without having to do a full restart of your app.
+- Support adding any existing web widget to your document, or creating your own widgets and using them in your documents.
+- Use “Instant Update” during local development, which allows you to see changes to your documents immediately without having to do a full restart of your app.
 - Generate documents using a synchronous or asynchronous approach. In the asynchronous action, the result object is available instantly, the content is added at a later stage.
 
 ### 1.2 Security
@@ -47,10 +49,10 @@ The document generation functionality is under active development. While we cann
 - The `Generate document from page` action does not support multiple page parameters.
 - We use a fixed 30 second timeout for the page to finish loading and rendering. A timeout exception is thrown if the page content did not finish loading within 30 seconds.
 - We currently do not enforce strict rate limits. However, take into account the following guidelines:
-  - Only set `Wait for result` parameter to *true* for direct user actions, and specifically, do not set it to *true* for batch processing. Under heavy load, requests that wait for the result may fail due to strict timeout limitations. 
+  - Only set `Wait for result` parameter to *true* for direct user actions. Do not set it to *true* for batch processing. Under heavy load, requests that wait for the result may fail due to strict timeout limitations. 
   - For batch processing, do not exceed 25 documents per minute, to ensure stable performance.
 - When you deploy your app, it needs to be accessible to our cloud service. This requires access to the DocGen request handler which can be configured in the Cloud Portal. If your app is configured to restrict access, for example using IP whitelisting and/or client certificates, our cloud service will not be able to reach your app and the module will not work properly.
-- Objects that are created in the microflow that contains the `Generate document from page` action are not available to use in your document. This is also applicable for changes made to existing objects. The reason for this is that those changes are not persisted to the database until the whole microflow has finished. The document generation service will access your document in its own context, and therefore have no access to the non-persisted changes.
+- Objects that are created in the microflow that contains the `Generate document from page` action are not available to use in your document. This is also applicable for changes made to existing objects. The reason is that those changes are not persisted to the database until the whole microflow has finished. The document generation service will access your document in its own context, and therefore have no access to the non-persisted changes.
 - For local development, we use the Chrome or Chromium executable that is available on the development machine. Even though we have not observed these yet, there might be minor differences in PDF output locally vs. when using the cloud service.
 
 ### 1.4 Known issues
@@ -62,10 +64,10 @@ The document generation functionality is under active development. While we cann
 ## 2 Installation {#installation}
 
 1. Follow the instructions in [How to Use Marketplace Content in Studio Pro](/appstore/general/app-store-content/) to import the Documentation Generation module into your app.
-2. In the **App Explorer**, go to **Settings** and then the **Runtime** tab, add the **ASu_DocumentGeneration_Initialize** microflow to run after startup. If there is already an after startup microflow, add the **ASu_DocumentGeneration_Initialize** microflow as an action in the existing microflow.
-3. In the **App Explorer**, go to **Security**, and set the **Security level** to **Prototype/demo** or **Production**.
-4. In the **App Explorer**, go to **Security** again, then go to the **User roles** tab, and then add the module role **User** from the **DocumentGeneration** module to all app roles that should be able to generate a document.
-5. To clean up the token, enable the scheduled event **SE_Token_Cleanup** to automatically remove expired **Token** objects after a configured offset in days. The event uses the constant **DocumentGeneration.TokenCleanupOffsetInDays** (the default value is 7 days). The scheduled event runs daily at 03:00 UTC.
+2. In the **App Explorer**, double-click **Settings**, then go to the **Runtime** tab, and add the **ASu_DocumentGeneration_Initialize** microflow to run after startup. If there is already an after startup microflow, add the **ASu_DocumentGeneration_Initialize** microflow as an action in the existing microflow.
+3. In the **App Explorer**, double-click **Security**, and then set the **Security level** to **Prototype/demo** or **Production**.
+4. In the **App Explorer**, double-click **Security** again, then go to the **User roles** tab, and add the module role **User** from the **DocumentGeneration** module to all app roles that should be able to generate a document.
+5. To clean up the token, enable the scheduled event **SE_Token_Cleanup** to automatically remove expired **Token** objects after a configured offset in days. The offset is configured using the constant **DocumentGeneration.TokenCleanupOffsetInDays** (the default value is 7 days). The scheduled event runs daily at 03:00 UTC.
 
 ## 3 Configuration
 
@@ -77,7 +79,7 @@ You need to have Chrome or Chromium installed on your local machine.
 
 The Document Generation module automatically tries to find the Chrome executable (*chrome.exe*) in the default installation paths. 
 
-If you have installed Chrome in a custom location, configure the path to the Chrome executable in the constant **CustomChromePath** in the **_UseMe** > **Configuration** > **CustomChromePath** folder. 
+If you have installed Chrome in a custom location, configure the path to the Chrome executable in the constant **CustomChromePath** in the **_UseMe** > **Configuration** folder. 
 
 ##### 3.1.2 Chromium
 
@@ -85,13 +87,14 @@ If you use Chromium, only use stable releases. The currently supported stable re
 
 Download the *chrome-win.zip* package and extract the archive to a location of your choosing. 
 
-Configure the path to the *chrome.exe* executable in the **CustomChromePath** constant in the **_UseMe** > **Configuration** > **CustomChomePath** folder.
+Configure the path to the *chrome.exe* executable in the **CustomChromePath** constant in the **_UseMe** > **Configuration** folder.
 
-#### 3.2 Running in the Mendix Cloud
+#### 3.2 Running on the Mendix Cloud
 
 1. Configure the API key and API URL that you received in the **API_KEY** and **API_URL** constants respectively in the **_UseMe** > **Configuration** > **Cloud Service** folder.
-2. Make sure that you have the **ASu_DocumentGeneration_Initialize** already configured in your app’s runtime settings, as described in the [Installation](#installation) section and that you have the application deployed to Mendix Cloud.
-3.  To allow the module to send and receive document generation requests on your Mendix Cloud environments, enable the DocGen request handler as follows:
+2. Make sure that you have the **ASu_DocumentGeneration_Initialize** already configured in your app’s runtime settings, as described in the [Installation](#installation) section.
+3. Make sure that you have the application deployed to the Mendix Cloud.
+4.  To allow the module to send and receive document generation requests in your Mendix Cloud environments, enable the DocGen request handler as follows:
 
     1. Go to the **Environments** page for the app as follows:
 

@@ -201,7 +201,7 @@ For more information on how to configure the **Workflow Commons** in an existing
 
 ## 9 Workflow Engine
 
-The Workflow Engine is the Runtime engine to execute workflows. For information on how the engine works, how you can interact with the engine, and what information it stores, see [Workflow Engine](/refguide/workflow-engine).
+The Workflow Engine is the Runtime engine to execute workflows. For information on how the engine works, how you can interact with the engine, and what information it stores, see [Workflow Engine](/refguide/workflow-engine/).
 
 ## 10 Read More
 

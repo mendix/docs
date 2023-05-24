@@ -160,12 +160,14 @@ To configure this widget, follow these steps:
 
         {{% alert color="info" %}}For more information about how to use tags for content filtering, see the [Custom ACF Mode](https://ckeditor.com/docs/ckeditor4/latest/examples/acfcustom.html) section in *Advanced Content Filter – Custom Mode*{{% /alert %}}
 * **Enable upload image**
-    * **No** (default) – if selected, the **upload** tab is unavailable in the image dialog
-    * **Yes** – if selected, the **upload** tab below becomes available in the image dialog, which enables the user to upload an image to the mendix server.
+    * **No** (default) – If selected, the **upload** tab is made unavailable in the image dialog box.
+    * **Yes** – If selected, the **upload** tab below becomes available in the image dialog box. This enables the end-user to upload an image to the Mendix server.
+
         {{< figure src="/attachments/appstore/widgets/rich-text/upload-image.png" alt="upload-image" >}}
-        * **Upload Image Endpoint** – Then endpoint that receives the image entity as the body parameter and passes the image guid in return.
-        * **Upload Image Max Size** – Max allowed image size in KB.
-        * **Uploaded Image List** – List of images that has been used as content in comma separated format.
+
+        * **Upload Image Endpoint** – This sets the endpoint that receives the image entity as the body parameter and passes the image GUID in return.
+        * **Upload Image Max Size** – This controls the maximum allowed image size (in KB).
+        * **Uploaded Image List** – This is a list of images that has been used as content in a comma-separated format.
         
         <!-- Note: See this module for easy setup of the image upload functionalities such as the endpoint [Rich Text Editor Extension Module]( // TODO: module link ) -->
 ### 2.6 Common Tab

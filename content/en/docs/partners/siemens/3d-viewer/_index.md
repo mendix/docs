@@ -12,7 +12,7 @@ aliases:
 
 ## 1 Introduction
 
-The [3D Viewer](https://marketplace.mendix.com/link/component/118345) app service lets you upload, visualize, and operate on 3D JT files in your web applications, using Mendix file storage to store models. The app service contains out-of-the-box Java actions, JavaScript actions, domain models, nanoflows, microflows, and a set of 3D widgets that enable you to build apps to work with 3D models via the JT format. Also included are whole functionalities and integrations that can be very helpful when building your own 3D applications. All you need to do is drag and drop items and configure them.
+The [3D Viewer](https://marketplace.mendix.com/link/component/118345) app service lets you upload, visualize, and operate on 3D file formats(JT, OBJ, glTF, STL) in your web applications, using Mendix file storage to store models. The app service contains out-of-the-box Java actions, JavaScript actions, [domain models](https://docs.mendix.com/refguide/domain-model/), [Nanoflows](https://docs.mendix.com/refguide/nanoflows/), [Microflows](https://docs.mendix.com/refguide/microflows/), and a set of 3D widgets that enable you to build apps to work with 3D models. Also included are whole functionalities and integrations that can be very helpful when building your own 3D applications. All you need to do is drag and drop items and configure them.
 
 This app service does the heavy-lifting for you so you do not have to build a 3D-rendering engine from scratch.
 
@@ -31,14 +31,15 @@ In most cases, you will only need what is contained in the **Viewer3D/USE_ME** f
 
 ### 1.1 Typical Use Cases
 
-You can use this app service when you want to upload, store, and visualize 3D JT models in your Mendix application. You can perform some basic operations, such us navigating the model product structure tree and the Product Manufacturing Information(PMI) tree, creating section views, 2D markups and much more.
+You can use this app service when you want to upload, store, and visualize 3D models in your Mendix application. You can perform some basic operations, such us navigating the model product structure tree and the Product Manufacturing Information(PMI) tree, creating section views, 2D markups and much more.
 
 ### 1.2 Features
 
 This app service enables doing the following:
 
-* Upload to and load models from Mendix file storage or your own file storage (both monolithic JT and shattered JT formats are  supported)
-* Display a 3D model
+* Upload to and load models from Mendix file storage or your own file storage (both monolithic JT and shattered JT formats are supported)
+* Open model from a url
+* Preview Model
 * Zoom, rotate, fit all, pan
 * Use quick intuitive controls to navigate product structure
 * Turn parts on and off
@@ -64,14 +65,14 @@ The 3D Viewer app service includes a few 3D widgets. These are some limitations 
 
 * One **Container3D** widget can only contain one **Viewer** widget. If multiple Viewer widgets are placed inside a Container3D widget, you will see error message in **Design mode**. 
 * The **Viewer** widget is used to display a 3D model. All other 3D widgets (except the **Uploader** and **Container3D** widgets) need a Viewer widget present on the page to interact with.
-* Currently, only JT models with version 9 and above are supported.
+* Currently, supports glTF, STL, OBJ and JT formats(JT version 9 and above).
 * Before uploading a shattered JT *.zip* file,  make sure you are using UTF-8 encode to zip the JT files. For example, if you are using 7Zip, make sure you enter *cu* in **Parameters**.
 
     {{< figure src="/attachments/partners/siemens/3d-viewer/shatteredjt-utf8.png" alt="shatteredjt-utf8" >}}
 
 ### 1.4 Prerequisites
 
-3D Viewer version 2.2.0 and higher can be used with Studio Pro versions starting with [9.4.0](/releasenotes/studio-pro/9.4/) until [9.11](/releasenotes/studio-pro/9.11/) (including 9.11), and version 2.1.2 can be used with Studio Pro 8 versions starting with [8.15.1](/releasenotes/studio-pro/8.15/#8151).
+3D Viewer version 3.0.0 and higher can be used with Studio Pro versions starting with [9.12.10](/releasenotes/studio-pro/9.12/#91210), version 2.2.0 and higher can be used with Studio Pro versions starting with [9.4.0](/releasenotes/studio-pro/9.4/) until [9.11](/releasenotes/studio-pro/9.11/) (including 9.11), and version 2.1.2 can be used with Studio Pro 8 versions starting with [8.15.1](/releasenotes/studio-pro/8.15/#8151).
 
 ## 2 Installation
 
@@ -113,7 +114,7 @@ The **ModelDocument** entity is a conceptual entity that incorporates all the in
 | **Author** | The author of the model. |
 | **CreationDate** | For models stored in Mendix file storage, the **CreationDate** corresponds to the time the JT model is first uploaded to the file storage. For models stored in Teamcenter, the **CreationDate** indicates the creation date of this model revision. |
 | **FileSize** | The size of the model in bytes. |
-| **FileType** | The 3D model format. Currently only the JT format is supported. |
+| **FileType** | The 3D model format. |
 | **Status** | Used specifically for models uploaded and stored in Mendix file storage. The **Status** has three values: **Complete** (indicates the uploading of a model to Mendix file storage is complete), **InProgress** (indicates the uploading is in progress), and **Error** (indicates the uploading failed). |
 | **ErrorReason**  | The reason for the model upload error.|
 
@@ -153,7 +154,7 @@ The **DownloadMarkup** microflow takes a **Markup** object as input parameter an
 
 ### 4.4 Nanoflow {#nanoflow}
 
-The **CreateModelDocumentFromFileDocument** nanoflow takes a **FileDocument** object as an input parameter to create a **ModelDocument** object to represent a user JT model file stored as the entity of **System.FileDocument** or its specialization. As the Viewer widget is prebuilt to take a **ModelDocument** object as the data source, this nanoflow allows you to get and visualize a JT model from your existing file storage.
+The **CreateModelDocumentFromFileDocument** nanoflow takes a **FileDocument** object as an input parameter to create a **ModelDocument** object to represent a user model file stored as the entity of **System.FileDocument** or its specialization. As the Viewer widget is prebuilt to take a **ModelDocument** object as the data source, this nanoflow allows you to get and visualize a model from your existing file storage.
 
 {{< figure src="/attachments/partners/siemens/3d-viewer/CreateModelDocumentFromFileDocument.jpg" alt="CreateModelDocumentFromFileDocument" >}}
 
@@ -175,7 +176,7 @@ For 3D Viewer to work, you must set the app's after-startup microflow to call th
 
 #### 4.6.1 Core Widgets
 
-The core widgets required to enable visualizing a 3D JT model are described below.
+The core widgets required to enable visualizing a 3D model are described below.
 
 ##### 4.6.1.1 Container3D {#container3d}
 
@@ -185,7 +186,7 @@ You can place this widget in any location of a page.
 
 ##### 4.6.1.2 Uploader {#uploader}
 
-This widget enables selecting a JT model from your local machine and uploading it to the Mendix file storage.
+This widget enables selecting one or more models from your local machine and uploading it to the Mendix file storage.
 
 You can place this widget in any location of a page. 
 
@@ -227,7 +228,7 @@ Each panel widget should be placed in a [Container3D](#container3d) widget. A Vi
 
 ##### 4.6.2.1 PS Tree {#ps-tree}
 
-This widget presents a hierarchical tree view of the items that form a model. By toggling the tree node, the end-user can control which model parts are loaded into the Viewer.
+This widget presents a hierarchical tree view of the items that form a model. By toggling the tree node, the end-user can control which model parts are loaded into the Viewer. In addition, support for searching the names of nodes using regular expressions and highlighting the results.
 
 On the **General** tab, the following options are available:
 
@@ -331,15 +332,15 @@ If you deploy your app in your own environment, you need to configure the licens
 
 ## 5 Usage
 
-3D Viewer provides a set of widgets to visualize JT models and a set of nanoflows and Java Actions to bring in the data.
+3D Viewer provides a set of widgets to visualize 3D models and a set of nanoflows and Java Actions to bring in the data.
 
-When you start from a blank app template in Mendix Studio Pro, you can follow the steps below to visualize your local JT model quickly.
+When you start from a blank app template in Mendix Studio Pro, you can follow the steps below to visualize your local 3D model quickly.
 
-### 5.1 Uploading and Viewing a 3D JT Model in Your Browser
+### 5.1 Uploading and Viewing a 3D Model in Your Browser
 
-For the [Viewer](#viewer) widget to visualize a JT model, two data source attributes should be set: **Model ID** and **Model source type**. To enable uploading 3D JT models and visualizing them directly on the page, a set of these attributes should be returned by the [Uploader](#uploader) widget and set to that of the Viewer widget.
+For the [Viewer](#viewer) widget to visualize a 3D model, two data source attributes should be set: **Model ID** and **Model source type**. To enable uploading 3D models and visualizing them directly on the page, a set of these attributes should be returned by the [Uploader](#uploader) widget and set to that of the Viewer widget.
 
-Follow these steps to configure this visualization:
+Follow these steps to configure this visualization(take JT file as an example):
 
 1. Place a [Container3D](#container3d) widget on the page.
 2. Put the Uploader and Viewer widgets into the Container3D widget and give them a layout.
@@ -381,6 +382,10 @@ Follow these steps to display the model loading progress:
 6. Run your app locally. You can see the real-time model loading progress:
 
     {{< figure src="/attachments/partners/siemens/3d-viewer/runlocally-loadingprogress.jpg" alt="runlocally-loadingprogress" >}}
+
+### 5.3 Preview models without uploading
+
+Preview a model directly without uploading to Mendix file storage, just drag and drop the file into the Viewer and support one-click upload. This is a new design that will bring you a lot of convenience.
 
 ### 5.3 Utilizing More 3D Functionality
 

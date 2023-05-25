@@ -44,11 +44,11 @@ User task properties consist of the following sections:
 
 Possible options of this property are described in the table below:
 
-| Option        | Description                                                                                                                                                                                                                                                                                                                                                               |
-|---------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| XPath         | Allows you to filter users who should be assigned the user task. For example, you can assign a certain task only to users with the Manager user role. You can use attributes of the **User Entity** set in [App Settings](/refguide/app-settings/#workflows).                                                                                                             |
-| Microflow     | Allows you to assign the user task to certain users. Using microflow you can check, for example, which users have the right to approve user tasks and are currently not on vacation and assign the task only to users who passed the check.<br />The return type of the microflow should be the **User Entity** set in [App Settings](/refguide/app-settings/#workflows). |
-| No assignment | Allows you to not assign the user task to certain users immediately. This can be useful when you, for example, want the user task to be created but have an administrator assign it to certain users later.                                                                                                                                            |
+| Option | Description |
+| --- | --- |
+| XPath | Allows you to filter users who should be assigned the user task. For example, you can assign a certain task only to users with the Manager user role. You can use attributes of the **User Entity** set in [App Settings](/refguide/app-settings/#workflows). |
+| Microflow | Allows you to assign the user task to certain users. Using microflow you can check, for example, which users have the right to approve user tasks and are currently not on vacation and assign the task only to users who passed the check.<br />The return type of the microflow should be the **User Entity** set in [App Settings](/refguide/app-settings/#workflows). |
+| No assignment | Allows you to not assign the user task to certain users immediately. This can be useful when you, for example, want the user task to be created but have an administrator assign it to certain users later. |
 
 In case **Target users using** (an XPath or a microflow) results in an empty list of users (0 users), the workflow fails. For more information on how to handle this kind of issues, see the [Operation](/refguide/change-workflow-state/#operation) section in *Change Workflow State*.
 
@@ -68,7 +68,7 @@ Enables automatically assigning a user task when a single user is targeted. This
 
 You can switch between a single-user task and a multi-user task. For more information on a multi-user task, see [Multi-User Task](/refguide/multi-user-task/).
 
-The following sections only introduces the properties that are shown after you choose a single-user task.
+The following sections only introduce the properties that are shown after you choose a single-user task.
 
 ### 2.4 Completion Criteria {#completion-criteria}
 
@@ -80,11 +80,11 @@ This property completion criteria used to complete a single-user task. The first
 
 The **Due date** section properties are described in the table below:
 
-| Property   | Description                                                                                                                                                                                                                                                           |
-|------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| None       | No due date is set.                                                                                                                                                                                                                                                   |
-| Duration   | You can set the deadline for the user task with the **Due in** option, which indicates the number of hours, days, or weeks the task is due in. Possible values of the property are the following ones:<br /><ul><li>Hour(s)</li><li>Day(s)</li><li>Week(s)</li> </ul> |
-| Expression | You can set a due date for the user task writing an expression. For example, to set a due date to tomorrow, you can use `addDays([%CurrentDateTime%], 1)`.                                                                                                            |
+| Property   | Description |
+| --- | --- |
+| None  | No due date is set. |
+| Duration | You can set the deadline for the user task with the **Due in** option, which indicates the number of hours, days, or weeks the task is due in. Possible values of the property are the following ones:<br /><ul><li>Hour(s)</li><li>Day(s)</li><li>Week(s)</li> </ul> |
+| Expression | You can set a due date for the user task writing an expression. For example, to set a due date to tomorrow, you can use `addDays([%CurrentDateTime%], 1)`. |
 
 ### 2.6 Events Section {#events}
 

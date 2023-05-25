@@ -7,7 +7,7 @@ tags: ["workflow", "workflows", "multi-user task", "multi user task", "task", "S
 
 ## 1 Introduction
 
-Multi-user task allows you to submit a workflow task to multiple users for approval. The user task will be completed based on the [completion criteria](#completion-criteria).
+Multi-user tasks are tasks that have to be executed by multiple users. Each user will perform the same task. The outcomes of each individual task will be aggregated into a single multi-user task outcome, based on the [completion criteria](#completion-criteria).
 
 For example, you can assign a review task to multiple users:
 
@@ -70,7 +70,7 @@ The following sections only introduces the properties that are shown after you c
 
 #### 2.3.2 Required Input
 
-This property determines the minimum number of targeted users that are required to select an outcome for a user task to be completed.
+This property determines the maximum number of targeted users that are required to select an outcome for a user task to be completed.
 
 ##### 2.3.2.1 All
 
@@ -86,20 +86,24 @@ The specified percentage of targeted users should select an outcome for the task
 
 The result of applying the percentage will be rounded upwards to the nearest mathematical integer value.
 
+For example, when there are 19 targeted users and Percentage is set to 50%, 10 users need to select an outcome for the task to complete.
+
 ### 2.4 Completion Criteria Section {#completion-criteria}
 
-This property specifies the algorithm used to complete a multi-user task.
+With this property you specify how the outcomes of the individual users are aggregated into a single multi-user task outcome. This aggregated outcome is used as the final outcome to complete the multi-user task.
 
 #### 2.4.1 Consensus
 
-All the assigned users need to select the same outcome for the task. The outcome selected by all the users will be the final outcome of the task.
+Select this rule when all users should be in agreement on the provided outcome, i.e. they should all select the same outcome. There has to be consensus. When there is no consensus, the multi-user task will complete with the outcome as selected in the Fallback outcome.
 
 **Fallback outcome**
 
 This outcome will be the final outcome of the task in the following cases:
 
 * If any of the users during consensus completion criteria selects a different outcome than the rest
-* If the number of [targeted users](#users) is less than the [absolute targeted users](#2322-absolute-number)
+* If the number of [targeted users](#users) is less than the [absolute number](#2322-absolute-number) specified in  the `Required Input` section.
+
+   For example, if the targeted user count is, let's say `10` and in the `RequiredInput` you set the absolute number to `20`. Then, in that case, consensus can never be reached and fallback outcome will be selected as the final outcome to complete the task.
 
 #### 2.4.2 Veto
 
@@ -109,7 +113,7 @@ For all the non-veto outcomes, if we group them per outcome, then for any outcom
 
 **Veto outcome**
 
-This property defines the veto outcome. See [Veto](#242-veto) for more information on this outcome.
+This property defines the veto outcome. [Veto](#242-veto) for more information on this outcome.
 
 ### 2.5 Due Date Section {#due-date}
 

@@ -157,11 +157,13 @@ The input parameters for receiving email are the following:
 
 ### 4.3 Using Email Templates
 
-When the module is running, you can create templates to use for a specific email account.
+You can create and use templates for a specific email account.
 
-#### 4.3.1 Creating an Email Template {#create-template)
+#### 4.3.1 Creating an Email Template {#create-template}
 
-You can create and configure email templates with the **SNIP_EmailTemplate_Overview** snippet.
+You can create email templates in two ways:
+1. During runtime, click on the **Email Templates** button in the upper right and follow the wizard.
+2. During design time, developers can use the **SNIP_EmailTemplate_Overview** snippet located in **Private** > **Snippets**. Use the snippet on a page and save it on a button click.
 
 #### 4.3.2 Creating an Email Message from a Template
 

@@ -94,7 +94,7 @@ Configure the path to the *chrome.exe* executable in the **CustomChromePath** co
 #### 3.2 Running on the Mendix Cloud
 
 To allow the module to send and receive document generation requests on your Mendix Cloud environments, you need to perform the following steps:
-1. [Enable the  DocGen request handler](#enable-docgen).
+1. [Enable the DocGen request handler](#enable-docgen).
 2. [Register your app](#register-app).
 
 ##### 3.2.1 Enabling the DocGen Request Handler {#enable-docgen}
@@ -218,10 +218,10 @@ If you encounter the message "Application URL does not match any of the environm
 If you encounter any of the following error messages, the cloud service was unable to reach your app:
 
 - "Domain verification failed, unable to reach app"
-- "Domain verification failed, unable to reach verification endpoint "
+- "Domain verification failed, unable to reach verification endpoint"
 - "Domain verification failed, verification endpoint inactive"
 
-Verify that you enabled the `ASu_DocumentGeneration_Initialize` after startup microflow and also allowed access to the DocGen request handler. For more information, see [Enabling the DocGen Request Handler](#enable-docgen)
+Verify that you enabled the `ASu_DocumentGeneration_Initialize` after startup microflow and also allowed access to the DocGen request handler. For more information, see [Enabling the DocGen Request Handler](#enable-docgen).
 
 ##### 5.1.5 Invalid Token
 
@@ -242,15 +242,15 @@ Verify that your app was not restarted by someone else during the registration p
 In general, we recommend you to perform the following steps in case of any issues during runtime:
 
 1. Temporarily set the log level of `DocumentGeneration` log node to TRACE. This should give more insight at what stage the action fails.
-2. Temporarily add the page microflow that is configured in the action to the project navigation, or make it accessible via a button. This can help to verify that the page itself loads correctly, and can for example outline misconfiguration of entity access, widgets, etc. Make sure that you access the page with the same user you provided to the `Generate as user` parameter in the action.
+2. Temporarily add the page microflow that is configured in the action to the app navigation, or make it accessible via a button. This can help to verify that the page itself loads correctly, and can for example outline misconfiguration of entity access, widgets, etc. Make sure that you access the page with the same user you provided to the `Generate as user` parameter in the action.
 
 ##### 5.2.1 Rendering/Styling Issues
 
-In case of issues regarding styling, we recommend you to temporarily add the page microflow to your project navigation (See step 2 in the [Module Usage and Runtime Issues](#module-usage-runtime-issues)). Open the page using Chrome and verify if the print version of the page matches the expected page. You can do this as follows:
+In case of issues regarding styling, we recommend you to temporarily add the page microflow to your app navigation (See step 2 in the [Module Usage and Runtime Issues](#module-usage-runtime-issues) section). Open the page using Chrome and verify if the print version of the page matches the expected page. You can do this as follows:
 
-* Enable print media type emulation, see [Emulate CSS media type (Enable print preview)t](https://developer.chrome.com/docs/devtools/rendering/emulate-css/#emulate-css-media-type-enable-print-preview) in  *Chrome Developers Documentation*. This is the preferred option, as this allows you to inspect the page + styling,
+* Enable print media type emulation, see [Emulate CSS Media Type (Enable Print Preview)](https://developer.chrome.com/docs/devtools/rendering/emulate-css/#emulate-css-media-type-enable-print-preview) in *Chrome Developers Documentation*. This is the preferred option, as this allows you to inspect the page and styling,
 
-* Alternatively, right-click the page and select **Print**.
+* Alternatively, you can right-click the page and select **Print**.
 
 ##### 5.2.2 Local Service Errors
 
@@ -267,6 +267,6 @@ We recommend you to temporarily set the log level of `DocumentGeneration` log no
 
 If you encounter the message "Failed to load page: TimeoutError: waiting for selector `#content .document-content` failed: timeout 30000ms exceeded" in your runtime logs, this means that a timeout occurred while the browser was waiting for the configured page to finish loading. This could be caused by the following reasons:
 
-- Loading the page failed or took too much time. When this occurs, verify that the page loads successfully and does not trigger any client errors by temporarily adding the page to for example the project navigation.
+- Loading the page failed or took too much time. When this occurs, verify that the page loads successfully and does not trigger any client errors by temporarily adding the page to for example the app navigation.
 - The required `DocumentLayout` or `document-content` class is not used on the page you try to export.
 - The configured service user does not have the applicable access rights to execute the page microflow. In this case, there should be a warning in the logs mentioning User `<username>` attempted to execute the microflow with action name `<page microflow>`, but does not have the required permissions.

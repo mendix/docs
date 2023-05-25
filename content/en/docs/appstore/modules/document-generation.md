@@ -65,15 +65,17 @@ The document generation functionality is under active development. While we cann
 
 ## 2 Installation {#installation}
 
-1. Follow the instructions in [How to Use Marketplace Content in Studio Pro](/appstore/general/app-store-content/) to import the Documentation Generation module into your app.
-2. In the **App Explorer**, double-click **Settings**, then go to the **Runtime** tab, and add the **ASu_DocumentGeneration_Initialize** microflow to run after startup. If there is already an after startup microflow, add the **ASu_DocumentGeneration_Initialize** microflow as an action in the existing microflow.
-3. In the **App Explorer**, double-click **Security**, and then set the **Security level** to **Prototype/demo** or **Production**.
-4. In the **App Explorer**, double-click **Security** again, then go to the **User roles** tab, and add the module role **User** from the **DocumentGeneration** module to all app roles that should be able to generate a document.
-6. To clean up the token, enable the scheduled event **SE_DocumentRequest_Cleanup** to automatically remove expired **Document Request** objects after a configured offset in days. The offset is configured using the constant **DocumentGeneration.RequestCleanupOffsetInDays** (the default value is 7 days). The scheduled event runs daily at 03:00 UTC.
+Follow the instructions in [How to Use Marketplace Content in Studio Pro](/appstore/general/app-store-content/) to import the Documentation Generation module into your app.
 
 ## 3 Configuration
 
-#### 3.1 Running locally
+1. In the **App Explorer**, double-click **Settings**, then go to the **Runtime** tab, and add the **ASu_DocumentGeneration_Initialize** microflow to run after startup. If there is already an after startup microflow, add the **ASu_DocumentGeneration_Initialize** microflow as an action in the existing microflow.
+2. In the **App Explorer**, double-click **Security**, and then set the **Security level** to **Prototype/demo** or **Production**.
+3. In the **App Explorer**, double-click **Security** again, then go to the **User roles** tab, and add the module role **User** from the **DocumentGeneration** module to all app roles that should be able to generate a document.
+4. To clean up the token, enable the scheduled event **SE_DocumentRequest_Cleanup** to automatically remove expired **Document Request** objects after a configured offset in days. The offset is configured using the constant **DocumentGeneration.RequestCleanupOffsetInDays** (the default value is 7 days). The scheduled event runs daily at 03:00 UTC.
+5. Depending on where you run the module, continue to perform the procedure in the [Running Locally](#run-locally) section or in the [Running on the Mendix Cloud](run-mendix-cloud) section.
+
+#### 3.1 Running Locally {#run-locally}
 
 You need to have Chrome or Chromium installed on your local machine.
 
@@ -91,11 +93,13 @@ Download the *chrome-win.zip* package and extract the archive to a location of y
 
 Configure the path to the *chrome.exe* executable in the **CustomChromePath** constant in the **_UseMe** > **Configuration** folder.
 
-#### 3.2 Running on the Mendix Cloud
+#### 3.2 Running on the Mendix Cloud {#run-on-mendix-cloud}
 
-To allow the module to send and receive document generation requests on your Mendix Cloud environments, you need to perform the following steps:
-1. [Enable the DocGen request handler](#enable-docgen).
-2. [Register your app](#register-app).
+To allow the module to send and receive document generation requests on your Mendix Cloud environments, you need to perform the following procedures:
+1. Enable the DocGen request handler.
+2. Register your app.
+
+The steps for each procedure are described in the sections below. 
 
 ##### 3.2.1 Enabling the DocGen Request Handler {#enable-docgen}
 
@@ -118,6 +122,8 @@ To allow the module to send and receive document generation requests on your Men
         - From the **New Restriction Type** drop-down list, select *Allow all access*.
     6. Click **Save**. The **/docgen/** path is added to the list.
     7. Restart your application for the new request handler to take effect.
+
+Now you can continue to [register your app](#register-app).
 
 ##### 3.2.2 Registering Your App {#register-app}
 
@@ -198,42 +204,54 @@ We recommend to try to log in as the service user at least once, to verify if th
 
 ##### 5.1.1 Invalid Developer Credentials
 
-If you encounter the message "Invalid developer credentials", this means that the developer information as provided in the **Email** and **API key** fields is incorrect. Verify that the provided email address in the **Email** field matches the username in your Mendix developer profile, and also that the API key that is being used is correct and still active.
+If you encounter the message "Invalid developer credentials",  then the developer information as provided in the **Email** and **API key** fields is incorrect. 
+
+Verify that the provided email address in the **Email** field matches the username in your Mendix developer profile, and also that the API key that is being used is correct and still active.
 
 ##### 5.1.2 Invalid App
 
-If you encounter any of the following error messages, this means that the provided App ID is either incorrect or that the developer (based on the **Email** and **API key** fields) does not have access to this app:
+If you encounter any of the following error messages:
 
 - "Invalid app"
 - "App not found for the given user"
+
+Then the provided App ID is either incorrect or that the developer (based on the **Email** and **API key** fields) does not have access to this app
 
 Verify that the **App ID** field is correct, and also that the developer account corresponding to the details entered in the **Email** and **API key** fields has access to the given app.
 
 ##### 5.1.3 Invalid Application URL
 
-If you encounter the message "Application URL does not match any of the environment URLs", this means that the app corresponding to the **App ID** field does not contain any environment that matches the URL given in the **Application URL** field. Verify that the **App ID** and **Application URL** fields are correct.
+If you encounter the message "Application URL does not match any of the environment URLs", then the app corresponding to the **App ID** field does not contain any environment that matches the URL given in the **Application URL** field. 
+
+Verify that the **App ID** and **Application URL** fields are correct.
 
 ##### 5.1.4 Unable to Reach App
 
-If you encounter any of the following error messages, the cloud service was unable to reach your app:
+If you encounter any of the following error messages:
 
 - "Domain verification failed, unable to reach app"
 - "Domain verification failed, unable to reach verification endpoint"
 - "Domain verification failed, verification endpoint inactive"
 
+Then the cloud service was unable to reach your app.
+
 Verify that you enabled the `ASu_DocumentGeneration_Initialize` after startup microflow and also allowed access to the DocGen request handler. For more information, see [Enabling the DocGen Request Handler](#enable-docgen).
 
 ##### 5.1.5 Invalid Token
 
-If you encounter the message "Domain verification failed, invalid token", this means that the cloud service was able to reach your app, but could not verify that this app is currently trying to register. Verify that the application URL matches the current environment.
+If you encounter the message "Domain verification failed, invalid token", then the cloud service was able to reach your app, but could not verify that this app is currently trying to register.
+
+Verify that the application URL matches the current environment.
 
 ##### 5.1.6 Other Errors
 
-If you encounter any of the following error messages, an unexpected error occured:
+If you encounter any of the following error messages:
 
 - "Project verification failed"
 - "Domain verification failed, invalid response from verification endpoint"
 - "Domain verification failed for unknown reason"
+
+Then an unexpected error occured.
 
 Verify that your app was not restarted by someone else during the registration process. If not, submit a ticket in the Mendix Support Portal.
 
@@ -241,7 +259,7 @@ Verify that your app was not restarted by someone else during the registration p
 
 In general, we recommend you to perform the following steps in case of any issues during runtime:
 
-1. Temporarily set the log level of `DocumentGeneration` log node to TRACE. This should give more insight at what stage the action fails.
+1. Temporarily set the log level of `DocumentGeneration` log node to [trace](/howto/monitoring-troubleshooting/log-levels/#level). This should give more insight at what stage the action fails.
 2. Temporarily add the page microflow that is configured in the action to the app navigation, or make it accessible via a button. This can help to verify that the page itself loads correctly, and can for example outline misconfiguration of entity access, widgets, etc. Make sure that you access the page with the same user you provided to the `Generate as user` parameter in the action.
 
 ##### 5.2.1 Rendering/Styling Issues
@@ -261,7 +279,7 @@ com.mendix.modules.microflowengine.MicroflowException: com.mendix.systemwideinte
 	at DocumentGenerationTest.ACT_TestDocument_WrongLayout (JavaAction : 'Generate PDF from page')
 ```
 
-We recommend you to temporarily set the log level of `DocumentGeneration` log node to TRACE. This should give more insight at what stage the action fails.
+We recommend you to temporarily set the log level of `DocumentGeneration` log node to [trace](/howto/monitoring-troubleshooting/log-levels/#level). This should give more insight at what stage the action fails.
 
 ##### 5.2.3 Timeout Errors
 
@@ -269,4 +287,4 @@ If you encounter the message "Failed to load page: TimeoutError: waiting for sel
 
 - Loading the page failed or took too much time. When this occurs, verify that the page loads successfully and does not trigger any client errors by temporarily adding the page to for example the app navigation.
 - The required `DocumentLayout` or `document-content` class is not used on the page you try to export.
-- The configured service user does not have the applicable access rights to execute the page microflow. In this case, there should be a warning in the logs mentioning User `<username>` attempted to execute the microflow with action name `<page microflow>`, but does not have the required permissions.
+- The configured service user does not have the applicable access rights to run the page microflow. In this case, there should be a warning in the logs mentioning User `<username>` attempted to run the microflow with action name `<page microflow>`, but does not have the required permissions.

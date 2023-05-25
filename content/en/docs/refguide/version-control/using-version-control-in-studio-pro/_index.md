@@ -174,7 +174,7 @@ There are two different sorts of conflict:
 
 Two changes in the same *document* that are really close to each other can cause a document conflict. For example, two people both change the properties of the same element on the page. The document will be marked as conflicted in the **Changes** pane. Conflicts have to be resolved before you can commit again.
 
-For more information on resolving document conflicts see [New Merge Algorithm with Fine-Grained Conflict Resolution](/refguide/new-merge-algorithm/) and [Changes Pane](/refguide/changes-pane/).
+For more information on resolving document conflicts see [Merge Algorithm with Fine-Grained Conflict Resolution](/refguide/merge-algorithm/) and [Changes Pane](/refguide/changes-pane/).
 
 ### 6.2 Resolving an App Conflict
 

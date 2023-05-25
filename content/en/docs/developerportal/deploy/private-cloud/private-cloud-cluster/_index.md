@@ -741,7 +741,7 @@ To use this plan, [upgrade](/developerportal/deploy/private-cloud-upgrade-guide/
 **Google Cloud Storage bucket** will connect to an existing Google cloud bucket. You need to create the bucket, get the credentials from the service account, and fill in all the details into the StoragePlan. You will need to provide all the information about your Google cloud storage such as plan name, endpoint, access key, and secret key.
 
 {{% alert color="info" %}}
-Please note that the bucket for the Google cloud needs to be created manually. Mx4PC will not create the Google cloud bucket. The format of the endpoint should be *https://storage.googleapis.com/<bucket-name>*. Keep in mind that the all the apps will be created in a separate folder in the bucket.
+Please note that the bucket for the Google cloud needs to be created manually. Mendix for Private Cloud will not create the Google cloud bucket. The format of the endpoint should be *https://storage.googleapis.com/<bucket-name>*. Keep in mind that the all the apps will be created in a separate folder in the bucket.
 {{% /alert %}}
 
 **Ephemeral** will enable you to quickly set up your environment and deploy your app, but any data objects you store will be lost when you restart your environment.

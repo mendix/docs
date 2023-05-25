@@ -82,7 +82,7 @@ The settings below influence the behavior of the log files. These settings can o
 | <a id="MaxLogFileSize" href="#MaxLogFileSize">MaxLogFileSize</a> | The maximum size per log file. When the log file reaches this maximum size, the log file will be backed up and a new empty log file will be used. | 2097152 (2 MB) |
 | <a id="MaxLogFileCount" href="#MaxLogFileCount">MaxLogFileCount</a> | The maximum count of log files preserved (actual file plus back-up files). When the maximum count is reached, the oldest backup file will be removed. | 10 |
 
-## 4 Database Settings
+## 4 Database Settings {#database-settings}
 
 ### 4.1 Common Settings
 

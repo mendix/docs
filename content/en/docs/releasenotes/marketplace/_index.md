@@ -22,6 +22,12 @@ These release notes cover changes made to the [Mendix Marketplace](/appstore/).
 #### Improvements
 
 * MPK files are now uploaded asynchronously in the onboarding flow, which means that you can continue to go through the onboarding wizard while the upload is in progress.
+* We aligned the the Marketplace UI with the rest of the Mendix Platform.
+
+#### Fixes
+
+* We fixed an issue with the notifications that are sent when a component update becomes available.
+* If a user's email address contained an upper-case letter, they did not have access to private components in user groups. This issue has been fixed.
 
 ### April 20th, 2023
 

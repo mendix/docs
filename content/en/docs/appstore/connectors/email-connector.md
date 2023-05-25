@@ -9,7 +9,7 @@ tags: ["marketplace", "marketplace component", "imap", "pop3", "email", "platfor
 
 ## 1 Introduction
 
-The [Email Connector](https://marketplace.mendix.com/link/component/120739) allows you to send and receive emails on your own email server, and includes features like sending signed and encrypted emails.
+The [Email](https://marketplace.mendix.com/link/component/120739) Connector allows you to send and receive emails on your own email server, and includes features like sending signed and encrypted emails.
 
 ### 1.1 Features
 
@@ -21,7 +21,7 @@ The Email Connector includes the following features:
 * Digital signatures and encryption
 * Email templates
 
-The Email connector supports the following protocols:
+The Email Connector supports the following protocols:
 
 * POP3 and POP3S
 * IMAP and IMAPS
@@ -33,7 +33,7 @@ The Email connector supports the following protocols:
 Ensure that you follow these prerequisites. Missing a step might lead to errors.
 {{% /alert %}}
 
-Before you use the Email connector in your app, do the following:
+Before you use the Email Connector in your app, do the following:
 
 1. Download and [configure](/appstore/modules/model-reflection/#configuration) the latest version of [Mx Model Reflection](https://marketplace.mendix.com/link/component/69) module. If you have the module already, ensure that it is up-to-date.
 2. Download and [configure](/appstore/modules/encryption/#configuration) the latest version of the [Encryption](https://marketplace.mendix.com/link/component/1011) module. If you have the module already, ensure that it is up-to-date.
@@ -43,7 +43,7 @@ Before you use the Email connector in your app, do the following:
 
 ### 1.2.1 Migrating from Another Module
 
-If you are migrating to the Email connector from another email module, we recommend that you test your settings in a new app first.
+If you are migrating to the Email Connector from another email module, we recommend that you test your settings in a new app first.
 
 We recommend using the community-supported [Email Connector migration utility](https://marketplace.mendix.com/link/component/205008) to migrate data from the [Email Module with Templates](/appstore/modules/email-with-templates/).
 
@@ -62,7 +62,7 @@ If you already have these widgets in your app, and they are not up-to-date, you 
 After you install the [Email Connector](https://marketplace.mendix.com/link/component/120739), configure the following in Studio Pro:
 
 1. Provide a value for the **EncryptionKey** constant provided by the **Encryption** module.
-2. Launch the UI by using the **ACT_EmailAccount_LaunchEmailConnectorOverview** Microflow in the **USEME/Microflows** folder.
+2. Launch the UI by using the **ACT_EmailAccount_LaunchEmailConnectorOverview** microflow in the **USEME/Microflows** folder.
 
 ### 2.1 Module Security and Roles
 
@@ -102,7 +102,7 @@ To manually configure the account, you have to enter **protocol**, **server host
 
 You can set up the following additional account settings:
 
-* **Subscribe to incoming emails** – user can select this option to get notification about the new incoming emails; for modeling use `SubscribeToIncomingEmail` Java action. Read more about this in the section below.
+* **Subscribe to incoming emails** – user can select this option to get a notification about the new incoming emails; for modeling use `SubscribeToIncomingEmail` Java action. Read more about this in the section below.
 
 {{% alert color="warning" %}}
 This is only supported for IMAP protocols, and some servers may not support it at all.
@@ -159,9 +159,11 @@ The input parameters for receiving email are the following:
 
 When the module is running, you can create templates to use for a specific email account.
 
-In Studio Pro, you can configure this functionality with the **SNIP_EmailTemplate_Overview** snippet.
+#### 4.3.1 Creating an Email Template {#create-template)
 
-#### 4.3.1 Creating an Email Message from a Template
+You can create and configure email templates with the **SNIP_EmailTemplate_Overview** snippet, located in **Private** > **Snippets**.
+
+#### 4.3.2 Creating an Email Message from a Template
 
 When modeling your app in Studio Pro, use the  **CreateEmailFromTemplate** Java action to create a draft message that you can preview and modify. Once your message is ready, you can send it with the **SendEmail** action.
 
@@ -173,7 +175,7 @@ The input parameters are the following:
 
 Refer to sample microflow **Sample_ACT_CreateEmailFromTemplateAndThenSend**. This Microflow demonstrates how to use **CreateEmailFromTemplate** Java action and set attachments to EmailMessage in addition to attachments provided by EmailTemplate.
 
-#### 4.3.2 Sending an Email with a Template
+#### 4.3.3 Sending an Email with a Template
 
 When modeling your app in Studio Pro, use the  **SendEmailWithTemplate** Java action to send an email from a template. The input parameters are the following:
 

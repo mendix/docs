@@ -171,9 +171,9 @@ As always, make sure you look at the retrieves and commits performed in your loo
 
 ## 6 Using MxAssist Best Practice Bot
 
-[MxAssist Best Practice Bot](/refguide/mx-assist-performance-bot/) can help you find potential improvements to your app in general, including solving performance issues. It can be accessed via **View** > **Best Practice Bot**.
+[MxAssist Best Practice Bot](/refguide/mx-assist-performance-bot/) can help you find potential improvements to your app in general, such as performance, security, naming conventions, and so on. It can be accessed via **View** > **Best Practice Bot**.
 
-For more information on performance best practices, see the [Performance Best Practices](/refguide/performance-best-practices/#performance-best-practices) section in *Recommendations from MxAssist Best Practice Bot*.
+For more information on best practices, see [Recommendations from MxAssist Best Practice Bot](/refguide/performance-best-practices/).
 
 ## 7 Read More
 

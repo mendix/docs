@@ -3,12 +3,12 @@ title: "MxAssist Best Practice Bot"
 url: /refguide/mx-assist-performance-bot/
 weight: 30
 description: "Describes MxAssist Best Practice Bot in Mendix Studio Pro."
-tags: ["studio pro", "best practice bot", "mendix assist", "AI", "assist", "mx assist"]
+tags: ["studio pro", "best practice bot", "mendix assist", "AI", "mx assist", "Mendix best practice", "anti patterns"]
 ---
 
 ## 1 Introduction 
 
-MxAssist Best Practice Bot is an intelligent virtual co-developer bot that helps you improve your app by inspecting your app model against Mendix development best practice in Mendix Studio Pro. It detects anti-patterns during the design and development, pinpoints you to these anti-patterns, suggests you how to resolve it, and in many cases can automatically fix these issues. 
+MxAssist Best Practice Bot is an intelligent virtual co-developer bot that helps you improve your app by inspecting your app model against Mendix development best practice in Mendix Studio Pro. It detects anti-patterns during the design and development, pinpoints you to these anti-patterns, suggests you how to resolve it, and in some cases can automatically fix these issues. 
 
 MxAssist Best Practice Bot is built using statistical analysis of thousands of anonymized Mendix app to learn common anti-patterns as well as using Mendix Expert Services best practices in the development of microflows, domain models, pages, security, and so on.
 
@@ -18,25 +18,25 @@ It consists of a three-level assistance:
 2. **Recommendation** – The bot explains the identified issue, the potential impact, and how to fix it. There is also a detailed best practice guide with a dedicated step-by-step guideline of how to fix the issue.
 3. **Auto-fixing** – The bot can automatically implement the best practice and fix the issue.
 
-## 2 MxAssist Best Practice Bot Pane
+## 2 Best Practice Bot Pane
 
-To access settings of MxAssist Best Practice Bot, open **Edit** > **Preferences** > the **General** tab > the **MxAssist** > **Best Practice Bot** tab. For more information, see [Preferences](/refguide/preferences-dialog/).
+To access settings of Best Practice Bot, open **Edit** > **Preferences** > the **General** tab > the **MxAssist** > **Best Practice Bot** tab. For more information, see [Preferences](/refguide/preferences-dialog/).
 
-MxAssist Best Practice Bot is enabled by default and is designed as a pane. To access the **MxAssist Best Practice Bot** pane, click **View** > **Best Practice Bot.**
+Best Practice Bot is enabled by default and is designed as a pane. To access the **Best Practice Bot** pane, click **View** > **Best Practice Bot**.
 
-The pane gives you information on each anti-pattern and contains MxAssist Best Practice Bot settings and configurations:
+The pane gives you information on each anti-pattern and contains Best Practice Bot settings and configurations:
 
 {{< figure src="/attachments/refguide/modeling/mx-assist-studio-pro/mx-assist-performance-bot/best-practice-bot-pane.png" alt="Best Practice Bot Pane" >}}
 
 ### 2.1 Options and Configuration {#options}
 
-At the top of the **MxAssist Best Practice Bot** pane you can see the following options: 
+At the top of the **Best Practice Bot** pane you can see the following options: 
 
-* **Inspect now** – Inspects your app model on the anti-patterns and issues in your app. 
-* **Limit to current tab** – Limits the messages displayed in the pane to the current document.
-* **Limit to uncommitted** – Limits the messages displayed in the pane to documents that have not been committed to version control.
+* **Inspect now** – Inspects your app model on the development anti-patterns and issues in your app. 
+* **Limit to current tab** – Filters to only show detected anti-patterns in the current tab (document).
+* **Limit to uncommitted** – Filters to only show detected anti-patterns of the changes that have not been committed to version control.
 * **Export** – Exports the recommendations to a CSV file. Suppressed recommendations are excluded.
-* **Configuration** – Defines the modules and documents that the MxAssist Best Practice Bot will analyze. Click the **Configuration** button to open the **Best Practice Bot Configuration** dialog box that contains the **App Model** and **Best Practice** tabs.
+* **Configuration** – Defines the modules and documents that the Best Practice Bot will analyze. Click the **Configuration** button to open the **Best Practice Bot Configuration** dialog box that contains the **App Model** and **Best Practice** tabs.
 
     * The **App Model** tab lists all relevant documents in your app. You can choose which specific modules or documents to inspect or leave out. 
 
@@ -53,7 +53,7 @@ You can use both app model and best practice configuration together.
 Each anti-pattern line in the pane provides you with the following information: 
 
 * **Icon** – indicates if the anti-pattern can be automatically fixed; if the icon has the “A” letter, the issue can be auto-fixed
-* **Category** - Indicates the type of issue identified by the bot, for example, **Performance** issues
+* **Category** - Indicates the type of development anti-pattern identified by the bot, for example, **Performance** issues
 * **Code** – a unique code that is specific to the anti-pattern type 
 * **Blue circle** – indicates a new detected anti-pattern
 * **Message** – description/explanation of the anti-pattern 
@@ -79,7 +79,7 @@ The following actions are available in the drop-down menu:
 
 The first level of assistance is **detection** that includes inspecting the app model, identifying anti-patterns, and pinpointing you to the document causing the issue. 
 
-To inspect your app model, click **Inspect now** in the **MxAssist Best Practice Bot** pane. 
+To inspect your app model, click **Inspect now** in the **Best Practice Bot** pane. 
 
 {{% alert color="info" %}}
 The **Inspect now** option will be disabled if there are consistency errors in the app. In this case, you need to resolve the consistency errors first. 
@@ -121,9 +121,9 @@ To auto-fix the issue, follow the steps below:
 
 After the issue is auto-fixed, a pop-up window listing the changes appears. You can click **Show the fix** to view the changed document and element. 
 
-## 4 MxAssist Best Practice Bot from the Command Line
+## 4 Best Practice Bot from the Command Line
 
-MxAssist Best Practice Bot may also be executed from the command line, via the [mx Command-Line Tool](/refguide/mx-command-line-tool/#check).
+Best Practice Bot may also be executed from the command line, via the [mx Command-Line Tool](/refguide/mx-command-line-tool/#check).
 
 ## 5 Read More
 

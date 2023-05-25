@@ -1,5 +1,6 @@
 ---
 title: "Recommendations from MxAssist Best Practice Bot"
+linktitle: "Recommendations from Best Practice Bot"
 url: /refguide/performance-best-practices/
 description: "Describes Mendix best practices from MxAssist Best Practice Bot."
 tags: ["studio pro", "performance", "best practice", "mx assist", "mendix assist"]

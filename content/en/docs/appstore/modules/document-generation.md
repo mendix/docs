@@ -194,7 +194,7 @@ We recommend to try to log in as the service user at least once, to verify if th
 
 ## 5 Troubleshooting
 
-#### 5.1 App Registration
+#### 5.1 App Registration Issues
 
 ##### 5.1.1 Invalid Developer Credentials
 
@@ -227,7 +227,7 @@ Verify that you enabled the `ASu_DocumentGeneration_Initialize` after startup mi
 
 If you encounter the message "Domain verification failed, invalid token", this means that the cloud service was able to reach your app, but could not verify that this app is currently trying to register. Verify that the application URL matches the current environment.
 
-##### 5.1.6 Other
+##### 5.1.6 Other Errors
 
 If you encounter any of the following error messages, an unexpected error occured:
 
@@ -244,7 +244,7 @@ In general, we recommend you to perform the following steps in case of any issue
 1. Temporarily set the log level of `DocumentGeneration` log node to TRACE. This should give more insight at what stage the action fails.
 2. Temporarily add the page microflow that is configured in the action to the project navigation, or make it accessible via a button. This can help to verify that the page itself loads correctly, and can for example outline misconfiguration of entity access, widgets, etc. Make sure that you access the page with the same user you provided to the `Generate as user` parameter in the action.
 
-##### 5.2.1 Rendering/Styling
+##### 5.2.1 Rendering/Styling Issues
 
 In case of issues regarding styling, we recommend you to temporarily add the page microflow to your project navigation (See step 2 in the [Module Usage and Runtime Issues](#module-usage-runtime-issues)). Open the page using Chrome and verify if the print version of the page matches the expected page. You can do this as follows:
 

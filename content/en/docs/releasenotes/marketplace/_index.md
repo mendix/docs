@@ -17,12 +17,12 @@ These release notes cover changes made to the [Mendix Marketplace](/appstore/).
 
 #### Improvements
 
-* Aligned the UI of the Marketplace with the rest of the platform.
+* We aligned the the Marketplace UI with the rest of the Mendix Platform.
 
 #### Fixes
 
-* We have fixed an issue with the notifications when a new update of a component becomes available.
-* If an email address contained uppercase letter, guests did not have access to the private components that are added to the user groups. This issue has been fixed.
+* We fixed an issue with the notifications that are sent when a component update becomes available.
+* If a user's email address contained an upper-case letter, they did not have access to private components in user groups. This issue has been fixed.
 
 ### April 20th, 2023
 

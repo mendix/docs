@@ -70,7 +70,7 @@ There are a number of ways a data view can end up without source data. For insta
 
 Default: *empty*
 
-### 3.1.2 Data Source Section {#data-source}
+#### 3.1.2 Data Source Section {#data-source}
 
 The data source determines which object will be shown in the data view. For more information on data sources, see [Data Sources](/refguide/data-sources/).
 
@@ -83,9 +83,9 @@ The data view supports the following types of data source: context, microflow, n
 | Nanoflow         | A data source that runs a selected nanoflow and displays a return value. For more  information on the nanoflow source, see [Nanoflow Source](/refguide/nanoflow-source/). |
 | Listen to widget | A data source that allows a data view to display detailed information on an object in the list widget on the same page. For more information on listen to widget source, see [Listen To Widget Source](/refguide/microflow-source/). |
 
-### 3.4 Editability Section {#editability}
+#### 3.1.3 Editability Section {#editability}
 
-#### 3.4.1 Editable {#editable}
+##### 3.1.3.1 Editable {#editable}
 
 The editable property indicates whether the data view as a whole is editable or not.
 
@@ -95,7 +95,7 @@ The editable property indicates whether the data view as a whole is editable or 
 | Inherited from snippet call | Set to **Yes** or **No** by the containing data container of the snippet call (default value for data views inside a snippet). |
 | No      | The data view is not editable: no widget inside the data view will be editable.|
 
-#### 3.4.2 Read-Only Style
+##### 3.1.3.2 Read-Only Style
 
 This property determines how input elements are rendered if they are read-only. 
 
@@ -106,21 +106,21 @@ This property determines how input elements are rendered if they are read-only.
 
 {{% alert color="info" %}}Read-only style is not supported on native mobile pages.{{% /alert %}}
 
-### 3.6 Visibility Section {#visibility}
+#### 3.1.4 Visibility Section {#visibility}
 
 {{% snippet file="/static/_includes/refguide/visibility-section-link.md" %}}
 
-### 3.1 Common Section {#common}
+#### 3.1.5 Common Section {#common}
 
 {{% snippet file="/static/_includes/refguide/common-section-link.md" %}}
 
 ### 3.2 Styling
 
-#### 3.2.1 Design Properties Section{#design-properties}
+#### 3.2.1 Design Properties Section {#design-properties}
 
 {{% snippet file="/static/_includes/refguide/design-section-link.md" %}} 
 
-#### 3.2.2 Common {#common-styling}
+#### 3.2.2 Common Section {#common-styling}
 
 [PERHAPS SHOULD JUST LINK/SNIPPET TO [Properties Common in the Page Editor](/refguide/common-widget-properties/)]
 

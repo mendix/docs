@@ -42,6 +42,12 @@ Next, configure the **IncludeOnlyChangedAttributes** constant for whether you wa
 
 Finally, add the **LogOverviewSnippet** snippet to a page in a custom module.
 
+### 2.3 Limitations
+
+As both configuration options require changing the entity, it is not possible to use AuditTrail directly with entities in the **System** module. It is still possible to add audit to specializations of such entities using the associations and events option.
+
+While it is possible to add required associations and event handlers to marketplace modules, such model changes are overwritten when marketplace modules are updated. Therefore, in that scenario it is recommended to use specializations.
+
 ## 3 Changing Audit Behavior
 
 Changing the audit behavior is easily done by altering the values of the constants below (for module version 7.6.0 and above; please note that if no value is set, the default is used) or the default values of the **Configuration** entity in the module's domain model (for module version 7.5.0 and below):

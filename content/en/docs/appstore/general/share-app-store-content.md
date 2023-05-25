@@ -274,15 +274,15 @@ Mendix does the following:
 * Checks the licenses used in the uploaded *.mpk* files using the [Fossology](https://fossology.osuosl.org/repo/) tool
     * There should be no use of GPL, LGPL, or MPL licenses
     * For more details, see the [Providing License Details](/appstore/general/share-app-store-content/#license) section above
-* Checks the *.mpk* file for malware using the [VirusTotal](https://www.virustotal.com/gui/home/upload) tool
+* Checks the *.mpk* files for malware using the [VirusTotal](https://www.virustotal.com/gui/home/upload) tool
 * Checks for third-party vulnerabilities using the [Snyk](https://snyk.io/) tool
-* If the component is a widget, module, connector, or solution template, checks that it can be used without errors in a specific Studio Pro version
+* If the component is a widget, module, connector, or solution template, Mendix checks that it can be used without errors in a specific Studio Pro version
 * Checks that the documentation mentions all the details per the template (for example, dependencies, configuration, and how to use the component)
 * Checks the grammar, alignment, and spelling for the component's description and documentation
 * Checks that the logo is related to the component's functionality
-* Checks that the screenshots are related to the configuration required to use your component in the end-user's app
+* Checks that the screenshots are related to the configuration required to use the component in the end-user's app
 
-It may sometimes take a few iterations for a component to be approved, depending on the issues identified. To avoid a high number of necessary iterations, make sure you have followed the [content development guidelines](#guidelines) and have performed the checks above before you submit your component for approval.
+It may sometimes take a few iterations for a component to be approved, depending on the issues identified. To avoid a high number of necessary iterations, make sure you have followed the [content development guidelines](#guidelines) and have performed the checks above before you submit a component for approval.
 
 {{% alert color="info" %}}
 Review and approval by Mendix is required only for the first version of a publicly-listed component. Subsequent versions of a public component do not need review or approval by Mendix.

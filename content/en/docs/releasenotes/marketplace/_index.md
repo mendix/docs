@@ -15,8 +15,13 @@ These release notes cover changes made to the [Mendix Marketplace](/appstore/).
 
 ### May 25th, 2023
 
+#### New Features
+
+* You can now reassign a draft to yourself if you have edit rights for the Marketplace component. The draft will be unassigned from the previous owner. This allows you to continue working on a Marketplace listing, even when your colleague is out of office.
+
 #### Improvements
 
+* *.mpk* files are now uploaded asynchronously in the flow for adding Marketplace content, which means that you can continue to go through the onboarding wizard while the upload is in progress.
 * We aligned the the Marketplace UI with the rest of the Mendix Platform.
 
 #### Fixes

@@ -161,7 +161,7 @@ When the module is running, you can create templates to use for a specific email
 
 #### 4.3.1 Creating an Email Template {#create-template)
 
-You can create and configure email templates with the **SNIP_EmailTemplate_Overview** snippet, located in **Private** > **Snippets**.
+You can create and configure email templates with the **SNIP_EmailTemplate_Overview** snippet.
 
 #### 4.3.2 Creating an Email Message from a Template
 

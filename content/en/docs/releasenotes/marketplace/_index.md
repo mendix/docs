@@ -17,7 +17,11 @@ These release notes cover changes made to the [Mendix Marketplace](/appstore/).
 
 #### New Features
 
-* We are excited to announce a new feature that allows you to transfer drafts between people within the same company. With this feature, you can now easily collaborate on [Your Mendix Drafts](/appstore/general/app-store-overview/#my-drafts) with your colleagues, even if a colleague is not available to work on a draft that they originally created. You can easily transfer ownership of a draft to yourself as long as you are part of the same company and within the same user group. This allows team members to continue working on the same draft even if someone is on leave.
+* You can now reassign a draft to yourself if you have edit rights to the Marketplace component. The draft will be unassigned from the previous owner. This allows you to continue working on a Marketplace listing, even when your colleague is out of office.
+
+#### Improvements
+
+* MPK files are now uploaded asynchronously in the onboarding flow, which means that you can continue to go through the onboarding wizard while the upload is in progress.
 
 ### April 20th, 2023
 

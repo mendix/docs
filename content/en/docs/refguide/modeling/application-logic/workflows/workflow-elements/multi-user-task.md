@@ -136,7 +136,7 @@ The completion rule is evaluated after each user selects an outcome. Thereforeï¼
 
 Veto completion criteria requires two outcomes, one of which is the veto outcome. If anyone selects the veto outcome, then the multi-user task will be completed with the veto outcome.
 
-For all the non-veto outcomes, if we group them per outcome, then for any outcome to become the final outcome of the task, the number of items for that outcome group should be greater than or equal to the [minimum number of targeted users](#required-input).
+For a multi-user task to complete with the non-veto outcome, all users, as defined in property **Required input**, need to complete their task by selecting the non-veto outcome.
 
 ##### 2.4.2.1 Examples
 

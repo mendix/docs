@@ -117,7 +117,7 @@ Click an item in the sidebar to go to the page for that content:
 * [Company Content](#company-content)
 * [Company Subscriptions](#company-subscriptions)
 * [Company Reviews](#company-reviews)
-* [User Groups](#user-groups)
+* [Content Groups](#content-groups)
 
 ### 4.1 My Drafts {#my-drafts}
 
@@ -158,13 +158,13 @@ Click the context menu to access various options for managing your content:
     * For more information on creating a draft version, see the [Updating Existing Marketplace Content](/appstore/general/share-app-store-content/#updating) section of *How to Share Marketplace Content*
 * **Edit a Version** – click this to edit the component (for details on editing, see the [Adding New Marketplace Content](/appstore/general/share-app-store-content/#adding) section of *How to Share Marketplace Content*)
 * **Unpublish a Version** – click this to remove one version or all versions of the component
-    * If the component is [protected content](#group-content) from a [user group](#user-groups), a [group member](#members) can unpublish any version
-    * If the component is not the protected content of a user group, you can only unpublish a version that you have published yourself
+    * If the component is [protected content](#group-content) from a [content group](#content-groups), a [group member](#members) can unpublish any version
+    * If the component is not the protected content of a content group, you can only unpublish a version that you have published yourself
     * Select **Unpublish All My Versions** to remove all your versions of the component
 
 You may see the **Company only** label on a component, which means it is your company's private Marketplace content (for details on how this is configured, see the [Adding New Marketplace Content](/appstore/general/share-app-store-content/#private-app-store) section of *How to Share Marketplace Content*). This content can be shared with [guests](#guests).
 
-In addition, you may see a label on a component name for the [user group](#user-groups) to which the component is assigned as group [group content](#group-content).
+In addition, you may see a label on a component name for the [content group](#content-groups) to which the component is assigned as group [group content](#group-content).
 
 ### 4.3 My Subscriptions {#my-subscriptions}
 
@@ -277,9 +277,9 @@ In the **Analytics** section, you can gain a visual intepretation of the plan us
 
 This page contains reviews of **Your company's content** as well as **Your company's reviews** that users from your company have written of other content.
 
-### 4.10 Content Groups {#user-groups}
+### 4.10 Content Groups {#content-groups}
 
-The **Content Groups** menu item and page are visible to all users. However, only [Mendix Admins](/developerportal/control-center/#company) can create and delete user groups. Both [Group Admins](#members) and Mendix Admins can manage user group members. 
+The **Content Groups** menu item and page are visible to all users. However, only [Mendix Admins](/developerportal/control-center/#company) can create and delete content groups. Both [Group Admins](#members) and Mendix Admins can manage content group members. 
 
 You can configure content groups for various levels of access to your company content. The available configuration tabs for each content group page are described in the sections below.
 
@@ -295,35 +295,31 @@ This table breaks down the roles and permissions for content groups:
 
 #### 4.10.1 Content Tab {#group-content}
 
-On this tab, you can assign content to this user group that can only be managed by members of this group. To assign a component to a user group, click **Assign Content** and select a company Marketplace component from the dialog box:
+On this tab, you can assign content to this content group that can only be managed by members of this group. To assign a component to a content group, click **Assign Content** and select a company Marketplace component from the dialog box:
 
 {{< figure src="/attachments/appstore/general/app-store-overview/group-content.png" >}}
 
 {{% alert color="info" %}}
-A component can only be assigned to one user group at a time. If a component is already assigned to another user group, it will not appear in this dialog box.
+A component can only be assigned to one content group at a time. If a component is already assigned to another content group, it will not appear in this dialog box.
 {{% /alert %}}
 
 Click the context menu to access various options for managing this content:
 
 {{< figure src="/attachments/appstore/general/app-store-overview/group-content-context.png" >}}
 
-The options in this menu are the same as described for the context menu for the [My Content](#my-content) section above. The **Unassign from Group** button is only available for [Group Admins](#members) and can be used to remove content from the user group.
+The options in this menu are the same as described for the context menu for the [My Content](#my-content) section above. The **Unassign from Group** button is only available for [Group Admins](#members) and can be used to remove content from the content group.
 
 #### 4.10.2 Members Tab {#members}
 
-On this tab, you can enter the email address of a Mendix Platform user from your company and click **Add Member** to add them as a user group member. User group members can manage the [content](#group-content) assigned to the group.
+On this tab, you can enter the email address of a Mendix Platform user from your company and click **Add Member** to add them as a content group member. User group members can manage the [content](#group-content) assigned to the group.
 
 Once a member is added, you can select their permission level: **Group Member** or **Group Admin**.
-
-{{< figure src="/attachments/appstore/general/app-store-overview/members.png" >}}
 
 To remove a member, click **Remove** next to their name.
 
 #### 4.10.3 Guests Tab {#guests}
 
 A guest is a Mendix Platform user from outside your organization who can download the selected private [Content](#group-content) of this group. To add a guest, enter their email address in the box and click **Add Guest**:
-
-{{< figure src="/attachments/appstore/general/app-store-overview/guests.png" >}}
 
 The guest will receive an email notifying them of access to the private content. They can then see all the private Marketplace content shared with them in their [Shared with Me](#shared-with-me) page.
 
@@ -341,7 +337,7 @@ This tab is only accessible to [Group Admins](#members) and [Mendix Admins](/dev
 
 On this tab, you can enter a **Group Name** and a **Group Description**.
 
-To delete a user group, a Group Admin or Mendix Admin can click **Delete Group**.
+To delete a content group, a Group Admin or Mendix Admin can click **Delete Group**.
 
 ## 5 Read More
 

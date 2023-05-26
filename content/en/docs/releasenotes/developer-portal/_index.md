@@ -796,7 +796,7 @@ In Portfolio Management, you can do the following
 
 #### Fixes
 
-* We fixed an issue where newly-added Company Admins did not get access to edit [user groups](/appstore/general/app-store-overview/#user-groups) in the Marketplace.
+* We fixed an issue where newly-added Company Admins did not get access to edit [user groups](/appstore/general/app-store-overview/#content-groups) in the Marketplace.
 
 ## 2020
 

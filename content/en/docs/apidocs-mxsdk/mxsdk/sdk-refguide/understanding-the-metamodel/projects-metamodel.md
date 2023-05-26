@@ -23,7 +23,7 @@ Studio Pro Guide | Model SDK API docs
 
 ### 1.2 Project Documents
 
-Project-level documents describe project security, app settings, app navigation (for the different modes of navigation) and translations of the texts in your app.
+Project-level documents describe app security, app settings, app navigation (for the different modes of navigation) and translations of the texts in your app.
 
 #### 1.2.1 Graphical Overview
 

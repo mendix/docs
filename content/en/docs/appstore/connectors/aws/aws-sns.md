@@ -86,22 +86,34 @@ To subscribe to a topic in your AWS environment and receive email notifications 
 2. Enter a name for your microflow, for example, *ACT_Subscribe_Email*, and then click **OK**.
 3. In the **App Explorer**, in the **AmazonSNSConnector** section, find the **Subscribe** activity.
 4. Drag the **Subscribe** activity onto the microflow you are working on.
-5. Double-click the **Subscribe** activity to configure the required parameters.
+5. Double-click the **Subscribe** activity and configure the **AWS_Region** parameter by doing the following steps:
 
-    For the **Subscribe** activity, you must specify the AWS Region, add your `Credentials` and `SubscribeRequest` object. The `SubscribeRequest` object requires the TopicARN of the topic you want to subscribe to and one `EmailEndpoint` object associated with it, which defines the email address you want to subscribe to the topic with. To get your `Credentials` object, add the **Credentials_GenerateFromConstants** microflow in front of your **Subscribe** activity so that you can pass the `Credentials` object as input parameter of the activity.
-
-    {{< figure src="/attachments/appstore/connectors/aws-sns/sns_subscribe_actions.png" alt="Configuring the Subscribe activity">}}
- 
-6. In the **Edit parameters** section, edit the **AWS_Region** parameter and change **Type** to **Expression**. In the expression builder, type *AWS_Region* and then press **Ctrl+Space**. In the autocomplete dialog, select **AmazonSNSConnector.AWS_Region** , then type . and select your AWS region from the list.
+    1. Click **Edit parameter value**, edit the **AWS_Region** parameter, and change **Type** to **Expression**.
+    2. In the expression builder, type `AWS_Region`, and then press **Ctrl+Space**.
+    3. In the autocomplete dialog, select **AmazonSNSConnector.AWS_Region**, then type *.* and select your AWS region from the list.
 
     {{< figure src="/attachments/appstore/connectors/aws-sns/sns_subscribe_aws_region.png" alt="Selecting the AWS region">}}
 
     For a list of available AWS regions, see [AWS_Region](#aws-region).
 
-7. Click **OK**.
-8. Configure the **Credentials_GenerateFromConstants** microflow.
-9. Open a page that contains a data view to show all the parameters of the `SubscribeResponse`, which is the response of the **Subscribe** activity.
-10. Configure a method to trigger the *ACT_Subscribe_Email* microflow. For example, you can associate the activity with a custom button on a page in your app. For an example of how this can be implemented, see [Creating a Custom Save Button with a Microflow](/refguide/creating-a-custom-save-button/).
+6. In the **App Explorer**, in the **AmazonSNSConnector** > **ConnectionDetails** section, find the **Credentials_GenerateFromConstants** activity.
+7. Drag the **Credentials_GenerateFromConstants** activity onto the microflow you are working on, and position it between the microflow start event and the **Subscribe** activity.
+
+    {{< figure src="/attachments/appstore/connectors/aws-sns/sns_subscribe_actions.png" alt="Configuring the Subscribe activity">}}
+
+8. Double-click the **Credentials_GenerateFromConstants** activity, and then configure the required **AWS_Region** parameter in the same way as described in step 5.
+9. Double-click the **Subscribe** activity and configure the **Credentials** parameter by doing the following steps:
+    1. Click **Edit parameter value**.
+    2. Edit the **Credentials** parameter and let it auto-fill.
+10. In the **Toolbox** pane, search for the **Create Object** activity, drag it onto the microflow area, and position it between the **Credentials_GenerateFromConstants** and the **Subscribe** activity.
+11. Double-click the **Create Object** activity, and then select **AmazonSNSConnector.SubscribeRequest** as the entity.
+    The `SubscribeRequest` object requires the TopicARN of the topic you want to subscribe to and one `EmailEndpoint` object associated with it, which defines the email address you want to subscribe to the topic with.
+12. Click **OK**.
+13. Double-click the **Subscribe** activity and configure the **SubscribeRequest** parameter by doing the following steps:
+    1. Click **Edit parameter value**.
+    2. Edit the **SubscribeRequest** parameter and let it auto-fill.
+14. Open a page that contains a data view to show all the parameters of the `SubscribeResponse`, which is the response of the **Subscribe** activity.
+15. Configure a method to trigger the *ACT_Subscribe_Email* microflow. For example, you can associate the activity with a custom button on a page in your app. For an example of how this can be implemented, see [Creating a Custom Save Button with a Microflow](/refguide/creating-a-custom-save-button/).
  
 #### 3.2.2 Sending Messages to a Topic
 
@@ -114,25 +126,37 @@ To be able to send a message to a topic so that all endpoints subscribed to that
 2. Enter a name for your microflow, for example, *ACT_PublishBatch*, and then click **OK**.
 3. In the **App Explorer**, in the **AmazonSNSConnector** section, find the **PublishBatch** activity.
 4. Drag the **PublishBatch** activity onto the microflow you are working on.
-5. Double-click the **PublishBatch** activity to configure the required parameters.
-For the **PublishBatch** activity, you must specify the AWS Region, add your `Credentials` and `PublishBatchRequest` object. The `PublishBatchRequest` object requires at least one `PublishBatchTopic` object associated with it, which contains the information about the topic you would like to send messages to. This `PublishBatchTopic` must also have a `PublishBatchMessage` object associated with it, which has the details of the message you would like to send. To get your `Credentials` object, add the **Credentials_GenerateFromConstants** microflow in front of your **PublishBatch** activity so that you can pass the `Credentials` object as input parameter of the activity.
+5. Double-click the **PublishBatch** activity y and configure the **AWS_Region** parameter by doing the following steps:
+
+    1. Click **Edit parameter value**, edit the **AWS_Region** parameter, and change **Type** to **Expression**.
+    2. In the expression builder, type `AWS_Region`, and then press **Ctrl+Space**.
+    3. In the autocomplete dialog, select **AmazonSNSConnector.AWS_Region**, then type *.* and select your AWS region from the list.
+
+        {{< figure src="/attachments/appstore/connectors/aws-sns/sns_publishbatch_aws_region.png" alt="Selecting the AWS region">}}
+
+        For a list of available AWS regions, see [AWS_Region](#aws-region).
+
+6. In the **App Explorer**, in the **AmazonSNSConnector** > **ConnectionDetails** section, find the **Credentials_GenerateFromConstants** activity.
+7. Drag the **Credentials_GenerateFromConstants** activity onto the microflow you are working on, and position it between the microflow start event and the **PublishBatch** activity.
 
     {{< figure src="/attachments/appstore/connectors/aws-sns/sns_publishbatch_actions.png" alt="Adding the PublishBatch activity">}}
- 
-6. In the **Edit parameters** section, edit the **AWS_Region** parameter and change **Type** to **Expression**. In the expression builder, type *AWS_Region* and then press **Ctrl+Space**. In the autocomplete dialog, select **AmazonSNSConnector.AWS_Region** , then type . and select your AWS region from the list.
 
-    {{< figure src="/attachments/appstore/connectors/aws-sns/sns_publishbatch_aws_region.png" alt="Selecting the AWS region">}}
+8. Double-click the **Credentials_GenerateFromConstants** activity, and then configure the required **AWS_Region** parameter in the same way as described in step 5.
+9. Double-click the **PublishBatch** activity and configure the **Credentials** parameter by doing the following steps:
+    1. Click **Edit parameter value**.
+    2. Edit the **Credentials** parameter and let it auto-fill.
+10. In the **Toolbox** pane, search for the **Create Object** activity, drag it onto the microflow area, and position it between the **Credentials_GenerateFromConstants** and the **PublishBatch** activity.
+11. Double-click the **Create Object** activity, and then select **AmazonSNSConnector.PublishBatchRequest** as the entity.
+    
+    The `PublishBatchRequest` object requires at least one `PublishBatchTopic` object associated with it, which contains the information about the topic you would like to send messages to. This `PublishBatchTopic` must also have a `PublishBatchMessage` object associated with it, which has the details of the message you would like to send.
 
-    For a list of available AWS regions, see [AWS_Region](#aws-region).
-
-7. Click **OK**.
-8. Configure the **Credentials_GenerateFromConstants** microflow.
-9. Open a page that contains a data view to show all the parameters of the `PublishBatchResponse`, which is the response of the **Subscribe** activity.
-10. Configure a method to trigger the *ACT_PublishBatch* microflow. For example, you can associate the activity with a custom button on a page in your app. For an example of how this can be implemented, see [Creating a Custom Save Button with a Microflow](/refguide/creating-a-custom-save-button/).
+12. Click **OK**.
+13. Open a page that contains a data view to show all the parameters of the `PublishBatchResponse`, which is the response of the **Subscribe** activity.
+14. Configure a method to trigger the *ACT_PublishBatch* microflow. For example, you can associate the activity with a custom button on a page in your app. For an example of how this can be implemented, see [Creating a Custom Save Button with a Microflow](/refguide/creating-a-custom-save-button/).
  
 ## 4 Technical Reference
  
-To help you work with the Amazon SNS connector, the following sections of this document list the available entities, enumerations, and activities that you can use in your application.
+To help you work with the Amazon SNS connector, the following sections of this document list the available [entities](#domain-model), [enumerations](#enumerations), and [activities](#activities) that you can use in your application.
  
 ### 4.1 Domain Model {#domain-model}
  
@@ -140,69 +164,69 @@ The domain model is a data model that describes the information in your applicat
 
 | Name | Generalization | Documentation |
 | --- | --- | --- |
-| `AbstractMessageAttribute` | | This entity holds information for publishing a message, specifically the message's attribute. The attributes it contains are AttributeType, which represents the native data type of the content, the Name, which represents the attribute, and the Value, which represents the attribute's value. This entity can be used to send messages to subsets of one's subscriber base. |
-| `Topic` | | This generalization entity represents information on Topics inside the Amazon SNS environment. The ARN (Amazon Resource Name) attribute represents an identification on Amazon's side, the Name attribute represents the Topic's name. |
-| `Message` | | This entity holds information for publishing a message, specifically the message to be broadcasted. The attributes it contains are Subject, which represents the message's subject, and Body, which represents the message's content. Required attributes: <br>_id <br>Message |
-| `ListTopicsResponse` | | This entity is the response for the Amazon SNS ListTopics action. It holds a list of ListTopicsTopic objects. Attributes: NextToken (string): this token can be used to retrieve the next set of topics. |
-| `ListTopicsTopic` | AmazonSNSConnector.Topic | This entity holds information on the retrieved Topic. The attributes it contains are ARN, which reflects the name of the resource inside the Amazon environment, and Name, which reflects the name of the Topic. |
-| `PublishBatchRequest` | | This entity is the request for the Amazon SNS PublishBatch action. It contains both a Topic that will contain messages that get send to SNS |
-| `PublishBatchTopic` | AmazonSNSConnector.Topic | This entity holds information for publishing a message, specifically the target Topic through the identifier attribute ARN. The attributes it contains are ARN and Name. |
-| `StringValue` | AmazonSNSConnector.AbstractMessageAttribute | |
-| `NumberValue` | AmazonSNSConnector.AbstractMessageAttribute | |
-| `BinaryValue` | AmazonSNSConnector.AbstractMessageAttribute | |
-| `StringArrayWrapper` | AmazonSNSConnector.AbstractMessageAttribute | |
+| `AbstractMessageAttribute` | | This entity holds information required to publisj a message, specifically the message's attributes. The attributes it contains are `AttributeType`, which represents the native data type of the content, `Name`, which represents the attribute, and `Value`, which represents the attribute's value. This entity can be used to send messages to subsets of one's subscriber base. |
+| `Topic` | | This generalization entity represents information on topics inside the Amazon SNS environment. The `ARN` (Amazon Resource Name) attribute represents an identification on Amazon's side, and the `Name` attribute represents the topic's name. |
+| `Message` | | This entity holds information for publishing a message, specifically the message to be broadcasted. The attributes it contains are `Subject`, which represents the message's subject, and `Body`, which represents the message's content. Required attributes: `_id`; `Message`. |
+| `ListTopicsResponse` | | This entity is the response for the Amazon SNS `ListTopics` action. It holds a list of `ListTopicsTopic` objects. Attributes: `NextToken` (string) - this token can be used to retrieve the next set of topics. |
+| `ListTopicsTopic` | `AmazonSNSConnector.Topic` | This entity holds information on the retrieved topic. The attributes it contains are `ARN`, which reflects the name of the resource inside the Amazon environment, and `Name`, which reflects the name of the topic. |
+| `PublishBatchRequest` | | This entity is the request for the Amazon SNS PublishBatch action. It contains a topic that will contain messages that get send to SNS. |
+| `PublishBatchTopic` | `AmazonSNSConnector.Topic` | This entity holds information for publishing a message, specifically the target topic through the identifier attribute ARN. The attributes it contains are `ARN` and `Name`. |
+| `StringValue` | `AmazonSNSConnector.AbstractMessageAttribute` | |
+| `NumberValue` | `AmazonSNSConnector.AbstractMessageAttribute` | |
+| `BinaryValue` | `AmazonSNSConnector.AbstractMessageAttribute` | |
+| `StringArrayWrapper` | `AmazonSNSConnector.AbstractMessageAttribute` | |
 | `StringArrayValue` | | |
-| `PublishBatchMessage` | AmazonSNSConnector.Message | Messages that will be sent to the corresponding SNS topic. At most 10 messages can be sent in one go |
-| `Tag` | | Entity for adding tags to keep track of what expenses belong where |
-| `CreateTopicResponse` | | Response of the CreateTopic action. This contains the newly created topics ARN |
-| `CreateTopicRequest` | | This entity is used for creating a Topic. Required values: Name <br>Note that if the topic is a fifo topic, the name must end in ".fifo". It must also contain a CreateTopicAttribute with key FifoTopic and value "true" |
-| `CreateTopicAttribute` | AmazonSNSConnector.UsageTopicAttribute | Specialization of TopicAttribute containing all attributes that will be added to the topic |
-| `TopicTag` | AmazonSNSConnector.Tag | Specialization of Tag containing all tags that will be added to a topic. At most 50 tags can be added to a single topic |
-| `AbstractTopicAttribute` | | Abstract entity for adding Topic Attributes. Warning, do not use the Abstract entity itself, instead, you should always use one of its specializations. Has the following specializations: ContentBasedDeduplication <br>FifoTopic <br>DeliveryPolicy <br>DeliveryName <br>Policy <br>SignatureVersion <br>TracingConfig <br>KmsMasterKeyId <br>DisplayName |
-| `FifoMessage` | | This entity contains information that can be added if the messages is sent to a fifo topic. This should not be added to messages that are sent to non fifo topics <br>Required: MessageGroupId |
-| `UsageTopicAttribute` | | Usage entity for adding topic attributes. This entity itself will not hold any data, but it will point to a specialization of the AbstractTopicAttribute entity. This will contain the attribute that will be added to the topic |
-| `SubscribeRequest` | | This entity is the request to subscribe to a topic and contains the unique identification of the topic to subscribe to and the endpoint of the notification. See https://docs.aws.amazon.com/sns/latest/dg/sns-create-subscribe-endpoint-to-topic.html and https://sdk.amazonaws.com/java/api/latest/software/amazon/awssdk/services/sns/model/SubscribeRequest.html |
-| `PublishBatchResponse` | | Response object for the PublishBatch action. It contains all messages that were sent succesfully and those that failed |
-| `ContentBasedDeduplication` | AmazonSNSConnector.AbstractTopicAttribute | Set the ContentBasedDeduplication attribute. This attribute can only be added to fifo topics |
+| `PublishBatchMessage` | `AmazonSNSConnector.Message` | Messages that will be sent to the corresponding SNS topic. At most 10 messages can be sent in one go. |
+| `Tag` | | Entity for adding tags to keep track of what expenses belong where. |
+| `CreateTopicResponse` | | Response of the `CreateTopic` action. This contains the newly created topic's ARN. |
+| `CreateTopicRequest` | | This entity is used for creating a topic. Required values: `Name`. Note that if the topic is a FIFO topic, the name must end in *.fifo*. It must also contain a CreateTopicAttribute with the key `FifoTopic` and the value **true**. |
+| `CreateTopicAttribute` | `AmazonSNSConnector.UsageTopicAttribute` | Specialization of `TopicAttribute` containing all attributes that will be added to the topic. |
+| `TopicTag` | `AmazonSNSConnector.Tag` | Specialization of `Tag` containing all tags that will be added to a topic. At most 50 tags can be added to a single topic. |
+| `AbstractTopicAttribute` | | Abstract entity for adding topic attributes. Do **not** use this Abstract entity directly - instead, you should always use one of its specializations. Has the following specializations: `ContentBasedDeduplication`; `FifoTopic`; `DeliveryPolicy`; `DeliveryName`; `Policy`; `SignatureVersion`; `TracingConfig`; `KmsMasterKeyId`; `DisplayName`. |
+| `FifoMessage` | | This entity contains information that can be added if the messages is sent to a FIFO topic. This should not be added to messages that are sent to non-FIFO topics. Required: `MessageGroupId`. |
+| `UsageTopicAttribute` | | Usage entity for adding topic attributes. This entity itself will not hold any data, but it will point to a specialization of the `AbstractTopicAttribute` entity. This will contain the attribute that will be added to the topic |
+| `SubscribeRequest` | | This entity is the request to subscribe to a topic and contains the unique identification of the topic to subscribe to and the endpoint of the notification. For more information, see [Subscribing to an Amazon SNS topic](https://docs.aws.amazon.com/sns/latest/dg/sns-create-subscribe-endpoint-to-topic.html) and [Class SubscribeRequest](https://sdk.amazonaws.com/java/api/latest/software/amazon/awssdk/services/sns/model/SubscribeRequest.html). |
+| `PublishBatchResponse` | | Response object for the `PublishBatch` action. It contains all messages that were sent successfully and those that failed. |
+| `ContentBasedDeduplication` | `AmazonSNSConnector.AbstractTopicAttribute` | Sets the `ContentBasedDeduplication` attribute. This attribute can only be added to FIFO topics. |
 | `AbstractEndpoint` | | This is an abstract entity, meaning that this entity itself should never be used. Instead, use a specialization of this class. |
-| `BatchResultErrorEntry` | | This entity contains information on the messages that failed to get sent to the SNS topic allong with what failed. |
-| `FifoTopic` | AmazonSNSConnector.AbstractTopicAttribute | Sets the FifoTopic attribute. Must be set to true for topics ending in .fifo and to false for topics that do not |
-| `EmailEndpoint` | AmazonSNSConnector.AbstractEndpoint | This entity represents a subscription endpoint of type email, meaning delivery of message via SMTP. Beware that a subscription of this type has to be activated with a confirmation, before notifications are sent out to a subscription. <br>The activation is done by the end-user in two steps: <br>1 He has to check his email inbox and choose Confirm subscription in the email from Amazon SNS. <br>2. Amazon SNS opens your web browser and displays a subscription confirmation with your subscription ID. <br>! Important ! To prevent mailing list recipients from unsubscribing all recipients from Amazon SNS topic emails, see Set up an email subscription that requires authentication to unsubscribe from AWS Support: https://repost.aws/knowledge-center/prevent-unsubscribe-all-sns-topic |
+| `BatchResultErrorEntry` | | This entity contains information on the messages that failed to be sent to the SNS topic, along with what failed. |
+| `FifoTopic` | AmazonSNSConnector.AbstractTopicAttribute | Sets the `FifoTopic` attribute. Must be set to *true* for topics that end in *.fifo* and to **false* for topics that do not. |
+| `EmailEndpoint` | `AmazonSNSConnector.AbstractEndpoint` | This entity represents a subscription endpoint of the type *email*, meaning delivery of message via SMTP. A subscription of this type must be activated with a confirmation, before notifications are sent out to a subscription. To activate the subscription, the end user has to check their email inbox and click **Confirm subscription** in the email from Amazon SNS. To prevent mailing list recipients from unsubscribing all recipients from Amazon SNS topic emails, see [Set up an email subscription that requires authentication to unsubscribe](https://repost.aws/knowledge-center/prevent-unsubscribe-all-sns-topic). |
 | `PublishBatchResultEntry` | | This entity contains information on all messages that were successfully sent to the SNS topic. |
 | `DeliveryPolicy` | AmazonSNSConnector.AbstractTopicAttribute | Sets the deliveryPolicy attribute |
-| `JSONEmailEndpoint` | AmazonSNSConnector.AbstractEndpoint | This entity represents a subscription endpoint of type json-email, meaning delivery of a JSON-encoded message via SMTP. Beware that a subscription of this type has to be activated with a confirmation, before notifications are sent out to a subscription. <br>The activation is done by the end-user in two steps: <br>1 He has to check his email inbox and choose Confirm subscription in the email from Amazon SNS. <br>2. Amazon SNS opens your web browser and displays a subscription confirmation with your subscription ID. <br>! Important ! To prevent mailing list recipients from unsubscribing all recipients from Amazon SNS topic emails, see Set up an email subscription that requires authentication to unsubscribe from AWS Support: https://repost.aws/knowledge-center/prevent-unsubscribe-all-sns-topic |
-| `DeliveryName` | AmazonSNSConnector.AbstractTopicAttribute | Sets the deliveryName attribute |
-| `SMSEndpoint` | AmazonSNSConnector.AbstractEndpoint | This entity represents a subscription endpoint of type SMS, meaning delivery of messages to a mobile device via SMS. For more information regarding sending SMS notifications: <br>https://docs.aws.amazon.com/sns/latest/dg/sns-mobile-phone-number-as-subscriber.html <br>Especially of interest are the topics about <br>- Managing phone numbers and SMS subscriptions: <br>https://docs.aws.amazon.com/sns/latest/dg/sms_manage.html <br>- Supported Regions and countries: <br>https://docs.aws.amazon.com/sns/latest/dg/sns-supported-regions-countries.html <br>- Senders are required to use a pre-registered alphabetic Sender ID: <br>https://docs.aws.amazon.com/sns/latest/dg/channels-sms-awssupport-sender-id.html |
-| `Policy` | AmazonSNSConnector.AbstractTopicAttribute | Sets the Policy attribute |
-| `SubscribeResponse` | | This entity represents the response of the subscribtion to a topic and contains the unique identification of the subscription. See https://docs.aws.amazon.com/sns/latest/dg/sns-create-subscribe-endpoint-to-topic.html and https://sdk.amazonaws.com/java/api/latest/software/amazon/awssdk/services/sns/model/SubscribeResponse.html |
-| `SignatureVersion` | AmazonSNSConnector.AbstractTopicAttribute | Sets the signatureVersion attribute |
-| `FilterPolicy` | | A Filter Policy can set on a subscription, to filter on the messages you receive. You can only set one filter policy on one subscription. The policy works either on the message attributes or on the body attributes (attributes in the payload). See https://docs.aws.amazon.com/sns/latest/dg/sns-message-filtering.html. <br>You can add multiple filters on a policy. They are all combined, so they work as a logical AND. <br>Note: a logical OR can functional be achieved by creating a new subscription with another Filter Policy containing the applicable filter(s).<br>Also note there are constraints, e.g. a max amount of different keys used in the policies. See https://docs.aws.amazon.com/sns/latest/dg/subscription-filter-policy-constraints.html |
-| `TracingConfig` | AmazonSNSConnector.AbstractTopicAttribute | Sets the TracingConfig attribute |
-| `AttributeExistsFilter` | AmazonSNSConnector.AbstractAttributeFilter | Filter to check if attribute exists or not. Set to true to check on presence of attribute, false to check on absence. So when set to true, only messages that contain this attribute will be received, when set to flase only messages that do not contain this attribute will be received. See https://docs.aws.amazon.com/sns/latest/dg/attribute-key-matching.html |
-| `KmsMasterKeyId` | AmazonSNSConnector.AbstractTopicAttribute | Sets the KmsMasterKeyId attribute |
-| `StringAttributeEqualsFilter` | AmazonSNSConnector.AbstractAttributeFilter | Filter on exact value. See https://docs.aws.amazon.com/sns/latest/dg/string-value-matching.html#string-exact-matching |
-| `DisplayName` | AmazonSNSConnector.AbstractTopicAttribute | Sets the DisplayName attribute |
-| `NumberAttributeEqualsFilter` | AmazonSNSConnector.AbstractAttributeFilter | Filter on exact value. See https://docs.aws.amazon.com/sns/latest/dg/numeric-value-matching.html#numeric-exact-matching |
-| `SubscribeFilterPolicy` | AmazonSNSConnector.FilterPolicy | The SubciribeFilterPolicy entitiy is optional, so you can apply a, only one, FilterPolicy to a subscription. |
-| `StringAttributePrefixFilter` | AmazonSNSConnector.AbstractAttributeFilter | Filter on beginning of string value. See https://docs.aws.amazon.com/sns/latest/dg/string-value-matching.html#string-prefix-matching |
-| `SourceIpAddressFilter` | | Filter on source ip address or subnet of incoming message. See https://docs.aws.amazon.com/sns/latest/dg/string-value-matching.html#ip-address-matching |
-| `StringAttributeAnythingButFilter` | AmazonSNSConnector.AbstractAttributeFilter | Filter to check if attribute does not have a value. See https://docs.aws.amazon.com/sns/latest/dg/string-value-matching.html#string-anything-but-matching |
-| `NumberAttributeAnythingButFilter` | AmazonSNSConnector.AbstractAttributeFilter | Filter to check if attribute does not have a value. See https://docs.aws.amazon.com/sns/latest/dg/numeric-value-matching.html#numeric-anything-but-matching |
-| `NumberAttributeCompareFilter` | AmazonSNSConnector.AbstractAttributeFilter | Filter with a numeric condition. See https://docs.aws.amazon.com/sns/latest/dg/numeric-value-matching.html#numeric-value-range-matching |
-| `NumberAttributeRangeFilter` | AmazonSNSConnector.AbstractAttributeFilter | Filter on a certain range. See https://docs.aws.amazon.com/sns/latest/dg/numeric-value-matching.html#numeric-value-range-matching |
-| `AbstractAttributeFilter` | | Abstract attribute filter as generalization. This entity can not be used by itself! Use one of the specializations instead. |
-| `StringAttributeListFilter` | AmazonSNSConnector.AbstractAttributeFilter | Filter on list of possible values. See https://docs.aws.amazon.com/sns/latest/dg/string-value-matching.html#string-exact-matching |
+| `JSONEmailEndpoint` | AmazonSNSConnector.AbstractEndpoint | This entity represents a subscription endpoint of the type *json-email*, meaning delivery of a JSON-encoded message via SMTP. A subscription of this type has to be activated with a confirmation, before notifications are sent out to a subscription. To activate the subscription, the end user has to check their email inbox and click **Confirm subscription** in the email from Amazon SNS. To prevent mailing list recipients from unsubscribing all recipients from Amazon SNS topic emails, see [Set up an email subscription that requires authentication to unsubscribe](https://repost.aws/knowledge-center/prevent-unsubscribe-all-sns-topic). |
+| `DeliveryName` | `AmazonSNSConnector.AbstractTopicAttribute` | Sets the `deliveryName` attribute. |
+| `SMSEndpoint` | `AmazonSNSConnector.AbstractEndpoint` | This entity represents a subscription endpoint of the type *SMS*, meaning delivery of messages to a mobile device via SMS. For more information regarding sending SMS notifications, see [Mobile text messaging (SMS)](https://docs.aws.amazon.com/sns/latest/dg/sns-mobile-phone-number-as-subscriber.html). |
+| `Policy` | `AmazonSNSConnector.AbstractTopicAttribute`| Sets the `Policy` attribute. |
+| `SubscribeResponse` | | This entity represents the response of the subscription to a topic and contains the unique identification of the subscription. For more information, see [Subscribing to an Amazon SNS topic](https://docs.aws.amazon.com/sns/latest/dg/sns-create-subscribe-endpoint-to-topic.html) and [Class SubscribeResponse](https://sdk.amazonaws.com/java/api/latest/software/amazon/awssdk/services/sns/model/SubscribeResponse.html). |
+| `SignatureVersion` | `AmazonSNSConnector.AbstractTopicAttribute` | Sets the `signatureVersion` attribute. |
+| `FilterPolicy` | | A Filter Policy can be set on a subscription, to filter on the messages you receive. You can only set one filter policy on one subscription. The policy works either on the message attributes or on the body attributes (attributes in the payload). For more information, see [Amazon SNS message filtering](https://docs.aws.amazon.com/sns/latest/dg/sns-message-filtering.html) and [Filter policy constraints](https://docs.aws.amazon.com/sns/latest/dg/subscription-filter-policy-constraints.html). |
+| `TracingConfig` | `AmazonSNSConnector.AbstractTopicAttribute` | Sets the `TracingConfig` attribute. |
+| `AttributeExistsFilter` | `AmazonSNSConnector.AbstractAttributeFilter` | Filter to check if an attribute exists. Set to *true* to check for the presence of the attribute, *false* to check for the absence. When set to true, only messages that contain this attribute will be received, when set to false, only messages that do not contain this attribute will be received. For more information, see [Key matching](https://docs.aws.amazon.com/sns/latest/dg/attribute-key-matching.html). |
+| `KmsMasterKeyId` | `AmazonSNSConnector.AbstractTopicAttribute` | Sets the `KmsMasterKeyId` attribute. |
+| `StringAttributeEqualsFilter` | `AmazonSNSConnector.AbstractAttributeFilter` | Filter on an exact value. For more information, see [Exact matching](https://docs.aws.amazon.com/sns/latest/dg/string-value-matching.html#string-exact-matching). |
+| `DisplayName` | `AmazonSNSConnector.AbstractTopicAttribute` | Sets the `DisplayName` attribute. |
+| `NumberAttributeEqualsFilter` | `AmazonSNSConnector.AbstractAttributeFilter` | Filter on exact value. For more information, see [Exact matching](https://docs.aws.amazon.com/sns/latest/dg/numeric-value-matching.html#numeric-exact-matching). |
+| `SubscribeFilterPolicy` | `AmazonSNSConnector.FilterPolicy` | The `SubscribeFilterPolicy` entity is optional and allows you to apply a single FilterPolicy to a subscription. |
+| `StringAttributePrefixFilter` | `AmazonSNSConnector.AbstractAttributeFilter` | Filter on the beginning of a string value. For more information, see [String prefix matching](https://docs.aws.amazon.com/sns/latest/dg/string-value-matching.html#string-prefix-matching). |
+| `SourceIpAddressFilter` | | Filter on the source IP address or subnet of an incoming message. For more information, see [String value matching](https://docs.aws.amazon.com/sns/latest/dg/string-value-matching.html#ip-address-matching). |
+| `StringAttributeAnythingButFilter` | `AmazonSNSConnector.AbstractAttributeFilter` | Filter to check if attribute does not have a value. For more information, see [String anything but matching](https://docs.aws.amazon.com/sns/latest/dg/string-value-matching.html#string-anything-but-matching). |
+| `NumberAttributeAnythingButFilter` | `AmazonSNSConnector.AbstractAttributeFilter` | Filter to check if an attribute does not have a value. For more information, see [Numeric anything but matching](https://docs.aws.amazon.com/sns/latest/dg/numeric-value-matching.html#numeric-anything-but-matching). |
+| `NumberAttributeCompareFilter` | `AmazonSNSConnector.AbstractAttributeFilter` | Filter with a numeric condition. For more information, see [Numeric value range matching](https://docs.aws.amazon.com/sns/latest/dg/numeric-value-matching.html#numeric-value-range-matching). |
+| `NumberAttributeRangeFilter` | `AmazonSNSConnector.AbstractAttributeFilter` | Filter on a certain range. For more information, see [Numeric value range matching](https://docs.aws.amazon.com/sns/latest/dg/numeric-value-matching.html#numeric-value-range-matching). |
+| `AbstractAttributeFilter` | | Abstract attribute filter as generalization. This entity can not be used by itself. Use one of the specializations instead. |
+| `StringAttributeListFilter` | `AmazonSNSConnector.AbstractAttributeFilter` | Filter on list of possible values. For more information, see [String exact matching](https://docs.aws.amazon.com/sns/latest/dg/string-value-matching.html#string-exact-matching). |
 | `AttributeStringValue` | | Entity with a String value attribute. To be used in String lists of filters. |
-| `StringAttributeAnythingButListFilter` | AmazonSNSConnector.AbstractAttributeFilter | Filter to check if attribute does not have a value from list See https://docs.aws.amazon.com/sns/latest/dg/string-value-matching.html#string-anything-but-matching |
-| `NumberAttributeAnythingButListFilter` | AmazonSNSConnector.AbstractAttributeFilter | Filter to check if attribute does not have a value. See https://docs.aws.amazon.com/sns/latest/dg/numeric-value-matching.html#numeric-anything-but-matching |
+| `StringAttributeAnythingButListFilter` | `AmazonSNSConnector.AbstractAttributeFilter` | Filter to check if attribute does not have a value from a list. For more information, see [String anything but matching](https://docs.aws.amazon.com/sns/latest/dg/string-value-matching.html#string-anything-but-matching). |
+| `NumberAttributeAnythingButListFilter` | `AmazonSNSConnector.AbstractAttributeFilter` | Filter to check if attribute does not have a value. For more information, see [Numeric anything but matching](https://docs.aws.amazon.com/sns/latest/dg/numeric-value-matching.html#numeric-anything-but-matching). |
 | `AttributeNumberValue` | | Entity with a number value attribute. To be used in number lists of filters. |
 | `ListTopicsRequest` | | This entity is the request for the Amazon SNS ListTopics action. It can contain a nextToken string to get the next set of topics. |
-| `ConfirmSubscriptionRequest` | | This entity is the request to confirm a subscribe of endpoint type Url (http/s) Endpoint to a topic and contains the unique identification of the topic to confirm the subscription and the short-lived token that has been sent to the Url (http/s) Endpoint. See step 3 of https://docs.aws.amazon.com/sns/latest/dg/sns-subscribe-https-s-endpoints-to-topic.html and https://sdk.amazonaws.com/java/api/latest/software/amazon/awssdk/services/sns/model/ConfirmSubscriptionRequest.html |
-| `ConfirmSubscriptionResponse` | | This entity represents the response of the confirmation of a Url (http/s) endpoint subscribtion to a topic and contains the unique identification of the subscription. See step 3 of https://docs.aws.amazon.com/sns/latest/dg/sns-subscribe-https-s-endpoints-to-topic.html and https://sdk.amazonaws.com/java/api/latest/software/amazon/awssdk/services/sns/model/ConfirmSubscriptionResponse.html |
-| `UrlEndpoint` | AmazonSNSConnector.AbstractEndpoint | This entity represents a subscription endpoint of type URL, meaning delivery of messages with a http post request to a url. The url must start with http:// or https://. See also https://docs.aws.amazon.com/sns/latest/dg/sns-subscribe-https-s-endpoints-to-topic.html and https://sdk.amazonaws.com/java/api/latest/software/amazon/awssdk/services/sns/model/SubscribeRequest.html#protocol() |
-| `Unsubscribe` | | This entity is the request to unsubscribe to a topic. It requires the SubscriptionARN to unsubscribe.See also https://docs.aws.amazon.com/sns/latest/api/API_Unsubscribe.html and https://sdk.amazonaws.com/java/api/latest/software/amazon/awssdk/services/sns/model/UnsubscribeRequest.html |
+| `ConfirmSubscriptionRequest` | | This entity is the request to confirm a subscription of an endpoint-type HTTP/S URL to a topic. It contains the unique identification of the topic to confirm the subscription and the short-lived token that has been sent to the URL HTTP/S endpoint. For more information, see [Subscribing an HTTP/S endpoint to a topic](https://docs.aws.amazon.com/sns/latest/dg/sns-subscribe-https-s-endpoints-to-topic.html) and [Class ConfirmSubscriptionRequest](https://sdk.amazonaws.com/java/api/latest/software/amazon/awssdk/services/sns/model/ConfirmSubscriptionRequest.html). |
+| `ConfirmSubscriptionResponse` | | This entity represents the response of the confirmation of a URL HTTP/S endpoint subscription to a topic and contains the unique identification of the subscription. For more information, see [Subscribing an HTTP/S endpoint to a topic](https://docs.aws.amazon.com/sns/latest/dg/sns-subscribe-https-s-endpoints-to-topic.html) and [Class ConfirmSubscriptionResponse](https://sdk.amazonaws.com/java/api/latest/software/amazon/awssdk/services/sns/model/ConfirmSubscriptionResponse.html). |
+| `UrlEndpoint` | `AmazonSNSConnector.AbstractEndpoint` | This entity represents a subscription endpoint of the type URL, meaning delivery of messages with an HTTP POST request to a URL. The URL must start with an `http://` or `https://` prefix. For more information, see [Subscribing an HTTP/S endpoint to a topic](https://docs.aws.amazon.com/sns/latest/dg/sns-subscribe-https-s-endpoints-to-topic.html) and [SubscribeRequest protocol](https://sdk.amazonaws.com/java/api/latest/software/amazon/awssdk/services/sns/model/SubscribeRequest.html#protocol()). |
+| `Unsubscribe` | | This entity is the request to unsubscribe from a topic. It requires the SubscriptionARN to unsubscribe. For more information, see [Unsubscribe](https://docs.aws.amazon.com/sns/latest/api/API_Unsubscribe.html) and [Class UnsubscribeRequest](https://sdk.amazonaws.com/java/api/latest/software/amazon/awssdk/services/sns/model/UnsubscribeRequest.html). |
 
-### 4.2 Enumerations
+### 4.2 Enumerations {#enumerations}
  
 An enumeration is a predefined list of values that can be used as an attribute type. For the Amazon SNS connector, enumerations list values such as the list of available AWS regions, the native data type of the content, and the category under which messages appear in error logs.
  
@@ -266,14 +290,11 @@ An enumeration is a predefined list of values that can be used as an attribute t
 
 ### 4.3 Activities {#activities}
  
-Activities define the actions that are executed in a microflow or a nanoflow. For the Amazon SNS connector, they represent actions such as creating or deleting a Topic in Amazon SNS.
+Activities define the actions that are executed in a microflow or a nanoflow. For the Amazon SNS connector, they represent actions such as creating or deleting a topic in Amazon SNS.
 
 #### 4.3.1 ConfirmSubscription{#confirmsubscription}
  
-To activate the sending of messages to a subscription for an url-endpoinst, the subscription first has to be confirmed.
-The confirmation needs the short-lived token that has been sent to the url of the endpoint via an http-post request (and can be found in the body)
-
-See also https://docs.aws.amazon.com/sns/latest/dg/sns-subscribe-https-s-endpoints-to-topic.html
+To activate the sending of messages to a subscription for a URL endpoint, the subscription first has to be confirmed. The confirmation needs the short-lived token that has been sent to the URL of the endpoint via an HTTP-POST request (and can be found in the request body). For more information, see [Subscribing an HTTP/S endpoint to a topic](https://docs.aws.amazon.com/sns/latest/dg/sns-subscribe-https-s-endpoints-to-topic.html).
  
 The input and output for this service are shown in the table below:
  
@@ -285,7 +306,7 @@ The input and output for this service are shown in the table below:
 
 #### 4.3.2 CreateTopic {#create-topic}
  
-The `CreateTopic` Amazon SNS action allows you to create a new topic, it requires a valid AWS Region and a CreateTopicRequest. The CreateTopicRequest must contain a topic name, and can contain attributes and tags. The output is a CreateTopicResponse that contains the newly created topics ARN
+The `CreateTopic` Amazon SNS action allows you to create a new topic. It requires a valid AWS Region and a `CreateTopicRequest`. The `CreateTopicRequest` must contain a topic name, and can contain attributes and tags. The output is a `CreateTopicResponse` that contains the newly created topics ARN. If a topic with the given name already exists, no error is thrown and a CreateTopicResponse with the already existing topic's ARN is returned.
  
 The input and output for this service are shown in the table below:
  
@@ -316,11 +337,11 @@ This activity returns a `ListTopicsResponse` object with objects from the follow
 | Name | Generalization | Description |
 | --- | --- | --- |
 | `ListTopicsResponse` | | This entity is the response for the Amazon SNS `ListTopics` action. It holds a list of ListTopicsTopic objects. |
-| `ListTopicsTopic` | `AmazonSNSConnector.Topic` | This entity holds information on the retrieved Topic. The attributes it contains are **ARN**, which reflects the name of the resource inside the Amazon environment, and **Name**, which reflects the name of the Topic. |
+| `ListTopicsTopic` | `AmazonSNSConnector.Topic` | This entity holds information on the retrieved topic. The attributes it contains are **ARN**, which reflects the name of the resource inside the Amazon environment, and **Name**, which reflects the name of the topic. |
  
 #### 4.3.4 PublishBatch {#publish-batch}
  
-The `Publish` Amazon SNS action allows you to publish up to 10 messages to all those subscribed to a given Topic.  It requires a valid AWS Region and a PublishRequest object, containing a Topic object that can contain up to 10 message objects. The output of the action is PublishBatchResponse object containing information on whether or not the messages was successfully delivered to the SNS topic.
+The `Publish` Amazon SNS action allows you to publish up to 10 messages to all those subscribed to a given topic.  It requires a valid AWS Region and a PublishRequest object, containing a Topic object that can contain up to 10 message objects. The output of the action is a `PublishBatchResponse` object containing information on whether or not the messages was successfully delivered to the SNS topic.
  
 The input and output for this service are shown in the table below:
  
@@ -332,14 +353,12 @@ The input and output for this service are shown in the table below:
 
 #### 4.3.5 Subscribe {#subscribe}
  
-To receive messages published to a topic, you must subscribe an endpoint to the topic. When you subscribe an endpoint to a topic, the endpoint begins to receive messages published to the associated topic.
+To receive messages published to a topic, you must subscribe an endpoint to the topic. When you subscribe an endpoint to a topic, the endpoint begins to receive messages published to the associated topic. The supported endpoint types are email, json-email, SMS, and URL.
 
-Before messages are sent, the subscription might have to be confirmed, for example by the link in the email of the email type endponts and for the url endpoint a short-lived token will be sent to the endpoint. This token has to be used in the ConfirmSubscrtiption operatiion/action.
+Before messages are sent, the subscription might have to be confirmed. For email-type endpoints, this requires the end-user to click the confirmation link in an email. For URL-type endpoints, a short-lived token is sent to the endpoint. This token has to be used in the `ConfirmSubscription` action.
 
-See also https://docs.aws.amazon.com/sns/latest/dg/sns-create-subscribe-endpoint-to-topic.html
+For more information, see [Subscribing to an Amazon SNS topic](https://docs.aws.amazon.com/sns/latest/dg/sns-create-subscribe-endpoint-to-topic.html).
 
-Mendix limitations: Supported endpoints are email, json-email, sms and url.
- 
 The input and output for this service are shown in the table below:
  
 | Input | Output |
@@ -352,7 +371,7 @@ The input and output for this service are shown in the table below:
  
 To stop receiving messages published to a topic, you must unsubscribe from it using the `SubscriptionARN`. 
 
-See also https://docs.aws.amazon.com/sns/latest/api/API_Unsubscribe.html
+For more information, see [Subscribing to an Amazon SNS topic](https://docs.aws.amazon.com/sns/latest/api/API_Unsubscribe.html).
  
 The input and output for this service are shown in the table below:
  

@@ -263,7 +263,7 @@ When you are developing your app, set the app service's binding keys as [constan
 
 Refer to the documentation on specific app services for how to use the binding keys (for example, see the [Authenticating MindSphere REST Calls](/partners/siemens/mindsphere-app-service/#authenticating) section of *MindSphere IIoT for Makers*).
 
-#### 4.7.2 Usage Dashboard {#usage-dashboard}
+#### 4.8.2 Usage Dashboard {#usage-dashboard}
 
 This dashboard presents **Subscription Details** specific to the component (for example, **Data Transfer** and **Number of Emails**). 
 
@@ -277,13 +277,13 @@ In the **Analytics** section, you can gain a visual intepretation of the plan us
 
 This page contains reviews of **Your company's content** as well as **Your company's reviews** that users from your company have written of other content.
 
-### 4.10 User Groups {#user-groups}
+### 4.10 Content Groups {#user-groups}
 
-You can configure user groups for various levels of access to your company content. The available configuration tabs for each user group page are described in the sections below.
+The **Content Groups** menu item and page are visible to all users. However, only [Mendix Admins](/developerportal/control-center/#company) can create and delete user groups. Both [Group Admins](#members) and Mendix Admins can manage user group members. 
 
-The **User Groups** menu item and page are visible to all users. However, only [Mendix Admins](/developerportal/control-center/#company) can create and delete user groups. Both [Group Admins](#members) and Mendix Admins can manage user group members. 
+You can configure content groups for various levels of access to your company content. The available configuration tabs for each content group page are described in the sections below.
 
-This table breaks down the roles and permissions for user groups:
+This table breaks down the roles and permissions for content groups:
 
 | Roles | Manage (Create & Delete) Groups | Manage Group Members | Assign Apps to Group | Manage (Edit, Add New Version & Unpublish) Content | View & Download Group Content | View Group List |
 | --- | --- | --- | --- | --- | --- | --- |
@@ -293,31 +293,7 @@ This table breaks down the roles and permissions for user groups:
 | Organization member (not part of any group) | ✘ | ✘ | ✘ | ✘ | ✔ | ✔ |
 | Guest | ✘ | ✘ | ✘ | ✘ | ✔ | ✘ |
 
-#### 4.10.1 Members Tab {#members}
-
-On this tab, you can enter the email address of a Mendix Platform user from your company and click **Add Member** to add them as a user group member. User group members can manage the [content](#group-content) assigned to the group.
-
-Once a member is added, you can select their permission level: **Group Member** or **Group Admin**.
-
-{{< figure src="/attachments/appstore/general/app-store-overview/members.png" >}}
-
-To remove a member, click **Remove** next to their name.
-
-#### 4.10.2 Guests Tab {#guests}
-
-A guest is a Mendix Platform user from outside your organization who can download the selected private [Content](#group-content) of this group. To add a guest, enter their email address in the box and click **Add Guest**:
-
-{{< figure src="/attachments/appstore/general/app-store-overview/guests.png" >}}
-
-The guest will receive an email notifying them of access to the private content. They can then see all the private Marketplace content shared with them in their [Shared with Me](#shared-with-me) page.
-
-{{% alert color="info" %}}
-The guest must be a registered Mendix Platform user; otherwise, they will not be able to access the shared content.
-{{% /alert %}}
-
-To remove a guest, click **Remove**.
-
-#### 4.10.3 Content Tab {#group-content}
+#### 4.10.1 Content Tab {#group-content}
 
 On this tab, you can assign content to this user group that can only be managed by members of this group. To assign a component to a user group, click **Assign Content** and select a company Marketplace component from the dialog box:
 
@@ -331,7 +307,31 @@ Click the context menu to access various options for managing this content:
 
 {{< figure src="/attachments/appstore/general/app-store-overview/group-content-context.png" >}}
 
-The options in this menu are the same as described for the context menu for the [My Content](#my-content) section above. The **Unassign from group** button is only available for [Group Admins](#members) and can be used to remove content from the user group.
+The options in this menu are the same as described for the context menu for the [My Content](#my-content) section above. The **Unassign from Group** button is only available for [Group Admins](#members) and can be used to remove content from the user group.
+
+#### 4.10.2 Members Tab {#members}
+
+On this tab, you can enter the email address of a Mendix Platform user from your company and click **Add Member** to add them as a user group member. User group members can manage the [content](#group-content) assigned to the group.
+
+Once a member is added, you can select their permission level: **Group Member** or **Group Admin**.
+
+{{< figure src="/attachments/appstore/general/app-store-overview/members.png" >}}
+
+To remove a member, click **Remove** next to their name.
+
+#### 4.10.3 Guests Tab {#guests}
+
+A guest is a Mendix Platform user from outside your organization who can download the selected private [Content](#group-content) of this group. To add a guest, enter their email address in the box and click **Add Guest**:
+
+{{< figure src="/attachments/appstore/general/app-store-overview/guests.png" >}}
+
+The guest will receive an email notifying them of access to the private content. They can then see all the private Marketplace content shared with them in their [Shared with Me](#shared-with-me) page.
+
+{{% alert color="info" %}}
+The guest must be a registered Mendix Platform user; otherwise, they will not be able to access the shared content.
+{{% /alert %}}
+
+To remove a guest, click **Remove**.
 
 #### 4.10.4 Settings Tab
 

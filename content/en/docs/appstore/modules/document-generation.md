@@ -127,11 +127,12 @@ Now you can continue to [register your app](#register-app).
 
 ##### 3.2.2 Registering Your App {#register-app}
 
-1. Sign in to the app environment you want to register.
-2. Add the snippet **Snip_AppRegistration** to a page that is accessible to admin users in your app.
-3. Enable the scheduled event **SE_AccessToken_Refresh** to automatically refresh the access token that is used to secure access to the Document Generation cloud service.
-4. Navigate to the page that contains the **Snip_AppRegistration** snippet.
-5. Follow the steps on the page to register your app environment.
+1. Add the snippet **Snip_AppRegistration** to a page that is accessible to admin users in your app.
+2. Enable the scheduled event **SE_AccessToken_Refresh** to automatically refresh the access token that is used to secure access to the Document Generation cloud service.
+3. Run your app.
+4. Sign in to the app environment you want to register.
+5. Navigate to the page that contains the **Snip_AppRegistration** snippet.
+6. Follow the steps on the page to register your app environment.
 
 ## 4 Usage
 

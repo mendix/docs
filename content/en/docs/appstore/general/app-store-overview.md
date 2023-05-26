@@ -213,13 +213,13 @@ The options in this menu are the same as described for the context menu for the 
 
 You can see all the Marketplace app services your company has subscribed to on this page:
 
-{{< figure src="/attachments/appstore/general/app-store-overview/company-subscriptions.jpg" >}}
+{{< figure src="/attachments/appstore/general/app-store-overview/company-subscriptions.png" >}}
 
-The table presents the **Product Names** your company has subscribed to. Clicking a product name takes you to the [service management dashboard](#service-management-dashboard) for the component. 
+The table presents the **Names** of the products your company has subscribed to. Clicking a product name takes you to the [service management dashboard](#service-management-dashboard) for the component. 
 
 The table also presents the **Technical Owner** of the company subscription. When subscribing for a paid component, you can assign the **Technical Owner** role to a user in your company. The Technical Owner can create binding keys on the [service management dashboard](#service-management-dashboard) and do other tasks.
 
-Finally, the table presents, the **Plan**, the plan's **Status**, and the **Expires On** date for the subscription. Under **Usage Details** is a link to the [usage dashboard](#usage-dashboard) for the component.
+Finally, the table presents the plan's **Status**, the subscription **Plan**, and the **Expires On** date for the plan. Under **Usage Details** is a link to the [usage dashboard](#usage-dashboard) for the component.
 
 #### 4.8.1 Service Management Dashboard {#service-management-dashboard}
 

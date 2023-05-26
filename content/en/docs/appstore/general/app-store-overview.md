@@ -67,9 +67,9 @@ The header for a component presents the following details:
 * **Download** – click this to download the component
     * This is only available for components that have a file attached (meaning, all shared Studio Pro components, but not promotions)
     * The best practice is to download a component from the Marketplace functionality built into Studio Pro, because it then downloads directly into Studio Pro (for details on importing downloaded Marketplace content into Studio Pro, see the [Installing Marketplace Content](/appstore/general/app-store-content/#install) section in *Use Marketplace Content in Studio Pro*))
-* The premium icon is applied to components that are supported by a partner:
+* The partner icon is applied to components that are supported by a partner:
 
-    {{< figure src="/attachments/appstore/general/app-store-overview/premium.png"  width="50"  >}}
+    {{< figure src="/attachments/appstore/general/app-store-overview/partner.png"  width="50"  >}}
 
     * These components have a **Contact Us** button for setting up your subscription with the partner
     * If you already have an active subscription or trial, click **View status** to go to the [Company Subscriptions](#company-subscriptions) page

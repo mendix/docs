@@ -144,20 +144,23 @@ On this page, click the ellipsis (**...**) button  for a component to access the
 
 ### 4.2 My Content {#my-content}
 
-On this page, you can see the Marketplace content for which you have created at least one version. Click the context menu to access various options for managing your content:
+On this page, you can see the Marketplace content for which you have created at least one version. 
+
+Click the name of the component to go its [component details page](#details).
+
+Click the context menu to access various options for managing your content:
 
 {{< figure src="/attachments/appstore/general/app-store-overview/my-content.png" >}}
 
-* **View item** – click this to go to the [component details page](#details) 
-* **Manage drafts** – click this to manage draft of the component
+* **Manage Drafts** – click this to manage the drafts of the component
     * Only one draft version of a component can exist at a time, so when one draft version is in progress, another draft cannot be initiated
-    * If there is a draft version in progress, you will see options to manage it; you can click **Edit draft** to see and edit the draft
+    * If there is a draft version in progress, you will see options to **Edit Draft** or **Delete Draft**
     * For more information on creating a draft version, see the [Updating Existing Marketplace Content](/appstore/general/share-app-store-content/#updating) section of *How to Share Marketplace Content*
-* **Edit a version** – click this to edit the component (for details on editing, see the [Adding New Marketplace Content](/appstore/general/share-app-store-content/#adding) section of *How to Share Marketplace Content*)
-* **Unpublish a version** – click this to remove one version or all versions of the component
+* **Edit a Version** – click this to edit the component (for details on editing, see the [Adding New Marketplace Content](/appstore/general/share-app-store-content/#adding) section of *How to Share Marketplace Content*)
+* **Unpublish a Version** – click this to remove one version or all versions of the component
     * If the component is [protected content](#group-content) from a [user group](#user-groups), a [group member](#members) can unpublish any version
     * If the component is not the protected content of a user group, you can only unpublish a version that you have published yourself
-    * Select **Unpublish all my versions** to remove all your versions of the component
+    * Select **Unpublish All My Versions** to remove all your versions of the component
 
 You may see the **Company only** label on a component, which means it is your company's private Marketplace content (for details on how this is configured, see the [Adding New Marketplace Content](/appstore/general/share-app-store-content/#private-app-store) section of *How to Share Marketplace Content*). This content can be shared with [guests](#guests).
 

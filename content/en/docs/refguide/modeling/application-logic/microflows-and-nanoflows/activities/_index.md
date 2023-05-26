@@ -110,7 +110,7 @@ Integration activities can be used to integrate with other systems, for example 
 
 | Graphic | Name | Description |
 | --- | --- | --- |
-| {{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/call-ml-model.png" alt="call ml model" link="/refguide/call-ml-model/" width="100px" >}} | [Call ML model](/refguide/call-ml-model/) *(only in microflows)* | Allows you to call an [ML model mapping](/refguide/ml-model-mapping/) document. |
+| {{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/call-ML-model.png" alt="call ml model" link="/refguide/call-ml-model/" width="100px" >}} | [Call ML model](/refguide/call-ml-model/) *(only in microflows)* | Allows you to call an [ML model mapping](/refguide/ml-model-mapping/) document. |
 
 ## 12 Workflow Activities
 

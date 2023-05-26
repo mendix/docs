@@ -172,7 +172,7 @@ You can see all the Marketplace app services you have trials for on this page:
 
 {{< figure src="/attachments/appstore/general/app-store-overview/my-subscriptions.jpg" >}}
 
-The table presents the **Product Names** you have trials for. Clicking a product name takes you to the [service management dashboard](#service-management-dashboard) for the component. 
+The table presents the **Names** of products you have trials for. Clicking a product name takes you to the [service management dashboard](#service-management-dashboard) for the component. 
 
 The table also presents the **Plan** and its **Status**, and the **Expires On** date for the subscription. Under **Usage Details** is a link to the [usage dashboard](#usage-dashboard) for the component.
 
@@ -182,23 +182,20 @@ This page contains private content shared with you by other companies who have m
 
 ### 4.5 Saved Content {#saved-components}
 
-This page presents the Marketplace content you have [saved](#saved). Click the bell icon in the lower-right corner of the component's tile to receive email notifications on new versions of the component:
+This page presents the Marketplace content you have [saved](#saved). 
 
-{{< figure src="/attachments/appstore/general/app-store-overview/bell.png" >}}
+Click the name of the component to go its [component details page](#details).
 
 Click the context menu to access various options for managing this content:
 
 {{< figure src="/attachments/appstore/general/app-store-overview/saved.png" >}}
 
-* **View item** – click this to go to the [component details page](#details) 
-* **Receive/Stop email notifications** – click this to start receivin email notifications or to stop the notifications if you already have them enabled
+* **Receive/Stop Email Notifications** – click this to start receiving email notifications or to stop the notifications if you already have them enabled
 * **Unsave** – click this to remove the component from your saved content
 
 ### 4.6 My Reviews {#my-reviews}
 
-This page contains reviews of [My Content](#my-content) by other users as well as **My reviews** that you have written of other content:
-
-{{< figure src="/attachments/appstore/general/app-store-overview/your-reviews.png" >}}
+This page contains reviews of [My Content](#my-content) by other users as well as **My reviews** that you have written of other content.
 
 ### 4.7 Company Content {#company-content}
 

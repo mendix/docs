@@ -128,7 +128,7 @@ Now you can continue to [register your app environment](#register-app).
 
 1. Add the snippet **Snip_AppRegistration** to a page that is accessible to admin users in your app.
 2. Enable the scheduled event **SE_AccessToken_Refresh** to automatically refresh the access token that is used to secure access to the Document Generation cloud service.
-3. Run your app.
+3. Make sure that your changes are deployed to the Mendix Cloud.
 4. Sign in to the app environment you want to register.
 5. Navigate to the page that contains the **Snip_AppRegistration** snippet.
 6. Follow the steps on the page to register your app environment.

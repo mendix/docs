@@ -199,11 +199,15 @@ This page contains reviews of [My Content](#my-content) by other users as well a
 
 ### 4.7 Company Content {#company-content}
 
-On this page, you can see all the content your company has published. Click the context menu to access various options for managing this content:
+On this page, you can see all the content your company has published. 
+
+Click the name of the component to go its [component details page](#details).
+
+Click the context menu to access various options for managing this content:
 
 {{< figure src="/attachments/appstore/general/app-store-overview/company-content.png" >}}
 
-The options in this menu are the same as described for the context menu for the [My Content](#my-content) section above. However, the **Edit a version** and **Unpublish a version** options are only available for your own versions of company content.
+The options in this menu are the same as described for the context menu for the [My Content](#my-content) section above. However, the **Edit a Version** and **Unpublish a Version** options are only available for your own versions of company content.
 
 ### 4.8 Company Subscriptions {#company-subscriptions}
 

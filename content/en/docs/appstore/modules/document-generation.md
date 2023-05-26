@@ -72,7 +72,7 @@ Follow the instructions in [How to Use Marketplace Content in Studio Pro](/appst
 1. In the **App Explorer**, double-click **Settings**, then go to the **Runtime** tab, and add the **ASu_DocumentGeneration_Initialize** microflow to run after startup. If there is already an after startup microflow, add the **ASu_DocumentGeneration_Initialize** microflow as an action in the existing microflow.
 2. In the **App Explorer**, double-click **Security**, and then set the **Security level** to **Prototype/demo** or **Production**.
 3. In the **App Explorer**, double-click **Security** again, then go to the **User roles** tab, and add the module role **User** from the **DocumentGeneration** module to all app roles that should be able to generate a document.
-4. To clean up the token, enable the scheduled event **SE_DocumentRequest_Cleanup** to automatically remove expired **Document Request** objects after a configured offset in days. The offset is configured using the constant **DocumentGeneration.RequestCleanupOffsetInDays** (the default value is 7 days). The scheduled event runs daily at 03:00 UTC.
+4. To clean up document requests, enable the scheduled event **SE_DocumentRequest_Cleanup** to automatically remove expired **Document Request** objects after a configured offset in days. The offset is configured using the constant **DocumentGeneration.RequestCleanupOffsetInDays** (the default value is 7 days). The scheduled event runs daily at 03:00 UTC.
 5. Depending on where you run the module, continue to perform the procedure in the [Running Locally](#run-locally) section or in the [Running on the Mendix Cloud](run-mendix-cloud) section.
 
 #### 3.1 Running Locally {#run-locally}
@@ -97,7 +97,7 @@ Configure the path to the *chrome.exe* executable in the **CustomChromePath** co
 
 To allow the module to send and receive document generation requests on your Mendix Cloud environments, you need to perform the following procedures:
 1. Enable the DocGen request handler.
-2. Register your app.
+2. Register your app environment.
 
 The steps for each procedure are described in the sections below. 
 
@@ -122,9 +122,9 @@ The steps for each procedure are described in the sections below.
     6. Click **Save**. The **/docgen/** path is added to the list.
     7. Restart your application for the new request handler to take effect.
 
-Now you can continue to [register your app](#register-app).
+Now you can continue to [register your app environment](#register-app).
 
-##### 3.2.2 Registering Your App {#register-app}
+##### 3.2.2 Registering Your App Environment {#register-app}
 
 1. Add the snippet **Snip_AppRegistration** to a page that is accessible to admin users in your app.
 2. Enable the scheduled event **SE_AccessToken_Refresh** to automatically refresh the access token that is used to secure access to the Document Generation cloud service.
@@ -196,11 +196,11 @@ We recommend to try to log in as the service user at least once, to verify if th
 - You can use the **Page orientation** design property to set the page orientation for your documents. This property is available in the **Design properties** section in the properties for a page.
 - You can use the **Page size** design property to set the page size for your documents. This property is available in the **Design properties** section in the properties for a page.
 - You can use the **Show page numbers** design property to enable page numbers for your documents. At the moment, we only support basic page numbers. We will extend and add support for custom headers and footers at a later stage.
-- For advanced styling, you can use the styling editor in Studio Pro to style your documents, for example by using the `@media print` and `@page rules` in your style sheet.
+- For advanced styling, you can use the styling editor in Studio Pro to style your documents, for example by using the `@media print` and `@page` rules in your style sheet.
 
 ## 5 Troubleshooting
 
-#### 5.1 App Registration Issues
+#### 5.1 App Environment Registration Issues
 
 ##### 5.1.1 Invalid Developer Credentials
 

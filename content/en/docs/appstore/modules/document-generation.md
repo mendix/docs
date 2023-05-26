@@ -103,10 +103,9 @@ The steps for each procedure are described in the sections below.
 
 ##### 3.2.1 Enabling the DocGen Request Handler {#enable-docgen}
 
-1. Configure the API key and API URL that you received in the **API_KEY** and **API_URL** constants respectively in the **_UseMe** > **Configuration** > **Cloud Service** folder.
-2. Make sure that you have the **ASu_DocumentGeneration_Initialize** already configured in your app’s runtime settings, as described in step 1 in the [Configuration](#configuration) section.
-3. Make sure that you have the application deployed to the Mendix Cloud.
-4. To allow the module to send and receive document generation requests in your Mendix Cloud environments, enable the DocGen request handler as follows:
+1. Make sure that you have the **ASu_DocumentGeneration_Initialize** already configured in your app’s runtime settings, as described in step 1 in the [Configuration](#configuration) section.
+2. Make sure that you have the application deployed to the Mendix Cloud.
+3. To allow the module to send and receive document generation requests in your Mendix Cloud environments, enable the DocGen request handler as follows:
 
     1. Go to the **Environments** page for the app as follows:
 

@@ -67,7 +67,7 @@ The document generation functionality is under active development. While we cann
 
 Follow the instructions in [How to Use Marketplace Content in Studio Pro](/appstore/general/app-store-content/) to import the Documentation Generation module into your app.
 
-## 3 Configuration
+## 3 Configuration {#configuration}
 
 1. In the **App Explorer**, double-click **Settings**, then go to the **Runtime** tab, and add the **ASu_DocumentGeneration_Initialize** microflow to run after startup. If there is already an after startup microflow, add the **ASu_DocumentGeneration_Initialize** microflow as an action in the existing microflow.
 2. In the **App Explorer**, double-click **Security**, and then set the **Security level** to **Prototype/demo** or **Production**.
@@ -104,7 +104,7 @@ The steps for each procedure are described in the sections below.
 ##### 3.2.1 Enabling the DocGen Request Handler {#enable-docgen}
 
 1. Configure the API key and API URL that you received in the **API_KEY** and **API_URL** constants respectively in the **_UseMe** > **Configuration** > **Cloud Service** folder.
-2. Make sure that you have the **ASu_DocumentGeneration_Initialize** already configured in your app’s runtime settings, as described in the [Installation](#installation) section.
+2. Make sure that you have the **ASu_DocumentGeneration_Initialize** already configured in your app’s runtime settings, as described in step 1 in the [Configuration](#configuration) section.
 3. Make sure that you have the application deployed to the Mendix Cloud.
 4. To allow the module to send and receive document generation requests in your Mendix Cloud environments, enable the DocGen request handler as follows:
 

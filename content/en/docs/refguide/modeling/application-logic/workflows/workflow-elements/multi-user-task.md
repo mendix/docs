@@ -104,11 +104,11 @@ Out of a group of two or more users, two users need to perform the same task: to
 
 * If they both approve the request, the multi-user task is completed with the outcome `Approve`. 
 * If they both reject the request, the multi-user task is completed with the outcome `Reject`. 
-* If no consensus is reached between the two users, the multi-user task will then be complected with a fallback outcome (in this example, `NoConsensus` )
+* If no consensus is reached between the two users, the multi-user task will then be completed with a fallback outcome (in this example, `NoConsensus` )
 
 You can refer to the following properties settings for this example:
 
-* **Targeted users**: The users that can perform the task (they can be a team, a department, or pre-picked two users)
+* **Targeted users**: The users that can perform the task (they can be a team, a department, or two pre-selected users)
 * **Input from**: **Multiple users**
 * **Required input**: **Absolute number** > `2`
 * **Completion criteria**: **Consensus**

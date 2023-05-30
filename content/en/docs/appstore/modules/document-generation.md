@@ -9,7 +9,7 @@ tags: ["marketplace", "marketplace component", "document generation", "platform 
 
 ## 1 Introduction
 
-The [Document Generation](#url-to-be-added) module allows you to generate pixel-perfect PDF documents based on regular pages in your app.
+The Document Generation module allows you to generate pixel-perfect PDF documents based on regular pages in your app.
 
 This module uses the document generation service on the Mendix Cloud to convert any regular web page in your app into a PDF document. The result is similar to what you would get when using the "Save as PDF" feature in the print dialog box of your browser. 
 
@@ -73,7 +73,7 @@ Follow the instructions in [How to Use Marketplace Content in Studio Pro](/appst
 2. In the **App Explorer**, double-click **Security**, and then set the **Security level** to **Prototype/demo** or **Production**.
 3. In the **App Explorer**, double-click **Security** again, then go to the **User roles** tab, and add the module role **User** from the **DocumentGeneration** module to all app roles that should be able to generate a document.
 4. To clean up document requests, enable the scheduled event **SE_DocumentRequest_Cleanup** to automatically remove expired **Document Request** objects after a configured offset in days. The offset is configured using the constant **DocumentGeneration.RequestCleanupOffsetInDays** (the default value is 7 days). The scheduled event runs daily at 03:00 UTC.
-5. Depending on where you run the module, continue to perform the procedure in the [Running Locally](#run-locally) section or in the [Running on the Mendix Cloud](run-mendix-cloud) section.
+5. Depending on where you run the module, continue to perform the procedure in the [Running Locally](#run-locally) section or in the [Running on the Mendix Cloud](#run-on-mendix-cloud) section.
 
 #### 3.1 Running Locally {#run-locally}
 

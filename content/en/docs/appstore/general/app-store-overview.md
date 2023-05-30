@@ -125,7 +125,7 @@ On this page, you can see and manage the drafts for all the Marketplace content 
 
 This page presents details on how many total drafts you have, which drafts are ready to publish or are awating approval, and which drafts have been declined.
 
-{{< figure src="/attachments/appstore/general/app-store-overview/my-draft.png" >}}
+{{< figure src="/attachments/appstore/general/app-store-overview/my-drafts.png" >}}
 
 These are the possible **Status** entries for each item:
 

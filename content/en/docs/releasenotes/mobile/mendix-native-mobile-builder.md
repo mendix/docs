@@ -181,7 +181,7 @@ App Center's CodePush OTA page improvements:
 
 * We improved the UX of the App Center's CodePush OTA page.
 * The platform selector will now correctly represent available platforms. Platforms that do not yet have an App Center build setup will be disabled by default. 
-* We added visible links for the App Center apps targeted by each platform. This makes it easier to identify cases where the Mendix Native Mobile bulder does not target the expected apps.
+* We added visible links for the App Center apps targeted by each platform. This makes it easier to identify cases where the Mendix Native Mobile builder does not target the expected apps.
 * The OTA button is now a callout button that visually summarizes the reasons why a OTA update might not currently be possible.
 
 #### Fixes

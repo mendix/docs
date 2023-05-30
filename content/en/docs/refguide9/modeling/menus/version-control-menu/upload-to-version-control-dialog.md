@@ -41,7 +41,7 @@ You can only upload to an existing repository if the repository is currently emp
 
 ### 2.3 Private Server
 
-This option is only available when support for other servers is enabled in **Edit** > **Preferences** > **Advanced** > [Enable private version control](/refguide9/preferences-dialog/#enable)).
+This option is only available when support for other servers is enabled in **Edit** > **Preferences** > **Advanced** > [Enable private version control](/refguide9/preferences-dialog/#enable).
 
 {{< figure src="/attachments/refguide9/modeling/menus/version-control-menu/upload-to-version-control-dialog/enable-private-version-control.png" alt="Enable private version control in advanced preferences" >}}
 

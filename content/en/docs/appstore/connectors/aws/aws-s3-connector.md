@@ -21,7 +21,7 @@ Amazon Simple Storage Service (Amazon S3) is an object storage service offering 
 
 ### 1.2 Prerequisites {#prerequisites}
 
-The Amazon S3 connector requires the [AWS authentication connector version 2.1 or higher](https://marketplace.mendix.com/link/component/120333) to authenticate with Amazon Web Services (AWS). It is crucial for the Amazon S3 connector to function correctly. For more information about installing and configuring the AWS Authentication connector, see see [AWS Authentication](/appstore/connectors/aws/aws-authentication/).
+The Amazon S3 connector requires the [AWS Authentication connector version 2.1 or higher](https://marketplace.mendix.com/link/component/120333) to authenticate with Amazon Web Services (AWS). It is crucial for the Amazon S3 connector to function correctly. For more information about installing and configuring the AWS Authentication connector, see [AWS Authentication](/appstore/connectors/aws/aws-authentication/).
 
 ## 2 Installation
 
@@ -117,8 +117,8 @@ Constants are used to define configuration values. All activities are exported a
 | Name | Description |
 | --- | --- |
 | `AmazonS3Connector.ClientCertificateID` | The ID for the `ClientCertificate` used to sign the authentication requests. | 
-|`AmazonS3Connector.ProfileARN` | The `ProfileARN` for the [IAM Roles Anywhere](https://docs.aws.amazon.com/rolesanywhere/latest/userguide/introduction.html) profile that has access to the Amazon Polly service | 
-|`AmazonS3Connector.RoleARN` | The `RoleARN` of the IAM Role that has access to the Polly service. | 
+|`AmazonS3Connector.ProfileARN` | The `ProfileARN` for the [IAM Roles Anywhere](https://docs.aws.amazon.com/rolesanywhere/latest/userguide/introduction.html) profile that has access to the Amazon S3 service | 
+|`AmazonS3Connector.RoleARN` | The `RoleARN` of the IAM Role that has access to the Amazon S3 service. | 
 |`AmazonS3Connector.TrustAnchorARN` | The `TrustAnchorARN` of the TrustAnchor configured in IAM Roles Anywhere that is used for the configured role | 
 |`AmazonS3Connector.UseStaticCredentials` | The `UseStaticCredentials` Boolean value defines if the connector uses the provided static credentials (`AccessKey` and `SecretKeyID`) over the session-based credentials | 
 |`AmazonS3Connector.AccessKey` | The `AccessKey` from an AWS account able to use this service | 

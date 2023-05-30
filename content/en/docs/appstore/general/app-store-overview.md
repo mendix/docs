@@ -129,10 +129,17 @@ This page presents details on how many total drafts you have, which drafts are r
 
 These are the possible **Status** entries for each item:
 
-* **Incomplete draft** –
-* **Ready to publish** and **Ready to submit for approval** – reminders for publishing and submission
-* **Waiting approval** – the component is being [reviewed by Mendix](/appstore/general/share-app-store-content/#approval) 
-* **Error(s)** – the number of errors in the draft; these need to be fixed in order for your submission to be approved
+**Incomplete draft** - takes the place of **Error**
+**Ready to Publish**
+**Submit for approval**
+**Waiting for approval**
+**Declined**
+
+
+
+* **Incomplete draft** – the number of errors in the draft; these need to be fixed in order for your submission to be approved
+* **Submit for approval** and **Ready to publish**  – reminders for submitting and publishing
+* **Waiting for approval** – the component is being [reviewed by Mendix](/appstore/general/share-app-store-content/#approval) 
 * **Declined** – the draft was declined in the review by Mendix; you can find additional information in the email you are sent
 
 On this page, click the ellipsis (**...**) button  for a component to access the following options:
@@ -155,6 +162,7 @@ Click the context menu to access various options for managing your content:
 * **Manage Drafts** – click this to manage the drafts of the component
     * Only one draft version of a component can exist at a time, so when one draft version is in progress, another draft cannot be initiated
     * If there is a draft version in progress, you will see options to **Edit Draft** or **Delete Draft**
+    * If there is a draft version in progress assigned to another user, you will see an option to **Reassign Draft** to yourself 
     * For more information on creating a draft version, see the [Updating Existing Marketplace Content](/appstore/general/share-app-store-content/#updating) section of *How to Share Marketplace Content*
 * **Edit a Version** – click this to edit the component (for details on editing, see the [Adding New Marketplace Content](/appstore/general/share-app-store-content/#adding) section of *How to Share Marketplace Content*)
 * **Unpublish a Version** – click this to remove one version or all versions of the component

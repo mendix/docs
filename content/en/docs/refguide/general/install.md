@@ -99,10 +99,9 @@ If the **AdoptOpenJDK 11 x64 failed; code 1639** error occurs during installatio
 
 ## 6 Installing Mendix Studio Pro Without Admin Rights
 
-Mendix also offers a Studio Pro installer that does not require admin rights. 
-This is called the portable installer which can also be found on the Studio Pro download page in the Mendix Marketplace. 
-The difference between the portable installer and the regular installer is that the portable installer installs Mendix Studio Pro in a user level directory, together with all dependencies. 
-This means that dependencies are not shared between Studio Pro versions, leading to a higher disk space usage. In return, you do not require admin rights to install Mendix Studio Pro, while still being able to use all functionality.
+Mendix also offers a Studio Pro installer called the **Portable** installer that does not require admin rights. The portable installers are avaialble per Studio Pro version on the [Get Studio Pro](https://marketplace.mendix.com/link/studiopro/) page in the Mendix Marketplace. 
+
+As compared to the regular installer, the portable installer installs Mendix Studio Pro in a user-level directory together with all the dependencies. This means that dependencies are not shared between Studio Pro versions, which results in higher disk space usage. In return, you do not require admin rights to install Mendix Studio Pro, while you can still use all the functionality.
 
 ## 7 Read More
 

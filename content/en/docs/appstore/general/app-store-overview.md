@@ -129,18 +129,11 @@ This page presents details on how many total drafts you have, which drafts are r
 
 These are the possible **Status** entries for each item:
 
-**Incomplete draft** - takes the place of **Error**
-**Ready to Publish**
-**Submit for approval**
-**Waiting for approval**
-**Declined**
-
-
-
-* **Incomplete draft** – the number of errors in the draft; these need to be fixed in order for your submission to be approved
-* **Submit for approval** and **Ready to publish**  – reminders for submitting and publishing
+* **Incomplete draft** – the draft is incomplete and requires additional information before you can submit it
+* **Submit for approval** – the draft is ready to be submitted for review by Mendix 
+* **Ready to publish**  – the draft is ready to be published to the Mendix Marketplace
 * **Waiting for approval** – the component is being [reviewed by Mendix](/appstore/general/share-app-store-content/#approval) 
-* **Declined** – the draft was declined in the review by Mendix; you can find additional information in the email you are sent
+* **Declined** – the draft was declined after review by Mendix; you can find specific feedback in the email notification and on the draft edit page
 
 On this page, click the ellipsis (**...**) button  for a component to access the following options:
 

@@ -371,7 +371,7 @@ The general tab shows information about your running app.
 
 {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-deploy/image22.png" >}}
 
-Most of the information is self-explanatory, but the **Status information** field gives you a quick summary of the status of the environment and the app deployed there. The **Source** field shows how the environment was created - by using the Portal or the [API](/apidocs-mxsdk/apidocs/private-cloud-deploy-api/)
+Most of the information is self-explanatory, but the status information gives you a quick summary of the status of the environment and the app deployed there. The **Source** field shows how the environment was created - by using the Portal or the [API](/apidocs-mxsdk/apidocs/private-cloud-deploy-api/)
 
 #### 5.1.1 Loaded Deployment Details > Status
 

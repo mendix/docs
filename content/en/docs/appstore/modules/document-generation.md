@@ -7,9 +7,13 @@ tags: ["marketplace", "marketplace component", "document generation", "platform 
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
+{{% alert color="warning" %}}
+This module is currently in Public Beta and should be used for testing purposes only.
+{{% /alert %}}
+
 ## 1 Introduction
 
-The Document Generation module allows you to generate pixel-perfect PDF documents based on regular pages in your app.
+The [Document Generation](https://marketplace.mendix.com/link/component/211553) module allows you to generate pixel-perfect PDF documents based on regular pages in your app.
 
 This module uses the document generation service on the Mendix Cloud to convert any regular web page in your app into a PDF document. The result is similar to what you would get when using the "Save as PDF" feature in the print dialog box of your browser. 
 
@@ -38,10 +42,6 @@ The architecture is set up to process every request in a fully isolated context.
 We do not store pages or documents at any time in the process.
 
 ### 1.3 Limitations
-
-{{% alert color="warning" %}}
-This module is still in a Beta version and should be used for testing purposes only.
-{{% /alert %}}
 
 The document generation functionality is under active development. While we cannot guarantee that there will not be any breaking changes in future releases, we will clearly and timely communicate any breaking changes. We will build in backwards compatibility wherever possible.
 

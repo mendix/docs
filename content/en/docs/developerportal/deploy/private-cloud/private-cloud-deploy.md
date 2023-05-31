@@ -245,7 +245,7 @@ There are three additional actions you can take while looking at the deployment 
 * **Expand to view build output** – shows the output from the Mendix build.
 * **Download Package** – allows you to download the deployment package and save it locally.
 * **Delete Package** – deletes the deployment package. You will be asked to confirm this action. If the deployment package is in a locked state, it cannot be deleted.
-* **Source** This field shows if the deployment package is created via the API or the portal. For more information on how to build deployment package via API, check [Build API](/apidocs-mxsdk/apidocs/private-cloud-build-api/) 
+* **Source** - shows if the deployment package has been created by using the API or the portal. For more information on how to build deployment packages with the API, see [Build API](/apidocs-mxsdk/apidocs/private-cloud-build-api/).
 
 #### 4.1.5 Deploy
 

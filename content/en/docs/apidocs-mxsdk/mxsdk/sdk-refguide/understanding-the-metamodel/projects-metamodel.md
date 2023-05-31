@@ -31,7 +31,7 @@ Project-level documents describe app security, app settings, app navigation (for
 
 Studio Pro Guide | Model SDK API docs
 | --- | --- |
-| | [App Settings](/refguide/app-settings/) | [ProjectDocument](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/projects.projectdocument.html) and its inheritance hierarchy |
+|[App Settings](/refguide/app-settings/)| | [ProjectDocument](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/projects.projectdocument.html) and its inheritance hierarchy |
 | [App Security](/refguide/app-security/) | |
 | [Navigation](/refguide/navigation/) | |
 | [System Texts](/refguide/system-texts/) | |

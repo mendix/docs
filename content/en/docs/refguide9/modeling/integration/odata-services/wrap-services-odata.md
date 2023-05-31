@@ -55,7 +55,7 @@ In Studio Pro, you can expose entities as OData resources by adding them to a pu
 
 When a consuming app reads your published OData service, it sends a GET request. You can handle an incoming GET request for an OData resource in the following ways:
 
-1. **Read from database** – This action pases the incoming OData query to a database query and retrieve the data from the database. This is the default action for *Readable* section. This action does not apply to non-persistable entities, because non-persistable entities cannot be retrieved from the database. For those, call a microflow.
+1. **Read from database** – This action passes the incoming OData query to a database query and retrieve the data from the database. This is the default action for *Readable* section. This action does not apply to non-persistable entities, because non-persistable entities cannot be retrieved from the database. For those, call a microflow.
 2. **Call a microflow** – This action calls a microflow defined in the *Readable* section. Specify your custom logic in this microflow to return a list of objects that correspond to the incoming request. See [Handle a GET Request with a Microflow](#handle-get-request).
 
 The resulting list of objects from either will then be transformed into an OData payload. If it fails, you will see a [status code](/refguide9/published-odata-services/#status-codes) of `500`.

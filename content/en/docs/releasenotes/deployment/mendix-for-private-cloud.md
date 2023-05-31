@@ -320,7 +320,7 @@ This issue is fixed in Mendix Operator [version 2.5.1](#2.5.1).
     * members invited for a namespace
     * members invited for a cluster
     * database and storage plans in a namespace
-* We have added a tootip to assist in using the **Purpose** field
+* We have added a tooltip to assist in using the **Purpose** field
 
 ### March 4th, 2022
 
@@ -567,7 +567,7 @@ To upgrade an existing installation of Private Cloud to this version, follow the
     * Bash (or Git Bash) is no longer required to install and configure a cluster. This allows you to use the tool in most Windows terminals such as PowerShell and Windows Command prompt with no workarounds.
     * The installation process no longer needs to communicate with an external service to download installation resources, and only needs access to the Kubernetes cluster API.
     * Migration of Mendix components to a Private Cloud registry no longer requires downloading and patching the installation script.
-    * The process for upgrading to the next version of Mendix for Private Cloud has been complely automated. Instead of a manual process using a Bash terminal, an upgrade can be done with a click of the mouse.
+    * The process for upgrading to the next version of Mendix for Private Cloud has been completely automated. Instead of a manual process using a Bash terminal, an upgrade can be done with a click of the mouse.
     * It's now possible to install or upgrade to a specific version of Mendix Operator (1.9.0 and later). Previously, it was only possible to install the latest version of the Operator.
 * We have added reporting of the **Storage Provisioner Version** to the Private Cloud Portal.
 * We have added dedicated sections to configure scheduled events and app constants when using the Operator in standalone mode.

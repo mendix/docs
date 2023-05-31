@@ -278,7 +278,7 @@ These release notes cover changes made to the [Mendix Data Hub Catalog](/data-hu
 
 #### Fixes
 
-* We fixed an error that occured when the **Business Owner** field was initially left empty, and users could not assign a new **Business Owner** in subsequent attempts.
+* We fixed an error that occurred when the **Business Owner** field was initially left empty, and users could not assign a new **Business Owner** in subsequent attempts.
 
 ### July 14th, 2022
 
@@ -361,7 +361,7 @@ These release notes cover changes made to the [Mendix Data Hub Catalog](/data-hu
 
 #### Fixes
 
-* We fixed a `NullPointerException` that occured when the **Versions** of an endpoint was empty on the **Registration API** `GET` service call.
+* We fixed a `NullPointerException` that occurred when the **Versions** of an endpoint was empty on the **Registration API** `GET` service call.
 * We fixed an issue where the Catalog loaded in our unreleased dark mode. Dark mode is not ready yet, but we will let you know when that feature is available!
 
 ### April 7th, 2022
@@ -560,7 +560,7 @@ These release notes cover changes made to the [Mendix Data Hub Catalog](/data-hu
 * We made several design changes, mainly on the [Catalog](/data-hub/data-hub-catalog/) page. We moved items like **Environment Name** and **Version** to the newly arranged right sidebar menu.
 * We moved the `ContractType` field to the `ServiceVersion` level. For more information, see [How to Register OData Resources in the Data Hub Catalog](/data-hub/data-hub-catalog/register-data/).
 * We added an informative tooltip to the **Company** drop-down menu and a pop-up window for when the user is an external user for another company.
-* We added in-app guidance to notify that you can switch the company when you have accepted a participation invitaion.
+* We added in-app guidance to notify that you can switch the company when you have accepted a participation invitation.
 
 #### Fixes
 

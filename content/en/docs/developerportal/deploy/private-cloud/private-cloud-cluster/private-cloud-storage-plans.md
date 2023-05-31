@@ -13,28 +13,24 @@ tags: ["Private Cloud","Storage","Database","File","S3","Minio","Postgres","Azur
 Every Mendix app environment needs a database to store entities, and a blob file storage bucket to store the contents of `System.FileDocument` entities. When an app developer creates a new environment, the Mendix Operator will automatically create (provision) a database and blob file storage bucket for that environment. In this way, an app developer does not need to install or configure a database - the Mendix Operator automatically prepares the database and blob file storage bucket, and links it with the new environment. Creating a new enviornment can be completely automated, and can be done by an app developer without assistance from the infrastructure team.
 
 The Mendix Operator has a modular architecture and offers a multitude of options how to create and attach databases and blob file storage buckets to environments.
-A _Storage plan_ specifies configuration (a blueprint) how to provide a database or blob file storage bucket to a new environment.
-For example, if you create a `postgres-prod` storage plan and configure it to use a specific Postgres instance, an app developer would be able to choose a `postgres-prod` from the database plan dropdown when creating a new environment.
-This plan would create a new Postgres role (user) and a new database (schema/tenant) inside an existing Postgres instance (RDS instance).
-The new Mendix app environment would only be able to access its database/tenant and will be isolated from other apps running on the same Postgres instance.
+A storage plan specifies a configuration blueprint for providing a database or blob file storage bucket to a new environment. For example, if you create a `postgres-prod` storage plan and configure it to use a specific Postgres instance, an app developer will be able to choose a `postgres-prod` from the database plan dropdown when creating a new environment. This plan will create a new Postgres role (user) and a new database (schema and tenant) inside an existing Postgres instance (RDS instance). The new Mendix app environment will only be able to access its database and tenant, and will be isolated from other apps running on the same Postgres instance.
 
 The Mendix Operator supports two storage management operations:
 
-* **Create** will create a new _tenant_, generate credentials and attach them to the new environment.
-* **Delete** deletes the environment's _tenant_, and optionally deletes that environment's data (database or files).
+* **Create** - Creates a new tenant, generate credentials and attach them to the new environment.
+* **Delete** - Deletes the environment's tenant, and optionally deletes that environment's data (database or files).
 
 {{% alert color="info" %}}
 If you would like to have full control over how storage (databases and blob file storage buckets) are created and connected to Mendix app environments, the [Secrets Storage](/developerportal/deploy/secret-store-credentials/) option can be used instead of storage plans.
 {{% /alert %}}
 
 {{% alert color="info" %}}
-In this document, _Storage plan_ means a general database or blob file bucket - an external server that can store data (entities in a database, or contents of `System.FileDocument` entities in a blob storage bucket).
+In this document, *storage plan* means a general database or blob file bucket - an external server that can store data (entities in a database, or contents of `System.FileDocument` entities in a blob storage bucket).
 
-To be as specific as possible, this document refers to file storage buckets as _blob file storage buckets_, and to their associated storage plans as _blob file storage plans_.
-To save screen space, the `mxpc-cli` Configuration Tool calls them _Storage Plans_.
+To be as specific as possible, this document refers to file storage buckets as *blob file storage buckets*, and to their associated storage plans as *blob file storage plans*. To save screen space, the `mxpc-cli` Configuration Tool calls them storage plans.
 {{% /alert %}}
 
-### 1.1 Classification of storage plans
+### 1.1 Classification of Storage Plans
 
 There are multiple ways to categorize storage options.
 

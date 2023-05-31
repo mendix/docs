@@ -24,12 +24,24 @@ The `OPTIONS` are described in the table below:
 | -------- | -------- | --------------------------------- |
 | `--help` | `-h`     | Displays the help text and exits. |
 
-`BASE` is common base commit.
+`BASE` is common base version of the App. If the app is version controlled, this is the last common revision of the app -- revision that is present in both branches history.
 
 `MINE` is the version to merge into; this MPR contains the results of the merge.
 
 `THEIRS` is the version to merge changes from.
 
+The image below illustrates the meaning of the parameters:
+
+{{< figure src="/attachments/refguide/general/mx-command-line-tool/merging/mx-merge/merge.png" alt="mx merge" >}}
+
+<span style="color:green">**A"**</span> is MINE -- the current commit you want to merge the changes TO.
+
+<span style="color:orange">**B'**</span> is THEIRS -- the last commit on a branch you want to merge change FROM.
+
+<span style="color:red">**A**</span> is BASE -- the common commit where branches diverged.
+
+In order to merge changes correctly Studio Pro has to compare both A" and B' againt A to see what has been changed on each branch. During the merge [Merge Algorithm](/refguide/merge-algorithm) will try to automatically merge the changes.
+ 
 ## 2 Conflicts
 
 If there are conflicts during the merge, you have to resolve those by opening the app in Studio Pro.

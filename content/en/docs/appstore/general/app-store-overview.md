@@ -264,16 +264,6 @@ When you are developing your app, set the app service's binding keys as [constan
 
 Refer to the documentation on specific app services for how to use the binding keys (for example, see the [Authenticating MindSphere REST Calls](/partners/siemens/mindsphere-app-service/#authenticating) section of *MindSphere IIoT for Makers*).
 
-#### 4.8.2 Usage Dashboard {#usage-dashboard}
-
-This dashboard presents **Subscription Details** specific to the component (for example, **Data Transfer** and **Number of Emails**). 
-
-The **Package Usage** section presents details on the limits of the purchased plan and usage against the total current package. 
-
-In the **Analytics** section, you can gain a visual intepretation of the plan usage.
-
-{{< figure src="/attachments/appstore/general/app-store-overview/usage-dashboard.jpg" >}}
-
 ### 4.9 Company Reviews {#company-reviews}
 
 This page contains reviews of **Your company's content** as well as **Your company's reviews** that users from your company have written of other content.

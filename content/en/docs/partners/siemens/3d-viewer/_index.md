@@ -575,17 +575,7 @@ The sections below describe these tools.
 * **Delete** – select one measurement result, then click **Delete** and the selected measurement result will be removed from the scene
 * **Clear** – clear all the measurement results in the scene
 
-### 5.8 Checking Statistics on the Usage Dashboard {#check-usage}
-
-The **Usage Dashboard** shows the real-time statistics about the usage of an app service. Perform the following steps to check the real-time statistics:
-
-1. Log into the Marketplace.
-2. Go to **My Marketplace**.
-3. On the left navigation menu, click [Company Subscriptions](https://marketplace.mendix.com/link/company/subscriptions). This page gives an overview of all the subscriptions of your organization.
-4. Find **3D Viewer** in the list.
-5. Click **Usage Dashboard** to show the usage details.
-
-### 5.9 Setting Preferences {#set-preferences}
+### 5.8 Setting Preferences {#set-preferences}
 
 You can change the settings of the Preference widget to customize the behavior of the model and set it up to suit your needs.
 

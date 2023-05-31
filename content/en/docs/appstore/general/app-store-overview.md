@@ -69,7 +69,7 @@ The header for a component presents the following details:
     * The best practice is to download a component from the Marketplace functionality built into Studio Pro, because it then downloads directly into Studio Pro (for details on importing downloaded Marketplace content into Studio Pro, see the [Installing Marketplace Content](/appstore/general/app-store-content/#install) section in *Use Marketplace Content in Studio Pro*))
 * The partner icon is applied to components that are supported by a partner:
 
-    {{< figure src="/attachments/appstore/general/app-store-overview/partner.png"  width="50"  >}}
+    {{< figure src="/attachments/appstore/general/app-store-overview/partner.png"  width="25"  >}}
 
     * These components have a **Contact Us** button for setting up your subscription with the partner
     * If you already have an active subscription or trial, click **View status** to go to the [Company Subscriptions](#company-subscriptions) page
@@ -150,7 +150,7 @@ Click the name of the component to go its [component details page](#details).
 
 Click the context menu to access various options for managing your content:
 
-{{< figure src="/attachments/appstore/general/app-store-overview/my-content.png" >}}
+{{< figure src="/attachments/appstore/general/app-store-overview/my-content.png"  width="400"  >}}
 
 * **Manage Drafts** – click this to manage the drafts of the component
     * Only one draft version of a component can exist at a time, so when one draft version is in progress, another draft cannot be initiated
@@ -189,7 +189,7 @@ Click the name of the component to go its [component details page](#details).
 
 Click the context menu to access various options for managing this content:
 
-{{< figure src="/attachments/appstore/general/app-store-overview/saved.png" >}}
+{{< figure src="/attachments/appstore/general/app-store-overview/saved.png"  width="400"  >}}
 
 * **Receive/Stop Email Notifications** – click this to start receiving email notifications or to stop the notifications if you already have them enabled
 * **Unsave** – click this to remove the component from your saved content
@@ -206,7 +206,7 @@ Click the name of the component to go its [component details page](#details).
 
 Click the context menu to access various options for managing this content:
 
-{{< figure src="/attachments/appstore/general/app-store-overview/company-content.png" >}}
+{{< figure src="/attachments/appstore/general/app-store-overview/company-content.png"  width="400"  >}}
 
 The options in this menu are the same as described for the context menu for the [My Content](#my-content) section above. However, the **Edit a Version** and **Unpublish a Version** options are only available for your own versions of company content.
 
@@ -298,7 +298,7 @@ This table breaks down the roles and permissions for content groups:
 
 On this tab, you can assign content to this content group that can only be managed by members of this group. To assign a component to a content group, click **Assign Content** and select a company Marketplace component from the dialog box:
 
-{{< figure src="/attachments/appstore/general/app-store-overview/group-content.png" >}}
+{{< figure src="/attachments/appstore/general/app-store-overview/group-content.png"  width="400"  >}}
 
 {{% alert color="info" %}}
 A component can only be assigned to one content group at a time. If a component is already assigned to another content group, it will not appear in this dialog box.

@@ -17,16 +17,16 @@ For information on the current status of deployment to Mendix for Private Cloud 
 
 #### Portal Improvements
 
-* We have added a new field "Source" in the Environment details and Deployment package details page which shows if the deployment package/environment is created via APIs or via portal.
-* We have now added activity logs when deployment package is uploaded/deleted via API
-* We have now added activity logs when environment is created/deleted via API
+* We have added a new **Source** field to the **Environment Details** and **Deployment Package Details** pages. The field shows if the deployment package or environment was created by using the API or the Portal.
+* Deleting or uploading a deployment package is now logged in the activity logs.
+* Creating or deleting an environment is now logged in the activity logs.
 
 #### Deploy API Improvements
 
-* We have improved the error message when same same cluster/namespace member is invited twice
-* We now allow customers to create environment successfully without providing the plans when secret store is enabled for the namespace
-* We have now made the enableSecretStore field in the create environment as non-mandatory. The field can be added for information purpose.
-* We have fixed the issue where user was not able to create an environment with same id in same application but in different namespace (Ticket 185165)
+* We have improved the error message that is shown when the same cluster or namespace member is invited twice.
+* It is now possible to create an environment without providing the plans when a secret store is enabled for the namespace.
+* When creating an environment, the **enableSecretStore** field is no longer mandatory. The field can be added for information purposes.
+* We have fixed an issue where a user was not able to create an environment with same ID in same application but in a different namespace (Ticket 185165).
 
 ### May 17th, 2023
 

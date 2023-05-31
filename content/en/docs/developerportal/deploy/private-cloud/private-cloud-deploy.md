@@ -245,7 +245,7 @@ There are three additional actions you can take while looking at the deployment 
 * **Expand to view build output** – shows the output from the Mendix build.
 * **Download Package** – allows you to download the deployment package and save it locally.
 * **Delete Package** – deletes the deployment package. You will be asked to confirm this action. If the deployment package is in a locked state, it cannot be deleted.
-* **Source** This field shows if the deployment package is created via the API or the portal. For more information on how to build deployment package via API, check [Build API](/apidocs-mxsdk/apidocs/private-cloud-build-api/) 
+* **Source** - shows if the deployment package has been created by using the API or the Portal. For more information on how to build deployment packages with the API, see [Build API](/apidocs-mxsdk/apidocs/private-cloud-build-api/).
 
 #### 4.1.5 Deploy
 
@@ -371,7 +371,7 @@ The general tab shows information about your running app.
 
 {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-deploy/image22.png" >}}
 
-Most of the information is self-explanatory, but the status information gives you a quick summary of the status of the environment and the app deployed there. The source field shows the source of environment creation. It can be via Portal or via [API](/apidocs-mxsdk/apidocs/private-cloud-deploy-api/)
+Most of the information is self-explanatory, but the status information gives you a quick summary of the status of the environment and the app deployed there. The **Source** field shows how the environment was created - by using the Portal or the [API](/apidocs-mxsdk/apidocs/private-cloud-deploy-api/)
 
 #### 5.1.1 Loaded Deployment Details > Status
 

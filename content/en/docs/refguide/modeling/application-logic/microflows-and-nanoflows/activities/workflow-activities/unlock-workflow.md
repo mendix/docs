@@ -46,11 +46,15 @@ You can open a dialog box to configure this action by clicking the ellipsis (**â
 
 You can also open the dialog box by double-clicking the activity in the microflow or right-clicking the activity and selecting **Properties**.
 
-### 3.1 Workflow {#workflow}
+### 3.1 Input Type {#workflow}
+
+This option allows you to choose between a workflow document (the one that you usually select in the **App Explorer** of your app) and a workflow object provided by the Runtime) to target the workflow you want to unlock. 
+
+### 3.2 Workflow {#workflow}
 
 The workflow that is unlocked by this activity. 
 
-### 3.2 Unpause Instances {#workflow}
+### 3.3 Unpause Instances {#workflow}
 
 With this option, all paused running workflow instances are reverted to their previous state. Workflow instances that are not currently paused are not impacted.
 For more information on workflow state transitions, see the [Workflow State Transitions Upon Locking and Unlocking](/refguide/lock-workflow/#workflow-state-transitions) section in *Lock Workflow*.

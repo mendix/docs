@@ -82,7 +82,7 @@ When importing your model, you might encounter error CE1790 like in this [BERT](
 
 {{< figure src="/attachments/refguide/modeling/integration/ml-kit/ml-kit/edit-model-input-shapes.png" alt="Edit ML model input shape dialog box." >}}
 
-In this case, the ? dimensions should be configured before using the mapping in a [Call ML model](/refguide/call-ml-model/) activity. Once filled, static tensor shapes of an output mapping will be automatically calculated based on configured dimensions of the input entity mappings, like in this [BERT](https://github.com/onnx/models/blob/main/text/machine_comprehension/bert-squad/model/bertsquad-12-int8.onnx) example below.
+In this case, configure the **?** dimensions before using the mapping in a [Call ML model](/refguide/call-ml-model/) activity. Once filled in, static tensor shapes of an output mapping will be automatically calculated based on configured dimensions of the input entity mappings, like in the [BERT](https://github.com/onnx/models/blob/main/text/machine_comprehension/bert-squad/model/bertsquad-12-int8.onnx) example below.
 
 The editor for the BERT model is below:
 

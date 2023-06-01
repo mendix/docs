@@ -40,10 +40,10 @@ Mendix Studio Pro comes with the mx command-line tool. The executable *mx.exe* f
 | create-solution-package | Export a solution package |
 | create-module-package | Export a module package |
 
-| **Merging and diffing**  ||
+| [**Merging and diffing**](/refguide/mx-command-line-tool/merge)  ||
 | - | - |
-| merge | Merge mpr files |
-| diff | Diff mpr files |
+| [merge](/refguide/mx-command-line-tool/mx-merge) | Merge mpr files |
+| [diff](/refguide/mx-command-line-tool/mx-diff) | Diff mpr files |
 
 ## 4 mx Tool Options
 

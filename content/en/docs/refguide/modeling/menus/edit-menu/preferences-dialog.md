@@ -186,4 +186,3 @@ Default: *disabled*
 ## 9 Read More
 
 * [Upload to Version Control Server](/refguide/upload-to-version-control-dialog/)
-* [Working with an On-Premises Version Control Server](/refguide/on-premises-svn/)

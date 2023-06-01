@@ -8,7 +8,7 @@ tags: ["Studio Pro", "changes", "changes pane"]
 
 ## 1 Introduction 
 
-For version control enabled apps (apps with Team Server or other SVN servers), the **Changes** pane shows the local changes to the app since the last commit. You can commit changes, update to the latest revision, and view the history from it. 
+For version control enabled apps (apps with Team Server or other Git servers), the **Changes** pane shows the local changes to the app since the last commit. You can commit changes, update to the latest revision, and view the history from it. 
 
 This pane consists of the following:
 
@@ -27,7 +27,7 @@ Buttons allow you to perform the following actions:
 * **Back** – goes back up one level; at the top level, this button is disabled
 * **Go to** – opens a zoomed-in level and opens up the selected document 
 * **Tasks** – allows you to perform specific actions such as reverting the change to the latest commit, or solving conflicts
-* **Update** – retrieves latest changes from the repository (for more information on the update concept, see the [Update](/refguide/version-control/#update) section in *Version Control*) 
+* **Pull** – retrieves latest changes from the repository (for more information on the pull concept, see the [Pull](/refguide/version-control/#pull) section in *Version Control*) 
 * **Commit** – commits your changes to the repository and starts a new revision (for more information on the commit concept, see the [Commit](/refguide/version-control/#commit) section in *Version Control*)
 * **History** – opens the **History** dialog box that shows the changes made on the current development line of the app (for more information on history, see [History](/refguide/history-dialog/))
 

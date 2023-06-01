@@ -12,21 +12,15 @@ In the **Version Control** menu, you can view and/or manipulate settings that ar
 
 {{< figure src="/attachments/refguide/modeling/menus/version-control-menu/version-control-menu.png" alt="Version Control Menu" >}}
 
-## 2 Update/Pull
+## 2 Pull
 
-The **Update** (for SVN) or **Pull** (for Git) option updates the local app to the latest revision that was committed to the version control server.
+The **Pull** option updates the local app to the latest revision that was committed to the version control server.
 
 ## 3 Commit
 
 The **Commit** option commits all local changes made to the app since the previous commit to the version control server. For more information, see [Commit](/refguide/commit-dialog/).
 
 ## 4 Push
-
-{{% alert color="info" %}}
-
-Push is only available in Git. In SVN, changes are automatically pushed together with the commit. 
-
-{{% /alert %}}
 
 The **Push** option sends your local changes to the version control server. For more information, see the [Commit/Push](/refguide/version-control/#commit) section in *Version Control*.
 

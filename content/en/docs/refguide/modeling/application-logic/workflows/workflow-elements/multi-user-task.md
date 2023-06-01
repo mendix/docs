@@ -129,7 +129,7 @@ The fallback outcome should not be an option a user can select on the task page.
 {{% /alert %}}
 
 {{% alert color="info" %}}
-The completion rule is evaluated after each user selects an outcome. Therefore， it is possible that a multi-user task completes with a final outcome before all required users have completed their task. For example, When 5 users need to review a contract (`Approve`, `Reject`) and the first 2 users are not in agreement (one selects `Approve` and the other one selects `Reject`), this multi-user task will be completed with the **Fallback outcome**. The input from the other users will not change the final outcome anymore. The task will no longer appear in their inbox.
+The completion rule is evaluated after each user selects an outcome. Therefore，it is possible that a multi-user task completes with a final outcome before all required users have completed their task. For example, when 5 users need to review a contract (`Approve`, `Reject`) and the first 2 users are not in agreement (one selects `Approve` and the other one selects `Reject`), this multi-user task will be completed with the **Fallback outcome**. The input from the other users will not change the final outcome anymore. The task will no longer appear in their inbox.
 {{% /alert %}}
 
 #### 2.4.2 Veto {#veto}

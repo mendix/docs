@@ -126,6 +126,6 @@ You can now  click the **Play** button in the Studio Pro top bar to run your app
 
 ## 4 Read More 
 
-* [MxAssist Performance Bot](/refguide/mx-assist-performance-bot/)
+* [MxAssist Best Practice Bot](/refguide/mx-assist-performance-bot/)
 * [MxAssist Logic Bot](/refguide/mx-assist-logic-bot/)
 * [Validation Rules](/refguide/validation-rules/)     

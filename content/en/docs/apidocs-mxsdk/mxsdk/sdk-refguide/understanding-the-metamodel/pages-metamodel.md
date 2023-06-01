@@ -49,7 +49,7 @@ If a layout has a master layout, it may not directly specify any widgets, but us
 | Studio Pro Guide                     | Model SDK API docs                                                                                           |
 |--------------------------------------|--------------------------------------------------------------------------------------------------------------|
 | [Page](/refguide/page/)              | [Page](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/pages.Page.html)                               |
-| [Placeholder](/refguide/placeholder) | [Placeholder](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/pages.Placeholder.html)                 |
+| [Placeholder](/refguide/placeholder/) | [Placeholder](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/pages.Placeholder.html)                 |
 | [Layout](/refguide/layout/)          | [Layout](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/pages.Layout.html)                           |
 |                                      | [LayoutCall](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/pages.LayoutCall.html)                   |
 |                                      | [LayoutCallArgument](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/pages.LayoutCallArgument.html)   |
@@ -105,7 +105,7 @@ Only one TabPage is visible at the same time, allowing to show a subset of widge
 |-------------------------------------------------|------------------------------------------------------------------------------------------------------------------|
 | [Container](/refguide/container/)               | [DivContainer](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/pages.DivContainer.html)                   |
 | [Group Box](/refguide/group-box/)               | [GroupBox](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/pages.GroupBox.html)                           |
-| [Layout Grid](/refguide/layout-grid)            | [LayoutGrid](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/pages.LayoutGrid.html)                       |
+| [Layout Grid](/refguide/layout-grid/)            | [LayoutGrid](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/pages.LayoutGrid.html)                       |
 |                                                 | [LayoutGridRow](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/pages.LayoutGridRow.html)                 |
 |                                                 | [LayoutGridColumn](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/pages.LayoutGridColumn.html)           |
 | [Scroll Container](/refguide/scroll-container/) | [ScrollContainer](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/pages.ScrollContainer.html)             |
@@ -228,7 +228,7 @@ The data sources can be divided by how their retrieve their data:
 - Querying [the database](/refguide/database-source/), possibly with an [XPath constraint](/refguide/xpath-source/)
 - By [context](/refguide/context-source/) from a surrounding data widget or a page (or snippet) parameter
 - By [association](/refguide/association-source/) to an object from a surrounding data widget
-- By a [microflow](/refguide/microflow-source/) or [nanoflow](/refguide/nanoflow-soource/)
+- By a [microflow](/refguide/microflow-source/) or [nanoflow](/refguide/nanoflow-source/)
 - By [listening to a list view or grid widget](/refguide/listen-to-grid-source/), showing the data of the selected object 
   of the target widget.
 

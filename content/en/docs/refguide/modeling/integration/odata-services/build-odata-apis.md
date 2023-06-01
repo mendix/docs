@@ -370,6 +370,7 @@ You may not want to directly publish APIs for your persistable entities because 
 * Your data is not stored in the database of your app, but in a third-party data source
 
 There are two ways to take an API-first approach, as explained in the [API-First vs. API Design-First: A Comprehensive Guide](https://blog.stoplight.io/api-first-vs.-api-design-first-a-comprehensive-guide):
+
 1. You should always start by defining a contract, like an OpenAPI document.
 2. You should set the use case and developer experience of using your APIs first.
 
@@ -387,15 +388,15 @@ In this example, you can expose a single REST resource that combines data from t
 
 {{< figure src="/attachments/refguide/modeling/integration/build-odata-apis/expose-single-resource-domain-model.png" >}} 
 
-1.  Add the `CustomerHomeAddress` entity as a resource to the OData service:
+1. Add the `CustomerHomeAddress` entity as a resource to the OData service:
 
      {{< figure src="/attachments/refguide/modeling/integration/build-odata-apis/customer-home-address-npe.png" >}} 
 
-2.  You can use an OQL Dataset to define the query to fetch this information from your entities:
+2. You can use an OQL Dataset to define the query to fetch this information from your entities:
 
      {{< figure src="/attachments/refguide/modeling/integration/build-odata-apis/oql-database.png" >}} 
 
-3.  Define a microflow that will fetch the correct data when a user does a GET on the CustomerHomeAddress resource:
+3. Define a microflow that will fetch the correct data when a user does a GET on the CustomerHomeAddress resource:
 
      {{< figure src="/attachments/refguide/modeling/integration/build-odata-apis/get-microflow.png" >}} 
 

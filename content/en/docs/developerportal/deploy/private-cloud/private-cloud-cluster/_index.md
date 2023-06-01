@@ -1586,10 +1586,13 @@ spec:
 You can set `runtimeLogFormatType` to one of the following values:
 
 * **plain**: – default option, produces plaintext logs in the following format:
+
     ```
     2023-03-21 14:36:14.607 INFO - M2EE: Added admin request handler '/prometheus' with servlet class 'com.mendix.metrics.prometheus.PrometheusServlet'
     ```
+
 * **json**: – produces JSON logs in the following format:
+
     ```json
     {"node":"M2EE","level":"INFO","message":"Added admin request handler '/prometheus' with servlet class 'com.mendix.metrics.prometheus.PrometheusServlet'","timestamp":1679409374607}
     ```

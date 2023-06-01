@@ -47,7 +47,6 @@ This is the text displayed when the number of characters is higher than the maxi
 
 This type of message can also occur when a loaded or stored value exceeds the character limit
 
-
 ### Maximum Length
 
 This property indicates the maximum number of characters that can be typed in this text box.

@@ -162,6 +162,7 @@ You can create and use templates for a specific email account.
 #### 4.3.1 Creating an Email Template {#create-template}
 
 You can create email templates in two ways:
+
 1. During runtime, click on the **Email Templates** button in the upper right and follow the wizard.
 2. During design time, developers can use the **SNIP_EmailTemplate_Overview** snippet located in **Private** > **Snippets**. Use the snippet on a page and save it on a button click.
 

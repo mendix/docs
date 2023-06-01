@@ -353,7 +353,7 @@ For more information, see [GetPropertyValueHistory](https://docs.aws.amazon.com/
 | Name | Connected to | Multiplicity | Description |
 | --- | --- | --- | --- |
 | `GetPropertyValueHistoryRequest_InterpolationParameters` | `AWSTwinMakerConnector.InterpolationParameters` | OneToMany | |
-| `GetPropertyValueHistoryRequest_EntityGetPropertyValueHistoryRequestPropertyFilter` |` AWSTwinMakerConnector.EntityGetPropertyValueHistoryRequestPropertyFilter` | ManyToMany | |
+| `GetPropertyValueHistoryRequest_EntityGetPropertyValueHistoryRequestPropertyFilter` |`AWSTwinMakerConnector.EntityGetPropertyValueHistoryRequestPropertyFilter` | ManyToMany | |
 | `AbstractQuery_GetPropertyValueHistoryRequest` | `AWSTwinMakerConnector.GetPropertyValueHistoryRequest` | OneToOne | |
 | `GetPropertyValueHistoryRequest_GetPropertyValueHistoryRequestSelectedProperty` | `AWSTwinMakerConnector.GetPropertyValueHistoryRequestSelectedProperty` | ManyToMany | |
 
@@ -2154,7 +2154,6 @@ The available interpolation types for interpolating results. For now, only one i
 | `DESCENDING` | DESCENDING |
 | `UNKNOWN_TO_SDK_VERSION` | UNKNOWN_TO_SDK_VERSION |
 
-
 ### 4.3 Activities {#activities}
 
 Activities define the actions that are executed in a microflow or a nanoflow.
@@ -2192,6 +2191,7 @@ For more information, see [GetWorkspace](https://docs.aws.amazon.com/iot-twinmak
 ##### 4.3.2.2 Return type
 
 This activity returns an `AWSTwinMakerConnector.GetWorkspaceResponse` entity.
+
 #### 4.3.3 Microflow GetEntity
 
 Retrieves information about a TwinMaker entity.
@@ -2329,4 +2329,3 @@ For more information, see [ListScenes](https://docs.aws.amazon.com/iot-twinmaker
 ##### 4.3.10.2 Return type
 
 This activity returns an `AWSTwinMakerConnector.ListScenesResponse` entity.
-

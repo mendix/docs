@@ -73,7 +73,6 @@ The following custom settings can be configured:
 | <a id="EnableFileDocumentCaching" href="#EnableFileDocumentCaching">EnableFileDocumentCaching</a> | Defines whether file documents should be cached. Only enable this if you are sure that the file documents will not contain sensitive information. Images are always cached. | false |
 | <a id="ObjectManagementStrictChangeBehavior" href="#ObjectManagementStrictChangeBehavior">ObjectManagement.<wbr>StrictChangeBehavior</a> | Defines the behavior when changing values of Enums and Calculated attributes.<br/>When set to true, setting an invalid value for an Enum attribute and/or setting a value for a Calculated attribute will result in an InvalidEnumerationValueException and/or ReadOnlyAttributeException respectively.<br/>When set to false, changes to the values of Enums and/or Calculated attributes will be allowed.<br/>We plan to remove this setting in Mendix version 11, after which, an exception will always be raised when setting an invalid value. | true |
 
-
 ## 3 Log File Settings
 
 The settings below influence the behavior of the log files. These settings can only be used on premises. In the cloud, these settings do not change any behavior.

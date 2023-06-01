@@ -78,6 +78,10 @@ Here is an example containing a column with **Yes, hidden by default** in **Desi
 
 ## 3 Pagination
 
+{{% alert color="info" %}}
+This widget doesn't support system texts, meaning is not possible to translate its content to another language.
+{{% /alert %}}
+
 In the new data grid we offer two types of pagination: **Paging Buttons** and **Virtual Scrolling**.
 
 ### 3.1 Paging Buttons

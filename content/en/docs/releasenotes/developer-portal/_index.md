@@ -17,6 +17,12 @@ To see the current status of the Mendix Developer Portal and Control Center, see
 
 ## 2023
 
+### June 1st, 2023
+
+#### Improvements
+
+* We improved the user experience of the Git migration. In case of any issues, we now provide information about why your project could not be successfully migrated from Subversion to Git and which specific branches might be the reason.
+
 ### May 18th, 2023
 
 #### Improvements

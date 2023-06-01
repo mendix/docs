@@ -11,6 +11,13 @@ These release notes cover changes made to the [Mendix Data Hub Catalog](/data-hu
 
 ## 2023
 
+### June 1st, 2023
+
+#### Fixes
+
+* We fixed an issue where pagination links in Search API responses were not correctly encoded.
+* We fixed an issue where the page was flickering when selecting a data set in the search results.
+
 ### May 25th, 2023
 
 #### Fixes

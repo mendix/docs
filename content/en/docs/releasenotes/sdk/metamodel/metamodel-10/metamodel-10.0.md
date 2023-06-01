@@ -18,9 +18,9 @@ weight: 100
 
 * We introduced this element for calling a REST operation action.
 
-#### ClearFromClientAction (Element)
+#### ClearFromClientAction, NotifyWorkflowAction (Elements)
 
-* We introduced this element. 
+* We introduced these elements. 
 
 #### LockWorkflowAction (Element)
 
@@ -31,10 +31,6 @@ weight: 100
 
 * We introduced the `workflowSelection` property. 
 * We deleted the `workflow` property. 
-
-#### NotifyWorkflowAction (Element)
-
-* We introduced this element. 
 
 ### Projects
 
@@ -86,7 +82,7 @@ weight: 100
 
 #### NavigationDocument (ModelUnit)
 
-* We deleted the `reports` and `reportParameters` property. 
+* We deleted the `reports` and `reportParameters` properties. 
 
 ### Pages
 
@@ -111,7 +107,7 @@ weight: 100
 
 #### ReportParameter (Element)
 
-* We deleted the `parameterTypeRuntime` and `reportId` property. 
+* We deleted the `parameterTypeRuntime` and `reportId` properties. 
 
 ### Workflows
 

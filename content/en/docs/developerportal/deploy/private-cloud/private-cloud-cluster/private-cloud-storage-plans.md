@@ -34,25 +34,27 @@ To be as specific as possible, this document refers to file storage buckets as *
 
 There are multiple ways to categorize storage options.
 
-<text class="badge badge-pill badge-primary">Automated</text> <text class="badge badge-pill badge-primary">Basic</text>
+#### 1.1.1 Automated Storage Options
 
-**Automated** provisioners can communicate with an API to create an isolated tenant for an environment.
-For example, the `minio` provisioner will automatically create a bucket, user and policy for every new environment - so that each environment would get its own user and bucket.
-In most cases, automated provisioners require some prerequisites - an existing service (such as a Postgres or MinIO server) and admin credentials - to create or delete tenants.
-This way, the Mendix Operator can isolate app environment from one another.
+Automated provisioners can communicate with an API to create an isolated tenant for an environment. For example, the *minio* provisioner will automatically create a bucket, user and policy for every new environment. In this way, each environment gets its own user and bucket, and the Mendix Operator can isolate app environments from one another.
 
-**Basic** provisioners do not communicate with any APIs, and just generate and attach existing credentials to a new environment.
-For example, a basic provisioner like Ceph will just provide the same credentials to every app environment (with an option to let each environment use its own bucket prefix).
-Basic provisioners don't provide isolation between environments, but in some cases can provide more control over how storage is managed.
-For example, this option can be used to attach a pre-created S3 bucket or on-premise SQL Server database to a new environment.
+In most cases, automated provisioners require some prerequisites to create or delete tenants. This usually means an existing service (such as a Postgres or MinIO server) and admin credentials.
 
-<text class="badge badge-pill badge-primary">On-Demand</text> <text class="badge badge-pill badge-primary">Dedicated</text>
+#### 1.1.2 Basic Storage Options
 
-**On-Demand** storage plans can be used by any number of environments. These provisioners can provide a database/bucket on-demand to any new environment.
+Basic provisioners do not communicate with any APIs. Instead, they generate and attach existing credentials to a new environment. For example, a basic provisioner like Ceph provides the same credentials to every app environment (with an option to let each environment use its own bucket prefix).
 
-**Dedicated** storage plans can only be used by one environment at a time. If a storage plan is marked as dedicated and is already in use by an environment, new environments cannot use it.
+Basic provisioners do not provide isolation between environments, but in some cases can provide more control over how storage is managed. For example, this option can be used to attach a pre-created S3 bucket or on-premise SQL Server database to a new environment.
 
-Most provisioners have need prerequisites to be created manually. Typically this would be a server (database or blob file storage bucket) and/or credentials to access or manage it.
+#### 1.1.3 On-Demand Options
+
+On-demand storage plans can be used by any number of environments. These provisioners can provide a database and bucket on demand to any new environment.
+
+#### 1.1.4 Dedicated Options
+
+Dedicated storage plans can only be used by one environment at a time. If a storage plan is marked as dedicated and is already in use by an environment, new environments cannot use it.
+
+Most provisioners have require some prerequisites to be created manually. Typically this would be a server (database or blob file storage bucket) and credentials to access or manage it.
 
 ### 1.2 How to configure a storage plan{#typical-workflow}
 

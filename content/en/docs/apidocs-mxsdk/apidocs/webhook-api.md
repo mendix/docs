@@ -25,7 +25,7 @@ Authentication for the Webhook API uses a personal access token (PAT).
 
 ### 2.1 Generating a PAT
 
-To generate a PAT, see the [Personal Access Tokens](/developerportal/community-tools/mendix-profile/#pat) section of *Mendix Profile*.
+To generate a PAT, see the [Personal Access Tokens](/developerportal/community-tools/mendix-profile/#pat) section in *Mendix Profile*.
 
 Select the following as scopes:
 
@@ -51,7 +51,7 @@ To authenticate calls when using the Open API specification below, click **Autho
 
 ### 3.1 Using the API to Create and Update a Webhook Endpoint
 
-The following procedure will create a webhook endpoint and update the webhook endpoint.
+The following procedure will create a webhook endpoint and update the webhook endpoint:
 
 1. Set up your authentication PAT.
 

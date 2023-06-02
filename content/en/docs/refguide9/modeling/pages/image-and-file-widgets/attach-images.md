@@ -61,7 +61,7 @@ Do the following:
 
 6. In the **Select Entity** dialog box, select **Report** and confirm your choice:
 
-    {< figure src="/attachments/refguide9/modeling/pages/image-and-file-widgets/attach-images/receipt-report-association.png"   >}}
+    {{< figure src="/attachments/refguide9/modeling/pages/image-and-file-widgets/attach-images/receipt-report-association.png"   >}}
 
 7. Click **OK** to close the **Properties** dialog box.
 

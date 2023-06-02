@@ -13,7 +13,7 @@ This chapter describes the uninstallation of the APM tool. The optional in this 
 Did you commit your work to the team server? And did you make a database backup?
 {{< figure src="/attachments/appstore/partner-solutions/apd/ig/ig-one/ig-one-uninstall-steps/Delete_Module.png" >}}
 
-If you don't have installed an SVN client like Tortoise SVN make a copy of the widgets folder in your project.
+At this step, either make a local copy of the widgets folder in your app or have a third party version control client installed such as TortoiseGit. You can use this to revert accidental changes in the next step.
 
 ## 3 Delete Module APMAgent
 

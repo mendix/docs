@@ -138,3 +138,7 @@ For full details on this role, see the [Technical Contact](/developerportal/coll
 {{% alert color="info" %}}
 Mendix Admins can also re-assign the Technical Contact role to another team member using the Deploy API Version 3. For more information, see [the Deploy API – Version 3](/apidocs-mxsdk/apidocs/deploy-api-3/).
 {{% /alert %}}
+
+## 6 Read More
+
+* [Licensing Mendix Cloud Apps](/developerportal/deploy/licensing-apps/)

@@ -26,7 +26,7 @@ Authentication for the Deploy API v3 uses a personal access token (PAT).
 
 ### 2.1 Generating a PAT
 
-To generate a PAT, see the [Personal Access Tokens](/developerportal/community-tools/mendix-profile/#pat) section of *Mendix Profile*.
+To generate a PAT, see the [Personal Access Tokens](/developerportal/community-tools/mendix-profile/#pat) section in *Mendix Profile*.
 
 Select the following as **Deployment Mendix Cloud** scopes:
 
@@ -58,6 +58,10 @@ The {appId} in version 3 is retrieved as the {ProjectId} from the version 1 API.
 
 The following steps will change the Technical Contact of the app identified by the UUID {appId}.
 
+{{% alert color="info" %}}
+Only Mendix Admins of the company and the current Technical Contact can re-assign the Technical Contact  role to another team member.
+{{% /alert %}}
+
 1. Set up your authentication PAT. You must have permission to change the Technical Contact of the app.
 1. Create a request body containing the userId of the new Technical Contact. For example, to make jane.doe@domain.tld the new Technical Contact, provide a body as shown below:
 
@@ -79,7 +83,10 @@ The following steps will change the Technical Contact of the app identified by t
 
 The following steps will change the permissions of a team member to an environment of the app identified by the UUID {appId}.
 
-1. Set up your authentication PAT. You must have permission to **Manage Permissions** for the app.
+1.  Set up your authentication PAT. You must have permission to **Manage Permissions** for the app.
+
+    {{% alert color="info" %}}Only Mendix Admins of the company, the Technical Contact of the app, and the app team members with specific permissions to manage permissions can change the access permissions of team members. {{% /alert %}}
+
 1. Call `GET /apps/{appId}/environments/{environmentId}/permissions` to get the existing Team Members' permissions for this {environmentId} of this {appId}. For example:
 
     ```http {linenos=false}

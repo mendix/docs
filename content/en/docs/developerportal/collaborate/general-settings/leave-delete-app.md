@@ -14,7 +14,7 @@ aliases:
 
 You can create a new app in one click and leave the app just as easily when you are not using it anymore. However, if you are thinking about leaving an app, consider carefully whether you may want to use that app later for any reason.
 
-**This how-to will teach you how to do the following as a Scrum Master:**
+This how-to will teach you how to do the following as a Scrum Master:
 
 * Leave an app
 * Delete an app

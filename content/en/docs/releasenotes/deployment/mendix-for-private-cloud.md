@@ -13,6 +13,12 @@ For information on the current status of deployment to Mendix for Private Cloud 
 
 ## 2023
 
+### June 5th, 2023
+
+#### Portal Improvements
+
+* We have fixed the issue with namespace/cluster invite where a member was not able to accept the invite (Ticket 187296)
+
 ### June 1st, 2023
 
 #### Portal Improvements

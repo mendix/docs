@@ -48,7 +48,7 @@ Defines the amount of data shown for each page or the limit to be presented when
 #### 2.3.2 Pagination
 
 {{% alert color="info" %}}
-This widget doesn't support system texts, meaning is not possible to translate its content to another language.
+This widget does not support [system texts](/refguide/system-texts/), meaning is not possible to translate its content to another language.
 {{% /alert %}}
 
 You can choose between paging buttons (button being presented below or above the grid) or virtual scrolling (mechanism that automatically loads data when the users reaches the bottom of the scroll bar). 

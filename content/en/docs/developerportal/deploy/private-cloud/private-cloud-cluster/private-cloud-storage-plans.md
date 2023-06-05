@@ -56,19 +56,19 @@ Dedicated storage plans can only be used by one environment at a time. If a stor
 
 Most provisioners have require some prerequisites to be created manually. Typically this would be a server (database or blob file storage bucket) and credentials to access or manage it.
 
-### 1.2 Creating a Storage Plan {#typical-workflow}
+### 1.2 Creating and Testing a Storage Plan {#typical-workflow}
+
+As a best practice, test your new storage plan by creating a new environment and confirming that it is working as expected. In some cases, even though the Mendix Operator was able to create a database and bucket, an environment may fail to connect because of firewalls, Kubernetes security policies, or other reasons.
 
 To create a new storage plan, perform the following steps:
 
 1. Run the `mxpc-cli` configuration tool and fill in all the necessary details for the storage plan or plans.
-2. Apply the changes in the `mxpc-cli` Configuration Tool and keep it open.
-3. Try to create a new test environment using the new Storage Plan.
-4. If the environment was successfully created and able to start, the Storage Plan is ready to use.
-5. Otherwise, check the error message displayed in the Cloud Portal and the logs from `{environment-name}-database` and `{environment-name}-file` pods.
-6. If necessary, update the Storage Plan configuration in `mxpc-cli` by switching to the `Database Plan` or `Storage Plan` tabs, and apply the configuration.
-7. To retry (re-test) the Storage Plan, delete the failed `{environment-name}-database` or `{environment-name}-file` pod.
-
-As a best practice, test your new storage plan by creating a new environment and confirming that it is working as expected. In some cases, even though the Mendix Operator was able to create a database and bucket, an environment may fail to connect because of firewalls, Kubernetes security policies, or other reasons.
+2. Apply the changes but keep the `mxpc-cli` configuration tool open.
+3. Try to create a new test environment using the new storage plan.
+    If the environment is successfully created and able to start, the storage plan is ready to use.
+4. If the environment cannot be successfully created or started, check the error message displayed in the Cloud Portal and the logs from the `{environment-name}-database` and `{environment-name}-file` pods.
+5. If necessary, update the storage plan configuration in `mxpc-cli` by switching to the **Database Plan** or **Storage Plan** tabs, and apply the configuration.
+6. Delete the failed `{environment-name}-database` or `{environment-name}-file` pod, and then test the storage plan again.
 
 ### 1.3 Limitations
 

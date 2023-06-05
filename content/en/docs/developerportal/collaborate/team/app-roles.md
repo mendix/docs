@@ -70,10 +70,10 @@ When a Mendix app is on premises, it is running on the customer's own infrastruc
 ### 4.3 Changing the Technical Contact {#change-technical-contact}
 
 {{% alert color="info" %}}
-It is currently not possible to have more than one Technical Contact for an app.
+It is currently not possible to have more than one Technical Contact for an app. 
 {{% /alert %}}
 
-If you are the current Technical Contact for an app, you can assign the Technical Contact role to another team member. To do so, perform the following steps:
+If you are the current Technical Contact for an app, you can give away your Technical Contact role to another team member as follows:
 
 1. Navigate to **Deploy** > **Environments**.
 2. Select the [Permissions](/developerportal/deploy/environments/#permissions) tab.
@@ -82,5 +82,5 @@ If you are the current Technical Contact for an app, you can assign the Technica
 The Technical Contact will be changed for all environments.
 
 {{% alert color="info" %}}
-Mendix Admins can also re-assign the Technical Contact role to another team member using the Deploy API Version 3. For more information, see [the Deploy API – Version 3](/apidocs-mxsdk/apidocs/deploy-api-3/).
+Mendix Admins can also give the Technical Contact role to another team member using the Deploy API Version 3. For more information, see [the Deploy API – Version 3](/apidocs-mxsdk/apidocs/deploy-api-3/).
 {{% /alert %}}

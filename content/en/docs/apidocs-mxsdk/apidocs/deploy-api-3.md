@@ -59,7 +59,7 @@ The {appId} in version 3 is retrieved as the {ProjectId} from the version 1 API.
 The following steps will change the Technical Contact of the app identified by the UUID {appId}.
 
 {{% alert color="info" %}}
-Only Mendix Admins of the company and the current Technical Contact can re-assign the Technical Contact  role to another team member.
+Only Mendix Admins of the company and the current Technical Contact can give the Technical Contact role to another team member. It is currently not possible to have more than one Technical Contact for an app.
 {{% /alert %}}
 
 1. Set up your authentication PAT. You must have permission to change the Technical Contact of the app.
@@ -81,11 +81,11 @@ Only Mendix Admins of the company and the current Technical Contact can re-assig
 
 ### 3.2 Using the API to Change App Team Members' Access Permissions to an Environment
 
-The following steps will change the permissions of a team member to an environment of the app identified by the UUID {appId}.
+The following steps will change the permissions of a team member to an environment of the app identified by the UUID {appId}:
+
+{{% alert color="info" %}}Only the following people can change the access permissions of team members: Mendix Admins of the company, the Technical Contact of the app, and the app team members with specific permissions to manage permissions.{{% /alert %}}
 
 1.  Set up your authentication PAT. You must have permission to **Manage Permissions** for the app.
-
-    {{% alert color="info" %}}Only Mendix Admins of the company, the Technical Contact of the app, and the app team members with specific permissions to manage permissions can change the access permissions of team members. {{% /alert %}}
 
 1. Call `GET /apps/{appId}/environments/{environmentId}/permissions` to get the existing Team Members' permissions for this {environmentId} of this {appId}. For example:
 

@@ -15,7 +15,6 @@ In the domain model of the System module, there are several workflow engine-rela
 
 {{< figure src="/attachments/refguide/modeling/application-logic/workflows/workflow-engine/workflow-data.png" >}}
 
-
 These entities are populated by the Workflow Engine, some on the start of the app, others – while running workflows. The entities can be divided into the following groups:
 
 * [Definition-related entities](#definition) (populated when the app starts)
@@ -23,7 +22,6 @@ These entities are populated by the Workflow Engine, some on the start of the ap
 * [Action-related entities](#action) (that fulfill a specific action)
 
 The workflow engine stores the state of the workflow instances in the database. It also uses a couple of internal, hidden entities to store the details about the workflow execution progress. These entities are not described in this document, but can be seen when exploring the tables in the database. These entities are hidden intentionally  as they should not be used outside the workflow engine, for example, to be displayed in pages or used in microflows. 
-
 
 ### 2.1 Definition-Related Entities {#definition}
 
@@ -48,7 +46,7 @@ Security-wise, only users with the **Administrator** role can access definition-
 
 The Workflow Engine stores execution data in regular entities. The purpose of these entities is to store the state during workflow execution. Only users who are involved in the workflow process have access to these entities. The main purpose of the workflow data is to handle the tasks and process execution and it is unaware of the business context it is running in. All workflow data is aimed at supporting the workflow engine. Business context can be added by a developer via the context entity.
 
-####  2.2.1 System.Workflow
+#### 2.2.1 System.Workflow
 
 As soon as the workflow is initiated (using the **Call workflow** activity in microflows, a client action, or using the corresponding Java API), an object is created in this entity. The **Name** and **Description** attributes are populated based on the [properties defined in the workflow](/refguide/workflow-properties/), the **DueDate** attribute – based on the configured [Due date workflow property](/refguide/workflow-properties/#due-date). 
 The **StartTime** attribute is set to the current time, the **State** attribute is set to **InProgress**. The **System.Workflow_WorkflowDefinition** association is set to the corresponding **System.WorfklowDefinition** object. The **System.owner** is set to the user initiating the workflow.
@@ -91,7 +89,6 @@ When a user selects an outcome for a user task, this information is stored as an
 
 Security-wise, users with the Administrator role can access all instances. Other users can access them only when they are an assigned or a targeted user of the associated user task. If other users need to access the System.Workflow data, the app developer needs to set state-change events in [App Settings](/refguide/app-settings/#events) or in [workflow properties](/refguide/workflow-properties/#events) to copy the data to other entities with more specific security constraints. 
 
-
 ### 2.3 Action-Related Entities {#action}
 
 Action-related entities are entities that refer to jumping to different activities in a workflow. For more information, see [Jumping to Different Activities in a Workflow](/refguide/jump-to/).
@@ -122,12 +119,12 @@ Only workflow instances with the **State** attribute being **InProgress** are ex
 
 The Workflow Engine queues workflow instances for execution automatically. This happens at the following stages:
 
-- After workflow instantiation
-- After workflow-initiated microflow execution finishes (either successfully or failing)
-- After an outcome has been selected for a user task
-- After a sub-workflow finishes (either successfully, failing, or being aborted)
-- After redeployment of a change in the workflow model
-- After a workflow activity in microflows (such as [Change workflow state](/refguide/change-workflow-state/) or [Generate jump-to options](/refguide/generate-jump-to-options/))
+* After workflow instantiation
+* After workflow-initiated microflow execution finishes (either successfully or failing)
+* After an outcome has been selected for a user task
+* After a sub-workflow finishes (either successfully, failing, or being aborted)
+* After redeployment of a change in the workflow model
+* After a workflow activity in microflows (such as [Change workflow state](/refguide/change-workflow-state/) or [Generate jump-to options](/refguide/generate-jump-to-options/))
 
 #### 3.2.2 Task Queues
 
@@ -146,11 +143,11 @@ Failed workflows can be retried using the **Retry workflow** option of the [Chan
 The [Jump activity](/refguide/jump-activity/) allows the workflow to jump to another activity of the same workflow. Jumping back to an earlier activity can create endless loops if defined incorrectly. To prevent endless loops occupying the Workflow Engine, the Workflow Engine executes only a limited amount of activities in the workflow (default number is 50, but it can be changed using the custom Runtime Server setting `com.mendix.workflow.MaxActivityExecutions`). When the limit is reached, the workflow execution stops and the workflow instance is queued for re-execution (which means that it is put at the end of the queue). This queuing mechanism allows other workflow instances to proceed. 
 
 #### 3.2.5 Workflow States {#workflow-states}
+
 The workflow states are stored in the **State** attribute of the **System.Workflow** entity. This attribute uses the System.WorkflowState enumeration to have a fixed set of states. These states represent different technical states a workflow instance can have. 
 In the picture below, you see two yellow boxes with outgoing and incoming arrows. The yellow boxes are not concrete states, they mean that any state inside the box can transition following the outgoing arrow and can transition back into the previous state by following the incoming arrow.
 
 {{< figure src="/attachments/refguide/modeling/application-logic/workflows/workflow-engine/workflow-states.png" >}}
-
 
 In the table below, you can find description of these states and allowed actions for each state:
 
@@ -227,4 +224,3 @@ Another solution may be to use a microflow for user targeting. In case no users 
 Other reasons for the user task to fail are failures during execution of the on-created event or during execution of the **Change workflow state** microflow. Depending on the error description the administrator may be able to fix the cause and then retry the workflow.
 
 It is advised to not leave failed user tasks as failed in the system. Either fix the user tasks and retry the workflow or abort the workflow. This is important to prevent the **System.WorkflowUserTask** entity table from growing as it will slow down the Task Inbox.
-

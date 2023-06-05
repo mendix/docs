@@ -40,4 +40,3 @@ This merge scenario allows you to merge a complete feature branch line to the ma
 ### 3.1 Branch Line
 
 Choose the branch line that you want to merge. It is not necessary to select individual revisions in this case, because all revisions of the branch line are merged automatically.
-

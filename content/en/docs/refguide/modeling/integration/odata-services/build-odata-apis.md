@@ -268,7 +268,7 @@ You can also generate and reuse the generated validation microflows. The followi
 
 {{< figure src="/attachments/refguide/modeling/integration/build-odata-apis/generate-validation-microflow.png" >}} 
 
-Tesulting validation microflow looks like this:
+The resulting validation microflow looks like this:
 
 {{< figure src="/attachments/refguide/modeling/integration/build-odata-apis/validation-microflow.png" >}} 
 

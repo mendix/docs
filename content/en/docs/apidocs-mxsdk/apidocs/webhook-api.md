@@ -1,5 +1,5 @@
 ---
-title: "Webhook API"
+title: "Webhooks API"
 url: /apidocs-mxsdk/apidocs/webhook/
 type: swagger
 category: "API Documentation"
@@ -9,7 +9,7 @@ tags: ["API", "deploy", "licensed", "deployment", "cloud"]
 
 ## 1 Introduction
 
-The Mendix Webhook API allows you to manage [webhooks](/developerportal/deploy/webhooks/).
+The Mendix Webhooks API allows you to manage [webhooks](/developerportal/deploy/webhooks/).
 
 You can use the API to do the following:
 
@@ -21,7 +21,7 @@ You can use the API to do the following:
 
 ## 2 Authentication{#authentication}
 
-Authentication for the Webhook API uses a personal access token (PAT).
+Authentication for the Webhooks API uses a personal access token (PAT).
 
 ### 2.1 Generating a PAT
 
@@ -34,7 +34,7 @@ Select the following as scopes:
 * `mx:webhook:read` – to perform `GET` operations
 * `mx:webhook:write` – to perform all operations (`GET`, `POST`, `PUT`, and `DELETE`)
 
-Store the generated value `{GENERATED_PAT}` somewhere safe so you can use it to authorize your Mendix Cloud Webhook API calls.
+Store the generated value `{GENERATED_PAT}` somewhere safe so you can use it to authorize your Mendix Cloud Webhooks API calls.
 
 ### 2.2 Using the PAT
 

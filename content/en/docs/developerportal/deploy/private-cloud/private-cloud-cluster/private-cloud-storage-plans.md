@@ -60,7 +60,7 @@ Most provisioners have require some prerequisites to be created manually. Typica
 
 As a best practice, test your new storage plan by creating a new environment and confirming that it is working as expected. In some cases, even though the Mendix Operator was able to create a database and bucket, an environment may fail to connect because of firewalls, Kubernetes security policies, or other reasons.
 
-To create a new storage plan, perform the following steps:
+To create a new storage plan, do the following steps:
 
 1. Run the `mxpc-cli` configuration tool and fill in all the necessary details for the storage plan or plans.
 2. Apply the changes but keep the `mxpc-cli` configuration tool open.
@@ -70,61 +70,71 @@ To create a new storage plan, perform the following steps:
 5. If necessary, update the storage plan configuration in `mxpc-cli` by switching to the **Database Plan** or **Storage Plan** tabs, and apply the configuration.
 6. Delete the failed `{environment-name}-database` or `{environment-name}-file` pod, and then test the storage plan again.
 
-### 1.3 Limitations
+### 1.3 Known Limitations
 
-Updating a storage plan will not apply changes to any already existing environments.
-For example, if you migrate a database to a new URL, updating the Storage Plan will not update the database URL in any already existing environments.
-In addition, any significant changes in the Storage Plan configuration (for example, replacing Postgres with SQL Server) will not migrate data in already existing environments.
-For any significant changes, we recommend to
-1. Create a new Storage Plan.
-2. Create new versions of existing environments using the new Storage Plan.
-3. Migrate data from existing environments to their new versions and verify that the migration went successfully.
-4. Delete previous environments and disable the previous Storage Plan.
+The following sections outline some limitations to keep in mind when using storage plans, as well as potential ways to mitigate those limitations.
 
-To rotate credentials of an environment, you will need to manually update credentials in that environment's Kubernetes secret.
-If your security policy requires regular rotation of credentials, consider using [Secrets Storage](/developerportal/deploy/secret-store-credentials/) instead.
+#### 1.3.1 Updating a Plan Does Not Update Existing Environments
+
+Updating a storage plan does not update any already existing environments. For example, if you migrate a database to a new URL, updating the storage plan will not update the database URL in any already existing environments. In addition, any significant changes to the storage plan configuration (such as replacing Postgres with SQL Server) will not migrate the data in already existing environments.
+
+To apply significant changes to your environments, do the following steps:
+
+1. Create a new storage plan.
+2. Create new versions of existing environments for the new storage plan.
+3. Migrate data from existing environments to their new versions and verify that the migration was successful.
+4. Delete previous environments and disable the previous storage plan.
+
+#### 1.3.2 Rotating Credentials Requires Manual Updates
+
+To rotate credentials of an environment, you must manually update the credentials in the environment's Kubernetes secret. If your security policy requires a regular rotation of credentials, consider using [Secrets Storage](/developerportal/deploy/secret-store-credentials/) instead.
 
 {{% alert color="info" %}}
-We're actively working on adding support for passwordless authentication in AWS (IRSA), removing the need to rotate credentials.
-This feature will be available very soon in an upcoming version of Mendix for Private Cloud.
+We are working on adding support for passwordless authentication in AWS (IRSA), removing the need to rotate credentials. This feature will be available in a future version of Mendix for Private Cloud.
 {{% /alert %}}
+
+#### 1.3.3 Provisioner Pods Do Not Automatically Retry after Failing
 
 If a provisioner pod fails, it will attempt to roll back any changes it made, but will not automatically retry.
-To retry a failed provisioner pod:
 
-1. Check the logs of the failed `{environment-name}-database` or `{environment-name}-file` pod to get the root cause of the problem.
-2. Address the root cause.
+To retry a failed provisioner pod, do the following steps:
+
+1. Check the logs of the failed `{environment-name}-database` or `{environment-name}-file` pod to find the root cause of the problem.
+2. Resolve the cause of the problem.
 2. Delete the failed `{environment-name}-database` or `{environment-name}-file` pod to retry.
 
-At the moment, it's not possible to read configuration of an existing Storage Plan.
-If you've created a Storage Plan in the past and would like to update it (for example, to change the admin credentials), you will need to fill in the Storage Plan details and use the same name as the currently existing Storage Plan.
-The only way to update a Storage Plan configuration is by overwriting it with an updated version.
+#### 1.3.4 The Configuration of an Existing Storage Plan Cannot Be Read
 
-{{% alert color="warning" %}}
-Each storage plan (database or blob file bucket) needs to have a unique name.
-If you create a plan that uses a name that already in use, this new plan will overwrite an existing plan.
+It is not currently possible to read the configuration of an existing storage plan. The only way to update the configuration of a storage plan is by overwriting it with an updated version. If you have created a storage plan in the past and would like to update it, for example, to change the admin credentials, you must create a new storage plan and give it the same name as the currently existing storage plan. This new configuration will overwrite and replace the existing plan.
 
-When you configure a new namespace, make sure that the database and blob file storage plans use unique, different names.
+{{% alert color="info" %}}
+Giving a storage plan (database or blob file bucket) a non-unique name always overwrites any previously created storage plans with the same name. To prevent your data from accitentally being overwritten, when you configure a new namespace, make sure that the database and blob file storage plans use unique, different names.
 {{% /alert %}}
 
-{{% alert color="warning" %}}
-The storage plan does not include any functionality for backing up or restoring files used by your app. It is your responsibility to ensure that appropriate provision is made for backing up and restoring these files using the tools provided by your storage and/or cloud provider.
+#### 1.3.5 You Are Responsible for Backing up and Restoring Files
+
+{{% alert color="info" %}}
+The storage plan does not include any functionality for backing up or restoring files used by your app. It is your responsibility to ensure that appropriate provision is made for backing up and restoring these files using the tools offered by your storage provider or cloud provider.
 {{% /alert %}}
 
-You can only create up to one database and one blob file storage plan when running the `mxpc-cli` Configuration Tool. Run the configuration tool multiple time to create additional database and blob file storage plans.
+#### 1.3.6 The Mxpc-cli Configuration Tool Creates One Storage Plan at a Time
 
-If the screen (terminal) cannot fit all elements, some UI elements might overflow and become hidden.
-We recommend opening the `mxpc-cli` Configuration Tool in fullscreen mode, or to at least increase the terminal window size to 180x60 characters.
+You can only create up to one database and one blob file storage plan when running the `mxpc-cli` configuration tool. Run the configuration tool multiple time to create additional database and blob file storage plans.
 
-{{% alert color="warning" %}}
-If you delete an environment, make sure that it's completely deleted - `kubectl -n {namespace} get storageinstance {environment-name}-file` and `kubectl get storageinstance {environment-name}-database` should return a _not found_ response.
+#### 1.3.7 Some UI Elements May Be Hidden When Not in Fullscreen Mode
 
-Otherwise, you will need to check the reason why the environment's database or blob file storage is not being deleted, and do a [manual cleanup](/developerportal/deploy/private-cloud-deploy/#delete-storage) if necessary.
+If the screen or terminal cannot fit all the elements, some UI elements may be hidden. As a best practice, open the `mxpc-cli` Configuration Tool in fullscreen mode, or increase the terminal window size to at least 180x60 characters.
 
-Until the cleanup is done, you should not create a new environment that uses the same name as the environment that's still being deleted.
-{{% /alert %}}
+#### 1.3.8 Deleting an Environment Must Be Verified Manually
 
-## 2 Database Plans{#database}
+If you delete an environment, make sure that it is completely deleted by running the following commands:
+
+* `kubectl -n {namespace} get storageinstance {environment-name}-file`
+* `kubectl get storageinstance {environment-name}-database` 
+
+If the commands return a *not found* response, your environment database and blob file storage have been fully removed. If either the database or the blob file storage were not deleted, you must find and troubleshoot the reason, and then do a [manual cleanup](/developerportal/deploy/private-cloud-deploy/#delete-storage) if necessary. Until the cleanup is done, you should not create a new environment that uses the same name as the environment that is still being deleted.
+
+## 2 Database Plans {#database}
 
 Every Mendix app needs a database to store persistent and non-persistent entities.
 A database plan tells the Operator how to provide a database to a new Mendix app environment.

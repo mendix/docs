@@ -111,6 +111,14 @@ Prior to Studio Pro 10, these functions were removed from a predicate, which was
 
 As of Studio Pro 10, the tautology range functions are no longer removed, but simply substituted by `True` or `False`. Subsequently, the expressions are optimized where possible (for example, `x OR True` becomes `True`, `x AND False` becomes `False`, and `NOT(True)` becomes `False`).
 
+### 7.5 Workflow Domain Model Changes
+
+In Studio Pro 10, we added a new feature called [multi-user tasks](/refguide/multi-user-task/). This feature makes it possible for a user task to have multiple assignees. For that to be possible, we have renamed the `WorkflowUserTask_Assignee` association to `WorkflowUserTask_Assignees` to suggest that there can be multiple assignees now. Also, this association will now be a reference set.
+
+If you use the [Workflow Commons](/appstore/modules/workflow-commons/) module in your project, you will have to upgrade the module to v3.0.0 or later due to this change. Along with this, you need to execute the migration microflow `ACT_Assignee_Migration` (available from the `WorkflowAdminCenter` page) or add the `ASu_Assignee_Migrate` microflow to the after startup microflow of your project.
+
+User task pages that were generated in an earlier version of Studio Pro also need to be updated. The conditional visibility based on whether the current user is assigned is no longer supported. You will see a consistency error for any outcome button that is using the visibility expression. For each button, set the visibility to **Always**.
+
 ## 8 Read More
 
 * [Studio Pro 10 Release Notes](/releasenotes/studio-pro/10.0/)

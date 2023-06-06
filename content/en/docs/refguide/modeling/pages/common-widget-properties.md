@@ -360,7 +360,24 @@ A practical example would be a web shop in which the user must submit both billi
 
 ##### 9.1.1.1 Based on Attribute Value{#visibility-based-on-attribute-value}
 
-When selected, this shows the widget while a particular attribute has a certain value. Only Boolean and enumeration attributes can be used for this purpose.
+When selected, this shows the widget while a particular attribute has a certain value. 
+
+{{% alert color="info" %}}
+Visibility based on an attribute value can be set only for widgets that are inside data containers (a data view, list view, or data grid). 
+
+Only Boolean and enumeration attributes can be used for this purpose.
+
+{{% /alert %}}
+
+For example, you have a web shop and you would like to show a field with a billing address only when a customer unchecks the **Billing address is the same as delivery address** option (it is checked by default). 
+
+A page where a customer fills in their details can look the following way:
+
+{{< figure src="/attachments/refguide/modeling/pages/common-widget-properties/customer-page-example.png" alt="Customer Details"  width="500">}}
+
+The visibility of the billing address depends whether the customer checks that the billing address is different from the delivery address. In your domain model, you have an attribute of the Boolean type called **BillingAddressSame**, so when it is set to *false*, the billing address should be visible. This means that the visibility of the billing address depends on the value of the **BillingAddressSame** attribute:
+
+{{< figure src="/attachments/refguide/modeling/pages/common-widget-properties/condition-for-visibility-dialog.png" alt="An example of visibility properties" width="500">}}
 
 ##### 9.1.1.2 Based on Expression{#visibility-based-on-expression}
 

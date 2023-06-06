@@ -501,7 +501,7 @@ Support for the `dataSource` attribute was introduced in Mendix 8.12.
 | ------------ | -------- | -------------- | ------------------------------------------------------------ |
 | `type`       | Yes      | String         | Must be `attribute`                                          |
 | `key`        | Yes      | String         | See [key](#key) |
-| `onChange`   | No       | Property Path  | The path to an Action property that will be executed by the Mendix Platform when the value is changed by the widget |
+| `onChange`   | No       | Property Path  | The path to an Action property that will be run by the Mendix Platform when the value is changed by the widget |
 | `required`   | No       | Boolean        | Decides if the property must be specified by the user, `true` by default |
 | `dataSource` | No       | Property Path  | Specifies the path to a [`datasource`](#datasource) property linked to this attribute property |
 

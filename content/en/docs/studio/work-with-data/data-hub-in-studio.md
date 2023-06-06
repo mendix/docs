@@ -93,7 +93,7 @@ External entities are colored *purple* in the domain model:
 
 {{< figure src="/attachments/studio/work-with-data/data-hub-in-studio/external-entity.png" alt="External Entity" >}}
 
-When you add external entities to your app, it is possible to make local changes to the entity, such as change its name. However, these changes are limited and will only apply to your app. Most of the properties of external entities are read-only as they are defined in the source app (this ensures that you will not accidently change the data in the source app):
+When you add external entities to your app, it is possible to make local changes to the entity, such as change its name. However, these changes are limited and will only apply to your app. Most of the properties of external entities are read-only as they are defined in the source app (this ensures that you will not accidentally change the data in the source app):
 
 {{< figure src="/attachments/studio/work-with-data/data-hub-in-studio/external-entity-properties.png" alt="External Entity Properties" >}}  
 

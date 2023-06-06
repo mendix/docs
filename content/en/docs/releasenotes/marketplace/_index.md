@@ -13,6 +13,22 @@ These release notes cover changes made to the [Mendix Marketplace](/appstore/).
 
 ## 2023
 
+### May 25th, 2023
+
+#### New Features
+
+* You can now reassign a draft to yourself if you have edit rights for the Marketplace component. The draft will be unassigned from the previous owner. This allows you to continue working on a Marketplace listing, even when your colleague is out of office.
+
+#### Improvements
+
+* *.mpk* files are now uploaded asynchronously in the flow for adding Marketplace content, which means that you can continue to go through the onboarding wizard while the upload is in progress.
+* We aligned the Marketplace UI with the rest of the Mendix Platform.
+
+#### Fixes
+
+* We fixed an issue with the notifications that are sent when a component update becomes available.
+* If a user's email address contained an upper-case letter, they did not have access to private components in [content groups](/appstore/general/app-store-overview/#content-groups). This issue has been fixed.
+
 ### April 20th, 2023
 
 #### New Features
@@ -76,7 +92,7 @@ If you are using Studio Pro on a Mac with Parallels, see [this update](https://k
 
 #### New Features
 
-* There are now user trials avaiable for **Premium** app services, such as Email Service and Speech to Text. This self-service experience helps you to evaluate the capabilities offered with these components and realize the value of premium content.
+* There are now user trials available for **Premium** app services, such as Email Service and Speech to Text. This self-service experience helps you to evaluate the capabilities offered with these components and realize the value of premium content.
 * User trial subscriptions are now listed under [My Subscriptions](/appstore/general/app-store-overview/#my-subscriptions), and company trial and paid subscriptions are now listed under [Company Subscriptions](/appstore/general/app-store-overview/#company-subscriptions).
 * For new uploads of public components, you can now optionally share a [virus scan report](/appstore/general/share-app-store-content/#package) to speed up the governance process.
 * For solutions and solution templates, you can now add a [use case](/appstore/general/share-app-store-content/#capabilities) relevant to the component. The use case is displayed in the component listing and includes header text and an external link.
@@ -232,7 +248,7 @@ If you are using Studio Pro on a Mac with Parallels, see [this update](https://k
 
 #### Improvements
 
-* You can now download previous versions of App Store components from the [Mendix Marketplacee](https://marketplace.mendix.com/). This can be done in the **All versions** tab on the component's [details page](/appstore/general/app-store-overview/#details). This can be used as a workaround for not being able to download private content from the App Store available in older versions of Studio Pro/Desktop Modeler due to the [security issue](#private-fix) described below.
+* You can now download previous versions of App Store components from the [Mendix Marketplace](https://marketplace.mendix.com/). This can be done in the **All versions** tab on the component's [details page](/appstore/general/app-store-overview/#details). This can be used as a workaround for not being able to download private content from the App Store available in older versions of Studio Pro/Desktop Modeler due to the [security issue](#private-fix) described below.
 
 #### Fixes
 
@@ -278,7 +294,7 @@ For more information on these support levels, see [App Store Content Support](/a
 
 #### New Features
 
-You can now create [user groups](/appstore/general/app-store-overview/#user-groups) for your company and assign your company’s App Store content to different groups. Management of user group content is restricted to only the members of the group. You can also add [guest](/appstore/general/app-store-overview/#guests) users to these groups and allow them to download selected private company content.
+You can now create [user groups](/appstore/general/app-store-overview/#content-groups) for your company and assign your company’s App Store content to different groups. Management of user group content is restricted to only the members of the group. You can also add [guest](/appstore/general/app-store-overview/#guests) users to these groups and allow them to download selected private company content.
 
 The former App Store **Content Managers** and **External Downloaders** groups have been removed. Members of these groups have been migrated to a new temporary user group called **Migrated Data**. Former “content managers” have been added as user group [members](/appstore/general/app-store-overview/#members), and former “external downloaders” have been added as [guests](/appstore/general/app-store-overview/#guests).
 

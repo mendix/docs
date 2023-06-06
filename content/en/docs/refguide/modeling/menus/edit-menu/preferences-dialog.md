@@ -78,13 +78,13 @@ The **Logic Bot** tab contains the following settings:
 * **Enable MxAssist Logic Bot** – when enabled, [MxAssist Logic Bot](/refguide/mx-assist-logic-bot/) is activated and can give you suggestions for microflow activities. You can also switch MxAssist Logic Bot on and off in the top right corner of the microflow editor.
 * **Show Suggestions for System Variables** – when enabled, MxAssist Logic Bot will include system objects in its suggestions (for example, it can suggest that you change system objects like currentUser or currentSession).
 
-#### 3.2 Performance Bot
+#### 3.2 Best Practice Bot
 
-The **Performance Bot** tab contains the following settings:
+The **Best Practice Bot** tab contains the following settings:
 
-* **Show recommendation in editors** – when enabled, [MxAssist Performance Bot](/refguide/mx-assist-performance-bot/) highlights elements that contain performance issues in visual editors.
+* **Show recommendation in editors** – when enabled, [MxAssist Best Practice Bot](/refguide/mx-assist-performance-bot/) highlights elements that contain anti-patterns in visual editors.
 
-* **Automatically run an inspection after opening an app** – when enabled, [MxAssist Performance Bot](/refguide/mx-assist-performance-bot/) automatically runs an inspection when an app is opened. If the app contains errors, the inspection will not run.
+* **Automatically run an inspection after opening an app** – when enabled, [MxAssist Best Practice Bot](/refguide/mx-assist-performance-bot/) automatically runs an inspection when an app is opened. If the app contains errors, the inspection will not run.
 
 ## 4 Model Tab
 
@@ -183,13 +183,6 @@ Not all screens of Studio Pro support dark mode yet.
 
 Default: *disabled*
 
-### 8.2 New Merge Algorithm with Fine-Grained Conflict Resolution
-
-With this option, you can enable the new merge algorithm that is used when you update your app or merge changes in it. For more information on the algorithm, see [New Merge Algorithm with Fine-Grained Conflict Resolution](/refguide/new-merge-algorithm/).
-
-Default: *enabled*
-
 ## 9 Read More
 
 * [Upload to Version Control Server](/refguide/upload-to-version-control-dialog/)
-* [Working with an On-Premises Version Control Server](/refguide/on-premises-svn/)

@@ -10,7 +10,7 @@ tags: ["marketplace", "marketplace component", "OIDC", "IdP", "identity provider
 
 ## 1 Introduction
 
-The [OpenID Connect (OIDC) SSO module](https://marketplace.mendix.com/link/component/120371) allows end-users of your Mendix app to login via Single Sign-on (SSO) using the OIDC protocol.  Besides delegating end-user authentication (OIDC), your app can also delegate authorization (OAuth).
+The [OpenID Connect (OIDC) SSO](https://marketplace.mendix.com/link/component/120371) module allows end-users of your Mendix app to login via Single Sign-on (SSO) using the OIDC protocol.  Besides delegating end-user authentication (OIDC), your app can also delegate authorization (OAuth).
 
 OIDC is an extension of OAuth2 that propagates the end-user's identity to your application.
 
@@ -137,7 +137,7 @@ To migrate from Mendix 8.18.x to Mendix 9.8.1 or above, follow the steps below:
 
 #### 3.2.2 Replacing Community Edition with Platform Edition on Mendix Version 9
 
-If your app is already developed using Mendix version 9, but uses the community edition of the OIDC SSO module, you can just do the following.
+If your app is already developed using Mendix version 9 or above, but uses the community edition of the OIDC SSO module, you can just do the following.
 
 1. Import the "OIDC" platform edition module from the Marketplace.
 2. Import the "Mx Model Reflection" Module from the Marketplace.

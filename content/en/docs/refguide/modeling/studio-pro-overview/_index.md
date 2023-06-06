@@ -82,7 +82,7 @@ Dockable panes can be positioned around the working area and contain various ele
 
 {{< figure src="/attachments/refguide/modeling/studio-pro-overview/pane-example.png" alt="Properties Pane Example" width="300" >}}
 
-For example, you can view [list of errors](/refguide/errors-pane/) or run [MxAssist Performance bot](/refguide/mx-assist-performance-bot/), configure properties of a specific document or an element, view toolbox. For more information on panes and their layout, see [View Menu](/refguide/view-menu/).
+For example, you can view [list of errors](/refguide/errors-pane/) or run [MxAssist Best Practice bot](/refguide/mx-assist-performance-bot/), configure properties of a specific document or an element, view toolbox. For more information on panes and their layout, see [View Menu](/refguide/view-menu/).
 
 ## 6 Status Bar {#status-bar}
 
@@ -253,3 +253,5 @@ The following shortcut keys are assigned to menu actions that can be used in all
 
 * [App Explorer](/refguide/app-explorer/)
 * [Menus](/refguide/menus/)
+* [Best Practices for Development](/refguide/dev-best-practices/)
+* [Best Practices for App Performance](/refguide/community-best-practices-for-app-performance/)

@@ -184,6 +184,23 @@ Click **Done** to exit the wizard and view the defined service document.
 
 **Export AsyncAPI Document** exports the YAML file of the business event service so that other apps can [use your newly created service](#two-way-be-existing).
 
+##### 4.2.1.2 Attribute Types {#attribute-types}
+
+Attribute types for business events relate to attribute types of entities, but not all attribute types are supported for business events. The following attribute types are not supported:
+
+* AutoNumber
+* Binary
+* Hashed string
+* Enumeration (see [Enumeration Attribute Type](#enum-att-type) below)
+
+In Studio Pro 9.24 and below, all types were supported implicitly because a business event was defined by an entity. The unsupported types were from the perspective of the consumer received as a string.
+
+###### 4.2.1.2.1 Enumeration Attribute Type {#enum-att-type}
+
+In Studio Pro [9.24](/releasenotes/studio-pro/9.24/), consumers see enumerations as a plain string. The names of the enumeration items are the values that are transmitted by the event broker to the subscribers. Enumerations cannot be modelled for new services in Studio Pro [9.24](/releasenotes/studio-pro/9.24/), but for converted earlier apps the functionality is maintained.
+
+In Studio Pro [10.0](/releasenotes/studio-pro/10.0/) and above, enumerations are fully supported. The enumeration attribute type can be modelled, the enumeration items are stored in the exported AsyncAPI document, when imported a new enumeration document will be created with the name '<attributeName>Enum’. The **Caption** and **Image** fields are not transmitted to the importer of the AsyncAPI document. Captions and images can be provided manually and will not cause conflicts when an AsyncAPI document is re-imported.
+
 #### 4.2.2 Using an Existing Business Event Service {#two-way-be-existing}
 
 To use an existing business service in Studio Pro 9.24 and above, do the following:
@@ -242,7 +259,7 @@ Do this using the **Publish business event** activity:
 4. Double-click **Publish business event** to display the **Publish Business Event** property box.
 5. Enter the following information:
     * **Subject**: This can be anything you consider useful, like a short description of what can be expected in the payload, similar to email subject. It will help subscribed apps decide if the event might be useful to them.
-    * **Event Data**: Select the entity that you want to publish in the service that will represent the Business event in the subscribers app. This should be an entity that you have configured to inherit from the **PublishedBusinessEvent** entity in step 1.
+    * **Event Data**: Enter the entity representing the business event that you want to publish. 
     * **Task Queue/Output:** These values are not currently used for Business Events and should be left unchanged.
 
 {{% alert color="info" %}}
@@ -262,7 +279,7 @@ The **PublishedBusinessEvent** and **ConsumedBusinessEvent** entities are necess
 
 #### 4.3.3 Dead Letter Queue for Failed Messages {#dead-letter-queue}
 
-Every time a business event is received, it is transformed to match the Entity created as part of the Subscription. When the Entity within the Business Event has changed based on the imported AsyncAPI doucment, it can render the Entity unable to be processed. In such a scenario the Business Event will fail into a **Dead Letter Queue** which contains the representation of the Entity within the data column.
+Every time a business event is received, it is transformed to match the Entity created as part of the Subscription. When the Entity within the Business Event has changed based on the imported AsyncAPI document, it can render the Entity unable to be processed. In such a scenario the Business Event will fail into a **Dead Letter Queue** which contains the representation of the Entity within the data column.
 
 The most important fields in this entity to be checked when there are errors include the following:
 

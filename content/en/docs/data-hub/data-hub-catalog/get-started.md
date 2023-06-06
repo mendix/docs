@@ -5,7 +5,7 @@ category: "Data Hub Catalog"
 linktitle: "Catalog Quickstart"
 weight: 1
 description: "Describes initial steps beginning users can take with their Catalog."
-tags: ["data hub", "data hub catalog", "consume", "external entities", "asset", "entities", "Integration pane", "studio pro"]
+tags: ["data hub", "data hub catalog", "consume", "external entities", "asset", "entities", "data hub pane", "studio pro"]
 ---
 
 ## 1 Introduction

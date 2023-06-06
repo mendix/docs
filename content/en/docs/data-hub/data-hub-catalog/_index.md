@@ -31,7 +31,7 @@ From the **Home** screen, you can do the following:
 
 * **Popular Data Sources** – click on the most popular data sources
 
-Data Hub is also integrated in Mendix Studio Pro to find and connect to shared data sources in your apps. For further details on using Data Hub in Studio Pro, see [Integration pane](/refguide/integration-pane/) in the *Studio Pro Guide*.
+Data Hub is also integrated in Mendix Studio Pro to find and connect to shared data sources in your apps. For further details on using Data Hub in Studio Pro, see [Data Hub Pane](/refguide/data-hub-pane/) in the *Studio Pro Guide*.
 
 {{% alert color="info" %}}
 The Data Hub integration is available in Studio Pro version 8.14 and above. To use the latest functionality of Data Hub download the latest version of Studio Pro. {{% /alert %}}
@@ -46,7 +46,7 @@ Users can find shared datasets by searching the Data Hub Catalog. The [search](/
 
 Use the Data Hub to find suitable data sources to integrate into your other enterprise applications by clicking [Copy Data Source URI](/data-hub/data-hub-catalog/search/#service-details).
 
-The Data Hub Catalog search functionality is integrated into Mendix Studio Pro through the [Integration pane](/refguide/integration-pane/) for finding registered services and datasets to use when developing apps.
+The Data Hub Catalog search functionality is integrated into Mendix Studio Pro through the [Data Hub pane](/refguide/data-hub-pane/) for finding registered services and datasets to use when developing apps.
 
 For more details, see [How to Search for Registered Assets](/data-hub/data-hub-catalog/search/).
 
@@ -54,7 +54,7 @@ For more details, see [How to Search for Registered Assets](/data-hub/data-hub-c
 
 Registered assets in the Data Hub Catalog can be accessed in Mendix Studio Pro to [build apps](/refguide/modeling/). These external data sources are represented in the domain model as [external entities](/refguide/external-entities/) which can be used with local entities.
 
-For further information on consuming from the Data Hub Catalog, see [How to Consume Registered Assets](/data-hub/data-hub-catalog/consume/). For details on using shared entities in Studio Pro, see [Integration pane](/refguide/integration-pane/) in the *Studio Pro Guide*.
+For further information on consuming from the Data Hub Catalog, see [How to Consume Registered Assets](/data-hub/data-hub-catalog/consume/). For details on using shared entities in Studio Pro, see [Data Hub Pane](/refguide/data-hub-pane/) in the *Studio Pro Guide*.
 
 ### 3.3 Register – Sharing Datasets
 
@@ -79,7 +79,7 @@ The information that is registered for data sources and exposed datasets are as 
 * **Endpoints** – All registered assets are defined as endpoints (URLs) in the Catalog. The endpoint of the service is accessed by the consuming app.
 * **Environment** – To complete the location of the asset, the endpoints are published to an environment. The location of the OData service also includes the environment to which the publishing app is deployed. Connecting to a data source in the correct environment is very important. For example, when developing an app, you want to connect to the test data of the app deployed to a non-production test or acceptance environment. However, the final production app will have to access the datasets from the production environment - the actual live or working data. In the Data Hub, the **Environment Type** is also specified which indicates to users the quality of the data.
 
-    {{% alert color="info" %}}You can filter the search results by environment type in the Data Hub Catalog (**Production**, **Non-production**, and the Mendix Free App environment or **Sandbox**). In the [Integration pane](/refguide/integration-pane/) of Studio Pro, you can remove the default filter on the search results to include non-production environments. {{% /alert %}}
+    {{% alert color="info" %}}You can filter the search results by environment type in the Data Hub Catalog (**Production**, **Non-production**, and the Mendix Free App environment or **Sandbox**). In the [Data Hub pane](/refguide/data-hub-pane/) of Studio Pro, you can remove the default filter on the search results to include non-production environments. {{% /alert %}}
 
 * **Published OData service** – At the service endpoint, there are the OData service metadata contract files that define the service. Available data sources are registered in the Data Hub Catalog by exposing  datasets, attributes, and associations in the [published OData service](/refguide/published-odata-services/). 
 * **Versions** – The contract exposed at a specific endpoint may be changed over time by the service owner, and if good practice is followed, these changes will be indicated by changing the version number. Every published OData service has a version number. Apps consuming from a service will consume from a specific version of a service deployed to an environment.

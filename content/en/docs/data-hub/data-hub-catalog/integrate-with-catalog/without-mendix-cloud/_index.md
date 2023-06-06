@@ -73,7 +73,7 @@ To import a metadata contract file of a published OData service, do the followin
 
     Right-click the **App Explorer** where you would like to add the service, then click **Add other** > **Consumed OData Service**. Select the `$metadata.xml` file you exported.
 
-The service will now appear in the Integration pane.
+The service will now appear in the Data Hub pane.
 
 #### 2.4.2 Importing from a URL
 
@@ -89,7 +89,7 @@ To import a published OData service URL, do the following:
 
 3. In the **Add Consumed OData Service** dialog box, make sure **From URL** is selected, and paste the copied URL into the field.
 
-The service will now appear in the Integration pane.
+The service will now appear in the Data Hub pane.
 
 ### 2.5 Updating a Manually Registered Contract
 

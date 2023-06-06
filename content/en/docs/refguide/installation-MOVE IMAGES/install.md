@@ -1,9 +1,9 @@
 ---
 title: "Installing Mendix Studio Pro"
-url: /refguide/install/
+url: /refguide/install-studio-pro/
 linktitle: "Install Mendix Studio Pro"
-category: "General Info"
-weight: 15
+category: "Installation"
+weight: 10
 description: "Describes how to install Mendix Studio Pro."
 tags: ["studio pro", "install", "install studio pro", "download"]
 aliases:

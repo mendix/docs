@@ -1,9 +1,9 @@
 ---
 title: "Studio Pro Overview"
 url: /refguide/studio-pro-overview/
-category: "App Modeling"
-description: "Describes Studio Pro in general, for example, tabs, menus, and shortcut keys."
+category: "General Info"
 weight: 10
+description: "Describes Studio Pro in general, for example, tabs, menus, and shortcut keys."
 tags: ["Studio Pro"]
 aliases:
     - /refguide/desktop-modeler-overview.html

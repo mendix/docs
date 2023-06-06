@@ -16,7 +16,7 @@ External entities connect to the data for shared data sources that are available
 
 This means that several properties of the external entities are determined in their originating app and cannot be changed in your project. 
 
-External entities are added to the domain model through the [Data Hub pane](/refguide8/data-hub-pane/) and are displayed as *purple* entity containers in the domain model. 
+External entities are added to the domain model through the [Integration pane](/refguide8/integration-pane/) and are displayed as *purple* entity containers in the domain model. 
 
 {{% alert color="info" %}}
 A license is required to use Mendix Data Hub and connect to external data sources through consumed OData services in your apps.
@@ -76,7 +76,7 @@ This tab displays the general properties of the external entity. The values that
 
 The [attributes](/refguide8/attributes/) that have been exposed in the OData service for the external entity are listed here. All changes that are made to the attributes and the attribute list are applied to the local instance of the entity. As they are consumed, these changes will not affect the metadata of the consumed service that the entity is exposed in or the attributes of the entity in the originating app.
 
-{{% alert color="info" %}}In the [Data Hub Pane](/refguide8/data-hub-pane/#association-attributes) the associations and attributes that are not supported in your Mendix model are shown as non-selectable (gray) and will not be included when you drag them into the domain model or be included in the entity properties. For more information see [Data Hub Pane](/refguide8/data-hub-pane/#association-attributes).{{% /alert %}}
+{{% alert color="info" %}}In the [Integration pane](/refguide8/integration-pane/#association-attributes) the associations and attributes that are not supported in your Mendix model are shown as non-selectable (gray) and will not be included when you drag them into the domain model or be included in the entity properties. For more information see [Integration pane](/refguide8/integration-pane/#association-attributes).{{% /alert %}}
 
 The following operations can be done on the displayed attribute list:
 

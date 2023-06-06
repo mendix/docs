@@ -108,7 +108,7 @@ To consume a business event, you first need to create a **Consumed Business Even
 There are two ways to subscribe to, or consume a specific business event:
 
 * **Add** the subscription in the [consumed business event service](#consume-be)
-* **Drag and drop** the business event from the **Data Hub pane** to your domain model
+* **Drag and drop** the business event from the **Integration pane** to your domain model
 
 ##### 4.1.3.1 Automatically Created Event Handler Microflow and Entity
 
@@ -220,7 +220,7 @@ The business event service document is open in Studio Pro:
 After following the instructions in [Using an Existing Business Event Service](#two-way-be-create), you can publish or subscribe (or both, depending on the [service definitions](#add-be-definitions)) in the following ways:
 
 * Open the business service document and click **Add**
-* **Drag and drop** the business event from the **Data Hub pane** to your domain model
+* **Drag and drop** the business event from the **Integration pane** to your domain model
 
 To publish a business event service, you need to use it in a microflow.
 

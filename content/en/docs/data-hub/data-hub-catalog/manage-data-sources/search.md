@@ -7,7 +7,7 @@ tags: ["data hub", "data hub catalog", "data source", "dataset"]
 
 ## 1 Introduction
 
-Finding the right data to use in your app development is made easier using the search functionality in the Data Hub Catalog. The details of registered data assets can be accessed using the [Data Hub Search API](/apidocs-mxsdk/apidocs/data-hub-apis/), or viewed in the [Asset details](#search-details) screen of the Catalog or the [Data Hub pane](/refguide/data-hub-pane/) in Studio Pro.  This document describes how you can search in Data Hub Catalog.
+Finding the right data to use in your app development is made easier using the search functionality in the Data Hub Catalog. The details of registered data assets can be accessed using the [Data Hub Search API](/apidocs-mxsdk/apidocs/data-hub-apis/), or viewed in the [Asset details](#search-details) screen of the Catalog or the [Integration pane](/refguide/integration-pane/) in Studio Pro.  This document describes how you can search in Data Hub Catalog.
 
 ## 2 Search Using the API {#search-api}
 

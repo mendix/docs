@@ -22,10 +22,6 @@ The footer of the data view is the section at the bottom of the data view that o
 
 ## 3 Properties Pane
 
-An example of data view properties is represented in the image below:
-
-{{< figure src="/attachments/refguide/modeling/pages/data-widgets/data-view/data-view-properties.png"   width="250"  >}}
-
 The properties pane is divided into two major sections by a toggle at the top of the pane: **Properties** and **Styling**. Data view properties consist of the following sections:
 
 Properties:
@@ -37,7 +33,7 @@ Properties:
 
 Styling: 
 * [Design Properties](#design-properties)
-* [Common](#common-styling) [PERHAPS SHOULD JUST LINK/SNIPPET TO [Properties Common in the Page Editor](/refguide/common-widget-properties/)]
+* [Common](#common-styling) 
 
 ## 3 Properties
 
@@ -123,7 +119,7 @@ This property determines how input elements are rendered if they are read-only.
 
 ### 4.2 Common Section {#common-styling}
 
-{{% snippet file="/static/_includes/refguide/common-styling-props-link.md" %}} 
+{{% snippet file="/static/_includes/refguide/common-section-link.md" %}}
 
 ## 5 Performing Specific Actions
 

@@ -103,7 +103,7 @@ Here you will find more default panes:
 * **Properties**: displays all the properties of the currently selected context element (for more information see [Properties](/refguide/view-menu/#properties))
 * **Toolbox**: a list of things you can add to the current document⁠—the **Toolbox** changes depending on context (for more information see [Toolbox](/refguide/view-menu/#toolbox))
 
-For additional information on right default panes, see the [Data Hub](/refguide/view-menu/#data-hub) and [Connector](/refguide/view-menu/#connector) sections of *View Menu*.
+For additional information on right default panes, see [Integration](/refguide/view-menu/#integration) and [Connector](/refguide/view-menu/#connector) sections of *View Menu*.
 
 ## 5 Creating Your App's Domain Model
 

@@ -69,7 +69,7 @@ The **Connector** pane displays elements that can be connected to the currently 
 
 The **Console** pane displays the output of the [Mendix Runtime](/refguide/runtime/) while running an application.
 
-### 3.5 Data Hub {#data-hub}
+### 3.5 Integration {#integration}
 
 The [Integration pane](/refguide/integration-pane/) enables you to browse the [Data Hub Catalog](/data-hub/data-hub-catalog/) and use registered data sources that are available for your organization in your app development. You can add [external entities](/refguide/external-entities/) to your app via this pane and see entities and data sources already consumed in your app. 
 

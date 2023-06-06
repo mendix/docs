@@ -141,7 +141,7 @@ To do this, follow the steps below:
 
     {{< figure src="/attachments/data-hub/share-data/view-data-hub.png" >}}
 
-3. In the [Data Hub](/refguide/data-hub-pane/) pane, enter the search string *{yourname}*.
+3. In the [Integration pane](/refguide/data-hub-pane/), enter the search string *{yourname}*.
 4. By default, search in the **Data Hub** pane only shows services in **Production** environments. Your app was deployed as a **Sandbox** app. Click the **Filter** icon next to the search and check **Show development environments**.
 
     {{< figure src="/attachments/data-hub/share-data/filter-icon.png" alt="Filter Icon" >}}

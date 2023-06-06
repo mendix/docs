@@ -62,7 +62,7 @@ As a best practice, test your new storage plan by creating a new environment and
 
 To create a new storage plan, do the following steps:
 
-1. Run the `mxpc-cli` configuration tool and fill in all the necessary details for the storage plan or plans.
+1. Run the [mxpc-cli configuration tool](/developerportal/deploy/private-cloud-cluster/#download-configuration-tool) and fill in all the necessary details for the storage plan or plans.
 2. Apply the changes but keep the `mxpc-cli` configuration tool open.
 3. Try to create a new test environment using the new storage plan.
     If the environment is successfully created and able to start, the storage plan is ready to use.

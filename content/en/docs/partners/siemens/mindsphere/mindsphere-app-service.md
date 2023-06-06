@@ -70,7 +70,7 @@ There are two ways to use the Mendix App Service.
 
     In this case your assets are now set up and you can continue by [Creating Binding Keys](#binding-keys).
 
-* You can publish your assets through Mendix Data Hub and add the asset data as an [External Entity](/refguide/external-entities/) in your domain model. In this case, you first have to publish a contract of your assets to Data Hub so that they can be found in the [Data Hub Pane](/refguide/data-hub-pane/) in Studio Pro.
+* You can publish your assets through Mendix Data Hub and add the asset data as an [External Entity](/refguide/external-entities/) in your domain model. In this case, you first have to publish a contract of your assets to Data Hub so that they can be found in the [Integration pane](/refguide/integration-pane/) in Studio Pro.
 
     The instructions for doing this are below, and instructions for using the external entities are in [Using MindSphere IIoT for Makers Through Mendix Data Hub](#using-data-hub).
 
@@ -129,7 +129,7 @@ There are two ways to use the Mendix App Service.
 
     In this case your assets are now set up and you can continue by [Creating Binding Keys](#binding-keys).
 
-* You can publish your resources through Mendix Data Hub and add the asset data as an [External Entity](/refguide/external-entities/) in your domain model. In this case, you first have to publish a contract of your assets to Data Hub so that they can be found in the [Data Hub Pane](/refguide/data-hub-pane/) in Studio Pro.
+* You can publish your resources through Mendix Data Hub and add the asset data as an [External Entity](/refguide/external-entities/) in your domain model. In this case, you first have to publish a contract of your assets to Data Hub so that they can be found in the [Integration pane](/refguide/integration-pane/) in Studio Pro.
 
     The instructions for doing this are below, and instructions for using the external entities are in [Using MindSphere IIoT for Makers Through Mendix Data Hub](#using-data-hub).
 
@@ -182,7 +182,7 @@ In MindSphere you can invite users with different email domains to your MindSphe
 Ensure that only users who have an email account within your company domain create contracts on Mendix DataHub.
 {{% /alert %}}
 
-Now your assets will appear in the Data Hub Pane of Studio Pro, and you can continue with [Creating Binding Keys](#binding-keys).
+Now your assets will appear in the Integration pane of Studio Pro, and you can continue with [Creating Binding Keys](#binding-keys).
 
 ## 3 Creating Binding Keys{#binding-keys}
 
@@ -210,7 +210,7 @@ The easiest way to get your data from MindSphere is to use Mendix Data Hub.
 
 ### 4.1 Adding External Entities to the Domain Model
 
-To add the external entities representing your MindSphere data to the domain model, search in the [Data Hub pane](/refguide/data-hub-pane/) for your MindSphere service.
+To add the external entities representing your MindSphere data to the domain model, search in the [Integration pane](/refguide/integration-pane/) for your MindSphere service.
 
 Drag the [entities](/refguide/external-entities/) you need into your domain model. This will also create a **Consumed OData Service** document which you will need to edit to authenticate your calls to the MindSphere API.
 

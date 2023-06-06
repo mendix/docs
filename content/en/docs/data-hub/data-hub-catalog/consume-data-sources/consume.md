@@ -3,16 +3,16 @@ title: "Consume Registered Assets"
 url: /data-hub/data-hub-catalog/consume/
 weight: 20
 description: "Describes how to use shared data sources and datasets through Mendix Data Hub."
-tags: ["data hub", "data hub catalog", "consume", "external entities", "asset", "entities", data hub pane", "studio pro"]
+tags: ["data hub", "data hub catalog", "consume", "external entities", "asset", "entities", Integration pane", "studio pro"]
 ---
 
 ## 1 Introduction
 
-The Data Hub Catalog is a catalog of OData services exposing datasets that you can use in your apps. In Mendix Studio Pro, these exposed datasets are added as *external entities* through the [Data Hub pane](/refguide/data-hub-pane/). The integrated Data Hub Catalog [search](/data-hub/data-hub-catalog/search/) functionality in Studio Pro is available to find suitable datasets to use in your apps. 
+The Data Hub Catalog is a catalog of OData services exposing datasets that you can use in your apps. In Mendix Studio Pro, these exposed datasets are added as *external entities* through the [Integration pane](/refguide/integration-pane/). The integrated Data Hub Catalog [search](/data-hub/data-hub-catalog/search/) functionality in Studio Pro is available to find suitable datasets to use in your apps. 
 
 ## 2 Using Registered Assets in Your App {#consuming-services-entities}
 
-You can use the Catalog or the [Data Hub pane](/refguide/data-hub-pane/) in Studio Pro to find registered data sources. Click [Copy Data Source URI](/data-hub/data-hub-catalog/search/#service-details) to  obtain the OData service URI, which can be used in other enterprise applications.
+You can use the Catalog or the [Integration pane](/refguide/integration-pane/) in Studio Pro to find registered data sources. Click [Copy Data Source URI](/data-hub/data-hub-catalog/search/#service-details) to  obtain the OData service URI, which can be used in other enterprise applications.
 
 The following sections summarize important points to consider when using OData services and registered datasets in your apps in Studio Pro.
 

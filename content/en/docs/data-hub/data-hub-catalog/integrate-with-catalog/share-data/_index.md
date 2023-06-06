@@ -135,13 +135,13 @@ To do this, follow the steps below:
 1. In Mendix Studio Pro, create a new app using the **Blank** app template and call it *{yourname}CustomerActionsApp*.
 2. Go to the domain model > **Data Hub** pane:
 
-    {{< figure src="/attachments/data-hub/share-data/data-hub-pane-empty.png" alt="data hub pane" >}}
+    {{< figure src="/attachments/data-hub/share-data/integration-pane-empty.png" alt="Integration pane" >}}
 
     If you do not see the **Data Hub** pane, click **View** > **Data Hub** to display it:
 
     {{< figure src="/attachments/data-hub/share-data/view-data-hub.png" >}}
 
-3. In the [Data Hub](/refguide/data-hub-pane/) pane, enter the search string *{yourname}*.
+3. In the [Data Hub](/refguide/integration-pane/) pane, enter the search string *{yourname}*.
 4. By default, search in the **Data Hub** pane only shows services in **Production** environments. Your app was deployed as a **Sandbox** app. Click the **Filter** icon next to the search and check **Show development environments**.
 
     {{< figure src="/attachments/data-hub/share-data/filter-icon.png" alt="Filter Icon" >}}

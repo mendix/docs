@@ -11,7 +11,7 @@ tags: ["studio pro", "data hub", "odata service", "consumed odata service"]
 
 ## 1 Introduction
 
-When an external entity is used in a project module through the [Data Hub pane](/refguide8/data-hub-pane/), a consumed OData service document is added specifying the details of the consumed service. This is the API to the publishing app and the data associated with the entity.
+When an external entity is used in a project module through the [Integration pane](/refguide8/integration-pane/), a consumed OData service document is added specifying the details of the consumed service. This is the API to the publishing app and the data associated with the entity.
 
 ## 2 Consume OData Service screen
 
@@ -29,7 +29,7 @@ The **Consumed OData Service** document that is added to the project displays th
     {{% alert color="info" %}}Studio Pro displays the **Update** option for the **Consumed OData Service** where you can check if an update is available. In the Data Hub search and **Project**  pane, when a different contract is detected at the service end-point, this will be indicated with an update arrow for the service. For further information on updating and switching services see the [Updating or Switching a Consumed OData service](#updating) section of this document. {{% /alert %}}
 
     {{% alert color="info" %}}In the **Data Hub** pane consumed services that have an available **Update** will have an update arrow to indicate this:<br />
-    {{< figure src="/attachments/refguide8/modeling/integration/consumed-odata-services/consumed-odata-service/data-hub-pane-update-available.png" alt="update service data hub pane" >}}
+    {{< figure src="/attachments/refguide8/modeling/integration/consumed-odata-services/consumed-odata-service/integration-pane-update-available.png" alt="update service Integration pane" >}}
     {{% /alert %}}
 
 ### 2.1 Connection Tab
@@ -112,7 +112,7 @@ Support for basic authentication was added from [version 8.16.0](/releasenotes/s
 This information is not stored, so if you download the metadata from the same server again, you will have to enter your username and password again.
 {{% /alert %}}
 
-When you import the metadata, you can add external entities from the consumed OData service in the [Data Hub Pane](/refguide8/data-hub-pane/).
+When you import the metadata, you can add external entities from the consumed OData service in the [Integration pane](/refguide8/integration-pane/).
 
 ### 3.2 Consumed OData Service Properties
 
@@ -195,7 +195,7 @@ In the **Project** pane this will be shown as follows:
 
 In the **Data Hub** pane the search results for the same consumed service displays the following:
 
-{{< figure src="/attachments/refguide8/modeling/integration/consumed-odata-services/consumed-odata-service/data-hub-pane-update-available.png" alt="update service dhpane" >}}
+{{< figure src="/attachments/refguide8/modeling/integration/consumed-odata-services/consumed-odata-service/integration-pane-update-available.png" alt="update service dhpane" >}}
 
 * The version of the service that is now at the endpoint, **1.0.12**
 
@@ -241,5 +241,5 @@ To consume the service deployed to the **Acceptance environment**, follow these 
 
 ## 5 Read More
 
-* [Data Hub Pane](/refguide8/data-hub-pane/)
+* [Integration pane](/refguide8/integration-pane/)
 * [Consumed OData Service](/refguide8/consumed-odata-service/)

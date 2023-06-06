@@ -17,6 +17,13 @@ For information on the current status of deployment to Mendix Cloud and any plan
 
 ## 2023
 
+### June 12th, 2023
+
+#### Improvements
+
+* Filtering capability for ingestion of runtime metrics to APM vendors are introduced.
+
+
 ### May 4th, 2023
 
 * In the Build and Deploy APIs, we have added a link to download packages from the Developer Portal. This is controlled by a parameter on the following API calls:

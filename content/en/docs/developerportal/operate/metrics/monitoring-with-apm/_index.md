@@ -285,6 +285,42 @@ You pass the configuration to the metrics agent by adding a *Custom Runtime Sett
 | mx.rest.time | The time to handle a REST request |
 | mx.soap.time | The time to handle a SOAP request |
 
-## 6 Read More
+## 6 Filtering Metrics Ingestion 
+
+{{% alert color="info" %}}
+The metrics collected by APM vendors' agents are not affected by this method, only runtime metrics collected by Mendix can be filtered.
+{{% /alert %}}
+
+To filter the ingestion of metrics to APM vendors, environment variables listed below can be used.
+
+* [APM_METRICS_FILTER_ALLOW](#app-metrics-filter-allow)
+* [APM_METRICS_FILTER_DENY](#app-metrics-filter-deny)
+* [APM_METRICS_FILTER_DENY_ALL](#app-metrics-filter-deny-all)
+
+{{% alert color="info" %}}
+Database metrics (`postgresql.*` and `mx.database.diskstorage_size`) cannot be filtered by name, to turn them off, the `APPMETRICS_INCLUDE_DB` environment variable can be set to false. 
+{{% /alert %}}
+
+### 6.1 APM_METRICS_FILTER_ALLOW{#app-metrics-filter-allow}
+
+Comma-separated list of prefixes for the metrics to be allowed. By default, all metrics are allowed, even if they are not specified via this environment variable.
+
+For example, to allow only the session and the jvm metrics, the environment variable should be set to `mx.runtime.stats.sessions,jvm`.
+
+
+### 6.2 APM_METRICS_FILTER_DENY{#app-metrics-filter-deny}
+
+Comma-separated list of prefixes for the metrics to be denied. 
+
+For example, to filter out only metrics starting with jetty or mx.runtime, the environment variable should be set to `jetty,mx.runtime`.
+
+
+### 6.3 APM_METRICS_FILTER_DENY_ALL{#app-metrics-filter-deny-all}
+
+This environment variable can be used to stop ingestion of all metrics at once.
+
+If it is set to `true`, all metrics will be denied regardless of the values of `APM_METRICS_FILTER_ALLOW`, `APM_METRICS_FILTER_DENY`, and `APPMETRICS_INCLUDE_DB`.
+
+## 7 Read More
 
 * [Metrics](/developerportal/operate/metrics/)

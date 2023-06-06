@@ -136,20 +136,20 @@ If the commands return a *not found* response, your environment database and blo
 
 ## 2 Database Plans {#database}
 
-Every Mendix app needs a database to store persistent and non-persistent entities.
-A database plan tells the Operator how to provide a database to a new Mendix app environment.
+Every Mendix app needs a database to store persistent and non-persistent entities. A database plan tells the Mendix Operator how to provide a database to a new Mendix app environment.
 
 {{% alert color="warning" %}}
-The database plan does not include any functionality for backing up or restoring data on your database.
-It is your responsibility to ensure that appropriate planning is made for backing up and restoring your database using the tools provided by your database management system and/or cloud provider.
+The database plan does not include any functionality for backing up or restoring data on your database. It is your responsibility to ensure that appropriate planning is made for backing up and restoring your database using the tools provided by your database management system or cloud provider.
 {{% /alert %}}
 
-Give your plan a **Name** and choose the **Database Type**. See the information below for more help in setting up plans for the different types of database which are supported by Mendix for Private Cloud.
+### 2.1 Creating a Database
 
-Once you have entered the details you can apply two validation checks by clicking the **Validate** and **Connection Validation** buttons:
+To create a new database, do the following steps:
 
-* **Validate** – checks that you have provided all the required values and that they are in the correct format
-* **Connection validation** –  checks whether the specified storage plan has been successfully created — this does not guarantee that the storage *instance* will be created successfully when the configuration is applied. To fully test a database plan, you will need to test it by [creating a temporary test environment](#typical-workflow).
+1. Give your plan a **Name** and choose the **Database Type**. See the information below for more help in setting up plans for the different types of database which are supported by Mendix for Private Cloud.
+2. Apply two validation checks by clicking the **Validate** and **Connection Validation** buttons:
+    * **Validate** – Checks that you have provided all the required values and that they are in the correct format.
+    * **Connection validation** –  Checks whether the specified storage plan has been successfully created. This does not guarantee that the storage instance will be created successfully when the configuration is applied, so to fully test a database plan, you will need to test it by [creating a temporary test environment](#typical-workflow).
 
 {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/database-plan-config.png" alt="Database Plan Configuration" >}}
 
@@ -157,27 +157,22 @@ Once you have entered the details you can apply two validation checks by clickin
 You cannot create multiple database plans at the same time. Run the configuration tool multiple times to create several database plans.
 {{% /alert %}}
 
-The following **Database Types** are supported:
+### 2.2 Supported Database Types
 
-* PostgreSQL
-* Ephemeral (non-persistent)
-* SQL Server
-* Dedicated JDBC
+The following database types are supported:
 
-The easiest option is [ephemeral](#database-ephemeral) databases.
+* [PostgreSQL](#database-postgres)
+* [Ephemeral (non-persistent)](#database-ephemeral)
+* [SQL Server](#database-sqlserver)
+* [Dedicated JDBC](#database-jdbc)
 
-For production-grade databases, the [Postgres](#database-postgres) plan is the most versatile and portable option.
+  To use a dedicated database, or to have more control over the database connection parameters, use the JDBC plan.
 
-To use a dedicated database, or to have more control over the database connection parameters, use the [JDBC plan](#database-jdbc).
+#### 2.2.1 Postgres {#database-postgres}
 
-### 2.1 Postgres{#database-postgres}
+The Postgres database is an automated, on-demanad database. The Postgres plan offers a good balance between automation, ease of use, and security. It is the most versatile and portable option for production-grade databases. If you would like to have more control over database configuration, consider using the [JDBC plan](#database-jdbc) instead.
 
-<text class="badge badge-pill badge-primary">Automated</text> <text class="badge badge-pill badge-primary">On-Demand</text>
-
-The **Postgres** plan offers a good balance between automation, ease of use and security.
-If you would like to have more control over database configuration, consider using the [JDBC plan](#database-jdbc) instead.
-
-**Prerequisites**
+##### 2.2.1.1 Prerequisites
 
 * A Postgres server - for example, an RDS instance, or a Postgres server installed from a Helm chart
    {{% alert color="info" %}}
@@ -185,43 +180,47 @@ If you would like to have more control over database configuration, consider usi
    {{% /alert %}}
 * A superuser account and its login database - in most cases, this would be the default `postgres` user and `postgres` database.
    {{% alert color="info" %}}
-   To connect to a Postgres server, a **login database** is required. This database is not used - but is required, because Postgres needs a default login database to be specified.
+   To connect to a Postgres server, a login database is required. This database is not used - but is required, because Postgres needs a default login database to be specified.
    {{% /alert %}}
 
-**Environment Isolation**
+##### 2.2.1.2 Environment Isolation
 
 * Unique user (Postgres role) for every environment.
 * Unique database for every environment.
 * Environment has full access only to its own database, cannot access data from other environments.
 
-**Limitations**
+##### 2.2.1.3 Limitations
 
 * Passwords can only be rotated manually.
 * The Postgres server will be shared between environments, which could affect scalability.
 
-**Create workflow** (what the Mendix Operator will do when a new environment is created):
+##### 2.2.1.4 Create Workflow 
+
+When a new environment is created, the Mendix Operator performs the following actions:
 
 * Generate a database name, username (Postgres role) and password for the new environment.
 * Create a new database in the provided Postgres server. This will be the environment's dedicated database.
 * Create a new user (role) for the new environment, and allow this user to access only the new environment's database. This will be the environment's user.
 * Create a Kubernetes secret to provide connection details to the new app environment - to automatically configure the new environment.
 
-**Delete workflow** (what the Mendix Operator will do when an existing environment is deleted):
+##### 2.2.1.5 Delete Workflow 
+
+When an existing environment is deleted, the Mendix Operator performs the following actions:
 
 * Delete that environment's user (role).
 * Delete that environment's database.
 * Delete that environment's Kubernetes database credentials secret.
 
-**Configuring a Postgres plan**
+##### 2.2.1.6 Configuring a Postgres Plan
 
 In the Postgres plan configuration, enter the following details:
 
-* **Host** is the Postgres server hostname, for example `postgres-shared-postgresql.privatecloud-storage.svc.cluster.local`
-* **Port** is the Postgres server port number, in most cases this should be set to `5432`.
-* **Database name** is the login database for the admin/superuser, in most cases this is set to `postgres`.
-* **Username** is the username for the admin/superuser - used by the Mendix Operator to create/delete tenants for app environments; typically, this is set to `postgres`.
-* **Password** is the username for the admin/superuser - used by the Mendix Operator to create/delete tenants for app environments.
-* **Strict TLS** specifies if TLS should always be validated.
+* **Host** - Postgres server hostname, for example `postgres-shared-postgresql.privatecloud-storage.svc.cluster.local`.
+* **Port** - Postgres server port number; in most cases this should be set to `5432`.
+* **Database name** - login database for the admin/superuser; in most cases this is set to `postgres`.
+* **Username** - username of the admin/superuser, used by the Mendix Operator to create or delete tenants for app environments; typically, this is set to `postgres`.
+* **Password** - username of the admin/superuser; used by the Mendix Operator to create or delete tenants for app environments.
+* **Strict TLS** - specifies if the TLS should always be validated.
   * Enabling this option will enable full TLS certificate validation and require encryption when connecting to the PostgreSQL server. If the PostgreSQL server has a self-signed certificate, you will also need to configure [custom TLS](#custom-tls) so that the self-signed certificate is accepted.
   * Disabling this option will attempt to connect with TLS, but skip certificate validation. If TLS is not supported, it will fall back to an unencrypted connection.
 
@@ -233,35 +232,37 @@ To connect to an Azure PostgreSQL server, the Kubernetes cluster must be added t
 To connect to an Amazon RDS database, the VPC and firewall must be configured to allow connections to the database from the Kubernetes cluster.
 {{% /alert %}}
 
-### 2.2 Ephemeral{#database-ephemeral}
+#### 2.2.2 Ephemeral {#database-ephemeral}
 
-<text class="badge badge-pill badge-primary">Basic</text> <text class="badge badge-pill badge-primary">On-Demand</text>
+Ephemeral databases are basic, on-demand databases. Ephemeral databases are the simplest option to implement. The Ephemeral plan will enable you to quickly set up your environment and deploy your app, but any data you store in the database will be lost when you restart your environment.
 
-The **Ephemeral** plan will enable you to quickly set up your environment and deploy your app, but any data you store in the database will be lost when you restart your environment.
+##### 2.2.2.1 Prerequisites
 
-**Prerequisites**
+None.
 
-* None.
-
-**Limitations**
+##### 2.2.2.2 Limitations
 
 * Data is lost when the app pod is restarted.
-* It's not possible to run more than one replica of an app.
+* It is not possible to run more than one replica of an app.
 
-**Environment Isolation**
+##### 2.2.2.3 Environment Isolation
 
-* Each environment (Kubernetes pod) stores its data in-memory.
+* Each environment (Kubernetes pod) stores its data in memory.
 * An environment cannot access data from other environments.
 
-**Create workflow** (what the Mendix Operator will do when a new environment is created):
+##### 2.2.2.4 Create Workflow
 
-* Create a Kubernetes secret to provide connection details to the new app environment - to specify that the app should use a local in-memory database.
+When a new environment is created, the Mendix Operator performs the following actions:
 
-**Delete workflow** (what the Mendix Operator will do when an existing environment is deleted):
+* Create a Kubernetes secret to provide connection details to the new app environment and specify that the app should use a local in-memory database.
+
+##### 2.2.2.5 Delete Workflow
+
+When an existing environment is deleted, the Mendix Operator performs the following actions:
 
 * Delete that environment's Kubernetes database credentials secret.
 
-### 2.3 SQL Server{#database-sqlserver}
+### 2.3 SQL Server {#database-sqlserver}
 
 <text class="badge badge-pill badge-primary">Automated</text> <text class="badge badge-pill badge-primary">On-Demand</text>
 

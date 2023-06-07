@@ -42,7 +42,7 @@ With the growth of our customer base, we felt the need to work on the architectu
 * We added a check on start-up to detect if the proper agent *.jar* file has been loaded.
 * We fixed an issue with [Client API](/apidocs-mxsdk/apidocs/client-api/) requests, as `retrieve_by_microflow` and `retrieve_by_path` were not specifying their target.
 
-## 2.0.21	
+## 2.0.21    
 
 * We released the Mendix 7 version of the agent for release [2.0.22](#2022) (which contains the Mendix 8 version).
 

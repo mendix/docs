@@ -403,6 +403,7 @@ The following discoverability values can be set:
 * **Discoverable** – all users in your company can see and consume the asset in the Catalog and Studio Pro 
 * **Non-Discoverable** – the asset is only visible to owners, Data Hub curators, and the company admin in the Catalog; it is not included in the search results in the **Data Hub** pane of Studio Pro, or any other client of the Data Hub API.
 
+
 #### 3.6.5 Validated
 
 This indicates if the data source has been **Validated**. For details on changing **Validated** as an owner or curator, see the [Curation Bar](#curation-bar) section below. See the [Validated](/data-hub/mendix-connect-catalog/curate/#validated) section of *Curate Registered Assets* to learn about what this means.

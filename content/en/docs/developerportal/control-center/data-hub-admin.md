@@ -73,7 +73,7 @@ Once the external user receives the invitation, they log into the Catalog with t
 
 {{< figure src="/attachments/developerportal/control-center/data-hub-admin/company_selector.png" alt="Company selector" >}}
 
-Company administrators can also **Remove** rights of users who no longer need access, and can add another user in their place.
+Mendix Admins can also **Remove** rights of users who no longer need access, and can add another user in their place.
 
 ## 5 Settings {#settings}
 

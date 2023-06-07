@@ -68,4 +68,3 @@ The Theme Customizer allows you to customize your app in Mendix Studio. FTo make
 * [How to Extend Design Properties to Customize Your Studio Experience](/howto8/front-end/extend-design-properties-to-customize/)
 * [How to Migrate Existing Apps to Atlas UI](/howto8/front-end/migrate-existing-projects-to-atlasui/)
 * [How to Share Company Atlas UI Resources](/howto8/front-end/share-company-atlas-ui-resources/)
-

@@ -344,7 +344,7 @@ In the list, you can see the following items:
 * **Portfolio Name** – This is the name of the portfolio. Clicking the name opens a pop-up window that shows the general information of the portfolio and the list of the Portfolio Managers.
 * **Managers** – This shows the number of Portfolio Managers in this portfolio.
 * **Members** – This shows the number of users who have access to this portfolio.
-*  **Privacy** – This shows the current privacy settings of the portfolio.
+* **Privacy** – This shows the current privacy settings of the portfolio.
    
     * **Private** –  A private portfolio is not discoverable in the **Company Portfolios** section of the [Portfolio Landscape Overview](/developerportal/portfolio-management/#portfolio-landscape) page in the Portfolio Management app. People who want to access a private portfolio need an invitation.
     * **Restricted** – A restricted portfolio is discoverable in the **Company Portfolios** section of the [Portfolio Landscape Overview](/developerportal/portfolio-management/#portfolio-landscape) page in the Portfolio Management app. People who want to access a restricted portfolio need an invitation.
@@ -355,9 +355,9 @@ In the list, you can see the following items:
 
 * Ellipsis (**...**) – Clicking the button opens a menu with the following items:
 
-  * **Access management** – Selecting this brings you to the [Access Management](#access-management) page.
+    * **Access management** – Selecting this brings you to the [Access Management](#access-management) page.
 
-  * **Delete** – Selecting this allows you to [delete the portfolio](#delete-portfolio) permanently together with all the data in the portfolio.
+    * **Delete** – Selecting this allows you to [delete the portfolio](#delete-portfolio) permanently together with all the data in the portfolio.
 
 {{% alert color="info" %}}
 
@@ -378,11 +378,11 @@ The list shows all users who have access to the portfolio as well as the pending
 * **User Name** – This shows the user name.
 * **Email** – This shows the email of the user.
 * **Company** – This shows the company where the user works.
-*  **Status** – This shows the status of the portfolio access of the user.
+* **Status** – This shows the status of the portfolio access of the user.
     * **Active** – The user has access to the portfolio.
     * **Pending** – The user still needs to accept the invitation to the portfolio.
 * **Role** – This shows the portfolio access role of the user. For more information about different roles and permissions, see the [Access Management](/developerportal/portfolio-management/#access-management) section in *Portfolio Management*.
-*  Ellipsis (**...**) – Clicking the button opens a menu with the following items:
+* Ellipsis (**...**) – Clicking the button opens a menu with the following items:
     * **Edit** – Selecting this allows you to change the role of the user.
     * **Remove** – Selecting this allows you to remove the user from the portfolio.
 
@@ -411,17 +411,17 @@ In the list, you can see the following items:
 * **Members** – This shows the number of users who have access to the portfolio.
 
 * **Privacy** – This shows the current privacy settings of the portfolio.
-  * **Private** –  A private portfolio is not discoverable in the **Company Portfolios** section of the [Portfolio Landscape Overview](/developerportal/portfolio-management/#portfolio-landscape) page in the Portfolio Management app. People who want to access a private portfolio need an invitation.
-  * **Restricted** – A restricted portfolio is discoverable in the **Company Portfolios** section of the [Portfolio Landscape Overview](/developerportal/portfolio-management/#portfolio-landscape) page in the Portfolio Management app. People who want to access a restricted portfolio need an invitation.
+    * **Private** –  A private portfolio is not discoverable in the **Company Portfolios** section of the [Portfolio Landscape Overview](/developerportal/portfolio-management/#portfolio-landscape) page in the Portfolio Management app. People who want to access a private portfolio need an invitation.
+    * **Restricted** – A restricted portfolio is discoverable in the **Company Portfolios** section of the [Portfolio Landscape Overview](/developerportal/portfolio-management/#portfolio-landscape) page in the Portfolio Management app. People who want to access a restricted portfolio need an invitation.
 
 * **Created** – This shows the date on which the portfolio was created.
 * **Last Modified** – This shows the date on which the portfolio was last modified.
 
 * Ellipsis (**...**) – Clicking the icon opens a menu with the following items:
 
-  * **Access management** – Selecting this brings you to the [Access Management](#access-management) page.
+    * **Access management** – Selecting this brings you to the [Access Management](#access-management) page.
 
-  * **Delete** – Selecting this allows you to [delete the portfolio](#delete-portfolio) permanently together with all the data in the portfolio.
+    * **Delete** – Selecting this allows you to [delete the portfolio](#delete-portfolio) permanently together with all the data in the portfolio.
 
 ### 15.3 Privacy Requests {#privacy-requests}
 
@@ -433,13 +433,13 @@ The toggle is turned off by default. If the toggle is turned on, as a Mendix Adm
 
 On the **Privacy Requests** tab, you can view all the pending requests. You can approve or reject a request here. Every request contains the following items:
 
-- **Portfolio Name** – This shows the name of the portfolio.
-- **Requested By** – This shows the name of the user who made the request.
-- **From** – This shows the current privacy settings.
-- **To** – This shows the new privacy settings that are being requested.
-- **Date** – This shows the date on which the request was made.
-- **Reject** – Clicking this rejects the request. When you reject a request, optionally you can fill in a reason to inform the requester.
-- **Approve** – Clicking this approves the request.
+* **Portfolio Name** – This shows the name of the portfolio.
+* **Requested By** – This shows the name of the user who made the request.
+* **From** – This shows the current privacy settings.
+* **To** – This shows the new privacy settings that are being requested.
+* **Date** – This shows the date on which the request was made.
+* **Reject** – Clicking this rejects the request. When you reject a request, optionally you can fill in a reason to inform the requester.
+* **Approve** – Clicking this approves the request.
 
 {{% alert color="info" %}}
 After a request is either rejected or approved, a notification is sent to the requester. If the Mendix Admin fills in the reason for the rejection, the reason is also shown to the requester.

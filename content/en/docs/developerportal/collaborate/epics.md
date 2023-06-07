@@ -243,17 +243,17 @@ To archive or delete multiple stories, select these stories, and then click the 
 
 For Windows, you can use the following keyboard shortcuts to select stories on the **Planning** page:
 
-   * <kbd>Ctrl</kbd> + <kbd>A</kbd> – select all stories
-   * <kbd>Ctrl</kbd> + <kbd>D</kbd> – cancel the selection of all stories
-   * <kbd>Ctrl</kbd> + click – select multiple stories
-   * <kbd>Shift</kbd> + click – select a range of stories
+* <kbd>Ctrl</kbd> + <kbd>A</kbd> – select all stories
+* <kbd>Ctrl</kbd> + <kbd>D</kbd> – cancel the selection of all stories
+* <kbd>Ctrl</kbd> + click – select multiple stories
+* <kbd>Shift</kbd> + click – select a range of stories
 
 For Mac, you can use the following keyboard shortcuts to select stories on the **Planning** page:
 
-   * <kbd>Command</kbd> + <kbd>A</kbd> – select all stories
-   * <kbd>Command</kbd> + <kbd>D</kbd> – cancel the selection of all stories
-   * <kbd>Command</kbd> + click – select multiple stories
-   * <kbd>Shift</kbd> + click – select a range of stories
+* <kbd>Command</kbd> + <kbd>A</kbd> – select all stories
+* <kbd>Command</kbd> + <kbd>D</kbd> – cancel the selection of all stories
+* <kbd>Command</kbd> + click – select multiple stories
+* <kbd>Shift</kbd> + click – select a range of stories
 
 ### 3.3 Importing Stories {#import-stories}
 

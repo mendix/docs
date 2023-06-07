@@ -247,7 +247,8 @@ These release notes cover changes made to the [Mendix Catalog](/data-hub/mendix-
 
 #### Improvements
 
-* Company administrators can now assign a new [external user](/developerportal/control-center/data-hub-admin/#external-users) when removing the existing one from company's Catalog. To remove a user, go to the **Control Center** > **Data Hub** > **External Users** and click **Remove**.
+
+* Mendix Admins can now assign a new [external user](/developerportal/control-center/data-hub-admin/#external-users) when removing the existing one from company's Data Hub Catalog. To remove a user, go to the **Control Center** > **Data Hub** > **External Users** and click **Remove**.
 
 #### Fixes
 
@@ -281,7 +282,7 @@ These release notes cover changes made to the [Mendix Catalog](/data-hub/mendix-
 
 #### Improvements
 
-* Company administrators can now remove external participants from their company's Catalog. To do so, go to the **Control Center** > **Data Hub** > **External Users** and click **Remove**.
+* Mendix Admins can now remove external participants from their company's Data Hub Catalog. To do so, go to the **Control Center** > **Data Hub** > **External Users** and click **Remove**.
 
 #### Fixes
 

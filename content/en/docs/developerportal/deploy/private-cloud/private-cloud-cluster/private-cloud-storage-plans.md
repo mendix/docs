@@ -383,74 +383,61 @@ In the Dedicated JDBC plan configuration, enter the following details:
 * **User** - Specifies the username to be used by the Mendix app environment to connect to the database.
 * **Password** - Specifies the password for **Username**.
 
-## 3 Blob File Storage Plans{#blob-storage}
+## 3 Blob File Storage Plans {#blob-storage}
 
 {{% alert color="info" %}}
-In this document, _Storage plan_ means a general database or blob file bucket - an external server that can store data (entities in a database, or contents of `System.FileDocument` entities in a blob storage bucket).
-
-To be as specific as possible, this document refers to file storage buckets as _blob file storage buckets_, and to their associated storage plans as _blob file storage plans_.
-To save screen space, the `mxpc-cli` Configuration Tool calls them _Storage Plans_.
+In this document, *storage plan* means a general database or blob file bucket - an external server that can store data (entities in a database, or contents of `System.FileDocument` entities in a blob storage bucket). To be as specific as possible, this document refers to file storage buckets as *blob file storage buckets*, and to their associated storage plans as *blob file storage plans*. To save screen space, the `mxpc-cli` Configuration Tool calls them *Storage Plans*.
 {{% /alert %}}
 
 {{% alert color="info" %}}
-The _Prevent Data Deletion_ option switches the bucket into immutable mode:
+The **Prevent Data Deletion** option switches the bucket into immutable mode:
 
 * When a `System.FileDocument` entity is removed, its actual file will remain in the storage bucket.
 * When a `System.FileDocument` entity is modified, a new blob file will be uploaded into the storage bucket.
 * When an environment is deleted, its files will not be cleaned up (deleted) from the storage bucket.
 
-This can increase storage costs, but in exchange removes the need to run file backups.
-To roll back an app environment to an earlier stage, only the database needs to be rolled back.
-All files referenced by that database shapshot are already available in the blob storage bucket.
+This can increase storage costs, but in exchange removes the need to run file backups. To roll back an app environment to an earlier stage, only the database needs to be rolled back. All files referenced by that database shapshot are already available in the blob storage bucket.
 
-If _Prevent Data Deletion_ is enabled, you can remove `s3:DeleteObject` and `s3:DeleteBucket` permissions from example IAM policies.
+If **Prevent Data Deletion** is enabled, you can remove `s3:DeleteObject` and `s3:DeleteBucket` permissions from example IAM policies.
 {{% /alert %}}
 
 The following **Blob File Storage Types** are supported:
 
-* MinIO
-* Ephemeral (non-persistent)
-* Amazon S3
-* Azure Blob Storage
-* Google Cloud Storage bucket
-* Ceph RADOS
+* [MinIO](#blob-minio) - Easiest option to use for a cloud vendor-agnostic solution, if the MinIO server license terms are acceptable
+* [Ephemeral (non-persistent)](#blob-ephemeral) - Simplest option; the contents of `System.FileDocument` will only be stored locally in a pod and will be lost when a pod is restarted
+* [Amazon S3](#blob-s3) - Solution hosted by Amazon S3
+* [Azure Blob Storage](#blob-azure) - Solution hosted by Azure Blob Storage
+* [Google Cloud Storage](#blob-gcp-storage-bucket) - Solution hosted by Google Cloud Storage
+* [Ceph RADOS](#blob-ceph) - Allows the use of a pre-created bucket from an S3-compatible vendor. This option also works with other S3-compatible storage options (not listed in this document)
 
-The easiest option is [ephemeral](#blob-ephemeral) file storage. The contents of `System.FileDocument` will only be stored locally in a pod and will be lost when a pod is restarted.
+### 3.1 MinIO {#blob-minio}
 
-For a cloud vendor-agnostic solution, [MinIO](#blob-minio) is easiest option to use - if the MinIO server license terms are acceptable.
+[MinIO](https://min.io/product/overview) is an automated, on-demand S3-compatible object storage. The **MinIO** plan offers a good balance between automation, ease of use and security, and doesn't depend on any cloud vendors. 
 
-To use a solution hosted by your cloud vendor, choose [Amazon S3](#blob-s3), [Azure Blob Storage](#blob-azure) or [Google Cloud Storage](#blob-gcp-storage-bucket).
-
-**Ceph RADOS** allows to use a pre-created bucket from an S3-compatible vendor. This option also works with other S3-compatible storage options (not listed in this document)
-
-### 3.1 MinIO{#blob-minio}
-
-<text class="badge badge-pill badge-primary">Automated</text> <text class="badge badge-pill badge-primary">On-Demand</text>
-
-The **MinIO** plan offers a good balance between automation, ease of use and security, and doesn't depend on any cloud vendors.
-[MinIO](https://min.io/product/overview) is an S3-compatible object storage. 
-
-**Prerequisites**
+#### 3.1.1 Prerequisites
 
 * A MinIO server - for example, installed from a Helm chart or using the official MinIO Kubernetes Operator.
 
    {{% alert color="warning" %}}
    MinIO [changed the license](https://blog.min.io/from-open-source-to-free-and-open-source-minio-is-now-fully-licensed-under-gnu-agplv3/) from Apache License 2.0 to GNU AGPLv3.
    This means that for use in most production environments, MinIO needs a licensed subscription.
-   {{% /alert %}} 
+   {{% /alert %}}
+   
 * An admin user account - with permissions to create/delete users, policies and buckets.
 
-**Limitations**
+#### 3.1.2 Limitations
 
-* Access/Secret keys used by existing environments can only be rotated manually.
+* Access and Secret keys used by existing environments can only be rotated manually.
 * The MinIO server needs to be a full-featured MinIO server, or a [MinIO Gateway](https://github.com/MinIO/MinIO/tree/master/docs/gateway) with configured `etcd`. MinIO Gateway without `etcd` can only have one user, and won't support environment isolation.
 
-**Environment Isolation**
+#### 3.1.3 Environment Isolation
 
 * Every environment has its own IAM user.
 * An environment can only access its own blob file storage bucket.
 
-**Create workflow** (what the Mendix Operator will do when a new environment is created):
+#### 3.1.4 Create Workflow
+
+When a new environment is created, the Mendix Operator performs the following actions:
 
 * Generate a bucket name and an IAM username for the new environment.
 * Create a new IAM user for the new environment.
@@ -459,9 +446,11 @@ The **MinIO** plan offers a good balance between automation, ease of use and sec
 * Create a new bucket for the new environment.
 * Create a Kubernetes secret to provide connection details to the new app environment - to automatically configure the new environment.
 
-**Delete workflow** (what the Mendix Operator will do when an existing environment is deleted):
+#### 3.1.5 Delete Workflow
 
-* (Only if _Prevent Data Deletion_ is not enabled) Delete that environment's bucket and its contents.
+When an existing environment is deleted, the Mendix Operator performs the following actions:
+
+* (Only if **Prevent Data Deletion** is not enabled) Delete that environment's bucket and its contents.
 * Delete that environment's IAM user.
 * Delete that environment's policy.
 * Delete that environment's Kubernetes blob file storage credentials secret.
@@ -472,7 +461,7 @@ To use TLS, specify the MinIO URL with an `https` schema, for example `https://m
 If the MinIO URL is specified with an `http` schema, TLS will not be used.
 {{% /alert %}}
 
-**Configuring a MinIO plan**
+#### 3.1.6 Configuring a MinIO Plan
 
 In the MinIO plan configuration, enter the following details:
 
@@ -481,35 +470,37 @@ In the MinIO plan configuration, enter the following details:
 * **Access Key** is the admin user account access key (username), used by Mendix Operator to create tenants for new environments.
 * **Secret Key** is the admin user account secret key (password), used by Mendix Operator to create tenants for new environments.
 
-### 3.2 Ephemeral{#blob-ephemeral}
+### 3.2 Ephemeral {#blob-ephemeral}
 
-<text class="badge badge-pill badge-primary">Basic</text> <text class="badge badge-pill badge-primary">On-Demand</text>
+The **Ephemeral** plan is a basic, on-demand way to quickly set up your environment and deploy your app, but any data objects you store will be lost when you restart your environment.
 
-The **Ephemeral** plan will enable you to quickly set up your environment and deploy your app, but any data objects you store will be lost when you restart your environment.
-
-**Prerequisites**
+#### 3.2.1 Prerequisites
 
 * None.
 
-**Limitations**
+#### 3.2.2 Limitations
 
 * Data is lost when the app pod is restarted.
 * If an app has more than one replica, behavior can be unpredictable unless the ingress controller has session affinity.
 
-**Environment Isolation**
+#### 3.2.3 Environment Isolation
 
 * Each environment (Kubernetes pod) stores its data in the local filesystem.
 * An environment cannot access data from other environments.
 
-**Create workflow** (what the Mendix Operator will do when a new environment is created):
+#### 3.2.4 Create Workflow
 
-* Create a Kubernetes secret to provide connection details to the new app environment - to specify that the app should use the default file storage option (local files in a pod).
+When a new environment is created, the Mendix Operator performs the following actions:
 
-**Delete workflow** (what the Mendix Operator will do when an existing environment is deleted):
+* Create a Kubernetes secret to provide connection details to the new app environment and specify that the app should use the default file storage option (local files in a pod).
+
+#### 3.2.5 Delete Workflow
+
+When an existing environment is deleted, the Mendix Operator performs the following actions:
 
 * Delete that environment's Kubernetes blob file storage credentials secret.
 
-### 3.3 Amazon S3{#blob-s3}
+### 3.3 Amazon S3 {#blob-s3}
 
 Mendix for Private Cloud provides a variety of options how to store files in Amazon S3.
 Each option uses its own approach to isolation between environments, and how a bucket (and IAM user/policy) would be attached to a new environment.

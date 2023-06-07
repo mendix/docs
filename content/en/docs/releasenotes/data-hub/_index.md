@@ -15,11 +15,11 @@ These release notes cover changes made to the [Mendix Data Hub Catalog](/data-hu
 
 #### Improvements
 
-* We added the option to provide feedback to the Catalog through a button on the right side of the screen. 
+* We added a feedback option on the right side of the screen. Let us know if you find an issue, have a suggestion for improvement, or want to share something we are doing well!
 
 #### Fixes
 
-* We fixed an issue where uploading and cropping a custom icon wasn't working correctly.
+* We fixed an issue where uploading and cropping a custom icon did not work correctly.
 
 ### June 1st, 2023
 

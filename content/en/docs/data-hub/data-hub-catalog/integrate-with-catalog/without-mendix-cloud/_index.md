@@ -20,44 +20,44 @@ This document covers the following use cases:
 * You are developing both the service and the client on a local machine, without deploying to a cloud environment (deploying locally)
 * You are deploying to a [Private Cloud](/developerportal/deploy/private-cloud/) (including the [Tencent Cloud](/developerportal/deploy/tencent-deploy/)) or [On-Premises](/developerportal/deploy/on-premises-design/), rather than the Mendix Cloud
 
-In these cases, you can still publish and consume external entities. This guide will explain how to work with the Data Hub Catalog and external entities by taking a step back and distinguishing between design time (when you are modeling your app) and runtime (after it has been deployed to a development server) for Data Hub.
+In these cases, you can still publish and consume external entities. This guide will explain how to work with the Catalog and external entities by taking a step back and distinguishing between design time (when you are modeling your app) and runtime (after it has been deployed to a development server) for Data Hub.
 
 ## 2 Data Hub in Design Time{#dh-design-time}
 
-During design time, when you are [modeling](/refguide/modeling/) your app, you are finding, registering, or importing data source [metadata](#metadata) into Studio Pro. This metadata is in the form of contracts, and is registered automatically in the Data Hub Catalog if your application is hosted on the Mendix Cloud. See the [Metadata Contracts](#metadata) section below for more details.
+During design time, when you are [modeling](/refguide/modeling/) your app, you are finding, registering, or importing data source [metadata](#metadata) into Studio Pro. This metadata is in the form of contracts, and is registered automatically in the Catalog if your application is hosted on the Mendix Cloud. See the [Metadata Contracts](#metadata) section below for more details.
 
 If you will be deploying locally, to a Private Cloud, or On-Premises, you can add an app, the environments on which it is deployed, and the [published OData resource](/refguide/published-odata-resource/) it provides using the metadata contract. For general resources on using Data Hub when modeling your app during design time, check out [Share Data Between Apps](/data-hub/share-data/) and [Write Data to Another App](/data-hub/write-data/).
 
 ### 2.1 Metadata Contracts {#metadata}
 
-The Data Hub Catalog acts as a phonebook or map to the data and capabilities provided by software in your organization. It contains metadata about the applications, environments, services, and versions deployed. For every system registered, the contracts describing its services are parsed and stored, so users can easily find the descriptions of the datasets, logic, and events provided by these systems. The Catalog does not contain any data, only the metadata required to describe these applications and services.
+The Catalog acts as a phonebook or map to the data and capabilities provided by software in your organization. It contains metadata about the applications, environments, services, and versions deployed. For every system registered, the contracts describing its services are parsed and stored, so users can easily find the descriptions of the datasets, logic, and events provided by these systems. The Catalog does not contain any data, only the metadata required to describe these applications and services.
 
-See the [Registering a Service Through the Mendix Cloud](/data-hub/data-hub-catalog/register-data/#mendix-cloud) section of *Register OData Resources in the Data Hub Catalog to read how this works if you are deploying to the Mendix Cloud. 
+See the [Registering a Service Through the Mendix Cloud](/data-hub/data-hub-catalog/register-data/#mendix-cloud) section of *Register OData Resources in the Catalog to read how this works if you are deploying to the Mendix Cloud. 
 
 ### 2.1.1 Supported Metadata Contract Types
 
 We support ZIP (for multiple file contracts) or XML (for single file contracts).
 
-### 2.2 Manually Registering Contracts to the Data Hub Catalog with Team Server {#manual-team-server}
+### 2.2 Manually Registering Contracts to the Catalog with Team Server {#manual-team-server}
 
-If you deploy to a Private Cloud or On-Premises setup, and use the [Mendix Team Server](/refguide/version-control/#team-server), you can manually register applications, environments, services, or data sources to the Data Hub Catalog. Registering the data source contracts to the Catalog ensures that it can be found and imported into an application by members of the company that owns it. 
+If you deploy to a Private Cloud or On-Premises setup, and use the [Mendix Team Server](/refguide/version-control/#team-server), you can manually register applications, environments, services, or data sources to the Catalog. Registering the data source contracts to the Catalog ensures that it can be found and imported into an application by members of the company that owns it. 
 
-To manually register an OData contract metadata file to the Data Hub Catalog, follow these basic steps:
+To manually register an OData contract metadata file to the Catalog, follow these basic steps:
 
 1. Create an `.mda` package to deploy. To do this, go to the **Environments** page in the **Developer Portal** and click **Create Package From Teamserver**. The `.mda` package contains a `dependencies.json` file that lists all published and consumed OData services.
 2. Use the [Transform](/data-hub/data-hub-catalog/register-data/#transform-api) operation to transform the contents of `dependencies.json` into payloads for other operations (see the [Transform operation specs](http://datahub-spec.s3-website.eu-central-1.amazonaws.com/registration_v4.html#/Endpoints/post_transform_dependenciesjson)).
 3. Use the [Registration API](/apidocs-mxsdk/apidocs/data-hub-apis/#registration) to register the data source.
 
-For detailed steps, see the [Registering a Service without the Mendix Cloud](/data-hub/data-hub-catalog/register-data/#without-mendix-cloud) section of *Register OData Resources in the Data Hub Catalog*.
+For detailed steps, see the [Registering a Service without the Mendix Cloud](/data-hub/data-hub-catalog/register-data/#without-mendix-cloud) section of *Register OData Resources in the Catalog*.
 
-### 2.3 Manually Registering Contracts to the Data Hub Catalog without Team Server {#manual-no-team-server}
+### 2.3 Manually Registering Contracts to the Catalog without Team Server {#manual-no-team-server}
 
-To manually register contracts to the Data Hub Catalog without the Mendix Team Server, do the following:
+To manually register contracts to the Catalog without the Mendix Team Server, do the following:
 
 1. Export the contract from the publishing app and download it to your computer. </br> Go to **Settings** tab of the **Published OData Service** document, and click **Export** next to the **Metadata** field. Save the `$metadata.xml` file.
-2. Register the contract into the Data Hub Catalog manually. </br> See the [Registering a Service without the Mendix Cloud](/data-hub/data-hub-catalog/register-data/#without-mendix-cloud) section of *Register OData Resources in the Data Hub Catalog*.
+2. Register the contract into the Catalog manually. </br> See the [Registering a Service without the Mendix Cloud](/data-hub/data-hub-catalog/register-data/#without-mendix-cloud) section of *Register OData Resources in the Catalog*.
 
-### 2.4 Importing Contracts Directly into Studio Pro (Bypassing the Data Hub Catalog) {#import-contracts}
+### 2.4 Importing Contracts Directly into Studio Pro (Bypassing the Catalog) {#import-contracts}
 
 If you are deploying locally, or do not want to register the data sources in the Catalog, you can import the metadata contracts or service URLs directly into Studio Pro to consume a published OData service.
 
@@ -106,7 +106,7 @@ See the [Update or Switch](/refguide/consumed-odata-service/#update-switch) sect
 
 ## 3 Data Hub in Runtime {#dh-runtime}
 
-During runtime, after you have deployed your app to a development server, the exchange of external entities via OData services occurs between publishing and consuming apps. Anyone who deploys to a Private Cloud or On-Premises can consume the OData resources that are set up when [using Data Hub in design time](#dh-design-time). The Data Hub Catalog is not involved during runtime.
+During runtime, after you have deployed your app to a development server, the exchange of external entities via OData services occurs between publishing and consuming apps. Anyone who deploys to a Private Cloud or On-Premises can consume the OData resources that are set up when [using Data Hub in design time](#dh-design-time). The Catalog is not involved during runtime.
 
 {{% alert color="info" %}}
 Publishing and consuming services need to have network access to each other, but do not necessarily need to be on cloud or network. {{% /alert %}}
@@ -114,5 +114,5 @@ Publishing and consuming services need to have network access to each other, but
 ## 4 Read More
 
 * [Data Hub Guide](/data-hub/)
-* [Data Hub Catalog](/data-hub/data-hub-catalog/)
+* [Catalog](/data-hub/data-hub-catalog/)
 * [Data Hub Architecture](https://www.mendix.com/evaluation-guide/app-capabilities/integration/data-hub-architecture/) in the Evaluation Guide

@@ -15,4 +15,4 @@ Common tasks for registering data sources include the following:
 * [Using the Registration API](/data-hub/data-hub-catalog/register-data/#register-services) (for any deployment method)
 * [Wrap services, APIs, and databases with OData](/refguide/wrap-services-odata/)
 
-For an overview of registering OData sources, see [Register OData Resources in the Data Hub Catalog](/data-hub/data-hub-catalog/register-data/). You can also [Register Non-OData Resources in the Data Hub Catalog](/data-hub/data-hub-catalog/register-non-odata-resources/). 
+For an overview of registering OData sources, see [Register OData Resources in the Catalog](/data-hub/data-hub-catalog/register-data/). You can also [Register Non-OData Resources in the Catalog](/data-hub/data-hub-catalog/register-non-odata-resources/). 

@@ -1,16 +1,16 @@
 ---
 title: "Catalog Quickstart"
 url: /data-hub/data-hub-catalog/get-started/
-category: "Data Hub Catalog"
+category: "Catalog"
 linktitle: "Catalog Quickstart"
 weight: 1
 description: "Describes initial steps beginning users can take with their Catalog."
-tags: ["data hub", "data hub catalog", "consume", "external entities", "asset", "entities", "data hub pane", "studio pro"]
+tags: ["data hub", "Catalog", "consume", "external entities", "asset", "entities", "data hub pane", "studio pro"]
 ---
 
 ## 1 Introduction
 
-Data Hub Catalog is an open, standards-based metadata repository that enables Mendix developers and administrators to discover and explore data sources throughout their connected ecosystem. This respository is accessible to [authorized users](/data-hub/data-hub-catalog/manage-data-sources/user-roles/) in your company on the web app, hub.mendix.com, or through [Data Hub APIs](/apidocs-mxsdk/apidocs/data-hub-apis/).
+Catalog is an open, standards-based metadata repository that enables Mendix developers and administrators to discover and explore data sources throughout their connected ecosystem. This respository is accessible to [authorized users](/data-hub/data-hub-catalog/manage-data-sources/user-roles/) in your company on the web app, hub.mendix.com, or through [Data Hub APIs](/apidocs-mxsdk/apidocs/data-hub-apis/).
 
 {{% alert color="info" %}}The Catalog currently supports OData data sources, or services, APIs, or databases that are [wrapped in OData](/refguide/wrap-services-odata/).{{% /alert %}}
 
@@ -44,4 +44,4 @@ Build on this experience by learning how to [write data to another app](/data-hu
 
 ## 5 Processes and Properties
 
-[Data Hub Catalog](/data-hub/data-hub-catalog/) goes into detailed information on the Catalog's processes and properties. This is helpful if you are looking for explanations of what you see in the Catalog UI (hub.mendix.com) and how parts of the UI relate to each other.
+[Catalog](/data-hub/data-hub-catalog/) goes into detailed information on the Catalog's processes and properties. This is helpful if you are looking for explanations of what you see in the Catalog UI (hub.mendix.com) and how parts of the UI relate to each other.

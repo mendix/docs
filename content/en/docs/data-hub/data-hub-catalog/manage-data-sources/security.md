@@ -2,12 +2,12 @@
 title: "Data Accessibility and Security"
 url: /data-hub/data-hub-catalog/security/
 description: "Describes security aspects around registered assets and access in Mendix Data Hub."
-tags: ["data hub", "data hub catalog", "security", "entity security", "dataset security","odata service security"]
+tags: ["data hub", "Catalog", "security", "entity security", "dataset security","odata service security"]
 ---
 
 ## 1 Introduction
 
-In the Data Hub Catalog, the [Access Level](#access-level) indicates whether you can access a registered data source.
+In the Catalog, the [Access Level](#access-level) indicates whether you can access a registered data source.
 
 Security for a Mendix app can be defined at the app-level, module-level, and entity-level. You can also specify further authentication methods to control access to the data associated with published datasets.
 

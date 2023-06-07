@@ -7,7 +7,7 @@ no_list: false
 description_list: true
 tags: ["mendix connect", "catalog"]
 aliases: 
-    - /data-hub/mendix-connect-catalog/
+    - /data-hub/data-hub-catalog/
 ---
 
 ## 1 Introduction

@@ -269,7 +269,7 @@ An enumeration is a predefined list of values that can be used as an attribute t
 | Name | Caption | Description |
 | --- | --- | --- |
 | `STANDARD` | **STANDARD** | (Default) Selecting this enumeration value stores an object according to the standard class |
-| `REDUCED_REDUNDANCY` | REDUCED_REDUNDANCY | Selecting this enumeration value stores an object according to the RRS (reduced redundancy storage) class |
+| `REDUCED_REDUNDANCY` | **REDUCED_REDUNDANCY** | Selecting this enumeration value stores an object according to the RRS (reduced redundancy storage) class |
 | `GLACIER` | **GLACIER** | Selecting this enumeration value stores an object according to the glacier class |
 | `STANDARD_IA` | **STANDARD_IA** | Selecting this enumeration value stores an object according to the standard-IA (infrequent access) class |
 | `ONEZONE_IA` | **ONEZONE_IA** | Selecting this enumeration value stores an object according to the one zone-IA (infrequent access) class |

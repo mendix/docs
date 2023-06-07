@@ -47,7 +47,7 @@ For detailed information on working with external entities and the Catalog witho
 
 ### 4.1 Registering a Service Through the Catalog Registration API {#registration-api}
 
-Calling the Catalog [Registration API](/apidocs-mxsdk/apidocs/data-hub-apis/#registration) allows you to register one or more exposed OData service(s). 
+Calling the Catalog [Registration API](/apidocs-mxsdk/apidocs/catalog-apis/#registration) allows you to register one or more exposed OData service(s). 
 
 First, you need to create an authentication token to get access to the Catalog APIs. The Catalog Registration API requires authentication through a personal access token. For every API request you make to a Catalog API, include the following key-value pair with your headers:
 

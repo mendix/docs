@@ -1,15 +1,17 @@
 ---
-title: "Data Hub APIs"
-url: /apidocs-mxsdk/apidocs/data-hub-apis/
+title: "Catalog APIs"
+url: /apidocs-mxsdk/apidocs/catalog-apis/
 category: "API Documentation"
-description: "Describes the Data Hub APIs (which are for registering data sources from other business applications) and how to generate the personal access token."
+description: "Describes the Catalog APIs (which are for registering data sources from other business applications) and how to generate the personal access token."
 weight: 25
-tags: ["data hub", "Data Hub API", "authentication", "personal access token"]
+tags: ["data hub", "Catalog API", "authentication", "personal access token"]
+aliases:
+    - /apidocs-mxskd/apidocs/data-hub/apis/
 ---
 
 ## 1 Introduction
 
-The [Data Hub APIs](https://datahub-spec.s3.eu-central-1.amazonaws.com/index.html) are OpenAPI (formerly Swagger) specifications with the following APIs available:
+The [Catalog APIs](https://datahub-spec.s3.eu-central-1.amazonaws.com/index.html) are OpenAPI (formerly Swagger) specifications with the following APIs available:
 
 * [Search API](#search) — search and retrieve information on registered assets that can be used in your app development
 * [Registration API](#registration) — register and update data sources to the organization's Mendix Data Hub
@@ -21,7 +23,7 @@ At this time, the **Try it out** feature on the OpenAPI specs does not work.
 
 ### 1.1 Authentication and Access Rights
 
-The Data Hub APIs support OAuth2.0 and personal access tokens. For more inforamtion, see the [Personal Access Tokens](/developerportal/community-tools/mendix-profile/#pat) section of *Mendix Profile*.
+The Catalog APIs support OAuth2.0 and personal access tokens. For more inforamtion, see the [Personal Access Tokens](/developerportal/community-tools/mendix-profile/#pat) section of *Mendix Profile*.
 
 To view authentication instructions for each API, open the OpenAPI spec and click **Authorize** on the upper right of the screen. Supported authentication methods are documented there. As mentioned above, the **Try it out** feature does not work.
 

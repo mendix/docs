@@ -63,7 +63,7 @@ OData services can be registered in the Data Hub in the following ways:
 
 * In Mendix Studio Pro, entities are exposed in a [published OData service](/refguide/published-odata-services/), and upon deployment of the app to an environment hosted in the Mendix Cloud, the service is automatically registered in the Catalog. For details on publishing an OData service from a Mendix app, see the [Publishing to the Catalog](/data-hub/share-data/#publishing) section of *How to Share Data Between Apps*.
 * OData v4 services originating from non-Mendix sources can be registered manually. For further details, see [Register OData Resources in the Catalog](/data-hub/mendix-connect-catalog/register-data/).
-* Using the [Data Hub API](/apidocs-mxsdk/apidocs/data-hub-apis/) you can set up a registration pipeline to register data sources from your business application.
+* Using the [Data Hub API](/apidocs-mxsdk/apidocs/catalog-apis/) you can set up a registration pipeline to register data sources from your business application.
 
 ### 3.4 Curate – Maintaining Registered Assets
 

@@ -103,7 +103,10 @@ Mendix also offers a Studio Pro installer called the **Portable** installer that
 
 As compared to the regular installer, the portable installer installs Mendix Studio Pro in a user-level directory together with all the dependencies. This means that dependencies are not shared between Studio Pro versions, which results in higher disk space usage. In return, you do not require admin rights to install Mendix Studio Pro, while you can still use all the functionality.
 
-## 7 Read More
+## 8 Next Steps
 
-* [Studio Pro Overview](/refguide/studio-pro-overview/)
-* [App Modeling](/refguide/modeling/)
+Congratulations on installing Mendix Studio Pro! Now you are ready to start modeling your apps. 
+
+You can start with the [Studio Pro Overview](/refguide/studio-pro-overview/) for details on Studio Pro's UI and shortcuts, or you can move straight to [App Modeling](/refguide/modeling/).
+
+Happy modeling!

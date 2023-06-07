@@ -1,9 +1,11 @@
 ---
 title: "Amazon S3"
-url: /appstore/connectors/aws/amazon-S3/
+url: /appstore/connectors/aws/amazon-s3/
 description: "Describes the configuration and usage of the Amazon S3 connector from the Mendix Marketplace. Amazon Simple Storage Service (Amazon S3) is an object storage service offering industry-leading scalability, data availability, security, and performance."
 weight: 20
 tags: ["marketplace", "marketplace component", "aws", "amazon", "s3", "connector"]
+aliases:
+    - /appstore/connectors/aws/aws-s3-connector/
 ---
 
 ## 1 Introduction

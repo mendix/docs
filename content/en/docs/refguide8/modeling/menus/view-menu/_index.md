@@ -70,7 +70,7 @@ The **Connector** pane displays elements that can be connected to the currently 
 
 ### 3.3 Data Hub {#data-hub}
 
-The [Data Hub pane](/refguide8/data-hub-pane/) allows you to browse the [Catalog](/data-hub/data-hub-catalog/) and integrate registered data sources that are available for your organization. You can add [external entities](/refguide8/external-entities/) to your app via this pane and view entities and services already consumed in your project. 
+The [Data Hub pane](/refguide8/data-hub-pane/) allows you to browse the [Catalog](/data-hub/mendix-connect-catalog/) and integrate registered data sources that are available for your organization. You can add [external entities](/refguide8/external-entities/) to your app via this pane and view entities and services already consumed in your project. 
 
 ### 3.3 Console {#console}
 

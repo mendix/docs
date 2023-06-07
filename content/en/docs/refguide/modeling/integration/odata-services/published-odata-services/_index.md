@@ -21,7 +21,7 @@ Not all parts of the standard are implemented. If something is not documented he
 This document describes the options available to you when you create a published OData service, and ends with some runtime considerations.
 
 {{% alert color="info" %}}
-Published OData services deployed to the [Mendix Cloud](/developerportal/deploy/mendix-cloud-deploy/) are automatically registered in the [Catalog](/data-hub/data-hub-catalog/).{{% /alert %}}
+Published OData services deployed to the [Mendix Cloud](/developerportal/deploy/mendix-cloud-deploy/) are automatically registered in the [Catalog](/data-hub/mendix-connect-catalog/).{{% /alert %}}
 
 ## 2 General
 

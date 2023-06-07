@@ -1,6 +1,6 @@
 ---
 title: "Consume Registered Assets"
-url: /data-hub/data-hub-catalog/consume/
+url: /data-hub/mendix-connect-catalog/consume/
 weight: 20
 description: "Describes how to use shared data sources and datasets through Mendix Data Hub."
 tags: ["data hub", "Catalog", "consume", "external entities", "asset", "entities", data hub pane", "studio pro"]
@@ -8,11 +8,11 @@ tags: ["data hub", "Catalog", "consume", "external entities", "asset", "entities
 
 ## 1 Introduction
 
-The Catalog is a catalog of OData services exposing datasets that you can use in your apps. In Mendix Studio Pro, these exposed datasets are added as *external entities* through the [Data Hub pane](/refguide/data-hub-pane/). The integrated Catalog [search](/data-hub/data-hub-catalog/search/) functionality in Studio Pro is available to find suitable datasets to use in your apps. 
+The Catalog is a catalog of OData services exposing datasets that you can use in your apps. In Mendix Studio Pro, these exposed datasets are added as *external entities* through the [Data Hub pane](/refguide/data-hub-pane/). The integrated Catalog [search](/data-hub/mendix-connect-catalog/search/) functionality in Studio Pro is available to find suitable datasets to use in your apps. 
 
 ## 2 Using Registered Assets in Your App {#consuming-services-entities}
 
-You can use the Catalog or the [Data Hub pane](/refguide/data-hub-pane/) in Studio Pro to find registered data sources. Click [Copy Data Source URI](/data-hub/data-hub-catalog/search/#service-details) to  obtain the OData service URI, which can be used in other enterprise applications.
+You can use the Catalog or the [Data Hub pane](/refguide/data-hub-pane/) in Studio Pro to find registered data sources. Click [Copy Data Source URI](/data-hub/mendix-connect-catalog/search/#service-details) to  obtain the OData service URI, which can be used in other enterprise applications.
 
 The following sections summarize important points to consider when using OData services and registered datasets in your apps in Studio Pro.
 
@@ -30,7 +30,7 @@ It is good practice for publishers of a service to deprecate a service version i
 
 When you use an external entity from a published OData service through the **Data Hub** pane in Studio Pro, you are consuming the dataset from the service  deployed to a specific environment. 
 
-When security is enabled for your app, you can define access rules for external entities just as you would for [persistable](/refguide/persistability/#persistable) and [non-persistable](/refguide/persistability/#non-persistable) entities. You can define access rules based on user roles (for more details, see [Security and Controlling Access to Information](/data-hub/data-hub-catalog/security/)).
+When security is enabled for your app, you can define access rules for external entities just as you would for [persistable](/refguide/persistability/#persistable) and [non-persistable](/refguide/persistability/#non-persistable) entities. You can define access rules based on user roles (for more details, see [Security and Controlling Access to Information](/data-hub/mendix-connect-catalog/security/)).
 
 You can associate external entities with both [persistable and non-persistable](/refguide/persistability/) local entities. However, the external entity cannot be the owner of an association. This means that the association has to be from a local entity to the external entity in the domain model, and the value for the association [owner](/refguide/associations/#ownership) must be set to **Default**.
 

@@ -1,6 +1,6 @@
 ---
 title: "Catalog User Roles"
-url: /data-hub/data-hub-catalog/manage-data-sources/user-roles/
+url: /data-hub/mendix-connect-catalog/manage-data-sources/user-roles/
 description: "Describes the user roles in the Catalog."
 tags: ["data hub", "Catalog", "curate", "user roles", "curator", "admin"]
 ---

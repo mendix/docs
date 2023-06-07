@@ -12,7 +12,7 @@ tags: ["studio Pro", "data hub", "data hub pane", "Catalog"]
 
 ## 1 Introduction 
 
-[Mendix Data Hub](/data-hub/) enables integration of available data sources from the different applications in an organization into your Mendix apps. This means that new apps can be created using shared datasets that are registered in the [Catalog](/data-hub/data-hub-catalog/). In Studio Pro, this is possible using the integrated functionality of Catalog through the **Data Hub** pane.
+[Mendix Data Hub](/data-hub/) enables integration of available data sources from the different applications in an organization into your Mendix apps. This means that new apps can be created using shared datasets that are registered in the [Catalog](/data-hub/mendix-connect-catalog/). In Studio Pro, this is possible using the integrated functionality of Catalog through the **Data Hub** pane.
 
 You can search in the Catalog through the **Data Hub** pane to discover data sources that you can use in your project. Via this pane you can add the entities that are exposed in the registered OData services—called **Data Sources** in Data Hub—into your app's domain model. These entities are called [external entities](/refguide8/external-entities/) and are different because they enable the connection to the data associated with the entities in the originating app.
 
@@ -54,14 +54,14 @@ To add entities to your project model, see [Adding an External Entity to a Proje
 
 ## 3 Searching the Catalog {#search}
 
-As you enter a search term, all the items in the Catalog satisfying the search string are listed in the search results. This will include words in the service, entity and attribute descriptions which are not displayed in the the Data Hub pane. Further information see the [Catalog asset details](/data-hub/data-hub-catalog/search/#search-details).
+As you enter a search term, all the items in the Catalog satisfying the search string are listed in the search results. This will include words in the service, entity and attribute descriptions which are not displayed in the the Data Hub pane. Further information see the [Catalog asset details](/data-hub/mendix-connect-catalog/search/#search-details).
 
 ### 3.1 Wildcard Search
 
 You can perform a wildcard search by entering `*` in the search area.
 
 {{% alert color="info" %}}
-The search strings must be a minimum of 3 alphanumeric characters. Punctuation cannot be used as part of the search term except for the wildcard character `*` to perform an "empty" search in the Catalog. You cannot use the wildcard in combination with other characters. For further details, see [How to Search for Registered Assets](/data-hub/data-hub-catalog/search/).
+The search strings must be a minimum of 3 alphanumeric characters. Punctuation cannot be used as part of the search term except for the wildcard character `*` to perform an "empty" search in the Catalog. You cannot use the wildcard in combination with other characters. For further details, see [How to Search for Registered Assets](/data-hub/mendix-connect-catalog/search/).
 {{% /alert %}}
 
 ### 3.2 Service Environments
@@ -107,7 +107,7 @@ The search results and Project pane will show the following at a service level:
 
     {{% alert color="info" %}}The version number that is shown for the OData service is the latest one that is available in the Catalog at the service endpoint—in the example above version 1.0.11 of **Theatre_service** is currently consumed in the project, but version **1.0.12** is now available in the Catalog. The search results display the entities available in the new service (also showing one that is locally consumed) however they are greyed-out and cannot be selected until the local service is **Updated** to this one.{{% /alert %}}
 
-* **Information icon** to view further details for the service and a link to go directly to the [Service Details](/data-hub/data-hub-catalog/search/#search-details) screen in the Catalog:
+* **Information icon** to view further details for the service and a link to go directly to the [Service Details](/data-hub/mendix-connect-catalog/search/#search-details) screen in the Catalog:
 
     {{< figure src="/attachments/refguide8/modeling/menus/view-menu/data-hub-pane/data-hub-pane-info.png" alt="Data Hub Pane Information"   width="250"  >}}
 
@@ -123,7 +123,7 @@ For any service in the list, you can click **:Show details** to see the full lis
 
 ### 4.2.1 Entity
 
-If you right-click an entity and select **View in Catalog**, it will take you to the entity details page in the [Catalog](/data-hub/data-hub-catalog/).
+If you right-click an entity and select **View in Catalog**, it will take you to the entity details page in the [Catalog](/data-hub/mendix-connect-catalog/).
 
 If you right-click a consumed entity and **Go to entity**, it will take you to the entity in the domain model.
 
@@ -147,7 +147,7 @@ In the above example, there are two attributes, **Addresses** and **FavoriteColo
 
 ## 5 Read More
 
-* [Catalog](/data-hub/data-hub-catalog/)
+* [Catalog](/data-hub/mendix-connect-catalog/)
 * [External Entities](/refguide8/external-entities/)
 * [Consumed OData Service](/refguide8/consumed-odata-service/)
-* [How to Consume Registered Assets](/data-hub/data-hub-catalog/consume/)
+* [How to Consume Registered Assets](/data-hub/mendix-connect-catalog/consume/)

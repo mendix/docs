@@ -1,7 +1,7 @@
 ---
 title: "Automate Catalog Registration"
 linktitle: "Automate Catalog Registration"
-url: /data-hub/data-hub-catalog/automate-registration/
+url: /data-hub/mendix-connect-catalog/automate-registration/
 description: "Learn how to automate Catalog registration in a pipeline deploying to a (virtual) private Cloud."
 weight: 40
 tags: ["Catalog", "security", "registration", "pipeline","register services"]
@@ -9,7 +9,7 @@ tags: ["Catalog", "security", "registration", "pipeline","register services"]
 
 ## 1 Introduction
 
-The [Catalog](/data-hub/data-hub-catalog/) is a metadata hub for managing shared registered assets made available through OData services. Registering data to the Catalog happens automatically when deploying an app with a published OData service to the Mendix Cloud. 
+The [Catalog](/data-hub/mendix-connect-catalog/) is a metadata hub for managing shared registered assets made available through OData services. Registering data to the Catalog happens automatically when deploying an app with a published OData service to the Mendix Cloud. 
 
 For people deploying to a (virtual) private cloud, you can follow the steps in this document to automate registration to the Catalog in your pipeline.
 
@@ -40,7 +40,7 @@ For this section, you will need:
 * Endpoint location `Name` (found in the *metadata.json* file for your exposed OData service, in an array called **Constants**, under **Name**)
 * Endpoint location `Value` (found in the *metadata.json* file for your exposed OData service, in an array called **Constants**, under **DefaultValue**)
 
-Follow the steps for [preparing your service details using the Transform endpoint of the Registration API](/data-hub/data-hub-catalog/register-data/#transform-api).
+Follow the steps for [preparing your service details using the Transform endpoint of the Registration API](/data-hub/mendix-connect-catalog/register-data/#transform-api).
 
 ## 5 Register the Application
 
@@ -51,7 +51,7 @@ For this section, you will need:
 * A [Personal Access Token](/developerportal/community-tools/mendix-profile/#pat)
 * The application **Name**
 
-Follow the steps for [registering an application through the Data Hub Registration API](/data-hub/data-hub-catalog/register-data/#register-application).
+Follow the steps for [registering an application through the Data Hub Registration API](/data-hub/mendix-connect-catalog/register-data/#register-application).
 
 Upon completion, you will have the `application_UUID`.
 
@@ -67,7 +67,7 @@ For this section, you will need:
 * Environment `Location`
 * Environment `Type`
 
-Follow the steps for [registering an environment through the Catalog Registration API](/data-hub/data-hub-catalog/register-data/#register-environment).
+Follow the steps for [registering an environment through the Catalog Registration API](/data-hub/mendix-connect-catalog/register-data/#register-environment).
 
 Upon completion, you will have the `environment_UUID`.
 
@@ -84,6 +84,6 @@ For this section, you will need:
 * Service `Version` and `Security Scheme`
 * Service `Contract` with `Type` and `Value`
 
-Follow the steps for [registering services (endpoints) through the Catalog Registration API](/data-hub/data-hub-catalog/register-data/#register-services).
+Follow the steps for [registering services (endpoints) through the Catalog Registration API](/data-hub/mendix-connect-catalog/register-data/#register-services).
 
 If you want to register more than one service for the same application and environment at once, add another object to the Endpoints list in the request body.

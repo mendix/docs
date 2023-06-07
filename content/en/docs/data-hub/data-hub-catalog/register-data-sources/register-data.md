@@ -1,13 +1,13 @@
 ---
 title: "Register OData Resources in the Catalog"
 linktitle: "Register OData Resources"
-url: /data-hub/data-hub-catalog/register-data/
+url: /data-hub/mendix-connect-catalog/register-data/
 description: "Describes how to register OData resources in the Catalog: through the Mendix Cloud, using the Registration API, or in the UI form."
 weight: 10
 tags: ["Catalog", "data hub", "external entities", "register", "published OData service" ,"how to", "registration"]
 aliases:
-    - /data-hub/data-hub-catalog/register.html
-    - /data-hub/data-hub-catalog/register
+    - /data-hub/mendix-connect-catalog/register.html
+    - /data-hub/mendix-connect-catalog/register
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details. 
 #The anchor registration-form below is mapped, so it should not be removed or changed.
 ---
@@ -32,7 +32,7 @@ Before starting this how-to, make sure you have completed the following prerequi
 
 ## 3 Registering a Service Through the Mendix Cloud {#mendix-cloud}
 
-If you have an exposed OData service that is deployed to the [Mendix Cloud](/developerportal/deploy/mendix-cloud-deploy/), a [published OData service](/refguide/published-odata-services/), then congratulations! Your service is already registered in the [Catalog](/data-hub/data-hub-catalog/).
+If you have an exposed OData service that is deployed to the [Mendix Cloud](/developerportal/deploy/mendix-cloud-deploy/), a [published OData service](/refguide/published-odata-services/), then congratulations! Your service is already registered in the [Catalog](/data-hub/mendix-connect-catalog/).
 
 ## 4 Registering a Service Without the Mendix Cloud {#without-mendix-cloud}
 
@@ -319,7 +319,7 @@ Follow the steps below:
     2. **Sandbox**: the Mendix Free App environment, data is not of production quality.
     3. **Non-production**: hosting is paid for, but data is not of production quality.
 
-8. Select your **Authentication** method. See the [Authentication](#authentication) section below for supported types. Curators can also [add or change authentication methods](/data-hub/data-hub-catalog/curate/#authentication) later. 
+8. Select your **Authentication** method. See the [Authentication](#authentication) section below for supported types. Curators can also [add or change authentication methods](/data-hub/mendix-connect-catalog/curate/#authentication) later. 
 9. Select the **Done!** option that appears once you have filled out all the required fields.
 
 Congratulations! Your OData service is registered in the Catalog. 
@@ -355,4 +355,4 @@ Folders in a ZIP contract are relative to the Document Base URL.
 
 See the ZIP structure example for reference:
 
-{{< figure src="/attachments/data-hub/data-hub-catalog/register-data/zip-file-structure.png" >}}
+{{< figure src="/attachments/data-hub/mendix-connect-catalog/register-data/zip-file-structure.png" >}}

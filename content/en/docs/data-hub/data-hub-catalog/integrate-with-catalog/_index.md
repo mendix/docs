@@ -1,6 +1,6 @@
 ---
 title: "Catalog and Studio Pro"
-url: /data-hub/data-hub-catalog/integrate/
+url: /data-hub/mendix-connect-catalog/integrate/
 weight: 60
 ---
 ## 1 Introduction

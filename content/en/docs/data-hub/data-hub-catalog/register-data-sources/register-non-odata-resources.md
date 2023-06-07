@@ -1,7 +1,7 @@
 ---
 title: "Register Non-OData Resources in the Catalog"
 linktitle: "Register Non-OData Resources"
-url: /data-hub/data-hub-catalog/register-non-odata-resources/
+url: /data-hub/mendix-connect-catalog/register-non-odata-resources/
 description: "Describes how to convert non-OData resources into OData and then register them in the Catalog."
 weight: 30
 tags: ["Data Hub", "Catalog", "registration", "OData", "register data"]
@@ -30,7 +30,7 @@ There are certain limitations on consumed OData services. For more information o
 
 The diagram below represents how an OData API wrapper can be used to connect a custom app data source to a Mendix Studio Pro app:
 
-{{< figure src="/attachments/data-hub/data-hub-catalog/register-non-odata-resources/non-odata.png" alt="Data Hub connecting to non-OData resources" >}}
+{{< figure src="/attachments/data-hub/mendix-connect-catalog/register-non-odata-resources/non-odata.png" alt="Data Hub connecting to non-OData resources" >}}
 
 Once the OData service is available, find the generated *$metadata* file for your data, and use that to register your service in the Catalog via the connector on the home page. For more information on setting up the connection, see [Published OData Services](/refguide/published-odata-services/).
 

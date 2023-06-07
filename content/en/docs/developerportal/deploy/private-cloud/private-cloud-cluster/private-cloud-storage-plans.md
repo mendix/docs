@@ -262,123 +262,126 @@ When an existing environment is deleted, the Mendix Operator performs the follow
 
 * Delete that environment's Kubernetes database credentials secret.
 
-### 2.3 SQL Server {#database-sqlserver}
+#### 2.2.3 SQL Server {#database-sqlserver}
 
-<text class="badge badge-pill badge-primary">Automated</text> <text class="badge badge-pill badge-primary">On-Demand</text>
+SQL server databases are automated, on-demand databases. The **SQL Server** plan offers a good balance between automation, ease of use, and security when using Microsoft SQL Server or Azure SQL. If you would like to have more control over database configuration, consider using the [JDBC plan](#database-jdbc) instead.
 
-The **SQL Server** plan offers a good balance between automation, ease of use and security when using Microsoft SQL Server or Azure SQL.
-If you would like to have more control over database configuration, consider using the [JDBC plan](#database-jdbc) instead.
+##### 2.2.3.1 Prerequisites
 
-**Prerequisites**
+* An SQL Server server - for example, an Azure SQL server, or a SQL Server installed from a Helm chart.
 
-* A SQL Server server - for example, an Azure SQL server, or a SQL Server installed from a Helm chart
    {{% alert color="info" %}}
-   A SQL Server or Azure SQL server can host multiple databases. Each database can be isolated from one another, this way one SQL Server can be used by multiple independent apps.
+   An SQL server can host multiple databases. Each database can be isolated from one another - in this way, one SQL Server can be used by multiple independent apps.
    {{% /alert %}}
+   
 * An admin user account.
 
-**Limitations**
+##### 2.2.3.2 Limitations
 
 * Passwords can only be rotated manually.
-* A standalone SQL Server will be shared between environments, which could affect scalability.
-  Azure SQL allows more flexibility, and is much better at scaling - each database can have reserved capacity and doesn't affect performance of other databases on the same server.
-* NetBIOS names are not supported. It's only possible to connect using the server's FQDN.
+* A standalone SQL Server will be shared between environments, which could affect scalability. Azure SQL allows more flexibility, and is much better at scaling - each database can have reserved capacity and does not  affect performance of other databases on the same server.
+* NetBIOS names are not supported. It is only possible to connect using the server's FQDN.
 * Only username/password authentication is supported at the moment.
 
-**Environment Isolation**
+##### 2.2.3.3 Environment Isolation
 
 * Unique user, login for every environment.
 * Unique database for every environment.
 * Environment has full access only to its own database, cannot access data from other environments.
 
-**Create workflow** (what the Mendix Operator will do when a new environment is created):
+##### 2.2.3.4 Create Workflow
+
+When a new environment is created, the Mendix Operator performs the following actions:
 
 * Generate a database name, username and password for the new environment.
 * Create a new database in the provided SQL Server server. This will be the environment's dedicated database.
 * Create a new user and login for the new environment, and allow this user to access only the new environment's database. This will be the environment's user.
 * Create a Kubernetes secret to provide connection details to the new app environment - to automatically configure the new environment.
 
-**Delete workflow** (what the Mendix Operator will do when an existing environment is deleted):
+##### 2.2.3.5 Delete Workflow
+
+When an existing environment is deleted, the Mendix Operator performs the following actions:
 
 * Delete that environment's user and login.
 * Delete that environment's database.
 * Delete that environment's Kubernetes database credentials secret.
 
-**Configuring a SQL Server plan**
+##### 2.2.3.6 Configuring an SQL Server Plan
 
 In the SQL Server plan configuration, enter the following details:
 
-* **Host** is the SQL Server (Azure SQL) server hostname, for example `my-database.database.windows.net`
-* **Port** is the SQL Server (Azure SQL) server port number, in most cases this should be set to `1433`.
-* **Username** is the username for the admin user - used by the Mendix Operator to create/delete tenants for app environments.
-* **Password** is the password for the admin user - used by the Mendix Operator to create/delete tenants for app environments.
-* **Strict TLS** specifies if TLS should always be validated.
-  * Enabling this option will enable full TLS certificate validation and require encryption when connecting to SQL Server. If the SQL Server server has a self-signed certificate, you will also need to configure [custom TLS](#custom-tls) so that the self-signed certificate is accepted. Azure SQL supports Strict TLS without any extra TLS configuration - no additional *custom TLS* configuration is required.
-  * Disabling this option will attempt to connect with TLS, but skip certificate validation. If TLS is not supported, it will fall back to an unencrypted connection.
-* **Is Azure SQL Server** opens additional options that are only available when using Azure SQL (instead of a standalone SQL Server):
-  * **Elastic Pool** specifies an existing Elastic Pool to use (can be left empty if the new app's database should not be using an elastic pool)
-  * **Edition** specifies the [database edition/tier](https://learn.microsoft.com/en-us/sql/t-sql/statements/create-database-transact-sql?view=azuresqldb-current&tabs=sqlpool#edition) to use, for example `Basic`. Can be left empty, in this case Azure SQL will use the default `GeneralPurpose` edition.
-  * **Service Objective** specifies the [database service objective](https://learn.microsoft.com/en-us/sql/t-sql/statements/create-database-transact-sql?view=azuresqldb-current&tabs=sqlpool#service_objective) (performance level), for example `Basic`. Can be left empty, in this case Azure SQL will use the default service objective (such as `GP_Gen5_2`).
-  * **Maximum Size** specifies the database maximum size, for example `1 GB`. Can be left empty, in this case the default size will be used.
+* **Host** - SQL Server (Azure SQL) server hostname, for example `my-database.database.windows.net`
+* **Port** - SQL Server (Azure SQL) server port number, in most cases this should be set to `1433`.
+* **Username** - Username for the admin user, used by the Mendix Operator to create or delete tenants for app environments.
+* **Password** - Password for the admin user, used by the Mendix Operator to create or delete tenants for app environments.
+* **Strict TLS** - Specifies if TLS should always be validated.
+    * Enabling this option will enable full TLS certificate validation and require encryption when connecting to SQL Server. If the SQL Server server has a self-signed certificate, you will also need to configure [custom TLS](#custom-tls) so that the self-signed certificate is accepted. Azure SQL supports Strict TLS without any extra TLS configuration - no additional *custom TLS* configuration is required.
+    * Disabling this option will attempt to connect with TLS, but skip certificate validation. If TLS is not supported, it will fall back to an unencrypted connection.
+* **Is Azure SQL Server** - Opens additional options that are only available when using Azure SQL (instead of a standalone SQL Server):
+    * **Elastic Pool** - Specifies an existing Elastic Pool to use (can be left empty if the new app's database should not be using an elastic pool)
+    * **Edition** - Specifies the [database edition/tier](https://learn.microsoft.com/en-us/sql/t-sql/statements/create-database-transact-sql?view=azuresqldb-current&tabs=sqlpool#edition) to use, for example `Basic`. Can be left empty, in this case Azure SQL will use the default `GeneralPurpose` edition.
+    * **Service Objective** - Specifies the [database service objective](https://learn.microsoft.com/en-us/sql/t-sql/statements/create-database-transact-sql?view=azuresqldb-current&tabs=sqlpool#service_objective) (performance level), for example `Basic`. Can be left empty, in which case Azure SQL will use the default service objective (such as `GP_Gen5_2`).
+    * **Maximum Size** - Specifies the database maximum size, for example `1 GB`. Can be left empty, in this case the default size will be used.
 
 {{% alert color="warning" %}}
-By default, Azure SQL will create a production-grade database, which could be too costly for small apps.
-Azure SQL allows to change the database configuration parameters after a database was created.
+By default, Azure SQL will create a production-grade database, which could be too costly for small apps. Azure SQL allows to change the database configuration parameters after a database was created.
 
-It would make sense to start with a small database plan by default, and adjust it through the Azure Portal if the database starts having performance issues.
-The smallest database tier available has the following parameters (keep the **Elastic Pool** value empty):
+As a best practice, start with a small database plan by default, and adjust it through the Azure Portal if the database starts having performance issues.
+The smallest database tier available has the following parameters:
 
-* **Edition**: `Basic`
-* **Service Objective**: `Basic`
-* **Maximum Size**: `1 GB`
+* **Edition** - `Basic`
+* **Service Objective** - `Basic`
+* **Maximum Size** - `1 GB`
+* **Elastic Pool** - Leave blank
 {{% /alert %}}
 
 {{% alert color="info" %}}
 To connect to an Azure SQL Server, the Kubernetes cluster must be added to the list of allowed hosts in the firewall.
 {{% /alert %}}
 
-### 2.4 Dedicated JDBC{#database-jdbc}
+#### 2.2.4 Dedicated JDBC {#database-jdbc}
 
-<text class="badge badge-pill badge-primary">Basic</text> <text class="badge badge-pill badge-primary">Dedicated</text>
+JDBC databases are dedicated, basic databases. The **Dedicated JDBC** plan enables you to enter the [database configuration parameters](/refguide/custom-settings/) for an existing database directly, as supported by the Mendix Runtime. This plan allows to configure and use any database supported by the Mendix Runtime, including Oracle.
 
-The **Dedicated JDBC** will enable you to enter the [database configuration parameters](/refguide/custom-settings/) for an existing database directly, as supported by the Mendix Runtime.
-This plan allows to configure and use any database supported by the Mendix Runtime, including Oracle.
-
-**Prerequisites**
+##### 2.2.4.1 Prerequisites
 
 * A database server, for example Postgres or Oracle.
 * A database in the database server - the database that should be used by the Mendix app environment.
 * An user account that has permissions to access the database - the account that should be used by the Mendix app environment.
 
-**Limitations**
+##### 2.2.4.2 Limitations
 
 * Passwords can only be rotated manually.
 * A dedicated JDBC database cannot be used by more than one Mendix app.
 * Configuration parameters will not be validated and will be provided to the Mendix app as-is. If the arguments are not valid or there is an issue with permissions, the Mendix Runtime will fail to start the and deployment will appear stuck with **Replicas running** and **Runtime** showing a spinner.
 
-**Environment Isolation**
+##### 2.2.4.3 Environment Isolation
 
 * Database plan can only be used by one environment at a time.
 * Other environments will not be able to use the database plan if it's already in use.
 
-**Create workflow** (what the Mendix Operator will do when a new environment is created):
+##### 2.2.4.4 Create Workflow
+
+When a new environment is created, the Mendix Operator performs the following actions:
 
 * Create a Kubernetes secret to provide connection details to the new app environment - to automatically configure the new environment.
 
-**Delete workflow** (what the Mendix Operator will do when an existing environment is deleted):
+##### 2.2.4.5 Delete Workflow
+
+When an existing environment is deleted, the Mendix Operator performs the following actions:
 
 * Delete that environment's Kubernetes database credentials secret.
 
-**Configuring a Dedicated JDBC plan**
+##### 2.2.4.6 Configuring a Dedicated JDBC Plan
 
 In the Dedicated JDBC plan configuration, enter the following details:
 
-* **Database type**: The database type, one of the supported [DatabaseType](/refguide/custom-settings/#DatabaseType) values such as `PostgreSQL`.
-* **Host**: The database hostname, for example `postgres-shared-postgresql.privatecloud-storage.svc.cluster.local:5432` - specifies the value of [DatabaseHost](/refguide/custom-settings/#DatabaseType).
-* **Database name**: The name of the database or schema used by the Mendix app, for example `postgres` - specifies the value of [DatabaseName](/refguide/custom-settings/#DatabaseName).
-* **JDBC URL**: The JDBC URL used to connect to the databse, for example `jdbc:postgresql://postgres-shared-postgresql.privatecloud-storage.svc.cluster.local:5432/myappdb?sslmode=prefer`.
-* **User**: Specifies the username to be used by the Mendix app environment to connect to the database.
-* **Password**: Specifies the password for **Username**.
+* **Database type** - The database type, one of the supported [DatabaseType](/refguide/custom-settings/#DatabaseType) values such as `PostgreSQL`.
+* **Host** - The database hostname, for example `postgres-shared-postgresql.privatecloud-storage.svc.cluster.local:5432` - specifies the value of [DatabaseHost](/refguide/custom-settings/#DatabaseType).
+* **Database name** - The name of the database or schema used by the Mendix app, for example `postgres` - specifies the value of [DatabaseName](/refguide/custom-settings/#DatabaseName).
+* **JDBC URL** - The JDBC URL used to connect to the databse, for example `jdbc:postgresql://postgres-shared-postgresql.privatecloud-storage.svc.cluster.local:5432/myappdb?sslmode=prefer`.
+* **User** - Specifies the username to be used by the Mendix app environment to connect to the database.
+* **Password** - Specifies the password for **Username**.
 
 ## 3 Blob File Storage Plans{#blob-storage}
 

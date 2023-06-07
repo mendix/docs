@@ -66,5 +66,4 @@ It is not possible to include different versions of the same native dependency i
 
 ## 5 Read More
 
-* [Pluggable Widget API Documentation](/apidocs-mxsdk/apidocs/pluggable-widgets/)
-* [Build JavaScript Actions for Native Mobile](/howto/extensibility/create-native-javascript-action/)
+* [Mendix 9](/apidocs-mxsdk/apidocs/pluggable-parent-9/) Pluggable Widget API Documentation

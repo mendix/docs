@@ -789,6 +789,4 @@ The editability property allows a pluggable widget to have an editable configura
 
 ## 6 Read More
 
-* [Pluggable Widgets API](/apidocs-mxsdk/apidocs/pluggable-widgets/)
-* [Client APIs Available to Pluggable Widgets](/apidocs-mxsdk/apidocs/pluggable-widgets-client-apis/)
-* [Build Pluggable Widgets](/howto/extensibility/pluggable-widgets/)
+* [Mendix 9](/apidocs-mxsdk/apidocs/pluggable-parent-9/) Pluggable Widget API Documentation

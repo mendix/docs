@@ -6,7 +6,7 @@ description: Information on Pluggable Widget API.
 tags: ["API", "pluggable","widget"]
 ---
 
-The following Mendix 98 pluggable widget API documents are available here:
+The following Mendix 9 pluggable widget API documents are available here:
 
 * [Configuration Module API for Pluggable Widgets](/apidocs-mxsdk/apidocs/pluggable-widgets-config-api-9/)
 * [Declaring Native Dependencies](/apidocs-mxsdk/apidocs/pluggable-widgets-native-dependencies-9/)

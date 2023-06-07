@@ -502,25 +502,22 @@ When an existing environment is deleted, the Mendix Operator performs the follow
 
 ### 3.3 Amazon S3 {#blob-s3}
 
-Mendix for Private Cloud provides a variety of options how to store files in Amazon S3.
-Each option uses its own approach to isolation between environments, and how a bucket (and IAM user/policy) would be attached to a new environment.
+Mendix for Private Cloud provides a variety of options for storing files in Amazon S3. Each option uses its own approach to isolation between environments, and to attaching a bucket (and IAM user/policy) to a new environment.
 
-If you'd like to have Mendix Operator with automation, and have full isolation between environment, use the [Create account with existing policy](#s3-create-account-existing-policy) option. This option works with the least possible AWS privileges.
+If you would like to have Mendix Operator with automation, and have full isolation between environment, use the [Create account with existing policy](#s3-create-account-existing-policy) option. This option works with the least possible AWS privileges.
 
-If you'd like to simply share a bucket between environments, or to manually create a bucket/account per environment, use the [existing bucket and account](#s3-existing-bucket-account) option.
+If you would like to simply share a bucket between environments, or to manually create a bucket and account per environment, use the [existing bucket and account](#s3-existing-bucket-account) option.
 
 Other options are mainly provided for historical reasons, and are not recommended for new installations.
 
-#### 3.3.1 Create account with existing policy{#s3-create-account-existing-policy}
+#### 3.3.1 Create Account with Existing Policy {#s3-create-account-existing-policy}
 
-<text class="badge badge-pill badge-primary">Automated</text> <text class="badge badge-pill badge-primary">On-Demand</text>
+This automated, on-demand option allows to share an existing bucket between environments, and isolates environments from accessing each other's data.
 
-This option allows to share an existing bucket between environments, and isolates environments from accessing each other's data.
+##### 3.3.1.1 Prerequisites
 
-**Prerequisites**
-
-* An S3 bucket.
-* An _environment template_ policy (will be attached to every new environment's user) - allowing access to the S3 bucket (replace `<bucket_name>` with the S3 bucket name):
+* An S3 bucket
+* An environment template policy which will be attached to every new environment's user; the policy allows access to the S3 bucket, as in the following example (replace `<bucket_name>` with the S3 bucket name):
 
    ```json
    {
@@ -562,7 +559,7 @@ This option allows to share an existing bucket between environments, and isolate
    }
    ```
 
-* An "admin" user account - with the following policy (replace `<account_id>` with your AWS account number, and `<policy_arn>` with the _environment template_ policy ARN):
+* An admin user account - with the following policy (replace `<account_id>` with your AWS account number, and `<policy_arn>` with the environment template policy ARN):
     ```json
     {
         "Version": "2012-10-17",
@@ -600,54 +597,55 @@ This option allows to share an existing bucket between environments, and isolate
     }
     ```
 
-**Limitations**
+##### 3.3.1.2 Limitations
 
 * Access/Secret keys used by existing environments can only be rotated manually.
 
-**Environment Isolation**
+##### 3.3.1.3 Environment Isolation
 
 * Every environment has its own IAM user.
 * The S3 bucket is shared. 
-  * The _environment template_ policy uses the IAM username as a template - so that a user can only access a certain prefix (path/directory) in the bucket.
+  * The environment template policy uses the IAM username as a template, so that a user can only access a certain prefix (path or directory) in the bucket.
   * In practice, this means that any environment can only access files if those files' prefix matches the environment's IAM username.
   * An environment cannot access files from other environments.
-* The Mendix Operator doesn't need permissions to create new policies, only to attach a manually created policy.
+* The Mendix Operator does not need permissions to create new policies, only to attach a manually created policy.
 
-**Create workflow** (what the Mendix Operator will do when a new environment is created):
+##### 3.3.1.4 Create Workflow
+
+When a new environment is created, the Mendix Operator performs the following actions:
 
 * Generate a new IAM username.
-* Create the new IAM user and attach the existing _environment template_ policy to this user.
-* Create a Kubernetes secret to provide connection details to the new app environment - to automatically configure the new environment.
+* Create the new IAM user and attach the existing environment template policy to this user.
+* Create a Kubernetes secret to provide connection details to the new app environment and to automatically configure the new environment.
 
-**Delete workflow** (what the Mendix Operator will do when an existing environment is deleted):
+##### 3.3.1.5 Delete Workflow
 
-* (Only if _Prevent Data Deletion_ is not enabled) Delete files from that environment's prefix (directory). Files from other apps (in other prefixes/directories) will not be affected.
+When an existing environment is deleted, the Mendix Operator performs the following actions:
+
+* (Only if the **Prevent Data Deletion** is not enabled) Delete files from that environment's prefix (directory). Files from other apps (in other prefixes/directories) will not be affected.
 * Delete that environment's IAM user.
 * Delete that environment's Kubernetes blob file storage credentials secret.
 
-**Configuring this plan**
+##### 3.3.1.6 Configuring the Plan
 
 In the Amazon S3 plan configuration, enter the following details:
 
-* **Create bucket per environment** - unchecked.
-* **Create account (IAM user) per environment** - checked.
-* **Bucket region** - the existing shared bucket's region, for example `eu-west-1`.
-* **Bucket name** - the existing shared bucket's name, for example `mendix-apps-production-example`.
-* **Create inline policy** - unchecked.
-* **Attach policy ARN** - the _environment template_ policy ARN; this is the existing policy that will be attached to every environment's user.
-* **Access Key** and **Secret Key** credentials for the "admin" user account - used to create/delete environment IAM users.
+* **Create bucket per environment** - Set to **yes**.
+* **Create account (IAM user) per environment** - Set to **no**.
+* **Bucket region** - The existing shared bucket's region, for example `eu-west-1`.
+* **Bucket name** - The existing shared bucket's name, for example `mendix-apps-production-example`.
+* **Create inline policy** - Set to **yes**.
+* **Attach policy ARN** - The environment template policy ARN; this is the existing policy that will be attached to every environment's user.
+* **Access Key** and **Secret Key** credentials for the admin user account - Used to create or delete environment IAM users.
 
-#### 3.3.2 Existing bucket and account{#s3-existing-bucket-account}
+#### 3.3.2 Existing bucket and account {#s3-existing-bucket-account}
 
-<text class="badge badge-pill badge-primary">Basic</text> <text class="badge badge-pill badge-primary">On-Demand</text> <text class="badge badge-pill badge-primary">Dedicated</text>
+This basic, on-demand option allows you to attach an existing S3 bucket and IAM account credentials (access and secret keys) to one or more environments. All apps (environments) will use the same S3 bucket and an IAM user account.
 
-This option allows to attach an existing S3 bucket and IAM account credentials (access and secret keys) to one or more environments.
-All apps (environments) will use the same S3 bucket and an IAM user account.
-
-**Prerequisites**
+##### 3.3.2.1 Prerequisites
 
 * An S3 bucket.
-* An "environment" user account, with the following IAM policy (replace `<bucket_name>` with the S3 bucket name):
+* An **environment** user account, with the following IAM policy (replace `<bucket_name>` with the S3 bucket name):
 
     ```json
     {
@@ -670,59 +668,60 @@ All apps (environments) will use the same S3 bucket and an IAM user account.
     }
     ```
 
-**Limitations**
+##### 3.3.2.2 Limitations
 
 * Access/Secret keys used by existing environments can only be rotated manually.
 * No isolation between environments using this blob storage plan (if the **Share bucket between environments** option is checked).
 * Configuration parameters will not be validated and will be provided to the Mendix app as-is. If the arguments are not valid or there is an issue with permissions, the Mendix Runtime will fail to start the and deployment will appear to be stuck with **Replicas running** and **Runtime** showing a spinner.
 * To configure the **Autogenerate Prefix** option you need Mendix Operator version 2.7.0 or above. See [Upgrading Private Cloud](/developerportal/deploy/private-cloud-upgrade-guide/) for instructions on upgrading the Mendix Operator.
 
-**Environment Isolation**
+##### 3.3.2.3 Environment Isolation
 
 * The S3 bucket and IAM credentials (access and secret keys) are shared between all environments using this plan.
 * An environment can access data from other environments using this Storage Plan.
 * By unchecking the **Share bucket between environments** option, this plan switches into **Dedicated** mode - so that only one environment can use it.
 
-**Create workflow** (what the Mendix Operator will do when a new environment is created):
+##### 3.3.2.4 Create Workflow
+
+When a new environment is created, the Mendix Operator performs the following actions:
 
 * (Optional, if **Autogenerate Prefix** is checked) - generate a unique prefix based on the environment's name, so that each environment stores files in a separate prefix (directory).
 * Create a Kubernetes secret to provide connection details to the new app environment - to automatically configure the new environment.
 
-**Delete workflow** (what the Mendix Operator will do when an existing environment is deleted):
+##### 3.3.2.5 Delete Workflow
+
+When an existing environment is deleted, the Mendix Operator performs the following actions:
 
 * Delete that environment's Kubernetes blob file storage credentials secret.
 
-**Configuring this plan**
+##### 3.3.2.6 Configuring the Plan
 
 In the Amazon S3 plan configuration, enter the following details:
 
-* **Create bucket per environment** - unchecked.
-* **Create account (IAM user) per environment** - unchecked.
-* **Endpoint** - the S3 bucket's endpoint address, for example `https://mendix-apps-production-example.s3.eu-west-1.amazonaws.com`.
-* **Access Key** and **Secret Key** credentials for the environment user account.
-* **Autogenerate prefix** - can be used to specify if the Mendix Operator should generate a unique bucket prefix (folder) for each environment, or to use a fixed, predefined prefix. If you want a new environment to reuse/inherit data from an existing environment, you can deselect the Autogenerate Prefix and provide the existing prefix you want to use.
-* **Share bucket between environments** - specifies is the bucket can be shared between environments (create an <text class="badge badge-pill badge-primary">On-Demand</text> storage plan); if unchecked, the bucket can only be used by one environment (create a <text class="badge badge-pill badge-primary">Dedicated</text> storage plan). To increase security and prevent environments from being able to access each other's data, do not enable this option.
+* **Create bucket per environment** - Set to **no**.
+* **Create account (IAM user) per environment** - Set to **no**.
+* **Endpoint** - The S3 bucket's endpoint address, for example `https://mendix-apps-production-example.s3.eu-west-1.amazonaws.com`.
+* **Access Key** and **Secret Key** - The credentials for the environment user account.
+* **Autogenerate prefix** - Can be used to specify if the Mendix Operator should generate a unique bucket prefix (folder) for each environment, or to use a fixed, predefined prefix. If you want a new environment to reuse/inherit data from an existing environment, you can deselect the Autogenerate Prefix and provide the existing prefix you want to use.
+* **Share bucket between environments** - Specifies is the bucket can be shared between environments (create an on-demand storage plan); if unchecked, the bucket can only be used by one environment (create a dedicated storage plan). To increase security and prevent environments from being able to access each other's data, do not enable this option.
 
-{{% alert color="warning" %}}
+{{% alert color="info" %}}
 Be sure to follow the naming guidelines for prefixes as described in the [AWS S3 documentation](https://docs.aws.amazon.com/AmazonS3/latest/userguide/object-keys.html).
 {{% /alert %}}
 
-#### 3.3.3 Create bucket and account with inline policy{#s3-create-bucket-account-inline-policy}
+#### 3.3.3 Create Bucket and Account with Inline Policy {#s3-create-bucket-account-inline-policy}
 
-<text class="badge badge-pill badge-primary">Automated</text> <text class="badge badge-pill badge-primary">On-Demand</text>
-
-This option will create an S3 bucket and IAM account for every new environment.
+This automated, on-demand option will create an S3 bucket and IAM account for every new environment.
 
 {{% alert color="warning" %}}
-We don't recommend using this option, as it's not possible to customize the bucket settings (encryption or default file access).
-In addition, this option needs admin-like IAM permissions to create inline policies - which might not be acceptable in regulated environments.
-This option is primarily here for historical reasons.
+We do not recommend using this option, as it is not possible to customize the bucket settings (encryption or default file access). In addition, this option needs admin-like IAM permissions to create inline policies - which might not be acceptable in regulated environments. This option is primarily here for historical reasons.
+
 Instead, we recommend using the [Create account with existing policy](#s3-create-account-existing-policy) option if you need automation.
 {{% /alert %}}
 
-**Prerequisites**
+##### 3.3.3.1 Prerequisites
 
-* An "admin" user account - with the following policy (replace `<account_id>` with your AWS account number):
+* An admin user account - with the following policy (replace `<account_id>` with your AWS account number):
     ```json
     {
         "Version": "2012-10-17",
@@ -755,55 +754,57 @@ Instead, we recommend using the [Create account with existing policy](#s3-create
     }
     ```
 
-**Limitations**
+##### 3.3.3.2 Limitations
 
 * Access/Secret keys used by existing environments can only be rotated manually.
-* It's not possible to customize how an S3 bucket is created (for example, encryption or default file access).
-* It's not possible to customize how the inline IAM policy is created.
+* It is not possible to customize how an S3 bucket is created (for example, encryption or default file access).
+* It is not possible to customize how the inline IAM policy is created.
 
-**Environment Isolation**
+##### 3.3.3.3 Environment Isolation
 
 * Every environment has its own IAM user.
 * Every environment has its own S3 bucket, which can only be accessed by that environment's IAM user.
 
-**Create workflow** (what the Mendix Operator will do when a new environment is created):
+##### 3.3.3.4 Create Workflow
+
+When a new environment is created, the Mendix Operator performs the following actions:
 
 * Generate a new IAM username and S3 bucket name for the environment.
 * Create a new S3 bucket for the environment.
 * Create the new IAM user with an inline policy - allowing that user to access the environment's S3 bucket.
 * Create a Kubernetes secret to provide connection details to the new app environment - to automatically configure the new environment.
 
-**Delete workflow** (what the Mendix Operator will do when an existing environment is deleted):
+##### 3.3.3.5 Delete Workflow
 
-* (Only if _Prevent Data Deletion_ is not enabled) Delete the environment's bucket and all of its contents.
+When an existing environment is deleted, the Mendix Operator performs the following actions:
+
+* (Only if **Prevent Data Deletion** is not enabled) Delete the environment's bucket and all of its contents.
 * Delete that environment's IAM user and inline policy.
 * Delete that environment's Kubernetes blob file storage credentials secret.
 
-**Configuring this plan**
+##### 3.3.3.6 Configuring the Plan
 
 In the Amazon S3 plan configuration, enter the following details:
 
-* **Create bucket per environment** - checked.
-* **Create account (IAM user) per environment** - checked.
-* **Bucket region** - the region where buckets will be created, for example `eu-west-1`.
-* **Create inline policy** - checked.
-* **Access Key** and **Secret Key** credentials for the "admin" user account - used to create/delete environment buckets and IAM users.
+* **Create bucket per environment** - Set to **yes**.
+* **Create account (IAM user) per environment** - Set to **yes**.
+* **Bucket region** - The region where buckets will be created, for example `eu-west-1`.
+* **Create inline policy** - Set to **yes**.
+* **Access Key** and **Secret Key** - Credentials for the admin user account, used to create or delete environment buckets and IAM users.
 
-#### 3.3.4 Create bucket and account with existing policy{#s3-create-bucket-account-existing-policy}
+#### 3.3.4 Create Bucket and Account with Existing Policy {#s3-create-bucket-account-existing-policy}
 
-<text class="badge badge-pill badge-primary">Automated</text> <text class="badge badge-pill badge-primary">On-Demand</text>
-
-This option will create an S3 bucket and IAM account for every new environment.
+This automated, on-demand option will create an S3 bucket and IAM account for every new environment.
 
 {{% alert color="warning" %}}
-We don't recommend using this option, as it's not possible to customize the bucket settings (encryption or default file access).
-This option is primarily here for historical reasons.
+We do not recommend using this option, as it is not possible to customize the bucket settings (encryption or default file access). This option is primarily available for historical reasons.
+
 Instead, we recommend using the [Create account with existing policy](#s3-create-account-existing-policy) option if you need automation.
 {{% /alert %}}
 
-**Prerequisites**
+##### 3.3.4.1 Prerequisites
 
-* An _environment template_ policy (will be attached to every new environment's user) - allowing access to the environment's S3 bucket:
+* An environment template policy (will be attached to every new environment's user), allowing access to the environment's S3 bucket:
 
     ```json
     {
@@ -845,7 +846,7 @@ Instead, we recommend using the [Create account with existing policy](#s3-create
     }
     ```
 
-* An "admin" user account - with the following policy (replace `<account_id>` with your AWS account number, and `<policy_arn>` with the _environment template_ policy ARN):
+* An admin user account - with the following policy (replace `<account_id>` with your AWS account number, and `<policy_arn>` with the environment template policy ARN):
 
     ```json
     {
@@ -893,58 +894,60 @@ Instead, we recommend using the [Create account with existing policy](#s3-create
     }
     ```
 
-**Limitations**
+##### 3.3.4.2 Limitations
 
 * Access/Secret keys used by existing environments can only be rotated manually.
-* It's not possible to customize how an S3 bucket is created (for example, encryption or default file access).
+* It is not possible to customize how an S3 bucket is created (for example, encryption or default file access).
 
-**Environment Isolation**
+##### 3.3.4.3 Environment Isolation
 
 * Every environment has its own IAM user.
 * Every environment has its own S3 bucket, which can only be accessed by that environment's IAM user.
-  * The _environment template_ policy uses the IAM username as a template - so that a user can only access an S3 bucket that matches the IAM username.
-* The Mendix Operator doesn't need permissions to create IAM policies.
+  * The environment template policy uses the IAM username as a template - so that a user can only access an S3 bucket that matches the IAM username.
+* The Mendix Operator does not need permissions to create IAM policies.
 
-**Create workflow** (what the Mendix Operator will do when a new environment is created):
+##### 3.3.4.4 Create Workflow
+
+When a new environment is created, the Mendix Operator performs the following actions:
 
 * Generate a new IAM username and S3 bucket name for the environment.
 * Create a new S3 bucket for the environment.
 * Create the new IAM user and attach the _environment template_ policy to this user.
 * Create a Kubernetes secret to provide connection details to the new app environment - to automatically configure the new environment.
 
-**Delete workflow** (what the Mendix Operator will do when an existing environment is deleted):
+##### 3.3.4.5 Delete Workflow
 
-* (Only if _Prevent Data Deletion_ is not enabled) Delete the environment's bucket and all of its contents.
+When an existing environment is deleted, the Mendix Operator performs the following actions:
+
+* (Only if **Prevent Data Deletion** is not enabled) Delete the environment's bucket and all of its contents.
 * Delete that environment's IAM user.
 * Delete that environment's Kubernetes blob file storage credentials secret.
 
-**Configuring this plan**
+##### 3.3.4.6 Configuring the Plan
 
 In the Amazon S3 plan configuration, enter the following details:
 
-* **Create bucket per environment** - checked.
-* **Create account (IAM user) per environment** - checked.
-* **Bucket region** - the region where buckets will be created, for example `eu-west-1`.
-* **Create inline policy** - unchecked.
-* **Attach policy ARN** - the _environment template_ policy ARN; this is the policy that will be attached to every environment's user.
-* **Access Key** and **Secret Key** credentials for the "admin" user account - used to create/delete environment buckets and IAM users.
+* **Create bucket per environment** - Set to **yes**.
+* **Create account (IAM user) per environment** - Set to **yes**.
+* **Bucket region** - The region where buckets will be created, for example `eu-west-1`.
+* **Create inline policy** - Set to **no**.
+* **Attach policy ARN** - The environment template policy ARN; this is the policy that will be attached to every environment's user.
+* **Access Key** and **Secret Key** - The credentials for the admin user account, used to create or delete environment buckets and IAM users.
 
-#### 3.3.5 Create account with inline policy{#s3-create-account-inline-policy}
+#### 3.3.5 Create account with inline policy {#s3-create-account-inline-policy}
 
-<text class="badge badge-pill badge-primary">Automated</text> <text class="badge badge-pill badge-primary">On-Demand</text>
-
-This option allows to share an existing bucket between environments, and isolates environments from accessing each other's data.
+This automated, on-demand option allows the sharing of an existing bucket between environments, and isolates environments from accessing each other's data.
 
 {{% alert color="warning" %}}
-We don't recommend using this option, as it needs admin-like IAM permissions to create inline policies - which might not be acceptable in regulated environments.
-This option is primarily here for historical reasons.
+We do not recommend using this option, as it needs admin-like IAM permissions to create inline policies, which might not be acceptable in regulated environments. This option is primarily available for historical reasons.
+
 Instead, we recommend using the [Create account with existing policy](#s3-create-account-existing-policy) option if you need automation.
 {{% /alert %}}
 
-**Prerequisites**
+##### 3.3.5.1 Prerequisites
 
 * An S3 bucket.
-* An "admin" user account - with the following policy (replace `<account_id>` with your AWS account number):
+* An admin user account - with the following policy (replace `<account_id>` with your AWS account number):
 
     ```json
     {
@@ -969,58 +972,60 @@ Instead, we recommend using the [Create account with existing policy](#s3-create
     }
     ```
 
-**Limitations**
+##### 3.3.5.2 Limitations
 
 * Access/Secret keys used by existing environments can only be rotated manually.
-* It's not possible to customize how the inline IAM policy is created.
+* It is not possible to customize how the inline IAM policy is created.
 
-**Environment Isolation**
+##### 3.3.5.3 Environment Isolation
 
 * Every environment has its own IAM user.
 * The S3 bucket is shared. 
-  * The Mendix Operator will generate an IAM policy for every user that only allows access to files in a specific prefix (directory) in the bucket.
-  * An environment cannot access files from other environments.
-* The Mendix Operator doesn't need permissions to create new buckets, only to create IAM users and inline policies.
+    * The Mendix Operator will generate an IAM policy for every user that only allows access to files in a specific prefix (directory) in the bucket.
+    * An environment cannot access files from other environments.
+* The Mendix Operator does no need permissions to create new buckets, only to create IAM users and inline policies.
 
-**Create workflow** (what the Mendix Operator will do when a new environment is created):
+##### 3.3.5.4 Create Workflow
+
+When a new environment is created, the Mendix Operator performs the following actions:
 
 * Generate a new IAM username.
 * Create the new IAM user with an inline policy - allowing that user to access the environment's S3 bucket.
 * Create a Kubernetes secret to provide connection details to the new app environment - to automatically configure the new environment.
 
-**Delete workflow** (what the Mendix Operator will do when an existing environment is deleted):
+##### 3.3.5.5 Delete Workflow
 
-* (Only if _Prevent Data Deletion_ is not enabled) Delete files from that environment's prefix (directory). Files from other apps (in other prefixes/directories) will not be affected.
+When an existing environment is deleted, the Mendix Operator performs the following actions:
+
+* (Only if **Prevent Data Deletion** is not enabled) Delete files from that environment's prefix (directory). Files from other apps (in other prefixes/directories) will not be affected.
 * Delete that environment's IAM user.
 * Delete that environment's Kubernetes blob file storage credentials secret.
 
-**Configuring this plan**
+##### 3.3.5.6 Configuring the Plan
 
 In the Amazon S3 plan configuration, enter the following details:
 
-* **Create bucket per environment** - unchecked.
-* **Create account (IAM user) per environment** - checked.
-* **Bucket region** - the existing shared bucket's region, for example `eu-west-1`.
-* **Bucket name** - the existing shared bucket's name, for example `mendix-apps-production-example`.
-* **Create inline policy** - checked.
-* **Access Key** and **Secret Key** credentials for the "admin" user account - used to create/delete environment IAM users.
+* **Create bucket per environment** - Set to **no**.
+* **Create account (IAM user) per environment** - Set to **yes**.
+* **Bucket region** - The existing shared bucket's region, for example `eu-west-1`.
+* **Bucket name** - The existing shared bucket's name, for example `mendix-apps-production-example`.
+* **Create inline policy** - Set to **yes**.
+* **Access Key** and **Secret Key** - Credentials for the "admin" user account, used to create or delete environment IAM users.
 
-#### 3.3.6 Create account with inline policy{#s3-create-account-inline-policy}
+#### 3.3.6 Create Account with Inline Policy {#s3-create-account-inline-policy}
 
-<text class="badge badge-pill badge-primary">Automated</text> <text class="badge badge-pill badge-primary">On-Demand</text>
-
-This option allows to share an existing bucket between environments, and isolates environments from accessing each other's data.
+This automated, on-demand option allows to share an existing bucket between environments, and isolates environments from accessing each other's data.
 
 {{% alert color="warning" %}}
-We don't recommend using this option, as it needs admin-like IAM permissions to create inline policies - which might not be acceptable in regulated environments.
-This option is primarily here for historical reasons.
+We do not recommend using this option, as it needs admin-like IAM permissions to create inline policies - which might not be acceptable in regulated environments. This option is primarily here for historical reasons.
+
 Instead, we recommend using the [Create account with existing policy](#s3-create-account-existing-policy) option if you need automation.
 {{% /alert %}}
 
-**Prerequisites**
+##### 3.3.6.1 Prerequisites
 
 * An S3 bucket.
-* An "admin" user account - with the following policy (replace `<account_id>` with your AWS account number):
+* An admin user account - with the following policy (replace `<account_id>` with your AWS account number):
 
     ```json
     {
@@ -1045,160 +1050,168 @@ Instead, we recommend using the [Create account with existing policy](#s3-create
     }
     ```
 
-**Limitations**
+##### 3.3.6.2 Limitations
 
 * Access/Secret keys used by existing environments can only be rotated manually.
-* It's not possible to customize how the inline IAM policy is created.
+* It is not possible to customize how the inline IAM policy is created.
 
-**Environment Isolation**
+##### 3.3.6.3 Environment Isolation
 
 * Every environment has its own IAM user.
 * The S3 bucket is shared. 
-  * The Mendix Operator will generate an IAM policy for every user that only allows access to files in a specific prefix (directory) in the bucket.
-  * An environment cannot access files from other environments.
-* The Mendix Operator doesn't need permissions to create new buckets, only to create IAM users and inline policies.
+    * The Mendix Operator will generate an IAM policy for every user that only allows access to files in a specific prefix (directory) in the bucket.
+    * An environment cannot access files from other environments.
+* The Mendix Operator does not need permissions to create new buckets, only to create IAM users and inline policies.
 
-**Create workflow** (what the Mendix Operator will do when a new environment is created):
+##### 3.3.6.4 Create Workflow
+
+When a new environment is created, the Mendix Operator performs the following actions:
 
 * Generate a new IAM username.
 * Create the new IAM user with an inline policy - allowing that user to access the environment's S3 bucket.
 * Create a Kubernetes secret to provide connection details to the new app environment - to automatically configure the new environment.
 
-**Delete workflow** (what the Mendix Operator will do when an existing environment is deleted):
+##### 3.3.6.5 Delete Workflow
+
+When an existing environment is deleted, the Mendix Operator performs the following actions:
 
 * (Only if _Prevent Data Deletion_ is not enabled) Delete files from that environment's prefix (directory). Files from other apps (in other prefixes/directories) will not be affected.
 * Delete that environment's IAM user.
 * Delete that environment's Kubernetes blob file storage credentials secret.
 
-**Configuring this plan**
+##### 3.3.6.6 Configuring the Plan
 
 In the Amazon S3 plan configuration, enter the following details:
 
-* **Create bucket per environment** - unchecked.
-* **Create account (IAM user) per environment** - checked.
-* **Bucket region** - the existing shared bucket's region, for example `eu-west-1`.
-* **Bucket name** - the existing shared bucket's name, for example `mendix-apps-production-example`.
-* **Create inline policy** - checked.
-* **Access Key** and **Secret Key** credentials for the "admin" user account - used to create/delete environment IAM users.
+* **Create bucket per environment** - Set to **no**.
+* **Create account (IAM user) per environment** - Set to **yes**.
+* **Bucket region** - The existing shared bucket's region, for example `eu-west-1`.
+* **Bucket name** - The existing shared bucket's name, for example `mendix-apps-production-example`.
+* **Create inline policy** - Set to **yes**.
+* **Access Key** and **Secret Key** - Credentials for the admin user account, used to create or delete environment IAM users.
 
-### 3.4 Azure Blob storage{#blob-azure}
+### 3.4 Azure Blob Storage {#blob-azure}
 
-<text class="badge badge-pill badge-primary">Basic</text> <text class="badge badge-pill badge-primary">On-Demand</text> <text class="badge badge-pill badge-primary">Dedicated</text>
+This basic, on-demand option allows you to attach an existing Azure Blob Storage container and credentials (account name and secret key) to one or more environments. All apps (environments) will use the same Azure Blob Storage container and credentials.
 
-This option allows to attach an existing Azure Blob Storage container and credentials (account name and secret key) to one or more environments.
-All apps (environments) will use the same Azure Blob Storage container and credentials.
-
-**Prerequisites**
+#### 3.4.1 Prerequisites
 
 * An Azure Blob storage container and credentials to access it.
 
-**Limitations**
+#### 3.4.2 Limitations
 
 * Access/Secret keys used by existing environments can only be rotated manually.
 * No isolation between environments using this blob storage plan (if the plan **Type** is `On-Demand`).
 * Configuration parameters will not be validated and will be provided to the Mendix app as-is. If the arguments are not valid or there is an issue with permissions, the Mendix Runtime will fail to start the and deployment will appear to hang with **Replicas running** and **Runtime** showing a spinner.
 
-**Environment Isolation**
+#### 3.4.3 Environment Isolation
 
 * The Azure Blob storage container and credentials are shared between all environments using this plan.
 * An environment can access data from other environments using this Storage Plan.
 * All environments will store their data in the root directory of the blob storage container.
 * By using the `Dedicated` **Type**, this plan switches into **Dedicated** mode - so that only one environment can use it.
 
-**Create workflow** (what the Mendix Operator will do when a new environment is created):
+#### 3.4.4 Create Workflow
+
+When a new environment is created, the Mendix Operator performs the following actions:
 
 * Create a Kubernetes secret to provide connection details to the new app environment - to automatically configure the new environment.
 
-**Delete workflow** (what the Mendix Operator will do when an existing environment is deleted):
+#### 3.4.5 Delete Workflow
+
+When an existing environment is deleted, the Mendix Operator performs the following actions:
 
 * Delete that environment's Kubernetes blob file storage credentials secret.
 
-**Configuring this plan**
+#### 3.4.6 Configuring the Plan
 
 In the Azure Blob plan configuration, enter the following details:
 
-* **Account Name** and **Account Key** credentials for the blob storage container.
-* **Container name** - name of the blob storage container..
-* **Type** - specifies is the container can be shared between environments (create an <text class="badge badge-pill badge-primary">On-Demand</text> storage plan); or that the container can only be used by one environment (create a <text class="badge badge-pill badge-primary">Dedicated</text> storage plan). To increase security and prevent environments from being able to access each other's data, select `Dedicated`.
+* **Account Name** and **Account Key** - Credentials for the blob storage container.
+* **Container name** - Name of the blob storage container.
+* **Type** - Specifies is the container can be shared between environments (create an on-demand storage plan); or that the container can only be used by one environment (create a dedicated storage plan). To increase security and prevent environments from being able to access each other's data, select `Dedicated`.
 
-### 3.5 Google Cloud Storage{#blob-gcp-storage-bucket}
+### 3.5 Google Cloud Storage {#blob-gcp-storage-bucket}
 
-<text class="badge badge-pill badge-primary">Basic</text> <text class="badge badge-pill badge-primary">On-Demand</text> <text class="badge badge-pill badge-primary">Dedicated</text>
+This basic, on-demand option allows you to attach an existing GCP Cloud Storage bucket and credentials (access and secret keys) to one or more environments. All apps (environments) will use the same GCP Cloud Storage bucket and credentials (access and secret keys).
 
-This option allows to attach an existing GCP Cloud Storage bucket and credentials (access and secret keys) to one or more environments.
-All apps (environments) will use the same GCP Cloud Storage bucket and credentials (access and secret keys).
-
-**Prerequisites**
+#### 3.5.1 Prerequisites
 
 * A GCP Cloud Storage bucket bucket.
 * An Access and Secret key with permissions to access the bucket.
 
-**Limitations**
+#### 3.5.2 Limitations
 
 * Access/Secret keys used by existing environments can only be rotated manually.
 * No isolation between environments using this blob storage plan (if the plan **Type** is `On-Demand`).
 * Configuration parameters will not be validated and will be provided to the Mendix app as-is. If the arguments are not valid or there is an issue with permissions, the Mendix Runtime will fail to start the and deployment will appear to hang with **Replicas running** and **Runtime** showing a spinner.
 
-**Environment Isolation**
+#### 3.5.3 Environment Isolation
 
 * The GCP Cloud Storage bucket and credentials (access and secret keys) are shared between all environments using this plan.
 * An environment can access data from other environments using this Storage Plan.
 * By using the `Dedicated` **Type**, this plan switches into **Dedicated** mode - so that only one environment can use it.
 
-**Create workflow** (what the Mendix Operator will do when a new environment is created):
+#### 3.5.4 Create Workflow
+
+When a new environment is created, the Mendix Operator performs the following actions:
 
 * Generate a unique prefix based on the environment's name, so that each environment stores files in a separate prefix (directory).
 * Create a Kubernetes secret to provide connection details to the new app environment - to automatically configure the new environment.
 
-**Delete workflow** (what the Mendix Operator will do when an existing environment is deleted):
+#### 3.5.5 Delete Workflow
+
+When an existing environment is deleted, the Mendix Operator performs the following actions:
 
 * Delete that environment's Kubernetes blob file storage credentials secret.
 
-**Configuring this plan**
+#### 3.5.6 Configuring the Plan
 
 In the GCP Cloud Storage plan configuration, enter the following details:
 
-* **Endpoint** - the GCP bucket's endpoint address, for example `https://storage.googleapis.com/<bucket-name>`.
-* **Access Key** and **Secret Key** credentials to access the bucket.
-* **Type** - specifies is the container can be shared between environments (create an <text class="badge badge-pill badge-primary">On-Demand</text> storage plan); or that the container can only be used by one environment (create a <text class="badge badge-pill badge-primary">Dedicated</text> storage plan). To increase security and prevent environments from being able to access each other's data, select `Dedicated`.
+* **Endpoint** - The GCP bucket's endpoint address, for example, `https://storage.googleapis.com/<bucket-name>`.
+* **Access Key** and **Secret Key** - Credentials to access the bucket.
+* **Type** - Specifies is the container can be shared between environments (create an on-demand storage plan); or that the container can only be used by one environment (create a dedicated storage plan). To increase security and prevent environments from being able to access each other's data, select `Dedicated`.
 
-### 3.6 Ceph{#blob-ceph}
+### 3.6 Ceph {#blob-ceph}
 
-<text class="badge badge-pill badge-primary">Basic</text> <text class="badge badge-pill badge-primary">On-Demand</text> <text class="badge badge-pill badge-primary">Dedicated</text>
-
-This option allows to attach an existing Ceph or S3-compatible bucket and credentials (access and secret keys) to one or more environments.
+This basic, on-demand option allows to attach an existing Ceph or S3-compatible bucket and credentials (access and secret keys) to one or more environments.
 All apps (environments) will use the same bucket and credentials (access and secret keys).
 
-**Prerequisites**
+#### 3.6.1 Prerequisites
 
 * A Ceph or S3-compatible bucket.
 * An Access and Secret key with permissions to access the bucket.
 
-**Limitations**
+#### 3.6.2 Limitations
 
 * Access/Secret keys used by existing environments can only be rotated manually.
-* No isolation between environments using this blob storage plan (if the plan **Type** is `On-Demand`).
+* No isolation between environments using this blob storage plan (if the plan **Type** is **On-Demand**).
 * Configuration parameters will not be validated and will be provided to the Mendix app as-is. If the arguments are not valid or there is an issue with permissions, the Mendix Runtime will fail to start the and deployment will appear to hang with **Replicas running** and **Runtime** showing a spinner.
 
-**Environment Isolation**
+#### 3.6.3 Environment Isolation
 
 * The Ceph or S3-compatible bucket and credentials (access and secret keys) are shared between all environments using this plan.
 * An environment can access data from other environments using this Storage Plan.
-* By using the `Dedicated` **Type**, this plan switches into **Dedicated** mode - so that only one environment can use it.
+* By using the Dedicated type, this plan switches into **Dedicated** mode, so that only one environment can use it.
 
-**Create workflow** (what the Mendix Operator will do when a new environment is created):
+#### 3.6.4 Create Workflow
+
+When a new environment is created, the Mendix Operator performs the following actions:
 
 * Generate a unique prefix based on the environment's name, so that each environment stores files in a separate prefix (directory).
 * Create a Kubernetes secret to provide connection details to the new app environment - to automatically configure the new environment.
 
-**Delete workflow** (what the Mendix Operator will do when an existing environment is deleted):
+#### 3.6.5 Delete Workflow
+
+When an existing environment is deleted, the Mendix Operator performs the following actions:
 
 * Delete that environment's Kubernetes blob file storage credentials secret.
 
-**Configuring this plan**
+#### 3.6.6 Configuring the Plan
 
 In the Ceph plan configuration, enter the following details:
 
-* **Endpoint** - the Ceph bucket's endpoint address, for example `https://ceph-instance.local:9000/<bucket-name>`.
-* **Access Key** and **Secret Key** credentials to access the bucket.
-* **Type** - specifies is the container can be shared between environments (create an <text class="badge badge-pill badge-primary">On-Demand</text> storage plan); or that the container can only be used by one environment (create a <text class="badge badge-pill badge-primary">Dedicated</text> storage plan). To increase security and prevent environments from being able to access each other's data, select `Dedicated`.
+* **Endpoint** - The Ceph bucket's endpoint address, for example `https://ceph-instance.local:9000/<bucket-name>`.
+* **Access Key** and **Secret Key** - Credentials to access the bucket.
+* **Type** - Specifies if the container can be shared between environments (create an on-demand storage plan); or that the container can only be used by one environment (create a dedicated storage plan). To increase security and prevent environments from being able to access each other's data, select **Dedicated**.

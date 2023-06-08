@@ -9,7 +9,7 @@ weight: 20
 
 ## 1 Introduction
 
-The main API the Mendix Platform provides to a pluggable widget client component is the props the component receives. These props resemble the structure of properties specified in the widget definition XML file (a structure described in [Pluggable Widgets API](/apidocs-mxsdk/apidocs/pluggable-widgets-9/)). A property's attribute type affects how the property will be represented to the client component. Simply, an attribute's type defines what will it be. You can find the more details on property types and the interfaces that property value can adhere to in [Pluggable Widget Property Types](/apidocs-mxsdk/apidocs/pluggable-widgets-property-types-9/). To see examples of pluggable widgets in action, see [How To Build Pluggable Widgets](/howto/extensibility/pluggable-widgets-9/)
+The main API the Mendix Platform provides to a pluggable widget client component is the props the component receives. These props resemble the structure of properties specified in the widget definition XML file (a structure described in [Pluggable Widgets API](/apidocs-mxsdk/apidocs/pluggable-widgets-9/)). A property's attribute type affects how the property will be represented to the client component. Simply, an attribute's type defines what will it be. You can find the more details on property types and the interfaces that property value can adhere to in [Pluggable Widget Property Types](/apidocs-mxsdk/apidocs/pluggable-widgets-property-types-9/). To see examples of pluggable widgets in action, see [How To Build Pluggable Widgets](/howto-9/extensibility/pluggable-widgets/)
 
 The Mendix Platform also exposes a few JavaScript modules, specifically extra Mendix APIs as well as existing libraries, like React, that client components must share with the platform to function properly. For more information on exposed libraries, see the [Exposed Libraries](#exposed-libraries) section below.
 
@@ -29,7 +29,7 @@ In Mendix Studio Pro, every widget must have a name configured. The primary usag
 
 ### 3.2 Class
 
-A user can specify multiple classes for every widget. They can do this either directly by configuring a [class](/refguide/common-widget-properties/#class) property in Studio Pro, or by using design properties. In web apps, the Mendix Platform creates a CSS class string from the configuration and passes it as a `string` `class` prop to every client component. Unfortunately, React Native does not have similar support for classes. Therefore in native mobile apps a component will not receive `class` prop, but a `style` prop instead.
+A user can specify multiple classes for every widget. They can do this either directly by configuring a [class](/refguide9/common-widget-properties/#class) property in Studio Pro, or by using design properties. In web apps, the Mendix Platform creates a CSS class string from the configuration and passes it as a `string` `class` prop to every client component. Unfortunately, React Native does not have similar support for classes. Therefore in native mobile apps a component will not receive `class` prop, but a `style` prop instead.
 
 ### 3.3 Style
 
@@ -240,7 +240,7 @@ export interface FileValue {
 
 ### 4.8 List values{#list-values}
 
-`ListValue` is used to represent a list of objects for the [datasource](/apidocs-mxsdk/apidocs/pluggable-widgets-property-types-9/#datasource) property. See [List Values](/apidocs-mxsdk/apidocs/pluggable-widgets-client-apis-list-values/) for more information about usage of `ListValue` and associated property values.
+`ListValue` is used to represent a list of objects for the [datasource](/apidocs-mxsdk/apidocs/pluggable-widgets-property-types-9/#datasource) property. See [List Values](/apidocs-mxsdk/apidocs/pluggable-widgets-client-apis-list-values-9/) for more information about usage of `ListValue` and associated property values.
 
 ## 5 Exposed Modules
 

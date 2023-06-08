@@ -219,7 +219,6 @@ If you have selected the **Connected Mode** which installs the **Mendix Gateway 
 * All the Websocket connections are established over HTTPS, and therefore, can be routed through a Proxy server.
 {{% /alert %}}
 
-
 #### 4.3.2 Configure Namespace {#configure-namespace}
 
 You can now configure the resources required for your namespace.

@@ -360,7 +360,7 @@ weight: 97
 
 **Release date: February 8th, 2019**
 
-* We added support for [Mendix 7.23.0](/releasenotes/studio-pro/7.23/).
+* We added support for Mendix 7.23.0.
 * It is now possible to perform operations (such as **delete working copy**) on working copies that have a newer Metamodel version than the one this Model SDK supports. This was not possible before, as we checked the Mendix Metamodel version for every operation. Now, we only check the Mendix Metamodel version when actually opening a working copy.
 
 ## 4.18.0 {#418}

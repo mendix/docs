@@ -55,7 +55,6 @@ These are the current LTS versions of Studio Pro:
 
 * [9.24](/releasenotes/studio-pro/9.24/) (started in March, 2023)
 * [8.18](/releasenotes/studio-pro/8.18/) (started in March, 2021)
-* [7.23](/releasenotes/studio-pro/7.23/) (started in February, 2019)
 
 Mendix advises using LTS versions for all production apps, as LTS versions of Studio Pro enjoy the highest security and stability. LTS versions also have the longest support duration compared to other versions.
 

@@ -10,10 +10,6 @@ weight: 85
 
 The Projects API allows you to programmatically create a project in your company space and move working copies between the Team Server and the Model Server.
 
-{{% alert color="warning" %}}
-As of June 20th, 2021, you can no longer create apps using app templates created in Desktop Modeler version [7.23.14](/releasenotes/studio-pro/7.23/#72314) or below. Please update your templates to [7.23.15](/releasenotes/studio-pro/7.23/#72315) or above before creating apps based on those templates.
-{{% /alert %}}
-
 ## 2 Error Handling
 
 The following errors might be returned by the service. As this API is implemented as an app service, it will only give a HTTP status code 500 in case an error occurs.

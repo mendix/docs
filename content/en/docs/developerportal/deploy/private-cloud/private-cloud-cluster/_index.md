@@ -940,16 +940,15 @@ When using a connected cluster, its status will be shown as **Connected** in the
 
 {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/image22.png" >}}
 
-### 5 Licensing the application via Private Cloud Licensing Manager
+### 5 Licensing the Application with Private Cloud License Manager
 
-You can license (operator and runtime) the application by configuring the Operator Configuration with License Manager details. In order to start using PCLM, you need to first download the PCLM executable available in the Installation page. For more information, see [PrivateCloudLicenseManager](/developerportal/deploy/private-cloud-cluster/private-cloud-license-manager.md) documentation and download the PCLM executable from this page.
+You can license the Operator and Runtime of your application by configuring the Operator configuration with License Manager details. In order to start using Private Cloud License Manager, you need to first download the PCLM executable available in the Installation page. For more information, see [Private Cloud License Manager](/developerportal/deploy/private-cloud-cluster/private-cloud-license-manager/). The PCLM executable is available for download from this page.
 
 {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/PCLMDownload.png" >}}
 
 {{% alert color="info" %}}
 In order to configure PCLM, make sure that the Operator version is 2.11.0 and above. 
 {{% /alert %}}
-
 
 ## 6 Advanced Operator Configuration
 

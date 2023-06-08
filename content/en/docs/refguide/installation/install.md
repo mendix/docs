@@ -1,7 +1,7 @@
 ---
 title: "Installing Mendix Studio Pro"
 url: /refguide/install/
-linktitle: "Install Mendix Studio Pro"
+linktitle: "Installing Studio Pro"
 category: "Installation"
 weight: 10
 description: "Describes how to install Mendix Studio Pro."

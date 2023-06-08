@@ -221,7 +221,7 @@ In the Postgres plan configuration, enter the following details:
 * **Username** - username of the admin/superuser, used by the Mendix Operator to create or delete tenants for app environments; typically, this is set to `postgres`.
 * **Password** - username of the admin/superuser; used by the Mendix Operator to create or delete tenants for app environments.
 * **Strict TLS** - specifies if the TLS should always be validated.
-  * Enabling this option will enable full TLS certificate validation and require encryption when connecting to the PostgreSQL server. If the PostgreSQL server has a self-signed certificate, you will also need to configure [custom TLS](#custom-tls) so that the self-signed certificate is accepted.
+  * Enabling this option will enable full TLS certificate validation and require encryption when connecting to the PostgreSQL server. If the PostgreSQL server has a self-signed certificate, you will also need to configure custom TLS so that the self-signed certificate is accepted.
   * Disabling this option will attempt to connect with TLS, but skip certificate validation. If TLS is not supported, it will fall back to an unencrypted connection.
 
 {{% alert color="info" %}}
@@ -315,7 +315,7 @@ In the SQL Server plan configuration, enter the following details:
 * **Username** - Username for the admin user, used by the Mendix Operator to create or delete tenants for app environments.
 * **Password** - Password for the admin user, used by the Mendix Operator to create or delete tenants for app environments.
 * **Strict TLS** - Specifies if TLS should always be validated.
-    * Enabling this option will enable full TLS certificate validation and require encryption when connecting to SQL Server. If the SQL Server server has a self-signed certificate, you will also need to configure [custom TLS](#custom-tls) so that the self-signed certificate is accepted. Azure SQL supports Strict TLS without any extra TLS configuration - no additional *custom TLS* configuration is required.
+    * Enabling this option will enable full TLS certificate validation and require encryption when connecting to SQL Server. If the SQL Server server has a self-signed certificate, you will also need to configure custom TLS so that the self-signed certificate is accepted. Azure SQL supports Strict TLS without any extra TLS configuration - no additional *custom TLS* configuration is required.
     * Disabling this option will attempt to connect with TLS, but skip certificate validation. If TLS is not supported, it will fall back to an unencrypted connection.
 * **Is Azure SQL Server** - Opens additional options that are only available when using Azure SQL (instead of a standalone SQL Server):
     * **Elastic Pool** - Specifies an existing Elastic Pool to use (can be left empty if the new app's database should not be using an elastic pool)
@@ -456,7 +456,7 @@ When an existing environment is deleted, the Mendix Operator performs the follow
 * Delete that environment's Kubernetes blob file storage credentials secret.
 
 {{% alert color="info" %}}
-To use TLS, specify the MinIO URL with an `https` schema, for example `https://minio.local:9000`. If MinIO has a self-signed certificate, you'll also need to configure [custom TLS](#custom-tls) so that the self-signed certificate is accepted.
+To use TLS, specify the MinIO URL with an `https` schema, for example `https://minio.local:9000`. If MinIO has a self-signed certificate, you will also need to configure custom TLS so that the self-signed certificate is accepted.
 
 If the MinIO URL is specified with an `http` schema, TLS will not be used.
 {{% /alert %}}
@@ -466,7 +466,7 @@ If the MinIO URL is specified with an `http` schema, TLS will not be used.
 In the MinIO plan configuration, enter the following details:
 
 * **Endpoint** is the MinIO server API endpoint, for example `http://minio-shared.privatecloud-storage.svc.cluster.local:9000`
-  * To use TLS, change `http` to `https`. If the MinIO server has a self-signed certificate, you will also need to configure [custom TLS](#custom-tls) so that the self-signed certificate is accepted.
+  * To use TLS, change `http` to `https`. If the MinIO server has a self-signed certificate, you will also need to configure custom TLS so that the self-signed certificate is accepted.
 * **Access Key** is the admin user account access key (username), used by Mendix Operator to create tenants for new environments.
 * **Secret Key** is the admin user account secret key (password), used by Mendix Operator to create tenants for new environments.
 

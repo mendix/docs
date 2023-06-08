@@ -447,7 +447,7 @@ The report is presented as a CSV file containing a summary of the licenses at va
 
 ## 8. Migration
 
-If you are migrating a Mendix Operator and Mendix apps which are already licensed to use the PCLM, you will need to remove the existing licenses. If your namespace was never licensed, please ignore this section.
+If you have manually configured static runtime licenses (offline licenses), PCLM will not replace those licenses. Only the runtime licenses applied through a Subscription secret will be replaced. If your namespace was never licensed, please ignore this section.
 
 Once you have configured the Mendix Operator running in a specific `<namespace>` to use the PCLM (following steps 7.1 and 7.2) you need to restart the Mendix operator to remove the existing licenses. You can do this as follows:
 

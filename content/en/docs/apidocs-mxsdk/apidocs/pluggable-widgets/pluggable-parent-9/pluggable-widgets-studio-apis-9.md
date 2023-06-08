@@ -5,8 +5,6 @@ url: /apidocs-mxsdk/apidocs/pluggable-widgets-studio-apis-9/
 description: A guide for understanding the APIs which influence pluggable widget preview appearances.
 tags: ["Widget", "Pluggable", "Custom", "JavaScript", "React", "Preview"]
 weight: 30
-aliases:
-- /apidocs-mxsdk/apidocs/studio-apis-for-pluggable-widgets
 ---
 
 ## 1 Introduction

@@ -1,12 +1,9 @@
 ---
 title: "Declaring Native Dependencies"
 url: /apidocs-mxsdk/apidocs/pluggable-widgets-native-dependencies-9/
-description: A guide for understanding native dependencies for pluggable widgets and JavaScript actions.
+description: A guide for understanding native dependencies for pluggable widgets and JavaScript actions in Mendix 9.
 tags: ["Widget", "Pluggable",  "JavaScript", "Native"]
-
 weight: 40
-aliases:
- - /apidocs-mxsdk/apidocs/native-dependencies
 ---
 
 ## 1 Introduction

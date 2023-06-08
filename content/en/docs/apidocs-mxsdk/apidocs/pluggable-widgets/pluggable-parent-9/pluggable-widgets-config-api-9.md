@@ -1,11 +1,9 @@
 ---
 title: "Configuration Module API"
 url: /apidocs-mxsdk/apidocs/pluggable-widgets-config-api-9/
-description: A guide for understanding the configuration module API which influences the behavior of pluggable widgets in Studio Pro.
+description: A guide for understanding the configuration module API which influences the behavior of pluggable widgets in Studio Pro Mendix 9.
 tags: ["Widget", "Pluggable", "Custom", "Preview", "Structure Mode", "Visibility", "editorConfig"]
 weight: 35
-aliases:
-- /apidocs-mxsdk/apidocs/config-api-for-pluggable-widgets
 ---
 
 ## 1 Introduction

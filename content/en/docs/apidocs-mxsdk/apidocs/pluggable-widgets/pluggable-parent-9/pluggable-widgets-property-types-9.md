@@ -1,12 +1,9 @@
 ---
 title: "Pluggable Widget Property Types"
 url: /apidocs-mxsdk/apidocs/pluggable-widgets-property-types-9/
-description: A guide for understanding pluggable widgets' property types.
+description: A guide for understanding pluggable widgets' property types in Studio Pro Mendix 9.
 tags: ["Widget", "Pluggable", "Custom", "JavaScript", "React"]
-
 weight: 10
-aliases:
-- /apidocs-mxsdk/apidocs/property-types-pluggable-widgets
 ---
 
 ## 1 Introduction

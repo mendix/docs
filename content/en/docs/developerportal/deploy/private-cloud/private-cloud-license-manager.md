@@ -26,7 +26,7 @@ The PCLM runs as a Kubernetes service on your cluster. This means that it can be
 To install and use the PCLM, you need the following prerequisites:
 
 * A Mendix for Private Cloud cluster
-* Mendix Operator in version 2.10 or above
+* Mendix Operator in version 2.11.0 or above
 * Administrative rights to a Kubernetes namespace to install PCLM server (a dedicated namespace is recommended). This can be within your Mendix for Private Cloud cluster, or in another cluster which is accessible over HTTP
 * A Postgres or SQLServer database server and within it:
     * A dedicated database with remote access which will be used to store your licenses, user authorization details, and usage information

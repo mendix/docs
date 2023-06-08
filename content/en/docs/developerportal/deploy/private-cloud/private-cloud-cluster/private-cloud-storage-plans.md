@@ -508,7 +508,9 @@ If you would like to have Mendix Operator with automation, and have full isolati
 
 If you would like to simply share a bucket between environments, or to manually create a bucket and account per environment, use the [existing bucket and account](#s3-existing-bucket-account) option.
 
-Other options are mainly provided for historical reasons, and are not recommended for new installations.
+{{% alert color="info" %}}
+Although we offer additional flexibility and provide other options, we recommend using one of the options listed above.
+{{% /alert %}}
 
 #### 3.3.1 Create Account with Existing Policy {#s3-create-account-existing-policy}
 

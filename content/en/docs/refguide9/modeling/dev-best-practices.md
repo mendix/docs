@@ -360,6 +360,29 @@ Use microflow [error handling](/refguide9/error-handling-in-microflows/) for all
 
 Complex processes and important business logic (like workflow processing or validations) must include debug and trace [logging](/refguide9/logging/). Logging actions must write the current state and progress of the process and must include a request ID or other identifying information. The log node should be the name of the module. This will greatly assist error analysis.
 
+#### 4.2.6 Validating Inputs in Microflows
+
+When microflows are invoked from the client side, it is important to validate the inputs. By having validations, you prevent incorrect, inappropriate, or potentially harmful data from being used in your microflow's and can protect yourself against security vulnerabilities. The following best practices contribute to the integrity and validation of inputs in your microflows.
+
+##### 4.2.6.1 Implementing Validation Checks
+
+Adding validation checks is vital for ensuring that input data conforms to the expected data type, format, range, or other application-specific constraints. For instance, if a numeric input is expected within a defined range, validation checks should confirm that the input is indeed numeric and falls within the specified range.
+
+##### 4.2.6.2 Managing Unexpected Values
+
+When building microflows, it's important to account for the potential occurrence of unexpected values. These could be empty values, or values outside the expected range or format. This also includes ensuring read-only attributes only contain expected values.
+
+{{% alert color="warning" %}}
+We strongly recommend adding validation to all microflows inputs, including read-only attributes. We also recommend avoiding storing intermediary values in attributes (such as a “TotalPrice”), and instead calculate these when needed to ensure the correct value.
+{{% /alert %}}
+
+Microflows should incorporate mechanisms to detect such anomalies, and respond suitably – this might involve returning an error message to the user or executing a fallback operation. 
+
+##### 4.6.2.3 Updating Validation Logic Regularly
+
+As the application evolves, the validation logic within microflows should be updated accordingly to reflect changes in business logic or data models. This regular review and update of validation checks will ensure that microflows remain secure and function correctly over time.
+By prioritizing the validation of inputs in microflows, you not only enhance the security of your application, but also ensure a more predictable and stable user experience. This practice underscores the development of reliable and robust applications.
+
 ### 4.3 Workflows
 
 Guidelines below can help you choose a short yet meaningful name for your workflow:

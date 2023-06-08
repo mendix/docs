@@ -1,6 +1,7 @@
 ---
 title: "Use Marketplace Content in Studio Pro"
 url: /appstore/general/app-store-content/
+linktitle: "Use Marketplace Content"
 category: "General Info"
 weight: 3
 tags: ["marketplace", "Studio Pro"]
@@ -34,9 +35,11 @@ There are three ways to install a Marketplace component, which are described in 
 
 ### 2.1 Downloading Content from Within Studio Pro {#downloading}
 
-{{% alert color="info" %}}The details below cover the updated Marketplace in Studio Pro that is available from version [9.19](/releasenotes/studio-pro/9.19/#updated-marketplace). For details on downloading content in older versions of Studio Pro, see the [For Older Versions of Studio Pro](#older) section below.{{% /alert %}}
+#### 2.1.1 For Studio Pro Versions 9.19 and Above
 
-{{% alert color="info" %}}This procedure works for all types of Marketplace components{{% /alert %}}
+{{% alert color="info" %}}This procedure works for all types of Marketplace components, unless you are using Studio Pro China Edition.{{% /alert %}}
+
+To download content in Studio Pro versions [9.19](/releasenotes/studio-pro/9.19/) and above, follow these steps:
 
 1. Open Studio Pro and sign in with your Mendix credentials.
 2. Open the app in which you want to install the component from the Marketplace.
@@ -75,9 +78,9 @@ There are three ways to install a Marketplace component, which are described in 
         2. Configure the necessary settings based on your storage choice.
         3. Click **OK**. After the app is downloaded, it opens automatically in Studio Pro.
 
-#### 2.1.1 For Older Versions of Studio Pro {#older}
+#### 2.1.1 For Studio Pro Versions 9.18 and Below
 
-These steps cover downloading content from the Marketplace available in Studio Pro version 9.18 and below:
+To download content in Studio Pro versions [9.18](/releasenotes/studio-pro/9.18/) and below, follow these steps:
 
 1. Open Studio Pro and sign in with your Mendix credentials.
 2. Open the app in which you want to install the component from the Marketplace.
@@ -173,6 +176,14 @@ To add a widget using the **Add widget** option from the toolbar, follow these s
 
 To update the widget in your app to a newer version, go to the Marketplace to download the right version, and [install](#install) it in your app.
 
+##### 3.1.2.1 Maintaining Added Translations in a Widget to Update
+
+In the scenario where you have an app with multiple languages in which you need to update an imported Marketplace widget that only comes with one language and where you have manually added translations for the additional languages you need, you can maintain the additional translations by following these steps:
+
+1. Maintain the translations for the widget by [exporting them to Excel](/refguide/batch-translate/#export).
+2. Update the widget via the steps described above.
+3. [Import](/refguide/batch-translate/#import) the maintained translations from the Excel.
+
 #### 3.1.3 Configuring the Widget
 
 After you place the widget in your page, some new errors can appear in the [Errors](/refguide/errors-pane/) pane. That is because you still need to configure the widget. In this procedure, we use the Ratings widget as an example.
@@ -213,11 +224,19 @@ To update the module in your app to a newer version, follow these steps::
 
 3. Check the **userlib** folder in your app directory for duplicate Java libraries. If your **userlib** folder contains multiple versions of the same Java library, it is usually safe to delete the old ones and keep only the new one.
 
+##### 3.2.1.1 Maintaining Added Translations in a Module to Update
+
+In the scenario where you have an app with multiple languages in which you need to update an imported Marketplace module that only comes with one language and where you have manually added translations for the additional languages you need, you can maintain the additional translations by following these steps:
+
+1. Maintain the translations for the module by [exporting them to Excel](/refguide/batch-translate/#export).
+2. Update the module via the steps described above.
+3. [Import](/refguide/batch-translate/#import) the maintained translations from the Excel.
+
 #### 3.2.2 Configuring the Module
 
 Each module that you download from the Marketplace is different. Some modules can cause errors because they are connected to other modules. For example, after you download the [Database Replication](/appstore/modules/database-replication/) module, you also need to download the [Mx Model Reflection](/appstore/modules/model-reflection/) module to accomplish the configuration. If you run into any problems, always check the **Documentation** tab on the page of this module in the Marketplace for installation guidelines and details on any dependencies.
 
-Keep in mind that some modules you can download may come with their own [user roles](/studio/settings-security/). If the **Security level** of your app is set to **Prototype/demo** or **Production**, you need to map the module roles to the applicable user roles in your app.
+Keep in mind that some modules you can download may come with their own user roles. If the **Security level** of your app is set to **Prototype/demo** or **Production**, you need to map the module roles to the applicable user roles in your app.
 
 ### 3.3  Using a Starter App
 

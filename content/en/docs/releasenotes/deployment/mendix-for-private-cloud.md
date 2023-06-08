@@ -13,6 +13,110 @@ For information on the current status of deployment to Mendix for Private Cloud 
 
 ## 2023
 
+### June 5th, 2023
+
+#### Portal Improvements
+
+* We have fixed the issue with the namespace or cluster invite, where a member was not able to accept the invite (Ticket 187296).
+
+### June 1st, 2023
+
+#### Portal Improvements
+
+* We have added a new **Source** field to the **Environment Details** and **Deployment Package Details** pages. The field shows if the deployment package or environment was created by using the API or the Portal.
+* Deleting or uploading a deployment package is now logged in the activity logs.
+* Creating or deleting an environment is now logged in the activity logs.
+
+#### Deploy API Improvements
+
+* We have improved the error message that is shown when the same cluster or namespace member is invited twice.
+* It is now possible to create an environment without providing the plans when a secret store is enabled for the namespace.
+* When creating an environment, the **secretsStoreEnabled** field is no longer mandatory. The field can be added for information purposes.
+* We have fixed an issue where a user was not able to create an environment with same ID in same application but in a different namespace (Ticket 185165).
+
+### May 17th, 2023
+
+#### Build API Improvements
+
+* We have changed the top-level entity in the response for GetPackage request to Package.
+
+#### Deploy API Improvements
+
+* We have fixed an issue where adding the same cluster member to an update cluster request more than once was not resulting in an error.
+
+### May 3rd, 2023
+
+#### Mendix Operator v2.11.0 {#2.11.0}
+
+* We have updated components to use Go 1.19 and the latest dependency versions, in order to improve security score ratings for all container images.
+* We fixed an issue where applying a custom TLS trust config in [non-interactive mode](/developerportal/deploy/private-cloud-cli-non-interactive/) failed.
+* We added a `runtimeLeaderSelection` option that allows you to run an environment without a leader replica - so that an app can be deployed into multiple regions.
+* We refactored the way the Mendix Runtime is launched. This removes the need to use Bash and Curl to start the Runtime.
+* It is now possible to choose between plaintext and JSON formats for Mendix app logs.
+* We have extended the options for configuring Ceph RADOS storage buckets. It is now possible to share a bucket between multiple environments.
+* We have updated the list of supported platforms to include OpenShift 4.12.
+
+### April 25th, 2023
+
+#### Portal Improvements
+
+* We have improved the error message that displays when invalid values are provided in the custom core resources.
+* We have added a message in the namespace plan section that displays when a namespace is configured with a secret store.
+* We have improved the look and feel of the Private Cloud portal.
+* We now allow the upload of deployment packages larger than 500 MB (up until 1024 MB) from the user interface. (Ticket 180884)
+
+#### Deploy API
+
+* We have fixed an issue where the environment list could not be retrieved successfully when the app internal ID was shorter than 8 characters.
+* We have fixed an issue where upper-case letters in an email ID would prevent members invited to a cluster manager or namespace from retrieving the environments.
+
+### April 13th, 2023
+
+#### Portal Enhancements
+
+* We have added webhooks which can trigger endpoints when changes are committed to a Team Server Git repository, or when a new deployment package is available for deployment to the Private Cloud. For more information, see [Webhooks](/developerportal/deploy/webhooks/).
+
+{{% alert color="info" %}}
+This feature is currently in a Beta release.
+{{% /alert %}}
+
+### March 17th, 2023
+
+#### Mendix Operator v2.10.2 {#2.10.2}
+
+* We have updated components to use the latest dependency versions, in order to improve security score ratings for all container images.
+* We have fixed an issue where the Operator would continuously create and delete pods after a container's memory, CPU or ephemeral storage had been adjusted by the cluster. (Tickets 175836, 177443)
+* We have added an option to specify a custom limit of how many Mendix Runtime versions can be downloaded when using the [Registry Migration](/developerportal/deploy/private-cloud-migrating/) tool. (Ticket 178006)
+* We have reduced the scope granted to the `mendix-operator` and `mendix-agent` roles in Kubernetes. Instead of an `*` verb that includes all permissions, the roles are now more fine-grained.
+* We have fixed an issue where annotations would only apply to new OpenShift Routes. With this update, it is possible to add or modify annotations in existing OpenShift Routes.
+* We have fixed an issue where enabling the **Add credentials to pull secrets** option would not work when the Push URL and Pull URL were different. With this update, credentials are now added for the push and pull registries.
+* We have extended the options for configuring Google Cloud storage buckets. It is now possible to share a bucket between multiple environments.
+
+### March 9th, 2023
+
+#### Deploy API Improvements
+
+* We have added a new API endpoint for updating the namespaces. This will allow cluster managers to do the following tasks:
+    * Add, edit or remove member permissions and members in a namespace. 
+    * Enable or disable the external secret store and development mode configurations. 
+    * Add, update, or clear the operational URLs.
+    * Activate or deactivate database and storage plans.
+* We have improved the Update Cluster API endpoint by allowing cluster managers to add new cluster managers.
+* We have improved the responses for `Get Cluster`, `Get Namespace`, `Get Clusters`, and `Get Namespaces`. The responses now provide more information for the user.
+* We have improved the Delete Cluster API endpoint by allowing the forced deletion of a cluster with namespaces, as long as the namespaces do not have any attached environments.
+* We have modified the OpenAPI specification file. Please download or check the latest version.
+
+#### Build API Release
+
+* We have introduced a new Mendix for Private Cloud Build API, which allows users to build, upload, delete and retrieve deployment packages for an application deployed in the Private Cloud.
+
+### February 16th, 2023
+
+#### Portal Improvements
+
+* We have improved the validation message for the internal name in the environment creation flow.
+* We have removed access to the old deployment packages repository. This means that active deployment packages which have not been deployed in the last 4 weeks might stop working. If that happens, simply recreate the deployment package with the same revision, and then redeploy it in your environment.
+
 ### February 9th, 2023
 
 #### Portal Improvements
@@ -120,7 +224,7 @@ Your build may fail if you try to deploy the same deployment package more than o
 
 * We now allow sorting of namespaces in the namespace selection list of the Create environment flow.
 * Newly-created environments will always run in Production mode (the DTAP mode is set to `P`) – you can no longer choose the purpose of your environment.
-    * This means that all apps must have [app security](/refguide/app-security/) set to `Production`.
+    * This means that all apps must have [app security](/refguide9/app-security/) set to `Production`.
 * We have made the **Subscription Secret** field optional – if no subscription secret is provided the app will be considered a trial app.
 * We now allow you to retrieve up to 100 branches for a project when creating a deployment package in the portal.
 
@@ -237,7 +341,7 @@ This issue is fixed in Mendix Operator [version 2.5.1](#2.5.1).
     * members invited for a namespace
     * members invited for a cluster
     * database and storage plans in a namespace
-* We have added a tootip to assist in using the **Purpose** field
+* We have added a tooltip to assist in using the **Purpose** field
 
 ### March 4th, 2022
 
@@ -484,7 +588,7 @@ To upgrade an existing installation of Private Cloud to this version, follow the
     * Bash (or Git Bash) is no longer required to install and configure a cluster. This allows you to use the tool in most Windows terminals such as PowerShell and Windows Command prompt with no workarounds.
     * The installation process no longer needs to communicate with an external service to download installation resources, and only needs access to the Kubernetes cluster API.
     * Migration of Mendix components to a Private Cloud registry no longer requires downloading and patching the installation script.
-    * The process for upgrading to the next version of Mendix for Private Cloud has been complely automated. Instead of a manual process using a Bash terminal, an upgrade can be done with a click of the mouse.
+    * The process for upgrading to the next version of Mendix for Private Cloud has been completely automated. Instead of a manual process using a Bash terminal, an upgrade can be done with a click of the mouse.
     * It's now possible to install or upgrade to a specific version of Mendix Operator (1.9.0 and later). Previously, it was only possible to install the latest version of the Operator.
 * We have added reporting of the **Storage Provisioner Version** to the Private Cloud Portal.
 * We have added dedicated sections to configure scheduled events and app constants when using the Operator in standalone mode.
@@ -535,7 +639,7 @@ After upgrading the Mendix Operator, we recommend downloading the latest version
 
 * We have added support in the Developer Portal to configure custom Certificate Authorities which should be trusted by the Mendix Operator and app environments.
 * We now add an environment UUID to environments deployed to Private Cloud namespaces so environment names no longer need to be unique.
-* As part of a Developer Portal clean up, we removed the *Model* option from the *DEVELOP* section of the Developer Portal menu when you are looking at environments on Mendix for Private Cloud. The functions of this page are still available via the **Edit in Studio** and **Edit in Studio Pro** buttons on the environments page. 
+* As part of a Developer Portal clean up, we removed the *Model* option from the *DEVELOP* section of the Developer Portal menu when you are looking at environments on Mendix for Private Cloud. The functions of this page are still available via the **Edit in Studio Pro** button on the environments page. 
 
 #### Fixes
 

@@ -18,7 +18,7 @@ This guide will teach you how to do the following:
 
 Before starting this guide, make sure you have completed the following prerequisites:
 
-* Review the [basic differences](https://developer.apple.com/library/archive/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/) between local notifications and push notifications
+* Review the [basic differences](https://developer.apple.com/documentation/usernotifications) between local notifications and push notifications
 * Install the [Make It Native](/refguide/getting-the-make-it-native-app/) app on your mobile device
 
 {{% alert color="info" %}}

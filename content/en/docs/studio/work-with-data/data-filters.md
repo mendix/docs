@@ -73,7 +73,7 @@ To create a new filter, do the following:
 
 1. To add a filter to a *microflow*, open the **Retrieve** action properties. 
 
-    To add a filter to a *page*, open properties of a list view or a data grid).
+    To add a filter to a *page*, open properties of a list view or a data grid.
 
 1. Make sure the database is selected as the data source and that an entity is selected.
 1. Click the **Filter** field.
@@ -86,7 +86,7 @@ To create a new filter, do the following:
 
 1. Select an operator and a value on the right. 
 
-    The value on the right can be a literal value that you type in (only available for string, long, integer, decimal, and autonumber attribute types), or it can be an attribute, association, or value you choose from the drop-down list. The options in the drop-down list depend on the left attribute/association. 
+    The value on the right can be a literal value that you type in (only available for the string, long, integer, decimal, and AutoNumber attribute types), or it can be an attribute, association, or value you choose from the drop-down list. The options in the drop-down list depend on the left attribute/association. 
 
     {{< figure src="/attachments/studio/work-with-data/data-filters/list-of-options.png" >}}
 

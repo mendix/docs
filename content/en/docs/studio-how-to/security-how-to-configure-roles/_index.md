@@ -78,7 +78,7 @@ You now have three user roles: Administrator, Customer, and Front_Desk.
 If you look at the table of your user roles, you will see that by default they can access all pages and microflows available in your app. To restrict access to certain pages, do the following:
 
 1. Click the **Page Access** tab. You will see a matrix listing all pages in lines, and all roles in columns.
-2. As front-desk agents should not have access to customer's personal profiles, untick the check-box in the **Front-Desk** column next in the **Personal_Profile** line:
+2. As front-desk agents should not have access to customer's personal profiles, untick the checkbox in the **Front-Desk** column next in the **Personal_Profile** line:
 
     {{< figure src="/attachments/studio-how-to/security-how-to-configure-roles/page-access-front-desk.png" alt="Page Access for the Front-Desk Role" >}}
 

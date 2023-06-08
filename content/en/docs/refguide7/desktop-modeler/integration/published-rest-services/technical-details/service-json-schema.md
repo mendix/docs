@@ -49,7 +49,7 @@ The schema of an attribute depends on the attribute type:
 | Currency       | `{ "type": "number" }` |
 | Date and time  | `{ "type": "string", "format": "date-time" }` |
 | Decimal        | `{ "type": "number" }` |
-| Enumeration    | `{ "type": "string", "enum": ["Male", "Female"] }` |
+| Enumeration    | `{ "type": "string", "enum": ["cat", "dog"] }` |
 | Float          | `{ "type": "number" }` |
 | Hashed string  | `{ "type": "string" }` |
 | Integer        | `{ "type": "integer", "format": "int32" }` |

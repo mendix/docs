@@ -2,7 +2,7 @@
 title: "Mendix Profile"
 url: /developerportal/community-tools/mendix-profile/
 category: "Community Tools"
-weight: 1
+weight: 2
 description: "Describes the personal profile page of the Mendix Developer Portal."
 tags: ["profile", "Developer Portal", "settings", "badge", "point", "connection", "invite", "leaderboard", "edit", "daily digest"]
 #To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
@@ -199,9 +199,9 @@ If you cannot finish your portfolio entry or do not want to publish yet, click *
 
 On the **Activity** tab, you can see a list of the last 20 public events for your badges, Marketplace, and Forum activity.
 
-## 10 Account Settings {#settings}
+## 10 User Settings {#settings}
 
-You can edit the information on your Mendix Profile by clicking the **Settings** cog icon. The settings page has a sidebar menu that allows you to edit the sections described below.
+You can edit the information on your Mendix Profile by clicking the **User Settings** cog icon. The settings page has a sidebar menu that allows you to edit the sections described below.
 
 ### 10.1 Profile {#profile}
 
@@ -261,7 +261,7 @@ You can also configure your **Buzz Notifications**:
 
 ### 10.4 Developer Settings {#dev-settings}
 
-#### 10.4.1 API Keys {#api-keys}
+#### 10.4.1 API Keys {#profile-api-keys}
 
 In this section, you can create and view the API keys that external applications can use to connect via the [Mendix Platform APIs](/apidocs-mxsdk/apidocs/) on behalf of your user account. An API key created here allows the apps using it to act on behalf of the user who created the key. This means the apps will have the same privileges as the user who created the key. An API key allows you to execute operations that need authentication without a password. For example, you can use an API key to perform scripted operations on your application model with the SDK. 
 
@@ -284,13 +284,13 @@ For more information, see the following:
 * [Mendix Platform SDK](/apidocs-mxsdk/mxsdk/)
 * [How to Manage App API Keys](/developerportal/settings/api-key/)
 
-#### 10.4.1 Personal Access Tokens {#pat}
+#### 10.4.2 Personal Access Tokens {#pat}
 
 Some platform APIs use personal access tokens (PATs) rather than API keys. This sections explains the concept of PATs, how you can obtain one, and how you can use this security token to give an application access to Mendix Platform services on your behalf.
 
 PATs are used as alternatives to passwords. They are designed to be used when the client application needs to get access on behalf of a specific platform user, but the user is not "present" at the time of access, so the user cannot login via a browser (web SSO). The client application can be any application (meaning, even an app not built with Mendix).
 
-You can create a PAT and remain in control of what access is delegated via the PAT by selecting the scopes. The PAT itself is a "‘bearer" token, which means that anyone or anything that has access to the PAT can use it as if they were the associated platform user subject to the restrictions set up in the scope of the PAT.
+You can create a PAT and remain in control of what access is delegated via the PAT by selecting the scopes. The PAT itself is a "bearer" token, which means that anyone or anything that has access to the PAT can use it as if they were the associated platform user subject to the restrictions set up in the scope of the PAT.
 
 PATs are security tokens that do not expire, but they cannot be used if the associated user has been deactivated on the Mendix Platform or when the user has deleted the PAT.
 
@@ -304,7 +304,7 @@ The following Mendix services support usage of PATs:
 * [App Repository API](/apidocs-mxsdk/apidocs/app-repository-api/)
 * [Projects API](/apidocs-mxsdk/apidocs/projects-api/)
 
-##### 10.4.1.1 Creating a PAT
+##### 10.4.2.1 Creating a PAT
 
 When you click **New Token**, you need to set the following characteristics of the PAT:
 
@@ -320,27 +320,27 @@ After you click **Create**, a pop-up window shows your secret token, which is th
 {{< figure src="/attachments/developerportal/community-tools/mendix-profile/token-secret.png" width="500px" alt="Created PAT in pop-up window" >}}
 
 {{% alert color="warning" %}}
-Store the secret token in a safe location, as it will not be displayed again!
+Store the secret token in a safe location, because it will not be displayed again!
 {{% /alert %}}
 
-##### 10.4.1.2 Managing a PAT
+##### 10.4.2.2 Managing a PAT
 
 To see the scopes of a PAT you have created, click **View Details**.
 
 {{< figure src="/attachments/developerportal/community-tools/mendix-profile/manage-pat.png" >}}
 
 {{% alert color="info" %}}
-You cannot see the secret token of a PAT here. You can only see that the PAT exists long with its scopes. 
+You cannot see the secret token of a PAT here. You can only see that the PAT exists along with its scopes. 
 {{% /alert %}}
 
 You can delete a PAT you have created via **Delete**. This will prevent anyone who has obtained the PAT's secret token from successfully using it.
 
-##### 10.4.1.3 Using a PAT
+##### 10.4.2.3 Using a PAT
 
 Use of a PAT depends on the API you are accessing.
 
 {{% alert color="warning" %}}
-For security reasons, you should not include PATs into your source code!
+For security reasons, you should not include PATs into your source code.
 {{% /alert %}}
 
 To use a PAT with the [Data Hub APIs](/apidocs-mxsdk/apidocs/data-hub-apis/), it must be passed as the authorization header on every request made to the Data Hub Catalog. The request will look like this:
@@ -348,7 +348,7 @@ To use a PAT with the [Data Hub APIs](/apidocs-mxsdk/apidocs/data-hub-apis/), it
 ```http
 GET /v1/register HTTP/1.1
 Host: catalog.mendix.com
-Authorization: mxtoken <your token>
+Authorization: mxtoken <your personal access token>
 ```
 
 If the PAT is not valid, the response will be `HTTP 403 Access Denied`:

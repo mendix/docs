@@ -16,9 +16,9 @@ To begin testing your push notifications, you will need to build new versions of
 
 1. Navigate to the [Developer Portal](https://sprintr.home.mendix.com/index.html), then click your app.
 2. Click **Deploy** > **Mobile App**.
-3. Make sure the check box **Permissions** > **Push Notifications** is selected.
+3. Make sure the checkbox **Permissions** > **Push Notifications** is selected.
 4. Click **Publish for Mobile App Stores**.
-5. Select the **Do it yourself** check box, make sure your preferred environment is selected, and then click **Download Customizable Package**. 
+5. Select the **Do it yourself** checkbox, make sure your preferred environment is selected, and then click **Download Customizable Package**. 
 
 This will give you a *zip* app that you can use to customize your app according to the [hybrid app package documentation](https://github.com/mendix/hybrid-app-template/). The *zip* app contains a *config.xml* file that refers to *google-services.json* and *GoogleService-info.plist* files. 
 

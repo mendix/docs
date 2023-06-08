@@ -12,7 +12,7 @@ tags: ["Stories", "Sprint", "Developer Portal"]
 
 In **Stories**, you are able to manage Sprints, stories, and labels for your app. These components are often used in an Agile development environment, in which teams work in short development cycles (Sprints) of 2–4 weeks.
 
-By adding your Sprints to Mendix, you will have a clear overview of your tasks and can easily view the status of the development of your app. You can create, refine, and prioritize user stories collaboratively using the stories' conversation threads. User stories can be estimated and organized into Sprints which can be monitored using Scrum boards and burndown charts.
+By adding your Sprints to Mendix, you will have a clear overview of your tasks and can easily view the status of the development of your app. You can create, refine, and prioritize user stories collaboratively using the stories' conversation threads. User stories can be estimated and organized into Sprints which can be monitored using Scrum boards.
 
 {{% alert color="info" %}}
 You can also manage the progress of tasks and Sprints from within Mendix Studio Pro via the [Stories pane](/refguide/stories-pane/).
@@ -42,7 +42,7 @@ For more information on Sprints, see the [Sprint Actions](#sprint-actions) secti
 Each Sprint contains a number of stories that describe the specific functionality to be implemented, built, or fixed. Click **New Story** to open the **Create Story** dialog box and fill in the following details:
 
 * **Add a title** for the story
-* **Add a label ** to organize your work
+* **Add a label** to organize your work
 * **Description** – a description of the story
 * **Tasks** – break down your work into up to 20 tasks
 * Story status – select **To-do** (default), **Running**, or **Done** from the drop-down menu
@@ -105,7 +105,7 @@ For each Sprint, the following options are provided via the menu button on the r
 
 ### 2.6  Story Actions {#story-actions}
 
-When you select a story via the check box, you can perform the following actions:
+When you select a story via the checkbox, you can perform the following actions:
 
 {{< figure src="/attachments/developerportal/collaborate/stories/story-context-menu.png" >}}
 
@@ -129,7 +129,7 @@ On this page, you can perform a number of actions:
 * Change the title by clicking the pencil icon
 * Add or remove **Labels**
 * Update the **Description** via **Edit Description**
-* View, add, and manage the **Tasks** of the story (you can mark them as **Done** by selecting the check box in front of the task)
+* View, add, and manage the **Tasks** of the story (you can mark them as **Done** by selecting the checkbox in front of the task)
 * Leave **Comments** on the story to collaborate with your team
 * VIew the **History** of changes to the story in the form of **Activities**
 * See the story's status and update it via the drop-down menu (available statuses are **To-do**, **Running**, and **Done**)

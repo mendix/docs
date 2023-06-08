@@ -63,13 +63,13 @@ If you have chosen to register a standalone cluster, then all communication with
 
 ## 3 Product Capability Comparison
 
-The table below shows the differences between the capabilities for apps deployed to the Mendix Cloud, Mendix for Private Cloud (Mx4PC) Connected, and Mx4PC Standalone.
+The table below shows the differences between the capabilities for apps deployed to the Mendix Cloud, Mendix for Private Cloud Connected, and Mendix for Private Cloud Standalone.
 
-| Capability | Mendix Cloud | Mx4PC Connected | Mx4PC Standalone |
+| Capability | Mendix Cloud | Mendix for Private Cloud Connected | Mendix for Private Cloud Standalone |
 | --- | --- | --- | --- |
 | Environment provisioning | Fully automated | Provisioned with database and blob storage provided by the customer | Provisioned with database and blob storage provided by the customer|
 | Environment configuration<br/>*For example, constants and scheduled event* | Mendix Developer Portal | Mendix Developer Portal | Custom Resources via Mendix Operator |
-| Mendix app/deployment package deployment | Mendix Developer Portal, Studio Pro, and Studio | Mendix Developer Portal and Studio Pro | Custom Resources via Mendix Operator<br/>*normally combined in a CI/CD pipeline* |
+| Mendix app/deployment package deployment | Mendix Developer Portal and Studio Pro | Mendix Developer Portal and Studio Pro | Custom Resources via Mendix Operator<br/>*normally combined in a CI/CD pipeline* |
 | Backup and restore | Mendix Developer Portal | Services supplied by the database server and file storage used¹ | Services supplied by the database server and file storage used¹ |
 | Monitoring | Mendix Developer Portal | App metrics sent to a Prometheus-compatible monitoring tool | App metrics sent to a Prometheus-compatible monitoring tool |
 | App logs | Mendix Developer Portal | Prints app logs to `stdout` | Prints app logs to `stdout` |

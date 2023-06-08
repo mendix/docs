@@ -1,5 +1,5 @@
 ---
-title: "Microsoft Teams Connector"
+title: "Microsoft Teams"
 url: /appstore/connectors/ms-teams-connector/
 category: "Connectors"
 description: "Describes the configuration and usage of the Microsoft Teams Connector, which enables sending messages and actionable message cards to a Microsoft Teams channel automatically."
@@ -11,7 +11,7 @@ tags: ["marketplace", "marketplace component", "connector", "microsoft", "micros
 
 ## 1 Introduction
 
-The [Microsoft Teams Connector](https://marketplace.mendix.com/link/component/118391) enables sending messages and actionable message cards to a Microsoft Teams channel automatically. You can add and configure the connector in a microflow. Once the microflow that uses the connector is triggered, your app sends out the message to the Microsoft Teams channel. 
+The [Microsoft Teams](https://marketplace.mendix.com/link/component/118391) connector enables sending messages and actionable message cards to a Microsoft Teams channel automatically. You can add and configure the connector in a microflow. Once the microflow that uses the connector is triggered, your app sends out the message to the Microsoft Teams channel. 
 
 This connector is an [add-on module](/refguide/consume-add-on-modules-and-solutions/).
 
@@ -34,7 +34,7 @@ This connector is an [add-on module](/refguide/consume-add-on-modules-and-soluti
 ### 1.4 Prerequisites
 
 * Your organization should allow you to use Webhooks in Microsoft Teams.
-* The connector can only be used with Studio Pro 9 versions starting from [9.16.0](/releasenotes/studio-pro/9.16/#9160).
+* The connector can only be used with Studio Pro [9.16.0](/releasenotes/studio-pro/9.16/#9160) and above.
 * You have installed the [Deep link](https://marketplace.mendix.com/link/component/43) module in your app.
 * You have a Microsoft Account in Azure Active Directory.
 
@@ -87,11 +87,11 @@ You can use the **Send Message to Webhook** activity in a microflow to send mess
 
         * If you want to send a message as plain text or in HTML or markdown formatting, select **Text**.
 
-            {{% alert color="info" %}}Fore more information about HTML and markdown tags supported by Microsoft Teams, see [Format Cards in Microsoft Teams](https://docs.microsoft.com/en-us/microsoftteams/platform/task-modules-and-cards/cards/cards-format).{{% /alert %}}
+            {{% alert color="info" %}}For more information about HTML and markdown tags supported by Microsoft Teams, see [Format Cards in Microsoft Teams](https://docs.microsoft.com/en-us/microsoftteams/platform/task-modules-and-cards/cards/cards-format).{{% /alert %}}
 
         * If you want to use an actionable message card as a message, select **Card**.
 
-            {{% alert color="info" %}}Fore more information about message cards, see [Building a Message Card](#build-message-card).{{% /alert %}}
+            {{% alert color="info" %}}For more information about message cards, see [Building a Message Card](#build-message-card).{{% /alert %}}
 
     3. For the **Message** parameter, set up the message content in the String format. The image below shows an example:
 
@@ -225,11 +225,11 @@ A pop-up window opens and shows containing the channel link.
 
         * If you want to send a message as plain text or in HTML or markdown formatting, select **Text**.
 
-            {{% alert color="info" %}}Fore more information about HTML and markdown tags supported by Microsoft Teams, see [Format Cards in Microsoft Teams](https://docs.microsoft.com/en-us/microsoftteams/platform/task-modules-and-cards/cards/cards-format).{{% /alert %}}
+            {{% alert color="info" %}}For more information about HTML and markdown tags supported by Microsoft Teams, see [Format Cards in Microsoft Teams](https://docs.microsoft.com/en-us/microsoftteams/platform/task-modules-and-cards/cards/cards-format).{{% /alert %}}
 
         * If you want to send a card designed using HTML and text, select **Card**.
 
-            {{% alert color="info" %}}Fore more information on designing message cards, see [Building a Message Card using HTML](https://docs.microsoft.com/en-us/graph/api/chatmessage-post?view=graph-rest-beta&tabs=http#example-3-send-message-that-contains-cards).{{% /alert %}}
+            {{% alert color="info" %}}For more information on designing message cards, see [Building a Message Card using HTML](https://docs.microsoft.com/en-us/graph/api/chatmessage-post?view=graph-rest-beta&tabs=http#example-3-send-message-that-contains-cards).{{% /alert %}}
 
     3. For the **Message** parameter, set up the message content as a String value. 
     4. Click **OK** to save the changes and close the dialog box.

@@ -12,7 +12,7 @@ aliases:
 
 ## 1 Introduction
 
-The [3D Viewer](https://marketplace.mendix.com/link/component/118345) app service lets you upload, visualize, and operate on 3D JT files in your web applications, using Mendix file storage to store models. The app service contains out-of-the-box Java actions, JavaScript actions, domain models, nanoflows, microflows, and a set of 3D widgets that enable you to build apps to work with 3D models via the JT format. Also included are whole functionalities and integrations that can be very helpful when building your own 3D applications. All you need to do is drag and drop items and configure them.
+The [3D Viewer](https://marketplace.mendix.com/link/component/118345) app service lets you upload, visualize, and operate on 3D files (JT, OBJ, glTF, and STL formats) in your web applications, using Mendix file storage to store models. The app service contains out-of-the-box Java actions, JavaScript actions, [domain models](/refguide/domain-model/), [nanoflows](/refguide/nanoflows/), [microflows](/refguide/microflows/), and a set of 3D widgets that enable you to build apps to work with 3D models. Also included are whole functionalities and integrations that can be very helpful when building your own 3D applications. All you need to do is drag and drop items and configure them.
 
 This app service does the heavy-lifting for you so you do not have to build a 3D-rendering engine from scratch.
 
@@ -31,15 +31,16 @@ In most cases, you will only need what is contained in the **Viewer3D/USE_ME** f
 
 ### 1.1 Typical Use Cases
 
-You can use this app service when you want to upload, store, and visualize 3D JT models in your Mendix application. You can perform some basic operations, such us navigating the model product structure tree and the Product Manufacturing Information(PMI) tree, creating section views, 2D markups and much more.
+You can use this app service when you want to upload, store, and visualize 3D models in your Mendix application. You can perform some basic operations, such us navigating the model product structure tree and the Product Manufacturing Information(PMI) tree, creating section views, 2D markups and much more.
 
 ### 1.2 Features
 
 This app service enables doing the following:
 
-* Upload to and load models from Mendix file storage or your own file storage (both monolithic JT and shattered JT formats are  supported)
-* Display a 3D model
-* Zoom, rotate, fit all, pan
+* Upload to and load models from Mendix file storage or your own file storage (both monolithic JT and shattered JT formats are supported)
+* Open a model from a URL
+* Preview a model
+* Support multiple ways to view a model: zooming, rotating, fitting all, and panning
 * Use quick intuitive controls to navigate product structure
 * Turn parts on and off
 * Select and clear selection of parts
@@ -58,20 +59,20 @@ This app service enables doing the following:
 
 The 3D Viewer app service includes a few 3D widgets. These are some limitations on how these widgets should be placed in a page in Mendix Studio Pro:
 
-* The **Container3D** widget acts as a context-sharing container for other 3D widgets, so 3D widgets can talk to each other and perform corresponding actions via this context. Therefore, every other 3D widget (except the **Uploader** widget) needs to be put inside the Container3D widget. If 3D widgets are placed outside of the Container3D widget, these widgets will not work as expected. In that case, you will be notified and see errors when you switch to Design mode. 
+* The **Container3D** widget acts as a context-sharing container for other 3D widgets, so 3D widgets can talk to each other and perform corresponding actions via this context. Therefore, every other 3D widget (except the **Uploader** widget) needs to be put inside the Container3D widget. If 3D widgets are placed outside of the Container3D widget, these widgets will not work as expected. In that case, you will be notified and see errors when you switch to **Design mode**. 
 
     {{< figure src="/attachments/partners/siemens/3d-viewer/widgetoutsidecontainer3d-structuremode.jpg" alt="widgetoutsidecontainer3d-structuremode" >}}
 
-* One **Container3D** widget can only contain one **Viewer** widget. If multiple Viewer widgets are placed inside a Container3D widget, you will see error message in Design mode. 
+* One **Container3D** widget can only contain one **Viewer** widget. If multiple Viewer widgets are placed inside a Container3D widget, you will see error message in **Design mode**. 
 * The **Viewer** widget is used to display a 3D model. All other 3D widgets (except the **Uploader** and **Container3D** widgets) need a Viewer widget present on the page to interact with.
-* Currently, only JT models with version 9 and above are supported.
+* Currently, supports glTF, STL, OBJ, and JT (JT version 9 and above) formats.
 * Before uploading a shattered JT *.zip* file,  make sure you are using UTF-8 encode to zip the JT files. For example, if you are using 7Zip, make sure you enter *cu* in **Parameters**.
 
     {{< figure src="/attachments/partners/siemens/3d-viewer/shatteredjt-utf8.png" alt="shatteredjt-utf8" >}}
 
 ### 1.4 Prerequisites
 
-3D Viewer version 2.2.0 and higher can be used with Studio Pro 9 versions starting with [9.4.0](/releasenotes/studio-pro/9.4/), and version 2.1.2 can be used with Studio Pro 8 versions starting with [8.15.1](/releasenotes/studio-pro/8.15/#8151).
+3D Viewer version 3.0.0 and higher can be used with Studio Pro versions starting with [9.12.10](/releasenotes/studio-pro/9.12/#91210), version 2.2.0 and higher can be used with Studio Pro versions starting with [9.4.0](/releasenotes/studio-pro/9.4/) until [9.11](/releasenotes/studio-pro/9.11/) (including 9.11), and version 2.1.2 can be used with Studio Pro 8 versions starting with [8.15.1](/releasenotes/studio-pro/8.15/#8151).
 
 ## 2 Installation
 
@@ -113,7 +114,7 @@ The **ModelDocument** entity is a conceptual entity that incorporates all the in
 | **Author** | The author of the model. |
 | **CreationDate** | For models stored in Mendix file storage, the **CreationDate** corresponds to the time the JT model is first uploaded to the file storage. For models stored in Teamcenter, the **CreationDate** indicates the creation date of this model revision. |
 | **FileSize** | The size of the model in bytes. |
-| **FileType** | The 3D model format. Currently only the JT format is supported. |
+| **FileType** | The 3D model format. |
 | **Status** | Used specifically for models uploaded and stored in Mendix file storage. The **Status** has three values: **Complete** (indicates the uploading of a model to Mendix file storage is complete), **InProgress** (indicates the uploading is in progress), and **Error** (indicates the uploading failed). |
 | **ErrorReason**  | The reason for the model upload error.|
 
@@ -153,7 +154,7 @@ The **DownloadMarkup** microflow takes a **Markup** object as input parameter an
 
 ### 4.4 Nanoflow {#nanoflow}
 
-The **CreateModelDocumentFromFileDocument** nanoflow takes a **FileDocument** object as an input parameter to create a **ModelDocument** object to represent a user JT model file stored as the entity of **System.FileDocument** or its specialization. As the Viewer widget is prebuilt to take a **ModelDocument** object as the data source, this nanoflow allows you to get and visualize a JT model from your existing file storage.
+The **CreateModelDocumentFromFileDocument** nanoflow takes a **FileDocument** object as an input parameter to create a **ModelDocument** object to represent a user model file stored as the entity of **System.FileDocument** or its specialization. As the Viewer widget is prebuilt to take a **ModelDocument** object as the data source, this nanoflow allows you to get and visualize a model from your existing file storage.
 
 {{< figure src="/attachments/partners/siemens/3d-viewer/CreateModelDocumentFromFileDocument.jpg" alt="CreateModelDocumentFromFileDocument" >}}
 
@@ -175,7 +176,7 @@ For 3D Viewer to work, you must set the app's after-startup microflow to call th
 
 #### 4.6.1 Core Widgets
 
-The core widgets required to enable visualizing a 3D JT model are described below.
+The core widgets required to enable visualizing a 3D model are described below.
 
 ##### 4.6.1.1 Container3D {#container3d}
 
@@ -185,7 +186,7 @@ You can place this widget in any location of a page.
 
 ##### 4.6.1.2 Uploader {#uploader}
 
-This widget enables selecting a JT model from your local machine and uploading it to the Mendix file storage.
+This widget enables selecting one or more models from your local machine and uploading it to the Mendix file storage.
 
 You can place this widget in any location of a page. 
 
@@ -205,10 +206,12 @@ For this widget to visualize a model correctly, set the following properties:
 * On the **Transport** tab, make sure the **HttpEndpoint** is set to **@Viewer3D.HttpEndpoint** or **visualization**
 * On the **Appearance** tab, make sure the widget has a fixed height (for example, set **Style** to **height:600px**, or make sure height of its parent is fixed); otherwise, the viewer will expand indefinitely
 * On the **General** tab, there are some optional customization options for changing the widget's behavior:
+    * **Viewer ID**  – sets the id for the widget — this can be used later to get the viewer instance 
     * **Show coordinate system**  – determines if a coordinate system will appear at the lower-left corner of the viewer 
     * **Show navigation cube**  – determines if a navigation cube will appear at the upper-right corner of the viewer
     * **Show tooltip** determines if a tooltip will appear when the end-user clicks a model part; this accepts a Boolean value
     * **Automatically load parts** – determines if the model part will be loaded into the Viewer automatically; if set to **Yes**, the model will be automatically loaded as long as the Viewer receives the **Model ID** and **Model source type** values; if set to **No**, the model will only be loaded into the Viewer when triggered from the PS Tree part toggling (for this use case, add the [PS Tree](#ps-tree) widget so you can trigger the part loading by clicking the PS Tree)
+    * **Advance configuration** – provides advanced configurations in JSON string format for Viewer. Please see [Advanced Configuration](#advance_configuration), below, for details.
 * On the **Events** tab, there are some optional customization options for changing the widget's behavior:
     * **On selection change** – by binding a String attribute to the **Selection** property, you can use this attribute as an input parameter to add an action to trigger when the selection changes on the Viewer 
     * **On error** – by binding a String attribute to the **Error** property, you can obtain the error message raised by the Viewer and add custom actions to trigger when an error arises
@@ -225,7 +228,7 @@ Each panel widget should be placed in a [Container3D](#container3d) widget. A Vi
 
 ##### 4.6.2.1 PS Tree {#ps-tree}
 
-This widget presents a hierarchical tree view of the items that form a model. By toggling the tree node, the end-user can control which model parts are loaded into the Viewer.
+This widget presents a hierarchical tree view of the items that form a model. By toggling the tree node, the end-user can control which model parts are loaded into the Viewer. In addition, the widget supports searching the names of nodes using regular expressions and highlighting the results.
 
 On the **General** tab, the following options are available:
 
@@ -277,9 +280,7 @@ No specific configuration is needed. With this widget, you can measure the dista
 
 ##### 4.6.2.7 Preference {#preference}
 
-This widget enables setting and saving your personal preferences.
-
-{{% alert color="info" %}}Only options for PMI filter are supported currently.{{% /alert %}}
+This widget allows you to set and save your personal preferences.
 
 Place this widget inside of a [Container3D](#container3d) widget. A [Viewer](#viewer) widget should be present in the same Container3D widget so that you can use the options provided in the widget to filter PMI of the model.
 
@@ -293,7 +294,7 @@ With this widget, you can use the following filtering settings:
 
 * Show assembly level PMI
 
-For details on how this widget behaves in an app, see the [Setting Preferences](#set-preferences) section below.
+For details on how this widget behaves in an application, see the [Setting Preferences](#set-preferences) section below.
 
 #### 4.6.3 Toolbar Widgets
 
@@ -331,15 +332,15 @@ If you deploy your app in your own environment, you need to configure the licens
 
 ## 5 Usage
 
-3D Viewer provides a set of widgets to visualize JT models and a set of nanoflows and Java Actions to bring in the data.
+3D Viewer provides a set of widgets to visualize 3D models and a set of nanoflows and Java Actions to bring in the data.
 
-When you start from a blank app template in Mendix Studio Pro, you can follow the steps below to visualize your local JT model quickly.
+When you start from a blank app template in Mendix Studio Pro, you can follow the steps below to visualize your local 3D model quickly.
 
-### 5.1 Uploading and Viewing a 3D JT Model in Your Browser
+### 5.1 Uploading and Viewing a 3D Model in Your Browser
 
-For the [Viewer](#viewer) widget to visualize a JT model, two data source attributes should be set: **Model ID** and **Model source type**. To enable uploading 3D JT models and visualizing them directly on the page, a set of these attributes should be returned by the [Uploader](#uploader) widget and set to that of the Viewer widget.
+For the [Viewer](#viewer) widget to visualize a 3D model, two data source attributes should be set: **Model ID** and **Model source type**. To enable uploading 3D models and visualizing them directly on the page, a set of these attributes should be returned by the [Uploader](#uploader) widget and set to that of the Viewer widget.
 
-Follow these steps to configure this visualization:
+The procedure shows how to configure this visualization, using a JT file as an example:
 
 1. Place a [Container3D](#container3d) widget on the page.
 2. Put the Uploader and Viewer widgets into the Container3D widget and give them a layout.
@@ -382,19 +383,23 @@ Follow these steps to display the model loading progress:
 
     {{< figure src="/attachments/partners/siemens/3d-viewer/runlocally-loadingprogress.jpg" alt="runlocally-loadingprogress" >}}
 
-### 5.3 Utilizing More 3D Functionality
+### 5.3 Previewing Models Without Uploading
+
+To preview a model directly without uploading to Mendix file storage, drag and drop the file into the Viewer and click **Upload**.
+
+### 5.4 Utilizing More 3D Functionality
 
 You can add more 3D widgets to the page to enable more 3D functionalities and arrange the layout of them as needed. For example:
 
 {{< figure src="/attachments/partners/siemens/3d-viewer/structuremode-more3dwidgets.jpg" alt="structuremode-more3dwidgets" >}}
 
-### 5.4 Managing Uploaded Models
+### 5.5 Managing Uploaded Models
 
 In previous use case, you can only visualize the model you upload.
 
 Usually, you will also need to manage the models that are uploaded and stored in the data storage. 3D Viewer provides the **GetModelListFromMendix** nanoflow and **DeleteModelFromMendix** microflow to help you build model data management functionality into your app.
 
-#### 5.4.1 Building a Model List
+#### 5.5.1 Building a Model List
 
 The Mendix native [list view](/refguide/list-view/) can be used to display the model list by following these steps:
 
@@ -406,7 +411,7 @@ The Mendix native [list view](/refguide/list-view/) can be used to display the m
 
     {{< figure src="/attachments/partners/siemens/3d-viewer/openmodelpopup-listview.jpg" alt="openmodelpopUp-listview" >}}
 
-#### 5.4.2 Opening a Model from the Model List
+#### 5.5.2 Opening a Model from the Model List
 
 Once you have the model list, you may want to click to select a model from the list and view the model. As the **Viewer** widget expects **ModelId** and **Model Source Type** to visualize a model, such information of the selected model needs to be passed to the [Viewer](#viewer) widget. Since each list item is a **ModelDocument** object and this object contains various pieces of information about the selected model (including ModelId and Model Source Type), you need to pass this object to the Viewer widget.
 
@@ -428,7 +433,7 @@ Follow these steps for configuration:
 
     {{< figure src="/attachments/partners/siemens/3d-viewer/openmodellistpopup-demo.jpg" alt="openmodellistpopup-demo" >}}
 
-#### 5.4.3 Deleting a Model
+#### 5.5.3 Deleting a Model
 
 There might be some models that you do not want in the database, so you can delete these, too. The 3D Viewer app service provides the **DeleteModelFromMendix** microflow to achieve this.
 
@@ -445,13 +450,13 @@ Follow these steps to delete a model from the database:
 
 Now you are able to get a list of models, select a list item to open a model, and delete the model.
 
-### 5.5 Handling Viewer Events
+### 5.6 Handling Viewer Events
 
 Multiple events can be picked up by the [Viewer](#viewer) widget and can be used to build your customized event handling logic.
 
 There are four main types of events that can be picked up on the Viewer widget, which are described in the sections below.
 
-#### 5.5.1 On Selection Change {#on-selection-change}
+#### 5.6.1 On Selection Change {#on-selection-change}
 
 By selecting one attribute to set **Selection**, you can get information on the selected part (for this you might need to work with Viewer APIs; if you have inquiries on how to use the Viewer APIs, please contact [Mendix Support](https://support.mendix.com/)).
 
@@ -463,7 +468,7 @@ Like other Mendix events, you can select from a list of actions upon a model par
 
 {{< figure src="/attachments/partners/siemens/3d-viewer/viewer-onselect-sample.jpg" alt="viewer-onselect-sample" >}}
 
-#### 5.5.2 On Error {#on-error}
+#### 5.6.2 On Error {#on-error}
 
 By selecting one attribute to set the **Error** event, you can pick up an error exposed by the Viewer.
 
@@ -475,7 +480,7 @@ Like other Mendix events, you can select from a list of actions upon a Viewer er
 
 {{< figure src="/attachments/partners/siemens/3d-viewer/viewer-onerror-sample.jpg" alt="viewer-onerror-sample" >}} 
 
-#### 5.5.3 On Progress Change {#on-progress-change}
+#### 5.6.3 On Progress Change {#on-progress-change}
 
 By selecting one attribute for the **Progress status** value, you can get the current loading status and the loading percentage of the model, product structure tree, and [PMI tree](#pmi-tree).
 
@@ -491,7 +496,7 @@ Like other Mendix events, you can select from a list of actions upon progress ch
 
 For more information, see [Displaying Model Loading Progress with Progress Bar Widget](#displaying-model-loading). 
 
-#### 5.5.4 On Load {#on-load}
+#### 5.6.4 On Load {#on-load}
 
 By selecting one attribute for the **Loaded** value, you can get the current loading status of the product structure tree.
 
@@ -503,7 +508,7 @@ Like other Mendix events, you can select from a list of actions upon the product
 
 {{< figure src="/attachments/partners/siemens/3d-viewer/viewer-onload-sample.jpg" alt="viewer-onload-sample" >}}
 
-### 5.6 Creating a 3D Section {#create-3d-section}
+### 5.7 Creating a 3D Section {#create-3d-section}
 
 When a model is loaded in the viewer, the [Section View](#section-view) widget enables the following:
 
@@ -517,13 +522,13 @@ The sections below present operations within the Section View widget.
 
 {{< figure src="/attachments/partners/siemens/3d-viewer/sectionview-designmode.jpg" alt="sectionview-designmode" >}}
 
-#### 5.6.1 Action
+#### 5.7.1 Action
 
 * **Add** – Use this to add a section plane. First, select the axis along which you would like to section the model, then click **Add**. You will see a section plane of the desired axis added to the scene. The default position of the newly added section plane is in the middle of the bounding box of the direction selected.
 * **Delete** – Use this to delete a selected section plane. Click the edge of the section plane to select it (when selected, the section plane edges are highlighted in yellow color). Then, click **Delete**.
 * **Clear** –  Use this to clear all the section planes added to the scene.
 
-#### 5.6.2 Direction
+#### 5.7.2 Direction
 
 * **X Direction** –  sets the X axis of the default coordinate system as the reference
 * **Y Direction** –  sets the Y axis of the default coordinate system as the reference
@@ -531,7 +536,7 @@ The sections below present operations within the Section View widget.
 
 For example, if you select **Y Direction**, then the cross section is created on the ZX plane.
 
-#### 5.6.3 Clipping
+#### 5.7.3 Clipping
 
 When a section plane is selected (and highlighted in yellow), you can choose which part of the model you would like to clip away by selecting a clipping option:
 
@@ -540,13 +545,21 @@ When a section plane is selected (and highlighted in yellow), you can choose whi
 * **Near** – clip away the positive side (toward the **Direction**)
 * **Far** –  clip away the negative side (away from the **Direction**)
 
-#### 5.6.4 Position
+#### 5.7.4 Position
 
 You can move the position sliders to adjust the position of the section plane along its axis. You can also type in an exact position to place the section plane at an exact position.
 
 You can add multiple section planes to cut the model in different directions. After the section, you can save a snapshot of a section view. You can also add markup annotations on the section view and save them for later review.
 
-### 5.7 Performing 3D Measurements {#perform-measurements}
+#### 5.7.5 SectionManipulator
+
+An advanced end-user can enable the SectionManipulator to move / rotate the section plane using [advanced configuration](#advance_configuration). There are two flavors as illustrated below:
+
+| enable SectionManipulator | enable SectionHandle |
+| ---  | --- |
+| {{< figure src="/attachments/partners/siemens/3d-viewer/sectionManipulator.png" alt="sectionManipulator" >}} | {{< figure src="/attachments/partners/siemens/3d-viewer/sectionHandle.png" alt="sectionHandle" >}} |
+
+### 5.8 Performing 3D Measurements {#perform-measurements}
 
 When a model is loaded into the viewer, the [Measurement](#measurement) widget provides a set of tools to measure different geometrical entities:
 
@@ -554,7 +567,7 @@ When a model is loaded into the viewer, the [Measurement](#measurement) widget p
 
 The sections below describe these tools.
 
-#### 5.7.1 Measurement Mode
+#### 5.8.1 Measurement Mode
 
 * **Distance** – measure the distance between two part features
 * **Length** – measure the length of a line
@@ -562,12 +575,12 @@ The sections below describe these tools.
 * **Angle** – measure the angle between two edges or surfaces
 * **Area** – measure the area of a surface
 
-#### 5.7.2 Action
+#### 5.8.2 Action
 
 * **Delete** – select one measurement result, then click **Delete** and the selected measurement result will be removed from the scene
 * **Clear** – clear all the measurement results in the scene
 
-### 5.8 Checking Statistics on the Usage Dashboard {#check-usage}
+### 5.9 Checking Statistics on the Usage Dashboard {#check-usage}
 
 The **Usage Dashboard** shows the real-time statistics about the usage of an app service. Perform the following steps to check the real-time statistics:
 
@@ -577,14 +590,286 @@ The **Usage Dashboard** shows the real-time statistics about the usage of an app
 4. Find **3D Viewer** in the list.
 5. Click **Usage Dashboard** to show the usage details.
 
-### 5.9 Setting Preferences {#set-preferences}
+### 5.10 Setting Preferences {#set-preferences}
 
-You can change the setting of the Preference widget to customize the behavior of the model and setup to your requirements.
+You can change the settings of the Preference widget to customize the behavior of the model and set it up to suit your needs.
 
 {{< figure src="/attachments/partners/siemens/3d-viewer/preferences-general.png" alt="preferences-general" >}}
 
-On the **PMI** tab, you can set filtering options for PMI and click **Ok** to save the changes.
+Click **Preference** to display the dialog. You can set your filter as a preference in any combination you like, and when you click the **OK** button, the filter will take effect the next time you open a file; the **Reset** button clears all settings. This method can only set the preference when your application is running, but of course we also provide a more advanced method - before the application starts - to set your preference, for more details you can refer to [Advanced Configuration](#advance_configuration).
 
-## 6 Read More
+## 6 Advanced Configuration {#advance_configuration}
 
-* [Build a 3D Model Inspection App](https://academy.mendix.com/link/paths/115/Build-a-3D-Model-Inspection-App)
+The viewer provides comprehensive configurations to customize behaviors. Advanced users can use these to customize their products by overriding default options. Some of the options are available in the **Advanced Version** ONLY, so please be aware of this when using the configuration options.
+
+Here is an example of how to set configuration options:
+
+```json
+{
+    "enableCache": true,
+    "enableSectionManipulator": true,
+    "enableBboxSurfaceScanner": true,
+    "bboxSurfaceScanner": {
+        "showBBoxes": false,
+    },
+    "pmiPreference": {
+        "ignoredPMI": ["DIMENSION","NOTE"], 
+        "ignoreModelView": true, 
+        "ignoreDesignGroup": true, 
+        "onlyShowAssemblyLevelPMI": false
+    }
+}
+```
+
+You can set the following configuration options:
+
+### 6.1 Cache Options
+
+#### 6.1.1 enableCache
+
+This  enables the edge / segment / vertex cache when loading JT files. When opening the same JT files, it will load directly from the browser cache to improve performance.
+
+* Type – Boolean
+* Default value – *false*
+
+### 6.2 SectionManipulator Options
+
+#### 6.2.1 enableSectionManipulator
+
+If you set enableSectionManipulator to true for a [section view](#section-view), it will add a trihedron drag handle to the section plane.
+
+* Type – Boolean
+* Default value – *false*
+
+#### 6.2.2 enableSectionHandle
+
+If you set enableSectionHandle to true for a [section view](#section-view), it will add a drag handle to the section plane.
+
+* Type – Boolean
+* Default value – *false*
+
+#### 6.2.3 sectionHandle
+
+Defines the style of sectionHandle. `arrowRadius`and `handleRadius` are measured in pixels.
+
+* Type – object
+* Default value –
+
+    ```json {linenos=false}
+    {
+        "arrowColor": 16711680,
+        "handleColor": 16711680,
+        "arrowRadius": 8,
+        "handleRadius": 1.5
+    }
+    ```
+
+### 6.3 Culling / bboxSurfaceScanner
+
+#### 6.3.1 enableBboxSurfaceScanner
+
+Setting this to true enables bounding box SurfaceScanner for lazy loading and rendering, which will improve performance for large models.
+
+* Type – Boolean
+* Default value – *false*
+
+#### 6.3.2 bboxSurfaceScanner
+
+Specifies bboxSurfaceScanner options.
+
+* Type – object
+* Default value –
+
+    ```json {linenos=false}
+    {
+        "useDefault": true,
+        "detailLevel": 35.8,
+        "positions": {
+            "enableAllScannerPositions": false,
+            "positions": {
+                "front": true
+            },
+            "fitAllPositions": {
+                "left": false,
+                "right": false,
+                "top": false,
+                "bottom": false,
+                "front": false,
+                "rear": false
+            }
+        },
+        "bboxOpacity": 35,
+        "showBBoxes": true,
+        "useMovingFrameCulling": true,
+        "movingFrameCullingBoundary": 2,
+        "movingFrameSleepMS": 200,
+        "autoScanning": true,
+        "autoScanDelayMS": 2000,
+        "cameraSensitivity": 0.1,
+        "reevaluateAfterRotation": true,
+        "drawWhileLoading": false,
+        "renderBBoxesOnMovingFrames": false,
+        "sleepBetweenAutoDrawsMS": 750
+    }
+    ```
+
+### 6.4 Measurement
+
+#### 6.4.1 measurementStyle
+
+This defines measurement behaviors and dimension styles. The `measurement` section is used to customize measurement behaviors and the `dimension` section is used to customize text, material, lines, colors etc.  |
+
+* Type – object
+* Default value –
+
+    ```json {linenos=false}
+    {    
+        "dimension": {    
+            "text": {    
+                "color": 0,    
+                "flatToScreen": true,    
+                "font": 1,    
+                "lineGapFactor": 0.25,    
+                "lineFactor": 0.25,    
+                "hasBorder": false,    
+                "isHollow": false,    
+                "backgroundColor": 39321,    
+                "labelTextColor": 16777215,    
+                "textSelectionColor": 16777215,    
+                "textHighlightColor": 16777215,    
+                "selectionBackgroundColor": 39321,    
+                "highlightBackgroundColor": 6151645,    
+                "height": 12,    
+                "fontFamily": "Arial"    
+            },    
+            "associationMaterial": {    
+                "diffuse": 18761,    
+                "linewidth": 3    
+            },    
+            "associationHighlightMaterial": {    
+                "diffuse": 6151645,    
+                "specular": 0,    
+                "shininess": 1,    
+                "linewidth": 3    
+            },    
+            "pointOnTopColor": {    
+                "diffuse": 14226709    
+            },    
+            "arrowLine": {    
+                "color": 8886442    
+            },    
+            "extensionLine": {    
+                "color": 8886442    
+            },    
+            "selectionColor": 39321,    
+            "highlightColor": 6151645,    
+            "widelineHighlightColor": {    
+                "linewidth": 3,    
+                "diffuse": 14226709    
+            },    
+            "meshHighlightColor": 14226709,    
+            "overwrite": true    
+        },    
+        "measurement": {    
+            "autoPosition": false,    
+            "highlightColor": {    
+                "diffuse": 14226709,    
+                "specular": 1,    
+                "shininess": 1    
+            },    
+            "pickingMaterial": {    
+                "diffuse": 12156222,    
+                "specular": 0,    
+                "shininess": 0    
+            }    
+        }    
+    }
+    ```
+
+### 6.5 Preference Options
+
+Here is a sample Preference configuration:
+
+```json
+{
+    "pmiPreference": {
+        "ignoredPMI": ["DIMENSION","NOTE"], 
+        "ignoreModelView": true, 
+        "ignoreDesignGroup": true, 
+        "onlyShowAssemblyLevelPMI": false
+    }
+}
+```
+
+#### 6.5.1 ignoredPMI
+
+Defines the PMI entities you do not want to display.
+
+* Type – array
+* Default value - *`[ ]`*
+
+Available enumeration values:
+
+```json
+
+{
+  "type": "array",
+  "items": {
+    "type": "string",
+    "enum": [
+      "BALLOON_NOTE",
+      "CALLOUT_DIMENSION_TYPE",
+      "CENTRELINE",
+      "CHAMFER_DIMENSION_TYPE",
+      "COORDINATE_SYSTEM",
+      "DATUM_TARGET",
+      "DIMENSION",
+      "FEATURE_CONTROL_FRAME",
+      "FEATURE_DATUM_TYPE",
+      "FEATURE_DISCRETE_JOIN_TYPE",
+      "LINE_WELD",
+      "MATERIAL_SPECIFICATION",
+      "MEASUREMENT_LOCATOR",
+      "MEASUREMENT_POINT",
+      "NOTE",
+      "ORGANIZATION",
+      "PART_SPECIFICATION",
+      "PMI_TABLE_TYPE",
+      "PROCESS_SPECIFICATION",
+      "REFERENCE_AXIS",
+      "REFERENCE_GEOMETRY",
+      "REFERENCE_PLANE",
+      "REFERENCE_POINT",
+      "SECTION",
+      "SPOT_WELD",
+      "SURFACE_FINISH"
+    ]
+  }
+}
+
+```
+
+#### 6.5.2 ignoreModelView
+
+Defines whether or not to filter the model view.
+
+* Type – Boolean
+* Default value – *false*
+
+#### 6.5.3 ignoreDesignGroup
+
+Defines whether or not to filter the design group.
+
+* Type – Boolean
+* Default value – *false*
+
+#### 6.5.4 onlyShowAssemblyLevelPMI
+
+Defines whether or not to show the assembly level PMI only.
+
+* Type – Boolean
+* Default value – *false*
+
+## 7 Read More
+
+* Academy course: [Build a 3D Model Inspection App](https://academy.mendix.com/link/paths/115/Build-a-3D-Model-Inspection-App)

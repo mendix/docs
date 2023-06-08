@@ -3,7 +3,7 @@ title: "Build a Responsive Web App"
 url: /refguide/quickstart-part1/
 weight: 10
 description: "Learn the basics of making an app in a Responsive Web profile."
-tags: ["microflows", "widgets", "app", "nanoflow", "app development"]
+tags: ["hello world", "microflows", "widgets", "app", "nanoflow", "app development"]
 ---
 
 ## 1 Introduction 
@@ -12,13 +12,13 @@ Get up and running with the Mendix Platform and start developing your first app 
 
 When you complete Part 1, you will have a photo album app that will allow users to upload, edit, and display pictures so that their cherished memories will be preserved. This guide, Part 1, will show you how to build a responsive web app compatible with all desktop, tablet, and mobile browsers.
 
-### 1.2 Getting to Know Mendix
+### 1.1 Getting to Know Mendix
 
 This tutorial will teach you several key Mendix concepts, such how to add an entity to the [domain model](/refguide/domain-model/) (a visual model that describes your app's information or data in an abstract way), create some basic pages which use building blocks and design properties, and model your first microflow. 
 
 A [microflow](/refguide/microflows/) is a visual way of expressing logic or code which is compiled into executable code at runtime. Microflows are commonly used to perform actions such as creating and changing objects, showing pages, and making choices.
 
-[Mendix Studio Pro](https://marketplace.mendix.com/link/studiopro/) is the Mendix integrated development environment (IDE) for professional developers. This tutorial will use Studio Pro version 9.12.1, but you can use a later version if you wish.
+[Mendix Studio Pro](https://marketplace.mendix.com/link/studiopro/) is the Mendix integrated development environment (IDE) for professional developers. Use the latest version of Studio Pro when completing the tutorial. Some of the screenshots in this guide might look a little different than your product, but we recommend you use the latest version of Studio Pro for ease and security.
 
 Every app created with us automatically provisions a [Free Cloud Environment](/developerportal/deploy/mendix-cloud-deploy/#free-app) the first time it is deployed, so you do not have to waste time provisioning a testing environment.
 
@@ -33,7 +33,7 @@ Before starting this guide, make sure you have completed the following prerequis
 * [Download](https://marketplace.mendix.com/index3.html) and [install](/refguide/install/) Mendix Studio Pro
 * If you are working on a Mac, please complete [Configuring Parallels](/refguide/using-mendix-studio-pro-on-a-mac/) to install Studio Pro on your Mac
 
-## 2 Choosing an App Template with a Responsive Navigation Profile
+## 3 Choosing an App Template with a Responsive Navigation Profile
 
 Here you will choose an app starting point. It is key that you choose a starting point with a configured responsive web navigation profile, as the app you will make in this guide needs to work for web browsers:
 
@@ -45,7 +45,7 @@ Here you will choose an app starting point. It is key that you choose a starting
     * **Why choose this template?** — Choosing the **Blank Native Mobile App** template lets you start with an already-configured native mobile navigation profile setup for your app. 
     * **Does that mean this app is native mobile only?** — No. The blank native mobile app template also comes with a responsive web navigation profile configured. This means your app is accessible on both web browsers and natively on mobile devices.
 1. Name your app *Quickstart App* and click the **Create app** button.
-1. Wait a few minutes for your app to be created, its team server to be initialized, and a local copy of the project to be downloaded to your development machine. After that the project will open on your app’s home page called **Home_Web**:
+1. Wait a few minutes for your app to be created, its team server to be initialized, and a local copy of the app to be downloaded to your development machine. After that the app will open on your app’s home page called **Home_Web**:
 
     {{< figure src="/attachments/refguide/quickstart-guide/part1/home-web.png" width="450px" alt="Home Web page">}}
 
@@ -54,56 +54,62 @@ A page defines the end-user interface in a Mendix app. You can create and edit p
 * [Layouts](/refguide/layout/): define a page's structure (such as navigation element location, areas for content, and more)
 * [Templates](/refguide/page-templates/): are completely editable starting points for new pages, and you can also start with a blank template so you can build from scratch
 
-## 3 Exploring Studio Pro
+## 4 Exploring Studio Pro
 
 Now that you have completed your first tasks in Studio Pro, this section will give you a quick and optional tour. If you know Studio Pro well already, you can skip this section.
 
-Take a look at Studio Pro all at once. There is a lot of power here, but it can be confusing at first glance: 
+Open up your version of Studio Pro and take a look at it all at once. There is a lot of power, but it can be confusing at first glance. Luckily it is easy to understand in sections. For even more detail, see the [Studio Pro Overview](/refguide/studio-pro-overview/).
 
-{{< figure src="/attachments/refguide/quickstart-guide/part1/tour.png" width="450px" alt="Marketplace Modules">}}
+Simply put, the center of Studio Pro hosts a [working area](/refguide/studio-pro-overview/#working-area) where you can work on an open document. Surrounding this work area are various panes which you will learn more about in the sections below. Finally, if you wish to change the language you work in (and that your end-user will use) see the [Status Bar](/refguide/studio-pro-overview/#status-bar) at the bottom.
 
-Luckily, it is easy to understand in sections. See the sections below for more information. For even more detail, see the [Studio Pro Overview](/refguide/studio-pro-overview/).
+The Studio Pro configuration you see is completely editable. You can add or hide panes as desired (you can find more panes under **View** as well as reset your view back to default settings if you wish). You can also quickly hide all of Studio Pro's panes by enabling **Distraction Free Mode** with <kbd>Shift</kbd> + <kbd>F11</kbd>.
 
-### 3.1 App Structure on the Left
+### 4.1 Top Bar
 
-You can navigate through your app using the App Explorer, the window on the left side of your screen. This is where you can create and explore new documents and modules in your app. Any modules you download from the Marketplace will appear under **Marketplace Modules** > **App** section:
+The top bar contains the menus, buttons, and other UI elements you need for fundamental app development tasks. For example, you can run your app with the play (**Run App**) button. 
+
+For more information on the top bar's menus and functions, see the [Top Bar](/refguide/studio-pro-overview/#top-bar) section of *Studio Pro Overview*.
+
+### 4.2 App Structure on the Left
+
+You can navigate through your app using the [App Explorer](/refguide/app-explorer/), the window on the left side of your screen. This is where you can create and explore new documents and modules in your app:
 
 {{< figure src="/attachments/refguide/quickstart-guide/part1/tour-left.png" alt="App Structure">}}
 
-### 3.2 Bottom Dockable Pane 
+Any [modules](/refguide/modules/) you download from the Marketplace will appear under **Marketplace Modules** > **App** section.
+
+### 4.3 Bottom Dockable Pane 
 
 Look at the bottom dockable pane of Studio Pro:
 
 {{< figure src="/attachments/refguide/quickstart-guide/part1/tour-bottom.png" width="450px" alt="Bottom Dockable Pane">}}
 
-Here you will find several panels:
+Here you will find several default panes such as:
 
-* **Stories**: displays your active user stories added on your app’s Stories page in the Developer Portal
-* **Changes**: displays a list of all changes in the project since the last commit to the team server (also used to resolve conflicts with other team members when updating)
-* **Errors**: displays any errors found within your project (can also display deprecations and warnings)
-* **MxAssist Performance Bot**: an AI peer programmer bot which analyzes your app's model and identifies any issues which may negatively impact your app’s performance
-* **Console**: a live feed of your app’s console as the app runs (you can filter for additional log levels by clicking on the **Advanced** drop-down list)
+* **Stories**: displays your active user stories added on your app’s Stories page in the Developer Portal (for more information see [Stories Pane](/refguide/stories-pane/))
+* **Changes**: displays a list of all changes in the app since the last commit to the team server (for more information see [Changes Pane](/refguide/changes-pane/))
+* **Errors**: displays any errors found within your app (for more information see [Errors Pane](/refguide/errors-pane/))
 
-### 3.3 Right Dockable Pane 
+For additional information on bottom default panes, see the [MxAssist Best Practice Bot](/refguide/view-menu/#mx-bot) and [Console](/refguide/view-menu/#console) sections of *View Menu*.
+
+### 4.4 Right Dockable Pane
 
 Look at the right dockable pane of Studio Pro:
 
-{{< figure src="/attachments/refguide/quickstart-guide/part1/tour-right.png" alt="Right Dockable Pane">}}
+{{< figure src="/attachments/refguide/quickstart-guide/part1/tour-right.png" width="350px" alt="Right Dockable Pane">}}
 
-Here you will find more panels:
+Here you will find more default panes:
 
-* **Data Hub**: displays [External Entities](/refguide/external-entities/) (entities from other apps) which are available for use in your app (you will not use this panel in this guide)
-* **Properties**: displays all the properties of the currently selected context element
-* **Toolbox**: a list of things you can add to the current document⁠—the **Toolbox** changes depending on context (it displays page elements while in the page editor or displays actions when editing a microflow or nanoflow)
-* **Connector**: quickly links data to pages⁠—using the connector you could drag an entity into a data view or data grid to quickly display your app’s data on a page
+* **Properties**: displays all the properties of the currently selected context element (for more information see [Properties](/refguide/view-menu/#properties))
+* **Toolbox**: a list of things you can add to the current document⁠—the **Toolbox** changes depending on context (for more information see [Toolbox](/refguide/view-menu/#toolbox))
 
-The view you see above is completely editable. You can add or remove panels as desired (you can find more windows under **View** as well as reset your view back to default settings if you wish). You can also quickly hide all of Studio Pro's panels by enabling Distraction Free Mode with <kbd>Shift</kbd> + <kbd>F11</kbd>.
+For additional information on right default panes, see the [Data Hub](/refguide/view-menu/#data-hub) and [Connector](/refguide/view-menu/#connector) sections of *View Menu*.
 
-## 4 Creating Your App's Domain Model
+## 5 Creating Your App's Domain Model
 
 In Mendix you define your app's data structure in the Domain Model.
 
-### 4.1 Understanding the Domain Model
+### 5.1 Understanding the Domain Model
 
 The domain model is a visual representation of your app’s database. Each module in your app (modules created by you or your team, downloaded from the Marketplace, or System Modules) can all have their own individual models which are combined and translated into a database automatically at runtime. 
 
@@ -111,9 +117,9 @@ Domain models are comprised of entities similar to a table in traditional SQL. E
 
 When you run your app locally or deploy it for the first time, the runtime compiles your app’s domain models and creates the underlying database. Any subsequent changes will be seen as updates to the database.
 
-Mendix by default uses its own built-in HSSQL database, but Mendix also supports several alternative database types such as IBM DB2, PostgreSQL, Microsoft SQL Server, and others. 
+Mendix by default uses its own built-in HSSQL database, but Mendix also supports several alternative database types such as PostgreSQL, Microsoft SQL Server, and others. 
 
-### 4.2 Creating an Entity to Store the Images
+### 5.2 Creating an Entity to Store the Images
 
 1. To open the domain model for the native mobile module, double-click it in the **App Explorer** pane on the left side:
 
@@ -146,7 +152,7 @@ Next you must add some attributes. Remember, your entity now inherits many prope
 
     {{< figure src="/attachments/refguide/quickstart-guide/part1/description-attributes.png" width="450px" alt="Entity properties">}}
 
-## 5 Creating Your App's User Interface
+## 6 Creating Your App's User Interface
 
 Now that you have created your domain model, it is time to create your photo album app’s front end. To do so, you will employ regular widgets and context widgets:
 
@@ -206,7 +212,7 @@ Your **Images** will now be displayed from the database, but the **Labels** on t
 
 1. Repeat this process for the label below with the caption **Supporting text**, making sure to select the **Description** attribute this time.
 
-## 6 Defining Logic Using Microflows
+## 7 Defining Logic Using Microflows
 
 There is only one step left before you can run and test your photo album app app. You have created a place to store images and a page to display them on. Most of the functionality for creating, editing, and deleting images has been handled automatically. But what if you want your app to do some custom logic? For example, what if you wanted to validate that the user has entered text for the **Title** and **Description** fields before they click **Save**? In Mendix, you can achieve this using a Microflow.
 
@@ -265,11 +271,6 @@ Launching your app compiles your app locally on your development machine, your l
 
 Congratulations! You successfully completed Part 1 of the quickstart guide. You have your first Mendix app to prove it, and it works on almost any device. Well done! 
 
+## 8 Continuing with the Next Tutorial
+
 To continue learning, see Part 2: [Add a Native Mobile App](/refguide/quickstart-part2/).
-
-## 7 Read More
-
-* [Mendix Academy](https://academy.mendix.com/) – complete learning paths to build general Mendix skills
-    * [Crash Course](https://academy.mendix.com/link/paths/82/Crash-Course) – the course we recommend for new users who are also experienced developers
-* [Mendix Documentation](https://docs.mendix.com/) – learn about the parts of Mendix which interest you most
-* [General Info](/refguide/general/) – learn more about the fundamentals of Studio Pro

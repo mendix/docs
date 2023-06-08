@@ -135,8 +135,8 @@ To delete an element from a page, select this element and press <kbd>Delete</kbd
 
 There are two different ways to edit your page:
 
-* [Structure Mode](#structure-mode), the default editor which clearly shows the relationship between page elements, together with additional information about each element
-* [Design Mode](#design-mode), a WYSIWYG (**W**hat **Y**ou **S**ee **I**s **W**hat **Y**ou **G**et) editor which better reflects what the page will look like when it is published
+* [Structure mode](#structure-mode), the default editor which clearly shows the relationship between page elements, together with additional information about each element
+* [Design mode](#design-mode), a WYSIWYG (**W**hat **Y**ou **S**ee **I**s **W**hat **Y**ou **G**et) editor which better reflects what the page will look like when it is published
 
 You can switch to the WYSIWYG editor from the default editor by clicking the **Design mode** button in the page editor.
 You can return to the structural editor by clicking **Structure mode**.
@@ -152,13 +152,13 @@ Both modes allow you to edit your page by doing the following:
 
 ### 3.1 Structure Mode {#structure-mode}
 
-In **Structure mode**, the page widgets are laid out so that it is easy to see the logical relationship between them. It has the following features which are not available in Design mode:
+In **Structure mode**, the page widgets are laid out so that it is easy to see the logical relationship between them. It has the following features which are not available in **Design mode**:
 
 * Widgets are shown with additional information easily visible – for example, data sources for data views and the width assigned to columns
 
     {{< figure src="/attachments/refguide8/modeling/pages/page/structure-mode-info.png" alt="Frequently-used widgets" >}}
 
-* Each widget has a drop-zone before/above and after/below it – this makes it easier to place widgets correctly when they appear close together in Design mode
+* Each widget has a drop-zone before/above and after/below it – this makes it easier to place widgets correctly when they appear close together in **Design mode**
 * Right-click a drop-zone allows you to insert a widget into it
 * There is a menu at the top of the page of data widgets – these cannot be dragged, but are positioned by clicking a drop-zone after selecting the widget
 
@@ -172,13 +172,13 @@ In **Structure mode**, the page widgets are laid out so that it is easy to see t
 
 In **Design mode**, the page is laid out as it will appear when published so that it is easy to see the spatial relationship between the elements.
 
-For example, the example page shown in [Structure Mode](#structure-mode), above, will look like this in **Design mode** for a tablet:
+For example, the example page shown in [Structure mode](#structure-mode), above, will look like this in **Design mode** for a tablet:
 
 {{< figure src="/attachments/refguide8/modeling/pages/page/design-mode-example.png" alt="Design mode page as displayed on a tablet" >}}
 
 It has the following features which are not available in **Structure mode**:
 
-* The widgets are shown as they will be on the page – for example two text widgets which are laid out vertically in structural mode may actually be laid out horizontally when the app is published, and this will be reflected in Design mode
+* The widgets are shown as they will be on the page – for example two text widgets which are laid out vertically in structural mode may actually be laid out horizontally when the app is published, and this will be reflected in **Design mode**
 * The page layout can be seen for different device modes – for example phone or browser by clicking the appropriate device mode button:
 
     {{< figure src="/attachments/refguide8/modeling/pages/page/design-factor.png" alt="Show styles button" >}}

@@ -34,14 +34,14 @@ Each style object has a name, referred to as the object’s class name. You can 
 ```javascript
 // A custom styling class
 export const customClassName = {
-	container: {
-		// ViewStyle properties
-		paddingTop: 5
-	},
-	text: {
-		// TextStyle properties
-		fontWeight: "bold"
-	}
+  container: {
+    // ViewStyle properties
+    paddingTop: 5
+  },
+  text: {
+    // TextStyle properties
+    fontWeight: "bold"
+  }
 }
 ```
 
@@ -53,14 +53,14 @@ When you want to apply styling to one instance of a widget, you can extend that 
 
 ```javascript
 export const ActionButton = {
-	container: {
-		// ViewStyle properties
-		borderWidth: 3
-	},
-	caption: {
-		// TextStyle properties
-		fontSize: 20
-	},
+  container: {
+    // ViewStyle properties
+    borderWidth: 3
+  },
+  caption: {
+    // TextStyle properties
+    fontSize: 20
+  }
 };
 ```
 
@@ -68,10 +68,10 @@ Add-on widgets each have their own default styling classes based on their full w
 
 ```javascript
 export const com_mendix_widget_native_badge_Badge = (Badge = {
-	text: {
-		// TextStyle properties
-		color: "#00FF00",
-	}
+  text: {
+    // TextStyle properties
+    color: "#00FF00",
+  }
 });
 ```
 
@@ -91,16 +91,24 @@ The list view shows a list of objects arranged vertically or horizontally. For m
 
 {{< figure src="/attachments/refguide/mobile/native-mobile/native-styling-refguide/list-view.png" alt="list view"   width="350"  >}}
 
-This is how the widget’s code is structured:
-
-```xml
-<container>
-	<listItem>content</listItem>
-	<listItem>content</listItem>
-</container>
+```javascript
+export const ListView = {
+  container: {
+    // All ViewStyle properties
+    numColumns: 1 // This is the number of columns that the list should render.
+  },
+  listItem: {
+    // All ViewStyle properties
+    rippleColor: 'rgba(0, 0, 0, 0.2))', // This is the color of the ripple on Android, and will be applied only when the item has an on click action set, otherwise it will be ignored.
+    underlayColor: null, // This is the color while pressing the item on iOS, and will be applied only when the item has an on click action set, otherwise it will be ignored and defaulted to opacity only.
+  },
+  listItemDisabled: {
+    // Same properties as `listItem`. Overrides `listItem` styles if the item has an on click action and the action cannot be executed or is disabled during action.
+  }
+};
 ```
 
-The widget’s style properties are as follows:
+The widget's style properties are as follows:
 
 | Element | Style Properties    | Description |
 | --- | --- | --- |
@@ -119,12 +127,17 @@ Text widgets are used in almost all app pages. Because of their ubiquity, learni
 
 ### 4.1 Text
 
-The text widget shows text which can optionally contain parameters. For more information on these widgets, see [Text Widgets](/refguide/text/). The widget’s style properties are as follows:
+The text widget shows text which can optionally contain parameters. For more information on these widgets, see [Text Widgets](/refguide/text/). 
 
-```xml
-<container>
-	<text>content</text>
-</container>
+```javascript
+export const Text = {
+  container: {
+    // All ViewStyle properties
+  },
+  text: {
+    // All TextStyle properties
+  },
+};
 ```
 
 | Element | Style Properties    | Description |
@@ -136,12 +149,17 @@ The default class to style all texts is named `Text`.
 
 ### 4.2 Page Title 
 
-The page title widget shows the title of the page on which it is used. This can be the title defined on the page itself, or the override title defined when showing a page. For more information on this widget, consult [Page Title](/refguide/page-title/). The widget’s style properties are as follows:
+The page title widget shows the title of the page on which it is used. This can be the title defined on the page itself, or the override title defined when showing a page. For more information on this widget, consult [Page Title](/refguide/page-title/). 
 
-```xml
-<container>
-	<text>Page Title</text>
-</container>
+```javascript
+export const PageTitle = {
+  container: {
+    // All ViewStyle properties
+  },
+  text: {
+    // All TextStyle properties
+  },
+};
 ```
 
 | Element | Style Properties    | Description |
@@ -169,42 +187,21 @@ The widget’s style properties are divided over several objects: `LayoutGrid`, 
 
 `noGuttersRow` (Row) and `noGutters` (Column) are being applied when the Spacing between columns property on a row is set to *No*.
 
-The main `LayoutGrid`:
-
-```xml {linenos=false}
-<container></container>
-```
-
-The `row`, `noGuttersRow`:
-
-```xml {linenos=false}
-<container></container>
-```
-
-The `col`, `colFitToContent`, `col1`, `col2`, `col3`, `col4`, `col5`, `col6`,  `col7`, `col8`, `col9`, `col10`, `col11`, `col12`, `noGutters`:
-
-```xml {linenos=false}
-<container></container>
-```
-
-The resulting DOM looks like this:
-
-```xml
-<container>
-	<row>
-		<col></col>
-	</row>
-</container>
-```
-
 ### 5.2 Container 
 
-A container widget can be used to style or hide a group of widgets. This widget does not have a visual representation by default, though styling can be used to add spacing. The widget’s style properties are as follows:
+A container widget can be used to style or hide a group of widgets. This widget does not have a visual representation by default, though styling can be used to add spacing. 
 
-```xml
-<container>
-	content
-</container>
+```javascript
+export const Container = {
+  container: {
+    // All ViewStyle properties
+    rippleColor: 'rgba(0, 0, 0, 0.2)', // This is the color of the ripple on Android, and will be applied only when the container has an on click action set, otherwise it will be ignored.
+    underlayColor: null, // This is the color while pressing the container on iOS, and will be applied only when the container has an on click action set, otherwise it will be ignored and defaulted to opacity only.      
+  },
+  containerDisabled: {
+    // Same properties as `container`. This overrides `container` styles if the there is an on click action set and the action cannot be executed or is disabled during action.
+  },
+};
 ```
 
 | Element | Style Properties    | Description |
@@ -222,25 +219,41 @@ Tab containers are used to show information categorized into multiple tab pages.
 
 {{< figure src="/attachments/refguide/mobile/native-mobile/native-styling-refguide/tab-container.png" alt="tab container"   width="350"  >}}
 
-This is how the widget’s code is structured:
-
-```xml
-<container>
-	<tabBar>
-		<tab>
-			<activeLabel>PAGE 1</activeLabel>
-			<badgeContainer><badgeCaption /></badgeContainer>
-		</tab>
-		<tab>
-			<label>PAGE 2</label>
-		</tab>
-		<indicator>
-	<tabBar>
-	content
-</container>
+```javascript
+export const TabContainer = {
+  container: {
+    // All ViewStyle properties   
+  },
+  tabBar: {
+    // All ViewStyle properties
+    bounces: null, // This is a Boolean value indicating whether the tab bar bounces when scrolling.
+    pressColor: null, // This is a color for material ripple (Android only).
+    pressOpacity: null, // This is opacity for a pressed tab.
+    scrollEnabled: null, // This is a Boolean value enabling scrollable tabs.
+    tabBarPosition: 'top' // This is the position of the tab bar in the tab view, and possible values are `top` and `bottom`. 
+  },
+  indicator: {
+    // All ViewStyle properties   
+  },
+  tab: {
+    // All ViewStyle properties   
+  },
+  label: {
+    // All TextStyle properties   
+  },  
+  activeLabel: {
+    // All TextStyle properties   
+  },
+  badgeContainer: {
+    // All ViewStyle properties   
+  },
+  badgeCaption: {
+    // All TextStyle properties   
+  },
+};
 ```
 
-The widget’s style properties are as follows:
+The widget's style properties are as follows:
 
 | Element | Style Properties    | Description |
 | --- | --- | --- |
@@ -262,12 +275,14 @@ The default class to style all tab containers is named `TabContainer`.
 
 ### 5.4 Scroll Container
 
-A scroll container is used to make enable scrolling for a part of a page. This widget does not have a visual representation by default, though styling can be used to add spacing.  The widget’s style properties are as follows:
+A scroll container is used to make enable scrolling for a part of a page. This widget does not have a visual representation by default, though styling can be used to add spacing. 
 
-```xml
-<container>
-	scrollable content
-</container>
+```javascript
+export const ScrollContainer = {
+  container: {
+    // All ViewStyle properties
+  },
+};
 ```
 
 | Element | Style Properties    | Description |
@@ -286,18 +301,45 @@ A text box can be used to display or edit a textual value. This is how a text bo
 
 {{< figure src="/attachments/refguide/mobile/native-mobile/native-styling-refguide/text-box.png" alt="text box"   width="350"  >}}
 
-The widget’s style properties are structured as follows:
-
-```xml
-<container>
-	<label>Text box</label>
-	<inputError>Content invalid</inputError>
-	<validationMessage>Input validation feedback message</validationMessage>
-</container>
-<container>
-	<label>Text box</label>
-	<input>Valid text</input>
-</container>
+```javascript
+export const TextBox = {
+  container: {
+    // All ViewStyle properties   
+  },
+  containerDisabled: {
+    // Same properties as `container`. Overrides `container` styles if the text box is non-editable.   
+  },
+  input: {
+    // All TextStyle properties
+    autoCapitalize: 'sentences', // This is a Boolean value indicating whether the tab bar bounces when scrolling. This automatically capitalizes certain characters when the user types: 
+    // 'characters': capitalizes all characters 
+    // 'words': capitalizes the first letter of each word 
+    // 'sentences': capitalizes the first letter of each sentence (default) 
+    // 'none': capitalizes nothing
+    placeholderTextColor: null, // This is the text color of the placeholder string.
+    selectionColor: null, // This is the highlight and cursor color of the text input.
+    underlineColorAndroid: null, // This is the color of the `input` underline.
+  },  
+  inputFocused: {
+    // Same properties as `input`. Overrides `input` styles if the text box is focused (with Studio Pro v8.15).
+  },
+  inputError: {
+    // Same properties as `input`. Overrides `input` styles if there are validation errors.  
+  },
+  inputDisabled: {
+    // Same properties as `input`. Overrides `input` styles if the text box is non-editable.
+  },
+  label: {
+    // All TextStyle properties
+    numberOfLines: 1 // This is the maximum number of lines to wrap the label text. If the text is any longer, it will be cut off with an ellipsis.  
+  },
+  labelDisabled: {
+    // Same properties as `label`. Overrides `label` styles if the text box is non-editable.
+  },
+  validationMessage: {
+    // This has all TextStyle properties.
+  },  
+};
 ```
 
 | Element | Style Properties    | Description |
@@ -333,148 +375,180 @@ A drop-down is an input widget that can be used to display and edit enumeration 
 
 Since Studio Pro v8.11, the drop-down widget has a new style property called `useUniformDesign: boolean` which enables the uniform design in both platforms.
 
-The widget’s render hierarchy is as follows for non-uniform:
-
-```xml
-<container>
-	<label>Drop down enumeration</label>
-	<value>Content invalid</value>
-	<validationMessage>Validation feedback enumeration</validationMessage>
-</container>
-<picker>
-	<pickerBackdropIOS/>
-	<pickerTopIOS><button>close</button></pickerTopIOS>
-	<pickerIOS>
-		<pickerItemIOS>First</pickerItemIOS>
-		<pickerItemIOS>Second</pickerItemIOS>
-		<pickerItemIOS>Third</pickerItemIOS>
-	</pickerIOS>
-</picker>
-```
-
-The widget’s render hierarchy is as follows for uniform:
-
-```xml
-<container>
-	<label>Drop down enumeration</label>
-    <valueContainer>
-        <value>First</value>
-	<icon/>
-    </valueContainer>
-	<validationMessage>Validation feedback enumeration</validationMessage>
-</container>
-<menuWrapper>
-	<selectedItemContainer>
-		<selectedItem>First</selectedItem>    <= Selected
-	</selectedItemContainer>
-    <itemContainer>
-        <item>Second</item>
-    </itemContainer>
-    <itemContainer>
-        <item>Third</item>
-    </itemContainer>
-</menuWrapper>
+```javascript
+export const DropDown = {
+  container: {
+    // All ViewStyle properties   
+  },
+  containerDisabled: {
+    // Same properties as `container`. Overrides `container` styles if the text box is non-editable.   
+  },
+  iconStyle: {
+    // This has all TextStyle properties. Styles the arrow down icon next to the value (with Studio Pro v8.15).
+  },  
+  item: {
+    // This has all TextStyle properties. Styles all the items in dropdown menu including selected item (with Studio Pro v8.11)
+  }, 
+  itemContainer: {
+    // This has all ViewStyle properties. Styles all the item containers in dropdown menu including selected item container (with Studio Pro v8.11).
+  },   
+  label: {
+    // This has all TextStyle properties.
+    numberOfLines: 1 // The maximum number of lines to wrap the label text. If the text is any longer it will be cut off with an ellipsis.  
+  },
+  labelDisabled: {
+    // Same properties as `label`. Overrides `label` styles if the drop-down is non-editable.
+  },
+  menuWrapper: {
+    // This has all ViewStyle properties. Styles the wrapper view surrounding all the menu items (with Studio Pro v8.11).
+  }, 
+  pickerIOS: {
+    // This has all ViewStyle properties.
+  },
+  pickerBackdropIOS: {
+    // This has all ViewStyle properties.
+  },
+  pickerTopIOS: {
+    // This has all ViewStyle properties.
+  },
+  selectedItem: {
+    // This has all TextStyle properties. Styles the selected item in dropdown menu (with Studio Pro v8.11).
+  }, 
+  selectedItemContainer: {
+    // This has all ViewStyle properties. Styles the selected item's container in dropdown menu (with Studio Pro v8.11).
+  }, 
+  useUniformDesign: null, // Enables new uniformDesign (with Studio Pro v8.11).
+  validationMessage: {
+    // This has all TextStyle properties. Styles the validation message (with Studio Pro v8.11).
+  },
+  value: {
+    // This has all TextStyle properties. Styles the value button which toggle's dropdown and PickerIOS items. If placeholder is selected, placeholderTextColor will be applied
+    placeholderTextColor: null, // If placeholder is selected, placeholderTextColor will be applied (with Studio Pro v8.11).
+  },
+  valueFocused: {
+    // Same properties as `value`. Overrides `value` styles if the dropdown box is focused. (with Studio Pro v8.15).
+  },  
+  valueContainer: {
+    // This has all ViewStyle properties and rippleColor. Styles the value button's container (with Studio Pro v8.11).
+  },  
+  valueContainerFocused: {
+    // Same properties as `valueContainer`. Overrides `valueContainer` styles if the dropdown box is focused (with Studio Pro v8.15).
+  },  
+  valueContainerError: {
+    // Same properties as `valueContainer`. Overrides `valueContainer` styles if the dropdown has a validation error (with Studio Pro v9.19.0).
+  }, 
+};
 ```
 
 | Element | Style Properties    | Description |
 | --- | --- | --- |
 | `container` | This has all ViewStyle properties. |  |
 | `containerDisabled` | Same properties as `container` | Overrides `container` styles if the drop-down is non-editable. |
+| `iconStyle`  | This has all TextStyle properties | Styles the arrow down icon next to the value (with Studio Pro v8.15).|
+| `item` | This has all TextStyle properties | Styles all the items in dropdown menu including selected item (with Studio Pro v8.11).|
+| `itemContainer` | This has all ViewStyle properties | Styles all the item containers in dropdown menu including selected item container (with Studio Pro v8.11).|
 | `label` | This has all TextStyle properties. | |
 | `label` | `numberOfLines` | The maximum number of lines to wrap the label text. If the text is any longer it will be cut off with an ellipsis. Defaults to `1`. |
 | `labelDisabled` | Same properties as `label` | Overrides `label` styles if the drop-down is non-editable. |
+| `menuWrapper` | This has all ViewStyle properties | Styles the wrapper view surrounding all the menu items (with Studio Pro v8.11).|
 | `pickerIOS` | This has all ViewStyle properties. |  |
 | `pickerBackdropIOS` | This has all ViewStyle properties. |   |
 | `pickerTopIOS` | This has all ViewStyle properties. |   |
+| `selectedItem` | This has all TextStyle properties | Styles the selected item in dropdown menu (with Studio Pro v8.11).|
+| `selectedItemContainer` | This has all ViewStyle properties | Styles the selected item's container in dropdown menu (with Studio Pro v8.11).|
+| `useUniformDesign` | `boolean` | Enables new uniformDesign (with Studio Pro v8.11). |
 | `validationMessage` | This has all TextStyle properties. | Styles the validation message (with Studio Pro v8.11).|
 | `value`  | This has all TextStyle properties  | Styles the value button which toggle's dropdown and PickerIOS items. If placeholder is selected, placeholderTextColor will be applied |
-| `useUniformDesign` | `boolean` | Enables new uniformDesign (with Studio Pro v8.11). |
-| `iconStyle`  | This has all TextStyle properties | Styles the arrow down icon next to the value (with Studio Pro v8.15).|
 | `value`  | `placeholderTextColor: string` | If placeholder is selected, placeholderTextColor will be applied (with Studio Pro v8.11).|
-| `valueFocused`  | Same properties as `value` | Overrides `value` styles if the dropdown box is focused. (with Studio Pro v8.15).|
 | `valueContainer` | This has all ViewStyle properties and rippleColor | Styles the value button's container (with Studio Pro v8.11).|
 | `valueContainerFocused` | Same properties as `valueContainer` | Overrides `valueContainer` styles if the dropdown box is focused (with Studio Pro v8.15).|
 | `valueContainerError` | Same properties as `valueContainer`  | Overrides `valueContainer` styles if the dropdown has a validation error (with Studio Pro v9.19.0).|
-| `menuWrapper` | This has all ViewStyle properties | Styles the wrapper view surrounding all the menu items (with Studio Pro v8.11).|
-| `itemContainer` | This has all ViewStyle properties | Styles all the item containers in dropdown menu including selected item container (with Studio Pro v8.11).|
-| `item` | This has all TextStyle properties | Styles all the items in dropdown menu including selected item (with Studio Pro v8.11).|
-| `selectedItem` | This has all TextStyle properties | Styles the selected item in dropdown menu (with Studio Pro v8.11).|
-| `selectedItemContainer` | This has all ViewStyle properties | Styles the selected item's container in dropdown menu (with Studio Pro v8.11).|
+| `valueFocused`  | Same properties as `value` | Overrides `value` styles if the dropdown box is focused. (with Studio Pro v8.15).|
 
-### 6.4 Check Box
+The default class to style all text areas is named `DropDown`.
 
-A check box input widget can be used to display and edit Boolean attributes and is rendered as either a switch or a checkbox. This is how a check box widget in switch render mode looks by default:
+### 6.4 Checkbox
 
-{{< figure src="/attachments/refguide/mobile/native-mobile/native-styling-refguide/check-box.png" alt="check box"   width="350"  >}}
+A checkbox input widget can be used to display and edit Boolean attributes and is rendered as either a switch or a checkbox. This is how a checkbox widget in switch render mode looks by default:
 
-This is how a check box widget in checkbox render mode looks by default:
+{{< figure src="/attachments/refguide/mobile/native-mobile/native-styling-refguide/check-box.png" alt="checkbox"   width="350"  >}}
 
-{{< figure src="/attachments/refguide/mobile/native-mobile/native-styling-refguide/check-box-checkbox.png" alt="check box in checkbox render mode"   width="350"  >}}
+This is how a checkbox widget in checkbox render mode looks by default:
 
-The widget’s style properties structure is as follows:
+{{< figure src="/attachments/refguide/mobile/native-mobile/native-styling-refguide/check-box-checkbox.png" alt="checkbox in checkbox render mode"   width="350"  >}}
 
-```xml
-<container/>
-<containerDisabled/>
-<label>
-    <numberOfLines/>
-</label>
-<labelDisabled/>
-<input>
-    <thumbColorOn/>,
-    <trackColorOn/>
-    <trackColorOff/>
-    <thumbColorOff/>
-</input>
-<inputDisabled>
-    <thumbColorOn/>,
-    <trackColorOn/>
-    <trackColorOff/>
-    <thumbColorOff/>
-</inputDisabled>
-<inputError>
-    <thumbColorOn/>,
-    <trackColorOn/>
-    <trackColorOff/>
-    <thumbColorOff/>
-</inputError>
-<checkboxInput>
-    <color/>
-    <size/>
-</checkboxInput>
-<checkboxInputDisabled>
-    <color/>
-    <size/>
-</checkboxInputDisabled>
-<checkboxInputDisabled>
-    <color/>
-    <size/>
-</checkboxInputDisabled>
-<validationMessage/>
+```javascript
+export const Checkbox = {
+  container: {
+    // All ViewStyle properties
+  },
+  containerDisabled: {
+    // All ViewStyle properties. Same properties as `container`. Overrides `container` styles if the text box is non-editable.
+  },
+  label: {
+    // This has all TextStyle properties.
+    numberOfLines: 1 // The maximum number of lines to wrap the label text. If the text is any longer it will be cut off with an ellipsis.
+  },
+  labelDisabled: {
+    // Same properties as `label`. Overrides `label` styles if the checkbox is non-editable.
+  },
+  validationMessage: {
+    // This has all TextStyle properties.
+  },
+
+  // The following properties are only used for the render mode: Switch
+  input: {
+    // All ViewStyle properties.
+    trackColorOn: null, // Custom color for the switch track when turned on.
+    trackColorOff: null, // Custom color for the switch track when turned off.
+    thumbColorOn: null, // Color of the foreground switch grip when turned on. If this is set on iOS, the switch grip will lose its drop shadow.
+    thumbColorOff: null, // Color of the foreground switch grip when turned off. If this is set on iOS, the switch grip will lose its drop shadow.
+  },
+  inputError: {
+    // This has the same properties as `input`. Overrides `input` styles if there are validation errors.
+  },
+  inputDisabled: {
+    // This has the same properties as `input`. Overrides `input` styles if the checkbox is non-editable.
+  },
+  
+  // The following properties are only used for the render mode: Checkbox
+  checkboxInput: {
+    // This has all ViewStyle properties.
+    // Render mode: Checkbox.
+    color: null, // Custom color for the tick icon.
+    size: null, // Custom size for the tick icon.
+  },
+  checkboxInputDisabled: {
+    // This has the same properties as `checkboxInput`. Overrides `checkboxInput` styles if the checkbox is non-editable.
+  },
+  checkboxInputError: {
+    // This has the same properties as `checkboxInput`. Overrides `input` styles if there are validation errors.
+  },
+};
 ```
 
 | Element | Style Properties    | Description | Render mode |
 | --- | --- | --- | --- |
 | `container` | This has all ViewStyle properties.   |   | Both |
 | `containerDisabled` | Same properties as `container`. | Overrides `container` styles if the text box is non-editable. | Both |
+| `label` | This has all TextStyle properties.   |  | Both |
+| `label` | `numberOfLines` | The maximum number of lines to wrap the label text. If the text is any longer it will be cut off with an ellipsis. Defaults to `1`. | Both |
+| `labelDisabled` | Same properties as `label`. | Overrides `label` styles if the checkbox is non-editable. | Both |
+| `validationMessage` | This has all TextStyle properties.   |  | Both |
 | `input` | This has all ViewStyle properties.   |   | Switch |
 | `input` | `trackColorOn` | Custom color for the switch track when turned on. | Switch  |
 | `input` | `trackColorOff` | Custom color for the switch track when turned off. | Switch |
 | `input` | `thumbColorOn` | Color of the foreground switch grip when turned on. If this is set on iOS, the switch grip will lose its drop shadow. | Switch |
 | `input` | `thumbColorOff` | Color of the foreground switch grip when turned off. If this is set on iOS, the switch grip will lose its drop shadow. | Switch |
 | `inputError` | This has the same properties as `input`. | Overrides `input` styles if there are validation errors. | Switch |
-| `inputDisabled` | This has the same properties as `input`. | Overrides `input` styles if the check box is non-editable. | Switch |
+| `inputDisabled` | This has the same properties as `input`. | Overrides `input` styles if the checkbox is non-editable. | Switch |
 | `checkboxInput` | This has all ViewStyle properties. |  | Checkbox |
 | `checkboxInput` | `color` | Custom color for the tick icon. | Checkbox |
 | `checkboxInput` | `size` | Custom size for the tick icon. | Checkbox |
-| `checkboxInputDisabled` | This has the same properties as `checkboxInput`. | Overrides `checkboxInput` styles if the check box is non-editable. | Checkbox |
+| `checkboxInputDisabled` | This has the same properties as `checkboxInput`. | Overrides `checkboxInput` styles if the checkbox is non-editable. | Checkbox |
 | `checkboxInputError` | This has the same properties as `checkboxInput`. | Overrides `input` styles if there are validation errors. | Checkbox |
-| `label` | This has all TextStyle properties.   |  | Both |
-| `label` | `numberOfLines` | The maximum number of lines to wrap the label text. If the text is any longer it will be cut off with an ellipsis. Defaults to `1`. | Both |
-| `labelDisabled` | Same properties as `label`. | Overrides `label` styles if the check box is non-editable. | Both |
-| `validationMessage` | This has all TextStyle properties.   |  | Both |
 
-The default class to style all check box inputs is named `Checkbox`.
+The default class to style all checkbox inputs is named `Checkbox`.
 
 ### 6.5 Date Picker
 
@@ -482,19 +556,54 @@ A date picker is an input widget that can be used to display and edit date or ti
 
 {{< figure src="/attachments/refguide/mobile/native-mobile/native-styling-refguide/date-picker.png" alt="date picker"   width="300"  >}}
 
-The widget’s style properties are as follows:
-
-```xml
-<container>
-	<label>Drop down enumeration</label>
-	<value>Content invalid</value>
-	<validationMessage>Validation feedback enumeration</validationMessage>
-	<pickerBackdropIOS>iOS picker modal shadow container
-		<pickerIOS>iOS picker
-			<pickerTopIOS>iOS picker modal header</pickerTopIOS>
-		</pickerIOS>
-	</pickerBackdropIOS>
-</container>
+```javascript
+export const DatePicker = {
+  container: {
+    // All ViewStyle properties
+  },
+  containerDisabled: {
+    // All ViewStyle properties. Same properties as `container`. Overrides `container` styles if the text box is non-editable.
+  },
+  label: {
+    // This has all TextStyle properties.
+    // Render mode: Both.
+    numberOfLines: 1 // The maximum number of lines to wrap the label text. If the text is any longer it will be cut off with an ellipsis. Render mode: Both.
+  },
+  labelDisabled: {
+    // Same properties as `label`. Overrides `label` styles if the checkbox is non-editable.
+    // Render mode: Both.
+  },
+  value: {
+    // This has all TextStyle properties.
+    rippleColor: 'rgba(0, 0, 0, 0.2)', // This is the color of the ripple on Android, and will be applied only when the date picker is pressed.
+    underlayColor: null, // This is the color while pressing the date picker on iOS, if not set it will be defaulted to opacity only.
+  },
+  valueDisabled: {
+    // This has all TextStyle properties. Overrides `value` styles if the date picker is non-editable.
+  },
+  valueContainerError: {
+    // This has all TextStyle properties. Overrides `value` styles if the date picker has a validation error.
+  }, 
+  placeholder: {
+    // This has all TextStyle properties.
+  },
+  placeholderDisabled: {
+    // This has all TextStyle properties.  Overrides `placeholder` styles if the date picker is non-editable.
+  },
+  validationMessage: {
+    // This has all TextStyle properties.
+  },
+  pickerBackdropIOS: {
+    // This has all Viewstyle properties.
+  },
+  pickerIOS: {
+    // This has all Viewstyle properties.
+    color: null,
+  },
+  pickerTopIOS: {
+    // This has all Viewstyle properties.
+  },
+};
 ```
 
 | Element | Style Properties    | Description |
@@ -531,12 +640,25 @@ Images, videos and files help your user app manage images and other files. For m
 
 ### 7.1 Static Image {#image}
 
-The static image widget can be used to show a predefined image on a page, layout, or snippet. For more information on this widgets, see [Static Image](/refguide/image/). The widget’s style properties are as follows:
+The static image widget can be used to show a predefined image on a page, layout, or snippet. For more information on this widgets, see [Static Image](/refguide/image/). 
 
-```xml
-<container>
-	<image/>
-</container>
+```javascript
+export const Image = {
+  container: {
+    // All ViewStyle properties
+    rippleColor: 'rgba(0, 0, 0, 0.2)', // This is the color of the ripple on Android, and will be applied only when the container has an on click action set, otherwise it will be ignored.
+    underlayColor: null, // This is the color while pressing the container on iOS, and will be applied only when the container has an on click action set, otherwise it will be ignored and defaulted to opacity only.
+  },
+  containerDisabled: {
+    // Same properties as `container`. Overrides `container` styles if the image has an on click action and the action cannot be executed or is disabled during action.
+  },
+  image: {
+    // This has all ImageStyle properties.
+  },
+  imageDisabled: {
+    // Same properties as `image`. Overrides `image` styles if the image has an on click action and the action cannot be executed or is disabled during action.
+  },
+};
 ```
 
 | Element             | Style Properties                    | Description                                                  |
@@ -546,7 +668,7 @@ The static image widget can be used to show a predefined image on a page, layout
 | `container`         | `underlayColor`                     | This is the color while pressing the container on iOS, and will be applied only when the container has an on click action set, otherwise it will be ignored and defaulted to opacity only. |
 | `containerDisabled` | Same properties as `container`      | Overrides `container` styles if the image has an on click action and the action cannot be executed or is disabled during action. |
 | `image`             | This has all ImageStyle properties. |                                                              |
-| `imageDisabled`     | Same properties as `image`          | Overrides `image` styles if the image has an on click action and the action cannot be executed or is disabled during action. |
+| `imageDisabled`     | Same properties as `image`.          | Overrides `image` styles if the image has an on click action and the action cannot be executed or is disabled during action. |
 
 The default class to style all static image styles is named `Image`. Please note that images loaded from the model are styled with `NativeDynamicImage` as described in the [Dynamic Image](#dynamic-image) section below.
 
@@ -566,12 +688,32 @@ An action button can perform various actions such as calling a nanoflow, opening
 
 {{< figure src="/attachments/refguide/mobile/native-mobile/native-styling-refguide/action-button.png" alt="action button"   width="350"  >}}
 
-The widget’s style properties are as follows:
+```javascript
+export const ActionButton = {
+  container: {
+    // All ViewStyle properties
+    rippleColor: 'rgba(0, 0, 0, 0.2)', // This is the color of the ripple on Android, and will be applied only when the container has an on click action set, otherwise it will be ignored.
+    underlayColor: null, // This is the color while pressing the container on iOS, and will be applied only when the container has an on click action set, otherwise it will be ignored and defaulted to opacity only.
+  },
+  containerDisabled: {
+    // Same properties as `container`. Overrides `container` styles if the button has on click action set and it cannot be executed or is set with `Disable during action`.
+  },
 
-```xml
-<container>
-	<icon/><caption>primary</caption>
-</container>
+  caption: {
+    // This has all TextStyle properties.
+  },
+  captionDisabled: {
+    // Same properties as `caption`. Overrides `caption` styles if the button has on click action set and it cannot be executed or is set with `Disable during action`.
+  },
+  icon: {
+    // This has all ViewStyle properties.
+    size: 12, // This is the size of the button icon.
+    color: null, // This is the color of the button icon.
+  },
+  iconDisabled: {
+    // Same properties as `icon`. Overrides `icon` styles if the button has on click action set and it cannot be executed or is set with `Disable during action`.
+  },
+};
 ```
 
 | Element | Style Properties    | Description |
@@ -593,14 +735,30 @@ The default class to style all actions buttons is named `ActionButton`. However,
 
 To style pages, you can add classes to a page or its layout. The status bar and header are part of a page and can also be styled this way.
 
-```xml
-<page>
-	<statusBar/>
-	<header/>
-	<container>
-		application content
-	</container>
-</page>
+```javascript
+export const Page = {
+  statusBar: {
+    barStyle: null, // The style of the status bar, which can be either `dark-content` (black text) or `light-content` (white text).
+    backgroundColor: null, // The background color of the status bar (Android only).
+  },
+  header: {
+    container: {
+      // This has all ViewStyle properties.
+    },
+    title: {
+      // This has all TextStyle properties.
+    },
+    backButtonText: {
+      // This has all TextStyle properties.
+    },
+    backButtonIcon: {
+      // This has all ImageStyle properties.
+    }
+  },
+  container: {
+    // This has all ImageStyle properties.
+  }
+};
 ```
 
 | Element | Style Properties    | Description |
@@ -621,21 +779,40 @@ The navigation consists of the bottom bar (which allows users to navigate within
 
 {{< figure src="/attachments/refguide/mobile/native-mobile/native-styling-refguide/nav-widget.png" alt="navigation widget"   width="300"  >}}
 
-The navigation style properties are as follows:
-
-```xml
-<app>
-	<page/>
-	<bottomBar/>
-<app>
-<progressOverlay>
-	<background>
-		<container>
-			<activityIndicator/>
-			<text/>
-		</container>
-	</background>
-</progressOverlay>
+```javascript
+export const navigationStyle = {
+  bottomBar: {
+    container: {
+      // This has all ViewStyle properties.
+    },
+    label: {
+      // This has all TextStyle properties.
+    },
+    selectedLabel: {
+      // This has all TextStyle properties.
+    },
+    icon: {
+      // This has all TextStyle properties.
+    },
+    selectedIcon: {
+      // This has all ViewStyle properties.
+    }
+  },
+  progressOverlay: {
+    background: {
+      // This has all ViewStyle properties.
+    },
+    container: {
+      // This has all ViewStyle properties.
+    },
+    activityIndicator: {
+      // This is the same as the `activity indicator` widget.
+    },
+    text: {
+      // This has all TextStyle properties.
+    }
+  },    
+};
 ```
 
 | Element | Style Properties    | Description |
@@ -662,12 +839,16 @@ The activity indicator widget displays a circular loading indicator. This is how
 
 {{< figure src="/attachments/refguide/mobile/native-mobile/native-styling-refguide/activity-indicator.png" alt="activity indicator"   width="350"  >}}
 
-The widget’s style properties are as follows:
-
 ```javascript
-<container>
-	<indicator/>
-</container>
+export const com_mendix_widget_native_activityindicator_ActivityIndicator = {
+  container: {
+    // This has all ViewStyle properties.
+  },
+  indicator: {
+    color: 'gray', // This is the color of the indicator.
+    size: 'large' // Possible values for indicator are `large` and `small`.
+  }
+};
 ```
 
 | Element | Style Properties    | Description |
@@ -686,12 +867,16 @@ The app events widget allows you to set actions when your app’s network status
 
 The background image widget enables layering one or more widgets on top of an image.
 
-The widget’s style properties are as follows:
-
 ```javascript
-<container>
-	<image />
-</container>
+export const com_mendix_widget_native_backgroundimage_BackgroundImage = {
+  container: {
+    // This has all ViewStyle properties.
+  },
+  image: {
+    // This has all ImageStyle properties.
+    svgColor: 'black', // Property to set the color of an SVG image.
+  }
+};
 ```
 
 | Element | Style Properties    | Description |
@@ -708,12 +893,15 @@ The badge widget displays text or values as a badge. This is how a badge widget 
 
 {{< figure src="/attachments/refguide/mobile/native-mobile/native-styling-refguide/badge.png" alt="badge"   width="350"  >}}
 
-The widget’s style properties are as follows: 
-
-```xml
-<container>
-	<text>New</text>
-</container>
+```javascript
+export const com_mendix_widget_native_badge_Badge = {
+  container: {
+    // This has all ViewStyle properties.
+  },
+  text: {
+    // This has all TextStyle properties.
+  }
+};
 ```
 
 | Element | Style Properties    | Description |
@@ -727,12 +915,18 @@ The default class to style all badges is named `com_mendix_widget_native_badge_B
 
 The barcode scanner widget allows your app to scan barcodes and QR codes. This widget renders a camera view in a styleable container.
 
-The widget's style properties are as follows:
-
 ```javascript
-<container>
-        <mask />
-<container />
+export const com_mendix_widget_native_barcodescanner_BarcodeScanner = {
+  container: {
+    // This has all ViewStyle properties.
+  },
+  mask: {
+    color: '#62B1F6', // Property to set the color of the mask border indicators.
+    width: null, // Property to set the width of the barcode reader.
+    height: null, // Property to set the height of the barcode reader.
+    backgroundColor: 'rgba(0, 0, 0, 0.6)' // Property to set the background color of the mask.
+  }
+};
 ```
 
 | Element | Style Properties    | Description |
@@ -752,7 +946,47 @@ The feedback widget allows users to give direct feedback. This is how a feedback
 
 {{< figure src="/attachments/refguide/mobile/native-mobile/native-styling-refguide/feedback-two.png" alt="feedback"   width="350"  >}}
 
-The widget’s style properties are as follows:
+```javascript
+export const com_mendix_widget_native_feedback_Feedback = {
+  floatingButton: {
+    // This has all ViewStyle properties.
+  },
+  dialog: {
+    // This has all ViewStyle properties.
+  },
+  title: {
+    // This has all TextStyle properties.
+  },
+  textAreaInput: {
+    // This has all TextStyle properties.
+    placeholderTextColor: null, // This is the text color of the placeholder string.
+    selectionColor: null, // This is the highlight and cursor color of the text input.
+    underlineColorAndroid: null, // This is the underline color for Android devices.
+    numberOfLines: null, // This is the height of the text area is based on this number of text lines.
+  },
+  switchLabel: {
+    // This has all TextStyle properties.
+  },
+  switchInput: {
+    // This has all TextStyle properties.
+    trackColorOn: null, // This is the custom color for the switch track when turned on.
+    trackColorOff: null, // This is the custom color for the switch track when turned off.
+    thumbColorOn: null, // This is the color of the foreground switch grip when turned on. If this is set on iOS, the switch grip will lose its drop shadow.
+    thumbColorOff: null, // This is the color of the foreground switch grip when turned off. If this is set on iOS, the switch grip will lose its drop shadow.
+  },
+  button: {
+    borderColor: null, // This is the color of dialog button borders.
+    borderWidth: null, // This is the width of dialog button borders.
+    color: null, // This is the color of dialog button text.
+  },
+  buttonDisabled: {
+    color: null, // This is the color of dialog button text when disabled.
+  },
+  activityIndicator: {
+    color: null, // This is the color of the activity indicator that is shown while feedback is being submitted.
+  },
+};
+```
 
 | Element | Style Properties    | Description |
 | --- | --- | --- |
@@ -782,6 +1016,35 @@ The default class to style all feedback widgets is named `com_mendix_widget_nati
 
 The floating action button widget lets you customize the appearance and functionality of floating action buttons. The widget’s style properties are as follows:
 
+```javascript
+export const com_mendix_widget_native_floatingactionbutton_FloatingActionButton = {
+  container: {
+    // This has all ViewStyle properties.
+  },
+  button: {
+    // This has all ViewStyle properties.
+    size: null, // This is the radius of the button.
+    rippleColor: null, // This is the color of the ripple on Android.
+  },
+  buttonIcon: {
+    // This has all ImageStyle properties.
+  },
+  secondaryButton: {
+    // This has all ViewStyle properties.
+    size: null, // This is the radius of the secondary buttons.
+  },
+  secondaryButtonIcon: {
+    // This has all ImageStyle properties.
+  },
+  secondaryButtonCaption: {
+    // This has all TextStyle properties.
+  },
+  secondaryButtonCaptionContainer: {
+    // This has all ViewStyle properties.
+  },
+};
+```
+
 | Element | Style Properties    | Description |
 | --- | ---| --- |
 | `container` | This has all ViewStyle properties. |  |
@@ -803,7 +1066,25 @@ The maps widget supports various digital map providers. This is how a maps widge
 
 {{< figure src="/attachments/refguide/mobile/native-mobile/native-styling-refguide/maps.png" alt="maps"   width="350"  >}}
 
-The widget’s style properties are as follows:
+```javascript
+export const com_mendix_widget_native_maps_Maps = {
+  container: {
+    // This has all ViewStyle properties.
+  },
+  loadingOverlay: {
+    // This has all ViewStyle properties.
+  },
+  loadingIndicator: {
+    color: null, // This is the color of the loading indicator.
+  },
+  marker: {
+    color: null, // This is the color of the location marker.
+    opacity: null, // This is the opacity of the location marker.
+  },
+};
+```
+
+The widget's style properties are as follows:
 
 | Element | Style Properties    | Description |
 | --- | --- | --- |
@@ -825,13 +1106,21 @@ The progress bar widget shows percentage of progress. This is how a progress bar
 
 {{< figure src="/attachments/refguide/mobile/native-mobile/native-styling-refguide/progress-bar.png" alt="progress bar"   width="300"  >}}
 
-The widget’s style properties are as follows:
-
-```xml
-<container>
-	<bar><fill/></bar>
-	<validationMessage/>
-</container>
+```javascript
+export const com_mendix_widget_native_progressbar_ProgressBar = {
+  container: {
+    // This has all ViewStyle properties.
+  },
+  bar: {
+    // This has all ViewStyle properties.
+  },
+  fill: {
+    backgroundColor: null, // This is the background color of the filled progress bar portion.
+  },
+  marker: {
+    // This has all TextStyle properties.
+  },
+};
 ```
 
 | Element | Style Properties    | Description |
@@ -849,13 +1138,28 @@ The progress circle widget displays progress in a circle using positive or negat
 
 {{< figure src="/attachments/refguide/mobile/native-mobile/native-styling-refguide/progress-circle.png" alt="progress circle"   width="300"  >}}
 
-The widget’s style properties are as follows:
-
-```xml
-<container>
-	<circle><fill/></circle>
-	<validationMessage/>
-</container>
+```javascript
+export const com_mendix_widget_native_progresscircle_ProgressCircle = {
+  container: {
+    // This has all ViewStyle properties.
+  },
+  circle: {
+    size: null, // This is the radius of the progress circle.
+    borderWidth: null, // This is the border width of the progress circle.
+    borderColor: null, // This is the color of the progress circle border.
+  },
+  fill: {
+    backgroundColor: null, // This is the color of the circle’s filled portion.
+    width: null, // This is the width of the progress circle.
+    lineCapRounded: null, // This determines if the rotating line’s front tip is rounded off or not.
+  },
+  text: {
+    // This has all TextStyle properties.
+  },
+  validationMessage: {
+    // This has all TextStyle properties.
+  },
+};
 ```
 
 | Element | Style Properties    | Description |
@@ -878,12 +1182,17 @@ The QR code widget generates a QR code based on a value, which a user can then s
 
 {{< figure src="/attachments/refguide/mobile/native-mobile/native-styling-refguide/qr-code.png" alt="qr code"   width="350"  >}}
 
-The widget’s style properties are as follows:
-
-```xml
-<container>
-	<qrcode/>
-</container>
+```javascript
+export const com_mendix_widget_native_qrcode_QRCode = {
+  container: {
+    // This has all ViewStyle properties.
+  },
+  qrcode: {
+    size: null, // The size of the QR code.
+    color: null, // The color of the QR code. 
+    borderColor: null, // The background color behind the QR code.
+  },
+};
 ```
 
 | Element | Style Properties    | Description |
@@ -901,18 +1210,36 @@ The range slider widget allows you to change a range of values using a slider wi
 
 {{< figure src="/attachments/refguide/mobile/native-mobile/native-styling-refguide/range-slider.png" alt="range slider"   width="300"  >}}
 
-The widget’s style properties are as follows:
-
-```xml
-<container>
-	<track><highlight/><marker/></track>
-	<validationMessage/>
-</container>
-
-<container>
-	<trackDisabled><highlightDisabled/><markerDisabled/></trackDisabled>
-	<validationMessage/>
-</container>
+```javascript
+export const com_mendix_widget_native_rangeslider_RangeSlider = {
+  container: {
+    // This has all ViewStyle properties.
+  },
+  track: {
+    // This has all ViewStyle properties.
+  },
+  trackDisabled: {
+    // This has all ViewStyle properties.
+  },
+  highlight: {
+    // This has all ViewStyle properties.
+  },
+  highlightDisabled: {
+    // This has all ViewStyle properties.
+  },
+  marker: {
+    // This has all ViewStyle properties.
+  },
+  markerActive: {
+    // This has all ViewStyle properties.
+  },
+  markerDisabled: {
+    // This has all ViewStyle properties.
+  },
+  validationMessage: {
+    // This has all TextStyle properties.
+  },
+};
 ```
 
 | Element | Style Properties    | Description |
@@ -933,10 +1260,14 @@ The default class to style all range slider inputs is named `com_mendix_widget_n
 
 The safe area view widget prevents content from being rendered in unwanted areas, such as behind rounded screen corners or notches. This widget is only supported on iOS apps. Note that `container` styling will only be applied to the safe area.
 
-The widget’s style properties are as follows:
+The widget's style properties are as follows:
 
-```xml {linenos=false}
-<container>content</container>
+```javascript
+export const com_mendix_widget_native_safeareaview_SafeAreaView = {
+  container: {
+    // This has all ViewStyle properties.
+  },
+};
 ```
 
 | Element | Style Properties    | Description |
@@ -961,16 +1292,21 @@ The ratings widget allows users to rate an object from 0 to 5. This is how a rat
 
 {{< figure src="/attachments/refguide/mobile/native-mobile/native-styling-refguide/ratings.png" alt="ratings"   width="350"  >}}
 
-The widget’s style properties are as follows:
-
-```xml
-<container>
-	<icon/><icon/><icon/><icon/><icon/>
-</container>
-
-<containerDisabled>
-	<icon/><icon/><icon/><icon/><icon/>
-</containerDisabled>
+```javascript
+export const com_mendix_widget_native_rating_Rating = {
+  container: {
+    // This has all ViewStyle properties.
+  },
+  containerDisabled: {
+    // This has all ViewStyle properties.
+  },
+  icon: {
+    // This has all ViewStyle properties.
+    size: null, // The size of the icon.
+    color: null, // The color of the icon.
+    selectedColor: null, // The color of the icon when selected.
+  },
+};
 ```
 
 | Element | Style Properties    | Description |
@@ -990,22 +1326,30 @@ The toggle buttons widget allows you to set an enumeration attribute. This is ho
 
 {{< figure src="/attachments/refguide/mobile/native-mobile/native-styling-refguide/toggle-buttons.png" alt="toggle buttons"   width="350"  >}}
 
-The widget’s style properties are as follows:
-
-```xml
-<container>
-	<button><text>Standard</text></button>
-	<activeButton><activeButtonText>Sattelite</activeButtonText></activeButton>
-	<button><text>Hybrid</text></button>
-	<validationMessage/>
-</container>
-
-<containerDisabled>
-	<button><text>Standard</text></button>
-	<activeButton><activeButtonText>Sattelite</activeButtonText></activeButton>
-	<button><text>Hybrid</text></button>
-	<validationMessage/>
-</containerDisabled>
+```javascript
+export const com_mendix_widget_native_togglebuttons_ToggleButtons = {
+  container: {
+    // This has all ViewStyle properties.
+  },
+  containerDisabled: {
+    // This has all ViewStyle properties.
+  },
+  button: {
+    // This has all ViewStyle properties.
+  },
+  text: {
+    // This has all TextStyle properties.
+  },
+  activeButton: {
+    // This has all ViewStyle properties.
+  },
+  activeButtonText: {
+    // This has all TextStyle properties.
+  },
+  validationMessage: {
+    // This has all TextStyle properties.
+  },
+};
 ```
 
 | Element | Style Properties    | Description |
@@ -1026,6 +1370,35 @@ The video player widget allows you to play video based on a URL, and is limited 
 
 {{< figure src="/attachments/refguide/mobile/native-mobile/native-styling-refguide/video-player.png" alt="video player"   width="300"  >}}
 
+```javascript
+export const com_mendix_widget_native_videoplayer_VideoPlayer = {
+  container: {
+    // This has all ViewStyle properties.
+  },
+  indicator: {
+    color: null, // The loading indicator color.
+  },
+  video: {
+    // This has all ViewStyle properties.
+  },
+  errorMessage: {
+    // This has all TextStyle properties.
+  },
+  fullScreenVideoPlayer: {
+    // This has all ViewStyle properties. Android only.
+  },
+  controlBtnContainerStyle: {
+    // This has all ViewStyle properties. Android only.
+  },
+  fullScreenVideoStyle: {
+    // This has all ViewStyle properties. Android only. 
+  },
+  fullScreenActivityIndicatorStyle: {
+    // This has all ViewStyle properties. Android only.
+  },
+};
+```
+
 The widget’s style properties are as follows:
 
 | Element | Style Properties    | Description |
@@ -1043,7 +1416,21 @@ The default class to style all video players is named `com_mendix_widget_native_
 
 ### 11.19 Web View
 
-The web view widget allows you to embed static or dynamic websites in your app. The widget’s style properties are as follows:
+The web view widget allows you to embed static or dynamic websites in your app. The widget's style properties are as follows:
+
+```javascript
+export const com_mendix_widget_native_webview_WebView = {
+  container: {
+    // This has all ViewStyle properties.
+  },
+  errorContainer: {
+    // This has all ViewStyle properties.
+  },
+  errorText: {
+    // This has all TextSTyle properties.
+  },
+};
+```
 
 | Element | Style Properties    | Description |
 | --- | --- | --- |
@@ -1055,14 +1442,14 @@ The default class to style all web views is named `com_mendix_widget_native_webv
 
 ### 11.20 Animation
 
-The animation widget allows you to animate a container. You can make the content wiggle, move, change size, and more.
+The animation widget allows you to animate a container. You can make the content wiggle, move, change size, and more. The widget's style properties are as follows:
 
-The widget’s style properties are as follows:
-
-```xml
-<container>
-	{content}
-</container>
+```javascript
+export const com_mendix_widget_native_animation_Animation = {
+  container: {
+    // This has all ViewStyle properties.
+  },
+};
 ```
 
 | Element | Style Properties    | Description |
@@ -1077,50 +1464,40 @@ This introduction screen widget displays paginated contents you can swipe throug
 
 {{< figure src="/attachments/refguide/mobile/native-mobile/native-styling-refguide/intro-screen.gif" alt="intro screen"   width="350"  >}}
 
-The widget’s style properties are as follows:
-
-```xml
-<fullscreenContainer>
-	content
-	<paginationContainer>
-		<dotStyle/><activeDotStyle/><dotStyle/>
-	</paginationContainer>
-	<paginationAbove.buttonsContainer>
-		<buttonSkip.container>
-			<icon/><caption>Skip</caption>
-		</buttonSkip.container>
-		<buttonPrevious.container>
-			<icon/><caption>Back</caption>
-		</buttonPrevious.container>
-		<buttonNext.container>
-			<icon/><caption>Next</caption>
-		</buttonNext.container>
-		<buttonDone.container>
-			<icon/><caption>Done</caption>
-		</buttonDone.container>
-	</paginationAbove.buttonsContainer>
-</fullscreenContainer>
-
-<popupContainer>
-	content
-	<paginationBetween>
-		<buttonSkip.container>
-			<icon/><caption>Skip</caption>
-		</buttonSkip.container>
-		<buttonPrevious.container>
-			<icon/><caption>Back</caption>
-		</buttonPrevious.container>
-		<paginationContainer>
-			<paginationText>4 / 5</paginationText>
-		</paginationContainer>
-		<buttonNext.container>
-			<icon/><caption>Next</caption>
-		</buttonNext.container>
-		<buttonDone.container>
-			<icon/><caption>Done</caption>
-		</buttonDone.container>
-	</paginationBetween>
-</popupContainer>
+```javascript
+export const com_mendix_widget_native_animation_Animation = {
+  fullscreenContainer: {
+    // This has all ViewStyle properties.
+  },
+  popupContainer: {
+    // This has all ViewStyle properties.
+  },
+  paginationContainer: {
+    // This has all ViewStyle properties.
+  },
+  paginationText: {
+    // This has all TextStyle properties.
+  },
+  dotStyle: {
+    // This has all ViewStyle properties.
+  },
+  activeDotStyle: {
+    // This has all ViewStyle properties.
+  },
+  buttonsContainer: {
+    // This has all ViewStyle properties.
+  },
+  container: {
+    // This has all ViewStyle properties. Meant for buttonSkip, buttonDone, buttonPrevious, and buttonNext.
+  },
+  caption: {
+    // This has all ViewStyle properties.
+  },
+  icon: {
+    size: null, // The size of the icon.
+    color: null, // The color of the icon.
+  },
+};
 ```
 
 | Element | Style Properties | Description |
@@ -1145,18 +1522,22 @@ The list view swipe widget can make a list view interactive by adding swipe gest
 
 {{< figure src="/attachments/refguide/mobile/native-mobile/native-styling-refguide/list-view-swipe-buttons.gif" alt="list view swipe"   width="350"  >}}
 
-The widget’s style properties are as follows:
-
-```xml
-<container>
-	<leftAction>
-		{Left background}
-	</leftAction>
-	{Foreground}
-	<rightAction>
-		{Right background}
-	</rightAction>
-</container>
+```javascript
+export const com_mendix_widget_native_listviewswipe_ListViewSwipe = {
+  container: {
+    // This has all ViewStyle properties.
+  },
+  leftAction: {
+    // This has all ViewStyle properties.
+    panelSize: null, // The number of pixels and the combined size of the background buttons.
+    threshold: null, // The number of pixels to accept the swipe action.
+  },
+  rightAction: {
+    // This has all ViewStyle properties.
+    panelSize: null, // The number of pixels and the combined size of the background buttons.
+    threshold: null, // The number of pixels to accept the swipe action.
+  },
+};
 ```
 
 | Element | Style Properties | Description |
@@ -1183,18 +1564,30 @@ The bottom sheet widget creates a set of options while blocking interaction with
 
     {{< figure src="/attachments/refguide/mobile/native-mobile/native-styling-refguide/expanding-bottom-sheet.gif" alt="expanding bottom sheet"   width="350"  >}}
 
-The widget’s style properties are as follows:
-
-```xml
-<container />
-<containerWhenExpandedFullscreen />
-<modal />
-<modalItems>
-	<defaultStyle />
-	<primaryStyle />
-	<dangerStyle />
-	<customStyle />
-</modalItems>
+```javascript
+export const com_mendix_widget_native_bottomsheet_BottomSheet = {
+  container: {
+    // This has all ViewStyle properties.
+  },
+  containerWhenExpandedFullscreen: {
+    // This has all ViewStyle properties. This has all ViewStyle properties. Only available if `Expading` and `Enable full screen` are enabled.
+  },
+  modal: {
+    // This has all ViewStyle properties. 
+  },
+  defaultStyle: {
+    // This has all TextStyle properties. Available when `Default` is selected as style for basic items.
+  },
+  primaryStyle: {
+    // This has all TextStyle properties. Available when `Primary` is selected as style for basic items.
+  },
+  dangerStyle: {
+    // This has all TextStyle properties. Available when `Danger` is selected as style for basic items.
+  },
+  customStyle: {
+    // This has all TextStyle properties. Available when `Custom` is selected as style for basic items.
+  },
+};
 ```
 
 | Element | Style Properties | Description |
@@ -1213,66 +1606,81 @@ The default class to style all bottom sheet widgets is named `com_mendix_widget_
 
 The popup menu widget allows you to show a context menu exactly where the user taps.
 
-The widget’s style properties are as follows:
+A main object has four objects:
 
-```xml
-<container/>
-<buttonContainer/>
-<custom>
-	<containerStyle/>
-	<itemStyle>
-		</rippleColor>
-	</itemStyle>
-</custom>
-<basic>
-    <containerStyle/>
-    <dividerColor/>
-    <itemStyle>
-        <ellipsizeMode/>
-	</rippleColor>
-        <defaultStyle/>
-        <primaryStyle/>
-        <dangerStyle/>
-        <customStyle/>
-    </itemStyle>
-<basic/>
+```javascript
+export const com_mendix_widget_native_popupmenu_PopupMenu = {
+  basic: {
+  // BasicItemStyle. Styles basic items.
+    containerStyle: {
+      // This has all ViewStyle properties. Styles the wrapper container around a basic item. 
+    },
+    itemStyle: {
+      ellipsizeMode: null, // 'head', 'middle', 'tail', or 'clip'. Styles how the text will be clipped if its too long.
+      rippleColor: null, // Styles the color of touch feedback when item is tapped. Works for both iOS and Android platforms.
+      defaultStyle: {
+        // This has all TextStyle properties. Styles all basic menu items which have the `default` style selected.
+      },
+      primaryStyle: {
+        // This has all TextStyle properties. Styles all basic menu items which have the `primary` style selected.
+      },
+      dangerStyle: {
+        // This has all TextStyle properties. Styles all basic menu items which have the `danger` style selected.
+      },
+      customStyle: {
+        // This has all TextStyle properties. Styles all basic menu items which have the `custom` style selected.
+      },
+    },
+    dividerColor: null, // Styles the divider color. 
+  },
+
+  custom: {
+    // CustomItemStyle. Styles custom items.
+    // This has the same properties as BasicItemStyle.
+  },
+
+  buttonContainer: {
+    // This has all ViewStyle properties. Styles the wrapper view of triggerer since there could be multiple elements, and it has to be wrapped in a view. 
+  },
+  container: {
+    // This has all ViewStyle properties. Styles the wrapper view around the whole menu.
+  },
+};
 ```
 
-A main object has four objects.
-
-| Element                    | Style Properties | Description                                                                                                      |
-| ----------------------------| --- | ---------------------------------------------------------------------------------------------------------------- |
-| basic      | BasicItemStyle |Styles basic items.                                                                                                   |
-| custom      | CustomItemStyle |Styles custom items.                                                                                                   |
-| buttonContainer | This has all ViewStyle properties. | Styles the wrapper view of triggerer since there could be multiple elements, and it has to be wrapped in a view. |
-| container       | This has all ViewStyle properties. | Styles the wrapper view around the whole menu.     |
+| Element | Style Properties | Description  |
+| ---| --- | ---|
+| `basic`     | BasicItemStyle |Styles basic items.  |
+| `custom`    | CustomItemStyle |Styles custom items.  |
+| `buttonContainer` | This has all ViewStyle properties. | Styles the wrapper view of triggerer since there could be multiple elements, and it has to be wrapped in a view. |
+| `container` | This has all ViewStyle properties. | Styles the wrapper view around the whole menu. |
 
 #### 24.1 BasicItemStyle
 
-| Element                   | Style Properties |  Description                                      |
-| ---------------------------| ---- | ------------------------------------------------ |
-| containerStyle | This has all ViewStyle properties. | Styles the wrapper container around a basic item. |
-| itemStyle | ItemStyle      | Styles the basic items.                         |
-| dividerColor | `string`      | Styles the divider color.                         |
+| Element    | Style Properties |  Description     |
+| ----| ---- | ------ |
+| `containerStyle` | This has all ViewStyle properties. | Styles the wrapper container around a basic item. |
+| `itemStyle` | ItemStyle      | Styles the basic items.      |
+| `dividerColor` | `string`      | Styles the divider color.    |
 
 #### 24.2 ItemStyle
 
-| Element                | Style Properties                     | Description                                                                                      |
-| ----------------------------------------| ----- | ------------------------------------------------------------------------------------------------ |
-| ellipsizeMode | `head`, `middle`, `tail`, or `clip` | Styles how the text will be clipped if its too long. |
-| rippleColor | `string`      | Styles the color of touch feedback when item is tapped. Works for both iOS and Android platforms. |
-| defaultStyle |  This has all TextStyle properties.                | Styles all basic menu items which have the `default` style selected.                                 |
-| primaryStyle |  This has all TextStyle properties.                | Styles all basic menu items which have the `primary` style selected.                                 |
-| dangerStyle |  This has all TextStyle properties.                 | Styles all basic menu items which have the `danger` style selected.                                  |
-| customStyle |  This has all TextStyle properties.                 | Styles all basic menu items which have the `custom` style selected.                                  |
+| Element | Style Properties  | Description  |
+| -------------| ----- | ----- |
+| `ellipsizeMode` | `head`, `middle`, `tail`, or `clip` | Styles how the text will be clipped if its too long. |
+| `rippleColor` | `string`      | Styles the color of touch feedback when item is tapped. Works for both iOS and Android platforms. |
+| `defaultStyle` |  This has all TextStyle properties. | Styles all basic menu items which have the `default` style selected.   |
+| `primaryStyle` |  This has all TextStyle properties. | Styles all basic menu items which have the `primary` style selected.   |
+| `dangerStyle` |  This has all TextStyle properties. | Styles all basic menu items which have the `danger` style selected.   |
+| `customStyle` |  This has all TextStyle properties.  | Styles all basic menu items which have the `custom` style selected.  |
 
 #### 24.3 CustomItemStyle
 
 | Element                   | Style Properties |  Description                                      |
 | ---------------------------| ---- | ------------------------------------------------ |
-| containerStyle | This has all ViewStyle properties. | Styles the wrapper container around a custom item. |
-| itemStyle | `rippleColor: string`      | Styles the color of touch feedback when item is tapped. Works for both iOS and Android platforms. |
-| dividerColor | `string`      | Styles the divider color.                         |
+| `containerStyle` | This has all ViewStyle properties. | Styles the wrapper container around a custom item. |
+| `itemStyle` | `rippleColor: string`      | Styles the color of touch feedback when item is tapped. Works for both iOS and Android platforms. |
+| `dividerColor` | `string`      | Styles the divider color.                         |
 
 The default class to style all popup menus is named `com_mendix_widget_native_popupmenu_PopupMenu`.
 
@@ -1280,70 +1688,79 @@ The default class to style all popup menus is named `com_mendix_widget_native_po
 
 The carousel widget allows you to show swipeable items in a carousel.
 
-The widget’s style properties are as follows:
-
-```xml
-</container>
-<cardLayout>
-    </slideItem>
-    </inactiveSlideItem>
-    </indicator>
-    <pagination>
-        </container>
-        </dotStyle>
-        </inactiveDotStyle>
-        </dotContainerStyle>
-        </text>
-    </pagination>
-</cardLayout>
-<fullWidthLayout>
-    </slideItem>
-    </inactiveSlideItem>
-    </indicator>
-    <pagination>
-        </container>
-        </dotStyle>
-        </inactiveDotStyle>
-        </dotContainerStyle>
-        </text>
-    </pagination>
-</fullWidthLayout>
-```
-
 Main object has to have three objects called `container`, `cardLayout`, and `fullWidthLayout`. `cardLayout` and `fullWidthLayout` will be applied automatically depending on selected layout in widget properties.
 
-```css
-export myCarouselStyle = {
-    container: ViewStyle  //
-    cardLayout: ...LayoutStyle,
-    fullWidthLayout: ...LayoutStyle
-}
+```javascript
+export const com_mendix_widget_native_carousel_Carousel = {
+  container: {
+    // This has all ViewStyle properties. Styles the view surrounding the carousel widget. For best results, make sure to give a fixed `height`
+  },
+  cardLayout: {
+    // Styles the carousel when the layout is set to card.     
+    slideItem: {
+      // This has all ViewStyle properties. Styles the view surrounding each slide, including inactive slides.
+    },
+    inactiveSlideItem: {
+      opacity: null, // Allows inactive slides to become more smaller and faded.   
+      scale: null, // Allows inactive slides to become more smaller and faded.   
+    },
+    indicator: {
+      color: null, // Styles the loading indicator which will be shown while the carousel is loading.
+    },
+    pagination: {
+      container: {
+        // This has all ViewStyle properties. Styles the main view around pagination, regardless of text or dot.
+      },
+      dotStyle: {
+        // This has all ViewStyle properties. Styles all the pagination dots.   
+  color: null, 
+      },
+      inactiveDotStyle: {
+        // This has all ViewStyle properties. Additional styles for inactive dots. Will be merged with `dotStyle`.
+  opacity: null,
+  scale: null,
+  color: null,
+      },
+      dotContainerStyle: {
+        // This has all ViewStyle properties. Styles the view around individual pagination dots.  
+      },
+      text: {
+        // This has all TextStyle properties. Will be applied when there are more than five elements in carousel, in which case pagination buttons become text like **1/5**.
+      },
+    },
+  },
+
+  fullWidthLayout: {
+    // Styles the carousel when the layout is set to full width.
+    // Same properties as cardLayout.
+  },
+};
 ```
 
-| Element                | Style Properties                               | Description                                                                                    |
-| -----------------------|-------------------------------- | ---------------------------------------------------------------------------------------------- |
-| container | This has all ViewStyle properties.                                   | Styles the view surrounding the carousel widget. For best results, make sure to give a fixed `height`.                             |
+| Element  | Style Properties | Description    |
+| --- | --- | --- |
+| container | This has all ViewStyle properties. | Styles the view surrounding the carousel widget. For best results, make sure to give a fixed `height`.                             |
 | cardLayout | LayoutStyle | Styles the carousel when the layout is set to card  |
-| fullWidthLayout | LayoutStyle                             | Styles the carousel when the layout is set to full width.                 |
+| fullWidthLayout | LayoutStyle  | Styles the carousel when the layout is set to full width. |
 
 #### 25.1 LayoutStyle
 
-| Element                | Style Properties                               | Description                                                                                    |
-| -----------------------|-------------------------------- | ---------------------------------------------------------------------------------------------- |
-| slideItem | This has all ViewStyle properties.                                   | Styles the view surrounding each slide, including inactive slides.                             |
+| Element | Style Properties | Description   |
+| --- | --- | --- |
+| slideItem | This has all ViewStyle properties.  | Styles the view surrounding each slide, including inactive slides.  |
 | inactiveSlideItem | `opacity: number, scale: number` | `inactiveSlideOpacity` and `inactiveSlideScale`, will allow inactive slides smaller and faded. |
-| indicator | `color: string`                             | Styles the loading indicator which will be shown while the carousel is loading.                 |
-| pagination | Pagination                                 | Styles pagination container, dots, active dots, and text.                                        |
+| indicator | `color: string`  | Styles the loading indicator which will be shown while the carousel is loading.   |
+| pagination | Pagination  | Styles pagination container, dots, active dots, and text.  |
 
 #### 25.2 Pagination
 
-| Element | Style Properties                                                                         | Description                                                                                                    |
-| ---------|------------------------------------------------------------------------ | -------------------------------------------------------------------------------------------------------------- |
-| container | This has all ViewStyle properties.                                                              | Styles the main view around pagination, regardless of text or dot.                                             |
-| dotStyle | All ViewStyle properties + `color: string`                                              | Styles all the pagination dots.                                                                                |
-| inactiveDotStyle|  All ViewStyle properties + `opacity: number; scale: number; color: string` | Additional styles for inactive dots. Will be merged with `dotStyle`.                                             |
-| dotContainerStyle | This has all ViewStyle properties.                                                      | Styles the view around individual pagination dots.                                                              |
-| text | This has all TextStyle properties.                                                                   | Will be applied when there are more than five elements in carousel, in which case pagination buttons become text like **1/5**. |
+| Element | Style Properties | Description  |
+| ---|--- | --- |
+| container | This has all ViewStyle properties.  | Styles the main view around pagination, regardless of text or dot.   |
+| dotStyle | All ViewStyle properties + `color: string` | Styles all the pagination dots.  |
+| inactiveDotStyle|  All ViewStyle properties + `opacity: number; scale: number; color: string` | Additional styles for inactive dots. Will be merged with `dotStyle`.  |
+| dotContainerStyle | This has all ViewStyle properties. | Styles the view around individual pagination dots.  |
+| text | This has all TextStyle properties.| Will be applied when there are more than five elements in carousel, in which case pagination buttons become text like **1/5**. |
 
 The default class to style all popup menus is named `com_mendix_widget_native_carousel_Carousel`.
 
@@ -1353,20 +1770,37 @@ The signature widget allows you to draw and save a signature. The signature widg
 
 {{< figure src="/attachments/refguide/mobile/native-mobile/native-styling-refguide/signature.png" alt="signature"   width="350"  >}}
 
-The widget’s style properties are structured as follows:
-
-```xml
-<container>
-    <signature/>
-    <buttonWrapper>
-        <Button>
-            <Caption>Clear</Caption>
-        </Button>
-        <Button>
-            <Caption>Save</Caption>
-        </Button>
-    </buttonWrapper>
-</container>
+```javascript
+export const com_mendix_widget_native_signature_Signature = {
+  container: {
+    // This has all ViewStyle properties. 
+    penColor: null, // This will change the color of the stroke.
+  },
+  buttonWrapper: {
+    // This has all ViewStyle properties. 
+  },
+  buttonClearContainer: {
+    // This has all ViewStyle properties. 
+    rippleColor: null, // This will change the color of the ripple on Android.
+    activeOpacity: null, // This will change the opacity when touch is active on iOS.
+    underlayColor: null, // This will change the underlay color when touch is active on iOS.
+  },
+  buttonClearCaption: {
+    // This has all TextStyle properties. 
+  },
+  buttonSaveContainer: {
+    // This has all ViewStyle properties.
+  },
+  buttonSaveContainer: {
+    // This has all ViewStyle properties. 
+    rippleColor: null, // This will change the color of the ripple on Android.
+    activeOpacity: null, // This will change the opacity when touch is active on iOS.
+    underlayColor: null, // This will change the underlay color when touch is active on iOS.
+  }, 
+  buttonSaveCaption: {
+    // This has all TextStyle properties.
+  },
+};
 ```
 
 | Element | Style Properties    | Description |
@@ -1391,34 +1825,83 @@ The default class to style all text boxes is named `com_mendix_widget_native_sig
 
 The [line chart](https://github.com/mendix/widgets-resources/blob/master/packages/pluggableWidgets/line-chart-native) widget renders a scalable line graph based on static and dynamic data sets.
 
-The widget consists of the following elements:
-
-```xml
-<container/>
-<errorMessage/>
-<chart/>
-<grid/>
-<xAxis>
-	<label/>
-</xAxis>
-<yAxis>
-	<label/>
-</yAxis>
-<legend>
-	<container/>
-	<item/>
-	<indicator/>
-	<label/>
-</legend>
-<lines>
-	<customLineStyles>
-		<any_custom_line_style_name>
-			<line/>
-			<markers/>
-		</any_custom_line_style_name>
-	</customLineStyles>
-</lines>
-<lineColorPalette/>
+```javascript
+export const com_mendix_widget_native_linechart_LineChart = {
+  container: {
+    // This has all ViewStyle properties. 
+  },
+  errorMessage: {
+    // This has all TextStyle properties. 
+  },
+  chart: {
+    // This has all ViewStyle properties. 
+  },
+  grid: {
+    backgroundColor: null, // Applies a color to the grid background (string).
+    dashArray: null, // Applies a pattern of dashes and gaps to the grid lines (string containing a [dash pattern](https://www.w3.org/TR/SVG11/painting.html#StrokeDasharrayProperty).
+    lineColor: null, // Applies a color to the grid lines (string).
+    lineWidth: null, // Applies a width to the grid lines (number).
+    padding: null, // Applies padding to all sides of the grid (number). Use it to make axis value labels visible.
+    paddingBottom: null, // Applies padding to the bottom side of the grid (number). Use it to make axis value labels visible.
+    paddingHorizontal: null, // Applies padding to the horizontal sides of the grid (number). Use it to make axis value labels visible.
+    paddingLeft: null, // Applies padding to the left side of the grid (number). Use it to make axis value labels visible.
+    paddingRight: null, // Applies padding to the right side of the grid (number). Use it to make axis value labels visible.
+    paddingTop: null, // Applies padding to the top side of the grid (number). Use it to make axis value labels visible.
+    paddingVertical: null, // Applies padding to the vertical sides of the grid (number). Use it to make axis value labels visible.
+  },
+  xAxis: {
+    color: null, // Applies a color to the axis value labels (string).
+    dashArray: null, // Applies a pattern of dashes and gaps to the axis line (string containing a [dash pattern](https://www.w3.org/TR/SVG11/painting.html#StrokeDasharrayProperty)).
+    fontFamily: null, // Applies fonts to the axis value labels (string).
+    fontSize: null, // Applies a size to the axis value labels (number).
+    fontStyle: null, // Applies a font style to the axis value labels ("normal" or "italic").
+    fontWeight: null, // Applies a font weight to the axis value labels ("normal" or "bold" or "100" or "200" or "300" or "400" or "500" or "600" or "700" or "800" or "900").
+    lineColor: null, // Applies a color to the axis line (string).
+    lineWidth: null, // Applies a width to the axis line (number).
+    label: { 
+      // All TextStyle properties.
+      relativePositionGrid: null, // Positions the axis label at the bottom or right side of the grid ("bottom" or "right").
+    },
+  },
+  yAxis: {
+    // All `xAxis` element styles.
+  },
+  legend: {
+    container: {
+      // All ViewStyle properties.
+    },
+    item: {
+      // All ViewStyle properties. 
+    },
+    indicator: {
+      // All ViewStyle properties. 
+    },
+    label: {
+      // All ViewStyle properties. 
+    }
+  },
+  lines: {
+    lineColorPalette: null, // Provides colors to lines that do not have a line color configured (string with list of colors separated by ';').
+    customLineStyles: {
+      any_custom_line_style_name: {
+        line: {
+          dashArray: null, // Applies a pattern of dashes and gaps to the graph line (string containing a [dash pattern](https://www.w3.org/TR/SVG11/painting.html#StrokeDasharrayProperty)).
+          ending: null, // Applies a flat or rounded line end to the graph line ("flat" or "round").
+          lineColor: null, // Applies a color to the graph line (string).
+          lineWidth: null, // Applies a width to the graph line (number).
+        },
+        markers: {
+          backgroundColor: null, // Applies a background color to the markers of the graph line (string).
+          borderColor: null, // Applies a border color to the markers of the graph line (string).
+          borderWidth: null, // Applies a border width to the markers of the graph line (string).
+          display: null, // Influences whether markers are displayed. When displayed, it positions the markers of the graph line on top or underneath the line ("false" or "underneath" or "onTop").
+          size: null, // Applies a size to the markers of the graph line (number).
+          symbol: null, // Applies a symbol to the markers of the graph line ("circle" or "diamond" or "plus" or "minus" or "square" or "star" or "triangleDown" or "triangleUp").
+        }
+      }
+    }
+  }
+};
 ```
 
 | Element | Style Properties | Description |
@@ -1472,38 +1955,87 @@ The default class to style all line chart widgets is named `com_mendix_widget_na
 
 The [Bar Chart](https://github.com/mendix/widgets-resources/tree/master/packages/pluggableWidgets/bar-chart-native) widget renders a horizontal bar graph based on static and dynamic data sets.
 
-The widget consists of the following elements:
-
-```xml
-<container/>
-<errorMessage/>
-<chart/>
-<grid/>
-<xAxis>
-	<label/>
-</xAxis>
-<yAxis>
-	<label/>
-</yAxis>
-<legend>
-	<container/>
-	<item/>
-	<indicator/>
-	<label/>
-</legend>
-<domain>
-    <padding/>
-</domain>
-<bars>
-    <barsOffset/>
-    <barColorPalette/>
-	<customBarStyles>
-		<any_custom_bar_style_name>
-			<bar/>
-			<label/>
-		</any_custom_bar_style_name>
-	</customBarStyles>
-</bars>
+```javascript
+export const com_mendix_widget_native_barchart_BarChart = {
+  container: {
+    // This has all ViewStyle properties. 
+  },
+  errorMessage: {
+    // This has all TextStyle properties. 
+  },
+  chart: {
+    // This has all ViewStyle properties. 
+  },
+  grid: {
+    backgroundcolor: null, // Applies a color to the grid background (string).
+    dashArray: null, //  Applies a pattern of dashes and gaps to the grid lines (string containing a [dash pattern](https://www.w3.org/TR/SVG11/painting.html#StrokeDasharrayProperty)).
+    lineColor: null, // Applies a color to the grid lines (string).
+    width: null, // Applies a width to the grid lines (number).
+    padding: null, // Applies padding to all sides of the grid (number). This makes axis value labels visible.
+    paddingBottom: null, // Applies padding to the bottom side of the grid (number). This makes axis value labels visible.
+    paddingHorizontal: null, // Applies padding to the horizontal sides of the grid (number). This makes axis value labels visible.
+    paddingLeft: null, // Applies padding to the left side of the grid (number). This makes axis value labels visible.
+    paddingRight: null, // Applies padding to the right side of the grid (number). This makes axis value labels visible.
+    paddingTop: null, // Applies padding to the top side of the grid (number). This makes axis value labels visible.
+    paddingVertical: null, // Applies padding to the vertical sides of the grid (number). This makes axis value labels visible.
+  },
+  xAxis: {
+    color: null, // Applies a color to the grid background (string).
+    dashArray: null, // Applies a pattern of dashes and gaps to the axis line (string containing a [dash pattern](https://www.w3.org/TR/SVG11/painting.html#StrokeDasharrayProperty)).
+    fontFamily: null, // Applies a font type to the axis value labels (string).
+    fontSize: null, // Applies a size to the axis value labels (number).
+    fontStyle: null, // Applies a font style to the axis value labels ("normal" or "italic").
+    fontWeight: null, // Applies a font weight to the axis value labels ("normal" or "bold" or "100" or "200" or "300" or "400" or "500" or "600" or "700" or "800" or "900").
+    lineColor: null, // Applies a color to the axis line (string).
+    width: null, // Applies a width to the axis line (number).
+    label: {
+      // All TextStyle properties.
+      relativePositionGrid: null, // Positions the axis label at the **bottom** or **right** side of the grid.
+    }
+  },
+  yAxis: {
+    // All `xAxis` element styles.
+  },
+  legend: {
+    container: {
+      // All ViewStyle properties.
+    },
+    item: {
+      // All ViewStyle properties.
+    },
+    indicator: {
+      // All ViewStyle properties.
+    },
+    label: {
+      // All TextStyle properties.
+    }
+  },
+  domain: {
+    padding: {
+      x: null, // Applies a number of pixels of padding to add the beginning and end of the X axis domain (number).
+      y: null, // Applies a number of pixels of padding to add the beginning and end of the y axis domain (number).
+    },
+  },
+  bars: {
+    barColorPalette: null, // Provides colors to bars that do not have a bar color configured (string with list of colors separated by ';', one color for each series).
+    barsoffset: null, // Determines the number of pixels each bar in a group should be offset from its original position on the Y axis (number). This is only applicable when presentation mode is **Grouped**.
+    customBarStyles: {
+      any_custom_bar_style_name: {
+        bar: {
+          ending: null, // Specifies a radius to apply to each bar.
+          barcolor: null, // Applies a color to the bar (string). If bars are configured to have labels, the labels will be the same color as the bar.
+          width: null, // Applies a width to the bar (number).
+        },
+        label: {
+          fontFamily: null, // Applies a font type to the bar label (string).
+          fontSize: null, // Applies a size to the bar label (number).
+          fontStyle: null, // Applies a font style to the bar label (**normal** or **italic**).
+          fontWeight: null, // Applies a font weight to the bar label ("normal" or "bold" or "100" or "200" or "300" or "400" or "500" or "600" or "700" or "800" or "900").
+        }
+      }
+    }
+  }
+};
 ```
 
 | Element | Style Properties | Description |
@@ -1557,27 +2089,34 @@ The default class to style all bar chart widgets is named `com_mendix_widget_nat
 
 The [Pie/Doughnut Chart](https://github.com/mendix/widgets-resources/blob/master/packages/pluggableWidgets/pie-doughnut-chart-native) widget renders a dataset as a pie or doughnut chart (depending on its configuration) based on static data sets.
 
-The widget consists of the following elements:
-
-```xml
-<container/>
-<slices>
-    <customStyles>
-        <any_custom_key>
-            <slice/>
-            <label/>
-        </any_custom_key>
-    </customStyles>
-    <colorPalette/>
-    <innerRadius/>
-    <padding/>
-    <paddingBottom/>
-    <paddingHorizontal/>
-    <paddingLeft/>
-    <paddingRight/>
-    <paddingTop/>
-    <paddingVertical/>
-</slices>
+```javascript
+export const com_mendix_widget_native_piedoughnutchart_PieDoughnutChart = {
+  container: {
+    // This has all ViewStyle properties. 
+  },
+  slices: {
+    customStyles: {
+      any_custom_key: {
+        slice: {
+          color: null, // Applies a color to the slice (string). If labels are configured to be shown, each label will be the same color as its corresponding slice.
+          fontFamily: null, // Applies a font type to the slice label (string).
+          fontSize: null, //  Applies a size to the slice label (number).
+          fontStyle: null, // Applies a font style to the slice label (**normal** or **italic**).
+          fontWeight: null, // Applies a font weight to the slice label ("normal" or "bold" or "100"-"900" ascending by increments of 100).
+        },
+      },
+    },
+    colorPalette: null, // Provides colors to slices that do not have a slice color configured (string with list of colors separated by a ';').
+    innerRadius: null, //  Applies an inner radius to the chart when in doughnut presentation mode (number).
+    padding: null, // Applies padding to all sides of the chart (number).
+    paddingBottom: null, // Applies padding to the bottom side of the chart (number).
+    paddingHorizontal: null, // Applies padding to the horizontal sides of the chart (number).
+    paddingLeft: null, // Applies padding to the left side of the chart (number).
+    paddingRight: null, // Applies padding to the right side of the chart (number).
+    paddingTop: null, // Applies padding to the top side of the chart (number).
+    paddingVertical: null, // Applies padding to the vertical sides of the chart (number).
+  },
+};
 ```
 
 | Element | Style Properties | Description |
@@ -1604,36 +2143,40 @@ The default class to style all Pie/Doughnut Chart widgets is named `com_mendix_w
 
 A switch input widget can be used to display and edit Boolean attributes and is rendered as a switch. This is how a Switch widget looks by default:
 
-{{< figure src="/attachments/refguide/mobile/native-mobile/native-styling-refguide/check-box.png" alt="check box"   width="350"  >}}
+{{< figure src="/attachments/refguide/mobile/native-mobile/native-styling-refguide/check-box.png" alt="checkbox"   width="350"  >}}
 
-The widget’s style properties structure is as follows:
-
-```xml
-<container/>
-<containerDisabled/>
-<label>
-    <numberOfLines/>
-</label>
-<labelDisabled/>
-<input>
-    <thumbColorOn/>,
-    <trackColorOn/>
-    <trackColorOff/>
-    <thumbColorOff/>
-</input>
-<inputDisabled>
-    <thumbColorOn/>,
-    <trackColorOn/>
-    <trackColorOff/>
-    <thumbColorOff/>
-</inputDisabled>
-<inputError>
-    <thumbColorOn/>,
-    <trackColorOn/>
-    <trackColorOff/>
-    <thumbColorOff/>
-</inputError>
-<validationMessage/>
+```javascript
+export const com_mendix_widget_native_switch_Switch = {
+  container: {
+    // This has all ViewStyle properties. 
+  },
+  containerDisabled: {
+    // Same properties as `container`. Overrides `container` styles if the text box is non-editable.
+  },
+  input: {
+    // This has all TextStyle properties. 
+    trackColorOn: null, // Custom color for the switch track when turned on.
+    trackColorOff: null, // Custom color for the switch track when turned off.
+    thumbColorOn: null, // Color of the foreground switch grip when turned on. If this is set on iOS, the switch grip will lose its drop shadow.
+    thumbColorOff: null, // Color of the foreground switch grip when turned off. If this is set on iOS, the switch grip will lose its drop shadow.
+  },
+  inputError: {
+    // This has the same properties as `input`. Overrides `input` styles if there are validation errors.
+  },
+  inputDisabled: {
+    // This has the same properties as `input`. Overrides `input` styles if the checkbox is non-editable.
+  },
+  label: {
+    // This has all TextStyle properties 
+    numberOfLines: 1, // The maximum number of lines to wrap the label text. If the text is any longer it will be cut off with an ellipsis.
+  },
+  labelDisabled: {
+    // Same properties as `label`. Overrides `label` styles if the checkbox is non-editable.
+  },
+  validationMessage: {
+    // This has all TextStyle properties.
+  },
+};
 ```
 
 | Element | Style Properties    | Description |
@@ -1646,29 +2189,30 @@ The widget’s style properties structure is as follows:
 | `input` | `thumbColorOn` | Color of the foreground switch grip when turned on. If this is set on iOS, the switch grip will lose its drop shadow. |
 | `input` | `thumbColorOff` | Color of the foreground switch grip when turned off. If this is set on iOS, the switch grip will lose its drop shadow. |
 | `inputError` | This has the same properties as `input` | Overrides `input` styles if there are validation errors. |
-| `inputDisabled` | This has the same properties as `input` | Overrides `input` styles if the check box is non-editable. |
+| `inputDisabled` | This has the same properties as `input` | Overrides `input` styles if the checkbox is non-editable. |
 | `label` | This has all TextStyle properties   |  |
 | `label` | `numberOfLines` | The maximum number of lines to wrap the label text. If the text is any longer it will be cut off with an ellipsis. Defaults to `1`. |
-| `labelDisabled` | Same properties as `label` | Overrides `label` styles if the check box is non-editable. |
+| `labelDisabled` | Same properties as `label` | Overrides `label` styles if the checkbox is non-editable. |
 | `validationMessage` | This has all TextStyle properties.   |  |
 
-The default class to style all check box inputs is named `com_mendix_widget_native_switch_Switch`.
+The default class to style all checkbox inputs is named `com_mendix_widget_native_switch_Switch`.
 
 ### 11.31 Background Gradient
 
 The background gradient widget allows you to apply a background that transitions between multiple colors in a linear direction.
 
-The widget’s style properties are as follows:
-
-```xml
-<angle/>
-<colorList>
-	[
-		<gradient_color_object/>
-	]
-</colorList>
-<container/>
-<opacity/>
+```javascript
+export const com_mendix_widget_native_backgroundgradient_BackgroundGradient = {
+  container: {
+    // This has all ViewStyle properties. 
+  },
+  colorList: {
+    color: null, // Colors can be passed in different formats. Valid color value formats are #d0d0d0, rgb(115,155,155), or rgba(195,226,226,0.5)
+    offset: null, // A color-stop's value, followed by one or more optional stop positions (should be between 0.0 and 1.0)
+  },
+  angle: null, // Line of direction. Takes a value from `0` to `360`. A value of 0 is equivalent to top; increasing values rotate the design clockwise.
+  opacity: null, // Takes a value from `0` to `100`. The lower the value, the more transparent.
+};
 ```
 
 | Element | Style Properties    | Description |
@@ -1695,38 +2239,87 @@ An object `{ color: string, offset: number }` that represents the color and the 
 
 The [column chart](https://github.com/mendix/widgets-resources/blob/master/packages/pluggableWidgets/column-chart-native) widget renders a vertical column graph based on static and dynamic data sets.
 
-The widget consists of the following elements:
-
-```xml
-<container/>
-<errorMessage/>
-<chart/>
-<grid/>
-<xAxis>
-	<label/>
-</xAxis>
-<yAxis>
-	<label/>
-</yAxis>
-<legend>
-	<container/>
-	<item/>
-	<indicator/>
-	<label/>
-</legend>
-<domain>
-    </padding>
-</domain>
-<columns>
-    <columnsOffset/>
-    <columnColorPalette/>
-	<customColumnStyles>
-		<any_custom_column_style_name>
-			</column>
-			</label>
-		</any_custom_column_style_name>
-	</customColumnStyles>
-</columns>
+```javascript
+export const com_mendix_widget_native_columnchart_ColumnChart = {
+  container: {
+    // All ViewStyle properties.
+  },
+  errorMessage: {
+    // All TextStyle properties.
+  },
+  chart: {
+    // All ViewStyle properties.
+  },
+  grid: {
+    backgroundColor: null, // Applies a color to the grid background (string).
+    dashArray: null, // Applies a pattern of dashes and gaps to the grid lines (string containing a [dash pattern](https://www.w3.org/TR/SVG11/painting.html#StrokeDasharrayProperty)).
+    lineColor: null, // Applies a color to the grid lines (string).
+    width: null, // Applies a width to the grid lines (number).
+    padding: null, // Applies padding to all sides of the grid (number). This makes axis value labels visible.
+    paddingBottom: null, // Applies padding to the bottom side of the grid (number). This makes axis value labels visible.
+    paddingHorizontal: null, // Applies padding to the horizontal sides of the grid (number). This makes axis value labels visible.
+    paddingLeft: null, // Applies padding to the left side of the grid (number). This makes axis value labels visible.
+    paddingRight: null, // Applies padding to the right side of the grid (number). This makes axis value labels visible.
+    paddingTop: null, // Applies padding to the top side of the grid (number). This makes axis value labels visible.
+    paddingVertical: null, // Applies padding to the vertical sides of the grid (number). This makes axis value labels visible.
+  },
+  xAxis: {
+    color: null, // Applies a color to the axis value labels (string).
+    dashArray: null, // Applies a pattern of dashes and gaps to the axis line (string containing a [dash pattern](https://www.w3.org/TR/SVG11/painting.html#StrokeDasharrayProperty)).
+    fontFamily: null, // Applies a font type to the axis value labels (string).
+    fontSize: null, // Applies a size to the axis value labels (number).
+    fontStyle: null, // Applies a font style to the axis value labels ("normal" or "italic").
+    fontWeight: null, // Applies a font weight to the axis value labels ("normal" or "bold" or "100" or "200" or "300" or "400" or "500" or "600" or "700" or "800" or "900").
+    lineColor: null, // Applies a color to the axis line (string).
+    width: null, // Applies a width to the axis line (number).
+    label: {
+      // All TextStyle properties.
+      relativePositionGrid: null, //P ositions the axis label at the **bottom** or **right** side of the grid.
+    }
+  },
+  yAxis: {
+    // All xAxis properties
+  },
+  legend: {
+    container: {
+      // All ViewStyle properties.
+    },
+    item: {
+      // All ViewStyle properties.
+    },
+    indicator: {
+      // All ViewStyle properties.
+    },
+    label: {
+      // All TextStyle properties.
+    },
+  },
+  domain: {
+    padding: {
+      x: null, // Applies a number of pixels of padding to add the beginning and end of the X axis domain (number).
+      y: null, // Applies a number of pixels of padding to add the beginning and end of the Y axis domain (number).
+    }
+  },
+  columns: {
+    columnColorPalette: null, // Provides colors to columns that do not have a column color configured (string with list of colors separated by ';', one color for each series).
+    columnsOffset: null, // Determines the number of pixels each column in a group should be offset from its original position on the Y axis (number). This is only applicable when presentation mode is **Grouped**.
+    customColumnStyles: {
+      any_custom_column_style_name: {
+        column: {
+          ending: null, // Specifies a radius to apply to each column.
+          columnColor: null, // Applies a color to the column (string). If columns are configured to have labels, the labels will be the same color as the column.
+          width: null, // Applies a width to the column (number).
+        },
+        label: {
+          fontFamily: null, // Applies a font type to the column label (string).
+          fontSize: null, // Applies a size to the column label (number).
+          fontStyle: null, // Applies a font style to the column label (**normal** or **italic**).
+          fontWeight: null, // Applies a font weight to the column label ("normal" or "bold" or "100" or "200" or "300" or "400" or "500" or "600" or "700" or "800" or "900").
+        }
+      }
+    }
+  }
+};
 ```
 
 | Element | Style Properties | Description |
@@ -1780,18 +2373,37 @@ The default class to style all column chart widgets is named `com_mendix_widget_
 
 The Gallery widget (a replacement for both template grids and list views) helps you build beautiful lists and grids for tablet and mobile devices.
 
-The widget’s style properties are as follows:
-
-```xml
-<container/>
-<emptyPlaceholder/>
-<firstItem/>
-<lastItem/>
-<list/>
-<listItem/>
-<loadMoreButtonContainer/>
-<loadMoreButtonPressableContainer/>
-<loadMoreButtonCaption/>
+```javascript
+export const com_mendix_widget_native_gallery_Gallery = {
+  container: {
+    // This has all ViewStyle properties. 
+  },
+  emptyPlaceholder: {
+    // This has all ViewStyle properties. Applies a view style to the empty placeholder.
+  },
+  firstItem: {
+    // This has all ViewStyle properties. Applies a view style to the first item of the list.
+  },
+  lastItem: {
+    // This has all ViewStyle properties. Applies a view style to the last item of the list.
+  },
+  list: {
+    // This has all ViewStyle properties. Applies a view style to the list container.
+  },
+  listitem: {
+    // This has all ViewStyle properties. Applies a view style to each item container in the list.
+  },
+  loadMoreButtonContainer: {
+    // This has all ViewStyle properties. Applies a view style to the load more button container.
+  },
+  loadMoreButtonPressableContainer: {
+    // This has all ViewStyle properties. Applies a view style to the load more button container.
+    rippleColor: null, // Defines the color of the ripple effect. ([color](https://reactnative.dev/docs/colors)) (Android only)
+    borderless: null, // Defines if ripple effect should not include border. (Boolean) (Android only)
+    radius: null, // Defines the radius of the ripple effect. (number) (Android only)
+    foreground: null, // Set to true to add the ripple effect to the foreground of the view, instead of the background. (Boolean) (Android only)
+  },
+};
 ```
 
 | Element | Style Properties | Description |
@@ -1810,17 +2422,27 @@ The widget’s style properties are as follows:
 | `loadMoreButtonPressableContainer` | foreground | Set to true to add the ripple effect to the foreground of the view, instead of the background. (Boolean) (Android only) |
 | `loadMoreButtonCaption` | All [TextStyle](https://reactnative.dev/docs/view-style-props) properties. | Applies a text style to the load more button caption. |
 
-### 11.33.1 Gallery Filtering
+The default class to style all gallery widgets is named `com_mendix_widget_native_gallery_Gallery`.
 
-In order to enable filtering within the gallery items you need to select the desired attributes to be filtered in the Filtering tab.
+#### 11.33.1 Gallery Filtering
 
-The widget’s style properties are as follows:
+In order to enable filtering within the gallery items you need to select the desired attributes to be filtered in the **Filtering** tab.
 
-```xml
-<textInputContainer/>
-<textInputContainerFocused/>
-<textInput/>
-<textInputClearIcon/>
+```javascript
+export const com_mendix_widget_native_gallerytextfilter_GalleryTextFilter = {
+  textInputContainer: {
+    // This has all ViewStyle properties. Applies a view style to the container of the text input. 
+  },
+  textInputContainerFocused: {
+    // This has all ViewStyle properties. Applies a view style to the container of the text input when the text box is focused.
+  },
+  textInput: {
+    // This has all ViewStyle properties. Applies a view style to the text input.
+  },
+  textInputClearIcon: {
+    // This has all ViewStyle properties. Applies style to the text clear button in the text box.
+  },
+};
 ```
 
 | Element | Style Properties | Description |
@@ -1830,7 +2452,9 @@ The widget’s style properties are as follows:
 | `textInput` | All [ViewStyle](https://reactnative.dev/docs/view-style-props) properties. | Applies a view style to the text input. |
 | `textInputClearIcon` | All [ViewStyle](https://reactnative.dev/docs/view-style-props) properties. | Applies style to the text clear button in the text box. |
 
-## 13 Read More
+The default class to style all gallery text filter widgets is named `com_mendix_widget_native_gallerytextfilter_GalleryTextFilter`.
+
+## 12 Read More
 
 * [Native Styling](/refguide/mobile/designing-mobile-user-interfaces/native-styling/)
 * [Design Properties Documentation](/apidocs-mxsdk/apidocs/design-properties/)

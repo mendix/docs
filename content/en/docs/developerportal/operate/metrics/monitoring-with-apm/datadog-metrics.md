@@ -23,7 +23,7 @@ For more information on the data you can send to Datadog, see [Monitoring Your M
 
 ## 2 Setting Up Datadog For Your Mendix App
 
-### 2.1 Datadog API Key{#api-key}
+### 2.1 Datadog API Key {#datadog-api-key}
 
 To make use of Datadog you will need a Datadog API key. If you already use Datadog, skip to the [Existing Datadog User](#existing-datadog-user) section to learn how to get one.
 
@@ -67,7 +67,7 @@ To send your runtime information to Datadog, you need to provide the Datadog API
 
     {{< figure src="/attachments/developerportal/operate/metrics/datadog-metrics/environment-variable-dd-api-key.png" alt="Dropdown containing custom environment variable names" >}}
 
-6. Enter the Datadog **API key**, obtained in the [Datadog API Key](#api-key) section, above, as the *Value* of the Environment Variable.
+6. Enter the Datadog **API key**, obtained in the [Datadog API Key](#datadog-api-key) section, above, as the *Value* of the Environment Variable.
 7. Add a second **Custom Environment Variable**:
 
     * **Name**: *DD_LOG_LEVEL*
@@ -83,6 +83,21 @@ To send your runtime information to Datadog, you need to provide the Datadog API
 9. Return to the **Environments** page for your app and *Deploy* or *Transport* your app into the selected environment.
 
     {{% alert color="warning" %}}Your app must be **redeployed** before it is started as additional dependencies need to be included.<br/><br/>Restarting the app is not sufficient to start sending data to Datadog.{{% /alert %}}
+    
+### 2.3 Install the Mendix integration{#install-integration}
+
+In the Datadog marketplace, there is an integration containing an example dashboard for monitoring your Mendix apps. This dashboard shows what metrics are available for your Mendix app and how you can display them. You can use this dashboard as a starting point for your own dashboard: you can customize it by adding or removing metrics and changing the way they are displayed.
+
+Once you have connected your node to Datadog, you can install the Mendix integration from the Datadog Marketplace by doing the following:
+
+1. Sign in to your Datadog account.
+2. Go to **Integrations > Marketplace**.
+3. Search for *Mendix*. You can also find the integration [here](https://app.datadoghq.eu/marketplace/integration/mendix?search=mendix).
+4. Click **Install Integration** to install the integration.
+5. Go to **Dashboards > Dashboard List** and open the *Mendix Application Overview* dashboard.
+6. Select a Mendix app, environment, and instance on the top left to view data.
+
+If you want to customize the dashboard you should clone it and modify the clone. Alternatively, you can build your own dashboard from scratch.
 
 ## 3 Tagging Metrics for Datadog
 
@@ -149,7 +164,7 @@ Setting these values for your app means that all metrics from this environment o
 You can add more tags if you want, but note that Datadog's charges include an element for [custom metrics](https://docs.datadoghq.com/developers/metrics/custom_metrics/) as described on the Datadog site.
 {{% /alert %}}
 
-## 4 Multi-instance metrics{#multi-instance-metrics}
+## 4 Multi-Instance metrics {#multi-instance-metrics}
 
 You can view metrics for multiple instances of an application on the Datadog dashboard:
 
@@ -217,7 +232,7 @@ The Datadog Events log contains events which come from your app: those are the s
 
 By default all email addresses contained in log events will be redacted. You can change this – see [Email Address Redaction](#redact-emails), above.
 
-### 5.9 Datadog Agent not Started
+### 5.9 Datadog Agent Not Started
 
 If you configure your app for Datadog but the Datadog agent is not started, the events will be sent to the app log files.
 

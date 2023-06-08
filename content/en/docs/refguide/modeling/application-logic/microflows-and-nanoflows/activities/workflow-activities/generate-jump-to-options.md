@@ -6,11 +6,7 @@ tags: ["studio pro", "workflow", "generate jump-to options"]
 ---
 
 {{% alert color="warning" %}}
-
 This activity can only be used in **Microflows**.
-
-This activity was introduced in Studio Pro [9.17.0](/releasenotes/studio-pro/9.17/#9170). 
-
 {{% /alert %}}
 
 ## 1 Introduction
@@ -37,7 +33,7 @@ This functionality is different from the [Jump activity](/refguide/jump-activity
 
 An example of **Generate jump-to options** properties is represented in the image below:
 
-{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/workflow-activities/generate-jump-to-options/generate-jump-to-options-properties.jpg" >}}
+{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/workflow-activities/generate-jump-to-options/generate-jump-to-options-properties.jpg" width="650px" >}}
 
 There are two sets of properties for this activity, those in the dialog box on the left, and those in the properties pane on the right.
 

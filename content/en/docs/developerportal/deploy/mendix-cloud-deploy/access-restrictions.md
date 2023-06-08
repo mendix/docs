@@ -60,7 +60,7 @@ Once the CA is uploaded, you will see a tree containing the root certificate and
 
 {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/access-restrictions/ca-profile.png" >}}
 
-Select the check box next to each intermediate or root certificate you want to use. Client certificates will be accepted if they are signed by any checked certificate. If more than one certificate in a branch is checked (for example the root certificate and an intermediate certificate) the client certificate will be accepted if it is signed by any of the checked certificates.
+Select the checkbox next to each intermediate or root certificate you want to use. Client certificates will be accepted if they are signed by any checked certificate. If more than one certificate in a branch is checked (for example the root certificate and an intermediate certificate) the client certificate will be accepted if it is signed by any of the checked certificates.
 
 {{% alert color="warning" %}}
 If you do not select any certificates then all the certificates will be valid.
@@ -159,7 +159,7 @@ To add this additional access restriction profile, follow these steps:
 5. Go to the **Deploy** tab of the **Environments** page, and click the **Details** of the desired environment.
 6. Select the **Network** tab of an application environment.
 
-    {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/access-restrictions/environment-restriction.png" >}}
+    {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/access-restrictions/environment-restriction-2.png" >}}
 
 7. **Edit** the `/ws/` path of the environment to apply the new access restriction profile. For the selected path (`/ws/`), the default profile (for the top level `/`) will now be overridden.
 

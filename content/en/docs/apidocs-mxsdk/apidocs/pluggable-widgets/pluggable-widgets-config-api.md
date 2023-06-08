@@ -10,7 +10,7 @@ aliases:
 
 ## 1 Introduction
 
-A pluggable widget's configuration module allows for several modeler experience improvements. For example, you can hide widget properties based on conditions, add consistency checks to validate the widget's configuration, and customize your widget's appearance in structure mode.
+A pluggable widget's configuration module allows for several modeler experience improvements. For example, you can hide widget properties based on conditions, add consistency checks to validate the widget's configuration, and customize your widget's appearance in **Structure mode**.
 
 It is usually located in a JavaScript file using the same name as the widget’s XML file, ending with *.editorConfig.js*. For example, next to *TextBox.xml* would be a *TextBox.editorConfig.js*.
 
@@ -22,24 +22,22 @@ Errors that are related to the configuration module are shown in the Widget Deve
 
 ## 3 Customizing the Widget’s Properties
 
-To customize the properties available in the Studios for the pluggable widget, the module should export a `getProperties` function. This function is passed three parameters:
+To customize the properties available in Studio Pro for the pluggable widget, the module should export a `getProperties` function. Two parameters are passed to this function::
 
 * The current configured values, following the [Values API](/apidocs-mxsdk/apidocs/pluggable-widgets-studio-apis/#values)
 * The default property configuration
-* An indicator for which of the Studios the properties are built for (this property is `"web"` for Studio and `"desktop"` for Studio Pro)
 
 ```typescript
 function getProperties(
     values: ValuesAPI,
-    defaultConfiguration: Properties,
-    target: "web" | "desktop"
+    defaultConfiguration: Properties
 ): Properties
 ```
 
-Using this API, it is possible to have different captions and descriptions of properties between the two Studios. It is also possible to dynamically show or hide certain properties based on configured values.
+Using this API, it is possible to dynamically show or hide certain properties based on configured values.
 
 {{% alert color="info" %}}
-Please note that when a property is hidden for both web and desktop, its value will be cleared.
+Please note that when a property is hidden,, its value will be cleared.
 {{% /alert %}}
 
 {{% alert color="info" %}}
@@ -204,10 +202,6 @@ The default configuration would then be:
 
 An object grid for object properties can be customized. To do this, the property needs to have `objectHeaders` configured, which will be used as column headers. Each object also needs to have `captions` configured for the grid to be filled.
 
-{{% alert color="info" %}}
-In Studio, object values are shown as lists instead of grids. However, it is possible to customize this list similar to what you can do in Studio Pro. For each object, the first caption will be displayed as value in the list. The object headers have no effect in Studio.
-{{% /alert %}}
-
 ### 4.1 Example
 
 If you wished to use data point structure detailed above to visualize geographic coordinates, you might want to add the suffixes `° N` and `° W` to the numeric **x** and **y** values so the grid will look like this (values below are purely hypothetical):
@@ -269,7 +263,7 @@ The following code example shows an object property configuration which uses obj
 
 ## 5 Customizing Validation Using Consistency Checks
 
-By default, the Studios will validate required properties. To add extra validations to the configured data, the module can export a `check` function. This function gets the values passed following the values API, and is expected to return an array of problems found:
+By default, Studio Pro will validate required properties. To add extra validations to the configured data, the module can export a `check` function. This function gets the values passed following the values API, and is expected to return an array of problems found:
 
 ```typescript
 function check(values: ValuesAPI): Problem[]
@@ -282,13 +276,11 @@ type Problem = {
     property?: string; // key of the property, at which the problem exists
     severity?: "error" | "warning" | "deprecation"; // default = "error"
     message: string; // description of the problem
-    studioMessage?: string; // studio-specific message, defaults to message
-    url?: string; // link with more information about the problem
-    studioUrl?: string; // studio-specific link
+    url?: string; // link with more information about the problem    
 }
 ```
 
-Any problem returned from this function will be shown in the [Errors](/refguide/errors-pane/) pane in Studio Pro, and the [Checks](/studio/checks/) pane in Studio.
+Any problem returned from this function will be shown in the [Errors](/refguide/errors-pane/) pane in Studio Pro.
 
 ### 5.1 Targeting a Property of a Sub-Object
 

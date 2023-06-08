@@ -11,7 +11,7 @@ The 3D Viewer API allows you to retrieve, create, and update 3D model entities, 
 
 ## 2 API Reference
 
-For details, see [3D Viewer API Reference](http://3dviewer-apidoc.s3-website.eu-central-1.amazonaws.com/index/v2.1/apidoc/3dviewer.html).
+For details, see [3D Viewer API Reference](https://d102io3ppw18a6.cloudfront.net/).
 
 ## 3 Usage
 

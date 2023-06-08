@@ -41,12 +41,12 @@ The Advanced Audit Trail solution is different from the [Audit Trail](/appstore/
 
 ### 1.3 Limitations 
 
-* Advanced Audit Trail contains an [add-on module](/refguide/consume-add-on-modules-and-solutions/). Mendix Studio does not support add-on modules. It should be disabled for your app.
+* Advanced Audit Trail contains an [add-on module](/refguide/consume-add-on-modules-and-solutions/). 
 * On Mendix Cloud XS [resource packs](/developerportal/deploy/mendix-cloud-deploy/#resource-pack), your app may run out of memory due to too many objects of the `ScheduledEventInformation` type being created.
 
 ### 1.4 Prerequisites
 
-* You need to use Advanced Audit Trail with Studio Pro 9 versions starting with [9.12](https://docs.mendix.com/releasenotes/studio-pro/9.12/).
+* You need to use Advanced Audit Trail with Studio Pro versions starting with [9.12](https://docs.mendix.com/releasenotes/studio-pro/9.12/).
 * You need to have a [subscription](#obtain-license-key) to the Advanced Audit Trail solution to store your data in an external data storage that runs in the Mendix Cloud
 
 ### 1.5 Dependencies

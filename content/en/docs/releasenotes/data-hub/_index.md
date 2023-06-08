@@ -11,6 +11,76 @@ These release notes cover changes made to the [Mendix Data Hub Catalog](/data-hu
 
 ## 2023
 
+### June 8th, 2023
+
+#### Improvements
+
+* We added a feedback option on the right side of the screen. Let us know if you find an issue, have a suggestion for improvement, or want to share something we are doing well!
+
+#### Fixes
+
+* We fixed an issue where uploading and cropping a custom icon did not work correctly.
+
+### June 1st, 2023
+
+#### Fixes
+
+* We fixed an issue where pagination links in Search API responses were not correctly encoded.
+* We fixed an issue where the page was flickering when selecting a data set in the search results.
+
+### May 25th, 2023
+
+#### Fixes
+
+* We fixed an issue where edits to descriptions in the Catalog UI were not saved.
+
+### May 11th, 2023
+
+#### Improvements
+
+* We made the authentication details on the [data source details](/data-hub/data-hub-catalog/search/#service-details) page more user friendly.
+
+#### Fixes
+
+* We fixed an issue that impacted the deployment of an OData service.
+
+### April 13th, 2023
+
+#### Fixes
+
+* We fixed an issue where the page was flickering when selecting an object in the search results.
+
+### April 6th, 2023
+
+#### Improvements
+
+* We improved the clarity and accuracy of some UI texts.
+
+### March 16th, 2023
+
+#### Fixes
+
+* We fixed an issue on the Catalog Admin page that displayed incorrect counts of data sources registered in the company.
+* We fixed an error that occured when no authentication is selected while registering a data source.
+
+### February 27th, 2023
+
+#### Fixes
+
+* We fixed an issue that was generating endpoint URLs leading to `404 not found` errors when deploying an app in Studio Pro.
+
+### February 23rd, 2023
+
+#### Improvements
+
+* On the [Search](/data-hub/data-hub-catalog/search/) page, there are no default search filters anymore and filters are persistent per search session.
+
+### February 16th, 2023
+
+#### Improvements
+
+* We added a link to the Marketplace module under authentication details that implements the specified authentication method.
+
 ### February 9th, 2023
 
 #### Improvements
@@ -144,7 +214,7 @@ These release notes cover changes made to the [Mendix Data Hub Catalog](/data-hu
 
 #### Improvements
 
-* You can now filter by content you own in the Catalog. Click **Filter** to add filters, and select the **Owned by me** check box in the **Ownership** section.
+* You can now filter by content you own in the Catalog. Click **Filter** to add filters, and select the **Owned by me** checkbox in the **Ownership** section.
 
 ### September 15th, 2022
 
@@ -187,7 +257,7 @@ These release notes cover changes made to the [Mendix Data Hub Catalog](/data-hu
 
 #### Improvements
 
-* Company administrators can now assign a new [external user](/developerportal/control-center/data-hub-admin/#external-users) when removing the existing one from company's Data Hub Catalog. To remove a user, go to the **Control Center** > **Data Hub** > **External Users** and click **Remove**.
+* Mendix Admins can now assign a new [external user](/developerportal/control-center/data-hub-admin/#external-users) when removing the existing one from company's Data Hub Catalog. To remove a user, go to the **Control Center** > **Data Hub** > **External Users** and click **Remove**.
 
 #### Fixes
 
@@ -221,11 +291,11 @@ These release notes cover changes made to the [Mendix Data Hub Catalog](/data-hu
 
 #### Improvements
 
-* Company administrators can now remove external participants from their company's Data Hub Catalog. To do so, go to the **Control Center** > **Data Hub** > **External Users** and click **Remove**.
+* Mendix Admins can now remove external participants from their company's Data Hub Catalog. To do so, go to the **Control Center** > **Data Hub** > **External Users** and click **Remove**.
 
 #### Fixes
 
-* We fixed an error that occured when the **Business Owner** field was initially left empty, and users could not assign a new **Business Owner** in subsequent attempts.
+* We fixed an error that occurred when the **Business Owner** field was initially left empty, and users could not assign a new **Business Owner** in subsequent attempts.
 
 ### July 14th, 2022
 
@@ -308,7 +378,7 @@ These release notes cover changes made to the [Mendix Data Hub Catalog](/data-hu
 
 #### Fixes
 
-* We fixed a `NullPointerException` that occured when the **Versions** of an endpoint was empty on the **Registration API** `GET` service call.
+* We fixed a `NullPointerException` that occurred when the **Versions** of an endpoint was empty on the **Registration API** `GET` service call.
 * We fixed an issue where the Catalog loaded in our unreleased dark mode. Dark mode is not ready yet, but we will let you know when that feature is available!
 
 ### April 7th, 2022
@@ -507,7 +577,7 @@ These release notes cover changes made to the [Mendix Data Hub Catalog](/data-hu
 * We made several design changes, mainly on the [Catalog](/data-hub/data-hub-catalog/) page. We moved items like **Environment Name** and **Version** to the newly arranged right sidebar menu.
 * We moved the `ContractType` field to the `ServiceVersion` level. For more information, see [How to Register OData Resources in the Data Hub Catalog](/data-hub/data-hub-catalog/register-data/).
 * We added an informative tooltip to the **Company** drop-down menu and a pop-up window for when the user is an external user for another company.
-* We added in-app guidance to notify that you can switch the company when you have accepted a participation invitaion.
+* We added in-app guidance to notify that you can switch the company when you have accepted a participation invitation.
 
 #### Fixes
 
@@ -528,13 +598,13 @@ These release notes cover changes made to the [Mendix Data Hub Catalog](/data-hu
 
 #### Fixes
 
-* We fixed an issue where searching in the [Data Hub pane](/refguide/data-hub-pane/) in Studio Pro caused an error.
+* We fixed an issue where searching in the [Data Hub pane](/refguide9/data-hub-pane/) in Studio Pro caused an error.
 
 ### September 23rd, 2021
 
 #### Data Hub Free Edition
 
-* The Data Hub Free edition is now available to all Mendix users! Publish your data sources in the Data Hub Catalog, curate them, and then consume them in another application. Learn more about it [here](/data-hub/#data-hub-licences).
+* The Data Hub Free edition is now available to all Mendix users! Publish your data sources in the Data Hub Catalog, curate them, and then consume them in another application.
 
 #### Fixes
 

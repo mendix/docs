@@ -112,11 +112,11 @@ When this identifier is not set for the environment where your app is deployed (
 
 ## 5 HTTP Headers Tab {#http-headers}
 
-{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/integration-activities/call-rest-action/http-headers-tab.png" >}}
+{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/integration-activities/call-rest-action/http-headers-tab.png" width="400px" >}}
 
 ### 5.1 Use HTTP Authentication
 
-The **Use HTTP authentication** check box defines whether basic authentication should be used.
+The **Use HTTP authentication** checkbox defines whether basic authentication (username and password) should be used.
 
 ### 5.2 User Name
 
@@ -136,7 +136,7 @@ REST endpoints which are using NGINX as a webserver will ['silently drop'](https
 
 ## 6 Request Tab {#request}
 
-{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/integration-activities/call-rest-action/request-tab.png" >}}
+{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/integration-activities/call-rest-action/request-tab.png" width="500px" >}}
 
 The sections below describe the options in the drop-down menu for generating the request.
 
@@ -170,7 +170,7 @@ If the [export mapping](/refguide/export-mappings/) is based on a message defini
 
 ### 6.2 Binary for the Entire Request
 
-This option allows you to send binary data (for example, the contents of a FileDocument).
+This option allows you to send binary data (for example, the contents of a FileDocument). See [Images and Files with REST](/refguide/send-receive-files-rest/) for detailed information working with files with REST).
 
 ### 6.3 Form-Data
 
@@ -194,7 +194,7 @@ See [String Template](#string-template), above, for more information on construc
 
 ## 7 Response Tab {#response}
 
-{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/integration-activities/call-rest-action/response-tab.png" >}}
+{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/integration-activities/call-rest-action/response-tab.png" width="500px" >}}
 
 ### 7.1 Response Handling
 
@@ -202,7 +202,7 @@ These are the options in the drop-down menu for handling the response:
 
 * **Apply import mapping** – if the response is JSON or XML, it can be transformed directly into objects using an [import mapping](/refguide/import-mappings/); the fields that you can choose here are described in the [Import Mapping action](/refguide/import-mapping-action/)
 * **Store in an HTTP response** – any successful HTTP response can be stored directly in an [HttpResponse](/refguide/http-request-and-response-entities/#http-response) object, and the [$latestHttpResponse](#latesthttpresponse) variable is also updated
-* **Store in a file document** – if the response contains binary content (for example, a PDF), it can be stored in an object of an entity type which inherits from `System.FileDocument`
+* **Store in a file document** – if the response contains binary content (for example, a PDF), it can be stored in an object of an entity type which inherits from `System.FileDocument` (see [Images and Files with REST](/refguide/send-receive-files-rest/)) for detailed information working with files with REST)
 * **Store in a string** – if the response is a string (for example, CSV), it can be stored directly in a string variable
 * **Do not store in a variable** - use this option when the call does not return anything useful
 

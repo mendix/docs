@@ -2,12 +2,13 @@
 title: "Studio 9 Guide"
 url: /studio/
 tags: ["studio", "web modeler"]
-weight: 20
+weight: 67
 cascade:
     - space: "Studio 9 Guide"
-    - mendix_version: "9"
+    - mendix_version: 9
+    - old_content: true
     - sitemap:
-        priority: 0.8
+        priority: 0.4
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 #This document is mapped to the landing page, update the link there if renaming or moving the doc file.
 ---
@@ -20,7 +21,7 @@ Mendix Studio only supports apps built in Mendix 9.20 and below. Apps built with
 
 ## 1 Introduction 
 
-The Mendix Platform includes [Mendix Studio](/studio/general/) in addition to [Mendix Studio Pro](/refguide/modeling/). Studio is a collaborative, no-code, web-based application development environment. It enables business developers and users with minimal coding or software development experience to create web and mobile applications without having to know how to code.
+The Mendix Platform includes [Mendix Studio](/studio/general/) in addition to [Mendix Studio Pro](/refguide9/modeling/). Studio is a collaborative, no-code, web-based application development environment. It enables business developers and users with minimal coding or software development experience to create web and mobile applications without having to know how to code.
 
 Studio enables you to do the following: 
 

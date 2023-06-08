@@ -1,0 +1,594 @@
+openapi: 3.0.0
+info:
+  title: Build API
+  version: 4.1.0
+  contact:
+    name: Mendix Support
+    url: 'https://support.mendix.com'
+    email: support@mendix.com
+  termsOfService: 'https://www.mendix.com/terms-of-use/'
+  description: The API for building and managing deployment packages in the Private Cloud Portal.
+servers:
+  - url: 'https://privatecloud.mendixcloud.com/api/v4'
+paths:
+  '/jobs/{jobId}':
+    get:
+      tags:
+        - jobs
+      summary: Get status and result
+      responses:
+        '200':
+          $ref: '#/components/responses/job'
+        '401':
+          $ref: '#/components/responses/error401'
+        '403':
+          $ref: '#/components/responses/error403'
+        '404':
+          $ref: '#/components/responses/error404'
+      operationId: get-job
+      description: Retrieve the status of an asynchronous job which has been initiated by an API call. Each API call which successfully starts a job will return the ID of the job which can be used in this API call.
+    parameters:
+      - name: jobId
+        in: path
+        required: true
+        schema:
+          type: string
+          example: 42dec69c-9bdb-4918-a979-716fbbe3b8a6
+        description: The ID of a JobRequest.
+  '/apps/{appId}/packages':
+    parameters:
+      - $ref: '#/components/parameters/appId'
+    get:
+      summary: Retrieve list of deployment packages
+      operationId: get-packages
+      description: Retrieve all deployment packages of a specific application.
+      tags:
+        - packages
+      parameters:
+        - $ref: '#/components/parameters/offset'
+        - $ref: '#/components/parameters/limit'
+      responses:
+        '200':
+          description: List of deployment packages.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/packages'
+        '401':
+          $ref: '#/components/responses/error401'
+        '403':
+          $ref: '#/components/responses/error403'
+        '404':
+          $ref: '#/components/responses/error404'
+    post:
+      summary: Upload deployment package
+      operationId: upload-package
+      description: Create a new deployment package by uploading an `.mda` file.
+      tags:
+        - packages
+      requestBody:
+        content:
+          multipart/form-data:
+            schema:
+              type: object
+              properties:
+                file:
+                  type: string
+                  format: binary
+                fileName:
+                  type: string
+                  example: my-app_2.2.1.19665.mda
+                  description: 'If the `.mda` extension is not provided, it will be added automatically once the upload has been processed.'
+              required:
+                - file
+                - fileName
+        description: Request body of type `multipart/form-data` that contains an `.mda` file and a `filename` string.
+      responses:
+        '202':
+          $ref: '#/components/responses/job'
+        '400':
+          $ref: '#/components/responses/error400'
+        '401':
+          $ref: '#/components/responses/error401'
+        '403':
+          $ref: '#/components/responses/error403'
+  '/apps/{appId}/packages/build':
+    parameters:
+      - $ref: '#/components/parameters/appId'
+    post:
+      summary: Build deployment package
+      operationId: build-package
+      description: Create a new deployment package for a given `branch` and `revision`.
+      tags:
+        - packages
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                branch:
+                  type: string
+                  example: main
+                  description: The name of the branch
+                  maxLength: 200
+                  minLength: 1
+                revision:
+                  type: string
+                  description: The revision number (for SVN) or string (for Git)
+                  maxLength: 50
+                  minLength: 1
+                  example: 93de884c
+                description:
+                  type: string
+                  description: An optional description of the package
+                  example: 'Fixed issues 7733, 7734 and 7613'
+                version:
+                  type: string
+                  description: The version of the package in x.y.z format
+                  maxLength: 20
+                  example: 2.0.4
+              required:
+                - branch
+                - revision
+        description: JSON object containing information about the deployment package to be built.
+      responses:
+        '202':
+          $ref: '#/components/responses/job'
+        '400':
+          $ref: '#/components/responses/error400'
+        '401':
+          $ref: '#/components/responses/error401'
+        '403':
+          $ref: '#/components/responses/error403'
+  '/apps/{appId}/packages/{packageId}':
+    parameters:
+      - $ref: '#/components/parameters/appId'
+      - $ref: '#/components/parameters/packageId'
+    get:
+      summary: Retrieve deployment package
+      tags:
+        - packages
+      responses:
+        '200':
+          description: Deployment package metadata.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/package'
+        '401':
+          $ref: '#/components/responses/error401'
+        '403':
+          $ref: '#/components/responses/error403'
+        '404':
+          $ref: '#/components/responses/error404'
+      operationId: get-package
+      description: Retrieves the deployment package metadata. The query parameter can be used to request a time-limited download URL.
+      parameters:
+        - schema:
+            type: boolean
+          in: query
+          name: url
+          description: Set the value to `true` to request a time-limited download URL of the deployment package file. The default value is `false`.
+        - schema:
+            type: boolean
+          in: query
+          name: log
+          description: Set the value to `true` to request the build log for the deployment package. The default value is `false`.
+    delete:
+      summary: Delete deployment package
+      operationId: delete-package
+      responses:
+        '202':
+          $ref: '#/components/responses/job'
+        '401':
+          $ref: '#/components/responses/error401'
+        '403':
+          $ref: '#/components/responses/error403'
+        '404':
+          $ref: '#/components/responses/error404'
+      description: Delete a deployment package.
+      tags:
+        - packages
+components:
+  schemas:
+    appId:
+      type: string
+      title: appId
+      format: uuid
+      example: c533ee0b-f7db-4e62-868b-1192d392ccec
+      description: 'The ID of a Mendix App. In the Developer Portal, this is shown as the App ID and it is a UUID format.'
+    error:
+      type: object
+      properties:
+        error:
+          $ref: '#/components/schemas/error-body'
+      description: The error body in an error object.
+    error-body:
+      description: The body of an error object explaining what happened.
+      type: object
+      properties:
+        code:
+          type: integer
+          minimum: 0
+          description: The HTTP status code.
+          example: 400
+        message:
+          type: string
+          description: Explanation of what happened.
+          example: Request validation errors
+    job:
+      description: Model for jobs.
+      type: object
+      x-examples:
+        example-job-created:
+          id: db6ed4d3-8b6d-4c2b-ad2b-2a69d0f7afe0
+          status: created
+          details: Request to build deployment package.
+          error:
+            code: 400
+            message: Request validation errors
+        example-job-finished-build-package:
+          id: db6ed4d3-8b6d-4c2b-ad2b-2a69d0f7afe0
+          status: finished
+          details: Deployment package created successfully.
+          packageId: 63e50976-34bf-4ce4-820b-9e5f106e5fa5
+      properties:
+        id:
+          $ref: '#/components/schemas/jobId'
+        status:
+          type: string
+          enum:
+            - running
+            - finished
+            - failed
+            - created
+          description: '`created` - a job has been created but has not been picked up for processing <br/> `running` - the job is being processed <br/> `finished` - the job has finished processing <br/> `failed` - something went wrong and the job processing failed'
+          example: finished
+        details:
+          type: string
+          example: Request to delete a deployment package.
+        packageId:
+          type: string
+          example: 63e50976-34bf-4ce4-820b-9e5f106e5fa5
+          format: uuid
+          description: Only present if the JobRequest was for building or uploading a deployment package.
+        error:
+          $ref: '#/components/schemas/error-body'
+      required:
+        - id
+        - status
+    jobId:
+      type: string
+      description: The ID of a JobRequest.
+      example: 42dec69c-9bdb-4918-a979-716fbbe3b8a6
+    packageId:
+      type: string
+      title: packageId
+      format: uuid
+      example: 905ba2c3-4424-48b8-b4b0-393eedd4cd1e
+      description: Model for packageId.
+      x-tags:
+        - packages
+    package:
+      title: package
+      type: object
+      description: Model for deployment package.
+      properties:
+        package:
+          type: object
+          properties:
+            id:
+              $ref: '#/components/schemas/packageId'
+            appId:
+              $ref: '#/components/schemas/appId'
+            modelVersion:
+              type: string
+              example: 1.3.0.623
+              description: The version of the model. This is set by the developer that created the package.
+            runtimeVersion:
+              type: string
+              example: 9.12.0.41679
+              description: The Mendix runtime version.
+            createdOn:
+              type: string
+              format: date-time
+              description: The date the package was created (uploaded or built).
+            description:
+              type: string
+              example: 'Fixed issues 7733, 7734 and 7613'
+            fileName:
+              type: string
+              example: MainLine-1.3.0.623.mda
+              description: The file name of the deployment package.
+            fileSize:
+              type: integer
+              minimum: 0
+              example: 2924125
+              description: The size of the deployment package file in bytes.
+            buildLog:
+              type: string
+              description: The build log for the deployment package. Can be used to debug potential issues encountered when creating the deployment package. Visibile only when the `log` query parameter is set to `true`.
+              example: 'Pipeline created at 2023-02-17T15:01:19Z [teamserver-discovery] 2023-02-17T15:01:24.551071428Z Project: a335e635-e0aa-4514-9437-c95aafa1fc12 [teamserver-discovery] 2023-02-17T15:01:24.551130910Z Determining repository type... '
+            url:
+              type: object
+              format: uri
+              description: Direct download URL of the deployment package file. This URL is valid for a limited time. Use the `url` query parameter set to `true` to retrieve an updated URL.
+              properties:
+                location:
+                  type: string
+                  example: 'https://url/to/download/the/package/file'
+                  format: uri
+                  description: The URL of the deployment package file.
+                ttl:
+                  type: integer
+                  description: The validity of the URL in seconds.
+                  example: 900
+              required:
+                - location
+                - ttl
+          required:
+            - id
+            - appId
+            - modelVersion
+            - runtimeVersion
+            - createdOn
+            - fileName
+            - fileSize
+    packages:
+      title: packages
+      x-stoplight:
+        id: aht25xuoseg2k
+      type: object
+      description: The model for the list of deployment packages.
+      x-examples: {}
+      properties:
+        packages:
+          type: array
+          items:
+            type: object
+            properties:
+              id:
+                $ref: '#/components/schemas/packageId'
+              appId:
+                $ref: '#/components/schemas/appId'
+              modelVersion:
+                type: string
+                description: The version of the model. This is set by the developer that created the package.
+                example: 1.3.0.623
+              runtimeVersion:
+                type: string
+                description: The Mendix runtime version.
+                example: 9.12.0.41679
+              createdOn:
+                type: string
+                description: The date the package was created (uploaded or built).
+                format: date-time
+              description:
+                type: string
+                example: 'Fixed issues 7733, 7734, 7613'
+              fileName:
+                type: string
+                description: The file name of the deployment package.
+                example: MainLine-1.3.0.623.mda
+              fileSize:
+                type: integer
+                description: The size of the deployment package file in bytes.
+                minimum: 0
+                example: 2924125
+            required:
+              - id
+              - appId
+              - modelVersion
+              - runtimeVersion
+              - createdOn
+              - fileName
+              - fileSize
+        pagination:
+          $ref: '#/components/schemas/pagination'
+      required:
+        - packages
+        - pagination
+    pagination:
+      title: pagination
+      type: object
+      description: Pagination attributes that reflect the parameters used to get the objects in the response.
+      properties:
+        offset:
+          type: integer
+          minimum: 0
+          description: The offset used to get the list of objects. It starts at 0.
+          example: 60
+        limit:
+          type: integer
+          minimum: 1
+          description: 'The maximum amount of objects to retrieve. When not specified, the a default value is 20.'
+          example: 20
+        size:
+          type: integer
+          minimum: 0
+          description: The amount of objects in the response.
+          example: 17
+      required:
+        - offset
+        - limit
+        - size
+  parameters:
+    offset:
+      name: offset
+      in: query
+      required: false
+      schema:
+        type: integer
+        minimum: 0
+        example: 30
+      description: Used with paging and defines the offset. The default value is 0.
+    limit:
+      name: limit
+      in: query
+      required: false
+      schema:
+        type: integer
+        minimum: 1
+        maximum: 50
+        example: 20
+      description: Used with paging and defines the maximum amount of objects to return. The default value is 20.
+    appId:
+      name: appId
+      in: path
+      required: true
+      schema:
+        type: string
+        format: uuid
+        example: c533ee0b-f7db-4e62-868b-1192d392ccec
+      description: 'The ID of a Mendix App. In the Developer Portal, this is shown as the App ID and it is a UUID format.'
+    packageId:
+      name: packageId
+      in: path
+      required: true
+      schema:
+        type: string
+        format: uuid
+        example: 905ba2c3-4424-48b8-b4b0-393eedd4cd1e
+      description: The ID of a deployment package.
+    jobId:
+      name: jobId
+      in: path
+      required: true
+      schema:
+        type: string
+        example: 42dec69c-9bdb-4918-a979-716fbbe3b8a6
+      description: The ID of a JobRequest.
+  responses:
+    error400:
+      description: |-
+        The request likely contains invalid data or is missing data.
+
+        The error response gives additional feedback.
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/error'
+          examples:
+            example-1:
+              value:
+                error:
+                  code: 400
+                  message: The request has validation errors.
+    error401:
+      description: |-
+        There were no usable authentication credentials found.
+
+        The error response gives additional feedback.
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/error'
+          examples:
+            Example:
+              value:
+                error:
+                  code: 401
+                  message: Unauthorized
+                  invalid-params:
+                    - name: Authentication
+                      reason: Missing or invalid Authorization header
+    error403:
+      description: |-
+        Access is denied. The provided credentials are incorrect or the credentials do not have the required level of access.
+
+        The error response gives additional feedback.
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/error'
+          examples:
+            Example:
+              value:
+                error:
+                  code: 403
+                  message: Forbidden
+                  invalid-params:
+                    - name: Authentication
+                      reason: The token is not accepted
+    error404:
+      description: |-
+        The requested item could not be found.
+
+        The error response gives additional feedback.
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/error'
+          examples:
+            Example:
+              value:
+                error:
+                  code: 404
+                  message: App not found
+                  invalid-params:
+                    - name: Validation
+                      reason: App 76ef1b0f-4050-4810-a159-cb419268636c could not be found
+    job:
+      description: The job response returned by a get-job request. The Location header is populated once the job has been created successfully
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/job'
+          examples:
+            example-job-created:
+              value:
+                id: ab6ed4d3-8b6d-4c2b-ad2b-2a69d0f7afex
+                status: created
+                details: Request to upload deployment package.
+            example-job-failed-with-code:
+              value:
+                id: bb6ed4d3-8b6d-4c2b-ad2b-2a69d0f7afez
+                status: failed
+                details: Request to build deployment package.
+                error:
+                  code: 400
+                  message: The job failed
+            example-job-failed-without-code:
+              value:
+                id: cb6ed4d3-8b6d-4c2b-ad2b-2a69d0f7afec
+                status: created
+                details: Request to build deployment package.
+                error:
+                  message: Request validation errors
+            example-job-finished:
+              value:
+                id: xb6ed4d3-8b6d-4c2b-ad2b-2a69d0f7afeb
+                status: finished
+                details: Request to delete deployment package.
+            example-job-finished-build-package:
+              value:
+                id: vb6ed4d3-8b6d-4c2b-ad2b-2a69d0f7afea
+                status: finished
+                details: Request to build deployment package.
+                packageId: 63e50976-34bf-4ce4-820b-9e5f106e5fa5
+            example-job-finished-upload-package:
+              value:
+                id: vb6ed4d3-8b6d-4c2b-ad2b-2a69d0f7afea
+                status: finished
+                details: Request to upload deployment package.
+                packageId: 63e50976-34bf-4ce4-820b-9e5f106e5fa5
+      headers:
+        Location:
+          schema:
+            type: string
+          description: The URL where the result of the job can be found. This is only available after the job has been created.
+  securitySchemes:
+    PersonalAccessToken:
+      name: Authorization
+      type: apiKey
+      in: header
+      description: 'For more information about requesting and using a token see the [documentation](https://docs.mendix.com/developerportal/community-tools/mendix-profile/#pat).<br/> The header must be set to `MxToken <Your PAT>`.'
+  requestBodies: {}
+tags:
+  - name: packages
+    description: ''
+  - name: jobs
+    description: ''
+security:
+  - PersonalAccessToken: []

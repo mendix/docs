@@ -80,7 +80,7 @@ Follow the steps below:
 
     {{< figure src="/attachments/refguide/modeling/pages/image-and-file-widgets/configure-files/select-entity.png" alt="Select Entity"   width="400"  >}}
     
-4. Open button properties and do the following:
+5. Open button properties and do the following:
 
     1. Select the **Caption** property and rename it to *Attach File*.
     
@@ -99,12 +99,12 @@ Follow the steps below:
         3. Since this button creates the Document object, the contents of the page will be configured automatically for you and the suggested page template is narrowed down to **Forms**. Choose **Form Vertical** and click **OK**:
             {{< figure src="/attachments/refguide/modeling/pages/image-and-file-widgets/configure-files/create-page-dialog.png" alt="Create Page Dialog Box"   width="550"  >}}
     
-5. A new pop-up page with a preconfigured form (a data view) is created:
+6. A new pop-up page with a preconfigured form (a data view) is created:
     {{< figure src="/attachments/refguide/modeling/pages/image-and-file-widgets/configure-files/attach-file-page.png" alt="Attach Files Page"     >}}
     
-9. As you only need your end-users to attach files on this page, delete **Name**, **Size**, and **Employee** widgets from the data view. 
+7. As you only need your end-users to attach files on this page, delete **Name**, **Size**, and **Employee** widgets from the data view. 
 
-10. As you would like users to only upload files on this pop-up page, open the **File Manager** properties and set **Type** to **Upload**.
+8. As you would like users to only upload files on this pop-up page, open the **File Manager** properties and set **Type** to **Upload**.
 
 You have created a pop-up page that will allow IT administrators to attach files to the employee profile form:
 

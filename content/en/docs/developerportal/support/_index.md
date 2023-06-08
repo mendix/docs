@@ -5,7 +5,7 @@ description: "Provides information on how to obtain support for your Mendix apps
 weight: 35
 no_list: false 
 description_list: true
-tags: ["support", "sla", "standard", "premier", "platform"]
+tags: ["support", "sla", "standard", "premier", "platform", "extended support"]
 aliases:
     - /howtogeneral/support/index.html
 ---
@@ -44,15 +44,17 @@ Please contact [Mendix Support](https://support.mendix.com/) or your Customer Su
 
 ### 1.3 Extended Support {#extended-support}
 
-Extended Support is available as a product for the oldest major Mendix version where support is scheduled to end upon release of a new major version. With this product, support according to the SLA for the oldest version is available from the GA release date of the newest major version in a six-month package that you can purchase once or twice (for a maximum duration of one year). 
+Extended Support may be offered in cases where the support of a major Mendix version is discontinued in line with its [end of Support date](/releasenotes/studio-pro/lts-mts/#end). Extended Support is available at cost and covers support within one year following the GA release of the current (meaning, latest) Mendix major version. 
 
-For example, support for Mx7 is scheduled to end upon the release of Mx10 GA. However, if you have purchased Extended Support, Mx7 remains supported for either six months or one year from the release date of Mx10 GA.
+There are 6-month and 12-month packages available for Extended Support.
+
+For example, support for Mendix version 7 is scheduled to end upon the release of Mendix version 10 GA. However, if you have purchased Extended Support, version 7 remains supported for either six months or one year from the release date of version 10 GA.
 
 Please contact your Customer Success Manager or [Mendix Support](https://support.mendix.com/hc/en-us) if you want to know more.
 
 ## 2 Finding Your Answers
 
-We expect that many questions and issues can be solved by reading the [Mendix Documentation](https://docs.mendix.com/) and by exploring the [Mendix Forum](https://forum.mendix.com/). If you cannot find the answer to your question in one of these locations, you can submit a question, incident, or change request to Mendix Support. We will act as the focal point for issues on Mendix Studio and Studio Pro, your applications, and the [Developer Portal](https://home.mendix.com/). We will forward the issue to the second- and third-line if necessary.
+We expect that many questions and issues can be solved by reading the [Mendix Documentation](https://docs.mendix.com/) and by exploring the [Mendix Forum](https://forum.mendix.com/). If you cannot find the answer to your question in one of these locations, you can submit a question, incident, or change request to Mendix Support. We will act as the focal point for issues on Mendix Studio Pro, your applications, and the [Developer Portal](https://home.mendix.com/). We will forward the issue to the second- and third-line if necessary.
 
 ## 3 Feature Requests
 

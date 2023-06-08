@@ -42,7 +42,8 @@ Mendix uses the following static IP addresses. If you need further information, 
 | Mendix Cloud Asia Pacific | Tokyo (ap-northeast-1) | `13.113.58.15` <br /> `52.193.228.1` <br /> `52.198.238.110` |
 | Mendix Cloud Asia Pacific | Mumbai (ap-south-1) | `43.204.254.95` <br /> `43.205.31.32` <br /> `65.1.183.103`  |
 | Mendix Cloud Canada | Canada (ca-central-1) | `3.97.111.124` <br /> `3.98.194.54` <br /> `35.182.171.81` |
-| Mendix Cloud EU | Frankfurt (eu-central-1) | `3.76.96.252`<br /> `3.125.228.151`<br /> `35.156.112.28` <br /> `35.157.102.14` <br /> `52.58.42.15` <br /> `54.93.126.19` |
+| Mendix Cloud EU | Frankfurt (eu-central-1) | `3.76.96.252`<br /> `3.125.228.151`<br /> `35.156.112.28` <br /> |
+| Mendix Cloud EU | Frankfurt-2 (eu-central-1) |`35.157.102.14` <br /> `52.58.42.15` <br /> `54.93.126.19` |
 | Mendix Cloud IE | Ireland (eu-west-1) | `52.18.10.62` <br /> `52.208.39.99` <br /> `99.80.177.69` |
 | Mendix Cloud Middle East | Bahrain (me-south-1) | `15.184.118.253`<br /> `16.24.5.102`<br /> `157.241.15.222` |
 | Mendix Cloud UK | London (eu-west-2) | `18.130.169.15` <br /> `35.177.185.47` <br /> `52.56.174.215` |
@@ -74,7 +75,7 @@ The incoming IP address is the same for multiple environments and applications b
 
 The outgoing IP address is the same for multiple environments and applications because we use Network Address Translation on our routers.
 
-**Which IP address should be whitelisted on our firewall?**
+**Which IP address should be safelisted on our firewall?**
 
 Usually you configure your firewall with rules for *incoming* traffic to your network. Therefore you need to use the *outgoing IP address* of the Mendix application.
 

@@ -20,7 +20,7 @@ The **Synchronize to device** activity can be used to selectively synchronize on
 
 There are two sets of properties for this activity, those in the dialog box on the left, and those in the properties pane on the right:
 
-{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/client-activities/synchronize-to-device/properties.png" alt="Synchronize to device Properties" >}}
+{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/client-activities/synchronize-to-device/properties.png" alt="Synchronize to device Properties" width="650px" >}}
 
 The **Synchronize to device** activity properties consists of the following sections:
 

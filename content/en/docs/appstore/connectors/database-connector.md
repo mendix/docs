@@ -21,7 +21,7 @@ The **Execute statement** action works internally in the same manner as the **Ex
 
 * [HikariCP](https://github.com/brettwooldridge/HikariCP), a high-performance JDBC connection pool
 
-## 2 Prerequisites
+## 2 Prerequisites {#prerequisites}
 
 These are the prerequisites for using this connector:
 
@@ -33,6 +33,10 @@ These are the prerequisites for using this connector:
     * For more information, see the [Common JDBC Drivers](#links) section below
 * Specific to the `Execute` query action: an entity in the domain model that can be used for the results of the executed query
     * For example, a query like `select name, number from stock` has two columns (of the string and integer type, respectively), so in order to use the **Execute query** action, you have to add an entity in the domain model that has the same attributes as the columns in the query
+
+{{% alert color="info" %}}
+Ensure that you follow these prerequisites, particularly adding the *.jar* files for the database to which you want to connect into the *userlib* folder, to avoid connection errors.
+{{% /alert %}}
 
 ## 3 Getting Started
 
@@ -157,6 +161,10 @@ The many-to-many-association with `DatabaseConnector.Parameter` is also used her
 {{% alert color="info" %}}
 If you intend to connect to SQL Server using integrated security, please be aware that the JDBC driver in the **userlib** folder needs to match the version supplied with the Mendix Platform (via the **runtime/bundles/** folder inside the Mendix installation directory).
 {{% /alert %}}
+
+### 5.1 Errors
+
+Errors can often be resolved by adding missing *.jar* dependencies to the *userlib* folder in the module. See the [Prerequisites](#prerequisites) section for further information.
 
 ## 6 Developing This Marketplace Component
 

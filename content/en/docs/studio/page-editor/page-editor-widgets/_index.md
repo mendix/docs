@@ -56,7 +56,7 @@ Widget categories are described in the table below:
 | [Buttons](/studio/page-editor-widgets-buttons/)                 | Contains buttons with general actions, such as opening or closing a page, calling a microflow, signing users out, opening a link. |
 | [Data Buttons](/studio/page-editor-widgets-buttons/)            | Contains buttons that manipulate data and are used to create or delete an object, save or cancel changes. |
 | [Workflow Buttons](/studio/page-editor-widgets-buttons/)        | Contains buttons that are related to [workflows](/studio/workflows/) and are used to call  a workflow, complete or show a [user task](/studio/workflows-user-task/), show a workflow page. |
-| [Menus](/refguide/menu-widgets/)                        | Contains menu creation widgets. Currently, these widgets can be configured only in Studio Pro. |
+| [Menus](/refguide9/menu-widgets/)                        | Contains menu creation widgets. Currently, these widgets can be configured only in Studio Pro. |
 | Add-ons                                                | Contains all custom widgets previously installed in the app. If widgets cannot be matched to the Marketplace profile they will be shown in the add-ons. |
 | Charts                                                 | Contains different charts. This category consist of the [Marketplace widgets](#app-store-widgets). |
 | Display                                                | Contains widgets which display changing elements on a page, for example a map, or a progress bar. This category consists of the [Marketplace widgets](#app-store-widgets). |

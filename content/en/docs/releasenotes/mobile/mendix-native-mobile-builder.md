@@ -181,7 +181,7 @@ App Center's CodePush OTA page improvements:
 
 * We improved the UX of the App Center's CodePush OTA page.
 * The platform selector will now correctly represent available platforms. Platforms that do not yet have an App Center build setup will be disabled by default. 
-* We added visible links for the App Center apps targeted by each platform. This makes it easier to identify cases where the Mendix Native Mobile bulder does not target the expected apps.
+* We added visible links for the App Center apps targeted by each platform. This makes it easier to identify cases where the Mendix Native Mobile Builder does not target the expected apps.
 * The OTA button is now a callout button that visually summarizes the reasons why a OTA update might not currently be possible.
 
 #### Fixes
@@ -211,7 +211,7 @@ App Center's CodePush OTA page improvements:
 This feature becomes available only for projects using Native Template 5.1.9 or later. For older projects, please update your Native Template.* 
 {{% /alert %}}
 
-Until now, the Native Mobile Builder required at least GitHub to function correctly. With this release, it now possible to use the Mendix Native Mobile Builder to configure your project locally too. For more information on using this feature, see [Build a Mendix Native App Locally](/refguide/mobile/distributing-mobile-apps/building-native-apps/native-build-locally/).
+Until now, the Native Mobile Builder required at least GitHub to function correctly. With this release, it now possible to use the Mendix Native Mobile Builder to configure your project locally too. For more information on using this feature, see [Build a Mendix Native App Locally](/refguide9/mobile/distributing-mobile-apps/building-native-apps/native-build-locally/).
 
 In the wizard, new projects can be configured to use one of 2 build types:  
 
@@ -270,7 +270,7 @@ Research has shown that animal sounds can relieve stress. As we work to simplify
 
 ##### OTA based on App Center CodePush
 
-We added OTA support based on App Center CodePush. Look for it under the Capabilities pages. For more information, see [Updating Native Apps](/refguide/mobile/distributing-mobile-apps/overtheair-updates/).
+We added OTA support based on App Center CodePush. Look for it under the Capabilities pages. For more information, see [Updating Native Apps](/refguide9/mobile/distributing-mobile-apps/overtheair-updates/).
 
 #### Improvements 
 

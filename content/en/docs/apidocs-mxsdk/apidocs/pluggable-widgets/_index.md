@@ -294,4 +294,6 @@ Here is how a caption and description look in Studio Pro:
 * [Pluggable Widget Property Types](/apidocs-mxsdk/apidocs/pluggable-widgets-property-types/)
 * [Preview Appearance APIs for Pluggable Widgets](/apidocs-mxsdk/apidocs/pluggable-widgets-studio-apis/)
 * [Configuration Module API for Pluggable Widgets](/apidocs-mxsdk/apidocs/pluggable-widgets-config-api/)
-* Pluggable Widget API information for [Mendix 8](/apidocs-mxsdk/apidocs/pluggable-parent-8/)
+* Pluggable Widget API information:
+    * [Mendix 9](/apidocs-mxsdk/apidocs/pluggable-parent-9/)
+    * [Mendix 8](/apidocs-mxsdk/apidocs/pluggable-parent-8/)

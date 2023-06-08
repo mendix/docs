@@ -16,7 +16,6 @@ Extend your application model using Java. All functionality and information from
 * [Mendix 10 Runtime API](https://apidocs.rnd.mendix.com/10/runtime/index.html)
 * [Mendix 9 Runtime API](https://apidocs.rnd.mendix.com/9/runtime/index.html)
 * [Mendix 8 Runtime API](https://apidocs.rnd.mendix.com/8/runtime/index.html)
-* [Mendix 7 Runtime API](https://apidocs.rnd.mendix.com/7/runtime/index.html)
 
 ## 3 Read More
 

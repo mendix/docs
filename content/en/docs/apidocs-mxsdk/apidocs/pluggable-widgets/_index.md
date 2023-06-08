@@ -155,10 +155,6 @@ For more complex help pages you can link to a markdown page. For security reason
 
 #### 4.2.2 Toolbox Category {#toolbox-category}
 
-{{% alert color="info" %}}
-This feature was introduced in Mendix Studio Pro v9.4.
-{{% /alert %}}
-
 To provide more clarity for Studio Pro users you can specify a toolbox category for your widgets. When provided, it determines a toolbox category for a widget in Studio Pro. It is possible to specify existing built-in categories such as **Data** or **Input** as well as new arbitrary categories like **Maps**. 
 
 When an existing category is specified, then your widget is placed in it next to existing built-in widgets. When a new category is specified, then your widget placed in that new category. 

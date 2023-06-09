@@ -8,6 +8,8 @@ tags: ["Epics", "Sprint", "Developer Portal"]
 #To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 ---
 
+{{% todo %}}Make sure the URL is logic, and the redirect works if the URL needs to be changed.{{% /todo %}}
+
 ## 1 Introduction
 
 The Epics tool enables your team members to collaborate efficiently during the app development process. It supports the Scrum workflow and Kanban workflow. 

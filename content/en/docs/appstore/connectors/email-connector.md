@@ -277,7 +277,7 @@ This connector contains functionality of sending and receiving emails, so during
 
 On the [Azure portal](https://portal.azure.com/), ensure that you have the following permissions enabled under **API permissions** tab on the sidebar:
 
-{{< figure src="/attachments/appstore/connectors/email-connector/app_permissions.png" >}}
+{{< figure src="/attachments/appstore/connectors/email-connector/app-permissions.png" >}}
 
 #### 4.7.3 Settings in the Microsoft Azure Portal (Client Credential code grant flow)
 
@@ -287,7 +287,7 @@ This connector contains functionality of sending and receiving emails, so Office
 
 * On the [Azure portal](https://portal.azure.com/), ensure that you have the following permissions enabled under **API permissions** tab on the sidebar:
 
-{{< figure src="/attachments/appstore/connectors/email-connector/client_cred_api_permission.png" >}}
+{{< figure src="/attachments/appstore/connectors/email-connector/client-cred-api-permissions.png" >}}
 
 * Admin grant is given on the added API permissions.
 * Tenant admin must register azure application's service principal in Exchange via Exchange Online PowerShell. Steps are mentioned [here] (https://learn.microsoft.com/en-us/exchange/client-developer/legacy-protocols/how-to-authenticate-an-imap-pop-smtp-application-by-using-oauth#register-service-principals-in-exchange)

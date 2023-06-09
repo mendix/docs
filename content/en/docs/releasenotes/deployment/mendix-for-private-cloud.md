@@ -13,6 +13,21 @@ For information on the current status of deployment to Mendix for Private Cloud 
 
 ## 2023
 
+### June 12th, 2023
+
+#### Private Cloud Licensing Manager
+
+* We have introduced [Private Cloud Licensing Manager](/developerportal/deploy/private-cloud-license-manager/) which will provide a repository of offline Mendix licenses to enable you to manage these centrally, and configure automatically the licenses for Mendix Operator and its Runtime.
+
+{{% alert color="info" %}}
+This feature is currently in a Beta release.
+{{% /alert %}}
+
+#### Portal Improvements
+
+* We have added a section in Installation page of Private Cloud Portal which will allow to download the CLI for Private Cloud Licensing Manager.
+* We have added a section in Namespace details page which will provide information on the Operator and Runtime Licenses and their usage claims (only visible when PCLM is configured).
+
 ### May 3rd, 2023
 
 #### Mendix Operator v2.11.0 {#2.11.0}

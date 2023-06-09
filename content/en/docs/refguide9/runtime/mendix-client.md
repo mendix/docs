@@ -100,6 +100,18 @@ This communicates the current state of the app (held in the object cache) to the
 
 To avoid performance issues, the Mendix Client does not send the entire state to the runtime. State handling decides which parts of the state should be sent by analyzing the model during the deployment of the applications.
 
+Determining which parts of the state should be send to the runtime consists of two parts. 
+
+During deployment, all microflows “reachable” from the client are analysed, such as:
+
+- Event handler of entities
+- Microflows called from a nanoflows
+- Microflows called from the page
+
+This analysis is done based on the microflow parameters and their usages throughout the microflow. Any time an association is used in the microflow, the association is marked, and will also be sent along in the request if needed. In some cases, such as Java actions, the analysis is not done as it would be too performance heavy. In that case, all objects associated to the microflow parameters will be sent along.
+
+For other (non-microflow) actions, such as committing or deleting objects, a more simple analysis is performed on the client-side to determine which associations should be sent along.
+
 For more detailed information about state, see this blog: [https://www.mendix.com/blog/the-art-of-state-part-1-introduction-to-the-client-state/](https://www.mendix.com/blog/the-art-of-state-part-1-introduction-to-the-client-state/). This also includes a worked example where you can see, and duplicate for yourself, how state is passed to the Runtime Server.
 
 State handling is also responsible for garbage collection. If you want to know more about this aspect, see this blog: [https://www.mendix.com/blog/the-art-of-state-part-2-garbage-collection/](https://www.mendix.com/blog/the-art-of-state-part-2-garbage-collection/).

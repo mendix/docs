@@ -186,7 +186,7 @@ To move multiple stories, select these stories, choose the category name where t
 
 {{< figure src="/attachments/developerportal/project-management/planning/move-multiple-stories.png" >}}
 
-To [archive](/developerportal/project-management/archive) or delete a story, click the **...** icon at the end of the row, and then select the corresponding option:
+To [archive](/developerportal/project-management/archive/#archive-story) or delete a story, click the **...** icon at the end of the row, and then select the corresponding option:
 
 {{< figure src="/attachments/developerportal/project-management/planning/archive-delete-story-kanban.png" >}}
 

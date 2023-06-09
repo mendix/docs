@@ -5,7 +5,7 @@ weight: 10
 description: "Describes the **Board** page in the Project Management section. This page looks different, depending on if you are working in the Scrum workflow or Kanban workflow. "
 tags: ["Project Management", "Epics", "Sprint", "Board", "Stories", "Developer Portal"]
 ---
-## 1 Introduction {#board}
+## 1 Introduction
 
 The **Board** page gives an overview of all the stories that your team is currently working on.
 
@@ -23,7 +23,7 @@ On the upper-right corner of the page, you can find the following items:
 
 ## 2 Scrum Board vs Kanban Board {#different-boards}
 
-Depending on your settings of [board type](#board-type): Scrum or Kanban, the main area of the board looks different.
+Depending on your settings of board type: Scrum or Kanban, the main area of the board looks different.
 
 ### 2.1 Scrum Board
 
@@ -35,7 +35,7 @@ The main area gives an overview of your current Sprint.
 
 {{% alert color="info" %}}When you commit changes in Studio Pro, you can link your commit to stories of the current Sprint in Epics in the [Commit](/refguide/commit-dialog/) dialog box.{{% /alert %}}
 
-You can edit or end the current Sprint on the [Scrum Planning](#scrum-planning) page.
+You can edit or end the current Sprint on the [Scrum Planning](/developerportal/project-management/planning/#scrum-planning) page.
 
 ### 2.2 Kanban Board
 

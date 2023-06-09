@@ -5,7 +5,7 @@ weight: 40
 description: "Describes the **Archive** page in the Project Management section."
 tags: ["Project Management", "Epics", "Sprint", Archive", "Stories", "Developer Portal"]
 ---
-## I Introduction {#archive}
+## I Introduction
 
 The **Archive** page shows all the archived stories. You can see the following details for an archived story:
 

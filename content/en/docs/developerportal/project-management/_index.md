@@ -22,7 +22,7 @@ In the Project Management section, your team members can collaborate efficiently
 
 Only a Scrum Master can give the team access to an app in the Project Management section. To do so, the Scrum Master must open the app in the [Developer Portal](https://sprintr.home.mendix.com/link/myapps), go to the [Project Management](/developerportal/collaborate/general-settings/#project-management) tab on the **General Settings** page, and click **Switch to Epics**:
 
-{{< figure src="/attachments/developerportal/project-managements/project-management.png" width="600px" >}}
+{{< figure src="/attachments/developerportal/project-management/project-management.png" width="600px" >}}
 
 This gives everyone in the team access to this app in Epics. To give the team access to another app in Epics, the Scrum Master must repeat this procedure.
 
@@ -30,7 +30,7 @@ This gives everyone in the team access to this app in Epics. To give the team ac
 
 Once you have access to an app in Epics, open it in the [Developer Portal](https://sprintr.home.mendix.com/link/myapps) and then go to the [Stories](/developerportal/collaborate/stories/) page. There is a notification at the top of the page where you can click **Check it Out** to open the app in Epics:
 
-{{< figure src="/attachments/developerportal/project-managements/epics-check-it-out.png" >}}
+{{< figure src="/attachments/developerportal/project-management/epics-check-it-out.png" >}}
 
 After you open the app in Epics, you can easily switch to other apps that you have access to. To do so, click the name of the current app on the upper-left corner, and then select a different app from the drop-down list.
 

@@ -5,7 +5,7 @@ weight: 20
 description: "Describes the **Planning** page in the Project Management section. This page looks different, depending on if you are working in the Scrum workflow or Kanban workflow."
 tags: ["Project Management", "Epics", "Sprint", "Planning", "Stories", Developer Portal"]
 ---
-## 1 Introduction {#planning}
+## 1 Introduction
 
 The **Planning** page shows all your stories. At the top of the page, you can find the following items:
 
@@ -50,7 +50,7 @@ If there is an active Sprint, on the upper-left corner, you can find the name of
 
 On the upper-right corner, you can find **End Sprint** and **Edit Sprint**, or **Start Sprint**:
 
-If there is an active Sprint, you can find **End Sprint** and **Edit Sprint**. When you end a Sprint, the system shows you how many stories were completed in that Sprint. All the completed stories are [archived](#archive) automatically, and you can decide where the unfinished stories should go. 
+If there is an active Sprint, you can find **End Sprint** and **Edit Sprint**. When you end a Sprint, the system shows you how many stories were completed in that Sprint. All the completed stories are [archived](/developerportal/project-management/archive/) automatically, and you can decide where the unfinished stories should go. 
 
 If there is no active Sprint, you can find **Start Sprint**. Once a Sprint is created, all the items in the **Next Sprint** are moved to the **Active Sprint** automatically. 
 
@@ -86,7 +86,7 @@ To change the tag color, click the current color, and then select the new color 
 
 ### 3.2 Board Type {#board-type}
 
-On this tab, you can switch between a Scrum workflow and Kanban workflow. The workflow you select determines how the [Board](#different-boards) page and the [Planning](#different-plannings) page look.
+On this tab, you can switch between a Scrum workflow and Kanban workflow. The workflow you select determines how the [Board](/developerportal/project-management/board/#different-boards) page and the [Planning](#different-plannings) page look.
 
 ### 3.3 Toast Settings
 
@@ -122,11 +122,11 @@ To migrate from Stories to Epics, follow these steps:
 
 These are the new locations of migrated stories:
 
-| From Stories                    | To Epics                                   | Additional Information                                    |
-| ------------------------------- | ------------------------------------------ | --------------------------------------------------------- |
-| **Active Sprint**               | **Active Sprint** in [Planning](#planning) | All stories are migrated to **To Do** swimlane with tags. |
-| Rest of the Sprints and backlog | **Refinement** in [Planning](#planning)    |                                                           |
-| Archived stories                | [Archive](#archive)                        |                                                           |
+| From Stories                    | To Epics                                                     | Additional Information                                    |
+| ------------------------------- | ------------------------------------------------------------ | --------------------------------------------------------- |
+| **Active Sprint**               | **Active Sprint** on the **Planning** page                   | All stories are migrated to **To Do** swimlane with tags. |
+| Rest of the Sprints and backlog | **Refinement** on the **Planning** page                      |                                                           |
+| Archived stories                | Archived stories on the [Archive](/developerportal/project-management/archive/) page |                                                           |
 
 These are the new details of migrated stories:
 
@@ -144,7 +144,7 @@ Here is the outcome after migration:
 
 {{< figure src="/attachments/developerportal/project-management/planning/data-migration-example-epics.png" >}}
 
-Beside the story details above, the remaining details for your stories are migrated according to their equivalents in [Epics](#epics).
+Beside the story details above, the remaining details for your stories are migrated according to their equivalents in the [Project Management](/developerportal/project-management/) section in the Developer Portal.
 
 {{% alert color="warning" %}}In [Stories](/developerportal/collaborate/stories/), files are associated with Comments, not with Stories. In Epics, files can only be associated with Stories, not with Comments. Therefore, files migrated from Stories will lose their Comment context.{{% /alert %}}
 
@@ -176,7 +176,7 @@ To select a story, select the checkbox for the story when the mouse pointer is a
 
 {{% alert color="info" %}}You can also use keyboard shortcuts to select multiple stories. For more information, see the [Keyboard Shortcuts](#keyboard-shortcuts) section.{{% /alert %}}
 
-To open the [story details](#story-details) page, click the row of the story when the mouse pointer is an open hand:
+To open the [story details](/developerportal/project-management/board/#story-details) page, click the row of the story when the mouse pointer is an open hand:
 
 {{< figure src="/attachments/developerportal/project-management/planning/open-hand.png" width="30px" >}}
 

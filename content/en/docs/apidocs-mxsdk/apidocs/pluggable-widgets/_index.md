@@ -3,15 +3,19 @@ title: "Pluggable Widgets API"
 url: /apidocs-mxsdk/apidocs/pluggable-widgets/
 category: "API Documentation"
 description: "This API helps you to understand pluggable widgets, how they extend app  functionality, and how they can be built to interact with Mendix's APIs."
+no_list: false
+description_list: true
 weight: 80
 tags: ["Widget", "Pluggable", "Custom", "JavaScript", "React"]
-aliases:
-    - /apidocs-mxsdk/apidocs/pluggable-parent-9
 ---
 
 ## 1 Introduction
 
-Mendix comes with a wide variety of [Widgets](/refguide/pages/#widgets-categories), but sometimes your app requires a widget outside of this set. To support a more  advanced UI pattern or create app-specific interactions, you will need to make your own pluggable widget. Your new pluggable widget can be used while modeling pages alongside standard Mendix components. It can also be shared between multiple apps and distributed through the [Marketplace](/appstore/).
+Mendix comes with a wide variety of [Widgets](/refguide/pages/#widgets-categories), but sometimes your app requires a widget outside of this set. To support a more  advanced UI pattern or create app-specific interactions, you will need to make your own pluggable widget. This documentation will help you achieve that in Studio Pro 10. See these links for other versions' documentation:
+* [Mendix 9](/apidocs-mxsdk/apidocs/pluggable-parent-9/)
+* [Mendix 8](/apidocs-mxsdk/apidocs/pluggable-parent-8/)
+
+Your new pluggable widget can be used while modeling pages alongside standard Mendix components. It can also be shared between multiple apps and distributed through the [Marketplace](/appstore/).
 
 You are in control of a pluggable widget's appearance and behavior. Customize a pluggable widget by implementing a widget as a plain [React](https://reactjs.org/) component written in JavaScript or TypeScript. The component will be rendered in a Mendix app, and will be able to use APIs provided by Mendix to interact with that app.
 
@@ -287,13 +291,4 @@ Here is how a caption and description look in Studio Pro:
 
 {{< figure src="/attachments/apidocs-mxsdk/apidocs/pluggable-widgets/card-description.png" alt="description" >}}
 
-## 7 Read More
-
-* [Client APIs Available to Pluggable Widgets](/apidocs-mxsdk/apidocs/pluggable-widgets-client-apis/)
-* [Declaring Native Dependencies for Pluggable Widgets](/apidocs-mxsdk/apidocs/pluggable-widgets-native-dependencies/)
-* [Pluggable Widget Property Types](/apidocs-mxsdk/apidocs/pluggable-widgets-property-types/)
-* [Preview Appearance APIs for Pluggable Widgets](/apidocs-mxsdk/apidocs/pluggable-widgets-studio-apis/)
-* [Configuration Module API for Pluggable Widgets](/apidocs-mxsdk/apidocs/pluggable-widgets-config-api/)
-* Pluggable Widget API information:
-    * [Mendix 9](/apidocs-mxsdk/apidocs/pluggable-parent-9/)
-    * [Mendix 8](/apidocs-mxsdk/apidocs/pluggable-parent-8/)
+## 7 Documents in this Section

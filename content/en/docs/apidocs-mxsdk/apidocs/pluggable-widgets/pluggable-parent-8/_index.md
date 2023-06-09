@@ -2,7 +2,7 @@
 title: "Mendix 8"
 url: /apidocs-mxsdk/apidocs/pluggable-parent-8/
 weight: 60
-description: Information on Pluggable Widget API.
+description: Information on Pluggable Widget API for Mx8.
 tags: ["API", "pluggable","widget"]
 ---
 

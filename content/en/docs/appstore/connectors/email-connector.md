@@ -17,6 +17,8 @@ The Email Connector includes the following features:
 
 * Configuration of multiple email accounts
     * Supports basic authentication and [creating an account with OAuth 2.0](#create-oauth) to configure Microsoft Azure AD accounts.
+      * Auth code grant flow and
+      * Client credentials grant flow are supported. 
     * Supports shared mailboxes using basic and OAuth 2.0 authentication.
 * Digital signatures and encryption
 * Email templates
@@ -80,7 +82,7 @@ When you run your app to use this module for the first time, and earlier data is
 2. Choose if you want to either configure the **Primary** account or **Shared Mailbox**.
 3. Choose the protocols for sending and receiving emails.
 
-You can add and configure an email account in the Email Connector using basic authentication and OAuth 2.0 for Microsoft Azure AD accounts. You can also add and configure "Shared Mailbox" using Basic & OAuth 2.0 authentitcation. To configure OAuth 2.0 accounts, see [Creating an Account Using Microsoft Azure OAuth 2.0](#create-oauth). The account configuration wizard supports automatic and manual configurations for Sending and Receiving emails.
+You can add and configure an email account in the Email Connector using basic authentication and OAuth 2.0 for Microsoft Azure AD accounts. You can also add and configure "Shared Mailbox" using Basic & OAuth 2.0 authentitcation; Auth code grant flow and Client credential grant flow are supported. To configure OAuth 2.0 accounts, see [Creating an Account Using Microsoft Azure OAuth 2.0](#create-oauth). The account configuration wizard supports automatic and manual configurations for Sending and Receiving emails.
 
 {{% alert color="info" %}}
 You can configure either your primary email account or shared mailbox in the wizard, but not both (primary and shared) at the same time. To add a primary and a shared mailbox, go through the wizard twice; first to configure your primary account, and then to configure the shared mailbox. You can choose to only configure a shared mailbox, although your primary email account is needed to configure it.
@@ -254,14 +256,20 @@ If no email accounts are configured then you can create new OAuth configutation 
 
 #### 4.7.1 OAuth Provider Configuration Details {#oauth-config-details}
 
-To configure OAuth provider, the following details are required:
+To configure OAuth provider for Auth code grant flow, the following details are required:
 
 * **Client ID** – available on the [Azure portal](https://portal.azure.com/) once you have registered your app
 * **Client Secret** – available on the [Azure portal](https://portal.azure.com/) once you have registered your app
-* **Callback operation path** – enter any string, based on which the callback URL will be auto-generated
+* **Callback Path** – enter any string, based on which the callback URL will be auto-generated
 * **Callback URL** – the URL where the OAuth provider will redirect with the authorization code, and configured on Azure portal as callback/redirect URI
 
-#### 4.7.2 Settings in the Microsoft Azure Portal
+To configure OAuth provider for Client Credential code grant flow, the following details are required:
+* **Client ID** – available on the [Azure portal](https://portal.azure.com/) once you have registered your app
+* **Client Secret** – available on the [Azure portal](https://portal.azure.com/) once you have registered your app
+* **Tenant ID** – available on the [Azure portal](https://portal.azure.com/) once you have registered your app
+
+ 
+#### 4.7.2 Settings in the Microsoft Azure Portal (Auth code grant flow)
 
 To register your app in the Azure Portal, follow Microsoft's Tutorial [Register an app with Azure Active Directory](https://docs.microsoft.com/en-us/power-apps/developer/data-platform/walkthrough-register-app-azure-active-directory). While registering, set the redirect/callback URI as **Callback URL** mentioned while configuring [OAuth Provider Configuration Details](#oauth-config-details).
 
@@ -270,6 +278,19 @@ This connector contains functionality of sending and receiving emails, so during
 On the [Azure portal](https://portal.azure.com/), ensure that you have the following permissions enabled under **API permissions** tab on the sidebar:
 
 {{< figure src="/attachments/appstore/connectors/email-connector/app_permissions.png" >}}
+
+#### 4.7.3 Settings in the Microsoft Azure Portal (Client Credential code grant flow)
+
+To register your app in the Azure Portal, follow Microsoft's Tutorial [Register an app with Azure Active Directory](https://docs.microsoft.com/en-us/power-apps/developer/data-platform/walkthrough-register-app-azure-active-directory).
+
+This connector contains functionality of sending and receiving emails, so Office 365 Exchange Online related APIs need to be given permission along with Admin consent.
+
+* On the [Azure portal](https://portal.azure.com/), ensure that you have the following permissions enabled under **API permissions** tab on the sidebar:
+
+{{< figure src="/attachments/appstore/connectors/email-connector/client_cred_api_permission.png" >}}
+
+* Admin grant is given on the added API permissions.
+* Tenant admin must register azure application's service principal in Exchange via Exchange Online PowerShell. Steps are mentioned [here] (https://learn.microsoft.com/en-us/exchange/client-developer/legacy-protocols/how-to-authenticate-an-imap-pop-smtp-application-by-using-oauth#register-service-principals-in-exchange)
 
 ### 4.8 Queuing Emails
 

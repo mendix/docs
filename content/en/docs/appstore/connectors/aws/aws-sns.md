@@ -94,8 +94,6 @@ To subscribe to a topic in your AWS environment and receive email notifications 
 
     {{< figure src="/attachments/appstore/connectors/aws-sns/sns_subscribe_aws_region.png" alt="Selecting the AWS region">}}
 
-    For a list of available AWS regions, see [AWS_Region](#aws-region).
-
 6. In the **App Explorer**, in the **AmazonSNSConnector** > **ConnectionDetails** section, find the **Credentials_GenerateFromConstants** activity.
 7. Drag the **Credentials_GenerateFromConstants** activity onto the microflow you are working on, and position it between the microflow start event and the **Subscribe** activity.
 
@@ -133,8 +131,6 @@ To be able to send a message to a topic so that all endpoints subscribed to that
     3. In the autocomplete dialog, select **AmazonSNSConnector.AWS_Region**, then type *.* and select your AWS region from the list.
 
         {{< figure src="/attachments/appstore/connectors/aws-sns/sns_publishbatch_aws_region.png" alt="Selecting the AWS region">}}
-
-        For a list of available AWS regions, see [AWS_Region](#aws-region).
 
 6. In the **App Explorer**, in the **AmazonSNSConnector** > **ConnectionDetails** section, find the **Credentials_GenerateFromConstants** activity.
 7. Drag the **Credentials_GenerateFromConstants** activity onto the microflow you are working on, and position it between the microflow start event and the **PublishBatch** activity.

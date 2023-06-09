@@ -68,7 +68,7 @@ You can click a story card to view the [story details](#story-details).
 
 When you click the card of a story, the story details dialog box opens.
 
-On the upper-right corner, you can click the link icon to copy the link to the story. Click the  ellipsis (**...**) icon to open a pop-up menu that allows you to clone, [archive](/developerportal/project-management/archive/#archive-story), or delete the story.
+On the upper-right corner, you can click the link icon to copy the link to the story. Click the  ellipsis (**...**) icon to open a pop-up menu that allows you to clone, archive, or delete the story.
 
 {{< figure src="/attachments/developerportal/project-management/board/story-details-page-icons.png" >}}
 
@@ -104,7 +104,7 @@ The **Board** page offers different features to accommodate your Scrum workflow 
 
 ### 3.1 Scrum Board
 
-If your [board type](/developerportal/planning/#board-type) is **Scrum**, you can find the features below which accommodate your workflow.
+If your [board type](/developerportal/project-management/planning/#board-type) is **Scrum**, you can find the features below which accommodate your workflow.
 
 The upper-left corner of the page shows the name of the current Sprint, when the Sprint ends, and how many stories and points it has, as well as the goal of the Sprint.
 
@@ -116,7 +116,7 @@ The main area of the page gives an overview of all the stories in your current S
 
 ### 3.2 Kanban Board
 
-If your [board type](/developerportal/planning/#board-type) is **Kanban**, the upper-left corner of the page shows the number of stories and the total points. 
+If your [board type](/developerportal/project-management/planning/#board-type) is **Kanban**, the upper-left corner of the page shows the number of stories and the total points. 
 
 {{< figure src="/attachments/developerportal/project-management/board/kanban-stories-story-points.png" >}}
 

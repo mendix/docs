@@ -1900,7 +1900,7 @@ If you would like to see the license payload, click **Show License Payload**.
 If you want to use the Private Cloud License Manager, the Mendix Operator must be in version 2.11.0 or later.
 {{% /alert %}}
 
-For more information, see [Private Cloud License Manager](/developerportal/deploy/private-cloud-cluster/private-cloud-license-manager).
+For more information, see [Private Cloud License Manager](/developerportal/deploy/private-cloud-cluster/private-cloud-license-manager/).
 
 ## 8 Current Limitations
 

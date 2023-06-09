@@ -1,12 +1,9 @@
 ---
-title: "Pluggable Widget Property Types"
-url: /apidocs-mxsdk/apidocs/pluggable-widgets-property-types/
-description: A guide for understanding pluggable widgets' property types in Mx10.
+title: "Property Types – Mx9"
+url: /apidocs-mxsdk/apidocs/pluggable-widgets-property-types-9/
+description: A guide for understanding pluggable widgets' property types in Studio Pro Mendix 9.
 tags: ["Widget", "Pluggable", "Custom", "JavaScript", "React"]
-
 weight: 10
-aliases:
-- /apidocs-mxsdk/apidocs/property-types-pluggable-widgets
 ---
 
 ## 1 Introduction
@@ -519,7 +516,7 @@ When a `dataSource` attribute is specified and configured by the user, it is pas
 |--------------|----------|----------------|----------------------------------------------------------------------------------------------------------------------------------|
 | `type`       | Yes      | String         | Must be `attribute`                                                                                                              |
 | `key`        | Yes      | String         | See [key](#key)                                                                                                                  |
-| `onChange`   | No       | Property Path  | The path to an [`action`](#action) property that will be run by the Mendix Platform when the value is changed by the widget |
+| `onChange`   | No       | Property Path  | The path to an [`action`](#action) property that will be executed by the Mendix Platform when the value is changed by the widget |
 | `required`   | No       | Boolean        | Decides if the property must be specified by the user, `true` by default                                                         |
 | `dataSource` | No       | Property Path  | Specifies the path to a [`datasource`](#datasource) property linked to this attribute property                                   |
 
@@ -588,7 +585,7 @@ When a `dataSource` attribute is specified and configured by the user, it is pas
 |---------------------|----------|----------------|----------------------------------------------------------------------------------------------------------------------------------|
 | `type`              | Yes      | String         | Must be `association`                                                                                                            |
 | `key`               | Yes      | String         | See [key](#key)                                                                                                                  |
-| `onChange`          | No       | Property Path  | The path to an [`action`](#action) property that will be run by the Mendix Platform when the value is changed by the widget |
+| `onChange`          | No       | Property Path  | The path to an [`action`](#action) property that will be executed by the Mendix Platform when the value is changed by the widget |
 | `required`          | No       | Boolean        | Decides if the property must be specified by the user, `true` by default                                                         |
 | `selectableObjects` | Yes      | Property Path  | Specifies the path to a [`datasource`](#datasource) property that will provide selectable objects for the association            |
 | `dataSource`        | No       | Property Path  | Specifies the path to a [`datasource`](#datasource) property linked to this association property                                 |
@@ -789,6 +786,4 @@ The editability property allows a pluggable widget to have an editable configura
 
 ## 6 Read More
 
-* [Pluggable Widgets API](/apidocs-mxsdk/apidocs/pluggable-widgets/)
-* [Client APIs Available to Pluggable Widgets](/apidocs-mxsdk/apidocs/pluggable-widgets-client-apis/)
-* [Build Pluggable Widgets](/howto/extensibility/pluggable-widgets/)
+* [Mendix 9](/apidocs-mxsdk/apidocs/pluggable-parent-9/) Pluggable Widget API Documentation

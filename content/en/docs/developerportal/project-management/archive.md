@@ -23,7 +23,7 @@ You can search a story in the search box, based on story title, tags, epic name,
 
 You can [export all the archived stories](#export-archived-stories) to an Excel file.
 
-### 1.1 Archiving a Story
+### 1.1 Archiving a Story {#archive-story}
 
 Every time you complete a Sprint, all the stories that are **Done** are archived automatically. You can also archive a story and a swimlane manually by doing the following:
 

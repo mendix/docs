@@ -104,7 +104,7 @@ On this tab, you can migrate all or part of your content from [Stories](/develop
 
 To migrate from Stories to Epics, follow these steps:
 
-1. Go to [Planning](#planning) and click the settings icon on the upper-right side of the screen.
+1. Click the settings icon on the upper-right side of the screen.
 
 2. Go to the **Data Migration** tab. Be sure to read the information before you click **Start Migration**:
 
@@ -186,7 +186,7 @@ To move multiple stories, select these stories, choose the category name where t
 
 {{< figure src="/attachments/developerportal/project-management/planning/move-multiple-stories.png" >}}
 
-To [archive](#archive) or delete a story, click the **...** icon at the end of the row, and then select the corresponding option:
+To [archive](/developerportal/project-management/archive) or delete a story, click the **...** icon at the end of the row, and then select the corresponding option:
 
 {{< figure src="/attachments/developerportal/project-management/planning/archive-delete-story-kanban.png" >}}
 

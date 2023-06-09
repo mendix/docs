@@ -55,7 +55,7 @@ You can add more custom swimlanes, such as **In Progress**, **In Review**, and *
 
 {{< figure src="/attachments/developerportal/project-management/board/add-swimlane.png" width="500px" >}}
 
-You can rename, [archive](/developerportal/project-management/archive), or delete a swimlane as follows: click the **...** icon on the upper-right corner of the swimlane, and then select the corresponding option.
+You can rename, [archive](/developerportal/project-management/archive/#archive), or delete a swimlane as follows: click the **...** icon on the upper-right corner of the swimlane, and then select the corresponding option.
 
 {{< figure src="/attachments/developerportal/project-management/board/rename-archive-delete-swimlane.png" >}}
 
@@ -85,7 +85,7 @@ A story card shows the following details:
 * ⑧ Points of the story
 * ⑨ To whom the story is assigned
 
-You can [archive](/developerportal/project-management/archive) or delete a story as follows: click the **...** icon on the upper-right corner of the card, and then select the corresponding option:
+You can [archive](/developerportal/project-management/archive/#archive) or delete a story as follows: click the **...** icon on the upper-right corner of the card, and then select the corresponding option:
 
 {{< figure src="/attachments/developerportal/project-management/board/archive-delete-story.png" >}}
 
@@ -97,7 +97,7 @@ You can click a story card to view the [story details](#story-details).
 
 When you click the card of a story, the story details dialog box opens.
 
-On the upper-right corner, you can click the link icon to copy the link to the story. Click the  ellipsis (**...**) icon to open a pop-up menu that allows you to clone, [archive](/developerportal/project-management/archive), or delete the story.
+On the upper-right corner, you can click the link icon to copy the link to the story. Click the  ellipsis (**...**) icon to open a pop-up menu that allows you to clone, [archive](/developerportal/project-management/archive/#archive), or delete the story.
 
 {{< figure src="/attachments/developerportal/project-management/board/story-details-page-icons.png" >}}
 

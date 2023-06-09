@@ -3,11 +3,13 @@ title: "Epics"
 url: /developerportal/project-management/epics/
 weight: 30
 description: "Describes the **Epics** page in the Project Management section."
-tags: ["Project Management", Epics", "Sprint", "Stories", "Developer Portal"]
+tags: ["Project Management", "Epics", "Sprint", "Stories", "Developer Portal"]
 ---
 ## 1 Introduction
 
-The **Epics** page gives an overview of all the epics for your current app. Each row shows the following details about an epic:
+The **Epics** page gives an overview of all the epics for your current app. 
+
+Each row shows the following details about an epic:
 
 * Unique ID, which consists of a prefix and a number
 * Title
@@ -19,6 +21,8 @@ The **Epics** page gives an overview of all the epics for your current app. Each
 {{< figure src="/attachments/developerportal/project-management/epics/epic.png" >}}
 
 Clicking a row opens the [epic details](#epic-details) dialog box.
+
+Clicking the **Create Epics** button on the upper-right corner enables you create a new epic.
 
 ##  2 Epic Details {#epic-details}
 

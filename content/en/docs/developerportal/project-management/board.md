@@ -7,47 +7,18 @@ tags: ["Project Management", "Epics", "Sprint", "Board", "Stories", "Developer P
 ---
 ## 1 Introduction
 
-The **Board** page gives an overview of all the stories that your team is currently working on.
+The **Board** page gives an overview of all the stories that your team is currently working on. The stories are groups in different swimlanes based on their status.
 
 On the upper-right corner of the page, you can find the following items:
 
-{{< figure src="/attachments/developerportal/project-management/board/create-epic-story-search.png" >}}
-
-* **Project Buzz**  – directs you to the [Buzz](/developerportal/collaborate/buzz/#app-buzz) page of the app
-
-* **Create Epic** – opens a dialog box where you an create an epic
-
-* **Create Story** – opens a dialog box where you can create a story
+* **Create Story** – Clicking this enables you to create a new story.
+* Ellipsis (**...**) –  – Clicking this shows the following items:
+  * **Create Epic**  – Clicking this enables you to create a new epic.
+  * **Project Buzz**  – Clicking this brings you to the [Buzz](/developerportal/collaborate/buzz/#app-buzz) page of the app
 
 * Search box – enables searching stories based on story title, tags, epic name, assignee (and unassigned stories), and story ID.
 
-## 2 Scrum Board vs Kanban Board {#different-boards}
-
-Depending on your settings of board type: Scrum or Kanban, the main area of the board looks different.
-
-### 2.1 Scrum Board
-
-If you work with the Scrum board, on the upper-left corner, you can find the name of the Sprint, when it ends, and how many stories and points it has. The area right below shows the goal of the current Sprint.
-
-{{< figure src="/attachments/developerportal/project-management/board/sprint-goal.png" >}}
-
-The main area gives an overview of your current Sprint. 
-
-{{% alert color="info" %}}When you commit changes in Studio Pro, you can link your commit to stories of the current Sprint in Epics in the [Commit](/refguide/commit-dialog/) dialog box.{{% /alert %}}
-
-You can edit or end the current Sprint on the [Scrum Planning](/developerportal/project-management/planning/#scrum-planning) page.
-
-### 2.2 Kanban Board
-
-If you work with the Kanban board, the upper-left corner of the page shows the number of stories and the total points. 
-
-{{< figure src="/attachments/developerportal/project-management/board/stories-story-points.png" >}}
-
-The main area gives an overview of all the stories that your team is working on. 
-
-## 3 Swimlanes
-
-In the main area of the board, the stories are grouped into different swimlanes based on their status. 
+## 2 Swimlanes
 
 The two default swimlanes are **To Do** and **Done**. 
 
@@ -55,7 +26,7 @@ You can add more custom swimlanes, such as **In Progress**, **In Review**, and *
 
 {{< figure src="/attachments/developerportal/project-management/board/add-swimlane.png" width="500px" >}}
 
-You can rename, [archive](/developerportal/project-management/archive/#archive-story), or delete a swimlane as follows: click the **...** icon on the upper-right corner of the swimlane, and then select the corresponding option.
+You can rename, archive, or delete a swimlane as follows: click the **...** icon on the upper-right corner of the swimlane, and then select the corresponding option.
 
 {{< figure src="/attachments/developerportal/project-management/board/rename-archive-delete-swimlane.png" >}}
 
@@ -67,7 +38,7 @@ However, it is not possible to do the following actions:
 
 You can move a swimlane by dragging it to the new location.
 
-### 3.1 Story Cards
+### 2.1 Story Cards
 
 Each card in a swimlane represents a story:
 
@@ -85,7 +56,7 @@ A story card shows the following details:
 * ⑧ Points of the story
 * ⑨ To whom the story is assigned
 
-You can [archive](/developerportal/project-management/archive/#archive-story) or delete a story as follows: click the **...** icon on the upper-right corner of the card, and then select the corresponding option:
+You can [archive](/developerportal/project-management/archive/) or delete a story as follows: click the **...** icon on the upper-right corner of the card, and then select the corresponding option:
 
 {{< figure src="/attachments/developerportal/project-management/board/archive-delete-story.png" >}}
 
@@ -93,7 +64,7 @@ You can move a card within a swimlane or across swimlanes. To do so, drag the ca
 
 You can click a story card to view the [story details](#story-details).
 
-### 3.2 Story Details {#story-details}
+### 2.2 Story Details {#story-details}
 
 When you click the card of a story, the story details dialog box opens.
 
@@ -125,4 +96,28 @@ The story details dialog box shows the following items:
 * **Attached Files** – You can add attached files by clicking **+**.
 * **Comment** – You can type your comment in the text box and then click **Post Your Comments** to save and post the comment.
 
-{{% alert color="info" %}}You need to click **Save Story** at the bottom to save any change.{{% /alert %}}
+{{% alert color="info" %}}You can also edit the story in this story details dialog box. If you make any change, click **Save Story** at the bottom to save it.{{% /alert %}}
+
+## 3 Scrum Board vs Kanban Board {#different-boards}
+
+The **Board** page offers different features to accommodate your Scrum workflow and Kanban workflow. Depending on your settings of board type – Scrum or Kanban, the **Board** page looks a bit different.
+
+### 3.1 Scrum Board
+
+If your [board type](/developerportal/planning/#board-type) is **Scrum**, you can find the features below which accommodate your workflow.
+
+The upper-left corner of the page shows the name of the current Sprint, when the Sprint ends, and how many stories and points it has, as well as the goal of the Sprint.
+
+{{< figure src="/attachments/developerportal/project-management/board/scrum-board.png" >}}
+
+The main area of the page gives an overview of all the stories in your current Sprint. When you commit changes in Studio Pro, you can link your commit to stories of the current Sprint in the [Commit](/refguide/commit-dialog/) dialog box.
+
+{{% alert color="info" %}}To edit or end the current Sprint, you should go to the [Scrum Planning](/developerportal/project-management/planning/#scrum-planning) page, click the Ellipsis (**...**) button on the upper-right corner, and select the corresponding item{{% /alert %}}
+
+### 3.2 Kanban Board
+
+If your [board type](/developerportal/planning/#board-type) is **Kanban**, the upper-left corner of the page shows the number of stories and the total points. 
+
+{{< figure src="/attachments/developerportal/project-management/board/kanban-stories-story-points.png" >}}
+
+The main area gives an overview of all the stories that your team is working on. 

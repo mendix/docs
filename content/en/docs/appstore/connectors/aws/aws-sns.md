@@ -355,9 +355,9 @@ The input and output for this service are shown in the table below:
  
 To receive messages published to a topic, you must subscribe an endpoint to the topic. When you subscribe an endpoint to a topic, the endpoint begins to receive messages published to the associated topic. The supported endpoint types are email, json-email, SMS, and URL.
 
-Before messages are sent, the subscription might have to be confirmed. For email-type endpoints, this requires the end-user to click the confirmation link in an email. For URL-type endpoints, a short-lived token is sent to the endpoint. This token has to be used in the `ConfirmSubscription` action.
+Before messages are sent, the subscription might have to be confirmed. For email-type endpoints, this requires the end-user to click the confirmation link in an email. For URL-type endpoints, a short-lived token is sent to the endpoint. This token has to be used in the `ConfirmSubscription` action. For more information, see [Subscribing to an Amazon SNS topic](https://docs.aws.amazon.com/sns/latest/dg/sns-create-subscribe-endpoint-to-topic.html).
 
-For more information, see [Subscribing to an Amazon SNS topic](https://docs.aws.amazon.com/sns/latest/dg/sns-create-subscribe-endpoint-to-topic.html).
+A Filter Policy can also be set on a subscription to filter on the messages the subscription will receive. For more information, see [Amazon SNS message filtering](https://docs.aws.amazon.com/sns/latest/dg/sns-message-filtering.html) and [Filter policy constraints](https://docs.aws.amazon.com/sns/latest/dg/subscription-filter-policy-constraints.html).
 
 The input and output for this service are shown in the table below:
  

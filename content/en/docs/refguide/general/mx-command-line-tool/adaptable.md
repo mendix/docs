@@ -30,7 +30,7 @@ In case of errors, the exit code consists of three digits `XYZ`:
 
 For exit code examples, refer to the specific commands below.
 
-## 2 mx show-app-version Command {#mx show-app-version}
+## 2 mx show-app-version Command {#show-app-version}
 
 The `mx show-app-version` command enables seeing the [publisher-side](/appstore/creating-content/sol-solutions-guide/) version of your solution (meaning, the version of the solution that you develop) and the [consumer-side](/appstore/creating-content/sol-solutions-impl/) version of the solution package that your app is based on (meaning, the version of the solution package when you consumed the solution).
 
@@ -70,7 +70,7 @@ This table shows the return codes and their description:
 | 315 | If `-b` was specified, but the app is not based on a solution.  |
 | 313 | If -b was not specified, but distribution as a solution is not enabled for the app. |
 
-## 3 mx set-app-version Command {#mx set-app-version}
+## 3 mx set-app-version Command {#set-app-version}
 
 The `mx set-app-version` command enables setting the version of your [solution](/appstore/creating-content/sol-solutions-guide/) when building it.
 

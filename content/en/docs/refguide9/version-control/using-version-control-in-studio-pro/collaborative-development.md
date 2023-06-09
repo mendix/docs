@@ -54,7 +54,7 @@ The developer works on the app in Studio. They start with the app in state 1, th
 
 Multiple users can view the app in Studio at the same time, but only one Studio user can edit it and other Studio users are in read-only mode. 
 
-### 2.4 Update/Pull Studio Pro Working Copy
+### 2.4 Pull Studio Pro Working Copy
 
 The developer using Studio Pro wants to include the changes made by the developer using Studio. They choose to update (for SVN) or pull (for Git) their working copy.
 

@@ -1,17 +1,17 @@
 ---
 title: "Apps"
-url: //appstore/partner-solutions/apd/rg-three-apps/
+url: /appstore/partner-solutions/apd/rg-three-apps/
 ---
 
 ## 1 Apps Overview
 
 The homepage of APD displays the list of licensed applications from the Mendix [Developer Portal](/developerportal/) in alphabetical order.
 
-{{< figure src="/attachments//appstore/partner-solutions/apd/rg-apd/rg-three-apd/rg-three-apps/ProjectsDashboard.png" >}}
+{{< figure src="/attachments/appstore/partner-solutions/apd/rg-apd/rg-three-apd/rg-three-apps/ProjectsDashboard.png" >}}
 
 It is possible to search on an app's name or select one from the overview directly.
 
-Selecting an app in the overview displays the overview of the [Environments](//appstore/partner-solutions/apd/rg-three-environments/) for that app.
+Selecting an app in the overview displays the overview of the [Environments](/appstore/partner-solutions/apd/rg-three-environments/) for that app.
 
 In order to find a specific application faster, it is possible to mark it as a favorite by clicking the star icon on the application tile. Favorite applications are shown first in the overview.
 
@@ -21,31 +21,31 @@ In case an application is not visible in this overview, click **Can’t find you
 
 APD has several tour guides and videos to help you navigate through APD to perform certain tasks. These can be accessed by clicking the documentation icon next to your profile image and selecting **Tour**:
 
-{{< figure src="/attachments//appstore/partner-solutions/apd/rg-apd/rg-three-apd/rg-three-apps/Documentation.png" >}}
+{{< figure src="/attachments/appstore/partner-solutions/apd/rg-apd/rg-three-apd/rg-three-apps/Documentation.png" >}}
 
 {{% alert color="info" %}}
 By default, APD displays the tour guides and videos upon login for new users.
 {{% /alert %}}
 
-{{< figure src="/attachments//appstore/partner-solutions/apd/rg-apd/rg-three-apd/rg-three-apps/Tour.png" >}}
+{{< figure src="/attachments/appstore/partner-solutions/apd/rg-apd/rg-three-apd/rg-three-apps/Tour.png" >}}
 
 When starting a tour, a tooltip will appear throughout the APD application with instructions to follow.
 
-{{< figure src="/attachments//appstore/partner-solutions/apd/rg-apd/rg-three-apd/rg-three-apps/TourStep.png" >}}
+{{< figure src="/attachments/appstore/partner-solutions/apd/rg-apd/rg-three-apd/rg-three-apps/TourStep.png" >}}
 
 ## 3 Profile Menu and User Settings
 
 In the profile menu, you can see links to your [Mendix Profile](/developerportal/community-tools/mendix-profile/) and also the user settings for APD:
 
-{{< figure src="/attachments//appstore/partner-solutions/apd/rg-apd/rg-three-apd/rg-three-apps/profile_menu.png" >}}
+{{< figure src="/attachments/appstore/partner-solutions/apd/rg-apd/rg-three-apd/rg-three-apps/profile_menu.png" >}}
 
 In the user settings, you can configure the home page to be one of the following:
 
 * All your apps (if both drop-down menus are empty)
-* A specific app on the [Environments](//appstore/partner-solutions/apd/rg-three-environments/) overview if an app is selected and the **Environment** drop-down menu is empty
+* A specific app on the [Environments](/appstore/partner-solutions/apd/rg-three-environments/) overview if an app is selected and the **Environment** drop-down menu is empty
 * A specific environment of a specific app
 
-{{< figure src="/attachments//appstore/partner-solutions/apd/rg-apd/rg-three-apd/rg-three-apps/user_settings.png" >}}
+{{< figure src="/attachments/appstore/partner-solutions/apd/rg-apd/rg-three-apd/rg-three-apps/user_settings.png" >}}
 
 These are the settings available on the **User settings** dialog box:
 
@@ -54,7 +54,7 @@ These are the settings available on the **User settings** dialog box:
 * **Statistics period** – determines if the statistics by default open with hourly or daily data
 * **Time zone** – determines your time zone for the proper representation of date/time information
 
-Clicking **Delete account** deletes your account, including the [Mendix Studio Pro environments](//appstore/partner-solutions/apd/rg-three-environments/) belonging to your account. After the deletion, you will navigate to the Mendix Developer Portal. Apps are not deleted at this time.
+Clicking **Delete account** deletes your account, including the [Mendix Studio Pro environments](/appstore/partner-solutions/apd/rg-three-environments/) belonging to your account. After the deletion, you will navigate to the Mendix Developer Portal. Apps are not deleted at this time.
 
 ## 4 Cleanups {#cleanups}
 

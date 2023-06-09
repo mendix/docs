@@ -1,6 +1,6 @@
 ---
 title: "APM 2 Use Cases"
-url: //appstore/partner-solutions/apd/uc-two/
+url: /appstore/partner-solutions/apd/uc-two/
 weight: 10
 ---
 

@@ -1,6 +1,6 @@
 ---
 title: "Sizing Impact"
-url: //appstore/partner-solutions/apd/ig-one-sizing-impact/
+url: /appstore/partner-solutions/apd/ig-one-sizing-impact/
 ---
 Load tests on decent hardware have shown a CPU usage increase that is very acceptable. When only trap tool and statistics tool are running a few percent. With performance tool recording SQL statements a little above 5%, but well below 10% increased CPU usage when CPU was 30%, 50% and even 70%.
 

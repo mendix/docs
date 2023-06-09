@@ -63,9 +63,9 @@ If you have chosen to register a standalone cluster, then all communication with
 
 ## 3 Product Capability Comparison
 
-The table below shows the differences between the capabilities for apps deployed to the Mendix Cloud, Mendix for Private Cloud (Mx4PC) Connected, and Mx4PC Standalone.
+The table below shows the differences between the capabilities for apps deployed to the Mendix Cloud, Mendix for Private Cloud Connected, and Mendix for Private Cloud Standalone.
 
-| Capability | Mendix Cloud | Mx4PC Connected | Mx4PC Standalone |
+| Capability | Mendix Cloud | Mendix for Private Cloud Connected | Mendix for Private Cloud Standalone |
 | --- | --- | --- | --- |
 | Environment provisioning | Fully automated | Provisioned with database and blob storage provided by the customer | Provisioned with database and blob storage provided by the customer|
 | Environment configuration<br/>*For example, constants and scheduled event* | Mendix Developer Portal | Mendix Developer Portal | Custom Resources via Mendix Operator |

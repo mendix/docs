@@ -2,7 +2,7 @@
 title: "Hosting Your Own Registry"
 url: /developerportal/deploy/private-cloud-migrating/
 description: "Describes how to migrate Mendix images to a private cloud registry"
-weight: 10
+weight: 20
 tags: ["Private Cloud", "Registry", "Migrate", "Image", "Export", "Import"]
 #To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 ---

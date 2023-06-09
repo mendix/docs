@@ -46,7 +46,7 @@ The Advanced Audit Trail solution is different from the [Audit Trail](/appstore/
 
 ### 1.4 Prerequisites
 
-* You need to use Advanced Audit Trail with Studio Pro 9 versions starting with [9.12](https://docs.mendix.com/releasenotes/studio-pro/9.12/).
+* You need to use Advanced Audit Trail with Studio Pro versions starting with [9.12](https://docs.mendix.com/releasenotes/studio-pro/9.12/).
 * You need to have a [subscription](#obtain-license-key) to the Advanced Audit Trail solution to store your data in an external data storage that runs in the Mendix Cloud
 
 ### 1.5 Dependencies

@@ -16,4 +16,3 @@ This section presents general information on ATS.
 * [Compatibility](/appstore/partner-solutions/ats/ov-compatibility/)
 * [Deployment Options](/appstore/partner-solutions/ats/ov-deployment/)
 * [Maintenance](/appstore/partner-solutions/ats/ov-maintenance/)
-* [Function API](/appstore/partner-solutions/ats/ov-function-api/)

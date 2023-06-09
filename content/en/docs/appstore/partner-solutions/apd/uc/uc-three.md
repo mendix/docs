@@ -1,6 +1,6 @@
 ---
 title: "APD 3 Use Cases"
-url: //appstore/partner-solutions/apd/uc-three/
+url: /appstore/partner-solutions/apd/uc-three/
 weight: 10
 ---
 

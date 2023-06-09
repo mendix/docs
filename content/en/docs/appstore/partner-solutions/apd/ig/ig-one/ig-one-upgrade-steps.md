@@ -1,6 +1,6 @@
 ---
 title: "Upgrade Steps"
-url: //appstore/partner-solutions/apd/ig-one-upgrade-steps/
+url: /appstore/partner-solutions/apd/ig-one-upgrade-steps/
 weight: 4
 ---
 

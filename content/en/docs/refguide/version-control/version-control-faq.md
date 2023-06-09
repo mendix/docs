@@ -4,7 +4,7 @@ url: /refguide/version-control-faq/
 category: "Version Control"
 weight: 30
 description: "Presents and explains several frequently asked questions about version control."
-tags: ["git", "svn", "subversion", "teamserver", "byo-git", "byo-svn" ]
+tags: ["git", "teamserver", "byo-git"]
 ---
 
 ## 1 Introduction
@@ -13,9 +13,7 @@ tags: ["git", "svn", "subversion", "teamserver", "byo-git", "byo-svn" ]
 
 ## 2 What Version Control System Is Team Server Built On? {#which-team-server}
 
-Mendix Team Server is based on proven technology. Initially it was based only on top of Subversion (SVN), also called Team Server SVN. Starting from Mendix version 9.12.0, the Team Server also supports storing apps using Git technology, referred to as Team Server Git. 
-
-Currently, SVN is the default version control system for the Team Server, but you can choose to use Git. In the future, Git will become the default system. 
+Mendix Team Server is based on proven technology. Initially it was based only on top of Subversion (SVN), also called Team Server SVN. Starting from Mendix version 10, the Team Server only supports storing apps using Git technology, referred to as Team Server Git. 
 
 ## 3 How Much Storage Space Is Provided with Team Server?
 
@@ -23,24 +21,9 @@ Storage space is unlimited for apps connected to a commercial license. 1 GB of f
 
 ## 4 What Happens with My Valuable and Confidential Data?
 
-Mendix adheres to strict security standards and considers you the sole owner of your data. Only Mendix Cloud Infrastructure Engineers can access data and will only do so for troubleshooting. Your data is backed up for one year, and the backups are retained for one year after app deletion. You can get a backup of your data at any time by using default Subversion tools, or, if your app was deleted, by filing a [Mendix Support](https://support.mendix.com/) ticket.
+Mendix adheres to strict security standards and considers you the sole owner of your data. Only Mendix Cloud Infrastructure Engineers can access data and will only do so for troubleshooting. Your data is backed up for one year, and the backups are retained for one year after app deletion. You can get a backup of your data at any time by using default Git tools, or, if your app was deleted, by filing a [Mendix Support](https://support.mendix.com/) ticket.
 
-## 5 What Are the Differences between Team Server SVN and Team Server Git?
-
-For information on differences between SVN and Git, see [Migrating to Git: SVN and Git Process Differences](/refguide/svn-git-differences/).
-
-## 6 What Are the Advantages of Team Server Git over Team Server SVN? {#git-advantages}
-
-Team Server Git has the following advantages over Team Server SVN:
-
-* Git is the standard for software version control as offered by, for example, GitHub, GitLab, Azure, AWS, and Atlassian; Subversion (SVN) has become outdated. So, this is modernization of the Mendix Platform to align with the broader market and developer ecosystems.
-* As Git stores a local version of the repository, developers are less dependent on a high speed internet connection and the need to synchronize their work with a central repository continuously. 
-* Git has a technically more advanced and optimized communication protocol, which makes synchronizing changes to and from the central repository faster and more reliable.
-* It is possible to commit your changes, essentially creating a save point, without pushing those changes to the central repository immediately. This enables creating a coherent set of changes that can be pushed at once, while also allowing you to commit those changes intermittently.
-* Your locally-committed changes may cause conflicts with changes retrieved from your colleagues. When doing an update, you have to resolve these, and then commit the resolved changes. With Git, you have to commit locally before retrieving these changes. Though this can seem cumbersome, it has the benefit that if you made a mistake when resolving conflicts, you can still view the changes you and your colleagues made and resolve them properly.
-* You can use modern third-party Git tooling for advanced version control cases like handling file changes.
-
-## 7 Retrieve and Commit + Push Actions Are Getting Slower
+## 5 Retrieve and Commit + Push Actions Are Getting Slower
 
 This may be caused by the way the storage format of Git interacts with the way the Mendix model stores changes, which can accumulate substantial disk space over time. 
 
@@ -48,22 +31,17 @@ You can run `git gc` in the command line to mitigate this. `git gc` runs a numbe
 
 We already do these housekeeping operations automatically on the Team Server, so you can also check out a fresh copy as an alternative . We are working to improve this in Studio Pro in an upcoming versions.
 
-## 8 Can I Keep Using the Subversion Version of the Team Server?
+## 6 Can I Use the Subversion Version of the Team Server?
 
-Yes, as we are introducing Team Server Git, we will maintain support for Team Server SVN. As we improve our offering for Team Server Git, we will introduce options to migrate your apps to Team Server Git from Team Server SVN.
-Mendix  is focusing on improving Team Server Git support and migrating customers to Team Server Git.
+No, in Mendix 10, we are supporting only Git-versioned apps. You need to migrate your SVN app to Git to use Mendix 10. For more information on how to migrate, see [Migrate to Git](/developerportal/collaborate/migrate-to-git/) in the *Developer Portal Guide*. 
 
-## 9 Can I Migrate from Team Server SVN to Git?
+## 7 Can I Use Third-Party Tools to Connect to the Team Server? {#third-party-tools}
 
-Scrum Masters can migrate an SVN app to Git in the Developer Portal. For more information on how to migrate, see [Migrate to Git](/developerportal/collaborate/migrate-to-git/) in the *Developer Portal Guide*. 
+Yes, as the Team Server is based on a full implementation of Git. You can directly use third-party tools like GitHub Desktop. For more information on how to set this up, see the [External Tools](/refguide/using-version-control-in-studio-pro/#external-tools) section in *Using Version Control in Studio Pro*. 
 
-## 10 Can I Use Third-Party Tools to Connect to the Team Server? {#third-party-tools}
+## 8 Is It Possible to Connect to a Third-Party or On-Premises Version Control Server?
 
-Yes, as the Team Server is based on a full implementation of Git or SVN. You can directly use third-party tools like TortoiseSVN, TortoiseGit, or GitHub Desktop. For more information on how to set this up, see the [External Tools](/refguide/using-version-control-in-studio-pro/#external-tools) section in *Using Version Control in Studio Pro*. 
-
-## 11 Is It Possible to Connect to a Third-Party or On-Premises Version Control Server?
-
-Yes, it is possible to connect to a third-party Subversion or Git version control repository, which is often called BYO-GIT or BYO-SVN (Bring Your Own Git/SVN).
+Yes, it is possible to connect to a third-party Git version control repository, which is often called BYO-GIT (Bring Your Own Git).
 
 However, in this case the following products and capabilities are not available:
 
@@ -71,11 +49,9 @@ However, in this case the following products and capabilities are not available:
 * Integrated platform APIs such as the [App repository API](/apidocs-mxsdk/apidocs/app-repository-api/), [Build API](/apidocs-mxsdk/apidocs/build-api/), [Platform SDK](/apidocs-mxsdk/mxsdk/), [Permissions API](/apidocs-mxsdk/apidocs/permissions-api/), [Projects API](/apidocs-mxsdk/apidocs/projects-api/), [Stories API](/apidocs-mxsdk/apidocs/stories-api/), and [User management API](/apidocs-mxsdk/apidocs/user-management-api/)
 * [AQM](/addons/aqm-addon/) 
 
-{{% alert color="info" %}}
-For Git, connecting to a third-party Git version control repository is in Beta. For more information about the supported Git repositories, see [Working with Git On-Premises Version Control Server](/refguide/on-premises-git/#preparing-your-repo).
-{{% /alert %}}
+For more information about the supported Git repositories, see the [Preparing Your Repository](/refguide/on-premises-git/#preparing-your-repo) section in *Working with Git On-Premises Version Control Server*.
 
-## 12 Will Mendix 9 Support Pull Requests and Peer Reviews? 
+## 9 Does Mendix 10 Support Pull Requests and Peer Reviews? 
 
 Studio Pro supports peer review and merging through the version control functionalities available in Studio Pro. For more information on how to set this process up, see [Using Version Control in Studio Pro](/refguide/using-version-control-in-studio-pro/).
 Currently, Mendix does not support pull or merge requests through the Team Server for Mendix. When using third-party tools it is possible to review the following code extensions:

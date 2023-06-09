@@ -1886,7 +1886,7 @@ Select **Operator** to view a list of all the Operator licenses in the bundle.
 
 {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/OperatorList.png" >}}
 
-Select **Runtime** to view a list of all the Operator licenses in the bundle.
+Select **Runtime** to view a list of all the Runtime licenses in the bundle.
 
 {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/RuntimeList.png" >}}
 

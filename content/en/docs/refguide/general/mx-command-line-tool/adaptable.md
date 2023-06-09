@@ -1,7 +1,6 @@
 ---
 title: "Adaptable Solution Commands"
 url: /refguide/mx-command-line-tool/adaptable
-category: "General Info"
 weight: 20
 description: "Describes the commands related to adaptable solutions."
 tags: ["mx", "command-line", "tool", "mx", "studio pro", "windows", "linux", "solution", "check"]
@@ -52,12 +51,14 @@ For `MPR-FILE`, enter an *.mpr* file.
 
 The `Based on` version is a version of a solution package (*.mxsolution*) that the current app is based on.
 
+### 2.2 Examples
+
 Here are two examples:
 
 * `mx show-app-version C:\MyApp\MyApp.mpr`
 * `mx show-app-version C:\MyApp\MyApp.mpr -b`
 
-### 2.2 Return Codes
+### 2.3 Return Codes
 
 This command uses the common format exit codes described above for all app-version related commands.
 
@@ -89,11 +90,13 @@ For `MPR-FILE`, enter an *.mpr* file.
 
 For `VERSION`, enter a version in the [SemVer](https://semver.org) format.
 
+### 3.2 Examples
+
 Here is an example:
 
 `mx set-app-version C:\MyApp\MyApp.mpr 1.2.3`
 
-### 3.2 Return Codes
+### 3.3 Return Codes
 
 This command uses the common format exit codes described above for all app-version related commands.
 

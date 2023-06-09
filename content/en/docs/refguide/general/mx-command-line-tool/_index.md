@@ -13,41 +13,41 @@ The **mx tool** is a Windows and Linux command-line tool that can be used to per
 
 ## 2 Location
 
-Mendix Studio Pro comes with the mx command-line tool. The executable *mx.exe* file can be found in the same folder that contains `studiopro.exe` (for example, *C:\Program Files\Mendix\10.0.0.5003\modeler\mx.exe*).
+Mendix Studio Pro comes with the mx command-line tool. You can find the executable *mx.exe* file can in the same folder that contains *studiopro.exe* (for example, *C:\Program Files\Mendix\10.0.0.5003\modeler\mx.exe*).
 
 ## 3 Available commands
 
-| [**App commands**](/refguide/mx-command-line-tool/app) | App commands |
+| [App Commands](/refguide/mx-command-line-tool/app) | Description |
 | - | - |
-| [check](/refguide/mx-command-line-tool/mx-check) | Check the app for issues |
-| [convert](/refguide/mx-command-line-tool/mx-convert) | Convert Mendix app |
-| [create-project](/refguide/mx-command-line-tool/mx-create-project) | Create a new Mendix app |
-| [show-version](/refguide/mx-command-line-tool/mx-show-version) | Show the version of Studio Pro that was last used to edit the app |
+| [check](/refguide/mx-command-line-tool/mx-check) | Checks the app for issues. |
+| [convert](/refguide/mx-command-line-tool/mx-convert) | Converts the Mendix app. |
+| [create-project](/refguide/mx-command-line-tool/mx-create-project) | Creates a new Mendix app. |
+| [show-version](/refguide/mx-command-line-tool/mx-show-version) | Shows the Studio Pro version that was last used to edit the app. |
 
-| [**Adaptable solutions commands**](/refguide/mx-command-line-tool/adaptable) ||
+| [Adaptable Solutions Commands](/refguide/mx-command-line-tool/adaptable) | Description|
 | - | - |
-| [show-app-version](/refguide/mx-command-line-tool/mx-show-version) | Show the Application Version of the app |
-| [set-app-version](/refguide/mx-command-line-tool/mx-set-app-version) | Sets the Application Version of the app |
+| [show-app-version](/refguide/mx-command-line-tool/mx-show-version) | Shows the application version of the app. |
+| [set-app-version](/refguide/mx-command-line-tool/mx-set-app-version) | Sets the application version of the app. |
 
-| [**Module commands**](/refguide/mx-command-line-tool/module) ||
+| [Module Commands](/refguide/mx-command-line-tool/module) | Description |
 |-|-|
-| [show-module-version](/refguide/mx-command-line-tool/mx-show-module-version) | Show the version of the module specified |
-| [set-module-version](/refguide/mx-command-line-tool/mx-set-module-version) | Set the version of the module specified |
+| [show-module-version](/refguide/mx-command-line-tool/mx-show-module-version) | Shows the version of the module specified. |
+| [set-module-version](/refguide/mx-command-line-tool/mx-set-module-version) | Sets the version of the module specified. |
 
-| [**Export package commands**](/refguide/mx-command-line-tool/export) ||
+| [Export Package Commands](/refguide/mx-command-line-tool/export) | Description |
 | - | - |
-| create-project-package | Export a project package |
-| create-solution-package | Export a solution package |
-| create-module-package | Export a module package |
+| create-project-package | Exports an app package. |
+| create-solution-package | Exports a solution package. |
+| create-module-package | Exports a module package. |
 
-| [**Merging and diffing**](/refguide/mx-command-line-tool/merge)  ||
+| [Merging and Diffing](/refguide/mx-command-line-tool/merge)  | Description |
 | - | - |
-| [merge](/refguide/mx-command-line-tool/mx-merge) | Merge mpr files |
-| [diff](/refguide/mx-command-line-tool/mx-diff) | Diff mpr files |
+| [merge](/refguide/mx-command-line-tool/mx-merge) | Merges the *.mpr* files. |
+| [diff](/refguide/mx-command-line-tool/mx-diff) | Shows the diff of the *.mpr* files. |
 
 ## 4 mx Tool Options
 
-The mx tool has `--help` option that outputs all the commands available.
+The mx tool has a `--help` option that outputs all the commands available.
 
 ## 5 Undocumented Options
 

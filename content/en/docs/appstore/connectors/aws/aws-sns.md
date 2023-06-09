@@ -77,7 +77,7 @@ After you configure the authentication profile for Amazon SNS, you can implement
 
 #### 3.2.1 Subscribing to a Topic
 
-To subscribe to a topic in your AWS environment and receive email notifications about it, implement the [Subscribe](#subscribe) activity by performing the following steps:
+To subscribe to a topic in your AWS environment and receive email notifications from it, implement the [Subscribe](#subscribe) activity by performing the following steps:
 
 1. In the **App Explorer**, right-click the name of your module, and then click **Add microflow**.
 

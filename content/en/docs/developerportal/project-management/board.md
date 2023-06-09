@@ -2,16 +2,16 @@
 title: "Board"
 url: /developerportal/project-management/board/
 weight: 10
-description: "Describes the Board page in the Project Management section."
+description: "Describes the **Board** page in the Project Management section. This page looks different, depending on if you are working in the Scrum workflow or Kanban workflow. "
 tags: ["Project Management", "Epics", "Sprint", "Board", "Stories", "Developer Portal"]
 ---
-## 2 Board {#board}
+## 1 Introduction {#board}
 
 The **Board** page gives an overview of all the stories that your team is currently working on.
 
 On the upper-right corner of the page, you can find the following items:
 
-{{< figure src="/attachments/developerportal/collaborate/epics/create-epic-story-search.png" >}}
+{{< figure src="/attachments/developerportal/project-management/board/create-epic-story-search.png" >}}
 
 * **Project Buzz**  – directs you to the [Buzz](/developerportal/collaborate/buzz/#app-buzz) page of the app
 
@@ -21,15 +21,15 @@ On the upper-right corner of the page, you can find the following items:
 
 * Search box – enables searching stories based on story title, tags, epic name, assignee (and unassigned stories), and story ID.
 
-### 2.1 Scrum Board vs Kanban Board {#different-boards}
+## 2 Scrum Board vs Kanban Board {#different-boards}
 
 Depending on your settings of [board type](#board-type): Scrum or Kanban, the main area of the board looks different.
 
-#### 2.1.1 Scrum Board
+### 2.1 Scrum Board
 
 If you work with the Scrum board, on the upper-left corner, you can find the name of the Sprint, when it ends, and how many stories and points it has. The area right below shows the goal of the current Sprint.
 
-{{< figure src="/attachments/developerportal/collaborate/epics/sprint-goal.png" >}}
+{{< figure src="/attachments/developerportal/project-management/board/sprint-goal.png" >}}
 
 The main area gives an overview of your current Sprint. 
 
@@ -37,15 +37,15 @@ The main area gives an overview of your current Sprint.
 
 You can edit or end the current Sprint on the [Scrum Planning](#scrum-planning) page.
 
-#### 2.1.2 Kanban Board
+### 2.2 Kanban Board
 
 If you work with the Kanban board, the upper-left corner of the page shows the number of stories and the total points. 
 
-{{< figure src="/attachments/developerportal/collaborate/epics/stories-story-points.png" >}}
+{{< figure src="/attachments/developerportal/project-management/board/stories-story-points.png" >}}
 
 The main area gives an overview of all the stories that your team is working on. 
 
-### 2.2 Swimlanes
+## 3 Swimlanes
 
 In the main area of the board, the stories are grouped into different swimlanes based on their status. 
 
@@ -53,11 +53,11 @@ The two default swimlanes are **To Do** and **Done**.
 
 You can add more custom swimlanes, such as **In Progress**, **In Review**, and **Testing**. To add a new swimlane, hover over the border of the swimlane where the new swimlane should be added, and click the vertical line when it appears. Then enter the name of the swimlane and click **✓** to save the changes.
 
-{{< figure src="/attachments/developerportal/collaborate/epics/add-swimlane.png" width="500px" >}}
+{{< figure src="/attachments/developerportal/project-management/board/add-swimlane.png" width="500px" >}}
 
-You can rename, [archive](#archive), or delete a swimlane as follows: click the **...** icon on the upper-right corner of the swimlane, and then select the corresponding option.
+You can rename, [archive](/developerportal/project-management/archive), or delete a swimlane as follows: click the **...** icon on the upper-right corner of the swimlane, and then select the corresponding option.
 
-{{< figure src="/attachments/developerportal/collaborate/epics/rename-archive-delete-swimlane.png" >}}
+{{< figure src="/attachments/developerportal/project-management/board/rename-archive-delete-swimlane.png" >}}
 
 However, it is not possible to do the following actions:
 
@@ -67,11 +67,11 @@ However, it is not possible to do the following actions:
 
 You can move a swimlane by dragging it to the new location.
 
-### 2.3 Story Cards
+### 3.1 Story Cards
 
 Each card in a swimlane represents a story:
 
-{{< figure src="/attachments/developerportal/collaborate/epics/story-card.png" >}}
+{{< figure src="/attachments/developerportal/project-management/board/story-card.png" >}}
 
 A story card shows the following details:
 
@@ -85,21 +85,21 @@ A story card shows the following details:
 * ⑧ Points of the story
 * ⑨ To whom the story is assigned
 
-You can [archive](#archive) or delete a story as follows: click the **...** icon on the upper-right corner of the card, and then select the corresponding option:
+You can [archive](/developerportal/project-management/archive) or delete a story as follows: click the **...** icon on the upper-right corner of the card, and then select the corresponding option:
 
-{{< figure src="/attachments/developerportal/collaborate/epics/archive-delete-story.png" >}}
+{{< figure src="/attachments/developerportal/project-management/board/archive-delete-story.png" >}}
 
 You can move a card within a swimlane or across swimlanes. To do so, drag the card to the new location.
 
 You can click a story card to view the [story details](#story-details).
 
-### 2.4 Story Details {#story-details}
+### 3.2 Story Details {#story-details}
 
 When you click the card of a story, the story details dialog box opens.
 
-On the upper-right corner, you can click the link icon to copy the link to the story. Click the  ellipsis (**...**) icon to open a pop-up menu that allows you to clone, [archive](#archive), or delete the story.
+On the upper-right corner, you can click the link icon to copy the link to the story. Click the  ellipsis (**...**) icon to open a pop-up menu that allows you to clone, [archive](/developerportal/project-management/archive), or delete the story.
 
-{{< figure src="/attachments/developerportal/collaborate/epics/story-details-page-icons.png" >}}
+{{< figure src="/attachments/developerportal/project-management/board/story-details-page-icons.png" >}}
 
 The story details dialog box shows the following items:
 
@@ -119,7 +119,7 @@ The story details dialog box shows the following items:
 * **Linked Epic** – You can select an epic from the drop-down list.
 * **Tags** – You can add or remove tags.
   * You can create a new tag by typing the tag in the text box and clicking **Create new "[tag name]"**.
-  * You can [manage tags](#manage-tags) by clicking the settings icon at the end.
+  * You can [manage tags](/developerportal/project-management/planning/#manage-tags) by clicking the settings icon at the end.
 
 * **Story Points** – You can set the story points to an integer.
 * **Attached Files** – You can add attached files by clicking **+**.

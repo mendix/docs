@@ -2,16 +2,12 @@
 title: "Epics"
 url: /developerportal/project-management/Epics/
 weight: 30
-description: "Describes the Epics page in the Project Management section."
+description: "Describes the **Epics** page in the Project Management section."
 tags: ["Project Management", Epics", "Sprint", "Stories", "Developer Portal"]
 ---
-## 4 Epics {#epics}
+## 1 Introduction {#epics}
 
-On the upper-right corner of the page, **Create Epic** enables creating an epic.
-
-### 4.1 Epics Overview 
-
-The main area gives an overview of all the epics for your current app. Each row shows the following details about an epic:
+The **Epics** page gives an overview of all the epics for your current app. Each row shows the following details about an epic:
 
 * Unique ID, which consists of a prefix and a number
 * Title
@@ -24,13 +20,13 @@ The main area gives an overview of all the epics for your current app. Each row 
 
 Clicking a row opens the [epic details](#epic-details) dialog box.
 
-### 4.2 Epic Details {#epic-details}
+##  2 Epic Details {#epic-details}
 
 When you click an epic, the epic details dialog box opens. 
 
 On the upper-right corner, there is a link icon and an ellipsis (**...**) icon. Clicking the link icon copies the link to the epic. Clicking the ellipsis icon opens a pop-up menu that allows you to delete the epic.
 
-{{< figure src="/attachments/developerportal/collaborate/epics/epic-details-page-ellipsis.png" >}}
+{{< figure src="/attachments/developerportal/project-management/epics/epic-details-page-ellipsis.png" >}}
 
 The epic details dialog box shows the following items:
 
@@ -42,7 +38,7 @@ The epic details dialog box shows the following items:
 * **Assign to** – You can assign the epic to anybody who can access the app in the Developer Portal.
 * **Tags** – You can add or remove tags.
   * You can create a new tag by typing the tag in the text box and clicking **Create new "[tag name]"**
-  * You can [manage tags](#manage-tags) by clicking the settings icon at the end.
+  * You can [manage tags](/developerportal/project-management/planning/#manage-tags) by clicking the settings icon at the end.
 
 * **Attachments** – You can add attachments by clicking **+**.
 * **Stories** – This shows the open stories that are linked to this epic.

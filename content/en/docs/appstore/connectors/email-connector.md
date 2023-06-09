@@ -257,7 +257,7 @@ If no email accounts are configured then you can create new OAuth configutation 
 
 #### 4.7.1 OAuth Provider Configuration Details {#oauth-config-details}
 
-To configure OAuth provider for Auth code grant flow, the following details are required:
+To configure OAuth provider for the Authentication Code Flow, the following details are required:
 
 * **Client ID** – available on the [Azure portal](https://portal.azure.com/) once you have registered your app
 * **Client Secret** – available on the [Azure portal](https://portal.azure.com/) once you have registered your app
@@ -268,9 +268,8 @@ To configure OAuth provider for Client Credential code grant flow, the following
 * **Client ID** – available on the [Azure portal](https://portal.azure.com/) once you have registered your app
 * **Client Secret** – available on the [Azure portal](https://portal.azure.com/) once you have registered your app
 * **Tenant ID** – available on the [Azure portal](https://portal.azure.com/) once you have registered your app
-
  
-#### 4.7.2 Settings in the Microsoft Azure Portal (Auth code grant flow)
+#### 4.7.2 Settings in the Microsoft Azure Portal (Authentication Code Flow)
 
 To register your app in the Azure Portal, follow Microsoft's Tutorial [Register an app with Azure Active Directory](https://docs.microsoft.com/en-us/power-apps/developer/data-platform/walkthrough-register-app-azure-active-directory). While registering, set the redirect/callback URI as **Callback URL** mentioned while configuring [OAuth Provider Configuration Details](#oauth-config-details).
 
@@ -280,9 +279,9 @@ On the [Azure portal](https://portal.azure.com/), ensure that you have the follo
 
 {{< figure src="/attachments/appstore/connectors/email-connector/app-permissions.png" >}}
 
-#### 4.7.3 Settings in the Microsoft Azure Portal (Client Credential code grant flow)
+#### 4.7.3 Settings in the Microsoft Azure Portal (Client Credentials Flow)
 
-To register your app in the Azure Portal, follow Microsoft's Tutorial [Register an app with Azure Active Directory](https://docs.microsoft.com/en-us/power-apps/developer/data-platform/walkthrough-register-app-azure-active-directory).
+To register your app in the Azure Portal, follow Microsoft's [Register an app with Azure Active Directory](https://docs.microsoft.com/en-us/power-apps/developer/data-platform/walkthrough-register-app-azure-active-directory).
 
 This connector contains functionality of sending and receiving emails, so Office 365 Exchange Online related APIs need to be given permission along with Admin consent.
 
@@ -290,8 +289,8 @@ This connector contains functionality of sending and receiving emails, so Office
 
 {{< figure src="/attachments/appstore/connectors/email-connector/client-cred-api-permissions.png" >}}
 
-* Admin grant is given on the added API permissions.
-* Tenant admin must register azure application's service principal in Exchange via Exchange Online PowerShell. Steps are mentioned [here] (https://learn.microsoft.com/en-us/exchange/client-developer/legacy-protocols/how-to-authenticate-an-imap-pop-smtp-application-by-using-oauth#register-service-principals-in-exchange)
+* Admin status is given on the added API permissions.
+* Tenant admin must register the Azure application's service principal in Exchange via Exchange Online PowerShell. Follow the steps in [Register service principals in Exchange](https://learn.microsoft.com/en-us/exchange/client-developer/legacy-protocols/how-to-authenticate-an-imap-pop-smtp-application-by-using-oauth#register-service-principals-in-exchange).
 
 ### 4.8 Queuing Emails
 

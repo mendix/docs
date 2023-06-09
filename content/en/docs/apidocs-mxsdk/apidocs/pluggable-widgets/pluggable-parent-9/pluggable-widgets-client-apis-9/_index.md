@@ -1,5 +1,5 @@
 ---
-title: "Client APIs Available to Pluggable Widgets"
+title: "Client APIs – Mx9"
 linktitle: "Client APIs for Pluggable Widgets"
 url: /apidocs-mxsdk/apidocs/pluggable-widgets-client-apis-9/
 description: A guide for understanding the client APIs available to pluggable widgets in Mendix 9.

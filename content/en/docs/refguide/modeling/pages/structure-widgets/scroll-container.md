@@ -80,7 +80,11 @@ This property is displayed only when the [Width](#width) property is set to *Pix
 
 Default: *Center*
 
-### 3.2 Regions Section {#regions}
+### 3.2 Common Section {#common}
+
+{{% snippet file="/static/_includes/refguide/common-section-link.md" %}}
+
+### 3.3 Regions Section {#regions}
 
 {{% alert color="info" %}}Regions are not supported on native mobile pages.{{% /alert %}}
 
@@ -90,25 +94,21 @@ Regions define the content area of a scroll container. For more information see 
 If you add regions in a [layout](/refguide/layout/), they will automatically be filled with [placeholders](/refguide/placeholder/).
 {{% /alert %}}
 
-#### 3.2.1 Enable Top
+#### 3.3.1 Enable Top
 
 Determines whether the scroll container should contain a top region.
 
-#### 3.2.2 Enable Bottom
+#### 3.3.2 Enable Bottom
 
 Determines whether the scroll container should contain a bottom region.
 
-#### 3.2.3 Enable Left
+#### 3.3.3 Enable Left
 
 Determines whether the scroll container should contain a left region.
 
-#### 3.2.4 Enable Right
+#### 3.3.4 Enable Right
 
 Determines whether the scroll container should contain a right region.
-
-### 3.3 Common Section {#common}
-
-{{% snippet file="/static/_includes/refguide/common-section-link.md" %}}
 
 ## 4 Scroll Container Region {#scroll-container-region}
 

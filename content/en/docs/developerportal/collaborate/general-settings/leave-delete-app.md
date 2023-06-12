@@ -1,7 +1,7 @@
 ---
 title: "Leave, Delete, or Deactivate an App"
 url: /developerportal/collaborate/leave-delete-app/
-weight: 1
+weight: 2
 description: "Describes how to leave, delete, and deactivate an app in the Developer Portal."
 tags: ["app", "delete", "deactivate", "Developer Portal", "Scrum Master"]
 linktitle: "Leave and Delete an App"

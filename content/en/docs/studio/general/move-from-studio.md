@@ -33,4 +33,4 @@ Now you can learn your way around Studio Pro and start developing with it.
 
 For more information on Studio Pro UI, see [Studio Pro Overview](/refguide9/studio-pro-overview/).
 
-For a guide on how to start building apps with Studio Pro, see the [Quickstart guide](/refguide9/quickstart-guide/). 
+For a guide on how to start building apps with Studio Pro, see the [Quickstarts](/quickstart-guide/). 

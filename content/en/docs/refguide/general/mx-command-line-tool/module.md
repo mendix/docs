@@ -12,7 +12,7 @@ The commands in this group are related to Mendix modules.
 
 Typically, these commands require a path to the *.mpr* file and the module name as parameters.
 
-## 2 mx show-module-version Command
+## 2 mx show-module-version Command {#show-module-version}
 
 The `mx show-module-verion` command outputs the version of a module.
 
@@ -49,7 +49,7 @@ This table shows the return codes and their description:
 
 The command will output the version of the module to the command line output.
 
-## 3 mx set-module-version Command
+## 3 mx set-module-version Command {#set-module-version}
 
 The `mx set-module-version` command outputs the version of a module.
 

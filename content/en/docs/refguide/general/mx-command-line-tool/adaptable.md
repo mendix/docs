@@ -44,7 +44,7 @@ These are the `OPTIONS`:
 
 | Option | Shortcut | Result |
 | --- | --- | --- |
-| `--based-on` | `-b` | Show `Based on` version. |
+| `--based-on` | `-b` | Shows the `Based on` version. |
 | `--help` | `-h` | Displays the help text and exits. |
 
 For `MPR-FILE`, enter an *.mpr* file.

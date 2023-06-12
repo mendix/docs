@@ -10,7 +10,9 @@ tags: ["API", "epics", "project management"]
 
 ## 1 Introduction
 
-The Epics API allows you to manage projects for your app application in the Developer Portal.
+The Mendix Epics API allows you to retrieve, create, update, and archive the Sprint, stories, and tasks in your Mendix apps.
+
+{{% todo %}}Does the API support archiving?{{% /todo %}}
 
 ## 2 Authentication{#authentication}
 

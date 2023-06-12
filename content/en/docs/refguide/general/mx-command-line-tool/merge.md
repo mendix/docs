@@ -79,7 +79,7 @@ These are the `OPTIONS`:
 
 The image below illustrates the meaning of the parameters:
 
-{{< figure src="/attachments/refguide/general/mx-command-line-tool/merging/mx-merge/merge.png" alt="mx merge" >}}
+{{< figure src="/attachments/refguide/general/mx-command-line-tool/merge.png" alt="mx merge" >}}
 
 In the diagram, note the following:
 

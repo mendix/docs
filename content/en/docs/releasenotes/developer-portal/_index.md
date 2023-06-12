@@ -17,6 +17,12 @@ To see the current status of the Mendix Developer Portal and Control Center, see
 
 ## 2023
 
+### June 1st, 2023
+
+#### Improvements
+
+* We improved the user experience of the Git migration. In case of any issues, we now provide information about why your project could not be successfully migrated from Subversion to Git and which specific branches might be the reason.
+
 ### May 18th, 2023
 
 #### Improvements
@@ -28,8 +34,8 @@ To see the current status of the Mendix Developer Portal and Control Center, see
 #### New Features
 
 * We have upgraded our [Portfolio Management](/developerportal/portfolio-management/) tool with new features:
-  * You can now have multiple portfolios at the same time!
-  * You can now create portfolios with different levels of visibility to people in your company: private or restricted.
+    * You can now have multiple portfolios at the same time!
+    * You can now create portfolios with different levels of visibility to people in your company: private or restricted.
 * We have added the [Portfolios](/developerportal/control-center/#portfolios) page to the Control Center, which provides Mendix Admins with governance features for portfolio management in your company.
 
 ### May 4th, 2023
@@ -647,7 +653,7 @@ In Portfolio Management, you can do the following
 
 #### Improvements
 
-* We made some minor changes to the look and feel over several pages, buttons, and UI components in line with the recent redeisgn of Mendix Developer Portal.
+* We made some minor changes to the look and feel over several pages, buttons, and UI components in line with the recent redesign of Mendix Developer Portal.
 
 #### Fixes
 
@@ -663,7 +669,7 @@ In Portfolio Management, you can do the following
 
 #### Fixes
 
-* We fixed an issue where some graphs in the Contral Center [Dashboard](/developerportal/control-center/#dashboard) were loading indefinitely. 
+* We fixed an issue where some graphs in the Control Center [Dashboard](/developerportal/control-center/#dashboard) were loading indefinitely. 
 * We fixed the page title of the [Mendix Studio](/studio/) landing page.
 * Page links now open in the correct tab.
 
@@ -796,7 +802,7 @@ In Portfolio Management, you can do the following
 
 #### Fixes
 
-* We fixed an issue where newly-added Company Admins did not get access to edit [user groups](/appstore/general/app-store-overview/#user-groups) in the Marketplace.
+* We fixed an issue where newly-added Company Admins did not get access to edit [user groups](/appstore/general/app-store-overview/#content-groups) in the Marketplace.
 
 ## 2020
 

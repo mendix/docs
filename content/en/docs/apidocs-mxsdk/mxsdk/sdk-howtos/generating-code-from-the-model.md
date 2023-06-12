@@ -170,7 +170,7 @@ function generate(domainModel1: domainmodels.DomainModel, model: IModel) {
 }
 ```
 
-For the next step, you will create a script that make use of the function. The script is written in TypeScript, so it will be able to run a JavaScript code just fine. This script will create a blank project and modify the domain model in the 'MyFirstModule' module.
+For the next step, you will create a script that make use of the function. The script is written in TypeScript, so it will be able to run a JavaScript code just fine. This script will create a blank app and modify the domain model in the `MyFirstModule` module.
 
 ```ts
 import { domainmodels, IModel } from "mendixmodelsdk";
@@ -210,6 +210,6 @@ Execute the script. You should have a new app with the generated entities.
 
 {{% alert color="info" %}}
 
-Instead of creating a new app, you can also reuse an existing project or even an existing online working copy.
+Instead of creating a new app, you can also reuse an existing app or even an existing online working copy.
 
 {{% /alert %}}

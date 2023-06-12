@@ -496,7 +496,7 @@ weight: 97
 
 | Story | Impact | Description |
 |------|-----|---|
-| MS-461 | Medium | Defined the new Metamodel for DataType. From Mendix [7.9.0](/releasenotes/studio-pro/7/) onwards, the new properties of the DataType type should be used instead of the old properties of the String type. |
+| MS-461 | Medium | Defined the new Metamodel for DataType. From Mendix 7.9.0 onwards, the new properties of the DataType type should be used instead of the old properties of the String type. |
 | MS-328 | None | Defined the new Metamodel for microflow expressions (experimental). |
 
 ## 4.4.0

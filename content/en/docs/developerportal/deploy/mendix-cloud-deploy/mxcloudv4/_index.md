@@ -61,7 +61,7 @@ You can also consider running your Mendix app using your own AWS account, and ha
 There are certain limits and behaviors which apply to your app when running in the Mendix Cloud. Here are a few considerations to bear in mind:
 
 * The Amazon RDS maintenance window is not aligned with the Mendix Developer Portal maintenance window for an application
-* It is not possible to deploy a model (*.mda*) larger than 4 GB when uncompressed or a model that contains approximately 64,000 or more files
+* It is not possible to deploy a model (*.mda*) larger than 1 GB when uncompressed or a model that contains approximately 64,000 or more files
 * You can't upload files bigger than 1 GB to your app
 * You can't download files bigger than 1 GB from your app
 * To use the debugger, you need to scale down to one instance

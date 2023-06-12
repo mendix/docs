@@ -21,6 +21,10 @@ The Amazon Textract connector requires Mendix Studio Pro version 9.18.0 or above
 
 To authenticate with Amazon Web Service (AWS), you must also install and configure the [AWS authentication connector](https://marketplace.mendix.com/link/component/120333). For more information about installing and configuring the AWS Authentication connector, see [AWS Authentication](/appstore/connectors/aws/aws-authentication/).
 
+### 1.3 Limitations
+
+Because of a synchronous invocation limitation of the Amazon Textract service, the Amazon Textract connector only supports scanning a single page at a time. This limitation will be removed in future versions of the connector.
+
 ## 2 Installation
 
 Follow the instructions in [How to Use Marketplace Content in Studio Pro](/appstore/general/app-store-content/) to import the Amazon Textract connector into your app.
@@ -167,31 +171,35 @@ An enumeration is a predefined list of values that can be used as an attribute t
 
 #### 4.2.1 RelationshipType
 
-This enumeration indicates the relationship between the current block and the other blocks in the array.
+This enumeration indicates the relationship between the current block and the other blocks in the array. For more information about the enumeration members, see [RelationshipType](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/clients/client-textract/enums/relationshiptype.html) in the AWS API documentation.
 
-| Name | Caption | Description |
-| --- | --- | --- |
-| `VALUE` | VALUE | |
-| `CHILD` | CHILD | |
-| `COMPLEX_FEATURES` | COMPLEX_FEATURES | |
-| `MERGED_CELL` | MERGED_CELL | |
-| `TITLE` | TITLE | |
-| `ANSWER` | ANSWER | |
+| Name | Caption |
+| --- | --- |
+| `VALUE` | VALUE |
+| `CHILD` | CHILD |
+| `COMPLEX_FEATURES` | COMPLEX_FEATURES |
+| `MERGED_CELL` | MERGED_CELL |
+| `TITLE` | TITLE |
+| `ANSWER` | ANSWER |
 
 #### 4.2.2 TextType
 
-| Name | Caption | Description |
-| --- | --- | --- |
-| `PRINTED` | PRINTED | Indicates that the text is printed. |
-| `HANDWRITING` | HANDWRITING | Indicates that the text is handwritten. |
+This enumeration indicates the type of text that is scanned.  For more information about the enumeration members, see [TextType](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/clients/client-textract/enums/texttype.html) in the AWS API documentation.
+
+| Name | Caption |
+| --- | --- |
+| `PRINTED` | PRINTED |
+| `HANDWRITING` | HANDWRITING |
 
 #### 4.2.3 EntityTypes
 
-| Name | Caption | Description |
-| --- | --- | --- |
-| `KEY` | KEY | |
-| `VALUE` | VALUE | |
-| `COLUMN_HEADER` | COLUMN_HEADER | |
+For more information about the enumeration members, see [EntityType](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/clients/client-textract/enums/entitytype.html) in the AWS API documentation.
+
+| Name | Caption |
+| --- | --- | 
+| `KEY` | KEY |
+| `VALUE` | VALUE |
+| `COLUMN_HEADER` | COLUMN_HEADER |
 
 #### 4.2.4 AWS_Region
 
@@ -224,26 +232,30 @@ This enumeration contains a list of supported AWS regions. For more information,
 
 #### 4.2.5 BlockType
 
-| Name | Caption | Description |
-| --- | --- | --- |
-| `CELL` | CELL | |
-| `KEY_VALUE_SET` | KEY_VALUE_SET | |
-| `LINE` | LINE | |
-| `MERGED_CELL` | MERGED_CELL | |
-| `PAGE` | PAGE | |
-| `QUERY` | QUERY | |
-| `QUERY_RESULT` | QUERY_RESULT | |
-| `SELECTION_ELEMENT` | SELECTION_ELEMENT | |
-| `TABLE` | TABLE | |
-| `TITLE` | TITLE | |
+This enumeration describes the current block. For more information about the enumeration members, see [BlockType](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/clients/client-textract/enums/blocktype.html) in the AWS API documentation.
+
+| Name | Caption |
+| --- | --- |
+| `CELL` | CELL |
+| `KEY_VALUE_SET` | KEY_VALUE_SET |
+| `LINE` | LINE |
+| `MERGED_CELL` | MERGED_CELL |
+| `PAGE` | PAGE |
+| `QUERY` | QUERY |
+| `QUERY_RESULT` | QUERY_RESULT |
+| `SELECTION_ELEMENT` | SELECTION_ELEMENT |
+| `TABLE` | TABLE |
+| `TITLE` | TITLE |
 | `WORD` | WORD | |
 
 #### 4.2.6 SelectionStatus
 
-| Name | Caption | Description |
-| --- | --- | --- |
-| `SELECTED` | SELECTED | |
-| `NOT_SELECTED` | NOT_SELECTED | |
+This enumeration indicates the selection status of the block. For more information about the enumeration members, see [SelectionStatus](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/clients/client-textract/enums/selectionstatus.html) in the AWS API documentation. 
+
+| Name | Caption |
+| --- | --- |
+| `SELECTED` | SELECTED |
+| `NOT_SELECTED` | NOT_SELECTED |
 
 ### 4.3 Activities {#activities}
 

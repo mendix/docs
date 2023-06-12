@@ -37,7 +37,7 @@ Properties:
 * [Accessibility](#accessibility)
 * [Common](#common)
 * [Events](#events)
-* [On change Behavior](#on-change)
+* [On change Behavior](#on-change-behavior)
 
 Styling:
 

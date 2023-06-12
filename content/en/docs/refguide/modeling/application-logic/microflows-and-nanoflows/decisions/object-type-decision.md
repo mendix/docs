@@ -21,12 +21,14 @@ If you want to use the specialized type in the rest of the microflow you can use
 
 ## 2 Properties
 
+An example of object type decision properties is presented in the image below:
+
+{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/decisions/object-type-decision/object-type-decision-properties.png"   width="250"  >}}
+
 The object type decision properties consists of the following sections:
 
 * [Common](#common)
 * [Input](#input)
-
-    {{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/decisions/object-type-decision/object-type-decision-properties.png"   width="250"  >}}
 
 ### 2.1 Common Section {#common} 
 

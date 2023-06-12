@@ -30,8 +30,8 @@ jobs:
           body: |
             "We're trying to delete some unnecessary attachments."
           branch: rem-unused-attachments
-          assignees: JohannaHemminger
-          reviewers: JohannaHemminger
+          assignees: MarkvanMents
+          reviewers: MarkvanMents
           labels: Internal WIP
           add-paths: |
             static/attachments/**

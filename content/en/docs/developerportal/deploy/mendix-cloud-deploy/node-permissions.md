@@ -35,6 +35,10 @@ Permissions allow you to give specific access to your environments to individual
 
 Only users with the *Technical Contact* role or team members specifically allowed to *Manage Permissions* can manage the permission settings for the cloud node.
 
+{{% alert color="info" %}}
+Mendix Admins can manage permissions using the Deploy API Version 3. For more information, see [Deploy API – Version 3](/apidocs-mxsdk/apidocs/deploy-api-3/).
+{{% /alert %}}
+
 The permissions are set independently for each environment. You can choose the environment at the top of the *Permissions* tab. Changing the permissions for a *production* environment will require two-factor authentication (see [Two-Factor Authentication](/developerportal/deploy/two-factor-authentication/)).
 
 Only team members who have permission to *Deploy, Publish, and Monitor* can view the permissions.
@@ -130,3 +134,11 @@ A cloud node has a single Technical Contact. They manage the cloud node and can 
 The Technical Contact can give the Technical Contact role to another team member. Click **Change to Technical Contact** under the user who should be the new Technical Contact. After this, the new user has the Technical Contact role, the old user does not.
 
 For full details on this role, see the [Technical Contact](/developerportal/collaborate/app-roles/#technical-contact) section of *App Roles*.
+
+{{% alert color="info" %}}
+Mendix Admins can also give the Technical Contact role to another team member using the Deploy API Version 3. For more information, see [Deploy API – Version 3](/apidocs-mxsdk/apidocs/deploy-api-3/).
+{{% /alert %}}
+
+## 6 Read More
+
+* [Licensing Mendix Cloud Apps](/developerportal/deploy/licensing-apps/)

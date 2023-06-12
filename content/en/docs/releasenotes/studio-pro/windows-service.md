@@ -122,7 +122,7 @@ To download the Windows Service, go to the [Get Studio Pro](https://marketplace.
 
 Please be aware of the fact that all service user passwords and database passwords will be encrypted in the settings files after opening the Mendix Service Console for the first time. Only database passwords of already as service installed apps will be untouched, until you reinstall their services.
 
-The Start service button will now be suitable to handle database synchronisations at the same way as the other Start button. This will only work if the service has been reinstalled with this version of the Mendix Service Console.
+The Start service button will now be suitable to handle database synchronizations at the same way as the other Start button. This will only work if the service has been reinstalled with this version of the Mendix Service Console.
 
 Changes in the Service configuration form will be performed directly to the real installed Windows service. There's is no necessary anymore to reinstall the service for such changes.
 
@@ -364,7 +364,7 @@ Now each app has its own license, even if it runs under the same user account as
 
 * New Advanced menu-item to set the log level for the log file.
 * Create / update administrator user password buttons moved to a combined menu-item in menu Advanced.
-* Custom settings file now must be defined by /yaml file-location (not anymore a single file location, but preceeded by /yaml).
+* Custom settings file now must be defined by /yaml file-location (not anymore a single file location, but preceded by /yaml).
 * For all key-value pair settings, the key will be trimmed before sending to Runtime server. Keys now may be ended with one or more white spaces.
 * Restart button now works.
 

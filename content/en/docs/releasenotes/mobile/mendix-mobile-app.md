@@ -65,7 +65,7 @@ description: "These are the release notes for the Mendix Mobile app."
 
 ### Deprecations and Removals
 
-* We removed support for custom profiles (which were deprecated with Mendix [7.4](/releasenotes/studio-pro/7.4/).
+* We removed support for custom profiles that were deprecated with Mendix [7.4](/releasenotes/studio-pro/7.4/).
 
 ### Limitation
 

@@ -21,7 +21,7 @@ This how-to will teach you how to do the following:
 
 Before you continue, make sure that you know how to create:
 
-* Domain models (see [Creating a Basic Data Layer](/refguide/create-a-basic-data-layer/))
+* Domain models (see [Configuring a Domain Model](/refguide/configuring-a-domain-model/))
 * A custom file document (see [File Manager](/refguide/file-manager/))
 * Overview and detail pages (see [How to Create Your First Two Overview and Detail Pages](/howto/front-end/create-your-first-two-overview-and-detail-pages/))
 * Menu items (see [Setting Up Navigation](/refguide/setting-up-the-navigation-structure/))

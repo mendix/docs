@@ -22,7 +22,7 @@ When service is initially created, service name is used in the creation of the d
 
 ### 2.2 Version
 
-Version is used to display version information in [OpenAPI (Swagger) documentation page](/refguide9/open-api/). You can set any string in the version field, but it is recomended to follow [semantic versioning](https://semver.org/) scheme.
+Version is used to display version information in [OpenAPI (Swagger) documentation page](/refguide9/open-api/). You can set any string in the version field, but it is recommended to follow [semantic versioning](https://semver.org/) scheme.
 
 By default, version is set to "1.0.0".
 

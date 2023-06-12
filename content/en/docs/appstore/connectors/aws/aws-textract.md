@@ -9,7 +9,7 @@ tags: ["marketplace", "marketplace component", "amazon", "textract", "connector"
 
 ## 1 Introduction
 
-The [Amazon Textract connector](https://marketplace.mendix.com/link/component/205646) provides a way for you to enrich your Mendix app with the capability to extract text, handwriting and data from documents by implementing [Amazon Textract](https://aws.amazon.com/textract/).
+The [Amazon Textract](https://marketplace.mendix.com/link/component/205646) connector provides a way for you to enrich your Mendix app with the capability to extract text, handwriting and data from documents by implementing [Amazon Textract](https://aws.amazon.com/textract/).
 
 ### 1.1 Typical Use Cases
 

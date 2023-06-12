@@ -17,10 +17,11 @@ Mendix adds the CVSS score and CVSS vector for security vulnerabilities describe
 Siemens publishes their CVEs on the second Tuesday of every month.
 {{% /alert %}}
 
-## 2 Security Advisory Details
+## 2 Security Advisory Details {#details}
 
 | CVE ID | CVSS v3.1 Base Score | Siemens Security Advisory (SSA) Description | Notes |
 | --- | --- | ---  | --- |
+| (To be published by [Siemens](https://new.siemens.com/global/en/products/services/cert.html)) | 9.1 | (To be published by [Siemens](https://new.siemens.com/global/en/products/services/cert.html)) | Fixed in [SAML module v3.6.3](https://marketplace.mendix.com/link/component/1174) |
 | CVE-2023-27464 | 5.3 | [Observable Response Discrepancy in Mendix Forgot Password Module](https://cert-portal.siemens.com/productcert/html/ssa-699404.html) | See the SSA description for remediation details. |
 |  CVE-2023-25957 | 9.1 | [Authentication Bypass Vulnerability in Mendix SAML Module](https://cert-portal.siemens.com/productcert/html/ssa-851884.html) | See the SSA description for remediation details. |
 | <a id="23835"></a>CVE-2023-23835 | 5.9 | [XPath Constraint Vulnerability in Mendix Runtime](https://cert-portal.siemens.com/productcert/pdf/ssa-252808.pdf) | See the SSA description for remediation details. |

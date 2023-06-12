@@ -74,10 +74,10 @@ Afterwards, you can merge the three flows followed by a meeting URL into one flo
 
 The **Rule** section is shown in the decision properties pane if the [Decision Type](#decision-type) property is set to **Rule**. A [rule](/refguide/rules/) can be selected to define the condition of the decision. You can use the outcome of the rule for the decision instead of calling a sub-microflow and using the returned variable of that sub-microflow.
 
+{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/decisions/decision/rule-properties.png"   width="350"  >}}
+
 The properties of the **Rule** decision type are the following ones:
 
 * **Rule** – allows you to select a rule.
 
 * **Parameter** – for each parameter of the rule an argument needs to be specified using [expressions](/refguide/expressions/). For example, a rule that determines whether a customer deserves a certain status will have a customer object as a parameter.
-
-    {{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/decisions/decision/rule-properties.png"   width="350"  >}}

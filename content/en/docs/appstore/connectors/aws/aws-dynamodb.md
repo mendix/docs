@@ -11,7 +11,7 @@ aliases:
 
 ## 1 Introduction
 
-The [Amazon DynamoDB connector](https://marketplace.mendix.com/link/component/204872) provides a way for you to increase the security, scalability, and performance of your Mendix app by implementing [Amazon DynamoDB](https://aws.amazon.com/dynamodb/).
+The [Amazon DynamoDB](https://marketplace.mendix.com/link/component/204872) connector provides a way for you to increase the security, scalability, and performance of your Mendix app by implementing [Amazon DynamoDB](https://aws.amazon.com/dynamodb/).
 
 ### 1.1 Typical Use Cases
 

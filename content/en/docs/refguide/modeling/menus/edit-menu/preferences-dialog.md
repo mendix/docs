@@ -145,7 +145,7 @@ Select this option when you want to work on an app that is not stored in [Mendix
 
 ### 6.1 Studio Pro Theme {#studio-pro-theme}
 
-This option allows user to choose between Studio Pro themes: **Auto (System theme)**, **Light**, or **Dark**. The default is **Auto (System theme)** which detects the theme set in the operating system and uses an appropriate theme for Studio Pro (**Light** or **Dark**). Changing this option requires a restart of Studio Pro to take effect.
+This option allows user to choose between Studio Pro themes: **Auto (System theme)**, **Light**, or **Dark**. The default is **Auto (System theme)**, which detects the theme set in the operating system and uses an appropriate theme for Studio Pro (**Light** or **Dark**). Changing this option requires a restart of Studio Pro to take effect.
 
 ### 6.2 Default Page Editor {#default-page-editor}
 
@@ -153,7 +153,7 @@ This option sets the default page editor mode that your page opens in: **Structu
 
 ### 6.3 Rendering {#rendering}
 
-Hardware and driver issues may cause performance problems when running Studio Pro. These issues can appear in form of dialogs opening and closing much slower than expected, and general slowness of the UI. In case the hardware problems cannot be solved, it is possible to mitigate these issues by turning the **Enable software rendering mode** setting on. Enabling this setting requires a restart of Studio Pro to take effect. Running the application with this setting on may increase the CPU usage.
+Hardware and driver issues may cause performance problems when running Studio Pro. These issues can appear in form of dialog boxes opening and closing much more slowly than expected, and general slowness of the UI. In case the hardware problems cannot be solved, it is possible to mitigate these issues by turning the **Enable software rendering mode** setting on. Enabling this setting requires a restart of Studio Pro to take effect. Running the application with this setting on may increase the CPU usage.
 
 ## 7 Advanced Tab
 

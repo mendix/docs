@@ -130,8 +130,8 @@ These are example commands:
 | Example | Result |
 | --- | --- |
 | `mx convert --in-place C:\MxProjects\App-main` | Converts the app in folder *C:\MxProjects\App-main* to the specific Studio Pro version that the mx tool is bundled with. |
-| `mx convert C:\Mendix\App1.mpk C:\Mendix\App2.mpk C:\Mendix\ConvertedProjects\` | Converts the *App1.mpk* and *App2.mpk* app packages that are in the *C:\Mendix\* folder and puts the results in the *C:\Mendix\ConvertedProjects\* folder. |
-| `mx convert --skip-error-check C:\Mendix\Packages\ C:\Mendix\ConvertedPackages\` | Converts all the app packages in the *C:\Mendix\Packages\* folder to the *C:\Mendix\ConvertedPackages\* folder without checking for errors. |
+| `mx convert C:\Mendix\App1.mpk C:\Mendix\App2.mpk C:\Mendix\ConvertedProjects\` | Converts the *App1.mpk* and *App2.mpk* app packages that are in the `C:\Mendix\` folder and puts the results in the `C:\Mendix\ConvertedProjects\` folder. |
+| `mx convert --skip-error-check C:\Mendix\Packages\ C:\Mendix\ConvertedPackages\` | Converts all the app packages in the `C:\Mendix\Packages\` folder to the `C:\Mendix\ConvertedPackages\` folder without checking for errors. |
 
 ### 4.3 Return Codes
 
@@ -186,7 +186,7 @@ These are example commands:
 | `mx check C:\MxProjects\App-main\App-main.mpr -p` | Checks the app at *C:\MxProjects\App-main\App-main.mpr* for errors and performance recommendations. |
 | `mx check C:\MxProjects\App-main\App-main.mpr --warnings --deprecations` | Checks the app at *C:\MxProjects\App-main\App-main.mpr* for errors, warnings, and deprecations. Suppressed warnings will be read from the *project-settings.user.json* file within the app directory. |
 | `mx check C:\MxProjects\App-main\App-main.mpr c:\MxFiles\my-exported-suppressed-warnings.json --warnings` | Checks the app at *C:\MxProjects\App-main\App-main.mpr* for errors and warnings. Suppressed warnings will be read from the JSON file *my-exported-suppressed-warnings.json*. |
-| `mx check C:\MxProjects\App-main\App-main.mpr -w -d -p` | Checks the app at `C:\MxProjects\App-main\App-main.mpr` for errors, warnings, deprecations, and performance recommendations. |
+| `mx check C:\MxProjects\App-main\App-main.mpr -w -d -p` | Checks the app at *C:\MxProjects\App-main\App-main.mpr* for errors, warnings, deprecations, and performance recommendations. |
 
 ### 5.3 Return Codes
 

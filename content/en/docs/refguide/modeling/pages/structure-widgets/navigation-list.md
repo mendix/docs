@@ -30,7 +30,7 @@ Styling:
 * [Design Properties](#design-properties)
 * [Common](#common-styling)
 
-Misc:
+Miscellaneous:
 * [Navigation List Item Properties](#nav-list)
 
 ## 3 Properties

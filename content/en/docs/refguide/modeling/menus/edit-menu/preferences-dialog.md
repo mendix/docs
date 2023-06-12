@@ -145,7 +145,7 @@ Select this option when you want to work on an app that is not stored in [Mendix
 
 ### 6.1 Studio Pro Theme {#studio-pro-theme}
 
-This option allows user to choose between Studio Pro themes: **Auto (System theme)**, **Light** or **Dark**. The default is **Auto (System theme)** which detects the theme set in operating system and uses appropriate theme for Studio Pro (**Light** or **Dark**). Changing this option requires a restart of Studio Pro to take effect.
+This option allows user to choose between Studio Pro themes: **Auto (System theme)**, **Light**, or **Dark**. The default is **Auto (System theme)** which detects the theme set in the operating system and uses an appropriate theme for Studio Pro (**Light** or **Dark**). Changing this option requires a restart of Studio Pro to take effect.
 
 ### 6.2 Default Page Editor {#default-page-editor}
 

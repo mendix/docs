@@ -79,7 +79,7 @@ With the growth of our customer base, we felt the need to work on the architectu
 We made the following improvements to the browser agent:
 
 * We merged the statistics and recording collecting in order to reduce overhead and resource usage.
-* We improved support for [Mendix 7.6](/releasenotes/studio-pro/7.6/) and above.
+* We improved support for Mendix 7.6 and above.
 
 We made the following improvements to the runtime agent:
 

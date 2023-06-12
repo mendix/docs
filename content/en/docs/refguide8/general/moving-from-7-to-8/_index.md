@@ -72,12 +72,12 @@ Make sure that you have either committed your latest changes to Team Server, or 
 ### 4.2 Upgrade to the Latest Release of Version 7 {#upgrade}
 
 {{% alert color="warning" %}}
-It is technically required for you to upgrade your app to the latest version of Mendix 7, which is [7.23](/releasenotes/studio-pro/7.23/). You can only convert your app to Mendix 8 from 7.23.x.
+It is technically required for you to upgrade your app to the latest version of Mendix 7, which is 7.23. You can only convert your app to Mendix 8 from 7.23.x.
 {{% /alert %}}
 
 To upgrade to Mendix 7, follow these steps:
 
-1. Download the latest patch release of Desktop Modeler [7.23](/releasenotes/studio-pro/7.23/).
+1. Download the latest patch release of Desktop Modeler 7.23.
 2. Open your app in Desktop Modeler 7.23.x.
 3. Allow it to upgrade the app, if necessary.
 

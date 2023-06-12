@@ -467,7 +467,7 @@ When using a connected cluster, its status will be shown as **Connected** in the
 
 ### 5 Licensing the Application with Private Cloud License Manager
 
-You can license the Operator and Runtime of your application by configuring the Operator configuration with License Manager details. In order to start using Private Cloud License Manager, you need to first download the PCLM executable available in the Installation page. For more information, see [Private Cloud License Manager](/developerportal/deploy/private-cloud-cluster/private-cloud-license-manager/). The PCLM executable is available for download from this page.
+You can license the Operator and Runtime of your application by configuring the Operator configuration with License Manager details. In order to start using Private Cloud License Manager, you need to first download the PCLM executable available in the Installation page. For more information, see [Private Cloud License Manager](/developerportal/deploy/private-cloud/private-cloud-license-manager/). The PCLM executable is available for download from this page.
 
 {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/PCLMDownload.png" >}}
 
@@ -1428,7 +1428,7 @@ If you would like to see the license payload, click **Show License Payload**.
 If you want to use the Private Cloud License Manager, the Mendix Operator must be in version 2.11.0 or later.
 {{% /alert %}}
 
-For more information, see [Private Cloud License Manager](/developerportal/deploy/private-cloud-cluster/private-cloud-license-manager/).
+For more information, see [Private Cloud License Manager](/developerportal/deploy/private-cloud/private-cloud-license-manager/).
 
 ## 8 Current Limitations
 

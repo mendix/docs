@@ -1,12 +1,12 @@
 ---
 title: "APD 3 Installation Guide"
-url: //appstore/partner-solutions/apd/ig-three/
+url: /appstore/partner-solutions/apd/ig-three/
 weight: 1
 ---
 
 ## 1 Introduction
 
-This is the installation guide for CLEVR APD 3, the successor to [APM 2](//appstore/partner-solutions/apd/ig-two/).
+This is the installation guide for CLEVR APD 3, the successor to [APM 2](/appstore/partner-solutions/apd/ig-two/).
 
 ## 2 Prerequisites
 
@@ -16,7 +16,7 @@ Before starting this how-to, make sure you have completed the following prerequi
 * If APM 2 was installed, do the following: 
     * Write down the current values for the constant **APMAgent2.APMAPIKey** (and, if set, **APMAgent2.APMAdvancedSettings**),
     * Use the values for **APDAgent.APIKey** and, if applicable, **APDAgent.AdvancedSettings**
-* Remove APM 1 and/or APM 2 if they are installed (for details, see [Uninstall Steps APM 1](//appstore/partner-solutions/apd/ig-one-uninstall-steps/))
+* Remove APM 1 and/or APM 2 if they are installed (for details, see [Uninstall Steps APM 1](/appstore/partner-solutions/apd/ig-one-uninstall-steps/))
 
 ## 3 Installation
 
@@ -25,7 +25,7 @@ To install APD 3, follow these steps:
 1. Arrange a license for the app to use APD 3.
 2. In a browser, log in using your Mendix account to the [APD Manager](https://apd.mendix.com/). (For backward compatibility with APM 1, APM 2 you are forwarded to [https://apmmanager100.mendixcloud.com](https://apmmanager100.mendixcloud.com)).
 3. Select your app in the dashboard.
-4. In the **Environments** dashboard, select the **New Environment** tile. If you are a [Scrum Master](/developerportal/collaborate/app-roles/) of the Mendix app, you can add test, acceptance, and production environments. If you are not, you can only add Mendix Studio Pro environments. For more details, see [Environments](//appstore/partner-solutions/apd/rg-three-environments/).
+4. In the **Environments** dashboard, select the **New Environment** tile. If you are a [Scrum Master](/developerportal/collaborate/app-roles/) of the Mendix app, you can add test, acceptance, and production environments. If you are not, you can only add Mendix Studio Pro environments. For more details, see [Environments](/appstore/partner-solutions/apd/rg-three-environments/).
 5. Choose an environment name.
 6. Click **Save and generate API key**, then use this key as the value for the **APDAgent.APIKey** constant in step 10 below.
 7. In Studio Pro with your app, import the [Mendix Application Performance Monitor](https://marketplace.mendix.com/link/component/6127/) module from the Mendix Marketplace.

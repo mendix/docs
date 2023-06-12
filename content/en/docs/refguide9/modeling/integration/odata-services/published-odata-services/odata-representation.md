@@ -53,4 +53,4 @@ Using this method, you can expose both sides of the association and you can expo
 
 ### 3.2 As an Associated Object ID
 
-When you choose to represent assocations as an associated object ID, the ID of the associated object is represented as an `Edm.Int64` property. If the association refers to more than one object, you can not expose it from that side.
+When you choose to represent associations as an associated object ID, the ID of the associated object is represented as an `Edm.Int64` property. If the association refers to more than one object, you can not expose it from that side.

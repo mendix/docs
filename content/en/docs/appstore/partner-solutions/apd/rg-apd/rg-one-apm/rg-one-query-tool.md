@@ -1,18 +1,18 @@
 ---
 title: "Query Tool"
-url: //appstore/partner-solutions/apd/rg-one-query-tool/
+url: /appstore/partner-solutions/apd/rg-one-query-tool/
 ---
 To collect database or application information the Query Tool has been introduced.
 
 The Query Tool allows you to perform OQL, XPath and JDBC queries. Opening the Query Tool shows an overview of all configured queries and allows for adding, modifying and deleting queries.
 
-{{< figure src="/attachments//appstore/partner-solutions/apd/rg-apd/rg-one-apm/rg-one-query-tool/List.png" >}}
+{{< figure src="/attachments/appstore/partner-solutions/apd/rg-apd/rg-one-apm/rg-one-query-tool/List.png" >}}
 
 If you open a query to edit you get a dialog where you can select give a description, select a type, enter a query and set the maximum number of rows to retrieve.
 
 When you use the execute button you will see the results.
 
-{{< figure src="/attachments//appstore/partner-solutions/apd/rg-apd/rg-one-apm/rg-one-query-tool/OQL.png" >}}                       
+{{< figure src="/attachments/appstore/partner-solutions/apd/rg-apd/rg-one-apm/rg-one-query-tool/OQL.png" >}}                       
 
 If you open a query that is used in the measurements tool it is presented as read-only.
 

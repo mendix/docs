@@ -73,7 +73,7 @@ To create a new filter, do the following:
 
 1. To add a filter to a *microflow*, open the **Retrieve** action properties. 
 
-    To add a filter to a *page*, open properties of a list view or a data grid).
+    To add a filter to a *page*, open properties of a list view or a data grid.
 
 1. Make sure the database is selected as the data source and that an entity is selected.
 1. Click the **Filter** field.

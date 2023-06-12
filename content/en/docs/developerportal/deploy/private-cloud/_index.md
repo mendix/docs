@@ -63,9 +63,9 @@ If you have chosen to register a standalone cluster, then all communication with
 
 ## 3 Product Capability Comparison
 
-The table below shows the differences between the capabilities for apps deployed to the Mendix Cloud, Mendix for Private Cloud (Mx4PC) Connected, and Mx4PC Standalone.
+The table below shows the differences between the capabilities for apps deployed to the Mendix Cloud, Mendix for Private Cloud Connected, and Mendix for Private Cloud Standalone.
 
-| Capability | Mendix Cloud | Mx4PC Connected | Mx4PC Standalone |
+| Capability | Mendix Cloud | Mendix for Private Cloud Connected | Mendix for Private Cloud Standalone |
 | --- | --- | --- | --- |
 | Environment provisioning | Fully automated | Provisioned with database and blob storage provided by the customer | Provisioned with database and blob storage provided by the customer|
 | Environment configuration<br/>*For example, constants and scheduled event* | Mendix Developer Portal | Mendix Developer Portal | Custom Resources via Mendix Operator |
@@ -159,3 +159,7 @@ If your app is **Connected** to the Developer Portal, you can enter the subscrip
 #### 4.4.2 Standalone & Offline Private Cloud Apps{#activate-offline}
 
 If your app is **Standalone** or unable to contact the Mendix license server, you will receive a **LicenseId** and a **LicenseKey**. You will have to apply these by [editing the CR](/developerportal/deploy/private-cloud-operator/#edit-cr) in the cluster.
+
+#### 4.4.3 Private Cloud Licensing Manager
+
+With Mendix Operator version 2.11.0 and above, you can start using the Private Cloud Licensing Manager to import a license bundle consisting of Operator and Runtime licenses. Private Cloud Licensing Manager automatically retrieves the licenses from the license bundle, so that you do not need to apply the license per environment. For more information, see [Private Cloud License Manager](/developerportal/deploy/private-cloud/private-cloud-license-manager/).

@@ -120,7 +120,9 @@ Disallowing concurrent execution of a microflow can be useful if a microflow wou
 
 ## 3 Expose as Microflow Action {#expose-as-microflow}
 
-This property is accessible by right-clicking in the microflow editor and selecting **Properties**.
+You can select this option by right-clicking in the microflow editor and selecting **Expose as action** > **Expose as microflow action**.
+
+It is also accessible by right-clicking in the microflow editor and selecting **Properties**.
 
 {{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/microflows/microflow/microflow-expose.jpg" alt="Expose as Microflow Action" width="550" >}}
 
@@ -142,7 +144,9 @@ If only icon is specified, the icon image will be used for the toolbox tile view
 
 ## 4 Expose as Workflow Action {#expose-as-workflow-action}
 
-This property is accessible by right-clicking in the microflow editor and selecting **Properties**.
+You can select this option by right-clicking in the microflow editor and selecting **Expose as action** > **Expose as workflow action**.
+
+It is also accessible by right-clicking in the microflow editor and selecting **Properties**.
 
 {{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/microflows/microflow/workflow-expose.jpg" alt="Expose As Workflow Action" width="550" >}}
 

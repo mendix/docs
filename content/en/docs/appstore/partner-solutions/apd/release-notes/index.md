@@ -1,6 +1,6 @@
 ---
 title: "APD Release Notes"
-url: //appstore/partner-solutions/apd/release-notes
+url: /appstore/partner-solutions/apd/release-notes
 description: "The release notes for Mendix Application Performance Diagnostics (APD) with details on new features, bug fixes, and known issues."
 weight: 40
 ---
@@ -15,7 +15,7 @@ For newer release notes, see the **Releases** tab of [Mendix Application Perform
 
 ### APM Renamed to Application Performance Diagnostics (APD)
 
-APM has been renamed to [Application Performance Diagnostics (APD)](//appstore/partner-solutions/apd/rg-three-apd/), since that better covers the functionality and since APD can work side-by-side with other APM solutions.
+APM has been renamed to [Application Performance Diagnostics (APD)](/appstore/partner-solutions/apd/rg-three-apd/), since that better covers the functionality and since APD can work side-by-side with other APM solutions.
 
 ### SMART Digital Factory APIs
 
@@ -42,7 +42,7 @@ With the growth of our customer base, we felt the need to work on the architectu
 * We added a check on start-up to detect if the proper agent *.jar* file has been loaded.
 * We fixed an issue with [Client API](/apidocs-mxsdk/apidocs/client-api/) requests, as `retrieve_by_microflow` and `retrieve_by_path` were not specifying their target.
 
-## 2.0.21	
+## 2.0.21    
 
 * We released the Mendix 7 version of the agent for release [2.0.22](#2022) (which contains the Mendix 8 version).
 

@@ -6,6 +6,10 @@ description: "Use this API to extend the requirements and project management cap
 weight: 90
 ---
 
+{{% alert color="warning" %}}
+We recommend you to use [Epics API](/apidoc-mxsdk/apidocs/epics-api/) instead of Stories API, because [Stories](/developerportal/collaboration/stories) has been replaced by Epics.
+{{% /alert %}}
+
 ## 1 Introduction
 
 The Mendix Stories API allows you to retrieve, create, and update the Sprint, stories, and tasks in your Mendix apps.

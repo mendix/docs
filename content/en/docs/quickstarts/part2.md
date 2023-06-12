@@ -4,6 +4,9 @@ url: /quickstarts/part2/
 weight: 20
 description: "Learn the basics of making a native mobile app."
 tags: ["hello world", "microflows", "widgets", "app", "nanoflow", "app development"]
+aliases:
+    - /refguide/quickstart-part1/
+    - /refguide9/quickstart-part1/
 ---
 
 ## 1 Introduction 

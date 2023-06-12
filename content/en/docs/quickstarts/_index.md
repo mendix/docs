@@ -4,6 +4,9 @@ url: /quickstarts/
 weight: 4
 description: "Presents tutorials on how to build an app in Studio Pro quickly and easily."
 tags: ["hello world", "microflows", "widgets", "app", "nanoflow", "app development"]
+aliases:
+    - /refguide/quickstart-guide/
+    - /refguide9/quickstart-guide/
 ---
 
 Welcome to the Mendix quickstarts for building an app! These tutorials cover the essentials of Mendix development:

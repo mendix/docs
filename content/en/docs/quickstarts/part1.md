@@ -4,6 +4,9 @@ url: /quickstarts/part1/
 weight: 10
 description: "Learn the basics of making an app in a Responsive Web profile."
 tags: ["hello world", "microflows", "widgets", "app", "nanoflow", "app development"]
+aliases:
+    - /refguide/quickstart-part2/
+    - /refguide9/quickstart-part2/
 ---
 
 ## 1 Introduction 
@@ -29,8 +32,8 @@ You will not need any additional software configured on your device in order to 
 Before starting this guide, make sure you have completed the following prerequisites:
 
 * Create your [free account](https://signup.mendix.com/link/signup/?source=quickstart-part1&medium=mxdocs
-) ⁠— which takes only two minutes to finish
-* [Download](https://marketplace.mendix.com/index3.html) and [install](/refguide/install/) Mendix Studio Pro
+)—which takes only two minutes to finish
+* [Download](https://marketplace.mendix.com/link/studiopro/) and [install](/refguide/install/) Mendix Studio Pro
 * If you are working on a Mac, please complete [Configuring Parallels](/refguide/using-mendix-studio-pro-on-a-mac/) to install Studio Pro on your Mac
 
 ## 3 Choosing an App Template with a Responsive Navigation Profile

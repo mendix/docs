@@ -2,7 +2,7 @@
 title: "App Commands"
 url: /refguide/mx-command-line-tool/app
 weight: 10
-description: "Describes the app related commands."
+description: "Describes the app-related commands for mx CLT."
 tags: ["mx", "command-line", "tool", "mx", "studio pro", "windows", "linux", "create-project", "show-version", "convert"]
 ---
 

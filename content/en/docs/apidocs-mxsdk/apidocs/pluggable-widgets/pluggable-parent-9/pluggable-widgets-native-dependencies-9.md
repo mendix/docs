@@ -1,11 +1,9 @@
 ---
-title: "Declaring Native Dependencies"
-url: /apidocs-mxsdk/apidocs/pluggable-widgets-native-dependencies/
-description: A guide for understanding native dependencies for pluggable widgets and JavaScript actions in Mx10.
+title: "Declaring Native Dependencies – Mx9"
+url: /apidocs-mxsdk/apidocs/pluggable-widgets-native-dependencies-9/
+description: A guide for understanding native dependencies for pluggable widgets and JavaScript actions in Mendix 9.
 tags: ["Widget", "Pluggable",  "JavaScript", "Native"]
 weight: 40
-aliases:
- - /apidocs-mxsdk/apidocs/native-dependencies
 ---
 
 ## 1 Introduction
@@ -65,5 +63,4 @@ It is not possible to include different versions of the same native dependency i
 
 ## 5 Read More
 
-* [Pluggable Widget API Documentation](/apidocs-mxsdk/apidocs/pluggable-widgets/)
-* [Build JavaScript Actions for Native Mobile](/howto/extensibility/create-native-javascript-action/)
+* [Mendix 9](/apidocs-mxsdk/apidocs/pluggable-parent-9/) Pluggable Widget API Documentation

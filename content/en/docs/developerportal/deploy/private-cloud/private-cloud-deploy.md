@@ -116,6 +116,11 @@ You can change the internal name if you wish, but do not reuse one which has alr
 
 6. Enter a **Subscription Secret** if you want your app to run as a licensed app. Without a license, your app will be subjected to restrictions very similar to those listed in the [Free Apps](/developerportal/deploy/mendix-cloud-deploy/#free-app) section of *Mendix Cloud*.
 
+    If you have configured **PCLM** in your namespace, the license from your license bundle will be automatically applied in the environment (with a condition that licenses should be available in the license bundle and not claimed in other environments). For more information, see [Private Cloud License Manager](/developerportal/deploy/private-cloud-cluster/private-cloud-license-manager/).
+
+    {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-deploy/PCLM.png" >}}
+
+
 7. Click **Next**.
 
     {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-deploy/configureEnvResources.png" >}}

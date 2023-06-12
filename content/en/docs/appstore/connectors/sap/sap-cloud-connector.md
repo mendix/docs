@@ -1,10 +1,12 @@
 ---
 title: "SAP Cloud Connector"
-url: /partners/sap/sap-cloud-connector/
+url: /appstore/connectors/sap/sap-cloud-connector/
 category: "SAP"
 weight: 28
 description: "Presents reference information on the SAP Cloud Connector."
 tags: ["SAP", "on-premises", "Cloud Connector", "Destination Services", "SAP BTP", "SAP Business Technology Platform"]
+aliases:
+    - /partners/sap/sap-cloud-connector/
 ---
 
 ## 1 Introduction

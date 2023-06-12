@@ -30,6 +30,9 @@ Styling:
 * [Design Properties](#design-properties)
 * [Common](#common-styling)
 
+Misc:
+* [Navigation List Item Properties](#nav-list)
+
 ## 3 Properties
 
 #### 3.1 Visibility Section {#visibility}
@@ -54,7 +57,7 @@ Styling:
 
 A row in a navigation list is a navigation list item. You can set a separate **On click** event for each row of the navigation list. 
 
-### 5.1 Navigation List Item Properties
+### 5.1 Navigation List Item Properties {#nav-list}
 
 #### 5.1.1 Common Section
 

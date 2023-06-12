@@ -8,7 +8,7 @@ tags: ["hello world", "microflows", "widgets", "app", "nanoflow", "app developme
 
 ## 1 Introduction 
 
-Get up and running with the Mendix Platform and start developing your first app in Mendix Studio Pro. This is Part 1 of the quickstart, where you will learn the basics of Studio Pro, handle data using the Domain Model, populate your app's pages with dynamic data, and create custom app logic using a microflow.
+Get up and running with the Mendix Platform and start developing your first app in Mendix Studio Pro. This is Part 1 of the quickstarts, where you will learn the basics of Studio Pro, handle data using the Domain Model, populate your app's pages with dynamic data, and create custom app logic using a microflow.
 
 When you complete Part 1, you will have a photo album app that will allow users to upload, edit, and display pictures so that their cherished memories will be preserved. This guide, Part 1, will show you how to build a responsive web app compatible with all desktop, tablet, and mobile browsers.
 
@@ -269,7 +269,7 @@ You have finished your responsive app! You can run your photo album app and test
 Launching your app compiles your app locally on your development machine, your local host. Publishing your app will push your app to a cloud environment or web container connected to your app. If none exists, an environment will be initialized for your app on the Mendix Cloud Free Tier EU.
 {{% /alert %}}
 
-Congratulations! You successfully completed Part 1 of the quickstart guide. You have your first Mendix app to prove it, and it works on almost any device. Well done! 
+Congratulations! You successfully completed Part 1 of the quickstarts. You have your first Mendix app to prove it, and it works on almost any device. Well done! 
 
 ## 8 Continuing with the Next Tutorial
 

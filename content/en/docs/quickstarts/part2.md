@@ -179,7 +179,7 @@ After taking a photo with your native mobile app and tapping the **Save** button
 
 {{< figure src="/attachments/quickstarts/part2/responsive-app.png" width="450px" alt="Browser view">}}
 
-Congratulations on successfully completing Part 2 of the quickstart guide! You are definitely on your way to succeed with the Mendix Platform.
+Congratulations on successfully completing Part 2 of the quickstarts! You are definitely on your way to succeed with the Mendix Platform.
 
 For more information on building and deploying apps with Mendix, see [Building Native Apps](/refguide/mobile/distributing-mobile-apps/building-native-apps/). Put simply, Mendix lets you [build an app for distribution](/refguide/mobile/distributing-mobile-apps/building-native-apps/native-build-locally/) and get it running on a native device. After you develop further, you can [debug native app issues](/refguide/mobile/distributing-mobile-apps/native-debug/) to improve your users' experience. Then, you can add [custom fonts](/refguide/mobile/designing-mobile-user-interfaces/images-icons-and-fonts/) to make your app feel more like your brand. And if you ever need help, we have [troubleshooting help](/refguide/mobile/getting-started-with-mobile/prerequisites/) for you just in case.
 

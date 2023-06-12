@@ -162,7 +162,7 @@ Do not add a double-space between the number (or bullet point) and first letter 
 1. First list item
 2. Second list item
 
-    {{< figure src="/attachments/refguide/general/moving-from-8-to-9/moving-from-atlas-2-to-3/set-hybrid-nav.png" >}}
+    {{< figure src="/attachments/refguide9/general/moving-from-8-to-9/moving-from-atlas-2-to-3/set-hybrid-nav.png" >}}
     * Indenting with **4 spaces** and a line break works, keeping the image in line with list item 2. The line break causes the parent element, list item 2 to be wrapped in `<p>`, making a gap between 1 and 2.
 3. Third item
 
@@ -170,7 +170,7 @@ Do not add a double-space between the number (or bullet point) and first letter 
 
 1. First list item
 2. Second list item
-    {{< figure src="/attachments/refguide/general/moving-from-8-to-9/moving-from-atlas-2-to-3/set-hybrid-nav.png" width="250px">}}
+    {{< figure src="/attachments/refguide9/general/moving-from-8-to-9/moving-from-atlas-2-to-3/set-hybrid-nav.png" width="250px">}}
     * Image indentation works with **4 spaces**.
     * Images don't need a line break to work.
 
@@ -178,7 +178,7 @@ Do not add a double-space between the number (or bullet point) and first letter 
 
 1. First list item
 2. Second list item  
-    {{< figure src="/attachments/refguide/general/moving-from-8-to-9/moving-from-atlas-2-to-3/set-hybrid-nav.png" >}}
+    {{< figure src="/attachments/refguide9/general/moving-from-8-to-9/moving-from-atlas-2-to-3/set-hybrid-nav.png" >}}
     * Adding trailing spaces (`<br>`) doesn't change example.
 
 ### 1.11 Indent for Alerts in Lists

@@ -2,7 +2,7 @@
 title: "Adaptable Solution Commands"
 url: /refguide/mx-command-line-tool/adaptable
 weight: 20
-description: "Describes the adaptable solution-related commands for mx CLT."
+description: "Describes the adaptable solution-related commands for the mx command-line tool."
 tags: ["mx", "command-line", "tool", "mx", "studio pro", "windows", "linux", "solution", "check"]
 ---
 
@@ -105,5 +105,5 @@ This table shows the return codes and their description:
 | Return Code | Description |
 | --- | --- |
 | 0 | No errors. |
-| 124 | If the version is not in the SemVer format. |
-| 313 | If distribution as a solution is not enabled for the app |
+| 124 | The version is not in the SemVer format. |
+| 313 | Distribution as a solution is not enabled for the app. |

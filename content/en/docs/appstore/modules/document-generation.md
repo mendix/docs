@@ -87,7 +87,7 @@ If you have installed Chrome in a custom location, configure the path to the Chr
 
 ##### 3.1.2 Chromium
 
-If you use Chromium, only use stable releases. The currently supported stable release is [104.0.5109.0](https://storage.googleapis.com/chromium-browser-snapshots/index.html?prefix=Win_x64/1011831). 
+If you use Chromium, only use stable releases. The currently supported stable release is [104.0.5109.0](https://storage.googleapis.com/chromium-browser-snapshots/index.html?prefix=Win_x64/1011831/). 
 
 Download the *chrome-win.zip* package and extract the archive to a location of your choosing. 
 

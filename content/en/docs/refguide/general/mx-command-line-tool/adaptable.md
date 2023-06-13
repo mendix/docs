@@ -66,9 +66,9 @@ This table shows the return codes and their description:
 
 | Return  Code | Description |
 | --- | --- |
-| 0 | No errors. |
-| 315 | If `-b` was specified, but the app is not based on a solution.  |
-| 313 | If -b was not specified, but distribution as a solution is not enabled for the app. |
+| `0` | No errors. |
+| `315` | If `-b` was specified, but the app is not based on a solution.  |
+| `313` | If -b was not specified, but distribution as a solution is not enabled for the app. |
 
 ## 3 mx set-app-version Command {#set-app-version}
 
@@ -104,6 +104,6 @@ This table shows the return codes and their description:
 
 | Return Code | Description |
 | --- | --- |
-| 0 | No errors. |
-| 124 | The version is not in the SemVer format. |
-| 313 | Distribution as a solution is not enabled for the app. |
+| `0` | No errors. |
+| `124` | The version is not in the SemVer format. |
+| `313` | Distribution as a solution is not enabled for the app. |

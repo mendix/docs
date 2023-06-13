@@ -48,10 +48,10 @@ This table shows the return codes and their description:
 
 | Return Code | Meaning |
 | --- | --- |
-| 0 | OK. |
-| 2 | Conflicts were found during the diff. |
-| 3 | An error happened during the merge. |
-| 4 | The version of either *.mpr* file is not supported. |
+| `0` | OK. |
+| `2` | Conflicts were found during the diff. |
+| `3` | An error happened during the merge. |
+| `4` | The version of either *.mpr* file is not supported. |
 
 ## 3 mx merge Command {#merge}
 
@@ -119,11 +119,11 @@ This table shows the return codes and their description:
 
 | Return Code | Description |
 | --- | --- |
-| 0 | The merge is successful and there are no conflicts. *MINE.mpr* contains the result of the merge. |
-| 1 | The command is invalid for the input parameters. |
-| 2 | Conflicts are detected. Open *MINE.mpr* in Studio Pro to resolve them. |
-| 3 | There is an exception, as an error occurred during the merge. Error details are printed to the command line output. |
-| 4 | The version is unsupported |
+| `0` | The merge is successful and there are no conflicts. *MINE.mpr* contains the result of the merge. |
+| `1` | The command is invalid for the input parameters. |
+| `2` | Conflicts are detected. Open *MINE.mpr* in Studio Pro to resolve them. |
+| `3` | There is an exception, as an error occurred during the merge. Error details are printed to the command line output. |
+| `4` | The version is unsupported |
 
 ## 4 mx merge as Git Merge Driver {#merge-git-driver}
 

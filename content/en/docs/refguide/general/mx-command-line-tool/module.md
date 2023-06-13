@@ -44,8 +44,8 @@ This table shows the return codes and their description:
 
 | Return Code | Description |
 | --- | --- |
-| 0 | No errors. |
-| 1 | The module does not have a version |
+| `0` | No errors. |
+| `1` | The module does not have a version |
 
 The command will output the version of the module to the command line output.
 
@@ -83,5 +83,5 @@ This table shows the return codes and their description:
 
 | Return Code | Description |
 | --- | --- |
-| 0 | No errors. |
-| 1 | The module does not have a version |
+| `0` | No errors. |
+| `1` | The module does not have a version |

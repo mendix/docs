@@ -47,9 +47,9 @@ These are the return codes:
 
 | Return Code | Description |
 | --- | --- |
-| 0 | The app creation was successful. |
-| 1 | An internal error occurred. |
-| 2 | There is something wrong with the command-line options. |
+| `0` | The app creation was successful. |
+| `1` | An internal error occurred. |
+| `2` | There is something wrong with the command-line options. |
 
 ## 3 mx show-version Command {#show-version}
 
@@ -90,7 +90,7 @@ These are the return codes:
 
 | Return Code | Description |
 | --- | --- |
-| 0 | The command ran successfully. |
+| `0` | The command ran successfully. |
 
 ## 4 mx convert Command {#convert}
 
@@ -130,8 +130,8 @@ These are example commands:
 | Example | Result |
 | --- | --- |
 | `mx convert --in-place C:\MxProjects\App-main` | Converts the app in folder *C:\MxProjects\App-main* to the specific Studio Pro version that the mx tool is bundled with. |
-| `mx convert C:\Mendix\App1.mpk C:\Mendix\App2.mpk C:\Mendix\ConvertedProjects\` | Converts the *App1.mpk* and *App2.mpk* app packages that are in the `C:\Mendix\` folder and puts the results in the `C:\Mendix\ConvertedProjects\` folder. |
-| `mx convert --skip-error-check C:\Mendix\Packages\ C:\Mendix\ConvertedPackages\` | Converts all the app packages in the `C:\Mendix\Packages\` folder to the `C:\Mendix\ConvertedPackages\` folder without checking for errors. |
+| `mx convert C:\Mendix\App1.mpk C:\Mendix\App2.mpk C:\Mendix\ConvertedProjects\` | Converts the *App1.mpk* and *App2.mpk* app packages that are in the *C:\\Mendix\\* folder and puts the results in the *C:\\Mendix\\ConvertedProjects\\* folder. |
+| `mx convert --skip-error-check C:\Mendix\Packages\ C:\Mendix\ConvertedPackages\` | Converts all the app packages in the *C:\\Mendix\\Packages\\* folder to the *C:\\Mendix\\ConvertedPackages\\* folder without checking for errors. |
 
 ### 4.3 Return Codes
 
@@ -139,10 +139,10 @@ These are the return codes:
 
 | Return Code | Description |
 | --- | --- |
-| 0 | The conversion was successful. |
-| 1 | An internal error occurred. |
-| 2 | There is something wrong with the command-line options. |
-| 3 | Converting failed. |
+| `0` | The conversion was successful. |
+| `1` | An internal error occurred. |
+| `2` | There is something wrong with the command-line options. |
+| `3` | Converting failed. |
 
 ## 5 mx check Command {#check}
 
@@ -194,11 +194,11 @@ These are the return codes:
 
 | Return Code | Description |
 | --- | --- |
-| 0 | No issues found. |
-| 1 | Errors were found. |
-| 2 | Warnings were found. |
-| 4 | Deprecations were found. |
-| 8 | Performance recommendations were found. |
+| `0` | No issues found. |
+| `1` | Errors were found. |
+| `2` | Warnings were found. |
+| `4` | Deprecations were found. |
+| `8` | Performance recommendations were found. |
 
 Those values are logically `OR` combined to indicate when there are a mix of errors, warnings, deprecations, or performance recommendations.
 

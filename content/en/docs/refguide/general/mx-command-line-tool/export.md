@@ -42,10 +42,10 @@ This table shows the return codes and their description:
 
 | Return Code | Description |
 | --- | --- |
-| 0 | OK. |
-| 1 | Incorrect app file provided. |
-| 2 | Output folder not determined. |
-| 4 | Unknown package export error. |
+| `0` | OK. |
+| `1` | Incorrect app file provided. |
+| `2` | Output folder not determined. |
+| `4` | Unknown package export error. |
 
 ## 3 mx create-module-package Command {#create-module-package}
 
@@ -82,11 +82,11 @@ This table shows the return codes and their description:
 
 | Return Code | Description |
 | --- | --- |
-| 0 | OK. |
-| 1 | Incorrect app file provided. |
-| 2 | Output folder not determined. |
-| 3 | Invalid module name specified. |
-| 4 | Unknown package export error. |
+| `0` | OK. |
+| `1` | Incorrect app file provided. |
+| `2` | Output folder not determined. |
+| `3` | Invalid module name specified. |
+| `4` | Unknown package export error. |
 
 ## 4 mx create-solution-package Command {#create-solution-package}
 
@@ -120,7 +120,7 @@ This table shows the return codes and their description:
 
 | Return Code | Description |
 | --- | --- |
-| 0 | OK. |
-| 1 | Incorrect app file provided. |
-| 2 | Output folder not determined. |
-| 4 | Unknown package export error. |
+| `0` | OK. |
+| `1` | Incorrect app file provided. |
+| `2` | Output folder not determined. |
+| `4` | Unknown package export error. |

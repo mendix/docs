@@ -264,40 +264,36 @@ The response is as follows:
 
 You can also generate and reuse the generated validation microflows. The following example shows a validation microflow for the customer entity. 
 
-1. On a save button, right-click and select **Generate validation microflow**:
+1. On a save button, right-click and select **Generate validation microflow**. The resulting validation microflow looks like this:
 
-{{< figure src="/attachments/refguide/modeling/integration/build-odata-apis/generate-validation-microflow.png" >}} 
+     {{< figure src="/attachments/refguide/modeling/integration/build-odata-apis/validation-microflow.png" >}} 
 
-Tesulting validation microflow looks like this:
-
-{{< figure src="/attachments/refguide/modeling/integration/build-odata-apis/validation-microflow.png" >}} 
-
-The use of *show validation message* activity to set the errors to be shown in the UI in this generated validation microflow. This microflow will be called in the insert microflow displayed below.
+     The use of *show validation message* activity to set the errors to be shown in the UI in this generated validation microflow. This microflow will be called in the insert microflow displayed below.
 
 2. Specify that you want to use a microflow to handle insert of a new Customer resource via the OData API. This microflow will be called whenever a client does a POST operation on the endpoint of the resource:
 
-{{< figure src="/attachments/refguide/modeling/integration/build-odata-apis/specify-use-microflow.png" >}} 
+     {{< figure src="/attachments/refguide/modeling/integration/build-odata-apis/specify-use-microflow.png" >}} 
 
 3. In the insert microflow, call the generated validation microflow and commit the object if the validation succeeds:
 
-{{< figure src="/attachments/refguide/modeling/integration/build-odata-apis/insert-microflow.png" >}} 
+     {{< figure src="/attachments/refguide/modeling/integration/build-odata-apis/insert-microflow.png" >}} 
 
-If validation fails, the *show validation message* texts are provided automatically in the response payload. See the following POST request:
+     If validation fails, the *show validation message* texts are provided automatically in the response payload. See the following POST request:
 
-```
-POST http://localhost:8080/odata/CustomerApi/v1/Customers
+     ```
+     POST http://localhost:8080/odata/CustomerApi/v1/Customers
 
-{
-    "FirstName": "Boris",
-    "Lastname": "Smith",
-    "Title": "",
-    "CompanyName": ""
-}
-```
+     {
+         "FirstName": "Boris",
+         "Lastname": "Smith",
+         "Title": "",
+         "CompanyName": ""
+     }
+     ```
 
-The response is as follows:
+     The response is as follows:
 
-{{< figure src="/attachments/refguide/modeling/integration/build-odata-apis/validation-response-payload.png" >}} 
+     {{< figure src="/attachments/refguide/modeling/integration/build-odata-apis/validation-response-payload.png" >}} 
 
 ### 4.3 Deleting Data
 
@@ -333,7 +329,7 @@ GET http://localhost:8080/odata/CustomerApi/v1/Customers(1)?$expand=Addresses,No
 
 The response is as follows:
 
-{{< figure src="/attachments/refguide/modeling/integration/build-odata-apis/expand-expression.png" >}} 
+     {{< figure src="/attachments/refguide/modeling/integration/build-odata-apis/expand-expression.png" >}} 
 
 You can use select and expand in combination with filters, sorting, top and skip as discussed in [Filtering, Sorting, Paginating, and Selecting Data](#filter-sort-page-select-data). See the following GET request:
 
@@ -346,7 +342,7 @@ GET http://localhost:8080/odata/CustomerApi/v1/Customers
             &$top=1
 ```
 
-{{< figure src="/attachments/refguide/modeling/integration/build-odata-apis/sort-top-skip.png" >}} 
+     {{< figure src="/attachments/refguide/modeling/integration/build-odata-apis/sort-top-skip.png" >}} 
 
 For long queries, place the query in the request body. You can do this by using POST, and adding `$query` to the endpoint. See the following POST request:
 
@@ -357,7 +353,7 @@ Content-Type: text/plain
 
 The response is as follows:
 
-{{< figure src="/attachments/refguide/modeling/integration/build-odata-apis/long-queries.png" >}} 
+     {{< figure src="/attachments/refguide/modeling/integration/build-odata-apis/long-queries.png" >}} 
 
 This result is very similar to using GraphQL, where you can query a graph of objects, and limit the attributes returned to only those that you need. 
 
@@ -370,6 +366,7 @@ You may not want to directly publish APIs for your persistable entities because 
 * Your data is not stored in the database of your app, but in a third-party data source
 
 There are two ways to take an API-first approach, as explained in the [API-First vs. API Design-First: A Comprehensive Guide](https://blog.stoplight.io/api-first-vs.-api-design-first-a-comprehensive-guide):
+
 1. You should always start by defining a contract, like an OpenAPI document.
 2. You should set the use case and developer experience of using your APIs first.
 
@@ -387,15 +384,15 @@ In this example, you can expose a single REST resource that combines data from t
 
 {{< figure src="/attachments/refguide/modeling/integration/build-odata-apis/expose-single-resource-domain-model.png" >}} 
 
-1.  Add the `CustomerHomeAddress` entity as a resource to the OData service:
+1. Add the `CustomerHomeAddress` entity as a resource to the OData service:
 
      {{< figure src="/attachments/refguide/modeling/integration/build-odata-apis/customer-home-address-npe.png" >}} 
 
-2.  You can use an OQL Dataset to define the query to fetch this information from your entities:
+2. You can use an OQL Dataset to define the query to fetch this information from your entities:
 
      {{< figure src="/attachments/refguide/modeling/integration/build-odata-apis/oql-database.png" >}} 
 
-3.  Define a microflow that will fetch the correct data when a user does a GET on the CustomerHomeAddress resource:
+3. Define a microflow that will fetch the correct data when a user does a GET on the CustomerHomeAddress resource:
 
      {{< figure src="/attachments/refguide/modeling/integration/build-odata-apis/get-microflow.png" >}} 
 
@@ -433,11 +430,11 @@ This example shows a `CustomerEmailRequest` entity, that a client can create usi
 
 1. The API will execute the logic to send the customer an email when this resource is created:
 
-{{< figure src="/attachments/refguide/modeling/integration/build-odata-apis/create-customer-email-request-entity.png" >}} 
+     {{< figure src="/attachments/refguide/modeling/integration/build-odata-apis/create-customer-email-request-entity.png" >}} 
 
 2. Define the logic as the insert (POST) action:
 
-{{< figure src="/attachments/refguide/modeling/integration/build-odata-apis/define-insert-action.png" >}} 
+     {{< figure src="/attachments/refguide/modeling/integration/build-odata-apis/define-insert-action.png" >}} 
 
 ### 6.4 Running Operations Asynchronously 
 

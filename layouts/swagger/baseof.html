@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="{{ .Site.Language.Lang }}" class="no-js">
+<html itemscope itemtype="http://schema.org/WebPage" lang="{{ .Site.Language.Lang }}" class="no-js">
   <head>
     {{ partial "head.html" . }}
     <!-- MvM - Do a test for missing Title -->
@@ -7,14 +7,13 @@
     {{ warnf "File %s \n\t\t\t\thas no title in the front matter\n " .Page.File.Path }}
     {{ end }}
     <title>{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ with .Title }}{{ . }} | {{ end }}{{ .Site.Title }}{{ end }}</title>
-    <link rel="stylesheet" type="text/css" href="{{ "/css/swagger-ui.css" | relURL }}">
+    <link rel="stylesheet" type="text/css" href="{{ "css/swagger-ui.css" | relURL }}">
   </head>
   <body class="td-{{ .Kind }}">
     {{/* NK - deactivation of original navbar 
     <header>
       {{ partial "navbar.html" . }}
     </header>
-    </div> 
     */}}
     <div class="container-fluid td-outer">
       <div class="td-main">
@@ -34,8 +33,8 @@
           </aside>
           <main class="col-12 col-lg-8 col-xl-6" role="main"> <!-- NK - adjusted resizing for different screens -->
             {{ if not .Site.Params.ui.breadcrumb_disable }}{{ partial "breadcrumb.html" . }}{{ end }}
-            <script src="{{ "/js/swagger-ui-bundle.js" | relURL }}"></script>
-            <script src="{{ "/js/swagger-ui-standalone-preset.js" | relURL }}"></script>
+            <script src="{{ "js/swagger-ui-bundle.js" | relURL }}"></script>
+            <script src="{{ "js/swagger-ui-standalone-preset.js" | relURL }}"></script>
             {{ block "main" . }}{{ end }}
           </main>
         </div>

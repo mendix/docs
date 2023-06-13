@@ -21,14 +21,14 @@ When the workflow reaches the user task activity, the task is created and will b
 
 User task properties consist of the following sections:
 
-- [General](#general)
-- [Due date](#due-date)
-- [Events](#events)
-- [Targeted users](#users)
-- [Outcomes](#outcomes)
-- [Task page](#task-page)
-- [Display information](#display-info)
-- [Common](#common)
+* [General](#general)
+* [Due date](#due-date)
+* [Events](#events)
+* [Targeted users](#users)
+* [Outcomes](#outcomes)
+* [Task page](#task-page)
+* [Display information](#display-info)
+* [Common](#common)
 
 ### 2.1 General Section {#general}
 
@@ -40,11 +40,11 @@ User task properties consist of the following sections:
 
 The **Due date** section properties are described in the table below:
 
-| Property   | Description                                                                                                                                                                                                                                                           |
-| ---------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| None       | No due date is set.                                                                                                                                                                                                                                                   |
-| Duration   | You can set the deadline for the user task with the **Due in** option, which indicates the number of hours, days, or weeks the task is due in. Possible values of the property are the following ones:<br /><ul><li>Hour(s)</li><li>Day(s)</li><li>Week(s)</li> </ul> |
-| Expression | You can set a due date for the user task writing an expression. For example, to set a due date to tomorrow, you can use `addDays([%CurrentDateTime%], 1)`.                                                                                                            |
+| Property | Description |
+| --- | --- |
+| None | No due date is set. |
+| Duration | You can set the deadline for the user task with the **Due in** option, which indicates the number of hours, days, or weeks the task is due in. Possible values of the property are the following ones:<br /><ul><li>Hour(s)</li><li>Day(s)</li><li>Week(s)</li> </ul> |
+| Expression | You can set a due date for the user task writing an expression. For example, to set a due date to tomorrow, you can use `addDays([%CurrentDateTime%], 1)`. |
 
 ### 2.3 Events Section {#events}
 
@@ -58,13 +58,13 @@ The **Due date** section properties are described in the table below:
 
 Possible options of this property are described in the table below:
 
-| Option        | Description                                                                                                                                                                                                                                                                                                                                                               |
-| ------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| XPath         | Allows you to filter users who should be assigned the user task. For example, you can assign a certain task only to users with the Manager user role. You can use attributes of the **User Entity** set in [App Settings](/refguide/app-settings/#workflows).                                                                                                             |
-| Microflow     | Allows you to assign the user task to certain users. Using microflow you can check, for example, which users have the right to approve user tasks and are currently not on vacation and assign the task only to users who passed the check.<br />The return type of the microflow should be the **User Entity** set in [App Settings](/refguide/app-settings/#workflows). |
-| No assignment | Allows you to not assign the user task to certain users immediately. This can be useful when you, for example, want the user task to be created but have an administrator assign it to certain users later.                                                                                                                                                               |
+| Option | Description |
+| --- | --- |
+| XPath | Allows you to filter users who should be assigned the user task. For example, you can assign a certain task only to users with the Manager user role. You can use attributes of the **User Entity** set in [App Settings](/refguide/app-settings/#workflows). |
+| Microflow | Allows you to assign the user task to certain users. Using microflow you can check, for example, which users have the right to approve user tasks and are currently not on vacation and assign the task only to users who passed the check.<br />The return type of the microflow should be the **User Entity** set in [App Settings](/refguide/app-settings/#workflows). |
+| No assignment | Allows you to not assign the user task to certain users immediately. This can be useful when you, for example, want the user task to be created but have an administrator assign it to certain users later. |
 
-In case **Target users using** (an XPath or a microflow) results in an empty list of users (0 users), the workflow fails. For more information on how to handle this kind of issues, see the [Operation](/refguide/change-workflow-state/#operation) section in _Change Workflow State_.
+In case **Target users using** (an XPath or a microflow) results in an empty list of users (0 users), the workflow fails. For more information on how to handle this kind of issues, see the [Operation](/refguide/change-workflow-state/#operation) section in *Change Workflow State*.
 
 #### 2.4.2 XPath Constraint
 
@@ -110,8 +110,8 @@ To view **Parameters**, click the ellipsis icon next to the **Task name** or **T
 
 Parameters have the following settings:
 
-- **Index** – an identification number of a parameter
-- **Expression** – an XPath expression that will be displayed
+* **Index** – an identification number of a parameter
+* **Expression** – an XPath expression that will be displayed
 
 ##### 2.7.3.1 Adding New Parameters
 
@@ -135,10 +135,10 @@ To add a parameter to the **Task name** or the **Task description**, do the foll
 
 In addition to adding new parameters, you can perform the following actions on parameters:
 
-- **Delete** – to delete a parameter click **Delete** or press <kbd>Delete</kbd> on your keyboard
-- **Edit** – double-click a parameter to edit it or click **Edit**
-- **Move up** – to move a parameter up in the list of parameters and also to change its index, click **Move up**
-- **Move down** – to move a parameter down in the list of parameters and also to change its index, click **Move down**
+* **Delete** – to delete a parameter click **Delete** or press <kbd>Delete</kbd> on your keyboard
+* **Edit** – double-click a parameter to edit it or click **Edit**
+* **Move up** – to move a parameter up in the list of parameters and also to change its index, click **Move up**
+* **Move down** – to move a parameter down in the list of parameters and also to change its index, click **Move down**
 
 ### 2.8 Common Section {#common}
 
@@ -146,4 +146,5 @@ In addition to adding new parameters, you can perform the following actions on p
 
 ## 3 Read More
 
-- [Workflows](/refguide/workflows/)
+* [Workflows](/refguide/workflows/)
+* [Multi-User Task](/refguide/multi-user-task/)

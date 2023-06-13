@@ -34,6 +34,7 @@ You can also find *dependencies.json* in the *deployment > model* folder of your
 Ensure that your contract metadata will be accepted by transforming *dependencies.json* using the **Transform** endpoint of the **Registration API**.
 
 For this section, you will need:
+
 * A [Personal Access Token](/developerportal/community-tools/mendix-profile/#pat)
 * The dependencies.json file 
 * Endpoint location `Name` (found in the *metadata.json* file for your exposed OData service, in an array called **Constants**, under **Name**)
@@ -46,6 +47,7 @@ Follow the steps for [preparing your service details using the Transform endpoin
 Then, register the application.
 
 For this section, you will need: 
+
 * A [Personal Access Token](/developerportal/community-tools/mendix-profile/#pat)
 * The application **Name**
 
@@ -58,6 +60,7 @@ Upon completion, you will have the `application_UUID`.
 Next, register the environment.
 
 For this section, you will need:
+
 * A [Personal Access Token](/developerportal/community-tools/mendix-profile/#pat)
 * The `application_UUID`
 * Environment `Name`
@@ -73,6 +76,7 @@ Upon completion, you will have the `environment_UUID`.
 Last, register the service endpoint(s).
 
 For this section, you will need:
+
 * A [Personal Access Token](/developerportal/community-tools/mendix-profile/#pat)
 * The `application_UUID`
 * The `environment_UUID`

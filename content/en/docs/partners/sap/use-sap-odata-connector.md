@@ -99,7 +99,7 @@ To create the microflow for this retrieve, follow these steps:
     * **Result info** – `empty`
     * **Use return variable** – `Yes`
     * **Variable** – `ListOfProducts`
-10. In the microflow, make the return value of the microflow **List of Customers**. This is so that you can call the microflow as a data source in a page.
+10. In the microflow, make the return value of the microflow **ListOfProducts**. This is so that you can call the microflow as a data source in a page.
 
 The final result of your microflow should look like this:
 

@@ -259,7 +259,7 @@ Studio Pro Guide | Model SDK API docs
 
 ### 2.11 Lists
 
-Lists can be created, changed and deleted with specific actions. List aggregation actions have a specific function (for example, sum or average). List operations can also be executed, see the following sections for details.
+Lists can be created, changed and deleted with specific actions. List aggregation actions have a specific function (for example, sum or average). List operations can also be run, see the following sections for details.
 
 #### 2.11.1 Graphical Overview
 

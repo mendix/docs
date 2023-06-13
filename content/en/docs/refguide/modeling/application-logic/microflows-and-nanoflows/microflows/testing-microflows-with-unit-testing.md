@@ -64,9 +64,9 @@ To set up the unit testing module and run the example tests, follow these steps:
 
     You can use this page to execute unit tests, or to reset the test status back to not executed. Use the left-side navigation pane to select a module that contains unit tests. In this scenario, **UnitTesting** is the only module that contains unit tests. 
 
-15. Ensure that the **Rollback microflow tests after execution** check box is selected.
+15. Ensure that the **Rollback microflow tests after execution** checkbox is selected.
 
-    {{% alert color="warning" %}}If the check box is cleared, all changes made by the microflows that you test are saved to the database. This can result in populating the database with unwanted test data. As a best practice, do not clear the check box unless it is required by your specific use case.{{% /alert %}}
+    {{% alert color="warning" %}}If the checkbox is cleared, all changes made by the microflows that you test are saved to the database. This can result in populating the database with unwanted test data. As a best practice, do not clear the checkbox unless it is required by your specific use case.{{% /alert %}}
 
 16. Validate that the Unit Testing module is correctly set up by running the **UnitTesting.Test_ValidUnitTest** test. 
 
@@ -86,14 +86,14 @@ For the purpose of this how-to, create a sample microflow that you can then test
 
 To create a sample microflow for testing, follow these steps:
 
-1. Create a new [enumeration](/refguide/create-a-basic-data-layer/#add-enumeration) with the following parameters:
+1. Create a new [enumeration](/refguide/configuring-a-domain-model/#add-enumeration) with the following parameters:
     * **Name** – *Level*
     * **Enumeration values** – *Junior*, *Medior*, and *Senior*.
 
     {{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/microflows/testing/18580356.png" alt="Enumeration with three values" >}}
 
 2. Open the domain model of **MyFirstModule**.
-3. Create a new [entity](/refguide/create-a-basic-data-layer/#create-entity) with the following parameters:
+3. Create a new [entity](/refguide/configuring-a-domain-model/#create-entity) with the following parameters:
     * **Name** – *Employee*
     * **Attributes** – *Name* (of the **String** type) and *Level* ( of the  **Enumeration** > **Level** type).
 
@@ -166,7 +166,7 @@ To create a sample test microflow, follow these steps:
     * **Argument** –*$NewEmployee/Level = MyFirstModule.Level.Medior*
 18. Run the app locally and view it. 
 19. In the left-side navigation pane, click **UnitTestOverview > MyFirstModule**.
-20. Verify that the **Rollback microflow tests after execution** check box is selected.
+20. Verify that the **Rollback microflow tests after execution** checkbox is selected.
 21. Click **Run all module tests** and verify that all the test cases pass.
 
 ## 5 Read More

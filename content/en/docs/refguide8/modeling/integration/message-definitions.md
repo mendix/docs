@@ -77,7 +77,7 @@ The structure tree shows the attributes and some of the associations of the enti
 
 | Column | Description | Can edit? | Notes |
 | --- | --- | :---: | --- |
-| Check box | Check if the attribute or association is part of the message. | y | |
+| Checkbox | Check if the attribute or association is part of the message. | y | |
 | Name | The name of the item in the Domain Model. | n | |
 | Type | The type of the item in the Domain Model. | n | |
 | Occurrence | How many times this item can occur for each parent item. | n | |

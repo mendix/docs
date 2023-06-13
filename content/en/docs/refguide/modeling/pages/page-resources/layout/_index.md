@@ -67,7 +67,7 @@ The values for the platform property are:
 
 For existing layouts, the value is read-only.
 
-#### 2.3.2 Master Layout
+#### 2.3.2 Master Layout {#master-layout}
 
 **Master layout** specifies a layout on which this layout is based. If no primary layout is specified, the layout contains a single widget (for example, a [scroll container](/refguide/scroll-container/)) that defines the structure of pages based on this layout. If a primary layout is specified, this layout fills the gaps defined by the primary layout. You can introduce new gaps in this layout by using [placeholders](/refguide/placeholder/).
 

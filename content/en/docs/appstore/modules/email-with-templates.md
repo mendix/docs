@@ -7,7 +7,7 @@ tags: ["marketplace", "marketplace component", "email module with templates", "t
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
-{{% alert color="info" %}}
+{{% alert color="warning" %}}
 This module is deprecated. Check out the [Email](/appstore/connectors/email-connector/) connector as an alternative. You can use the community-supported [Email Connector Migration Utility](https://marketplace.mendix.com/link/component/205008) module to migrate the data of this module to the Email connector.
 {{% /alert %}}
 
@@ -62,7 +62,7 @@ For security reasons, it is highly recommended for the **Server configuration** 
 
 You can configure your account to authenticate with Microsoft Azure AD OAuth 2.0. You can only add one OAuth 2.0 configuration for each app.
 
-Select the check box for **Microsoft Azure AD**. If the account is already registered on the Azure portal, the required fields will already be filled in. If not, or if you need to make changes, you will need to register your app on the Azure portal.
+Select the checkbox for **Microsoft Azure AD**. If the account is already registered on the Azure portal, the required fields will already be filled in. If not, or if you need to make changes, you will need to register your app on the Azure portal.
 
 #### 3.1.1 Using OAuth Path Constants
 

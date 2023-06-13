@@ -140,7 +140,7 @@ The following properties are specific for this action:
 
 * **Source** – Depends on the chosen link type and whether you want to use a literal value or to use the value of an attribute. Possible values for **Source** are the following:
 
-    * **Use literal value** – You can fill a value out (Specify **Url** for **Web**, **Recipient** for **Email**, and **Phone Number** for **Phone Cal**l and **Message**).
+    * **Use literal value** – You can fill a value out (Specify **Url** for **Web**, **Recipient** for **Email**, and **Phone Number** for **Phone Call** and **Message**).
     * **Use attribute** – If you select **Database**>**Entity** as a data source for the list view,  you can choose the attribute of a string type that belongs to the entity or create a new one (when the **Use attribute** option is configured, you do not need to fill out any information manually, it will be updated dynamically).
 
 ### 2.13 Delete Object Action {#delete-object-action}

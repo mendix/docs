@@ -99,7 +99,7 @@ To update a data set in Studio Pro, do the following:
 
 1. Open your app and the published OData service you want to update.
 2. Under **Entities**, select **Customer**, and click **Edit**.
-3. Select the check box for **Updateable** and click **OK**.
+3. Select the checkbox for **Updateable** and click **OK**.
 4. Click **Publish**.
 
 See the [Update or Switch](/refguide/consumed-odata-service/#update-switch) section of *Consumed OData Service*  to see how this works for automatically registered contracts.

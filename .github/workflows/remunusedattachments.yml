@@ -3,9 +3,9 @@ name: Remove unused attachments
 
 # Controls when the workflow will run
 on:
-  #schedule:
-    #- cron: '00 08 22 * *'
-  # Allows you to run this workflow manually from the Actions tab
+  schedule:
+    - cron: '00 21 1 * *'
+   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
@@ -30,8 +30,8 @@ jobs:
           body: |
             "We're trying to delete some unnecessary attachments."
           branch: rem-unused-attachments
-          assignees: JohannaHemminger
-          reviewers: JohannaHemminger
+          assignees: MarkvanMents
+          reviewers: MarkvanMents
           labels: Internal WIP
           add-paths: |
             static/attachments/**

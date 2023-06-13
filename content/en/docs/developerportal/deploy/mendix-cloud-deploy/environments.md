@@ -86,9 +86,9 @@ You can perform the following actions in this section:
 * **Transport to** – stage an environment to acceptance or production
 * **Setup Studio Pro Deployment** – the [Technical Contact](/developerportal/collaborate/app-roles/#technical-contact) can set the target environment to which apps will be deployed from Studio Pro; for more information, see [Studio Pro Deployment Settings](/developerportal/deploy/studio-deployment-settings/).
 
-#### 2.2.2 Flexible Environments
+#### 2.2.2 Flexible Environments {#flexible-environments}
 
-If your node supports flexible environments, you can define the number and type of environments that you have. For example, you can have multiple staging environments if your deployment process requires it.
+If your Mendix license supports flexible environments, you can define the number and type of environments that you have. You must define at least two environments, one of which must be a production environment. The other environment or environments may be designated according to your requirements; for example, you can have a production environment and multiple staging environments if your deployment process requires it.
 
 {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/environments/deploy-flex-environments.png" alt="The Environments section with flexible environments" >}}
 

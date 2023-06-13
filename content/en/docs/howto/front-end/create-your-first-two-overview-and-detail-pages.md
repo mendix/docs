@@ -21,7 +21,7 @@ This how-to will teach you how to do the following:
 
 Before starting with this how-to, make sure you have completed the following prerequisite:
 
-* Set up a basic data structure by reading [Creating a Basic Data Layer](/refguide/create-a-basic-data-layer/):
+* Create a domain model by following [Configuring a Domain Model](/refguide/configuring-a-domain-model/):
 
     {{< figure src="/attachments/howto/front-end/create-your-first-two-overview-and-detail-pages/18582175.png" >}}
 

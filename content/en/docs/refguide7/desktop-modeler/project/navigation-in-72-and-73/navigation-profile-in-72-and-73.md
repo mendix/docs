@@ -57,7 +57,7 @@ If [security](/refguide7/project-security/) is enabled, the menu will only show 
 
 This allows for adding new profiles. The profile name and profile kind can be provided. 
 
-The **Copy settings from profile 'Profile'** check box enables creating a duplicate of the current profile. It copies over all the settings except the profile name and profile kind.
+The **Copy settings from profile 'Profile'** checkbox enables creating a duplicate of the current profile. It copies over all the settings except the profile name and profile kind.
 
 ### 2.2 Change Kind
 

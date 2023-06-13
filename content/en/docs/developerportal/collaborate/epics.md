@@ -161,9 +161,9 @@ The story details dialog box shows the following items:
 The **Planning** page shows all your stories. At the top of the page, you can find the following items:
 
 * **...** – Clicking the icon opens the option to import stories using an Excel file.
-  * For more information, see the [Import Stories](#import-stories) section.
+    * For more information, see the [Import Stories](#import-stories) section.
 * **Settings icon** – This enables changing settings.
-  * For more information, see the [Settings](#settings) section.
+    * For more information, see the [Settings](#settings) section.
 
 * **Create Epic** – This enables creating an epic.
 * **Create Story** – This enables creating a story.
@@ -200,7 +200,11 @@ In the main area of the page, stories are grouped in these categories: **To Do**
 
 ### 3.2 Planning Overview
 
-The main area of the **Planning** page lists all the stories in different categories. Each row shows the following information about a story:
+The main area of the **Planning** page lists all the stories in different categories. Each row represents a story:
+
+{{< figure src="/attachments/developerportal/collaborate/epics/story-kanban.png" >}}
+
+A row shows the following information about a story:
 
 * Whether the story is a bug or a feature
 * If the story has a feedback item linked to it
@@ -213,15 +217,43 @@ The main area of the **Planning** page lists all the stories in different catego
 * Story points
 * To whom the story is assigned
 
-{{< figure src="/attachments/developerportal/collaborate/epics/story-kanban.png" >}}
+#### 3.2.1 Selecting, Moving, Archiving, and Deleting Stories 
+
+To select a story, select the checkbox for the story when the mouse pointer is a pointing hand:
+
+ {{< figure src="/attachments/developerportal/collaborate/epics/pointing-hand.png" width="30px" >}}
+
+To open the [story details](#story-details) page, click the row of the story when the mouse pointer is an open hand:
+
+{{< figure src="/attachments/developerportal/collaborate/epics/open-hand.png" width="30px" >}}
+
+To move a story, drag the story to a different category. 
+
+To move multiple stories, select these stories, choose the category name where they should go from the drop-down list at the bottom of the page, and then click **Move**.
+
+{{< figure src="/attachments/developerportal/collaborate/epics/move-multiple-stories.png" >}}
 
 To [archive](#archive) or delete a story, click the **...** icon at the end of the row, and then select the corresponding option:
 
 {{< figure src="/attachments/developerportal/collaborate/epics/archive-delete-story-kanban.png" >}}
 
-To move a story, drag the row to a different category.
+To archive or delete multiple stories, select these stories, and then click the corresponding option at the bottom of the page.
 
-Clicking a row opens the [story details](#story-details) page.
+#### 3.2.2 Keyboard Shortcuts {#keyboard-shortcuts}
+
+For Windows, you can use the following keyboard shortcuts to select stories on the **Planning** page:
+
+* <kbd>Ctrl</kbd> + <kbd>A</kbd> – select all stories
+* <kbd>Ctrl</kbd> + <kbd>D</kbd> – cancel the selection of all stories
+* <kbd>Ctrl</kbd> + click – select multiple stories
+* <kbd>Shift</kbd> + click – select a range of stories
+
+For Mac, you can use the following keyboard shortcuts to select stories on the **Planning** page:
+
+* <kbd>Command</kbd> + <kbd>A</kbd> – select all stories
+* <kbd>Command</kbd> + <kbd>D</kbd> – cancel the selection of all stories
+* <kbd>Command</kbd> + click – select multiple stories
+* <kbd>Shift</kbd> + click – select a range of stories
 
 ### 3.3 Importing Stories {#import-stories}
 
@@ -454,9 +486,9 @@ When you click the Sprint icon in a row of an archived story on the **Archived**
 * When the Sprint was archived
 * When the Sprint started and ended
 * Summary of the Sprint
-  * How many stories were completed
-  * How many stories were uncompleted
-  * Breakdown of completed points
+    * How many stories were completed
+    * How many stories were uncompleted
+    * Breakdown of completed points
 * Sprint goal
 * Whether the Sprint goal was reached
 * Who archived the Sprint (shown under **Archived by**)

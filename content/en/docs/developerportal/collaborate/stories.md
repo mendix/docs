@@ -105,7 +105,7 @@ For each Sprint, the following options are provided via the menu button on the r
 
 ### 2.6  Story Actions {#story-actions}
 
-When you select a story via the check box, you can perform the following actions:
+When you select a story via the checkbox, you can perform the following actions:
 
 {{< figure src="/attachments/developerportal/collaborate/stories/story-context-menu.png" >}}
 
@@ -129,7 +129,7 @@ On this page, you can perform a number of actions:
 * Change the title by clicking the pencil icon
 * Add or remove **Labels**
 * Update the **Description** via **Edit Description**
-* View, add, and manage the **Tasks** of the story (you can mark them as **Done** by selecting the check box in front of the task)
+* View, add, and manage the **Tasks** of the story (you can mark them as **Done** by selecting the checkbox in front of the task)
 * Leave **Comments** on the story to collaborate with your team
 * VIew the **History** of changes to the story in the form of **Activities**
 * See the story's status and update it via the drop-down menu (available statuses are **To-do**, **Running**, and **Done**)

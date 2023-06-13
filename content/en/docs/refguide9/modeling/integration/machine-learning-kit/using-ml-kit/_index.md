@@ -161,7 +161,6 @@ The pre-processor is essentially a standard Java Action that creates the multidi
 
 See the following pre-processor example in our [Mendix ML Kit Demo Repository](https://github.com/mendix/mlkit-example-app/blob/main/javasource/iris_randomforest/actions/PreProcessor.java):
 
-
 ```
     @java.lang.Override
     public IMendixObject executeAction() throws Exception 

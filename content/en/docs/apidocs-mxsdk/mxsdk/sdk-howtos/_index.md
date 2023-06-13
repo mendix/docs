@@ -40,7 +40,7 @@ To learn how to navigate to the main documentation sources, refer to the [How to
 
 ### 3.1 Development Workflow
 
-The script you used in the Creating your first script step was doing a full round-trip. It created an app, made it available as a working copy and committed it back to the TeamServer after making changes. Depending on what exactly you're using the SDK for (see [Use Case Examples](/apidocs-mxsdk/mxsdk/sdk-use-cases/)), this may or may not be a good idea. If you're interested in, for instance, analyzing your model, you want to start from an existing project instead of a newly created app and you won't have any changes to your model to commit.
+The script you used in the Creating your first script step was doing a full round-trip. It created an app, made it available as a working copy and committed it back to the TeamServer after making changes. Depending on what exactly you're using the SDK for (see [Use Case Examples](/apidocs-mxsdk/mxsdk/sdk-use-cases/)), this may or may not be a good idea. If you are interested in, for instance, analyzing your model, you want to start from an existing app instead of a newly created app and you will not have any changes to your model to commit.
 
 ### 3.2 How to Manipulate Existing Models
 

@@ -3,7 +3,7 @@ title: "Build a Responsive Web App"
 url: /refguide/quickstart-part1/
 weight: 10
 description: "Learn the basics of making an app in a Responsive Web profile."
-tags: ["microflows", "widgets", "app", "nanoflow", "app development"]
+tags: ["hello world", "microflows", "widgets", "app", "nanoflow", "app development"]
 ---
 
 ## 1 Introduction 
@@ -90,7 +90,7 @@ Here you will find several default panes such as:
 * **Changes**: displays a list of all changes in the app since the last commit to the team server (for more information see [Changes Pane](/refguide/changes-pane/))
 * **Errors**: displays any errors found within your app (for more information see [Errors Pane](/refguide/errors-pane/))
 
-For additional information on bottom default panes, see the [MxAssist Performance Bot](/refguide/view-menu/#mx-bot) and [Console](/refguide/view-menu/#console) sections of *View Menu*.
+For additional information on bottom default panes, see the [MxAssist Best Practice Bot](/refguide/view-menu/#mx-bot) and [Console](/refguide/view-menu/#console) sections of *View Menu*.
 
 ### 4.4 Right Dockable Pane
 
@@ -271,11 +271,6 @@ Launching your app compiles your app locally on your development machine, your l
 
 Congratulations! You successfully completed Part 1 of the quickstart guide. You have your first Mendix app to prove it, and it works on almost any device. Well done! 
 
+## 8 Continuing with the Next Tutorial
+
 To continue learning, see Part 2: [Add a Native Mobile App](/refguide/quickstart-part2/).
-
-## 8 Read More
-
-* [Mendix Academy](https://academy.mendix.com/) – complete learning paths to build general Mendix skills
-    * [Crash Course](https://academy.mendix.com/link/paths/82/Crash-Course) – the course we recommend for new users who are also experienced developers
-* [Mendix Documentation](https://docs.mendix.com/) – learn about the parts of Mendix which interest you most
-* [General Info](/refguide/general/) – learn more about the fundamentals of Studio Pro

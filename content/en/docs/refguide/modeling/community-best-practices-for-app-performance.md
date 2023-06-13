@@ -61,8 +61,7 @@ Indexes is a topic with a long history of best practices from the database world
 
 * Minimize the work in loops:
     * Do commits and deletes after the loop in a list commit. 
-    * If needed, create a list named `<Entity>_CommitList` before the loop and collect the items to be committed there. 
-      Same for deletes with a `<Entity>_DeleteList`.
+        * If needed, create a list named `<Entity>_CommitList` (or `<Entity>_DeleteList`) before the loop and collect the items to be committed (or deleted) there. 
     * For retrieves in a loop, consider retrieving all the data before the loop, and do finds on that list inside the loop.
     * If loops contain decisions, consider if the decision logic can be a query before the loop to minimize iterations.
 * Prevent unnecessary retrieves if objects or lists can be passed as parameters.

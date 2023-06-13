@@ -370,7 +370,7 @@ You can also use your own event broker cluster.
 
 #### 6.3.1 Warning Message When Deploying
 
-If you deploying an app to production that contains a published business event service, you might receive a warning that it is not possible to enable the event broker service. If you see this message, do the following in the [Services](/developerportal/deploy/environments/#services) tab of the production environment screen:
+If you are deploying an app to production that contains a published business event service, you might receive a warning that it is not possible to enable the event broker service. If you see this message, do the following in the [Services](/developerportal/deploy/environments/#services) tab of the production environment screen:
 
 1. Select the **Enable** checkbox for the environment.
 2. Transport the mda to an environment.
@@ -378,7 +378,9 @@ If you deploying an app to production that contains a published business event s
    
 ### 6.4 Bring your own Kafka
 
-If you want to deploy either locally or in private cloud using your own Kafka cluster, you can make use of the the `EventBrokerSpace` constant. This constant can be set to values like test, acceptance or production based on in which environment (or say namespace in Kubernetes) your Mendix app is running. Setting this constant would mean that each Business Event would have its own Kafka topic for environment. The topic would be of the form businessevents.<channel>.<EventBrokerSpace>. 
+To deploy to a private cloud using your own Kafka cluster, you can make use of the the `EventBrokerSpace` constant. This constant can be set to values like test, acceptance or production based on in which environment (or say namespace in Kubernetes) your Mendix app is running. Setting this constant would mean that each Business Event would have its own Kafka topic for environment. The topic would be of the form businessevents.<channel>.<EventBrokerSpace>.
+
+If you want you can also use the `EventBrokerSpace` constant locally to test the behaviour.
 
 ## 7 Local Testing {#local-testing}
 

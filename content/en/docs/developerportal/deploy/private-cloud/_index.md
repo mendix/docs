@@ -159,3 +159,7 @@ If your app is **Connected** to the Developer Portal, you can enter the subscrip
 #### 4.4.2 Standalone & Offline Private Cloud Apps{#activate-offline}
 
 If your app is **Standalone** or unable to contact the Mendix license server, you will receive a **LicenseId** and a **LicenseKey**. You will have to apply these by [editing the CR](/developerportal/deploy/private-cloud-operator/#edit-cr) in the cluster.
+
+#### 4.4.3 Private Cloud Licensing Manager
+
+With Mendix Operator version 2.11.0 and above, you can start using the Private Cloud Licensing Manager to import a license bundle consisting of Operator and Runtime licenses. Private Cloud Licensing Manager automatically retrieves the licenses from the license bundle, so that you do not need to apply the license per environment. For more information, see [Private Cloud License Manager](/developerportal/deploy/private-cloud/private-cloud-license-manager/).

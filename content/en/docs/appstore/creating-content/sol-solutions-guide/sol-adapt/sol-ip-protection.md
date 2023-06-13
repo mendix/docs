@@ -114,10 +114,10 @@ These are the best practices for usage metering:
 
 * Verify that usage metering is "on the right side" and hidden behind the API
 * Make sure the usage metering does not depend on the specific invocation of an API
-	* Relying on an after-startup microflow to start regular-interval usage metering is not a good idea, because it can be accidentally disabled
-	* However, you can safely use an after-startup microflow if it is also used for functional purposes (for example, starting a custom request handler, or initializing a module when the module will not function without it)
+    * Relying on an after-startup microflow to start regular-interval usage metering is not a good idea, because it can be accidentally disabled
+    * However, you can safely use an after-startup microflow if it is also used for functional purposes (for example, starting a custom request handler, or initializing a module when the module will not function without it)
 * Have a legal agreement for your solution or app service in place that includes a clause requiring the customer to ensure that any custom usage metering functions as intended
-	* This means that where for some reason you cannot protect the metering implementation at the technical level, you are still covered at the legal level
+    * This means that where for some reason you cannot protect the metering implementation at the technical level, you are still covered at the legal level
 
 ### 5.5 Entitlement Management
 
@@ -130,4 +130,3 @@ Every implementation can have a cryptographically signed license key, which will
 * Multiple editions of your product by enabling specific functionality or rate-limiting specific actions
 * Expiration of license keys in time
 * Validity of license key for specific runtime URLs
-

@@ -79,7 +79,6 @@ In these instructions, it is assumed that your main module is `MyFirstModule`. I
         * User
             * `Administration.User`
             * `DeepLink.User`
-            * `Email_Connector.EmailConnectorAdmin or EmailTemplate.Administrator³`
             * `ForgotPassword.Guest_ResetPassword`
             * `MxModelReflection.Readonly`
             * `MxModelReflection.TokenUser`

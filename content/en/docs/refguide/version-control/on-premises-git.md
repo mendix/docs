@@ -80,16 +80,16 @@ Once the app is created, you can upload it to your private Git repository. For m
 Now that you have a Git app on your server, you can download it to another directory or one of your team members can download it on their machine. Follow the steps below:
 
 1. Under **Version Control > Download from Version Control Server**, select the **Private server** option and enter the URL of your repository, which contains the app you want to download. If you are not sure what URL to use, you can find this info in your Git server.
-2. Enter the link to the repository in the **App repository address** and click **Connect**. Now you will have the option to change the directory where the app is downloaded to:
+1. Enter the link to the repository in the **App repository address** and click **Connect**. Now you will have the option to change the directory where the app is downloaded to:
 
     {{< figure src="/attachments/refguide/version-control/on-premises-git/download-from-version-control-server-extended.png" alt="Download from Version Control Server Extended dialog" >}}
 
-4. Click **OK**. 
-5. In the **Sign In** dialog box, enter your credentials:
+1. Click **OK**. 
+1. In the **Sign In** dialog box, enter your credentials:
 
     {{< figure src="/attachments/refguide/version-control/on-premises-git/sign-in-dialog.png" alt="Sign In dialog" >}}
 
-6. Enter username (it can be anything except empty) and use the PAT you saved earlier as the password. 
+1. Enter username (it can be anything except empty) and use the PAT you saved earlier as the password. 
 
 The app is downloaded and ready to be used with version control.
 

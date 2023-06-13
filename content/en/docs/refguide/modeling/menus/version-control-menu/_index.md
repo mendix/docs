@@ -44,7 +44,7 @@ The **Upload to Version Control Server** option uploads a local app to a new or 
 
 The **Manage Branch Lines** option allows you to manage branch lines on the version control server that can be used to develop functionality separately from the main line. For more information on the Branch Line Manager and creating a new branch line, see [Branch Line Manager](/refguide/branch-line-manager-dialog/) and [Create Branch Line](/refguide/create-branch-line-dialog/). 
 
-## 9 Merge Changes Here
+## 9 Merge Changes Here {#merge-changes-here}
 
 The **Merge Changes Here** option allows you to merge changes that were committed in another development line to the development line that is currently opened in Studio Pro.
 

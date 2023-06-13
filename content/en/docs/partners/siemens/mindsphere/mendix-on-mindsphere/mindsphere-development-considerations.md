@@ -207,6 +207,10 @@ The definition of a tenant on MindSphere is available in the MindSphere document
 
 This should be the tenant that the user has access to in a multi-tenant environment. For a developer tenant, this must be the same as the HostTenant. In an operator or iot plan tenant, you can change this to allow you to test multi-tenant apps.
 
+**UserEmail**
+
+Specify the email used for the local **MxAdmin** user account. Default value "max.mustermann@email.com" is used in case no value is provided.
+
 ### 5.4 User Roles
 
 If you are testing different roles in your app, do not use the demo users. If you switch between demo users, this will not correctly populate the tenant and role information from MindSphere. To test different roles, allocate the role to MxAdmin, redeploy, and sign in again.

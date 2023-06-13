@@ -69,4 +69,4 @@ See the documentation of the Localize property of [Attributes](/refguide9/attrib
 
 ## 7 Tokens
 
-Tokens for referring to specific moments like [%BeginOfCurrentDay%] now refer to the user time zone. Where it makes sense, UTC versions of tokens have been added, for example, [%BeginOfCurrentDayUTC%]].
+Tokens for referring to specific moments like [%BeginOfCurrentDay%] now refer to the user time zone. Where it makes sense, UTC versions of tokens have been added, for example, [%BeginOfCurrentDayUTC%].

@@ -27,7 +27,7 @@ The **Validation feedback** activity does a validation check, and if this check 
 
 There are two sets of properties for this activity, those in the dialog box on the left, and those in the properties pane on the right:
 
-{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/client-activities/validation-feedback/validation-feedback-properties.png" alt="Validation Feedback Properties" >}}
+{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/client-activities/validation-feedback/validation-feedback-properties.png" alt="Validation Feedback Properties" width="650px" >}}
 
 The **Validation feedback** properties pane consists of the following sections:
 

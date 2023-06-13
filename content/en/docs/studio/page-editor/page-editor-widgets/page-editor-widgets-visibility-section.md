@@ -10,7 +10,7 @@ tags: ["studio", "page editor", "widgets", "on click action", "events"]
 
 The **Conditional Visibility** section in widget properties allows you to show a widget only when certain conditions are met. You can make widgets visible based on the following conditions:
 
-* [Visibile based on data](#based-on-data)
+* [Visible based on data](#based-on-data)
 * [Visible based on role](#role-based) 
 
 For example, you have a web shop and you do not want to bother users with filling in the same address twice when the delivery address matches the billing address. You would like to show fields to fill the billing address in only when a user unchecks the **Billing address is the same as delivery address** option (which is checked by default). In this case you can make the billing address fields visible based on an *attribute value*: the field will be displayed only when the *BillingAddressSame* is unticked (set to *false*):

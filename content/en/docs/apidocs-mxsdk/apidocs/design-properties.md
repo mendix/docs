@@ -2,8 +2,8 @@
 title: "Design Properties API"
 url: /apidocs-mxsdk/apidocs/design-properties/
 category: "API Documentation"
-description: "This guide outlines how design properties work and can help you create custom design properties."
-weight: 30
+description: "This API guide outlines how design properties work in Atlas UI and can help you create custom design properties."
+weight: 45
 tags: ["styling", "design", "classes", "design properties"]
 ---
 
@@ -18,11 +18,13 @@ This guide outlines how design properties work and can help you create custom de
 Design properties are a special set of settings shipped together with a Mendix theme module. Design properties are shared among all the Mendix apps which use a specific theme module. 
 
 In Studio Pro, you can see which design properties are available for a widget either in the **Properties** pane or in the widget's settings dialog box under the **Appearance** tab. 
+
 ## 2 Using Design Properties
 
 While styling Mendix apps, users must often apply the same set of CSS or native styling classes to widgets on different pages again and again. This work is time consuming and vulnerable to human error as you edit text fields in order to apply classes to a widget.
 
 Design properties can make this work easier and safer. By configuring your own custom design properties, a certain styling can be applied to a widget in a few clicks.
+
 ## 3 Design Property Types
 
 There are two types of design properties: **Toggle** and **Dropdown**. By default design properties have no effect on widgets. Styling is only applied when a **Toggle** property is turned on for a widget, or when one of the options is selected for a **Dropdown** property.

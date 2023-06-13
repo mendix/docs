@@ -16,7 +16,7 @@ A **Report parameter** allows the end-user to select a parameter for the [data s
 
 For example, a report may show order data for a customer and the report parameter can be used to specify which customer's data should be displayed.
 
-The report parameter is displayed in structure mode with the data set parameter name (and the attribute to be displayed if the parameter is an object) shown between square brackets and colored blue.
+The report parameter is displayed in **Structure mode** with the data set parameter name (and the attribute to be displayed if the parameter is an object) shown between square brackets and colored blue.
 
 {{< figure src="/attachments/refguide8/modeling/pages/report-widgets/report-parameter/report-parameter.png" alt="Report parameter in structure mode" >}}
 

@@ -7,7 +7,7 @@ no_list: false
 description_list: true
 cascade:
     - space: "APIs and SDK"
-    - mendix_version: ""
+    - mendix_version: 10
 ---
 
 The *APIs and SDK* are divided into the following categories:

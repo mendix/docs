@@ -7,7 +7,7 @@ tags: ["Atlas", "UI", "UX", "user experience", "Web Modeler"]
 
 ## 1 Introduction
 
-The Web Modeler is a powerful collaborative tool that lets you build your application in the cloud together with your team. When you log into the Web Modeler for the first time, you get the option to choose an app template that is powered by Atlas UI. For more information on the Web Modeler, see the [Web Modeler Guide](/studio7/). 
+The Web Modeler is a powerful collaborative tool that lets you build your application in the cloud together with your team. When you log into the Web Modeler for the first time, you get the option to choose an app template that is powered by Atlas UI. For more information on the Web Modeler, see the Web Modeler Guide. 
 
 This how-to will teach you how to do the following:
 
@@ -36,7 +36,7 @@ Note that when you click **Edit App** for any Atlas UI app, it will automaticall
 
 ## 4 Exploring the Mendix Web Modeler
 
-Your app is ready to be built. In the **Toolbox** in the [page editor](/studio7/page-editor/), you will find building blocks and widgets you can build your pages with. 
+Your app is ready to be built. In the **Toolbox** in the page editor, you will find building blocks and widgets you can build your pages with. 
 
 {{< figure src="/attachments/howto7/front-end/atlas-ui/get-started-with-atlasui/start_explore_the_mendix_wm.png" alt="Web Modeler Page Example" >}}
 
@@ -46,7 +46,7 @@ All these resources have been created with Atlas UI. Each building block has an 
 
 ## 5 Choosing a Page Template
 
-You can choose a page template when you create a new page. For information on how to create a new page and perform other basic functions, see section [3 Performing Basic Functions](/studio7/page-editor/#page-editor-basic-functions) in Page Editor in the *Web Modeler Guide*. 
+You can choose a page template when you create a new page.
 
 For example, **Dashboard Action Tiles**, **Dashboard Charts**, **Dashboard Expenses** are page templates. 
 
@@ -56,7 +56,7 @@ Once the page is created, you can customize it.
 
 ## 6 Customizing Your Theme
 
-The **[Theme Customizer](/studio7/theme-customizer/)** allows you to customize your app in the Web Modeler. For more information on how you can style your app with it, see [Theme Customizer](/studio7/theme-customizer/) in the *Web Modeler Guide*. 
+The **Theme Customizer** allows you to customize your app in the Web Modeler.
 
 ## 7 Read More
 
@@ -64,6 +64,3 @@ The **[Theme Customizer](/studio7/theme-customizer/)** allows you to customize y
 * [How to Extend Design Properties to Customize the Web Modeler Experience](/howto7/front-end/extend-design-properties-to-customize-the-web-modeler-experience/)
 * [How to Migrate Existing Apps to Atlas UI](/howto7/front-end/migrate-existing-projects-to-atlasui/)
 * [How to Share Company Atlas UI Resources](/howto7/front-end/share-company-atlas-ui-resources/)
-* [General Info](/studio7/general/) 
-* [Page Editor](/studio7/page-editor/)
-* [Theme Customizer](/studio7/theme-customizer/)

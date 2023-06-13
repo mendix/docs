@@ -42,7 +42,7 @@ So like in the example shown above, in the case of Mendix Studio Pro 8.9.x you c
 
 React Native modules are npm packages that include dependencies which must be linked with your platform-specific apps so that the React Native modules can be compiled with the apps.
 
-The Native Template fully supports the [React Native's CLI auto-linking capabilities](https://github.com/react-native-community/cli/blob/master/docs/autolinking). Libraries that are auto-linkable by default will be correctly linked to the platform-specific apps. 
+The Native Template fully supports the [React Native's CLI auto-linking capabilities](https://github.com/react-native-community/cli/blob/main/docs/autolinking.md). Libraries that are auto-linkable by default will be correctly linked to the platform-specific apps. 
 
 For libraries that are not fully auto-linkable (those are usually libraries that require special initialization) we extended the default auto-linking capabilities. This process is limited to publicly known capabilities. We will expand the documentation when the API becomes public.
 
@@ -644,7 +644,7 @@ We suggest you initially develop your app using the Mendix Native Mobile Builder
 
 A CI environment needs to be able to do the following to successfully configure a Native Template for builds:
 
-* Check out the latest Mendix app from SVN
+* Check out the latest Mendix app
 * Check out your app's Native Template (the one used when configuring the app)
 * Run `mxbuild`
 * Set up the configuration and move assets as needed (this can be done with simple shell scripts or any other solution, and is the implementor's choice) 

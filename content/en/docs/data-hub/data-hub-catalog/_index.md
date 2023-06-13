@@ -19,7 +19,7 @@ If you deploy your Mendix apps in an alternative environment, like on-prem or pr
 
 ## 2 Catalog Home {#data-hub-home}
 
-From the Catalog [Home](https://hub.mendix.com) screen, you can navigate to the following tabs:
+From the Catalog [Home](https://catalog.mendix.com) screen, you can navigate to the following tabs:
 
 * **Home** – search in the Catalog, manually register a service from different applications, select from the most popular services
 * **Catalog** – [search](/data-hub/mendix-connect-catalog/search/) for registered assets in the search pane and see details of the metadata of selected asset

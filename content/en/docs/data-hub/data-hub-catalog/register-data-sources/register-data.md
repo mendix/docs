@@ -304,7 +304,7 @@ The Catalog has a UI form where you can register a single exposed OData service.
 
 Follow the steps below:
 
-1. Start at the [Catalog homepage](https://hub.mendix.com). If the connector for your business application is not shown, use the generic **OData** v4 service.
+1. Start at the [Catalog homepage](https://catalog.mendix.com). If the connector for your business application is not shown, use the generic **OData** v4 service.
 2. On the **Contract** screen, upload your XML or ZIP file. For more information on the contract, see the [Contract Structure](#contract-structure) section below.
 
     If you selected the wrong file, click the **x** to remove it and upload a different one. 

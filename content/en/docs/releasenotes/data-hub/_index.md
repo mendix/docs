@@ -902,7 +902,7 @@ The [Data Hub Transform API](https://datahub-spec.s3.eu-central-1.amazonaws.com/
 
 Using data from other applications used to be a complex activity requiring an in-depth understanding of building integrations.
 
-No more! We are very proud to announce that [Mendix Data Hub](https://hub.mendix.com) is now generally available. Finding, understanding, and using data from other applications and services has never been this easy.
+No more! We are very proud to announce that [Mendix Data Hub](https://catalog.mendix.com) is now generally available. Finding, understanding, and using data from other applications and services has never been this easy.
 
 Every organization has valuable data in different applications. With Mendix Data Hub, you can use the data from different sources in your app without having to deal with complex integrations. All you need to do is just search for the data, add it to your domain model, and use it.
 

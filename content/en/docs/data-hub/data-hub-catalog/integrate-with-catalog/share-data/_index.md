@@ -107,7 +107,7 @@ The **{yourname}CustomerODataService** from your app is now registered in the Ca
 
 Do the following:
 
-1. Go to [Mendix Data Hub](https://hub.mendix.com/):
+1. Go to [Mendix Data Hub](https://catalog.mendix.com/):
 
     {{< figure src="/attachments/data-hub/share-data/data-hub-home.png" alt="Data Hub screen" >}}
 
@@ -185,7 +185,7 @@ Congratulations, you have successfully used the Data Hub to share data between M
 
 You can view the two apps that you have created in the Data Hub Landscape and see how they are connected:
 
-1. Open the [Data Hub](https://hub.mendix.com/#/home) home page.
+1. Open the [Data Hub](https://catalog.mendix.com/#/home) home page.
 2. Find your service using the search pane. Remember to use the filter to ensure you can see **Sandbox** apps. 
 3. Click the **Landscape** tab to see a visual representation of your apps (rounded squares), services (circles), and connections (lines). The number of entity sets/datasets that have been exposed appears beneath the service. 
 

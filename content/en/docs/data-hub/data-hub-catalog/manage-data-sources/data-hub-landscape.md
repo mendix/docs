@@ -24,7 +24,7 @@ This visual display of registered assets will enable you to:
 * Discover the context of the data being shared by the network of nodes for a service and the deploying app
 * From the displayed network of dependencies, ascertain the differences between the services by seeing how the shared data is used
 
-You can access the Data Hub Landscape from [Mendix Data Hub](https://hub.mendix.com/) by clicking the **Landscape** tab.
+You can access the Data Hub Landscape from [Mendix Data Hub](https://catalog.mendix.com/) by clicking the **Landscape** tab.
 
 ## 2 Data Hub Landscape in Detail
 

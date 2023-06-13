@@ -10,13 +10,13 @@ tags: ["data hub", "Catalog", "consume", "external entities", "asset", "entities
 
 ## 1 Introduction
 
-Catalog is an open, standards-based metadata repository that enables Mendix developers and administrators to discover and explore data sources throughout their connected ecosystem. This respository is accessible to [authorized users](/data-hub/mendix-connect-catalog/manage-data-sources/user-roles/) in your company on the web app, hub.mendix.com, or through [Data Hub APIs](/apidocs-mxsdk/apidocs/data-hub-apis/).
+Catalog is an open, standards-based metadata repository that enables Mendix developers and administrators to discover and explore data sources throughout their connected ecosystem. This respository is accessible to [authorized users](/data-hub/mendix-connect-catalog/manage-data-sources/user-roles/) in your company on the web app, catalog.mendix.com, or through [Data Hub APIs](/apidocs-mxsdk/apidocs/data-hub-apis/).
 
 {{% alert color="info" %}}The Catalog currently supports OData data sources, or services, APIs, or databases that are [wrapped in OData](/refguide/wrap-services-odata/).{{% /alert %}}
 
 ## 2 Your Company's Catalog
 
-Log in with your company credentials to hub.mendix.com to see what metadata has been shared in your company. 
+Log in with your company credentials to catalog.mendix.com to see what metadata has been shared in your company. 
 
 Depending on your [user role](/data-hub/mendix-connect-catalog/manage-data-sources/user-roles/) and use case, you can do the following:
 
@@ -44,4 +44,4 @@ Build on this experience by learning how to [write data to another app](/data-hu
 
 ## 5 Processes and Properties
 
-[Catalog](/data-hub/mendix-connect-catalog/) goes into detailed information on the Catalog's processes and properties. This is helpful if you are looking for explanations of what you see in the Catalog UI (hub.mendix.com) and how parts of the UI relate to each other.
+[Catalog](/data-hub/mendix-connect-catalog/) goes into detailed information on the Catalog's processes and properties. This is helpful if you are looking for explanations of what you see in the Catalog UI (catalog.mendix.com) and how parts of the UI relate to each other.

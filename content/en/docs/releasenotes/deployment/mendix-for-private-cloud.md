@@ -13,6 +13,27 @@ For information on the current status of deployment to Mendix for Private Cloud 
 
 ## 2023
 
+### June 12th, 2023
+
+#### Private Cloud License Manager
+
+* We have introduced [Private Cloud License Manager](/developerportal/deploy/private-cloud/private-cloud-license-manager/) which provides a repository of offline Mendix licenses. You can use Private Cloud License Manager to manage these licenses centrally, and to automatically configure the licenses for the Mendix Operator and its Runtime.
+
+{{% alert color="info" %}}
+This feature is currently in a Beta release. For more information on what Beta release means, see [Beta Releases](/releasenotes/beta-features/).
+{{% /alert %}}
+
+#### Portal Improvements
+
+* On the **Installation** page of Private Cloud Portal, we have added a section where you can download the CLI for Private Cloud License Manager.
+* On the **Namespace details** page of Private Cloud Portal, we have added a section which provides information on the Operator and Runtime Licenses and their usage claims. The section is only visible when Private Cloud License Manager is configured.
+
+### June 5th, 2023
+
+#### Portal Improvements
+
+* We have fixed the issue with the namespace or cluster invite, where a member was not able to accept the invite (Ticket 187296).
+
 ### June 1st, 2023
 
 #### Portal Improvements

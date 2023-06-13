@@ -14,7 +14,7 @@ aliases:
 
 You can create a new app in one click and leave the app just as easily when you are not using it anymore. However, if you are thinking about leaving an app, consider carefully whether you may want to use that app later for any reason.
 
-**This how-to will teach you how to do the following as a Scrum Master:**
+This how-to will teach you how to do the following as a Scrum Master:
 
 * Leave an app
 * Delete an app
@@ -25,7 +25,6 @@ You can create a new app in one click and leave the app just as easily when you 
 Before you delete or deactivate an app, make sure you have completed the following prerequisites:
 
 * You need to have the **Scrum Master** role in your team (or a custom role with the **App Settings** permission).
-* You should not be the **Technical Contact** of the app.
 
 {{% alert color="info" %}}If you are a [Mendix Admin](/developerportal/control-center/#apps), you can delete, deactivate, and activate all the company's apps, with or without team members for the app.{{% /alert %}}
 

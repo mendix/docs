@@ -48,9 +48,9 @@ You can create new database connections from the **Databases** page. Each connec
 
 #### 2.1.1 Type
 
-This is the type of database you want to import.
+This is the type of database you want to import. Available database parameters vary per database type.
 
-#### 2.1.2 URL and Port
+#### 2.1.2 Host and Port
 
 This is the host name and port number of the server on which your database is running.
 

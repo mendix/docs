@@ -274,5 +274,3 @@ Congratulations! You successfully completed Part 1 of the quickstart guide. You 
 ## 8 Continuing with the Next Tutorial
 
 To continue learning, see Part 2: [Add a Native Mobile App](/refguide/quickstart-part2/).
-
-

@@ -11,6 +11,16 @@ These release notes cover changes made to the [Mendix Data Hub Catalog](/data-hu
 
 ## 2023
 
+### June 8th, 2023
+
+#### Improvements
+
+* We added a feedback option on the right side of the screen. Let us know if you find an issue, have a suggestion for improvement, or want to share something we are doing well!
+
+#### Fixes
+
+* We fixed an issue where uploading and cropping a custom icon did not work correctly.
+
 ### June 1st, 2023
 
 #### Fixes
@@ -247,7 +257,7 @@ These release notes cover changes made to the [Mendix Data Hub Catalog](/data-hu
 
 #### Improvements
 
-* Company administrators can now assign a new [external user](/developerportal/control-center/data-hub-admin/#external-users) when removing the existing one from company's Data Hub Catalog. To remove a user, go to the **Control Center** > **Data Hub** > **External Users** and click **Remove**.
+* Mendix Admins can now assign a new [external user](/developerportal/control-center/data-hub-admin/#external-users) when removing the existing one from company's Data Hub Catalog. To remove a user, go to the **Control Center** > **Data Hub** > **External Users** and click **Remove**.
 
 #### Fixes
 
@@ -281,7 +291,7 @@ These release notes cover changes made to the [Mendix Data Hub Catalog](/data-hu
 
 #### Improvements
 
-* Company administrators can now remove external participants from their company's Data Hub Catalog. To do so, go to the **Control Center** > **Data Hub** > **External Users** and click **Remove**.
+* Mendix Admins can now remove external participants from their company's Data Hub Catalog. To do so, go to the **Control Center** > **Data Hub** > **External Users** and click **Remove**.
 
 #### Fixes
 

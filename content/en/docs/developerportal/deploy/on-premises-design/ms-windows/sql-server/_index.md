@@ -6,7 +6,7 @@ no_list: false
 description_list: true
 ---
 
-##  1 Introduction
+## 1 Introduction
 
 This section describes how to set up your Microsoft SQL Server user, notification, and maintenance plans for use with your Mendix installation.
 

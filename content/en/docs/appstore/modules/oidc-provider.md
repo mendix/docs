@@ -263,6 +263,7 @@ To pass this additional information, you need to create custom claims. You can d
 Do not to create custom claims with the same names as standard claims or existing Mendix custom claims.
 
 Some examples of existing claims are:
+
 * scope
 
     If the claim with ‘scope’ is created, the scope value in access token and id-token gets overwritten with the claim value

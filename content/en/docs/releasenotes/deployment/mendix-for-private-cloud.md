@@ -13,6 +13,42 @@ For information on the current status of deployment to Mendix for Private Cloud 
 
 ## 2023
 
+### June 12th, 2023
+
+#### Private Cloud License Manager
+
+* We have introduced [Private Cloud License Manager](/developerportal/deploy/private-cloud/private-cloud-license-manager/) which provides a repository of offline Mendix licenses. You can use Private Cloud License Manager to manage these licenses centrally, and to automatically configure the licenses for the Mendix Operator and its Runtime.
+
+{{% alert color="info" %}}
+This feature is currently in a Beta release. For more information on what Beta release means, see [Beta Releases](/releasenotes/beta-features/).
+{{% /alert %}}
+
+#### Portal Improvements
+
+* On the **Installation** page of Private Cloud Portal, we have added a section where you can download the CLI for Private Cloud License Manager.
+* On the **Namespace details** page of Private Cloud Portal, we have added a section which provides information on the Operator and Runtime Licenses and their usage claims. The section is only visible when Private Cloud License Manager is configured.
+
+### June 5th, 2023
+
+#### Portal Improvements
+
+* We have fixed the issue with the namespace or cluster invite, where a member was not able to accept the invite (Ticket 187296).
+
+### June 1st, 2023
+
+#### Portal Improvements
+
+* We have added a new **Source** field to the **Environment Details** and **Deployment Package Details** pages. The field shows if the deployment package or environment was created by using the API or the Portal.
+* Deleting or uploading a deployment package is now logged in the activity logs.
+* Creating or deleting an environment is now logged in the activity logs.
+
+#### Deploy API Improvements
+
+* We have improved the error message that is shown when the same cluster or namespace member is invited twice.
+* It is now possible to create an environment without providing the plans when a secret store is enabled for the namespace.
+* When creating an environment, the **secretsStoreEnabled** field is no longer mandatory. The field can be added for information purposes.
+* We have fixed an issue where a user was not able to create an environment with same ID in same application but in a different namespace (Ticket 185165).
+
 ### May 17th, 2023
 
 #### Build API Improvements
@@ -320,7 +356,7 @@ This issue is fixed in Mendix Operator [version 2.5.1](#2.5.1).
     * members invited for a namespace
     * members invited for a cluster
     * database and storage plans in a namespace
-* We have added a tootip to assist in using the **Purpose** field
+* We have added a tooltip to assist in using the **Purpose** field
 
 ### March 4th, 2022
 
@@ -567,7 +603,7 @@ To upgrade an existing installation of Private Cloud to this version, follow the
     * Bash (or Git Bash) is no longer required to install and configure a cluster. This allows you to use the tool in most Windows terminals such as PowerShell and Windows Command prompt with no workarounds.
     * The installation process no longer needs to communicate with an external service to download installation resources, and only needs access to the Kubernetes cluster API.
     * Migration of Mendix components to a Private Cloud registry no longer requires downloading and patching the installation script.
-    * The process for upgrading to the next version of Mendix for Private Cloud has been complely automated. Instead of a manual process using a Bash terminal, an upgrade can be done with a click of the mouse.
+    * The process for upgrading to the next version of Mendix for Private Cloud has been completely automated. Instead of a manual process using a Bash terminal, an upgrade can be done with a click of the mouse.
     * It's now possible to install or upgrade to a specific version of Mendix Operator (1.9.0 and later). Previously, it was only possible to install the latest version of the Operator.
 * We have added reporting of the **Storage Provisioner Version** to the Private Cloud Portal.
 * We have added dedicated sections to configure scheduled events and app constants when using the Operator in standalone mode.

@@ -90,7 +90,7 @@ Here you will find several default panes such as:
 * **Changes**: displays a list of all changes in the app since the last commit to the team server (for more information see [Changes Pane](/refguide/changes-pane/))
 * **Errors**: displays any errors found within your app (for more information see [Errors Pane](/refguide/errors-pane/))
 
-For additional information on bottom default panes, see the [MxAssist Performance Bot](/refguide/view-menu/#mx-bot) and [Console](/refguide/view-menu/#console) sections of *View Menu*.
+For additional information on bottom default panes, see the [MxAssist Best Practice Bot](/refguide/view-menu/#mx-bot) and [Console](/refguide/view-menu/#console) sections of *View Menu*.
 
 ### 4.4 Right Dockable Pane
 
@@ -274,5 +274,3 @@ Congratulations! You successfully completed Part 1 of the quickstart guide. You 
 ## 8 Continuing with the Next Tutorial
 
 To continue learning, see Part 2: [Add a Native Mobile App](/refguide/quickstart-part2/).
-
-

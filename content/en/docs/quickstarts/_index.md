@@ -1,7 +1,7 @@
 ---
 title: "Quickstarts"
 url: /quickstarts/
-weight: 4
+weight: 7
 description: "Presents tutorials on how to build an app in Studio Pro quickly and easily."
 tags: ["hello world", "microflows", "widgets", "app", "nanoflow", "app development"]
 aliases:

@@ -348,9 +348,7 @@ Business Events offers three different deployment models:
 1. Deploy locally with the [Local Setup Tool](https://github.com/mendix/event-broker-tools)
 2. Free apps use a free multi-tenant Event Broker
 3. Production apps use the [Mendix Event Broker](#mendix-event-broker) running in the Mendix Cloud
-
-{{% alert color="info" %}}
-Currently, business events can only be deployed to the [Mendix Cloud](/developerportal/deploy/mendix-cloud-deploy/), with other deployment models expected in forthcoming releases.{{% /alert %}} 
+4. Bring your own Kafka
 
 ### 6.1 Local Deployment
 
@@ -377,6 +375,10 @@ If you deploying an app to production that contains a published business event s
 1. Select the **Enable** checkbox for the environment.
 2. Transport the mda to an environment.
 3. Restart the environment.
+   
+### 6.4 Bring your own Kafka
+
+If you want to deploy either locally or in private cloud using your own Kafka cluster, you can make use of the the `EventBrokerSpace` constant. This constant can be set to values like test, acceptance or production based on in which environment (or say namespace in Kubernetes) your Mendix app is running. Setting this constant would mean that each Business Event would have its own Kafka topic for environment. The topic would be of the form businessevents.<channel>.<EventBrokerSpace>. 
 
 ## 7 Local Testing {#local-testing}
 

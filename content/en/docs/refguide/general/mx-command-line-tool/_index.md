@@ -19,7 +19,7 @@ Mendix Studio Pro comes with the mx command-line tool. You can find the executab
 
 ### 3.1 App Commands
 
-These are the available [app commands](/refguide/mx-command-line-tool/app):
+These are the available [app commands](/refguide/mx-command-line-tool/app/):
 
 | Command  | Description |
 | --- | --- |
@@ -30,7 +30,7 @@ These are the available [app commands](/refguide/mx-command-line-tool/app):
 
 ### 3.1 Adaptable Solutions Commands
 
-These are the available [adaptable solutions commands](/refguide/mx-command-line-tool/adaptable):
+These are the available [adaptable solutions commands](/refguide/mx-command-line-tool/adaptable/):
 
 | Command | Description|
 | --- | --- |
@@ -39,7 +39,7 @@ These are the available [adaptable solutions commands](/refguide/mx-command-line
 
 ### 3.1 Module Commands
 
-These are the available [module commands](/refguide/mx-command-line-tool/module):
+These are the available [module commands](/refguide/mx-command-line-tool/module/):
 
 |  Command | Description |
 |---|---|
@@ -48,7 +48,7 @@ These are the available [module commands](/refguide/mx-command-line-tool/module)
 
 ### 3.1 Export Package Commands
 
-These are the available [export package commands](/refguide/mx-command-line-tool/export):
+These are the available [export package commands](/refguide/mx-command-line-tool/export/):
 
 |  Command | Description |
 | --- | --- |
@@ -58,7 +58,7 @@ These are the available [export package commands](/refguide/mx-command-line-tool
 
 ### 3.1 Merging and Diffing Commands
 
-These are the available [merging and diffing commands](/refguide/mx-command-line-tool/merge):
+These are the available [merging and diffing commands](/refguide/mx-command-line-tool/merge/):
 
 |   Command | Description |
 | --- | --- |

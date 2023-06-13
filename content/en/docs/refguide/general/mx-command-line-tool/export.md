@@ -27,7 +27,7 @@ These are the `OPTIONS`:
 | `-s, --include-snapshot` | Includes a snapshot in the app package. |
 | `-d, --package-dir` | Exports the package to the directory. |
 | `--help` | Displays the help screen. |
- 
+
 For `TARGET-FILE`, specify the *.mpr*  the app you want to export.
 
 ### 2.2 Examples
@@ -65,7 +65,7 @@ These are the `OPTIONS`:
 | `-e, --exclude-files` | Excludes all the files that match the given regular expression. |
 | `-d, --package-dir` | Exports the module package to the directory. |
 | `--help` | Displays the help screen. |
- 
+
 For `TARGET-FILE`, specify the *.mpr*  the app you want to export.
 
 For `MODULE-NAME`, specify the name of the module you want to export.
@@ -90,7 +90,7 @@ This table shows the return codes and their description:
 
 ## 4 mx create-solution-package Command {#create-solution-package}
 
-The `mx create-solution-package` command exports the app as a [solution package](/refguide/export-app-package-dialog).
+The `mx create-solution-package` command exports the app as a [solution package](/refguide/export-app-package-dialog/).
 
 ### 4.1 Usage
 
@@ -105,7 +105,7 @@ These are the `OPTIONS`:
 | `-s, --include-snapshot` | Includes a snapshot in the app package. |
 | `-d, --package-dir` | Exports the package to the directory. |
 | `--help` | Displays the help screen. |
- 
+
 For `TARGET-FILE`, specify the *.mpr*  the app you want to export.
 
 ### 4.2 Examples

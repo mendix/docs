@@ -87,7 +87,7 @@ In the diagram, note the following:
 * <span style="color:orange">**B'**</span> is `THEIRS`, which is the last commit on a branch you want to merge changes from
 * <span style="color:red">**A**</span> is `BASE`, which is the common commit where the branches diverged
 
-In order to merge changes correctly, Studio Pro has to compare both **A"** and **B'** against **A** to see what has been changed on each branch. During the merge, the [merge algorithm](/refguide/merge-algorithm) will try to automatically merge the changes.
+In order to merge changes correctly, Studio Pro has to compare both **A"** and **B'** against **A** to see what has been changed on each branch. During the merge, the [merge algorithm](/refguide/merge-algorithm/) will try to automatically merge the changes.
 
 This command works for any three *.mpr* files. This means you can try to merge different apps at your own risk.
 
@@ -105,7 +105,7 @@ The reason for this is that conflict resolution is a complex process that has tw
 
 This merge state is needed for Studio Pro to know what your current branch is and which branch you are trying to merge into it. This way, when you are trying to resolve the conflict using the `THEIRS` document, Studio Pro can download the document from the branch and put it into your current app. 
 
-So, if you run this command from the command line specifying the three *.mpr* files but the result has conflicts, you will not be able to resolve the conflicts in the `MINE` app using the `THEIRS` documents by just opening the app in Studio Pro. Instead, you need to configure Git to use `mx merge` as a [merge driver](/refguide/mx-command-line-tool/mx-merge-driver) for the *.mpr* files and trigger the merge from the Git command line (so that the repository is put in the merge state for Studio Pro to be able to pick it up after the command is complete).
+So, if you run this command from the command line specifying the three *.mpr* files but the result has conflicts, you will not be able to resolve the conflicts in the `MINE` app using the `THEIRS` documents by just opening the app in Studio Pro. Instead, you need to configure Git to use `mx merge` as a [merge driver](/refguide/mx-command-line-tool/mx-merge-driver/) for the *.mpr* files and trigger the merge from the Git command line (so that the repository is put in the merge state for Studio Pro to be able to pick it up after the command is complete).
 
 ### 3.3 Examples
 

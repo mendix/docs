@@ -105,7 +105,7 @@ The reason for this is that conflict resolution is a complex process that has tw
 
 This merge state is needed for Studio Pro to know what your current branch is and which branch you are trying to merge into it. This way, when you are trying to resolve the conflict using the `THEIRS` document, Studio Pro can download the document from the branch and put it into your current app. 
 
-So, if you run this command from the command line specifying the three *.mpr* files but the result has conflicts, you will not be able to resolve the conflicts in the `MINE` app using the `THEIRS` documents by just opening the app in Studio Pro. Instead, you need to configure Git to use `mx merge` as a [merge driver](/refguide/mx-command-line-tool/mx-merge-driver/) for the *.mpr* files and trigger the merge from the Git command line (so that the repository is put in the merge state for Studio Pro to be able to pick it up after the command is complete).
+So, if you run this command from the command line specifying the three *.mpr* files but the result has conflicts, you will not be able to resolve the conflicts in the `MINE` app using the `THEIRS` documents by just opening the app in Studio Pro. Instead, you need to configure Git to use `mx merge` as a [merge driver](#merge-git-driver) for the *.mpr* files and trigger the merge from the Git command line (so that the repository is put in the merge state for Studio Pro to be able to pick it up after the command is complete).
 
 ### 3.3 Examples
 

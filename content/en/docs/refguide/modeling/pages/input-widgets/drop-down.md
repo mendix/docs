@@ -23,23 +23,28 @@ For example, the following drop-down allows the end-user to see, and set, the **
 
 {{< figure src="/attachments/refguide/modeling/pages/input-widgets/drop-down/drop-down.png" >}}
 
-## 2 Properties
+## 2 Properties Pane
 
-An example of drop-down properties is represented in the image below:
+The properties pane is divided into two major sections by a toggle at the top of the pane: **Properties** and **Styling**. Drop-down properties consist of the following sections:
 
-{{< figure src="/attachments/refguide/modeling/pages/input-widgets/drop-down/drop-down-properties.png"   width="300"  >}}
-
-Drop-down properties consist of the following sections:
-
-* [Common](#common)
-* [Data source](#data-source)
-* [Design Properties](#design-properties)
-* [Editability](#editability)
-* [Events](#events)
+Properties:
 * [General](#general)
+* [Data source](#data-source)
 * [Label](#label)
-* [Validation](#validation)
+* [Editability](#editability)
 * [Visibility](#visibility)
+* [Validation](#validation)
+* [Accessibility](#accessibility)
+* [Common](#common)
+* [Events](#events)
+
+Styling:
+* [Design Properties](#design-properties)
+* [Common](#common-styling)
+
+## 3 Properties
+
+## 4 Styling
 
 ### 2.1 Common Section{#common}
 

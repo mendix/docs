@@ -322,7 +322,7 @@ Adding validation checks is vital for ensuring that input data conforms to the e
 
 When building microflows, it is important to account for the potential occurrence of unexpected values. These could be empty values, or values outside the expected range or format. It is also important to ensure that read-only attributes only contain expected values.
 
-{{% alert color="info" %}}
+{{% alert color="warning" %}}
 We strongly recommend adding validation checks to all microflows inputs, including read-only attributes. 
 
 We also recommend avoiding storing intermediary values in attributes (such as, *TotalPrice*). Instead, calculate these values when needed to ensure you have the correct values.

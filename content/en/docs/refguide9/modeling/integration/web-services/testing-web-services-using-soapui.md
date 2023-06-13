@@ -31,7 +31,7 @@ Before you can start with this how-to, make sure you have completed the followin
 | SoapUI | 5.2.0 |
 
 {{% alert color="warning" %}}
-All images, names and steps in this how-to are based on Studio Pro 5.20. When using other versions the images and/or names on your screen may be different than the images or names used in this how-to.
+All images, names and steps in this how-to are based on Studio Pro [9.24.3](/releasenotes/studio-pro/9.24/). When using other versions the images and/or names on your screen may be different than the images or names used in this how-to.
 {{% /alert %}}
 
 ## 3 Publishing More Microflows as Web Service Operation

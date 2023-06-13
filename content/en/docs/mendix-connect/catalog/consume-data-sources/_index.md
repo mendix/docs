@@ -1,7 +1,9 @@
 ---
 title: "Consume Data Sources"
-url: /data-hub/mendix-connect-catalog/consume-data-sources/
+url: /mendix-connect/catalog/consume-data-sources/
 weight: 20
+aliases:
+    - /data-hub/data-hub-catalog/consume-data-sources/
 ---
 
 ## 1 Introduction
@@ -10,8 +12,8 @@ The Catalog makes it easy to consume data sources within your company's ecosyste
 
 Common tasks for users who want to consume data sources from the Catalog include the following:
 
-* Understanding data source [authentication](/data-hub/mendix-connect-catalog/register-data/#authentication) set by publishing developers
+* Understanding data source [authentication](/mendix-connect/mendix-connect-catalog/register-data/#authentication) set by publishing developers
 * Using the [Data Hub pane](/refguide/data-hub-pane/)
-* Understanding how sources are related in the [Landscape](/data-hub/data-hub-landscape/)
+* Understanding how sources are related in the [Landscape](/mendix-connect/data-hub-landscape/)
 
-For an overview on consuming data sources, see [Consume Registered Assets](/data-hub/mendix-connect-catalog/consume/). 
+For an overview on consuming data sources, see [Consume Registered Assets](/mendix-connect/catalog/consume/). 

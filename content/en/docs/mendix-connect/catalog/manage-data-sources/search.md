@@ -1,8 +1,10 @@
 ---
 title: "Search in the Catalog"
-url: /data-hub/mendix-connect-catalog/search/
+url: /mendix-connect/catalog/search/
 description: "Describes how to find data sources and datasets in the Catalog."
-tags: ["data hub", "Catalog", "data source", "dataset"]
+tags: ["mendix connect", "Catalog", "data source", "dataset"]
+aliases:
+    - /data-hub/data-hub-catalog/search/
 ---
 
 ## 1 Introduction

@@ -1,14 +1,16 @@
 ---
 title: "Write Data to Another App"
-url: /data-hub/write-data/
+url: /mendix-connect/write-data/
 description: "Describes how to add annotations to an OData service in Mendix Studio Pro, see external entities with these features in the Catalog, and use them to build your app."
 tags: ["Data Hub", "external entities", "published OData service" ,"how to","OData", "Catalog"]
 weight: 20
+aliases:
+    - /data-hub/write-data/
 ---
 
 ## 1 Introduction
 
-This how-to builds on the information provided in [How to Share Data Between Apps](/data-hub/share-data/) and shows you how OData annotations give you the power to create, update, and delete data.
+This how-to builds on the information provided in [How to Share Data Between Apps](/mendix-connect/share-data/) and shows you how OData annotations give you the power to create, update, and delete data.
 
 This how-to will teach you how to do the following:
 
@@ -32,7 +34,7 @@ Note the following terminology differences described in the table below:
 Before starting this how-to, make sure you have completed the following prerequisites:
 
 * Install the most recent version of Studio Pro
-* Understand how read-only external entities behave by reading [How to Share Data Between Apps](/data-hub/share-data/)
+* Understand how read-only external entities behave by reading [How to Share Data Between Apps](/mendix-connect/share-data/)
 
 ## 3 Exposing OData Contracts in Mendix Studio Pro
 
@@ -48,7 +50,7 @@ The OData updatable capability pertains to the data in your app. The Catalog pro
 
 To see the capabilities of a particular OData entity, do the following: 
 
-1. Go to the Catalog and search for the name of an exposed OData service endpoint, entity, attribute, or association. For more information, see the [Using the Catalog and Curating Your Own Service](/data-hub/share-data/#use-and-curate) section in *Share Data Between Apps*.
+1. Go to the Catalog and search for the name of an exposed OData service endpoint, entity, attribute, or association. For more information, see the [Using the Catalog and Curating Your Own Service](/mendix-connect/share-data/#use-and-curate) section in *Share Data Between Apps*.
 2. Select your entity from the left-side search results pane. If you are not seeing many results, try removing the **Production** filter on your search.
 
 Notice the highlighted **CRUD** letters next to the entity name in the search panel and in the detailed information in the center. The purple letters indicate which operations are supported, and the gray letters indicate which are not. Hover over the letters to see which operations are supported. You will also see any OData restrictions here.

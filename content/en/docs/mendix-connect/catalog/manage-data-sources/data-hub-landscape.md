@@ -1,15 +1,17 @@
 ---
 title: "Data Hub Landscape"
-url: /data-hub/data-hub-landscape/
-description: "Describes how to the Data Hub Landscape to explore the connections with registered assets."
+url: /mendix-connect/landscape/
+description: "Describes how to use the Landscape to explore the connections with registered assets."
 tags: ["Catalog", "data hub", "external entities", "landscape", "published odata service"]
 weight: 40
+aliases:
+    - /data-hub/data-hub-landscape/
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details. 
 ---
 
 ## 1 Introduction
 
-The Data Hub Landscape presents a graphical view of the registered OData services in your Data Hub. It provides a landscape visualization of items registered in the [Catalog](/data-hub/mendix-connect-catalog/) and their relationships with apps that consume the datasets that they connect to. In the Data Hub Landscape, the nodes are the runtime instances of applications (or, more specifically, the deployments of apps in specific environments) and the published OData services from the apps. All public services that are issued with Data Hub are also shown in the Landscape.
+The Data Hub Landscape presents a graphical view of the registered OData services in your Data Hub. It provides a landscape visualization of items registered in the [Catalog](/mendix-connect/catalog/) and their relationships with apps that consume the datasets that they connect to. In the Data Hub Landscape, the nodes are the runtime instances of applications (or, more specifically, the deployments of apps in specific environments) and the published OData services from the apps. All public services that are issued with Data Hub are also shown in the Landscape.
 
 In the Landscape, you will see, at a glance, the network of deployments of the apps publishing OData services and those consuming them. It enhances searching for suitable data sources in the Catalog by showing the following:
 
@@ -48,7 +50,7 @@ You can pan around the landscape and and zoom using the mouse. You can also coll
 
 When you click the **Catalog** tab the **Details** screen of the item selected is displayed in the search pane.
 
-{{< figure src="/attachments/data-hub/mendix-connect-catalog/manage-data-sources/data-hub-landscape/landscape.png" alt="sample employee" >}}
+{{< figure src="/attachments/mendix-connect/catalog/manage-data-sources/data-hub-landscape/landscape.png" alt="sample employee" >}}
 
 ### 2.3 Nodes
 
@@ -62,19 +64,19 @@ Data sources or the published OData services are depicted as a round node with t
 
 The following is an example of a selected service node exposing three datasets:
 
-{{< figure src="/attachments/data-hub/mendix-connect-catalog/manage-data-sources/data-hub-landscape/node-service.png" alt="service  note" >}}
+{{< figure src="/attachments/mendix-connect/catalog/manage-data-sources/data-hub-landscape/node-service.png" alt="service  note" >}}
 
 #### 2.3.2 Apps
 
-Apps are displayed as square icons with the application icon and the environment that the app is deployed to is given below the app name. The example below shows a non-Mendix app (**TeamcenterMfg**), a Mendix app (**CompanyCarDemo**) which are deployed to the Mendix Free App environment, **Sandbox**. The third example shows another Mendix app (**HRSample_App**) deployed to the production environment which has a custom icon. For further information on adding a custom icon to your app see [Changing the Application Icon](/data-hub/mendix-connect-catalog/curate/#application-icon).
+Apps are displayed as square icons with the application icon and the environment that the app is deployed to is given below the app name. The example below shows a non-Mendix app (**TeamcenterMfg**), a Mendix app (**CompanyCarDemo**) which are deployed to the Mendix Free App environment, **Sandbox**. The third example shows another Mendix app (**HRSample_App**) deployed to the production environment which has a custom icon. For further information on adding a custom icon to your app see [Changing the Application Icon](/mendix-connect/catalog/curate/#application-icon).
 
-{{< figure src="/attachments/data-hub/mendix-connect-catalog/manage-data-sources/data-hub-landscape/node-apps.png" alt="different app logos" >}}
+{{< figure src="/attachments/mendix-connect/catalog/manage-data-sources/data-hub-landscape/node-apps.png" alt="different app logos" >}}
 
 ### 2.4 Dependencies
 
 The relationships and dependencies between apps, published services, and consuming apps are represented by connecting lines that also display the datasets that are published by a service and consumed by consuming apps. These are illustrated and described in the following examples:
 
-{{< figure src="/attachments/data-hub/mendix-connect-catalog/manage-data-sources/data-hub-landscape/dependencies.png" alt="dependencies" >}}
+{{< figure src="/attachments/mendix-connect/catalog/manage-data-sources/data-hub-landscape/dependencies.png" alt="dependencies" >}}
 
 * **Solid gray line** – This links an app and the services published from the app in the specified environment. In the example, the selected app **LEGO-Machinesafety Data** has 2 published services, which includes**Published_OData_MS 1.0.0**.
 * **Broken gray line with an arrow (consume line)** – This indicates that an app is consuming from the service it is linked to by the line. The direction of the dependency is indicated by the direction of the arrow: the consuming app makes a call to the OData service for data from the publishing app—the arrow points to the service (or data source) which is "pulling" the data. The service will "get" the data associated with the endpoint of the consumed dataset from the publishing app.
@@ -95,4 +97,4 @@ Clicking a node will display details of the node in the **Metadata** pane. You c
 
 If you click the **Entity** icon on the consume line, the names of the datasets that are being consumed from the service will be shown in the right panel.
 
-{{< figure src="/attachments/data-hub/mendix-connect-catalog/manage-data-sources/data-hub-landscape/consume-arrow-entities-list.png" alt="arrow convention" >}}
+{{< figure src="/attachments/mendix-connect/catalog/manage-data-sources/data-hub-landscape/consume-arrow-entities-list.png" alt="arrow convention" >}}

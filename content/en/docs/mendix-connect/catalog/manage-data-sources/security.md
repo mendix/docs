@@ -1,8 +1,10 @@
 ---
 title: "Data Accessibility and Security"
-url: /data-hub/mendix-connect-catalog/security/
+url: /mendix-connect/catalog/security/
 description: "Describes security aspects around registered assets and access in Mendix Data Hub."
 tags: ["data hub", "Catalog", "security", "entity security", "dataset security","odata service security"]
+aliases:
+    - /data-hub/data-hub-catalog/security/
 ---
 
 ## 1 Introduction
@@ -24,7 +26,7 @@ For Mendix apps that publish or consume [external entities](/refguide/external-e
 
     {{% alert color="info" %}}The security for an OData service can only be set if the [app security](/refguide/app-security/) is enabled.{{% /alert %}}
 
-* Classification of the data associated with the entities is defined in the service metadata and shown in the [Service Metadata](/data-hub/mendix-connect-catalog/search/#metadata) panel of the **Search Details** screen. 
+* Classification of the data associated with the entities is defined in the service metadata and shown in the [Service Metadata](/mendix-connect/catalog/search/#metadata) panel of the **Search Details** screen. 
 
 * Through the identification protocols used for establishing the user identity, the security rules for the user in the publishing app are applied
 
@@ -58,17 +60,17 @@ You can use a custom HTTP headers microflow and a custom HTTP validation microfl
 
 The following steps describe how the security proposal is set with an OpenID Connect (OIDC) compliant identity provider (IDP) and the [OIDC](https://marketplace.mendix.com/link/component/120371) Mendix Marketplace module:
 
-{{< figure src="/attachments/data-hub/mendix-connect-catalog/security/federation-with-ADFS-SAML-schematic.png" >}}
+{{< figure src="/attachments/mendix-connect/catalog/security/federation-with-ADFS-SAML-schematic.png" >}}
 
 1. The app end-user logs into an app that uses external entities.
 2. The end-user is not yet authenticated, so the OIDC module forwards the user to IDP for authentication.
 3. If the correct credentials are provided, IDP returns the UserInfo and an access token for SSO.
 4. When the end-user performs a query on a external entity, the JSON web tokens (JWTs) are set on the API call, and are validated with a microflow in the consumed OData service. Create a microflow for the **Headers from microflow** option, and add the value of your OIDC token to the **Authorization** header:
 
-    {{< figure src="/attachments/data-hub/mendix-connect-catalog/security/authentication-headers-from-microflow.png" alt="authentication flow" >}}
+    {{< figure src="/attachments/mendix-connect/catalog/security/authentication-headers-from-microflow.png" alt="authentication flow" >}}
 
 5. The publishing app receives the request and uses the custom authentication microflow specified in the settings of the published OData document to validate the tokens. This microflow should take the token from the **Authorization**, validate the information locally, or call IDP to validate.
 
-    {{< figure src="/attachments/data-hub/mendix-connect-catalog/security/authentication-microflow.png" alt="authentication microflow" >}}
+    {{< figure src="/attachments/mendix-connect/catalog/security/authentication-microflow.png" alt="authentication microflow" >}}
 
 6. The custom authentication microflow on the OData service document returns the appropriate user, which is used for retrieving the data. The entity access rules will use this user for authorization.

@@ -28,7 +28,7 @@ Before you start this how-to, make sure you have completed the following prerequ
 
 | Software | Version used in this how-to |
 | --- | --- |
-| SoapUI | 5.7.0 |
+| SoapUI | 5.2.0 |
 
 {{% alert color="warning" %}}
 All images, names and steps in this how-to are based on these versions. When using other versions the images and/or names on your screen may be different than the images or names used in this how-to.

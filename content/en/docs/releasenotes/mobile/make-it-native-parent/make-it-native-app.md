@@ -137,7 +137,7 @@ For older versions of Studio Pro please install the appropriate legacy app [here
 
 On Android:
 
-* We fixed an issue where the app might open a cached version of an older project if the packeger does not respond in time.
+* We fixed an issue where the app might open a cached version of an older project if the packager does not respond in time.
 
 ### Known Issues
 

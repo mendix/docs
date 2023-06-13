@@ -367,7 +367,7 @@ The name must adhere to the following rules:
 * The name is case-insensitive.
 
 {{% alert color="info" %}}
-It is recommended to use a common prefix that uniquely defines your organisation and application.
+It is recommended to use a common prefix that uniquely defines your organization and application.
 {{% /alert %}}
 
 ### 5.2 Deprecated usages

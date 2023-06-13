@@ -258,7 +258,7 @@ To fix the error, do the following:
 You have changed the association multiplicity and fixed the error. 
 
 {{% alert color="info" %}}
-Сhanging the domain model can result in other errors. To avoid changing the domain model, you might want to use another widget instead of the reference set selector or input reference set selector, for example, a reference selector. 
+Changing the domain model can result in other errors. To avoid changing the domain model, you might want to use another widget instead of the reference set selector or input reference set selector, for example, a reference selector. 
 {{% /alert %}}
 
 ## 7 Images, Videos and Files Consistency Errors
@@ -290,7 +290,7 @@ To fix the consistency errors, finish configuring the on click event (for exampl
 
 ## 10 Icon Collection Consistency Errors
 
-Icon collections have configurable class names, icon prefixes, and icon names. These properties are used to generate the CSS code for your pages. You can come accross the following consistency errors that prevent you from generating invalid CSS:
+Icon collections have configurable class names, icon prefixes, and icon names. These properties are used to generate the CSS code for your pages. You can come across the following consistency errors that prevent you from generating invalid CSS:
 
 | Error code | Message in the Error Pane | Cause of the Error | Way to Fix |
 | ---------- | ------------------------- | ------------------ | ---------- |

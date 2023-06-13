@@ -23,7 +23,7 @@ App packages can be created using [Export App Package](/refguide/export-app-pack
 
 ## 2 Where Should We Store Your App?
 
-Use this setting to select the location where you want to store your app. This can be the [Team Server](#team-server), a [private server](#private-server) (an SVN server other than the Team Server), or a [local disk](#local).
+Use this setting to select the location where you want to store your app. This can be the [Team Server](#team-server), a [private server](#private-server) (a Git server other than the Team Server), or a [local disk](#local).
 
 ### 2.1 Mendix Team Server {#team-server}
 
@@ -42,7 +42,7 @@ For more information about the Mendix Team Server, see [Team Server](/developerp
 ### 2.2 Private Server {#private-server}
 
 {{% alert color="info" %}}
-The **Private server** option is only available when support for other SVN servers is enabled: **Edit** >**Preferences** > **Version Control** > **Enable private version control**. 
+The **Private server** option is only available when support for other Git servers is enabled: **Edit** >**Preferences** > **Version Control** > **Enable private version control with Git**. 
 {{% /alert %}}
 
 In the **App repository address** field, enter the address of the repository you want to upload your app to.

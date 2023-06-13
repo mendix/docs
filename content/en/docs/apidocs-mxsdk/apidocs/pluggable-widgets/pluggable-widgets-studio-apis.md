@@ -1,8 +1,8 @@
 ---
-title: "Preview Appearance APIs for Pluggable Widgets"
+title: "Preview Appearance APIs"
 linktitle: "Preview Appearance APIs"
 url: /apidocs-mxsdk/apidocs/pluggable-widgets-studio-apis/
-description: A guide for understanding the APIs which influence pluggable widget preview appearances.
+description: A guide for understanding the APIs which influence pluggable widget preview appearances in Mx10.
 tags: ["Widget", "Pluggable", "Custom", "JavaScript", "React", "Preview"]
 weight: 30
 aliases:
@@ -11,7 +11,7 @@ aliases:
 
 ## 1 Introduction
 
-This guide explains the APIs offered by Mendix Studio Pro so you can build better pluggable widgets. Specifically, you can use these APIs and modules to alter pluggable widgets' preview appearances while working in Studio Pro's Design mode. To learn about creating a custom preview in structure mode, add custom consistency checks, or conditionally hide widget properties, read the [Configuration Module API for Pluggable Widgets](/apidocs-mxsdk/apidocs/pluggable-widgets-config-api/).
+This guide explains the APIs offered by Mendix Studio Pro so you can build better pluggable widgets. Specifically, you can use these APIs and modules to alter pluggable widgets' preview appearances while working in Studio Pro's **Design mode**. To learn about creating a custom preview in **Structure mode**, add custom consistency checks, or conditionally hide widget properties, read the [Configuration Module API for Pluggable Widgets](/apidocs-mxsdk/apidocs/pluggable-widgets-config-api/).
 
 Lastly, [Client APIs Available to Pluggable Widgets](/apidocs-mxsdk/apidocs/pluggable-widgets-client-apis/) is meant for pluggable widget development once your app is running in the client. This guide's APIs are available in Mendix 8.0.0 and higher.
 
@@ -58,7 +58,7 @@ Icon properties are exposed objects containing a `type` field that is `"glyph"` 
 
 For the `"glyph"` type, `iconClass` is available. It contains the class to apply on a `glyphicon` element to display the correct icon. It will be an empty string value if no icon has been selected.
 
-For the `"image"` type, `imageUrl` is available. It represents a URL from which your selected image can be reached by Studio Pro's Design mode. It will be an empty string value if no image has been selected.
+For the `"image"` type, `imageUrl` is available. It represents a URL from which your selected image can be reached by Studio Pro's **Design mode**. It will be an empty string value if no image has been selected.
 
 For the `"icon"` type, `iconClass` is available. It contains the classes to apply to an element to display the correct icon. This element does not need to have the `glyphicon` class. It will be an empty string value if no icon has been selected.
 
@@ -75,7 +75,7 @@ type ImageProperty = null | StaticImage | DynamicImage;
 
 Image properties are exposed objects containing a `type` field that is `"static"` if a static image is selected, `"dynamic"` if an entity is selected, or `null` if no image is selected at all.
 
-For the `"static"` type, `imageUrl`  is available. It represents a URL from which your selected image can be reached by Studio Pro's Design mode. It will be an empty string value if no image has been selected.
+For the `"static"` type, `imageUrl`  is available. It represents a URL from which your selected image can be reached by Studio Pro's **Design mode**. It will be an empty string value if no image has been selected.
 
 For the `"dynamic"` type, `entity` is available. It represents the entity where the selected image's data is stored. It will be an empty string value if no entity has been selected.
 
@@ -156,7 +156,7 @@ This preview module is expected to be a CommonJS module, exporting the following
 
 ### 3.1 Exposed Libraries
 
-In Design mode, only a few libraries are allowed to be imported. This is expected to occur through the
+In **Design mode**, only a few libraries are allowed to be imported. This is expected to occur through the
 CommonJS method: by using `require`.
 
 It is possible to require the following modules:

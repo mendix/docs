@@ -26,7 +26,7 @@ else
   OrderProcessing.Status.started
 ```
 
-## 2 getCaption
+## 2 getCaption {#get-caption}
 
 The `getCaption` function takes an enumeration value and returns the caption of this value. The *caption* is a translatable string and the result of this function depends on the current language.
 

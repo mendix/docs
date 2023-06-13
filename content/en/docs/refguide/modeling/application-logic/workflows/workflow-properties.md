@@ -41,6 +41,7 @@ The **Due date** section properties are described in the table below:
 **Events** section properties allow you to override app-wide events in the **App Settings** and to set a workflow-specific microflow that will be triggered on a state change of the current workflow and its user tasks. For more information on app-wide events, see the [Events](/refguide/app-settings/#events) section in *App Settings*.
 
 #### 2.3.1 Workflow State Change {#workflow-state-change}
+
 {{% alert color="info" %}}
 This setting overrides the app-wide setting in the **App Settings**. For more information see the [Workflow State Change](/refguide/app-settings/#workflow-state-change) section in *App Settings*.
 {{% /alert %}}

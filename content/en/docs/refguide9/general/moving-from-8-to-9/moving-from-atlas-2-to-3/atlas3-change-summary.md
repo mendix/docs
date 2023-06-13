@@ -70,7 +70,7 @@ Here is a list of key changes pertaining to the web environment:
 * The color palette has been improved which influences all aspects of design and user-experience, from widgets to page templates
 * Layout and spacing now relies on an 8 pixel system, creating more uniformity in design
 * Display type **flex** has been used instead of **float** where possible
-* Many design properties have been introduced, and existing ones have recieved added options:
+* Many design properties have been introduced, and existing ones have received added options:
     * **Inner** spacing options allowing users to configure **padding** for widgets. This applies to all widgets
         * Previous spacing options are now renamed to **Outer** to be more explicit and apply to **margin** for widgets
     * Structure  widgets get a new **gradient** option for background color

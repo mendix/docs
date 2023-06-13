@@ -22,7 +22,7 @@ This how-to will teach you how to do the following:
 
 Before starting with this how-to, make sure you have completed the following prerequisites:
 
-* Know how to create a domain model (for details, see [Creating a Basic Data Layer](/refguide/create-a-basic-data-layer/))
+* Know how to create a domain model (for details, see [Creating a Basic Data Layer](/refguide/configuring-a-domain-model/))
 * Know how to create overview and detail pages (for details, see [How to Create Your First Two Overview and Details Pages](/howto/front-end/create-your-first-two-overview-and-detail-pages/))
 * Know how to create menu items (for details, see [Setting Up Navigation](/refguide/setting-up-the-navigation-structure/))
 * Know how to add action buttons (for details, see [Buttons](/refguide/button-widgets/))

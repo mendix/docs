@@ -131,7 +131,9 @@ For example, if you use the counter message `You've used {1} characters of the {
 
 {{% alert color="info" %}}Text too long message is not supported on native mobile pages.{{% /alert %}}
 
-This is the text displayed when the number of typed characters is higher than the maximum allowed number of characters.
+This is the text displayed when the number of characters is higher than the maximum allowed number of characters.
+
+This type of message can also occur when a loaded or stored value exceeds the character limit
 
 #### 2.6.5 Maximum Length
 

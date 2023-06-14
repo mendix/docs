@@ -15,7 +15,7 @@ These release notes cover changes made to the [Mendix Data Hub Catalog](/data-hu
 
 #### Fixes
 
-* We fixed an issue where the uploading Application icon was not showing correct error messages.
+* We fixed an issue where uploading an application icon did not show the correct dialog box.
 
 ### June 8th, 2023
 

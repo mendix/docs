@@ -46,6 +46,7 @@ The LDAP module has the following features for end-user synchronization:
 * Import groups from the LDAP server, which can be mapped to user roles in your Mendix app
 * Deactivate end-user accounts in your application if they are removed from the LDAP server
 * Import end-users from multiple LDAP servers
+* Supports LDAPS (LDAP over SSL)
 
 The LDAP module also has the following features if SSO via SAML or OIDC is not possible.
 
@@ -65,7 +66,6 @@ This module is dependent on the following additional modules – make sure they 
 
 The LDAP module has the following limitations:
 
-* It does not support LDAP-S.
 * Updating data on the LDAP-server through a Mendix app is not supported. The module is designed so that the LDAP server is leading, so no changes are submitted to the LDAP server.
 * It does not support ‘Delta syncs’ which only apply changes. For example, it doesn’t include logic for using the `When Changed` attribute of Microsoft Active Directory (AD) to do a partial sync. The LDAP module does full syncs to ensure proper deactivation of end-users in your Mendix App.
 * Occasionally, new end-users will not sync successfully the first time they are included in the synchronization process. They will be synced successfully in subsequent (scheduled) syncs.
@@ -123,7 +123,9 @@ If you have an existing configuration, you can click **Reload configuration** wh
 Once you have the LDAP configuration form, fill in the following properties to match the setup of your LDAP server:
 
 * **Description** – This is a descriptive name for the LDAP connection so you can identify the different connections you have set up.
-* **Server address** – This is the address at which the LDAP server is located. Either an IP address or host name may be used. The address must begin with `ldap://`.
+* **Server address** – This is the address at which the LDAP server (domain controller) is located. Either an IP address or fully qualified host name may be used (you cannot just use the LDAP server domain name). The format of the address is
+    * `ldap://<LDAP server>` for default LDAP.
+    * `ldaps://<LDAP server>:636` for LDAPS. In addition, the path to the CA certificate of the LDAP server must be added to the [CA Certificates](/refguide/custom-settings/#CACertificates) in *Runtime Customization*.
 * **LDAP root directory** – This is the root of the LDAP directory that will be read. You can select any branch which is set up on your LDAP server to be the root directory for synchronization. Your server will usually provide this in the form `DC=``<organization>,DC=<location>`, where `<organization>` is the LDAP/AD domain name, and `<location>` is something like `local` or `org`.
 * **Is AD server** – Turn this on if you are authenticating against a Microsoft AD server. Microsoft AD servers run an implementation of LDAP.
 * **Is paged search allowed** – Paged search is useful when retrieving large data sets from LDAP, but some LDAP servers have paged search disabled. Leave this enabled unless you run into problems related to paging.

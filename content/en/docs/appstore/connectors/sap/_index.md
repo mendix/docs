@@ -1,5 +1,5 @@
 ---
-title: "AWS Connectors"
+title: "SAP Connectors"
 url: /appstore/sap-connectors/
 description: "Presents details on the SAP-specific connectors available in the Mendix Marketplace."
 weight: 40

@@ -16,6 +16,10 @@ While developing Mendix apps, you will need to test and iterate to make the best
 * The [Getting the Make It Native App](#get-min-app) section explains how to download the Make It Native App, which you can use to test your apps using a simple QR code
 * The [Troubleshooting Common Mobile Issues](#troubleshooting) section explains port forwarding, WiFi settings, and other common troubleshooting issues
 
+{{% alert color="warning" %}}
+Please note that instructions in this document reference Mendix 9 technologies. After the Make It Native 10 app is published in app stores, this document will be rewritten to describe testing Mx10 apps.
+{{% /alert %}}
+
 ## 2 Getting the Make It Native App {#get-min-app}
 
 The Make It Native app allows developers to preview, test, and debug native mobile apps in conjunction with Mendix Studio Pro. Use the **Make It Native 9 app** for Studio Pro v9.24.0 and above.

@@ -242,7 +242,7 @@ To connect to an Azure PostgreSQL server, the Kubernetes cluster must be added t
 To connect to an Amazon RDS database, the VPC and firewall must be configured to allow connections to the database from the Kubernetes cluster.
 {{% /alert %}}
 
-#### 2.3.2 Postgres (IAM authentication){#database-postgres}
+#### 2.3.2 Postgres (IAM authentication){#database-postgres-iam}
 
 The Postgres database is an automated, on-demanad database. The Postgres plan offers a good balance between automation, ease of use, and security.
 [IRSA authentication](https://docs.aws.amazon.com/eks/latest/userguide/iam-roles-for-service-accounts.html) removes static passwords and instead uses IAM roles for authentication.
@@ -258,7 +258,6 @@ The Postgres database is an automated, on-demanad database. The Postgres plan of
    To connect to a Postgres server, a login database is required. This database is not used - but is required, because Postgres needs a default login database to be specified.
    {{% /alert %}}
 * A *Postgres Admin* IAM role with permissions to access the database, with the following inline policy (replace `<aws_region>` with the database's region, `<account_id>` with your AWS account number, `<database_id>` with the RDS database instance identifier and `<database_user>` with the Postgres superuser account name):
-
     ```json
     {
         "Version": "2012-10-17",
@@ -276,10 +275,8 @@ The Postgres database is an automated, on-demanad database. The Postgres plan of
     }
     ```
 
-    {{% alert color="info" %}}
-    The `<database_id>` parameter is not the database name (or ARN), but the uniquely generated AWS resource ID.
-    For more information and instructions how to write this policy, see the [IAM policy](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/UsingWithRDS.IAMDBAuth.IAMPolicy.html) document.
-    {{% /alert %}}
+    {{% alert color="info" %}}The `<database_id>` parameter is not the database name (or ARN), but the uniquely generated AWS resource ID.
+    For more information and instructions how to write this policy, see the [IAM policy](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/UsingWithRDS.IAMDBAuth.IAMPolicy.html) document.{{% /alert %}}
 
 * An IAM-based S3 blob storage plan.
    
@@ -333,13 +330,12 @@ In the Postgres plan configuration, enter the following details:
 * **IAM Role ARN** - the *Postgres Admin* IAM role ARN.
   * We recommend to use the same IAM role to manage Postgres databases and S3 buckets, as this would be easier to set up and maintain.
 * **K8s Service Account** - the Kubernetes Service Account to create and attach to the IAM role.
-
-    {{% alert color="warning" %}}
-    Do not use the name of an existing Service Account (environment name), or one of the reserved Kubernetes Service Account names:
-    * `mendix-operator`
-    * `mendix-agent`
-    * `mendix-storage-provisioner`
-    {{% /alert %}}
+  {{% alert color="warning" %}}
+  Do not use the name of an existing Service Account (environment name), or one of the reserved Kubernetes Service Account names:
+  * `mendix-operator`
+  * `mendix-agent`
+  * `mendix-storage-provisioner`
+  {{% /alert %}}
 
 {{% alert color="info" %}}
 To connect to an Amazon RDS database, the VPC and firewall must be configured to allow connections to the database from the Kubernetes cluster.
@@ -825,14 +821,10 @@ It's similar to the [Create account with existing policy](#s3-create-account-exi
     }
     ```
 
-    {{% alert color="info" %}}
-    The `AllowConnectionToDatabase` statement is optional and is only needed when using a Postgres database with IAM authentication.
-    All permissions to an app's environment will be granted through by the S3 provisioner, through this environment template policy.
-    {{% /alert %}}
+    {{% alert color="info" %}}The `AllowConnectionToDatabase` statement is optional and is only needed when using a Postgres database with IAM authentication.
+    All permissions to an app's environment will be granted through by the S3 provisioner, through this environment template policy.{{% /alert %}}
 
-    {{% alert color="info" %}}
-    If an environment needs additional permissions (for example, to access KMS keys), they can be added to this policy as well.
-    {{% /alert %}}
+    {{% alert color="info" %}}If an environment needs additional permissions (for example, to access KMS keys), they can be added to this policy as well.{{% /alert %}}
 
 * An admin user role - with the following policy (replace `<account_id>` with your AWS account number, and `<policy_arn>` with the environment template policy ARN, `<aws_region>` with the database's region, `<account_id>` with your AWS account number, `<database_id>` with the RDS database instance identifier and `<database_user>` with the Postgres superuser account name):
 
@@ -896,15 +888,11 @@ It's similar to the [Create account with existing policy](#s3-create-account-exi
     }
     ```
 
-    {{% alert color="info" %}}
-    The `AllowFileCleanup` statement is optional and is only needed if the **Prevent file deletion** option is not enabled.
-    This allows the Mendix Operator to delete an environment's files when that environment is deleted.
-    {{% /alert %}}
+    {{% alert color="info" %}}The `AllowFileCleanup` statement is optional and is only needed if the **Prevent file deletion** option is not enabled.
+    This allows the Mendix Operator to delete an environment's files when that environment is deleted.{{% /alert %}}
 
-    {{% alert color="info" %}}
-    The `AllowCreateRDSTenants` statement is optional, and is only needed if the admin role will be shared by the Postgres and S3 provisioners.
-    For more information on Postgres IAM authentication, see the [Postgres (IAM authentication)](#database-postgres) plan.
-    {{% /alert %}}
+    {{% alert color="info" %}}The `AllowCreateRDSTenants` statement is optional, and is only needed if the admin role will be shared by the Postgres and S3 provisioners.
+    For more information on Postgres IAM authentication, see the [Postgres (IAM authentication)](#database-postgres-iam) plan.{{% /alert %}}
 
 ##### 3.3.2.2 Limitations
 
@@ -950,12 +938,12 @@ In the Amazon S3 plan configuration, enter the following details:
   * We recommend to use the same IAM role to manage Postgres databases and S3 buckets, as this would be easier to set up and maintain.
 * **K8s Service Account** - the Kubernetes Service Account to create and attach to the IAM role.
 
-    {{% alert color="warning" %}}
-    Do not use the name of an existing Service Account (environment name), or one of the reserved Kubernetes Service Account names:
-    * `mendix-operator`
-    * `mendix-agent`
-    * `mendix-storage-provisioner`
-    {{% /alert %}}
+  {{% alert color="warning" %}}
+  Do not use the name of an existing Service Account (environment name), or one of the reserved Kubernetes Service Account names:
+  * `mendix-operator`
+  * `mendix-agent`
+  * `mendix-storage-provisioner`
+  {{% /alert %}}
 
 AWS IRSA allows a Kubernetes Service Account to assume an IAM role. For this to work correctly, the IAM role's trust policy needs to trust the Kubernetest Service Account:
 

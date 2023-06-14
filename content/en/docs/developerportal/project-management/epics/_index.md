@@ -1,14 +1,13 @@
-```
 ---
 title: "Epics"
-url: /developerportal/collaborate/epics/
+url: /developerportal/project-management/epics/
 category: "Project Management"
-weight: 1
-description: "Describes how to use Epics for your app development."
+weight: 10
+no_list: false
 description_list: true
+description: "Describes how to use Epics for your app development."
 tags: ["Epics", "Sprint", "Developer Portal"]
 ---
-```
 
 ## 1 Introduction
 

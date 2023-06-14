@@ -1,7 +1,7 @@
 ---
 title: "Feature Release Calendar"
 url: /releasenotes/feature-release-calendar/
-tags: ["mendix world", "announcements", "features", "feature release", "products", "features and products", "calendar"]
+tags: ["mendix world", "announcements", "features", "feature release", "products", "features and products", "calendar", "new"]
 weight: 60
 #notoc: true
 #layout: wide

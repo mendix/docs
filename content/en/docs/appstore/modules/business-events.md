@@ -343,12 +343,12 @@ This is implemented as follows:
 
 ## 6 Deployment {#deployment}
 
-Business Events offers three different deployment models:
+Business Events offers four different deployment models:
 
 1. Deploy locally with the [Local Setup Tool](https://github.com/mendix/event-broker-tools)
 2. Free apps use a free multi-tenant Event Broker
 3. Production apps use the [Mendix Event Broker](#mendix-event-broker) running in the Mendix Cloud
-4. Bring your own Kafka
+4. Apps running in Mendix for Private Cloud (Bring your own Kafka) [Currently in [Beta](releasenotes/beta-features/)]
 
 ### 6.1 Local Deployment
 
@@ -370,17 +370,20 @@ You can also use your own event broker cluster.
 
 #### 6.3.1 Warning Message When Deploying
 
-If you are deploying an app to production that contains a published business event service, you might receive a warning that it is not possible to enable the event broker service. If you see this message, do the following in the [Services](/developerportal/deploy/environments/#services) tab of the production environment screen:
+If you are deploying an app to production that contains a published business event service, you may receive a warning that it is not possible to enable the event broker service. If you see this message, do the following in the [Services](/developerportal/deploy/environments/#services) tab of the production environment screen:
 
 1. Select the **Enable** checkbox for the environment.
 2. Transport the mda to an environment.
 3. Restart the environment.
    
-### 6.4 Bring your own Kafka
+### 6.4 Apps Running in Mendix for Private Cloud (Bring Your Own Kafka)
 
-To deploy to a private cloud using your own Kafka cluster, you can make use of the the `EventBrokerSpace` constant. This constant can be set to values like test, acceptance or production based on in which environment (or say namespace in Kubernetes) your Mendix app is running. Setting this constant would mean that each Business Event would have its own Kafka topic for environment. The topic would be of the form businessevents.<channel>.<EventBrokerSpace>.
+{{% alert color="info" %}}
+This deployment method is currently in Beta.{{% /alert %}}
 
-If you want you can also use the `EventBrokerSpace` constant locally to test the behaviour.
+To deploy to a private cloud using your own Kafka cluster, you can use the `EventBrokerSpace` constant. This constant can be set to values like test, acceptance or production based on in which environment (or say namespace in Kubernetes) your Mendix app is running. Setting this constant means that each Business Event has its own Kafka topic for environment. The topic would be of the form businessevents.<channel>.<EventBrokerSpace>.
+
+You can also use the `EventBrokerSpace` constant locally to test the behavior.
 
 ## 7 Local Testing {#local-testing}
 

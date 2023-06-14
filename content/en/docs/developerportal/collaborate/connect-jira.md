@@ -1,13 +1,13 @@
 ---
-title: "Connect Your App to Jira"
+title: "Jira Connector"
 url: /developerportal/collaborate/connect-jira/
 weight: 1
-description: "Describes how to connect your apps in the Developer Portal to Jira."
-tags: ["app", "jira", "project management", "general settings", Developer Portal", "Scrum Master"]
+description: "Describes how to connec Mendix apps in the Developer Portal to Jira."
+tags: ["app", "jira", "project management", "scrum master", "general settings", Developer Portal", "Scrum Master"]
 ---
 
 {{% alert color="info" %}}
-This feature is still in Public Beta.
+This feature is in Public Beta.
 {{% /alert %}}
 
 ## 1 Introduction
@@ -16,9 +16,9 @@ If you are a Scrum Master of a Mendix app, you can link your app to Jira if you 
 
 ## 2 Features
 
-* Supports connecting your Mendix project to Jira
-* Enables you to migrate open stories (namely, stories in any uncompleted Sprint or backlog, with the status "to-do" or "running") from the Developer Portal to Jira
-* Allows you to associate your changes in Studio Pro (version 7.19 or above) to Jira stories
+* Supports connecting your Mendix app to Jira
+* Enables you to migrate open stories (stories in any uncompleted Sprint or backlog, with the status "to-do" or "running") from the Developer Portal to Jira
+* Allows you to associate your commits in Studio Pro (version 7.19 or above) to Jira stories
 * Supports [Jira Cloud platform REST API version 3](https://developer.atlassian.com/cloud/jira/platform/rest/v3/intro/#about)
 
 ## 3 Limitations
@@ -27,17 +27,17 @@ If you are a Scrum Master of a Mendix app, you can link your app to Jira if you 
 As we further develop this feature, we may lift these limitations with future releases.
 {{% /alert %}}
 
-- Feedback issues are not migrated to Jira upon the activation of the connection.
-- You cannot change the status of a story from the [Stories](/refguide/stories-pane/)  pane in Studio Pro
+- Feedback issues and stories from Epics are not migrated to Jira.
+- You cannot change the status of a story from the [Stories](/refguide/stories-pane/)  pane in Studio Pro.
 - The Stories pane only shows Jira issue types "Story" or "Bug".
-- The Stories pane does not correctly show the status and story points of a story.
+- The Stories pane does not show the status and story points of a story correctly.
 
 ## 4 Prerequisites
 
-- You need to be a Scrum Master of your app in the Developer Portal.
+- You need to be a [Scrum Master](/developerportal/collaborate/app-roles/#team-roles) of the app in the Developer Portal.
 - You need to have an active subscription to Jira.
 - You need to have a project in Jira with a Scrum board or a Kanban board.
-- You need to have a user account and API token with administration rights to the project in Jira. For more information, see [Manage API tokens for your Atlassian account](https://support.atlassian.com/atlassian-account/docs/manage-api-tokens-for-your-atlassian-account/).
+- You need to have a user account and API token with administration rights to the project in Jira. For more information on how to get this API token, see [Manage API tokens for your Atlassian account](https://support.atlassian.com/atlassian-account/docs/manage-api-tokens-for-your-atlassian-account/).
 
 ## 5 Procedure
 
@@ -62,11 +62,11 @@ To connect your app to Jira, perform the following steps:
 
 5. Click **Next**. 
 
-6. If your Jira project has several boards configured, from the drop-down list, select one of the boards to connect. We support Scrum, simplified Scrum, and Kanban board types.
+6. If your Jira project has several boards configured, from the drop-down list, select one of the Jira boards to connect. We support Scrum, simplified Scrum, and Kanban board types.
 
     {{< figure src="/attachments/developerportal/collaborate/general-settings/connect-jira/connect-jira-board.png"   >}}
 
-7. If your app has any stories in any uncompleted Sprint or backlog, with the status "to-do" or "running", you can choose whether to migrate these stories to your Jira project. 
+7. If your app has stories in any uncompleted Sprint or backlog, with the status "to-do" or "running", you can choose whether to migrate these stories to your Jira project. 
 
     If you choose to migrate these stories, they will be converted to Jira in the following way:
 
@@ -80,12 +80,12 @@ To connect your app to Jira, perform the following steps:
 
 8. Click **Activate** to activate the connection. 
 
-After your connection is activated, your app is connected to Jira. You can see the following:
+Once the activation is completed, your app is connected to Jira. You can see the following:
 
-* In Studio Pro, you can see your stories in the Stories pane:
+* In Studio Pro, you can see your Jira stories in the Stories pane:
   * If you connect your app to a Scrum board in Jira, the Stories pane shows all issues of the types "Story" and "Bug" from the active Sprint.
-  * If you connect your app to a Kanban board, the Stories pane shows all issues that match the board’s filter query and sub-filter. 
-    * You can find the query and sub-query in the board settings in Jira. Fore more information, see [Configure a company-managed board](https://support.atlassian.com/jira-software-cloud/docs/configure-a-company-managed-board/). 
+  * If you connect your app to a Kanban board, the Stories pane shows all issues that match the board’s filter and sub-filter. 
+    * You can find the filters and sub-filters in the board settings in Jira. Fore more information, see [Configure a company-managed board](https://support.atlassian.com/jira-software-cloud/docs/configure-a-company-managed-board/). 
     * If you want to exclude issues from the backlog in the Stories pane, consider removing the backlog statuses from the board’s column settings.
 
-* After you commit your changes in Studio Pro, you can see the associated Jira stories for the corresponding revision by clicking **View Linked Stories**.
+* After you commit your changes in Studio Pro, you can see the associated Jira stories in the details of the corresponding [revision](/developerportal/collaborate/team-server/#revision-details) in the **Team Server** page of the Developer Portal.

@@ -31,20 +31,21 @@ Multiple constraints can be added to a single query, this is true for all querie
 
 This query retrieves all customers whose name is equal to Jansen and who live in Rotterdam:
 
-{{< tabpane lineNos=false >}}
+{{< tabpane persistLang=false >}}
+  {{% tab header="Environments:" disabled=true /%}}
   {{< tab header="Studio Pro" lang="StudioPro" >}}
     [Name='Jansen'][Sales.Customer_Address/Sales.Address/City = 'Rotterdam']
     {{% /tab %}}
   {{< tab header="Java" lang="JavaQuery" >}}
-    //Sales.Customer[Name='Jansen'][Sales.Customer_Address/Sales.Address/City = 'Rotterdam']
+     //Sales.Customer[Name = 'Jansen'][Sales.Customer_Address/Sales.Address/City = 'Rotterdam']
     {{% /tab %}}
 {{< /tabpane >}}
+
+It is also possible to combine constraints with an `and` or `or` [operator](/refguide/xpath-operators/). This query retrieves all customers whose names equal to Jansen *and* who live in Rotterdam:
 
 ```java {linenos=false}
 //Sales.Customer[Name = 'Jansen'][Sales.Customer_Address/Sales.Address/City = 'Rotterdam']
 ```
-
-It is also possible to combine constraints with an `and` or `or` [operator](/refguide/xpath-operators/). This query retrieves all customers whose names equal to Jansen *and* who live in Rotterdam:
 
 ```java {linenos=false}
 //Sales.Customer[Name = 'Jansen' and Sales.Customer_Address/Sales.Address/City = 'Rotterdam']

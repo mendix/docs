@@ -11,13 +11,9 @@ This document describes page properties. For details on what pages are for and w
 
 ## 2 Properties Pane {#properties-pane}
 
-An example of page properties is represented in the image below:
-
-{{< figure src="/attachments/refguide/modeling/pages/page/page-properties/page-properties.png" alt="Page Properties"   width="250"  >}}
-
 The properties pane is divided into two major sections by a toggle at the top of the pane: **Properties** and **Styling**. Page properties consist of the following sections:
 
-[Properties](#properties):
+Properties:
 
 * [General](#general)
 * [Common](#common)
@@ -27,7 +23,7 @@ The properties pane is divided into two major sections by a toggle at the top of
 * [Navigation](#navigation)
 * [Pop-up](#pop-up)
 
-[Styling](#styling):
+Styling:
 
 * [Common](#common-styling)
 

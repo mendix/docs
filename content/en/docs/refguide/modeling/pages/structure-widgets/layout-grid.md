@@ -33,7 +33,7 @@ Styling:
 
 ## 3 Properties
 
-### 3.1 General {#general}
+### 3.1 General Section {#general}
 
 #### 3.1.1 Width
 
@@ -50,7 +50,7 @@ As the layout grid responds to the viewport width, and not to the width of its c
 
 ## 4 Styling
 
-### 4.1 Common {#common-styling}
+### 4.1 Common Section {#common-styling}
 
 {{% snippet file="/static/_includes/refguide/common-section-link.md" %}}
 

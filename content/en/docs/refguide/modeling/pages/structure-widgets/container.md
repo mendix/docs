@@ -29,7 +29,7 @@ Styling:
 * [Design Properties](#design-properties)
 * [Common](#common-styling)
 
-## 3 Properties Pane
+## 3 Properties 
 
 ### 3.1 General Section {#general}
 
@@ -68,7 +68,7 @@ The **On-click** property specifies the action that will be executed when the us
 
 {{% snippet file="/static/_includes/refguide/common-section-link.md" %}}
 
-### 3.5 Accessibility {#accessibility}
+### 3.5 Accessibility Section {#accessibility}
 
 #### 3.5.1 Hide for Screen Readers 
 
@@ -83,7 +83,7 @@ This property specifies whether to hide the container from screen readers or not
 
 {{% snippet file="/static/_includes/refguide/design-section-link.md" %}} 
 
-### 4.2 Common {#common-styling}
+### 4.2 Common Section {#common-styling}
 
 {{% snippet file="/static/_includes/refguide/common-section-link.md" %}}
 

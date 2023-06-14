@@ -67,7 +67,7 @@ The on-change property specifies an action that will be executed when leaving th
 
 {{% snippet file="/static/_includes/refguide/events-section-link.md" %}}
 
-#### 2.5.2 On Enter
+#### 3.6.2 On Enter
 
 The on-enter property specifies an action that will be executed when the widget is entered, either by using the <kbd>Tab</kbd> key or by clicking it with the mouse.
 

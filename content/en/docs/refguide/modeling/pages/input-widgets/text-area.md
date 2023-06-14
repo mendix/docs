@@ -126,7 +126,7 @@ This option is only available in native pages.
 
 ### 3.7 Accessibility Section{#accessibility}
 
-### 3.7.1 Aria Required
+#### 3.7.1 Aria Required
 
 In a text area widget, when **Aria required** is set to **Yes** then assistive technologies will read out the field that is required. When set to **No** then assistive technologies will not read the field out.
 
@@ -163,7 +163,7 @@ The On Change Behavior property lets users select how **on change** is handled v
 * When user leaves input field (Default)
 * While user is entering data
 
-##### 3.10.1 When user leaves input field (Default)
+#### 3.10.1 When user leaves input field (Default)
 
 This option will work as in previous versions of Studio Pro. Text area will apply changes when a value is not the same as previously saved value in the database and one of the following conditions is met:
 
@@ -172,7 +172,7 @@ This option will work as in previous versions of Studio Pro. Text area will appl
 
 This means that there is no way for users to trigger an on change event while typing. That use case requires the second option: **While user is entering data**.
 
-##### 3.10.2 While user is entering data
+#### 3.10.2 While user is entering data
 
 This option allows makes it so users trigger an on change event while they are typing. Text area will save changes when the value is not the same as the previously saved value in the database and if the last change made took place after the configured **Apply after (ms)** length of time.
 

@@ -29,7 +29,7 @@ The properties pane is divided into two major sections by a toggle at the top of
 
 Properties:
 * [General](#general)
-* [Data source](#data-source)
+* [Data Source](#data-source)
 * [Label](#label)
 * [Editability](#editability)
 * [Visibility](#visibility)
@@ -37,7 +37,7 @@ Properties:
 * [Accessibility](#accessibility)
 * [Common](#common)
 * [Events](#events)
-* [On change Behavior](#on-change-behavior)
+* [On Change Behavior](#on-change-behavior)
 
 Styling:
 
@@ -128,7 +128,7 @@ This option is only available in native pages.
 
 ### 3.7 Accessibility Section{#accessibility}
 
-### 3.7.1 Aria Required
+#### 3.7.1 Aria Required
 
 In a textbox widget, when **Aria required** is set to **Yes** then assistive technologies will read out the field that is required. When set to **No** then assistive technologies will not read the field out.
 

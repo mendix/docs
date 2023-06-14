@@ -47,11 +47,11 @@ The **General** section contains the **Caption** property. **Caption** defines t
 
 ## 4 Styling
 
-### 4.1 Design Properties {#design-properties}
+### 4.1 Design Properties Section {#design-properties}
 
 {{% snippet file="/static/_includes/refguide/design-section-link.md" %}} 
 
-### 4.2 Common {#common-styling}
+### 4.2 Common Section {#common-styling}
 
 {{% snippet file="/static/_includes/refguide/common-section-link.md" %}}
 

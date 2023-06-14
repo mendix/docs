@@ -53,11 +53,11 @@ Miscellaneous:
 
 {{% snippet file="/static/_includes/refguide/common-section-link.md" %}}
 
-## 5 Navigation List Item
-
-A row in a navigation list is a navigation list item. You can set a separate **On click** event for each row of the navigation list. 
+## 5 Miscellaneous
 
 ### 5.1 Navigation List Item Properties {#nav-list}
+
+A row in a navigation list is a navigation list item. You can set a separate **On click** event for each row of the navigation list. 
 
 #### 5.1.1 Common Section
 

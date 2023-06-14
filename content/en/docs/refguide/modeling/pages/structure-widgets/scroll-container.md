@@ -36,6 +36,9 @@ Styling:
 * [Design Properties](#design-properties)
 * [Common](#common-styling)
 
+Miscellaneous:
+* [Scroll Container Region](#scroll-container-region)
+
 ## 3 Properties
 
 ### 3.1 General Section {#general}
@@ -110,7 +113,19 @@ Determines whether the scroll container should contain a left region.
 
 Determines whether the scroll container should contain a right region.
 
-## 4 Scroll Container Region {#scroll-container-region}
+## 4 Styling
+
+### 4.1 Design Properties Section {#design-properties}
+
+{{% snippet file="/static/_includes/refguide/design-section-link.md" %}} 
+
+### 4.2 Common Section {#common-styling}
+
+{{% snippet file="/static/_includes/refguide/common-section-link.md" %}}
+
+## 5 Miscellaneous
+
+## 5.1 Scroll Container Region Section {#scroll-container-region}
 
 A scroll container region is part of a scroll container, and defines a content area. A scroll container can contain the following regions:
 
@@ -121,16 +136,6 @@ A scroll container region is part of a scroll container, and defines a content a
 * Bottom
 
 You can add and remove all the regions listed above except the center one. 
-
-## 5 Styling
-
-### 5.1 Design Properties Section {#design-properties}
-
-{{% snippet file="/static/_includes/refguide/design-section-link.md" %}} 
-
-### 5.2 Common Section {#common-styling}
-
-{{% snippet file="/static/_includes/refguide/common-section-link.md" %}}
 
 ## 6 Read More
 

@@ -116,7 +116,7 @@ The render mode determines how the text will be displayed.
 
 {{% snippet file="/static/_includes/refguide/design-section-link.md" %}} 
 
-### 4.3 Common {#common-styling}
+### 4.3 Common Section {#common-styling}
 
 {{% snippet file="/static/_includes/refguide/common-section-link.md" %}}
 

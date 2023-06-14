@@ -78,7 +78,7 @@ For example, the drop-down that allows the end-user to select the region allocat
 
 ### 3.7 Accessibility Section{#accessibility}
 
-### 3.7.1 Aria Required
+#### 3.7.1 Aria Required
 
 In a text area widget, when **Aria required** is set to **Yes** then assistive technologies will read out the field that is required. When set to **No** then assistive technologies will not read the field out.
 

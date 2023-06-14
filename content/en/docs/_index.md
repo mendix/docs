@@ -13,5 +13,7 @@ aliases:
     - /search/
 cascade:
     - no_list: true
-#for future ease of maintenance, the tab contents might have to be split up into snippets
+# Main layout template for landing page: docs/layouts/landingpage/landingpage.html
+# Other parts are in partials/landingpage
+# Root index.html file calls docs/content/en/docs/_index.md content
 ---

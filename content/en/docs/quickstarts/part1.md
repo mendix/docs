@@ -5,8 +5,8 @@ weight: 10
 description: "Learn the basics of making an app in a Responsive Web profile."
 tags: ["hello world", "microflows", "widgets", "app", "nanoflow", "app development"]
 aliases:
-    - /refguide/quickstart-part2/
-    - /refguide9/quickstart-part2/
+    - /refguide/quickstart-part1/
+    - /refguide9/quickstart-part1/
 ---
 
 ## 1 Introduction 

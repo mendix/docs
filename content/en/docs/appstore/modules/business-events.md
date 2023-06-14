@@ -325,7 +325,7 @@ Technical Contacts with a license to the Mendix Event Broker can manage its feat
 
 See [Enabling the Mendix Event Broker Service](#enable-mx-event-broker) for more information.
 
-#### 5.2.2 Topics and Channels
+#### 5.2.2 Topics and Channels {#topics-channels}
 
 Events are placed in Channels, sometimes called Topics. Apps subscribed to a channel will receive events published to this channel.
 
@@ -379,11 +379,11 @@ If you are deploying an app to production that contains a published business eve
 ### 6.4 Apps Running in Mendix for Private Cloud (Bring Your Own Kafka)
 
 {{% alert color="info" %}}
-This deployment method is currently in Beta.{{% /alert %}}
+This deployment method is currently in [Beta](/releasenotes/beta-features/).{{% /alert %}}
 
-To deploy to a private cloud using your own Kafka cluster, you can use the `EventBrokerSpace` constant. This constant can be set to values like test, acceptance or production based on in which environment (or say namespace in Kubernetes) your Mendix app is running. Setting this constant means that each Business Event has its own Kafka topic for environment. The topic would be of the form businessevents.<channel>.<EventBrokerSpace>.
+To deploy to a private cloud using your own Kafka cluster, you can use the `EventBrokerSpace` constant. This constant can be set to values like test, acceptance or production based on in which environment (or say namespace in Kubernetes) your Mendix app is running. Setting this constant means that each Business Event has its own Kafka topic for the environment. The topic would be of the form businessevents.<channel>.<EventBrokerSpace>. For further explanation on topics and channels, see [Topics and Channels](#topics-channels) and the [Mendix Event Broker](#mendix-event-broker) section.
 
-You can also use the `EventBrokerSpace` constant locally to test the behavior.
+You can also use the `EventBrokerSpace` constant locally to test the behavior. See [Local Testing](#local-testing).
 
 ## 7 Local Testing {#local-testing}
 

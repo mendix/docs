@@ -1,6 +1,6 @@
 ---
 title: "Board"
-url: /developerportal/project-management/board/
+url: /developerportal/project-management/epics/board/
 weight: 10
 description: "Describes the **Board** page in the Project Management section. This page looks different, depending on if you are working in the Scrum workflow or Kanban workflow. "
 tags: ["Project Management", "Epics", "Sprint", "Board", "Stories", "Developer Portal"]

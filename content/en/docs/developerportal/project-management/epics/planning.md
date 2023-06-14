@@ -1,6 +1,6 @@
 ---
 title: "Planning"
-url: /developerportal/project-management/planning/
+url: /developerportal/project-management/epics/planning/
 weight: 20
 description: "Describes the **Planning** page in the Project Management section. This page looks different, depending on if you are working in the Scrum workflow or Kanban workflow."
 tags: ["Project Management", "Epics", "Sprint", "Planning", "Stories", Developer Portal"]

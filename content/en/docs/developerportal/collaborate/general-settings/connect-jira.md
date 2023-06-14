@@ -12,7 +12,7 @@ This feature is still in Public Beta.
 
 ## 1 Introduction
 
-If you manage projects in Jira, you can link your app in the Developer Portal to Jira. Once your app is connected to Jira, you have the option to associate your commit in Studio Pro to one or more stories created in Jira. 
+If you are a Scrum Master of a Mendix app, you can link your app to Jira if you manage your project there. Once your app is connected to Jira, you have the option to associate your commit in Studio Pro to one or more stories created in Jira. 
 
 ## 2 Features
 
@@ -34,6 +34,7 @@ As we further develop this feature, we may lift these limitations with future re
 
 ## 4 Prerequisites
 
+- You need to be a Scrum Master of your app in the Developer Portal.
 - You need to have an active subscription to Jira.
 - You need to have a project in Jira with a Scrum board or a Kanban board.
 - You need to have a user account and API token with administration rights to the project in Jira. For more information, see [Manage API tokens for your Atlassian account](https://support.atlassian.com/atlassian-account/docs/manage-api-tokens-for-your-atlassian-account/).
@@ -87,4 +88,4 @@ After your connection is activated, your app is connected to Jira. You can see t
     * You can find the query and sub-query in the board settings in Jira. Fore more information, see [Configure a company-managed board](https://support.atlassian.com/jira-software-cloud/docs/configure-a-company-managed-board/). 
     * If you want to exclude issues from the backlog in the Stories pane, consider removing the backlog statuses from the board’s column settings.
 
-* After you commit your changes in Studio Pro, you can find a button next to the revision in the [revision details](/developerportal/collaborate/team-server/revision-details). Clicking this button brings you to the associated user story in your Jira environment.
+* After you commit your changes in Studio Pro, you can see the associated Jira stories for the corresponding revision by clicking **View Linked Stories**.

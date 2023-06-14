@@ -31,6 +31,15 @@ Multiple constraints can be added to a single query, this is true for all querie
 
 This query retrieves all customers whose name is equal to Jansen and who live in Rotterdam:
 
+{{< tabpane lineNos=false >}}
+  {{< tab header="Studio Pro" lang="StudioPro" >}}
+    [Name='Jansen'][Sales.Customer_Address/Sales.Address/City = 'Rotterdam']
+    {{% /tab %}}
+  {{< tab header="Java" lang="JavaQuery" >}}
+    //Sales.Customer[Name='Jansen'][Sales.Customer_Address/Sales.Address/City = 'Rotterdam']
+    {{% /tab %}}
+{{< /tabpane >}}
+
 ```java {linenos=false}
 //Sales.Customer[Name = 'Jansen'][Sales.Customer_Address/Sales.Address/City = 'Rotterdam']
 ```

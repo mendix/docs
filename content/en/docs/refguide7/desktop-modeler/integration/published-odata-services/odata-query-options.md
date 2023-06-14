@@ -87,7 +87,7 @@ Filters can be combined with `and`, `or`, `not`, and `()`. For example: `?$filte
 
 ### 4.5 Arithmetic Operators
 
-The use of arithmetic operators such as "add", "sub", "mul", "div", and "mod" in filter expressions is not supported.
+The use of arithmetic operators such as `add`, `sub`, `mul`, `div`, and `mod` in filter expressions is not supported.
 
 ## 5 Sorting
 

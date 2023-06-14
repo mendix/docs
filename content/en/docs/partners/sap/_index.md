@@ -15,23 +15,23 @@ To find out how to deploy your app to SAP Business Technology Platform, see [SAP
 
 ## 2 Reference Documents in This Category
 
-* [OData Connector for SAP Solutions](/partners/sap/sap-odata-connector/) – describes the actions and domain model of the [OData Connector for SAP solutions](/partners/sap/use-sap-odata-connector/) 
-* [BAPI Connector for SAP Solutions](/partners/sap/sap-bapi-connector/) – describes the actions and domain model used when using this connector to integrate with SAP BAPI
+* [OData Connector for SAP Solutions](/appstore/connectors/sap/sap-odata-connector/) – describes the actions and domain model of the [OData Connector for SAP solutions](https://marketplace.mendix.com/link/component/74525) 
+* [BAPI Connector for SAP Solutions](/appstore/connectors/sap/sap-bapi-connector/) – describes the actions and domain model used when using this connector to integrate with SAP BAPI
 * [SAP Destination Service](/partners/sap/sap-destination-service/) – presents details on enabling your Mendix app running on SAP BTP to use external services and systems
 * [SAP Data Models](/partners/sap/sap-data-models/) – describes resources for consuming the SAP OData service
-* [XSUAA Connector for SAP Business Technology Platform](/partners/sap/sap-xsuaa-connector/) – presents background information on the [XSUAA Connector for SAP Business Technology Platform](/partners/sap/use-sap-xsuaa-connector/)
+* [XSUAA Connector for SAP Business Technology Platform](/appstore/connectors/sap/sap-xsuaa-connector/) – presents information on the [XSUAA Connector for SAP Business Technology Platform](https://marketplace.mendix.com/link/component/78091)
 * [Application Autoscaler for SAP Business Technology Platform](/partners/sap/sap-autoscaler/) – has information on binding and configuring the Application Autoscaler
 * [SAP Single Sign-On](/partners/sap/sap-single-sign-on/) – describes utilizing all the options of Mendix SSO as an SAP user
 * [SAP Fiori 3.0 Styling](/partners/sap/sap-fiori-3-0/) – summarizes the features of the Web UI Package for SAP Fiori theme module you can use to create an SAP Fiori-themed app
-* [SAP Cloud Connector](/partners/sap/sap-cloud-connector/) – describes using the connector so that a Mendix app deployed on SAP BTP can access any SAP system running on premises
+* [SAP Cloud Connector](/appstore/connectors/sap/sap-cloud-connector/) – describes using the connector so that a Mendix app deployed on SAP BTP can access any SAP system running on premises
 
 ## 3 How-to Documents in This Category
 
 The how-to's in this category will teach you to perform certain actions to integrate Mendix with SAP services like SAP Business Suite (SAP ERP 6.0), SAP S/4HANA, SAP S/4HANA Cloud, and SAP SuccessFactors, among others.
 
-* [Use the OData Connector for SAP Solutions](/partners/sap/use-sap-odata-connector/)
+* [OData Connector for SAP Solutions](/appstore/connectors/sap/sap-odata-connector/)
 * [Use the Model Creator for SAP Integrations](/partners/sap/use-sap-model-creator/)
-* [How to Use the XSUAA Connector for SAP Business Technology Platform](/partners/sap/use-sap-xsuaa-connector/)
+* [XSUAA Connector for SAP Business Technology Platform](/appstore/connectors/sap/sap-xsuaa-connector/)
 * [Use SAP Connectivity Services with REST and SOAP](/partners/sap/sap-destination-with-rest/)
 
 ## 4 Learning Path

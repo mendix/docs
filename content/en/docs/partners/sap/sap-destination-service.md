@@ -186,7 +186,7 @@ If you want to deploy locally, during development or testing for example, you wi
 
 When you use OData Connector for SAP solutions actions, you often have to provide a string containing a URL or query. Without Destination Services this needs to contain the SERVICEROOT, that is: the endpoint of the service being consumed.
 
-With the SAP Destination Service, you should not provide the SERVICEROOT. You should start the query with a slash and the COLLECTIONNAME. Note that you will also need to start the query with the COLLECTIONNAME in the case where the URL is obtained from the object metadata or *Deferred* attribute. See [OData Connector for SAP Solutions](/partners/sap/sap-odata-connector/) for more details.
+With the SAP Destination Service, you should not provide the SERVICEROOT. You should start the query with a slash and the COLLECTIONNAME. Note that you will also need to start the query with the COLLECTIONNAME in the case where the URL is obtained from the object metadata or *Deferred* attribute. See [OData Connector for SAP Solutions](/appstore/connectors/sap/sap-odata-connector/) for more details.
 
 ## 7 Troubleshooting
 
@@ -206,5 +206,5 @@ Ensure that the user accessing the Mendix App has the required level of access o
 
 ## 8 Read More
 
-* [OData Connector for SAP Solutions](/partners/sap/sap-odata-connector/)
-* [XSUAA Connector for SAP Business Technology Platform](/partners/sap/sap-xsuaa-connector/)
+* [OData Connector for SAP Solutions](/appstore/connectors/sap/sap-odata-connector/)
+* [XSUAA Connector for SAP Business Technology Platform](/appstore/connectors/sap/sap-xsuaa-connector/)

@@ -862,7 +862,7 @@ This domain model is part of the OData Connector for SAP solutions module and ca
 * [Data Types](/refguide/data-types/)
 * [Domain Model](/refguide/domain-model/)
 * [Entities](/refguide/entities/)
-* [SAP Cloud Connector](/partners/sap/sap-cloud-connector/)
+* [SAP Cloud Connector](/appstore/connectors/sap/sap-cloud-connector/)
 * [SAP Help Portal](https://help.sap.com)
 * [SAP Data Models](/partners/sap/sap-data-models/)
 * [OData Query Options](/refguide/odata-query-options/)

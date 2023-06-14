@@ -40,7 +40,7 @@ For information on the current status of deployment to SAP BTP and any planned r
 
 #### BAPI Connector
 
-* We added the new BAPI Connector for SAP solutions, which allows Mendix apps to integrate using the SAP Business API (SAP BAPI) available with SAP Business Suite, SAP S/4HANA, and SAP S/4HANA Cloud. For more information, see [BAPI Connector for SAP Solutions](/partners/sap/sap-bapi-connector/).
+* We added the new BAPI Connector for SAP solutions, which allows Mendix apps to integrate using the SAP Business API (SAP BAPI) available with SAP Business Suite, SAP S/4HANA, and SAP S/4HANA Cloud. For more information, see [BAPI Connector for SAP Solutions](/appstore/connectors/sap/sap-bapi-connector/).
 
 ## 2021
 
@@ -48,7 +48,7 @@ For information on the current status of deployment to SAP BTP and any planned r
 
 #### Improvements
 
-* We added a configurator to help you create a custom *xs-security-json* file to configure an XSUAA service. For more information, see [XSUAA Connector for SAP Business Technology Platform](/partners/sap/sap-xsuaa-connector/).
+* We added a configurator to help you create a custom *xs-security-json* file to configure an XSUAA service. For more information, see [XSUAA Connector for SAP Business Technology Platform](/appstore/connectors/sap/sap-xsuaa-connector/).
 
 ### October 14th, 2021
 
@@ -72,7 +72,7 @@ For information on the current status of deployment to SAP BTP and any planned r
 
 #### Improvements
 
-* We released version 2.1.1 of the [XSUAA Connector for SAP Business Technology Platform](/partners/sap/sap-xsuaa-connector/).
+* We released version 2.1.1 of the [XSUAA Connector for SAP Business Technology Platform](/appstore/connectors/sap/sap-xsuaa-connector/).
 
     {{% alert color="info" %}}This version uses a new user administration module called **SapAuthentication** and customers using *XSUAA Connector for SAP Business Technology Platform* version 2.0.0 or below will need to migrate their existing users from **Administration.Account** to **SapAuthentication.SapUser** using the [User Migration](/appstore/modules/user-migration-module/) Marketplace module.{{% /alert %}}
 
@@ -86,7 +86,7 @@ For information on the current status of deployment to SAP BTP and any planned r
 
 #### Improvements
 
-* We released a new version of the [OData Model Creator for SAP Solutions](/partners/sap/use-sap-model-creator/) and [OData Connector for SAP Solutions](/partners/sap/sap-odata-connector/) which support read-only access to SAP OData Gateway Services which use OData version 4. This is in addition to the existing support for OData versions 2 and 3.
+* We released a new version of the [OData Model Creator for SAP Solutions](/partners/sap/use-sap-model-creator/) and [OData Connector for SAP Solutions](/appstore/connectors/sap/sap-odata-connector/) which support read-only access to SAP OData Gateway Services which use OData version 4. This is in addition to the existing support for OData versions 2 and 3.
 
 #### Fix
 

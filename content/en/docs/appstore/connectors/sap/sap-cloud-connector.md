@@ -38,6 +38,5 @@ When the XSUAA Connector for SAP Business Technology Platform and Cloud Connecto
 
 ## 4 Read More
 
-* [XSUAA Connector for SAP Business Technology Platform](/partners/sap/sap-xsuaa-connector/)
-* [How to Use the XSUAA Connector for SAP Business Technology Platform](/partners/sap/use-sap-xsuaa-connector/)
-* [How to Use the OData Connector for SAP Solutions](/partners/sap/use-sap-odata-connector/)
+* [XSUAA Connector for SAP Business Technology Platform](/appstore/connectors/sap/sap-xsuaa-connector/)
+* [OData Connector for SAP Solutions](/appstore/connectors/sap/sap-odata-connector/)

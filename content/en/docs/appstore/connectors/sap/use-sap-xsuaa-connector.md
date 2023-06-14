@@ -244,5 +244,5 @@ You can picture the authentication as shown below:
 * [How to Create a Secure App](/howto/security/create-a-secure-app/)
 * [How to Use Marketplace Content in Studio Pro](/appstore/general/app-store-content/)
 * [App Security](/refguide/app-security/)
-* [XSUAA Connector for SAP Business Technology Platform](/partners/sap/sap-xsuaa-connector/) (documentation)
+* [XSUAA Connector for SAP Business Technology Platform](/appstore/connectors/sap/sap-xsuaa-connector/) (documentation)
 * [SAP Business Technology Platform cockpit](https://account.hana.ondemand.com/cockpit#/home/allaccounts)

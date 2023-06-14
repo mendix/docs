@@ -41,6 +41,11 @@ The following file storage options are supported:
 * Amazon S3
 * Minio
 
+{{% alert color="warning" %}}
+The data transfer tool only supports static authentication.
+If the database or file storage relies on Kubernetes Service Accounts for authentication, or uses CSI Secrets Storage to store credentials, the data transfer tool will fail to authenticate.
+{{% /alert %}}
+
 ### 2.2 Environment Requirements
 
 The data transfer tool needs the following:

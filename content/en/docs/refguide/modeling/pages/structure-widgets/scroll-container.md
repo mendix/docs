@@ -30,7 +30,7 @@ The properties pane is divided into two major sections by a toggle at the top of
 Properties:
 * [General](#general)
 * [Common](#common)
-* [Regions](#regions)
+* [Regions](#region)
 
 Styling:
 * [Design Properties](#design-properties)
@@ -87,7 +87,7 @@ Default: *Center*
 
 {{% snippet file="/static/_includes/refguide/common-section-link.md" %}}
 
-### 3.3 Regions Section {#regions}
+### 3.3 Regions Section {#region}
 
 {{% alert color="info" %}}Regions are not supported on native mobile pages.{{% /alert %}}
 
@@ -125,7 +125,7 @@ Determines whether the scroll container should contain a right region.
 
 ## 5 Miscellaneous
 
-## 5.1 Scroll Container Region Section {#scroll-container-region}
+### 5.1 Scroll Container Region Section {#scroll-container-region}
 
 A scroll container region is part of a scroll container, and defines a content area. A scroll container can contain the following regions:
 

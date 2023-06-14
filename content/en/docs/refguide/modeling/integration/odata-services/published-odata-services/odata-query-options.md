@@ -113,7 +113,7 @@ Filtering on an associated object or list in this way is possible when you [expo
 
 ### 4.6 Arithmetic Operators
 
-The use of arithmetic operators such as "add", "sub", "mul", "div", and "mod" in filter expressions is not supported.
+The use of arithmetic operators such as `add`, `sub`, `mul`, `div`, and `mod` in filter expressions is not supported.
 
 ## 5 Sorting
 

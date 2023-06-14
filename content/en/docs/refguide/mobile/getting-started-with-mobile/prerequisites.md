@@ -16,6 +16,12 @@ While developing Mendix apps, you will need to test and iterate to make the best
 * The [Getting the Make It Native App](#get-min-app) section explains how to download the Make It Native App, which you can use to test your apps using a simple QR code
 * The [Troubleshooting Common Mobile Issues](#troubleshooting) section explains port forwarding, WiFi settings, and other common troubleshooting issues
 
+{{% alert color="warning" %}}
+Please note that instructions in this document reference Mendix 9 technologies. When using Mx10 Beta 1 or Beta 2, please use the Make it Native 9 app while testing.
+
+After the Make It Native 10 app is published in app stores, this document will be rewritten to describe testing Mx10 apps.
+{{% /alert %}}
+
 ## 2 Getting the Make It Native App {#get-min-app}
 
 The Make It Native app allows developers to preview, test, and debug native mobile apps in conjunction with Mendix Studio Pro. Use the **Make It Native 9 app** for Studio Pro v9.24.0 and above.
@@ -93,6 +99,10 @@ If your company has strict network policies which do not allow you to open the p
     adb reverse tcp:8080 tcp:8080
     adb reverse tcp:8083 tcp:8083
     ```
+
+### 3.1.6 Use Make It Native 9 with an Older Version of Mendix 9 {#use-MIN-older}
+
+The latest version of Make It Native 9 is only compatible with versions of Mendix 9.24.0 and above. To develop with older versions of Mendix 9, you can create a custom developer app by following [this guide](/refguide/mobile/distributing-mobile-apps/building-native-apps/how-to-devapps/). Note that a custom developer app can be used to develop multiple older Mendix apps as long as no custom dependencies are introduced.
 
 ### 3.2 Configure Parallels
 

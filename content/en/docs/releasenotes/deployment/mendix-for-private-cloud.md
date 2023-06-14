@@ -17,7 +17,7 @@ For information on the current status of deployment to Mendix for Private Cloud 
 
 #### Private Cloud License Manager
 
-* We have introduced [Private Cloud License Manager](/developerportal/deploy/private-cloud-license-manager/) which provides a repository of offline Mendix licenses. You can use Private Cloud License Manager to manage these licenses centrally, and to automatically configure the licenses for the Mendix Operator and its Runtime.
+* We have introduced [Private Cloud License Manager](/developerportal/deploy/private-cloud/private-cloud-license-manager/) which provides a repository of offline Mendix licenses. You can use Private Cloud License Manager to manage these licenses centrally, and to automatically configure the licenses for the Mendix Operator and its Runtime.
 
 {{% alert color="info" %}}
 This feature is currently in a Beta release. For more information on what Beta release means, see [Beta Releases](/releasenotes/beta-features/).

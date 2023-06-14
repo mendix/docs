@@ -132,7 +132,7 @@ In this example scenario, you need to do the following:
 * [Test Microflows Using the Unit Testing Module](/howto8/testing/testing-microflows-using-the-unittesting-module/)
 * [Find the Root Cause of Runtime Errors](/howto8/monitoring-troubleshooting/finding-the-root-cause-of-runtime-errors/)
 * [Clear Warning Messages in Mendix](/howto8/monitoring-troubleshooting/clear-warning-messages/)
-* [Test Web Services Using SoapUI](/howto8/testing/testing-web-services-using-soapui/)
+* [Test Web Services Using SoapUI](/howto8/integration/testing-web-services-using-soapui/)
 * [Monitor Mendix Using JMX](/howto8/monitoring-troubleshooting/monitoring-mendix-using-jmx/)
 
 Learn more about this topic using the following helpful link:

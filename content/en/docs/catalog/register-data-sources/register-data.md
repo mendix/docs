@@ -6,9 +6,8 @@ description: "Describes how to register OData resources in the Catalog: through 
 weight: 10
 tags: ["data hub catalog", "data hub", "external entities", "register", "published OData service" ,"how to", "registration"]
 aliases:
-    - /data-hub/data-hub-catalog/register.html
     - /data-hub/data-hub-catalog/register/
-	- /data-hub/data-hub-catalog/register-data/
+    - /data-hub/data-hub-catalog/register-data/
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details. 
 #The anchor registration-form below is mapped, so it should not be removed or changed.
 ---

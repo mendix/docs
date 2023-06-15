@@ -1,6 +1,6 @@
 ---
 title: "Webhooks API"
-url: /apidocs-mxsdk/apidocs/webhooks/
+url: /apidocs-mxsdk/apidocs/webhooks-api/
 type: swagger
 category: "API Documentation"
 weight: 97

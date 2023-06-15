@@ -8,6 +8,7 @@ description_list: true
 tags: ["data hub", "data hub catalog"]
 aliases:
     - /data-hub/data-hub-catalog/
+    - /data-hub/
 ---
 
 ## 1 Introduction

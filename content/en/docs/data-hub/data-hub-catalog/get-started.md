@@ -1,5 +1,5 @@
 ---
-title: "Catalog Quickstart"
+title: "Get Started with the Catalog"
 url: /data-hub/data-hub-catalog/get-started/
 category: "Data Hub Catalog"
 linktitle: "Catalog Quickstart"

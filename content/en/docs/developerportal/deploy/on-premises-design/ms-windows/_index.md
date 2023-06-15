@@ -123,7 +123,7 @@ To deploy a Mendix app using the Mendix Service Console, follow these steps:
 
 10. Click **Finish** and start the application.
 
-## 5 Configuring the Microsoft Internet Information Services Server
+## 5 Configuring the Microsoft Internet Information Services Server{#configure-msiis}
 
 To configure the MS IIS server, follow the steps in the sections below.
 

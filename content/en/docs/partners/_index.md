@@ -7,7 +7,7 @@ no_list: false
 description_list: true
 cascade:
     - space: "Strategic Partners Guide"
-    - mendix_version: ""
+    - mendix_version: 10
 tags: ["strategic partners", "aws", "sap", "siemens"]
 #This document is mapped to the landing page, update the link there if renaming or moving the doc file.
 ---

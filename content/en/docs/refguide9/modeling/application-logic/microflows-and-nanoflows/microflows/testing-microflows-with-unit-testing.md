@@ -64,9 +64,9 @@ To set up the unit testing module and run the example tests, follow these steps:
 
     You can use this page to execute unit tests, or to reset the test status back to not executed. Use the left-side navigation pane to select a module that contains unit tests. In this scenario, **UnitTesting** is the only module that contains unit tests. 
 
-15. Ensure that the **Rollback microflow tests after execution** check box is selected.
+15. Ensure that the **Rollback microflow tests after execution** checkbox is selected.
 
-    {{% alert color="warning" %}}If the check box is cleared, all changes made by the microflows that you test are saved to the database. This can result in populating the database with unwanted test data. As a best practice, do not clear the check box unless it is required by your specific use case.{{% /alert %}}
+    {{% alert color="warning" %}}If the checkbox is cleared, all changes made by the microflows that you test are saved to the database. This can result in populating the database with unwanted test data. As a best practice, do not clear the checkbox unless it is required by your specific use case.{{% /alert %}}
 
 16. Validate that the Unit Testing module is correctly set up by running the **UnitTesting.Test_ValidUnitTest** test. 
 
@@ -166,7 +166,7 @@ To create a sample test microflow, follow these steps:
     * **Argument** –*$NewEmployee/Level = MyFirstModule.Level.Medior*
 18. Run the app locally and view it. 
 19. In the left-side navigation pane, click **UnitTestOverview > MyFirstModule**.
-20. Verify that the **Rollback microflow tests after execution** check box is selected.
+20. Verify that the **Rollback microflow tests after execution** checkbox is selected.
 21. Click **Run all module tests** and verify that all the test cases pass.
 
 ## 5 Read More

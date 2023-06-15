@@ -116,7 +116,7 @@ When this identifier is not set for the environment where your app is deployed (
 
 ### 5.1 Use HTTP Authentication
 
-The **Use HTTP authentication** check box defines whether basic authentication (username and password) should be used.
+The **Use HTTP authentication** checkbox defines whether basic authentication (username and password) should be used.
 
 ### 5.2 User Name
 
@@ -202,7 +202,7 @@ These are the options in the drop-down menu for handling the response:
 
 * **Apply import mapping** – if the response is JSON or XML, it can be transformed directly into objects using an [import mapping](/refguide9/import-mappings/); the fields that you can choose here are described in the [Import Mapping action](/refguide9/import-mapping-action/)
 * **Store in an HTTP response** – any successful HTTP response can be stored directly in an [HttpResponse](/refguide9/http-request-and-response-entities/#http-response) object, and the [$latestHttpResponse](#latesthttpresponse) variable is also updated
-* **Store in a file document** – if the response contains binary content (for example, a PDF), it can be stored in an object of an entity type which inherits from `System.FileDocument` (see [Images and Files with REST](/refguide9/send-receive-files-rest/)) for detailed information working with files with REST)
+* **Store in a file document** – if the response contains binary content (for example, a PDF), it can be stored in an object of an entity type which inherits from `System.FileDocument` (see [Images and Files with REST](/refguide9/send-receive-files-rest/) for detailed information working with files with REST)
 * **Store in a string** – if the response is a string (for example, CSV), it can be stored directly in a string variable
 * **Do not store in a variable** - use this option when the call does not return anything useful
 

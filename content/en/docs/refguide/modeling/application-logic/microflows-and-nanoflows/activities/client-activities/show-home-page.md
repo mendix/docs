@@ -33,7 +33,7 @@ The **Show home page** activity properties consists of the following sections:
 
 * [Common](#common)
 
-    {{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/client-activities/show-home-page/show-home-page-properties.png" alt="Show Home Page Properties"   width="300"  >}}
+{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/client-activities/show-home-page/show-home-page-properties.png" alt="Show Home Page Properties"   width="300"  >}}
 
 ## 3 Action Section {#action}
 

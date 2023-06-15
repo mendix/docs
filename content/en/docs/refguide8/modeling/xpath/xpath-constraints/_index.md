@@ -10,7 +10,7 @@ tags: ["studio pro"]
 
 ## 1 Introduction
 
-A constraint can be added to any Xpath query to filter the data retrieved. It should always take the form of a valid [expression](/refguide8/xpath-expressions/). This should consist of one or more variables combined with [operators](/refguide8/xpath-operators/), [functions](/refguide8/xpath-constraint-functions/), [keywords or system variables](/refguide8/xpath-keywords-and-system-variables/).
+A constraint can be added to any XPath query to filter the data retrieved. It should always take the form of a valid [expression](/refguide8/xpath-expressions/). This should consist of one or more variables combined with [operators](/refguide8/xpath-operators/), [functions](/refguide8/xpath-constraint-functions/), [keywords or system variables](/refguide8/xpath-keywords-and-system-variables/).
 
 For example, this query retrieves all customers whose name is equal to Jansen:
 

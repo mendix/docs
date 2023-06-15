@@ -17,7 +17,7 @@ The ability to send attributes using this activity was introduced in Studio Pro 
 
 ## 2 Using the **Send external object** Activity
 
-Use this activity with [updatable exernal entities](#updatable-entities) to send objects that have been first retrieved and then changed, or with [creatable external entities](#creatable-entities) to send newly created objects.
+Use this activity with [updatable external entities](#updatable-entities) to send objects that have been first retrieved and then changed, or with [creatable external entities](#creatable-entities) to send newly created objects.
 
 ### 2.1 Updatable External Entities {#updatable-entities}
 

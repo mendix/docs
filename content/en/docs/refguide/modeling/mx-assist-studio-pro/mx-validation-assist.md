@@ -30,7 +30,7 @@ The Validation Assist is activated by default in the page elements where data va
     * **Text box**
     * **Text area**
     * **Drop-down**
-    * **Check box**
+    * **Checkbox**
     * **Radio button**
     * **Date picker**
     * **Reference selector**
@@ -126,6 +126,6 @@ You can now  click the **Play** button in the Studio Pro top bar to run your app
 
 ## 4 Read More 
 
-* [MxAssist Performance Bot](/refguide/mx-assist-performance-bot/)
+* [MxAssist Best Practice Bot](/refguide/mx-assist-performance-bot/)
 * [MxAssist Logic Bot](/refguide/mx-assist-logic-bot/)
 * [Validation Rules](/refguide/validation-rules/)     

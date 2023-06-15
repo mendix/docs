@@ -71,6 +71,7 @@ The following custom settings can be configured:
 | <a id="TrackWebServiceUserLastLogin" href="#TrackWebServiceUserLastLogin">TrackWebServiceUserLastLogin</a> | Defines whether to update the web service user's `LastLogin` field on each login. When this happens a database update query has to be sent and this can have performance consequences on heavy load systems. When this setting is set to false, no database interaction is necessary. | true |
 | <a id="UploadedFilesPath" href="#UploadedFilesPath">UploadedFilesPath</a> | The location of the uploaded files. A valid path can be: `\\FileServer\CustomerPortalFiles`. | [deployment folder]\data\files |
 | <a id="EnableFileDocumentCaching" href="#EnableFileDocumentCaching">EnableFileDocumentCaching</a> | Defines whether file documents should be cached. Only enable this if you are sure that the file documents will not contain sensitive information. Images are always cached. | false |
+| <a id="ObjectManagementStrictChangeBehavior" href="#ObjectManagementStrictChangeBehavior">ObjectManagement.<wbr>StrictChangeBehavior</a> | Defines the behavior when changing values of Enums and Calculated attributes.<br/>When set to true, setting an invalid value for an Enum attribute and/or setting a value for a Calculated attribute will result in an InvalidEnumerationValueException and/or ReadOnlyAttributeException respectively.<br/>When set to false, changes to the values of Enums and/or Calculated attributes will be allowed.<br/>We plan to remove this setting in Mendix version 11, after which, an exception will always be raised when setting an invalid value. | true |
 
 ## 3 Log File Settings
 
@@ -82,7 +83,7 @@ The settings below influence the behavior of the log files. These settings can o
 | <a id="MaxLogFileSize" href="#MaxLogFileSize">MaxLogFileSize</a> | The maximum size per log file. When the log file reaches this maximum size, the log file will be backed up and a new empty log file will be used. | 2097152 (2 MB) |
 | <a id="MaxLogFileCount" href="#MaxLogFileCount">MaxLogFileCount</a> | The maximum count of log files preserved (actual file plus back-up files). When the maximum count is reached, the oldest backup file will be removed. | 10 |
 
-## 4 Database Settings
+## 4 Database Settings {#database-settings}
 
 ### 4.1 Common Settings
 
@@ -92,10 +93,10 @@ The settings below influence the behavior of the log files. These settings can o
 | <a id="DatabaseType" href="#DatabaseType">DatabaseType</a> | Defines the database engine which is used as the Mendix database. Valid values are `HSQLDB`, `MYSQL`, `ORACLE`, `POSTGRESQL`, `SAPHANA`, and `SQLSERVER`. | |
 | <a id="DatabaseUserName" href="#DatabaseUserName">DatabaseUserName</a> | Name required for authentication to the database. | |
 | <a id="DatabasePassword" href="#DatabasePassword">DatabasePassword</a> | Password for the `DatabaseUserName` supplied above. | |
-| <a id="DatabaseHost" href="#DatabaseHost">DatabaseHost</a> | The host name and optionally the TCP port number of the database. Use a colon (`:`) as separator between the host name and port number. Possible values are: `db.url.org`, `db.url.org:1521`, `10.0.0.5`,  and`10.0.0.5:1433`\. It is possible to use a plain IPv6 address by enclosing it in brackets (for example, `[::1]:5432`).<br/>This will be overridden if you supply `DatabaseJdbcUrl`. | |
-| <a id="DatabaseName" href="#DatabaseName">DatabaseName</a> | The name of the database or schema used by the Mendix app <br/>This will be overridden if you supply **DatabaseJdbcUrl**. | |
+| <a id="DatabaseHost" href="#DatabaseHost">DatabaseHost</a> | The host name and optionally the TCP port number of the database. Use a colon (`:`) as separator between the host name and port number. Possible values are: `db.url.org`, `db.url.org:1521`, `10.0.0.5`,  and`10.0.0.5:1433`\. It is possible to use a plain IPv6 address by enclosing it in brackets (for example, `[::1]:5432`).<br/>This will be overridden if you supply [DatabaseJdbcUrl](#DatabaseJdbcUrl). | |
+| <a id="DatabaseName" href="#DatabaseName">DatabaseName</a> | The name of the database or schema used by the Mendix app <br/>This will be overridden if you supply [DatabaseJdbcUrl](#DatabaseJdbcUrl). | |
 | <a id="DatabaseJdbcUrl" href="#DatabaseJdbcUrl">DatabaseJdbcUrl</a> | Defines the JDBC URL to use for the database connection (which overrides the other database connection settings). |   |
-| <a id="DatabaseUseSsl" href="#DatabaseUseSsl">DatabaseUseSsl</a> | For PostgreSQL databases, defines whether the connection will be made using SSL without certificate validation. If you need certificate validation, use **DatabaseJdbcUrl** instead. | false |
+| <a id="DatabaseUseSsl" href="#DatabaseUseSsl">DatabaseUseSsl</a> | When `true`, the connection will be made using SSL without certificate validation. If you need certificate validation, use [DatabaseJdbcUrl](#DatabaseJdbcUrl) instead.<br />When `false`, the connection will be made without SSL (this is only relevant for SQL Server, which uses SSL by default). | |
 | <a id="DatabaseUseIntegratedSecurity" href="#DatabaseUseIntegratedSecurity">DatabaseUseIntegratedSecurity</a> | This setting defines whether integrated security will be used to authenticate to SQL Server. If true, user name and password will not be used.<br />Ensure that the proper domain user for accessing the SQL Server is authenticated on the runtime server using the `kinit` command. | false |
 | <a id="LogMinDurationQuery" href="#LogMinDurationQuery">LogMinDurationQuery</a> | Defines whether database queries are logged via the `ConnectionBus_Queries` log node if they finished after the number of milliseconds specified here. By default, only the relevant SQL query will be logged. Set the log level of the `ConnectionBus_Queries` log node to `TRACE` to show more information about the page or the microflow which leads to this query. |   |
 | <a id="OracleServiceName" href="#OracleServiceName">OracleServiceName</a> | Defines the `SERVICE_NAME` when you have a connection with an Oracle DBMS. |   |
@@ -134,7 +135,7 @@ Before the data copying process starts, the main database structure will be gene
 | <a id="SourceDatabasePassword" href="#SourceDatabasePassword">SourceDatabasePassword</a> | The password for the connection to the source database. |   |
 | <a id="SourceDatabaseType" href="#SourceDatabaseType">SourceDatabaseType</a> | The type of the source database. Possible values: `HSQLDB`, `MYSQL`, `ORACLE`, `POSTGRESQL`, `SAPHANA`, or `SQLSERVER`. |   |
 | <a id="SourceDatabaseUseIntegratedSecurity" href="#SourceDatabaseUseIntegratedSecurity">SourceDatabaseUseIntegratedSecurity</a> | This setting defines whether integrated security will be used to authenticate to SQL Server. If true, user name and password will not be used. See [DatabaseUseIntegratedSecurity](#DatabaseUseIntegratedSecurity) for more information. | false |
-| <a id="SourceDatabaseUseSsl" href="#SourceDatabaseUseSsl">SourceDatabaseUseSsl</a> | For PostgreSQL databases, defines whether the connection to the source database will be made using SSL. | false |
+| <a id="SourceDatabaseUseSsl" href="#SourceDatabaseUseSsl">SourceDatabaseUseSsl</a> |  When `true`, the connection to the source database will be made using SSL without certificate validation. If you need certificate validation, use [SourceDatabaseJdbcUrl](#SourceDatabaseJdbcUrl) instead.<br />When `false`, the connection to the source database will be made without SSL (this is only relevant for SQL Server, which uses SSL by default). | |
 | <a id="SourceDatabaseUserName" href="#SourceDatabaseUserName">SourceDatabaseUserName</a> | The user name for the connection to the source database. |   |
 | <a id="SourceOracleServiceName" href="#SourceOracleServiceName">SourceOracleServiceName</a> | Defines the `SERVICE_NAME` when you have a connection with an Oracle DBMS as source. |   |
 

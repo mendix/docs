@@ -60,8 +60,8 @@ Indexes is a topic with a long history of best practices from the database world
 ## 4 Microflow Best Practices {#microflow-community-best-practices}
 
 * Minimize the work in loops:
-    * Do commits after the loop in a list commit. 
-    * If needed, create a list named `<Entity>_CommitList` before the loop and collect the items to be committed there.
+    * Do commits and deletes after the loop in a list commit. 
+        * If needed, create a list named `<Entity>_CommitList` (or `<Entity>_DeleteList`) before the loop and collect the items to be committed (or deleted) there. 
     * For retrieves in a loop, consider retrieving all the data before the loop, and do finds on that list inside the loop.
     * If loops contain decisions, consider if the decision logic can be a query before the loop to minimize iterations.
 * Prevent unnecessary retrieves if objects or lists can be passed as parameters.
@@ -110,8 +110,8 @@ For OQL, many of the same best practices apply as for XPath.
 * Validating against schema slows down the processing.
 * Using sub-transactions for microflows slows down processing.
 
-## 11 MxAssist Performance Bot
+## 11 MxAssist Best Practice Bot
 
-[MxAssist Performance Bot](/refguide/mx-assist-performance-bot/) can help you find potential improvements to your app for better performance. It can be accessed via **View** > **MxAssist Performance Bot**.
+[MxAssist Best Practice Bot](/refguide/mx-assist-performance-bot/) can help you find potential improvements to your app in general, such as performance, security, naming conventions, and so on. It can be accessed via **View** > **Best Practice Bot**.
 
-For more information on performance best practices, see [Performance Best Practices](/refguide/performance-best-practices/).
+For more information on best practices, see [Recommendations from MxAssist Best Practice Bot](/refguide/performance-best-practices/).

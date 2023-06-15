@@ -14,6 +14,10 @@ For more information on the Make It Native app, see [Getting the Make It Native 
 
 You can download the Make It Native app for [iOS](https://apps.apple.com/app/make-it-native/id1334081181) or [Android](/refguide9/getting-the-make-it-native-app/).
 
+{{% alert color="warning" %}}
+In Studio Pro [9.18](/releasenotes/studio-pro/9.18/), scanning your Mendix app's QR Code to launch it in the Make It Native or a custom developer app on iOS does not work. Please type in the URL instead or migrate your app to the latest version of Studio Pro 9.24.
+{{% /alert %}}
+
 ## Android 2.0.0 / iOS 2.0.0
 
 **Release date: 28th March 2023**

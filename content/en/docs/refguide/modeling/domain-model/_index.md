@@ -65,4 +65,4 @@ The entity 'Order' is stored in the table 'module$order' which is shown below. I
 
 ## 3 Read More
 
-* [Creating a Basic Data Layer](/refguide/create-a-basic-data-layer/)
+* [Configuring a Domain Model](/refguide/configuring-a-domain-model/)

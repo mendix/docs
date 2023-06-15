@@ -8,7 +8,7 @@ tags: ["studio pro", "find advanced", "find usages", "find", "edit menu"]
 
 ## 1 Introduction
 
-You can search for changes or usages of different elements, documents, Xpaths, changes to various elements, in your app.  You do it via **Find**, **Find Advanced**, and **Find Usages** options under the **Edit** menu. 
+You can search for changes or usages of different elements, documents, XPaths, changes to various elements, in your app.  You do it via **Find**, **Find Advanced**, and **Find Usages** options under the **Edit** menu. 
 
 {{< figure src="/attachments/refguide/modeling/menus/edit-menu/find-and-find-advanced/find-options.jpg" alt="Find Options" >}}
 

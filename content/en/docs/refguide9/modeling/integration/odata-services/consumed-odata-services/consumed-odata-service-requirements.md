@@ -117,4 +117,3 @@ When you publish a self-referencing association, you can only publish one side o
 ### 3.6 Enumerations
 
 Enumeration types that have one or more members with a name that is not a valid [enumeration value name](/refguide9/enumerations/#312-name) are not supported.
-

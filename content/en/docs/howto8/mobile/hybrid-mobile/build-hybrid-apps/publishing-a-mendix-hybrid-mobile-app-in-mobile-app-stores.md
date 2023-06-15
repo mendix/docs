@@ -59,7 +59,7 @@ To start the packaging process, follow these steps:
 5. On the **App Info** tab set up the following settings for your app:</br>
     1. Fill in the name that your app will have in the app stores and on the device. The **Name** should correspond to the name set up in your Apple certificate.</br>
     1. Set the unique **App Identifier** for your app. The **App Identifier** should correspond to the ones set up in your Apple certificate.</br>
-    1. If your app does not employ push notifications, disable the **Push Notifications** permission by clearing its check box.
+    1. If your app does not employ push notifications, disable the **Push Notifications** permission by clearing its checkbox.
 
 6. Select the platforms that you want to support.
 7. Optionally, upload custom-branded app icons and splash screens under the tabs for the different platforms. You can find those tabs next to the **App Info** tab.
@@ -174,7 +174,7 @@ Publish your app by following Apple's [Overview of publishing an app](https://he
 
 ## 7 Preparing and Publishing for Android{#publishing-for-android}
 
-If you plan on publishing an Android app, read Google's overview of [the Android app publishing process](http://developer.android.com/tools/publishing/publishing_overview.html). Before submitting your app to an app store, [review the launch checklist](http://developer.android.com/distribute/tools/launch-checklist.html). Google provides information on [publishing your app in the Google Play Store](https://developer.android.com/studio8/publish).
+If you plan on publishing an Android app, read Google's overview of [the Android app publishing process](http://developer.android.com/tools/publishing/publishing_overview.html). Before submitting your app to an app store, [review the launch checklist](http://developer.android.com/distribute/tools/launch-checklist.html).
 
 If you are just testing your app, you do not need to create a keystore. You can continue with the next section [Enabling your Mobile Test Device for an Android Binary (APK)](#download-apk) below. 
 
@@ -188,7 +188,7 @@ After you create your build you can download the resulting APK using a download 
 2. Open **Apps and notifications,** or on a Samsung Galaxy **Biometrics and Security**.
 3. Tap **Install unknown apps** (on certain devices you may have to tap **Special access** first).
 4. Select the browser you wish to use when downloading APK files.
-5. Enable the **Allow from this source** switch or check box.
+5. Enable the **Allow from this source** switch or checkbox.
 6. Tap the **OK** button if prompted.
 
 ### 7.2 Installing Your APK
@@ -207,7 +207,7 @@ To install an APK file directly from your Android's **Download** folder:
 
 1. Tap the **Back** button to see your list of apps.
 2. Tap the file manager app you will use to install the APK file.
-3. Tap the **Allow** switch or check box.
+3. Tap the **Allow** switch or checkbox.
 4. Tap the **OK** button if prompted.
 
 #### 7.2.2 Option 2: Using a USB Cord

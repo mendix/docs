@@ -112,11 +112,11 @@ When this identifier is not set for the environment where your app is deployed (
 
 ## 5 HTTP Headers Tab {#http-headers}
 
-{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/integration-activities/call-rest-action/http-headers-tab.png" >}}
+{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/integration-activities/call-rest-action/http-headers-tab.png" width="400px" >}}
 
 ### 5.1 Use HTTP Authentication
 
-The **Use HTTP authentication** check box defines whether basic authentication (username and password) should be used.
+The **Use HTTP authentication** checkbox defines whether basic authentication (username and password) should be used.
 
 ### 5.2 User Name
 
@@ -136,7 +136,7 @@ REST endpoints which are using NGINX as a webserver will ['silently drop'](https
 
 ## 6 Request Tab {#request}
 
-{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/integration-activities/call-rest-action/request-tab.png" >}}
+{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/integration-activities/call-rest-action/request-tab.png" width="500px" >}}
 
 The sections below describe the options in the drop-down menu for generating the request.
 
@@ -194,7 +194,7 @@ See [String Template](#string-template), above, for more information on construc
 
 ## 7 Response Tab {#response}
 
-{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/integration-activities/call-rest-action/response-tab.png" >}}
+{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/integration-activities/call-rest-action/response-tab.png" width="500px" >}}
 
 ### 7.1 Response Handling
 

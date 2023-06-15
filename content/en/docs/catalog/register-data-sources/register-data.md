@@ -1,7 +1,7 @@
 ---
 title: "Register OData Resources in the Data Hub Catalog"
 linktitle: "Register OData Resources"
-url: /catalog/register-data-sources/register-data/
+url: /catalog/register/register-data/
 description: "Describes how to register OData resources in the Catalog: through the Mendix Cloud, using the Registration API, or in the UI form."
 weight: 10
 tags: ["data hub catalog", "data hub", "external entities", "register", "published OData service" ,"how to", "registration"]
@@ -319,7 +319,7 @@ Follow the steps below:
     2. **Sandbox**: the Mendix Free App environment, data is not of production quality.
     3. **Non-production**: hosting is paid for, but data is not of production quality.
 
-8. Select your **Authentication** method. See the [Authentication](#authentication) section below for supported types. Curators can also [add or change authentication methods](/catalog/manage-data-sources/curate/#authentication) later. 
+8. Select your **Authentication** method. See the [Authentication](#authentication) section below for supported types. Curators can also [add or change authentication methods](/catalog/manage/curate/#authentication) later. 
 9. Select the **Done!** option that appears once you have filled out all the required fields.
 
 Congratulations! Your OData service is registered in the Data Hub Catalog. 

@@ -40,11 +40,11 @@ For more information on how to add entities to your app, see [Adding an External
 
 ## 3 Searching the Data Hub Catalog {#search}
 
-As you enter a search term, all the items in the Data Hub Catalog satisfying the search string are listed in the search results. This includes words in the service, entity and attribute descriptions, which are not displayed in the **Data Hub** pane. For more information, see the [Selected Asset Details](/catalog/manage-data-sources/search/#search-details) section in *Search in the Data Hub Catalog*.
+As you enter a search term, all the items in the Data Hub Catalog satisfying the search string are listed in the search results. This includes words in the service, entity and attribute descriptions, which are not displayed in the **Data Hub** pane. For more information, see the [Selected Asset Details](/catalog/manage/search/#search-details) section in *Search in the Data Hub Catalog*.
 
 You can drag the entity from the search results into your domain model and it will be added to your app and displayed as an [external entity](/refguide9/external-entities/).
 
-{{% alert color="info" %}}Services that are set to **not-Discoverable** in the Catalog are not be included in the search results for *any* user including owners of the service. To consume entities from these services owners must ensure that they are [Discoverable](/catalog/manage-data-sources/curate/#discoverability).{{% /alert %}}
+{{% alert color="info" %}}Services that are set to **not-Discoverable** in the Catalog are not be included in the search results for *any* user including owners of the service. To consume entities from these services owners must ensure that they are [Discoverable](/catalog/manage/curate/#discoverability).{{% /alert %}}
 
 ### 3.1 Wildcard Search
 
@@ -81,7 +81,7 @@ The search results and **User in your App** section show the following informati
 
 * **Green check-mark** if the service or entity is consumed in the app. If you right-click a consumed service, you can do the following:
 
-    * **View in Data Hub Catalog** – click this to go to the [data source details](/catalog/manage-data-sources/search/#service-details) page in the Data Hub Catalog
+    * **View in Data Hub Catalog** – click this to go to the [data source details](/catalog/manage/search/#service-details) page in the Data Hub Catalog
     * **Go to connection settings** – click this to open the [consumed OData service](/refguide9/consumed-odata-service/) document
 
         {{< figure src="/attachments/refguide9/modeling/menus/view-menu/data-hub-pane/data-hub-pane-menu.png" alt="info on a Service" >}}
@@ -95,7 +95,7 @@ The search results and **User in your App** section show the following informati
 
     {{% alert color="info" %}}The version number that is shown for the OData service is the latest one that is available in the Data Hub Catalog at the service endpoint – in the example above, version 1.0.0 of **BikeVehicleService** is currently consumed in the app, but the contract that is available in the Catalog is different to the one currently consumed.{{% /alert %}}
 
-* **Information icon** allows you to view further details for the service and a link to go directly to the [Service Details](/catalog/manage-data-sources/search/#search-details) screen in the Data Hub Catalog:
+* **Information icon** allows you to view further details for the service and a link to go directly to the [Service Details](/catalog/manage/search/#search-details) screen in the Data Hub Catalog:
 
     {{< figure src="/attachments/refguide9/modeling/menus/view-menu/data-hub-pane/data-hub-pane-info.png" alt="Data Hub Pane Information" >}}
 

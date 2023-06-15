@@ -27,7 +27,7 @@ The Data Hub Curator role can see and edit metadata for all registered assets in
 To assign a Curator role to a Mendix user, click **Add Curator**. To search the list of Mendix users in your organization, start typing in the search box and check the user(s) you want to assign the Curator role to.
 
 {{% alert color="info" %}}
-A user with Curator rights can access all assets registered in the Data Hub Catalog. This also includes those that are set to **Non-discoverable** (for more information on discoverability, see the [Discoverability](/catalog/manage-data-sources/search/#discoverability-metadata) section in *How to Search in the Data Hub Catalog*). Curators can also change the metadata for assets that are owned by other users.
+A user with Curator rights can access all assets registered in the Data Hub Catalog. This also includes those that are set to **Non-discoverable** (for more information on discoverability, see the [Discoverability](/catalog/manage/search/#discoverability-metadata) section in *How to Search in the Data Hub Catalog*). Curators can also change the metadata for assets that are owned by other users.
 {{% /alert %}}
 
 If you want to remove the curator rights for a user, check the box next to the user and click **Remove Curator**.
@@ -38,7 +38,7 @@ This only removes the Curator rights of the user, it does not remove the user as
 
 ## 3 Owners {#custom-owners}
 
-Custom owners are owners that have been added as contacts for a registered app. They may be added during the app [curation](/catalog/manage-data-sources/curate/#discoverability-metadata), or they may have been specified during app registration. For more information, see the [Adding a Custom Owner](/catalog/manage-data-sources/curate/#discoverability-metadata) section of *How to Curate Registered Assets*.
+Custom owners are owners that have been added as contacts for a registered app. They may be added during the app [curation](/catalog/manage/curate/#discoverability-metadata), or they may have been specified during app registration. For more information, see the [Adding a Custom Owner](/catalog/manage/curate/#discoverability-metadata) section of *How to Curate Registered Assets*.
 
 Custom owners are only the contact people for registered assets. Adding a custom owner does not give them access rights to the Data Hub Catalog, as they are not able to log in to the Mendix Platform and curate registered assets in the Catalog. Custom owners appear in the Catalog with their name and initials, or with their personalized avatar if they are a Mendix user.
 

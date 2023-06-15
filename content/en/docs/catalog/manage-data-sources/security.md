@@ -1,6 +1,6 @@
 ---
 title: "Data Accessibility and Security"
-url: /catalog/manage-data-sources/security/
+url: /catalog/manage/security/
 description: "Describes security aspects around registered assets and access in Mendix Data Hub."
 tags: ["data hub", "data hub catalog", "security", "entity security", "dataset security","odata service security"]
 aliases:
@@ -26,7 +26,7 @@ For Mendix apps that publish or consume [external entities](/refguide/external-e
 
     {{% alert color="info" %}}The security for an OData service can only be set if the [app security](/refguide/app-security/) is enabled.{{% /alert %}}
 
-* Classification of the data associated with the entities is defined in the service metadata and shown in the [Service Metadata](/catalog/manage-data-sources/search/#metadata) panel of the **Search Details** screen. 
+* Classification of the data associated with the entities is defined in the service metadata and shown in the [Service Metadata](/catalog/manage/search/#metadata) panel of the **Search Details** screen. 
 
 * Through the identification protocols used for establishing the user identity, the security rules for the user in the publishing app are applied
 

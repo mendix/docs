@@ -1,6 +1,6 @@
 ---
 title: "Catalog User Roles"
-url: /catalog/manage-data-sources/user-roles/
+url: /catalog/manage/user-roles/
 description: "Describes the user roles in the Data Hub Catalog."
 tags: ["data hub", "data hub catalog", "curate", "user roles", "curator", "admin"]
 aliases:

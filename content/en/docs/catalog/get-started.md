@@ -32,9 +32,9 @@ You can use the Catalog with any deployment method, though there are differences
 
 | Deployment Method | How are Data Sources Registered? | 
 | --- | --- |
-| [Mendix Cloud](/developerportal/deploy/mendix-cloud-deploy/) | Published OData services in a deployed app are [registered automatically](/catalog/register-data-sources/register-data/#mendix-cloud) as data sources in the Catalog <br> [Register sources using the Registration API](/catalog/register-data-sources/register-data/#register-services) |
-| [Private Cloud](/developerportal/deploy/private-cloud/), [Tencent Cloud](/developerportal/deploy/tencent-deploy/) | Using the [Registration API](/catalog/register-data-sources/register-data/#register-services) |
-| [On-Premises](/developerportal/deploy/on-premises-design/) | Using the [Registration API](/catalog/register-data-sources/register-data/#register-services) |
+| [Mendix Cloud](/developerportal/deploy/mendix-cloud-deploy/) | Published OData services in a deployed app are [registered automatically](/catalog/register/register-data/#mendix-cloud) as data sources in the Catalog <br> [Register sources using the Registration API](/catalog/register/register-data/#register-services) |
+| [Private Cloud](/developerportal/deploy/private-cloud/), [Tencent Cloud](/developerportal/deploy/tencent-deploy/) | Using the [Registration API](/catalog/register/register-data/#register-services) |
+| [On-Premises](/developerportal/deploy/on-premises-design/) | Using the [Registration API](/catalog/register/register-data/#register-services) |
 
 Once data sources are registered, the metadata is stored in the Catalog so that you can share these sources with authorized users in your company.
 

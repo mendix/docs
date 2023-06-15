@@ -11,10 +11,10 @@ Owners of data sources, Data Hub Curators, and Mendix Admins can manage, or cura
 
 Common tasks for managing data sources include the following:
 
-* [Editing metadata](/catalog/manage-data-sources/curate/#curate-application)
-* [Changing an owner](/catalog/manage-data-sources/curate/#changing-owners) 
+* [Editing metadata](/catalog/manage/curate/#curate-application)
+* [Changing an owner](/catalog/manage/curate/#changing-owners) 
 * Using [semantic numbering for service versions](/refguide/consumed-odata-service/#semantic)
-* Setting [discoverability](/catalog/manage-data-sources/curate/#discoverability)
-* [Deleting data sources](/catalog/manage-data-sources/curate/#delete-data-source)
+* Setting [discoverability](/catalog/manage/curate/#discoverability)
+* [Deleting data sources](/catalog/manage/curate/#delete-data-source)
 
-For an overview of curation tasks for the Catalog, see [Curate Registered Assets](/catalog/manage-data-sources/curate/).
+For an overview of curation tasks for the Catalog, see [Curate Registered Assets](/catalog/manage/curate/).

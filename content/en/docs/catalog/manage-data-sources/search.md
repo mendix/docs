@@ -1,6 +1,6 @@
 ---
 title: "Search in the Catalog"
-url: /catalog/manage-data-sources/search/
+url: /catalog/manage/search/
 description: "Describes how to find data sources and datasets in the Data Hub Catalog."
 tags: ["data hub", "data hub catalog", "data source", "dataset"]
 aliases:
@@ -353,7 +353,7 @@ The source and endpoint details of the dataset are displayed:
 * **Version** number of the data source that the dataset is exposed in
 * **Connections** – the number of apps that consume this dataset
 * A description of the dataset
-* [Authentication method](/catalog/register-data-sources/register-data/#authentication)
+* [Authentication method](/catalog/register/register-data/#authentication)
 
 You can perform the following actions from this screen:
 
@@ -380,11 +380,11 @@ The metadata panel at the right of the asset details screen displays details fro
 
 #### 3.6.1 Tags
 
-These are the tags that have been assigned to the data source in the Catalog (for more information, see the [Adding or Editing Tags to a Service](/catalog/manage-data-sources/curate/#tags) section of *How to Curate Registered Assets*). Tags assigned at a data source-level propagate down to the datasets and attributes exposed in the service.
+These are the tags that have been assigned to the data source in the Catalog (for more information, see the [Adding or Editing Tags to a Service](/catalog/manage/curate/#tags) section of *How to Curate Registered Assets*). Tags assigned at a data source-level propagate down to the datasets and attributes exposed in the service.
 
 #### 3.6.2 Business Owner {#busines-owner}
 
-This is a link to the business owner of the data exposed in the data source. For more information, see the [Changing Owners of an App](/catalog/manage-data-sources/curate/#changing-owners) section of *How to Curate Registered Assets*.
+This is a link to the business owner of the data exposed in the data source. For more information, see the [Changing Owners of an App](/catalog/manage/curate/#changing-owners) section of *How to Curate Registered Assets*.
 
 #### 3.6.3 Technical Owner
 
@@ -392,7 +392,7 @@ The technical contact of the app; by default this is the owner who registered th
 
 For apps hosted in the Mendix Cloud, the **Technical Owner** is the app developer that deployed the app.
 
-Technical owners can be [changed](/catalog/manage-data-sources/curate/#changing-owners).
+Technical owners can be [changed](/catalog/manage/curate/#changing-owners).
 
 #### 3.6.4 Discoverability {#discoverability-metadata}
 
@@ -407,7 +407,7 @@ The following discoverability values can be set:
 
 #### 3.6.5 Validated
 
-This indicates if the data source has been **Validated**. For details on changing **Validated** as an owner or curator, see the [Curation Bar](#curation-bar) section below. See the [Validated](/catalog/manage-data-sources/curate/#validated) section of *Curate Registered Assets* to learn about what this means.
+This indicates if the data source has been **Validated**. For details on changing **Validated** as an owner or curator, see the [Curation Bar](#curation-bar) section below. See the [Validated](/catalog/manage/curate/#validated) section of *Curate Registered Assets* to learn about what this means.
 
 #### 3.6.6 Application
 
@@ -425,9 +425,9 @@ The environment type indicates the quality and the status of the data that the e
 
 The **Curation Bar** is displayed in the asset detail screen if you are the owner of the selected asset or a curator. In **Edit** > **Edit Metadata**, you can edit the information that is displayed in the Catalog for an asset:
 
-* For the selected data source, you can edit [Application Details](/catalog/manage-data-sources/curate/#curate-application) and [Data Source Details](/catalog/manage-data-sources/curate/#service-details)
+* For the selected data source, you can edit [Application Details](/catalog/manage/curate/#curate-application) and [Data Source Details](/catalog/manage/curate/#service-details)
 
-For further details, see the [Discoverable and Validated](/catalog/manage-data-sources/curate/#discoverability) section of *Curate Registered Assets*.
+For further details, see the [Discoverable and Validated](/catalog/manage/curate/#discoverability) section of *Curate Registered Assets*.
 
 ### 3.8 Data Source and Dataset URIs
 

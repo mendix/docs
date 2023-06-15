@@ -1,7 +1,9 @@
 ---
 title: "Manage Data Sources"
-url: /data-hub/data-hub-catalog/manage-data-sources/
+url: /catalog/manage-data-sources/
 weight: 30
+aliases:
+    - /data-hub/data-hub-catalog/manage-data-sources/
 ---
 ## 1 Introduction
 

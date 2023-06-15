@@ -102,7 +102,7 @@ These release notes cover changes made to the [Mendix Data Hub Catalog](/data-hu
 
 #### Improvements
 
-* You can now select relevant Mendix Marketplace module for an [authentication](/data-hub/data-hub-catalog/register-data/#authentication) type. See the [Selecting an Authentication Method](/data-hub/data-hub-catalog/register-data/#authentication) section of *Register OData Resources in the Data Hub Catalog* for more information on the authentication types.
+* You can now select relevant Mendix Marketplace module for an [authentication](/catalog/register-data-sources/register-data/#authentication) type. See the [Selecting an Authentication Method](/catalog/register-data-sources/register-data/#authentication) section of *Register OData Resources in the Data Hub Catalog* for more information on the authentication types.
 
 #### Fixes
 
@@ -112,7 +112,7 @@ These release notes cover changes made to the [Mendix Data Hub Catalog](/data-hu
 
 #### Improvements
 
-* You can now add [authentication](/data-hub/data-hub-catalog/register-data/#authentication) details to a data source. Click **Edit** on the data source and then click the **Authentication** tab. See the [Selecting an Authentication Method](/data-hub/data-hub-catalog/register-data/#authentication) section of *Register OData Resources in the Data Hub Catalog* for more information on the authentication types.
+* You can now add [authentication](/catalog/register-data-sources/register-data/#authentication) details to a data source. Click **Edit** on the data source and then click the **Authentication** tab. See the [Selecting an Authentication Method](/catalog/register-data-sources/register-data/#authentication) section of *Register OData Resources in the Data Hub Catalog* for more information on the authentication types.
 
 ## 2022
 
@@ -130,7 +130,7 @@ These release notes cover changes made to the [Mendix Data Hub Catalog](/data-hu
 
 #### Improvements
 
-* When you receive and click on a notification from the Catalog about newly registered endpoints or newly assigned ownership, you will now be directed to the more user-friendly [Curate](/data-hub/data-hub-catalog/curate/) page that shows all relevant and filtered resources. 
+* When you receive and click on a notification from the Catalog about newly registered endpoints or newly assigned ownership, you will now be directed to the more user-friendly [Curate](/catalog/manage-data-sources/curate/) page that shows all relevant and filtered resources. 
 
 ### November 24th, 2022 {#nov-24}
 
@@ -170,14 +170,14 @@ These release notes cover changes made to the [Mendix Data Hub Catalog](/data-hu
 
 #### Improvements
 
-* When registering a service in the registration form, you can now designate which authentication type is needed for consumers to access it. For more information, see [Selecting an Authentication Method](/data-hub/data-hub-catalog/register-data/#authentication) in *Register OData Resources in the Data Hub Catalog*.
+* When registering a service in the registration form, you can now designate which authentication type is needed for consumers to access it. For more information, see [Selecting an Authentication Method](/catalog/register-data-sources/register-data/#authentication) in *Register OData Resources in the Data Hub Catalog*.
 * Sample data sources are now clearly indicated with a label.
 
 ### October 20th, 2022
 
 #### Improvements
 
-* You will now get a notification about which services automatically registered in the Catalog. Services are automatically registered when deploying a published OData service. To learn more, see [Register OData Resources in the Data Hub Catalog](/data-hub/data-hub-catalog/register-data/).
+* You will now get a notification about which services automatically registered in the Catalog. Services are automatically registered when deploying a published OData service. To learn more, see [Register OData Resources in the Data Hub Catalog](/catalog/register-data-sources/register-data/).
 
 ### Fixes
 
@@ -307,7 +307,7 @@ These release notes cover changes made to the [Mendix Data Hub Catalog](/data-hu
 
 #### Improvements
 
-* When a user other than the Technical or Business Owner deletes an application, environment, or data source, the Technical and/or Business Owner will receive a notification. For more information on data source ownership, see the [Changing Owners of an App](/data-hub/data-hub-catalog/curate/#changing-owners) section of *Curate Registered Assets*.
+* When a user other than the Technical or Business Owner deletes an application, environment, or data source, the Technical and/or Business Owner will receive a notification. For more information on data source ownership, see the [Changing Owners of an App](/catalog/manage-data-sources/curate/#changing-owners) section of *Curate Registered Assets*.
 
 ### June 30th, 2022
 
@@ -456,7 +456,7 @@ These release notes cover changes made to the [Mendix Data Hub Catalog](/data-hu
 
 #### New Features
 
-* We added an option to [delete a data source](/data-hub/data-hub-catalog/curate/#delete-data-source), available for users with [curation](/data-hub/data-hub-catalog/curate/) rights. To delete a data source, go to the [Curation Bar](/data-hub/data-hub-catalog/curate/#curation-bar) for the data source and click **Edit**, then click **Delete Data Source**.
+* We added an option to [delete a data source](/catalog/manage-data-sources/curate/#delete-data-source), available for users with [curation](/catalog/manage-data-sources/curate/) rights. To delete a data source, go to the [Curation Bar](/catalog/manage-data-sources/curate/#curation-bar) for the data source and click **Edit**, then click **Delete Data Source**.
 
 #### Fixes
 
@@ -550,7 +550,7 @@ These release notes cover changes made to the [Mendix Data Hub Catalog](/data-hu
 #### New Features
 
 * We added a new **Settings** tab to the [Data Hub](/developerportal/control-center/data-hub-admin/#settings) page in Control Center with a default discoverability setting.
-* We added a discoverability radio button to the data source [registration](/data-hub/data-hub-catalog/register-data/) form.
+* We added a discoverability radio button to the data source [registration](/catalog/register-data-sources/register-data/) form.
 
 #### Fixes
 
@@ -566,7 +566,7 @@ These release notes cover changes made to the [Mendix Data Hub Catalog](/data-hu
 
 #### Fixes
 
-* We fixed an issue where a Data Hub Curator could not access the fourth page or above of [Company Assets](/data-hub/data-hub-catalog/curate/#curatelist).
+* We fixed an issue where a Data Hub Curator could not access the fourth page or above of [Company Assets](/catalog/manage-data-sources/curate/#curatelist).
 * We fixed an issue with the landscape view for datasets.
 
 ### October 28th, 2021
@@ -574,14 +574,14 @@ These release notes cover changes made to the [Mendix Data Hub Catalog](/data-hu
 #### Fixes
 
 * We fixed an issue where the [Business Owner](/data-hub/data-hub-catalog/search/#busines-owner) name was not visible in the metadata of a data source.
-* We removed the temporary administration link from the home page. The owner management page is now available from the [Curate](/data-hub/data-hub-catalog/curate/) tab for Data Hub Curators and from the [Administration](/developerportal/control-center/data-hub-admin/#custom-owners) page in Control Center for Mendix Administrators.
+* We removed the temporary administration link from the home page. The owner management page is now available from the [Curate](/catalog/manage-data-sources/curate/) tab for Data Hub Curators and from the [Administration](/developerportal/control-center/data-hub-admin/#custom-owners) page in Control Center for Mendix Administrators.
 
 ### October 14th, 2021
 
 #### Improvements
 
 * We made several design changes, mainly on the [Catalog](/data-hub/data-hub-catalog/) page. We moved items like **Environment Name** and **Version** to the newly arranged right sidebar menu.
-* We moved the `ContractType` field to the `ServiceVersion` level. For more information, see [How to Register OData Resources in the Data Hub Catalog](/data-hub/data-hub-catalog/register-data/).
+* We moved the `ContractType` field to the `ServiceVersion` level. For more information, see [How to Register OData Resources in the Data Hub Catalog](/catalog/register-data-sources/register-data/).
 * We added an informative tooltip to the **Company** drop-down menu and a pop-up window for when the user is an external user for another company.
 * We added in-app guidance to notify that you can switch the company when you have accepted a participation invitation.
 
@@ -727,7 +727,7 @@ These release notes cover changes made to the [Mendix Data Hub Catalog](/data-hu
 
 #### New Features
 
-* A new connector has been added to the **Data Hub Home** for [registering](/data-hub/data-hub-catalog/register-data/) Siemens Opcenter data sources.
+* A new connector has been added to the **Data Hub Home** for [registering](/catalog/register-data-sources/register-data/) Siemens Opcenter data sources.
 
 #### Improvements
 
@@ -739,7 +739,7 @@ These release notes cover changes made to the [Mendix Data Hub Catalog](/data-hu
 #### Improvements
 
 * Datasets in the [search results list](/data-hub/data-hub-catalog/search/#search-results) that are validated are now clearly indicated as such.
-* Custom owners can be added for an application when [registering data sources](/data-hub/data-hub-catalog/register-data/) using the business application connectors from the **Data Hub Home**.
+* Custom owners can be added for an application when [registering data sources](/catalog/register-data-sources/register-data/) using the business application connectors from the **Data Hub Home**.
 * Further styling changes have been made to improve usability.
 
 ### May 6th, 2021
@@ -758,34 +758,34 @@ The [Data Hub Transform API](https://datahub-spec.s3.eu-central-1.amazonaws.com/
 
 #### Improvements
 
-* [Search result](/data-hub/data-hub-catalog/search/#search-results) listings in Data Hub Catalog have been improved.  Data sources and datasets that are set as [Validated](/data-hub/data-hub-catalog/curate/#validated) will appear above assets that are not validated.
+* [Search result](/data-hub/data-hub-catalog/search/#search-results) listings in Data Hub Catalog have been improved.  Data sources and datasets that are set as [Validated](/catalog/manage-data-sources/curate/#validated) will appear above assets that are not validated.
 
 ### April 1st, 2021
 
 #### Improvements
 
-* [Registration](/data-hub/data-hub-catalog/register-data/) of data sources using the business application connectors from the **Data Hub Home** is improved. For each connector, users can register data sources by selecting from a list of apps and environments already registered in the Catalog for the business application. When none are registered, the  "**Create New...**" option will be presented.
+* [Registration](/catalog/register-data-sources/register-data/) of data sources using the business application connectors from the **Data Hub Home** is improved. For each connector, users can register data sources by selecting from a list of apps and environments already registered in the Catalog for the business application. When none are registered, the  "**Create New...**" option will be presented.
 
 ### March 18th, 2021
 
 #### Improvements
 
-* A Mendix connector has been added to the business applications on the Data Hub Home to enable users to [manually register](/data-hub/data-hub-catalog/register-data/)  Mendix OData v3 contracts.
-* Data sources that are [validated](/data-hub/data-hub-catalog/curate/#discoverability)  are now clearly indicated in the search results list and for the selected asset details with a validated shield icon. The validation status of the data source is now displayed in the metadata panel.
-* The [discoverability](/data-hub/data-hub-catalog/curate/#discoverability) of a data source is displayed in the search results pane, the asset details screen and the the metadata panel.
+* A Mendix connector has been added to the business applications on the Data Hub Home to enable users to [manually register](/catalog/register-data-sources/register-data/)  Mendix OData v3 contracts.
+* Data sources that are [validated](/catalog/manage-data-sources/curate/#discoverability)  are now clearly indicated in the search results list and for the selected asset details with a validated shield icon. The validation status of the data source is now displayed in the metadata panel.
+* The [discoverability](/catalog/manage-data-sources/curate/#discoverability) of a data source is displayed in the search results pane, the asset details screen and the the metadata panel.
 
 ### March 11th, 2021
 
 #### Improvements
 
-* Improvements have been made on the [discoverability](/data-hub/data-hub-catalog/curate/#discoverability) of registered assets.
-* The functionality for [registering data sources from enterprise applications](/data-hub/data-hub-catalog/register-data/) is now responsive.
+* Improvements have been made on the [discoverability](/catalog/manage-data-sources/curate/#discoverability) of registered assets.
+* The functionality for [registering data sources from enterprise applications](/catalog/register-data-sources/register-data/) is now responsive.
 
 ### March 4th, 2021
 
 #### New Features
 
-* Data sources from different enterprise business applications can now be registered more easily in Data Hub using the new [Registration functionality](/data-hub/data-hub-catalog/register-data/). This will enable users to use those datasets when developing apps without having to worry about connectivity to the application. This functionality replaces the previous manual registration form.
+* Data sources from different enterprise business applications can now be registered more easily in Data Hub using the new [Registration functionality](/catalog/register-data-sources/register-data/). This will enable users to use those datasets when developing apps without having to worry about connectivity to the application. This functionality replaces the previous manual registration form.
 
 ### February 19th, 2021
 
@@ -803,7 +803,7 @@ The [Data Hub Transform API](https://datahub-spec.s3.eu-central-1.amazonaws.com/
 
 #### New Features
 
-* Custom icons can now be used for applications and data sources. Curators and owners can [upload their own icons](/data-hub/data-hub-catalog/curate/#application-icon) or select from the Data Hub icon library.
+* Custom icons can now be used for applications and data sources. Curators and owners can [upload their own icons](/catalog/manage-data-sources/curate/#application-icon) or select from the Data Hub icon library.
 
 #### Improvements
 
@@ -841,7 +841,7 @@ The [Data Hub Transform API](https://datahub-spec.s3.eu-central-1.amazonaws.com/
 
 #### Improvements
 
-* Contract validation has been improved when [manually registering Odata v4 contracts](/data-hub/data-hub-catalog/register-data/) or when using the `PUT` services API call for OData v4 services.
+* Contract validation has been improved when [manually registering Odata v4 contracts](/catalog/register-data-sources/register-data/) or when using the `PUT` services API call for OData v4 services.
 
 ### December 17th, 2020
 
@@ -869,7 +869,7 @@ The [Data Hub Transform API](https://datahub-spec.s3.eu-central-1.amazonaws.com/
 
 #### New Features
 
-* We have added new functionality for adding [Business and Technical Owner contact details](/data-hub/data-hub-catalog/curate/#custom-owner) when curating the **Application Details** of a registered asset. Curators and owners can select owners from a drop-down list or create a new owner and add their contact details.
+* We have added new functionality for adding [Business and Technical Owner contact details](/catalog/manage-data-sources/curate/#discoverability-metadata) when curating the **Application Details** of a registered asset. Curators and owners can select owners from a drop-down list or create a new owner and add their contact details.
 * We have added a new tab to the Data Hub **Administration** page: Owner Management which provides an overview of the custom Business and Technical owners in the Data Hub Catalog. From this release, the Data Hub Administrator and curators can now add, edit, and remove custom owners from this list.
 
 #### Improvements
@@ -879,8 +879,8 @@ The [Data Hub Transform API](https://datahub-spec.s3.eu-central-1.amazonaws.com/
 
 #### Fixes
 
-* The [Validated](/data-hub/data-hub-catalog/curate/#validated) label will now be correctly updated in the search results pane for the selected asset when it is changed by curators and the owners of the asset.
-* We fixed an issue on the [Curation List](/data-hub/data-hub-catalog/curate/#curatelist) where clicking on the **Added** column title (to change the sort order) resulted in an error.
+* The [Validated](/catalog/manage-data-sources/curate/#validated) label will now be correctly updated in the search results pane for the selected asset when it is changed by curators and the owners of the asset.
+* We fixed an issue on the [Curation List](/catalog/manage-data-sources/curate/#curatelist) where clicking on the **Added** column title (to change the sort order) resulted in an error.
 
 ### November 5th, 2020
 

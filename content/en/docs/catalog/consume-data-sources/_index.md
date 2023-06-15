@@ -10,7 +10,7 @@ The Catalog makes it easy to consume data sources within your company's ecosyste
 
 Common tasks for users who want to consume data sources from the Catalog include the following:
 
-* Understanding data source [authentication](/data-hub/data-hub-catalog/register-data/#authentication) set by publishing developers
+* Understanding data source [authentication](/catalog/register-data-sources/register-data/#authentication) set by publishing developers
 * Using the [Data Hub pane](/refguide/data-hub-pane/)
 * Understanding how sources are related in the [Landscape](/data-hub/data-hub-landscape/)
 

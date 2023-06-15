@@ -44,7 +44,7 @@ As you enter a search term, all the items in the Data Hub Catalog satisfying the
 
 You can drag the entity from the search results into your domain model and it will be added to your app and displayed as an [external entity](/refguide9/external-entities/).
 
-{{% alert color="info" %}}Services that are set to **not-Discoverable** in the Catalog are not be included in the search results for *any* user including owners of the service. To consume entities from these services owners must ensure that they are [Discoverable](/data-hub/data-hub-catalog/curate/#discoverability).{{% /alert %}}
+{{% alert color="info" %}}Services that are set to **not-Discoverable** in the Catalog are not be included in the search results for *any* user including owners of the service. To consume entities from these services owners must ensure that they are [Discoverable](/catalog/manage-data-sources/curate/#discoverability).{{% /alert %}}
 
 ### 3.1 Wildcard Search
 

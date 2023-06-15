@@ -68,7 +68,7 @@ The following is an example of a selected service node exposing three datasets:
 
 #### 2.3.2 Apps
 
-Apps are displayed as square icons with the application icon and the environment that the app is deployed to is given below the app name. The example below shows a non-Mendix app (**TeamcenterMfg**), a Mendix app (**CompanyCarDemo**) which are deployed to the Mendix Free App environment, **Sandbox**. The third example shows another Mendix app (**HRSample_App**) deployed to the production environment which has a custom icon. For further information on adding a custom icon to your app see [Changing the Application Icon](/data-hub/data-hub-catalog/curate/#application-icon).
+Apps are displayed as square icons with the application icon and the environment that the app is deployed to is given below the app name. The example below shows a non-Mendix app (**TeamcenterMfg**), a Mendix app (**CompanyCarDemo**) which are deployed to the Mendix Free App environment, **Sandbox**. The third example shows another Mendix app (**HRSample_App**) deployed to the production environment which has a custom icon. For further information on adding a custom icon to your app see [Changing the Application Icon](/catalog/manage-data-sources/curate/#application-icon).
 
 {{< figure src="/attachments/data-hub/data-hub-catalog/manage-data-sources/data-hub-landscape/node-apps.png" alt="different app logos" >}}
 

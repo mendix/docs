@@ -7,7 +7,7 @@ weight: 10
 tags: ["data hub catalog", "data hub", "external entities", "register", "published OData service" ,"how to", "registration"]
 aliases:
     - /data-hub/data-hub-catalog/register/
-    - /data-hub/data-hub-catalog/register-data/
+    - /catalog/register-data-sources/register-data/
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details. 
 #The anchor registration-form below is mapped, so it should not be removed or changed.
 ---
@@ -319,7 +319,7 @@ Follow the steps below:
     2. **Sandbox**: the Mendix Free App environment, data is not of production quality.
     3. **Non-production**: hosting is paid for, but data is not of production quality.
 
-8. Select your **Authentication** method. See the [Authentication](#authentication) section below for supported types. Curators can also [add or change authentication methods](/data-hub/data-hub-catalog/curate/#authentication) later. 
+8. Select your **Authentication** method. See the [Authentication](#authentication) section below for supported types. Curators can also [add or change authentication methods](/catalog/manage-data-sources/curate/#authentication) later. 
 9. Select the **Done!** option that appears once you have filled out all the required fields.
 
 Congratulations! Your OData service is registered in the Data Hub Catalog. 
@@ -355,4 +355,4 @@ Folders in a ZIP contract are relative to the Document Base URL.
 
 See the ZIP structure example for reference:
 
-{{< figure src="/attachments/data-hub/data-hub-catalog/register-data/zip-file-structure.png" >}}
+{{< figure src="/attachments/catalog/register-data-sources/register-data/zip-file-structure.png" >}}

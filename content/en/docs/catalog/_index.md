@@ -13,7 +13,7 @@ aliases:
 
 ## 1 Introduction
 
-The Data Hub Catalog is a development tool provided in the Mendix Cloud. OData REST services provided by Mendix Apps running in the Mendix Cloud, [published OData services](/refguide/published-odata-services/), will automatically be registered in the Catalog upon deployment. This provides you with an up-to-date view of all the OData REST APIs published and consumed by your Mendix apps. These assets can be [curated](/data-hub/data-hub-catalog/curate/) in the Data Hub Catalog to ensure that they are exposed to the relevant users and can be found easily. The [Data Hub Landscape](/data-hub/data-hub-landscape/), part of the Catalog, is a graphical representation of the relationship between apps and services.
+The Data Hub Catalog is a development tool provided in the Mendix Cloud. OData REST services provided by Mendix Apps running in the Mendix Cloud, [published OData services](/refguide/published-odata-services/), will automatically be registered in the Catalog upon deployment. This provides you with an up-to-date view of all the OData REST APIs published and consumed by your Mendix apps. These assets can be [curated](/catalog/manage-data-sources/curate/) in the Data Hub Catalog to ensure that they are exposed to the relevant users and can be found easily. The [Data Hub Landscape](/data-hub/data-hub-landscape/), part of the Catalog, is a graphical representation of the relationship between apps and services.
 
 {{% alert color="info" %}}
 If you deploy your Mendix apps in an alternative environment, like on-prem or private cloud, you can use the Data Hub Catalog APIs to register your apps and services in the Data Hub Catalog to enable visibility of your deployed APIs. For information about using Data Hub for local deployment, see [Register Data without Mendix Cloud](/data-hub/data-hub-without-mendix-cloud/).{{% /alert %}}
@@ -28,12 +28,12 @@ From the Data Hub Catalog [Home](https://hub.mendix.com) screen, you can navigat
 * **Home** – search in the Data Hub Catalog, manually register a service from different applications, select from the most popular services
 * **Catalog** – [search](/data-hub/data-hub-catalog/search/) for registered assets in the search pane and see details of the metadata of selected asset
 * **Landscape** – gain a graphical view of the organization's available services and exposed datasets showing consuming and publishing dependencies (for further details, see [Data Hub Landscape](/data-hub/data-hub-landscape/))
-* **Curate** – carry out [curate](/data-hub/data-hub-catalog/curate/) functions on registered assets to enrich the registered metadata and increase discoverability
+* **Curate** – carry out [curate](/catalog/manage-data-sources/curate/) functions on registered assets to enrich the registered metadata and increase discoverability
 
 From the **Home** screen, you can do the following:
 
 * **Search** – search in the Data Hub Catalog using the **Search** box or by clicking the suggested **Tags**
-* **Register a new data source** – manually register an OData service from your enterprise business application to the Data Hub (for more details, see [How to Register OData Resources in the Data Hub Catalog](/data-hub/data-hub-catalog/register-data/))
+* **Register a new data source** – manually register an OData service from your enterprise business application to the Data Hub (for more details, see [How to Register OData Resources in the Data Hub Catalog](/catalog/register-data-sources/register-data/))
 
 * **Popular Data Sources** – click on the most popular data sources
 
@@ -64,17 +64,17 @@ For further information on consuming from the Data Hub Catalog, see [How to Cons
 
 ### 3.3 Register – Sharing Datasets
 
-If you want to make the data from your apps available for use by others, you can publish the datasets in an OData service and register it in the Data Hub. In a Mendix app, the datasets are the **Entity sets** for a defined **Entity**. Using this REST-based protocol, metadata contracts defining the structure and documentation of the datasets that are included are registered. Further details such as the location of the data associated with a registered dataset are also captured. For Mendix apps deploying to the Mendix Cloud, this information is captured during the deployment process. This information can also be collected while [registering a service without Mendix Cloud](/data-hub/data-hub-catalog/register-data/).
+If you want to make the data from your apps available for use by others, you can publish the datasets in an OData service and register it in the Data Hub. In a Mendix app, the datasets are the **Entity sets** for a defined **Entity**. Using this REST-based protocol, metadata contracts defining the structure and documentation of the datasets that are included are registered. Further details such as the location of the data associated with a registered dataset are also captured. For Mendix apps deploying to the Mendix Cloud, this information is captured during the deployment process. This information can also be collected while [registering a service without Mendix Cloud](/catalog/register-data-sources/register-data/).
 
 OData services can be registered in the Data Hub in the following ways:
 
-* In Mendix Studio Pro, entities are exposed in a [published OData service](/refguide/published-odata-services/), and upon deployment of the app to an environment hosted in the Mendix Cloud, the service is automatically registered in the Data Hub Catalog. For details on publishing an OData service from a Mendix app, see the [Publishing to the Data Hub Catalog](/data-hub/share-data/#publishing) section of *How to Share Data Between Apps*.
-* OData v4 services originating from non-Mendix sources can be registered manually. For further details, see [Register OData Resources in the Data Hub Catalog](/data-hub/data-hub-catalog/register-data/).
+* In Mendix Studio Pro, entities are exposed in a [published OData service](/refguide/published-odata-services/), and upon deployment of the app to an environment hosted in the Mendix Cloud, the service is automatically registered in the Data Hub Catalog. For details on publishing an OData service from a Mendix app, see the [Publishing to the Data Hub Catalog](/catalog/share-data/#publishing) section of *How to Share Data Between Apps*.
+* OData v4 services originating from non-Mendix sources can be registered manually. For further details, see [Register OData Resources in the Data Hub Catalog](/catalog/register-data-sources/register-data/).
 * Using the [Data Hub API](/apidocs-mxsdk/apidocs/data-hub-apis/) you can set up a registration pipeline to register data sources from your business application.
 
 ### 3.4 Curate – Maintaining Registered Assets
 
-You can add tags and descriptions, edit app owners, and toggle discoverability to ensure the right people find your service. For more details, see [How to Curate Registered Assets](/data-hub/data-hub-catalog/curate/).
+You can add tags and descriptions, edit app owners, and toggle discoverability to ensure the right people find your service. For more details, see [How to Curate Registered Assets](/catalog/manage-data-sources/curate/).
 
 ## 4 Information Available in the Data Hub Catalog
 

@@ -42,7 +42,7 @@ For this section, you will need:
 * Endpoint location `Name` (found in the *metadata.json* file for your exposed OData service, in an array called **Constants**, under **Name**)
 * Endpoint location `Value` (found in the *metadata.json* file for your exposed OData service, in an array called **Constants**, under **DefaultValue**)
 
-Follow the steps for [preparing your service details using the Transform endpoint of the Registration API](/data-hub/data-hub-catalog/register-data/#transform-api).
+Follow the steps for [preparing your service details using the Transform endpoint of the Registration API](/catalog/register-data-sources/register-data/#transform-api).
 
 ## 5 Register the Application
 
@@ -53,7 +53,7 @@ For this section, you will need:
 * A [Personal Access Token](/developerportal/community-tools/mendix-profile/#pat)
 * The application **Name**
 
-Follow the steps for [registering an application through the Data Hub Registration API](/data-hub/data-hub-catalog/register-data/#register-application).
+Follow the steps for [registering an application through the Data Hub Registration API](/catalog/register-data-sources/register-data/#register-application).
 
 Upon completion, you will have the `application_UUID`.
 
@@ -69,7 +69,7 @@ For this section, you will need:
 * Environment `Location`
 * Environment `Type`
 
-Follow the steps for [registering an environment through the Data Hub Catalog Registration API](/data-hub/data-hub-catalog/register-data/#register-environment).
+Follow the steps for [registering an environment through the Data Hub Catalog Registration API](/catalog/register-data-sources/register-data/#register-environment).
 
 Upon completion, you will have the `environment_UUID`.
 
@@ -86,6 +86,6 @@ For this section, you will need:
 * Service `Version` and `Security Scheme`
 * Service `Contract` with `Type` and `Value`
 
-Follow the steps for [registering services (endpoints) through the Data Hub Catalog Registration API](/data-hub/data-hub-catalog/register-data/#register-services).
+Follow the steps for [registering services (endpoints) through the Data Hub Catalog Registration API](/catalog/register-data-sources/register-data/#register-services).
 
 If you want to register more than one service for the same application and environment at once, add another object to the Endpoints list in the request body.

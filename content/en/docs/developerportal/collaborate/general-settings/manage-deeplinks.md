@@ -1,7 +1,7 @@
 ---
 title: "Manage Deep Links"
 url: /developerportal/collaborate/manage-deeplinks/
-weight: 3
+weight: 2
 description: "Describes how to implement deep links to Developer Portal pages."
 tags: ["Developer Portal", "deep link"]
 aliases:

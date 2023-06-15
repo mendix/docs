@@ -28,7 +28,7 @@ Default: *Object*
 
 ### 3.2 Name
 
-**Name** refers to the value of the parameter.
+**Name** refers to the name of the parameter.
 
 ## 4 Setting an Input Parameter as the Return Value
 

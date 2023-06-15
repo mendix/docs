@@ -78,7 +78,7 @@ You can add tags and descriptions, edit app owners, and toggle discoverability t
 
 ## 4 Information Available in the Data Hub Catalog
 
-In the Data Hub Catalog, all the information for registered assets is displayed in the [Catalog search details](/data-hub/data-hub-catalog/search/#search-details) screen. This information comes from the metadata in the OData service contract, and also from additional metadata that is added when registered assets are curated. Registered assets can be curated by owners, [Data Hub curators](/data-hub/data-hub-catalog/manage-data-sources/user-roles/#curator), and [Mendix Admins](/data-hub/data-hub-catalog/manage-data-sources/user-roles/#admin).
+In the Data Hub Catalog, all the information for registered assets is displayed in the [Catalog search details](/catalog/manage-data-sources/search/#search-details) screen. This information comes from the metadata in the OData service contract, and also from additional metadata that is added when registered assets are curated. Registered assets can be curated by owners, [Data Hub curators](/data-hub/data-hub-catalog/manage-data-sources/user-roles/#curator), and [Mendix Admins](/data-hub/data-hub-catalog/manage-data-sources/user-roles/#admin).
 
 The information that is registered for data sources and exposed datasets are as follows:
 

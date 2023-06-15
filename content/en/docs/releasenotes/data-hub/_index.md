@@ -120,7 +120,7 @@ These release notes cover changes made to the [Mendix Data Hub Catalog](/data-hu
 
 #### Improvements
 
-* You can now edit data source details directly from the [asset details](/data-hub/data-hub-catalog/search/#service-details) page. In our [November 24th](#nov-24) release, we made it possible to edit dataset details from the same page. To learn more about data sources and datasets, see the [Selected Asset Details](/data-hub/data-hub-catalog/search/#search-details) section of *Search in the Data Hub Catalog*.
+* You can now edit data source details directly from the [asset details](/data-hub/data-hub-catalog/search/#service-details) page. In our [November 24th](#nov-24) release, we made it possible to edit dataset details from the same page. To learn more about data sources and datasets, see the [Selected Asset Details](/catalog/manage-data-sources/search/#search-details) section of *Search in the Data Hub Catalog*.
 
 #### Fixes
 
@@ -797,7 +797,7 @@ The [Data Hub Transform API](https://datahub-spec.s3.eu-central-1.amazonaws.com/
 
 #### Improvements
 
-* You can now copy the dataset URI from the [data source details](/data-hub/data-hub-catalog/search/#search-details) in the Data Hub Catalog. This makes it easier to directly select datasets to use in other business applications from the context of the data source.
+* You can now copy the dataset URI from the [data source details](/catalog/manage-data-sources/search/#search-details) in the Data Hub Catalog. This makes it easier to directly select datasets to use in other business applications from the context of the data source.
 
 ### January 21st, 2021
 
@@ -824,7 +824,7 @@ The [Data Hub Transform API](https://datahub-spec.s3.eu-central-1.amazonaws.com/
 
 #### New Features
 
-* The [asset details](/data-hub/data-hub-catalog/search/#search-details) in the Data Hub Catalog now have added functionality to copy the URI of the data source or dataset to the clipboard. This functionality means that the Data Hub Catalog can be used to discover registered assets—data sources and datasets—and access the data in other enterprise applications through the metadata URI.
+* The [asset details](/catalog/manage-data-sources/search/#search-details) in the Data Hub Catalog now have added functionality to copy the URI of the data source or dataset to the clipboard. This functionality means that the Data Hub Catalog can be used to discover registered assets—data sources and datasets—and access the data in other enterprise applications through the metadata URI.
 
 #### Improvements
 
@@ -836,7 +836,7 @@ The [Data Hub Transform API](https://datahub-spec.s3.eu-central-1.amazonaws.com/
 
 #### New Features
 
-* The [search details](/data-hub/data-hub-catalog/search/#search-details) in the Data Hub Catalog now display the exposed **Datasets** (the entity set names of an entity) in place of the **entity** names. This means that for published services of Mendix apps, the name shown as the **Dataset** will be the Mendix **Exposed Entity set** name.
+* The [search details](/catalog/manage-data-sources/search/#search-details) in the Data Hub Catalog now display the exposed **Datasets** (the entity set names of an entity) in place of the **entity** names. This means that for published services of Mendix apps, the name shown as the **Dataset** will be the Mendix **Exposed Entity set** name.
 * In the [Data Hub API](/apidocs-mxsdk/apidocs/data-hub-apis/), the Search API (`GET` data) returns items that specify the entity sets instead of entity types. The response structure has been expanded by adding the fields `EntitySetName` `EntityTypeName` and `Namespace` at the `Item` and `ItemAssociation` level.
 
 #### Improvements

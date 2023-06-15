@@ -7,7 +7,7 @@ weight: 97
 tags: ["API", "webhooks", "Mendix Cloud"]
 ---
 
-{{% alert color="warning" %}} This feature is in Beta. For more information on Beta products, see [Beta Releases](/releasenotes/beta-features). {{% /alert %}}
+{{% alert color="warning" %}} This feature is in Beta. For more information on Beta products, see [Beta Releases](/releasenotes/beta-features/). {{% /alert %}}
 
 ## 1 Introduction
 

@@ -1,13 +1,15 @@
 ---
 title: "Epics"
-url: /developerportal/project-management/epics/epics/
+url: /developerportal/project-management/epics/epics/epics/
 weight: 30
 description: "Describes the **Epics** page in the Project Management section."
 tags: ["Project Management", "Epics", "Sprint", "Stories", "Developer Portal"]
 ---
 ## 1 Introduction
 
-The **Epics** page gives an overview of all the epics for your current app. 
+The **Epics** page gives an overview of all the epics for your current app. Each row represents an epic.
+
+{{< figure src="/attachments/developerportal/project-management/epics/epics/epic.png" >}}
 
 Each row shows the following details about an epic:
 
@@ -17,8 +19,6 @@ Each row shows the following details about an epic:
 * To whom the epic is assigned
 * Progress bar
 * How many stories are completed for the epic
-
-{{< figure src="/attachments/developerportal/project-management/epics/epic.png" >}}
 
 Clicking a row opens the [epic details](#epic-details) dialog box.
 
@@ -30,7 +30,7 @@ When you click an epic, the epic details dialog box opens.
 
 On the upper-right corner, there is a link icon and an ellipsis (**...**) icon. Clicking the link icon copies the link to the epic. Clicking the ellipsis icon opens a pop-up menu that allows you to delete the epic.
 
-{{< figure src="/attachments/developerportal/project-management/epics/epic-details-page-ellipsis.png" >}}
+{{< figure src="/attachments/developerportal/project-management/epics/epics/epic-details-page-ellipsis.png" >}}
 
 The epic details dialog box shows the following items:
 
@@ -42,7 +42,7 @@ The epic details dialog box shows the following items:
 * **Assign to** – You can assign the epic to anybody who can access the app in the Developer Portal.
 * **Tags** – You can add or remove tags.
   * You can create a new tag by typing the tag in the text box and clicking **Create new "[tag name]"**
-  * You can [manage tags](/developerportal/project-management/planning/#manage-tags) by clicking the settings icon at the end.
+  * You can [manage tags](/developerportal/project-management/epics/planning/#manage-tags) by clicking the settings icon at the end.
 
 * **Attachments** – You can add attachments by clicking **+**.
 * **Stories** – This shows the open stories that are linked to this epic.
@@ -53,4 +53,4 @@ The epic details dialog box shows the following items:
 * **Archived Stories** – This shows the archived stories that are linked to this epic.
 * **Comment** – You can type a comment in the text box and then click **Post Your Comments** to save and post the comment.
 
-{{% alert color="info" %}}You need to click **Save Epic** at the bottom to save any change.{{% /alert %}}
+{{% alert color="info" %}}You can also edit the epic in this epic details dialog box. If you make any change, click **Save Epic** at the bottom to save it.{{% /alert %}}

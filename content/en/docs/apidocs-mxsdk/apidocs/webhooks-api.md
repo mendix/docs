@@ -31,8 +31,6 @@ To generate a PAT, see the [Personal Access Tokens](/developerportal/community-t
 
 Select the following as scopes:
 
-{{% todo %}}Make sure the scopes are correct.{{% /todo %}}
-
 * `mx:webhook:read` – to perform `GET` operations
 * `mx:webhook:write` – to perform all operations (`GET`, `POST`, `PUT`, and `DELETE`)
 
@@ -97,4 +95,4 @@ The following procedure will create a webhook endpoint and update the webhook en
 
 ## 4 API Reference
 
-{{< swaggerui src="/openapi-spec/webhook.yaml"  >}}
+{{< swaggerui src="/openapi-spec/webhooks.yaml"  >}}

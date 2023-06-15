@@ -12,11 +12,9 @@ The **Board** page gives an overview of all the stories that your team is curren
 On the upper-right corner of the page, you can find the following items:
 
 * **Create Story** – Clicking this enables you to create a new story.
-* Ellipsis (**...**) –  – Clicking this shows the following items:
-  * **Create Epic**  – Clicking this enables you to create a new epic.
-  * **Project Buzz**  – Clicking this brings you to the [Buzz](/developerportal/collaborate/buzz/#app-buzz) page of the app
-
-* Search box – enables searching stories based on story title, tags, epic name, assignee (and unassigned stories), and story ID.
+* **Create Epic**  – Clicking this enables you to create a new epic.
+  
+* Search box – You can search stories based on story title, tags, epic name, assignee (and unassigned stories), and story ID.
 
 ## 2 Swimlanes
 

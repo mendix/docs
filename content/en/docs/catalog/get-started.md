@@ -6,6 +6,8 @@ linktitle: "Get Started"
 weight: 1
 description: "Describes initial steps beginning users can take with their Catalog."
 tags: ["data hub", "data hub catalog", "consume", "external entities", "asset", "entities", "data hub pane", "studio pro"]
+aliases:
+    - /data-hub/data-hub-catalog/get-started/
 ---
 
 ## 1 Introduction

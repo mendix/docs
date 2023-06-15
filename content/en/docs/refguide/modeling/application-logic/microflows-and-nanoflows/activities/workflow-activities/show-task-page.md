@@ -44,7 +44,9 @@ The user task object of the System.WorkflowUserTask entity available from the mi
 ### 3.2 Auto-Assign
 
 With this option, you can automatically assign the user task to the user who has opened the task page.
+
 For a [single user task](/refguide/user-task/), the auto assignment happens only if the user task has not been assigned to anyone yet.
+
 For a [multi-user task](/refguide/multi-user-task/), the auto assignment happens irrespective of whether the task was assigned before (to another user) or not.
 
 This option is enabled by default.

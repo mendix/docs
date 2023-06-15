@@ -28,7 +28,7 @@ The **Archive** page shows all the archived stories.
 
 If a feedback item was linked to your archived story, you will see it with a purple icon:
 
-{{< figure src="/attachments/developerportal/project-management/archive/archive.png" >}}
+{{< figure src="/attachments/developerportal/project-management/epics/archive/archive.png" >}}
 
 On the top of the page, you can search a story in the search box, based on story title, tags, epic name, and story ID.
 

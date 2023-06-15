@@ -12,14 +12,13 @@ This feature is in Public Beta.
 
 ## 1 Introduction
 
-If you are a Scrum Master of a Mendix app, you can link your app to Jira if you manage your project there. Once your app is connected to Jira, you have the option to associate your commit in Studio Pro to one or more stories created in Jira. 
+If you are a Scrum Master of a Mendix app, you can link your app to Jira if you manage your project there. Once your app is connected to Jira, you have the option to associate your commits in Studio Pro to one or more stories created in Jira. 
 
 ## 2 Features
 
 * Supports connecting your Mendix app to Jira
 * Enables you to migrate open stories (stories in any uncompleted Sprint or backlog, with the status "to-do" or "running") from the Developer Portal to Jira
 * Allows you to associate your commits in Studio Pro (version 7.19 or above) to Jira stories
-* Supports [Jira Cloud platform REST API version 3](https://developer.atlassian.com/cloud/jira/platform/rest/v3/intro/#about)
 
 ## 3 Limitations
 

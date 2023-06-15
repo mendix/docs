@@ -1,10 +1,10 @@
 ---
 title: "Webhooks API"
-url: /apidocs-mxsdk/apidocs/webhook/
+url: /apidocs-mxsdk/apidocs/webhooks/
 type: swagger
 category: "API Documentation"
 weight: 97
-tags: ["API", "deploy", "licensed", "deployment", "cloud"]
+tags: ["API", "webhooks", "Mendix Cloud"]
 ---
 
 {{% alert color="warning" %}} This feature is in Beta. For more information on Beta products, see [Beta Releases](/releasenotes/beta-features). {{% /alert %}}

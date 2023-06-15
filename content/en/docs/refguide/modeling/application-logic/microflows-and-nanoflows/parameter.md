@@ -32,6 +32,6 @@ Default: *Object*
 
 ## 4 Setting an Input Parameter as the Return Value
 
-To set a parameter as the [return value](/refguide/end-event/#return-value) of your microflow, right-click the parameter and select **Set $Parameter as return value**:
+To set a parameter as the [return value](/refguide/end-event/#return-value) of your microflow, right-click the parameter and select **Set $Parameter as return value** via the context menu:
 
 {{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/parameter/set-parameter-as-return-value.png" width="300px" >}}

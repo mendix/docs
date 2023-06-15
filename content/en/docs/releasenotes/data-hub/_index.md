@@ -79,7 +79,7 @@ These release notes cover changes made to the [Mendix Data Hub Catalog](/catalog
 
 #### Improvements
 
-* On the [Search](/catalog/search/) page, there are no default search filters anymore and filters are persistent per search session.
+* On the [Search](/catalog/manage-data-sources/search/) page, there are no default search filters anymore and filters are persistent per search session.
 
 ### February 16th, 2023
 

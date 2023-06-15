@@ -69,7 +69,7 @@ To invite a new user, on the Data Hub screen, click **Invite External Users**. I
 You can only invite users with a Mendix account. The invitation email will not be sent to email addresses that are not associated with any Mendix account.
 {{% /alert %}}
 
-Once the external user receives the invitation, they log into the Data Hub Catalog with their Mendix credentials and accept. An external user can only access resources from one organization at a time; therefore, they need to select the company that sent the invitation in the **Company** drop-down list in the Data Hub [Home](/data-hub/data-hub-catalog/#data-hub-home) page:
+Once the external user receives the invitation, they log into the Data Hub Catalog with their Mendix credentials and accept. An external user can only access resources from one organization at a time; therefore, they need to select the company that sent the invitation in the **Company** drop-down list in the Data Hub [Home](/catalog/#catalog-home) page:
 
 {{< figure src="/attachments/developerportal/control-center/data-hub-admin/company_selector.png" alt="Company selector" >}}
 

@@ -11,9 +11,9 @@ The **Planning** page shows all your stories.
 
 The main area of the **Planning** page lists all the stories in different categories. Each row represents a story:
 
-{{< figure src="/attachments/developerportal/project-management/planning/story-kanban.png" >}}
+{{< figure src="/attachments/developerportal/project-management/epics/planning/story-kanban.png" >}}
 
-A row shows the following information about a story:
+Each row shows the following information about a story:
 
 * Whether the story is a bug or a feature
 * If the story has a feedback item linked to it
@@ -26,16 +26,16 @@ A row shows the following information about a story:
 * Story points
 * To whom the story is assigned
 
-On the upper-left corner of the page, you can use the search box to search stories based on story title, tags, epic name, assignee (and unassigned stories), and story ID.
+On the upper-left corner of the page, you can use the search box to search stories based on story title, tags, epic name, assignee (including unassigned stories), and story ID.
 
 On the upper-right corner of the page, you can see two buttons:
 
 * **Create Story** – Clicking this enables you to create a new story.
 * Ellipsis (**...**) – Clicking this shows the following options:
   * **Create Epic** – This enable you to create an epic.
-  * **Edit Sprint** (only available for [Scrum planning](#scrum-planning)) – This enables you to edit the current Sprint.
-  * **End Sprint** (only available for [Scrum planning](#scrum-planning)) – This enables you to the current Sprint.
-  * **Start Sprint** (only available for [Scrum planning](#scrum-planning)) – This enables you to start a new Sprint.
+  * **Edit Sprint** (only available for [a Scrum workflow](#scrum-planning)) – This enables you to edit the current Sprint.
+  * **End Sprint** (only available for [a Scrum workflow](#scrum-planning)) – This enables you to the current Sprint.
+  * **Start Sprint** (only available for [a Scrum workflow](#scrum-planning)) – This enables you to start a new Sprint.
   * **Import Stories** – Clicking this enables you to import stories from an Excel file.
     * For more information, see the [Import Stories](#import-stories) section.
   * **Board Settings** – Clicking this enables you configure the board settings.
@@ -43,25 +43,25 @@ On the upper-right corner of the page, you can see two buttons:
 
 ### 1.1 Selecting, Moving, Archiving, and Deleting Stories 
 
-To select a story, select the checkbox for the story when the mouse pointer is a pointing hand:
+To select a story, select the checkbox for the story when the mouse pointer becomes a pointing hand:
 
- {{< figure src="/attachments/developerportal/project-management/planning/pointing-hand.png" width="30px" >}}
+ {{< figure src="/attachments/developerportal/project-management/epics/planning/pointing-hand.png" width="30px" >}}
 
 {{% alert color="info" %}}You can also use keyboard shortcuts to select multiple stories. For more information, see the [Keyboard Shortcuts](#keyboard-shortcuts) section.{{% /alert %}}
 
-To open the [story details](/developerportal/project-management/board/#story-details) page, click the row of the story when the mouse pointer is an open hand:
+To open the [story details](/developerportal/project-management/epics/board/#story-details) page, click the row of the story when the mouse pointer becomes an open hand:
 
-{{< figure src="/attachments/developerportal/project-management/planning/open-hand.png" width="30px" >}}
+{{< figure src="/attachments/developerportal/project-management/epics/planning/open-hand.png" width="30px" >}}
 
 To move a story, drag the story to a different category. 
 
 To move multiple stories, select these stories, choose the category name where they should go from the drop-down list at the bottom of the page, and then click **Move**.
 
-{{< figure src="/attachments/developerportal/project-management/planning/move-multiple-stories.png" >}}
+{{< figure src="/attachments/developerportal/project-management/epics/planning/move-multiple-stories.png" >}}
 
-To [archive](/developerportal/project-management/archive/) or delete a story, click the **...** icon at the end of the row, and then select the corresponding option:
+To [archive](/developerportal/project-management/epics/archive/) or delete a story, click the **...** icon at the end of the row, and then select the corresponding option:
 
-{{< figure src="/attachments/developerportal/project-management/planning/archive-delete-story-kanban.png" >}}
+{{< figure src="/attachments/developerportal/project-management/epics/planning/archive-delete-story-kanban.png" >}}
 
 To archive or delete multiple stories, select these stories, and then click the corresponding option at the bottom of the page.
 
@@ -69,29 +69,26 @@ To archive or delete multiple stories, select these stories, and then click the 
 
 For Windows, you can use the following keyboard shortcuts to select stories on the **Planning** page:
 
-* <kbd>Ctrl</kbd> + <kbd>A</kbd> – select all stories
-* <kbd>Ctrl</kbd> + <kbd>D</kbd> – cancel the selection of all stories
-* <kbd>Ctrl</kbd> + click – select multiple stories
-* <kbd>Shift</kbd> + click – select a range of stories
-
-For Mac, you can use the following keyboard shortcuts to select stories on the **Planning** page:
-
-* <kbd>Command</kbd> + <kbd>A</kbd> – select all stories
-* <kbd>Command</kbd> + <kbd>D</kbd> – cancel the selection of all stories
-* <kbd>Command</kbd> + click – select multiple stories
-* <kbd>Shift</kbd> + click – select a range of stories
+| Action                              | Windows                        | Mac                               |
+| ----------------------------------- | ------------------------------ | --------------------------------- |
+| Select all stories                  | <kbd>Ctrl</kbd> + <kbd>A</kbd> | <kbd>Ctrl</kbd> + <kbd>A</kbd>    |
+| Cancel the selection of all stories | <kbd>Ctrl</kbd> + <kbd>D</kbd> | <kbd>Command</kbd> + <kbd>D</kbd> |
+| Select multiple stories             | <kbd>Ctrl</kbd> + click        | <kbd>Command</kbd> + click        |
+| Select a range of stories           | <kbd>Shift</kbd> + click       | <kbd>Shift</kbd> + click          |
 
 ## 2 Scrum Planning vs Kanban Planning {#different-plannings}
 
-The **Planning** page offers different features to accommodate your Scrum workflow and Kanban workflow. Depending on your settings of board type – Scrum or Kanban, the **Planning** page looks a bit different.
+The **Planning** page offers different features to accommodate two different workflows: Scrum or Kanban. Depending on your choice of board type – Scrum or Kanban, the **Board** page looks a bit different.
+
+{{% alert color="info" %}}You can select your board type on the [Planning](/developerportal/project-management/epics/planning/#board-type) page.{{% /alert %}}
 
 ### 2.1 Scrum Planning {#scrum-planning}
 
-If your [board type](#board-type) is **Scrum**, you can find the features below which accommodate your workflow.
+If your board style is Scrum, you can find the features below which accommodate your Scrum workflow.
 
 If there is an active Sprint, on the upper-left corner, you can find the name of the Sprint, when it ends, and how many stories and points it has. If you hover over the goal icon, you can see the goal of the Sprint:
 
-{{< figure src="/attachments/developerportal/project-management/planning/scrum-planning.png" >}}
+{{< figure src="/attachments/developerportal/project-management/epics/planning/scrum-planning.png" >}}
 
 In the main area of the page, stories are grouped in these categories: **Active Sprint** (if there is an active Sprint), **Next Sprint**, **Refinement**, and **Backlog**.
 
@@ -106,9 +103,9 @@ On the upper-right corner, you can find these Scrum items if you click the **...
 
 ### 2.2 Kanban Planning {#kanban-planning}
 
-If your [board type](#board-type) is **Kanban**, the stories are grouped in these categories: **To Do**, **Refinement**, and **Backlog**. On the top of each category, you can see the total number of stories and points.
+If your board type is Kanban, the stories are grouped in these categories: **To Do**, **Refinement**, and **Backlog**. On the top of each category, you can see the total number of stories and points.
 
-{{< figure src="/attachments/developerportal/project-management/planning/kanban-planning.png" >}}
+{{< figure src="/attachments/developerportal/project-management/epics/planning/kanban-planning.png" >}}
 
 ## 3 Importing Stories {#import-stories}
 
@@ -116,7 +113,7 @@ You can import your stories using an Excel file to Epics as follows:
 
 1. On the upper-right corner of the **Planning** page, click **...** and then click **Import Stories**.
 
-   {{< figure src="/attachments/developerportal/project-management/planning/import-stories.png" >}}
+   {{< figure src="/attachments/developerportal/project-management/epics/planning/import-stories.png" >}}
 
    The **Import Stories From Excel** dialog box opens.
 
@@ -160,7 +157,7 @@ You can find all the imported stories in the **Backlog**.
 
 When you click **...** on the upper-right corner of the **Planning** page, and select **Board Settings**, a dialog box opens with four tabs: **Manage Tags**, **Board Type**, **Toast Settings**, and **Data Migration**. These tabs are described in the sections below.
 
-{{< figure src="/attachments/developerportal/project-management/planning/board-settings.png" >}}
+{{< figure src="/attachments/developerportal/project-management/epics/planning/board-settings.png" >}}
 
 ### 4.1 Managing Tags {#manage-tags}
 
@@ -182,7 +179,7 @@ On this tab, you can switch between a Scrum workflow and Kanban workflow. The wo
 
 On this tab, you can enable or disable the toast notifications that appear like this:
 
-{{< figure src="/attachments/developerportal/project-management/planning/toast-notification.png" width="500px" >}}
+{{< figure src="/attachments/developerportal/project-management/epics/planning/toast-notification.png" width="500px" >}}
 
 ### 4.4 Data Migration {#data-migration}
 
@@ -198,13 +195,13 @@ To migrate from Stories to Epics, follow these steps:
 
 2. Go to the **Data Migration** tab. Be sure to read the information before you click **Start Migration**:
 
-   {{< figure src="/attachments/developerportal/project-management/planning/data-migration-info.png" width="400px" >}}
+   {{< figure src="/attachments/developerportal/project-management/epics/planning/data-migration-info.png" width="400px" >}}
 
 3. Select the content you want to migrate.
 
    {{% alert color="warning" %}}Stories will become read-only once ALL sections have been migrated successfully. There is no further synchronization available between Developer Portal and Epics (or vice versa). After the migration is completed, the option to migrate is removed from Epics.{{% /alert %}}
 
-   {{< figure src="/attachments/developerportal/project-management/planning/data-migration-content.png" width="400px" >}}
+   {{< figure src="/attachments/developerportal/project-management/epics/planning/data-migration-content.png" width="400px" >}}
 
 4. A notification is sent in the Developer Portal's [top bar](/developerportal/#navigation) informing you of the status of the migration. An email is also sent with this information. You can open the [migration report](#migration-report) by clicking the notification or the button provided in the email.
 
@@ -228,11 +225,11 @@ These are the new details of migrated stories:
 
 For example, here is a Sprint with three stories from [Stories](/developerportal/collaborate/stories/):
 
-{{< figure src="/attachments/developerportal/project-management/planning/data-migration-example-stories.png" >}}
+{{< figure src="/attachments/developerportal/project-management/epics/planning/data-migration-example-stories.png" >}}
 
 Here is the outcome after migration:
 
-{{< figure src="/attachments/developerportal/project-management/planning/data-migration-example-epics.png" >}}
+{{< figure src="/attachments/developerportal/project-management/epics/planning/data-migration-example-epics.png" >}}
 
 Beside the story details above, the remaining details for your stories are migrated according to their equivalents in the [Project Management](/developerportal/project-management/) section in the Developer Portal.
 
@@ -244,11 +241,11 @@ The migration report is available a few seconds after the migration completes (t
 
 Click **View Migration Report**:
 
-{{< figure src="/attachments/developerportal/project-management/planning/migration-report-buttons.png" width="400px" >}}
+{{< figure src="/attachments/developerportal/project-management/epics/planning/migration-report-buttons.png" width="400px" >}}
 
 The migration report then opens:
 
-{{< figure src="/attachments/developerportal/project-management/planning/migration-report.png" width="600px" >}}
+{{< figure src="/attachments/developerportal/project-management/epics/planning/migration-report.png" width="600px" >}}
 
 The **Migration Configuration** section presents what you have selected to migrate and the status of that migration. 
 

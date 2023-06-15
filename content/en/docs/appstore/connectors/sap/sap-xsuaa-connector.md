@@ -27,7 +27,7 @@ When you deploy an application to SAP Business Technology Platform (SAP BTP) usi
 
 ## 2 Setup
 
-In this diagram, the relationship is shown between groups, roles, and users in relation to the Mendix application and the IDP:
+In this diagram, the relationship is shown between groups, roles, and users in relation to the Mendix application and the IdP:
 
 {{< figure src="/attachments/partners/sap/sap-xsuaa-connector/xsuaa-diagram.png" >}}
 

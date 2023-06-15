@@ -8,8 +8,8 @@ weight: 47
 tags: ["API", "epics", "project management"]
 ---
 
-{{% alert color="warning" %}}As of the GA release on December 1st, 2022, Epics is the default project management tool for all new apps. 
-You can still use [Stories](https://github.com/mendix/docs/blob/development/developerportal/collaborate/stories) in addition to Epics. However, Mendix recommends only using one tool at a time in an app, as using both will make data migration more difficult later.{{% /alert %}}
+{{% alert color="warning" %}}As of the GA release on December 1st, 2022, [Epics](/developerportal/project-management/epics/) is the default project management tool for all new apps. 
+You can still use [Stories](/developerportal/collaborate/stories/) in addition to Epics. However, Mendix recommends only using one tool at a time in an app, as using both will make data migration more difficult later.{{% /alert %}}
 
 ## 1 Introduction
 

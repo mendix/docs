@@ -9,11 +9,11 @@ description: "Describes how to use Epics for your app development."
 tags: ["Epics", "Sprint", "Developer Portal"]
 ---
 
+{{% alert color="warning" %}}As of the GA release on December 1st, 2022, Epics is the default place where you can manage the development process of new apps. </br> It is a replacement of [Stories](/developerportal/collaborate/stories/), which we plan to deprecate in the fall of 2023. You can still use Stories in addition to Epics. However, Mendix recommends not using both of them at the same time as it will make data migration more difficult later.{{% /alert %}}
+
 ## 1 Introduction
 
 The Epics tool enables your team members to collaborate efficiently during the app development process. It supports the Scrum workflow and Kanban workflow.
-
-{{% alert color="warning" %}}As of the GA release on December 1st, 2022, [Epics](/developerporta/project-management/epics/) is the default place where you can manage the development process of new apps. </br> It is a replacement of [Stories](/developerportal/collaborate/stories/), which we plan to deprecate in the fall of 2023. You can still use Stories in addition to Epics. However, Mendix recommends not using both of them at the same time as it will make data migration more difficult later.{{% /alert %}}
 
 ## 2 Getting Your Team Access to an App in Epics
 

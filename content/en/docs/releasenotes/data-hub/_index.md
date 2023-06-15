@@ -44,7 +44,7 @@ These release notes cover changes made to the [Mendix Data Hub Catalog](/data-hu
 
 #### Improvements
 
-* We made the authentication details on the [data source details](/data-hub/data-hub-catalog/search/#service-details) page more user friendly.
+* We made the authentication details on the [data source details](/catalog/manage-data-sources/search/#service-details) page more user friendly.
 
 #### Fixes
 
@@ -120,7 +120,7 @@ These release notes cover changes made to the [Mendix Data Hub Catalog](/data-hu
 
 #### Improvements
 
-* You can now edit data source details directly from the [asset details](/data-hub/data-hub-catalog/search/#service-details) page. In our [November 24th](#nov-24) release, we made it possible to edit dataset details from the same page. To learn more about data sources and datasets, see the [Selected Asset Details](/catalog/manage-data-sources/search/#search-details) section of *Search in the Data Hub Catalog*.
+* You can now edit data source details directly from the [asset details](/catalog/manage-data-sources/search/#service-details) page. In our [November 24th](#nov-24) release, we made it possible to edit dataset details from the same page. To learn more about data sources and datasets, see the [Selected Asset Details](/catalog/manage-data-sources/search/#search-details) section of *Search in the Data Hub Catalog*.
 
 #### Fixes
 
@@ -136,23 +136,23 @@ These release notes cover changes made to the [Mendix Data Hub Catalog](/data-hu
 
 #### Improvements
 
-* You can now edit dataset details directly from the [asset details](/data-hub/data-hub-catalog/search/#service-details) page.
+* You can now edit dataset details directly from the [asset details](/catalog/manage-data-sources/search/#service-details) page.
 
 #### Fixes
 
-* We fixed an issue with the display of services with anonymous access in the [asset details](/data-hub/data-hub-catalog/search/#service-details) page.
+* We fixed an issue with the display of services with anonymous access in the [asset details](/catalog/manage-data-sources/search/#service-details) page.
 
 ### November 17th, 2022
 
 #### Improvements
 
-* You can now request access to a data source directly from the [asset details](/data-hub/data-hub-catalog/search/#service-details) page. Click **Request access** in the **Authentication** section to open a draft email to the owner.
+* You can now request access to a data source directly from the [asset details](/catalog/manage-data-sources/search/#service-details) page. Click **Request access** in the **Authentication** section to open a draft email to the owner.
 
 ### November 10th, 2022
 
 #### Improvements
 
-* You can now view authentication details in the [data source details](/data-hub/data-hub-catalog/search/#service-details) page. 
+* You can now view authentication details in the [data source details](/catalog/manage-data-sources/search/#service-details) page. 
 * The **Technical Owner** can now only be changed in the **Control Center**, not within the **Data Hub Catalog**. See the [Custom Owners](/developerportal/control-center/data-hub-admin/#custom-owners) section of *Data Hub Administration*.
 
 #### Fixes
@@ -573,7 +573,7 @@ These release notes cover changes made to the [Mendix Data Hub Catalog](/data-hu
 
 #### Fixes
 
-* We fixed an issue where the [Business Owner](/data-hub/data-hub-catalog/search/#busines-owner) name was not visible in the metadata of a data source.
+* We fixed an issue where the [Business Owner](/catalog/manage-data-sources/search/#busines-owner) name was not visible in the metadata of a data source.
 * We removed the temporary administration link from the home page. The owner management page is now available from the [Curate](/catalog/manage-data-sources/curate/) tab for Data Hub Curators and from the [Administration](/developerportal/control-center/data-hub-admin/#custom-owners) page in Control Center for Mendix Administrators.
 
 ### October 14th, 2021
@@ -711,8 +711,8 @@ These release notes cover changes made to the [Mendix Data Hub Catalog](/data-hu
 
 #### Improvements
 
-* In the search input boxes on the [Search result](/data-hub/data-hub-catalog/search/#search-results) listings and [Data Hub Home](/data-hub/data-hub-catalog/#data-hub-home) page, the magnifying glass now appears on the right side.
-* In the [Search result](/data-hub/data-hub-catalog/search/#search-results) listings, the filters have been restyled.
+* In the search input boxes on the [Search result](/catalog/manage-data-sources/search/#search-results) listings and [Data Hub Home](/data-hub/data-hub-catalog/#data-hub-home) page, the magnifying glass now appears on the right side.
+* In the [Search result](/catalog/manage-data-sources/search/#search-results) listings, the filters have been restyled.
 * All cancel and discard buttons now have matching styles for improved usability.
 
 ### June 3rd, 2021
@@ -732,13 +732,13 @@ These release notes cover changes made to the [Mendix Data Hub Catalog](/data-hu
 #### Improvements
 
 * **Mindsphere** applications are now indicated with the display of the Mindsphere logo for all associated assets in the Catalog.
-* In the [Search result](/data-hub/data-hub-catalog/search/#search-results) listings, the service version number is no longer next to the data source name, it is now displayed below it.
+* In the [Search result](/catalog/manage-data-sources/search/#search-results) listings, the service version number is no longer next to the data source name, it is now displayed below it.
 
 ### May 12th, 2021
 
 #### Improvements
 
-* Datasets in the [search results list](/data-hub/data-hub-catalog/search/#search-results) that are validated are now clearly indicated as such.
+* Datasets in the [search results list](/catalog/manage-data-sources/search/#search-results) that are validated are now clearly indicated as such.
 * Custom owners can be added for an application when [registering data sources](/catalog/register-data-sources/register-data/) using the business application connectors from the **Data Hub Home**.
 * Further styling changes have been made to improve usability.
 
@@ -758,7 +758,7 @@ The [Data Hub Transform API](https://datahub-spec.s3.eu-central-1.amazonaws.com/
 
 #### Improvements
 
-* [Search result](/data-hub/data-hub-catalog/search/#search-results) listings in Data Hub Catalog have been improved.  Data sources and datasets that are set as [Validated](/catalog/manage-data-sources/curate/#validated) will appear above assets that are not validated.
+* [Search result](/catalog/manage-data-sources/search/#search-results) listings in Data Hub Catalog have been improved.  Data sources and datasets that are set as [Validated](/catalog/manage-data-sources/curate/#validated) will appear above assets that are not validated.
 
 ### April 1st, 2021
 
@@ -813,7 +813,7 @@ The [Data Hub Transform API](https://datahub-spec.s3.eu-central-1.amazonaws.com/
 
 #### New Features
 
-* You can download the OData service contract for a registered data source from the [asset details](/data-hub/data-hub-catalog/search/#download-contract) in the Data Hub Catalog. The set of files that make up the contract will be downloaded as a ***.zip*** file.
+* You can download the OData service contract for a registered data source from the [asset details](/catalog/manage-data-sources/search/#download-contract) in the Data Hub Catalog. The set of files that make up the contract will be downloaded as a ***.zip*** file.
 
 #### Improvements
 
@@ -859,7 +859,7 @@ The [Data Hub Transform API](https://datahub-spec.s3.eu-central-1.amazonaws.com/
 
 #### Improvements
 
-* The Service [Metadata](/data-hub/data-hub-catalog/search/#metadata) panel on the right side of the the Data Hub Catalog search details page has been reorganized to improve the grouping of the information.
+* The Service [Metadata](/catalog/manage-data-sources/search/#metadata) panel on the right side of the the Data Hub Catalog search details page has been reorganized to improve the grouping of the information.
 
 #### Fixes
 
@@ -886,15 +886,15 @@ The [Data Hub Transform API](https://datahub-spec.s3.eu-central-1.amazonaws.com/
 
 #### Improvements
 
-* In the Data Hub **Catalog** search pane, we now show the number of  [filters](/data-hub/data-hub-catalog/search/#filter) that are active for the current search at the filter icon.
+* In the Data Hub **Catalog** search pane, we now show the number of  [filters](/catalog/manage-data-sources/search/#filter) that are active for the current search at the filter icon.
 
 ### October 29th, 2020
 
 #### Improvements
 
 * In [Landscape](/data-hub/data-hub-landscape/) nodes are now static and cannot be dragged around the display. To see other parts of of the selected assets network, you can pan and zoom using the mouse.
-* In Data Hub **Catalog** by default, the [search filter](/data-hub/data-hub-catalog/search/#filter) is set to show results in the **Production** environment only. To include hits in **Non-production** or **Sandbox** environments you have to check these boxes in the **Add Filters** dialog box.
-* The [entity details](/data-hub/data-hub-catalog/search/#entity-details) screen now displays the number of connections to the individual entity. The service details continue to show the total number of connections to the service.
+* In Data Hub **Catalog** by default, the [search filter](/catalog/manage-data-sources/search/#filter) is set to show results in the **Production** environment only. To include hits in **Non-production** or **Sandbox** environments you have to check these boxes in the **Add Filters** dialog box.
+* The [entity details](/catalog/manage-data-sources/search/#entity-details) screen now displays the number of connections to the individual entity. The service details continue to show the total number of connections to the service.
 
 ### October 8th, 2020
 

@@ -50,7 +50,7 @@ The functionality of the Data Hub reflects the process of sharing data in an org
 
 Users can find shared datasets by searching the Data Hub Catalog. The [search](/data-hub/data-hub-catalog/search/) features include results that are project-relevant in order of most popular services, and results can be refined by using filters. Full details of the registered services are displayed to help in deciding on the suitability of the data associated with a registered dataset.
 
-Use the Data Hub to find suitable data sources to integrate into your other enterprise applications by clicking [Copy Data Source URI](/data-hub/data-hub-catalog/search/#service-details).
+Use the Data Hub to find suitable data sources to integrate into your other enterprise applications by clicking [Copy Data Source URI](/catalog/manage-data-sources/search/#service-details).
 
 The Data Hub Catalog search functionality is integrated into Mendix Studio Pro through the [Data Hub pane](/refguide/data-hub-pane/) for finding registered services and datasets to use when developing apps.
 

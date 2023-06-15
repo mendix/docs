@@ -14,7 +14,7 @@ The Data Hub Catalog is a catalog of OData services exposing datasets that you c
 
 ## 2 Using Registered Assets in Your App {#consuming-services-entities}
 
-You can use the Catalog or the [Data Hub pane](/refguide/data-hub-pane/) in Studio Pro to find registered data sources. Click [Copy Data Source URI](/data-hub/data-hub-catalog/search/#service-details) to  obtain the OData service URI, which can be used in other enterprise applications.
+You can use the Catalog or the [Data Hub pane](/refguide/data-hub-pane/) in Studio Pro to find registered data sources. Click [Copy Data Source URI](/catalog/manage-data-sources/search/#service-details) to  obtain the OData service URI, which can be used in other enterprise applications.
 
 The following sections summarize important points to consider when using OData services and registered datasets in your apps in Studio Pro.
 

@@ -355,4 +355,4 @@ Folders in a ZIP contract are relative to the Document Base URL.
 
 See the ZIP structure example for reference:
 
-{{< figure src="/attachments/catalog/register-data-sources/register-data/zip-file-structure.png" >}}
+{{< figure src="/attachments/data-hub/data-hub-catalog/register-data/zip-file-structure.png" >}}

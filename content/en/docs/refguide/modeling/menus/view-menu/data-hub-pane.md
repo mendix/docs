@@ -81,7 +81,7 @@ The search results and **User in your App** section show the following informati
 
 * **Green check-mark** if the service or entity is consumed in the app. If you right-click a consumed service, you can do the following:
 
-    * **View in Data Hub Catalog** – click this to go to the [data source details](/data-hub/data-hub-catalog/search/#service-details) page in the Data Hub Catalog
+    * **View in Data Hub Catalog** – click this to go to the [data source details](/catalog/manage-data-sources/search/#service-details) page in the Data Hub Catalog
     * **Go to connection settings** – click this to open the [consumed OData service](/refguide/consumed-odata-service/) document
 
         {{< figure src="/attachments/refguide/modeling/menus/view-menu/data-hub-pane/data-hub-pane-menu.png" alt="info on a Service" >}}

@@ -1,7 +1,9 @@
 ---
 title: "Register Data Sources"
-url: /data-hub/data-hub-catalog/register-data-sources/
+url: /catalog/register-data-sources/
 weight: 10
+aliases:
+    - /data-hub/data-hub-catalog/register-data-sources/
 ---
 ## Introduction
 

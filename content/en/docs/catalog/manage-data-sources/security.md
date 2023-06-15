@@ -1,8 +1,10 @@
 ---
 title: "Data Accessibility and Security"
-url: /data-hub/data-hub-catalog/security/
+url: /catalog/manage-data-sources/security/
 description: "Describes security aspects around registered assets and access in Mendix Data Hub."
 tags: ["data hub", "data hub catalog", "security", "entity security", "dataset security","odata service security"]
+aliases:
+    - /data-hub/data-hub-catalog/security/
 ---
 
 ## 1 Introduction

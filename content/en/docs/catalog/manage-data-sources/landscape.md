@@ -1,6 +1,6 @@
 ---
 title: "Data Hub Landscape"
-url: /catalog/landscape/
+url: /catalog/manage-data-sources/landscape/
 description: "Describes how to the Data Hub Landscape to explore the connections with registered assets."
 tags: ["data hub catalog", "data hub", "external entities", "landscape", "published odata service"]
 weight: 40

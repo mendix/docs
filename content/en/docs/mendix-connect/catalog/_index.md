@@ -1,5 +1,5 @@
 ---
-title: "Mendix Connect Catalog"
+title: "Catalog"
 url: /mendix-connect/catalog/
 description: "Describes the processes and properties of Mendix Connect Catalog."
 weight: 1
@@ -35,7 +35,7 @@ From the **Home** screen, you can do the following:
 
 Data Hub is also integrated in Mendix Studio Pro to find and connect to shared data sources in your apps. For further details on using Data Hub in Studio Pro, see [Data Hub Pane](/refguide/data-hub-pane/) in the *Studio Pro Guide*.
 
-## 3 Using Mendix Data Hub
+## 3 Using the Catalog
 
 The functionality of the Data Hub reflects the process of sharing data in an organization through APIs from different systems in an enterprise. The sections below describe the processes involved.
 

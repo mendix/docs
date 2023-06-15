@@ -25,7 +25,7 @@ The **Portfolio Landscape Overview** page contains two sections: **My Portfolios
 
 **My Portfolios** shows all the portfolios to which you have access. Clicking a portfolio card [opens the portfolio](#open-portfolio).
 
-**Company Portfolios** show all the portfolios in your company that are discoverable and to which you do not have access. Clicking a portfolio card shows more details about the portfolio.
+**Company Portfolios** shows all the portfolios in your company that are discoverable and to which you do not have access. Clicking a portfolio card shows more details about the portfolio. You can request access to a portfolio by clicking on **Request to Join** on the portfolio card. A Portfolio Manager needs to approve this [Access Request](#access-requests).
 
 {{% alert color="info" %}}Whether a portfolio is discoverable in the **Company Portfolios** section depends on its **Privacy Settings** on the [Portfolio Settings](#portfolio-settings) page.{{% /alert %}}
 
@@ -33,13 +33,13 @@ The **Portfolio Landscape Overview** page contains two sections: **My Portfolios
 
 On the **Portfolio Landscape Overview** page, you can create a new portfolio as follows:
 
-1. On the upper-right corner of the page, click **New Portfolio**. The **New Portfolio** dialog box opens.
+1. On the upper-right corner of the page, click **Create Portfolio**. The **New Portfolio** dialog box opens.
 2. Enter **Portfolio Name** and **Description** for the new portfolio.
 3. For **Privacy Settings**, select **Private** or **Restricted**:
 
     * **Private** – If the portfolio is private, it is not discoverable in the **Company Portfolios** section of the [Portfolio Landscape Overview](#portfolio-landscape) page in the Portfolio Management app. People who want to access a private portfolio need an invitation.
 
-    * **Restricted** – If a portfolio is restricted, it is discoverable in the **Company Portfolios** section of the [Portfolio Landscape Overview](#portfolio-landscape) page in the Portfolio Management app. People who want to access a private portfolio need an invitation.
+    * **Restricted** – If a portfolio is restricted, it is discoverable in the **Company Portfolios** section of the [Portfolio Landscape Overview](#portfolio-landscape) page in the Portfolio Management app. People who want to access a restricted portfolio need an invitation or can request access.
 
      {{% alert color="info" %}}If the toggle on the [Privacy Requests](/developerportal/control-center/#privacy-requests) tab is turned on in the Control Center, a Mendix Admin needs to approve the creation of a restricted portfolio. In that case, a Mendix Admin will receive a notification about your request and can approve or reject your request from the [Control Center](/developerportal/control-center/#privacy-requests). The **Private Settings** of the portfolio will be **Private** until a Mendix Admin approves your request.{{% /alert %}}
 
@@ -58,7 +58,7 @@ In the **Portfolio Landscape Overview** page, when you click a portfolio card in
 Clicking a menu item opens the corresponding page:
 
 * [Initiatives Overview](#initiatives-overview)
-* [Archived Initiatives](#archived-initiatives)
+* [Archive](#archived-initiatives)
 * [Access Management](#access-management)
 * [Portfolio Settings](#portfolio-settings) (only available for Portfolio Managers)
 
@@ -70,9 +70,11 @@ In the Portfolio Management app, the term "Initiative" represents a business obj
 
 The **Initiatives Overview** page gives an overview of all the initiatives in this portfolio.
 
+{{< figure src="/attachments/developerportal/portfolio-management/initiatives-overview.png" >}}
+
 In the search box, you can search for an initiative by the initiative name.
 
-On the upper-right corner, you can use the **Filters** to filter initiatives. Using the drop-down list next to the **Filters**, you can [change your view](#change-view). Clicking the **Create New Initiative** button allows you to [create a new initiative](#create-new-initiative).
+On the upper-right corner, you can use the **Filters** to filter initiatives. Using the drop-down list next to the **Filters**, you can [change your view](#change-view). Clicking the **Create Initiative** button allows you to [create a new initiative](#create-new-initiative).
 
 ### 3.1 Creating a New Initiative {#create-new-initiative}
 
@@ -93,7 +95,7 @@ To create a new initiative and add details to it, do as follows:
 To create a new initiative, follow these steps:
 
 1. Go to the **Initiatives Overview** page.
-2. Click **Create New Initiative**.
+2. Click **Create Initiative**.
 3. Enter the **Initiative Name** and the **Stage** in which the initiative is. 
 4. Click **Create Initiative**. The initiative is created and appears on the **Initiatives Overview** page. The **Edit Initiative** side pane opens on the right side of the page where you can add the details of the new initiative.
 
@@ -159,9 +161,9 @@ To delete an existing tag, do as follows:
 
 In the **Edit Initiative** side pane, click **Planning** to show all the fields in this section. Set the following dates in this section:
 
-* **Intake** – the time when the initiative is accepted based on business requirements
-* **Start Date** – the time when the first actions are taken to start implementation
-* **Go-Live date** – the time when the app is expected to be up and running
+* **Intake Date** – the date when the initiative is accepted based on business requirements
+* **Start Date** – the date when the first actions are taken to start implementation
+* **Go-Live date** – the date when the app is expected to be up and running
 
 Now you can proceed to [add prioritization information](#add-prioritization-information).
 
@@ -183,7 +185,7 @@ In the **Edit Initiative** side pane, click **Estimated Value** to show all the 
   
     {{% alert color="info" %}}A Portfolio Manager can customize the options for **Type of Value** on the [Portfolio Settings](#portfolio-settings) page.{{% /alert %}}
     
-* **Frequency** – Select whether the value is **Once-off** or **Recurring**.
+* **Frequency** – Select whether the value is **One-Off** or **Recurring**.
 * **Value** – Enter the amount of the value in numbers. Use a comma every third digit from the right (for example, *1,000,000*)
 * **Additional Information** – Enter anything that can help clarify how estimated value may impact the overall costs of the initiative.
 
@@ -213,7 +215,7 @@ To change your view on the **Initiatives Overview** page, click the drop-down li
 
 #### 3.2.1 Kanban View {#kanban-view}
 
-In Kanban view, all the initiatives are represented by initiative cards, and are categorized in different columns. A column indicates a the stage that an initiative is currently in. To move an initiative to a different stage, hover over the initiative card, and then click the **>** or **<** icon on the left or right side of the card. 
+In Kanban view, all the initiatives are represented by initiative cards, and are categorized in different columns. A column indicates the stage that an initiative is currently in. Clicking on an initiative card opens a [side pane](#view-initiative) that shows initiative details. To move an initiative to a different stage, hover over the initiative card, and then click the **>** or **<** icon on the left or right side of the card.
 
 {{% alert type="info" %}}A Portfolio Manager can set up custom stages for initiatives on the [Portfolio Settings](#portfolio-settings) page.{{% /alert %}}
 
@@ -223,7 +225,7 @@ Each initiative card shows the following information:
 
 {{< figure src="/attachments/developerportal/portfolio-management/initiative-card.png" >}}
 
-* ① Initiative name  – Clicking this opens a [side pane](#view-initiative) that shows initiative details.
+* ① Initiative name
 * ② Ellipsis (**...**) – Clicking this button opens a menu that enables you to [edit](#edit-delete-initiative), [archive](#archive-initiative), or [delete](#edit-delete-initiative) the initiative.
   
     {{% alert type="info" %}}Both Portfolio Managers and Contributors can edit, archive, or delete an initiative. Only Viewers cannot do these actions. For more information on roles and permissions, see [Access Management](#access-management).{{% /alert %}}
@@ -231,9 +233,9 @@ Each initiative card shows the following information:
 * ③ Tags for the initiative – these tags are used to classify the initiative (tags can be used, for example, to indicate the types of initiatives)
 * ④ Department – the department to which the initiative belongs
 * ⑤ Calendar icon – hovering over the icon shows the following defined dates of the initiative lifecycle:
-    * **Intake** – the time when the initiative is accepted based on business requirements
-    * **Start Date** – the time when the first actions are taken to start implementation
-    * **Go-Live Date** – the time when the app is expected to be up and running
+    * **Intake** – the date when the initiative is accepted based on business requirements
+    * **Start** – the date when the first actions are taken to start implementation
+    * **Go-Live** – the date when the app is expected to be up and running
 * ⑥ Icon of the linked app – clicking this shows the information about the Mendix app that is linked with the initiative
 * ⑦ Avatar of the initiative owner – hovering over the avatar shows the name of the initiative owner
 
@@ -245,17 +247,17 @@ In the list view, initiatives are shown in a list. Clicking the header of a colu
 
 The list contains the following information:
 
-* **Initiative name** – Clicking this opens a [side pane](#view-initiative) that shows initiative details.
+* **Initiative Name** – Clicking this opens a [side pane](#view-initiative) that shows initiative details.
 * **Department** – This shows the department to which the initiative belongs.
 * **Stage** – This shows the stage the initiative is currently in.
    
     {{% alert type="info" %}}A Portfolio Manager can set up custom stages for initiatives on the [Portfolio Settings](#portfolio-settings) page.{{% /alert %}}
     
-* **Intake** – This shows the time when the initiative is accepted based on business requirements.
-* **Start Date** – This shows the time when the first actions are taken to start implementation.
-* **Go-Live Date** – This shows the time when the app is expected to be up and running.
-* **Linked App** – Clicking this shows the information about the Mendix app linked with the initiative.
-* **Owner** –  This shows the name of the initiative owner.
+* **Intake Date** – This shows the date when the initiative is accepted based on business requirements.
+* **Start Date** – This shows the date when the first actions are taken to start implementation.
+* **Go-Live Date** – This shows the date when the app is expected to be up and running.
+* Icon of the linked app – Clicking this shows the information about the Mendix app that is linked with the initiative.
+* Avatar of the initiative owner – Hovering over the avatar shows the name of the initiative owner.
 * Ellipsis (**...**) – Clicking this button opens a menu that enables you to [edit](#edit-delete-initiative), [archive](#archive-initiative), or [delete](#edit-delete-initiative) the initiative.
   
     {{% alert type="info" %}}Both Portfolio Managers and Contributors can edit, archive, or delete an initiative. Only Viewers cannot do these actions. For more information on roles and permissions, see [Access Management](#access-management).{{% /alert %}}
@@ -268,8 +270,7 @@ In the WSJF prioritization view, all the initiatives are sequenced by their WSJF
 
 The list contains the following information:
 
-* **Initiative** – Clicking it opens a [side pane](#view-initiative) that shows initiative details.
-
+* **Initiative Name** – Clicking it opens a [side pane](#view-initiative) that shows initiative details.
 * **Stage** – This shows which stage the initiative is currently in.
 
   {{% alert type="info" %}}A Portfolio Manager can set up custom stages for initiatives on the [Portfolio Settings](#portfolio-settings) page.{{% /alert %}}
@@ -279,6 +280,12 @@ The list contains the following information:
 * **Risk Reduction** – This indicates how much this initiative will help mitigate or reduce future risks. You can select **Highest**, **High**, **Medium**, **Low**, or **Lowest**.
 * **Size** – This is the job size of the initiative. You can select **XL**, **L**, **M**, **S**, or **XS**.
 * **Score** – This is the WSJF score of the initiative.
+* Calendar icon – Hovering over the icon shows the following defined dates of the initiative lifecycle:
+    * **Intake** – This is the date when the initiative is accepted based on business requirements.
+    * **Start** – This is the date when the first actions are taken to start implementation.
+    * **Go-Live** – This is the date when the app is expected to be up and running.
+* Icon of the linked app – Clicking this shows the information about the Mendix app that is linked with the initiative.
+* Avatar of the initiative owner – Hovering over the avatar shows the name of the initiative owner.
 * Ellipsis (**...**) – Clicking this button opens a menu that enables you to [edit](#edit-delete-initiative), [archive](#archive-initiative), or [delete](#edit-delete-initiative) the initiative.
   
     {{% alert type="info" %}}Both Portfolio Managers and Contributors can edit, archive, or delete an initiative. Only Viewers cannot do these actions. For more information on roles and permissions, see [Access Management](#access-management).{{% /alert %}}
@@ -291,7 +298,7 @@ In the RICE prioritization view, all the initiatives are sequenced by their RICE
 
 The list contains the following information:
 
-* **Initiative** – Clicking this opens a [side pane](#view-initiative) that shows initiative details.
+* **Initiative Name** – Clicking this opens a [side pane](#view-initiative) that shows initiative details.
 * **Stage** – This shows which stage the initiative is currently in.
   
     {{% alert type="info" %}}A Portfolio Manager can set up custom stages for initiatives on the [Portfolio Settings](#portfolio-settings) page.{{% /alert %}}
@@ -302,14 +309,14 @@ The list contains the following information:
 * **Effort** – This is the estimated total amount of time that the initiative will require from all members of your team: product, design, and development. You must enter an integer in this field.
 * **Score** – This is the RICE score of the initiative.
 * Calendar icon – Hovering over the icon shows the following defined dates of the initiative lifecycle:
-    * **Intake** – This is the time when the initiative is accepted based on business requirements.
-    * **Start Date** – This is the time when the first actions are taken to start implementation.
-    * **Go-Live Date** – This is the time when the app is expected to be up and running.
+    * **Intake** – This is the date when the initiative is accepted based on business requirements.
+    * **Start** – This is the date when the first actions are taken to start implementation.
+    * **Go-Live** – This is the date when the app is expected to be up and running.
 * Icon of the linked app – Clicking this shows the information about the Mendix app that is linked with the initiative.
 * Avatar of the initiative owner – Hovering over the avatar shows the name of the initiative owner.
 * Ellipsis (**...**) – Clicking this button opens a menu that enables you to [edit](#edit-delete-initiative), [archive](#archive-initiative), or [delete](#edit-delete-initiative) the initiative.
   
-    {{% alert type="info" %}}Both Portfolio Managers and Contributors can edit, archive, or delete an initiative. Only Viewers cannot do these actions. For more information on roles and permissions, see [Access Management](#access-management)).{{% /alert %}}
+    {{% alert type="info" %}}Both Portfolio Managers and Contributors can edit, archive, or delete an initiative. Only Viewers cannot do these actions. For more information on roles and permissions, see [Access Management](#access-management).{{% /alert %}}
 
 ### 3.3 Viewing Initiative Details {#view-initiative}
 
@@ -350,11 +357,11 @@ To archive an initiative, perform the following steps:
 
     {{< figure src="/attachments/developerportal/portfolio-management/archive-dialog-box.png" >}}
 
-A pop-up window opens and tells you that the initiative is successfully archived. Once the initiative is archived, you can find it on the [Archived Initiatives](#archived-initiatives) page.
+A pop-up window opens and tells you that the initiative is successfully archived. Once the initiative is archived, you can find it on the [Archive](#archived-initiatives) page.
 
-## 4 Archived Initiatives {#archived-initiatives}
+## 4 Archive {#archived-initiatives}
 
-The **Archived Initiatives** page shows all the initiatives that are archived. You can search for an initiative in the search bar. 
+The **Archive** page shows all the initiatives that are archived. You can search for an initiative in the search bar. 
 
 {{< figure src="/attachments/developerportal/portfolio-management/archived-initiatives.png" >}}
 
@@ -365,13 +372,13 @@ The list contains the following information:
     {{% alert type="info" %}}When you view the details of an archived initiative, you can only **Post Comment**. You cannot edit any other information.{{% /alert %}}
 
 * **Department** – the department to which the initiative belongs
-* **Stage** – which stage the initiative is currently in
-* **Archiving reason** – the reason why the initiative was archived
-* **Archived date** – the date when the initiative was archived
-* **Archived by** – the name of the person who archived the initiative
+* **Stage** – which stage the initiative was in when it was archived
+* **Archiving Reason** – the reason why the initiative was archived
+* **Archived Date** – the date when the initiative was archived
+* **Archived By** – the avatar of the user who archived the initiative
 * Ellipsis (**...**) icon – clicking this opens a menu that enables you to [restore](#restore-delete-archived-initiative) or [delete](#restore-delete-archived-initiative) the archived initiative
   
-    {{% alert type="info" %}}Both Portfolio Managers and Contributors can restore or delete an initiative. Only Viewers cannot do these actions. For more information on roles and permissions, see [Access Management](#access-management).{{% /alert %}}
+    {{% alert type="info" %}}Both Portfolio Managers and Contributors can restore or delete an archived initiative. Only Viewers cannot do these actions. For more information on roles and permissions, see [Access Management](#access-management).{{% /alert %}}
 
 ### 4.1 Restoring or Deleting an Archived Initiative {#restore-delete-archived-initiative}
 
@@ -379,13 +386,13 @@ The list contains the following information:
 Both Portfolio Managers and Contributors can restore or delete an archived initiative. Only Viewers cannot do these actions. For more information on roles and permissions, see [Access Management](#access-management).
 {{% /alert %}}
 
-To restore or delete an archived initiative, go to the **Archived Initiatives** page, click the ellipsis button (**...**) for that initiative, and then select **Restore** or **Delete**. After you restore an archived initiative, it goes back to the [Initiatives Overview](#initiatives-overview) page.
+To restore or delete an archived initiative, go to the **Archive** page, click the ellipsis button (**...**) for that initiative, and then select **Restore** or **Delete**. After you restore an archived initiative, it goes back to the [Initiatives Overview](#initiatives-overview) page.
 
 Alternatively, to delete an archived initiative, you can also click the ellipsis button (**...**) in the side pane where you view the archived initiative details, and then select **Delete**.
 
 ## 5 Access Management {#access-management}
 
-The **Access Management** page shows all the users who have access to this portfolio. 
+The **Access Management** page shows all the users who have access to this portfolio. Portfolio Managers can see [Access Requests](#access-requests) by clicking on the **Access Requests** tab. This tab is not visible for Contributors, and Viewers.
 
 {{< figure src="/attachments/developerportal/portfolio-management/access-management.png" >}}
 
@@ -395,12 +402,12 @@ The table below shows the permissions of Portfolio Managers, Contributors and Vi
 
 | Action | Portfolio Manager | Contributor | Viewer |
 | --- | --- | --- | --- |
-| Invite new users | {{< figure src="/attachments/developerportal/portfolio-management/check-mark.svg" >}} | {{< figure src="/attachments/developerportal/portfolio-management/cross-mark.svg" >}} | {{< figure src="/attachments/developerportal/portfolio-management/cross-mark.svg" >}} |
+| Invite users | {{< figure src="/attachments/developerportal/portfolio-management/check-mark.svg" >}} | {{< figure src="/attachments/developerportal/portfolio-management/cross-mark.svg" >}} | {{< figure src="/attachments/developerportal/portfolio-management/cross-mark.svg" >}} |
 | Remove user permissions and roles | {{< figure src="/attachments/developerportal/portfolio-management/check-mark.svg" >}} | {{< figure src="/attachments/developerportal/portfolio-management/cross-mark.svg" >}} | {{< figure src="/attachments/developerportal/portfolio-management/cross-mark.svg" >}} |
 | Update user permissions and roles | {{< figure src="/attachments/developerportal/portfolio-management/check-mark.svg" >}} | {{< figure src="/attachments/developerportal/portfolio-management/cross-mark.svg" >}} | {{< figure src="/attachments/developerportal/portfolio-management/cross-mark.svg" >}} |
 | View user access information | {{< figure src="/attachments/developerportal/portfolio-management/check-mark.svg" >}} | {{< figure src="/attachments/developerportal/portfolio-management/check-mark.svg" >}} | {{< figure src="/attachments/developerportal/portfolio-management/check-mark.svg" >}} |
 | Manage portfolio settings | {{< figure src="/attachments/developerportal/portfolio-management/check-mark.svg" >}} | {{< figure src="/attachments/developerportal/portfolio-management/cross-mark.svg" >}} | {{< figure src="/attachments/developerportal/portfolio-management/cross-mark.svg" >}} |
-| Delete the Portfolio | {{< figure src="/attachments/developerportal/portfolio-management/check-mark.svg" >}} | {{< figure src="/attachments/developerportal/portfolio-management/cross-mark.svg" >}} | {{< figure src="/attachments/developerportal/portfolio-management/cross-mark.svg" >}} |
+| Delete the portfolio | {{< figure src="/attachments/developerportal/portfolio-management/check-mark.svg" >}} | {{< figure src="/attachments/developerportal/portfolio-management/cross-mark.svg" >}} | {{< figure src="/attachments/developerportal/portfolio-management/cross-mark.svg" >}} |
 | Create new initiatives | {{< figure src="/attachments/developerportal/portfolio-management/check-mark.svg" >}} | {{< figure src="/attachments/developerportal/portfolio-management/check-mark.svg" >}} | {{< figure src="/attachments/developerportal/portfolio-management/cross-mark.svg" >}} |
 | Edit existing initiatives | {{< figure src="/attachments/developerportal/portfolio-management/check-mark.svg" >}} | {{< figure src="/attachments/developerportal/portfolio-management/check-mark.svg" >}} | {{< figure src="/attachments/developerportal/portfolio-management/cross-mark.svg" >}} |
 | Archive and restore initiatives | {{< figure src="/attachments/developerportal/portfolio-management/check-mark.svg" >}} | {{< figure src="/attachments/developerportal/portfolio-management/check-mark.svg" >}} | {{< figure src="/attachments/developerportal/portfolio-management/cross-mark.svg" >}} |
@@ -419,16 +426,16 @@ The table below shows the permissions of Portfolio Managers, Contributors and Vi
 {{% alert color="info" %}}Only [Portfolio Managers](#access-management) can add new users.{{% /alert %}}
 
 1. Go to **Access Management**.
-2. On the upper-right corner, click **Add New Users**.
-3. In the dialog box, enter the **Email Address** of the user who you want to invite. They can be someone within your company or outside your company. For users outside your company, their names and profile pictures are not displayed.
-4. Select an **Access Role** for the user – **Portfolio Manager**, **Contributor**, or **Viewer**. This determines the user's access level to all the initiatives in this portfolio.
+2. On the upper-right corner, click **Add Users**.
+3. In the dialog box, enter the **Email Addresses** of the user(s) who you want to invite. They can be someone within your company or outside your company. For users outside your company, their names and profile pictures are not displayed.
+4. Select an **Access Role** for the user(s) – **Portfolio Manager**, **Contributor**, or **Viewer**. This determines the user's access level to all the initiatives in this portfolio.
 5. Click **Add to List**.
-6. Repeat steps 2 and 4 until you add all the users.
+6. (Optionally) Repeat steps 3 through 5 until you add all the users to the list.
 7. Click **Send Invites**.
 
-The users that you added now appear on the **Access Management** page. 
+The users that you invited receive a notification per email and now appear on the **Access Management** page. 
 
-For users outside your company, they will receive an invitation email. Once they accept the invitation, their **Status** will change from **Pending** to **Active**. 
+For users outside your company, they need to accept their invitation. Once they accept, their **Status** will change from **Pending** to **Active**. 
 
 For users within your company, if they have a Mendix account, their **Status** will be **Active** immediately; and if they do not have an Mendix account, their **Status** will change from **Pending** to **Active** after they create a Mendix account.
 
@@ -437,6 +444,20 @@ For users within your company, if they have a Mendix account, their **Status** w
 At the end of the row, click the ellipsis button (**...**), and then select the corresponding action. To update the permissions and the role of a user, click **Edit**. To remove a user from the portfolio, click **Remove**.
 
 {{< figure src="/attachments/developerportal/portfolio-management/edit-delete-user.png" >}}
+
+### 5.3 Access Requests {#access-requests}
+
+When the [Privacy Settings](#portfolio-settings) of a portfolio are set to Restricted, users of your company can request access to the portfolio from the [Portfolio Landscape Overview](#portfolio-landscape). Access requests need to be approved by a Portfolio Manager and as a Portfolio Manager you automatically get a [notification](/developerportal/#notifications) for a new access request. 
+
+{{< figure src="/attachments/developerportal/portfolio-management/access-requests.png" >}}
+
+The **Access Requests** page shows all open access requests for the portfolio with the following items:
+
+* **Requested By** – the name and avatar of the user who requested access
+* **Role** – the access role that was requested by the user
+* **Date** – the date when the request was made
+* **Reject** - clicking this rejects the request
+* **Approve** - clicking this approves the request and gives the user access to the portfolio
 
 ## 6 Portfolio Settings {#portfolio-settings}
 
@@ -455,7 +476,7 @@ On the **Portfolio Settings** page, Portfolio Managers can change the following 
 * **Privacy Settings** – You can set the settings to **Private** or **Restricted**.
 
     * **Private** – A private portfolio is not discoverable in the **Company Portfolios** section of the [Portfolio Landscape Overview](#portfolio-landscape) page in the Portfolio Managent app. People who want to access a private portfolio need an invitation.
-    * **Restricted** – A restricted portfolio is discoverable in the **Company Portfolios** section of the [Portfolio Landscape Overview](#portfolio-landscape) page in the Portfolio Management app. People who want to access a private portfolio need an invitation.
+    * **Restricted** – A restricted portfolio is discoverable in the **Company Portfolios** section of the [Portfolio Landscape Overview](#portfolio-landscape) page in the Portfolio Management app. People who want to access a restricted portfolio need an invitation or can request access.
 
     {{% alert color="info" %}}If the toggle on the [Privacy Requests](/developerportal/control-center/#privacy-requests) tab is turned on in the Control Center, a Mendix Admin needs to approve any change of **Privacy Settings**. In that case, a Mendix Admin will receive a notification about your change request and can approve or reject your request from the Control Center. You can cancel a pending request by clicking **Cancel Request**.{{% /alert %}}
 

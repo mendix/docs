@@ -19,7 +19,7 @@ The Data Hub Catalog is a development tool provided in the Mendix Cloud. OData R
 If you deploy your Mendix apps in an alternative environment, like on-prem or private cloud, you can use the Data Hub Catalog APIs to register your apps and services in the Data Hub Catalog to enable visibility of your deployed APIs. For information about using Data Hub for local deployment, see [Register Data without Mendix Cloud](/data-hub/data-hub-without-mendix-cloud/).{{% /alert %}}
 
 {{% alert color="info" %}}
-The Catalog and [external entities](/refguide/external-entities/) are supported in Studio Pro [8.14](/releasenotes/8.14/) and above.{{% /alert %}}
+The Catalog and [external entities](/refguide/external-entities/) are supported in Studio Pro [8.14](/releasenotes/studio-pro/8.14/) and above.{{% /alert %}}
 
 ## 2 Data Hub Catalog Home {#catalog-home}
 
@@ -78,7 +78,7 @@ You can add tags and descriptions, edit app owners, and toggle discoverability t
 
 ## 4 Information Available in the Data Hub Catalog {#available-info}
 
-In the Data Hub Catalog, all the information for registered assets is displayed in the [Catalog search details](/catalog/manage/search/#search-details) screen. This information comes from the metadata in the OData service contract, and also from additional metadata that is added when registered assets are curated. Registered assets can be curated by owners, [Data Hub curators](/catalog/manage-data-sources/user-roles/#curator), and [Mendix Admins](/catalog/manage-data-sources/user-roles/#admin).
+In the Data Hub Catalog, all the information for registered assets is displayed in the [Catalog search details](/catalog/manage/search/#search-details) screen. This information comes from the metadata in the OData service contract, and also from additional metadata that is added when registered assets are curated. Registered assets can be curated by owners, [Data Hub curators](/catalog/manage/user-roles/#curator), and [Mendix Admins](/catalog/manage/user-roles/#admin).
 
 The information that is registered for data sources and exposed datasets are as follows:
 

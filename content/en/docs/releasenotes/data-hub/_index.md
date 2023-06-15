@@ -79,7 +79,7 @@ These release notes cover changes made to the [Mendix Data Hub Catalog](/catalog
 
 #### Improvements
 
-* On the [Search](/catalog/manage-data-sources/search/) page, there are no default search filters anymore and filters are persistent per search session.
+* On the [Search](/catalog/manage/search/) page, there are no default search filters anymore and filters are persistent per search session.
 
 ### February 16th, 2023
 
@@ -711,7 +711,7 @@ These release notes cover changes made to the [Mendix Data Hub Catalog](/catalog
 
 #### Improvements
 
-* In the search input boxes on the [Search result](/catalog/manage/search/#search-results) listings and [Data Hub Home](/catalog/#data-hub-home) page, the magnifying glass now appears on the right side.
+* In the search input boxes on the [Search result](/catalog/manage/search/#search-results) listings and [Data Hub Home](/catalog/#catalog-home) page, the magnifying glass now appears on the right side.
 * In the [Search result](/catalog/manage/search/#search-results) listings, the filters have been restyled.
 * All cancel and discard buttons now have matching styles for improved usability.
 
@@ -752,7 +752,7 @@ The [Data Hub Transform API](https://datahub-spec.s3.eu-central-1.amazonaws.com/
 
 #### Improvements
 
-* Improvements have been made to the styling of the [Data Hub Home](/catalog/#data-hub-home).
+* Improvements have been made to the styling of the [Data Hub Home](/catalog/#catalog-home).
 
 ### April 22nd, 2021
 

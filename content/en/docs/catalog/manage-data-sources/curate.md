@@ -14,7 +14,7 @@ Owners of data sources, Data Hub Curators, and Mendix Admins can curate register
 Users who can curate assets in the Data Hub Catalog are as follows:
 
 * Owners of a registered service – can curate their own services which includes those that have been set to non-**Discoverable**
-* [Data Hub Curators](/catalog/manage-data-sources/user-roles/#curator) and [Mendix Admins](/catalog/manage-data-sources/user-roles/#admin) – can curate and find all registered assets in the Catalog
+* [Data Hub Curators](/catalog/manage/user-roles/#curator) and [Mendix Admins](/catalog/manage/user-roles/#admin) – can curate and find all registered assets in the Catalog
 
 Owners and Curators can also get an overview of the registered assets they own and curate from the [Curate](#curatelist) tab in Data Hub.
 

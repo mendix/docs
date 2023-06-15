@@ -50,7 +50,7 @@ The OData updatable capability pertains to the data in your app. The Data Hub Ca
 
 To see the capabilities of a particular OData entity, do the following: 
 
-1. Go to the Data Hub Catalog and search for the name of an exposed OData service endpoint, entity, attribute, or association. For more information, see the [Using the Data Hub Catalog and Curating Your Own Service](/catalog/write-data/#use-and-curate) section in *Share Data Between Apps*.
+1. Go to the Data Hub Catalog and search for the name of an exposed OData service endpoint, entity, attribute, or association. For more information, see the [Using the Data Hub Catalog and Curating Your Own Service](/catalog/share-data/#use-and-curate) section in *Share Data Between Apps*.
 2. Select your entity from the left-side search results pane. If you are not seeing many results, try removing the **Production** filter on your search.
 
 Notice the highlighted **CRUD** letters next to the entity name in the search panel and in the detailed information in the center. The purple letters indicate which operations are supported, and the gray letters indicate which are not. Hover over the letters to see which operations are supported. You will also see any OData restrictions here.

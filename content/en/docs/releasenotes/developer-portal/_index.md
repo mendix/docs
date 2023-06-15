@@ -21,7 +21,7 @@ To see the current status of the Mendix Developer Portal and Control Center, see
 
 #### New Features
 
-* We introduced the [Webhooks API](/apidocs-mxsdk/apidocs/webhooks-api/).
+* We have released [Webhooks API](/apidocs-mxsdk/apidocs/webhooks-api/) for Beta usage.
 
 ### June 1st, 2023
 

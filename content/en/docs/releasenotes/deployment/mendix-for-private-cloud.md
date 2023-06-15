@@ -17,7 +17,7 @@ For information on the current status of deployment to Mendix for Private Cloud 
 
 #### Portal Enhancements
 
-* The webhooks feature is no longer in a Beta release. Webhooks can trigger endpoints when changes are committed to a Team Server Git repository, or when a new deployment package is available for deployment to the Private Cloud. For more information, see [Webhooks](/developerportal/deploy/webhooks/).
+* The webhooks feature is now released for GA. Webhooks can trigger endpoints when changes are committed to a Team Server Git repository, or when a new deployment package is available for deployment to the Private Cloud. For more information, see [Webhooks](/developerportal/deploy/webhooks/).
 
 ### June 12th, 2023
 

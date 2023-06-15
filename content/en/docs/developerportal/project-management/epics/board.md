@@ -14,7 +14,7 @@ On the upper-right corner of the page, you can find the following items:
 * **Create Story** – Clicking this enables you to create a new story.
 * **Create Epic**  – Clicking this enables you to create a new epic.
   
-* Search box – You can search stories based on story title, tags, epic name, assignee (and unassigned stories), and story ID.
+* Search box – You can search stories based on story title, tags, epic name, assignee (including unassigned stories), and story ID.
 
 ## 2 Swimlanes
 
@@ -22,11 +22,11 @@ The two default swimlanes are **To Do** and **Done**.
 
 You can add more custom swimlanes, such as **In Progress**, **In Review**, and **Testing**. To add a new swimlane, hover over the border of the swimlane where the new swimlane should be added, and click the vertical line when it appears. Then enter the name of the swimlane and click **✓** to save the changes.
 
-{{< figure src="/attachments/developerportal/project-management/board/add-swimlane.png" width="500px" >}}
+{{< figure src="/attachments/developerportal/project-management/epics/board/add-swimlane.png" width="500px" >}}
 
 You can rename, archive, or delete a swimlane as follows: click the **...** icon on the upper-right corner of the swimlane, and then select the corresponding option.
 
-{{< figure src="/attachments/developerportal/project-management/board/rename-archive-delete-swimlane.png" >}}
+{{< figure src="/attachments/developerportal/project-management/epics/board/rename-archive-delete-swimlane.png" >}}
 
 However, it is not possible to do the following actions:
 
@@ -40,7 +40,7 @@ You can move a swimlane by dragging it to the new location.
 
 Each card in a swimlane represents a story:
 
-{{< figure src="/attachments/developerportal/project-management/board/story-card.png" >}}
+{{< figure src="/attachments/developerportal/project-management/epics/board/story-card.png" >}}
 
 A story card shows the following details:
 
@@ -54,9 +54,9 @@ A story card shows the following details:
 * ⑧ Points of the story
 * ⑨ To whom the story is assigned
 
-You can [archive](/developerportal/project-management/archive/) or delete a story as follows: click the **...** icon on the upper-right corner of the card, and then select the corresponding option:
+You can [archive](/developerportal/project-management/epics/archive/) or delete a story as follows: click the **...** icon on the upper-right corner of the card, and then select the corresponding option:
 
-{{< figure src="/attachments/developerportal/project-management/board/archive-delete-story.png" >}}
+{{< figure src="/attachments/developerportal/project-management/epics/board/archive-delete-story.png" >}}
 
 You can move a card within a swimlane or across swimlanes. To do so, drag the card to the new location.
 
@@ -68,7 +68,7 @@ When you click the card of a story, the story details dialog box opens.
 
 On the upper-right corner, you can click the link icon to copy the link to the story. Click the  ellipsis (**...**) icon to open a pop-up menu that allows you to clone, archive, or delete the story.
 
-{{< figure src="/attachments/developerportal/project-management/board/story-details-page-icons.png" >}}
+{{< figure src="/attachments/developerportal/project-management/epics/board/story-details-page-icons.png" >}}
 
 The story details dialog box shows the following items:
 
@@ -98,24 +98,26 @@ The story details dialog box shows the following items:
 
 ## 3 Scrum Board vs Kanban Board {#different-boards}
 
-The **Board** page offers different features to accommodate your Scrum workflow and Kanban workflow. Depending on your settings of board type – Scrum or Kanban, the **Board** page looks a bit different.
+The **Board** page offers different features to accommodate two different workflows: Scrum or Kanban. Depending on your choice of board type – Scrum or Kanban, the **Board** page looks a bit different.
+
+{{% alert color="info" %}}You can select your board type on the [Planning](/developerportal/project-management/epics/planning/#board-type) page.{{% /alert %}}
 
 ### 3.1 Scrum Board
 
-If your [board type](/developerportal/project-management/planning/#board-type) is **Scrum**, you can find the features below which accommodate your workflow.
+If your board style is Scrum, you can find the features below which accommodate your Scrum workflow.
 
 The upper-left corner of the page shows the name of the current Sprint, when the Sprint ends, and how many stories and points it has, as well as the goal of the Sprint.
 
-{{< figure src="/attachments/developerportal/project-management/board/scrum-board.png" >}}
+{{< figure src="/attachments/developerportal/project-management/epics/board/scrum-board.png" >}}
 
 The main area of the page gives an overview of all the stories in your current Sprint. When you commit changes in Studio Pro, you can link your commit to stories of the current Sprint in the [Commit](/refguide/commit-dialog/) dialog box.
 
-{{% alert color="info" %}}To edit or end the current Sprint, you should go to the [Scrum Planning](/developerportal/project-management/planning/#scrum-planning) page, click the Ellipsis (**...**) button on the upper-right corner, and select the corresponding item{{% /alert %}}
+{{% alert color="info" %}}To edit or end the current Sprint, you should go to the [Planning](/developerportal/project-management/planning/#scrum-planning) page, click the Ellipsis (**...**) button on the upper-right corner, and select the corresponding item{{% /alert %}}
 
 ### 3.2 Kanban Board
 
-If your [board type](/developerportal/project-management/planning/#board-type) is **Kanban**, the upper-left corner of the page shows the number of stories and the total points. 
+If your board type is Kanban, the upper-left corner of the page shows the number of stories and the total points. 
 
-{{< figure src="/attachments/developerportal/project-management/board/kanban-stories-story-points.png" >}}
+{{< figure src="/attachments/developerportal/project-management/epics/board/kanban-stories-story-points.png" >}}
 
 The main area gives an overview of all the stories that your team is working on. 

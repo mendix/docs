@@ -76,7 +76,7 @@ OData services can be registered in the Data Hub in the following ways:
 
 You can add tags and descriptions, edit app owners, and toggle discoverability to ensure the right people find your service. For more details, see [How to Curate Registered Assets](/catalog/manage-data-sources/curate/).
 
-## 4 Information Available in the Data Hub Catalog
+## 4 Information Available in the Data Hub Catalog {#available-info}
 
 In the Data Hub Catalog, all the information for registered assets is displayed in the [Catalog search details](/catalog/manage-data-sources/search/#search-details) screen. This information comes from the metadata in the OData service contract, and also from additional metadata that is added when registered assets are curated. Registered assets can be curated by owners, [Data Hub curators](/data-hub/data-hub-catalog/manage-data-sources/user-roles/#curator), and [Mendix Admins](/data-hub/data-hub-catalog/manage-data-sources/user-roles/#admin).
 

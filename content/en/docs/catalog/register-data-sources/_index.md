@@ -1,6 +1,6 @@
 ---
 title: "Register Data Sources"
-url: /catalog/register-data-sources/
+url: /catalog/register/
 weight: 10
 aliases:
     - /data-hub/data-hub-catalog/register-data-sources/

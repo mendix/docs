@@ -1,6 +1,6 @@
 ---
 title: "Consume Registered Assets"
-url: /catalog/consume-data-sources/consume/
+url: /catalog/consume/consume-registered-assets/
 weight: 20
 description: "Describes how to use shared data sources and datasets through Mendix Data Hub."
 tags: ["data hub", "data hub catalog", "consume", "external entities", "asset", "entities", data hub pane", "studio pro"]

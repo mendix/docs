@@ -1,6 +1,6 @@
 ---
 title: "Consume Data Sources"
-url: /catalog/consume-data-sources/
+url: /catalog/consume/
 weight: 20
 ---
 

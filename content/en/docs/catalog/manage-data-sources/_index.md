@@ -1,6 +1,6 @@
 ---
 title: "Manage Data Sources"
-url: /catalog/manage-data-sources/
+url: /catalog/manage/
 weight: 30
 aliases:
     - /data-hub/data-hub-catalog/manage-data-sources/

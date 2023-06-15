@@ -1,7 +1,7 @@
 ---
 title: "Get Started with the Catalog"
-url: /data-hub/data-hub-catalog/get-started/
-category: "Data Hub Catalog"
+url: /catalog/get-started/
+category: "Catalog"
 linktitle: "Get Started"
 weight: 1
 description: "Describes initial steps beginning users can take with their Catalog."

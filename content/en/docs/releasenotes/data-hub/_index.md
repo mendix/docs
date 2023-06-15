@@ -7,7 +7,7 @@ weight: 30
 #This document is mapped to the landing page, update the link there if renaming or moving the doc file.
 ---
 
-These release notes cover changes made to the [Mendix Data Hub Catalog](/data-hub/data-hub-catalog/).
+These release notes cover changes made to the [Mendix Data Hub Catalog](/catalog/).
 
 ## 2023
 
@@ -79,7 +79,7 @@ These release notes cover changes made to the [Mendix Data Hub Catalog](/data-hu
 
 #### Improvements
 
-* On the [Search](/data-hub/data-hub-catalog/search/) page, there are no default search filters anymore and filters are persistent per search session.
+* On the [Search](/catalog/search/) page, there are no default search filters anymore and filters are persistent per search session.
 
 ### February 16th, 2023
 
@@ -580,7 +580,7 @@ These release notes cover changes made to the [Mendix Data Hub Catalog](/data-hu
 
 #### Improvements
 
-* We made several design changes, mainly on the [Catalog](/data-hub/data-hub-catalog/) page. We moved items like **Environment Name** and **Version** to the newly arranged right sidebar menu.
+* We made several design changes, mainly on the [Catalog](/catalog/) page. We moved items like **Environment Name** and **Version** to the newly arranged right sidebar menu.
 * We moved the `ContractType` field to the `ServiceVersion` level. For more information, see [How to Register OData Resources in the Data Hub Catalog](/catalog/register/register-data/).
 * We added an informative tooltip to the **Company** drop-down menu and a pop-up window for when the user is an external user for another company.
 * We added in-app guidance to notify that you can switch the company when you have accepted a participation invitation.
@@ -711,7 +711,7 @@ These release notes cover changes made to the [Mendix Data Hub Catalog](/data-hu
 
 #### Improvements
 
-* In the search input boxes on the [Search result](/catalog/manage/search/#search-results) listings and [Data Hub Home](/data-hub/data-hub-catalog/#data-hub-home) page, the magnifying glass now appears on the right side.
+* In the search input boxes on the [Search result](/catalog/manage/search/#search-results) listings and [Data Hub Home](/catalog/#data-hub-home) page, the magnifying glass now appears on the right side.
 * In the [Search result](/catalog/manage/search/#search-results) listings, the filters have been restyled.
 * All cancel and discard buttons now have matching styles for improved usability.
 
@@ -752,7 +752,7 @@ The [Data Hub Transform API](https://datahub-spec.s3.eu-central-1.amazonaws.com/
 
 #### Improvements
 
-* Improvements have been made to the styling of the [Data Hub Home](/data-hub/data-hub-catalog/#data-hub-home).
+* Improvements have been made to the styling of the [Data Hub Home](/catalog/#data-hub-home).
 
 ### April 22nd, 2021
 
@@ -869,7 +869,7 @@ The [Data Hub Transform API](https://datahub-spec.s3.eu-central-1.amazonaws.com/
 
 #### New Features
 
-* We have added new functionality for adding [Business and Technical Owner contact details](/catalog/manage/curate/#discoverability-metadata) when curating the **Application Details** of a registered asset. Curators and owners can select owners from a drop-down list or create a new owner and add their contact details.
+* We have added new functionality for adding [Business and Technical Owner contact details](/catalog/manage/search/#discoverability-metadata) when curating the **Application Details** of a registered asset. Curators and owners can select owners from a drop-down list or create a new owner and add their contact details.
 * We have added a new tab to the Data Hub **Administration** page: Owner Management which provides an overview of the custom Business and Technical owners in the Data Hub Catalog. From this release, the Data Hub Administrator and curators can now add, edit, and remove custom owners from this list.
 
 #### Improvements

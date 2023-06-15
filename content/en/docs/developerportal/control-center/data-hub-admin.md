@@ -38,7 +38,7 @@ This only removes the Curator rights of the user, it does not remove the user as
 
 ## 3 Owners {#custom-owners}
 
-Custom owners are owners that have been added as contacts for a registered app. They may be added during the app [curation](/catalog/manage/curate/#discoverability-metadata), or they may have been specified during app registration. For more information, see the [Adding a Custom Owner](/catalog/manage/curate/#discoverability-metadata) section of *How to Curate Registered Assets*.
+Custom owners are owners that have been added as contacts for a registered app. They may be added during the app [curation](/catalog/manage/search/#discoverability-metadata), or they may have been specified during app registration. For more information, see the [Adding a Custom Owner](/catalog/manage/search/#discoverability-metadata) section of *How to Curate Registered Assets*.
 
 Custom owners are only the contact people for registered assets. Adding a custom owner does not give them access rights to the Data Hub Catalog, as they are not able to log in to the Mendix Platform and curate registered assets in the Catalog. Custom owners appear in the Catalog with their name and initials, or with their personalized avatar if they are a Mendix user.
 

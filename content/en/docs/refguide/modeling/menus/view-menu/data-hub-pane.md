@@ -134,7 +134,7 @@ Unsupported attributes are grayed out and are not included in your app.
 #### 4.2.4 CRUD Capabilities
 
 If the entity, association, or attribute supports **C**reate, **R**ead, **U**pdate, or **D**elete capabilities and it is also supported by Studio Pro, then it is displayed in the **Data Hub** pane.
-Entities and associations can have any of the CRUD capabilities, while attributes can only have create and update. For more information on CRUD capabilities, see [Write Data to Another App](/data-hub/write-data/).
+Entities and associations can have any of the CRUD capabilities, while attributes can only have create and update. For more information on CRUD capabilities, see [Write Data to Another App](/catalog/write-data/).
 
 ## 5 Read More
 

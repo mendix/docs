@@ -42,7 +42,7 @@ Once data sources are registered, the metadata is stored in the Catalog so that 
 
 Follow [Share Data Between Apps](/data-hub/share-data/) to use the Catalog to share data between two Mendix apps.
 
-Build on this experience by learning how to [write data to another app](/data-hub/write-data/).
+Build on this experience by learning how to [write data to another app](/catalog/write-data/).
 
 ## 5 Processes and Properties
 

@@ -5,12 +5,12 @@ description: "Describes how to add annotations to an OData service in Mendix Stu
 tags: ["Data Hub", "external entities", "published OData service" ,"how to","OData", "Data Hub Catalog"]
 weight: 20
 aliases:
-    - /data-hub/write-data/
+    - /catalog/write-data/
 ---
 
 ## 1 Introduction
 
-This how-to builds on the information provided in [How to Share Data Between Apps](/data-hub/share-data/) and shows you how OData annotations give you the power to create, update, and delete data.
+This how-to builds on the information provided in [How to Share Data Between Apps](/catalog/write-data/) and shows you how OData annotations give you the power to create, update, and delete data.
 
 This how-to will teach you how to do the following:
 
@@ -34,7 +34,7 @@ Note the following terminology differences described in the table below:
 Before starting this how-to, make sure you have completed the following prerequisites:
 
 * Install the most recent version of Studio Pro
-* Understand how read-only external entities behave by reading [How to Share Data Between Apps](/data-hub/share-data/)
+* Understand how read-only external entities behave by reading [How to Share Data Between Apps](/catalog/write-data/)
 
 ## 3 Exposing OData Contracts in Mendix Studio Pro
 
@@ -50,7 +50,7 @@ The OData updatable capability pertains to the data in your app. The Data Hub Ca
 
 To see the capabilities of a particular OData entity, do the following: 
 
-1. Go to the Data Hub Catalog and search for the name of an exposed OData service endpoint, entity, attribute, or association. For more information, see the [Using the Data Hub Catalog and Curating Your Own Service](/data-hub/share-data/#use-and-curate) section in *Share Data Between Apps*.
+1. Go to the Data Hub Catalog and search for the name of an exposed OData service endpoint, entity, attribute, or association. For more information, see the [Using the Data Hub Catalog and Curating Your Own Service](/catalog/write-data/#use-and-curate) section in *Share Data Between Apps*.
 2. Select your entity from the left-side search results pane. If you are not seeing many results, try removing the **Production** filter on your search.
 
 Notice the highlighted **CRUD** letters next to the entity name in the search panel and in the detailed information in the center. The purple letters indicate which operations are supported, and the gray letters indicate which are not. Hover over the letters to see which operations are supported. You will also see any OData restrictions here.
@@ -59,7 +59,7 @@ Notice the highlighted **CRUD** letters next to the entity name in the search pa
 
 Just like in the Catalog, you can see the **CRUD** capabilities of entities, attributes, and associations inside the **Data Hub** pane of Studio Pro.
 
-{{< figure src="/attachments/data-hub/write-data/crud-capabilities.png" alt="crud capabilities" >}}
+{{< figure src="/attachments/catalog/write-data/crud-capabilities.png" alt="crud capabilities" >}}
 
 To consume an OData entity, do the following:
 
@@ -77,8 +77,8 @@ How does the published service know that that an insert fails? In the publishing
 
 The domain model for the publishing app's validation message would look like this:
 
-{{< figure src="/attachments/data-hub/write-data/validate-data-publishing-app.png" alt="publishing app validation" >}}
+{{< figure src="/attachments/catalog/write-data/validate-data-publishing-app.png" alt="publishing app validation" >}}
 
 In the client app, the error handler would look like this:
 
-{{< figure src="/attachments/data-hub/write-data/validate-data-client-app.png" alt="client app validation" >}}
+{{< figure src="/attachments/catalog/write-data/validate-data-client-app.png" alt="client app validation" >}}

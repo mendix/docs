@@ -26,6 +26,12 @@ To see the current status of the Mendix Developer Portal and Control Center, see
     * You can now request access to restricted portfolios in your company.
     * Filters in the **Initiatives Overview** are now preserved when switching views.
 
+### June 15th, 2023
+
+#### New Features
+
+* We have released [Webhooks API](/apidocs-mxsdk/apidocs/webhooks-api/) for Beta usage.
+
 ### June 1st, 2023
 
 #### Improvements

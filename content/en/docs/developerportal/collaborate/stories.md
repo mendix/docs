@@ -8,6 +8,8 @@ tags: ["Stories", "Sprint", "Developer Portal"]
 #To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 ---
 
+{{% alert color="warning" %}}As of the GA release on December 1st, 2022, Epics is the default place where you can manage the development process of new apps. </br> It is a replacement of [Stories](/developerportal/collaborate/stories/), which we plan to deprecate in the fall of 2023. You can still use Stories in addition to Epics. However, Mendix recommends not using both of them at the same time as it will make data migration more difficult later.{{% /alert %}}
+
 ## 1 Introduction
 
 In **Stories**, you are able to manage Sprints, stories, and labels for your app. These components are often used in an Agile development environment, in which teams work in short development cycles (Sprints) of 2–4 weeks.

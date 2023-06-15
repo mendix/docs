@@ -13,11 +13,11 @@ tags: ["Epics", "Sprint", "Developer Portal"]
 
 The Epics tool enables your team members to collaborate efficiently during the app development process. It supports the Scrum workflow and Kanban workflow.
 
-{{% alert color="warning" %}}As of the GA release on December 1st, 2022, Epics is the default place where you can manage the development process of new apps. </br> It is a replacement of [Stories](/developerportal/collaborate/stories/), which we plan to deprecate in the fall of 2023. You can still use Stories in addition to Epics. However, Mendix recommends not using both of them at the same time as it will make data migration more difficult later.{{% /alert %}}
+{{% alert color="warning" %}}As of the GA release on December 1st, 2022, [Epics](/developerporta/project-management/epics/) is the default place where you can manage the development process of new apps. </br> It is a replacement of [Stories](/developerportal/collaborate/stories/), which we plan to deprecate in the fall of 2023. You can still use Stories in addition to Epics. However, Mendix recommends not using both of them at the same time as it will make data migration more difficult later.{{% /alert %}}
 
 ## 2 Getting Your Team Access to an App in Epics
 
-Only a Scrum Master can give the team access to an app in the Project Management section. To do so, the Scrum Master must open the app in the [Developer Portal](https://sprintr.home.mendix.com/link/myapps), go to the [Project Management](/developerportal/collaborate/general-settings/#project-management) tab on the **General Settings** page, and click **Switch to Epics**:
+Only a Scrum Master can give the team access to an app in Epics. To do so, the Scrum Master must open the app in the [Developer Portal](https://sprintr.home.mendix.com/link/myapps), go to the [Project Management](/developerportal/collaborate/general-settings/#project-management) tab on the **General Settings** page, and click **Switch to Epics**:
 
 {{< figure src="/attachments/developerportal/project-management/project-management.png" width="600px" >}}
 

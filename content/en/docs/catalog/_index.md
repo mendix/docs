@@ -1,5 +1,5 @@
 ---
-title: "Data Hub Catalog"
+title: "Catalog Guide"
 url: /catalog/
 description: "Describes the processes and properties of Data Hub Catalog."
 weight: 1

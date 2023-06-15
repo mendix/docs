@@ -9,6 +9,7 @@ tags: ["data hub", "data hub catalog"]
 aliases:
     - /data-hub/data-catalog/index.html
     - /data-hub/
+    - /data-hub/data-hub-catalog/
 ---
 
 ## 1 Introduction

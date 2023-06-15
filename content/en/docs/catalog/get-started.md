@@ -1,11 +1,13 @@
 ---
 title: "Get Started with Catalog"
-url: /data-hub/data-hub-catalog/get-started/
+url: /catalog/get-started/
 category: "Data Hub Catalog"
 linktitle: "Catalog Quickstart"
 weight: 1
 description: "Describes initial steps beginning users can take with their Catalog."
 tags: ["data hub", "data hub catalog", "consume", "external entities", "asset", "entities", "data hub pane", "studio pro"]
+aliases:
+    - /data-hub/data-hub-catalog/get-started/
 ---
 
 ## 1 Introduction

@@ -17,41 +17,30 @@ To start the Portfolio Management app, go to the Developer Portal, open the [Swi
 
 When you start the Portfolio Management app for the first time, an introduction page opens. The introduction page describes the new features and gives helpful information. You can click **Visit Portfolio Management** to open the **Portfolio Landscape Overview** page. After that, when you start the Portfolio Management app, the **Portfolio Landscape Overview** page directly opens. You can click **Learn more about Portfolio Management** to go back to the introduction page.
 
-On the **Portfolio Landscape Overview** page, each portfolio is presented in a card. On a portfolio card, you can see the name of the portfolio, the company to which it belongs, the privacy settings, and the avatars of Portfolio Managers (up to avatars of four Portfolio Managers).
+### 2.1 My Portfolios vs Company Portfolios
 
 The **Portfolio Landscape Overview** page contains two sections: **My Portfolios** and **Company Portfolios**. A section only appears if there is at least one portfolio card in that section.
 
 {{< figure src="/attachments/developerportal/portfolio-management/portfolio-landscape-overview.png" >}}
 
-**My Portfolios** shows all the portfolios to which you have access. Clicking a portfolio card [opens the portfolio](#open-portfolio).
+**My Portfolios** shows all the portfolios to which you have access. Clicking a portfolio card opens the portfolio.
 
-**Company Portfolios** shows all the portfolios in your company that are discoverable and to which you do not have access. Clicking a portfolio card shows more details about the portfolio. You can request access to a portfolio by clicking **Request to Join** on the portfolio card. A Portfolio Manager needs to approve this [access request](#access-requests).
+**Company Portfolios** shows all the restricted portfolios in your company, to which you do not have access. Clicking a portfolio card shows more details about the portfolio. You can request access to a portfolio by clicking **Request to Join** on the portfolio card. A Portfolio Manager needs to approve this [access request](#access-requests).
 
-{{% alert color="info" %}}Whether a portfolio is discoverable in the **Company Portfolios** section depends on its **Privacy Settings** on the [Portfolio Settings](#portfolio-settings) page.{{% /alert %}}
+### 2.2 Portfolio Cards
 
-### 2.1 Creating a New Portfolio {#create-portfolio}
+On the **Portfolio Landscape Overview** page, each portfolio is presented in a card. On a portfolio card, you can see the name of the portfolio, the company to which it belongs, the privacy settings (private or restricted), and the avatars of Portfolio Managers (up to avatars of four Portfolio Managers).
 
-On the **Portfolio Landscape Overview** page, you can create a new portfolio as follows:
+Currently, a portfolio can be private or restricted. This is decided by its **Privacy Settings** on the [Portfolio Settings](#portfolio-settings) page. You can also see the privacy settings on the portfolio card. 
 
-1. On the upper-right corner of the page, click **Create Portfolio**. The **New Portfolio** dialog box opens.
-2. Enter **Portfolio Name** and **Description** for the new portfolio.
-3. For **Privacy Settings**, select **Private** or **Restricted**:
+| Portfolio type | Visible in the **Company Portfolios** section of the **Portfolio Landscape Overview** page? | How  to join the portfolio?                                  |
+| -------------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
+| Private        | {{< figure src="/attachments/developerportal/portfolio-management/cross-mark.svg" >}} | An invitation to the portfolio is needed.                    |
+| Restricted     | {{< figure src="/attachments/developerportal/portfolio-management/check-mark.svg" >}} | An invitation to the portfolio is needed. Users can also equest access by clicking **Request to Join** on the portfolio card. A Portfolio Manager needs to approve this [access request](#access-requests). |
 
-    * **Private** – If the portfolio is private, it is not discoverable in the **Company Portfolios** section of the [Portfolio Landscape Overview](#portfolio-landscape) page in the Portfolio Management app. People who want to access a private portfolio need an invitation.
 
-    * **Restricted** – If a portfolio is restricted, it is discoverable in the **Company Portfolios** section of the [Portfolio Landscape Overview](#portfolio-landscape) page in the Portfolio Management app. People who want to access a restricted portfolio need an invitation or can request access.
 
-     {{% alert color="info" %}}If the toggle on the [Privacy Requests](/developerportal/control-center/#privacy-requests) tab is turned on in the Control Center, a Mendix Admin needs to approve the creation of a restricted portfolio. In that case, a Mendix Admin will receive a notification about your request and can approve or reject your request from the [Control Center](/developerportal/control-center/#privacy-requests). The **Private Settings** of the portfolio will be **Private** until a Mendix Admin approves your request.{{% /alert %}}
-
-4. For **Prioritization Model**, select [WSJF Prioritization](/developerportal/portfolio-management/#wsjf) or [RICE Prioritization](/developerportal/portfolio-management/#rice).
-5. From the **Currency** drop-down list, select the default currency for this portfolio.
-6. Click **Create**.
-
-The portfolio is created. You are the first Portfolio Manager of this portfolio. You can start [inviting other people](#add-users) to the portfolio.
-
-### 2.2 Opening a Portfolio {#open-portfolio}
-
-In the **Portfolio Landscape Overview** page, when you click a portfolio card in the **My Portfolios** section, the portfolio opens with a menu on the left side. 
+When you click a portfolio card to which you have access, the portfolio opens with a menu on the left side. 
 
 {{< figure src="/attachments/developerportal/portfolio-management/opened-portfolio.png" >}}
 
@@ -62,7 +51,29 @@ Clicking a menu item opens the corresponding page:
 * [Access Management](#access-management)
 * [Portfolio Settings](#portfolio-settings) (only available for Portfolio Managers)
 
-These pages are described in the sections below.
+### 2.3 Creating a New Portfolio {#create-portfolio}
+
+On the **Portfolio Landscape Overview** page, you can create a new portfolio as follows:
+
+1. On the upper-right corner of the page, click **Create Portfolio**. The **New Portfolio** dialog box opens.
+
+2. Enter **Portfolio Name** and **Description** for the new portfolio.
+
+3. For **Privacy Settings**, select **Private** or **Restricted**:
+
+   * **Private** – If the portfolio is private, it is not visible in the **Company Portfolios** section of the [Portfolio Landscape Overview](#portfolio-landscape) page in the Portfolio Management app. People who want to access a private portfolio need an invitation.
+
+   * **Restricted** – If a portfolio is restricted, it is visible in the **Company Portfolios** section of the [Portfolio Landscape Overview](#portfolio-landscape) page in the Portfolio Management app. People who want to access a restricted portfolio need an invitation or can request access.
+
+    {{% alert color="info" %}}If the toggle on the [Privacy Requests](/developerportal/control-center/#privacy-requests) tab is turned on in the Control Center, a Mendix Admin needs to approve the creation of a restricted portfolio. In that case, a Mendix Admin will receive a notification about your request and can approve or reject your request from the [Control Center](/developerportal/control-center/#privacy-requests). The **Private Settings** of the portfolio will be **Private** until a Mendix Admin approves your request.{{% /alert %}}
+
+4. For **Prioritization Model**, select [WSJF Prioritization](/developerportal/portfolio-management/#wsjf) or [RICE Prioritization](/developerportal/portfolio-management/#rice).
+
+5. From the **Currency** drop-down list, select the default currency for this portfolio.
+
+6. Click **Create**.
+
+The portfolio is created. You are the first Portfolio Manager of this portfolio. You can start [inviting other people](#add-users) to the portfolio.
 
 ## 3 Initiatives Overview {#initiatives-overview}
 
@@ -473,8 +484,8 @@ On the **Portfolio Settings** page, Portfolio Managers can change the following 
 * **Portfolio Description** – Click **Edit Portfolio Details** to change the portfolio description.
 * **Privacy Settings** – You can set the settings to **Private** or **Restricted**.
 
-    * **Private** – A private portfolio is not discoverable in the **Company Portfolios** section of the [Portfolio Landscape Overview](#portfolio-landscape) page in the Portfolio Managent app. People who want to access a private portfolio need an invitation.
-    * **Restricted** – A restricted portfolio is discoverable in the **Company Portfolios** section of the [Portfolio Landscape Overview](#portfolio-landscape) page in the Portfolio Management app. People who want to access a restricted portfolio need an invitation or can request access.
+    * **Private** – A private portfolio is invisible in the **Company Portfolios** section of the [Portfolio Landscape Overview](#portfolio-landscape) page in the Portfolio Managent app. People who want to access a private portfolio need an invitation.
+    * **Restricted** – A restricted portfolio is visible in the **Company Portfolios** section of the [Portfolio Landscape Overview](#portfolio-landscape) page in the Portfolio Management app. People who want to access a restricted portfolio need an invitation or can request access.
 
     {{% alert color="info" %}}If the toggle on the [Privacy Requests](/developerportal/control-center/#privacy-requests) tab is turned on in the Control Center, a Mendix Admin needs to approve any change of **Privacy Settings**. In that case, a Mendix Admin will receive a notification about your change request and can approve or reject your request from the Control Center. You can cancel a pending request by clicking **Cancel Request**.{{% /alert %}}
 

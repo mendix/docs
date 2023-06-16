@@ -1,13 +1,14 @@
 ---
 title: "Share Data Between Apps"
-url: /data-hub/share-data/
-description: "Describes how to publish and register a simple data asset to Mendix Data Hub from Studio Pro and create a new app that consumes this asset."
+url: /catalog/share-data/
+description: "Describes how to publish and register a simple data asset to the Catalog from Studio Pro and create a new app that consumes this asset."
 tags: ["data hub catalog", "data hub", "external entities", "landscape", "published OData service" ,"how to", "consume"]
 weight: 10
 aliases:
     - /data-hub/data-hub-catalog/use-data-catalog.html
     - /datahub/general/share-data/index.html
     - /data-hub/data-hub-catalog/use-data-catalog
+    - /data-hub/share-data/
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
@@ -122,7 +123,7 @@ Do the following:
 
     {{< figure src="/attachments/data-hub/share-data/search-details-screen.png" alt="data hub" >}}
 
-    {{% alert color="info" %}}For more information about roles in Data Hub, see [Roles in Data Hub](/data-hub/#data-hub-roles).{{% /alert %}}
+    {{% alert color="info" %}}For more information about roles in the Catalog, see [User Roles](/catalog/manage/user-roles/).{{% /alert %}}
 
 For more details on searching in the Data Hub Catalog and the **Search Details** screen, see [How to Search in the Data Hub Catalog](/data-hub/data-hub-catalog/search/). You can also explore registered services in the Data Hub Landscape. For more information, see [How to Use the Data Hub Landscape](/data-hub/data-hub-landscape/).
 

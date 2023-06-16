@@ -1,10 +1,12 @@
 ---
-title: "Data Hub without Mendix Cloud"
+title: "Register Data Sources without Mendix Cloud"
 description: "Describes how to use Mendix Data Hub and external entities for local deployments, or for private cloud or on-premises solutions."
-url: /data-hub/data-hub-without-mendix-cloud/
+url: /catalog/data-sources-without-mendix-cloud/
 linktitle: "Data Hub on Private Cloud/On-Prem"
 weight: 80
 tags: ["entity", "external entities", "private cloud", "on prem", "local", "studio pro", "consumed OData Service", "Data Hub on prem", "Data Hub private cloud", Data Hub Tencent"]
+aliases:
+    - /data-hub/data-hub-without-mendix-cloud/
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 ## 1 Introduction
@@ -26,13 +28,13 @@ In these cases, you can still publish and consume external entities. This guide 
 
 During design time, when you are [modeling](/refguide/modeling/) your app, you are finding, registering, or importing data source [metadata](#metadata) into Studio Pro. This metadata is in the form of contracts, and is registered automatically in the Data Hub Catalog if your application is hosted on the Mendix Cloud. See the [Metadata Contracts](#metadata) section below for more details.
 
-If you will be deploying locally, to a Private Cloud, or On-Premises, you can add an app, the environments on which it is deployed, and the [published OData resource](/refguide/published-odata-resource/) it provides using the metadata contract. For general resources on using Data Hub when modeling your app during design time, check out [Share Data Between Apps](/data-hub/share-data/) and [Write Data to Another App](/data-hub/write-data/).
+If you will be deploying locally, to a Private Cloud, or On-Premises, you can add an app, the environments on which it is deployed, and the [published OData resource](/refguide/published-odata-resource/) it provides using the metadata contract. For general resources on using Data Hub when modeling your app during design time, check out [Share Data Between Apps](/data-hub/share-data/) and [Write Data to Another App](/catalog/write-data/).
 
 ### 2.1 Metadata Contracts {#metadata}
 
 The Data Hub Catalog acts as a phonebook or map to the data and capabilities provided by software in your organization. It contains metadata about the applications, environments, services, and versions deployed. For every system registered, the contracts describing its services are parsed and stored, so users can easily find the descriptions of the datasets, logic, and events provided by these systems. The Catalog does not contain any data, only the metadata required to describe these applications and services.
 
-See the [Registering a Service Through the Mendix Cloud](/data-hub/data-hub-catalog/register-data/#mendix-cloud) section of *Register OData Resources in the Data Hub Catalog to read how this works if you are deploying to the Mendix Cloud. 
+See the [Registering a Service Through the Mendix Cloud](/catalog/register/register-data/#mendix-cloud) section of *Register OData Resources in the Data Hub Catalog to read how this works if you are deploying to the Mendix Cloud. 
 
 ### 2.1.1 Supported Metadata Contract Types
 
@@ -45,17 +47,17 @@ If you deploy to a Private Cloud or On-Premises setup, and use the [Mendix Team 
 To manually register an OData contract metadata file to the Data Hub Catalog, follow these basic steps:
 
 1. Create an `.mda` package to deploy. To do this, go to the **Environments** page in the **Developer Portal** and click **Create Package From Teamserver**. The `.mda` package contains a `dependencies.json` file that lists all published and consumed OData services.
-2. Use the [Transform](/data-hub/data-hub-catalog/register-data/#transform-api) operation to transform the contents of `dependencies.json` into payloads for other operations (see the [Transform operation specs](http://datahub-spec.s3-website.eu-central-1.amazonaws.com/registration_v4.html#/Endpoints/post_transform_dependenciesjson)).
+2. Use the [Transform](/catalog/register/register-data/#transform-api) operation to transform the contents of `dependencies.json` into payloads for other operations (see the [Transform operation specs](http://datahub-spec.s3-website.eu-central-1.amazonaws.com/registration_v4.html#/Endpoints/post_transform_dependenciesjson)).
 3. Use the [Registration API](/apidocs-mxsdk/apidocs/data-hub-apis/#registration) to register the data source.
 
-For detailed steps, see the [Registering a Service without the Mendix Cloud](/data-hub/data-hub-catalog/register-data/#without-mendix-cloud) section of *Register OData Resources in the Data Hub Catalog*.
+For detailed steps, see the [Registering a Service without the Mendix Cloud](/catalog/register/register-data/#without-mendix-cloud) section of *Register OData Resources in the Data Hub Catalog*.
 
 ### 2.3 Manually Registering Contracts to the Data Hub Catalog without Team Server {#manual-no-team-server}
 
 To manually register contracts to the Data Hub Catalog without the Mendix Team Server, do the following:
 
 1. Export the contract from the publishing app and download it to your computer. </br> Go to **Settings** tab of the **Published OData Service** document, and click **Export** next to the **Metadata** field. Save the `$metadata.xml` file.
-2. Register the contract into the Data Hub Catalog manually. </br> See the [Registering a Service without the Mendix Cloud](/data-hub/data-hub-catalog/register-data/#without-mendix-cloud) section of *Register OData Resources in the Data Hub Catalog*.
+2. Register the contract into the Data Hub Catalog manually. </br> See the [Registering a Service without the Mendix Cloud](/catalog/register/register-data/#without-mendix-cloud) section of *Register OData Resources in the Data Hub Catalog*.
 
 ### 2.4 Importing Contracts Directly into Studio Pro (Bypassing the Data Hub Catalog) {#import-contracts}
 

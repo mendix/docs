@@ -153,7 +153,7 @@ To edit an existing tag, do as follows:
 
 To delete an existing tag, do as follows:
 
-1. Hover over the row where the tag is listed, a delete icon (red trashcan) appears at the end of the row.
+1. Hover over the row where the tag is listed, a delete icon (red trash can) appears at the end of the row.
 2. Click the delete icon. The **Confirmation** dialog box opens.
 3. Click **Delete Tag**.
 
@@ -215,8 +215,7 @@ To change your view on the **Initiatives Overview** page, click the drop-down li
 
 #### 3.2.1 Kanban View {#kanban-view}
 
-In Kanban view, all the initiatives are represented by initiative cards, and are categorized in different columns. A column indicates the stage that an initiative is currently in. Clicking an initiative card opens a [side pane](#view-initiative) that shows initiative details. To move an initiative to a different stage, hover over the initiative card, and then click the **>** or **<** icon on the left or right side of the card.
-
+In Kanban view, all the initiatives are represented by initiative cards, and are categorized in different columns. A column indicates the stage that an initiative is currently in. Clicking on an initiative card opens a [side pane](#view-initiative) that shows initiative details. To move an initiative to a different stage, hover over the initiative card, and then click the **<** or **>** icon on the left or right side of the card.
 {{% alert type="info" %}}A Portfolio Manager can set up custom stages for initiatives on the [Portfolio Settings](#portfolio-settings) page.{{% /alert %}}
 
 To filter initiatives, you can select a filter from the **Filters** drop-down list on the top of the page.

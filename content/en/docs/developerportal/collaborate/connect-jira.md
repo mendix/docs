@@ -1,7 +1,7 @@
 ---
 title: "Jira Connector"
 url: /developerportal/collaborate/connect-jira/
-weight: 1
+weight: 4
 description: "Describes how to connec Mendix apps in the Developer Portal to Jira."
 tags: ["app", "jira", "project management", "scrum master", "general settings", Developer Portal", "Scrum Master"]
 ---

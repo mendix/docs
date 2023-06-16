@@ -31,7 +31,7 @@ The **Portfolio Landscape Overview** page contains two sections: **My Portfolios
 
 On the **Portfolio Landscape Overview** page, each portfolio is presented in a card. On a portfolio card, you can see the name of the portfolio, the company to which it belongs, the [privacy settings](#private-settings), and the avatars of Portfolio Managers (up to avatars of four Portfolio Managers).
 
-##### 2.2.1 Different Privacy Settings of a Portfolio {#private-settings}
+##### 2.2.1 Different Privacy Settings of a Portfolio {#privacy-settings}
 
 Currently, the private settings of a portfolio private or restricted. Their differences are shown in the table below:
 

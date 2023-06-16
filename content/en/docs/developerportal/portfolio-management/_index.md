@@ -25,7 +25,7 @@ The **Portfolio Landscape Overview** page contains two sections: **My Portfolios
 
 **My Portfolios** shows all the portfolios to which you have access. Clicking a portfolio card [opens the portfolio](#open-portfolio).
 
-**Company Portfolios** shows all the portfolios in your company that are discoverable and to which you do not have access. Clicking a portfolio card shows more details about the portfolio. You can request access to a portfolio by clicking on **Request to Join** on the portfolio card. A Portfolio Manager needs to approve this [Access Request](#access-requests).
+**Company Portfolios** shows all the portfolios in your company that are discoverable and to which you do not have access. Clicking a portfolio card shows more details about the portfolio. You can request access to a portfolio by clicking **Request to Join** on the portfolio card. A Portfolio Manager needs to approve this [access request](#access-requests).
 
 {{% alert color="info" %}}Whether a portfolio is discoverable in the **Company Portfolios** section depends on its **Privacy Settings** on the [Portfolio Settings](#portfolio-settings) page.{{% /alert %}}
 
@@ -215,7 +215,7 @@ To change your view on the **Initiatives Overview** page, click the drop-down li
 
 #### 3.2.1 Kanban View {#kanban-view}
 
-In Kanban view, all the initiatives are represented by initiative cards, and are categorized in different columns. A column indicates the stage that an initiative is currently in. Clicking on an initiative card opens a [side pane](#view-initiative) that shows initiative details. To move an initiative to a different stage, hover over the initiative card, and then click the **>** or **<** icon on the left or right side of the card.
+In Kanban view, all the initiatives are represented by initiative cards, and are categorized in different columns. A column indicates the stage that an initiative is currently in. Clicking an initiative card opens a [side pane](#view-initiative) that shows initiative details. To move an initiative to a different stage, hover over the initiative card, and then click the **>** or **<** icon on the left or right side of the card.
 
 {{% alert type="info" %}}A Portfolio Manager can set up custom stages for initiatives on the [Portfolio Settings](#portfolio-settings) page.{{% /alert %}}
 
@@ -225,7 +225,7 @@ Each initiative card shows the following information:
 
 {{< figure src="/attachments/developerportal/portfolio-management/initiative-card.png" >}}
 
-* ① Initiative name
+* ① Initiative name – – Clicking this opens a [side pane](#view-initiative) that shows initiative details.
 * ② Ellipsis (**...**) – Clicking this button opens a menu that enables you to [edit](#edit-delete-initiative), [archive](#archive-initiative), or [delete](#edit-delete-initiative) the initiative.
   
     {{% alert type="info" %}}Both Portfolio Managers and Contributors can edit, archive, or delete an initiative. Only Viewers cannot do these actions. For more information on roles and permissions, see [Access Management](#access-management).{{% /alert %}}
@@ -250,7 +250,7 @@ The list contains the following information:
 * **Initiative Name** – Clicking this opens a [side pane](#view-initiative) that shows initiative details.
 * **Department** – This shows the department to which the initiative belongs.
 * **Stage** – This shows the stage the initiative is currently in.
-   
+  
     {{% alert type="info" %}}A Portfolio Manager can set up custom stages for initiatives on the [Portfolio Settings](#portfolio-settings) page.{{% /alert %}}
     
 * **Intake Date** – This shows the date when the initiative is accepted based on business requirements.
@@ -270,7 +270,7 @@ In the WSJF prioritization view, all the initiatives are sequenced by their WSJF
 
 The list contains the following information:
 
-* **Initiative Name** – Clicking it opens a [side pane](#view-initiative) that shows initiative details.
+* **Initiative Name** – Clicking this opens a [side pane](#view-initiative) that shows initiative details.
 * **Stage** – This shows which stage the initiative is currently in.
 
   {{% alert type="info" %}}A Portfolio Manager can set up custom stages for initiatives on the [Portfolio Settings](#portfolio-settings) page.{{% /alert %}}
@@ -342,7 +342,7 @@ Both Portfolio Managers and Contributors can edit or delete an existing initiati
 
 To edit or delete an initiative, go to the **Initiatives Overview** page, click the ellipsis button (**...**) for that initiative, and then select **Edit** or **Delete**. Alternatively, you can also click the ellipsis button in the [side pane](#view-initiative) where you view initiative details, and then select **Edit** or **Delete**.
 
-### 3.5 Archiving an initiative {#archive-initiative}
+### 3.5 Archiving an Initiative {#archive-initiative}
 
 When an initiative is finished or the initiative is not relevant for the current time being, you can archive an initiative.
 
@@ -392,7 +392,7 @@ Alternatively, to delete an archived initiative, you can also click the ellipsis
 
 ## 5 Access Management {#access-management}
 
-The **Access Management** page shows all the users who have access to this portfolio. Portfolio Managers can see [Access Requests](#access-requests) by clicking on the **Access Requests** tab. This tab is not visible for Contributors, and Viewers.
+The **Access Management** page shows all the users who have access to this portfolio. Portfolio Managers can see [access requests](#access-requests) by clicking the **Access Requests** tab. This tab is not visible for Contributors, and Viewers.
 
 {{< figure src="/attachments/developerportal/portfolio-management/access-management.png" >}}
 
@@ -427,10 +427,9 @@ The table below shows the permissions of Portfolio Managers, Contributors and Vi
 
 1. Go to **Access Management**.
 2. On the upper-right corner, click **Add Users**.
-3. In the dialog box, enter the **Email Addresses** of the user(s) who you want to invite. They can be someone within your company or outside your company. For users outside your company, their names and profile pictures are not displayed.
+3. In the dialog box, enter the **Email Addresses** of the user who you want to invite. You can add multiple email addresses if you need to invite more than one user. The users can be people within your company or outside your company. For users outside your company, their names and profile pictures are not displayed.
 4. Select an **Access Role** for the user(s) – **Portfolio Manager**, **Contributor**, or **Viewer**. This determines the user's access level to all the initiatives in this portfolio.
 5. Click **Add to List**.
-6. (Optionally) Repeat steps 3 through 5 until you add all the users to the list.
 7. Click **Send Invites**.
 
 The users that you invited receive a notification per email and now appear on the **Access Management** page. 
@@ -447,17 +446,17 @@ At the end of the row, click the ellipsis button (**...**), and then select the 
 
 ### 5.3 Access Requests {#access-requests}
 
-When the [Privacy Settings](#portfolio-settings) of a portfolio are set to Restricted, users of your company can request access to the portfolio from the [Portfolio Landscape Overview](#portfolio-landscape). Access requests need to be approved by a Portfolio Manager and as a Portfolio Manager you automatically get a [notification](/developerportal/#notifications) for a new access request. 
+Users from the same company can request access to a restricted portfolio from the [Portfolio Landscape Overview](#portfolio-landscape) by clicking **Request to Join** on the portfolio card. Access requests need to be approved by a Portfolio Manager. Portfolio Managers automatically get a [notification](/developerportal/#notifications) for a new access request. 
 
 {{< figure src="/attachments/developerportal/portfolio-management/access-requests.png" >}}
 
 The **Access Requests** page shows all open access requests for the portfolio with the following items:
 
-* **Requested By** – the name and avatar of the user who requested access
-* **Role** – the access role that was requested by the user
-* **Date** – the date when the request was made
-* **Reject** - clicking this rejects the request
-* **Approve** - clicking this approves the request and gives the user access to the portfolio
+* **Requested By** – This is the name and avatar of the user who requested access.
+* **Role** – This is the access role that was requested by the user.
+* **Date** – This is the date when the request was made.
+* **Reject** - Clicking this rejects the request.
+* **Approve** - Clicking this approves the request and gives the user access to the portfolio.
 
 ## 6 Portfolio Settings {#portfolio-settings}
 

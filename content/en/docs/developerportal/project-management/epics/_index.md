@@ -27,7 +27,7 @@ This gives everyone in the team access to this app in Epics. To give the team ac
 Once you have access to an app in Epics, open it in the [Developer Portal](https://sprintr.home.mendix.com/link/myapps) and then go to the [Project Management](/developerportal/project-management/) section. This sections shows all the pages of the Epics tool:
 
 * [Board](/developerportal/project-management/epics/board/)
-* [Planning](/developerportal/project-management/epics/planning)
+* [Planning](/developerportal/project-management/epics/planning/)
 * [Epics](/developerportal/project-management/epics/epics/)
 * [Archive](/developerportal/project-management/epics/archive/)
 

@@ -88,7 +88,7 @@ The story details dialog box shows the following items:
 * **Linked Epic** – You can select an epic from the drop-down list.
 * **Tags** – You can add or remove tags.
   * You can create a new tag by typing the tag in the text box and clicking **Create new "[tag name]"**.
-  * You can [manage tags](/developerportal/project-management/planning/#manage-tags) by clicking the settings icon at the end.
+  * You can [manage tags](/developerportal/project-management/epics/planning/#manage-tags) by clicking the settings icon at the end.
 
 * **Story Points** – You can set the story points to an integer.
 * **Attached Files** – You can add attached files by clicking **+**.
@@ -112,7 +112,7 @@ The upper-left corner of the page shows the name of the current Sprint, when the
 
 The main area of the page gives an overview of all the stories in your current Sprint. When you commit changes in Studio Pro, you can link your commit to stories of the current Sprint in the [Commit](/refguide/commit-dialog/) dialog box.
 
-{{% alert color="info" %}}To edit or end the current Sprint, you should go to the [Planning](/developerportal/project-management/planning/#scrum-planning) page, click the Ellipsis (**...**) button on the upper-right corner, and select the corresponding item{{% /alert %}}
+{{% alert color="info" %}}To edit or end the current Sprint, you should go to the [Planning](/developerportal/project-management/epics/planning/#scrum-planning) page, click the Ellipsis (**...**) button on the upper-right corner, and select the corresponding item{{% /alert %}}
 
 ### 3.2 Kanban Board
 

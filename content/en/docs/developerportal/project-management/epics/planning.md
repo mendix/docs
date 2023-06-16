@@ -173,7 +173,7 @@ To change the tag color, click the current color, and then select the new color 
 
 ### 4.2 Board Type {#board-type}
 
-On this tab, you can switch between a Scrum workflow and Kanban workflow. The workflow you select determines how the [Board](/developerportal/project-management/board/#different-boards) page and the [Planning](#different-plannings) page look.
+On this tab, you can switch between a Scrum workflow and Kanban workflow. The workflow you select determines how the [Board](/developerportal/project-management/epics/board/#different-boards) page and the [Planning](#different-plannings) page look.
 
 ### 4.3 Toast Settings
 
@@ -213,7 +213,7 @@ These are the new locations of migrated stories:
 | ------------------------------- | ------------------------------------------------------------ | --------------------------------------------------------- |
 | **Active Sprint**               | **Active Sprint** on the **Planning** page                   | All stories are migrated to **To Do** swimlane with tags. |
 | Rest of the Sprints and backlog | **Refinement** on the **Planning** page                      |                                                           |
-| Archived stories                | Archived stories on the [Archive](/developerportal/project-management/archive/) page |                                                           |
+| Archived stories                | Archived stories on the [Archive](/developerportal/project-management/epics/archive/) page |                                                           |
 
 These are the new details of migrated stories:
 

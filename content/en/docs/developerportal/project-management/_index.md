@@ -24,5 +24,5 @@ If you are the [Scrum Master](/developerportal/collaborate/app-roles/) of your a
 3. Go to the **Project Management** tab.
 4.  Select one of the tools: 
 
-    * [Stories](/developerportal/collaborate/stories) – Once you choose to Stories, you can manage the project on the [Stories](/developerportal/collaborate/stories/) page in the **Collaborate** section.
+    * [Stories](/developerportal/collaborate/stories/) – Once you choose to use Stories, you can manage the project on the Stories page in the **Collaborate** section.
     * [Epics](/developerportal/project-management/epics/) – Once you choose to use Epics, you can access the [Epics](/developerportal/project-management/epics/) in the **Project Management** section.

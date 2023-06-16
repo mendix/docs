@@ -70,7 +70,7 @@ These are functions of the environment in which the Mendix Client is running. In
 
 This is the static data which is needed by the Mendix Client. For a browser-based client, this data is held online, with the Runtime Server. For native mobile apps, this is held locally on the device.
 
-These include the initial environment (for example, the browser shell page) needed to start the Mendix Client, Cascading Style Sheets (css files) which define the app’s theme, and JavaScript files which define client-side logic.
+These include the initial environment (for example, the browser shell page) needed to start the Mendix Client, Cascading Style Sheets (CSS files) which define the app’s theme, and JavaScript files which define client-side logic.
 
 ### 2.9 Data API
 
@@ -100,11 +100,11 @@ To avoid performance issues, the Mendix Client does not send the entire state to
 
 Determining which parts of the state should be send to the runtime consists of two parts. 
 
-During deployment, all microflows “reachable” from the client are analysed, such as:
+During deployment, all microflows “reachable” from the client are analyzed, such as:
 
-- Event handler of entities
-- Microflows called from a nanoflows
-- Microflows called from the page
+* Event handler of entities
+* Microflows called from a nanoflows
+* Microflows called from the page
 
 This analysis is done based on the microflow parameters and their usages throughout the microflow. Any time an association is used in the microflow, the association is marked, and will also be sent along in the request if needed. In some cases, such as Java actions, the analysis is not done as it would be too performance heavy. In that case, all objects associated to the microflow parameters will be sent along.
 
@@ -212,7 +212,7 @@ When the app is deployed, the static resources are placed in a structure referre
 
 * index.html – the initial HTML page which is loaded when the end-user starts the Mendix Client — this contains the client configuration and other static non-Mendix content (for example if Google analytics is added to the app)
 * mxui.js – the main Mendix Client code
-* app styling/Atlas – the app-specific css styling and static visual elements which define how a page is displayed
+* app styling/Atlas – the app-specific CSS styling and static visual elements which define how a page is displayed
 * widgets – both native and web core widgets which are used by this app
 * page definitions – xml page definitions which tell the Mendix Client what the pages for this app look like
 

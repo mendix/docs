@@ -98,19 +98,17 @@ For more information about the communication between the Mendix Client and the R
 
 This communicates the current state of the app (held in the object cache) to the Runtime Server. As the state is held in the Mendix Client, the Runtime Server can be stateless. This ensures that it is easier to scale your app horizontally by adding more instances as any instance can handle any request.
 
-To avoid performance issues, the Mendix Client does not send the entire state to the runtime. State handling decides which parts of the state should be sent by analyzing the model during the deployment of the applications.
+To avoid performance issues, the Mendix Client does not send the entire state to the runtime. State handling decides which parts of the state should be sent by analyzing the model during the deployment of the applications. This analysis consists of two parts. 
 
-Determining which parts of the state should be send to the runtime consists of two parts. 
+Firstly, during deployment, all microflows “reachable” from the client are analyzed. For example:
 
-During deployment, all microflows “reachable” from the client are analyzed, such as:
-
-* Event handler of entities
-* Microflows called from a nanoflows
+* Event handlers of entities
+* Microflows called from a nanoflow
 * Microflows called from the page
 
-This analysis is done based on the microflow parameters and their usages throughout the microflow. Any time an association is used in the microflow, the association is marked, and will also be sent along in the request if needed. In some cases, such as Java actions, the analysis is not done as it would be too performance heavy. In that case, all objects associated to the microflow parameters will be sent along.
+This analysis is done based on the microflow parameters and their usages throughout the microflow. Any time an association is used in the microflow, the association is marked, and will also be sent in the request if needed. In some cases, such as Java actions, the analysis is not done as it would be too performance heavy. In that case, all objects associated with the microflow parameters will be sent along.
 
-For other (non-microflow) actions, such as committing or deleting objects, a more simple analysis is performed on the client-side to determine which associations should be sent along.
+Secondly, for other (non-microflow) actions such as committing or deleting objects, a simpler analysis is performed on the client side to determine which associations should be included in the request.
 
 For more detailed information about state, see this blog: [https://www.mendix.com/blog/the-art-of-state-part-1-introduction-to-the-client-state/](https://www.mendix.com/blog/the-art-of-state-part-1-introduction-to-the-client-state/). This also includes a worked example where you can see, and duplicate for yourself, how state is passed to the Runtime Server.
 

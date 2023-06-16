@@ -2,11 +2,15 @@
 title: "Catalog Guide"
 url: /catalog/
 description: "Describes the processes and properties of Data Hub Catalog."
-weight: 1
+weight: 40
 no_list: false
 description_list: true
-tags: ["data hub", "data hub catalog"]
+cascade:
+    - space: "Catalog Guide"
+    - mendix_version: 10
+tags: ["data hub", "data hub catalog", "data hub landscape", "external entities", "external users"]
 aliases:
+    - /data-hub/data-catalog/index.html
     - /data-hub/data-hub-catalog/
     - /data-hub/
 ---

@@ -9,14 +9,11 @@ dist: jammy          # or bionic | xenial | trusty | precise with xenial as defa
 git:
   depth: 20000 # We're cloning a max of xxx commits, so the author date is correct
   quiet: true # prevent commit numbers appearing in the log and being flagged as potential security leaks.
-  submodules: false # turn off submodules and specifically update them in before_install - preventing the commit numbers appearing in the log
+  submodules: false # turn off submodules
 
 env:
   global:
-# =============================================
-# UPDATE VERSION MANUALLY AND TEST BEFORE MERGE
-# =============================================
-    - HUGO_VERSION=0.91.0 # Choose Hugo version explicitly, in case there is an issue with published version.
+# Global variables can go here, for example HUGO_VERSION if we were using Netlify to publish.
 
 branches:
 # build only development and production
@@ -49,13 +46,8 @@ branches:
 
 before_install:
 ###############
-  # Added the submodule update here so that I can add the --quiet flag
-  - git submodule update --init --recursive --quiet
-  #
+  # Hugo, Docsy and dependencies are installed via npm
   - npm install # use npm rather than yarn - HUGO doesn't have that many dependencies
-  #
-  - travis_retry curl -L https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_extended_${HUGO_VERSION}_Linux-64bit.tar.gz | tar xz # Install Hugo manually - Snap is too fragile
-  - chmod +x ./hugo # installed into $TRAVIS_BUILD_DIR/hugo
   #
   # Currently will use custom version of htmltest stored in /htmltest/htmltest
   # This version makes the html.Parse much smaller
@@ -67,14 +59,14 @@ install:
   # ------------------------
   - mkdir public  # This because <Maybe> the process of syncing to public is probably deadlocked behind waiting for the public folder to be made, and is never signalled that the folder is created, which ends up stalling the build on Travis CI.
   # ------------------------
-  - ./hugo config --environment $TRAVIS_BRANCH # report the config we are using
+  -  ./node_modules/.bin/hugo config --environment $TRAVIS_BRANCH # report the config we are using
   - echo "HUGO was run for environment $TRAVIS_BRANCH" > $TRAVIS_BUILD_DIR/hugo.log
   # Set pipefail so that if Hugo fails the whole job fails
   - set -o pipefail
   # put the flags in different config files controlled by environment matching $TRAVIS_BRANCH
   # Append output to hugo.log file to print at the end of the travis job
   # (see https://stackoverflow.com/questions/418896/how-to-redirect-output-to-a-file-and-stdout)
-  - ./hugo --environment $TRAVIS_BRANCH 2>&1 | tee -a $TRAVIS_BUILD_DIR/hugo.log
+  -  ./node_modules/.bin/hugo --environment $TRAVIS_BRANCH 2>&1 | tee -a $TRAVIS_BUILD_DIR/hugo.log
   #
   # normal htmltest takes too much memory - using a modified version which strips <aside> tag content
   # NB - Set pipefail so that Travis CI sees the return code from `tee` and not from `htmltest` so it will always build.

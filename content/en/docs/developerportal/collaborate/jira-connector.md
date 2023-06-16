@@ -1,6 +1,6 @@
 ---
 title: "Jira Connector"
-url: /developerportal/collaborate/connect-jira/
+url: /developerportal/collaborate/jira-connector/
 weight: 4
 description: "Describes how to connec Mendix apps in the Developer Portal to Jira."
 tags: ["app", "jira", "project management", "scrum master", "general settings", Developer Portal", "Scrum Master"]
@@ -48,7 +48,7 @@ To connect your app to Jira, perform the following steps:
 
 4. Click **Connect Jira**. The **Set Up Jira Configuration** dialog box opens.
 
-    {{< figure src="/attachments/developerportal/collaborate/general-settings/connect-jira/set-up-jira-configuration.png"   >}}
+    {{< figure src="/attachments/developerportal/collaborate/jira-connector/set-up-jira-configuration.png"   >}}
 
     Fill in the information as follows:
 
@@ -61,7 +61,7 @@ To connect your app to Jira, perform the following steps:
 
 6. If your Jira project has several boards configured, from the drop-down list, select one of the Jira boards to connect. We support Scrum, simplified Scrum, and Kanban board types.
 
-    {{< figure src="/attachments/developerportal/collaborate/general-settings/connect-jira/connect-jira-board.png"   >}}
+    {{< figure src="/attachments/developerportal/collaborate/jira-connector/connect-jira-board.png"   >}}
 
 7. If your app has stories in any uncompleted Sprint or backlog, with the status "to-do" or "running", you can choose whether to migrate these stories to your Jira project. 
 

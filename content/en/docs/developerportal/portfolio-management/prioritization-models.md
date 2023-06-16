@@ -17,7 +17,7 @@ The [Portfolio Management](/developerportal/portfolio-management/) tool supports
 
 ## 2 WSJF {#wsjf}
 
-The weighted shortest job first (WSJF) score is calculated as the cost of delay (CoD) divided by the job size of an initiative. The CoD is the sum of the initiative's business value, time criticality, and risk reduction. If an initiative can deliver the most CoD with the smallest job size, it has the highest WSJF score, and provides the best change of return.
+The weighted shortest job first (WSJF) score is calculated as the cost of delay (CoD) divided by the job size of an initiative. The CoD is the sum of the initiative's business value, time criticality, and risk reduction. If an initiative can deliver the most CoD with the smallest job size, it has the highest WSJF score, and provides the best chance of return.
 
 {{< figure src="/attachments/developerportal/portfolio-management/prioritization-models/wsjf-score-calculation.png" >}}
 
@@ -41,7 +41,7 @@ If the job size of an initiative is too big, we recommend you to split it into m
 
 ## 3 RICE {#rice}
 
-You get the reach impact confident effort (RICE) score of an initiative by multiplying the Reach, Impact, and Confidence estimates and then dividing the product by the Effort estimate. An initiative with a higher RICE score has a better chance of return.
+You get the reach impact confident effort (RICE) score of an initiative by multiplying the Reach, Impact, and Confidence estimates and then dividing the result by the Effort estimate. An initiative with a higher RICE score has a better chance of return.
 
 {{< figure src="/attachments/developerportal/portfolio-management/prioritization-models/rice-score-calculation.png" >}}
 

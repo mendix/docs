@@ -17,17 +17,15 @@ For information on the current status of deployment to Mendix Cloud and any plan
 
 ## 2023
 
-### June 16th, 2023
-
-#### Improvements
-
-* We introduced filtering capabilities for the ingestion of runtime metrics to APM vendors.
-
 ### June 15th, 2023
 
 #### Portal Enhancements
 
 * The webhooks feature is now released for GA. Webhooks can trigger endpoints when changes are committed to a Team Server Git repository, or when a new deployment package is available for deployment to the Mendix Cloud. For more information, see [Webhooks](/developerportal/deploy/webhooks/).
+
+#### Improvements
+
+* We have introduced a filtering capability for sending Mendix runtime metrics to APM vendors.
 
 ### May 4th, 2023
 

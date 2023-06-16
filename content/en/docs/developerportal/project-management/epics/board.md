@@ -16,7 +16,7 @@ On the upper-right corner of the page, you can find the following items:
   
 * Search box – You can search stories based on story title, tags, epic name, assignee (including unassigned stories), and story ID.
 
-## 2 Swimlanes
+## 2 Swimlanes {#swimlane}
 
 The two default swimlanes are **To Do** and **Done**. 
 
@@ -36,7 +36,7 @@ However, it is not possible to do the following actions:
 
 You can move a swimlane by dragging it to the new location.
 
-### 2.1 Story Cards
+### 2.1 Story Cards {#story-card}
 
 Each card in a swimlane represents a story:
 

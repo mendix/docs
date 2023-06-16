@@ -4,8 +4,6 @@ Bootstrap variables overrides for theme.
 See https://github.com/twbs/bootstrap/pull/23260
 */
 
-@fa-font-path :        "../webfonts";
-
 // Bootstrap flags. For more, see https://getbootstrap.com/docs/4.0/getting-started/theming/
 $enable-gradients: true !default;
 $enable-rounded: true !default;
@@ -70,6 +68,7 @@ $link-hover-decoration: none !default;
 $google_font_name: "Noto Sans" !default; // NK - changed to Mendix font
 $google_font_family: "Noto+Sans:ital,wght@0,400;0,500;0,700;1,400" !default; // NK - changed to Mendix font
 $web-font-path: "https://fonts.googleapis.com/css2?family=#{$google_font_family}&display=swap"; // NK - changed to Mendix font
+$font-awesome-font-name: "Font Awesome 6 Free" !default;
 $font-family: "Noto Sans"; // NK - changed to Mendix font
 $td-fonts-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 
@@ -136,12 +135,3 @@ $navbar-dark-disabled-color: rgba($white, 0.25) !default;
 
 // The yiq lightness value that determines when the lightness of color changes from "dark" to "light".
 $yiq-contrasted-threshold: 200 !default;
-
-// NK - for changes to grid layout of pages
-// Grid columns
-//
-// Set the number of columns and specify the width of the gutters.
-
-// $grid-columns:                12 !default;
-// $grid-gutter-width:           50px !default;
-// $grid-row-columns:            6 !default;

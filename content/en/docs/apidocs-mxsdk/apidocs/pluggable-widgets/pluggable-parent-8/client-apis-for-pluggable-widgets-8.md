@@ -1,8 +1,8 @@
 ---
-title: "Client APIs Available to Pluggable Widgets"
+title: "Client APIs – Mx8"
 linktitle: "Client APIs for Pluggable Widgets"
 url: /apidocs-mxsdk/apidocs/client-apis-for-pluggable-widgets-8/
-weight: 10
+weight: 20
 description: A guide for understanding the client APIs available to pluggable widgets.
 tags: ["Widget", "Pluggable",  "JavaScript"]
 ---

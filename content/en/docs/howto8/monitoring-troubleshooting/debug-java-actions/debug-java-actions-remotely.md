@@ -53,6 +53,6 @@ To configure Eclipse, follow these steps:
 
 * [Find the Root Cause of Runtime Errors](/howto8/monitoring-troubleshooting/finding-the-root-cause-of-runtime-errors/)
 * [Clear Warning Messages in Mendix](/howto8/monitoring-troubleshooting/clear-warning-messages/)
-* [Test Web Services Using SoapUI](/howto8/testing/testing-web-services-using-soapui/)
+* [Test Web Services Using SoapUI](/howto8/integration/testing-web-services-using-soapui/)
 * [Monitor Mendix Using JMX](/howto8/monitoring-troubleshooting/monitoring-mendix-using-jmx/)
 * [Debug Java Actions](/howto8/monitoring-troubleshooting/debug-java-actions/)

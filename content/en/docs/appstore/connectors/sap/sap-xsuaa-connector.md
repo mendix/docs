@@ -17,10 +17,6 @@ XSUAA is a service provided by the SAP Business Technology Platform (SAP BTP) th
 
 Out of the box, SAP BTP has the SAP external identify provider (IDP) configured as the default IDP. It is possible to use your own (corporate) IDP as an alternative so that you can automatically give access to all the employees of your organization.
 
-{{% alert color="info" %}}
-Version 2.1.1 of the XSUAA Connector for SAP Business Technology Platform uses a new user administration module called **SapAuthentication**. If you are upgrading from version 2.0.0 or below, you will need to migrate your existing users from **Administration.Account** to **SapAuthentication.SapUser** using the [User Migration](/appstore/modules/user-migration-module/) Marketplace module.
-{{% /alert %}}
-
 ### 1.1 Typical Use Cases
 
 When you deploy an application to SAP Business Technology Platform (SAP BTP) using the SAP deployment features of the Mendix Developer Portal, it is bound automatically to the XSUAA service. This service allows you to use an external identity provider (IdP) for a Mendix application. In this way, instead of having their user credentials stored separately in the Mendix app, the user can sign on to their app using the IdP and thus have a single sign-on (SSO) experience with their application.
@@ -81,3 +77,7 @@ The configuration will be applied when your app is restarted.
 When XSUAA is enabled on SAP BTP and the *XSUAA Connector for SAP Business Technology Platform* is part of the Mendix application (for details on this connector, see [How to Use the XSUAA Connector for SAP Business Technology Platform](/partners/sap/use-sap-xsuaa-connector/)), an IDP user automatically becomes a Mendix application user. They will be assigned to the roles in the Mendix application based on the scopes they have received from the XSUAA service. The scopes are defined by the mapping between the role templates and the role collections.
 
 When the IDP user is added to the Mendix application, they are given a randomly generated password to prevent the user being logged in using the local credentials. You can control the length of this randomly-generated password using the `SapAuthentication.PasswordLength` constant. This can also be set via an environment variable. `SapAuthentication.PasswordLength` should be at least 8, with a maximum value of 12.
+
+## 5 Upgrading
+
+Version 2.1.1 of the XSUAA Connector for SAP Business Technology Platform uses a new user administration module called **SapAuthentication**. If you are upgrading from version 2.0.0 or below, you will need to migrate your existing users from **Administration.Account** to **SapAuthentication.SapUser** using the [User Migration](/appstore/modules/user-migration-module/) Marketplace module.

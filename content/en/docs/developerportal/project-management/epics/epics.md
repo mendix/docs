@@ -1,6 +1,6 @@
 ---
 title: "Epics"
-url: /developerportal/project-management/epics/epics/epics/
+url: /developerportal/project-management/epics/epics/
 weight: 30
 description: "Describes the **Epics** page in the Project Management section."
 tags: ["Project Management", "Epics", "Sprint", "Stories", "Developer Portal"]

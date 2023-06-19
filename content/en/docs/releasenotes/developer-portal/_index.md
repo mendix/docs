@@ -379,7 +379,7 @@ In Portfolio Management, you can do the following
 
 #### New Features
 
-* We redesigned the [General](/developerportal/collaborate/general-settings/) settings section to make it more intuitive and user-friendly.
+* We redesigned the [General Settings](/developerportal/collaborate/general-settings/) section to make it more intuitive and user-friendly.
 * We prepared the integration of Studio Pro with our new project management tool, Epics (coming soon!).
 
 ### June 16th, 2022

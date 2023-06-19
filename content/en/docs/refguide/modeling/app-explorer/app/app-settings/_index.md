@@ -321,9 +321,9 @@ This tab allows you to exclude libraries from deployment. For example, you can e
 
 ## 9 Solution Tab {#solution}
 
-Settings on the **Solution** tab allow you to configure application distribution as an [adaptive solution](/appstore/creating-content/sol-solutions-guide/). 
+Settings on the **Solution** tab allow you to configure application distribution as an [adaptable solution](/appstore/creating-content/sol-solutions-guide/). 
 
-If you want to distribute your app as an adaptive solution package and allow upgrading it from the [implementer's side](/appstore/creating-content/sol-solutions-impl/), you need to **Enable solution adaptation** on this tab. The title of your app in the App Explorer will change to *Solution* and the solution version will be displayed after the app name.
+If you want to distribute your app as an adaptable solution package and allow upgrading it from the [implementer's side](/appstore/creating-content/sol-solutions-impl/), you need to **Enable solution adaptation** on this tab. The title of your app in the App Explorer will change to *Solution* and the solution version will be displayed after the app name.
 
 A distributable app must have a **Solution version** that you can set on this tab.
 

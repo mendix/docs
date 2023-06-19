@@ -24,7 +24,7 @@ For a deep-dive look into styling with Calypso, check out this video:
 
 ## 2 Prerequisites
 
-* Download Calypso [here](https://www.dropbox.com/sh/r1vx2kig86v5wa6/AABQC8MJfNi8Ff9skinrIf7Ea?dl=0)
+* Download Calypso [here](https://github.com/mendix/Atlas-UI-Framework/releases/download/calypso-v1/Calypso.Setup.1.0.0.exe)
 
 ## 3 Setting Up Calypso
 

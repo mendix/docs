@@ -88,7 +88,7 @@ Here are some selected properties which you might be particularly interested in:
 The widget's *XML* file can be updated to contain configurations similar to these:
 
 ```xml
-<propertyGroup caption="Accessibilty">
+<propertyGroup caption="Accessibility">
     <property key="accessible" type="boolean" defaultValue="true">
         <caption>Accessible</caption>
         <description />

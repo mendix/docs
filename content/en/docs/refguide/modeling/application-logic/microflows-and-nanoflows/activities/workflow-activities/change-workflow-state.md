@@ -11,7 +11,7 @@ This activity can only be used in **Microflows**.
 
 ## 1 Introduction
 
-The **Change workflow state** activity can be used to add **Abort**, **Continue**, **Pause**, **Restart**, and **Resume** operations to a workflow and control workflow instances. 
+The **Change workflow state** activity can be used to add **Abort**, **Continue**, **Pause**, **Unpause**, **Restart**, or **Retry** operations to a workflow and control workflow instances. 
 
 ## 2 Properties
 
@@ -44,9 +44,9 @@ You can select the following operations that represent the new state of the work
 
 * **Pause workflow** – This operation pauses further processing of the workflow. User tasks cannot be completed when the workflow instance is in the *Pause* state. Use the **Resume workflow** operation to resume processing of the workflow.
 
-* **Restart workflow** – This operation stops the current task of the workflow and starts it from the initial task in the workflow definition. This action can be used when a workflow instance has become *incompatible* after a modified workflow definition has been deployed. Note that when the workflow instance is restarted, the workflow context object has the same values as before the **Restart workflow** operation was executed.
-
 * **Unpause workflow** – This operation resumes the workflow after it has been paused with the **Pause workflow** operation. User tasks can be completed again.
+
+* **Restart workflow** – This operation stops the current task of the workflow and starts it from the initial task in the workflow definition. This action can be used when a workflow instance has become *incompatible* after a modified workflow definition has been deployed. Note that when the workflow instance is restarted, the workflow context object has the same values as before the **Restart workflow** operation was executed.
 
 * **Retry workflow** – This operation allows you to retry the failed workflow. **Retry workflow** differs from **Restart workflow** – **Restart workflow** starts the same workflow from the beginning, while **Retry workflow** retries the failed activity to see whether the workflow can get back into the in-progress state. There can be the following use cases:
     * If the failed activity is a user task activity, **Retry workflow** attempts to get the user task back to the state it had before it failed. 

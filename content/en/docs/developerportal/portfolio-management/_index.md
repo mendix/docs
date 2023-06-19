@@ -37,8 +37,8 @@ Currently, the privacy settings of a portfolio can be private or restricted. The
 
 | Portfolio type | Visible in the **Company Portfolios** section?               | How  to join the portfolio?                                  |
 | -------------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| Private        | {{< figure src="/attachments/developerportal/portfolio-management/cross-mark.svg" >}} | Users need to have an invitation to the portfolio.           |
-| Restricted     | {{< figure src="/attachments/developerportal/portfolio-management/check-mark.svg" >}} | Users need to have an invitation to the portfolio. Users can also request access by clicking **Request to Join** on the portfolio card. A Portfolio Manager needs to approve this [access request](#access-requests). |
+| Private        | {{< figure src="/attachments/developerportal/portfolio-management/cross-mark.svg" >}} | A Portfolio Manager can [add users to the portfolio](#add-users). |
+| Restricted     | {{< figure src="/attachments/developerportal/portfolio-management/check-mark.svg" >}} | A Portfolio Manager can [add users to the portfolio](#add-users). Users can also request access by clicking **Request to Join** on the portfolio card. A Portfolio Manager needs to approve this [access request](#access-requests). |
 
 A Portfolio Manager can change the **Privacy Settings** on the [Portfolio Settings](#portfolio-settings) page.
 

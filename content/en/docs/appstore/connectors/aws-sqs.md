@@ -107,7 +107,7 @@ The input and output for this service are shown in the table below:
 
 #### 3.2.4 Delete Message
 
-The `DeleteMessage` Amazon SQS activity allows you to delete a message from a queue. It requires a queue and a message to be deleted as parameters.
+The `DeleteMessage` Amazon SQS activity allows you to delete a message from a queue. It requires a DeleteMessageRequest as parameter.
 
 The input and output for this service are shown in the table below:
 

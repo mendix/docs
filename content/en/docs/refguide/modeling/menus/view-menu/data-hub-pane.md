@@ -1,9 +1,9 @@
 ---
-title: "Data Hub Pane"
+title: "Integration pane"
 url: /refguide/data-hub-pane/
 weight: 30
-description: "Describes the Data Hub pane in Mendix Studio Pro."
-tags: ["studio Pro", "data hub", "data hub pane", "data hub catalog"]
+description: "Describes the Integration pane in Mendix Studio Pro."
+tags: ["studio Pro", "data hub", "Integration pane", "data hub catalog"]
 
 ---
 
@@ -19,7 +19,7 @@ To display the **Data Hub** pane, click **View** > **Data Hub**.
 In the Data Hub Catalog, registered published services are referred to as *data sources*. Exposed entities will show the **Entity set** name and are called *datasets.*
 {{% /alert %}}
 
-## 2 Data Hub Pane Overview
+## 2 Integration pane Overview
 
 The **Data Hub** pane is used to search the Data Hub Catalog for entities that can be dragged into the domain model and used in your app and also display the external entities and the associated services that are consumed in your current model.
 
@@ -64,7 +64,7 @@ By default, the search is performed on assets in the **Production** environment.
 When the **Show development environments** is checked, all subsequent searches results will also include those in non-production environments.
 {{% /alert %}}
 
-## 4 Data Hub Pane Information {#viewing}
+## 4 Integration pane Information {#viewing}
 
 The information that is displayed in the **Data Hub** pane either when you enter a search term or when you open the **Used in your App** section is described in the sections below. 
 
@@ -89,7 +89,7 @@ The search results and **User in your App** section show the following informati
 * **Gray shield icon** shows if the service or entity is validated in the Catalog
 * **Update icon** is a blue arrow icon that indicates that there is another version of the consumed service available in the Data Hub. Click to update the service that is consumed in the app to the contract that is now available:
 
-    {{< figure src="/attachments/refguide/modeling/menus/view-menu/data-hub-pane/update-available.png" alt="Data Hub Pane update" >}}
+    {{< figure src="/attachments/refguide/modeling/menus/view-menu/data-hub-pane/update-available.png" alt="Integration pane update" >}}
 
     {{% alert color="info" %}}If there is an OData service update available, then the entities that are listed are those that are available in that version of the OData service. These entities are grayed-out to indicate that they cannot be dragged into the domain model, as the *current* contract that is consumed in the app does not have these entities. You must update the contract to the version shown in the search results by clicking the **Update** icon. {{% /alert %}}
 
@@ -97,7 +97,7 @@ The search results and **User in your App** section show the following informati
 
 * **Information icon** allows you to view further details for the service and a link to go directly to the [Service Details](/catalog/manage/search/#search-details) screen in the Data Hub Catalog:
 
-    {{< figure src="/attachments/refguide/modeling/menus/view-menu/data-hub-pane/data-hub-pane-info.png" alt="Data Hub Pane Information" >}}
+    {{< figure src="/attachments/refguide/modeling/menus/view-menu/data-hub-pane/data-hub-pane-info.png" alt="Integration pane Information" >}}
 
 ### 4.2 Entities, Attributes, and Associations {#association-attributes}
 
@@ -105,7 +105,7 @@ Entities, attributes, and associations are displayed under the service name.
 
 For any service in the list, you can click **Show details** to see the full list of the exposed entities, associations, and attributes for that service.
 
-{{< figure src="/attachments/refguide/modeling/menus/view-menu/data-hub-pane/expand-service-list.png" alt="Data Hub Pane Information" >}}
+{{< figure src="/attachments/refguide/modeling/menus/view-menu/data-hub-pane/expand-service-list.png" alt="Integration pane Information" >}}
 
 {{% alert color="info" %}}The associations and attributes that are not supported in your Mendix app are shown as non-selectable (gray) and will not be included when you drag them into the domain model.{{% /alert %}}
 

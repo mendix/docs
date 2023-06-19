@@ -104,14 +104,14 @@ To subscribe to a topic in your AWS environment and receive email notifications 
     1. Click **Edit parameter value**.
     2. Edit the **Credentials** parameter and let it auto-fill.
 10. In the **Toolbox** pane, search for the **Create Object** activity, drag it onto the microflow area, and position it between the **Credentials_GenerateFromConstants** and the **Subscribe** activity.
-11. Double-click the **Create Object** activity, and then select **AmazonSNSConnector.SubscribeRequest** as the entity.
-    The `SubscribeRequest` object requires the TopicARN of the topic you want to subscribe to and one `EmailEndpoint` object associated with it, which defines the email address you want to subscribe to the topic with.
-12. Click **OK**.
-13. Double-click the **Subscribe** activity and configure the **SubscribeRequest** parameter by doing the following steps:
+11.  Double-click the **Subscribe** activity and configure the **SubscribeRequest** parameter by doing the following steps:
     1. Click **Edit parameter value**.
     2. Edit the **SubscribeRequest** parameter and let it auto-fill.
-14. Open a page that contains a data view to show all the parameters of the `SubscribeResponse`, which is the response of the **Subscribe** activity.
-15. Configure a method to trigger the *ACT_Subscribe_Email* microflow. For example, you can associate the activity with a custom button on a page in your app. For an example of how this can be implemented, see [Creating a Custom Save Button with a Microflow](/refguide/creating-a-custom-save-button/).
+12. Double-click the **Subscribe** activity and configure the **SubscribeRequest** parameter by doing the following steps:
+    1. Click **Edit parameter value**.
+    2. Edit the **SubscribeRequest** parameter and let it auto-fill.
+13. Open a page that contains a data view to show all the parameters of the `SubscribeResponse`, which is the response of the **Subscribe** activity.
+14. Configure a method to trigger the *ACT_Subscribe_Email* microflow. For example, you can associate the activity with a custom button on a page in your app. For an example of how this can be implemented, see [Creating a Custom Save Button with a Microflow](/refguide/creating-a-custom-save-button/).
  
 #### 3.2.2 Sending Messages to a Topic
 
@@ -142,13 +142,11 @@ To be able to send a message to a topic so that all endpoints subscribed to that
     1. Click **Edit parameter value**.
     2. Edit the **Credentials** parameter and let it auto-fill.
 10. In the **Toolbox** pane, search for the **Create Object** activity, drag it onto the microflow area, and position it between the **Credentials_GenerateFromConstants** and the **PublishBatch** activity.
-11. Double-click the **Create Object** activity, and then select **AmazonSNSConnector.PublishBatchRequest** as the entity.
-    
-    The `PublishBatchRequest` object requires at least one `PublishBatchTopic` object associated with it, which contains the information about the topic you would like to send messages to. This `PublishBatchTopic` must also have a `PublishBatchMessage` object associated with it, which has the details of the message you would like to send.
-
-12. Click **OK**.
-13. Open a page that contains a data view to show all the parameters of the `PublishBatchResponse`, which is the response of the **Subscribe** activity.
-14. Configure a method to trigger the *ACT_PublishBatch* microflow. For example, you can associate the activity with a custom button on a page in your app. For an example of how this can be implemented, see [Creating a Custom Save Button with a Microflow](/refguide/creating-a-custom-save-button/).
+11. Double-click the **Create Object** activity and configure the **PublishBatchRequest** parameter by doing the following steps:
+    1. Click **Edit parameter value**.
+    2. Edit the **PublishBatchRequest** parameter and let it auto-fill.
+12. Open a page that contains a data view to show all the parameters of the `PublishBatchResponse`, which is the response of the **Subscribe** activity.
+13. Configure a method to trigger the *ACT_PublishBatch* microflow. For example, you can associate the activity with a custom button on a page in your app. For an example of how this can be implemented, see [Creating a Custom Save Button with a Microflow](/refguide/creating-a-custom-save-button/).
  
 ## 4 Technical Reference
  

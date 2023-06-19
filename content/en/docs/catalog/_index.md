@@ -31,7 +31,7 @@ The Catalog and [external entities](/refguide/external-entities/) are supported 
 
 ## 2 Data Hub Catalog Home {#catalog-home}
 
-From the Data Hub Catalog [Home](https://hub.mendix.com) screen, you can navigate to the following tabs:
+From the Data Hub Catalog [Home](https://catalog.mendix.com) screen, you can navigate to the following tabs:
 
 * **Home** – search in the Data Hub Catalog, manually register a service from different applications, select from the most popular services
 * **Catalog** – [search](/data-hub/data-hub-catalog/search/) for registered assets in the search pane and see details of the metadata of selected asset

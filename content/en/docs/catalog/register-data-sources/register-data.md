@@ -92,7 +92,7 @@ A successful `PUT` call results in a `201` status code and a JSON response body 
 	"Name":"My-Application",
 	"Type":"Other",
 	"UUID":"0301800d-b104-417f-8a64-a8f3ba3450c3",
-	"Icon":"https://hub.mendix.com/resources/logos/other_icon.png"
+	"Icon":"https://catalog.mendix.com/resources/logos/other_icon.png"
 }
 ```
 
@@ -131,7 +131,7 @@ A successful `PUT` call results in a `201` status code and a JSON response body 
 		"Name":"My-Application",
 		"UUID":"0301800d-b104-417f-8a64-a8f3ba3450c3",
 		"Type":"Other",
-		"Icon":"https://hub.mendix.com/resources/logos/other_icon.png"
+		"Icon":"https://catalog.mendix.com/resources/logos/other_icon.png"
 	}
 }
 ```
@@ -306,7 +306,7 @@ The Data Hub Catalog has a UI form where you can register a single exposed OData
 
 Follow the steps below:
 
-1. Start at the [Data Hub Catalog homepage](https://hub.mendix.com). If the connector for your business application is not shown, use the generic **OData** v4 service.
+1. Start at the [Data Hub Catalog homepage](https://catalog.mendix.com). If the connector for your business application is not shown, use the generic **OData** v4 service.
 2. On the **Contract** screen, upload your XML or ZIP file. For more information on the contract, see the [Contract Structure](#contract-structure) section below.
 
     If you selected the wrong file, click the **x** to remove it and upload a different one. 

@@ -198,7 +198,7 @@ A successful `GET` call results in a `200` status code and a JSON response body 
                     "OpenID": "https://mxid2.mendixcloud.com/mxid2/id?id=3abbc519-36cb-49e0-b158-120e9100e8be",
                     "Name": "Roselien Opmeer"
                 },
-                "Icon": "https://hub.mendix.com/resources/logos/other_icon.png",
+                "Icon": "https://catalog.mendix.com/resources/logos/other_icon.png",
                 "UUID": "34aacfda-8a85-497c-bb21-74f1c6ee2b18",
                 "RepositoryLocation": "https://sprintr.home.mendix.com/link/project/a2e76491-bd8d-4284-b865-00c9ae8dde94",
                 "BusinessOwner": {

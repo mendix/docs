@@ -719,7 +719,7 @@ These release notes cover changes made to the [Mendix Catalog](/catalog/).
 
 #### New Features
 
-* All [Catalog APIs](/apidocs-mxsdk/apidocs/catalog-apis/) are now available at https://datahub-spec.s3.eu-central-1.amazonaws.com/index.html. The original Data Hub API is now split into 2 APIs for search and registration operations and include the following changes:
+* All [Catalog APIs](/apidocs-mxsdk/apidocs/catalog-apis/) are now available at https://datahub-spec.s3.eu-central-1.amazonaws.com/index.html. The original Catalog API is now split into 2 APIs for search and registration operations and include the following changes:
     * [Search](/apidocs-mxsdk/apidocs/catalog-apis/) – includes GET calls for getting details of data sources
     * [Register](/apidocs-mxsdk/apidocs/catalog-apis/) – PUT calls are added to enable users to update or register applications and environments by specifying a UUID
 
@@ -746,7 +746,7 @@ These release notes cover changes made to the [Mendix Catalog](/catalog/).
 
 #### New Features
 
-The [Data Hub Transform API](https://datahub-spec.s3.eu-central-1.amazonaws.com/transform.html) is available for Mendix users deploying their apps to non-Mendix environments.  The Transform API extracts the information from the the app’s `dependencies.json` file to generate the request bodies that are required when using the [Data Hub API](/apidocs-mxsdk/apidocs/catalog-apis/). For further information see [Data Hub Transform API](/apidocs-mxsdk/apidocs/catalog-apis/#transform).
+The [Data Hub Transform API](https://datahub-spec.s3.eu-central-1.amazonaws.com/transform.html) is available for Mendix users deploying their apps to non-Mendix environments.  The Transform API extracts the information from the the app’s `dependencies.json` file to generate the request bodies that are required when using the [Catalog API](/apidocs-mxsdk/apidocs/catalog-apis/). For further information see [Data Hub Transform API](/apidocs-mxsdk/apidocs/catalog-apis/#transform).
 
 ### April 29th, 2021
 
@@ -791,7 +791,7 @@ The [Data Hub Transform API](https://datahub-spec.s3.eu-central-1.amazonaws.com/
 
 #### Improvements
 
-* Two new endpoints have been added to the [Data Hub API](/apidocs-mxsdk/apidocs/catalog-apis/) for registering published and consumed endpoints separately.
+* Two new endpoints have been added to the [Catalog API](/apidocs-mxsdk/apidocs/catalog-apis/) for registering published and consumed endpoints separately.
 
 ### January 28th, 2021
 
@@ -837,7 +837,7 @@ The [Data Hub Transform API](https://datahub-spec.s3.eu-central-1.amazonaws.com/
 #### New Features
 
 * The [search details](/catalog/manage/search/#search-details) in the Catalog now display the exposed **Datasets** (the entity set names of an entity) in place of the **entity** names. This means that for published services of Mendix apps, the name shown as the **Dataset** will be the Mendix **Exposed Entity set** name.
-* In the [Data Hub API](/apidocs-mxsdk/apidocs/catalog-apis/), the Search API (`GET` data) returns items that specify the entity sets instead of entity types. The response structure has been expanded by adding the fields `EntitySetName` `EntityTypeName` and `Namespace` at the `Item` and `ItemAssociation` level.
+* In the [Catalog API](/apidocs-mxsdk/apidocs/catalog-apis/), the Search API (`GET` data) returns items that specify the entity sets instead of entity types. The response structure has been expanded by adding the fields `EntitySetName` `EntityTypeName` and `Namespace` at the `Item` and `ItemAssociation` level.
 
 #### Improvements
 
@@ -847,7 +847,7 @@ The [Data Hub Transform API](https://datahub-spec.s3.eu-central-1.amazonaws.com/
 
 #### New Feature
 
-* The [Data Hub API](/apidocs-mxsdk/apidocs/catalog-apis/) is available to enable searching of data sources in the Catalog. The API can be used to register data sources from your application to your organization's Data Hub.
+* The [Catalog API](/apidocs-mxsdk/apidocs/catalog-apis/) is available to enable searching of data sources in the Catalog. The API can be used to register data sources from your application to your organization's Data Hub.
 
 ### December 10th, 2020
 

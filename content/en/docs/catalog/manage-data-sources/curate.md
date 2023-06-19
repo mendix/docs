@@ -69,7 +69,7 @@ You can curate Application Details from the **Application Details** screen as fo
 
 The **Business Owners** and **Technical Owners** are displayed as a link in the asset **Metadata** pane so that users can contact them through the email that is provided for them.
 
-By default, the **Technical Owner** for a registered asset is the user who registered the data source when registration is done through the deployment pipeline in Studio Pro. The owners can also be specified during manual registration using one of the connectors in the Data Hub Home and also when registering assets using the Data Hub API. 
+By default, the **Technical Owner** for a registered asset is the user who registered the data source when registration is done through the deployment pipeline in Studio Pro. The owners can also be specified during manual registration using one of the connectors in the Data Hub Home and also when registering assets using the Catalog API. 
 
 {{% alert color="info" %}}
 **Business Owners** and **Technical Owners** have curation rights for the registered data source in the Catalog only if they are registered users on the Mendix Platform. If a [custom owner](#custom-owner) is created with the process described in this section, the link to contact them will be displayed for the asset. It does not mean that they are able to access the asset in Data Hub or curate it.{{% /alert %}}

@@ -11,9 +11,9 @@ tags: ["studio pro"]
 
 Mendix XPath is one of the Mendix query languages designed to retrieve data. XPath uses path expressions to select data of Mendix objects and their attributes or associations.
 
-XPath queries can be written in Studio Pro, for example when you want to specify a [constraint](/refguide/xpath-constraints/) on the data retrieved in a Retrieve microflow activity. XPath queries can also be used directly in code in the *.java* files of your Java actions. 
+XPath queries can be written in Studio Pro, for example when you want to specify a constraint on the data retrieved in a Retrieve microflow activity. For examples on how XPath queries are used in Studio Pro, see [XPath Constraints](/refguide/xpath-constraints/).
 
-Examples of complete XPath queries in Java code are:
+XPath queries can also be used directly in code in the *.java* files of your Java actions. Examples of complete XPath queries in Java code are:
 
 * `//Sales.Customer`
     Retrieve all customers.
@@ -21,8 +21,6 @@ Examples of complete XPath queries in Java code are:
     Retrieve all customers with name 'Jansen'.
 * `avg(//Sales.Order[IsPaid = true()]/TotalPrice)`
     Retrieve the average of the total prices of all paid orders.
-
-For examples on how XPath queries are used in Studio Pro, see [XPath Constraints](/refguide/xpath-constraints/).
 
 {{% alert color="warning" %}}
 The syntax of XPath queries differs between Studio Pro and Java environments. In Studio Pro, you do not write complete queries, only the constraints. The entity is implicitly determined by the context. So, instead of `//Sales.Customer[Name='Jansen']`, you only need to write `[Name='Jansen']` in the context of a customer. In Java, you do need to write whole queries, including the double slashes (`//`) and the entity name.
@@ -41,7 +39,11 @@ A common XPath query consists of several elements.
 | Aggregate function (optional) | Entity to retrieve (required) | Constraint (optional) | Attribute to retrieve (optional) |
 | `avg` | `//Sales.Order` | `[IsPaid = true()]` | `/TotalPrice` |
 
-Element B describes the core of each query and consists of a description of the object being retrieved. This segment always starts with two forward slashes `//` and includes the name of the entity you wish to access preceded by the module containing the entity separated by a period. For example, `//Sales.Order` would return all objects of entity `Order` in the module `Sales`. In Studio Pro, you do not write this element in your XPath query because it is implicitly determined by context. For more information, see [XPath Constraints](/refguide/xpath-constraints/).
+Element B describes the core of each query and consists of a description of the object being retrieved. This segment always starts with two forward slashes `//` and includes the name of the entity you wish to access preceded by the module containing the entity separated by a period. For example, `//Sales.Order` would return all objects of entity `Order` in the module `Sales`. 
+
+{{% alert color="info" %}}
+In Studio Pro, you do not write element B in your XPath query because it is implicitly determined by context. For more information, see [XPath Constraints](/refguide/xpath-constraints/).
+{{% /alert %}}
 
 Element C of a query is optional and contains one or more constraints to restrict the data being retrieved. Consider the following complete XPath query:
 

@@ -21,6 +21,12 @@ Multiple constraints can be added to a single query, this is true for all querie
 
 ## 2 Examples
 
+{{% alert color="info" %}}
+
+For all the XPath constraints examples given for Studio Pro, it is assumed that you have already selected the relevant entity as the context of the XPath constraints before you type in the constraints. For all the examples given in Java environment, whole XPath queries are presented, including the double slashes (`//`) and the entity name.
+
+{{% /alert %}}
+
 This query retrieves all customers whose name is equal to Jansen and who live in Rotterdam:
 
 {{< tabpane >}}

@@ -29,11 +29,11 @@ The **Portfolio Landscape Overview** page contains two sections: **My Portfolios
 
 ### 2.2 Portfolio Cards {#portfolio-card}
 
-On the **Portfolio Landscape Overview** page, each portfolio is presented in a card. On a portfolio card, you can see the name of the portfolio, the company to which it belongs, the [privacy settings](#private-settings), and the avatars of Portfolio Managers (up to avatars of four Portfolio Managers).
+On the **Portfolio Landscape Overview** page, each portfolio is presented in a card. On a portfolio card, you can see the name of the portfolio, the company to which it belongs, the [privacy settings](#privacy-settings), and the avatars of Portfolio Managers (up to avatars of four Portfolio Managers).
 
 #### 2.2.1 Different Privacy Settings of a Portfolio {#privacy-settings}
 
-Currently, the private settings of a portfolio can be private or restricted. Their differences are shown in the table below:
+Currently, the privacy settings of a portfolio can be private or restricted. Their differences are shown in the table below:
 
 | Portfolio type | Visible in the **Company Portfolios** section?               | How  to join the portfolio?                                  |
 | -------------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
@@ -65,7 +65,7 @@ On the **Portfolio Landscape Overview** page, you can create a new portfolio as 
 
 3. For **Privacy Settings**, select **Private** or **Restricted**. For details on privacy settings, see the [Different Privacy Settings of a Portfolio](#privacy-settings) section.
 
-    {{% alert color="info" %}}If the toggle on the [Privacy Requests](/developerportal/control-center/#privacy-requests) tab is turned on in the Control Center, a Mendix Admin needs to approve the creation of a restricted portfolio. In that case, a Mendix Admin will receive a notification about your request and can approve or reject your request from the [Control Center](/developerportal/control-center/#privacy-requests). The **Private Settings** of the portfolio will be **Private** until a Mendix Admin approves your request.{{% /alert %}}
+    {{% alert color="info" %}}If the toggle on the [Privacy Requests](/developerportal/control-center/#privacy-requests) tab is turned on in the Control Center, a Mendix Admin needs to approve the creation of a restricted portfolio. In that case, a Mendix Admin will receive a notification about your request and can approve or reject your request from the [Control Center](/developerportal/control-center/#privacy-requests). The **Privacy Settings** of the portfolio will be **Private** until a Mendix Admin approves your request.{{% /alert %}}
 
 4. For **Prioritization Model**, select [WSJF Prioritization](/developerportal/portfolio-management/#wsjf) or [RICE Prioritization](/developerportal/portfolio-management/#rice).
 

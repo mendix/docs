@@ -36,7 +36,7 @@ If deploying to Red Hat OpenShift, you need to specify that specifically when cr
 
 Mendix for Private Cloud Operator `v2.*.*` is the latest version which officially supports:
 
-* Kubernetes versions 1.19 through 1.26
+* Kubernetes versions 1.19 through 1.27
 * OpenShift 4.6 through 4.12
 
 {{% alert color="warning" %}}

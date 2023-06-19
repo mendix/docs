@@ -31,16 +31,16 @@ The **Portfolio Landscape Overview** page contains two sections: **My Portfolios
 
 On the **Portfolio Landscape Overview** page, each portfolio is presented in a card. On a portfolio card, you can see the name of the portfolio, the company to which it belongs, the [privacy settings](#private-settings), and the avatars of Portfolio Managers (up to avatars of four Portfolio Managers).
 
-##### 2.2.1 Different Privacy Settings of a Portfolio {#privacy-settings}
+#### 2.2.1 Different Privacy Settings of a Portfolio {#privacy-settings}
 
-Currently, the private settings of a portfolio private or restricted. Their differences are shown in the table below:
+Currently, the private settings of a portfolio can be private or restricted. Their differences are shown in the table below:
 
 | Portfolio type | Visible in the **Company Portfolios** section?               | How  to join the portfolio?                                  |
 | -------------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
 | Private        | {{< figure src="/attachments/developerportal/portfolio-management/cross-mark.svg" >}} | Users need to have an invitation to the portfolio.           |
 | Restricted     | {{< figure src="/attachments/developerportal/portfolio-management/check-mark.svg" >}} | Users need to have an invitation to the portfolio. Users can also request access by clicking **Request to Join** on the portfolio card. A Portfolio Manager needs to approve this [access request](#access-requests). |
 
- A Portfolio Manager can change the **Privacy Settings** on the [Portfolio Settings](#portfolio-settings) page.
+A Portfolio Manager can change the **Privacy Settings** on the [Portfolio Settings](#portfolio-settings) page.
 
 ### 2.3 Opening a Portfolio 
 

@@ -72,17 +72,7 @@ We support the following comparison operators:
 | ge | greater than or equal to | `/Employees?$filter=Age ge 15` |
 | le | less than or equal to | `/Employees?$filter=Age le 15` |
 
-### 4.3 Arithmetic Operators
-
-| Operator | Meaning | Example                              | Returns |
-| ---      | ---     | ---                                  | ---     |
-| add      | add | `/Products?$filter=Prices add 2 eq 10` | All products with price 8 |
-| sub      | minus | `/Products?$filter=Prices sub 2 eq 10` | All products with price 12 |
-| mul      | multiplied by | `/Products?$filter=Prices mul 2 eq 10` | All products with price 5 |
-| div      | divided by |`/Products?$filter=Prices div 2 eq 10` | All products with price 20 |
-| mod      | modulus |`/Products?$filter=Prices mod 5 eq 0`  | All products with price divisible by 5 |
-
-### 4.4 Functions
+### 4.3 Functions
 
 | Function     | Example                                 | Returns |
 | ---          | ---                                     | ---     |
@@ -99,7 +89,7 @@ We support the following comparison operators:
 
 <small><sup>1</sup> In OData 3 (deprecated), the `contains` function is called `substringof`, and its arguments are reversed For example, `/Employees?$filter=substringof('f', Name)`</small>
 
-### 4.5 Combining Filters
+### 4.4 Combining Filters
 
 Filters can be combined with `and`, `or`, `not`, and `()`. For example: `?$filter=Name eq 'John' and (Age gt 65 or Age lt 11)`.
 
@@ -110,7 +100,7 @@ Filters can be combined with `and`, `or`, `not`, and `()`. For example: `?$filte
 | not | `/Employees?$filter=not(Name eq 'John')` |
 | ( ) | `/Employees?$filter=Name eq 'John' and (Age gt 65 or Age lt 11)` |
 
-### 4.6 Filtering by Association
+### 4.5 Filtering by Association
 
 You can filter on attributes of an associated entity. The way you do this depends on whether the association exposes one object or a list of objects.
 
@@ -120,6 +110,10 @@ You can filter on attributes of an associated entity. The way you do this depend
 | Filter on an associated list  | `City?$filter=BornIn/any(person:person/Year le 1919)` |
 
 Filtering on an associated object or list in this way is possible when you [expose associations as a link](/refguide/odata-representation/#associations). It is not possible when you [expose associations as an associated object ID](/refguide/odata-representation/#associations).
+
+### 4.6 Arithmetic Operators
+
+The use of arithmetic operators such as `add`, `sub`, `mul`, `div`, and `mod` in filter expressions is not supported.
 
 ## 5 Sorting
 

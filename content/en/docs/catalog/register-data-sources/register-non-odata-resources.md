@@ -1,17 +1,17 @@
 ---
-title: "Register Non-OData Resources in the Data Hub Catalog"
+title: "Register Non-OData Resources in the Catalog"
 linktitle: "Register Non-OData Resources"
 url: /catalog/register/register-non-odata-resources/
-description: "Describes how to convert non-OData resources into OData and then register them in the Data Hub Catalog."
+description: "Describes how to convert non-OData resources into OData and then register them in the Catalog."
 weight: 30
-tags: ["Data Hub", "Data Hub Catalog", "registration", "OData", "register data"]
+tags: ["Data Hub", "Catalog", "registration", "OData", "register data"]
 aliases:
-    - /data-hub/data-hub-catalog/register-non-odata-resources/
+    - /catalog/register-non-odata-resources/
 ---
 
 ## 1 Introduction
 
-The Data Hub Catalog collects metadata from exposed services and currently supports all OData XML resources. If you want to connect something other than OData, you can do so by wrapping it in OData and then registering the data source contract file in the Data Hub Catalog. Afterwards, you can make it available for being consumed in Mendix Studio Pro. Currently there are two ways to wrap data in OData:
+The Catalog collects metadata from exposed services and currently supports all OData XML resources. If you want to connect something other than OData, you can do so by wrapping it in OData and then registering the data source contract file in the Catalog. Afterwards, you can make it available for being consumed in Mendix Studio Pro. Currently there are two ways to wrap data in OData:
 
 * [Expose OData via a Mendix app](#use-mendix-app)
 * [Expose OData via a service wrapper (a custom solution)](#use-service-wrapper)
@@ -32,9 +32,9 @@ There are certain limitations on consumed OData services. For more information o
 
 The diagram below represents how an OData API wrapper can be used to connect a custom app data source to a Mendix Studio Pro app:
 
-{{< figure src="/attachments/data-hub/data-hub-catalog/register-non-odata-resources/non-odata.png" alt="Data Hub connecting to non-OData resources" >}}
+{{< figure src="/attachments/catalog/register-non-odata-resources/non-odata.png" alt="Data Hub connecting to non-OData resources" >}}
 
-Once the OData service is available, find the generated *$metadata* file for your data, and use that to register your service in the Data Hub Catalog via the connector on the home page. For more information on setting up the connection, see [Published OData Services](/refguide/published-odata-services/).
+Once the OData service is available, find the generated *$metadata* file for your data, and use that to register your service in the Catalog via the connector on the home page. For more information on setting up the connection, see [Published OData Services](/refguide/published-odata-services/).
 
 ### 3.1 Examples of Exposing OData with a Service Wrapper
 

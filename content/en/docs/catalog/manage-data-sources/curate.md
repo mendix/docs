@@ -1,17 +1,17 @@
 ---
 title: "Curate Registered Assets"
 url: /catalog/manage/curate/
-description: "Describes how to curate and enhance data assets in Data Hub Catalog, and make them easier to find and understand."
-tags: ["data hub", "data hub catalog", "curate", "description", "services", "tags"]
+description: "Describes how to curate and enhance data assets in Catalog, and make them easier to find and understand."
+tags: ["data hub", "Catalog", "curate", "description", "services", "tags"]
 aliases:
-    - /data-hub/data-hub-catalog/curate/
+    - /catalog/curate/
 ---
 
 ## 1 Introduction
 
 Owners of data sources, Data Hub Curators, and Mendix Admins can curate registered assets. Curation in the Catalog is the process of enriching the metadata and providing further information about the exposed data sources, datasets and attributes, and deleting irrelevent or outdated data sources. You can add custom application icons, Catalog-specific descriptions, and tags to supplement the registered metadata. Curate functions in Data Hub include setting the [Discoverability](#discoverability) of data sources, indicating whether the data source is [validated](#validated), and specifying the [Business and Technical Owners](#custom-owner).
 
-Users who can curate assets in the Data Hub Catalog are as follows:
+Users who can curate assets in the Catalog are as follows:
 
 * Owners of a registered service – can curate their own services which includes those that have been set to non-**Discoverable**
 * [Data Hub Curators](/catalog/manage/user-roles/#curator) and [Mendix Admins](/catalog/manage/user-roles/#admin) – can curate and find all registered assets in the Catalog
@@ -19,14 +19,14 @@ Users who can curate assets in the Data Hub Catalog are as follows:
 Owners and Curators can also get an overview of the registered assets they own and curate from the [Curate](#curatelist) tab in Data Hub.
 
 {{% alert color="info" %}}
-Information that is added or changed during curation is stored in the Data Hub Catalog for that item. It will not be added to the OData service contract or metadata files or affect any of the values in the metadata files associated with the service or the data associated with the exposed datasets.
+Information that is added or changed during curation is stored in the Catalog for that item. It will not be added to the OData service contract or metadata files or affect any of the values in the metadata files associated with the service or the data associated with the exposed datasets.
 {{% /alert %}}
 
 ## 2 Curate List {#curatelist}
 
 Owners and curators of registered assets can click **Curate** from the **Data Hub** screen to see the **Curation List** screen which provides an overview of all the registered assets that you can curate as an owner under the **My Assets** tab. Curators will also see the **Company Assets** tab that lists all the registered assets:
 
-{{< figure src="/attachments/data-hub/data-hub-catalog/curate/curate-list.png" alt="curate list" >}}
+{{< figure src="/attachments/catalog/curate/curate-list.png" alt="curate list" >}}
 
 In both cases, the list includes registered data sources and also individual datasets that are exposed for the data source.
 
@@ -63,7 +63,7 @@ You can curate Application Details from the **Application Details** screen as fo
 1. In the **Curation Bar** click **Edit** > **Edit Metadata** > **Application Details**.
 2. The **Application Metadata** screen is displayed:
 
-    {{< figure src="/attachments/data-hub/data-hub-catalog/curate/application-metadata-screen.png" alt="app metadata screen" >}}
+    {{< figure src="/attachments/catalog/curate/application-metadata-screen.png" alt="app metadata screen" >}}
 
 ### 4.1 Changing Owners of an App {#changing-owners}
 
@@ -72,7 +72,7 @@ The **Business Owners** and **Technical Owners** are displayed as a link in the 
 By default, the **Technical Owner** for a registered asset is the user who registered the data source when registration is done through the deployment pipeline in Studio Pro. The owners can also be specified during manual registration using one of the connectors in the Data Hub Home and also when registering assets using the Data Hub API. 
 
 {{% alert color="info" %}}
-**Business Owners** and **Technical Owners** have curation rights for the registered data source in the Data Hub Catalog only if they are registered users on the Mendix Platform. If a [custom owner](#custom-owner) is created with the process described in this section, the link to contact them will be displayed for the asset. It does not mean that they are able to access the asset in Data Hub or curate it.{{% /alert %}}
+**Business Owners** and **Technical Owners** have curation rights for the registered data source in the Catalog only if they are registered users on the Mendix Platform. If a [custom owner](#custom-owner) is created with the process described in this section, the link to contact them will be displayed for the asset. It does not mean that they are able to access the asset in Data Hub or curate it.{{% /alert %}}
 
 {{% alert color="info" %}}
 Curators and Mendix Admins can manage the lists of custom owners as part of **Administration** functions. For details, see the [Owners](/developerportal/control-center/data-hub-admin/#custom-owners) section of *Data Hub Administration*.
@@ -82,7 +82,7 @@ Curators and Mendix Admins can manage the lists of custom owners as part of **Ad
 
 To change the **Business Owner** or **Technical Owner**, from the **Application Metadata** screen, click in the name field of the **Business** or **Technical** owner. You can start typing or select from the drop-down list of names. Mendix Platform users will be displayed with their avatar and custom owners will be shown with an avatar that displays their initials.
 
-The **Technical Owner** can only be changed in the **Control Center**, not within the **Data Hub Catalog**. See the [Custom Owners](/developerportal/control-center/data-hub-admin/#custom-owners) section of *Data Hub Administration*.
+The **Technical Owner** can only be changed in the **Control Center**, not within the **Catalog**. See the [Custom Owners](/developerportal/control-center/data-hub-admin/#custom-owners) section of *Data Hub Administration*.
 
 #### 4.1.2 Adding a Custom Owner {#custom-owner}
 
@@ -106,7 +106,7 @@ You can change the icon that is displayed for the app and the data source by upl
 
 {{% alert color="info" %}} When you change an application icon, all data sources that are registered in the Catalog for that application will show the new icon. For example, the following shows two data sources that are published from the **HR Sample App** which are listed in the search results pane (**SAMPLE_Employee…** and **SAP 1.0.0**). They both display the same icon that was set for the app:
 
-{{< figure src="/attachments/data-hub/data-hub-catalog/curate/app-icon-several-services.png" alt="custom contact create" >}}
+{{< figure src="/attachments/catalog/curate/app-icon-several-services.png" alt="custom contact create" >}}
 
 {{% /alert %}}
 
@@ -128,7 +128,7 @@ To **upload a different icon** for the app follow these steps:
 
 1. In the **Application Metadata** screen of the selected data source, click **Upload a different icon** to display the **Upload Application Icon** pop up:
 
-    {{< figure src="/attachments/data-hub/data-hub-catalog/curate/icon-upload-dialog.png" alt="upload icon"   width="300"  >}}
+    {{< figure src="/attachments/catalog/curate/icon-upload-dialog.png" alt="upload icon"   width="300"  >}}
 
 2. Drag the image file into the upload area or click **Upload** to browse and select a file from your file system. Click **Step 2: Crop image** to proceed.
 3. Move the wire-frame to select an area of the loaded image and change the size of the wire-frame to crop the image to the area that you want to use. When you are satisfied, click **Apply Changes**.
@@ -137,11 +137,11 @@ To **upload a different icon** for the app follow these steps:
 
 4. A preview of the application icon is shown. Click **Save** to upload the selected icon.
 
-    {{< figure src="/attachments/data-hub/data-hub-catalog/curate/icon-preview.png" alt="upload icon"   width="300"  >}}
+    {{< figure src="/attachments/catalog/curate/icon-preview.png" alt="upload icon"   width="300"  >}}
 
 5. The **Application Metadata** screen will now show the selected icon for the application:
 
-    {{< figure src="/attachments/data-hub/data-hub-catalog/curate/asset-metadata-new-icon.png" alt="upload icon" >}}
+    {{< figure src="/attachments/catalog/curate/asset-metadata-new-icon.png" alt="upload icon" >}}
 
 6. Click **Save Changes** to return to the data source details page. The custom icon will be stored in the **Icon Library**.
 
@@ -149,7 +149,7 @@ To **upload a different icon** for the app follow these steps:
 
 An alternative to uploading an icon is to use an existing icon by clicking **select one from your library**. The icons for your Data Hub will be shown and you can select one and click **Change Icon**.
 
-{{< figure src="/attachments/data-hub/data-hub-catalog/curate/icon-library.png" alt="upload icon"   width="300"  >}}
+{{< figure src="/attachments/catalog/curate/icon-library.png" alt="upload icon"   width="300"  >}}
 
 ## 5 Editing the Metadata of a Data Source {#service-details}
 
@@ -159,7 +159,7 @@ You can curate data sources to add a Catalog description and add tags.
 
 If a description was included in the OData metadata contract, this will be displayed in the asset details screen for the selected data source. You can add a description or edit an existing description for the Catalog. They are included in searches.
 
-You can specify if the OData service **Contract Description** or the **Catalog Description** is displayed in the Data Hub Catalog.
+You can specify if the OData service **Contract Description** or the **Catalog Description** is displayed in the Catalog.
 
 {{% alert color="info" %}}If there is a **Catalog Description** for a service, both descriptions will be retained for the service in the Catalog regardless of the one that is selected for display in the **Asset Details** screen. {{% /alert %}}
 
@@ -167,11 +167,11 @@ To edit the asset metadata, follow these steps:
 
 1. In the **Curation Bar**, click **Edit** > **Edit Metadata** > **Service Details** to display the **Service Metadata** box:
 
-    {{< figure src="/attachments/data-hub/data-hub-catalog/curate/service-metadata-box.png" alt="service metadata" >}}
+    {{< figure src="/attachments/catalog/curate/service-metadata-box.png" alt="service metadata" >}}
 
 2. The description from the OData service metadata is displayed in the **Contract Description**. This cannot be changed, as it is part of the OData service definition. You can provide an alternative description by toggling **Use the catalog description** to display the **Catalog Description** box:
 
-    {{< figure src="/attachments/data-hub/data-hub-catalog/curate/service-metadata-description.png" alt="edit description" >}}
+    {{< figure src="/attachments/catalog/curate/service-metadata-description.png" alt="edit description" >}}
 
 3. Add a catalog description. This will be stored with the service details in the Catalog.
 4. Click **Save Changes** to save the changes that you have made to the **Edit Service Metadata** screen and return to the **Service Details** screen, which will now display the selected description.
@@ -183,15 +183,15 @@ Add tags to categorize a registered service and provide additional means for fin
 1. In the **Search Details** screen of a selected service, click **Edit** > **Edit Metadata** > **Service Details** in the **Curation Bar** to display the **Service Metadata** box.
 2. To add tags, click the empty **Tag** input area:
 
-    {{< figure src="/attachments/data-hub/data-hub-catalog/curate/service-metadata-tags.png" alt="tags" >}}
+    {{< figure src="/attachments/catalog/curate/service-metadata-tags.png" alt="tags" >}}
 
-3. To add or edit the tags, enter a tag string and press **Enter** or select one from the list of existing tags that are used in the Data Hub Catalog and displayed when you start typing in the **Tag** field. To separate multiple tags, use spaces.
+3. To add or edit the tags, enter a tag string and press **Enter** or select one from the list of existing tags that are used in the Catalog and displayed when you start typing in the **Tag** field. To separate multiple tags, use spaces.
 
     {{% alert color="info" %}}Tags can only contain lower-case letters, numbers, and underscores. They must have a minimum of 2 characters. If you use capital letters when typing the tag string, they will be converted to lower-case. {{% /alert %}}
 
 4. You can enter multiple tags separated by spaces. You can remove tags by clicking the **x**:
 
-    {{< figure src="/attachments/data-hub/data-hub-catalog/curate/service-metadata-tags-list.png" alt="tag list" >}}
+    {{< figure src="/attachments/catalog/curate/service-metadata-tags-list.png" alt="tag list" >}}
 
 5. When you are finished specifying the tags, click **Save Changes** to register the changes and the tags will be shown in the **Service Metadata** pane.
 
@@ -199,7 +199,7 @@ Add tags to categorize a registered service and provide additional means for fin
 
 Publishers of a data source can let consuming developers know what they will need to identify themselves when consuming a data source. Add this later if not configured during the registration step.
 
-For a description of supported authentication methods, see the [Selecting an Authentication Method](/catalog/register/register-data/#authentication) section of *Register OData Resources in the Data Hub Catalog*.
+For a description of supported authentication methods, see the [Selecting an Authentication Method](/catalog/register/register-data/#authentication) section of *Register OData Resources in the Catalog*.
 
 ## 6 Discoverable and Validated {#discoverability}
 
@@ -207,7 +207,7 @@ The discoverable and validated properties of registered assets can be set from t
 
 ### 6.1 Discoverable
 
-The discoverability is set at a data source level. When a data source is registered in the Data Hub catalog, **Discoverable** is set to the company default value, which is configured by the Mendix Admin in [Control Center](/developerportal/control-center/data-hub-admin/#settings). If **Discoverable** is on for a data source, all users can find the asset and see the details of it. The **Discoverable** setting will apply to all datasets that are exposed in the data source.
+The discoverability is set at a data source level. When a data source is registered in the Catalog, **Discoverable** is set to the company default value, which is configured by the Mendix Admin in [Control Center](/developerportal/control-center/data-hub-admin/#settings). If **Discoverable** is on for a data source, all users can find the asset and see the details of it. The **Discoverable** setting will apply to all datasets that are exposed in the data source.
 
 When the **Discoverable** setting is turned off, it will only be visible to the owners of the service and curators and the Mendix Admin. All other users of Data Hub (also through the Data Hub integrations in Studio Pro) will not be able to see an asset whose discoverabilty is turned off.
 
@@ -218,7 +218,7 @@ When a data source is set to non-**Discoverable**, the data source, and the data
 
 To change the discoverability of a service, follow these steps:
 
-1. In the Data Hub Catalog, select the service to display the **Search Details**.
+1. In the Catalog, select the service to display the **Search Details**.
 2. If you have curation rights, the **Curation Bar** is displayed. Click the drop-down **Edit** menu and then the **Discoverable** toggle to turn it on or off. 
 
 A message is displayed to indicate the discoverability of the asset and the discoverability icon is updated in the search results and the data source details.
@@ -231,7 +231,7 @@ Setting an asset as **Validated** contributes to the weighting of the asset in t
 
 ## 7 Deleting a Data Source {#delete-data-source}
 
-Owners of a data source can delete their own data sources. Anyone with curation rights (Mendix Admins or Curators) can delete any data sources within the company. This ensures that their Data Hub Catalog is free of outdated or irrelevant data sources. 
+Owners of a data source can delete their own data sources. Anyone with curation rights (Mendix Admins or Curators) can delete any data sources within the company. This ensures that their Catalog is free of outdated or irrelevant data sources. 
 
 Deleting something from Catalog only removes the metadata registration. It does not affect the publishing application or any of the applications that are consuming the data source.
 

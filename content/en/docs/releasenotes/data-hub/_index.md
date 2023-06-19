@@ -1,13 +1,13 @@
 ---
-title: "Data Hub Catalog"
+title: "Catalog"
 url: /releasenotes/data-hub/
-description: "Release notes for updates to the Mendix Data Hub Catalog"
-tags: ["data hub", "data hub catalog", "data hub Landscape"]
+description: "Release notes for updates to the Mendix Catalog"
+tags: ["data hub", "Catalog", "data hub Landscape"]
 weight: 30
 #This document is mapped to the landing page, update the link there if renaming or moving the doc file.
 ---
 
-These release notes cover changes made to the [Mendix Data Hub Catalog](/catalog/).
+These release notes cover changes made to the [Mendix Catalog](/catalog/).
 
 ## 2023
 
@@ -102,7 +102,7 @@ These release notes cover changes made to the [Mendix Data Hub Catalog](/catalog
 
 #### Improvements
 
-* You can now select relevant Mendix Marketplace module for an [authentication](/catalog/register/register-data/#authentication) type. See the [Selecting an Authentication Method](/catalog/register/register-data/#authentication) section of *Register OData Resources in the Data Hub Catalog* for more information on the authentication types.
+* You can now select relevant Mendix Marketplace module for an [authentication](/catalog/register/register-data/#authentication) type. See the [Selecting an Authentication Method](/catalog/register/register-data/#authentication) section of *Register OData Resources in the Catalog* for more information on the authentication types.
 
 #### Fixes
 
@@ -112,7 +112,7 @@ These release notes cover changes made to the [Mendix Data Hub Catalog](/catalog
 
 #### Improvements
 
-* You can now add [authentication](/catalog/register/register-data/#authentication) details to a data source. Click **Edit** on the data source and then click the **Authentication** tab. See the [Selecting an Authentication Method](/catalog/register/register-data/#authentication) section of *Register OData Resources in the Data Hub Catalog* for more information on the authentication types.
+* You can now add [authentication](/catalog/register/register-data/#authentication) details to a data source. Click **Edit** on the data source and then click the **Authentication** tab. See the [Selecting an Authentication Method](/catalog/register/register-data/#authentication) section of *Register OData Resources in the Catalog* for more information on the authentication types.
 
 ## 2022
 
@@ -120,7 +120,7 @@ These release notes cover changes made to the [Mendix Data Hub Catalog](/catalog
 
 #### Improvements
 
-* You can now edit data source details directly from the [asset details](/catalog/manage/search/#service-details) page. In our [November 24th](#nov-24) release, we made it possible to edit dataset details from the same page. To learn more about data sources and datasets, see the [Selected Asset Details](/catalog/manage/search/#search-details) section of *Search in the Data Hub Catalog*.
+* You can now edit data source details directly from the [asset details](/catalog/manage/search/#service-details) page. In our [November 24th](#nov-24) release, we made it possible to edit dataset details from the same page. To learn more about data sources and datasets, see the [Selected Asset Details](/catalog/manage/search/#search-details) section of *Search in the Catalog*.
 
 #### Fixes
 
@@ -153,7 +153,7 @@ These release notes cover changes made to the [Mendix Data Hub Catalog](/catalog
 #### Improvements
 
 * You can now view authentication details in the [data source details](/catalog/manage/search/#service-details) page. 
-* The **Technical Owner** can now only be changed in the **Control Center**, not within the **Data Hub Catalog**. See the [Custom Owners](/developerportal/control-center/data-hub-admin/#custom-owners) section of *Data Hub Administration*.
+* The **Technical Owner** can now only be changed in the **Control Center**, not within the **Catalog**. See the [Custom Owners](/developerportal/control-center/data-hub-admin/#custom-owners) section of *Data Hub Administration*.
 
 #### Fixes
 
@@ -170,14 +170,14 @@ These release notes cover changes made to the [Mendix Data Hub Catalog](/catalog
 
 #### Improvements
 
-* When registering a service in the registration form, you can now designate which authentication type is needed for consumers to access it. For more information, see [Selecting an Authentication Method](/catalog/register/register-data/#authentication) in *Register OData Resources in the Data Hub Catalog*.
+* When registering a service in the registration form, you can now designate which authentication type is needed for consumers to access it. For more information, see [Selecting an Authentication Method](/catalog/register/register-data/#authentication) in *Register OData Resources in the Catalog*.
 * Sample data sources are now clearly indicated with a label.
 
 ### October 20th, 2022
 
 #### Improvements
 
-* You will now get a notification about which services automatically registered in the Catalog. Services are automatically registered when deploying a published OData service. To learn more, see [Register OData Resources in the Data Hub Catalog](/catalog/register/register-data/).
+* You will now get a notification about which services automatically registered in the Catalog. Services are automatically registered when deploying a published OData service. To learn more, see [Register OData Resources in the Catalog](/catalog/register/register-data/).
 
 ### Fixes
 
@@ -228,11 +228,11 @@ These release notes cover changes made to the [Mendix Data Hub Catalog](/catalog
 
 * We added an **Authentication** details page on the data source registration form.
 * We added a filter to the [Data Hub Search API](/apidocs-mxsdk/apidocs/data-hub-apis/) to view the resources owned by a user.
-* We updated the Data Hub Catalog UI to support pagination in the search results.
+* We updated the Catalog UI to support pagination in the search results.
 
 #### Fixes
 
-* We fixed a bug where a 404 page was shown after clicking the Data Hub Catalog call-to-action in a notification email.
+* We fixed a bug where a 404 page was shown after clicking the Catalog call-to-action in a notification email.
 
 ### September 8th, 2022
 
@@ -244,7 +244,7 @@ These release notes cover changes made to the [Mendix Data Hub Catalog](/catalog
 
 #### Improvements
 
-* External users will receive an email when they are removed from a company's Data Hub Catalog. 
+* External users will receive an email when they are removed from a company's Catalog. 
 * Company Admins can now add multiple external users by separating email addresses with a comma and space. 
 
 #### Fixes
@@ -263,7 +263,7 @@ These release notes cover changes made to the [Mendix Data Hub Catalog](/catalog
 
 #### Improvements
 
-* Mendix Admins can now assign a new [external user](/developerportal/control-center/data-hub-admin/#external-users) when removing the existing one from company's Data Hub Catalog. To remove a user, go to the **Control Center** > **Data Hub** > **External Users** and click **Remove**.
+* Mendix Admins can now assign a new [external user](/developerportal/control-center/data-hub-admin/#external-users) when removing the existing one from company's Catalog. To remove a user, go to the **Control Center** > **Data Hub** > **External Users** and click **Remove**.
 
 #### Fixes
 
@@ -297,7 +297,7 @@ These release notes cover changes made to the [Mendix Data Hub Catalog](/catalog
 
 #### Improvements
 
-* Mendix Admins can now remove external participants from their company's Data Hub Catalog. To do so, go to the **Control Center** > **Data Hub** > **External Users** and click **Remove**.
+* Mendix Admins can now remove external participants from their company's Catalog. To do so, go to the **Control Center** > **Data Hub** > **External Users** and click **Remove**.
 
 #### Fixes
 
@@ -460,7 +460,7 @@ These release notes cover changes made to the [Mendix Data Hub Catalog](/catalog
 
 #### Fixes
 
-* We fixed a bug where the Data Hub Catalog did not display the correct status of an updatable entity.
+* We fixed a bug where the Catalog did not display the correct status of an updatable entity.
 * We made various security and UI fixes.
 
 ### February 3rd, 2022
@@ -499,7 +499,7 @@ These release notes cover changes made to the [Mendix Data Hub Catalog](/catalog
 
 #### Fixes
 
-* We fixed a bug where V3 contracts uploaded as single XML files were not downloadable from the Data Hub Catalog via the **Download Contract** button.
+* We fixed a bug where V3 contracts uploaded as single XML files were not downloadable from the Catalog via the **Download Contract** button.
 
 ### January 6th, 2022
 
@@ -581,7 +581,7 @@ These release notes cover changes made to the [Mendix Data Hub Catalog](/catalog
 #### Improvements
 
 * We made several design changes, mainly on the [Catalog](/catalog/) page. We moved items like **Environment Name** and **Version** to the newly arranged right sidebar menu.
-* We moved the `ContractType` field to the `ServiceVersion` level. For more information, see [How to Register OData Resources in the Data Hub Catalog](/catalog/register/register-data/).
+* We moved the `ContractType` field to the `ServiceVersion` level. For more information, see [How to Register OData Resources in the Catalog](/catalog/register/register-data/).
 * We added an informative tooltip to the **Company** drop-down menu and a pop-up window for when the user is an external user for another company.
 * We added in-app guidance to notify that you can switch the company when you have accepted a participation invitation.
 
@@ -594,11 +594,11 @@ These release notes cover changes made to the [Mendix Data Hub Catalog](/catalog
 
 #### Improvements
 
-* We upgraded the Data Hub Catalog search engine to OpenSearch 1.0.
+* We upgraded the Catalog search engine to OpenSearch 1.0.
 
 #### Fixes
 
-* We fixed an issue that caused older Studio Pro versions to not be able to connect to the Data Hub Catalog.
+* We fixed an issue that caused older Studio Pro versions to not be able to connect to the Catalog.
 
 ### September 30th, 2021
 
@@ -610,7 +610,7 @@ These release notes cover changes made to the [Mendix Data Hub Catalog](/catalog
 
 #### Data Hub Free Edition
 
-* The Data Hub Free edition is now available to all Mendix users! Publish your data sources in the Data Hub Catalog, curate them, and then consume them in another application.
+* The Data Hub Free edition is now available to all Mendix users! Publish your data sources in the Catalog, curate them, and then consume them in another application.
 
 #### Fixes
 
@@ -652,7 +652,7 @@ These release notes cover changes made to the [Mendix Data Hub Catalog](/catalog
     * `GET` all environments for an application
     * `GET` all consumed endpoints
 * A change was made to the `POST` application API call to also allow for the `Opcenter` and `MindSphere` application types.
-* We added Data Hub Catalog integration with [Control Center](/developerportal/control-center/#data-hub). For details, see [Data Hub Administration](/developerportal/control-center/data-hub-admin/).
+* We added Catalog integration with [Control Center](/developerportal/control-center/#data-hub). For details, see [Data Hub Administration](/developerportal/control-center/data-hub-admin/).
 
 ### August 19th, 2021
 
@@ -758,7 +758,7 @@ The [Data Hub Transform API](https://datahub-spec.s3.eu-central-1.amazonaws.com/
 
 #### Improvements
 
-* [Search result](/catalog/manage/search/#search-results) listings in Data Hub Catalog have been improved.  Data sources and datasets that are set as [Validated](/catalog/manage/curate/#validated) will appear above assets that are not validated.
+* [Search result](/catalog/manage/search/#search-results) listings in Catalog have been improved.  Data sources and datasets that are set as [Validated](/catalog/manage/curate/#validated) will appear above assets that are not validated.
 
 ### April 1st, 2021
 
@@ -797,7 +797,7 @@ The [Data Hub Transform API](https://datahub-spec.s3.eu-central-1.amazonaws.com/
 
 #### Improvements
 
-* You can now copy the dataset URI from the [data source details](/catalog/manage/search/#search-details) in the Data Hub Catalog. This makes it easier to directly select datasets to use in other business applications from the context of the data source.
+* You can now copy the dataset URI from the [data source details](/catalog/manage/search/#search-details) in the Catalog. This makes it easier to directly select datasets to use in other business applications from the context of the data source.
 
 ### January 21st, 2021
 
@@ -813,7 +813,7 @@ The [Data Hub Transform API](https://datahub-spec.s3.eu-central-1.amazonaws.com/
 
 #### New Features
 
-* You can download the OData service contract for a registered data source from the [asset details](/catalog/manage/search/#download-contract) in the Data Hub Catalog. The set of files that make up the contract will be downloaded as a ***.zip*** file.
+* You can download the OData service contract for a registered data source from the [asset details](/catalog/manage/search/#download-contract) in the Catalog. The set of files that make up the contract will be downloaded as a ***.zip*** file.
 
 #### Improvements
 
@@ -824,7 +824,7 @@ The [Data Hub Transform API](https://datahub-spec.s3.eu-central-1.amazonaws.com/
 
 #### New Features
 
-* The [asset details](/catalog/manage/search/#search-details) in the Data Hub Catalog now have added functionality to copy the URI of the data source or dataset to the clipboard. This functionality means that the Data Hub Catalog can be used to discover registered assets—data sources and datasets—and access the data in other enterprise applications through the metadata URI.
+* The [asset details](/catalog/manage/search/#search-details) in the Catalog now have added functionality to copy the URI of the data source or dataset to the clipboard. This functionality means that the Catalog can be used to discover registered assets—data sources and datasets—and access the data in other enterprise applications through the metadata URI.
 
 #### Improvements
 
@@ -836,7 +836,7 @@ The [Data Hub Transform API](https://datahub-spec.s3.eu-central-1.amazonaws.com/
 
 #### New Features
 
-* The [search details](/catalog/manage/search/#search-details) in the Data Hub Catalog now display the exposed **Datasets** (the entity set names of an entity) in place of the **entity** names. This means that for published services of Mendix apps, the name shown as the **Dataset** will be the Mendix **Exposed Entity set** name.
+* The [search details](/catalog/manage/search/#search-details) in the Catalog now display the exposed **Datasets** (the entity set names of an entity) in place of the **entity** names. This means that for published services of Mendix apps, the name shown as the **Dataset** will be the Mendix **Exposed Entity set** name.
 * In the [Data Hub API](/apidocs-mxsdk/apidocs/data-hub-apis/), the Search API (`GET` data) returns items that specify the entity sets instead of entity types. The response structure has been expanded by adding the fields `EntitySetName` `EntityTypeName` and `Namespace` at the `Item` and `ItemAssociation` level.
 
 #### Improvements
@@ -847,7 +847,7 @@ The [Data Hub Transform API](https://datahub-spec.s3.eu-central-1.amazonaws.com/
 
 #### New Feature
 
-* The [Data Hub API](/apidocs-mxsdk/apidocs/data-hub-apis/) is available to enable searching of data sources in the Data Hub Catalog. The API can be used to register data sources from your application to your organization's Data Hub.
+* The [Data Hub API](/apidocs-mxsdk/apidocs/data-hub-apis/) is available to enable searching of data sources in the Catalog. The API can be used to register data sources from your application to your organization's Data Hub.
 
 ### December 10th, 2020
 
@@ -859,7 +859,7 @@ The [Data Hub Transform API](https://datahub-spec.s3.eu-central-1.amazonaws.com/
 
 #### Improvements
 
-* The Service [Metadata](/catalog/manage/search/#metadata) panel on the right side of the the Data Hub Catalog search details page has been reorganized to improve the grouping of the information.
+* The Service [Metadata](/catalog/manage/search/#metadata) panel on the right side of the the Catalog search details page has been reorganized to improve the grouping of the information.
 
 #### Fixes
 
@@ -870,7 +870,7 @@ The [Data Hub Transform API](https://datahub-spec.s3.eu-central-1.amazonaws.com/
 #### New Features
 
 * We have added new functionality for adding [Business and Technical Owner contact details](/catalog/manage/search/#discoverability-metadata) when curating the **Application Details** of a registered asset. Curators and owners can select owners from a drop-down list or create a new owner and add their contact details.
-* We have added a new tab to the Data Hub **Administration** page: Owner Management which provides an overview of the custom Business and Technical owners in the Data Hub Catalog. From this release, the Data Hub Administrator and curators can now add, edit, and remove custom owners from this list.
+* We have added a new tab to the Data Hub **Administration** page: Owner Management which provides an overview of the custom Business and Technical owners in the Catalog. From this release, the Data Hub Administrator and curators can now add, edit, and remove custom owners from this list.
 
 #### Improvements
 

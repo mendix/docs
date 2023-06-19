@@ -1,19 +1,19 @@
 ---
 title: "Search in the Catalog"
 url: /catalog/manage/search/
-description: "Describes how to find data sources and datasets in the Data Hub Catalog."
-tags: ["data hub", "data hub catalog", "data source", "dataset"]
+description: "Describes how to find data sources and datasets in the Catalog."
+tags: ["data hub", "Catalog", "data source", "dataset"]
 aliases:
-    - /data-hub/data-hub-catalog/search/
+    - /catalog/search/
 ---
 
 ## 1 Introduction
 
-Finding the right data to use in your app development is made easier using the search functionality in the Data Hub Catalog. The details of registered data assets can be accessed using the [Data Hub Search API](/apidocs-mxsdk/apidocs/data-hub-apis/), or viewed in the [Asset details](#search-details) screen of the Catalog or the [Data Hub pane](/refguide/data-hub-pane/) in Studio Pro.  This document describes how you can search in Data Hub Catalog.
+Finding the right data to use in your app development is made easier using the search functionality in the Catalog. The details of registered data assets can be accessed using the [Data Hub Search API](/apidocs-mxsdk/apidocs/data-hub-apis/), or viewed in the [Asset details](#search-details) screen of the Catalog or the [Data Hub pane](/refguide/data-hub-pane/) in Studio Pro.  This document describes how you can search in Catalog.
 
 ## 2 Search Using the API {#search-api}
 
-To use the Data Hub Catalog Search API, you need the following:
+To use the Catalog Search API, you need the following:
 
 * A [personal access token](/developerportal/community-tools/mendix-profile/#pat)
 * A search term
@@ -233,14 +233,14 @@ Every published OData service (or data source) has a version number. Apps that c
 
 #### 3.1.2 Environments
 
-The Data Hub Catalog is a register of published OData services (or data sources) that are deployed to a particular environment. Each registered data source is a unique **endpoint** combination of service version and environment.
+The Catalog is a register of published OData services (or data sources) that are deployed to a particular environment. Each registered data source is a unique **endpoint** combination of service version and environment.
 
 The environment also provides an indication of the quality of the dataset that is available. Shared datasets that are available from a *production environment* will have production-level data, while those in non-production environments (*acceptance*, *development*) could be populated with data that may not be reliable for building stable apps but be useful for development work.
 
 Search results show the data source endpoints. If a version of a service is deployed on both a test and acceptance environment, two endpoints are shown in the search results.
 
 {{% alert color="info" %}}
-By default, search results in the Data Hub Catalog are filtered to show only hits in the **Production** environments. You can extend the search to **Non-production** or **Mendix Free App (Sandbox)** environments by checking them in the search pane **Add Filter** list. For more details, see the [Filters](#filter) section below.
+By default, search results in the Catalog are filtered to show only hits in the **Production** environments. You can extend the search to **Non-production** or **Mendix Free App (Sandbox)** environments by checking them in the search pane **Add Filter** list. For more details, see the [Filters](#filter) section below.
 {{% /alert %}}
 
 #### 3.1.3 Asset Description
@@ -248,12 +248,12 @@ By default, search results in the Data Hub Catalog are filtered to show only hit
 The description that is included as part of the published service metadata. This description can be edited at the data source, dataset, and attribute level by owners and curators.
 
 {{% alert color="info" %}}
-In Studio Pro, when publishing an OData service, it is possible to specify a summary of the service and a description. Only the description is included in the OData service contract document and registered in the Data Hub Catalog.
+In Studio Pro, when publishing an OData service, it is possible to specify a summary of the service and a description. Only the description is included in the OData service contract document and registered in the Catalog.
 {{% /alert %}}
 
 ### 3.2 Searching for Assets from Data Hub Home {#data-hub-home}
 
-When searching in the Data Hub Catalog, the following fields are searched:
+When searching in the Catalog, the following fields are searched:
 
 * Data source or service endpoint: Name, Description, Tags
 * Application: Name
@@ -276,13 +276,13 @@ Any of the above actions will take you to the **Search** screen.
 
 The **Search** screen is divided into the [search](#search-pane) pane on the left, the [asset details](#search-details) of the selected asset in the center panel, and the [asset metadata](#metadata) panel on the right.
 
-{{< figure src="/attachments/data-hub/data-hub-catalog/search/search-details-page.png" alt="search details" >}}
+{{< figure src="/attachments/catalog/search/search-details-page.png" alt="search details" >}}
 
 ### 3.4 Search Pane {#search-pane}
 
-The collapsible **Search** pane is used to search for registered assets in the Data Hub Catalog:
+The collapsible **Search** pane is used to search for registered assets in the Catalog:
 
-{{< figure src="/attachments/data-hub/data-hub-catalog/search/search-pane.png" alt="search pane"   width="300"  >}}
+{{< figure src="/attachments/catalog/search/search-pane.png" alt="search pane"   width="300"  >}}
 
 #### 3.4.1 Specifying the Search
 
@@ -296,7 +296,7 @@ To change the environment type filter, click **Filter**.
 
 In the **Filters** dialog box, check the **Environment Type** that you want to include in your search. Then click **Apply Filters**. The search results will only display results in the selected environments.
 
-You can also filter by CRUD (Creatable, Readable, Updatable, or Deletable) capabilities. See the [Viewing OData Capabilities in Data Hub Catalog](/catalog/write-data/#view-capabilities) section of *Write Data to Another App* for more information.
+You can also filter by CRUD (Creatable, Readable, Updatable, or Deletable) capabilities. See the [Viewing OData Capabilities in Catalog](/catalog/write-data/#view-capabilities) section of *Write Data to Another App* for more information.
 
 You will also see any OData restrictions that apply, including **Count** and **Pagination** and whether something is **Sortable** or **Filterable**.
 
@@ -367,16 +367,16 @@ The **Attributes** tab lists the attributes that are exposed for the dataset in 
 
 Under the **Associations** tab for each dataset, the associations are displayed:
 
-{{< figure src="/attachments/data-hub/data-hub-catalog/search/attributes-associations.png" alt="associations info" >}}
+{{< figure src="/attachments/catalog/search/attributes-associations.png" alt="associations info" >}}
 
 * **Name** – the name of the association that is exposed in the OData service contract.
 * **Navigates to** – the dataset the association is made with. Click the link to see the details of the associated dataset in the Catalog.
 
 ### 3.6 Metadata Panel {#metadata}
 
-The metadata panel at the right of the asset details screen displays details from the OData service metadata contract and values that have been curated in the Data Hub Catalog:
+The metadata panel at the right of the asset details screen displays details from the OData service metadata contract and values that have been curated in the Catalog:
 
-{{< figure src="/attachments/data-hub/data-hub-catalog/search/metadata.png" alt="metadata pane"   width="300"  >}}
+{{< figure src="/attachments/catalog/search/metadata.png" alt="metadata pane"   width="300"  >}}
 
 #### 3.6.1 Tags
 
@@ -396,13 +396,13 @@ Technical owners can be [changed](/catalog/manage/curate/#changing-owners).
 
 #### 3.6.4 Discoverability {#discoverability-metadata}
 
-When a data source is registered, by default, it is **Discoverable** in the Data Hub Catalog. When this is set, all users in your company can find it, view the details, and consume it. The owners of an asset and curators can set a data source as **Non-discoverable**, which means it is not visible to users unless they are the owner or a curator.
+When a data source is registered, by default, it is **Discoverable** in the Catalog. When this is set, all users in your company can find it, view the details, and consume it. The owners of an asset and curators can set a data source as **Non-discoverable**, which means it is not visible to users unless they are the owner or a curator.
 
 See the [Curation Bar](#curation-bar) section below for changing **Discoverability** as the owner of the data source or curator.
 
 The following discoverability values can be set:
 
-* **Discoverable** – all users in your company can see and consume the asset in the Data Hub Catalog and Studio Pro 
+* **Discoverable** – all users in your company can see and consume the asset in the Catalog and Studio Pro 
 * **Non-Discoverable** – the asset is only visible to owners, Data Hub curators, and the Mendix Admin in the Catalog; it is not included in the search results in the **Data Hub** pane of Studio Pro, or any other client of the Data Hub API.
 
 #### 3.6.5 Validated
@@ -441,7 +441,7 @@ The resulting ZIP file is named `DataHub_<service_name>_<service_version>_<techn
 
 Here is an example:
 
-{{< figure src="/attachments/data-hub/data-hub-catalog/search/download_example.png" alt="download example" >}}
+{{< figure src="/attachments/catalog/search/download_example.png" alt="download example" >}}
 
 When you click **Download**, the following file is downloaded: `DataHub_SAP_Intelligence_1.0_OData4.zip`. This ZIP file has the folder `DataHub_SAP_Intelligence_1.0_OData4`, which contains the all the metadata files that define the service.
 

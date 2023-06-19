@@ -276,13 +276,13 @@ Any of the above actions will take you to the **Search** screen.
 
 The **Search** screen is divided into the [search](#search-pane) pane on the left, the [asset details](#search-details) of the selected asset in the center panel, and the [asset metadata](#metadata) panel on the right.
 
-{{< figure src="/attachments/catalog/search/search-details-page.png" alt="search details" >}}
+{{< figure src="/attachments/data-hub/data-hub-catalog/search/search-details-page.png" alt="search details" >}}
 
 ### 3.4 Search Pane {#search-pane}
 
 The collapsible **Search** pane is used to search for registered assets in the Catalog:
 
-{{< figure src="/attachments/catalog/search/search-pane.png" alt="search pane"   width="300"  >}}
+{{< figure src="/attachments/data-hub/data-hub-catalog/search/search-pane.png" alt="search pane"   width="300"  >}}
 
 #### 3.4.1 Specifying the Search
 
@@ -367,7 +367,7 @@ The **Attributes** tab lists the attributes that are exposed for the dataset in 
 
 Under the **Associations** tab for each dataset, the associations are displayed:
 
-{{< figure src="/attachments/catalog/search/attributes-associations.png" alt="associations info" >}}
+{{< figure src="/attachments/data-hub/data-hub-catalog/search/attributes-associations.png" alt="associations info" >}}
 
 * **Name** – the name of the association that is exposed in the OData service contract.
 * **Navigates to** – the dataset the association is made with. Click the link to see the details of the associated dataset in the Catalog.
@@ -376,7 +376,7 @@ Under the **Associations** tab for each dataset, the associations are displayed:
 
 The metadata panel at the right of the asset details screen displays details from the OData service metadata contract and values that have been curated in the Catalog:
 
-{{< figure src="/attachments/catalog/search/metadata.png" alt="metadata pane"   width="300"  >}}
+{{< figure src="/attachments/data-hub/data-hub-catalog/search/metadata.png" alt="metadata pane"   width="300"  >}}
 
 #### 3.6.1 Tags
 
@@ -441,7 +441,7 @@ The resulting ZIP file is named `DataHub_<service_name>_<service_version>_<techn
 
 Here is an example:
 
-{{< figure src="/attachments/catalog/search/download_example.png" alt="download example" >}}
+{{< figure src="/attachments/data-hub/data-hub-catalog/search/download_example.png" alt="download example" >}}
 
 When you click **Download**, the following file is downloaded: `DataHub_SAP_Intelligence_1.0_OData4.zip`. This ZIP file has the folder `DataHub_SAP_Intelligence_1.0_OData4`, which contains the all the metadata files that define the service.
 

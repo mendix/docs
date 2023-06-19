@@ -157,7 +157,7 @@ For more information on security issues, see [Security Advisories](/releasenotes
 #### Improvements
 
 * We enabled more options for search in [Epics](/developerportal/project-management/epics/). On the [Board](/developerportal/project-management/epics/board/) page, you can now search stories based on tags, epic name, assignee (and unassigned stories), story title, and story ID. On the [Planning](/developerportal/project-management/epics/planning/) page, you can search stories based on tags, epic name, assignee (and unassigned stories), status name (only in the Scrum workflow), story title, and story ID.
-* The Epics listed on the [Epics](/developerportal/project-management/epics/epics) overview page now have visible tags.
+* The Epics listed on the [Epics](/developerportal/project-management/epics/epics/) overview page now have visible tags.
 
 #### Fixes
 
@@ -282,7 +282,7 @@ In Portfolio Management, you can do the following
 
 * We replaced the widget used in story description in [Epics](/developerportal/project-management/epics/) with a new one, which fixes the bug you might have been experiencing. This replacement also comes with the following changes:
     * You can use @ to mention someone in the text of story description or epic objective. The mentioned person will get a notification once the text is saved.
-    * You can copy the link to a story or an epic on the upper-right corner of the [story details](/developerportal/project-management/epics/epics/#story-details) dialog box or the [epic details](/developerportal/project-management/epics/epics/#epic-details) dialog box.
+    * You can copy the link to a story or an epic on the upper-right corner of the [story details](/developerportal/project-management/epics/epics/#story-details) dialog box or the [epic details](/developerportal/project-management/epics/board/#epic-details) dialog box.
     * Story and epic details now appear in a dialog box instead of a side pane.
     * The widget styling is now slightly different.
 * We added a **Project Buzz** button on the [Board](/developerportal/project-management/epics/board/) page. Clicking the button brings you to the [Buzz](/developerportal/collaborate/buzz/#app-buzz) page of the specific app in the Developer Portal.

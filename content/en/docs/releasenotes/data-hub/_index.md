@@ -327,7 +327,7 @@ These release notes cover changes made to the [Mendix Catalog](/catalog/).
 #### Improvements
 
 * Consumed data sources that have been deleted are now indicated in the [Landscape](/data-hub/data-hub-landscape/).
-* Existing endpoints that are not present in a `PUT` call of the **Registration API** will be deleted. Check out the [Data Hub Registration API](https://datahub-spec.s3.eu-central-1.amazonaws.com/registration_v4.html), or read the documentation in the [Registration API](/apidocs-mxsdk/apidocs/data-hub-apis/#registration) section of *Data Hub APIs*.
+* Existing endpoints that are not present in a `PUT` call of the **Registration API** will be deleted. Check out the [Data Hub Registration API](https://datahub-spec.s3.eu-central-1.amazonaws.com/registration_v4.html), or read the documentation in the [Registration API](/apidocs-mxsdk/apidocs/data-hub-apis/#registration) section of *Catalog APIs*.
 * The `app_uuid` is now present in the `409 CONFLICT` response from **Registration API** when registering an environment on a location that is already in use. 
 
 #### Fixes
@@ -349,7 +349,7 @@ These release notes cover changes made to the [Mendix Catalog](/catalog/).
 
 #### Fixes
 
-* We fixed a bug where the `GET ServiceVersion` operation of the DataHub V2 API would not always return the `ContractType` of a `Service`. See [Data Hub APIs](https://platformcore.pages.rnd.mendix.com/datahub-spec/) for a list of all available APIs.
+* We fixed a bug where the `GET ServiceVersion` operation of the DataHub V2 API would not always return the `ContractType` of a `Service`. See [Catalog APIs](https://platformcore.pages.rnd.mendix.com/datahub-spec/) for a list of all available APIs.
 
 ### May 19th, 2022
 
@@ -379,7 +379,7 @@ These release notes cover changes made to the [Mendix Catalog](/catalog/).
 
 #### New Features
 
-* You can now delete applications through the **Registration API**. Check out the [Data Hub Registration API](https://datahub-spec.s3.eu-central-1.amazonaws.com/registration_v4.html), or read the documentation in the [Registration API](/apidocs-mxsdk/apidocs/data-hub-apis/#registration) section of *Data Hub APIs*.
+* You can now delete applications through the **Registration API**. Check out the [Data Hub Registration API](https://datahub-spec.s3.eu-central-1.amazonaws.com/registration_v4.html), or read the documentation in the [Registration API](/apidocs-mxsdk/apidocs/data-hub-apis/#registration) section of *Catalog APIs*.
 * When a person is assigned to an application as a Technical Owner or Business Owner, they will receive an MxDock notification confirming their new role.
 
 #### Fixes
@@ -420,7 +420,7 @@ These release notes cover changes made to the [Mendix Catalog](/catalog/).
 #### Improvements 
 
 * We now support all OData versions and have unified all OData versions to a single **ContractType** with separate version attributes. Previously we only supported v3 and v4.
-* We added v4 of the **Registration API** and **Search API** to support the unified OData type and version structure. View the [list of Data Hub APIs](https://datahub-spec.s3.eu-central-1.amazonaws.com/index.html) or see our [Data Hub APIs](/apidocs-mxsdk/apidocs/data-hub-apis/) documentation.
+* We added v4 of the **Registration API** and **Search API** to support the unified OData type and version structure. View the [list of Catalog APIs](https://datahub-spec.s3.eu-central-1.amazonaws.com/index.html) or see our [Catalog APIs](/apidocs-mxsdk/apidocs/data-hub-apis/) documentation.
 
 #### Fixes
 
@@ -697,7 +697,7 @@ These release notes cover changes made to the [Mendix Catalog](/catalog/).
 
 #### Fixes
 
-* We updated the example in the [Data Hub APIs](/apidocs-mxsdk/apidocs/data-hub-apis/) for `PUT` published endpoints to match the behavior.
+* We updated the example in the [Catalog APIs](/apidocs-mxsdk/apidocs/data-hub-apis/) for `PUT` published endpoints to match the behavior.
 
 ### June 24th, 2021
 
@@ -719,7 +719,7 @@ These release notes cover changes made to the [Mendix Catalog](/catalog/).
 
 #### New Features
 
-* All [Data Hub APIs](/apidocs-mxsdk/apidocs/data-hub-apis/) are now available at https://datahub-spec.s3.eu-central-1.amazonaws.com/index.html. The original Data Hub API is now split into 2 APIs for search and registration operations and include the following changes:
+* All [Catalog APIs](/apidocs-mxsdk/apidocs/data-hub-apis/) are now available at https://datahub-spec.s3.eu-central-1.amazonaws.com/index.html. The original Data Hub API is now split into 2 APIs for search and registration operations and include the following changes:
     * [Search](/apidocs-mxsdk/apidocs/data-hub-apis/) – includes GET calls for getting details of data sources
     * [Register](/apidocs-mxsdk/apidocs/data-hub-apis/) – PUT calls are added to enable users to update or register applications and environments by specifying a UUID
 

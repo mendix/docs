@@ -21,7 +21,7 @@ To see the current status of the Mendix Developer Portal and Control Center, see
 
 #### New Features
 
-* We added the [Project Management](/developerportal/project-management/) section to the Developer Portal, which currently provides you with the full [Epics](/developerportal/project-management/epics/) features. We will integrate more project management options with this section. Stay tuned!
+* We added the [Project Management](/developerportal/project-management/) section to the Developer Portal and moved [Epics](/developerportal/project-management/epics/) into this section. Previously, Epics was located in the **Collaborate** section. We will integrate more project management options into the **Project Management** section. Stay tuned!
 * We introduced the [Epics API](/apidocs-mxsdk/apidocs/epics-api/).
 
 ### June 15th, 2023

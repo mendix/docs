@@ -17,6 +17,16 @@ To see the current status of the Mendix Developer Portal and Control Center, see
 
 ## 2023
 
+### June 22nd, 2023
+
+#### New Features
+
+* We have added the [Project Management](/developerportal/project-management/) section to the Developer Portal, which currently provides you with [Epics](/developerportal/project-management/epics/) features. We will integrate more project management options with this section. Stay tuned!
+* We have introduced the [Epics API](/apidocs-mxsdk/apidocs/epics-api/).
+* We released [Jira connector](/developerportal/collaborate/jira-connector), which enables you to connect your Mendix app to your Jira board.
+
+{{% todo %}}1. Check release date. 2. Check whether it is for Beta{{% /todo %}}
+
 ### June 15th, 2023
 
 #### New Features

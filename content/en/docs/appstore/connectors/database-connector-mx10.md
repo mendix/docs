@@ -9,9 +9,13 @@ tags: ["marketplace",  "marketplace component", "database connector", "jdbc", "h
 
 ## 1 Introduction
 
-{Provide a basic description of what this platform-supported Mendix Marketplace component does.}
+Connect to MSSQL, MySQL, PostgresSQL, and Oracle databases with the [Database](add marketplace link here) connector.
+
+This connector is designed for Studio Pro [10.0](/releasenotes/studio-pro/10/) and above. 
 
 ### 1.1 Typical Use Cases
+
+
 
 ### 1.2 Features
 

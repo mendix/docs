@@ -50,7 +50,7 @@ Depending on whether you plan to use the SAP Cloud Connector, you also need the 
 
 If you are using the SAP Cloud Connector to facilitate connection to the SAP backend system, you must install the *bapi-service* microservice component. The component minimizes the network complexity and helps make your application is compliant with the recommended SAP security standards.
 
-You can download the *bapi-service* component from the [Mendix Content Delivery Network](https://cdn.mendix.com/mcdep/bapi-service/bapi-service-1.0.0.zip), and then use the extracted manifest file to deploy the *bapi-service.war* file to SAP BTP. To use the component, you must also define an RFC-type destination in SAP BTP.
+You can download the *bapi-service* component from the [Mendix Content Delivery Network](https://cdn.mendix.com/mcdep/bapi-service/bapi-service-1.0.1.zip), and then use the extracted manifest file to deploy the *bapi-service.war* file to SAP BTP. To use the component, you must also define an RFC-type destination in SAP BTP.
 
 ### 2.2 Required Only When Not Using the SAP Cloud Connector
 

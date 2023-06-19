@@ -235,7 +235,7 @@ Each initiative card shows the following information:
 
 {{< figure src="/attachments/developerportal/portfolio-management/initiative-card.png" >}}
 
-* ① Initiative name – – Clicking this opens a [side pane](#view-initiative) that shows initiative details.
+* ① Initiative name
 * ② Ellipsis (**...**) – Clicking this button opens a menu that enables you to [edit](#edit-delete-initiative), [archive](#archive-initiative), or [delete](#edit-delete-initiative) the initiative.
   
     {{% alert type="info" %}}Both Portfolio Managers and Contributors can edit, archive, or delete an initiative. Only Viewers cannot do these actions. For more information on roles and permissions, see [Access Management](#access-management).{{% /alert %}}

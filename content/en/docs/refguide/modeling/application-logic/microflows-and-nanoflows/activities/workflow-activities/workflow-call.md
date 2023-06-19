@@ -18,8 +18,6 @@ This page describes the **Call workflow** activity you can use in your [microflo
 
 The **Call workflow** activity in microflows can be used to call and trigger a [workflow](/refguide/workflows/). 
 
-{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/workflow-activities/workflow-call/workflow-call.jpg" >}}
-
 ## 2 Properties
 
 An example of Call workflow properties is represented in the image below:

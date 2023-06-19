@@ -23,7 +23,7 @@ For more details on what can and cannot be provided in your search query, see th
 You can see an example of a request below where the search term is `Customer`:
 
 ```curl
-curl --location --request GET 'https://hub.mendix.com/rest/search/v3/data?query=Customer' \
+curl --location --request GET 'https://catalog.mendix.com/rest/search/v3/data?query=Customer' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: MxToken <your_Personal_Access_Token>'
 ```
@@ -35,15 +35,15 @@ A successful `GET` call results in a `200` status code and a JSON response body 
     "TotalResults": 145,
     "Links": [
         {
-            "Href": "https://hub.mendix.com/rest/search/v3/data?query=Customer",
+            "Href": "https://catalog.mendix.com/rest/search/v3/data?query=Customer",
             "Rel": "First"
         },
         {
-            "Href": "https://hub.mendix.com/rest/search/v3/data?query=Customer",
+            "Href": "https://catalog.mendix.com/rest/search/v3/data?query=Customer",
             "Rel": "Current"
         },
         {
-            "Href": "https://hub.mendix.com/rest/search/v3/data?query=Customer&afterId=18d7d608-723f-4f33-b247-a85271d5eefd",
+            "Href": "https://catalog.mendix.com/rest/search/v3/data?query=Customer&afterId=18d7d608-723f-4f33-b247-a85271d5eefd",
             "Rel": "Next"
         }
     ],
@@ -66,11 +66,11 @@ A successful `GET` call results in a `200` status code and a JSON response body 
             "Links": [
                 {
                     "Rel": "Self",
-                    "Href": "https://hub.mendix.com/rest/search/v3/endpoints/9756545b-9b36-4f51-8655-1102c36e9288"
+                    "Href": "https://catalog.mendix.com/rest/search/v3/endpoints/9756545b-9b36-4f51-8655-1102c36e9288"
                 },
                 {
                     "Rel": "Catalog",
-                    "Href": "https://hub.mendix.com/link/endpoint?EndpointUUID=9756545b-9b36-4f51-8655-1102c36e9288"
+                    "Href": "https://catalog.mendix.com/link/endpoint?EndpointUUID=9756545b-9b36-4f51-8655-1102c36e9288"
                 }
             ],
             "Items": [
@@ -81,7 +81,7 @@ A successful `GET` call results in a `200` status code and a JSON response body 
                     "Updatable": false,
                     "Links": [{
                         "Rel": "Catalog",
-                        "Href": "https://hub.mendix.com/link/entity?EndpointUUID=9756545b-9b36-4f51-8655-1102c36e9288&EntityUUID=d27150f1-1ba3-41f0-965b-3ce3402412ef"
+                        "Href": "https://catalog.mendix.com/link/entity?EndpointUUID=9756545b-9b36-4f51-8655-1102c36e9288&EntityUUID=d27150f1-1ba3-41f0-965b-3ce3402412ef"
                     }],
                     "Deletable": false,
                     "Items": [
@@ -128,7 +128,7 @@ A successful `GET` call results in a `200` status code and a JSON response body 
                     "Updatable": false,
                     "Links": [{
                         "Rel": "Catalog",
-                        "Href": "https://hub.mendix.com/link/entity?EndpointUUID=9756545b-9b36-4f51-8655-1102c36e9288&EntityUUID=3aeb0d6b-4205-4bc6-adef-67487e85e178"
+                        "Href": "https://catalog.mendix.com/link/entity?EndpointUUID=9756545b-9b36-4f51-8655-1102c36e9288&EntityUUID=3aeb0d6b-4205-4bc6-adef-67487e85e178"
                     }],
                     "Deletable": false,
                     "Items": [{
@@ -155,7 +155,7 @@ A successful `GET` call results in a `200` status code and a JSON response body 
                     "Updatable": false,
                     "Links": [{
                         "Rel": "Catalog",
-                        "Href": "https://hub.mendix.com/link/entity?EndpointUUID=9756545b-9b36-4f51-8655-1102c36e9288&EntityUUID=6939a90c-c3bc-4eaf-a741-a484cf2248ad"
+                        "Href": "https://catalog.mendix.com/link/entity?EndpointUUID=9756545b-9b36-4f51-8655-1102c36e9288&EntityUUID=6939a90c-c3bc-4eaf-a741-a484cf2248ad"
                     }],
                     "Deletable": false,
                     "Items": [{

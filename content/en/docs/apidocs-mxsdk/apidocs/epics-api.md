@@ -23,14 +23,12 @@ Authentication for the Epics API uses a personal access token (PAT).
 
 ### 2.1 Generating a PAT
 
-{{% todo %}}What are the correct scopes?{{% /todo %}}
-
 To generate a PAT, see the [Personal Access Tokens](/developerportal/community-tools/mendix-profile/#pat) section in *Mendix Profile*.
 
 Select the following as **Deployment Mendix Cloud** scopes:
 
-* `mx:deployment:read` – to perform `GET` operations
-* `mx:deployment:write` – to perform all operations (`GET`, `POST`, `PUT`, and `DELETE`)
+* `mx:epics:read` – to perform `GET` operations
+* `mx:epics:write` – to perform all operations (`GET`, `POST`, `PUT`, and `DELETE`)
 
 Store the generated value `{GENERATED_PAT}` somewhere safe so you can use it to authorize your Mendix Cloud Deploy API calls.
 

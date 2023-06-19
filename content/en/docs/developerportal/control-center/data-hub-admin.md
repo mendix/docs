@@ -2,6 +2,7 @@
 title: "Data Hub Administration"
 url: /developerportal/control-center/data-hub-admin/
 category: "Control Center"
+weight: 15
 description: "Describes the Mendix Admin functions for Mendix Admin and curators."
 tags: ["data hub", "Mendix Admin", "curator", "custom owner", "administration"]
 ---
@@ -26,7 +27,7 @@ The Data Hub Curator role can see and edit metadata for all registered assets in
 To assign a Curator role to a Mendix user, click **Add Curator**. To search the list of Mendix users in your organization, start typing in the search box and check the user(s) you want to assign the Curator role to.
 
 {{% alert color="info" %}}
-A user with Curator rights can access all assets registered in the Data Hub Catalog. This also includes those that are set to **Non-discoverable** (for more information on discoverability, see the [Discoverability](/data-hub/data-hub-catalog/search/#discoverability-metadata) section in *How to Search in the Data Hub Catalog*). Curators can also change the metadata for assets that are owned by other users.
+A user with Curator rights can access all assets registered in the Data Hub Catalog. This also includes those that are set to **Non-discoverable** (for more information on discoverability, see the [Discoverability](/catalog/manage/search/#discoverability-metadata) section in *How to Search in the Data Hub Catalog*). Curators can also change the metadata for assets that are owned by other users.
 {{% /alert %}}
 
 If you want to remove the curator rights for a user, check the box next to the user and click **Remove Curator**.
@@ -37,7 +38,7 @@ This only removes the Curator rights of the user, it does not remove the user as
 
 ## 3 Owners {#custom-owners}
 
-Custom owners are owners that have been added as contacts for a registered app. They may be added during the app [curation](/data-hub/data-hub-catalog/curate/#custom-owner), or they may have been specified during app registration. For more information, see the [Adding a Custom Owner](/data-hub/data-hub-catalog/curate/#custom-owner) section of *How to Curate Registered Assets*.
+Custom owners are owners that have been added as contacts for a registered app. They may be added during the app [curation](/catalog/manage/search/#discoverability-metadata), or they may have been specified during app registration. For more information, see the [Adding a Custom Owner](/catalog/manage/search/#discoverability-metadata) section of *How to Curate Registered Assets*.
 
 Custom owners are only the contact people for registered assets. Adding a custom owner does not give them access rights to the Data Hub Catalog, as they are not able to log in to the Mendix Platform and curate registered assets in the Catalog. Custom owners appear in the Catalog with their name and initials, or with their personalized avatar if they are a Mendix user.
 
@@ -68,11 +69,11 @@ To invite a new user, on the Data Hub screen, click **Invite External Users**. I
 You can only invite users with a Mendix account. The invitation email will not be sent to email addresses that are not associated with any Mendix account.
 {{% /alert %}}
 
-Once the external user receives the invitation, they log into the Data Hub Catalog with their Mendix credentials and accept. An external user can only access resources from one organization at a time; therefore, they need to select the company that sent the invitation in the **Company** drop-down list in the Data Hub [Home](/data-hub/data-hub-catalog/#data-hub-home) page:
+Once the external user receives the invitation, they log into the Data Hub Catalog with their Mendix credentials and accept. An external user can only access resources from one organization at a time; therefore, they need to select the company that sent the invitation in the **Company** drop-down list in the Data Hub [Home](/catalog/#catalog-home) page:
 
 {{< figure src="/attachments/developerportal/control-center/data-hub-admin/company_selector.png" alt="Company selector" >}}
 
-Company administrators can also **Remove** rights of users who no longer need access, and can add another user in their place.
+Mendix Admins can also **Remove** rights of users who no longer need access, and can add another user in their place.
 
 ## 5 Settings {#settings}
 

@@ -46,7 +46,7 @@ A microflow is composed of elements. Below is a categorized overview of all elem
 * [Artifacts](#artifacts) provide the microflow with input and allow comments to be made.
 * [Error handlers](#errorhandlers) can be set on an activity, gateway or loop to define how to handle an error.
 
-## 4 Events<a name="events"></a>
+## 4 Events {#events}
 
 Events represent start and end points of a microflow and special operations in a loop.
 
@@ -58,7 +58,7 @@ Events represent start and end points of a microflow and special operations in a
 | {{< figure src="/attachments/refguide7/desktop-modeler/application-logic/microflows/918115.png" link="/refguide7/continue-event/" >}} | [Continue Event](/refguide7/continue-event/) | A continue event is used to stop the current iteration of a loop and continue with the next iteration. Please note that continue events can only be used inside a [Loop](/refguide7/loop/). |
 | {{< figure src="/attachments/refguide7/desktop-modeler/application-logic/microflows/918026.png" link="/refguide7/break-event/" >}} | [Break Event](/refguide7/break-event/) | A break event is used to stop iterating over the list of objects and continue with the rest of the flow after the loop. Please note that break events can only be used inside a [Loop](/refguide7/loop/). |
 
-## 5 Flows<a name="flows"></a>
+## 5 Flows {#flows}
 
 Flows form the connection between elements.
 
@@ -67,7 +67,7 @@ Flows form the connection between elements.
 | {{< figure src="/attachments/refguide7/desktop-modeler/application-logic/microflows/917883.png" link="/refguide7/sequence-flow/" >}} | [Sequence Flow](/refguide7/sequence-flow/) | A sequence flow is an arrow that links events, activities, splits and merges with each other. Together they defined the order of execution within a microflow. |
 | {{< figure src="/attachments/refguide7/desktop-modeler/application-logic/microflows/917688.png" link="/refguide7/annotation-flow/" >}} | [Annotation flow](/refguide7/annotation-flow/) | An association is a connection that can be used to connect an annotation to another element. |
 
-## 6 Gateways<a name="gateways"></a>
+## 6 Gateways {#gateways}
 
 Gateways deal with making choices and merging different paths again..
 
@@ -78,7 +78,7 @@ Gateways deal with making choices and merging different paths again..
 | {{< figure src="/attachments/refguide7/desktop-modeler/application-logic/microflows/918122.png" link="/refguide7/inheritance-split/" >}} | [Inheritance Split](/refguide7/inheritance-split/) | An inheritance split is an element that makes a choice based on the [specialization](/refguide7/entities/) of the selected object. You can give the specialized object a name using a [Cast Object](/refguide7/cast-object/) action. |
 | {{< figure src="/attachments/refguide7/desktop-modeler/application-logic/microflows/918116.png" link="/refguide7/merge/" >}} | [Merge](/refguide7/merge/) | A merge can be used to combine multiple sequence flows into one. If a choice is made in a microflow and afterwards some common work needs to be done, you can combine the two (or more) paths using a merge. |
 
-## 7 Activities<a name="activities"></a>
+## 7 Activities {#activities}
 
 Activities are the actions that are executed in a microflow.
 
@@ -87,7 +87,7 @@ Activities are the actions that are executed in a microflow.
 | {{< figure src="/attachments/refguide7/desktop-modeler/application-logic/microflows/918096.png" link="/refguide7/activities/" >}} | [Activity](/refguide7/activities/) | An activity can be used to execute a specific action in a microflow. |
 | {{< figure src="/attachments/refguide7/desktop-modeler/application-logic/microflows/917804.png" link="/refguide7/loop/" >}} | [Loop](/refguide7/loop/) | A looped activity is used to iterate over a list of objects. For every object the flow inside the looped activity is executed. A looped activity can contain all elements used in microflows, with the exception of start and stop events. The flow starts at the first element with no incoming flows. |
 
-## 8 Artifacts<a name="artifacts"></a>
+## 8 Artifacts {#artifacts}
 
 Artifacts provide the microflow with input and allow comments to be made.
 
@@ -108,7 +108,7 @@ In the example below, the parameter **AccountPasswordData** is highlighted becau
 
 When an error occurs in a microflow, all changes that have been made to objects are rolled back and the microflow is aborted. Optionally, you can handle errors in the microflow itself by configuring different error handling settings. You can even inspect the details of the error by looking at the predefined variables `$latestError` and `$latestSoapFault`.
 
-### 10.1 Error Handlers<a name="errorhandlers"></a>
+### 10.1 Error Handlers {#errorhandlers}
 
 An error handler can be set on an activity, gateway or loop.
 On an activity or gateway it gives you three options:
@@ -148,7 +148,7 @@ The following table shows the attributes of System.Error and System.SoapFault.
 | --- | --- | --- | --- |
 | System.Error | ErrorType | String | The Java exception type of the error that occurred. |
 | System.Error | Message | String | The message of the Java exception. |
-| System.Error | Stacktrace | String | The stacktrace of the Java exception. |
+| System.Error | Stacktrace | String | The stack trace of the Java exception. |
 | System.SoapFault | Code | String | The Code element of the SOAP fault. |
 | System.SoapFault | Reason | String | The Reason element of the SOAP fault. |
 | System.SoapFault | Node | String | The Node element of the SOAP fault. |

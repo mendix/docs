@@ -17,22 +17,22 @@ In the 8.18.1 example, the first number (**8**) indicates the major version.
 
 Mendix supports three major versions at a time. To clarify our current offering and in relation to our SLA, today Mendix supports major versions 7, 8, and 9. Once version 10 has been released, version 7 will only be supported via the Extended Support product.
 
-As of Mendix 10, to make planning version upgrades easier for our users, Mendix will release in a two-year cadence, which means that every two years we plan to release a new major version in June. This will help in preparing and planning to adopt new releases and upgrade older Mendix versions. Each major version release will start with two Public Beta releases.
+As of Mendix 10, to make planning version upgrades easier for our users, Mendix will release in a two-year cadence, which means that every two years we plan to release a new major version in June. This will help in preparing and planning to adopt new releases and upgrade older Mendix versions. Each major version release will start with two Beta releases.
 
 For Mendix 10 and 11, we are planning to follow this release timeline:
 
 | Release | Date |
 | --- | --- |
 | 9.24 LTS | March 2023 |
-| 10 Public Beta 1 | April 2023 |
-| 10 Public Beta 2 | May 2023 |
+| 10 Beta 1 | April 2023 |
+| 10 Beta 2 | May 2023 |
 | 10.0 GA | June 2023 |
 | 10.6 MTS | December 2023 |
 | 10.12 MTS | June 2024 |
 | 10.18 MTS | December 2024 |
 | 10.21 LTS | March 2025 |
-| 11 Public Beta 1 | April 2025 |
-| 11 Public Beta 2 | May 2025 |
+| 11 Beta 1 | April 2025 |
+| 11 Beta 2 | May 2025 |
 | 11.0 GA | June 2025 |
 
 ### 1.2 Minor Version
@@ -41,11 +41,11 @@ In the 8.18.1 example, the second number (**18**) indicates the minor version.
 
 A minor version is generally released every month. It includes new features and fixes, but it does not include breaking changes.
 
-### 1.3 Patch Version
+### 1.3 Patch Version {#patch-version}
 
 In the 8.18.1 example, the third number (**1**) indicates the patch version. 
 
-A patch version is released on an as-needed basis. It includes security fixes and critical bug fixes, but it does not include new features or breaking changes.
+A patch version is released on an as-needed basis. It includes security fixes and critical bug fixes, but it does not include new features or breaking changes (unless these address security issues).
 
 ## 2 Long-Term Support Version (LTS) {#lts}
 
@@ -53,6 +53,7 @@ An LTS version is the latest minor version before a new major version is release
 
 These are the current LTS versions of Studio Pro:
 
+* [9.24](/releasenotes/studio-pro/9.24/) (started in March, 2023)
 * [8.18](/releasenotes/studio-pro/8.18/) (started in March, 2021)
 * [7.23](/releasenotes/studio-pro/7.23/) (started in February, 2019)
 
@@ -93,7 +94,7 @@ These are the current MTS versions for Studio Pro:
 * [9.6](/releasenotes/studio-pro/9.6/) (started in September, 2021)
 
 {{% alert color="info" %}}
-Older MTS versions (for example, 9.6) remain supported until the next LTS version has been released.
+Older MTS versions (for example, 9.6) remain supported until the next major version has been released for General Availability (for example, 10).
 {{% /alert %}}
 
 If you are on an innovation track with your development and need to get the latest and greatest Mendix has to offer every month, then upgrade to an MTS and stay on that version with its patch releases until the next MTS version is released.

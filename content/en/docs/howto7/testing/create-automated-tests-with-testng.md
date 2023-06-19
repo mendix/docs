@@ -332,7 +332,7 @@ After you have created an expense, you will want to sign out. To add the fifth t
 
     This test method will click the element with the `mx-name-signOutButton1` class name.
 
-## <a name="RuntheTest"></a>6 Run the Test
+## 6 Run the Test {#RuntheTest}
 
 You are now ready to run the test. To run the test, follow these steps:
 

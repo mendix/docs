@@ -2,7 +2,7 @@
 title: "Support Escalation Process"
 url: /developerportal/support/escalation-management-process/
 category: "Mendix Support"
-weight: 5
+weight: 50
 description: "Describes how a support request can be escalated to bring your issue to closure."
 tags: ["support", "escalation management"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
@@ -59,7 +59,7 @@ This is the normal process for a support case:
 
 3. Once the ticket has been submitted, this incoming ticket is assigned to a Support Engineer.
 
-The Support Engineer will come to a solution most of the time, sometimes after discussion with a Technical Support Lead and, if needed, with our second-line team (for the Mendix Studios, Client, Core, or Expert Services).
+The Support Engineer will come to a solution most of the time, sometimes after discussion with a Technical Support Lead and, if needed, with our second-line team (for  Mendix Studio Pro, Client, Core, or Expert Services).
 
 If the gap between the customer's expectation and the Mendix Platform possibilities cannot be resolved, an escalation is started.
 

@@ -10,7 +10,7 @@ tags: ["security", "headers"]
 
 By employing a content security policy (CSP) in your app, you can protect it from malicious content which might try to take advantage of the app's trusted web page context. A rigorous CSP allows you to control which resources are loaded in the app.
 
-In Mendix Studio Pro 9.12.0 and higher, a web app (including progressive web apps) can be made more strict and secure by setting its CSP to `default-src: self`. By doing so, only resources from the same domain can be loaded and no resources can be loaded inline (such as Base64 images or inline JavaScript).
+A web app (including progressive web apps) can be made more strict and secure by setting its CSP to `default-src: self`. By doing so, only resources from the same domain can be loaded and no resources can be loaded inline (such as Base64 images or inline JavaScript).
 
 For more background information on CSPs, see [Content Security Policy](https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP) from Mozilla.
 
@@ -43,7 +43,7 @@ window.dojoConfig = {
 	blankGif: "mxclientsystem/dojo/resources/blank.gif"
 };
 
-if (!document.cookie || !document.cookie.match(/(^|;)originURI=/gi))
+if (!document.cookie || !document.cookie.match(/(^|;) *originURI=/gi))
 	document.cookie = "originURI=/login.html" + (window.location.protocol === "https:" ? ";SameSite=None;Secure" : "");
 ```
 

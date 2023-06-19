@@ -1,5 +1,5 @@
 ---
-title: "CI/CD for Mendix for Standalone Private Cloud using Tekton"
+title: "CI/CD for Mendix for Standalone Private Cloud Using Tekton"
 linktitle: "CI/CD with Tekton"
 url: /developerportal/deploy/private-cloud-tekton/
 description: "Describes how to use Tekton to create a CI/CD solution for Mendix environments in the Private Cloud"
@@ -39,7 +39,7 @@ To follow these instructions you will need:
 * Administrator access to a Kubernetes/OpenShift cluster
 * The standalone [cluster registered in the Mendix Developer Portal](/developerportal/deploy/private-cloud-cluster/#create-cluster)
 * A [namespace added](/developerportal/deploy/private-cloud-cluster/#add-namespace) to the cluster
-* The [Mendix Operator installed](/developerportal/deploy/private-cloud-cluster/#install-operator) and configured in the cluster
+* The [Mendix Operator v2.8.0+ installed](/developerportal/deploy/private-cloud-cluster/#install-operator) and configured in the cluster
 * The [Helm](https://helm.sh) package manager
 * The Mendix Tekton pipelines – these can be requested through your CSM
 * Access to the internet to copy images to your air-gapped registry, or to install images directly onto your cluster
@@ -119,33 +119,33 @@ If your cluster is air-gapped and does not have access to the internet, you will
 When you have followed those instructions, you can continue with [Installing Triggers](#installing-triggers), below.
 {{% /alert %}}
 
-## 5 Tekton Installation for Non Air-gapped (Regular) Environments{#tekton-installation}
+## 5 Tekton Installation for Non Air-Gapped (Regular) Environments {#tekton-installation}
 
 If Tekton is already installed in your namespace, you can skip to [Pipeline Installation for non air-gapped Environments](#pipelines-installation).
 
-### 5.1 Installing on Non Air-gapped Kubernetes
+### 5.1 Installing on Non Air-Gapped Kubernetes
 
 To install Tekton with Tekton Triggers, apply the following *yaml* manifests:
 
 ```bash {linenos=false}
-kubectl apply --filename https://storage.googleapis.com/tekton-releases/pipeline/previous/v0.33.2/release.yaml
-kubectl apply --filename https://storage.googleapis.com/tekton-releases/triggers/previous/v0.19.0/release.yaml
-kubectl apply --filename https://storage.googleapis.com/tekton-releases/triggers/previous/v0.19.0/interceptors.yaml
+kubectl apply --filename https://storage.googleapis.com/tekton-releases/pipeline/previous/v0.41.1/release.yaml
+kubectl apply --filename https://storage.googleapis.com/tekton-releases/triggers/previous/v0.22.1/release.yaml
+kubectl apply --filename https://storage.googleapis.com/tekton-releases/triggers/previous/v0.22.1/interceptors.yaml
 ```
 
 {{% alert color="info" %}}
 The manifests target the `tekton-pipelines` namespace.
 {{% /alert %}}
 
-### 5.2 Installing on Non Air-gapped OpenShift
+### 5.2 Installing on Non Air-Gapped OpenShift
 
 To install Tekton and Tekton Triggers on OpenShift you can use Red Hat OpenShift Pipelines, follow the instructions on the [Installing OpenShift Pipelines](https://docs.openshift.com/container-platform/4.7/cicd/pipelines/installing-pipelines.html) page of the OpenShift documentation. 
 
 Main objects would be installed in `openshift-pipelines` namespace. 
 
-At the moment we support Red Hat OpenShift Pipelines v1.7.2. 
+At the moment we support Red Hat OpenShift Pipelines v1.9.2. 
 
-## 6 Pipeline Installation for Non Air-gapped Environments{#pipelines-installation}
+## 6 Pipeline Installation for Non Air-Gapped Environments {#pipelines-installation}
 
 Before you install the Mendix pipelines, which contain all Tekton-related objects, you need to do the following:
 
@@ -201,6 +201,7 @@ To set the GitLab Token in GitLab you specify it as the **Secret Token** when cr
 
 With HTTP clients you simply need to add `X-GitLab-Token` to your header.
 For example, using the `curl` client:
+
 ```bash {linenos=table, hl_lines=[3]}
 curl -X POST \\
   http://pipeline.trigger.yourdomain.com/ \\
@@ -278,6 +279,7 @@ After installing the generic trigger or the GitLab webhook trigger, you will hav
 Make sure that you have access to that service (by creating an ingress or load balancer from a cloud provider, etc).
 
 Here is an example of ingress object:
+
 ```yaml {linenos=false}
 apiVersion: networking.k8s.io/v1
 kind: Ingress
@@ -296,7 +298,12 @@ spec:
                 port:
                   number: 8080
 ```
+
 Make sure that an ingress controller already installed. You can use an [NGINX Controller](https://kubernetes.github.io/ingress-nginx/) for this purpose.
+
+This service expects parameters in JSON/HTTP Header format. Examples of HTTP requests are provided in the [Triggering Pipelines](#triggering-pipelines) section.
+
+By exposing the service with the HTTP protocol all traffic might go unencrypted over the public internet. We recommend that you enable HTTPS/TLS protocols.
 
 In this example and in the rest of this document, we use `pipeline.trigger.yourdomain.com` to refer to this trigger.
 
@@ -331,6 +338,7 @@ For ECR you need to create secret with [authorization token](https://docs.aws.am
 To make it easier we build Kubernetes CronJob that you can reuse.
 
 This CronJob requires IAM user with the next policy:
+
 ```
 {
     "Version": "2012-10-17",
@@ -359,12 +367,14 @@ This CronJob requires IAM user with the next policy:
     ]
 }
 ```
+
 You need replace strings `$YOUR_REGISTRY_REGION`, `$YOUR_ACCOUNT` and `$YOUR_REPO` with your values (use the same repo from [this section](#pipelines-installation)).  
 
 Manifest below contains CronJob that will refresh secret with ECR .dockerconfig every 4 hours.
 Also, it contains Job that will create that secret for the first time.
 Replace $BASE64_KEYID_HERE, $BASE64_ACCESSKEY_HERE, $BASE64_AWS_ACCOUNT_HERE and $BASE64_AWS_REGION_HERE strings with the correct one.</br>
 $BASE64_KEYID_HERE and $BASE64_ACCESSKEY_HERE are the Access key ID and Secret access key of the created IAM user.
+
 ```
 apiVersion: v1
 kind: Secret
@@ -503,9 +513,9 @@ spec:
                   kubectl patch serviceaccount tekton-triggers-mx-sa -p '{"secrets":[{"name":"aws-registry"}]}'
 ```
 
-## 9 Triggering Pipelines
+## 9 Triggering Pipelines  {#triggering-pipelines}
 
-This section documents the HTTP requests which will trigger the various Mendix pipelines, using the triggers you have installed in the [Installing Triggers](#installing-triggers) section, and describes their parameters.
+This section documents the HTTP requests which will trigger the various Mendix pipelines, using the triggers you have installed in the [Installing Triggers](#installing-triggers) section, and describes their parameters. 
 
 ### 9.1 Create App Pipeline
 
@@ -522,6 +532,7 @@ curl -X POST \
     "env-internal-name":"mx-environment-internal-name",
     "dtap-mode":"D",
     "storage-plan-name":"file-plan-name",
+    "mx-admin-password":"Welc0me!",
     "database-plan-name":"db-plan-name"
 }'
 ```
@@ -531,8 +542,9 @@ curl -X POST \
 | `namespace`         | name of the Kubernetes namespace where the Mendix Operator runs                                                                                                                                                                            |
 | `env-internal-name` | Mendix environment internal name. The MendixApp CR will be created with this name                                                                                                                                                          |
 | `dtap-mode`         | mode for running the Mendix application. Available options:<br/>`P` – Production (for all production environments)<br/>`D` – Development<br/> Your app can only be deployed to a production environment if [security in the app is set on](/refguide/app-security/).  |
-| `storage-plan-name` | name of an already-created storage plan                                                                                                                                                                                                    |
-| `database-plan-name` | name of an already-created database plan                                                                                                                                                                                                   |
+| `storage-plan-name` | name of an existing storage plan                                                                                                                                                                                                    |
+| `database-plan-name` | name of an existing database plan                                                                                                                                                                                                   |
+| `mx-admin-password` | Mendix admin password                                                                                                                                                                                                |
 | `X-GitLab-Token: SomeLongSecureToken42` | token from [7.2 section](#authentication). You can remove this field if authentication is disabled.                                                                                                                                        |
 
 ### 9.2 Build Pipeline
@@ -599,6 +611,7 @@ curl -X POST \
     "namespace":"namespace-with-operator",
     "env-internal-name":"mx-environment-internal-name",
     "source-url":"https://example.com/url-to-mda/or/oci-image",
+    "mx-admin-password":"Welc0me!",
     "replicas":5,
     "dtap-mode":"D",
     "set-constants":"{\"key\":\"value\"}",
@@ -615,6 +628,7 @@ curl -X POST \
 | `namespace` | name of the Kubernetes namespace where Mendix Operator runs                                                                                   |
 | `env-internal-name` | Mendix environment internal name. You can get all the internal environment names with the command `kubectl get mendixapps -n $namespace_name` |
 | `source-url` *(Optional)* | .mda file url or oci-image (using `oci-image://` scheme) url. If empty, the url is not changed                                                |
+| `mx-admin-password` | Mendix admin password     |
 | `replicas` *(Optional)* | number of replicas. If empty, the number of replicas remains the same                                                                         |
 | `dtap-mode` *(Optional)* | mode for running the Mendix application. Available options<br/>`P` – Production (for all production environments)<br/>`D` – Development       |
 | `set-constants` *(Optional)* | constants to set provided as a JSON map. Replaces the old list with the new one. Example: {"KEY":"VALUE"}                                     |
@@ -652,10 +666,13 @@ curl -X POST \
 ### 10.1 Checking Tekton Components
 
 To verify that all components are running correctly, use the following command:
+
 ```bash {linenos=false}
 kubectl get po -n tekton-pipelines
 ```
+
 You should see a list of `Running` pods similar to that below:
+
 ```
 NAME                                                 READY   STATUS    RESTARTS   AGE
 tekton-pipelines-controller-78d8d6d4b-rbd6g          1/1     Running   0          20d
@@ -666,10 +683,13 @@ tekton-triggers-webhook-7f5c9477cc-fb624             1/1     Running   0        
 ```
 
 Also, you need to check the listener of the Tekton Trigger (`$NAMESPACE_WITH_PIPELINES` is the namespace from the [Installing Triggers](#installing-triggers) step):
+
 ```bash {linenos=false}
 kubectl get po -n $NAMESPACE_WITH_PIPELINES
 ```
+
 The output should include a `Running` pod similar to the one below:
+
 ```
 NAME                                             READY   STATUS      RESTARTS   AGE
 el-mx-pipeline-listener-gitlab-55f75fc997-nrl5b  1/1     Running     11         17d
@@ -686,6 +706,7 @@ To view the logs you need to identify the name of the listener pods. Use the com
 Then use the command: `kubectl logs $LISTENER_POD -n $NAMESPACE_WITH_PIPELINES`, using the pod name in place of $LISTENER_POD.
 
 Information log messages like those shown below do not indicate an issue — they are caused by implementation details:
+
 ```
 {"level":"info","ts":"2022-08-10T09:46:54.300Z","logger":"eventlistener","caller":"sink/sink.go:229","msg":"interceptor stopped trigger processing: rpc error: code = FailedPrecondition desc = expression header.match('Event', 'configure-app') did not return true","knative.dev/controller":"eventlistener","eventlistener":"mx-pipeline-listener-generic","namespace":"mxpipeline","eventlistenerUID":"fcf84b8f-bcb1-46f1-bcd0-ae4b21d85f06","/triggers-eventid":"627c82d7-1d9e-4dda-99c7-14166c86b385","/trigger":"mx-pipline-configure-app-trigger-generic"}
 {"level":"info","ts":"2022-08-10T09:46:54.300Z","logger":"eventlistener","caller":"sink/sink.go:229","msg":"interceptor stopped trigger processing: rpc error: code = FailedPrecondition desc = expression header.match('Event', 'build') did not return true","knative.dev/controller":"eventlistener","eventlistener":"mx-pipeline-listener-generic","namespace":"mxpipeline","eventlistenerUID":"fcf84b8f-bcb1-46f1-bcd0-ae4b21d85f06","/triggers-eventid":"627c82d7-1d9e-4dda-99c7-14166c86b385","/trigger":"mx-pipline-build-trigger-generic"}
@@ -698,6 +719,7 @@ Information log messages like those shown below do not indicate an issue — the
 To view the list of pipeline runs use the command `kubectl get pipelineruns -n $NAMESPACE_WITH_PIPELINES` (`$NAMESPACE_WITH_PIPELINES` is the namespace from the [Installing Triggers](#installing-triggers) step).
 
 The output of this command looks like this:
+
 ```
 NAME                                       SUCCEEDED   REASON      STARTTIME   COMPLETIONTIME
 mx-pipeline-app-create-run-generic-zzt8h   False       Failed      8d          8d
@@ -709,11 +731,15 @@ mx-pipeline-build-run-gitlab-2bjc7         True        Succeeded   22d         2
 Logs regarding pipeline execution can be found in the pods.
 
 Example of finding logs of the failed pipeline (`$NAMESPACE_WITH_PIPELINES` is the namespace from the [Installing Triggers](#installing-triggers) step):
+
 1. Get a list of pipelines:
+
     ```bash {linenos=false}
     kubectl get pipelineruns -n $NAMESPACE_WITH_PIPELINES
     ```
+
     In the output, there is one failed pipelinerun with the name `mx-pipeline-app-create-run-generic-zzt8h`:
+
     ```
     NAME                                       SUCCEEDED   REASON      STARTTIME   COMPLETIONTIME
     mx-pipeline-app-create-run-generic-zzt8h   False       Failed      8d          8d
@@ -721,20 +747,25 @@ Example of finding logs of the failed pipeline (`$NAMESPACE_WITH_PIPELINES` is t
     ```
 
 2. Get the pods for the failed pipeline runs:
+
     ```bash {linenos=false}
     kubectl get po -n $NAMESPACE_WITH_PIPELINES | grep mx-pipeline-app-create-run-generic-zzt8h
     ```
+
     In the output there is a `Failed` pod:
+
     ```
     mx-pipeline-app-create-run-generic-zzt8h-create-app-cr-2g-hjkx2   0/1     Error       0          8d
     ```
 
 3. Get the logs for the failed pod:
+
     ```bash {linenos=false}
     kubectl logs mx-pipeline-app-create-run-generic-zzt8h-create-app-cr-2g-hjkx2 -n $NAMESPACE_WITH_PIPELINES
     ```
 
     In the output there are logs which indicate the error:
+
     ```
     Error: mendixapps.privatecloud.mendix.com "mxapp" already exists
     Usage:
@@ -766,6 +797,7 @@ As alternative, it's possible to use [Tekton Dashboard](https://github.com/tekto
 Pipeline runs can produce a lot of pods. To clean up the pods you can delete `pipelineruns` Custom Resource objects.
 
 For example, to delete all pipeline runs except latest 5 use the following commands:
+
 ```bash {linenos=false}
 NUM_TO_KEEP=5
 TO_DELETE="$(kubectl get pipelinerun -o jsonpath='{range .items[?(@.status.completionTime)]}{.status.completionTime}{" "}{.metadata.name}{"\n"}{end}' | sort | head -n -${NUM_TO_KEEP} | awk '{ print $2}')"

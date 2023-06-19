@@ -2,7 +2,8 @@
 title: "Team Server API"
 url: /apidocs-mxsdk/apidocs/team-server-api/
 category: "API Documentation"
-weight: 65
+description: "This API enables retrieving information (branches, revisions) about application models stored in Mendix Team Server."
+weight: 95
 ---
 
 {{% alert color="warning" %}}
@@ -27,7 +28,7 @@ The Developer Portal Management API requires its users to authenticate themselve
 
 ### 3.1 Retrieve Branches
 
-<a name="TeamServerAPI-Description" rel="nofollow"></a>Retrieves all branches that belong to the team server project of a specific app which the authenticated user has access to as a regular user.
+<a id="TeamServerAPI-Description" rel="nofollow"></a>Retrieves all branches that belong to the team server project of a specific app which the authenticated user has access to as a regular user.
 
 ```http
 HTTP Method: GET

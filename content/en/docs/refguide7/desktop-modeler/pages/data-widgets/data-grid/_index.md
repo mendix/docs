@@ -273,7 +273,7 @@ See [Control Bar](/refguide7/control-bar/).
 
 ### Search Bar (for the Database and XPath Data Source Types)
 
-The search bar contains search fields that allow the end-user to quickly find the information he or she needs.
+The search bar contains search fields that allow the end-user to quickly find the information they need.
 
 See [Search Bar](/refguide7/search-bar/).
 

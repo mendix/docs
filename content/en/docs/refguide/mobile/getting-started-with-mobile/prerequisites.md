@@ -16,43 +16,28 @@ While developing Mendix apps, you will need to test and iterate to make the best
 * The [Getting the Make It Native App](#get-min-app) section explains how to download the Make It Native App, which you can use to test your apps using a simple QR code
 * The [Troubleshooting Common Mobile Issues](#troubleshooting) section explains port forwarding, WiFi settings, and other common troubleshooting issues
 
+{{% alert color="warning" %}}
+Please note that instructions in this document reference Mendix 9 technologies. When using Mx10 Beta 1 or Beta 2, please use the Make it Native 9 app while testing.
+
+After the Make It Native 10 app is published in app stores, this document will be rewritten to describe testing Mx10 apps.
+{{% /alert %}}
+
 ## 2 Getting the Make It Native App {#get-min-app}
 
-The Make It Native app allows developers to preview, test, and debug native mobile apps in conjunction with Mendix Studio Pro. It currently comes in two versions: 
+The Make It Native app allows developers to preview, test, and debug native mobile apps in conjunction with Mendix Studio Pro. Use the **Make It Native 9 app** for Studio Pro v9.24.0 and above.
 
-* The **Make It Native 8 app** for Mendix Studio Pro 8 (v8.8 and above) 
-* The **Make It Native 9 app** for Studio Pro v9.0 and above
-
-Both of these apps are available for both Android and iOS devices.
+This app is available for both Android and iOS devices.
 
 For information on which mobile operating systems are supported by the Make It Native app, see the [Mobile Operating Systems](/refguide/system-requirements/#mobileos) section of *System Requirements*.
 
-### 2.1 Archives {#archives}
+### 2.1 Direct Download Links {#direct-links}
 
-Occasionally Mendix will introduce features, bug fixes, and functionality that will make the Make It Native app incompatible with older versions of the Mendix Studio Pro.
-
-For example, you might be working on a time-critical app where updating to the latest Mendix Studio Pro version might be difficult, and due to incompatible changes on the Make It Native app your latest app might not work.
-
-To solve this issue and others like it, the apps provided in this document can be installed side by side with the latest Make It Native app. Those apps working together will allow you to continue your work unimpeded.
-
-#### 2.1.1 Android
-
-To acquire the archive you need, see the [Android Make It Native Archive](https://www.dropbox.com/sh/37s3d4gumhej6j3/AAAdXd97G3s8W0sUE1TQyYW9a?dl=0). To install the APKs, navigate with your device to the link provided, choose the version you would like to install, then download and install it on your device.
-
-#### 2.1.2 iOS
-
-iOS archive versions for Make It Native are served via TestFlight links. To join a specific TestFlight version of the Make It Native app and install it, tap the appropriate link using the device with the account you would like to join TestFlight with. Use the TestFlight app to install the version of the app you already joined.
-
-### 2.2 Direct Download Links {#direct-links}
-
-For Make it Native 9 apps, please download them in their app stores. If you would like to download an older Make it Native 8 version directly, see the section below.
-
-#### 2.2.1 Make It Native for Studio Pro 8.8 and Below:
+For Make it Native 9 apps, download the following Android or iOS Make It Native apps directly using these QR codes:
 
 |                                  Android                                  |                                iOS                                |
 | :-----------------------------------------------------------------------: | :---------------------------------------------------------------: |
-| {{< figure src="/attachments/refguide/mobile/native-mobile/getting-the-make-it-native-app/qr-android-8.8.png" alt="Android QR Code" >}} | {{< figure src="/attachments/refguide/mobile/native-mobile/getting-the-make-it-native-app/qr-ios-8.8.png" alt="iOS QR Code" >}} |
-|   [Link](https://www.dropbox.com/s/z0255q1gcxpvlwl/MiN%208.8.apk?dl=0)    |        [Link](https://testflight.apple.com/join/ra3QR6iG)         |
+| {{< figure src="/attachments/refguide/mobile/native-mobile/getting-the-make-it-native-app/android-min-qr-code.png" alt="Android QR Code" >}} | {{< figure src="/attachments/refguide/mobile/native-mobile/getting-the-make-it-native-app/ios-min-qr-code.png" alt="iOS QR Code" >}} |
+|   [Link](https://play.google.com/store/apps/details?id=com.mendix.developerapp.mx9&hl=en_US&gl=US)    |        [Link](https://apps.apple.com/us/app/make-it-native-9/id1542182000)         |
 
 ## 3 Troubleshooting Common Mobile Issues {#troubleshooting}
 
@@ -115,6 +100,10 @@ If your company has strict network policies which do not allow you to open the p
     adb reverse tcp:8083 tcp:8083
     ```
 
+### 3.1.6 Use Make It Native 9 with an Older Version of Mendix 9 {#use-MIN-older}
+
+The latest version of Make It Native 9 is only compatible with versions of Mendix 9.24.0 and above. To develop with older versions of Mendix 9, you can create a custom developer app by following [this guide](/refguide/mobile/distributing-mobile-apps/building-native-apps/how-to-devapps/). Note that a custom developer app can be used to develop multiple older Mendix apps as long as no custom dependencies are introduced.
+
 ### 3.2 Configure Parallels
 
-To use Studio Pro on a Mac device, you will first need to install and configure Parallels. For more information, see [How to Configure Parallels](/howto/general/using-mendix-studio-pro-on-a-mac/).
+To use Studio Pro on a Mac device, you will first need to install and configure Parallels. For more information, see [Configuring Parallels](/refguide/using-mendix-studio-pro-on-a-mac/).

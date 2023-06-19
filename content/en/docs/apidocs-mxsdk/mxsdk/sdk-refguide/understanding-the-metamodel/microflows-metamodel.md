@@ -1,5 +1,7 @@
 ---
 title: "Microflows in the Mendix Metamodel"
+linktitle: "Microflows in the Metamodel"
+description: "This document explains in detail how you can create and invoke microflows."
 url: /apidocs-mxsdk/mxsdk/microflows-metamodel/
 weight: 4
 ---
@@ -257,7 +259,7 @@ Studio Pro Guide | Model SDK API docs
 
 ### 2.11 Lists
 
-Lists can be created, changed and deleted with specific actions. List aggregation actions have a specific function (for example, sum or average). List operations can also be executed, see the following sections for details.
+Lists can be created, changed and deleted with specific actions. List aggregation actions have a specific function (for example, sum or average). List operations can also be run, see the following sections for details.
 
 #### 2.11.1 Graphical Overview
 

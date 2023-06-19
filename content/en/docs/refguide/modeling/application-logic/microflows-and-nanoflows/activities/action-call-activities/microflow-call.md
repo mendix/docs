@@ -11,17 +11,13 @@ This activity can be used in both **Microflows** and **Nanoflows**.
 
 ## 1 Introduction
 
-The **Microflow call** activity can be used to call a [microflow](/refguide/microflows/). 
-
-{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/action-call-activities/microflow-call/microflow-call.png" alt="Call Microflow"   width="200"  >}}
-
-Arguments can be passed to the microflow and the result can be stored.
+The **Microflow call** activity can be used to call a [microflow](/refguide/microflows/). Arguments can be passed to the microflow and the result can be stored.
 
 ## 2 Properties
 
 There are two sets of properties for this activity, those in the dialog box on the left, and those in the properties pane on the right:
 
-{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/action-call-activities/microflow-call/microflow-call-properties.png" alt="Microflow Call Properties" >}}
+{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/action-call-activities/microflow-call/microflow-call-properties.png" alt="Microflow Call Properties" width="700px" >}}
 
 The **Microflow call** properties pane consists of the following sections:
 
@@ -60,7 +56,7 @@ The **Edit parameter value** button allows you to edit the argument value. For e
 * Primitive types (strings, numbers, etc.) are passed as values (meaning, they are immutable, and not changeable via sub-microflows)
 
 {{% alert color="warning" %}}
-When used inside a nanoflow in an offline profile, only primitives and non-persistable entities that have no associations with persistable entities are allowed as arguments for the call. For more information, see the [Microflows](/refguide/mobile/using-mobile-capabilities/offlinefirst-data/best-practices/#microflows) section of *Offline Best Practices*.
+When used inside a nanoflow in an offline profile, only primitives and non-persistable entities that have no associations with persistable entities are allowed as arguments for the call. For more information, see the [Microflows](/refguide/mobile/building-efficient-mobile-apps/offlinefirst-data/best-practices/#microflows) section of *Offline Best Practices*.
 {{% /alert %}}
 
 ### 3.3 Task Queue
@@ -73,7 +69,7 @@ If you want a microflow to call a microflow to run in the background using a tas
 
 1. Check **Execute this microflow in a Task Queue**.
 2. Identify which task queue it should run in in **Select Task Queue**.
-3. (optionally – in Mendix version 9.10.0 and above) Select an automatic retry strategy.
+3. (optionally) Select an automatic retry strategy.
 
 For more information about task queues, see [Task Queue](/refguide/task-queue/).
 
@@ -91,7 +87,7 @@ The name of the variable, list, or object returned by the activity.
 
 ## 4 Microflow Calls in Offline-First Apps
 
-It is possible to perform a microflow call from an offline-first app. However, it works a bit differently than in online applications. For more information, see the [Microflows](/refguide/mobile/using-mobile-capabilities/offlinefirst-data/best-practices/#microflows) section of *Offline Best Practices*
+It is possible to perform a microflow call from an offline-first app. However, it works a bit differently than in online applications. For more information, see the [Microflows](/refguide/mobile/building-efficient-mobile-apps/offlinefirst-data/best-practices/#microflows) section of *Offline Best Practices*
 
 ## 5 Common Section {#common}
 

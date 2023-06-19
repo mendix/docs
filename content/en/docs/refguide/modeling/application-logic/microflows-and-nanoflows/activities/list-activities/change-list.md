@@ -20,7 +20,7 @@ The **Change list** activity allows you to change a list by adding objects to, a
 
 An example of change list properties is represented in the image below:
 
-{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/list-activities/change-list/change-list-properties.png" alt="change list properties" >}}
+{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/list-activities/change-list/change-list-properties.png" alt="change list properties" width="700px" >}}
 
 There are two sets of properties for this activity, those in the dialog box on the left, and those in the properties pane on the right.
 

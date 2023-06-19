@@ -10,7 +10,7 @@ tags: ["Operate", "App", "Developer Portal", "Backup"]
 
 ## 1 Introduction
 
-Backup snapshots are created every night or on demand, as described in the [Backups](#backups) section, below.
+Backup snapshots for apps running in the Mendix Cloud are created every night or on demand, as described in the [Backups](#backups) section, below.
 
 Backup snapshots contain both the database and file documents referred to in the database.
 
@@ -30,16 +30,18 @@ The following backups are retained:
 The **Start Time** of nightly backups in UTC is shown below. The **Local Time** indicates the time at the regional data center – this may vary if *Summer Time* or other adjustments are in place. The **Estimated Duration** indicates the period during which backups are expected to be taken from apps in that region – your app can be backed up at any time during this period and the exact period during which backups are taken can change due to factors at the data center which are outside Mendix's control.
 
 | Region | Replication Region | Start Time (UTC) | Local Time | Estimated Duration |
-| --- | --- | --- | --- |  --- |
-| Dublin | Frankfurt | 23:00 | 00:00 |  3 hours |
+| --- | --- | --- | --- | --- |
+| Bahrain | Mumbai | 03:00 | 06:00 | 1 hour |
+| Canada | Oregon | 05:00 | 00:00 | 1 hour |
+| Dublin | Frankfurt | 23:00 | 00:00 | 3 hours |
 | Frankfurt | Dublin | 00:00 | 01:00 | 3 hours |
 | London | Frankfurt | 23:00 | 23:00 | 2 hours |
+| Mumbai | Singapore | 19:30 | 01:00 | 1 hour |
 | Oregon | Ohio | 07:00 | 00:00 | 1 hour |
 | Singapore | Sydney | 17:00 | 01:00 | 1 hour |
+| Cape Town | Frankfurt | 02:00 | 04:00 | 1 hour |
 | Tokyo | Osaka | 16:00 | 01:00 | 1 hour |
 | N. Virginia | N. California | 05:00 | 00:00 | 4 hours |
-| Canada | Oregon | 05:00 | 00:00 | 1 hour |
-| Mumbai | Singapore | 19:30 | 01:00 | 1 hour |
 
 Nightly backups will start once an app has been successfully deployed to, and started in, the environment.
 
@@ -61,9 +63,9 @@ This will automatically generate a backup snapshot from your application data. S
 
 The sections below present details on uploading data in recent Mendix Cloud versions.
 
-#### 3.2.1 Uploading Data in Mendix Cloud v4
+#### 3.2.1 Uploading Data in Mendix Cloud
 
-In **Mendix Cloud v4**, the upload creates a new backup item in your backup list, which you can then restore via the regular restore process. This ensures less downtime for your application. 
+In the **Mendix Cloud**, the upload creates a new backup item in your backup list, which you can then restore via the regular restore process. This ensures less downtime for your application. 
 
 Anything you can download you can also upload again, which means you can upload archives containing the following:
 
@@ -75,26 +77,7 @@ Anything you can download you can also upload again, which means you can upload 
 Uploading a **Files Only** archive resulta in a backup item with an exclamation mark and a warning message. Since the archive does not contain a database, it is not possible to restore it.
 {{% /alert %}}
 
-#### 3.2.2 Uploading Data in Mendix Cloud v3
-
-{{% alert color="warning" %}}
-Mendix Cloud v3 is deprecated and will be retired in the future. To continue running your licensed Mendix application on the Mendix Cloud, you need to migrate your app to Mendix Cloud V4. To learn more about Mendix Cloud V4 and how to migrate from Mendix Cloud V3, please visit the following page: [Migrate to Mendix Cloud V4](/developerportal/deploy/migrating-to-v4/). 
-{{% /alert %}}
-
-{{% alert color="warning" %}}
-In **Mendix Cloud v3**, this does not add a backup to the backup list but directly update the application with the newly uploaded data.
-
-Your environment is cleared completely. The existing deployment package, uploaded files, and database are removed. If you are uploading data to the production environment, any published app services will be unpublished.
-{{% /alert %}}
-
-You must stop the application before executing this process. This functionality is used to transfer data from your local or on-premises application to the cloud environment.
-
-You can upload two types of data:
-
-* **Database**
-* **Uploaded files** (*zip* or *tar.gz*)
-
-### 3.3 Download Backup
+### 3.3 Download Backup {#download-backup}
 
 You can download a backup archive containing one of the following: 
 
@@ -115,7 +98,7 @@ You can choose the **destination** environment to which you want to restore the 
 If you restore a backup snapshot that was originally deployed with an older Mendix version, you get a warning. You can still restore the data, but you will have to deploy the older model later on. 
 
 {{% alert color="info" %}}
-In Mendix Cloud v4, if the restore takes too long, the system shows a timeout message. The restore continues behind the scenes, and you can track the progress of the restore by inspecting your database free disk space graphs. While the database free disk space keeps decreasing, the restore process is still in progress. If the database free disk space is constant, the restore process is finished and you can try to start your application. If this happens regularly, consider upgrading to a database plan with more CPU cores, so that the restore process can be executed faster.
+If the restore takes too long, the system shows a timeout message. The restore continues behind the scenes, and you can track the progress of the restore by inspecting your database free disk space graphs. While the database free disk space keeps decreasing, the restore process is still in progress. If the database free disk space is constant, the restore process is finished and you can try to start your application. If this happens regularly, consider upgrading to a database plan with more CPU cores, so that the restore process can be executed faster.
 {{% /alert %}}
 
 See [Restore a Backup](/developerportal/operate/restore-backup/) for more information.
@@ -124,25 +107,24 @@ See [Restore a Backup](/developerportal/operate/restore-backup/) for more inform
 
 When you click **Details**, you can view the following details:
 
-Backup Details | Cloud Version | Description
-:---|:---|:---
-**Origin of Environment** | v3 | From which environment this backup was made
-**Status** | v3 and v4 | The status of the backup. Backups can have the status of **Queued**, **Running**, **Failed**, and **Completed**
-**Created by**/ <br /> **Type** | v3 <br /> v4 | The name of the person who created the backup. Automated system backups are named **Nightly**
-**ID**/ <br /> **Snapshot id** | v3 <br /> v4 | Unique identifier for the backup *snapshot*
-**Date**/ <br /> **Created on** | v3 <br /> v4 | The creation date of the backup
-**Expires on** | v3 and v4 | The date on which the backup will be removed from the system
-**Model version** | v3 and v4 | The version of the deployment package used during backup creation
-**Snapshot Size Uncompressed (MB)** | v4 | The size of database dump and files of the snapshot in MB
-**Comment** | v3 and v4 | A specific comment added to the backup
+| Backup Details | Description |
+| :--- | :--- |
+| **Status** | The status of the backup. Backups can have the status of **Queued**, **Running**, **Failed**, and **Completed** |
+| **Created by**/ <br /> **Type** | The name of the person who created the backup. Automated system backups are named **Nightly** |
+| **ID**/ <br /> **Snapshot id** | A unique identifier for the backup *snapshot* |
+| **Date**/ <br /> **Created on** | The creation date of the backup |
+| **Expires on** | The date on which the backup will be removed from the system |
+| **Model version** | The version of the deployment package used during backup creation |
+| **Snapshot Size Uncompressed (MB)** | The size of database dump and files of the snapshot in MB |
+| **Comment** | A specific comment added to the backup |
 
 At the bottom of the screen, you can click **Delete** to delete this particular backup.
 
 {{< figure src="/attachments/developerportal/operate/backups/backup-details.png" alt="Backup Details" >}}
 
-## 4 Known issues
+## 4 Limitations
 
-Mendix Cloud v4 backups that contain a very large number of files (that is, greater than about 50,000) will experience slow performance for all backup operations (create, download, restore, and upload). This is because of the inherent overhead associated with each file; as the number of files increases, this overhead becomes quite significant, and can be in the order of hours.
+Mendix Cloud backups that contain a very large number of files (that is, greater than about 50,000) will experience slow performance for all backup operations (create, download, restore, and upload). This is because of the inherent overhead associated with each file; as the number of files increases, this overhead becomes quite significant, and can be in the order of hours.
 
 ## 5 Read More
 

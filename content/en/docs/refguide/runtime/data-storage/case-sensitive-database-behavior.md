@@ -38,19 +38,13 @@ Sorting and comparison are **case sensitive**. They cannot be configured.
 
 String functions are **case insensitive** as they are implemented using the `ILIKE` SQL operator.
 
-### 2.3 DB2
-
-Sorting and comparing are **case sensitive**. For versions below 8.14, all operations are **case sensitive**. There is an exception for both version groups where collation is configured to **case insensitive**, which affects all operations. For more information, see the [Making DB2 Case-Insensitive](/refguide/db2/#making) section of *DB2*.
-
-Does not support sorting on string attributes of unlimited length.
-
-### 2.4 MARIADB and MYSQL
+### 2.3 MARIADB and MYSQL
 
 All operations depend on the configured collation.
 The default collation is `utf8_general_ci` when the `utf8` character set is used, or `latin1_swedish_ci` when the `latin1` character set is used.
 These default collations are both **case insensitive**.
 
-### 2.5 ORACLE
+### 2.4 ORACLE
 
 Sorting and comparison depend on the configured collation.
 The default collation is `binary`, which is **case sensitive**, but a `binary_ci` is available for case insensitive operations.
@@ -61,11 +55,11 @@ Does not support comparison on string attributes of unlimited length.
 
 String functions are implemented by converting all letters to uppercase using the database's `UPPER` function and are, therefore, **case insensitive** and insensitive to the `locale` in which they are executed.
 
-### 2.6 SAP HANA
+### 2.5 SAP HANA
 
 Does not support sorting or comparison on string attributes of unlimited length.
 
-### 2.7 SQL SERVER
+### 2.6 SQL SERVER
 
 All operations depend on collation.
 The default recommended collation is `SQL_Latin1_General_CP1_CI_AS`.
@@ -79,10 +73,9 @@ This table presents the default case sensitivity by different database types:
 |------------------:|:--------------:|:-----------:|:--------------------:|
 | HSQLDB            | I              | I           | I                    |
 | POSTGRESQL        | S              | S           | I                    |
-| DB2               | S              | S¹          | I³                   |
 | MARIADB and MYSQL | C              | C           | C                    |
 | ORACLE            | C¹             | C           | I                    |
-| SAP HANA          | S¹             | S¹          | I²                   |
+| SAP HANA          | S¹             | S¹          | I                    |
 | SQL SERVER        | C              | C           | C                    |
 
 Where the letters have the following meaning:
@@ -92,5 +85,3 @@ Where the letters have the following meaning:
 * **I** – Case insensitive
 
 ¹Operation not supported on strings of unlimited length.
-²From Mendix version 8.11.0
-³From Mendix version 8.14.0

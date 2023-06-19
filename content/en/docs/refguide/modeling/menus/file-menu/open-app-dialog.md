@@ -21,13 +21,13 @@ The **Open App** dialog box will open, where you can [select an app](#select-app
 
 {{< figure src="/attachments/refguide/modeling/menus/file-menu/open-app-dialog/open-app.png" alt="Open App" >}}
 
-Apps can be located on the Team Server, on another SVN server, or on the local disk. When opening an app from the Team Server or another SVN server, Studio Pro will check whether you have already downloaded this app. If so, it will simply open it. If not, the app will be downloaded from the version control server first. 
+Apps can be located on the Team Server, on another Git server, or on the local disk. When opening an app from the Team Server or another Git server, Studio Pro will check whether you have already downloaded this app. If so, it will simply open it. If not, the app will be downloaded from the version control server first. 
 
 ## 2 Opening an App
 
 ### 2.1 Selecting an App {#select-app}
 
-You can select an app from the list of your apps. Once you have selected an app, you can either choose a branch line that you would like to open or click **Open in Studio Pro** and the branch that is indicated in the **Current Branch** column will open:
+You can select an app from the list of your apps. Once you have selected an app, you can either choose a [branch line](/refguide/version-control/#branches) that you would like to open or click **Open in Studio Pro** and the branch that is indicated in the **Current Branch** column will open:
 
 {{< figure src="/attachments/refguide/modeling/menus/file-menu/open-app-dialog/select-app.png" >}}
 

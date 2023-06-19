@@ -33,7 +33,7 @@ Before starting this how-to, make sure you have completed the following prerequi
 
     {{< figure src="/attachments/partners/sap/use-sap-xsuaa-connector/add-roles-to-app.png" >}}
 
-* Ensure the app behaves differently according to the user role, so you can see the effect of setting up the roles in XSUAA. For example, give each role a different starting page as described here: [How To Set Up the Navigation Structure](/howto/general/setting-up-the-navigation-structure/)
+* Ensure the app behaves differently according to the user role, so you can see the effect of setting up the roles in XSUAA. For example, give each role a different starting page as described here: [Setting Up Navigation](/refguide/setting-up-the-navigation-structure/)
 
 ## 3 Getting the XSUAA Connector for SAP Business Technology Platform Module
 
@@ -70,10 +70,10 @@ By default, the Mendix login page will not allow the user to enter their SSO cre
 * Bypass the Mendix login page altogether and just display the XSUAA login page
 
 {{% alert color="info" %}}
-If you are using the [Deep Link](/appstore/modules/deep-link/) module, you will also need to set the **LoginLocation** constant to `/xsauaalogin/`.
+If you are using the [Deep Link](/appstore/modules/deep-link/) module, you will also need to set the **LoginLocation** constant to `/xsauaalogin/login?ret=`.
 {{% /alert %}}
 
-#### 4.2.1 Adding the SSO Login Button to the Login Page<a name="adding"></a>
+#### 4.2.1 Adding the SSO Login Button to the Login Page {#adding}
 
 {{% alert color="info" %}}
 If your app already had XSUAA included, your login.html file may have been modified already.

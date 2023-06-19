@@ -13,7 +13,7 @@ The deployment of apps to Mendix for Private Cloud is controlled by the Mendix O
 
 ## 2 What Is an Operator?
 
-### 2.1 Issues around Deploying Manually
+### 2.1 Issues Around Deploying Manually
 
 The quickest way to deploy an application into Kubernetes is to manually create its resources with commands such as `kubectl create pod` or `kubectl apply`. This works with any container image and getting started is easy. But any non-default configuration options require knowledge of how the application and its container image work internally. For example, some applications use environment variables and others require a configuration file.
 

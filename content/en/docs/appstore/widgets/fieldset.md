@@ -24,5 +24,4 @@ The [Fieldset](https://marketplace.mendix.com/link/component/113922/Mendix/Field
 
 This widget is compatible with the following products:
 
-* Mendix Studio
 * Mendix Studio Pro 8.3.1 and above

@@ -1,7 +1,7 @@
 ---
 title: "List Values"
 url: /apidocs-mxsdk/apidocs/pluggable-widgets-client-apis-list-values/
-description: A guide to understanding the list of objects for the datasource property.
+description: A guide to understanding the list of objects for the datasource property in Mx10.
 tags: ["Pluggable", "Widget", "ListValue", "ListActionValue", "ListAttributeValue", "ListWidgetValue", "ListExpressionValue"]
 
 ---
@@ -191,10 +191,6 @@ this.props.myDataSource.setSortOrder(undefined);
 
 The `setSort` method is supported for all [data sources](/refguide/data-sources/#list-widgets). For `Database` and `XPath` data sources the sorting is done by the back end. For all the other data sources the sorting is done by the client.
 
-{{% alert color="info" %}}
-This feature was introduced in Mendix Studio Pro v9.3.
-{{% /alert %}}
-
 ### 2.4 Filtering {#listvalue-filtering}
 
 It is possible to set filtering conditions for items of a datasource. `setFilter()` method accepts filter conditions and applies filtering. `filter` field represents the current filter condition.
@@ -218,10 +214,6 @@ interface MyListWidgetsProps {
 ```
 
 The `setFilter` method is supported for all [data sources](/refguide/data-sources/#list-widgets). For `Database` and `XPath` data sources the filtering is done by the back end. For all the other data sources the filtering is done by the client. In both cases the widget will receive the filtered items in the `items` property.
-
-{{% alert color="info" %}}
-This feature was introduced in Mendix Studio Pro v9.3.
-{{% /alert %}}
 
 #### 2.4.1 Simple Filtering {#simple-filtering}
 
@@ -395,7 +387,7 @@ interface MyListWidgetsProps {
 The following code sample shows how to call `myListAction` on the first element from the `myDataSource`.
 
 ```ts
-const actionOnFirstItem = this.props.myDataSource.myListAction.get(this.props.myDataSource.item[0]);
+const actionOnFirstItem = this.props.myListAction.get(this.props.myDataSource.item[0]);
 
 actionOnFirstItem.execute();
 ```

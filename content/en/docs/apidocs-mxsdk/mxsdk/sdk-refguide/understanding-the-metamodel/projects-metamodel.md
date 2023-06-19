@@ -1,6 +1,8 @@
 ---
 title: "Projects in the Mendix Metamodel"
+linktitle: "Projects in the Metamodel"
 url: /apidocs-mxsdk/mxsdk/projects-metamodel/
+description: "This document describes how the Mendix Metamodel handles projects in relation to modules and documents."
 weight: 1
 ---
 
@@ -21,7 +23,7 @@ Studio Pro Guide | Model SDK API docs
 
 ### 1.2 Project Documents
 
-Project-level documents describe project security, app settings, app navigation (for the different modes of navigation) and translations of the texts in your app.
+Project-level documents describe app security, app settings, app navigation (for the different modes of navigation) and translations of the texts in your app.
 
 #### 1.2.1 Graphical Overview
 
@@ -29,10 +31,10 @@ Project-level documents describe project security, app settings, app navigation 
 
 Studio Pro Guide | Model SDK API docs
 | --- | --- |
-| | [App Settings](/refguide/app-settings/) | [ProjectDocument](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/projects.projectdocument.html) and its inheritance hierarchy |
-| [App Security](/refguide/app-security/) | |
-| [Navigation](/refguide/navigation/) | |
-| [System Texts](/refguide/system-texts/) | |
+|[App Settings](/refguide/app-settings/)| [ProjectSettings](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/settings.ProjectSettings.html) |
+| [App Security](/refguide/app-security/) | [ProjectSercurity](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/security.ProjectSecurity.html)|
+| [Navigation](/refguide/navigation/) |[NavigationDocument](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/navigation.NavigationDocument.html)|
+| [System Texts](/refguide/system-texts/) |[SystemTextCollection](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/texts.SystemTextCollection.html) |
 
 ## 2 Modules
 

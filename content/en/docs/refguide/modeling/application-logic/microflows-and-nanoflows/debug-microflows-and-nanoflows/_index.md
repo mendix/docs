@@ -18,7 +18,7 @@ This how-to will teach you how to do the following:
 
 Before starting this how-to, make sure you have completed the following prerequisites:
 
-* Read [How to Create a Basic Data Layer](/howto/data-models/create-a-basic-data-layer/)
+* Read [Configuring a Domain Model](/refguide/configuring-a-domain-model/)
 * Read [How to Create Your First Two Overview and Detail Pages](/howto/front-end/create-your-first-two-overview-and-detail-pages/)
 
 ## 3 Debugging Overview
@@ -48,8 +48,8 @@ Breakpoints are points in a microflow/nanoflow where the application will halt e
 1. Run your application locally.
 2. Open the microflow/nanoflow that needs debugging in Studio Pro.
 3. Right-click any of the activities or decisions in the microflow/nanoflow and select **Add breakpoint**. This sets a breakpoint on the selected step in the microflow/nanoflow, which is visually represented by a red dot:
-    
-	{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/debug-microflows-and-nanoflows/18580020.png" >}}
+
+    {{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/debug-microflows-and-nanoflows/18580020.png" >}}
 
     You can open an overview of all the breakpoints by going to **View** > **Breakpoints**:
 
@@ -107,7 +107,7 @@ To use breakpoint conditions, follow these steps:
 1. Right-click the activity or decision in the microflow/nanoflow with a breakpoint and select **Edit breakpoint condition**:
 
     {{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/debug-microflows-and-nanoflows/18580018.png" >}}
-	
+
 2. Use the expression below to make sure this breakpoint only interrupts the microflow/nanoflow if you are executing it yourself (replace `YourUserName` with your own user name):
 
     ```java {linenos=false}

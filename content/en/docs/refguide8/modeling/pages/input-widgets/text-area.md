@@ -89,7 +89,7 @@ Default: *No*
 
 #### 2.6.2 Number of Lines
 
-**Number of lines** determines the size of the text area, based on the height of the lines. If the text in the text area contains more lines, a scrollbar will enable the end-user to see it all. This property is only used if **Grow automatically** is set to *No*.
+**Number of lines** determines the size of the text area, based on the height of the lines. If the text in the text area contains more lines, a scroll bar will enable the end-user to see it all. This property is only used if **Grow automatically** is set to *No*.
 
 Default: *5*
 
@@ -107,7 +107,9 @@ For example, if you use the counter message `You've used {1} characters of the {
 
 {{% alert color="info" %}}Text too long message is not supported on native mobile pages.{{% /alert %}}
 
-This is the text displayed when the number of typed characters is higher than the maximum allowed number of characters.
+This is the text displayed when the number of characters is higher than the maximum allowed number of characters.
+
+This type of message can also occur when a loaded or stored value exceeds the character limit
 
 #### 2.6.5 Maximum Length
 

@@ -5,7 +5,7 @@ url: /partners/sap/sap-xsuaa-connector/
 category: "SAP"
 weight: 40
 description: "Presents reference information on the XSUAA Connector for SAP Business Technology Platform."
-tags: ["SAP", "SAP Cloud Platform", "SSO", "XSUAA", "SAP BTP", "SAP Business Technology Platform"]
+tags: ["SAP", "SSO", "XSUAA", "SAP BTP", "SAP Business Technology Platform"]
 ---
 
 ## 1 Introduction
@@ -40,7 +40,7 @@ You need to provide your own [xs-security.json](https://help.sap.com/viewer/4505
 
 You then have two options:
 
-### 3.1 Use the XSUAA Configurator
+### 3.1 Use the XSUAA Configurator {#configurator}
 
 The **XSUAA Configurator** provides a user friendly interface to create the JSON required to configure the XSUAA service. It can be uploaded automatically for you, or you can download the file and upload it manually.
 

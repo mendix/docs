@@ -38,7 +38,7 @@ Scrum Masters can edit and create new team roles on the [Team](/developerportal/
 
 ## 4 Technical Contact {#technical-contact}
 
-Every app can have one Technical Contact. When you view the [General Settings](/developerportal/settings/general-settings/) for a specific app, you will see the **Technical Contact** of the app. This is the user you can contact with questions related to the app. 
+Every deployed app has a Technical Contact. When you view the [General Settings](/developerportal/collaborate/general-settings/#general) for a deployed app, you will see the **Technical Contact** of the app. This is the user you can contact with questions related to the app. 
 
 {{< figure src="/attachments/developerportal/collaborate/team/app-roles/technical-contact.png" >}}
 
@@ -69,18 +69,18 @@ When a Mendix app is on premises, it is running on the customer's own infrastruc
 
 ### 4.3 Changing the Technical Contact {#change-technical-contact}
 
-To change the Technical Contact, you need to be a **Technical Contact**.
-
 {{% alert color="info" %}}
-It is currently not possible to have more than one Technical Contact for an app.
+It is currently not possible to have more than one Technical Contact for an app. 
 {{% /alert %}}
 
-If you are the current Technical Contact for an app, make another team member the Technical Contact by following these steps:
+If you are the current Technical Contact for an app, you can give away your Technical Contact role to another team member as follows:
 
 1. Navigate to **Deploy** > **Environments**.
 2. Select the [Permissions](/developerportal/deploy/environments/#permissions) tab.
 3. Click **Change to Technical Contact** for the team member who should be the new Technical Contact. You may have to authenticate first to perform this action. If so, click **Change to Technical Contact** again after successful authentication to finish this action.
 
+The Technical Contact will be changed for all environments.
+
 {{% alert color="info" %}}
-The Technical Contact will be changed for all environments..
+Mendix Admins can also give the Technical Contact role to another team member using the Deploy API Version 3. For more information, see [Deploy API – Version 3](/apidocs-mxsdk/apidocs/deploy-api-3/).
 {{% /alert %}}

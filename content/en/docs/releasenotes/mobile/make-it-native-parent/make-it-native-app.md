@@ -6,9 +6,9 @@ description: "These release notes showcase each release of the iOS and Android M
 tags: ["Native", "Android", "iOS", "Apple", "mendix 8"]
 ---
 
-For more information on the Make It Native app, see [Getting the Make It Native App](/refguide/getting-the-make-it-native-app/).
+For more information on the Make It Native app, see [Getting the Make It Native App](/refguide9/getting-the-make-it-native-app/).
 
-You can download the Make It Native app for [iOS](https://apps.apple.com/app/make-it-native/id1334081181) or [Android](/refguide/getting-the-make-it-native-app/).
+You can download the Make It Native app for [iOS](https://apps.apple.com/app/make-it-native/id1334081181) or [Android](/refguide9/getting-the-make-it-native-app/).
 
 ## Android 2.2.2 / iOS 2.2.2
 
@@ -61,7 +61,7 @@ From Mendix Studio Pro 8.10 and above, the responsibility of deciding when to sy
 **Release date: April 28th, 2020**
 
 {{% alert color="info" %}}
-Due to upgrades to our dependencies, neither version of Make It Native 2.0.0 is backwards compatible with versions older than Studio Pro 8.9. To keep working with older versions of Studio Pro, install a version from [the archive](/refguide8/getting-the-make-it-native-app/#direct-links). 
+Due to upgrades to our dependencies, neither version of Make It Native 2.0.0 is backwards compatible with versions older than Studio Pro 8.9. We recommend you upgrade to a Studio Pro version of 8.18 or higher and then download the most recent version of the Make It Native 8 app. 
 {{% /alert %}}
 
 ### New Features
@@ -76,7 +76,7 @@ Due to upgrades to our dependencies, neither version of Make It Native 2.0.0 is 
 {{% alert color="info" %}}
 If you are working in Mendix Studio Pro 8.8 or higher, you must update your Make It Native app to this version. 
 
-For older versions of Studio Pro please install the appropriate legacy app [here](/refguide/getting-the-make-it-native-app/).
+For older versions of Studio Pro please install the appropriate legacy app [here](/refguide9/getting-the-make-it-native-app/).
 {{% /alert %}}
 
 ### New Features
@@ -137,7 +137,7 @@ For older versions of Studio Pro please install the appropriate legacy app [here
 
 On Android:
 
-* We fixed an issue where the app might open a cached version of an older project if the packeger does not respond in time.
+* We fixed an issue where the app might open a cached version of an older project if the packager does not respond in time.
 
 ### Known Issues
 
@@ -200,7 +200,7 @@ On Android:
 
 ### Fixes
 
-* <a name="153"></a>We fixed an issue where clearing data on Android via the start screen did not clear cookies correctly.
+* <a id="153"></a>We fixed an issue where clearing data on Android via the start screen did not clear cookies correctly.
 
 ## Android 1.0.0 / iOS 1.0.2
 

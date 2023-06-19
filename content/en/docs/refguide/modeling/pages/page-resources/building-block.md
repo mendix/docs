@@ -1,7 +1,7 @@
 ---
 title: "Building Block"
 url: /refguide/building-block/
-weight: 40
+weight: 5
 tags: ["studio pro", "building block", "page resource"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
@@ -32,7 +32,7 @@ The display name determines the name of the building block that will appear in t
 
 ### 4.2 Image
 
-The image selected will appear in the **Building Blocks** tab of Studio's **Toolbox** and Studio Pro's **Toolbox** in **Tile View**. Selecting a representative image will allow users to easily distinguish between building blocks. If left blank, Studio will display a generic default image. Any image selected will be scaled down to 200x200 pixels.
+The image selected will appear in Studio Pro's **Toolbox** in **Tile View**. Selecting a representative image will allow users to easily distinguish between building blocks. If left blank, Studio Pro will display a generic default image. Any image selected will be scaled down to 200x200 pixels.
 
 ### 4.3 Category
 

@@ -65,13 +65,13 @@ description: "These are the release notes for the Mendix Mobile app."
 
 ### Deprecations and Removals
 
-* We removed support for custom profiles (which were deprecated with Mendix [7.4](/releasenotes/studio-pro/7.4/).
+* We removed support for custom profiles that were deprecated with Mendix [7.4](/releasenotes/studio-pro/7.4/).
 
 ### Limitation
 
 * Mendix hybrid apps (loaded using, for example, the QR scanner or the manual app loading screen) are not able to use the barcode scanning widget. Using the barcode scanning functionality from within an app-specific hybrid app (meaning, one built using the mobile app flow from the Mendix Developer Portal) should not pose any problems.
 
-## iOS 4.4.1 <a name="RN441"></a>
+## iOS 4.4.1 {#RN441}
 
 **Release date: October 2nd, 2017**
 

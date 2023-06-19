@@ -31,7 +31,7 @@ The [Rich Text](https://marketplace.mendix.com/link/component/74889/) widget pro
     * <kbd>Ctrl</kbd> + <kbd>C</kbd> – copy
     * <kbd>Ctrl</kbd> + <kbd>V</kbd> – paste
     * <kbd>-</kbd> + <kbd>space</kbd> – starts a list
-    * <kbd>tab</kbd> – indents the content when <kbd>tab</kbd> is configured to indent from the widget XML; otherwise, move the focus to the next element
+    * <kbd>tab</kbd> – moves the focus to the next element
 
 ## 2 Configuration
 
@@ -65,7 +65,7 @@ To configure this widget, follow these steps:
     * **Bordered toolbar** – if selected, text is shown in a frame and the toolbar is also visible, but the user cannot make any changes
 * **Editable** – determines when user can edit content in the editor and when it is read-only
 
-    {{% alert color="info" %}}For more information, see [Editability Section](https://docs.mendix.com/refguide/common-widget-properties#editability) in the *Studio Pro 9 Guide*.{{% /alert %}}
+    {{% alert color="info" %}}For more information, see [Editability Section](https://docs.mendix.com/refguide/common-widget-properties#editability) in the *Studio Pro Guide*.{{% /alert %}}
 
 * **Show label** 
     * **Yes** – if selected, you can define the label caption
@@ -73,7 +73,7 @@ To configure this widget, follow these steps:
     * **No** (default) – if selected, there is no label for this widget on the page
 * **Visible** – determines if the widget is visible on the page
 
-    {{% alert color="info" %}}For more information, see [Visibility Section](https://docs.mendix.com/refguide/common-widget-properties#visibility-properties) in the *Studio Pro 9 Guide*.{{% /alert %}}
+    {{% alert color="info" %}}For more information, see [Visibility Section](https://docs.mendix.com/refguide/common-widget-properties#visibility-properties) in the *Studio Pro Guide*.{{% /alert %}}
 
 ### 2.2 Toolbar Tab
 

@@ -11,7 +11,7 @@ tags: ["studio", "workflow", "how to", "task", "onboarding"]
 ## 1 Introduction 
 
 {{% alert type="note" %}}
-Workflows are available in Studio from **Mendix version 9.12.1**. If you have an app with workflows functionality below this version, this app is likely to be created in Studio Pro and requires a manual migration. For more information on how to migrate your app using Studio Pro, see [Migrate Workflow Apps](/refguide/workflow-beta-migration/). 
+Workflows are available in Studio from **Mendix version 9.12.1**. If you have an app with workflows functionality below this version, this app is likely to be created in Studio Pro and requires a manual migration. For more information on how to migrate your app using Studio Pro, see [Migrating Workflow Apps](/refguide9/workflow-beta-migration/). 
 {{% /alert %}}
 
 The workflow wizard helps you create the Approval Request workflow. If your workflow falls under the approval request use case, for example, approving vacation days for your employees, this is a good starting point that sets the whole app automatically for you – not only the workflow itself but also pages and navigation.
@@ -27,7 +27,7 @@ If your use case does not fall under an approval request, then you might want to
 
 Before starting this how-to, make sure you have completed the following prerequisites:
 
-* Familiarize yourself with workflow terms. For more information, see [Workflows](/refguide/workflows/). 
+* Familiarize yourself with workflow terms. For more information, see [Workflows](/refguide9/workflows/). 
 * Make sure your app has Mendix version 9.12.1 (you can look up your app version by clicking **More options** (three dots) icon > **About Studio**).
 * Make sure that your app has workflow functionality enabled. For more information, see the [Enabling Workflows](/studio/workflows/#enable) section in *Workflows*. 
 

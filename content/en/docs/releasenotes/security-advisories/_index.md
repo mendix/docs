@@ -17,25 +17,33 @@ Mendix adds the CVSS score and CVSS vector for security vulnerabilities describe
 Siemens publishes their CVEs on the second Tuesday of every month.
 {{% /alert %}}
 
-## 2 Security Advisory Details
+## 2 Security Advisory Details {#details}
 
 | CVE ID | CVSS v3.1 Base Score | Siemens Security Advisory (SSA) Description | Notes |
 | --- | --- | ---  | --- |
-| CVE-2022-37011 | 7.4 |  [Authentication Bypass Vulnerability in Mendix SAML](https://cert-portal.siemens.com/productcert/pdf/ssa-638652.pdf) | See the SSA description for remediation details. |
-| <a name="34466"></a>CVE-2022-34466 | 6.5 | [Expression Injection Vulnerability in Mendix Applications](https://cert-portal.siemens.com/productcert/pdf/ssa-492173.pdf) | See the SSA description for remediation details. |
-| <a name="31257"></a>CVE-2022-31257 | 4.9 | [Improper Access Control Vulnerability in Mendix](https://cert-portal.siemens.com/productcert/pdf/ssa-433782.pdf) | See the SSA description for remediation details. |
+| CVE-2023-29129 | 9.1 | [Authentication Bypass Vulnerability in Mendix SAML Module](https://cert-portal.siemens.com/productcert/html/ssa-851884.html) | See the SSA description for remediation details. |
+| CVE-2023-25957 | 9.1 | [Authentication Bypass Vulnerability in Mendix SAML Module](https://cert-portal.siemens.com/productcert/html/ssa-851884.html) | See the SSA description for remediation details. |
+| CVE-2023-27464 | 5.3 | [Observable Response Discrepancy in Mendix Forgot Password Module](https://cert-portal.siemens.com/productcert/html/ssa-699404.html) | See the SSA description for remediation details. |
+| <a id="23835"></a>CVE-2023-23835 | 5.9 | [XPath Constraint Vulnerability in Mendix Runtime](https://cert-portal.siemens.com/productcert/pdf/ssa-252808.pdf) | See the SSA description for remediation details. |
+| CVE-2022-46823 | 9.3 | [Cross-Site Scripting Vulnerability in Mendix SAML Module](https://cert-portal.siemens.com/productcert/html/ssa-496604.html) | See the SSA description for remediation details. |
+| CVE-2022-46664 | 8.1 | [Improper Access Control Vulnerability in Mendix Workflow Commons Module](https://cert-portal.siemens.com/productcert/pdf/ssa-210822.pdf) | See the SSA description for remediation details. |
+| CVE-2022-45936 | 8.1 | [Improper Access Control Vulnerability in Mendix Email Connector Module](https://cert-portal.siemens.com/productcert/pdf/ssa-224632.pdf) | See the SSA description for remediation details. |
+| CVE-2022-44457 | 7.4 | [Authentication Bypass Vulnerability in Mendix SAML](https://cert-portal.siemens.com/productcert/pdf/ssa-638652.pdf) | See the SSA description for remediation details. |
+| CVE-2022-37011 | 7.4 | [Authentication Bypass Vulnerability in Mendix SAML](https://cert-portal.siemens.com/productcert/pdf/ssa-638652.pdf) | See the SSA description for remediation details. |
+| <a id="34466"></a>CVE-2022-34466 | 6.5 | [Expression Injection Vulnerability in Mendix Applications](https://cert-portal.siemens.com/productcert/pdf/ssa-492173.pdf) | See the SSA description for remediation details. |
+| <a id="31257"></a>CVE-2022-31257 | 4.9 | [Improper Access Control Vulnerability in Mendix](https://cert-portal.siemens.com/productcert/pdf/ssa-433782.pdf) | See the SSA description for remediation details. |
 | CVE-2022-34467 | 6.5 | [XML Entity Expansion Injection Vulnerability in Mendix Excel Importer Module](https://cert-portal.siemens.com/productcert/pdf/ssa-610768.pdf) | See the SSA description for remediation details. |
 | CVE-2022-32285 | 8.3 | [Privilege Escalation Vulnerability in Mendix SAML Module](https://cert-portal.siemens.com/productcert/pdf/ssa-740594.pdf) | See the SSA description for remediation details. |
 | CVE-2022-32286 | 7.6 | [Privilege Escalation Vulnerability in Mendix SAML Module](https://cert-portal.siemens.com/productcert/pdf/ssa-740594.pdf) | See the SSA description for remediation details. |
-| <a name="25650"></a>CVE-2022-25650 | 3.1 | [Improper Access Control Vulnerability in Mendix](https://cert-portal.siemens.com/productcert/pdf/ssa-870917.pdf) | See the SSA description for remediation details. |
-| <a name="27241"></a>CVE-2022-27241 | 5.3 | [Information Disclosure Vulnerability in Mendix](https://cert-portal.siemens.com/productcert/pdf/ssa-414513.pdf) | See the SSA description for remediation details. |
+| <a id="25650"></a>CVE-2022-25650 | 3.1 | [Improper Access Control Vulnerability in Mendix](https://cert-portal.siemens.com/productcert/pdf/ssa-870917.pdf) | See the SSA description for remediation details. |
+| <a id="27241"></a>CVE-2022-27241 | 5.3 | [Information Disclosure Vulnerability in Mendix](https://cert-portal.siemens.com/productcert/pdf/ssa-414513.pdf) | See the SSA description for remediation details. |
 | CVE-2022-26313 | 9.1 | [Vulnerability in Mendix Forgot Password Marketplace Module](https://cert-portal.siemens.com/productcert/pdf/ssa-134279.pdf) | See the SSA description for remediation details. |
 | CVE-2022-26314 | 7.4 | [Vulnerability in Mendix Forgot Password Marketplace Module](https://cert-portal.siemens.com/productcert/pdf/ssa-134279.pdf) | See the SSA description for remediation details. |
-| <a name="24309"></a>CVE-2022-24309 | 5.9 | [XPath Constraint Vulnerability in Mendix Runtime](https://cert-portal.siemens.com/productcert/pdf/ssa-148641.pdf) | See the SSA description for remediation details. |
-| <a name="26317"></a>CVE-2022-26317 | 7.7 | [Improper Access Control Vulnerability in Mendix](https://cert-portal.siemens.com/productcert/pdf/ssa-415938.pdf) | See the SSA description for remediation details. |
-| <a name="42015"></a>CVE-2021-42015 | 4.0 | [Information Disclosure Vulnerability in Mendix](https://cert-portal.siemens.com/productcert/pdf/ssa-338732.pdf) | See the SSA description for remediation details. |
-| <a name="42025"></a>CVE-2021-42025 | 5.3 | [Two Incorrect Authorization Vulnerabilities in Mendix](https://cert-portal.siemens.com/productcert/pdf/ssa-779699.pdf) | See the SSA description for remediation details. |
-| <a name="42026"></a>CVE-2021-42026 | 3.1 | [Two Incorrect Authorization Vulnerabilities in Mendix](https://cert-portal.siemens.com/productcert/pdf/ssa-779699.pdf) | See the SSA description for remediation details. |
+| <a id="24309"></a>CVE-2022-24309 | 5.9 | [XPath Constraint Vulnerability in Mendix Runtime](https://cert-portal.siemens.com/productcert/pdf/ssa-148641.pdf) | See the SSA description for remediation details. |
+| <a id="26317"></a>CVE-2022-26317 | 7.7 | [Improper Access Control Vulnerability in Mendix](https://cert-portal.siemens.com/productcert/pdf/ssa-415938.pdf) | See the SSA description for remediation details. |
+| <a id="42015"></a>CVE-2021-42015 | 4.0 | [Information Disclosure Vulnerability in Mendix](https://cert-portal.siemens.com/productcert/pdf/ssa-338732.pdf) | See the SSA description for remediation details. |
+| <a id="42025"></a>CVE-2021-42025 | 5.3 | [Two Incorrect Authorization Vulnerabilities in Mendix](https://cert-portal.siemens.com/productcert/pdf/ssa-779699.pdf) | See the SSA description for remediation details. |
+| <a id="42026"></a>CVE-2021-42026 | 3.1 | [Two Incorrect Authorization Vulnerabilities in Mendix](https://cert-portal.siemens.com/productcert/pdf/ssa-779699.pdf) | See the SSA description for remediation details. |
 | CVE-2021-33718 | 5.3 | [Access Check Bypass Vulnerability in Mendix](https://cert-portal.siemens.com/productcert/pdf/ssa-352521.pdf) | See the SSA description for remediation details. |
 | CVE-2021-33712 | 8.1 | [Privilege Escalation Vulnerability in Mendix SAML Module](https://cert-portal.siemens.com/productcert/pdf/ssa-522654.pdf) | See the SSA description for remediation details. |
 | CVE-2021-31339 | 4.3 | [Information Disclosure Vulnerability in Mendix Excel Importer Module](https://cert-portal.siemens.com/productcert/pdf/ssa-854248.pdf) | See the SSA description for remediation details. |

@@ -49,7 +49,7 @@ This option is only available when support for other servers is enabled in **Edi
 
 {{< figure src="/attachments/refguide8/modeling/menus/version-control-menu/upload-to-version-control-dialog/enable-private-version-control.png" alt="Enable private version control in advanced preferences" >}}
 
-<a name="private-server"></a>If you select **Private server**, enter the address of the repository to which you want to upload your app in the **App repository address** field.
+<a id="private-server"></a>If you select **Private server**, enter the address of the repository to which you want to upload your app in the **App repository address** field.
 
 {{< figure src="/attachments/refguide8/modeling/menus/version-control-menu/upload-to-version-control-dialog/private-server-app.png" alt="Enable private version control in advanced preferences" >}}
 

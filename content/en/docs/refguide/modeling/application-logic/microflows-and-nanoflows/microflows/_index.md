@@ -15,8 +15,9 @@ Microflows run in the runtime server and can therefore not be used in offline ap
 
 This page is a summary of the elements which make up a microflow, together with their visual representation within the microflow. It also covers [keyboard support](#keyboard) when editing microflows.
 
-For the properties of the microflow itself, see [Microflow Properties](/refguide/microflow/). For more best practice details, see [Microflow Naming Conventions](/howto/general/dev-best-practices/#microflow-naming-conventions), [Microflow General Best Practices](/howto/general/dev-best-practices/#microflow-dev-best-practices), and [Microflow Best Practices from the Community](/howto/general/community-best-practices-for-app-performance/#microflow-community-best-practices).
+For the properties of the microflow itself, see [Microflow Properties](/refguide/microflow/). For more best practice details, see [Microflow Naming Conventions](/refguide/dev-best-practices/#microflow-naming-conventions), [Microflow General Best Practices](/refguide/dev-best-practices/#microflow-dev-best-practices), and [Microflow Best Practices from the Community](/refguide/community-best-practices-for-app-performance/#microflow-community-best-practices).
 
+For information on using microflows as data sources, see [Microflow Source](/refguide/microflow-source/).
 
 ## 2 Microflow Notation
 
@@ -67,7 +68,7 @@ Decisions deal with making choices and merging different paths again.
 
 [Activities](/refguide/activities/) are the actions that are executed in a microflow:
 
-{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/microflows/activity.png" alt="Activity" >}}
+{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/microflows/activity.png" alt="Activity" width="150px" >}}
 
 ### 2.5 Loop {#loop}
 
@@ -122,3 +123,11 @@ If you want to see what happens while a microflow is executing, you can use the 
 
 * [Debugging Microflows and Nanoflows](/refguide/debug-microflows-and-nanoflows/)
 * [Debugging Microflows Remotely](/refguide/debug-microflows-remotely/)
+
+## 5 Converting a Microflow to a Nanoflow {#convert-to-nanoflow}
+
+To convert a microflow to a nanoflow, you have two options. The first option is to right-click anywhere in the microflow editor and select **Convert to nanoflow**. Alternatively, in the **App Explorer**, right-click on the name of the microflow you want to convert, and select **Convert to nanoflow**.
+
+{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/microflows/convert-to-nanoflow.PNG" alt="Convert to nanoflow" width="550px" >}}
+
+A new nanoflow is created and added to the same directory, and you can get consistency errors if there are actions that are not supported by nanoflows.

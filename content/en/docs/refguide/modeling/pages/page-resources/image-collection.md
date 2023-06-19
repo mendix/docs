@@ -1,7 +1,7 @@
 ---
 title: "Image Collection"
 url: /refguide/image-collection/
-weight: 5
+weight: 1
 description: "Why and how to create an image collection"
 tags: ["Studio Pro", "Images", "Image Collection"]
 ---
@@ -15,7 +15,7 @@ For information on how to use images in your app, see [Images](/refguide/images/
 Remember that, if you want to use the same set of custom images in several apps, you can export and import complete image collections, with their images. For more information, see [Importing and Exporting Apps, Modules, Widgets, and Documents](/refguide/import-and-export/).
 
 {{% alert color="warning" %}}
-Too many large static images in your app can lead to performance issues. If you need a lot of large images, you can store them in your database (see [How to Work with Images and Files](/howto/data-models/working-with-images-and-files/) for more information).
+Too many large static images in your app can lead to performance issues. If you need a lot of large images, you can store them in your database (see [Dynamic Image](/refguide/image-viewer/) for more information).
 {{% /alert %}}
 
 ## 2 Adding an Image Collection
@@ -32,7 +32,7 @@ You can perform the following actions within image collections using the icons a
 
 {{< figure src="/attachments/refguide/modeling/pages/page-resources/image-collection/actions.png" alt="Image collection actions" >}}
 
-Some of the actions can be applied to multiple images. You can select all images with <kbd>Ctrl</kbd>+<kbd>A</kbd>, or multiple images by combining your click with <kbd>Ctrl</kbd> or <kbd>Shift</kbd>
+Some of the actions can be applied to multiple images. You can select all images with <kbd>Ctrl</kbd>+<kbd>A</kbd>, or multiple images by combining your click with <kbd>Ctrl</kbd> or <kbd>Shift</kbd>.
 
 ### 3.1 Add
 

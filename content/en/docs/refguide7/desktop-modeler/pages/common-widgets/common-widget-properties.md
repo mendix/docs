@@ -55,4 +55,4 @@ The tab index influences the order in which the end user navigates through the f
 
 A widget can be made editable based on the value of an attribute of the enclosing data view. The attribute must be of type boolean or enumeration. For each value, you specify whether the widget is editable. Upon entering the form and upon changing the condition attribute the edit state of the widget will be updated.
 
-Example: you don't have to ask for the marriage date if the end user indicates that he or she is not married.
+For example, you do not have to ask for the marriage date if the end user indicates that they are not married.

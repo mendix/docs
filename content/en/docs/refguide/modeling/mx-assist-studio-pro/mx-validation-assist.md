@@ -6,15 +6,9 @@ description: "Describes Mendix Validation Assist on pages."
 tags: ["studio pro", "mendix assist", "validation assist", "bot", "validation bot", "validation", "data validations", "field validation", "form validation"]
 ---
 
-{{% alert color="info" %}}
-
-This feature is currently in [Public Beta](/releasenotes/beta-features/).
-
-{{% /alert %}}
-
 ## 1 Introduction 
 
-The Validation Assist helps you build validation microflows in a more automated way using pre-built expressions.  [Validation rules](https://docs.mendix.com/refguide/validation-rules/) are conditions that should be satisfied before an object is committed. There are different ways to [set up data validations](https://docs.mendix.com/howto/data-models/setting-up-data-validation/) in Mendix. Building data validations in microflows is a manual and repetitive task and Validation Assist helps automate it. 
+The Validation Assist helps you build validation microflows in a more automated way using pre-built expressions.  [Validation rules](https://docs.mendix.com/refguide/validation-rules/) are conditions that should be satisfied before an object is committed. There are different ways to [set up data validations](/refguide/setting-up-data-validation/) in Mendix. Building data validations in microflows is a manual and repetitive task and Validation Assist helps automate it. 
 
 The main features of the Validation Assist are the following:
 
@@ -36,7 +30,7 @@ The Validation Assist is activated by default in the page elements where data va
     * **Text box**
     * **Text area**
     * **Drop-down**
-    * **Check box**
+    * **Checkbox**
     * **Radio button**
     * **Date picker**
     * **Reference selector**
@@ -45,9 +39,7 @@ The Validation Assist is activated by default in the page elements where data va
 To access the Validation Assist, right-click a button or an input widget listed above and select **Generate validation microflow**. 
 
 {{% alert color="info" %}}
-
 The page should contain at least one input widget, for the **Generate validation microflow** option to be available. 
-
 {{% /alert %}} 
 
 The **Generate Validation Microflow** dialog box is where you can configure all validations:
@@ -88,7 +80,6 @@ Your app also has a form where customers can schedule a hairdresser’s appointm
 To configure the **Save** button for the use case above, do the following:
 
 1. Open the page with the form called *Appointment_NewEdit* and right-click the **Save** button in it.
-
 2. In the drop-down list, select **Generate validation microflow**:
 
     {{< figure src="/attachments/refguide/modeling/mx-assist-studio-pro/mx-validation-assist/generate-validation-microflow-option.png" alt="Generate Validation Microflow Option" >}}
@@ -100,35 +91,32 @@ To configure the **Save** button for the use case above, do the following:
 4. In your app, you already have a validation microflow that checks the selected date and time, you can call the microflow in the current validation. Do the following:
 
     1. Click **New** in the **Generate Validation Microflow** dialog box.
-
     2. In the **Add Validation** dialog box, set **Type** to **Call a validation microflow**.
-
     3. Select the existing validation microflow for **Microflow** and click **OK**. 
 
-       The microflow is added to validations. 
+        The microflow is added to validations. 
 
-5.  You also would like to add one more validation that checks that the name of the customer is valid (the name has only alphabetical symbols). To add a validation, do the following:
+5. You also would like to add one more validation that checks that the name of the customer is valid (the name has only alphabetical symbols). To add a validation, do the following:
 
     1. Click **New** in the **Generate Validation Microflow** dialog box. 
     2. In the **Add Validation** dialog box, make sure that **Type** is set to **Based on expression**.
     3. For **Member**, select the **Customer_Name** attribute.
     4. In the **Expression** field, fill in *$Appointment/Customer_Name*. 
     5. Click **OK** to save changes.
-    
+
 6. You would like to save validations for the **Customer_Name** attribute (that the name is not empty and that it is alphabetical) as a sub-microflow to use them as a separate validation on a different page.  Do the following:
 
     1. In the **Generate Validation Microflow** dialog box, select two validations for *Customer_Name* and click **Extract submicroflow**:
 
         {{< figure src="/attachments/refguide/modeling/mx-assist-studio-pro/mx-validation-assist/extract-sub-microflow.png" alt="Extract Sub-Microflow" >}}
 
-    2.  In the **Extract Validation Sub Microflow,** click **Extract Microflow**.
+    2. In the **Extract Validation Sub Microflow,** click **Extract Microflow**.
 
         {{< figure src="/attachments/refguide/modeling/mx-assist-studio-pro/mx-validation-assist/extract-sub-microflow-dialog.png" alt="Extract Sub-Microflow Dialog" >}}
 
         The microflow is saved separately containing selected validations.
 
 7. In the **Generate Validation Microflow** dialog box, click **Generate microflow**. 
-
 8. In the **Validation Assist** dialog box, click **Open the microflow** to view the configured microflow:
 
     {{< figure src="/attachments/refguide/modeling/mx-assist-studio-pro/mx-validation-assist/validation-microflow.png" alt="Validation Microflow" >}}
@@ -138,6 +126,6 @@ You can now  click the **Play** button in the Studio Pro top bar to run your app
 
 ## 4 Read More 
 
-* [MxAssist Performance Bot](/refguide/mx-assist-performance-bot/)
+* [MxAssist Best Practice Bot](/refguide/mx-assist-performance-bot/)
 * [MxAssist Logic Bot](/refguide/mx-assist-logic-bot/)
 * [Validation Rules](/refguide/validation-rules/)     

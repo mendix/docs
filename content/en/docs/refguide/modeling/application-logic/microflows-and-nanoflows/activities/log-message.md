@@ -12,9 +12,7 @@ This activity can be used in both **Microflows** and **Nanoflows**.
 
 ## 1 Introduction
 
-With the **Log message** activity you can create messages that appear in the log of your Mendix application:
-
-{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/log-message/log-message.png" alt="Log Message" >}}
+With the **Log message** activity you can create messages that appear in the log of your Mendix application.
 
 ## 2 Properties
 
@@ -80,7 +78,7 @@ Defines whether to include the stack trace of the latest error in this log messa
 
 Double-clicking these log messages shows the stack trace.
 
-This option also applies to `$latestSoapFault`. If you define an error handler for a web service call, and it catches a soap fault error, checking this box will add the stacktrace to the logline in Studio Pro.
+This option also applies to `$latestSoapFault`. If you define an error handler for a web service call, and it catches a soap fault error, checking this box will add the stack trace to the logline in Studio Pro.
 
 ## 4 Common Section {#common}
 

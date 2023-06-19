@@ -38,34 +38,28 @@ Before starting this how-to, make sure you have completed the following prerequi
 You would like to open a page with opportunity contact list and its details from your home page. Do the following:
 
 1. Open your home page. 
-
 2. Navigate to the **Toolbox** > **Widgets** and search for **Open Page** button and drag it onto the page.
 
     {{< figure src="/attachments/studio-how-to/pages/pages-how-to-configure-list/open-page-button.png" alt="Open Page"   width="250"  >}}
 
-5. Open the button properties and follow the steps below:
+3. Open the button properties and follow the steps below:
 
     1. Set **Page** as an on-click action and click the **Page** property.
-
     2. In the **Select Page** dialog box, click the plus icon in the top right corner.
-
     3. In the **Create Page** dialog box, set the page title to *OpportunityContact*.
-    
     4. Deselect the **Autofill Contents** option and select the page template by clicking **Master Detail** in the side bar and choose **Master Detail**:
 
         {{< figure src="/attachments/studio-how-to/pages/pages-how-to-configure-list/create-master-detail.png"   width="550"  >}}
 
     5. Click **Create**.
-    
     6. Go back to the home page and open the **Page** button properties.
-    
     7. Set **Parameters** to **Create Object**:
-    
+
         {{< figure src="/attachments/studio-how-to/pages/pages-how-to-configure-list/button-properties.png" alt="Button Properties"   width="250"  >}}
 
 You have created a new page. In the responsive (Desktop) view, a list is displayed on the left and list item details are displayed on the right:
 
-{{< figure src="/attachments/studio-how-to/pages/pages-how-to-configure-list/master-details.png" >}} 
+{{< figure src="/attachments/studio-how-to/pages/pages-how-to-configure-list/primary-details.png" >}} 
 
 ## 4 Configuring the List
 
@@ -76,17 +70,17 @@ The page is created, now you need to configure it. First of all, you need to con
     {{< figure src="/attachments/studio-how-to/pages/pages-how-to-configure-list/new-parameter.png" alt="New Parameter"  >}}
 
 2. In page parameter properties, click **Entity**:
+
     {{< figure src="/attachments/studio-how-to/pages/pages-how-to-configure-list/parameter-properties.png" alt="Page Parameter Properties"  >}}
 
 3. In **Select Entity** dialog box, choose the **OpportunityContact** entity and click **Select**. The page now has an *OpportunityContact* object as its context through the page parameter. 
-
-1. On the page, select the list view and click the **Entity** option in its properties:
+4. On the page, select the list view and click the **Entity** option in its properties:
 
     {{< figure src="/attachments/studio-how-to/pages/pages-how-to-configure-list/list-view-entity.png" alt="List View Properties"   width="250"  >}}
 
 5. In the **Select Entity** dialog box, select **OpportunityContact** and confirm your choice by clicking **Select**. Now the list is connected to the **OpportunityContact** entity. 
 
-3. To display the name of each report per company, do the following:
+6. To display the name of each report per company, do the following:
 
     1. Select the **Name** text in the list view and open the **Properties** tab.
 
@@ -98,11 +92,11 @@ The page is created, now you need to configure it. First of all, you need to con
 
     3. In the **Select Attribute** dialog box, choose **Name** and click **Select**. 
 
-4. Delete the image from the list and the column where this image is placed, as now the image displays a user image that does not correspond to opportunity contacts you are displaying.
+7. Delete the image from the list and the column where this image is placed, as now the image displays a user image that does not correspond to opportunity contacts you are displaying.
 
     {{< figure src="/attachments/studio-how-to/pages/pages-how-to-configure-list/list-with-no-image.png"   width="300"  >}}
 
-5. As the goal of the new page is to merely display data, delete the **New** button above the list view together with the container it is placed in:
+8. As the goal of the new page is to merely display data, delete the **New** button above the list view together with the container it is placed in:
 
     {{< figure src="/attachments/studio-how-to/pages/pages-how-to-configure-list/container.png"   width="300"  >}}
 

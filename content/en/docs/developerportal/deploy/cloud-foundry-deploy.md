@@ -43,12 +43,9 @@ For more information on running Mendix apps on Cloud Foundry, see the [Mendix Cl
 * Deploy your app to Cloud Foundry
 * Troubleshoot
 
-### 1.1 Cloud Foundry on SAP and IBM
+### 1.1 Cloud Foundry on SAP
 
-Cloud Foundry providers like SAP and IBM are made available within the Mendix Developer Portal. It is recommended that you use the Developer Portal for deploying your application to these clouds. See the detailed documentation for the following targets:  
-
-* [SAP Business Technology Platform](/developerportal/deploy/sap-cloud-platform/)
-* [IBM Cloud](/developerportal/deploy/ibm-cloud/)
+Cloud Foundry providers like SAP are made available within the Mendix Developer Portal. It is recommended that you use the Developer Portal for deploying your application to these clouds. See the detailed documentation for [SAP Business Technology Platform](/developerportal/deploy/sap-cloud-platform/).
 
 Only use the instructions in this document if you have specific requirements which the recommended method does not support.
 
@@ -69,9 +66,8 @@ To deploy a Mendix app to Cloud Foundry, you have to configure the settings in S
 
 2. Enter the following in the credentials of the **Edit Cloud Foundry Settings** window:
 
-    * **API endpoint** is the endpoint of the platform which you will be able to get from the platform documentation. Examples are:
-        * `https://api.ng.bluemix.net` for IBM region US South
-        * `https://api.cf.eu10.hana.ondemand.com` for SAP Frankfurt
+    * **API endpoint** is the endpoint of the platform which you will be able to get from the platform documentation. For example:
+          * `https://api.cf.eu10.hana.ondemand.com` for SAP Frankfurt
     * **User name** is the name of your account on the platform
     * **Password** is the password which authenticates your account
 
@@ -115,9 +111,8 @@ This how-to will describe adding the database and file store only. Additional se
 
 To configure the Cloud Foundry environment, you will need to go to the console for your platform. You must logon with the same credentials which you used when creating a Cloud Foundry environment from Studio Pro.
 
-All these consoles have similar features which allow you to select services, bind them to your app, and view details of the environment and the app. Some example consoles are:
+All these consoles have similar features which allow you to select services, bind them to your app, and view details of the environment and the app. For example:
 
-* [IBM](https://console.bluemix.net/dashboard/apps/)
 * [SAP](https://account.hanatrial.ondemand.com/cockpit#/home/trialhome)
 
 {{% alert color="info" %}}
@@ -128,7 +123,7 @@ To add a database service to your app, follow these steps:
 
 1. Navigate to the space where you created your app. The environment for the app you created is there, but it isn't running yet. This is because it doesn't have any services attached to it.
 2. Find the list of services which you can add. This may be in a **Service Marketplace** or you may need to **Add Service** to get a list of services you can add. Note that services are provided to spaces, not to individual apps.
-3. Select a database which is supported by Mendix. Supported databases include PostgreSQL, DB2, DashDB, Compose For PostgreSQL, ClearDB MySQL, and ElephantSQL (PostgreSQL as a service)
+3. Select a database which is supported by Mendix. Supported databases include PostgreSQL, DashDB, Compose For PostgreSQL, ClearDB MySQL, and ElephantSQL (PostgreSQL as a service)
 
     {{< figure src="/attachments/developerportal/deploy/cloud-foundry-deploy/marketplaces.png" >}}
 

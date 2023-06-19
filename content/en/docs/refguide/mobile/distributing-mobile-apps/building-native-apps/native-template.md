@@ -42,7 +42,7 @@ So like in the example shown above, in the case of Mendix Studio Pro 8.9.x you c
 
 React Native modules are npm packages that include dependencies which must be linked with your platform-specific apps so that the React Native modules can be compiled with the apps.
 
-The Native Template fully supports the [React Native's CLI auto-linking capabilities](https://github.com/react-native-community/cli/blob/master/docs/autolinking). Libraries that are auto-linkable by default will be correctly linked to the platform-specific apps. 
+The Native Template fully supports the [React Native's CLI auto-linking capabilities](https://github.com/react-native-community/cli/blob/main/docs/autolinking.md). Libraries that are auto-linkable by default will be correctly linked to the platform-specific apps. 
 
 For libraries that are not fully auto-linkable (those are usually libraries that require special initialization) we extended the default auto-linking capabilities. This process is limited to publicly known capabilities. We will expand the documentation when the API becomes public.
 
@@ -629,14 +629,11 @@ The created bundles need to be copied to the right place in the Native Template 
 
 ## 7 Deriving the App's Native Dependencies
 
-Mendix Studio Pro 9 introduced Native Dependency resolution for pluggable widgets and Javascript actions. For more information, see [Declaring Native Dependencies
-](/apidocs-mxsdk/apidocs/pluggable-widgets-native-dependencies/). Prior to Studio Pro 9 Mendix Studio Pro was shipping with a set of core dependencies which are now are removed. 
+Mendix Studio Pro includes Native Dependency resolution for pluggable widgets and Javascript actions. For more information, see [Declaring Native Dependencies](/apidocs-mxsdk/apidocs/pluggable-widgets-native-dependencies/).
 
-As you develop, you may add more Mendix Studio Pro 9 compatible modules, widgets, and actions to your app. This means and more dependencies 
-will be added that will also need be declared in your app's Native Template prior to building the native apps. 
+As you develop, you may add more Mendix Studio Pro compatible modules, widgets, and actions to your app. This means and more dependencies will be added that will also need be declared in your app's Native Template prior to building the native apps. 
 
-As this dependency management is required for your app's initial setup, we suggest you use the Mendix Native Mobile Builder to configure your app.
-The Mendix Native Mobile builder is capable of deriving required dependencies and linking them with your app's Native Template. 
+As this dependency management is required for your app's initial setup, we suggest you use the Mendix Native Mobile Builder to configure your app. The Mendix Native Mobile builder is capable of deriving required dependencies and linking them with your app's Native Template. 
 
 ## 8 Continuous Integration Testing Guidelines
 
@@ -647,7 +644,7 @@ We suggest you initially develop your app using the Mendix Native Mobile Builder
 
 A CI environment needs to be able to do the following to successfully configure a Native Template for builds:
 
-* Check out the latest Mendix app from SVN
+* Check out the latest Mendix app
 * Check out your app's Native Template (the one used when configuring the app)
 * Run `mxbuild`
 * Set up the configuration and move assets as needed (this can be done with simple shell scripts or any other solution, and is the implementor's choice) 

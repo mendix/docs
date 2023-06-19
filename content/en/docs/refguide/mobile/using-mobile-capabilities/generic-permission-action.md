@@ -13,7 +13,7 @@ Advanced features in mobile apps often require permission from users. Apps need 
 ## 2 Prerequisites
 
 * Complete the [Prerequisites](/refguide/mobile/distributing-mobile-apps/building-native-apps/deploying-native-app/#prerequisites) section of *Deploy Your First Mendix Native Mobile App*.
-* Install Mendix Studio Pro v9.10.0 and above to use the Native Mobile App Builder and the latest Nanoflow Commons module.
+* Install Mendix Studio Pro to use the Native Mobile App Builder and the latest Nanoflow Commons module.
 * Make sure your [Native Mobile Resources](/appstore/modules/native-mobile-resources/) module is up to date.
 * Make sure you are using [Make It Native 9 app](/releasenotes/mobile/make-it-native-parent/), and it is up-to-date.
 
@@ -140,13 +140,12 @@ target 'YourAwesomeProject' do
 end
 ```
 
-
 To allow a Siri permission you will need to enable Siri capability in your app. This can be done one of two ways:
 
 * The first way is by navigating to **Xcode** > **Signing & Capabilities** > **+** > **Siri** and then enabling the capability
 * The second way is by updating the */ios/{app name}/{app name}.entitlements* file as follows:
 
-	```xml
+    ```xml
 	<?xml version="1.0" encoding="UTF-8"?>
 	<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 	<plist version="1.0">
@@ -156,7 +155,7 @@ To allow a Siri permission you will need to enable Siri capability in your app. 
 		<true/>
 	</dict>
 	</plist>
-	```
+    ```
 
 ### 5.2 Android {#update-android-native-permissions}
 

@@ -11,10 +11,6 @@ tags: ["studio Pro", "data hub", "data hub pane", "data hub catalog"]
 
 [Mendix Data Hub](/data-hub/) enables integration of available data sources from the different applications in an organization into your Mendix apps. This means that new apps can be created using shared datasets that are registered in the [Data Hub Catalog](/data-hub/data-hub-catalog/). In Studio Pro, this is possible using the integrated functionality of Data Hub Catalog through the **Data Hub** pane.
 
-{{% alert color="info" %}}
-See the [Data Hub Licenses](/data-hub/#data-hub-licences) section of the *Data Hub Guide* to learn about licensing.
-{{% /alert %}}
-
 You can search in the Data Hub Catalog through the **Data Hub** pane to discover data sources that you can use in your app. Via this pane you can add the entities that are exposed in the registered OData services—called **Data Sources** in Data Hub—into your app's domain model. These entities are called [external entities](/refguide/external-entities/) and are different because they enable the connection to the data associated with the entities in the originating app.
 
 To display the **Data Hub** pane, click **View** > **Data Hub**.
@@ -44,11 +40,11 @@ For more information on how to add entities to your app, see [Adding an External
 
 ## 3 Searching the Data Hub Catalog {#search}
 
-As you enter a search term, all the items in the Data Hub Catalog satisfying the search string are listed in the search results. This includes words in the service, entity and attribute descriptions, which are not displayed in the **Data Hub** pane. For more information, see the [Selected Asset Details](/data-hub/data-hub-catalog/search/#search-details) section in *Search in the Data Hub Catalog*.
+As you enter a search term, all the items in the Data Hub Catalog satisfying the search string are listed in the search results. This includes words in the service, entity and attribute descriptions, which are not displayed in the **Data Hub** pane. For more information, see the [Selected Asset Details](/catalog/manage/search/#search-details) section in *Search in the Data Hub Catalog*.
 
 You can drag the entity from the search results into your domain model and it will be added to your app and displayed as an [external entity](/refguide/external-entities/).
 
-{{% alert color="info" %}}Services that are set to **not-Discoverable** in the Catalog are not be included in the search results for *any* user including owners of the service. To consume entities from these services owners must ensure that they are [Discoverable](/data-hub/data-hub-catalog/curate/#discoverability).{{% /alert %}}
+{{% alert color="info" %}}Services that are set to **not-Discoverable** in the Catalog are not be included in the search results for *any* user including owners of the service. To consume entities from these services owners must ensure that they are [Discoverable](/catalog/manage/curate/#discoverability).{{% /alert %}}
 
 ### 3.1 Wildcard Search
 
@@ -85,7 +81,7 @@ The search results and **User in your App** section show the following informati
 
 * **Green check-mark** if the service or entity is consumed in the app. If you right-click a consumed service, you can do the following:
 
-    * **View in Data Hub Catalog** – click this to go to the **Data Source Details** page in the Data Hub Catalog
+    * **View in Data Hub Catalog** – click this to go to the [data source details](/catalog/manage/search/#service-details) page in the Data Hub Catalog
     * **Go to connection settings** – click this to open the [consumed OData service](/refguide/consumed-odata-service/) document
 
         {{< figure src="/attachments/refguide/modeling/menus/view-menu/data-hub-pane/data-hub-pane-menu.png" alt="info on a Service" >}}
@@ -99,7 +95,7 @@ The search results and **User in your App** section show the following informati
 
     {{% alert color="info" %}}The version number that is shown for the OData service is the latest one that is available in the Data Hub Catalog at the service endpoint – in the example above, version 1.0.0 of **BikeVehicleService** is currently consumed in the app, but the contract that is available in the Catalog is different to the one currently consumed.{{% /alert %}}
 
-* **Information icon** allows you to view further details for the service and a link to go directly to the [Service Details](/data-hub/data-hub-catalog/search/#search-details) screen in the Data Hub Catalog:
+* **Information icon** allows you to view further details for the service and a link to go directly to the [Service Details](/catalog/manage/search/#search-details) screen in the Data Hub Catalog:
 
     {{< figure src="/attachments/refguide/modeling/menus/view-menu/data-hub-pane/data-hub-pane-info.png" alt="Data Hub Pane Information" >}}
 
@@ -138,7 +134,7 @@ Unsupported attributes are grayed out and are not included in your app.
 #### 4.2.4 CRUD Capabilities
 
 If the entity, association, or attribute supports **C**reate, **R**ead, **U**pdate, or **D**elete capabilities and it is also supported by Studio Pro, then it is displayed in the **Data Hub** pane.
-Entities and associations can have any of the CRUD capabilities, while attributes can only have create and update. For more information on CRUD capabilities, see [Write Data to Another App](/data-hub/write-data/).
+Entities and associations can have any of the CRUD capabilities, while attributes can only have create and update. For more information on CRUD capabilities, see [Write Data to Another App](/catalog/write-data/).
 
 ## 5 Read More
 

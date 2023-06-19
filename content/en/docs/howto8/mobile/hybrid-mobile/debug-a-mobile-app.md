@@ -30,7 +30,7 @@ Before starting this how-to, make sure you have completed the following prerequi
 * Ensure that you have a network utilities tool on your mobile device (I use [PingTools](https://play.google.com/store/apps/details?id=ua.com.streamsoft.pingtools) on Android, and [NetworkPing Lite](https://itunes.apple.com/us/app/network-ping-lite/id289967115?mt=8) on iOS) in order to ensure connectivity between your device and your computer
 * Acquire a paid Apple Developer Membership—see [Apple Membership](https://developer.apple.com/support/membership/) for more details
 
-## 3 Android and macOS <a name="AndroidMac"></a>
+## 3 Android and macOS {#AndroidMac}
 
 This is perhaps the easiest combination of a mobile target platform and a development environment to configure.
 
@@ -121,7 +121,7 @@ You can use PhoneGap Build to build the native mobile application and tell it to
 
 ### 3.3 Android Configuration
 
-1. Enable the developer options on your Android device. See [Configure On-Device Developer Options](https://developer.android.com/studio8/debug/dev-options.html#enable) for more information.
+1. Enable the developer options on your Android device. See [Configure On-Device Developer Options](https://developer.android.com/studio/debug/dev-options) for more information.
 2. Connect your device to your development machine and when the popup window appears on your mobile device to allow USB debugging, choose **Allow**:
 
     {{< figure src="/attachments/howto8/mobile/hybrid-mobile/debug-a-mobile-app/android-2.png" alt="android-2" >}}
@@ -140,7 +140,7 @@ You can use PhoneGap Build to build the native mobile application and tell it to
 
 You can now take advantage of all the debugging tools you know and love with Mendix, including offline breakpoints, quick updates/refreshes, and the Chrome Developer Tools.
 
-## 4 iOS and macOS <a name="iosAndMac"></a>
+## 4 iOS and macOS {#iosAndMac}
 
 ### 4.1 Apple Developer Configuration
 
@@ -228,7 +228,7 @@ In order to build (and debug) a Mendix iOS app, you need to ensure that you have
 
 1. Download your Provisioning Profile (you will need this for Phonegap).
 
-### 4.2 Phonegap Configuration <a name="PhonegapConfiguration"></a>
+### 4.2 Phonegap Configuration {#PhonegapConfiguration}
 
 You can use PhoneGap Build to build the native mobile application and tell it to initialize based on this new URL, rather than the default. Follow these steps to change the PhoneGap Build
 
@@ -326,7 +326,7 @@ You can use PhoneGap Build to build the native mobile application and tell it to
 
 10. This will bring up the **Safari Web Inspector** for your device.
 
-## 5 Android + Windows <a name="AndroidAndWindows"></a>
+## 5 Android + Windows {#AndroidAndWindows}
 
 ### 5.1 Windows Configuration
 
@@ -386,7 +386,7 @@ You can use PhoneGap Build to build the native mobile application and tell it to
 
 ### 5.3 Android Configuration
 
-1. Enable the developer options on your Android device. See [Configure On-Device Developer Options](https://developer.android.com/studio8/debug/dev-options.html#enable) for more information.
+1. Enable the developer options on your Android device. See [Configure On-Device Developer Options](https://developer.android.com/studio/debug/dev-options) for more information.
 2. Connect your device to your development machine and when the popup appears on your mobile device to allow USB debugging, choose **Allow**:
 
     {{< figure src="/attachments/howto8/mobile/hybrid-mobile/debug-a-mobile-app/android-2.png" alt="android-2" >}}

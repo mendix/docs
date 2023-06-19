@@ -46,7 +46,6 @@ The output is:
 "Wed Feb 07 23:59 CET 2007"
 ```
 
-
 ## 3 endOfWeek
 
 The `endOfWeek` function calculates the end of the week compared to the initial date. The beginning and the end of the week are based on the user's locale. In the case of an anonymous user, the browser's locale is used instead.

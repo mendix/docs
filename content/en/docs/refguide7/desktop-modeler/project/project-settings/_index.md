@@ -83,7 +83,7 @@ The default time zone determines the time zone for newly created users. If your 
 
 ### 3.8 Scheduled Event Time Zone
 
-The scheduled event time zone defines under which timezone scheduled events run. The default is UTC and this has been the case since 3.0. If you would like to run scheduled events under another time zone (such as the time zone of the company office or the project default timezone), you can select it here.
+The scheduled event time zone defines under which time zone scheduled events run. The default is UTC and this has been the case since 3.0. If you would like to run scheduled events under another time zone (such as the time zone of the company office or the project default time zone), you can select it here.
 
 This affects time zone-related operations, such as parsing and formatting dates from/to strings and obtaining the beginning of the current day.
 
@@ -108,7 +108,7 @@ This performance difference is hardly noticeable to a single user when logging i
 
 A (web service) user will log in to execute a web service operation, wait for the operation to finish, and finally get the result back (if any).
 
-Imagine an empty microflow that returns nothing at all exposed as a published web service. We ask one user to execute this operation as many times as he can in one minute (simulated with SoapUI). First we set the hashing algorithm to BCrypt, then we set it to SSHA256. Any extra overhead here (on top of establishing the connection, building the XML message and so forth) is basically the hashing algorithm, as the operation should take near zero milliseconds and there is no result. So that leaves only the login, or, more precisely, the hashing of the password.
+Imagine an empty microflow that returns nothing at all exposed as a published web service. We ask one user to execute this operation as many times as they can in one minute (simulated with SoapUI). First we set the hashing algorithm to BCrypt, then we set it to SSHA256. Any extra overhead here (on top of establishing the connection, building the XML message and so forth) is basically the hashing algorithm, as the operation should take near zero milliseconds and there is no result. So that leaves only the login, or, more precisely, the hashing of the password.
 
 | Hashing Algorithm | Total Operations Executed | Operation per Second | Overhead in Milliseconds |
 | --- | --- | --- | --- |

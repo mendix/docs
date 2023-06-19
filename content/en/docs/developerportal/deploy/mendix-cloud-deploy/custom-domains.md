@@ -48,7 +48,7 @@ Before starting this how-to, you will need to have the following prerequisites:
     * What is an SSL/TLS private key and what it is used for?
     * What is a certificate request and what it is used for?
 * a basic knowledge of certificate authorities (like GeoTrust, Thawte, Verisign, RapidSSL, GoDaddy, Comodo)
-* the correct permissions to your licensed node (for more information, see [Node Permissions](/developerportal/deploy/node-permissions/))
+* the correct permissions to your licensed node (for more information, see [Node Permissions](/developerportal/deploy/node-permissions/)) — this must include [Transport Rights](/developerportal/deploy/node-permissions/#transport-rights)
 
 ### 2.2 Create and Configure a CNAME Record{#DNS}
 
@@ -92,6 +92,10 @@ If you do not have an SSL/TLS certificate you can order one from a certificate a
 
 ### 4.1 Generating a Certificate Request for your Custom Domain{#Generating}
 
+{{% alert color="info" %}}
+Certificates are applied to a single app. Therefore, we recommend that you do not use a wildcard (`*`) in the domain for which you are requesting a certificate. See [Can I Create a `*.mycompany.com` Wildcard Certificate?](#wildcard), below, for more information.
+{{% /alert %}}
+
 To create a CSR and an RSA (Rivest–Shamir–Adleman) encryption key, follow these steps:
 
 1. Click **New**.
@@ -110,7 +114,7 @@ To create a CSR and an RSA (Rivest–Shamir–Adleman) encryption key, follow th
 
     {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/custom-domains/21168226.png" >}}
 
-    {{% alert color="info" %}}The SSL/TLS private key will be stored in our secure keystore. It will not be available for download in order to keep it secure.{{% /alert %}}
+    {{% alert color="info" %}}The SSL/TLS private key will be stored in our secure keystore. It is not available for download, nor can Mendix Support obtain it for you, in order to keep it secure.{{% /alert %}}
 
 You can now go to your certificate authority to get a signed SSL/TLS certificate.
 
@@ -148,7 +152,7 @@ To upload the custom domain certificate, follow these steps:
 
 2. Click **Upload Certificate, Chain and Key**.
 
-    {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/custom-domains/upload-certificate.png" >}}
+    {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/custom-domains/newcustomdomain.png" >}}
 
 3. Type a **Description** for the certificate.
 
@@ -162,7 +166,7 @@ To upload the custom domain certificate, follow these steps:
 
 7. Click **Save** to save your new custom domain certificate. It will be uploaded to the Mendix Cloud automatically.
 
-    {{% alert color="info" %}}The SSL/TLS private key will be hidden after uploading it. It will be stored in our secure keystore and will not be available for download in order to keep it secure.{{% /alert %}}
+    {{% alert color="info" %}}The SSL/TLS private key will be hidden after uploading it. It will be stored in our secure keystore and will not be available for download, nor can Mendix Support obtain it for you, in order to keep it secure.{{% /alert %}}
 
 You can now configure your custom domain. See [Configuring a Custom Domain](#Configuring), below.
 
@@ -198,7 +202,7 @@ You can also edit an existing custom domain certificate.
 For this you will need access to the certificate request that you created for the current certificate.
 {{% /alert %}}
 
-## 7 Configuring a Custom Domain<a name="Configuring"></a>
+## 7 Configuring a Custom Domain {#Configuring}
 
 Once a custom domain certificate has been uploaded, you can configure a custom domain for one of your application environments.
 
@@ -234,9 +238,9 @@ Make sure you have configured a CNAME record for your custom domain with your do
 
 ## 8 Frequently Asked Questions
 
-### 8.1 Can I Create a `*.mycompany.com` Wildcard Certificate?
+### 8.1 Can I Create a `*.mycompany.com` Wildcard Certificate? {#wildcard}
 
-Yes. However, when you create the certificate request via the Mendix Cloud, you will only be able to use the wildcard certificate for the environments of a single application.
+Yes. However, when you create the certificate request via the Mendix Cloud, you will only be able to use the wildcard certificate for the environments of a single app. This is because the private key is stored securely and is not accessible to you or Mendix Support, so you will not be able to reuse it in other apps.
 
 If you have your own custom domain certificate, you can upload it to all of your apps and use it for all the environments of all of your apps.
 

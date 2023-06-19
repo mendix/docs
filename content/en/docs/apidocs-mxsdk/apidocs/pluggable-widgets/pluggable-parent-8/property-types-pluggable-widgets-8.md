@@ -1,7 +1,7 @@
 ---
-title: "Pluggable Widget Property Types"
+title: "Property Types – Mx8"
 url: /apidocs-mxsdk/apidocs/property-types-pluggable-widgets-8/
-weight: 20
+weight: 10
 description: A guide for understanding pluggable widgets' property types.
 tags: ["Widget", "Pluggable", "Custom", "JavaScript", "React"]
 ---
@@ -501,13 +501,13 @@ Support for the `dataSource` attribute was introduced in Mendix 8.12.
 | ------------ | -------- | -------------- | ------------------------------------------------------------ |
 | `type`       | Yes      | String         | Must be `attribute`                                          |
 | `key`        | Yes      | String         | See [key](#key) |
-| `onChange`   | No       | Property Path  | The path to an Action property that will be executed by the Mendix Platform when the value is changed by the widget |
+| `onChange`   | No       | Property Path  | The path to an Action property that will be run by the Mendix Platform when the value is changed by the widget |
 | `required`   | No       | Boolean        | Decides if the property must be specified by the user, `true` by default |
 | `dataSource` | No       | Property Path  | Specifies the path to a [`datasource`](#datasource) property linked to this attribute property |
 
 #### 4.4.2 XML Elements
 
-`<attributeTypes>` (required) — This element encapsulates `<attributeType>` elements which declare supported attribute types available while configuring the attribute property in the Studios.
+`<attributeTypes>` (required) — This element encapsulates `<attributeType>` elements which declare supported attribute types available while configuring the attribute property in Studio Pro.
 
 `<attributeType>` (required one or more) — this element defines the allowed attribute type in the `name` attribute.
 

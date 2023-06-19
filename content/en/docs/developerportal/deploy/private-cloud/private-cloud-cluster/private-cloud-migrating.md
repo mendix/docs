@@ -2,7 +2,7 @@
 title: "Hosting Your Own Registry"
 url: /developerportal/deploy/private-cloud-migrating/
 description: "Describes how to migrate Mendix images to a private cloud registry"
-weight: 10
+weight: 20
 tags: ["Private Cloud", "Registry", "Migrate", "Image", "Export", "Import"]
 #To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 ---
@@ -45,6 +45,11 @@ Follow these steps to export the Mendix components and store them on your local 
 7. Click **Export components**.
 
     The components you selected will be extracted from the Mendix repository and saved on your local machine. This will be in the folder `C:\Users\<User id>\.mxpc-cli\registry-migration` on Windows or `home/<User id>/.mxpc-cli/registry-migration` for Mac and U*ix. This can take some time. Wait for the message*The images for the selected components were exported successfully in tarballs*.
+
+{{% alert color="info" %}}
+To avoid downloading too many images, there is a default limit on the number of images that will be downloaded. You can check the current limit by running the following command: `./mxpc-cli registry-migration --help`
+Since version 2.10.2 of `mxpc-cli`, you can change this limit by using a `--max-images` commandline argument, for example, `mxpc-cli registry-migration --max-images=50`.
+{{% /alert %}}
 
 ## 5 Import Mendix Components Into Your Own Registry
 

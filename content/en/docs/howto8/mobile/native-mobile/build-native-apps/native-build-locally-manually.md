@@ -36,7 +36,7 @@ Before starting this how-to, make sure you have completed the following prerequi
 For iOS builds:
 
 * Have a Mac OS X machine 
-* Install [XCode 11.7](https://apps.apple.com/us/app/xcode/id497799835?mt=12) and [CocoaPods](https://guides.cocoapods.org/using/getting-started.html) 
+* Install the latest version of [XCode](https://developer.apple.com/xcode/resources/) and [CocoaPods](https://guides.cocoapods.org/using/getting-started.html) 
 
 For Android Builds:
 
@@ -138,10 +138,16 @@ In the sections below you can see the basic steps to get an app up and running o
 
 ### 5.1 Building an Android App with Android Studio
 
+{{% alert color="warning" %}}
+During this process, do not accept any suggestions to update to latest Gradle or Kotlin version.
+{{% /alert %}}
+
+To build an Android app with Android Studio, do the following:
+
 1. Run `npm install` (for NPM v7 and above run `npm install --legacy-peer-deps`) in the app root to install the required dependencies.
 1. Open Android Studio.
 1. Select the `<Native Template root>/android` as the entry point for the app.
-1. After synchronizing the app your Android Studio should look something like this. **Do not accept any suggestions to update to latest Gradle or Kotlin version!**:
+1. After synchronizing the app your Android Studio should look something like this (remember to not accept any suggestions to update to latest Gradle or Kotlin version):
 
     {{< figure src="/attachments/howto8/mobile/native-mobile/build-native-apps/native-build-locally-manually/as-home.png" alt="Android Studio"   width="350"  >}}
 
@@ -168,7 +174,7 @@ The Native Template does not yet support the ARM 64 Simulator architecture. For 
 1. Ensure you have Rosetta installed on your system (for more information, see this [Apple documentation](https://support.apple.com/en-us/HT211861)).
 1. Run `arch -x86_64 pod install` to install the correct type of pods.
 1. Right-click on the **XCode.app** icon and select **Get info**.
-1. Select the check box **Open using Rosetta**.
+1. Select the checkbox **Open using Rosetta**.
 1. Start XCode.
 
 XCode will now use x86_64 simulators and building should work as expected. Now that you have set up the 86 pods, click [here](#resume-ios) to skip the second path and resume the build process.
@@ -182,7 +188,7 @@ To build an iOS app with a Mac running Intel Silicon, do the following:
 
 The iOS project is using CocoaPods for its dependency management. For more information on installing the CocoaPods dependency manager on your machine see this CocoaPods [documentation](https://cocoapods.org/#install).
 
-<a name="resume-ios"></a>Now that you have completed one of the two paths listed above, you can resume building your iOS app:
+<a id="resume-ios"></a>Now that you have completed one of the two paths listed above, you can resume building your iOS app:
 
 1. Open *.xcodeworkspace* using XCode.
 1. Navigate to **Signing and Capabilities** and choose your **Team** from the drop-down menu:

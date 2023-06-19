@@ -1,16 +1,16 @@
 ---
 title: "Debugging Microflows Remotely"
-url: /refguide/debug-microflows-remotely//
+url: /refguide/debug-microflows-remotely/
 tags: ["monitoring", "troubleshooting", "debug", "microflow", "remote"]
+aliases:
+    - /howto/monitoring-troubleshooting/debug-microflows-remotely
+#If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
+#The anchor <enable-cloud-debugging> below is mapped, so it should not be removed or changed.
 ---
 
 ## 1 Introduction
 
 In addition to debugging a local deployment of your app, it is also possible to debug applications that are already in a cloud environment.
-
-{{% alert color="info" %}}
-These instructions are for apps running in Mendix Cloud v4. If you are running an older version of Mendix which is deployed to Mendix Cloud v3 you need the previous version of this document here: [Debugging Microflows Remotely](/howto7/monitoring-troubleshooting/debug-microflows-remotely/).
-{{% /alert %}}
 
 {{% alert color="warning" %}}
 **Debugging in a production environment is not recommended.**
@@ -24,21 +24,21 @@ If you are debugging in the cloud, be aware of other app end-users. Breakpoints 
 
 This how-to will teach you how to do the following:
 
-* Connect the debugger in Studio Pro to your Mendix Cloud v4 environment
+* Connect the debugger in Studio Pro to your Mendix Cloud environment
 
 ## 2 Prerequisites
 
 Before starting this how-to, make sure you have completed the following prerequisites:
 
-* Have access as a team member to a Mendix app deployed to a [licensed](/developerportal/deploy/licensing-apps/) Mendix Cloud v4 environment
+* Have access as a team member to a Mendix app deployed to a [licensed](/developerportal/deploy/licensing-apps/) Mendix Cloud environment
 * Have **TRANSPORT RIGHTS** to the app environment you want to debug in the app's [node permissions](/developerportal/deploy/node-permissions/)
 
 ## 3 The Basics
 
-In Mendix Cloud v4, the debugger is always listening for connections so you cannot turn it on or off. To debug your app in the cloud, you need to get a URL and a password from the app environment and provide that information to Studio Pro. The steps below explain how to do this.
+In the Mendix Cloud, the debugger is always listening for connections so you cannot turn it on or off. To debug your app in the cloud, you need to get a URL and a password from the app environment and provide that information to Studio Pro. The steps below explain how to do this.
 
 {{% alert color="info" %}}
-The debugger supports only debugging of single-instance environments. Multi-instance environments need to be scaled down to one instance before the debugger can be used. See [Scaling Your Environment in Mendix Cloud v4](/developerportal/deploy/scale-environment/) for more information.
+The debugger supports only debugging of single-instance environments. Multi-instance environments need to be scaled down to one instance before the debugger can be used. See [Scaling Your Environment in Mendix Cloud](/developerportal/deploy/scale-environment/) for more information.
 {{% /alert %}}
 
 ### 3.1 Obtain Debugging Credentials
@@ -121,7 +121,7 @@ The debugger is available at `{appURL}/debugger/` using the default runtime serv
 
 If you are debugging your app running behind IIS, make sure the debugger path is forwarded to the right runtime location as described in the [Reverse Proxy Inbound Rules](/developerportal/deploy/deploy-mendix-on-microsoft-windows/#reverse-proxy-rules) section of *Microsoft Windows – deploy*.
 
-### 3.2 How to Enable Cloud Debugging in Studio Pro
+### 3.2 How to Enable Cloud Debugging in Studio Pro {#enable-cloud-debugging}
 
 Once you have the unique URL and password, there are two methods for connecting Studio Pro to the cloud environment. 
 

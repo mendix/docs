@@ -65,7 +65,7 @@ Use as few dependency modules as possible. When you must use one, make sure they
 
 Add the app to [Team Server](/refguide/version-control/#team-server) (or GitHub) version control, if you have not already done so when creating the app. 
 
-We recommend that you have a separate public Git repository next to your private Team Server SVN/Git repository, so that you can continue committing and applying changes while you only push to the public repository for a new release to the Marketplace. The automated integration with GitHub from the Marketplace makes this a good option for your public-facing Git repository.
+We recommend that you have a separate public Git repository next to your private Team Server Git repository, so that you can continue committing and applying changes while you only push to the public repository for a new release to the Marketplace. The automated integration with GitHub from the Marketplace makes this a good option for your public-facing Git repository.
 
 ### 2.4 Working with Java-Intensive Apps
 
@@ -168,13 +168,13 @@ Depending on your module's functionality, you might need to store data in the en
 
 Actions that may be batched or divided over multiple threads due to a large load or volume should be offloaded to the [task queue](/refguide/task-queue/). Using this method, you can offload multiple tasks at once to multiple instances and over multiple threads. You can also run these tasks in the background without the user request waiting for it. Make sure that the end-user is aware that something is going on by setting a certain Task Status, or maybe implementing a progress log.
 
-If you are using Studio Pro [8.18](/releasenotes/studio-pro/8.18/) or older, you can consider using the process queue. See the [Replacing Process Queue](/refguide/task-queue/#process-queue) section of *Task Queue* for the difference between these functionalities.
+If you are using Studio Pro [8.18](/releasenotes/studio-pro/8.18/) or older, you can consider using the process queue. See the [Replacing Process Queue](/refguide9/task-queue/#process-queue) section of *Task Queue* for the difference between these functionalities.
 
 ### 3.6 ConnectionDetails Entity
 
 Use a **ConnectionDetails** entity for all general connection and security settings for the call. Use a **ConnectionDetails_Get** microflow in all your Operations. This way it is easy to change all the settings in one location. The individual settings can be stored in a constant or in the database and set in the create. Using constants are recommended because this avoids a dependency on the Encryption module.  
 
-{{% alert color="warning" %}} Using either the default value of a constant or the project’s configuration setting is unsafe. Both these places are readable by others and visible in the version management copies made by SVN. If you can share these settings with other developers, set them in the project configuration and leave the default values blank. This will limit the risk of accidentally exposing the settings when exporting the module.{{% /alert %}}
+{{% alert color="warning" %}} Using either the default value of a constant or the project’s configuration setting is unsafe. Both these places are readable by others and visible in the version management. If you can share these settings with other developers, set them in the project configuration and leave the default values blank. This will limit the risk of accidentally exposing the settings when exporting the module.{{% /alert %}}
 
 If you do need to store sensitive information in the database, then always use the [Encryption](/appstore/modules/encryption/) module to encrypt and store and to retrieve and decrypt the information.
 
@@ -195,7 +195,7 @@ Consider doing the following for all entity attributes:
 * Set all string values to unlimited.
 * Check all date values. If the service only returns a date (no time), then set **localize** to *No*.
 * Check all number values (decimal, integer, long), and remove the default value of 0.
-* 
+
 ### 3.10 Dependencies
 
 Given that there is no dependency management between Mendix modules, try to minimize the number of dependencies your module has on other modules. If you do have to depend on other modules, make sure those modules are well-maintained by you or by Mendix themselves. Introducing another community-supported module as a dependent module might be too much of a risk for developers wanting to use your module.
@@ -204,7 +204,7 @@ Any dependencies your module has should be well documented including the minimum
 
 ### 3.11 IP Protection
 
-Right now, you will not be able to protect your IP or prevent end-users from changing any logic that you ship in a module using Mendix tooling. Access to this functionality is currently limited and can be gained through the [Mendix Vendor Program](/appstore/creating-content/vendor-program/).
+For members of the [Mendix Partner Program](/appstore/creating-content/partner-program/) and the [Mendix Commercial Solution Partner Program](https://www.mendix.com/partners/become-a-partner/isv-program/), protecting your intellectual property (IP) or preventing end-users from changing any logic that you ship in a module using Mendix tooling is possible. For details, see [How to Apply IP Protection](/appstore/creating-content/sol-ip-protection/).
 
 If protecting your IP or preventing end-users from changing your logic is not a requirement, you can use all the tooling that Mendix provides to build a connector using available Mendix tools. If you want IP protection today, you need to implement the sensitive parts of the module in a hidden Java library. 
 
@@ -405,7 +405,7 @@ Gradle can handle managing Java dependencies and running [JUnit](http://junit.or
 
 #### 6.2.2 Using the Java Unit Test Reference
 
-Mendix apps need `Core` classes, and the [Core API](https://apidocs.rnd.mendix.com/9/runtime/com/mendix/core/Core.html) allows you to do things that you usually do in a microflow, like committing an object. `CoreProxy` serves as a mockable layer between your Java logic and the `Core` API. 
+Mendix apps need `Core` classes, and the **Class Core** [Runtime API](/apidocs-mxsdk/apidocs/runtime-api/) allows you to do things that you usually do in a microflow, like committing an object. `CoreProxy` serves as a mockable layer between your Java logic and the **Core** API. 
 
 Our [Java unit test reference](https://Github.com/mendixlabs/javaunittestreference) is available to help you through this process. `MendixUnitTestBase.java` is extendable and reusable for your own purposes. When extended, it enables Mockito on your test classes and mocks `Core` API behavior.  This does the following:
 

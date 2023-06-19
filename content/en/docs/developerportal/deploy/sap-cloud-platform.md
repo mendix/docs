@@ -5,7 +5,7 @@ url: /developerportal/deploy/sap-cloud-platform/
 category: "Deployment"
 weight: 40
 description: "Describes how to deploy to SAP Business Technology Platform."
-tags: ["SAP", "SAP Cloud Platform", "Deployment", "Environment", "SAP BTP", "SAP Business Technology Platform", "Dynatrace"]
+tags: ["SAP", "Deployment", "Environment", "SAP BTP", "SAP Business Technology Platform", "Dynatrace"]
 #To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
@@ -47,9 +47,13 @@ Click **Getting Started** and then continue with [Set Up Region](#SetUpRegion).
 
 In this scenario, you choose a Mendix app template for SAP **SAP Apps** tab and give it a name.
 
+{{% alert color="warning" %}}
+The app name that you provide is passed to SAP BTP as the host name parameter used when creating [routes](https://help.sap.com/docs/btp/sap-business-technology-platform/create-routes). Because of that, the name that you use for your SAP app should only contain characters that are valid when used in a host name (such as ASCII letters from A to Z, digits from 0 to 9, and hyphens). If your app name contains an invalid character, you will receive an error message when trying to create the app.
+{{% /alert %}}
+
 Once the app has been created you can continue with [Set Up Region](#SetUpRegion).
 
-### 2.3 Set Up Region{#SetUpRegion}
+### 2.3 Set Up Region {#SetUpRegion}
 
 You are now prompted with an SAP BTP login screen. Select the region where your SAP BTP is located.
 
@@ -99,13 +103,9 @@ You will be able to choose a Domain, Organization, and Space which is configured
 
 If you do not choose a Custom database, you will still be able to choose from a range of different databases, PostgreSQL, Hyperscaler Option and SAP HANA for example. Please ensure that the database you choose is supported by your quota plan for this region and organization. See [Databases in SAP BTP](#databases), below, for important information on selecting the correct database for your app.
 
-If you select **Yes** for **Custom database?**, you will be asked for the Name and the Plan.
+If you select **Yes** for **Custom database?**, you will be asked for the **Name** and the **Plan**.
 
-After the environment has been created successfully, you will see the following page:
-
-{{< figure src="/attachments/developerportal/deploy/sap-cloud-platform/02-sap-configured-for-use.png" >}}
-
-Your development environment is now configured and you can now develop your app.
+After the environment has been created successfully, you will see a confirmation message. Your development environment is now configured and you ca develop your app.
 
 ## 3 Create a New Environment{#NewEnvironment}
 
@@ -295,7 +295,7 @@ SAP BTP [has a limit of 1.5 GB](https://help.sap.com/viewer/65de2977205c403bbc10
     {{< figure src="/attachments/developerportal/deploy/sap-cloud-platform/start-application.png" >}}
 
     {{% alert color="info" %}}This will bind any services which are in the status **Services To Be Bound**.{{% /alert %}}
- 
+
 7. When the application has been started you will receive a confirmation message. Click **OK** and you will be taken to the Environment Details page for the selected environment. See [Environment Details](#EnvironmentDetails), below.
 
     {{< figure src="/attachments/developerportal/deploy/sap-cloud-platform/application-started.png" >}}
@@ -335,10 +335,10 @@ When the app has been transported you will be on the page **Configure the Applic
 
 The environment details page contains the following four tabs:
 
-* [General](#general-tab) – how the application is deployed on SAP Cloud Platform
+* [General](#general-tab) – how the application is deployed on SAP BTP
 * [Model Options](#model-options-tab) – application constants and scheduled events
 * [Services](#binding-services) – Cloud Foundry service management
-* [Runtime](#runtime-tab) – custom environment variables which define "User-Provided Variables" in SAP cloud foundry environment — pre-defined variables can be used to control the behavior of the Mendix Runtime
+* [Runtime](#runtime-tab) – custom environment variables which define **User-Provided Variables** in SAP cloud foundry environment — pre-defined variables can be used to control the behavior of the Mendix Runtime
 
 Open the environment details by clicking **Details** on an environment on the Environments page of the Development Portal. You will also be taken to this page when you successfully deploy or transport your app.
 
@@ -394,9 +394,17 @@ If you do not select **Remove resources** in this dialog, the resources will be 
 
 #### 7.1.5 Change Development Mode
 
-Click **Change** to change the Development Mode toggle. Set it to Yes if you want the application to run with only prototype security, or completely without security. This is not recommended for acceptance or production environments.
+Click **Change** to change the **Development Mode** toggle. Set it to Yes if you want the application to run with only prototype security, or completely without security. This is not recommended for acceptance or production environments.
 
-#### 7.1.6 Scaling
+#### 7.1.6 Change App URL
+
+Click **Change** to change the **App URL** for this environment.
+
+#### 7.1.7 Change Redirect URLs
+
+Click **Change** to change the **Redirect URLs**. Redirect URLs are custom URLs (for example, `appname.subdomain.domain.com`) where the user will be redirected after signing on using XSUAA, instead of being redirected to the generated URL (for example, `appname.cfapps.eu10.hana.ondemand.com`) of the app.
+
+#### 7.1.8 Scaling
 
 If the app is started or stopped (that is, the environment has been created successfully and the app has been deployed without errors) then options to scale the app are available.
 
@@ -412,7 +420,7 @@ Click **Reset** to return the values to what they were before the sliders were m
 You can also make use of the **Application Autoscaler** service on SAP BTP. Mendix provides assistance in setting up the parameters needed to configure application autoscaler. For more information see [Application Autoscaler for SAP Business Technology Platform](/partners/sap/sap-autoscaler/).
 {{% /alert %}}
 
-#### 7.1.7 Change License Subscription ID
+#### 7.1.9 Change License Subscription ID
 
 Click **Change** to change the subscription secret which is the code which registers your production Mendix license to this environment.
 
@@ -655,21 +663,17 @@ If you have issues with your app running on SAP HANA, you will need to use the S
 
 #### 8.2.2 SAP HANA Configuration for Trial Accounts
 
-{{% alert color="info" %}}
-If you are using a trial account created before November 2019, the SAP HANA Schema may not be available. It is not possible to work around this, so we advise you to set up a new trial account if your account does not support the `hanatrial-schema` database.
-{{% /alert %}}
-
-For trial accounts which do have the **SAP HANA Schemas & HDI Containers (Trial)** services, you can bind your Mendix app to a trial SAP HANA database. Just choose **hanatrial-schema** from the drop-down of supported databases.
+For new trial accounts, you can bind your Mendix app to a trial SAP HANA database. Just choose **hanatrial-securestore** from the drop-down of supported databases.
 
 {{< figure src="/attachments/developerportal/deploy/sap-cloud-platform/hanatrial-schema.png" >}}
 
-If your trial account does not include `hanatrial-schema`, you will get an error when you try to deploy your Mendix app saying that *provisioning has failed because service hanatrial with plan schema is not found*.
+Some older trial accounts do not include `hanatrial-securestore`. In this case you will get an error when you try to deploy your Mendix app saying that *provisioning has failed because service hanatrial with plan securestore is not found*.
 
 #### 8.2.3 SAP HANA Performance Tuning
 
-If your SAP HANA database has performance issues, you may be able to improve performance by performing the following tuning.
+If your SAP HANA database has performance issues, you may be able to improve performance by performing the following tuning:
 
-1. Obtain the following service binding credentials from the SAP BTP Cockpit, or via the cli:
+1. Obtain the following service binding credentials from the SAP BTP cockpit, or via the cli:
 
     * host
     * url
@@ -726,9 +730,7 @@ A more detailed description of the reason why the environment creation failed wi
 
 ### 9.2 Deleting an App
 
-Note that if you are the last person to leave a Mendix app you can delete the app. However, this will not delete the app or resources on SAP BTP. You can leave the app by going to the **General Settings** page of the Developer Portal and clicking **Leave app**.
-
-{{< figure src="/attachments/developerportal/deploy/sap-cloud-platform/leave-app.png" >}}
+Note that if you are the last person to leave a Mendix app you can delete the app. However, this will not delete the app or resources on SAP BTP. To leave the app, find it on the [My Apps](https://sprintr.home.mendix.com/link/myapps) page in the **Developer Portal**, and then click **Leave app**.
 
 If you are the last member of the app development team, you will be asked if you want to delete the app.
 

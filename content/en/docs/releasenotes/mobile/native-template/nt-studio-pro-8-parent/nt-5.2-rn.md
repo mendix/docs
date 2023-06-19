@@ -4,6 +4,21 @@ url: /releasenotes/mobile/nt-5.2-rn/
 weight: 10
 description: "Native Template 5.2 release notes."
 ---
+## 5.2.16
+
+**Release date: January 20th, 2023**
+
+### Fixes
+
+* We fixed a compilation error issue affecting Android builds by pinning AndroidX library versions.
+
+## 5.2.15
+
+**Release date: December 27th, 2022**
+
+### Fixes
+
+* We changed the order of repositories in Android builds to fix an issue with jitpack.io.
 
 ## 5.2.14
 
@@ -120,4 +135,4 @@ This is a re-release of Native Template [5.2.0](#520).
 
 ### Breaking Change
 
-* We bumped the `react-native-image` internal dependency to version `4.0.3` and introduced the `react-native-permissions` dependency. Developers would need to update their `NativeMobileResources` module from the App Store to the latest version to avoid unexpected behaviours. Due to this change, developers previously relying on over-the-air updates for their apps would have to release new applications to the app store.
+* We bumped the `react-native-image` internal dependency to version `4.0.3` and introduced the `react-native-permissions` dependency. Developers would need to update their `NativeMobileResources` module from the App Store to the latest version to avoid unexpected behaviors. Due to this change, developers previously relying on over-the-air updates for their apps would have to release new applications to the app store.

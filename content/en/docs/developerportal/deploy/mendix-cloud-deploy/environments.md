@@ -33,7 +33,7 @@ The **Environments** page has the following tabs:
 
 In the **Deploy** tab, you can view information about your environment, as well as create, upload, delete, and deploy packages.
 
-### 2.1 Deployment Package Repository
+### 2.1 Deployment Package Repository{#package-repository}
 
 In the **Deployment Package Repository** section, you have an overview of all the available deployment packages with the following details:
 
@@ -84,13 +84,11 @@ You can perform the following actions in this section:
 
 * **Details** – for more information, see [Details](/developerportal/deploy/environments-details/)
 * **Transport to** – stage an environment to acceptance or production
-* **Setup Studios Deployment** – the [Technical Contact](/developerportal/collaborate/app-roles/#technical-contact) can set the target environment to which apps will be deployed from Studio and Studio Pro; for more information, see [Studio Deployment Settings](/developerportal/deploy/studio-deployment-settings/)
+* **Setup Studio Pro Deployment** – the [Technical Contact](/developerportal/collaborate/app-roles/#technical-contact) can set the target environment to which apps will be deployed from Studio Pro; for more information, see [Studio Pro Deployment Settings](/developerportal/deploy/studio-deployment-settings/).
 
-    {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/environments/setup-studios-target.png" alt="The Environments section with the Setup Studios Deployment button visible" >}}
+#### 2.2.2 Flexible Environments {#flexible-environments}
 
-#### 2.2.2 Flexible Environments
-
-If your node supports flexible environments, you can define the number and type of environments that you have. For example, you can have multiple staging environments if your deployment process requires it.
+If your Mendix license supports flexible environments, you can define the number and type of environments that you have. You must define at least two environments, one of which must be a production environment. The other environment or environments may be designated according to your requirements; for example, you can have a production environment and multiple staging environments if your deployment process requires it.
 
 {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/environments/deploy-flex-environments.png" alt="The Environments section with flexible environments" >}}
 
@@ -114,9 +112,7 @@ For flexible environments, the **Environments** section shows the following deta
 You can perform the following actions in this section:
 
 * **Details** – for more information, see [Details](/developerportal/deploy/environments-details/)
-* **Setup Studios Deployment** – the [Technical Contact](/developerportal/collaborate/app-roles/#technical-contact) can set the target environment to which apps will be deployed from Studio and Studio Pro; for more information, see [Studio Deployment Settings](/developerportal/deploy/studio-deployment-settings/)
-
-    {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/environments/setup-studios-target.png" alt="The Environments section with the Setup Studios Deployment button visible" >}}
+* **Setup Studio Pro Deployment** – the [Technical Contact](/developerportal/collaborate/app-roles/#technical-contact) can set the target environment to which apps will be deployed from Studio Pro; for more information, see [Studio Pro Deployment Settings](/developerportal/deploy/studio-deployment-settings/).
 
 * **Search** – you can use the **Search** box to find a specific environment
 * Reordering environments - the [Technical Contact](/developerportal/collaborate/app-roles/#technical-contact) can reorder the environments by dragging them in the list, for example, to group environments of the same type together:

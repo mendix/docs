@@ -15,6 +15,14 @@ For information on the current status of deployment to SAP BTP and any planned r
 
 ## 2022
 
+### November 17th, 2022
+
+#### Improvements
+
+* We improved the flow when creating an environment with an SAP HANA database by allowing the upload of a custom binding file when you create an environment.
+* We added the ability to choose which environment is the target for deployments directly from Mendix Studio.
+* We upgraded Mendix to use version 3 of the Cloud Foundry API, as version 2 has been deprecated.
+
 ### August 4th, 2022
 
 #### Improvements
@@ -130,7 +138,7 @@ For more information see [SAP Business Technology Platform - deploy](/developerp
 * We have added support for PostgreSQL on SAP Cloud Platform, Hyperscaler Option for Mendix apps deployed to SAP Cloud Platform.
     * this comes with a configurator to help you create the correct configuration.
     * see [Running Mendix on PostgreSQL on SAP Cloud Platform](/developerportal/deploy/sap-cloud-platform/#sap-hyperscaler) for more information.
-* As part of a Developer Portal clean up, we removed the *Model* option from the *DEVELOP* section of the Developer Portal menu when you are looking at environments on SAP Cloud Platform. The functions of this page are still available via the **Edit in Studio** and **Edit in Studio Pro** buttons on the environments page.
+* As part of a Developer Portal clean up, we removed the *Model* option from the *DEVELOP* section of the Developer Portal menu when you are looking at environments on SAP Cloud Platform. The functions of this page are still available via the **Edit in Studio Pro** button on the environments page.
 
 ### October 21st, 2020
 

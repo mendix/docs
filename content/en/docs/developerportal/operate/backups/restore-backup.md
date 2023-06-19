@@ -75,13 +75,10 @@ The app previously deployed to the node does not, however, need to have had the 
 
 3. Click **Upload Archive**.
 
-    In **Mendix Cloud v4**, the upload will create a new backup item in your backup list, which you can then restore via the regular restore process. This will ensure less downtime for your application.
+    The upload will create a new backup item in your backup list, which you can then restore via the regular restore process. This will ensure less downtime for your application.
 
-    In the deprecated **Mendix Cloud v3**, this will *not* add a backup to the backup list but directly update the application with the newly uploaded data. Your environment will be cleared completely. The existing deployment package, uploaded files, and database will be removed. If you are uploading data to the production environment, any published app services will be unpublished.
-
-4. In Mendix Cloud **v3** you will need to confirm this by clicking **Yes**, because this action will immediately stop your app.
-5. Upload the *.db* or *.gz* backup file.
-6. In Mendix Cloud **v4** you will now need to restore your backup which is held in the Mendix Cloud, as described in [Restoring a Backup for the Same Licensed Cloud Node](#restore-cloud-backup), above.
+4. Upload the *.db* or *.gz* backup file.
+5. You will now need to restore your backup which is held in the Mendix Cloud, as described in [Restoring a Backup for the Same Licensed Cloud Node](#restore-cloud-backup), above.
 
 ## 4 Restoring a Backup for a Free App
 
@@ -98,11 +95,11 @@ For a Free App, you can only restore available backups which are made from the a
 
 You may want to restore a backup which has been created on another platform, for example an on-premises deployment. In this case you will have to construct the backup file which the Mendix Cloud will recognize.
 
-### .tar.gz archive
+### 5.1 .tar.gz Archive
 
 A **Full snapshot** backup file is a *.tar.gz* file (for example, *files_and_database-fc9e126f-201811210121.tar.gz*).
 
-### .tar archive
+### 5.2 .tar Archive
 
 The *.tar* archive within the *.tar.gz* archive (for example, *files_and_database-fc9e126f-201811210121.tar*) contains a number of files in a folder structure.
 
@@ -124,7 +121,7 @@ tree/46/9c/469c9c80-34d3-4810-8494-86b63eb37214
 tree/4d/8f/4d8ffd66-7ad3-4f5c-a992-985cf360581b
 ```
 
-### .metadata file
+### 5.3 .metadata File
 
 This contains json describing the backup. For example:
 
@@ -138,7 +135,7 @@ This contains json describing the backup. For example:
 }
 ```
 
-### db folder{#db-folder}
+### db Folder {#db-folder}
 
 This contains the *db.backup* file. This is a PostgreSQL dump file created using the command `pg_dump -O -x -Fc`.
 
@@ -148,7 +145,7 @@ If the dump does not use the *custom format* then the restore will fail.
 The dump must be created with `pg_dump` version 1.14 or below, which is currently bundled with PostgreSQL 12 and 13. If it is created with a later version, then the upload will fail.
 {{% /alert %}}
 
-### tree folder
+### tree Folder
 
 This contains the files which are stored in external file storage. Each file has the name of the uuid used within Mendix to identify the resource. They are also stored in the following tree structure where each file is stored in a second level location:
 

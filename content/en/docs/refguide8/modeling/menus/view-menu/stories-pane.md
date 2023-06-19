@@ -12,9 +12,9 @@ tags: ["Studio Pro", "stories", "stories pane"]
 
 ## 1 Introduction 
 
-For version control enabled projects (projects with Team Server or other SVN servers), the **Stories** pane displays the stories and tasks of the current [Sprint](/developerportal/collaborate/stories/). Stories, tasks, and sprints are created and managed in the Developer Portal. For more information on stories, see [Stories](/developerportal/collaborate/stories/). For more information on tasks, see the [Adding a Task to a Story](/developerportal/collaborate/stories/#adding-task) section in *Stories*. 
+For version control enabled projects (projects with Team Server or other SVN servers), the **Stories** pane displays the stories and tasks of the current [Sprint](/developerportal/collaborate/stories/). Stories, tasks, and Sprint are created and managed in the Developer Portal. For more information on stories, see [Stories](/developerportal/collaborate/stories/). For more information on tasks, see the [Adding a Task to a Story](/developerportal/collaborate/stories/#adding-task) section in *Stories*. 
 
-In the **Stories** pane, you can view the stories and tasks of the current sprint, show or hide done stories, open their details, change the status of the stories and tasks, and open documents connected to stories. 
+In the **Stories** pane, you can view the stories and tasks of the current Sprint, show or hide done stories, open their details, change the status of the stories and tasks, and open documents connected to stories. 
 
 The **Stories** pane consists of the top bar with various buttons and a table:
 
@@ -83,10 +83,10 @@ You can change the status of a story or a task.
 
 To change the status of a *story*, click its status in the **Status** column. The status will change in the following succession:  *To do* > *Running* > *Done* > *To do*. 
 
-To change the status of a task, tick or clear the check box in the **Status** column:
+To change the status of a task, tick or clear the checkbox in the **Status** column:
 
-* Clear the check box to set the done task in *To do*
-* Tick the check box to set the task to *Done*
+* Clear the checkbox to set the done task in *To do*
+* Tick the checkbox to set the task to *Done*
 
 ## 3 Read More
 

@@ -50,7 +50,7 @@ After setting up all the prerequisites, follow these steps to write your first s
     main();
     ```
 
-3. Replace the `username` (line 7) and `apikey` (line 8) with the email address of your Mendix account. From your [Mendix Profile](/developerportal/community-tools/mendix-profile/#api-key), you can generate an [API Key](/apidocs-mxsdk/apidocs/authentication/).
+3. Replace the `username` (line 7) and `apikey` (line 8) with the email address of your Mendix account. From your [Mendix Profile](/developerportal/community-tools/mendix-profile/#profile-api-keys), you can generate an [API Key](/apidocs-mxsdk/apidocs/authentication/).
 
 ## 3 Code Explanation
 
@@ -137,7 +137,7 @@ For more information, see [Async Await](https://basarat.gitbook.io/typescript/fu
     ```
 
 {{% alert color="info" %}}
-The steps for app (project) creation (line 3) and committing to the Team Server (line 10) can take some time, so please be patient. Be aware that 'revision -1' refers to the latest revision, and that 'branch null' is equal to the main line.
+The steps for app creation (line 3) and committing to the Team Server (line 10) can take some time, so please be patient. Be aware that 'revision -1' refers to the latest revision, and that 'branch null' is equal to the main line.
 {{% /alert %}}
 
 ## 5 Opening the App in Studio Pro

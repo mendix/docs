@@ -23,13 +23,13 @@ Whether security is enabled for your app by default, depends on whether the secu
 
     {{< figure src="/attachments/studio/settings/settings-security/security-pop-up.png" alt="Secure Your App Pop-up Window"   width="300"  >}}
 
-    {{% alert color="info" %}}When you enable security, it is enabled for the whole app, and there are checks and changes applied to the model that are visible in Studio Pro. For more technical information on these checks and changes, see [Model Changes When Security Is Enabled in Studio](/refguide/studio-security-enabled/).{{% /alert %}}
+    {{% alert color="info" %}}When you enable security, it is enabled for the whole app, and there are checks and changes applied to the model that are visible in Studio Pro. For more technical information on these checks and changes, see [Model Changes When Security Is Enabled in Studio](/refguide9/studio-security-enabled/).{{% /alert %}}
 
-2. Security is set to the **Production** level in Studio Pro and settings are compatible with Studio. In this case, you can view and edit **Roles and Permissions** in Studio. (For more information on what security settings are compatible with Studio, see the [Studio Compatibility](/refguide/studio-security-enabled/#studio-compatible) section in *Model Changes When Security Is Enabled in Studio*.)
+2. Security is set to the **Production** level in Studio Pro and settings are compatible with Studio. In this case, you can view and edit **Roles and Permissions** in Studio. (For more information on what security settings are compatible with Studio, see the [Studio Compatibility](/refguide9/studio-security-enabled/#studio-compatible) section in *Model Changes When Security Is Enabled in Studio*.)
 
     {{< figure src="/attachments/studio/settings/settings-security/roles-and-permissions-screen.png" >}}
 
-3. Security is set to the **Prototype/demo** or **Production** level in Studio Pro and settings are not compatible with Studio. In this case, you can only view, but not edit **Roles and Permissions** in Studio. (For more information on security settings compatible with Studio, see the [Studio Compatibility](/refguide/studio-security-enabled/#studio-compatible) section in *Model Changes When Security Is Enabled in Studio*.)
+3. Security is set to the **Prototype/demo** or **Production** level in Studio Pro and settings are not compatible with Studio. In this case, you can only view, but not edit **Roles and Permissions** in Studio. (For more information on security settings compatible with Studio, see the [Studio Compatibility](/refguide9/studio-security-enabled/#studio-compatible) section in *Model Changes When Security Is Enabled in Studio*.)
 
     {{< figure src="/attachments/studio/settings/settings-security/security-read-only.png" >}}
 
@@ -144,7 +144,7 @@ There are two ways to change access for specific pages/microflows/workflows in y
 
 ## 4 Demo Users {#demo-users}
 
-Demo users are a demonstration of each user role existing in your app. You can use demo users to review how your app looks like for each user role. For more technical information, see [Demo Users](/refguide/demo-users/). 
+Demo users are a demonstration of each user role existing in your app. You can use demo users to review how your app looks like for each user role. For more technical information, see [Demo Users](/refguide9/demo-users/). 
 
 ### 4.1 Testing Your Roles {#testing-your-roles}
 
@@ -197,5 +197,5 @@ If the auto-upgrade detects that the service was customized in Studio Pro by a t
 
 ## 7 Read More
 
-* [Security](/refguide/security/)
-* [Model Changes When Security Is Enabled in Studio](/refguide/studio-security-enabled/)
+* [Security](/refguide9/security/)
+* [Model Changes When Security Is Enabled in Studio](/refguide9/studio-security-enabled/)

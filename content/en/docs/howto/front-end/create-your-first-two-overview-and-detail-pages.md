@@ -21,7 +21,7 @@ This how-to will teach you how to do the following:
 
 Before starting with this how-to, make sure you have completed the following prerequisite:
 
-* Set up a basic data structure by reading [How to Create a Basic Data Layer](/howto/data-models/create-a-basic-data-layer/):
+* Create a domain model by following [Configuring a Domain Model](/refguide/configuring-a-domain-model/):
 
     {{< figure src="/attachments/howto/front-end/create-your-first-two-overview-and-detail-pages/18582175.png" >}}
 
@@ -96,7 +96,7 @@ To create a new detail page manually, follow these steps:
 
 ## 5 Navigation and Security
 
-Now create a navigation item for your overview page to start using it. For details on how to set up the navigation structure, see [How to Set Up the Navigation Structure](/howto/general/setting-up-the-navigation-structure/).
+Now create a navigation item for your overview page to start using it. For details on Setting Up Navigation, see [Setting Up Navigation](/refguide/setting-up-the-navigation-structure/).
 
 If you switched on security for this application, you also need to configure page access on both the overview and detail pages. For more information, see [How to Create a Secure App](/howto/security/create-a-secure-app/).
 
@@ -104,6 +104,6 @@ If you switched on security for this application, you also need to configure pag
 
 * [UI Design](/howto/front-end/atlas-ui/)
 * [Use Layouts and Snippets](/howto/front-end/layouts-and-snippets/)
-* [Set Up the Navigation Structure](/howto/general/setting-up-the-navigation-structure/)
+* [Setting Up Navigation](/refguide/setting-up-the-navigation-structure/)
 * [Find the Root Cause of Runtime Errors](/howto/monitoring-troubleshooting/finding-the-root-cause-of-runtime-errors/)
 * [Page](/refguide/page/)

@@ -1,7 +1,7 @@
 ---
 title: "Menu"
 url: /refguide/menu/
-weight: 50
+weight: 3
 tags: ["studio pro", "menu", "menu item", "page resource"]
 aliases:
     - /refguide/menu-item.html
@@ -39,3 +39,4 @@ A menu item or a sub-item has the following general properties:
 
 * [Pages](/refguide/pages/)
 * [Menus and Navigation](/refguide/menu-widgets/)
+* [Triggering a Microflow from a Menu Item](/refguide/triggering-microflow-from-menu-item/)

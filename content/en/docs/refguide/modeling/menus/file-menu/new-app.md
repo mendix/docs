@@ -39,7 +39,7 @@ The name of your new app. This name is used as the name of the app directory and
 
 ### 2.2 Enable Online Services
 
-The Mendix Platform offers online services such as [version control](/refguide/version-control/), [cloud deployment](/developerportal/deploy/), and [collaboration](/refguide/collaborative-development/). When enabled, this will create an app in the Developer Portal and a corresponding version control repository.
+The Mendix Platform offers online services such as [version control](/refguide/version-control/) and [cloud deployment](/developerportal/deploy/). When enabled, this will create an app in the Developer Portal and a corresponding version control repository.
 
 If you choose *No*, you will create an app that is only stored on your local disk. At a later point you can still decide to upload this local app to a version control server and enjoy the benefits of version control.
 
@@ -49,7 +49,11 @@ The default language is the language of the user interface of your app. Choose t
 
 ### 2.4 App Directory
 
-Specify the directory in which the files for your app are stored. If you enable the online services for the new app, you will see that the suffix *-main* will be appended to the directory name automatically. This is to indicate that the directory contains the main branch line of your app. While working on your app, you can create new branches and download these to other directories. For more information on the branch line management, see [Branch Line Manager](/refguide/branch-line-manager-dialog/).
+Specify the directory in which the files for your app are stored.
+
+If you enable the online services for the new app, you will see that the suffix *-main* has been added to the directory name automatically. It is used to indicate that the directory contains the main branch line of your app. While working on your app, you can create new branches and download them to other directories. For more information on the branch line management, see [Branch Line Manager](/refguide/branch-line-manager-dialog/).
+
+The default directory in which new apps are stored can be changed in the [Preferences](/refguide/preferences-dialog/#241-default-app-directory) dialog box.
 
 ## 3 Read More
 

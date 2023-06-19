@@ -103,7 +103,7 @@ The input and output for this service are shown in the table below:
 
 | Input | Output |
 | --- | --- |
-| N/A | `Queue (List of Objects, maximum 1000)` |
+| `ListQueueRequest` | `ListQueueResponse` |
 
 #### 3.2.4 Delete Message
 

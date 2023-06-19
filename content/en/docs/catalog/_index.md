@@ -11,7 +11,6 @@ cascade:
 tags: ["data hub", "Catalog", "data hub landscape", "external entities", "external users"]
 aliases:
     - /data-hub/data-catalog/index.html
-    - /catalog/
     - /data-hub/
 ---
 

@@ -113,7 +113,7 @@ The input and output for this service are shown in the table below:
 
 | Input | Output |
 | --- | --- |
-| `Message (Object)`, `Queue (Object)` | Delete status (Boolean) |
+| `DeleteMessageRequest` | Delete status (Boolean) |
 
 #### 3.2.5 CreateQueue
 

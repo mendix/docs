@@ -9,6 +9,7 @@ aliases:
     - /datahub/general/share-data/index.html
     - /data-hub/data-hub-catalog/use-data-catalog
     - /data-hub/share-data/
+    - /catalog/#share-data
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 

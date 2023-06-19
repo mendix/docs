@@ -27,7 +27,7 @@ Apps can be located on the Team Server, on another Git server, or on the local d
 
 ### 2.1 Selecting an App {#select-app}
 
-You can select an app from the list of your apps. Once you have selected an app, you can either choose a branch line that you would like to open or click **Open in Studio Pro** and the branch that is indicated in the **Current Branch** column will open:
+You can select an app from the list of your apps. Once you have selected an app, you can either choose a [branch line](/refguide/version-control/#branches) that you would like to open or click **Open in Studio Pro** and the branch that is indicated in the **Current Branch** column will open:
 
 {{< figure src="/attachments/refguide/modeling/menus/file-menu/open-app-dialog/select-app.png" >}}
 

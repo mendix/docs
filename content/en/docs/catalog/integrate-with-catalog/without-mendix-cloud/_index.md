@@ -48,7 +48,7 @@ To manually register an OData contract metadata file to the Catalog, follow thes
 
 1. Create an `.mda` package to deploy. To do this, go to the **Environments** page in the **Developer Portal** and click **Create Package From Teamserver**. The `.mda` package contains a `dependencies.json` file that lists all published and consumed OData services.
 2. Use the [Transform](/catalog/register/register-data/#transform-api) operation to transform the contents of `dependencies.json` into payloads for other operations (see the [Transform operation specs](http://datahub-spec.s3-website.eu-central-1.amazonaws.com/registration_v4.html#/Endpoints/post_transform_dependenciesjson)).
-3. Use the [Registration API](/apidocs-mxsdk/apidocs/data-hub-apis/#registration) to register the data source.
+3. Use the [Registration API](/apidocs-mxsdk/apidocs/catalog-apis/#registration) to register the data source.
 
 For detailed steps, see the [Registering a Service without the Mendix Cloud](/catalog/register/register-data/#without-mendix-cloud) section of *Register OData Resources in the Catalog*.
 

@@ -127,7 +127,7 @@ To add general information to your initiative, follow these steps:
 
         {{% alert color="info" %}}If a field has the **ⓘ** icon next to it like the **Link Existing App** field, then you can check out the description of this field by hovering over the **ⓘ** icon.{{% /alert %}}
 
-    2. Select the app that you want to link to the initiative. If you woud like to see more information about a linked app, click the app name after it is linked.
+    2. Select the app that you want to link to the initiative. If you like to see more information about a linked app, click the app name after it is linked.
 
 4. Set the **Owner** for the initiative.
 5. Select the **Stage**, **Department**, **Country**, and **Use Case** for the initiative.
@@ -437,7 +437,7 @@ The table below shows the permissions of Portfolio Managers, Contributors and Vi
 
 1. Go to **Access Management**.
 2. On the upper-right corner, click **Add Users**.
-3. In the dialog box, enter the **Email Addresses** of the user who you want to invite. You can add multiple email addresses if you need to invite more than one user. The users can be people within your company or outside your company. For users outside your company, their names and profile pictures are not displayed.
+3. In the dialog box, enter the **Email Address** of the user who you want to invite. You can add multiple email addresses if you need to invite more than one user. The users can be people within your company or outside your company. For users outside your company, their names and profile pictures are not displayed.
 4. Select an **Access Role** for the user(s) – **Portfolio Manager**, **Contributor**, or **Viewer**. This determines the user's access level to all the initiatives in this portfolio.
 5. Click **Add to List**.
 7. Click **Send Invites**.

@@ -8,7 +8,7 @@ tags: ["Studio Pro", "stories", "stories pane"]
 
 ## 1 Introduction 
 
-For version control-enabled apps (apps with Team Server or other Git servers), the **Stories** pane displays the stories and tasks of the current Sprint. Stories, tasks, and Sprints are created and managed via [Stories](/developerportal/collaborate/stories/) or [Epics](/developerportal/collaborate/epics/) in the Developer Portal or connected to your [Jira board](/developerportal/collaborate/jira-connector).
+For version control-enabled apps (apps with Team Server or other Git servers), the **Stories** pane displays the stories and tasks of the current Sprint. Stories, tasks, and Sprints are created and managed via [Stories](/developerportal/collaborate/stories/) or [Epics](/developerportal/collaborate/epics/) in the Developer Portal or connected to your [Jira board](/developerportal/collaborate/jira-connector/).
 
 In the **Stories** pane, you can view the stories and tasks of the current Sprint, show or hide done stories, open their details, change the status of the stories and tasks, and open documents connected to stories. 
 

@@ -14,8 +14,6 @@ This activity can only be used in **Microflows**.
 
 The **Notify workflow** activity can be used to notify a [workflow](/refguide/workflows/) that is suspended on the [Wait for notification](/refguide/wait-for-notification/) workflow activity.
 
-{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/workflow-activities/notify-workflow/notify-workflow.jpg" width="200" >}}
-
 If the workflow is suspended on the specified wait for notification activity, then this activity will return `true` and the workflow execution will continue further. Otherwise, it will simply return `false`.
 
 {{% alert color="warning" %}}

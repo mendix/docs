@@ -33,7 +33,11 @@ The [Search API](https://datahub-spec.s3.eu-central-1.amazonaws.com/search_v4.ht
 
 You can paginate through search results with an offset, which allows you to limit the number of results and specify how many to skip. 
 
+<<<<<<< HEAD
 For step-by-step instructions and an example API call, see the [Search via the API](/data-hub/mendix-connect-catalog/search/#search-api) section of *How to Search in the Catalog*. 
+=======
+For step-by-step instructions and an example API call, see the [Search via the API](/catalog/manage/search/#search-api) section of *How to Search in the Data Hub Catalog*. 
+>>>>>>> development
 
 ## 3 Registration API {#registration}
 
@@ -45,10 +49,18 @@ The API includes the following:
 * `PUT` calls to *update* assets for existing UUIDs or create new applications and environments for new UUIDs. If existing endpoints are not present in a `PUT` call, these endpoints will be deleted.
 * `DELETE` calls to *delete* applications
 
+<<<<<<< HEAD
 For step-by-step instructions, see the [Registering a Service Through the Catalog Registration API](/data-hub/mendix-connect-catalog/register-data/#registration-api) section in *Register OData Resources in the Catalog*.
 
 ## 4 Transform API {#transform}
 
 Mendix users who deploy to *non-Mendix clouds* can make use of the [Transform API](https://datahub-spec.s3.eu-central-1.amazonaws.com/transform.html) to generate the request body for the Registration API. The Transform API reconfigures information from the *dependencies.json* file into the correct fields. For an example API, see the [Preparing Your Service Details Using the Transform API](/data-hub/mendix-connect-catalog/register-data/#transform-api) section of *How to Register OData Resources in the Catalog*.
+=======
+For step-by-step instructions, see the [Registering a Service Through the Data Hub Catalog Registration API](/catalog/register/register-data/#registration-api) section in *Register OData Resources in the Data Hub Catalog*.
+
+## 4 Transform API {#transform}
+
+Mendix users who deploy to *non-Mendix clouds* can make use of the [Transform API](https://datahub-spec.s3.eu-central-1.amazonaws.com/transform.html) to generate the request body for the Registration API. The Transform API reconfigures information from the *dependencies.json* file into the correct fields. For an example API, see the [Preparing Your Service Details Using the Transform API](/catalog/register/register-data/#transform-api) section of *How to Register OData Resources in the Data Hub Catalog*.
+>>>>>>> development
 
 V4 compatibility for the **Transform API** is accessible via the [Data Hub Registration API](https://datahub-spec.s3.eu-central-1.amazonaws.com/registration_v4.html) under the **Endpoints** section.

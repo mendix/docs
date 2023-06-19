@@ -7,9 +7,19 @@ weight: 30
 #This document is mapped to the landing page, update the link there if renaming or moving the doc file.
 ---
 
+<<<<<<< HEAD
 These release notes cover changes made to the [Mendix Catalog](/data-hub/mendix-connect-catalog/).
+=======
+These release notes cover changes made to the [Mendix Data Hub Catalog](/catalog/).
+>>>>>>> development
 
 ## 2023
+
+### June 15th, 2023
+
+#### Fixes
+
+* We fixed an issue where uploading an application icon did not show the correct dialog box.
 
 ### June 8th, 2023
 
@@ -38,7 +48,11 @@ These release notes cover changes made to the [Mendix Catalog](/data-hub/mendix-
 
 #### Improvements
 
+<<<<<<< HEAD
 * We made the authentication details on the [data source details](/data-hub/mendix-connect-catalog/search/#service-details) page more user friendly.
+=======
+* We made the authentication details on the [data source details](/catalog/manage/search/#service-details) page more user friendly.
+>>>>>>> development
 
 #### Fixes
 
@@ -73,7 +87,11 @@ These release notes cover changes made to the [Mendix Catalog](/data-hub/mendix-
 
 #### Improvements
 
+<<<<<<< HEAD
 * On the [Search](/data-hub/mendix-connect-catalog/search/) page, there are no default search filters anymore and filters are persistent per search session.
+=======
+* On the [Search](/catalog/manage/search/) page, there are no default search filters anymore and filters are persistent per search session.
+>>>>>>> development
 
 ### February 16th, 2023
 
@@ -96,7 +114,11 @@ These release notes cover changes made to the [Mendix Catalog](/data-hub/mendix-
 
 #### Improvements
 
+<<<<<<< HEAD
 * You can now select relevant Mendix Marketplace module for an [authentication](/data-hub/mendix-connect-catalog/register-data/#authentication) type. See the [Selecting an Authentication Method](/data-hub/mendix-connect-catalog/register-data/#authentication) section of *Register OData Resources in the Catalog* for more information on the authentication types.
+=======
+* You can now select relevant Mendix Marketplace module for an [authentication](/catalog/register/register-data/#authentication) type. See the [Selecting an Authentication Method](/catalog/register/register-data/#authentication) section of *Register OData Resources in the Data Hub Catalog* for more information on the authentication types.
+>>>>>>> development
 
 #### Fixes
 
@@ -106,7 +128,11 @@ These release notes cover changes made to the [Mendix Catalog](/data-hub/mendix-
 
 #### Improvements
 
+<<<<<<< HEAD
 * You can now add [authentication](/data-hub/mendix-connect-catalog/register-data/#authentication) details to a data source. Click **Edit** on the data source and then click the **Authentication** tab. See the [Selecting an Authentication Method](/data-hub/mendix-connect-catalog/register-data/#authentication) section of *Register OData Resources in the Catalog* for more information on the authentication types.
+=======
+* You can now add [authentication](/catalog/register/register-data/#authentication) details to a data source. Click **Edit** on the data source and then click the **Authentication** tab. See the [Selecting an Authentication Method](/catalog/register/register-data/#authentication) section of *Register OData Resources in the Data Hub Catalog* for more information on the authentication types.
+>>>>>>> development
 
 ## 2022
 
@@ -114,7 +140,11 @@ These release notes cover changes made to the [Mendix Catalog](/data-hub/mendix-
 
 #### Improvements
 
+<<<<<<< HEAD
 * You can now edit data source details directly from the [asset details](/data-hub/mendix-connect-catalog/search/#service-details) page. In our [November 24th](#nov-24) release, we made it possible to edit dataset details from the same page. To learn more about data sources and datasets, see the [Selected Asset Details](/data-hub/mendix-connect-catalog/search/#search-details) section of *Search in the Catalog*.
+=======
+* You can now edit data source details directly from the [asset details](/catalog/manage/search/#service-details) page. In our [November 24th](#nov-24) release, we made it possible to edit dataset details from the same page. To learn more about data sources and datasets, see the [Selected Asset Details](/catalog/manage/search/#search-details) section of *Search in the Data Hub Catalog*.
+>>>>>>> development
 
 #### Fixes
 
@@ -124,30 +154,51 @@ These release notes cover changes made to the [Mendix Catalog](/data-hub/mendix-
 
 #### Improvements
 
+<<<<<<< HEAD
 * When you receive and click on a notification from the Catalog about newly registered endpoints or newly assigned ownership, you will now be directed to the more user-friendly [Curate](/data-hub/mendix-connect-catalog/curate/) page that shows all relevant and filtered resources. 
+=======
+* When you receive and click on a notification from the Catalog about newly registered endpoints or newly assigned ownership, you will now be directed to the more user-friendly [Curate](/catalog/manage/curate/) page that shows all relevant and filtered resources. 
+>>>>>>> development
 
 ### November 24th, 2022 {#nov-24}
 
 #### Improvements
 
+<<<<<<< HEAD
 * You can now edit dataset details directly from the [asset details](/data-hub/mendix-connect-catalog/search/#service-details) page.
 
 #### Fixes
 
 * We fixed an issue with the display of services with anonymous access in the [asset details](/data-hub/mendix-connect-catalog/search/#service-details) page.
+=======
+* You can now edit dataset details directly from the [asset details](/catalog/manage/search/#service-details) page.
+
+#### Fixes
+
+* We fixed an issue with the display of services with anonymous access in the [asset details](/catalog/manage/search/#service-details) page.
+>>>>>>> development
 
 ### November 17th, 2022
 
 #### Improvements
 
+<<<<<<< HEAD
 * You can now request access to a data source directly from the [asset details](/data-hub/mendix-connect-catalog/search/#service-details) page. Click **Request access** in the **Authentication** section to open a draft email to the owner.
+=======
+* You can now request access to a data source directly from the [asset details](/catalog/manage/search/#service-details) page. Click **Request access** in the **Authentication** section to open a draft email to the owner.
+>>>>>>> development
 
 ### November 10th, 2022
 
 #### Improvements
 
+<<<<<<< HEAD
 * You can now view authentication details in the [data source details](/data-hub/mendix-connect-catalog/search/#service-details) page. 
 * The **Technical Owner** can now only be changed in the **Control Center**, not within the **Catalog**. See the [Custom Owners](/developerportal/control-center/data-hub-admin/#custom-owners) section of *Data Hub Administration*.
+=======
+* You can now view authentication details in the [data source details](/catalog/manage/search/#service-details) page. 
+* The **Technical Owner** can now only be changed in the **Control Center**, not within the **Data Hub Catalog**. See the [Custom Owners](/developerportal/control-center/data-hub-admin/#custom-owners) section of *Data Hub Administration*.
+>>>>>>> development
 
 #### Fixes
 
@@ -164,14 +215,22 @@ These release notes cover changes made to the [Mendix Catalog](/data-hub/mendix-
 
 #### Improvements
 
+<<<<<<< HEAD
 * When registering a service in the registration form, you can now designate which authentication type is needed for consumers to access it. For more information, see [Selecting an Authentication Method](/data-hub/mendix-connect-catalog/register-data/#authentication) in *Register OData Resources in the Catalog*.
+=======
+* When registering a service in the registration form, you can now designate which authentication type is needed for consumers to access it. For more information, see [Selecting an Authentication Method](/catalog/register/register-data/#authentication) in *Register OData Resources in the Data Hub Catalog*.
+>>>>>>> development
 * Sample data sources are now clearly indicated with a label.
 
 ### October 20th, 2022
 
 #### Improvements
 
+<<<<<<< HEAD
 * You will now get a notification about which services automatically registered in the Catalog. Services are automatically registered when deploying a published OData service. To learn more, see [Register OData Resources in the Catalog](/data-hub/mendix-connect-catalog/register-data/).
+=======
+* You will now get a notification about which services automatically registered in the Catalog. Services are automatically registered when deploying a published OData service. To learn more, see [Register OData Resources in the Data Hub Catalog](/catalog/register/register-data/).
+>>>>>>> development
 
 ### Fixes
 
@@ -302,7 +361,11 @@ These release notes cover changes made to the [Mendix Catalog](/data-hub/mendix-
 
 #### Improvements
 
+<<<<<<< HEAD
 * When a user other than the Technical or Business Owner deletes an application, environment, or data source, the Technical and/or Business Owner will receive a notification. For more information on data source ownership, see the [Changing Owners of an App](/data-hub/mendix-connect-catalog/curate/#changing-owners) section of *Curate Registered Assets*.
+=======
+* When a user other than the Technical or Business Owner deletes an application, environment, or data source, the Technical and/or Business Owner will receive a notification. For more information on data source ownership, see the [Changing Owners of an App](/catalog/manage/curate/#changing-owners) section of *Curate Registered Assets*.
+>>>>>>> development
 
 ### June 30th, 2022
 
@@ -451,7 +514,11 @@ These release notes cover changes made to the [Mendix Catalog](/data-hub/mendix-
 
 #### New Features
 
+<<<<<<< HEAD
 * We added an option to [delete a data source](/data-hub/mendix-connect-catalog/curate/#delete-data-source), available for users with [curation](/data-hub/mendix-connect-catalog/curate/) rights. To delete a data source, go to the [Curation Bar](/data-hub/mendix-connect-catalog/curate/#curation-bar) for the data source and click **Edit**, then click **Delete Data Source**.
+=======
+* We added an option to [delete a data source](/catalog/manage/curate/#delete-data-source), available for users with [curation](/catalog/manage/curate/) rights. To delete a data source, go to the [Curation Bar](/catalog/manage/curate/#curation-bar) for the data source and click **Edit**, then click **Delete Data Source**.
+>>>>>>> development
 
 #### Fixes
 
@@ -545,7 +612,11 @@ These release notes cover changes made to the [Mendix Catalog](/data-hub/mendix-
 #### New Features
 
 * We added a new **Settings** tab to the [Data Hub](/developerportal/control-center/data-hub-admin/#settings) page in Control Center with a default discoverability setting.
+<<<<<<< HEAD
 * We added a discoverability radio button to the data source [registration](/data-hub/mendix-connect-catalog/register-data/) form.
+=======
+* We added a discoverability radio button to the data source [registration](/catalog/register/register-data/) form.
+>>>>>>> development
 
 #### Fixes
 
@@ -561,22 +632,36 @@ These release notes cover changes made to the [Mendix Catalog](/data-hub/mendix-
 
 #### Fixes
 
+<<<<<<< HEAD
 * We fixed an issue where a Data Hub Curator could not access the fourth page or above of [Company Assets](/data-hub/mendix-connect-catalog/curate/#curatelist).
+=======
+* We fixed an issue where a Data Hub Curator could not access the fourth page or above of [Company Assets](/catalog/manage/curate/#curatelist).
+>>>>>>> development
 * We fixed an issue with the landscape view for datasets.
 
 ### October 28th, 2021
 
 #### Fixes
 
+<<<<<<< HEAD
 * We fixed an issue where the [Business Owner](/data-hub/mendix-connect-catalog/search/#busines-owner) name was not visible in the metadata of a data source.
 * We removed the temporary administration link from the home page. The owner management page is now available from the [Curate](/data-hub/mendix-connect-catalog/curate/) tab for Data Hub Curators and from the [Administration](/developerportal/control-center/data-hub-admin/#custom-owners) page in Control Center for Mendix Administrators.
+=======
+* We fixed an issue where the [Business Owner](/catalog/manage/search/#busines-owner) name was not visible in the metadata of a data source.
+* We removed the temporary administration link from the home page. The owner management page is now available from the [Curate](/catalog/manage/curate/) tab for Data Hub Curators and from the [Administration](/developerportal/control-center/data-hub-admin/#custom-owners) page in Control Center for Mendix Administrators.
+>>>>>>> development
 
 ### October 14th, 2021
 
 #### Improvements
 
+<<<<<<< HEAD
 * We made several design changes, mainly on the [Catalog](/data-hub/mendix-connect-catalog/) page. We moved items like **Environment Name** and **Version** to the newly arranged right sidebar menu.
 * We moved the `ContractType` field to the `ServiceVersion` level. For more information, see [How to Register OData Resources in the Catalog](/data-hub/mendix-connect-catalog/register-data/).
+=======
+* We made several design changes, mainly on the [Catalog](/catalog/) page. We moved items like **Environment Name** and **Version** to the newly arranged right sidebar menu.
+* We moved the `ContractType` field to the `ServiceVersion` level. For more information, see [How to Register OData Resources in the Data Hub Catalog](/catalog/register/register-data/).
+>>>>>>> development
 * We added an informative tooltip to the **Company** drop-down menu and a pop-up window for when the user is an external user for another company.
 * We added in-app guidance to notify that you can switch the company when you have accepted a participation invitation.
 
@@ -706,8 +791,13 @@ These release notes cover changes made to the [Mendix Catalog](/data-hub/mendix-
 
 #### Improvements
 
+<<<<<<< HEAD
 * In the search input boxes on the [Search result](/data-hub/mendix-connect-catalog/search/#search-results) listings and [Data Hub Home](/data-hub/mendix-connect-catalog/#data-hub-home) page, the magnifying glass now appears on the right side.
 * In the [Search result](/data-hub/mendix-connect-catalog/search/#search-results) listings, the filters have been restyled.
+=======
+* In the search input boxes on the [Search result](/catalog/manage/search/#search-results) listings and [Data Hub Home](/catalog/#catalog-home) page, the magnifying glass now appears on the right side.
+* In the [Search result](/catalog/manage/search/#search-results) listings, the filters have been restyled.
+>>>>>>> development
 * All cancel and discard buttons now have matching styles for improved usability.
 
 ### June 3rd, 2021
@@ -722,19 +812,32 @@ These release notes cover changes made to the [Mendix Catalog](/data-hub/mendix-
 
 #### New Features
 
+<<<<<<< HEAD
 * A new connector has been added to the **Data Hub Home** for [registering](/data-hub/mendix-connect-catalog/register-data/) Siemens Opcenter data sources.
+=======
+* A new connector has been added to the **Data Hub Home** for [registering](/catalog/register/register-data/) Siemens Opcenter data sources.
+>>>>>>> development
 
 #### Improvements
 
 * **Mindsphere** applications are now indicated with the display of the Mindsphere logo for all associated assets in the Catalog.
+<<<<<<< HEAD
 * In the [Search result](/data-hub/mendix-connect-catalog/search/#search-results) listings, the service version number is no longer next to the data source name, it is now displayed below it.
+=======
+* In the [Search result](/catalog/manage/search/#search-results) listings, the service version number is no longer next to the data source name, it is now displayed below it.
+>>>>>>> development
 
 ### May 12th, 2021
 
 #### Improvements
 
+<<<<<<< HEAD
 * Datasets in the [search results list](/data-hub/mendix-connect-catalog/search/#search-results) that are validated are now clearly indicated as such.
 * Custom owners can be added for an application when [registering data sources](/data-hub/mendix-connect-catalog/register-data/) using the business application connectors from the **Data Hub Home**.
+=======
+* Datasets in the [search results list](/catalog/manage/search/#search-results) that are validated are now clearly indicated as such.
+* Custom owners can be added for an application when [registering data sources](/catalog/register/register-data/) using the business application connectors from the **Data Hub Home**.
+>>>>>>> development
 * Further styling changes have been made to improve usability.
 
 ### May 6th, 2021
@@ -747,40 +850,67 @@ The [Data Hub Transform API](https://datahub-spec.s3.eu-central-1.amazonaws.com/
 
 #### Improvements
 
+<<<<<<< HEAD
 * Improvements have been made to the styling of the [Data Hub Home](/data-hub/mendix-connect-catalog/#data-hub-home).
+=======
+* Improvements have been made to the styling of the [Data Hub Home](/catalog/#catalog-home).
+>>>>>>> development
 
 ### April 22nd, 2021
 
 #### Improvements
 
+<<<<<<< HEAD
 * [Search result](/data-hub/mendix-connect-catalog/search/#search-results) listings in Catalog have been improved.  Data sources and datasets that are set as [Validated](/data-hub/mendix-connect-catalog/curate/#validated) will appear above assets that are not validated.
+=======
+* [Search result](/catalog/manage/search/#search-results) listings in Data Hub Catalog have been improved.  Data sources and datasets that are set as [Validated](/catalog/manage/curate/#validated) will appear above assets that are not validated.
+>>>>>>> development
 
 ### April 1st, 2021
 
 #### Improvements
 
+<<<<<<< HEAD
 * [Registration](/data-hub/mendix-connect-catalog/register-data/) of data sources using the business application connectors from the **Data Hub Home** is improved. For each connector, users can register data sources by selecting from a list of apps and environments already registered in the Catalog for the business application. When none are registered, the  "**Create New...**" option will be presented.
+=======
+* [Registration](/catalog/register/register-data/) of data sources using the business application connectors from the **Data Hub Home** is improved. For each connector, users can register data sources by selecting from a list of apps and environments already registered in the Catalog for the business application. When none are registered, the  "**Create New...**" option will be presented.
+>>>>>>> development
 
 ### March 18th, 2021
 
 #### Improvements
 
+<<<<<<< HEAD
 * A Mendix connector has been added to the business applications on the Data Hub Home to enable users to [manually register](/data-hub/mendix-connect-catalog/register-data/)  Mendix OData v3 contracts.
 * Data sources that are [validated](/data-hub/mendix-connect-catalog/curate/#discoverability)  are now clearly indicated in the search results list and for the selected asset details with a validated shield icon. The validation status of the data source is now displayed in the metadata panel.
 * The [discoverability](/data-hub/mendix-connect-catalog/curate/#discoverability) of a data source is displayed in the search results pane, the asset details screen and the the metadata panel.
+=======
+* A Mendix connector has been added to the business applications on the Data Hub Home to enable users to [manually register](/catalog/register/register-data/)  Mendix OData v3 contracts.
+* Data sources that are [validated](/catalog/manage/curate/#discoverability)  are now clearly indicated in the search results list and for the selected asset details with a validated shield icon. The validation status of the data source is now displayed in the metadata panel.
+* The [discoverability](/catalog/manage/curate/#discoverability) of a data source is displayed in the search results pane, the asset details screen and the the metadata panel.
+>>>>>>> development
 
 ### March 11th, 2021
 
 #### Improvements
 
+<<<<<<< HEAD
 * Improvements have been made on the [discoverability](/data-hub/mendix-connect-catalog/curate/#discoverability) of registered assets.
 * The functionality for [registering data sources from enterprise applications](/data-hub/mendix-connect-catalog/register-data/) is now responsive.
+=======
+* Improvements have been made on the [discoverability](/catalog/manage/curate/#discoverability) of registered assets.
+* The functionality for [registering data sources from enterprise applications](/catalog/register/register-data/) is now responsive.
+>>>>>>> development
 
 ### March 4th, 2021
 
 #### New Features
 
+<<<<<<< HEAD
 * Data sources from different enterprise business applications can now be registered more easily in Data Hub using the new [Registration functionality](/data-hub/mendix-connect-catalog/register-data/). This will enable users to use those datasets when developing apps without having to worry about connectivity to the application. This functionality replaces the previous manual registration form.
+=======
+* Data sources from different enterprise business applications can now be registered more easily in Data Hub using the new [Registration functionality](/catalog/register/register-data/). This will enable users to use those datasets when developing apps without having to worry about connectivity to the application. This functionality replaces the previous manual registration form.
+>>>>>>> development
 
 ### February 19th, 2021
 
@@ -792,13 +922,21 @@ The [Data Hub Transform API](https://datahub-spec.s3.eu-central-1.amazonaws.com/
 
 #### Improvements
 
+<<<<<<< HEAD
 * You can now copy the dataset URI from the [data source details](/data-hub/mendix-connect-catalog/search/#search-details) in the Catalog. This makes it easier to directly select datasets to use in other business applications from the context of the data source.
+=======
+* You can now copy the dataset URI from the [data source details](/catalog/manage/search/#search-details) in the Data Hub Catalog. This makes it easier to directly select datasets to use in other business applications from the context of the data source.
+>>>>>>> development
 
 ### January 21st, 2021
 
 #### New Features
 
+<<<<<<< HEAD
 * Custom icons can now be used for applications and data sources. Curators and owners can [upload their own icons](/data-hub/mendix-connect-catalog/curate/#application-icon) or select from the Data Hub icon library.
+=======
+* Custom icons can now be used for applications and data sources. Curators and owners can [upload their own icons](/catalog/manage/curate/#application-icon) or select from the Data Hub icon library.
+>>>>>>> development
 
 #### Improvements
 
@@ -808,7 +946,11 @@ The [Data Hub Transform API](https://datahub-spec.s3.eu-central-1.amazonaws.com/
 
 #### New Features
 
+<<<<<<< HEAD
 * You can download the OData service contract for a registered data source from the [asset details](/data-hub/mendix-connect-catalog/search/#download-contract) in the Catalog. The set of files that make up the contract will be downloaded as a ***.zip*** file.
+=======
+* You can download the OData service contract for a registered data source from the [asset details](/catalog/manage/search/#download-contract) in the Data Hub Catalog. The set of files that make up the contract will be downloaded as a ***.zip*** file.
+>>>>>>> development
 
 #### Improvements
 
@@ -819,7 +961,11 @@ The [Data Hub Transform API](https://datahub-spec.s3.eu-central-1.amazonaws.com/
 
 #### New Features
 
+<<<<<<< HEAD
 * The [asset details](/data-hub/mendix-connect-catalog/search/#search-details) in the Catalog now have added functionality to copy the URI of the data source or dataset to the clipboard. This functionality means that the Catalog can be used to discover registered assets—data sources and datasets—and access the data in other enterprise applications through the metadata URI.
+=======
+* The [asset details](/catalog/manage/search/#search-details) in the Data Hub Catalog now have added functionality to copy the URI of the data source or dataset to the clipboard. This functionality means that the Data Hub Catalog can be used to discover registered assets—data sources and datasets—and access the data in other enterprise applications through the metadata URI.
+>>>>>>> development
 
 #### Improvements
 
@@ -831,12 +977,20 @@ The [Data Hub Transform API](https://datahub-spec.s3.eu-central-1.amazonaws.com/
 
 #### New Features
 
+<<<<<<< HEAD
 * The [search details](/data-hub/mendix-connect-catalog/search/#search-details) in the Catalog now display the exposed **Datasets** (the entity set names of an entity) in place of the **entity** names. This means that for published services of Mendix apps, the name shown as the **Dataset** will be the Mendix **Exposed Entity set** name.
+=======
+* The [search details](/catalog/manage/search/#search-details) in the Data Hub Catalog now display the exposed **Datasets** (the entity set names of an entity) in place of the **entity** names. This means that for published services of Mendix apps, the name shown as the **Dataset** will be the Mendix **Exposed Entity set** name.
+>>>>>>> development
 * In the [Data Hub API](/apidocs-mxsdk/apidocs/data-hub-apis/), the Search API (`GET` data) returns items that specify the entity sets instead of entity types. The response structure has been expanded by adding the fields `EntitySetName` `EntityTypeName` and `Namespace` at the `Item` and `ItemAssociation` level.
 
 #### Improvements
 
+<<<<<<< HEAD
 * Contract validation has been improved when [manually registering Odata v4 contracts](/data-hub/mendix-connect-catalog/register-data/) or when using the `PUT` services API call for OData v4 services.
+=======
+* Contract validation has been improved when [manually registering Odata v4 contracts](/catalog/register/register-data/) or when using the `PUT` services API call for OData v4 services.
+>>>>>>> development
 
 ### December 17th, 2020
 
@@ -854,7 +1008,11 @@ The [Data Hub Transform API](https://datahub-spec.s3.eu-central-1.amazonaws.com/
 
 #### Improvements
 
+<<<<<<< HEAD
 * The Service [Metadata](/data-hub/mendix-connect-catalog/search/#metadata) panel on the right side of the the Catalog search details page has been reorganized to improve the grouping of the information.
+=======
+* The Service [Metadata](/catalog/manage/search/#metadata) panel on the right side of the the Data Hub Catalog search details page has been reorganized to improve the grouping of the information.
+>>>>>>> development
 
 #### Fixes
 
@@ -864,8 +1022,13 @@ The [Data Hub Transform API](https://datahub-spec.s3.eu-central-1.amazonaws.com/
 
 #### New Features
 
+<<<<<<< HEAD
 * We have added new functionality for adding [Business and Technical Owner contact details](/data-hub/mendix-connect-catalog/curate/#custom-owner) when curating the **Application Details** of a registered asset. Curators and owners can select owners from a drop-down list or create a new owner and add their contact details.
 * We have added a new tab to the Data Hub **Administration** page: Owner Management which provides an overview of the custom Business and Technical owners in the Catalog. From this release, the Data Hub Administrator and curators can now add, edit, and remove custom owners from this list.
+=======
+* We have added new functionality for adding [Business and Technical Owner contact details](/catalog/manage/search/#discoverability-metadata) when curating the **Application Details** of a registered asset. Curators and owners can select owners from a drop-down list or create a new owner and add their contact details.
+* We have added a new tab to the Data Hub **Administration** page: Owner Management which provides an overview of the custom Business and Technical owners in the Data Hub Catalog. From this release, the Data Hub Administrator and curators can now add, edit, and remove custom owners from this list.
+>>>>>>> development
 
 #### Improvements
 
@@ -874,22 +1037,36 @@ The [Data Hub Transform API](https://datahub-spec.s3.eu-central-1.amazonaws.com/
 
 #### Fixes
 
+<<<<<<< HEAD
 * The [Validated](/data-hub/mendix-connect-catalog/curate/#validated) label will now be correctly updated in the search results pane for the selected asset when it is changed by curators and the owners of the asset.
 * We fixed an issue on the [Curation List](/data-hub/mendix-connect-catalog/curate/#curatelist) where clicking on the **Added** column title (to change the sort order) resulted in an error.
+=======
+* The [Validated](/catalog/manage/curate/#validated) label will now be correctly updated in the search results pane for the selected asset when it is changed by curators and the owners of the asset.
+* We fixed an issue on the [Curation List](/catalog/manage/curate/#curatelist) where clicking on the **Added** column title (to change the sort order) resulted in an error.
+>>>>>>> development
 
 ### November 5th, 2020
 
 #### Improvements
 
+<<<<<<< HEAD
 * In the Data Hub **Catalog** search pane, we now show the number of  [filters](/data-hub/mendix-connect-catalog/search/#filter) that are active for the current search at the filter icon.
+=======
+* In the Data Hub **Catalog** search pane, we now show the number of  [filters](/catalog/manage/search/#filter) that are active for the current search at the filter icon.
+>>>>>>> development
 
 ### October 29th, 2020
 
 #### Improvements
 
 * In [Landscape](/data-hub/data-hub-landscape/) nodes are now static and cannot be dragged around the display. To see other parts of of the selected assets network, you can pan and zoom using the mouse.
+<<<<<<< HEAD
 * In Data Hub **Catalog** by default, the [search filter](/data-hub/mendix-connect-catalog/search/#filter) is set to show results in the **Production** environment only. To include hits in **Non-production** or **Sandbox** environments you have to check these boxes in the **Add Filters** dialog box.
 * The [entity details](/data-hub/mendix-connect-catalog/search/#entity-details) screen now displays the number of connections to the individual entity. The service details continue to show the total number of connections to the service.
+=======
+* In Data Hub **Catalog** by default, the [search filter](/catalog/manage/search/#filter) is set to show results in the **Production** environment only. To include hits in **Non-production** or **Sandbox** environments you have to check these boxes in the **Add Filters** dialog box.
+* The [entity details](/catalog/manage/search/#entity-details) screen now displays the number of connections to the individual entity. The service details continue to show the total number of connections to the service.
+>>>>>>> development
 
 ### October 8th, 2020
 

@@ -17,7 +17,7 @@ For information on the current status of deployment to Mendix for Private Cloud 
 
 #### Mendix Operator v2.12.0 {#2.12.0}
 
-* We've added an option to use IAM-based authentication when connecting to an RDS database and S3 file storage - removing the need for static passwords. To use this feature, you need to upgrade your apps to Mendix 9.22 (or later).
+* We've added an option to use IAM-based authentication when connecting to an RDS database and S3 file storage - removing the need for static passwords. To use this feature, you need to upgrade your apps to Mendix 9.22 (or later). For a walkthrough guide how to enable and use this feature, see the [walkthrough](/developerportal/deploy/private-cloud-storage-plans/#walkthrough-aws-irsa).
 * We've removed the need to specify a namespace name when applying a custom TLS trust config in [non-interactive mode](/developerportal/deploy/private-cloud-cli-non-interactive/).
 * We fixed an issue where Google Cloud and Ceph bucket configuration would not be saved or loaded in [non-interactive mode](/developerportal/deploy/private-cloud-cli-non-interactive/).
 * We have updated the list of supported platforms to include Kubernetes 1.27.

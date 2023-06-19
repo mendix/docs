@@ -1539,3 +1539,273 @@ In the Ceph plan configuration, enter the following details:
 * **Endpoint** - The Ceph bucket's endpoint address, for example `https://ceph-instance.local:9000/<bucket-name>`.
 * **Access Key** and **Secret Key** - Credentials to access the bucket.
 * **Type** - Specifies if the container can be shared between environments (create an on-demand storage plan); or that the container can only be used by one environment (create a dedicated storage plan). To increase security and prevent environments from being able to access each other's data, select **Dedicated**.
+
+## 4 Walkthroughs
+
+This section provides instructions how to set up storage for the most typical use cases.
+
+### 4.1 AWS IAM-based storage{#walkthrough-aws-irsa}
+
+AWS recommends using [IRSA authentication](https://docs.aws.amazon.com/eks/latest/userguide/iam-roles-for-service-accounts.html) instead of static credentials.
+This guide explains how to set up and use a database and blob file storage plan using AWS best practices.
+
+{{% alert color="warning" %}}
+This feature requires an Mendix app based on Mendix 9.22 (or later) and Mendix Operator version 2.12 (or later).
+{{% /alert %}}
+
+Before you begin, you need to create an EKS cluster and install Mendix for Private Cloud in that cluster.
+
+Navigate to the EKS cluster details and write down the **OpenID Connect provider URL**:
+
+{{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/private-cloud-storage-plans/IRSA-OIDC.png" >}}
+
+IRSA authentication uses the same AWS IAM Role and Kubernetes Service Account to authenticate with AWS services.
+It's not possible to assign more than one IAM Role or Kubernetes Service Account to a Mendix app environment.
+To avoid conflicts, IAM roles and service accounts will be managed by the S3 blob file storage provisioner.
+The Postgres provisioner only creates a database and Postgres user (Postgres role), but doesn't manage IAM roles.
+To use IAM authentication, the database and blob file storage plans need to be managed together - the IAM policy is shared, and grants access to the database and S3 bucket.
+
+{{% alert color="warning" %}}
+To prevent authentication or connectivity issues, create all AWS resources in the same account and region.
+{{% /alert %}}
+
+For more details, see the [Postgres (IAM authentication](#database-postgres-iam) and [S3 IRSA mode](#s3-irsa-mode) plan details.
+
+#### 4.1.1 RDS database
+
+Create a Postgres RDS instance and enable **Password and IAM database authentication**; or enable **Password and IAM database authentication** for an existing instance.
+See the [RDS IAM documentation](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/UsingWithRDS.IAMDBAuth.Enabling.html) for more details on enabling IAM authentication.
+
+{{% alert color="info" %}}
+The VPC and firewall must be configured to allow connections to the database from the Kubernetes cluster.
+When creating the RDS instance, make sure it's either publicly accessible, or (preferrably) uses the same VPC as the Kubernetes cluster.
+After an RDS instance has been created, it's not possible to modify its VPC.
+{{% /alert %}}
+
+Navigate to the RDS instance details, and write down the following information:
+
+1. The database **Endpoint** from the **Connectivity & security** tab:
+
+   {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/private-cloud-storage-plans/RDS-Endpoint.png" >}}
+
+2. The **Master username** and **Resource ID** from the **Configuration** tab:
+
+   {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/private-cloud-storage-plans/RDS-Connection.png" >}}
+
+Download the [RDS TLS certificates](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/UsingWithRDS.SSL.html#UsingWithRDS.SSL.CertificatesAllRegions)
+and save them into a Kubernetes secret (replace `{namespace}` with the namespace where the Mendix Operator is installed):
+
+```shell
+curl -L -o custom.crt https://truststore.pki.rds.amazonaws.com/global/global-bundle.pem
+kubectl -n {namespace} create secret generic mendix-custom-tls --from-file=custom.crt=custom.crt
+```
+
+#### 4.1.2 S3 bucket
+
+Create an S3 bucket using default parameters.
+Write down the **Bucket name** and **Region**.
+
+{{% alert color="info" %}}
+While it is possible to enable SSE-KMS encryption, it requires additional configuration steps, which are not covered by this guide.
+For a Mendix app environment to use SSE-KMS keys, the *environment template policy* (explained in the next step) needs `kms:GenerateDataKey` and `kms:Decrypt` permissions to access the KMS key.
+{{% /alert %}}
+
+#### 4.1.3 Environment template policy
+
+Create a new IAM policy with the following JSON:
+
+```json
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Sid": "AllowListingOfUserFolder",
+            "Action": [
+                "s3:ListBucket"
+            ],
+            "Effect": "Allow",
+            "Resource": [
+                "arn:aws:s3:::<bucket_name>"
+            ],
+            "Condition": {
+                "StringLike": {
+                    "s3:prefix": [
+                        "${aws:PrincipalTag/privatecloud.mendix.com/s3-prefix}/*",
+                        "${aws:PrincipalTag/privatecloud.mendix.com/s3-prefix}"
+                    ]
+                }
+            }
+        },
+        {
+            "Sid": "AllowAllS3ActionsInUserFolder",
+            "Effect": "Allow",
+            "Resource": [
+                "arn:aws:s3:::<bucket_name>/${aws:PrincipalTag/privatecloud.mendix.com/s3-prefix}/*"
+            ],
+            "Action": [
+                "s3:AbortMultipartUpload",
+                "s3:DeleteObject",
+                "s3:GetObject",
+                "s3:ListMultipartUploadParts",
+                "s3:PutObject"
+            ]
+        },
+        {
+            "Sid": "AllowConnectionToDatabase",
+            "Effect": "Allow",
+            "Action": "rds-db:connect",
+            "Resource": "arn:aws:rds-db:<aws_region>:<account_id>:dbuser:<database_id>/${aws:PrincipalTag/privatecloud.mendix.com/database-user}"
+        }
+    ]
+}
+```
+
+In this template, replace:
+
+* `<bucket_name>` with the S3 **Bucket name**
+* `<aws_region>`, with the RDS Instance's AWS region
+* `<account_id>`, with the AWS account ID
+* `<database_id>`, with the **Resource ID** from the RDS database **Configuration** tab (it should look like `db-ABCDEFGHIJKL01234`, and is **not** the database name or ARN)
+
+This *environment template policy* will be attached to every new environment's role.
+Write down its ARN.
+
+For every new environment, the Mendix Operator will automatically create a new role and fill in the `privatecloud.mendix.com/database-user` and `privatecloud.mendix.com/s3-prefix` tags.
+
+{{% alert color="info" %}}
+Do not modify `${aws:PrincipalTag/...}` placeholders - they're used to limit an environment to only have limited access to:
+
+* the database (Postgres user/role) specified in the environment IAM role's `privatecloud.mendix.com/database-user` tag
+* the S3 prefix specified in the environment IAM role's `privatecloud.mendix.com/s3-prefix` tag
+{{% /alert %}}
+
+#### 4.1.4 Storage Provisioner admin role
+
+Create a new IAM role:
+
+Select the following options on Step 1:
+
+* *Web identity* as the *Trusted entity type*
+* The EKS cluster's **OpenID Connect provider URL** (written down eariler) from the the *Identity provider* dropdown
+* The default `sts.amazonaws.com` *Audience*
+
+Complete the wizard with default options, without adding any permissions on Step 2.
+
+Write down this *Storage Provisioner admin role* ARN.
+
+Next, allow a Kubernetes ServiceAccount to assume this role.
+This would be the *storage provisioner* admin-like service account that manages permissions for new environments, and revokes permissions of an environment when it's deleted.
+To avoid collisions with existing ServiceAccounts, we recommend using `mendix-storage-provisioner-iam` as the Kubernetes ServiceAccount name.
+
+1. Open the role for editing and add an entry for the ServiceAccount to the list of conditions:
+
+    {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-deploy/awsserviceaccountlinktorole.png" >}}
+
+2. For the second condition, copy and paste the `sts.amazonaws.com` line; replace `:aud` with `:sub` and set it to `system:serviceaccount:<Kubernetes namespace>:<Kubernetes serviceaccount name>`.
+
+    See [Amazon EKS Pod Identity Webhook – EKS Walkthrough](https://github.com/aws/amazon-eks-pod-identity-webhook#eks-walkthrough) for more details.
+
+    After this, the specified serviceaccount in the specified namespace will be able to assume this role.
+
+Attach the following IAM policy to this Storage Provisioner admin IAM role:
+
+```json
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Sid": "LimitedAttachmentPermissions",
+            "Effect": "Allow",
+            "Action": [
+                "iam:AttachRolePolicy",
+                "iam:DetachRolePolicy"
+            ],
+            "Resource": "*",
+            "Condition": {
+                "ArnEquals": {
+                    "iam:PolicyArn": [
+                        "<policy_arn>"
+                    ]
+                }
+            }
+        },
+        {
+            "Sid": "ManageRoles",
+            "Effect": "Allow",
+            "Action": [
+                "iam:CreateRole",
+                "iam:TagRole",
+                "iam:DeleteRole"
+            ],
+            "Resource": [
+                "arn:aws:iam::<account_id>:role/mendix-*"
+            ]
+        },
+        {
+            "Sid": "AllowFileCleanup",
+            "Effect": "Allow",
+            "Resource": [
+                "arn:aws:s3:::<bucket_name>"
+            ],
+            "Action": [
+                "s3:AbortMultipartUpload",
+                "s3:DeleteObject",
+                "s3:GetObject",
+                "s3:ListMultipartUploadParts",
+                "s3:PutObject",
+                "s3:ListBucket"
+            ]
+        },
+        {
+            "Effect": "AllowCreateRDSTenants",
+            "Action": [
+                "rds-db:connect"
+            ],
+            "Resource": [
+                "arn:aws:rds-db:<aws_region>:<account_id>:dbuser:<database_id>/<database_user>"
+            ]
+        }
+    ]
+}
+```
+
+
+In this template, replace:
+
+* `<policy_arn>` with the *environment template policy* ARN
+* `<bucket_name>` with the S3 **Bucket name**
+* `<aws_region>`, with the RDS Instance's AWS region
+* `<account_id>`, with the AWS account ID
+* `<database_id>`, with the **Resource ID** from the RDS database **Configuration** tab (it should look like `db-ABCDEFGHIJKL01234`, and is **not** the database name or ARN)
+
+This role allows the Mendix Operator to create and delete IAM roles for Mendix app environments.
+
+In addition, the optional `AllowFileCleanup` permissions will be used to clean up a deleted environment's files (if **Prevent Data Deletion** is disabled).
+Only files from a deleted environment will be cleaned up, files from other environments will remain unaffected.
+
+#### 4.1.5 Creating the storage plans
+
+Run the `mxpc-cli` configuration tool and select to configure the **Database Plan**, **Storage Plan** and **Custom TLS**.
+
+In the **Database** configuration tab, select `postgres` as the database type, and provide the following details:
+
+* **Host** should be set to the **Endpoint** of the RDS database instance
+* **Port** should be set to `5432` (or custom port if the RDS instance is using a non-standard port)
+* **Database Name** should be set to `postgres` (or a custom login database if the default database is not available)
+* **Username** should be set to the **Master username** of the RDS database instance
+* **Authentication** should be set to `aws-iam`
+* **IAM Role ARN** should be set to the *Storage Provisioner admin role* ARN
+* **K8s Service Account** should use the same Kubernetes Service Account that was specified in the *Storage Provisioner admin role* trust policy. If you used the recommended Service Account name, paste `mendix-storage-provisioner-iam` in this field.
+
+In the **Storage Plan** configuration tab, select `amazon-s3` as the storage type, and provide the following details:
+
+* **IRSA Authentication** should be set to *yes*
+* **Bucket Region** and **Bucket Name** should be set to the bucket's region and name
+* **Attach policy ARN** should be set to the *environment template policy* ARN
+* **EKS OIDC URL** should be set to the **OpenID Connect provider URL** value
+* **IAM Role ARN** should be set to the *Storage Provisioner admin role* ARN
+* **K8s Service Account** should use the same Kubernetes Service Account that was specified in the *Storage Provisioner admin role* trust policy. If you used the recommended Service Account name, paste `mendix-storage-provisioner-iam` in this field.
+
+In the **Custom TLS** tab, paste `mendix-custom-tls` into the `CA Certificates Secret Name` field.
+
+Apply the changes - you can now use the new Postgres and S3 plans to create new environments with IRSA authentication.

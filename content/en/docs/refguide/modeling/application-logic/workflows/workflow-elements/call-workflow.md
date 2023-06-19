@@ -5,6 +5,10 @@ weight: 70
 tags: ["workflow", "workflows", "call workflow", "Studio Pro"]
 ---
 
+{{% alert color="warning" %}}
+This page describes the **Call workflow** activity you can use in your [workflow](/refguide/workflow-elements/). Looking for information on the **Call workflow** activity for [microflows](/refguide/workflow-activities/) instead? See [Call workflow](/refguide/workflow-call/).
+{{% /alert %}}
+
 ## 1 Introduction
 
 To improve the maintainability of a workflow, you can split a larger process into smaller pieces and avoid having repeated tasks. You can use the **Call workflow** activity for this purpose and use another workflow as a *sub-workflow* for the current one. 

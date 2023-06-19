@@ -1,8 +1,10 @@
 ---
 title: "Curate Registered Assets"
-url: /data-hub/data-hub-catalog/curate/
+url: /catalog/manage/curate/
 description: "Describes how to curate and enhance data assets in Data Hub Catalog, and make them easier to find and understand."
 tags: ["data hub", "data hub catalog", "curate", "description", "services", "tags"]
+aliases:
+    - /data-hub/data-hub-catalog/curate/
 ---
 
 ## 1 Introduction
@@ -12,7 +14,7 @@ Owners of data sources, Data Hub Curators, and Mendix Admins can curate register
 Users who can curate assets in the Data Hub Catalog are as follows:
 
 * Owners of a registered service – can curate their own services which includes those that have been set to non-**Discoverable**
-* [Data Hub Curators](/data-hub/data-hub-catalog/manage-data-sources/user-roles/#curator) and [Mendix Admins](/data-hub/data-hub-catalog/manage-data-sources/user-roles/#admin) – can curate and find all registered assets in the Catalog
+* [Data Hub Curators](/catalog/manage/user-roles/#curator) and [Mendix Admins](/catalog/manage/user-roles/#admin) – can curate and find all registered assets in the Catalog
 
 Owners and Curators can also get an overview of the registered assets they own and curate from the [Curate](#curatelist) tab in Data Hub.
 
@@ -36,7 +38,7 @@ Click **View** to display the asset details. You can then perform curate actions
 
 ## 3 Curation Bar {#curation-bar}
 
-Curation is performed from the [asset details screen](/data-hub/data-hub-catalog/search/#search-details). If you are an owner of an asset or are a curator, you will see the **Curation Bar** for the selected item.
+Curation is performed from the [asset details screen](/catalog/manage/search/#search-details). If you are an owner of an asset or are a curator, you will see the **Curation Bar** for the selected item.
 
 {{% alert color="info" %}}
 Owners of registered assets and can only curate their services.
@@ -197,7 +199,7 @@ Add tags to categorize a registered service and provide additional means for fin
 
 Publishers of a data source can let consuming developers know what they will need to identify themselves when consuming a data source. Add this later if not configured during the registration step.
 
-For a description of supported authentication methods, see the [Selecting an Authentication Method](/data-hub/data-hub-catalog/register-data/#authentication) section of *Register OData Resources in the Data Hub Catalog*.
+For a description of supported authentication methods, see the [Selecting an Authentication Method](/catalog/register/register-data/#authentication) section of *Register OData Resources in the Data Hub Catalog*.
 
 ## 6 Discoverable and Validated {#discoverability}
 

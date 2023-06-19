@@ -54,7 +54,7 @@ To add entities to your project model, see [Adding an External Entity to a Proje
 
 ## 3 Searching the Data Hub Catalog {#search}
 
-As you enter a search term, all the items in the Data Hub Catalog satisfying the search string are listed in the search results. This will include words in the service, entity and attribute descriptions which are not displayed in the the Data Hub pane. Further information see the [Data Hub Catalog asset details](/data-hub/data-hub-catalog/search/#search-details).
+As you enter a search term, all the items in the Data Hub Catalog satisfying the search string are listed in the search results. This will include words in the service, entity and attribute descriptions which are not displayed in the the Data Hub pane. Further information see the [Data Hub Catalog asset details](/catalog/manage/search/#search-details).
 
 ### 3.1 Wildcard Search
 
@@ -107,7 +107,7 @@ The search results and Project pane will show the following at a service level:
 
     {{% alert color="info" %}}The version number that is shown for the OData service is the latest one that is available in the Data Hub Catalog at the service endpoint—in the example above version 1.0.11 of **Theatre_service** is currently consumed in the project, but version **1.0.12** is now available in the Data Hub Catalog. The search results display the entities available in the new service (also showing one that is locally consumed) however they are greyed-out and cannot be selected until the local service is **Updated** to this one.{{% /alert %}}
 
-* **Information icon** to view further details for the service and a link to go directly to the [Service Details](/data-hub/data-hub-catalog/search/#search-details) screen in the Data Hub Catalog:
+* **Information icon** to view further details for the service and a link to go directly to the [Service Details](/catalog/manage/search/#search-details) screen in the Data Hub Catalog:
 
     {{< figure src="/attachments/refguide8/modeling/menus/view-menu/data-hub-pane/data-hub-pane-info.png" alt="Data Hub Pane Information"   width="250"  >}}
 

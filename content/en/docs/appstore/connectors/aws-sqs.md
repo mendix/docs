@@ -97,7 +97,7 @@ The input and output for this service are shown in the table below:
 
 #### 3.2.3 List Queue {#list-queues}
 
-The `ListQueue` Amazon SQS activity allows you to get a list of queues created in a particular region for the user. It does not require any entry parameters.
+The `ListQueue` Amazon SQS activity allows you to get a list of queues created in a particular region for the user. It requires a ListQueueRequest parameter as an input.
 
 The input and output for this service are shown in the table below:
 

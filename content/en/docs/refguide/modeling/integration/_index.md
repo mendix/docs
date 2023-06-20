@@ -15,19 +15,18 @@ Integration with other applications (other Mendix apps, or applications built wi
 
 Data integration capabilities in Studio pro is part of [Mendix Connect](#mendix-connect).
 
-## 2 Integration Capabilities and Mendix Connect {#mendix-connect}
+## 2 Integration and Mendix Connect {#integration-mx-connect}
 
 [Mendix Connect](https://www.mendix.com/data-hub/) is a collection of functionalities available in the Mendix Platform that allow people in your organization to discover, understand, connect, and govern data securely. The following published and consumed integration services in Studio Pro allow you connect and share data between and among apps using APIs:
 
-* [OData services](/refguide/integration/odata-services/)
-Manage and share these services in your organization's Catalog
+* [OData services](/refguide/integration/odata-services/) (view and manage in your company's [Catalog](/catalog/))
 * [REST services](/refguide/integration/rest-services/)
 * [Web services](/refguide/integration/web-services/)
 * [Business event services](/refguide/business-event-services/)
 
 In addition to integration capabilities in Studio Pro, Mendix Connect functionalities include:
 
-* The [Catalog](#catalog), used to register, manage, and govern data in your organization
-* Platform-supported [Connectors and modules](#connectors-modules) available in the [Mendix Marketplace](/appstore/)
+* The [Catalog](/catalog/#catalog-mx-connect), used to register, manage, and govern data in your organization
+* Platform-supported [connectors and modules](/appstore/#marketplace-mx-connect) available in the [Mendix Marketplace](/appstore/)
 
 ## 3 Documents in This Category

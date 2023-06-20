@@ -23,7 +23,7 @@ It also contains guidelines on [creating Marketplace content](/appstore/creating
 
 For details on the Studio Pro version required for use and when the component was published, please see the specific component page in the Mendix Marketplace. For more information, see the [Marketplace release notes](/releasenotes/marketplace/).
 
-## 2 Marketplace Guide and Mendix Connect
+## 2 Marketplace and Mendix Connect {#marketplace-mx-connect}
 
 [Mendix Connect](https://www.mendix.com/data-hub/) is a collection of functionalities available in the Mendix Platform that allow people in your organization to discover, understand, connect, and govern data securely. The following connectors and modules are part of the Mendix Connect ecosystem:
 
@@ -40,7 +40,7 @@ And our strategic partner connectors:
 
 In addition to platform-supported connectors and modules, Mendix Connect functionalities include:
 
-* [Integration capabilities](#integration-capabilities) in Studio Pro [10.0](/releasenotes/studio-pro/10.0)
-* The [Catalog](#catalog), used to register, manage, and govern data in your organization
+* [Integration capabilities](/refguide/integration/#integration-mx-connect) in Studio Pro [10.0](/releasenotes/studio-pro/10.0)
+* The [Catalog](/catalog/#catalog-mx-connect), used to register, manage, and govern data in your organization
 
 ## 3 Guide Categories

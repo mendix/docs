@@ -72,7 +72,7 @@ These are functions of the environment in which the Mendix Client is running. In
 
 This is the static data which is needed by the Mendix Client. For a browser-based client, this data is held online, with the Runtime Server. For native mobile apps, this is held locally on the device.
 
-These include the initial environment (for example, the browser shell page) needed to start the Mendix Client, Cascading Style Sheets (css files) which define the app’s theme, and JavaScript files which define client-side logic.
+These include the initial environment (for example, the browser shell page) needed to start the Mendix Client, Cascading Style Sheets (CSS files) which define the app’s theme, and JavaScript files which define client-side logic.
 
 ### 2.9 Data API
 
@@ -98,7 +98,17 @@ For more information about the communication between the Mendix Client and the R
 
 This communicates the current state of the app (held in the object cache) to the Runtime Server. As the state is held in the Mendix Client, the Runtime Server can be stateless. This ensures that it is easier to scale your app horizontally by adding more instances as any instance can handle any request.
 
-To avoid performance issues, the Mendix Client does not send the entire state to the runtime. State handling decides which parts of the state should be sent by analyzing the model during the deployment of the applications.
+To avoid performance issues, the Mendix Client does not send the entire state to the runtime. State handling decides which parts of the state should be sent by analyzing the model during the deployment of the applications. This analysis consists of two parts. 
+
+Firstly, during deployment, all microflows “reachable” from the client are analyzed. For example:
+
+* Event handlers of entities
+* Microflows called from a nanoflow
+* Microflows called from the page
+
+This analysis is done based on the microflow parameters and their usages throughout the microflow. Any time an association is used in the microflow, the association is marked, and will also be sent in the request if needed. In some cases, such as Java actions, the analysis is not done as it would be too performance heavy. In that case, all objects associated with the microflow parameters will be sent along.
+
+Secondly, for other (non-microflow) actions such as committing or deleting objects, a simpler analysis is performed on the client side to determine which associations should be included in the request.
 
 For more detailed information about state, see this blog: [https://www.mendix.com/blog/the-art-of-state-part-1-introduction-to-the-client-state/](https://www.mendix.com/blog/the-art-of-state-part-1-introduction-to-the-client-state/). This also includes a worked example where you can see, and duplicate for yourself, how state is passed to the Runtime Server.
 
@@ -202,7 +212,7 @@ When the app is deployed, the static resources are placed in a structure referre
 
 * index.html – the initial HTML page which is loaded when the end-user starts the Mendix Client — this contains the client configuration and other static non-Mendix content (for example if Google analytics is added to the app)
 * mxui.js – the main Mendix Client code
-* app styling/Atlas – the app-specific css styling and static visual elements which define how a page is displayed
+* app styling/Atlas – the app-specific CSS styling and static visual elements which define how a page is displayed
 * widgets – both native and web core widgets which are used by this app
 * page definitions – xml page definitions which tell the Mendix Client what the pages for this app look like
 

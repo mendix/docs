@@ -28,7 +28,16 @@ If you deploy your Mendix apps in an alternative environment, like on-prem or pr
 {{% alert color="info" %}}
 The Catalog and [external entities](/refguide/external-entities/) are supported in Studio Pro [8.14](/releasenotes/studio-pro/8.14/) and above.{{% /alert %}}
 
-## 2 Catalog Home {#catalog-home}
+## 2 Catalog and Mendix Connect
+
+[Mendix Connect](https://www.mendix.com/data-hub/) is a collection of functionalities available in the Mendix Platform that allow people in your organization to discover, understand, connect, and govern data securely. The [Catalog](/mendix-connect/catalog/) is a part of the Mendix Connect ecosystem as a user-friendly way to view, share, and use data within your organization. 
+
+In addition to the Catalog, Mendix Connect functionalities include:
+
+* [Integration capabilities](#integration-capabilities) in Studio Pro [10.0](/releasenotes/studio-pro/10.0)
+* Platform-supported [Connectors and modules](#connectors-modules) available in the [Mendix Marketplace](/appstore/)
+
+## 3 Catalog Home {#catalog-home}
 
 From the Catalog [Home](https://catalog.mendix.com) screen, you can navigate to the following tabs:
 
@@ -49,11 +58,11 @@ Data Hub is also integrated in Mendix Studio Pro to find and connect to shared d
 {{% alert color="info" %}}
 The Data Hub integration is available in Studio Pro version 8.14 and above. To use the latest functionality of Data Hub download the latest version of Studio Pro. {{% /alert %}}
 
-## 3 Using Mendix Data Hub
+## 4 Using Mendix Data Hub
 
 The functionality of the Data Hub reflects the process of sharing data in an organization through APIs from different systems in an enterprise. The sections below describe the processes involved.
 
-### 3.1 Search – Finding Connectable Data Sources
+### 4.1 Search – Finding Connectable Data Sources
 
 Users can find shared datasets by searching the Catalog. The [search](/catalog/search/) features include results that are project-relevant in order of most popular services, and results can be refined by using filters. Full details of the registered services are displayed to help in deciding on the suitability of the data associated with a registered dataset.
 
@@ -63,13 +72,13 @@ The Catalog search functionality is integrated into Mendix Studio Pro through th
 
 For more details, see [How to Search for Registered Assets](/catalog/search/).
 
-### 3.2 Consume – Using Registered Datasets
+### 4.2 Consume – Using Registered Datasets
 
 Registered assets in the Catalog can be accessed in Mendix Studio Pro to [build apps](/refguide/modeling/). These external data sources are represented in the domain model as [external entities](/refguide/external-entities/) which can be used with local entities.
 
 For further information on consuming from the Catalog, see [How to Consume Registered Assets](/catalog/consume/). For details on using shared entities in Studio Pro, see [Data Hub Pane](/refguide/data-hub-pane/) in the *Studio Pro Guide*.
 
-### 3.3 Register – Sharing Datasets
+### 4.3 Register – Sharing Datasets
 
 If you want to make the data from your apps available for use by others, you can publish the datasets in an OData service and register it in the Data Hub. In a Mendix app, the datasets are the **Entity sets** for a defined **Entity**. Using this REST-based protocol, metadata contracts defining the structure and documentation of the datasets that are included are registered. Further details such as the location of the data associated with a registered dataset are also captured. For Mendix apps deploying to the Mendix Cloud, this information is captured during the deployment process. This information can also be collected while [registering a service without Mendix Cloud](/catalog/register/register-data/).
 
@@ -79,11 +88,11 @@ OData services can be registered in the Data Hub in the following ways:
 * OData v4 services originating from non-Mendix sources can be registered manually. For further details, see [Register OData Resources in the Catalog](/catalog/register/register-data/).
 * Using the [Catalog API](/apidocs-mxsdk/apidocs/catalog-apis/) you can set up a registration pipeline to register data sources from your business application.
 
-### 3.4 Curate – Maintaining Registered Assets
+### 4.4 Curate – Maintaining Registered Assets
 
 You can add tags and descriptions, edit app owners, and toggle discoverability to ensure the right people find your service. For more details, see [How to Curate Registered Assets](/catalog/manage/curate/).
 
-## 4 Information Available in the Catalog {#available-info}
+## 5 Information Available in the Catalog {#available-info}
 
 In the Catalog, all the information for registered assets is displayed in the [Catalog search details](/catalog/manage/search/#search-details) screen. This information comes from the metadata in the OData service contract, and also from additional metadata that is added when registered assets are curated. Registered assets can be curated by owners, [Data Hub curators](/catalog/manage/user-roles/#curator), and [Mendix Admins](/catalog/manage/user-roles/#admin).
 
@@ -99,6 +108,6 @@ The information that is registered for data sources and exposed datasets are as 
 
     {{% alert color="info" %}}If significant changes are made in the service which would break any consuming apps, then good practice dictates that the service is deployed to a different endpoint with a major update in the version number. In this case the service will be listed twice for the two different endpoints. For more information see [Semantic numbering](/refguide/consumed-odata-service/#semantic) in *Consumed OData Service*. {{% /alert %}}
 
-## Data Hub Administration
+## 6 Data Hub Administration
 
 Mendix Admins can assign and manage **Curators**, **Owners**, and **External Users**, and control discoverability settings. For more information, see [Data Hub Administration](/developerportal/control-center/data-hub-admin/).

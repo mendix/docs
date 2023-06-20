@@ -1,14 +1,14 @@
 ---
 title: "Amazon SQS"
-url: /appstore/connectors/amazon-sqs/
-description: "Describes the configuration and usage of the Amazon SQS connector from the Mendix Marketplace."
+url: /appstore/connectors/aws/amazon-sqs/
+description: "Describes the configuration and usage of the Amazon SQS connector from the Mendix Marketplace. Amazon SQS lets you send, store, and receive messages between software components at any volume, without losing messages or requiring other services to be available."
 tags: ["marketplace", "marketplace component", "amazon", "sqs", "connector"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details. 
 ---
 
 ## 1 Introduction
 
-The [Amazon SQS connector]([#needs-url]) enables your app to connect to other microservices by implementing [Amazon Simple Queue Service (SQS)](https://aws.amazon.com/sqs/).
+The [Amazon SQS connector]([#needs-url]) enables your app to connect to other microservices by implementing [Amazon Simple Queue Service (SQS)](https://aws.amazon.com/sqs/). Amazon SQS lets you send, store, and receive messages between software components at any volume, without losing messages or requiring other services to be available.
 
 ### 1.1 Typical Use Cases
 
@@ -16,7 +16,9 @@ Amazon SQS helps improve your app by providing a queue service to send messages 
 
 ### 1.2 Prerequisites
 
-The Amazon SQS connector requires the [AWS Authentication connector](https://marketplace.mendix.com/link/component/120333) to authenticate with Amazon Web Services (AWS). For more information about installing and configuring the AWS Authentication connector, see [AWS Authentication](/appstore/connectors/aws-authentication/).
+The Amazon SQS connector requires Mendix Studio Pro version 9.18.0 or above.
+
+To authenticate with Amazon Web Service (AWS), you must also install and configure the [AWS authentication connector](https://marketplace.mendix.com/link/component/120333). For more information about installing and configuring the AWS Authentication connector, see [AWS Authentication](/appstore/connectors/aws/aws-authentication/).
 
 {{% alert color="info" %}}
 Ensure that the AWS user account used for authentication has the appropriate permissions to access the SQS service in AWS.

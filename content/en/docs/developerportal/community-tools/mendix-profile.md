@@ -300,7 +300,7 @@ From a governance aspect, it is important for Mendix Admins to deactivate ex-emp
 
 The following Mendix services support usage of PATs:
 
-* [Data Hub Catalog API](/apidocs-mxsdk/apidocs/data-hub-apis/)
+* [Catalog API](/apidocs-mxsdk/apidocs/catalog-apis/)
 * [App Repository API](/apidocs-mxsdk/apidocs/app-repository-api/)
 * [Projects API](/apidocs-mxsdk/apidocs/projects-api/)
 
@@ -343,7 +343,7 @@ Use of a PAT depends on the API you are accessing.
 For security reasons, you should not include PATs into your source code.
 {{% /alert %}}
 
-To use a PAT with the [Data Hub APIs](/apidocs-mxsdk/apidocs/data-hub-apis/), it must be passed as the authorization header on every request made to the Data Hub Catalog. The request will look like this:
+To use a PAT with the [Catalog APIs](/apidocs-mxsdk/apidocs/catalog-apis/), it must be passed as the authorization header on every request made to the Catalog. The request will look like this:
 
 ```http
 GET /v1/register HTTP/1.1

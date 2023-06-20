@@ -2,7 +2,7 @@
 title: "Data Hub Landscape"
 url: /catalog/manage/landscape/
 description: "Describes how to the Data Hub Landscape to explore the connections with registered assets."
-tags: ["data hub catalog", "data hub", "external entities", "landscape", "published odata service"]
+tags: ["Catalog", "data hub", "external entities", "landscape", "published odata service"]
 weight: 40
 aliases:
     - /data-hub/data-hub-landscape/
@@ -11,9 +11,9 @@ aliases:
 
 ## 1 Introduction
 
-The Data Hub Landscape presents a graphical view of the registered OData services in your Data Hub. It provides a landscape visualization of items registered in the [Data Hub Catalog](/data-hub/data-hub-catalog/) and their relationships with apps that consume the datasets that they connect to. In the Data Hub Landscape, the nodes are the runtime instances of applications (or, more specifically, the deployments of apps in specific environments) and the published OData services from the apps. All public services that are issued with Data Hub are also shown in the Landscape.
+The Data Hub Landscape presents a graphical view of the registered OData services in your Data Hub. It provides a landscape visualization of items registered in the [Catalog](/catalog/) and their relationships with apps that consume the datasets that they connect to. In the Data Hub Landscape, the nodes are the runtime instances of applications (or, more specifically, the deployments of apps in specific environments) and the published OData services from the apps. All public services that are issued with Data Hub are also shown in the Landscape.
 
-In the Landscape, you will see, at a glance, the network of deployments of the apps publishing OData services and those consuming them. It enhances searching for suitable data sources in the Data Hub Catalog by showing the following:
+In the Landscape, you will see, at a glance, the network of deployments of the apps publishing OData services and those consuming them. It enhances searching for suitable data sources in the Catalog by showing the following:
 
 * Popular apps in the Data Hub Landscape and the apps that consume data from them
 * The dependencies between consuming and publishing apps
@@ -26,7 +26,7 @@ This visual display of registered assets will enable you to:
 * Discover the context of the data being shared by the network of nodes for a service and the deploying app
 * From the displayed network of dependencies, ascertain the differences between the services by seeing how the shared data is used
 
-You can access the Data Hub Landscape from [Mendix Data Hub](https://hub.mendix.com/) by clicking the **Landscape** tab.
+You can access the Data Hub Landscape from [Mendix Data Hub](https://catalog.mendix.com/) by clicking the **Landscape** tab.
 
 ## 2 Data Hub Landscape in Detail
 

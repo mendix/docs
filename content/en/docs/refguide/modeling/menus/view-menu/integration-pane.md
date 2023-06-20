@@ -6,28 +6,27 @@ description: "Describes the Integration pane in Mendix Studio Pro."
 tags: ["studio Pro", "data hub", "Integration pane", "data hub catalog"]
 aliases:
     - /refguide/data-hub-pane/
-
 ---
 
 ## 1 Introduction
 
-[Mendix Data Hub](/data-hub/) enables integration of available data sources from the different applications in an organization into your Mendix apps. This means that new apps can be created using shared datasets that are registered in the [Data Hub Catalog](/data-hub/data-hub-catalog/). In Studio Pro, this is possible using the integrated functionality of Data Hub Catalog through the **Data Hub** pane.
+Use the Integration pane in Studio Pro to use available data sources from the different applications in an organization into your Mendix apps. New apps can be created using shared datasets that are registered in the [Catalog](/catalog/). In Studio Pro, this is possible using the integrated functionality of Catalog through the **Data Hub** pane.
 
-You can search in the Data Hub Catalog through the **Data Hub** pane to discover data sources that you can use in your app. Via this pane you can add the entities that are exposed in the registered OData services—called **Data Sources** in Data Hub—into your app's domain model. These entities are called [external entities](/refguide/external-entities/) and are different because they enable the connection to the data associated with the entities in the originating app.
+You can search in the Catalog through the **Data Hub** pane to discover data sources that you can use in your app. Via this pane you can add the entities that are exposed in the registered OData services—called **Data Sources** in Data Hub—into your app's domain model. These entities are called [external entities](/refguide/external-entities/) and are different because they enable the connection to the data associated with the entities in the originating app.
 
 To display the **Data Hub** pane, click **View** > **Data Hub**.
 
 {{% alert color="info" %}}
-In the Data Hub Catalog, registered published services are referred to as *data sources*. Exposed entities will show the **Entity set** name and are called *datasets.*
+In the Catalog, registered published services are referred to as *data sources*. Exposed entities will show the **Entity set** name and are called *datasets.*
 {{% /alert %}}
 
-## 2 Integration pane Overview
+## 2 Integration Pane Overview
 
-The **Data Hub** pane is used to search the Data Hub Catalog for entities that can be dragged into the domain model and used in your app and also display the external entities and the associated services that are consumed in your current model.
+The **Integration** pane is used to search the Catalog for entities that can be dragged into the domain model and used in your app and also display the external entities and the associated services that are consumed in your current model.
 
 The following functionality is available in the pane:
 
-* [Search](#search) – Enter a search string of alphanumeric characters to search in the Data Hub Catalog. The search will be performed on services, entities, attributes, associations, and descriptions in the Catalog.
+* [Search](#search) – Enter a search string of alphanumeric characters to search in the Catalog. The search will be performed on services, entities, attributes, associations, and descriptions in the Catalog.
 * [Filter](#filter) – By default, the search is performed on assets in the **Production** environment. Click the **Filter** icon to include all other environments such as test, acceptance and also the Mendix free app environment **Sandbox** in the search.
 * [View information](#viewing) on the service, its entities, attributes, and associations – When you enter a search term and browse through services, you can view various information on them.
 * [View services used in your app](#used-in-app) – Services and the entities that are currently being used in your app are displayed in the **Used in your App** section and are indicated with a green check-mark in the search results. For more information, see the [Used in Your App](#used-in-app) section below. 
@@ -40,9 +39,9 @@ When you do not enter search text in the **Data Hub** pane, then **Used in your 
 
 For more information on how to add entities to your app, see [Adding an External Entity to an App](/refguide/external-entities/#adding-external-entities) section in *External Entities*.
 
-## 3 Searching the Data Hub Catalog {#search}
+## 3 Searching Catalog Sources {#search}
 
-As you enter a search term, all the items in the Data Hub Catalog satisfying the search string are listed in the search results. This includes words in the service, entity and attribute descriptions, which are not displayed in the **Data Hub** pane. For more information, see the [Selected Asset Details](/catalog/manage/search/#search-details) section in *Search in the Data Hub Catalog*.
+As you enter a search term, all the items in the Catalog satisfying the search string are listed in the search results. This includes words in the service, entity and attribute descriptions, which are not displayed in the **Data Hub** pane. For more information, see the [Selected Asset Details](/catalog/manage/search/#search-details) section in *Search in the Catalog*.
 
 You can drag the entity from the search results into your domain model and it will be added to your app and displayed as an [external entity](/refguide/external-entities/).
 
@@ -53,7 +52,7 @@ You can drag the entity from the search results into your domain model and it wi
 You can perform a wildcard search by entering `*` in the search field.
 
 {{% alert color="info" %}}
-The search strings must be a minimum of three alphanumeric characters. Punctuation cannot be used as part of the search term except for the wildcard character `*` to perform an "empty" search in the Data Hub Catalog. You cannot use the wildcard in combination with other characters. For further details, see [How to Search for Registered Assets](/data-hub/data-hub-catalog/search/).
+The search strings must be a minimum of three alphanumeric characters. Punctuation cannot be used as part of the search term except for the wildcard character `*` to perform an "empty" search in the Catalog. You cannot use the wildcard in combination with other characters. For further details, see [How to Search for Registered Assets](/catalog/search/).
 {{% /alert %}}
 
 ### 3.2 Filtering Environments {#filter}
@@ -83,7 +82,7 @@ The search results and **User in your App** section show the following informati
 
 * **Green check-mark** if the service or entity is consumed in the app. If you right-click a consumed service, you can do the following:
 
-    * **View in Data Hub Catalog** – click this to go to the [data source details](/catalog/manage/search/#service-details) page in the Data Hub Catalog
+    * **View in Catalog** – click this to go to the [data source details](/catalog/manage/search/#service-details) page in the Catalog
     * **Go to connection settings** – click this to open the [consumed OData service](/refguide/consumed-odata-service/) document
 
         {{< figure src="/attachments/refguide/modeling/menus/view-menu/data-hub-pane/data-hub-pane-menu.png" alt="info on a Service" >}}
@@ -95,9 +94,9 @@ The search results and **User in your App** section show the following informati
 
     {{% alert color="info" %}}If there is an OData service update available, then the entities that are listed are those that are available in that version of the OData service. These entities are grayed-out to indicate that they cannot be dragged into the domain model, as the *current* contract that is consumed in the app does not have these entities. You must update the contract to the version shown in the search results by clicking the **Update** icon. {{% /alert %}}
 
-    {{% alert color="info" %}}The version number that is shown for the OData service is the latest one that is available in the Data Hub Catalog at the service endpoint – in the example above, version 1.0.0 of **BikeVehicleService** is currently consumed in the app, but the contract that is available in the Catalog is different to the one currently consumed.{{% /alert %}}
+    {{% alert color="info" %}}The version number that is shown for the OData service is the latest one that is available in the Catalog at the service endpoint – in the example above, version 1.0.0 of **BikeVehicleService** is currently consumed in the app, but the contract that is available in the Catalog is different to the one currently consumed.{{% /alert %}}
 
-* **Information icon** allows you to view further details for the service and a link to go directly to the [Service Details](/catalog/manage/search/#search-details) screen in the Data Hub Catalog:
+* **Information icon** allows you to view further details for the service and a link to go directly to the [Service Details](/catalog/manage/search/#search-details) screen in the Catalog:
 
     {{< figure src="/attachments/refguide/modeling/menus/view-menu/data-hub-pane/data-hub-pane-info.png" alt="Integration pane Information" >}}
 
@@ -113,7 +112,7 @@ For any service in the list, you can click **Show details** to see the full list
 
 #### 4.2.1 Entity
 
-If you right-click an entity and select **View in Data Hub Catalog**, it will take you to the entity details page in the [Data Hub Catalog](/data-hub/data-hub-catalog/).
+If you right-click an entity and select **View in Catalog**, it will take you to the entity details page in the [Catalog](/catalog/).
 
 If you right-click a consumed entity and **Go to entity**, it will take you to the entity in the domain model.
 
@@ -140,7 +139,7 @@ Entities and associations can have any of the CRUD capabilities, while attribute
 
 ## 5 Read More
 
-* [Data Hub Catalog](/data-hub/data-hub-catalog/)
+* [Catalog](/catalog/)
 * [External Entities](/refguide/external-entities/)
 * [Consumed OData Service](/refguide/consumed-odata-service/)
-* [How to Consume Registered Assets](/data-hub/data-hub-catalog/consume/)
+* [How to Consume Registered Assets](/catalog/consume/)

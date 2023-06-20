@@ -2,12 +2,12 @@
 title: "Share Data Between Apps"
 url: /catalog/share-data/
 description: "Describes how to publish and register a simple data asset to the Catalog from Studio Pro and create a new app that consumes this asset."
-tags: ["data hub catalog", "data hub", "external entities", "landscape", "published OData service" ,"how to", "consume"]
+tags: ["Catalog", "data hub", "external entities", "landscape", "published OData service" ,"how to", "consume"]
 weight: 10
 aliases:
-    - /data-hub/data-hub-catalog/use-data-catalog.html
+    - /catalog/use-data-catalog.html
     - /datahub/general/share-data/index.html
-    - /data-hub/data-hub-catalog/use-data-catalog
+    - /catalog/use-data-catalog
     - /data-hub/share-data/
     - /catalog/#share-data
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
@@ -18,8 +18,8 @@ aliases:
 This how-to will demonstrate how easy it is to build apps using data from different sources using Mendix Data Hub. The steps describe the following: 
 
 * Create an app in Mendix Studio Pro
-* Publish an entity from the app and register it in the Data Hub Catalog 
-* Use the Data Hub Catalog to explore the data sources from the organization that are registered as assets 
+* Publish an entity from the app and register it in the Catalog 
+* Use the Catalog to explore the data sources from the organization that are registered as assets 
 * Connect to the registered asset that you published earlier and use it in a new app
 * Change data in the original app and see it updated in the new or consuming app
 * See the network of shared data in the Data Hub Landscape
@@ -61,9 +61,9 @@ You have created a simple app with the entity **Customer**, and a web page where
 
 Go ahead and customize the homepage further by changing the banner text.
 
-## 4 Publishing to the Data Hub Catalog {#publishing}
+## 4 Publishing to the Catalog {#publishing}
 
-You need to register the **Customer** entity in the Data Hub Catalog to use this entity in other apps. To do this, you need to expose the **Customer** entity in a *Published OData service* in Mendix Studio Pro. OData v3 and OData v4 are REST-based protocols and standard formats for registering services in the Data Hub Catalog. 
+You need to register the **Customer** entity in the Catalog to use this entity in other apps. To do this, you need to expose the **Customer** entity in a *Published OData service* in Mendix Studio Pro. OData v3 and OData v4 are REST-based protocols and standard formats for registering services in the Catalog. 
 
 Do the following:
 
@@ -85,9 +85,9 @@ Do the following:
 
     {{< figure src="/attachments/data-hub/share-data/edit-published-resource-box.png" >}}
 
-    {{% alert color="info" %}}  Make a note of the the **Exposed set name**. This defaults to the **Exposed name** with an "**s"** added to the end. When the service is registered in the Data Hub Catalog, the **Exposed set name** will be displayed as the available **Dataset**. {{% /alert %}}
+    {{% alert color="info" %}}  Make a note of the the **Exposed set name**. This defaults to the **Exposed name** with an "**s"** added to the end. When the service is registered in the Catalog, the **Exposed set name** will be displayed as the available **Dataset**. {{% /alert %}}
 
-5. Click **OK** twice to display the **OData Service** document that will be registered in the Data Hub Catalog. In the **General** tab, notice the **Version** number. 
+5. Click **OK** twice to display the **OData Service** document that will be registered in the Catalog. In the **General** tab, notice the **Version** number. 
 
     {{< figure src="/attachments/data-hub/share-data/customer-odata-service-page.png" >}}
 
@@ -95,21 +95,21 @@ Do the following:
 
 6. Click **Publish** in the top bar to deploy the app and publish it. When prompted, click **Save and continue** to save any unsaved changes to the app.     
 
-7. The app is deployed, and the OData service is automatically registered in the Data Hub Catalog. Click **View App** to open the app in a browser. 
+7. The app is deployed, and the OData service is automatically registered in the Catalog. Click **View App** to open the app in a browser. 
 8. On the app's home page, click **Customers Overview**.
 9. Add data to the app. Click **New** to add data for a customer entry.
 
     {{< figure src="/attachments/data-hub/share-data/add-data-in-app.png" alt="external entities" >}}
 
-When this entity set is consumed by another app via the Data Hub Catalog, the other app will see the data entered here.
+When this entity set is consumed by another app via the Catalog, the other app will see the data entered here.
 
-## 5 Using the Data Hub Catalog and Curating Your Own Service {#use-and-curate}
+## 5 Using the Catalog and Curating Your Own Service {#use-and-curate}
 
-The **{yourname}CustomerODataService** from your app is now registered in the Data Hub Catalog. The data can be used in other apps. The service is called a **Data Source** in the Catalog, and the exposed **Customer** entity is a **Dataset**.
+The **{yourname}CustomerODataService** from your app is now registered in the Catalog. The data can be used in other apps. The service is called a **Data Source** in the Catalog, and the exposed **Customer** entity is a **Dataset**.
 
 Do the following:
 
-1. Go to [Mendix Data Hub](https://hub.mendix.com/):
+1. Go to [Mendix Data Hub](https://catalog.mendix.com/):
 
     {{< figure src="/attachments/data-hub/share-data/data-hub-home.png" alt="Data Hub screen" >}}
 
@@ -126,7 +126,7 @@ Do the following:
 
     {{% alert color="info" %}}For more information about roles in the Catalog, see [User Roles](/catalog/manage/user-roles/).{{% /alert %}}
 
-For more details on searching in the Data Hub Catalog and the **Search Details** screen, see [How to Search in the Data Hub Catalog](/data-hub/data-hub-catalog/search/). You can also explore registered services in the Data Hub Landscape. For more information, see [How to Use the Data Hub Landscape](/data-hub/data-hub-landscape/).
+For more details on searching in the Catalog and the **Search Details** screen, see [How to Search in the Catalog](/catalog/search/). You can also explore registered services in the Data Hub Landscape. For more information, see [How to Use the Data Hub Landscape](/data-hub/data-hub-landscape/).
 
 ## 6 Using the Customer Dataset in Another App
 
@@ -157,7 +157,7 @@ To do this, follow the steps below:
 
     {{% alert color="info" %}}For further information on external entities, see [External Entities](/refguide/external-entities/) in the *Studio Pro Guide*.  {{% /alert %}}
 
-    Click the information icon for the consumed service in the **Data Hub** pane to see further information about the service, and follow the link to **View in Data Hub Catalog**.
+    Click the information icon for the consumed service in the **Data Hub** pane to see further information about the service, and follow the link to **View in Catalog**.
 
 7. In the **App Explorer**, notice the service and location documents for your external entity. These documents specify the metadata for the service and provide the links for connecting to the shared data.
 8. Right-click the entity and select **Generate overview pages** for this entity. In the **Generate pages** dialog box, for **Content layout** select **Atlas_Default(Atlas_Core)** and click **OK**. Accept the **Information** box by clicking **OK**. Overview pages for the new entity are added in the **OverviewPages** folder of **MyFirstModule**.
@@ -187,7 +187,7 @@ Congratulations, you have successfully used the Data Hub to share data between M
 
 You can view the two apps that you have created in the Data Hub Landscape and see how they are connected:
 
-1. Open the [Data Hub](https://hub.mendix.com/#/home) home page.
+1. Open the [Data Hub](https://catalog.mendix.com/#/home) home page.
 2. Find your service using the search pane. Remember to use the filter to ensure you can see **Sandbox** apps. 
 3. Click the **Landscape** tab to see a visual representation of your apps (rounded squares), services (circles), and connections (lines). The number of entity sets/datasets that have been exposed appears beneath the service. 
 

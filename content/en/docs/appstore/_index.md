@@ -27,8 +27,9 @@ For details on the Studio Pro version required for use and when the component wa
 
 [Mendix Connect](https://www.mendix.com/data-hub/) is a collection of functionalities available in the Mendix Platform that allow people in your organization to discover, understand, connect, and govern data securely. The following connectors and modules are part of the Mendix Connect ecosystem:
 
-* [Database](/appstore/connectors/database/) connnector
-* [Excel](/appstore/connectors/email/) connector
+* [Database](/appstore/connectors/database-connector/) connnector
+* [Excel Importer](/appstore/modules/excel-importer/) module
+* [Excel Exporter](/appstore/modules/excel-exporter/) module
 * [Email](/appstore/connectors/email-connector/) connector
 * [MQTT](/appstore/connectors/mqtt/) connector
 * [Mendix Business Events](/appstore/modules/business-events/) module
@@ -40,7 +41,7 @@ And our strategic partner connectors:
 
 In addition to platform-supported connectors and modules, Mendix Connect functionalities include:
 
-* [Integration capabilities](/refguide/integration/#integration-mx-connect) in Studio Pro [10.0](/releasenotes/studio-pro/10.0)
+* [Integration capabilities](/refguide/integration/#integration-mx-connect) in Studio Pro [10.0](/releasenotes/studio-pro/10.0/)
 * The [Catalog](/catalog/#catalog-mx-connect), used to register, manage, and govern data in your organization
 
 ## 3 Guide Categories

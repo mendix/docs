@@ -1,9 +1,11 @@
 ---
 title: "Integration pane"
-url: /refguide/data-hub-pane/
+url: /refguide/integration-pane/
 weight: 30
 description: "Describes the Integration pane in Mendix Studio Pro."
 tags: ["studio Pro", "data hub", "Integration pane", "data hub catalog"]
+aliases:
+    - /refguide/data-hub-pane/
 
 ---
 

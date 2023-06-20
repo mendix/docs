@@ -17,7 +17,7 @@ To open an app in Mendix Studio Pro, do one of the following:
 * Select **File** > **Open App**
 * Click **Open App** on the Studio Pro landing page
 
-The **Open App** dialog box will open, where you can [select an app](#select-app) from your apps, [open an app locally](#open-locally), or [import an app package](#import-app):
+The **Open App** dialog box will open, where you can [select an app](#select-app) from your apps, [open an app locally](#open-locally),[open an app from a private git repository](#open-private) or [import an app package](#import-app):
 
 {{< figure src="/attachments/refguide/modeling/menus/file-menu/open-app-dialog/open-app.png" alt="Open App" >}}
 
@@ -35,9 +35,21 @@ You can select an app from the list of your apps. Once you have selected an app,
 
 For opening an app you already have on disk, click **Open App Locally** in the left sidebar and point to the app file.
 
-### 2.3 Importing App Package {#import-app}
+### 2.3 Opening a Private App {#open-private}
 
-You can also import and app package and open it. Click **Import App Package** in the left sidebar. For more information on how to import an app package, see [Import App Package](/refguide/import-app-package-dialog/). 
+For opening an app you already have in a [Git On-Premises Version Control Server](/refguide/on-premises-git/), click **Open Private App** in the left sidebar. You will need to enter the **App repository address**, credentials for the repository, choose the **Development line** (branch) and indicate where you want to store it on the disk.
+
+### 2.4 Importing App Package {#import-app}
+
+You can also import and app package and open it. Click **Import App Package** in the left sidebar. For more information on how to import an app package, see [Import App Package](/refguide/import-app-package-dialog/).
+
+### 2.5 Preferences
+
+Clicking **Preferences** opens a dialog box with a subset of the preferences you can set in [Preferences](/refguide/preferences-dialog/). The preferences you can change are as follows:
+
+* Studio Pro Theme
+* Default Page Editor
+* Rendering
 
 ## 3 Read More
 

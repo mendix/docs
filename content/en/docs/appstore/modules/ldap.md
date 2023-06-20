@@ -244,3 +244,7 @@ One of the objectives of using user sync is to get the right set of active end-u
     * Users that are selected for synchronization are considered active, although they have inactive status in the LDAP server. The sync with the LDAP server does not include the end-user’s status.
     
 * LDAP Group Mapping – if LDAP group mapping is set up and an end-user is not a member of a group for which a user role is mapped, the LDAP module marks the end-user as inactive
+
+#### 5.5 Invalid LDAP Credentials
+
+Every error which occurs in the LDAP module will display “Invalid LDAP credentials” to the end-user. You can view the underlying error in the app log on log node `Ldap`. If you need more information, you can set this node to TRACE level.

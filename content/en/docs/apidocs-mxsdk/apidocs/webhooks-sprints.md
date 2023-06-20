@@ -4,7 +4,7 @@ linktitle: "Webhooks for Stories/Sprints"
 url: /apidocs-mxsdk/apidocs/webhooks-sprints/
 category: "API Documentation"
 description: "These webhooks allow you to build or set up Mendix Platform connectors that subscribe to certain events on the Developer Portal."
-weight: 97
+weight: 100
 ---
 
 ## 1 Introduction

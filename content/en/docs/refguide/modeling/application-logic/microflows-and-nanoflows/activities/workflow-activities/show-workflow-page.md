@@ -14,8 +14,6 @@ This activity can only be used in **Microflows**.
 
 The **Show workflow admin page** activity can be used to open a workflow overview page. 
 
-{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/workflow-activities/show-workflow-page/open-workflow-page.jpg" alt="Show Workflow Admin Page" >}}
-
 ## 2 Properties
 
 An example of create object properties is represented in the image below:

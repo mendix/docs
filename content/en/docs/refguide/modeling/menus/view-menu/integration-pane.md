@@ -1,15 +1,16 @@
 ---
-title: "Data Hub Pane"
-url: /refguide/data-hub-pane/
+title: "Integration pane"
+url: /refguide/integration-pane/
 weight: 30
-description: "Describes the Data Hub pane in Mendix Studio Pro."
-tags: ["studio Pro", "data hub", "data hub pane", "Catalog"]
-
+description: "Describes the Integration pane in Mendix Studio Pro."
+tags: ["studio Pro", "data hub", "Integration pane", "data hub catalog"]
+aliases:
+    - /refguide/data-hub-pane/
 ---
 
 ## 1 Introduction
 
-[Mendix Data Hub](/data-hub/) enables integration of available data sources from the different applications in an organization into your Mendix apps. This means that new apps can be created using shared datasets that are registered in the [Catalog](/catalog/). In Studio Pro, this is possible using the integrated functionality of Catalog through the **Data Hub** pane.
+Use the Integration pane in Studio Pro to use available data sources from the different applications in an organization into your Mendix apps. New apps can be created using shared datasets that are registered in the [Catalog](/catalog/). In Studio Pro, this is possible using the integrated functionality of Catalog through the **Data Hub** pane.
 
 You can search in the Catalog through the **Data Hub** pane to discover data sources that you can use in your app. Via this pane you can add the entities that are exposed in the registered OData services—called **Data Sources** in Data Hub—into your app's domain model. These entities are called [external entities](/refguide/external-entities/) and are different because they enable the connection to the data associated with the entities in the originating app.
 
@@ -19,9 +20,9 @@ To display the **Data Hub** pane, click **View** > **Data Hub**.
 In the Catalog, registered published services are referred to as *data sources*. Exposed entities will show the **Entity set** name and are called *datasets.*
 {{% /alert %}}
 
-## 2 Data Hub Pane Overview
+## 2 Integration Pane Overview
 
-The **Data Hub** pane is used to search the Catalog for entities that can be dragged into the domain model and used in your app and also display the external entities and the associated services that are consumed in your current model.
+The **Integration** pane is used to search the Catalog for entities that can be dragged into the domain model and used in your app and also display the external entities and the associated services that are consumed in your current model.
 
 The following functionality is available in the pane:
 
@@ -38,7 +39,7 @@ When you do not enter search text in the **Data Hub** pane, then **Used in your 
 
 For more information on how to add entities to your app, see [Adding an External Entity to an App](/refguide/external-entities/#adding-external-entities) section in *External Entities*.
 
-## 3 Searching the Catalog {#search}
+## 3 Searching Catalog Sources {#search}
 
 As you enter a search term, all the items in the Catalog satisfying the search string are listed in the search results. This includes words in the service, entity and attribute descriptions, which are not displayed in the **Data Hub** pane. For more information, see the [Selected Asset Details](/catalog/manage/search/#search-details) section in *Search in the Catalog*.
 
@@ -64,7 +65,7 @@ By default, the search is performed on assets in the **Production** environment.
 When the **Show development environments** is checked, all subsequent searches results will also include those in non-production environments.
 {{% /alert %}}
 
-## 4 Data Hub Pane Information {#viewing}
+## 4 Integration pane Information {#viewing}
 
 The information that is displayed in the **Data Hub** pane either when you enter a search term or when you open the **Used in your App** section is described in the sections below. 
 
@@ -89,7 +90,7 @@ The search results and **User in your App** section show the following informati
 * **Gray shield icon** shows if the service or entity is validated in the Catalog
 * **Update icon** is a blue arrow icon that indicates that there is another version of the consumed service available in the Data Hub. Click to update the service that is consumed in the app to the contract that is now available:
 
-    {{< figure src="/attachments/refguide/modeling/menus/view-menu/data-hub-pane/update-available.png" alt="Data Hub Pane update" >}}
+    {{< figure src="/attachments/refguide/modeling/menus/view-menu/data-hub-pane/update-available.png" alt="Integration pane update" >}}
 
     {{% alert color="info" %}}If there is an OData service update available, then the entities that are listed are those that are available in that version of the OData service. These entities are grayed-out to indicate that they cannot be dragged into the domain model, as the *current* contract that is consumed in the app does not have these entities. You must update the contract to the version shown in the search results by clicking the **Update** icon. {{% /alert %}}
 
@@ -97,7 +98,7 @@ The search results and **User in your App** section show the following informati
 
 * **Information icon** allows you to view further details for the service and a link to go directly to the [Service Details](/catalog/manage/search/#search-details) screen in the Catalog:
 
-    {{< figure src="/attachments/refguide/modeling/menus/view-menu/data-hub-pane/data-hub-pane-info.png" alt="Data Hub Pane Information" >}}
+    {{< figure src="/attachments/refguide/modeling/menus/view-menu/data-hub-pane/data-hub-pane-info.png" alt="Integration pane Information" >}}
 
 ### 4.2 Entities, Attributes, and Associations {#association-attributes}
 
@@ -105,7 +106,7 @@ Entities, attributes, and associations are displayed under the service name.
 
 For any service in the list, you can click **Show details** to see the full list of the exposed entities, associations, and attributes for that service.
 
-{{< figure src="/attachments/refguide/modeling/menus/view-menu/data-hub-pane/expand-service-list.png" alt="Data Hub Pane Information" >}}
+{{< figure src="/attachments/refguide/modeling/menus/view-menu/data-hub-pane/expand-service-list.png" alt="Integration pane Information" >}}
 
 {{% alert color="info" %}}The associations and attributes that are not supported in your Mendix app are shown as non-selectable (gray) and will not be included when you drag them into the domain model.{{% /alert %}}
 

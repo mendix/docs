@@ -9,7 +9,7 @@ aliases:
 
 ## 1 Introduction
 
-When an external entity is used in an app module through the [Data Hub pane](/refguide/data-hub-pane/), a consumed OData service document is added specifying the details of the consumed service. This is the API to the publishing app and the data associated with the entity.
+When an external entity is used in an app module through the [Integration pane](/refguide/integration-pane/), a consumed OData service document is added specifying the details of the consumed service. This is the API to the publishing app and the data associated with the entity.
 
 ## 2 Consumed OData Service screen
 
@@ -124,7 +124,7 @@ When downloading the metadata from a URL, the server may request a username and 
 This information is not stored, so if you download the metadata from the same server again, you will have to enter your username and password again.
 {{% /alert %}}
 
-When you import the metadata, you can add external entities from the consumed OData service in the [Data Hub Pane](/refguide/data-hub-pane/).
+When you import the metadata, you can add external entities from the consumed OData service in the [Integration pane](/refguide/integration-pane/).
 
 ### 3.2 Properties
 
@@ -194,7 +194,7 @@ The **Update** option is available when Studio Pro detects that that the contrac
 
 See the [Limitations](/refguide/consumed-odata-services/#consumed-odata-service-limitations) section of *Consumed OData Services* to read about known update limitations.
 
-##### 4.3.1.1 Data Hub Pane
+##### 4.3.1.1 Integration pane
 
 In the **Data Hub** pane, in search results and in the **Used in your App** section an update arrow indicate if there is a different contract at the Catalog endpoint:
 
@@ -242,5 +242,5 @@ To consume the service deployed to the **Acceptance environment**, follow these 
 
 ## 5 Read More
 
-* [Data Hub Pane](/refguide/data-hub-pane/)
+* [Integration pane](/refguide/integration-pane/)
 * [Consumed OData Services](/refguide/consumed-odata-services/)

@@ -1672,11 +1672,13 @@ Write down its ARN.
 
 For every new environment, the Mendix Operator will automatically create a new role and fill in the `privatecloud.mendix.com/database-user` and `privatecloud.mendix.com/s3-prefix` tags.
 
-{{% alert color="info" %}}
+{{% alert color="warning" %}}
 Do not modify `${aws:PrincipalTag/...}` placeholders - they're used to limit an environment to only have limited access to:
 
 * the database (Postgres user/role) specified in the environment IAM role's `privatecloud.mendix.com/database-user` tag
 * the S3 prefix specified in the environment IAM role's `privatecloud.mendix.com/s3-prefix` tag
+
+To find more details about how tags can be used as a variable (placeholder) in an IAM policy and limit the scope, see the [AWS documentation](https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_variables.html#policy-vars-tags).
 {{% /alert %}}
 
 #### 4.1.4 Storage Provisioner admin role
@@ -1809,3 +1811,8 @@ In the **Storage Plan** configuration tab, select `amazon-s3` as the storage typ
 In the **Custom TLS** tab, paste `mendix-custom-tls` into the `CA Certificates Secret Name` field.
 
 Apply the changes - you can now use the new Postgres and S3 plans to create new environments with IRSA authentication.
+
+{{% alert color="warning" %}}
+The Mendix Operator will create an IAM role for every new environment.
+Do not remove or modify `privatecloud.mendix.com/s3-prefix` or `privatecloud.mendix.com/database-user` tags from that role - those tags are used by the *environment template policy* to limit the environment's scope and prevent an environment from accessing data from other apps using the same S3 bucket or RDS instance.
+{{% /alert %}}

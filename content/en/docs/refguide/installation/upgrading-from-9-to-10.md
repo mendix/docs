@@ -62,11 +62,11 @@ Check if there is a newer version of your component available in the Marketplace
 
 Be sure to update these key widgets, resources, and actions:
 
-* [Native Mobile Resources](https://marketplace.mendix.com/link/component/109513)
-* [Nanoflow Commons](https://marketplace.mendix.com/link/component/109515)
+* [Atlas Core](https://marketplace.mendix.com/link/component/117187)
 * [Community Commons](https://marketplace.mendix.com/link/component/170)
 * [Data Widgets](https://marketplace.mendix.com/link/component/116540)
-* [Atlas Core](https://marketplace.mendix.com/link/component/117187)
+* [Nanoflow Commons](https://marketplace.mendix.com/link/component/109515)
+* [Native Mobile Resources](https://marketplace.mendix.com/link/component/109513)
 
 In general you should not remove and re-import modules unless this is recommended in the component's release notes. If you do remove and re-import a component, you may lose data or configuration related to the component.
 
@@ -120,24 +120,21 @@ If you use the [Workflow Commons](/appstore/modules/workflow-commons/) module in
 
 User task pages that were generated in an earlier version of Studio Pro also need to be updated. The conditional visibility based on whether the current user is assigned is no longer supported. You will see a consistency error for any outcome button that is using the visibility expression. For each button, set the visibility to **Always**.
 
-## 7.6 DOM Structure changes
+## 7.6 DOM Structure Changes
 
-Studio Pro 10 introduce a DOM Structure changes of the web client to ensure compatibility with future versions of React.
+Studio Pro 10 introduces DOM structure changes to the web client to ensure compatibility with future versions of React.
 
-A `div[data-widget-wrapper]` element will be placed around a React widget if its container is rendered as a Dojo widget, while the extra `script` element for such widgets has been removed. This added `div` element should not affect the page layout directly (as it uses `display: contents`), but it may affect CSS styling which relies on direct child (`>`), sibling (`+`) or `nth-child` selectors.
+A `div[data-widget-wrapper]` element is placed around a React widget if its container is rendered as a Dojo widget, while the extra `script` element for such widgets has been removed. This added `div` element should not affect the page layout directly (as it uses `display: contents`), but it may affect the CSS styling that relies on direct child (`>`), sibling (`+`), or `nth-child` selectors.
 
-This changes might impact your current styling.
+These changes may impact your current styling.
 
-If your application is currently using Atlas theme, this will be easily solved by upgrading [Atlas Core](https://marketplace.mendix.com/link/component/117187) to minimum version 3.11.
-Otherwise, please adjust your css selectors accordingly.
+If your application is currently using the Atlas theme, this is easily solved by upgrading [Atlas Core](https://marketplace.mendix.com/link/component/117187) to version 3.11 or above. Otherwise, please adjust your css selectors accordingly.
 
-## 7.7 Moving away from Glyphicon
+## 7.7 Moving Away from Glyphicon
 
-In Studio Pro 10, Glyphicon is slowly being phased out. Although that the current selected glyphicon will still works, some of the widgets Studio Pro 10 used is no longer using glyphicon class name.
+In Studio Pro 10, the glyphicon is slowly being phased out. Although a currently selected glyphicon will still work, some of the widgets that Studio Pro 10 uses are no longer using a glyphicon class name.
 
-If your application is currently using Atlas theme, this will be easily solved by upgrading [Atlas Core](https://marketplace.mendix.com/link/component/117187) to minimum version 3.11.
-
-The temporary work around for this is to add [Atlas icon fonts](https://github.com/mendix/atlas/raw/main/resources/mx-icon-set-filled-v1.2.2.zip) directly to your theme styling directory.
+If your application is currently using the Atlas theme, this is easily solved by upgrading [Atlas Core](https://marketplace.mendix.com/link/component/117187) to version 3.11 or above. Otherwise, the temporary workaround for this is to add the [Atlas icon fonts](https://github.com/mendix/atlas/raw/main/resources/mx-icon-set-filled-v1.2.2.zip) directly to your theme styling directory.
 
 ## 8 Read More
 

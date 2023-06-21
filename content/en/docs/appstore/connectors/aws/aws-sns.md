@@ -104,7 +104,7 @@ To subscribe to a topic in your AWS environment and receive email notifications 
     1. Click **Edit parameter value**.
     2. Edit the **Credentials** parameter and let it auto-fill.
 10. In the **Toolbox** pane, search for the **Create Object** activity, drag it onto the microflow area, and position it between the **Credentials_GenerateFromConstants** and the **Subscribe** activity.
-11.  Double-click the **Subscribe** activity and configure the **SubscribeRequest** parameter by doing the following steps:
+11. Double-click the **Subscribe** activity and configure the **SubscribeRequest** parameter by doing the following steps:
     1. Click **Edit parameter value**.
     2. Edit the **SubscribeRequest** parameter and let it auto-fill.
 12. Double-click the **Subscribe** activity and configure the **SubscribeRequest** parameter by doing the following steps:

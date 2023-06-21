@@ -45,6 +45,4 @@ To authenticate calls when using the Open API specification below, click **Autho
 
 ## 3 API Reference
 
-{{% todo %}}What are the correct scopes?{{% /todo %}}
-
 {{< swaggerui src="/openapi-spec/epics.yaml"  >}}

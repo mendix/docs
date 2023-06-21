@@ -9,12 +9,12 @@ aliases:
 
 ## 1 Introduction
 
-Owners of data sources, Data Hub Curators, and Mendix Admins can curate registered assets. Curation in the Catalog is the process of enriching the metadata and providing further information about the exposed data sources, datasets and attributes, and deleting irrelevent or outdated data sources. You can add custom application icons, Catalog-specific descriptions, and tags to supplement the registered metadata. Curate functions in Data Hub include setting the [Discoverability](#discoverability) of data sources, indicating whether the data source is [validated](#validated), and specifying the [Business and Technical Owners](#custom-owner).
+Owners of data sources, Curators, and Mendix Admins can curate registered assets. Curation in the Catalog is the process of enriching the metadata and providing further information about the exposed data sources, datasets and attributes, and deleting irrelevent or outdated data sources. You can add custom application icons, Catalog-specific descriptions, and tags to supplement the registered metadata. Curate functions in Data Hub include setting the [Discoverability](#discoverability) of data sources, indicating whether the data source is [validated](#validated), and specifying the [Business and Technical Owners](#custom-owner).
 
 Users who can curate assets in the Catalog are as follows:
 
 * Owners of a registered service – can curate their own services which includes those that have been set to non-**Discoverable**
-* [Data Hub Curators](/catalog/manage/user-roles/#curator) and [Mendix Admins](/catalog/manage/user-roles/#admin) – can curate and find all registered assets in the Catalog
+* [Curators](/catalog/manage/user-roles/#curator) and [Mendix Admins](/catalog/manage/user-roles/#admin) – can curate and find all registered assets in the Catalog
 
 Owners and Curators can also get an overview of the registered assets they own and curate from the [Curate](#curatelist) tab in Data Hub.
 
@@ -104,11 +104,7 @@ To add a custom **Business Owner**, follow these steps:
 
 You can change the icon that is displayed for the app and the data source by uploading your own custom application icon or selecting one from Data Hub the icon library. The selected icon will be displayed for all endpoints of the application and data source such as the Catalog search results and also in the Mendix Studio Pro [Data Hub pane](/refguide/data-hub-pane/).
 
-{{% alert color="info" %}} When you change an application icon, all data sources that are registered in the Catalog for that application will show the new icon. For example, the following shows two data sources that are published from the **HR Sample App** which are listed in the search results pane (**SAMPLE_Employee…** and **SAP 1.0.0**). They both display the same icon that was set for the app:
-
-{{< figure src="/attachments/data-hub/data-hub-catalog/curate/app-icon-several-services.png" alt="custom contact create" >}}
-
-{{% /alert %}}
+When you change an application icon, all data sources that are registered in the Catalog for that application will show the new icon. 
 
 Currently, by default, the application icon is determined by the application type when the data source is registered. For example, for Mendix apps the Mendix Icon is displayed which identifies the technology of the source app.
 
@@ -149,8 +145,6 @@ To **upload a different icon** for the app follow these steps:
 
 An alternative to uploading an icon is to use an existing icon by clicking **select one from your library**. The icons for your Data Hub will be shown and you can select one and click **Change Icon**.
 
-{{< figure src="/attachments/data-hub/data-hub-catalog/curate/icon-library.png" alt="upload icon"   width="300"  >}}
-
 ## 5 Editing the Metadata of a Data Source {#service-details}
 
 You can curate data sources to add a Catalog description and add tags.
@@ -189,9 +183,7 @@ Add tags to categorize a registered service and provide additional means for fin
 
     {{% alert color="info" %}}Tags can only contain lower-case letters, numbers, and underscores. They must have a minimum of 2 characters. If you use capital letters when typing the tag string, they will be converted to lower-case. {{% /alert %}}
 
-4. You can enter multiple tags separated by spaces. You can remove tags by clicking the **x**:
-
-    {{< figure src="/attachments/data-hub/data-hub-catalog/curate/service-metadata-tags-list.png" alt="tag list" >}}
+4. You can enter multiple tags separated by spaces. You can remove tags by clicking the **x**.
 
 5. When you are finished specifying the tags, click **Save Changes** to register the changes and the tags will be shown in the **Service Metadata** pane.
 

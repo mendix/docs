@@ -15,14 +15,14 @@ aliases:
 
 ## 1 Introduction
 
-This how-to will demonstrate how easy it is to build apps using data from different sources using Mendix Data Hub. The steps describe the following: 
+This how-to will demonstrate how easy it is to build apps using data from different sources using the Catalog. The steps describe the following: 
 
 * Create an app in Mendix Studio Pro
 * Publish an entity from the app and register it in the Catalog 
 * Use the Catalog to explore the data sources from the organization that are registered as assets 
 * Connect to the registered asset that you published earlier and use it in a new app
 * Change data in the original app and see it updated in the new or consuming app
-* See the network of shared data in the Data Hub Landscape
+* See the network of shared data in the Landscape
 
 ## 2 Prerequisites
 
@@ -109,9 +109,7 @@ The **{yourname}CustomerODataService** from your app is now registered in the Ca
 
 Do the following:
 
-1. Go to [Mendix Data Hub](https://catalog.mendix.com/):
-
-    {{< figure src="/attachments/data-hub/share-data/data-hub-home.png" alt="Data Hub screen" >}}
+1. Go to the [Catalog](https://catalog.mendix.com/).
 
 2. In the search field, enter the search term *{yourname}*. All services and datasets that satisfy this search string are displayed in the **Search Results** pane in the **Search Details** screen. However, the service does not appear in the **Search Results** yet, as by default, a filter is set to show results in **Production** environments.
 3. In the panel on the left, click **Filter** to see the **Filters** dialog box.
@@ -126,7 +124,7 @@ Do the following:
 
     {{% alert color="info" %}}For more information about roles in the Catalog, see [User Roles](/catalog/manage/user-roles/).{{% /alert %}}
 
-For more details on searching in the Catalog and the **Search Details** screen, see [How to Search in the Catalog](/catalog/search/). You can also explore registered services in the Data Hub Landscape. For more information, see [How to Use the Data Hub Landscape](/data-hub/data-hub-landscape/).
+For more details on searching in the Catalog and the **Search Details** screen, see [How to Search in the Catalog](/catalog/search/). You can also explore registered services in the Landscape. For more information, see [Catalog Landscape](/catalog/manage/landscape/).
 
 ## 6 Using the Customer Dataset in Another App
 
@@ -135,14 +133,7 @@ You are going to create a second app and consume the **Customer** dataset from t
 To do this, follow the steps below:
 
 1. In Mendix Studio Pro, create a new app using the **Blank** app template and call it *{yourname}CustomerActionsApp*.
-2. Go to the domain model > **Data Hub** pane:
-
-    {{< figure src="/attachments/data-hub/share-data/data-hub-pane-empty.png" alt="data hub pane" >}}
-
-    If you do not see the **Data Hub** pane, click **View** > **Data Hub** to display it:
-
-    {{< figure src="/attachments/data-hub/share-data/view-data-hub.png" >}}
-
+2. Go to the domain model > **Data Hub** pane (if you do not see the **Data Hub** pane, click **View** > **Data Hub** to display it).
 3. In the [Data Hub](/refguide/data-hub-pane/) pane, enter the search string *{yourname}*.
 4. By default, search in the **Data Hub** pane only shows services in **Production** environments. Your app was deployed as a **Sandbox** app. Click the **Filter** icon next to the search and check **Show development environments**.
 
@@ -151,14 +142,7 @@ To do this, follow the steps below:
     The search results now include **{yourname}CustomerOData_service** from your Mendix Cloud **Sandbox** environment.
 
 5. From **{yourname}CustomerODataService**, drag the **Customer** entity into the domain model. The consumed service and entity have green checkmarks in the **Data Hub** pane now.
-6. This entity is different from the blue entity container from the first app. This purple colored entity is called an *external entity*. The name of the OData service it is exposed in is displayed above it.
-
-    {{< figure src="/attachments/data-hub/share-data/external-entities-in-domain-model.png" alt="external entities" >}}
-
-    {{% alert color="info" %}}For further information on external entities, see [External Entities](/refguide/external-entities/) in the *Studio Pro Guide*.  {{% /alert %}}
-
-    Click the information icon for the consumed service in the **Data Hub** pane to see further information about the service, and follow the link to **View in Catalog**.
-
+6. This entity is different from the blue entity container from the first app. This purple colored entity is called an [external entity](/refguide/external-entities/). The name of the OData service it is exposed in is displayed above it. Click the information icon for the consumed service in the **Data Hub** pane to see further information about the service, and follow the link to **View in Catalog**.
 7. In the **App Explorer**, notice the service and location documents for your external entity. These documents specify the metadata for the service and provide the links for connecting to the shared data.
 8. Right-click the entity and select **Generate overview pages** for this entity. In the **Generate pages** dialog box, for **Content layout** select **Atlas_Default(Atlas_Core)** and click **OK**. Accept the **Information** box by clicking **OK**. Overview pages for the new entity are added in the **OverviewPages** folder of **MyFirstModule**.
 9. From the App Explorer, drag **Customer_Overview** into the empty **Auto-fill** container under the *Home* banner.
@@ -181,13 +165,13 @@ To see an example of consumed data being updated when data is changed in the ori
 2. Make a change to the customer list in **{yourname}CustomerServiceApp**, such as adding a few more customers or editing some existing entries.
 3. Refresh the **{yourname}CustomerActionsApp** window by doing a **Search** to see the changes in the data displayed. 
 
-Congratulations, you have successfully used the Data Hub to share data between Mendix apps! You can now see your new apps in your Data Hub Landscape. 
+Congratulations, you have successfully used the Catalog to share data between Mendix apps! You can now see your new apps in your Landscape. 
 
-## 9 Viewing Your Apps in the Data Hub Landscape
+## 9 Viewing Your Apps in the Landscape
 
-You can view the two apps that you have created in the Data Hub Landscape and see how they are connected:
+You can view the two apps that you have created in the Landscape and see how they are connected:
 
-1. Open the [Data Hub](https://catalog.mendix.com/#/home) home page.
+1. Open the [Catalog](https://catalog.mendix.com/#/home) home page.
 2. Find your service using the search pane. Remember to use the filter to ensure you can see **Sandbox** apps. 
 3. Click the **Landscape** tab to see a visual representation of your apps (rounded squares), services (circles), and connections (lines). The number of entity sets/datasets that have been exposed appears beneath the service. 
 

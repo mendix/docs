@@ -45,7 +45,7 @@ If you are not using the Mendix Cloud to deploy your Mendix application, there a
 
 The Catalog collects metadata about the application and environment where your application is deployed, so you can distinguish services from one another. You need to provide details about both the application and environment where the service is deployed in order to register your service.
 
-For detailed information on working with external entities and the Catalog without the Mendix Cloud (for on-prem or local deployment), see [Data Hub without Mendix Cloud](/data-hub/data-hub-without-mendix-cloud/).
+For detailed information on working with external entities and the Catalog without the Mendix Cloud (for on-prem or local deployment), see [Register Data Sources without Mendix Cloud](/catalog/data-sources-without-mendix-cloud/).
 
 ### 4.1 Registering a Service Through the Catalog Registration API {#registration-api}
 

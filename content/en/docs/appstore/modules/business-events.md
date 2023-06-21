@@ -331,6 +331,10 @@ Events are placed in Channels, sometimes called Topics. Apps subscribed to a cha
 
 Events published by Free Apps are published to one shared company channel on a multi-tenant free Event Broker. Events published by apps running on licensed nodes are published to their own channels on the company Event Broker. These channels, implemented as topics on Kafka, are automatically created upon deployment of the app publishing the events.
 
+For information on setting topics and channels for Kafka clusters running on a Private Cloud ("Bring Your Own Kafka"), see [Configuring Deployment Constants for Own Kafka Cluster](#deployment-constants).
+
+A topic is named in the form of `businessevents.<channel>.<EventBrokerSpace>`. A channel is written as a UUID and is used to group events.
+
 #### 5.2.3 Error Handling
 
 Event publishing is part of the transaction where the publishing occurs. This means that if you decide that something has gone wrong in your microflow logic, and you roll back all changes, the publishing of your events is also rolled back. No event will be sent to other apps.
@@ -376,12 +380,24 @@ If you are deploying an app to production that contains a published business eve
 2. Transport the mda to an environment.
 3. Restart the environment.
    
-### 6.4 Apps Running in Mendix for Private Cloud (Bring Your Own Kafka)
+### 6.4 Apps Running Own Kafka Cluster on Private Cloud (Bring Your Own Kafka)
 
 {{% alert color="info" %}}
 This deployment method is currently in [Beta](/releasenotes/beta-features/).{{% /alert %}}
 
-To deploy to a private cloud using your own Kafka cluster, you can use the `EventBrokerSpace` constant. This constant can be set to values like test, acceptance or production based on in which environment (or say namespace in Kubernetes) your Mendix app is running. Setting this constant means that each Business Event has its own Kafka topic for the environment. The topic would be of the form businessevents.<channel>.<EventBrokerSpace>. For further explanation on topics and channels, see [Topics and Channels](#topics-channels) and the [Mendix Event Broker](#mendix-event-broker) section.
+Business events are powered by Apache Kafka (see [Mendix Event Broker](#mendix-event-broker). If you wish to use your own Kafka cluster instead of the [Mendix Event Broker](#mendix-event-broker), see [Configuring Deployment Constants for Own Kafka Cluster](#deployment-constants). Running your own cluster is referred to as Bring Your Own Kafka (BYOK).
+
+#### 6.4.1 Configuring Deployment Constants for Own Kafka Cluster {#deployment-constants}
+
+Business Events module exposes configuration via [constants](/refguide/constants/). These are set up during deployment to connect to your Kafka cluster. 
+
+All the constants are part of the Mendix Business Events module.
+
+* `BusinessEvents.ServerUrl` – Configure your Kafka bootstrap servers here as `host1:port1,host2:port2,...`. The setting is used to connect the app.
+* `BusinessEvents.Username` and `BusinessEvents.Password` – The module supports Kafka’s SASL/SCRAM SHA-512 authentication mechanism, and the Kafka cluster should be set up to authenticate clients with this. See [Configuring Kafka Brokers](https://kafka.apache.org/documentation/#security_sasl_scram_brokerconfig) in the Apache Kafka documentation for further instructions.
+* `BusinessEvents.EventBrokerSpace` – This setting helps you group events into Kafka [topics](#topics-channels). With this set, each business event will be put in its own topic. Set the `EventBrokerSpace` value to your environment names (or Kubernetes namespaces) like `test` or `production`. Doing so ensures that when each business event that is defined in an app is deployed to a specific environment, it will have its own topic. For example, an `OrdersReceived` business event defined in an app when deployed to two different environments will have two topics. A topic is named in the form of `businessevents.<channel>.<EventBrokerSpace>`. A channel is written as a UUID and is used to group events.
+
+For further explanation on topics and channels, see [Topics and Channels](#topics-channels) and the [Mendix Event Broker](#mendix-event-broker) section.
 
 You can also use the `EventBrokerSpace` constant locally to test the behavior. See [Local Testing](#local-testing).
 
@@ -447,7 +463,7 @@ Here is an example of postgres service that you can add to your `docker-compose.
 
 8. How do I configure which Kafka cluster to use?
 
-    During modelling, you can use the **Constants** described in the [Configuring Local Deployments](#config-local-deployment) section to configure to a local or other Kafka. This does not transfer through to runtime. During runtime, the configurations are provided during startup automatically, since only Mendix Cloud is supported.
+    During modelling, you can use the **Constants** described in the [Configuring Local Deployments](#config-local-deployment) section to configure to a local or other Kafka. This does not transfer through to runtime.
 
 9. How do I delete or clean up events and tasks?
 

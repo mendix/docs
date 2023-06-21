@@ -14,11 +14,15 @@ aliases:
 The [Catalog APIs](https://datahub-spec.s3.eu-central-1.amazonaws.com/index.html) are OpenAPI (formerly Swagger) specifications with the following APIs available:
 
 * [Search API](#search) — search and retrieve information on registered assets that can be used in your app development
-* [Registration API](#registration) — register and update data sources to the organization's Mendix Data Hub
+* [Registration API](#registration) — register and update data sources to the organization's [Catalog](/catalog/)
 * [Transform API](#transform) — for Mendix users deploying to a non-Mendix environment, generate the request bodies to register data sources published from your Mendix app
 
 {{% alert color="info" %}}
 At this time, the **Try it out** feature on the OpenAPI specs does not work.
+{{% /alert %}}
+
+{{% alert color="info" %}}
+These APIs were previously called Data Hub APIs.
 {{% /alert %}}
 
 ### 1.1 Authentication and Access Rights
@@ -31,7 +35,7 @@ Curation rights apply to some API activities.
 
 ## 2 Search API {#search}
 
-The [Search API](https://datahub-spec.s3.eu-central-1.amazonaws.com/search_v4.html) enables users to search and retrieve assets that are registered in Data Hub that satisfy the specified search criteria.
+The [Search API](https://datahub-spec.s3.eu-central-1.amazonaws.com/search_v4.html) enables users to search and retrieve assets that are registered in the Catalog that satisfy the specified search criteria.
 
 You can paginate through search results with an offset, which allows you to limit the number of results and specify how many to skip. 
 
@@ -53,4 +57,4 @@ For step-by-step instructions, see the [Registering a Service Through the Catalo
 
 Mendix users who deploy to *non-Mendix clouds* can make use of the [Transform API](https://datahub-spec.s3.eu-central-1.amazonaws.com/transform.html) to generate the request body for the Registration API. The Transform API reconfigures information from the *dependencies.json* file into the correct fields. For an example API, see the [Preparing Your Service Details Using the Transform API](/catalog/register/register-data/#transform-api) section of *How to Register OData Resources in the Catalog*.
 
-V4 compatibility for the **Transform API** is accessible via the [Data Hub Registration API](https://datahub-spec.s3.eu-central-1.amazonaws.com/registration_v4.html) under the **Endpoints** section.
+V4 compatibility for the **Transform API** is accessible via the [Registration API](https://datahub-spec.s3.eu-central-1.amazonaws.com/registration_v4.html) under the **Endpoints** section.

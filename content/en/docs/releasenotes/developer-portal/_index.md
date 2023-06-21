@@ -17,11 +17,11 @@ To see the current status of the Mendix Developer Portal and Control Center, see
 
 ## 2023
 
-### June 28th, 2023
+### June 22nd, 2023
 
 #### New Features
 
-* We have introduced [Jira connector](/developerportal/collaborate/jira-connector/) in the Developer Portal, which enables you to connect your Mendix apps to your Jira board.
+* Jira is here! You can now assign your Studio Pro commits to user stories in your Jira board. We offer this functionality as a first public Beta version and welcome your feedback. Read all about the features and how to set it up in our [doc](/developerportal/collaborate/jira-connector/).
 
 ### June 15th, 2023
 

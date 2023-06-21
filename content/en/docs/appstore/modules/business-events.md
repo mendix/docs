@@ -393,6 +393,8 @@ Business Events module exposes configuration via [constants](/refguide/constants
 
 All the constants are part of the Mendix Business Events module.
 
+{{% alert color="warning" %}}Special characters are not allowed in constants. {{% /alert %}}
+
 * `BusinessEvents.ServerUrl` – Configure your Kafka bootstrap servers here as `host1:port1,host2:port2,...`. The setting is used to connect the app.
 * `BusinessEvents.Username` and `BusinessEvents.Password` – The module supports Kafka’s SASL/SCRAM SHA-512 authentication mechanism, and the Kafka cluster should be set up to authenticate clients with this. See [Configuring Kafka Brokers](https://kafka.apache.org/documentation/#security_sasl_scram_brokerconfig) in the Apache Kafka documentation for further instructions.
 * `BusinessEvents.EventBrokerSpace` – This setting helps you group events into Kafka [topics](#topics-channels). With this set, each business event will be put in its own topic. Set the `EventBrokerSpace` value to your environment names (or Kubernetes namespaces) like `test` or `production`. Doing so ensures that when each business event that is defined in an app is deployed to a specific environment, it will have its own topic. For example, an `OrdersReceived` business event defined in an app when deployed to two different environments will have two topics. A topic is named in the form of `businessevents.<channel>.<EventBrokerSpace>`. A channel is written as a UUID and is used to group events.

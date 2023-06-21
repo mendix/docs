@@ -177,7 +177,7 @@ If the Postgres instance is an AWS RDS database, you can [IAM authentication](#d
 
 #### 2.3.1 Postgres (static credentials) {#database-postgres-static}
 
-The Postgres database is an automated, on-demanad database. The Postgres plan offers a good balance between automation, ease of use, and security. It is the most versatile and portable option for production-grade databases.
+The Postgres database is an automated, on-demand database. The Postgres plan offers a good balance between automation, ease of use, and security. It is the most versatile and portable option for production-grade databases.
 If you would like to have more control over database configuration, consider using the [JDBC plan](#database-jdbc) instead.
 If your provider is AWS, [Postgres IAM authentication](#database-postgres-iam) can be used instead - to increase security.
 
@@ -244,8 +244,13 @@ To connect to an Amazon RDS database, the VPC and firewall must be configured to
 
 #### 2.3.2 Postgres (IAM authentication){#database-postgres-iam}
 
-The Postgres database is an automated, on-demanad database. The Postgres plan offers a good balance between automation, ease of use, and security.
+The Postgres database is an automated, on-demand database. The Postgres plan offers a good balance between automation, ease of use, and security.
 [IRSA authentication](https://docs.aws.amazon.com/eks/latest/userguide/iam-roles-for-service-accounts.html) removes static passwords and instead uses IAM roles for authentication.
+
+{{% alert color="info" %}}
+💡 This section provides technical details how IAM authentication works with Postgres.
+If you just need instructions how to get started, the [AWS IAM-based storage walkthrough](#walkthrough-aws-irsa) provides a quickstart guide - to set the Mendix Operator to manage an RDS database and S3 bucket.
+{{% /alert %}}
 
 ##### 2.3.2.1 Prerequisites
 
@@ -642,7 +647,7 @@ If your app is using Mendix 9.22 (or a later version) consider using the [IRSA M
 
 ##### 3.3.1.1 Prerequisites
 
-* An S3 bucket
+* An existing S3 bucket
 * An environment template policy which will be attached to every new environment's user; the policy allows access to the S3 bucket, as in the following example (replace `<bucket_name>` with the S3 bucket name):
 
    ```json
@@ -770,9 +775,14 @@ In the Amazon S3 plan configuration, enter the following details:
 This automated, on-demand option allows to share an existing bucket between environments, and isolates environments from accessing each other's data.
 It's similar to the [Create account with existing policy](#s3-create-account-existing-policy) option, but instead of static credentials, uses IAM roles for authentication.
 
+{{% alert color="info" %}}
+💡 This section provides technical details how IAM authentication works with Postgres.
+If you just need instructions how to get started, the [AWS IAM-based storage walkthrough](#walkthrough-aws-irsa) provides a quickstart guide - to set the Mendix Operator to manage an RDS database and S3 bucket.
+{{% /alert %}}
+
 ##### 3.3.2.1 Prerequisites
 
-* An S3 bucket
+* An existing S3 bucket
 * An environment template policy which will be attached to every new environment's user; the policy allows access to the S3 bucket and RDS database, as in the following example (replace `<bucket_name>` with the S3 bucket name, `<aws_region>` with the database's region, `<account_id>` with your AWS account number, `<database_id>` with the RDS database instance identifier and `<database_user>` with the Postgres superuser account name):
 
     ```json
@@ -912,7 +922,7 @@ It's similar to the [Create account with existing policy](#s3-create-account-exi
 When a new environment is created, the Mendix Operator performs the following actions:
 
 * Create a new IAM role (the *environment role*).
-* Add tags to the *environment role* - these tags will be used as values in IAM policies, and can be used to limit which S3 bucket prefix the environment can access.
+* Add `privatecloud.mendix.com/s3-prefix` and `privatecloud.mendix.com/database-user` tags to the *environment role*. These tags will be used as values in IAM policies, and can be used to limit which S3 bucket prefix the environment can access. Modifying or removing these tags will change the environment's permissions.
 * Create a Kubernetes Service Account and attach it to the *environment role*. This Service Account acts as a replacement for AWS access/secret keys, and can also be used to authenticate with RDS Postgres databases.
 * Create a Kubernetes secret to provide connection details to the new app environment and to automatically configure the new environment.
    Since the app environment will authenticate through an IAM role, this secret will not contain any static passwords - only non-sensitive connection details such as the bucket endpoint and prefix.
@@ -923,6 +933,7 @@ When an existing environment is deleted, the Mendix Operator performs the follow
 
 * (Only if the **Prevent Data Deletion** is not enabled) Delete files from that environment's prefix (directory). Files from other apps (in other prefixes/directories) will not be affected.
 * Delete that environment's IAM role.
+* Delete that environment's Kubernetes Kubernetes Service Account.
 * Delete that environment's Kubernetes blob file storage credentials secret.
 
 ##### 3.3.2.6 Configuring the Plan
@@ -963,7 +974,7 @@ This basic, on-demand option allows you to attach an existing S3 bucket and IAM 
 
 ##### 3.3.3.1 Prerequisites
 
-* An S3 bucket.
+* An existing S3 bucket
 * An **environment** user account, with the following IAM policy (replace `<bucket_name>` with the S3 bucket name):
 
     ```json
@@ -1268,7 +1279,7 @@ Instead, we recommend using the [Create account with existing policy](#s3-create
 
 ##### 3.3.6.1 Prerequisites
 
-* An S3 bucket.
+* An existing S3 bucket
 * An admin user account - with the following policy (replace `<account_id>` with your AWS account number):
 
     ```json
@@ -1347,7 +1358,7 @@ Instead, we recommend using the [Create account with existing policy](#s3-create
 
 ##### 3.3.7.1 Prerequisites
 
-* An S3 bucket.
+* An existing S3 bucket
 * An admin user account - with the following policy (replace `<account_id>` with your AWS account number):
 
     ```json

@@ -21,7 +21,7 @@ To see the current status of the Mendix Developer Portal and Control Center, see
 
 #### Improvements
 
-* We improved our [Portfolio Management](/developerportal/portfolio-management/) tool with the following changes:
+* Our [Portfolio Management](/developerportal/portfolio-management/) tool is now released for GA. At the same time, we also made a few improvements to the tool:
     * We renamed **Projects** to **Initiatives**.
     * You can now request access to restricted portfolios in your company.
     * Filters in the **Initiatives Overview** are now preserved when switching views.

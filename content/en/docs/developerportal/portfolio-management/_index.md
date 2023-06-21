@@ -89,7 +89,7 @@ On the upper-right corner, you can use the **Filters** to filter initiatives. Us
 
 ### 3.1 Creating a New Initiative {#create-new-initiative}
 
-{{% alert type="info" %}}Both Portfolio Managers and Contributors can create new initiatives. Only Viewers cannot do this action. For more information on roles and permissions, see [Access Management](#access-management).{{% /alert %}}
+{{% alert type="info" %}}Both Portfolio Managers and Contributors can create new initiatives. Only Viewers cannot do this action. For more information on roles and permissions, see the [Access Management](#access-management) section.{{% /alert %}}
 
 To create a new initiative and add details to it, do as follows:
 
@@ -226,7 +226,7 @@ To change your view on the **Initiatives Overview** page, click the drop-down li
 
 #### 3.2.1 Kanban View {#kanban-view}
 
-In Kanban view, all the initiatives are represented by initiative cards, and are categorized in different columns. A column indicates the stage that an initiative is currently in. Clicking on an initiative card opens a [side pane](#view-initiative) that shows initiative details. To move an initiative to a different stage, hover over the initiative card, and then click the **<** or **>** icon on the left or right side of the card.
+In Kanban view, all the initiatives are represented by initiative cards, and are categorized in different columns. A column indicates the stage that an initiative is currently in. Clicking an initiative card opens a [side pane](#view-initiative) that shows initiative details. To move an initiative to a different stage, hover over the initiative card, and then click the **<** or **>** icon on the left or right side of the card.
 {{% alert type="info" %}}A Portfolio Manager can set up custom stages for initiatives on the [Portfolio Settings](#portfolio-settings) page.{{% /alert %}}
 
 To filter initiatives, you can select a filter from the **Filters** drop-down list on the top of the page.
@@ -238,16 +238,16 @@ Each initiative card shows the following information:
 * ① Initiative name
 * ② Ellipsis (**...**) – Clicking this button opens a menu that enables you to [edit](#edit-delete-initiative), [archive](#archive-initiative), or [delete](#edit-delete-initiative) the initiative.
   
-    {{% alert type="info" %}}Both Portfolio Managers and Contributors can edit, archive, or delete an initiative. Only Viewers cannot do these actions. For more information on roles and permissions, see [Access Management](#access-management).{{% /alert %}}
+    {{% alert type="info" %}}Both Portfolio Managers and Contributors can edit, archive, or delete an initiative. Only Viewers cannot do these actions. For more information on roles and permissions, see the [Access Management](#access-management) section.{{% /alert %}}
     
-* ③ Tags for the initiative – these tags are used to classify the initiative (tags can be used, for example, to indicate the types of initiatives)
-* ④ Department – the department to which the initiative belongs
-* ⑤ Calendar icon – hovering over the icon shows the following defined dates of the initiative lifecycle:
-    * **Intake** – the date when the initiative is accepted based on business requirements
-    * **Start** – the date when the first actions are taken to start implementation
-    * **Go-Live** – the date when the app is expected to be up and running
-* ⑥ Icon of the linked app – clicking this shows the information about the Mendix app that is linked with the initiative
-* ⑦ Avatar of the initiative owner – hovering over the avatar shows the name of the initiative owner
+* ③ Tags for the initiative – These tags are used to classify the initiative (tags can be used, for example, to indicate the types of initiatives).
+* ④ Department – This shows the department to which the initiative belongs.
+* ⑤ Calendar icon – Hovering over the icon shows the following defined dates of the initiative lifecycle:
+    * **Intake** – This shows the date when the initiative is accepted based on business requirements.
+    * **Start** – This shows the date when the first actions are taken to start implementation.
+    * **Go-Live** – This shows the date when the app is expected to be up and running.
+* ⑥ Icon of the linked app – Clicking this shows the information about the Mendix app that is linked with the initiative.
+* ⑦ Avatar of the initiative owner – Hovering over the avatar shows the name of the initiative owner.
 
 #### 3.2.2 List View {#list-view}
 
@@ -270,7 +270,7 @@ The list contains the following information:
 * Avatar of the initiative owner – Hovering over the avatar shows the name of the initiative owner.
 * Ellipsis (**...**) – Clicking this button opens a menu that enables you to [edit](#edit-delete-initiative), [archive](#archive-initiative), or [delete](#edit-delete-initiative) the initiative.
   
-    {{% alert type="info" %}}Both Portfolio Managers and Contributors can edit, archive, or delete an initiative. Only Viewers cannot do these actions. For more information on roles and permissions, see [Access Management](#access-management).{{% /alert %}}
+    {{% alert type="info" %}}Both Portfolio Managers and Contributors can edit, archive, or delete an initiative. Only Viewers cannot do these actions. For more information on roles and permissions, see the [Access Management](#access-management) section.{{% /alert %}}
 
 #### 3.2.3 WSJF Prioritization {#wsjf}
 
@@ -285,7 +285,7 @@ The list contains the following information:
 
   {{% alert type="info" %}}A Portfolio Manager can set up custom stages for initiatives on the [Portfolio Settings](#portfolio-settings) page.{{% /alert %}}
 
-* **Business Value** –  This indicates how much business value this initiative will generate. You can select **Highest**, **High**, **Medium**, **Low**, or **Lowest**.
+* **Business Value** – This indicates how much business value this initiative will generate. You can select **Highest**, **High**, **Medium**, **Low**, or **Lowest**.
 * **Time Criticality** – This indicates how time-critical this initiative is. You can select **Highest**, **High**, **Medium**, **Low**, or **Lowest**.
 * **Risk Reduction** – This indicates how much this initiative will help mitigate or reduce future risks. You can select **Highest**, **High**, **Medium**, **Low**, or **Lowest**.
 * **Size** – This is the job size of the initiative. You can select **XL**, **L**, **M**, **S**, or **XS**.
@@ -298,7 +298,7 @@ The list contains the following information:
 * Avatar of the initiative owner – Hovering over the avatar shows the name of the initiative owner.
 * Ellipsis (**...**) – Clicking this button opens a menu that enables you to [edit](#edit-delete-initiative), [archive](#archive-initiative), or [delete](#edit-delete-initiative) the initiative.
   
-    {{% alert type="info" %}}Both Portfolio Managers and Contributors can edit, archive, or delete an initiative. Only Viewers cannot do these actions. For more information on roles and permissions, see [Access Management](#access-management).{{% /alert %}}
+    {{% alert type="info" %}}Both Portfolio Managers and Contributors can edit, archive, or delete an initiative. Only Viewers cannot do these actions. For more information on roles and permissions, see the [Access Management](#access-management) section.{{% /alert %}}
 
 #### 3.2.4 RICE Prioritization {#rice}
 
@@ -326,17 +326,17 @@ The list contains the following information:
 * Avatar of the initiative owner – Hovering over the avatar shows the name of the initiative owner.
 * Ellipsis (**...**) – Clicking this button opens a menu that enables you to [edit](#edit-delete-initiative), [archive](#archive-initiative), or [delete](#edit-delete-initiative) the initiative.
   
-    {{% alert type="info" %}}Both Portfolio Managers and Contributors can edit, archive, or delete an initiative. Only Viewers cannot do these actions. For more information on roles and permissions, see [Access Management](#access-management).{{% /alert %}}
+    {{% alert type="info" %}}Both Portfolio Managers and Contributors can edit, archive, or delete an initiative. Only Viewers cannot do these actions. For more information on roles and permissions, see the [Access Management](#access-management) section.{{% /alert %}}
 
 ### 3.3 Viewing Initiative Details {#view-initiative}
 
 On the **Initiatives Overview** page, if you click an initiative, a side pane opens on the right side to show initiative details.
 
-On the upper-right corner of the pane, there is a link button and an ellipsis button (**…**). Clicking the link button copies the link to the initiative. Clicking the ellipsis button opens a menu that allows you to [edit](#edit-delete-initiative), [archive](#archive-initiative), or [delete](#edit-delete-initiative) the initiative.
+On the upper-right corner of the pane, there is a link button and an ellipsis button (**…**). Clicking the link button copies the link to the initiative. Clicking **...** opens a menu that allows you to [edit](#edit-delete-initiative), [archive](#archive-initiative), or [delete](#edit-delete-initiative) the initiative.
 
 {{% alert type="info" %}}
 
-Both Portfolio Managers and Contributors can edit, archive, or delete an initiative. Only Viewers cannot do these actions. For more information on roles and permissions, see [Access Management](#access-management).
+Both Portfolio Managers and Contributors can edit, archive, or delete an initiative. Only Viewers cannot do these actions. For more information on roles and permissions, see the [Access Management](#access-management) section.
 
 {{% /alert %}}
 
@@ -347,22 +347,22 @@ When you view initiative details, you can only **Post Comment**. You cannot chan
 ### 3.4 Editing or Deleting an initiative {#edit-delete-initiative}
 
 {{% alert type="info" %}}
-Both Portfolio Managers and Contributors can edit or delete an existing initiative. Only Viewers cannot do these actions. For more information on roles and permissions, see [Access Management](#access-management).
+Both Portfolio Managers and Contributors can edit or delete an existing initiative. Only Viewers cannot do these actions. For more information on roles and permissions, see the [Access Management](#access-management) section.
 {{% /alert %}}
 
-To edit or delete an initiative, go to the **Initiatives Overview** page, click the ellipsis button (**...**) for that initiative, and then select **Edit** or **Delete**. Alternatively, you can also click the ellipsis button in the [side pane](#view-initiative) where you view initiative details, and then select **Edit** or **Delete**.
+To edit or delete an initiative, go to the **Initiatives Overview** page, click the ellipsis button (**...**) for that initiative, and then select **Edit** or **Delete**. Alternatively, you can also click **...** in the [side pane](#view-initiative) where you view initiative details, and then select **Edit** or **Delete**.
 
 ### 3.5 Archiving an Initiative {#archive-initiative}
 
 When an initiative is finished or the initiative is not relevant for the current time being, you can archive an initiative.
 
 {{% alert type="info" %}}
-Both Portfolio Managers and Contributors can archive an initiative. Only Viewers cannot do this action. For more information on roles and permissions, see [Access Management](#access-management).
+Both Portfolio Managers and Contributors can archive an initiative. Only Viewers cannot do this action. For more information on roles and permissions, see the [Access Management](#access-management) section.
 {{% /alert %}}
 
 To archive an initiative, perform the following steps:
 
-1. On the **Initiatives Overview** page, click the ellipsis button (**...**) for that initiative, and then select **Archive**. Alternatively, you can also click the ellipsis button (**...**) in the [side pane](#view-initiative) where you view initiative details, and then select **Archive**.
+1. On the **Initiatives Overview** page, click the ellipsis button (**...**) for that initiative, and then select **Archive**. Alternatively, you can also click **...** in the [side pane](#view-initiative) where you view initiative details, and then select **Archive**.
 2. In the dialog box that opens, select the reason why the initiative is archived: **Completed**, **Canceled**, **On Hold** or **Other Reason**, and also enter any information that other people should know about this change, and then click **Archive**.
 
     {{< figure src="/attachments/developerportal/portfolio-management/archive-dialog-box.png" >}}
@@ -381,19 +381,19 @@ The list contains the following information:
 
     {{% alert type="info" %}}When you view the details of an archived initiative, you can only **Post Comment**. You cannot edit any other information.{{% /alert %}}
 
-* **Department** – the department to which the initiative belongs
-* **Stage** – which stage the initiative was in when it was archived
-* **Archiving Reason** – the reason why the initiative was archived
-* **Archived Date** – the date when the initiative was archived
-* **Archived By** – the avatar of the user who archived the initiative
-* Ellipsis (**...**) icon – clicking this opens a menu that enables you to [restore](#restore-delete-archived-initiative) or [delete](#restore-delete-archived-initiative) the archived initiative
+* **Department** – This shows the department to which the initiative belongs.
+* **Stage** – This shows which stage the initiative was in when it was archived.
+* **Archiving Reason** – This shows reason why the initiative was archived.
+* **Archived Date** – This shows the date when the initiative was archived.
+* **Archived By** – This shows the avatar of the user who archived the initiative.
+* Ellipsis (**...**) icon – Clicking this opens a menu that enables you to [restore](#restore-delete-archived-initiative) or [delete](#restore-delete-archived-initiative) the archived initiative.
   
-    {{% alert type="info" %}}Both Portfolio Managers and Contributors can restore or delete an archived initiative. Only Viewers cannot do these actions. For more information on roles and permissions, see [Access Management](#access-management).{{% /alert %}}
+    {{% alert type="info" %}}Both Portfolio Managers and Contributors can restore or delete an archived initiative. Only Viewers cannot do these actions. For more information on roles and permissions, see the [Access Management](#access-management) section.{{% /alert %}}
 
 ### 4.1 Restoring or Deleting an Archived Initiative {#restore-delete-archived-initiative}
 
 {{% alert type="info" %}}
-Both Portfolio Managers and Contributors can restore or delete an archived initiative. Only Viewers cannot do these actions. For more information on roles and permissions, see [Access Management](#access-management).
+Both Portfolio Managers and Contributors can restore or delete an archived initiative. Only Viewers cannot do these actions. For more information on roles and permissions, see the [Access Management](#access-management) section.
 {{% /alert %}}
 
 To restore or delete an archived initiative, go to the **Archive** page, click the ellipsis button (**...**) for that initiative, and then select **Restore** or **Delete**. After you restore an archived initiative, it goes back to the [Initiatives Overview](#initiatives-overview) page.
@@ -402,13 +402,13 @@ Alternatively, to delete an archived initiative, you can also click the ellipsis
 
 ## 5 Access Management {#access-management}
 
-The **Access Management** page shows all the users who have access to this portfolio. Portfolio Managers can see [access requests](#access-requests) by clicking the **Access Requests** tab. This tab is not visible for Contributors, and Viewers.
+The **Access Management** page shows all the users who have access to this portfolio. Portfolio Managers can see [access requests](#access-requests) by clicking the **Access Requests** tab. This tab is not visible for Contributors and Viewers.
 
 {{< figure src="/attachments/developerportal/portfolio-management/access-management.png" >}}
 
 There are three access roles: **Portfolio Managers**, **Contributors**, and **Viewers**.
 
-The table below shows the permissions of Portfolio Managers, Contributors and Viewers:
+The table below shows the permissions of Portfolio Managers, Contributors, and Viewers:
 
 | Action | Portfolio Manager | Contributor | Viewer |
 | --- | --- | --- | --- |
@@ -448,7 +448,7 @@ For users outside your company, they need to accept their invitation. Once they 
 
 For users within your company, if they have a Mendix account, their **Status** will be **Active** immediately; and if they do not have an Mendix account, their **Status** will change from **Pending** to **Active** after they create a Mendix account.
 
-### 5.2 Editing and Deleting a User
+### 5.2 Editing and Removing a User
 
 At the end of the row, click the ellipsis button (**...**), and then select the corresponding action. To update the permissions and the role of a user, click **Edit**. To remove a user from the portfolio, click **Remove**.
 
@@ -465,8 +465,8 @@ The **Access Requests** page shows all open access requests for the portfolio wi
 * **Requested By** – This is the name and avatar of the user who requested access.
 * **Role** – This is the access role that was requested by the user.
 * **Date** – This is the date when the request was made.
-* **Reject** - Clicking this rejects the request.
-* **Approve** - Clicking this approves the request and gives the user access to the portfolio.
+* **Reject** – Clicking this rejects the request.
+* **Approve** – Clicking this approves the request and gives the user access to the portfolio.
 
 ## 6 Portfolio Settings {#portfolio-settings}
 

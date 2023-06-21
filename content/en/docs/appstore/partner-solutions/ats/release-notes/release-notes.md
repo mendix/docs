@@ -11,12 +11,9 @@ weight: 100
 
 ### Fixes
 
-* We updated Certificate Authority certificates to fix connect issues with custom selenium hubs.
-* We released a new extension to fix the removal of the Web Recorder from the Chrome Store.
-
-### Other
-
-* We changed our e-mail service.
+* We updated the certificate authority certificates to fix connect issues with custom Selenium hubs.
+* We released a new extension to fix the removal of the ATS Web Recorder from the Google Chrome Web Store.
+* We changed our email service.
 
 ## 2.28.12
 

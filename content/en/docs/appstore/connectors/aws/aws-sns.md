@@ -103,15 +103,11 @@ To subscribe to a topic in your AWS environment and receive email notifications 
 9. Double-click the **Subscribe** activity and configure the **Credentials** parameter by doing the following steps:
     1. Click **Edit parameter value**.
     2. Edit the **Credentials** parameter and let it auto-fill.
-10. In the **Toolbox** pane, search for the **Create Object** activity, drag it onto the microflow area, and position it between the **Credentials_GenerateFromConstants** and the **Subscribe** activity.
-11. Double-click the **Subscribe** activity and configure the **SubscribeRequest** parameter by doing the following steps:
+10. Double-click the **Subscribe** activity and configure the **SubscribeRequest** parameter by doing the following steps:
     1. Click **Edit parameter value**.
     2. Edit the **SubscribeRequest** parameter and let it auto-fill.
-12. Double-click the **Subscribe** activity and configure the **SubscribeRequest** parameter by doing the following steps:
-    1. Click **Edit parameter value**.
-    2. Edit the **SubscribeRequest** parameter and let it auto-fill.
-13. Open a page that contains a data view to show all the parameters of the `SubscribeResponse`, which is the response of the **Subscribe** activity.
-14. Configure a method to trigger the *ACT_Subscribe_Email* microflow. For example, you can associate the activity with a custom button on a page in your app. For an example of how this can be implemented, see [Creating a Custom Save Button with a Microflow](/refguide/creating-a-custom-save-button/).
+11. Open a page that contains a data view to show all the parameters of the `SubscribeResponse`, which is the response of the **Subscribe** activity.
+12. Configure a method to trigger the *ACT_Subscribe_Email* microflow. For example, you can associate the activity with a custom button on a page in your app. For an example of how this can be implemented, see [Creating a Custom Save Button with a Microflow](/refguide/creating-a-custom-save-button/).
  
 #### 3.2.2 Sending Messages to a Topic
 

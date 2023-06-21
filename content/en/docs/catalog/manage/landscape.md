@@ -26,7 +26,7 @@ This visual display of registered assets will enable you to:
 * Discover the context of the data being shared by the network of nodes for a service and the deploying app
 * From the displayed network of dependencies, ascertain the differences between the services by seeing how the shared data is used
 
-You can access the Landscape from [Catalogb](https://catalog.mendix.com/) by clicking the **Landscape** tab.
+You can access the Landscape from [Catalog](https://catalog.mendix.com/) by clicking the **Landscape** tab.
 
 ## 2 Catalog Landscape in Detail
 
@@ -48,10 +48,6 @@ When you click any of the nodes or connections, the metadata pane on the right d
 
 You can pan around the landscape and and zoom using the mouse. You can also collapse both the search pane and the metadata pane so that the full screen area is available for viewing.
 
-When you click the **Catalog** tab the **Details** screen of the item selected is displayed in the search pane.
-
-{{< figure src="/attachments/data-hub/data-hub-catalog/manage-data-sources/data-hub-landscape/landscape.png" alt="sample employee" >}}
-
 ### 2.3 Nodes
 
 Registered apps and services are depicted in the Landscape as nodes from the definitions in the registered service metadata. The icons for each of these nodes identifies the the source application, for example, Mendix and Siemens.
@@ -62,10 +58,6 @@ Data sources or the published OData services are depicted as a round node with t
 
 {{% alert color="info" %}}The application icon that is shown for the data source and application in the asset details screen and the search results is not shown for the data source in Landscape. Here the service technology is indicated.{{% /alert %}}
 
-The following is an example of a selected service node exposing three datasets:
-
-{{< figure src="/attachments/data-hub/data-hub-catalog/manage-data-sources/data-hub-landscape/node-service.png" alt="service  note" >}}
-
 #### 2.3.2 Apps
 
 Apps are displayed as square icons with the application icon and the environment that the app is deployed to is given below the app name. The example below shows a non-Mendix app (**TeamcenterMfg**), a Mendix app (**CompanyCarDemo**) which are deployed to the Mendix Free App environment, **Sandbox**. The third example shows another Mendix app (**HRSample_App**) deployed to the production environment which has a custom icon. For further information on adding a custom icon to your app see [Changing the Application Icon](/catalog/manage/curate/#application-icon).
@@ -75,8 +67,6 @@ Apps are displayed as square icons with the application icon and the environment
 ### 2.4 Dependencies
 
 The relationships and dependencies between apps, published services, and consuming apps are represented by connecting lines that also display the datasets that are published by a service and consumed by consuming apps. These are illustrated and described in the following examples:
-
-{{< figure src="/attachments/data-hub/data-hub-catalog/manage-data-sources/data-hub-landscape/dependencies.png" alt="dependencies" >}}
 
 * **Solid gray line** – This links an app and the services published from the app in the specified environment. In the example, the selected app **LEGO-Machinesafety Data** has 2 published services, which includes**Published_OData_MS 1.0.0**.
 * **Broken gray line with an arrow (consume line)** – This indicates that an app is consuming from the service it is linked to by the line. The direction of the dependency is indicated by the direction of the arrow: the consuming app makes a call to the OData service for data from the publishing app—the arrow points to the service (or data source) which is "pulling" the data. The service will "get" the data associated with the endpoint of the consumed dataset from the publishing app.
@@ -96,5 +86,3 @@ Clicking a node will display details of the node in the **Metadata** pane. You c
 ### 2.6 Consumed Datasets
 
 If you click the **Entity** icon on the consume line, the names of the datasets that are being consumed from the service will be shown in the right panel.
-
-{{< figure src="/attachments/data-hub/data-hub-catalog/manage-data-sources/data-hub-landscape/consume-arrow-entities-list.png" alt="arrow convention" >}}

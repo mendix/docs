@@ -13,9 +13,7 @@ You can still use [Stories](/developerportal/collaborate/stories/) in addition t
 
 ## 1 Introduction
 
-The Mendix Epics API allows you to retrieve, create, update, and archive the Sprint, stories, and tasks in your Mendix apps.
-
-{{% todo %}}Does the API support archiving?{{% /todo %}}
+The Mendix Epics API allows you to retrieve, create, and update stories as well as get all the statuses that can be possibly assigned to stories.
 
 ## 2 Authentication{#authentication}
 

@@ -185,7 +185,7 @@ For details on the technical configuration of webhooks for stories and sprints, 
 Only users with the **App Settings** permission can view the history.
 {{% /alert %}}
 
-The **History** page presents the collaboration actions for the app. On this page, you can see what change was made, who performed it, and when it occurred:
+The **History** tab presents the collaboration actions for the app. On this page, you can see what change was made, who performed it, and when it occurred:
 
 {{< figure src="/attachments/developerportal/collaborate/general-settings/history.png"   width="700"  >}}
 

@@ -26,7 +26,7 @@ The **Consumed OData Service** document contains the following information:
 
     {{% alert color="info" %}} Studio Pro will always show the **Update** option for the **Consumed OData Service** where you can check if an update is available. In the Data Hub search and **App**  pane, when a different contract is detected at the service end-point, this will be indicated with an update arrow for the service. For further information on updating and switching services see the [Updating or Switching a Consumed OData service](#updating) section of this document. {{% /alert %}}
 
-    {{% alert color="info" %}}In the **Data Hub** pane, consumed services have an **Update** icon (a blue arrow) if they have an update available.{{% /alert %}}
+    {{% alert color="info" %}}In the [Integration pane](/refguide/integration-pane/], consumed services have an **Update** icon (a blue arrow) if they have an update available.{{% /alert %}}
 
 ### 2.1 Service URL {#service-url}
 
@@ -196,7 +196,7 @@ See the [Limitations](/refguide/consumed-odata-services/#consumed-odata-service-
 
 ##### 4.3.1.1 Integration pane
 
-In the **Data Hub** pane, in search results and in the **Used in your App** section an update arrow indicate if there is a different contract at the Catalog endpoint:
+In the [Integration pane](/refguide/integration-pane/], in search results and in the **Used in your App** section an update arrow indicate if there is a different contract at the Catalog endpoint:
 
 {{< figure src="/attachments/refguide/modeling/integration/consumed-odata-services/consumed-odata-service/update-available.png" alt="update service app-pane" >}}
 
@@ -220,7 +220,7 @@ In the example given in the [Consuming from Service Endpoints](#consume-service-
 
 #### 4.3.3 Switching Consumed Services
 
-A published OData services that is deployed to multiple environments or is published with major service updates (and therefore deployed to a different endpoint) will be shown as separate items in the search results of the **Data Hub** pane.
+A published OData services that is deployed to multiple environments or is published with major service updates (and therefore deployed to a different endpoint) will be shown as separate items in the search results of the [Integration pane](/refguide/integration-pane/].
 
 In the following example, the consumed **Orders** version **1.0.0** deployed to **Test** environment is consumed in the app. However,  the same service is deployed to the **Acceptance** environment:
 
@@ -236,7 +236,7 @@ To consume the service deployed to the **Acceptance environment**, follow these 
 
     {{< figure src="/attachments/refguide/modeling/integration/consumed-odata-services/consumed-odata-service/switch-environment.png" alt="major change environment" >}}
 
-3. The consumed service is be consumed from the new selected environment. The information on the **Consumed OData Service** document will display the changed service details and the **Data Hub** pane now displays that you are consuming from the selected environment:
+3. The consumed service is be consumed from the new selected environment. The information on the **Consumed OData Service** document will display the changed service details and the [Integration pane](/refguide/integration-pane/] now displays that you are consuming from the selected environment:
 
     {{< figure src="/attachments/refguide/modeling/integration/consumed-odata-services/consumed-odata-service/switch-new-environment.png" alt="major change environment dh pane"   width="300"  >}}
 

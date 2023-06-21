@@ -13,7 +13,7 @@ Datasets are maintained and updated in the source application. You can integrate
 
 External entities can be used with local entities. However, as the datasets are maintained in the source applications, not all properties can be changed in the consuming app.
 
-To follow how to add external entities from the **Data Hub** pane, see [Adding External Entities](#adding-external-entities).
+To follow how to add external entities from the [Integration pane](/refguide/integration-pane/], see [Adding External Entities](#adding-external-entities).
 
 {{% alert color="info" %}}
 A license is required to use Mendix Data Hub and connect to external data sources through consumed OData services in your apps.
@@ -23,7 +23,7 @@ A license is required to use Mendix Data Hub and connect to external data source
 
 To add an external entity to your app model, follow these steps:
 
-1. In the the Domain Model of you app model search in the **Data Hub** pane for the entity or data source that you want to use in your app. 
+1. In the the Domain Model of you app model search in the [Integration pane](/refguide/integration-pane/] for the entity or data source that you want to use in your app. 
 
     {{% alert color="info" %}}In the [Catalog](/catalog/search/), an OData service may be registered multiple times with different version numbers or deployed to different environments, all exposing the entity (dataset) that you may want to use. Search the Catalog first and find the one most relevant to the requirements for your app.{{% /alert %}}
 
@@ -41,12 +41,12 @@ When you drag an entity that is associated with an entity from the same service 
 
 For further information, see [Consumed OData Service](/refguide/consumed-odata-service/).
 
-The consumed entities of the current app are listed in the **Used in your App** section of the **Data Hub** pane:
+The consumed entities of the current app are listed in the **Used in your App** section of the [Integration pane](/refguide/integration-pane/]:
 
 {{< figure src="/attachments/refguide/modeling/domain-model/external-entities/data-hub-app.png" alt=" Virtual Entity and OData Service files" >}}
 
 {{% alert color="info" %}}
-When a new version of a consumed service becomes available in the Catalog, this will be indicated in the **Data Hub** pane by an update arrow next to the service name. For more information, see the [Updating or Switching a Consumed OData Service](/refguide/consumed-odata-service/#updating) section in *Consumed OData Service*.
+When a new version of a consumed service becomes available in the Catalog, this will be indicated in the [Integration pane](/refguide/integration-pane/] by an update arrow next to the service name. For more information, see the [Updating or Switching a Consumed OData Service](/refguide/consumed-odata-service/#updating) section in *Consumed OData Service*.
 {{% /alert %}}
 
 You can make local changes to the properties of external entities that only affect how the data is used and presented in the consuming app. All other properties are defined in the source application and cannot be changed. When multiple external entities from the same OData service are used in a module or app, associations between the entities (made in the source app) will automatically be made in the local module.
@@ -183,7 +183,7 @@ Learn more about adding authentication information to a consumed OData service:
 
 ## 4 External Entity Limitations {#limitations}
 
-External entities are the endpoints that are defined in the published OData service from the originating app. The consumed OData service document displays the values from the service metadata when the external entity is used through the **Data Hub** pane. The datasets associated with the entities are maintained in the originating apps.
+External entities are the endpoints that are defined in the published OData service from the originating app. The consumed OData service document displays the values from the service metadata when the external entity is used through the [Integration pane](/refguide/integration-pane/]. The datasets associated with the entities are maintained in the originating apps.
 
 External entities cannot be committed. Use the [Send External Object activity](/refguide/send-external-object/) to persist changes to external entities. This means the following:
 

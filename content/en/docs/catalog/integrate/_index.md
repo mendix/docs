@@ -7,4 +7,9 @@ aliases:
 ---
 ## 1 Introduction
 
-This section explores how you can use the Catalog with Mendix Studio Pro to easily integrate data in your applications.
+This section explores how you can use Catalog and Studio Pro to create apps with shared data. See the following guides:
+
+* [Share Data Between Apps](/catalog/share-data/)
+* [Write Data to Another App](/catalog/write-data)
+
+

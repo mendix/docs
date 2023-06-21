@@ -22,7 +22,7 @@ The OData protocol allows data to be read, created, updated, and deleted. Mendix
 
 Note the following terminology differences described in the table below:
 
-| Data Hub | Studio Pro |
+| Catalog | Studio Pro |
 | -------- | ---------- |
 | Create   | Insertable |
 | Read     | Readable   |

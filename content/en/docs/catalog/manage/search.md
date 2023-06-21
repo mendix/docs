@@ -9,7 +9,7 @@ aliases:
 
 ## 1 Introduction
 
-Finding the right data to use in your app development is made easier using the search functionality in the Catalog. The details of registered data assets can be accessed using the [Data Hub Search API](/apidocs-mxsdk/apidocs/catalog-apis/), or viewed in the [Asset details](#search-details) screen of the Catalog or the [Data Hub pane](/refguide/data-hub-pane/) in Studio Pro.  This document describes how you can search in Catalog.
+Finding the right data to use in your app development is made easier using the search functionality in the Catalog. The details of registered data assets can be accessed using the [Search API](/apidocs-mxsdk/apidocs/catalog-apis/), or viewed in the [Asset details](#search-details) screen of the Catalog or the [Data Hub pane](/refguide/data-hub-pane/) in Studio Pro.  This document describes how you can search in Catalog.
 
 ## 2 Search Using the API {#search-api}
 
@@ -223,7 +223,7 @@ A successful `GET` call results in a `200` status code and a JSON response body 
 
 ### 3.1 Details of Registered Assets
 
-You can start searching from the [Data Hub Home](#data-hub-home) page, or click the [Catalog](#search-tab) tab to go to the **Search** pane and **Asset Details** screen. This section describes important properties of registered assets: data sources, datasets, and attributes.
+You can start searching from the [Home](#data-hub-home) page, or click the [Catalog](#search-tab) tab to go to the **Search** pane and **Asset Details** screen. This section describes important properties of registered assets: data sources, datasets, and attributes.
 
 {{% alert color="info" %}}The **Dataset** is the name of the **Entity set** of a published **Entity** in Mendix Studio Pro, which by default, is the entity name with an "s" appended to it. For example, if an entity named `Customer` is published in an OData service, the **Dataset** name in the **Search Details** will be `Customers`.{{% /alert %}}
 
@@ -251,7 +251,7 @@ The description that is included as part of the published service metadata. This
 In Studio Pro, when publishing an OData service, it is possible to specify a summary of the service and a description. Only the description is included in the OData service contract document and registered in the Catalog.
 {{% /alert %}}
 
-### 3.2 Searching for Assets from Data Hub Home {#data-hub-home}
+### 3.2 Searching for Assets {#data-hub-home}
 
 When searching in the Catalog, the following fields are searched:
 
@@ -261,9 +261,7 @@ When searching in the Catalog, the following fields are searched:
 * Attribute: Name, Description
 * Association: Name
 
-From the **Data Hub Home** page, you can search the Catalog in the following ways:
-
-{{< figure src="/attachments/data-hub/share-data/data-hub-home.png" alt="data hub home page" >}}
+From the **Home** page, you can search the Catalog in the following ways:
 
 * Type a search term in the search box and click **Search** (search strings must be at least 3 alphanumeric characters)
 * Click one of the *tags* given in the search suggestions
@@ -275,8 +273,6 @@ Any of the above actions will take you to the **Search** screen.
 ### 3.3 Search Screen {#search-tab}
 
 The **Search** screen is divided into the [search](#search-pane) pane on the left, the [asset details](#search-details) of the selected asset in the center panel, and the [asset metadata](#metadata) panel on the right.
-
-{{< figure src="/attachments/data-hub/data-hub-catalog/search/search-details-page.png" alt="search details" >}}
 
 ### 3.4 Search Pane {#search-pane}
 
@@ -308,7 +304,7 @@ The number of items satisfying the search criteria (search string plus filters) 
 * Popularity of the service (the number of connections)
 * **Validated** assets before non-validated ones
 
-When an item in the search results is selected, the **Landscape** tab shows the network of connections and dependencies of the selected item in the [Data Hub Landscape](/data-hub/data-hub-landscape/).
+When an item in the search results is selected, the **Landscape** tab shows the network of connections and dependencies of the selected item in the [Landscape](/data-hub/data-hub-landscape/).
 
 ### 3.5 Selected Asset Details {#search-details}
 
@@ -403,7 +399,7 @@ See the [Curation Bar](#curation-bar) section below for changing **Discoverabili
 The following discoverability values can be set:
 
 * **Discoverable** – all users in your company can see and consume the asset in the Catalog and Studio Pro 
-* **Non-Discoverable** – the asset is only visible to owners, Data Hub curators, and the Mendix Admin in the Catalog; it is not included in the search results in the **Data Hub** pane of Studio Pro, or any other client of the Catalog API.
+* **Non-Discoverable** – the asset is only visible to owners, curators, and the Mendix Admin in the Catalog; it is not included in the search results in the [Data Hub pane](/refguide/data-hub-pane/) of Studio Pro, or any other client of the Catalog API.
 
 #### 3.6.5 Validated
 
@@ -445,6 +441,6 @@ Here is an example:
 
 When you click **Download**, the following file is downloaded: `DataHub_SAP_Intelligence_1.0_OData4.zip`. This ZIP file has the folder `DataHub_SAP_Intelligence_1.0_OData4`, which contains the all the metadata files that define the service.
 
-### 3.10 Viewing Search Results in the Data Hub Landscape
+### 3.10 Viewing Search Results in the Landscape
 
 When an item is selected in the search results pane, you can click the [Landscape](/data-hub/data-hub-landscape/) tab to see the network of connections and dependencies for the selected asset. This provides a graphical representation to indicate the context and relevance of a selected item and the data for the exposed datasets.

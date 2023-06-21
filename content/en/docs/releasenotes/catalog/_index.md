@@ -1,15 +1,23 @@
 ---
 title: "Catalog"
-url: /releasenotes/data-hub/
+url: /releasenotes/catalog/
 description: "Release notes for updates to the Mendix Catalog"
 tags: ["data hub", "Catalog", "data hub Landscape"]
-weight: 30
+weight: 37
+aliases:
+    - /releasenotes/data-hub/
 #This document is mapped to the landing page, update the link there if renaming or moving the doc file.
 ---
 
-These release notes cover changes made to the [Mendix Catalog](/catalog/).
+These release notes cover changes made to the [Catalog](/catalog/).
 
 ## 2023
+
+### June 22nd, 2023
+
+#### Improvements
+
+* We improved the clarity and accuracy of Catalog UI texts.
 
 ### June 15th, 2023
 

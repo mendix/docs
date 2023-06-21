@@ -81,21 +81,13 @@ The completion condition is evaluated after each user selects an outcome. When a
 
 This property determines the maximum number of targeted users that are required to select an outcome to complete a multi-user task.
 
-##### 2.5.1.1 All
+Possible options of participant input are described in the table below:
 
-All targeted users should select an outcome to complete the multi-user task.
-
-##### 2.5.1.2 Absolute Number {#absolute-number}
-
-The specified amount of targeted users should select an outcome to complete the multi-user task.
-
-##### 2.5.1.3 Percentage
-
-The specified percentage of targeted users should select an outcome to complete the multi-user task.
-
-The result of applying the percentage will be rounded upwards to the nearest mathematical integer value.
-
-For example, when there are 19 targeted users and the **Percentage** is set to `50%`, then 10 users need to select an outcome to complete the multi-user task.
+| Participant Input | Description |
+| --- | --- |
+| **All Target Users** | All targeted users should select an outcome to complete the multi-user task. |
+| **Absolute Number** | The specified amount of targeted users should select an outcome to complete the multi-user task. |
+| **Percentage** | The specified percentage of targeted users should select an outcome to complete the multi-user task. The result of applying the percentage will be rounded upwards to the nearest mathematical integer value. For example, when there are 19 targeted users and the **Percentage** is set to `50%`, then 10 users need to select an outcome to complete the multi-user task. |
 
 #### 2.5.2 Decision Method
 
@@ -161,7 +153,7 @@ You can refer to the following properties settings for the example above:
 * **Veto outcome**: `DoNotHire`
 * **Outcomes**: `Hire`, `DoNotHire`
 
-Another example is when a group of five experts needs to decide whether a change request is `Minor` or `Major`. If any one of the five experts decides it is a major request, the change request will be `Major`. The input from the other four experts is not relevant anymore. If all five of them decide it is a minor change request, the final multi-user task outcome will be `Minor`. In this case, the outcome `Major` is the veto outcome.
+Another example is when a group of five experts needs to decide whether a change request is `Minor` or `Major`. In this example, the outcome `Major` is the veto outcome. If any one of the five experts decides it is a major request, the change request will be `Major`. The input from the other four experts is not relevant anymore. If all five of them decide it is a minor change request, the final multi-user task outcome will be `Minor`.
 
 You can refer to the following properties settings for the second example above:
 
@@ -181,19 +173,18 @@ The completion condition is evaluated after each user selects an outcome. When o
 
 ##### 2.5.2.3 Majority {#majority}
 
-Select this rule when a task should result in an outcome based on an absolute or relative majority number of votes. The number of required votes is defined as the result of the [participant input](#participant-input).
+Select this decision method when a task should result in an outcome based on an absolute or relative majority number of votes. The number of required votes is defined as the result of the [participant input](#participant-input).
 
 ###### 2.5.2.3.1 Majority type
 
 This property determines the majority type that will be applied when using the majority decision method.
 
-###### 2.5.2.3.1.1 More than half {#more-than-half}
+Possible options of majority type are described in the table below:
 
-When one of the outcomes reaches more than 50% of all possible this votes (absolute majority), the task is competed with this outcome.
-
-###### 2.5.2.3.1.2 Most chosen {#most-chosen}
-
-When one of the outcomes gets the most votes (relative majority) and additional votes will not result in another outcome getting more votes, the task is competed with this outcome.
+| Majority Type | Description |
+| --- | --- |
+| **More than half** | When one of the outcomes reaches more than 50% of all possible votes (absolute majority), the task is competed with this outcome. |
+| **Most chosen** | When one of the outcomes gets the most votes (relative majority) and additional votes will not result in another outcome getting more votes, the task is competed with this outcome. |
 
 ###### 2.5.2.3.2 Fallback outcome {#majority-fallback-outcome}
 
@@ -205,11 +196,11 @@ This outcome will be the final outcome of the multi-user task in the following c
 For example, if the targeted user count is `10` and you set the absolute number to `20` as the **Participant input**, then majority can never be reached and the fallback outcome will be used as the final outcome to complete the task.
 
 {{% alert color="info" %}}
-A fallback outcome be both a selectable outcome and a fallback outcome at the same time.
+A fallback outcome can be both a selectable outcome and a fallback outcome at the same time.
 {{% /alert %}}
 
 {{% alert color="info" %}}
-When [more than half](#more-than-half) is selected as the **Majority type**, the [fallback outcome](#majority-fallback-outcome) is only required when there are 3 or more outcomes defined.
+When the **Majority type** is set to **More than half**, the fallback outcome is only required when there are 3 or more outcomes defined.
 {{% /alert %}}
 
 {{% alert color="info" %}}
@@ -218,20 +209,20 @@ The completion condition is evaluated after each user selects an outcome. If a u
 
 ###### 2.5.2.3.3 Example
 
-The following example shows how you can use **Majority** as the **Decision method** and using [more than half](#more-than-half) or [most-chosen](#most-chosen) as the majority type:
+The following example shows how it works when the decision method is **Majority** and the majority type is **More than half** or **Most chosen**.
 
-There are 50 targeted users and 10 required votes from users. The possible outcomes are A, B and fallback outcome C. 5 users have voted for outcome A, 4 users have voted for outcome B and 0 users voted for outcome C. This means that the task has 9 completed votes, and 1 vote is left to that will determine the outcome.
+There are 50 targeted users and 10 required votes from users. The possible outcomes are A, B and C. 5 users have voted for outcome A, 4 users have voted for outcome B and 0 users voted for outcome C. This means that the task has 9 completed votes, and 1 vote is left to determine the final outcome of the task.
 
 | Outcomes | A   | B   | C   |
 |----------|-----|-----|-----|
 | Votes    | 5   | 4   | 0   |
 
-* In case the majority type is [more than half](#more-than-half), there is no absolute majority yet, as this would require more than half (6 votes) of the users to select the same outcome. In this example, when the next user votes for outcome A, the task will be completed with outcome A as this is the first outcome to receive the absolute majority of the available votes. In case the last user completes the task with outcome B or C, the task will be completed with the [fallback outcome](#majority-fallback-outcome) as there is no absolute majority possible.
-* In case the majority type is [most-chosen](#most-chosen), when last user selects outcome A or C the task will be completed with outcome A, since it has most votes of all outcomes. If the user selects outcome B, the task completes with the [fallback outcome](#fallback-outcome) because both A and B have 5 votes.
+* In case the majority type is **More than half**, there is no absolute majority yet, as this would require more than half (6 votes) of the users to select the same outcome. In this example, when the next user votes for outcome A, the task will be completed with outcome A, as this is the first outcome to receive the absolute majority of the available votes. In case the last user completes the task with outcome B or C, the task will be completed with the fallback outcome, as there is no absolute majority possible.
+* In case the majority type is **Most chosen**, when the last user selects outcome A or C, the task will be completed with outcome A, since it has most votes of all outcomes. If the user selects outcome B, the task completes with the fallback outcome because both A and B have 5 votes.
 
 {{% alert color="info" %}}
-* When there are 2 outcomes for a task, there is no difference between [more than half](#more-than-half) and [most-chosen](#most-chosen).
-  {{% /alert %}}
+When there are only 2 outcomes for a task, there is no difference between the majority type **More than half** and **Most chosen**.
+{{% /alert %}}
 
 You can refer to the following properties settings for this example:
 
@@ -244,30 +235,25 @@ You can refer to the following properties settings for this example:
 
 ##### 2.5.2.4 Threshold {#threshold}
 
-Select this rule when a task should complete with an outcome when the number of votes for this outcome reaches the amount of votes set as the threshold value. The number of required votes is defined as the result of the [participant input](#participant-input).
+Select this decision method when a task should complete with an outcome when the number of votes for this outcome reaches the amount of votes set as the threshold value. The number of required votes is defined as the result of the [participant input](#participant-input).
 
 ###### 2.5.2.4.1 Threshold type {#threshold-type}
 
 This property determines the threshold type that will be applied when using the threshold decision method.
 
-###### 2.5.2.4.1.1 Percentage
+Possible options of threshold type are described in the table below:
 
-Of the specified percentage of targeted users defined in the participant input section, a task will be completed with an outcome when it reaches the specified percentage of votes. The result of applying the percentage will be rounded upwards to the nearest mathematical integer value.
-
-For example, when the [participant input](#participant-input) results in 10 target users and the threshold value is set to `50%`, a user task will complete with the outcome that gets 5 votes.
-
-###### 2.5.2.4.1.2 Absolute number
-
-Of the specified percentage of targeted users defined in the participant input section, a task will be completed with an outcome when it reaches the specified amount of votes.
-
-For example, when the [participant input](#participant-input) results in 10 target users and the threshold value is set to `5`, a user task will complete with the outcome that gets 5 votes.
+| Threshold Type | Description |
+| --- | --- |
+| **Percentage** | Of the specified users defined in the participant input section, a task will be completed with an outcome when it reaches the specified percentage of votes. The result of applying the percentage will be rounded upwards to the nearest mathematical integer value.<br><br>For example, when the [participant input](#participant-input) results in 10 target users and the threshold value is set to `50%`, a user task will complete with the outcome that gets 5 votes. |
+| **Absolute number** | Of the specified users defined in the participant input section, a task will be completed with an outcome when it reaches the specified amount of votes.<br><br>For example, when the [participant input](#participant-input) results in 10 target users and the threshold value is set to `5`, a user task will complete with the outcome that gets 5 votes. |
 
 {{% alert color="info" %}}
-A threshold of `51%` is the same as using **Majority** as the **Decision method** with [more than half](#more-than-half) as the **Majority type**
+A threshold of `51%` is the same as using **Majority** as the **Decision method** with **More than half** as the **Majority type**.
 {{% /alert %}}
 
 {{% alert color="info" %}}
-A threshold of `100%` is the same as using **Consensus** as the **Decision method**
+A threshold of `100%` is the same as using **Consensus** as the **Decision method**.
 {{% /alert %}}
 
 ###### 2.5.2.4.2 Fallback outcome {#threshold-fallback-outcome}
@@ -291,7 +277,7 @@ The completion condition is evaluated after each user selects an outcome. If a u
 
 The following example shows how you can use **Threshold** as the **Decision method** using **Percentage** as the [threshold type](#threshold-type):
 
-There are 50 targeted users and 10 required votes from users. The possible outcomes are A, B and fallback outcome C and the threshold value is `60%`. 3 users have voted for outcome A, 4 users have voted for outcome B and 1 user voted for outcome C. This means that in total, 8 users have voted and there are a maximum of 2 votes to go to complete the task.
+There are 50 targeted users and 10 required votes from users. The possible outcomes are A, B and C. The threshold value is `60%`. 3 users have voted for outcome A, 4 users have voted for outcome B, and 1 user voted for outcome C. This means that in total, 8 users have voted and there are a maximum of 2 votes to go to complete the task.
 
 | Outcomes | A   | B   | C   |
 |----------|-----|-----|-----|

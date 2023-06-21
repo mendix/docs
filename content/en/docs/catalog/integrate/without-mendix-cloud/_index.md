@@ -1,8 +1,8 @@
 ---
 title: "Register Data Sources without Mendix Cloud"
-description: "Describes how to use Mendix Data Hub and external entities for local deployments, or for private cloud or on-premises solutions."
+description: "Describes how to use Catalog and external entities for local deployments, or for private cloud or on-premises solutions."
 url: /catalog/data-sources-without-mendix-cloud/
-linktitle: "Data Hub on Private Cloud/On-Prem"
+linktitle: "Data Sources and Catalog on Private Cloud/On-Prem"
 weight: 80
 tags: ["entity", "external entities", "private cloud", "on prem", "local", "studio pro", "consumed OData Service", "Data Hub on prem", "Data Hub private cloud", Data Hub Tencent"]
 aliases:
@@ -11,9 +11,7 @@ aliases:
 ---
 ## 1 Introduction
 
-This guide explains how to use [external entities](/refguide/external-entities/) and the [Catalog](/catalog/) when deploying locally, to a Private Cloud, the Tencent Cloud, or an On-Premises solution.
-
-If you are deploying to the Mendix Cloud, check out the [Data Hub Guide](/data-hub/) documentation, and the Studio Pro guide to [external entities](/refguide/external-entities/).
+This guide explains how to use [published OData services](/refguide/published-odata-services/) and [external entities](/refguide/external-entities/) with or without the [Catalog](/catalog/) when deploying locally, to a Private Cloud, the Tencent Cloud, or an On-Premises solution.
 
 ## 1.1 Use Cases
 
@@ -22,13 +20,13 @@ This document covers the following use cases:
 * You are developing both the service and the client on a local machine, without deploying to a cloud environment (deploying locally)
 * You are deploying to a [Private Cloud](/developerportal/deploy/private-cloud/) (including the [Tencent Cloud](/developerportal/deploy/tencent-deploy/)) or [On-Premises](/developerportal/deploy/on-premises-design/), rather than the Mendix Cloud
 
-In these cases, you can still publish and consume external entities. This guide will explain how to work with the Catalog and external entities by taking a step back and distinguishing between design time (when you are modeling your app) and runtime (after it has been deployed to a development server) for Data Hub.
+In these cases, you can still publish and consume external entities. This guide will explain how to work with the Catalog and external entities by taking a step back and distinguishing between design time (when you are modeling your app) and runtime (after it has been deployed to a development server).
 
-## 2 Data Hub in Design Time{#dh-design-time}
+## 2 Using Data in Design Time{#dh-design-time}
 
 During design time, when you are [modeling](/refguide/modeling/) your app, you are finding, registering, or importing data source [metadata](#metadata) into Studio Pro. This metadata is in the form of contracts, and is registered automatically in the Catalog if your application is hosted on the Mendix Cloud. See the [Metadata Contracts](#metadata) section below for more details.
 
-If you will be deploying locally, to a Private Cloud, or On-Premises, you can add an app, the environments on which it is deployed, and the [published OData resource](/refguide/published-odata-resource/) it provides using the metadata contract. For general resources on using Data Hub when modeling your app during design time, check out [Share Data Between Apps](/data-hub/share-data/) and [Write Data to Another App](/catalog/write-data/).
+If you will be deploying locally, to a Private Cloud, or On-Premises, you can add an app, the environments on which it is deployed, and the [published OData resource](/refguide/published-odata-resource/) it provides using the metadata contract. For general resources on using data when modeling your app during design time, check out [Share Data Between Apps](/data-hub/share-data/) and [Write Data to Another App](/catalog/write-data/).
 
 ### 2.1 Metadata Contracts {#metadata}
 
@@ -106,15 +104,9 @@ To update a data set in Studio Pro, do the following:
 
 See the [Update or Switch](/refguide/consumed-odata-service/#update-switch) section of *Consumed OData Service*  to see how this works for automatically registered contracts.
 
-## 3 Data Hub in Runtime {#dh-runtime}
+## 3 Using Data in Runtime {#dh-runtime}
 
-During runtime, after you have deployed your app to a development server, the exchange of external entities via OData services occurs between publishing and consuming apps. Anyone who deploys to a Private Cloud or On-Premises can consume the OData resources that are set up when [using Data Hub in design time](#dh-design-time). The Catalog is not involved during runtime.
+During runtime, after you have deployed your app to a development server, the exchange of external entities via OData services occurs between publishing and consuming apps. Anyone who deploys to a Private Cloud or On-Premises can consume the OData resources that are set up when [using data in design time](#dh-design-time). The Catalog is not involved during runtime.
 
 {{% alert color="info" %}}
 Publishing and consuming services need to have network access to each other, but do not necessarily need to be on cloud or network. {{% /alert %}}
-
-## 4 Read More
-
-* [Data Hub Guide](/data-hub/)
-* [Catalog](/catalog/)
-* [Data Hub Architecture](https://www.mendix.com/evaluation-guide/app-capabilities/integration/data-hub-architecture/) in the Evaluation Guide

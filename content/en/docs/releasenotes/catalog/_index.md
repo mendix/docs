@@ -9,7 +9,7 @@ aliases:
 #This document is mapped to the landing page, update the link there if renaming or moving the doc file.
 ---
 
-These release notes cover changes made to the [Mendix Catalog](/catalog/).
+These release notes cover changes made to the [Catalog](/catalog/).
 
 ## 2023
 

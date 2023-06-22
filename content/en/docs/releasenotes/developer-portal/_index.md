@@ -19,13 +19,21 @@ To see the current status of the Mendix Developer Portal and Control Center, see
 
 ### June 22nd, 2023
 
+#### New Features
+
+* Jira is here! You can now assign your Studio Pro commits to user stories in your Jira board. We offer this functionality as a Beta version and welcome your feedback. Read all about the features and how to set it up in our [doc](/developerportal/collaborate/jira-connector/).
+
 #### Improvements
 
 * Our [Portfolio Management](/developerportal/portfolio-management/) tool is now released for GA. At the same time, we also made a few improvements to the tool:
-    * We renamed **Projects** to **Initiatives**.
-    * You can now request access to restricted portfolios in your company.
-    * Filters in the **Initiatives Overview** are now preserved when switching views.
-
+  * We renamed **Projects** to **Initiatives**.
+  * You can now request access to restricted portfolios in your company.
+  * Filters in the **Initiatives Overview** are now preserved when switching views.
+* We simplified the [app invitation flow](/developerportal/collaborate/team/#inviting). If someone from your own company invites you to an app that also belongs to your company, you will no longer have to accept the pending  invitation. Instead, you will be immediately added to the team.
+* You can now see everyone who was invited to the app and by whom. You will find this information on the [History](/developerportal/collaborate/general-settings/#history) tab of the **General Settings** page.
+* We had a close look at the messages we post on the [History](/developerportal/collaborate/team/) tab of the **Team** page and revised some of them to make them more readable.
+* You can now see all pending invitations to your app on the [Team](/developerportal/collaborate/team/) page.
+* We fixed an issue where, under certain circumstances, the app logo was not updated in Studio Pro after you changed it in the [General Settings](/developerportal/collaborate/general-settings/) page.
 ### June 15th, 2023
 
 #### New Features

@@ -8,7 +8,7 @@ tags: ["swagger", "swagger.json", "OpenAPI 3.0", "documentation", "paths", "oper
 
 ## 1 Introduction
 
-Every [published REST service](/refguide/published-rest-service/) is automatically documented. The system generates a *openapi.json* file that conforms to the [OpenAPI 3.0 specification](https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.0.1.md). This file can be [saved from Studio Pro](/refguide/published-rest-service/#export-openapi-documentation) or downloaded from */rest-doc/{location}/openapi.json*.
+Every [published REST service](/refguide/published-rest-service/) is automatically documented. The system generates a *openapi.json* file that conforms to the [OpenAPI 3.0 specification](https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.0.1.md). This file can be [saved from Studio Pro](/refguide/published-rest-service/#export-openapi-documentation) or downloaded from */rest-doc/{location}/openapi.json*, where *{location}* is the location of the REST service, for instance *rest/myservice/v1*.
 
 If you need to communicate with the service from another app, you can use the *openapi.json* file to generate an API in many different systems, including Microsoft Visual Studio, React, Angular, and Java. This makes it easy to communicate between your different apps.
 

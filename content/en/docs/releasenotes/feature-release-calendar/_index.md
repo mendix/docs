@@ -55,12 +55,12 @@ The new features were divided into these major themes, which are described in th
 | Mendix Connect - External Entities | Released for GA [Jun 27, 2023](/releasenotes/studio-pro/10.0/) [**VERIFY TO REFRAME/REMOVE**] |
 | Mendix Connect - Business Events & Event Broker | Released for GA [Jun 27, 2023](/releasenotes/studio-pro/10.0/) [**VERIFY TO REFRAME/REMOVE**] |
 | Machine Learning Kit | Released for GA [Jun 27, 2023](/releasenotes/studio-pro/10.0/) [**WILL GO GA - NEED TO ADD NOTE**] |
-| Solutions Kit - Protected Modules | Released for GA [Jun 27, 2023](/releasenotes/studio-pro/10.0/) [**VERIFY TO REFRAME/REMOVE**] |
-| Solutions Kit - Solution Lifecycle Management | Released for GA [Jun 27, 2023](/releasenotes/studio-pro/10.0/) [**VERIFY TO REFRAME/REMOVE**] |
+| Solutions kit - protected modules | Released for GA [Jun 27, 2023](/releasenotes/studio-pro/10.0/) [**VERIFY RELEASE NOTE ADDED**] |
+| Solutions kit - solution lifecycle management | Released for GA [Jun 27, 2023](/releasenotes/studio-pro/10.0/) [**VERIFY RELEASE NOTE ADDED**] |
 | Mendix Connect - Database Connector | GA: Q3 2023 |
 | Mendix Connect - REST Connector | GA: Q4 2023 |
 | Studio Pro Extensibility | Private Beta: Q3 2023<br>GA: TBD |
-| Solutions Kit - Adaptation Insights | Private Beta: Q4 2023<br>GA: TBD |
+| Solutions kit - Adaptation Insights | Private Beta: Q4 2023<br>GA: TBD |
 | Mendix Connect - External Actions | GA: TBD |
 
 ## 5 Multi-Cloud Deployment

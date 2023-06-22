@@ -11,7 +11,7 @@ aliases:
 
 ## 1 Introduction
 
-The Landscape presents a graphical view of the registered OData services in your Catalog. It provides a landscape visualization of items registered in the [Catalog](/catalog/) and their relationships with apps that consume the datasets that they connect to. In the Landscape, the nodes are the runtime instances of applications (or, more specifically, the deployments of apps in specific environments) and the published OData services from the apps. All public services that are issued are also shown in the Landscape.
+The Landscape View presents a graphical view of the registered OData services in your [Catalog](/catalog/). It provides a landscape visualization of items registered in the Catalog, and their relationships with apps that consume the datasets that they connect to. In the Landscape, the nodes are the runtime instances of applications (or, more specifically, the deployments of apps in specific environments) and the published OData services from the apps. All public services that are issued are also shown in the Landscape.
 
 In the Landscape, you will see, at a glance, the network of deployments of the apps publishing OData services and those consuming them. It enhances searching for suitable data sources in the Catalog by showing the following:
 
@@ -26,7 +26,7 @@ This visual display of registered assets will enable you to:
 * Discover the context of the data being shared by the network of nodes for a service and the deploying app
 * From the displayed network of dependencies, ascertain the differences between the services by seeing how the shared data is used
 
-You can access the Landscape from [Catalog](https://catalog.mendix.com/) by clicking the **Catalog** tab **Landscape View**.
+You can access the Landscape from [Catalog](https://catalog.mendix.com/) by clicking the **Catalog** tab > **Landscape View**.
 
 ## 2 Catalog Landscape in Detail
 

@@ -9,9 +9,13 @@ weight: 60
 
 ## 1 Introduction
 
-[**ADD INTRO CONTENT, DIAGRAM, AND ALT TEXT**]
+[**ADD ALT TEXT**]
 
-{{< figure src="/attachments/releasenotes/mx-world-2021/innovations.png" alt="Announcements are _______" >}}
+At the Mendix 10 launch event on June 27th, 2023, there were a number of announcements for features that Mendix is releasing. This document contains the calendar of expected release dates for these features.
+
+The new features were divided into these major themes, which are described in the sections below:
+
+{{< figure src="/attachments/releasenotes/calendar/themes.png" alt="Announcements are _______" >}}
 
 {{% alert color="info" %}}
 "GA" means General Availability for all users. A GA release is different than a Beta release. For more information, see [Beta Releases](/releasenotes/beta-features/).
@@ -21,28 +25,62 @@ weight: 60
 
 | Capability or Feature | Expected Release |
 | --- | --- |
-| __ | __ |
+| Portfolio Management | GA June 27 |
+| Jira Integration | Public beta June 22<br>GA Q4 2023 |
+| App Insights | GA August 12th |
+| Community Spaces | Beta June 2023<br>GA Q3 2023 | 
 
 ## 3 Developer Experience
 
 | Capability or Feature | Expected Release |
 | --- | --- |
-| __ | __ |
+| Mac support | Public Beta 10.6 |
+| Studio Pro redesign | GA 10.0 |
+| Improved properties | GA 10.0 |
+| Git version control (without SVN support) | GA 10.0 |
+| Insights into commits by peers| GA 10.3 |
+| Start from spreadsheet | GA 10.0 |
+| Rich design properties | GA 10.3 |
+| PDF generator | Public Beta 10.0 (and 9.18+)<br>GA 10.2 |
+| Visual data filters | GA 10.3 |
+| Custom icons support | GA 10.0 |
+| Flexible page urls | GA 10.0 |
+| Mendix Chat | GA 10.6 |
+| Validation Bot | GA 10.0 |
+| Best Practices Bot | GA 10.0 |
+| Workflow enhancements (Multi User Task, Wait for Notification) | GA 10.0 |
+| Mixed online and offline data | GA 10.6 |
 
 ## 4 Composability
 
 | Capability or Feature | Expected Release |
 | --- | --- |
-| __ | __ |
+| Mendix Connect - Database Connector | GA 10.2 |
+| Mendix Connect - REST Connector | TBD |
+| Mendix Connect - External Entities | GA 10.0 |
+| Mendix Connect - External Actions | GA 10.x |
+| Mendix Connect - Business Events & Event Broker | GA 10.0 |
+| ML Kit | GA 10.0 |
+| Studio Pro Extensibility | Private Beta 10.3 |
+| Solutions Kit - Protected Modules | GA: 10.0 |
+| Solutions Kit - Solution Lifecycle Management | GA: 10.0 |
+| Solutions Kit - Adaptation Insights | Private beta: CQ4 2023 |
 
 ## 5 Multi-Cloud Deployment
 
 | Capability or Feature | Expected Release |
 | --- | --- |
-| __ | __ |
+| Multi-Region Fail-over | GA on July 1st, 2023 |
+| WebHooks | Released for GA on June 15, 2023 |
+| Pipelines | Public Beta: CQ4, 2023 |
+| Mendix on AWS EKS | Released for GA in February 2023 |
+| Private Mendix Platform |
 
 ## 6 Governance & Control
 
 | Capability or Feature | Expected Release |
 | --- | --- |
-| __ | __ |
+| Landscape Overview | Public Beta: Q3, 2023 |
+| Dependency Governance  Public Beta: CQ4, 2023 |
+| Cloud Self Service | Release 1.0 as Private Beta: Released May 2023 |
+| BYO IDP | Released for GA in June 2023 |

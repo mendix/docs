@@ -35,7 +35,7 @@ On the **Portfolio Landscape Overview** page, you can create a new portfolio as 
 
 1. On the upper-right corner of the page, click **New Portfolio**. The **New Portfolio** dialog box opens.
 2. Enter **Portfolio Name** and **Description** for the new portfolio.
-3.  For **Privacy Settings**, select **Private** or **Restricted**:
+3. For **Privacy Settings**, select **Private** or **Restricted**:
 
     * **Private** – If the portfolio is private, it is not discoverable in the **Company Portfolios** section of the [Portfolio Landscape Overview](#portfolio-landscape) page in the Portfolio Management app. People who want to access a private portfolio need an invitation.
 
@@ -247,7 +247,7 @@ The list contains the following information:
 
 * **Project name** – Clicking this opens a [side pane](#view-project) that shows project details.
 * **Department** – This shows the department to which the project belongs.
-*  **Stage** – This shows the stage the project is currently in.
+* **Stage** – This shows the stage the project is currently in.
    
     {{% alert type="info" %}}A Portfolio Manager can set up custom stages for projects on the [Portfolio Settings](#portfolio-settings) page.{{% /alert %}}
     
@@ -360,7 +360,7 @@ The **Archived Projects** page shows all the projects that are archived. You can
 
 The list contains the following information:
 
-*  **Project Name** – Clicking it opens a side pane that shows the details of the archived project as well as why the project was archived, additional comments, who archived the project, and when.
+* **Project Name** – Clicking it opens a side pane that shows the details of the archived project as well as why the project was archived, additional comments, who archived the project, and when.
 
     {{% alert type="info" %}}When you view the details of a archived project, you can only **Post Comment**. You cannot edit any other information.{{% /alert %}}
 
@@ -421,7 +421,7 @@ The table below shows the permissions of Portfolio Managers, Contributors and Vi
 1. Go to **Access Management**.
 2. On the upper-right corner, click **Add New Users**.
 3. In the dialog box, enter the **Email Address** of the user who you want to invite. They can be someone within your company or outside your company. For users outside your company, their names and profile pictures are not displayed.
-4.  Select an **Access Role** for the user – **Portfolio Manager**, **Contributor**, or **Viewer**. This determines the user's access level to all the projects in this portfolio.
+4. Select an **Access Role** for the user – **Portfolio Manager**, **Contributor**, or **Viewer**. This determines the user's access level to all the projects in this portfolio.
 5. Click **Add to List**.
 6. Repeat steps 2 and 4 until you add all the users.
 7. Click **Send Invites**.
@@ -452,14 +452,14 @@ On the **Portfolio Settings** page, Portfolio Managers can change the following 
 
 * **Portfolio Name** – Click **Edit Portfolio Details** to change the portfolio name.
 * **Portfolio Description** – Click **Edit Portfolio Details** to change the portfolio description.
-*  **Privacy Settings** – You can set the settings to **Private** or **Restricted**.
+* **Privacy Settings** – You can set the settings to **Private** or **Restricted**.
 
     * **Private** – A private portfolio is not discoverable in the **Company Portfolios** section of the [Portfolio Landscape Overview](#portfolio-landscape) page in the Portfolio Managent app. People who want to access a private portfolio need an invitation.
     * **Restricted** – A restricted portfolio is discoverable in the **Company Portfolios** section of the [Portfolio Landscape Overview](#portfolio-landscape) page in the Portfolio Management app. People who want to access a private portfolio need an invitation.
 
     {{% alert color="info" %}}If the toggle on the [Privacy Requests](/developerportal/control-center/#privacy-requests) tab is turned on in the Control Center, a Mendix Admin needs to approve any change of **Privacy Settings**. In that case, a Mendix Admin will receive a notification about your change request and can approve or reject your request from the Control Center. You can cancel a pending request by clicking **Cancel Request**.{{% /alert %}}
 
-*  **Stages** – Click the **^** button or the **v** button to move a stage upwards or downwards.
+* **Stages** – Click the **^** button or the **v** button to move a stage upwards or downwards.
 
     {{< figure src="/attachments/developerportal/portfolio-management/move-upwards-downwards.png" >}}
 

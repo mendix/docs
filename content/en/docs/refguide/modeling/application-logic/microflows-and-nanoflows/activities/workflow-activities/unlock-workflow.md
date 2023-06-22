@@ -15,11 +15,9 @@ This activity can only be used in **Microflows**.
 The **Unlock workflow** activity can be used to unlock a [workflow](/refguide/workflows/), i.e. a workflow definition. 
 If the workflow is unlocked, new instances of the workflow can be created.
 
-{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/workflow-activities/unlock-workflow/unlock-workflow.jpg" >}}
-
 {{% alert color="warning" %}} 
 
-When you try the unlock the workflow which is not locked, it will result in a Runtime error. For information on how to handle the error, see [Error Handling in Microflows](/refguide/error-handling-in-microflows/).
+When you try to unlock the workflow which is not locked, it will result in a Runtime error. For information on how to handle the error, see [Error Handling in Microflows](/refguide/error-handling-in-microflows/).
 
 {{% /alert %}}
 
@@ -46,11 +44,15 @@ You can open a dialog box to configure this action by clicking the ellipsis (**â
 
 You can also open the dialog box by double-clicking the activity in the microflow or right-clicking the activity and selecting **Properties**.
 
-### 3.1 Workflow {#workflow}
+### 3.1 Input Type {#workflow}
+
+This option allows you to choose between a workflow document (the one that you usually select in the **App Explorer** of your app) and a workflow object provided by the Runtime) to target the workflow you want to unlock. 
+
+### 3.2 Workflow {#workflow}
 
 The workflow that is unlocked by this activity. 
 
-### 3.2 Unpause Instances {#workflow}
+### 3.3 Unpause Instances {#workflow}
 
 With this option, all paused running workflow instances are reverted to their previous state. Workflow instances that are not currently paused are not impacted.
 For more information on workflow state transitions, see the [Workflow State Transitions Upon Locking and Unlocking](/refguide/lock-workflow/#workflow-state-transitions) section in *Lock Workflow*.

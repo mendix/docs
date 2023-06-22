@@ -219,7 +219,7 @@ If you have made any of the above modifications, please follow the following ste
 
 * [Native Custom Variables](#native-custom-variables)
 * [Native Custom Styling](#native-custom-styling)
-* [Native Additonal Custom Styling](#native-additional-custom-styling)
+* [Native Additional Custom Styling](#native-additional-custom-styling)
 * [Native Design Properties](#native-design-properties)
 
 #### 2.4.1 Native Custom Variables {#native-custom-variables}

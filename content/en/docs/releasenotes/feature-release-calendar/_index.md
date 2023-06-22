@@ -1,7 +1,7 @@
 ---
 title: "Feature Release Calendar"
 url: /releasenotes/feature-release-calendar/
-tags: ["mendix world", "announcements", "features", "feature release", "products", "features and products", "calendar"]
+tags: ["mendix world", "announcements", "features", "feature release", "products", "features and products", "calendar", "new"]
 weight: 60
 #notoc: true
 #layout: wide
@@ -76,8 +76,8 @@ If you want to watch the keynote speech in which these announcements were made, 
 | --- | --- |
 | Studio Pro modernization | Released for GA on [Sep 28th, 2021](/releasenotes/studio-pro/9.6/#studio-pro-new-design) |
 | Team Server Git (Mendix Cloud) | Released for GA on [Mar 29th, 2022](/releasenotes/studio-pro/9.12/#team-server-git) |
-| BYO Git (Bring Your Own) | Currently in Public Beta<br/>GA: Apr 2023 |
-| Studio Pro dark theme | Currently in Public Beta <br />GA: TBD |
+| BYO Git (Bring Your Own) | Released for GA on [Mar 28th, 2023](/releasenotes/studio-pro/9.24/#private-git) |
+| Studio Pro dark mode | Currently in Public Beta <br />GA: TBD |
 
 ## 8 Data Hub 2.0
 

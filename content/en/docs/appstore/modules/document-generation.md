@@ -7,9 +7,13 @@ tags: ["marketplace", "marketplace component", "document generation", "platform 
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
+{{% alert color="warning" %}}
+This module is currently in Public Beta and should be used for testing purposes only.
+{{% /alert %}}
+
 ## 1 Introduction
 
-The Document Generation module allows you to generate pixel-perfect PDF documents based on regular pages in your app.
+The [Document Generation](https://marketplace.mendix.com/link/component/211553) module allows you to generate pixel-perfect PDF documents based on regular pages in your app.
 
 This module uses the document generation service on the Mendix Cloud to convert any regular web page in your app into a PDF document. The result is similar to what you would get when using the "Save as PDF" feature in the print dialog box of your browser. 
 
@@ -23,11 +27,11 @@ When running on the Mendix Cloud, the document generation service on the Mendix 
 
 ### 1.1 Features
 
-- Generate pixel-perfect PDF documents based on regular pages in your app.
-- Make use of the full capabilities of the page editor, including the use of snippets, text templates, conditional visibility based on expressions, dynamic classes, etc.
-- Support adding any existing web widget to your document, or creating your own widgets and using them in your documents.
-- Use “Instant Update” during local development, which allows you to see changes to your documents immediately without having to do a full restart of your app.
-- Generate documents using a synchronous or asynchronous approach. In the asynchronous action, the result object is available instantly, the content is added at a later stage.
+* Generate pixel-perfect PDF documents based on regular pages in your app.
+* Make use of the full capabilities of the page editor, including the use of snippets, text templates, conditional visibility based on expressions, dynamic classes, etc.
+* Support adding any existing web widget to your document, or creating your own widgets and using them in your documents.
+* Use “Instant Update” during local development, which allows you to see changes to your documents immediately without having to do a full restart of your app.
+* Generate documents using a synchronous or asynchronous approach. In the asynchronous action, the result object is available instantly, the content is added at a later stage.
 
 ### 1.2 Security
 
@@ -39,29 +43,25 @@ We do not store pages or documents at any time in the process.
 
 ### 1.3 Limitations
 
-{{% alert color="warning" %}}
-This module is still in a Beta version and should be used for testing purposes only.
-{{% /alert %}}
-
 The document generation functionality is under active development. While we cannot guarantee that there will not be any breaking changes in future releases, we will clearly and timely communicate any breaking changes. We will build in backwards compatibility wherever possible.
 
-- Currently, PDF is the only supported document export format.
-- The `Generate PDF from page` action does not support multiple page parameters.
-- We use a fixed 30 second timeout for the page to finish loading and rendering. A timeout exception is thrown if the page content did not finish loading within 30 seconds.
-- We currently do not enforce strict rate limits. However, take into account the following guidelines:
-  - Only set `Wait for result` parameter to *true* for direct user actions. Do not set it to *true* for batch processing. Under heavy load, requests that wait for the result may fail due to strict timeout limitations. 
-  - For batch processing, do not exceed 25 documents per minute, to ensure stable performance.
-- Objects that are created in the microflow that contains the `Generate PDF from page` action are not available to use in your document. This is also applicable for changes made to existing objects. The reason is that those changes are not persisted to the database until the whole microflow has finished. The document generation service will access your document in its own context, and therefore have no access to the non-persisted changes.
-- For local development, we use the Chrome or Chromium executable that is available on the development machine. Even though we have not observed these yet, there might be minor differences in PDF output locally vs. when using the cloud service.
-- For deployment, currently only Mendix Cloud is supported. Other deployment scenarios will be supported at a later stage.
-- When you deploy your app, it needs to be accessible to our cloud service. This requires access to the DocGen request handler which can be configured in the Cloud Portal. If your app is configured to restrict access, for example using IP whitelisting and/or client certificates, our cloud service will not be able to reach your app and the module will not work properly.
-- The access (and refresh) tokens used to secure requests to the cloud service are stored unencrypted in the app database. No user roles have read access to these tokens and all communication with the cloud service is encrypted by requiring HTTPS. However, do consider this when sharing a backup of the database with other developers. We will introduce encryption at a later stage.
+* Currently, PDF is the only supported document export format.
+* The `Generate PDF from page` action does not support multiple page parameters.
+* We use a fixed 30 second timeout for the page to finish loading and rendering. A timeout exception is thrown if the page content did not finish loading within 30 seconds.
+* We currently do not enforce strict rate limits. However, take into account the following guidelines:
+    * Only set `Wait for result` parameter to *true* for direct user actions. Do not set it to *true* for batch processing. Under heavy load, requests that wait for the result may fail due to strict timeout limitations. 
+    * For batch processing, do not exceed 25 documents per minute, to ensure stable performance.
+* Objects that are created in the microflow that contains the `Generate PDF from page` action are not available to use in your document. This is also applicable for changes made to existing objects. The reason is that those changes are not persisted to the database until the whole microflow has finished. The document generation service will access your document in its own context, and therefore have no access to the non-persisted changes.
+* For local development, we use the Chrome or Chromium executable that is available on the development machine. Even though we have not observed these yet, there might be minor differences in PDF output locally vs. when using the cloud service.
+* For deployment, currently only Mendix Cloud is supported. Other deployment scenarios will be supported at a later stage.
+* When you deploy your app, it needs to be accessible to our cloud service. This requires access to the DocGen request handler which can be configured in the Cloud Portal. If your app is configured to restrict access, for example using IP whitelisting and/or client certificates, our cloud service will not be able to reach your app and the module will not work properly.
+* The access (and refresh) tokens used to secure requests to the cloud service are stored unencrypted in the app database. No user roles have read access to these tokens and all communication with the cloud service is encrypted by requiring HTTPS. However, do consider this when sharing a backup of the database with other developers. We will introduce encryption at a later stage.
 
 ### 1.4 Known issues
 
-- When styling your document, you might see conflicting styles introduced by Atlas Core. These styles are specific to the print media and use the `!important` property. This means you can only override them using `!important` property as well. You can find this property in the file *atlas_core/web/core/\_legacy/bootstrap/_bootstrap.scss*.
-- The `System.Owner` association is currently not set to the user which has run the microflow.
-- Some widgets, such as the [Charts](/appstore/widgets/charts/) widget, might not be fully loaded if they are rendered before all data is available. We check on pending network requests to prevent this, but this is not 100% reliable.
+* When styling your document, you might see conflicting styles introduced by Atlas Core. These styles are specific to the print media and use the `!important` property. This means you can only override them using `!important` property as well. You can find this property in the file *atlas_core/web/core/\_legacy/bootstrap/_bootstrap.scss*.
+* The `System.Owner` association is currently not set to the user which has run the microflow.
+* Some widgets, such as the [Charts](/appstore/widgets/charts/) widget, might not be fully loaded if they are rendered before all data is available. We check on pending network requests to prevent this, but this is not 100% reliable.
 
 ## 2 Installation {#installation}
 
@@ -87,7 +87,7 @@ If you have installed Chrome in a custom location, configure the path to the Chr
 
 ##### 3.1.2 Chromium
 
-If you use Chromium, only use stable releases. The currently supported stable release is [104.0.5109.0](https://storage.googleapis.com/chromium-browser-snapshots/index.html?prefix=Win_x64/1011831). 
+If you use Chromium, only use stable releases. The currently supported stable release is [104.0.5109.0](https://storage.googleapis.com/chromium-browser-snapshots/index.html?prefix=Win_x64/1011831/). 
 
 Download the *chrome-win.zip* package and extract the archive to a location of your choosing. 
 
@@ -96,6 +96,7 @@ Configure the path to the *chrome.exe* executable in the **CustomChromePath** co
 #### 3.2 Running on the Mendix Cloud {#run-on-mendix-cloud}
 
 To allow the module to send and receive document generation requests on your Mendix Cloud environments, you need to perform the following procedures:
+
 1. Enable the DocGen request handler.
 2. Register your app environment.
 
@@ -109,16 +110,16 @@ The steps for each procedure are described in the sections below.
 
     1. Go to the **Environments** page for the app as follows:
 
-       - Go to the [Nodes](https://cloud.home.mendix.com/) page, then in the **My Nodes** list, find the desired app, and then click **Environments**.
-       - Alternatively, go to the [Developer Portal](https://sprintr.home.mendix.com), then in the **My Apps** list, find the desired app, and then click **Environments**.
+       * Go to the [Nodes](https://cloud.home.mendix.com/) page, then in the **My Nodes** list, find the desired app, and then click **Environments**.
+       * Alternatively, go to the [Developer Portal](https://sprintr.home.mendix.com), then in the **My Apps** list, find the desired app, and then click **Environments**.
 
         The app’s environments page opens. The **Deploy** tab shows a list of available environments for your app.
     2. On the **Deploy** tab, click **Details** for the respective environment.
     3. In the specific **Environment Details** page, select the **Network** tab.
     4. Scroll down to **Path Based Access Restrictions** and click **Add**. The **Edit Path Based Access Restriction** dialog box opens.
-    5.  Fill in the fields as follows:
-        - In the **Path** field, enter */docgen/*.
-        - From the **New Restriction Type** drop-down list, select *Allow all access*.
+    5. Fill in the fields as follows:
+        * In the **Path** field, enter */docgen/*.
+        * From the **New Restriction Type** drop-down list, select *Allow all access*.
     6. Click **Save**. The **/docgen/** path is added to the list.
     7. Restart your application for the new request handler to take effect.
 
@@ -192,11 +193,11 @@ We recommend to try to log in as the service user at least once, to verify if th
 
 #### 4.3 Styling Documents
 
-- You can use the **Page break** widget included in this module to structure your documents. The **Page break** widget enables you to add page breaks at any place in your document.
-- You can use the **Page orientation** design property to set the page orientation for your documents. This property is available in the **Design properties** section in the properties for a page.
-- You can use the **Page size** design property to set the page size for your documents. This property is available in the **Design properties** section in the properties for a page.
-- You can use the **Show page numbers** design property to enable page numbers for your documents. At the moment, we only support basic page numbers. We will extend and add support for custom headers and footers at a later stage.
-- For advanced styling, you can use the styling editor in Studio Pro to style your documents, for example by using the `@media print` and `@page` rules in your style sheet.
+* You can use the **Page break** widget included in this module to structure your documents. The **Page break** widget enables you to add page breaks at any place in your document.
+* You can use the **Page orientation** design property to set the page orientation for your documents. This property is available in the **Design properties** section in the properties for a page.
+* You can use the **Page size** design property to set the page size for your documents. This property is available in the **Design properties** section in the properties for a page.
+* You can use the **Show page numbers** design property to enable page numbers for your documents. At the moment, we only support basic page numbers. We will extend and add support for custom headers and footers at a later stage.
+* For advanced styling, you can use the styling editor in Studio Pro to style your documents, for example by using the `@media print` and `@page` rules in your style sheet.
 
 ## 5 Troubleshooting
 
@@ -212,8 +213,8 @@ Verify that the provided email address in the **Email** field matches the userna
 
 If you encounter any of the following error messages:
 
-- "Invalid app"
-- "App not found for the given user"
+* "Invalid app"
+* "App not found for the given user"
 
 Then the provided App ID is either incorrect or that the developer (based on the **Email** and **API key** fields) does not have access to this app
 
@@ -229,9 +230,9 @@ Verify that the **App ID** and **Application URL** fields are correct.
 
 If you encounter any of the following error messages:
 
-- "Domain verification failed, unable to reach app"
-- "Domain verification failed, unable to reach verification endpoint"
-- "Domain verification failed, verification endpoint inactive"
+* "Domain verification failed, unable to reach app"
+* "Domain verification failed, unable to reach verification endpoint"
+* "Domain verification failed, verification endpoint inactive"
 
 Then the cloud service was unable to reach your app.
 
@@ -247,9 +248,9 @@ Verify that the application URL matches the current environment.
 
 If you encounter any of the following error messages:
 
-- "Project verification failed"
-- "Domain verification failed, invalid response from verification endpoint"
-- "Domain verification failed for unknown reason"
+* "Project verification failed"
+* "Domain verification failed, invalid response from verification endpoint"
+* "Domain verification failed for unknown reason"
 
 Then an unexpected error occured.
 
@@ -285,6 +286,6 @@ We recommend you to temporarily set the log level of `DocumentGeneration` log no
 
 If you encounter the message "Failed to load page: TimeoutError: waiting for selector `#content .document-content` failed: timeout 30000ms exceeded" in your runtime logs, this means that a timeout occurred while the browser was waiting for the configured page to finish loading. This could be caused by the following reasons:
 
-- Loading the page failed or took too much time. When this occurs, verify that the page loads successfully and does not trigger any client errors by temporarily adding the page to for example the app navigation.
-- The required `DocumentLayout` or `document-content` class is not used on the page you try to export.
-- The configured service user does not have the applicable access rights to run the page microflow. In this case, there should be a warning in the logs mentioning User `<username>` attempted to run the microflow with action name `<page microflow>`, but does not have the required permissions.
+* Loading the page failed or took too much time. When this occurs, verify that the page loads successfully and does not trigger any client errors by temporarily adding the page to for example the app navigation.
+* The required `DocumentLayout` or `document-content` class is not used on the page you try to export.
+* The configured service user does not have the applicable access rights to run the page microflow. In this case, there should be a warning in the logs mentioning User `<username>` attempted to run the microflow with action name `<page microflow>`, but does not have the required permissions.

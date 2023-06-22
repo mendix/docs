@@ -53,6 +53,7 @@ The following custom settings can be configured:
 | **com.mendix.core.SessionIdCookieName** | Defines the name of the cookie value which represents the session id. Can be useful to change when running in a container which assumes a certain name for the session cookie. | XASSESSIONID |
 | **EnableApacheCommonsLogging** | Some libraries used by the Mendix runtime use [Apache Commons](http://commons.apache.org/) for logging. By default these log messages are suppressed. Set this value to `true` to receive the log messages from these libraries in the Mendix logs. This setting is available in Mendix 8.18.6 and later. | false |
 | **EnableFileDocumentCaching** | Defines whether file documents should be cached. Only enable this if you are sure that the file documents will not contain sensitive information. Images are always cached. This setting is available in Studio Pro 8.18.12 and above.| false |
+| **RequestHandling.AllowLegacyCookies** | Allows violations of RFC 6265 which is enforced since Studio Pro 8.18.25. See  [RFC6265_LEGACY CookieCompliance mode](https://www.eclipse.org/jetty/javadoc/jetty-10/org/eclipse/jetty/http/CookieCompliance.html#RFC6265_LEGACY) for more information. Be aware of the fact that enabling this custom setting exposes your app to CVE-2023-26049. This setting is available in Studio Pro 8.18.25 and above. | false |
 
 ## 3 Log File Settings
 

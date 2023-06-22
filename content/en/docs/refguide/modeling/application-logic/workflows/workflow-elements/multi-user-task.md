@@ -58,7 +58,7 @@ Possible options of this property are described in the table below:
 | Option | Description |
 | --- | --- |
 | XPath | Allows you to filter users who should be assigned to the multi-user task. For example, you can assign a certain task only to users with the Manager user role. You can use attributes of the **User Entity** set in [App Settings](/refguide/app-settings/#workflows). |
-| Microflow | Allows you to assign the multi-user task to certain users. Using microflow you can check, for example, which users have the right to approve multi-user tasks and are currently not on vacation and assign the task only to users who passed the check.<br />The return type of the microflow should be the **User Entity** set in [App Settings](/refguide/app-settings/#workflows). |
+| Microflow | Allows you to assign the multi-user task to certain users. Using microflow you can check, for example, which users have the right to approve multi-user tasks and are currently not on vacation and assign the task only to users who passed the check.<br><br>The return type of the microflow should be the **User Entity** set in [App Settings](/refguide/app-settings/#workflows). |
 | No assignment | Allows you to not assign the multi-user task to certain users immediately. This can be useful when you, for example, want the multi-user task to be created but have an administrator assign it to certain users later. |
 
 In case **Target users using** (an XPath or a microflow) results in an empty list of users (0 users), the workflow fails. For more information on how to handle this kind of issues, see the [Operation](/refguide/change-workflow-state/#operation) section in *Change Workflow State*.
@@ -74,7 +74,7 @@ Specifies the microflow used to assign the multi-user task. This option is displ
 ### 2.5 Completion Condition Section {#completion-condition}
 
 {{% alert color="info" %}}
-The completion condition is evaluated after each user selects an outcome. When a user selects an outcome and this results in the task to be completed, the task will be removed from the inbox of the remaining users as outcomes will not change the final multi-user task outcome.
+The completion condition is evaluated after each user selects an outcome. When a user selects an outcome and this results in the multi-user task to be completed, this multi-user task will be removed from the inbox of the remaining users, as their votes will not change the final outcome of the multi-user task.
 {{% /alert %}}
 
 #### 2.5.1 Participant Input {#participant-input}
@@ -85,21 +85,38 @@ Possible options of participant input are described in the table below:
 
 | Participant Input | Description |
 | --- | --- |
-| **All Target Users** | All targeted users should select an outcome to complete the multi-user task. |
-| **Absolute Number** | The specified amount of targeted users should select an outcome to complete the multi-user task. |
-| **Percentage** | The specified percentage of targeted users should select an outcome to complete the multi-user task. The result of applying the percentage will be rounded upwards to the nearest mathematical integer value. For example, when there are 19 targeted users and the **Percentage** is set to `50%`, then 10 users need to select an outcome to complete the multi-user task. |
+| All target users | All targeted users should select an outcome to complete the multi-user task. |
+| Absolute number | The specified amount of targeted users should select an outcome to complete the multi-user task. |
+| Percentage | The specified percentage of targeted users should select an outcome to complete the multi-user task. The result of applying the percentage will be rounded upwards to the nearest mathematical integer value.<br><br>For example, when there are 19 targeted users and the **Percentage** is set to `50%`, then 10 users need to select an outcome to complete the multi-user task. |
 
 #### 2.5.2 Decision Method
 
 With this property, you specify how the outcomes of the individual users are aggregated into a single multi-user task outcome. This aggregated outcome is used as the final outcome to complete the multi-user task.
 
+{{% alert color="warning" %}}
+If the number of [targeted users](#users) is less than the absolute number specified in the **Participant input** section, it is impossible to complete the multi-suer task and the workflow will fail.
+{{% /alert %}}
+
 ##### 2.5.2.1 Consensus
 
-Select this rule when all users should be in agreement with the provided outcome. That is, they should all select the same outcome. There has to be consensus. When there is no consensus, the multi-user task will complete with the selected [fallback outcome](#fallback-outcome).
+Select this decision method when all users should be in agreement with the provided outcome. That is, they should all select the same outcome. There has to be consensus. When there is no consensus, the multi-user task will complete with the the fallback outcome.
 
-###### 2.5.2.1.1 Example
+###### 2.5.2.1.1 Fallback Outcome {#fallback-outcome}
 
-The following example shows how you can use **Consensus** as the **Decision method**:
+This outcome will be the final outcome of the multi-user task in the following cases:
+
+* If any of the users during consensus decision method selects a different outcome from the rest of the users.
+* If the multi-user task is completed with a final outcome before all required users have completed their task:
+
+  For example, when 5 users need to review a contract (`Approve`, `Reject`) and the first 2 users are not in agreement (one selects `Approve` and the other one selects `Reject`), this multi-user task will be completed with the **Fallback outcome**. The input from the other users will not change the final outcome anymore. The task will no longer appear in their inbox.
+
+{{% alert color="info" %}}
+The fallback outcome should not be an option a user can select on the task page.
+{{% /alert %}}
+
+###### 2.5.2.1.2 Example
+
+The following example shows how it works when the decision method is **Consensus**:
 
 Out of a group of two or more users, two users need to perform the same task: to approve or reject a request. Their decisions are represented by the task outcomes. When the **Decision method** is set to **Consensus**:
 
@@ -115,40 +132,30 @@ You can refer to the following properties settings for this example:
 * **Fallback outcome**: An outcome users can select but it will be selected automatically when there is no consensus (in this example, `NoConsensus`)
 * **Outcomes**: `Approve`, `Reject`, `NoConsensus`
 
-###### 2.5.2.1.2 Fallback Outcome {#fallback-outcome}
-
-This outcome will be the final outcome of the multi-user task in the following cases:
-
-* If any of the users during consensus decision method selects a different outcome from the rest of the users
-* If the number of [targeted users](#users) is less than the [absolute number](#absolute-number) specified in the **Participant input** section:
-
-  For example, if the targeted user count is `10` and you set the absolute number to `20` as the **Participant input**, then consensus can never be reached and fallback outcome will be used as the final outcome to complete the task.
-
-* If the multi-user task is completed with a final outcome before all required users have completed their task:
-
-  For example, when 5 users need to review a contract (`Approve`, `Reject`) and the first 2 users are not in agreement (one selects `Approve` and the other one selects `Reject`), this multi-user task will be completed with the **Fallback outcome**. The input from the other users will not change the final outcome anymore. The task will no longer appear in their inbox.
-
-
-{{% alert color="info" %}}
-The fallback outcome should not be an option a user can select on the task page.
-{{% /alert %}}
-
 ##### 2.5.2.2 Veto {#veto}
 
 Veto decision method requires two outcomes, one of which is the veto outcome. If anyone selects the veto outcome, then the multi-user task will be completed with the veto outcome.
 
-For a multi-user task to complete with the non-veto outcome, all users, as defined in property **Participant input**, need to complete their task by selecting the non-veto outcome.
+For a multi-user task to complete with the non-veto outcome, all users defined in property **Participant input** need to complete their task by selecting the non-veto outcome.
 
-###### 2.5.2.2.1 Examples
+{{% alert color="info" %}}
+The completion condition is evaluated after each user selects an outcome. When one user completes the task by selecting the veto outcome, the multi-user task will be completed with the veto outcome. The task will be removed from the inbox of the remaining users, as their votes will not change the final outcome of the multi-user task.
+{{% /alert %}}
 
-Two examples are provided here to show how you can use **Veto** as the **Decision method**.
+###### 2.5.2.2.1 Veto Outcome
+
+This property defines the [veto](#veto) outcome.
+
+###### 2.5.2.2.2 Examples
+
+Two examples are provided here to show how it works when the decision method is **Veto**.
 
 One example is when a whole team needs to make a joint decision during a hiring process: `Hire` or `DoNotHire`. The candidate receives an offer if the whole team agrees that this person should be hired. When one team member decides the person should not be hired (veto), the outcome of the multi-user task will be `DoNotHire`. As soon as someone decides this is not the right candidate, the rest do not have to make a decision anymore, as their decisions cannot influence the final outcome.
 
 You can refer to the following properties settings for the example above:
 
-* **Targeted users**: All users that need to decide during the hiring process (the whole team)
-* **Participant input**: **All** targeted users
+* **Targeted users**: The users that can perform the task (the whole team)
+* **Participant input**: **All target users**
 * **Decision method**: **Veto**
 * **Veto outcome**: `DoNotHire`
 * **Outcomes**: `Hire`, `DoNotHire`
@@ -163,19 +170,15 @@ You can refer to the following properties settings for the second example above:
 * **Veto outcome**: `Major`
 * **Outcomes**: `Minor`, `Major`
 
-###### 2.5.2.2.2 Veto Outcome
-
-This property defines the [veto](#veto) outcome.
-
-{{% alert color="info" %}}
-The completion condition is evaluated after each user selects an outcome. When one user completes the task by selecting the veto outcome, the multi-user task will be completed with the veto outcome. The task will be removed from the inbox of the remaining users. Their outcomes will not change the final multi-user task outcome.
-{{% /alert %}}
-
 ##### 2.5.2.3 Majority {#majority}
 
 Select this decision method when a task should result in an outcome based on an absolute or relative majority number of votes. The number of required votes is defined as the result of the [participant input](#participant-input).
 
-###### 2.5.2.3.1 Majority type
+{{% alert color="info" %}}
+The completion condition is evaluated after each user selects an outcome. If a user selects an outcome and this results in a majority, the multi-user task will be completed with that outcome. The task will be removed from the inbox of the remaining users, as their votes will not change the final outcome of the multi-user task.
+{{% /alert %}}
+
+###### 2.5.2.3.1 Majority Type
 
 This property determines the majority type that will be applied when using the majority decision method.
 
@@ -183,28 +186,19 @@ Possible options of majority type are described in the table below:
 
 | Majority Type | Description |
 | --- | --- |
-| **More than half** | When one of the outcomes reaches more than 50% of all possible votes (absolute majority), the task is competed with this outcome. |
-| **Most chosen** | When one of the outcomes gets the most votes (relative majority) and additional votes will not result in another outcome getting more votes, the task is competed with this outcome. |
+| More than half | When one of the outcomes reaches more than 50% of all possible votes (absolute majority), the task is competed with this outcome. |
+| Most chosen | As soon as one of the outcomes gets most of the votes (relative majority), the task is completed with this outcome. Adding additional votes will not change the final outcome. Currently, it is also not possible to add additional votes after the task is completed. |
 
-###### 2.5.2.3.2 Fallback outcome {#majority-fallback-outcome}
+###### 2.5.2.3.2 Fallback Outcome {#majority-fallback-outcome}
 
-This outcome will be the final outcome of the multi-user task in the following cases:
-
-* If it is determined that none of the remaining votes will result in a majority.
-* If the number of [targeted users](#users) is less than the [absolute number](#absolute-number) specified in the **Participant input** section:
-
-For example, if the targeted user count is `10` and you set the absolute number to `20` as the **Participant input**, then majority can never be reached and the fallback outcome will be used as the final outcome to complete the task.
+This outcome will be the final outcome of the multi-user task if it is determined that none of the remaining votes will result in a majority.
 
 {{% alert color="info" %}}
 A fallback outcome can be both a selectable outcome and a fallback outcome at the same time.
 {{% /alert %}}
 
 {{% alert color="info" %}}
-When the **Majority type** is set to **More than half**, the fallback outcome is only required when there are 3 or more outcomes defined.
-{{% /alert %}}
-
-{{% alert color="info" %}}
-The completion condition is evaluated after each user selects an outcome. If a user selects an outcome and this results in a majority, the multi-user task will be completed with that outcome. The task will be removed from the inbox of the remaining users as their votes will not change the final multi-user task outcome.
+When the **Majority type** is set to **More than half**, the fallback outcome is only required when there are 2 or more outcomes defined.
 {{% /alert %}}
 
 ###### 2.5.2.3.3 Example
@@ -237,7 +231,11 @@ You can refer to the following properties settings for this example:
 
 Select this decision method when a task should complete with an outcome when the number of votes for this outcome reaches the amount of votes set as the threshold value. The number of required votes is defined as the result of the [participant input](#participant-input).
 
-###### 2.5.2.4.1 Threshold type {#threshold-type}
+{{% alert color="info" %}}
+The completion condition is evaluated after each user selects an outcome. If a user selects an outcome and this results an outcome reaching the threshold, the multi-user task will be completed with that outcome. The task will be removed from the inbox of the remaining users, as their votes will not change the final outcome of the multi-user task.
+{{% /alert %}}
+
+###### 2.5.2.4.1 Threshold Type {#threshold-type}
 
 This property determines the threshold type that will be applied when using the threshold decision method.
 
@@ -245,8 +243,8 @@ Possible options of threshold type are described in the table below:
 
 | Threshold Type | Description |
 | --- | --- |
-| **Percentage** | Of the specified users defined in the participant input section, a task will be completed with an outcome when it reaches the specified percentage of votes. The result of applying the percentage will be rounded upwards to the nearest mathematical integer value.<br><br>For example, when the [participant input](#participant-input) results in 10 target users and the threshold value is set to `50%`, a user task will complete with the outcome that gets 5 votes. |
-| **Absolute number** | Of the specified users defined in the participant input section, a task will be completed with an outcome when it reaches the specified amount of votes.<br><br>For example, when the [participant input](#participant-input) results in 10 target users and the threshold value is set to `5`, a user task will complete with the outcome that gets 5 votes. |
+| Percentage | Of the specified users defined in the participant input section, a task will be completed with an outcome when it reaches the specified percentage of votes. The result of applying the percentage will be rounded upwards to the nearest mathematical integer value.<br><br>For example, when the [participant input](#participant-input) results in 10 target users and the threshold value is set to `50%`, the multi-user task will complete with the outcome that gets 5 votes. |
+| Absolute number | Of the specified users defined in the participant input section, a task will be completed with an outcome when it reaches the specified amount of votes.<br><br>For example, when the [participant input](#participant-input) results in 10 target users and the threshold value is set to `5`, the multi-user task will complete with the outcome that gets 5 votes. |
 
 {{% alert color="info" %}}
 A threshold of `51%` is the same as using **Majority** as the **Decision method** with **More than half** as the **Majority type**.
@@ -256,26 +254,17 @@ A threshold of `51%` is the same as using **Majority** as the **Decision method*
 A threshold of `100%` is the same as using **Consensus** as the **Decision method**.
 {{% /alert %}}
 
-###### 2.5.2.4.2 Fallback outcome {#threshold-fallback-outcome}
+###### 2.5.2.4.2 Fallback Outcome {#threshold-fallback-outcome}
 
-This outcome will be the final outcome of the multi-user task in the following cases:
-
-* If it is determined that it is not possible to reach the threshold with the remaining votes.
-* If the number of [targeted users](#users) is less than the [absolute number](#absolute-number) specified in the **Participant input** section:
-
-For example, if the targeted user count is `10` and you set the absolute number to `20` as the **Participant input**, then the threshold can never be reached and the fallback outcome will be used as the final outcome to complete the task.
+This outcome will be the final outcome of the multi-user task if it is determined that it is not possible to reach the threshold with the remaining votes.
 
 {{% alert color="info" %}}
-A fallback outcome be both a selectable outcome and a fallback outcome at the same time.
-{{% /alert %}}
-
-{{% alert color="info" %}}
-The completion condition is evaluated after each user selects an outcome. If a user selects an outcome and this results an outcome reaching the threshold, the multi-user task will be completed with that outcome. The task will be removed from the inbox of the remaining users as their votes will not change the final multi-user task outcome.
+A fallback outcome can be both a selectable outcome and a fallback outcome at the same time.
 {{% /alert %}}
 
 ###### 2.5.2.4.3 Example
 
-The following example shows how you can use **Threshold** as the **Decision method** using **Percentage** as the [threshold type](#threshold-type):
+The following example shows how it works when the decision method is **Threshold** and the threshold type is **Percentage**.
 
 There are 50 targeted users and 10 required votes from users. The possible outcomes are A, B and C. The threshold value is `60%`. 3 users have voted for outcome A, 4 users have voted for outcome B, and 1 user voted for outcome C. This means that in total, 8 users have voted and there are a maximum of 2 votes to go to complete the task.
 

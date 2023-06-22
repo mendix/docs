@@ -13,13 +13,9 @@ aliases:
 
 ## 1 Introduction
 
-<<<<<<< HEAD:content/en/docs/appstore/connectors/sap/sap-xsuaa-connector.md
 XSUAA is a service provided by the SAP Business Technology Platform (SAP BTP) that will bind to the Mendix application as soon as the application is deployed within the SAP Business Technology Platform (SAP BTP) using the deployment features in the Mendix Developer Portal.
 
 Out of the box, SAP BTP has the SAP external identify provider (IDP) configured as the default IDP. It is possible to use your own (corporate) IDP as an alternative so that you can automatically give access to all the employees of your organization.
-=======
-When you deploy an application to SAP Business Technology Platform (SAP BTP) using the SAP deployment features of the Mendix Developer Portal it is bound automatically to the XSUAA service. This service allows you to use an external **Id**entity **P**rovider (IdP) for a Mendix application. This means that the user can sign on to their app using this IdP instead of having their user credentials stored separately in the Mendix app. This means that they can have a single sign-on (SSO) experience with their application.
->>>>>>> development:content/en/docs/partners/sap/use-sap-xsuaa-connector.md
 
 ### 1.1 Typical Use Cases
 

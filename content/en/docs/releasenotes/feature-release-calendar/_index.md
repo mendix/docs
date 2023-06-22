@@ -15,7 +15,7 @@ At the Mendix 10 launch event on June 27th, 2023, there were a number of announc
 
 The new features were divided into these major themes, which are described in the sections below:
 
-{{< figure src="/attachments/releasenotes/calendar/themes.png" alt="Announcements are _______" >}}
+{{< figure src="/attachments/releasenotes/calendar/themes.png" alt="Themes are continuous collaboration, developer experience, composability, multi-cloud deployment, and governance and control." >}}
 
 {{% alert color="info" %}}
 "GA" means General Availability for all users. A GA release is different than a Beta release. For more information, see [Beta Releases](/releasenotes/beta-features/).
@@ -76,7 +76,7 @@ The new features were divided into these major themes, which are described in th
 | Mendix on AWS EKS | Released for GA [Feb 8, 2023](/releasenotes/developer-portal/mendix-for-private-cloud/#february-8th-2023) |
 | Private Mendix Platform | Currently in Private Beta<br>GA: Q4 2023   |
 
-## 6 Governance & Control
+## 6 Governance and Control
 
 | Capability or Feature | Expected Release |
 | --- | --- |

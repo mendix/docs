@@ -25,31 +25,31 @@ The new features were divided into these major themes, which are described in th
 
 | Capability or Feature | Expected Release |
 | --- | --- |
-| Portfolio Management | GA June 27 |
-| Jira Integration | Public beta June 22<br>GA Q4 2023 |
-| App Insights | GA August 12th |
-| Community Spaces | Beta June 2023<br>GA Q3 2023 | 
+| Portfolio Management | Released for GA [Jun 22, 2023](**ADD RN LINK**) |
+| Jira Integration | Released for Public Beta [Jun 22, 2023](**ADD RN LINK**)<br>GA: Q4 2023 |
+| App Insights | GA: Q3 2023 |
+| Community Spaces | Released for Public Beta [Jun __, 2023](**VERIFY, ADD RN LINK**)<br>GA: Q3 2023 | 
 
 ## 3 Developer Experience
 
 | Capability or Feature | Expected Release |
 | --- | --- |
-| Mac support | Public Beta 10.6 |
-| Studio Pro redesign | GA 10.0 |
-| Improved properties | GA 10.0 |
-| Git version control (without SVN support) | GA 10.0 |
-| Insights into commits by peers| GA 10.3 |
-| Start from spreadsheet | GA 10.0 |
-| Rich design properties | GA 10.3 |
-| PDF generator | Public Beta 10.0 (and 9.18+)<br>GA 10.2 |
-| Visual data filters | GA 10.3 |
-| Custom icons support | GA 10.0 |
-| Flexible page urls | GA 10.0 |
-| Mendix Chat | GA 10.6 |
-| Validation Bot | GA 10.0 |
-| Best Practices Bot | GA 10.0 |
-| Workflow enhancements (Multi User Task, Wait for Notification) | GA 10.0 |
-| Mixed online and offline data | GA 10.6 |
+| Mac support | Public Beta: Q4 2023 |
+| Studio Pro redesign | Released for GA [Jun 27, 2023](/releasenotes/studio-pro/10.0/) |
+| Improved properties | Released for GA [Jun 27, 2023](/releasenotes/studio-pro/10.0/) |
+| Git version control (without SVN support) | Released for GA [Jun 27, 2023](/releasenotes/studio-pro/10.0/) |
+| Insights into commits by peers| GA: Q3 2023 |
+| Start from spreadsheet | Released for GA [Jun 27, 2023](/releasenotes/studio-pro/10.0/) |
+| Rich design properties | GA: Q3 2023 |
+| PDF generator | Released for Public Beta [Jun 27, 2023](/releasenotes/studio-pro/10.0/)<br>GA: Q3 2023 [**VERIFY FOR RN**] |
+| Visual data filters | GA: Q3 2023 |
+| Custom icons support | Released for GA [Jun 27, 2023](/releasenotes/studio-pro/10.0/) |
+| Flexible page urls | Released for GA [Jun 27, 2023](/releasenotes/studio-pro/10.0/) |
+| Mendix Chat | GA: Q4 2023 |
+| Validation Bot | Released for GA [Jun 27, 2023](/releasenotes/studio-pro/10.0/) |
+| Best Practices Bot | Released for GA [Jun 27, 2023](/releasenotes/studio-pro/10.0/) |
+| Workflow enhancements (Multi User Task, Wait for Notification) | Released for GA [Jun 27, 2023](/releasenotes/studio-pro/10.0/) |
+| Mixed online and offline data | GA: Q4 2023 |
 
 ## 4 Composability
 
@@ -61,7 +61,7 @@ The new features were divided into these major themes, which are described in th
 | Mendix Connect - External Actions | GA 10.x |
 | Mendix Connect - Business Events & Event Broker | GA 10.0 |
 | ML Kit | GA 10.0 |
-| Studio Pro Extensibility | Private Beta 10.3 |
+| Studio Pro Extensibility | Private Beta: Q3 2023 |
 | Solutions Kit - Protected Modules | GA: 10.0 |
 | Solutions Kit - Solution Lifecycle Management | GA: 10.0 |
 | Solutions Kit - Adaptation Insights | Private beta: CQ4 2023 |

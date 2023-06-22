@@ -35,6 +35,8 @@ Navigate to the **Role Settings** tab to view and edit permissions for the team 
 
 Navigate to the **History** tab to view the history of changes for the team and [node permissions](/developerportal/deploy/node-permissions/).
 
+Navigate to the **Pending Invites** tab for an overview of all sent and unaccepted invitations. You can retract pending invitations from there.
+
 ## 3 Inviting Team Members {#inviting}
 
 To invite new team members, follow these steps:

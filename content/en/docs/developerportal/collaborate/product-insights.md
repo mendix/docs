@@ -1,5 +1,5 @@
 ---
-title: "Mini Surveys & App Insights"
+title: "Mendix Mini Surveys"
 url: /developerportal/collaborate/product-insights/
 category: "Collaboration"
 weight: 5
@@ -13,20 +13,15 @@ This feature is in Beta. For more information on Beta products, see [Beta Releas
 
 ## 1 Introduction
 
-By using **Mini Surveys** > **App Insights** in the Developer Portal and the [App Insights – Mini Surveys](/appstore/modules/app-insights/) module in the Marketplace, you can set up mini-surveys for the target user groups you would like to reach and collect their feedback to gain valuable app insights.
+Mini Surveys is apart of the Mendix App Insights collection of tools designed to help you collect & aggregate feedback from your customers. 
+
+Mini Survey consists of 2 parts;
+1. A pop-up survey in your app.
+2. A back-end dashboard in the developer portal to create surveys and aggregate your survey results.
 
 You begin by creating a mini-survey in **App Insights** in the Developer Portal, and then you implement the mini-survey by configuring the **App Insights – Mini-Surveys** module in Studio Pro. After the mini-survey is running, you can view responses that have been collected in **App Insights** and export the responses to an XLSX file.
 
 This document first describes all the pages in **App Insights** in the Developer Portal, and then it describes the procedure for running a mini-survey.
-
-### 1.1 Survey Pop-Up Behaviour 
-
-The Mini Survey has specific opt-out rules after a user is shown a Survey.
-
-* **The survey opt-out scenarios are;**
-    * **Scenario 1:** – User closes Survey, without answering any questions. User is opted-out and survey will not show again.
-    * **Scenario 2:** – User Answers 1 or more questions but does not finish the survey: Survey will show again to the user. But if they close the survey before finishing (for second time), it will not show survey again.
-    * **Scenario 3:** – User Answers all questions: Survey will not show again.
 
 {{% alert color="info" %}}In the GA release (May/June) we will allow you customise these opt-out rules from App Insights portal.{{% /alert %}} 
 
@@ -228,6 +223,17 @@ To check the responses that have been collected, follow these steps::
 
 ## 4 FAQ
 
-### 4.1 Upgrading the module from v1.0.0. to v1.1.0.
+### 4.1 Survey Pop-Up Behaviour 
+
+The Mini Survey has specific opt-out rules after a user is shown a Survey.
+
+* **The survey opt-out scenarios are;**
+    * **Scenario 1:** – User closes Survey, without answering any questions. User is opted-out and survey will not show again.
+    * **Scenario 2:** – User Answers 1 or more questions but does not finish the survey: Survey will show again to the user. But if they close the survey before finishing (for second time), it will not show survey again.
+    * **Scenario 3:** – User Answers all questions: Survey will not show again.
+
+### 4.2 Upgrading the module from v1.0.0. to v1.1.0.
 
 In order to fix the issue where surveys do not work locally when running multiple applications we have updated the way Mini Surveys are tracked. Due to this change if you are upgrading from release v1.0.0 to v1.1.0 then you must clear your browsers local storage/cached data to remove deprecated features. This only needs to be done one time in your browser.
+
+

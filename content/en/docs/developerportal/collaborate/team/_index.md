@@ -46,7 +46,7 @@ To invite new team members, follow these steps:
 3. Select an **Access Role** for the new member and click **Add**.
 4. Send the invitation(s).
 
-When inviting someone from your own company to an app that is owned by your company, the invited user is added directly to the app's team.
+{{% alert color="info" %}}If you invite a Mendix user from your company to an app owned by your company, the invited user is added directly to the app's team.{{% /alert %}}
 
 ## 4 Read More
 

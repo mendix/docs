@@ -1,8 +1,8 @@
 ---
 title: "Write Data to Another App"
 url: /catalog/write-data/
-description: "Describes how to add annotations to an OData service in Mendix Studio Pro, see external entities with these features in the Data Hub Catalog, and use them to build your app."
-tags: ["Data Hub", "external entities", "published OData service" ,"how to","OData", "Data Hub Catalog"]
+description: "Describes how to add annotations to an OData service in Mendix Studio Pro, see external entities with these features in the Catalog, and use them to build your app."
+tags: ["Data Hub", "external entities", "published OData service" ,"how to","OData", "Catalog"]
 weight: 20
 aliases:
     - /catalog/write-data/
@@ -15,14 +15,14 @@ This how-to builds on the information provided in [How to Share Data Between App
 This how-to will teach you how to do the following:
 
 * Expose updatable OData entities, attributes, and associations in Mendix Studio Pro
-* See which capabilities a particular entity, attribute, or association has in the Data Hub Catalog
+* See which capabilities a particular entity, attribute, or association has in the Catalog
 * Consume an updatable OData resource in your Mendix app
 
-The OData protocol allows data to be read, created, updated, and deleted. Mendix Studio Pro takes advantage of some of these capabilities. The Data Hub Catalog uses developer-familiar shorthand for these features, while Mendix Studio Pro sticks with the OData definitions.
+The OData protocol allows data to be read, created, updated, and deleted. Mendix Studio Pro takes advantage of some of these capabilities. The Catalog uses developer-familiar shorthand for these features, while Mendix Studio Pro sticks with the OData definitions.
 
 Note the following terminology differences described in the table below:
 
-| Data Hub | Studio Pro |
+| Catalog | Studio Pro |
 | -------- | ---------- |
 | Create   | Insertable |
 | Read     | Readable   |
@@ -44,13 +44,13 @@ When you publish an entity in a published OData service, clients can read the da
 2. Select the **Customer** entity and click **Edit**.
 3. Select the checkboxes to indicate whether the entity should be **Insertable**, **Updatable**, and/or **Deletable**.
 
-## 4 Viewing OData Capabilities in Data Hub Catalog {#view-capabilities}
+## 4 Viewing OData Capabilities in Catalog {#view-capabilities}
 
-The OData updatable capability pertains to the data in your app. The Data Hub Catalog provides an inventory of the metadata in your apps. In the Data Hub Catalog you can see the capabilities of entities, attributes, and associations. Changes to the data itself occur in Mendix apps themselves, not in the Data Hub Catalog.
+The OData updatable capability pertains to the data in your app. The Catalog provides an inventory of the metadata in your apps. In the Catalog you can see the capabilities of entities, attributes, and associations. Changes to the data itself occur in Mendix apps themselves, not in the Catalog.
 
 To see the capabilities of a particular OData entity, do the following: 
 
-1. Go to the Data Hub Catalog and search for the name of an exposed OData service endpoint, entity, attribute, or association. For more information, see the [Using the Data Hub Catalog and Curating Your Own Service](/catalog/share-data/#use-and-curate) section in *Share Data Between Apps*.
+1. Go to the Catalog and search for the name of an exposed OData service endpoint, entity, attribute, or association. For more information, see the [Using the Catalog and Curating Your Own Service](/catalog/share-data/#use-and-curate) section in *Share Data Between Apps*.
 2. Select your entity from the left-side search results pane. If you are not seeing many results, try removing the **Production** filter on your search.
 
 Notice the highlighted **CRUD** letters next to the entity name in the search panel and in the detailed information in the center. The purple letters indicate which operations are supported, and the gray letters indicate which are not. Hover over the letters to see which operations are supported. You will also see any OData restrictions here.

@@ -5,26 +5,27 @@ category: "Catalog"
 linktitle: "Get Started"
 weight: 1
 description: "Describes initial steps beginning users can take with their Catalog."
-tags: ["data hub", "data hub catalog", "consume", "external entities", "asset", "entities", "data hub pane", "studio pro"]
+tags: ["data hub", "Catalog", "consume", "external entities", "asset", "entities", "data hub pane", "studio pro"]
 aliases:
     - /data-hub/data-hub-catalog/get-started/
+
 ---
 
 ## 1 Introduction
 
-Data Hub Catalog is an open, standards-based metadata repository that enables Mendix developers and administrators to discover and explore data sources throughout their connected ecosystem. This respository is accessible to [authorized users](/catalog/manage-data-sources/user-roles/) in your company on the web app, hub.mendix.com, or through [Data Hub APIs](/apidocs-mxsdk/apidocs/data-hub-apis/).
+Catalog is an open, standards-based metadata repository that enables Mendix developers and administrators to discover and explore data sources throughout their connected ecosystem. This respository is accessible to [authorized users](/catalog/manage-data-sources/user-roles/) in your company on the web app, catalog.mendix.com, or through [Catalog APIs](/apidocs-mxsdk/apidocs/catalog-apis/).
 
 {{% alert color="info" %}}The Catalog currently supports OData data sources, or services, APIs, or databases that are [wrapped in OData](/refguide/wrap-services-odata/).{{% /alert %}}
 
 ## 2 Your Company's Catalog
 
-Log in with your company credentials to hub.mendix.com to see what metadata has been shared in your company. 
+Log in with your company credentials to catalog.mendix.com to see what metadata has been shared in your company. 
 
 Depending on your [user role](/catalog/manage-data-sources/user-roles/) and use case, you can do the following:
 
-* [Register data sources](/data-hub/data-hub-catalog/register-data-sources/) to be used in other apps in your company
+* [Register data sources](/catalog/register-data-sources/) to be used in other apps in your company
 * [Consume data sources](/catalog/consume/) in your company's Catalog
-* [Manage data sources](/data-hub/data-hub-catalog/manage-data-sources/) as a data source owner or as an administrator
+* [Manage data sources](/catalog/manage-data-sources/) as a data source owner or as an administrator
 
 ## 3 Catalog and App Deployment Methods
 
@@ -46,4 +47,4 @@ Build on this experience by learning how to [write data to another app](/catalog
 
 ## 5 Processes and Properties
 
-[Data Hub Catalog](/data-hub/data-hub-catalog/) goes into detailed information on the Catalog's processes and properties. This is helpful if you are looking for explanations of what you see in the Catalog UI (hub.mendix.com) and how parts of the UI relate to each other.
+[Catalog](/catalog/) goes into detailed information on the Catalog's processes and properties. This is helpful if you are looking for explanations of what you see in the Catalog UI (catalog.mendix.com) and how parts of the UI relate to each other.

@@ -3,14 +3,14 @@ title: "Consume Registered Assets"
 url: /catalog/consume/consume-registered-assets/
 weight: 20
 description: "Describes how to use shared data sources and datasets through Mendix Data Hub."
-tags: ["data hub", "data hub catalog", "consume", "external entities", "asset", "entities", data hub pane", "studio pro"]
+tags: ["data hub", "Catalog", "consume", "external entities", "asset", "entities", data hub pane", "studio pro"]
 aliases:
-    - /data-hub/data-hub-catalog/consume/
+    - /catalog/consume/
 ---
 
 ## 1 Introduction
 
-The Data Hub Catalog is a catalog of OData services exposing datasets that you can use in your apps. In Mendix Studio Pro, these exposed datasets are added as *external entities* through the [Data Hub pane](/refguide/data-hub-pane/). The integrated Data Hub Catalog [search](/data-hub/data-hub-catalog/search/) functionality in Studio Pro is available to find suitable datasets to use in your apps. 
+The Catalog is a catalog of OData services exposing datasets that you can use in your apps. In Mendix Studio Pro, these exposed datasets are added as *external entities* through the [Data Hub pane](/refguide/data-hub-pane/). The integrated Catalog [search](/catalog/search/) functionality in Studio Pro is available to find suitable datasets to use in your apps. 
 
 ## 2 Using Registered Assets in Your App {#consuming-services-entities}
 
@@ -20,7 +20,7 @@ The following sections summarize important points to consider when using OData s
 
 ### 2.1 Services
 
-When a new version of the OData service for an external entity is registered in the Data Hub Catalog, the consumed OData service can be updated in the consuming app. For more details on updating a consumed service see the [Updating or Switching a Consumed OData Service](/refguide/consumed-odata-service/#updating) section of *Consumed OData Service*.
+When a new version of the OData service for an external entity is registered in the Catalog, the consumed OData service can be updated in the consuming app. For more details on updating a consumed service see the [Updating or Switching a Consumed OData Service](/refguide/consumed-odata-service/#updating) section of *Consumed OData Service*.
 
 {{% alert color="info" %}}
 In Studio Pro, new versions of a service are indicated and users can choose to **Update** the service, or **Switch** to another version of the service deployed to another endpoint.
@@ -32,7 +32,7 @@ It is good practice for publishers of a service to deprecate a service version i
 
 When you use an external entity from a published OData service through the **Data Hub** pane in Studio Pro, you are consuming the dataset from the service  deployed to a specific environment. 
 
-When security is enabled for your app, you can define access rules for external entities just as you would for [persistable](/refguide/persistability/#persistable) and [non-persistable](/refguide/persistability/#non-persistable) entities. You can define access rules based on user roles (for more details, see [Security and Controlling Access to Information](/data-hub/data-hub-catalog/security/)).
+When security is enabled for your app, you can define access rules for external entities just as you would for [persistable](/refguide/persistability/#persistable) and [non-persistable](/refguide/persistability/#non-persistable) entities. You can define access rules based on user roles (for more details, see [Security and Controlling Access to Information](/catalog/security/)).
 
 You can associate external entities with both [persistable and non-persistable](/refguide/persistability/) local entities. However, the external entity cannot be the owner of an association. This means that the association has to be from a local entity to the external entity in the domain model, and the value for the association [owner](/refguide/associations/#ownership) must be set to **Default**.
 

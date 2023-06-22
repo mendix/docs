@@ -9,8 +9,6 @@ weight: 60
 
 ## 1 Introduction
 
-[**ADD ALT TEXT**]
-
 At the Mendix 10 launch event on June 27th, 2023, there were a number of announcements for features that Mendix is releasing. This document contains the calendar of expected release dates for these features.
 
 The new features were divided into these major themes, which are described in the sections below:
@@ -25,10 +23,10 @@ The new features were divided into these major themes, which are described in th
 
 | Capability or Feature | Expected Release |
 | --- | --- |
-| Portfolio Management | Released for GA [Jun 22, 2023](**ADD RN LINK**) |
-| Jira Integration | Released for Public Beta [Jun 22, 2023](**ADD RN LINK**)<br>GA: Q4 2023 |
+| Portfolio Management | Released for GA [Jun 22, 2023](/releasenotes/developer-portal/#june-22nd-2023) |
+| Jira Integration | Released for Public Beta [Jun 22, 2023](/releasenotes/developer-portal/#june-22nd-2023)<br>GA: Q4 2023 |
 | App Insights | GA: Q3 2023 |
-| Community Spaces | Released for Public Beta [Jun __, 2023](**VERIFY, ADD RN LINK**)<br>GA: Q3 2023 | 
+| Community Spaces | Released for Public Beta [Jun __, 2023](**ADD RN LINK**)<br>GA: Q3 2023 [**VERIFY, WHAT IS THIS?**] | 
 
 ## 3 Developer Experience
 
@@ -83,4 +81,4 @@ The new features were divided into these major themes, which are described in th
 | Landscape Overview | Public Beta: Q3 2023<br>GA: TBD |
 | Dependency Governance | Public Beta: Q4 2023<br>GA: TBD |
 | Cloud Self-Service | Currently in Private Beta<br>GA: TBD |
-| BYO IDP |  Released for GA [Jun __, 2023](**ADD RN LINK**) |
+| BYO IDP |  Released for GA [Jun __, 2023](**ADD RN LINK**) [**LINK**] |

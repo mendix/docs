@@ -2,7 +2,7 @@
 title: "Mini Surveys & App Insights"
 url: /developerportal/collaborate/product-insights/
 category: "Collaboration"
-weight: 4
+weight: 5
 description: "Describes how to set up mini-surveys to gain insights into your app and view and export the survey results."
 tags: ["mini survey", "app insights", "sprint", "developer portal"]
 ---
@@ -87,7 +87,7 @@ Clicking the mini-survey in a row on the list shows its [survey details](#survey
 On the **Settings** tab of **Survey Overview**, you can enable the test mode, and view or generate API keys.
 
 * **Test Mode - For All Users** – After you enable this test mode, all users will become the testers of your survey. They will see the survey every time it is triggered. Their responses will not be saved, and therefore will not pollute the true survey results. You can view their responses on the [Test data](#test-data) tab of the survey details page. 
-    
+  
     * To enable this test mode, open your app in Studio Pro. In the **App Explorer**, go to  **Marketplace modules > AppInsights_MiniSurvey > _SETUP > 2. Set API Key & mode.**, and set the **TEST_MODE** constant to **True**.
     
 * **Test Mode - For Project Members** – After you enable this test mode, all team members of the app will become the testers of your survey. They will see the survey every time it is triggered. Their responses will not be saved, and therefore will not pollute the true survey results. You can view their responses on the [Test data](#test-data) tab of the survey details page.

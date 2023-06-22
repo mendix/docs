@@ -25,7 +25,7 @@ The new features were divided into these major themes, which are described in th
 | --- | --- |
 | Portfolio Management | Released for GA [Jun 22, 2023](/releasenotes/developer-portal/#june-22nd-2023) |
 | Jira Integration | Released for Public Beta [Jun 22, 2023](/releasenotes/developer-portal/#june-22nd-2023)<br>GA: Q4 2023 |
-| Community Spaces | Released for Public Beta [Jun __, 2023](**ADD RN LINK**)<br>GA: Q3 2023 [**VERIFY, WHAT IS THIS?**] | 
+| Community Spaces | Released for Public Beta [Jun __, 2023](**ADD RN LINK**)<br>GA: Q3 2023 [**VERIFY FOR DATE AND RN; WHAT IS THIS?**] | 
 | App Insights | GA: Q3 2023 |
 
 ## 3 Developer Experience
@@ -54,9 +54,9 @@ The new features were divided into these major themes, which are described in th
 | --- | --- |
 | Mendix Connect - External Entities | Released for GA [Jun 27, 2023](/releasenotes/studio-pro/10.0/) [**VERIFY TO REFRAME/REMOVE**] |
 | Mendix Connect - Business Events & Event Broker | Released for GA [Jun 27, 2023](/releasenotes/studio-pro/10.0/) [**VERIFY TO REFRAME/REMOVE**] |
-| Machine Learning Kit | Released for GA [Jun 27, 2023](/releasenotes/studio-pro/10.0/) [**WILL GO GA - NEED TO ADD NOTE**] |
-| Solutions kit - protected modules | Released for GA [Jun 27, 2023](/releasenotes/studio-pro/10.0/) [**VERIFY RELEASE NOTE ADDED**] |
-| Solutions kit - solution lifecycle management | Released for GA [Jun 27, 2023](/releasenotes/studio-pro/10.0/) [**VERIFY RELEASE NOTE ADDED**] |
+| Machine Learning Kit | Released for GA [Jun 27, 2023](/releasenotes/studio-pro/10.0/) |
+| Solutions kit - protected modules | Released for GA [Jun 27, 2023](/releasenotes/studio-pro/10.0/) |
+| Solutions kit - solution lifecycle management | Released for GA [Jun 27, 2023](/releasenotes/studio-pro/10.0/) |
 | Mendix Connect - Database Connector | GA: Q3 2023 |
 | Mendix Connect - REST Connector | GA: Q4 2023 |
 | Studio Pro Extensibility | Private Beta: Q3 2023<br>GA: TBD |
@@ -77,7 +77,7 @@ The new features were divided into these major themes, which are described in th
 
 | Capability or Feature | Expected Release |
 | --- | --- |
-| BYO IDP | Released for GA [Jun __, 2023](ADD RN LINK) [**VERIFY FOR DATE AND RN**] |
+| BYO IDP | Released for GA [May 16, 2023](/releasenotes/developer-portal/#byoidp) [**VERIFY RN LINK**] |
 | Cloud Self-Service | Currently in Private Beta<br>GA: TBD |
 | Landscape Overview | Public Beta: Q3 2023<br>GA: TBD |
 | Dependency Governance | Public Beta: Q4 2023<br>GA: TBD |

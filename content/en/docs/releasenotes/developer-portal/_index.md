@@ -17,6 +17,15 @@ To see the current status of the Mendix Developer Portal and Control Center, see
 
 ## 2023
 
+### June 22nd, 2023
+
+#### Improvements
+
+* Our [Portfolio Management](/developerportal/portfolio-management/) tool is now released for GA. At the same time, we also made a few improvements to the tool:
+    * We renamed **Projects** to **Initiatives**.
+    * You can now request access to restricted portfolios in your company.
+    * Filters in the **Initiatives Overview** are now preserved when switching views.
+
 ### June 15th, 2023
 
 #### New Features

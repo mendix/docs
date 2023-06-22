@@ -19,7 +19,7 @@ Mini Survey consists of 2 parts;
 1. A pop-up survey in your app.
 2. A back-end dashboard in the developer portal to create surveys and aggregate your survey results.
 
-You begin by creating a mini-survey in **App Insights** in the Developer Portal, and then you implement the mini-survey by configuring the **App Insights – Mini-Surveys** module in Studio Pro. After the mini-survey is running, you can view responses that have been collected in **App Insights** and export the responses to an XLSX file.
+You begin by creating a mini-survey in **App Insights** in the Developer Portal, and then you implement the mini-survey by configuring the **AppInsights_MiniSurvey** module in Studio Pro. After the mini-survey is running, you can view responses that have been collected in **App Insights** and export the responses to an XLSX file.
 
 This document first describes all the pages in **App Insights** in the Developer Portal, and then it describes the procedure for running a mini-survey.
 
@@ -41,7 +41,7 @@ The tabs of the **Survey Overview** page are described below.
 
 The **Active** tab shows all the mini-surveys that are active for the app with the following details:
 
-* **Survey ID** – This is the unique ID of the mini-survey. You can also find this ID on the [survey details](#survey-details) page of the mini-survey. You need to use the ID as input when you configure the App Insights – Mini-Surveys module in Studio Pro to implement the mini-survey.
+* **Survey ID** – This is the unique ID of the mini-survey. You can also find this ID on the [survey details](#survey-details) page of the mini-survey. You need to use the ID as input when you configure the AppInsights_Mini-Surveys module in Studio Pro to implement the mini-survey.
 * **Name** – This is the name of the mini-survey.
 * **Responses** – This shows the number of responses that have been collected for the mini-survey.
 * **Status** – This shows the status of the mini-survey. For more information, see the [Statuses of Mini-Surveys](#survey-status) section.

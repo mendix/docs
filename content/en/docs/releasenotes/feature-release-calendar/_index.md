@@ -34,7 +34,7 @@ The new features were divided into these major themes, which are described in th
 
 | Capability or Feature | Expected Release |
 | --- | --- |
-| Mac support | Public Beta: Q4 2023 |
+| Mac support | Public Beta: Q4 2023<br>GA: TBD |
 | Studio Pro redesign | Released for GA [Jun 27, 2023](/releasenotes/studio-pro/10.0/) |
 | Improved properties | Released for GA [Jun 27, 2023](/releasenotes/studio-pro/10.0/) |
 | Git version control (without SVN support) | Released for GA [Jun 27, 2023](/releasenotes/studio-pro/10.0/) |
@@ -55,32 +55,32 @@ The new features were divided into these major themes, which are described in th
 
 | Capability or Feature | Expected Release |
 | --- | --- |
-| Mendix Connect - Database Connector | GA 10.2 |
-| Mendix Connect - REST Connector | TBD |
-| Mendix Connect - External Entities | GA 10.0 |
-| Mendix Connect - External Actions | GA 10.x |
-| Mendix Connect - Business Events & Event Broker | GA 10.0 |
-| ML Kit | GA 10.0 |
-| Studio Pro Extensibility | Private Beta: Q3 2023 |
-| Solutions Kit - Protected Modules | GA: 10.0 |
-| Solutions Kit - Solution Lifecycle Management | GA: 10.0 |
-| Solutions Kit - Adaptation Insights | Private beta: CQ4 2023 |
+| Mendix Connect - Database Connector | GA: Q3 2023 |
+| Mendix Connect - REST Connector | GA: TBD |
+| Mendix Connect - External Entities | Released for GA [Jun 27, 2023](/releasenotes/studio-pro/10.0/) [**VERIFY FOR RN**] |
+| Mendix Connect - External Actions | GA: TBD |
+| Mendix Connect - Business Events & Event Broker | Released for GA [Jun 27, 2023](/releasenotes/studio-pro/10.0/) [**VERIFY FOR RN**] |
+| Machine Learning Kit | Released for GA [Jun 27, 2023](/releasenotes/studio-pro/10.0/) [**VERIFY FOR RN**] |
+| Studio Pro Extensibility | Private Beta: Q3 2023<br>GA: TBD |
+| Solutions Kit - Protected Modules | Released for GA [Jun 27, 2023](/releasenotes/studio-pro/10.0/) [**VERIFY FOR RN**] |
+| Solutions Kit - Solution Lifecycle Management | Released for GA [Jun 27, 2023](/releasenotes/studio-pro/10.0/) [**VERIFY FOR RN**] |
+| Solutions Kit - Adaptation Insights | Private Beta: Q4 2023<br>GA: TBD |
 
 ## 5 Multi-Cloud Deployment
 
 | Capability or Feature | Expected Release |
 | --- | --- |
-| Multi-Region Fail-over | GA on July 1st, 2023 |
-| WebHooks | Released for GA on June 15, 2023 |
-| Pipelines | Public Beta: CQ4, 2023 |
-| Mendix on AWS EKS | Released for GA in February 2023 |
-| Private Mendix Platform |
+| Multi-Region Fail-over | GA: Q3 2023 |
+| WebHooks | Released for GA [Jun 15, 2023](/releasenotes/developer-portal/mendix-cloud/#june-15th-2023) |
+| Pipelines | Public Beta: Q4 2023<br>GA: TBD |
+| Mendix on AWS EKS | Released for GA [Feb 8, 2023](/releasenotes/developer-portal/mendix-for-private-cloud/#february-8th-2023) |
+| Private Mendix Platform | GA: TBD   |
 
 ## 6 Governance & Control
 
 | Capability or Feature | Expected Release |
 | --- | --- |
-| Landscape Overview | Public Beta: Q3, 2023 |
-| Dependency Governance  Public Beta: CQ4, 2023 |
-| Cloud Self Service | Release 1.0 as Private Beta: Released May 2023 |
-| BYO IDP | Released for GA in June 2023 |
+| Landscape Overview | Public Beta: Q3 2023<br>GA: TBD |
+| Dependency Governance | Public Beta: Q4 2023<br>GA: TBD |
+| Cloud Self-Service | Currently in Private Beta<br>GA: TBD |
+| BYO IDP |  Released for GA [Jun __, 2023](**ADD RN LINK**) |

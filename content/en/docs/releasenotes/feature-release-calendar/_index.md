@@ -42,11 +42,10 @@ The new features were divided into these major themes, which are described in th
 | PDF Document Generation module | Released for Public Beta [May 31, 2023](/appstore/modules/document-generation/)<br>GA: Q3 2023 |
 | Visual data filters | GA: Q3 2023 |
 | Custom icons support | Released for GA [Jun 27, 2023](/releasenotes/studio-pro/10.0/) |
-| Flexible page urls | Released for GA [Jun 27, 2023](/releasenotes/studio-pro/10.0/) |
+| Flexible page URLs | Released for GA [Jun 27, 2023](/releasenotes/studio-pro/10.0/) |
 | Mendix Chat | GA: Q4 2023 |
-| Validation Assist | Released for GA [Jun 27, 2023](/releasenotes/studio-pro/10.0/) [**VERIFY FOR DATE AND RN**] |
 | MxAssist Best Practice Bot | Released for GA [Jun 27, 2023](/releasenotes/studio-pro/10.0/) |
-| Workflow enhancements (Multi User Task, Wait for Notification) | Released for GA [Jun 27, 2023](/releasenotes/studio-pro/10.0/) |
+| Workflow enhancements (multi-user tasks, Wait for notification activity) | Released for GA [Jun 27, 2023](/releasenotes/studio-pro/10.0/) |
 | Mixed online and offline data | GA: Q4 2023 |
 
 ## 4 Composability
@@ -55,13 +54,13 @@ The new features were divided into these major themes, which are described in th
 | --- | --- |
 | Mendix Connect - Database Connector | GA: Q3 2023 |
 | Mendix Connect - REST Connector | GA: TBD |
-| Mendix Connect - External Entities | Released for GA [Jun 27, 2023](/releasenotes/studio-pro/10.0/) [**VERIFY FOR RN**] |
+| Mendix Connect - External Entities | Released for GA [Jun 27, 2023](/releasenotes/studio-pro/10.0/) [**VERIFY FOR DATE AND RN**] |
 | Mendix Connect - External Actions | GA: TBD |
-| Mendix Connect - Business Events & Event Broker | Released for GA [Jun 27, 2023](/releasenotes/studio-pro/10.0/) [**VERIFY FOR RN**] |
-| Machine Learning Kit | Released for GA [Jun 27, 2023](/releasenotes/studio-pro/10.0/) [**VERIFY FOR RN**] |
+| Mendix Connect - Business Events & Event Broker | Released for GA [Jun 27, 2023](/releasenotes/studio-pro/10.0/) [**VERIFY FOR DATE AND RN**] |
+| Machine Learning Kit | Released for GA [Jun 27, 2023](/releasenotes/studio-pro/10.0/) [**VERIFY FOR DATE AND RN**] |
 | Studio Pro Extensibility | Private Beta: Q3 2023<br>GA: TBD |
-| Solutions Kit - Protected Modules | Released for GA [Jun 27, 2023](/releasenotes/studio-pro/10.0/) [**VERIFY FOR RN**] |
-| Solutions Kit - Solution Lifecycle Management | Released for GA [Jun 27, 2023](/releasenotes/studio-pro/10.0/) [**VERIFY FOR RN**] |
+| Solutions Kit - Protected Modules | Released for GA [Jun 27, 2023](/releasenotes/studio-pro/10.0/) [**VERIFY FOR DATE AND RN**] |
+| Solutions Kit - Solution Lifecycle Management | Released for GA [Jun 27, 2023](/releasenotes/studio-pro/10.0/) [**VERIFY FOR DATE AND RN**] |
 | Solutions Kit - Adaptation Insights | Private Beta: Q4 2023<br>GA: TBD |
 
 ## 5 Multi-Cloud Deployment

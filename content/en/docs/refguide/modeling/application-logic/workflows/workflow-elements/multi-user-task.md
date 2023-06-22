@@ -94,12 +94,12 @@ Possible options of participant input are described in the table below:
 With this property, you specify how the outcomes of the individual users are aggregated into a single multi-user task outcome. This aggregated outcome is used as the final outcome to complete the multi-user task.
 
 {{% alert color="warning" %}}
-If the number of [targeted users](#users) is less than the absolute number specified in the **Participant input** section, it is impossible to complete the multi-suer task and the workflow will fail.
+If the number of [targeted users](#users) is less than the absolute number specified in the **Participant input** section, it is impossible to complete the multi-user task and the workflow will fail.
 {{% /alert %}}
 
 ##### 2.5.2.1 Consensus
 
-Select this decision method when all users should be in agreement with the provided outcome. That is, they should all select the same outcome. There has to be consensus. When there is no consensus, the multi-user task will complete with the the fallback outcome.
+Select this decision method when all required users should be in agreement with the provided outcome. That is, they should all select the same outcome. There has to be consensus. When there is no consensus, the multi-user task will complete with the the fallback outcome.
 
 ###### 2.5.2.1.1 Fallback Outcome {#fallback-outcome}
 

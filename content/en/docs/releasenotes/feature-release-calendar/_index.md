@@ -34,18 +34,18 @@ The new features were divided into these major themes, which are described in th
 | --- | --- |
 | Mac support | Public Beta: Q4 2023<br>GA: TBD |
 | Studio Pro redesign | Released for GA [Jun 27, 2023](/releasenotes/studio-pro/10.0/) |
-| Improved properties | Released for GA [Jun 27, 2023](/releasenotes/studio-pro/10.0/) |
-| Git version control (without SVN support) | Released for GA [Jun 27, 2023](/releasenotes/studio-pro/10.0/) |
+| Improved Properties pane | Released for GA [Jun 27, 2023](/releasenotes/studio-pro/10.0/) |
+| Git version control (without SVN support) | Released for GA [Jun 27, 2023](/releasenotes/studio-pro/10.0/) [**VERIFY FOR DATE AND RN**] |
 | Insights into commits by peers| GA: Q3 2023 |
 | Start from spreadsheet | Released for GA [Jun 27, 2023](/releasenotes/studio-pro/10.0/) |
 | Rich design properties | GA: Q3 2023 |
-| PDF generator | Released for Public Beta [Jun 27, 2023](/releasenotes/studio-pro/10.0/)<br>GA: Q3 2023 [**VERIFY FOR RN**] |
+| PDF Document Generation module | Released for Public Beta [May 31, 2023](/appstore/modules/document-generation/)<br>GA: Q3 2023 |
 | Visual data filters | GA: Q3 2023 |
 | Custom icons support | Released for GA [Jun 27, 2023](/releasenotes/studio-pro/10.0/) |
 | Flexible page urls | Released for GA [Jun 27, 2023](/releasenotes/studio-pro/10.0/) |
 | Mendix Chat | GA: Q4 2023 |
-| Validation Bot | Released for GA [Jun 27, 2023](/releasenotes/studio-pro/10.0/) |
-| Best Practices Bot | Released for GA [Jun 27, 2023](/releasenotes/studio-pro/10.0/) |
+| Validation Assist | Released for GA [Jun 27, 2023](/releasenotes/studio-pro/10.0/) [**VERIFY FOR DATE AND RN**] |
+| MxAssist Best Practice Bot | Released for GA [Jun 27, 2023](/releasenotes/studio-pro/10.0/) |
 | Workflow enhancements (Multi User Task, Wait for Notification) | Released for GA [Jun 27, 2023](/releasenotes/studio-pro/10.0/) |
 | Mixed online and offline data | GA: Q4 2023 |
 

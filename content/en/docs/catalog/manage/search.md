@@ -1,19 +1,19 @@
 ---
 title: "Search in the Catalog"
 url: /catalog/manage/search/
-description: "Describes how to find data sources and datasets in the Data Hub Catalog."
-tags: ["data hub", "data hub catalog", "data source", "dataset"]
+description: "Describes how to find data sources and datasets in the Catalog."
+tags: ["data hub", "Catalog", "data source", "dataset"]
 aliases:
-    - /data-hub/data-hub-catalog/search/
+    - /catalog/search/
 ---
 
 ## 1 Introduction
 
-Finding the right data to use in your app development is made easier using the search functionality in the Data Hub Catalog. The details of registered data assets can be accessed using the [Data Hub Search API](/apidocs-mxsdk/apidocs/data-hub-apis/), or viewed in the [Asset details](#search-details) screen of the Catalog or the [Data Hub pane](/refguide/data-hub-pane/) in Studio Pro.  This document describes how you can search in Data Hub Catalog.
+Finding the right data to use in your app development is made easier using the search functionality in the Catalog. The details of registered data assets can be accessed using the [Search API](/apidocs-mxsdk/apidocs/catalog-apis/), or viewed in the [Asset details](#search-details) screen of the Catalog or the [Data Hub pane](/refguide/data-hub-pane/) in Studio Pro.  This document describes how you can search in Catalog.
 
 ## 2 Search Using the API {#search-api}
 
-To use the Data Hub Catalog Search API, you need the following:
+To use the Catalog Search API, you need the following:
 
 * A [personal access token](/developerportal/community-tools/mendix-profile/#pat)
 * A search term
@@ -23,7 +23,7 @@ For more details on what can and cannot be provided in your search query, see th
 You can see an example of a request below where the search term is `Customer`:
 
 ```curl
-curl --location --request GET 'https://hub.mendix.com/rest/search/v3/data?query=Customer' \
+curl --location --request GET 'https://catalog.mendix.com/rest/search/v3/data?query=Customer' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: MxToken <your_Personal_Access_Token>'
 ```
@@ -35,15 +35,15 @@ A successful `GET` call results in a `200` status code and a JSON response body 
     "TotalResults": 145,
     "Links": [
         {
-            "Href": "https://hub.mendix.com/rest/search/v3/data?query=Customer",
+            "Href": "https://catalog.mendix.com/rest/search/v3/data?query=Customer",
             "Rel": "First"
         },
         {
-            "Href": "https://hub.mendix.com/rest/search/v3/data?query=Customer",
+            "Href": "https://catalog.mendix.com/rest/search/v3/data?query=Customer",
             "Rel": "Current"
         },
         {
-            "Href": "https://hub.mendix.com/rest/search/v3/data?query=Customer&afterId=18d7d608-723f-4f33-b247-a85271d5eefd",
+            "Href": "https://catalog.mendix.com/rest/search/v3/data?query=Customer&afterId=18d7d608-723f-4f33-b247-a85271d5eefd",
             "Rel": "Next"
         }
     ],
@@ -66,11 +66,11 @@ A successful `GET` call results in a `200` status code and a JSON response body 
             "Links": [
                 {
                     "Rel": "Self",
-                    "Href": "https://hub.mendix.com/rest/search/v3/endpoints/9756545b-9b36-4f51-8655-1102c36e9288"
+                    "Href": "https://catalog.mendix.com/rest/search/v3/endpoints/9756545b-9b36-4f51-8655-1102c36e9288"
                 },
                 {
                     "Rel": "Catalog",
-                    "Href": "https://hub.mendix.com/link/endpoint?EndpointUUID=9756545b-9b36-4f51-8655-1102c36e9288"
+                    "Href": "https://catalog.mendix.com/link/endpoint?EndpointUUID=9756545b-9b36-4f51-8655-1102c36e9288"
                 }
             ],
             "Items": [
@@ -81,7 +81,7 @@ A successful `GET` call results in a `200` status code and a JSON response body 
                     "Updatable": false,
                     "Links": [{
                         "Rel": "Catalog",
-                        "Href": "https://hub.mendix.com/link/entity?EndpointUUID=9756545b-9b36-4f51-8655-1102c36e9288&EntityUUID=d27150f1-1ba3-41f0-965b-3ce3402412ef"
+                        "Href": "https://catalog.mendix.com/link/entity?EndpointUUID=9756545b-9b36-4f51-8655-1102c36e9288&EntityUUID=d27150f1-1ba3-41f0-965b-3ce3402412ef"
                     }],
                     "Deletable": false,
                     "Items": [
@@ -128,7 +128,7 @@ A successful `GET` call results in a `200` status code and a JSON response body 
                     "Updatable": false,
                     "Links": [{
                         "Rel": "Catalog",
-                        "Href": "https://hub.mendix.com/link/entity?EndpointUUID=9756545b-9b36-4f51-8655-1102c36e9288&EntityUUID=3aeb0d6b-4205-4bc6-adef-67487e85e178"
+                        "Href": "https://catalog.mendix.com/link/entity?EndpointUUID=9756545b-9b36-4f51-8655-1102c36e9288&EntityUUID=3aeb0d6b-4205-4bc6-adef-67487e85e178"
                     }],
                     "Deletable": false,
                     "Items": [{
@@ -155,7 +155,7 @@ A successful `GET` call results in a `200` status code and a JSON response body 
                     "Updatable": false,
                     "Links": [{
                         "Rel": "Catalog",
-                        "Href": "https://hub.mendix.com/link/entity?EndpointUUID=9756545b-9b36-4f51-8655-1102c36e9288&EntityUUID=6939a90c-c3bc-4eaf-a741-a484cf2248ad"
+                        "Href": "https://catalog.mendix.com/link/entity?EndpointUUID=9756545b-9b36-4f51-8655-1102c36e9288&EntityUUID=6939a90c-c3bc-4eaf-a741-a484cf2248ad"
                     }],
                     "Deletable": false,
                     "Items": [{
@@ -198,7 +198,7 @@ A successful `GET` call results in a `200` status code and a JSON response body 
                     "OpenID": "https://mxid2.mendixcloud.com/mxid2/id?id=3abbc519-36cb-49e0-b158-120e9100e8be",
                     "Name": "Roselien Opmeer"
                 },
-                "Icon": "https://hub.mendix.com/resources/logos/other_icon.png",
+                "Icon": "https://catalog.mendix.com/resources/logos/other_icon.png",
                 "UUID": "34aacfda-8a85-497c-bb21-74f1c6ee2b18",
                 "RepositoryLocation": "https://sprintr.home.mendix.com/link/project/a2e76491-bd8d-4284-b865-00c9ae8dde94",
                 "BusinessOwner": {
@@ -223,7 +223,7 @@ A successful `GET` call results in a `200` status code and a JSON response body 
 
 ### 3.1 Details of Registered Assets
 
-You can start searching from the [Data Hub Home](#data-hub-home) page, or click the [Catalog](#search-tab) tab to go to the **Search** pane and **Asset Details** screen. This section describes important properties of registered assets: data sources, datasets, and attributes.
+You can start searching from the [Home](#data-hub-home) page, or click the [Catalog](#search-tab) tab to go to the **Search** pane and **Asset Details** screen. This section describes important properties of registered assets: data sources, datasets, and attributes.
 
 {{% alert color="info" %}}The **Dataset** is the name of the **Entity set** of a published **Entity** in Mendix Studio Pro, which by default, is the entity name with an "s" appended to it. For example, if an entity named `Customer` is published in an OData service, the **Dataset** name in the **Search Details** will be `Customers`.{{% /alert %}}
 
@@ -233,14 +233,14 @@ Every published OData service (or data source) has a version number. Apps that c
 
 #### 3.1.2 Environments
 
-The Data Hub Catalog is a register of published OData services (or data sources) that are deployed to a particular environment. Each registered data source is a unique **endpoint** combination of service version and environment.
+The Catalog is a register of published OData services (or data sources) that are deployed to a particular environment. Each registered data source is a unique **endpoint** combination of service version and environment.
 
 The environment also provides an indication of the quality of the dataset that is available. Shared datasets that are available from a *production environment* will have production-level data, while those in non-production environments (*acceptance*, *development*) could be populated with data that may not be reliable for building stable apps but be useful for development work.
 
 Search results show the data source endpoints. If a version of a service is deployed on both a test and acceptance environment, two endpoints are shown in the search results.
 
 {{% alert color="info" %}}
-By default, search results in the Data Hub Catalog are filtered to show only hits in the **Production** environments. You can extend the search to **Non-production** or **Mendix Free App (Sandbox)** environments by checking them in the search pane **Add Filter** list. For more details, see the [Filters](#filter) section below.
+By default, search results in the Catalog are filtered to show only hits in the **Production** environments. You can extend the search to **Non-production** or **Mendix Free App (Sandbox)** environments by checking them in the search pane **Add Filter** list. For more details, see the [Filters](#filter) section below.
 {{% /alert %}}
 
 #### 3.1.3 Asset Description
@@ -248,12 +248,12 @@ By default, search results in the Data Hub Catalog are filtered to show only hit
 The description that is included as part of the published service metadata. This description can be edited at the data source, dataset, and attribute level by owners and curators.
 
 {{% alert color="info" %}}
-In Studio Pro, when publishing an OData service, it is possible to specify a summary of the service and a description. Only the description is included in the OData service contract document and registered in the Data Hub Catalog.
+In Studio Pro, when publishing an OData service, it is possible to specify a summary of the service and a description. Only the description is included in the OData service contract document and registered in the Catalog.
 {{% /alert %}}
 
-### 3.2 Searching for Assets from Data Hub Home {#data-hub-home}
+### 3.2 Searching for Assets {#data-hub-home}
 
-When searching in the Data Hub Catalog, the following fields are searched:
+When searching in the Catalog, the following fields are searched:
 
 * Data source or service endpoint: Name, Description, Tags
 * Application: Name
@@ -261,9 +261,7 @@ When searching in the Data Hub Catalog, the following fields are searched:
 * Attribute: Name, Description
 * Association: Name
 
-From the **Data Hub Home** page, you can search the Catalog in the following ways:
-
-{{< figure src="/attachments/data-hub/share-data/data-hub-home.png" alt="data hub home page" >}}
+From the **Home** page, you can search the Catalog in the following ways:
 
 * Type a search term in the search box and click **Search** (search strings must be at least 3 alphanumeric characters)
 * Click one of the *tags* given in the search suggestions
@@ -276,11 +274,9 @@ Any of the above actions will take you to the **Search** screen.
 
 The **Search** screen is divided into the [search](#search-pane) pane on the left, the [asset details](#search-details) of the selected asset in the center panel, and the [asset metadata](#metadata) panel on the right.
 
-{{< figure src="/attachments/data-hub/data-hub-catalog/search/search-details-page.png" alt="search details" >}}
-
 ### 3.4 Search Pane {#search-pane}
 
-The collapsible **Search** pane is used to search for registered assets in the Data Hub Catalog:
+The collapsible **Search** pane is used to search for registered assets in the Catalog:
 
 {{< figure src="/attachments/data-hub/data-hub-catalog/search/search-pane.png" alt="search pane"   width="300"  >}}
 
@@ -296,7 +292,7 @@ To change the environment type filter, click **Filter**.
 
 In the **Filters** dialog box, check the **Environment Type** that you want to include in your search. Then click **Apply Filters**. The search results will only display results in the selected environments.
 
-You can also filter by CRUD (Creatable, Readable, Updatable, or Deletable) capabilities. See the [Viewing OData Capabilities in Data Hub Catalog](/catalog/write-data/#view-capabilities) section of *Write Data to Another App* for more information.
+You can also filter by CRUD (Creatable, Readable, Updatable, or Deletable) capabilities. See the [Viewing OData Capabilities in Catalog](/catalog/write-data/#view-capabilities) section of *Write Data to Another App* for more information.
 
 You will also see any OData restrictions that apply, including **Count** and **Pagination** and whether something is **Sortable** or **Filterable**.
 
@@ -308,7 +304,7 @@ The number of items satisfying the search criteria (search string plus filters) 
 * Popularity of the service (the number of connections)
 * **Validated** assets before non-validated ones
 
-When an item in the search results is selected, the **Landscape** tab shows the network of connections and dependencies of the selected item in the [Data Hub Landscape](/data-hub/data-hub-landscape/).
+When an item in the search results is selected, the **Landscape** tab shows the network of connections and dependencies of the selected item in the [Landscape](/data-hub/data-hub-landscape/).
 
 ### 3.5 Selected Asset Details {#search-details}
 
@@ -374,7 +370,7 @@ Under the **Associations** tab for each dataset, the associations are displayed:
 
 ### 3.6 Metadata Panel {#metadata}
 
-The metadata panel at the right of the asset details screen displays details from the OData service metadata contract and values that have been curated in the Data Hub Catalog:
+The metadata panel at the right of the asset details screen displays details from the OData service metadata contract and values that have been curated in the Catalog:
 
 {{< figure src="/attachments/data-hub/data-hub-catalog/search/metadata.png" alt="metadata pane"   width="300"  >}}
 
@@ -396,14 +392,14 @@ Technical owners can be [changed](/catalog/manage/curate/#changing-owners).
 
 #### 3.6.4 Discoverability {#discoverability-metadata}
 
-When a data source is registered, by default, it is **Discoverable** in the Data Hub Catalog. When this is set, all users in your company can find it, view the details, and consume it. The owners of an asset and curators can set a data source as **Non-discoverable**, which means it is not visible to users unless they are the owner or a curator.
+When a data source is registered, by default, it is **Discoverable** in the Catalog. When this is set, all users in your company can find it, view the details, and consume it. The owners of an asset and curators can set a data source as **Non-discoverable**, which means it is not visible to users unless they are the owner or a curator.
 
 See the [Curation Bar](#curation-bar) section below for changing **Discoverability** as the owner of the data source or curator.
 
 The following discoverability values can be set:
 
-* **Discoverable** – all users in your company can see and consume the asset in the Data Hub Catalog and Studio Pro 
-* **Non-Discoverable** – the asset is only visible to owners, Data Hub curators, and the Mendix Admin in the Catalog; it is not included in the search results in the **Data Hub** pane of Studio Pro, or any other client of the Data Hub API.
+* **Discoverable** – all users in your company can see and consume the asset in the Catalog and Studio Pro 
+* **Non-Discoverable** – the asset is only visible to owners, curators, and the Mendix Admin in the Catalog; it is not included in the search results in the [Data Hub pane](/refguide/data-hub-pane/) of Studio Pro, or any other client of the Catalog API.
 
 #### 3.6.5 Validated
 
@@ -445,6 +441,6 @@ Here is an example:
 
 When you click **Download**, the following file is downloaded: `DataHub_SAP_Intelligence_1.0_OData4.zip`. This ZIP file has the folder `DataHub_SAP_Intelligence_1.0_OData4`, which contains the all the metadata files that define the service.
 
-### 3.10 Viewing Search Results in the Data Hub Landscape
+### 3.10 Viewing Search Results in the Landscape
 
 When an item is selected in the search results pane, you can click the [Landscape](/data-hub/data-hub-landscape/) tab to see the network of connections and dependencies for the selected asset. This provides a graphical representation to indicate the context and relevance of a selected item and the data for the exposed datasets.

@@ -1,13 +1,13 @@
 ---
-title: "Register OData Resources in the Data Hub Catalog"
+title: "Register OData Resources in the Catalog"
 linktitle: "Register OData Resources"
 url: /catalog/register/register-data/
 description: "Describes how to register OData resources in the Catalog: through the Mendix Cloud, using the Registration API, or in the UI form."
 weight: 10
-tags: ["data hub catalog", "data hub", "external entities", "register", "published OData service" ,"how to", "registration"]
+tags: ["Catalog", "data hub", "external entities", "register", "published OData service" ,"how to", "registration"]
 aliases:
-    - /data-hub/data-hub-catalog/register/
-    - /data-hub/data-hub-catalog/register-data/
+    - /catalog/register/
+    - /catalog/register-data/
     - /catalog/register-data-sources/register-data/
     - /catalog/register-data-sources/register
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details. 
@@ -16,13 +16,13 @@ aliases:
 
 ## 1 Introduction
 
-There are three ways to register [published OData services](/refguide/published-odata-services/) in the Data Hub Catalog. We support all OData versions.
+There are three ways to register [published OData services](/refguide/published-odata-services/) in the Catalog. We support all OData versions.
 
 **This how-to will teach you how to register a service in the following ways:**
 
 * [Through the Mendix Cloud](#mendix-cloud), done automatically when you deploy a [published OData service](/refguide/published-odata-services/) to the Mendix Cloud
-* [Through the Data Hub Catalog Registration API](#registration-api)
-* [Through the Data Hub Catalog UI form](#registration-form)
+* [Through the Catalog Registration API](#registration-api)
+* [Through the Catalog UI form](#registration-form)
 
 ## 2 Prerequisites
 
@@ -34,24 +34,24 @@ Before starting this how-to, make sure you have completed the following prerequi
 
 ## 3 Registering a Service Through the Mendix Cloud {#mendix-cloud}
 
-If you have an exposed OData service that is deployed to the [Mendix Cloud](/developerportal/deploy/mendix-cloud-deploy/), a [published OData service](/refguide/published-odata-services/), then congratulations! Your service is already registered in the [Data Hub Catalog](/data-hub/data-hub-catalog/).
+If you have an exposed OData service that is deployed to the [Mendix Cloud](/developerportal/deploy/mendix-cloud-deploy/), a [published OData service](/refguide/published-odata-services/), then congratulations! Your service is already registered in the [Catalog](/catalog/).
 
 ## 4 Registering a Service Without the Mendix Cloud {#without-mendix-cloud}
 
-If you are not using the Mendix Cloud to deploy your Mendix application, there are two other ways to register an exposed OData service in the Data Hub Catalog:
+If you are not using the Mendix Cloud to deploy your Mendix application, there are two other ways to register an exposed OData service in the Catalog:
 
-* [Through the Data Hub Catalog Registration API](#registration-api)
-* [Through the Data Hub Catalog UI form](#registration-form)
+* [Through the Catalog Registration API](#registration-api)
+* [Through the Catalog UI form](#registration-form)
 
-The Data Hub Catalog collects metadata about the application and environment where your application is deployed, so you can distinguish services from one another. You need to provide details about both the application and environment where the service is deployed in order to register your service.
+The Catalog collects metadata about the application and environment where your application is deployed, so you can distinguish services from one another. You need to provide details about both the application and environment where the service is deployed in order to register your service.
 
-For detailed information on working with external entities and the Catalog without the Mendix Cloud (for on-prem or local deployment), see [Data Hub without Mendix Cloud](/data-hub/data-hub-without-mendix-cloud/).
+For detailed information on working with external entities and the Catalog without the Mendix Cloud (for on-prem or local deployment), see [Register Data Sources without Mendix Cloud](/catalog/data-sources-without-mendix-cloud/).
 
-### 4.1 Registering a Service Through the Data Hub Catalog Registration API {#registration-api}
+### 4.1 Registering a Service Through the Catalog Registration API {#registration-api}
 
-Calling the Data Hub Catalog [Registration API](/apidocs-mxsdk/apidocs/data-hub-apis/#registration) allows you to register one or more exposed OData service(s). 
+Calling the Catalog [Registration API](/apidocs-mxsdk/apidocs/catalog-apis/#registration) allows you to register one or more exposed OData service(s). 
 
-First, you need to create an authentication token to get access to the Data Hub Catalog APIs. The Data Hub Catalog Registration API requires authentication through a personal access token. For every API request you make to a Data Hub Catalog API, include the following key-value pair with your headers:
+First, you need to create an authentication token to get access to the Catalog APIs. The Catalog Registration API requires authentication through a personal access token. For every API request you make to a Catalog API, include the following key-value pair with your headers:
 
 `Authorization: MxToken <your_Personal_Access_Token>`
 
@@ -67,7 +67,7 @@ Once you have a personal access token, follow this series of REST calls to regis
 
 The [Data Hub Registration API specification](https://datahub-spec.s3.eu-central-1.amazonaws.com/registration_v4.html) describes all the optional fields, required formats, other operations on these same paths. You will only fill out the required fields and one operation per path in this how-to. 
 
-#### 4.1.1 Registering an Application Through the Data Hub Catalog Registration API {#register-application}
+#### 4.1.1 Registering an Application Through the Catalog Registration API {#register-application}
 
 To register an application, you need:
 
@@ -79,7 +79,7 @@ For more details on what can and cannot be provided in these fields, see the [AP
 You can see an example of a request below:
 
 ```curl
-curl --location --request PUT 'https://hub.mendix.com/rest/registration/v4/applications' \
+curl --location --request PUT 'https://catalog.mendix.com/rest/registration/v4/applications' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: MxToken <your_Personal_Access_Token>' \
 --data-raw '{"Name": "My-Application"}'
@@ -92,13 +92,13 @@ A successful `PUT` call results in a `201` status code and a JSON response body 
 	"Name":"My-Application",
 	"Type":"Other",
 	"UUID":"0301800d-b104-417f-8a64-a8f3ba3450c3",
-	"Icon":"https://hub.mendix.com/resources/logos/other_icon.png"
+	"Icon":"https://catalog.mendix.com/resources/logos/other_icon.png"
 }
 ```
 
 Use the application UUID to register your environment.
 
-#### 4.1.2 Registering an Environment Through the Data Hub Catalog Registration API {#register-environment}
+#### 4.1.2 Registering an Environment Through the Catalog Registration API {#register-environment}
 
 To register an environment, you need the following:
 
@@ -113,7 +113,7 @@ For more details on what can and cannot be provided in these fields, see the [AP
 You can see an example of a request below:
 
 ```curl
-curl --location --request PUT 'https://hub.mendix.com/rest/registration/v4/applications/{application_UUID}/environments' \
+curl --location --request PUT 'https://catalog.mendix.com/rest/registration/v4/applications/{application_UUID}/environments' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: MxToken <your_Personal_Access_Token>' \
 --data-raw '{"Name": "My-Environment", "Location": "https://my-deployed-application-url.com", "Type": "Production"}'
@@ -131,14 +131,14 @@ A successful `PUT` call results in a `201` status code and a JSON response body 
 		"Name":"My-Application",
 		"UUID":"0301800d-b104-417f-8a64-a8f3ba3450c3",
 		"Type":"Other",
-		"Icon":"https://hub.mendix.com/resources/logos/other_icon.png"
+		"Icon":"https://catalog.mendix.com/resources/logos/other_icon.png"
 	}
 }
 ```
 
 Use the application UUID and the environment UUID to register one or more services.
 
-#### 4.1.3 Registering Services Through the Data Hub Catalog Registration API {#register-services}
+#### 4.1.3 Registering Services Through the Catalog Registration API {#register-services}
 
 To register services, you need the following:
 
@@ -154,7 +154,7 @@ For more details on what can and cannot be provided in these fields, see the [AP
 You can see an example of a request below:
 
 ```curl
-curl --location --request PUT 'https://hub.mendix.com/rest/registration/v4/applications/{application_UUID}/environments/{environment_UUID}/published-endpoints' \
+curl --location --request PUT 'https://catalog.mendix.com/rest/registration/v4/applications/{application_UUID}/environments/{environment_UUID}/published-endpoints' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: MxToken <your_Personal_Access_Token>' \
 --data-raw '{"Endpoints":[{"Path": "/path/to/my/service/endpoint","ServiceVersion":{"Version": "1.0","Service":{"Name": "My-Service-Name","ContractType": "OData_3_0"},"SecurityScheme": { "SecurityTypes": [{"Name": "Basic"}] },"Contracts":[{"Type": "Metadata",  "Value": "<?xml version=\"1.0\" encoding=\"utf-8\"?><edmx:Edmx Version=\"1.0\" xmlns:edmx=\"http://schemas.microsoft.com/ado/2007/06/edmx\" xmlns:mx=\"http://www.mendix.com/Protocols/MendixData\">  <edmx:DataServices m:DataServiceVersion=\"3.0\" m:MaxDataServiceVersion=\"3.0\" xmlns:m=\"http://schemas.microsoft.com/ado/2007/08/dataservices/metadata\">    <Schema Namespace=\"DefaultNamespace\" xmlns=\"http://schemas.microsoft.com/ado/2009/11/edm\"><EntityType Name=\"Employee\"><Key><PropertyRef Name=\"ID\" /></Key><Property Name=\"ID\" Type=\"Edm.Int64\" Nullable=\"false\" mx:isAttribute=\"false\" /><Property Name=\"Name\" Type=\"Edm.String\" MaxLength=\"200\" /><Property Name=\"DateOfBirth\" Type=\"Edm.DateTimeOffset\" /><Property Name=\"Address\" Type=\"Edm.String\" MaxLength=\"200\" /><Property Name=\"JobTitle\" Type=\"Edm.String\" MaxLength=\"200\" /><Property Name=\"Salary\" Type=\"Edm.Decimal\" /></EntityType><EntityContainer Name=\"test.acme.employeeinformation/v1Entities\" m:IsDefaultEntityContainer=\"true\"><EntitySet Name=\"Employees\" EntityType=\"DefaultNamespace.Employee\" /></EntityContainer></Schema></edmx:DataServices></edmx:Edmx>"}]}}]}'
@@ -171,11 +171,11 @@ A successful `PUT` call will result in a `200` status code and a JSON response b
 		"SecurityClassification": "Internal",
 		"UUID": "f6cde195-a45e-4077-b055-bca10e83c202",
 		"Links": [{
-				"Href": "https://hub.mendix.com/rest/registration/v4/endpoints/f6cde195-a45e-4077-b055-bca10e83c202",
+				"Href": "https://catalog.mendix.com/rest/registration/v4/endpoints/f6cde195-a45e-4077-b055-bca10e83c202",
 				"Rel": "Self"
 			},
 			{
-				"Href": "https://hub.mendix.com/link/endpoint?EndpointUUID=f6cde195-a45e-4077-b055-bca10e83c202",
+				"Href": "https://catalog.mendix.com/link/endpoint?EndpointUUID=f6cde195-a45e-4077-b055-bca10e83c202",
 				"Rel": "Catalog"
 			}
 		],
@@ -190,7 +190,7 @@ A successful `PUT` call will result in a `200` status code and a JSON response b
 				"ContractType": "OData_3_0",
 				"UUID": "0fe4ce93-a421-4ffe-8022-3715a5a60d15",
 				"Links": [{
-					"Href": "https://hub.mendix.com/rest/registration/v4/applications/0301800d-b104-417f-8a64-a8f3ba3450c3/services/My-Service-Name",
+					"Href": "https://catalog.mendix.com/rest/registration/v4/applications/0301800d-b104-417f-8a64-a8f3ba3450c3/services/My-Service-Name",
 					"Rel": "Self"
 				}]
 			},
@@ -295,9 +295,9 @@ A successful `PUT` call results in a `200` status code and a JSON response body.
 }
 ```
 
-### 4.2 Registering a Service Through the Data Hub Catalog UI Form {#registration-form}
+### 4.2 Registering a Service Through the Catalog UI Form {#registration-form}
 
-The Data Hub Catalog has a UI form where you can register a single exposed OData service. Make sure you have collected the following details before you begin:
+The Catalog has a UI form where you can register a single exposed OData service. Make sure you have collected the following details before you begin:
 
 * OData metadata contract file as an XML, or ZIP if it is multiple files
 * Data Source details: `Name`, `Version`, `Path`
@@ -306,7 +306,7 @@ The Data Hub Catalog has a UI form where you can register a single exposed OData
 
 Follow the steps below:
 
-1. Start at the [Data Hub Catalog homepage](https://hub.mendix.com). If the connector for your business application is not shown, use the generic **OData** v4 service.
+1. Start at the [Catalog homepage](https://catalog.mendix.com). If the connector for your business application is not shown, use the generic **OData** v4 service.
 2. On the **Contract** screen, upload your XML or ZIP file. For more information on the contract, see the [Contract Structure](#contract-structure) section below.
 
     If you selected the wrong file, click the **x** to remove it and upload a different one. 
@@ -324,7 +324,7 @@ Follow the steps below:
 8. Select your **Authentication** method. See the [Authentication](#authentication) section below for supported types. Curators can also [add or change authentication methods](/catalog/manage/curate/#authentication) later. 
 9. Select the **Done!** option that appears once you have filled out all the required fields.
 
-Congratulations! Your OData service is registered in the Data Hub Catalog. 
+Congratulations! Your OData service is registered in the Catalog. 
 
 The discoverable status of the OData service defaults to the value set by the Mendix Admin. For more details, see the [Settings](/developerportal/control-center/data-hub-admin/#settings) section of *Data Hub Administration*.
 
@@ -332,7 +332,7 @@ The discoverable status of the OData service defaults to the value set by the Me
 
 Publishers of a data source can let consuming developers know what they will need to identify themselves when consuming a data source. 
 
-The following methods are supported by the Data Hub Catalog:
+The following methods are supported by the Catalog:
 
 * **Basic authentication** – Authenticates from a username and password
 * **Active session** – For Mendix data sources, authenticates from the open and active browser session

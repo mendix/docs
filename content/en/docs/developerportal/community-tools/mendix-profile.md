@@ -300,7 +300,7 @@ From a governance aspect, it is important for Mendix Admins to deactivate ex-emp
 
 The following Mendix services support usage of PATs:
 
-* [Data Hub Catalog API](/apidocs-mxsdk/apidocs/data-hub-apis/)
+* [Catalog API](/apidocs-mxsdk/apidocs/catalog-apis/)
 * [App Repository API](/apidocs-mxsdk/apidocs/app-repository-api/)
 * [Projects API](/apidocs-mxsdk/apidocs/projects-api/)
 
@@ -343,7 +343,7 @@ Use of a PAT depends on the API you are accessing.
 For security reasons, you should not include PATs into your source code.
 {{% /alert %}}
 
-To use a PAT with the [Data Hub APIs](/apidocs-mxsdk/apidocs/data-hub-apis/), it must be passed as the authorization header on every request made to the Data Hub Catalog. The request will look like this:
+To use a PAT with the [Catalog APIs](/apidocs-mxsdk/apidocs/catalog-apis/), it must be passed as the authorization header on every request made to the Catalog. The request will look like this:
 
 ```http
 GET /v1/register HTTP/1.1
@@ -375,7 +375,3 @@ Mendix has been tracking these data changes since November 2018.
 ## 11 Point Penalties
 
 Abusing the Mendix Forum, point system, or other community tools is not allowed. Any such action can result in a point penalty. Mendix reserves the right to penalize a user who bypasses or games the system without informing them.
-
-## 12 Main Document in This Category
-
-* [OAuth and Scopes](/developerportal/community-tools/oauth-scopes/) – provides introductory information on how OAuth and scopes work, as well as details on scopes generated in the Developer Portal

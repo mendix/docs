@@ -325,11 +325,15 @@ Technical Contacts with a license to the Mendix Event Broker can manage its feat
 
 See [Enabling the Mendix Event Broker Service](#enable-mx-event-broker) for more information.
 
-#### 5.2.2 Topics and Channels
+#### 5.2.2 Topics and Channels {#topics-channels}
 
 Events are placed in Channels, sometimes called Topics. Apps subscribed to a channel will receive events published to this channel.
 
 Events published by Free Apps are published to one shared company channel on a multi-tenant free Event Broker. Events published by apps running on licensed nodes are published to their own channels on the company Event Broker. These channels, implemented as topics on Kafka, are automatically created upon deployment of the app publishing the events.
+
+For information on setting topics and channels for Kafka clusters running on a Private Cloud ("Bring Your Own Kafka"), see [Configuring Deployment Constants for Own Kafka Cluster](#deployment-constants).
+
+A topic is named in the form of `businessevents.<channel>.<EventBrokerSpace>`. A channel is written as a UUID and is used to group events.
 
 #### 5.2.3 Error Handling
 
@@ -343,14 +347,12 @@ This is implemented as follows:
 
 ## 6 Deployment {#deployment}
 
-Business Events offers three different deployment models:
+Business Events offers four different deployment models:
 
 1. Deploy locally with the [Local Setup Tool](https://github.com/mendix/event-broker-tools)
 2. Free apps use a free multi-tenant Event Broker
 3. Production apps use the [Mendix Event Broker](#mendix-event-broker) running in the Mendix Cloud
-
-{{% alert color="info" %}}
-Currently, business events can only be deployed to the [Mendix Cloud](/developerportal/deploy/mendix-cloud-deploy/), with other deployment models expected in forthcoming releases.{{% /alert %}} 
+4. Apps running in Mendix for Private Cloud (Bring your own Kafka) [Currently in [Beta](/releasenotes/beta-features/)]
 
 ### 6.1 Local Deployment
 
@@ -372,11 +374,34 @@ You can also use your own event broker cluster.
 
 #### 6.3.1 Warning Message When Deploying
 
-If you deploying an app to production that contains a published business event service, you might receive a warning that it is not possible to enable the event broker service. If you see this message, do the following in the [Services](/developerportal/deploy/environments/#services) tab of the production environment screen:
+If you are deploying an app to production that contains a published business event service, you may receive a warning that it is not possible to enable the event broker service. If you see this message, do the following in the [Services](/developerportal/deploy/environments/#services) tab of the production environment screen:
 
 1. Select the **Enable** checkbox for the environment.
 2. Transport the mda to an environment.
 3. Restart the environment.
+   
+### 6.4 Apps Running Own Kafka Cluster on Private Cloud (Bring Your Own Kafka)
+
+{{% alert color="info" %}}
+This deployment method is currently in [Beta](/releasenotes/beta-features/).{{% /alert %}}
+
+Business events are powered by Apache Kafka (see [Mendix Event Broker](#mendix-event-broker). If you wish to use your own Kafka cluster instead of the [Mendix Event Broker](#mendix-event-broker), see [Configuring Deployment Constants for Own Kafka Cluster](#deployment-constants). Running your own cluster is referred to as Bring Your Own Kafka (BYOK).
+
+#### 6.4.1 Configuring Deployment Constants for Own Kafka Cluster {#deployment-constants}
+
+Business Events module exposes configuration via [constants](/refguide/constants/). These are set up during deployment to connect to your Kafka cluster. 
+
+All the constants are part of the Mendix Business Events module.
+
+{{% alert color="warning" %}}Special characters are not allowed in constants. {{% /alert %}}
+
+* `BusinessEvents.ServerUrl` – Configure your Kafka bootstrap servers here as `host1:port1,host2:port2,...`. The setting is used to connect the app.
+* `BusinessEvents.Username` and `BusinessEvents.Password` – The module supports Kafka’s SASL/SCRAM SHA-512 authentication mechanism, and the Kafka cluster should be set up to authenticate clients with this. See [Configuring Kafka Brokers](https://kafka.apache.org/documentation/#security_sasl_scram_brokerconfig) in the Apache Kafka documentation for further instructions.
+* `BusinessEvents.EventBrokerSpace` – This setting helps you group events into Kafka [topics](#topics-channels). With this set, each business event will be put in its own topic. Set the `EventBrokerSpace` value to your environment names (or Kubernetes namespaces) like `test` or `production`. Doing so ensures that when each business event that is defined in an app is deployed to a specific environment, it will have its own topic. For example, an `OrdersReceived` business event defined in an app when deployed to two different environments will have two topics. A topic is named in the form of `businessevents.<channel>.<EventBrokerSpace>`. A channel is written as a UUID and is used to group events.
+
+For further explanation on topics and channels, see [Topics and Channels](#topics-channels) and the [Mendix Event Broker](#mendix-event-broker) section.
+
+You can also use the `EventBrokerSpace` constant locally to test the behavior. See [Local Testing](#local-testing).
 
 ## 7 Local Testing {#local-testing}
 
@@ -440,7 +465,7 @@ Here is an example of postgres service that you can add to your `docker-compose.
 
 8. How do I configure which Kafka cluster to use?
 
-    During modelling, you can use the **Constants** described in the [Configuring Local Deployments](#config-local-deployment) section to configure to a local or other Kafka. This does not transfer through to runtime. During runtime, the configurations are provided during startup automatically, since only Mendix Cloud is supported.
+    During modelling, you can use the **Constants** described in the [Configuring Local Deployments](#config-local-deployment) section to configure to a local or other Kafka. This does not transfer through to runtime.
 
 9. How do I delete or clean up events and tasks?
 

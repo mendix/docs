@@ -41,7 +41,7 @@ For opening an app you already have in a [Git On-Premises Version Control Server
 
 ### 2.4 Importing App Package {#import-app}
 
-You can also import and app package and open it. Click **Import App Package** in the left sidebar. For more information on how to import an app package, see [Import App Package](/refguide/import-app-package-dialog/).
+You can also import an app package and open it. Click **Import App Package** in the left sidebar. For more information on how to import an app package, see [Import App Package](/refguide/import-app-package-dialog/).
 
 ### 2.5 Preferences
 

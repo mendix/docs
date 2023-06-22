@@ -41,6 +41,7 @@ These tabs are only available for users with the **App Settings** permission:
 
 In this tab, you can find the following items:
 
+* **Logo** of the app
 * **Description** of the app
 * **App ID**
 * [Technical Contact](/developerportal/collaborate/app-roles/#technical-contact) of the app

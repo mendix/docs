@@ -1,5 +1,5 @@
 ---
-title: "Catalog Landscape"
+title: "Landscape View"
 url: /catalog/manage/landscape/
 description: "Describes the Catalog Landscape to explore the connections with registered assets."
 tags: ["Catalog", "data hub", "external entities", "landscape", "published odata service"]
@@ -26,7 +26,7 @@ This visual display of registered assets will enable you to:
 * Discover the context of the data being shared by the network of nodes for a service and the deploying app
 * From the displayed network of dependencies, ascertain the differences between the services by seeing how the shared data is used
 
-You can access the Landscape from [Catalog](https://catalog.mendix.com/) by clicking the **Landscape** tab.
+You can access the Landscape from [Catalog](https://catalog.mendix.com/) by clicking the **Catalog** tab **Landscape View**.
 
 ## 2 Catalog Landscape in Detail
 

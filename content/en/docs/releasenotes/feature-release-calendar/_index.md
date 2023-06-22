@@ -74,7 +74,7 @@ The new features were divided into these major themes, which are described in th
 | WebHooks | Released for GA [Jun 15, 2023](/releasenotes/developer-portal/mendix-cloud/#june-15th-2023) |
 | Pipelines | Public Beta: Q4 2023<br>GA: TBD |
 | Mendix on AWS EKS | Released for GA [Feb 8, 2023](/releasenotes/developer-portal/mendix-for-private-cloud/#february-8th-2023) |
-| Private Mendix Platform | GA: TBD   |
+| Private Mendix Platform | Currently in Private Beta<br>GA: Q4 2023   |
 
 ## 6 Governance & Control
 

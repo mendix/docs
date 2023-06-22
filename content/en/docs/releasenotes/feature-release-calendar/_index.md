@@ -52,11 +52,11 @@ The new features were divided into these major themes, which are described in th
 
 | Capability or Feature | Expected Release |
 | --- | --- |
-| Mendix Connect - External Entities | Released for GA [Jun 27, 2023](/releasenotes/studio-pro/10.0/) [**VERIFY TO REMOVE**] |
-| Mendix Connect - Business Events & Event Broker | Released for GA [Jun 27, 2023](/releasenotes/studio-pro/10.0/) [**VERIFY TO REMOVE**] |
+| Mendix Connect - External Entities | Released for GA [Jun 27, 2023](/releasenotes/studio-pro/10.0/) [**VERIFY TO REFRAME/REMOVE**] |
+| Mendix Connect - Business Events & Event Broker | Released for GA [Jun 27, 2023](/releasenotes/studio-pro/10.0/) [**VERIFY TO REFRAME/REMOVE**] |
 | Machine Learning Kit | Released for GA [Jun 27, 2023](/releasenotes/studio-pro/10.0/) [**WILL GO GA - NEED TO ADD NOTE**] |
-| Solutions Kit - Protected Modules | Released for GA [Jun 27, 2023](/releasenotes/studio-pro/10.0/) [**VERIFY FOR DATE AND RN**] |
-| Solutions Kit - Solution Lifecycle Management | Released for GA [Jun 27, 2023](/releasenotes/studio-pro/10.0/) [**VERIFY FOR DATE AND RN**] |
+| Solutions Kit - Protected Modules | Released for GA [Jun 27, 2023](/releasenotes/studio-pro/10.0/) [**VERIFY TO REFRAME/REMOVE**] |
+| Solutions Kit - Solution Lifecycle Management | Released for GA [Jun 27, 2023](/releasenotes/studio-pro/10.0/) [**VERIFY TO REFRAME/REMOVE**] |
 | Mendix Connect - Database Connector | GA: Q3 2023 |
 | Mendix Connect - REST Connector | GA: Q4 2023 |
 | Studio Pro Extensibility | Private Beta: Q3 2023<br>GA: TBD |

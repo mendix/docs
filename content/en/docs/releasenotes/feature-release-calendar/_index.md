@@ -34,7 +34,7 @@ The new features were divided into these major themes, which are described in th
 | --- | --- |
 | Studio Pro redesign | Released for GA [Jun 27, 2023](/releasenotes/studio-pro/10.0/) |
 | Improved Properties pane | Released for GA [Jun 27, 2023](/releasenotes/studio-pro/10.0/) |
-| Git version control (without SVN support) | Released for GA [Jun 27, 2023](/releasenotes/studio-pro/10.0/) [**VERIFY FOR DATE AND RN**] |
+| Git version control (removal of SVN support) | Released for GA [Jun 27, 2023](/releasenotes/studio-pro/10.0/) |
 | Start from spreadsheet | Released for GA [Jun 27, 2023](/releasenotes/studio-pro/10.0/) |
 | Custom icons support | Released for GA [Jun 27, 2023](/releasenotes/studio-pro/10.0/) |
 | Flexible page URLs | Released for GA [Jun 27, 2023](/releasenotes/studio-pro/10.0/) |

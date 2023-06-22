@@ -7,7 +7,8 @@ weight: 1
 description: "Describes initial steps beginning users can take with their Catalog."
 tags: ["data hub", "Catalog", "consume", "external entities", "asset", "entities", "data hub pane", "studio pro"]
 aliases:
-    - /catalog/get-started/
+    - /data-hub/data-hub-catalog/get-started/
+
 ---
 
 ## 1 Introduction

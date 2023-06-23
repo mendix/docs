@@ -65,7 +65,7 @@ To see the current status of the Mendix Developer Portal and Control Center, see
 
 #### New Features
 
-* You can now [set up an SSO (BYOIDP)](/developerportal/control-center/set-up-sso-byoidp/) to allow Mendix users to sign in to Mendix Platform services and apps using Mendix SSO using identity federation between the Mendix Platform and your corporate IdP.
+* You can now [set up an SSO (BYOIDP)](/developerportal/control-center/set-up-sso-byoidp/) to allow Mendix users to sign in to Mendix Platform services, including Studio Pro, using identity federation between the Mendix Platform and your corporate IdP.
 * You can now use a [Personal Access Token](/developerportal/community-tools/mendix-profile/#pat) to access SVN repositories in [Team Server](/developerportal/collaborate/team-server/) without using your personal Mendix credentials.
 
 ### May 4th, 2023

@@ -61,6 +61,13 @@ To see the current status of the Mendix Developer Portal and Control Center, see
     * You can now create portfolios with different levels of visibility to people in your company: private or restricted.
 * We have added the [Portfolios](/developerportal/control-center/#portfolios) page to the Control Center, which provides Mendix Admins with governance features for portfolio management in your company.
 
+### May 16th, 2023{#byoidp}
+
+#### New Features
+
+* You can now [set up an SSO (BYOIDP)](/developerportal/control-center/set-up-sso-byoidp/) to allow Mendix users to sign in to Mendix Platform services, including Studio Pro, using identity federation between the Mendix Platform and your corporate IdP.
+* You can now use a [Personal Access Token](/developerportal/community-tools/mendix-profile/#pat) to access SVN repositories in [Team Server](/developerportal/collaborate/team-server/) without using your personal Mendix credentials.
+
 ### May 4th, 2023
 
 #### New Features 

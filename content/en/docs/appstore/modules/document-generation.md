@@ -1,8 +1,8 @@
 ---
-title: "Document Generation"
+title: "PDF Document Generation"
 url: /appstore/modules/document-generation/
 category: "Modules"
-description: "Describes the configuration and usage of the Document Generation module, which is available in the Mendix Marketplace."
+description: "Describes the configuration and usage of the PDF Document Generation module, which is available in the Mendix Marketplace."
 tags: ["marketplace", "marketplace component", "document generation", "platform support"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
@@ -13,7 +13,7 @@ This module is currently in Public Beta and should be used for testing purposes 
 
 ## 1 Introduction
 
-The [Document Generation](https://marketplace.mendix.com/link/component/211553) module allows you to generate pixel-perfect PDF documents based on regular pages in your app.
+The [PDF Document Generation](https://marketplace.mendix.com/link/component/211553) module allows you to generate pixel-perfect PDF documents based on regular pages in your app.
 
 This module uses the document generation service on the Mendix Cloud to convert any regular web page in your app into a PDF document. The result is similar to what you would get when using the "Save as PDF" feature in the print dialog box of your browser. 
 
@@ -81,7 +81,7 @@ You need to have Chrome or Chromium installed on your local machine.
 
 ##### 3.1.1 Chrome
 
-The Document Generation module automatically tries to find the Chrome executable (*chrome.exe*) in the default installation paths. 
+The PDF Document Generation module automatically tries to find the Chrome executable (*chrome.exe*) in the default installation paths. 
 
 If you have installed Chrome in a custom location, configure the path to the Chrome executable in the constant **CustomChromePath** in the **_UseMe** > **Configuration** folder. 
 

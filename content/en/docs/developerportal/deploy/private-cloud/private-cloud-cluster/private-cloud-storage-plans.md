@@ -1472,7 +1472,7 @@ This basic, on-demand option allows you to attach an existing GCP Cloud Storage 
 
 #### 3.5.1 Prerequisites
 
-* A GCP Cloud Storage bucket bucket.
+* A GCP Cloud Storage bucket.
 * An Access and Secret key with permissions to access the bucket.
 
 #### 3.5.2 Limitations

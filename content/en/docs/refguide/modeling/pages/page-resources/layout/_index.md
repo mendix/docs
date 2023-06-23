@@ -38,7 +38,7 @@ Styling:
 
 ## 3 Properties
 
-### 3.1 General Properties{#general}
+### 3.1 General Section {#general}
 
 #### 3.1.1 Platform
 
@@ -82,7 +82,7 @@ The **layout type**, determines the purpose of the layout and how a page using t
 
 {{% snippet file="/static/_includes/refguide/common-section-link.md" %}}
 
-### 3.3 Designer Section{#designer}
+### 3.3 Designer Section {#designer}
 
 #### 3.3.1 Canvas Width
 

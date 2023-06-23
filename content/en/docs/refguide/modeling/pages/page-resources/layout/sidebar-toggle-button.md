@@ -20,38 +20,34 @@ For example, the image below shows for an example layout that uses the sidebar t
 
 {{< figure src="/attachments/refguide/modeling/pages/page-resources/layout/sidebar-toggle-button/sidebar-toggle-button.png" >}}
 
-## 2 Properties
+## 2 Properties Pane
 
-An example of sidebar toggle properties is represented in the image below:
+The properties pane is divided into two major sections by a toggle at the top of the pane: **Properties** and **Styling**. Sidebar toggle properties consist of the following sections:
 
-{{< figure src="/attachments/refguide/modeling/pages/page-resources/layout/sidebar-toggle-button/sidebar-toggle-properties.png"   width="250"  >}}
+Properties:
 
-Sidebar toggle properties consist of the following sections:
-
-* [Common](#common)
-* [Design Properties](#design-properties)
 * [General](#general)
 * [Visibility](#visibility)
+* [Common](#common)
 
-### 2.1 Common Section{#common}
+Styling:
 
-{{% snippet file="/static/_includes/refguide/common-section-link.md" %}}
+* [Design Properties](#design-properties)
+* [Common](#common-styling)
 
-### 2.2 Design Properties Section{#design-properties}
+## 3 Properties
 
-{{% snippet file="/static/_includes/refguide/design-section-link.md" %}}
+### 3.1 General Section {#general}
 
-### 2.3 General Section {#general}
-
-#### 2.3.1 Caption {#caption}
+#### 3.1.1 Caption {#caption}
 
 The **Caption** property defines a text that will be shown on the sidebar toggle.
 
-#### 2.3.3 Tooltip
+#### 3.1.2 Tooltip
 
 The **Tooltip** property determines a text end-users will see in the tooltip that appears when they hover over the sidebar toggle. The tooltip text is translatable. For more information on translatable texts, see [Language Menu](/refguide/translatable-texts/). If the tooltip is not specified, no tooltip will be shown when hovering over the sidebar toggle.
 
-#### 2.3.4 Icon {#icon}
+#### 3.1.3 Icon {#icon}
 
 The **Icon** property determines the icon that will be shown in front of the caption of the sidebar toggle. Possible options are: 
 
@@ -61,7 +57,7 @@ The **Icon** property determines the icon that will be shown in front of the cap
 
 Glyphicons come from the Bootstrap Halflings collection. The advantages of a glyphicon over a bitmap image are that they are scalable, look sharp on high-resolution screens, and their color can be changed by changing the font color. The advantage of an image icon is that it can have multiple colors.
 
-#### 2.3.5 Render Mode
+#### 3.1.4 Render Mode
 
 Defines the way the sidebar toggle will be shown to the end-user. Possible options are the following:
 
@@ -70,7 +66,7 @@ Defines the way the sidebar toggle will be shown to the end-user. Possible optio
 
 *Default render mode:* Button
 
-#### 2.3.6 Button Style
+#### 3.1.5 Button Style
 
 The **Button style** property applies a predefined styling to the sidebar toggle. Possible options are the following:
 
@@ -82,6 +78,20 @@ The **Button style** property applies a predefined styling to the sidebar toggle
 * Warning
 * Danger
 
-### 2.4 Visibility Section{#visibility}
+### 3.2 Visibility Section {#visibility}
 
 {{% snippet file="/static/_includes/refguide/visibility-section-link.md" %}}
+
+### 3.3 Common Section {#common}
+
+{{% snippet file="/static/_includes/refguide/common-section-link.md" %}}
+
+## 4 Styling
+
+### 4.1 Design Properties Section {#design-properties}
+
+{{% snippet file="/static/_includes/refguide/design-section-link.md" %}}
+
+### 4.2 Common Section {#common-styling}
+
+{{% snippet file="/static/_includes/refguide/common-section-link.md" %}}

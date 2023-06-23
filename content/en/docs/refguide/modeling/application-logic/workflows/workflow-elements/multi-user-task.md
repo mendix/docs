@@ -97,6 +97,10 @@ With this property, you specify how the outcomes of the individual users are agg
 If the number of [targeted users](#users) is less than the absolute number specified in the **Participant input** section, it is impossible to complete the multi-user task and the workflow will fail.
 {{% /alert %}}
 
+{{% alert color="info" %}}
+A fallback outcome can be both a selectable outcome and a fallback outcome at the same time.
+{{% /alert %}}
+
 ##### 2.5.2.1 Consensus
 
 Select this decision method when all required users should be in agreement with the provided outcome. That is, they should all select the same outcome. There has to be consensus. When there is no consensus, the multi-user task will complete with the the fallback outcome.
@@ -109,10 +113,6 @@ This outcome will be the final outcome of the multi-user task in the following c
 * If the multi-user task is completed with a final outcome before all required users have completed their task:
 
   For example, when 5 users need to review a contract (`Approve`, `Reject`) and the first 2 users are not in agreement (one selects `Approve` and the other one selects `Reject`), this multi-user task will be completed with the **Fallback outcome**. The input from the other users will not change the final outcome anymore. The task will no longer appear in their inbox.
-
-{{% alert color="info" %}}
-The fallback outcome should not be an option a user can select on the task page.
-{{% /alert %}}
 
 ###### 2.5.2.1.2 Example
 
@@ -137,10 +137,6 @@ You can refer to the following properties settings for this example:
 Veto decision method requires two outcomes, one of which is the veto outcome. If anyone selects the veto outcome, then the multi-user task will be completed with the veto outcome.
 
 For a multi-user task to complete with the non-veto outcome, all users defined in property **Participant input** need to complete their task by selecting the non-veto outcome.
-
-{{% alert color="info" %}}
-The completion condition is evaluated after each user selects an outcome. When one user completes the task by selecting the veto outcome, the multi-user task will be completed with the veto outcome. The task will be removed from the inbox of the remaining users, as their votes will not change the final outcome of the multi-user task.
-{{% /alert %}}
 
 ###### 2.5.2.2.1 Veto Outcome
 
@@ -174,10 +170,6 @@ You can refer to the following properties settings for the second example above:
 
 Select this decision method when a task should result in an outcome based on an absolute or relative majority number of votes. The number of required votes is defined as the result of the [participant input](#participant-input).
 
-{{% alert color="info" %}}
-The completion condition is evaluated after each user selects an outcome. If a user selects an outcome and this results in a majority, the multi-user task will be completed with that outcome. The task will be removed from the inbox of the remaining users, as their votes will not change the final outcome of the multi-user task.
-{{% /alert %}}
-
 ###### 2.5.2.3.1 Majority Type
 
 This property determines the majority type that will be applied when using the majority decision method.
@@ -194,10 +186,6 @@ Possible options of majority type are described in the table below:
 This outcome will be the final outcome of the multi-user task if it is determined that none of the remaining votes will result in a majority.
 
 {{% alert color="info" %}}
-A fallback outcome can be both a selectable outcome and a fallback outcome at the same time.
-{{% /alert %}}
-
-{{% alert color="info" %}}
 When the **Majority type** is set to **More than half**, the fallback outcome is only required when there are 2 or more outcomes defined.
 {{% /alert %}}
 
@@ -205,7 +193,7 @@ When the **Majority type** is set to **More than half**, the fallback outcome is
 
 The following example shows how it works when the decision method is **Majority** and the majority type is **More than half** or **Most chosen**.
 
-There are 50 targeted users and 10 required votes from users. The possible outcomes are A, B and C. 5 users have voted for outcome A, 4 users have voted for outcome B and 0 users voted for outcome C. This means that the task has 9 completed votes, and 1 vote is left to determine the final outcome of the task.
+There are 50 targeted users and 10 required votes from users. The possible outcomes are A, B and C. 5 users have voted for outcome A, 4 users have voted for outcome B, and 0 users voted for outcome C. This means that the task has 9 completed votes, and 1 vote is left to determine the final outcome of the task.
 
 | Outcomes | A   | B   | C   |
 |----------|-----|-----|-----|
@@ -231,10 +219,6 @@ You can refer to the following properties settings for this example:
 
 Select this decision method when a task should complete with an outcome when the number of votes for this outcome reaches the amount of votes set as the threshold value. The number of required votes is defined as the result of the [participant input](#participant-input).
 
-{{% alert color="info" %}}
-The completion condition is evaluated after each user selects an outcome. If a user selects an outcome and this results an outcome reaching the threshold, the multi-user task will be completed with that outcome. The task will be removed from the inbox of the remaining users, as their votes will not change the final outcome of the multi-user task.
-{{% /alert %}}
-
 ###### 2.5.2.4.1 Threshold Type {#threshold-type}
 
 This property determines the threshold type that will be applied when using the threshold decision method.
@@ -257,10 +241,6 @@ A threshold of `100%` is the same as using **Consensus** as the **Decision metho
 ###### 2.5.2.4.2 Fallback Outcome {#threshold-fallback-outcome}
 
 This outcome will be the final outcome of the multi-user task if it is determined that it is not possible to reach the threshold with the remaining votes.
-
-{{% alert color="info" %}}
-A fallback outcome can be both a selectable outcome and a fallback outcome at the same time.
-{{% /alert %}}
 
 ###### 2.5.2.4.3 Example
 

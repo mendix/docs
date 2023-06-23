@@ -66,6 +66,7 @@ Be sure to update these key widgets, resources, and actions:
 * [Nanoflow Commons](https://marketplace.mendix.com/link/component/109515)
 * [Community Commons](https://marketplace.mendix.com/link/component/170)
 * [Data Widgets](https://marketplace.mendix.com/link/component/116540)
+* [MendixSSO](https://marketplace.mendix.com/link/component/111349)
 
 In general you should not remove and re-import modules unless this is recommended in the component's release notes. If you do remove and re-import a component, you may lose data or configuration related to the component.
 

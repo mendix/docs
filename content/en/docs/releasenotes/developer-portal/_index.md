@@ -21,7 +21,7 @@ To see the current status of the Mendix Developer Portal and Control Center, see
 
 #### New Features
 
-* Jira is here! You can now assign your Studio Pro commits to user stories in your Jira board. We offer this functionality as a Beta version and welcome your feedback. Read all about the features and how to set it up in our [doc](/developerportal/collaborate/jira-connector/).
+* Jira is here! You can now assign your Studio Pro commits to user stories in your Jira board. We offer this functionality as a Beta version and welcome your feedback. Read all about the features and how to set it up in our [Jira Connector](/developerportal/collaborate/jira-connector/).
 
 #### Improvements
 

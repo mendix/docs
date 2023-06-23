@@ -2,7 +2,7 @@
 title: "Mendix 10 Feature Release Calendar"
 url: /releasenotes/feature-release-calendar/
 tags: ["announcements", "features", "feature release", "products", "features and products", "calendar", "new", "mendix 10", "mx10"]
-weight: 60
+weight: 4
 #notoc: true
 #layout: wide
 ---
@@ -25,7 +25,7 @@ The new features were divided into these major themes, which are described in th
 | --- | --- |
 | Portfolio Management | Released for GA [Jun 22, 2023](/releasenotes/developer-portal/#june-22nd-2023) |
 | Jira Integration | Released for Public Beta [Jun 22, 2023](/releasenotes/developer-portal/#june-22nd-2023)<br>GA: Q4 2023 |
-| Community Spaces | Released for Public Beta [Jun __, 2023](**ADD RN LINK**)<br>GA: Q3 2023 [**VERIFY FOR DATE AND RN; WHAT IS THIS?**] | 
+| Community Spaces | Currently in Private Beta<br>GA: Q3 2023 | 
 | App Insights | GA: Q3 2023 |
 
 ## 3 Developer Experience

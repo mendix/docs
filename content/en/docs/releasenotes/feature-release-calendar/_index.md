@@ -52,8 +52,7 @@ The new features were divided into these major themes, which are described in th
 
 | Capability or Feature | Expected Release |
 | --- | --- |
-| Mendix Connect - external entities | Released for GA [Jun 27, 2023](/releasenotes/studio-pro/10.0/) [**VERIFY TO REFRAME/REMOVE**] |
-| Mendix Connect - business events and Mendix Event Broker | Released for GA [Jun 27, 2023](/releasenotes/studio-pro/10.0/) [**VERIFY TO REFRAME/REMOVE**] |
+| Mendix Connect - business events and Mendix Event Broker | Released for GA [Jun 27, 2023](/releasenotes/studio-pro/10.0/) [**LINK TO RN**] |
 | Machine Learning Kit | Released for GA [Jun 27, 2023](/releasenotes/studio-pro/10.0/) |
 | Solutions Kit - protected modules | Released for GA [Jun 27, 2023](/releasenotes/studio-pro/10.0/) |
 | Solutions Kit - solution lifecycle management | Released for GA [Jun 27, 2023](/releasenotes/studio-pro/10.0/) |

@@ -86,8 +86,8 @@ Possible options of participant input are described in the table below:
 | Participant Input | Description |
 | --- | --- |
 | All target users | All targeted users should select an outcome to complete the multi-user task. |
-| Absolute number | The specified amount of targeted users should select an outcome to complete the multi-user task. |
-| Percentage | The specified percentage of targeted users should select an outcome to complete the multi-user task. The result of applying the percentage will be rounded upwards to the nearest mathematical integer value.<br><br>For example, when there are 19 targeted users and the **Percentage** is set to `50%`, then 10 users need to select an outcome to complete the multi-user task. |
+| Absolute number | The specified amount of targeted users who should select an outcome to complete the multi-user task.<br><br>**Amount**: The property that defines the absolute number. |
+| Percentage | The specified percentage of targeted users who should select an outcome to complete the multi-user task. The result of applying the percentage will be rounded upwards to the nearest mathematical integer value.<br><br>For example, when there are 19 targeted users and the **Percentage** is set to `50%`, then 10 users need to select an outcome to complete the multi-user task. |
 
 #### 2.5.2 Decision Method
 
@@ -228,7 +228,7 @@ Possible options of threshold type are described in the table below:
 | Threshold Type | Description |
 | --- | --- |
 | Percentage | Of the specified users defined in the participant input section, a task will be completed with an outcome when it reaches the specified percentage of votes. The result of applying the percentage will be rounded upwards to the nearest mathematical integer value.<br><br>For example, when the [participant input](#participant-input) results in 10 target users and the threshold value is set to `50%`, the multi-user task will complete with the outcome that gets 5 votes. |
-| Absolute number | Of the specified users defined in the participant input section, a task will be completed with an outcome when it reaches the specified amount of votes.<br><br>For example, when the [participant input](#participant-input) results in 10 target users and the threshold value is set to `5`, the multi-user task will complete with the outcome that gets 5 votes. |
+| Absolute number | Of the specified users defined in the participant input section, a task will be completed with an outcome when it reaches the specified amount of votes.<br><br>**Amount**: The property that defines the absolute number.<br><br>For example, when the [participant input](#participant-input) results in 10 target users and the threshold value is set to `5`, the multi-user task will complete with the outcome that gets 5 votes. |
 
 {{% alert color="info" %}}
 A threshold of `51%` is the same as using **Majority** as the **Decision method** with **More than half** as the **Majority type**.

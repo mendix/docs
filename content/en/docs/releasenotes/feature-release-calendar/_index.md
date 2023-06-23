@@ -35,7 +35,7 @@ The new features were divided into these major themes, which are described in th
 | Studio Pro redesign | Released for GA [Jun 27, 2023](/releasenotes/studio-pro/10.0/) |
 | Improved Properties pane | Released for GA [Jun 27, 2023](/releasenotes/studio-pro/10.0/) |
 | Git version control (removal of SVN support) | Released for GA [Jun 27, 2023](/releasenotes/studio-pro/10.0/) |
-| Start from spreadsheet | Released for GA [Jun 27, 2023](/releasenotes/studio-pro/10.0/) |
+| Start from spreadsheet | Released for GA [Jun 27, 2023](/releasenotes/studio-pro/10.0/) [**ADD RN**] |
 | Custom icons support | Released for GA [Jun 27, 2023](/releasenotes/studio-pro/10.0/) |
 | Flexible page URLs | Released for GA [Jun 27, 2023](/releasenotes/studio-pro/10.0/) |
 | MxAssist Best Practice Bot | Released for GA [Jun 27, 2023](/releasenotes/studio-pro/10.0/) |
@@ -52,7 +52,7 @@ The new features were divided into these major themes, which are described in th
 
 | Capability or Feature | Expected Release |
 | --- | --- |
-| Mendix Connect - business events and Mendix Event Broker | Released for GA [Jun 27, 2023](/releasenotes/studio-pro/10.0/) [**LINK TO RN**] |
+| Mendix Connect - business events and Mendix Event Broker | Released for GA [Jun 27, 2023](/releasenotes/studio-pro/10.0/) [**ADD RN**] |
 | Machine Learning Kit | Released for GA [Jun 27, 2023](/releasenotes/studio-pro/10.0/) |
 | Solutions Kit - protected modules | Released for GA [Jun 27, 2023](/releasenotes/studio-pro/10.0/) |
 | Solutions Kit - solution lifecycle management | Released for GA [Jun 27, 2023](/releasenotes/studio-pro/10.0/) |
@@ -80,4 +80,3 @@ The new features were divided into these major themes, which are described in th
 | Cloud self-service | Currently in Private Beta<br>GA: TBD |
 | Landscape overview | Public Beta: Q3 2023<br>GA: TBD |
 | Dependency governance | Public Beta: Q4 2023<br>GA: TBD |
-

@@ -6,7 +6,7 @@ description: "Describes how to connec Mendix apps in the Developer Portal to Jir
 tags: ["app", "jira", "project management", "scrum master", "general settings", Developer Portal", "Scrum Master"]
 ---
 
-{{% alert color="warning" %}}This feature is in Beta. For more information on Beta products, see [Beta Releases](/development/releasenotes/beta-features). {{% /alert %}}
+{{% alert color="warning" %}}This feature is in Beta. For more information on Beta products, see [Beta Releases](/development/releasenotes/beta-features/). {{% /alert %}}
 
 ## 1 Introduction
 

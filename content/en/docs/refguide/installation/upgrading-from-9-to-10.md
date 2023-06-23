@@ -134,7 +134,7 @@ If your application is currently using the Atlas theme, this is easily solved by
 
 In Studio Pro 10, the glyphicon is slowly being phased out. Although a currently selected glyphicon will still work, some of the widgets that Studio Pro 10 uses are no longer using a glyphicon class name.
 
-If your application is currently using the Atlas theme, this is easily solved by upgrading [Atlas Core](https://marketplace.mendix.com/link/component/117187) to version 3.11 or above. Otherwise, the temporary workaround for this is to add the [Atlas icon fonts](https://github.com/mendix/atlas/raw/main/resources/mx-icon-set-filled-v1.2.2.zip) directly to your theme styling directory.
+If your application is currently using the Atlas theme, this is easily solved by upgrading [Atlas Core](https://marketplace.mendix.com/link/component/117187) to version 3.11 or above. Otherwise, a possible workaround for this is to manually add the [Atlas icons module](https://github.com/mendix/atlas/raw/main/resources/Atlas_Icons.mpk) to your app.
 
 ## 8 Read More
 

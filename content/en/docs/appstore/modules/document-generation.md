@@ -8,7 +8,7 @@ tags: ["marketplace", "marketplace component", "document generation", "platform 
 ---
 
 {{% alert color="warning" %}}
-This module is currently in Public Beta and should be used for testing purposes only.
+This module is currently in Public Beta and should be used for testing purposes only. For more information on Beta products, see [Beta Releases](/development/releasenotes/beta-features/).
 {{% /alert %}}
 
 ## 1 Introduction

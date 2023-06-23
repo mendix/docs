@@ -24,9 +24,9 @@ The new features were divided into these major themes, which are described in th
 | Capability or Feature | Expected Release |
 | --- | --- |
 | Portfolio Management | Released for GA [Jun 22, 2023](/releasenotes/developer-portal/#june-22nd-2023) |
-| Jira Integration | Released for Public Beta [Jun 22, 2023](/releasenotes/developer-portal/#june-22nd-2023)<br>GA: Q4 2023 |
-| Community Spaces | Currently in Private Beta<br>GA: Q3 2023 | 
-| App Insights | GA: Q3 2023 |
+| App Insights | Released for Public Beta [Dec 13, 2022](/releasenotes/developer-portal/#december-13th-2022)<br>GA: Q3 2023 |
+| Community spaces | Currently in Private Beta<br>GA: Q3 2023 |
+| Jira integration | Released for Public Beta [Jun 22, 2023](/releasenotes/developer-portal/#june-22nd-2023)<br>GA: Q4 2023 |
 
 ## 3 Developer Experience
 
@@ -77,7 +77,7 @@ The new features were divided into these major themes, which are described in th
 
 | Capability or Feature | Expected Release |
 | --- | --- |
-| BYO IDP | Released for GA [May 16, 2023](/releasenotes/developer-portal/#byoidp) [**VERIFY RN LINK**] |
+| BYO IDP | Released for GA [May 16, 2023](/releasenotes/developer-portal/#byoidp) |
 | Cloud Self-Service | Currently in Private Beta<br>GA: TBD |
 | Landscape Overview | Public Beta: Q3 2023<br>GA: TBD |
 | Dependency Governance | Public Beta: Q4 2023<br>GA: TBD |

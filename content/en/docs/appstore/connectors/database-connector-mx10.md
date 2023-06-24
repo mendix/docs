@@ -37,7 +37,6 @@ This connector supports the following statements:
 This connector currently has the following limitations:
 
 * MSSQL database connections is only supported on x64 architecture.
-* Parameterized queries are currently not supported.
 * Queries are saved when clicking **Save Query & Create Entity**, which you may not want.
 
 ### 1.4 Prerequisites
@@ -99,13 +98,13 @@ In the **Data Structure** screen you will see a preview of the queried data in a
 
 {{< figure src="/attachments/appstore/connectors/database-connector-mx10/use-response.png" >}}
 
-**Save Query & Create Entity** to create the entity and add it to your domain model:
+Click **Save Query & Create Entity** to create the entity and add it to your domain model:
 
 {{< figure src="/attachments/appstore/connectors/database-connector-mx10/entity-created-from-database.png" >}}
 
-### 3.5 Using Entity in a Microflow {#entity-microflow}
+### 3.5 Using the Entity in a Microflow {#entity-microflow}
 
-The [External Database] custom activity is still being developed.
+Use the [Query External Database](/refguide/query-external-database/) activity to call the database in a microflow.
 
 ## 4 Troubleshooting
 

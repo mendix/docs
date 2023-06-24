@@ -15,7 +15,7 @@ This connector is supported for Studio Pro [10.0](/releasenotes/studio-pro/10.0/
 
 ### 1.1 Typical Use Cases
 
-Use this module if you need to connect to databases and select data to use in your app. This connector allows you to directly test connections and queries during configuration in Studio Pro (design time). 
+Use this module if you need to connect to databases and select data to use in your app. This connector allows you to directly test connections and queries during configuration in Studio Pro ([design time](#design-time)). 
 
 If you need to connect to other database types or use other statements, check out the [Database](/appstore/connectors/database-connector/) connector.
 
@@ -64,9 +64,8 @@ Curren
 
 ## 4 Usage
 
-### 4.1 Design Time
+### 4.1 Design Time {#design-time}
 
-### 4.2 Runtime
-
+### 4.2 Runtime {#runtime}
 
 ## 5 Troubleshooting

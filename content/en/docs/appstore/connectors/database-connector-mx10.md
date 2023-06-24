@@ -47,7 +47,7 @@ This connector currently has the following limitations:
     * Login credentials
     * Database type
     * Hostname, port, and database name; or, instead, the JDBC connection string
-* Familiarity with SQL queries [add some link here]
+* Familiarity with [SEELECT SQL query](https://www.w3schools.com/sql/sql_select.asp)
 
 ### 1.5  Dependencies
 
@@ -65,8 +65,16 @@ After installing the connector, right-click on the module where you would like t
 
 #### 3.1.2 Connect to Database Wizard {#wizard}
 
+{{< figure src="/attachments/appstore/connectors/database-connector-mx10/.png" >}}
 
 
 ### 3.2 Querying a Database
 
 
+### 3.3 Using Query Response
+
+### 3.4 Creating an Entity from the Response
+
+### 3.5 Using Entity in a Microflow
+
+[External Database] custom activity is still being developed.

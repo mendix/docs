@@ -15,8 +15,6 @@ This activity can only be used in **Microflows**.
 
 The **Generate document** activity is used to write a document to a file, based on a [document template](/refguide/document-templates/). 
 
-{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/generate-document/generate-document.png" alt="Generate Document" >}}
-
 For more information on which types of documents can be created, see [Document Type](#document-type).
 
 ## 2 Properties

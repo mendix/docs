@@ -7,10 +7,6 @@ description: "Creating a Webhook to trigger actions from the Mendix cloud"
 tags: ["Mendix cloud", "Webhooks", "CI/CD", "Pipeline"]
 ---
 
-{{% alert color="warning" %}}
-This feature is in Beta. For more information on Beta products, see [Beta Releases](/releasenotes/beta-features/).
-{{% /alert %}}
-
 ## 1 Introduction
 
 Webhooks allow you to send information about your licensed Mendix app deployed to the Mendix Cloud or Mendix for Private Cloud to an external app or workflow. This can be used, for example, to trigger an automated CI/CD workflow when a new change is committed to the Team Server.

@@ -2,7 +2,7 @@
 title: "Query External Database"
 url: /query-external-database/
 tags: ["studio pro", "integration activity", "query external database"]
-weight: 10
+weight: 90
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
@@ -12,3 +12,24 @@ This activity can only be used in **Microflows**.
 
 ## 1 Introduction
 
+The **Query External Database** activity is used with the [Mendix 10 Database Connector](/appstore/connectors/database-connector-mx10) to use preconfigured database queries and display retrieved data in your app.
+
+This document covers the properties of the **Query External Database** activity. 
+
+To learn how to use this activity in a microflow and configure other aspects of the Database connector, see the [Configuration in Design Time](/appstore/connectors/database-connector-mx10/#configuration) section of *Mendix 10 Database Connector*.
+
+## 2 Properties
+
+Double-click on the **Query External Database** activity to view its properties.
+
+In the **Query** section are the following properties:
+
+* **Database** – the name of the database you want to query
+* **Query** – the saved SQL query from your configuration of the Database connector
+* **Parameters** – the saved parameters from your configuration of the Database connector
+
+In the **Output** section are the following properties:
+
+* **Return type** – the return type once the microflow is completed
+* **Use return value** – select **Yes** or **No**
+    * **List name** – if **Use return value** is set to **Yes**, then this is the name of the returned list

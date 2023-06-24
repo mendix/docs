@@ -9,7 +9,7 @@ tags: ["marketplace",  "marketplace component", "database connector", "mendix 10
 
 ## 1 Introduction
 
-Connect to MSSQL, MySQL, PostgresSQL, and Oracle databases with the [Mendix 10 Database](add marketplace link here) connector.
+Connect to Microsoft SQL, MySQL, PostgresSQL, and Oracle databases with the [Mendix 10 Database](add marketplace link here) connector.
 
 This connector is supported for Studio Pro [10.2](/releasenotes/studio-pro/10.2/) and above. 
 
@@ -23,7 +23,7 @@ If you need to connect to other database types or use other statements besides `
 
 This connector supports connections to the following database types:
 
-* MSSQL
+* Microsoft SQL
 * MySQL
 * PostgresSQL
 * Oracle
@@ -56,7 +56,9 @@ Hooray, this connector has no dependencies!
 
 Download the [Mendix 10 Database Connector](add marketplace link here) and [add it to your app](/appstore/general/app-store-content/#install).
 
-## 3 Usage
+## 3 Configuration in Design Time {#configuration}
+
+In this connector, you will test database connections and add queries and parameters during design time--before your app is running. This allows you to make sure everything works before deploying your app.
 
 ### 3.1 Getting Started: Connecting to a Database {#connect-database}
 
@@ -84,6 +86,10 @@ To query the database, do the following:
     {{< figure src="/attachments/appstore/connectors/database-connector-mx10/select-query-columns.png" >}}
 3. Click **Execute Query** to move to the **Response** screen and view the queried data.
 
+#### 3.2.1 Adding Parameters {#parameters}
+
+Add parameters to your queries to pass dynamic values to the query at runtime.
+
 ### 3.3 Using Query Response {#use-query-response}
 
 After [querying the database](#query-database), you can look at the response in the **Reponse** screen. 
@@ -104,7 +110,21 @@ Click **Save Query & Create Entity** to create the entity and add it to your dom
 
 ### 3.5 Using the Entity in a Microflow {#entity-microflow}
 
-Use the [Query External Database](/refguide/query-external-database/) activity to call the database in a microflow.
+Use the [Query External Database](/refguide/query-external-database/) activity to call the database in a microflow. Do the following:
+
+1. Create a new microflow and drag the **Query External Database** activity into it.
+2. In the **Database** field, click **Select** to choose the database you want to query.
+3. Select the **Query** that you want to include in the activity (that you saved while [querying the database](#query-database)).
+4. Include any [parameters](#parameters).
+5. Specify whether you want **Return value** (for example, a list of `cars`).
+6. Click **OK**.
+7. Configure the end event (such as displaying a list, if you are selecting data to appear in a list). 
+
+You can now use the microflow in your app. Here is an example of a configured microflow:
+
+{{< figure src="/attachments/appstore/connectors/database-connector-mx10/example-microflow.png" >}}
+
+See the [Query External Database](/refguide/query-external-database/) entry in the Studio Pro guide for further explanation of the properties in this activity.
 
 ## 4 Troubleshooting
 

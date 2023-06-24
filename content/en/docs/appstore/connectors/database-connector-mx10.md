@@ -17,7 +17,7 @@ This connector is supported for Studio Pro [10.2](/releasenotes/studio-pro/10.2/
 
 Use this module if you need to connect to databases and select data to use in your app. This connector allows you to directly test connections and queries during configuration in Studio Pro ([design time](#design-time)). 
 
-If you need to connect to other database types or use other statements, check out the [Database](/appstore/connectors/database-connector/) connector.
+If you need to connect to other database types or use other statements besides `SELECT`, check out the [Database](/appstore/connectors/database-connector/) connector.
 
 ### 1.2 Features {#features}
 
@@ -42,12 +42,12 @@ This connector currently has the following limitations:
 
 ### 1.4 Prerequisites
 
-* Studio Pro [10.0](/releasenotes/studio-pro/10.0/) or above
+* Studio Pro [10.2](/releasenotes/studio-pro/10.0/) or above
 * External database connection details, including the following:
     * Login credentials
     * Database type
     * Hostname, port, and database name; or, instead, the JDBC connection string
-* Familiarity with [SEELECT SQL query](https://www.w3schools.com/sql/sql_select.asp)
+* Familiarity with the [SELECT SQL query](https://www.w3schools.com/sql/sql_select.asp)
 
 ### 1.5  Dependencies
 
@@ -61,12 +61,15 @@ Download the [Mendix 10 Database Connector](add marketplace link here) and [add 
 
 ### 3.1 Getting Started: Connecting to a Database
 
-After installing the connector, right-click on the module where you would like to add the connection and click **Add other > External database connection**. This opens the **Connect to Database** wizard.
+After installing the connector, right-click on the module where you would like to add the connection and click **Add other > External database connection**. This opens the **Connect to Database** [wizard](#wizard):
 
-#### 3.1.2 Connect to Database Wizard {#wizard}
+{{< figure src="/attachments/appstore/connectors/database-connector-mx10/database-wizard-filled-in.png" >}}
 
-{{< figure src="/attachments/appstore/connectors/database-connector-mx10/.png" >}}
+Enter the information for the database to which you would like to connect. For detaild descriptions of the fields in the wizard, see the [Connect to Database Wizard](/refguide/external-database-connection/#wizard) section of the *External Database Connection* document entry in the Studio Pro guide.
 
+Click **Test Connection** to see if the connection works. If you do not see a green **Connection Succcessful** text pop-up, try checking your database details again.
+
+Click **Save** to open the external database document for this database.
 
 ### 3.2 Querying a Database
 
@@ -77,4 +80,4 @@ After installing the connector, right-click on the module where you would like t
 
 ### 3.5 Using Entity in a Microflow
 
-[External Database] custom activity is still being developed.
+The [External Database] custom activity is still being developed.

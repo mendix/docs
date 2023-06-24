@@ -1,5 +1,5 @@
 ---
-title: "Database Connection"
+title: "External Database Connection"
 url: /refguide/external-database-connection/
 weight: 49
 description: "Overview of the external database connection document in Studio Pro"
@@ -16,9 +16,44 @@ This page references the **External database connection** document in Studio Pro
 You must have the [Mendix 10 Database Connector](add marketplace link) installed for external database connections to work properly while running your app. For instructions on adding modules or connectors to your app, see [Use Marketplace Content in Studio Pro](/appstore/general/app-store-content/).
 {{% /alert %}}
 
-## 2 Connect to Database Wizard
+## 2 Connect to Database Wizard {#wizard}
 
-Clicking **Add other > External database connection** on your module opens the Connect to Database wizard. Learn more about this wizard in the [Connect to Database Wizard](/appstore/connectors/database-connector-mx10/) section of the main *Mendix 10 Database Connector* documentation.
+Clicking **Add other > External database connection** on your module opens the **Connect to Database** wizard:
+
+{{< figure src="/attachments/refguide/modeling/integration/database-connector-mx10/connect-to-database-wizard.png" >}}
+
+Once in the wizard, enter or select the following:
+
+* **Name** — (not necessarily the name of the database).
+* **Database Type** — Microsoft SQL, MySQL, Oracle, or PostgreSQL
+
+### 2.1 Connecting Using Connection Details
+
+If you select **Use connection details**, enter:
+
+* **Host** — the hostname (`localhost` when testing locally)
+* **Port** — the port number
+* **Database Name** — the name of the database
+* **User Name** — your username to access the database
+* **Password** — your password to access the database
+
+### 2.2 Connecting Using Connection String
+
+If you select **Use connection string**, enter the following:
+
+* **Username** — your username to access the database
+* **Password** — your password to access the database
+* **JDBC Connection String** — the connection string, in the following formats for each database type:
+    * **Microsoft SQL** — `jdbc:sqlserver://myHostName:myPortNumber;databasename=myDatabaseName`
+    * **MySQL** — `jdbc:mysql://myHostName:myPortNumber/myDatabaseName`
+    * **Oracle** — `jdbc:oracle:thin:@//myHostName:myPortName/myDatabaseName`
+    * **PostgresSQL** — `jdbc:postgresql://myHostName:myPortNumber/myDatabaseName`
+
+### 2.3 Finishing the Wizard
+
+Click **Test Connection** to see if the connection works. If you do not see a green **Connection Succcessful** text pop-up, try checking your database details again.
+
+Click **Save** to save and open the [external database document](#external-database-document) for this database.
 
 ## 3 External Database Connection Document {#external-database-document}
 
@@ -34,12 +69,12 @@ View data from the database in the [Tables & Columns](#tables-columns) screen on
 
 This screen includes the following fields:
 
-* **Query Name**
-* **SQL Query**
-* **Parameters**
-    * **Name**
-    * **Data Type**
-    * **Test Value**
+* **Query Name** —
+* **SQL Query** —
+* **Parameters** —
+    * **Name** —
+    * **Data Type** —
+    * **Test Value** —
 
 Click **Execute Query** to view a preview of the reponse.
 

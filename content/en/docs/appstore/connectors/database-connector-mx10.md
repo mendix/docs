@@ -88,7 +88,17 @@ To query the database, do the following:
 
 #### 3.2.1 Adding Parameters {#parameters}
 
-Add parameters to your queries to pass dynamic values to the query at runtime.
+Click **Add Parameter** to add parameters to your SQL queries to pass dynamic values to the query at runtime. 
+
+The example database in [Querying a Database](#query-database) is a table of cars with information like ID number, plate number, and model. Let's say you want to specify a certain car model while your app is running. You can add the following parameter:
+
+{{< figure src="/attachments/appstore/connectors/database-connector-mx10/sample-parameter.png" >}}
+
+And then use the parameter in the query, like this:
+
+`select * from cars where model like {paramModelName}`
+
+To learn more about SQL queries and parameters, consult the documentation of the database you are using, or read [How and Why to Use Parameterized Queries](https://techcommunity.microsoft.com/t5/sql-server-blog/how-and-why-to-use-parameterized-queries/ba-p/383483).
 
 ### 3.3 Using Query Response {#use-query-response}
 

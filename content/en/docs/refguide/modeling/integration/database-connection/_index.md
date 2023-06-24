@@ -49,17 +49,13 @@ If you select **Use connection string**, enter the following:
     * **Oracle** — `jdbc:oracle:thin:@//myHostName:myPortName/myDatabaseName`
     * **PostgresSQL** — `jdbc:postgresql://myHostName:myPortNumber/myDatabaseName`
 
-### 2.3 Finishing the Wizard
-
-Click **Test Connection** to see if the connection works. If you do not see a green **Connection Succcessful** text pop-up, try checking your database details again.
-
-Click **Save** to save and open the [external database document](#external-database-document) for this database.
-
 ## 3 External Database Connection Document {#external-database-document}
 
 After completing the **Connect to Database** wizard, the external database connection document is open in Studio Pro. 
 
-The name of the document is the **Name** (not **Database name**) you provided when running the wizard.
+The name of the document is the **Name** (not **Database name**) you provided when running the wizard:
+
+{{< figure src="/attachments/refguide/modeling/integration/database-connector-mx10/database-service-document.png" >}}
 
 ### 3.1 Query Screen {#query-screen}
 
@@ -69,17 +65,30 @@ View data from the database in the [Tables & Columns](#tables-columns) screen on
 
 This screen includes the following fields:
 
-* **Query Name** —
-* **SQL Query** —
-* **Parameters** —
-    * **Name** —
-    * **Data Type** —
-    * **Test Value** —
+* **Query Name** — query name, since it is saved and can be used later
+* **SQL Query** — text box where you can enter your query
+
+In the **Parameters** section, click **Add Parameter** to enter the following information:
+    * **Name** — name of the parameter that can be used in the **SQL Query** field (in the form of {parameter_name})
+    * **Data Type** — select the type of data for your parameter
+    * **Test Value** — enter or select the value of the parameter
 
 Click **Execute Query** to view a preview of the reponse.
 
 ### 3.2 Tables & Columns {#tables-columns}
 
+The **Tables & Columns** field, on the right side of the screen, displays the information from your database. You can use queries to access certain information in your database.
+
 ### 3.3 Response {#response}
 
+After [querying the database](/appstore/connectors/database-connector-mx10/#query-database), you can view the data included in the query in the **Response** screen.
+
+If you like what you see, click **Use Response**. This will take you to the [Data Structure](#data-structure) screen where you can preview and create an entity from the response.
+
 ### 3.4 Data Structure {#data-structure}
+
+The **Data Structure** screen gives you a preview of an entity that can be created from the response of your query. You can adjust the name, or move back to a previous step. Click **Save Query & Create Entity** to create the entity in your domain model.
+
+## 4 Read More
+
+To use the data in a microflow, see the custom action page (when it's ready) 

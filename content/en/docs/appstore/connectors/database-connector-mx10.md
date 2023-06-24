@@ -15,7 +15,7 @@ This connector is supported for Studio Pro [10.2](/releasenotes/studio-pro/10.2/
 
 ### 1.1 Typical Use Cases
 
-Use this module if you need to connect to databases and select data to use in your app. This connector allows you to directly test connections and queries during configuration in Studio Pro ([design time](#design-time)). 
+Use this module if you need to connect to databases and select data to use in your app. This connector allows you to directly test connections and queries during configuration in Studio Pro (design time). 
 
 If you need to connect to other database types or use other statements besides `SELECT`, check out the [Database](/appstore/connectors/database-connector/) connector.
 
@@ -27,6 +27,8 @@ This connector supports connections to the following database types:
 * MySQL
 * PostgresSQL
 * Oracle
+
+If you are looking for another database type, follow the prompt to request support your database when you open the the []
 
 This connector supports the following statements:
 
@@ -64,7 +66,7 @@ In this connector, you will test database connections and add queries and parame
 
 After [installing](#installation) the connector, get started by doing the following:
 
-1.  Right-click on the module where you would like to add the connection and click **Add other > External database connection**. This opens the **Connect to Database** [wizard](#wizard):
+1.  Right-click on the module where you would like to add the connection and click **Add other > External database connection**. This opens the **Connect to Database** wizard:
 
     {{< figure src="/attachments/appstore/connectors/database-connector-mx10/database-wizard-filled-in.png" >}}
 

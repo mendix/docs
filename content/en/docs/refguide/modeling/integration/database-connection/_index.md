@@ -20,7 +20,7 @@ You must have the [Mendix 10 Database Connector](add marketplace link) installed
 
 Clicking **Add other > External database connection** on your module opens the **Connect to Database** wizard:
 
-{{< figure src="/attachments/refguide/modeling/integration/database-connector-mx10/connect-to-database-wizard.png" >}}
+{{< figure src="/attachments/refguide/modeling/integration/external-database-connection/connect-to-database-wizard.png" >}}
 
 Once in the wizard, enter or select the following:
 
@@ -55,7 +55,7 @@ After completing the **Connect to Database** wizard, the external database conne
 
 The name of the document is the **Name** (not **Database name**) you provided when running the wizard:
 
-{{< figure src="/attachments/refguide/modeling/integration/database-connector-mx10/database-service-document.png" >}}
+{{< figure src="/attachments/refguide/modeling/integration/external-database-connection/database-service-document.png" >}}
 
 ### 3.1 Query Screen {#query-screen}
 

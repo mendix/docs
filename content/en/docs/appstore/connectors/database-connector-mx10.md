@@ -11,7 +11,7 @@ tags: ["marketplace",  "marketplace component", "database connector", "mendix 10
 
 Connect to MSSQL, MySQL, PostgresSQL, and Oracle databases with the [Mendix 10 Database](add marketplace link here) connector.
 
-This connector is supported for Studio Pro [10.0](/releasenotes/studio-pro/10.0/) and above. 
+This connector is supported for Studio Pro [10.2](/releasenotes/studio-pro/10.2/) and above. 
 
 ### 1.1 Typical Use Cases
 
@@ -46,24 +46,27 @@ This connector currently has the following limitations:
 * External database connection details, including the following:
     * Login credentials
     * Database type
-    * Hostname, port, and database name, or JDBC connection string
+    * Hostname, port, and database name; or, instead, the JDBC connection string
+* Familiarity with SQL queries [add some link here]
 
 ### 1.5  Dependencies
 
-{List important dependencies, especially when they are other Marketplace components.}
+Hooray, this connector has no dependencies!
 
 ## 2 Installation
 
-Curren
+Download the [Mendix 10 Database Connector](add marketplace link here) and [add it to your app](/appstore/general/app-store-content/#install).
 
-## 3 Configuration
+## 3 Usage
 
-{Describe the properties to be configured.}
+### 3.1 Getting Started: Connecting to a Database
 
-## 4 Usage
+After installing the connector, right-click on the module where you would like to add the connection and click **Add other > External database connection**. This opens the **Connect to Database** wizard.
 
-### 4.1 Design Time {#design-time}
+#### 3.1.2 Connect to Database Wizard {#wizard}
 
-### 4.2 Runtime {#runtime}
 
-## 5 Troubleshooting
+
+### 3.2 Querying a Database
+
+

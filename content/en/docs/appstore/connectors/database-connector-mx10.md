@@ -3,25 +3,52 @@ title: "Database (Mendix 10)"
 url: /appstore/connectors/database-connector-mx10/
 category: "Connectors"
 description: "Describes the configuration and usage of the new Database connector, which incorporates your external data directly in your Mendix app."
-tags: ["marketplace",  "marketplace component", "database connector", "jdbc", "hikari", "query", "new"]
+tags: ["marketplace",  "marketplace component", "database connector", "mendix 10", "studio pro 10", "query", "mssql", "mysql", "postgres", "oracle", "new"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details. 
 ---
 
 ## 1 Introduction
 
-Connect to MSSQL, MySQL, PostgresSQL, and Oracle databases with the [Database](add marketplace link here) connector.
+Connect to MSSQL, MySQL, PostgresSQL, and Oracle databases with the [Mendix 10 Database](add marketplace link here) connector.
 
-This connector is designed for Studio Pro [10.0](/releasenotes/studio-pro/10/) and above. 
+This connector is supported for Studio Pro [10.0](/releasenotes/studio-pro/10.0/) and above. 
 
 ### 1.1 Typical Use Cases
 
+Use this module if you need to connect to databases and select data to use in your app. This connector allows you to directly test connections and queries during configuration in Studio Pro (design time). 
 
+If you need to connect to other database types or use other statements, check out the [Database](/appstore/connectors/database-connector/) connector.
 
-### 1.2 Features
+### 1.2 Features {#features}
+
+This connector supports connections to the following database types:
+
+* MSSQL
+* MySQL
+* PostgresSQL
+* Oracle
+
+This connector supports the following statements:
+
+* `SELECT` — retrieves rows and columns from a database
 
 ### 1.3 Limitations
 
+This connector currently has the following limitations:
+
+* MSSQL database connections is only supported on x64 architecture.
+* Parameterized queries are currently not supported.
+* Queries are saved when clicking **Save Query & Create Entity**, which you may not want.
+
 ### 1.4 Prerequisites
+
+* Studio Pro [10.0](/releasenotes/studio-pro/10.0/) or above
+* External database connection details, including the following:
+    * Database type
+    * Hostname
+    * Port
+    * Database name
+    * Login credentials
 
 ### 1.5  Dependencies
 
@@ -29,7 +56,7 @@ This connector is designed for Studio Pro [10.0](/releasenotes/studio-pro/10/) a
 
 ## 2 Installation
 
-{Describe the basic installation of the component if necessary.}
+Curren
 
 ## 3 Configuration
 
@@ -37,12 +64,9 @@ This connector is designed for Studio Pro [10.0](/releasenotes/studio-pro/10/) a
 
 ## 4 Usage
 
-{Optional: Provide more info for general use cases here if desired. You should provide this info in a reference guide page or how-to for more specific or advanced use cases.}
+### 4.1 Design Time
+
+### 4.2 Runtime
+
 
 ## 5 Troubleshooting
-
-{Optional: Provide basic troubleshooting info for configuration here if necessary. You should provide this info in a reference guide page or how-to for more specific use cases.}
-
-## 6 Read More
-
-{Add links to related documents and blog posts. Contextualize necessary third-party links in the above sections, as they should not be put here.}

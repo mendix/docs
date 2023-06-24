@@ -126,5 +126,11 @@ You can now use the microflow in your app. Here is an example of a configured mi
 
 See the [Query External Database](/refguide/query-external-database/) entry in the Studio Pro guide for further explanation of the properties in this activity.
 
-## 4 Troubleshooting
+## 4 Running Your App
+
+[Do we need to add anything here?]
+
+## 5 Troubleshooting 
+
+[Do we need to add anything here?]
 

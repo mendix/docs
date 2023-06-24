@@ -44,11 +44,9 @@ This connector currently has the following limitations:
 
 * Studio Pro [10.0](/releasenotes/studio-pro/10.0/) or above
 * External database connection details, including the following:
-    * Database type
-    * Hostname
-    * Port
-    * Database name
     * Login credentials
+    * Database type
+    * Hostname, port, and database name, or JDBC connection string
 
 ### 1.5  Dependencies
 

@@ -1,0 +1,544 @@
+// File to override any Docsy/Bootstrap CSS definition
+
+// _front-page.scss is only custom styling page not from Docsy/Bootstrap
+@import "front-page";
+
+// _alert.scss - Style alert boxes
+
+.alert {
+    font-weight: $font-weight-normal; // NK - adjusted for use with multiple Noto Sans weights
+    //background: $white; // NK - turns off explicit color set, now it's inherited from bootstrap _alerts.scss
+    color: inherit;
+    border-radius: 0;
+
+    @each $color, $value in $theme-colors {
+        &-#{$color} {
+            & .alert-heading {
+                color: $value;
+            }
+
+            border-style: solid;
+            border-color: $value;
+            border-width: 0 0 0 4px;
+            background-color: fade-out($value, 0.75%); // NK - adds faded gradient to alert backgrounds
+        }
+    }
+}
+
+// _code.scss -  Code formatting
+
+.td-content {
+    // Highlighted code.
+    .highlight {
+        @extend .card;
+
+        margin: 2rem 0;
+        padding: 0;
+        position: relative;
+
+        pre {
+            margin: 0;
+            padding: 1.5rem 0.5rem 0.5rem 0.5rem;  // NK - changed padding
+        }
+    }
+
+    // Inline code
+    p code, li > code, table code {
+        color: inherit;
+        padding: 0.1em 0.1em;  // NK - made padding smaller
+        margin: 0;
+        font-size: $font-size-base; // NK - added to match rest of text
+        word-break: normal;
+        background-color: rgba($info, 0.07); // NK - changed background color
+        border-radius: $border-radius;
+        border: 1px solid rgba($info, 0.1);  // NK - added border and color
+
+        br {
+            display: none;
+        }
+    }
+
+
+    // Code blocks
+    pre {
+        word-wrap: normal;
+        background-color: $gray-100;
+        padding: 0.5rem; // NK - changed
+        line-height: 1.25; // NK - added to match code text
+        font-size: $font-size-base; // NK - added to match code text
+
+        > code {
+            background-color: inherit !important;
+            padding: 0;
+            margin: 0;
+            font-size: $font-size-base; // NK - added to match rest of text
+            word-break: normal;
+            white-space: pre;
+            border: 0;
+        }
+    }
+}
+
+// _content.scss - Style Markdown content
+
+.td-content {
+    order: 1;
+    margin-left: 2rem; // NK - custom edit
+    max-width: 90%;  // NK - fixed width of all content to 90%
+
+    p, li, td {
+        font-weight: $font-weight-body-text;
+    }
+
+    // NK - custom additions for margin styling in lists
+    li p:first-child {
+        margin-bottom: 0.25rem;
+    }
+    li p:not(:first-child), li figure, li .alert {
+        margin-bottom: 0.5rem;
+    }
+
+    > h1 {
+        font-weight: $font-weight-normal; // NK - adjusted for use with multiple Noto Sans weights
+        margin-bottom: 1rem;
+        font-size: 2rem; // NK - custom edit
+    }
+
+    > h2 {
+        margin-bottom: 1rem;
+        font-size: 1.7rem; // NK - custom edit
+    }
+
+    > h2:not(:first-child) {
+        margin-top: 1.5rem; // NK - decrease space between sections
+    }
+
+    > h2 + h3 {
+         margin-top: 1.5rem; // NK - decrease space between sections
+    }
+
+    > h3, > h4, > h5, > h6 {
+        margin-bottom: 1rem;
+        margin-top: 1.5rem; // NK - decrease space between sections
+    }
+
+    /* ordered lists inside ordered lists will be displayed using letters */
+    ol ol {
+        list-style-type: lower-alpha;
+        padding-left: 2rem; // NK - decrease indent
+    }
+    ul ol, ul ul, ol ul {
+        padding-left: 2rem; // NK - decrease indent
+    }
+}
+
+.btn {
+    border-radius: 0.25rem;
+}
+
+// main.scss
+
+// Adjust anchors vs the fixed menu.
+@include media-breakpoint-up(md) {
+    .td-offset-anchor:target {
+        display: block;
+        position: relative;
+        top: 0; // NK - overrides default Docsy value
+        visibility: hidden;
+    }
+
+    h2[id]:before,
+    h3[id]:before,
+    h4[id]:before,
+    h5[id]:before {
+        display: block;
+        content: " ";
+        margin-top: 0; // NK - overrides default Docsy value
+        height: 0; // NK - overrides default Docsy value
+        visibility: hidden;
+    }
+}
+
+// _main-container.scss
+
+// NK - Sets default offset for any inline anchor from height of dock
+html {
+    scroll-padding-top: 48px; /* height of sticky header */
+}
+
+// The outer page container i.e. common styles for any page.
+.td-outer {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    position: absolute; // NK - custom edit
+}
+
+.td-main {
+    flex-grow: 1;
+}
+
+.td-main main {
+        @include media-breakpoint-up(md) {
+            padding-top: 3.75rem;  // NK - made smaller
+            border-left: 1px solid $gray-border; // NK - moved from toc, to fully span height of screen
+            border-right: 1px solid $gray-border; // NK - moved from left menu, to fully span height of screen
+        }
+
+
+        padding-bottom: 2rem;
+    }
+    // NK - custom addition
+    main.lp{
+        @include media-breakpoint-up(xl){
+            min-width: 800px;
+        }
+    }
+
+    div.stretch-main{
+        height: 100%; // NK - so that all of main (side menus and content get stretched to bottom of page)
+    }
+
+// NK - to fully stretch the footer & bottom of dock
+div.footer{
+    background-color: $gray-100;
+    border-top: 1px solid $gray-border;
+    border-bottom: 1px solid $gray-border;
+    margin: 0 -15px;
+    padding: 0.5rem 0;
+}
+div.mx-dock-footer{
+    margin: 0 -15px;
+}
+div.date-format{
+    font-size: 0.8rem;
+}
+
+// _nav.scss
+//
+// Main navbar
+//
+
+.td-navbar {
+    background: $primary;
+    min-height: 4rem;
+    margin: 0;
+    z-index: 32;
+
+    @include media-breakpoint-up(md) {
+        position: fixed;
+        top: 0; // NK - copied from Docsy v0.1.0 file
+        width: 100%;
+    }
+
+    .nav-link {
+        text-transform: none;
+        font-weight: $font-weight-medium; // NK - adjusted for use with multiple Noto Sans weights
+    }
+
+    .td-search-input {
+        border: none;
+        color: $navbar-dark-color; // NK - copied from Docsy v0.1.0 file
+        @include placeholder {
+            color: $navbar-dark-color;
+        }
+    }
+}
+
+// Icons
+// NK - custom edit
+.dropdown-toggle.lang-arrow {
+    &::after {
+        border-left: 0.4em solid transparent;
+        border-right: 0.4em solid transparent;
+        border-top: 0.4em solid;
+        margin-left: -0.8em;
+    }
+}
+
+// Foldable sidebar menu
+nav.foldable-nav {
+
+    .td-sidebar-nav__section, .with-child ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        text-overflow: ellipsis; // NK - custom edit
+        overflow: hidden; // NK - custom edit
+        white-space: nowrap; // NK - custom edit
+    }
+
+    .with-child, .without-child {
+        position: relative;
+        padding-left: 1.5em;
+    }
+
+    .ul-1 .with-child > label:before {
+        display: inline-block;
+        font-style: normal;
+        font-variant: normal;
+        text-rendering: auto;
+        -webkit-font-smoothing: antialiased;
+        font-family: $font-awesome-font-name; font-weight: 900; content: "\f0da";
+        position: absolute;
+        left: 0.1em;
+        padding-left: 0.4em;
+        padding-right: 0.4em;
+        font-size: 1em;
+        color: $gray-900;
+        transition: all 0s; // NK - disables animation transition time, now switch is instant
+        &:hover{
+        transform: rotate(90deg);
+        }
+    }
+
+    .ul-1 .with-child > input:checked ~ label:before { 
+        color: $primary;
+        transform: rotate(90deg);
+        transition: transform 0s; // NK - disables animation transition time, now switch is instant
+    }
+}
+
+@media (hover: hover) and (pointer: fine) {
+    
+    nav.foldable-nav {
+
+        .ul-1 .with-child > label:hover:before { 
+            color: $primary;
+            transform: rotate(30deg);
+            transition: transform 0s; // NK - disables animation transition time, now switch is instant
+        }
+
+        .ul-1 .with-child > input:checked ~ label:hover:before { 
+            color: $primary;
+            transform: rotate(60deg) !important;
+            transition: transform 0s; // NK - disables animation transition time, now switch is instant
+        }
+    }
+}
+
+// section-index.scss
+
+.section-index {
+
+    .entry {
+        padding: 0; // NK - removes padding around entry div
+    }
+}
+
+// sidebar-toc.scss - Right side toc
+
+.td-sidebar-toc {
+    border-left: 0; // NK - changed to 0, the actual border moved to td-main main, to fully span height of screen
+    font-size: 0.9rem; // NK - decreased
+    line-height: 1.2; // NK - decreased
+
+    @supports (position: sticky) {
+        position: sticky;
+        top: 3rem; // NK - change from docsy theme of 4rem
+        height: max-content; // NK - change from docsy theme of calc(100vh - 10rem);
+        overflow-y: auto;
+    }
+
+    order: 2;
+    padding-top: 0.75rem;
+    padding-bottom: 1.5rem;
+    vertical-align: top;
+
+}
+.td-toc {
+
+    height: calc(100vh - 180px); // NK - added to allow scrolling
+    overflow-x:hidden !important; // NK - added to allow scrolling
+
+    li {
+        list-style: none;
+        display: block;
+        border-left: 2px solid transparent; // NK - moved from a and .activeToC to give consistent border size, only color changes when active
+    }
+
+    li li {
+        margin-left: 0.75rem;  // NK - increased
+    }
+
+    #TableOfContents {
+        // Hugo's ToC is a mouthful, this can be used to style the top level h2 entries.
+        > ul > li > ul > li > a {}
+
+        a {
+            // NK - styling for ToC
+            color: $gray-800;
+            padding-left: 20px;
+            padding-bottom: .25rem;
+            padding-top: .25rem;
+
+            &:hover {
+                color: $blue;
+                text-decoration: none;
+            }
+        }
+        // NK - styling for ToC highlighting
+        .activeToc {
+            font-weight: $font-weight-bold;
+            color: $blue;
+            border-left-color: $blue;
+        }
+    }
+}
+
+// _sidebar-tree.scss - Left side navigation
+
+.td-sidebar-nav {
+    padding-right: 0.5rem;
+    margin-right: -5px; // NK - decreased
+    margin-left: -15px;
+    font-size: 0.95rem; // NK - decreased from inherited
+    line-height: 1.2; // NK - decreased from inherited
+
+    @include media-breakpoint-up(md) {
+        @supports (position: sticky) {
+            max-height: max-content;// NK - changed from calc(100vh - 10rem);
+            overflow-y: auto;
+        }
+    }
+
+    &__section-title {
+        display: block;
+        font-weight: $font-weight-normal; // NK - adjusted for use with multiple Noto Sans weights
+
+        .active {
+            font-weight: $font-weight-bold;
+        }
+
+        a {
+            color: $gray-900;
+        }
+    }
+
+    .td-sidebar-link {
+        display: block;
+        padding-bottom: 0.375rem;
+
+        // NK - overrides special styling for pages with no children
+        &__page {
+            color: inherit;//$gray-700;
+            font-weight: inherit;//$font-weight-light;
+        }
+    }
+    
+    .td-sidebar-link.tree-root{
+        font-weight: $font-weight-bold;
+        color: $td-sidebar-tree-root-color;
+        border-bottom: none;//1px $td-sidebar-tree-root-color solid; // NK - deactivated to align with design proposal
+        margin-bottom: 1rem;
+    }
+}
+
+.td-sidebar {
+    @include media-breakpoint-up(md) {
+        padding-top: 4rem;
+        background-color: $td-sidebar-bg-color;
+        padding-right: 1rem;
+        border-right: none;//border-right: 1px solid $td-sidebar-border-color; // NK - moved to td-main main, to fully span height of screen
+    }
+    &__inner {
+        order: 0;
+        height: calc(100vh - 75px); // NK - added to allow scrolling
+        overflow-x: hidden !important; // NK - added to allow scrolling
+
+        @include media-breakpoint-up(md) {
+            @supports (position: sticky) {
+                position: sticky;
+                top: 4rem; // NK - added to work with height change
+                z-index: 10;
+                height: calc(100vh - 75px);// NK - changed to allow scrolling
+            }
+        }
+    }
+}
+
+// _tables.scss - from https://github.com/twbs/bootstrap/blob/v4.6.2/scss/_tables.scss
+
+.table {
+    width: 90%; // NK - adjusted width to match rest of content
+    margin-bottom: $spacer;
+    color: $table-color;
+    background-color: $table-bg; // Reset for nesting within parents with `background-color`.
+    position: relative; // NK - added to allow movement of horizontal scroll bar, when overlaping with header below
+    z-index: 2; // NK - added to allow movement of horizontal scroll bar, when overlaping with header below
+  
+    th,
+    td {
+      padding: $table-cell-padding;
+      vertical-align: top;
+      border: $table-border-width solid $table-border-color; // NK - added borders to tables
+      font-size: 0.8rem; // NK - smaller font size
+  
+      ul, ol > ul li, > ol li {
+          margin-bottom: .25rem;  // NK - removes margin padding at end of list item in table cell
+      }
+    }
+  
+    thead th {
+      vertical-align: bottom;
+      border-bottom: (2 * $table-border-width) solid $table-border-color;  // NK - added borders to tables
+      border-top: $table-border-width solid $table-border-color;
+      border-left: $table-border-width solid $table-border-color;
+      border-right: $table-border-width solid $table-border-color;
+    }
+  
+    tbody + tbody {
+      border: (2 * $table-border-width) solid $table-border-color; // NK - added borders to tables
+    }
+  }
+
+  // Responsive tables
+  //
+  // Generate series of `.table-responsive-*` classes for configuring the screen
+  // size of where your table will overflow.
+  
+  .table-responsive {
+    @each $breakpoint in map-keys($grid-breakpoints) {
+      $next: breakpoint-next($breakpoint, $grid-breakpoints);
+      $infix: breakpoint-infix($next, $grid-breakpoints);
+  
+      &#{$infix} {
+        @include media-breakpoint-down($breakpoint) {
+          display: block;
+          width: 90%; // NK - adjusted width to match rest of content
+          overflow-x: auto;
+          -webkit-overflow-scrolling: touch;
+  
+          // Prevent double border on horizontal scroll due to use of `display: block;`
+          > .table-bordered {
+            border: 0;
+          }
+        }
+      }
+    }
+  }
+
+// _utilities.scss
+  .td-max-width-on-larger-screens {
+    @include media-breakpoint-up(lg) {
+        max-width: 100%; // NK - changed from 80%, to fill up more of the screen
+    }
+
+}
+
+// MvM/YL Max width was only 80% and looked horrible. Making the tabs full width.
+.tab-content {
+    .tab-pane {
+      .highlight {
+        margin: 0rem 0 0rem 0;
+        border: none;
+        max-width: 100%;
+      }
+      margin-top: 0rem;
+      margin-bottom: 1.5rem;
+      max-width: 100%;
+      border-left: 1px solid rgba(0, 0, 0, 0.125);
+      border-right: 1px solid rgba(0, 0, 0, 0.125);
+      border-bottom: 1px solid rgba(0, 0, 0, 0.125);
+    }
+  }

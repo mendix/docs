@@ -385,7 +385,9 @@ Follow these steps to display the model loading progress:
 
 ### 5.3 Previewing Models Without Uploading
 
-To preview a model directly without uploading to Mendix file storage, drag and drop the file into the Viewer and click **Upload**.
+To preview a model directly without uploading to Mendix file storage, drag and drop the file into the Viewer. If you want to upload the model after the preview, just click the **Upload to Mendix File Storage** icon on the upper-left corner of the Viewer. 
+
+{{< figure src="/attachments/partners/siemens/3d-viewer/upload-to-mendix-file-storage.png"  >}}
 
 ### 5.4 Utilizing More 3D Functionality
 

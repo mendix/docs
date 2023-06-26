@@ -28,12 +28,25 @@ quarter-from-dateTime ( attribute [, timezone ] )
 
 This query returns all the logs where `DateAttribute` is in the forth quarter in the local time zone (for example, "2011-12-30"):
 
-```java {linenos=false}
-//Logging.Log[quarter-from-dateTime(DateAttribute) = 4]
-```
+{{< tabpane >}}
+  {{% tab header="Environments:" disabled=true /%}}
+  {{< tab header="Studio Pro" lang="StudioPro" >}}
+    [quarter-from-dateTime(DateAttribute) = 4]
+    {{% /tab %}}
+  {{< tab header="Java" lang="JavaQuery" >}}
+     //Logging.Log[quarter-from-dateTime(DateAttribute) = 4]
+    {{% /tab %}}
+{{< /tabpane >}}
 
 This query returns all the logs where `DateAttribute` is in the forth quarter in the New York time zone (for example, "2011-12-30"):
 
-```java {linenos=false}
-//Logging.Log[quarter-from-dateTime(DateAttribute, 'America/New_York') = 4]
-```
+{{< tabpane >}}
+  {{% tab header="Environments:" disabled=true /%}}
+  {{< tab header="Studio Pro" lang="StudioPro" >}}
+    [quarter-from-dateTime(DateAttribute, 'America/New_York') = 4]
+    {{% /tab %}}
+  {{< tab header="Java" lang="JavaQuery" >}}
+     //Logging.Log[quarter-from-dateTime(DateAttribute, 'America/New_York') = 4]
+    {{% /tab %}}
+{{< /tabpane >}}
+

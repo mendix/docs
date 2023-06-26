@@ -71,7 +71,7 @@ The **Console** pane displays the output of the [Mendix Runtime](/refguide/runti
 
 ### 3.5 Data Hub {#data-hub}
 
-The [Data Hub pane](/refguide/data-hub-pane/) enables you to browse the [Data Hub Catalog](/data-hub/data-hub-catalog/) and use registered data sources that are available for your organization in your app development. You can add [external entities](/refguide/external-entities/) to your app via this pane and see entities and data sources already consumed in your app. 
+The [Data Hub pane](/refguide/data-hub-pane/) enables you to browse the [Catalog](/catalog/) and use registered data sources that are available for your organization in your app development. You can add [external entities](/refguide/external-entities/) to your app via this pane and see entities and data sources already consumed in your app. 
 
 ### 3.6 Documentation
 

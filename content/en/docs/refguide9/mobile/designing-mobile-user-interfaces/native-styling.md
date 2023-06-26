@@ -58,10 +58,10 @@ You have the capacity to alter design properties with Mendix Studio Pro. Further
 ### 5.1 Prerequisites 
 
 * Install an integrated development environment (IDE) of your choice (Mendix recommends [Microsoft Visual Studio Code](https://code.visualstudio.com/))
-* Create a Mendix app based on the Blank Native Mobile App template by following the [Creating a New App Based on the Quickstart App](/refguide9/mobile/getting-started-with-mobile/#quickstartapp) section of *Get Started with Native Mobile*
+* Create a Mendix app based on the Blank Native Mobile App template by following the [Creating a New App Based on the Quickstarter App](/refguide9/mobile/getting-started-with-mobile/#quickstartapp) section of *Get Started with Native Mobile*
 * Download the Make It Native 9 app on your mobile device via either the [Google Play](https://play.google.com/store/apps/details?id=com.mendix.developerapp.mx9) store or the [Apple App Store](https://apps.apple.com/us/app/make-it-native-9/id1542182000) so you can text your app and see your styling changes
 
-### 5.2 Customizing the Quickstart App
+### 5.2 Customizing the Quickstarter App
 
 The [Blank Native Mobile App](https://marketplace.mendix.com/link/component/109511/) is styled using an Atlas UI resources package. This package consists of:
 

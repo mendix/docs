@@ -57,7 +57,7 @@ For each revision, you can see the following information:
 
 You can also access the revision history in Studio Pro. For more information, see the [History](/refguide/using-version-control-in-studio-pro/#history) section in *Using Version Control in Studio Pro*.
 
-## 5 Revision Details
+## 5 Revision Details {#revision-details}
 
 When you click **Details** for a revision, you can see the stories related to that revision.
 

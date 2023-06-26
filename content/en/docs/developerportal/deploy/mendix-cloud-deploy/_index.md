@@ -101,11 +101,11 @@ Apps that run on the Mendix Cloud are automatically given their own URLs. The fo
 
 | License type | Environment | URL format | Example URL |
 | --- | --- | --- | --- |
-| Licensed app | production | Depends on the region:<br /> `{name of your app}.mendixcloud.com`*<br />or<br />`{name of your app}.apps.{region}.mendixcloud.com`\* | `myappname.mendixcloud.com`, <br /> `myappname.apps.ap-3a.mendixcloud.com` |
-| Licensed app | test, acceptance, flexible environments | Depends on the region:<br /> `{name of your app}-{environment type}.mendixcloud.com`*<br />or<br />`{name of your app}-{environment type}.apps.{region}.mendixcloud.com`\* | `myappname-accp.mendixcloud.com`, <br /> `myappname-accp.apps.ap-3a.mendixcloud.com` |
-| Free App | N/A | `{name of your app}.mxapps.io` | `myfreeappname.mxapps.io` |
+| Licensed app | production | Depends on the region:<br /> `{app-name}.mendixcloud.com`¹<br />*or*<br />`{app-name}.apps.{region}.mendixcloud.com`¹ | `myappname.mendixcloud.com`, <br /> `myappname.apps.ap-3a.mendixcloud.com` |
+| Licensed app | test, acceptance, flexible environments | Depends on the region:<br /> `{app-name}-{environment-type}.mendixcloud.com`¹<br />*or*<br />`{app-name}-{environment-type}.apps.{region}.mendixcloud.com`¹ | `myappname-accp.mendixcloud.com`, <br /> `myappname-accp.apps.ap-3a.mendixcloud.com` |
+| Free App | N/A | `{app-name}-sandbox.mxapps.io`<br />*or*<br />`{app-name}.mxapps.io` | `myfreeappname.mxapps.io` |
 
-{{% alert color="info" %}}*The URL of an app on some clusters in a region contains `apps.{region}`. You can only select the region for your app, but not the cluster.{{% /alert %}}
+{{% alert color="info" %}}¹The URL of an app on some clusters in a region contains `apps.{region}`. You can only select the region for your app, but not the cluster.{{% /alert %}}
 
 You can customize a URL by adding [custom domains](/developerportal/deploy/custom-domains/).
 

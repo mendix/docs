@@ -5,6 +5,24 @@ description: "The release notes for Mendix Application Test Suite (ATS) with det
 weight: 100
 ---
 
+## 2.28.13
+
+**Release date: June 20th, 2023**
+
+### Fixes
+
+* We updated the certificate authority certificates to fix connect issues with custom Selenium hubs.
+* We released a new extension to fix the removal of the ATS Web Recorder from the Google Chrome Web Store.
+* We changed our email service.
+
+## 2.28.12
+
+**Release date: May 23rd, 2023**
+
+### Improvements
+
+* We made preparations for a new recorder extension
+
 ## 2.28.11
 
 **Release date: May 9th, 2023**

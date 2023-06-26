@@ -41,6 +41,7 @@ These tabs are only available for users with the **App Settings** permission:
 
 In this tab, you can find the following items:
 
+* **Logo** of the app
 * **Description** of the app
 * **App ID**
 * [Technical Contact](/developerportal/collaborate/app-roles/#technical-contact) of the app
@@ -143,6 +144,8 @@ On the **Project Management** tab, you can select your team's planning tool for 
 
 It is possible to migrate all or part of your content from [Stories](/developerportal/collaborate/stories/) to Epics. For details, see the [Data Migration](/developerportal/collaborate/epics/#data-migration) section of *Epics*.
 
+If you manage your projects in Jira, you can connect your apps in the Developer Portal to Jira. For more information, see [Jira Connector](/developerportal/collaborate/jira-connector/).
+
 ## 7 Webhooks {#webhooks}
 
 {{% alert color="warning" %}}
@@ -185,7 +188,7 @@ For details on the technical configuration of webhooks for stories and sprints, 
 Only users with the **App Settings** permission can view the history.
 {{% /alert %}}
 
-The **Project History** page presents the collaboration actions for the app. On this page, you can see what change was made, who performed it, and when it occurred:
+The **History** tab presents the collaboration actions for the app. On this page, you can see what change was made, who performed it, and when it occurred:
 
 {{< figure src="/attachments/developerportal/collaborate/general-settings/history.png"   width="700"  >}}
 

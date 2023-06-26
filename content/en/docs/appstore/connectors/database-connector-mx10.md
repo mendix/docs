@@ -39,7 +39,6 @@ This connector supports the following statements:
 This connector currently has the following limitations:
 
 * MSSQL database connections is only supported on x64 architecture.
-* Queries are saved when clicking **Save Query & Create Entity**, which you may not want.
 
 ### 1.4 Prerequisites
 
@@ -82,11 +81,13 @@ Now you can start [querying the database](#query-database) to select data for us
 
 To query the database, do the following:
 
-1. Enter a **Query Name** so you can access the same query later.
+1. Enter a **Query Name** so you can access the same query later. This will be saved once you click **Save Query & Create Entity** in the [Create an Entity from the Response](#create-entity) section.
 2. Enter your `SELECT`  **SQL Query** to select data from your database for use in your app. For example, the query `SELECT * FROM Cars` selects all rows in the **Cars** table:
 
     {{< figure src="/attachments/appstore/connectors/database-connector-mx10/select-query-columns.png" >}}
 3. Click **Execute Query** to move to the **Response** screen and view the queried data.
+
+
 
 #### 3.2.1 Adding Parameters {#parameters}
 

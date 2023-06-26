@@ -1,20 +1,20 @@
 ---
-title: "Integration pane"
+title: "Integration Pane"
 url: /refguide/integration-pane/
 weight: 30
-description: "Describes the Integration pane in Mendix Studio Pro."
-tags: ["studio Pro", "data hub", "Integration pane", "data hub catalog"]
+description: "Describes the Integration Pane in Mendix Studio Pro."
+tags: ["studio Pro", "data hub", "Integration Pane", "data hub catalog"]
 aliases:
     - /refguide/data-hub-pane/
 ---
 
 ## 1 Introduction
 
-Use the Integration pane in Studio Pro to use available data sources from the different applications in an organization into your Mendix apps. New apps can be created using shared datasets that are registered in the [Catalog](/catalog/). In Studio Pro, this is possible using the integrated functionality of Catalog through the [Integration pane](/refguide/integration-pane/].
+Use the Integration Pane in Studio Pro to use available data sources from the different applications in an organization into your Mendix apps. New apps can be created using shared datasets that are registered in the [Catalog](/catalog/). In Studio Pro, this is possible using the integrated functionality of Catalog through the [Integration Pane](/refguide/integration-pane/).
 
-You can search in the Catalog through the [Integration pane](/refguide/integration-pane/] to discover data sources that you can use in your app. Via this pane you can add the entities that are exposed in the registered OData services—called **Data Sources** in Data Hub—into your app's domain model. These entities are called [external entities](/refguide/external-entities/) and are different because they enable the connection to the data associated with the entities in the originating app.
+You can search in the Catalog through the [Integration Pane](/refguide/integration-pane/) to discover data sources that you can use in your app. Via this pane you can add the entities that are exposed in the registered OData services—called **Data Sources** in Data Hub—into your app's domain model. These entities are called [external entities](/refguide/external-entities/) and are different because they enable the connection to the data associated with the entities in the originating app.
 
-To display the [Integration pane](/refguide/integration-pane/], click **View** > **Data Hub**.
+To display the [Integration Pane](/refguide/integration-pane/), click **View** > **Data Hub**.
 
 {{% alert color="info" %}}
 In the Catalog, registered published services are referred to as *data sources*. Exposed entities will show the **Entity set** name and are called *datasets.*
@@ -33,7 +33,7 @@ The following functionality is available in the pane:
 
 ### 2.2 Used in Your App Section {#used-in-app}
 
-When you do not enter search text in the [Integration pane](/refguide/integration-pane/], then **Used in your App** section is displayed. This shows the consumed services and the external entities used in the current app. The list of entities, associations, and attributes for the consumed services are shown as for the search results:
+When you do not enter search text in the [Integration Pane](/refguide/integration-pane/), then **Used in your App** section is displayed. This shows the consumed services and the external entities used in the current app. The list of entities, associations, and attributes for the consumed services are shown as for the search results:
 
 {{< figure src="/attachments/refguide/modeling/menus/view-menu/data-hub-pane/used-in-your-app.png" alt="User in Your App Section" >}}
 
@@ -41,7 +41,7 @@ For more information on how to add entities to your app, see [Adding an External
 
 ## 3 Searching Catalog Sources {#search}
 
-As you enter a search term, all the items in the Catalog satisfying the search string are listed in the search results. This includes words in the service, entity and attribute descriptions, which are not displayed in the [Integration pane](/refguide/integration-pane/]. For more information, see the [Selected Asset Details](/catalog/manage/search/#search-details) section in *Search in the Catalog*.
+As you enter a search term, all the items in the Catalog satisfying the search string are listed in the search results. This includes words in the service, entity and attribute descriptions, which are not displayed in the [Integration Pane](/refguide/integration-pane/). For more information, see the [Selected Asset Details](/catalog/manage/search/#search-details) section in *Search in the Catalog*.
 
 You can drag the entity from the search results into your domain model and it will be added to your app and displayed as an [external entity](/refguide/external-entities/).
 
@@ -65,9 +65,9 @@ By default, the search is performed on assets in the **Production** environment.
 When the **Show development environments** is checked, all subsequent searches results will also include those in non-production environments.
 {{% /alert %}}
 
-## 4 Integration pane Information {#viewing}
+## 4 Integration Pane Information {#viewing}
 
-The information that is displayed in the [Integration pane](/refguide/integration-pane/] either when you enter a search term or when you open the **Used in your App** section is described in the sections below. 
+The information that is displayed in the [Integration Pane](/refguide/integration-pane/) either when you enter a search term or when you open the **Used in your App** section is described in the sections below. 
 
 ### 4.1 Services
 
@@ -134,7 +134,7 @@ Unsupported attributes are grayed out and are not included in your app.
 
 #### 4.2.4 CRUD Capabilities
 
-If the entity, association, or attribute supports **C**reate, **R**ead, **U**pdate, or **D**elete capabilities and it is also supported by Studio Pro, then it is displayed in the [Integration pane](/refguide/integration-pane/].
+If the entity, association, or attribute supports **C**reate, **R**ead, **U**pdate, or **D**elete capabilities and it is also supported by Studio Pro, then it is displayed in the [Integration Pane](/refguide/integration-pane/).
 Entities and associations can have any of the CRUD capabilities, while attributes can only have create and update. For more information on CRUD capabilities, see [Write Data to Another App](/catalog/write-data/).
 
 ## 5 Read More

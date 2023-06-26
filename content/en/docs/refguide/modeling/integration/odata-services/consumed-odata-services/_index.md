@@ -8,9 +8,9 @@ tags: ["studio pro"]
 
 ## 1 Introduction
 
-Data can be published from an app for use by other apps through [published OData services](/refguide/published-odata-services/). Consumed OData services can be used to integrate external data sources in apps through the [Integration pane](/refguide/integration-pane/).
+Data can be published from an app for use by other apps through [published OData services](/refguide/published-odata-services/). Consumed OData services can be used to integrate external data sources in apps through the [Integration Pane](/refguide/integration-pane/).
 
-OData services that are registered in the [Catalog](/catalog/) expose entities that can be dragged and dropped into your domain model through the [Integration pane](/refguide/integration-pane/) as external entities. The OData service document that is added to your app provides the information for retrieving the metadata for the service and exposed entities.
+OData services that are registered in the [Catalog](/catalog/) expose entities that can be dragged and dropped into your domain model through the [Integration Pane](/refguide/integration-pane/) as external entities. The OData service document that is added to your app provides the information for retrieving the metadata for the service and exposed entities.
 
 For further details on the consumed OData service document and updating consumed OData services in your app, see [Consumed OData Service](/refguide/consumed-odata-service/).
 
@@ -41,9 +41,9 @@ You can create associations between local [persistable entities](/refguide/persi
 
 When an external entity is dragged into the domain model, the  **Consumed OData** document that is added to the model displays the values of the metadata contract from the service endpoint.
 
-In the [Integration pane](/refguide/integration-pane/], the service and the entity are shown as consumed both in the search results pane and also in the **Used in your App** section.
+In the [Integration Pane](/refguide/integration-pane/), the service and the entity are shown as consumed both in the search results pane and also in the **Used in your App** section.
 
-If the metadata contract at the specified service endpoint is different to the contract in the current app model, this is indicated in the [Integration pane](/refguide/integration-pane/] search results and the **Properties** pane for the service with an **Update** icon (a blue arrow).
+If the metadata contract at the specified service endpoint is different to the contract in the current app model, this is indicated in the [Integration Pane](/refguide/integration-pane/) search results and the **Properties** pane for the service with an **Update** icon (a blue arrow).
 
 This means that the consumed service has to be **Updated** to the new contract. If this is not done, then this will result in errors when data has to be retrieved from the endpoint based on an outdated contract. Changes in consumed OData service contracts is further described in [Updating or Switching a Consumed OData Service](/refguide/consumed-odata-service/#updating).
 

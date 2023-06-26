@@ -38,7 +38,7 @@ To import this module into your app, follow the instructions in [How to Use Mark
         4. Create a button that calls the **ShowSurvey_OnAction** nanoflow on the page where **Template_SurveyWidget** is placed. Mendix recommends renaming the flow to something that describes the original action.
 
     * For the on-page load option:
-   
+     
         1. Open the **Show Survey** folder, and copy the widget from **ShowSurvey_OnPageLoad** to your page.
         2. Place this widget on any page you wish to show the survey (you can use multiple **Show Mini Survey On Page Load** widgets in your app to trigger many surveys).
         3. Double-click the **Show Mini Survey On Page Load** widget, then fill in the **Survey ID**.
@@ -46,3 +46,9 @@ To import this module into your app, follow the instructions in [How to Use Mark
 6. In **App Explorer**, double-click **Security**, and add the **AppInsights_MiniSurvey.User** user role to all the system roles that use the mini-survey in the **App Security** dialog box.
 
 {{% alert color="info" %}}Once the start time of the mini-survey is reached, the mini-survey will start running, and all the target users of the mini-survey will receive the survey automatically.{{% /alert %}}
+
+## 4 Troubleshooting {#troubleshooting}
+
+#### 4.1 Surveys Do Not Work Locally When Running Multiple Applications
+
+If this occurs, upgrade the module to v1.1.0 or above, and ensure to clear your browsers cached data to remove deprecated feature – you only need to do this one time in your browser.

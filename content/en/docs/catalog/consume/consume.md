@@ -2,19 +2,19 @@
 title: "Consume Registered Assets"
 url: /catalog/consume/consume-registered-assets/
 weight: 20
-description: "Describes how to use shared data sources and datasets through Mendix Data Hub."
-tags: ["data hub", "Catalog", "consume", "external entities", "asset", "entities", data hub pane", "studio pro"]
+description: "Describes how to use shared data sources and datasets through the Catalog."
+tags: ["data hub", "Catalog", "consume", "external entities", "asset", "entities", integration pane", "studio pro"]
 aliases:
     - /data-hub/data-hub-catalog/consume/
 ---
 
 ## 1 Introduction
 
-The Catalog is a catalog of OData services exposing datasets that you can use in your apps. In Mendix Studio Pro, these exposed datasets are added as *external entities* through the [Data Hub pane](/refguide/data-hub-pane/). The integrated Catalog [search](/catalog/search/) functionality in Studio Pro is available to find suitable datasets to use in your apps. 
+The Catalog is a catalog of OData services exposing datasets that you can use in your apps. In Mendix Studio Pro, these exposed datasets are added as *external entities* through the [Integration Pane](/refguide/integration-pane/). The integrated Catalog [search](/catalog/search/) functionality in Studio Pro is available to find suitable datasets to use in your apps. 
 
 ## 2 Using Registered Assets in Your App {#consuming-services-entities}
 
-You can use the Catalog or the [Data Hub pane](/refguide/data-hub-pane/) in Studio Pro to find registered data sources. Click [Copy Data Source URI](/catalog/manage/search/#service-details) to  obtain the OData service URI, which can be used in other enterprise applications.
+You can use the Catalog or the [Integration Pane](/refguide/integration-pane/) in Studio Pro to find registered data sources. Click [Copy Data Source URI](/catalog/manage/search/#service-details) to  obtain the OData service URI, which can be used in other enterprise applications.
 
 The following sections summarize important points to consider when using OData services and registered datasets in your apps in Studio Pro.
 

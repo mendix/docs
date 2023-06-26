@@ -116,12 +116,12 @@ Do the following:
 3. In the panel on the left, click **Filter** to see the **Filters** dialog box.
 4. Your app was deployed to the **Mendix Free App** or **Sandbox** environment. Check **Sandbox** to include it in the search results, then click **Apply**:
 
-    {{< figure src="/attachments/data-hub/share-data/dh-filter-box.png" alt="Data Hub screen" >}}
+    {{< figure src="/attachments/data-hub/share-data/dh-filter-box.png" alt="Catalog screen" >}}
 
 5. From the new search results list on the left, select the *{yourname}CustomerODataService* service. Full details from the OData contract for the service are displayed on the right.
 6. The **Curate** bar confirms that "**You are the owner of this data source**". You have permissions edit the metadata for this service in the Catalog and a **Business Owner**.
 
-    {{< figure src="/attachments/data-hub/share-data/search-details-screen.png" alt="data hub" >}}
+    {{< figure src="/attachments/data-hub/share-data/search-details-screen.png" alt="Catalog search details" >}}
 
     {{% alert color="info" %}}For more information about roles in the Catalog, see [User Roles](/catalog/manage/user-roles/).{{% /alert %}}
 
@@ -135,7 +135,7 @@ To do this, follow the steps below:
 
 1. In Mendix Studio Pro, create a new app using the **Blank** app template and call it *{yourname}CustomerActionsApp*.
 2. Go to the domain model > [Integration Pane](/refguide/integration-pane/) (if you do not see the [Integration Pane](/refguide/integration-pane/), click **View** > **Data Hub** to display it).
-3. In the [Data Hub](/refguide/data-hub-pane/) pane, enter the search string *{yourname}*.
+3. In the [Integration Pane](/refguide/integration-pane/), enter the search string *{yourname}*.
 4. By default, search in the [Integration Pane](/refguide/integration-pane/) only shows services in **Production** environments. Your app was deployed as a **Sandbox** app. Click the **Filter** icon next to the search and check **Show development environments**.
 
     {{< figure src="/attachments/data-hub/share-data/filter-icon.png" alt="Filter Icon" >}}

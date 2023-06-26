@@ -11,7 +11,7 @@ tags: ["marketplace", "marketplace component", "business events", "data broker",
 
 With [Mendix Business Events](https://marketplace.mendix.com/link/component/202649), applications can signal when something important happens, and can independently subscribe to these events if they want to be informed. Business events are like a mailing list to share event notifications between apps. The key difference between business events and traditional communication between apps, like REST or Web Services, is that there is no direct communication between the different apps. 
 
-To deliver these events reliably between your applications, an event broker is required. For apps running the Mendix cloud on licensed nodes, you'll need to purchase a license for a [Mendix Event Broker](#mendix-event-broker). 
+To deliver these events reliably between your applications, an event broker is required. For apps running the Mendix cloud on licensed nodes, you will need to purchase a license for a [Mendix Event Broker](#mendix-event-broker). 
 
 {{% alert color="info" %}}
 Business events are supported in Studio Pro [9.18](/releasenotes/studio-pro/9.18/) and above, and currently can only be deployed to the [Mendix Cloud](/developerportal/deploy/mendix-cloud-deploy/).{{% /alert %}} 
@@ -35,7 +35,7 @@ To use Mendix Business Events, you will need the following:
 
 ## 2 Licensing {#licensing}
 
-The Mendix Business Events module itself does not require a license, but it depends on an event broker to deploy to production environments. You can purchase a [Mendix Event Broker License](#event-broker-license) for a broker to be set up for you. See the [Mendix Event Broker](https://marketplace.mendix.com/link/component/202907) platform service page for more details.
+The Mendix Business Events module itself does not require a license, but it depends on an event broker to deploy to production environments. You can purchase a [Mendix Event Broker License](#event-broker-license) for a broker to be set up for you. See the [Mendix Event Broker](https://marketplace.mendix.com/link/component/202907) platform service page for more details. You can also run business events on [your own Kafka cluster](#byok).
 
 ## 3 Configuration
 
@@ -302,7 +302,7 @@ There is a single Kafka broker for Free Apps that all your company Free Apps can
 
 Purchase a license to the Mendix Event Broker to deploy unlimited apps on production environments in the Mendix Cloud. Ask your Customer Success Manager or Account Manager to get in touch with us to purchase a license. See the [Mendix Event Broker](https://marketplace.mendix.com/link/component/202907) platform service page for more details.
 
-Licenses for the Mendix Event Broker are available for all regions, but once selected, you can only run on a single region (no multi-region support). To learn more about how this broker works, see [Mendix Event Broker](#mendix-event-broker).
+Licenses for the Mendix Event Broker are available for all regions, but once selected, you can only run on a single region (no multi-region support). To learn more about how this broker works, see [Mendix Event Broker](#mendix-event-broker). This license is available for all customers. You can also run business events on [your own Kafka cluster](#byok).
 
 #### 5.1.1 Enabling the Mendix Event Broker Service {#enable-mx-event-broker}
 
@@ -380,7 +380,7 @@ If you are deploying an app to production that contains a published business eve
 2. Transport the mda to an environment.
 3. Restart the environment.
    
-### 6.4 Apps Running Own Kafka Cluster (Bring Your Own Kafka)
+### 6.4 Apps Running Own Kafka Cluster (Bring Your Own Kafka) {#byok}
 
 {{% alert color="info" %}}
 This deployment method is currently in [Beta](/releasenotes/beta-features/).{{% /alert %}}

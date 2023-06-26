@@ -133,16 +133,16 @@ You are going to create a second app and consume the **Customer** dataset from t
 To do this, follow the steps below:
 
 1. In Mendix Studio Pro, create a new app using the **Blank** app template and call it *{yourname}CustomerActionsApp*.
-2. Go to the domain model > **Data Hub** pane (if you do not see the **Data Hub** pane, click **View** > **Data Hub** to display it).
+2. Go to the domain model > [Integration Pane](/refguide/integration-pane/) (if you do not see the [Integration Pane](/refguide/integration-pane/), click **View** > **Data Hub** to display it).
 3. In the [Data Hub](/refguide/data-hub-pane/) pane, enter the search string *{yourname}*.
-4. By default, search in the **Data Hub** pane only shows services in **Production** environments. Your app was deployed as a **Sandbox** app. Click the **Filter** icon next to the search and check **Show development environments**.
+4. By default, search in the [Integration Pane](/refguide/integration-pane/) only shows services in **Production** environments. Your app was deployed as a **Sandbox** app. Click the **Filter** icon next to the search and check **Show development environments**.
 
     {{< figure src="/attachments/data-hub/share-data/filter-icon.png" alt="Filter Icon" >}}
 
     The search results now include **{yourname}CustomerOData_service** from your Mendix Cloud **Sandbox** environment.
 
-5. From **{yourname}CustomerODataService**, drag the **Customer** entity into the domain model. The consumed service and entity have green checkmarks in the **Data Hub** pane now.
-6. This entity is different from the blue entity container from the first app. This purple colored entity is called an [external entity](/refguide/external-entities/). The name of the OData service it is exposed in is displayed above it. Click the information icon for the consumed service in the **Data Hub** pane to see further information about the service, and follow the link to **View in Catalog**.
+5. From **{yourname}CustomerODataService**, drag the **Customer** entity into the domain model. The consumed service and entity have green checkmarks in the [Integration Pane](/refguide/integration-pane/) now.
+6. This entity is different from the blue entity container from the first app. This purple colored entity is called an [external entity](/refguide/external-entities/). The name of the OData service it is exposed in is displayed above it. Click the information icon for the consumed service in the [Integration Pane](/refguide/integration-pane/) to see further information about the service, and follow the link to **View in Catalog**.
 7. In the **App Explorer**, notice the service and location documents for your external entity. These documents specify the metadata for the service and provide the links for connecting to the shared data.
 8. Right-click the entity and select **Generate overview pages** for this entity. In the **Generate pages** dialog box, for **Content layout** select **Atlas_Default(Atlas_Core)** and click **OK**. Accept the **Information** box by clicking **OK**. Overview pages for the new entity are added in the **OverviewPages** folder of **MyFirstModule**.
 9. From the App Explorer, drag **Customer_Overview** into the empty **Auto-fill** container under the *Home* banner.

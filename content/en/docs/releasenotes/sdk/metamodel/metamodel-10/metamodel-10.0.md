@@ -4,7 +4,9 @@ url: /releasenotes/sdk/metamodel-10.0/
 weight: 100
 ---
 
-## 10.0.0
+## 10.0.0 GA
+
+**Release date: June 19th, 2023**
 
 ### Microflows
 

@@ -4,6 +4,8 @@ url: /catalog/manage/security/
 description: "Describes security aspects around registered assets and access in Mendix Data Hub."
 tags: ["data hub", "Catalog", "security", "entity security", "dataset security","odata service security"]
 aliases:
+    - /data-hub/data-hub-catalog/security/
+    - /data-hub/data-hub-catalog/manage-data-sources/security/
     - /catalog/security/
 ---
 

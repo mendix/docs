@@ -13,11 +13,12 @@ This feature is in Beta. For more information on Beta products, see [Beta Releas
 
 ## 1 Introduction
 
-Mini Surveys is apart of the Mendix App Insights collection of tools designed to help you collect & aggregate feedback from your customers. 
+The Mini Surveys feature is part of the Mendix App Insights collection of tools designed to help you collect and aggregate feedback from your customers. 
 
-Mini Survey consists of 2 parts;
-1. A pop-up survey in your app.
-2. A back-end dashboard in the developer portal to create surveys and aggregate your survey results.
+This feature consists of 2 parts:
+* A pop-up survey in your app for users to fill in
+
+* A back-end dashboard in the Developer Portal for you to create surveys and aggregate your survey results.
 
 You begin by creating a mini-survey in **App Insights** in the Developer Portal, and then you implement the mini-survey by configuring the **AppInsights_MiniSurvey** module in Studio Pro. After the mini-survey is running, you can view responses that have been collected in **App Insights** and export the responses to an XLSX file.
 
@@ -221,19 +222,17 @@ To check the responses that have been collected, follow these steps::
 4. Go to the **Responses** tab to see all the responses that have been collected.
 5. To export the responses to an XLSX file, click **Export Responses** on the upper-right corner of the page.
 
-## 4 FAQ
+### 3.5 Survey Opt-out Rules
 
-### 4.1 Survey Pop-Up Behaviour 
+A mini-survey has the following opt-out rules: 
 
-The Mini Survey has specific opt-out rules after a user is shown a Survey.
+* If a user has closed a survey, without answering any questions, then the survey will not show again to this user .
 
-* **The survey opt-out scenarios are;**
-    * **Scenario 1:** – User closes Survey, without answering any questions. User is opted-out and survey will not show again.
-    * **Scenario 2:** – User Answers 1 or more questions but does not finish the survey: Survey will show again to the user. But if they close the survey before finishing (for second time), it will not show survey again.
-    * **Scenario 3:** – User Answers all questions: Survey will not show again.
+* If a user has answered one or more questions in a survey, but did not finished the survey, then the survey will show again. However, if the user has closed the survey before finishing for the second time, the survey will not show again to this user.
+* If the user has answered all questions, then the survey will not show again to the user.
 
-### 4.2 Upgrading the module from v1.0.0. to v1.1.0.
+## 4 Troubleshooting
 
-In order to fix the issue where surveys do not work locally when running multiple applications we have updated the way Mini Surveys are tracked. Due to this change if you are upgrading from release v1.0.0 to v1.1.0 then you must clear your browsers local storage/cached data to remove deprecated features. This only needs to be done one time in your browser.
+#### 4.1 Surveys Do Not Work Locally When Running Multiple Applications
 
-
+See the [Troubleshooting](/appstore/modules/app-insights/#troubleshooting/) section in the documentation for the App Insights – Mini-Surveys module in the Marketplace.

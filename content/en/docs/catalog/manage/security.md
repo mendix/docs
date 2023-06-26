@@ -5,6 +5,7 @@ description: "Describes security aspects around registered assets and access in 
 tags: ["data hub", "Catalog", "security", "entity security", "dataset security","odata service security"]
 aliases:
     - /catalog/security/
+    - /data-hub/data-hub-catalog/security/
 ---
 
 ## 1 Introduction

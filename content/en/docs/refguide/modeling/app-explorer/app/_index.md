@@ -36,6 +36,12 @@ System texts are texts like information and error messages that are produced by 
 
 See [System Texts](/refguide/system-texts/).
 
+## 6 Advanced
+
+### Export Documentation
+
+Right clicking on the app level allows you to export your documentation. This will export an HTML file with all documents in your app and their documentation.
+
 ## 6 Read More
 
 * [Modules](/refguide/modules/)

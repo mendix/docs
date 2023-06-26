@@ -11,7 +11,7 @@ aliases:
 
 ## 1 Introduction
 
-After you have created a mini-survey in [Product Insights](/developerportal/collaborate/product-insights/) in the Developer Portal, use the [App Insights – Mini-Surveys](https://marketplace.mendix.com/link/component/205483) module to implement your mini-survey in Studio Pro.
+After you have created a [mini-survey](/developerportal/collaborate/product-insights/) in the Developer Portal, use the [App Insights – Mini-Surveys](https://marketplace.mendix.com/link/component/205483) module to implement your mini-survey in Studio Pro.
 
 ## 2 Installation
 

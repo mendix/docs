@@ -51,15 +51,15 @@ The new features were divided into these major themes, which are described in th
 
 | Capability or Feature | Expected Release |
 | --- | --- |
-| Mendix Connect - business events and Mendix Event Broker | Released for GA [Jun 27, 2023](/releasenotes/studio-pro/10.0/) |
+| Mendix Connect – business events and Mendix Event Broker | Released for GA [Jun 27, 2023](/releasenotes/studio-pro/10.0/) |
 | Machine Learning Kit | Released for GA [Jun 27, 2023](/releasenotes/studio-pro/10.0/) |
-| Solutions Kit - protected modules | Released for GA [Jun 27, 2023](/releasenotes/studio-pro/10.0/) |
-| Solutions Kit - solution lifecycle management | Released for GA [Jun 27, 2023](/releasenotes/studio-pro/10.0/) |
-| Mendix Connect - new database connector | GA: Q3 2023 |
-| Mendix Connect - REST connector | GA: Q4 2023 |
+| Solutions Kit – protected modules | Released for GA [Jun 27, 2023](/releasenotes/studio-pro/10.0/) |
+| Solutions Kit – solution lifecycle management | Released for GA [Jun 27, 2023](/releasenotes/studio-pro/10.0/) |
+| Mendix Connect – new database connector | GA: Q3 2023 |
+| Mendix Connect – REST connector | GA: Q4 2023 |
 | Studio Pro extensibility | Private Beta: Q3 2023<br>GA: TBD |
-| Solutions Kit - adaptation insights | Private Beta: Q4 2023<br>GA: TBD |
-| Mendix Connect - external actions | GA: TBD |
+| Solutions Kit – adaptation insights | Private Beta: Q4 2023<br>GA: TBD |
+| Mendix Connect – external actions | GA: TBD |
 
 ## 5 Multi-Cloud Deployment
 

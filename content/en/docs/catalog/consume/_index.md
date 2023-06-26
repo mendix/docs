@@ -2,6 +2,8 @@
 title: "Consume Data Sources"
 url: /catalog/consume/
 weight: 20
+aliases:
+    - /data-hub/data-hub-catalog/consume-data-sources/
 ---
 
 ## 1 Introduction

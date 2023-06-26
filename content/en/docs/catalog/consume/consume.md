@@ -5,7 +5,7 @@ weight: 20
 description: "Describes how to use shared data sources and datasets through Mendix Data Hub."
 tags: ["data hub", "Catalog", "consume", "external entities", "asset", "entities", data hub pane", "studio pro"]
 aliases:
-    - /catalog/consume/
+    - /data-hub/data-hub-catalog/consume/
 ---
 
 ## 1 Introduction

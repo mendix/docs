@@ -12,6 +12,7 @@ tags: ["data hub", "Catalog", "data hub landscape", "external entities", "extern
 aliases:
     - /data-hub/data-catalog/index.html
     - /data-hub/
+    - /data-hub/data-hub-catalog/
 ---
 
 ## 1 Introduction

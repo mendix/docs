@@ -3,7 +3,7 @@ title: "Catalog and Studio Pro"
 url: /catalog/integrate-with-studio-pro/
 weight: 60
 aliases:
-    - /catalog/integrate/
+    - /data-hub/data-hub-catalog/integrate/
 ---
 ## 1 Introduction
 

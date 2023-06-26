@@ -52,7 +52,6 @@ After you install the connector, you can find it in the **App Explorer**, in the
 
 ### 3.1 Configuring AWS Authentication
 
-#### THIS SECTION IS PRETTY MUCH ALWAYS REQUIRED, BUT THERE IS ONE PLATFORM-SUPPORTED CONNECTOR THAT USES A DIFFERENT AUTHENTICATION SETUP (AWS S3). IN THAT CASE, THIS SECTION IS SKIPPED.
 #### THIS SECTION HAS SCREENSHOTS FROM THE DYNAMODB CONNECTOR. REPLACE THEM WITH SIMILAR SCREENSHOTS FROM YOUR CONNECTOR.
 
 In order to use the {AWS SERVICE NAME} service, you must authenticate with AWS. To do so, you must set up a configuration profile in your Mendix app. After you set up the configuration profile, the connector module handles the authentication internally.

@@ -45,7 +45,7 @@ To upgrade your theme directory to Atlas 3 specifications, please complete the f
 
 ### 2.2  Migrating UI Content {#upgrade-ui-content}
 
-**Atlas 3** distributes the UI content previously found in the Atlas_UI_Resources, in 3 seperate modules: **Atlas Core**, **Atlas Web Content** and **Atlas Native Content**. 
+**Atlas 3** distributes the UI content previously found in the Atlas_UI_Resources, in 3 separate modules: **Atlas Core**, **Atlas Web Content** and **Atlas Native Content**. 
 
 * [Atlas Core](https://marketplace.mendix.com/link/component/117187) - Contains Atlas core styling and layouts
 * [Atlas Web Content](https://marketplace.mendix.com/link/component/117183) - Contains Atlas's web page templates and building blocks

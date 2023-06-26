@@ -217,43 +217,48 @@ You can also connect your social accounts via **Twitter URL** and **LinkedIn URL
 You can also choose to make your profile public (which will allow the Mendix community to view your profile) by clicking **Make Profile Public**. Be sure to do the following to make your profile public:
 
 * Add an avatar
-* Enter a **Job Title**
-* Enter a **Department**
-* Enter **Country of Residence**
-* Enter details **About You**
-* Add at least 1 **Skill**
-* Add at least 1 **Industry Experience** item
+* Enter a **Job Title**, **Department**, and **Country of Residence**
+* Add some details **About You**
+* Add at least one **Skill**
+* Add at least one **Industry Experience** item
 
 {{% alert color="info" %}}
 To make your public profile private again, click **Make Profile Private**. 
 {{% /alert %}}
 
-#### 10.1.1 Merge Profiles
+#### 10.1.1 Merging Profiles
 
-If you own two (or more user accounts) it is recommended to merge the profiles of these user accounts with each other. It saves you from maintenance of multiple profiles and your community contributions will be stored with the one profile you’re actively using, leading to one stronger profile instead of keeping track of your progress scattered in multiple Mendix profiles in the Platform. The **Merge Profile** process will merge information associated to the to be merged profiles, resulting in a single profile with 2 (or more) user accounts related to it.
+If you own two (or more) user accounts, Mendix recommendeds merging the profiles of these user accounts with each other. This saves you from having to maintain multiple profiles, and your community contributions will be stored with the one profile you actively use. As a result, you will have a stronger single Mendix Profile, and you will not have to keep track of your progress scattered in multiple profiles in the platform.
 
-##### The merge process {#merge-process}
+The **Merge Profile** process merges the information associated with the merged profiles, resulting in a single Mendix Profile with two (or more) user accounts related to it.
 
-Prerequisites for the profile merge actions:
+##### 10.1.1.1 Merging Process {#merge-process}
 
-* Two (or more) user accounts
-* Platform Access with at least one of these user accounts.
-* Ability to receive emails for the to-be-merge user profiles. (This can be the login email address or profile email address)
+These are the prerequisites for the profile merge actions:
 
-##### User account Platform access
+* Own two (or more) user accounts
+* Have platform access with at least one of these user accounts
+* Be able to receive emails for the user profiles that will be merged (this can be your email address used to log in or a profile email address)
 
-Before you start with a new profile merge action it is important to understand what scenarios are possible and what it means for the profile merge process. 
+##### 10.1.1.2 User Account Platform Access [NEED SUB-HEADING?]
+
+Before you start with a new profile merge action, it is important to understand what scenarios are possible and what it means for the profile merge process.
+
 The following starting scenarios are possible:
 
-* **All user accounts give you access to the Mendix Platform** - Considering you have access to the platform with all your user accounts, you are able to initiate a merge having signed in with any of them. For the other profile a confirmation email message is sent, to allow for the merge action to start (for details on what information will end up in the merge result profile, see the [Result of merge process](https://docs.mendix.com/developerportal/community-tools/mendix-profile/#merge-profile-result) section below).
-* **One of the user accounts gives you access to the Mendix Platform** - Considering you have access to only one of the user accounts, the profile merge process can only be initiated from that account. Furthermore, the user account you signed in with will determine what profile information will end up in the merge result profile for the properties where the system can’t determine which information should be kept (for details on on what information will end up in the merge result profile, see the [Result of merge process](https://docs.mendix.com/developerportal/community-tools/mendix-profile/#merge-profile-result) section below).
-For the other profile a confirmation email message is sent to allow for the merge action to start. 
-* **None of the user accounts gives you access to the Mendix Platform** - You should own at least one user account that gives access to the Mendix Platform.
+* **All user accounts give you access to the Mendix Platform** – If you have access to the platform with all your user accounts, you are able to initiate a merge after signing in with any of the accounts. For the other profile, a confirmation email message is sent that enables starting the merge action.
+* **One of the user accounts gives you access to the Mendix Platform** – If you have access to only one of your user accounts, the profile merge process can only be initiated from that account. Furthermore, the user account you signed in with determines what profile information ends up in the resulting merged profile in the case of properties where the system cannot determine the information that should be kept. For the other profile, a confirmation email message is sent that enables starting the merge action. 
+* **None of the user accounts gives you access to the Mendix Platform** – You should own at least one user account that provides access to the Mendix Platform.
 
-##### Ability to receive emails for the to-be-merged user profiles
-When merging user profiles, a merge confirmation is needed for the user account you are not signed in with. The verification code which you need to confirm the merge operation will arrive by email. Therefore, it is required to be able to receive the verification email in an email inbox that is associated to the user account or to the the associated profile.  
+{{% alert color="info" %}}
+For details on what information ends up in the resulting merged profile, see the [Results of Merge Process](#merge-profile-result) section below.
+{{% /alert %}}
 
-##### Step-by-step Merge process
+##### 10.1.1.3 Ability to Receive Emails for the User Profiles That Will Be Merged
+
+When merging user profiles, a merge confirmation is needed for the user account you are not signed in with. The verification code that you need to confirm the merge operation will arrive by email. Therefore, you must be able to receive the verification email in an email inbox that is associated with the user account or the associated profile.  
+
+##### 10.1.1.4 Step-by-Step Merge Process
 
 From this page, click **Merge Profile**. After entering the email address of one of the accounts linked to the profile you want to transfer information from in the dialog box, click Next and you will be asked to choose an email address to receive a verification code. You should choose an email address you have access to. This step is needed to verify you are the owner of the Mendix profile you are trying to merge.
 
@@ -266,6 +271,7 @@ With the merge, the accounts of both profiles are kept. None of the accounts wil
 If you are sure you want to proceed with the merge, click Merge. You will be notified once the merge is completed.
 
 ##### Result of the merge process {#merge-profile-result}
+
 The result of the profile merge process is the profile information of the merged profiles resulting into one profile. Information that can be added to the profile will all be associated with the resulting profile. However, in the situation where there is conflicting data for the two to-be-merged profiles, the system will use the profile data of the user account the user is signed in with. The following data can conflict, but can be easily updated after the merge process: 
 
 * Full name
@@ -281,6 +287,7 @@ It is not possible to separate profiles after they have been merged. Double-chec
 {{% /alert %}}
 
 ##### FAQ
+
 **I don’t have access to any of the email addresses of the user account/profile I want to merge, what now?**
 If you do not have access to any of these email addresses and you cannot log in with the Profile you want to merge, click **Create Support Request**  to go to Mendix Support. Mendix Support Team will contact you to change the profile (**Recovery**) email. Once this is done, you will be able to **Merge Profile** yourself, following the above steps. 
 

@@ -13,10 +13,13 @@ aliases:
 
 ## 1 Introduction
 
-By default, any newly created account comes with its own profile. Your Mendix Profile is your main point of contact with members of the Mendix community. It displays your activities on the Mendix Platform and details about your background. 
-To get more involved in the Mendix community, your profile is the best way to start. 
+Your Mendix Profile is your main point of contact with members of the Mendix community. It displays your activities on the Mendix Platform and details about your background. To get more involved in the Mendix community, your profile is the best place to start. 
 
 You can access your Mendix profile by clicking your picture in the upper-right corner of the Developer Portal and then selecting **See Your Profile**.
+
+{{% alert color="info" %}}
+By default, any newly created Mendix account comes with its own Mendix Profile.
+{{% /alert %}}
 
 ## 2 Header {#header}
 
@@ -41,7 +44,7 @@ The first profile card below the header presents your **Stats**, which are your 
 {{< figure src="/attachments/developerportal/community-tools/mendix-profile/stats.png"   width="350"  >}}
 
 {{% alert color="warning" %}}
-Don't get bummed out about a low number of points, because everyone in the Mendix community started like that, even our Expert developers! There are plenty of opportunities to gain more points and climb the [Leaderboard](#leaderboard).
+Don't get disappointed about a low number of points, because everyone in the Mendix community started like that, even our Expert developers! There are plenty of opportunities to gain more points and climb the [Leaderboard](#leaderboard).
 {{% /alert %}}
 
 ## 4 Badges {#badges}

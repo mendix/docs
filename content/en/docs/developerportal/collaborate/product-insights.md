@@ -42,7 +42,7 @@ The tabs of the **Survey Overview** page are described below.
 
 The **Active** tab shows all the mini-surveys that are active for the app with the following details:
 
-* **Survey ID** – This is the unique ID of the mini-survey. You can also find this ID on the [survey details](#survey-details) page of the mini-survey. You need to use the ID as input when you configure the AppInsights_Mini-Surveys module in Studio Pro to implement the mini-survey.
+* **Survey ID** – This is the unique ID of the mini-survey. You can also find this ID on the [survey details](#survey-details) page of the mini-survey. You need to use the ID as input when you configure the Mendix Mini-Surveys module in Studio Pro to implement the mini-survey.
 * **Name** – This is the name of the mini-survey.
 * **Responses** – This shows the number of responses that have been collected for the mini-survey.
 * **Status** – This shows the status of the mini-survey. For more information, see the [Statuses of Mini-Surveys](#survey-status) section.
@@ -84,7 +84,7 @@ On the **Settings** tab of **Survey Overview**, you can enable the test mode, an
 
 * **Test Mode - For All Users** – After you enable this test mode, all users will become the testers of your survey. They will see the survey every time it is triggered. Their responses will not be saved, and therefore will not pollute the true survey results. You can view their responses on the [Test data](#test-data) tab of the survey details page. 
   
-    * To enable this test mode, open your app in Studio Pro. In the **App Explorer**, go to  **Marketplace modules > AppInsights_MiniSurvey > _SETUP > 2. Set API Key & mode.**, and set the **TEST_MODE** constant to **True**.
+    * To enable this test mode, open your app in Studio Pro. In the **App Explorer**, go to **Marketplace modules > AppInsights_MiniSurvey > _SETUP > 2. Set API Key & mode.**, and set the **TEST_MODE** constant to **True**.
     
 * **Test Mode - For Project Members** – After you enable this test mode, all team members of the app will become the testers of your survey. They will see the survey every time it is triggered. Their responses will not be saved, and therefore will not pollute the true survey results. You can view their responses on the [Test data](#test-data) tab of the survey details page.
 
@@ -92,7 +92,7 @@ On the **Settings** tab of **Survey Overview**, you can enable the test mode, an
 
     * To enable this test mode, select **Yes** for **Test Mode - For Project Members** here.
 
-* **API Keys** – You can view API keys here, or generate an API key if there is none available. You need to use the API key as input when you configure the App Insights – Mini-Surveys module in Studio Pro to implement the mini-survey. You need only one API key per app.
+* **API Keys** – You can view API keys here, or generate an API key if there is none available. You need to use the API key as input when you configure the Mendix Mini-Surveys module in Studio Pro to implement the mini-survey. You need only one API key per app.
 
     * To generate an API key, click **Generate API Key** here.
     * To view an existing API key, click the eye icon in the **View** column in the table.
@@ -135,7 +135,7 @@ This tab shows the test data that has been collected from testers in the test mo
 
 You can collect test data using two methods:
 
-* Change the value of the **TEST_MODE** constant in the [App Insights – Mini-Surveys](/appstore/modules/app-insights/) module. This will show **[TEST_MODE]** on the survey widget UI.
+* Change the value of the **TEST_MODE** constant in the [Mendix Mini-Surveys](/appstore/modules/app-insights/) module. This will show **[TEST_MODE]** on the survey widget UI.
 * Select the **Enable Mendix SSO test users"** checkbox on the **Settings** tab of **Survey Overview**, which marks the app team members as testers. Note that if an app team member is not authenticated through Mendix SSO, this setting does not work for them. The survey widget will not show **[TEST_MODE]** on the UI.
 
 ## 3 Running a Mini-Survey
@@ -204,11 +204,11 @@ To obtain an API key for the implementation, follow these steps:
 
 #### 3.3.2 Installing and Configuring the Module
 
-To install the [App Insights – Mini-Surveys](/appstore/modules/app-insights/) module, follow these steps:
+To install the [Mendix Mini-Surveys](/appstore/modules/app-insights/) module, follow these steps:
 
 1. Open your app in Studio Pro.
 2. Follow the instructions in [How to Use Marketplace Content in Studio Pro](/appstore/general/app-store-content/) to import the module into your app.
-3. Follow the instructions in the [Configuration](/appstore/modules/app-insights/#configuration) section of *App Insights – Mini-Surveys* to complete the implementation of the mini-survey in Studio Pro.
+3. Follow the instructions in the [Configuration](/appstore/modules/app-insights/#configuration) section in *Mendix Mini-Surveys* to complete the implementation of the mini-survey in Studio Pro.
 
 ### 3.4 Viewing/Exporting Responses {#view-export-responses}
 
@@ -235,4 +235,4 @@ A mini-survey has the following opt-out rules:
 
 #### 4.1 Surveys Do Not Work Locally When Running Multiple Applications
 
-See the [Troubleshooting](/appstore/modules/app-insights/#troubleshooting/) section in the documentation for the App Insights – Mini-Surveys module in the Marketplace.
+For details on how to solve this issue, see the [Troubleshooting](/appstore/modules/app-insights/#troubleshooting/) section in *Mendix Mini-Surveys*.

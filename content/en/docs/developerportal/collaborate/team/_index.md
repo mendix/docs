@@ -2,7 +2,7 @@
 title: "Team"
 url: /developerportal/collaborate/team/
 category: "Collaboration"
-weight: 5
+weight: 6
 description: "Describes the Team page of the Developer Portal."
 tags: ["Team", "Developer Portal"]
 #To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
@@ -35,6 +35,8 @@ Navigate to the **Role Settings** tab to view and edit permissions for the team 
 
 Navigate to the **History** tab to view the history of changes for the team and [node permissions](/developerportal/deploy/node-permissions/).
 
+Navigate to the **Pending Invites** tab for an overview of all sent and unaccepted invitations. You can retract pending invitations from there.
+
 ## 3 Inviting Team Members {#inviting}
 
 To invite new team members, follow these steps:
@@ -43,6 +45,8 @@ To invite new team members, follow these steps:
 2. Enter the email address for the Mendix user(s) you want to invite to the team.
 3. Select an **Access Role** for the new member and click **Add**.
 4. Send the invitation(s).
+
+{{% alert color="info" %}}If you invite a Mendix user from your company to an app owned by your company, the invited user is added directly to the app's team.{{% /alert %}}
 
 ## 4 Read More
 

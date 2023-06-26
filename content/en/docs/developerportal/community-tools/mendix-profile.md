@@ -375,7 +375,3 @@ Mendix has been tracking these data changes since November 2018.
 ## 11 Point Penalties
 
 Abusing the Mendix Forum, point system, or other community tools is not allowed. Any such action can result in a point penalty. Mendix reserves the right to penalize a user who bypasses or games the system without informing them.
-
-## 12 Main Document in This Category
-
-* [OAuth and Scopes](/developerportal/community-tools/oauth-scopes/) – provides introductory information on how OAuth and scopes work, as well as details on scopes generated in the Developer Portal

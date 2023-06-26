@@ -5,7 +5,7 @@ description: "Describes how to add annotations to an OData service in Mendix Stu
 tags: ["Data Hub", "external entities", "published OData service" ,"how to","OData", "Catalog"]
 weight: 20
 aliases:
-    - /catalog/write-data/
+    - /data-hub/write-data/
 ---
 
 ## 1 Introduction

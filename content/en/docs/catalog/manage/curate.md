@@ -5,6 +5,8 @@ description: "Describes how to curate and enhance data assets in Catalog, and ma
 tags: ["data hub", "Catalog", "curate", "description", "services", "tags"]
 aliases:
     - /catalog/curate/
+    - /data-hub/data-hub-catalog/curate/
+    - /data-hub/data-hub-catalog/manage-data-sources/curate/
 ---
 
 ## 1 Introduction

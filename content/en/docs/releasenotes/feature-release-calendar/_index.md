@@ -1,4 +1,4 @@
-10.1.1.3---
+---
 title: "Mendix 10 Feature Release Calendar"
 url: /releasenotes/feature-release-calendar/
 tags: ["announcements", "features", "feature release", "products", "features and products", "calendar", "new", "mendix 10", "mx10"]

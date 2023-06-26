@@ -1,5 +1,5 @@
 ---
-title: "Data Hub Administration"
+title: "Catalog Administration"
 url: /developerportal/control-center/data-hub-admin/
 category: "Control Center"
 weight: 15

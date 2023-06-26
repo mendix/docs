@@ -161,7 +161,7 @@ These release notes cover changes made to the [Catalog](/catalog/).
 #### Improvements
 
 * You can now view authentication details in the [data source details](/catalog/manage/search/#service-details) page. 
-* The **Technical Owner** can now only be changed in the **Control Center**, not within the **Catalog**. See the [Custom Owners](/developerportal/control-center/data-hub-admin/#custom-owners) section of *Data Hub Administration*.
+* The **Technical Owner** can now only be changed in the **Control Center**, not within the **Catalog**. See the [Custom Owners](/developerportal/control-center/data-hub-admin/#custom-owners) section of *Catalog Administration*.
 
 #### Fixes
 
@@ -642,7 +642,7 @@ These release notes cover changes made to the [Catalog](/catalog/).
 
 * We fixed an issue where updating a service version created a new endpoint instead of updating the existing one.
 * We fixed an issue that caused pagination URLs to be returned as *http* links rather than *https*.
-* We fixed an issue where clicking **Control Center** in the top bar of the [Data Hub administration](/developerportal/control-center/#data-hub) page navigated to the Data Hub home page. Now, it navigates to Control Center.
+* We fixed an issue where clicking **Control Center** in the top bar of the [Catalog Administration](/developerportal/control-center/#data-hub) page navigated to the Data Hub home page. Now, it navigates to Control Center.
 
 ### September 2nd, 2021
 
@@ -660,7 +660,7 @@ These release notes cover changes made to the [Catalog](/catalog/).
     * `GET` all environments for an application
     * `GET` all consumed endpoints
 * A change was made to the `POST` application API call to also allow for the `Opcenter` and `MindSphere` application types.
-* We added Catalog integration with [Control Center](/developerportal/control-center/#data-hub). For details, see [Data Hub Administration](/developerportal/control-center/data-hub-admin/).
+* We added Catalog integration with [Control Center](/developerportal/control-center/#data-hub). For details, see [Catalog Administration](/developerportal/control-center/data-hub-admin/).
 
 ### August 19th, 2021
 

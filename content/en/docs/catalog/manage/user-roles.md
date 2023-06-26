@@ -33,7 +33,7 @@ For more information, see the [Data Hub](/developerportal/control-center/#data-h
 
 ### 2.1 External Users
 
-Mendix Admins can add **External Users** to their company's Catalog. See the [External Users](/developerportal/control-center/data-hub-admin/#external-users) section in *Data Hub Administration*.
+Mendix Admins can add **External Users** to their company's Catalog. See the [External Users](/developerportal/control-center/data-hub-admin/#external-users) section in *Catalog Administration*.
 
 ## 3 Curator {#curator}
 

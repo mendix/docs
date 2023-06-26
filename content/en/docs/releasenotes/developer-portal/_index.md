@@ -623,7 +623,7 @@ In Portfolio Management, you can do the following
 
 #### Improvements
 
-* We added a new menu item for Mendix Admins to access [Data Hub](/developerportal/control-center/#data-hub) tasks in Control Center. For details, see [Data Hub Administration](/developerportal/control-center/data-hub-admin/).
+* We added a new menu item for Mendix Admins to access [Data Hub](/developerportal/control-center/#data-hub) tasks in Control Center. For details, see [Catalog Administration](/developerportal/control-center/data-hub-admin/).
 
 ### August 19th, 2021
 

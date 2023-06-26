@@ -15,12 +15,12 @@ This feature is in Beta. For more information on Beta products, see [Beta Releas
 
 The Mini Surveys feature is part of the Mendix App Insights collection of tools designed to help you collect and aggregate feedback from your customers. 
 
-This feature consists of 2 parts:
+The Mini Surveys feature consists of two parts:
 * A pop-up survey in your app for users to fill in
 
 * A back-end dashboard in the Developer Portal for you to create surveys and aggregate your survey results.
 
-You begin by creating a mini survey in the Developer Portal, and then you implement the mini survey by configuring the [Mendix Mini Surveys](/appstore/modules/app-insights) module in Studio Pro. After the mini survey is running, you can view responses that have been collected in Mendix Mini Surveys in the Developer Portal and export the responses to an XLSX file.
+You begin by creating a mini survey in the Developer Portal, and then you implement the mini survey by configuring the [Mendix Mini Surveys](/appstore/modules/app-insights) module in Studio Pro. After the mini survey is running, you can view responses that have been collected in Mini Surveys in the Developer Portal and export the responses to an XLSX file.
 
 This document first describes all the pages in Mini Surveys in the Developer Portal, and then it describes the procedure for running a mini survey.
 
@@ -208,7 +208,7 @@ To install the [Mendix Mini Surves](/appstore/modules/app-insights/) module, fol
 
 1. Open your app in Studio Pro.
 2. Follow the instructions in [How to Use Marketplace Content in Studio Pro](/appstore/general/app-store-content/) to import the module into your app.
-3. Follow the instructions in the [Configuration](/appstore/modules/app-insights/#configuration) section in *Mendix Mini Surves* to complete the implementation of the mini survey in Studio Pro.
+3. Follow the instructions in the [Configuration](/appstore/modules/app-insights/#configuration) section in *Mendix Mini Surveys* to complete the implementation of the mini survey in Studio Pro.
 
 ### 3.4 Viewing/Exporting Responses {#view-export-responses}
 
@@ -235,4 +235,4 @@ A mini survey has the following opt-out rules:
 
 #### 4.1 Surveys Do Not Work Locally When Running Multiple Applications
 
-For details on how to solve this issue, see the [Troubleshooting](/appstore/modules/app-insights/#troubleshooting/) section in *Mendix Mini Surves*.
+For details on how to resolve this issue, see the [Troubleshooting](/appstore/modules/app-insights/#troubleshooting/) section in *Mendix Mini Surveys*.

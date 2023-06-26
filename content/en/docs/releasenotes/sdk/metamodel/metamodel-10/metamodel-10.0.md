@@ -88,28 +88,9 @@ weight: 100
 
 * We introduced the `urlSegments` property.
 
+#### UrlSegment, ParameterAttributeUrlSegment, ParameterIdUrlSegment, StaticUrlSegment (Elements)
 
-
-
-
-
-
-
-#### UrlSegment (Element)
-
-* We introduced this element. 
-
-#### ParameterAttributeUrlSegment (Element)
-
-* We introduced this element. 
-
-#### ParameterIdUrlSegment (Element)
-
-* We introduced this element. 
-
-#### StaticUrlSegment (Element)
-
-* We introduced this element. 
+* We introduced these elements.
 
 #### EntityPathSource (Element)
 
@@ -117,39 +98,17 @@ weight: 100
 
 #### RetrievalQueryParameter (Element)
 
+* We introduced the `types` property.
 * We deleted the `type` property. 
-* We introduced the `types` property. 
 
 ### Reports
 
 #### ReportParameter (Element)
 
-* We deleted the `parameterTypeRuntime` property. 
-* We deleted the `reportId` property. 
+* We deleted the `parameterTypeRuntime` and `reportId` properties.
 
 ### Workflows
 
-#### WaitForNotificationActivity (Element)
+#### WaitForNotificationActivity, MajorityCompletionCriteria, ThresholdCompletionCriteria, WorkflowDefinitionSelection, WorkflowDefinitionNameSelection, WorkflowDefinitionObjectSelection (Elements)
 
-* We introduced this element. 
-
-#### MajorityCompletionCriteria (Element)
-
-* We introduced this element. 
-
-#### ThresholdCompletionCriteria (Element)
-
-* We introduced this element. 
-
-#### WorkflowDefinitionSelection (Element)
-
-* We introduced this element. 
-
-#### WorkflowDefinitionNameSelection (Element)
-
-* We introduced this element. 
-
-#### WorkflowDefinitionObjectSelection (Element)
-* We introduced this element. 
-
-This page has been generated automatically.
+* We introduced these elements.

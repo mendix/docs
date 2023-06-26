@@ -5,6 +5,7 @@ description: "Describes how to find data sources and datasets in the Catalog."
 tags: ["data hub", "Catalog", "data source", "dataset"]
 aliases:
     - /catalog/search/
+    - /data-hub/data-hub-catalog/search
 ---
 
 ## 1 Introduction

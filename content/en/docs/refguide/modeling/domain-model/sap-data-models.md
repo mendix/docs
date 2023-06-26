@@ -1,10 +1,12 @@
 ---
 title: "SAP Data Models"
-url: /partners/sap/sap-data-models/
+url: /refguide/sap-data-models/
 category: "SAP"
-weight: 30
+weight: 80
 description: "Presents reference information on the use of SAP data models."
 tags: ["SAP", "integration", "SAP services", "OData"]
+aliases:
+    - /partners/sap/sap-data-models/
 ---
 
 ## 1 Introduction
@@ -13,7 +15,7 @@ Mendix apps can consume OData services exposed by SAP back-end systems. To do th
 
 The OData Connector for SAP solutions needs to know details of the OData service which has been exposed. This involves mapping the data structures exposed by the OData service (via the $metadata URL) to entities and attributes of the domain model. This information is created as a Mendix module (.mpk) file which can be imported into your Mendix app.
 
-Any OData service can be used to generate a data model using the Model Creator for SAP Integrations. See [How To Use the Model Creator for SAP Integrations](/partners/sap/use-sap-model-creator/) for instructions on how to do this.
+Any OData service can be used to generate a data model using the Model Creator for SAP Integrations. See [How To Use the Model Creator for SAP Integrations](/refguide/use-sap-model-creator/) for instructions on how to do this.
 
 ## 2 SAP Data Models
 
@@ -49,4 +51,4 @@ The enumeration **FunctionNames** contains a list of functions which are exposed
 ## 3 Read More
 
 * [OData Connector for SAP Solutions](/appstore/connectors/sap/sap-odata-connector/)
-* [How To Use the Model Creator for SAP Integrations](/partners/sap/use-sap-model-creator/)
+* [How To Use the Model Creator for SAP Integrations](refguide/use-sap-model-creator/)

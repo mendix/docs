@@ -1,11 +1,13 @@
 ---
 title: "Use the Model Creator for SAP Integrations"
 linktitle: "Model Creator for SAP Integrations"
-url: /partners/sap/use-sap-model-creator/
+url: /refguide/use-sap-model-creator/
 category: "SAP"
-weight: 35
+weight: 85
 description: "Describes how to use the Model Creator for SAP Integrations to generate a Mendix domain model for an SAP OData or BAPI service."
 tags: ["SAP", "OData", "integration", "SAP services", "BAPI"]
+aliases:
+    - /partners/sap/use-sap-model-creator/
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 

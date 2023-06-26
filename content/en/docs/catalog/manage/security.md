@@ -6,6 +6,7 @@ tags: ["data hub", "Catalog", "security", "entity security", "dataset security",
 aliases:
     - /data-hub/data-hub-catalog/security/
     - /data-hub/data-hub-catalog/manage-data-sources/security/
+    - /catalog/security/
 ---
 
 ## 1 Introduction

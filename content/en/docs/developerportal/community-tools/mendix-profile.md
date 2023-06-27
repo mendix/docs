@@ -260,15 +260,18 @@ When merging user profiles, a merge confirmation is needed for the user account 
 
 ##### 10.1.1.4 Step-by-Step Merge Process
 
-From this page, click **Merge Profile**. After entering the email address of one of the accounts linked to the profile you want to transfer information from in the dialog box, click Next and you will be asked to choose an email address to receive a verification code. You should choose an email address you have access to. This step is needed to verify you are the owner of the Mendix profile you are trying to merge.
+Follow these steps to merge your profiles:
 
-After entering the verification code you received in the selected email address, click **Verify** and you will see an overview of the profile information that will be deleted and those that will be kept. You will see the earned points, achievements, credits, certifications, and Academy progress that will be merged to your target profile.
+1. Click **Merge Profile**.
+2. In the dialog box that appears, enter the email address of one of the accounts linked to the profile you want to transfer information from. Then click **Next**.
+3. You will be asked to choose an email address to receive a verification code, so choose an email address you have access to. This step is needed to verify that you are the owner of the Mendix Profile you are trying to merge.
+4. Enter the verification code you received via the selected email address.
+5. After clicking **Verify**, you will see an overview of the profile information that will be deleted and the information that will be kept. This includes earned points, achievements, credits, certifications, and Academy progress that will be merged to your target profile.
+6. To proceed with the merge, click **Merge**. You will be notified once the merge is completed.
 
 {{% alert color="info" %}} 
 With the merge, the accounts of both profiles are kept. None of the accounts will be deactivated from the Mendix Platform. That should be done by a [Mendix Admin](/developerportal/control-center/#members).
 {{% /alert %}}
-
-If you are sure you want to proceed with the merge, click Merge. You will be notified once the merge is completed.
 
 ##### Result of the merge process {#merge-profile-result}
 

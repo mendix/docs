@@ -250,6 +250,10 @@ The following starting scenarios are possible:
 * **One of the user accounts gives you access to the Mendix Platform** – If you have access to only one of your user accounts, the profile merge process can only be initiated from that account. Furthermore, the user account you signed in with determines what profile information ends up in the resulting merged profile in the case of properties where the system cannot determine the information that should be kept. For the other profile, a confirmation email message is sent that enables starting the merge action. 
 * **None of the user accounts gives you access to the Mendix Platform** – You should own at least one user account that provides access to the Mendix Platform.
 
+{{% alert color="warning" %}}
+If you do not have access to any of the email addresses linked to the user accounts/profiles that you want to merge and you cannot log in with the Mendix Profile you want to merge, click **Create Support Request**  to go to Mendix Support. Mendix Support will contact you to change the profile **Recovery** email. Once this is done, you will be able to follow the steps below. 
+{{% /alert %}}
+
 {{% alert color="info" %}}
 For details on what information ends up in the resulting merged profile, see the [Results of Merge Process](#merge-profile-result) section below.
 {{% /alert %}}
@@ -291,20 +295,15 @@ The following details may have conflicts, but these can easily be updated after 
 It is not possible to separate profiles after they have been merged. Double-check that the information from both of your profiles is valid.
 {{% /alert %}}
 
-##### 10.1.1.6 FAQ
-
-**I don’t have access to any of the email addresses of the user account/profile I want to merge, what now?**
-If you do not have access to any of these email addresses and you cannot log in with the Profile you want to merge, click **Create Support Request**  to go to Mendix Support. Mendix Support Team will contact you to change the profile (**Recovery**) email. Once this is done, you will be able to **Merge Profile** yourself, following the above steps. 
-
 ### 10.2 Account
 
-This page is an overview of all the accounts you own and are linked to your Mendix profile. You can see which account you are logged in with, the company associated with each user account, if Single Sign On is enabled and the status of each user account (Active or Deactivated)
+This page is an overview of all the accounts you own and that are linked to your Mendix Profile. You can see which account you are logged in with, the company associated with each user account, if single sign-on is enabled, and the status of each user account (**Active** or **Deactivated**).
 
 By default, you are requested to change your password every 90 days. A Mendix Admin can change this password policy setting in [Control Center](/developerportal/control-center/#security).
 
 You can update the password of each of your accounts via the [Change Password](https://login.mendix.com/mxid3/request-password-reset) button, which you can also reach using the **Forgot password?** link on the login screen.
 
-If you do not want to use an account anymore, you can remove it from this page. Click the menu button next to the account you want to delete and select **Forget this Account**. All of the account information is then removed and deleted from our servers. All the personal and identifiable information of your profile will be deleted when you delete all your accounts.
+If you do not want to use an account anymore, you can remove it from this page. Click the menu button next to the account you want to delete and select **Forget this Account**. All of the account information is then removed and deleted from Mendix's servers. All the personal and identifiable information of your profile will be deleted when you delete all your accounts.
 
 ### 10.3 Notifications {#notifications}
 

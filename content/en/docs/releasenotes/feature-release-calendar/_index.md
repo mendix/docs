@@ -26,8 +26,8 @@ The new features were divided into these major themes, which are described in th
 | --- | --- |
 | Portfolio Management | Released for GA [Jun 22, 2023](/releasenotes/developer-portal/#june-22nd-2023) |
 | App Insights | Released for Public Beta [Dec 13, 2022](/releasenotes/developer-portal/#december-13th-2022)<br>GA: Q3 2023 |
-| Community spaces | Currently in Private Beta<br>GA: Q3 2023 |
 | Jira integration | Released for Public Beta [Jun 22, 2023](/releasenotes/developer-portal/#june-22nd-2023)<br>GA: Q4 2023 |
+| Community spaces | Currently in Private Beta<br>GA: Q3 2023 |
 
 ## 3 Developer Experience
 
@@ -41,7 +41,7 @@ The new features were divided into these major themes, which are described in th
 | Custom icons support | Released for GA [Jun 27, 2023](/releasenotes/studio-pro/10.0/) |
 | Flexible page URLs | Released for GA [Jun 27, 2023](/releasenotes/studio-pro/10.0/) |
 | MxAssist Best Practice Bot | Released for GA [Jun 27, 2023](/releasenotes/studio-pro/10.0/) |
-| Workflow enhancements (multi-user tasks, Wait for notification activity) | Released for GA [Jun 27, 2023](/releasenotes/studio-pro/10.0/) |
+| Workflow enhancements (multi-user tasks,<br/>Wait for notification activity) | Released for GA [Jun 27, 2023](/releasenotes/studio-pro/10.0/) |
 | PDF Document Generation module | Released for Public Beta [May 31, 2023](/appstore/modules/document-generation/)<br>GA: Q3 2023 |
 | Insights into commits by peers| GA: Q3 2023 |
 | Rich design properties | GA: Q3 2023 |

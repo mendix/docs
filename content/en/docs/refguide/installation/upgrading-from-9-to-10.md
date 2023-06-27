@@ -62,10 +62,11 @@ Check if there is a newer version of your component available in the Marketplace
 
 Be sure to update these key widgets, resources, and actions:
 
-* [Native Mobile Resources](https://marketplace.mendix.com/link/component/109513)
-* [Nanoflow Commons](https://marketplace.mendix.com/link/component/109515)
+* [Atlas Core](https://marketplace.mendix.com/link/component/117187)
 * [Community Commons](https://marketplace.mendix.com/link/component/170)
 * [Data Widgets](https://marketplace.mendix.com/link/component/116540)
+* [Nanoflow Commons](https://marketplace.mendix.com/link/component/109515)
+* [Native Mobile Resources](https://marketplace.mendix.com/link/component/109513)
 * [MendixSSO](https://marketplace.mendix.com/link/component/111349)
 
 In general, you should not remove and re-import modules unless this is recommended in the component's release notes. If you do remove and re-import a component, you may lose data or configuration related to the component.
@@ -119,6 +120,22 @@ In Studio Pro 10, we added a new feature called [multi-user tasks](/refguide/mul
 If you use the [Workflow Commons](/appstore/modules/workflow-commons/) module in your project, you will have to upgrade the module to v3.0.0 or later due to this change. Along with this, you need to execute the migration microflow `ACT_Assignee_Migration` (available from the `WorkflowAdminCenter` page) or add the `ASu_Assignee_Migrate` microflow to the after startup microflow of your project.
 
 User task pages that were generated in an earlier version of Studio Pro also need to be updated. The conditional visibility based on whether the current user is assigned is no longer supported. You will see a consistency error for any outcome button that is using the visibility expression. For each button, set the visibility to **Always**.
+
+## 7.6 DOM Structure Changes
+
+Studio Pro 10 introduces DOM structure changes to the web client to ensure compatibility with future versions of React.
+
+A `div[data-widget-wrapper]` element is placed around a React widget if its container is rendered as a Dojo widget, while the extra `script` element for such widgets has been removed. This added `div` element should not affect the page layout directly (as it uses `display: contents`), but it may affect the CSS styling that relies on direct child (`>`), sibling (`+`), or `nth-child` selectors.
+
+These changes may impact your current styling.
+
+If your application is currently using the Atlas theme, this is easily solved by upgrading [Atlas Core](https://marketplace.mendix.com/link/component/117187) to version 3.11 or above. Otherwise, please adjust your css selectors accordingly.
+
+## 7.7 Moving Away from Glyphicon
+
+In Studio Pro 10, the glyphicon is slowly being phased out. Although a currently selected glyphicon will still work, some of the widgets that Studio Pro 10 uses are no longer using a glyphicon class name.
+
+If your application is currently using the Atlas theme, this is easily solved by upgrading [Atlas Core](https://marketplace.mendix.com/link/component/117187) to version 3.11 or above. Otherwise, a possible workaround for this is to manually add the [Atlas icons module](https://github.com/mendix/atlas/raw/main/resources/Atlas_Icons.mpk) to your app.
 
 ## 8 Read More
 

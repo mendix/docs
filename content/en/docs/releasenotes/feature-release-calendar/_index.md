@@ -1,5 +1,6 @@
 ---
 title: "Mendix 10 Feature Release Calendar"
+linktitle: "Mx10 Feature Release Calendar"
 url: /releasenotes/feature-release-calendar/
 tags: ["announcements", "features", "feature release", "products", "features and products", "calendar", "new", "mendix 10", "mx10"]
 weight: 4

@@ -282,7 +282,7 @@ The following details may have conflicts, but these can easily be updated after 
 * **LinkedIn URL**
 
 {{% alert color="warning" %}}
-It is not possible to separate profiles after they have been merged. Double-check that the information from both of your profiles is valid.
+It is not possible to separate profiles after they have been merged. Double-check that the information from all of your profiles is valid.
 {{% /alert %}}
 
 ### 10.2 Account

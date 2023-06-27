@@ -273,23 +273,25 @@ Follow these steps to merge your profiles:
 With the merge, the accounts of both profiles are kept. None of the accounts will be deactivated from the Mendix Platform. That should be done by a [Mendix Admin](/developerportal/control-center/#members).
 {{% /alert %}}
 
-##### Result of the merge process {#merge-profile-result}
+##### 10.1.1.5 Merge Result {#merge-profile-result}
 
-The result of the profile merge process is the profile information of the merged profiles resulting into one profile. Information that can be added to the profile will all be associated with the resulting profile. However, in the situation where there is conflicting data for the two to-be-merged profiles, the system will use the profile data of the user account the user is signed in with. The following data can conflict, but can be easily updated after the merge process: 
+The result of the profile merge process is that the information of the profiles is merged into one profile. The information that can be added to the profile will be associated with the resulting Mendix Profile. However, in a situation where there is conflicting data for the two profiles to be merged, the system uses the profile data of the user account you are signed in with. 
 
-* Full name
+The following details may have conflicts, but these can easily be updated after the merge process: 
+
 * Avatar image
-* Job title
-* Country of residence
-* About you
-* Twitter URL
-* LinkedIn URL
+* **Name**
+* **Job Title**
+* **Country of Residence**
+* **About You**
+* **Twitter URL**
+* **LinkedIn URL**
 
 {{% alert color="warning" %}}
-It is not possible to separate profiles after they have been merged. Double-check that both your profile information is valid.
+It is not possible to separate profiles after they have been merged. Double-check that the information from both of your profiles is valid.
 {{% /alert %}}
 
-##### FAQ
+##### 10.1.1.6 FAQ
 
 **I don’t have access to any of the email addresses of the user account/profile I want to merge, what now?**
 If you do not have access to any of these email addresses and you cannot log in with the Profile you want to merge, click **Create Support Request**  to go to Mendix Support. Mendix Support Team will contact you to change the profile (**Recovery**) email. Once this is done, you will be able to **Merge Profile** yourself, following the above steps. 

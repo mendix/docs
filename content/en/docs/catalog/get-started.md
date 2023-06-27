@@ -5,7 +5,7 @@ category: "Catalog"
 linktitle: "Get Started"
 weight: 1
 description: "Describes initial steps beginning users can take with their Catalog."
-tags: ["data hub", "Catalog", "consume", "external entities", "asset", "entities", "data hub pane", "studio pro"]
+tags: ["data hub", "Catalog", "consume", "external entities", "asset", "entities", "integration pane", "studio pro"]
 aliases:
     - /data-hub/data-hub-catalog/get-started/
 

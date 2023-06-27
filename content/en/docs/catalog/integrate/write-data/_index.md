@@ -5,7 +5,7 @@ description: "Describes how to add annotations to an OData service in Mendix Stu
 tags: ["Data Hub", "external entities", "published OData service" ,"how to","OData", "Catalog"]
 weight: 20
 aliases:
-    - /catalog/write-data/
+    - /data-hub/write-data/
 ---
 
 ## 1 Introduction
@@ -57,14 +57,14 @@ Notice the highlighted **CRUD** letters next to the entity name in the search pa
 
 ## 5 Consuming OData Resources in Your Mendix App
 
-Just like in the Catalog, you can see the **CRUD** capabilities of entities, attributes, and associations inside the [Integration pane](/refguide/integration-pane/] of Studio Pro.
+Just like in the Catalog, you can see the **CRUD** capabilities of entities, attributes, and associations inside the [Integration Pane](/refguide/integration-pane/) of Studio Pro.
 
 {{< figure src="/attachments/data-hub/write-data/crud-capabilities.png" alt="crud capabilities" >}}
 
 To consume an OData entity, do the following:
 
-1. In the [Integration pane](/refguide/integration-pane/], enter a search term in the search field. 
-2. Select your entity from the [Integration pane](/refguide/integration-pane/]. By default it shows only results published to the production environment. If you also want to see results from other environments, click the filter icon and check the **Show development environment** checkbox.
+1. In the [Integration Pane](/refguide/integration-pane/), enter a search term in the search field. 
+2. Select your entity from the [Integration Pane](/refguide/integration-pane/). By default it shows only results published to the production environment. If you also want to see results from other environments, click the filter icon and check the **Show development environment** checkbox.
 3. Drag the entity into the domain model.
 
 Now you have an external entity in your domain model. Depending on the capabilities, for example the **CRUD** capabilities, you can generally use external entities to model your app as you would normally do, although there are some limitations. For more information on limitations, see the [External Entities Limitations](/refguide/external-entities/#limitations) section in *External Entities*. 

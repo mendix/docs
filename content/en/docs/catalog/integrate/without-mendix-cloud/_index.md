@@ -4,7 +4,7 @@ description: "Describes how to use Catalog and external entities for local deplo
 url: /catalog/data-sources-without-mendix-cloud/
 linktitle: "Register Data Sources Private Cloud/On-Prem"
 weight: 80
-tags: ["entity", "external entities", "private cloud", "on prem", "local", "studio pro", "consumed OData Service", "Data Hub on prem", "Data Hub private cloud", Data Hub Tencent", "without mendix cloud"]
+tags: ["entity", "external entities", "private cloud", "on prem", "local", "studio pro", "consumed OData Service", "Data Hub on prem", "private cloud", Tencent", "without mendix cloud"]
 aliases:
     - /data-hub/data-hub-without-mendix-cloud/
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
@@ -73,7 +73,7 @@ To import a metadata contract file of a published OData service, do the followin
 
     Right-click the **App Explorer** where you would like to add the service, then click **Add other** > **Consumed OData Service**. Select the `$metadata.xml` file you exported.
 
-The service will now appear in the Data Hub pane.
+The service will now appear in the [Integration Pane](/refguide/integration-pane/).
 
 #### 2.4.2 Importing from a URL
 
@@ -89,7 +89,7 @@ To import a published OData service URL, do the following:
 
 3. In the **Add Consumed OData Service** dialog box, make sure **From URL** is selected, and paste the copied URL into the field.
 
-The service will now appear in the Data Hub pane.
+The service will now appear in the [Integration Pane](/refguide/integration-pane/).
 
 ### 2.5 Updating a Manually Registered Contract
 

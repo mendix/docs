@@ -226,6 +226,8 @@ You can also choose to make your profile public (which will allow the Mendix com
 To make your public profile private again, click **Make Profile Private**. 
 {{% /alert %}}
 
+You can also add a **Recover Email** address, which is useful if you lose access to your account or Mendix Profile. You can provide a non-business email address for this.
+
 #### 10.1.1 Merging Profiles
 
 If you own two (or more) user accounts, Mendix recommendeds merging the profiles of these user accounts with each other. This saves you from having to maintain multiple profiles, and your community contributions will be stored with the one profile you actively use. As a result, you will have a stronger single Mendix Profile, and you will not have to keep track of your progress scattered in multiple profiles in the platform.

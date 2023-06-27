@@ -775,7 +775,7 @@ This automated, on-demand option allows to share an existing bucket between envi
 It's similar to the [Create account with existing policy](#s3-create-account-existing-policy) option, but instead of static credentials, uses IAM roles for authentication.
 
 {{% alert color="info" %}}
-💡 This section provides technical details how IAM authentication works with Postgres.
+This section provides technical details how IAM authentication works with Postgres.
 If you just need instructions how to get started, the [AWS IAM-based storage walkthrough](#walkthrough-aws-irsa) provides a quickstart guide - to set the Mendix Operator to manage an RDS database and S3 bucket.
 {{% /alert %}}
 

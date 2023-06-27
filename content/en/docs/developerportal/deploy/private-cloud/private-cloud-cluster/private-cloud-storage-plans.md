@@ -173,7 +173,7 @@ The following database types are supported:
 ### 2.3 Postgres {#database-postgres}
 
 Postgres databases can be used with [static authentication](#database-postgres-static).
-If the Postgres instance is an AWS RDS database, you can [IAM authentication](#database-postgres-iam) for additional security.
+If the Postgres instance is an AWS RDS database, you can use [IAM authentication](#database-postgres-iam) for additional security.
 
 #### 2.3.1 Postgres (static credentials) {#database-postgres-static}
 

@@ -294,7 +294,7 @@ The High Availability option ensures that if there is a problem with the current
 The Fallback option ensures that the data in your database is automatically copied to a database in a second AZ. This, together with the high availability option, ensures that all your data is still available to your app if there is an issue with the current availability zone and app instances have to be started in the second AZ. This is important for critical production apps which cannot afford to have downtime during an AZ outage in the AWS data center.
 
 {{% alert color="warning" %}}
-Because one of the instances will be running in a different AZ from the primary database, the performance of your app might be slightly affected for some users. You need to balance this with the risk of running your app without the fallback option.
+Instances which are running in a different AZ from the primary database can have a slight impact on the performance of your app. You need to balance this with the risk of downtime if you run your app without the fallback option.
 {{% /alert %}}
 
 To fully benefit from fallback, your app needs to be [horizontally scaled](/developerportal/deploy/scale-environment/) to at least two instances so that it is running in more than one AZ.

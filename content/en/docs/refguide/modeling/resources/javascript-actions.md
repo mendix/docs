@@ -126,7 +126,7 @@ The **Icon** property is optional when exposing a JavaScript action. The image i
 
 When no icon is selected, the default JavaScript action icon is used. The required icon size is 64x64 pixels; the required icon format is PNG. 
 
-A separate icon can be provided for the [dark mode](/refguide/preferences-dialog/#dark-mode) of Studio Pro to fit its color scheme.
+A separate icon can be provided for the [dark mode](/refguide/preferences-dialog/#studio-pro-theme) of Studio Pro to fit its color scheme.
 
 ### 4.4 Image
 
@@ -136,7 +136,7 @@ When no image and no icon is selected, the default JavaScript action image is us
 
 The required image size is 256x192 pixels; the required the image format is PNG. 
 
-A separate image can be provided for the [dark mode](/refguide/preferences-dialog/#dark-mode) of Studio Pro to fit its color scheme.
+A separate image can be provided for the [dark mode](/refguide/preferences-dialog/#studio-pro-theme) of Studio Pro to fit its color scheme.
 
 ## 5 Documentation
 

@@ -132,7 +132,7 @@ The **Caption** and **Category** of the workflow action are required, but the **
 
 The required size for the icon is 64x64 pixels, and 256x192 pixels for the image; the required image format for both is PNG. 
 
-A separate icon and image can be provided for the [dark mode](/refguide/preferences-dialog/#dark-mode) of Studio Pro to fit its color scheme.
+A separate icon and image can be provided for the [dark mode](/refguide/preferences-dialog/#studio-pro-theme) of Studio Pro to fit its color scheme.
 
 {{% alert type="info" %}}
 
@@ -156,7 +156,7 @@ The **Caption** and **Category** of the workflow action are required, but the **
 
 The required size for the icon is 64x64 pixels, and 256x192 pixels for the image; the required image format for both is PNG. 
 
-A separate icon and image can be provided for the [dark mode](/refguide/preferences-dialog/#dark-mode) of Studio Pro to fit its color scheme.
+A separate icon and image can be provided for the [dark mode](/refguide/preferences-dialog/#studio-pro-theme) of Studio Pro to fit its color scheme.
 
 {{% alert type="info" %}}
 

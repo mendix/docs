@@ -123,7 +123,7 @@ After the issue is auto-fixed, a pop-up window listing the changes appears. You 
 
 ## 4 Best Practice Bot from the Command Line
 
-Best Practice Bot may also be executed from the command line, via the [mx Command-Line Tool](/refguide/mx-command-line-tool/#check).
+Best Practice Bot may also be executed from the command line, via the [mx Command-Line Tool](/refguide/mx-command-line-tool/app/#check).
 
 ## 5 Read More
 

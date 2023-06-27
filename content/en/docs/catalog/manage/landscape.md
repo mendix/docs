@@ -6,6 +6,7 @@ tags: ["Catalog", "data hub", "external entities", "landscape", "published odata
 weight: 40
 aliases:
     - /data-hub/data-hub-landscape/
+    - /data-hub/data-hub-catalog/data-hub-landscape/
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details. 
 ---
 

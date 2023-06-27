@@ -6,7 +6,7 @@ description: "Describes the Catalog APIs (which are for registering data sources
 weight: 25
 tags: ["data hub", "Catalog API", "authentication", "personal access token"]
 aliases:
-    - /apidocs-mxdsk/apidocs/data-hub-apis/
+    - /apidocs-mxsdk/apidocs/data-hub-apis/
 ---
 
 ## 1 Introduction

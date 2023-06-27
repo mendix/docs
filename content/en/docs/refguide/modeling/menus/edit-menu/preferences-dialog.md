@@ -141,48 +141,30 @@ This option is available when [Enable automatic repository optimization](#optimi
 
 Select this option when you want to work on an app that is not stored in [Mendix Team Server](/developerportal/collaborate/team-server/), but in a private Git server to which you have access. This will allow you to specify the location of the app on the Git server when opening, downloading, or uploading the app. In this section, you also need to specify name and email values that will be used to identify your commits with Git.
 
-## 6 Advanced Tab
+## 6 Work Environment Tab
 
-### 6.1 Proxy Server
+### 6.1 Studio Pro Theme {#studio-pro-theme}
 
-Sometimes the computer running Studio Pro cannot access the internet directly, but has to connect to a proxy server that requires authentication. If this is the case, then these settings can be used to specify the user name and password to connect to the proxy server.
+This option allows user to choose between Studio Pro themes: **Auto (System theme)**, **Light**, or **Dark**. The default is **Auto (System theme)**, which detects the theme set in the operating system and uses an appropriate theme for Studio Pro (**Light** or **Dark**). Changing this option requires a restart of Studio Pro to take effect.
 
-### 6.2 Usage Data {#usage-data}
-
-When the **Send Studio Pro usage data to Mendix** setting is enabled, Studio Pro sends usage data to Mendix that allows Mendix to identify issues and improve the user experience. The usage data does not contain sensitive information. It is possible to disable this feature, but it may affect the behavior of some features, prevent Mendix from identifying issues reported by the user, or affect tracking issues that are not reported yet. This setting is machine-specific and changing this feature does not affect any existing installed version.
-
-### 6.2 Rendering {#rendering}
-
-Hardware and driver issues may cause performance problems when running Studio Pro. These issues can appear in form of dialogs opening and closing much slower than expected, and general slowness of the UI. In case the hardware problems cannot be solved, it is possible to mitigate these issues by turning the **Enable software rendering mode** setting on. Enabling this setting requires a restart of Studio Pro to take effect. Running the application with this setting on may increase the CPU usage.
-
-## 7 Work Environment Tab
-
-### 7.1 Default Page Editor {#default-page-editor}
+### 6.2 Default Page Editor {#default-page-editor}
 
 This option sets the default page editor mode that your page opens in: **Design mode** (the default) or **Structure mode** . For more information on page editor modes, see the [Page Editor Modes](/refguide/page/#page-editor-modes) section in *Page*.
 
-## 8 New Features Tab {#new-features}
+### 6.3 Rendering {#rendering}
 
-The **New features** tab allows you to turn new features on and off. These are features which are being worked on but are either not yet developed sufficiently to remove the previous version, or which are currently optional.
+Hardware and driver issues may cause performance problems when running Studio Pro. These issues can appear in form of dialog boxes opening and closing much more slowly than expected, and general slowness of the UI. In case the hardware problems cannot be solved, it is possible to mitigate these issues by turning the **Enable software rendering mode** setting on. Enabling this setting requires a restart of Studio Pro to take effect. Running the application with this setting on may increase the CPU usage.
 
-{{% alert color="info" %}}
-You need to restart Studio Pro for changes to these settings to take effect.
-{{% /alert %}}
+## 7 Advanced Tab
 
-### 8.1 Dark Mode Preview {#dark-mode}
+### 7.1 Proxy Server
 
-{{% alert color="info" %}}
-This functionality is currently in [Beta](/releasenotes/beta-features/).
-{{% /alert %}}
+Sometimes the computer running Studio Pro cannot access the internet directly, but has to connect to a proxy server that requires authentication. If this is the case, then these settings can be used to specify the user name and password to connect to the proxy server.
 
-The **Dark mode** option allows you to preview to the dark mode of the Studio Pro user interface. 
+### 7.2 Usage Data {#usage-data}
 
-{{% alert color="info" %}}
-Not all screens of Studio Pro support dark mode yet.
-{{% /alert %}}
+When the **Send Studio Pro usage data to Mendix** setting is enabled, Studio Pro sends usage data to Mendix that allows Mendix to identify issues and improve the user experience. The usage data does not contain sensitive information. It is possible to disable this feature, but it may affect the behavior of some features, prevent Mendix from identifying issues reported by the user, or affect tracking issues that are not reported yet. This setting is machine-specific and changing this feature does not affect any existing installed version.
 
-Default: *disabled*
-
-## 9 Read More
+## 8 Read More
 
 * [Upload to Version Control Server](/refguide/upload-to-version-control-dialog/)

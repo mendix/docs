@@ -2,7 +2,7 @@
 title: "Call Workflow"
 url: /refguide/workflow-call/
 weight: 10
-tags: ["studio pro", "call workflow", "workflow call", "microflows"]
+tags: ["microflow", "microflows", "call workflow", "workflow call", "studio pro"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
@@ -10,11 +10,13 @@ tags: ["studio pro", "call workflow", "workflow call", "microflows"]
 This activity can only be used in **Microflows**.
 {{% /alert %}}
 
+{{% alert color="warning" %}}
+This page describes the **Call workflow** activity you can use in your [microflow](/refguide/workflow-activities/). Looking for information on the **Call workflow** activity for [workflows](/refguide/workflow-elements/) instead? See [Call workflow](/refguide/call-workflow/).
+{{% /alert %}}
+
 ## 1 Introduction
 
 The **Call workflow** activity in microflows can be used to call and trigger a [workflow](/refguide/workflows/). 
-
-{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/workflow-activities/workflow-call/workflow-call.jpg" >}}
 
 ## 2 Properties
 

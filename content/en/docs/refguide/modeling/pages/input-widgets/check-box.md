@@ -18,54 +18,62 @@ For example, this checkbox allows you to see, and set, whether someone is subscr
 
 {{< figure src="/attachments/refguide/modeling/pages/input-widgets/check-box/check-box.png" >}}
 
-## 2 Properties
+## 2 Properties Pane
 
-An example of checkbox properties is represented in the image below:
+The properties pane is divided into two major sections by a toggle at the top of the pane: **Properties** and **Styling*. Checkbox properties consist of the following sections:
 
-{{< figure src="/attachments/refguide/modeling/pages/input-widgets/check-box/check-box-properties.png"   width="250"  >}}
-
-Checkbox properties consist of the following sections:
-
-* [Common](#common)
+Properties:
 * [Data source](#data-source)
-* [Design Properties](#design-properties)
-* [Editability](#editability)
-* [Events](#events)
-* [Formatting](#formatting)
 * [Label](#label)
+* [Editability](#editability)
 * [Visibility](#visibility)
+* [Common](#common)
+* [Events](#events)
 
-### 2.1 Common Section{#common}
+Styling:
+* [Design Properties](#design-properties)
+* [Common](#common-styling)
 
-{{% snippet file="/static/_includes/refguide/common-section-link.md" %}}
+Miscellaneous:
+* [Formatting](#formatting)
 
-### 2.2 Data Source Section{#data-source}
+## 3 Properties
+
+### 3.1 Data Source Section{#data-source}
 
 {{% snippet file="/static/_includes/refguide/data-source-section-link.md" %}}
 
-### 2.3 Design Properties Section{#design-properties}
+### 3.2 Label Section{#label}
 
-{{% snippet file="/static/_includes/refguide/design-section-link.md" %}} 
+{{% snippet file="/static/_includes/refguide/label-section-link.md" %}}
 
-### 2.4 Editability Section{#editability}
+### 3.3 Editability Section{#editability}
 
 {{% snippet file="/static/_includes/refguide/editability-section-link.md" %}}
 
-### 2.5 Events Section{#events}
+### 3.4 Visibility Section{#visibility}
 
-#### 2.5.1 On Change{#on-change}
+{{% snippet file="/static/_includes/refguide/visibility-section-link.md" %}}
+
+### 3.5 Common Section{#common}
+
+{{% snippet file="/static/_includes/refguide/common-section-link.md" %}}
+
+### 3.6 Events Section{#events}
+
+#### 3.6.1 On Change{#on-change}
 
 The on-change property specifies an action that will be executed when leaving the widget, either by using the <kbd>Tab</kbd> key or by clicking another widget, after the value has been changed.
 
 {{% snippet file="/static/_includes/refguide/events-section-link.md" %}}
 
-#### 2.5.2 On Enter
+#### 3.6.2 On Enter
 
 The on-enter property specifies an action that will be executed when the widget is entered, either by using the <kbd>Tab</kbd> key or by clicking it with the mouse.
 
 {{% snippet file="/static/_includes/refguide/events-section-link.md" %}}
 
-#### 2.5.3 On Leave
+#### 3.6.3 On Leave
 
 The on-leave property specifies an action that will be executed when leaving the widget, either by using the <kbd>Tab</kbd> key or by clicking another widget.
 
@@ -73,19 +81,23 @@ This differs from the [On change](#on-change) property in that the event will al
 
 {{% snippet file="/static/_includes/refguide/events-section-link.md" %}}
 
-### 2.6 Formatting Section{#formatting}
+## 4 Styling
+
+### 4.1 Design Properties Section{#design-properties}
+
+{{% snippet file="/static/_includes/refguide/design-section-link.md" %}} 
+
+### 4.2 Common Section{#common-styling}
+
+{{% snippet file="/static/_includes/refguide/common-section-link.md" %}}
+
+## 5 Miscellaneous 
+
+### 5.1 Formatting Section{#formatting}
 
 The render mode property determines whether the widget renders as a switch or a checkbox.
 
-### 2.7 Label Section{#label}
-
-{{% snippet file="/static/_includes/refguide/label-section-link.md" %}}
-
-### 2.8 Visibility Section{#visibility}
-
-{{% snippet file="/static/_includes/refguide/visibility-section-link.md" %}}
-
-## 3 Read More
+## 6 Read More
 
 * [Data View](/refguide/data-view/)
 * [Attributes](/refguide/attributes/)

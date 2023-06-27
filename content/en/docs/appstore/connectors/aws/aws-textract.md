@@ -21,6 +21,20 @@ The Amazon Textract connector requires Mendix Studio Pro version 9.18.0 or above
 
 To authenticate with Amazon Web Service (AWS), you must also install and configure the [AWS authentication connector](https://marketplace.mendix.com/link/component/120333). For more information about installing and configuring the AWS Authentication connector, see [AWS Authentication](/appstore/connectors/aws/aws-authentication/).
 
+### 1.3 Licensing and Cost
+
+This connector is available as a free download from the Mendix Marketplace, but the AWS service to which is connects may incur a usage cost. For more information, refer to AWS documentation.
+
+{{% alert color="info" %}}
+Most AWS services provide a free tier that allows easy access to most services. To find out if this service is included in the free tier, see [AWS Free Tier](https://aws.amazon.com/free/). To calculate the potential cost of using an AWS service outside of the free tier, use the [AWS Cost calculator](https://calculator.aws/).
+{{% /alert %}}
+
+Depending on your use case, your deployment environment, and the type of app that you want to build, you may also need a license for your Mendix app. For more information, refer to [Licensing Apps](/developerportal/deploy/licensing-apps-outside-mxcloud/).
+
+### 1.4 Limitations
+
+Because of a synchronous invocation limitation of the Amazon Textract service, the Amazon Textract connector only supports scanning a single page at a time. This limitation will be removed in future versions of the connector.
+
 ## 2 Installation
 
 Follow the instructions in [How to Use Marketplace Content in Studio Pro](/appstore/general/app-store-content/) to import the Amazon Textract connector into your app.
@@ -146,11 +160,11 @@ The domain model is a data model that describes the information in your applicat
 
 | Name | Description |
 | --- | --- |
-| `Block` | This generalization entity holds information for items that are recognized in a document within a group of pixels close to each other.<br><br>The attribute it contains are `BlockType`, `ColumnIndex`, `ColumnSpan`, `Confidence`, `EntityTypes`, `_Id`, `Page`, `RowIndex`, `RowSpan`, `SelectionStatus`, `Text` and `TextType`. The `BlockType` describes the type of text item that's recognized, the `ColumnIndex` describes the column in which a table appears the first column position is 1, the second column position is 2 and so on), the `ColumnSpan` describes the number of columns that a table cell spans, the Confidence describes the score that Amazon Textract has in the accuracy of the recognized text, the `EntityTypes` describes the type of entity, the `Page` describes the page on which a block was detected, the `RowIndex` describes the row in which a table cell is located (the first row position is 1, the second row position is 2, and so on), the `RowSpan` describes the number of rows that a table cell spans, the `SelectionStatus` describes the selection status of a selection element (such as an option, radio or checkbox), the `Text` describes the word or line of text that is recognized by Amazon Textract and `TextType` describes the kind of text that Amazon Textract has detected (handwritten/printed).<br><br>Additionally, this entity contains a list of `Relationship` objects, a specialized `Geometry` object (`BlockGeometry`) and if the action involved a query a `QueryBlock` object. |
+| `Block` | This generalization entity holds information for items that are recognized in a document within a group of pixels close to each other. The attribute it contains are `BlockType`, `ColumnIndex`, `ColumnSpan`, `Confidence`, `EntityTypes`, `_Id`, `Page`, `RowIndex`, `RowSpan`, `SelectionStatus`, `Text` and `TextType`. The `BlockType` describes the type of text item that's recognized, the `ColumnIndex` describes the column in which a table appears the first column position is 1, the second column position is 2 and so on), the `ColumnSpan` describes the number of columns that a table cell spans, the Confidence describes the score that Amazon Textract has in the accuracy of the recognized text, the `EntityTypes` describes the type of entity, the `Page` describes the page on which a block was detected, the `RowIndex` describes the row in which a table cell is located (the first row position is 1, the second row position is 2, and so on), the `RowSpan` describes the number of rows that a table cell spans, the `SelectionStatus` describes the selection status of a selection element (such as an option, radio or checkbox), the `Text` describes the word or line of text that is recognized by Amazon Textract and `TextType` describes the kind of text that Amazon Textract has detected (handwritten/printed). Additionally, this entity contains a list of `Relationship` objects, a specialized `Geometry` object (`BlockGeometry`) and if the action involved a query a `QueryBlock` object. |
 | `Geometry` | This generalization entity holds information for the location of identified information on a document page: detected page, text, key-value pairs, tables, table cells and selection elements. Additionally, it contains a list of `Point` objects and a `BoundingBox` object. |
 | `Point` | This entity holds information of the location of a fine-grained polygon of a recognized item. The attribute it contains are X and Y. The X describes the X-coordinate for a point on a polygon and the Y describes the Y-coordinate for a point on a polygon. |
 | `BoundingBox` | This entity holds information for an axis-aligned coarse representation of the location of the recognized item on the document page. The attribute it contains are `Height`, `Left`, `Top` and `Width`. The `Height` describes height of the bounding box as a ratio of the overall document page height, the `Left` describes the left coordinate of the bounding box as a ratio of the overall document page width, the `Top` describes the top coordinate of the bounding box as a ratio of the overall document page height and `Width` describes the width of the bounding box as a ratio of the overall document page width. |
-| `Relationship` | Contains the relationship type of a block entity to another block entity<br><br>This entity holds information about how blocks are related to each other. The attribute it contains is `RelationshipType` which describes the type of relationships for all blocks in the `BlockId`'s array. This is represented as a list of `BlockId` objects. |
+| `Relationship` | Contains the relationship type of a block entity to another block entity This entity holds information about how blocks are related to each other. The attribute it contains is `RelationshipType` which describes the type of relationships for all blocks in the `BlockId`'s array. This is represented as a list of `BlockId` objects. |
 | `BlockId` | This entity holds information for blocks that are related by each other. The attribute it contains is `_Id` which reflects the identification of the block. |
 | `QueryBlock` | This entity holds information for the results of the search query. The attribute it contains is `Text` which describes the value matched to the search query. Additionally, it contains a list of `PagesSearched` objects. |
 | `PagesSearched` | This entity holds information for identifying which pages have been searched. |
@@ -163,7 +177,11 @@ The domain model is a data model that describes the information in your applicat
 
 ### 4.2 Enumerations {#enumerations}
 
+An enumeration is a predefined list of values that can be used as an attribute type. For more information, see [Enumerations](/refguide/enumerations/).
+
 #### 4.2.1 RelationshipType
+
+This enumeration indicates the relationship between the current block and the other blocks in the array. For more information about the enumeration members, see [RelationshipType](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/clients/client-textract/enums/relationshiptype.html) in the AWS API documentation.
 
 | Name | Caption |
 | --- | --- |
@@ -174,24 +192,28 @@ The domain model is a data model that describes the information in your applicat
 | `TITLE` | TITLE |
 | `ANSWER` | ANSWER |
 
-4.2.2 TextType
+#### 4.2.2 TextType
+
+This enumeration indicates the type of text that is scanned.  For more information about the enumeration members, see [TextType](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/clients/client-textract/enums/texttype.html) in the AWS API documentation.
 
 | Name | Caption |
 | --- | --- |
 | `PRINTED` | PRINTED |
 | `HANDWRITING` | HANDWRITING |
 
-4.2.3 EntityTypes
+#### 4.2.3 EntityTypes
+
+For more information about the enumeration members, see [EntityType](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/clients/client-textract/enums/entitytype.html) in the AWS API documentation.
 
 | Name | Caption |
-| --- | --- |
+| --- | --- | 
 | `KEY` | KEY |
 | `VALUE` | VALUE |
 | `COLUMN_HEADER` | COLUMN_HEADER |
 
-4.2.4 AWS_Region
+#### 4.2.4 AWS_Region
 
-For a list of supported regions, see [Service endpoints](https://docs.aws.amazon.com/general/latest/gr/textract.html#textract_region).
+This enumeration contains a list of supported AWS regions. For more information, see [Service endpoints](https://docs.aws.amazon.com/general/latest/gr/textract.html#textract_region).
 
 | Name | Caption |
 | --- | --- |
@@ -220,6 +242,8 @@ For a list of supported regions, see [Service endpoints](https://docs.aws.amazon
 
 #### 4.2.5 BlockType
 
+This enumeration describes the current block. For more information about the enumeration members, see [BlockType](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/clients/client-textract/enums/blocktype.html) in the AWS API documentation.
+
 | Name | Caption |
 | --- | --- |
 | `CELL` | CELL |
@@ -232,9 +256,11 @@ For a list of supported regions, see [Service endpoints](https://docs.aws.amazon
 | `SELECTION_ELEMENT` | SELECTION_ELEMENT |
 | `TABLE` | TABLE |
 | `TITLE` | TITLE |
-| `WORD` | WORD |
+| `WORD` | WORD | |
 
 #### 4.2.6 SelectionStatus
+
+This enumeration indicates the selection status of the block. For more information about the enumeration members, see [SelectionStatus](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/clients/client-textract/enums/selectionstatus.html) in the AWS API documentation. 
 
 | Name | Caption |
 | --- | --- |
@@ -243,7 +269,7 @@ For a list of supported regions, see [Service endpoints](https://docs.aws.amazon
 
 ### 4.3 Activities {#activities}
 
-Activities define the actions that are executed in a microflow or a nanoflow. For the Amazon Textract connector, they represent actions such as analyzing a document or expense.
+Activities define the actions that are executed in a microflow or a nanoflow. For the Amazon Textract connector, they represent actions such as analyzing a document or expense. For more information, see [Activities](/refguide/activities/).
 
 #### 4.3.1 AnalyzeDocument {#analyzedocument}
 
@@ -264,7 +290,7 @@ This activity returns a `AnalyzeDocumentResponse` object with objects from the f
 | Name | Generalization | Documentation |
 | --- | --- | --- |
 | `AnalyzeDocumentResponse` | | This entity is the response for the Amazon Textract `AnalyzeDocument` action. It contains a list of specialized Block objects (`AnalyzeDocumentBlock`). |
-| `AnalyzeDocumentBlock` | `AmazonTextractConnector.Block` | This entity holds information for items that are recognized in a document within a group of pixels close to each other.<br><br>The attribute it contains are `BlockType`, `ColumnIndex`, `ColumnSpan`, `Confidence`, `EntityTypes`, `_Id`, `Page`, `RowIndex`, `RowSpan`, `SelectionStatus`, `Text` and `TextType`. The `BlockType` describes the type of text item that's recognized, the `ColumnIndex` describes the column in which a table appears the first column position is 1, the second column position is 2 and so on), the `ColumnSpan` describes the number of columns that a table cell spans, the `Confidence` describes the score that Amazon Textract has in the accuracy of the recognized text, the `EntityTypes` describes the type of entity, the `Page` describes the page on which a block was detected, the `RowIndex` describes the row in which a table cell is located (the first row position is 1, the second row position is 2, and so on), the `RowSpan` describes the number of rows that a table cell spans, the `SelectionStatus` describes the selection status of a selection element (such as an option, radio or checkbox), the Text describes the word or line of text that's recognized by Amazon Textract and `TextType` describes the kind of text that Amazon Textract has detected (handwritten/printed).<br><br>Additionally, this entity contains a list of `Relationship` objects, a `QueryBlock` object and a specialized `Geometry` object (`BlockGeometry`). |
+| `AnalyzeDocumentBlock` | `AmazonTextractConnector.Block` | This entity holds information for items that are recognized in a document within a group of pixels close to each other. The attribute it contains are `BlockType`, `ColumnIndex`, `ColumnSpan`, `Confidence`, `EntityTypes`, `_Id`, `Page`, `RowIndex`, `RowSpan`, `SelectionStatus`, `Text` and `TextType`. The `BlockType` describes the type of text item that's recognized, the `ColumnIndex` describes the column in which a table appears the first column position is 1, the second column position is 2 and so on), the `ColumnSpan` describes the number of columns that a table cell spans, the `Confidence` describes the score that Amazon Textract has in the accuracy of the recognized text, the `EntityTypes` describes the type of entity, the `Page` describes the page on which a block was detected, the `RowIndex` describes the row in which a table cell is located (the first row position is 1, the second row position is 2, and so on), the `RowSpan` describes the number of rows that a table cell spans, the `SelectionStatus` describes the selection status of a selection element (such as an option, radio or checkbox), the Text describes the word or line of text that's recognized by Amazon Textract and `TextType` describes the kind of text that Amazon Textract has detected (handwritten/printed). Additionally, this entity contains a list of `Relationship` objects, a `QueryBlock` object and a specialized `Geometry` object (`BlockGeometry`). |
 
 #### 4.3.2 AnalyzeExpense
 
@@ -287,4 +313,4 @@ This activity returns an `AnalyzeExpenseResponse` object with objects from the f
 | `LineItemGroup` | | This entity holds information for a grouping of tables which contain `LineItems`. The attribute it contains is `LineItemGroupIndex` which describes which table was detected (1 represents the first encountered table, 2 represent the second encountered table, and so on). |
 | `LineItemField` | | This entity holds information for a line within the given document's table. |
 | `LineItemExpenseField` | `AmazonTextractConnector.ExpenseField` | This specialized entity holds information for the detected expense-related information, separated into categories `Type`, `LabelDetection` and `ValueDetection`. The attribute it contains is `PageNumber`, which describes the page number on which the value was detected. Additionally, it contains a list of `GroupProperty` objects, a specialized `ExpenseDetection` object (both `ExpenseDetectionLabel` and `ExpenseDetectionValue`), an `ExpenseType` object, and a `Currency` object. |
-| `AnalyzeExpenseBlock` | `AmazonTextractConnector.Block` | This entity holds information for items that are recognized in a document within a group of pixels close to each other.<br><br>The attributea it contains are `BlockType`, `ColumnIndex`, `ColumnSpan`, `Confidence`, `EntityTypes`, `_Id`, `Page`, `RowIndex`, `RowSpan`, `SelectionStatus`, `Text` and `TextType`. The `BlockType` describes the type of text item that's recognized, the `ColumnIndex` describes the column in which a table appears the first column position is 1, the second column position is 2 and so on), the `ColumnSpan` describes the number of columns that a table cell spans, the `Confidence` describes the score that Amazon Textract has in the accuracy of the recognized text, the `EntityTypes` describes the type of entity, the `Page` describes the page on which a block was detected, the `RowIndex` describes the row in which a table cell is located (the first row position is 1, the second row position is 2, and so on), the `RowSpan` describes the number of rows that a table cell spans, the `SelectionStatus` describes the selection status of a selection element (such as an option, radio or checkbox), the `Text` describes the word or line of text that's recognized by Amazon Textract and `TextType` describes the kind of text that Amazon Textract has detected (handwritten or printed).<br><br>Additionally, this entity contains a list of `Relationship` objects and a specialized Geometry object (`BlockGeometry`). |
+| `AnalyzeExpenseBlock` | `AmazonTextractConnector.Block` | This entity holds information for items that are recognized in a document within a group of pixels close to each other. The attributea it contains are `BlockType`, `ColumnIndex`, `ColumnSpan`, `Confidence`, `EntityTypes`, `_Id`, `Page`, `RowIndex`, `RowSpan`, `SelectionStatus`, `Text` and `TextType`. The `BlockType` describes the type of text item that's recognized, the `ColumnIndex` describes the column in which a table appears the first column position is 1, the second column position is 2 and so on), the `ColumnSpan` describes the number of columns that a table cell spans, the `Confidence` describes the score that Amazon Textract has in the accuracy of the recognized text, the `EntityTypes` describes the type of entity, the `Page` describes the page on which a block was detected, the `RowIndex` describes the row in which a table cell is located (the first row position is 1, the second row position is 2, and so on), the `RowSpan` describes the number of rows that a table cell spans, the `SelectionStatus` describes the selection status of a selection element (such as an option, radio or checkbox), the `Text` describes the word or line of text that's recognized by Amazon Textract and `TextType` describes the kind of text that Amazon Textract has detected (handwritten or printed). Additionally, this entity contains a list of `Relationship` objects and a specialized Geometry object (`BlockGeometry`). |

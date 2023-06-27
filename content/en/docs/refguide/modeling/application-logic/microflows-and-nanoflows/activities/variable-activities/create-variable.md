@@ -11,9 +11,9 @@ This activity can be used in both **Microflows** and **Nanoflows**.
 
 ## 1 Introduction
 
-With this action, you can create a new variable and assign a value to it. For example, you can create a *$Discount* variable and assign a value 0.5 to give customers a 50% discount and use this value to calculate a price for a customer:
+The **Create variable** activity allows you to create a new variable and assign a value to it. 
 
-{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/variable-activities/create-variable/create-variable.png" alt="Create Variable" >}}
+For example, you can create a *$Discount* variable and assign a value of *0.5* to give customers a 50% discount and use this value to calculate a price for a customer.
 
 ## 2 Properties
 

@@ -1569,11 +1569,8 @@ Navigate to the EKS cluster details and write down the **OpenID Connect provider
 
 {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/private-cloud-storage-plans/IRSA-OIDC.png" >}}
 
-IRSA authentication uses the same AWS IAM Role and Kubernetes Service Account to authenticate with AWS services.
-It's not possible to assign more than one IAM Role or Kubernetes Service Account to a Mendix app environment.
-To avoid conflicts, IAM roles and service accounts will be managed by the S3 blob file storage provisioner.
-The Postgres provisioner only creates a database and Postgres user (Postgres role), but doesn't manage IAM roles.
-To use IAM authentication, the database and blob file storage plans need to be managed together - the IAM policy is shared, and grants access to the database and S3 bucket.
+IRSA authentication uses the same AWS IAM Role and Kubernetes Service Account to authenticate with AWS services. It is not possible to assign more than one IAM Role or Kubernetes Service Account to a Mendix app environment. To avoid conflicts, IAM roles and service accounts will be managed by the S3 blob file storage provisioner.
+The Postgres provisioner only creates a database and Postgres user (Postgres role), but does not manage IAM roles. To use IAM authentication, the database and blob file storage plans need to be managed together - the IAM policy is shared, and grants access to the database and S3 bucket.
 
 {{% alert color="warning" %}}
 To prevent authentication or connectivity issues, create all AWS resources in the same account and region.
@@ -1583,26 +1580,25 @@ For more details, see the [Postgres (IAM authentication](#database-postgres-iam)
 
 #### 4.1.1 RDS Database
 
-Create a Postgres RDS instance and enable **Password and IAM database authentication**; or enable **Password and IAM database authentication** for an existing instance.
-See the [RDS IAM documentation](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/UsingWithRDS.IAMDBAuth.Enabling.html) for more details on enabling IAM authentication.
+To configure the required settings for an RDS database, do the following steps:
+
+1. Create a Postgres RDS instance and enable **Password and IAM database authentication**, or enable **Password and IAM database authentication** for an existing instance. See the [RDS IAM documentation](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/UsingWithRDS.IAMDBAuth.Enabling.html) for more details on enabling IAM authentication.
 
 {{% alert color="info" %}}
-The VPC and firewall must be configured to allow connections to the database from the Kubernetes cluster.
-When creating the RDS instance, make sure it's either publicly accessible, or (preferrably) uses the same VPC as the Kubernetes cluster.
-After an RDS instance has been created, it's not possible to modify its VPC.
+The VPC and firewall must be configured to allow connections to the database from the Kubernetes cluster. When creating the RDS instance, as a best practice, make sure that it uses the same VPC as the Kubernetes cluster. Alternatively, you can also use a publicly accessible cluster. After an RDS instance has been created, it is not possible to modify its VPC.
 {{% /alert %}}
 
-Navigate to the RDS instance details, and write down the following information:
+2. Navigate to the RDS instance details, and write down the following information:
 
-1. The database **Endpoint** from the **Connectivity & security** tab:
+    1. The database **Endpoint** from the **Connectivity & security** tab:
 
-   {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/private-cloud-storage-plans/RDS-Endpoint.png" >}}
+       {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/private-cloud-storage-plans/RDS-Endpoint.png" >}}
 
-2. The **Master username** and **Resource ID** from the **Configuration** tab:
+    2. The **Master username** and **Resource ID** from the **Configuration** tab:
 
-   {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/private-cloud-storage-plans/RDS-Connection.png" >}}
+       {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/private-cloud-storage-plans/RDS-Connection.png" >}}
 
-Download the [RDS TLS certificates](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/UsingWithRDS.SSL.html#UsingWithRDS.SSL.CertificatesAllRegions)
+3. Download the [RDS TLS certificates](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/UsingWithRDS.SSL.html#UsingWithRDS.SSL.CertificatesAllRegions)
 and save them into a Kubernetes secret (replace `{namespace}` with the namespace where the Mendix Operator is installed):
 
 ```shell
@@ -1612,8 +1608,10 @@ kubectl -n {namespace} create secret generic mendix-custom-tls --from-file=custo
 
 #### 4.1.2 S3 Bucket
 
-Create an S3 bucket using default parameters.
-Write down the **Bucket name** and **Region**.
+To configure the required settings for an S3 bucket, do the following steps:
+
+1. Create an S3 bucket using default parameters.
+2. Write down the **Bucket name** and **Region**.
 
 {{% alert color="info" %}}
 While it is possible to enable SSE-KMS encryption, it requires additional configuration steps, which are not covered by this guide.
@@ -1677,7 +1675,7 @@ In this template, replace:
 * `<account_id>` with the AWS account ID
 * `<database_id>` with the **Resource ID** from the RDS database **Configuration** tab (it should look like `db-ABCDEFGHIJKL01234`, and is not the database name or ARN)
 
-This *environment template policy* will be attached to every new environment's role. Write down its ARN.
+This environment template policy will be attached to every new environment's role. Write down its ARN.
 
 For every new environment, the Mendix Operator will automatically create a new role and fill in the `privatecloud.mendix.com/database-user` and `privatecloud.mendix.com/s3-prefix` tags.
 

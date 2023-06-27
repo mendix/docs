@@ -19,12 +19,12 @@ aliases:
 
 The Catalog is a development tool provided in the Mendix Cloud. 
 
-OData REST services provided by Mendix Apps running in the Mendix Cloud, [published OData services](/refguide/published-odata-services/), will automatically be registered in the Catalog upon deployment. This provides you with an up-to-date view of all the OData REST APIs published and consumed by your Mendix apps. These assets can be [curated](/catalog/manage/curate/) in the Catalog to ensure that they are exposed to the relevant users and can be found easily. The [Landscape](/data-hub/data-hub-landscape/), part of the Catalog, is a graphical representation of the relationship between apps and services.
+OData REST services provided by Mendix Apps running in the Mendix Cloud, [published OData services](/refguide/published-odata-services/), are automatically registered in the Catalog upon deployment. This provides you with an up-to-date view of all the OData REST APIs published and consumed by your Mendix apps. These assets can be [curated](/catalog/manage/curate/) in the Catalog to ensure that they are exposed to the relevant users and can be found easily. 
 
 Learn about updates and improvements in the [Catalog](/releasenotes/data-hub/) release notes.
 
 {{% alert color="info" %}}
-If you deploy your Mendix apps in an alternative environment, like on-prem or private cloud, you can use the Catalog APIs to register your apps and services in the Catalog to enable visibility of your deployed APIs. For information about using Catalog for local deployment, see [Register Data without Mendix Cloud](/data-hub/data-hub-without-mendix-cloud/).{{% /alert %}}
+If you deploy your Mendix apps in an alternative environment, like on-prem or private cloud, you can use the Catalog APIs to register your apps and services in the Catalog to enable visibility of your deployed APIs. For information about using Catalog for local deployment, see [Register Data Sources without Mendix Cloud](/catalog/data-sources-without-mendix-cloud/).{{% /alert %}}
 
 {{% alert color="info" %}}
 The Catalog and [external entities](/refguide/external-entities/) are supported in Studio Pro [8.14](/releasenotes/studio-pro/8.14/) and above.{{% /alert %}}
@@ -43,8 +43,7 @@ In addition to the Catalog, Mendix Connect functionalities include:
 From the Catalog [Home](https://catalog.mendix.com) screen, you can navigate to the following tabs:
 
 * **Home** – search in the Catalog, manually register a service from different applications, select from the most popular services
-* **Catalog** – [search](/catalog/search/) for registered assets in the search pane and see details of the metadata of selected asset
-* **Landscape** – gain a graphical view of the organization's available services and exposed datasets showing consuming and publishing dependencies (for further details, see [Landscape](/data-hub/data-hub-landscape/))
+* **Browse** – [search](/catalog/search/) for registered assets in the search pane and see details of the metadata of selected asset, either with the **Data View** or [Landscape View](/catalog/manage/landscape/)
 * **Curate** – carry out [curate](/catalog/manage/curate/) functions on registered assets to enrich the registered metadata and increase discoverability
 
 From the **Home** screen, you can do the following:
@@ -54,7 +53,7 @@ From the **Home** screen, you can do the following:
 
 * **Popular Data Sources** – click on the most popular data sources
 
-The Catalog is also integrated in Mendix Studio Pro to find and connect to shared data sources in your apps. For further details on using Catalog in Studio Pro, see [Integration Pane](/refguide/integration-pane/)in the *Studio Pro Guide*.
+The Catalog is also integrated in Mendix Studio Pro to find and connect to shared data sources in your apps. For further details on using Catalog in Studio Pro, see [Integration Pane](/refguide/integration-pane/) in the *Studio Pro Guide*.
 
 {{% alert color="info" %}}
 The Catalog integration is available in Studio Pro version 8.14 and above. {{% /alert %}}
@@ -77,4 +76,4 @@ The information that is registered for data sources and exposed datasets are as 
 
 Mendix Admins can assign and manage **Curators**, **Owners**, and **External Users**, and control discoverability settings. For more information, see [Data Hub Administration](/developerportal/control-center/data-hub-admin/).
 
-## 6 Documents in This Guide
+## 6 Documents in This Category

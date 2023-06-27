@@ -21,8 +21,8 @@ To see the current status of the Mendix Developer Portal and Control Center, see
 
 #### Improvements
 
-
-
+* We changed the process for merging Mendix Profiles so that the profiles are truly merged and your user accounts stay connected to the resulting Mendix Profile. Previously, profile data was moved from one account to another.
+* We introduced a Mendix Profile recovery email address that allows you to prove ownership of a profile during the profile merge process. You can provide a non-business email address for this.
 
 ### June 15th, 2023
 

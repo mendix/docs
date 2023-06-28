@@ -9,14 +9,9 @@ description_list: true
 cascade:
     - space: "Studio Pro 10 Guide"
     - mendix_version: 10
-    - banner: "Mendix 10 is currently in Beta. For details on Mendix 9.24 LTS, see Studio Pro 9 Guide."
     - sitemap:
         priority: 0.8
 ---
-
-{{% alert color="warning" %}}
-Mendix 10 is currently in [Beta](/releasenotes/beta-features/). Looking for documentation on Mendix 9.24 LTS instead? See [Studio Pro 9 Guide](/refguide9/).
-{{% /alert %}}
 
 ## 1 Introduction
 

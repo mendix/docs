@@ -9,13 +9,13 @@ weight: 1
 
 The goal of this document is to clarify Mendix Studio Pro version options and help you decide which version to run your applications on.
 
-To understand the different types of versions and releases, consider the example of Studio Pro version  [8.18.1](/releasenotes/studio-pro/8.18/#8181) and see the sections below.
+To understand the different types of versions and releases, consider the example of Studio Pro version [8.18.1](/releasenotes/studio-pro/8.18/#8181) and see the sections below.
 
 ### 1.1 Major Version {#major-version}
 
 In the 8.18.1 example, the first number (**8**) indicates the major version.
 
-Mendix supports three major versions at a time. To clarify our current offering and in relation to our SLA, today Mendix supports major versions 7, 8, and 9. Once version 10 has been released, version 7 will only be supported via the Extended Support product.
+Mendix supports three major versions at a time. To clarify our current offering and in relation to our SLA, today Mendix supports major versions 8, 9, and 10. Version 7 is only supported via the Extended Support product.
 
 As of Mendix 10, to make planning version upgrades easier for our users, Mendix will release in a two-year cadence, which means that every two years we plan to release a new major version in June. This will help in preparing and planning to adopt new releases and upgrade older Mendix versions. Each major version release will start with two Beta releases.
 
@@ -55,7 +55,6 @@ These are the current LTS versions of Studio Pro:
 
 * [9.24](/releasenotes/studio-pro/9.24/) (started in March, 2023)
 * [8.18](/releasenotes/studio-pro/8.18/) (started in March, 2021)
-* [7.23](/releasenotes/studio-pro/7.23/) (started in February, 2019)
 
 Mendix advises using LTS versions for all production apps, as LTS versions of Studio Pro enjoy the highest security and stability. LTS versions also have the longest support duration compared to other versions.
 

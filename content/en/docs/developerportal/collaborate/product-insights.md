@@ -20,7 +20,7 @@ The Mini Surveys feature consists of two parts:
 
 * A back-end dashboard in the Developer Portal for you to create surveys and aggregate your survey results.
 
-You begin by creating a mini survey in the Developer Portal, and then you implement the mini survey by configuring the [Mendix Mini Surveys](/appstore/modules/app-insights) module in Studio Pro. After the mini survey is running, you can view responses that have been collected in Mini Surveys in the Developer Portal and export the responses to an XLSX file.
+You begin by creating a mini survey in the Developer Portal, and then you implement the mini survey by configuring the [Mendix Mini Surveys](/appstore/modules/app-insights/) module in Studio Pro. After the mini survey is running, you can view responses that have been collected in Mini Surveys in the Developer Portal and export the responses to an XLSX file.
 
 This document first describes all the pages in Mini Surveys in the Developer Portal, and then it describes the procedure for running a mini survey.
 

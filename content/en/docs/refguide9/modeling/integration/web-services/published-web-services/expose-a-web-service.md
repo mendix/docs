@@ -25,12 +25,12 @@ Before starting this how-to, make sure you have completed the following prerequi
 * Download the latest version of [Mendix Studio Pro](https://marketplace.mendix.com/)
 
 {{% alert color="warning" %}}
-This how-to was written based on Studio Pro version 5.20. All the images, names, and steps in this how-to are based on this version. When using other versions, the images and/or names on your screen may be different than the images and names used in this how-to.
+This how-to was written based on Studio Pro 9.24. All the images, names, and steps in this how-to are based on this version. When using other versions, the images and/or names on your screen may be different than the images and names used in this how-to.
 {{% /alert %}}
 
 ## 3 Data Structure and GUI
 
-1. Create the following **Customer** entity in your domain model (for details on how to create an entity, see [Creating a Basic Data Layer](/refguide9/create-a-basic-data-layer/):
+1. Create the following **Customer** entity in your domain model (for details on how to create an entity, see [Create a Basic Data Layer](/refguide9/create-a-basic-data-layer/)):
 
     {{< figure src="/attachments/refguide9/modeling/integration/expose-a-web-service/8945665.png" >}}
 
@@ -38,15 +38,13 @@ This how-to was written based on Studio Pro version 5.20. All the images, names,
 3. Create a menu item to access the customer overview page (for details on how to create menu items, see [Setting Up Navigation](/refguide9/setting-up-the-navigation-structure/).
 4. Run the application and add some data to expose in the web service.
 
-## 4 Creating a Published Web Service{#create-published-web-service}
+## 4 Creating a Published Web Service {#create-published-web-service}
 
 To create a published web service, follow these steps:
 
-1. Right-click the module in which you want to store the published web service and select **Add** > **Published services** > **Published web service**:
+1. Right-click the module in which you want to store the published web service and select **Add other** > **Published web service**.
 
-    {{< figure src="/attachments/refguide9/modeling/integration/expose-a-web-service/18581715.png" >}}
-
-2. In the **Add Published Web Service** window, enter *CustomerWebservice* for the **Name** and then click **OK**:
+2. In the **Add Published Web Service** window, enter *CustomerWebService* for the **Name** and then click **OK**:
 
     {{< figure src="/attachments/refguide9/modeling/integration/expose-a-web-service/18581728.png" >}}
 
@@ -59,13 +57,9 @@ To create a published web service, follow these steps:
 
         {{< figure src="/attachments/refguide9/modeling/integration/expose-a-web-service/18581712.png" >}}
 
-    * On the **Documentation** tab, you can change the documentation:
-
-        {{< figure src="/attachments/refguide9/modeling/integration/expose-a-web-service/18581710.png" >}}
-
 4. Click **OK.**
 
-## 5 Creating the Functionality to Expose
+## 5 Creating the Functionality to Expose {#expose}
 
 To create the functionality to expose, follow these steps:
 
@@ -78,7 +72,9 @@ To create the functionality to expose, follow these steps:
 
     {{< figure src="/attachments/refguide9/modeling/integration/expose-a-web-service/model.jpg" >}}
 
-## 6 Publishing a Microflow{#publish-a-microflow}
+If you get any errors, you will need to mark the input parameters in the **Operations** > **Paremeters** section of the service document as **Optional** and **Nillable** (see the following section.)
+
+## 6 Publishing a Microflow {#publish-a-microflow}
 
 To publish a microflow, follow these steps:
 
@@ -92,17 +88,9 @@ To publish a microflow, follow these steps:
 
 3. You should now see the **Operation Operation** properties editor. Take note of the following tab details:
 
-    * On the **General** tab, you can change the **Name** and **Documentation**:
-
-        {{< figure src="/attachments/refguide9/modeling/integration/expose-a-web-service/18581705.png" >}}
-
-    * On the **Parameters** tab, you can mark the input parameters as **Optional** and **Nillable**:
-
-        {{< figure src="/attachments/refguide9/modeling/integration/expose-a-web-service/18581707.png" >}}
-
-    * On the **Return type** tab you can configure the return type:
-
-        {{< figure src="/attachments/refguide9/modeling/integration/expose-a-web-service/18581706.png" >}}
+    * On the **General** tab, you can change the **Name** and **Documentation**.
+    * On the **Parameters** tab, you can mark the input parameters as **Optional** and **Nillable** (needed when adding  [parameters](/refguide9/parameter/) during the [creating the functionality to expose](#expose) step)
+    * On the **Return type** tab you can configure the return type.
 
 4. Click **Select...** to select which attributes and associations of the return object **Customer** you want to expose:
 
@@ -137,9 +125,7 @@ To change the user authentication, follow these steps:
 
     {{< figure src="/attachments/refguide9/modeling/integration/expose-a-web-service/18581702.png" >}}
 
-3. Change **Authentication** to **Username and password**:
-
-    {{< figure src="/attachments/refguide9/modeling/integration/expose-a-web-service/18581701.png" >}}
+3. Change **Authentication** to **Username and password**.
 
 4. Click **OK** and re-run the application. Users now need to authenticate before they can use the web service.
 

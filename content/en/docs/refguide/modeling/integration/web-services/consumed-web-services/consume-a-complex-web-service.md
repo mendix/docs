@@ -19,6 +19,8 @@ This how-to will teach you how to do the following:
 * Directly import a web service document into your app
 * Configure a web service call
 
+{{% alert color="warning" %}}The **Import Web Service** wizard is deprecated and will be removed in Studio Pro 10.6.{{% /alert %}}
+
 ## 2 Importing a Web Service Using the Wizard
 
 This section describes the powerful wizard that enables integrating—in just a few clicks—the creation of an imported web service, the related data entities, the XML-mapping, and a microflow to trigger the web service.

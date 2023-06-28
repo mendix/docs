@@ -12,8 +12,14 @@ The `contains()` function tests whether a string attribute contains a specific s
 
 This query returns all the customers from which the name contains the string `an`:
 
-```java {linenos=false}
-//Sales.Customer[contains(Name, 'an')]
-```
+{{< tabpane >}}
+  {{% tab header="Environments:" disabled=true /%}}
+  {{< tab header="Studio Pro" lang="StudioPro" >}}
+    [contains(Name, 'an')]
+    {{% /tab %}}
+  {{< tab header="Java" lang="JavaQuery" >}}
+     //Sales.Customer[contains(Name, 'an')]
+    {{% /tab %}}
+{{< /tabpane >}}
 
 Customers with the name "Andy" or "Jan" will be returned, for example, because "an" is part of those names.

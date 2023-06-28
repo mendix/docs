@@ -12,11 +12,7 @@ tags: ["studio pro", "nanoflow call", "call nanoflow"]
 This activity can only be used in **Nanoflows**.
 {{% /alert %}}
 
-The **Call nanoflow** activity can be used to call another [nanoflow](/refguide/nanoflows/). 
-
-{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/client-activities/nanoflow-call/nanoflow-call.png" alt="Nanoflow Call"   width="200"  >}}
-
-Arguments can be passed to the nanoflow and the result can be stored in a variable.
+The **Call nanoflow** activity can be used to call another [nanoflow](/refguide/nanoflows/). Arguments can be passed to the nanoflow and the result can be stored in a variable.
 
 ## 2 Properties
 

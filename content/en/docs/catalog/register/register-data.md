@@ -65,7 +65,7 @@ Once you have a personal access token, follow this series of REST calls to regis
 
     If your service contract is not in the right format, use the [Transform API](#transform-api) (an endpoint of the Registration API) to get your service contract in the right format before registering them.
 
-The [Data Hub Registration API specification](https://datahub-spec.s3.eu-central-1.amazonaws.com/registration_v4.html) describes all the optional fields, required formats, other operations on these same paths. You will only fill out the required fields and one operation per path in this how-to. 
+The [Registration API specification](https://datahub-spec.s3.eu-central-1.amazonaws.com/registration_v4.html) describes all the optional fields, required formats, other operations on these same paths. You will only fill out the required fields and one operation per path in this how-to. 
 
 #### 4.1.1 Registering an Application Through the Catalog Registration API {#register-application}
 

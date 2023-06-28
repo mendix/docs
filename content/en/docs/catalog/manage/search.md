@@ -4,13 +4,14 @@ url: /catalog/manage/search/
 description: "Describes how to find data sources and datasets in the Catalog."
 tags: ["data hub", "Catalog", "data source", "dataset"]
 aliases:
+    - /data-hub/data-hub-catalog/search/
+    - /data-hub/data-hub-catalog/manage-data-sources/search/
     - /catalog/search/
-    - /data-hub/data-hub-catalog/search
 ---
 
 ## 1 Introduction
 
-Finding the right data to use in your app development is made easier using the search functionality in the Catalog. The details of registered data assets can be accessed using the [Search API](/apidocs-mxsdk/apidocs/catalog-apis/), or viewed in the [Asset details](#search-details) screen of the Catalog or the [Data Hub pane](/refguide/data-hub-pane/) in Studio Pro.  This document describes how you can search in Catalog.
+Finding the right data to use in your app development is made easier using the search functionality in the Catalog. The details of registered data assets can be accessed using the [Search API](/apidocs-mxsdk/apidocs/catalog-apis/), or viewed in the [Asset details](#search-details) screen of the Catalog or the [Integration Pane](/refguide/integration-pane/) in Studio Pro.  This document describes how you can search in Catalog.
 
 ## 2 Search Using the API {#search-api}
 
@@ -400,7 +401,7 @@ See the [Curation Bar](#curation-bar) section below for changing **Discoverabili
 The following discoverability values can be set:
 
 * **Discoverable** – all users in your company can see and consume the asset in the Catalog and Studio Pro 
-* **Non-Discoverable** – the asset is only visible to owners, curators, and the Mendix Admin in the Catalog; it is not included in the search results in the [Data Hub pane](/refguide/data-hub-pane/) of Studio Pro, or any other client of the Catalog API.
+* **Non-Discoverable** – the asset is only visible to owners, curators, and the Mendix Admin in the Catalog; it is not included in the search results in the [Integration Pane](/refguide/integration-pane/) of Studio Pro, or any other client of the Catalog API.
 
 #### 3.6.5 Validated
 

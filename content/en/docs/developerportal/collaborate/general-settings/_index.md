@@ -35,7 +35,9 @@ These tabs are only available for users with the **App Settings** permission:
 * **Cloud Settings**
 * **API Keys**
 * **Project Management**
+* **Webhooks**
 * **History**
+* **Story Archive**
 
 ## 2 General {#general}
 
@@ -194,7 +196,17 @@ The **History** tab presents the collaboration actions for the app. On this page
 
 When you select a history item and click **Show item**, the details of the story, Sprint, or [feedback item](/developerportal/collaborate/feedback/) will be presented.
 
-## 9 Read More
+## 9 Story Archive
+
+Once you have switched from Mendix Stories to Epics or Jira, we archive any work you may have had in Mendix Stories. You can review your work here and download if necessary.
+
+{{% alert color="info" %}}
+We will permanently delete all data from Mendix Stories starting 1 October 2023. We strongly urge you to download your work before that date.
+{{% /alert %}}
+
+{{< figure src="/attachments/developerportal/collaborate/general-settings/story-archive.png" width="700"  >}}
+
+## 10 Read More
 
 * [Leave and Delete an App](/developerportal/collaborate/leave-delete-app/)
 * [Manage Deep Links](/developerportal/collaborate/manage-deeplinks/)

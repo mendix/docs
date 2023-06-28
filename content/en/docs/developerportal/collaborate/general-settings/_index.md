@@ -142,11 +142,11 @@ Only users with the **App Settings** permission can manage these settings.
 
 On the **Project Management** tab, you can select your team's planning tool for the app. By default, [Epics](/developerportal/collaborate/epics/) is the selected tool.
 
-{{% alert color="warning" %}}To sync the Stories tab back in Studio Pro, you need to switch back to Stories as the planning tool. For more information, see the [Managing Stories in Studio Pro](/developerportal/collaborate/stories/#managing-sp) section of *Stories*.{{% /alert %}}
-
 It is possible to migrate all or part of your content from [Stories](/developerportal/collaborate/stories/) to Epics. For details, see the [Data Migration](/developerportal/collaborate/epics/#data-migration) section of *Epics*.
 
 If you manage your projects in Jira, you can connect your apps in the Developer Portal to Jira. For more information, see [Jira Connector](/developerportal/collaborate/jira-connector/).
+
+{{< figure src="/attachments/developerportal/collaborate/general-settings/story-switcher.png" width="700"  >}}
 
 ## 7 Webhooks {#webhooks}
 

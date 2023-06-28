@@ -17,6 +17,15 @@ To see the current status of the Mendix Developer Portal and Control Center, see
 
 ## 2023
 
+### June 29th, 2023
+
+#### Imrpovements
+
+* With both Epics and Jira connector as new options to plan your work, we are getting ready to say goodbye to Mendix Stories on October 1. As of today, once you switch to [Epics](/developerportal/collaborate/epics/) or [Jira](/developerportal/collaborate/jira-connector/), we will [archive all your work in Mendix Stories](/developerportal/collaborate/general-settings/_index.md#9-story-archive) and you will not be able to switch back to Mendix Stories anymore. The scrum master of your team can choose the right project management tool for you in a new tab page under General Settings.
+* To highlight the story tool you choose for your project, we gave it its own section in the navigation, called Project Management
+* With these changes, navigation in Epics works a bit differently than before: the navigation items are in the sidebar now instead of at the top, so it's easier for you to get from one part of the Developer Portal to another (but if you need more space on the screen, you can always collapse the sidebar)
+* Speaking of Epics, we have released the new public API. You can find all the info in our [documentation](/developerportal/apidocs-mxsdk/apidocs/epics-api/)
+
 ### June 22nd, 2023
 
 #### New Features

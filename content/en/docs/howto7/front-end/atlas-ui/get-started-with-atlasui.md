@@ -2,7 +2,7 @@
 title: "Get Started with Atlas UI"
 url: /howto7/front-end/get-started-with-atlasui/
 weight: 10
-tags: ["Atlas", "UI", "UX", "user experience", "Web Modeler"]
+tags: ["Atlas", "UI", "UX", "user experience"]
 ---
 
 ## 1 Introduction
@@ -61,6 +61,5 @@ The **Theme Customizer** allows you to customize your app in the Web Modeler.
 ## 7 Read More
 
 * [How to Create Custom Preview Images for Building Blocks and Page Templates](/howto7/front-end/create-custom-preview-images-for-building-blocks-and-page-templates/)
-* [How to Extend Design Properties to Customize the Web Modeler Experience](/howto7/front-end/extend-design-properties-to-customize-the-web-modeler-experience/)
 * [How to Migrate Existing Apps to Atlas UI](/howto7/front-end/migrate-existing-projects-to-atlasui/)
 * [How to Share Company Atlas UI Resources](/howto7/front-end/share-company-atlas-ui-resources/)

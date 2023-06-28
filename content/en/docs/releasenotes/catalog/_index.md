@@ -17,7 +17,7 @@ These release notes cover changes made to the [Catalog](/catalog/).
 
 #### Improvements
 
-* We’ve made several user interface changes to rebrand DataHub as Catalog, aligning it with the new Mendix Connect brand.
+* We improved the clarity and accuracy of even more Catalog UI texts.
 
 ### June 22nd, 2023
 

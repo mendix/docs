@@ -136,7 +136,7 @@ You can toggle between the modes by clicking the **Design mode** or **Structure 
 
 {{< figure src="/attachments/refguide/modeling/pages/page/design-mode.png" alt="Design mode and Structure mode buttons" width="250" >}}
 
-By default, pages open in **Structure mode**, but if you prefer **Design mode**, this can be set as default in the **Preferences** (**Edit > Preferences > Work Environment > Default Page Editor**). For more information, see the [Default Page Editor](/refguide/preferences-dialog/#default-page-editor) section in *Preferences*.
+By default, pages open in **Design mode**, but if you prefer **Structure mode**, this can be set as default in the **Preferences** (**Edit > Preferences > Work Environment > Default Page Editor**). For more information, see the [Default Page Editor](/refguide/preferences-dialog/#default-page-editor) section in *Preferences*.
 
 Both modes allow you to edit your page by doing the following:
 

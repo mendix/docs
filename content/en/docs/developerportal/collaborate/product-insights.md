@@ -235,4 +235,4 @@ A mini survey has the following opt-out rules:
 
 #### 4.1 Surveys Do Not Work Locally When Running Multiple Applications
 
-For details on how to resolve this issue, see the [Troubleshooting](/appstore/modules/app-insights/#troubleshooting/) section in *Mendix Mini Surveys*.
+For details on how to resolve this issue, see the [Troubleshooting](/appstore/modules/app-insights/#troubleshooting) section in *Mendix Mini Surveys*.

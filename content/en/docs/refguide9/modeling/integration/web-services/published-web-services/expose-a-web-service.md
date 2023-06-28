@@ -1,6 +1,6 @@
 ---
 title: "Expose a Web Service"
-url: /refguide99/integration/expose-a-web-service/
+url: /refguide9/integration/expose-a-web-service/
 category: "Integration"
 weight: 12
 description: "Describes how Mendix supports exposing the functionality and data of your app using web services."
@@ -30,7 +30,7 @@ This how-to was written based on Studio Pro 9.24. All the images, names, and ste
 
 ## 3 Data Structure and GUI
 
-1. Create the following **Customer** entity in your domain model (for details on how to create an entity, see [Configuring a Domain Model](/refguide9/configuring-a-domain-model/)):
+1. Create the following **Customer** entity in your domain model (for details on how to create an entity, see [Create a Basic Data Layer](/refguide9/create-a-basic-data-layer/)):
 
     {{< figure src="/attachments/refguide9/modeling/integration/expose-a-web-service/8945665.png" >}}
 
@@ -38,7 +38,7 @@ This how-to was written based on Studio Pro 9.24. All the images, names, and ste
 3. Create a menu item to access the customer overview page (for details on how to create menu items, see [Setting Up Navigation](/refguide9/setting-up-the-navigation-structure/).
 4. Run the application and add some data to expose in the web service.
 
-## 4 Creating a Published Web Service{#create-published-web-service}
+## 4 Creating a Published Web Service {#create-published-web-service}
 
 To create a published web service, follow these steps:
 
@@ -59,7 +59,7 @@ To create a published web service, follow these steps:
 
 4. Click **OK.**
 
-## 5 Creating the Functionality to Expose
+## 5 Creating the Functionality to Expose {#expose}
 
 To create the functionality to expose, follow these steps:
 
@@ -74,7 +74,7 @@ To create the functionality to expose, follow these steps:
 
 If you get any errors, you will need to mark the input parameters in the **Operations** > **Paremeters** section of the service document as **Optional** and **Nillable** (see the following section.)
 
-## 6 Publishing a Microflow{#publish-a-microflow}
+## 6 Publishing a Microflow {#publish-a-microflow}
 
 To publish a microflow, follow these steps:
 

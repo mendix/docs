@@ -14,7 +14,7 @@ Use the Integration Pane in Studio Pro to use available data sources from the di
 
 You can search in the Catalog through the [Integration Pane](/refguide/integration-pane/) to discover data sources that you can use in your app. Via this pane you can add the entities that are exposed in the registered OData services—called **Data Sources** in Data Hub—into your app's domain model. These entities are called [external entities](/refguide/external-entities/) and are different because they enable the connection to the data associated with the entities in the originating app.
 
-To display the [Integration Pane](/refguide/integration-pane/), click **View** > **Data Hub**.
+To display the [Integration Pane](/refguide/integration-pane/), click **View** > **Integration**.
 
 {{% alert color="info" %}}
 In the Catalog, registered published services are referred to as *data sources*. Exposed entities will show the **Entity set** name and are called *datasets.*

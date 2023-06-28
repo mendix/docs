@@ -735,7 +735,7 @@ These release notes cover changes made to the [Catalog](/catalog/).
 
 #### New Features
 
-* A new connector has been added to the **Data Hub Home** for [registering](/catalog/register/register-data/) Siemens Opcenter data sources.
+* A new connector has been added to the **Catalog Home** for [registering](/catalog/register/register-data/) Siemens Opcenter data sources.
 
 #### Improvements
 
@@ -747,7 +747,7 @@ These release notes cover changes made to the [Catalog](/catalog/).
 #### Improvements
 
 * Datasets in the [search results list](/catalog/manage/search/#search-results) that are validated are now clearly indicated as such.
-* Custom owners can be added for an application when [registering data sources](/catalog/register/register-data/) using the business application connectors from the **Data Hub Home**.
+* Custom owners can be added for an application when [registering data sources](/catalog/register/register-data/) using the business application connectors from the **Catalog Home**.
 * Further styling changes have been made to improve usability.
 
 ### May 6th, 2021
@@ -772,7 +772,7 @@ The [Data Hub Transform API](https://datahub-spec.s3.eu-central-1.amazonaws.com/
 
 #### Improvements
 
-* [Registration](/catalog/register/register-data/) of data sources using the business application connectors from the **Data Hub Home** is improved. For each connector, users can register data sources by selecting from a list of apps and environments already registered in the Catalog for the business application. When none are registered, the  "**Create New...**" option will be presented.
+* [Registration](/catalog/register/register-data/) of data sources using the business application connectors from the **Catalog Home** is improved. For each connector, users can register data sources by selecting from a list of apps and environments already registered in the Catalog for the business application. When none are registered, the  "**Create New...**" option will be presented.
 
 ### March 18th, 2021
 

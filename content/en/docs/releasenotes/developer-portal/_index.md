@@ -21,7 +21,7 @@ To see the current status of the Mendix Developer Portal and Control Center, see
 
 #### New Features
 
-* To highlight the story tool you choose for your project, we gave it its own section in the navigation, called [Project Management](/developerportal/project-management).
+* To highlight the story tool you choose for your project, we gave it its own section in the navigation, called [Project Management](/developerportal/project-management/).
 * With these changes, navigation in [Epics](/developerportal/project-management/epics/) works a bit differently than before: the navigation items are in the sidebar now instead of at the top, so it is easier for you to get from one part of the Developer Portal to another (but if you need more space on the screen, you can always collapse the sidebar).
 * Speaking of Epics, we have released the new public API. You can find all the info in our [documentation](/apidocs-mxsdk/apidocs/epics-api/).
 

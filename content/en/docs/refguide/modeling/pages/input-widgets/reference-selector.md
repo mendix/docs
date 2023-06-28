@@ -26,25 +26,31 @@ For example, the following reference allows the end-user to see, and set, the as
 If you only want to *display* information, you can also use a [text box](/refguide/text-box/). This has the added advantage that you can choose an attribute from an object which is linked via several association steps.
 {{% /alert %}}
 
-## 2 Properties
+## 2 Properties Pane
 
-An example of reference selector properties is represented in the image below:
+The properties pane is divided into two major sections by a toggle at the top of the pane: **Properties** and **Styling**. Reference selector properties consist of the following sections:
 
-{{< figure src="/attachments/refguide/modeling/pages/input-widgets/reference-selector/reference-selector-properties.png"   width="400"  >}}
-
-Reference selector properties consist of the following sections:
-
-* [Common](#common)
-* [Data source](#data-source)
-* [Design Properties](#design-properties)
-* [Editability](#editability)
-* [Events](#events)
-* [Formatting](#formatting)
+Properties:
 * [General](#general)
+* [Data Source](#data-source)
 * [Label](#label)
-* [Selectable Objects](#selectable-objects)
-* [Validation](#validation)
+* [Editability](#editability)
 * [Visibility](#visibility)
+* [Validation](#validation)
+* [Events](#events)
+* [Common](#common)
+* [Selectable Objects](#selectable-objects)
+
+Styling:
+* [Design Properties](#design-properties)
+* [Common](#common-styling)
+
+
+
+* [Formatting](#formatting) CAN DELETE? Not in product 
+
+## 3 Properties
+## 4 Styling
 
 ### 2.1 Common Section{#common}
 

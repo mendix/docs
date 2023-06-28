@@ -29,11 +29,9 @@ The following XPath query aggregate functions are available:
 
 ## 2 avg {#avg}
 
-### 2.1 Overview
-
 The `avg()` function returns the average of its argument.
 
-### 2.2 Examples
+### 2.1 Examples
 
 This query returns the average total price of all placed orders:
 
@@ -49,11 +47,9 @@ avg(//Sales.Order[Sales.Customer_Order/Sales.Customer = 'Jansen']/TotalPrice)
 
 ## 3 count {#count}
 
-### 3.1 Overview
-
 The `count()` function counts all objects retrieved by the enclosed query and returns the value as an integer.
 
-### 3.2 Examples
+### 3.1 Examples
 
 This query returns a count of all the placed orders:
 
@@ -69,11 +65,9 @@ count(//Sales.Order[Sales.Customer_Order/Sales.Customer/Name = 'Jansen'])
 
 ## 4 max {#max}
 
-### 4.1 Overview
-
 The `max()` function returns the maximum value of its argument.
 
-### 4.2 Examples
+### 4.1 Examples
 
 This query returns the highest total price found in any object:
 
@@ -89,11 +83,9 @@ max(//Sales.Order[Sales.Customer_Order/Sales.Customer/Name = 'Jansen']/TotalPric
 
 ## 5 min {#min}
 
-### 5.1 Overview
-
 The `min()` function returns the minimum value of its argument.
 
-### 5.2 Examples
+### 5.1 Examples
 
 This query returns the lowest total price found in any object:
 
@@ -109,11 +101,9 @@ min(//Sales.Order[Sales.Customer_Order/Sales.Customer/Name = 'Jansen']/TotalPric
 
 ## 6 sum {#sum}
 
-### 6.1 Overview
-
 The `sum()` function returns the sum of its argument.
 
-### 6.2 Examples
+### 6.1 Examples
 
 This query returns the sum of the total prices of all placed orders:
 

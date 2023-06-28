@@ -20,7 +20,7 @@ For example, this checkbox allows you to see, and set, whether someone is subscr
 
 ## 2 Properties Pane
 
-The properties pane is divided into two major sections by a toggle at the top of the pane: **Properties** and **Styling*. Checkbox properties consist of the following sections:
+The properties pane is divided into two major sections by a toggle at the top of the pane: **Properties** and **Styling**. Checkbox properties consist of the following sections:
 
 Properties:
 * [Data source](#data-source)

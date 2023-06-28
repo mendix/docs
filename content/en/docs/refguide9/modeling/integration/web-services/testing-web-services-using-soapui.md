@@ -11,7 +11,7 @@ aliases:
 
 ## 1 Introduction
 
-You can publish your own webservices in a Mendix application. These webservices consist of operations. Other applications can then call operations of this webservice and you can return a result. This result is based on a microflow that will be executed when the webservice is called. With SoapUI you can create (automated) tests for these webservices.
+You can publish your own web services in a Mendix application. These webservices consist of operations. Other applications can then call operations of this webservice and you can return a result. This result is based on a microflow that will be executed when the web service is called. With SoapUI you can create (automated) tests for these webservices.
 
 This how-to will teach you how to do the following:
 
@@ -21,34 +21,34 @@ This how-to will teach you how to do the following:
 
 ## 2 Preparation
 
-Before you can start with this how-to, make sure you have completed the following prerequisites.
+Before you start this how-to, make sure you have completed the following prerequisites.
 
 * Download and install [SoapUI](https://www.soapui.org/downloads/soapui.html)
-* Complete the how-to [Exposing a web service](/refguide9/integration/expose-a-web-service/)
+* Complete the how-to [Expose a web service](/howto/integration/expose-a-web-service/)
 
 | Software | Version used in this how-to |
 | --- | --- |
-| SoapUI | 5.2.0 |
+| SoapUI | 5.7.0 |
 
 {{% alert color="warning" %}}
-All images, names and steps in this how-to are based on Studio Pro [9.24.3](/releasenotes/studio-pro/9.24/). When using other versions the images and/or names on your screen may be different than the images or names used in this how-to.
+All images, names and steps in this how-to are based on Studio Pro 9.24. When using other versions the images and/or names on your screen may be different than the images or names used in this how-to.
 {{% /alert %}}
 
 ## 3 Publishing More Microflows as Web Service Operation
 
-In [How to Expose a Web Service](/refguide9/integration/expose-a-web-service/) you already published the microflow *GetCustomers* as web service operation. In this chapter you will create two more microflow and publish them as web service operation.
+In [Expose a Web Service](/howto/integration/expose-a-web-service/) you already published the microflow *GetCustomers* as web service operation. In this chapter you will create two more microflow and publish them as web service operation.
 
 1. Open Studio Pro.
-2. Open the app you created in [How to Expose a Web Service](/refguide9/integration/expose-a-web-service/).
-3. Create a **Microflow** that creates a customer and returns a Boolean. 
+2. Open the app you created in [How to Expose a Web Service](/howto/integration/expose-a-web-service/).
+3. Create a **Microflow** that creates a customer and returns a Boolean:
 
     {{< figure src="/attachments/refguide9/modeling/integration/testing-web-services-using-soapui/model1.jpg" >}}
 
-4. Create a **Microflow** that deletes a customer and returns a Boolean.
+4. Create a **Microflow** that deletes a customer and returns a Boolean:
 
     {{< figure src="/attachments/refguide9/modeling/integration/testing-web-services-using-soapui/model2.jpg" >}}
 
-5. Publish both microflows as web service operation of the **CustomerWebservice** as described in chapter 4 of [How to Expose a Web Service](/refguide9/integration/expose-a-web-service/).
+5. Publish both microflows as web service operation of the **CustomerWebservice** as described in chapter 4 of [How to Expose a Web Service](/howto/integration/expose-a-web-service/).
 
 ## 4 Creating a New SOAP Project
 
@@ -56,15 +56,13 @@ In this chapter you will create a new SOAP project.
 
 1. Open **SoapUI**.
 2. Press **CTRL+N** to create a new SOAP project.
-    {{< figure src="/attachments/refguide9/modeling/integration/testing-web-services-using-soapui/18580339.png" >}}
-3. Run the app locally in Studio Pro.
+3. Run your app locally in Studio Pro.
 4. Go to `http://localhost:8080/ws-doc/`.
     {{< figure src="/attachments/refguide9/modeling/integration/testing-web-services-using-soapui/18580314.png" >}}
 5. Enter the URL of the WSDL schema in the **Initial WSDL** field in SoapUI.
     The **Project Name** field will automatically be filled with the name of the webservice following by *?wsdl*.
     {{< figure src="/attachments/refguide9/modeling/integration/testing-web-services-using-soapui/18580334.png" >}}
 6. Click**OK**. This will create a new SOAP project in SoapUI.
-    {{< figure src="/attachments/refguide9/modeling/integration/testing-web-services-using-soapui/18580313.png" >}}
 
 ## 5 Building a TestSuite, TestCase, and TestStep
 

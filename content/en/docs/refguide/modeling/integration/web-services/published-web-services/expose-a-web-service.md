@@ -59,9 +59,20 @@ To create a published web service, follow these steps:
 
 4. Click **OK.**
 
-## 5 Creating the Functionality to Expose
+## 5 Creating the Functionality to Expose {#expose}
 
-To create the functionality to expose, create a microflow that retrieves and returns a list of customers from the database (for details on how to create a microflow, see [Triggering a Microflow From a Menu Item](/refguide/triggering-microflow-from-menu-item/)).
+To create the functionality to expose, follow these steps:
+
+1. Create a microflow that retrieves and returns a list of customers from the database (for details on how to create a microflow, see [Triggering a Microflow From a Menu Item](/refguide/triggering-microflow-from-menu-item/)).
+2. To make the microflow more exciting, add two input parameters to dynamically set the range settings of the retrieve action. Configure the range options of the retrieve action like this:
+
+    {{< figure src="/attachments/refguide/modeling/integration/expose-a-web-service/18581709.png" >}}
+
+    Reference this microflow:
+
+    {{< figure src="/attachments/refguide/modeling/integration/expose-a-web-service/model.jpg" >}}
+
+If you get any errors, you will need to mark the input parameters in the **Operations** > **Paremeters** section of the service document as **Optional** and **Nillable** (see the following section.)
 
 ## 6 Publishing a Microflow{#publish-a-microflow}
 
@@ -78,7 +89,7 @@ To publish a microflow, follow these steps:
 3. You should now see the **Operation Operation** properties editor. Take note of the following tab details:
 
     * On the **General** tab, you can change the **Name** and **Documentation**.
-    * On the **Parameters** tab, you can mark the input parameters as **Optional** and **Nillable** (if you add these [parameters](/refguide/parameter/))
+    * On the **Parameters** tab, you can mark the input parameters as **Optional** and **Nillable** (needed when adding  [parameters](/refguide/parameter/) during the [creating the functionality to expose](#expose) step)
     * On the **Return type** tab you can configure the return type.
 
 4. Click **Select...** to select which attributes and associations of the return object **Customer** you want to expose:

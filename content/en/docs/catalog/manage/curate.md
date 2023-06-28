@@ -11,11 +11,11 @@ aliases:
 
 ## 1 Introduction
 
-Owners of data sources, Curators, and Mendix Admins can curate registered assets. Curation in the Catalog is the process of enriching the metadata and providing further information about the exposed data sources, datasets and attributes, and deleting irrelevent or outdated data sources. You can add custom application icons, Catalog-specific descriptions, and tags to supplement the registered metadata. Curate functions in the Catalog include setting the [Discoverability](#discoverability) of data sources, indicating whether the data source is [validated](#validated), and specifying the [Business and Technical Owners](#custom-owner).
+Owners of data sources, Curators, and Mendix Admins can curate registered assets. Curation in the Catalog is the process of enriching the metadata and providing further information about the exposed data sources, datasets and attributes, and deleting irrelevant or outdated data sources. You can add custom application icons, Catalog-specific descriptions, and tags to supplement the registered metadata. Curate functions in the Catalog include setting the [Discoverability](#discoverability) of data sources, indicating whether the data source is [validated](#validated), and specifying the [Business and Technical Owners](#custom-owner).
 
 Users who can curate assets in the Catalog are as follows:
 
-* Owners of a registered service – can curate their own services which includes those that have been set to non-**Discoverable**
+* Owners of a registered service – can curate their own services which include those that have been set to non-**Discoverable**
 * [Curators](/catalog/manage/user-roles/#curator) and [Mendix Admins](/catalog/manage/user-roles/#admin) – can curate and find all registered assets in the Catalog
 
 Owners and Curators can also get an overview of the registered assets they own and curate from the [Curate](#curatelist) tab in Data Hub.
@@ -34,7 +34,7 @@ In both cases, the list includes registered data sources and also individual dat
 
 You can search for specific assets by entering a search string in the search bar or **Filter By:** **Environment** or **Validated** assets.
 
-The list can be also be sorted by any of the columns by clicking on the column header.
+The list can also be sorted by any of the columns by clicking on the column header.
 
 Click **View** to display the asset details. You can then perform curate actions to add Catalog specific information to the asset metadata.
 
@@ -43,7 +43,7 @@ Click **View** to display the asset details. You can then perform curate actions
 Curation is performed from the [asset details screen](/catalog/manage/search/#search-details). If you are an owner of an asset or are a curator, you will see the **Curation Bar** for the selected item.
 
 {{% alert color="info" %}}
-Owners of registered assets and can only curate their services.
+Owners of registered assets can only curate their services.
 {{% /alert %}}
 
 When a data source is selected in the **Search Results**, you can do the following after clicking **Edit**:
@@ -203,7 +203,7 @@ The discoverable and validated properties of registered assets can be set from t
 
 The discoverability is set at a data source level. When a data source is registered in the Catalog, **Discoverable** is set to the company default value, which is configured by the Mendix Admin in [Control Center](/developerportal/control-center/data-hub-admin/#settings). If **Discoverable** is on for a data source, all users can find the asset and see the details of it. The **Discoverable** setting will apply to all datasets that are exposed in the data source.
 
-When the **Discoverable** setting is turned off, it will only be visible to the owners of the service and curators and the Mendix Admin. All other users of the Catalog (also through the Catalog integrations in Studio Pro) will not be able to see an asset whose discoverabilty is turned off.
+When the **Discoverable** setting is turned off, it will only be visible to the owners of the service and curators and the Mendix Admin. All other users of the Catalog (also through the Catalog integrations in Studio Pro) will not be able to see an asset whose discoverability is turned off.
 
 When a data source is set to non-**Discoverable**, the data source, and the datasets that are exposed cannot be found by other users (except by owners and curators). However, there may be instances of the same datasets in the Catalog, from the same apps, that are available through other discoverable services.
 

@@ -9,11 +9,11 @@ weight: 1
 
 The goal of this document is to clarify Mendix Studio Pro version options and help you decide which version to run your applications on.
 
-To understand the different types of versions and releases, consider the example of Studio Pro version [8.18.1](/releasenotes/studio-pro/8.18/#8181) and see the sections below.
+To understand the different types of versions and releases, consider the example of Studio Pro version [9.24.1](/releasenotes/studio-pro/9.24/#9241) and see the sections below.
 
 ### 1.1 Major Version {#major-version}
 
-In the 8.18.1 example, the first number (**8**) indicates the major version.
+In the 9.24.1 example, the first number (**9**) indicates the major version.
 
 Mendix supports three major versions at a time. To clarify our current offering and in relation to our SLA, today Mendix supports major versions 8, 9, and 10. Version 7 is only supported via the Extended Support product.
 
@@ -37,13 +37,13 @@ For Mendix 10 and 11, we are planning to follow this release timeline:
 
 ### 1.2 Minor Version
 
-In the 8.18.1 example, the second number (**18**) indicates the minor version. 
+In the 9.24.1 example, the second number (**18**) indicates the minor version. 
 
 A minor version is generally released every month. It includes new features and fixes, but it does not include breaking changes.
 
 ### 1.3 Patch Version {#patch-version}
 
-In the 8.18.1 example, the third number (**1**) indicates the patch version. 
+In the 9.24.1 example, the third number (**1**) indicates the patch version. 
 
 A patch version is released on an as-needed basis. It includes security fixes and critical bug fixes, but it does not include new features or breaking changes (unless these address security issues).
 

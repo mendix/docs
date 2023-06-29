@@ -10,15 +10,16 @@ tags: ["studio pro", "data importer", "excel importer"]
 
 The **Data Importer** allows you to import an Excel file and choose which parts of it you want to import. You can view this in design time, before running your app.
 
-## 2 Creating a Data Importer Service Document
+## 2 Creating a Data Importer Service Document {#create-document}
 
-**Add other** > **Data Importer**
+To start importing data, go to **Add other** > **Data Importer**. Name the document, and the new **Data Importer Document** opens.
 
-**Data Importer Document**
+## 3 Previewing Data {#preview-data}
 
-## 3 Importing Data in a Microflow
+Once you have [created the **Data Importer** document](#create-document), click **Select a local file** to import an Excel file (*.xls* or *.xslx*).
 
-Select a local file
+## 4 Importing Data in a Microflow
+
 
 Sheet name
 Header row number

@@ -1,0 +1,604 @@
+openapi: "3.0.0"
+info:
+  version: 1.0.0
+  title: Epics API
+  description: The API to manage stories, tasks, Sprint, and epics for Mendix apps which use the Epics story service.
+  termsOfService: https://www.mendix.com/terms-of-use/
+  contact:
+    name: Mendix Support
+    url: 'https://support.mendix.com'
+    email: support@mendix.com
+servers:
+  - url: 'https://epics-api.mendix.com/v1'
+paths:
+  /projects/{appId}/statuses:
+    get:
+      tags:
+        - statuses
+      summary: Get statuses by app ID
+      description: Returns an array of statuses
+      operationId: getProjectStatuses
+      parameters:
+        - $ref: '#/components/parameters/appId'
+      responses:
+        '200':
+          description: successful operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/statuses'
+        '401':
+          $ref: '#/components/responses/error401'
+        '404':
+          $ref: '#/components/responses/error404'
+  /projects/{appId}/stories:
+    get:
+      tags:
+        - stories
+      summary: Get stories by app ID
+      description: Returns an array of stories
+      operationId: getProjectStories
+      parameters:
+        - $ref: '#/components/parameters/appId'
+        - $ref: '#/components/parameters/limitStories'
+        - $ref: '#/components/parameters/offsetStories'
+      responses:
+        '200':
+          description: successful operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/stories'
+        '400':
+          $ref: '#/components/responses/error400query'
+        '401':
+          $ref: '#/components/responses/error401'
+        '404':
+          $ref: '#/components/responses/error404'
+    post:
+      tags:
+        - stories
+      summary: Create stories for an app
+      description: Returns an array of created stories
+      operationId: postProjectStories
+      parameters:
+        - $ref: '#/components/parameters/appId'
+      requestBody:
+        description: Create stories for an app
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/post-stories-request'
+      responses:
+        '200':
+          description: successful operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/post-stories-200'
+        '207':
+          description: partial successful operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/post-stories-207'
+        '400':
+          $ref: '#/components/responses/error400postStoriesMalformed'
+        '401':
+          $ref: '#/components/responses/error401'
+        '404':
+          $ref: '#/components/responses/error404'
+  /projects/{appId}/stories/{storyId}:
+    patch:
+      tags:
+        - stories
+      summary: Patch stories by story ID 
+      description: Returns success 
+      operationId: patchProjectStory
+      parameters:
+        - $ref: '#/components/parameters/appId'
+        - $ref: '#/components/parameters/storyId'
+      requestBody:
+        description: Patch stories by story ID
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/patch-stories-request' 
+      responses:
+        '204':
+          description: successful operation
+        '400':
+          $ref: '#/components/responses/error400patchStories'
+        '401':
+          $ref: '#/components/responses/error401'
+        '404':
+          $ref: '#/components/responses/error404'
+  /projects/{appId}/epics:
+    get:
+      tags:
+        - epics
+      summary: Get epics by app ID
+      description: Returns an array of epics
+      operationId: getProjectEpics
+      parameters:
+        - $ref: '#/components/parameters/appId'
+        - $ref: '#/components/parameters/limitEpics'
+        - $ref: '#/components/parameters/offsetEpics'
+      responses:
+        '200':
+          description: successful operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/epics'
+        '400':
+          $ref: '#/components/responses/error400query'
+        '401':
+          $ref: '#/components/responses/error401'
+        '404':
+          $ref: '#/components/responses/error404'
+  /projects/{appId}/stories/{storyId}/tasks:
+    get:
+      tags:
+        - tasks
+      summary: Get tasks of a story by story ID and app ID
+      description: Returns an array of tasks
+      operationId: getStoryTasks
+      parameters:
+        - $ref: '#/components/parameters/appId'
+        - $ref: '#/components/parameters/storyId'
+      responses:
+        '200':
+          description: successful operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/tasks'
+        '401':
+          $ref: '#/components/responses/error401'
+        '404':
+          $ref: '#/components/responses/error404'
+components:
+  parameters:
+    appId:
+      name: appId
+      in: path
+      description: ID of the app
+      required: true
+      schema:
+        type: string
+        format: uuid
+    storyId:
+      name: storyId
+      in: path
+      description: Readable ID of the story
+      required: true
+      schema:
+        type: string
+    limit:
+      name: limit
+      in: query
+      required: false
+      schema:
+        type: integer
+        format: int64
+        minimum: 1
+        maximum: 100
+        default: 20
+    limitStories:
+      allOf:
+        - $ref: '#/components/parameters/limit'
+          description: The maximum number of stories that can be returned per request. If the total stories retrieved is more than this limit, then we shall provide page links for retrieval of subsequent stories in the response.
+    limitEpics:
+      allOf:
+        - $ref: '#/components/parameters/limit'
+          description: The maximum number of epics that can be returned per request. If the total epics retrieved is more than this limit, then we shall provide page links for retrieval of subsequent epics in the response.
+    offset:
+      name: offset
+      in: query
+      required: false
+      schema:
+        type: integer
+        format: int64
+        minimum: 0
+        default: 0
+    offsetStories:
+      allOf:
+        - $ref: '#/components/parameters/offset'
+          description: The offset is the zero-based index of the first story to be returned on the page.
+    offsetEpics:
+      allOf:
+        - $ref: '#/components/parameters/offset'
+          description: The offset is the zero-based index of the first epic to be returned on the page.
+  responses:
+    error400:
+      description: |-
+        The request likely contains invalid data or is missing data.
+
+        The error response gives additional feedback.
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/error'
+          examples:
+            example-400:
+              value:
+                error:
+                  status: 400
+                  title: Bad Request
+                  detail: Request validation errors
+    error400query:
+      allOf:
+        - $ref: '#/components/responses/error400'
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/error400query'
+    error400postStoriesMalformed:
+      allOf:
+        - $ref: '#/components/responses/error400'
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/error400postStoriesMalformed'
+    error400patchStories:
+      allOf:
+        - $ref: '#/components/responses/error400'
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/error400patchStories'
+    error401:
+      description: |-
+        There were no usable authentication credentials found.
+
+        The error response gives additional feedback.
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/error401'
+    error404:
+      description: |-
+        The required item could not be found.
+
+        The error response gives additional feedback.
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/error404'
+  schemas:
+    error:
+      type: object
+      properties:
+        status:
+          type: integer
+          minimum: 0
+          example: 400
+        title:
+          type: string
+          example: Bad Request
+        detail:
+          type: string
+          example: Malformed request body
+    error400query:
+      type: object
+      properties:
+        status:
+          type: integer
+          format: int64
+          example: 400
+        title:
+          type: string
+          example: Bad Request
+        detail:
+          type: string
+          example: Unsupported query parameter was used
+    error400postStoriesMalformed:
+      type: object
+      properties:
+        status:
+          type: integer
+          format: int64
+          example: 400
+        title:
+          type: string
+          example: Bad Request
+        detail:
+          type: string
+          example: The request is malformed and could not be read
+    error400patchStories:
+      type: object
+      properties:
+        status:
+          type: integer
+          format: int64
+          example: 400
+        title:
+          type: string
+          example: Bad Request
+        detail:
+          type: string
+          example: The title of a story is required.
+    error401:
+      type: object
+      properties:
+        status:
+          type: integer
+          format: int64
+          example: 401
+        title:
+          type: string
+          example: Unauthorized
+        detail:
+          type: string
+          example: Credentials could not be authenticated.
+    error404:
+      type: object
+      properties:
+        status:
+          type: integer
+          format: int64
+          example: 404
+        title:
+          type: string
+          example: Not Found
+        detail:
+          type: string
+          example: The app does not exist or you do not have access to it
+    limit:
+      type: integer
+      format: int64
+      example: 20
+      minimum: 0
+      maximum: 100
+    offset:
+      type: integer
+      format: int64
+      minimum: 0
+      example: 120
+    links:
+      type: array
+      items:
+        type: object
+        properties:
+          rel:
+            type: string 
+            example: current
+            enum:
+              - first
+              - previous
+              - current
+              - next
+              - last
+          hRef:
+            type: string
+            format: url
+            example: "https://epics-api.mendix.com/v1/projects/346a2cad-6b96-477a-9225-3957b73ctpro/{tag}?limit=20&offset=120"
+    sortId:
+      type: integer
+      format: int64
+      minimum: 0
+      example: 0
+    storyId:
+      type: string
+      example: TEST-1
+    storyLevel:
+      type: string
+      example: Active
+      enum:
+        - Active
+        - NextSprint
+        - InRefinement
+        - Backlog 
+    storyPoints:
+      type: integer
+      format: int64
+      minimum: 0
+      example: 5
+    storyType:
+      type: string
+      example: Feature
+      enum:
+        - Bug
+        - Feature
+    title:
+      type: string
+      example: "Title of something to do" 
+    uuid:
+      type: string
+      format: uuid
+      example: 346a2cad-6b96-477a-9225-3957b73ctest
+    statuses:
+      type: object
+      properties:
+        statuses:
+          type: array
+          items:
+            type: object
+            properties:
+              name:
+                type: string
+                example: Done
+              sortId:
+                type: integer
+                format: int64
+                example: 0
+    stories:
+      type: object
+      properties:
+        stories:
+          type: array
+          items:
+            type: object
+            properties:
+              uuid:
+                $ref: '#/components/schemas/uuid'
+              storyId:
+                $ref: '#/components/schemas/storyId'
+              sortId:
+                $ref: '#/components/schemas/sortId'
+              title:
+                $ref: '#/components/schemas/title'
+              descriptionHTML:
+                type: string
+                format: html 
+                example: <p>A simple story description</p>
+              descriptionPlain:
+                type: string
+                example: A simple story description
+              storyPoints:
+                $ref: '#/components/schemas/storyPoints'
+              storyType:
+                $ref: '#/components/schemas/storyType'
+              storyLevel:
+                $ref: '#/components/schemas/storyLevel'
+              numberOfTasks:
+                type: integer
+                format: int64
+                example: 1
+              status:
+                type: string
+                example: Done
+        totalStories:
+          type: integer
+          format: int64
+          example: 1
+        links: 
+          $ref: '#/components/schemas/links'
+        limit:
+          $ref: '#/components/schemas/limit'
+        offset:
+          $ref: '#/components/schemas/offset'
+    epics:
+      type: object
+      properties:
+        epics:
+          type: array
+          items:
+            type: object
+            properties:
+              epicId:
+                type: string
+                example: 'EPI-TEST-1'
+              name:
+                type: string
+                example: Public API Initiative
+              objective:
+                type: string
+                example: ability to change stories programatically
+              numberOfStories:
+                type: integer
+                format: int64
+                minimum: 0
+                example: 4
+              numberOfStoryPoints:
+                type: integer
+                format: int64
+                minimum: 4
+                example: 24
+        totalEpics:
+          type: integer
+          format: int64
+          minimum: 0
+          example: 240
+        links:
+          $ref: '#/components/schemas/links'
+        limit:
+          $ref: '#/components/schemas/limit'
+        offset:
+          $ref: '#/components/schemas/offset'
+    tasks:
+      type: object
+      properties:
+        tasks:
+          type: array
+          items:
+            type: object
+            properties:
+              title:
+                $ref: '#/components/schemas/title' 
+              isDone:
+                type: boolean
+                example: false
+              sortId:
+                $ref: '#/components/schemas/sortId'
+    post-stories-200:
+      type: object
+      properties:
+        items:
+          type: array
+          items:
+            type: object
+            properties:
+              code:
+                type: integer
+                format: int64
+                example: 200
+              story:
+                type: object
+                properties:
+                  uuid:
+                    $ref: '#/components/schemas/uuid'
+                  storyId:
+                    $ref: '#/components/schemas/storyId'
+    post-stories-207:
+      type: object
+      properties:
+        items:
+          type: array
+          items:
+            type: object
+            properties:
+              code:
+                type: integer
+                format: int64
+                example: 400
+              reason:
+                type: string
+                example: Unsupported story type
+    post-stories-request:
+      type: array
+      items:
+        type: object
+        properties:
+          title:
+            $ref: '#/components/schemas/title'
+          description:
+            type: string
+            example: Description of a new user story
+          storyType:
+            $ref: '#/components/schemas/storyType'
+          storyPoints:
+            $ref: '#/components/schemas/storyPoints'
+          storyLevel:
+            $ref: '#/components/schemas/storyLevel'
+    patch-stories-request:
+      type: object
+      properties:
+        title:
+          $ref: '#/components/schemas/title'
+        description: 
+          type: string
+          example: Update story description
+        storyPoints:
+          $ref: '#/components/schemas/storyPoints'
+        storyType:
+          $ref: '#/components/schemas/storyType'
+        storyLevel:
+          $ref: '#/components/schemas/storyLevel'
+        storyStatus:
+          type: string
+          example: Done
+  securitySchemes:
+    PersonalAccessToken:
+      name: Authorization
+      type: apiKey
+      in: header
+      description: 'For more information about requesting and using a token see the [documentation](https://docs.mendix.com/developerportal/community-tools/mendix-profile/#pat).<br/> The header must be set to `MxToken <Your PAT>`.'        
+tags:
+  - name: epics
+  - name: statuses
+  - name: stories
+  - name: tasks
+security:
+  - PersonalAccessToken: []

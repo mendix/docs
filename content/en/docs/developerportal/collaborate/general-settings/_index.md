@@ -144,7 +144,7 @@ On the **Project Management** tab, you can select your team's planning tool for 
 
 It is possible to migrate all or part of your content from [Stories](/developerportal/collaborate/stories/) to Epics. For details, see the [Data Migration](/developerportal/project-management/epics/planning/#data-migration) section of *Planning*.
 
-If you manage your projects in Jira, you can connect your apps in the Developer Portal to Jira. For more information, see [Jira Connector](/developerportal/collaborate/jira-connector/).
+If you manage your projects in Jira, you can connect your apps in the Developer Portal to Jira. For more information, see [Jira Connector](/developerportal/project-management/jira-connector/).
 
 {{< figure src="/attachments/developerportal/collaborate/general-settings/story-switcher.png" width="700"  >}}
 

@@ -35,7 +35,6 @@ These tabs are only available for users with the **App Settings** permission:
 * **Cloud Settings**
 * **API Keys**
 * **Project Management**
-* **Webhooks**
 * **History**
 * **Story Archive**
 

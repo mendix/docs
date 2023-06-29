@@ -196,7 +196,7 @@ The **History** tab presents the collaboration actions for the app. On this page
 
 When you select a history item and click **Show item**, the details of the story, Sprint, or [feedback item](/developerportal/collaborate/feedback/) will be presented.
 
-## 9 Story Archive
+## 9 Story Archive {#story-archive}
 
 Once you have switched from Mendix Stories to Epics or Jira, we archive any work you may have had in Mendix Stories. You can review your work on this tab, and download it if necessary.
 

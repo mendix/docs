@@ -50,7 +50,7 @@ In Windows, use the following format for the command line:
 
 You can also run MxBuild under Linux using the the following command line format:
 
-`mono mxbuild.exe --java-home="JDKDirectory" --java-exe-path="javaExecutable" [options] projectFile`
+`mxbuild --java-home="JDKDirectory" --java-exe-path="javaExecutable" [options] projectFile`
 
 After creating the deployment package, the MxBuild process quits.
 

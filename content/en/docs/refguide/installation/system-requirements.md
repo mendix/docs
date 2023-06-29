@@ -238,7 +238,7 @@ Depending on your app's complexity, these minimum hardware requirements might no
 
 MxBuild is a Windows and Linux command-line tool that can be used to build a Mendix Deployment Package. For more information, see [MxBuild](/refguide/mxbuild/).
 
-* Mono v5.20.x or .NET v4.7.2
+* .NET 6.0
 * JDK 11
 
 ## 12 mx Command-Line Tool {#mxtool}

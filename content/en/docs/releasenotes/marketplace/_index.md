@@ -17,7 +17,7 @@ These release notes cover changes made to the [Mendix Marketplace](/appstore/).
 
 #### New Features
 
-* You can configure your own **Proprietary License** when creating a new **Public** component. The license will be reviewed by Mendix alongside the review of the component. After the license has been approved, you and anyone within your organization will be able to use the license for other components.
+* You can now configure your own [proprietary license](/appstore/general/share-app-store-content/#4222-proprietary-license) when creating a new public component. The license will be reviewed by Mendix alongside the review of the component. After the license has been approved, you and anyone within your organization can use the license for other components. 
 
 ### May 25th, 2023
 

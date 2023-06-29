@@ -13,6 +13,12 @@ These release notes cover changes made to the [Mendix Marketplace](/appstore/).
 
 ## 2023
 
+### June 29th, 2023
+
+#### New Features
+
+* You can configure your own **Proprietary License** when creating a new **Public** component. The license will be reviewed by Mendix alongside the review of the component. After the license has been approved, you and anyone within your organization will be able to use the license for other components.
+
 ### May 25th, 2023
 
 #### New Features

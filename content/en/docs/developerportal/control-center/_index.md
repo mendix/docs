@@ -299,7 +299,7 @@ You may only have one Technical Contact per app. When you change the Technical C
 
 An organization's Catalog requires governance of the data-sharing policy down to the practical details of curating registered assets. A Mendix Admin can oversee these functions and also assign curators that can perform governance tasks for their apps.
 
-For details on these tasks, see [Catalog Administration](/developerportal/control-center/data-hub-admin/).
+For details on these tasks, see [Catalog Administration](/developerportal/control-center/catalog-admin/).
 
 ## 14 Marketplace Content {#marketplace-content}
 

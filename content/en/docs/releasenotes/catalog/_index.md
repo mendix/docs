@@ -13,6 +13,12 @@ These release notes cover changes made to the [Catalog](/catalog/).
 
 ## 2023
 
+### June 29th, 2023
+
+#### Improvements
+
+* We improved the clarity and accuracy of even more Catalog UI texts.
+
 ### June 22nd, 2023
 
 #### Improvements

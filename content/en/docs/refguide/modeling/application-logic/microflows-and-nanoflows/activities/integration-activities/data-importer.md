@@ -14,15 +14,23 @@ This activity can only be used in **Microflows**.
 
 [verify that this activity is indeed under Integration Activities or its own thing]
 
-The **Data Importer** activity can be used in a microflow to integrate data from an Excel file into your Mendix app. Before using this activity, ensure that you have imported an Excel file with the [Data Importer](/refgide/data-importer/).
+The **Data Importer** activity can be used in a microflow to integrate data from an Excel file into your Mendix app. 
 
-## 2 Properties
+{{% alert color="warning" %}}Before using this activity, ensure that you have imported an Excel file with the [Data Importer](/refgide/data-importer/).{{% /alert %}}
 
-Data Importer Document > Source parameters in microflow InputFile
-Data importer action
+## 2  Properties
 
-Data Importer Mapping Properties
-File
-Data Importer Document
-List of customer
+Double-click on the **Data Importer** activity after you have dragged it into your microflow to view its properties:
 
+{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/integration-activities/data-importer-activity/properties.png" >}}
+
+The following are the properties in the **Input** section:
+
+* **File** – name of file document from which you will import data
+* **Data Importer document** – the [Data Importer service document](/refguide/data-importer/) created by going to **Add other** > **Data Importer**
+
+The following are the properties in the **Output** section:
+
+* **Return type** – the return type of the microflow
+* **Use return variable** – if set to yes, you will be asked to give it a name
+* **Variable name** – the result of the activity will be given this name

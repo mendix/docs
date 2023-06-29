@@ -263,7 +263,7 @@ When searching in the Catalog, the following fields are searched:
 * Attribute: Name, Description
 * Association: Name
 
-From the **Home** page, you can search the Catalog in the following ways:
+From the **Catalog** home page, you can search the Catalog in the following ways:
 
 * Type a search term in the search box and click **Search** (search strings must be at least 3 alphanumeric characters)
 * Click one of the *tags* given in the search suggestions

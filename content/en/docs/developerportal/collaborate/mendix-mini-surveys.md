@@ -1,7 +1,7 @@
 ---
 title: "Mendix Mini Surveys"
-url: /developerportal/collaborate/product-insights/
-category: "Collaboration"
+url: /developerportal/app-insights/mini-surveys/
+category: "App Insights"
 weight: 5
 description: "Describes how to set up mini surveys to gain insights into your app and view and export the survey results."
 tags: ["mini survey", "app insights", "sprint", "developer portal"]

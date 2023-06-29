@@ -19,7 +19,7 @@ aliases:
 
 The [Catalog](https://catalog.mendix.com) is a development tool provided in the Mendix Cloud. 
 
-{{< figure src="/attachments/data-hub/data-hub-catalog/catalog-home.png" >}}
+{{< figure src="/attachments/catalog/data-hub-catalog/catalog-home.png" >}}
 
 ### 1.2 What is the Catalog?
 

@@ -28,7 +28,7 @@ The customer implementation is a separate, upgradable model instance (fork) per 
 | Options | Dedicated App | Cloud Node per Customer | Customer Access to Developer Portal¹ | Model Access for Customer¹ |
 | --- | --- | --- | --- | --- |
 | ISV builds, no design-time adaptation needed | No | Optional | No | No |
-| ISV builds and adapts for customer as managed service | Yes | Yes | Optional for collaboration with [Feedback](/developerportal/collaborate/feedback/) and [Epics](/developerportal/collaborate/epics/) | No |
+| ISV builds and adapts for customer as managed service | Yes | Yes | Optional for collaboration with [Feedback](/developerportal/collaborate/feedback/) and [Epics](/developerportal/project-management/epics/) | No |
 | Customized by customer or implementation partner | Yes | Yes | Yes, including access to the customer model | Yes |
 
 ¹Including the partner that implements on behalf of the customer.

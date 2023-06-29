@@ -17,6 +17,16 @@ To see the current status of the Mendix Developer Portal and Control Center, see
 
 ## 2023
 
+### June 29th, 2023
+
+#### New Features
+
+* We introduced a Mendix Profile recovery email address option that allows you to prove ownership of a profile during the profile merge process. You can provide a non-business email address for this.
+
+#### Improvements
+
+* We changed the process for merging Mendix Profiles so that the profiles are truly merged and your user accounts stay connected to the resulting Mendix Profile. Previously, profile data was moved from one account to another.
+
 ### June 22nd, 2023
 
 #### New Features
@@ -34,6 +44,7 @@ To see the current status of the Mendix Developer Portal and Control Center, see
 * We had a close look at the messages we post on the [History](/developerportal/collaborate/team/) tab of the **Team** page and revised some of them to make them more readable.
 * You can now see all pending invitations to your app on the [Team](/developerportal/collaborate/team/) page.
 * We fixed an issue where, under certain circumstances, the app logo was not updated in Studio Pro after you changed it in the [General Settings](/developerportal/collaborate/general-settings/) page.
+
 ### June 15th, 2023
 
 #### New Features

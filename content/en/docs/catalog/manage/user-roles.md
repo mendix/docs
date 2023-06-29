@@ -24,16 +24,16 @@ Catalog users can do the following:
 
 A Mendix Admin can do the following:
 
-* Act as a [Mendix Admin](/developerportal/control-center/data-hub-admin/) of the organization's Catalog
+* Act as a [Mendix Admin](/developerportal/control-center/catalog-admin/) of the organization's Catalog
 * Assign [ Curator](#curator) roles
 * Curate the Catalog according to the organization's data governance policy
 * Access all the registered assets in the Catalog for the organization
 
-For more information, see the [Data Hub](/developerportal/control-center/#data-hub) section of *Control Center*. 
+For more information, see the [Catalog](/developerportal/control-center/#catalog) section of *Control Center*. 
 
 ### 2.1 External Users
 
-Mendix Admins can add **External Users** to their company's Catalog. See the [External Users](/developerportal/control-center/data-hub-admin/#external-users) section in *Data Hub Administration*.
+Mendix Admins can add **External Users** to their company's Catalog. See the [External Users](/developerportal/control-center/catalog-admin/#external-users) section in *Catalog Administration*.
 
 ## 3 Curator {#curator}
 

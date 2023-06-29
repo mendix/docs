@@ -167,7 +167,7 @@ These release notes cover changes made to the [Catalog](/catalog/).
 #### Improvements
 
 * You can now view authentication details in the [data source details](/catalog/manage/search/#service-details) page. 
-* The **Technical Owner** can now only be changed in the **Control Center**, not within the **Catalog**. See the [Custom Owners](/developerportal/control-center/data-hub-admin/#custom-owners) section of *Data Hub Administration*.
+* The **Technical Owner** can now only be changed in the **Control Center**, not within the **Catalog**. See the [Custom Owners](/developerportal/control-center/catalog-admin/#custom-owners) section of *Catalog Administration*.
 
 #### Fixes
 
@@ -277,7 +277,7 @@ These release notes cover changes made to the [Catalog](/catalog/).
 
 #### Improvements
 
-* Mendix Admins can now assign a new [external user](/developerportal/control-center/data-hub-admin/#external-users) when removing the existing one from company's Catalog. To remove a user, go to the **Control Center** > **Data Hub** > **External Users** and click **Remove**.
+* Mendix Admins can now assign a new [external user](/developerportal/control-center/catalog-admin/#external-users) when removing the existing one from company's Catalog. To remove a user, go to the **Control Center** > **Data Hub** > **External Users** and click **Remove**.
 
 #### Fixes
 
@@ -563,7 +563,7 @@ These release notes cover changes made to the [Catalog](/catalog/).
 
 #### New Features
 
-* We added a new **Settings** tab to the [Data Hub](/developerportal/control-center/data-hub-admin/#settings) page in Control Center with a default discoverability setting.
+* We added a new **Settings** tab to the [Data Hub](/developerportal/control-center/catalog-admin/#settings) page in Control Center with a default discoverability setting.
 * We added a discoverability radio button to the data source [registration](/catalog/register/register-data/) form.
 
 #### Fixes
@@ -588,7 +588,7 @@ These release notes cover changes made to the [Catalog](/catalog/).
 #### Fixes
 
 * We fixed an issue where the [Business Owner](/catalog/manage/search/#busines-owner) name was not visible in the metadata of a data source.
-* We removed the temporary administration link from the home page. The owner management page is now available from the [Curate](/catalog/manage/curate/) tab for Data Hub Curators and from the [Administration](/developerportal/control-center/data-hub-admin/#custom-owners) page in Control Center for Mendix Administrators.
+* We removed the temporary administration link from the home page. The owner management page is now available from the [Curate](/catalog/manage/curate/) tab for Data Hub Curators and from the [Administration](/developerportal/control-center/catalog-admin/#custom-owners) page in Control Center for Mendix Administrators.
 
 ### October 14th, 2021
 
@@ -648,7 +648,7 @@ These release notes cover changes made to the [Catalog](/catalog/).
 
 * We fixed an issue where updating a service version created a new endpoint instead of updating the existing one.
 * We fixed an issue that caused pagination URLs to be returned as *http* links rather than *https*.
-* We fixed an issue where clicking **Control Center** in the top bar of the [Data Hub administration](/developerportal/control-center/#data-hub) page navigated to the Data Hub home page. Now, it navigates to Control Center.
+* We fixed an issue where clicking **Control Center** in the top bar of the [Catalog Administration](/developerportal/control-center/#catalog) page navigated to the Data Hub home page. Now, it navigates to Control Center.
 
 ### September 2nd, 2021
 
@@ -666,7 +666,7 @@ These release notes cover changes made to the [Catalog](/catalog/).
     * `GET` all environments for an application
     * `GET` all consumed endpoints
 * A change was made to the `POST` application API call to also allow for the `Opcenter` and `MindSphere` application types.
-* We added Catalog integration with [Control Center](/developerportal/control-center/#data-hub). For details, see [Data Hub Administration](/developerportal/control-center/data-hub-admin/).
+* We added Catalog integration with [Control Center](/developerportal/control-center/#catalog). For details, see [Catalog Administration](/developerportal/control-center/catalog-admin/).
 
 ### August 19th, 2021
 
@@ -741,7 +741,7 @@ These release notes cover changes made to the [Catalog](/catalog/).
 
 #### New Features
 
-* A new connector has been added to the **Data Hub Home** for [registering](/catalog/register/register-data/) Siemens Opcenter data sources.
+* A new connector has been added to the **Catalog Home** for [registering](/catalog/register/register-data/) Siemens Opcenter data sources.
 
 #### Improvements
 
@@ -753,7 +753,7 @@ These release notes cover changes made to the [Catalog](/catalog/).
 #### Improvements
 
 * Datasets in the [search results list](/catalog/manage/search/#search-results) that are validated are now clearly indicated as such.
-* Custom owners can be added for an application when [registering data sources](/catalog/register/register-data/) using the business application connectors from the **Data Hub Home**.
+* Custom owners can be added for an application when [registering data sources](/catalog/register/register-data/) using the business application connectors from the **Catalog Home**.
 * Further styling changes have been made to improve usability.
 
 ### May 6th, 2021
@@ -778,7 +778,7 @@ The [Data Hub Transform API](https://datahub-spec.s3.eu-central-1.amazonaws.com/
 
 #### Improvements
 
-* [Registration](/catalog/register/register-data/) of data sources using the business application connectors from the **Data Hub Home** is improved. For each connector, users can register data sources by selecting from a list of apps and environments already registered in the Catalog for the business application. When none are registered, the  "**Create New...**" option will be presented.
+* [Registration](/catalog/register/register-data/) of data sources using the business application connectors from the **Catalog Home** is improved. For each connector, users can register data sources by selecting from a list of apps and environments already registered in the Catalog for the business application. When none are registered, the  "**Create New...**" option will be presented.
 
 ### March 18th, 2021
 

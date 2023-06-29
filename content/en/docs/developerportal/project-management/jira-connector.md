@@ -1,7 +1,7 @@
 ---
-title: "Jira Connector"
-url: /developerportal/collaborate/jira-connector/
-weight: 4
+title: "Jira"
+url: /developerportal/project-management/jira-connector/
+weight: 5
 description: "Describes how to connec Mendix apps in the Developer Portal to Jira."
 tags: ["app", "jira", "project management", "scrum master", "general settings", Developer Portal", "Scrum Master"]
 ---
@@ -48,7 +48,7 @@ To connect your app to Jira, perform the following steps:
 
 4. Click **Connect Jira**. The **Set Up Jira Configuration** dialog box opens.
 
-    {{< figure src="/attachments/developerportal/collaborate/jira-connector/set-up-jira-configuration.png"   >}}
+    {{< figure src="/attachments/developerportal/project-management/jira-connector/set-up-jira-configuration.png"   >}}
 
     Fill in the information as follows:
 
@@ -61,7 +61,7 @@ To connect your app to Jira, perform the following steps:
 
 6. If your Jira project has several boards configured, from the drop-down list, select one of the Jira boards to connect. We support Scrum, simplified Scrum, and Kanban board types.
 
-    {{< figure src="/attachments/developerportal/collaborate/jira-connector/connect-jira-board.png"   >}}
+    {{< figure src="/attachments/developerportal/project-management/jira-connector/connect-jira-board.png"   >}}
 
 7. If your app has stories in any uncompleted Sprint or backlog, with the status "to-do" or "running", you can choose whether to migrate these stories to your Jira project. 
 
@@ -87,4 +87,6 @@ Once the activation is completed, your app is connected to Jira. You can see the
 
 * After you commit your changes in Studio Pro, you can see the associated Jira stories in the details of the corresponding [revision](/developerportal/collaborate/team-server/#revision-details) in the **Team Server** page of the Developer Portal.
 
-* You can see the link to your Jira board on the [Stories](/developerportal/collaborate/stories/) page in the Developer Portal.
+*  You can see the link to your Jira board in the **Project Management** section of the Developer Portal.
+
+    {{< figure src="/attachments/developerportal/project-management/jira-connector/navigation-jira.png"   >}}

@@ -21,6 +21,10 @@ To see the current status of the Mendix Developer Portal and Control Center, see
 
 #### New Features
 
+* With both Epics and Jira connector as new options to plan your work, we are getting ready to say goodbye to Mendix Stories on October 1, 2023. As of today, once you switch to [Epics](/developerportal/project-management/epics/) or [Jira](/developerportal/project-management/jira-connector/) , we will [archive all your work in Mendix Stories](/developerportal/collaborate/general-settings/#story-archive) and you will not be able to switch back to Mendix Stories anymore. The Scrum Master of your team can choose the right project management tool for you on the [Project Management](/developerportal/collaborate/general-settings/#project-management) tab on the **General Settings** page.
+* To highlight the story tool you choose for your app, we gave it its own section in the navigation, called [Project Management](/developerportal/project-management/).
+* With these changes, navigation in Epics works a bit differently than before: the navigation items are on the sidebar now instead of at the top, so it is easier for you to get from one part of the Developer Portal to another (but if you need more space on the screen, you can always collapse the sidebar).
+* Speaking of Epics, we have released the new public API. You can find all the information in our [documentation](/apidocs-mxsdk/apidocs/epics-api/).
 * We introduced a Mendix Profile recovery email address option that allows you to prove ownership of a profile during the profile merge process. You can provide a non-business email address for this.
 
 #### Improvements
@@ -31,7 +35,7 @@ To see the current status of the Mendix Developer Portal and Control Center, see
 
 #### New Features
 
-* Jira is here! You can now assign your Studio Pro commits to user stories in your Jira board. We offer this functionality as a Beta version and welcome your feedback. Read all about the features and how to set it up in [Jira Connector](/developerportal/collaborate/jira-connector/).
+* Jira is here! You can now assign your Studio Pro commits to user stories in your Jira board. We offer this functionality as a Beta version and welcome your feedback. Read all about the features and how to set it up in [Jira Connector](/developerportal/project-management/jira-connector/).
 
 #### Improvements
 
@@ -83,13 +87,13 @@ To see the current status of the Mendix Developer Portal and Control Center, see
 
 #### New Features 
 
-* In [Epics](/developerportal/collaborate/epics/), you can now select multiple stories on the [Planning](/developerportal/collaborate/epics/#planning) page, and then move them to a different category, archive them, or delete them in one go.
-* In  [Epics](/developerportal/collaborate/epics/), you can now use [keyboard shortcuts](/developerportal/collaborate/epics/#keyboard-shortcuts) to select stories on the **Planning** page.
+* In [Epics](/developerportal/project-management/epics/), you can now select multiple stories on the [Planning](/developerportal/project-management/epics/planning/) page, and then move them to a different category, archive them, or delete them in one go.
+* In  [Epics](/developerportal/project-management/epics/), you can now use [keyboard shortcuts](/developerportal/project-management/epics/planning/#keyboard-shortcuts) to select stories on the **Planning** page.
 
 #### Fixes
 
 * We fixed an issue where under certain circumstances you were not able to retry to [migrate your repository to Git](/developerportal/collaborate/migrate-to-git/) if the first try resulted in errors.
-* We fixed an issue where a redirect to a user story that is linked to a feedback item would result in an error if this story is hosted by [Epics](/developerportal/collaborate/epics/).
+* We fixed an issue where a redirect to a user story that is linked to a feedback item would result in an error if this story is hosted by [Epics](/developerportal/project-management/epics/).
 
 ### April 20th, 2023
 
@@ -106,12 +110,12 @@ To see the current status of the Mendix Developer Portal and Control Center, see
 
 #### Improvements
 
-* We added the following features to [Epics](/developerportal/collaborate/epics/):
+* We added the following features to [Epics](/developerportal/project-management/epics/):
     * You can now add, rename, and delete tags, as well as change tag colors (21 colors to choose from!).
     * You can now create, link, or remove stories directly from an epic.
     * The address bar in your browser now shows the link to the exact board, story, and epic, so you can bookmark individual pages and easily come back to them.
-    * If you use Scrum, you can now see a summary of your completed sprint on the [archived Sprint details](/developerportal/collaborate/epics/#archived-sprint-details) page. You can see how many stories were completed and uncompleted, as well as the breakdown of completed points in the Sprint.
-    * You can now [import](/developerportal/collaborate/epics/#import-stories) and [export](/developerportal/collaborate/epics/#export-archived-stories) stories using Excel files.
+    * If you use Scrum, you can now see a summary of your completed sprint on the [archived Sprint details](/developerportal/project-management/epics/archive/#archived-sprint-details) page. You can see how many stories were completed and uncompleted, as well as the breakdown of completed points in the Sprint.
+    * You can now [import](/developerportal/project-management/epics/planning/#import-stories) and [export](/developerportal/project-management/epics/archive/#export-archived-stories) stories using Excel files.
 
 #### Fixes
 
@@ -123,7 +127,7 @@ To see the current status of the Mendix Developer Portal and Control Center, see
 #### Improvements
 
 * We have made the option to migrate your app to Git more prominent. The banner is now displayed on all pages within the **Collaborate** section of the Developer Portal. Read more information on how to migrate and if you are eligible to migrate [here](/developerportal/collaborate/migrate-to-git/).
-* Have you tried [Epics](/developerportal/collaborate/epics/) yet? You should! It is awesome if we do say ourselves. We are also working in the background to make it possible to connect your Mendix apps to your Jira boards – stay tuned!
+* Have you tried [Epics](/developerportal/project-management/epics/) yet? You should! It is awesome if we do say ourselves. We are also working in the background to make it possible to connect your Mendix apps to your Jira boards – stay tuned!
 
 ### March 23rd, 2023
 
@@ -182,8 +186,8 @@ For more information on security issues, see [Security Advisories](/releasenotes
 
 #### Improvements
 
-* We enabled more options for search in [Epics](/developerportal/collaborate/epics/). On the [Board](/developerportal/collaborate/epics/#board) page, you can now search stories based on tags, epic name, assignee (and unassigned stories), story title, and story ID. On the [Planning](/developerportal/collaborate/epics/#planning) page, you can search stories based on tags, epic name, assignee (and unassigned stories), status name (only in the Scrum workflow), story title, and story ID.
-* The Epics listed on the [Epics](/developerportal/collaborate/epics/#epics) overview page now have visible tags.
+* We enabled more options for search in [Epics](/developerportal/project-management/epics/). On the [Board](/developerportal/project-management/epics/board/) page, you can now search stories based on tags, epic name, assignee (and unassigned stories), story title, and story ID. On the [Planning](/developerportal/project-management/epics/planning/) page, you can search stories based on tags, epic name, assignee (and unassigned stories), status name (only in the Scrum workflow), story title, and story ID.
+* The Epics listed on the [Epics](/developerportal/project-management/epics/epics/) overview page now have visible tags.
 
 #### Fixes
 
@@ -210,8 +214,8 @@ For more information on security issues, see [Security Advisories](/releasenotes
 #### Improvements
 
 * We fixed an issue where the story description did not appear in Studio Pro.
-* [Epics](/developerportal/collaborate/epics/) now have different colors so that you can distinguish between them more easily. The color is currently assigned randomly (as is done with story labels), but we may add management functionality at a later point.
-* If you practice Scrum, you can now see the status of the stories in your active Sprint on the [Planning](/developerportal/collaborate/epics/#planning) page.
+* [Epics](/developerportal/project-management/epics/) now have different colors so that you can distinguish between them more easily. The color is currently assigned randomly (as is done with story labels), but we may add management functionality at a later point.
+* If you practice Scrum, you can now see the status of the stories in your active Sprint on the [Planning](/developerportal/project-management/epics/planning/) page.
 * Sprint details are now editable, so you can change the date, name, and goal of your Sprint after you start it. Use this power wisely, as committing to a Sprint goal is important, so only change the goal if there really is no other option.
 * We have implemented the new [Mendix Feedback](/appstore/modules/mendix-feedback/) module, so now you have much better screenshot functionality. Do send us feedback, we love hearing what you think. And also try out the new Mendix Feedback module in your own apps, it's awesome!
 
@@ -237,11 +241,11 @@ This feature is in Beta, so we would very much appreciate your feedback. If you 
 
 #### Improvements
 
-We released a new version of [Epics](/developerportal/collaborate/epics/), our brand new Agile planning tool, for General Availability!
+We released a new version of [Epics](/developerportal/project-management/epics/), our brand new Agile planning tool, for General Availability!
 
 We made the following improvements:
 
-* It is possible to migrate all your data from Stories into Epics. For details, see the [Data Migration](/developerportal/collaborate/epics/#data-migration) section of *Epics*.
+* It is possible to migrate all your data from Stories into Epics. For details, see the [Data Migration](/developerportal/project-management/epics/planning/#data-migration) section of *Epics*.
 * You can link a feedback item to a story in Epics. If you accept feedback, the story with the feedback ID and the link to the original issue will show up in your backlog.
 * If you type *#* and then start typing a story name, you can link a story in the description of another story. This is handy for showing dependencies or other relationships between stories.
 * Mentioning app team members with *@* is available in story and epic descriptions as well as in comments. If someone *@* mentions you, it triggers a notification on the Mendix Platform and/or an email, depending on your notification settings.
@@ -306,12 +310,12 @@ In Portfolio Management, you can do the following
 
 #### New Features
 
-* We replaced the widget used in story description in [Epics](/developerportal/collaborate/epics/) with a new one, which fixes the bug you might have been experiencing. This replacement also comes with the following changes:
+* We replaced the widget used in story description in [Epics](/developerportal/project-management/epics/) with a new one, which fixes the bug you might have been experiencing. This replacement also comes with the following changes:
     * You can use @ to mention someone in the text of story description or epic objective. The mentioned person will get a notification once the text is saved.
-    * You can copy the link to a story or an epic on the upper-right corner of the [story details](/developerportal/collaborate/epics/#story-details) dialog box or the [epic details](/developerportal/collaborate/epics/#epic-details) dialog box.
+    * You can copy the link to a story or an epic on the upper-right corner of the [story details](/developerportal/project-management/epics/board/#story-details) dialog box or the [epic details](/developerportal/project-management/epics/epics/#epic-details) dialog box.
     * Story and epic details now appear in a dialog box instead of a side pane.
     * The widget styling is now slightly different.
-* We added a **Project Buzz** button on the [Board](/developerportal/collaborate/epics/#board) page. Clicking the button brings you to the [Buzz](/developerportal/collaborate/buzz/#app-buzz) page of the specific app in the Developer Portal.
+* We added a **Project Buzz** button on the [Board](/developerportal/project-management/epics/board/) page. Clicking the button brings you to the [Buzz](/developerportal/collaborate/buzz/#app-buzz) page of the specific app in the Developer Portal.
 * We added an error page in case you access Epics with no apps enabled.
 * We made it possible for you to link commits from Studio Pro to stories in Epics.
 
@@ -353,7 +357,7 @@ In Portfolio Management, you can do the following
 
 * We have introduced the [Marketplace Content](/developerportal/control-center/#marketplace-content) page in Control Center, where Mendix Admins can manage the visibility of Marketplace Content in Studio.
 * We simplified the process of [inviting other users](/developerportal/collaborate/team/#inviting) to your projects. Now you do not need to add a personal message to the invitation anymore and the whole process can be completed on a single page.
-* We added a banner about [Epics](/developerportal/collaborate/epics/), our new tool for Agile planning, on the [Stories](/developerportal/collaborate/stories/) page. This banner provides more information about Epics and makes it easier for Scrum Masters to enable it for their projects.  
+* We added a banner about [Epics](/developerportal/project-management/epics/), our new tool for Agile planning, on the [Stories](/developerportal/collaborate/stories/) page. This banner provides more information about Epics and makes it easier for Scrum Masters to enable it for their projects.  
 
 ### August 9th, 2022
 
@@ -385,7 +389,7 @@ In Portfolio Management, you can do the following
 
 #### New Features
 
-* We released [Epics](/developerportal/collaborate/epics/), our brand new tool for Agile planning, for Beta usage. Epics has many features. For example, you can:
+* We released [Epics](/developerportal/project-management/epics/), our brand new tool for Agile planning, for Beta usage. Epics has many features. For example, you can:
 
     * Map your exact development process with fully customizable swimlanes
     * Use Scrum or Kanban – we support both!
@@ -407,7 +411,7 @@ In Portfolio Management, you can do the following
 
 #### New Features
 
-* We redesigned the [General](/developerportal/collaborate/general-settings/) settings section to make it more intuitive and user-friendly.
+* We redesigned the [General Settings](/developerportal/collaborate/general-settings/) section to make it more intuitive and user-friendly.
 * We prepared the integration of Studio Pro with our new project management tool, Epics (coming soon!).
 
 ### June 16th, 2022

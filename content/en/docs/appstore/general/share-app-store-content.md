@@ -48,7 +48,7 @@ You can add information the end-user should know to the component [Documentation
 
 When considering intellectual property (IP) in the Mendix Marketplace, follow these guidelines:
 
-* Do not copy any text, names,or other data from other components published in the Marketplace, since you do not own the copyright. Do not create unnecessary ambiguity or confusion that would mislead consumers of Marketplace components.
+* Do not copy any text, names,or other data from other components published in the Marketplace, since you do not own the copyright. Do not create unnecessary ambiguity or confusion that would mislead users of Marketplace components.
 * Do not mention components published by others within your content on the Marketplace. 
 * Make sure your component documentation only includes intellectual property that you have created. Your component should not include information or content published by others on the Marketplace, as this may lead to removing your component from the Marketplace. This also means other components can also be removed if they are using your component information or content. 
 * If you come across instances of intellectual property abuse, let us know at *AppServices_Supplier_Team@mendix.com*.
@@ -150,9 +150,18 @@ These are the open-source software license options available and their requireme
 The [GNU General Public License (GPL), version 3](https://www.gnu.org/licenses/gpl-3.0.en.html)  is not available to use, as everything licensed under GNU GPL is public; GNU GPL has a strong copyleft effect; modification has a strong copyleft effect; and all consuming apps should make their code public.
 {{% /alert %}}
 
-##### 4.2.2.2 Partner Licenses
+##### 4.2.2.2 Proprietary License
 
-If you participate in the [Mendix Component Partner Program](/appstore/creating-content/partner-program/), you can offer your own commercial license for your content.
+You can configure your own proprietary license for your company’s content. The license can be used for multiple components, and it can be used by everyone within your organization. 
+
+This license can be created for a new **Public Marketplace (all Mendix users)** component by requesting a new license and submitting it alongside the component. The license needs to be [approved by Mendix](/appstore/general/share-app-store-content/#guidelines) after you have created and submitted it the first time. Once it has been submitted for approval, you and the people within your organization can also use it it for other components.
+
+Follow these steps to configure a proprietary license for a new public component:
+
+1. Click **Request New License**.
+2. Add a **License Name**, which is the name that will be displayed on the [component details page](/appstore/general/app-store-overview/#details).
+3. Add a **License URL**, which should lead the user to a web page that lists the terms and conditions for using the component. Users can navigate to this web page by clicking the license name on the component details page.
+4. Add a **Reason** for the new license. This is for the purpose of the Mendix review only, and it will not be displayed on the component details page.
 
 #### 4.2.3 Generating New Leads {#lead-generation}
 

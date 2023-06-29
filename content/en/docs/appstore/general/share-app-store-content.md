@@ -150,7 +150,7 @@ These are the open-source software license options available and their requireme
 The [GNU General Public License (GPL), version 3](https://www.gnu.org/licenses/gpl-3.0.en.html)  is not available to use, as everything licensed under GNU GPL is public; GNU GPL has a strong copyleft effect; modification has a strong copyleft effect; and all consuming apps should make their code public.
 {{% /alert %}}
 
-##### 4.2.2.2 Proprietary License
+##### 4.2.2.2 Proprietary License {#proprietary-license}
 
 You can configure your own proprietary license for your company’s content. The license can be used for multiple components, and it can be used by everyone within your organization. 
 

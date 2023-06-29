@@ -87,6 +87,6 @@ Once the activation is completed, your app is connected to Jira. You can see the
 
 * After you commit your changes in Studio Pro, you can see the associated Jira stories in the details of the corresponding [revision](/developerportal/project-management/team-server/#revision-details) in the **Team Server** page of the Developer Portal.
 
-* You can see the link to your Jira board in the **Project Management** section of the Developer Portal.
+*  You can see the link to your Jira board in the **Project Management** section of the Developer Portal.
 
-  {{< figure src="/attachments/developerportal/project-management/jira-connector/navigation-jira.png"   >}}
+    {{< figure src="/attachments/developerportal/project-management/jira-connector/navigation-jira.png"   >}}

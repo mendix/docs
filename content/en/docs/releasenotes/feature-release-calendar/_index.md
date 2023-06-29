@@ -74,7 +74,7 @@ The new features were divided into these major themes, which are described in th
 | Multi-region failover (Mendix Cloud, Cloud Dedicated) | GA: Q3 2023 |
 | Private Mendix Platform | Currently in Private Beta<br>GA: Q4 2023   |
 | Pipelines (Mendix Cloud, Cloud Dedicated) | Public Beta: Q4 2023<br>GA: TBD |
-| Pipelines (Private Cloud) | Public Beta: Q2 2024<br>GA: TBD |
+| Pipelines (Private Cloud) | GA: TBD |
 
 ## 6 Governance and Control
 

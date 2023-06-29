@@ -6,9 +6,13 @@ description: "Use this API to extend the requirements and project management cap
 weight: 90
 ---
 
-## 1 Introduction
+{{% alert color="warning" %}}
+As of the GA release on December 1st, 2022, [Epics](/developerportal/project-management/epics/) is the default tool for you to manage the development process of new apps. Epics is a replacement of [Stories](/developerportal/collaborate/stories). You can still use Stories in addition to Epics. However, Mendix recommends not using both of them at the same time as it will make data migration more difficult later.
 
-{{% alert color="warning" %}}As of the GA release on December 1st, 2022, [Epics](/developerportal/project-management/epics/) is the default place where you can manage the development process of new apps. </br> It is a replacement of [Stories](/developerportal/collaborate/stories/), which we plan to deprecate in the fall of 2023. You can still use Stories in addition to Epics. However, Mendix recommends not using both of them at the same time as it will make data migration more difficult later.{{% /alert %}}
+We plan to deprecate Stories in October 2023.
+{{% /alert %}}
+
+## 1 Introduction
 
 The Mendix Stories API allows you to retrieve, create, and update the Sprint, stories, and tasks in your Mendix apps.
 

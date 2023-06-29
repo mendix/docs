@@ -134,7 +134,7 @@ You are going to create a second app and consume the **Customer** dataset from t
 To do this, follow the steps below:
 
 1. In Mendix Studio Pro, create a new app using the **Blank** app template and call it *{yourname}CustomerActionsApp*.
-2. Go to the domain model > [Integration Pane](/refguide/integration-pane/) (if you do not see the [Integration Pane](/refguide/integration-pane/), click **View** > **Data Hub** to display it).
+2. Go to the domain model > [Integration Pane](/refguide/integration-pane/) (if you do not see the [Integration Pane](/refguide/integration-pane/), click **View** > **Integration** to display it).
 3. In the [Integration Pane](/refguide/integration-pane/), enter the search string *{yourname}*.
 4. By default, search in the [Integration Pane](/refguide/integration-pane/) only shows services in **Production** environments. Your app was deployed as a **Sandbox** app. Click the **Filter** icon next to the search and check **Show development environments**.
 

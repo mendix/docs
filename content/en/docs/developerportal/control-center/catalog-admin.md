@@ -1,28 +1,30 @@
 ---
-title: "Data Hub Administration"
-url: /developerportal/control-center/data-hub-admin/
+title: "Catalog Administration"
+url: /developerportal/control-center/catalog-admin/
 category: "Control Center"
 weight: 15
 description: "Describes the Mendix Admin functions for Mendix Admin and curators."
 tags: ["data hub", "Mendix Admin", "curator", "custom owner", "administration"]
+aliases:
+    - /developerportal/control-center/data-hub-admin/
 ---
 
 ## 1 Introduction
 
-In the [Data Hub](/developerportal/control-center/#data-hub) page of Control Center, you can perform the following operations:
+In the [Catalog](/developerportal/control-center/#catalog) page of Control Center, you can perform the following operations:
 
-* Assign and manage Data Hub [Curators](#curator)
+* Assign and manage [Curators](#curator)
 * Invite and manage custom [Owners](#custom-owners) (who have already been added as business or technical owners in the Catalog)
 * Invite and manage [External Users](#external-users)
 * Control the default discoverability settings of your company's data source [Settings](#settings)
 
 ## 2 Curators {#curator}
 
-A Mendix Admin sees the **Curators** tab displaying the list of Data Hub Curators for the organization:
+A Mendix Admin sees the **Curators** tab displaying the list of Curators for the organization:
 
-{{< figure src="/attachments/developerportal/control-center/data-hub-admin/curators.png" alt="Data Hub Curators" >}}
+{{< figure src="/attachments/developerportal/control-center/data-hub-admin/curators.png" alt="Curators" >}}
 
-The Data Hub Curator role can see and edit metadata for all registered assets in the Catalog. Business and Technical Owners can edit metadata on the items they own, but not those that they do not own.
+The Curator role can see and edit metadata for all registered assets in the Catalog. Business and Technical Owners can edit metadata on the items they own, but not those that they do not own.
 
 To assign a Curator role to a Mendix user, click **Add Curator**. To search the list of Mendix users in your organization, start typing in the search box and check the user(s) you want to assign the Curator role to.
 
@@ -42,12 +44,12 @@ Custom owners are owners that have been added as contacts for a registered app. 
 
 Custom owners are only the contact people for registered assets. Adding a custom owner does not give them access rights to the Catalog, as they are not able to log in to the Mendix Platform and curate registered assets in the Catalog. Custom owners appear in the Catalog with their name and initials, or with their personalized avatar if they are a Mendix user.
 
-Mendix Admins and Data Hub Curators can manage the custom owner list on the **Owners** tab:
+Mendix Admins and Curators can manage the custom owner list on the **Owners** tab:
 
 {{< figure src="/attachments/developerportal/control-center/data-hub-admin/owners.png" alt="Owners" >}}
 
 {{% alert color="info" %}}
-Data Hub Curators will see *only* the **Owners** tab available in the **Data Hub** page.
+Curators will see *only* the **Owners** tab available in the **Catalog** page.
 {{% /alert %}}
 
 On this tab, you can do the following:
@@ -63,13 +65,13 @@ Mendix Admins can invite external users on the **External Users** tab. An extern
 
 {{< figure src="/attachments/developerportal/control-center/data-hub-admin/external_users.png" alt="External users" >}}
 
-To invite a new user, on the Data Hub screen, click **Invite External Users**. In the dialog box, enter the email addresses of the users you would like to invite as external users and click **Send Invitation**.
+To invite a new user, on the Catalog screen, click **Invite External Users**. In the dialog box, enter the email addresses of the users you would like to invite as external users and click **Send Invitation**.
 
 {{% alert color="info" %}}
 You can only invite users with a Mendix account. The invitation email will not be sent to email addresses that are not associated with any Mendix account.
 {{% /alert %}}
 
-Once the external user receives the invitation, they log into the Catalog with their Mendix credentials and accept. An external user can only access resources from one organization at a time; therefore, they need to select the company that sent the invitation in the **Company** drop-down list in the Data Hub [Home](/catalog/#catalog-home) page:
+Once the external user receives the invitation, they log into the Catalog with their Mendix credentials and accept. An external user can only access resources from one organization at a time; therefore, they need to select the company that sent the invitation in the **Company** drop-down list in the Catalog [Home](/catalog/#catalog-home) page:
 
 {{< figure src="/attachments/developerportal/control-center/data-hub-admin/company_selector.png" alt="Company selector" >}}
 

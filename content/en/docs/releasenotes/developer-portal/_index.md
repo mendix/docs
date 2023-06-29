@@ -24,6 +24,11 @@ To see the current status of the Mendix Developer Portal and Control Center, see
 * To highlight the story tool you choose for your project, we gave it its own section in the navigation, called [Project Management](/developerportal/project-management/).
 * With these changes, navigation in [Epics](/developerportal/project-management/epics/) works a bit differently than before: the navigation items are in the sidebar now instead of at the top, so it is easier for you to get from one part of the Developer Portal to another (but if you need more space on the screen, you can always collapse the sidebar).
 * Speaking of Epics, we have released the new public API. You can find all the info in our [documentation](/apidocs-mxsdk/apidocs/epics-api/).
+* We introduced a Mendix Profile recovery email address option that allows you to prove ownership of a profile during the profile merge process. You can provide a non-business email address for this.
+
+#### Improvements
+
+* We changed the process for merging Mendix Profiles so that the profiles are truly merged and your user accounts stay connected to the resulting Mendix Profile. Previously, profile data was moved from one account to another.
 
 ### June 22nd, 2023
 
@@ -632,7 +637,7 @@ In Portfolio Management, you can do the following
 
 #### Improvements
 
-* We added a new menu item for Mendix Admins to access [Data Hub](/developerportal/control-center/#data-hub) tasks in Control Center. For details, see [Data Hub Administration](/developerportal/control-center/data-hub-admin/).
+* We added a new menu item for Mendix Admins to access [Catalog Administration](/developerportal/control-center/#catalog) tasks in Control Center. For details, see [Catalog Administration](/developerportal/control-center/catalog-admin/).
 
 ### August 19th, 2021
 

@@ -83,7 +83,7 @@ Some SAML services, such as eHerkenning and DigID in the Netherlands, use option
 
 If you need any of these features, contact your Mendix CSM to discuss inclusion of these features on the Mendix roadmap or customization of the SAML SSO module.
 
-If you want to connect your app to multiple SAML IdPs, you cannot use different key pairs and certificates for each of the SSO federations. Instead, you must use a single key pair and certificate for all SAML IdPs. The certificate can be either a self-signed certificate or a certificate issued by a Certificate Authority (CA) (see [Use a Certificate Issued by a Certificate Authority](#use-ca) for more details)
+If you want to connect your app to multiple SAML IdPs, you cannot use different key pairs and certificates for each of the SSO federations. Instead, you must use a single key pair and certificate for all SAML IdPs. The certificate can be either a self-signed certificate or a certificate issued by a certificate authority (CA) (see [Use a Certificate Issued by a Certificate Authority](#use-ca) for more details)
 
 The URL for downloading the SP metadata of your app is independent of the value of the EntityID that you configure for your app (see [Configuring Service Provider](#configure-sp)) and which is included in the SP metadata. Instead, the metadata URL is based on the alias for the connected IDP where the SP metadata will be used.
 
@@ -555,7 +555,8 @@ With these settings, you can configure the behavior of this module and improve t
 
 ### 5.2 Use a Certificate Issued by a Certificate Authority {#use-ca}
 
-By default the SAML SSO module will use self-signed certificates. It is, however, also possible to use certificates issued by a Certificate Authority (CA).
+By default the SAML SSO module will use self-signed certificates. It is, however, also possible to use certificates issued by a certificate authority (CA).
+
 SAML SSO supports 2 file formats:
 
 * a PKCS 12 file, which typically has extension .pfx or .p12.

@@ -2,7 +2,7 @@
 title: "Parameter"
 url: /refguide/parameter/
 weight: 70
-tags: ["studio pro", "parameter", "microflow"]
+tags: ["studio pro", "parameter", "parameters", "microflow"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 

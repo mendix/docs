@@ -4,6 +4,9 @@ url: /developerportal/project-management/jira-connector/
 weight: 5
 description: "Describes how to connec Mendix apps in the Developer Portal to Jira."
 tags: ["app", "jira", "project management", "scrum master", "general settings", Developer Portal", "Scrum Master"]
+aliases:
+    -  /developerportal/collaborate/jira-connector/
+#If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details. 
 ---
 
 {{% alert color="warning" %}}This feature is in Beta. For more information on Beta products, see [Beta Releases](/releasenotes/beta-features/). {{% /alert %}}

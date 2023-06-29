@@ -10,6 +10,10 @@ tags: ["studio pro", "data importer", "excel importer"]
 
 The **Data Importer** allows you to import an Excel file and choose which parts of it you want to import. You can view this in design time, before running your app.
 
+{{% alert color="info" %}}
+The **Data Importer** is available in Studio Pro [10.2](/releasenotes/studio-pro/10.2/) and above.
+{{% /alert %}}
+
 ## 2 Creating a Data Importer Service Document {#create-document}
 
 To start importing data, go to **Add other** > **Data Importer**. Name the document, and the new **Data Importer Document** opens.
@@ -21,8 +25,8 @@ Once you have [created the **Data Importer** document](#create-document), click 
 After importing the file, you can choose which columns and information to include. Information about the imported Excel file is as followings:
 
 * **Sheet name** – name of the imported Excel file
-* **Header row number** –
-* **Read data from** –
+* **Header row number** – row number of the file header
+* **Read data from** – starting line for reading data
 
 Click **Preview Excel data & entity** to open the preview of the entity.
 

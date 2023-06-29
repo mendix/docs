@@ -85,7 +85,7 @@ Once the activation is completed, your app is connected to Jira. You can see the
     * You can find the filters and sub-filters in the board settings in Jira. Fore more information, see [Configure a company-managed board](https://support.atlassian.com/jira-software-cloud/docs/configure-a-company-managed-board/). 
     * If you want to exclude issues from the backlog in the Stories pane, consider removing the backlog statuses from the board’s column settings.
 
-* After you commit your changes in Studio Pro, you can see the associated Jira stories in the details of the corresponding [revision](/developerportal/collaboratet/team-server/#revision-details) in the **Team Server** page of the Developer Portal.
+* After you commit your changes in Studio Pro, you can see the associated Jira stories in the details of the corresponding [revision](/developerportal/collaborate/team-server/#revision-details) in the **Team Server** page of the Developer Portal.
 
 *  You can see the link to your Jira board in the **Project Management** section of the Developer Portal.
 

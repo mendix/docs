@@ -7,9 +7,9 @@ weight: 90
 ---
 
 {{% alert color="warning" %}}
-As of the GA release on December 1st, 2022, [Epics](/developerportal/project-management/epics/) is the default tool for you to manage the development process of new apps. Epics is a replacement of [Stories](/developerportal/collaborate/stories). You can still use Stories in addition to Epics. However, Mendix recommends not using both of them at the same time as it will make data migration more difficult later.
+We will delete all data from Mendix Stories starting October 1, 2023. We strongly urge you to [download your work](/developerportal/collaborate/general-settings/#story-archive) before that date.
 
-We plan to deprecate Stories on October 1, 2023.
+As of the GA release on December 1st, 2022, [Epics](/developerportal/project-management/epics/) is the default tool for you to manage the development process of new apps. Epics is a replacement of Stories. You can still use Stories in addition to Epics. However, Mendix recommends not using both of them at the same time as it will make data migration more difficult later.
 {{% /alert %}}
 
 ## 1 Introduction

@@ -49,7 +49,7 @@ To submit changes, follow these guidelines:
 
 ## 5 Read More
 
-* [Stories](/developerportal/collaborate/stories/)
+* [Stories](/developerportal/project-management/stories/)
 * [Start Your Own Repository](/howto8/collaboration-requirements-management/starting-your-own-repository/)
 * [Version Control](/refguide8/version-control/)
 * [Share the Development Database](/howto8/collaboration-requirements-management/sharing-the-development-database/)

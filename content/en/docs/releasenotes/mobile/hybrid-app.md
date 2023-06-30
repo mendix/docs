@@ -208,7 +208,7 @@ If your app does not employ push notifications, you can still use the Phonegap B
 
 ### Hybrid App Base 3.0.0 / Hybrid App Template 3.0.0
 
-**Release date: November 20th, 2018"
+**Release date: November 20, 2018"
 
 {{% alert color="warning" %}}
 
@@ -356,7 +356,7 @@ For this update, we recommend downloading a fresh hybrid app package from the Me
 
 ### Hybrid App Base 2.0.5
 
-**Release date: April 20th, 2018**
+**Release date: April 20, 2018**
 
 * We improved the styling of the loader and login screens by making the text on those pages thicker.
 
@@ -418,7 +418,7 @@ For this update, we recommend that you download a fresh hybrid app package from 
 
 ### Hybrid App Base 1.7.3
 
-**Release date: January 30th, 2018**
+**Release date: January 30, 2018**
 
 * We removed the Cordova console plugin. This plugin was obsolete and caused issues while building iOS packages.
 
@@ -520,7 +520,7 @@ For this update, we recommend that you download a fresh hybrid app package from 
 
 ### Hybrid App Base 1.3.0
 
-**Release date: September 20th, 2017**
+**Release date: September 20, 2017**
 
 * We added support for iOS 11 (ticket 56209). For existing hybrid apps, you can also update the `cordova-plugin-wkwebview-engine-nextgen plugin` in the *config.xml* to version to 1.1.0 and publish again.
 * We changed the keyboard type on the PIN login page to `tel`. (Ticket 54380)

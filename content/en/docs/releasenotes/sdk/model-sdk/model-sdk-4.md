@@ -28,7 +28,7 @@ weight: 97
 
 ## 4.73.0 {#473}
 
-**Release date: March 20th, 2023**
+**Release date: March 20, 2023**
 
 * We added support for Mendix [9.24.0](/releasenotes/studio-pro/9.24/).
 * We added support for Mendix Metamodel [9.24.0](/releasenotes/sdk/metamodel-9.24/).
@@ -98,14 +98,14 @@ weight: 97
 
 ## 4.63.0 {#463}
 
-**Release date: May 20th, 2022**
+**Release date: May 20, 2022**
 
 * We added support for Mendix [9.14.0](/releasenotes/studio-pro/9.14/).
 * We added support for Mendix Metamodel [9.14.0](/releasenotes/sdk/metamodel-9.14/).
 
 ## 4.62.0 {#462}
 
-**Release date: April 20th, 2022**
+**Release date: April 20, 2022**
 
 * We added support for Mendix [9.13.0](/releasenotes/studio-pro/9.13/).
 * We added support for Mendix Metamodel [9.13.0](/releasenotes/sdk/metamodel-9.13/).
@@ -169,7 +169,7 @@ weight: 97
 
 ## 4.53.0 {#453}
 
-**Release date: July 20th, 2021**
+**Release date: July 20, 2021**
 
 * We added support for Mendix [9.4.0](/releasenotes/studio-pro/9.4/).
 * We added support for Mendix Metamodel [9.4.0](/releasenotes/sdk/metamodel-9.4/).
@@ -228,7 +228,7 @@ weight: 97
 
 ## 4.42.0 {#442}
 
-**Release date: October 20th, 2020**
+**Release date: October 20, 2020**
 
 * We added support for Mendix [8.15.0](/releasenotes/studio-pro/8.15/).
 * We added support for Mendix Metamodel [8.15.0](/releasenotes/sdk/metamodel-8.15/).
@@ -256,7 +256,7 @@ weight: 97
 
 ## 4.36.0 {#436}
 
-**Release date: June 30th, 2020**
+**Release date: June 30, 2020**
 
 * We added support for Mendix [8.11.0](/releasenotes/studio-pro/8.11/).
 * We added support for Mendix Metamodel [8.11.0](/releasenotes/sdk/metamodel-8.11/).
@@ -270,7 +270,7 @@ weight: 97
 
 ## 4.32.0 {#432}
 
-**Release date: April 30th, 2020**
+**Release date: April 30, 2020**
 
 * We added support for Mendix [8.9.0](/releasenotes/studio-pro/8.9/).
 * We added support for Mendix Metamodel [8.9.0](/releasenotes/sdk/metamodel-8.9/).
@@ -383,7 +383,7 @@ weight: 97
 
 ## 4.17.0
 
-**Release date: November 30th, 2018**
+**Release date: November 30, 2018**
 
 * We added new working copy lock type `update`.
 * We added support for Mendix 7.21.0.

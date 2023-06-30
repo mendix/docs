@@ -30,7 +30,7 @@ For information on the current status of deployment to SAP BTP and any planned r
 * You can now add custom Mendix Runtime settings under the [Runtime tab](/developerportal/deploy/sap-cloud-platform/#runtime-tab).
     * this replaces the previous method of adding custom settings using User-Provided Variables.
 
-### June 20th, 2022
+### June 20, 2022
 
 #### Improvements
 
@@ -56,7 +56,7 @@ For information on the current status of deployment to SAP BTP and any planned r
 
 * We added the ability to provide a custom *xs-security.json* file to configure an XSUAA service. This allows you to apply the configuration every time your app is deployed. You can add your configuration by unbinding and rebinding the XSUAA service in the [Services](/developerportal/deploy/sap-cloud-platform/#binding-services) tab.
 
-### August 30th, 2021
+### August 30, 2021
 
 * You can now upload your service configurations directly from the Configurator without having to download the configuration first.
 * We added the ability to unbind services from your environment without deleting the service. This makes it easier to change the configuration of a service and then rebind it.
@@ -112,7 +112,7 @@ For information on the current status of deployment to SAP BTP and any planned r
 
     (Tickets 118831 118847 118861 118862 118874 118876 118908 118925 118935 118983 119020)
 
-### February 10th, 2021
+### February 10, 2021
 
 #### Improvements
 

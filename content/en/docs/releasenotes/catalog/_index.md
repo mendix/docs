@@ -162,7 +162,7 @@ These release notes cover changes made to the [Catalog](/catalog/).
 
 * You can now request access to a data source directly from the [asset details](/catalog/manage/search/#service-details) page. Click **Request access** in the **Authentication** section to open a draft email to the owner.
 
-### November 10th, 2022
+### November 10, 2022
 
 #### Improvements
 
@@ -187,7 +187,7 @@ These release notes cover changes made to the [Catalog](/catalog/).
 * When registering a service in the registration form, you can now designate which authentication type is needed for consumers to access it. For more information, see [Selecting an Authentication Method](/catalog/register/register-data/#authentication) in *Register OData Resources in the Catalog*.
 * Sample data sources are now clearly indicated with a label.
 
-### October 20th, 2022
+### October 20, 2022
 
 #### Improvements
 
@@ -323,7 +323,7 @@ These release notes cover changes made to the [Catalog](/catalog/).
 
 * When a user other than the Technical or Business Owner deletes an application, environment, or data source, the Technical and/or Business Owner will receive a notification. For more information on data source ownership, see the [Changing Owners of an App](/catalog/manage/curate/#changing-owners) section of *Curate Registered Assets*.
 
-### June 30th, 2022
+### June 30, 2022
 
 #### Improvements
 
@@ -429,7 +429,7 @@ These release notes cover changes made to the [Catalog](/catalog/).
 
 * We fixed the **Update/Switch** button's functionality for consumed OData services.
 
-### March 10th, 2022
+### March 10, 2022
 
 #### Improvements 
 
@@ -466,7 +466,7 @@ These release notes cover changes made to the [Catalog](/catalog/).
 
 * We made various security and UI fixes.
 
-### February 10th, 2022
+### February 10, 2022
 
 #### New Features
 
@@ -523,7 +523,7 @@ These release notes cover changes made to the [Catalog](/catalog/).
 
 ## 2021
 
-### December 30th, 2021
+### December 30, 2021
 
 #### Fixes
 
@@ -536,7 +536,7 @@ These release notes cover changes made to the [Catalog](/catalog/).
 * We fixed an issue where the user was logged out after changing the Technical Owner of a data source.
 * We fixed an issue that occurred with scrolling on a data source deep-link page.
 
-### December 20th, 2021
+### December 20, 2021
 
 #### Fixes
 
@@ -614,7 +614,7 @@ These release notes cover changes made to the [Catalog](/catalog/).
 
 * We fixed an issue that caused older Studio Pro versions to not be able to connect to the Catalog.
 
-### September 30th, 2021
+### September 30, 2021
 
 #### Fixes
 
@@ -721,7 +721,7 @@ These release notes cover changes made to the [Catalog](/catalog/).
     * `GET` all published endpoints
     * `GET`, `POST`, and `PUT` one individual published endpoint
 
-### June 10th, 2021
+### June 10, 2021
 
 #### Improvements
 
@@ -863,7 +863,7 @@ The [Data Hub Transform API](https://datahub-spec.s3.eu-central-1.amazonaws.com/
 
 * The [Catalog API](/apidocs-mxsdk/apidocs/catalog-apis/) is available to enable searching of data sources in the Catalog. The API can be used to register data sources from your application to your organization's Data Hub.
 
-### December 10th, 2020
+### December 10, 2020
 
 #### Improvements
 

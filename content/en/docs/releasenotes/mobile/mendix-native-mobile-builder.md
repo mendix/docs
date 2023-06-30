@@ -359,7 +359,7 @@ The Native Mobile Builder is now able to derive which files need to be kept or r
 
 ### Release v1.0.74
 
-**Release date: December 30th, 2020**
+**Release date: December 30, 2020**
 
 #### Signed iOS Builds Failing
 
@@ -401,7 +401,7 @@ If you are working with multiple people on the same project please make sure the
 
 ### Release v1.0.51 
 
-**Release date: December 10th, 2020**
+**Release date: December 10, 2020**
 
 #### Improvements
 

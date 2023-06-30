@@ -95,7 +95,7 @@ To see the current status of the Mendix Developer Portal and Control Center, see
 * We fixed an issue where under certain circumstances you were not able to retry to [migrate your repository to Git](/developerportal/collaborate/migrate-to-git/) if the first try resulted in errors.
 * We fixed an issue where a redirect to a user story that is linked to a feedback item would result in an error if this story is hosted by [Epics](/developerportal/project-management/epics/).
 
-### April 20th, 2023
+### April 20, 2023
 
 #### Improvements
 
@@ -253,7 +253,7 @@ We made the following improvements:
 
 From this point on, Epics is the default project management tool for all new apps.
 
-### November 30th, 2022
+### November 30, 2022
 
 #### New Features
 
@@ -278,14 +278,14 @@ In Portfolio Management, you can do the following
 
 * We introduced a self-service option for Team Server SVN that allows Scrum Masters to permanently migrate eligible apps to Git. For more information on what apps are eligible for migration and on the migration process, see [Migrate to Git](/developerportal/collaborate/migrate-to-git/). For more information on steps after the migration and process differences between Git and SVN, see [Migrating from SVN to Git: Steps After Migration and Process Differences](/refguide9/svn-git-differences/).
 
-### November 10th, 2022
+### November 10, 2022
 
 #### Improvements
 
 * We improved the way [Company Brand](/developerportal/control-center/#company-brand) is stored and distributed. The company logo that is uploaded in Company Brand will be updated throughout the platform where it is used.
 * We removed the Brand Colors feature for Company Brand.
 
-### October 20th, 2022
+### October 20, 2022
 
 #### Fixes
 
@@ -403,7 +403,7 @@ In Portfolio Management, you can do the following
 
     You can try it out for any Mendix app. Your Scrum Master just needs to enable Epics in the [General Settings](/developerportal/collaborate/general-settings/#project-management). Please note it is not yet possible to migrate the data from Stories into Epics, so we recommend using it for new projects or iterations first – in this way you do not have to worry about the stories in your current backlog.
 
-### June 30th, 2022
+### June 30, 2022
 
 #### Fixes
 
@@ -481,7 +481,7 @@ In Portfolio Management, you can do the following
 
 * We fixed an issue where the submitter of a [feedback item](/developerportal/collaborate/feedback/) was no longer able to comment on that issue after they left the app.
 
-### March 10th, 2022
+### March 10, 2022
 
 #### Fixes
 
@@ -491,7 +491,7 @@ In Portfolio Management, you can do the following
 
 * The apps displayed on the **My Apps** tab that appears when starting Studio Pro are pulled from the [My Apps](/developerportal/#my-apps) page in Developer Portal. In Studio Pro versions below [9.6.0](/releasenotes/studio-pro/9.6/), the **My Apps** tab will no longer display [Git for version control](/refguide9/branch-line-manager-dialog/#byo-server-app) apps, as Git integration is not supported. In Studio Pro versions 9.6.0 and above, both Git-enabled and SVN-enabled apps are displayed.
 
-### February 10th, 2022
+### February 10, 2022
 
 #### New Features
 
@@ -664,7 +664,7 @@ In Portfolio Management, you can do the following
 
 * We updated the look and feel of the [Documents](/developerportal/collaborate/documents/) page.
 
-### June 30th, 2021
+### June 30, 2021
 
 #### Improvements
 
@@ -692,7 +692,7 @@ In Portfolio Management, you can do the following
 #### Improvements
 
 * We added a tab on the [Cloud](/developerportal/control-center/#cloud) page in Control Center that displays details on **Free Environments**.
-* We are deprecating part of the options to create an app based on an app template. As of June 20th, 2021, you can no longer create apps through the [Projects API](/apidocs-mxsdk/apidocs/projects-api/) or the [Developer Portal](/developerportal/#navigation) using app templates created in Desktop Modeler version [7.23.14](/releasenotes/studio-pro/7.23/#72314) or below. Please update your templates to [7.23.15](/releasenotes/studio-pro/7.23/#72315) or above before creating apps based on those templates.
+* We are deprecating part of the options to create an app based on an app template. As of June 20, 2021, you can no longer create apps through the [Projects API](/apidocs-mxsdk/apidocs/projects-api/) or the [Developer Portal](/developerportal/#navigation) using app templates created in Desktop Modeler version [7.23.14](/releasenotes/studio-pro/7.23/#72314) or below. Please update your templates to [7.23.15](/releasenotes/studio-pro/7.23/#72315) or above before creating apps based on those templates.
 
 ### May 17th, 2021
 
@@ -724,7 +724,7 @@ In Portfolio Management, you can do the following
 
 * We released the Control Center [Dashboard](/developerportal/control-center/#dashboard), which provides an overview of various activities for your company on the Mendix Platform. This feature is currently in [Beta](/releasenotes/beta-features/), and you can provide feedback via the feedback button on the right of the page.
 
-### March 30th, 2021
+### March 30, 2021
 
 #### Improvements
 
@@ -758,7 +758,7 @@ In Portfolio Management, you can do the following
 
 * We fixed a bug where it was not possible to open a version 6 Desktop Modeler from the Developer Portal.
 
-### March 10th, 2021
+### March 10, 2021
 
 #### Fixes
 
@@ -1071,7 +1071,7 @@ In Portfolio Management, you can do the following
 
 * We fixed an issue where updates to decimal constants in the Developer Portal were limited to 2 decimal places. This has been increased to 8 decimal places. (Ticket 85507)
 
-### May 10th, 2019
+### May 10, 2019
 
 #### Support Improvements
 
@@ -1196,7 +1196,7 @@ The Web Modeler can now be enabled for all types of apps. You can do this on the
 
 * For a while, the **Show activity for** filter buttons on the company **Buzz** page were broken and displayed nothing. They now work again.
 
-### September 10th, 2018
+### September 10, 2018
 
 #### Improvements
 

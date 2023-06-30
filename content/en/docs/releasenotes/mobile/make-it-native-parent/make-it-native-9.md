@@ -44,7 +44,7 @@ In Studio Pro [9.18](/releasenotes/studio-pro/9.18/), scanning your Mendix app's
 
 ## Android 1.1.0 / iOS 1.1.0
 
-**Release date: 30th March 2021**
+**Release date: 30 March 2021**
 
 This is the official release of the Android and iOS versions of the Make It Native 9 app with support for Mendix Studio Pro 9.0. Both the Android and iOS versions allow you to preview and debug your locally-running native app on any [supported mobile platforms](/refguide9/system-requirements/#mobileos).
 
@@ -59,6 +59,6 @@ This is the official release of the Android and iOS versions of the Make It Nati
 
 ## Android 1.0.4 / iOS 1.0.2
 
-**Release date: 30th March 2021**
+**Release date: 30 March 2021**
 
 This is the official release of the Android and iOS versions of the Make It Native 9 app, with support for Mendix Studio Pro 9.0. Both Android and iOS versions allow you to preview and debug your locally running native app on any supported mobile platform.

@@ -35,7 +35,7 @@ These release notes cover changes made to the [Mendix Marketplace](/appstore/).
 * We fixed an issue with the notifications that are sent when a component update becomes available.
 * If a user's email address contained an upper-case letter, they did not have access to private components in [content groups](/appstore/general/app-store-overview/#content-groups). This issue has been fixed.
 
-### April 20th, 2023
+### April 20, 2023
 
 #### New Features
 
@@ -108,7 +108,7 @@ If you are using Studio Pro on a Mac with Parallels, see [this update](https://k
 * We made performance improvements for when a large source file is [uploaded](/appstore/general/share-app-store-content/#package), specifically on the navigation steps.
 * We improved the UI for self-service uploading your component to the Marketplace.
 
-### February 10th, 2022
+### February 10, 2022
 
 #### Improvements
 
@@ -320,7 +320,7 @@ We added the flexibility to label your App Store content with a [custom version 
 
 {{% alert color="info" %}}This is based on an [upvoted idea from Andreas Blaesius](https://forum.mendixcloud.com/link/ideas/1324) submitted to the [Mendix Idea Forum](https://forum.mendixcloud.com). Thanks, Andreas!{{% /alert %}}
 
-### August 30th, 2019
+### August 30, 2019
 
 #### Improvements
 

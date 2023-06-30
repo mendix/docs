@@ -50,7 +50,7 @@ From Mendix Studio Pro 8.10 and above, the responsibility of deciding when to sy
 
 ## Android 2.0.1 / iOS 2.0.0
 
-**Release date: April 30th, 2020**
+**Release date: April 30, 2020**
 
 ### Fixes
 
@@ -187,7 +187,7 @@ On Android:
 
 ## Android 1.1.0 / iOS 1.1.0
 
-**Release date: September 30th, 2019**
+**Release date: September 30, 2019**
 
 ### New Features
 

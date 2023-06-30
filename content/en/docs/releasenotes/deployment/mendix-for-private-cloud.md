@@ -352,7 +352,7 @@ This issue is fixed in Mendix Operator [version 2.5.1](#2.5.1).
 * We fixed an issue where the number of replicas was not correctly reported
 * We fixed an issue where some users could not deploy MDAs (Tickets 144512 and 144908)
 
-### March 10th, 2022
+### March 10, 2022
 
 #### Portal Improvement
 
@@ -371,7 +371,7 @@ This issue is fixed in Mendix Operator [version 2.5.1](#2.5.1).
 * We have added an option to clear the local cache and check for updates to verify that the hash of your downloaded images matches with remote images.
 * We have also fixed issue where users got an error while installing the Operator (Ticket 142583).
 
-### February 10th, 2022
+### February 10, 2022
 
 #### Mendix Operator v2.4.0 and Mendix Gateway Agent v2.4.0
 
@@ -666,7 +666,7 @@ After upgrading the Mendix Operator, we recommend downloading the latest version
 
 * We fixed the bug where you would be taken to a non-existent page and receive a *404 Not Found* message if you didn't select an Operating System when downloading the configuration tool.
 
-### December 10th, 2020
+### December 10, 2020
 
 #### Mendix for Private Cloud — Mendix Operator v1.7.0 and Mendix Gateway Agent v1.6.0
 
@@ -684,7 +684,7 @@ To upgrade an existing installation of Private Cloud to this version, follow the
 * We improved the stability of the Private Cloud Portal.
 * We added a warning message when the operator license has expired
 
-### October 30th, 2020
+### October 30, 2020
 
 #### Mendix for Private Cloud — Mendix Operator v1.6.1
 
@@ -834,7 +834,7 @@ To upgrade an existing installation of Private Cloud to this version, follow the
 * We have replaced the **Tiny** plan with a **Small** plan in the core resources.
 * We have improved the reliability of updating the current environment status in the Developer Portal.
 
-### June 10th, 2020
+### June 10, 2020
 
 #### Mendix Gateway Agent v1.1.1
 

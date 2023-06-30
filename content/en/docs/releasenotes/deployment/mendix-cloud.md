@@ -34,7 +34,7 @@ For information on the current status of deployment to Mendix Cloud and any plan
     * [Retrieve Environment Package](/apidocs-mxsdk/apidocs/deploy-api/#retrieve-environment-package) in the Deploy API
 * We have deprecated the [Download Package](/apidocs-mxsdk/apidocs/build-api/#download-package) call in the Build API.
 
-### April 20th, 2023
+### April 20, 2023
 
 #### Improvements
 
@@ -102,7 +102,7 @@ For information on the current status of deployment to Mendix Cloud and any plan
 
 * We have configured reverse DNS for the outgoing IP addresses of Mendix Cloud v4. A reverse DNS lookup is commonly used by email services to filter out spams.
 
-### November 10th, 2022
+### November 10, 2022
 
 #### Improvements
 
@@ -115,7 +115,7 @@ For information on the current status of deployment to Mendix Cloud and any plan
 
 * We have enabled DNSSEC for all `*.mendixcloud.com` domains.
 
-### October 20th, 2022
+### October 20, 2022
 
 #### Fix
 
@@ -186,7 +186,7 @@ New Certificate Details: <https://crt.sh/?id=6940402070>
 
 #### Improvements
 
-* We have enabled a Web Application Firewall (WAF) service for the licensed regions of the Mendix Cloud. See the [release note for March 30th](#waf) for more information over WAF.
+* We have enabled a Web Application Firewall (WAF) service for the licensed regions of the Mendix Cloud. See the [release note for March 30](#waf) for more information over WAF.
 
     | Region | Date Enabled |
     | --- | --- |
@@ -236,7 +236,7 @@ New Certificate Details: <https://crt.sh/?id=6940402070>
 
 * We now show deactivated users on the [Node Permissions](/developerportal/deploy/node-permissions/) page for consistency with the [Team](/developerportal/collaborate/team/) page.
 
-### March 30th, 2022{#waf}
+### March 30, 2022{#waf}
 
 #### Improvements
 
@@ -324,7 +324,7 @@ Existing applications will be updated in the next few weeks. Technical contacts 
 
 * We fixed an issue where users could not see all their backups, and some backups were shown more than once. (Tickets 127908, 128966, 130090, and 130313)
 
-### September 10th, 2021
+### September 10, 2021
 
 #### Improvements
 
@@ -449,7 +449,7 @@ Any clients that use IPv6 to connect to applications which have configured Acces
 
 * We implemented a new `upload` API which allows you to upload large (>300 MB) app packages (.mda files) and still retrieve the package ID. More information is in [Deploy API – Version 2](/apidocs-mxsdk/apidocs/deploy-api-2/). (Tickets 117609 and 117622)
 
-### March 30th, 2021
+### March 30, 2021
 
 * We have implemented various visual changes to the user interface of the Developer Portal.
 
@@ -678,7 +678,7 @@ SSL/TLS ciphers that are still supported for HTTPS connections after December 1,
 
 * We fixed an issue where some customers did not receive an SMS for two-factor authentication. (Ticket 104252) 
 
-### July 30th, 2020
+### July 30, 2020
 
 #### Fixes
 
@@ -823,9 +823,9 @@ This value is displayed in the following graphs in Metrics for Mendix Cloud v4:
 
 * We have improved the stability and performance of Mendix Cloud Deployment and Operations.
 
-    * This also resolved the [known issues noted on October 30th](#ki20201030)
+    * This also resolved the [known issues noted on October 30](#ki20201030)
 
-### October 30th, 2019
+### October 30, 2019
 
 #### Improvements
 
@@ -1036,7 +1036,7 @@ If you run services that connect to a `*.mendixcloud.com` endpoint AND use a sta
 
 * We fixed an issue that caused an error while creating a backup in Mendix Cloud v4. (Tickets 70086, 70090, 75936, 75996)
 
-### October 30th, 2018
+### October 30, 2018
 
 #### Improvements
 
@@ -1196,7 +1196,7 @@ In some cases, you may still experience false positives for the runtime heartbea
 
 * Applications in Mendix Cloud v3 that were running for more than 248 days started to use 100% CPU due to an unknown bug in either the Mendix Runtime, the JVM, or a combination thereof. A very small number of applications have been impacted by this, as most applications are updated much more often, and every deployment restarts an application. However, this problem has been causing performance issues for both the affected applications and our infrastructure. As a workaround, we will now automatically restart apps that have been running non-stop for 247 days between 01:00 and 07:00 local time of the cloud region. If this happens to an application, you will see a message in the application log.
 
-### March 20th, 2018
+### March 20, 2018
 
 #### Improvements
 
@@ -1323,7 +1323,7 @@ In some cases, you may still experience false positives for the runtime heartbea
 * Mendix Cloud v4 alert status showed `UNKNOWN` sometimes due to an error. This was fixed and the correct status is now shown.
 * In the **Deploy**, **Operate**, and **Backups** pages, you can *finally* use the <kbd>Enter</kbd> key to submit your two-factor authentication code. Happy typing!
 
-### October 20th, 2017
+### October 20, 2017
 
 #### Improvements
 
@@ -1335,7 +1335,7 @@ In some cases, you may still experience false positives for the runtime heartbea
 
 * When creating a deployment package from Team Server, users will now be able to see the revisions that were committed without the Mendix Modeler.
 
-### October 10th, 2017
+### October 10, 2017
 
 #### Improvements
 
@@ -1350,7 +1350,7 @@ In some cases, you may still experience false positives for the runtime heartbea
 * Improved the stability for transporting deployment packages for Asia-Pacific users for Mendix Cloud v4.
 * Environment health indicators for your environments are now much more accurate.
 
-### August 30th, 2017
+### August 30, 2017
 
 #### Improvements
 
@@ -1439,7 +1439,7 @@ In some cases, you may still experience false positives for the runtime heartbea
 * We fixed an issue where the log viewer for Free Apps did not escape HTML, so if the application logged plain HTML, it was interpreted in the browser.
 * We fixed an issue where simultaneous snapshot restore jobs from the same environment to two others could lock one of the environments.
 
-### March 20th, 2017
+### March 20, 2017
 
 #### Fixes
 
@@ -1451,13 +1451,13 @@ In some cases, you may still experience false positives for the runtime heartbea
 
 * Clicking **Operate -> Backups** resulted in errors for a Free App. This has been fixed.
 
-### March 10th, 2017
+### March 10, 2017
 
 #### Improvements
 
 * We introduced a new setting in **Node Security**, you can now configure **Monitoring Permissions** separately from **Transport Permissions**. Immediately after this change, we granted all users that had **Transport Permissions** on an environment the **Monitoring Permissions** there as well. From now on, a **Technical Contact** can configure these settings for everyone in the team separately. While we introduced this setting, we revisited the layout of the **Node Security** screen, you now have a simpler interface to change the permissions for each environment.
 
-### February 20th, 2017
+### February 20, 2017
 
 #### Improvements
 

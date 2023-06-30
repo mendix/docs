@@ -7,7 +7,7 @@ weight: 100
 
 ## 2.28.13
 
-**Release date: June 20th, 2023**
+**Release date: June 20, 2023**
 
 ### Fixes
 
@@ -405,7 +405,7 @@ To make this process even faster and skip one click, we added the option to run 
 
 ## 2.17.0
 
-**Release date: April 30th, 2020**
+**Release date: April 30, 2020**
 
 ### Mendix 8.9 Compatibility
 
@@ -770,7 +770,7 @@ Mendix applications that are based on Mendix version 7.17 can now be tested and 
 
 ## 2.9.0
 
-**Release date: July 10th, 2018**
+**Release date: July 10, 2018**
 
 ### Improvements
 

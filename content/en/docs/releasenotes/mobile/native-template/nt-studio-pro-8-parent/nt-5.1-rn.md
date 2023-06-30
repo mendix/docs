@@ -62,7 +62,7 @@ iOS 15 requires you to recompile your apps with XCode 13. This release bumps the
 
 ## 5.1.14
 
-**Release date: July 20th, 2021**
+**Release date: July 20, 2021**
 
 ### Improvements
 
@@ -72,7 +72,7 @@ iOS 15 requires you to recompile your apps with XCode 13. This release bumps the
 
 ## 5.1.13
 
-**Release date: June 30th, 2021**
+**Release date: June 30, 2021**
 
 ### Improvements
 

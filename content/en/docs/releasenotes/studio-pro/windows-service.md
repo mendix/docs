@@ -82,7 +82,7 @@ To download the Windows Service, go to the [Get Studio Pro](https://marketplace.
 
 ## 4.4
 
-**Release date: September 20th, 2016**
+**Release date: September 20, 2016**
 
 * When an app is updated with a deployment archive, the old app will not be copied anymore to a backup file. In the user interface, there is a checkbox now to enable backing up the old app. (Ticket 41885)
 * We fixed the exception that occurred when showing active server actions. (Ticket 41924, 44180)
@@ -143,7 +143,7 @@ Changes between 4.2-beta2 and 4.2:
 
 ### 4.2.0 Beta 2
 
-**Release date: July 10th, 2013**
+**Release date: July 10, 2013**
 
 * Ticket 20737: Improved working of the Start service button. The database can now be synchronized, even if the app is started via the Start service button. The Start button is invisible by default, if the service is installed.
 * Ticket 16404, 15319 (partially): Added encryption for service account password and database password.
@@ -162,7 +162,7 @@ Changes between 4.2-beta2 and 4.2:
 
 ### 4.2.0 Beta 1
 
-**Release date: June 10th, 2013**
+**Release date: June 10, 2013**
 
 * Support for running Mendix 5 apps.
 * Ticket 16884: Fixed error on service start: Request <(..)> failed: Unable to connect to remote server. Maybe the service could not be started.

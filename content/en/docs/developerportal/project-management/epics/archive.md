@@ -2,7 +2,7 @@
 title: "Archive"
 url: /developerportal/project-management/epics/archive/
 weight: 40
-description: "Describes the **Archive** page in the Project Management section."
+description: "Describes the Archive page in Epics."
 tags: ["Project Management", "Epics", "Sprint", "Archive", "Stories", "Developer Portal"]
 ---
 ## 1 Introduction

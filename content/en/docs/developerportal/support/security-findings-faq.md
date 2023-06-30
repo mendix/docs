@@ -214,5 +214,5 @@ The Mendix Runtime implements a number of mitigation methods which mean that the
 
 * Separating secrets from user input
 * Randomizing secrets per request
-* Masking secrets (effectively randomizing by XORing with a random secret per request)
+* Masking secrets
 * Protecting vulnerable pages with CSRF

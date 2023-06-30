@@ -83,7 +83,7 @@ To see the current status of the Mendix Developer Portal and Control Center, see
 * You can now [set up an SSO (BYOIDP)](/developerportal/control-center/set-up-sso-byoidp/) to allow Mendix users to sign in to Mendix Platform services, including Studio Pro, using identity federation between the Mendix Platform and your corporate IdP.
 * You can now use a [Personal Access Token](/developerportal/community-tools/mendix-profile/#pat) to access SVN repositories in [Team Server](/developerportal/collaborate/team-server/) without using your personal Mendix credentials.
 
-### May 4th, 2023
+### May 4, 2023
 
 #### New Features 
 
@@ -122,7 +122,7 @@ To see the current status of the Mendix Developer Portal and Control Center, see
 * We fixed an issue that prevented some apps from being migrated to Git.
 * We fixed an issue that incorrectly removed Team Server access for some app team members when changing the permissions of an app role.
 
-### April 4th, 2023
+### April 4, 2023
 
 #### Improvements
 
@@ -378,7 +378,7 @@ In Portfolio Management, you can do the following
 * We fixed an issue where apps on the **Company Apps** page would not be displayed properly.
 * We fixed an issue that would cause an error when you edit a very long app name or description on the **General Settings** page.
 
-### July 14th, 2022
+### July 14, 2022
 
 #### Improvements
 
@@ -470,7 +470,7 @@ In Portfolio Management, you can do the following
     * Breadcrumb navigation
     * Dedicated pages for Forum content you have interacted with (asked, answered, and commented for questions, and submitted and commented for ideas)
 
-### March 24th, 2022
+### March 24, 2022
 
 #### Improvements
 
@@ -540,7 +540,7 @@ In Portfolio Management, you can do the following
 * We introduced a new version of the [Feedback API](/apidocs-mxsdk/apidocs/feedback-api/) that will be used by a new generation of [Feedback widgets](/appstore/modules/mendix-feedback/) coming to the Marketplace soon.
 * Until now, you were not able to delete or deactivate an app if it was still deployed to an environment, regardless of whether it was a licensed environment or a sandbox for a Free App. We changed this behavior so that the only check is on whether the environment is licensed. A consequence of this change is that the cloud icon on the app tiles on the [My Apps](/developerportal/#my-apps) page is only displayed if your app is deployed to a licensed node.
 
-### November 4th, 2021
+### November 4, 2021
 
 #### Improvements
 
@@ -575,7 +575,7 @@ In Portfolio Management, you can do the following
 
 * We fixed an issue accidentally introduced in the [October 14th](#oct-fourteen) release where you were no longer able to post comments on a [feedback item's details page](/developerportal/collaborate/feedback/#feedback-details). (Tickets 132892, 132959, 132983, 133075)
 
-### October 14th, 2021 {#oct-fourteen}
+### October 14, 2021 {#oct-fourteen}
 
 #### Improvements
 
@@ -658,7 +658,7 @@ In Portfolio Management, you can do the following
 
 * We improved the **External Members** overview on the Control Center [Dashboard](/developerportal/control-center/#dashboard) so that a list of external members from a specific company appears when you click a part of the pie chart.
 
-### July 14th, 2021
+### July 14, 2021
 
 #### Improvements
 
@@ -771,7 +771,7 @@ In Portfolio Management, you can do the following
 * In Control Center, Mendix Admins can now edit the name and description of an [App Access Group](/developerportal/control-center/#groups) once it has been created.
 * Mendix Admins can now [deactivate](/developerportal/control-center/#members) Technical Contacts and the last Scrum Master in a team.
 
-### March 4th, 2021
+### March 4, 2021
 
 #### Improvements
 
@@ -817,7 +817,7 @@ In Portfolio Management, you can do the following
 
 * We fixed an issue where new Mendix Admins did not get access to environment nodes. (Ticket 114913)
 
-### February 4th, 2021
+### February 4, 2021
 
 #### New Features
 
@@ -827,7 +827,7 @@ In Portfolio Management, you can do the following
 
 * We moved the existing Company Admin features in the Developer Portal to Control Center.
 
-### January 24th, 2021
+### January 24, 2021
 
 #### Improvements
 
@@ -869,7 +869,7 @@ In Portfolio Management, you can do the following
 
 * We changed the home page of the Developer Portal to [My Apps](/developerportal/#my-apps).
 
-### November 4th, 2020
+### November 4, 2020
 
 #### Fixes
 
@@ -882,7 +882,7 @@ In Portfolio Management, you can do the following
 
 * We fixed an issue where team members were not displayed in the [Team](/developerportal/collaborate/team/) overview.
 
-### October 4th, 2020
+### October 4, 2020
 
 #### Improvements
 
@@ -1044,7 +1044,7 @@ In Portfolio Management, you can do the following
 
 * We introduced the ability to [favorite](/developerportal/#my-apps) apps from the **My Apps** page and to filter on favorite apps. This is helpful when you have a large number of Mendix apps.
 
-### September 24th, 2019
+### September 24, 2019
 
 #### Improvements
 
@@ -1104,7 +1104,7 @@ In Portfolio Management, you can do the following
 * We fixed an error that occurred when importing stories from Excel in certain situations.
 * We fixed an issue where you unable to invite referrals to the Mendix Platform.
 
-### March 14th, 2019
+### March 14, 2019
 
 #### Fixes
 
@@ -1149,7 +1149,7 @@ In Portfolio Management, you can do the following
 
 * We fixed an issue that sometimes caused the team member with the Technical Contact role to be hidden on the **Node Permissions** tab of the **Security** pages. (Tickets 69085, 69150, 69419, 69440, 69458, 69585, 69592, 69783, 69884,70131,70228, 70285, 76152)
 
-### November 14th, 2018
+### November 14, 2018
 
 #### Mendix Shop
 

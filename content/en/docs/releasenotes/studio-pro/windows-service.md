@@ -14,7 +14,7 @@ To download the Windows Service, go to the [Get Studio Pro](https://marketplace.
 
 ### 4.7.1
 
-**Release date: February 24th, 2023**
+**Release date: February 24, 2023**
 
 * Add possibility to add extra logsubscribers in the Settings.yaml file. See https://github.com/mendix/m2ee-tools/blob/v7.2.3/examples/full-documented-m2ee.yaml#L392 for more information. Compared to that information, the 'Logging' property has to start with an uppercase letter, so 'Logging:' instead of 'logging:'. The loglevel setting as described is not supported for the Windows Service.
 * We replaced the modified YAML parser YamlSerializer 0.9.0.2 by YamlDotNet 12.3.1.
@@ -93,7 +93,7 @@ To download the Windows Service, go to the [Get Studio Pro](https://marketplace.
 
 ## 4.3
 
-**Release date: March 4th, 2016**
+**Release date: March 4, 2016**
 
 * Added support for Mendix 6.3. Please reinstall the service if the app has been upgraded from an earlier version.
 * Fixed exception about too large numbers in constants (System.OverflowException: Value was either too large or too small for an Int32) and the fact that the Settings were partly reset in that case. (ticket 463290, 462793)
@@ -179,7 +179,7 @@ Changes between 4.2-beta2 and 4.2:
 
 ## 4.1
 
-**Release date: March 4th, 2013**
+**Release date: March 4, 2013**
 
 This release introduces two great new functionalities: you can enable the debugger and you can show the actions which are currently active on the server. In addition, many issues are solved, such as the errors which occur while updating apps.
 
@@ -360,7 +360,7 @@ Now each app has its own license, even if it runs under the same user account as
 
 #### 1.0.6.2
 
-**Release date: December 14th, 2010**
+**Release date: December 14, 2010**
 
 * New Advanced menu-item to set the log level for the log file.
 * Create / update administrator user password buttons moved to a combined menu-item in menu Advanced.
@@ -402,7 +402,7 @@ Now each app has its own license, even if it runs under the same user account as
 
 #### 1.0.4.1
 
-**Release date: June 4th, 2010**
+**Release date: June 4, 2010**
 
 * Don't stop loading application constants from Modeler file when this setting does not exist in the yaml settings file.
 * Status bar added.

@@ -72,7 +72,7 @@ With this release we updated all PhoneGap dependencies to the latest supported v
 
 ### Hybrid App Base 4.1.10
 
-**Release date: February 4th, 2020**
+**Release date: February 4, 2020**
 
 * We fixed an issue with Android 10 failing with secure storage.
 
@@ -139,7 +139,7 @@ With this release we updated all PhoneGap dependencies to the latest supported v
 
 ### Hybrid App Base 4.1.0 / Hybrid App Template 4.1.0
 
-**Release date: May 14th, 2019**
+**Release date: May 14, 2019**
 
 We updated **Cordova Android** to version 7.1.4.
 
@@ -305,7 +305,7 @@ We have tested extensively against real-life projects and commonly used widgets 
 
 ### Hybrid App Base 2.2.2
 
-**Release date: August 14th, 2018**
+**Release date: August 14, 2018**
 
 * As part of the signout/cleanup process, we now clear out all locations where authentication tokens might still reside.
 

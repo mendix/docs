@@ -88,13 +88,13 @@ If you are using Studio Pro on a Mac with Parallels, see [this update](https://k
     * Limit available public Marketplace content in Studio
     * Approve and hide private Marketplace content in Studio
 
-### March 24th, 2022
+### March 24, 2022
 
 #### Improvements
 
 * We have made changes related to ad-hoc versioning and are now able to support more flexible version numbers as you create components. This means you can also publish components with version numbers that are backward-compatible.
 
-### February 24th, 2022
+### February 24, 2022
 
 #### New Features
 
@@ -185,7 +185,7 @@ If you are using Studio Pro on a Mac with Parallels, see [this update](https://k
     * Automatic provisioning of the app service on subscription.
     * The [Service Management Dashboard](/appstore/general/app-store-overview/#company-subscriptions), where you can view the service instance to which you have subscribed and generate binding keys for your service instance.
 
-### May 4th, 2021
+### May 4, 2021
 
 #### Fixes
 
@@ -260,7 +260,7 @@ If you are using Studio Pro on a Mac with Parallels, see [this update](https://k
 
 * As of Studio Pro version [8.6.4](/releasenotes/studio-pro/8.6/#private-content), you are able to download private content in the App Store again. This is possible for Studio Pro version 8.6.4 and all further 8.6.x versions. It is not possible for Studio Pro versions below 8.6.4.
 
-### May 4th, 2020
+### May 4, 2020
 
 #### Fixes
 
@@ -282,7 +282,7 @@ If you are using Studio Pro on a Mac with Parallels, see [this update](https://k
 
 ## 2019
 
-### November 14th, 2019
+### November 14, 2019
 
 #### Improvements
 
@@ -392,7 +392,7 @@ We added a component in the App Store which, when configured in your app, allows
 * We now provide OData Connector support for Mendix apps which use Oracle DB as their database.
 * We fixed some typos in the OData Connector actions.
 
-### January 24th, 2019
+### January 24, 2019
 
 #### Improvements
 

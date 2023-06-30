@@ -229,7 +229,7 @@ Your build may fail if you try to deploy the same deployment package more than o
 * The Cluster Manager can enable and disable development mode in cluster manager page. This will allow the developers to create app in development mode.
 * We added activity log entries whan development mode is enabled or disabled in a Namespace.
 
-### November 14th, 2022
+### November 14, 2022
 
 #### Mendix Operator v2.9.0{#2.9.0}
 
@@ -364,7 +364,7 @@ This issue is fixed in Mendix Operator [version 2.5.1](#2.5.1).
     * database and storage plans in a namespace
 * We have added a tooltip to assist in using the **Purpose** field
 
-### March 4th, 2022
+### March 4, 2022
 
 #### mxpc-cli v2.4.1 for Mendix Operator v2.3.0
 
@@ -455,7 +455,7 @@ To use Prometheus metrics, upgrade to Mendix Operator v2.1.0 (or above) and foll
 
     The new option prevents files being deleted from storage when an environment is removed.
 
-### October 14th, 2021
+### October 14, 2021
 
 #### Portal Improvements
 
@@ -556,7 +556,7 @@ To upgrade an existing installation of Mendix for Private Cloud to Mendix Operat
 
 To upgrade an existing installation of Private Cloud to this version, follow the [Upgrade instructions](/developerportal/deploy/private-cloud-upgrade-guide/).
 
-### May 4th, 2021
+### May 4, 2021
 
 #### Mendix Operator v1.11.0 and Mendix Gateway Agent v1.10.0
 
@@ -654,7 +654,7 @@ After upgrading the Mendix Operator, we recommend downloading the latest version
 * We fixed an error where opening the feedback widget on a Mendix for Private Cloud page in the Developer Portal resulted in an error.
 * We upgraded the Mendix version used for Mendix for Private Cloud in the Developer Portal to apply the latest security fix.
 
-### December 14th, 2020
+### December 14, 2020
 
 #### Portal Improvements
 
@@ -718,7 +718,7 @@ To upgrade an existing installation of Private Cloud to this version, follow the
 
 To upgrade an existing installation of Private Cloud to this version, follow the [Upgrade instructions](/developerportal/deploy/private-cloud-upgrade-guide/).
 
-### September 14th, 2020
+### September 14, 2020
 
 #### Fixes
 
@@ -862,7 +862,7 @@ To upgrade an existing installation of Private Cloud to the latest version, foll
 
 * We have improved the reliability of event processing and cluster authentication.
 
-### March 24th, 2020
+### March 24, 2020
 
 #### Mendix Operator v1.0.1
 
@@ -880,7 +880,7 @@ To upgrade an existing installation of Private Cloud to the latest version, foll
 * We fixed an issue where users could not accept invitations to join a cluster.
 * We fixed an issue were the first time an app was deployed no replicas were started, meaning that it was still in a stopped state. Now all apps will have one replica started when they are deployed for the first time.
 
-### March 4th, 2020
+### March 4, 2020
 
 #### Improvements
 

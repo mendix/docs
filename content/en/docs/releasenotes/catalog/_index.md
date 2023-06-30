@@ -146,7 +146,7 @@ These release notes cover changes made to the [Catalog](/catalog/).
 
 * When you receive and click on a notification from the Catalog about newly registered endpoints or newly assigned ownership, you will now be directed to the more user-friendly [Curate](/catalog/manage/curate/) page that shows all relevant and filtered resources. 
 
-### November 24th, 2022 {#nov-24}
+### November 24, 2022 {#nov-24}
 
 #### Improvements
 
@@ -297,7 +297,7 @@ These release notes cover changes made to the [Catalog](/catalog/).
 * We removed an undocumented field that was returned by the [Search API](/apidocs-mxsdk/apidocs/catalog-apis/#search).
 * We fixed an issue where under certain conditions, published and consumed services were not registered automatically in the Catalog.
 
-### August 4th, 2022
+### August 4, 2022
 
 #### Improvements
 
@@ -317,7 +317,7 @@ These release notes cover changes made to the [Catalog](/catalog/).
 
 * We fixed an error that occurred when the **Business Owner** field was initially left empty, and users could not assign a new **Business Owner** in subsequent attempts.
 
-### July 14th, 2022
+### July 14, 2022
 
 #### Improvements
 
@@ -389,7 +389,7 @@ These release notes cover changes made to the [Catalog](/catalog/).
 
 * We fixed a bug where the **Delete Data Source** button incorrectly appeared on a **Dataset** detail page.
 
-### April 14th, 2022
+### April 14, 2022
 
 #### New Features
 
@@ -413,7 +413,7 @@ These release notes cover changes made to the [Catalog](/catalog/).
 
 * We made various security improvements.
 
-### March 24th, 2022
+### March 24, 2022
 
 #### New Features
 
@@ -450,7 +450,7 @@ These release notes cover changes made to the [Catalog](/catalog/).
 
 * We implemented a fix to allow users to re-register a previously deleted data source. You can do this by going to the **Register a Data Source** section on the Catalog home page.
 
-### February 24th, 2022
+### February 24, 2022
 
 #### Improvements 
 
@@ -503,7 +503,7 @@ These release notes cover changes made to the [Catalog](/catalog/).
     * Improved parsing and more detailed error messaging
     * Improved validation (after parsing succeeded) and more detailed error messaging
 
-### January 14th, 2022
+### January 14, 2022
 
 #### Fixes
 
@@ -590,7 +590,7 @@ These release notes cover changes made to the [Catalog](/catalog/).
 * We fixed an issue where the [Business Owner](/catalog/manage/search/#busines-owner) name was not visible in the metadata of a data source.
 * We removed the temporary administration link from the home page. The owner management page is now available from the [Curate](/catalog/manage/curate/) tab for Data Hub Curators and from the [Administration](/developerportal/control-center/catalog-admin/#custom-owners) page in Control Center for Mendix Administrators.
 
-### October 14th, 2021
+### October 14, 2021
 
 #### Improvements
 
@@ -713,7 +713,7 @@ These release notes cover changes made to the [Catalog](/catalog/).
 
 * We updated the example in the [Catalog APIs](/apidocs-mxsdk/apidocs/catalog-apis/) for `PUT` published endpoints to match the behavior.
 
-### June 24th, 2021
+### June 24, 2021
 
 #### New Features
 
@@ -795,7 +795,7 @@ The [Data Hub Transform API](https://datahub-spec.s3.eu-central-1.amazonaws.com/
 * Improvements have been made on the [discoverability](/catalog/manage/curate/#discoverability) of registered assets.
 * The functionality for [registering data sources from enterprise applications](/catalog/register/register-data/) is now responsive.
 
-### March 4th, 2021
+### March 4, 2021
 
 #### New Features
 
@@ -823,7 +823,7 @@ The [Data Hub Transform API](https://datahub-spec.s3.eu-central-1.amazonaws.com/
 
 * Improvements have been made to security.
 
-### January 14th, 2021
+### January 14, 2021
 
 #### New Features
 
@@ -846,7 +846,7 @@ The [Data Hub Transform API](https://datahub-spec.s3.eu-central-1.amazonaws.com/
 
 ## 2020
 
-### December 24th, 2020
+### December 24, 2020
 
 #### New Features
 

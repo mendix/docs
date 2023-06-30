@@ -30,7 +30,7 @@ You can download the Make It Native app for [iOS](https://apps.apple.com/app/mak
 
 ## Android 2.1.0 / iOS 2.2.0
 
-**Release date: June 24th, 2020**
+**Release date: June 24, 2020**
 
 ### New Features
 
@@ -103,7 +103,7 @@ For older versions of Studio Pro please install the appropriate legacy app [here
 
 ## Android 1.2.2 / iOS 1.2.4
 
-**Release date: February 4th, 2020**
+**Release date: February 4, 2020**
 
 ### Fixes
 

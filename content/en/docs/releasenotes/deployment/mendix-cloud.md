@@ -27,7 +27,7 @@ For information on the current status of deployment to Mendix Cloud and any plan
 
 * We have introduced a filtering capability for sending Mendix runtime metrics to APM vendors.
 
-### May 4th, 2023
+### May 4, 2023
 
 * In the Build and Deploy APIs, we have added a link to download packages from the Developer Portal. This is controlled by a parameter on the following API calls:
     * [Retrieve Package](/apidocs-mxsdk/apidocs/build-api/#retrieve-package) in the Build API
@@ -96,7 +96,7 @@ For information on the current status of deployment to Mendix Cloud and any plan
 
 ## 2022
 
-### November 14th, 2022
+### November 14, 2022
 
 #### Improvements
 
@@ -190,9 +190,9 @@ New Certificate Details: <https://crt.sh/?id=6940402070>
 
     | Region | Date Enabled |
     | --- | --- |
-    | Asia Pacific | June 13th |
-    | US and Canada | June 14th |
-    | EU and UK | June 15th |
+    | Asia Pacific | June 13 |
+    | US and Canada | June 14 |
+    | EU and UK | June 15 |
 
 ### June 2, 2022
 
@@ -381,7 +381,7 @@ Existing applications will be updated in the next few weeks. Technical contacts 
 
 * We are deprecating [Version 1 of the Backups API](/apidocs-mxsdk/apidocs/backups-api-v1/). We recommend that you use [Backups API V2](/apidocs-mxsdk/apidocs/backups-api/) which handles long-running backup and restore jobs more robustly.
 
-### June 14th, 2021
+### June 14, 2021
 
 #### Improvements
 
@@ -605,7 +605,7 @@ If you encounter errors using APIs, please ensure that the format matches the do
 
     {{% alert color="info" %}}You must restart the affected environment to apply this fix.{{% /alert %}} 
 
-### September 14th, 2020
+### September 14, 2020
 
 #### Announcement - Deprecation of HTTPS SSL/TLS weak ciphers from **December 1, 2020**
 
@@ -645,7 +645,7 @@ SSL/TLS ciphers that are still supported for HTTPS connections after December 1,
 * `TLS_DHE_RSA_WITH_AES_256_GCM_SHA384`
 * `TLS_DHE_RSA_WITH_AES_128_GCM_SHA256`
 
-### September 4th, 2020
+### September 4, 2020
 
 #### Improvements
 
@@ -738,7 +738,7 @@ This value is displayed in the following graphs in Metrics for Mendix Cloud v4:
     * Database IOPS Burst Balance, based on the graph [Database IOPS Burst Balance](/developerportal/operate/trends-v4/#Trends-dbmxdatabaseburstbalance)
     * Database Freeable Memory, based on the graph [Database Node Operating System Memory](/developerportal/operate/trends-v4/#Trends-dbmemory)
 
-### June 4th, 2020
+### June 4, 2020
 
 #### Improvements
 
@@ -957,7 +957,7 @@ If you run services that connect to a `*.mendixcloud.com` endpoint AND use a sta
 
 * We released **Free Edition** of Mendix. This removes the limit of 10 named users on Free Apps which are deployed to the Mendix Cloud. To take advantage of the *Free Edition* for an existing app, you need to redeploy your app.
 
-### April 4th, 2019
+### April 4, 2019
 
 #### Fixes
 
@@ -1024,7 +1024,7 @@ If you run services that connect to a `*.mendixcloud.com` endpoint AND use a sta
 * We fixed a security issue that allowed app team members without deploy access to see application constants. (Ticket 76171)
 * We addressed and fixed an issue that prevented some users from being able to deploy to their environments. (Tickets 77060, 77122)
 
-### November 14th, 2018
+### November 14, 2018
 
 #### Fixes
 
@@ -1411,7 +1411,7 @@ In some cases, you may still experience false positives for the runtime heartbea
 * We upgraded the SSL/TLS ciphers for connections to apps in Mendix Cloud v4. These included dropping block-based ciphers (3DES), moving to 2048 bit DH params. Mendix Cloud v4 now has an [A+ rating at SSL Labs](https://www.ssllabs.com/ssltest/index.html).
 * We added HTTP/2 support for connections to all apps in Mendix Cloud v3 and Mendix Cloud v4. HTTP/2 is supported by all major browsers and results in more efficient network connections. [Read more about HTTP/2 here](https://http2.github.io/faq/).
 
-### May 4th, 2017
+### May 4, 2017
 
 #### Improvements
 

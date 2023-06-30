@@ -302,7 +302,7 @@ Test cases in ATS are dynamic with values that come from parameters, datasets, a
 
 ## 2.20.1
 
-**Release date: August 24th, 2020**
+**Release date: August 24, 2020**
 
 ### Fixes
 
@@ -377,7 +377,7 @@ To make this process even faster and skip one click, we added the option to run 
 
 ## 2.18.0
 
-**Release date: May 14th, 2020**
+**Release date: May 14, 2020**
 
 ### Improvements
 
@@ -393,7 +393,7 @@ To make this process even faster and skip one click, we added the option to run 
 
 ## 2.17.1 {#2171}
 
-**Release date: May 4th, 2020**
+**Release date: May 4, 2020**
 
 ### Improvements
 
@@ -471,7 +471,7 @@ When deleting an action that is being used somewhere else, a warning is now show
 
 ## 2.13.2
 
-**Release date: August 4th, 2019**
+**Release date: August 4, 2019**
 
 ### Mendix 8 Compatibility
 
@@ -620,7 +620,7 @@ For more details, see the [ATS 2 Reference Guide](/appstore/partner-solutions/at
 
 ## 2.11.0 {#2-11-0}
 
-**Release date: June 4th 2019**
+**Release date: June 4 2019**
 
 ### Support for More Mendix Marketplace Widgets
 
@@ -711,7 +711,7 @@ Mendix applications that are based on [Mendix version 7.22.2](/releasenotes/stud
 
 ## 2.9.4
 
-**Release date: December 4th, 2018**
+**Release date: December 4, 2018**
 
 ### Improvements
 
@@ -1068,7 +1068,7 @@ This opens up a lot exciting possibilities for us as ATS developers. For example
 
 ## 2.4.0
 
-**Release date: January 24th, 2018**
+**Release date: January 24, 2018**
 
 ### Improvements
 
@@ -1134,7 +1134,7 @@ This opens up a lot exciting possibilities for us as ATS developers. For example
 
 ## 2.2.0
 
-**Release date: November 14th, 2017**
+**Release date: November 14, 2017**
 
 ### Terms of Use and Privacy Policy
 
@@ -1340,7 +1340,7 @@ Many bug fixes and small changes have been maded, including everything from the 
 
 ## 1.8.8
 
-**Release date: December 14th, 2017**
+**Release date: December 14, 2017**
 
 ### Fixes
 
@@ -1387,7 +1387,7 @@ Many bug fixes and small changes have been maded, including everything from the 
 
 ## 1.8.5
 
-**Release date: February 24th, 2017**
+**Release date: February 24, 2017**
 
 ### Compatibiliy with Mendix 7
 

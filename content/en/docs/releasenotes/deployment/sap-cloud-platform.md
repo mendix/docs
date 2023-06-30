@@ -23,7 +23,7 @@ For information on the current status of deployment to SAP BTP and any planned r
 * We added the ability to choose which environment is the target for deployments directly from Mendix Studio.
 * We upgraded Mendix to use version 3 of the Cloud Foundry API, as version 2 has been deprecated.
 
-### August 4th, 2022
+### August 4, 2022
 
 #### Improvements
 
@@ -50,7 +50,7 @@ For information on the current status of deployment to SAP BTP and any planned r
 
 * We added a configurator to help you create a custom *xs-security-json* file to configure an XSUAA service. For more information, see [XSUAA Connector for SAP Business Technology Platform](/partners/sap/sap-xsuaa-connector/).
 
-### October 14th, 2021
+### October 14, 2021
 
 #### Improvements
 
@@ -76,7 +76,7 @@ For information on the current status of deployment to SAP BTP and any planned r
 
     {{% alert color="info" %}}This version uses a new user administration module called **SapAuthentication** and customers using *XSUAA Connector for SAP Business Technology Platform* version 2.0.0 or below will need to migrate their existing users from **Administration.Account** to **SapAuthentication.SapUser** using the [User Migration](/appstore/modules/user-migration-module/) Marketplace module.{{% /alert %}}
 
-### July 14th, 2021
+### July 14, 2021
 
 #### Fix
 
@@ -147,7 +147,7 @@ For more information see [SAP Business Technology Platform - deploy](/developerp
 * We split the **Edit App** button into two separate buttons, **Edit in Studio** and **Edit in Studio Pro** on some of the Developer Portal pages (Environments, App Services, Metrics, Alerts, Logs, Backups, and the Node Permissions tab of Security).
 * We also updated the drop down for the **View App** button.
 
-### April 24th, 2020
+### April 24, 2020
 
 #### Improvements
 
@@ -177,11 +177,11 @@ For more information see [SAP Business Technology Platform - deploy](/developerp
 
 * We added support for AWS RDS PostgreSQL databases when deploying to SAP Cloud Platform
 
-### July 4th, 2019
+### July 4, 2019
 
 #### Fixes
 
-* We fixed an issue where the XSUAA configuration wasn’t updated after deployment. **Please redeploy any apps which you deployed to SAP Cloud Platform between June 27th and 8:00 CST on July 4th.**
+* We fixed an issue where the XSUAA configuration wasn’t updated after deployment. **Please redeploy any apps which you deployed to SAP Cloud Platform between June 27th and 8:00 CST on July 4.**
 
 ### May 13th, 2019
 

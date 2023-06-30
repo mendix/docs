@@ -103,7 +103,7 @@ Please note that if your app requires custom initialization, for example due to 
 
 ## 5.1.11
 
-**Release date: May 14th, 2021**
+**Release date: May 14, 2021**
 
 ### Fixes 
 
@@ -174,7 +174,7 @@ We have decided to retract version 5.1.7 after we received reports that apps wou
 
 ## 5.1.5
 
-**Release date: February 4th, 2021**
+**Release date: February 4, 2021**
 
 ### Fixes
 

@@ -134,7 +134,7 @@ To see the current status of the Mendix Developer Portal and Control Center, see
 #### Improvements
 
 * In preparation for the [merging of Studio and Studio Pro](https://www.mendix.com/blog/coming-in-2023-the-merging-of-studio-and-studio-pro/), we removed the **Edit in Studio** button. You can still open your app in Studio via the ellipsis (**…**) in the [app tile](/developerportal/#my-apps) on the **My Apps** page.
-* After the big overhaul we released on [February 13th](#feb-13-23), our logging showed a decrease in the overall performance of [Stories](/developerportal/collaborate/stories/). We took some counter-measures and made performance improvements.
+* After the big overhaul we released on [February 13th](#feb-13-23), our logging showed a decrease in the overall performance of [Stories](/developerportal/project-management/stories/). We took some counter-measures and made performance improvements.
 * We made some minor improvements to the flow for [inviting app team members](/developerportal/collaborate/team/#inviting). For example, when you invite someone new to your app, the default role will be **Business Engineer** (as long as this role exists in your app).
 * We made some improvements to the layout of the [App Buzz](/developerportal/collaborate/buzz/#app-buzz) page so that it displays better on small screen resolutions.
 * The left-hand app sidebar menu is now collapsible, which makes for a far better experience on small screen resolutions.
@@ -225,7 +225,7 @@ For more information on security issues, see [Security Advisories](/releasenotes
 
 #### Fixes
 
-* We fixed an issue where some users were not able to open the [Sprint Status](/developerportal/collaborate/stories/) page.
+* We fixed an issue where some users were not able to open the [Sprint Status](/developerportal/project-management/stories/) page.
 
 ### December 13th, 2022
 
@@ -357,7 +357,7 @@ In Portfolio Management, you can do the following
 
 * We have introduced the [Marketplace Content](/developerportal/control-center/#marketplace-content) page in Control Center, where Mendix Admins can manage the visibility of Marketplace Content in Studio.
 * We simplified the process of [inviting other users](/developerportal/collaborate/team/#inviting) to your projects. Now you do not need to add a personal message to the invitation anymore and the whole process can be completed on a single page.
-* We added a banner about [Epics](/developerportal/project-management/epics/), our new tool for Agile planning, on the [Stories](/developerportal/collaborate/stories/) page. This banner provides more information about Epics and makes it easier for Scrum Masters to enable it for their projects.  
+* We added a banner about [Epics](/developerportal/project-management/epics/), our new tool for Agile planning, on the [Stories](/developerportal/project-management/stories/) page. This banner provides more information about Epics and makes it easier for Scrum Masters to enable it for their projects.  
 
 ### August 9th, 2022
 
@@ -452,7 +452,7 @@ In Portfolio Management, you can do the following
 
 #### Improvements
 
-* We removed the old [Stories](/developerportal/collaborate/stories/) UI in preparation for a brand new Mendix tool for Agile project management that will eventually replace **Stories** completely – stay tuned!
+* We removed the old [Stories](/developerportal/project-management/stories/) UI in preparation for a brand new Mendix tool for Agile project management that will eventually replace **Stories** completely – stay tuned!
 * We expanded the export-to-Excel functionality in [Control Center](/developerportal/control-center/) for both the [Apps](/developerportal/control-center/#apps) tab (which includes the **App ID**) and the [Cloud](/developerportal/control-center/#cloud) tab (which includes the **App ID**, **Environment ID**, and **Environment URL**).
 
 #### Known Issues
@@ -503,7 +503,7 @@ In Portfolio Management, you can do the following
 
 #### Fixes
 
-* We fixed a bug where editing a new task while [creating a story](/developerportal/collaborate/stories/#new-story) threw an error.
+* We fixed a bug where editing a new task while [creating a story](/developerportal/project-management/stories/#new-story) threw an error.
 
 ### January 18th, 2022
 
@@ -544,7 +544,7 @@ In Portfolio Management, you can do the following
 
 #### Improvements
 
-* We redesigned the [Stories](/developerportal/collaborate/stories/) archive page to allow you to more easily search through completed stories by ID, name, description, or Sprint.
+* We redesigned the [Stories](/developerportal/project-management/stories/) archive page to allow you to more easily search through completed stories by ID, name, description, or Sprint.
 
 ### November 1st, 2021
 
@@ -580,7 +580,7 @@ In Portfolio Management, you can do the following
 #### Improvements
 
 * We noticed our **API Keys** overview was not telling the exact truth and made some changes accordingly. Because API keys are cached by our user-provisioning system, when you revoke an API key, it takes a certain amount of time before this is reflected across the platform. A new confirmation message warns you of this.
-* We added a [Team Server revision history](/developerportal/collaborate/team-server/#revision-history) overview page for your Git-enabled apps. This allows you to have an overview of the last 40 commits made in your app. You can filter the overview per branch. When a revision is linked to a user story, the Team Server page can bring you to the [story details](/developerportal/collaborate/stories/#story-details) page.
+* We added a [Team Server revision history](/developerportal/collaborate/team-server/#revision-history) overview page for your Git-enabled apps. This allows you to have an overview of the last 40 commits made in your app. You can filter the overview per branch. When a revision is linked to a user story, the Team Server page can bring you to the [story details](/developerportal/project-management/stories/#story-details) page.
 
 #### Fixes
 
@@ -596,17 +596,17 @@ In Portfolio Management, you can do the following
 
 #### Improvements
 
-* We simplified the drag-and-drop behavior on the [Stories Overview](/developerportal/collaborate/stories/#overview) page (for both the new and old UI) to make it more stable.
+* We simplified the drag-and-drop behavior on the [Stories Overview](/developerportal/project-management/stories/#overview) page (for both the new and old UI) to make it more stable.
 * We added support for adding labels to stories on the **Stories Overview** page.
-* It is now possible to add labels and tasks as well as assign a team member when you [create a story](/developerportal/collaborate/stories/#new-story).
+* It is now possible to add labels and tasks as well as assign a team member when you [create a story](/developerportal/project-management/stories/#new-story).
 * Thanks to a lot of feedback from the community, we have improved the new stories functionality to the point where we feel comfortable removing the old UI. Because of this, we will be deprecating the old UI on December 31st, 2021.
-* We improved the look and feel of the [story details](/developerportal/collaborate/stories/#story-details) page, and we removed support for the old version of this page.
+* We improved the look and feel of the [story details](/developerportal/project-management/stories/#story-details) page, and we removed support for the old version of this page.
 * We made further preparations for the support of Git-enabled apps.
 * We finished a year-long project where we modernized the way the Developer Portal communicates internally. This meant we removed a long-running internal platform app, which had a great run, but now it is time to say goodbye. This app has been replaced with business events based on Kafka.
 
 #### Fixes
 
-* We fixed an issue where an error was shown when a Sprint was created from the [Stories](/developerportal/collaborate/stories/#new-sprint) page.
+* We fixed an issue where an error was shown when a Sprint was created from the [Stories](/developerportal/project-management/stories/#new-sprint) page.
 
 ### September 13th, 2021
 
@@ -668,8 +668,8 @@ In Portfolio Management, you can do the following
 
 #### Improvements
 
-* You can now assign team members to a [user story](/developerportal/collaborate/stories/#story-details).
-* We moved the old version of the Stories UI. You can now access it via the [More](/developerportal/collaborate/stories/#more) button on the **Stories** page.
+* You can now assign team members to a [user story](/developerportal/project-management/stories/#story-details).
+* We moved the old version of the Stories UI. You can now access it via the [More](/developerportal/project-management/stories/#more) button on the **Stories** page.
 * We removed the **Team** read-only overview page and send you straight to the [Manage Team](/developerportal/collaborate/team/#managing) page.
 * We moved the **API Keys** page to the [General Settings](/developerportal/collaborate/general-settings/#general-settings-api-keys) page.
 * We implemented a new responsive search panel.
@@ -680,7 +680,7 @@ In Portfolio Management, you can do the following
 #### Improvements
 
 * Git is coming: we have prepared the Developer Portal for the handling of Git-supported apps.
-* We added a button to the [Stories](/developerportal/collaborate/stories/) overview that allows you to [create a new label](/developerportal/collaborate/stories/#new-label).
+* We added a button to the [Stories](/developerportal/project-management/stories/) overview that allows you to [create a new label](/developerportal/project-management/stories/#new-label).
 * We made some minor changes to the look and feel across the Developer Portal.
 
 #### Fixes
@@ -703,7 +703,7 @@ In Portfolio Management, you can do the following
 #### Fixes
 
 * We fixed an issue where you could not always see the avatars of other users in the same app.
-* We fixed an issue where there were styling glitches visible when adding a description to a newly created [story](/developerportal/collaborate/stories/).
+* We fixed an issue where there were styling glitches visible when adding a description to a newly created [story](/developerportal/project-management/stories/).
 * We fixed an issue where Mendix Support was not always able to adjust app permissions on behalf of customers.
 
 ### May 7th, 2021
@@ -735,7 +735,7 @@ In Portfolio Management, you can do the following
     * Under your avatar on the right side of the top bar, there is an option to switch off the new navigation, which will be available for a limited amount of time.
 * We improved the search experience and added a full page of search results that can be accessed by clicking **View Search Results Page** at the bottom of the search drop-down menu or by pressing <kbd>Enter</kbd> after typing a search query
 * We changed the [My Apps](/developerportal/#my-apps) page and moved your favorite apps to the **Pinned** tab. This will become the default tab on this page, making it easy to quickly access the apps you care about the most.
-* You asked and we listened: We added new label colors for labels in [Stories](/developerportal/collaborate/stories/). There are now 15 different colors to choose from, specifically selected with accessibility in mind.
+* You asked and we listened: We added new label colors for labels in [Stories](/developerportal/project-management/stories/). There are now 15 different colors to choose from, specifically selected with accessibility in mind.
 * We made some big changes to the look and feel of our Developer Portal:
     * We reshuffled the navigation items in the [App Buzz](/developerportal/collaborate/buzz/#app-buzz) to a more logical order, based on our research insights. Now, there are two main sections: **Collaborate** and **Deploy**.
     * We updated the look of various navigation items (**Feedback**, **Planning**, **Team Server**, **General**) to our new design.
@@ -810,7 +810,7 @@ In Portfolio Management, you can do the following
 
 #### Improvements
 
-* It is now possible to add or remove labels in the [Story Details](/developerportal/collaborate/stories/#story-details) page.
+* It is now possible to add or remove labels in the [Story Details](/developerportal/project-management/stories/#story-details) page.
 * We added a link to your app's [environments](/developerportal/deploy/environments/) in the app tile on [My Apps](/developerportal/#my-apps).
 
 #### Fixes
@@ -843,7 +843,7 @@ In Portfolio Management, you can do the following
 #### Improvements
 
 * We redesigned the [My Apps](/developerportal/#my-apps) page.
-* You will now see labels when you are editing a [story](/developerportal/collaborate/stories/#story-actions) using the new **Stories** UI. We will enable the editing of story labels and label colors in a future release.
+* You will now see labels when you are editing a [story](/developerportal/project-management/stories/#story-actions) using the new **Stories** UI. We will enable the editing of story labels and label colors in a future release.
 
 #### Fixes
 
@@ -856,7 +856,7 @@ In Portfolio Management, you can do the following
 #### Improvements
 
 * We tweaked the styling of the **Stories** > **Project History** page.
-* We made [moving a story](/developerportal/collaborate/stories/#move-stories) to another app more intuitive.
+* We made [moving a story](/developerportal/project-management/stories/#move-stories) to another app more intuitive.
 * We removed the Model page, which contained tips on how to get started creating your apps.
 
 #### Fixes
@@ -874,7 +874,7 @@ In Portfolio Management, you can do the following
 #### Fixes
 
 * We fixed a bug where a change of company name was not properly distributed along the platform.
-* We fixed a bug where drop-down menus were cut off on the [story details](/developerportal/collaborate/stories/#story-details) page.
+* We fixed a bug where drop-down menus were cut off on the [story details](/developerportal/project-management/stories/#story-details) page.
 
 ### October 9th, 2020
 
@@ -886,8 +886,8 @@ In Portfolio Management, you can do the following
 
 #### Improvements
 
-* We redesigned the [story details](/developerportal/collaborate/stories/#story-details) page and made it available for Beta usage. You can use the new design when the new story UI is enabled. Please note that it is currently not possible to add or manage [labels](/developerportal/collaborate/stories/#managing-labels) with the new UI; this functionality will be released in the future.
-* When you add a [task](/developerportal/collaborate/stories/#adding-task) to a commit of your app model, we now show the revision in the revision overview of the story details. Clicking the task will bring you to the story details page to which the task belongs.
+* We redesigned the [story details](/developerportal/project-management/stories/#story-details) page and made it available for Beta usage. You can use the new design when the new story UI is enabled. Please note that it is currently not possible to add or manage [labels](/developerportal/project-management/stories/#managing-labels) with the new UI; this functionality will be released in the future.
+* When you add a [task](/developerportal/project-management/stories/#adding-task) to a commit of your app model, we now show the revision in the revision overview of the story details. Clicking the task will bring you to the story details page to which the task belongs.
 * We simplified the **Company Settings** tab of the **Company** page by removing some barely used attributes.
 
 #### Fixes
@@ -900,11 +900,11 @@ In Portfolio Management, you can do the following
 
 #### Improvements
 
-* We reintroduced the read-only authorization for the [user story](/developerportal/collaborate/stories/) overview.
+* We reintroduced the read-only authorization for the [user story](/developerportal/project-management/stories/) overview.
 
 #### Fixes
 
-* We fixed an issue where, under certain circumstances, email notifications were not sent on [story comment](/developerportal/collaborate/stories/#story-details) updates.
+* We fixed an issue where, under certain circumstances, email notifications were not sent on [story comment](/developerportal/project-management/stories/#story-details) updates.
 
 ### August 11th, 2020
 
@@ -948,7 +948,7 @@ In Portfolio Management, you can do the following
 
 #### Improvements
 
-* The [new Stories UI](/developerportal/collaborate/stories/) has been improved with various sections. The old Stories UI will be made unavailable soon. We encourage you to turn your tasks that are still available in the old Stories UI into new stories before the old UI is inaccessible.
+* The [new Stories UI](/developerportal/project-management/stories/) has been improved with various sections. The old Stories UI will be made unavailable soon. We encourage you to turn your tasks that are still available in the old Stories UI into new stories before the old UI is inaccessible.
 * We improved performance on story-related actions such as drag-and-drop and status changes on large apps with many deleted items.
 * We renamed the default **End-User** team role to [Guest](/developerportal/collaborate/app-roles/#team-roles) to better distinguish team roles from app user roles.
 * We removed the list appearance of the [My Company's Apps](/developerportal/#my-company-apps) page.
@@ -962,7 +962,7 @@ In Portfolio Management, you can do the following
 
 #### Improvements
 
-* When you delete a story or task on the [Stories](/developerportal/collaborate/stories/) page, it is now irreversibly removed from the system.
+* When you delete a story or task on the [Stories](/developerportal/project-management/stories/) page, it is now irreversibly removed from the system.
 * We removed the ability to revert story-related changes in an app's history.
 * We removed the ability to delete several stories at once on the **Stories** page.
 * We simplified story maintenance by preventing nested tasks.
@@ -978,13 +978,13 @@ In Portfolio Management, you can do the following
 
 #### Improvements
 
-* The [Stories](/developerportal/collaborate/stories/) template functionality has been replaced with the **Clone** functionality in the [new UI option (Beta)](/developerportal/collaborate/stories/#story-actions).
+* The [Stories](/developerportal/project-management/stories/) template functionality has been replaced with the **Clone** functionality in the [new UI option (Beta)](/developerportal/project-management/stories/#story-actions).
 
 ### May 7th, 2020
 
 #### Improvements
 
-* We added a new story action called **Clone** to the new Beta UI. For more information, see the [New UI Option (Beta)](/developerportal/collaborate/stories/#story-actions) section of *Stories*.
+* We added a new story action called **Clone** to the new Beta UI. For more information, see the [New UI Option (Beta)](/developerportal/project-management/stories/#story-actions) section of *Stories*.
 
 ### February 21st, 2020
 
@@ -992,7 +992,7 @@ In Portfolio Management, you can do the following
 
 * We fixed an issue where [favorited apps](/developerportal/#my-apps) still showed up in the favorites view on the [My Apps](/developerportal/#my-apps) page after being deleted.
 * We made performance improvements to the **My Apps** page.
-* We fixed an issue where the description field did not expand properly when creating a new [story](/developerportal/collaborate/stories/).
+* We fixed an issue where the description field did not expand properly when creating a new [story](/developerportal/project-management/stories/).
 
 ### February 6th, 2020
 
@@ -1018,13 +1018,13 @@ In Portfolio Management, you can do the following
 
 #### Improvements
 
-* We made some minor improvements to the style of the [Stories](/developerportal/collaborate/stories/#story-actions) Beta version. This release fixes issues regarding batch actions.
+* We made some minor improvements to the style of the [Stories](/developerportal/project-management/stories/#story-actions) Beta version. This release fixes issues regarding batch actions.
 
 ### December 13th, 2019 
 
 #### Improvements
 
-* We redesigned the [Stories](/developerportal/collaborate/stories/#story-actions) page with a brand new UI and improved stability. The new UI can be accessed by clicking **Enable new UI**. This is a [Beta version](/releasenotes/beta-features/).
+* We redesigned the [Stories](/developerportal/project-management/stories/#story-actions) page with a brand new UI and improved stability. The new UI can be accessed by clicking **Enable new UI**. This is a [Beta version](/releasenotes/beta-features/).
 
 ### December 5th, 2019
 

@@ -46,4 +46,4 @@ You can perform the following actions on this page:
 
 * [Buzz](/developerportal/collaborate/buzz/)
 * [Team](/developerportal/collaborate/team/)
-* [Stories](/developerportal/collaborate/stories/)
+* [Stories](/developerportal/project-management/stories/)

@@ -52,4 +52,4 @@ To invite new team members, follow these steps:
 
 * [App Roles](/developerportal/collaborate/app-roles/)
 * [Settings](/developerportal/settings/)
-* [Stories](/developerportal/collaborate/stories/)
+* [Stories](/developerportal/project-management/stories/)

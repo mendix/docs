@@ -185,7 +185,7 @@ On this tab, you can enable or disable the toast notifications that appear like 
 
 ### 4.4 Data Migration {#data-migration}
 
-On this tab, you can migrate all or part of your content from [Stories](/developerportal/collaborate/stories/) to Epics.
+On this tab, you can migrate all or part of your content from [Stories](/developerportal/project-management/stories/) to Epics.
 
 {{% alert color="info" %}}Only a Scrum Master can start a migration. Once you have started the migration, Mendix recommends working on Epics from that point forward.{{% /alert %}}
 
@@ -225,7 +225,7 @@ These are the new details of migrated stories:
 | Story **Status** | Tag with this format: **status:Status**                      | **status:To-do**    |
 | **Assignee**     | Story is assigned unless the assignee is not a member of the app team. |                     |
 
-For example, here is a Sprint with three stories from [Stories](/developerportal/collaborate/stories/):
+For example, here is a Sprint with three stories from [Stories](/developerportal/project-management/stories/):
 
 {{< figure src="/attachments/developerportal/project-management/epics/planning/data-migration-example-stories.png" >}}
 
@@ -235,7 +235,7 @@ Here is the outcome after migration:
 
 Beside the story details above, the remaining details for your stories are migrated according to their equivalents in the [Project Management](/developerportal/project-management/) section in the Developer Portal.
 
-{{% alert color="warning" %}}In [Stories](/developerportal/collaborate/stories/), files are associated with Comments, not with Stories. In Epics, files can only be associated with Stories, not with Comments. Therefore, files migrated from Stories will lose their Comment context.{{% /alert %}}
+{{% alert color="warning" %}}In [Stories](/developerportal/project-management/stories/), files are associated with Comments, not with Stories. In Epics, files can only be associated with Stories, not with Comments. Therefore, files migrated from Stories will lose their Comment context.{{% /alert %}}
 
 #### 4.4.3 Migration Report {#migration-report}
 
@@ -254,7 +254,7 @@ The **Migration Configuration** section presents what you have selected to migra
 The **Not Finished** status means that you can use the **Continue Migration** button option (this button is only available if a migration has failed or there is still some stories data left to migrate).
 
 {{% alert color="info" %}}
-If you still have content with the **Error** status (for example, in the **Unmigrated Stories** section) after retrying the migration via the **Continue Migration** button, Mendix recommends manually migrating that data from [Stories](/developerportal/collaborate/stories/) to Epics. Furthermore, if a section has been successfully migrated but there is still data that has not been migrated, Mendix recommends manually migrating the data.
+If you still have content with the **Error** status (for example, in the **Unmigrated Stories** section) after retrying the migration via the **Continue Migration** button, Mendix recommends manually migrating that data from [Stories](/developerportal/project-management/stories/) to Epics. Furthermore, if a section has been successfully migrated but there is still data that has not been migrated, Mendix recommends manually migrating the data.
 {{% /alert %}}
 
 

@@ -24,7 +24,7 @@ By adding your Sprints to Mendix, you will have a clear overview of your tasks a
 You can also manage the progress of tasks and Sprints from within Mendix Studio Pro via the [Stories pane](/refguide/stories-pane/).
 {{% /alert %}}
 
-{{< figure src="/attachments/developerportal/collaborate/stories/stories.png" >}}
+{{< figure src="/attachments/developerportal/project-management/stories/stories.png" >}}
 
 The tabs for this page are described below.
 
@@ -113,7 +113,7 @@ For each Sprint, the following options are provided via the menu button on the r
 
 When you select a story via the checkbox, you can perform the following actions:
 
-{{< figure src="/attachments/developerportal/collaborate/stories/story-context-menu.png" >}}
+{{< figure src="/attachments/developerportal/project-management/stories/story-context-menu.png" >}}
 
 * **Clone** – enables duplicating a selected story and its tasks, story points, status, and labels into a new user story; this can enable utilizing a user story as a template
 * **Move** –  enables moving a story to another Sprint
@@ -128,7 +128,7 @@ These actions support multi-selection of stories, except for the **Clone** actio
 
 When you click a story title, the story details page opens:
 
-{{< figure src="/attachments/developerportal/collaborate/stories/story-details.png"   width="500"  >}}
+{{< figure src="/attachments/developerportal/project-management/stories/story-details.png"   width="500"  >}}
 
 On this page, you can perform a number of actions:
 
@@ -173,11 +173,11 @@ To manage stories in Studio Pro, follow these steps:
 1. Open your app in Studio Pro by clicking **Edit in Studio Pro** in the upper-right corner of the page.
 2. Open **View** > **Stories**. You can see your active Sprints in the **Stories** pane.
 
-    {{< figure src="/attachments/developerportal/collaborate/stories/stories-pane.png" >}}
+    {{< figure src="/attachments/developerportal/project-management/stories/stories-pane.png" >}}
 
 3. To change the status of a story in Studio Pro, click the current status. For example, click the **To-do** **Status** to change it to **Running**:
 
-{{< figure src="/attachments/developerportal/collaborate/stories/stories-to-do.jpg" >}}
+{{< figure src="/attachments/developerportal/project-management/stories/stories-to-do.jpg" >}}
 
 {{% alert color="info" %}}
 Changing the status of a story or updating story points automatically synchronizes the updates between the Developer Portal and Studio Pro. For more information on how to change the status of your story, see the [Changing the Status of a Story or a Task](/refguide/stories-pane/#changing-status) section in *Stories Pane*.
@@ -185,11 +185,11 @@ Changing the status of a story or updating story points automatically synchroniz
 
 ## 3 Board
 
-On the **Board** tab, there is a Kanban overview of the [stories](/developerportal/collaborate/stories/) in the current Sprint. The stories are categorized in the **To-Do**, **Running**, and **Done** sections according to their status.
+On the **Board** tab, there is a Kanban overview of the [stories](/developerportal/project-management/stories/) in the current Sprint. The stories are categorized in the **To-Do**, **Running**, and **Done** sections according to their status.
 
 You can click **Mark current sprint as completed** only when all stories have the **Done** status.
 
-When you click **Details** for a story, you will be taken to the [story details](/developerportal/collaborate/stories/#story-details) page.
+When you click **Details** for a story, you will be taken to the [story details](/developerportal/project-management/stories/#story-details) page.
 
 {{% alert color="info" %}}
 All the changes made on this page are directly passed on to the **Stories** page and vice versa.

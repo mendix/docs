@@ -65,7 +65,7 @@ This feature is currently in a Beta release. For more information on what Beta r
 
 * We have fixed an issue where adding the same cluster member to an update cluster request more than once was not resulting in an error.
 
-### May 3rd, 2023
+### May 3, 2023
 
 #### Mendix Operator v2.11.0 {#2.11.0}
 
@@ -873,7 +873,7 @@ To upgrade an existing installation of Private Cloud to the latest version, foll
 
 * We have improved the reliability of sending environment statuses to the Developer Portal.
 
-### March 23rd, 2020
+### March 23, 2020
 
 #### Fixes
 

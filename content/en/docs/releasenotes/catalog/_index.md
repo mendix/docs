@@ -89,7 +89,7 @@ These release notes cover changes made to the [Catalog](/catalog/).
 
 * We fixed an issue that was generating endpoint URLs leading to `404 not found` errors when deploying an app in Studio Pro.
 
-### February 23rd, 2023
+### February 23, 2023
 
 #### Improvements
 
@@ -174,7 +174,7 @@ These release notes cover changes made to the [Catalog](/catalog/).
 * We fixed a bug where whitespaces in certain fields were causing duplicate services to be created.
 * We removed the **Automatically registered** tag from sample data sources.
 
-### November 3rd, 2022
+### November 3, 2022
 
 #### Improvements
 
@@ -336,7 +336,7 @@ These release notes cover changes made to the [Catalog](/catalog/).
 
 * We fixed an error that occurred when filtering by *Environment* in the search pane.
 
-### June 23rd, 2022
+### June 23, 2022
 
 #### Improvements
 
@@ -440,7 +440,7 @@ These release notes cover changes made to the [Catalog](/catalog/).
 
 * We added a loading spinner when you are waiting for a response on each of the registration form steps. 
 
-### March 3rd, 2022
+### March 3, 2022
 
 #### Improvements 
 
@@ -477,7 +477,7 @@ These release notes cover changes made to the [Catalog](/catalog/).
 * We fixed a bug where the Catalog did not display the correct status of an updatable entity.
 * We made various security and UI fixes.
 
-### February 3rd, 2022
+### February 3, 2022
 
 #### Fixes
 
@@ -529,7 +529,7 @@ These release notes cover changes made to the [Catalog](/catalog/).
 
 * We fixed an issue where a user registered an endpoint with an environment URL and the same relative path combination. As a result, an endpoint was reused from a different company.
 
-### December 23rd, 2021
+### December 23, 2021
 
 #### Fixes
 
@@ -620,7 +620,7 @@ These release notes cover changes made to the [Catalog](/catalog/).
 
 * We fixed an issue where searching in the [Data Hub pane](/refguide9/data-hub-pane/) in Studio Pro caused an error.
 
-### September 23rd, 2021
+### September 23, 2021
 
 #### Data Hub Free Edition
 
@@ -729,7 +729,7 @@ These release notes cover changes made to the [Catalog](/catalog/).
 * In the [Search result](/catalog/manage/search/#search-results) listings, the filters have been restyled.
 * All cancel and discard buttons now have matching styles for improved usability.
 
-### June 3rd, 2021
+### June 3, 2021
 
 #### New Features
 

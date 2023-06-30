@@ -372,7 +372,7 @@ We were made aware of a change in App Center resulting in signed iOS builds fail
 
 ### Release v1.0.71
 
-**Release date: December 23rd, 2020**
+**Release date: December 23, 2020**
 
 #### Multiple Configurations 
 

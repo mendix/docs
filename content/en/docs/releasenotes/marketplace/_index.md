@@ -46,7 +46,7 @@ These release notes cover changes made to the [Mendix Marketplace](/appstore/).
 * The **Compatibility** filter now only allows for major Mendix versions.
 * The **Support** section of the [component details page](/appstore/general/app-store-overview/#details) now includes a link to [Marketplace Content Support](/appstore/general/app-store-content-support/).
 
-### March 23rd, 2023
+### March 23, 2023
 
 #### New Features
 
@@ -159,7 +159,7 @@ If you are using Studio Pro on a Mac with Parallels, see [this update](https://k
 
 * We have implemented a UX refresh of [My Marketplace](/appstore/general/app-store-overview/#my-marketplace) to be in-line with other Marketplace pages.
 
-### June 3rd, 2021
+### June 3, 2021
 
 #### Fixes
 
@@ -209,7 +209,7 @@ If you are using Studio Pro on a Mac with Parallels, see [this update](https://k
 * There is an issue with users having trouble downloading Windows Service.
     * Fixed on [May 4th, 2021](#windows-service).
 
-### March 23rd, 2021
+### March 23, 2021
 
 #### Improvements
 
@@ -296,7 +296,7 @@ For more information on these support levels, see [App Store Content Support](/a
 
 * You can now subscribe to receive emails when new versions of your [favorite](/appstore/general/app-store-overview/#saved) App Store content are published.
 
-### October 23rd, 2019
+### October 23, 2019
 
 #### New Features
 

@@ -201,7 +201,7 @@ In the end, your variable should be set up like this:
 
 ## 6.2.15
 
-**Release date: March 23rd, 2022**
+**Release date: March 23, 2022**
 
 ### Fixes
 
@@ -295,7 +295,7 @@ In the end, your variable should be set up like this:
 
 ## 6.2.4
 
-**Release date: September 23rd, 2021**
+**Release date: September 23, 2021**
 
 ### Improvements
 

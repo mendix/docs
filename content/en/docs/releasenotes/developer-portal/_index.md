@@ -129,7 +129,7 @@ To see the current status of the Mendix Developer Portal and Control Center, see
 * We have made the option to migrate your app to Git more prominent. The banner is now displayed on all pages within the **Collaborate** section of the Developer Portal. Read more information on how to migrate and if you are eligible to migrate [here](/developerportal/collaborate/migrate-to-git/).
 * Have you tried [Epics](/developerportal/project-management/epics/) yet? You should! It is awesome if we do say ourselves. We are also working in the background to make it possible to connect your Mendix apps to your Jira boards – stay tuned!
 
-### March 23rd, 2023
+### March 23, 2023
 
 #### Improvements
 
@@ -163,7 +163,7 @@ To see the current status of the Mendix Developer Portal and Control Center, see
 
 * We fixed an issue where the users you administered for your app's [environment](/developerportal/collaborate/general-settings/#manage-users) were not displayed in the correct order.
 
-### February 23rd, 2023
+### February 23, 2023
 
 #### New Features
 
@@ -513,7 +513,7 @@ In Portfolio Management, you can do the following
 
 ## 2021
 
-### December 23rd, 2021
+### December 23, 2021
 
 #### Improvements
 
@@ -592,7 +592,7 @@ In Portfolio Management, you can do the following
 
 * We have released the company [Onboarding](/developerportal/control-center/#onboarding) functionality in Control Center that enables setting up Mendix onboarding specifically for all new members of your company. You can set up an onboarding email that new users get as soon as they create their Mendix accounts and a company onboarding page that new users land on.
 
-### September 23rd, 2021
+### September 23, 2021
 
 #### Improvements
 
@@ -792,7 +792,7 @@ In Portfolio Management, you can do the following
 * We optimized the **App Templates** page for a better experience. We also improved the search function on this page.
 * There is now better performance for building your app after you select a template.
 
-### February 23rd, 2021
+### February 23, 2021
 
 #### Improvements
 
@@ -851,7 +851,7 @@ In Portfolio Management, you can do the following
 
 ## 2020
 
-### December 23rd, 2020
+### December 23, 2020
 
 #### Improvements
 
@@ -1004,7 +1004,7 @@ In Portfolio Management, you can do the following
 
 ## 2019
 
-### December 23rd, 2019
+### December 23, 2019
 
 #### Improvements
 
@@ -1122,7 +1122,7 @@ In Portfolio Management, you can do the following
 
 * We removed the [Mendix Feedback](/appstore/modules/mendix-feedback/) widget from the Developer Portal. If you want to report an issue or ask a question, please submit a ticket at [Mendix Support](https://support.mendix.com).
 
-### January 3rd, 2019
+### January 3, 2019
 
 #### Fixes
 
@@ -1212,7 +1212,7 @@ The Web Modeler can now be enabled for all types of apps. You can do this on the
 
 * We implemented the new Mendix header.
 
-### May 23rd, 2018
+### May 23, 2018
 
 #### Improvements
 

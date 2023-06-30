@@ -48,13 +48,13 @@ For more information on hybrid mobile app development in Mendix, see the [Hybrid
 
 ### Hybrid App Base 5.0.2
 
-**Release date: September 3rd, 2020**
+**Release date: September 3, 2020**
 
 * We fixed the version number of the Hybrid App Base.
 
 ### Hybrid App Base 5.0.1
 
-**Release date: September 3rd, 2020**
+**Release date: September 3, 2020**
 
 * Android builds now target Android SDK level 29 by default. This version of the Native Template complies with the Google Play requirements. More info can be found at the [Android developer forum](https://support.google.com/googleplay/android-developer/answer/113469#targetsdk). 
 
@@ -78,7 +78,7 @@ With this release we updated all PhoneGap dependencies to the latest supported v
 
 ### Hybrid App Base 4.1.9
 
-**Release date: January 3rd, 2020**
+**Release date: January 3, 2020**
 
 * We fixed an issue with race conditions in asynchronous hooks.
 * We introduced a new **onBeforeSynchonization** hook.
@@ -162,7 +162,7 @@ To enable more control over the target architecture, use the following variants:
 
 ### Hybrid App Base 4.0.4
 
-**Release date: January 23rd, 2019**
+**Release date: January 23, 2019**
 
 * We fixed a mistake in the Google Services *.plist* file.
 
@@ -350,7 +350,7 @@ For this update, we recommend downloading a fresh hybrid app package from the Me
 
 ### Hybrid App Base 2.0.6 {#7318}
 
-**Release date: July 3rd, 2018**
+**Release date: July 3, 2018**
 
 * We increased the default server timeout for offline apps. The new timeout is 30 seconds.
 
@@ -369,7 +369,7 @@ For this update, we recommend downloading a fresh hybrid app package from the Me
 
 ### Hybrid App Base 2.0.3 / Hybrid App Template 2.0.1
 
-**Release date: March 23rd, 2018**
+**Release date: March 23, 2018**
 
 This patch fixes an issue with an upstream dependency (`com.google.android.gms:play-services-gcm`) that was updated by Google. The issue prevented building *.apk* files, both locally and on Phonegap Build.
 
@@ -424,7 +424,7 @@ For this update, we recommend that you download a fresh hybrid app package from 
 
 ### Hybrid App Template 1.3.5
 
-**Release date: January 23rd, 2018**
+**Release date: January 23, 2018**
 
 * We updated the *package-lock.json* file to fix an issue where an old version of `mendix-hybrid-app-base` was being used.
 

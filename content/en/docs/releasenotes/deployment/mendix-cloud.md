@@ -48,7 +48,7 @@ For information on the current status of deployment to Mendix Cloud and any plan
 
     {{% alert color="info" %}}This feature is currently in a [Beta Release](/releasenotes/beta-features/).{{% /alert %}}
 
-### February 23rd, 2023
+### February 23, 2023
 
 #### Improvements
 
@@ -252,7 +252,7 @@ New Certificate Details: <https://crt.sh/?id=6940402070>
     * Local File Inclusion
     * Log4j remote code execution
 
-### March 3rd, 2022
+### March 3, 2022
 
 #### Fixes
 
@@ -278,7 +278,7 @@ New Certificate Details: <https://crt.sh/?id=6940402070>
 
 ## 2021
 
-### December 23rd, 2021
+### December 23, 2021
 
 #### Improvements
 
@@ -354,7 +354,7 @@ Existing applications will be updated in the next few weeks. Technical contacts 
 
 * We now prevent you from allocating more memory than is available when [scaling your environment](/developerportal/deploy/scale-environment/) when you have multiple instances, ensuring that deployments do not fail because of a lack of memory. 
 
-### July 23rd, 2021
+### July 23, 2021
 
 #### Improvements
 
@@ -491,7 +491,7 @@ Everyone who logs onto the app with a username and password is considered an app
 
 In connected environments, this usage information will be sent back to Mendix automatically, at regular intervals — by default this is set to once every day. This transmission will take place at around(randomized) midnight. Data will also be sent when the app is restarted. 
 
-### March 3rd, 2021
+### March 3, 2021
 
 * We updated the [deploy API](/apidocs-mxsdk/apidocs/deploy-api/), [Build API](/apidocs-mxsdk/apidocs/build-api/), [Team Server API](/apidocs-mxsdk/apidocs/team-server-api/), [Backups API V2](/apidocs-mxsdk/apidocs/backups-api/), and [Backups API V1](/apidocs-mxsdk/apidocs/backups-api-v1/) to:
     * add json validation
@@ -525,9 +525,9 @@ If you encounter errors using APIs, please ensure that the format matches the do
     * For single-instance apps, the log level can be changed while the app is running.
     * For a multi-instance app, the new log level will only be applied after a restart.
 
-    This is a requested improvement after the release of [December 3rd](#20201203). Note that changes to the log levels are still permanent as announced on December 3rd.
+    This is a requested improvement after the release of [December 3rd](#20201203). Note that changes to the log levels are still permanent as announced on that date.
 
-### December 3rd, 2020 {#20201203}
+### December 3, 2020 {#20201203}
 
 * We added the ability to permanently change the Log Levels in Mendix Cloud v4 for an app so that they persist between restarts. This was in response to customer requests. (Ticket 101413)<br/>Log Levels will only become persistent after the next restart of your app, so you may have to set them one more time.<br/>For more information on log levels, see [Log Levels Tab](/developerportal/deploy/environments-details/#log-levels) in the *Environment Details* documentation.
 * You can now retrieve the version of the buildpack used in deployment via the Deploy API [Retrieve Environment](/apidocs-mxsdk/apidocs/deploy-api/#retrieve-environment) call. The version is returned as `RuntimeLayer`. You will need to redeploy your app to ensure it returns this in the API response.
@@ -805,7 +805,7 @@ This value is displayed in the following graphs in Metrics for Mendix Cloud v4:
 
 ## 2019
 
-### December 23rd, 2019
+### December 23, 2019
 
 #### Improvements
 
@@ -885,7 +885,7 @@ If you run services that connect to a `*.mendixcloud.com` endpoint AND use a sta
 * We fixed an issue that caused the wrong Technical Contact information to be shown on the app's *General* page in the Developer Portal. (Ticket 84852)
 * We added a feedback message when you try to restore a backup while the backup is still being created. (Ticket 85786)
 
-### August 23rd, 2019
+### August 23, 2019
 
 #### Improvements
 
@@ -951,7 +951,7 @@ If you run services that connect to a `*.mendixcloud.com` endpoint AND use a sta
 
 * We resolved an issue where some team members were not visible in Node Permissions after an app was relinked (Tickets 70285, 79708, 79824, 80557, 81713, 82591).
 
-### May 3rd, 2019
+### May 3, 2019
 
 #### Improvements
 
@@ -1006,7 +1006,7 @@ If you run services that connect to a `*.mendixcloud.com` endpoint AND use a sta
 
 * We have implemented a change on our Mendix Cloud v4 infrastructure so that incoming connections that do not support TLS v1.2 or higher will stop working. This effectively means that TLS v1.0 and v1.1 are disabled, and Mendix Cloud v4 now has an [A+ rating at SSL Labs](https://www.ssllabs.com/ssltest/index.html) again.
 
-### January 3rd, 2019
+### January 3, 2019
 
 #### Fixes
 
@@ -1091,7 +1091,7 @@ Over the last few months, we have made several improvements to our alerting stac
 
 In some cases, you may still experience false positives for the runtime heartbeat alert. If that happens, you can resolve the problem by doing a transport and then a restart of the app.
 
-### July 23rd, 2018
+### July 23, 2018
 
 #### Improvements
 
@@ -1233,7 +1233,7 @@ In some cases, you may still experience false positives for the runtime heartbea
 
 * When uploading a backup in Mendix Cloud v3, double-clicking the **Restore** button was causing the UI to break. This is now fixed.
 
-### February 23rd, 2018
+### February 23, 2018
 
 #### Improvements
 

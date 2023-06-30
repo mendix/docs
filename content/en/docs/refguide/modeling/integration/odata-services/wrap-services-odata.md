@@ -142,7 +142,7 @@ Another way to test published OData services is with the user interfaces of [Ope
 
 The following examples are possible ways to use OData to connect to external data sources.
 
-### 7.1 Third-Party Service Connector {#3rd-party}
+### 7.1 Third-Party Service Connector {#third-party}
 
 You can use the features described in this document to build a connector that wraps a third-party service API as OData. 
 

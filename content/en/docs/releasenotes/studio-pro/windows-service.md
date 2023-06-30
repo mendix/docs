@@ -376,7 +376,7 @@ Now each app has its own license, even if it runs under the same user account as
 
 #### 1.0.6.0
 
-**Release date: November 23rd, 2010**
+**Release date: November 23, 2010**
 
 * In some cases, port number changes were not be saved.
 * Database settings user interface improved.
@@ -411,7 +411,7 @@ Now each app has its own license, even if it runs under the same user account as
 
 #### 1.0.4.0
 
-**Release date: June 3rd, 2010**
+**Release date: June 3, 2010**
 
 * Now the existence of the given paths will be checked before start.
 * More info will be shown in Windows Log in some cases of service startup fail.

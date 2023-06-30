@@ -17,7 +17,7 @@ weight: 100
 
 ## 2.28.12
 
-**Release date: May 23rd, 2023**
+**Release date: May 23, 2023**
 
 ### Improvements
 
@@ -88,7 +88,7 @@ weight: 100
 
 ## 2.28.5
 
-**Release date: January 3rd, 2023**
+**Release date: January 3, 2023**
 
 ### Fixes
 
@@ -1349,7 +1349,7 @@ Many bug fixes and small changes have been maded, including everything from the 
 
 ## 1.8.7
 
-**Release date: July 3rd, 2017**
+**Release date: July 3, 2017**
 
 ### Fixes
 

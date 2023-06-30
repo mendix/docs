@@ -21,7 +21,7 @@ description: "These are the release notes for the Mendix Mobile app."
 
 ## Android 4.7.0 / iOS 4.7.0
 
-**Release date: March 23rd, 2018**
+**Release date: March 23, 2018**
 
 ### New Functionality
 

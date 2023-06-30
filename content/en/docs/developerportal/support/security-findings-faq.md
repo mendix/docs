@@ -208,12 +208,11 @@ The Mendix Client is bundled with the full dojo library. However, not all functi
 
 Mendix versions 9.11.0 and above use Dojo 1.16.4. The `setObject` function is used in one place in our code, but this is in a deprecated function. This function is no longer used internally. Therefore, there is no opportunity for the `setObject` function to be exploited.
 
-## 8.7 BREACH Attack vulnerability
+### 8.7 BREACH Attacks
 
-The following mitigation methods are recommended and can be implemented on the application side to protect resources from BREACH attacks:
+The Mendix Runtime implements a number of mitigation methods which mean that the Mendix Runtime is not vulnerable to [BREACH attacks](https://www.breachattack.com/). These recommended mitigation methods protect resources by:
 
 * Separating secrets from user input
 * Randomizing secrets per request
 * Masking secrets (effectively randomizing by XORing with a random secret per request)
 * Protecting vulnerable pages with CSRF
-We currently have these mitigation methods implemented in our runtime and are therefor not vulnerable to this vulnerability. 

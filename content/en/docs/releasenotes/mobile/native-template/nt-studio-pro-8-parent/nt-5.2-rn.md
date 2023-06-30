@@ -79,7 +79,7 @@ description: "Native Template 5.2 release notes."
 
 ## 5.2.6
 
-**Release date: November 2nd, 2021**
+**Release date: November 2, 2021**
 
 ### Fixes
 

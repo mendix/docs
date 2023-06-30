@@ -183,7 +183,7 @@ We have decided to retract version 5.1.7 after we received reports that apps wou
 
 ## 5.1.4
 
-**Release date: December 22nd, 2020**
+**Release date: December 22, 2020**
 
 ### Fixes
 
@@ -203,7 +203,7 @@ We have decided to retract version 5.1.7 after we received reports that apps wou
 
 ## 5.1.1
 
-**Release date: November 2nd, 2020**
+**Release date: November 2, 2020**
 
 ### Disclaimer
 

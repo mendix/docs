@@ -125,7 +125,7 @@ With this release we updated all PhoneGap dependencies to the latest supported v
 
 ### Hybrid App Base 4.1.1
 
-**Release date: July 2nd, 2019**
+**Release date: July 2, 2019**
 
 * We moved the Google Services *.json*, *.plist*, and *build-extras.xml* files to the **/config** folder. Thus, if you have an existing **config.xml** file, make sure that lines `213-214` read as follows:
 
@@ -441,14 +441,14 @@ For this update, we recommend that you download a fresh hybrid app package from 
 
 ### Hybrid App Template 1.3.3
 
-**Release date: December 22nd, 2017**
+**Release date: December 22, 2017**
 
 * We renamed the command `prepare` to `prepare:all`, because it conflicted with the **npm** command of the same name.
 * We updated the README with a table of contents and a list of known issues.
 
 ### Hybrid App Base 1.7.0 / Hybrid App Template 1.3.2
 
-**Release date: December 2nd, 2017**
+**Release date: December 2, 2017**
 
 * We updated some of the Cordova plugins to support the new iPhone X screen size/ratio/notch. Please follow the instructions in [iPhone X Support](https://github.com/mendix/hybrid-app-template/blob/master/IPHONEX.md) to configure your hybrid app to look good on an iPhone X.
 * We improved how Android splash screens are configured. The old configuration could lead to memory-related crashes during startup.

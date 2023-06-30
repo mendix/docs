@@ -329,7 +329,7 @@ Now each app has its own license, even if it runs under the same user account as
 
 ### 1.0.7
 
-**Release date: March 22nd, 2011**
+**Release date: March 22, 2011**
 
 * Fixed incorrect shutdown handling.
 * Force quit will be done after waiting 10 instead of 5 seconds.

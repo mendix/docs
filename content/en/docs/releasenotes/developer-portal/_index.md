@@ -31,7 +31,7 @@ To see the current status of the Mendix Developer Portal and Control Center, see
 
 * We changed the process for merging Mendix Profiles so that the profiles are truly merged and your user accounts stay connected to the resulting Mendix Profile. Previously, profile data was moved from one account to another.
 
-### June 22nd, 2023
+### June 22, 2023
 
 #### New Features
 
@@ -342,7 +342,7 @@ In Portfolio Management, you can do the following
 * We fixed an issue where Mendix Admins were not able to invite users to their company's apps.
 * We fixed a pagination issue on the [user management overview](/developerportal/collaborate/general-settings/#manage-users) in your **Access Management** settings.
 
-### August 22nd, 2022
+### August 22, 2022
 
 #### New Features
 
@@ -526,7 +526,7 @@ In Portfolio Management, you can do the following
 
 * We changed the minimum length of passwords from 8 to 12 characters.
 
-### December 2nd, 2021
+### December 2, 2021
 
 #### Fixes
 
@@ -621,7 +621,7 @@ In Portfolio Management, you can do the following
 
 * Mendix Admins can now configure their own [single sign-on](/developerportal/control-center/set-up-sso-byoidp/) configuration from the [Security](/developerportal/control-center/#security) tab of Control Center. 
 
-### September 2nd, 2021
+### September 2, 2021
 
 #### Improvements
 
@@ -863,7 +863,7 @@ In Portfolio Management, you can do the following
 
 * We fixed an issue where replies to Buzz notifications were not properly processed into comments on your [app Buzz](/developerportal/collaborate/buzz/#app-buzz) page. (Ticket 111076)
 
-### December 2nd, 2020
+### December 2, 2020
 
 #### Improvements
 
@@ -974,7 +974,7 @@ In Portfolio Management, you can do the following
 * We fixed a bug where the calendar icon on date/time input fields was not displayed properly.
 * We fixed a bug where the star icon on your [favorite apps](/developerportal/#my-apps) was not displayed properly.
 
-### May 22nd, 2020
+### May 22, 2020
 
 #### Improvements
 
@@ -1077,7 +1077,7 @@ In Portfolio Management, you can do the following
 
 * We have changed the way you request a license for a new app. You can now request a license using the [Request New App Node](https://newnode.mendix.com/) app. Other requests should continue to be made through the [Support Portal](https://support.mendix.com).
 
-### May 2nd, 2019
+### May 2, 2019
 
 #### UI Improvements
 

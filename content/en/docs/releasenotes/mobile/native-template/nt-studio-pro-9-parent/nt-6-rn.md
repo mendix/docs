@@ -153,7 +153,7 @@ In the end, your variable should be set up like this:
 
 ## 6.2.22
 
-**Release date: June 2nd, 2022**
+**Release date: June 2, 2022**
 
 ### Fixes
 

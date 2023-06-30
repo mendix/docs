@@ -194,7 +194,7 @@ New Certificate Details: <https://crt.sh/?id=6940402070>
     | US and Canada | June 14th |
     | EU and UK | June 15th |
 
-### June 2nd, 2022
+### June 2, 2022
 
 #### Fix
 
@@ -216,7 +216,7 @@ New Certificate Details: <https://crt.sh/?id=6940402070>
 
 * We have updated AppDynamics monitoring to provide default values where possible.
 
-### April 22nd, 2022
+### April 22, 2022
 
 #### Improvements
 
@@ -258,7 +258,7 @@ New Certificate Details: <https://crt.sh/?id=6940402070>
 
 * We fixed an issue where the `start environment` Deploy API error response had an incorrect JSON format. (Ticket 135323)
 
-### March 2nd, 2022
+### March 2, 2022
 
 #### Improvements
 
@@ -289,7 +289,7 @@ New Certificate Details: <https://crt.sh/?id=6940402070>
 
 * We fixed an issue where uploading a backup file got stuck and could not be completed. (Tickets 134454, 134887, 134898, 135007, 135325, 135359, 135692, 135894, and 137806)
 
-### December 22nd, 2021
+### December 22, 2021
 
 #### Improvements
 
@@ -501,7 +501,7 @@ In connected environments, this usage information will be sent back to Mendix au
 
 If you encounter errors using APIs, please ensure that the format matches the documentation exactly before contacting Mendix Support. Additional or amended headers or request bodies may cause the API to fail.
 
-### February 22nd, 2021
+### February 22, 2021
 
 * We have released a major improvement to the technology underpinning our integration with Datadog. This adds the following features:
     * tracing program flow (see https://docs.datadoghq.com/tracing/setup_overview/setup/java for information on how Datadog does this)
@@ -557,7 +557,7 @@ If you encounter errors using APIs, please ensure that the format matches the do
 
     See [Mendix Buildpack Releases](https://github.com/mendix/cf-mendix-buildpack/releases) on *GitHub* for more information.
 
-### October 22nd, 2020
+### October 22, 2020
 
 #### Improvements
 
@@ -575,7 +575,7 @@ If you encounter errors using APIs, please ensure that the format matches the do
     * You can now choose only to build the MDA without deploying to an environment
     * The setting of the target environment (for Technical Contacts only) has been moved from the individual Environment Details pages to the Environments page of the app
 
-### September 22nd, 2020
+### September 22, 2020
 
 #### Improvements
 
@@ -684,7 +684,7 @@ SSL/TLS ciphers that are still supported for HTTPS connections after December 1s
 
 * We fixed an issue where users did not see changes they made to node permissions. (Tickets 104154 and 104642)
 
-### July 22nd, 2020
+### July 22, 2020
 
 #### Fixes
 
@@ -706,7 +706,7 @@ SSL/TLS ciphers that are still supported for HTTPS connections after December 1s
     {{% alert color="info" %}}You will still need to change the password of the administrator account for the new role to be assigned to the administrator. See the [User Role](/refguide9/administrator/#user-role) section of *Administrator* for more information{{% /alert %}}
 * We resolved an issue where an incorrect debugger password could be displayed for Mendix Cloud **v4** when the **Show Debugger Information** button was clicked on the Environment Details page. (Ticket 99469)
 
-### July 2nd, 2020
+### July 2, 2020
 
 #### Improvements and Fixes
 
@@ -763,7 +763,7 @@ This value is displayed in the following graphs in Metrics for Mendix Cloud v4:
 
 * We have updated the environment details and backups screens for Mendix Clouds to show a more precise region, and the location of the secondary backup.
 
-### March 2nd, 2020
+### March 2, 2020
 
 #### Improvements
 
@@ -1118,7 +1118,7 @@ In some cases, you may still experience false positives for the runtime heartbea
 * You now get a warning if you try to restore a backup into a small environment. (Ticket 63367)
 * Creating a backup via REST API no longer returns error message 500 when it succeeds. (Ticket 65762)
 
-### July 2nd, 2018
+### July 2, 2018
 
 #### Improvements
 
@@ -1165,7 +1165,7 @@ In some cases, you may still experience false positives for the runtime heartbea
 * We fixed the problem that caused the Mendix Cloud v4 **Metrics** legend to remain on the screen even if the user navigated to a different page.
 * We fixed the health icon statuses of the environments so that they reflect the environment health with minimum delay.
 
-### May 22nd, 2018
+### May 22, 2018
 
 #### Fixes
 
@@ -1239,7 +1239,7 @@ In some cases, you may still experience false positives for the runtime heartbea
 
 * In Mendix Cloud v4, the native memory usage of applications was very high. This led to crashes and automatic restarts, especially on containers with 1 GB of memory. We activated an advanced memory limiting setting for glibc (`MALLOC_ARENA_MAX`), which will prevent this behavior. The fix will automatically be applied to all apps that are transported and restarted as of today.
 
-### February 22nd, 2018
+### February 22, 2018
 
 #### Improvements
 
@@ -1282,7 +1282,7 @@ In some cases, you may still experience false positives for the runtime heartbea
 
 * In Mendix Cloud v4, the **archived log** function returned logs from a broader time range than what the user had selected (for example, the logs for one day returned log data from two days). This was fixed.
 
-### December 22nd, 2017
+### December 22, 2017
 
 #### Improvements
 
@@ -1358,7 +1358,7 @@ In some cases, you may still experience false positives for the runtime heartbea
 * For Mendix Cloud v4, we do no longer show the size of the archived log. The size we displayed previously was wrong.
 * The expiry date for Mendix Cloud backups is now visible in the backup list.
 
-### August 22nd, 2017
+### August 22, 2017
 
 #### Improvements
 

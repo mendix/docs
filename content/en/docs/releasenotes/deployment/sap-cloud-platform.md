@@ -36,7 +36,7 @@ For information on the current status of deployment to SAP BTP and any planned r
 
 * We released new versions of the [SAP Fiori 3 UI Resource](https://marketplace.mendix.com/link/component/116359) and [UI Package for SAP Fiori themed apps](https://marketplace.mendix.com/link/component/107625) modules in the Mendix Marketplace. These modules allow you to use Mendix version 9.6.11 and above to make Fiori-styled apps which work alongside the Atlas Core theme.
 
-### March 2nd, 2022
+### March 2, 2022
 
 #### BAPI Connector
 
@@ -92,7 +92,7 @@ For information on the current status of deployment to SAP BTP and any planned r
 
 * We fixed an issue where the activity log reported the wrong value when the memory of the environment was scaled. (Ticket 122642)
 
-### June 2nd, 2021
+### June 2, 2021
 
 #### Improvements
 
@@ -207,7 +207,7 @@ For more information see [SAP Business Technology Platform - deploy](/developerp
 
 ## 2018
 
-### October 22nd, 2018
+### October 22, 2018
 
 #### Improvements
 

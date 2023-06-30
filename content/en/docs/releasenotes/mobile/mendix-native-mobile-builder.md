@@ -192,7 +192,7 @@ App Center's CodePush OTA page improvements:
 
 ### Release 1.0.90
 
-**Release date: June 22nd, 2021**
+**Release date: June 22, 2021**
 
 #### Fixes
 
@@ -286,7 +286,7 @@ still fail if the keystore values are invalid.
 
 ### Release v1.0.81
 
-**Release date: March 2nd, 2021**
+**Release date: March 2, 2021**
 
 #### Improvements 
 

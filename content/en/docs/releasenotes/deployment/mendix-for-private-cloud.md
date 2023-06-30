@@ -157,7 +157,7 @@ As part of our [strategic partnership with AWS](/partners/aws/), we have added a
 
 * We have updated the [CSI Secrets Storage](/developerportal/deploy/secret-store-credentials/) documentation to clarify how database password rotation works, and how to use AWS RDS IAM authentication instead of passwords.
 
-### February 2nd, 2023
+### February 2, 2023
 
 #### Portal Improvements
 
@@ -297,7 +297,7 @@ Your build may fail if you try to deploy the same deployment package more than o
 
 * We fixed an issue where users were unable to see all the environments on the environment details page. (Ticket 151698)
 
-### June 2nd, 2022 
+### June 2, 2022 
 
 #### Portal Improvements
 
@@ -345,7 +345,7 @@ This issue is fixed in Mendix Operator [version 2.5.1](#2.5.1).
 
 * We fixed an issue where dates set in an environment variable was malformed when passed to the Mendix Runtime. (Ticket 144314)
 
-### March 22nd, 2022
+### March 22, 2022
 
 #### Fixes
 
@@ -486,7 +486,7 @@ This tool is available as a technical preview. For documentation and download li
 * We have fixed an issue where you get duplicate scheduled events and constants after renaming them in a mendix app.
 * We have improved the page to configure annotations (ingress, service, and pod) from the Developer Portal for connected clusters.
 
-### September 2nd, 2021{#20210902}
+### September 2, 2021{#20210902}
 
 #### Mendix Operator v2.1.0 and Mendix Gateway Agent v2.1.0
 
@@ -801,7 +801,7 @@ To upgrade an existing installation of Private Cloud to this version, follow the
 
 * We have fixed multiple issues where the UI was not showing information or was showing outdated information.
 
-### June 22nd, 2020
+### June 22, 2020
 
 #### Mendix Operator v1.2.0
 

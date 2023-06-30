@@ -19,7 +19,7 @@ These release notes cover changes made to the [Catalog](/catalog/).
 
 * We improved the clarity and accuracy of even more Catalog UI texts.
 
-### June 22nd, 2023
+### June 22, 2023
 
 #### Improvements
 
@@ -112,7 +112,7 @@ These release notes cover changes made to the [Catalog](/catalog/).
 * We fixed an issue with cropping images when uploading an application icon.
 * We fixed an issue where authentication details of a data source were not visible to users without curation rights.
 
-### February 2nd, 2023
+### February 2, 2023
 
 #### Improvements
 
@@ -130,7 +130,7 @@ These release notes cover changes made to the [Catalog](/catalog/).
 
 ## 2022
 
-### December 22nd, 2022
+### December 22, 2022
 
 #### Improvements
 
@@ -230,7 +230,7 @@ These release notes cover changes made to the [Catalog](/catalog/).
 * Restoring a previously deleted environment through the [Registration API](/apidocs-mxsdk/apidocs/catalog-apis/#registration) is now possible and will no longer return a `409` response.
 * Submitting an API request with an invalid JSON body will no longer trigger a `500` response, but a `400` Bad Request instead.
 
-### September 22nd, 2022
+### September 22, 2022
 
 #### Improvements
 
@@ -354,7 +354,7 @@ These release notes cover changes made to the [Catalog](/catalog/).
 
 * We improved the UI performance during registration of large contracts.
 
-### June 2nd, 2022
+### June 2, 2022
 
 #### Improvements
 
@@ -559,7 +559,7 @@ These release notes cover changes made to the [Catalog](/catalog/).
 * We fixed an issue that caused uploading a contract as a ZIP file to fail.
 * We fixed an issue that occurred when searching for and then clicking a popular dataset.
 
-### December 2nd, 2021
+### December 2, 2021
 
 #### New Features
 
@@ -650,7 +650,7 @@ These release notes cover changes made to the [Catalog](/catalog/).
 * We fixed an issue that caused pagination URLs to be returned as *http* links rather than *https*.
 * We fixed an issue where clicking **Control Center** in the top bar of the [Catalog Administration](/developerportal/control-center/#catalog) page navigated to the Data Hub home page. Now, it navigates to Control Center.
 
-### September 2nd, 2021
+### September 2, 2021
 
 #### Fixes
 
@@ -701,7 +701,7 @@ These release notes cover changes made to the [Catalog](/catalog/).
 
 * The Mendix connector on the Data Hub **Home** page now also supports OData v4. 
 
-### July 22nd, 2021
+### July 22, 2021
 
 #### Fixes
 
@@ -768,7 +768,7 @@ The [Data Hub Transform API](https://datahub-spec.s3.eu-central-1.amazonaws.com/
 
 * Improvements have been made to the styling of the [Data Hub Home](/catalog/#catalog-home).
 
-### April 22nd, 2021
+### April 22, 2021
 
 #### Improvements
 

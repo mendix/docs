@@ -68,7 +68,7 @@ We have decided to retract version 5.0.11 after we received reports that apps wo
 
 ## 5.0.8
 
-**Release date: December 22nd, 2020**
+**Release date: December 22, 2020**
 
 ### Fixes
 
@@ -88,7 +88,7 @@ We have decided to retract version 5.0.11 after we received reports that apps wo
 
 ## 5.0.6
 
-**Release date: November 2nd, 2020**
+**Release date: November 2, 2020**
 
 ### Disclaimer
 
@@ -125,7 +125,7 @@ We have decided to retract version 5.0.11 after we received reports that apps wo
 
 ## 5.0.2
 
-**Release date: September 2nd, 2020**
+**Release date: September 2, 2020**
 
 ### Fixes
 

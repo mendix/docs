@@ -73,7 +73,7 @@ description: "These are the release notes for the Mendix Mobile app."
 
 ## iOS 4.4.1 {#RN441}
 
-**Release date: October 2nd, 2017**
+**Release date: October 2, 2017**
 
 ### Bug Fixes
 

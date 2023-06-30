@@ -179,7 +179,7 @@ weight: 100
 
 ## 2.25.0
 
-**Release date: November 2nd, 2021**
+**Release date: November 2, 2021**
 
 ### Improvements 
 
@@ -208,7 +208,7 @@ With this release, ATS officially supports testing apps that are built with Mend
 
 ## 2.23.0
 
-**Release date: March 2nd, 2021**
+**Release date: March 2, 2021**
 
 ### Dark Theme Support
 
@@ -1360,7 +1360,7 @@ Many bug fixes and small changes have been maded, including everything from the 
 
 ## 1.8.6
 
-**Release date: June 2nd, 2017**
+**Release date: June 2, 2017**
 
 ### New Action: Hover
 

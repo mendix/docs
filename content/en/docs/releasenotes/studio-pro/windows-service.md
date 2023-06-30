@@ -64,7 +64,7 @@ To download the Windows Service, go to the [Get Studio Pro](https://marketplace.
 
 ### 4.5.1 {#451}
 
-**Release date: June 5th, 2018**
+**Release date: June 5, 2018**
 
 * We upgraded the target Microsoft .NET Framework version from 4.5 to 4.5.2.
 * We added a checkbox to the **Update App** form so that you are able to configure whether you want to apply the correct user rights on some deployment folders. This is enabled by default for new apps, but disabled by default when you upgrade an existing app.

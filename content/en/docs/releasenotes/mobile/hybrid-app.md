@@ -40,7 +40,7 @@ For more information on hybrid mobile app development in Mendix, see the [Hybrid
 
 ### Hybrid App Base 5.0.3
 
-**Release date: March 5th, 2021**
+**Release date: March 5, 2021**
 
 * We fixed an issue where the database could close at the wrong moment.
 
@@ -60,7 +60,7 @@ For more information on hybrid mobile app development in Mendix, see the [Hybrid
 
 ### Hybrid App Base 5.0.0 / Hybrid App Template 5.0.0
 
-**Release date: April 15th, 2020**
+**Release date: April 15, 2020**
 
 With this release we updated all PhoneGap dependencies to the latest supported versions to comply with the Apple App Store guidelines for the deprecated UIWebView dependency:
 
@@ -112,7 +112,7 @@ With this release we updated all PhoneGap dependencies to the latest supported v
 
 ### Hybrid App Base 4.1.4
 
-**Release date: August 15th, 2019**
+**Release date: August 15, 2019**
 
 * We fixed an issue where Android devices with older WebView versions might get stack in a loading loop.
 * We fixed an unhandled exception with Secure Storage when using a PIN view. Users on devices with no OS-level security features enabled — like pin, password, biometrics — will now be prompted to enable any of them before proceeding to set their app's PIN.
@@ -344,7 +344,7 @@ For this update, we recommend downloading a fresh hybrid app package from the Me
 
 ### Hybrid App Base 2.0.7
 
-**Release date: July 5th, 2018**
+**Release date: July 5, 2018**
 
 * We fixed the transparency level in the default styling.
 
@@ -514,7 +514,7 @@ For this update, we recommend that you download a fresh hybrid app package from 
 
 ### Hybrid App Template 1.3.0
 
-**Release date: September 25th, 2017**
+**Release date: September 25, 2017**
 
 * Based on feedback from the Mendix community, we decided to iterate on the command set that is at your disposal while building your Mendix hybrid mobile app. For instructions on how to use the updated commands, refer to the [Mendix PhoneGap Build App Template README](https://github.com/mendix/hybrid-app-template/blob/master/README.md).
 
@@ -533,7 +533,7 @@ For this update, we recommend that you download a fresh hybrid app package from 
 
 ### Hybrid App Base 1.1.2 / Hybrid App Template 1.1.1
 
-**Release date: August 25th, 2017**
+**Release date: August 25, 2017**
 
 * We fixed the "malformed JSON" issue.
 * We removed the dependency on the BlueBird library.

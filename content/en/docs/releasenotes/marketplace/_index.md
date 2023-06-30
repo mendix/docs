@@ -19,7 +19,7 @@ These release notes cover changes made to the [Mendix Marketplace](/appstore/).
 
 * You can now configure your own [proprietary license](/appstore/general/share-app-store-content/#proprietary-license) when creating a new public component. The license will be reviewed by Mendix alongside the review of the component. After the license has been approved, you and anyone within your organization can use the license for other components. 
 
-### May 25th, 2023
+### May 25, 2023
 
 #### New Features
 
@@ -59,7 +59,7 @@ You can find and use partner-supported components on the [Marketplace homepage](
 
 ## 2022
 
-### October 25th, 2022
+### October 25, 2022
 
 #### New Features
 
@@ -235,7 +235,7 @@ If you are using Studio Pro on a Mac with Parallels, see [this update](https://k
 
 ## 2020
 
-### December 15th, 2020
+### December 15, 2020
 
 #### Improvements
 
@@ -356,7 +356,7 @@ We renamed all the SAP-related connectors and app templates in the App Store to 
 * We made some user changes and improvements when you create new content using GitHub as the source. For example, an easier-to-use selection screen when choosing your repository.  
 * We also made some other minor bug fixes. 
 
-### July 5th, 2019
+### July 5, 2019
 
 #### Improvements
 
@@ -384,7 +384,7 @@ We added a component in the App Store which, when configured in your app, allows
 * For App Store administrators, you can now set content managers who are allowed to manage your company content by marking it as protected.
 * You can now share private App Store content with external downloaders from other companies.
 
-### February 15th, 2019
+### February 15, 2019
 
 #### Improvements 
 

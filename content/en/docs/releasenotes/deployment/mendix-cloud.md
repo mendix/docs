@@ -17,7 +17,7 @@ For information on the current status of deployment to Mendix Cloud and any plan
 
 ## 2023
 
-### June 15th, 2023
+### June 15, 2023
 
 #### Portal Enhancements
 
@@ -88,7 +88,7 @@ For information on the current status of deployment to Mendix Cloud and any plan
 
 * We added the AWS Middle East (Bahrain) and AWS Africa (Cape Town) regions as a new deployment targets.
 
-### January 5th, 2023
+### January 5, 2023
 
 #### Improvements
 
@@ -128,7 +128,7 @@ For information on the current status of deployment to Mendix Cloud and any plan
 * We updated our alert template to remove the **Application Server Memory** alert.
 * We added the **Database Freeable Memory** alert with the critical threshold set to 10%.
 
-### September 15th, 2022
+### September 15, 2022
 
 #### Improvements
 
@@ -182,7 +182,7 @@ Current Certificate Details: <https://crt.sh/?id=4793020687>
 
 New Certificate Details: <https://crt.sh/?id=6940402070>
 
-### June 15th, 2022
+### June 15, 2022
 
 #### Improvements
 
@@ -365,13 +365,13 @@ Existing applications will be updated in the next few weeks. Technical contacts 
 * We fixed an issue where custom JSON error descriptions were not returned for REST endpoints. If you have defined custom HTML error pages for your app, they will be disabled for request handlers that typically do not serve HTML content. These include SOAP, OData, and REST endpoints defined in your app.
 * We fixed an issue where the free application environment page showed an app as deployed in Mendix Cloud when it was not.
 
-### July 15th, 2021
+### July 15, 2021
 
 #### Improvements
 
 * Mendix Cloud v4 now supports incoming connections over Internet Protocol version 6 (IPv6).
 
-### July 5th, 2021
+### July 5, 2021
 
 #### Fixes
 
@@ -443,7 +443,7 @@ You can test whether your client (browser or integrating client) is using IPv6, 
 
 Any clients that use IPv6 to connect to applications which have configured Access Restriction Profiles may experience connectivity issues from **July 1, 2021** onwards.
 
-### April 15th, 2021
+### April 15, 2021
 
 #### Fix/Improvement
 
@@ -539,7 +539,7 @@ If you encounter errors using APIs, please ensure that the format matches the do
 * We fixed an issue where you could not set the value for a constant which was defined as long to a value greater than the maximum value for an integer.
 * We fixed an issue where the Company Admin could not search through licensed nodes. (Ticket 109742)
 
-### November 5th, 2020
+### November 5, 2020
 
 #### Improvements
 
@@ -567,7 +567,7 @@ If you encounter errors using APIs, please ensure that the format matches the do
 * We added the ability for the Technical Contact to download a list of [node permissions](/developerportal/deploy/node-permissions/) as a CSV to assist with audits
 * We added information about the size of backup files.
 
-### October 5th, 2020
+### October 5, 2020
 
 #### Improvements
 
@@ -597,7 +597,7 @@ If you encounter errors using APIs, please ensure that the format matches the do
 
 {{% alert color="info" %}}This change will take effect the next time you deploy your application.{{% /alert %}}
 
-### September 15th, 2020
+### September 15, 2020
 
 #### Fixes
 
@@ -878,7 +878,7 @@ If you run services that connect to a `*.mendixcloud.com` endpoint AND use a sta
 * SHA-256 Fingerprint: AE:55:1D:88:32:E1:7E:BF:AB:0D:F3:2F:57:57:C8:98:8D:87:3F:E8:F6:5F:A6:09:82:EA:37:F7:12:25:A5:D3
 * SHA-1 Fingerprint: 5E:4D:05:9B:FE:54:3F:B6:D8:A4:D7:86:7F:3B:50:9A:EE:09:35:8F
 
-### September 5th, 2019
+### September 5, 2019
 
 #### Fixes
 
@@ -891,7 +891,7 @@ If you run services that connect to a `*.mendixcloud.com` endpoint AND use a sta
 
 * We improved the performance of the Environments page by reducing the number of remote requests needed.
 
-### July 25th, 2019
+### July 25, 2019
 
 #### Improvements
 
@@ -913,7 +913,7 @@ If you run services that connect to a `*.mendixcloud.com` endpoint AND use a sta
 * We added appropriate feedback if you try to upload a client certificate which is unsupported because it is not encoded in PEM. (Ticket 82299)
 * We fixed an issue which prevented the offboarding of a single environment if you wanted to retain other environments in the Mendix Cloud node. (Ticket 83189)
 
-### June 15th, 2019
+### June 15, 2019
 
 #### Improvements
 
@@ -1130,7 +1130,7 @@ In some cases, you may still experience false positives for the runtime heartbea
 
 * We fixed the bug that allowed users to start an application during a restore.
 
-### June 15th, 2018
+### June 15, 2018
 
 #### Improvements
 
@@ -1171,7 +1171,7 @@ In some cases, you may still experience false positives for the runtime heartbea
 
 * We fixed the bug in Mendix Cloud v4 that prevented users from using nested custom domains. Now you can have one domain (for example, `app.example.com`) and one on `microservice.app.example.com`.
 
-### May 5th, 2018
+### May 5, 2018
 
 #### Improvements
 
@@ -1259,7 +1259,7 @@ In some cases, you may still experience false positives for the runtime heartbea
 
 * In Mendix Cloud v4, we have enabled logging slow database queries. This is the custom runtime setting `LogMinDurationQuery`, and it is useful for finding performance bottlenecks in your application. The value is set to a default of 10,000 ms, which was also the value on Mendix Cloud v3. You can customize this setting by using the **Runtime** tab on your environment details screen under **Environments**. To start using this feature on a Mendix Cloud environment, transport your deployment package and restart your app.
 
-### January 25th, 2018
+### January 25, 2018
 
 #### Fixes
 
@@ -1314,7 +1314,7 @@ In some cases, you may still experience false positives for the runtime heartbea
 
 * Free App users now have the option to select between Web Modeler and Desktop Modeler for editing their application models.
 
-### November 15th, 2017
+### November 15, 2017
 
 #### Improvements
 
@@ -1364,7 +1364,7 @@ In some cases, you may still experience false positives for the runtime heartbea
 
 * Due to various optimizations, the deployment speed for apps in Mendix Cloud v4 EU is now about twice as fast. The latency for FileDocument read/write actions has also improved for all Mendix Cloud v4 regions.
 
-### August 15th, 2017
+### August 15, 2017
 
 #### Improvements
 

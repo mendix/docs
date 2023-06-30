@@ -49,7 +49,7 @@ To see the current status of the Mendix Developer Portal and Control Center, see
 * You can now see all pending invitations to your app on the [Team](/developerportal/collaborate/team/) page.
 * We fixed an issue where, under certain circumstances, the app logo was not updated in Studio Pro after you changed it in the [General Settings](/developerportal/collaborate/general-settings/) page.
 
-### June 15th, 2023
+### June 15, 2023
 
 #### New Features
 
@@ -323,7 +323,7 @@ In Portfolio Management, you can do the following
 
 * We improved some empty states in the story details dialog box, epics details dialog box, archived Sprint details dialog box, and archived story details dialog box in Epics.
 
-### September 15th, 2022
+### September 15, 2022
 
 #### New Features
 
@@ -335,7 +335,7 @@ In Portfolio Management, you can do the following
 * We fixed an issue where users were not able to delete an app, if other users were still members of this app.
 * We fixed a navigation issue that would occur when users click **Go to Environments** in [Cloud Settings](/developerportal/collaborate/general-settings/#cloud-settings).
 
-### August 25th, 2022
+### August 25, 2022
 
 #### Fixes
 
@@ -442,7 +442,7 @@ In Portfolio Management, you can do the following
 
 * We added a download button for Feedback images, so that you can see them in full size more easily.
 
-### May 5th, 2022 {#may-fifth}
+### May 5, 2022 {#may-fifth}
 
 #### Fixes
 
@@ -458,7 +458,7 @@ In Portfolio Management, you can do the following
 #### Known Issues
 
 * Under certain circumstances, the app image is not displayed properly on the [My Apps](/developerportal/#my-apps) page.
-    * Fixed on [May 5th, 2022](#may-fifth).
+    * Fixed on [May 5, 2022](#may-fifth).
 
 ### April 7th, 2022
 
@@ -520,7 +520,7 @@ In Portfolio Management, you can do the following
 * We recently changed the password length requirement from 8 to 12 characters. We noticed this caused some confusion, because not all pages where the password can be reset or changed listed the password requirements. We made sure that all pages now list those requirements.
 * During the last release, we introduced an issue where the Developer Portal exposed apps without a repository to Studio Pro. We patched this issue on Friday December 17th, 2021 with a band-aid. This release sees a more permanent solution.
 
-### December 15th, 2021
+### December 15, 2021
 
 #### Improvements
 
@@ -675,7 +675,7 @@ In Portfolio Management, you can do the following
 * We implemented a new responsive search panel.
 * We will remove the **Burndown Chart** and **Release Plan** tabs from the Developer Portal on August 31, 2021.
 
-### June 15th, 2021
+### June 15, 2021
 
 #### Improvements
 
@@ -752,7 +752,7 @@ In Portfolio Management, you can do the following
 
 * We made some small improvements to the **App Templates** page.
 
-### March 15th, 2021
+### March 15, 2021
 
 #### Fixes
 
@@ -785,7 +785,7 @@ In Portfolio Management, you can do the following
 * We fixed an issue where the **Add image** icon was missing when posting a comment on the [Buzz](/developerportal/collaborate/buzz/). (Ticket 109481)
 * We fixed an issue where creating API keys appeared in the audit trail. (Ticket 116182)
 
-### February 25th, 2021
+### February 25, 2021
 
 #### Improvements
 
@@ -806,7 +806,7 @@ In Portfolio Management, you can do the following
 
 * We improved the speed of the **App Templates** page. After you click **Create App**, the templates appear instantly now.
 
-### February 5th, 2021
+### February 5, 2021
 
 #### Improvements
 
@@ -838,7 +838,7 @@ In Portfolio Management, you can do the following
 
 * We fixed several minor issues with the [My Apps](/developerportal/#my-apps) page.
 
-### January 15th, 2021
+### January 15, 2021
 
 #### Improvements
 
@@ -896,7 +896,7 @@ In Portfolio Management, you can do the following
 * We fixed an issue where a Company Admin was no longer able to open the [General Settings](/developerportal/collaborate/general-settings/) of an app they for a team in which they were not a member.
 * We repaired a dead link to the documentation on the [App User Management](/developerportal/collaborate/general-settings/#managing-app-users) page.
 
-### August 25th, 2020
+### August 25, 2020
 
 #### Improvements
 
@@ -944,7 +944,7 @@ In Portfolio Management, you can do the following
 
 * We fixed an issue where it was possible to change the end date of a closed Sprint.
 
-### June 15th, 2020
+### June 15, 2020
 
 #### Improvements
 
@@ -1026,7 +1026,7 @@ In Portfolio Management, you can do the following
 
 * We redesigned the [Stories](/developerportal/collaborate/stories/#story-actions) page with a brand new UI and improved stability. The new UI can be accessed by clicking **Enable new UI**. This is a [Beta version](/releasenotes/beta-features/).
 
-### December 5th, 2019
+### December 5, 2019
 
 #### Improvements
 
@@ -1065,7 +1065,7 @@ In Portfolio Management, you can do the following
 
 * We redesigned the UI for managing app users and improved the performance of loading manageable app environments and users.
 
-### July 25th, 2019
+### July 25, 2019
 
 #### Fixes
 
@@ -1089,13 +1089,13 @@ In Portfolio Management, you can do the following
 
 * We have added the ability to create webhooks for stories and Sprints for your apps. These webhooks can be configured to send information when Sprints change and/or stories change.
 
-### April 5th, 2019
+### April 5, 2019
 
 #### Fixes
 
 * We fixed an issue with the Developer Portal where the memory utilization was not optimized and could cause system instability. This change does not affect memory utilization by customer apps.
 
-### March 15th, 2019
+### March 15, 2019
 
 #### Fixes
 
@@ -1257,7 +1257,7 @@ The Web Modeler can now be enabled for all types of apps. You can do this on the
 
 * The **Deploy** and **Operate** deep links were not available in the **Security** menu for user groups without monitoring access. This has been fixed.
 
-### February 15th, 2018
+### February 15, 2018
 
 #### Improvements
 
@@ -1267,7 +1267,7 @@ The Web Modeler can now be enabled for all types of apps. You can do this on the
 
 * We addressed an issue that prevented the **Daily Digest** email from being sent.
 
-### January 25th, 2018
+### January 25, 2018
 
 #### Improvement
 

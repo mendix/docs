@@ -49,7 +49,7 @@ We have decided to retract version 5.0.11 after we received reports that apps wo
 
 ## 5.0.10
 
-**Release date: February 15th, 2021**
+**Release date: February 15, 2021**
 
 ### Fixes
 

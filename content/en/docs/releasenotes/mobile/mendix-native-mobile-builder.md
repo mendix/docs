@@ -67,7 +67,7 @@ The Mendix Native Mobile Builder is a UI-based tool, complimentary to Mendix Stu
 
 ### Release 1.0.120
 
-**Release date: May 25th, 2022**
+**Release date: May 25, 2022**
 
 #### Fixes
 
@@ -143,7 +143,7 @@ For more details, see [NSUserTrackingUsageDescription](https://developer.apple.c
 
 ### Release 1.0.109
 
-**Release date: October 25th, 2021**
+**Release date: October 25, 2021**
 
 #### Improvements
 
@@ -298,7 +298,7 @@ still fail if the keystore values are invalid.
 
 ### Release v1.0.80
 
-**Release date: February 25th, 2021**
+**Release date: February 25, 2021**
 
 #### Local Notifications for Mendix 9 
 

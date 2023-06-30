@@ -25,7 +25,7 @@ These release notes cover changes made to the [Catalog](/catalog/).
 
 * We improved the clarity and accuracy of Catalog UI texts.
 
-### June 15th, 2023
+### June 15, 2023
 
 #### Fixes
 
@@ -48,7 +48,7 @@ These release notes cover changes made to the [Catalog](/catalog/).
 * We fixed an issue where pagination links in Search API responses were not correctly encoded.
 * We fixed an issue where the page was flickering when selecting a data set in the search results.
 
-### May 25th, 2023
+### May 25, 2023
 
 #### Fixes
 
@@ -236,7 +236,7 @@ These release notes cover changes made to the [Catalog](/catalog/).
 
 * You can now filter by content you own in the Catalog. Click **Filter** to add filters, and select the **Owned by me** checkbox in the **Ownership** section.
 
-### September 15th, 2022
+### September 15, 2022
 
 #### Improvements
 
@@ -265,7 +265,7 @@ These release notes cover changes made to the [Catalog](/catalog/).
 
 * We fixed a bug where external users were sometimes unable to upload contracts.
 
-### August 25th, 2022
+### August 25, 2022
 
 #### Improvements
 
@@ -377,7 +377,7 @@ These release notes cover changes made to the [Catalog](/catalog/).
 
 * We added a description about the curation rights that apply for `DELETE` and `PUT` operations.
 
-### May 5th, 2022
+### May 5, 2022
 
 #### New Features
 
@@ -689,7 +689,7 @@ These release notes cover changes made to the [Catalog](/catalog/).
 
 * We made improvements to Data Hub security.
 
-### August 5th, 2021
+### August 5, 2021
 
 #### Fixes
 
@@ -896,7 +896,7 @@ The [Data Hub Transform API](https://datahub-spec.s3.eu-central-1.amazonaws.com/
 * The [Validated](/catalog/manage/curate/#validated) label will now be correctly updated in the search results pane for the selected asset when it is changed by curators and the owners of the asset.
 * We fixed an issue on the [Curation List](/catalog/manage/curate/#curatelist) where clicking on the **Added** column title (to change the sort order) resulted in an error.
 
-### November 5th, 2020
+### November 5, 2020
 
 #### Improvements
 

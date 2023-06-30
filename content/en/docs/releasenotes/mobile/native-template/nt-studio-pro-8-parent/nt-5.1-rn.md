@@ -164,7 +164,7 @@ We have decided to retract version 5.1.7 after we received reports that apps wou
 
 ## 5.1.6
 
-**Release date: February 15th, 2021**
+**Release date: February 15, 2021**
 
 ### Fixes
 

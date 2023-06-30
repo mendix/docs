@@ -12,7 +12,7 @@ You can download the Make It Native app for [iOS](https://apps.apple.com/app/mak
 
 ## Android 2.2.2 / iOS 2.2.2
 
-**Release date: March 25th, 2021**
+**Release date: March 25, 2021**
 
 ### New Features
 
@@ -42,7 +42,7 @@ You can download the Make It Native app for [iOS](https://apps.apple.com/app/mak
 
 ## Android 2.1.0 / iOS 2.1.0
 
-**Release date: May 15th, 2020**
+**Release date: May 15, 2020**
 
 ### New Features
 

@@ -13,7 +13,7 @@ For information on the current status of deployment to Mendix for Private Cloud 
 
 ## 2023
 
-### June 15th, 2023
+### June 15, 2023
 
 #### Portal Enhancements
 
@@ -34,7 +34,7 @@ This feature is currently in a Beta release. For more information on what Beta r
 * On the **Installation** page of Private Cloud Portal, we have added a section where you can download the CLI for Private Cloud License Manager.
 * On the **Namespace details** page of Private Cloud Portal, we have added a section which provides information on the Operator and Runtime Licenses and their usage claims. The section is only visible when Private Cloud License Manager is configured.
 
-### June 5th, 2023
+### June 5, 2023
 
 #### Portal Improvements
 
@@ -77,7 +77,7 @@ This feature is currently in a Beta release. For more information on what Beta r
 * We have extended the options for configuring Ceph RADOS storage buckets. It is now possible to share a bucket between multiple environments.
 * We have updated the list of supported platforms to include OpenShift 4.12.
 
-### April 25th, 2023
+### April 25, 2023
 
 #### Portal Improvements
 
@@ -194,7 +194,7 @@ Your build may fail if you try to deploy the same deployment package more than o
 
 * We have fixed a network error issue with the **Try it out** option in the [Private Cloud Deploy API documentation](/apidocs-mxsdk/apidocs/private-cloud-deploy-api/).
 
-### January 5th, 2023
+### January 5, 2023
 
 #### Mendix Operator v2.10.0{#2.10.0}
 
@@ -272,7 +272,7 @@ Your build may fail if you try to deploy the same deployment package more than o
 * We now allow the running of a Mendix environment using a [specific Kubernetes ServiceAccount](https://kubernetes.io/docs/tasks/configure-pod-container/configure-service-account/#use-the-default-service-account-to-access-the-api-server) instead of the default ServiceAccount.
 * We have added an option to specify a custom, fixed S3 bucket prefix when using the S3 (existing bucket and account) Storage Plan.
 
-### August 25th, 2022
+### August 25, 2022
 
 #### Portal Improvements
 
@@ -303,7 +303,7 @@ Your build may fail if you try to deploy the same deployment package more than o
 
 * We now provide the `mxpc-cli` configuration tool (version 2.5.1 and above) in versions which run on ARM64 architectures.
 
-### May 25th, 2022
+### May 25, 2022
 
 #### Mendix Operator v2.5.1{#2.5.1}
 
@@ -429,7 +429,7 @@ This issue is fixed in Mendix Operator [version 2.5.1](#2.5.1).
 * We have removed the restriction on the use of the `kubernetes.io/ingress.class` ingress annotation.
 * We have changed the left navigation panel to match the rest of the Developer Portal.
 
-### November 15th, 2021
+### November 15, 2021
 
 #### Supported Providers
 
@@ -446,7 +446,7 @@ To see more details about supported databases and Kubernetes versions, see the [
 
 To use Prometheus metrics, upgrade to Mendix Operator v2.1.0 (or above) and follow the [instructions](/developerportal/deploy/private-cloud-monitor/).
 
-### October 25th, 2021
+### October 25, 2021
 
 #### mxpc-cli v2.1.2 for Mendix Operator v2.1.0 and Mendix Gateway Agent v2.1.0
 
@@ -708,7 +708,7 @@ To upgrade an existing installation of Private Cloud to this version, follow the
 * We fixed an issue where the cluster icon was only visible to members of a namespace.
 * We fixed an issue where the **Next** button did not display correctly if no MDA branch was selected. (Ticket 108399)
 
-### October 15th, 2020
+### October 15, 2020
 
 #### Mendix Operator v1.6.0 and Mendix Gateway Agent v1.5.0
 
@@ -777,7 +777,7 @@ To upgrade an existing installation of Private Cloud to this version, follow the
 
 To upgrade an existing installation of Private Cloud to this version, follow the [Upgrade instructions](/developerportal/deploy/private-cloud-upgrade-guide/).
 
-### July 15th, 2020
+### July 15, 2020
 
 #### Mendix Operator v1.3.0 and Mendix Gateway Agent v1.2.0
 
@@ -888,7 +888,7 @@ To upgrade an existing installation of Private Cloud to the latest version, foll
 
 ## 2019
 
-### December 5th, 2019
+### December 5, 2019
 
 #### Improvements
 

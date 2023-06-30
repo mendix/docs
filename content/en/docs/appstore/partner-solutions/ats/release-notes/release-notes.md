@@ -123,7 +123,7 @@ weight: 100
 
 ## 2.28.1
 
-**Release date: October 25th, 2022**
+**Release date: October 25, 2022**
 
 ### Fixes
 
@@ -141,7 +141,7 @@ weight: 100
 
 ## 2.27.0
 
-**Release date: July 25th, 2022**
+**Release date: July 25, 2022**
 
 ### Fixes
 
@@ -156,7 +156,7 @@ weight: 100
 
 ## 2.26.0
 
-**Release date: July 5th, 2022**
+**Release date: July 5, 2022**
 
 ### Fixes
 
@@ -730,7 +730,7 @@ We do not expect this change to cause any issues with existing tests. However, i
 
 ## 2.9.3
 
-**Release date: October 15th, 2018**
+**Release date: October 15, 2018**
 
 ### Improvements
 
@@ -816,7 +816,7 @@ Mendix applications based on Mendix version 7.16 can now be tested and recorded 
 
 ## 2.8.0
 
-**Release date: June 15th, 2018**
+**Release date: June 15, 2018**
 
 ### Control of Administration Rights 
 
@@ -867,7 +867,7 @@ The built-in function *Assert not null* behavior has been changed. Up to and inc
 
 ## 2.7.1
 
-**Release date: May 15th, 2018**
+**Release date: May 15, 2018**
 
 ### Mobile Testing
 
@@ -965,7 +965,7 @@ The same holds for the function parameters.
 
 ## 2.6.1
 
-**Release date: April 5th, 2018**
+**Release date: April 5, 2018**
 
 ### Fixes
 
@@ -1058,7 +1058,7 @@ This opens up a lot exciting possibilities for us as ATS developers. For example
 
 ## 2.4.1
 
-**Release date: February 5th, 2018**
+**Release date: February 5, 2018**
 
 ### Fixes
 
@@ -1102,7 +1102,7 @@ This opens up a lot exciting possibilities for us as ATS developers. For example
 
 ## 2.3.1
 
-**Release date: December 5th, 2018**
+**Release date: December 5, 2018**
 
 ### Improvements
 

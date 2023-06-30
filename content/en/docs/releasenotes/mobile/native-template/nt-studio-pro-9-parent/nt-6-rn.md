@@ -7,7 +7,7 @@ description: "Native Template 6 release notes."
 
 ## 6.3.5
 
-**Release date: January 31st, 2023**
+**Release date: January 31, 2023**
 
 ### Fixes
 
@@ -161,7 +161,7 @@ In the end, your variable should be set up like this:
 
 ## 6.2.21
 
-**Release date: May 31st, 2022**
+**Release date: May 31, 2022**
 
 ### Fixes
 
@@ -373,7 +373,7 @@ Please note that if your app requires custom initialization, for example due to 
 
 ## 6.1.3
 
-**Release date: March 31st, 2021**
+**Release date: March 31, 2021**
 
 ### Improvements
 

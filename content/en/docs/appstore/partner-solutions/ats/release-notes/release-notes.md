@@ -72,7 +72,7 @@ weight: 100
 
 ## 2.28.7
 
-**Release date: January 31st, 2023**
+**Release date: January 31, 2023**
 
 ### Fixes
 
@@ -274,7 +274,7 @@ Test cases in ATS are dynamic with values that come from parameters, datasets, a
 
 ## 2.21.0
 
-**Release date: December 1st, 2020**
+**Release date: December 1, 2020**
 
 ### New Features
 
@@ -485,7 +485,7 @@ Apps built with [Studio Pro 8](/releasenotes/studio-pro/8/) can now be tested us
 
 ## 2.13.1
 
-**Release date: August 1st, 2019**
+**Release date: August 1, 2019**
 
 ### Fixes
 
@@ -494,7 +494,7 @@ Apps built with [Studio Pro 8](/releasenotes/studio-pro/8/) can now be tested us
 
 ## 2.13.0
 
-**Release date: July 31st, 2019**
+**Release date: July 31, 2019**
 
 ### Upgraded Selenium from Version 3.8 to 3.141.59
 
@@ -516,7 +516,7 @@ If you are using another Selenium hub, we highly recommend updating it to use Se
 
 ## 2.12.0
 
-**Release date: July 21st, 2019**
+**Release date: July 21, 2019**
 
 ### Test Step Settings
 
@@ -746,7 +746,7 @@ We do not expect this change to cause any issues with existing tests. However, i
 
 ## 2.9.2
 
-**Release date: August 21st, 2018**
+**Release date: August 21, 2018**
 
 ### Mendix 7.17
 
@@ -1412,7 +1412,7 @@ ATS now supports testing the recently released Mendix 7.
 
 ## 1.8.4
 
-**Release date: February 1st, 2017**
+**Release date: February 1, 2017**
 
 ### New Action
 

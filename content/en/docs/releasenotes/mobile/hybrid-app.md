@@ -328,7 +328,7 @@ We have tested extensively against real-life projects and commonly used widgets 
 
 {{% alert color="warning" %}}
 
-As of August 1st, new apps published to Google's Play Store need to target at least Android SDK 26. As of November 1st, updates to apps also need to target at least SDK 26.
+As of August 1, new apps published to Google's Play Store need to target at least Android SDK 26. As of November 1, updates to apps also need to target at least SDK 26.
 
 {{% /alert %}}
 
@@ -403,7 +403,7 @@ This is a major release, because it is not fully compatible with older versions 
 
 ### Hybrid App Base 1.7.4 / Hybrid App Template 1.4.0
 
-**Release date: January 31st, 2018**
+**Release date: January 31, 2018**
 
 {{% alert color="info" %}}
 
@@ -541,7 +541,7 @@ For this update, we recommend that you download a fresh hybrid app package from 
 
 ### Hybrid App Base 1.1.0 / Hybrid App Template 1.1.0
 
-**Release date: August 1st, 2017**
+**Release date: August 1, 2017**
 
 * You can now automatically log in if credentials are provided.
 * We replaced the SQLite library with our own fork.

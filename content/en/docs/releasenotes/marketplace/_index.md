@@ -165,7 +165,7 @@ If you are using Studio Pro on a Mac with Parallels, see [this update](https://k
 
 * We fixed a bug in Studio Pro where certain components did not load properly.
 
-### May 31st, 2021
+### May 31, 2021
 
 #### Improvements
 
@@ -306,7 +306,7 @@ The former App Store **Content Managers** and **External Downloaders** groups ha
 
 Content that was marked as **Protected** as well as content marked as **Shared with Others** has been migrated to the [Content](/appstore/general/app-store-overview/#group-content) tab of the Migrated Data user group. This makes all “externally shared” content protected for that user group.
 
-### October 1st, 2019
+### October 1, 2019
 
 #### Improvements
 
@@ -347,7 +347,7 @@ We renamed all the SAP-related connectors and app templates in the App Store to 
 
 * We also fixed a *java.net.SocketException: Broken pipe (Write failed)* exception which occurred when sending a large request to the OData service endpoint. (Ticket 86680)
 
-### July 31st, 2019  
+### July 31, 2019  
 
 #### Improvements 
 
@@ -400,7 +400,7 @@ We added a component in the App Store which, when configured in your app, allows
 * We released an upgraded version of the IBM Watson Connector Suite Example Project, which includes the new IBM Watson Connector Suite.
 * We released an upgraded version of the IBM Watson Blank App app template, which includes the new IBM Watson Connector Suite.
 
-### January 21st, 2019
+### January 21, 2019
 
 #### Fixes
 
@@ -414,7 +414,7 @@ The **Reviews** section at the bottom of the [App Store main page](https://marke
 
 We have noticed that when searching in the App Store (via the **Search Mendix** search bar), users frequently use keywords like **Mendix**, **Modeler**, **Desktop**, and **Download** as well as different Desktop Modeler versions. The search results did not provide the expected results based on these keywords (as in, they did not show the Modeler download page). With this update, it is now possible to search for the Modeler and all of its versions in the **Search Mendix** search bar, which will redirect you to the [Desktop Modeler page](https://marketplace.mendix.com/link/studiopro/) in the Mendix Marketplace.
 
-### October 1st, 2018
+### October 1, 2018
 
 #### SAP OData Connector 4.0
 
@@ -442,6 +442,6 @@ The new **SAP OData Connector** will break existing projects which are using the
 
 ## 2017
 
-### June 21st, 2017
+### June 21, 2017
 
 * Private company App Store content is now indicated in the **Template** browser with a lock icon.

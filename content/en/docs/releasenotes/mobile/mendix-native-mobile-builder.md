@@ -59,7 +59,7 @@ The Mendix Native Mobile Builder is a UI-based tool, complimentary to Mendix Stu
 
 ### Release 1.0.121
 
-**Release date: July 21st, 2022**
+**Release date: July 21, 2022**
 
 #### Fixes
 
@@ -113,7 +113,7 @@ Now, instead of accessing the first MPR file found in the directory, the tool wi
 
 ### Release 1.0.111
 
-**Release date: December 21st, 2021**
+**Release date: December 21, 2021**
 
 #### Improvements
 
@@ -250,7 +250,7 @@ Every mobile app requires certain features, as well as certain permissions users
 
 ### Release 1.0.86
 
-**Release date: April 1st, 2021**
+**Release date: April 1, 2021**
 
 #### New Features
 

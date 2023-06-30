@@ -41,7 +41,7 @@ These release notes cover changes made to the [Catalog](/catalog/).
 
 * We fixed an issue where uploading and cropping a custom icon did not work correctly.
 
-### June 1st, 2023
+### June 1, 2023
 
 #### Fixes
 
@@ -254,7 +254,7 @@ These release notes cover changes made to the [Catalog](/catalog/).
 
 * You will now see an error message when the parsing of a contract fails due to the parsing service being offline. 
 
-### September 1st, 2022
+### September 1, 2022
 
 #### Improvements
 
@@ -383,7 +383,7 @@ These release notes cover changes made to the [Catalog](/catalog/).
 
 * When a person is removed as a Technical Owner or Business Owner of an individual application, they will receive an MxDock notification confirming that they are no longer the point of contact.
 
-### April 21st, 2022
+### April 21, 2022
 
 #### Fixes
 
@@ -407,7 +407,7 @@ These release notes cover changes made to the [Catalog](/catalog/).
 
 * We corrected the OData file upload message that was incorrectly indicating the maximum file size as 1 MB, when in fact the allowed maximum file size is 5 MB.
 
-### March 31st, 2022
+### March 31, 2022
 
 #### Improvements
 
@@ -494,7 +494,7 @@ These release notes cover changes made to the [Catalog](/catalog/).
 
 * We fixed a bug that was causing the file uploader to get stuck when uploading an empty file.
 
-### January 21st, 2022
+### January 21, 2022
 
 #### Improvements
 
@@ -707,7 +707,7 @@ These release notes cover changes made to the [Catalog](/catalog/).
 
 * Administration pages no longer time out for Data Hub Admins.
 
-### July 1st, 2021
+### July 1, 2021
 
 #### Fixes
 
@@ -774,7 +774,7 @@ The [Data Hub Transform API](https://datahub-spec.s3.eu-central-1.amazonaws.com/
 
 * [Search result](/catalog/manage/search/#search-results) listings in Catalog have been improved.  Data sources and datasets that are set as [Validated](/catalog/manage/curate/#validated) will appear above assets that are not validated.
 
-### April 1st, 2021
+### April 1, 2021
 
 #### Improvements
 
@@ -813,7 +813,7 @@ The [Data Hub Transform API](https://datahub-spec.s3.eu-central-1.amazonaws.com/
 
 * You can now copy the dataset URI from the [data source details](/catalog/manage/search/#search-details) in the Catalog. This makes it easier to directly select datasets to use in other business applications from the context of the data source.
 
-### January 21st, 2021
+### January 21, 2021
 
 #### New Features
 
@@ -917,7 +917,7 @@ The [Data Hub Transform API](https://datahub-spec.s3.eu-central-1.amazonaws.com/
 * The Data Hub home tab is now called  **Data Hub**.
 * From the **Data Hub** screen, you can now navigate to the [Mendix Academy learning path for Data Hub](https://academy.mendix.com/link/path/111/Share-Data-Between-Apps-Using-the-Data-Hub-Catalog) where you can learn how to easily share data to build apps in Studio Pro.
 
-### October 1st, 2020
+### October 1, 2020
 
 Using data from other applications used to be a complex activity requiring an in-depth understanding of building integrations.
 

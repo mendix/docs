@@ -21,7 +21,7 @@ Please use a Native Template version [compatible](/releasenotes/mobile/nt-studio
 
 ## 5.0.12
 
-**Release date: March 31st, 2021**
+**Release date: March 31, 2021**
 
 ### Fixes
 

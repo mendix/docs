@@ -75,7 +75,7 @@ To download the Windows Service, go to the [Get Studio Pro](https://marketplace.
 
 ### 4.5.0
 
-**Release date: February 21st, 2017**
+**Release date: February 21, 2017**
 
 * We added support for Mendix 7.
 * We updated background images.
@@ -257,7 +257,7 @@ Now each app has its own license, even if it runs under the same user account as
 
 ## 2.2
 
-**Release date: June 1st, 2012**
+**Release date: June 1, 2012**
 
 * Now the license key can be registered and viewed in the Mendix Service Console, even if the application is not started (from menu Advanced -> License information...).
 * Ticket 12171: Service console shows non-Mendix event messages.

@@ -40,7 +40,7 @@ This feature is currently in a Beta release. For more information on what Beta r
 
 * We have fixed the issue with the namespace or cluster invite, where a member was not able to accept the invite (Ticket 187296).
 
-### June 1st, 2023
+### June 1, 2023
 
 #### Portal Improvements
 
@@ -209,7 +209,7 @@ Your build may fail if you try to deploy the same deployment package more than o
 
 ## 2022
 
-### December 1st, 2022
+### December 1, 2022
 
 #### Portal Improvements
 
@@ -339,7 +339,7 @@ This issue is fixed in Mendix Operator [version 2.5.1](#2.5.1).
     * Building an app image
     * Requesting a database or file storage for a new environment
 
-### April 21st, 2022
+### April 21, 2022
 
 #### Portal Fixes
 
@@ -590,7 +590,7 @@ To upgrade an existing installation of Private Cloud to this version, follow the
 
 To upgrade an existing installation of Private Cloud to this version, follow the [Upgrade instructions](/developerportal/deploy/private-cloud-upgrade-guide/).
 
-### March 31st, 2021
+### March 31, 2021
 
 #### Mendix Operator v1.9.1
 
@@ -693,7 +693,7 @@ To upgrade an existing installation of Private Cloud to this version, follow the
 
 To upgrade an existing installation of Private Cloud to this version, follow the [Upgrade instructions](/developerportal/deploy/private-cloud-upgrade-guide/).
 
-### October 21st, 2020
+### October 21, 2020
 
 #### Portal Improvements
 

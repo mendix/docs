@@ -140,6 +140,6 @@ Please update to Native Builder v3.2.1 or higher. Version 3.2.1 includes the fix
 
 ## 0.1.0
 
-**Release date: August 1st, 2019**
+**Release date: August 1, 2019**
 
 * This marks the initial release of the Native Builder.

@@ -58,7 +58,7 @@ For information on the current status of deployment to Mendix Cloud and any plan
 * We have enabled DNSSEC to authenticate DNS lookups for `cname.mendix.net`.
     * This means that custom domains for applications in the Mendix Cloud will validate using DNSSEC, provided it is also enabled for the custom domain.
 
-### February 21st, 2023
+### February 21, 2023
 
 #### Improvements
 
@@ -109,7 +109,7 @@ For information on the current status of deployment to Mendix Cloud and any plan
 * We updated the **Virtual Machine Out of Memory** and **Virtual Machine Error** alerts to offer more clarity and visibility into the application behavior. These changes are available after you redeploy your app.
 * We now warn you if you try to set unsupported custom runtime settings. These are settings, mainly related to storage options, which are controlled by the Mendix Cloud deployment and cannot be customized for apps which are deployed to the Mendix Cloud.
 
-### November 1st, 2022
+### November 1, 2022
 
 #### Improvements
 
@@ -150,7 +150,7 @@ For information on the current status of deployment to Mendix Cloud and any plan
 
 * We added the AWS Mumbai region as a new deployment target in Mendix Cloud Asia Pacific.
 
-### July 21st, 2022
+### July 21, 2022
 
 #### Improvements
 
@@ -204,7 +204,7 @@ New Certificate Details: <https://crt.sh/?id=6940402070>
 
 * We improved the UX for setting up two-factor authentication.
 
-### May 31st, 2022
+### May 31, 2022
 
 #### Fix – AppDynamics
 
@@ -226,11 +226,11 @@ New Certificate Details: <https://crt.sh/?id=6940402070>
 * We have updated the alert order on the [Alerts page](/developerportal/operate/monitoring-application-health/) for better visibility
 * We have made improvements to the email alert subscription service to make it more reliable
 
-### April 21st, 2022
+### April 21, 2022
 
 * We have introduced support for [AppDynamics](/developerportal/operate/appdynamics-metrics/) monitoring in Mendix Cloud V4.
 
-### March 31st, 2022
+### March 31, 2022
 
 #### Improvements
 
@@ -423,9 +423,9 @@ Existing applications will be updated in the next few weeks. Technical contacts 
 
 * We increased the maximum number of instances you can set when [scaling](/developerportal/deploy/environments-details/#scaling) your app to 32. If you need more than 32 instances please contact Mendix Support.
 
-#### Announcement - Internet Protocol Version 6 (IPv6) will be supported for applications in Mendix Cloud v4 from **July 1st, 2021**
+#### Announcement - Internet Protocol Version 6 (IPv6) will be supported for applications in Mendix Cloud v4 from **July 1, 2021**
 
-To improve security and scalability of the connections made to applications in Mendix Cloud v4, **on July 1st, 2021** we will enable support for **Internet Protocol Version 6 (IPv6)** in **Mendix Cloud v4**. This will happen automatically, there is no need to redeploy your app.
+To improve security and scalability of the connections made to applications in Mendix Cloud v4, **on July 1, 2021** we will enable support for **Internet Protocol Version 6 (IPv6)** in **Mendix Cloud v4**. This will happen automatically, there is no need to redeploy your app.
 
 Enabling support for IPv6 means that clients who access your Mendix applications which have configured Access Restriction Profiles may not be able to connect to them when using IPv6.
 
@@ -433,7 +433,7 @@ Enabling support for IPv6 means that clients who access your Mendix applications
 
 We are informing you about this date so that you can plan to update your Access Restriction Profiles and inform users about this change. Technical Contacts of affected apps will also be contacted directly.
 
-You can configure IPv6 ranges before July 1st, but the change will only come into effect on that date. Instructions for setting IP ranges can be found in the [Access Restriction Profiles](/developerportal/deploy/access-restrictions/#ip-ranges) documentation.
+You can configure IPv6 ranges before July 1, but the change will only come into effect on that date. Instructions for setting IP ranges can be found in the [Access Restriction Profiles](/developerportal/deploy/access-restrictions/#ip-ranges) documentation.
 
 **Test your clients**
 
@@ -441,7 +441,7 @@ You can test whether your client (browser or integrating client) is using IPv6, 
 
 **Impact**
 
-Any clients that use IPv6 to connect to applications which have configured Access Restriction Profiles may experience connectivity issues from **July 1st, 2021** onwards.
+Any clients that use IPv6 to connect to applications which have configured Access Restriction Profiles may experience connectivity issues from **July 1, 2021** onwards.
 
 ### April 15th, 2021
 
@@ -607,13 +607,13 @@ If you encounter errors using APIs, please ensure that the format matches the do
 
 ### September 14th, 2020
 
-#### Announcement - Deprecation of HTTPS SSL/TLS weak ciphers from **December 1st, 2020**
+#### Announcement - Deprecation of HTTPS SSL/TLS weak ciphers from **December 1, 2020**
 
 To improve the security of the HTTPS connections made to apps in Mendix Cloud v4 we [enabled TLSv1.3 in February this year](#tls-v1_3). Since then more than 50% of the requests to Cloud v4 apps have been served over TLSv1.3.
 
 To further improve the security of the HTTPS connections to apps in Mendix Cloud v4 we are deprecating and stopping support for block ciphers. Block ciphers are considered weak.
 
-**On December 1st, 2020**, we will stop technical support for **TLSv1.2 Block ciphers (CBC)** for HTTPS connections to apps in **Mendix Cloud v4**.
+**On December 1, 2020**, we will stop technical support for **TLSv1.2 Block ciphers (CBC)** for HTTPS connections to apps in **Mendix Cloud v4**.
 
 **What this means for your Mendix apps**
 
@@ -629,7 +629,7 @@ Some examples of clients which will no longer be supported are:
 
 **What we continue to support (expert details)**
 
-SSL/TLS ciphers that are still supported for HTTPS connections after December 1st, 2020:
+SSL/TLS ciphers that are still supported for HTTPS connections after December 1, 2020:
 
 **TLSv1.3**
 
@@ -751,7 +751,7 @@ This value is displayed in the following graphs in Metrics for Mendix Cloud v4:
 
     You will need to redeploy your app in order to apply the new ARP(s).
 
-### May 1st, 2020
+### May 1, 2020
 
 #### Improvements
 
@@ -787,7 +787,7 @@ This value is displayed in the following graphs in Metrics for Mendix Cloud v4:
 
 * We enabled TLSv1.3 support in Mendix Cloud v4 Free Tier EU. TLSv1.3 improves the speed and security of HTTPS connections.
 
-### January 21st, 2020
+### January 21, 2020
 
 #### Fixes
 
@@ -811,7 +811,7 @@ This value is displayed in the following graphs in Metrics for Mendix Cloud v4:
 
 * We improved the stability and performance of Mendix Cloud deployment. (Tickets 86800, 92241, 92426)
 
-### November 21st, 2019
+### November 21, 2019
 
 #### Improvements
 
@@ -844,7 +844,7 @@ This value is displayed in the following graphs in Metrics for Mendix Cloud v4:
 
     * Resolved by release on [November 7th](#20201107).
 
-### October 1st, 2019
+### October 1, 2019
 
 #### Improvements
 
@@ -1015,7 +1015,7 @@ If you run services that connect to a `*.mendixcloud.com` endpoint AND use a sta
 
 ## 2018
 
-### December 1st, 2018
+### December 1, 2018
 
 #### Fixes
 
@@ -1030,7 +1030,7 @@ If you run services that connect to a `*.mendixcloud.com` endpoint AND use a sta
 
 * We fixed an issue in which [custom error pages](/howto/front-end/custom-error-page/) did not work for online applications in Mendix Cloud v4.
 
-### November 1st, 2018
+### November 1, 2018
 
 #### Fixes
 
@@ -1054,7 +1054,7 @@ If you run services that connect to a `*.mendixcloud.com` endpoint AND use a sta
 
 * We fixed an issue which caused subdomain validation errors for sandbox environments. (Ticket 56574)
 
-### August 21st, 2018
+### August 21, 2018
 
 #### Fixes
 
@@ -1190,7 +1190,7 @@ In some cases, you may still experience false positives for the runtime heartbea
 * As of today, Mendix Cloud v4 users will be able to create and restore backups of their environments via REST API. Detailed information can be found in the [Deploy API](/apidocs-mxsdk/apidocs/deploy-api/) documentation.
 * The results of **Retrieve Environments** and **Retrieve Environment** REST API calls will now also include the model version and Mendix version information of the applications for which the call is being made.
 
-### March 21st, 2018
+### March 21, 2018
 
 #### Improvements
 
@@ -1220,7 +1220,7 @@ In some cases, you may still experience false positives for the runtime heartbea
 
 * In the Mendix Cloud, we have renewed the SSL/TLS certificates for *.mendixcloud.com*, *.mxapps.io*, and *.mendix.com*.
 
-### March 1st, 2018
+### March 1, 2018
 
 #### Fixes
 
@@ -1370,13 +1370,13 @@ In some cases, you may still experience false positives for the runtime heartbea
 
 * We enabled path-based access restrictions for all Mendix Cloud v3 apps. This allows users to more easily configure access restrictions on their environments. For more information, see [Access Restrictions](/developerportal/deploy/access-restrictions/). Mendix Cloud v4 already has this functionality enabled.
 
-### August 1st, 2017
+### August 1, 2017
 
 #### Improvements
 
 * For Mendix Cloud v3, Java will be upgraded, including the most recent security updates. The Java KeyStore has also been updated. It contains trusted root certificates for secure outgoing connections from your Mendix app. For example, with the updated Java KeyStore, you are now able to connect to endpoints that use a certificate signed by [Let's Encrypt](https://letsencrypt.org/). Root certificates that are considered unsecure by Oracle and Mozilla have been removed. Your app will automatically start using a newer Java version and KeyStore when you restart the app. For Mendix Cloud v4, we are still planning the rollout of this fix.
 
-### July 31st, 2017
+### July 31, 2017
 
 #### Fixes
 
@@ -1425,7 +1425,7 @@ In some cases, you may still experience false positives for the runtime heartbea
 * Added a warning message before restore backup, to prevent users clearing their environment. Clearing the environment before restoring resulted in a much slower non-incremental restore operation.
 * Disabled automatic copying of "Data Snapshots" to empty environments in Mendix Cloud v4 Pro/Enterprise environments. This features is only used in Free Apps. Weak admin passwords in the database snapshot would prevent the app from starting.
 
-### April 1st, 2017
+### April 1, 2017
 
 #### Improvements
 

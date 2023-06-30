@@ -71,7 +71,7 @@ Due to upgrades to our dependencies, neither version of Make It Native 2.0.0 is 
 
 ## Android 1.3.0 / iOS 1.3.0
 
-**Release date: April 1st, 2020**
+**Release date: April 1, 2020**
 
 {{% alert color="info" %}}
 If you are working in Mendix Studio Pro 8.8 or higher, you must update your Make It Native app to this version. 
@@ -204,7 +204,7 @@ On Android:
 
 ## Android 1.0.0 / iOS 1.0.2
 
-**Release date: August 1st, 2019**
+**Release date: August 1, 2019**
 
 * This is the official release of the Android and iOS versions of the Make It Native app, with support for Mendix Studio Pro 8.0. Both Android and iOS versions allow you to preview and debug your locally running native app on any supported mobile platform. The apps are not backwards compatible with the Mendix Studio Pro 8.0.0 Beta versions of Mendix Studio Pro. For more information on Mendix Studio Pro 8.0, see the [8.0.0 Release Notes](/releasenotes/studio-pro/8.0/).
 

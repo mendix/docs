@@ -55,7 +55,7 @@ To see the current status of the Mendix Developer Portal and Control Center, see
 
 * We have released [Webhooks API](/apidocs-mxsdk/apidocs/webhooks-api/) for Beta usage.
 
-### June 1st, 2023
+### June 1, 2023
 
 #### Improvements
 
@@ -221,7 +221,7 @@ For more information on security issues, see [Security Advisories](/releasenotes
 
 ## 2022
 
-### December 21st, 2022
+### December 21, 2022
 
 #### Fixes
 
@@ -237,7 +237,7 @@ A survey can have a maximum of three questions that appear in your app based on 
 
 This feature is in Beta, so we would very much appreciate your feedback. If you have any questions or suggestions for improvement, just reach out via the **Feedback** widget on the **Product Insights** page in the Developer Portal.
 
-### December 1st, 2022
+### December 1, 2022
 
 #### Improvements
 
@@ -272,7 +272,7 @@ In Portfolio Management, you can do the following
 * Easily manage portfolio users via **Access Management**
 * Get notified when you get assigned to a project initiative or someone commented on a project initiative you own
 
-### November 21st, 2022
+### November 21, 2022
 
 #### New Features
 
@@ -365,7 +365,7 @@ In Portfolio Management, you can do the following
 
 * We released [Notifications](/developerportal/#notifications) for Beta usage, which allows you to receive updates from Academy, Data Hub, Developer Portal, Epics, and Forum. Additionally, you can manage what kind of updates you will receive in the [Notification Settings](https://user-settings.mendix.com/link/notifications) page.
 
-### July 21st, 2022
+### July 21, 2022
 
 #### Improvements
 
@@ -448,7 +448,7 @@ In Portfolio Management, you can do the following
 
 * We fixed a known issue where not all app images were displayed correctly on the [My Apps](/developerportal/#my-apps) page. (Ticket 148379)
 
-### April 21st, 2022
+### April 21, 2022
 
 #### Improvements
 
@@ -546,7 +546,7 @@ In Portfolio Management, you can do the following
 
 * We redesigned the [Stories](/developerportal/collaborate/stories/) archive page to allow you to more easily search through completed stories by ID, name, description, or Sprint.
 
-### November 1st, 2021
+### November 1, 2021
 
 #### Update of *.mendixcloud.com SSL/TLS certificate
 
@@ -564,7 +564,7 @@ In Portfolio Management, you can do the following
         * SHA-256 Fingerprint: `BF:AE:01:9F:93:5A:D9:92:35:B5:BA:9F:E4:AE:56:99:21:17:44:51:56:17:A2:11:A1:FE:3B:42:9C:B4:B6:70`
                 * SHA-1 Fingerprint: `0F:3B:31:9F:86:6E:65:2D:5F:7A:EF:35:64:04:45:67:58:E4:ED:11`
 
-### October 21st, 2021
+### October 21, 2021
 
 #### Improvements
 
@@ -586,7 +586,7 @@ In Portfolio Management, you can do the following
 
 * We fixed an issue where you could not see the story details if one of the tasks had a title that was longer than 200 characters.
 
-### October 1st, 2021 {#oct1}
+### October 1, 2021 {#oct1}
 
 #### New Features
 
@@ -599,7 +599,7 @@ In Portfolio Management, you can do the following
 * We simplified the drag-and-drop behavior on the [Stories Overview](/developerportal/collaborate/stories/#overview) page (for both the new and old UI) to make it more stable.
 * We added support for adding labels to stories on the **Stories Overview** page.
 * It is now possible to add labels and tasks as well as assign a team member when you [create a story](/developerportal/collaborate/stories/#new-story).
-* Thanks to a lot of feedback from the community, we have improved the new stories functionality to the point where we feel comfortable removing the old UI. Because of this, we will be deprecating the old UI on December 31st, 2021.
+* Thanks to a lot of feedback from the community, we have improved the new stories functionality to the point where we feel comfortable removing the old UI. Because of this, we will be deprecating the old UI on December 31, 2021.
 * We improved the look and feel of the [story details](/developerportal/collaborate/stories/#story-details) page, and we removed support for the old version of this page.
 * We made further preparations for the support of Git-enabled apps.
 * We finished a year-long project where we modernized the way the Developer Portal communicates internally. This meant we removed a long-running internal platform app, which had a great run, but now it is time to say goodbye. This app has been replaced with business events based on Kafka.
@@ -673,7 +673,7 @@ In Portfolio Management, you can do the following
 * We removed the **Team** read-only overview page and send you straight to the [Manage Team](/developerportal/collaborate/team/#managing) page.
 * We moved the **API Keys** page to the [General Settings](/developerportal/collaborate/general-settings/#general-settings-api-keys) page.
 * We implemented a new responsive search panel.
-* We will remove the **Burndown Chart** and **Release Plan** tabs from the Developer Portal on August 31st, 2021.
+* We will remove the **Burndown Chart** and **Release Plan** tabs from the Developer Portal on August 31, 2021.
 
 ### June 15th, 2021
 
@@ -687,7 +687,7 @@ In Portfolio Management, you can do the following
 
 * We fixed a broken link to the documentation on the [Team Server](/developerportal/collaborate/team-server/) page.
 
-### June 1st, 2021
+### June 1, 2021
 
 #### Improvements
 
@@ -914,7 +914,7 @@ In Portfolio Management, you can do the following
 
 #### Fixes
 
-* We placed a deprecation warning in a file hosted by the Developer Portal that is used in old versions of the [Mendix Feedback](/appstore/modules/mendix-feedback/) widget. As of October 1st, 2020, we will end support for Mendix Feedback widget version 5 or below. Please always keep your Feedback widget up-to-date to ensure the best experience for your users.
+* We placed a deprecation warning in a file hosted by the Developer Portal that is used in old versions of the [Mendix Feedback](/appstore/modules/mendix-feedback/) widget. As of October 1, 2020, we will end support for Mendix Feedback widget version 5 or below. Please always keep your Feedback widget up-to-date to ensure the best experience for your users.
 * We fixed an issue where you could move a user story to a different Sprint without specifying the target Sprint.
 
 ### July 28th, 2020
@@ -986,7 +986,7 @@ In Portfolio Management, you can do the following
 
 * We added a new story action called **Clone** to the new Beta UI. For more information, see the [New UI Option (Beta)](/developerportal/collaborate/stories/#story-actions) section of *Stories*.
 
-### February 21st, 2020
+### February 21, 2020
 
 #### Improvements
 
@@ -1032,13 +1032,13 @@ In Portfolio Management, you can do the following
 
 * We made some minor styling improvements on [Buzz](/developerportal/collaborate/buzz/).
 
-### November 21st, 2019
+### November 21, 2019
 
 #### Fixes
 
 * We fixed an issue that prevented the **Edit in Studio Pro** functionality in the Developer Portal from opening Studio Pro.
 
-### November 1st, 2019
+### November 1, 2019
 
 #### Improvements
 
@@ -1143,7 +1143,7 @@ In Portfolio Management, you can do the following
 
 * We fixed the broken deep link to the **Stories** page of your apps.
 
-### December 1st, 2018
+### December 1, 2018
 
 #### Fixes
 
@@ -1157,7 +1157,7 @@ In Portfolio Management, you can do the following
 
     {{< figure src="/attachments/releasenotes/developer-portal/shop.png"   width="300"  >}}
 
-### November 1st, 2018
+### November 1, 2018
 
 #### Improvements
 
@@ -1186,7 +1186,7 @@ In Portfolio Management, you can do the following
     * The **App** > **General** page has been redesigned.
     * The [People](https://developer.mendixcloud.com/link/people) overview has been redesigned. The same view on Mendix community members is available in the [Connections tab](/developerportal/community-tools/mendix-profile/#connections) of your Mendix Profile.
 
-### October 1st, 2018
+### October 1, 2018
 
 #### Web Modeler Improvements
 

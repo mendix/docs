@@ -187,7 +187,7 @@ When you try to publish your app, you may be notified that upgrade of the servic
 
 {{< figure src="/attachments/studio/settings/settings-security/upgrade.png" alt="Upgrade Required"   width="300"  >}}
 
-A special service makes it possible to manage your app users. As of April 1st, 2020 we are replacing the current service with an improved one. This upgrade will be done automatically for you when you click **Auto-Upgrade**. 
+A special service makes it possible to manage your app users. As of April 1, 2020 we are replacing the current service with an improved one. This upgrade will be done automatically for you when you click **Auto-Upgrade**. 
 
 No need to worry if you do not auto-upgrade, your app will still be secured and running, however, you will not be able to publish a newer version of your app until you upgrade. 
 

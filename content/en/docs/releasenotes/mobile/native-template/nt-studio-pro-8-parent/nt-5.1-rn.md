@@ -123,7 +123,7 @@ Please note that if your app requires custom initialization, for example due to 
 
 ## 5.1.9
 
-**Release date: March 31st, 2021**
+**Release date: March 31, 2021**
 
 ### Mobile Toolkit for 5.1.x
 

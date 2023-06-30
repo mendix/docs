@@ -1,10 +1,10 @@
 ---
 title: "Stories"
-url: /developerportal/collaborate/stories/
+url: /developerportal/project-management/stories/
 category: "Collaboration"
-weight: 3
+weight: 10
 description: "Describes how to manage the Sprints and stories for your apps."
-tags: ["Stories", "Sprint", "Developer Portal"]
+tags: ["Stories", "Sprint", "Project management", "Developer Portal"]
 #To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 ---
 

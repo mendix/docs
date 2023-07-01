@@ -40,9 +40,9 @@ To see the current status of the Mendix Developer Portal and Control Center, see
 #### Improvements
 
 * Our [Portfolio Management](/developerportal/portfolio-management/) tool is now released for GA. At the same time, we also made a few improvements to the tool:
-  * We renamed **Projects** to **Initiatives**.
-  * You can now request access to restricted portfolios in your company.
-  * Filters in the **Initiatives Overview** are now preserved when switching views.
+    * We renamed **Projects** to **Initiatives**.
+    * You can now request access to restricted portfolios in your company.
+    * Filters in the **Initiatives Overview** are now preserved when switching views.
 * We simplified the [app invitation flow](/developerportal/collaborate/team/#inviting). If someone from your own company invites you to an app that also belongs to your company, you will no longer have to accept the pending  invitation. Instead, you will be immediately added to the team.
 * You can now see everyone who was invited to the app and by whom. You will find this information on the [History](/developerportal/collaborate/general-settings/#history) tab of the **General Settings** page.
 * We had a close look at the messages we post on the [History](/developerportal/collaborate/team/) tab of the **Team** page and revised some of them to make them more readable.

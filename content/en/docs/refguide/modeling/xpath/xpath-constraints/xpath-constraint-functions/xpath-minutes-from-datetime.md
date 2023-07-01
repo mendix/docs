@@ -49,4 +49,3 @@ This query returns all the logs where the minutes part of `DateAttribute` is 30 
      //Logging.Log[minutes-from-dateTime(DateAttribute, 'America/New_York') = 30]
     {{% /tab %}}
 {{< /tabpane >}}
-

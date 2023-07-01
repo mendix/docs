@@ -177,7 +177,6 @@ Set up a connector module that communicates to the Twitter API with OData by fol
 
     Since you are working in local development environment and not deploying locally, your published resource will not automatically be available in the Catalog or the Integration Pane. See [Register Data Sources without the Mendix Cloud](/catalog/data-sources-without-mendix-cloud/) to understand how to work with external entities and the Catalog for local deployments.
 
-
 #### 7.1.3 Building the Client
 
 Set up a Twitter client module that allows users to input a Twitter ID and communicates to the Twitter API via your [Twitter connector](#twitter-connector).

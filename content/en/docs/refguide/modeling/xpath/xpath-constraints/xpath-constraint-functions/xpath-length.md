@@ -21,4 +21,3 @@ This query returns all customers with a `FirstName` of 5 or more characters:
      //Sales.Customer[length(FirstName) >= 5]
     {{% /tab %}}
 {{< /tabpane >}}
-

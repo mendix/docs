@@ -34,14 +34,14 @@ On the upper-right corner of the page, you can see two buttons:
 
 * **Create Story** – Clicking this enables you to create a new story.
 * Ellipsis (**...**) – Clicking this shows the following options:
-  * **Create Epic** – This enable you to create an epic.
-  * **Edit Sprint** (only available for [a Scrum workflow](#scrum-planning)) – This enables you to edit the current Sprint.
-  * **End Sprint** (only available for [a Scrum workflow](#scrum-planning)) – This enables you to the current Sprint.
-  * **Start Sprint** (only available for [a Scrum workflow](#scrum-planning)) – This enables you to start a new Sprint.
-  * **Import Stories** – Clicking this enables you to import stories from an Excel file.
-    * For more information, see the [Import Stories](#import-stories) section.
-  * **Board Settings** – Clicking this enables you configure the board settings.
-    * For more information, see the [Board Settings](#settings) section.
+    * **Create Epic** – This enable you to create an epic.
+    * **Edit Sprint** (only available for [a Scrum workflow](#scrum-planning)) – This enables you to edit the current Sprint.
+    * **End Sprint** (only available for [a Scrum workflow](#scrum-planning)) – This enables you to the current Sprint.
+    * **Start Sprint** (only available for [a Scrum workflow](#scrum-planning)) – This enables you to start a new Sprint.
+    * **Import Stories** – Clicking this enables you to import stories from an Excel file.
+        * For more information, see the [Import Stories](#import-stories) section.
+    * **Board Settings** – Clicking this enables you configure the board settings.
+        * For more information, see the [Board Settings](#settings) section.
 
 ### 1.1 Selecting, Moving, Archiving, and Deleting Stories 
 
@@ -97,11 +97,11 @@ In the main area of the page, stories are grouped in these categories: **Active 
 On the upper-right corner, you can find these Scrum items if you click the **...** button:
 
 * **Start Sprint** – Clicking this allows you to start a new Sprint. Once a Sprint is created, all the items in the **Next Sprint** are moved to the **Active Sprint** automatically. 
-  * This is available only when there is no Sprint running at this moment.
+    * This is available only when there is no Sprint running at this moment.
 * **Edit Sprint** – Clicking this allows you to edit the current Sprint. When you end a Sprint, the system shows you how many stories were completed in that Sprint. All the completed stories are archived automatically, and you can decide where the unfinished stories should go.
-  * This is available only when this is a Sprint running at this moment.
+    * This is available only when this is a Sprint running at this moment.
 * **End Sprint** – Clicking this allows you to end the current Sprint. 
-  * This is available only when this is a Sprint running at this moment.
+    * This is available only when this is a Sprint running at this moment.
 
 ### 2.2 Kanban Planning {#kanban-planning}
 
@@ -256,6 +256,3 @@ The **Not Finished** status means that you can use the **Continue Migration** bu
 {{% alert color="info" %}}
 If you still have content with the **Error** status (for example, in the **Unmigrated Stories** section) after retrying the migration via the **Continue Migration** button, Mendix recommends manually migrating that data from [Stories](/developerportal/project-management/stories/) to Epics. Furthermore, if a section has been successfully migrated but there is still data that has not been migrated, Mendix recommends manually migrating the data.
 {{% /alert %}}
-
-
-

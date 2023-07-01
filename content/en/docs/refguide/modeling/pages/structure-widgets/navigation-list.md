@@ -23,14 +23,17 @@ For example, clicking one row can open a page, clicking another one can execute 
 The properties pane is divided into two major sections by a toggle at the top of the pane: **Properties** and **Styling**. Navigation list properties consist of the following sections:
 
 Properties:
+
 * [Visibility](#visibility)
 * [Common](#common)
 
 Styling:
+
 * [Design Properties](#design-properties)
 * [Common](#common-styling)
 
 Miscellaneous:
+
 * [Navigation List Item Properties](#nav-list)
 
 ## 3 Properties

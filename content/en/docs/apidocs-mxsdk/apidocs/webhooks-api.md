@@ -65,12 +65,13 @@ The following procedure will create a webhook endpoint and update the webhook en
 
 3. To update the new webhook, call `PUT /apps/{app-id}/webhooks/{webhook-id}`, with a request body. For example:
 
-    *  API call:
+    * API call:
 
         ```http {linenos=false}
         PUT /apps/80a28d6e-c5fc-43d9-87c2-d7d56b07542e/webhooks/msg_2M605iBQRge9hTgpYg7fKXQubaw
         ```
-    *  Request body:
+
+    * Request body:
 
         ```json
         {
@@ -91,7 +92,6 @@ The following procedure will create a webhook endpoint and update the webhook en
         ```
 
     If the update succeeds, you should receive status code `202`. You can get the updated webhook details by calling `GET apps/{app-id}/webhooks/{webhook-id}`.
-
 
 ## 4 API Reference
 

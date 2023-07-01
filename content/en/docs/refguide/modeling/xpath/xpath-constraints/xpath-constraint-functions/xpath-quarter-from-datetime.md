@@ -49,4 +49,3 @@ This query returns all the logs where `DateAttribute` is in the forth quarter in
      //Logging.Log[quarter-from-dateTime(DateAttribute, 'America/New_York') = 4]
     {{% /tab %}}
 {{< /tabpane >}}
-

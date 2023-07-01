@@ -16,6 +16,7 @@ This feature is in Beta. For more information on Beta products, see [Beta Releas
 The Mini Surveys feature is part of the Mendix App Insights collection of tools designed to help you collect and aggregate feedback from your customers. 
 
 The Mini Surveys feature consists of two parts:
+
 * A pop-up survey in your app for users to fill in
 
 * A back-end dashboard in the Developer Portal for you to create surveys and aggregate your survey results.

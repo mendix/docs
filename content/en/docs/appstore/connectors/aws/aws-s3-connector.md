@@ -321,7 +321,7 @@ The `DeleteObject` Amazon S3 actions allows you delete an object from a specifie
 
 #### 4.3.4 ListBuckets {#listbuckets}
 
-The `ListBuckets` Amazon S3 actions allows you retrieve a list of all buckets in one’s Amazon S3 environment. It requires a valid `AWS_Region` and `Credentials`. It returns a` ListBucketsResponse` object. The input and output for this service are shown in the table below: 
+The `ListBuckets` Amazon S3 actions allows you retrieve a list of all buckets in one’s Amazon S3 environment. It requires a valid `AWS_Region` and `Credentials`. It returns a`ListBucketsResponse` object. The input and output for this service are shown in the table below: 
 
 | Input | Output | 
 | --- | --- | 

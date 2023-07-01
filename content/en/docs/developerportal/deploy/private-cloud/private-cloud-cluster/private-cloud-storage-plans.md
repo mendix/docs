@@ -221,8 +221,8 @@ In the Postgres plan configuration, enter the following details:
 * **Username** - username of the admin/superuser, used by the Mendix Operator to create or delete tenants for app environments; typically, this is set to `postgres`.
 * **Password** - username of the admin/superuser; used by the Mendix Operator to create or delete tenants for app environments.
 * **Strict TLS** - specifies if the TLS should always be validated.
-  * Enabling this option will enable full TLS certificate validation and require encryption when connecting to the PostgreSQL server. If the PostgreSQL server has a self-signed certificate, you will also need to configure custom TLS so that the self-signed certificate is accepted.
-  * Disabling this option will attempt to connect with TLS, but skip certificate validation. If TLS is not supported, it will fall back to an unencrypted connection.
+    * Enabling this option will enable full TLS certificate validation and require encryption when connecting to the PostgreSQL server. If the PostgreSQL server has a self-signed certificate, you will also need to configure custom TLS so that the self-signed certificate is accepted.
+    * Disabling this option will attempt to connect with TLS, but skip certificate validation. If TLS is not supported, it will fall back to an unencrypted connection.
 
 {{% alert color="info" %}}
 To connect to an Azure PostgreSQL server, the Kubernetes cluster must be added to the list of allowed hosts in the firewall. For the database name, use `postgres`.
@@ -466,7 +466,7 @@ If the MinIO URL is specified with an `http` schema, TLS will not be used.
 In the MinIO plan configuration, enter the following details:
 
 * **Endpoint** is the MinIO server API endpoint, for example `http://minio-shared.privatecloud-storage.svc.cluster.local:9000`
-  * To use TLS, change `http` to `https`. If the MinIO server has a self-signed certificate, you will also need to configure custom TLS so that the self-signed certificate is accepted.
+    * To use TLS, change `http` to `https`. If the MinIO server has a self-signed certificate, you will also need to configure custom TLS so that the self-signed certificate is accepted.
 * **Access Key** is the admin user account access key (username), used by Mendix Operator to create tenants for new environments.
 * **Secret Key** is the admin user account secret key (password), used by Mendix Operator to create tenants for new environments.
 
@@ -562,6 +562,7 @@ This automated, on-demand option allows to share an existing bucket between envi
    ```
 
 * An admin user account - with the following policy (replace `<account_id>` with your AWS account number, and `<policy_arn>` with the environment template policy ARN):
+
     ```json
     {
         "Version": "2012-10-17",
@@ -607,9 +608,9 @@ This automated, on-demand option allows to share an existing bucket between envi
 
 * Every environment has its own IAM user.
 * The S3 bucket is shared. 
-  * The environment template policy uses the IAM username as a template, so that a user can only access a certain prefix (path or directory) in the bucket.
-  * In practice, this means that any environment can only access files if those files' prefix matches the environment's IAM username.
-  * An environment cannot access files from other environments.
+    * The environment template policy uses the IAM username as a template, so that a user can only access a certain prefix (path or directory) in the bucket.
+    * In practice, this means that any environment can only access files if those files' prefix matches the environment's IAM username.
+    * An environment cannot access files from other environments.
 * The Mendix Operator does not need permissions to create new policies, only to attach a manually created policy.
 
 ##### 3.3.1.4 Create Workflow
@@ -724,6 +725,7 @@ Instead, we recommend using the [Create account with existing policy](#s3-create
 ##### 3.3.3.1 Prerequisites
 
 * An admin user account - with the following policy (replace `<account_id>` with your AWS account number):
+
     ```json
     {
         "Version": "2012-10-17",
@@ -905,7 +907,7 @@ Instead, we recommend using the [Create account with existing policy](#s3-create
 
 * Every environment has its own IAM user.
 * Every environment has its own S3 bucket, which can only be accessed by that environment's IAM user.
-  * The environment template policy uses the IAM username as a template - so that a user can only access an S3 bucket that matches the IAM username.
+    * The environment template policy uses the IAM username as a template - so that a user can only access an S3 bucket that matches the IAM username.
 * The Mendix Operator does not need permissions to create IAM policies.
 
 ##### 3.3.4.4 Create Workflow
@@ -914,7 +916,7 @@ When a new environment is created, the Mendix Operator performs the following ac
 
 * Generate a new IAM username and S3 bucket name for the environment.
 * Create a new S3 bucket for the environment.
-* Create the new IAM user and attach the _environment template_ policy to this user.
+* Create the new IAM user and attach the *environment template* policy to this user.
 * Create a Kubernetes secret to provide connection details to the new app environment - to automatically configure the new environment.
 
 ##### 3.3.4.5 Delete Workflow
@@ -1077,7 +1079,7 @@ When a new environment is created, the Mendix Operator performs the following ac
 
 When an existing environment is deleted, the Mendix Operator performs the following actions:
 
-* (Only if _Prevent Data Deletion_ is not enabled) Delete files from that environment's prefix (directory). Files from other apps (in other prefixes/directories) will not be affected.
+* (Only if *Prevent Data Deletion* is not enabled) Delete files from that environment's prefix (directory). Files from other apps (in other prefixes/directories) will not be affected.
 * Delete that environment's IAM user.
 * Delete that environment's Kubernetes blob file storage credentials secret.
 

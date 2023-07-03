@@ -75,17 +75,17 @@ Follow the instructions in [How to Use Marketplace Content in Studio Pro](/appst
 4. To clean up document requests, enable the scheduled event **SE_DocumentRequest_Cleanup** to automatically remove expired **Document Request** objects after a configured offset in days. The offset is configured using the constant **DocumentGeneration.RequestCleanupOffsetInDays** (the default value is 7 days). The scheduled event runs daily at 03:00 UTC.
 5. Depending on where you run the module, continue to perform the procedure in the [Running Locally](#run-locally) section or in the [Running on the Mendix Cloud](#run-on-mendix-cloud) section.
 
-#### 3.1 Running Locally {#run-locally}
+### 3.1 Running Locally {#run-locally}
 
 You need to have Chrome or Chromium installed on your local machine.
 
-##### 3.1.1 Chrome
+#### 3.1.1 Chrome
 
 The PDF Document Generation module automatically tries to find the Chrome executable (*chrome.exe*) in the default installation paths. 
 
 If you have installed Chrome in a custom location, configure the path to the Chrome executable in the constant **CustomChromePath** in the **_UseMe** > **Configuration** folder. 
 
-##### 3.1.2 Chromium
+#### 3.1.2 Chromium
 
 If you use Chromium, only use stable releases. The currently supported stable release is [104.0.5109.0](https://storage.googleapis.com/chromium-browser-snapshots/index.html?prefix=Win_x64/1011831/). 
 
@@ -93,7 +93,7 @@ Download the *chrome-win.zip* package and extract the archive to a location of y
 
 Configure the path to the *chrome.exe* executable in the **CustomChromePath** constant in the **_UseMe** > **Configuration** folder.
 
-#### 3.2 Running on the Mendix Cloud {#run-on-mendix-cloud}
+### 3.2 Running on the Mendix Cloud {#run-on-mendix-cloud}
 
 To allow the module to send and receive document generation requests on your Mendix Cloud environments, you need to perform the following procedures:
 
@@ -102,7 +102,7 @@ To allow the module to send and receive document generation requests on your Men
 
 The steps for each procedure are described in the sections below. 
 
-##### 3.2.1 Enabling the DocGen Request Handler {#enable-docgen}
+#### 3.2.1 Enabling the DocGen Request Handler {#enable-docgen}
 
 1. Make sure that you have the **ASu_DocumentGeneration_Initialize** already configured in your app’s runtime settings, as described in step 1 in the [Configuration](#configuration) section.
 2. Make sure that you have the application deployed to the Mendix Cloud.
@@ -125,7 +125,7 @@ The steps for each procedure are described in the sections below.
 
 Now you can continue to [register your app environment](#register-app).
 
-##### 3.2.2 Registering Your App Environment {#register-app}
+#### 3.2.2 Registering Your App Environment {#register-app}
 
 1. Add the snippet **Snip_AppRegistration** to a page that is accessible to admin users in your app.
 2. Enable the scheduled event **SE_AccessToken_Refresh** to automatically refresh the access token that is used to secure access to the Document Generation cloud service.
@@ -136,7 +136,7 @@ Now you can continue to [register your app environment](#register-app).
 
 ## 4 Usage
 
-#### 4.1 Generating Documents for the Current User
+### 4.1 Generating Documents for the Current User
 
 1. Add an entity in your domain model for storing the generated documents. Use **System.FileDocument** as its generalization. Give read access rights for the user roles that should be able to download the document.
 
@@ -167,7 +167,7 @@ Now you can continue to [register your app environment](#register-app).
 To see the generated document in the browser or download it, you can use the **Download file** microflow action. This will only work if you set the **Wait for result** parameter of the **Generate PDF from page** action to *true*.
 {{% /alert %}}
 
-#### 4.2 Generating Documents as a System Task {#system-task}
+### 4.2 Generating Documents as a System Task {#system-task}
 
 For scenarios where you want to generate documents using a system context (for example in a scheduled event), the recommended approach is to set up one or more service users for document generation.
 
@@ -191,7 +191,7 @@ For scenarios where you want to generate documents using a system context (for e
 We recommend to try to log in as the service user at least once, to verify if the service user has the required module roles to login. Depending on your app’s implementation, it might for example be required to assign the `Administration.Account` module role.
 {{% /alert %}}
 
-#### 4.3 Styling Documents
+### 4.3 Styling Documents
 
 * You can use the **Page break** widget included in this module to structure your documents. The **Page break** widget enables you to add page breaks at any place in your document.
 * You can use the **Page orientation** design property to set the page orientation for your documents. This property is available in the **Design properties** section in the properties for a page.
@@ -201,15 +201,15 @@ We recommend to try to log in as the service user at least once, to verify if th
 
 ## 5 Troubleshooting
 
-#### 5.1 App Environment Registration Issues
+### 5.1 App Environment Registration Issues
 
-##### 5.1.1 Invalid Developer Credentials
+#### 5.1.1 Invalid Developer Credentials
 
 If you encounter the message "Invalid developer credentials",  then the developer information as provided in the **Email** and **API key** fields is incorrect. 
 
 Verify that the provided email address in the **Email** field matches the username in your Mendix developer profile, and also that the API key that is being used is correct and still active.
 
-##### 5.1.2 Invalid App
+#### 5.1.2 Invalid App
 
 If you encounter any of the following error messages:
 
@@ -220,13 +220,13 @@ Then the provided App ID is either incorrect or that the developer (based on the
 
 Verify that the **App ID** field is correct, and also that the developer account corresponding to the details entered in the **Email** and **API key** fields has access to the given app.
 
-##### 5.1.3 Invalid Application URL
+#### 5.1.3 Invalid Application URL
 
 If you encounter the message "Application URL does not match any of the environment URLs", then the app corresponding to the **App ID** field does not contain any environment that matches the URL given in the **Application URL** field. 
 
 Verify that the **App ID** and **Application URL** fields are correct.
 
-##### 5.1.4 Unable to Reach App
+#### 5.1.4 Unable to Reach App
 
 If you encounter any of the following error messages:
 
@@ -238,13 +238,13 @@ Then the cloud service was unable to reach your app.
 
 Verify that you enabled the `ASu_DocumentGeneration_Initialize` after startup microflow and also allowed access to the DocGen request handler. For more information, see [Enabling the DocGen Request Handler](#enable-docgen).
 
-##### 5.1.5 Invalid Token
+#### 5.1.5 Invalid Token
 
 If you encounter the message "Domain verification failed, invalid token", then the cloud service was able to reach your app, but could not verify that this app is currently trying to register.
 
 Verify that the application URL matches the current environment.
 
-##### 5.1.6 Other Errors
+#### 5.1.6 Other Errors
 
 If you encounter any of the following error messages:
 
@@ -256,14 +256,14 @@ Then an unexpected error occured.
 
 Verify that your app was not restarted by someone else during the registration process. If not, submit a ticket in the Mendix Support Portal.
 
-#### 5.2 Module Usage and Runtime Issues {#module-usage-runtime-issues}
+### 5.2 Module Usage and Runtime Issues {#module-usage-runtime-issues}
 
 In general, we recommend you to perform the following steps in case of any issues during runtime:
 
 1. Temporarily set the log level of `DocumentGeneration` log node to [trace](/howto/monitoring-troubleshooting/log-levels/#level). This should give more insight at what stage the action fails.
 2. Temporarily add the page microflow that is configured in the action to the app navigation, or make it accessible via a button. This can help to verify that the page itself loads correctly, and can for example outline misconfiguration of entity access, widgets, etc. Make sure that you access the page with the same user you provided to the `Generate as user` parameter in the action.
 
-##### 5.2.1 Rendering/Styling Issues
+#### 5.2.1 Rendering/Styling Issues
 
 In case of issues regarding styling, we recommend you to temporarily add the page microflow to your app navigation (See step 2 in the [Module Usage and Runtime Issues](#module-usage-runtime-issues) section). Open the page using Chrome and verify if the print version of the page matches the expected page. You can do this as follows:
 
@@ -271,7 +271,7 @@ In case of issues regarding styling, we recommend you to temporarily add the pag
 
 * Alternatively, you can right-click the page and select **Print**.
 
-##### 5.2.2 Local Service Errors
+#### 5.2.2 Local Service Errors
 
 In case you encounter the message "Local service exited with error" in your runtime logs, for example:
 
@@ -282,7 +282,7 @@ com.mendix.modules.microflowengine.MicroflowException: com.mendix.systemwideinte
 
 We recommend you to temporarily set the log level of `DocumentGeneration` log node to [trace](/howto/monitoring-troubleshooting/log-levels/#level). This should give more insight at what stage the action fails.
 
-##### 5.2.3 Timeout Errors
+#### 5.2.3 Timeout Errors
 
 If you encounter the message "Failed to load page: TimeoutError: waiting for selector `#content .document-content` failed: timeout 30000ms exceeded" in your runtime logs, this means that a timeout occurred while the browser was waiting for the configured page to finish loading. This could be caused by the following reasons:
 

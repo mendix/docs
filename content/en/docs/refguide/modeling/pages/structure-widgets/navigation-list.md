@@ -38,7 +38,7 @@ Miscellaneous:
 
 ## 3 Properties
 
-#### 3.1 Visibility Section {#visibility}
+### 3.1 Visibility Section {#visibility}
 
 {{% snippet file="/static/_includes/refguide/visibility-section-link.md" %}}
 

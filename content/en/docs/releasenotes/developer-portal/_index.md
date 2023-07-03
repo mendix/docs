@@ -17,6 +17,12 @@ To see the current status of the Mendix Developer Portal and Control Center, see
 
 ## 2023
 
+### July 3, 2023
+
+#### Deprecations
+
+* We removed the **Marketplace Content** section of [Control Center](/developerportal/control-center/#marketplace-content), which had been deprecated since March, 2023.
+
 ### June 29th, 2023
 
 #### New Features

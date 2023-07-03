@@ -21,6 +21,7 @@ For example, the following text area allows the end-user to see, and set, the **
 The properties pane is divided into two major sections by a toggle at the top of the pane: **Properties** and **Styling**. Text area properties consist of the following sections:
 
 Properties:
+
 * [General](#general)
 * [Data source](#data-source)
 * [Label](#label)
@@ -33,6 +34,7 @@ Properties:
 * [On Change Behavior](#on-change-behavior)
 
 Styling:
+
 * [Design Properties](#design-properties)
 * [Common](#common-styling)
 

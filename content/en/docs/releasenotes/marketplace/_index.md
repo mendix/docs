@@ -13,6 +13,12 @@ These release notes cover changes made to the [Mendix Marketplace](/appstore/).
 
 ## 2023
 
+### June 29th, 2023
+
+#### New Features
+
+* You can now configure your own [proprietary license](/appstore/general/share-app-store-content/#proprietary-license) when creating a new public component. The license will be reviewed by Mendix alongside the review of the component. After the license has been approved, you and anyone within your organization can use the license for other components. 
+
 ### May 25th, 2023
 
 #### New Features
@@ -78,7 +84,7 @@ If you are using Studio Pro on a Mac with Parallels, see [this update](https://k
 
 #### New Features
 
-* We have introduced a content curation feature, which allows Mendix Admins to curate Marketplace content for Studio. Mendix Admins can do the following from the [Marketplace Content](/developerportal/control-center/#marketplace-content) page in Control Center:
+* We have introduced a content curation feature, which allows Mendix Admins to curate Marketplace content for Studio. Mendix Admins can do the following from the **Marketplace Content** page in Control Center:
     * Limit available public Marketplace content in Studio
     * Approve and hide private Marketplace content in Studio
 

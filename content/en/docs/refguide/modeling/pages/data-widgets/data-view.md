@@ -25,6 +25,7 @@ The footer of the data view is the section at the bottom of the data view that o
 The properties pane is divided into two major sections by a toggle at the top of the pane: **Properties** and **Styling**. Data view properties consist of the following sections:
 
 Properties:
+
 * [General](#general)
 * [Data source](#data-source)
 * [Editability](#editability)
@@ -32,6 +33,7 @@ Properties:
 * [Common](#common)
 
 Styling: 
+
 * [Design Properties](#design-properties)
 * [Common](#common-styling) 
 

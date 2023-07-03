@@ -5,6 +5,7 @@ category: "App Insights"
 weight: 5
 description: "Describes how to set up mini surveys to gain insights into your app and view and export the survey results."
 tags: ["mini survey", "app insights", "sprint", "developer portal"]
+#If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details. 
 ---
 
 {{% alert color="warning" %}}
@@ -16,6 +17,7 @@ This feature is in Beta. For more information on Beta products, see [Beta Releas
 The Mini Surveys feature is part of the Mendix App Insights collection of tools designed to help you collect and aggregate feedback from your customers. 
 
 The Mini Surveys feature consists of two parts:
+
 * A pop-up survey in your app for users to fill in
 
 * A back-end dashboard in the Developer Portal for you to create surveys and aggregate your survey results.
@@ -233,6 +235,6 @@ A mini survey has the following opt-out rules:
 
 ## 4 Troubleshooting
 
-#### 4.1 Surveys Do Not Work Locally When Running Multiple Applications
+### 4.1 Surveys Do Not Work Locally When Running Multiple Applications
 
 For details on how to resolve this issue, see the [Troubleshooting](/appstore/modules/app-insights/#troubleshooting) section in *Mendix Mini Surveys*.

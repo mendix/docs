@@ -155,8 +155,8 @@ You can confirm that you can connect to the PCLM server using the following URLs
 * `http://mx-privatecloud-license-manager.<namespace>.svc.cluster.local/health` should return `HTTP 200 OK`
 * `http://mx-privatecloud-license-manager.<namespace>.svc.cluster.local/metrics` should return `HTTP 200 OK` together with the collected server metrics.
 
-
 When using the CLI, use `kubectl port-forward` instead of an ingress, as in the following example:
+
 ```bash {linenos=false}
 kubectl port-forward -n <namespace> svc/<service name> 8080:8080
 ```
@@ -285,6 +285,7 @@ mx-pclm-cli config-namespace -n <operator-ns> \
    -u <admin-user> \
    -p <admin-password>
 ```   
+
 The default secret name is `mendix-operator-pclm`. If PCLM was previously configured manually, the existing secret name is used. 
 
 #### 7.1.1 Sample Yaml Files

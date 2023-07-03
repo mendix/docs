@@ -120,7 +120,6 @@ You can change the internal name if you wish, but do not reuse one which has alr
 
     {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-deploy/PCLM.png" >}}
 
-
 7. Click **Next**.
 
     {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-deploy/configureEnvResources.png" >}}

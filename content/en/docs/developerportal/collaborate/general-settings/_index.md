@@ -2,7 +2,7 @@
 title: "General Settings"
 url: /developerportal/collaborate/general-settings/
 category: "Collaboration"
-weight: 9
+weight: 14
 description: "Describes general settings of your app."
 tags: ["Settings", "App", "Developer Portal"]
 aliases:
@@ -36,6 +36,7 @@ These tabs are only available for users with the **App Settings** permission:
 * **API Keys**
 * **Project Management**
 * **History**
+* **Story Archive**
 
 ## 2 General {#general}
 
@@ -138,13 +139,13 @@ To delete an app API key, click **Revoke**.
 Only users with the **App Settings** permission can manage these settings.
 {{% /alert %}}
 
-On the **Project Management** tab, you can select your team's planning tool for the app. By default, [Epics](/developerportal/collaborate/epics/) is the selected tool.
+On the **Project Management** tab, you can select your team's planning tool for the app. By default, [Epics](/developerportal/project-management/epics/) is the selected tool.
 
-{{% alert color="warning" %}}To sync the Stories tab back in Studio Pro, you need to switch back to Stories as the planning tool. For more information, see the [Managing Stories in Studio Pro](/developerportal/collaborate/stories/#managing-sp) section of *Stories*.{{% /alert %}}
+It is possible to migrate all or part of your content from [Stories](/developerportal/project-management/stories/) to Epics. For details, see the [Data Migration](/developerportal/project-management/epics/planning/#data-migration) section of *Planning*.
 
-It is possible to migrate all or part of your content from [Stories](/developerportal/collaborate/stories/) to Epics. For details, see the [Data Migration](/developerportal/collaborate/epics/#data-migration) section of *Epics*.
+If you manage your projects in Jira, you can connect your apps in the Developer Portal to Jira. For more information, see [Jira Connector](/developerportal/project-management/jira-connector/).
 
-If you manage your projects in Jira, you can connect your apps in the Developer Portal to Jira. For more information, see [Jira Connector](/developerportal/collaborate/jira-connector/).
+{{< figure src="/attachments/developerportal/collaborate/general-settings/story-switcher.png" width="700"  >}}
 
 ## 7 Webhooks {#webhooks}
 
@@ -171,8 +172,8 @@ After clicking **New Webhook** to create a new webhook for stories and sprints, 
 * **Secret** – the secret used by the Developer Portal to sign the data payload in order to identify the source of the data to the receiving URL (this appears when creating and editing a webhook for stories and Sprints, but it will not be displayed on the **Webhooks settings** page)
 * **Version** – the version of the webhooks feature to be used
 * **Events** – what types of data will be sent via the webhook for stories and Sprints (you must select at least one; this appears when creating and editing a webhook for stories and Sprints, but it will not be displayed on the **Webhooks settings** page)
-    * [Sprints](/developerportal/collaborate/stories/#story-actions)
-    * [Stories](/developerportal/collaborate/stories/)
+    * [Sprints](/developerportal/project-management/stories/#story-actions)
+    * [Stories](/developerportal/project-management/stories/)
 
 To edit the above details for an existing webhook for stories and Sprints, click **Edit**.
 
@@ -194,7 +195,17 @@ The **History** tab presents the collaboration actions for the app. On this page
 
 When you select a history item and click **Show item**, the details of the story, Sprint, or [feedback item](/developerportal/collaborate/feedback/) will be presented.
 
-## 9 Read More
+## 9 Story Archive {#story-archive}
+
+Once you have switched from Mendix Stories to Epics or Jira, we archive any work you may have had in Mendix Stories. You can review your work on this tab, and download it if necessary.
+
+{{% alert color="warning" %}}
+We will delete all data from Mendix Stories starting October 1, 2023. We strongly urge you to download your work before that date.
+{{% /alert %}}
+
+{{< figure src="/attachments/developerportal/collaborate/general-settings/story-archive.png" width="700"  >}}
+
+## 10 Read More
 
 * [Leave and Delete an App](/developerportal/collaborate/leave-delete-app/)
 * [Manage Deep Links](/developerportal/collaborate/manage-deeplinks/)

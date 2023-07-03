@@ -104,7 +104,7 @@ The settings below influence the behavior of the log files. These settings can o
 | <a id="UseNetworkTimeout" href="#UseNetworkTimeout">UseNetworkTimeout</a> | This setting is applied to PostgreSQL. It affects the timeout mechanism used when reserving new ids for Mendix objects. If set to true, the socket level request timeout is used. In that case, the request timeout is handled within the operating system. If set to false, the timeout is handled by Mendix runtime. For other databases, timeouts are always handled by Mendix runtime. | true |
 | <a id="JdbcLoginTimeout" href="#JdbcLoginTimeout">JdbcLoginTimeout</a> | This setting defines the database connection establishment time in milliseconds. | 5000 (5 seconds) |
 
-### 4.2 Connection Pooling
+### 4.2 Connection Pooling {#connection-pooling}
 
 The settings below are used to define the database connection pooling behavior. Mendix Runtime uses a pool of reusable database connections. You can, for example, define how many connections can be used. Connection pooling is implemented using the [Apache Commons Object-pooling API](http://commons.apache.org/pool/) . 
 

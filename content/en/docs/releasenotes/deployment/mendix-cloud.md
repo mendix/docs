@@ -17,6 +17,12 @@ For information on the current status of deployment to Mendix Cloud and any plan
 
 ## 2023
 
+### July 3rd, 2023
+
+#### Improvements
+
+* We have upgraded the Cloud Foundry stack on Mendix Cloud to `cflinuxfs4`. This stack will be used automatically when you redeploy your Mendix app on Mendix Cloud public or dedicated clusters.
+
 ### June 15th, 2023
 
 #### Portal Enhancements

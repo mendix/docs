@@ -28,7 +28,7 @@ Information that is added or changed during curation is stored in the Catalog fo
 
 Owners and curators of registered assets can click **Curate** from the **Data Hub** screen to see the **Curation List** screen which provides an overview of all the registered assets that you can curate as an owner under the **My Assets** tab. Curators will also see the **Company Assets** tab that lists all the registered assets:
 
-{{< figure src="/attachments/data-hub/data-hub-catalog/curate/curate-list.png" alt="curate list" >}}
+{{< figure src="/attachments/catalog/curate/curate-list.png" alt="curate list" >}}
 
 In both cases, the list includes registered data sources and also individual datasets that are exposed for the data source.
 
@@ -65,7 +65,7 @@ You can curate Application Details from the **Application Details** screen as fo
 1. In the **Curation Bar** click **Edit** > **Edit Metadata** > **Application Details**.
 2. The **Application Metadata** screen is displayed:
 
-    {{< figure src="/attachments/data-hub/data-hub-catalog/curate/application-metadata-screen.png" alt="app metadata screen" >}}
+    {{< figure src="/attachments/catalog/curate/application-metadata-screen.png" alt="app metadata screen" >}}
 
 ### 4.1 Changing Owners of an App {#changing-owners}
 
@@ -77,20 +77,20 @@ By default, the **Technical Owner** for a registered asset is the user who regis
 **Business Owners** and **Technical Owners** have curation rights for the registered data source in the Catalog only if they are registered users on the Mendix Platform. If a [custom owner](#custom-owner) is created with the process described in this section, the link to contact them will be displayed for the asset. It does not mean that they are able to access the asset in the Catalog or curate it.{{% /alert %}}
 
 {{% alert color="info" %}}
-Curators and Mendix Admins can manage the lists of custom owners as part of **Administration** functions. For details, see the [Owners](/developerportal/control-center/data-hub-admin/#custom-owners) section of *Data Hub Administration*.
+Curators and Mendix Admins can manage the lists of custom owners as part of **Administration** functions. For details, see the [Owners](/developerportal/control-center/catalog-admin/#custom-owners) section of *Catalog Administration*.
 {{% /alert %}}
 
 #### 4.1.1 Changing the Business and Technical Owners of an App {#changing-owner}
 
 To change the **Business Owner** or **Technical Owner**, from the **Application Metadata** screen, click in the name field of the **Business** or **Technical** owner. You can start typing or select from the drop-down list of names. Mendix Platform users will be displayed with their avatar and custom owners will be shown with an avatar that displays their initials.
 
-The **Technical Owner** can only be changed in the **Control Center**, not within the **Catalog**. See the [Custom Owners](/developerportal/control-center/data-hub-admin/#custom-owners) section of *Data Hub Administration*.
+The **Technical Owner** can only be changed in the **Control Center**, not within the **Catalog**. See the [Custom Owners](/developerportal/control-center/catalog-admin/#custom-owners) section of *Catalog Administration*.
 
 #### 4.1.2 Adding a Custom Owner {#custom-owner}
 
 When curating the owners of an application, you can specify an owner who is not a registered Mendix user but is the technical contact point for the application, or the owner of the data that is made available in the app – the **Business Owner**. The name and the contact email must be provided.
 
-Curators can manage the lists of custom owners as an **Administration** task. For more details, see the [Owners](/developerportal/control-center/data-hub-admin/#custom-owners) section of *Data Hub Administration*.
+Curators can manage the lists of custom owners as an **Administration** task. For more details, see the [Owners](/developerportal/control-center/catalog-admin/#custom-owners) section of *Catalog Administration*.
 
 To add a custom **Business Owner**, follow these steps:
 
@@ -126,7 +126,7 @@ To **upload a different icon** for the app follow these steps:
 
 1. In the **Application Metadata** screen of the selected data source, click **Upload a different icon** to display the **Upload Application Icon** pop up:
 
-    {{< figure src="/attachments/data-hub/data-hub-catalog/curate/icon-upload-dialog.png" alt="upload icon"   width="300"  >}}
+    {{< figure src="/attachments/catalog/curate/icon-upload-dialog.png" alt="upload icon"   width="300"  >}}
 
 2. Drag the image file into the upload area or click **Upload** to browse and select a file from your file system. Click **Step 2: Crop image** to proceed.
 3. Move the wire-frame to select an area of the loaded image and change the size of the wire-frame to crop the image to the area that you want to use. When you are satisfied, click **Apply Changes**.
@@ -135,11 +135,11 @@ To **upload a different icon** for the app follow these steps:
 
 4. A preview of the application icon is shown. Click **Save** to upload the selected icon.
 
-    {{< figure src="/attachments/data-hub/data-hub-catalog/curate/icon-preview.png" alt="upload icon"   width="300"  >}}
+    {{< figure src="/attachments/catalog/curate/icon-preview.png" alt="upload icon"   width="300"  >}}
 
 5. The **Application Metadata** screen will now show the selected icon for the application:
 
-    {{< figure src="/attachments/data-hub/data-hub-catalog/curate/asset-metadata-new-icon.png" alt="upload icon" >}}
+    {{< figure src="/attachments/catalog/curate/asset-metadata-new-icon.png" alt="upload icon" >}}
 
 6. Click **Save Changes** to return to the data source details page. The custom icon will be stored in the **Icon Library**.
 
@@ -163,11 +163,11 @@ To edit the asset metadata, follow these steps:
 
 1. In the **Curation Bar**, click **Edit** > **Edit Metadata** > **Service Details** to display the **Service Metadata** box:
 
-    {{< figure src="/attachments/data-hub/data-hub-catalog/curate/service-metadata-box.png" alt="service metadata" >}}
+    {{< figure src="/attachments/catalog/curate/service-metadata-box.png" alt="service metadata" >}}
 
 2. The description from the OData service metadata is displayed in the **Contract Description**. This cannot be changed, as it is part of the OData service definition. You can provide an alternative description by toggling **Use the catalog description** to display the **Catalog Description** box:
 
-    {{< figure src="/attachments/data-hub/data-hub-catalog/curate/service-metadata-description.png" alt="edit description" >}}
+    {{< figure src="/attachments/catalog/curate/service-metadata-description.png" alt="edit description" >}}
 
 3. Add a catalog description. This will be stored with the service details in the Catalog.
 4. Click **Save Changes** to save the changes that you have made to the **Edit Service Metadata** screen and return to the **Service Details** screen, which will now display the selected description.
@@ -179,7 +179,7 @@ Add tags to categorize a registered service and provide additional means for fin
 1. In the **Search Details** screen of a selected service, click **Edit** > **Edit Metadata** > **Service Details** in the **Curation Bar** to display the **Service Metadata** box.
 2. To add tags, click the empty **Tag** input area:
 
-    {{< figure src="/attachments/data-hub/data-hub-catalog/curate/service-metadata-tags.png" alt="tags" >}}
+    {{< figure src="/attachments/catalog/curate/service-metadata-tags.png" alt="tags" >}}
 
 3. To add or edit the tags, enter a tag string and press **Enter** or select one from the list of existing tags that are used in the Catalog and displayed when you start typing in the **Tag** field. To separate multiple tags, use spaces.
 
@@ -201,7 +201,7 @@ The discoverable and validated properties of registered assets can be set from t
 
 ### 6.1 Discoverable
 
-The discoverability is set at a data source level. When a data source is registered in the Catalog, **Discoverable** is set to the company default value, which is configured by the Mendix Admin in [Control Center](/developerportal/control-center/data-hub-admin/#settings). If **Discoverable** is on for a data source, all users can find the asset and see the details of it. The **Discoverable** setting will apply to all datasets that are exposed in the data source.
+The discoverability is set at a data source level. When a data source is registered in the Catalog, **Discoverable** is set to the company default value, which is configured by the Mendix Admin in [Control Center](/developerportal/control-center/catalog-admin/#settings). If **Discoverable** is on for a data source, all users can find the asset and see the details of it. The **Discoverable** setting will apply to all datasets that are exposed in the data source.
 
 When the **Discoverable** setting is turned off, it will only be visible to the owners of the service and curators and the Mendix Admin. All other users of the Catalog (also through the Catalog integrations in Studio Pro) will not be able to see an asset whose discoverability is turned off.
 

@@ -75,4 +75,4 @@ Before starting this how-to, make sure you have completed the following prerequi
 * [How to Denormalize Data to Improve Performance](/howto7/data-models/denormalize-data-to-improve-performance/)
 * [How to Set Up Data Validation](/howto7/data-models/setting-up-data-validation/)
 * [How to Find the Root Cause of Runtime Errors](/howto7/monitoring-troubleshooting/finding-the-root-cause-of-runtime-errors/)
-* [Stories](/developerportal/collaborate/stories/)
+* [Stories](/developerportal/project-management/stories/)

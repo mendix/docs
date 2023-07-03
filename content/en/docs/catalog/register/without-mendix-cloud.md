@@ -1,12 +1,13 @@
 ---
-title: "Register Data Sources on Private Cloud/On-Prem Environments"
+title: "Register Data Sources (On-Prem or Private Cloud)"
 description: "Describes how to use Catalog and external entities for local deployments, or for private cloud or on-premises solutions."
-url: /catalog/data-sources-without-mendix-cloud/
-linktitle: "Register Data Sources Private Cloud/On-Prem"
-weight: 80
+url: /catalog/register/data-sources-without-mendix-cloud/
+linktitle: "Private Cloud/On-Premises Registration"
+weight: 40
 tags: ["entity", "external entities", "private cloud", "on prem", "local", "studio pro", "consumed OData Service", "Data Hub on prem", "private cloud", Tencent", "without mendix cloud"]
 aliases:
     - /data-hub/data-hub-without-mendix-cloud/
+    - /catalog/data-sources-without-mendix-cloud/
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 ## 1 Introduction

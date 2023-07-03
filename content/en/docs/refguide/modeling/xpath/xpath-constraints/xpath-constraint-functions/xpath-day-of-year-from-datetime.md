@@ -49,5 +49,3 @@ This query returns all the logs where the day in the year in `DateAttribute` is 
      //Logging.Log[day-of-year-from-dateTime(DateAttribute, 'America/New_York') = 40]
     {{% /tab %}}
 {{< /tabpane >}}
-
-

@@ -99,6 +99,7 @@ On the **Advanced** tab, there are these settings:
 * **Process an argument as an Object** – This is deprecated.
 * **Process an argument as a String** – This is deprecated.
 * **Alternative Index Page** – If selected, the default index location (`index.html`) and the **DeepLink.IndexPage** constant will be overridden by this value. This is useful for theme-related use cases, for example, `index-dark.html`.
+* **Track hit count** - If selected, Deeplink will track the number of hits on this link in the `HitCount` attribute. This tracking can be disabled if performance issues occur. This option is only available in Deep Link module version 9 or higher.
 
 ### 3.5 Optional Configuration
 

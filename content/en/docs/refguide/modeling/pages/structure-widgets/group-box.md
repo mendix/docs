@@ -19,11 +19,13 @@ A group box can be used to visually group related widgets together. Group boxes 
 The properties pane is divided into two major sections by a toggle at the top of the pane: **Properties** and **Styling**. Group box properties consist of the following sections:
 
 Properties:
+
 * [General](#general)
 * [Visibility](#visibility)
 * [Common](#common)
 
 Styling:
+
 * [Design Properties](#design-properties)
 * [Common](#common-styling)
 

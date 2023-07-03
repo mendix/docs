@@ -77,7 +77,7 @@ Using the drop-down menu, you can choose to sort the apps in the following ways:
 
 By clicking the ellipsis (**…**) in the app tile, you can quickly perform a number of actions:
 
-{{< figure src="/attachments/developerportal/quick-action-menu.png" alt="Quick actions menu for an app" >}}
+{{< figure src="/attachments/developerportal/quick-action-menu.png" alt="Quick actions menu for an app" width="50%" >}}
 
 The actions available depend on the app selected:
 

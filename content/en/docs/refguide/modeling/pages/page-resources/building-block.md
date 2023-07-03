@@ -30,7 +30,9 @@ Default: switched on
 
 ### 2.3 Image
 
-The image selected will appear in Studio Pro's **Toolbox** in **Tile View**. Selecting a representative image will allow users to easily distinguish between building blocks. If left blank, Studio Pro will display a generic default image. Any image selected will be scaled down to 200x200 pixels.
+The image selected will appear in Studio Pro's **Toolbox** in **Tile View**. Selecting a representative image will allow users to easily distinguish between building blocks. If left blank, Studio Pro will display a generic default image. The image selected must be in the PNG format and will be resized to fit 432x192 pixels (px). 
+
+When resizing, Studio Pro preserves the aspect ratio of your image. For example, an image of 864x192px will be resized to 432x89px (which fits 432x192), and an image of 432x384px will be resized to 216x192px (which fits 432x192px).
 
 ### 2.4 Category
 

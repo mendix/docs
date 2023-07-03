@@ -101,7 +101,7 @@ To retry a failed provisioner pod, do the following steps:
 
 1. Check the logs of the failed `{environment-name}-database` or `{environment-name}-file` pod to find the root cause of the problem.
 2. Resolve the cause of the problem.
-2. Delete the failed `{environment-name}-database` or `{environment-name}-file` pod to retry.
+3. Delete the failed `{environment-name}-database` or `{environment-name}-file` pod to retry.
 
 #### 1.3.4 The Configuration of an Existing Storage Plan Cannot Be Read
 

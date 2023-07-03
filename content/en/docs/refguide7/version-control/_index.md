@@ -34,7 +34,6 @@ A revision is the version of your app at a moment in time, stored on the *Team S
 
 Each revision of your app is given a unique number to identify it and enable you to find it in future. A new revision is created from the *Desktop Modeler* when the app is committed to the repository
 
-
 ### 2.4 Working Copy
 
 A working copy is the version of your app which is currently being worked on in the Modelers. For the Desktop Modeler, there is one working copy for each development line of the app. This model is held locally, on each computer where development work is taking place.

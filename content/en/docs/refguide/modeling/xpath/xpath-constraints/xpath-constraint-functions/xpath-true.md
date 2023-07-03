@@ -23,4 +23,3 @@ This query returns all the customers who are classified as "gold customers":
      //Sales.Customer[IsGoldCustomer = true()]
     {{% /tab %}}
 {{< /tabpane >}}
-

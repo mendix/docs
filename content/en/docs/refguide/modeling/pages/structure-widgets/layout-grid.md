@@ -26,9 +26,11 @@ For more information on row and column properties, see the [Rows and Their Prope
 The properties pane is divided into two major sections by a toggle at the top of the pane: **Properties** and **Styling**.Layout grid properties consist of the following sections:
 
 Properties:
+
 * [General](#general)
 
 Styling:
+
 * [Common](#common-styling)
 
 ## 3 Properties

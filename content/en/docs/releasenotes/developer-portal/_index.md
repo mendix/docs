@@ -355,7 +355,7 @@ In Portfolio Management, you can do the following
 
 #### New Features
 
-* We have introduced the [Marketplace Content](/developerportal/control-center/#marketplace-content) page in Control Center, where Mendix Admins can manage the visibility of Marketplace Content in Studio.
+* We have introduced the **Marketplace Content** page in Control Center, where Mendix Admins can manage the visibility of Marketplace Content in Studio.
 * We simplified the process of [inviting other users](/developerportal/collaborate/team/#inviting) to your projects. Now you do not need to add a personal message to the invitation anymore and the whole process can be completed on a single page.
 * We added a banner about [Epics](/developerportal/project-management/epics/), our new tool for Agile planning, on the [Stories](/developerportal/project-management/stories/) page. This banner provides more information about Epics and makes it easier for Scrum Masters to enable it for their projects.  
 

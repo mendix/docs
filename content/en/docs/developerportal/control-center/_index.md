@@ -216,7 +216,7 @@ On the **Security History** tab, you can click **Show Security History** to open
 This feature is not yet publicly available. Please talk to your Customer Success Manager to enable this page.
 {{% /alert %}}
 
-The **Paid Environments** tab on this page presents an overview of the licensed Mendix Cloud environments allocated to your company. This includes information on an environment's [Resource pack](/developerportal/deploy/mendix-cloud-deploy/#resource-pack) and whether the [Fallback](/developerportal/deploy/mendix-cloud-deploy/#fallback) option has been purchased as part of a Premium plan.   
+The **Paid Environments** tab on this page presents an overview of the licensed Mendix Cloud environments allocated to your company. This includes information on an environment's [Resource pack](/developerportal/deploy/mendix-cloud-deploy/#resource-pack) and whether the [Fallback](/developerportal/deploy/mendix-cloud-deploy/#fallback) option is included as part of a Premium plan.   
 
 {{< figure src="/attachments/developerportal/control-center/cloud.jpg" >}}
 

@@ -23,6 +23,10 @@ The input parameters are described in the table below:
 | --------------------------------------------- | ------------------------------------------------------------ |
 | A value that should be converted to a string. | Integer/Long, Decimal, Date and time, Boolean and Enumeration.<br />In case of enumeration, the expression returns the key of the enumeration value, not the caption. More information, see [Enumerations in expressions](/refguide/enumerations-in-expressions/). |
 
+{{% alert color="info" %}}
+If you pass an empty object or attribute to this function, the output will be an empty string.
+{{% /alert %}}
+
 ### 2.2 Example
 
 If you use the following input:

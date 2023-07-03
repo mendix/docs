@@ -143,6 +143,6 @@ To configure the delete behavior, double-click the **Order_Customer** associatio
 * [Set Up Data Validation](/howto7/data-models/setting-up-data-validation/)
 * [Work with Object Events](/howto7/data-models/working-with-object-events/)
 * [Find the Root Cause of Runtime Errors](/howto7/monitoring-troubleshooting/finding-the-root-cause-of-runtime-errors/)
-* [Stories](/developerportal/collaborate/stories/)
+* [Stories](/developerportal/project-management/stories/)
 * [Define Access Rules Using XPath](/howto7/logic-business-rules/define-access-rules-using-xpath/)
 * [Create Your First Two Overview and Detail Pages](/howto7/front-end/create-your-first-two-overview-and-detail-pages/)

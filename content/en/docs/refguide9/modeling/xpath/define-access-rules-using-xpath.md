@@ -36,7 +36,7 @@ To prepare the data structure, GUI, and example data, follow these steps:
 
     {{< figure src="/attachments/refguide9/modeling/xpath/define-access-rules-using-xpath/18581008.png" >}}
 
-5. Enter *FinancialAdministrator* for the **Name** of the new user role on the **User roles** tab (for more information on adding roles, see [How to Create a Secure App](/howto9/security/create-a-secure-app/):
+5. Enter *FinancialAdministrator* for the **Name** of the new user role on the **User roles** tab (for more information on adding roles, see [How to Create a Secure App](/howto9/security/create-a-secure-app/)):
 
     {{< figure src="/attachments/refguide9/modeling/xpath/define-access-rules-using-xpath/18581005.png" >}}
 

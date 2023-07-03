@@ -59,7 +59,7 @@ The **Backups** page presents options for managing your backups. These are descr
 
 This will automatically generate a backup snapshot from your application data. See [Create a Backup](/developerportal/operate/create-backup/).
 
-### 3.2 Upload Backup
+### 3.2 Upload Backupb {#upload}
 
 The sections below present details on uploading data in recent Mendix Cloud versions.
 

@@ -125,4 +125,4 @@ If you want to validate multiple attributes, it is best to do this in a sub-micr
 * [Denormalize Data to Improve Performance](/howto8/data-models/denormalize-data-to-improve-performance/)
 * [Set Up Data Validation](/howto8/data-models/setting-up-data-validation/)
 * [Find the Root Cause of Runtime Errors](/howto8/monitoring-troubleshooting/finding-the-root-cause-of-runtime-errors/)
-* [Stories](/developerportal/collaborate/stories/)
+* [Stories](/developerportal/project-management/stories/)

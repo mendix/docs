@@ -128,7 +128,7 @@ To view all the available deep link configurations and example URLs, add the **D
     For the **LoginLocation** constant, it is IMPORTANT to note the following:
 
     * When the value is left empty, the default location is `login.html` (this file should be available in the theme folder).
-    * When the login location ends with `=` (for example, in the case of Mendix SSO: `https://login.mendix.com/oidp/login?ret=`), the original deep link location will be appended to the login location.
+    * When the login location ends with `=` (for example, in the case of Mendix SSO: `/openid/login?continuation=`), the original deep link location will be appended to the login location.
     * When using the module with a MindSphere app, use `/mindspherelogin.html?redirect_uri=` as a login location (MindSphere SSO V2.0 and above is required).
     * When using XSUAA, set the value to `/xsauaalogin/login?ret=`.
     * When using the [SAML](/appstore/modules/saml/) module, set the value to `/SSO/login?f=true&cont=` to redirect the user to the original deep link location after a successful login.

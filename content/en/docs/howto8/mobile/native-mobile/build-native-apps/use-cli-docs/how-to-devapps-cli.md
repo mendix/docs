@@ -33,8 +33,8 @@ A custom developer app helps you by serving as a replacement for the Make It Nat
     ```
 
     This command does the following: <br />
-    1. Creates a branch named `developer` based on the commited changes to your `master` <br />
-    1. Starts a build using the developer app flavors for your project
+    1. Creates a branch named `developer` based on the commited changes to your `main`. <br />
+    1. Starts a build using the developer app flavors for your project.
 4. Wait until the Native Builder completes your builds.
 
 As with a release build, when the Native Builder is done building you should have two archives for each build: an iOS and an Android build. These archives can be found under the build output path `{build output path}` with **Dev** prepended to their name. The default `{build output path}` is the `./builds` folder relative to your `native-builder.exe` location.

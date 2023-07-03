@@ -28,7 +28,7 @@ If you want to join a team, you have to ask a current team member (with the **In
 
 Within a team, there are predefined roles that can be provisioned to team members. Each team role has access to permission areas based on the following factors:
 
-* Who can edit the backlog and current [Sprint](/developerportal/collaborate/stories/)
+* Who can edit the backlog and current [Sprint](/developerportal/project-management/stories/)
 * Who can edit the app model
 * Who has the correct [node permissions](/developerportal/deploy/node-permissions/) for access to the node information
     * Note that node permissions must be provisioned by the [Technical Contact](#technical-contact)
@@ -69,18 +69,18 @@ When a Mendix app is on premises, it is running on the customer's own infrastruc
 
 ### 4.3 Changing the Technical Contact {#change-technical-contact}
 
-To change the Technical Contact, you need to be a **Technical Contact**.
-
 {{% alert color="info" %}}
-It is currently not possible to have more than one Technical Contact for an app.
+It is currently not possible to have more than one Technical Contact for an app. 
 {{% /alert %}}
 
-If you are the current Technical Contact for an app, make another team member the Technical Contact by following these steps:
+If you are the current Technical Contact for an app, you can give away your Technical Contact role to another team member as follows:
 
 1. Navigate to **Deploy** > **Environments**.
 2. Select the [Permissions](/developerportal/deploy/environments/#permissions) tab.
 3. Click **Change to Technical Contact** for the team member who should be the new Technical Contact. You may have to authenticate first to perform this action. If so, click **Change to Technical Contact** again after successful authentication to finish this action.
 
+The Technical Contact will be changed for all environments.
+
 {{% alert color="info" %}}
-The Technical Contact will be changed for all environments..
+Mendix Admins can also give the Technical Contact role to another team member using the Deploy API Version 3. For more information, see [Deploy API – Version 3](/apidocs-mxsdk/apidocs/deploy-api-3/).
 {{% /alert %}}

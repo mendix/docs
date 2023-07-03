@@ -30,7 +30,7 @@ App **Buzz** is for a specific app:
 
 You can see the size of your **Team** and your team members on the right side of the page. Click the **+** icon to invite new members to your team directly (please note that we show no more than 25 team members at a time). Click **Show all** to go to the [Team](/developerportal/collaborate/team/) page for the app.
 
-**Latest Stories** shows the last few stories created for this app. Click **Show all** to see all the [Stories](/developerportal/collaborate/stories/).
+**Latest Stories** shows the last few stories created for this app. Click **Show all** to see all the [Stories](/developerportal/project-management/stories/).
 
 **App Feedback** shows the last few items of feedback for this app. Click **Show all** to see all the [Feedback](/developerportal/collaborate/feedback/).
 
@@ -47,4 +47,4 @@ On  **Company Buzz**, both Company Buzz and App Buzz communication can be seen b
 ## 5 Read More
 
 * [Team](/developerportal/collaborate/team/)
-* [Stories](/developerportal/collaborate/stories/)
+* [Stories](/developerportal/project-management/stories/)

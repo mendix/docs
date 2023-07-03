@@ -17,15 +17,13 @@ To access the **Merge** dialog box, open [Version Control](/refguide/version-con
 
 {{< figure src="/attachments/refguide/modeling/menus/version-control-menu/merge-dialog/merge-dialog.png" alt="Merge Dialog" >}}
 
-Available scenarios are described below
+Available scenarios are described in sections below.
 
 ## 2 Port Fix
 
 This scenario allows you to move a fix from a maintenance branch line to the main line. If you just want to redo a small fix, a single commit is often enough.
 
-In SVN, it is possible to port multiple commits at once.
-
-In Git, port fix transports the actual commit from one branch and directly applies it, including author and commit text to another branch. This means you do not need to explicitly commit your change.
+Port fix transports the actual commit from one branch and directly applies it, including author and commit text to another branch. This means you do not need to explicitly commit your change.
 
 ### 2.1 Branch Line
 
@@ -42,21 +40,3 @@ This merge scenario allows you to merge a complete feature branch line to the ma
 ### 3.1 Branch Line
 
 Choose the branch line that you want to merge. It is not necessary to select individual revisions in this case, because all revisions of the branch line are merged automatically.
-
-## 4 Advanced Merge
-
-{{% alert color="info" %}}
-This option is only available for SVN.
-{{% /alert %}}
-
-This scenario may be used for merge actions that are only needed in exceptional circumstances. Use this option with caution.
-
-While normally you would only merge (revisions of) a branch line to the main line, the advanced merge scenario offers the possibility to merge from the main line to a branch line, or from one branch line to another.
-
-### 4.1 Branch Line
-
-Choose the branch line that you want to merge, or select 'Main line' when you want to merge (revisions of) the main line to the current branch line.
-
-### 4.2 Start / End Revision
-
-Select the start revision (revision with the lowest number) and the end revision (revision with the highest number) of the range you want to merge. If you want to merge all commits of the selected branch line, simply select the first and the last revision of the branch. It's not necessary to select the 'Create branch' revision.

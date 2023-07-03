@@ -12,9 +12,7 @@ This activity can be used in both **Microflows** and **Nanoflows**.
 
 ## 1 Introduction
 
-With the **Log message** activity you can create messages that appear in the log of your Mendix application:
-
-{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/log-message/log-message.png" alt="Log Message" >}}
+With the **Log message** activity you can create messages that appear in the log of your Mendix application.
 
 ## 2 Properties
 

@@ -404,11 +404,7 @@ Click **Change** to change the **App URL** for this environment.
 
 Click **Change** to change the **Redirect URLs**. Redirect URLs are custom URLs (for example, `appname.subdomain.domain.com`) where the user will be redirected after signing on using XSUAA, instead of being redirected to the generated URL (for example, `appname.cfapps.eu10.hana.ondemand.com`) of the app.
 
-#### 7.1.8 Change Mendix Studios Target
-
-You can see if this is the current target environment to which apps will be published from Mendix Studio. If this is not the current target environment for Mendix Studio, click **Change** to make it the target.
-
-#### 7.1.9 Scaling
+#### 7.1.8 Scaling
 
 If the app is started or stopped (that is, the environment has been created successfully and the app has been deployed without errors) then options to scale the app are available.
 
@@ -424,7 +420,7 @@ Click **Reset** to return the values to what they were before the sliders were m
 You can also make use of the **Application Autoscaler** service on SAP BTP. Mendix provides assistance in setting up the parameters needed to configure application autoscaler. For more information see [Application Autoscaler for SAP Business Technology Platform](/partners/sap/sap-autoscaler/).
 {{% /alert %}}
 
-#### 7.1.10 Change License Subscription ID
+#### 7.1.9 Change License Subscription ID
 
 Click **Change** to change the subscription secret which is the code which registers your production Mendix license to this environment.
 
@@ -735,8 +731,6 @@ A more detailed description of the reason why the environment creation failed wi
 ### 9.2 Deleting an App
 
 Note that if you are the last person to leave a Mendix app you can delete the app. However, this will not delete the app or resources on SAP BTP. To leave the app, find it on the [My Apps](https://sprintr.home.mendix.com/link/myapps) page in the **Developer Portal**, and then click **Leave app**.
-
-{{< figure src="/attachments/developerportal/deploy/sap-cloud-platform/leave-app.png" >}}
 
 If you are the last member of the app development team, you will be asked if you want to delete the app.
 

@@ -17,6 +17,29 @@ For information on the current status of deployment to Mendix Cloud and any plan
 
 ## 2023
 
+### July 3rd, 2023
+
+#### Improvements
+
+* We have upgraded the Cloud Foundry stack on Mendix Cloud to `cflinuxfs4`. This stack will be used automatically when you redeploy your Mendix app on Mendix Cloud public or dedicated clusters.
+
+### June 15th, 2023
+
+#### Portal Enhancements
+
+* The webhooks feature is now released for GA. Webhooks can trigger endpoints when changes are committed to a Team Server Git repository, or when a new deployment package is available for deployment to the Mendix Cloud. For more information, see [Webhooks](/developerportal/deploy/webhooks/).
+
+#### Improvements
+
+* We have introduced a filtering capability for sending Mendix runtime metrics to APM vendors.
+
+### May 4th, 2023
+
+* In the Build and Deploy APIs, we have added a link to download packages from the Developer Portal. This is controlled by a parameter on the following API calls:
+    * [Retrieve Package](/apidocs-mxsdk/apidocs/build-api/#retrieve-package) in the Build API
+    * [Retrieve Environment Package](/apidocs-mxsdk/apidocs/deploy-api/#retrieve-environment-package) in the Deploy API
+* We have deprecated the [Download Package](/apidocs-mxsdk/apidocs/build-api/#download-package) call in the Build API.
+
 ### April 20th, 2023
 
 #### Improvements
@@ -63,7 +86,7 @@ For information on the current status of deployment to Mendix Cloud and any plan
 
 #### Fix
 
-* For customers running Mendix apps with runtime version 9.7.0 and above, we have fixed some minor issues with the [Number of handled external requests](/developerportal/operate/trends-v4/#Trends-appmxruntimerequests) and [Number of database queries being executed](/developerportal/operate/trends-v4/#Trends-dbmxruntimeconnectionbus) graphs. These changes are available after you redeploy your app.
+* For customers running Mendix apps with runtime version 9.7.0 and above, we have fixed some minor issues with the [Number of handled external requests](/developerportal/operate/trends-v4/#Trends-appmxruntimerequests) and [Number of database queries being run](/developerportal/operate/trends-v4/#Trends-dbmxruntimeconnectionbus) graphs. These changes are available after you redeploy your app.
 
 ### January 13th, 2023
 

@@ -1,7 +1,7 @@
 ---
 title: "Image Collection"
 url: /refguide/image-collection/
-weight: 5
+weight: 1
 description: "Why and how to create an image collection"
 tags: ["Studio Pro", "Images", "Image Collection"]
 ---
@@ -32,7 +32,7 @@ You can perform the following actions within image collections using the icons a
 
 {{< figure src="/attachments/refguide/modeling/pages/page-resources/image-collection/actions.png" alt="Image collection actions" >}}
 
-Some of the actions can be applied to multiple images. You can select all images with <kbd>Ctrl</kbd>+<kbd>A</kbd>, or multiple images by combining your click with <kbd>Ctrl</kbd> or <kbd>Shift</kbd>
+Some of the actions can be applied to multiple images. You can select all images with <kbd>Ctrl</kbd>+<kbd>A</kbd>, or multiple images by combining your click with <kbd>Ctrl</kbd> or <kbd>Shift</kbd>.
 
 ### 3.1 Add
 

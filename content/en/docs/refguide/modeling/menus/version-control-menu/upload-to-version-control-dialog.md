@@ -51,5 +51,4 @@ If you select **Private server**, enter the address of the repository to which y
 
 ## 3 Read More
 
-* [Working with an On-Premises SVN Version Control Server](/refguide/on-premises-svn/)
 * [How to Work with an On-Premises Git Version Control Server](/refguide/on-premises-git/)

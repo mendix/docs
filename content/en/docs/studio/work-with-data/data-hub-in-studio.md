@@ -14,7 +14,7 @@ Every organization has apps containing valuable data that can be used in other a
 
 Mendix Data Hub is the central hub in the organization that enables you to discover, connect to, and use shared data from different apps in your organization. It also ensures that data is used consistently throughout your organization. 
 
-Shared data is registered as a *service* in the [Data Hub Catalog](/data-hub/data-hub-catalog/). Through the **Data Hub** tab in Studio, you can access data from the Data Hub Catalog. You can find external entities coming from the service, add them to your app together with their attributes and associations, and use them locally. The properties of entities, attributes, and associations will be read-only.
+Shared data is registered as a *service* in the [Data Hub Catalog](/catalog/). Through the **Data Hub** tab in Studio, you can access data from the Data Hub Catalog. You can find external entities coming from the service, add them to your app together with their attributes and associations, and use them locally. The properties of entities, attributes, and associations will be read-only.
 
 For example, you have an *Employee Onboarding app* containing information on what devices should be assigned to a new employee. Your organization also has a *Company's HR* app which has all the data on employees. With the Data Hub functionality, you will be able to use (consume) data from the *HR app* in your *Employee Onboarding app* instead of having to duplicate the data and keep it in sync manually.  
 
@@ -93,7 +93,7 @@ External entities are colored *purple* in the domain model:
 
 {{< figure src="/attachments/studio/work-with-data/data-hub-in-studio/external-entity.png" alt="External Entity" >}}
 
-When you add external entities to your app, it is possible to make local changes to the entity, such as change its name. However, these changes are limited and will only apply to your app. Most of the properties of external entities are read-only as they are defined in the source app (this ensures that you will not accidently change the data in the source app):
+When you add external entities to your app, it is possible to make local changes to the entity, such as change its name. However, these changes are limited and will only apply to your app. Most of the properties of external entities are read-only as they are defined in the source app (this ensures that you will not accidentally change the data in the source app):
 
 {{< figure src="/attachments/studio/work-with-data/data-hub-in-studio/external-entity-properties.png" alt="External Entity Properties" >}}  
 
@@ -126,4 +126,4 @@ You cannot change or delete this association. It is also not possible to create 
 ## 4 Read More
 
 * [Data Hub](/data-hub/)
-* [Data Hub Catalog](/data-hub/data-hub-catalog/)
+* [Data Hub Catalog](/catalog/)

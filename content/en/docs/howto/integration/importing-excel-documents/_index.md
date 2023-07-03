@@ -15,7 +15,7 @@ Adding large amounts of data to your application (for example, reference data or
 
 Before starting this how-to, make sure you know how to do the following:
 
-* Create domain models (see [Creating a Basic Data Layer](/refguide/create-a-basic-data-layer/))
+* Create domain models (see [Configuring a Domain Model](/refguide/configuring-a-domain-model/))
 * Create overview and detail pages (see [How to Create Your First Two Overview and Detail Pages](/howto/front-end/create-your-first-two-overview-and-detail-pages/))
 * Create menu items (see [Setting Up Navigation](/refguide/setting-up-the-navigation-structure/))
 * Create microflows (see [Triggering a Microflow From a Menu Item](/refguide/triggering-microflow-from-menu-item/)

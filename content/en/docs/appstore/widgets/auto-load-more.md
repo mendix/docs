@@ -7,6 +7,10 @@ tags: ["marketplace", "marketplace component", "widget", "auto-load more", "load
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
+{{% alert color="warning" %}}
+This widget is deprecated. For an alternative, see the [Gallery](/appstore/modules/gallery/) module.
+{{% /alert %}}
+
 ## 1 Introduction
 
 The [Auto-Load More](https://marketplace.mendix.com/link/component/50323/) widget loads more items on the list view as the end-user scrolls.

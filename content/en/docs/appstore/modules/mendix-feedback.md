@@ -28,7 +28,7 @@ In case of any questions, contact [Mendix Support](https://support.mendix.com/hc
 
 ## 1 Introduction
 
-The [Mendix Feedback](https://marketplace.mendix.com/link/component/199/) module allows end-users of your application to directly submit feedback into your app. The module contains a feedback widget along with other files. The feedback module is fully integrated with the [Feedback](/developerportal/collaborate/feedback/) page in the Developer Portal, where you can review feedback and convert it into [user stories](/developerportal/collaborate/stories/) to improve your app.
+The [Mendix Feedback](https://marketplace.mendix.com/link/component/205506) module allows end-users of your application to directly submit feedback into your app. The module contains a feedback widget along with other files. The feedback module is fully integrated with the [Feedback](/developerportal/collaborate/feedback/) page in the Developer Portal, where you can review feedback and convert it into [user stories](/developerportal/project-management/stories/) to improve your app.
 
 {{< figure src="/attachments/appstore/modules/mendix-feedback/feedback-in-app.png" >}}
 
@@ -60,11 +60,11 @@ You should install the latest version of the Mendix Feedback module, as it will 
 
 1. Configure the **User roles** in the **App Security** for the Feedback module.
 
-2.  In the **Toolbox**, find the **Feedback** widget in the **Feedback** category.
+2. In the **Toolbox**, find the **Feedback** widget in the **Feedback** category.
 
     {{< figure src="/attachments/appstore/modules/mendix-feedback/Toolbox-feedback.png" width="250px">}} 
 
-3.  Drop it into a position in the layout:
+3. Drop it into a position in the layout:
 
     {{< figure src="/attachments/appstore/modules/mendix-feedback/feedback-on-layout.png" >}} 
 
@@ -76,46 +76,46 @@ To configure the Feedback widget, double-click it to open the **Edit Feedback** 
 
 * **Project** tab
 
-  * **Allow screenshots** – This controls whether the end-user can take a screenshot or not.
-  * **Submit successful image url** – This changes the image to show on the last successfully submitted page. Leaving this empty will result in no image being shown.
-  * **Submit failed image url** – This changes the image to show on the failed submitted page. Leaving this empty will result in no image being shown.
+    * **Allow screenshots** – This controls whether the end-user can take a screenshot or not.
+    * **Submit successful image url** – This changes the image to show on the last successfully submitted page. Leaving this empty will result in no image being shown.
+    * **Submit failed image url** – This changes the image to show on the failed submitted page. Leaving this empty will result in no image being shown.
 
 * **Advanced** tab
 
-  * **App ID** – This is the unique identifier of your app. You can find it in your app’s [General Settings](/developerportal/collaborate/general-settings/) in the Developer Portal.
+    * **App ID** – This is the unique identifier of your app. You can find it in your app’s [General Settings](/developerportal/collaborate/general-settings/) in the Developer Portal.
 
     {{% alert color="info" %}}The original value of **App ID** is *1*, but this value should automatically change to your correct app ID. If it does not change automatically, see [Updating App ID](#update-app-id) below.
     {{% /alert %}}
 
-  * **Feedback server location** – This is the URL of the Developer Portal server (usually `https://feedback-api.mendix.com`). You should only change it when you use a different environment.
+    * **Feedback server location** – This is the URL of the Developer Portal server (usually `https://feedback-api.mendix.com`). You should only change it when you use a different environment.
 
-  * **Screenshot Foreign Rendering**
+    * **Screenshot Foreign Rendering**
 
-    * **No** (default)
-    * **Yes** – This is only used when the page includes sensitive information.
+        * **No** (default)
+        * **Yes** – This is only used when the page includes sensitive information.
 
 * **Authentication** tab
 
   {{% alert color="info" %}}For the best user experience, we strongly encourage you to apply Mendix SSO to your app and connect the Mendix SSO module to the latest version of the Mendix Feedback module. The widget works without authentication. However, without authentication each users will be an **Anonymous User**. Choose either **MendixSSO** or **Custom Authentication** for your feedback widget. You need to enter the value of authentication items manually, as the widget does not support a drop-down menu for selecting a microflow or the attributes of an entity.{{% /alert %}}
 
-  * **MendixSSO** – If Mendix SSO is applied and the following settings are configured correctly, the end-user can leave feedback without providing their name and email address.
+    * **MendixSSO** – If Mendix SSO is applied and the following settings are configured correctly, the end-user can leave feedback without providing their name and email address.
 
-    * **ID token microflow** – We recommend that you select the **DS_GetCurrentIdToken** microflow from the Mendix SSO module.
+        * **ID token microflow** – We recommend that you select the **DS_GetCurrentIdToken** microflow from the Mendix SSO module.
 
       {{% alert color="info" %}}If you are using MendixSSO 3, include and select the **DS_GetCurrentIdToken** microflow from the **FeedbackModule** folder and configure the module roles in the security.{{% /alert %}}
 
-    * **Decrypted Token Value** – We recommend that you select the **Value** attribute (the default if **Value** in the MendixSSO module). 
+        * **Decrypted Token Value** – We recommend that you select the **Value** attribute (the default if **Value** in the MendixSSO module). 
 
     See the screenshot below for an example:
 
     {{< figure src="/attachments/appstore/modules/mendix-feedback/mendixsso-authentication.png" width="600px">}}
 
-  * **Custom Authentication** – If you are using an SSO solution other than the Mendix SSO module, you should configure the following settings. With these settings, you can provide a microflow that should return a valid username and email when the end-user is signed in with your authentication solution. If the end-user is not signed in (meaning the **User Object Provider** microflow returns an empty username or an invalid email address) the end-user will have to manually enter their name and email address when they leave feedback.
+    * **Custom Authentication** – If you are using an SSO solution other than the Mendix SSO module, you should configure the following settings. With these settings, you can provide a microflow that should return a valid username and email when the end-user is signed in with your authentication solution. If the end-user is not signed in (meaning the **User Object Provider** microflow returns an empty username or an invalid email address) the end-user will have to manually enter their name and email address when they leave feedback.
 
-    * **User object microflow** – This is the microflow that returns **User** entity from your module.
-    * **User object** – This is the **User** entity.
-    * **User name attribute**– This is the attribute of **name** from the **User** entity.
-    * **Email attribute** – This the attribute of **email** from the **User** entity.
+        * **User object microflow** – This is the microflow that returns **User** entity from your module.
+        * **User object** – This is the **User** entity.
+        * **User name attribute**– This is the attribute of **name** from the **User** entity.
+        * **Email attribute** – This the attribute of **email** from the **User** entity.
 
     See the screenshot below for an example:
 
@@ -180,7 +180,7 @@ If you are using the [Native Mobile Resources](/appstore/modules/native-mobile-r
 
 ### 5.1 Introduction
 
-The [Mendix Feedback](https://marketplace.mendix.com/link/component/199/) widget allows end-users of your application to directly submit feedback into your app. The feedback widget is fully integrated with the [Feedback](/developerportal/collaborate/feedback/) page in the Developer Portal, where you can review feedback and convert it into [user stories](/developerportal/collaborate/stories/) to improve your app.
+The [Mendix Feedback](https://marketplace.mendix.com/link/component/199/) widget allows end-users of your application to directly submit feedback into your app. The feedback widget is fully integrated with the [Feedback](/developerportal/collaborate/feedback/) page in the Developer Portal, where you can review feedback and convert it into [user stories](/developerportal/project-management/stories/) to improve your app.
 
 {{< figure src="/attachments/appstore/widgets/mendix-feedback/feedback-in-app.png" width="350px">}}
 

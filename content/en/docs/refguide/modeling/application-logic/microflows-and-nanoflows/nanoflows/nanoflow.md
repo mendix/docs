@@ -18,9 +18,9 @@ An example of nanoflow properties is represented in the image below:
 Nanoflow properties consist of the following sections:
 
 * [Common](#common)
+* [Usage](#usage)
 * [Output](#output)
 * [Security](#security)
-* [Usage](#usage)
 
 ### 2.1 Common Section{#common}
 
@@ -32,26 +32,26 @@ Nanoflow properties consist of the following sections:
 
 **Documentation** allows you to describe your nanoflow to make it easier for people to use and modify it.
 
-### 2.2 Output Section{#output}
+### 2.2 Usage Section {#usage}
 
-#### 2.2.1 Return Type
-
-The return type defines what information the nanoflow returns. The caller of the nanoflow will get a result of this type. For possible return types, see [Data Types](/refguide/data-types/).
-
-### 2.3 Security Section{#security}
-
-#### 2.3.1 Allowed Roles
-
-These are the [module roles](/refguide/module-security/#module-role) the user must have to be able to execute the nanoflow.
-
-For more information, see [Module Security](/refguide/module-security/).
-
-### 2.4 Usage Section {#usage}
-
-#### 2.4.1 Mark as Used
+#### 2.2.1 Mark as Used
 
 You can search for unused items (<kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>F</kbd>, then select **Unused items** in the **Search for** drop-down menu) in Studio Pro. Nanoflows that are only called from JavaScript code will be listed as unused, because Studio Pro cannot look inside the source code.
 
 By setting the property **Mark as used** to **Yes**, you explicitly specify that the nanoflow is used and Studio Pro will no longer list it when searching for unused items.
 
 Default: *No*
+
+### 2.3 Output Section{#output}
+
+#### 2.3.1 Return Type
+
+The return type defines what information the nanoflow returns. The caller of the nanoflow will get a result of this type. For possible return types, see [Data Types](/refguide/data-types/).
+
+### 2.4 Security Section{#security}
+
+#### 2.4.1 Allowed Roles
+
+These are the [module roles](/refguide/module-security/#module-role) the user must have to be able to execute the nanoflow.
+
+For more information, see [Module Security](/refguide/module-security/).

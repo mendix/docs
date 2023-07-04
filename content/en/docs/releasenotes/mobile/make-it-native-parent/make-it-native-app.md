@@ -116,7 +116,7 @@ For older versions of Studio Pro please install the appropriate legacy app [here
 
 ## Android 1.2.1 / iOS 1.2.3
 
-**Release date: December 17th, 2019**
+**Release date: December 17, 2019**
 
 ### Improvement
 

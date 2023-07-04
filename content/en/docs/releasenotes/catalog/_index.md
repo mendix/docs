@@ -83,7 +83,7 @@ These release notes cover changes made to the [Catalog](/catalog/).
 * We fixed an issue on the Catalog Admin page that displayed incorrect counts of data sources registered in the company.
 * We fixed an error that occured when no authentication is selected while registering a data source.
 
-### February 27th, 2023
+### February 27, 2023
 
 #### Fixes
 
@@ -156,7 +156,7 @@ These release notes cover changes made to the [Catalog](/catalog/).
 
 * We fixed an issue with the display of services with anonymous access in the [asset details](/catalog/manage/search/#service-details) page.
 
-### November 17th, 2022
+### November 17, 2022
 
 #### Improvements
 
@@ -180,7 +180,7 @@ These release notes cover changes made to the [Catalog](/catalog/).
 
 * Notifications for newly registered resources are now grouped, helping to de-clutter your Catalog experience.
 
-### October 27th, 2022
+### October 27, 2022
 
 #### Improvements
 
@@ -401,7 +401,7 @@ These release notes cover changes made to the [Catalog](/catalog/).
 * We fixed a `NullPointerException` that occurred when the **Versions** of an endpoint was empty on the **Registration API** `GET` service call.
 * We fixed an issue where the Catalog loaded in our unreleased dark mode. Dark mode is not ready yet, but we will let you know when that feature is available!
 
-### April 7th, 2022
+### April 7, 2022
 
 #### Fixes
 
@@ -423,7 +423,7 @@ These release notes cover changes made to the [Catalog](/catalog/).
 
 * We fixed a few styling issues.
 
-### March 17th, 2022
+### March 17, 2022
 
 #### Fixes
 
@@ -460,7 +460,7 @@ These release notes cover changes made to the [Catalog](/catalog/).
 
 * We fixed a typo in a validation message that appeared if registering a contract failed.
 
-### February 17th, 2022
+### February 17, 2022
 
 #### Fixes
 
@@ -483,7 +483,7 @@ These release notes cover changes made to the [Catalog](/catalog/).
 
 * We fixed a bug on the **Contract Upload** page. The page incorrectly displayed a red warning border if you uploaded a document with non-blocking errors and then immediately deleted it. We have removed the red border in this scenario.
 
-### January 27th, 2022
+### January 27, 2022
 
 #### Improvements
 
@@ -604,7 +604,7 @@ These release notes cover changes made to the [Catalog](/catalog/).
 * We removed byte order mark (BOM) from the uploaded contract XMLs.
 * A consumed entity in Studio Pro now works after upgrading from OData v3 to OData v4.
 
-### October 7th, 2021
+### October 7, 2021
 
 #### Improvements
 
@@ -737,7 +737,7 @@ These release notes cover changes made to the [Catalog](/catalog/).
     * [Search](/apidocs-mxsdk/apidocs/catalog-apis/) – includes GET calls for getting details of data sources
     * [Register](/apidocs-mxsdk/apidocs/catalog-apis/) – PUT calls are added to enable users to update or register applications and environments by specifying a UUID
 
-### May 27th, 2021
+### May 27, 2021
 
 #### New Features
 
@@ -834,7 +834,7 @@ The [Data Hub Transform API](https://datahub-spec.s3.eu-central-1.amazonaws.com/
 * Further improvements have been made to security in Data Hub.
 * All screens in Data Hub are now responsive.
 
-### January 7th, 2021
+### January 7, 2021
 
 #### New Features
 
@@ -857,7 +857,7 @@ The [Data Hub Transform API](https://datahub-spec.s3.eu-central-1.amazonaws.com/
 
 * Contract validation has been improved when [manually registering Odata v4 contracts](/catalog/register/register-data/) or when using the `PUT` services API call for OData v4 services.
 
-### December 17th, 2020
+### December 17, 2020
 
 #### New Feature
 

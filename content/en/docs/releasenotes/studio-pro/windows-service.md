@@ -396,7 +396,7 @@ Now each app has its own license, even if it runs under the same user account as
 
 #### 1.0.4.2
 
-**Release date: June 7th, 2010**
+**Release date: June 7, 2010**
 
 * When folders were selected with folder selector, the locations were not saved.
 

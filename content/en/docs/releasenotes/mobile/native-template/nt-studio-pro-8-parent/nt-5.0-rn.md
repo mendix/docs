@@ -13,7 +13,7 @@ Please use a Native Template version [compatible](/releasenotes/mobile/nt-studio
 
 ## 5.0.14
 
-**Release date: May 17th, 2022**
+**Release date: May 17, 2022**
 
 ### Fixes
 
@@ -29,7 +29,7 @@ Please use a Native Template version [compatible](/releasenotes/mobile/nt-studio
 
 ## 5.0.12 {#5012}
 
-**Release date: March 17th, 2021**
+**Release date: March 17, 2021**
 
 ### Fixes
 
@@ -76,7 +76,7 @@ We have decided to retract version 5.0.11 after we received reports that apps wo
 
 ## 5.0.7
 
-**Release date: November 27th, 2020**
+**Release date: November 27, 2020**
 
 ### Improvements
 
@@ -139,7 +139,7 @@ As of August 2020, Google Play requires apps to be built targeting SDK 29. This 
 
 ## 5.0.0
 
-**Release date: August 7th, 2020**
+**Release date: August 7, 2020**
 
 Mendix Studio Pro [8.12.1](/releasenotes/studio-pro/8.12/#8121) introduces better splash screen support for native mobile apps. As the new functionality requires new native dependencies, the changes are not backwards-compatible with previous Mendix Studio versions. 
 

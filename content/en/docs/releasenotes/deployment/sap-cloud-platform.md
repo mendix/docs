@@ -15,7 +15,7 @@ For information on the current status of deployment to SAP BTP and any planned r
 
 ## 2022
 
-### November 17th, 2022
+### November 17, 2022
 
 #### Improvements
 
@@ -98,7 +98,7 @@ For information on the current status of deployment to SAP BTP and any planned r
 
 * We have added the ability to upload an MDA file to the Developer Portal for deployment to SAP BTP.
 
-### May 27th, 2021
+### May 27, 2021
 
 #### Improvements
 
@@ -181,7 +181,7 @@ For more information see [SAP Business Technology Platform - deploy](/developerp
 
 #### Fixes
 
-* We fixed an issue where the XSUAA configuration wasn’t updated after deployment. **Please redeploy any apps which you deployed to SAP Cloud Platform between June 27th and 8:00 CST on July 4.**
+* We fixed an issue where the XSUAA configuration wasn’t updated after deployment. **Please redeploy any apps which you deployed to SAP Cloud Platform between June 27 and 8:00 CST on July 4.**
 
 ### May 13th, 2019
 
@@ -220,7 +220,7 @@ For more information see [SAP Business Technology Platform - deploy](/developerp
 
 * We now configure Destination Service in the scope of XSUAA. This means that we add the uaa.user default scope to the destination instances in each new environment. This is needed to fetch the destination configuration.
 
-### August 7th, 2018
+### August 7, 2018
 
 #### Improvements
 
@@ -233,7 +233,7 @@ For more information see [SAP Business Technology Platform - deploy](/developerp
 
 * To improve integration and security between Mendix and SAP we now redirect you to SAP to provide your SAP credentials. This means that you need to use the same username (email address) for Mendix and SAP the next time you need to provide your credentials. This is currently implemented only for SAP regions **eu10 (Europe - Frankfurt)** and **us10 (US East - VA)**.
 
-### February 27th, 2018
+### February 27, 2018
 
 #### Fixes
 

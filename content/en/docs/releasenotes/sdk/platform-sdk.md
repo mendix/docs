@@ -28,7 +28,7 @@ These are the [Mendix Platform SDK](/apidocs-mxsdk/mxsdk/) release notes, includ
 
 ## 4.1.0
 
-**Release date: December 17th, 2018**
+**Release date: December 17, 2018**
 
 * We introduced `PlatformSdkClient.deleteApp()`, which allows users to delete an app from the Mendix Platform.
 * We made `loadAsPromise()` compatible with the [Model SDK version 4.18.0](/releasenotes/sdk/model-sdk-4/#418).

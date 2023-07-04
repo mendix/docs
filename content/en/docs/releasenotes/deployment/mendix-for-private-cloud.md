@@ -55,7 +55,7 @@ This feature is currently in a Beta release. For more information on what Beta r
 * When creating an environment, the **secretsStoreEnabled** field is no longer mandatory. The field can be added for information purposes.
 * We have fixed an issue where a user was not able to create an environment with same ID in same application but in a different namespace (Ticket 185165).
 
-### May 17th, 2023
+### May 17, 2023
 
 #### Build API Improvements
 
@@ -101,7 +101,7 @@ This feature is currently in a Beta release. For more information on what Beta r
 This feature is currently in a Beta release.
 {{% /alert %}}
 
-### March 17th, 2023
+### March 17, 2023
 
 #### Mendix Operator v2.10.2 {#2.10.2}
 
@@ -151,7 +151,7 @@ This feature is currently in a Beta release.
 
 As part of our [strategic partnership with AWS](/partners/aws/), we have added a way for you to streamline the deployment of your apps in your AWS account by automatically provisioning a private cloud environment, based on Amazon Elastic Kubernetes Service (EKS). By using the Mendix for Amazon EKS solution, you can deploy your apps in the AWS cloud in a simplified, automated way. For more information, see Mendix for [Amazon EKS—Terraform module](https://aws.amazon.com/solutions/partners/terraform-modules/mendix-eks/).
 
-### February 7th, 2023
+### February 7, 2023
 
 #### Documentation Updates
 
@@ -216,7 +216,7 @@ Your build may fail if you try to deploy the same deployment package more than o
 * We have introduced an API which supports the creation, modification, and deletion, of clusters, namespaces, and environments. You can find more information in [Mendix for Private Cloud Deploy API](/apidocs-mxsdk/apidocs/private-cloud-deploy-api/).
 * We now add the creator name in the activity logs when an app is autodeployed.
 
-### November 17th, 2022
+### November 17, 2022
 
 #### Portal Improvements
 
@@ -257,7 +257,7 @@ Your build may fail if you try to deploy the same deployment package more than o
 * We have limited the Mendix app emptyDir size to 4 MiB to prevent memory-backed emptyDirs from consuming more memory than required.
 * You may see some other minor changes to the Mendix Operator. These do not add or change any functionality at present, but are in preparation for supporting external storage secrets in a future release.
 
-### September 27th, 2022{#tekton}
+### September 27, 2022{#tekton}
 
 * We have added a number of Tekton pipelines that can be used to create a CI/CD (Continuous Integration and Delivery/Deployment) solution for your Mendix for Private Cloud apps. For more information, see [CI/CD for Mendix for Private Cloud using Tekton](/developerportal/deploy/private-cloud-tekton/).
 
@@ -437,7 +437,7 @@ This issue is fixed in Mendix Operator [version 2.5.1](#2.5.1).
 
 To see more details about supported databases and Kubernetes versions, see the [Supported Providers](/developerportal/deploy/private-cloud-supported-environments/) document.
 
-### October 27th, 2021
+### October 27, 2021
 
 #### Prometheus Metrics
 
@@ -461,7 +461,7 @@ To use Prometheus metrics, upgrade to Mendix Operator v2.1.0 (or above) and foll
 
 * We have replaced the Mendix 8 placeholder app which is deployed when you add a new environment with a Mendix 9 app. Use the Mendix 7 placeholder app if you are planning to  deploy a Mendix 7 or Mendix 8 app.
 
-### September 27th, 2021
+### September 27, 2021
 
 #### Data migration tool (preview)
 
@@ -741,7 +741,7 @@ To upgrade an existing installation of Private Cloud to this version, follow the
 
 To upgrade an existing installation of Private Cloud to this version, follow the [Upgrade instructions](/developerportal/deploy/private-cloud-upgrade-guide/).
 
-### September 7th, 2020
+### September 7, 2020
 
 #### Portal Improvements
 
@@ -768,7 +768,7 @@ To upgrade an existing installation of Private Cloud to this version, follow the
 
 * We fixed an issue where you could not delete a deployment package if it was broken.
 
-### July 27th, 2020
+### July 27, 2020
 
 #### Mendix Operator v1.4.0 and Mendix Gateway Agent v1.3.0
 

@@ -57,7 +57,7 @@ Please update to Native Builder v3.2.1 or higher. Version 3.2.1 includes the fix
 
 ## 3.1.0
 
-**Release date: December 17th, 2019**
+**Release date: December 17, 2019**
 
 ### Improvements
 

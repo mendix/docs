@@ -264,7 +264,7 @@ Research has shown that animal sounds can relieve stress. As we work to simplify
 
 ### Release 1.0.84
 
-**Release date: March 17th, 2021**
+**Release date: March 17, 2021**
 
 #### New Features
 
@@ -425,7 +425,7 @@ This release focuses mainly on quality of life bug fixes and features.
 
 ### Release v1.0.49
 
-**Release date: October 27th, 2020**
+**Release date: October 27, 2020**
 
 This marks the initial release of the Mendix Native Mobile Builder UI tool. It is included in [Mendix Studio Pro v8.15](/releasenotes/studio-pro/8.15/) and higher.
 

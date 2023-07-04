@@ -67,7 +67,7 @@ To see the current status of the Mendix Developer Portal and Control Center, see
 
 * We changed the default app logo.
 
-### May 17th, 2023
+### May 17, 2023
 
 #### New Features
 
@@ -385,7 +385,7 @@ In Portfolio Management, you can do the following
 * We removed the profile buzz page.
 * We made some small improvements to the **General Settings** page.
 
-### July 7th, 2022
+### July 7, 2022
 
 #### New Features
 
@@ -460,7 +460,7 @@ In Portfolio Management, you can do the following
 * Under certain circumstances, the app image is not displayed properly on the [My Apps](/developerportal/#my-apps) page.
     * Fixed on [May 5, 2022](#may-fifth).
 
-### April 7th, 2022
+### April 7, 2022
 
 #### Improvements
 
@@ -518,7 +518,7 @@ In Portfolio Management, you can do the following
 #### Improvements
 
 * We recently changed the password length requirement from 8 to 12 characters. We noticed this caused some confusion, because not all pages where the password can be reset or changed listed the password requirements. We made sure that all pages now list those requirements.
-* During the last release, we introduced an issue where the Developer Portal exposed apps without a repository to Studio Pro. We patched this issue on Friday December 17th, 2021 with a band-aid. This release sees a more permanent solution.
+* During the last release, we introduced an issue where the Developer Portal exposed apps without a repository to Studio Pro. We patched this issue on December 17, 2021 with a band-aid. This release sees a more permanent solution.
 
 ### December 15, 2021
 
@@ -652,7 +652,7 @@ In Portfolio Management, you can do the following
 
 * We fixed an issue with the app's [Team](/developerportal/collaborate/team/) page where [Mendix Admins](/developerportal/control-center/#company) could not add or remove team members.
 
-### July 27th, 2021
+### July 27, 2021
 
 #### Improvements
 
@@ -694,7 +694,7 @@ In Portfolio Management, you can do the following
 * We added a tab on the [Cloud](/developerportal/control-center/#cloud) page in Control Center that displays details on **Free Environments**.
 * We are deprecating part of the options to create an app based on an app template. As of June 20, 2021, you can no longer create apps through the [Projects API](/apidocs-mxsdk/apidocs/projects-api/) or the [Developer Portal](/developerportal/#navigation) using app templates created in Desktop Modeler version [7.23.14](/releasenotes/studio-pro/7.23/#72314) or below. Please update your templates to [7.23.15](/releasenotes/studio-pro/7.23/#72315) or above before creating apps based on those templates.
 
-### May 17th, 2021
+### May 17, 2021
 
 #### Improvements
 
@@ -706,7 +706,7 @@ In Portfolio Management, you can do the following
 * We fixed an issue where there were styling glitches visible when adding a description to a newly created [story](/developerportal/collaborate/stories/).
 * We fixed an issue where Mendix Support was not always able to adjust app permissions on behalf of customers.
 
-### May 7th, 2021
+### May 7, 2021
 
 #### New Features
 
@@ -958,7 +958,7 @@ In Portfolio Management, you can do the following
 * We fixed a bug where the background did not display properly on mobile browsers.
 * We fixed a bug where changes to a story title or description were saved when clicking **Cancel**.
 
-### May 27th, 2020
+### May 27, 2020
 
 #### Improvements
 
@@ -980,7 +980,7 @@ In Portfolio Management, you can do the following
 
 * The [Stories](/developerportal/collaborate/stories/) template functionality has been replaced with the **Clone** functionality in the [new UI option (Beta)](/developerportal/collaborate/stories/#story-actions).
 
-### May 7th, 2020
+### May 7, 2020
 
 #### Improvements
 
@@ -1110,7 +1110,7 @@ In Portfolio Management, you can do the following
 
 * We fixed an issue that sometimes caused the Technical Contact information to be hidden on the app's *General* page in the Developer Portal. (Tickets 70285, 77387, 80269, 80929)
 
-### March 7th, 2019
+### March 7, 2019
 
 #### Fix
 
@@ -1163,7 +1163,7 @@ In Portfolio Management, you can do the following
 
 * We made improvements in the communication between the Web Modeler and the Developer Portal.
 
-### October 17th, 2018
+### October 17, 2018
 
 #### Fixes
 

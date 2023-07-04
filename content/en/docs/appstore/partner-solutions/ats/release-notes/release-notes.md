@@ -61,7 +61,7 @@ weight: 100
 
 ## 2.28.8
 
-**Release date: March 7th, 2023**
+**Release date: March 7, 2023**
 
 ### Fixes
 
@@ -80,7 +80,7 @@ weight: 100
 
 ## 2.28.6
 
-**Release date: January 17th, 2023**
+**Release date: January 17, 2023**
 
 ### Fixes
 
@@ -170,7 +170,7 @@ weight: 100
 
 ## 2.25.1
 
-**Release date: April 27th, 2022**
+**Release date: April 27, 2022**
 
 ### Fixes
 
@@ -311,7 +311,7 @@ Test cases in ATS are dynamic with values that come from parameters, datasets, a
 
 ## 2.20.0
 
-**Release date: August 17th, 2020**
+**Release date: August 17, 2020**
 
 ### Built-in Selenium (Preview)
 
@@ -457,7 +457,7 @@ When deleting an action that is being used somewhere else, a warning is now show
 
 ## 2.14.0
 
-**Release date: September 17th, 2019**
+**Release date: September 17, 2019**
 
 ### Improvements
 
@@ -586,7 +586,7 @@ This is a complete list of all the functions that can be negated:
 
 ## 2.11.2
 
-**Release date: June 17th 2019**
+**Release date: June 17 2019**
 
 ### Extended API
 
@@ -973,7 +973,7 @@ The same holds for the function parameters.
 
 ## 2.6.0
 
-**Release date: March 27th, 2018**
+**Release date: March 27, 2018**
 
 ### Selective Reporting
 
@@ -1162,7 +1162,7 @@ After your first login to this release, you'll see a pop-up window, which will a
 
 ## 2.1.0
 
-**Release date: October 27th, 2017**
+**Release date: October 27, 2017**
 
 ### Performance
 
@@ -1451,7 +1451,7 @@ ATS now supports testing the recently released Mendix 7.
 
 ## 1.8.1
 
-**Release date: November 7th, 2016**
+**Release date: November 7, 2016**
 
 ### Fixes
 

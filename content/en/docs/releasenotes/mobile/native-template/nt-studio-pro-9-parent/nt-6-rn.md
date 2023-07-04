@@ -15,7 +15,7 @@ description: "Native Template 6 release notes."
 
 ## 6.3.4
 
-**Release date: December 27th, 2022**
+**Release date: December 27, 2022**
 
 ### Fixes
 
@@ -73,7 +73,7 @@ In the end, your variable should be set up like this:
 
 ## 6.2.29
 
-**Release date: December 27th, 2022**
+**Release date: December 27, 2022**
 
 ### Fixes
 
@@ -303,7 +303,7 @@ In the end, your variable should be set up like this:
 
 ## 6.2.3
 
-**Release date: September 7th, 2021**
+**Release date: September 7, 2021**
 
 ### Fixes
 

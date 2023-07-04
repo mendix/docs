@@ -13,7 +13,7 @@ Please use a Native Template version [compatible](/releasenotes/mobile/nt-studio
 
 ## 5.1.21
 
-**Release date: December 27th, 2022**
+**Release date: December 27, 2022**
 
 ### Fixes
 
@@ -143,7 +143,7 @@ The Native Mobile Builder writes to the *config.json* and commits assets to rela
 
 ## 5.1.8 {#518}
 
-**Release date: March 17th, 2021**
+**Release date: March 17, 2021**
 
 ### Fixes
 
@@ -191,7 +191,7 @@ We have decided to retract version 5.1.7 after we received reports that apps wou
 
 ## 5.1.3
 
-**Release date: November 27th, 2020**
+**Release date: November 27, 2020**
 
 ### Improvements
 
@@ -219,7 +219,7 @@ We have decided to retract version 5.1.7 after we received reports that apps wou
 
 ## 5.1.0
 
-**Release date: October 27th, 2020**
+**Release date: October 27, 2020**
 
 ### Disclaimer
 

@@ -119,7 +119,7 @@ We have added two new features to accelerate your app delivery projects:
 
 ## Android 4.1.0 / iOS 4.3.0
 
-**Release date: April 7th, 2017**
+**Release date: April 7, 2017**
 
 With this release, we greatly improved the user experience of the Mendix Mobile app.
 

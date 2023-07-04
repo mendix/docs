@@ -74,7 +74,7 @@ For more information, see [How to Use Marketplace Content in Studio Pro](/appsto
 {{% alert color="warning" %}}
 If you are using Studio Pro on a Mac with Parallels, see [this update](https://kb.parallels.com/112091#section7) for improving the loading time of Marketplace in Studio Pro.{{% /alert %}}
 
-### August 27th, 2022
+### August 27, 2022
 
 #### Improvements
 
@@ -139,7 +139,7 @@ If you are using Studio Pro on a Mac with Parallels, see [this update](https://k
 * You can now add [release notes](/appstore/general/share-app-store-content/#package) for your new component version without uploading a new source file.
 * You can now skip uploading a source file on the [Package](/appstore/general/share-app-store-content/#package) page for **App Service** and **Solution Template** component types if your component is not downloadable.
 
-### September 7th, 2021
+### September 7, 2021
 
 #### New Features
 
@@ -192,7 +192,7 @@ If you are using Studio Pro on a Mac with Parallels, see [this update](https://k
 * <a id="windows-service"></a>We fixed the issue with downloading the Windows Service. 
 * We fixed a minor bug for anonymous users.
 
-### April 7th, 2021
+### April 7, 2021
 
 #### Improvements
 
@@ -244,7 +244,7 @@ If you are using Studio Pro on a Mac with Parallels, see [this update](https://k
 * We have enabled an enhanced navigation and undertaken some curation of published components to help you discover the components you require more easily.
 * We have enabled a more structured wizard-based flow that makes it a lot easier for you to [share new content](/appstore/general/share-app-store-content/) to the Marketplace.
 
-### May 27th, 2020
+### May 27, 2020
 
 #### Fixes
 
@@ -266,7 +266,7 @@ If you are using Studio Pro on a Mac with Parallels, see [this update](https://k
 
 * As of Desktop Modeler version [7.23.14](/releasenotes/studio-pro/7.23/#private), you are able to download private content in the App Store again. This is possible for Desktop Modeler version 7.23.14 and all further 7.23.x versions. It is not possible for Desktop Modeler versions below 7.23.14.
 
-### April 7th, 2020
+### April 7, 2020
 
 #### Fixes {#private-fix}
 
@@ -408,7 +408,7 @@ The **Reviews** section at the bottom of the [App Store main page](https://marke
 
 ## 2018
 
-### December 17th, 2018
+### December 17, 2018
 
 #### Improvements
 

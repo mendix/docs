@@ -10,7 +10,7 @@ weight: 4
 
 ## 1 Introduction
 
-At the Mendix 10 launch event on June 27th, 2023, there were a number of announcements for features that Mendix is releasing. This document contains the calendar of expected release dates for these features.
+At the Mendix 10 launch event on June 27, 2023, there were a number of announcements for features that Mendix is releasing. This document contains the calendar of expected release dates for these features.
 
 The new features were divided into these major themes, which are described in the sections below:
 

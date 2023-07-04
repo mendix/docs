@@ -121,7 +121,7 @@ For information on the current status of deployment to Mendix Cloud and any plan
 
 * We fixed an issue with validation of white spaces in intermediate certificate chains for custom domains. (Tickets 15376, 163961, 165121, 165756, 167669, and 168416)
 
-### October 17th, 2022
+### October 17, 2022
 
 #### Improvements
 
@@ -264,7 +264,7 @@ New Certificate Details: <https://crt.sh/?id=6940402070>
 
 * We have adjusted the thresholds for the Application Container Memory Percentage alert. It will now send a warning alert when the memory utilization is above 90% and a critical alert when it is above 95%.
 
-### February 17th, 2022
+### February 17, 2022
 
 #### Fixes
 
@@ -318,7 +318,7 @@ All newly-created applications will have a database running PostgreSQL 13.
 
 Existing applications will be updated in the next few weeks. Technical contacts of these applications will receive timely notifications and, additionally, maintenance information will be visible in the Developer Portal.
 
-### October 7th, 2021
+### October 7, 2021
 
 #### Fixes
 
@@ -399,7 +399,7 @@ Existing applications will be updated in the next few weeks. Technical contacts 
 
 * The [Mendix buildpack](https://github.com/mendix/cf-mendix-buildpack) that is used to run your Mendix application will be automatically updated to the latest version every time your app resumes in Mendix Cloud v4 Free Tier EU.
 
-### May 27th, 2021
+### May 27, 2021
 
 #### Improvements
 
@@ -511,7 +511,7 @@ If you encounter errors using APIs, please ensure that the format matches the do
 
 ## 2020
 
-### December 17th, 2020
+### December 17, 2020
 
 * We added the ability to allow customers to test Beta features by adding certain allowed Custom Environment Variables. These can be added like Custom Environment Variables in Mendix Cloud v4 environment, using a text field beside the current dropdown.
 
@@ -589,7 +589,7 @@ If you encounter errors using APIs, please ensure that the format matches the do
 * We resolved an issue where memory could not be scaled above 16GiB even though 32GiB was available. (Ticket 101035)
 * We resolved an issue where the documentation field was empty when editing a constant in the Developer Portal, even though there was documentation in the model. To see the documentation, you will need to redeploy your app. (Tickets 78758, 78958, 79212, 79359, 92954, 93107, and 100756)
 
-### September 17th, 2020
+### September 17, 2020
 
 #### Improvements
 
@@ -672,7 +672,7 @@ SSL/TLS ciphers that are still supported for HTTPS connections after December 1,
 
 * We fixed an issue where some customers were unable to manually add certificates to [access restriction profiles](/developerportal/deploy/environments/#asp). (Ticket 102615)
 
-### August 7th, 2020
+### August 7, 2020
 
 #### Fixes
 
@@ -722,7 +722,7 @@ This value is displayed in the following graphs in Metrics for Mendix Cloud v4:
 
 {{% alert color="warning" %}}You may see a large increase in the size of the unused java heap metric when this change is applied. This is a consequence of the new calculation and not a change in the memory usage of your app.{{% /alert %}}
 
-### June 17th, 2020
+### June 17, 2020
 
 #### Fixes
 
@@ -757,7 +757,7 @@ This value is displayed in the following graphs in Metrics for Mendix Cloud v4:
 
 * For [Mendix Cloud Dedicated](https://www.mendix.com/evaluation-guide/app-capabilities/mendix-cloud-overview#mendix-cloud-vpc), we have added the ability to safelist outgoing IP addresses.
 
-### March 17th, 2020
+### March 17, 2020
 
 #### Improvements
 
@@ -775,13 +775,13 @@ This value is displayed in the following graphs in Metrics for Mendix Cloud v4:
 * New Deploy API calls have been added. These will be added to the [Deploy API](/apidocs-mxsdk/apidocs/deploy-api/) documentation shortly.
 * You will now be warned that you cannot restore a file-only backup to Mendix Cloud. You can only restore backups which include the database.
 
-### February 27th, 2020{#tls-v1_3}
+### February 27, 2020{#tls-v1_3}
 
 #### TLSv1.3 Support for Mendix Cloud (All Regions)
 
 * Mendix Cloud v4 and Mendix Cloud v3 now support TLSv1.3. TLSv1.3 improves the speed and security of HTTPS connections.
 
-### February 17th, 2020
+### February 17, 2020
 
 #### TLSv1.3 Support for Mendix Cloud v4 Free Tier EU
 
@@ -795,7 +795,7 @@ This value is displayed in the following graphs in Metrics for Mendix Cloud v4:
 * We fixed an issue on the page where you select a node to deploy your app, where the app name and the link to the Environments page disappeared.
 * We corrected the text of the welcome email for new cloud environments which gave incorrect instructions for deploying your app. (Ticket 93145)
 
-### January 7th, 2020
+### January 7, 2020
 
 #### Improvements
 
@@ -817,7 +817,7 @@ This value is displayed in the following graphs in Metrics for Mendix Cloud v4:
 
 * We implemented a number of improvements to enable Mendix Support to provide better support if there are deployment issues
 
-### November 7th, 2019{#20201107}
+### November 7, 2019{#20201107}
 
 #### Improvements and Fixes
 
@@ -838,11 +838,11 @@ This value is displayed in the following graphs in Metrics for Mendix Cloud v4:
 * In the **Environments** page, when you click the **Details** button for a **Production** environment and successfully complete two-factor authentication you are redirected to the **first** environment listed for your app, *not the Production environment*. (Ticket 90999)
 
     * Workaround – Choose the **Details** for the **Production** environment again and you will be taken to the correct environment.
-    * Resolved by release on [November 7th](#20201107).
+    * Resolved by release on [November 7](#20201107).
 
 * When you attempt to open an **OPERATE** or **DEPLOY** page in the Developer Portal, you may see a login page. You will need to force a refresh of your page, or clear your browser cache, in order to access the page.
 
-    * Resolved by release on [November 7th](#20201107).
+    * Resolved by release on [November 7](#20201107).
 
 ### October 1, 2019
 
@@ -850,7 +850,7 @@ This value is displayed in the following graphs in Metrics for Mendix Cloud v4:
 
 * The `X-Client-Certificate` request header has been removed. You can use the `SSL-Client-S-DN` header instead. See [Mendix Cloud HTTP Request Headers](/developerportal/deploy/mendix-cloud-request-headers/) for more information.
 
-### September 27th, 2019
+### September 27, 2019
 
 #### Improvements
 
@@ -899,7 +899,7 @@ If you run services that connect to a `*.mendixcloud.com` endpoint AND use a sta
 * We improved the performance of calculating the environment health status.
 * We improved the ability to recover from a failed deployment in the Free App cluster.
 
-### June 27th, 2019
+### June 27, 2019
 
 #### Improvements
 
@@ -920,7 +920,7 @@ If you run services that connect to a `*.mendixcloud.com` endpoint AND use a sta
 * All **HTTP Request Headers** set by the Mendix Cloud which available to app developers are documented in [Mendix Cloud HTTP Request Headers](/developerportal/deploy/mendix-cloud-request-headers/).
 * The `X-Client-Certificate` request header that is currently present is deprecated and will be removed in a later stage. Any application relying on this header must switch to the new `SSL-Client-S-DN` header. See the previously mentioned documentation for more information.
 
-### May 17th, 2019
+### May 17, 2019
 
 #### Fixes
 
@@ -938,7 +938,7 @@ If you run services that connect to a `*.mendixcloud.com` endpoint AND use a sta
 
 * We fixed an issue where the Mendix feedback widget stopped working for apps deployed to Mendix Cloud because of a change to HTTP Headers. (Ticket 83001)
 
-### May 7th, 2019
+### May 7, 2019
 
 #### Improvements
 
@@ -979,7 +979,7 @@ If you run services that connect to a `*.mendixcloud.com` endpoint AND use a sta
 
 * We have added the ability to manage tags through the Developer Portal, in addition to the current method which involved using the API
 
-### March 7th, 2019
+### March 7, 2019
 
 #### Fixes
 
@@ -1042,7 +1042,7 @@ If you run services that connect to a `*.mendixcloud.com` endpoint AND use a sta
 
 * Cloud v3 PostgreSQL backups are now created with `pg_dump` version 1.13. This version has been shipped with PostgreSQL since March 2018 (PostgreSQL 10.3, 9.6.8, 9.5.12, 9.4.17, and 9.3.22). The side-effect is that it is not possible to restore these PostgreSQL backups using a `pg_restore` version below 1.13. The error that you will receive is `pg_restore: [archiver] unsupported version (1.13) in file header`. To fix this issue, upgrade your PostgreSQL client software to one that includes newer versions of `pg_dump` and `pg_restore`.
 
-### October 17th, 2018
+### October 17, 2018
 
 #### Improvements
 
@@ -1103,7 +1103,7 @@ In some cases, you may still experience false positives for the runtime heartbea
 * We fixed problems with the uploading, downloading, and restoring of backups with very large databases in Cloud v4.
 * We fixed the problem wherein 404, 403, and 503 responses to a REST call translated to an HTML error page.
 
-### July 17th, 2018
+### July 17, 2018
 
 #### Improvements
 
@@ -1227,7 +1227,7 @@ In some cases, you may still experience false positives for the runtime heartbea
 * Switching between environments in the **Metrics** menu of Mendix Cloud v3 apps is now fixed.
 * We fixed the synchronization problem that prevented Mendix Cloud v3 users from seeing their latest nightly backups.
 
-### February 27th, 2018
+### February 27, 2018
 
 #### Fixes
 
@@ -1308,7 +1308,7 @@ In some cases, you may still experience false positives for the runtime heartbea
 
 * We addressed an issue that prevents Free Apps from being embedded in an iframe.
 
-### November 27th, 2017
+### November 27, 2017
 
 #### Improvements
 
@@ -1404,7 +1404,7 @@ In some cases, you may still experience false positives for the runtime heartbea
 * We corrected the backup retention scheme for paid applications on Mendix Cloud v4, and it is now the same as on Mendix Cloud v3.
 * The "view current log" functionality for Mendix Cloud v4 applications was empty by default and the **Show all** button needed to be used. It now shows the content right away.
 
-### May 17th, 2017
+### May 17, 2017
 
 #### Improvements
 

@@ -16,7 +16,7 @@ For more information on hybrid mobile app development in Mendix, see the [Hybrid
 
 ### Hybrid App Base 5.0.6
 
-**Release date: June 17th, 2021**
+**Release date: June 17, 2021**
 
 #### Improvements
 
@@ -87,7 +87,7 @@ With this release we updated all PhoneGap dependencies to the latest supported v
 
 ### Hybrid App Base 4.1.8
 
-**Release date: December 17th, 2019**
+**Release date: December 17, 2019**
 
 * We fixed a regression with the keyboard-avoiding behavior in iOS.
 * We fixed an issue with SSO failing to load on iOS 13 devices.
@@ -168,7 +168,7 @@ To enable more control over the target architecture, use the following variants:
 
 ### Hybrid App Base 4.0.3
 
-**Release date: January 7th, 2019**
+**Release date: January 7, 2019**
 
 * We updated **Cordova Android** to version 7.1.3.
 * We made sure that the Google Play Services files are only copied over when push notifications are enabled.
@@ -177,7 +177,7 @@ To enable more control over the target architecture, use the following variants:
 
 ### Hybrid App Base 4.0.2
 
-**Release date: January 7th, 2019**
+**Release date: January 7, 2019**
 
 * We added the *build-extras.gradle* file which was missing in the published npm package.
 
@@ -430,7 +430,7 @@ For this update, we recommend that you download a fresh hybrid app package from 
 
 ### Hybrid App Base 1.7.2 / Hybrid App Template 1.3.4
 
-**Release date: January 17th, 2018**
+**Release date: January 17, 2018**
 
 * We added a cachebust to the `synchronizePackage` call so that a fresh copy of the static files is downloaded only when needed.
 * We upgraded the Phonegap CLI version used to 7.1.0.
@@ -478,13 +478,13 @@ For this update, we recommend that you download a fresh hybrid app package from 
 
 ### Hybrid App Base 1.5.0
 
-**Release date: October 27th, 2017**
+**Release date: October 27, 2017**
 
 * In some cases, it was possible to avoid the PIN login prompt. This release mitigates those cases. For hybrid apps that have PIN login enabled, upgrading to this release is highly recommended.
 
 ### Hybrid App Base 1.4.3
 
-**Release date: October 17th, 2017**
+**Release date: October 17, 2017**
 
 * Support for custom navigation profiles was removed. This affects Mendix apps running on version 7.2 or 7.3. For these apps, upgrading to a newer Mendix version is recommended.
 

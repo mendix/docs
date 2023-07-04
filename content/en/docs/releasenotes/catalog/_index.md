@@ -54,7 +54,7 @@ These release notes cover changes made to the [Catalog](/catalog/).
 
 * We fixed an issue where edits to descriptions in the Catalog UI were not saved.
 
-### May 11th, 2023
+### May 11, 2023
 
 #### Improvements
 
@@ -284,7 +284,7 @@ These release notes cover changes made to the [Catalog](/catalog/).
 * We fixed a bug where an empty V3 contract resulted in an error. The contract will now be parsed successfully and yield no entities because it is empty.
 * We fixed a bug where notifications were not sent when the notification title was more than 100 characters. The maximum number of characters in notification titles is now 100.
 
-### August 11th, 2022
+### August 11, 2022
 
 ### Improvements
 
@@ -576,7 +576,7 @@ These release notes cover changes made to the [Catalog](/catalog/).
 
 * Non-company admins are now navigated to the Control Center landing page instead of getting the **Access Denied** message.
 
-### November 11th, 2021
+### November 11, 2021
 
 #### Fixes
 
@@ -788,7 +788,7 @@ The [Data Hub Transform API](https://datahub-spec.s3.eu-central-1.amazonaws.com/
 * Data sources that are [validated](/catalog/manage/curate/#discoverability)  are now clearly indicated in the search results list and for the selected asset details with a validated shield icon. The validation status of the data source is now displayed in the metadata panel.
 * The [discoverability](/catalog/manage/curate/#discoverability) of a data source is displayed in the search results pane, the asset details screen and the the metadata panel.
 
-### March 11th, 2021
+### March 11, 2021
 
 #### Improvements
 

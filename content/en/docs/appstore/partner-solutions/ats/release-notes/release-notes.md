@@ -35,7 +35,7 @@ weight: 100
 
 ## 2.28.10
 
-**Release date: April 11th, 2023**
+**Release date: April 11, 2023**
 
 ### Improvements
 
@@ -131,7 +131,7 @@ weight: 100
 
 ## 2.28.0
 
-**Release date: October 11th, 2022**
+**Release date: October 11, 2022**
 
 ### Fixes
 
@@ -608,7 +608,7 @@ For more details, see the [ATS 2 Reference Guide](/appstore/partner-solutions/at
 
 ## 2.11.1
 
-**Release date: June 11th 2019**
+**Release date: June 11 2019**
 
 ### Fixes
 

@@ -39,7 +39,7 @@ description: "Native Template 5.2 release notes."
 
 ## 5.2.12
 
-**Release date: May 11th, 2022**
+**Release date: May 11, 2022**
 
 ### Fixes
 

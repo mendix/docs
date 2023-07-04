@@ -10,7 +10,7 @@ These are the [Mendix Platform SDK](/apidocs-mxsdk/mxsdk/) release notes, includ
 
 ## 5.1.0
 
-**Release date: March 11th, 2022**
+**Release date: March 11, 2022**
 
 * It is no longer mandatory to include the `branches/` prefix for SVN branch names that are not `trunk`.
 
@@ -22,7 +22,7 @@ These are the [Mendix Platform SDK](/apidocs-mxsdk/mxsdk/) release notes, includ
 
 ## 4.1.1
 
-**Release date: June 11th, 2019**
+**Release date: June 11, 2019**
 
 * We fixed the incorrect return type for the `createNewApp` method. We downgraded the `rest` dependency to 1.3.2 to always return a `When.js` promise (instead of a regular `ES6` promise).
 

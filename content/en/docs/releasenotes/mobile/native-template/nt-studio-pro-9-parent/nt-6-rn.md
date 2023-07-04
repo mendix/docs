@@ -177,7 +177,7 @@ In the end, your variable should be set up like this:
 
 ## 6.2.19
 
-**Release date: May 11th, 2022**
+**Release date: May 11, 2022**
 
 ### Fixes
 
@@ -347,7 +347,7 @@ This is a re-release of Native Template [6.2.0](#620).
 
 ## 6.1.6
 
-**Release date: June 11th, 2021**
+**Release date: June 11, 2021**
 
 ### Improvements
 

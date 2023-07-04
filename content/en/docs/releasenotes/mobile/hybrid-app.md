@@ -186,7 +186,7 @@ To enable more control over the target architecture, use the following variants:
 **Release date: January 6, 2019**
 
 {{% alert color="warning" %}}
-As of April 11th, 2019, Google will drop support for sending push notifications through their Google Cloud Messaging (GCM) service. By that time, all clients will need to have migrated to the new Firebase Cloud Messaging (FCM) service. The move from GCM to FCM impacts Mendix apps that employ push notifications through the Mendix [Push Notifications Connector](/appstore/modules/push-notifications/) module. Please read the notes below for upgrade instructions
+As of April 11, 2019, Google will drop support for sending push notifications through their Google Cloud Messaging (GCM) service. By that time, all clients will need to have migrated to the new Firebase Cloud Messaging (FCM) service. The move from GCM to FCM impacts Mendix apps that employ push notifications through the Mendix [Push Notifications Connector](/appstore/modules/push-notifications/) module. Please read the notes below for upgrade instructions
 {{% /alert %}}
 
 #### Push Notifications
@@ -505,7 +505,7 @@ For this update, we recommend that you download a fresh hybrid app package from 
 
 ### Hybrid App Base 1.4.0
 
-**Release date: October 11th, 2017**
+**Release date: October 11, 2017**
 
 * This release improves support for the PIN login feature:
     * We updated the Phonegap CLI version to 7.0.1.

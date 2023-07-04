@@ -80,7 +80,7 @@ If you are using Studio Pro on a Mac with Parallels, see [this update](https://k
 
 * We have added the **My Drafts** page, where you can access component drafts. We have also extended the actions you can perform on drafts. For more information, see the [My Drafts](/appstore/general/app-store-overview/#my-drafts) section of *Marketplace Overview*.
 
-### August 11th, 2022
+### August 11, 2022
 
 #### New Features
 
@@ -312,7 +312,7 @@ Content that was marked as **Protected** as well as content marked as **Shared w
 
 * We now display the UUID of a App Store component in the [Usage](/appstore/general/app-store-overview/#usage) section of its details page. This allows you to specify the `TemplateUUID` when calling the [CreateNewApp operation](/apidocs-mxsdk/apidocs/projects-api/#createnewapp) in the *Projects API*.
 
-### September 11th, 2019
+### September 11, 2019
 
 #### Improvements
 

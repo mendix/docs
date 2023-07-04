@@ -351,7 +351,7 @@ In Portfolio Management, you can do the following
     * All password resets and changes are now done via the [New Password Request page](https://login.mendix.com/mxid3/request-password-reset), which you can reach using the **Forgot password?** link on the login screen. This will send a password reset link to your registered email address.
 * We introduced a separate session duration of one hour for users logging into the platform using SSO with their companies BYOIDP, so session management can be better controlled by their IDP.
 
-### August 11th, 2022
+### August 11, 2022
 
 #### New Features
 
@@ -906,7 +906,7 @@ In Portfolio Management, you can do the following
 
 * We fixed an issue where, under certain circumstances, email notifications were not sent on [story comment](/developerportal/collaborate/stories/#story-details) updates.
 
-### August 11th, 2020
+### August 11, 2020
 
 #### Improvements
 
@@ -1176,7 +1176,7 @@ In Portfolio Management, you can do the following
 
 * It is now possible to go to a Mendix community member's new [Mendix Profile](/developerportal/community-tools/mendix-profile/) directly from the [Buzz](/developerportal/collaborate/buzz/) and [People](https://developer.mendixcloud.com/link/people) pages. (Ticket 69702)
 
-### October 11th, 2018
+### October 11, 2018
 
 #### Improvements
 

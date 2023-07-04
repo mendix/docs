@@ -30,7 +30,7 @@ Please use a Native Template version [compatible](/releasenotes/mobile/nt-studio
 
 ## 5.1.19
 
-**Release date: May 11th, 2022**
+**Release date: May 11, 2022**
 
 ### Fixes
 
@@ -85,7 +85,7 @@ iOS 15 requires you to recompile your apps with XCode 13. This release bumps the
 
 ## 5.1.12
 
-**Release date: June 11th, 2021**
+**Release date: June 11, 2021**
 
 ### Improvements
 

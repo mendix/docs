@@ -387,7 +387,7 @@ Existing applications will be updated in the next few weeks. Technical contacts 
 
 * We have improved our logging to provide more stability and robustness. This addresses issues faced by customers such as failing log downloads and incomplete log files.
 
-### June 11th, 2021
+### June 11, 2021
 
 #### Mendix Cloud V3 Archived Logs
 
@@ -1142,7 +1142,7 @@ In some cases, you may still experience false positives for the runtime heartbea
 * Retrieving an environment package via REST API is no longer broken. (Tickets 65348, 65370)
 * We reintroduced copy privileges for operations.
 
-### June 11th, 2018
+### June 11, 2018
 
 #### Improvements
 

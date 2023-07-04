@@ -40,7 +40,7 @@ For information on the current status of deployment to Mendix Cloud and any plan
 
 * We have updated the [Splunk](/developerportal/operate/splunk-metrics/) integration to send app metadata to the Splunk Cloud Platform, together with the ability to add custom tags.
 
-### March 16th, 2023
+### March 1, 2023
 
 #### Improvements
 
@@ -64,13 +64,13 @@ For information on the current status of deployment to Mendix Cloud and any plan
 
 * We now return HTTP headers for the SHA1 Fingerprint and Serial number of an authenticated Client Certificate. See [Mendix Cloud HTTP Request Headers](/developerportal/deploy/mendix-cloud-request-headers/) for more information.
 
-### February 16th, 2023
+### February 1, 2023
 
 #### Improvements
 
 * Customers can now download access logs for their applications. The Deploy API has also been updated with this functionality — see [Download Access Logs](/apidocs-mxsdk/apidocs/deploy-api/#download-logs) in *Deploy API* for more information.
 
-### January 26th, 2023
+### January 2, 2023
 
 #### Improvements
 
@@ -210,7 +210,7 @@ New Certificate Details: <https://crt.sh/?id=6940402070>
 
 * We changed the naming format for nodes when using AppDynamics metrics. When the instance is added to the node name, we now use a hyphen instead of an underscore. So `node_1` becomes `node-1`. This is in line with AppDynamics naming conventions.
 
-### May 6th, 2022
+### May , 2022
 
 #### Improvements
 
@@ -308,7 +308,7 @@ New Certificate Details: <https://crt.sh/?id=5832398831>
 * We fixed an issue with the custom HTTP header Content-Security-Policy to follow RFC and W3C specs during validation. (Tickets 133172)
 * We fixed an issue where a request handler path with '.' would break transport. (Tickets 132865, 133292)
 
-### October 26th, 2021
+### October 2, 2021
 
 #### Improvements
 
@@ -334,7 +334,7 @@ Existing applications will be updated in the next few weeks. Technical contacts 
 
 * In **Mendix Cloud v3** we fixed a problem with viewing the current log in a pop-up. We now display the current log in a new browser tab. 
 
-### August 26th, 2021
+### August 2, 2021
 
 #### Improvements
 
@@ -343,7 +343,7 @@ Existing applications will be updated in the next few weeks. Technical contacts 
     * Through the [Developer Portal](/developerportal/operate/restore-backup/#restore-cloud-backup)
     * Using the [Backups API V2](/apidocs-mxsdk/apidocs/backups-api/)
 
-### August 6th, 2021
+### August , 2021
 
 #### Improvements
 
@@ -466,7 +466,7 @@ Any clients that use IPv6 to connect to applications which have configured Acces
 
     As a consequence of this, you will no longer be able to see the log levels of all your [log nodes](/developerportal/deploy/environments-details/#log-levels) if your app is not running. Only log nodes which are not set to `Info` will be visible until you restart your app.
 
-### March 16th, 2021
+### March 1, 2021
 
 * We updated the Mendix runtime to send back usage information to Mendix for your apps deployed to the Mendix Cloud. See below for more information about this change.
 
@@ -532,7 +532,7 @@ If you encounter errors using APIs, please ensure that the format matches the do
 * We added the ability to permanently change the Log Levels in Mendix Cloud v4 for an app so that they persist between restarts. This was in response to customer requests. (Ticket 101413)<br/>Log Levels will only become persistent after the next restart of your app, so you may have to set them one more time.<br/>For more information on log levels, see [Log Levels Tab](/developerportal/deploy/environments-details/#log-levels) in the *Environment Details* documentation.
 * You can now retrieve the version of the buildpack used in deployment via the Deploy API [Retrieve Environment](/apidocs-mxsdk/apidocs/deploy-api/#retrieve-environment) call. The version is returned as `RuntimeLayer`. You will need to redeploy your app to ensure it returns this in the API response.
 
-### November 26th, 2020
+### November 2, 2020
 
 #### Fixes
 
@@ -549,7 +549,7 @@ If you encounter errors using APIs, please ensure that the format matches the do
 
 * We resolved an issue where an incorrect debugger password was sometimes shown for Mendix Cloud v4 apps in the Developer Portal. This meant that customers were not able to connect to the debugger. (Ticket 105317)
 
-### October 26th, 2020
+### October 2, 2020
 
 #### Fixes
 
@@ -660,7 +660,7 @@ SSL/TLS ciphers that are still supported for HTTPS connections after December 1,
     * We improved the error messages for Mendix Cloud v4 apps that appear when you deploy from Studio Pro with no [Mendix Studios Target](/developerportal/deploy/studio-deployment-settings/#target) set or you do not have sufficient privileges to deploy to the Studios target.
     * We fixed an issue where you were able to log in as a **Demo User** to the Studios target. Please note that in this scenario, you have to clear the Studios target and redeploy to the affected environment. The target can then be set after redeploying. (Ticket 106312)
 
-### August 26th, 2020
+### August 2, 2020
 
 #### Improvements
 
@@ -690,7 +690,7 @@ SSL/TLS ciphers that are still supported for HTTPS connections after December 1,
 
 * We fixed an issue where trends graphs were not being updated with the latest data. (Ticket 102400)
 
-### July 16th, 2020
+### July 1, 2020
 
 #### Improvements
 
@@ -730,7 +730,7 @@ This value is displayed in the following graphs in Metrics for Mendix Cloud v4:
 * We fixed an issue where some valid certificate authorities could not be uploaded. (Tickets 98150 and 100271)
 * We made some changes to the Mendix Cloud v3 Trends graphs.
 
-### June 16th, 2020
+### June 1, 2020
 
 #### Improvements
 
@@ -926,7 +926,7 @@ If you run services that connect to a `*.mendixcloud.com` endpoint AND use a sta
 
 * We made several changes to our maintenance window management to ensure that environments are completely locked during maintenance.
 
-### May 16th, 2019
+### May 1, 2019
 
 #### Improvements
 
@@ -988,7 +988,7 @@ If you run services that connect to a `*.mendixcloud.com` endpoint AND use a sta
 * We have fixed the issue regarding unclear application version numbering when building an MDA packages. The "App latest tag" and "Branch latest tag" have been replaced with "App highest tag" and "Branch highest tag" respectively to represent the values more precisely. (Ticket 78699)
 * We have fixed the issue which meant that license information was displayed incorrectly in the Developer Portal for some Mendix Cloud v3 production environments. (Ticket 78229, 80336)
 
-### February 6th, 2019
+### February , 2019
 
 #### Fixes
 
@@ -1124,7 +1124,7 @@ In some cases, you may still experience false positives for the runtime heartbea
 
 * We improved the stability of the alerting stack.
 
-### June 26th, 2018
+### June 2, 2018
 
 #### Fixes
 
@@ -1202,7 +1202,7 @@ In some cases, you may still experience false positives for the runtime heartbea
 
 * We enabled ICMP (ping) packets for our Mendix Cloud v4 load balancers. Now you can use tools like ping, traceroute, and mtr to debug connectivity issues from your location to Mendix Cloud v4 applications. Note that packets will not reach the actual application but only the load balancers. You can expect latency in the low single-digit milliseconds between the load balancers and applications.
 
-### March 16th, 2018
+### March 1, 2018
 
 #### Fixes
 
@@ -1302,7 +1302,7 @@ In some cases, you may still experience false positives for the runtime heartbea
 * The JVM Process Memory graph in Cloud v4 now also show the native memory of the application.
 * The Application Node Operating System Memory graph for Cloud v4 now shows as two lines: total and used. The previous version displayed the total added to the used in a stacked area graph, which was very confusing.
 
-### December 6th, 2017
+### December , 2017
 
 #### Fixes
 
@@ -1443,7 +1443,7 @@ In some cases, you may still experience false positives for the runtime heartbea
 
 #### Fixes
 
-* The Deploy / Operate sections in the Platform Portal were broken on Internet Explorer 11 due to widget incompatibility, introduced in the previous release. This was already hot-patched in production on March 16th.
+* The Deploy / Operate sections in the Platform Portal were broken on Internet Explorer 11 due to widget incompatibility, introduced in the previous release. This was already hot-patched in production on March 1.
 
 ### March 13th, 2017
 

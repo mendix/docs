@@ -21,7 +21,7 @@ Deployment on IBM Cloud Portal is no longer officially supported by Mendix. We h
 
 ## 2020
 
-### October 26th, 2020
+### October 2, 2020
 
 #### Buildpack
 
@@ -29,7 +29,7 @@ Deployment on IBM Cloud Portal is no longer officially supported by Mendix. We h
 
 ## 2019
 
-### November 26th, 2019
+### November 2, 2019
 
 #### IBM Cloud Portal Deployment
 

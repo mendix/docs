@@ -125,7 +125,7 @@ This is a re-release of Native Template [5.2.0](#520).
 
 ## 5.2.0 {#520}
 
-**Release date: July 26th, 2021**
+**Release date: July 2, 2021**
 
 ### Improvements
 

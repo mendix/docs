@@ -111,7 +111,7 @@ Please note that if your app requires custom initialization, for example due to 
 
 ## 5.1.10
 
-**Release date: April 6th, 2021**
+**Release date: April , 2021**
 
 ### Improvements
 

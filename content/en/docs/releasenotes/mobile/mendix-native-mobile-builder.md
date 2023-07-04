@@ -13,7 +13,7 @@ The Mendix Native Mobile Builder is a UI-based tool, complimentary to Mendix Stu
 
 ### Release 1.0.127
 
-**Release date: October 6th, 2022**
+**Release date: October , 2022**
 
 #### Fixes
 
@@ -159,7 +159,7 @@ If the dialog is accepted the App Center option will then be disabled as it is c
 
 ### Release 1.0.107
 
-**Release date: July 26th, 2021**
+**Release date: July 2, 2021**
 
 #### Fixes
 
@@ -168,7 +168,7 @@ If the dialog is accepted the App Center option will then be disabled as it is c
 
 ### Release 1.0.105
 
-**Release date: July 16th, 2021**
+**Release date: July 1, 2021**
 
 #### Improvements
 

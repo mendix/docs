@@ -46,7 +46,7 @@ Yearly events come in 2 flavors:
 
 #### 4.1.1 Specific Date
 
-This allows you to run the event on the same date every year (for example, April 5th).
+This allows you to run the event on the same date every year (for example, April 5).
 
 | Property | Description |
 | --- | --- |

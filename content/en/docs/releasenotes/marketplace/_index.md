@@ -121,7 +121,7 @@ If you are using Studio Pro on a Mac with Parallels, see [this update](https://k
 
 ## 2021
 
-### December 1, 2021
+### December 16th, 2021
 
 #### Improvements
 
@@ -223,7 +223,7 @@ If you are using Studio Pro on a Mac with Parallels, see [this update](https://k
 * You can now download [Windows Service](/releasenotes/studio-pro/windows-service/) and **Server Distribution** for the latest Studio Pro version using the **Related Downloads** button on the **Get Studio pro** page.  
 * Adding beta versions for components is no longer supported. Beta versions of published components and existing drafts have been automatically updated to remove the Beta tag.
 
-### January 2, 2021
+### January 26th, 2021
 
 #### Improvements
 
@@ -250,7 +250,7 @@ If you are using Studio Pro on a Mac with Parallels, see [this update](https://k
 
 * As of Studio Pro version [8.10.0](/releasenotes/studio-pro/8.10/#1400), you are able to download private content in the App Store again. This is not possible for Studio Pro versions 8.7–8.9.
 
-### May , 2020
+### May 6th, 2020
 
 #### Improvements
 
@@ -274,7 +274,7 @@ If you are using Studio Pro on a Mac with Parallels, see [this update](https://k
     * You will be able to download private content from the App Store available in Studio Pro/Desktop Modeler again once a fix is released in a future [8.x](/releasenotes/studio-pro/8/), [8.6.x](/releasenotes/studio-pro/8.6/), and [7.23.x](/releasenotes/studio-pro/7.23/) release. This functionality will then only be available in those specific versions with the fix and subsequent versions. This functionality will not be available again for the App Store in Desktop Modeler version 6.
     * You can continue downloading the latest version of private App Store content from the [Company Content](/appstore/general/app-store-overview/#company-content) page in the [Mendix Marketplace](https://marketplace.mendix.com/) and use it in the respective versions of Studio Pro/Desktop Modeler.
 
-### February 2, 2020
+### February 26th, 2020
 
 #### Improvements
 
@@ -290,7 +290,7 @@ We are invested in maintaining Mendix Marketplace content to make it easier for 
 
 For more information on these support levels, see [App Store Content Support](/appstore/general/app-store-content-support/).
 
-### November , 2019
+### November 6th, 2019
 
 #### Improvements
 
@@ -337,7 +337,7 @@ We renamed all the SAP-related connectors and app templates in the App Store to 
 | App Template | SAP Northwind OData | Northwind OData Service Master-Detail App for SAP solutions |
 | App Template | SAP Purchase Order Approval Tutorial | Purchase Order Approval Tutorial for SAP solutions |
 
-### August 2, 2019
+### August 26th, 2019
 
 #### Improvements
 
@@ -369,7 +369,7 @@ We renamed all the SAP-related connectors and app templates in the App Store to 
 
 We added a component in the App Store which, when configured in your app, allows you to use the logging format supported by SAP Kibana. For more information, see [SAP Logging Connector](/partners/sap/sap-logger/).
 
-### June , 2019
+### June 6th, 2019
 
 #### Improvements
 

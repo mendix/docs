@@ -57,7 +57,7 @@ In the end, your variable should be set up like this:
 
 ## 6.3.1
 
-**Release date: October , 2022**
+**Release date: October 6th, 2022**
 
 ### Fixes
 
@@ -119,7 +119,7 @@ In the end, your variable should be set up like this:
 
 ## 6.2.25
 
-**Release date: August 1, 2022**
+**Release date: August 16th, 2022**
 
 ### Fixes
 
@@ -129,7 +129,7 @@ In the end, your variable should be set up like this:
 
 ## 6.2.24
 
-**Release date: July 2, 2022**
+**Release date: July 26th, 2022**
 
 ### Fixes
 
@@ -209,7 +209,7 @@ In the end, your variable should be set up like this:
 
 ## 6.2.13 and 6.2.14
 
-**Release date: March 1, 2022**
+**Release date: March 16th, 2022**
 
 ### Fixes
 
@@ -226,7 +226,7 @@ In the end, your variable should be set up like this:
 
 ## 6.2.11
 
-**Release date: January , 2022**
+**Release date: January 6th, 2022**
 
 ### Fixes
 

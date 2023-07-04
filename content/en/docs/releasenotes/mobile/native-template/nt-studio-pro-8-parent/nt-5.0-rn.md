@@ -133,7 +133,7 @@ We have decided to retract version 5.0.11 after we received reports that apps wo
 
 ## 5.0.1
 
-**Release date: August 2, 2020**
+**Release date: August 26th, 2020**
 
 As of August 2020, Google Play requires apps to be built targeting SDK 29. This version of the Native Template complies with these requirements. For more information, see [Target API level requirements for the Play Console](https://support.google.com/googleplay/android-developer/answer/113469#targetsdk).
 

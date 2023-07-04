@@ -98,7 +98,7 @@ weight: 100
 
 ## 2.28.4
 
-**Release date: December , 2022**
+**Release date: December 6th, 2022**
 
 ### Fixes
 
@@ -422,7 +422,7 @@ Apps built with [Mendix 8.9](/releasenotes/studio-pro/8.9/) can now be tested an
 
 ## 2.16.0
 
-**Release date: October 1, 2019**
+**Release date: October 16th, 2019**
 
 ### Mendix 8.2.2 Compatibility
 
@@ -437,7 +437,7 @@ Apps built with [Mendix 8.2.2](/releasenotes/studio-pro/8.2/#822) can now be tes
 
 ## 2.15.0
 
-**Release date: September 2, 2019**
+**Release date: September 26th, 2019**
 
 ### Desktop Recorder
 
@@ -1459,7 +1459,7 @@ ATS now supports testing the recently released Mendix 7.
 
 ## 1.8.0
 
-**Release date: November , 2016**
+**Release date: November 6th, 2016**
 
 ### Supporting Mendix Marketplace Widgets
 

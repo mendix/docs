@@ -28,13 +28,13 @@ For more information on hybrid mobile app development in Mendix, see the [Hybrid
 
 ### Hybrid App Base 5.0.5
 
-**Release date: April 1, 2021**
+**Release date: April 16th, 2021**
 
 * We upgraded the push notification library to fix an issue with iOS push notifications.
 
 ### Hybrid App Base 5.0.4
 
-**Release date: March 1, 2021**
+**Release date: March 16th, 2021**
 
 * We fixed an issue with file store that sometimes corrupted the runtime tokens.
 
@@ -183,7 +183,7 @@ To enable more control over the target architecture, use the following variants:
 
 ### Hybrid App Base 4.0.0 / Hybrid App Template 4.0.0
 
-**Release date: January , 2019**
+**Release date: January 6th, 2019**
 
 {{% alert color="warning" %}}
 As of April 11th, 2019, Google will drop support for sending push notifications through their Google Cloud Messaging (GCM) service. By that time, all clients will need to have migrated to the new Firebase Cloud Messaging (FCM) service. The move from GCM to FCM impacts Mendix apps that employ push notifications through the Mendix [Push Notifications Connector](/appstore/modules/push-notifications/) module. Please read the notes below for upgrade instructions
@@ -375,7 +375,7 @@ This patch fixes an issue with an upstream dependency (`com.google.android.gms:p
 
 ### Hybrid App Base 2.0.2
 
-**Release date: March 1, 2018**
+**Release date: March 16th, 2018**
 
 This patch fixes an issue with the generation of the `index.html` file.
 
@@ -455,7 +455,7 @@ For this update, we recommend that you download a fresh hybrid app package from 
 
 ### Hybrid App Base 1.6.0
 
-**Release date: November 1, 2017**
+**Release date: November 16th, 2017**
 
 * Android icons and splash screens are now properly configured. For projects using the "do it yourself" workflow, apply the following change in *src/config.xml.mustache*:
 

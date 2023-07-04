@@ -23,7 +23,7 @@ To download the Windows Service, go to the [Get Studio Pro](https://marketplace.
 
 ### 4.7.0
 
-**Release date: August 2, 2022**
+**Release date: August 26th, 2022**
 
 * We fixed an exception which occurred when updating an app where files with a path exceeding 260 characters are overwritten. (Ticket 142021)
 * We now require Microsoft .NET Framework version 4.6.2 instead of 4.5.2.
@@ -118,7 +118,7 @@ To download the Windows Service, go to the [Get Studio Pro](https://marketplace.
 
 ### 4.2.0
 
-**Release date: January 1, 2014**
+**Release date: January 16th, 2014**
 
 Please be aware of the fact that all service user passwords and database passwords will be encrypted in the settings files after opening the Mendix Service Console for the first time. Only database passwords of already as service installed apps will be untouched, until you reinstall their services.
 
@@ -351,7 +351,7 @@ Now each app has its own license, even if it runs under the same user account as
 
 #### 1.0.6.3
 
-**Release date: February 1, 2011**
+**Release date: February 16th, 2011**
 
 * Support for DTAP modes Acceptance and Production (by default).
 * Now service user name and password fields are disabled when a fixed user has been chosen.
@@ -387,7 +387,7 @@ Now each app has its own license, even if it runs under the same user account as
 
 ### 1.0.5
 
-**Release date: August , 2010**
+**Release date: August 6th, 2010**
 
 * Better Windows log message content when the service start fails.
 * Version in title bar of Console.
@@ -428,7 +428,7 @@ Now each app has its own license, even if it runs under the same user account as
 
 #### 1.0.3.1
 
-**Release date: May 2, 2010**
+**Release date: May 26th, 2010**
 
 * Fixed the occurring error when saving the configuration and there are no application constants given.
 * Added Mendix icon to Service Tester program and form.

@@ -145,7 +145,7 @@ This feature is currently in a Beta release.
 * We have added a new info section on top of the **Environments Overview** page which will be used to improve the communication about upcoming features and deprecations in the Portal. If nothing needs to be communicated, the section will be hidden.
 * We have fixed the known issue from previous release where the builds were failing when customer tried to deploy the same deployment package or scale the app.
 
-### February 8th, 2023
+### February 8, 2023
 
 #### Mendix for Amazon EKS
 
@@ -420,7 +420,7 @@ This issue is fixed in Mendix Operator [version 2.5.1](#2.5.1).
 * When switching to the *Review and Apply* screen in `mxpc-cli`, previous results will be cleared.
 * We have fixed an issue where attempting to apply a custom TLS configuration in non-interactive mode with `mxpc-cli` failed with a panic error.
 
-### November 18th, 2021
+### November 18, 2021
 
 #### Portal Improvements
 
@@ -601,7 +601,7 @@ To upgrade an existing installation of Private Cloud to this version, follow the
 
 To upgrade an existing installation of Private Cloud to this version, follow the [Upgrade instructions](/developerportal/deploy/private-cloud-upgrade-guide/).
 
-### March 18th, 2021
+### March 18, 2021
 
 #### Mendix Operator v1.9.0 and Mendix Gateway Agent v1.8.0
 
@@ -616,7 +616,7 @@ To upgrade an existing installation of Private Cloud to this version, follow the
 
 To upgrade an existing installation of Private Cloud to this version, follow the [Upgrade instructions](/developerportal/deploy/private-cloud-upgrade-guide/).
 
-### February 18th, 2021
+### February 18, 2021
 
 #### Portal Improvements
 
@@ -825,7 +825,7 @@ We released a new version of the Mendix for Private Cloud Operator.
 
 To upgrade an existing installation of Private Cloud to this version, follow the [Upgrade instructions](/developerportal/deploy/private-cloud-upgrade-guide/).
 
-### June 18th, 2020
+### June 18, 2020
 
 #### Improvements
 
@@ -842,7 +842,7 @@ To upgrade an existing installation of Private Cloud to this version, follow the
 
 * We have fixed a regression which caused unusually high CPU usage.
 
-### June 8th, 2020
+### June 8, 2020
 
 #### Mendix Operator v1.1.0
 

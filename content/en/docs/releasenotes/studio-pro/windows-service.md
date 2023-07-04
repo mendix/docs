@@ -37,7 +37,7 @@ To download the Windows Service, go to the [Get Studio Pro](https://marketplace.
 
 ### 4.6.1 {#4_6_1}
 
-**Release date: February 8th, 2021**
+**Release date: February 8, 2021**
 
 * <a id="46ki"></a>We now find a correct AdoptOpenJDK version for [Studio Pro 8](/releasenotes/studio-pro/8.0/) and above if that is not configured yet.
 * We changed the `Update-MxApp` cmdlet so that it no longer applies file access rights. Normally, you only need to do this once, so the Mendix Service Console will do this when you add a new app. If you still want this on an existing app, you can update the app manually in the Service Console and use the checkbox on the **Update App** form to apply the user rights again. For more information, see the release note about this checkbox for version [4.5.1](#451) below. (Ticket 67514)
@@ -49,7 +49,7 @@ To download the Windows Service, go to the [Get Studio Pro](https://marketplace.
 
 ### 4.6.0 {#4_6}
 
-**Release date: August 8th, 2019**
+**Release date: August 8, 2019**
 
 * We added support for [Studio Pro 8](/releasenotes/studio-pro/8.0/).
 * We added the option to download the applicable server distribution on the form where you add or update an app.
@@ -318,7 +318,7 @@ Now each app has its own license, even if it runs under the same user account as
 
 ## 2.0
 
-**Release date: July 28th, 2011**
+**Release date: July 28, 2011**
 
 * Support for Modeler 3.0 deployment format.
 * Communication with Runtime changed to support 3.0.
@@ -435,7 +435,7 @@ Now each app has its own license, even if it runs under the same user account as
 
 #### 1.0.3.0
 
-**Release date: May 18th, 2010**
+**Release date: May 18, 2010**
 
 * User interface changes.
 * Added possibility to select folders by the Windows folder browser control.

@@ -127,7 +127,7 @@ If you are using Studio Pro on a Mac with Parallels, see [this update](https://k
 
 * We now support using rich text for your [component description](/appstore/general/share-app-store-content/#general).
 
-### November 18th, 2021
+### November 18, 2021
 
 #### New Features
 
@@ -177,7 +177,7 @@ If you are using Studio Pro on a Mac with Parallels, see [this update](https://k
 
 * We fixed some bugs in the flow for adding new Marketplace content.
 
-### May 28th, 2021
+### May 28, 2021
 
 #### New Features
 
@@ -363,7 +363,7 @@ We renamed all the SAP-related connectors and app templates in the App Store to 
 * We updated the **SAP Logging Connector** to allow the log level to be set via a constant instead of an enumeration. This means that you can change the log level with a restart, without needing to fully redeploy your app.
 * We solved an issue where the SAP Logging Connector had conflicts with the Community Commons module.
 
-### June 28th, 2019
+### June 28, 2019
 
 #### Improvements
 

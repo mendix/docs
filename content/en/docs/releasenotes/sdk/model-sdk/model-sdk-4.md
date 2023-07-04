@@ -56,7 +56,7 @@ weight: 97
 
 ## 4.69.0 {#469}
 
-**Release date: November 18th, 2022**
+**Release date: November 18, 2022**
 
 * We added support for Mendix [9.20.0](/releasenotes/studio-pro/9.20/).
 * We added support for Mendix Metamodel [9.20.0](/releasenotes/sdk/metamodel-9.20/).
@@ -84,7 +84,7 @@ weight: 97
 
 ## 4.65.0 {#465}
 
-**Release date: July 18th, 2022**
+**Release date: July 18, 2022**
 
 * We added support for Mendix [9.16.0](/releasenotes/studio-pro/9.16/).
 * We added support for Mendix Metamodel [9.16.0](/releasenotes/sdk/metamodel-9.16/).
@@ -147,7 +147,7 @@ weight: 97
 
 ## 4.56.0 {#456}
 
-**Release date: October 18th, 2021**
+**Release date: October 18, 2021**
 
 * We added support for Mendix [9.7.0](/releasenotes/studio-pro/9.7/).
 * We added support for Mendix Metamodel [9.7.0](/releasenotes/sdk/metamodel-9.7/).
@@ -366,7 +366,7 @@ weight: 97
 
 ## 4.19.0 {#419}
 
-**Release date: February 8th, 2019**
+**Release date: February 8, 2019**
 
 * We added support for [Mendix 7.23.0](/releasenotes/studio-pro/7.23/).
 * It is now possible to perform operations (such as **delete working copy**) on working copies that have a newer Metamodel version than the one this Model SDK supports. This was not possible before, as we checked the Mendix Metamodel version for every operation. Now, we only check the Mendix Metamodel version when actually opening a working copy.

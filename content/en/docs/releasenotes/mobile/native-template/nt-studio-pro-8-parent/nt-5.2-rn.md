@@ -119,7 +119,7 @@ description: "Native Template 5.2 release notes."
 
 ## 5.2.1
 
-**Release date: July 28th, 2021**
+**Release date: July 28, 2021**
 
 This is a re-release of Native Template [5.2.0](#520).
 

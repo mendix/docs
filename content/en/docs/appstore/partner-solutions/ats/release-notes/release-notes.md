@@ -49,7 +49,7 @@ weight: 100
 
 ## 2.28.9
 
-**Release date: March 28th, 2023**
+**Release date: March 28, 2023**
 
 ### Fixes
 
@@ -188,7 +188,7 @@ weight: 100
 
 ## 2.24.0
 
-**Release date: April 8th, 2021**
+**Release date: April 8, 2021**
 
 ### Mendix 9 Support
 
@@ -449,7 +449,7 @@ When deleting an action that is being used somewhere else, a warning is now show
 
 ## 2.14.1
 
-**Release date: September 18th, 2019**
+**Release date: September 18, 2019**
 
 ### Fixes
 
@@ -644,7 +644,7 @@ We are constantly on the lookout for popular widgets that we can support with AT
 
 ## 2.10.0
 
-**Release date: May 18th 2019**
+**Release date: May 18 2019**
 
 ### Alerting Improvements
 
@@ -1021,7 +1021,7 @@ Mendix applications built on Mendix versions 7.11 or 7.12 can now be tested and 
 
 ## 2.5.0
 
-**Release date: March 8th, 2018**
+**Release date: March 8, 2018**
 
 ### Functions
 

@@ -69,7 +69,7 @@ The new features were divided into these major themes, which are described in th
 
 | Capability or Feature | Expected Release |
 | --- | --- |
-| Mendix on AWS EKS (Private Cloud) | Released for GA [Feb 8, 2023](/releasenotes/developer-portal/mendix-for-private-cloud/#february-8th-2023) |
+| Mendix on AWS EKS (Private Cloud) | Released for GA [Feb 8, 2023](/releasenotes/developer-portal/mendix-for-private-cloud/#february-8-2023) |
 | Webhooks (Mendix Cloud, Cloud Dedicated, Private Cloud) | Released for GA [Jun 15, 2023](/releasenotes/developer-portal/mendix-cloud/#june-15-2023) |
 | Multi-region failover (Mendix Cloud, Cloud Dedicated) | GA: Q3 2023 |
 | Private Mendix Platform | Currently in Private Beta<br>GA: Q4 2023   |

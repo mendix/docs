@@ -31,7 +31,7 @@ These release notes cover changes made to the [Catalog](/catalog/).
 
 * We fixed an issue where uploading an application icon did not show the correct dialog box.
 
-### June 8th, 2023
+### June 8, 2023
 
 #### Improvements
 
@@ -140,7 +140,7 @@ These release notes cover changes made to the [Catalog](/catalog/).
 
 * We fixed an issue with a `PUT` environment API request, which resulted in 409 conflict instead of updating the environment. (Ticket 173609)
 
-### December 8th, 2022
+### December 8, 2022
 
 #### Improvements
 
@@ -248,7 +248,7 @@ These release notes cover changes made to the [Catalog](/catalog/).
 
 * We fixed a bug where a 404 page was shown after clicking the Catalog call-to-action in a notification email.
 
-### September 8th, 2022
+### September 8, 2022
 
 #### Improvements
 
@@ -273,7 +273,7 @@ These release notes cover changes made to the [Catalog](/catalog/).
 * We added the option to the [Search API](/apidocs-mxsdk/apidocs/catalog-apis/#search) to paginate through search results with an offset. This allows you to limit the number of results and specify how many to skip.
 * We made several improvements to the Catalog UI.
 
-### August 18th, 2022
+### August 18, 2022
 
 #### Improvements
 
@@ -307,7 +307,7 @@ These release notes cover changes made to the [Catalog](/catalog/).
 
 * The **Capabilities** filter will now be reset when returning to the homepage.
 
-### July 28th, 2022
+### July 28, 2022
 
 #### Improvements
 
@@ -570,7 +570,7 @@ These release notes cover changes made to the [Catalog](/catalog/).
 
 * We fixed an issue with the icon size for the registered datasets.
 
-### November 18th, 2021
+### November 18, 2021
 
 #### Improvements
 
@@ -583,7 +583,7 @@ These release notes cover changes made to the [Catalog](/catalog/).
 * We fixed an issue where a Data Hub Curator could not access the fourth page or above of [Company Assets](/catalog/manage/curate/#curatelist).
 * We fixed an issue with the landscape view for datasets.
 
-### October 28th, 2021
+### October 28, 2021
 
 #### Fixes
 
@@ -780,7 +780,7 @@ The [Data Hub Transform API](https://datahub-spec.s3.eu-central-1.amazonaws.com/
 
 * [Registration](/catalog/register/register-data/) of data sources using the business application connectors from the **Catalog Home** is improved. For each connector, users can register data sources by selecting from a list of apps and environments already registered in the Catalog for the business application. When none are registered, the  "**Create New...**" option will be presented.
 
-### March 18th, 2021
+### March 18, 2021
 
 #### Improvements
 
@@ -807,7 +807,7 @@ The [Data Hub Transform API](https://datahub-spec.s3.eu-central-1.amazonaws.com/
 
 * Two new endpoints have been added to the [Catalog API](/apidocs-mxsdk/apidocs/catalog-apis/) for registering published and consumed endpoints separately.
 
-### January 28th, 2021
+### January 28, 2021
 
 #### Improvements
 
@@ -910,7 +910,7 @@ The [Data Hub Transform API](https://datahub-spec.s3.eu-central-1.amazonaws.com/
 * In Data Hub **Catalog** by default, the [search filter](/catalog/manage/search/#filter) is set to show results in the **Production** environment only. To include hits in **Non-production** or **Sandbox** environments you have to check these boxes in the **Add Filters** dialog box.
 * The [entity details](/catalog/manage/search/#entity-details) screen now displays the number of connections to the individual entity. The service details continue to show the total number of connections to the service.
 
-### October 8th, 2020
+### October 8, 2020
 
 #### Improvements
 

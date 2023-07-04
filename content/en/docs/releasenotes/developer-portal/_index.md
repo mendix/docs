@@ -61,7 +61,7 @@ To see the current status of the Mendix Developer Portal and Control Center, see
 
 * We improved the user experience of the Git migration. In case of any issues, we now provide information about why your project could not be successfully migrated from Subversion to Git and which specific branches might be the reason.
 
-### May 18th, 2023
+### May 18, 2023
 
 #### Improvements
 
@@ -306,7 +306,7 @@ In Portfolio Management, you can do the following
 
 * All [Mendix Feedback](/appstore/modules/mendix-feedback/) widgets with versions lower than 8.4.0 are disabled. The feedback provided via a widget version lower than 8.4.0 is no longer sent to the [Feedback](/developerportal/collaborate/feedback/) section of the Developer Portal, but your app will keep working as usual. Please download and replace your current Mendix Feedback widget with version 8.4.0 or higher. If you are using the [Native Mobile Resources](/appstore/modules/native-mobile-resources/) module (which also includes a version of the Mendix Feedback widget), please upgrade to version 3.5.1 or higher of that module. 
 
-### September 28th, 2022
+### September 28, 2022
 
 #### New Features
 
@@ -505,7 +505,7 @@ In Portfolio Management, you can do the following
 
 * We fixed a bug where editing a new task while [creating a story](/developerportal/collaborate/stories/#new-story) threw an error.
 
-### January 18th, 2022
+### January 18, 2022
 
 #### Improvements
 
@@ -532,7 +532,7 @@ In Portfolio Management, you can do the following
 
 * We fixed an error where it was not possible to edit a comment under a [Feedback](/developerportal/collaborate/feedback/) item. (Tickets 134179, 136172)
 
-### November 18th, 2021
+### November 18, 2021
 
 #### Improvements
 
@@ -917,7 +917,7 @@ In Portfolio Management, you can do the following
 * We placed a deprecation warning in a file hosted by the Developer Portal that is used in old versions of the [Mendix Feedback](/appstore/modules/mendix-feedback/) widget. As of October 1, 2020, we will end support for Mendix Feedback widget version 5 or below. Please always keep your Feedback widget up-to-date to ensure the best experience for your users.
 * We fixed an issue where you could move a user story to a different Sprint without specifying the target Sprint.
 
-### July 28th, 2020
+### July 28, 2020
 
 #### Fixes
 
@@ -934,7 +934,7 @@ In Portfolio Management, you can do the following
 
 * We fixed a bug where, under certain circumstances, the "View App" was disabled even though it should have been enabled.
 
-### June 28th, 2020
+### June 28, 2020
 
 #### Improvements
 
@@ -1014,7 +1014,7 @@ In Portfolio Management, you can do the following
 
 * We fixed an issue where you were redirected to the **Comments** page from the **Stories** page.
 
-### December 18th, 2019
+### December 18, 2019
 
 #### Improvements
 
@@ -1083,7 +1083,7 @@ In Portfolio Management, you can do the following
 
 * With the Beta release of Mendix Studio and Mendix Studio Pro (Mendix version 8), we have updated all mentions of *Web Modeler* to *Mendix Studio* and *Desktop Modeler* to *Mendix Studio Pro* across the Developer Portal.
 
-### April 8th, 2019
+### April 8, 2019
 
 #### Webhooks Available
 
@@ -1222,7 +1222,7 @@ The Web Modeler can now be enabled for all types of apps. You can do this on the
 
 * The **Revisions** tab on the **Story Details** page now shows the avatar of the committer instead of the app's avatar.
 
-### May 8th, 2018
+### May 8, 2018
 
 #### Improvements
 

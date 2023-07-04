@@ -94,7 +94,7 @@ With this release we updated all PhoneGap dependencies to the latest supported v
 
 ### Hybrid App Base 4.1.7
 
-**Release date: November 18th, 2019**
+**Release date: November 18, 2019**
 
 * We fixed an issue with missing build scripts.
 
@@ -119,7 +119,7 @@ With this release we updated all PhoneGap dependencies to the latest supported v
 
 ### Hybrid App Base 4.1.3 / Hybrid App Template 4.1.3
 
-**Release date: July 18th, 2019**
+**Release date: July 18, 2019**
 
 * We fixed an issue where, when using a PIN view, Android devices would sometimes offer a QWERTY keyboard instead of a numeric one.
 
@@ -156,7 +156,7 @@ To enable more control over the target architecture, use the following variants:
 
 ### Hybrid App Base 4.0.5
 
-**Release date: January 28th, 2019**
+**Release date: January 28, 2019**
 
 * We fixed an issue on iOS where the app did not fill the entire screen after the keyboard was hidden.
 
@@ -287,19 +287,19 @@ We have tested extensively against real-life projects and commonly used widgets 
 
 ### Hybrid App Base 2.3.2
 
-**Release date: October 18th, 2018**
+**Release date: October 18, 2018**
 
 * We inadvertently removed the mechanism to pin the Android support library, which could lead to issues during compilation of the app. We now pin it at SDK version 27 again.
 
 ### Hybrid App Base 2.3.1
 
-**Release date: October 18th, 2018**
+**Release date: October 18, 2018**
 
 * We upgrade the inappbrowser plugin to latest version (3.0.0).
 
 ### Hybrid App Base 2.3.0
 
-**Release date: October 18th, 2018**
+**Release date: October 18, 2018**
 
 * The Cordova inappbrowser plugin does not comply with recent changes in Android API requirements. Specifically, opening a file using the file:// protocol is disallowed. To avoid the issue, links to files (images, pdfs, etc.) are now opened using the default application available on the device.
 
@@ -527,7 +527,7 @@ For this update, we recommend that you download a fresh hybrid app package from 
 
 ### Hybrid App Base 1.2.0 / Hybrid App Template 1.2.0
 
-**Release date: August 28th, 2017**
+**Release date: August 28, 2017**
 
 * Whenever a new version of your Mendix application is deployed, the hybrid app will now ask the user to confirm that they are ready to update.
 

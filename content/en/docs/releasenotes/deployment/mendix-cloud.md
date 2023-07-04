@@ -76,7 +76,7 @@ For information on the current status of deployment to Mendix Cloud and any plan
 
 * We added a new version of the Deploy API which allows you to change the Technical Contact and team permissions of an app. See [Deploy API – Version 3](/apidocs-mxsdk/apidocs/deploy-api-3/) for further information.
 
-### January 18th, 2023
+### January 18, 2023
 
 #### Fix
 
@@ -144,7 +144,7 @@ For information on the current status of deployment to Mendix Cloud and any plan
 
 * We updated our alert template to make the alert names more descriptive and transparent. For more information, see [Alerts](/developerportal/operate/monitoring-application-health/).
 
-### August 8th, 2022
+### August 8, 2022
 
 #### Improvements
 
@@ -156,7 +156,7 @@ For information on the current status of deployment to Mendix Cloud and any plan
 
 * We have introduced support for runtime application logs to be sent from Mendix Cloud V4 to [Splunk Cloud Platform](/developerportal/operate/splunk-metrics/).
 
-### July 8th, 2022
+### July 8, 2022
 
 #### Improvements
 
@@ -301,7 +301,7 @@ Current Certificate Details: <https://crt.sh/?id=2349479044>
 
 New Certificate Details: <https://crt.sh/?id=5832398831>
 
-### November 18th, 2021
+### November 18, 2021
 
 #### Fixes
 
@@ -393,7 +393,7 @@ Existing applications will be updated in the next few weeks. Technical contacts 
 
 * We have deleted archived logs older than 6 months for all Mendix Cloud **V3** apps. This is in line with the warning given in the Developer Portal and the current commitment to keep logs for 6 months.
 
-### June 8th, 2021
+### June 8, 2021
 
 #### Improvements
 
@@ -405,7 +405,7 @@ Existing applications will be updated in the next few weeks. Technical contacts 
 
 * We now retain daily backups on Mendix Cloud V4 for 30 days. Previously, it was two weeks.
 
-### May 18th, 2021
+### May 18, 2021
 
 #### Improvements
 
@@ -453,7 +453,7 @@ Any clients that use IPv6 to connect to applications which have configured Acces
 
 * We have implemented various visual changes to the user interface of the Developer Portal.
 
-### March 18th, 2021
+### March 18, 2021
 
 #### Improvements
 
@@ -519,7 +519,7 @@ If you encounter errors using APIs, please ensure that the format matches the do
 
 * As part of a Developer Portal clean up, we removed the Model option from the DEVELOP section of the Developer Portal menu when you are looking at environments on Mendix Cloud. The functions of this page are still available via the **Edit in Studio Pro** button on the environments page.
 
-### December 8th, 2020
+### December 8, 2020
 
 * We changed the way Log Levels can be set in Mendix Cloud v4.
     * For single-instance apps, the log level can be changed while the app is running.
@@ -651,7 +651,7 @@ SSL/TLS ciphers that are still supported for HTTPS connections after December 1,
 
 * We have added *used storage space* to the Database Node Disk Usage graph in Mendix Cloud v4. See [Trends in the Mendix Cloud v4](/developerportal/operate/trends-v4/#Trends-dbdfabs) for more information.
 
-### August 28th, 2020
+### August 28, 2020
 
 #### Fixes
 
@@ -697,7 +697,7 @@ SSL/TLS ciphers that are still supported for HTTPS connections after December 1,
 * We added the ability to set the `SameSite` value on cookies to `None` for existing apps. This enables apps to run in iframes in browsers where the default SameSite setting for cookies is `Lax` or `Strict`. (Tickets 97187, 97190, 97699, 97701, 97900, and 98507)
     * This is implemented through the `SAMESITE_COOKIE_PRE_MX812` custom environment variable. For more information see [Running Your App in an Iframe](/developerportal/deploy/environments-details/#iframe) in the *Environment Details* documentation.
 
-### July 8th, 2020
+### July 8, 2020
 
 #### Fixes
 
@@ -998,7 +998,7 @@ If you run services that connect to a `*.mendixcloud.com` endpoint AND use a sta
 * We addressed and solved a problem which meant that some sandboxes could not be resumed after getting stopped.
 * We have fixed the issue that prevented apps with ACS (AppCloudServices) from being deployed using the Web Modeler. (Ticket 76888)
 
-### January 28th, 2019
+### January 28, 2019
 
 #### Improvements{#tls}
 
@@ -1083,7 +1083,7 @@ If you run services that connect to a `*.mendixcloud.com` endpoint AND use a sta
 
 * Alerts are now sent when a Mendix Cloud v3 app or database runs out of system memory.
 
-### August 8th, 2018
+### August 8, 2018
 
 #### Improvements
 
@@ -1148,7 +1148,7 @@ In some cases, you may still experience false positives for the runtime heartbea
 
 * We added alerts for when an application runs out of memory or otherwise unexpectedly crashes. This is only applicable to Mendix Cloud v4 deployments.
 
-### June 8th, 2018
+### June 8, 2018
 
 #### Improvements
 
@@ -1341,7 +1341,7 @@ In some cases, you may still experience false positives for the runtime heartbea
 
 * We removed the backup expiry entries from the activity logs for all applications in the Mendix Cloud, as we found they cluttered the overview and did not provide any useful information to users.
 
-### September 28th, 2017
+### September 28, 2017
 
 #### Improvements
 
@@ -1382,7 +1382,7 @@ In some cases, you may still experience false positives for the runtime heartbea
 
 * The [Deploy API](/apidocs-mxsdk/apidocs/deploy-api/) for apps in Mendix Cloud v4 contained multiple bugs in the start, stop and transport calls. These are now fixed.
 
-### July 18th, 2017
+### July 18, 2017
 
 #### Improvements
 

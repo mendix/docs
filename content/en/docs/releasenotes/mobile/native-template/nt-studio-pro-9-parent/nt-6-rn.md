@@ -111,7 +111,7 @@ In the end, your variable should be set up like this:
 
 ## 6.2.26
 
-**Release date: September 8th, 2022**
+**Release date: September 8, 2022**
 
 ### Improvements
 
@@ -139,7 +139,7 @@ In the end, your variable should be set up like this:
 
 ## 6.2.23
 
-**Release date: July 18th, 2022**
+**Release date: July 18, 2022**
 
 ### Improvements
 
@@ -319,7 +319,7 @@ In the end, your variable should be set up like this:
 
 ## 6.2.1 {#621}
 
-**Release date: July 28th, 2021**
+**Release date: July 28, 2021**
 
 This is a re-release of Native Template [6.2.0](#620).
 

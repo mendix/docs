@@ -10,7 +10,7 @@ tags: ["Any Chart", "Charts", "Building Blocks", "Widget", "Studio Pro"]
 
 Any Chart is a widget which is available in the Mendix Marketplace here: [Any Chart](/appstore/modules/any-chart/) module. The Any Chart module enables you to build all the chart types that are possible with Plotly.js up to the version mentioned in the widget description in the Marketplace. More about Plotly.js is available here: https://plot.ly/javascript/reference/.
 
-Any Chart building blocks are pre-configured page building blocks with the basic properties of a chart already defined. They can be placed on a Mendix page in the same way as any other widget or building block. They contain samples of the **data** and **Layout** objects which are required to create a chart. These objects are used for demo purposes at run time when there is no Source attribute selected or when rendering sample data in the Studio preview.
+Any Chart building blocks are pre-configured page building blocks with the basic properties of a chart already defined. They can be placed on a Mendix page in the same way as any other widget or building block. They contain samples of the **data** and **Layout** objects which are required to create a chart. These objects are used for demo purposes at runtime when there is no Source attribute selected or when rendering sample data in the Studio Pro preview.
 
 ## 2 Properties
 
@@ -32,7 +32,7 @@ The attribute data will merge and overwrite **Static** data.
 
 #### 2.1.3 Sample Data
 
-Data for preview. It will be merged with the **Static data** in Studio or at runtime when no **Source attribute** is selected.
+Data for preview. It will be merged with the **Static data** in Studio Pro or at runtime when no **Source attribute** is selected.
 
 #### 2.1.4 Mode
 
@@ -52,7 +52,7 @@ The attribute layout will merge and overwrite static layout options.
 
 #### 2.2.3 Sample Layout
 
-Layout options for preview. It will be merged with the 'Static' in Studio or at runtime when no 'Source attribute' is selected.
+Layout options for preview. It will be merged with the 'Static' in Studio Pro or at runtime when no 'Source attribute' is selected.
 
 {{% alert color="info" %}}
 For more a detailed description of Any Chart configuration, see [Any Chart Widgets](/refguide9/charts-any-configuration/)

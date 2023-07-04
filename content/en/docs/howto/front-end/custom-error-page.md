@@ -35,7 +35,7 @@ Before starting this how-to, make sure you have completed the following prerequi
 * Have your app *hosted in the Mendix Cloud*
 * Identify which version of the Atlas module you are using
 
-## 3 Creating a Custom Error Page
+## 3 Creating a Custom Error Page {#create-custom-error}
 
 {{% alert color="info" %}}
 If you are using Atlas 2, consider [upgrading](/refguide/moving-from-atlas-2-to-3/). If you cannot, follow the instructions below but create the **error_page** folder in your **theme** folder directly.
@@ -89,7 +89,7 @@ An example `offline.html/404.html/403.html` page could look like this:
 
 This example refers to *style.css* and *script.js*, which you should also create and place in the **error_page** directory if you want to have special styling and/or JavaScript.
 
-## 4 Creating a Re-Usable Custom Error Page
+## 4 Creating a Re-Usable Custom Error Page {#create-reusable-error}
 
 It is also possible to create custom error pages inside [re-usable theme modules](/howto/front-end/customize-styling-new/#create-theme-mod).
 

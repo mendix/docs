@@ -930,7 +930,7 @@ The same holds for the function parameters.
 * In the search dialog there is now an indicator when multi selection is available.
 * When a test case/suite that is related to a schedule/job template is deleted the related schedule/job is also deleted.
 * We added a progress bar on the sidebar search dialog. We hope that this helps prevent error due to accidentally double clicking on the select button.
-* When running a job on Browserstack or Saucelabs the job name is set as the the session name in their portals. This should make it easier to correlate the provider sessions with jobs in ATS.
+* When running a job on Browserstack or Saucelabs the job name is set as the session name in their portals. This should make it easier to correlate the provider sessions with jobs in ATS.
 
 ### Fixes
 
@@ -943,7 +943,7 @@ The same holds for the function parameters.
 * When a test case failed in a teardown step any existing screenshot from a regular step was overwritten. In order to fix this we do not take a screenshot during teardown steps anymore.
 * It was possible to add records to a dataset with no fields. This is now fixed.
 * When editing a folder and clicking cancel, the changes to the folder name were still saved. We fixed this so that clicking cancel does not result in any changes being applied.
-* When moving a folder it would sometimes happen the the name is suffixed with "(moved) (moved)" to avoid a conflict. This is fixed so that the folder name gets the suffix "(moved)" instead.
+* When moving a folder it would sometimes happen the name is suffixed with "(moved) (moved)" to avoid a conflict. This is fixed so that the folder name gets the suffix "(moved)" instead.
 * Due to a bug it was no longer possible to expand certain items on the dashboard anymore. This is now fixed.
 * When testing on Internet Explorer the calculation of the application context for example, dialog was not working. This had the effect that sometimes an element was found that was not within the current context which probably then causes a test case to fail. This is now fixed.
 * We fixed an issue in the recorder where the recorder would send too much information to ATS causing it to slow down significantly.

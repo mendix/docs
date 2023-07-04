@@ -84,7 +84,7 @@ You will want to verify that your endpoint has received a payload from Mendix an
 
 This verification is enabled through the `webhook-signature` which is sent in the webhook header. It is generated using the **Validation Secret** you provided when you set up the webhook in combination with the payload of the trigger using [HMAC-SHA256](https://en.wikipedia.org/wiki/HMAC) authentication.
 
-To verify the the signature, you need to reconstruct it and then compare it with the **webhook-signature** in the webhook header. In general, this is done as follows:
+To verify the signature, you need to reconstruct it and then compare it with the **webhook-signature** in the webhook header. In general, this is done as follows:
 
 1. Construct a string containing the signed content which is the `{webhook-id}.{webhook-timestamp}.{webhook payload}`. Note the full-stop (`.`) between the three elements.
 1. Calculate the **webhook-signature** using the HMAC-SHA256 function for your language and the **Validation Secret** you set up for the Webhook.

@@ -2,7 +2,7 @@
 title: "Archive"
 url: /developerportal/project-management/epics/archive/
 weight: 40
-description: "Describes the **Archive** page in the Project Management section."
+description: "Describes the Archive page in Epics."
 tags: ["Project Management", "Epics", "Sprint", "Archive", "Stories", "Developer Portal"]
 ---
 ## 1 Introduction
@@ -42,9 +42,9 @@ When you click the Sprint name in a row of an archived story on the **Archived**
 * When the Sprint was archived
 * When the Sprint started and ended
 * Summary of the Sprint
-  * How many stories were completed
-  * How many stories were uncompleted
-  * Breakdown of completed points
+    * How many stories were completed
+    * How many stories were uncompleted
+    * Breakdown of completed points
 * Sprint goal
 * Whether the Sprint goal was reached
 * Who archived the Sprint (shown under **Archived by**)

@@ -49,5 +49,3 @@ This query returns all logs where the month value `DateAttribute` is 12 (Decembe
      //Logging.Log[month-from-dateTime(DateAttribute, 'America/New_York') = 12]
     {{% /tab %}}
 {{< /tabpane >}}
-
-

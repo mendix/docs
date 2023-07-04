@@ -28,6 +28,7 @@ For example, the following drop-down allows the end-user to see, and set, the **
 The properties pane is divided into two major sections by a toggle at the top of the pane: **Properties** and **Styling**. Drop-down properties consist of the following sections:
 
 Properties:
+
 * [General](#general)
 * [Data source](#data-source)
 * [Label](#label)
@@ -39,6 +40,7 @@ Properties:
 * [Events](#events)
 
 Styling:
+
 * [Design Properties](#design-properties)
 * [Common](#common-styling)
 

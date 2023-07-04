@@ -12,10 +12,6 @@ tags: ["studio pro", "upgrade", "runtime", "xpath"]
 
 Mendix Studio Pro 10 is a [major version](/releasenotes/studio-pro/lts-mts/#major-version) release that provides powerful tools for building your apps and brings a host of improvements and fixes. For the full list of changes, see the [Studio Pro 10 release notes](/releasenotes/studio-pro/10.0/).
 
-{{% alert color="warning" %}}
-Mendix Studio Pro [10.0](/releasenotes/studio-pro/10.0/) is currently in [Beta](/releasenotes/beta-features/). The GA release is in June, 2023, as scheduled in the [Studio Pro release timeline](/releasenotes/studio-pro/lts-mts/#major-version).
-{{% /alert %}}
-
 ### 1.1 Upgrading from Studio Pro 9 to 10
 
 The sections below describe upgrading from Studio Pro 9 to Studio Pro 10.

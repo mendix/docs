@@ -49,4 +49,3 @@ This query returns all the logs where the hours part of `DateAttribute` is 8 in 
      //Logging.Log[hours-from-dateTime(DateAttribute, 'America/New_York') = 8]
     {{% /tab %}}
 {{< /tabpane >}}
-

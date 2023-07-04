@@ -49,6 +49,6 @@ To import this module into your app, follow the instructions in [How to Use Mark
 
 ## 4 Troubleshooting {#troubleshooting}
 
-#### 4.1 Surveys Do Not Work Locally When Running Multiple Applications
+### 4.1 Surveys Do Not Work Locally When Running Multiple Applications
 
 If this occurs, upgrade the module to v1.1.0 or above, and ensure to clear your browsers cached data to remove deprecated feature – you only need to do this one time in your browser.

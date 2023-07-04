@@ -23,11 +23,13 @@ A label shows static text, which describes the purpose of a specific widget to a
 The properties pane is divided into two major sections by a toggle at the top of the pane: **Properties** and **Styling**. Label properties consist of the following sections:
 
 Properties:
+
 * [General](#general)
 * [Visibility](#visibility)
 * [Common](#common)
 
 Styling:
+
 * [Design Properties](#design-properties)
 * [Common](#common-styling)
 

@@ -531,7 +531,7 @@ You can usually leave the key store settings as the default. The SAML module wil
 * when the IdP encryption key length is changed
 * when you attempt to upload a keypair and the upload fails for any reason
 
-However, there may be a requirement to use a specific key store. If you want to upload a key pair certificate, click **Upload** to upload a key store file. Use the **Entity Id** as the the alias of the key store.
+However, there may be a requirement to use a specific key store. If you want to upload a key pair certificate, click **Upload** to upload a key store file. Use the **Entity Id** as the alias of the key store.
 
 {{% alert color="info" %}}
 For versions below 3.5.0 only:

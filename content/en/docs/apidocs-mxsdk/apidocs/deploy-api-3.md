@@ -85,7 +85,7 @@ The following steps will change the permissions of a team member to an environme
 
 {{% alert color="info" %}}Only the following people can change the access permissions of team members: Mendix Admins of the company, the Technical Contact of the app, and the app team members who can manage permissions.{{% /alert %}}
 
-1.  Set up your authentication PAT. You must have permission to **Manage Permissions** for the app.
+1. Set up your authentication PAT. You must have permission to **Manage Permissions** for the app.
 
 1. Call `GET /apps/{appId}/environments/{environmentId}/permissions` to get the existing Team Members' permissions for this {environmentId} of this {appId}. For example:
 

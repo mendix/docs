@@ -340,7 +340,6 @@ This button contains a list of actions which you can perform quickly on the envi
 * **Model Options** – allows you to change the running of scheduled events and the values of constants for your app by taking you to the **Model Options** tab of the **Environment Details** page
 * **Stop Application** (only shown if at least one replica is running) — stops the application by reducing the number of replicas to zero
 * **Delete Environment** – this deletes the environment (see [Current Limitations](#limitations), below, for additional details about what is deleted) — you will be asked to confirm this action
-* **Set as Studio Deployment target** - this allows you to select the default target environment for Studio deployment.
 
 ### 4.3 Activity
 

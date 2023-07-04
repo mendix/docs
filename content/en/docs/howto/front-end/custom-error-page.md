@@ -91,32 +91,32 @@ This example refers to *style.css* and *script.js*, which you should also create
 
 ## 4 Creating a Re-Usable Custom Error Page
 
-It is also possible to create custom error pages inside [re-usable theme modules](/howto/front-end/customize-styling-new/#create-theme-mod) in a similar way as described above.
+It is also possible to create custom error pages inside [re-usable theme modules](/howto/front-end/customize-styling-new/#create-theme-mod).
 
-To create a custom error page inside your theme module:
+To create a custom error page inside your theme module, do the following:
 
 1. Open your app's local folder.
-2. Go to **themesource**:
+1. Go to **themesource**:
 
    {{< figure src="/attachments/howto/front-end/custom-error-page/themesource.png" >}}
 
-3. Open your theme module's folder:
+1. Open your theme module's folder:
 
    {{< figure src="/attachments/howto/front-end/custom-error-page/module-themesource.png" >}}
 
-4. Open the **public** folder:
+1. Open the **public** folder:
 
    {{< figure src="/attachments/howto/front-end/custom-error-page/public.png" >}}
 
-5. Create a new folder named *error_page*:
+1. Create a new folder named *error_page*:
 
    {{< figure src="/attachments/howto/front-end/custom-error-page/public-error-page.png" >}}
 
-6. In the **error_page** folder, place your *offline.html*, *404.html*, and/or *403.html* files:
+1. In the **error_page** folder, place your *offline.html*, *404.html*, and/or *403.html* files:
 
    {{< figure src="/attachments/howto/front-end/custom-error-page/offline.png" >}}
 
-When this module is imported into other apps, its custom error pages will automatically become available.
+Now you have a custom error page inside a re-useable theme module! When this module is imported into other apps, its custom error pages will automatically become available.
 
 This can also be used in a [company design system](/howto/front-end/create-a-company-design-system/).
 

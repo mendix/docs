@@ -25,7 +25,7 @@ weight: 100
 
 ## 2.28.11
 
-**Release date: May 9th, 2023**
+**Release date: May 9, 2023**
 
 ### Fixes
 
@@ -106,7 +106,7 @@ weight: 100
 
 ## 2.28.3
 
-**Release date: November 29th, 2022**
+**Release date: November 29, 2022**
 
 ### Fixes
 
@@ -114,7 +114,7 @@ weight: 100
 
 ## 2.28.2
 
-**Release date: November 9th, 2022**
+**Release date: November 9, 2022**
 
 ### Fixes
 
@@ -245,7 +245,7 @@ To prevent such incidents, we no longer allow two users to edit a test case simu
 
 ## 2.22.0
 
-**Release date: January 19th, 2021**
+**Release date: January 19, 2021**
 
 ### Reworked Value Entry Widget
 
@@ -362,7 +362,7 @@ To make this process even faster and skip one click, we added the option to run 
 
 ## 2.19.0
 
-**Release date: June 9th 2020**
+**Release date: June 9 2020**
 
 ### License Improvements
 
@@ -762,7 +762,7 @@ Mendix applications that are based on Mendix version 7.17 can now be tested and 
 
 ## 2.9.1
 
-**Release date: August 9th, 2018**
+**Release date: August 9, 2018**
 
 ### Fixes
 
@@ -1114,7 +1114,7 @@ This opens up a lot exciting possibilities for us as ATS developers. For example
 
 ## 2.3.0
 
-**Release date: November 29th, 2017**
+**Release date: November 29, 2017**
 
 ### Improvements
 
@@ -1196,7 +1196,7 @@ We saw decreasing performance in some parts of the UI when you had a lot of data
 
 ## 2.0.0
 
-**Release date: October 19th, 2017**
+**Release date: October 19, 2017**
 
 ### More Platform Integration
 
@@ -1435,7 +1435,7 @@ ATS now supports testing the recently released Mendix 7.
 
 ## 1.8.3
 
-**Release date: December 19th, 2016**
+**Release date: December 19, 2016**
 
 ### Improvements
 

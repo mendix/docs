@@ -370,7 +370,7 @@ Now each app has its own license, even if it runs under the same user account as
 
 #### 1.0.6.1
 
-**Release date: November 29th, 2010**
+**Release date: November 29, 2010**
 
 * added support for defining Mendix Service settings file as first command line argument.
 

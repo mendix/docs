@@ -162,13 +162,13 @@ For information on the current status of deployment to Mendix Cloud and any plan
 
 We added the ability to enable and disable additional services at an app and environment level.
 
-### June 29th, 2022
+### June 29, 2022
 
 #### Improvements
 
 **Update of `*.apps.ca-1a.mendixcloud.com` TLS certificate**
 
-We replaced the TLS certificate for `*.apps.ca-1a.mendixcloud.com` on June 29th, 2022. Browsers like Mozilla Firefox, Microsoft Edge, and Google Chrome automatically trust the new certificate. In those cases, there is nothing you have to do.
+We replaced the TLS certificate for `*.apps.ca-1a.mendixcloud.com` on June 29, 2022. Browsers like Mozilla Firefox, Microsoft Edge, and Google Chrome automatically trust the new certificate. In those cases, there is nothing you have to do.
 
 Current Certificate Details: <https://crt.sh/?id=4793020705>
 
@@ -176,7 +176,7 @@ New Certificate Details: <https://crt.sh/?id=6940447552>
 
 **Update of `*.apps.au-1a.mendixcloud.com` TLS certificate**
 
-We replaced the TLS certificate for `*.apps.au-1a.mendixcloud.com` on June 29th, 2022. Browsers like Mozilla Firefox, Microsoft Edge, and Google Chrome automatically trust the new certificate. In those cases, there is nothing you have to do.
+We replaced the TLS certificate for `*.apps.au-1a.mendixcloud.com` on June 29, 2022. Browsers like Mozilla Firefox, Microsoft Edge, and Google Chrome automatically trust the new certificate. In those cases, there is nothing you have to do.
 
 Current Certificate Details: <https://crt.sh/?id=4793020687>
 
@@ -417,7 +417,7 @@ Existing applications will be updated in the next few weeks. Technical contacts 
 
 * Mendix Cloud database backups are now created with `pg_dump` version 1.14. This version is shipped with PostgreSQL since October 2019 (PostgreSQL 12, 13). The side-effect is that it is not possible to restore these PostgreSQL backups using a `pg_restore` version below 1.14 (PostgreSQL <= 11). The error that you will receive is `pg_restore: [archiver] unsupported version (1.14) in file header`. To resolve this issue, upgrade your software to a version that includes newer versions of `pg_dump` and `pg_restore`. Examples are PostgreSQL client version 12 or 13, or [PGAdmin version 4.12 or above](https://www.pgadmin.org/download/).
 
-### April 29th, 2021
+### April 29, 2021
 
 #### Improvements
 
@@ -932,7 +932,7 @@ If you run services that connect to a `*.mendixcloud.com` endpoint AND use a sta
 
 * We redesigned the App User management page of the Developer Portal for Mendix Cloud environments which are enabled for single sign-on (SSO).
 
-### May 9th, 2019
+### May 9, 2019
 
 #### Fixes
 
@@ -963,7 +963,7 @@ If you run services that connect to a `*.mendixcloud.com` endpoint AND use a sta
 
 * We have fixed an issue with changing [Node Permissions](/developerportal/deploy/node-permissions/).
 
-### March 29th, 2019
+### March 29, 2019
 
 #### Improvements
 
@@ -1077,7 +1077,7 @@ If you run services that connect to a `*.mendixcloud.com` endpoint AND use a sta
 * The Postgres database size can also be observed in Datadog after enabling it in the Developer Portal.
 * The **Environments** breadcrumb in **Deploy** > **Environments** > environment is now a link that redirects you back to the **Environments** page.
 
-### August 9th, 2018
+### August 9, 2018
 
 #### Improvements
 
@@ -1183,7 +1183,7 @@ In some cases, you may still experience false positives for the runtime heartbea
 * We fixed an issue that prevented our Mendix Cloud v4 users from uploading and restoring big backups (larger than ~30 GB) to their environments. It has been tested with the archives (~90 GBs) on Mendix Cloud v4.
 * We addressed and fixed an issue that caused Mendix Cloud v4 users in the Asia Pacific time zone to receive the wrong timestamps when they downloaded daily logs.
 
-### April 9th, 2018
+### April 9, 2018
 
 #### Improvements
 
@@ -1253,7 +1253,7 @@ In some cases, you may still experience false positives for the runtime heartbea
 * We addressed and fixed an issue where a backup activity item was added each time the backups page was viewed.
 * The environment details list was loading slowly for some of our users, which is now fixed.
 
-### February 19th, 2018
+### February 19, 2018
 
 #### Improvements
 
@@ -1276,7 +1276,7 @@ In some cases, you may still experience false positives for the runtime heartbea
 
 ## 2017
 
-### December 29th, 2017
+### December 29, 2017
 
 #### Fixes
 
@@ -1397,7 +1397,7 @@ In some cases, you may still experience false positives for the runtime heartbea
 * Due to a ZIP file encoding change in Mendix 7.5.0, AppServices could not be parsed when deploying to the Mendix Cloud. We fixed this.
 * The **View Current Log** button is no longer hidden for Free Apps.
 
-### May 19th, 2017
+### May 19, 2017
 
 #### Fixes
 

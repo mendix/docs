@@ -17,7 +17,7 @@ To see the current status of the Mendix Developer Portal and Control Center, see
 
 ## 2023
 
-### June 29th, 2023
+### June 29, 2023
 
 #### New Features
 
@@ -152,7 +152,7 @@ To see the current status of the Mendix Developer Portal and Control Center, see
 
 * We have deprecated **General Settings** > **Webhooks** for stories and Sprints. For more information, see the deprecation note in the [Webhooks](/developerportal/collaborate/general-settings/#webhooks) section of *General Settings*. You can now set webhooks for building and deploying your app. These are described in [Webhooks](/developerportal/deploy/webhooks/).
 
-### March 9th, 2023
+### March 9, 2023
 
 #### Improvements
 
@@ -359,7 +359,7 @@ In Portfolio Management, you can do the following
 * We simplified the process of [inviting other users](/developerportal/collaborate/team/#inviting) to your projects. Now you do not need to add a personal message to the invitation anymore and the whole process can be completed on a single page.
 * We added a banner about [Epics](/developerportal/project-management/epics/), our new tool for Agile planning, on the [Stories](/developerportal/collaborate/stories/) page. This banner provides more information about Epics and makes it easier for Scrum Masters to enable it for their projects.  
 
-### August 9th, 2022
+### August 9, 2022
 
 #### New Features
 
@@ -421,7 +421,7 @@ In Portfolio Management, you can do the following
 * We fixed an issue where users with an invalid Twitter URL in the **Social** section of their Mendix Profile Settings could not change their password.
 * We fixed an issue where users could have a duplicated project membership, resulting in two identical projects in the Developer Portal.
 
-### June 9th, 2022
+### June 9, 2022
 
 #### New Features
 
@@ -432,7 +432,7 @@ In Portfolio Management, you can do the following
 * The free and licensed Mendix Cloud environments of an app are now visualized on the [app details](/developerportal/control-center/#app-details) page in Control Center.
 * From now on, the free Mendix Cloud environment of an app will be deleted whenever the app is deactivated or deleted.
 
-### May 19th, 2022
+### May 19, 2022
 
 #### Fixes
 
@@ -640,7 +640,7 @@ In Portfolio Management, you can do the following
 
 * We added a new menu item for Mendix Admins to access [Catalog Administration](/developerportal/control-center/#catalog) tasks in Control Center. For details, see [Catalog Administration](/developerportal/control-center/catalog-admin/).
 
-### August 19th, 2021
+### August 19, 2021
 
 #### Improvements
 
@@ -764,7 +764,7 @@ In Portfolio Management, you can do the following
 
 * We fixed a bug where selecting an IBM or SAP template in the **Create App** flow did not direct you to the right page. 
 
-### March 9th, 2021
+### March 9, 2021
 
 #### Improvements
 
@@ -800,7 +800,7 @@ In Portfolio Management, you can do the following
     * Open the [Team](/developerportal/collaborate/team/#managing) page from the project details page in order to manage team members and add yourself to a team (if you are a Mendix Admin)
     * Deactivate or delete an app or a team member
 
-### February 9th, 2021
+### February 9, 2021
 
 #### Improvements
 
@@ -876,7 +876,7 @@ In Portfolio Management, you can do the following
 * We fixed a bug where a change of company name was not properly distributed along the platform.
 * We fixed a bug where drop-down menus were cut off on the [story details](/developerportal/collaborate/stories/#story-details) page.
 
-### October 9th, 2020
+### October 9, 2020
 
 #### Fixes
 
@@ -1052,14 +1052,14 @@ In Portfolio Management, you can do the following
 * We fixed an issue that occasionally triggered an error message during signup.
 * We made various small performance improvements on the Developer Portal.
 
-### September 19th, 2019
+### September 19, 2019
 
 #### Launchpad Removal and App User Management Update
 
 * We removed the old launchpad page, as we have moved to a new SSO architecture. The old URL `launchpad.mendix.com` now links to your [My Apps](/developerportal/#my-apps) page.
 * We moved the App User management functionality of the launchpad to the **General** app settings in the Developer Portal. For more information, see the [Managing App Users](/developerportal/collaborate/general-settings/#managing-app-users) section of *How to Manage General App Settings*.
 
-### August 9th, 2019
+### August 9, 2019
 
 #### App User Management Improvements 
 
@@ -1237,7 +1237,7 @@ The Web Modeler can now be enabled for all types of apps. You can do this on the
 * If there is a lot of activity in a Buzz thread, each notification email now displays the correct thread history, instead of each email containing the same comments.
 * We fixed two documentation links.
 
-### April 9th, 2018
+### April 9, 2018
 
 #### Fixes
 

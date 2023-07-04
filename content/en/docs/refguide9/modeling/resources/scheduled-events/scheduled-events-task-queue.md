@@ -55,7 +55,7 @@ This allows you to run the event on the same date every year (for example, April
 | On overlap | See explanation of options in [Long-running Events](#long-events). |
 
 {{% alert color="warning" %}}
-It is possible to select the leap day (February 29th). In non-leap years the event will then be executed on February 28th.
+It is possible to select the leap day (February 29). In non-leap years the event will then be executed on February 28th.
 {{% /alert %}}
 
 #### 4.1.2 Specific Month and Weekday

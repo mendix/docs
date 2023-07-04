@@ -21,7 +21,7 @@ Please use a Native Template version [compatible](/releasenotes/mobile/nt-studio
 
 ## 5.1.20
 
-**Release date: November 9th, 2022**
+**Release date: November 9, 2022**
 
 ### Fixes
 
@@ -38,7 +38,7 @@ Please use a Native Template version [compatible](/releasenotes/mobile/nt-studio
 
 ## 5.1.17
 
-**Release date: September 29th, 2021**
+**Release date: September 29, 2021**
 
 ### Improvements
 
@@ -46,7 +46,7 @@ iOS 15 requires you to recompile your apps with XCode 13. This release bumps the
 
 ## 5.1.16
 
-**Release date: September 9th, 2021**
+**Release date: September 9, 2021**
 
 ### Fixes
 
@@ -54,7 +54,7 @@ iOS 15 requires you to recompile your apps with XCode 13. This release bumps the
 
 ## 5.1.15
 
-**Release date: August 9th, 2021**
+**Release date: August 9, 2021**
 
 ### Improvements
 

@@ -161,7 +161,7 @@ On iOS:
 
 ## Android 1.2.0 / iOS 1.2.0
 
-**Release date: October 29th, 2019**
+**Release date: October 29, 2019**
 
 ### New Features
 

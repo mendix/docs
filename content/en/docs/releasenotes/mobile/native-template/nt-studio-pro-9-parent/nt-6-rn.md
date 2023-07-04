@@ -49,7 +49,7 @@ In the end, your variable should be set up like this:
 
 ## 6.3.2
 
-**Release date: November 9th, 2022**
+**Release date: November 9, 2022**
 
 ### Fixes
 
@@ -81,7 +81,7 @@ In the end, your variable should be set up like this:
 
 ## 6.2.28
 
-**Release date: November 9th, 2022**
+**Release date: November 9, 2022**
 
 ### Fixes
 
@@ -89,7 +89,7 @@ In the end, your variable should be set up like this:
 
 ## 6.2.27
 
-**Release date: September 19th, 2022**
+**Release date: September 19, 2022**
 
 ### Improvements
 
@@ -243,7 +243,7 @@ In the end, your variable should be set up like this:
 
 ## 6.2.9 {#6.2.9}
 
-**Release date: November 29th, 2021**
+**Release date: November 29, 2021**
 
 ### Improvements
 
@@ -287,7 +287,7 @@ In the end, your variable should be set up like this:
 
 ## 6.2.5
 
-**Release date: September 29th, 2021**
+**Release date: September 29, 2021**
 
 ### Improvements
 
@@ -311,7 +311,7 @@ In the end, your variable should be set up like this:
 
 ## 6.2.2
 
-**Release date: July 29th, 2021**
+**Release date: July 29, 2021**
 
 ### Fixes
 

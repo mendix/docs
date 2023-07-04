@@ -113,7 +113,7 @@ This feature is currently in a Beta release.
 * We have fixed an issue where enabling the **Add credentials to pull secrets** option would not work when the Push URL and Pull URL were different. With this update, credentials are now added for the push and pull registries.
 * We have extended the options for configuring Google Cloud storage buckets. It is now possible to share a bucket between multiple environments.
 
-### March 9th, 2023
+### March 9, 2023
 
 #### Deploy API Improvements
 
@@ -138,7 +138,7 @@ This feature is currently in a Beta release.
 * We have improved the validation message for the internal name in the environment creation flow.
 * We have removed access to the old deployment packages repository. This means that active deployment packages which have not been deployed in the last 4 weeks might stop working. If that happens, simply recreate the deployment package with the same revision, and then redeploy it in your environment.
 
-### February 9th, 2023
+### February 9, 2023
 
 #### Portal Improvements
 
@@ -178,7 +178,7 @@ Your build may fail if you try to deploy the same deployment package more than o
 * We have switched from UBI 8 Minimal base images to [UBI 8 Micro](https://www.redhat.com/en/blog/introduction-ubi-micro).
 * We have implemented a feature to use [IAM role authentication](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/UsingWithRDS.IAMDBAuth.html) when connecting to RDS Postgres databases. This feature depends on an upcoming release of Mendix, and additional documentation will be provided later.
 
-### January 19th, 2023
+### January 19, 2023
 
 #### Portal Improvements
 
@@ -249,7 +249,7 @@ Your build may fail if you try to deploy the same deployment package more than o
 * We have made the **Subscription Secret** field optional – if no subscription secret is provided the app will be considered a trial app.
 * We now allow you to retrieve up to 100 branches for a project when creating a deployment package in the portal.
 
-### September 29th, 2022
+### September 29, 2022
 
 #### Mendix Operator v2.8.0{#2.8.0}
 
@@ -310,7 +310,7 @@ Your build may fail if you try to deploy the same deployment package more than o
 * We addressed a regression in Mendix Operator v2.5.0 where an error would show a spinner icon in the Developer Portal (instead of an error icon)
 * We addressed an issue with deleting Minio storage from [Minio RELEASE.2021-11-05T09-16-26Z](https://github.com/minio/minio/releases/tag/RELEASE.2021-11-05T09-16-26Z) and later versions
 
-### May 19th, 2022
+### May 19, 2022
 
 #### Portal Improvement
 
@@ -403,7 +403,7 @@ This issue is fixed in Mendix Operator [version 2.5.1](#2.5.1).
 
 ## 2021
 
-### December 9th, 2021
+### December 9, 2021
 
 #### Portal Improvements
 
@@ -470,7 +470,7 @@ To use Prometheus metrics, upgrade to Mendix Operator v2.1.0 (or above) and foll
 
 This tool is available as a technical preview. For documentation and download links, see the [documentation](/developerportal/deploy/private-cloud-data-transfer/).
 
-### September 9th, 2021
+### September 9, 2021
 
 #### mxpc-cli v2.1.1 for Mendix Operator v2.1.0 and Mendix Gateway Agent v2.1.0{#2.1.1}
 
@@ -534,7 +534,7 @@ To upgrade an existing installation of Mendix for Private Cloud to Mendix Operat
 * We resolved an issue where environment variables were limited to 200 characters.
 * We resolved an issue where changing the cluster name or description could remove other cluster managers from the cluster.
 
-### June 29th, 2021
+### June 29, 2021
 
 #### Mendix Operator v1.12.0 and Mendix Gateway Agent v1.11.0
 
@@ -570,7 +570,7 @@ To upgrade an existing installation of Private Cloud to this version, follow the
 
 To upgrade an existing installation of Private Cloud to this version, follow the [Upgrade instructions](/developerportal/deploy/private-cloud-upgrade-guide/).
 
-### April 19th, 2021
+### April 19, 2021
 
 #### Portal Improvements
 
@@ -647,7 +647,7 @@ After upgrading the Mendix Operator, we recommend downloading the latest version
 
 ## 2020
 
-### December 29th, 2020
+### December 29, 2020
 
 #### Fixes
 
@@ -724,7 +724,7 @@ To upgrade an existing installation of Private Cloud to this version, follow the
 
 * We resolved an issue where deployment of a new MDA to an environment set the constant values to the defaults in the MDA rather than applying the values set through the environment's [Model Options](/developerportal/deploy/private-cloud-deploy/#environment-details). (Ticket 106933)
 
-### September 9th, 2020
+### September 9, 2020
 
 #### Mendix Operator v1.5.0 and Mendix Gateway Agent v1.4.0
 
@@ -755,7 +755,7 @@ To upgrade an existing installation of Private Cloud to this version, follow the
 
 * We fixed a bug where creating an environment with a name that had been used before showed the state of the old environment before it was removed.
 
-### July 29th, 2020
+### July 29, 2020
 
 #### Portal Improvements
 
@@ -811,7 +811,7 @@ We released a new version of the Mendix for Private Cloud Operator.
 
 To upgrade an existing installation of Private Cloud to this version, follow the [Upgrade instructions](/developerportal/deploy/private-cloud-upgrade-guide/).
 
-### June 19th, 2020
+### June 19, 2020
 
 #### Mendix Operator v1.1.1
 

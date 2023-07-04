@@ -22,7 +22,7 @@ description: "Native Template 5.2 release notes."
 
 ## 5.2.14
 
-**Release date: November 9th, 2022**
+**Release date: November 9, 2022**
 
 ### Fixes
 
@@ -55,7 +55,7 @@ description: "Native Template 5.2 release notes."
 
 ## 5.2.9
 
-**Release date: March 29th, 2022** 
+**Release date: March 29, 2022** 
 
 ### Improvements
 
@@ -95,7 +95,7 @@ description: "Native Template 5.2 release notes."
 
 ## 5.2.4
 
-**Release date: September 29th, 2021**
+**Release date: September 29, 2021**
 
 ### Improvements
 
@@ -111,7 +111,7 @@ description: "Native Template 5.2 release notes."
 
 ## 5.2.2
 
-**Release date: August 9th, 2021**
+**Release date: August 9, 2021**
 
 ### Improvements
 

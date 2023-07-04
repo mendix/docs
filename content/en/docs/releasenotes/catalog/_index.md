@@ -13,7 +13,7 @@ These release notes cover changes made to the [Catalog](/catalog/).
 
 ## 2023
 
-### June 29th, 2023
+### June 29, 2023
 
 #### Improvements
 
@@ -101,7 +101,7 @@ These release notes cover changes made to the [Catalog](/catalog/).
 
 * We added a link to the Marketplace module under authentication details that implements the specified authentication method.
 
-### February 9th, 2023
+### February 9, 2023
 
 #### Improvements
 
@@ -217,7 +217,7 @@ These release notes cover changes made to the [Catalog](/catalog/).
 
 * We fixed an error that was preventing the registration a new version of an existing service on the Registration form. 
 
-### September 29th, 2022
+### September 29, 2022
 
 #### Improvements
 
@@ -365,7 +365,7 @@ These release notes cover changes made to the [Catalog](/catalog/).
 
 * We fixed a bug where the `GET ServiceVersion` operation of the DataHub V2 API would not always return the `ContractType` of a `Service`. See [Catalog APIs](https://platformcore.pages.rnd.mendix.com/datahub-spec/) for a list of all available APIs.
 
-### May 19th, 2022
+### May 19, 2022
 
 #### Improvements
 
@@ -552,7 +552,7 @@ These release notes cover changes made to the [Catalog](/catalog/).
 
 * We consolidated the existing **Edit Metadata**, **Discoverability**, and **Validate** drop-down menus into one menu named **Edit**.
 
-### December 9th, 2021
+### December 9, 2021
 
 #### Fixes
 
@@ -629,7 +629,7 @@ These release notes cover changes made to the [Catalog](/catalog/).
 #### Fixes
 
 * We fixed an issue where the **Curate** button appeared in the navigation for users who were not able to curate any content.
-* We removed duplicate endpoints that had been created due to an issue fixed in the [September 9th](#nine) release.
+* We removed duplicate endpoints that had been created due to an issue fixed in the [September 9](#nine) release.
 
 ### September 16, 2021
 
@@ -642,7 +642,7 @@ These release notes cover changes made to the [Catalog](/catalog/).
 * We fixed an issue with pagination for Applications and Environments in the API.
 * We fixed styling issues.
 
-### September 9th, 2021 {#nine}
+### September 9, 2021 {#nine}
 
 #### Fixes
 
@@ -668,7 +668,7 @@ These release notes cover changes made to the [Catalog](/catalog/).
 * A change was made to the `POST` application API call to also allow for the `Opcenter` and `MindSphere` application types.
 * We added Catalog integration with [Control Center](/developerportal/control-center/#catalog). For details, see [Catalog Administration](/developerportal/control-center/catalog-admin/).
 
-### August 19th, 2021
+### August 19, 2021
 
 #### Fixes
 
@@ -695,7 +695,7 @@ These release notes cover changes made to the [Catalog](/catalog/).
 
 * We made various security and UI fixes.
 
-### July 29th, 2021
+### July 29, 2021
 
 #### New Feature
 
@@ -762,7 +762,7 @@ These release notes cover changes made to the [Catalog](/catalog/).
 
 The [Data Hub Transform API](https://datahub-spec.s3.eu-central-1.amazonaws.com/transform.html) is available for Mendix users deploying their apps to non-Mendix environments.  The Transform API extracts the information from the the app’s `dependencies.json` file to generate the request bodies that are required when using the [Catalog API](/apidocs-mxsdk/apidocs/catalog-apis/). For further information see [Data Hub Transform API](/apidocs-mxsdk/apidocs/catalog-apis/#transform).
 
-### April 29th, 2021
+### April 29, 2021
 
 #### Improvements
 
@@ -801,7 +801,7 @@ The [Data Hub Transform API](https://datahub-spec.s3.eu-central-1.amazonaws.com/
 
 * Data sources from different enterprise business applications can now be registered more easily in Data Hub using the new [Registration functionality](/catalog/register/register-data/). This will enable users to use those datasets when developing apps without having to worry about connectivity to the application. This functionality replaces the previous manual registration form.
 
-### February 19th, 2021
+### February 19, 2021
 
 #### Improvements
 
@@ -879,7 +879,7 @@ The [Data Hub Transform API](https://datahub-spec.s3.eu-central-1.amazonaws.com/
 
 * You can now sign-out from the Mendix Platform from the Mendix top bar when you click on the account avatar.
 
-### November 19th, 2020
+### November 19, 2020
 
 #### New Features
 
@@ -902,7 +902,7 @@ The [Data Hub Transform API](https://datahub-spec.s3.eu-central-1.amazonaws.com/
 
 * In the Data Hub **Catalog** search pane, we now show the number of  [filters](/catalog/manage/search/#filter) that are active for the current search at the filter icon.
 
-### October 29th, 2020
+### October 29, 2020
 
 #### Improvements
 

@@ -13,7 +13,7 @@ These release notes cover changes made to the [Mendix Marketplace](/appstore/).
 
 ## 2023
 
-### June 29th, 2023
+### June 29, 2023
 
 #### New Features
 
@@ -153,7 +153,7 @@ If you are using Studio Pro on a Mac with Parallels, see [this update](https://k
 
 * We have replaced the **Download** button with the **Start with Template** button for the **Create New App** category.
 
-### July 29th, 2021
+### July 29, 2021
 
 #### New Features
 
@@ -216,7 +216,7 @@ If you are using Studio Pro on a Mac with Parallels, see [this update](https://k
 * We added email notifications for several actions in the Marketplace. You can now receive emails if one of your components has changed, when a published component has received a review, and when you receive a reply to one of your reviews. You can unsubscribe from any of notifications in the [My Marketplace](/appstore/general/app-store-overview/#my-marketplace) section of the of Marketplace.
 * Developers can now reply to reviews of their components.
 
-### February 9th, 2021
+### February 9, 2021
 
 #### Improvements
 
@@ -376,7 +376,7 @@ We added a component in the App Store which, when configured in your app, allows
 * We fixed the issue with selecting specific app templates when creating a new app in Mendix Studio Pro (Desktop Modeler).
 * We fixed the problems with deep links for private apps.
 
-### April 29th, 2019
+### April 29, 2019
 
 #### Improvements
 

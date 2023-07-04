@@ -324,7 +324,7 @@ We have tested extensively against real-life projects and commonly used widgets 
 
 ### Hybrid App Base 2.1.0
 
-**Release date: July 9th, 2018**
+**Release date: July 9, 2018**
 
 {{% alert color="warning" %}}
 
@@ -362,7 +362,7 @@ For this update, we recommend downloading a fresh hybrid app package from the Me
 
 ### Hybrid App Base 2.0.4
 
-**Release date: April 19th, 2018**
+**Release date: April 19, 2018**
 
 * We improved the styling of the loader screen.
 * We added backwards compatibility with respect to quality vs. density properties (for Android only).
@@ -387,7 +387,7 @@ This patch fixes an issue with an upstream dependency (`com.android.support:supp
 
 ### Hybrid App Base 2.0.0 / Hybrid App Template 2.0.0
 
-**Release date: March 9th, 2018**
+**Release date: March 9, 2018**
 
 {{% alert color="info" %}}
 

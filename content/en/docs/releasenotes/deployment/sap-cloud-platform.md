@@ -44,7 +44,7 @@ For information on the current status of deployment to SAP BTP and any planned r
 
 ## 2021
 
-### December 9th, 2021
+### December 9, 2021
 
 #### Improvements
 
@@ -61,7 +61,7 @@ For information on the current status of deployment to SAP BTP and any planned r
 * You can now upload your service configurations directly from the Configurator without having to download the configuration first.
 * We added the ability to unbind services from your environment without deleting the service. This makes it easier to change the configuration of a service and then rebind it.
 
-### August 19th, 2021
+### August 19, 2021
 
 #### Improvements – OData Connector for SAP Solutions
 
@@ -131,7 +131,7 @@ For more information see [SAP Business Technology Platform - deploy](/developerp
 
 * We released the [SAP Fiori 3 UI Resource](https://marketplace.mendix.com/link/component/116359) module in the Mendix Marketplace. This allows you to create the SAP Fiori 3 user experience in your Mendix apps. SAP Fiori 3 is the new target design system for all SAP products in the *Intelligent Suite*. For more information, see [SAP Fiori 3.0 Styling](/partners/sap/sap-fiori-3-0/).
 
-### December 9th, 2020
+### December 9, 2020
 
 #### Improvements
 
@@ -189,7 +189,7 @@ For more information see [SAP Business Technology Platform - deploy](/developerp
 
 * We fixed an issue for users deploying to SAP Cloud Portal where newly-bound services were bound correctly but did not appear in the Mendix Developer Portal. (Ticket 81418)
 
-### March 29th, 2019
+### March 29, 2019
 
 #### Improvements
 

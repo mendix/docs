@@ -38,7 +38,7 @@ Deployment on IBM Cloud Portal is no longer officially supported by Mendix. We h
 
 ## 2018
 
-### October 29th, 2018
+### October 29, 2018
 
 #### IBM Cloud Portal Deployment
 

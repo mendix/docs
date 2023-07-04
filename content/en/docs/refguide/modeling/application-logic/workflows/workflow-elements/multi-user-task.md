@@ -103,7 +103,7 @@ A fallback outcome can be both a selectable outcome and a fallback outcome at th
 
 ##### 2.5.2.1 Consensus
 
-Select this decision method when all required users should be in agreement with the provided outcome. That is, they should all select the same outcome. There has to be consensus. When there is no consensus, the multi-user task will complete with the the fallback outcome.
+Select this decision method when all required users should be in agreement with the provided outcome. That is, they should all select the same outcome. There has to be consensus. When there is no consensus, the multi-user task will complete with the fallback outcome.
 
 ###### 2.5.2.1.1 Fallback Outcome {#fallback-outcome}
 

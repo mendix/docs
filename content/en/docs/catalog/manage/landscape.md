@@ -51,7 +51,7 @@ You can pan around the landscape and and zoom using the mouse. You can also coll
 
 ### 2.3 Nodes
 
-Registered apps and services are depicted in the Landscape as nodes from the definitions in the registered service metadata. The icons for each of these nodes identifies the the source application, for example, Mendix and Siemens.
+Registered apps and services are depicted in the Landscape as nodes from the definitions in the registered service metadata. The icons for each of these nodes identifies the source application, for example, Mendix and Siemens.
 
 #### 2.3.1 Data Sources
 

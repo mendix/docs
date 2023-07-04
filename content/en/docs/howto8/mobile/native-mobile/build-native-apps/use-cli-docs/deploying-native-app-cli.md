@@ -132,7 +132,7 @@ You have successfully prepared your app, and in the next section will make a bui
 
 To initiate your first build in the Native Builder, you will execute a command in CLI with various parameters included. For more information on parameters, see the [Commands](/refguide8/native-builder/#commands) section in the *Native Builder* guide. While some parameters are optional, two are required: the `--project-name` parameter and the `--build-number` parameter.
 
-This is an example build command using the the two required parameters mentioned above, as well as the optional `--app-version` command (it is best practice to include a [new app version](https://semver.org/) with each release):
+This is an example build command using the two required parameters mentioned above, as well as the optional `--app-version` command (it is best practice to include a [new app version](https://semver.org/) with each release):
 
 ```bash {linenos=false}
 native-builder.exe build --project-name CoolApp --build-number 1 --app-version 0.1.0

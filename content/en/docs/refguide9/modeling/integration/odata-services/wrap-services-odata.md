@@ -92,7 +92,7 @@ When you use a microflow to provide data, any security constraints are applied t
 
 * **HttpRequest** – The first accepted parameter is an HTTP request of the entity type **System.HttpRequest**. This parameter is optional.
 
-    When a consumer sends a request to the the published OData service, the  `HttpRequest` string attribute *Uri* will contain the OData query that consumer requested. Based on that information, the microflow needs to decide what should be returned. For more information on how an OData v4 requests work, see [OData Version 4.0. Part 2: URL Conections Plus Errata 03](https://docs.oasis-open.org/odata/odata/v4.0/odata-v4.0-part2-url-conventions.html).
+    When a consumer sends a request to the published OData service, the  `HttpRequest` string attribute *Uri* will contain the OData query that consumer requested. Based on that information, the microflow needs to decide what should be returned. For more information on how an OData v4 requests work, see [OData Version 4.0. Part 2: URL Conections Plus Errata 03](https://docs.oasis-open.org/odata/odata/v4.0/odata-v4.0-part2-url-conventions.html).
 
 * **ODataResponse** – The second accepted parameter is an OData response of the entity type **System.ODataResponse**. This parameter is optional.
 

@@ -40,7 +40,7 @@ We will start by providing Studio Pro as an example of what the REST service ret
 
 ## 3 Creating an Import Mapping {#create-import-mapping}
 
-An [import mapping](/refguide/import-mappings/) specifies how the JSON relates to [entities](/refguide/entities/). You can map the the JSON to any entity you like. The following steps describe how to generate the entities and create an import mapping:
+An [import mapping](/refguide/import-mappings/) specifies how the JSON relates to [entities](/refguide/entities/). You can map the JSON to any entity you like. The following steps describe how to generate the entities and create an import mapping:
 
 1. Right-click the module in the **App Explorer** and select **Add other** > **Import Mapping**.
 2. Enter a **Name** for the import mapping: *Import_mapping* and click **OK**.

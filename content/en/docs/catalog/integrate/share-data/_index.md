@@ -86,7 +86,7 @@ Do the following:
 
     {{< figure src="/attachments/catalog/share-data/edit-published-resource-box.png" >}}
 
-    {{% alert color="info" %}}  Make a note of the the **Exposed set name**. This defaults to the **Exposed name** with an "**s"** added to the end. When the service is registered in the Catalog, the **Exposed set name** will be displayed as the available **Dataset**. {{% /alert %}}
+    {{% alert color="info" %}}  Make a note of the **Exposed set name**. This defaults to the **Exposed name** with an "**s"** added to the end. When the service is registered in the Catalog, the **Exposed set name** will be displayed as the available **Dataset**. {{% /alert %}}
 
 5. Click **OK** twice to display the **OData Service** document that will be registered in the Catalog. In the **General** tab, notice the **Version** number. 
 

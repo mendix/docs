@@ -153,7 +153,7 @@ The following shortcut keys are available in the microflow editor:
 
 ### 7.5 Microflow Debugger Shortcut Keys {#debugger-shortcuts}
 
-The following shortcut keys are available for the the microflow debugger:
+The following shortcut keys are available for the microflow debugger:
 
 | Key | Description |
 | --- | --- |

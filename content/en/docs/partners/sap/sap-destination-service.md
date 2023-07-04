@@ -25,7 +25,7 @@ It is not the aim of this document to explain how to configure destinations. For
 
 ## 3 Including SAP Destination Services in your App
 
-Although you can use the SAP Destination Service on its own, the main use within Mendix is as part of the OData Connector for SAP solutions. Therefore, to include the SAP Destination Service in your app, download the OData Connector for SAP solutions from the the Marketplace here: [OData Connector for SAP solutions](https://marketplace.mendix.com/link/component/74525/).
+Although you can use the SAP Destination Service on its own, the main use within Mendix is as part of the OData Connector for SAP solutions. Therefore, to include the SAP Destination Service in your app, download the OData Connector for SAP solutions from the Marketplace here: [OData Connector for SAP solutions](https://marketplace.mendix.com/link/component/74525/).
 
 ## 4 Get Destination Action
 

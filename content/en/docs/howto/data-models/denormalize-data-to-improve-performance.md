@@ -148,7 +148,7 @@ Now the application is ready to store redundant data, but you still need to keep
 * [Configuring a Domain Model](/refguide/configuring-a-domain-model/)
 * [Setting Up Data Validation](/refguide/setting-up-data-validation/)
 * [Find the Root Cause of Runtime Errors](/howto/monitoring-troubleshooting/finding-the-root-cause-of-runtime-errors/)
-* [Stories](/developerportal/collaborate/stories/)
+* [Stories](/developerportal/project-management/stories/)
 * [Defining Access Rules Using XPath](/refguide/define-access-rules-using-xpath/)
 * [Attributes](/refguide/attributes/)
 * [Event Handlers](/refguide/event-handlers/)

@@ -28,6 +28,7 @@ For example, the following text box allows the end-user to see, and set, the **N
 The properties pane is divided into two major sections by a toggle at the top of the pane: **Properties** and **Styling**. Text box properties consist of the following sections:
 
 Properties:
+
 * [General](#general)
 * [Data Source](#data-source)
 * [Label](#label)
@@ -45,6 +46,7 @@ Styling:
 * [Common](#common-styling)
 
 Miscellaneous:
+
 * [Formatting](#formatting)
 
 ## 3 Properties

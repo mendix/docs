@@ -28,15 +28,18 @@ A scroll container can consist of several scroll container regions. For more inf
 The properties pane is divided into two major sections by a toggle at the top of the pane: **Properties** and **Styling**. Scroll container properties consist of the following sections:
 
 Properties:
+
 * [General](#general)
 * [Common](#common)
 * [Regions](#region)
 
 Styling:
+
 * [Design Properties](#design-properties)
 * [Common](#common-styling)
 
 Miscellaneous:
+
 * [Scroll Container Region](#scroll-container-region)
 
 ## 3 Properties

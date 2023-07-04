@@ -85,7 +85,7 @@ To get a PAT for your user account, see the [Use personal access tokens](https:/
 
 You need `Code (full)` permission for your token.
 
-##### 2.5.2 GitHub 
+#### 2.5.2 GitHub 
 
 We support GitHub’s hosting solutions, including the free GitHub.com cloud-hosted service and GitHub Enterprise, both hosted (Enterprise Cloud) and on-premises (Enterprise Server).
 
@@ -93,7 +93,7 @@ To get a PAT for your user account, see the [Creating a personal access token](h
 
 You need `repo` permissions for your token.
 
-##### 2.5.3 GitLab 
+#### 2.5.3 GitLab 
 
 We support all tiers of GitLab’s service, including GitLab.com, GitLab Community Edition, and GitLab Enterprise Edition.
 
@@ -101,7 +101,7 @@ To get a PAT for your user account , see the [Personal access tokens](https://do
 
 You need `write_repository` permission for the token.
 
-##### 2.5.4 BitBucket 
+#### 2.5.4 BitBucket 
 
 We support all tiers of Atlassian’s BitBucket service, including BitBucket.org, BitBucket Server, and BitBucket Data Center on-premises solutions.
 

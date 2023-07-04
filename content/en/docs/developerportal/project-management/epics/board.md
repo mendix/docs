@@ -73,22 +73,22 @@ On the upper-right corner, you can click the link icon to copy the link to the s
 The story details dialog box shows the following items:
 
 * **Description** – This is the description of the story:
-  * You can edit the description of the story by clicking **Edit Description** and making changes in the WYSIWYG editor. The editor supports different text formats, including code blocks.
-  * You can link a story in the editor by typing *#* and the story title, and then selecting the right story from the list.
-  * You can type a person in the editor by typing *@*, and the person's name, and then selecting the right person from the list. Once you save the story, the system will send a notification to the tagged person.
+    * You can edit the description of the story by clicking **Edit Description** and making changes in the WYSIWYG editor. The editor supports different text formats, including code blocks.
+    * You can link a story in the editor by typing *#* and the story title, and then selecting the right story from the list.
+    * You can type a person in the editor by typing *@*, and the person's name, and then selecting the right person from the list. Once you save the story, the system will send a notification to the tagged person.
 
 * **Assign to** – You can assign the story to anybody who can access the app in the Developer Portal.
 * **Status** – You can set the status to any of the category/swimlane names on the **Board** and **Planning** pages.
 * **Tasks** – All the tasks are listed.
-  * You can add a task by clicking **+ Add Task**.
+    * You can add a task by clicking **+ Add Task**.
 
-  * You can move a task upwards or downwards by dragging them around.
+    * You can move a task upwards or downwards by dragging them around.
 
 * **Story Type** – You can set the story type to **Bug** or **Feature**.
 * **Linked Epic** – You can select an epic from the drop-down list.
 * **Tags** – You can add or remove tags.
-  * You can create a new tag by typing the tag in the text box and clicking **Create new "[tag name]"**.
-  * You can [manage tags](/developerportal/project-management/epics/planning/#manage-tags) by clicking the settings icon at the end.
+    * You can create a new tag by typing the tag in the text box and clicking **Create new "[tag name]"**.
+    * You can [manage tags](/developerportal/project-management/epics/planning/#manage-tags) by clicking the settings icon at the end.
 
 * **Story Points** – You can set the story points to an integer.
 * **Attached Files** – You can add attached files by clicking **+**.

@@ -95,16 +95,16 @@ It is also possible to create custom error pages inside [re-usable theme modules
 
 To create a custom error page inside your theme module:
 
-1. Open the local folder of your app.
-2. Go to **themesource**
+1. Open your app's local folder.
+2. Go to **themesource**:
 
    {{< figure src="/attachments/howto/front-end/custom-error-page/themesource.png" >}}
 
-3. Go the the folder of your theme module:
+3. Open your theme module's folder:
 
    {{< figure src="/attachments/howto/front-end/custom-error-page/module-themesource.png" >}}
 
-4. Go to the **public** folder:
+4. Open the **public** folder:
 
    {{< figure src="/attachments/howto/front-end/custom-error-page/public.png" >}}
 
@@ -116,10 +116,12 @@ To create a custom error page inside your theme module:
 
    {{< figure src="/attachments/howto/front-end/custom-error-page/offline.png" >}}
 
-When this module is imported in other apps, the custom error pages in it will automatically become available.
+When this module is imported into other apps, its custom error pages will automatically become available.
+
 This can also be used in a [company design system](/howto/front-end/create-a-company-design-system/).
 
 {{% alert color="info" %}}
-Error pages created inside the app's **theme/web** folder will override error pages that are included with a theme module.  
-This way, it is always possible to customize/change one or more error pages while still using the rest of the styling and elements from the module. 
+Error pages created inside your app's **theme/web** folder will override error pages that are included in a theme module.
+
+Because of this, you are able to customize one or more error pages while still using the rest of the styling and elements from the module. 
 {{% /alert %}}

@@ -136,7 +136,7 @@ spec:
         value: -Dhttp.proxyHost=10.0.0.100 -Dhttp.proxyPort=8080 -Dhttps.proxyHost=10.0.0.100 -Dhttps.proxyPort=8443 -Dhttp.nonProxyHosts="localhost|host.example.com"
     clientCertificates: # Optional, can be omitted : set client certificates for TLS authentication
       - key: Q0VSVElGSUNBVEU= # base64-encoded PKCS12 certificate
-        password: Q0VSVElGSUNBVEU= # base64-encoded password for the certificate, cannot be empty
+        password: Q2hhbmdlLW1lNDI= # base64-encoded password for the certificate, cannot be empty
         pinTo: # Optional, list of web services or domain names where this certificate should be used
         - "www.example.com"
         - "service.www.example.com"

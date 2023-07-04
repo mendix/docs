@@ -140,7 +140,7 @@ To see the current status of the Mendix Developer Portal and Control Center, see
 #### Improvements
 
 * In preparation for the [merging of Studio and Studio Pro](https://www.mendix.com/blog/coming-in-2023-the-merging-of-studio-and-studio-pro/), we removed the **Edit in Studio** button. You can still open your app in Studio via the ellipsis (**…**) in the [app tile](/developerportal/#my-apps) on the **My Apps** page.
-* After the big overhaul we released on [February 13th](#feb-13-23), our logging showed a decrease in the overall performance of [Stories](/developerportal/collaborate/stories/). We took some counter-measures and made performance improvements.
+* After the big overhaul we released on [February 13th](#feb-13-23), our logging showed a decrease in the overall performance of [Stories](/developerportal/project-management/stories/). We took some counter-measures and made performance improvements.
 * We made some minor improvements to the flow for [inviting app team members](/developerportal/collaborate/team/#inviting). For example, when you invite someone new to your app, the default role will be **Business Engineer** (as long as this role exists in your app).
 * We made some improvements to the layout of the [App Buzz](/developerportal/collaborate/buzz/#app-buzz) page so that it displays better on small screen resolutions.
 * The left-hand app sidebar menu is now collapsible, which makes for a far better experience on small screen resolutions.
@@ -604,9 +604,9 @@ In Portfolio Management, you can do the following
 
 * We simplified the drag-and-drop behavior on the [Stories Overview](/developerportal/project-management/stories/#overview) page (for both the new and old UI) to make it more stable.
 * We added support for adding labels to stories on the **Stories Overview** page.
-* It is now possible to add labels and tasks as well as assign a team member when you [create a story](/developerportal/collaborate/stories/#new-story).
+* It is now possible to add labels and tasks as well as assign a team member when you [create a story](/developerportal/project-management/stories/#new-story).
 * Thanks to a lot of feedback from the community, we have improved the new stories functionality to the point where we feel comfortable removing the old UI. Because of this, we will be deprecating the old UI on December 31st, 2021.
-* We improved the look and feel of the [story details](/developerportal/collaborate/stories/#story-details) page, and we removed support for the old version of this page.
+* We improved the look and feel of the [story details](/developerportal/project-management/stories/#story-details) page, and we removed support for the old version of this page.
 * We made further preparations for the support of Git-enabled apps.
 * We finished a year-long project where we modernized the way the Developer Portal communicates internally. This meant we removed a long-running internal platform app, which had a great run, but now it is time to say goodbye. This app has been replaced with business events based on Kafka.
 

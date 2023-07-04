@@ -131,7 +131,7 @@ This feature is currently in a Beta release.
 
 * We have introduced a new Mendix for Private Cloud Build API, which allows users to build, upload, delete and retrieve deployment packages for an application deployed in the Private Cloud.
 
-### February 16th, 2023
+### February 16, 2023
 
 #### Portal Improvements
 
@@ -170,7 +170,7 @@ As part of our [strategic partnership with AWS](/partners/aws/), we have added a
 
 Your build may fail if you try to deploy the same deployment package more than once in the same environment. To fix this issue, recreate the deployment package, and then deploy it again. The same workaround is sometimes required when rescaling an application. A fix for this issue will be available in an upcoming release.
 
-### January 26th, 2023
+### January 26, 2023
 
 #### Mendix Operator v2.10.1{#2.10.1}
 
@@ -239,7 +239,7 @@ Your build may fail if you try to deploy the same deployment package more than o
 * We replaced an internal go-chi dependency with Go Fiber to ensure that Mendix for Private Cloud is using a well-maintained HTTP implementation.
 * We also fixed an issue where mxpc-cli was not responding to the mouse inputs in a Linux terminal. (Ticket 168570)
 
-### October 6th, 2022
+### October 6, 2022
 
 #### Portal Improvements
 
@@ -261,7 +261,7 @@ Your build may fail if you try to deploy the same deployment package more than o
 
 * We have added a number of Tekton pipelines that can be used to create a CI/CD (Continuous Integration and Delivery/Deployment) solution for your Mendix for Private Cloud apps. For more information, see [CI/CD for Mendix for Private Cloud using Tekton](/developerportal/deploy/private-cloud-tekton/).
 
-### August 26th, 2022
+### August 26, 2022
 
 #### Mendix Operator v2.7.0{#2.7.0}
 
@@ -410,7 +410,7 @@ This issue is fixed in Mendix Operator [version 2.5.1](#2.5.1).
 * We have fixed an issue where the app URL is not editable when trying to deploy to an environment in a namespace with service-only ingress, type = ClusterIP.
 * We have replaced the placeholder app in environment creation with a deployment package. A valid deployment package is required to create a new environment.
 
-### December 6th, 2021
+### December 6, 2021
 
 #### Mendix Operator v2.2.0 and Mendix Gateway Agent v2.2.0
 
@@ -523,7 +523,7 @@ To upgrade an existing installation of Mendix for Private Cloud to Mendix Operat
 {{% alert color="warning" %}}Mendix for Private Cloud has not yet been fully validated to support Kubernetes 1.22, a [new release](https://kubernetes.io/blog/2021/08/04/kubernetes-1-22-release-announcement/) which removes support for several deprecated APIs and features.
 {{% /alert %}}
 
-### July 6th, 2021
+### July 6, 2021
 
 #### Portal Improvements
 
@@ -639,7 +639,7 @@ To upgrade an existing installation of Private Cloud to this version, follow the
 To upgrade an existing installation of Private Cloud to this version, follow the [Upgrade instructions](/developerportal/deploy/private-cloud-upgrade-guide/).
 After upgrading the Mendix Operator, we recommend downloading the latest version of the Configuration Tool.
 
-### January 6th, 2021
+### January 6, 2021
 
 #### Improvements
 
@@ -676,7 +676,7 @@ After upgrading the Mendix Operator, we recommend downloading the latest version
 
 To upgrade an existing installation of Private Cloud to this version, follow the [Upgrade instructions](/developerportal/deploy/private-cloud-upgrade-guide/).
 
-### November 16th, 2020
+### November 16, 2020
 
 * We have introduced a new, interactive, installation and configuration tool for the Mendix Operator. The previous installation scripts are still available, and you can choose between the new and previous installation tools.
 * We added access rules for namespaces to control access to the debugger and TLS.

@@ -68,7 +68,7 @@ For information on the current status of deployment to SAP BTP and any planned r
 * We improved the error handling for expired access tokens when using [Get Destination](/partners/sap/sap-destination-service/). Users will now be signed out so that they can retrieve a new access token.
 * We added the ability to fetch the SAP Destination even if the application is not XSUAA enabled or not using XSUAA.
 
-### July 26th, 2021
+### July 26, 2021
 
 #### Improvements
 
@@ -82,7 +82,7 @@ For information on the current status of deployment to SAP BTP and any planned r
 
 * We resolved an issue where the PostgreSQL, Hyperscaler Option service did not appear in the **Services** tab of the environment details. (Tickets 121404 and 123430)
 
-### June 16th, 2021
+### June 16, 2021
 
 #### Improvements
 
@@ -154,7 +154,7 @@ For more information see [SAP Business Technology Platform - deploy](/developerp
 * We have added an easy-to-use autoscaler configurator to allow you to easily create JSON configuration files for the **Application Autoscaler** on SAP Cloud Platform. See [Application Autoscaler for SAP Business Technology Platform](/partners/sap/sap-autoscaler/) for more information.
     * There is currently an issue with how the JSON is uploaded. We are working on a fix for this but, in the meantime, please check the workaround in the documentation to ensure that the JSON is uploaded.
 
-### March 26th, 2020
+### March 26, 2020
 
 #### Improvements
 

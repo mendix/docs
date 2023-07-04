@@ -76,7 +76,7 @@ To see the current status of the Mendix Developer Portal and Control Center, see
     * You can now create portfolios with different levels of visibility to people in your company: private or restricted.
 * We have added the [Portfolios](/developerportal/control-center/#portfolios) page to the Control Center, which provides Mendix Admins with governance features for portfolio management in your company.
 
-### May 16th, 2023{#byoidp}
+### May 16, 2023{#byoidp}
 
 #### New Features
 
@@ -141,7 +141,7 @@ To see the current status of the Mendix Developer Portal and Control Center, see
 * You can now create and manage personal access tokens (PATs) in **User Settings** > **Developer Settings**. This location replaces the Warden tool that was previously used. For more information, see the [Personal Access Tokens](/developerportal/community-tools/mendix-profile/#pat) section in *Mendix Profile*.
 * We are preparing the Developer Portal for a brand new feedback experience. Please stay tuned!
 
-### March 16th, 2023
+### March 16, 2023
 
 #### Improvements
 
@@ -182,7 +182,7 @@ For more information on security issues, see [Security Advisories](/releasenotes
 * We fixed a performance issue that occurred when opening an [App Buzz](/developerportal/collaborate/buzz/#app-buzz) page for an app with a large team. We now show no more than 25 team members in the team list in the right corner at a time.
 * We fixed an issue where the country of residence you selected during sign-up was not properly stored in your [Mendix Profile](/developerportal/community-tools/mendix-profile/#profile).
 
-### February 16th, 2023
+### February 16, 2023
 
 #### Improvements
 
@@ -209,7 +209,7 @@ For more information on security issues, see [Security Advisories](/releasenotes
 
 * We fixed a performance issue on the [Team](/developerportal/collaborate/team/) page.
 
-### January 26th, 2023
+### January 26, 2023
 
 #### Improvements
 
@@ -291,7 +291,7 @@ In Portfolio Management, you can do the following
 
 * We fixed an issue where the story name in the revision history was not visible when you link a commit to a story in Epics or Jira (Beta).
 
-### October 6th, 2022
+### October 6, 2022
 
 #### Improvements
 
@@ -414,7 +414,7 @@ In Portfolio Management, you can do the following
 * We redesigned the [General Settings](/developerportal/collaborate/general-settings/) section to make it more intuitive and user-friendly.
 * We prepared the integration of Studio Pro with our new project management tool, Epics (coming soon!).
 
-### June 16th, 2022
+### June 16, 2022
 
 #### Fixes
 
@@ -615,7 +615,7 @@ In Portfolio Management, you can do the following
 * Your [Mendix Profile](/developerportal/community-tools/mendix-profile/) got a visual update.
 * We removed the possibility to add a GitHub account to your profile.
 
-### September 6th, 2021
+### September 6, 2021
 
 #### New Feature
 
@@ -634,7 +634,7 @@ In Portfolio Management, you can do the following
 * We fixed a bug where the pop-up window with pending invitations was shown twice.
 * We also fixed a layout bug on the invitation pop-up window that we accidentally introduced during the last release.
 
-### August 26th, 2021
+### August 26, 2021
 
 #### Improvements
 
@@ -718,7 +718,7 @@ In Portfolio Management, you can do the following
 * We fixed the page title of the [Mendix Studio](/studio/) landing page.
 * Page links now open in the correct tab.
 
-### April 26th, 2021
+### April 26, 2021
 
 #### New Features
 
@@ -746,7 +746,7 @@ In Portfolio Management, you can do the following
 
 * We fixed an issue where sending feedback from Studio Pro resulted in an error. (Tickets 113634, 115031)
 
-### March 26th, 2021
+### March 26, 2021
 
 #### Improvements
 
@@ -994,7 +994,7 @@ In Portfolio Management, you can do the following
 * We made performance improvements to the **My Apps** page.
 * We fixed an issue where the description field did not expand properly when creating a new [story](/developerportal/collaborate/stories/).
 
-### February 6th, 2020
+### February 6, 2020
 
 #### Improvements
 
@@ -1116,7 +1116,7 @@ In Portfolio Management, you can do the following
 
 * When building a mobile application package for a new project, the default for permissions is now *disabled*. These are the set of permissions that a mobile (Phonegap) app requires and, previously, all permissions were enabled for new projects by default. This caused Push Notifications to fail if no further configuration was provided.
 
-### March 6th, 2019
+### March 6, 2019
 
 #### Feedback and Support
 
@@ -1170,7 +1170,7 @@ In Portfolio Management, you can do the following
 * We fixed a memory leak problem that caused Developer Portal to have longer response times.
 * We addressed and fixed an issue that caused some Developer Portal users to see empty dialog boxes instead of error message content. (Tickets 67626, 69363)
 
-### October 16th, 2018
+### October 16, 2018
 
 #### Fixes
 
@@ -1206,7 +1206,7 @@ The Web Modeler can now be enabled for all types of apps. You can do this on the
 
 * We have loosened an unnecessarily strict constraint on email domains during signup. You can now sign up with email domains with single-character sub-domains. (Tickets 68210 , 68386)
 
-### June 26th, 2018
+### June 26, 2018
 
 #### Improvement
 
@@ -1246,7 +1246,7 @@ The Web Modeler can now be enabled for all types of apps. You can do this on the
 * The bug that prevented some users from viewing the list of running requests of their applications is now fixed.
 * The bug that prevented users from deactivating their projects is now fixed.
 
-### March 16th, 2018
+### March 16, 2018
 
 #### Improvements
 

@@ -70,13 +70,13 @@ These release notes cover changes made to the [Catalog](/catalog/).
 
 * We fixed an issue where the page was flickering when selecting an object in the search results.
 
-### April 6th, 2023
+### April 6, 2023
 
 #### Improvements
 
 * We improved the clarity and accuracy of some UI texts.
 
-### March 16th, 2023
+### March 16, 2023
 
 #### Fixes
 
@@ -95,7 +95,7 @@ These release notes cover changes made to the [Catalog](/catalog/).
 
 * On the [Search](/catalog/manage/search/) page, there are no default search filters anymore and filters are persistent per search session.
 
-### February 16th, 2023
+### February 16, 2023
 
 #### Improvements
 
@@ -207,7 +207,7 @@ These release notes cover changes made to the [Catalog](/catalog/).
 
 * We fixed a bug where the redeployment of an endpoint resulted in an error. The error mistakenly reported the redeployed endpoint as a duplicate rather than an update.
 
-### October 6th, 2022
+### October 6, 2022
 
 #### Improvements
 
@@ -348,7 +348,7 @@ These release notes cover changes made to the [Catalog](/catalog/).
 
 * We fixed an issue where *Popular* tags were not displayed on the home page for users without curation rights.
 
-### June 16th, 2022
+### June 16, 2022
 
 #### Improvements
 
@@ -515,7 +515,7 @@ These release notes cover changes made to the [Catalog](/catalog/).
 
 * We fixed a bug where V3 contracts uploaded as single XML files were not downloadable from the Catalog via the **Download Contract** button.
 
-### January 6th, 2022
+### January 6, 2022
 
 #### Fixes 
 
@@ -542,7 +542,7 @@ These release notes cover changes made to the [Catalog](/catalog/).
 
 * We updated the Log4j dependency to 2.17.0, which addresses [CVE-2021-45105](https://cert-portal.siemens.com/productcert/pdf/ssa-501673.pdf).
 
-### December 16th, 2021
+### December 16, 2021
 
 #### Fixes
 
@@ -631,7 +631,7 @@ These release notes cover changes made to the [Catalog](/catalog/).
 * We fixed an issue where the **Curate** button appeared in the navigation for users who were not able to curate any content.
 * We removed duplicate endpoints that had been created due to an issue fixed in the [September 9th](#nine) release.
 
-### September 16th, 2021
+### September 16, 2021
 
 #### Improvements
 
@@ -656,7 +656,7 @@ These release notes cover changes made to the [Catalog](/catalog/).
 
 * We removed the `SecurityClassification` from the `Endpoints` JSON structure of the [Register API](/apidocs-mxsdk/apidocs/catalog-apis/). The creation of endpoints as `Public` via the API is no longer allowed due to security reasons.
 
-### August 26th, 2021
+### August 26, 2021
 
 #### Improvements
 
@@ -756,7 +756,7 @@ These release notes cover changes made to the [Catalog](/catalog/).
 * Custom owners can be added for an application when [registering data sources](/catalog/register/register-data/) using the business application connectors from the **Catalog Home**.
 * Further styling changes have been made to improve usability.
 
-### May 6th, 2021
+### May 6, 2021
 
 #### New Features
 
@@ -869,7 +869,7 @@ The [Data Hub Transform API](https://datahub-spec.s3.eu-central-1.amazonaws.com/
 
 * This release contains several security improvements.
 
-### November 26th, 2020
+### November 26, 2020
 
 #### Improvements
 

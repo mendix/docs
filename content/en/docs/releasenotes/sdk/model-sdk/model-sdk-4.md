@@ -119,7 +119,7 @@ weight: 97
 
 ## 4.60.0 {#460}
 
-**Release date: February 16th, 2022**
+**Release date: February 16, 2022**
 
 * We added support for Mendix [9.11.0](/releasenotes/studio-pro/9.11/).
 * We added support for Mendix Metamodel [9.11.0](/releasenotes/sdk/metamodel-9.11/).
@@ -179,7 +179,7 @@ weight: 97
 
 ## 4.52.0 {#452}
 
-**Release date: June 16th, 2021**
+**Release date: June 16, 2021**
 
 * We added support for Mendix [9.3.0](/releasenotes/studio-pro/9.3/).
 * We added support for Mendix Metamodel [9.3.0](/releasenotes/sdk/metamodel-9.3/).
@@ -200,14 +200,14 @@ weight: 97
 
 ## 4.49.0 {#449}
 
-**Release date: March 26th, 2021**
+**Release date: March 26, 2021**
 
 * We added support for Mendix [9.0.5](/releasenotes/studio-pro/9.0/).
 * We added support for Mendix Metamodel [9.0.5](/releasenotes/sdk/metamodel-9.0/).
 
 ## 4.48.0 {#448}
 
-**Release date: February 16th, 2021**
+**Release date: February 16, 2021**
 
 * We added support for Mendix 9.0.4.
 * We added support for Mendix Metamodel [9.0.4](/releasenotes/sdk/metamodel-9.0/).
@@ -263,7 +263,7 @@ weight: 97
 
 ## 4.35.0 {#435}
 
-**Release date: May 26th, 2020**
+**Release date: May 26, 2020**
 
 * We added support for Mendix [8.10.0](/releasenotes/studio-pro/8.10/).
 * We added support for Mendix Metamodel [8.10.0](/releasenotes/sdk/metamodel-8.10/).
@@ -359,7 +359,7 @@ weight: 97
 
 ## 4.20.0 {#420}
 
-**Release date: April 26th, 2019**
+**Release date: April 26, 2019**
 
 * We added support for Mendix [8.0.0 Beta 1](/releasenotes/studio-pro/8.0/).
 * We fixed the rename for by-name references that refer to the base class.

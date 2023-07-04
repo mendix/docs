@@ -49,7 +49,7 @@ weight: 97
 
 ## 4.70.0 {#470}
 
-**Release date: December 13th, 2022**
+**Release date: December 13, 2022**
 
 * We added support for Mendix [9.21.0](/releasenotes/studio-pro/9.21/).
 * We added support for Mendix Metamodel [9.21.0](/releasenotes/sdk/metamodel-9.21/).
@@ -298,7 +298,7 @@ weight: 97
 
 ## 4.28.0 {#428}
 
-**Release date: December 13th, 2019**
+**Release date: December 13, 2019**
 
 * We added support for Mendix [8.5.0](/releasenotes/studio-pro/8/).
 * We added support for Mendix Metamodel [8.5.0](/releasenotes/sdk/metamodel-8.5/).
@@ -373,7 +373,7 @@ weight: 97
 
 ## 4.18.0 {#418}
 
-**Release date: December 13th, 2018**
+**Release date: December 13, 2018**
 
 * We added the ability to use promises instead of callbacks when using the Model SDK. All methods in `ModelSdkClient` and `Model` as well as the `load()` method of model elements now feature promise-based overloads in addition to the original callback-based ones.
     {{% alert color="info" %}}If you open a working copy using the promise-based methods but you are still using callbacks in other places in your code without passing an error callback (for example, the callback overload of the `load()` method of model elements), be sure to register an error handler on the model using `Model.setErrorHandler()`.{{% /alert %}}

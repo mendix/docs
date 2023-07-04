@@ -6,7 +6,7 @@ weight: 98
 
 ## 3.3.0
 
-**Release date: April 13th, 2017**
+**Release date: April 13, 2017**
 
 * Added support for Modeler version 7.2.0.
 

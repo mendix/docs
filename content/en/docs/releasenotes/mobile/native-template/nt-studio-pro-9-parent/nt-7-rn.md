@@ -7,7 +7,7 @@ description: "Native Template 7 release notes."
 
 ## 7.0.1 {#701}
 
-**Release date: April 13th, 2023**
+**Release date: April 13, 2023**
 
 ### Fixes
 

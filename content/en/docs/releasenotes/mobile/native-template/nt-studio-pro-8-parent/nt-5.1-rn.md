@@ -152,7 +152,7 @@ The Native Mobile Builder writes to the *config.json* and commits assets to rela
 
 ## 5.1.7
 
-**Release date: March 12th, 2021**
+**Release date: March 12, 2021**
 
 {{% alert color="warning" %}}
 We have decided to retract version 5.1.7 after we received reports that apps would crash when using Firebase after the patch. Please update to [5.1.8](#518). 

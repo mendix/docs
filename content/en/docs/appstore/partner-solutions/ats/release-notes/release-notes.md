@@ -691,7 +691,7 @@ This table compares the nomenclature:
 
 ## 2.9.5 
 
-**Release date: February 12th, 2019**
+**Release date: February 12, 2019**
 
 ### Support for Mendix 7.22.2
 
@@ -1443,7 +1443,7 @@ ATS now supports testing the recently released Mendix 7.
 
 ## 1.8.2
 
-**Release date: December 13th, 2016**
+**Release date: December 13, 2016**
 
 ### Fixes
 

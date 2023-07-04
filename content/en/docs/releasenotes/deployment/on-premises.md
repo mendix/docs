@@ -13,7 +13,7 @@ For information on the current status of Mendix deployment see [Mendix Status](h
 
 ## 2022
 
-### December 12th, 2022
+### December 12, 2022
 
 #### IBM Cloud Portal Deployment
 

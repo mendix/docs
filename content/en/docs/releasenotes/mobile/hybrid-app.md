@@ -100,13 +100,13 @@ With this release we updated all PhoneGap dependencies to the latest supported v
 
 ### Hybrid App Base 4.1.6
 
-**Release date: November 12th, 2019**
+**Release date: November 12, 2019**
 
 * We fixed an issue that would stop apps from loading on iPads running iOS 13.
 
 ### Hybrid App Base 4.1.5 
 
-**Release date: November 12th, 2019**
+**Release date: November 12, 2019**
 
 * We fixed an issue with the Android build failing due to missing files.
 
@@ -311,13 +311,13 @@ We have tested extensively against real-life projects and commonly used widgets 
 
 ### Hybrid App Base 2.2.1
 
-**Release date: August 13th, 2018**
+**Release date: August 13, 2018**
 
 * For upgraded apps, the recent change to store authentication tokens in file storage instead of localstorage could lead to a loss of the session. To avoid this issue, we added a fallback mechanism to check if a token is still available in localstorage.
 
 ### Hybrid App Base 2.2.0
 
-**Release date: August 13th, 2018**
+**Release date: August 13, 2018**
 
 * We changed how auth tokens are stored, preventing an issue where a session was not reconstructed after an update of the app.
 * We added several default entries to the *config.xml* file, preventing security errors in the web view.
@@ -381,7 +381,7 @@ This patch fixes an issue with the generation of the `index.html` file.
 
 ### Hybrid App Base 2.0.1
 
-**Release date: March 13th, 2018**
+**Release date: March 13, 2018**
 
 This patch fixes an issue with an upstream dependency (`com.android.support:support-v4`) that was updated by Google. The issue prevented building *.apk* files, both locally and on Phonegap Build.
 
@@ -490,7 +490,7 @@ For this update, we recommend that you download a fresh hybrid app package from 
 
 ### Hybrid App Base 1.4.2 / Hybrid App Template 1.3.1
 
-**Release date: October 13th, 2017**
+**Release date: October 13, 2017**
 
 * We added extra Phonegap commands (`plugin` and `prepare`).
 * We added a `devDependency` to fix the failing build in some cases.
@@ -498,7 +498,7 @@ For this update, we recommend that you download a fresh hybrid app package from 
 
 ### Hybrid App Base 1.4.1
 
-**Release date: October 12th, 2017**
+**Release date: October 12, 2017**
 
 * We fixed the wrong application of `Promise.all`, which broke the PIN flow.
 * We fixed the `appbase` command, used internally to build the Phonegap Build ZIP file.
@@ -548,44 +548,44 @@ For this update, we recommend that you download a fresh hybrid app package from 
 
 ### Hybrid App Base 1.0.7
 
-**Release date: June 13th, 2017**
+**Release date: June 13, 2017**
 
 * The build for Android ARM is now by default.
 
 ### Hybrid App Base 1.0.6
 
-**Release date: June 13th, 2017**
+**Release date: June 13, 2017**
 
 * We now facilitate the overriding of `entry.js`.
 
 ### Hybrid App Base 1.0.5
 
-**Release date: June 13th, 2017**
+**Release date: June 13, 2017**
 
 * We cleaned up the **resources** folder.
 
 ### Hybrid App Base 1.0.4
 
-**Release date: June 13th, 2017**
+**Release date: June 13, 2017**
 
 * We fixed an issue where the *package.json* was removed on cleanup.
 
 ### Hybrid App Base 1.0.3 / Hybrid App Template 1.0.3
 
-**Release date: June 13th, 2017**
+**Release date: June 13, 2017**
 
 * `WkWebview` is now enabled by default.
 * We fixed an issue with UglifyJS and added the NPM5 lockfile.
 
 ### Hybrid App Base 1.0.2 / Hybrid App Template 1.0.2
 
-**Release date: June 13th, 2017**
+**Release date: June 13, 2017**
 
 * We fixed the resource paths and the debug mode.
 
 ### Hybrid App Base 1.0.1 / Hybrid App Template 1.0.1
 
-**Release date: June 13th, 2017**
+**Release date: June 13, 2017**
 
 * There are now more iOS icons.
 * We improved the documentation.
@@ -593,6 +593,6 @@ For this update, we recommend that you download a fresh hybrid app package from 
 
 ### Hybrid App Base 1.0.0 / Hybrid App Template 1.0.0
 
-**Release date: June 13th, 2017**
+**Release date: June 13, 2017**
 
 * There is now a new Mendix Hybrid App package format.

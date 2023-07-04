@@ -365,7 +365,7 @@ Please note that if your app requires custom initialization, for example due to 
 
 ## 6.1.5
 
-**Release date: May 12th, 2021**
+**Release date: May 12, 2021**
 
 ### Fixes 
 

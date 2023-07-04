@@ -171,7 +171,7 @@ For more information see [SAP Business Technology Platform - deploy](/developerp
 
 ## 2019
 
-### September 13th, 2019
+### September 13, 2019
 
 #### Improvements
 
@@ -183,7 +183,7 @@ For more information see [SAP Business Technology Platform - deploy](/developerp
 
 * We fixed an issue where the XSUAA configuration wasn’t updated after deployment. **Please redeploy any apps which you deployed to SAP Cloud Platform between June 27 and 8:00 CST on July 4.**
 
-### May 13th, 2019
+### May 13, 2019
 
 #### Fixes
 

@@ -82,7 +82,7 @@ For information on the current status of deployment to Mendix Cloud and any plan
 
 * For customers running Mendix apps with runtime version 9.7.0 and above, we have fixed some minor issues with the [Number of handled external requests](/developerportal/operate/trends-v4/#Trends-appmxruntimerequests) and [Number of database queries being run](/developerportal/operate/trends-v4/#Trends-dbmxruntimeconnectionbus) graphs. These changes are available after you redeploy your app.
 
-### January 13th, 2023
+### January 13, 2023
 
 #### Improvements
 
@@ -138,7 +138,7 @@ For information on the current status of deployment to Mendix Cloud and any plan
 
 * We improved the performance of the Developer Portal when selecting which revision to use to build a deployment package from an MDA. (Ticket 163959)
 
-### September 13th, 2022
+### September 13, 2022
 
 #### Improvements
 
@@ -270,7 +270,7 @@ New Certificate Details: <https://crt.sh/?id=6940402070>
 
 * We removed a misleading message which was displayed when a Free App was unlinked from its environment. (Ticket 140897)
 
-### January 13th, 2022
+### January 13, 2022
 
 #### Fixes
 
@@ -411,7 +411,7 @@ Existing applications will be updated in the next few weeks. Technical contacts 
 
 * Mendix Cloud domains `mendixcloud.com` and `mxapps.io` now use DNSSEC to authenticate DNS lookups. There is nothing that you need to do for this change to take effect. Going forward, all DNS requests to these domains will automatically use DNSSEC.
 
-### May 12th, 2021
+### May 12, 2021
 
 #### Improvements
 
@@ -1061,7 +1061,7 @@ If you run services that connect to a `*.mendixcloud.com` endpoint AND use a sta
 * We have fixed a bug that was causing some Mendix Cloud v4 users to unsubscribe from alerting lists after changing environment privilege settings.
 * We have addressed an issue that caused some Mendix Cloud v4 users to not to be able to see their archived logs from previous day.
 
-### August 13th, 2018
+### August 13, 2018
 
 #### Fixes
 
@@ -1214,7 +1214,7 @@ In some cases, you may still experience false positives for the runtime heartbea
 * We have improved database storage alerts for Mendix Cloud v4 applications. If you subscribed to your applications' alerts, you will receive a warning alert when you have less than 25% disk space on your applications' databases and a critical alert when disk space is below 10%. You need to re-deploy your application to activate this alert.
 * Live logging for Mendix Cloud v4 applications is here! You can now view logs neatly and in real-time.
 
-### March 13th, 2018
+### March 13, 2018
 
 #### Improvements
 
@@ -1295,7 +1295,7 @@ In some cases, you may still experience false positives for the runtime heartbea
 * We fixed an issue where some Mendix Cloud v3 users were not able to set a specified Java version for environments.
 * Hovering over a Mendix Cloud environment status icon will now give more information about the environment's health.
 
-### December 13th, 2017
+### December 13, 2017
 
 #### Fixes
 
@@ -1445,7 +1445,7 @@ In some cases, you may still experience false positives for the runtime heartbea
 
 * The Deploy / Operate sections in the Platform Portal were broken on Internet Explorer 11 due to widget incompatibility, introduced in the previous release. This was already hot-patched in production on March 16.
 
-### March 13th, 2017
+### March 13, 2017
 
 #### Fixes
 

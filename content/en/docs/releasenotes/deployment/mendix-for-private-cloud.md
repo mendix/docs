@@ -19,7 +19,7 @@ For information on the current status of deployment to Mendix for Private Cloud 
 
 * The webhooks feature is now released for GA. Webhooks can trigger endpoints when changes are committed to a Team Server Git repository, or when a new deployment package is available for deployment to the Private Cloud. For more information, see [Webhooks](/developerportal/deploy/webhooks/).
 
-### June 12th, 2023
+### June 12, 2023
 
 #### Private Cloud License Manager
 
@@ -91,7 +91,7 @@ This feature is currently in a Beta release. For more information on what Beta r
 * We have fixed an issue where the environment list could not be retrieved successfully when the app internal ID was shorter than 8 characters.
 * We have fixed an issue where upper-case letters in an email ID would prevent members invited to a cluster manager or namespace from retrieving the environments.
 
-### April 13th, 2023
+### April 13, 2023
 
 #### Portal Enhancements
 
@@ -281,7 +281,7 @@ Your build may fail if you try to deploy the same deployment package more than o
 * We added Save and Save and Apply functionality for all the annotations (Ingress, Service, and Pod) on the cluster manager page.
 * We improved the error message displayed when no deployable environments are found due to missing permissions.
 
-### July 12th, 2022
+### July 12, 2022
 
 #### Mendix Operator v2.6.0{#2.6.0}
 
@@ -323,7 +323,7 @@ Your build may fail if you try to deploy the same deployment package more than o
 * We resolved an issue where the wrong number of replicas was reported after a restart. (Ticket 148333)
 * We resolved an issue where the refresh button did not always display all the environments.
 
-### May 12th, 2022
+### May 12, 2022
 
 #### Mendix Operator v2.5.0 and Mendix Gateway Agent v2.5.0
 
@@ -382,7 +382,7 @@ This issue is fixed in Mendix Operator [version 2.5.1](#2.5.1).
 * We have improved the UX, and added a new button, **Save and Apply** to directly apply changes made in an environment. This button restarts the environment.
 * We have added the ability to add metrics configuration to a environment.
   
-### January 13th, 2022
+### January 13, 2022
 
 #### Mendix Operator v2.3.0 and Mendix Gateway Agent v2.3.0
 
@@ -394,7 +394,7 @@ This issue is fixed in Mendix Operator [version 2.5.1](#2.5.1).
 * We have added a new field, **cluster owner**, on the cluster details page. A cluster owner is now also displayed as a cluster manager in the cluster managers tab.
 * We have updated the UX in the create environment flow and added a **more info** button to the environment details page.
 
-### January 12th, 2022
+### January 12, 2022
 
 #### Prometheus Metrics
 
@@ -509,7 +509,7 @@ This issue is fixed in [version 2.1.1](#2.1.1) of `mxpc-cli`.
     kubectl delete deployment <app>-worker -n <namespace>
     ```
 
-### August 12th, 2021
+### August 12, 2021
 
 #### Mendix Operator v2.0.0 and Mendix Gateway Agent v2.0.0
 

@@ -108,7 +108,7 @@ To download the Windows Service, go to the [Get Studio Pro](https://marketplace.
 
 ### 4.2.1
 
-**Release date: April 13th, 2015**
+**Release date: April 13, 2015**
 
 * Disabled 'Show or add license' button if an app is not running (ticket 204548).
 * Prevented the shared runtime mxclientsystem folder from being emptied when an app has to be removed (ticket 204549).
@@ -201,7 +201,7 @@ You can safely update the Mendix Service Console. You don't have to stop the cur
 
 ## 4.0
 
-**Release date: December 12th, 2012**
+**Release date: December 12, 2012**
 
 Mendix Service Console 4 manages all your Mendix 3 and 4 apps within one application. The left bar shows all the apps on your server. When you click an app, you can manage that app on the panel at the right side. You can show logging output of all your apps in separate windows.
 Installation
@@ -273,7 +273,7 @@ Now each app has its own license, even if it runs under the same user account as
 
 ### 2.1.1
 
-**Release date: February 13th, 2012**
+**Release date: February 13, 2012**
 
 * Ticket 10963: Installing Mendix Windows Service doesn't support user principal name format.
 * Ticket 11120: Mendix Windows Service did not restart after reboot.
@@ -285,7 +285,7 @@ Now each app has its own license, even if it runs under the same user account as
 
 ### 2.1.0
 
-**Release date: January 12th, 2012**
+**Release date: January 12, 2012**
 
 * Ticket 9470: Sometimes the maximum Java heap size configuration and other numeric settings were not saved.
 * Now you see a UAC popup when you start the Mendix Service Console, because the UAC administrator level will be required, to prevent an UAC request on (un)installing the service and to making it possible to start/stop services in the Console.

@@ -37,7 +37,7 @@ Please use a Native Template version [compatible](/releasenotes/mobile/nt-studio
 
 ## 5.0.11
 
-**Release date: March 12th, 2021**
+**Release date: March 12, 2021**
 
 {{% alert color="warning" %}}
 We have decided to retract version 5.0.11 after we received reports that apps would crash when using Firebase after the patch. Please update to [5.0.12](#5012). 

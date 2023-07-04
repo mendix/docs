@@ -338,7 +338,7 @@ Dependency management and auto-linking are not included as part of the Native Mo
 
 ### Release v1.0.79
 
-**Release date: February 12th, 2021**
+**Release date: February 12, 2021**
 
 #### Native Dependency Management Beta (with Studio Pro v9.0.3 Beta)
 

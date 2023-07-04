@@ -64,7 +64,7 @@ These release notes cover changes made to the [Catalog](/catalog/).
 
 * We fixed an issue that impacted the deployment of an OData service.
 
-### April 13th, 2023
+### April 13, 2023
 
 #### Fixes
 
@@ -122,7 +122,7 @@ These release notes cover changes made to the [Catalog](/catalog/).
 
 * We fixed a bug that was causing the creation of an application using the [Registration API](/apidocs-mxsdk/apidocs/catalog-apis/#registration) to fail.
 
-### January 12th, 2023
+### January 12, 2023
 
 #### Improvements
 
@@ -197,7 +197,7 @@ These release notes cover changes made to the [Catalog](/catalog/).
 
 * We fixed a bug where HTML tags were appearing on toast notifications. 
 
-### October 13th, 2022
+### October 13, 2022
 
 #### Improvements
 
@@ -371,7 +371,7 @@ These release notes cover changes made to the [Catalog](/catalog/).
 
 * We made several improvements to the UI.
 
-### May 12th, 2022
+### May 12, 2022
 
 #### Improvements
 
@@ -509,7 +509,7 @@ These release notes cover changes made to the [Catalog](/catalog/).
 
 * We fixed a bug where an error occurred after selecting any curate menu item on the **Curation** page as a Data Hub Curator.
 
-### January 13th, 2022
+### January 13, 2022
 
 #### Fixes
 
@@ -676,7 +676,7 @@ These release notes cover changes made to the [Catalog](/catalog/).
 * We fixed an issue where the Mendix Admin did not see external users after adding them.
 * We fixed styling issues on the **Administration** page.
 
-### August 12th, 2021
+### August 12, 2021
 
 #### New Features
 
@@ -748,7 +748,7 @@ These release notes cover changes made to the [Catalog](/catalog/).
 * **Mindsphere** applications are now indicated with the display of the Mindsphere logo for all associated assets in the Catalog.
 * In the [Search result](/catalog/manage/search/#search-results) listings, the service version number is no longer next to the data source name, it is now displayed below it.
 
-### May 12th, 2021
+### May 12, 2021
 
 #### Improvements
 

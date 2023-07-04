@@ -106,7 +106,7 @@ To see the current status of the Mendix Developer Portal and Control Center, see
 
 * We fixed an issue where authors of a [feedback](/developerportal/collaborate/feedback/) item would receive notifications on that item even though they specifically set the system not to send any notifications.
 
-### April 13th, 2023
+### April 13, 2023
 
 #### Improvements
 
@@ -134,7 +134,7 @@ To see the current status of the Mendix Developer Portal and Control Center, see
 #### Improvements
 
 * In preparation for the [merging of Studio and Studio Pro](https://www.mendix.com/blog/coming-in-2023-the-merging-of-studio-and-studio-pro/), we removed the **Edit in Studio** button. You can still open your app in Studio via the ellipsis (**…**) in the [app tile](/developerportal/#my-apps) on the **My Apps** page.
-* After the big overhaul we released on [February 13th](#feb-13-23), our logging showed a decrease in the overall performance of [Stories](/developerportal/collaborate/stories/). We took some counter-measures and made performance improvements.
+* After the big overhaul we released on [February 13](#feb-13-23), our logging showed a decrease in the overall performance of [Stories](/developerportal/collaborate/stories/). We took some counter-measures and made performance improvements.
 * We made some minor improvements to the flow for [inviting app team members](/developerportal/collaborate/team/#inviting). For example, when you invite someone new to your app, the default role will be **Business Engineer** (as long as this role exists in your app).
 * We made some improvements to the layout of the [App Buzz](/developerportal/collaborate/buzz/#app-buzz) page so that it displays better on small screen resolutions.
 * The left-hand app sidebar menu is now collapsible, which makes for a far better experience on small screen resolutions.
@@ -194,7 +194,7 @@ For more information on security issues, see [Security Advisories](/releasenotes
 * We fixed an issue in **Epics** where the unsaved changes pop-up window did not take you to the correct story after clicking **Leave**.
 * We updated the text in the [notifications](/developerportal/#notifications) when a story is assigned to you in **Epics**.
 
-### February 13th, 2023 {#feb-13-23}
+### February 13, 2023 {#feb-13-23}
 
 #### Improvements
 
@@ -227,7 +227,7 @@ For more information on security issues, see [Security Advisories](/releasenotes
 
 * We fixed an issue where some users were not able to open the [Sprint Status](/developerportal/collaborate/stories/) page.
 
-### December 13th, 2022
+### December 13, 2022
 
 #### New Features
 
@@ -608,7 +608,7 @@ In Portfolio Management, you can do the following
 
 * We fixed an issue where an error was shown when a Sprint was created from the [Stories](/developerportal/collaborate/stories/#new-sprint) page.
 
-### September 13th, 2021
+### September 13, 2021
 
 #### Improvements
 
@@ -923,7 +923,7 @@ In Portfolio Management, you can do the following
 
 * We fixed an issue where email notifications on [feedback](/developerportal/collaborate/feedback/) items were not sent under certain circumstances.
 
-### July 13th, 2020
+### July 13, 2020
 
 #### Improvements
 
@@ -1020,7 +1020,7 @@ In Portfolio Management, you can do the following
 
 * We made some minor improvements to the style of the [Stories](/developerportal/collaborate/stories/#story-actions) Beta version. This release fixes issues regarding batch actions.
 
-### December 13th, 2019 
+### December 13, 2019 
 
 #### Improvements
 
@@ -1131,7 +1131,7 @@ In Portfolio Management, you can do the following
 
 ## 2018
 
-### December 12th, 2018
+### December 12, 2018
 
 #### Improvements
 

@@ -232,7 +232,7 @@ The scopes you configure are not added automatically to the “scopes_supported�
     Modify the `OpenIDConnectProvider.SUB_CustomScope` microflow to assign the scope value (user role) based on your authorization business logic. You would typically use the following inputs to decide whether to return a requested scope:
 
     * `RegisteredClient` – this identifies the client app that sends the login request and associated user role/scope request 
-    * `Account` – defines the the user who tries login
+    * `Account` – defines the user who tries login
     * `AllowedScopeList` – the scopes associated with the client in the OIDC Provider
     * `scopesListFromRequest` – the scopes/user roles which the client requests
      

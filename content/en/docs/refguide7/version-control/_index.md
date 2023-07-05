@@ -16,13 +16,6 @@ Version Control allows you to manage your app development in two ways:
 
 Version control in Mendix is built on top of [Apache Subversion](https://subversion.apache.org/) and the concepts will be familiar to Subversion users. Mendix simplifies Subversion commands by building them into the Modelers and Developer Portal.
 
-{{% alert color="warning" %}}
-
-The processes involving the Web Modeler described here apply to collaborative working in Mendix versions 7.23.3 and above. 
-
-You cannot sync your changes with the Web Modeler if your project has Mendix version 7.23.2 or below. You will still be able to open your project in the Web Modeler, but the Web Modeler will automatically upgrade it to the latest patch version of 7.23. 
-{{% /alert %}}
-
 ## 2 Concepts {#concepts}
 
 ### 2.1 Team Server
@@ -39,18 +32,13 @@ Within the *Team Server* each app is stored in a repository. This repository con
 
 A revision is the version of your app at a moment in time, stored on the *Team Server*.
 
-Each revision of your app is given a unique number to identify it and enable you to find it in future. A new revision is created from the *Desktop Modeler* in two circumstances:
-
-* The app is committed to the Repository
-* A Desktop Modeler working copy is updated from the Web Modeler working copy
+Each revision of your app is given a unique number to identify it and enable you to find it in future. A new revision is created from the *Desktop Modeler* when the app is committed to the repository
 
 ### 2.4 Working Copy
 
 A working copy is the version of your app which is currently being worked on in the Modelers. For the Desktop Modeler, there is one working copy for each development line of the app. This model is held locally, on each computer where development work is taking place.
 
-For the Web Modeler, there is one additional working copy, held in the *cloud.* Only one developer at a time can edit this.
-
-### 2.5 Merge{#merge}
+### 2.5 Merge {#merge}
 
 Merging is the action of taking one *revision* of an app and applying the differences which have been made in a different revision. See section 4.3, [Merging Branches](#merging-branches) for more information.
 
@@ -69,13 +57,9 @@ When a conflict occurs, a developer has to intervene to decide how it should be 
 
 Updating is the action, invoked in the Desktop Modeler, which gets the latest revision of the current *development line* from the Team Server repository and merges the differences into the current working copy.
 
-If the Web Modeler is enabled for this development line, the process first ensures that the Web Modeler working copy is stored as a new revision.
-
 ### 2.8 Commit{#commit}
 
 Committing is the action, invoked in the Desktop Modeler, of sending all your changes to the *repository* and making a new *revision*.
-
-If the Web Modeler is enabled for this development line, the process first ensures that the Web Modeler working copy is stored as a new revision and merged into the working copy of the Desktop Modeler. If there are not conflicts, the changes are then sent to the repository to make a new revision.
 
 ### 2.9 Development Line{#development-line}
 
@@ -91,15 +75,7 @@ A Branch line is a way of making an independent set of changes which can be test
 
 See section 4, [Branches](#branches), for more information on how branch lines can be used.
 
-### 2.10 Web Modeler Enabled
-
-You may enable the Web Modeler for one of the development lines. This means that a developer can make changes to the app through the Web Modeler and share changes with the team. All changes will be linked to the selected branch and committed as revisions to that branch. Changes made to other development lines will not be available in the Web Modeler.
-
-The Web Modeler cannot be used to develop the app if it is not enabled for any development lines.
-
-For app templates created via the Developer Portal, the main line of a new app will be Web Modeler enabled.
-
-### 2.11 Tag
+### 2.10 Tag
 
 A Tag is a way of identifying a commit in addition to the *revision* number. It is specified by the developer and has four parts:
 

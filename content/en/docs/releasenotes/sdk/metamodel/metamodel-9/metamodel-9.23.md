@@ -6,7 +6,7 @@ weight: 77
 
 ## 9.23.0
 
-**Release date: February 21st, 2023**
+**Release date: February 21, 2023**
 
 ### CodeActions
 

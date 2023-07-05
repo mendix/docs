@@ -86,7 +86,7 @@ To create a custom configuration, follow these steps:
 2. Select the name of the series you want to display differently from the drop-down menu: in this case **Series 1**.
 3. Edit the **Custom settings**; change them to `{ "type": "line" }`.
     {{< figure src="/attachments/appstore/widgets/charts/charts-tutorials/charts-advanced-tuning/charts-widget-bar-line-combination.png" alt="chart editor" >}}
-4. Copy the the custom settings.
+4. Copy the custom settings.
 5. In Studio Pro, open the **Series 1** configuration.
 6. Paste the new configuration for the data into the **(Layout) Options** property in the **Advanced** tab.
 

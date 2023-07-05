@@ -168,7 +168,7 @@ The **Width** property can be used to make your layout more flexible and adaptiv
 
 For example, you have a layout grid with one row and two columns: a picture is in one column, and a text with details is in another.
 
-For the *desktop* and *tablet*, you might want to set the first column with a picture to **Auto-fit content** and and the second one to **Auto-fill**, this way the first column will adjust to the size of the picture, while the second one will take the rest of the row:
+For the *desktop* and *tablet*, you might want to set the first column with a picture to **Auto-fit content** and the second one to **Auto-fill**, this way the first column will adjust to the size of the picture, while the second one will take the rest of the row:
 
 {{< figure src="/attachments/studio/page-editor/page-editor-widgets/page-editor-widgets-structure/layout-example-desktop.png" alt="Layout Example, Desktop" >}}
 

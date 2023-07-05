@@ -11,7 +11,7 @@ For newer release notes, see the **Releases** tab of [Mendix Application Perform
 
 ## 3.0.0
 
-**Release date: March 9th, 2020**
+**Release date: March 9, 2020**
 
 ### APM Renamed to Application Performance Diagnostics (APD)
 
@@ -417,7 +417,7 @@ The measurements tool has been redesigned to include some new features.
 * The option to overrule the protection on processing the recorded session. You get a dialog where you can filter, overrule or cancel.
 * Performance Tool got a new entity, called session where recording sessions are stored. The recorded microflows are linked to the session in which they are recorded. After process and when processing a trap in the performance tool the session opens, so you see the results of your action directly.
 * The performance tool filtering now filters sub-microflows on the action threshold to prevent empty microflows and filter a low more in the case of loops with a lot of iterations.
-* The processing of a trap in the performance tool has been simplified so you no longer have to select rows. The complete trap or in advanced search the complete result set in the grid is sent to the performance tool. This makes this function a 2 click-function (the 2nd being ‘Are you sure?’).
+* The processing of a trap in the performance tool has been simplified so you no longer have to select rows. The complete trap or in advanced search the complete result set in the grid is sent to the performance tool. This makes this function a two-click function (the second being ‘Are you sure?’).
 * Fixed performance tool tree widget showing [+] and [-].
 * Removed option to process recorded data before shutdown. Hardly used and could cause delay in shutdown.
 * Simplified the explain plan dialog to execute immidiately if there are no parameters. If there are parameters

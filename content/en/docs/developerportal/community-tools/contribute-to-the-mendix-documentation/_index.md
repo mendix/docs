@@ -83,7 +83,7 @@ The sections below present the key steps in writing new documentation for Mendix
 To submit a new how-to or *Studio Pro Guide* page to the Mendix documentation, start with a Mendix documentation template:
 
 * To get the how-to template, right-click this link and save the file locally: [How-to Template](https://raw.githubusercontent.com/mendix/docs/development/templates/how-to-template.md)
-* To get the *Studio Pro Guide* page template, right-click this link and save the file locally: [Mendix Studio Pro Guide Page Template](https://raw.githubusercontent.com/mendix/docs/development/templates/ref-guide-page-template.md)
+* To get the reference page template, right-click this link and save the file locally: [Mendix Studio Pro Guide Page Template](https://raw.githubusercontent.com/mendix/docs/development/templates/reference-template.md)
 
 ### 5.2 Guidelines and Conventions {#naming}
 
@@ -117,7 +117,7 @@ You may receive a response to your pull request asking for verification of speci
 
 The first time you make a contribution to the Mendix documentation (via a pull request), you need to sign the [Contributor License Agreement for mendix/docs](https://cla-assistant.io/mendix/docs).
 
-To access the license agreement, go to the the **Checks** section of the pull request's **Conversation** tab and click **Details** for **license/cla** .
+To access the license agreement, go to the **Checks** section of the pull request's **Conversation** tab and click **Details** for **license/cla** .
 
 This only needs to be done once.
 

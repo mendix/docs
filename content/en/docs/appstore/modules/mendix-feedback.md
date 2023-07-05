@@ -17,7 +17,7 @@ This document is for the Mendix Feedback module, compatible with Studio Pro v.9.
 
 **This is the Mendix Feedback module, formerly the Mendix Feedback widget.**
 
-All [Mendix Feedback](https://marketplace.mendix.com/link/component/199/) widgets with versions lower than 8.4.0 are disabled as of October 1st, 2022. If you are using one of these versions, [upgrade your current Mendix Feedback widget with the latest version of this module](#upgrade).
+All [Mendix Feedback](https://marketplace.mendix.com/link/component/199/) widgets with versions lower than 8.4.0 are disabled as of October 1, 2022. If you are using one of these versions, [upgrade your current Mendix Feedback widget with the latest version of this module](#upgrade).
 
 The feedback provided via a widget version lower than 8.4.0 is no longer sent to the [Feedback](/developerportal/collaborate/feedback/) section of the Developer Portal, but your app will keep working as usual.
 
@@ -28,7 +28,7 @@ In case of any questions, contact [Mendix Support](https://support.mendix.com/hc
 
 ## 1 Introduction
 
-The [Mendix Feedback](https://marketplace.mendix.com/link/component/199/) module allows end-users of your application to directly submit feedback into your app. The module contains a feedback widget along with other files. The feedback module is fully integrated with the [Feedback](/developerportal/collaborate/feedback/) page in the Developer Portal, where you can review feedback and convert it into [user stories](/developerportal/collaborate/stories/) to improve your app.
+The [Mendix Feedback](https://marketplace.mendix.com/link/component/205506) module allows end-users of your application to directly submit feedback into your app. The module contains a feedback widget along with other files. The feedback module is fully integrated with the [Feedback](/developerportal/collaborate/feedback/) page in the Developer Portal, where you can review feedback and convert it into [user stories](/developerportal/project-management/stories/) to improve your app.
 
 {{< figure src="/attachments/appstore/modules/mendix-feedback/feedback-in-app.png" >}}
 
@@ -171,7 +171,7 @@ If you see the following error, click **close** and then go to your widget folde
 ## 5 Legacy Feedback Widget Docs {#legacy-feedback-docs}
 
 {{% alert color="warning" %}}
-**All Mendix Feedback widgets with versions lower than 8.4.0 are disabled as of October 1st, 2022. If you are using one of these versions, download and replace your current [Mendix Feedback](https://marketplace.mendix.com/link/component/199/) widget with version 8.4.0 or higher.**
+**All Mendix Feedback widgets with versions lower than 8.4.0 are disabled as of October 1, 2022. If you are using one of these versions, download and replace your current [Mendix Feedback](https://marketplace.mendix.com/link/component/199/) widget with version 8.4.0 or higher.**
 
 The feedback provided via a widget version lower than 8.4.0 is no longer sent to the [Feedback](/developerportal/collaborate/feedback/) section of the Developer Portal, but your app will keep working as usual.
 
@@ -180,7 +180,7 @@ If you are using the [Native Mobile Resources](/appstore/modules/native-mobile-r
 
 ### 5.1 Introduction
 
-The [Mendix Feedback](https://marketplace.mendix.com/link/component/199/) widget allows end-users of your application to directly submit feedback into your app. The feedback widget is fully integrated with the [Feedback](/developerportal/collaborate/feedback/) page in the Developer Portal, where you can review feedback and convert it into [user stories](/developerportal/collaborate/stories/) to improve your app.
+The [Mendix Feedback](https://marketplace.mendix.com/link/component/199/) widget allows end-users of your application to directly submit feedback into your app. The feedback widget is fully integrated with the [Feedback](/developerportal/collaborate/feedback/) page in the Developer Portal, where you can review feedback and convert it into [user stories](/developerportal/project-management/stories/) to improve your app.
 
 {{< figure src="/attachments/appstore/widgets/mendix-feedback/feedback-in-app.png" width="350px">}}
 

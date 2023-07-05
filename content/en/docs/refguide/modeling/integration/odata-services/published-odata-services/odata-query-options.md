@@ -82,7 +82,7 @@ We support the following comparison operators:
 | length       | `/Employees?$filter=length(Name) eq 5`          | All employees with names that have a length of 5 |
 | year         | `/Employees?$filter=year(DateOfBirth) eq 1990`  | All employees born in the year 1990 |
 | month        | `/Employees?$filter=month(DateOfBirth) eq 5`    | All employees born in May |
-| day          | `/Employees?$filter=day(DateOfBirth) eq 31`     | All employees born on the 31st day of the month |
+| day          | `/Employees?$filter=day(DateOfBirth) eq 31`     | All employees born on the 31 day of the month |
 | hour         | `/Employees?$filter=hour(Registration) eq 13`   | All employees registered between 13:00 (1 PM) and 13:59 (1:59 PM) |
 | minute       | `/Employees?$filter=minute(Registration) eq 55` | All employees registered on the 55th minute of any hour |
 | second       | `/Employees?$filter=second(Registration) eq 55` | All employees registered on the 55th second of any minute of any hour |
@@ -139,7 +139,7 @@ You can limit the number of returned objects using the `$top` query option, wher
 
 ### 7.2 Skip (Offset)
 
-You can skip a number of objects before retrieving the result using the `$skip` query option, where the offset is a positive integer. For example: `?$skip=100` will return objects starting with the 101st object in the list.
+You can skip a number of objects before retrieving the result using the `$skip` query option, where the offset is a positive integer. For example: `?$skip=100` will return objects starting with the 101 object in the list.
 
 ## 8 Null Literals
 

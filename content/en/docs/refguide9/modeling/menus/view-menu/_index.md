@@ -71,7 +71,7 @@ The **Console** pane displays the output of the [Mendix Runtime](/refguide9/runt
 
 ### 3.5 Data Hub {#data-hub}
 
-The [Data Hub pane](/refguide9/data-hub-pane/) enables you to browse the [Data Hub Catalog](/data-hub/data-hub-catalog/) and use registered data sources that are available for your organization in your app development. You can add [external entities](/refguide9/external-entities/) to your app via this pane and see entities and data sources already consumed in your app. 
+The [Data Hub pane](/refguide9/data-hub-pane/) enables you to browse the [Catalog](/catalog/) and use registered data sources that are available for your organization in your app development. You can add [external entities](/refguide9/external-entities/) to your app via this pane and see entities and data sources already consumed in your app. 
 
 ### 3.6 Documentation
 
@@ -105,7 +105,7 @@ The **Properties** pane displays the properties of the currently selected elemen
 
 ### 3.13 Stories
 
-For [Team Server](/developerportal/collaborate/team-server/) app, the **Stories** pane shows the [stories](/developerportal/collaborate/stories/) of the current [Sprint](/developerportal/collaborate/stories/). For more information on the **Stories** pane and how to interact with it, see [Stories Pane](/refguide9/stories-pane/). 
+For [Team Server](/developerportal/collaborate/team-server/) app, the **Stories** pane shows the [stories](/developerportal/project-management/stories/) of the current [Sprint](/developerportal/project-management/stories/). For more information on the **Stories** pane and how to interact with it, see [Stories Pane](/refguide9/stories-pane/). 
 
 ### 3.14 Toolbox {#toolbox}
 

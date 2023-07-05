@@ -44,7 +44,7 @@ You can then access the following parts of the Mendix Platform:
     * Clicking **Details** on this page opens the [Environments](/developerportal/deploy/environments/) page for the app that is deployed to a node
     * For details on the **Cluster Manager** option in the top bar, see [Creating a Private Cloud Cluster](/developerportal/deploy/private-cloud-cluster/)
 * [Control Center](/developerportal/control-center/)
-* [Portfolio Management](/developerportal/portfolio-management/)
+* [Portfolio](/developerportal/portfolio-management/)
 * [Marketplace](/appstore/)
 * [Data Hub](/data-hub/)
 * [Academy](https://academy.mendix.com/link/home)
@@ -77,7 +77,7 @@ Using the drop-down menu, you can choose to sort the apps in the following ways:
 
 By clicking the ellipsis (**…**) in the app tile, you can quickly perform a number of actions:
 
-{{< figure src="/attachments/developerportal/quick-action-menu.png" alt="Quick actions menu for an app" >}}
+{{< figure src="/attachments/developerportal/quick-action-menu.png" alt="Quick actions menu for an app" width="50%" >}}
 
 The actions available depend on the app selected:
 

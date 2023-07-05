@@ -61,7 +61,7 @@ This chart shows the available solutions for when you want to connect Mendix app
 | Unsupported protocols   | Build a module to connect either via alternative protocols, or by encapsulating one of the platform supported protocols. |
 
 {{% alert color="info" %}}
-The [Data Hub Catalog](/data-hub/data-hub-catalog/) is a hub for shared registered assets made available in your organization. At the moment, it only supports OData.
+The [Catalog](/catalog/) is a hub for shared registered assets made available in your organization. At the moment, it only supports OData.
 {{% /alert %}}
 
 ### 2.2 Getting Mendix Connectors
@@ -149,4 +149,4 @@ Because connectors are exported as modules and then published on the Marketplace
 * Read [How to Share Marketplace Content](/appstore/general/share-app-store-content/)
 * Check out [Best Practices for Building Connectors](/appstore/creating-content/connector-guide-best-practices/)
 * See [Wrap Services, APIs, or Databases with OData](/refguide/wrap-services-odata/) for more advanced ways of building connectors
-* Read about building a [Third-Party Service Connector](/refguide/wrap-services-odata/#3rd-party)
+* Read about building a [Third-Party Service Connector](/refguide/wrap-services-odata/#third-party)

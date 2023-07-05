@@ -43,9 +43,9 @@ You can obtain the deployment package in a number of ways:
 
 The deployment package must be available over the internet without requiring authorization credentials, as these cannot be provided in the CR.
 
-### 3.2 Editing the CR{#edit-cr}
+### 3.2 Editing the CR {#edit-cr}
 
-You need to create a file containing the following yml code and then configure it to create the CR for your app. Below is an example which can be used a reference purpose to create a mendix cr yaml file. 
+You need to create a file containing yml code and then configure it to create the CR for your app. Below is an example which can be used a reference purpose to create a mendix CR yaml file. Adapt this example as required for your own application.
 
 ```yml
 apiVersion: privatecloud.mendix.com/v1alpha1

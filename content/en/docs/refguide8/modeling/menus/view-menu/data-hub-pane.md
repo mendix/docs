@@ -54,7 +54,7 @@ To add entities to your project model, see [Adding an External Entity to a Proje
 
 ## 3 Searching the Catalog {#search}
 
-As you enter a search term, all the items in the Catalog satisfying the search string are listed in the search results. This will include words in the service, entity and attribute descriptions which are not displayed in the the Data Hub pane. Further information see the [Catalog asset details](/catalog/manage/search/#search-details).
+As you enter a search term, all the items in the Catalog satisfying the search string are listed in the search results. This will include words in the service, entity and attribute descriptions which are not displayed in the Data Hub pane. Further information see the [Catalog asset details](/catalog/manage/search/#search-details).
 
 ### 3.1 Wildcard Search
 

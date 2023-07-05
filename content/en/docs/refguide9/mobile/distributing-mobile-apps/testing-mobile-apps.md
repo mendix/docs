@@ -112,7 +112,7 @@ While using Espresso in combination with Mendix apps, there have been occasional
 
 ## 6 Automatically Testing Your Mendix Native App
 
-Once you have the capabilities you want that work with Appium Desktop, you can also use them with Appium CLI to run automated tests. Everything you need to create your first automated test can be found [here](http://appium.io/docs/en/about-appium/getting-started/?lang=en). You can use the the Appium Desktop Inspector to find the right locators.
+Once you have the capabilities you want that work with Appium Desktop, you can also use them with Appium CLI to run automated tests. Everything you need to create your first automated test can be found [here](http://appium.io/docs/en/about-appium/getting-started/?lang=en). You can use the Appium Desktop Inspector to find the right locators.
 
 ## 7 Read More
 

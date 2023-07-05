@@ -6,7 +6,7 @@ weight: 100
 
 ## 10.0.0 GA
 
-**Release date: June 19th, 2023**
+**Release date: June 19, 2023**
 
 ### Microflows
 

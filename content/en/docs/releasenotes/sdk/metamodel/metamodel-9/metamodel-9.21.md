@@ -6,7 +6,7 @@ weight: 79
 
 ## 9.21.0
 
-**Release date: December 13th, 2022**
+**Release date: December 13, 2022**
 
 ### Microflows
 

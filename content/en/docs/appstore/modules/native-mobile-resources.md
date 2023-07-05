@@ -166,7 +166,7 @@ These are the nanoflow actions in the native mobile category:
     * IsEmulator: checks if the app is running on an emulator
     * IsTablet: checks if the app is running on a tablet
     * IsLandscape: checks if the device is currently in landscape mode
-    * HasNotch: checks if the the device has a notch
+    * HasNotch: checks if the device has a notch
 
 * **Hide keyboard** – hides the onscreen keyboard
 * **Open in app browser** – opens a specific URL in an in app web browser

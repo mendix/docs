@@ -117,7 +117,7 @@ If you use the [Workflow Commons](/appstore/modules/workflow-commons/) module in
 
 User task pages that were generated in an earlier version of Studio Pro also need to be updated. The conditional visibility based on whether the current user is assigned is no longer supported. You will see a consistency error for any outcome button that is using the visibility expression. For each button, set the visibility to **Always**.
 
-## 7.6 DOM Structure Changes
+### 7.6 DOM Structure Changes
 
 Studio Pro 10 introduces DOM structure changes to the web client to ensure compatibility with future versions of React.
 
@@ -127,7 +127,7 @@ These changes may impact your current styling.
 
 If your application is currently using the Atlas theme, this is easily solved by upgrading [Atlas Core](https://marketplace.mendix.com/link/component/117187) to version 3.11 or above. Otherwise, please adjust your css selectors accordingly.
 
-## 7.7 Moving Away from Glyphicon
+### 7.7 Moving Away from Glyphicon
 
 In Studio Pro 10, the glyphicon is slowly being phased out. Although a currently selected glyphicon will still work, some of the widgets that Studio Pro 10 uses are no longer using a glyphicon class name.
 

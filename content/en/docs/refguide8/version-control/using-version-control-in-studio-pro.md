@@ -373,7 +373,7 @@ To fix this, make a small commit on your branch in Studio Pro (for example, chan
 
 ### 9.5 Reverting Accidental Studio Pro App Model Upgrade
 
-When working in different app with different Studio Pro versions, you may one day find yourself with an app model upgraded and committed to a newer Studio Pro version, while the the rest of your team is not yet ready to upgrade. 
+When working in different app with different Studio Pro versions, you may one day find yourself with an app model upgraded and committed to a newer Studio Pro version, while the rest of your team is not yet ready to upgrade. 
 
 To revert this version upgrade of the app model, follow these steps:
 

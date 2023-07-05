@@ -99,6 +99,7 @@ To allow the module to send and receive document generation requests on your Men
 
 1. Enable the DocGen request handler.
 2. Register your app environment.
+3. For applications using Mendix custom domains.
 
 The steps for each procedure are described in the sections below. 
 

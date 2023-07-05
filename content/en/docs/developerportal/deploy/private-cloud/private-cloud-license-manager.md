@@ -421,7 +421,7 @@ spec:
       type: offline
 ```
 
-## 7. Migration
+## 8 Migration
 
 If you have manually configured static runtime licenses (offline licenses), PCLM will not replace those licenses. Only the runtime licenses applied through a Subscription secret will be replaced. If your namespace was never licensed, please ignore this section.
 
@@ -453,9 +453,9 @@ This will indicate that licenses have been applied to the operator and apps in t
 
   
 
-## 8 Troubleshooting
+## 9 Troubleshooting
 
-### 8.1 mx-pclm-cli Help
+### 9.1 mx-pclm-cli Help
 
 You can get help on using mx-pclm-cli and its individual commands at any time by using the help command.
 For example, `mx-pclm-cli --help` or `mx-pclm-cli user --help`.

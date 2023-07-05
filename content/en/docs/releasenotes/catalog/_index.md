@@ -12,11 +12,12 @@ aliases:
 These release notes cover changes made to the [Catalog](/catalog/).
 
 ## 2023
+
 ### July 6, 2023
 
 #### Improvements
 
-* We improved the clarity and accuracy of text in email notifications.
+* We improved the clarity and accuracy of the texts in email notifications.
 
 ### June 29, 2023
 

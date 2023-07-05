@@ -31,7 +31,7 @@ This is the docker environment specification which specifies the docker environm
 
 ### 2.3 Project MPK
 
-This is the project model as created by Studio Pro or Studio. It cannot be directly interpreted by the Mendix Runtime.
+This is the project model as created by Studio Pro. It cannot be directly interpreted by the Mendix Runtime.
 
 ### 2.4 MX Build
 

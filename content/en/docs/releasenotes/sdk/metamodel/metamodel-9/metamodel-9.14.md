@@ -6,7 +6,7 @@ weight: 86
 
 ## 9.14.0
 
-**Release date: May 20th, 2022**
+**Release date: May 20, 2022**
 
 ### DomainModels
 

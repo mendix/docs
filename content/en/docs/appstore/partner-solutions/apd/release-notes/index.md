@@ -11,7 +11,7 @@ For newer release notes, see the **Releases** tab of [Mendix Application Perform
 
 ## 3.0.0
 
-**Release date: March 9th, 2020**
+**Release date: March 9, 2020**
 
 ### APM Renamed to Application Performance Diagnostics (APD)
 

@@ -15,7 +15,7 @@ For information on the current status of deployment to SAP BTP and any planned r
 
 ## 2022
 
-### November 17th, 2022
+### November 17, 2022
 
 #### Improvements
 
@@ -23,20 +23,20 @@ For information on the current status of deployment to SAP BTP and any planned r
 * We added the ability to choose which environment is the target for deployments directly from Mendix Studio.
 * We upgraded Mendix to use version 3 of the Cloud Foundry API, as version 2 has been deprecated.
 
-### August 4th, 2022
+### August 4, 2022
 
 #### Improvements
 
 * You can now add custom Mendix Runtime settings under the [Runtime tab](/developerportal/deploy/sap-cloud-platform/#runtime-tab).
     * this replaces the previous method of adding custom settings using User-Provided Variables.
 
-### June 20th, 2022
+### June 20, 2022
 
 #### Improvements
 
 * We released new versions of the [SAP Fiori 3 UI Resource](https://marketplace.mendix.com/link/component/116359) and [UI Package for SAP Fiori themed apps](https://marketplace.mendix.com/link/component/107625) modules in the Mendix Marketplace. These modules allow you to use Mendix version 9.6.11 and above to make Fiori-styled apps which work alongside the Atlas Core theme.
 
-### March 2nd, 2022
+### March 2, 2022
 
 #### BAPI Connector
 
@@ -44,31 +44,31 @@ For information on the current status of deployment to SAP BTP and any planned r
 
 ## 2021
 
-### December 9th, 2021
+### December 9, 2021
 
 #### Improvements
 
 * We added a configurator to help you create a custom *xs-security-json* file to configure an XSUAA service. For more information, see [XSUAA Connector for SAP Business Technology Platform](/partners/sap/sap-xsuaa-connector/).
 
-### October 14th, 2021
+### October 14, 2021
 
 #### Improvements
 
 * We added the ability to provide a custom *xs-security.json* file to configure an XSUAA service. This allows you to apply the configuration every time your app is deployed. You can add your configuration by unbinding and rebinding the XSUAA service in the [Services](/developerportal/deploy/sap-cloud-platform/#binding-services) tab.
 
-### August 30th, 2021
+### August 30, 2021
 
 * You can now upload your service configurations directly from the Configurator without having to download the configuration first.
 * We added the ability to unbind services from your environment without deleting the service. This makes it easier to change the configuration of a service and then rebind it.
 
-### August 19th, 2021
+### August 19, 2021
 
 #### Improvements – OData Connector for SAP Solutions
 
 * We improved the error handling for expired access tokens when using [Get Destination](/partners/sap/sap-destination-service/). Users will now be signed out so that they can retrieve a new access token.
 * We added the ability to fetch the SAP Destination even if the application is not XSUAA enabled or not using XSUAA.
 
-### July 26th, 2021
+### July 26, 2021
 
 #### Improvements
 
@@ -76,13 +76,13 @@ For information on the current status of deployment to SAP BTP and any planned r
 
     {{% alert color="info" %}}This version uses a new user administration module called **SapAuthentication** and customers using *XSUAA Connector for SAP Business Technology Platform* version 2.0.0 or below will need to migrate their existing users from **Administration.Account** to **SapAuthentication.SapUser** using the [User Migration](/appstore/modules/user-migration-module/) Marketplace module.{{% /alert %}}
 
-### July 14th, 2021
+### July 14, 2021
 
 #### Fix
 
 * We resolved an issue where the PostgreSQL, Hyperscaler Option service did not appear in the **Services** tab of the environment details. (Tickets 121404 and 123430)
 
-### June 16th, 2021
+### June 16, 2021
 
 #### Improvements
 
@@ -92,19 +92,19 @@ For information on the current status of deployment to SAP BTP and any planned r
 
 * We fixed an issue where the activity log reported the wrong value when the memory of the environment was scaled. (Ticket 122642)
 
-### June 2nd, 2021
+### June 2, 2021
 
 #### Improvements
 
 * We have added the ability to upload an MDA file to the Developer Portal for deployment to SAP BTP.
 
-### May 27th, 2021
+### May 27, 2021
 
 #### Improvements
 
 * We have added support for the [Deep Link](/appstore/modules/deep-link/) module for apps using the SAP XSUAA Connector. When you set up the module, you need to set the **LoginLocation** constant to `/xsauaalogin/` to ensure your end users are logged in.
 
-### March 28th, 2021
+### March 28, 2021
 
 #### Fix
 
@@ -112,7 +112,7 @@ For information on the current status of deployment to SAP BTP and any planned r
 
     (Tickets 118831 118847 118861 118862 118874 118876 118908 118925 118935 118983 119020)
 
-### February 10th, 2021
+### February 10, 2021
 
 #### Improvements
 
@@ -125,13 +125,13 @@ For more information see [SAP Business Technology Platform - deploy](/developerp
 
 ## 2020
 
-### December 21st, 2020
+### December 21, 2020
 
 #### Improvements
 
 * We released the [SAP Fiori 3 UI Resource](https://marketplace.mendix.com/link/component/116359) module in the Mendix Marketplace. This allows you to create the SAP Fiori 3 user experience in your Mendix apps. SAP Fiori 3 is the new target design system for all SAP products in the *Intelligent Suite*. For more information, see [SAP Fiori 3.0 Styling](/partners/sap/sap-fiori-3-0/).
 
-### December 9th, 2020
+### December 9, 2020
 
 #### Improvements
 
@@ -140,21 +140,21 @@ For more information see [SAP Business Technology Platform - deploy](/developerp
     * see [Running Mendix on PostgreSQL on SAP Cloud Platform](/developerportal/deploy/sap-cloud-platform/#sap-hyperscaler) for more information.
 * As part of a Developer Portal clean up, we removed the *Model* option from the *DEVELOP* section of the Developer Portal menu when you are looking at environments on SAP Cloud Platform. The functions of this page are still available via the **Edit in Studio Pro** button on the environments page.
 
-### October 21st, 2020
+### October 21, 2020
 
 #### Improvements
 
 * We split the **Edit App** button into two separate buttons, **Edit in Studio** and **Edit in Studio Pro** on some of the Developer Portal pages (Environments, App Services, Metrics, Alerts, Logs, Backups, and the Node Permissions tab of Security).
 * We also updated the drop down for the **View App** button.
 
-### April 24th, 2020
+### April 24, 2020
 
 #### Improvements
 
 * We have added an easy-to-use autoscaler configurator to allow you to easily create JSON configuration files for the **Application Autoscaler** on SAP Cloud Platform. See [Application Autoscaler for SAP Business Technology Platform](/partners/sap/sap-autoscaler/) for more information.
     * There is currently an issue with how the JSON is uploaded. We are working on a fix for this but, in the meantime, please check the workaround in the documentation to ensure that the JSON is uploaded.
 
-### March 26th, 2020
+### March 26, 2020
 
 #### Improvements
 
@@ -163,7 +163,7 @@ For more information see [SAP Business Technology Platform - deploy](/developerp
 * We have added a log of all deployment activities which are carried out on your SAP environments to the environments page of apps which are deployed to SAP Cloud Platform.
 * We have added the ability to specify a custom URL (for example, `appname.subdomain.domain.com`) where the user will be redirected after signing on using XSUAA, instead of being redirected to the generated URL (for example, `appname.cfapps.eu10.hana.ondemand.com`) of the app.
 
-### January 3rd, 2020
+### January 3, 2020
 
 #### Improvements
 
@@ -171,31 +171,31 @@ For more information see [SAP Business Technology Platform - deploy](/developerp
 
 ## 2019
 
-### September 13th, 2019
+### September 13, 2019
 
 #### Improvements
 
 * We added support for AWS RDS PostgreSQL databases when deploying to SAP Cloud Platform
 
-### July 4th, 2019
+### July 4, 2019
 
 #### Fixes
 
-* We fixed an issue where the XSUAA configuration wasn’t updated after deployment. **Please redeploy any apps which you deployed to SAP Cloud Platform between June 27th and 8:00 CST on July 4th.**
+* We fixed an issue where the XSUAA configuration wasn’t updated after deployment. **Please redeploy any apps which you deployed to SAP Cloud Platform between June 27 and 8:00 CST on July 4.**
 
-### May 13th, 2019
+### May 13, 2019
 
 #### Fixes
 
 * We fixed an issue for users deploying to SAP Cloud Portal where newly-bound services were bound correctly but did not appear in the Mendix Developer Portal. (Ticket 81418)
 
-### March 29th, 2019
+### March 29, 2019
 
 #### Improvements
 
 * We have changed Mendix deployment to **SAP Cloud Platform** so that the Cloud Foundry stack cflinuxfs3 is used. Previously, Mendix apps were using cflinuxfs2, which has been deprecated by SAP. See [Cloud Foundry Environment – Deprecation of cflinuxfs2](https://help.sap.com/doc/43b304f99a8145809c78f292bfc0bc58/Cloud/en-US/98bf747111574187a7c76f8ced51cfeb.html?from=2018-11-08&sel3=Announcement&sel1=Cloud%20Foundry%20Environment&to=2018-11-08) SAP release note from 8 November 2018, and [Rapid Application Development by Mendix – Stack Switch](https://help.sap.com/doc/43b304f99a8145809c78f292bfc0bc58/Cloud/en-US/98bf747111574187a7c76f8ced51cfeb.html?from=2019-03-29&to=2019-03-29&sel3=Announcement) SAP release note from 29 March 2019 for more information. The next time that you deploy a new, or existing, Mendix app to *SAP Cloud Platform* from the Mendix Developer Portal, the new stack will be applied to your app.
 
-### March 21st, 2019
+### March 21, 2019
 
 #### Improvements
 
@@ -207,33 +207,33 @@ For more information see [SAP Business Technology Platform - deploy](/developerp
 
 ## 2018
 
-### October 22nd, 2018
+### October 22, 2018
 
 #### Improvements
 
 * Apps deployed to SAP Cloud Platform can be edited in the Web Modeler or Desktop Modeler by choosing the appropriate option on the **Edit App** button in the Developer Portal. Older apps can have this functionality enabled using the **Enable Web Modeler** button on the **General** settings page.
 * Logs for apps deployed to SAP Cloud Platform can be viewed with Kibana from the **Logs** page of the Developer Portal. See [Logs](/developerportal/operate/logs/) for more information.
 
-### October 1st, 2018
+### October 1, 2018
 
 #### Improvements
 
 * We now configure Destination Service in the scope of XSUAA. This means that we add the uaa.user default scope to the destination instances in each new environment. This is needed to fetch the destination configuration.
 
-### August 7th, 2018
+### August 7, 2018
 
 #### Improvements
 
 * We introduced a new environments lifecycle for our SAP apps and migrated all of the old environments.
 * We improved our UX, especially on the **Environments** screens of SAP apps.
 
-### July 3rd, 2018
+### July 3, 2018
 
 #### Improvements
 
 * To improve integration and security between Mendix and SAP we now redirect you to SAP to provide your SAP credentials. This means that you need to use the same username (email address) for Mendix and SAP the next time you need to provide your credentials. This is currently implemented only for SAP regions **eu10 (Europe - Frankfurt)** and **us10 (US East - VA)**.
 
-### February 27th, 2018
+### February 27, 2018
 
 #### Fixes
 

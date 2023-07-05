@@ -28,6 +28,7 @@ As we further develop this feature, we may lift these limitations with future re
 {{% /alert %}}
 
 * Feedback issues and stories from Epics are not migrated to Jira.
+* Feedback issues accepted in the Developer Portal will not result in a story in your Jira board.
 * You cannot change the status of a story from the [Stories](/refguide/stories-pane/)  pane in Studio Pro.
 * The Stories pane only shows Jira issue types "Story" or "Bug".
 * The Stories pane does not show the status and story points of a story correctly.

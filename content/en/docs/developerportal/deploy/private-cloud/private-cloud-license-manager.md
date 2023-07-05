@@ -451,8 +451,6 @@ This will indicate that licenses have been applied to the operator and apps in t
 | `<license-id>` | `<namepace>` | `<app-ID>` | mx-operator |
 | `<license-id>` | `<namepace>` | `<app-ID>` | mx-runtime  |
 
-  
-
 ## 9 Troubleshooting
 
 ### 9.1 mx-pclm-cli Help

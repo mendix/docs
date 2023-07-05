@@ -31,7 +31,7 @@ To deploy an app to Tencent, you need the following:
 
 * A cluster and namespace (see [Cluster and Namespace Management](#cluster-namespace), below)
 
-* You can use Siemens Low Code Platform Studio to create your app online, but if you want to use Siemens Low Code Platform Studio Pro China Edition
+* Siemens Low Code Platform Studio Pro China Edition
 
     * You will be able to download Siemens Low Code Platform Studio Pro, as the first step of the onboarding during your initial sign up.
     * You can also get a copy from the **下载 Studio Pro** option in the **切换到** menu at the top left of **App & Team Management**.
@@ -446,7 +446,7 @@ The **详情** button opens the **环境详情** page which is described in more
 
 #### 5.2.3 Actions
 
-THe **操作** button opens a list of actions which you can perform quickly on the environment. Most of these actions will be disabled if the app is currently starting or stopping. These actions are:
+The **操作** button opens a list of actions which you can perform quickly on the environment. Most of these actions will be disabled if the app is currently starting or stopping. These actions are:
 
 * **启动应用** (only shown if app is stopped) – allows you to start a stopped application
 * **传输包** – allows you to deploy the deployment package in the current environment to another environment within the app, or to redeploy it in the current environment

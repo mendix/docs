@@ -21,7 +21,7 @@ For information on the current status of deployment to Mendix for Private Cloud 
 * We have removed the need to specify a namespace name when applying a custom TLS trust config in [non-interactive mode](/developerportal/deploy/private-cloud-cli-non-interactive/).
 * We fixed an issue where Google Cloud and Ceph bucket configuration would not be saved or loaded in [non-interactive mode](/developerportal/deploy/private-cloud-cli-non-interactive/).
 * We have updated components to use Go 1.20 and the latest dependency versions, in order to improve security score ratings for all container images.
-* For apps based on Mendix versions 9.12.0 and above, scheduled events are now configured on all instances; this improves reliability in some restart or update scenarios.
+* For apps based on Mendix versions 9.12.0 and above, scheduled events are now configured on all instances. This improves reliability in some scenarios where a restart or an update is required.
 * We have updated the list of supported platforms to include Kubernetes 1.27.
 
 ### June 15th, 2023

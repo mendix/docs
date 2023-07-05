@@ -139,10 +139,9 @@ Here are a few examples:
 * `MyFirstModule.Event`
 * `MyFirstModule.EventSchedule_Event/MyFirstModule.Event`
 
-## 3 Preview Module for Studio and Design Mode
+## 3 Preview Module for Studio Pro's Design Mode
 
-It is possible to create a preview for pluggable widgets that will be rendered in Studio's page editor,
-as well as Studio Pro's Design Mode.
+It is possible to create a preview for pluggable widgets in Studio Pro's Design Mode.
 
 Add the module by adding a file to your custom widget with the same name as your `xml` file as well as the suffix
 `.editorPreview.js`. For example, a widget named `TextBox.xml` would have the preview module `TextBox.editorPreview.js`.
@@ -151,8 +150,7 @@ This preview module is expected to be a CommonJS module, exporting the following
 
 ### 3.1 Exposed Libraries
 
-In Studio and **Design mode**, only a few libraries are allowed to be imported. This is expected to occur through the
-CommonJS method: by using `require`.
+In **Design mode**, only a few libraries are allowed to be imported. This is expected to occur through the CommonJS method: by using `require`.
 
 It is possible to require the following modules:
 

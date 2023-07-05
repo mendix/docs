@@ -9,7 +9,7 @@ tags: ["Widget", "Pluggable", "Custom", "JavaScript", "React", "Preview"]
 
 ## 1 Introduction
 
-This guide explains the APIs offered by Mendix Studio and Studio Pro so you can build better pluggable widgets. Specifically, you can use these APIs and modules to alter pluggable widgets' preview appearances while working in Mendix Studio or Studio Pro's **Design mode**.
+This guide explains the APIs offered by Mendix Studio Pro so you can build better pluggable widgets. Specifically, you can use these APIs and modules to alter pluggable widgets' preview appearances while working in Studio Pro's **Design mode**.
 
 In contrast, [Client APIs Available to Pluggable Widgets](/apidocs-mxsdk/apidocs/client-apis-for-pluggable-widgets-8/) is meant for pluggable widget development once your app is running in the client. This guide's APIs are available in Mendix 8.0.0 and higher.
 
@@ -55,7 +55,7 @@ Icon properties are exposed objects containing a `type` field that is `"glyph"` 
 
 For the `"glyph"` type, `iconClass` is available. It contains the class to apply on a `glyphicon` element to display the correct icon. It will be an empty string value if no icon has been selected.
 
-For the `"image"` type, `imageUrl` is available. It represents a URL from which your selected image can be reached by Studio and Studio Pro's **Design mode**. It will be an empty string value if no image has been selected.
+For the `"image"` type, `imageUrl` is available. It represents a URL from which your selected image can be reached by Studio Pro's **Design mode**. It will be an empty string value if no image has been selected.
 
 ### 2.3 Image
 
@@ -70,7 +70,7 @@ type ImageProperty = null | StaticImage | DynamicImage;
 
 Image properties are exposed objects containing a `type` field that is `"static"` if a static image is selected, `"dynamic"` if an entity is selected, or `null` if no image is selected at all.
 
-For the `"static"` type, `imageUrl`  is available. It represents a URL from which your selected image can be reached by Studio and Studio Pro's **Design mode**. It will be an empty string value if no image has been selected.
+For the `"static"` type, `imageUrl`  is available. It represents a URL from which your selected image can be reached by Studio Pro's **Design mode**. It will be an empty string value if no image has been selected.
 
 For the `"dynamic"` type, `entity` is available. It represents the entity where the selected image's data is stored. It will be an empty string value if no entity has been selected.
 

@@ -10,7 +10,7 @@ weight: 4
 
 ## 1 Introduction
 
-At the Mendix 10 launch event on June 27th, 2023, there were a number of announcements for features that Mendix is releasing. This document contains the calendar of expected release dates for these features.
+At the Mendix 10 launch event on June 27, 2023, there were a number of announcements for features that Mendix is releasing. This document contains the calendar of expected release dates for these features.
 
 The new features were divided into these major themes, which are described in the sections below:
 
@@ -24,9 +24,9 @@ The new features were divided into these major themes, which are described in th
 
 | Capability or Feature | Expected Release |
 | --- | --- |
-| Portfolio Management | Released for GA [Jun 22, 2023](/releasenotes/developer-portal/#june-22nd-2023) |
-| App Insights | Released for Public Beta [Dec 13, 2022](/releasenotes/developer-portal/#december-13th-2022)<br>GA: Q3 2023 |
-| Jira integration | Released for Public Beta [Jun 22, 2023](/releasenotes/developer-portal/#june-22nd-2023)<br>GA: Q4 2023 |
+| Portfolio Management | Released for GA [Jun 22, 2023](/releasenotes/developer-portal/#june-22-2023) |
+| App Insights | Released for Public Beta [Dec 13, 2022](/releasenotes/developer-portal/#december-13-2022)<br>GA: Q3 2023 |
+| Jira integration | Released for Public Beta [Jun 22, 2023](/releasenotes/developer-portal/#june-22-2023)<br>GA: Q4 2023 |
 | Community spaces | Currently in Private Beta<br>GA: Q3 2023 |
 
 ## 3 Developer Experience
@@ -69,17 +69,19 @@ The new features were divided into these major themes, which are described in th
 
 | Capability or Feature | Expected Release |
 | --- | --- |
-| Mendix on AWS EKS | Released for GA [Feb 8, 2023](/releasenotes/developer-portal/mendix-for-private-cloud/#february-8th-2023) |
-| Webhooks | Released for GA [Jun 15, 2023](/releasenotes/developer-portal/mendix-cloud/#june-15th-2023) |
-| Multi-region failover | GA: Q3 2023 |
+| Mendix on AWS EKS (Private Cloud) | Released for GA [Feb 8, 2023](/releasenotes/developer-portal/mendix-for-private-cloud/#february-8-2023) |
+| Webhooks (Mendix Cloud, Cloud Dedicated, Private Cloud) | Released for GA [Jun 15, 2023](/releasenotes/developer-portal/mendix-cloud/#june-15-2023) |
+| Multi-region failover (Mendix Cloud, Cloud Dedicated) | GA: Q3 2023 |
 | Private Mendix Platform | Currently in Private Beta<br>GA: Q4 2023   |
-| Pipelines | Public Beta: Q4 2023<br>GA: TBD |
+| Pipelines (Mendix Cloud, Cloud Dedicated) | Public Beta: Q4 2023<br>GA: TBD |
+| Pipelines (Private Cloud) | GA: TBD |
 
 ## 6 Governance and Control
 
 | Capability or Feature | Expected Release |
 | --- | --- |
-| BYO IDP | Released for GA [May 16, 2023](/releasenotes/developer-portal/#byoidp) |
-| Cloud self-service | Currently in Private Beta<br>GA: TBD |
-| Landscape overview | Public Beta: Q3 2023<br>GA: TBD |
-| Dependency governance | Public Beta: Q4 2023<br>GA: TBD |
+| BYO IDP (Mendix Cloud, Cloud Dedicated) | Released for GA [May 16, 2023](/releasenotes/developer-portal/#byoidp) |
+| Cloud self-service (Mendix Cloud) | Currently in Private Beta<br>GA: TBD |
+| Landscape overview (Mendix Cloud, Cloud Dedicated) | Public Beta: Q3 2023<br>GA: TBD |
+| Dependency governance (Mendix Cloud, Cloud Dedicated) | Public Beta: Q4 2023<br>GA: TBD |
+| Cloud self-service (Cloud Dedicated) | Private Beta: Q4 2023<br>GA: TBD |

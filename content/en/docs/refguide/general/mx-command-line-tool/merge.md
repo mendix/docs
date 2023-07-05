@@ -152,6 +152,7 @@ Under the `[core]` section, add the following:
 ```ini
     attributesfile = .git/.gitattributes`
 ```
+
 ### 4.2 .gitattributes File
 
 Create `.gitattributes` file in .git folder of your App on disk. Add the following line there to tell git to use `[merge "custom"]` driver from .gitconfig chapter of this page for merging *.mpr files.

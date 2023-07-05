@@ -263,7 +263,7 @@ If you have multiple development lines, you sometimes want to port changes from 
 
 Merging is always done while you have a working copy open. The merge will result in extra local changes in that working copy. It is advisable to commit local changes first before merging extra changes into a working copy. Otherwise, the uncommitted local changes and the changes caused by the merge will be combined and it is very hard to untangle them if you are unhappy with the merge. Studio Pro will warn you if you have uncommitted changes.
 
-Select **Version Control > Merge Changes Here**, after that you can select **Port fix** or **Merge feature branch** options. For more information on merge settings, see [Merge Dialog](/refguide/merge-dialog/).
+Select **Version Control** > **Merge Changes Here**, after that you can select **Port fix** or **Merge feature branch** options. For more information on merge settings, see [Merge Dialog](/refguide/merge-dialog/).
 
 #### 7.2.3 Reverse Merging
 
@@ -283,7 +283,7 @@ There are two methods for fully replacing your main line with a branch line.
 
 The first method is to merge the entire branch line into the main line, essentially replacing the main line contents with the branch line contents). This works as long as the branch line is up to date with the main line (to avoid conflicts). To do this, follow these steps:
 
-1. Select **Version Control > Merge Changes Here** > **Merge feature branch**.
+1. Select **Version Control** > **Merge Changes Here** > **Merge feature branch**.
 2. Select the branch to merge into the main line.
 
 The second method should be used if the first method is not possible for some reason and you want to "overwrite" the main line with your branch line. For this method, you must follow these steps:
@@ -408,7 +408,7 @@ To fix this, make a small commit on your branch in Studio Pro (for example, chan
 
 ### 9.6 Reverting Accidental Studio Pro App Model Upgrade
 
-When working in different apps with different Studio Pro versions, you may one day find yourself with an app model upgraded and committed to a newer Studio Pro version, while the the rest of your team is not yet ready to upgrade. 
+When working in different apps with different Studio Pro versions, you may one day find yourself with an app model upgraded and committed to a newer Studio Pro version, while the rest of your team is not yet ready to upgrade. 
 
 To revert this version upgrade of the app model, use the Git tool of your preference to revert the change.
 

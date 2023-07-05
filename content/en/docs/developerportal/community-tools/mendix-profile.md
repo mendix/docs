@@ -13,10 +13,13 @@ aliases:
 
 ## 1 Introduction
 
-Your Mendix Profile is your main point of contact with members of the Mendix community. It displays your activities on the Mendix Platform and details about your background. 
-To get more involved in the Mendix community, your profile is the best way to start. 
+Your Mendix Profile is your main point of contact with members of the Mendix community. It displays your activities on the Mendix Platform and details about your background. To get more involved in the Mendix community, your profile is the best place to start. 
 
 You can access your Mendix profile by clicking your picture in the upper-right corner of the Developer Portal and then selecting **See Your Profile**.
+
+{{% alert color="info" %}}
+By default, any newly created Mendix account comes with its own Mendix Profile.
+{{% /alert %}}
 
 ## 2 Header {#header}
 
@@ -41,7 +44,7 @@ The first profile card below the header presents your **Stats**, which are your 
 {{< figure src="/attachments/developerportal/community-tools/mendix-profile/stats.png"   width="350"  >}}
 
 {{% alert color="warning" %}}
-Don't get bummed out about a low number of points, because everyone in the Mendix community started like that, even our Expert developers! There are plenty of opportunities to gain more points and climb the [Leaderboard](#leaderboard).
+Don't get disappointed about a low number of points, because everyone in the Mendix community started like that, even our Expert developers! There are plenty of opportunities to gain more points and climb the [Leaderboard](#leaderboard).
 {{% /alert %}}
 
 ## 4 Badges {#badges}
@@ -214,39 +217,85 @@ You can also connect your social accounts via **Twitter URL** and **LinkedIn URL
 You can also choose to make your profile public (which will allow the Mendix community to view your profile) by clicking **Make Profile Public**. Be sure to do the following to make your profile public:
 
 * Add an avatar
-* Enter a **Function**
-* Confirm if you are looking for a **job**, a **project**, both, or neither
-* Enter a **Summary**
-* Add at least 1 **Skill**
-* Add at least 1 **Industry Experience** item
+* Enter a **Job Title**, **Department**, and **Country of Residence**
+* Add some details **About You**
+* Add at least one **Skill**
+* Add at least one **Industry Experience** item
 
 {{% alert color="info" %}}
 To make your public profile private again, click **Make Profile Private**. 
 {{% /alert %}}
 
-### 10.2 Account
+You can also add a **Recover Email** address, which is useful if you lose access to your account or Mendix Profile. You can provide a non-business email address for this.
 
-By default, you are requested to change your password every 90 days. A Mendix Admin can change this password policy setting in [Control Center](/developerportal/control-center/#security).
+#### 10.1.1 Merging Profiles
 
-You can update your password via the [Request Password Change](https://login.mendix.com/mxid3/request-password-reset) button, which you can also reach using the **Forgot password?** link on the login screen.
+If you own two (or more) user accounts, Mendix recommendeds merging the profiles of these user accounts with each other. This saves you from having to maintain multiple profiles, and your community contributions will be stored with the one profile you actively use. As a result, you will have a stronger single Mendix Profile, and you will not have to keep track of your progress scattered in multiple profiles in the platform.
 
-Do you want to transfer information from your old Mendix account to a new one? You should prepare for the merge by adding your new account to the relevant apps of your old account. Mendix recommends doing this, because once the old account has been merged into the new account, you no longer have access to the apps of your old account. With your new account, you will need a new invitation to those apps to gain access.
+The **Merge Profile** process merges the information associated with the merged profiles, resulting in a single Mendix Profile with two (or more) user accounts related to it. For details on what information ends up in the resulting merged profile, see the [Results of Merge Process](#merge-profile-result) section below.
 
-From your new account, then click **Transfer Account Data**. After sharing some information with us and entering the email address of your old account in the dialog box, click **Transfer Data** and the request will be sent. 
+These are the prerequisites for the profile merge actions:
 
-If you still have access to your old account, you can approve the merge yourself after clicking the link in the confirmation email that is sent to your old account when the merge is requested. Be sure you are logged in with your old account to see the merge request. Otherwise, you can wait for merge approval from Mendix Support.
+* Own two (or more) user accounts
+* Have platform access with at least one of these user accounts
+* Be able to receive emails for the user profiles that will be merged (this can be your email address used to log in or a profile email address)
 
-Your account data, earned points, achievements, credits, certifications, and Academy progress is then transferred to your new account.
+Before you start with a new profile merge action, it is important to understand what scenarios are possible and what it means for the profile merge process. The following starting scenarios are possible:
 
-{{% alert color="info" %}}
-With the merge, the accounts are only combined. The old account is not deactivated from the Mendix Platform. That should be done by a [Mendix Admin](/developerportal/control-center/#members).
+* **All user accounts give you access to the Mendix Platform** – If you have access to the platform with all your user accounts, you are able to initiate a merge after signing in with any of the accounts. For the other profile, a confirmation email message is sent that enables starting the merge action.
+* **One of the user accounts gives you access to the Mendix Platform** – If you have access to only one of your user accounts, the profile merge process can only be initiated from that account. Furthermore, the user account you signed in with determines what profile information ends up in the resulting merged profile in the case of properties where the system cannot determine the information that should be kept. For the other profile, a confirmation email message is sent that enables starting the merge action. 
+* **None of the user accounts gives you access to the Mendix Platform** – You should own at least one user account that provides access to the Mendix Platform.
+
+{{% alert color="warning" %}}
+If you do not have access to any of the email addresses linked to the user accounts/profiles that you want to merge and you cannot log in with the Mendix Profile you want to merge, click **Create Support Request**  to go to Mendix Support. Mendix Support will contact you to change the profile **Recovery** email. Once this is done, you will be able to follow the steps below. 
 {{% /alert %}}
 
 {{% alert color="warning" %}}
-It is not possible to separate accounts after they have been merged. Double-check that your old and new account information is valid and in the correct order.
+When merging user profiles, a merge confirmation is needed for the user account you are not signed in with. The verification code that you need to confirm the merge operation will arrive by email. Therefore, you must be able to receive the verification email in an email inbox that is associated with the user account or the associated profile.  
 {{% /alert %}}
 
-If you do not want to use Mendix anymore, you can remove your account from this page. Click the menu button next to **Request Password Change** and select **Delete Account**. All of your personal and identifiable information is then removed and deleted from our servers.
+#### 10.1.2 Merge Process
+
+Follow these steps to merge your profiles:
+
+1. Click **Merge Profile**.
+2. In the dialog box that appears, enter the email address of one of the accounts linked to the profile you want to transfer information from. Then click **Next**.
+3. You will be asked to choose an email address to receive a verification code, so choose an email address you have access to. This step is needed to verify that you are the owner of the Mendix Profile you are trying to merge.
+4. Enter the verification code you received via the selected email address.
+5. After clicking **Verify**, you will see an overview of the profile information that will be deleted and the information that will be kept. This includes earned points, achievements, credits, certifications, and Academy progress that will be merged to your target profile.
+6. To proceed with the merge, click **Merge**. You will be notified once the merge is completed.
+
+{{% alert color="info" %}} 
+With the merge, the accounts of both profiles are kept. None of the accounts will be deactivated from the Mendix Platform. That should be done by a [Mendix Admin](/developerportal/control-center/#members).
+{{% /alert %}}
+
+#### 10.1.3 Merge Result {#merge-profile-result}
+
+The result of the profile merge process is that the information of the profiles is merged into one profile. The information that can be added to the profile will be associated with the resulting Mendix Profile. However, in a situation where there is conflicting data for the two profiles to be merged, the system uses the profile data of the user account you are signed in with. 
+
+The following details may have conflicts, but these can easily be updated after the merge process: 
+
+* Avatar image
+* **Name**
+* **Job Title**
+* **Country of Residence**
+* **About You**
+* **Twitter URL**
+* **LinkedIn URL**
+
+{{% alert color="warning" %}}
+It is not possible to separate profiles after they have been merged. Double-check that the information from all of your profiles is valid.
+{{% /alert %}}
+
+### 10.2 Account
+
+This page is an overview of all the accounts you own and that are linked to your Mendix Profile. You can see which account you are logged in with, the company associated with each user account, if single sign-on is enabled, and the status of each user account (**Active** or **Deactivated**).
+
+By default, you are requested to change your password every 90 days. A Mendix Admin can change this password policy setting in [Control Center](/developerportal/control-center/#security).
+
+You can update the password of each of your accounts via the [Change Password](https://login.mendix.com/mxid3/request-password-reset) button, which you can also reach using the **Forgot password?** link on the login screen.
+
+If you do not want to use an account anymore, you can remove it from this page. Click the menu button next to the account you want to delete and select **Forget this Account**. All of the account information is then removed and deleted from Mendix's servers. All the personal and identifiable information of your profile will be deleted when you delete all your accounts.
 
 ### 10.3 Notifications {#notifications}
 

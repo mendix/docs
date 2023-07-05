@@ -152,7 +152,7 @@ Do the following:
 
     2. In the **Create New File Attribute** dialog box, set the name to *Order_Confirmation* and click **Create**.
 
-6. Create attributes for the the **Order_Confirmation** entity. Do the following:<br />
+6. Create attributes for the **Order_Confirmation** entity. Do the following:<br />
 
     1. Repeat step 2a to create the *Date_Sent* attribute.
 

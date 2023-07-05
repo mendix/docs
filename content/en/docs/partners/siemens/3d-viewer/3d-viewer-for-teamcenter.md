@@ -121,7 +121,7 @@ Follow these steps to get the list:
 
     {{< figure src="/attachments/partners/siemens/3d-viewer/3d-viewer-for-teamcenter/teamcenter-wrapdataviews.jpg" alt="teamcenter-wrapdataviews" >}}  
 
-9. Run your app locally, then log in to Teamcenter and open the the Teamcenter model pop-up window. Type in a model name and search. You will see a list of models that contain the entered item name.
+9. Run your app locally, then log in to Teamcenter and open the Teamcenter model pop-up window. Type in a model name and search. You will see a list of models that contain the entered item name.
 
     {{< figure src="/attachments/partners/siemens/3d-viewer/3d-viewer-for-teamcenter/teamcenter-samplesearch.jpg" alt="teamcenter-samplesearch" >}}
 

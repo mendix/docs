@@ -150,7 +150,7 @@ When building the domain model for your connector, keep the following considerat
 
 ### 4.2 Naming Conventions for Elements within the Connector {#naming}
 
-To ensure that the naming conventions for your connector are easy to parse for the end user, refer to the the table below for a list of best practices by element type:
+To ensure that the naming conventions for your connector are easy to parse for the end user, refer to the table below for a list of best practices by element type:
 
 | Connector element | Naming convention |
 | --- | --- |

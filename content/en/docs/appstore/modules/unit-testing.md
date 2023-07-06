@@ -37,7 +37,7 @@ For module versions below 9.1.0, the [Object Handling](/appstore/modules/object-
 1. Map the module role **TestRunner** to the applicable user roles in your app.
 1. Add the **UnitTestOverview** microflow to your navigation structure, or include the **UnitTestOverview** snippet on a custom page.
 1. The following steps are optional:
-    * For including JUnit tests – set the **UnitTesting.FindJUnitTests** constant to true (take the the app settings regarding cloud security into consideration)
+    * For including JUnit tests – set the **UnitTesting.FindJUnitTests** constant to true (take the app settings regarding cloud security into consideration)
     * For running remote unit tests via API:
         * Add the **Startup** flow to your app model's startup sequence
         * Set the **UnitTesting.RemoteApiEnabled** constant to true and provide a password for **UnitTesting.RemoteApiPassword**

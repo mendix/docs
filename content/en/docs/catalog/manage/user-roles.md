@@ -25,7 +25,7 @@ Catalog users can do the following:
 A Mendix Admin can do the following:
 
 * Act as a [Mendix Admin](/developerportal/control-center/catalog-admin/) of the organization's Catalog
-* Assign [ Curator](#curator) roles
+* Assign [Curator](#curator) roles
 * Curate the Catalog according to the organization's data governance policy
 * Access all the registered assets in the Catalog for the organization
 

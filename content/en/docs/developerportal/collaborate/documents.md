@@ -2,7 +2,7 @@
 title: "Documents"
 url: /developerportal/collaborate/documents/
 category: "Collaboration"
-weight: 7
+weight: 10
 description: "Describes how to manage the documents in your app."
 tags: ["Documents", "Developer Portal"]
 #To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
@@ -46,4 +46,4 @@ You can perform the following actions on this page:
 
 * [Buzz](/developerportal/collaborate/buzz/)
 * [Team](/developerportal/collaborate/team/)
-* [Stories](/developerportal/collaborate/stories/)
+* [Stories](/developerportal/project-management/stories/)

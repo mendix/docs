@@ -27,17 +27,18 @@ If you are a Scrum Master of a Mendix app, you can link your app to Jira if you 
 As we further develop this feature, we may lift these limitations with future releases.
 {{% /alert %}}
 
-- Feedback issues and stories from Epics are not migrated to Jira.
-- You cannot change the status of a story from the [Stories](/refguide/stories-pane/)  pane in Studio Pro.
-- The Stories pane only shows Jira issue types "Story" or "Bug".
-- The Stories pane does not show the status and story points of a story correctly.
+* Feedback issues and stories from Epics are not migrated to Jira.
+* Feedback issues accepted in the Developer Portal will not result in a story in your Jira board.
+* You cannot change the status of a story from the [Stories](/refguide/stories-pane/)  pane in Studio Pro.
+* The Stories pane only shows Jira issue types "Story" or "Bug".
+* The Stories pane does not show the status and story points of a story correctly.
 
 ## 4 Prerequisites
 
-- You need to be a [Scrum Master](/developerportal/collaborate/app-roles/#team-roles) of the app in the Developer Portal.
-- You need to have an active subscription to Jira.
-- You need to have a project in Jira with a Scrum board or a Kanban board.
-- You need to have a user account and API token with administration rights to the project in Jira. For more information on how to get this API token, see [Manage API tokens for your Atlassian account](https://support.atlassian.com/atlassian-account/docs/manage-api-tokens-for-your-atlassian-account/).
+* You need to be a [Scrum Master](/developerportal/collaborate/app-roles/#team-roles) of the app in the Developer Portal.
+* You need to have an active subscription to Jira.
+* You need to have a project in Jira with a Scrum board or a Kanban board.
+* You need to have a user account and API token with administration rights to the project in Jira. For more information on how to get this API token, see [Manage API tokens for your Atlassian account](https://support.atlassian.com/atlassian-account/docs/manage-api-tokens-for-your-atlassian-account/).
 
 ## 5 Procedure
 
@@ -70,26 +71,26 @@ To connect your app to Jira, perform the following steps:
 
     If you choose to migrate these stories, they will be converted to Jira in the following way:
 
-    -  The title, description, labels, story points (if you have the Estimation field visible in your Jira board), and tasks of these stories will be converted to Jira.
+    * The title, description, labels, story points (if you have the Estimation field visible in your Jira board), and tasks of these stories will be converted to Jira.
 
         {{% alert color="info" %}}If a label has a white space or comma in it, we replace these characters with a dash (-).{{% /alert %}}
 
-    -  In Jira, the stories will be placed in the backlog, and receive the default status.
+    * In Jira, the stories will be placed in the backlog, and receive the default status.
 
-    - Feedback issues and stories from Epics are not migrated to Jira.
+    * Feedback issues and stories from Epics are not migrated to Jira.
 
 8. Click **Activate** to activate the connection. 
 
 Once the activation is completed, your app is connected to Jira. You can see the following:
 
 * In Studio Pro, you can see your Jira stories in the Stories pane:
-  * If you connect your app to a Scrum board in Jira, the Stories pane shows all issues of the types "Story" and "Bug" from the active Sprint.
-  * If you connect your app to a Kanban board, the Stories pane shows all issues that match the board’s filter and sub-filter. 
-    * You can find the filters and sub-filters in the board settings in Jira. Fore more information, see [Configure a company-managed board](https://support.atlassian.com/jira-software-cloud/docs/configure-a-company-managed-board/). 
-    * If you want to exclude issues from the backlog in the Stories pane, consider removing the backlog statuses from the board’s column settings.
+    * If you connect your app to a Scrum board in Jira, the Stories pane shows all issues of the types "Story" and "Bug" from the active Sprint.
+    * If you connect your app to a Kanban board, the Stories pane shows all issues that match the board’s filter and sub-filter. 
+        * You can find the filters and sub-filters in the board settings in Jira. Fore more information, see [Configure a company-managed board](https://support.atlassian.com/jira-software-cloud/docs/configure-a-company-managed-board/). 
+        * If you want to exclude issues from the backlog in the Stories pane, consider removing the backlog statuses from the board’s column settings.
 
 * After you commit your changes in Studio Pro, you can see the associated Jira stories in the details of the corresponding [revision](/developerportal/collaborate/team-server/#revision-details) in the **Team Server** page of the Developer Portal.
 
-*  You can see the link to your Jira board in the **Project Management** section of the Developer Portal.
+* You can see the link to your Jira board in the **Project Management** section of the Developer Portal.
 
     {{< figure src="/attachments/developerportal/project-management/jira-connector/navigation-jira.png"   >}}

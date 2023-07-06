@@ -6,7 +6,7 @@ weight: 80
 
 ## 9.20.0
 
-**Release date: November 18th, 2022**
+**Release date: November 18, 2022**
 
 ### CustomWidgets
 

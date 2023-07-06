@@ -265,6 +265,7 @@ To configure OAuth provider for the Authentication Code Flow, the following deta
 * **Callback URL** – the URL where the OAuth provider will redirect with the authorization code, and configured on Azure portal as callback/redirect URI
 
 To configure OAuth provider for Client Credential code grant flow, the following details are required:
+
 * **Client ID** – available on the [Azure portal](https://portal.azure.com/) once you have registered your app
 * **Client Secret** – available on the [Azure portal](https://portal.azure.com/) once you have registered your app
 * **Tenant ID** – available on the [Azure portal](https://portal.azure.com/) once you have registered your app

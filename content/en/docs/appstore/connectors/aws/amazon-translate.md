@@ -1,6 +1,6 @@
 ---
 title: "Amazon Translate"
-url: /appstore/connector/aws/amazon-translate
+url: /appstore/connectors/aws/amazon-translate
 description: "Describes the configuration and usage of the Amazon Translate app service. Amazon Translate is a neural machine translation service that delivers fast, high-quality, affordable, and customizable language translation."
 weight: 20
 tags: ["translation", "service", "app store", "marketplace", "component", "platform support"]

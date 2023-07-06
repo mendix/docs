@@ -272,14 +272,14 @@ An enumeration is a predefined list of values that can be used as an attribute t
 | `Number` | **Number** |
 | `Binary` | **Binary** |
  
- #### 4.2.4 `ENUM_FilterPolicyScope`
+#### 4.2.4 `ENUM_FilterPolicyScope`
  
 | Name | Caption |
 | --- | --- |
 | `MESSAGE_ATTRIBUTES` | **MESSAGE-ATTRIBUTES SCOPE** |
 | `MESSAGE_BODY` | **MESSAGE-BODY SCOPE** |
  
- #### 4.2.4 `ENUM_AttributeFilterCompareOperator`
+#### 4.2.4 `ENUM_AttributeFilterCompareOperator`
  
 | Name | Caption |
 | --- | --- |

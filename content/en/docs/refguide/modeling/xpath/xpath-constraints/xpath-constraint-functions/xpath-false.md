@@ -1,6 +1,7 @@
 ---
 title: "XPath false"
 url: /refguide/xpath-false/
+weight: 2
 tags: ["studio pro"]
 ---
 
@@ -23,4 +24,3 @@ This query returns all the customers who are not classified as gold customers:
      //Sales.Customer[IsGoldCustomer = false()]
     {{% /tab %}}
 {{< /tabpane >}}
-

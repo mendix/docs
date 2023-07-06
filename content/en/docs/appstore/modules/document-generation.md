@@ -98,7 +98,7 @@ Configure the path to the *chrome.exe* executable in the **CustomChromePath** co
 To allow the module to send and receive document generation requests on your Mendix Cloud environments, you need to perform the following procedures:
 
 1. Enable the DocGen request handler.
-2. For applications using Mendix custom domains.
+2. For applications using Mendix [Custom Domains](/developerportal/deploy/custom-domains/).
 3. Register your app environment.
 
 
@@ -125,11 +125,11 @@ The steps for each procedure are described in the sections below.
     6. Click **Save**. The **/docgen/** path is added to the list.
     7. Restart your application for the new request handler to take effect.
 
-Now you can continue to [register your app environment](#register-app).
+If you are making use of Mendix [Custom Domains](/developerportal/deploy/custom-domains/) for this app environment, make sure to follow the steps in [section 3.2.2](#use-custom-domain) below; if not, you can continue to [register your app environment](#register-app).
 
 ##### 3.2.2 If your application makes use of a custom domain {#use-custom-domain}
 
-When your application is deployed to the Mendix cloud and configured with a [custom domain](/developerportal/deploy/custom-domains/), the Document Generation module needs to know your original Mendix cloud URL in order to successfully generate your documents. 
+When your application is deployed to the Mendix cloud and configured with a custom domain, the Document Generation module needs to know your original Mendix cloud URL in order to successfully generate your documents. 
 To set it up you need to set the values of the constants **DocumentGeneration.UseCustomApplicationUrl**  and **DocumentGeneration.CustomApplicationUrl** for the desired app environment:
 
 {{% alert color="info" %}}

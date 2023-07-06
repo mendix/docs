@@ -13,7 +13,7 @@ For information on the current status of deployment to Mendix for Private Cloud 
 
 ## 2023
 
-### July ???, 2023
+### July 6th, 2023
 
 #### Mendix Operator v2.12.0 {#2.12.0}
 
@@ -23,6 +23,8 @@ For information on the current status of deployment to Mendix for Private Cloud 
 * We have updated components to use Go 1.20 and the latest dependency versions, in order to improve security score ratings for all container images.
 * For apps based on Mendix versions 9.12.0 and above, scheduled events are now configured on all instances. This improves reliability in some scenarios where a restart or an update is required.
 * We have updated the list of supported platforms to include Kubernetes 1.27.
+* We fixed an issue where connections to Azure SQL would fail with a *TLS Handshake failed* error.
+* The Mendix Operator will ensure that environments using licenses from the Private Cloud License Manager always have a non-expired license. When an environment's license reaches its expiration date, the Mendix Operator will replace it with a non-expired license from PCLM.
 
 ### June 15th, 2023
 

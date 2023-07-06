@@ -86,37 +86,17 @@ A Tag is a way of identifying a commit in addition to the *revision* number. It 
 
 ## 3 Version Control Processes for a Single Branch
 
-The figure below shows how two developers might work on a *Web Modeler enabled* development line of an app. One developer is working in the Web Modeler, and one in the Desktop Modeler. They both work on the same development line (for example, the main line).
+Another (or the same) developer opens the app for the first time in the Desktop Modeler. A new revision (state 2) is created on the Team Server from the current state of a working copy. It is downloaded to the local machine as the working copy for the Desktop Modeler. 
 
-{{< figure src="/attachments/refguide7/version-control/image1.png" >}}
+The developer works in the Desktop Modeler on the local working copy of the app. The developer can commit this to the Team Server repository at any time to make a new revision (state 3).
 
-### 3.1 Work in Web Modeler Only
+If two developers are working on the same *development line* of the same app at the same time, changes are stored in the respective working copies.
 
-The developer works on the app in the Web Modeler. They start with the app in state 1, this can be a new app or a revision of the app. Changes are made continuously to the working copy for the Web Modeler, stored in the cloud.
+### 3.4 Update Main Working Copy
 
-{{< figure src="/attachments/refguide7/version-control/image2.png" >}}
+The developer wants to include changes made by another developer, so they choose to update their working copy.
 
-### 3.2 Work in Desktop Modeler Only
-
-Another (or the same) developer opens the app for the first time in the Desktop Modeler. A new revision (state 2) is created on the Team Server from the current state of the Web Modeler working copy. It is downloaded to the local machine as the working copy for the Desktop Modeler. The Web Modeler is locked temporarily so that the Web Modeler working copy is stable while it is copied.
-
-The developer works in the Desktop Modeler on the local working copy of the app. There is no work done in the Web Modeler in this scenario.
-
-The developer can commit this to the Team Server repository at any time to make a new revision (state 3). This revision is copied into the Web Modeler working copy and the developer using the Web Modeler will get the changes automatically.
-
-{{< figure src="/attachments/refguide7/version-control/image3.png" >}}
-
-### 3.3 Work in Both Modelers
-
-Two developers are working on the same *development line* of the same app at the same time. One is using the Desktop Modeler, the other is using the Web Modeler. Changes from both Modelers are stored in the respective working copies: on the local machine for the Desktop Modeler and in the cloud for the Web Modeler.
-
-{{< figure src="/attachments/refguide7/version-control/image4.png" >}}
-
-### 3.4 Update Desktop Modeler Working Copy
-
-The developer using the Desktop Modeler wants to include the changes made by the developer using the Web Modeler. They choose to update their working copy.
-
-All the changes from the Web Modeler working copy are put into a new revision on the Team Server (state 4). This revision is merged into the Desktop Modeler working copy. While the Desktop Modeler working copy is being updated, the Web Modeler is locked temporarily so that the Web Modeler working copy is stable while it is copied.
+All the changes from one working copy are put into a new revision on the Team Server. This revision is merged into the current working copy. 
 
 {{% alert color="info" %}}
 This will also pick up changes from other developers using the Desktop Modeler, if they have committed changes to this branch.
@@ -124,23 +104,15 @@ This will also pick up changes from other developers using the Desktop Modeler, 
 
 If there are conflicts, the developer using the Desktop Modeler will have to resolve them before they can commit the changes to the Team Server repository.
 
-{{< figure src="/attachments/refguide7/version-control/image5.png" >}}
-
 ### 3.5 Commit Changes to Team Server Repository
 
-The developer using the Desktop Modeler wants to commit a new revision to the Team Server. This will enable the developer using the Web Modeler, or a different developer using the Desktop Modeler, to see and work with the changes the developer has made. It also means that the revision can be deployed to the cloud.
+The developer wants to commit a new revision to the Team Server. This will enable a different developer to see and work with the changes the developer has made. It also means that the revision can be deployed to the cloud.
 
-The developer selects to commit, and the following things happen:
+The developer selects to commit, and the revision created is merged with the main working copy
 
-* The Web Modeler is locked temporarily
-* The Web Modeler working copy is committed as a revision (restore point – state 5)
-* The revision just created (state 5) is merged with the Desktop Modeler working copy
+If there are no merge *conflicts*, the updated main working copy is committed as a new revision.
 
-If there are no merge *conflicts*, the updated Desktop Modeler working copy is committed as a new revision (state 6) and the Web Modeler is updated to the new revision and unlocked.
-
-If there are conflicts, the developer using the Desktop Modeler will need to resolve these. The Web Modeler will be unlocked, without receiving any of the changes from the Desktop Modeler, while they do this. The developer using the Desktop Modeler then needs to commit again, and the process starts from the beginning (the Web Modeler is locked ready for a new revision to be committed from the Web Modeler Working Copy).
-
-{{< figure src="/attachments/refguide7/version-control/image6.png" >}}
+If there are conflicts, the developer will need to resolve these. The developer needs to commit again, and the process starts from the beginning.
 
 ## 4 Branches{#branches}
 
@@ -155,8 +127,6 @@ All apps are developed along the main line (also referred to as *trunk*). Here y
 {{< figure src="/attachments/refguide7/version-control/image7.png" >}}
 
 This is the case for the version control processes described in section 3, Version Control Processes for a Single Branch.
-
-Initially, developers using the Web Modeler only have access to the development line for which the Web Modeler is enabled. They can be switched to another development line, however, by a developer using the Desktop Modeler.
 
 ### 4.2 Branch Line
 

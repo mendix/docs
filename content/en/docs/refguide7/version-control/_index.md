@@ -14,7 +14,7 @@ Version Control allows you to manage your app development in two ways:
 * Firstly, it allows you to store ([*commit*](#commit)) the current revision of your model and all its resources. You give it an identifier so that you can get that revision again and share it with other team members.
 * Secondly, it allows work to take place on multiple [*development lines*](#development-line) so that several different features can be worked on at once. These development lines can then be [*merged*](#merge) back together so that your *main line* contains all the completed features that have been worked on separately.
 
-Version control in Mendix is built on top of [Apache Subversion](https://subversion.apache.org/) and the concepts will be familiar to Subversion users. Mendix simplifies Subversion commands by building them into the Modelers and Developer Portal.
+Version control in Mendix is built on top of [Apache Subversion](https://subversion.apache.org/) and the concepts will be familiar to Subversion users. Mendix simplifies Subversion commands by building them into the Modeler and Developer Portal.
 
 ## 2 Concepts {#concepts}
 
@@ -36,7 +36,7 @@ Each revision of your app is given a unique number to identify it and enable you
 
 ### 2.4 Working Copy
 
-A working copy is the version of your app which is currently being worked on in the Modelers. For the Desktop Modeler, there is one working copy for each development line of the app. This model is held locally, on each computer where development work is taking place.
+A working copy is the version of your app which is currently being worked on in the Modeler. For the Desktop Modeler, there is one working copy for each development line of the app. This model is held locally, on each computer where development work is taking place.
 
 ### 2.5 Merge {#merge}
 
@@ -145,7 +145,7 @@ You can merge a specific revision of a branch line into your current *working co
 
 As with the examples in section 3, Version Control Processes for a Single Branch, there may be conflicts during the merge, and these will have to be resolved before you can commit the changes to your app.
 
-Note that *errors* can be introduced by the *merge* process even if no conflicts are identified during the merge. Errors are inconsistencies which are flagged in the Modelers and will prevent the app from being deployed. They could lead to a revision not being deployable, so it is important to check for errors after you have done a merge.
+Note that *errors* can be introduced by the *merge* process even if no conflicts are identified during the merge. Errors are inconsistencies which are flagged in the Modeler and will prevent the app from being deployed. They could lead to a revision not being deployable, so it is important to check for errors after you have done a merge.
 
 ## 5 Main Documents in This Category
 

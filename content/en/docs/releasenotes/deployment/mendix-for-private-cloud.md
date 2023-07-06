@@ -13,7 +13,20 @@ For information on the current status of deployment to Mendix for Private Cloud 
 
 ## 2023
 
-### June 15, 2023
+### July 6th, 2023
+
+#### Mendix Operator v2.12.0 {#2.12.0}
+
+* We have added an option to use IAM-based authentication when connecting to an RDS database and S3 file storage, removing the need for static passwords. To use this feature, you must upgrade your apps to Mendix 9.22 or later. For a walkthrough guide on how to enable and use this feature, see the [walkthrough](/developerportal/deploy/private-cloud-storage-plans/#walkthrough-aws-irsa).
+* We have removed the need to specify a namespace name when applying a custom TLS trust config in [non-interactive mode](/developerportal/deploy/private-cloud-cli-non-interactive/).
+* We fixed an issue where Google Cloud and Ceph bucket configuration would not be saved or loaded in [non-interactive mode](/developerportal/deploy/private-cloud-cli-non-interactive/).
+* We have updated components to use Go 1.20 and the latest dependency versions, in order to improve security score ratings for all container images.
+* For apps based on Mendix versions 9.12.0 and above, scheduled events are now configured on all instances. This improves reliability in some scenarios where a restart or an update is required.
+* We have updated the list of supported platforms to include Kubernetes 1.27.
+* We fixed an issue where connections to Azure SQL would fail with a *TLS Handshake failed* error.
+* The Mendix Operator will ensure that environments using licenses from the Private Cloud License Manager always have a non-expired license. When an environment's license reaches its expiration date, the Mendix Operator will replace it with a non-expired license from PCLM.
+
+### June 15th, 2023
 
 #### Portal Enhancements
 

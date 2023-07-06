@@ -112,7 +112,7 @@ To use the BAPI Connector, you have to first set up your environment and configu
 
     You need the latest stable versions for your operating system. For more details on SAP JCo releases, please refer to official [SAP JCo release and support strategy](https://launchpad.support.sap.com/#/notes/2786882).
 
-4. Put the downloaded files in the `/userlib` folder where your Mendix application is stored on your local machine (that is, `<app location>/userlib`). You can open this from within Studio Pro by clicking **App** > **Show App Directory in Explorer**.
+4. Put the downloaded files in the `/userlib` folder where your Mendix application is stored on your local machine (that is, `<app location>/userlib`). You can open this folder from within Studio Pro by clicking **App** > **Show App Directory in Explorer**.
 5. Configure the connection details. The specific configuration steps are different depending on whether you are using the SAP Cloud Connector. For more information, see the following sections:
     * [Configuring the Connection Details for the SAP Cloud Connector](#sap-cloud-connector-details)
     * [Configuring the Connection Details for Direct Connections to the SAP Backend System](#sap-connection-details)

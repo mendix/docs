@@ -43,16 +43,16 @@ The tabs of the **Survey Overview** page are described below.
 
 The **Active** tab shows all the mini surveys that are active for the app with the following details:
 
-* **Survey ID** – This is the unique ID of the mini survey. You can also find this ID on the [survey details](#survey-details) page of the mini survey. You need to use the ID as input when you configure the Mendix Mini Surves module in Studio Pro to implement the mini survey.
+* **Survey ID** – This is the unique ID of the mini survey. You can also find this ID on the [survey details](#survey-details) page of the mini survey. You need to use the ID as input when you configure the Mendix Mini Surveys module in Studio Pro to implement the mini survey.
 * **Name** – This is the name of the mini survey.
 * **Responses** – This shows the number of responses that have been collected for the mini survey.
-* **Status** – This shows the status of the mini survey. For more information, see the [Statuses of Mini Surves](#survey-status) section.
+* **Status** – This shows the status of the mini survey. For more information, see the [Statuses of Mini Surveys](#survey-status) section.
 * **Start & End Dates** – This shows the start and end dates of the mini survey.
 * **Created on** – This shows when the mini survey was created.
 
 Click the mini survey in a row on the list to see its [survey details](#survey-details) page.
 
-##### 2.1.1.1 Statuses of Mini Surves {#survey-status}
+##### 2.1.1.1 Statuses of Mini Surveys {#survey-status}
 
 A mini survey can have different statuses. You can check the status of a mini survey on the [Active](#active) tab.
 
@@ -93,7 +93,7 @@ On the **Settings** tab of **Survey Overview**, you can enable the test mode, an
 
     * To enable this test mode, select **Yes** for **Test Mode - For Project Members** here.
 
-* **API Keys** – You can view API keys here, or generate an API key if there is none available. You need to use the API key as input when you configure the Mendix Mini Surves module in Studio Pro to implement the mini survey. You need only one API key per app.
+* **API Keys** – You can view API keys here, or generate an API key if there is none available. You need to use the API key as input when you configure the Mendix Mini Surveys module in Studio Pro to implement the mini survey. You need only one API key per app.
 
     * To generate an API key, click **Generate API Key** here.
     * To view an existing API key, click the eye icon in the **View** column in the table.
@@ -120,7 +120,7 @@ This tab is available for mini surveys with all the statuses. It gives an overvi
 
 This tab is available for mini surveys with the status of **Draft**, **Ready for Implement**, or **Running**.
 
-On this tab, you can find information about how to implement the mini survey in Studio Pro. For a more detailed procedure, see the [Implement a Mini Surve](#implement-survey) section.
+On this tab, you can find information about how to implement the mini survey in Studio Pro. For a more detailed procedure, see the [Implement a Mini Survey](#implement-survey) section.
 
 #### 2.2.3 Responses Tab {#responses}
 
@@ -136,12 +136,12 @@ This tab shows the test data that has been collected from testers in the test mo
 
 You can collect test data using two methods:
 
-* Change the value of the **TEST_MODE** constant in the [Mendix Mini Surves](/appstore/modules/app-insights/) module. This will show **[TEST_MODE]** on the survey widget UI.
+* Change the value of the **TEST_MODE** constant in the [Mendix Mini Surveys](/appstore/modules/app-insights/) module. This will show **[TEST_MODE]** on the survey widget UI.
 * Select the **Enable Mendix SSO test users"** checkbox on the **Settings** tab of **Survey Overview**, which marks the app team members as testers. Note that if an app team member is not authenticated through Mendix SSO, this setting does not work for them. The survey widget will not show **[TEST_MODE]** on the UI.
 
-## 3 Running a Mini Surve
+## 3 Running a Mini Survey
 
-### 3.1 Creating a Mini Surve {#create-survey}
+### 3.1 Creating a Mini Survey {#create-survey}
 
 To create a mini survey, follow these steps:
 
@@ -172,7 +172,7 @@ To create a mini survey, follow these steps:
 
 Now you can [implement the mini survey](#implement-survey).
 
-### 3.2 Editing a Mini Surve {#edit-survey}
+### 3.2 Editing a Mini Survey {#edit-survey}
 
 To edit a mini survey, perform the following steps:
 
@@ -185,7 +185,7 @@ To edit a mini survey, perform the following steps:
    * If the mini survey has the status of **Draft**, you can edit everything in the mini survey. To edit the mini survey, click **Edit Draft** on the upper-right corner of the page, and then make changes.
    * If the mini survey has the status of **Ready to Implement**, **Running**, or **Evaluate Responses**, you can only edit the **Settings** section (for **Runtime** and **Toaster Placement**) in the survey. Click **Edit Settings** and then make the changes.
 
-### 3.3 Implementing a Mini Surve {#implement-survey}
+### 3.3 Implementing a Mini Survey {#implement-survey}
 
 Before the start time of the mini survey is reached, you should implement the survey in Studio Pro. Otherwise, users will not actually receive the mini survey, even if it has the [Status](#survey-status) of **Running** on the **Survey Overview** page. You can [reset the start time in the Settings section](#edit-survey) if you need more time to implement the survey in Studio Pro.
 
@@ -205,7 +205,7 @@ To obtain an API key for the implementation, follow these steps:
 
 #### 3.3.2 Installing and Configuring the Module
 
-To install the [Mendix Mini Surves](/appstore/modules/app-insights/) module, follow these steps:
+To install the [Mendix Mini Surveys](/appstore/modules/app-insights/) module, follow these steps:
 
 1. Open your app in Studio Pro.
 2. Follow the instructions in [How to Use Marketplace Content in Studio Pro](/appstore/general/app-store-content/) to import the module into your app.

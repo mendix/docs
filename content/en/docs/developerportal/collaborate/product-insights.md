@@ -141,7 +141,7 @@ You can collect test data using two methods:
 
 ## 3 Running a Mini Surve
 
-### 3.1 Creating a Mini Surve {#create-survey}
+### 3.1 Creating a Mini Survey {#create-survey}
 
 To create a mini survey, follow these steps:
 
@@ -172,7 +172,7 @@ To create a mini survey, follow these steps:
 
 Now you can [implement the mini survey](#implement-survey).
 
-### 3.2 Editing a Mini Surve {#edit-survey}
+### 3.2 Editing a Mini Survey {#edit-survey}
 
 To edit a mini survey, perform the following steps:
 
@@ -185,7 +185,7 @@ To edit a mini survey, perform the following steps:
    * If the mini survey has the status of **Draft**, you can edit everything in the mini survey. To edit the mini survey, click **Edit Draft** on the upper-right corner of the page, and then make changes.
    * If the mini survey has the status of **Ready to Implement**, **Running**, or **Evaluate Responses**, you can only edit the **Settings** section (for **Runtime** and **Toaster Placement**) in the survey. Click **Edit Settings** and then make the changes.
 
-### 3.3 Implementing a Mini Surve {#implement-survey}
+### 3.3 Implementing a Mini Survey {#implement-survey}
 
 Before the start time of the mini survey is reached, you should implement the survey in Studio Pro. Otherwise, users will not actually receive the mini survey, even if it has the [Status](#survey-status) of **Running** on the **Survey Overview** page. You can [reset the start time in the Settings section](#edit-survey) if you need more time to implement the survey in Studio Pro.
 

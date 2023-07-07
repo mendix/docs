@@ -36,7 +36,7 @@ If deploying to Red Hat OpenShift, you need to specify that specifically when cr
 
 Mendix for Private Cloud Operator `v2.*.*` is the latest version which officially supports:
 
-* Kubernetes versions 1.19 through 1.26
+* Kubernetes versions 1.19 through 1.27
 * OpenShift 4.6 through 4.12
 
 {{% alert color="warning" %}}
@@ -297,7 +297,7 @@ For every Mendix app environment, a new bucket and user will be created so that 
 {{% /alert %}}
 
 {{% alert color="warning" %}}
-If MinIO is installed in [Gateway](https://github.com/minio/minio/tree/master/docs/gateway) mode, it needs to be configured to use etcd.
+If MinIO is installed in the deprecated Gateway mode, it needs to be configured to use etcd.
 MinIO uses etcd to store its configuration.
 Without etcd, MinIO will disable its admin API – which is required by the Mendix Operator to create new users for each environment.
 {{% /alert %}}

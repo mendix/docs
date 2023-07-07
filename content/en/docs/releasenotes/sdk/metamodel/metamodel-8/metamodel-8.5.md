@@ -6,7 +6,7 @@ weight: 96
 
 ## 8.5.0
 
-**Release date: December 13th, 2019**
+**Release date: December 13, 2019**
 
 ### CodeActions
 

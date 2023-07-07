@@ -630,5 +630,5 @@ components:
             format: int32
           description: 'The remaining window before the rate limit resets, in UTC epoch seconds.'
 servers:
-  - url: 'https://webhook.home.mendix.com/api/v1'
+  - url: 'https://webhook-portal.home.mendix.com/api/v1'
     description: Production

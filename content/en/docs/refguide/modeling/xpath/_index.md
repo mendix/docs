@@ -55,7 +55,7 @@ The constraint is clearly visible between brackets and restricts the objects ret
 
 Element D of a query is optional and specifies an attribute of the retrieved entity. This option is rarely used in Studio Pro itself as all data is stored in objects, making it cumbersome and needlessly complicated to deal with a list of single attribute. However, various Java actions have use of such lists. Also, this functionality can be used in conjunction with element A to create aggregates of certain attributes easily.
 
-Element A of a query is optional and specifies an aggregation. Element A can be one of the following functions: [avg](/refguide/xpath-avg/), [count](/refguide/xpath-count/), [max](/refguide/xpath-max/), [min](/refguide/xpath-min/) and [sum](/refguide/xpath-sum/). With the exception of [count](/refguide/xpath-count/), each of these functions requires that a particular attribute is specified in element D. 
+Element A of a query is optional and specifies an aggregation. Element A can be one of the following functions: [avg](/refguide/xpath-aggregate-functions/#avg), [count](/refguide/xpath-aggregate-functions/#count), [max](/refguide/xpath-aggregate-functions/#max), [min](/refguide/xpath-aggregate-functions/#min) and [sum](/refguide/xpath-aggregate-functions/#sum). With the exception of [count](/refguide/xpath-aggregate-functions/#count), each of these functions requires that a particular attribute is specified in element D. 
 
 {{% alert color="info" %}}
 Element A is for use in Java code only.
@@ -71,23 +71,9 @@ For details, see [XPath Operators](/refguide/xpath-operators/).
 
 ## 5 Functions
 
-There are two function types - [XPath aggregate functions](/refguide/xpath-aggregate-functions/) and [XPath constraint functions](/refguide/xpath-constraint-functions/). XPath aggregate functions are for use in Java code only and must contain full queries as their arguments. XPath constraint functions can be used both in Java code and in Studio Pro. In Studio Pro, you do not write complete queries, only the constraints. 
+There are two function types. XPath aggregate functions are for use in Java code only and must contain full queries as their arguments. XPath constraint functions can be used both in Java code and in Studio Pro. In Studio Pro, you do not write complete queries, only the constraints.
 
-See below some frequently used XPath functions:
-
-* [XPath aggregate functions](/refguide/xpath-aggregate-functions/):
-    * [avg](/refguide/xpath-avg/)
-    * [count](/refguide/xpath-count/)
-    * [max](/refguide/xpath-max/)
-    * [min](/refguide/xpath-min/)
-    * [sum](/refguide/xpath-sum/)
-* [XPath constraint functions](/refguide/xpath-constraint-functions/):
-    * [contains](/refguide/xpath-contains/)
-    * [starts-with](/refguide/xpath-starts-with/)
-    * [ends-with](/refguide/xpath-ends-with/)
-    * [not](/refguide/xpath-not/)
-    * [true](/refguide/xpath-true/)
-    * [false](/refguide/xpath-false/)
+For details, see [XPath aggregate functions](/refguide/xpath-aggregate-functions/) and [XPath constraint functions](/refguide/xpath-constraint-functions/). 
     
 ## 6 Example
 

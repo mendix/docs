@@ -44,7 +44,7 @@ The category weight determines the order of categories inside the **Toolbox** (i
 
 ### 2.6 Documentation URL
 
-The documentation URL can be used to link to a documentation page for the building block. These links will appear in the **Building Blocks** tab of Studio's **Toolbox**.
+The documentation URL can be used to link to a documentation page for the building block. These links will appear in the **Building Blocks** tab of Studio Pro's **Toolbox**.
 
 ## 3 Common Properties
 

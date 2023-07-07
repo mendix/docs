@@ -38,7 +38,7 @@ You can perform the following actions in the **Stories** pane:
 
 ### 2.1 Refreshing the Stories Pane {#refresh}
 
-The **Refresh** button allows you to get the latest changes on stories and tasks done by you and your team members in the the Developer Portal or Studio Pro. 
+The **Refresh** button allows you to get the latest changes on stories and tasks done by you and your team members in the Developer Portal or Studio Pro. 
 
 If two team members change the same story, the changes done last will take effect. For example, you set the story status to *Running*, but your colleague sets it to *Done* two minutes later. The story's status will be set to *Done* when you click **Refresh**, as your colleague was the last one to implement changes. 
 

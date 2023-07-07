@@ -14,7 +14,7 @@ To download the Windows Service, go to the [Get Studio Pro](https://marketplace.
 
 ### 4.7.1
 
-**Release date: February 24th, 2023**
+**Release date: February 24, 2023**
 
 * Add possibility to add extra logsubscribers in the Settings.yaml file. See https://github.com/mendix/m2ee-tools/blob/v7.2.3/examples/full-documented-m2ee.yaml#L392 for more information. Compared to that information, the 'Logging' property has to start with an uppercase letter, so 'Logging:' instead of 'logging:'. The loglevel setting as described is not supported for the Windows Service.
 * We replaced the modified YAML parser YamlSerializer 0.9.0.2 by YamlDotNet 12.3.1.
@@ -23,7 +23,7 @@ To download the Windows Service, go to the [Get Studio Pro](https://marketplace.
 
 ### 4.7.0
 
-**Release date: August 26th, 2022**
+**Release date: August 26, 2022**
 
 * We fixed an exception which occurred when updating an app where files with a path exceeding 260 characters are overwritten. (Ticket 142021)
 * We now require Microsoft .NET Framework version 4.6.2 instead of 4.5.2.
@@ -37,7 +37,7 @@ To download the Windows Service, go to the [Get Studio Pro](https://marketplace.
 
 ### 4.6.1 {#4_6_1}
 
-**Release date: February 8th, 2021**
+**Release date: February 8, 2021**
 
 * <a id="46ki"></a>We now find a correct AdoptOpenJDK version for [Studio Pro 8](/releasenotes/studio-pro/8.0/) and above if that is not configured yet.
 * We changed the `Update-MxApp` cmdlet so that it no longer applies file access rights. Normally, you only need to do this once, so the Mendix Service Console will do this when you add a new app. If you still want this on an existing app, you can update the app manually in the Service Console and use the checkbox on the **Update App** form to apply the user rights again. For more information, see the release note about this checkbox for version [4.5.1](#451) below. (Ticket 67514)
@@ -49,7 +49,7 @@ To download the Windows Service, go to the [Get Studio Pro](https://marketplace.
 
 ### 4.6.0 {#4_6}
 
-**Release date: August 8th, 2019**
+**Release date: August 8, 2019**
 
 * We added support for [Studio Pro 8](/releasenotes/studio-pro/8.0/).
 * We added the option to download the applicable server distribution on the form where you add or update an app.
@@ -64,7 +64,7 @@ To download the Windows Service, go to the [Get Studio Pro](https://marketplace.
 
 ### 4.5.1 {#451}
 
-**Release date: June 5th, 2018**
+**Release date: June 5, 2018**
 
 * We upgraded the target Microsoft .NET Framework version from 4.5 to 4.5.2.
 * We added a checkbox to the **Update App** form so that you are able to configure whether you want to apply the correct user rights on some deployment folders. This is enabled by default for new apps, but disabled by default when you upgrade an existing app.
@@ -75,14 +75,14 @@ To download the Windows Service, go to the [Get Studio Pro](https://marketplace.
 
 ### 4.5.0
 
-**Release date: February 21st, 2017**
+**Release date: February 21, 2017**
 
 * We added support for Mendix 7.
 * We updated background images.
 
 ## 4.4
 
-**Release date: September 20th, 2016**
+**Release date: September 20, 2016**
 
 * When an app is updated with a deployment archive, the old app will not be copied anymore to a backup file. In the user interface, there is a checkbox now to enable backing up the old app. (Ticket 41885)
 * We fixed the exception that occurred when showing active server actions. (Ticket 41924, 44180)
@@ -93,7 +93,7 @@ To download the Windows Service, go to the [Get Studio Pro](https://marketplace.
 
 ## 4.3
 
-**Release date: March 4th, 2016**
+**Release date: March 4, 2016**
 
 * Added support for Mendix 6.3. Please reinstall the service if the app has been upgraded from an earlier version.
 * Fixed exception about too large numbers in constants (System.OverflowException: Value was either too large or too small for an Int32) and the fact that the Settings were partly reset in that case. (ticket 463290, 462793)
@@ -108,7 +108,7 @@ To download the Windows Service, go to the [Get Studio Pro](https://marketplace.
 
 ### 4.2.1
 
-**Release date: April 13th, 2015**
+**Release date: April 13, 2015**
 
 * Disabled 'Show or add license' button if an app is not running (ticket 204548).
 * Prevented the shared runtime mxclientsystem folder from being emptied when an app has to be removed (ticket 204549).
@@ -118,7 +118,7 @@ To download the Windows Service, go to the [Get Studio Pro](https://marketplace.
 
 ### 4.2.0
 
-**Release date: January 16th, 2014**
+**Release date: January 16, 2014**
 
 Please be aware of the fact that all service user passwords and database passwords will be encrypted in the settings files after opening the Mendix Service Console for the first time. Only database passwords of already as service installed apps will be untouched, until you reinstall their services.
 
@@ -143,7 +143,7 @@ Changes between 4.2-beta2 and 4.2:
 
 ### 4.2.0 Beta 2
 
-**Release date: July 10th, 2013**
+**Release date: July 10, 2013**
 
 * Ticket 20737: Improved working of the Start service button. The database can now be synchronized, even if the app is started via the Start service button. The Start button is invisible by default, if the service is installed.
 * Ticket 16404, 15319 (partially): Added encryption for service account password and database password.
@@ -162,7 +162,7 @@ Changes between 4.2-beta2 and 4.2:
 
 ### 4.2.0 Beta 1
 
-**Release date: June 10th, 2013**
+**Release date: June 10, 2013**
 
 * Support for running Mendix 5 apps.
 * Ticket 16884: Fixed error on service start: Request <(..)> failed: Unable to connect to remote server. Maybe the service could not be started.
@@ -179,7 +179,7 @@ Changes between 4.2-beta2 and 4.2:
 
 ## 4.1
 
-**Release date: March 4th, 2013**
+**Release date: March 4, 2013**
 
 This release introduces two great new functionalities: you can enable the debugger and you can show the actions which are currently active on the server. In addition, many issues are solved, such as the errors which occur while updating apps.
 
@@ -201,7 +201,7 @@ You can safely update the Mendix Service Console. You don't have to stop the cur
 
 ## 4.0
 
-**Release date: December 12th, 2012**
+**Release date: December 12, 2012**
 
 Mendix Service Console 4 manages all your Mendix 3 and 4 apps within one application. The left bar shows all the apps on your server. When you click an app, you can manage that app on the panel at the right side. You can show logging output of all your apps in separate windows.
 Installation
@@ -257,7 +257,7 @@ Now each app has its own license, even if it runs under the same user account as
 
 ## 2.2
 
-**Release date: June 1st, 2012**
+**Release date: June 1, 2012**
 
 * Now the license key can be registered and viewed in the Mendix Service Console, even if the application is not started (from menu Advanced -> License information...).
 * Ticket 12171: Service console shows non-Mendix event messages.
@@ -273,7 +273,7 @@ Now each app has its own license, even if it runs under the same user account as
 
 ### 2.1.1
 
-**Release date: February 13th, 2012**
+**Release date: February 13, 2012**
 
 * Ticket 10963: Installing Mendix Windows Service doesn't support user principal name format.
 * Ticket 11120: Mendix Windows Service did not restart after reboot.
@@ -285,7 +285,7 @@ Now each app has its own license, even if it runs under the same user account as
 
 ### 2.1.0
 
-**Release date: January 12th, 2012**
+**Release date: January 12, 2012**
 
 * Ticket 9470: Sometimes the maximum Java heap size configuration and other numeric settings were not saved.
 * Now you see a UAC popup when you start the Mendix Service Console, because the UAC administrator level will be required, to prevent an UAC request on (un)installing the service and to making it possible to start/stop services in the Console.
@@ -318,7 +318,7 @@ Now each app has its own license, even if it runs under the same user account as
 
 ## 2.0
 
-**Release date: July 28th, 2011**
+**Release date: July 28, 2011**
 
 * Support for Modeler 3.0 deployment format.
 * Communication with Runtime changed to support 3.0.
@@ -329,7 +329,7 @@ Now each app has its own license, even if it runs under the same user account as
 
 ### 1.0.7
 
-**Release date: March 22nd, 2011**
+**Release date: March 22, 2011**
 
 * Fixed incorrect shutdown handling.
 * Force quit will be done after waiting 10 instead of 5 seconds.
@@ -351,7 +351,7 @@ Now each app has its own license, even if it runs under the same user account as
 
 #### 1.0.6.3
 
-**Release date: February 16th, 2011**
+**Release date: February 16, 2011**
 
 * Support for DTAP modes Acceptance and Production (by default).
 * Now service user name and password fields are disabled when a fixed user has been chosen.
@@ -360,7 +360,7 @@ Now each app has its own license, even if it runs under the same user account as
 
 #### 1.0.6.2
 
-**Release date: December 14th, 2010**
+**Release date: December 14, 2010**
 
 * New Advanced menu-item to set the log level for the log file.
 * Create / update administrator user password buttons moved to a combined menu-item in menu Advanced.
@@ -370,13 +370,13 @@ Now each app has its own license, even if it runs under the same user account as
 
 #### 1.0.6.1
 
-**Release date: November 29th, 2010**
+**Release date: November 29, 2010**
 
 * added support for defining Mendix Service settings file as first command line argument.
 
 #### 1.0.6.0
 
-**Release date: November 23rd, 2010**
+**Release date: November 23, 2010**
 
 * In some cases, port number changes were not be saved.
 * Database settings user interface improved.
@@ -387,7 +387,7 @@ Now each app has its own license, even if it runs under the same user account as
 
 ### 1.0.5
 
-**Release date: August 6th, 2010**
+**Release date: August 6, 2010**
 
 * Better Windows log message content when the service start fails.
 * Version in title bar of Console.
@@ -396,13 +396,13 @@ Now each app has its own license, even if it runs under the same user account as
 
 #### 1.0.4.2
 
-**Release date: June 7th, 2010**
+**Release date: June 7, 2010**
 
 * When folders were selected with folder selector, the locations were not saved.
 
 #### 1.0.4.1
 
-**Release date: June 4th, 2010**
+**Release date: June 4, 2010**
 
 * Don't stop loading application constants from Modeler file when this setting does not exist in the yaml settings file.
 * Status bar added.
@@ -411,7 +411,7 @@ Now each app has its own license, even if it runs under the same user account as
 
 #### 1.0.4.0
 
-**Release date: June 3rd, 2010**
+**Release date: June 3, 2010**
 
 * Now the existence of the given paths will be checked before start.
 * More info will be shown in Windows Log in some cases of service startup fail.
@@ -428,14 +428,14 @@ Now each app has its own license, even if it runs under the same user account as
 
 #### 1.0.3.1
 
-**Release date: May 26th, 2010**
+**Release date: May 26, 2010**
 
 * Fixed the occurring error when saving the configuration and there are no application constants given.
 * Added Mendix icon to Service Tester program and form.
 
 #### 1.0.3.0
 
-**Release date: May 18th, 2010**
+**Release date: May 18, 2010**
 
 * User interface changes.
 * Added possibility to select folders by the Windows folder browser control.

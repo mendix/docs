@@ -155,7 +155,7 @@ Some trial accounts may not include object storage.
 You may need to configure your file store by using environment variables. See the [Mendix BuildPack Documentation](https://github.com/mendix/cf-mendix-buildpack) for more information.
 {{% /alert %}}
 
-## 6 Deploy Your App to Cloud Foundry
+## 6 Deploy Your App to Cloud Foundry (Deprecated)
 
 1. Open Studio Pro
 2. Open the app you want to deploy to Cloud Foundry.
@@ -164,6 +164,8 @@ You may need to configure your file store by using environment variables. See th
     {{< figure src="/attachments/developerportal/deploy/cloud-foundry-deploy/run-on-cf.png" >}} 
 
 The Mendix app will now be deployed to the configured Cloud Foundry app and started automatically
+
+{{% alert color="warning" %}}Deploying directly to Cloud Foundry from Studio Pro is deprecated. This functionality will be removed in Mendix version 11.{{% /alert %}}
 
 ## 7 Cloud Foundry Environment Variables
 

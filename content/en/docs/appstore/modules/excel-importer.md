@@ -128,7 +128,7 @@ This determines whether values in this column should be interpreted as case sens
 
 #### 4.2.6 Parse With {#parse-with}
 
-You can use a custom microflow to parse data for a column. Such a microflow should have one parameter of the same type as the column in the Excel. This will receive the data field from Excel. The microflow should return the value to put in the field you want to map (meaning, a DateTime if you are mapping to a DateTime attribute).
+You can use a custom microflow to parse data for a column. Such a microflow should have one parameter of the same type as the column in the Excel. This will receive the data field from Excel. The microflow should return the value to put in the field you want to map (meaning, a `DateTime` if you are mapping to a `DateTime` attribute). This does not apply to numbers (Integer, Long, Decimal), because Excel reads the raw data as Decimal and hence the Parsing microflow should always return Decimal. The eventual conversion of this returned Decimal value into either Integer, Long or Decimal will be done by the module.
 
 This field also has quicksearch functionality. Type in the box to the left of the reference selector and press <kbd>Tab</kbd> to search for the value you typed.
 
@@ -188,7 +188,7 @@ These control which kinds of messages are printed on the application console.
 
 This option causes objects that are not found in the imported database to be removed from your Mendix database. In other words, objects that are in your Mendix database that do not correspond to any imported database rows (anymore) are deleted. You can use this option if, for example, you want to mirror any changes to a target database and not just import new data.
 
-This functionality requires your Mendix objects to have an integer attribute that is used to keep track of which objects to remove. You can specify which attribute to use for this in the selector marked **Attribute**. 
+This functionality requires your Mendix objects to have an Integer attribute that is used to keep track of which objects to remove. You can specify which attribute to use for this in the selector marked **Attribute**. 
 
 {{% alert color="warning" %}}
 This attribute must not be used by your application in any other way, because this will cause unexpected results.
@@ -214,7 +214,7 @@ Even if there are not any changes to the object, you can still commit the object
 
 ### 5.1 A Column in Excel Shows Only Integers, but When I Import These Fields to a String Attribute, Why Do All the Values Have 2 Decimals?
 
-Excel stores all the numeric values as floats. The library reads all the values from the column and reads the values that are stored (with the two decimals) and not the values that are shown (without decimals).
+Excel stores all the numeric values as floats. The library reads all the values from the column and reads the values that are stored (with the two Decimals) and not the values that are shown (without Decimals).
 
 You can fix this by creating a microflow with a string input and a [create variable](/refguide/create-variable/) activity. The expression should be something like this: `substring( $InputVariable, 0, find($InputVariable, '.'))`.
 

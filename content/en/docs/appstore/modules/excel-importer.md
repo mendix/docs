@@ -128,7 +128,7 @@ This determines whether values in this column should be interpreted as case sens
 
 #### 4.2.6 Parse With {#parse-with}
 
-You can use a custom microflow to parse data for a column. Such a microflow should have one parameter of the same type as the column in the Excel. This will receive the data field from Excel. The microflow should return the value to put in the field you want to map (meaning, a DateTime if you are mapping to a DateTime attribute).
+You can use a custom microflow to parse data for a column. Such a microflow should have one parameter of the same type as the column in the Excel. This will receive the data field from Excel. The microflow should return the value to put in the field you want to map (meaning, a DateTime if you are mapping to a DateTime attribute). This statement does not apply to "numbers" (Integer, Long, Decimal) because Excel reads the raw data as decimals and hence the Parsing microflow should always return decimal. The eventual conversion of this returned "decimal" into either Integer, Long or Decimal will be done by the module. 
 
 This field also has quicksearch functionality. Type in the box to the left of the reference selector and press <kbd>Tab</kbd> to search for the value you typed.
 

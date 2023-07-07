@@ -448,6 +448,7 @@ The **详情** button opens the **环境详情** page which is described in more
 
 The **操作** button opens a list of actions which you can perform quickly on the environment. Most of these actions will be disabled if the app is currently starting or stopping. These actions are:
 
+* **设置为 Studio Pro 部署目标** – sets this environment as the target if you publish the app from Studio Pro
 * **启动应用** (only shown if app is stopped) – allows you to start a stopped application
 * **传输包** – allows you to deploy the deployment package in the current environment to another environment within the app, or to redeploy it in the current environment
 * **环境日志** – takes you to the log page defined by the cluster manager when they registered the namespace

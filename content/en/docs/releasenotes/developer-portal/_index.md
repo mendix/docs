@@ -721,7 +721,7 @@ In Portfolio Management, you can do the following
 #### Fixes
 
 * We fixed an issue where some graphs in the Control Center [Dashboard](/developerportal/control-center/#dashboard) were loading indefinitely. 
-* We fixed the page title of the [Mendix Studio](/studio/) landing page.
+* We fixed the page title of the Mendix Studio landing page.
 * Page links now open in the correct tab.
 
 ### April 26, 2021

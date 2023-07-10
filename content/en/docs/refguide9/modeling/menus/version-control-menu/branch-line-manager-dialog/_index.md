@@ -39,4 +39,4 @@ In the **App repository address** field, enter the address of the app you want t
 ## 3 Read More
 
 * [Version Control](/refguide9/version-control/)
-* [Collaborative Development](/refguide9/collaborative-development/)
+

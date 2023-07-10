@@ -124,12 +124,11 @@ You can merge a specific revision of a branch line into your current [working co
 
 {{< figure src="/attachments/refguide8/version-control/image9.png" >}}
 
-As with the examples in the [Version Control Processes for a Single Branch](#vc-single) section, there may be conflicts during the merge, and these will have to be resolved before you can commit the changes to your app.
+There may be conflicts during the merge, and these will have to be resolved before you can commit the changes to your app.
 
 Note that errors can be introduced by the [merge](#merge) process even if no conflicts are identified during the merge. Errors are inconsistencies which are flagged in Studio Pro and will prevent the app from being deployed. They could lead to a revision not being deployable, so it is important to check for errors after you have done a merge.
 
 ## 4 Main Documents in This Category
 
 * [Using Version Control in Studio Pro](/refguide8/using-version-control-in-studio-pro/) – presents technical details for using version control (theoretical concerns are described above)
-* [Collaborative Development](/refguide8/collaborative-development/) – describes the process of sharing app model changes when a team of more than one person is working on the app
 * [Team Server](/developerportal/collaborate/team-server/) – presents an overview of viewing Team Server information in the Developer Portal (for example, revision summary and details)

@@ -2,7 +2,7 @@
 title: "Feedback"
 url: /developerportal/app-insights/feedback/
 category: "App Insights"
-weight: 6
+weight: 5
 description: "Describes how to manage feedback on your Mendix app in the Developer Portal."
 tags: ["Feedback","Developer Portal", "feedback widget"]
 #To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.

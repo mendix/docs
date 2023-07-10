@@ -1,15 +1,8 @@
 ---
-<<<<<<<< HEAD:content/en/docs/developerportal/app-insights/mendix-mini-surveys.md
-title: "Mendix Mini Surveys"
+title: "Mini Surveys"
 url: /developerportal/app-insights/mini-surveys/
 category: "App Insights"
 weight: 5
-========
-title: "Mini Surveys"
-url: /developerportal/general/product-insights/
-category: "General"
-weight: 8
->>>>>>>> development:content/en/docs/developerportal/general/product-insights.md
 description: "Describes how to set up mini surveys to gain insights into your app and view and export the survey results."
 tags: ["mini survey", "app insights", "sprint", "developer portal"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details. 

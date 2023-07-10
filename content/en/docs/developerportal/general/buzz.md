@@ -47,4 +47,3 @@ On  **Company Buzz**, both Company Buzz and App Buzz communication can be seen b
 ## 5 Read More
 
 * [Team](/developerportal/collaborate/team/)
-* [Stories](/developerportal/project-management/stories/)

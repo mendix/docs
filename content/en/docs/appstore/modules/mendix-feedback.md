@@ -67,15 +67,17 @@ You should install the latest version of the Mendix Feedback module, as it will 
 
     {{< figure src="/attachments/appstore/modules/mendix-feedback/feedback-on-layout.png" >}} 
 
-4.  If your app allows anonymous users, do as follows:
+3.  [Configure the Feedback widget](#configuration).
 
-    1. Drop an extra Feedback widgets into a position in the layout:
+5. If your app allows anonymous users, do as follows:
 
-        {{< figure src="/attachments/appstore/modules/mendix-feedback/two-feedback-on-layout.png" >}} 
+   1. Drop an extra Feedback widget into a position in the layout:
 
-    2. Configure the visible roles of each Feedback widget. The Feedback widget for anonymous users should only be visible to the anonymous user role, while the Feedback widget for logged-in users should not be visible to the anonymous user role. 
+       {{< figure src="/attachments/appstore/modules/mendix-feedback/two-feedback-on-layout.png" >}} 
 
-5. [Configure the Feedback widget](#configuration).
+   2. Configure the visible roles of each Feedback widget. The Feedback widget for anonymous users should only be visible to the anonymous user role, while the Feedback widget for logged-in users should not be visible to the anonymous user role.
+
+   3. [Configure the extra Feedback widget](#configuration).
 
 ### 3.2 Configuring the Feedback Widget {#configuration}
 

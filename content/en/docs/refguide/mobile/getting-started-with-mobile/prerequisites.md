@@ -32,12 +32,12 @@ For information on which mobile operating systems are supported by the Make It N
 
 ### 2.1 Direct Download Links {#direct-links}
 
-For Make it Native 9 apps, download the following Android or iOS Make It Native apps directly using these QR codes:
+For Make it Native 10 apps, download the following Android or iOS Make It Native apps directly using these QR codes:
 
 |                                  Android                                  |                                iOS                                |
 | :-----------------------------------------------------------------------: | :---------------------------------------------------------------: |
-| {{< figure src="/attachments/refguide/mobile/native-mobile/getting-the-make-it-native-app/android-min-qr-code.png" alt="Android QR Code" >}} | {{< figure src="/attachments/refguide/mobile/native-mobile/getting-the-make-it-native-app/ios-min-qr-code.png" alt="iOS QR Code" >}} |
-|   [Link](https://play.google.com/store/apps/details?id=com.mendix.developerapp.mx9&hl=en_US&gl=US)    |        [Link](https://apps.apple.com/us/app/make-it-native-9/id1542182000)         |
+| {{< figure src="/attachments/refguide/mobile/native-mobile/getting-the-make-it-native-app/android-min-10.png" alt="Android QR Code" >}} | {{< figure src="/attachments/refguide/mobile/native-mobile/getting-the-make-it-native-app/ios-min-10.png" alt="iOS QR Code" >}} |
+|   [Link](https://play.google.com/store/apps/details?id=com.mendix.developerapp.mx10)    |        [Link](https://apps.apple.com/us/app/make-it-native-10/id6450037464)         |
 
 ## 3 Troubleshooting Common Mobile Issues {#troubleshooting}
 

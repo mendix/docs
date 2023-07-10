@@ -10,7 +10,7 @@ aliases:
 ---
 
 {{% alert color="info" %}}
-This document is for the Mendix Feedback module, compatible with Studio Pro v.9.18.5 and above. If you are using the deprecated Mendix Feedback widget (compatible with Studio Pro v.8.6.0 and above), see the [Legacy Mendix Feedback Widget Documentation](#legacy-feedback-docs) sections below. We recommend you use the newer Mendix Feedback module, as the deprecated Feedback widget will no longer receive regular updates.
+This document is for the Mendix Feedback module, compatible with Studio Pro v.9.18.6 and above. If you are using the deprecated Mendix Feedback widget (compatible with Studio Pro v.8.6.0 and above), see the [Legacy Mendix Feedback Widget Documentation](#legacy-feedback-docs) sections below. We recommend you use the newer Mendix Feedback module, as the deprecated Feedback widget will no longer receive regular updates.
 {{% /alert %}}
 
 {{% alert color="warning" %}}
@@ -46,7 +46,7 @@ The Mendix Feedback module is easy to set up and automatically attaches addition
 ### 1.3 Limitations
 
 * This module can only be used in combination with Mendix apps.
-* This module is compatible with Studio Pro v.9.18.5 or higher.
+* This module is compatible with Studio Pro v.9.18.6 or higher.
 * [Atlas Core](https://marketplace.mendix.com/link/component/117187) is required to apply the styling.
 * In native mobile apps, some of the feedback metadata such as username, email address, and document name will be hard-coded, as they cannot be retrieved dynamically (to address this you can use the [Native Feedback widget](/appstore/modules/native-mobile-resources/) instead, located in [Native Mobile Resources](https://marketplace.mendix.com/link/component/109513)).
 
@@ -57,6 +57,10 @@ You should install the latest version of the Mendix Feedback module, as it will 
 ## 3 Usage
 
 ### 3.1 Adding the Feedback Widget to Your App
+
+{{% alert color="info" %}}
+Check whether your app allows anonymous users to follow the extra steps. 
+{{% /alert %}}
 
 1. Configure the **User roles** in the **App Security** for the Feedback module.
 
@@ -69,6 +73,16 @@ You should install the latest version of the Mendix Feedback module, as it will 
     {{< figure src="/attachments/appstore/modules/mendix-feedback/feedback-on-layout.png" >}} 
 
 4. [Configure the Feedback widget](#configuration).
+
+#### 3.1.1 Your App allows anonymous users
+
+1. Drop an extra **Feedback** widgets into a position in the layout:
+
+    {{< figure src="/attachments/appstore/modules/mendix-feedback/two-feedback-on-layout.png" >}} 
+
+2. Configure the visible roles of each widget. The **Feedback** widgets for anonymous users should only select the anonymous user role while the **Feedback** widgets for login users shouldn't. 
+   
+4. [Configure the Feedback widget for anonymous user](#configuration_anonymous).
 
 ### 3.2 Configuring the Feedback Widget {#configuration}
 
@@ -93,39 +107,33 @@ To configure the Feedback widget, double-click it to open the **Edit Feedback** 
 
         * **No** (default)
         * **Yes** – This is only used when the page includes sensitive information.
+          
+    * **Visibility** – Select the correct user role for the widget.
 
 * **Authentication** tab
 
-  {{% alert color="info" %}}For the best user experience, we strongly encourage you to apply Mendix SSO to your app and connect the Mendix SSO module to the latest version of the Mendix Feedback module. The widget works without authentication. However, without authentication each users will be an **Anonymous User**. Choose either **MendixSSO** or **Custom Authentication** for your feedback widget. You need to enter the value of authentication items manually, as the widget does not support a drop-down menu for selecting a microflow or the attributes of an entity.{{% /alert %}}
+  {{% alert color="info" %}}For the best user experience, we strongly encourage you to apply Mendix SSO to your app and connect the Mendix SSO module to the latest version of the Mendix Feedback module. The widget works without authentication configured correctly. However, without authentication, each user will be an **Anonymous User**. The latest widget provides a quicker method to configure the widget. For the previous widget version configuration, please check the [legacy authentication] section. (#legacy-authentication) {{% /alert %}}
 
-    * **MendixSSO** – If Mendix SSO is applied and the following settings are configured correctly, the end-user can leave feedback without providing their name and email address.
+    * **Use data source** – If the data source is applied and the following settings are configured correctly, the end-user can leave feedback without providing their name and email address.
 
-        * **ID token microflow** – We recommend that you select the **DS_GetCurrentIdToken** microflow from the Mendix SSO module.
+        * **User entity** – Choose the method that returns the entity that contains the user's information. It needs to be a list and the first item from the list will be used. We recommend making sure the user is only allowed to see the information of the current user. After this is configured, the options for **Display name attribute** and **Email address attribute** will show up. 
 
-      {{% alert color="info" %}}If you are using MendixSSO 3, include and select the **DS_GetCurrentIdToken** microflow from the **FeedbackModule** folder and configure the module roles in the security.{{% /alert %}}
+      {{% alert color="info" %}}If you are using MendixSSO 4, select the **MendixSSOUser** entity from the **MendixSSOModule**.{{% /alert %}}
 
-        * **Decrypted Token Value** – We recommend that you select the **Value** attribute (the default if **Value** in the MendixSSO module). 
-
-    See the screenshot below for an example:
-
-    {{< figure src="/attachments/appstore/modules/mendix-feedback/mendixsso-authentication.png" width="600px">}}
-
-    * **Custom Authentication** – If you are using an SSO solution other than the Mendix SSO module, you should configure the following settings. With these settings, you can provide a microflow that should return a valid username and email when the end-user is signed in with your authentication solution. If the end-user is not signed in (meaning the **User Object Provider** microflow returns an empty username or an invalid email address) the end-user will have to manually enter their name and email address when they leave feedback.
-
-        * **User object microflow** – This is the microflow that returns **User** entity from your module.
-        * **User object** – This is the **User** entity.
-        * **User name attribute**– This is the attribute of **name** from the **User** entity.
-        * **Email attribute** – This the attribute of **email** from the **User** entity.
+        * **Display name attribute** – Select the display name of the user from the user entity.
+        
+        * **Email address attribute** – Select the email address of the user from the user entity.
 
     See the screenshot below for an example:
 
-    {{< figure src="/attachments/appstore/modules/mendix-feedback/custom-authentication.png" width="600px">}}
+    {{< figure src="/attachments/appstore/modules/mendix-feedback/authentication-user-data-source.png" width="600px">}}
+
+    * **Provided by user** – Select this if you prefer users fill in their information or you are using the widget for anonymous users. 
 
 * **Translation** tab – The translation should be filled in automatically but you can still configure your own text and translation here.
 
 ### 3.3 Submitting Feedback on an App
 
-When you click the **Feedback icon**, the Mendix Platform first checks if you are signed in. If you are not signed in, you will need to either **Sign in to Mendix** or **Continue as a guest** to enter feedback mode:
 When you click the **Feedback icon**, the Mendix Platform first checks if you are signed in. If you are not signed in, you will need to enter email address to continue as an **Anonymous User** to submit the feedback:
 
 {{< figure src="/attachments/appstore/modules/mendix-feedback/feedback-form.png" width="500px" >}} 
@@ -216,7 +224,8 @@ You can configure the widget for certain actions in your app. All the configurat
     * **Screenshot Foreign Rendering**
         * **No** (default)
         * **Yes** – only used when the page includes sensitive information
-* **Authentication** tab
+          
+* **Authentication** tab {#legacy-authentication}
 
     {{% alert color="info" %}}For the best user experience, your are strongly encouraged to apply Mendix SSO to your app and connect the Mendix SSO module to the Mendix Feedback widget version 8.2.1 or above. Choose only one of the authentication methods: either **MendixSSO** or **Custom Authentication**.</br></br>You need to enter the value of authentication items manually as currently the widget does not support a drop-down menu for selecting microflow or the attributes of an entity.{{% /alert %}}
 

@@ -60,7 +60,6 @@ mx-pclm-cli installer-gen --db-type <db-type> \
     --db-port <port> \ 
     --db-strict-tls <tls-boolean> \
     --ssl-cert-file <ssl-root-certificate> \
-    --env <environment-type> \
     --image-repo <docker-repo> \
     --image-tag <docker-tag> \
     --out-file <out-file>
@@ -76,9 +75,8 @@ Where you need to supply the following parameters
 * `<port>` – the port used to access the database, default: *5432*
 * `<tls-boolean>` – whether the database uses strict TLS, `true` or `false` *(default)*
 * `<ssl-root-certificate>` – the location of the SSL Root certificate file, if `<tls-boolean>` is `true`
-* `<environment-type>` – the type of environment, `prod` *(default)* or `dev`
 * `<docker-repo>` – location of the image repo, default: `private-cloud.registry.mendix.com/privatecloud-license-manager`
-* `<docker-tag>` – the docker image tag, default: `master`
+* `<docker-tag>` – the docker image tag, default: `0.3.0`
 * `<out-file>` – the name of the file where the yaml is written, for example `manifest.yaml`
 
 ### 3.2 Applying the Manifest
@@ -423,30 +421,7 @@ spec:
       type: offline
 ```
 
-### 7.4 Auditing Licenses
-
-You can retrieve an audit report showing a history of which apps had which licenses, and which license(s) were applied to which operator(s) using the following command:
-
-```bash {linenos=false}
-mx-pclm-cli report generate \
-    --num-days <days> \
-    --zip-file <file-name> \
-    -s <pclm-http-url> \
-    -u <admin-user> \
-    -p <admin-password>
-```
-
-Where:
-
-* `<days>` – is the number of past days to report (default 365)
-* `<file-name>` – is the name of the file where a zipped version of the report is saved — if this is omitted, the report will be output to the console
-* `<pclm-http-url>` – is the HTTP REST endpoint of the PCLM server (overrides the config file)
-* `<admin-user>` – is a user of type *admin* which can update users, default: `administrator` (overrides the config file)
-* `<admin-password>` – is the password for the chosen *admin* user (overrides the config file)
-
-The report is presented as a CSV file containing a summary of the licenses at various times over the specified period. The data in the report will only be available after 12 hours.
-
-## 8. Migration
+## 8 Migration
 
 If you have manually configured static runtime licenses (offline licenses), PCLM will not replace those licenses. Only the runtime licenses applied through a Subscription secret will be replaced. If your namespace was never licensed, please ignore this section.
 

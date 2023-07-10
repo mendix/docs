@@ -69,6 +69,7 @@ This list is currently incomplete and is being updated.
 | DataStorage_QueryPlan | Query execution plan information for installations (currently only supported for PostgreSQL databases). |
 | DocumentExporter | Logs messages related to the templating engine that generates documents. |
 | FileDocumentSizesPopulateJob | Logs messages for a background job that populates the file-size field in the database for documents that do not have that field filled (used during legacy migration). |
+| IDResolution | Information on retrieval queries and runtime operations that are being executed. |
 | I18NProcessor | Logs messages related to translation of the app. |
 | JSON | JSON messages from the Mendix Client to the Runtime Server. See [JSON](#json), below, for more information |
 | Jetty | Logs messages from the internal Jetty webserver that handles HTTP requests between the runtime and the outside world. |

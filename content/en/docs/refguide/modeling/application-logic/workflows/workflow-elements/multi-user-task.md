@@ -89,6 +89,16 @@ Possible options of participant input are described in the table below:
 | Absolute number | The specified amount of targeted users who should select an outcome to complete the multi-user task.<br><br>**Amount**: The property that defines the absolute number. |
 | Percentage | The specified percentage of targeted users who should select an outcome to complete the multi-user task. The result of applying the percentage will be rounded upwards to the nearest mathematical integer value.<br><br>For example, when there are 19 targeted users and the **Percentage** is set to `50%`, then 10 users need to select an outcome to complete the multi-user task. |
 
+##### 2.5.1.1 Set overall outome
+
+This property determines when the user task is completed. It has not influence on the final outcome of the user task.
+
+Possible options are described in the table below:
+| Set overall outcome | Description |
+| --- | --- |
+| After all participants completed the task | The user task is completed only when Each of the required participants has selected an outcome. |
+| Once sufficient participants completed the task | The user task is completed as soon as a stable outcome can be determined from the outcomes that haven been selected so far. The remaining participants will no longer be able to select an outcome after this. |
+
 #### 2.5.2 Decision Method
 
 With this property, you specify how the outcomes of the individual users are aggregated into a single multi-user task outcome. This aggregated outcome is used as the final outcome to complete the multi-user task.

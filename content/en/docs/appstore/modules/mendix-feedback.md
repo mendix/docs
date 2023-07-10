@@ -105,13 +105,13 @@ To configure the Feedback widget, double-click it to open the **Edit Feedback** 
 
 * **Authentication** tab
 
-  {{% alert color="info" %}}For the best user experience, we strongly encourage you to apply Mendix SSO to your app and connect the Mendix SSO module to the latest version of the Mendix Feedback module. The widget works without authentication configured correctly. However, without authentication, each user will be an **Anonymous User**. The latest widget provides a quicker method to configure the widget. For the previous widget version configuration, please check the [legacy authentication] section. (#legacy-authentication) {{% /alert %}}
+  {{% alert color="info" %}}For the best user experience, we strongly encourage you to apply Mendix SSO to your app and connect the Mendix SSO module to the latest version of the Mendix Feedback module. The widget works without authentication configured correctly. However, without authentication, each user will be an anonymous user. The latest widget provides a quicker method to configure the widget. For details on the previous widget version configuration, see the [legacy authentication](#legacy-authentication) section.{{% /alert %}}
 
     * **Use data source** – If the data source is applied and the following settings are configured correctly, the end-user can leave feedback without providing their name and email address.
 
-        * **User entity** – Choose the method that returns the entity that contains the user's information. It needs to be a list and the first item from the list will be used. We recommend making sure the user is only allowed to see the information of the current user. After this is configured, the options for **Display name attribute** and **Email address attribute** will show up. 
+        * **User entity** – Choose the method that returns the entity that contains the user's information. It needs to be a list and the first item from the list will be used. We recommend only allowing the user to see the information of the current user. After this is configured, the options for **Display name attribute** and **Email address attribute** will show up. 
 
-      {{% alert color="info" %}}If you are using MendixSSO 4, select the **MendixSSOUser** entity from the **MendixSSOModule**.{{% /alert %}}
+      {{% alert color="info" %}}If you are using MendixSSO 4, select the **MendixSSOUser** entity from the **MendixSSOModule** folder.{{% /alert %}}
 
         * **Display name attribute** – Select the display name of the user from the user entity.
         

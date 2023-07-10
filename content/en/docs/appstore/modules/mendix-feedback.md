@@ -236,7 +236,7 @@ You can configure the widget for certain actions in your app. All the configurat
 
         See the screenshot below for an example:
 
-        {{< figure src="/attachments/appstore/widgets/mendix-feedback/mendixsso-authentication.png" >}}
+        {{< figure src="/attachments/appstore/modules/mendix-feedback/mendixsso-authentication.png" >}}
 
     * **Custom Authentication** – if you are using an SSO solution other than the Mendix SSO module, you should configure the following settings. With these settings, you can provide a microflow that should return a valid username and email when the end-user is signed in with your authentication solution. If the end-user is not signed in (meaning the **User Object Provider** microflow returns an empty username or an invalid email address) the end-user will have to manually enter their name and email address when they leave feedback.
         * **User object microflow** – selects the microflow that returns **User** entity from your module
@@ -246,7 +246,7 @@ You can configure the widget for certain actions in your app. All the configurat
 
         See the screenshot below for an example:
 
-        {{< figure src="/attachments/appstore/widgets/mendix-feedback/custom-authentication.png" >}}
+        {{< figure src="/attachments/appstore/modules/mendix-feedback/custom-authentication.png" >}}
 
 ### 5.3 Usage
 

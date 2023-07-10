@@ -105,7 +105,7 @@ To configure the Feedback widget, double-click it to open the **Edit Feedback** 
 
 * **Authentication** tab
 
-  {{% alert color="info" %}}For the best user experience, we strongly encourage you to apply Mendix SSO to your app and connect the Mendix SSO module to the latest version of the Mendix Feedback module. The widget works without authentication configured correctly. However, without authentication, each user will be an anonymous user. The latest widget provides a quicker method to configure the widget. For details on the previous widget version configuration, see the [legacy authentication](#legacy-authentication) section.{{% /alert %}}
+  {{% alert color="info" %}}For the best user experience, we strongly encourage you to apply Mendix SSO to your app and connect the Mendix SSO module to the latest version of the Mendix Feedback module. The widget works without authentication configured correctly. However, without authentication, each user will be an anonymous user. The latest widget provides a quicker method to configure the widget. For details on the configuration of the previous version, see the [Configuration](#legacy-configuration) section of the legacy docs.{{% /alert %}}
 
     * **Use data source** – If the data source is applied and the following settings are configured correctly, the end-user can leave feedback without providing their name and email address.
 

@@ -193,7 +193,7 @@ The **History** tab presents the collaboration actions for the app. On this page
 
 {{< figure src="/attachments/developerportal/general/settings/history.png"   width="700"  >}}
 
-When you select a history item and click **Show item**, the details of the story, Sprint, or [feedback item](/developerportal/general/feedback/) will be presented.
+When you select a history item and click **Show item**, the details of the story, Sprint, or [feedback item](/developerportal/app-insights/feedback/) will be presented.
 
 ## 9 Story Archive {#story-archive}
 

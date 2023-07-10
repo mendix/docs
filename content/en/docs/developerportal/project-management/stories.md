@@ -208,4 +208,4 @@ By clicking a story's ID, you can see the [story details](#story-details).
 * [Buzz](/developerportal/general/buzz/)
 * [Team](/developerportal/general/team/)
 * [Team Server](/developerportal/general/team-server/)
-* [Feedback](/developerportal/general/feedback/)
+* [Feedback](/developerportal/app-insights/feedback/)

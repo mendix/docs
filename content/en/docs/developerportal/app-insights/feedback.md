@@ -12,7 +12,7 @@ tags: ["Feedback","Developer Portal", "feedback widget"]
 
 On the **Feedback** page of the Developer Portal, you can view and manage the feedback that has been submitted about an app.
 
-{{< figure src="/attachments/developerportal/general/feedback/feedback.png" >}}
+{{< figure src="/attachments/developerportal/app-insights/feedback/feedback.png" >}}
 
 This feedback comes from different sources:
 
@@ -63,7 +63,7 @@ If you need to use a link to a specific feedback item (for example, to ask someo
 
 Here you can review the feedback and start any necessary investigation:
 
-{{< figure src="/attachments/developerportal/general/feedback/feedback-no-details.png" >}}
+{{< figure src="/attachments/developerportal/app-insights/feedback/feedback-no-details.png" >}}
 
 The number and type of the feedback item are presented below the item's title, along with the name of the feedback provider and the date on which the feedback was provided.
 
@@ -95,7 +95,7 @@ After clicking **Accept feedback**, you can create a story on the basis of the f
 3. Decide whether the feedback item should be classified as a bug or feature in **Identify as**.
 4. Click **Submit** to submit the story.
 
-    {{< figure src="/attachments/developerportal/general/feedback/accept-feedback.png"   width="500"  >}}
+    {{< figure src="/attachments/developerportal/app-insights/feedback/accept-feedback.png"   width="500"  >}}
 
 Once a feedback item is connected to a user story, the user who submitted the story will automatically be updated on the progress made on that story:
 

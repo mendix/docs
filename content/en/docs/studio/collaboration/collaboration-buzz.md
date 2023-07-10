@@ -46,4 +46,4 @@ You will be automatically taken to the Developer Portal. For more information on
 ## 3 Read More
 
 * [Buzz](/developerportal/general/buzz/)
-* [Feedback Management](/developerportal/general/feedback/)
+* [Feedback Management](/developerportal/app-insights/feedback/)

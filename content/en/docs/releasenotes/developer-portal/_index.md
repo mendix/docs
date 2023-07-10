@@ -110,7 +110,7 @@ To see the current status of the Mendix Developer Portal and Control Center, see
 
 #### Fixes
 
-* We fixed an issue where authors of a [feedback](/developerportal/general/feedback/) item would receive notifications on that item even though they specifically set the system not to send any notifications.
+* We fixed an issue where authors of a [feedback](/developerportal/app-insights/feedback/) item would receive notifications on that item even though they specifically set the system not to send any notifications.
 
 ### April 13, 2023
 
@@ -237,7 +237,7 @@ For more information on security issues, see [Security Advisories](/releasenotes
 
 #### New Features
 
-We have released the Beta version of [Product Insights](/developerportal/general/product-insights/), which is a new way for you to proactively get feedback from your users. The functionality consists of a tool for setting up mini surveys in addition to the [Product Insights - Mini Surveys](/appstore/modules/product-insights/) Marketplace module, which you can add to your app to set up the exact targeting criteria for a survey.
+We have released the Beta version of [Product Insights](/developerportal/app-insights/mendix-mini-surveys/), which is a new way for you to proactively get feedback from your users. The functionality consists of a tool for setting up mini surveys in addition to the [Product Insights - Mini Surveys](/appstore/modules/product-insights/) Marketplace module, which you can add to your app to set up the exact targeting criteria for a survey.
 
 A survey can have a maximum of three questions that appear in your app based on the implemented criteria. You can choose between four different question types (rating scale, multiple choice, open question, and NPS question), and you can place the survey toaster in any of corner of the page. You can also preview exactly what the survey will look like.
 
@@ -310,7 +310,7 @@ In Portfolio Management, you can do the following
 
 #### Deprecations
 
-* All [Mendix Feedback](/appstore/modules/mendix-feedback/) widgets with versions lower than 8.4.0 are disabled. The feedback provided via a widget version lower than 8.4.0 is no longer sent to the [Feedback](/developerportal/general/feedback/) section of the Developer Portal, but your app will keep working as usual. Please download and replace your current Mendix Feedback widget with version 8.4.0 or higher. If you are using the [Native Mobile Resources](/appstore/modules/native-mobile-resources/) module (which also includes a version of the Mendix Feedback widget), please upgrade to version 3.5.1 or higher of that module. 
+* All [Mendix Feedback](/appstore/modules/mendix-feedback/) widgets with versions lower than 8.4.0 are disabled. The feedback provided via a widget version lower than 8.4.0 is no longer sent to the [Feedback](/developerportal/app-insights/feedback/) section of the Developer Portal, but your app will keep working as usual. Please download and replace your current Mendix Feedback widget with version 8.4.0 or higher. If you are using the [Native Mobile Resources](/appstore/modules/native-mobile-resources/) module (which also includes a version of the Mendix Feedback widget), please upgrade to version 3.5.1 or higher of that module. 
 
 ### September 28, 2022
 
@@ -442,7 +442,7 @@ In Portfolio Management, you can do the following
 
 #### Fixes
 
-* We fixed an issue where replies on [Feedback](/developerportal/general/feedback/) emails were not correctly processed into comments.
+* We fixed an issue where replies on [Feedback](/developerportal/app-insights/feedback/) emails were not correctly processed into comments.
 
 #### Improvements
 
@@ -485,7 +485,7 @@ In Portfolio Management, you can do the following
 
 #### Fixes
 
-* We fixed an issue where the submitter of a [feedback item](/developerportal/general/feedback/) was no longer able to comment on that issue after they left the app.
+* We fixed an issue where the submitter of a [feedback item](/developerportal/app-insights/feedback/) was no longer able to comment on that issue after they left the app.
 
 ### March 10, 2022
 
@@ -536,7 +536,7 @@ In Portfolio Management, you can do the following
 
 #### Fixes
 
-* We fixed an error where it was not possible to edit a comment under a [Feedback](/developerportal/general/feedback/) item. (Tickets 134179, 136172)
+* We fixed an error where it was not possible to edit a comment under a [Feedback](/developerportal/app-insights/feedback/) item. (Tickets 134179, 136172)
 
 ### November 18, 2021
 
@@ -579,7 +579,7 @@ In Portfolio Management, you can do the following
 
 #### Fixes
 
-* We fixed an issue accidentally introduced in the [October 14th](#oct-fourteen) release where you were no longer able to post comments on a [feedback item's details page](/developerportal/general/feedback/#feedback-details). (Tickets 132892, 132959, 132983, 133075)
+* We fixed an issue accidentally introduced in the [October 14th](#oct-fourteen) release where you were no longer able to post comments on a [feedback item's details page](/developerportal/app-insights/feedback/#feedback-details). (Tickets 132892, 132959, 132983, 133075)
 
 ### October 14, 2021 {#oct-fourteen}
 
@@ -927,7 +927,7 @@ In Portfolio Management, you can do the following
 
 #### Fixes
 
-* We fixed an issue where email notifications on [feedback](/developerportal/general/feedback/) items were not sent under certain circumstances.
+* We fixed an issue where email notifications on [feedback](/developerportal/app-insights/feedback/) items were not sent under certain circumstances.
 
 ### July 13, 2020
 

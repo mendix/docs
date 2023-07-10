@@ -1,7 +1,7 @@
 ---
 title: "Team"
 url: /developerportal/general/team/
-category: "General"
+category: "Collaboration"
 weight: 3
 description: "Describes the Team page of the Developer Portal."
 tags: ["Team", "Developer Portal"]

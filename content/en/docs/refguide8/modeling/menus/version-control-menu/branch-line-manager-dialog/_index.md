@@ -36,7 +36,7 @@ This option is only available when support for other SVN servers is enabled in t
 
 Select the Team Server app of which you want to manage the branch lines. If you have an app open in Studio Pro it will be selected automatically. However, you can also manage branch lines without opening an app first, in which case no app will be selected.
 
-For more information about the Mendix Team Server, see [Team Server](/developerportal/collaborate/team-server/).
+For more information about the Mendix Team Server, see [Team Server](/developerportal/general/team-server/).
 
 ### 2.2 Other SVN Server App {#other-svn-server-app}
 

@@ -36,4 +36,4 @@ Now build your app and you will see a correctly rendered feedback widget!
 
 ## 4 Read More
 
-* [Feedback Management](/developerportal/collaborate/feedback/)
+* [Feedback Management](/developerportal/general/feedback/)

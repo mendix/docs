@@ -1,6 +1,6 @@
 ---
 title: "App Roles"
-url: /developerportal/collaborate/app-roles/
+url: /developerportal/general/app-roles/
 description: "Describes the app team and App/Technical Contact roles and permissions within the Mendix Platform."
 tags: ["team", "technical contact", "developer portal", "role", "permissions"]
 aliases:
@@ -18,7 +18,7 @@ aliases:
 
 ## 1 Introduction
 
-The roles defined in Developer Portal for an [app](/developerportal/#my-apps) and [team](/developerportal/collaborate/team/) are described below.
+The roles defined in Developer Portal for an [app](/developerportal/#my-apps) and [team](/developerportal/general/team/) are described below.
 
 ## 2 Team Member
 
@@ -34,13 +34,13 @@ Within a team, there are predefined roles that can be provisioned to team member
     * Note that node permissions must be provisioned by the [Technical Contact](#technical-contact)
 * Who can change the app's [general settings](/developerportal/settings/general-settings/)
 
-Scrum Masters can edit and create new team roles on the [Team](/developerportal/collaborate/team/) page, and Mendix Admins can edit and create new team roles within the company in [Control Center](/developerportal/control-center/).
+Scrum Masters can edit and create new team roles on the [Team](/developerportal/general/team/) page, and Mendix Admins can edit and create new team roles within the company in [Control Center](/developerportal/control-center/).
 
 ## 4 Technical Contact {#technical-contact}
 
-Every deployed app has a Technical Contact. When you view the [General Settings](/developerportal/collaborate/general-settings/#general) for a deployed app, you will see the **Technical Contact** of the app. This is the user you can contact with questions related to the app. 
+Every deployed app has a Technical Contact. When you view the [General Settings](/developerportal/general/general-settings/#general) for a deployed app, you will see the **Technical Contact** of the app. This is the user you can contact with questions related to the app. 
 
-{{< figure src="/attachments/developerportal/collaborate/team/app-roles/technical-contact.png" >}}
+{{< figure src="/attachments/developerportal/general/team/app-roles/technical-contact.png" >}}
 
 {{% alert color="info" %}}
 You should provide Technical Contact with the Scrum Master role. Since the Technical Contact will be the contact for regular users, they thus should be able to perform app operations on behalf of all Scrum Masters.

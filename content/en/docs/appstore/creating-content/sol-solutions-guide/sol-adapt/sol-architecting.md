@@ -28,7 +28,7 @@ The customer implementation is a separate, upgradable model instance (fork) per 
 | Options | Dedicated App | Cloud Node per Customer | Customer Access to Developer Portal¹ | Model Access for Customer¹ |
 | --- | --- | --- | --- | --- |
 | ISV builds, no design-time adaptation needed | No | Optional | No | No |
-| ISV builds and adapts for customer as managed service | Yes | Yes | Optional for collaboration with [Feedback](/developerportal/collaborate/feedback/) and [Epics](/developerportal/project-management/epics/) | No |
+| ISV builds and adapts for customer as managed service | Yes | Yes | Optional for collaboration with [Feedback](/developerportal/general/feedback/) and [Epics](/developerportal/project-management/epics/) | No |
 | Customized by customer or implementation partner | Yes | Yes | Yes, including access to the customer model | Yes |
 
 ¹Including the partner that implements on behalf of the customer.
@@ -62,9 +62,9 @@ Mendix recommends design-time model adaptation over "building Mendix in Mendix."
 
 For design-time adaptations, Mendix recommends referencing [How to Set Up a Solution](/appstore/creating-content/sol-set-up/) and [How to Upgrade a Solution](/appstore/creating-content/sol-upgrade/) in order to create a dedicated app and Git repository per customer (including the partner that implements on behalf of the customer) and keeping these up to date. This allows for the following:
 
-* Full control of who can access the individual customer’s model instance via [app roles](/developerportal/collaborate/app-roles/) 
+* Full control of who can access the individual customer’s model instance via [app roles](/developerportal/general/app-roles/) 
 * Preventing access to [IP-protected](/appstore/creating-content/sol-ip-protection/) content and the development of the original solution template
-* Using all [Developer Portal collaboration features](/developerportal/collaborate/)
+* Using all [Developer Portal collaboration features](/developerportal/general/)
 * Data isolation per customer tenant by having dedicated environments (at least acceptance and production)
 
 The customer model instances will run with [IP protection](/appstore/creating-content/sol-ip-protection/) enabled, meaning that parts of the original solution model can be hidden. Once the solution is published with the protected solution models, this implementation hiding cannot be undone by the consumer of the solution model.

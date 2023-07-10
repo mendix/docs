@@ -9,7 +9,7 @@ tags: ["developer portal", "documents", "team server", "buzz", "team", "app"]
 aliases:
     - /developerportal/develop/
     - /developerportal/settings/
-    - /developerportal/collaborate/
+    - /developerportal/general/
 #To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 ---
 

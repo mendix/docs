@@ -168,7 +168,29 @@ You can also deploy an app from Team Server. To do this, follow these steps:
 
 The package is deployed to the cloud.
 
-### 2.3 Deploying a Free App to the Mendix Cloud
+### 2.3 Deploying the App to an Environment {#deploy-the-app-to-an-environment}
+
+The previous steps explained how to deploy a deployment package to the Mendix Cloud, but the actual app is not running yet. To deploy a deployment package to a node environment, follow these steps:
+
+1. Open the [Developer Portal](http://sprintr.home.mendix.com).
+2. Open your app.
+3. Go to **Environments**.
+4. In the **Deployment Package Repository**, choose the preferred deployment package and click **Deploy**.
+5. Click the environment to which you want to deploy the package.
+6. Click **Transport**.
+
+    {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/transport-to-flex.png" alt="The Transport menu" >}}
+
+7. If asked to do so, clean the environment.
+8. Configure the [constants](/refguide/constants/) (if necessary) by clicking **Constants** and **Edit constants value**. This can also be done in a later stage in the settings.
+9. Configure the [scheduled events](/refguide/scheduled-events/) (if necessary) by clicking **Scheduled Events**.
+10. Click **Continue**.
+11. Click **Start application**. 
+12. If asked to do so, click **Synchronize database**.
+
+The app is now deployed. You can configure the administrative account.
+
+### 2.4 Deploying a Free App to the Mendix Cloud
 
 With a Free App, you can deploy your app to the Mendix Cloud from Studio Pro by using one of the following methods:
 

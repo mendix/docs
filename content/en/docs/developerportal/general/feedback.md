@@ -1,7 +1,7 @@
 ---
 title: "Feedback"
 url: /developerportal/general/feedback/
-category: "Collaboration"
+category: "General"
 weight: 6
 description: "Describes how to manage feedback on your Mendix app in the Developer Portal."
 tags: ["Feedback","Developer Portal", "feedback widget"]

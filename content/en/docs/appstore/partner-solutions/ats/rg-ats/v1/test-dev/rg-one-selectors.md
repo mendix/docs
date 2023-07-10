@@ -15,11 +15,11 @@ You can use the custom ATS selectors like CSS3 selectors in your custom actions.
 Pattern |Name | Meaning
 -----|---------|--------
 :clickable | Clickable pseudo-class | Selects a user interface element whose CSS visibility property is set to visible.
-:containsExact(*text*) | ContainsExact pseudo-class | Selects a element whose inner HTML is exactly equal to the given text (**not** case sensitive)
-:containsExactCase(*text*) | ContainsExactCase pseudo-class |Selects a element whose inner HTML is exactly equal to the given text (case sensitive)
-:containsRegex(*regex*) | ContainsRegex pseudo-class | Selects a element whose inner HTML matches the given regex.  
-:containsText(*text*) | ContainsText pseudo-class | Selects a element whose inner text value is equal to the given text. Can only be used on text, CDATA and element nodes
-:val(*text*) | Value pseudo-class | Selects a input, select or textarea whose value is equal to the given text
+:containsExact(*text*) | ContainsExact pseudo-class | Selects an element whose inner HTML is exactly equal to the given text (**not** case sensitive)
+:containsExactCase(*text*) | ContainsExactCase pseudo-class |Selects an element whose inner HTML is exactly equal to the given text (case sensitive)
+:containsRegex(*regex*) | ContainsRegex pseudo-class | Selects an element whose inner HTML matches the given regex.  
+:containsText(*text*) | ContainsText pseudo-class | Selects an element whose inner text value is equal to the given text. Can only be used on text, CDATA and element nodes
+:val(*text*) | Value pseudo-class | Selects an input, select or textarea whose value is equal to the given text
 
 ## 3 CSS Selectors {#css-selectors}
 
@@ -36,7 +36,7 @@ You can use any CSS Selector defined in CSS3 and supported by your browser. The 
 | :checked | Checked pseudo-class | Selects a user interface element which is **checked** |
 | E > F | Child Combinator | Selects an **F element child** of an E element |
 
-For more informations visit the official [W3C CSS3 selectors reference](http://www.w3.org/TR/css3-selectors/).
+For more information visit the official [W3C CSS3 selectors reference](http://www.w3.org/TR/css3-selectors/).
 
 ## 4 JQuery Selectors {#jquery-selectors}
 
@@ -57,4 +57,4 @@ Pattern |Name | Meaning
  :parent | Parent Selector | Select all elements that have at least one child node (either an element or text).
  :text | Text Selector | Selects all input elements of type text.
 
-For more informations visit the [official JQuery selectors reference](https://api.jquery.com/category/selectors/).
+For more information visit the [official JQuery selectors reference](https://api.jquery.com/category/selectors/).

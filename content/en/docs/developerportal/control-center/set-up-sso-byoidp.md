@@ -186,7 +186,7 @@ Microsoft Azure AD is one of the most used IdP's, and supports OIDC. To help you
 
     {{< figure src="/attachments/developerportal/control-center/set-up-sso-byoidp/azure-app-registration-step-4.png" >}}
 
-11. In the pop-up box that opens, enter a name for your certificate, select a expiration type, and click **Add**.
+11. In the pop-up box that opens, enter a name for your certificate, select an expiration type, and click **Add**.
 
     {{< figure src="/attachments/developerportal/control-center/set-up-sso-byoidp/azure-app-registration-step-5.png" >}}
 

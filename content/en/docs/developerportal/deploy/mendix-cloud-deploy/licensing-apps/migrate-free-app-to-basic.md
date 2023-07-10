@@ -24,7 +24,7 @@ Before starting this how-to, make sure you have completed the following prerequi
 
 * Make sure you have received confirmation that your Basic node is ready
 
-* Make sure you are the [Technical Contact](/developerportal/collaborate/app-roles/#technical-contact) of the app
+* Make sure you are the [Technical Contact](/developerportal/general/app-roles/#technical-contact) of the app
 
 * Ensure that [two-factor authentication](/developerportal/deploy/two-factor-authentication/) is enabled on your account
 

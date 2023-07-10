@@ -143,7 +143,11 @@ On this page, you can perform a number of actions:
 * Update the story points via the drop-down menu
 * **Move Story** to a different app or Sprint (for details, see the [Moving Stories](#move-stories) section below)
 * **Duplicate** the story and its tasks, story points, status, and labels into a new user story
+<<<<<<< HEAD
 * View the **Feedback** on which this story is based.
+=======
+* View the **Feedback** on which this story is based (if applicable; for details, see the [Adding a Feedback Item to Your Backlog](/developerportal/general/feedback/#adding) section of *Feedback Management*)
+>>>>>>> development
 * View the committed **Revisions** linked to the story (which are configured in the [Related stories](/refguide/commit-dialog/#stories) tab of the **Commit** dialog box in Studio Pro)
 * **Change to Bug** to toggle the story type between **Bug** and **Feature** (by default, a story is created as a **Feature**)
 * **Delete** the story
@@ -205,7 +209,7 @@ By clicking a story's ID, you can see the [story details](#story-details).
 
 ## 5 Read More
 
-* [Buzz](/developerportal/collaborate/buzz/)
-* [Team](/developerportal/collaborate/team/)
-* [Team Server](/developerportal/collaborate/team-server/)
-* [Feedback](/developerportal/collaborate/feedback/)
+* [Buzz](/developerportal/general/buzz/)
+* [Team](/developerportal/general/team/)
+* [Team Server](/developerportal/general/team-server/)
+* [Feedback](/developerportal/general/feedback/)

@@ -1,6 +1,6 @@
 ---
 title: "Migrate to Git"
-url: /developerportal/collaborate/migrate-to-git/
+url: /developerportal/general/migrate-to-git/
 weight: 10
 description: "Describes how to migrate apps to Git."
 tags: ["Studio Pro", "Team Server", "migration", "Git", "migrate"]
@@ -21,7 +21,7 @@ To be able to migrate your app to Git, your app needs to meet the following crit
 
 {{% alert type="info" %}}
 
-Only a user with the Scrum Master role can migrate an app. For more information, see [App Roles](/developerportal/collaborate/app-roles/). 
+Only a user with the Scrum Master role can migrate an app. For more information, see [App Roles](/developerportal/general/app-roles/). 
 
 {{% /alert %}}
 
@@ -35,7 +35,7 @@ At this moment we are limited in our ability to migrate large SVN repositories. 
 
 If your app is eligible for migration and your team role is Scrum Master, you see a notification on possible migration at the top of all pages within the **Collaborate** section. Click **Migrate to Git** to start migration:
 
-{{< figure src="/attachments/developerportal/collaborate/team-server/migrate-to-git/migrate-to-git.jpg" >}}
+{{< figure src="/attachments/developerportal/general/team-server/migrate-to-git/migrate-to-git.jpg" >}}
 
 During migration all app history, including revisions for all branches, is copied from SVN to Git. 
 

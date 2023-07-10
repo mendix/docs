@@ -77,7 +77,7 @@ This list is currently incomplete and is being updated.
 | Jetty | Logs messages from the internal Jetty webserver that handles HTTP requests between the runtime and the outside world. |
 | LocalFileSystemStore | Logs messages related to file handling if you are using local file system as your file store. |
 | Logging | Logs messages related to the logging framework used by Mendix. |
-| M2EE | Logs messages from the administration interface with Mendix Runtime. |
+| M2EE | Logs messages from the administration interface with the Mendix Runtime. |
 | MicroflowDebugger | Logs messages related to the status of the microflow debugger (for example, connection status, incoming and outgoing requests). |
 | MicroflowEngine | Logs messages related to microflow execution (for example, which microflow or microflow action is being executed and errors that occur during the execution). |
 | ModelStore | |

@@ -1,7 +1,7 @@
 ---
-title: "General Settings"
+title: "Settings"
 url: /developerportal/collaborate/general-settings/
-category: "Collaboration"
+category: "General"
 weight: 14
 description: "Describes general settings of your app."
 tags: ["Settings", "App", "Developer Portal"]

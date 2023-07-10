@@ -16,7 +16,7 @@ Located in the Developer Portal, Buzz lets you see Mendix app activity in your c
 
 The **Company Buzz** is accessible via the top bar in the Developer Portal:
 
-{{< figure src="/attachments/developerportal/collaborate/buzz/company-buzz.png" >}}
+{{< figure src="/attachments/developerportal/general/buzz/company-buzz.png" >}}
 
 The drop-down menu for the content you see in the Company Buzz is set to **All Channels** by default, which shows Buzz activity for all the apps for which you are a team member *plus* all Buzz activity for your company. In the menu, you can choose to see only Buzz for your company or for a specific app for which you are a team member. 
 

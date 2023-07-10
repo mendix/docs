@@ -29,7 +29,7 @@ The maximum number of files allowed in a working copy is 10,000.
 
 ### 1.6 What Apps Can I Access With the Model API?
 
-You can access all apps stored on [Mendix Team Server](/developerportal/general/team-server/). Apps stored elsewhere, for example in your on-premises Git server, cannot be accessed with the model API.
+You can access all apps stored on [Mendix Team Server](/developerportal/collaborate/team-server/). Apps stored elsewhere, for example in your on-premises Git server, cannot be accessed with the model API.
 
 ## 2 Common Error Messages
 

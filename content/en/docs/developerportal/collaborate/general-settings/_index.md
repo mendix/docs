@@ -1,7 +1,7 @@
 ---
-title: "Settings"
+title: "General Settings"
 url: /developerportal/collaborate/general-settings/
-category: "General"
+category: "Collaboration"
 weight: 14
 description: "Describes general settings of your app."
 tags: ["Settings", "App", "Developer Portal"]
@@ -19,7 +19,7 @@ The **General Settings** page presents an overview of your app.
 
 On the top of page, you can see the image of the app, the app name, and the company that owns the app. You can also find the **Watch** / **Stop Watching** toggle which enables or disables notifications for this app.
 
-{{< figure src="/attachments/developerportal/general/settings/general-information.png"  >}}
+{{< figure src="/attachments/developerportal/collaborate/general-settings/general-information.png"  >}}
 
 {{% alert color="info" %}}
 Only users with the **App Settings** permission can edit the image and the app name.
@@ -45,14 +45,14 @@ In this tab, you can find the following items:
 * **Logo** of the app
 * **Description** of the app
 * **App ID**
-* [Technical Contact](/developerportal/general/app-roles/#technical-contact) of the app
+* [Technical Contact](/developerportal/collaborate/app-roles/#technical-contact) of the app
 * **Danger Zone**
     * **Leave this app**
     * **Deactivate this app**
     * **Delete this app**
 
 {{% alert color="info" %}}
-Only users with the **App Settings** permission can change the description of the app.<br/>Only users with the **App Settings** permission can deactivate or delete an app. For details, see [How to Leave, Delete, or Deactivate an App](/developerportal/general/leave-delete-app/).
+Only users with the **App Settings** permission can change the description of the app.<br/>Only users with the **App Settings** permission can deactivate or delete an app. For details, see [How to Leave, Delete, or Deactivate an App](/developerportal/collaborate/leave-delete-app/).
 {{% /alert %}}
 
 ## 3 Access Management {#managing-app-users}
@@ -83,7 +83,7 @@ If an app user has been granted access to an app environment through a [group](/
 To invite new app users to your app, click **Invite Users** for that environment or via the **Manage Users** and follow these steps:
 
 1. Enter the email addresses of the end-users you want to invite.
-2. Click **Include your app team** to include invitations to all the members of your [Team](/developerportal/general/team/). This may be useful, because people invited to join your team are not added as app users automatically.
+2. Click **Include your app team** to include invitations to all the members of your [Team](/developerportal/collaborate/team/). This may be useful, because people invited to join your team are not added as app users automatically.
 3. Click **Add to invitee list**.
 4. Select the role for the App User (for example, **User** or **Administrator**). Permissions for these roles correspond to what you have configured for your app's user roles in [App Security](/refguide/app-security/#user-roles) in Mendix Studio Pro. If you have created a customized role, you need to publish the app before you are able to see and assign it here.
 5. Click **Next** to send the invitation.
@@ -120,7 +120,7 @@ In **API Keys**, there is an overview of the API keys created for your app with 
 * Date of **Creation**
 * Date **Last Used**
 
-{{< figure src="/attachments/developerportal/general/settings/keys.png"   width="800"  >}}
+{{< figure src="/attachments/developerportal/collaborate/general-settings/keys.png"   width="800"  >}}
 
 To create a new app-specific API key, click **Create New API Key**  and follow these steps:
 
@@ -145,7 +145,7 @@ It is possible to migrate all or part of your content from [Stories](/developerp
 
 If you manage your projects in Jira, you can connect your apps in the Developer Portal to Jira. For more information, see [Jira Connector](/developerportal/project-management/jira-connector/).
 
-{{< figure src="/attachments/developerportal/general/settings/story-switcher.png" width="700"  >}}
+{{< figure src="/attachments/developerportal/collaborate/general-settings/story-switcher.png" width="700"  >}}
 
 ## 7 Webhooks {#webhooks}
 
@@ -163,7 +163,7 @@ This tab is only visible if you already have webhooks for stories and Sprints cr
 
 Open the **Webhooks** tab to manage your app's webhooks for stories and Sprints. A webhook enables the Developer Portal to talk to another website and post updated Developer Portal content (for example, Sprint updates and new stories) to that website. For example, if you want to follow the changes in your app, you can create a service with a certain [URL](#url) that keeps track of the data, and then changes in the app in the Developer Portal are sent to that URL.
 
-{{< figure src="/attachments/developerportal/general/settings/webhooks-list.png" width="800"  >}}
+{{< figure src="/attachments/developerportal/collaborate/general-settings/webhooks-list.png" width="800"  >}}
 
 After clicking **New Webhook** to create a new webhook for stories and sprints, fill in the following details:
 
@@ -191,9 +191,9 @@ Only users with the **App Settings** permission can view the history.
 
 The **History** tab presents the collaboration actions for the app. On this page, you can see what change was made, who performed it, and when it occurred:
 
-{{< figure src="/attachments/developerportal/general/settings/history.png"   width="700"  >}}
+{{< figure src="/attachments/developerportal/collaborate/general-settings/history.png"   width="700"  >}}
 
-When you select a history item and click **Show item**, the details of the story, Sprint, or [feedback item](/developerportal/general/feedback/) will be presented.
+When you select a history item and click **Show item**, the details of the story, Sprint, or [feedback item](/developerportal/collaborate/feedback/) will be presented.
 
 ## 9 Story Archive {#story-archive}
 
@@ -203,9 +203,9 @@ Once you have switched from Mendix Stories to Epics or Jira, we archive any work
 We will delete all data from Mendix Stories starting October 1, 2023. We strongly urge you to download your work before that date.
 {{% /alert %}}
 
-{{< figure src="/attachments/developerportal/general/settings/story-archive.png" width="700"  >}}
+{{< figure src="/attachments/developerportal/collaborate/general-settings/story-archive.png" width="700"  >}}
 
 ## 10 Read More
 
-* [Leave and Delete an App](/developerportal/general/leave-delete-app/)
-* [Manage Deep Links](/developerportal/general/manage-deeplinks/)
+* [Leave and Delete an App](/developerportal/collaborate/leave-delete-app/)
+* [Manage Deep Links](/developerportal/collaborate/manage-deeplinks/)

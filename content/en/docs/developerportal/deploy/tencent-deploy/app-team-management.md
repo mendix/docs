@@ -34,7 +34,7 @@ You can then access the following parts of the Mendix Platform:
 
 The **我的应用** page shows you a summary of your apps.
 
-The **激活** tab displays all the apps for which you are a [Team](/developerportal/general/team/) member. Any apps you pin with the pin icon will appear in the **固定** tab. 
+The **激活** tab displays all the apps for which you are a [Team](/developerportal/collaborate/team/) member. Any apps you pin with the pin icon will appear in the **固定** tab. 
 
 Click an app tile to see more details about the app.
 

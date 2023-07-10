@@ -1,7 +1,7 @@
 ---
 title: "Documents"
-url: /developerportal/general/documents/
-category: "General"
+url: /developerportal/collaborate/documents/
+category: "Collaboration"
 weight: 10
 description: "Describes how to manage the documents in your app."
 tags: ["Documents", "Developer Portal"]
@@ -12,7 +12,7 @@ tags: ["Documents", "Developer Portal"]
 
 On the **Documents** page, you can upload files to your app and replace existing files with newer versions.
 
-{{< figure src="/attachments/developerportal/general/documents/documents.png" >}}
+{{< figure src="/attachments/developerportal/collaborate/documents/documents.png" >}}
 
 ## 2 Actions
 
@@ -34,7 +34,7 @@ To download a document, click the download icon next to the desired document.
 
 Click **Show Details** for a document to see the description of the file, comments, and all the versions of the document:
 
-{{< figure src="/attachments/developerportal/general/documents/document-details.png" >}}
+{{< figure src="/attachments/developerportal/collaborate/documents/document-details.png" >}}
 
 You can perform the following actions on this page:
 
@@ -44,6 +44,6 @@ You can perform the following actions on this page:
 
 ## 3 Read More
 
-* [Buzz](/developerportal/general/buzz/)
-* [Team](/developerportal/general/team/)
+* [Buzz](/developerportal/collaborate/buzz/)
+* [Team](/developerportal/collaborate/team/)
 * [Stories](/developerportal/project-management/stories/)

@@ -32,7 +32,7 @@ Use this setting to select the location where your app is stored. This can be ei
 
 Select the Team Server Git app for which you want to manage the branch lines. If you have an app open in Studio Pro, it will be selected automatically. However, you can also manage branch lines without opening an app first, in which case no app will be selected.
 
-For more information about the Mendix Team Server, see [Team Server](/developerportal/general/team-server/).
+For more information about the Mendix Team Server, see [Team Server](/developerportal/collaborate/team-server/).
 
 ### 2.2 Bring Your Own (BYO) Git Server App {#byo-server-app}
 

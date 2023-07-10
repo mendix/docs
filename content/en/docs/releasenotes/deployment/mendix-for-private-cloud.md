@@ -905,4 +905,4 @@ To upgrade an existing installation of Private Cloud to the latest version, foll
 
 #### Improvements
 
-* On the **General** page of [App Buzz](/developerportal/general/buzz/#app-buzz), we added a **Private Cloud** target. This will currently take you to a closed Beta test that allows you to connect your private cluster to Mendix. You can ask to join the Beta program, but places are currently limited.
+* On the **General** page of [App Buzz](/developerportal/collaborate/buzz/#app-buzz), we added a **Private Cloud** target. This will currently take you to a closed Beta test that allows you to connect your private cluster to Mendix. You can ask to join the Beta program, but places are currently limited.

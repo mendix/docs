@@ -9,7 +9,7 @@ tags: ["git", "svn", "subversion", "teamserver", "byo-git", "byo-svn" ]
 
 ## 1 Introduction
 
-[Mendix Team Server](/developerportal/general/team-server/) is the Mendix-hosted environment that stores all Mendix apps. It facilitates versioning your apps by integrating them into a version control system. Mendix Studio and Mendix Studio Pro integrate into the Team Server allowing you to create and update apps, commit changes, and merge model versions in one click.
+[Mendix Team Server](/developerportal/collaborate/team-server/) is the Mendix-hosted environment that stores all Mendix apps. It facilitates versioning your apps by integrating them into a version control system. Mendix Studio and Mendix Studio Pro integrate into the Team Server allowing you to create and update apps, commit changes, and merge model versions in one click.
 
 ## 2 What Version Control System Is Team Server Built On? {#which-team-server}
 
@@ -57,7 +57,7 @@ Mendix  is focusing on improving Team Server Git support and migrating customers
 
 ## 9 Can I Migrate from Team Server SVN to Git?
 
-Scrum Masters can migrate an SVN app to Git in the Developer Portal. For more information on how to migrate, see [Migrate to Git](/developerportal/general/migrate-to-git/) in the *Developer Portal Guide*. 
+Scrum Masters can migrate an SVN app to Git in the Developer Portal. For more information on how to migrate, see [Migrate to Git](/developerportal/collaborate/migrate-to-git/) in the *Developer Portal Guide*. 
 
 ## 10 Can I Use Third-Party Tools to Connect to the Team Server? {#third-party-tools}
 

@@ -27,7 +27,7 @@ If you want to deploy your app to a new licensed node in the Mendix Cloud, Mendi
 
 Fill in all the required details for this new licensed app node in the [Request New App Node](https://newnode.mendix.com/) app.
 
-Mendix Support will contact the [Technical Contact](/developerportal/general/app-roles/#technical-contact) for the app via a ticket in the [Mendix Support Portal](https://support.mendix.com), and provide the app details. Mendix Support will also check if your request matches your entitlement to resources (number of apps, cloud resources).
+Mendix Support will contact the [Technical Contact](/developerportal/collaborate/app-roles/#technical-contact) for the app via a ticket in the [Mendix Support Portal](https://support.mendix.com), and provide the app details. Mendix Support will also check if your request matches your entitlement to resources (number of apps, cloud resources).
 
 If you have an app deployed to **SAP** and need a *Subscription Secret*, you need to choose the **Hosting type** *Virtual Private Cloud* and then, on the subsequent screen choose **Hosting type** *Cloud Foundry* and **Virtual Private Cloud Name** *SAP BTP*.  
 
@@ -37,7 +37,7 @@ If your environment is not the right size, for example it has too little databas
 
 Fill in all the required details in the [Resize Environment](https://resize.mendix.com/index.html) app.
 
-Mendix Support will contact the [Technical Contact](/developerportal/general/app-roles/#technical-contact) for the app via a ticket in the [Mendix Support Portal](https://support.mendix.com) to discuss priority and timing.
+Mendix Support will contact the [Technical Contact](/developerportal/collaborate/app-roles/#technical-contact) for the app via a ticket in the [Mendix Support Portal](https://support.mendix.com) to discuss priority and timing.
 
 {{% alert color="warning" %}}
 Resizing operations will require your app to be restarted and it will be offline for a time while it is being resized.

@@ -49,10 +49,10 @@ To see the current status of the Mendix Developer Portal and Control Center, see
     * We renamed **Projects** to **Initiatives**.
     * You can now request access to restricted portfolios in your company.
     * Filters in the **Initiatives Overview** are now preserved when switching views.
-* We simplified the [app invitation flow](/developerportal/general/team/#inviting). If someone from your own company invites you to an app that also belongs to your company, you will no longer have to accept the pending  invitation. Instead, you will be immediately added to the team.
+* We simplified the [app invitation flow](/developerportal/collaborate/team/#inviting). If someone from your own company invites you to an app that also belongs to your company, you will no longer have to accept the pending  invitation. Instead, you will be immediately added to the team.
 * You can now see everyone who was invited to the app and by whom. You will find this information on the [History](/developerportal/collaborate/general-settings/#history) tab of the **General Settings** page.
-* We had a close look at the messages we post on the [History](/developerportal/general/team/) tab of the **Team** page and revised some of them to make them more readable.
-* You can now see all pending invitations to your app on the [Team](/developerportal/general/team/) page.
+* We had a close look at the messages we post on the [History](/developerportal/collaborate/team/) tab of the **Team** page and revised some of them to make them more readable.
+* You can now see all pending invitations to your app on the [Team](/developerportal/collaborate/team/) page.
 * We fixed an issue where, under certain circumstances, the app logo was not updated in Studio Pro after you changed it in the [General Settings](/developerportal/collaborate/general-settings/) page.
 
 ### June 15, 2023
@@ -87,7 +87,7 @@ To see the current status of the Mendix Developer Portal and Control Center, see
 #### New Features
 
 * You can now [set up an SSO (BYOIDP)](/developerportal/control-center/set-up-sso-byoidp/) to allow Mendix users to sign in to Mendix Platform services, including Studio Pro, using identity federation between the Mendix Platform and your corporate IdP.
-* You can now use a [Personal Access Token](/developerportal/community-tools/mendix-profile/#pat) to access SVN repositories in [Team Server](/developerportal/general/team-server/) without using your personal Mendix credentials.
+* You can now use a [Personal Access Token](/developerportal/community-tools/mendix-profile/#pat) to access SVN repositories in [Team Server](/developerportal/collaborate/team-server/) without using your personal Mendix credentials.
 
 ### May 4, 2023
 
@@ -98,19 +98,19 @@ To see the current status of the Mendix Developer Portal and Control Center, see
 
 #### Fixes
 
-* We fixed an issue where under certain circumstances you were not able to retry to [migrate your repository to Git](/developerportal/general/migrate-to-git/) if the first try resulted in errors.
+* We fixed an issue where under certain circumstances you were not able to retry to [migrate your repository to Git](/developerportal/collaborate/migrate-to-git/) if the first try resulted in errors.
 * We fixed an issue where a redirect to a user story that is linked to a feedback item would result in an error if this story is hosted by [Epics](/developerportal/project-management/epics/).
 
 ### April 20, 2023
 
 #### Improvements
 
-* We added a pre-condition check to the [Git migration](/developerportal/general/migrate-to-git/) process. We will inform you of any errors in the check, so that you can resolve them before proceeding with the migration.
+* We added a pre-condition check to the [Git migration](/developerportal/collaborate/migrate-to-git/) process. We will inform you of any errors in the check, so that you can resolve them before proceeding with the migration.
 * If your app is between versions 9.0 and 9.11, we now alert you to upgrade and become eligible to migrate. You see, we really want you to migrate to Git!
 
 #### Fixes
 
-* We fixed an issue where authors of a [feedback](/developerportal/general/feedback/) item would receive notifications on that item even though they specifically set the system not to send any notifications.
+* We fixed an issue where authors of a [feedback](/developerportal/collaborate/feedback/) item would receive notifications on that item even though they specifically set the system not to send any notifications.
 
 ### April 13, 2023
 
@@ -132,7 +132,7 @@ To see the current status of the Mendix Developer Portal and Control Center, see
 
 #### Improvements
 
-* We have made the option to migrate your app to Git more prominent. The banner is now displayed on all pages within the **Collaborate** section of the Developer Portal. Read more information on how to migrate and if you are eligible to migrate [here](/developerportal/general/migrate-to-git/).
+* We have made the option to migrate your app to Git more prominent. The banner is now displayed on all pages within the **Collaborate** section of the Developer Portal. Read more information on how to migrate and if you are eligible to migrate [here](/developerportal/collaborate/migrate-to-git/).
 * Have you tried [Epics](/developerportal/project-management/epics/) yet? You should! It is awesome if we do say ourselves. We are also working in the background to make it possible to connect your Mendix apps to your Jira boards – stay tuned!
 
 ### March 23, 2023
@@ -141,8 +141,8 @@ To see the current status of the Mendix Developer Portal and Control Center, see
 
 * In preparation for the [merging of Studio and Studio Pro](https://www.mendix.com/blog/coming-in-2023-the-merging-of-studio-and-studio-pro/), we removed the **Edit in Studio** button. You can still open your app in Studio via the ellipsis (**…**) in the [app tile](/developerportal/#my-apps) on the **My Apps** page.
 * After the big overhaul we released on [February 13th](#feb-13-23), our logging showed a decrease in the overall performance of [Stories](/developerportal/project-management/stories/). We took some counter-measures and made performance improvements.
-* We made some minor improvements to the flow for [inviting app team members](/developerportal/general/team/#inviting). For example, when you invite someone new to your app, the default role will be **Business Engineer** (as long as this role exists in your app).
-* We made some improvements to the layout of the [App Buzz](/developerportal/general/buzz/#app-buzz) page so that it displays better on small screen resolutions.
+* We made some minor improvements to the flow for [inviting app team members](/developerportal/collaborate/team/#inviting). For example, when you invite someone new to your app, the default role will be **Business Engineer** (as long as this role exists in your app).
+* We made some improvements to the layout of the [App Buzz](/developerportal/collaborate/buzz/#app-buzz) page so that it displays better on small screen resolutions.
 * The left-hand app sidebar menu is now collapsible, which makes for a far better experience on small screen resolutions.
 * You can now create and manage personal access tokens (PATs) in **User Settings** > **Developer Settings**. This location replaces the Warden tool that was previously used. For more information, see the [Personal Access Tokens](/developerportal/community-tools/mendix-profile/#pat) section in *Mendix Profile*.
 * We are preparing the Developer Portal for a brand new feedback experience. Please stay tuned!
@@ -162,7 +162,7 @@ To see the current status of the Mendix Developer Portal and Control Center, see
 
 #### Improvements
 
-* As of now, only Scrum Masters can [manage the app team](/developerportal/general/team/#managing).
+* As of now, only Scrum Masters can [manage the app team](/developerportal/collaborate/team/#managing).
 * We simplified the way your [Notification](/developerportal/community-tools/mendix-profile/#notifications) settings are stored.
 
 #### Fixes
@@ -185,7 +185,7 @@ For more information on security issues, see [Security Advisories](/releasenotes
 
 #### Fixes
 
-* We fixed a performance issue that occurred when opening an [App Buzz](/developerportal/general/buzz/#app-buzz) page for an app with a large team. We now show no more than 25 team members in the team list in the right corner at a time.
+* We fixed a performance issue that occurred when opening an [App Buzz](/developerportal/collaborate/buzz/#app-buzz) page for an app with a large team. We now show no more than 25 team members in the team list in the right corner at a time.
 * We fixed an issue where the country of residence you selected during sign-up was not properly stored in your [Mendix Profile](/developerportal/community-tools/mendix-profile/#profile).
 
 ### February 16, 2023
@@ -207,13 +207,13 @@ For more information on security issues, see [Security Advisories](/releasenotes
 * We overhauled the entire [Project Management](/developerportal/collaborate/general-settings/#project-management) to a completely new design. This design brings the benefit of using the full body width of your screen, scales much better across several devices and screen resolutions, and is dark-mode ready.
 * Have you lost track of where your apps live? We now display the cloud plan on the app tile in [My Apps](/developerportal/#my-apps).
 * We moved the notification settings you set for your app management to **Account Settings** > [Notifications](/developerportal/community-tools/mendix-profile/#notifications) (which you can access via the menu beneath your avatar in the top bar). This page includes a list of the apps you are watching.
-* We simplified the [team member invitation](/developerportal/general/team/#inviting) flow from a multi-step wizard to a single page.
+* We simplified the [team member invitation](/developerportal/collaborate/team/#inviting) flow from a multi-step wizard to a single page.
 * We moved the **Pending Invites** to a tab on the [My Apps](/developerportal/#my-apps) page. You will find both the pending invitations to apps that you have received (which you can **Accept** or **Decline**) in addition to the invitations you have sent. 
 * In addition, personal **API Keys** are available via **Account Settings** > [Developer Settings](/developerportal/community-tools/mendix-profile/#dev-settings).
 
 #### Fixes
 
-* We fixed a performance issue on the [Team](/developerportal/general/team/) page.
+* We fixed a performance issue on the [Team](/developerportal/collaborate/team/) page.
 
 ### January 26, 2023
 
@@ -237,7 +237,7 @@ For more information on security issues, see [Security Advisories](/releasenotes
 
 #### New Features
 
-We have released the Beta version of [Product Insights](/developerportal/general/product-insights/), which is a new way for you to proactively get feedback from your users. The functionality consists of a tool for setting up mini surveys in addition to the [Product Insights - Mini Surveys](/appstore/modules/product-insights/) Marketplace module, which you can add to your app to set up the exact targeting criteria for a survey.
+We have released the Beta version of [Product Insights](/developerportal/collaborate/product-insights/), which is a new way for you to proactively get feedback from your users. The functionality consists of a tool for setting up mini surveys in addition to the [Product Insights - Mini Surveys](/appstore/modules/product-insights/) Marketplace module, which you can add to your app to set up the exact targeting criteria for a survey.
 
 A survey can have a maximum of three questions that appear in your app based on the implemented criteria. You can choose between four different question types (rating scale, multiple choice, open question, and NPS question), and you can place the survey toaster in any of corner of the page. You can also preview exactly what the survey will look like.
 
@@ -282,7 +282,7 @@ In Portfolio Management, you can do the following
 
 #### New Features
 
-* We introduced a self-service option for Team Server SVN that allows Scrum Masters to permanently migrate eligible apps to Git. For more information on what apps are eligible for migration and on the migration process, see [Migrate to Git](/developerportal/general/migrate-to-git/). For more information on steps after the migration and process differences between Git and SVN, see [Migrating from SVN to Git: Steps After Migration and Process Differences](/refguide9/svn-git-differences/).
+* We introduced a self-service option for Team Server SVN that allows Scrum Masters to permanently migrate eligible apps to Git. For more information on what apps are eligible for migration and on the migration process, see [Migrate to Git](/developerportal/collaborate/migrate-to-git/). For more information on steps after the migration and process differences between Git and SVN, see [Migrating from SVN to Git: Steps After Migration and Process Differences](/refguide9/svn-git-differences/).
 
 ### November 10, 2022
 
@@ -310,7 +310,7 @@ In Portfolio Management, you can do the following
 
 #### Deprecations
 
-* All [Mendix Feedback](/appstore/modules/mendix-feedback/) widgets with versions lower than 8.4.0 are disabled. The feedback provided via a widget version lower than 8.4.0 is no longer sent to the [Feedback](/developerportal/general/feedback/) section of the Developer Portal, but your app will keep working as usual. Please download and replace your current Mendix Feedback widget with version 8.4.0 or higher. If you are using the [Native Mobile Resources](/appstore/modules/native-mobile-resources/) module (which also includes a version of the Mendix Feedback widget), please upgrade to version 3.5.1 or higher of that module. 
+* All [Mendix Feedback](/appstore/modules/mendix-feedback/) widgets with versions lower than 8.4.0 are disabled. The feedback provided via a widget version lower than 8.4.0 is no longer sent to the [Feedback](/developerportal/collaborate/feedback/) section of the Developer Portal, but your app will keep working as usual. Please download and replace your current Mendix Feedback widget with version 8.4.0 or higher. If you are using the [Native Mobile Resources](/appstore/modules/native-mobile-resources/) module (which also includes a version of the Mendix Feedback widget), please upgrade to version 3.5.1 or higher of that module. 
 
 ### September 28, 2022
 
@@ -321,7 +321,7 @@ In Portfolio Management, you can do the following
     * You can copy the link to a story or an epic on the upper-right corner of the [story details](/developerportal/project-management/epics/board/#story-details) dialog box or the [epic details](/developerportal/project-management/epics/epics/#epic-details) dialog box.
     * Story and epic details now appear in a dialog box instead of a side pane.
     * The widget styling is now slightly different.
-* We added a **Project Buzz** button on the [Board](/developerportal/project-management/epics/board/) page. Clicking the button brings you to the [Buzz](/developerportal/general/buzz/#app-buzz) page of the specific app in the Developer Portal.
+* We added a **Project Buzz** button on the [Board](/developerportal/project-management/epics/board/) page. Clicking the button brings you to the [Buzz](/developerportal/collaborate/buzz/#app-buzz) page of the specific app in the Developer Portal.
 * We added an error page in case you access Epics with no apps enabled.
 * We made it possible for you to link commits from Studio Pro to stories in Epics.
 
@@ -362,7 +362,7 @@ In Portfolio Management, you can do the following
 #### New Features
 
 * We have introduced the **Marketplace Content** page in Control Center, where Mendix Admins can manage the visibility of Marketplace Content in Studio.
-* We simplified the process of [inviting other users](/developerportal/general/team/#inviting) to your projects. Now you do not need to add a personal message to the invitation anymore and the whole process can be completed on a single page.
+* We simplified the process of [inviting other users](/developerportal/collaborate/team/#inviting) to your projects. Now you do not need to add a personal message to the invitation anymore and the whole process can be completed on a single page.
 * We added a banner about [Epics](/developerportal/project-management/epics/), our new tool for Agile planning, on the [Stories](/developerportal/project-management/stories/) page. This banner provides more information about Epics and makes it easier for Scrum Masters to enable it for their projects.  
 
 ### August 9, 2022
@@ -442,7 +442,7 @@ In Portfolio Management, you can do the following
 
 #### Fixes
 
-* We fixed an issue where replies on [Feedback](/developerportal/general/feedback/) emails were not correctly processed into comments.
+* We fixed an issue where replies on [Feedback](/developerportal/collaborate/feedback/) emails were not correctly processed into comments.
 
 #### Improvements
 
@@ -480,12 +480,12 @@ In Portfolio Management, you can do the following
 
 #### Improvements
 
-* As of today, we send all app invites, [Buzz](/developerportal/general/buzz/) notifications, and the Daily Digest from a no-reply email address. You can still reply to Buzz notifications, by the way.
+* As of today, we send all app invites, [Buzz](/developerportal/collaborate/buzz/) notifications, and the Daily Digest from a no-reply email address. You can still reply to Buzz notifications, by the way.
 * We have started sending the Daily Digest in a slightly different markup.
 
 #### Fixes
 
-* We fixed an issue where the submitter of a [feedback item](/developerportal/general/feedback/) was no longer able to comment on that issue after they left the app.
+* We fixed an issue where the submitter of a [feedback item](/developerportal/collaborate/feedback/) was no longer able to comment on that issue after they left the app.
 
 ### March 10, 2022
 
@@ -536,7 +536,7 @@ In Portfolio Management, you can do the following
 
 #### Fixes
 
-* We fixed an error where it was not possible to edit a comment under a [Feedback](/developerportal/general/feedback/) item. (Tickets 134179, 136172)
+* We fixed an error where it was not possible to edit a comment under a [Feedback](/developerportal/collaborate/feedback/) item. (Tickets 134179, 136172)
 
 ### November 18, 2021
 
@@ -574,19 +574,19 @@ In Portfolio Management, you can do the following
 
 #### Improvements
 
-* The app [Team](/developerportal/general/team/#managing) overview now shows deactivated users. These users can no longer sign in to the Mendix Platform or contribute to the app, and they were until now hidden from view. By showing deactivated users, app administrators have the opportunity to remove them from the app team.
+* The app [Team](/developerportal/collaborate/team/#managing) overview now shows deactivated users. These users can no longer sign in to the Mendix Platform or contribute to the app, and they were until now hidden from view. By showing deactivated users, app administrators have the opportunity to remove them from the app team.
 * During our continuous monitoring, we noticed that creating an app during peak hours caused performance issues and sometimes resulted in timeouts. We mitigated these problems by restructuring the app creation process.
 
 #### Fixes
 
-* We fixed an issue accidentally introduced in the [October 14th](#oct-fourteen) release where you were no longer able to post comments on a [feedback item's details page](/developerportal/general/feedback/#feedback-details). (Tickets 132892, 132959, 132983, 133075)
+* We fixed an issue accidentally introduced in the [October 14th](#oct-fourteen) release where you were no longer able to post comments on a [feedback item's details page](/developerportal/collaborate/feedback/#feedback-details). (Tickets 132892, 132959, 132983, 133075)
 
 ### October 14, 2021 {#oct-fourteen}
 
 #### Improvements
 
 * We noticed our **API Keys** overview was not telling the exact truth and made some changes accordingly. Because API keys are cached by our user-provisioning system, when you revoke an API key, it takes a certain amount of time before this is reflected across the platform. A new confirmation message warns you of this.
-* We added a [Team Server revision history](/developerportal/general/team-server/#revision-history) overview page for your Git-enabled apps. This allows you to have an overview of the last 40 commits made in your app. You can filter the overview per branch. When a revision is linked to a user story, the Team Server page can bring you to the [story details](/developerportal/project-management/stories/#story-details) page.
+* We added a [Team Server revision history](/developerportal/collaborate/team-server/#revision-history) overview page for your Git-enabled apps. This allows you to have an overview of the last 40 commits made in your app. You can filter the overview per branch. When a revision is linked to a user story, the Team Server page can bring you to the [story details](/developerportal/project-management/stories/#story-details) page.
 
 #### Fixes
 
@@ -632,7 +632,7 @@ In Portfolio Management, you can do the following
 #### Improvements
 
 * We removed the **Burndown Chart** and the **Release Plan** from **Stories**. We are working on reintroducing solutions for project analytics and release planning in the future.
-* We implemented [context deep links](/developerportal/general/manage-deeplinks/) to all main app pages on the Developer Portal so you can easily share references.
+* We implemented [context deep links](/developerportal/collaborate/manage-deeplinks/) to all main app pages on the Developer Portal so you can easily share references.
 * We increased the performance of opening the [My Apps page](/developerportal/#my-apps)
 
 #### Fixes
@@ -656,7 +656,7 @@ In Portfolio Management, you can do the following
 
 #### Fixes
 
-* We fixed an issue with the app's [Team](/developerportal/general/team/) page where [Mendix Admins](/developerportal/control-center/#company) could not add or remove team members.
+* We fixed an issue with the app's [Team](/developerportal/collaborate/team/) page where [Mendix Admins](/developerportal/control-center/#company) could not add or remove team members.
 
 ### July 27, 2021
 
@@ -668,7 +668,7 @@ In Portfolio Management, you can do the following
 
 #### Improvements
 
-* We updated the look and feel of the [Documents](/developerportal/general/documents/) page.
+* We updated the look and feel of the [Documents](/developerportal/collaborate/documents/) page.
 
 ### June 30, 2021
 
@@ -676,7 +676,7 @@ In Portfolio Management, you can do the following
 
 * You can now assign team members to a [user story](/developerportal/project-management/stories/#story-details).
 * We moved the old version of the Stories UI. You can now access it via the [More](/developerportal/project-management/stories/#more) button on the **Stories** page.
-* We removed the **Team** read-only overview page and send you straight to the [Manage Team](/developerportal/general/team/#managing) page.
+* We removed the **Team** read-only overview page and send you straight to the [Manage Team](/developerportal/collaborate/team/#managing) page.
 * We moved the **API Keys** page to the [General Settings](/developerportal/collaborate/general-settings/#general-settings-api-keys) page.
 * We implemented a new responsive search panel.
 * We will remove the **Burndown Chart** and **Release Plan** tabs from the Developer Portal on August 31, 2021.
@@ -691,7 +691,7 @@ In Portfolio Management, you can do the following
 
 #### Fixes
 
-* We fixed a broken link to the documentation on the [Team Server](/developerportal/general/team-server/) page.
+* We fixed a broken link to the documentation on the [Team Server](/developerportal/collaborate/team-server/) page.
 
 ### June 1, 2021
 
@@ -743,7 +743,7 @@ In Portfolio Management, you can do the following
 * We changed the [My Apps](/developerportal/#my-apps) page and moved your favorite apps to the **Pinned** tab. This will become the default tab on this page, making it easy to quickly access the apps you care about the most.
 * You asked and we listened: We added new label colors for labels in [Stories](/developerportal/project-management/stories/). There are now 15 different colors to choose from, specifically selected with accessibility in mind.
 * We made some big changes to the look and feel of our Developer Portal:
-    * We reshuffled the navigation items in the [App Buzz](/developerportal/general/buzz/#app-buzz) to a more logical order, based on our research insights. Now, there are two main sections: **Collaborate** and **Deploy**.
+    * We reshuffled the navigation items in the [App Buzz](/developerportal/collaborate/buzz/#app-buzz) to a more logical order, based on our research insights. Now, there are two main sections: **Collaborate** and **Deploy**.
     * We updated the look of various navigation items (**Feedback**, **Planning**, **Team Server**, **General**) to our new design.
     * We removed the grey background with white card content in all pages.
     * We replaced the breadcrumbs in the top left corner of the project navigation with the app name and icon.
@@ -788,7 +788,7 @@ In Portfolio Management, you can do the following
 
 #### Fixes
 
-* We fixed an issue where the **Add image** icon was missing when posting a comment on the [Buzz](/developerportal/general/buzz/). (Ticket 109481)
+* We fixed an issue where the **Add image** icon was missing when posting a comment on the [Buzz](/developerportal/collaborate/buzz/). (Ticket 109481)
 * We fixed an issue where creating API keys appeared in the audit trail. (Ticket 116182)
 
 ### February 25, 2021
@@ -803,7 +803,7 @@ In Portfolio Management, you can do the following
 #### Improvements
 
 * We have updated the [App Projects](/developerportal/control-center/#apps) tab of Control Center, where you can now do the following:
-    * Open the [Team](/developerportal/general/team/#managing) page from the project details page in order to manage team members and add yourself to a team (if you are a Mendix Admin)
+    * Open the [Team](/developerportal/collaborate/team/#managing) page from the project details page in order to manage team members and add yourself to a team (if you are a Mendix Admin)
     * Deactivate or delete an app or a team member
 
 ### February 9, 2021
@@ -838,7 +838,7 @@ In Portfolio Management, you can do the following
 #### Improvements
 
 * We removed support for the **Country** and **Skype** attributes in your [Mendix Profile](/developerportal/community-tools/mendix-profile/).
-* You can no longer create new polls on the company or app [Buzz](/developerportal/general/buzz/) page. Existing polls can still be answered.
+* You can no longer create new polls on the company or app [Buzz](/developerportal/collaborate/buzz/) page. Existing polls can still be answered.
 
 #### Fixes
 
@@ -867,7 +867,7 @@ In Portfolio Management, you can do the following
 
 #### Fixes
 
-* We fixed an issue where replies to Buzz notifications were not properly processed into comments on your [app Buzz](/developerportal/general/buzz/#app-buzz) page. (Ticket 111076)
+* We fixed an issue where replies to Buzz notifications were not properly processed into comments on your [app Buzz](/developerportal/collaborate/buzz/#app-buzz) page. (Ticket 111076)
 
 ### December 2, 2020
 
@@ -886,7 +886,7 @@ In Portfolio Management, you can do the following
 
 #### Fixes
 
-* We fixed an issue where team members were not displayed in the [Team](/developerportal/general/team/) overview.
+* We fixed an issue where team members were not displayed in the [Team](/developerportal/collaborate/team/) overview.
 
 ### October 4, 2020
 
@@ -927,7 +927,7 @@ In Portfolio Management, you can do the following
 
 #### Fixes
 
-* We fixed an issue where email notifications on [feedback](/developerportal/general/feedback/) items were not sent under certain circumstances.
+* We fixed an issue where email notifications on [feedback](/developerportal/collaborate/feedback/) items were not sent under certain circumstances.
 
 ### July 13, 2020
 
@@ -944,7 +944,7 @@ In Portfolio Management, you can do the following
 
 #### Improvements
 
-* We implemented the second increment in renaming the default **End-user** team role to [Guest](/developerportal/general/app-roles/#team-roles).
+* We implemented the second increment in renaming the default **End-user** team role to [Guest](/developerportal/collaborate/app-roles/#team-roles).
 
 #### Fixes
 
@@ -956,7 +956,7 @@ In Portfolio Management, you can do the following
 
 * The [new Stories UI](/developerportal/project-management/stories/) has been improved with various sections. The old Stories UI will be made unavailable soon. We encourage you to turn your tasks that are still available in the old Stories UI into new stories before the old UI is inaccessible.
 * We improved performance on story-related actions such as drag-and-drop and status changes on large apps with many deleted items.
-* We renamed the default **End-User** team role to [Guest](/developerportal/general/app-roles/#team-roles) to better distinguish team roles from app user roles.
+* We renamed the default **End-User** team role to [Guest](/developerportal/collaborate/app-roles/#team-roles) to better distinguish team roles from app user roles.
 * We removed the list appearance of the [My Company's Apps](/developerportal/#my-company-apps) page.
 
 #### Fixes 
@@ -1036,7 +1036,7 @@ In Portfolio Management, you can do the following
 
 #### Improvements
 
-* We made some minor styling improvements on [Buzz](/developerportal/general/buzz/).
+* We made some minor styling improvements on [Buzz](/developerportal/collaborate/buzz/).
 
 ### November 21, 2019
 
@@ -1180,7 +1180,7 @@ In Portfolio Management, you can do the following
 
 #### Fixes
 
-* It is now possible to go to a Mendix community member's new [Mendix Profile](/developerportal/community-tools/mendix-profile/) directly from the [Buzz](/developerportal/general/buzz/) and [People](https://developer.mendixcloud.com/link/people) pages. (Ticket 69702)
+* It is now possible to go to a Mendix community member's new [Mendix Profile](/developerportal/community-tools/mendix-profile/) directly from the [Buzz](/developerportal/collaborate/buzz/) and [People](https://developer.mendixcloud.com/link/people) pages. (Ticket 69702)
 
 ### October 11, 2018
 

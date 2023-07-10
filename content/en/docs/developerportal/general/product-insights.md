@@ -1,5 +1,5 @@
 ---
-title: "Mendix Mini Surveys"
+title: "Mini Surveys"
 url: /developerportal/general/product-insights/
 category: "General"
 weight: 8
@@ -33,7 +33,7 @@ This document first describes all the pages in Mini Surveys in the Developer Por
 
 When you click **Mini Surveys** in the sidebar for an app that already has existing mini surveys, the **Survey Overview** page opens first.
 
-On the upper-left corner of the page, you can see the name of the app currently opened. Click the app name to open a drop-down list of other apps you can navigate to that have been previously opened for Mendix Mini Surveys.
+On the upper-left corner of the page, you can see the name of the app currently opened. Click the app name to open a drop-down list of other apps you can navigate to that have been previously opened for Mini Surveys.
 
 The tabs of the **Survey Overview** page are described below.
 

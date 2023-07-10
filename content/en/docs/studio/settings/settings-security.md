@@ -171,7 +171,7 @@ To manage App Users, open **Roles and Permissions** and click **Manage Users** i
 
 {{< figure src="/attachments/studio/settings/settings-security/manage-users-button.png" >}}
 
-You will be taken to the [App User Management](/developerportal/general/general-settings/#managing-app-users) page in the Developer Portal, where you can invite people to your app and manage their user roles. 
+You will be taken to the [App User Management](/developerportal/collaborate/general-settings/#managing-app-users) page in the Developer Portal, where you can invite people to your app and manage their user roles. 
 
 {{% alert color="info" %}}
 People invited to join your team in the Developer Portal are not added as App Users automatically, so you will need to invite your team members if necessary.

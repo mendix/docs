@@ -10,7 +10,7 @@ weight: 100
 ## 1 Introduction
 
 {{% alert color="warning" %}}
-The webhooks for stories and Sprints have been deprecated. For more information, see the deprecation note in the [Webhooks](/developerportal/general/general-settings/#webhooks) section of *General Settings*.
+The webhooks for stories and Sprints have been deprecated. For more information, see the deprecation note in the [Webhooks](/developerportal/collaborate/general-settings/#webhooks) section of *General Settings*.
 {{% /alert %}}
 
 {{% alert color="warning" %}}

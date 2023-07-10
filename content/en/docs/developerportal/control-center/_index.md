@@ -79,7 +79,7 @@ Deleting and deactivating apps is currently not supported for licensed apps or a
 
 The app details page has the following tabs:
 
-* **App Info** – This tab has the **Description** and **App ID** fields, which are also available on the [General Settings](/developerportal/general/general-settings/) page for your app in the Developer Portal.
+* **App Info** – This tab has the **Description** and **App ID** fields, which are also available on the [General Settings](/developerportal/collaborate/general-settings/) page for your app in the Developer Portal.
 * **Members** – This tab presents the internal members and external members of the app.
     * You can directly deactivate an internal member from the app by clicking their name and selecting **Deactivate Member**.
     * For other member management options, click **Manage Members**, which will open the **Security** > [Team](/developerportal/general/team/#managing) page. As a Mendix Admin, you can also add yourself to a team via this page.

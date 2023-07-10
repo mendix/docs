@@ -27,7 +27,7 @@ To see the current status of the Mendix Developer Portal and Control Center, see
 
 #### New Features
 
-* With both Epics and Jira connector as new options to plan your work, we are getting ready to say goodbye to Mendix Stories on October 1, 2023. As of today, once you switch to [Epics](/developerportal/project-management/epics/) or [Jira](/developerportal/project-management/jira-connector/) , we will [archive all your work in Mendix Stories](/developerportal/general/general-settings/#story-archive) and you will not be able to switch back to Mendix Stories anymore. The Scrum Master of your team can choose the right project management tool for you on the [Project Management](/developerportal/general/general-settings/#project-management) tab on the **General Settings** page.
+* With both Epics and Jira connector as new options to plan your work, we are getting ready to say goodbye to Mendix Stories on October 1, 2023. As of today, once you switch to [Epics](/developerportal/project-management/epics/) or [Jira](/developerportal/project-management/jira-connector/) , we will [archive all your work in Mendix Stories](/developerportal/collaborate/general-settings/#story-archive) and you will not be able to switch back to Mendix Stories anymore. The Scrum Master of your team can choose the right project management tool for you on the [Project Management](/developerportal/collaborate/general-settings/#project-management) tab on the **General Settings** page.
 * To highlight the story tool you choose for your app, we gave it its own section in the navigation, called [Project Management](/developerportal/project-management/).
 * With these changes, navigation in Epics works a bit differently than before: the navigation items are on the sidebar now instead of at the top, so it is easier for you to get from one part of the Developer Portal to another (but if you need more space on the screen, you can always collapse the sidebar).
 * Speaking of Epics, we have released the new public API. You can find all the information in our [documentation](/apidocs-mxsdk/apidocs/epics-api/).
@@ -50,10 +50,10 @@ To see the current status of the Mendix Developer Portal and Control Center, see
     * You can now request access to restricted portfolios in your company.
     * Filters in the **Initiatives Overview** are now preserved when switching views.
 * We simplified the [app invitation flow](/developerportal/general/team/#inviting). If someone from your own company invites you to an app that also belongs to your company, you will no longer have to accept the pending  invitation. Instead, you will be immediately added to the team.
-* You can now see everyone who was invited to the app and by whom. You will find this information on the [History](/developerportal/general/general-settings/#history) tab of the **General Settings** page.
+* You can now see everyone who was invited to the app and by whom. You will find this information on the [History](/developerportal/collaborate/general-settings/#history) tab of the **General Settings** page.
 * We had a close look at the messages we post on the [History](/developerportal/general/team/) tab of the **Team** page and revised some of them to make them more readable.
 * You can now see all pending invitations to your app on the [Team](/developerportal/general/team/) page.
-* We fixed an issue where, under certain circumstances, the app logo was not updated in Studio Pro after you changed it in the [General Settings](/developerportal/general/general-settings/) page.
+* We fixed an issue where, under certain circumstances, the app logo was not updated in Studio Pro after you changed it in the [General Settings](/developerportal/collaborate/general-settings/) page.
 
 ### June 15, 2023
 
@@ -156,7 +156,7 @@ To see the current status of the Mendix Developer Portal and Control Center, see
 
 #### Deprecations
 
-* We have deprecated **General Settings** > **Webhooks** for stories and Sprints. For more information, see the deprecation note in the [Webhooks](/developerportal/general/general-settings/#webhooks) section of *General Settings*. You can now set webhooks for building and deploying your app. These are described in [Webhooks](/developerportal/deploy/webhooks/).
+* We have deprecated **General Settings** > **Webhooks** for stories and Sprints. For more information, see the deprecation note in the [Webhooks](/developerportal/collaborate/general-settings/#webhooks) section of *General Settings*. You can now set webhooks for building and deploying your app. These are described in [Webhooks](/developerportal/deploy/webhooks/).
 
 ### March 9, 2023
 
@@ -167,7 +167,7 @@ To see the current status of the Mendix Developer Portal and Control Center, see
 
 #### Fixes
 
-* We fixed an issue where the users you administered for your app's [environment](/developerportal/general/general-settings/#manage-users) were not displayed in the correct order.
+* We fixed an issue where the users you administered for your app's [environment](/developerportal/collaborate/general-settings/#manage-users) were not displayed in the correct order.
 
 ### February 23, 2023
 
@@ -204,7 +204,7 @@ For more information on security issues, see [Security Advisories](/releasenotes
 
 #### Improvements
 
-* We overhauled the entire [Project Management](/developerportal/general/general-settings/#project-management) to a completely new design. This design brings the benefit of using the full body width of your screen, scales much better across several devices and screen resolutions, and is dark-mode ready.
+* We overhauled the entire [Project Management](/developerportal/collaborate/general-settings/#project-management) to a completely new design. This design brings the benefit of using the full body width of your screen, scales much better across several devices and screen resolutions, and is dark-mode ready.
 * Have you lost track of where your apps live? We now display the cloud plan on the app tile in [My Apps](/developerportal/#my-apps).
 * We moved the notification settings you set for your app management to **Account Settings** > [Notifications](/developerportal/community-tools/mendix-profile/#notifications) (which you can access via the menu beneath your avatar in the top bar). This page includes a list of the apps you are watching.
 * We simplified the [team member invitation](/developerportal/general/team/#inviting) flow from a multi-step wizard to a single page.
@@ -301,7 +301,7 @@ In Portfolio Management, you can do the following
 
 #### Improvements
 
-* You can now see your app history under the [General Settings](/developerportal/general/general-settings/#history) page. Previously this was located under the **Stories** page.
+* You can now see your app history under the [General Settings](/developerportal/collaborate/general-settings/#history) page. Previously this was located under the **Stories** page.
 
 #### Fixes
 
@@ -333,20 +333,20 @@ In Portfolio Management, you can do the following
 
 #### New Features
 
-* We added the option to watch and unwatch an app. You can find this option on the [General Settings](/developerportal/general/general-settings/) page for an app as well as when you click the ellipsis (**...**) in an app tile on the [My Apps](/developerportal/#my-apps) page. Watching an app means that you will receive feedback notifications for this app, while unwatching an app turns off the notifications.
+* We added the option to watch and unwatch an app. You can find this option on the [General Settings](/developerportal/collaborate/general-settings/) page for an app as well as when you click the ellipsis (**...**) in an app tile on the [My Apps](/developerportal/#my-apps) page. Watching an app means that you will receive feedback notifications for this app, while unwatching an app turns off the notifications.
 * We introduced the **Billing Accounts** page in Control Center where Mendix Admin can update the payment card information for their company at any time.
 
 #### Fixes
 
 * We fixed an issue where users were not able to delete an app, if other users were still members of this app.
-* We fixed a navigation issue that would occur when users click **Go to Environments** in [Cloud Settings](/developerportal/general/general-settings/#cloud-settings).
+* We fixed a navigation issue that would occur when users click **Go to Environments** in [Cloud Settings](/developerportal/collaborate/general-settings/#cloud-settings).
 
 ### August 25, 2022
 
 #### Fixes
 
 * We fixed an issue where Mendix Admins were not able to invite users to their company's apps.
-* We fixed a pagination issue on the [user management overview](/developerportal/general/general-settings/#manage-users) in your **Access Management** settings.
+* We fixed a pagination issue on the [user management overview](/developerportal/collaborate/general-settings/#manage-users) in your **Access Management** settings.
 
 ### August 22, 2022
 
@@ -407,7 +407,7 @@ In Portfolio Management, you can do the following
     * Archive single stories or whole swimlanes
     * Easily search through your completed stories and get an overview of completed Sprints in the archive
 
-    You can try it out for any Mendix app. Your Scrum Master just needs to enable Epics in the [General Settings](/developerportal/general/general-settings/#project-management). Please note it is not yet possible to migrate the data from Stories into Epics, so we recommend using it for new projects or iterations first – in this way you do not have to worry about the stories in your current backlog.
+    You can try it out for any Mendix app. Your Scrum Master just needs to enable Epics in the [General Settings](/developerportal/collaborate/general-settings/#project-management). Please note it is not yet possible to migrate the data from Stories into Epics, so we recommend using it for new projects or iterations first – in this way you do not have to worry about the stories in your current backlog.
 
 ### June 30, 2022
 
@@ -417,7 +417,7 @@ In Portfolio Management, you can do the following
 
 #### New Features
 
-* We redesigned the [General Settings](/developerportal/general/general-settings/) section to make it more intuitive and user-friendly.
+* We redesigned the [General Settings](/developerportal/collaborate/general-settings/) section to make it more intuitive and user-friendly.
 * We prepared the integration of Studio Pro with our new project management tool, Epics (coming soon!).
 
 ### June 16, 2022
@@ -677,7 +677,7 @@ In Portfolio Management, you can do the following
 * You can now assign team members to a [user story](/developerportal/project-management/stories/#story-details).
 * We moved the old version of the Stories UI. You can now access it via the [More](/developerportal/project-management/stories/#more) button on the **Stories** page.
 * We removed the **Team** read-only overview page and send you straight to the [Manage Team](/developerportal/general/team/#managing) page.
-* We moved the **API Keys** page to the [General Settings](/developerportal/general/general-settings/#general-settings-api-keys) page.
+* We moved the **API Keys** page to the [General Settings](/developerportal/collaborate/general-settings/#general-settings-api-keys) page.
 * We implemented a new responsive search panel.
 * We will remove the **Burndown Chart** and **Release Plan** tabs from the Developer Portal on August 31, 2021.
 
@@ -781,7 +781,7 @@ In Portfolio Management, you can do the following
 
 #### Improvements
 
-* We made some minor changes to the look and feel over several pages, most notably the [General Settings](/developerportal/general/general-settings/) page.
+* We made some minor changes to the look and feel over several pages, most notably the [General Settings](/developerportal/collaborate/general-settings/) page.
 * We removed the old Company Admin pages. But you are already using the [Mendix Control Center](/developerportal/control-center/) as a Mendix Admin, right?
 * We made some preparations for Git support.
 * We improved the sharing of data across the Developer Portal so that it is more stable and secure.
@@ -899,8 +899,8 @@ In Portfolio Management, you can do the following
 #### Fixes
 
 * We fixed an issue where the default avatar of a team member who committed a revision was not properly displayed in the revision overview of the story details.
-* We fixed an issue where a Company Admin was no longer able to open the [General Settings](/developerportal/general/general-settings/) of an app they for a team in which they were not a member.
-* We repaired a dead link to the documentation on the [App User Management](/developerportal/general/general-settings/#managing-app-users) page.
+* We fixed an issue where a Company Admin was no longer able to open the [General Settings](/developerportal/collaborate/general-settings/) of an app they for a team in which they were not a member.
+* We repaired a dead link to the documentation on the [App User Management](/developerportal/collaborate/general-settings/#managing-app-users) page.
 
 ### August 25, 2020
 
@@ -1063,7 +1063,7 @@ In Portfolio Management, you can do the following
 #### Launchpad Removal and App User Management Update
 
 * We removed the old launchpad page, as we have moved to a new SSO architecture. The old URL `launchpad.mendix.com` now links to your [My Apps](/developerportal/#my-apps) page.
-* We moved the App User management functionality of the launchpad to the **General** app settings in the Developer Portal. For more information, see the [Managing App Users](/developerportal/general/general-settings/#managing-app-users) section of *How to Manage General App Settings*.
+* We moved the App User management functionality of the launchpad to the **General** app settings in the Developer Portal. For more information, see the [Managing App Users](/developerportal/collaborate/general-settings/#managing-app-users) section of *How to Manage General App Settings*.
 
 ### August 9, 2019
 

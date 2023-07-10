@@ -46,7 +46,7 @@ To connect your app to Jira, perform the following steps:
 
 1. In the Developer Portal, open your app.
 
-2. Go to the [General Settings](/developerportal/general/general-settings/) of your app.
+2. Go to the [General Settings](/developerportal/collaborate/general-settings/) of your app.
 
 3. Go to the **Project Management** tab.
 

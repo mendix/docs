@@ -63,4 +63,4 @@ The following deep links can be used:
 
 ## 4 Read More
 
-* [How to Manage General App Settings](/developerportal/general/general-settings/)
+* [How to Manage General App Settings](/developerportal/collaborate/general-settings/)

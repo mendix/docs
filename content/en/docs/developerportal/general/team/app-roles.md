@@ -38,7 +38,7 @@ Scrum Masters can edit and create new team roles on the [Team](/developerportal/
 
 ## 4 Technical Contact {#technical-contact}
 
-Every deployed app has a Technical Contact. When you view the [General Settings](/developerportal/general/general-settings/#general) for a deployed app, you will see the **Technical Contact** of the app. This is the user you can contact with questions related to the app. 
+Every deployed app has a Technical Contact. When you view the [General Settings](/developerportal/collaborate/general-settings/#general) for a deployed app, you will see the **Technical Contact** of the app. This is the user you can contact with questions related to the app. 
 
 {{< figure src="/attachments/developerportal/general/team/app-roles/technical-contact.png" >}}
 

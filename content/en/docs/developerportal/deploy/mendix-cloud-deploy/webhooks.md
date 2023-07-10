@@ -21,7 +21,7 @@ The webhooks contain a retry mechanism if an error response is received from the
 {{% alert color="info" %}}
 Webhooks are only available for licensed Mendix apps which are deployed to the Mendix Cloud or Mendix for Private Cloud.
 
-They are set up and work independently of the deprecated [webhooks for Sprints and Stories](/developerportal/general/general-settings/#webhooks).
+They are set up and work independently of the deprecated [webhooks for Sprints and Stories](/developerportal/collaborate/general-settings/#webhooks).
 {{% /alert %}}
 
 ## 2 Configuring a Webhook{#setting-up}

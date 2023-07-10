@@ -45,7 +45,7 @@ Should you consider using a connected environment, the following URLs should be 
 
 ### 3.1 Creating a Cluster {#create-cluster}
 
-1. Click [Cloud Settings](/developerportal/general/general-settings/#cloud-settings) on the **General Settings** page of your Mendix app.
+1. Click [Cloud Settings](/developerportal/collaborate/general-settings/#cloud-settings) on the **General Settings** page of your Mendix app.
 2. Click **Mendix for Private Cloud**.
 
     {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/image3.png" >}}

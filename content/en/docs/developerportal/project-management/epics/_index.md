@@ -23,7 +23,7 @@ The Epics tool enables your team members to collaborate efficiently during the a
 
 ## 2 Getting Your Team Access to an App in Epics
 
-Only a Scrum Master can give the team access to an app in Epics. To do so, the Scrum Master must open the app in the [Developer Portal](https://sprintr.home.mendix.com/link/myapps), go to the [Project Management](/developerportal/general/general-settings/#project-management) tab on the **General Settings** page, and click **Switch to Epics**:
+Only a Scrum Master can give the team access to an app in Epics. To do so, the Scrum Master must open the app in the [Developer Portal](https://sprintr.home.mendix.com/link/myapps), go to the [Project Management](/developerportal/collaborate/general-settings/#project-management) tab on the **General Settings** page, and click **Switch to Epics**:
 
 {{< figure src="/attachments/developerportal/project-management/epics/project-management.png" width="600px" >}}
 

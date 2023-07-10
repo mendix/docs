@@ -1,6 +1,6 @@
 ---
 title: "Settings"
-url: /developerportal/general/general-settings/
+url: /developerportal/collaborate/general-settings/
 category: "General"
 weight: 14
 description: "Describes general settings of your app."

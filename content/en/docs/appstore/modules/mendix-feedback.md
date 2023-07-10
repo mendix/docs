@@ -82,7 +82,7 @@ To configure the Feedback widget, double-click it to open the **Edit Feedback** 
 
 * **Advanced** tab
 
-    * **App ID** – This is the unique identifier of your app. You can find it in your app’s [General Settings](/developerportal/general/general-settings/) in the Developer Portal.
+    * **App ID** – This is the unique identifier of your app. You can find it in your app’s [General Settings](/developerportal/collaborate/general-settings/) in the Developer Portal.
 
     {{% alert color="info" %}}The original value of **App ID** is *1*, but this value should automatically change to your correct app ID. If it does not change automatically, see [Updating App ID](#update-app-id) below.
     {{% /alert %}}
@@ -156,7 +156,7 @@ If you are using MendixSSO3 for authentication, after upgrading to the module yo
 
 The value of the **App ID** on the **Project** tab will be changed to your correct app ID automatically from the original value 1. 
 
-If it did not change to your app ID because of an unexpected error, you can update the app ID manually. You can find the app ID in your app's [General Settings](/developerportal/general/general-settings/) in the Developer Portal.
+If it did not change to your app ID because of an unexpected error, you can update the app ID manually. You can find the app ID in your app's [General Settings](/developerportal/collaborate/general-settings/) in the Developer Portal.
 
 ### 4.2 Feedback Item Does Not Show in the Developer portal
 
@@ -205,7 +205,7 @@ The Mendix Feedback widget is easy to set up and automatically attaches addition
 You can configure the widget for certain actions in your app. All the configuration properties are explained on the various tabs of the properties dialog box for the widget. The feedback feature requires the following properties to be set:
 
 * **Project** tab
-    * **App ID** – the unique identifier of your app, which you can find in your app’s [General Settings](/developerportal/general/general-settings/) in the Developer Portal
+    * **App ID** – the unique identifier of your app, which you can find in your app’s [General Settings](/developerportal/collaborate/general-settings/) in the Developer Portal
 
         {{% alert color="info" %}}The original value of **App ID** is 1, but this value should automatically change to your correct app ID. If it does not change automatically, see [Updating App ID](#legacy-update-app-id) below.
         {{% /alert %}}
@@ -279,7 +279,7 @@ When this happens, right-click the error message, and choose **Update widget** o
 
 The value of the **App ID** on the **Project** tab will be changed to your correct app ID automatically from the original value 1. 
 
-If it did not change to your app ID because of an unexpected error, you can update the app ID manually. You can find the app ID in your app's [General Settings](/developerportal/general/general-settings/) in the Developer Portal.
+If it did not change to your app ID because of an unexpected error, you can update the app ID manually. You can find the app ID in your app's [General Settings](/developerportal/collaborate/general-settings/) in the Developer Portal.
 
 #### 5.4.2 Page Does Not Scroll in the Screenshot Image
 

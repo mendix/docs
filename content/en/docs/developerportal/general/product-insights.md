@@ -25,7 +25,7 @@ You begin by creating a mini survey in the Developer Portal, and then you implem
 
 This document first describes all the pages in Mini Surveys in the Developer Portal, and then it describes the procedure for running a mini survey.
 
-{{% alert color="info" %}}In the GA release (May/June) we will allow you customise these opt-out rules from App Insights portal.{{% /alert %}} 
+{{% alert color="info" %}}In the GA release, we will allow you customise these opt-out rules from the App Insights portal.{{% /alert %}} 
 
 ## 2 Mendix Mini Survey Configuration 
 

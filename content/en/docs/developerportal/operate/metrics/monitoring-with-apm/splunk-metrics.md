@@ -26,7 +26,7 @@ To use Splunk Cloud Platform, and to send data to Splunk Cloud Platform from you
 
 * Access to Splunk Cloud Platform
 * An access token for your Splunk Cloud Platform account, obtained from the Splunk Cloud Platform dashboard
-* A licensed Mendix app of which you are the [Technical Contact](/developerportal/collaborate/app-roles/#technical-contact)
+* A licensed Mendix app of which you are the [Technical Contact](/developerportal/general/app-roles/#technical-contact)
 
 ## 3 Connect Node to Splunk Cloud Platform{#connect-node}
 

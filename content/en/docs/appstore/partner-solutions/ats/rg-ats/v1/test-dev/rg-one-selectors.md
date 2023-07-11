@@ -36,7 +36,7 @@ You can use any CSS Selector defined in CSS3 and supported by your browser. The 
 | :checked | Checked pseudo-class | Selects a user interface element which is **checked** |
 | E > F | Child Combinator | Selects an **F element child** of an E element |
 
-For more information visit the official [W3C CSS3 selectors reference](http://www.w3.org/TR/css3-selectors/).
+For more information, visit the official [W3C CSS3 selectors reference](http://www.w3.org/TR/css3-selectors/).
 
 ## 4 JQuery Selectors {#jquery-selectors}
 
@@ -57,4 +57,4 @@ Pattern |Name | Meaning
  :parent | Parent Selector | Select all elements that have at least one child node (either an element or text).
  :text | Text Selector | Selects all input elements of type text.
 
-For more information visit the [official JQuery selectors reference](https://api.jquery.com/category/selectors/).
+For more information, visit the [official JQuery selectors reference](https://api.jquery.com/category/selectors/).

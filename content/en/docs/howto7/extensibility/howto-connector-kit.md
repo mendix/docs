@@ -141,7 +141,7 @@ The action is defined as follows:
 
 Implement the action in Java as follows:
 
-1. Create an InputStream from the the JSON input so it can be read by the import mapping.
+1. Create an InputStream from the JSON input so it can be read by the import mapping.
 2. Use `Core.integration().importStream()` to import the JSON with the specified mapping.
 3. Return the first object imported.
 

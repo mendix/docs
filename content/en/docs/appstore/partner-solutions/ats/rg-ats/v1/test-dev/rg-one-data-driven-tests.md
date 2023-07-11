@@ -46,7 +46,7 @@ For each error the test step and parameter are listed so they can be easily iden
 If you change the selected dataset the system will remember your set parameters and will match them again if you select a dataset containing the same field names.
 {{% /alert %}}
 
-When you have selected a primary dataset you can use the the contained field as input values for your test steps.
+When you have selected a primary dataset you can use the contained field as input values for your test steps.
 
 {{< figure src="/attachments/appstore/partner-solutions/ats/rg-ats/v1/test-dev/rg-one-data-driven-tests/21168192.png" alt="Setting a filed as input value" >}}
 

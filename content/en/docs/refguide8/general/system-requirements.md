@@ -59,7 +59,7 @@ If you are using the Intel® UHD Graphics 630 graphics processor, please ensure 
 
 ## 3 Team Server {#ts}
 
-The [Team Server](/developerportal/collaborate/team-server/) is implemented using Subversion, and Studio Pro uses the HTTPS protocol to communicate with that server. To access the Team Server from within Studio Pro, the network at your location needs the following settings:
+The [Team Server](/developerportal/general/team-server/) is implemented using Subversion, and Studio Pro uses the HTTPS protocol to communicate with that server. To access the Team Server from within Studio Pro, the network at your location needs the following settings:
 
 * The HTTPS port (TCP 443) needs to be open
 * The HTTP port (TCP 80) needs to be open
@@ -118,7 +118,7 @@ Mendix tries to support the most recent and patched database server versions fro
 Current support:
 
 * [IBM DB2](/refguide8/db2/) 11.5 for Linux, Unix, and Windows
-* [MariaDB](/refguide8/mysql/) 10.2, 10.3, 10.4, 10.5, 10.6, 10.11
+* [MariaDB](/refguide8/mysql/) 10.4, 10.5, 10.6, 10.11
 * [Microsoft SQL Server](/developerportal/deploy/mendix-on-windows-microsoft-sql-server/) 2019, 2022
 * [Azure SQL](https://docs.microsoft.com/en-us/sql/t-sql/statements/alter-database-transact-sql-compatibility-level?view=sql-server-2017) v12 compatibility mode 140 or higher
 * [MySQL](/refguide8/mysql/) 8.0

@@ -7,7 +7,7 @@ weight: 100
 
 ## 2.28.13
 
-**Release date: June 20th, 2023**
+**Release date: June 20, 2023**
 
 ### Fixes
 
@@ -17,7 +17,7 @@ weight: 100
 
 ## 2.28.12
 
-**Release date: May 23rd, 2023**
+**Release date: May 23, 2023**
 
 ### Improvements
 
@@ -25,7 +25,7 @@ weight: 100
 
 ## 2.28.11
 
-**Release date: May 9th, 2023**
+**Release date: May 9, 2023**
 
 ### Fixes
 
@@ -35,7 +35,7 @@ weight: 100
 
 ## 2.28.10
 
-**Release date: April 11th, 2023**
+**Release date: April 11, 2023**
 
 ### Improvements
 
@@ -49,7 +49,7 @@ weight: 100
 
 ## 2.28.9
 
-**Release date: March 28th, 2023**
+**Release date: March 28, 2023**
 
 ### Fixes
 
@@ -61,7 +61,7 @@ weight: 100
 
 ## 2.28.8
 
-**Release date: March 7th, 2023**
+**Release date: March 7, 2023**
 
 ### Fixes
 
@@ -72,7 +72,7 @@ weight: 100
 
 ## 2.28.7
 
-**Release date: January 31st, 2023**
+**Release date: January 31, 2023**
 
 ### Fixes
 
@@ -80,7 +80,7 @@ weight: 100
 
 ## 2.28.6
 
-**Release date: January 17th, 2023**
+**Release date: January 17, 2023**
 
 ### Fixes
 
@@ -88,7 +88,7 @@ weight: 100
 
 ## 2.28.5
 
-**Release date: January 3rd, 2023**
+**Release date: January 3, 2023**
 
 ### Fixes
 
@@ -98,7 +98,7 @@ weight: 100
 
 ## 2.28.4
 
-**Release date: December 6th, 2022**
+**Release date: December 6, 2022**
 
 ### Fixes
 
@@ -106,7 +106,7 @@ weight: 100
 
 ## 2.28.3
 
-**Release date: November 29th, 2022**
+**Release date: November 29, 2022**
 
 ### Fixes
 
@@ -114,7 +114,7 @@ weight: 100
 
 ## 2.28.2
 
-**Release date: November 9th, 2022**
+**Release date: November 9, 2022**
 
 ### Fixes
 
@@ -123,7 +123,7 @@ weight: 100
 
 ## 2.28.1
 
-**Release date: October 25th, 2022**
+**Release date: October 25, 2022**
 
 ### Fixes
 
@@ -131,7 +131,7 @@ weight: 100
 
 ## 2.28.0
 
-**Release date: October 11th, 2022**
+**Release date: October 11, 2022**
 
 ### Fixes
 
@@ -141,7 +141,7 @@ weight: 100
 
 ## 2.27.0
 
-**Release date: July 25th, 2022**
+**Release date: July 25, 2022**
 
 ### Fixes
 
@@ -156,7 +156,7 @@ weight: 100
 
 ## 2.26.0
 
-**Release date: July 5th, 2022**
+**Release date: July 5, 2022**
 
 ### Fixes
 
@@ -170,7 +170,7 @@ weight: 100
 
 ## 2.25.1
 
-**Release date: April 27th, 2022**
+**Release date: April 27, 2022**
 
 ### Fixes
 
@@ -179,7 +179,7 @@ weight: 100
 
 ## 2.25.0
 
-**Release date: November 2nd, 2021**
+**Release date: November 2, 2021**
 
 ### Improvements 
 
@@ -188,7 +188,7 @@ weight: 100
 
 ## 2.24.0
 
-**Release date: April 8th, 2021**
+**Release date: April 8, 2021**
 
 ### Mendix 9 Support
 
@@ -208,7 +208,7 @@ With this release, ATS officially supports testing apps that are built with Mend
 
 ## 2.23.0
 
-**Release date: March 2nd, 2021**
+**Release date: March 2, 2021**
 
 ### Dark Theme Support
 
@@ -245,7 +245,7 @@ To prevent such incidents, we no longer allow two users to edit a test case simu
 
 ## 2.22.0
 
-**Release date: January 19th, 2021**
+**Release date: January 19, 2021**
 
 ### Reworked Value Entry Widget
 
@@ -274,7 +274,7 @@ Test cases in ATS are dynamic with values that come from parameters, datasets, a
 
 ## 2.21.0
 
-**Release date: December 1st, 2020**
+**Release date: December 1, 2020**
 
 ### New Features
 
@@ -302,7 +302,7 @@ Test cases in ATS are dynamic with values that come from parameters, datasets, a
 
 ## 2.20.1
 
-**Release date: August 24th, 2020**
+**Release date: August 24, 2020**
 
 ### Fixes
 
@@ -311,7 +311,7 @@ Test cases in ATS are dynamic with values that come from parameters, datasets, a
 
 ## 2.20.0
 
-**Release date: August 17th, 2020**
+**Release date: August 17, 2020**
 
 ### Built-in Selenium (Preview)
 
@@ -362,7 +362,7 @@ To make this process even faster and skip one click, we added the option to run 
 
 ## 2.19.0
 
-**Release date: June 9th 2020**
+**Release date: June 9 2020**
 
 ### License Improvements
 
@@ -377,7 +377,7 @@ To make this process even faster and skip one click, we added the option to run 
 
 ## 2.18.0
 
-**Release date: May 14th, 2020**
+**Release date: May 14, 2020**
 
 ### Improvements
 
@@ -393,7 +393,7 @@ To make this process even faster and skip one click, we added the option to run 
 
 ## 2.17.1 {#2171}
 
-**Release date: May 4th, 2020**
+**Release date: May 4, 2020**
 
 ### Improvements
 
@@ -405,7 +405,7 @@ To make this process even faster and skip one click, we added the option to run 
 
 ## 2.17.0
 
-**Release date: April 30th, 2020**
+**Release date: April 30, 2020**
 
 ### Mendix 8.9 Compatibility
 
@@ -422,7 +422,7 @@ Apps built with [Mendix 8.9](/releasenotes/studio-pro/8.9/) can now be tested an
 
 ## 2.16.0
 
-**Release date: October 16th, 2019**
+**Release date: October 16, 2019**
 
 ### Mendix 8.2.2 Compatibility
 
@@ -437,7 +437,7 @@ Apps built with [Mendix 8.2.2](/releasenotes/studio-pro/8.2/#822) can now be tes
 
 ## 2.15.0
 
-**Release date: September 26th, 2019**
+**Release date: September 26, 2019**
 
 ### Desktop Recorder
 
@@ -449,7 +449,7 @@ When deleting an action that is being used somewhere else, a warning is now show
 
 ## 2.14.1
 
-**Release date: September 18th, 2019**
+**Release date: September 18, 2019**
 
 ### Fixes
 
@@ -457,7 +457,7 @@ When deleting an action that is being used somewhere else, a warning is now show
 
 ## 2.14.0
 
-**Release date: September 17th, 2019**
+**Release date: September 17, 2019**
 
 ### Improvements
 
@@ -471,7 +471,7 @@ When deleting an action that is being used somewhere else, a warning is now show
 
 ## 2.13.2
 
-**Release date: August 4th, 2019**
+**Release date: August 4, 2019**
 
 ### Mendix 8 Compatibility
 
@@ -485,7 +485,7 @@ Apps built with [Studio Pro 8](/releasenotes/studio-pro/8/) can now be tested us
 
 ## 2.13.1
 
-**Release date: August 1st, 2019**
+**Release date: August 1, 2019**
 
 ### Fixes
 
@@ -494,7 +494,7 @@ Apps built with [Studio Pro 8](/releasenotes/studio-pro/8/) can now be tested us
 
 ## 2.13.0
 
-**Release date: July 31st, 2019**
+**Release date: July 31, 2019**
 
 ### Upgraded Selenium from Version 3.8 to 3.141.59
 
@@ -516,7 +516,7 @@ If you are using another Selenium hub, we highly recommend updating it to use Se
 
 ## 2.12.0
 
-**Release date: July 21st, 2019**
+**Release date: July 21, 2019**
 
 ### Test Step Settings
 
@@ -586,7 +586,7 @@ This is a complete list of all the functions that can be negated:
 
 ## 2.11.2
 
-**Release date: June 17th 2019**
+**Release date: June 17 2019**
 
 ### Extended API
 
@@ -608,7 +608,7 @@ For more details, see the [ATS 2 Reference Guide](/appstore/partner-solutions/at
 
 ## 2.11.1
 
-**Release date: June 11th 2019**
+**Release date: June 11 2019**
 
 ### Fixes
 
@@ -620,7 +620,7 @@ For more details, see the [ATS 2 Reference Guide](/appstore/partner-solutions/at
 
 ## 2.11.0 {#2-11-0}
 
-**Release date: June 4th 2019**
+**Release date: June 4 2019**
 
 ### Support for More Mendix Marketplace Widgets
 
@@ -644,7 +644,7 @@ We are constantly on the lookout for popular widgets that we can support with AT
 
 ## 2.10.0
 
-**Release date: May 18th 2019**
+**Release date: May 18 2019**
 
 ### Alerting Improvements
 
@@ -691,7 +691,7 @@ This table compares the nomenclature:
 
 ## 2.9.5 
 
-**Release date: February 12th, 2019**
+**Release date: February 12, 2019**
 
 ### Support for Mendix 7.22.2
 
@@ -711,7 +711,7 @@ Mendix applications that are based on [Mendix version 7.22.2](/releasenotes/stud
 
 ## 2.9.4
 
-**Release date: December 4th, 2018**
+**Release date: December 4, 2018**
 
 ### Improvements
 
@@ -730,7 +730,7 @@ We do not expect this change to cause any issues with existing tests. However, i
 
 ## 2.9.3
 
-**Release date: October 15th, 2018**
+**Release date: October 15, 2018**
 
 ### Improvements
 
@@ -746,7 +746,7 @@ We do not expect this change to cause any issues with existing tests. However, i
 
 ## 2.9.2
 
-**Release date: August 21st, 2018**
+**Release date: August 21, 2018**
 
 ### Mendix 7.17
 
@@ -762,7 +762,7 @@ Mendix applications that are based on Mendix version 7.17 can now be tested and 
 
 ## 2.9.1
 
-**Release date: August 9th, 2018**
+**Release date: August 9, 2018**
 
 ### Fixes
 
@@ -770,7 +770,7 @@ Mendix applications that are based on Mendix version 7.17 can now be tested and 
 
 ## 2.9.0
 
-**Release date: July 10th, 2018**
+**Release date: July 10, 2018**
 
 ### Improvements
 
@@ -816,7 +816,7 @@ Mendix applications based on Mendix version 7.16 can now be tested and recorded 
 
 ## 2.8.0
 
-**Release date: June 15th, 2018**
+**Release date: June 15, 2018**
 
 ### Control of Administration Rights 
 
@@ -867,7 +867,7 @@ The built-in function *Assert not null* behavior has been changed. Up to and inc
 
 ## 2.7.1
 
-**Release date: May 15th, 2018**
+**Release date: May 15, 2018**
 
 ### Mobile Testing
 
@@ -930,7 +930,7 @@ The same holds for the function parameters.
 * In the search dialog there is now an indicator when multi selection is available.
 * When a test case/suite that is related to a schedule/job template is deleted the related schedule/job is also deleted.
 * We added a progress bar on the sidebar search dialog. We hope that this helps prevent error due to accidentally double clicking on the select button.
-* When running a job on Browserstack or Saucelabs the job name is set as the the session name in their portals. This should make it easier to correlate the provider sessions with jobs in ATS.
+* When running a job on Browserstack or Saucelabs the job name is set as the session name in their portals. This should make it easier to correlate the provider sessions with jobs in ATS.
 
 ### Fixes
 
@@ -943,7 +943,7 @@ The same holds for the function parameters.
 * When a test case failed in a teardown step any existing screenshot from a regular step was overwritten. In order to fix this we do not take a screenshot during teardown steps anymore.
 * It was possible to add records to a dataset with no fields. This is now fixed.
 * When editing a folder and clicking cancel, the changes to the folder name were still saved. We fixed this so that clicking cancel does not result in any changes being applied.
-* When moving a folder it would sometimes happen the the name is suffixed with "(moved) (moved)" to avoid a conflict. This is fixed so that the folder name gets the suffix "(moved)" instead.
+* When moving a folder it would sometimes happen the name is suffixed with "(moved) (moved)" to avoid a conflict. This is fixed so that the folder name gets the suffix "(moved)" instead.
 * Due to a bug it was no longer possible to expand certain items on the dashboard anymore. This is now fixed.
 * When testing on Internet Explorer the calculation of the application context for example, dialog was not working. This had the effect that sometimes an element was found that was not within the current context which probably then causes a test case to fail. This is now fixed.
 * We fixed an issue in the recorder where the recorder would send too much information to ATS causing it to slow down significantly.
@@ -965,7 +965,7 @@ The same holds for the function parameters.
 
 ## 2.6.1
 
-**Release date: April 5th, 2018**
+**Release date: April 5, 2018**
 
 ### Fixes
 
@@ -973,7 +973,7 @@ The same holds for the function parameters.
 
 ## 2.6.0
 
-**Release date: March 27th, 2018**
+**Release date: March 27, 2018**
 
 ### Selective Reporting
 
@@ -1021,7 +1021,7 @@ Mendix applications built on Mendix versions 7.11 or 7.12 can now be tested and 
 
 ## 2.5.0
 
-**Release date: March 8th, 2018**
+**Release date: March 8, 2018**
 
 ### Functions
 
@@ -1058,7 +1058,7 @@ This opens up a lot exciting possibilities for us as ATS developers. For example
 
 ## 2.4.1
 
-**Release date: February 5th, 2018**
+**Release date: February 5, 2018**
 
 ### Fixes
 
@@ -1068,7 +1068,7 @@ This opens up a lot exciting possibilities for us as ATS developers. For example
 
 ## 2.4.0
 
-**Release date: January 24th, 2018**
+**Release date: January 24, 2018**
 
 ### Improvements
 
@@ -1102,7 +1102,7 @@ This opens up a lot exciting possibilities for us as ATS developers. For example
 
 ## 2.3.1
 
-**Release date: December 5th, 2018**
+**Release date: December 5, 2018**
 
 ### Improvements
 
@@ -1114,7 +1114,7 @@ This opens up a lot exciting possibilities for us as ATS developers. For example
 
 ## 2.3.0
 
-**Release date: November 29th, 2017**
+**Release date: November 29, 2017**
 
 ### Improvements
 
@@ -1134,7 +1134,7 @@ This opens up a lot exciting possibilities for us as ATS developers. For example
 
 ## 2.2.0
 
-**Release date: November 14th, 2017**
+**Release date: November 14, 2017**
 
 ### Terms of Use and Privacy Policy
 
@@ -1162,7 +1162,7 @@ After your first login to this release, you'll see a pop-up window, which will a
 
 ## 2.1.0
 
-**Release date: October 27th, 2017**
+**Release date: October 27, 2017**
 
 ### Performance
 
@@ -1196,7 +1196,7 @@ We saw decreasing performance in some parts of the UI when you had a lot of data
 
 ## 2.0.0
 
-**Release date: October 19th, 2017**
+**Release date: October 19, 2017**
 
 ### More Platform Integration
 
@@ -1340,7 +1340,7 @@ Many bug fixes and small changes have been maded, including everything from the 
 
 ## 1.8.8
 
-**Release date: December 14th, 2017**
+**Release date: December 14, 2017**
 
 ### Fixes
 
@@ -1349,7 +1349,7 @@ Many bug fixes and small changes have been maded, including everything from the 
 
 ## 1.8.7
 
-**Release date: July 3rd, 2017**
+**Release date: July 3, 2017**
 
 ### Fixes
 
@@ -1360,7 +1360,7 @@ Many bug fixes and small changes have been maded, including everything from the 
 
 ## 1.8.6
 
-**Release date: June 2nd, 2017**
+**Release date: June 2, 2017**
 
 ### New Action: Hover
 
@@ -1387,7 +1387,7 @@ Many bug fixes and small changes have been maded, including everything from the 
 
 ## 1.8.5
 
-**Release date: February 24th, 2017**
+**Release date: February 24, 2017**
 
 ### Compatibiliy with Mendix 7
 
@@ -1412,7 +1412,7 @@ ATS now supports testing the recently released Mendix 7.
 
 ## 1.8.4
 
-**Release date: February 1st, 2017**
+**Release date: February 1, 2017**
 
 ### New Action
 
@@ -1435,7 +1435,7 @@ ATS now supports testing the recently released Mendix 7.
 
 ## 1.8.3
 
-**Release date: December 19th, 2016**
+**Release date: December 19, 2016**
 
 ### Improvements
 
@@ -1443,7 +1443,7 @@ ATS now supports testing the recently released Mendix 7.
 
 ## 1.8.2
 
-**Release date: December 13th, 2016**
+**Release date: December 13, 2016**
 
 ### Fixes
 
@@ -1451,7 +1451,7 @@ ATS now supports testing the recently released Mendix 7.
 
 ## 1.8.1
 
-**Release date: November 7th, 2016**
+**Release date: November 7, 2016**
 
 ### Fixes
 
@@ -1459,7 +1459,7 @@ ATS now supports testing the recently released Mendix 7.
 
 ## 1.8.0
 
-**Release date: November 6th, 2016**
+**Release date: November 6, 2016**
 
 ### Supporting Mendix Marketplace Widgets
 

@@ -121,7 +121,7 @@ To create the microflow, follow these steps:
 
     {{< figure src="/attachments/howto8/testing/testing-microflows-using-the-unittesting-module/18580352.png" >}}
 
-7. Now, the the employee needs to be promoted to the right level. Add a new activity of the **Microflow call** type and select the**UnitTesting.AssertTrue1** microflow.
+7. Now, the employee needs to be promoted to the right level. Add a new activity of the **Microflow call** type and select the**UnitTesting.AssertTrue1** microflow.
 8. Set the argument of **ValueToAssert** parameter to `$NewEmployee/Level = MyFirstModule.Level.Junior`:
 
     {{< figure src="/attachments/howto8/testing/testing-microflows-using-the-unittesting-module/18580344.png" >}}

@@ -10,9 +10,11 @@ tags: ["studio", "studio pro", "fusion", "moving to studio pro"]
 
 ## 1 Introduction 
 
-Mendix Studio and Mendix Studio Pro will be fused in one IDE in Mendix 10. Starting from Mendix 9.21, Mendix only features Studio Pro, meaning that Mendix 9.20 is the latest version you can use for Studio. For more information on fusion, see the [Coming in 2023: The Merging of Studio and Studio Pro](https://www.mendix.com/blog/coming-in-2023-the-merging-of-studio-and-studio-pro/) blog post.
+Mendix Studio and Mendix Studio Pro have been fused in one IDE since Mendix 10. Mendix Studio will remain available until July 15, 2023 for apps developed in Mendix 9.20 and below. Therefore, we are encouraging Studio users to switch to Studio Pro now.
 
-Therefore, we are encouraging Studio users to switch to Studio Pro before Mendix 10 release. This document outlines the steps a Studio developer needs to take to install Studio Pro, know their way around it, and start developing with it.
+For more information on fusion, see the [Coming in 2023: The Merging of Studio and Studio Pro](https://www.mendix.com/blog/coming-in-2023-the-merging-of-studio-and-studio-pro/) blog post.
+
+This document outlines the steps a Studio developer needs to take to install Studio Pro, know their way around it, and continue developing your app in Studio Pro.
 
 ## 2 Moving from Studio to Studio Pro
 

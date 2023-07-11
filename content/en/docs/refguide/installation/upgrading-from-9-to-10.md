@@ -12,10 +12,6 @@ tags: ["studio pro", "upgrade", "runtime", "xpath"]
 
 Mendix Studio Pro 10 is a [major version](/releasenotes/studio-pro/lts-mts/#major-version) release that provides powerful tools for building your apps and brings a host of improvements and fixes. For the full list of changes, see the [Studio Pro 10 release notes](/releasenotes/studio-pro/10.0/).
 
-{{% alert color="warning" %}}
-Mendix Studio Pro [10.0](/releasenotes/studio-pro/10.0/) is currently in [Beta](/releasenotes/beta-features/). The GA release is in June, 2023, as scheduled in the [Studio Pro release timeline](/releasenotes/studio-pro/lts-mts/#major-version).
-{{% /alert %}}
-
 ### 1.1 Upgrading from Studio Pro 9 to 10
 
 The sections below describe upgrading from Studio Pro 9 to Studio Pro 10.
@@ -121,7 +117,7 @@ If you use the [Workflow Commons](/appstore/modules/workflow-commons/) module in
 
 User task pages that were generated in an earlier version of Studio Pro also need to be updated. The conditional visibility based on whether the current user is assigned is no longer supported. You will see a consistency error for any outcome button that is using the visibility expression. For each button, set the visibility to **Always**.
 
-## 7.6 DOM Structure Changes
+### 7.6 DOM Structure Changes
 
 Studio Pro 10 introduces DOM structure changes to the web client to ensure compatibility with future versions of React.
 
@@ -131,7 +127,7 @@ These changes may impact your current styling.
 
 If your application is currently using the Atlas theme, this is easily solved by upgrading [Atlas Core](https://marketplace.mendix.com/link/component/117187) to version 3.11 or above. Otherwise, please adjust your css selectors accordingly.
 
-## 7.7 Moving Away from Glyphicon
+### 7.7 Moving Away from Glyphicon
 
 In Studio Pro 10, the glyphicon is slowly being phased out. Although a currently selected glyphicon will still work, some of the widgets that Studio Pro 10 uses are no longer using a glyphicon class name.
 

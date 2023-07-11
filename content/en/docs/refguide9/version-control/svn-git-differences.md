@@ -13,7 +13,7 @@ aliases:
 
 As of Studio Pro version 9.21, Git is the default version control system in Studio Pro. Git offers [several advantages](/refguide9/version-control-faq/#git-advantages) over SVN and provides a way to have a stronger and more robust collaboration with your team members. However, there are some differences in the way you commit changes and the way you collaborate. This document describes the most prominent changes between Git and SVN.
 
-For more information on how to migrate to Git, see [Migrate to Git](/developerportal/collaborate/migrate-to-git/) in the *Developer Portal Guide*.
+For more information on how to migrate to Git, see [Migrate to Git](/developerportal/general/migrate-to-git/) in the *Developer Portal Guide*.
 
 ## 2 Differences in Collaboration: Committing, Pushing, Updating (Pulling), and Merging 
 
@@ -63,4 +63,4 @@ It is possible to [set up a third-party tool to connect to the Team Server](/ref
 
 ## 6 Read More
 
-* [Migrate to Git](/developerportal/collaborate/migrate-to-git/)
+* [Migrate to Git](/developerportal/general/migrate-to-git/)

@@ -451,7 +451,7 @@ The SAP Destination Service will only provide the correct information when run o
 
 #### 4.1.4 Query{#Query}
 
-This is the OData query which identifies what data should be returned. This query formats an SQL query such as `SELECT * FROM EntitySet WHERE (foo) ORDER BY (bar) …` into a OData GET request like `GET ~/EntitySet?$filter=foo&$orderby=bar…`. It is the responsibility of the developer to ensure that the query is constructed correctly.
+This is the OData query which identifies what data should be returned. This query formats an SQL query such as `SELECT * FROM EntitySet WHERE (foo) ORDER BY (bar) …` into an OData GET request like `GET ~/EntitySet?$filter=foo&$orderby=bar…`. It is the responsibility of the developer to ensure that the query is constructed correctly.
 
 The format of the Query is:
 

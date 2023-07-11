@@ -23,6 +23,7 @@ For example, this checkbox allows you to see, and set, whether someone is subscr
 The properties pane is divided into two major sections by a toggle at the top of the pane: **Properties** and **Styling**. Checkbox properties consist of the following sections:
 
 Properties:
+
 * [Data source](#data-source)
 * [Label](#label)
 * [Editability](#editability)
@@ -31,10 +32,12 @@ Properties:
 * [Events](#events)
 
 Styling:
+
 * [Design Properties](#design-properties)
 * [Common](#common-styling)
 
 Miscellaneous:
+
 * [Formatting](#formatting)
 
 ## 3 Properties

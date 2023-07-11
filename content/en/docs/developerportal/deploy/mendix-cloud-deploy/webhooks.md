@@ -84,7 +84,7 @@ You will want to verify that your endpoint has received a payload from Mendix an
 
 This verification is enabled through the `webhook-signature` which is sent in the webhook header. It is generated using the **Validation Secret** you provided when you set up the webhook in combination with the payload of the trigger using [HMAC-SHA256](https://en.wikipedia.org/wiki/HMAC) authentication.
 
-To verify the the signature, you need to reconstruct it and then compare it with the **webhook-signature** in the webhook header. In general, this is done as follows:
+To verify the signature, you need to reconstruct it and then compare it with the **webhook-signature** in the webhook header. In general, this is done as follows:
 
 1. Construct a string containing the signed content which is the `{webhook-id}.{webhook-timestamp}.{webhook payload}`. Note the full-stop (`.`) between the three elements.
 1. Calculate the **webhook-signature** using the HMAC-SHA256 function for your language and the **Validation Secret** you set up for the Webhook.
@@ -150,7 +150,7 @@ Ensure you use the correct key names if using this payload information to call o
 
 ## 5 Teamserver Push (Git)
 
-When you push a model change to the [Git Team Server](/developerportal/collaborate/team-server/), and the webhook responds to the event **Teamserver push (Git)**, request content containing a payload with the following format will be sent to the configured endpoint:
+When you push a model change to the [Git Team Server](/developerportal/general/team-server/), and the webhook responds to the event **Teamserver push (Git)**, request content containing a payload with the following format will be sent to the configured endpoint:
 
 ```json {linenos=false}
 {

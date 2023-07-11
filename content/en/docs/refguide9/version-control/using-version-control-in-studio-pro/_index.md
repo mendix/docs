@@ -30,7 +30,7 @@ The app is created on the Team Server, and a working copy is created in the **Ap
 
 ## 3 Joining an App
 
-If there is already a Team Server-enabled app, you can be invited to join it (see [Team](/developerportal/collaborate/team/)).
+If there is already a Team Server-enabled app, you can be invited to join it (see [Team](/developerportal/general/team/)).
 
 Once you are a team member, providing you have been given a role with sufficient rights, you can work on the app by doing the following:
 
@@ -191,7 +191,7 @@ The involved document is marked as conflicted and you can see the reason in the 
 If a whole folder (or module) was *deleted* and another person changes a document inside that folder, the folder/module is restored and also marked as conflicted. This way you know that the intention was to delete that folder but it has been restored to show you the context of the changed document.
 {{% /alert %}}
 
-You can resolve an app conflict by choosing **Tasks > Use mine** or by deleting the involved documents or folders.
+You can resolve an app conflict by choosing **Tasks** > **Use mine** or by deleting the involved documents or folders.
 
 ## 7 Using Branches
 
@@ -208,7 +208,7 @@ It is often convenient to have more than one development line. For example, one 
 If you want to add some functionality to a deployed application or you want to fix a bug in it, you can do so without interfering with other development.
 
 1. Determine the version of the deployed application. This information is in the Developer Portal. Alternatively, you can find the version in the *metadata.json* file in the **model** subfolder of your deployment package (mda) archive. For example, `"ModelVersion": "1.0.0.16"`
-2. Choose **Version Control > Manage Branch Lines...** and create a branch based on the tag with the that version number as its name.
+2. Choose **Version Control** > **Manage Branch Lines...** and create a branch based on the tag with the that version number as its name.
 
     {{< figure src="/attachments/refguide9/version-control/using-version-control-in-studio-pro/create-from-tag.png" >}}
 
@@ -226,7 +226,7 @@ Of course, not all maintenance fixes need to be merged to the main line. Sometim
 
 Another reason for creating a branch is to develop a big new feature without interfering with other development. This gives you the freedom to commit a half-implemented feature, possibly even with errors, while other people can still commit and update/pull on the main line. Without using a branch line, you would have to constantly make sure that your app is error free and does not break other parts of the system.
 
-Firstly, select **Version Control > Manage Branch Lines...** and create a branch from a revision of the main line.
+Firstly, select **Version Control** > **Manage Branch Lines...** and create a branch from a revision of the main line.
 
 {{< figure src="/attachments/refguide9/version-control/using-version-control-in-studio-pro/create-branch-line-dialog.png" >}}
 
@@ -235,7 +235,7 @@ Now work on the branch until the feature is done and commit the completed work.
 When you want to merge the whole branch back to the main line to integrate the feature there. Do the following:
 
 1. Open the main line.
-2. Choose **Version Control > Merge changes here**.
+2. Choose **Version Control** > **Merge changes here**.
 3. Select **Merge feature branch** option.
 4. Click **Merge**.
 5. Resolve any conflicts and errors.
@@ -249,7 +249,7 @@ You can delete the branch after merging it back, if you want.
 
 Development lines other than the main line are called branch lines. Our advice would be to develop new features in the *main line* and to use *branch lines* for fixing bugs in versions that have been deployed. This is the scenario Studio Pro makes easy but other scenarios for more complex apps are supported as well.
 
-You can create branch lines from the Branch Line Manager which you can find at **Version Control > Manage Branch Lines...**.
+You can create branch lines from the Branch Line Manager which you can find at **Version Control** > **Manage Branch Lines...**.
 
 {{< figure src="/attachments/refguide9/version-control/using-version-control-in-studio-pro/create-branch-line.png" >}}
 
@@ -259,7 +259,7 @@ If you have multiple development lines, you sometimes want to port changes from 
 
 Merging is always done while you have a working copy open. The merge will result in extra local changes in that working copy. It is advisable to commit local changes first before merging extra changes into a working copy. Otherwise, the uncommitted local changes and the changes caused by the merge will be combined and it is very hard to untangle them if you are unhappy with the merge. Studio Pro will warn you if you have uncommitted changes.
 
-Select **Version Control > Merge Changes Here**, select the option available for the version control you are using:
+Select **Version Control** > **Merge Changes Here**, select the option available for the version control you are using:
 
 * For SVN, **Port fix**, **Merge feature branch**, and **Advanced merge** options are available
 * For Git, **Port fix** and **Merge feature branch** options are available
@@ -270,7 +270,7 @@ For more information on merge settings, see [Merge Dialog](/refguide9/merge-dial
 
 Reverting changes works for changes that have not been committed yet. Changes that have been committed can never be deleted. However, you can apply the changes 'in reverse' and commit that. This feature is called 'Reverse merging' in Studio Pro.
 
-Choose **Version Control > Reverse Merge Changes...**
+Choose **Version Control** > **Reverse Merge Changes...**
 
 For SVN, you can choose a range (**Start revision** and **End revision**):
 
@@ -288,7 +288,7 @@ There are two methods for fully replacing your main line with a branch line.
 
 The first method is to merge the entire branch line into the main line, essentially replacing the main line contents with the branch line contents). This works as long as the branch line is up to date with the main line (to avoid conflicts). To do this, follow these steps:
 
-1. Select **Version Control > Merge Changes Here** > **Merge feature branch**.
+1. Select **Version Control** > **Merge Changes Here** > **Merge feature branch**.
 2. Select the branch to merge into the main line.
 
 The second method should be used if the first method is not possible for some reason and you want to "overwrite" the main line with your branch line. For this method, you must follow these steps:
@@ -425,7 +425,7 @@ To fix this, make a small commit on your branch in Studio Pro (for example, chan
 
 ### 9.6 Reverting Accidental Studio Pro App Model Upgrade
 
-When working in different apps with different Studio Pro versions, you may one day find yourself with an app model upgraded and committed to a newer Studio Pro version, while the the rest of your team is not yet ready to upgrade. 
+When working in different apps with different Studio Pro versions, you may one day find yourself with an app model upgraded and committed to a newer Studio Pro version, while the rest of your team is not yet ready to upgrade. 
 
 To revert this version upgrade of the app model, follow these steps, using either TortoiseGit or TortoiseSVN depending on your repository type:
 

@@ -113,7 +113,6 @@ There are different versions of the SAML module, depending on which version of M
 2. In the **Documentation** tab, the *compatibility guidance* section indicates the latest recommended version for your LTS/MTS Mendix release. These guidelines are updated with each release of the SAML module, and you should refer to them to choose the version of the module that is compatible with your app. For additional information, some general considerations are listed below:
     
     * For Mendix version 7 and version 8, you should use the latest published version in the **1.x** and **2.x** range, respectively, unless otherwise indicated in the **Documentation** tab. 
-    
     * For Mendix version 9, there are odd- and even-numbered patch releases that contain the same changes and require the same Mendix version, but differ based on the version of Atlas UI that your app uses: 
     
         * The even-numbered releases (for example, 3.6.2) are intended for apps that use the 2.0 version of Atlas UI, that is, apps which were originally built on a version of Mendix below 9.0.0, and then upgraded to Mendix version 9.

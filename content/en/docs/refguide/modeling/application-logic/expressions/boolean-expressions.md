@@ -41,7 +41,7 @@ The `or` operator combines two Boolean expressions, and returns `true` if at lea
 
 The examples below illustrate which value the expression returns:
 
-* You have a entity called *product* that has the *price* attribute of the integer type. The *price* attribute equals 3, and you have another attribute called *recommendedPrice* that equals 2. 
+* You have an entity called *product* that has the *price* attribute of the integer type. The *price* attribute equals 3, and you have another attribute called *recommendedPrice* that equals 2. 
 
     If you use the following input:
 

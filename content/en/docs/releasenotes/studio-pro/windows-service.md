@@ -299,7 +299,7 @@ Now each app has its own license, even if it runs under the same user account as
 * Added possibility to use a Mendix Deployment Archive (MDA file) to update the project. The old project files are backed up to a ZIP file in the Backup folder.
 * Added possibility to use a Mendix Server distribution (*tar.gz* file) to add a Mendix server version. More versions can be installed side-by-side. Mendix chooses the right version to start the project. The existing Mendix server version from pre-2.1 Mendix Windows Service applications will be kept when using this 2.1 version, but when you installs a new Mendix server version, that version will be used if suitable for the project.
 * Now the application is always started under the specific service user account to simulate the same user environment as when it is started as service. A service user account must be given before a project can be run.
-* Added possibility to select a service user account via a Active Directory picker.
+* Added possibility to select a service user account via an Active Directory picker.
 * Now a service user can be specified without a domain name/computer name. In that case it's a local user.
 * Removed setting for user account type. A common user account must always be given. Removed possibility for system accounts like Local System.
 * Now new application constants will have their default values as set in the Modeler.

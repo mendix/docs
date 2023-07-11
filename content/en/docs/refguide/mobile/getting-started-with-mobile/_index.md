@@ -59,7 +59,7 @@ To view your app on an Android device (or emulator), you must download and insta
 
 #### 3.2.2 Downloading for iOS {#downloading-for-ios}
 
-To view your app on a iOS device, you must download and install the Make It Native 10 app from the [Apple App Store](https://apps.apple.com/us/app/make-it-native-10/id6450037464).
+To view your app on an iOS device, you must download and install the Make It Native 10 app from the [Apple App Store](https://apps.apple.com/us/app/make-it-native-10/id6450037464).
 
 ### 3.3 Viewing Your App on Your Testing Device
 

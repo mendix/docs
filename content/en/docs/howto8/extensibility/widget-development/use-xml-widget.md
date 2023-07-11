@@ -68,7 +68,7 @@ Other possible attributes are:
 | Attribute | Description |
 | --- | --- |
 | isList | Only used for the Object property type. |
-| entityProperty | Assigns a entity to a property. This should point to the **key** attribute of the **entity** to which it is related.  This could also be relative (like `"../entityName"`) when the attribute is inside a object list: `<property key="key" type="object" isList="true">`|
+| entityProperty | Assigns an entity to a property. This should point to the **key** attribute of the **entity** to which it is related.  This could also be relative (like `"../entityName"`) when the attribute is inside an object list: `<property key="key" type="object" isList="true">`|
 | allowNonPersistableEntities | Allows the selection of a non-persistable entity. (By default this is false.) |
 | defaultValue | The default value that a property starts with when it is created. |
 | required | Specifies if the property is a required field or not. Defaults to "True" if not present. |

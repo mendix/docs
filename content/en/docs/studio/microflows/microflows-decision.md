@@ -49,7 +49,7 @@ For the Boolean type of the parameter or attribute, two flows are possible: **tr
 
 The number of cases available for the enumeration type depends on the corresponding enumeration values. There is also the *empty* case available for enumeration: if the enumeration parameter or an attribute of an object is unassigned, the sequence flow with the caption **(empty)** is followed.
 
-For example, if a end-user needs to select a customer grade but does not do that, the flow labelled **(empty)** is followed and an error message is shown to the end-user:
+For example, if an end-user needs to select a customer grade but does not do that, the flow labelled **(empty)** is followed and an error message is shown to the end-user:
 
 {{< figure src="/attachments/studio/microflows/microflows-decision/decision-enumeration.png" >}}
 

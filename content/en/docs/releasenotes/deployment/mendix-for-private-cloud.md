@@ -393,7 +393,7 @@ This issue is fixed in Mendix Operator [version 2.5.1](#2.5.1).
 #### Portal Improvement
 
 * We have improved the UX, and added a new button, **Save and Apply** to directly apply changes made in an environment. This button restarts the environment.
-* We have added the ability to add metrics configuration to a environment.
+* We have added the ability to add metrics configuration to an environment.
   
 ### January 13, 2022
 
@@ -564,7 +564,7 @@ To upgrade an existing installation of Mendix for Private Cloud to Mendix Operat
     * Ingress class
     * Ingress path and path type
 * When a custom `ApplicationRootUrl` is specified in Custom Runtime Settings, it will be used instead of the automatically generated application URL.
-* We have fixed a incorrect *Runtime has an empty (trial) license* log message which appeared when using a Subscription Secret license.
+* We have fixed an incorrect *Runtime has an empty (trial) license* log message which appeared when using a Subscription Secret license.
 * We extended the Mendix Operator trial period from 30 days to 90 days. (Tickets 118172, 121775, 124921)
 
 To upgrade an existing installation of Private Cloud to this version, follow the [Upgrade instructions](/developerportal/deploy/private-cloud-upgrade-guide/).

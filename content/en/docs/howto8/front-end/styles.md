@@ -139,7 +139,7 @@ Create alerts with standard containers.
 
 * `alert`: makes an alert of a container; use in combination with the next classes
 * `alert-success`: creates a success alert
-* `alert-info`: creates a info alert
+* `alert-info`: creates an info alert
 * `alert-warning`: creates a warning alert
 * `alert-danger`: creates a danger alert
 

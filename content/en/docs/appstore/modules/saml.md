@@ -118,7 +118,7 @@ There are different versions of the SAML module, depending on which version of M
         * The even-numbered releases (for example, 3.6.2) are intended for apps that use the 2.0 version of Atlas UI, that is, apps which were originally built on a version of Mendix below 9.0.0, and then upgraded to Mendix version 9.
         * The odd-numbered releases (for example, 3.6.3) are for new apps that are built using Mendix version 9 or 10 and are using the 3.0 version of Atlas UI. 
 
-    * For Mendix version 10, you should use the latest version of the module that is compatible with apps newly built on Mendix 9 or newer (that is, apps that use the 3.0 version of Atlas UI).
+    * For Mendix version 10, you should use the latest version of the module that is compatible with the 3.0 version of Atlas UI (that is, the version for apps newly built on Mendix 9 or newer).
         
 3. To download the required release, in **Releases** tab, find the release that is compatible with your app per the guidelines in the **Documentation** tab, and then click the **Download** button by the number of the release.
 4. Follow the instructions in [How to Use Marketplace Content in Studio Pro](/appstore/general/app-store-content/) to import the SAML module into your app.

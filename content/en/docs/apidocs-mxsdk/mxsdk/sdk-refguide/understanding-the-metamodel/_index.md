@@ -32,7 +32,7 @@ A lot of elements (or element types) share features. For example: microflows and
 
 ## 3 Properties
 
-Almost all elements have one or more properties, or rather: their values. The properties are determined by the element's type and the type of the values of a property are determined by the property. These typically show up as an editable values in the Properties pane/view. As before with elements, some properties will be rather technical in nature and (seemingly) do not map 1-to-1/clearly with anything shown in Studio Pro. For example the `Location` property of an entity denotes the position where the entity is drawn in Studio Pro.
+Almost all elements have one or more properties, or rather: their values. The properties are determined by the element's type and the type of the values of a property are determined by the property. These typically show up as editable values in the **Properties** pane/view. As before with elements, some properties will be rather technical in nature and (seemingly) do not map 1-to-1/clearly with anything shown in Studio Pro. For example the `Location` property of an entity denotes the position where the entity is drawn in Studio Pro.
 
 ### 3.1 References
 

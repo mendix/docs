@@ -17,6 +17,16 @@ To see the current status of the Mendix Developer Portal and Control Center, see
 
 ## 2023
 
+### July 12, 2023
+
+#### New Features 
+* Added Member ID column to active/deactivated member lists and also to the excel exported files.
+* Introduced Member ID search functionality.
+
+#### Improvements
+
+* Fixed column alignment issues and added responsive column resizing for member list columns to improve readability and visual aesthetics.
+
 ### July 3, 2023
 
 #### Deprecations

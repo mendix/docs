@@ -17,6 +17,12 @@ To see the current status of the Mendix Developer Portal and Control Center, see
 
 ## 2023
 
+### July 13th, 2023
+
+#### Fixes
+
+* we fixed a bug where we accidently tried to [migrate stories](/developerportal/project-management/epics/planning/#data-migration) that were marked for deletion from Mendix Stories to Epics. (They weren't actually migrated, but they ended up as errors in the migration log)
+
 ### July 3, 2023
 
 #### Deprecations

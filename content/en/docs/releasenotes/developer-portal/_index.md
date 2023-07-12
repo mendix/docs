@@ -20,18 +20,18 @@ To see the current status of the Mendix Developer Portal and Control Center, see
 ### July 12, 2023
 
 #### New Features 
-* Added Member ID column to active/deactivated member lists and also to the excel exported files.
-* Introduced Member ID search functionality.
+* We added the **Member ID** column to the **Active Members** and **Deactivated Members** lists and also to the exported Excel files in the [Control Center](/developerportal/control-center/#41-active-and-deactivated-members).
+* We introduced **Member ID** search functionality in the Control Center.
 
 #### Improvements
 
-* Fixed column alignment issues and added responsive column resizing for member list columns to improve readability and visual aesthetics.
+* We fixed column alignment issues and added responsive column resizing for member list columns to improve readability and visual aesthetics.
 
 ### July 3, 2023
 
 #### Deprecations
 
-* We removed the **Marketplace Content** section of Control Center](/developerportal/control-center/), which had been deprecated since March, 2023.
+* We removed the **Marketplace Content** section of [Control Center](/developerportal/control-center/), which had been deprecated since March, 2023.
 
 ### June 29, 2023
 

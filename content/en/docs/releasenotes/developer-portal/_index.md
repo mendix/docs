@@ -27,8 +27,8 @@ To see the current status of the Mendix Developer Portal and Control Center, see
 
 * We fixed column alignment issues and added responsive column resizing for member list columns to improve readability and visual aesthetics in Control Center.
 * We have improved your ability to create stories within Epics. You can now add a new story directly from any [swimlane](/developerportal/project-management/epics/board/#swimlane).
-* To streamline your project editing process, we have added a new **Edit in Studio Pro** button in Epics. With a single click, you can open your project directly in Studio Pro, similar to the rest of the platform.
-* In Epics, you now have the ability to sort your story and epic comments based on their time of submission, either showing the newest or the oldest on top.
+* To streamline your app editing process, we have added a new **Edit in Studio Pro** button in Epics. With a single click, you can open your app directly in Studio Pro, similar to the rest of the platform.
+* In Epics, you now have the ability to sort your [story](/developerportal/project-management/epics/board/#story-details) and [epic](/developerportal/project-management/epics/epics/#epic-details) comments based on their time of submission, either showing the newest or the oldest on top.
 
 ### July 3, 2023
 

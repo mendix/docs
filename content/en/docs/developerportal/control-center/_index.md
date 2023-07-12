@@ -423,4 +423,53 @@ On the **Privacy Requests** tab, you can view all the pending requests. You can 
 After a request is either rejected or approved, a notification is sent to the requester. If the Mendix Admin fills in the reason for the rejection, the reason is also shown to the requester.
 {{% /alert %}}
 
-## 15 Documents in This Category
+## 15 Application Health Dashboard
+
+{{% alert color="info" %}}
+The **Application Health Dashboard** is in Beta. For more information on Beta products, see [Beta Releases](https://github.com/mendix/docs/blob/development/releasenotes/beta-features). {{% /alert %}}
+{{% /alert %}}
+
+The **Application Health Dashboard** tab gives an overview of the alert status of the whole application landscape of your company. This overview offers you an insight into the **Alerts** of all the production environments of all the apps in your company. 
+
+At the top of the page, the critical and warning labels show the number of environments that have respectively critical and warning alerts. 
+
+The environment list is ordered based on the environments with the most critical alerts at the top, followed by the environments with the most warning alerts, and then the environments with no alerts. 
+
+You can use the search field to search on the app name or app ID. The list can also be filtered on **Alert Type** and **Alert Level**.
+
+The list shows the following information about the production environments:
+
+- **App Name** - This is the name of the app. 
+
+- **Environment** - This shows the name of the specific production environment.
+
+- **Latest Alert Date** - This is the date and time that the latest alert occurred.
+
+- **Critical** - This shows the number of critical alerts of this app.
+
+- **Warnings** - This shows the number of warning alerts of this app.
+
+- **Alerts** - This shows the alert type of the critical and warning alerts of the app. 
+
+### 15.1 Refreshing the Dashboard
+
+The information on the dashboard is retrieved when you open the page. The alert data will be automatically refreshed every five minutes when you leave the page open. Newly-deployed production environments will be added to the dashboard every 60 minutes when you leave the page open.
+
+You are also able to manually refresh your alerts with the **Refresh Alerts** button on the dashboard page. When using this option, the alerts of all the environments in your landscape are refreshed. This refresh can be done with a minimum of one minute in between the refreshes. If required, you can also manually refresh the whole landscape using the button **Refresh Environment List** after you click the Ellipsis button (**...**) on the upper-right of the page. This manual refresh can be done every 15 minutes.
+
+### 15.2 Environment Details
+
+If you click an environment from the list, you will see the **Environment details** of this specific production environment. This page shows all the alerts of this environment and the date and time on which the alerts have occurred. The **Environment details** and the technical contact of this environment are also displayed. With this information, you can directly get in contact with the responsible person.
+
+If you click **Go to Cloud Portal**, you are taken to the environments page of the application in the Developer Portal. If you have access, you can take action on the alerts here; otherwise you can look up the team members that manage this app and contact them.
+
+The list on this page shows the alert information of this specific production environment. In this list, you can see the following details:
+
+- **Alert Type** - This shows the name of the alert type.
+- **Status** - This shows the status of the specific alert, indicated by an icon:
+    - **Critical Alert** - Recognizable by the circle icon with the cross in the middle.
+    - **Warning Alert** - Recognizable by the triangle icon with the exclamation mark in the middle.
+    - **OK Alert** - Recognizable by the letters: OK.
+- **Timestamp** - This is the date and time that this alert occurred.
+
+## 16 Documents in This Category

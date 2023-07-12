@@ -406,6 +406,8 @@ This allows you to scale your app by increasing the number of replicas.
 
 To apply the new value, click **Restart the App and Scale**. Because you restart your app, it will be unavailable for a short time.
 
+If application is in Stopped state, then the scaling wont come into effect if the application is not started which means that you have to click on Start application without which scaling of app will not be registered in your cluster.
+
 ##### 5.1.3.4 Clear Admin Password
 
 This allows you to clear the password for the local admin user set in the Private Cloud environment. This means that there will be no password pushed to your environment when your app is deployed - any password currently set in the environment will be retained.
@@ -457,6 +459,8 @@ If any of these garbage collection steps fail, you will no longer see the enviro
 If you need to enter or change the subscription secret, then you can do that here.
 
 Subscription secrets are obtained from [Mendix support](https://support.mendix.com/).
+
+We have also released an alternate way of licensing your apps in Private cloud using PCLM. For more information, see [Private Cloud License Manager](/developerportal/deploy/private-cloud/private-cloud-license-manager/).
 
 #### 5.1.4 Security
 

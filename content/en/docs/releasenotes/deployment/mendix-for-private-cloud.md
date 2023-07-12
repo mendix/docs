@@ -13,6 +13,22 @@ For information on the current status of deployment to Mendix for Private Cloud 
 
 ## 2023
 
+### July 12th, 2023
+
+#### Portal Improvements
+
+* We have now decoupled the scaling from start/stop in members permission. This means that application will not be scaled if its not started and Start application button has to be clicked seperately in order to send the updated replicas to the cluster.
+* We have added a banner in Namepace details Installation page which will inform about the new Operator release.
+* We have added a pagination limit of 10 in the PCLM statistics retrieval page
+
+
+#### Deploy API Improvements
+* We have now decoupled the scaling from start/stop in members permission
+* We have added a new field *runtimeVersion* under runtime in the Manifest of the Environment in DeployAPI.
+* We have fixed the core resource decimal conversion issue in environment manifest file (Ticket 189615)
+* We have fixed an issue where upper-case letters in an email ID would prevent members invited to a cluster manager or namespace from accepting the invite (Ticket 189975)
+
+
 ### July 6th, 2023
 
 #### Mendix Operator v2.12.0 {#2.12.0}

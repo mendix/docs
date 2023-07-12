@@ -1171,7 +1171,7 @@ When you add a cluster manager, the user will have most of the access which the 
 
 The only limitations are that:
 
-* an added cluster manager will not be able to operate on or manage the environments created in the namespaces which are already in the cluster — they need to be added as a member of the namespace if they want to manage environments in the namespaces
+* an added cluster manager will not be able to operate on or manage the environments created in the namespaces which are already in the cluster — they need to be added as a member of the application if they want to manage existing environments in the namespaces.
 * cluster managers who are added to the cluster cannot remove the cluster manager who created the cluster
 {{% /alert %}}
 
@@ -1288,6 +1288,7 @@ The following rights are available to the cluster creator, and members of a name
 
 The following actions require the appropriate access to the namespace **and** access to the app environment as a team member with appropriate authorization:
 
+* Manage environment
 * Deploy App – user can deploy a new app to the environment or start and stop existing apps
 * Scale App – user can change the number of replicas
 * Edit App Constants
@@ -1321,6 +1322,8 @@ You can invite additional members to the namespace, and configure their role dep
     1. **Developer** – a standard set of rights needed by a developer, these are listed on the screen
     2. **Administrator** – a standard set of rights needed by an administrator, these are listed on the screen
     3. **Custom** – you can select a custom set of rights by checking the box next to each role you want to give to this person
+
+    With custom permission, we have now decoupled the permission for Scale and Start/Stop operation. This means that if app is already Started, then customer with Scale permission can scale the application, however, if application is in stopped state, then customer can update the replicas for the application, but the new replicas will only come into effect if the application is started.
 
 5. Click **Send Invite** to send an invite to this person.
 

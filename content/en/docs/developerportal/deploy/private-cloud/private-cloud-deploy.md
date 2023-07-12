@@ -406,7 +406,7 @@ This allows you to scale your app by increasing the number of replicas.
 
 To apply the new value, click **Restart the App and Scale**. Because you restart your app, it will be unavailable for a short time.
 
-If application is in the Stopped state, then the scaling won't come into effect until the application is Started. This means that you have to click on Start application in order for the changes to be sent to the cluster.
+If an application is in the Stopped state, the scaling does not come into effect until the application is started. This means that you have to click **Start application** in order for the changes to be sent to the cluster.
 
 ##### 5.1.3.4 Clear Admin Password
 
@@ -460,7 +460,7 @@ If you need to enter or change the subscription secret, then you can do that her
 
 Subscription secrets are obtained from [Mendix support](https://support.mendix.com/).
 
-We have also released an alternate way of licensing your apps in Private cloud using PCLM. For more information, see [Private Cloud License Manager](/developerportal/deploy/private-cloud/private-cloud-license-manager/).
+We have also released an alternate way of licensing your apps in the Private Cloud by using PCLM. For more information, see [Private Cloud License Manager](/developerportal/deploy/private-cloud/private-cloud-license-manager/).
 
 #### 5.1.4 Security
 

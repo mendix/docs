@@ -82,7 +82,7 @@ To submit a request with Mendix Support, follow these steps:
         * **Developer Platform - Academy** – issues/questions regarding the [Mendix Academy](https://academy.mendix.com/link/home) (for example, when you cannot open a learning path or you cannot find the attachments required for a module)
         * **Developer Platform - Forum** – issues/questions regarding the [Mendix Forum](https://forum.mendixcloud.com/index3.html) (for example, when you cannot create a new question or add an answer)
         * **Developer Platform - Cloud Portal** – issues/questions regarding [deploying in the Developer Portal](/developerportal/deploy/) (for example, when you cannot view your [log](/developerportal/operate/logs/) files or [scale](/developerportal/deploy/scale-environment/) your environment)
-        * **Developer Platform - Catalog** – issues/questions regarding [Data Hub](/data-hub/) (for example, when you have difficulties accessing the Catalog)
+        * **Developer Platform - Catalog** – issues/questions regarding the [Catalog](/catalog/) (for example, when you have difficulties accessing the Catalog)
         * **Developer Platform - Control Center** - issues/questions regarding [Control Center](/developerportal/control-center/) (for example, when you have difficulties deactivating applications from the Control Center) 
         * **Developer Platform - Support Portal** - issues/questions regarding the [Support Portal](https://support.mendix.com/) (for example, when you have difficulties creating Support tickets)
         * **Developer Platform - Other** – any other issues/questions regarding the Mendix Platform itself

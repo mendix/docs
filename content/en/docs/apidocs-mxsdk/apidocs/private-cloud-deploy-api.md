@@ -145,7 +145,7 @@ The following steps will create a cluster, create a namespace, and create an env
 14. Verify that the job is successful using the process described in [Managing Asynchronous Jobs](#async-jobs).
 15. Now you can access the application at the `appURL` which is returned from `GET /apps/{appId}/namespaces/{namespaceId}/environments/{environmentId}` of the environment.
 
-{{% alert color="warning" %}}
+{{% alert color="info" %}}
 Please note that there is a limited support for Custom permissions in Deploy APIs.
 {{% /alert %}}
 

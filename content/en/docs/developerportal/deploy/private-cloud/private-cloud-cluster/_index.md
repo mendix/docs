@@ -1323,7 +1323,7 @@ You can invite additional members to the namespace, and configure their role dep
     2. **Administrator** – a standard set of rights needed by an administrator, these are listed on the screen
     3. **Custom** – you can select a custom set of rights by checking the box next to each role you want to give to this person
 
-    With custom permission, we have now decoupled the permissions for Scale, Start and Stop operations. If application is in the Stopped state, then the scaling won't come into effect until the application is Started. This means that you have to click on Start application in order for the changes to be sent to the cluster
+    With custom permissions, we have now decoupled the permissions for Scale, Start and Stop operations. If an application is in the Stopped state, the scaling does not come into effect until the application is Started. This means that you have to click **Start application** in order for the changes to be sent to the cluster.
 
 5. Click **Send Invite** to send an invite to this person.
 

@@ -84,7 +84,7 @@ Curators and Mendix Admins can manage the lists of custom owners as part of **Ad
 
 To change the **Business Owner** or **Technical Owner**, from the **Application Metadata** screen, click in the name field of the **Business** or **Technical** owner. You can start typing or select from the drop-down list of names. Mendix Platform users will be displayed with their avatar and custom owners will be shown with an avatar that displays their initials.
 
-The **Technical Owner** can only be changed in the **Control Center**, not within the **Catalog**. See the [Custom Owners](/developerportal/control-center/catalog-admin/#custom-owners) section of *Catalog Administration*.
+The **Technical Owner** can only be changed in **Control Center**, not within the **Catalog**. See the [Custom Owners](/developerportal/control-center/catalog-admin/#custom-owners) section of *Catalog Administration*.
 
 #### 4.1.2 Adding a Custom Owner {#custom-owner}
 

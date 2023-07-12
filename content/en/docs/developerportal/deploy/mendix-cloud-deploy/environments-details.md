@@ -82,7 +82,7 @@ To clear the environment, follow these steps:
 
 ### 2.2 Naming of Environments – Flexible Environments in the Mendix Cloud {#naming}
 
-If you are the [Technical Contact](/developerportal/collaborate/app-roles/#technical-contact) of the app, you can rename the environments.
+If you are the [Technical Contact](/developerportal/general/app-roles/#technical-contact) of the app, you can rename the environments.
 
 To rename the environment, follow these steps:
 
@@ -506,9 +506,9 @@ For example, you may wish to use tags when logging with Datadog. For more inform
 
 ## 9 Services Tab {#services}
 
-You can enable and disable custom services for individual environments of your app. The service that you want to enable must have been enabled for the app by its [Technical Contact](/developerportal/collaborate/app-roles/#technical-contact). For more information, see [Services](/developerportal/deploy/environments/#services).
+You can enable and disable custom services for individual environments of your app. The service that you want to enable must have been enabled for the app by its [Technical Contact](/developerportal/general/app-roles/#technical-contact). For more information, see [Services](/developerportal/deploy/environments/#services).
 
-Here, the [Technical Contact](/developerportal/collaborate/app-roles/#technical-contact) can decide which custom services can be used in each environment of this app.
+Here, the [Technical Contact](/developerportal/general/app-roles/#technical-contact) can decide which custom services can be used in each environment of this app.
 
 ### 9.1 Available Services
 

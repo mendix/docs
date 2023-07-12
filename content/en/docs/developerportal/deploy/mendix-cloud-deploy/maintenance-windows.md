@@ -71,5 +71,5 @@ For example: imagine today is Tuesday, your maintenance window is currently Thur
 
 ## 4 Read More
 
-* [App Roles](/developerportal/collaborate/app-roles/)
+* [App Roles](/developerportal/general/app-roles/)
 * [Node Permissions](/developerportal/deploy/node-permissions/) 

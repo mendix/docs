@@ -25,7 +25,7 @@ To select the target environment, do the following:
 
 2. <a id="target"></a>In the **Deploy** tab, click **Setup Studio Pro Deployment**.
 
-    {{% alert color="info" %}} Only a [Technical Contact](/developerportal/collaborate/app-roles/#technical-contact) can see the **Setup Studio Pro Deployment** button and click it.{{% /alert %}}
+    {{% alert color="info" %}} Only a [Technical Contact](/developerportal/general/app-roles/#technical-contact) can see the **Setup Studio Pro Deployment** button and click it.{{% /alert %}}
 
 3. In the **Select target environment** dialog box, click the drop-down menu and select the environment.
 

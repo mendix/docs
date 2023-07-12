@@ -240,7 +240,7 @@ New Certificate Details: <https://crt.sh/?id=6940402070>
 
 #### Improvements
 
-* We now show deactivated users on the [Node Permissions](/developerportal/deploy/node-permissions/) page for consistency with the [Team](/developerportal/collaborate/team/) page.
+* We now show deactivated users on the [Node Permissions](/developerportal/deploy/node-permissions/) page for consistency with the [Team](/developerportal/general/team/) page.
 
 ### March 30, 2022{#waf}
 

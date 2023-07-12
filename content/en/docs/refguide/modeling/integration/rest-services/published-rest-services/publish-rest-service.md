@@ -115,7 +115,7 @@ To be able to use the data from your model in the REST service, you need to crea
 
     {{< figure src="/attachments/refguide/modeling/integration/publish-rest-service/MFExportWithMapping.png" >}}
 
-17. Add a an activity to the microflow to create an object of the type **HttpResponse**:
+17. Add an activity to the microflow to create an object of the type **HttpResponse**:
 
     {{< figure src="/attachments/refguide/modeling/integration/publish-rest-service/httpResponse.png" >}}
 

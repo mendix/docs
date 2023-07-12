@@ -38,7 +38,7 @@ Before trying to solve the problems, it is useful to discover the origin of the 
 
 ### 3.1 Is This a Team Server App?
 
-If your app is a [Team Server](/developerportal/collaborate/team-server/) app, and you just did a [download or update](/refguide9/using-version-control-in-studio-pro/) from the server, the problem may have been added in a revision that was recently committed to the Team Server. You can check who made the most recent commit via the [Team Server](/developerportal/collaborate/team-server/) menu item in the [Developer Portal](https://sprintr.home.mendix.com).
+If your app is a [Team Server](/developerportal/general/team-server/) app, and you just did a [download or update](/refguide9/using-version-control-in-studio-pro/) from the server, the problem may have been added in a revision that was recently committed to the Team Server. You can check who made the most recent commit via the [Team Server](/developerportal/general/team-server/) menu item in the [Developer Portal](https://sprintr.home.mendix.com).
 
 If the latest change on your branch line was committed by someone other than yourself, please inform the person about the problem.
 

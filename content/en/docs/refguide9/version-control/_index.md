@@ -27,9 +27,9 @@ Team Server Git was released for GA in version [9.12.0](/releasenotes/studio-pro
 
 ### 2.1 Team Server {#team-server}
 
-[Team Server](/developerportal/collaborate/team-server/) is where all the committed versions of Mendix apps are stored. If you commit a revision of an app, it is stored on the Team Server.
+[Team Server](/developerportal/general/team-server/) is where all the committed versions of Mendix apps are stored. If you commit a revision of an app, it is stored on the Team Server.
 
-To commit to the Team Server you will need to have a role in the app which allows you to edit the app. For more information, see the [Team Roles](/developerportal/collaborate/app-roles/#team-roles) section *App Roles*.
+To commit to the Team Server you will need to have a role in the app which allows you to edit the app. For more information, see the [Team Roles](/developerportal/general/app-roles/#team-roles) section *App Roles*.
 
 For more information on the Team Server and technologies involved, see [Version Control FAQ](/refguide9/version-control-faq/).
 

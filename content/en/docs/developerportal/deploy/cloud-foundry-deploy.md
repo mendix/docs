@@ -185,6 +185,18 @@ If you encounter any problems, you should consult the application logs. These ar
 
 {{< figure src="/attachments/developerportal/deploy/cloud-foundry-deploy/cf-log.png" >}}
 
+### 8.1 Cannot Push Project Folder
+
+When using the buildpack to push a Mendix project folder to a Cloud Foundry cluster, the push fails.
+
+#### 8.1.1 Cause
+
+Pushing the project folder to a Cloud Foundry cluster is not currently supported.
+
+#### 8.1.2 Solution
+
+This issue will be solved in an upcoming version of the buildpack.
+
 ## 9 Read More
 
 * [Mendix BuildPack Documentation](https://github.com/mendix/cf-mendix-buildpack)

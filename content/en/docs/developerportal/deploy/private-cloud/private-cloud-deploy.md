@@ -406,7 +406,7 @@ This allows you to scale your app by increasing the number of replicas.
 
 To apply the new value, click **Restart the App and Scale**. Because you restart your app, it will be unavailable for a short time.
 
-If application is in Stopped state, then the scaling wont come into effect if the application is not started which means that you have to click on Start application without which scaling of app will not be registered in your cluster.
+If application is in the Stopped state, then the scaling won't come into effect until the application is Started. This means that you have to click on Start application in order for the changes to be sent to the cluster.
 
 ##### 5.1.3.4 Clear Admin Password
 

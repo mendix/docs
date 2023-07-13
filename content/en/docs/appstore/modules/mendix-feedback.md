@@ -67,7 +67,7 @@ You should install the latest version of the Mendix Feedback module, as it will 
 
     {{< figure src="/attachments/appstore/modules/mendix-feedback/feedback-on-layout.png" >}} 
 
-3.  [Configure the Feedback widget](#configuration).
+4.  [Configure the Feedback widget](#configuration).
 
 5. If your app allows anonymous users, do as follows:
 
@@ -250,7 +250,7 @@ You can configure the widget for certain actions in your app. All the configurat
 You should use the latest version of the Mendix Feedback widget, as it will provide the most up-to-date features for leaving feedback and communicating with the team. To ensure you have the latest version of the widget included in your app, follow these steps:
 
 1. Download the latest version of the Mendix Feedback widget from the Marketplace. You are strongly encouraged to use version 8.6.0 or above of the widget.
-1. When the widget is included in your app, ensure that it is added to all the layouts used in the application.
+2. When the widget is included in your app, ensure that it is added to all the layouts used in the application.
 
 #### 6.3.2 Submitting Feedback on an App
 

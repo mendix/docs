@@ -22,7 +22,7 @@ To see the current status of the Mendix Developer Portal and Control Center, see
 #### New Features 
 
 * We added the **Member ID** column to the **Active Members** and **Deactivated Members** lists on the [Member](/developerportal/control-center/#41-active-and-deactivated-members) page in Control Center. The column also appears in the Excel file, when you export the member information from these lists.
-* We introduced **Member ID** search functionality in Control Center.
+* We introduced **Member ID** search functionality on the **Member** page in Control Center.
 
 #### Improvements
 

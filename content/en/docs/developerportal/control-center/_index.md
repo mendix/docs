@@ -252,7 +252,7 @@ This feature is currently in Beta. For more information about Beta features, see
 
 The **Deployed Apps Overview** page is a self-service tool that enables you to provision and offboard environments.
 
-The **Deployed Apps Overview** page shows a list of all the apps within your company. You can use it to view an app's name, ID, technical contact, or status. The page has separate tabs for **Mendix Cloud Apps** and **Free Apps**.
+The **Deployed Apps Overview** page shows a list of all the apps within your company. You can use it to view an app's name, ID, Technical Contact, or status. The page has separate tabs for **Mendix Cloud Apps** and **Free Apps**.
 
 {{< figure src="/attachments/developerportal/control-center/apps-overview.png" alt="Deployed Apps - apps overview" >}}
 
@@ -426,52 +426,52 @@ After a request is either rejected or approved, a notification is sent to the re
 ## 15 Application Health Dashboard
 
 {{% alert color="info" %}}
-The **Application Health Dashboard** is in Beta. For more information on Beta products, see [Beta Releases](https://github.com/mendix/docs/blob/development/releasenotes/beta-features). {{% /alert %}}
+The **Application Health Dashboard** is in Beta. For more information on Beta products, see [Beta Releases](https://github.com/mendix/docs/blob/development/releasenotes/beta-features).
 {{% /alert %}}
 
-On the **Application Health Dashboard** tab, you can see all the alerts for all the production environments of all the apps in your company. 
+The **Application Health Dashboard** gives an overview of the alerts of the whole application landscape of your company. Here you can see all the alerts of the production environments of the apps.
 
-At the top of the page, the critical and warning label shows the number of the environments with critical alerts and the number of the environments with warning alerts, respectively. 
+The label at the top of the page gives a summary of the total number of the environments with critical alerts and the total number of the environments with warning alerts. 
 
-On the list below, apps are ordered in the following order: apps with the most critical alerts are placed at the top, followed by apps with the most warning alerts, and then apps with no alerts. 
+On the list below, apps are ordered in the following order: environments with the most critical alerts are placed at the top, followed by environments with the most warning alerts, and then environments with no alerts. 
 
 You can use the search box to search for an app in the list using the app name or app ID. The list can also be filtered on **Alert Type** and **Alert Level**.
 
 The list shows the following information:
 
-- **App Name** - This is the name of the app. 
+- **App Name** – This is the name of the app. 
 
-- **Environment** - This shows the name of the app's production environment.
+- **Environment** – This shows the name of the app's production environment.
 
-- **Latest Alert Date** - This is the date and time that the latest alert occurred.
+- **Latest Alert Date** – This is the date and time the latest alert occurred.
 
-- **Critical** - This shows the number of critical alerts for this app.
+- **Critical** – This shows the number of critical alerts of this production environment.
 
-- **Warnings** - This shows the number of warning alerts for this app.
+- **Warnings** – This shows the of warning alerts of this production environment.
 
-- **Alerts** - This shows the types of the alerts for this app. 
+- **Alerts** – This shows the types of the alerts of this production environment.
 
 ### 15.1 Refreshing the Dashboard
 
-The information on the dashboard is retrieved when you open the page. If you leave the page open, the alert data will be automatically refreshed every five minutes, and newly-deployed production environments will be added to the dashboard every 60 minutes.
+The information on the dashboard is retrieved when you open the page. If you leave the page open, the alert data will be automatically refreshed every five minutes, and newly-deployed production environments will be automatically added to the dashboard every 60 minutes.
 
-You can also manually refresh your alerts using the **Refresh Alerts** button on the upper-right corner of the page. After clicking this button, the alerts of all the environments in your landscape are refreshed. This refresh can be done with a minimum of one minute in between the refreshes. 
+You can also manually refresh your alerts using the **Refresh Alerts** button on the upper-right corner of the page. After clicking this button, the alerts of all the environments in your landscape are refreshed. You can do this once every minute.
 
-You can also manually refresh the whole landscape using the **Refresh Environment List** button after you click the ellipsis button (**...**) on the upper-right of the page. This manual refresh can be done every 15 minutes.
+You can also manually refresh the whole landscape using the **Refresh Environment List** button after you click the ellipsis button (**...**) on the upper-right of the page. You can do this once every 15 minutes.
 
 ### 15.2 Environment Details
 
-If you click an environment from the list, you will see the **Environment details** of this specific production environment. This page shows all the alerts of this environment and the date and time on which the alerts have occurred. The **Environment details** and the technical contact of this environment are also displayed. With this information, you can directly get in contact with the responsible person.
+If you click an environment from the list, you will see the **Environment details** of this specific production environment. This page shows all the alerts of this environment and the date and time the alerts have occurred. The **Environment details** and the Technical Contact of this environment are also displayed. With this information, you can directly get in contact with the responsible person.
 
-If you click **Go to Cloud Portal**, you are taken to the environments page of the application in the Developer Portal. If you have access, you can take action on the alerts here; otherwise you can look up the team members that manage this app and contact them.
+If you click **Go to Cloud Portal** on the upper-right corner of the page, you are taken to the [Environments](/developerportal/deploy/environments/) page of the application in the Developer Portal. If you have access, you can take action on the alerts here; otherwise you can look up the team members who manage this app and contact them.
 
-The list on this page shows the alert information of this specific production environment. In this list, you can see the following details:
+The **Environment Details** page also lists the alert information of this specific production environment. In the list, you can see the following details:
 
-- **Alert Type** - This shows the name of the alert type.
-- **Status** - This shows the status of the specific alert, indicated by an icon:
-    - **Critical Alert** - Recognizable by the circle icon with the cross in the middle.
-    - **Warning Alert** - Recognizable by the triangle icon with the exclamation mark in the middle.
-    - **OK Alert** - Recognizable by the letters: OK.
-- **Timestamp** - This is the date and time that this alert occurred.
+- **Alert Type** – This shows the name of the alert type.
+- **Status** – This shows the status of the specific alert, indicated by an icon:
+    - A critical alert is indicated by a circle icon with a cross in the middle.
+    - A warning alert is indicated by a triangle icon with an exclamation mark in the middle.
+    - An OK alert is indicated by the word **OK**.
+- **Timestamp** – This is the date and time this alert occurred.
 
 ## 16 Documents in This Category

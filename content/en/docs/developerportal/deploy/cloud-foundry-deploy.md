@@ -195,6 +195,12 @@ Pushing the project folder to a Cloud Foundry cluster is not currently supported
 
 #### 8.1.2 Solution
 
+To resolve the issue, implement one of the following workarounds:
+
+* If the app model is stored on the Mendix Teamserver, use the Deploy API to [build a deployment package](/apidocs-mxsdk/apidocs/build-api/#start-building-deployment-package), and push that package with the CF buildpack.
+* [Build a deployment package from Studio Pro](/refguide/app-menu/#6-create-deployment-package), and push that package with the CF buildpack.
+* Run [MxBuild](/refguide/mxbuild/) from your CI/CD pipeline to build a deployment package, and push that package with the CF buildpack.
+
 This issue will be solved in an upcoming version of the buildpack.
 
 ## 9 Read More

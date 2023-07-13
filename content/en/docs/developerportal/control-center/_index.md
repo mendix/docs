@@ -423,13 +423,13 @@ On the **Privacy Requests** tab, you can view all the pending requests. You can 
 After a request is either rejected or approved, a notification is sent to the requester. If the Mendix Admin fills in the reason for the rejection, the reason is also shown to the requester.
 {{% /alert %}}
 
-## 15 Application Health Dashboard
+## 15 Application Health Dashboard {#application-health-dashboard}
 
 {{% alert color="info" %}}
 The **Application Health Dashboard** is in Beta. For more information on Beta products, see [Beta Releases](https://github.com/mendix/docs/blob/development/releasenotes/beta-features).
 {{% /alert %}}
 
-The **Application Health Dashboard** gives an overview of the alerts of the whole application landscape of your company. Here you can see all the alerts of the production environments of the apps.
+The **Application Health Dashboard** gives an overview of the alert status of the whole application landscape of your company. Here you can see all the alerts of the production environments of the apps.
 
 The label at the top of the page gives a summary of the total number of the environments with critical alerts and the total number of the environments with warning alerts. 
 

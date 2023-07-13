@@ -429,33 +429,35 @@ After a request is either rejected or approved, a notification is sent to the re
 The **Application Health Dashboard** is in Beta. For more information on Beta products, see [Beta Releases](https://github.com/mendix/docs/blob/development/releasenotes/beta-features). {{% /alert %}}
 {{% /alert %}}
 
-The **Application Health Dashboard** tab gives an overview of the alert status of the whole application landscape of your company. This overview offers you an insight into the **Alerts** of all the production environments of all the apps in your company. 
+On the **Application Health Dashboard** tab, you can see all the alerts for all the production environments of all the apps in your company. 
 
-At the top of the page, the critical and warning labels show the number of environments that have respectively critical and warning alerts. 
+At the top of the page, the critical and warning label shows the number of the environments with critical alerts and the number of the environments with warning alerts, respectively. 
 
-The environment list is ordered based on the environments with the most critical alerts at the top, followed by the environments with the most warning alerts, and then the environments with no alerts. 
+On the list below, apps are ordered in the following order: apps with the most critical alerts are placed at the top, followed by apps with the most warning alerts, and then apps with no alerts. 
 
-You can use the search field to search on the app name or app ID. The list can also be filtered on **Alert Type** and **Alert Level**.
+You can use the search box to search for an app in the list using the app name or app ID. The list can also be filtered on **Alert Type** and **Alert Level**.
 
-The list shows the following information about the production environments:
+The list shows the following information:
 
 - **App Name** - This is the name of the app. 
 
-- **Environment** - This shows the name of the specific production environment.
+- **Environment** - This shows the name of the app's production environment.
 
 - **Latest Alert Date** - This is the date and time that the latest alert occurred.
 
-- **Critical** - This shows the number of critical alerts of this app.
+- **Critical** - This shows the number of critical alerts for this app.
 
-- **Warnings** - This shows the number of warning alerts of this app.
+- **Warnings** - This shows the number of warning alerts for this app.
 
-- **Alerts** - This shows the alert type of the critical and warning alerts of the app. 
+- **Alerts** - This shows the types of the alerts for this app. 
 
 ### 15.1 Refreshing the Dashboard
 
-The information on the dashboard is retrieved when you open the page. The alert data will be automatically refreshed every five minutes when you leave the page open. Newly-deployed production environments will be added to the dashboard every 60 minutes when you leave the page open.
+The information on the dashboard is retrieved when you open the page. If you leave the page open, the alert data will be automatically refreshed every five minutes, and newly-deployed production environments will be added to the dashboard every 60 minutes.
 
-You are also able to manually refresh your alerts with the **Refresh Alerts** button on the dashboard page. When using this option, the alerts of all the environments in your landscape are refreshed. This refresh can be done with a minimum of one minute in between the refreshes. If required, you can also manually refresh the whole landscape using the button **Refresh Environment List** after you click the Ellipsis button (**...**) on the upper-right of the page. This manual refresh can be done every 15 minutes.
+You can also manually refresh your alerts using the **Refresh Alerts** button on the upper-right corner of the page. After clicking this button, the alerts of all the environments in your landscape are refreshed. This refresh can be done with a minimum of one minute in between the refreshes. 
+
+You can also manually refresh the whole landscape using the **Refresh Environment List** button after you click the ellipsis button (**...**) on the upper-right of the page. This manual refresh can be done every 15 minutes.
 
 ### 15.2 Environment Details
 

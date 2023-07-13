@@ -15,7 +15,7 @@ aliases:
 
 ## 1 Introduction
 
-Use the **Download from Version Control Server…** menu item to download an app from an SVN version control server (for example, [Team Server](/developerportal/collaborate/team-server/)). If you are currently editing an app, the project will be closed (after prompting to save any changes) and the newly downloaded app will be opened using the current version of Studio Pro.
+Use the **Download from Version Control Server…** menu item to download an app from an SVN version control server (for example, [Team Server](/developerportal/general/team-server/)). If you are currently editing an app, the project will be closed (after prompting to save any changes) and the newly downloaded app will be opened using the current version of Studio Pro.
 
 {{% alert color="info" %}}
 If the downloaded app was created with a different version of Mendix, you will be asked if it can be converted to the current version.
@@ -33,7 +33,7 @@ If **Enable private version control** is set in the project [Preferences](/refgu
 
 Use the **Team Server App** dropdown to choose the app you want to download.
 
-For more information about the Mendix Team Server, see [Team Server](/developerportal/collaborate/team-server/).
+For more information about the Mendix Team Server, see [Team Server](/developerportal/general/team-server/).
 
 ### 2.2 Private Server
 

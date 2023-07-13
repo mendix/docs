@@ -150,7 +150,7 @@ Ensure you use the correct key names if using this payload information to call o
 
 ## 5 Teamserver Push (Git)
 
-When you push a model change to the [Git Team Server](/developerportal/collaborate/team-server/), and the webhook responds to the event **Teamserver push (Git)**, request content containing a payload with the following format will be sent to the configured endpoint:
+When you push a model change to the [Git Team Server](/developerportal/general/team-server/), and the webhook responds to the event **Teamserver push (Git)**, request content containing a payload with the following format will be sent to the configured endpoint:
 
 ```json {linenos=false}
 {

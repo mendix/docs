@@ -29,7 +29,7 @@ To use AppDynamics, and to send data to AppDynamics from your Mendix app, you wi
 * The following information about AppDynamics
     * The account name and access key for your AppDynamics account
     * The hostname or IP address of your AppDynamics controller
-* A licensed Mendix app of which you are the [Technical Contact](/developerportal/collaborate/app-roles/#technical-contact)
+* A licensed Mendix app of which you are the [Technical Contact](/developerportal/general/app-roles/#technical-contact)
 
 ## 3 Connect Node to AppDynamics{#connect-node}
 

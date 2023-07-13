@@ -14,7 +14,7 @@ Now click **Add Item**, a popup window will appear.
 
 {{< figure src="/attachments/appstore/partner-solutions/ats/rg-ats/v1/test-dev/rg-one-custom-actions/sampleaction.png" alt="Create new Action" >}}
 
-In that window you can choose wich type of item you want to create.
+In that window you can choose which type of item you want to create.
 Choose **Action** and give it a **name** and an optional **description**. You can change the name and the description later on if you want.
 When you have entered all needed informations, click **Create**.
 

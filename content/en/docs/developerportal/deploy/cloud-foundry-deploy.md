@@ -187,7 +187,7 @@ If you encounter any problems, you should consult the application logs. These ar
 
 ### 8.1 Cannot Push Project Folder
 
-When using the buildpack to push a Mendix project folder to a Cloud Foundry cluster, the push fails.
+When using the buildpack to push a Mendix project folder to a Cloud Foundry cluster, the push fails with the following error message: *Cannot open assembly 'MendixBuilder/modeler/mxbuild.exe': no such file or directory.*
 
 #### 8.1.1 Cause
 

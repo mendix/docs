@@ -304,7 +304,7 @@ If you encounter any of the following error messages:
 * "Domain verification failed, invalid response from verification endpoint"
 * "Domain verification failed for unknown reason"
 
-Then an unexpected error occured.
+Then an unexpected error occurred.
 
 Verify that your app was not restarted by someone else during the registration process. If not, submit a ticket in the Mendix Support Portal.
 

@@ -87,7 +87,7 @@ These release notes cover changes made to the [Catalog](/catalog/).
 #### Fixes
 
 * We fixed an issue on the Catalog Admin page that displayed incorrect counts of data sources registered in the company.
-* We fixed an error that occured when no authentication is selected while registering a data source.
+* We fixed an error that occurred when no authentication is selected while registering a data source.
 
 ### February 27, 2023
 

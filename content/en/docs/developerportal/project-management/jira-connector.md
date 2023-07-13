@@ -5,7 +5,7 @@ weight: 5
 description: "Describes how to connec Mendix apps in the Developer Portal to Jira."
 tags: ["app", "jira", "project management", "scrum master", "general settings", Developer Portal", "Scrum Master"]
 aliases:
-    -  /developerportal/collaborate/jira-connector/
+    -  /developerportal/general/jira-connector/
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details. 
 ---
 
@@ -35,7 +35,7 @@ As we further develop this feature, we may lift these limitations with future re
 
 ## 4 Prerequisites
 
-* You need to be a [Scrum Master](/developerportal/collaborate/app-roles/#team-roles) of the app in the Developer Portal.
+* You need to be a [Scrum Master](/developerportal/general/app-roles/#team-roles) of the app in the Developer Portal.
 * You need to have an active subscription to Jira.
 * You need to have a project in Jira with a Scrum board or a Kanban board.
 * You need to have a user account and API token with administration rights to the project in Jira. For more information on how to get this API token, see [Manage API tokens for your Atlassian account](https://support.atlassian.com/atlassian-account/docs/manage-api-tokens-for-your-atlassian-account/).
@@ -89,7 +89,7 @@ Once the activation is completed, your app is connected to Jira. You can see the
         * You can find the filters and sub-filters in the board settings in Jira. Fore more information, see [Configure a company-managed board](https://support.atlassian.com/jira-software-cloud/docs/configure-a-company-managed-board/). 
         * If you want to exclude issues from the backlog in the Stories pane, consider removing the backlog statuses from the board’s column settings.
 
-* After you commit your changes in Studio Pro, you can see the associated Jira stories in the details of the corresponding [revision](/developerportal/collaborate/team-server/#revision-details) in the **Team Server** page of the Developer Portal.
+* After you commit your changes in Studio Pro, you can see the associated Jira stories in the details of the corresponding [revision](/developerportal/general/team-server/#revision-details) in the **Team Server** page of the Developer Portal.
 
 * You can see the link to your Jira board in the **Project Management** section of the Developer Portal.
 

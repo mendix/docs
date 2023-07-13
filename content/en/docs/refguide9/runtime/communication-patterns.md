@@ -42,7 +42,7 @@ Communication between these components operates as follows:
     * Static resources like pages, stylesheets, widgets, images, etc.
     * Application data-related communication, which includes CRUD commands on data and logic that may require data
 * The Runtime Server communicates with different (relational) databases using SQL statements handled by a JDBC library
-    * Application data is stored in a ER-model in an database
+    * Application data is stored in an ER-model in an database
 
 ## 3 Basic CRUD Communication Pattern{#crud}
 

@@ -1,7 +1,7 @@
 ---
-title: "Mendix Mini Surveys"
-url: /developerportal/collaborate/product-insights/
-category: "Collaboration"
+title: "Mini Surveys"
+url: /developerportal/general/product-insights/
+category: "General"
 weight: 8
 description: "Describes how to set up mini surveys to gain insights into your app and view and export the survey results."
 tags: ["mini survey", "app insights", "sprint", "developer portal"]
@@ -25,7 +25,7 @@ You begin by creating a mini survey in the Developer Portal, and then you implem
 
 This document first describes all the pages in Mini Surveys in the Developer Portal, and then it describes the procedure for running a mini survey.
 
-{{% alert color="info" %}}In the GA release (May/June) we will allow you customise these opt-out rules from App Insights portal.{{% /alert %}} 
+{{% alert color="info" %}}In the GA release, we will allow you customise these opt-out rules from the App Insights portal.{{% /alert %}} 
 
 ## 2 Mendix Mini Survey Configuration 
 
@@ -33,11 +33,11 @@ This document first describes all the pages in Mini Surveys in the Developer Por
 
 When you click **Mini Surveys** in the sidebar for an app that already has existing mini surveys, the **Survey Overview** page opens first.
 
-On the upper-left corner of the page, you can see the name of the app currently opened. Click the app name to open a drop-down list of other apps you can navigate to that have been previously opened for Mendix Mini Surveys.
+On the upper-left corner of the page, you can see the name of the app currently opened. Click the app name to open a drop-down list of other apps you can navigate to that have been previously opened for Mini Surveys.
 
 The tabs of the **Survey Overview** page are described below.
 
-{{< figure src="/attachments/developerportal/collaborate/product-insights/survey-overview.png" >}}
+{{< figure src="/attachments/developerportal/general/product-insights/survey-overview.png" >}}
 
 #### 2.1.1 Active Tab {#active}
 
@@ -102,7 +102,7 @@ On the **Settings** tab of **Survey Overview**, you can enable the test mode, an
 
 When you click a mini survey on the [Survey Overview](#survey-overview) page, the survey details page of the mini survey opens.
 
-{{< figure src="/attachments/developerportal/collaborate/product-insights/survey-details.png" >}}
+{{< figure src="/attachments/developerportal/general/product-insights/survey-details.png" >}}
 
 On the upper-right corner, you can find the following buttons:
 

@@ -27,7 +27,7 @@ If you want the synchronization to get triggered automatically after your app st
 
 ### 2.1 Token Configuration
 
-The token configuration used in the [Email Module with Templates](/appstore/modules/email-with-templates/) now also allows you to specify the display pattern. This allows you to configure how the attributes are shown rather than relying on the defaults of the module.
+The token configuration used in the [Email Module with Templates](https://marketplace.mendix.com/link/component/259/) now also allows you to specify the display pattern. This allows you to configure how the attributes are shown rather than relying on the defaults of the module.
 
 The display pattern in the token is optional. If you do not specify a value, the module will use the original behavior. 
 

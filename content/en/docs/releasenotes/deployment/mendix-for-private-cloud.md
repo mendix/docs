@@ -13,6 +13,20 @@ For information on the current status of deployment to Mendix for Private Cloud 
 
 ## 2023
 
+### July 13th, 2023
+
+#### Portal Improvements
+
+*  We have now decoupled the scaling from *Start* and *Stop* in the members permission. This means that scaling does not come into effect until the application is started, and you have to click **Start application** in order for the changes to be sent to the cluster
+* We have added a banner on the **Namespace details** page to display information about the new Operator release.
+
+#### Deploy API Improvements
+
+* We have now decoupled the scaling from start and stop in members permissions.
+* We have added a new **runtimeVersion** field under **Runtime** in the **Manifest of the Environment** in DeployAPI.
+* We have fixed a core resource decimal conversion issue in the environment manifest file (Ticket 189615).
+* We have fixed an issue where upper-case letters in an email ID would prevent members invited to a cluster manager or namespace from accepting the invite. (Ticket 189975)
+
 ### July 6th, 2023
 
 #### Mendix Operator v2.12.0 {#2.12.0}

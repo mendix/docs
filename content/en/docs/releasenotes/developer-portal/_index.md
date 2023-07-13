@@ -17,6 +17,24 @@ To see the current status of the Mendix Developer Portal and Control Center, see
 
 ## 2023
 
+### July 13, 2023
+
+#### New Features 
+
+* We added the **Member ID** column to the **Active Members** and **Deactivated Members** lists on the [Member](/developerportal/control-center/#41-active-and-deactivated-members) page in Control Center. The column also appears in the Excel file, when you export the member information from these lists.
+* We introduced **Member ID** search functionality on the **Member** page in Control Center.
+
+#### Improvements
+
+* We fixed column alignment issues and added responsive column resizing for member list columns to improve readability and visual aesthetics in Control Center.
+* We have improved your ability to create stories within Epics. You can now add a new story directly from any [swimlane](/developerportal/project-management/epics/board/#swimlane).
+* To streamline your app editing process, we have added a new **Edit in Studio Pro** button in Epics. With a single click, you can open your app directly in Studio Pro, similar to the rest of the platform.
+* In Epics, you now have the ability to sort your [story](/developerportal/project-management/epics/board/#story-details) and [epic](/developerportal/project-management/epics/epics/#epic-details) comments based on their time of submission, either showing the newest or the oldest on top.
+
+#### Fixes
+
+* We fixed a bug where we accidently tried to [migrate stories](/developerportal/project-management/epics/planning/#data-migration) that were marked for deletion from Mendix Stories to Epics. (They were not actually migrated, but they ended up as errors in the migration log.)
+
 ### July 3, 2023
 
 #### Deprecations

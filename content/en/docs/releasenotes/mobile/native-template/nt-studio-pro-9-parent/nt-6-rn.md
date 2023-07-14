@@ -4,7 +4,15 @@ url: /releasenotes/mobile/nt-6-rn/
 weight: 10
 description: "Native Template 6 release notes."
 ---
+## 6.3.6
 
+**Release date: June 1, 2023**
+
+### Fixes
+
+* We fixed an issue with cookie management in Native Apps (Ticket 178053).
+* We fixed an issue while compiling the native iOS app using Xcode 14+
+  
 ## 6.3.5
 
 **Release date: January 31, 2023**

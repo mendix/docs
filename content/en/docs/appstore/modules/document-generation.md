@@ -99,7 +99,7 @@ Configure the path to the *chrome.exe* executable in the **CustomChromePath** co
 To allow the module to send and receive document generation requests on your Mendix Cloud environments, you need to perform the following procedures:
 
 1. Enable the DocGen request handler.
-2. If your app is deployed on the Mendix Cloud with a [custom domain](/developerportal/deploy/custom-domains/), set up the URL for the Mendix custom domain.
+2. For applications using Mendix [Custom Domains](/developerportal/deploy/custom-domains/), configure custom domain support.
 3. Register your app environment.
 
 
@@ -134,17 +134,17 @@ The steps for each procedure are described in the sections below.
     
     7. Restart your application for the new request handler to take effect.
     
-    8. Depending whether this app environment uses a Mendix [custom domain](/developerportal/deploy/custom-domains/), continue with one of the following procedures:
+    8. Depending whether this app environment uses a Mendix [Custom Domain](/developerportal/deploy/custom-domains/), continue with one of the following procedures:
     
-        * If it uses a Mendix custom domain, [set up the URL for the Mendix custom domain](#use-custom-domain).
+        * If it uses a Mendix custom domain, [set up your app to support the custom domain](#use-custom-domain).
         * If it does not use a Mendix custom domain, [register your app environment](#register-app).
     
 
-#### 3.2.2 Setting up the URL for the Mendix Custom Domain (Only for Apps Deployed with Mendix Custom Domains){#use-custom-domain}
+#### 3.2.2 Setup Mendix Custom Domain support (Only for Apps Deployed with Mendix Custom Domains){#use-custom-domain}
 
-If your app is deployed to the Mendix Cloud and configured with a custom domain, the PDF Document Generation module needs to know the URL for the custom domain in order to successfully generate your documents.
+If your app is deployed to the Mendix Cloud and configured with a custom domain, the PDF Document Generation module needs to know the original Mendix Cloud URL in order to successfully generate your documents.
 
-To set up the URL for the custom domain, do as follows:
+To set it up you need to set the values of the constants **DocumentGeneration.UseCustomApplicationUrl** and **DocumentGeneration.CustomApplicationUrl** to point to the Mendix Cloud URL for the desired app environment:
 
 1. Go to the **Environments** page for the app as follows:
 
@@ -169,7 +169,7 @@ To set up the URL for the custom domain, do as follows:
 
 8. Click **Edit**. The **Edit Constant** dialog box opens. 
 
-9. In the **New value** field, enter the URL for the custom domain without the trailing slash, for example: *https://exampleapp-accp.mendixcloud.com*, and then click **Save**. You can find the value of the URL by searching for the constant **DocumentGeneration.CustomApplicationUrl** in the folder **_UseMe** > **Configuration** > **Custom Domain** in the App Explorer in Studio Pro.
+9. In the **New value** field, enter the URL for the Mendix Cloud domain of your app without trailing slash, for example: *https://exampleapp-accp.mendixcloud.com*, and then click **Save**.
 
     {{< figure src="/attachments/appstore/modules/document-generation/custom-application-url.png" >}}
 

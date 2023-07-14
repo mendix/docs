@@ -46,6 +46,7 @@ We do not store pages or documents at any time in the process.
 The document generation functionality is under active development. While we cannot guarantee that there will not be any breaking changes in future releases, we will clearly and timely communicate any breaking changes. We will build in backwards compatibility wherever possible.
 
 * Currently, PDF is the only supported document export format.
+* For deployment, currently only the public [Mendix Cloud](https://docs.mendix.com/developerportal/deploy/mendix-cloud-deploy/) is supported. Other deployment scenarios will be supported at a later stage.
 * The `Generate PDF from page` action does not support multiple page parameters.
 * We use a fixed 30 second timeout for the page to finish loading and rendering. A timeout exception is thrown if the page content did not finish loading within 30 seconds.
 * We currently do not enforce strict rate limits. However, take into account the following guidelines:
@@ -53,7 +54,6 @@ The document generation functionality is under active development. While we cann
     * For batch processing, do not exceed 25 documents per minute, to ensure stable performance.
 * Objects that are created in the microflow that contains the `Generate PDF from page` action are not available to use in your document. This is also applicable for changes made to existing objects. The reason is that those changes are not persisted to the database until the whole microflow has finished. The document generation service will access your document in its own context, and therefore have no access to the non-persisted changes.
 * For local development, we use the Chrome or Chromium executable that is available on the development machine. Even though we have not observed these yet, there might be minor differences in PDF output locally vs. when using the cloud service.
-* For deployment, currently only Mendix Cloud is supported. Other deployment scenarios will be supported at a later stage.
 * When you deploy your app, it needs to be accessible to our cloud service. This requires access to the DocGen request handler which can be configured in the Cloud Portal. If your app is configured to restrict access, for example using IP whitelisting and/or client certificates, our cloud service will not be able to reach your app and the module will not work properly.
 * The access (and refresh) tokens used to secure requests to the cloud service are stored unencrypted in the app database. No user roles have read access to these tokens and all communication with the cloud service is encrypted by requiring HTTPS. However, do consider this when sharing a backup of the database with other developers. We will introduce encryption at a later stage.
 

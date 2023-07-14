@@ -96,8 +96,8 @@ This property determines when the user task will be completed. That can be eithe
 Possible options are described in the table below:
 | Set overall outcome | Description |
 | --- | --- |
-| After all participants completed the task | The user task is completed only when Each of the required participants has selected an outcome. |
-| Once sufficient participants completed the task | The user task is completed as soon as a stable outcome can be determined from the outcomes that haven been selected so far. The remaining participants will no longer be able to select an outcome after this. |
+| After all participants completed the task | The completion condition is evaluated after all the targeted users has selected an outcome. This means that even though an overall outcome can be determined from the current outcomes, the multi-user task will not yet be completed until all targeted users have selected an outcome. |
+| Once sufficient participants completed the task | The completion condition is evaluated after each user selects an outcome. When a user selects an outcome and this results in the multi-user task to be completed, this multi-user task will be removed from the inbox of the remaining users, as their votes will not change the final outcome of the multi-user task. |
 
 #### 2.5.2 Decision Method
 

@@ -256,6 +256,10 @@ To reach the root certificate, you have to link your certificate via the interme
 
 For certain use cases, it is important for the Mendix runtime to know the public URL of your applications. This is most commonly needed when your app generates links back to itself. To tell the runtime where it lives, set the ApplicationRootUrl [custom runtime setting](/refguide/custom-settings/#general). To set the custom runtime setting, follow the instructions in the [Custom Runtime Settings](/developerportal/deploy/environments-details/#custom-runtime-settings) section of *Environment Details*.
 
+### 8.4 Can I configure multiple custom domains for the same application?(#multiple-custom-domains)
+
+Yes. You can configure multiple custom domains for the same application. Please note that this can only be done by [uploading multiple own custom domain certificates](#Uploading). You can only [generate one certificate signing request for one custom domain](#Generating) for your application.
+
 ## 9 Read More
 
 * [Certificates](/developerportal/deploy/certificates/)

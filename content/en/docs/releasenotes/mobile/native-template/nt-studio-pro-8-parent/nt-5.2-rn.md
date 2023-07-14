@@ -4,6 +4,22 @@ url: /releasenotes/mobile/nt-5.2-rn/
 weight: 10
 description: "Native Template 5.2 release notes."
 ---
+## 5.2.18
+
+**Release date: May 24, 2023**
+
+### Fixes
+
+* We fixed an issue while building apps with Remote/Local notifications enabled (Tickets 185505, 186171)
+
+## 5.2.17
+
+**Release date: May 16, 2023**
+
+### Fixes
+
+* We updated AppCenter configurations
+  
 ## 5.2.16
 
 **Release date: January 20, 2023**

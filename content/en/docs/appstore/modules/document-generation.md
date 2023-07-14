@@ -62,7 +62,7 @@ The document generation functionality is under active development. While we cann
 * When styling your document, you might see conflicting styles introduced by Atlas Core. These styles are specific to the print media and use the `!important` property. This means you can only override them using `!important` property as well. You can find this property in the file *atlas_core/web/core/\_legacy/bootstrap/_bootstrap.scss*.
 * The `System.Owner` association is currently not set to the user which has run the microflow.
 * Some widgets, such as the [Charts](/appstore/widgets/charts/) widget, might not be fully loaded if they are rendered before all data is available. We check on pending network requests to prevent this, but this is not 100% reliable.
-* If you have the [Application Performance Monitor (APM)](/appstore/partner-solutions/apd/) or [Application Performance Diagnostics (APD)](/appstore/partner-solutions/apd/) add-on enabled in your app, or set the log level of the **Services** log node to **Trace**, the PDF Document Generation module will not be able to generate documents when used in the Mendix Cloud. Note: This is only applicable for apps built in Mendix versions below 9.24.5 and Mendix 10.0.0.
+* If you have the [Application Performance Monitor (APM)](/appstore/partner-solutions/apd/) or [Application Performance Diagnostics (APD)](/appstore/partner-solutions/apd/) add-on enabled in your app, or set the log level of the **Services** log node to *Trace*, the PDF Document Generation module will not be able to generate documents when used in the Mendix Cloud. Note: This is only applicable for apps built in Mendix versions below 9.24.5 and Mendix 10.0.0.
 
 ## 2 Installation {#installation}
 
@@ -101,7 +101,7 @@ Configure the path to the *chrome.exe* executable in the **CustomChromePath** co
 To allow the module to send and receive document generation requests on your Mendix Cloud environments, you need to perform the following procedures:
 
 1. Enable the DocGen request handler.
-2. For applications using Mendix [Custom Domains](/developerportal/deploy/custom-domains/), configure custom domain support.
+2. For applications using Mendix [custom domains](/developerportal/deploy/custom-domains/), configure custom domain support.
 3. Register your app environment.
 
 
@@ -136,13 +136,13 @@ The steps for each procedure are described in the sections below.
     
     7. Restart your application for the new request handler to take effect.
     
-    8. Depending whether this app environment uses a Mendix [Custom Domain](/developerportal/deploy/custom-domains/), continue with one of the following procedures:
+    8. Depending whether this app environment uses a Mendix [custom domain](/developerportal/deploy/custom-domains/), continue with one of the following procedures:
     
         * If it uses a Mendix custom domain, [set up your app to support the custom domain](#use-custom-domain).
         * If it does not use a Mendix custom domain, [register your app environment](#register-app).
     
 
-#### 3.2.2 Setup Mendix Custom Domain support (Only for Apps Deployed with Mendix Custom Domains){#use-custom-domain}
+#### 3.2.2 Setting up Mendix Custom Domain Support (Only for Apps Deployed with Mendix Custom Domains){#use-custom-domain}
 
 If your app is deployed to the Mendix Cloud and configured with a custom domain, the PDF Document Generation module needs to know the original Mendix Cloud URL in order to successfully generate your documents.
 

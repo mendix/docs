@@ -91,7 +91,7 @@ Possible options of participant input are described in the table below:
 
 ##### 2.5.1.1 Set overall outome
 
-This property determines when the user task is completed. It has not influence on the final outcome of the user task.
+This property determines when the user task will be completed. That can be either once sufficient users have completed the task to determine the outcome or after all the targeted users have completed the task. This option has no influence on the final outcome of the user task. For the sake of efficiency, the option to complete the task once sufficient users have completed the task is selected.
 
 Possible options are described in the table below:
 | Set overall outcome | Description |

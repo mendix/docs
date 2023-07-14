@@ -72,7 +72,9 @@ Follow the instructions in [How to Use Marketplace Content in Studio Pro](/appst
 
 1. In the **App Explorer**, double-click **Settings**, then go to the **Runtime** tab, and add the **ASu_DocumentGeneration_Initialize** microflow to run after startup. If there is already an after startup microflow, add the **ASu_DocumentGeneration_Initialize** microflow as an action in the existing microflow.
 2. In the **App Explorer**, double-click **Security**, and then set the **Security level** to **Prototype/demo** or **Production**.
-3. In the **App Explorer**, double-click **Security** again, then go to the **User roles** tab, and add the module role **User** from the **DocumentGeneration** module to all app roles that should be able to generate a document.
+3. In the **App Explorer**, double-click **Security** again, then go to the **User roles** tab and perform the following steps: 
+    1. Add the module role **User** from the **DocumentGeneration** module to all app roles that should be able to generate a document.
+    2. Add the module role **Administrator** from the **DocumentGeneration** module to all app roles that should be able to [register](#register-app) the app environments on Mendix Cloud.
 4. To clean up document requests, enable the scheduled event **SE_DocumentRequest_Cleanup** to automatically remove expired **Document Request** objects after a configured offset in days. The offset is configured using the constant **DocumentGeneration.RequestCleanupOffsetInDays** (the default value is 7 days). The scheduled event runs daily at 03:00 UTC.
 5. Depending on where you run the module, continue to perform the procedure in the [Running Locally](#run-locally) section or in the [Running on the Mendix Cloud](#run-on-mendix-cloud) section.
 

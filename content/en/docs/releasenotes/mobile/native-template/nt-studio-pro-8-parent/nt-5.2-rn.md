@@ -10,7 +10,7 @@ description: "Native Template 5.2 release notes."
 
 ### Fixes
 
-* We fixed an issue while building apps with Remote/Local notifications enabled (Tickets 185505, 186171)
+* We fixed an issue which affected building apps with remote or local notifications enabled. (Tickets 185505, 186171)
 
 ## 5.2.17
 

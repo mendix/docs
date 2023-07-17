@@ -9,7 +9,7 @@ tags: ["git", "svn", "subversion", "teamserver", "byo-git", "byo-svn" ]
 
 ## 1 Introduction
 
-[Mendix Team Server](/developerportal/general/team-server/) is the Mendix-hosted environment that stores all Mendix apps. It facilitates versioning your apps by integrating them into a version control system. Mendix Studio and Mendix Studio Pro integrate into the Team Server allowing you to create and update apps, commit changes, and merge model versions in one click.
+[Mendix Team Server](/developerportal/general/team-server/) is the Mendix-hosted environment that stores all Mendix apps. It facilitates versioning your apps by integrating them into a version control system. Mendix Studio Pro integrates into the Team Server allowing you to create and update apps, commit changes, and merge model versions in one click.
 
 ## 2 What Version Control System Is Team Server Built On? {#which-team-server}
 
@@ -69,7 +69,6 @@ Yes, it is possible to connect to a third-party Subversion or Git version contro
 
 However, in this case the following products and capabilities are not available:
 
-* [Mendix Studio](/studio/general/) and the [collaborative development in Studio](/studio/collaboration/)
 * Deployment using the Developer Portal directly from the Team Server
 * Integrated platform APIs such as the [App repository API](/apidocs-mxsdk/apidocs/app-repository-api/), [Build API](/apidocs-mxsdk/apidocs/build-api/), [Platform SDK](/apidocs-mxsdk/mxsdk/), [Permissions API](/apidocs-mxsdk/apidocs/permissions-api/), [Projects API](/apidocs-mxsdk/apidocs/projects-api/), [Stories API](/apidocs-mxsdk/apidocs/stories-api/), and [User management API](/apidocs-mxsdk/apidocs/user-management-api/)
 * [AQM](/addons/aqm-addon/) 

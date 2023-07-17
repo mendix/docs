@@ -168,10 +168,6 @@ You can also deploy an app from Team Server. To do this, follow these steps:
 
 The package is deployed to the cloud.
 
-#### 2.2.3 Deploying via Studio
-
-To deploy your app from Studio, click **Publish**. For more information, see the [Publishing Your App](/studio/publishing-app/#publishing-your-app) section of *Previewing and Publishing Your App*.
-
 ### 2.3 Deploying the App to an Environment {#deploy-the-app-to-an-environment}
 
 The previous steps explained how to deploy a deployment package to the Mendix Cloud, but the actual app is not running yet. To deploy a deployment package to a node environment, follow these steps:
@@ -196,7 +192,7 @@ The app is now deployed. You can configure the administrative account.
 
 ### 2.4 Deploying a Free App to the Mendix Cloud
 
-With a Free App, you can deploy your app to the Mendix Cloud from Studio or Studio Pro by using one of the following methods:
+With a Free App, you can deploy your app to the Mendix Cloud from Studio Pro by using one of the following methods:
 
 * In the top bar of Studio Pro, click **Run** > **Publish**. This automatically deploys your app to a Free App environment.
 

@@ -10,8 +10,8 @@ description: "Native Template 6 release notes."
 
 ### Fixes
 
-* We fixed an issue with cookie management in Native Apps (Ticket 178053).
-* We fixed an issue while compiling the native iOS app using Xcode 14+
+* We fixed an issue with cookie management in native apps. (Ticket 178053)
+* We fixed an issue which affected compiling a native iOS app using XCode 14 or higher.
   
 ## 6.3.5
 

@@ -18,7 +18,7 @@ description: "Native Template 5.2 release notes."
 
 ### Fixes
 
-* We updated AppCenter configurations
+* We updated AppCenter configurations.
   
 ## 5.2.16
 

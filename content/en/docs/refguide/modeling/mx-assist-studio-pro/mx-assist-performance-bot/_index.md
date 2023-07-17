@@ -92,7 +92,7 @@ The bot will detect anti-patterns and list them in the pane under the associated
 To view the element or the document where the anti-pattern is located, double-click the message line or right-click the message line and choose **Go to Cause** or **Go to Usage** in the drop-down menu.
 
 {{% alert color="info" %}}
-Best Practice Bot only detects a *subset* of the documented Best Practices. In general this is to avoid any false positives and maximise the quality rather than the quantity of recommendations.
+Best Practice Bot only detects a subset of the [documented best practices](/refguide/performance-best-practices/). This is to avoid any false positives and to maximize the quality rather than the quantity of the recommendations.
 {{% /alert %}}
 
 ### 3.2 Recommending a Fix {#recommending}

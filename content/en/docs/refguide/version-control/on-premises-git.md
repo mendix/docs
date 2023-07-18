@@ -78,7 +78,7 @@ Once the app is created, you can upload it to your private Git repository. For m
 ### 4.4 Downloading from a Private Repository
 
 {{% alert color="info" %}}
-Please note that the libraries Mendix uses to operate Git do not support spaces in Git repo URLs.
+Please note that the libraries Mendix uses to operate Git do not support <kbd>{Space}</kbd> characters in Git repo URLs.
 {{% /alert %}}
 
 Now that you have a Git app on your server, you can download it to another directory or one of your team members can download it on their machine. Follow the steps below:

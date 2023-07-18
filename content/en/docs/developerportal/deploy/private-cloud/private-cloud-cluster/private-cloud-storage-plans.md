@@ -1764,7 +1764,8 @@ Create a new IAM role.
             ]
         },
         {
-            "Effect": "AllowCreateRDSTenants",
+            "Sid": "AllowCreateRDSTenants",
+            "Effect": "Allow",
             "Action": [
                 "rds-db:connect"
             ],

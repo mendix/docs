@@ -62,7 +62,7 @@ The header for a component presents the following details:
 * The name and category of the component
 * The review average (in stars) and the number of reviews
 * The number of times the component has been downloaded
-* <a id="saved"></a>The **Add to Saved** button which, when clicked, will add the component to the list on the [My Marketplace](#my-marketplace)
+* <a id="saved"></a>The **Save and get notified** button which, when clicked, will add the component to the list on the [My Marketplace](#my-marketplace)
 * The **Share** button, which allows you to copy the URL of the component and share it to your networks
 * **Download** – click this to download the component
     * This is only available for components that have a file attached (meaning, all shared Studio Pro components, but not promotions)

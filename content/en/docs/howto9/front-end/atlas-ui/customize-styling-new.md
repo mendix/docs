@@ -3,7 +3,7 @@ title: "Customize Styling"
 url: /howto9/front-end/customize-styling-new/
 weight: 20
 description: "This describes how developers can change apps styling and create re-usable styling."
-tags: ["build", "app", "studio", "studio pro", "style", "styling"]
+tags: ["build", "app", "studio pro", "style", "styling"]
 ---
 
 ## 1 Introduction
@@ -12,15 +12,13 @@ This page describes how developers can change the styling of apps and create re-
 
 ## 2 Changing the App Look and Feel
 
-Developers have several options to change an app's look and feel. Depending on whether you are a Studio or Studio Pro user, there are different options.
+Developers have several options to change an app's look and feel.
 
 ### 2.1 Changing the Default Theme Settings
 
 When tailoring your app's look, a simple first step is to change the theme settings. This quickly adjusts the theme to a company's brand by changing the colors.
 
-For Studio users, use the [Theme Customizer](/studio/theme-customizer/) to change the basic look and feel of your app. The differences will become visible immediately.
-
-For Studio Pro users there are more options to change the default theme settings. To customize the default theme settings, you can open and edit the *custom-variables* file from the App Explorer (**App** > **Styling** > **web** > **custom-variables.scss** for web apps, and **App** > **Styling** > **native** > **custom-variables.js** for native apps).
+To customize the default theme settings, you can open and edit the *custom-variables* file from the App Explorer (**App** > **Styling** > **web** > **custom-variables.scss** for web apps, and **App** > **Styling** > **native** > **custom-variables.js** for native apps).
 
 For more information on how changes can be quickly previewed, see the [Preview a Styling Change](#previewing-styling) section below.
 
@@ -190,10 +188,6 @@ You can now export the **mytheme** module from Studio Pro to re-use in your apps
 
 To test the theme for all the widgets, page templates, and building blocks it can be helpful to use the Atlas Design System app as discussed in [Create a Company Design System](/howto9/front-end/create-a-company-design-system/).
 
-{{% alert color="info" %}}
-Note: if this is done, the Theme customizer in Studio will not work any more as it depends on the custom variables in the **theme** folder.
-{{% /alert %}}
-
 #### 4.3.2 Native Mobile
 
 As an example, the following variables in *theme/native/custom-variables.js* will be made into a re-usable theme module:
@@ -307,14 +301,14 @@ The bullets below describe the file structure for the theme folder and for modul
 
 ## 7 Styling output {#styling-output}
 
-With the modular structure of the styling of Mendix app, the styling files are placed in different folders. Studio (Pro) automatically combines the files to a single output (stylesheet for web and JavaScript for native) which is used by the app in the browser or on the device. The following sections describe in more detail how this is done.
+With the modular structure of the styling of Mendix app, the styling files are placed in different folders. Studio Pro automatically combines the files to a single output (stylesheet for web and JavaScript for native) which is used by the app in the browser or on the device. The following sections describe in more detail how this is done.
 
 ### 7.1 Web Apps
 
-Studio and Studio Pro combines the different *.scss* files in a certain order and compiles the SASS into CSS which is used in the browser. The compiled output is saved in a folder named **theme-cache**.
+Studio Pro combines the different *.scss* files in a certain order and compiles the SASS into CSS which is used in the browser. The compiled output is saved in a folder named **theme-cache**.
 
 {{% alert color="info" %}}
-The content of this folder is regenerated regularly (for example when opening the app or pressing <kbd>{F4}</kbd>) and therefore should not be changed manually. Also note, that the **theme-cache** folder is included when uploading your app to Team Server. It is required to see the correct styling in Studio, which is why it's strongly recommended to commit any changes when the styling has changed.
+The content of this folder is regenerated regularly (for example when opening the app or pressing <kbd>{F4}</kbd>) and therefore should not be changed manually. Also note, that the **theme-cache** folder is included when uploading your app to Team Server. 
 {{% /alert %}}
 
 If a module contains styling, such as a design system module, it is generally best practice to mark the module as a UI resources module. This will make it possible to explicitly set a compilation order in the theme settings. For more information, see the [Create a Theme Module](#create-theme-mod) section above.

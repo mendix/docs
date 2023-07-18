@@ -103,5 +103,4 @@ To use the UI Resources module from teh Mendix Marketplace, follow these steps:
 * [Get Started with Atlas UI](/howto8/front-end/get-started-with-atlasui/)
 * [Create Company Atlas UI Resources](/howto8/front-end/create-company-atlas-ui-resources/)
 * [Create Custom Preview Images for Building Blocks and Page Templates](/howto8/front-end/create-custom-preview-images-for-building-blocks-and-page-templates/)
-* [Extend Design Properties to Customize Your Studio Experience](/howto8/front-end/extend-design-properties-to-customize/)
 * [Migrate Existing Apps to Atlas UI](/howto8/front-end/migrate-existing-projects-to-atlasui/)

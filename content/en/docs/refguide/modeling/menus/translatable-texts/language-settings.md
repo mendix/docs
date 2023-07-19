@@ -95,6 +95,7 @@ The list below is provided to enable you to quickly evaluate if Mendix supports 
 | Arabic | United Arab Emirates | ar_AE | 9.0.5 |
 | Arabic | Yemen | ar_YE | 9.0.5 |
 | Armenian | Armenia | hy_AM | 9.2.0 |
+| Basque (Euskara) | Basque Country | ??? | 10.1 |
 | Belarusian | Belarus | be_BY | 9.0.5 |
 | Bengali | Bangladesh | bn_BD | 9.3.0 |
 | Bengali | India | bn_IN | 9.3.0 |

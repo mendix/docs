@@ -95,7 +95,7 @@ For a Free App, you can only restore available backups which are made from the a
 
 When a backup restore fails, you will be notified via your app's **Backup Activity** log (found in the **Backups** page of the *Developer Portal*). When this happens, all data that was restored until the point of failure will be present in your database. This will leave the database only partially restored; not all data from the backup file will be present in your database. 
 
-Your database must be large enough to hold the decompressed size of the database as stored in your backup file's [db folder](#db-folder), plus an overhead of 2.25 GB. This overhead is employed during the restoration process. 
+Your database must be large enough to hold the decompressed size of the database as stored in your backup file's [db folder](#db-folder), plus an overhead of 2.25 GB. This overhead is employed during the restoration process. For example, if the size of your decompressed database in the **db folder** is 6 GB, your database must have at least 8.25 GB of storage.
 
 In the event that a backup restore fails in this way, you will need to retry the backup restore. When you retry, please ensure your database meets the size requirements explained above.
 

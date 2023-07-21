@@ -91,11 +91,13 @@ For a Free App, you can only restore available backups which are made from the a
 
 3. Click **Yes** to confirm the restoration.
 
-## 5 Restoring a Backup Fails
+## 5 Restoring After a Backup Fails {#restore-after-fail}
 
-When a backup restore fails you will encounter a message stating that in the Backup Activity log in the **Backups** page of the *Developer Portal* for your app. When this happens all data that was restored until the point of failure will be present in your database. This will leave the database only partially restored and not all data from the backup file will be present in your database. Note, that your database must be large enough to hold the decompressed size of the database as stored in the [db folder](#db-folder) of your backup file, plus an overhead of 2.25 GB used during the restoration process. 
+When a backup restore fails, you will be notified via your app's **Backup Activity** log (found in the **Backups** page of the *Developer Portal*). When this happens, all data that was restored until the point of failure will be present in your database. This will leave the database only partially restored; not all data from the backup file will be present in your database. 
 
-In the event that this happens, you will need to retry the backup restore.
+Your database must be large enough to hold the decompressed size of the database as stored in your backup file's [db folder](#db-folder), plus an overhead of 2.25 GB. This overhead is employed during the restoration process. 
+
+In the event that a backup restore fails in this way, you will need to retry the backup restore. When you retry, please ensure your database meets the size requirements explained above.
 
 Please contact [Mendix Support](https://support.mendix.com/) if you need further assistance with this issue.
 

@@ -91,15 +91,23 @@ For a Free App, you can only restore available backups which are made from the a
 
 3. Click **Yes** to confirm the restoration.
 
-## 5 Format of a Backup File{#format-of-backup-file}
+## 5 Restoring a Backup Fails
+
+When a backup restore fails you will encounter a message stating that in the Backup Activity log in the **Backups** page of the *Developer Portal* for your app. When this happens all data that was restored until the point of failure will be present in your database. This will leave the database only partially restored and not all data from the backup file will be present in your database. Note, that your database must be large enough to hold the decompressed size of the database as stored in the [db folder](#db-folder) of your backup file, plus an overhead of 2.25 GB used during the restoration process. 
+
+In the event that this happens, you will need to retry the backup restore.
+
+Please contact [Mendix Support](https://support.mendix.com/) if you need further assistance with this issue.
+
+## 6 Format of a Backup File{#format-of-backup-file}
 
 You may want to restore a backup which has been created on another platform, for example an on-premises deployment. In this case you will have to construct the backup file which the Mendix Cloud will recognize.
 
-### 5.1 .tar.gz Archive
+### 6.1 .tar.gz Archive
 
 A **Full snapshot** backup file is a *.tar.gz* file (for example, *files_and_database-fc9e126f-201811210121.tar.gz*).
 
-### 5.2 .tar Archive
+### 6.2 .tar Archive
 
 The *.tar* archive within the *.tar.gz* archive (for example, *files_and_database-fc9e126f-201811210121.tar*) contains a number of files in a folder structure.
 
@@ -121,7 +129,7 @@ tree/46/9c/469c9c80-34d3-4810-8494-86b63eb37214
 tree/4d/8f/4d8ffd66-7ad3-4f5c-a992-985cf360581b
 ```
 
-### 5.3 .metadata File
+### 6.3 .metadata File
 
 This contains json describing the backup. For example:
 

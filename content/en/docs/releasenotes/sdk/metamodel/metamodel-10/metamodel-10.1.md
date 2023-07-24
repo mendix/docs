@@ -5,6 +5,8 @@ parent: "metamodel-10"
 
 ## 10.1.0
 
+**Release date: June 19, 2023**
+
 ### Microflows
 
 #### Microflow (ModelUnit)

@@ -12,16 +12,16 @@ You can download the Make It Native app for [iOS](https://apps.apple.com/us/app/
 
 ## iOS 1.0.3
 
-**iOS Release date: July 22nd , 2023**
+**iOS Release date: July 22nd, 2023**
 
 ### Improvements
 
-* The launch screen now consistently remembers the previously used URL.
-* The history now automatically opens the launch screen to quickly launch your app.
-* The history no longer saves duplicate entries.
-
+* We made the **Launch App** screen consistently remember your previously used URL.
+* The **History** tab now automatically opens the launch screen to quickly launch your app.
+  
 ### Fixes
 
+* We fixed the **History** tab so it no longer saves duplicate entries.
 * We fixed rendering the onboarding screens on all devices.
 * We fixed several design and usability issues throughout the app.
 

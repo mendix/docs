@@ -22,7 +22,6 @@ On the left side of the top bar, you open an access menu by clicking the **切�
 
 You can then access the following parts of the Mendix Platform:
 
-* [Studio](/studio/)
 * **下载 Studio Pro** – opens the Studio Pro China Edition download page
 * **我的应用** – opens the page with [a summary of your apps](#my-apps)
 * **集群管理** – opens the page for [cluster management](/developerportal/deploy/tencent-deploy/#overview)
@@ -34,7 +33,7 @@ You can then access the following parts of the Mendix Platform:
 
 The **我的应用** page shows you a summary of your apps.
 
-The **激活** tab displays all the apps for which you are a [Team](/developerportal/collaborate/team/) member. Any apps you pin with the pin icon will appear in the **固定** tab. 
+The **激活** tab displays all the apps for which you are a [Team](/developerportal/general/team/) member. Any apps you pin with the pin icon will appear in the **固定** tab. 
 
 Click an app tile to see more details about the app.
 

@@ -22,7 +22,7 @@ Where you place the file depends on your situation:
 
 * For JavaScript actions, declare in the *.json* file
 * For widgets, if you are using the latest **pluggable-widgets-tools** they will collect and create the declaration file automatically
-* If you are creating a widget on your own, create a a *.json* file which has the same name as your widget as listed in its *.mpk*
+* If you are creating a widget on your own, create a *.json* file which has the same name as your widget as listed in its *.mpk*
 
 ### 2.1 Naming Conventions
 

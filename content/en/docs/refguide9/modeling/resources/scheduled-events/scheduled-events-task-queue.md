@@ -46,7 +46,7 @@ Yearly events come in 2 flavors:
 
 #### 4.1.1 Specific Date
 
-This allows you to run the event on the same date every year.  For example, April 5th.
+This allows you to run the event on the same date every year (for example, April 5).
 
 | Property | Description |
 | --- | --- |
@@ -55,7 +55,7 @@ This allows you to run the event on the same date every year.  For example, Apri
 | On overlap | See explanation of options in [Long-running Events](#long-events). |
 
 {{% alert color="warning" %}}
-It is possible to select the leap day (February 29th). In non-leap years the event will then be executed on February 28th.
+It is possible to select the leap day (February 29). In non-leap years the event will then be executed on February 28th.
 {{% /alert %}}
 
 #### 4.1.2 Specific Month and Weekday
@@ -78,7 +78,7 @@ Monthly events also come in 2 flavors:
 
 #### 4.2.1 Specific Date
 
-This allows you to run the event on the same date every month, or number of months.  For example, the 5th of each month.
+This allows you to run the event on the same date every month, or number of months (for example, the 5th of each month).
 
 | Property | Description |
 | --- | --- |

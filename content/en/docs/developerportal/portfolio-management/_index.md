@@ -65,7 +65,7 @@ On the **Portfolio Landscape Overview** page, you can create a new portfolio as 
 
 3. For **Privacy Settings**, select **Private** or **Restricted**. For details on privacy settings, see the [Different Privacy Settings of a Portfolio](#privacy-settings) section.
 
-    {{% alert color="info" %}}If the toggle on the [Privacy Requests](/developerportal/control-center/#privacy-requests) tab is turned on in the Control Center, a Mendix Admin needs to approve the creation of a restricted portfolio. In that case, a Mendix Admin will receive a notification about your request and can approve or reject your request from the [Control Center](/developerportal/control-center/#privacy-requests). The **Privacy Settings** of the portfolio will be **Private** until a Mendix Admin approves your request.{{% /alert %}}
+    {{% alert color="info" %}}If the toggle on the [Privacy Requests](/developerportal/control-center/#privacy-requests) tab is turned on in Control Center, a Mendix Admin needs to approve the creation of a restricted portfolio. In that case, a Mendix Admin will receive a notification about your request and can approve or reject your request from the [Control Center](/developerportal/control-center/#privacy-requests). The **Privacy Settings** of the portfolio will be **Private** until a Mendix Admin approves your request.{{% /alert %}}
 
 4. For **Prioritization Model**, select [WSJF Prioritization](/developerportal/portfolio-management/#wsjf) or [RICE Prioritization](/developerportal/portfolio-management/#rice).
 
@@ -440,7 +440,7 @@ The table below shows the permissions of Portfolio Managers, Contributors, and V
 3. In the dialog box, enter the **Email Address** of the user who you want to invite. You can add multiple email addresses if you need to invite more than one user. The users can be people within your company or outside your company. For users outside your company, their names and profile pictures are not displayed.
 4. Select an **Access Role** for the user(s) – **Portfolio Manager**, **Contributor**, or **Viewer**. This determines the user's access level to all the initiatives in this portfolio.
 5. Click **Add to List**.
-7. Click **Send Invites**.
+6. Click **Send Invites**.
 
 The users that you invited receive a notification per email and now appear on the **Access Management** page. 
 
@@ -486,7 +486,7 @@ On the **Portfolio Settings** page, Portfolio Managers can change the following 
 
 * **Privacy Settings** – You can set the settings to **Private** or **Restricted**. For details on privacy settings, see the [Different Privacy Settings of a Portfolio](#privacy-settings) section.
 
-    {{% alert color="info" %}}If the toggle on the [Privacy Requests](/developerportal/control-center/#privacy-requests) tab is turned on in the Control Center, a Mendix Admin needs to approve any change of **Privacy Settings**. In that case, a Mendix Admin will receive a notification about your change request and can approve or reject your request from the Control Center. You can cancel a pending request by clicking **Cancel Request**.{{% /alert %}}
+    {{% alert color="info" %}}If the toggle on the [Privacy Requests](/developerportal/control-center/#privacy-requests) tab is turned on in Control Center, a Mendix Admin needs to approve any change of **Privacy Settings**. In that case, a Mendix Admin will receive a notification about your change request and can approve or reject your request from Control Center. You can cancel a pending request by clicking **Cancel Request**.{{% /alert %}}
     
 * **Stages** – Click the **^** button or the **v** button to move a stage upwards or downwards.
 
@@ -517,7 +517,7 @@ To add an option for a setting, click **Add Department**, **Add Country**, **Add
 3. If you decide to continue, type *DELETE* in the text box.
 4. Click **Delete**. The portfolio is permanently deleted.
 
-{{% alert color="info" %}}A Mendix Admin can also delete a portfolio in the [Portfolios](/developerportal/control-center/#delete-portfolio) section of the Control Center.{{% /alert %}}
+{{% alert color="info" %}}A Mendix Admin can also delete a portfolio in the [Portfolios](/developerportal/control-center/#delete-portfolio) section of Control Center.{{% /alert %}}
 
 ## 7 Read More
 

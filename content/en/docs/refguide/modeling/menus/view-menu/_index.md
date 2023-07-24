@@ -55,7 +55,7 @@ The [App Explorer](/refguide/app-explorer/) pane displays the complete structure
 
 ### 3.2 Changes
 
-For version control-enabled apps (meaning, those with [Team Server](/developerportal/collaborate/team-server/) or other Git servers), the [Changes pane](/refguide/changes-pane/) shows the local changes to the app since the last commit. You can commit changes, update to the latest revision, and view the history from here. 
+For version control-enabled apps (meaning, those with [Team Server](/developerportal/general/team-server/) or other Git servers), the [Changes pane](/refguide/changes-pane/) shows the local changes to the app since the last commit. You can commit changes, update to the latest revision, and view the history from here. 
 
 This pane has two levels, so when you zoom into a changed document, you can review all the changes within that document without going back and forth between levels. The zoomed-in level of the pane is split into two grids, with elements on the left and properties on the right. Selecting an element on the left presents the changed properties on the right:
 
@@ -71,7 +71,7 @@ The **Console** pane displays the output of the [Mendix Runtime](/refguide/runti
 
 ### 3.5 Data Hub {#data-hub}
 
-The [Data Hub pane](/refguide/data-hub-pane/) enables you to browse the [Catalog](/catalog/) and use registered data sources that are available for your organization in your app development. You can add [external entities](/refguide/external-entities/) to your app via this pane and see entities and data sources already consumed in your app. 
+The [Integration Pane](/refguide/integration-pane/) enables you to browse the [Catalog](/catalog/) and use registered data sources that are available for your organization in your app development. You can add [external entities](/refguide/external-entities/) to your app via this pane and see entities and data sources already consumed in your app. 
 
 ### 3.6 Documentation
 
@@ -105,7 +105,7 @@ The **Properties** pane displays the properties of the currently selected elemen
 
 ### 3.13 Stories
 
-For [Team Server](/developerportal/collaborate/team-server/) app, the **Stories** pane shows the [stories](/developerportal/collaborate/stories/) of the current [Sprint](/developerportal/collaborate/stories/). For more information on the **Stories** pane and how to interact with it, see [Stories Pane](/refguide/stories-pane/). 
+For [Team Server](/developerportal/general/team-server/) app, the **Stories** pane shows the [stories](/developerportal/project-management/stories/) of the current [Sprint](/developerportal/project-management/stories/). For more information on the **Stories** pane and how to interact with it, see [Stories Pane](/refguide/stories-pane/). 
 
 ### 3.14 Toolbox {#toolbox}
 

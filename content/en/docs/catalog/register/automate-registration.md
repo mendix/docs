@@ -53,7 +53,7 @@ For this section, you will need:
 * A [Personal Access Token](/developerportal/community-tools/mendix-profile/#pat)
 * The application **Name**
 
-Follow the steps for [registering an application through the Data Hub Registration API](/catalog/register/register-data/#register-application).
+Follow the steps for [registering an application through the Registration API](/catalog/register/register-data/#register-application).
 
 Upon completion, you will have the `application_UUID`.
 

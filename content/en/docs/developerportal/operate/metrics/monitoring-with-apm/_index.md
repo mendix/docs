@@ -292,13 +292,11 @@ Comma-separated list of prefixes for the metrics to be allowed. By default, all 
 
 For example, to allow only the session and the jvm metrics, the environment variable should be set to `mx.runtime.stats.sessions,jvm`.
 
-
 ### 5.2 APM_METRICS_FILTER_DENY{#app-metrics-filter-deny}
 
 Comma-separated list of prefixes for the metrics to be denied. 
 
 For example, to filter out only metrics starting with jetty or mx.runtime, the environment variable should be set to `jetty,mx.runtime`.
-
 
 ### 5.3 APM_METRICS_FILTER_DENY_ALL{#app-metrics-filter-deny-all}
 

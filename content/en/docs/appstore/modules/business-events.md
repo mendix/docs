@@ -77,7 +77,7 @@ If you are running with Studio Pro 9.24 and above, skip down to [Creating a Serv
 
 #### 4.1.1 Creating a Published Business Event Service {#create-be}
 
-A **Published Business Event Service** contains a definition of the business events provided by this service. A document can be exported from the published service, to inform other developers what the published business event service provides. This is an AsyncAPI document, similar to a OpenAPI or WSDL contract.
+A **Published Business Event Service** contains a definition of the business events provided by this service. A document can be exported from the published service, to inform other developers what the published business event service provides. This is an AsyncAPI document, similar to an OpenAPI or WSDL contract.
 
 1. Right-click on the module folder, hover over **Add other**, and click **Published Business Event Service**.
 2. Provide the name for your service and **OK** to create it.
@@ -108,7 +108,7 @@ To consume a business event, you first need to create a **Consumed Business Even
 There are two ways to subscribe to, or consume a specific business event:
 
 * **Add** the subscription in the [consumed business event service](#consume-be)
-* **Drag and drop** the business event from the **Data Hub pane** to your domain model
+* **Drag and drop** the business event from the [Integration Pane](/refguide/integration-pane/) to your domain model
 
 ##### 4.1.3.1 Automatically Created Event Handler Microflow and Entity
 
@@ -220,7 +220,7 @@ The business event service document is open in Studio Pro:
 After following the instructions in [Using an Existing Business Event Service](#two-way-be-create), you can publish or subscribe (or both, depending on the [service definitions](#add-be-definitions)) in the following ways:
 
 * Open the business service document and click **Add**
-* **Drag and drop** the business event from the **Data Hub pane** to your domain model
+* **Drag and drop** the business event from the [Integration Pane](/refguide/integration-pane/) to your domain model
 
 To publish a business event service, you need to use it in a microflow.
 

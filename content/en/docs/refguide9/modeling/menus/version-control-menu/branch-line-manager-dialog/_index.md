@@ -30,7 +30,7 @@ This option is only available when support for private SVN or Git servers is ena
 
 Select the Team Server app for which you want to manage the branch lines. If you have an app open in Studio Pro, it will be selected automatically. However, you can also manage branch lines without opening an app first, in which case no app will be selected.
 
-For more information about the Mendix Team Server, see [Team Server](/developerportal/collaborate/team-server/).
+For more information about the Mendix Team Server, see [Team Server](/developerportal/general/team-server/).
 
 ### 2.2 Bring Your Own (BYO) SVN or Git Server App {#byo-server-app}
 
@@ -39,4 +39,4 @@ In the **App repository address** field, enter the address of the app you want t
 ## 3 Read More
 
 * [Version Control](/refguide9/version-control/)
-* [Collaborative Development](/refguide9/collaborative-development/)
+

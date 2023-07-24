@@ -10,7 +10,7 @@ tags: ["studio pro"]
 
 ## 1 Overview
 
-The `day-of-year-from-dateTime()` function extracts the day in the year from a **Date and time** attribute so it can be used to compare to a value. Values range from 1 (January 1st) to 366 (due to leap years).
+The `day-of-year-from-dateTime()` function extracts the day in the year from a **Date and time** attribute so it can be used to compare to a value. Values range from 1 (January 1) to 366 (due to leap years).
 
 ## 2 Example
 

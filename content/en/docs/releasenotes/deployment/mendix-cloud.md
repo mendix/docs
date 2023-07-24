@@ -17,7 +17,13 @@ For information on the current status of deployment to Mendix Cloud and any plan
 
 ## 2023
 
-### June 15th, 2023
+### July 3, 2023
+
+#### Improvements
+
+* We have upgraded the Cloud Foundry stack on Mendix Cloud to `cflinuxfs4`. This stack will be used automatically when you redeploy your Mendix app on Mendix Cloud public or dedicated clusters.
+
+### June 15, 2023
 
 #### Portal Enhancements
 
@@ -27,20 +33,20 @@ For information on the current status of deployment to Mendix Cloud and any plan
 
 * We have introduced a filtering capability for sending Mendix runtime metrics to APM vendors.
 
-### May 4th, 2023
+### May 4, 2023
 
 * In the Build and Deploy APIs, we have added a link to download packages from the Developer Portal. This is controlled by a parameter on the following API calls:
     * [Retrieve Package](/apidocs-mxsdk/apidocs/build-api/#retrieve-package) in the Build API
     * [Retrieve Environment Package](/apidocs-mxsdk/apidocs/deploy-api/#retrieve-environment-package) in the Deploy API
 * We have deprecated the [Download Package](/apidocs-mxsdk/apidocs/build-api/#download-package) call in the Build API.
 
-### April 20th, 2023
+### April 20, 2023
 
 #### Improvements
 
 * We have updated the [Splunk](/developerportal/operate/splunk-metrics/) integration to send app metadata to the Splunk Cloud Platform, together with the ability to add custom tags.
 
-### March 16th, 2023
+### March 16, 2023
 
 #### Improvements
 
@@ -48,7 +54,7 @@ For information on the current status of deployment to Mendix Cloud and any plan
 
     {{% alert color="info" %}}This feature is currently in a [Beta Release](/releasenotes/beta-features/).{{% /alert %}}
 
-### February 23rd, 2023
+### February 23, 2023
 
 #### Improvements
 
@@ -58,37 +64,37 @@ For information on the current status of deployment to Mendix Cloud and any plan
 * We have enabled DNSSEC to authenticate DNS lookups for `cname.mendix.net`.
     * This means that custom domains for applications in the Mendix Cloud will validate using DNSSEC, provided it is also enabled for the custom domain.
 
-### February 21st, 2023
+### February 21, 2023
 
 #### Improvements
 
 * We now return HTTP headers for the SHA1 Fingerprint and Serial number of an authenticated Client Certificate. See [Mendix Cloud HTTP Request Headers](/developerportal/deploy/mendix-cloud-request-headers/) for more information.
 
-### February 16th, 2023
+### February 16, 2023
 
 #### Improvements
 
 * Customers can now download access logs for their applications. The Deploy API has also been updated with this functionality — see [Download Access Logs](/apidocs-mxsdk/apidocs/deploy-api/#download-logs) in *Deploy API* for more information.
 
-### January 26th, 2023
+### January 26, 2023
 
 #### Improvements
 
 * We added a new version of the Deploy API which allows you to change the Technical Contact and team permissions of an app. See [Deploy API – Version 3](/apidocs-mxsdk/apidocs/deploy-api-3/) for further information.
 
-### January 18th, 2023
+### January 18, 2023
 
 #### Fix
 
 * For customers running Mendix apps with runtime version 9.7.0 and above, we have fixed some minor issues with the [Number of handled external requests](/developerportal/operate/trends-v4/#Trends-appmxruntimerequests) and [Number of database queries being run](/developerportal/operate/trends-v4/#Trends-dbmxruntimeconnectionbus) graphs. These changes are available after you redeploy your app.
 
-### January 13th, 2023
+### January 13, 2023
 
 #### Improvements
 
 * We added the AWS Middle East (Bahrain) and AWS Africa (Cape Town) regions as a new deployment targets.
 
-### January 5th, 2023
+### January 5, 2023
 
 #### Improvements
 
@@ -96,39 +102,39 @@ For information on the current status of deployment to Mendix Cloud and any plan
 
 ## 2022
 
-### November 14th, 2022
+### November 14, 2022
 
 #### Improvements
 
 * We have configured reverse DNS for the outgoing IP addresses of Mendix Cloud v4. A reverse DNS lookup is commonly used by email services to filter out spams.
 
-### November 10th, 2022
+### November 10, 2022
 
 #### Improvements
 
 * We updated the **Virtual Machine Out of Memory** and **Virtual Machine Error** alerts to offer more clarity and visibility into the application behavior. These changes are available after you redeploy your app.
 * We now warn you if you try to set unsupported custom runtime settings. These are settings, mainly related to storage options, which are controlled by the Mendix Cloud deployment and cannot be customized for apps which are deployed to the Mendix Cloud.
 
-### November 1st, 2022
+### November 1, 2022
 
 #### Improvements
 
 * We have enabled DNSSEC for all `*.mendixcloud.com` domains.
 
-### October 20th, 2022
+### October 20, 2022
 
 #### Fix
 
 * We fixed an issue with validation of white spaces in intermediate certificate chains for custom domains. (Tickets 15376, 163961, 165121, 165756, 167669, and 168416)
 
-### October 17th, 2022
+### October 17, 2022
 
 #### Improvements
 
 * We updated our alert template to remove the **Application Server Memory** alert.
 * We added the **Database Freeable Memory** alert with the critical threshold set to 10%.
 
-### September 15th, 2022
+### September 15, 2022
 
 #### Improvements
 
@@ -138,37 +144,37 @@ For information on the current status of deployment to Mendix Cloud and any plan
 
 * We improved the performance of the Developer Portal when selecting which revision to use to build a deployment package from an MDA. (Ticket 163959)
 
-### September 13th, 2022
+### September 13, 2022
 
 #### Improvements
 
 * We updated our alert template to make the alert names more descriptive and transparent. For more information, see [Alerts](/developerportal/operate/monitoring-application-health/).
 
-### August 8th, 2022
+### August 8, 2022
 
 #### Improvements
 
 * We added the AWS Mumbai region as a new deployment target in Mendix Cloud Asia Pacific.
 
-### July 21st, 2022
+### July 21, 2022
 
 #### Improvements
 
 * We have introduced support for runtime application logs to be sent from Mendix Cloud V4 to [Splunk Cloud Platform](/developerportal/operate/splunk-metrics/).
 
-### July 8th, 2022
+### July 8, 2022
 
 #### Improvements
 
 We added the ability to enable and disable additional services at an app and environment level.
 
-### June 29th, 2022
+### June 29, 2022
 
 #### Improvements
 
 **Update of `*.apps.ca-1a.mendixcloud.com` TLS certificate**
 
-We replaced the TLS certificate for `*.apps.ca-1a.mendixcloud.com` on June 29th, 2022. Browsers like Mozilla Firefox, Microsoft Edge, and Google Chrome automatically trust the new certificate. In those cases, there is nothing you have to do.
+We replaced the TLS certificate for `*.apps.ca-1a.mendixcloud.com` on June 29, 2022. Browsers like Mozilla Firefox, Microsoft Edge, and Google Chrome automatically trust the new certificate. In those cases, there is nothing you have to do.
 
 Current Certificate Details: <https://crt.sh/?id=4793020705>
 
@@ -176,25 +182,25 @@ New Certificate Details: <https://crt.sh/?id=6940447552>
 
 **Update of `*.apps.au-1a.mendixcloud.com` TLS certificate**
 
-We replaced the TLS certificate for `*.apps.au-1a.mendixcloud.com` on June 29th, 2022. Browsers like Mozilla Firefox, Microsoft Edge, and Google Chrome automatically trust the new certificate. In those cases, there is nothing you have to do.
+We replaced the TLS certificate for `*.apps.au-1a.mendixcloud.com` on June 29, 2022. Browsers like Mozilla Firefox, Microsoft Edge, and Google Chrome automatically trust the new certificate. In those cases, there is nothing you have to do.
 
 Current Certificate Details: <https://crt.sh/?id=4793020687>
 
 New Certificate Details: <https://crt.sh/?id=6940402070>
 
-### June 15th, 2022
+### June 15, 2022
 
 #### Improvements
 
-* We have enabled a Web Application Firewall (WAF) service for the licensed regions of the Mendix Cloud. See the [release note for March 30th](#waf) for more information over WAF.
+* We have enabled a Web Application Firewall (WAF) service for the licensed regions of the Mendix Cloud. See the [release note for March 30](#waf) for more information over WAF.
 
     | Region | Date Enabled |
     | --- | --- |
-    | Asia Pacific | June 13th |
-    | US and Canada | June 14th |
-    | EU and UK | June 15th |
+    | Asia Pacific | June 13 |
+    | US and Canada | June 14 |
+    | EU and UK | June 15 |
 
-### June 2nd, 2022
+### June 2, 2022
 
 #### Fix
 
@@ -204,19 +210,19 @@ New Certificate Details: <https://crt.sh/?id=6940402070>
 
 * We improved the UX for setting up two-factor authentication.
 
-### May 31st, 2022
+### May 31, 2022
 
 #### Fix – AppDynamics
 
 * We changed the naming format for nodes when using AppDynamics metrics. When the instance is added to the node name, we now use a hyphen instead of an underscore. So `node_1` becomes `node-1`. This is in line with AppDynamics naming conventions.
 
-### May 6th, 2022
+### May 6, 2022
 
 #### Improvements
 
 * We have updated AppDynamics monitoring to provide default values where possible.
 
-### April 22nd, 2022
+### April 22, 2022
 
 #### Improvements
 
@@ -226,17 +232,17 @@ New Certificate Details: <https://crt.sh/?id=6940402070>
 * We have updated the alert order on the [Alerts page](/developerportal/operate/monitoring-application-health/) for better visibility
 * We have made improvements to the email alert subscription service to make it more reliable
 
-### April 21st, 2022
+### April 21, 2022
 
 * We have introduced support for [AppDynamics](/developerportal/operate/appdynamics-metrics/) monitoring in Mendix Cloud V4.
 
-### March 31st, 2022
+### March 31, 2022
 
 #### Improvements
 
-* We now show deactivated users on the [Node Permissions](/developerportal/deploy/node-permissions/) page for consistency with the [Team](/developerportal/collaborate/team/) page.
+* We now show deactivated users on the [Node Permissions](/developerportal/deploy/node-permissions/) page for consistency with the [Team](/developerportal/general/team/) page.
 
-### March 30th, 2022{#waf}
+### March 30, 2022{#waf}
 
 #### Improvements
 
@@ -252,25 +258,25 @@ New Certificate Details: <https://crt.sh/?id=6940402070>
     * Local File Inclusion
     * Log4j remote code execution
 
-### March 3rd, 2022
+### March 3, 2022
 
 #### Fixes
 
 * We fixed an issue where the `start environment` Deploy API error response had an incorrect JSON format. (Ticket 135323)
 
-### March 2nd, 2022
+### March 2, 2022
 
 #### Improvements
 
 * We have adjusted the thresholds for the Application Container Memory Percentage alert. It will now send a warning alert when the memory utilization is above 90% and a critical alert when it is above 95%.
 
-### February 17th, 2022
+### February 17, 2022
 
 #### Fixes
 
 * We removed a misleading message which was displayed when a Free App was unlinked from its environment. (Ticket 140897)
 
-### January 13th, 2022
+### January 13, 2022
 
 #### Fixes
 
@@ -278,7 +284,7 @@ New Certificate Details: <https://crt.sh/?id=6940402070>
 
 ## 2021
 
-### December 23rd, 2021
+### December 23, 2021
 
 #### Improvements
 
@@ -289,7 +295,7 @@ New Certificate Details: <https://crt.sh/?id=6940402070>
 
 * We fixed an issue where uploading a backup file got stuck and could not be completed. (Tickets 134454, 134887, 134898, 135007, 135325, 135359, 135692, 135894, and 137806)
 
-### December 22nd, 2021
+### December 22, 2021
 
 #### Improvements
 
@@ -301,14 +307,14 @@ Current Certificate Details: <https://crt.sh/?id=2349479044>
 
 New Certificate Details: <https://crt.sh/?id=5832398831>
 
-### November 18th, 2021
+### November 18, 2021
 
 #### Fixes
 
 * We fixed an issue with the custom HTTP header Content-Security-Policy to follow RFC and W3C specs during validation. (Tickets 133172)
 * We fixed an issue where a request handler path with '.' would break transport. (Tickets 132865, 133292)
 
-### October 26th, 2021
+### October 26, 2021
 
 #### Improvements
 
@@ -318,13 +324,13 @@ All newly-created applications will have a database running PostgreSQL 13.
 
 Existing applications will be updated in the next few weeks. Technical contacts of these applications will receive timely notifications and, additionally, maintenance information will be visible in the Developer Portal.
 
-### October 7th, 2021
+### October 7, 2021
 
 #### Fixes
 
 * We fixed an issue where users could not see all their backups, and some backups were shown more than once. (Tickets 127908, 128966, 130090, and 130313)
 
-### September 10th, 2021
+### September 10, 2021
 
 #### Improvements
 
@@ -334,7 +340,7 @@ Existing applications will be updated in the next few weeks. Technical contacts 
 
 * In **Mendix Cloud v3** we fixed a problem with viewing the current log in a pop-up. We now display the current log in a new browser tab. 
 
-### August 26th, 2021
+### August 26, 2021
 
 #### Improvements
 
@@ -343,7 +349,7 @@ Existing applications will be updated in the next few weeks. Technical contacts 
     * Through the [Developer Portal](/developerportal/operate/restore-backup/#restore-cloud-backup)
     * Using the [Backups API V2](/apidocs-mxsdk/apidocs/backups-api/)
 
-### August 6th, 2021
+### August 6, 2021
 
 #### Improvements
 
@@ -354,7 +360,7 @@ Existing applications will be updated in the next few weeks. Technical contacts 
 
 * We now prevent you from allocating more memory than is available when [scaling your environment](/developerportal/deploy/scale-environment/) when you have multiple instances, ensuring that deployments do not fail because of a lack of memory. 
 
-### July 23rd, 2021
+### July 23, 2021
 
 #### Improvements
 
@@ -365,13 +371,13 @@ Existing applications will be updated in the next few weeks. Technical contacts 
 * We fixed an issue where custom JSON error descriptions were not returned for REST endpoints. If you have defined custom HTML error pages for your app, they will be disabled for request handlers that typically do not serve HTML content. These include SOAP, OData, and REST endpoints defined in your app.
 * We fixed an issue where the free application environment page showed an app as deployed in Mendix Cloud when it was not.
 
-### July 15th, 2021
+### July 15, 2021
 
 #### Improvements
 
 * Mendix Cloud v4 now supports incoming connections over Internet Protocol version 6 (IPv6).
 
-### July 5th, 2021
+### July 5, 2021
 
 #### Fixes
 
@@ -381,51 +387,51 @@ Existing applications will be updated in the next few weeks. Technical contacts 
 
 * We are deprecating [Version 1 of the Backups API](/apidocs-mxsdk/apidocs/backups-api-v1/). We recommend that you use [Backups API V2](/apidocs-mxsdk/apidocs/backups-api/) which handles long-running backup and restore jobs more robustly.
 
-### June 14th, 2021
+### June 14, 2021
 
 #### Improvements
 
 * We have improved our logging to provide more stability and robustness. This addresses issues faced by customers such as failing log downloads and incomplete log files.
 
-### June 11th, 2021
+### June 11, 2021
 
 #### Mendix Cloud V3 Archived Logs
 
 * We have deleted archived logs older than 6 months for all Mendix Cloud **V3** apps. This is in line with the warning given in the Developer Portal and the current commitment to keep logs for 6 months.
 
-### June 8th, 2021
+### June 8, 2021
 
 #### Improvements
 
 * The [Mendix buildpack](https://github.com/mendix/cf-mendix-buildpack) that is used to run your Mendix application will be automatically updated to the latest version every time your app resumes in Mendix Cloud v4 Free Tier EU.
 
-### May 27th, 2021
+### May 27, 2021
 
 #### Improvements
 
 * We now retain daily backups on Mendix Cloud V4 for 30 days. Previously, it was two weeks.
 
-### May 18th, 2021
+### May 18, 2021
 
 #### Improvements
 
 * Mendix Cloud domains `mendixcloud.com` and `mxapps.io` now use DNSSEC to authenticate DNS lookups. There is nothing that you need to do for this change to take effect. Going forward, all DNS requests to these domains will automatically use DNSSEC.
 
-### May 12th, 2021
+### May 12, 2021
 
 #### Improvements
 
 * Mendix Cloud database backups are now created with `pg_dump` version 1.14. This version is shipped with PostgreSQL since October 2019 (PostgreSQL 12, 13). The side-effect is that it is not possible to restore these PostgreSQL backups using a `pg_restore` version below 1.14 (PostgreSQL <= 11). The error that you will receive is `pg_restore: [archiver] unsupported version (1.14) in file header`. To resolve this issue, upgrade your software to a version that includes newer versions of `pg_dump` and `pg_restore`. Examples are PostgreSQL client version 12 or 13, or [PGAdmin version 4.12 or above](https://www.pgadmin.org/download/).
 
-### April 29th, 2021
+### April 29, 2021
 
 #### Improvements
 
 * We increased the maximum number of instances you can set when [scaling](/developerportal/deploy/environments-details/#scaling) your app to 32. If you need more than 32 instances please contact Mendix Support.
 
-#### Announcement - Internet Protocol Version 6 (IPv6) will be supported for applications in Mendix Cloud v4 from **July 1st, 2021**
+#### Announcement - Internet Protocol Version 6 (IPv6) will be supported for applications in Mendix Cloud v4 from **July 1, 2021**
 
-To improve security and scalability of the connections made to applications in Mendix Cloud v4, **on July 1st, 2021** we will enable support for **Internet Protocol Version 6 (IPv6)** in **Mendix Cloud v4**. This will happen automatically, there is no need to redeploy your app.
+To improve security and scalability of the connections made to applications in Mendix Cloud v4, **on July 1, 2021** we will enable support for **Internet Protocol Version 6 (IPv6)** in **Mendix Cloud v4**. This will happen automatically, there is no need to redeploy your app.
 
 Enabling support for IPv6 means that clients who access your Mendix applications which have configured Access Restriction Profiles may not be able to connect to them when using IPv6.
 
@@ -433,7 +439,7 @@ Enabling support for IPv6 means that clients who access your Mendix applications
 
 We are informing you about this date so that you can plan to update your Access Restriction Profiles and inform users about this change. Technical Contacts of affected apps will also be contacted directly.
 
-You can configure IPv6 ranges before July 1st, but the change will only come into effect on that date. Instructions for setting IP ranges can be found in the [Access Restriction Profiles](/developerportal/deploy/access-restrictions/#ip-ranges) documentation.
+You can configure IPv6 ranges before July 1, but the change will only come into effect on that date. Instructions for setting IP ranges can be found in the [Access Restriction Profiles](/developerportal/deploy/access-restrictions/#ip-ranges) documentation.
 
 **Test your clients**
 
@@ -441,19 +447,19 @@ You can test whether your client (browser or integrating client) is using IPv6, 
 
 **Impact**
 
-Any clients that use IPv6 to connect to applications which have configured Access Restriction Profiles may experience connectivity issues from **July 1st, 2021** onwards.
+Any clients that use IPv6 to connect to applications which have configured Access Restriction Profiles may experience connectivity issues from **July 1, 2021** onwards.
 
-### April 15th, 2021
+### April 15, 2021
 
 #### Fix/Improvement
 
 * We implemented a new `upload` API which allows you to upload large (>300 MB) app packages (.mda files) and still retrieve the package ID. More information is in [Deploy API – Version 2](/apidocs-mxsdk/apidocs/deploy-api-2/). (Tickets 117609 and 117622)
 
-### March 30th, 2021
+### March 30, 2021
 
 * We have implemented various visual changes to the user interface of the Developer Portal.
 
-### March 18th, 2021
+### March 18, 2021
 
 #### Improvements
 
@@ -466,7 +472,7 @@ Any clients that use IPv6 to connect to applications which have configured Acces
 
     As a consequence of this, you will no longer be able to see the log levels of all your [log nodes](/developerportal/deploy/environments-details/#log-levels) if your app is not running. Only log nodes which are not set to `Info` will be visible until you restart your app.
 
-### March 16th, 2021
+### March 16, 2021
 
 * We updated the Mendix runtime to send back usage information to Mendix for your apps deployed to the Mendix Cloud. See below for more information about this change.
 
@@ -491,7 +497,7 @@ Everyone who logs onto the app with a username and password is considered an app
 
 In connected environments, this usage information will be sent back to Mendix automatically, at regular intervals — by default this is set to once every day. This transmission will take place at around(randomized) midnight. Data will also be sent when the app is restarted. 
 
-### March 3rd, 2021
+### March 3, 2021
 
 * We updated the [deploy API](/apidocs-mxsdk/apidocs/deploy-api/), [Build API](/apidocs-mxsdk/apidocs/build-api/), [Team Server API](/apidocs-mxsdk/apidocs/team-server-api/), [Backups API V2](/apidocs-mxsdk/apidocs/backups-api/), and [Backups API V1](/apidocs-mxsdk/apidocs/backups-api-v1/) to:
     * add json validation
@@ -501,7 +507,7 @@ In connected environments, this usage information will be sent back to Mendix au
 
 If you encounter errors using APIs, please ensure that the format matches the documentation exactly before contacting Mendix Support. Additional or amended headers or request bodies may cause the API to fail.
 
-### February 22nd, 2021
+### February 22, 2021
 
 * We have released a major improvement to the technology underpinning our integration with Datadog. This adds the following features:
     * tracing program flow (see https://docs.datadoghq.com/tracing/setup_overview/setup/java for information on how Datadog does this)
@@ -511,7 +517,7 @@ If you encounter errors using APIs, please ensure that the format matches the do
 
 ## 2020
 
-### December 17th, 2020
+### December 17, 2020
 
 * We added the ability to allow customers to test Beta features by adding certain allowed Custom Environment Variables. These can be added like Custom Environment Variables in Mendix Cloud v4 environment, using a text field beside the current dropdown.
 
@@ -519,27 +525,27 @@ If you encounter errors using APIs, please ensure that the format matches the do
 
 * As part of a Developer Portal clean up, we removed the Model option from the DEVELOP section of the Developer Portal menu when you are looking at environments on Mendix Cloud. The functions of this page are still available via the **Edit in Studio Pro** button on the environments page.
 
-### December 8th, 2020
+### December 8, 2020
 
 * We changed the way Log Levels can be set in Mendix Cloud v4.
     * For single-instance apps, the log level can be changed while the app is running.
     * For a multi-instance app, the new log level will only be applied after a restart.
 
-    This is a requested improvement after the release of [December 3rd](#20201203). Note that changes to the log levels are still permanent as announced on December 3rd.
+    This is a requested improvement after the release of [December 3rd](#20201203). Note that changes to the log levels are still permanent as announced on that date.
 
-### December 3rd, 2020 {#20201203}
+### December 3, 2020 {#20201203}
 
 * We added the ability to permanently change the Log Levels in Mendix Cloud v4 for an app so that they persist between restarts. This was in response to customer requests. (Ticket 101413)<br/>Log Levels will only become persistent after the next restart of your app, so you may have to set them one more time.<br/>For more information on log levels, see [Log Levels Tab](/developerportal/deploy/environments-details/#log-levels) in the *Environment Details* documentation.
 * You can now retrieve the version of the buildpack used in deployment via the Deploy API [Retrieve Environment](/apidocs-mxsdk/apidocs/deploy-api/#retrieve-environment) call. The version is returned as `RuntimeLayer`. You will need to redeploy your app to ensure it returns this in the API response.
 
-### November 26th, 2020
+### November 26, 2020
 
 #### Fixes
 
 * We fixed an issue where you could not set the value for a constant which was defined as long to a value greater than the maximum value for an integer.
 * We fixed an issue where the Company Admin could not search through licensed nodes. (Ticket 109742)
 
-### November 5th, 2020
+### November 5, 2020
 
 #### Improvements
 
@@ -549,7 +555,7 @@ If you encounter errors using APIs, please ensure that the format matches the do
 
 * We resolved an issue where an incorrect debugger password was sometimes shown for Mendix Cloud v4 apps in the Developer Portal. This meant that customers were not able to connect to the debugger. (Ticket 105317)
 
-### October 26th, 2020
+### October 26, 2020
 
 #### Fixes
 
@@ -557,7 +563,7 @@ If you encounter errors using APIs, please ensure that the format matches the do
 
     See [Mendix Buildpack Releases](https://github.com/mendix/cf-mendix-buildpack/releases) on *GitHub* for more information.
 
-### October 22nd, 2020
+### October 22, 2020
 
 #### Improvements
 
@@ -567,7 +573,7 @@ If you encounter errors using APIs, please ensure that the format matches the do
 * We added the ability for the Technical Contact to download a list of [node permissions](/developerportal/deploy/node-permissions/) as a CSV to assist with audits
 * We added information about the size of backup files.
 
-### October 5th, 2020
+### October 5, 2020
 
 #### Improvements
 
@@ -575,7 +581,7 @@ If you encounter errors using APIs, please ensure that the format matches the do
     * You can now choose only to build the MDA without deploying to an environment
     * The setting of the target environment (for Technical Contacts only) has been moved from the individual Environment Details pages to the Environments page of the app
 
-### September 22nd, 2020
+### September 22, 2020
 
 #### Improvements
 
@@ -589,7 +595,7 @@ If you encounter errors using APIs, please ensure that the format matches the do
 * We resolved an issue where memory could not be scaled above 16GiB even though 32GiB was available. (Ticket 101035)
 * We resolved an issue where the documentation field was empty when editing a constant in the Developer Portal, even though there was documentation in the model. To see the documentation, you will need to redeploy your app. (Tickets 78758, 78958, 79212, 79359, 92954, 93107, and 100756)
 
-### September 17th, 2020
+### September 17, 2020
 
 #### Improvements
 
@@ -597,7 +603,7 @@ If you encounter errors using APIs, please ensure that the format matches the do
 
 {{% alert color="info" %}}This change will take effect the next time you deploy your application.{{% /alert %}}
 
-### September 15th, 2020
+### September 15, 2020
 
 #### Fixes
 
@@ -605,15 +611,15 @@ If you encounter errors using APIs, please ensure that the format matches the do
 
     {{% alert color="info" %}}You must restart the affected environment to apply this fix.{{% /alert %}} 
 
-### September 14th, 2020
+### September 14, 2020
 
-#### Announcement - Deprecation of HTTPS SSL/TLS weak ciphers from **December 1st, 2020**
+#### Announcement - Deprecation of HTTPS SSL/TLS weak ciphers from **December 1, 2020**
 
 To improve the security of the HTTPS connections made to apps in Mendix Cloud v4 we [enabled TLSv1.3 in February this year](#tls-v1_3). Since then more than 50% of the requests to Cloud v4 apps have been served over TLSv1.3.
 
 To further improve the security of the HTTPS connections to apps in Mendix Cloud v4 we are deprecating and stopping support for block ciphers. Block ciphers are considered weak.
 
-**On December 1st, 2020**, we will stop technical support for **TLSv1.2 Block ciphers (CBC)** for HTTPS connections to apps in **Mendix Cloud v4**.
+**On December 1, 2020**, we will stop technical support for **TLSv1.2 Block ciphers (CBC)** for HTTPS connections to apps in **Mendix Cloud v4**.
 
 **What this means for your Mendix apps**
 
@@ -629,7 +635,7 @@ Some examples of clients which will no longer be supported are:
 
 **What we continue to support (expert details)**
 
-SSL/TLS ciphers that are still supported for HTTPS connections after December 1st, 2020:
+SSL/TLS ciphers that are still supported for HTTPS connections after December 1, 2020:
 
 **TLSv1.3**
 
@@ -645,13 +651,13 @@ SSL/TLS ciphers that are still supported for HTTPS connections after December 1s
 * `TLS_DHE_RSA_WITH_AES_256_GCM_SHA384`
 * `TLS_DHE_RSA_WITH_AES_128_GCM_SHA256`
 
-### September 4th, 2020
+### September 4, 2020
 
 #### Improvements
 
 * We have added *used storage space* to the Database Node Disk Usage graph in Mendix Cloud v4. See [Trends in the Mendix Cloud v4](/developerportal/operate/trends-v4/#Trends-dbdfabs) for more information.
 
-### August 28th, 2020
+### August 28, 2020
 
 #### Fixes
 
@@ -660,7 +666,7 @@ SSL/TLS ciphers that are still supported for HTTPS connections after December 1s
     * We improved the error messages for Mendix Cloud v4 apps that appear when you deploy from Studio Pro with no [Mendix Studios Target](/developerportal/deploy/studio-deployment-settings/#target) set or you do not have sufficient privileges to deploy to the Studios target.
     * We fixed an issue where you were able to log in as a **Demo User** to the Studios target. Please note that in this scenario, you have to clear the Studios target and redeploy to the affected environment. The target can then be set after redeploying. (Ticket 106312)
 
-### August 26th, 2020
+### August 26, 2020
 
 #### Improvements
 
@@ -672,32 +678,32 @@ SSL/TLS ciphers that are still supported for HTTPS connections after December 1s
 
 * We fixed an issue where some customers were unable to manually add certificates to [access restriction profiles](/developerportal/deploy/environments/#asp). (Ticket 102615)
 
-### August 7th, 2020
+### August 7, 2020
 
 #### Fixes
 
 * We fixed an issue where some customers did not receive an SMS for two-factor authentication. (Ticket 104252) 
 
-### July 30th, 2020
+### July 30, 2020
 
 #### Fixes
 
 * We fixed an issue where users did not see changes they made to node permissions. (Tickets 104154 and 104642)
 
-### July 22nd, 2020
+### July 22, 2020
 
 #### Fixes
 
 * We fixed an issue where trends graphs were not being updated with the latest data. (Ticket 102400)
 
-### July 16th, 2020
+### July 16, 2020
 
 #### Improvements
 
 * We added the ability to set the `SameSite` value on cookies to `None` for existing apps. This enables apps to run in iframes in browsers where the default SameSite setting for cookies is `Lax` or `Strict`. (Tickets 97187, 97190, 97699, 97701, 97900, and 98507)
     * This is implemented through the `SAMESITE_COOKIE_PRE_MX812` custom environment variable. For more information see [Running Your App in an Iframe](/developerportal/deploy/environments-details/#iframe) in the *Environment Details* documentation.
 
-### July 8th, 2020
+### July 8, 2020
 
 #### Fixes
 
@@ -706,7 +712,7 @@ SSL/TLS ciphers that are still supported for HTTPS connections after December 1s
     {{% alert color="info" %}}You will still need to change the password of the administrator account for the new role to be assigned to the administrator. See the [User Role](/refguide9/administrator/#user-role) section of *Administrator* for more information{{% /alert %}}
 * We resolved an issue where an incorrect debugger password could be displayed for Mendix Cloud **v4** when the **Show Debugger Information** button was clicked on the Environment Details page. (Ticket 99469)
 
-### July 2nd, 2020
+### July 2, 2020
 
 #### Improvements and Fixes
 
@@ -722,7 +728,7 @@ This value is displayed in the following graphs in Metrics for Mendix Cloud v4:
 
 {{% alert color="warning" %}}You may see a large increase in the size of the unused java heap metric when this change is applied. This is a consequence of the new calculation and not a change in the memory usage of your app.{{% /alert %}}
 
-### June 17th, 2020
+### June 17, 2020
 
 #### Fixes
 
@@ -730,7 +736,7 @@ This value is displayed in the following graphs in Metrics for Mendix Cloud v4:
 * We fixed an issue where some valid certificate authorities could not be uploaded. (Tickets 98150 and 100271)
 * We made some changes to the Mendix Cloud v3 Trends graphs.
 
-### June 16th, 2020
+### June 16, 2020
 
 #### Improvements
 
@@ -738,7 +744,7 @@ This value is displayed in the following graphs in Metrics for Mendix Cloud v4:
     * Database IOPS Burst Balance, based on the graph [Database IOPS Burst Balance](/developerportal/operate/trends-v4/#Trends-dbmxdatabaseburstbalance)
     * Database Freeable Memory, based on the graph [Database Node Operating System Memory](/developerportal/operate/trends-v4/#Trends-dbmemory)
 
-### June 4th, 2020
+### June 4, 2020
 
 #### Improvements
 
@@ -751,19 +757,19 @@ This value is displayed in the following graphs in Metrics for Mendix Cloud v4:
 
     You will need to redeploy your app in order to apply the new ARP(s).
 
-### May 1st, 2020
+### May 1, 2020
 
 #### Improvements
 
 * For [Mendix Cloud Dedicated](https://www.mendix.com/evaluation-guide/app-capabilities/mendix-cloud-overview#mendix-cloud-vpc), we have added the ability to safelist outgoing IP addresses.
 
-### March 17th, 2020
+### March 17, 2020
 
 #### Improvements
 
 * We have updated the environment details and backups screens for Mendix Clouds to show a more precise region, and the location of the secondary backup.
 
-### March 2nd, 2020
+### March 2, 2020
 
 #### Improvements
 
@@ -775,19 +781,19 @@ This value is displayed in the following graphs in Metrics for Mendix Cloud v4:
 * New Deploy API calls have been added. These will be added to the [Deploy API](/apidocs-mxsdk/apidocs/deploy-api/) documentation shortly.
 * You will now be warned that you cannot restore a file-only backup to Mendix Cloud. You can only restore backups which include the database.
 
-### February 27th, 2020{#tls-v1_3}
+### February 27, 2020{#tls-v1_3}
 
 #### TLSv1.3 Support for Mendix Cloud (All Regions)
 
 * Mendix Cloud v4 and Mendix Cloud v3 now support TLSv1.3. TLSv1.3 improves the speed and security of HTTPS connections.
 
-### February 17th, 2020
+### February 17, 2020
 
 #### TLSv1.3 Support for Mendix Cloud v4 Free Tier EU
 
 * We enabled TLSv1.3 support in Mendix Cloud v4 Free Tier EU. TLSv1.3 improves the speed and security of HTTPS connections.
 
-### January 21st, 2020
+### January 21, 2020
 
 #### Fixes
 
@@ -795,7 +801,7 @@ This value is displayed in the following graphs in Metrics for Mendix Cloud v4:
 * We fixed an issue on the page where you select a node to deploy your app, where the app name and the link to the Environments page disappeared.
 * We corrected the text of the welcome email for new cloud environments which gave incorrect instructions for deploying your app. (Ticket 93145)
 
-### January 7th, 2020
+### January 7, 2020
 
 #### Improvements
 
@@ -805,27 +811,27 @@ This value is displayed in the following graphs in Metrics for Mendix Cloud v4:
 
 ## 2019
 
-### December 23rd, 2019
+### December 23, 2019
 
 #### Improvements
 
 * We improved the stability and performance of Mendix Cloud deployment. (Tickets 86800, 92241, 92426)
 
-### November 21st, 2019
+### November 21, 2019
 
 #### Improvements
 
 * We implemented a number of improvements to enable Mendix Support to provide better support if there are deployment issues
 
-### November 7th, 2019{#20201107}
+### November 7, 2019{#20201107}
 
 #### Improvements and Fixes
 
 * We have improved the stability and performance of Mendix Cloud Deployment and Operations.
 
-    * This also resolved the [known issues noted on October 30th](#ki20201030)
+    * This also resolved the [known issues noted on October 30](#ki20201030)
 
-### October 30th, 2019
+### October 30, 2019
 
 #### Improvements
 
@@ -838,19 +844,19 @@ This value is displayed in the following graphs in Metrics for Mendix Cloud v4:
 * In the **Environments** page, when you click the **Details** button for a **Production** environment and successfully complete two-factor authentication you are redirected to the **first** environment listed for your app, *not the Production environment*. (Ticket 90999)
 
     * Workaround – Choose the **Details** for the **Production** environment again and you will be taken to the correct environment.
-    * Resolved by release on [November 7th](#20201107).
+    * Resolved by release on [November 7](#20201107).
 
 * When you attempt to open an **OPERATE** or **DEPLOY** page in the Developer Portal, you may see a login page. You will need to force a refresh of your page, or clear your browser cache, in order to access the page.
 
-    * Resolved by release on [November 7th](#20201107).
+    * Resolved by release on [November 7](#20201107).
 
-### October 1st, 2019
+### October 1, 2019
 
 #### Improvements
 
 * The `X-Client-Certificate` request header has been removed. You can use the `SSL-Client-S-DN` header instead. See [Mendix Cloud HTTP Request Headers](/developerportal/deploy/mendix-cloud-request-headers/) for more information.
 
-### September 27th, 2019
+### September 27, 2019
 
 #### Improvements
 
@@ -878,20 +884,20 @@ If you run services that connect to a `*.mendixcloud.com` endpoint AND use a sta
 * SHA-256 Fingerprint: AE:55:1D:88:32:E1:7E:BF:AB:0D:F3:2F:57:57:C8:98:8D:87:3F:E8:F6:5F:A6:09:82:EA:37:F7:12:25:A5:D3
 * SHA-1 Fingerprint: 5E:4D:05:9B:FE:54:3F:B6:D8:A4:D7:86:7F:3B:50:9A:EE:09:35:8F
 
-### September 5th, 2019
+### September 5, 2019
 
 #### Fixes
 
 * We fixed an issue that caused the wrong Technical Contact information to be shown on the app's *General* page in the Developer Portal. (Ticket 84852)
 * We added a feedback message when you try to restore a backup while the backup is still being created. (Ticket 85786)
 
-### August 23rd, 2019
+### August 23, 2019
 
 #### Improvements
 
 * We improved the performance of the Environments page by reducing the number of remote requests needed.
 
-### July 25th, 2019
+### July 25, 2019
 
 #### Improvements
 
@@ -899,7 +905,7 @@ If you run services that connect to a `*.mendixcloud.com` endpoint AND use a sta
 * We improved the performance of calculating the environment health status.
 * We improved the ability to recover from a failed deployment in the Free App cluster.
 
-### June 27th, 2019
+### June 27, 2019
 
 #### Improvements
 
@@ -913,32 +919,32 @@ If you run services that connect to a `*.mendixcloud.com` endpoint AND use a sta
 * We added appropriate feedback if you try to upload a client certificate which is unsupported because it is not encoded in PEM. (Ticket 82299)
 * We fixed an issue which prevented the offboarding of a single environment if you wanted to retain other environments in the Mendix Cloud node. (Ticket 83189)
 
-### June 15th, 2019
+### June 15, 2019
 
 #### Improvements
 
 * All **HTTP Request Headers** set by the Mendix Cloud which available to app developers are documented in [Mendix Cloud HTTP Request Headers](/developerportal/deploy/mendix-cloud-request-headers/).
 * The `X-Client-Certificate` request header that is currently present is deprecated and will be removed in a later stage. Any application relying on this header must switch to the new `SSL-Client-S-DN` header. See the previously mentioned documentation for more information.
 
-### May 17th, 2019
+### May 17, 2019
 
 #### Fixes
 
 * We made several changes to our maintenance window management to ensure that environments are completely locked during maintenance.
 
-### May 16th, 2019
+### May 16, 2019
 
 #### Improvements
 
 * We redesigned the App User management page of the Developer Portal for Mendix Cloud environments which are enabled for single sign-on (SSO).
 
-### May 9th, 2019
+### May 9, 2019
 
 #### Fixes
 
 * We fixed an issue where the Mendix feedback widget stopped working for apps deployed to Mendix Cloud because of a change to HTTP Headers. (Ticket 83001)
 
-### May 7th, 2019
+### May 7, 2019
 
 #### Improvements
 
@@ -951,19 +957,19 @@ If you run services that connect to a `*.mendixcloud.com` endpoint AND use a sta
 
 * We resolved an issue where some team members were not visible in Node Permissions after an app was relinked (Tickets 70285, 79708, 79824, 80557, 81713, 82591).
 
-### May 3rd, 2019
+### May 3, 2019
 
 #### Improvements
 
 * We released **Free Edition** of Mendix. This removes the limit of 10 named users on Free Apps which are deployed to the Mendix Cloud. To take advantage of the *Free Edition* for an existing app, you need to redeploy your app.
 
-### April 4th, 2019
+### April 4, 2019
 
 #### Fixes
 
 * We have fixed an issue with changing [Node Permissions](/developerportal/deploy/node-permissions/).
 
-### March 29th, 2019
+### March 29, 2019
 
 #### Improvements
 
@@ -979,7 +985,7 @@ If you run services that connect to a `*.mendixcloud.com` endpoint AND use a sta
 
 * We have added the ability to manage tags through the Developer Portal, in addition to the current method which involved using the API
 
-### March 7th, 2019
+### March 7, 2019
 
 #### Fixes
 
@@ -988,7 +994,7 @@ If you run services that connect to a `*.mendixcloud.com` endpoint AND use a sta
 * We have fixed the issue regarding unclear application version numbering when building an MDA packages. The "App latest tag" and "Branch latest tag" have been replaced with "App highest tag" and "Branch highest tag" respectively to represent the values more precisely. (Ticket 78699)
 * We have fixed the issue which meant that license information was displayed incorrectly in the Developer Portal for some Mendix Cloud v3 production environments. (Ticket 78229, 80336)
 
-### February 6th, 2019
+### February 6, 2019
 
 #### Fixes
 
@@ -998,7 +1004,7 @@ If you run services that connect to a `*.mendixcloud.com` endpoint AND use a sta
 * We addressed and solved a problem which meant that some sandboxes could not be resumed after getting stopped.
 * We have fixed the issue that prevented apps with ACS (AppCloudServices) from being deployed using the Web Modeler. (Ticket 76888)
 
-### January 28th, 2019
+### January 28, 2019
 
 #### Improvements{#tls}
 
@@ -1006,7 +1012,7 @@ If you run services that connect to a `*.mendixcloud.com` endpoint AND use a sta
 
 * We have implemented a change on our Mendix Cloud v4 infrastructure so that incoming connections that do not support TLS v1.2 or higher will stop working. This effectively means that TLS v1.0 and v1.1 are disabled, and Mendix Cloud v4 now has an [A+ rating at SSL Labs](https://www.ssllabs.com/ssltest/index.html) again.
 
-### January 3rd, 2019
+### January 3, 2019
 
 #### Fixes
 
@@ -1015,7 +1021,7 @@ If you run services that connect to a `*.mendixcloud.com` endpoint AND use a sta
 
 ## 2018
 
-### December 1st, 2018
+### December 1, 2018
 
 #### Fixes
 
@@ -1024,25 +1030,25 @@ If you run services that connect to a `*.mendixcloud.com` endpoint AND use a sta
 * We fixed a security issue that allowed app team members without deploy access to see application constants. (Ticket 76171)
 * We addressed and fixed an issue that prevented some users from being able to deploy to their environments. (Tickets 77060, 77122)
 
-### November 14th, 2018
+### November 14, 2018
 
 #### Fixes
 
 * We fixed an issue in which [custom error pages](/howto/front-end/custom-error-page/) did not work for online applications in Mendix Cloud v4.
 
-### November 1st, 2018
+### November 1, 2018
 
 #### Fixes
 
 * We fixed an issue that caused an error while creating a backup in Mendix Cloud v4. (Tickets 70086, 70090, 75936, 75996)
 
-### October 30th, 2018
+### October 30, 2018
 
 #### Improvements
 
 * Cloud v3 PostgreSQL backups are now created with `pg_dump` version 1.13. This version has been shipped with PostgreSQL since March 2018 (PostgreSQL 10.3, 9.6.8, 9.5.12, 9.4.17, and 9.3.22). The side-effect is that it is not possible to restore these PostgreSQL backups using a `pg_restore` version below 1.13. The error that you will receive is `pg_restore: [archiver] unsupported version (1.13) in file header`. To fix this issue, upgrade your PostgreSQL client software to one that includes newer versions of `pg_dump` and `pg_restore`.
 
-### October 17th, 2018
+### October 17, 2018
 
 #### Improvements
 
@@ -1054,14 +1060,14 @@ If you run services that connect to a `*.mendixcloud.com` endpoint AND use a sta
 
 * We fixed an issue which caused subdomain validation errors for sandbox environments. (Ticket 56574)
 
-### August 21st, 2018
+### August 21, 2018
 
 #### Fixes
 
 * We have fixed a bug that was causing some Mendix Cloud v4 users to unsubscribe from alerting lists after changing environment privilege settings.
 * We have addressed an issue that caused some Mendix Cloud v4 users to not to be able to see their archived logs from previous day.
 
-### August 13th, 2018
+### August 13, 2018
 
 #### Fixes
 
@@ -1077,13 +1083,13 @@ If you run services that connect to a `*.mendixcloud.com` endpoint AND use a sta
 * The Postgres database size can also be observed in Datadog after enabling it in the Developer Portal.
 * The **Environments** breadcrumb in **Deploy** > **Environments** > environment is now a link that redirects you back to the **Environments** page.
 
-### August 9th, 2018
+### August 9, 2018
 
 #### Improvements
 
 * Alerts are now sent when a Mendix Cloud v3 app or database runs out of system memory.
 
-### August 8th, 2018
+### August 8, 2018
 
 #### Improvements
 
@@ -1091,7 +1097,7 @@ Over the last few months, we have made several improvements to our alerting stac
 
 In some cases, you may still experience false positives for the runtime heartbeat alert. If that happens, you can resolve the problem by doing a transport and then a restart of the app.
 
-### July 23rd, 2018
+### July 23, 2018
 
 #### Improvements
 
@@ -1103,7 +1109,7 @@ In some cases, you may still experience false positives for the runtime heartbea
 * We fixed problems with the uploading, downloading, and restoring of backups with very large databases in Cloud v4.
 * We fixed the problem wherein 404, 403, and 503 responses to a REST call translated to an HTML error page.
 
-### July 17th, 2018
+### July 17, 2018
 
 #### Improvements
 
@@ -1118,19 +1124,19 @@ In some cases, you may still experience false positives for the runtime heartbea
 * You now get a warning if you try to restore a backup into a small environment. (Ticket 63367)
 * Creating a backup via REST API no longer returns error message 500 when it succeeds. (Ticket 65762)
 
-### July 2nd, 2018
+### July 2, 2018
 
 #### Improvements
 
 * We improved the stability of the alerting stack.
 
-### June 26th, 2018
+### June 26, 2018
 
 #### Fixes
 
 * We fixed the bug that allowed users to start an application during a restore.
 
-### June 15th, 2018
+### June 15, 2018
 
 #### Improvements
 
@@ -1142,13 +1148,13 @@ In some cases, you may still experience false positives for the runtime heartbea
 * Retrieving an environment package via REST API is no longer broken. (Tickets 65348, 65370)
 * We reintroduced copy privileges for operations.
 
-### June 11th, 2018
+### June 11, 2018
 
 #### Improvements
 
 * We added alerts for when an application runs out of memory or otherwise unexpectedly crashes. This is only applicable to Mendix Cloud v4 deployments.
 
-### June 8th, 2018
+### June 8, 2018
 
 #### Improvements
 
@@ -1165,13 +1171,13 @@ In some cases, you may still experience false positives for the runtime heartbea
 * We fixed the problem that caused the Mendix Cloud v4 **Metrics** legend to remain on the screen even if the user navigated to a different page.
 * We fixed the health icon statuses of the environments so that they reflect the environment health with minimum delay.
 
-### May 22nd, 2018
+### May 22, 2018
 
 #### Fixes
 
 * We fixed the bug in Mendix Cloud v4 that prevented users from using nested custom domains. Now you can have one domain (for example, `app.example.com`) and one on `microservice.app.example.com`.
 
-### May 5th, 2018
+### May 5, 2018
 
 #### Improvements
 
@@ -1183,26 +1189,26 @@ In some cases, you may still experience false positives for the runtime heartbea
 * We fixed an issue that prevented our Mendix Cloud v4 users from uploading and restoring big backups (larger than ~30 GB) to their environments. It has been tested with the archives (~90 GBs) on Mendix Cloud v4.
 * We addressed and fixed an issue that caused Mendix Cloud v4 users in the Asia Pacific time zone to receive the wrong timestamps when they downloaded daily logs.
 
-### April 9th, 2018
+### April 9, 2018
 
 #### Improvements
 
 * As of today, Mendix Cloud v4 users will be able to create and restore backups of their environments via REST API. Detailed information can be found in the [Deploy API](/apidocs-mxsdk/apidocs/deploy-api/) documentation.
 * The results of **Retrieve Environments** and **Retrieve Environment** REST API calls will now also include the model version and Mendix version information of the applications for which the call is being made.
 
-### March 21st, 2018
+### March 21, 2018
 
 #### Improvements
 
 * Applications in Mendix Cloud v3 that were running for more than 248 days started to use 100% CPU due to an unknown bug in either the Mendix Runtime, the JVM, or a combination thereof. A very small number of applications have been impacted by this, as most applications are updated much more often, and every deployment restarts an application. However, this problem has been causing performance issues for both the affected applications and our infrastructure. As a workaround, we will now automatically restart apps that have been running non-stop for 247 days between 01:00 and 07:00 local time of the cloud region. If this happens to an application, you will see a message in the application log.
 
-### March 20th, 2018
+### March 20, 2018
 
 #### Improvements
 
 * We enabled ICMP (ping) packets for our Mendix Cloud v4 load balancers. Now you can use tools like ping, traceroute, and mtr to debug connectivity issues from your location to Mendix Cloud v4 applications. Note that packets will not reach the actual application but only the load balancers. You can expect latency in the low single-digit milliseconds between the load balancers and applications.
 
-### March 16th, 2018
+### March 16, 2018
 
 #### Fixes
 
@@ -1214,32 +1220,32 @@ In some cases, you may still experience false positives for the runtime heartbea
 * We have improved database storage alerts for Mendix Cloud v4 applications. If you subscribed to your applications' alerts, you will receive a warning alert when you have less than 25% disk space on your applications' databases and a critical alert when disk space is below 10%. You need to re-deploy your application to activate this alert.
 * Live logging for Mendix Cloud v4 applications is here! You can now view logs neatly and in real-time.
 
-### March 13th, 2018
+### March 13, 2018
 
 #### Improvements
 
 * In the Mendix Cloud, we have renewed the SSL/TLS certificates for *.mendixcloud.com*, *.mxapps.io*, and *.mendix.com*.
 
-### March 1st, 2018
+### March 1, 2018
 
 #### Fixes
 
 * Switching between environments in the **Metrics** menu of Mendix Cloud v3 apps is now fixed.
 * We fixed the synchronization problem that prevented Mendix Cloud v3 users from seeing their latest nightly backups.
 
-### February 27th, 2018
+### February 27, 2018
 
 #### Fixes
 
 * When uploading a backup in Mendix Cloud v3, double-clicking the **Restore** button was causing the UI to break. This is now fixed.
 
-### February 23rd, 2018
+### February 23, 2018
 
 #### Improvements
 
 * In Mendix Cloud v4, the native memory usage of applications was very high. This led to crashes and automatic restarts, especially on containers with 1 GB of memory. We activated an advanced memory limiting setting for glibc (`MALLOC_ARENA_MAX`), which will prevent this behavior. The fix will automatically be applied to all apps that are transported and restarted as of today.
 
-### February 22nd, 2018
+### February 22, 2018
 
 #### Improvements
 
@@ -1253,13 +1259,13 @@ In some cases, you may still experience false positives for the runtime heartbea
 * We addressed and fixed an issue where a backup activity item was added each time the backups page was viewed.
 * The environment details list was loading slowly for some of our users, which is now fixed.
 
-### February 19th, 2018
+### February 19, 2018
 
 #### Improvements
 
 * In Mendix Cloud v4, we have enabled logging slow database queries. This is the custom runtime setting `LogMinDurationQuery`, and it is useful for finding performance bottlenecks in your application. The value is set to a default of 10,000 ms, which was also the value on Mendix Cloud v3. You can customize this setting by using the **Runtime** tab on your environment details screen under **Environments**. To start using this feature on a Mendix Cloud environment, transport your deployment package and restart your app.
 
-### January 25th, 2018
+### January 25, 2018
 
 #### Fixes
 
@@ -1276,13 +1282,13 @@ In some cases, you may still experience false positives for the runtime heartbea
 
 ## 2017
 
-### December 29th, 2017
+### December 29, 2017
 
 #### Fixes
 
 * In Mendix Cloud v4, the **archived log** function returned logs from a broader time range than what the user had selected (for example, the logs for one day returned log data from two days). This was fixed.
 
-### December 22nd, 2017
+### December 22, 2017
 
 #### Improvements
 
@@ -1295,26 +1301,26 @@ In some cases, you may still experience false positives for the runtime heartbea
 * We fixed an issue where some Mendix Cloud v3 users were not able to set a specified Java version for environments.
 * Hovering over a Mendix Cloud environment status icon will now give more information about the environment's health.
 
-### December 13th, 2017
+### December 13, 2017
 
 #### Fixes
 
 * The JVM Process Memory graph in Cloud v4 now also show the native memory of the application.
 * The Application Node Operating System Memory graph for Cloud v4 now shows as two lines: total and used. The previous version displayed the total added to the used in a stacked area graph, which was very confusing.
 
-### December 6th, 2017
+### December 6, 2017
 
 #### Fixes
 
 * We addressed an issue that prevents Free Apps from being embedded in an iframe.
 
-### November 27th, 2017
+### November 27, 2017
 
 #### Improvements
 
 * Free App users now have the option to select between Web Modeler and Desktop Modeler for editing their application models.
 
-### November 15th, 2017
+### November 15, 2017
 
 #### Improvements
 
@@ -1323,7 +1329,7 @@ In some cases, you may still experience false positives for the runtime heartbea
 * Mendix Cloud v4 alert status showed `UNKNOWN` sometimes due to an error. This was fixed and the correct status is now shown.
 * In the **Deploy**, **Operate**, and **Backups** pages, you can *finally* use the <kbd>Enter</kbd> key to submit your two-factor authentication code. Happy typing!
 
-### October 20th, 2017
+### October 20, 2017
 
 #### Improvements
 
@@ -1335,13 +1341,13 @@ In some cases, you may still experience false positives for the runtime heartbea
 
 * When creating a deployment package from Team Server, users will now be able to see the revisions that were committed without the Mendix Modeler.
 
-### October 10th, 2017
+### October 10, 2017
 
 #### Improvements
 
 * We removed the backup expiry entries from the activity logs for all applications in the Mendix Cloud, as we found they cluttered the overview and did not provide any useful information to users.
 
-### September 28th, 2017
+### September 28, 2017
 
 #### Improvements
 
@@ -1350,7 +1356,7 @@ In some cases, you may still experience false positives for the runtime heartbea
 * Improved the stability for transporting deployment packages for Asia-Pacific users for Mendix Cloud v4.
 * Environment health indicators for your environments are now much more accurate.
 
-### August 30th, 2017
+### August 30, 2017
 
 #### Improvements
 
@@ -1358,31 +1364,31 @@ In some cases, you may still experience false positives for the runtime heartbea
 * For Mendix Cloud v4, we do no longer show the size of the archived log. The size we displayed previously was wrong.
 * The expiry date for Mendix Cloud backups is now visible in the backup list.
 
-### August 22nd, 2017
+### August 22, 2017
 
 #### Improvements
 
 * Due to various optimizations, the deployment speed for apps in Mendix Cloud v4 EU is now about twice as fast. The latency for FileDocument read/write actions has also improved for all Mendix Cloud v4 regions.
 
-### August 15th, 2017
+### August 15, 2017
 
 #### Improvements
 
 * We enabled path-based access restrictions for all Mendix Cloud v3 apps. This allows users to more easily configure access restrictions on their environments. For more information, see [Access Restrictions](/developerportal/deploy/access-restrictions/). Mendix Cloud v4 already has this functionality enabled.
 
-### August 1st, 2017
+### August 1, 2017
 
 #### Improvements
 
 * For Mendix Cloud v3, Java will be upgraded, including the most recent security updates. The Java KeyStore has also been updated. It contains trusted root certificates for secure outgoing connections from your Mendix app. For example, with the updated Java KeyStore, you are now able to connect to endpoints that use a certificate signed by [Let's Encrypt](https://letsencrypt.org/). Root certificates that are considered unsecure by Oracle and Mozilla have been removed. Your app will automatically start using a newer Java version and KeyStore when you restart the app. For Mendix Cloud v4, we are still planning the rollout of this fix.
 
-### July 31st, 2017
+### July 31, 2017
 
 #### Fixes
 
 * The [Deploy API](/apidocs-mxsdk/apidocs/deploy-api/) for apps in Mendix Cloud v4 contained multiple bugs in the start, stop and transport calls. These are now fixed.
 
-### July 18th, 2017
+### July 18, 2017
 
 #### Improvements
 
@@ -1397,21 +1403,21 @@ In some cases, you may still experience false positives for the runtime heartbea
 * Due to a ZIP file encoding change in Mendix 7.5.0, AppServices could not be parsed when deploying to the Mendix Cloud. We fixed this.
 * The **View Current Log** button is no longer hidden for Free Apps.
 
-### May 19th, 2017
+### May 19, 2017
 
 #### Fixes
 
 * We corrected the backup retention scheme for paid applications on Mendix Cloud v4, and it is now the same as on Mendix Cloud v3.
 * The "view current log" functionality for Mendix Cloud v4 applications was empty by default and the **Show all** button needed to be used. It now shows the content right away.
 
-### May 17th, 2017
+### May 17, 2017
 
 #### Improvements
 
 * We upgraded the SSL/TLS ciphers for connections to apps in Mendix Cloud v4. These included dropping block-based ciphers (3DES), moving to 2048 bit DH params. Mendix Cloud v4 now has an [A+ rating at SSL Labs](https://www.ssllabs.com/ssltest/index.html).
 * We added HTTP/2 support for connections to all apps in Mendix Cloud v3 and Mendix Cloud v4. HTTP/2 is supported by all major browsers and results in more efficient network connections. [Read more about HTTP/2 here](https://http2.github.io/faq/).
 
-### May 4th, 2017
+### May 4, 2017
 
 #### Improvements
 
@@ -1425,7 +1431,7 @@ In some cases, you may still experience false positives for the runtime heartbea
 * Added a warning message before restore backup, to prevent users clearing their environment. Clearing the environment before restoring resulted in a much slower non-incremental restore operation.
 * Disabled automatic copying of "Data Snapshots" to empty environments in Mendix Cloud v4 Pro/Enterprise environments. This features is only used in Free Apps. Weak admin passwords in the database snapshot would prevent the app from starting.
 
-### April 1st, 2017
+### April 1, 2017
 
 #### Improvements
 
@@ -1439,25 +1445,25 @@ In some cases, you may still experience false positives for the runtime heartbea
 * We fixed an issue where the log viewer for Free Apps did not escape HTML, so if the application logged plain HTML, it was interpreted in the browser.
 * We fixed an issue where simultaneous snapshot restore jobs from the same environment to two others could lock one of the environments.
 
-### March 20th, 2017
+### March 20, 2017
 
 #### Fixes
 
-* The Deploy / Operate sections in the Platform Portal were broken on Internet Explorer 11 due to widget incompatibility, introduced in the previous release. This was already hot-patched in production on March 16th.
+* The Deploy / Operate sections in the Platform Portal were broken on Internet Explorer 11 due to widget incompatibility, introduced in the previous release. This was already hot-patched in production on March 16.
 
-### March 13th, 2017
+### March 13, 2017
 
 #### Fixes
 
 * Clicking **Operate -> Backups** resulted in errors for a Free App. This has been fixed.
 
-### March 10th, 2017
+### March 10, 2017
 
 #### Improvements
 
 * We introduced a new setting in **Node Security**, you can now configure **Monitoring Permissions** separately from **Transport Permissions**. Immediately after this change, we granted all users that had **Transport Permissions** on an environment the **Monitoring Permissions** there as well. From now on, a **Technical Contact** can configure these settings for everyone in the team separately. While we introduced this setting, we revisited the layout of the **Node Security** screen, you now have a simpler interface to change the permissions for each environment.
 
-### February 20th, 2017
+### February 20, 2017
 
 #### Improvements
 

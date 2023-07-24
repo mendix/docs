@@ -47,7 +47,7 @@ The OIDC Provider has the following features and limitations:
 **Limitations**
 
 * The hybrid resource owner password credentials, and client credential grants are not supported, although the OIDC Provider may contain some (rudimentary) implementation to support them.
-* The OIDC Provider module ignores "email", "phone" and "profile" scope values (as specified by OIDC specs) when the client includes these in a authentication request . Instead, the OIDC Provider module will include user claims in an ID-token based on a custom microflow, regardless of the scopes in the request.
+* The OIDC Provider module ignores "email", "phone" and "profile" scope values (as specified by OIDC specs) when the client includes these in an authentication request . Instead, the OIDC Provider module will include user claims in an ID-token based on a custom microflow, regardless of the scopes in the request.
 * Front channel and back-channel logout are implemented as alpha features.
 
 ### 1.3 Dependencies
@@ -232,7 +232,7 @@ The scopes you configure are not added automatically to the “scopes_supported�
     Modify the `OpenIDConnectProvider.SUB_CustomScope` microflow to assign the scope value (user role) based on your authorization business logic. You would typically use the following inputs to decide whether to return a requested scope:
 
     * `RegisteredClient` – this identifies the client app that sends the login request and associated user role/scope request 
-    * `Account` – defines the the user who tries login
+    * `Account` – defines the user who tries login
     * `AllowedScopeList` – the scopes associated with the client in the OIDC Provider
     * `scopesListFromRequest` – the scopes/user roles which the client requests
      

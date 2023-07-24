@@ -11,5 +11,3 @@ This section explores how you can use Catalog and Studio Pro to create apps with
 
 * [Share Data Between Apps](/catalog/share-data/)
 * [Write Data to Another App](/catalog/write-data/)
-
-

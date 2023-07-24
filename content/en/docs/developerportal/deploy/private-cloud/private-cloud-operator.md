@@ -43,9 +43,9 @@ You can obtain the deployment package in a number of ways:
 
 The deployment package must be available over the internet without requiring authorization credentials, as these cannot be provided in the CR.
 
-### 3.2 Editing the CR{#edit-cr}
+### 3.2 Editing the CR {#edit-cr}
 
-You need to create a file containing the following yml code and then configure it to create the CR for your app:
+You need to create a file containing yml code and then configure it to create the CR for your app. Below is an example which can be used a reference purpose to create a mendix CR yaml file. Adapt this example as required for your own application.
 
 ```yml
 apiVersion: privatecloud.mendix.com/v1alpha1
@@ -136,7 +136,7 @@ spec:
         value: -Dhttp.proxyHost=10.0.0.100 -Dhttp.proxyPort=8080 -Dhttps.proxyHost=10.0.0.100 -Dhttps.proxyPort=8443 -Dhttp.nonProxyHosts="localhost|host.example.com"
     clientCertificates: # Optional, can be omitted : set client certificates for TLS authentication
       - key: Q0VSVElGSUNBVEU= # base64-encoded PKCS12 certificate
-        password: # base64-encoded password for the certificate, cannot be empty
+        password: Q2hhbmdlLW1lNDI= # base64-encoded password for the certificate, cannot be empty
         pinTo: # Optional, list of web services or domain names where this certificate should be used
         - "www.example.com"
         - "service.www.example.com"

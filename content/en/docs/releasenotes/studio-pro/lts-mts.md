@@ -9,13 +9,13 @@ weight: 1
 
 The goal of this document is to clarify Mendix Studio Pro version options and help you decide which version to run your applications on.
 
-To understand the different types of versions and releases, consider the example of Studio Pro version  [8.18.1](/releasenotes/studio-pro/8.18/#8181) and see the sections below.
+To understand the different types of versions and releases, consider the example of Studio Pro version [9.24.1](/releasenotes/studio-pro/9.24/#9241) and see the sections below.
 
 ### 1.1 Major Version {#major-version}
 
-In the 8.18.1 example, the first number (**8**) indicates the major version.
+In the 9.24.1 example, the first number (**9**) indicates the major version.
 
-Mendix supports three major versions at a time. To clarify our current offering and in relation to our SLA, today Mendix supports major versions 7, 8, and 9. Once version 10 has been released, version 7 will only be supported via the Extended Support product.
+Mendix supports three major versions at a time. To clarify our current offering and in relation to our SLA, today Mendix supports major versions 8, 9, and 10. Version 7 is only supported via the Extended Support product.
 
 As of Mendix 10, to make planning version upgrades easier for our users, Mendix will release in a two-year cadence, which means that every two years we plan to release a new major version in June. This will help in preparing and planning to adopt new releases and upgrade older Mendix versions. Each major version release will start with two Beta releases.
 
@@ -37,13 +37,13 @@ For Mendix 10 and 11, we are planning to follow this release timeline:
 
 ### 1.2 Minor Version
 
-In the 8.18.1 example, the second number (**18**) indicates the minor version. 
+In the 9.24.1 example, the second number (**18**) indicates the minor version. 
 
 A minor version is generally released every month. It includes new features and fixes, but it does not include breaking changes.
 
 ### 1.3 Patch Version {#patch-version}
 
-In the 8.18.1 example, the third number (**1**) indicates the patch version. 
+In the 9.24.1 example, the third number (**1**) indicates the patch version. 
 
 A patch version is released on an as-needed basis. It includes security fixes and critical bug fixes, but it does not include new features or breaking changes (unless these address security issues).
 
@@ -55,7 +55,6 @@ These are the current LTS versions of Studio Pro:
 
 * [9.24](/releasenotes/studio-pro/9.24/) (started in March, 2023)
 * [8.18](/releasenotes/studio-pro/8.18/) (started in March, 2021)
-* [7.23](/releasenotes/studio-pro/7.23/) (started in February, 2019)
 
 Mendix advises using LTS versions for all production apps, as LTS versions of Studio Pro enjoy the highest security and stability. LTS versions also have the longest support duration compared to other versions.
 
@@ -87,11 +86,7 @@ The impact of upgrading from an LTS to an LTS is often the lowest of these optio
 
 An MTS is a minor version released approximately every 6 months after a new major version release for General Availability.
 
-These are the current MTS versions for Studio Pro:
-
-* [9.18](/releasenotes/studio-pro/9.18/) (started in September, 2022)
-* [9.12](/releasenotes/studio-pro/9.12/) (started in March, 2022)
-* [9.6](/releasenotes/studio-pro/9.6/) (started in September, 2021)
+The next MTS version for Studio Pro will be 10.6, due to be released in December, 2023.
 
 {{% alert color="info" %}}
 Older MTS versions (for example, 9.6) remain supported until the next major version has been released for General Availability (for example, 10).
@@ -117,7 +112,7 @@ The impact of upgrading between MTS versions is higher than upgrading between LT
 
 ## 4 Monthly Release Version {#patch}
 
-A monthly release is a a non-MTS/LTS minor release that only receives patches for critical/security issues if they can be released earlier and faster than the next minor version release.
+A monthly release is a non-MTS/LTS minor release that only receives patches for critical/security issues if they can be released earlier and faster than the next minor version release.
 
 ### 4.1 Support Duration
 

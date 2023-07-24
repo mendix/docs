@@ -17,10 +17,12 @@ The **Snippet call** widget allows you to use a [snippet](/refguide/snippet/) on
 The properties pane is divided into two major sections by a toggle at the top of the pane: **Properties** and **Styling**. Snippet call properties consist of the following sections:
 
 Properties:
+
 * [General](#general)
 * [Common](#common)
 
 Styling:
+
 * [Design Properties](#design-properties)
 * [Common](#common)
 

@@ -22,7 +22,7 @@ The Mendix Platform consists of the following components:
 * Mendix Platform – a completely integrated application platform-as-a-service (aPaaS) for designing, building, deploying, and managing apps
 * Developer Portal – a web-based collaborative environment for designing, developing, and deploying apps, managing users and environments, deploying apps to the cloud with a single click, and managing and monitoring their performance
 * Marketplace – a portal with hundreds of publicly-available building blocks to speed up app development
-* Mendix Studio and Studio Pro – multi-user modeling studios of the Mendix Platform
+* Mendix Studio Pro – multi-user modeling studio of the Mendix Platform
 * Team Server – a central repository for managing application model versions
 * Mendix Runtime – runs applications using a server part (the [Runtime Server](/refguide8/runtime-server/)) and a client part ([Mendix Client](/refguide8/mendix-client/))
 * Build – a process which creates deployment packages from artifacts such as models, style sheets, and custom Java classes
@@ -40,7 +40,7 @@ Communication between these components operates as follows:
     * Static resources like pages, stylesheets, widgets, images, etc.
     * Application data-related communication, which includes CRUD commands on data and logic that may require data
 * The Runtime Server communicates with different RDBMSs using SQL statements handled by a JDBC library
-    * Application data is stored in a ER-model in an RDBMS
+    * Application data is stored in an ER-model in an RDBMS
 
 ## 3 Basic CRUD Communication Pattern
 

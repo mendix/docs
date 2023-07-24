@@ -18,10 +18,6 @@ The main *difference* between an add-on and a solution module is their purpose. 
 
 Solution modules are *always part of a solution* – any Mendix app that is suitable to be sold to multiple different customers. Solution modules are dependent on each other and are inseparable. Solutions modules form the **solution core** of the solution. 
 
-{{% alert color="info" %}}
-Add-on and solution modules are not supported in Mendix Studio.
-{{% /alert %}}
-
 ## 2 Configuring Add-on and Solution Modules
 
 You can mark a standard module (app module) as an add-on or solution module at any time, but we recommend to do so right-away when you start developing. We also recommend changing the module version for add-on and solution modules every time you make changes to them. 

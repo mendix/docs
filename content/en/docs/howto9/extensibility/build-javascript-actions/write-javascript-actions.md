@@ -112,7 +112,7 @@ To create a JavaScript action that can synthesize text to speech, follow these s
                 resolve(true);
             };
             utterance.onerror = function(event) {
-                reject("An error occured during playback: " + event.error);
+                reject("An error occurred during playback: " + event.error);
             };
             window.speechSynthesis.speak(utterance);
         });

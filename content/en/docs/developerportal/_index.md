@@ -54,7 +54,7 @@ You can then access the following parts of the Mendix Platform:
 
 You can also quickly access specific [Recent Apps](#my-apps) you have used.
 
-Click [Company Buzz](/developerportal/collaborate/buzz/) to communicate with colleagues, team members, stakeholders, and any other Mendix users in your company.
+Click [Company Buzz](/developerportal/general/buzz/) to communicate with colleagues, team members, stakeholders, and any other Mendix users in your company.
 
 Click [Company Apps](/developerportal/#my-company-apps) to see all the apps created by members of your company.
 
@@ -66,9 +66,9 @@ The **My Apps** page shows you a summary of your apps:
 
 {{< figure src="/attachments/developerportal/app-tiles.png" alt="Apps tiles" >}}
 
-**All** displays all the apps for which you are a [Team](/developerportal/collaborate/team/) member. Any apps you pin with the pin icon will appear in the **Pinned** tab. 
+**All** displays all the apps for which you are a [Team](/developerportal/general/team/) member. Any apps you pin with the pin icon will appear in the **Pinned** tab. 
 
-Click an app tile to see the app [Buzz](/developerportal/collaborate/buzz/).
+Click an app tile to see the app [Buzz](/developerportal/general/buzz/).
 
 Using the drop-down menu, you can choose to sort the apps in the following ways:
 
@@ -77,7 +77,7 @@ Using the drop-down menu, you can choose to sort the apps in the following ways:
 
 By clicking the ellipsis (**…**) in the app tile, you can quickly perform a number of actions:
 
-{{< figure src="/attachments/developerportal/quick-action-menu.png" alt="Quick actions menu for an app" >}}
+{{< figure src="/attachments/developerportal/quick-action-menu.png" alt="Quick actions menu for an app" width="50%" >}}
 
 The actions available depend on the app selected:
 
@@ -100,11 +100,11 @@ On the **My Company's Apps** page, you will see all the apps created by members 
 
 You can also sort the order of the apps here.
 
-If you click an app for which you are a team member, you will be taken to the app [Buzz](/developerportal/collaborate/buzz/).
+If you click an app for which you are a team member, you will be taken to the app [Buzz](/developerportal/general/buzz/).
 
 If you click an app for which you are not an team member, you will see the app details.
 
-For details on **Company Buzz**, see the [Company Buzz](/developerportal/collaborate/buzz/#company-buzz) section of *Buzz*.
+For details on **Company Buzz**, see the [Company Buzz](/developerportal/general/buzz/#company-buzz) section of *Buzz*.
 
 ## 5 Getting Assistance
 

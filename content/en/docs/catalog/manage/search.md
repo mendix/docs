@@ -11,7 +11,7 @@ aliases:
 
 ## 1 Introduction
 
-Finding the right data to use in your app development is made easier using the search functionality in the Catalog. The details of registered data assets can be accessed using the [Search API](/apidocs-mxsdk/apidocs/catalog-apis/), or viewed in the [Asset details](#search-details) screen of the Catalog or the [Data Hub pane](/refguide/data-hub-pane/) in Studio Pro.  This document describes how you can search in Catalog.
+Finding the right data to use in your app development is made easier using the search functionality in the Catalog. The details of registered data assets can be accessed using the [Search API](/apidocs-mxsdk/apidocs/catalog-apis/), or viewed in the [Asset details](#search-details) screen of the Catalog or the [Integration Pane](/refguide/integration-pane/) in Studio Pro.  This document describes how you can search in Catalog.
 
 ## 2 Search Using the API {#search-api}
 
@@ -263,7 +263,7 @@ When searching in the Catalog, the following fields are searched:
 * Attribute: Name, Description
 * Association: Name
 
-From the **Home** page, you can search the Catalog in the following ways:
+From the **Catalog** home page, you can search the Catalog in the following ways:
 
 * Type a search term in the search box and click **Search** (search strings must be at least 3 alphanumeric characters)
 * Click one of the *tags* given in the search suggestions
@@ -280,7 +280,7 @@ The **Search** screen is divided into the [search](#search-pane) pane on the lef
 
 The collapsible **Search** pane is used to search for registered assets in the Catalog:
 
-{{< figure src="/attachments/data-hub/data-hub-catalog/search/search-pane.png" alt="search pane"   width="300"  >}}
+{{< figure src="/attachments/catalog/search/search-pane.png" alt="search pane"   width="300"  >}}
 
 #### 3.4.1 Specifying the Search
 
@@ -365,7 +365,7 @@ The **Attributes** tab lists the attributes that are exposed for the dataset in 
 
 Under the **Associations** tab for each dataset, the associations are displayed:
 
-{{< figure src="/attachments/data-hub/data-hub-catalog/search/attributes-associations.png" alt="associations info" >}}
+{{< figure src="/attachments/catalog/search/attributes-associations.png" alt="associations info" >}}
 
 * **Name** – the name of the association that is exposed in the OData service contract.
 * **Navigates to** – the dataset the association is made with. Click the link to see the details of the associated dataset in the Catalog.
@@ -374,7 +374,7 @@ Under the **Associations** tab for each dataset, the associations are displayed:
 
 The metadata panel at the right of the asset details screen displays details from the OData service metadata contract and values that have been curated in the Catalog:
 
-{{< figure src="/attachments/data-hub/data-hub-catalog/search/metadata.png" alt="metadata pane"   width="300"  >}}
+{{< figure src="/attachments/catalog/search/metadata.png" alt="metadata pane"   width="300"  >}}
 
 #### 3.6.1 Tags
 
@@ -401,7 +401,7 @@ See the [Curation Bar](#curation-bar) section below for changing **Discoverabili
 The following discoverability values can be set:
 
 * **Discoverable** – all users in your company can see and consume the asset in the Catalog and Studio Pro 
-* **Non-Discoverable** – the asset is only visible to owners, curators, and the Mendix Admin in the Catalog; it is not included in the search results in the [Data Hub pane](/refguide/data-hub-pane/) of Studio Pro, or any other client of the Catalog API.
+* **Non-Discoverable** – the asset is only visible to owners, curators, and the Mendix Admin in the Catalog; it is not included in the search results in the [Integration Pane](/refguide/integration-pane/) of Studio Pro, or any other client of the Catalog API.
 
 #### 3.6.5 Validated
 
@@ -439,7 +439,7 @@ The resulting ZIP file is named `DataHub_<service_name>_<service_version>_<techn
 
 Here is an example:
 
-{{< figure src="/attachments/data-hub/data-hub-catalog/search/download_example.png" alt="download example" >}}
+{{< figure src="/attachments/catalog/search/download_example.png" alt="download example" >}}
 
 When you click **Download**, the following file is downloaded: `DataHub_SAP_Intelligence_1.0_OData4.zip`. This ZIP file has the folder `DataHub_SAP_Intelligence_1.0_OData4`, which contains the all the metadata files that define the service.
 

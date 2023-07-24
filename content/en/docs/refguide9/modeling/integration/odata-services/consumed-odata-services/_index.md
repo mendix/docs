@@ -2,7 +2,7 @@
 title: "Consumed OData Services"
 url: /refguide9/consumed-odata-services/
 weight: 5
-description: "Overview of consumed OData services for Studios"
+description: "Overview of consumed OData services for Studio Pro"
 tags: ["studio pro"]
 ---
 

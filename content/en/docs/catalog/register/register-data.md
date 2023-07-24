@@ -65,7 +65,7 @@ Once you have a personal access token, follow this series of REST calls to regis
 
     If your service contract is not in the right format, use the [Transform API](#transform-api) (an endpoint of the Registration API) to get your service contract in the right format before registering them.
 
-The [Data Hub Registration API specification](https://datahub-spec.s3.eu-central-1.amazonaws.com/registration_v4.html) describes all the optional fields, required formats, other operations on these same paths. You will only fill out the required fields and one operation per path in this how-to. 
+The [Registration API specification](https://datahub-spec.s3.eu-central-1.amazonaws.com/registration_v4.html) describes all the optional fields, required formats, other operations on these same paths. You will only fill out the required fields and one operation per path in this how-to. 
 
 #### 4.1.1 Registering an Application Through the Catalog Registration API {#register-application}
 
@@ -326,7 +326,7 @@ Follow the steps below:
 
 Congratulations! Your OData service is registered in the Catalog. 
 
-The discoverable status of the OData service defaults to the value set by the Mendix Admin. For more details, see the [Settings](/developerportal/control-center/data-hub-admin/#settings) section of *Data Hub Administration*.
+The discoverable status of the OData service defaults to the value set by the Mendix Admin. For more details, see the [Settings](/developerportal/control-center/catalog-admin/#settings) section of *Catalog Administration*.
 
 #### 4.2.1 Selecting an Authentication Method {#authentication}
 
@@ -357,4 +357,4 @@ Folders in a ZIP contract are relative to the Document Base URL.
 
 See the ZIP structure example for reference:
 
-{{< figure src="/attachments/data-hub/data-hub-catalog/register-data/zip-file-structure.png" >}}
+{{< figure src="/attachments/catalog/register-data/zip-file-structure.png" >}}

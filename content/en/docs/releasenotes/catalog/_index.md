@@ -17,7 +17,7 @@ These release notes cover changes made to the [Catalog](/catalog/).
 
 #### Fixes
 
-* We fixed an issue where Datasets sometimes disappeared from an endpoint.
+* We fixed an issue where datasets sometimes disappeared from an endpoint.
 
 ### July 6, 2023
 

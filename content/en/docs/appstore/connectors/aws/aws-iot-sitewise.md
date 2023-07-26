@@ -118,7 +118,7 @@ An enumeration is a predefined list of values that can be used as an attribute t
 
 Activities define the actions that are executed in a microflow or a nanoflow. For the AWS IoT SiteWise connector, they {PURPOSE OF THE ACTIVITIES}.
 
-#### 4.3.1 {ACTIVITY NAME}
+#### 4.3.1 ListAssetModels
 
 The `{ACTIVITYNAME}` {AWS SERVICE NAME} activity allows you to {ACTIVITY PURPOSE}. It requires {REQUIRED PARAMETERS}. {OPTIONAL, IF THE ACTIVITY HAS NO OUTPUT: "This activity has no return value.
 "}

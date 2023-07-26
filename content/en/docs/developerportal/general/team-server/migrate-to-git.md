@@ -47,7 +47,7 @@ Deleted SVN branches are not mapped to Git branches by the migration process. If
 
 Access to SVN is disabled as soon as migration starts to prevent developers from making changes to SVN that will not be copied. If migration fails for any reason, it is rolled back and access to SVN is restored.
 
-To inform your team members about the process, several emails are sent out automatically :
+To inform your team members about the process, two emails are sent out automatically:
 
 * Migration started
 * Migration completed or migration failed
@@ -64,7 +64,7 @@ Inform your team members that they should commit their changes before migration.
 
 After migration, existing local copies are no longer linked to a working version control system. To be able to work on your app and store your changes in the version control system, you need to check out (re-download) the app from Team Server. Do the following:
 
-1. Open Studio Pro, select the app that was migrated to Git (you can identify it by a Git icon), and click **Open** in Studio Pro to download the Git version of your app. Once this is completed you can make changes and store them in version control system.
+1. Open Studio Pro, select the app that was migrated to Git. You can identify it by a Git icon. Click **Open** in Studio Pro to download the Git version of your app. Once this is completed you can make changes and store them in version control.
 
 2. Remove previous local copies of the app to avoid working on the wrong app version.
 

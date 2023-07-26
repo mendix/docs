@@ -8,9 +8,9 @@ tags: ["marketplace", "marketplace component", "data grid", "platform support"]
 
 ## 1 Introduction
 
-[Data Grid 2](https://marketplace.mendix.com/link/component/116540) is the successor to the standard data grid widget for displaying content in a tabular form. It comes with many powerful new features and settings like support for widgets, row and cell coloring, responsive layout, accessibility, and paging options like virtual scrolling. 
+[Data Grid 2](https://marketplace.mendix.com/link/component/116540) is the successor to the standard data grid widget for displaying content in a tabular form. It comes with many powerful new features and settings like support for widgets, row and cell coloring, responsive layout, accessibility, and paging options like virtual scrolling.
 
-The Data Grid 2 module offers personalization support so that end-users can show, hide, and re-order columns. Personalizations can be persisted in the database for flexibility and control. 
+The Data Grid 2 module offers personalization support so that end-users can show, hide, and re-order columns. Personalizations can be persisted in the database for flexibility and control.
 
 The module also uses a flexible approach for filtering. You can drag data-grid-specific widgets into the header of the grid and tailor the behavior of the filters. There are filters for text, numbers, and dates, and there is an option to add drop-down filters for single or multiple selections.
 
@@ -67,7 +67,7 @@ Here is an example of hiding button containing columns to be hidden:
 {{< figure src="/attachments/appstore/modules/data-widgets/data-grid-2/hiding.png" alt="Example of hiding button containing columns to be hidden" >}}
 
 {{% alert color="info" %}}
-When a column is marked as “Yes, hidden by default” it will render differently in **Structure mode** and **Design mode** and to indicate that the column is hidden. **When running the application, the column will in fact be hidden by default**. 
+When a column is marked as “Yes, hidden by default” it will render differently in **Structure mode** and **Design mode** and to indicate that the column is hidden. **When running the application, the column will in fact be hidden by default**.
 {{% /alert %}}
 
 Here is an example containing a column with **Yes, hidden by default** in **Structure mode**:
@@ -92,7 +92,7 @@ The **Paging Buttons** option will render the default buttons as the previous da
 
 {{< figure src="/attachments/appstore/modules/data-widgets/data-grid-2/paging-buttons.png" alt="Example of paging buttons" >}}
 
-### 3.2 Virtual Scrolling 
+### 3.2 Virtual Scrolling
 
 The **Virtual Scrolling** option forces the data grid to show a fixed amount of items (defined in the page size option) within a scrollable container. When the end-user reaches the bottom of the scrollable container it fetches more items automatically.
 
@@ -301,6 +301,8 @@ This widget also allows multiple selections by selecting **Multiselect** in the 
 
 {{< figure src="/attachments/appstore/modules/data-widgets/data-grid-2/dropdown-filter-multiselect.png" alt="Example of multi select drop-down filter" >}}
 
+With **Multiselect** enabled, the user's selections are lost when moving between pages, differently from Data Grid 1, which maintains selections when paging.
+
 You can also define the empty option caption, which will be rendered as the first item if **Multiselect** if set as **No**. It allows users to clean the filter if pressed.
 
 #### 7.2.1 Configurations
@@ -457,8 +459,8 @@ The performance of the new data grid can be affected if sorting or filtering are
 If you are using Atlas v2.x and you cannot upgrade to Atlas 3 at the moment, please replace the line 3 `cssFiles` with the following code in the file `theme/settings.json`:
 
 ```json
-"cssFiles": [ 
-    "styles/web/css/main.css", 
-    "theme.compiled.css" 
+"cssFiles": [
+    "styles/web/css/main.css",
+    "theme.compiled.css"
 ],
 ```

@@ -123,6 +123,7 @@ Please be aware of the following limitation affecting synchronization:
     * An entity that is not used in offline.
     * An entity that is configured with a synchronization mode other than **Never**.
 * Deleted objects configured with **Never** will be ignored during Startup Synchronization, [Synchronize all Objects](/refguide/synchronize/#all-objects), or [Synchronize Unsynchronized Objects](/refguide/synchronize/#unsynchronized-objects).
+* If the offline database is reset (for example, because of a domain model change), all offline objects of entities configured with **Never** will be removed. To avoid data loss, only use the synchronization mode **Never** for objects you can recreate.
 
 ### 2.6 Error Handling {#error-handling}
 

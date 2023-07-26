@@ -98,36 +98,133 @@ To help you work with the AWS IoT SiteWise connector, the following sections of 
 
 The domain model is a data model that describes the information in your application domain in an abstract way. For more information, see [Domain Model](/refguide/domain-model/).
 
-The entities in the table below describe all generalizations. These are reused by the different models for the specific microflow activities or for storing connection details.
+NOT ALL ARE GENERALIZATIONS! -> The entities in the table below describe all generalizations. These are reused by the different models for the specific microflow activities or for storing connection details.
 
-| Name | Description |
+### 4.1.1 ListAssetModelsRequest {#listassetmodelsrequest}
+
+| Attribute | Description |
 | --- | --- |
-| {ENTITY NAME} | {ENTITY DESCRIPTION} |
+| MaxResults | Describes the maximum number of asset models returned in the response. By default it is set to 50 and can return a maximum of 250 asset models. |
+| NextToken | Describes to the Amazon IoT SiteWise service that the list is being continued on with a token |
+
+### 4.1.2 ListAssetModelsResponse {#listassetmodelsresponse}
+
+| Attribute | Description |
+| --- | --- |
+| NextToken | Describes whether there are more asset models in the region that can be listed. The next list requests to Amazon IoT SiteWise can be continued with this `NextToken`. |
+
+### 4.1.3  AssetModelSummary {#assetmodelsummary}
+
+| Attribute | Description |
+| --- | --- |
+| ARN | The ARN (Amazon Resource Name)  of the asset model |
+| CreationDate | The creation date of the asset model |
+| Description | The description of the asset model |
+| AssetModelID | The asset model ID of the asset model |
+| LastUpdateDate | The last update date of the asset model |
+| Name | The name of the asset model |
+
+### 4.1.4 AssetModelStatus {#assetmodelstatus}
+
+| Attribute | Description |
+| --- | --- |
+| N/A | The object does not contain any attributes, but it inherits from the `AbstractAssetModelStatus` entity |
+
+### 4.1.5 AbstractAssetModelStatus {#abstractassetmodelstatus}
+
+| Attribute | Description |
+| --- | --- |
+| State | The current status state of the asset model |
+
+### 4.1.6 ErrorDetails {#errordetails}
+
+| Attribute | Description |
+| --- | --- |
+| Code | The error code |
+| Message | The error message |
+
+### 4.1.7 DetailedError {#detailederror}
+
+| Attribute | Description |
+| --- | --- |
+| Code | The error code |
+| Message | The error message |
+
+### 4.1. ENTITY_NAME {#entity_name}
+
+| Attribute | Description |
+| --- | --- |
+| {Attribute NAME} | {Attribute DESCRIPTION} |
 
 ### 4.2 Enumerations
 
-An enumeration is a predefined list of values that can be used as an attribute type. For the AWS IoT SiteWise connector, enumerations list values such as {USUALLY "the list of available AWS regions", POSSIBLY ALSO OTHERS AS REQUIRED}.
+An enumeration is a predefined list of values that can be used as an attribute type. For the AWS IoT SiteWise connector, enumerations list values such as the list of available AWS regions, the asset model state, error details code and the detailed error codes.
 
-#### 4.2.1 `{ENUMERATION NAME}`
+#### 4.2.1 AWS_Region {#aws-region}
+
+| Name | Caption | 
+| --- | --- | 
+| `us_east_2` | US East (Ohio) | 
+| `us_east_1` | US East (N. Virginia) | 
+| `us_west_1` | US West (N. California) | 
+| `us_west_2` | US West (Oregon) | 
+| `af_south_1` | Africa (Cape Town) | 
+| `ap_east_1` | Asia Pacific (Hong Kong) | 
+| `ap_southeast_3` | Asia Pacific (Jakarta) | 
+| `ap_south_1` | Asia Pacific (Mumbai) | 
+| `ap_northeast_3` | Asia Pacific (Osaka) | 
+| `ap_northeast_2` | Asia Pacific (Seoul) | 
+| `ap_southeast_1` | Asia Pacific (Singapore) | 
+| `ap_southeast_2` | Asia Pacific (Sydney) | 
+| `ap_northeast_1` | Asia Pacific (Tokyo) | 
+| `ca_central_1` | Canada (Central) | 
+| `eu_central_1` | Europe (Frankfurt) | 
+| `eu_west_1` | Europe (Ireland) | 
+| `eu_west_2` | Europe (London) | 
+| `eu_south_1` | Europe (Milan) | 
+| `eu_west_3` | Europe (Paris) | 
+| `eu_north_1` | Europe (Stockholm) | 
+| `me_south_1` | Middle East (Bahrain) | 
+| `sa_east_1` | South America (São Paulo) |
+
+#### 4.2.1 AssetModelStatus_State
+
+ Name | Caption | Description |
+| --- | --- | --- |
+| CREATING | CREATING | The asset model is being created. |
+| ACTIVE | ACTIVE | The asset model is active. |
+| UPDATING  | UPDATING  | The asset model is being updated. |
+| PROPAGATING | PROPAGATING | The asset model's changes are propagating to its assets. |
+| DELETING | DELETING | The asset model is being deleted. |
+| FAILED | FAILED | The asset model failed to validate during a create or update operation. |
+
+#### 4.2.3 ErrorDetails_Code
 
 | Name | Caption | Description |
 | --- | --- | --- |
-| {ENUMERATION ELEMENT NAME} | {ENUMERATION ELEMENT VALUE} | {ENUMERATION ELEMENT DESCRIPTION} |
+| VALIDATION_ERROR | VALIDATION_ERROR |  |
+| INTERNAL_FAILURE | INTERNAL_FAILURE |  |
+
+#### 4.2.4 DetailedError_Code
+
+| Name | Caption | Description |
+| --- | --- | --- |
+| INCOMPATIBLE_COMPUTE_LOCATION | INCOMPATIBLE_COMPUTE_LOCATION |  |
+| INCOMPATIBLE_FORWARDING_CONFIGURATION | INCOMPATIBLE_FORWARDING_CONFIGURATION |  |
 
 ### 4.3 Activities {#activities}
 
-Activities define the actions that are executed in a microflow or a nanoflow. For the AWS IoT SiteWise connector, they {PURPOSE OF THE ACTIVITIES}.
+Activities define the actions that are executed in a microflow or a nanoflow.
 
 #### 4.3.1 ListAssetModels
 
-The `{ACTIVITYNAME}` {AWS SERVICE NAME} activity allows you to {ACTIVITY PURPOSE}. It requires {REQUIRED PARAMETERS}. {OPTIONAL, IF THE ACTIVITY HAS NO OUTPUT: "This activity has no return value.
-"}
+The `ListAssetModels` Amazon Iot SiteWise activity allows you to retrieve a list of all asset model summaries for the given region. It requires a valid `AWS_Region` parameter and a `ListAssetModelsRequest` object and returns a `ListAssetModelsResponse` object, which can include a maximum of 250 results. The input and output for this service are shown in the table below: 
 
-The input and output for this service are shown in the table below:
+| Input | Output | 
+| --- | --- | 
+| `ListAssetModelsRequest` | `ListAssetModelsResponse` |
 
-| Input | Output |
-| --- | --- |
-| `{INPUT OBJECT}` | `{OUTPUT OBJECT}` |
+The `ListAssetModels` method supports pagination. The MaxResults in the request can be set to specify the maximum number of results to be returned in the response object. If you do not set MaxResults, the response includes 50 results by default. If you set MaxResults and there are additional results to display, the response includes a value for NextToken. Use NextToken as a parameter in your next request to the `ListAssetModels` method to receive the next page of results.
 
 ##### OPTIONAL, INCLUDE ONLY IF THE ACTIVITY RETURNS AN OUTPUT:
 

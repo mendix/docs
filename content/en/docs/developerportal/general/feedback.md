@@ -118,7 +118,7 @@ The new features include:
 
 * Improved search capabilities
 * Adding tags to feedback items
-* Setting custom statuses for feedback items to replace the current Open/Handled/Accepted/Closed statuses
+* Allow teams to define custom statuses for feedback items
 * Identifying which environment the feedback item comes from (for example Production or Test)
 * Linking feedback items together, for example feedback about the same issue
 * Moving feedback between apps

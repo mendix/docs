@@ -4,9 +4,17 @@ url: /developerportal/general/feedback/
 category: "General"
 weight: 6
 description: "Describes how to manage feedback on your Mendix app in the Developer Portal."
-tags: ["Feedback","Developer Portal", "feedback widget"]
+tags: ["Feedback","Developer Portal", "feedback widget", "feedback module"]
 #To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 ---
+
+{{% alert color="info" %}}
+On 12 August, 2023, the way that feedback is presented in the Developer Portal will be changed to become part of **App Insights**.
+
+Existing and new feedback items will continue to be available and you will not need to change the [Mendix Feedback](/appstore/modules/mendix-feedback/) module will not need to be changed in your app(s).
+
+See [App Insights Features](#app-insights), below, for a summary of the new features you will be getting.
+{{% /alert %}}
 
 ## 1 Introduction
 
@@ -16,7 +24,7 @@ On the **Feedback** page of the Developer Portal, you can view and manage the fe
 
 This feedback comes from different sources:
 
-* Submitted via the [Mendix Feedback widget](/appstore/modules/mendix-feedback/)
+* Submitted via the [Mendix Feedback module](/appstore/modules/mendix-feedback/)
 * Submitted on the **Feedback** page itself (for details, see the [Actions](#actions) section, below)
 
 {{% alert color="info" %}}When new feedback is submitted for your app, you will also get a notification. You can check the notification by clicking the [Notifications](/developerportal/#notifications) icon. If you no longer would like to receive feedback notifications for a specific app, go to the [Team](/developerportal/general/team/) page for this app, and then change your role to a role that does not have the permission **Can edit 'Stories, Documents and Feedback'**.{{% /alert %}}
@@ -101,3 +109,19 @@ Once a feedback item is connected to a user story, the user who submitted the st
 
 * Adding a story with feedback attached from your backlog to a Sprint will result in a message that the item has been planned
 * Completing a Sprint that contains a story with feedback attached will result in a message that the item has been completed
+
+## 5 App Insights Features {#app-insights}
+
+On 12 August, 2023, the way that Feedback is managed in the Developer Portal will change. This will give you additional features to help you work with your existing and new feedback items. You will not need to make any changes to your app(s), the current [Mendix Feedback](/appstore/modules/mendix-feedback/) module will continue to work.
+
+The new features include: 
+
+* Improved search capabilities
+* Adding tags to feedback items
+* Allow teams to define custom statuses for feedback items
+* Identifying which environment the feedback item comes from (for example Production or Test)
+* Linking feedback items together, for example feedback about the same issue
+* Moving feedback between apps
+* Convert feedback items to an epics story
+* Allowing reporters to see and update their feedback items in the Developer Portal
+* Integrating feedback with Jira

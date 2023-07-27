@@ -118,11 +118,9 @@ The new features include:
 
 * Improved search capabilities
 * Adding tags to feedback items
-* Setting custom statuses for feedback items
+* Setting custom statuses for feedback items to replace the current Open/Handled/Accepted/Closed statuses
 * Identifying which environment the feedback item comes from (for example Production or Test)
-* Assigning feedback items to app team members
 * Linking feedback items together, for example feedback about the same issue
-* Adding attachments to feedback items
 * Moving feedback between apps
 * Convert feedback items to an epics story
-* Allowing reporters to see their feedback items in the Developer Portal
+* Allowing reporters to see and update their feedback items in the Developer Portal 

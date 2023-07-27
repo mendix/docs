@@ -127,12 +127,12 @@ You can now preview your app by running it locally (the play icon at the top) an
 
 If **Generate pages for my data** is selected in the preview page, pages are created based on your spreadsheet. The following changes are made in the page editor or in the navigation document:
 
-* A **Manage_Data** overview page is created – an overview page with tabs for each Excel table and with data grids per entity:
+* One **{EntityName}_Overview** page per entity is created – a page with a data grid where you can have an overview of this entity's objects
+
+* One **{EntityName}_NewEdit** page per entity is created – a page to create and save a new object of this entity, or to edit the existing objects
+
+* A **Manage data** menu item is created in the navigation with a link to the first **{EntityName}_Overview** page with tabs for each Excel table that allow you to go to the overview pages of other entities:
 
     {{< figure src="/attachments/refguide/modeling/app-from-spreadsheet/manage-data-page.jpg" >}}
-
-* A **Manage Data** menu item is created in the navigation with a link to the **Manage_Data** page
-
-* One **{EntityName}__NewEdit** page per entity is created – a page for each of your entities to create and save a new object of this entity
 
 * Your data is transferred to the preview and publish environment. This means when you preview or publish your app, you can view your data there

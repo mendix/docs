@@ -23,7 +23,7 @@ To see the current status of the Mendix Developer Portal and Control Center, see
 
 * In Mendix 10, we have combined the strength of Mendix Studio and Studio Pro - they are not separate anymore, so we have removed the last links from the Developer Portal to Studio.
 * We have improved the information regarding the sunset of [Mendix Stories](/developerportal/project-management/stories/) (remember, it's October 1)
-* We are preparing the platform for the [big upgrade of the feedback management experience](https://www.mendix.com/blog/mendix-release-10-0-a-new-era/#app-insights). The new feedback management and mini surveys are a part of our brand new product suite called App Insights. The date for this upgrade of feedback management is set to August 13. If you are using the current feedback management tool, you will have received more detailed information in an email sent on Monday, July 24 (subject line: Upgrade to new Feedback Management).
+* We are preparing the platform for the [big upgrade of the feedback management experience](https://www.mendix.com/blog/mendix-release-10-0-a-new-era/#app-insights). The new feedback management and mini surveys are a part of our brand new product suite called App Insights. The date for this upgrade of feedback management is set to August 12. If you are using the current feedback management tool, you will have received more detailed information in an email sent on Monday, July 24 (subject line: Upgrade to new Feedback Management).
 * You asked, we listened: In Epics, you can now see who created a story on the story details page.
 
 ### July 13, 2023

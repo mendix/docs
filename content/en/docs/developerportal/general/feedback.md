@@ -9,7 +9,7 @@ tags: ["Feedback","Developer Portal", "feedback widget", "feedback module"]
 ---
 
 {{% alert color="info" %}}
-On 13 August, 2023, the way that feedback is presented in the Developer Portal will be changed to become part of **App Insights**.
+On 12 August, 2023, the way that feedback is presented in the Developer Portal will be changed to become part of **App Insights**.
 
 Existing and new feedback items will continue to be available and you will not need to change the [Mendix Feedback](/appstore/modules/mendix-feedback/) module will not need to be changed in your app(s).
 
@@ -112,7 +112,7 @@ Once a feedback item is connected to a user story, the user who submitted the st
 
 ## 5 App Insights Features {#app-insights}
 
-On 13 August, 2023, the way that Feedback is managed in the Developer Portal will change. This will give you additional features to help you work with your existing and new feedback items. You will not need to make any changes to your app(s), the current [Mendix Feedback](/appstore/modules/mendix-feedback/) module will continue to work.
+On 12 August, 2023, the way that Feedback is managed in the Developer Portal will change. This will give you additional features to help you work with your existing and new feedback items. You will not need to make any changes to your app(s), the current [Mendix Feedback](/appstore/modules/mendix-feedback/) module will continue to work.
 
 The new features include: 
 
@@ -123,4 +123,5 @@ The new features include:
 * Linking feedback items together, for example feedback about the same issue
 * Moving feedback between apps
 * Convert feedback items to an epics story
-* Allowing reporters to see and update their feedback items in the Developer Portal 
+* Allowing reporters to see and update their feedback items in the Developer Portal
+* Integrating feedback with Jira

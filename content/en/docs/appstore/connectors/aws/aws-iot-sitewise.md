@@ -263,7 +263,7 @@ The `ListProjects` Amazon Iot SiteWise activity allows you to retrieve a list of
 
 | Input | Output | 
 | --- | --- | 
-| `ListProjectssRequest` | `ListProjectsResponse` |
+| `ListProjectsRequest` | `ListProjectsResponse` |
 
 The `ListProjects` method supports pagination. The MaxResults in the request can be set to specify the maximum number of results to be returned in the response object. If you do not set MaxResults, the response includes 50 results by default. If you set MaxResults and there are additional results to display, the response includes a value for NextToken. Use NextToken as a parameter in your next request to the `ListProjects` method to receive the next page of results.
 

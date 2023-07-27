@@ -4,14 +4,14 @@ url: /developerportal/general/feedback/
 category: "General"
 weight: 6
 description: "Describes how to manage feedback on your Mendix app in the Developer Portal."
-tags: ["Feedback","Developer Portal", "feedback widget"]
+tags: ["Feedback","Developer Portal", "feedback widget", "feedback module"]
 #To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 ---
 
 {{% alert color="info" %}}
 On 13 August, 2023, the way that feedback is presented in the Developer Portal will be changed to become part of **App Insights**.
 
-Existing and new feedback items will continue to be available and you will not need to change the [Mendix Feedback](/appstore/modules/mendix-feedback/) widget will not need to be changed in your app(s).
+Existing and new feedback items will continue to be available and you will not need to change the [Mendix Feedback](/appstore/modules/mendix-feedback/) module will not need to be changed in your app(s).
 
 See [App Insights Features](#app-insights), below, for a summary of the new features you will be getting.
 {{% /alert %}}
@@ -24,7 +24,7 @@ On the **Feedback** page of the Developer Portal, you can view and manage the fe
 
 This feedback comes from different sources:
 
-* Submitted via the [Mendix Feedback widget](/appstore/modules/mendix-feedback/)
+* Submitted via the [Mendix Feedback module](/appstore/modules/mendix-feedback/)
 * Submitted on the **Feedback** page itself (for details, see the [Actions](#actions) section, below)
 
 {{% alert color="info" %}}When new feedback is submitted for your app, you will also get a notification. You can check the notification by clicking the [Notifications](/developerportal/#notifications) icon. If you no longer would like to receive feedback notifications for a specific app, go to the [Team](/developerportal/general/team/) page for this app, and then change your role to a role that does not have the permission **Can edit 'Stories, Documents and Feedback'**.{{% /alert %}}
@@ -112,7 +112,7 @@ Once a feedback item is connected to a user story, the user who submitted the st
 
 ## 5 App Insights Features {#app-insights}
 
-On 13 August, 2023, the way that Feedback is managed in the Developer Portal will change. This will give you additional features to help you work with your existing and new feedback items. You will not need to make any changes to your app(s), the current [Mendix Feedback](/appstore/modules/mendix-feedback/) widget will continue to work.
+On 13 August, 2023, the way that Feedback is managed in the Developer Portal will change. This will give you additional features to help you work with your existing and new feedback items. You will not need to make any changes to your app(s), the current [Mendix Feedback](/appstore/modules/mendix-feedback/) module will continue to work.
 
 The new features include: 
 

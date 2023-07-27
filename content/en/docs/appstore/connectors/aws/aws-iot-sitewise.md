@@ -111,7 +111,7 @@ NOT ALL ARE GENERALIZATIONS! -> The entities in the table below describe all gen
 
 | Attribute | Description |
 | --- | --- |
-| NextToken | Describes whether there are more asset models in the region that can be listed. The next list requests to Amazon IoT SiteWise can be continued with this `NextToken`. |
+| NextToken | Describes whether there are more asset models in the region that can be listed. The next list requests to Amazon IoT SiteWise can be continued with this `NextToken` |
 
 ### 4.1.3  AssetModelSummary {#assetmodelsummary}
 
@@ -149,6 +149,37 @@ NOT ALL ARE GENERALIZATIONS! -> The entities in the table below describe all gen
 | --- | --- |
 | Code | The error code |
 | Message | The error message |
+
+### 4.1.8 ListProjectsRequest {#listprojectsrequest}
+
+| Attribute | Description |
+| --- | --- |
+| MaxResults | Describes the maximum number of projects returned in the response. By default it is set to 50 and can return a maximum of 250 asset models |
+| NextToken | Describes to the Amazon IoT SiteWise service that the list is being continued on with a token |
+| PortalID | Describes the portal ID from which the projects will be retrieved from |
+
+### 4.1.9 ListProjectsResponse {#listprojectsresponse}
+
+| Attribute | Description |
+| --- | --- |
+| NextToken | Describes whether there are more projects in the portal that can be listed. The next list requests to Amazon IoT SiteWise can be continued with this `NextToken` |
+
+### 4.1.10 ProjectSummary {#projectsummary}
+
+| Attribute | Description |
+| --- | --- |
+| N/A | The object does not contain any attributes, but it inherits from the `AbstractProjectSummary` entity |
+
+### 4.1.11 AbstractProjectSummary {#abstractprojectsummary}
+
+| Attribute | Description |
+| --- | --- |
+| CreationDate | The creation date of the project |
+| Description | The description of the project |
+| ProjectID | The asset model ID of the project |
+| LastUpdateDate | The last update date of the project |
+| Name | The name of the project |
+
 
 ### 4.1. ENTITY_NAME {#entity_name}
 
@@ -216,7 +247,7 @@ An enumeration is a predefined list of values that can be used as an attribute t
 
 Activities define the actions that are executed in a microflow or a nanoflow.
 
-#### 4.3.1 ListAssetModels
+#### 4.3.1 ListAssetModels {#list-asset-models}
 
 The `ListAssetModels` Amazon Iot SiteWise activity allows you to retrieve a list of all asset model summaries for the given region. It requires a valid `AWS_Region` parameter and a `ListAssetModelsRequest` object and returns a `ListAssetModelsResponse` object, which can include a maximum of 250 results. The input and output for this service are shown in the table below: 
 
@@ -225,6 +256,16 @@ The `ListAssetModels` Amazon Iot SiteWise activity allows you to retrieve a list
 | `ListAssetModelsRequest` | `ListAssetModelsResponse` |
 
 The `ListAssetModels` method supports pagination. The MaxResults in the request can be set to specify the maximum number of results to be returned in the response object. If you do not set MaxResults, the response includes 50 results by default. If you set MaxResults and there are additional results to display, the response includes a value for NextToken. Use NextToken as a parameter in your next request to the `ListAssetModels` method to receive the next page of results.
+
+#### 4.3.2 ListProjects {#list-projects}
+
+The `ListProjects` Amazon Iot SiteWise activity allows you to retrieve a list of all project summaries for an AWS IoT SiteWise Monitor portal. It requires a valid `AWS_Region` parameter and a `ListProjectsRequest` object with a valid PortalID and returns a `ListProjectsResponse` object, which can include a maximum of 250 results. The input and output for this service are shown in the table below: 
+
+| Input | Output | 
+| --- | --- | 
+| `ListProjectssRequest` | `ListProjectsResponse` |
+
+The `ListProjects` method supports pagination. The MaxResults in the request can be set to specify the maximum number of results to be returned in the response object. If you do not set MaxResults, the response includes 50 results by default. If you set MaxResults and there are additional results to display, the response includes a value for NextToken. Use NextToken as a parameter in your next request to the `ListProjects` method to receive the next page of results.
 
 ##### OPTIONAL, INCLUDE ONLY IF THE ACTIVITY RETURNS AN OUTPUT:
 

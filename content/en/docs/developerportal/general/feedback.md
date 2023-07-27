@@ -8,6 +8,14 @@ tags: ["Feedback","Developer Portal", "feedback widget"]
 #To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 ---
 
+{{% alert color="info" %}}
+On 13 August, 2023, the way that feedback is presented in the Developer Portal will be changed to become part of **App Insights**.
+
+Existing and new feedback items will continue to be available and you will not need to change the [Mendix Feedback](/appstore/modules/mendix-feedback/) widget will not need to be changed in your app(s).
+
+See [App Insights Features](#app-insights), below, for a summary of the new features you will be getting.
+{{% /alert %}}
+
 ## 1 Introduction
 
 On the **Feedback** page of the Developer Portal, you can view and manage the feedback that has been submitted about an app.
@@ -101,3 +109,20 @@ Once a feedback item is connected to a user story, the user who submitted the st
 
 * Adding a story with feedback attached from your backlog to a Sprint will result in a message that the item has been planned
 * Completing a Sprint that contains a story with feedback attached will result in a message that the item has been completed
+
+## 5 App Insights Features {#app-insights}
+
+On 13 August, 2023, the way that Feedback is managed in the Developer Portal will change. This will give you additional features to help you work with your existing and new feedback items. You will not need to make any changes to your app(s), the current [Mendix Feedback](/appstore/modules/mendix-feedback/) widget will continue to work.
+
+The new features include: 
+
+* Improved search capabilities
+* Adding tags to feedback items
+* Setting custom statuses for feedback items
+* Identifying which environment the feedback item comes from (for example Production or Test)
+* Assigning feedback items to app team members
+* Linking feedback items together, for example feedback about the same issue
+* Adding attachments to feedback items
+* Moving feedback between apps
+* Convert feedback items to an epics story
+* Allowing reporters to see their feedback items in the Developer Portal

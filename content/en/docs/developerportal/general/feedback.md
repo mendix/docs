@@ -122,6 +122,5 @@ The new features include:
 * Identifying which environment the feedback item comes from (for example Production or Test)
 * Linking feedback items together, for example feedback about the same issue
 * Moving feedback between apps
-* Convert feedback items to an epics story
 * Allowing reporters to see and update their feedback items in the Developer Portal
 * Integrating feedback with Jira

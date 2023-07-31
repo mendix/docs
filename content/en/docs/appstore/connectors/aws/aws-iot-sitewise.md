@@ -180,6 +180,43 @@ NOT ALL ARE GENERALIZATIONS! -> The entities in the table below describe all gen
 | LastUpdateDate | The last update date of the project |
 | Name | The name of the project |
 
+### 4.1.12 ListPortalsRequest {#listportalsrequest}
+
+| Attribute | Description |
+| --- | --- |
+| MaxResults | Describes the maximum number of portal summaries returned in the response. By default it is set to 50 and can return a maximum of 250 portals. |
+| NextToken | Describes to the Amazon IoT SiteWise service that the list is being continued on with a token |
+
+### 4.1.13 ListPortalsResponse {#listportalsresponse}
+
+| Attribute | Description |
+| --- | --- |
+| NextToken | Describes whether there are more portals in the region that can be listed. The next list requests to Amazon IoT SiteWise can be continued with this `NextToken` |
+
+### 4.1.14  PortalSummary {#portalsummary}
+
+| Attribute | Description |
+| --- | --- |
+| CreationDate | The creation date of the portal |
+| Description | The description of the portal |
+| PortalID | The ID of the portal |
+| LastUpdateDate | The last update date of the portal |
+| Name | The name of the portal |
+| RoleARN | The ARN (Amazon Resource Name) of the service role that allows the portal's users to access the AWS IoT SiteWise resources |
+| StartURL | The URL for the AWS IoT SiteWise Monitor portal |
+
+### 4.1.15 PortalStatus {#portalstatus}
+
+| Attribute | Description |
+| --- | --- |
+| State | The current status state of the portal |
+
+### 4.1.16 MonitorErrorDetails {#monitorerrordetails}
+
+| Attribute | Description |
+| --- | --- |
+| Code | The error code |
+| Message | The error message |
 
 ### 4.1. ENTITY_NAME {#entity_name}
 
@@ -218,7 +255,7 @@ An enumeration is a predefined list of values that can be used as an attribute t
 | `me_south_1` | Middle East (Bahrain) | 
 | `sa_east_1` | South America (São Paulo) |
 
-#### 4.2.1 AssetModelStatus_State
+#### 4.2.2 AssetModelStatus_State
 
  Name | Caption | Description |
 | --- | --- | --- |
@@ -243,6 +280,24 @@ An enumeration is a predefined list of values that can be used as an attribute t
 | INCOMPATIBLE_COMPUTE_LOCATION | INCOMPATIBLE_COMPUTE_LOCATION |  |
 | INCOMPATIBLE_FORWARDING_CONFIGURATION | INCOMPATIBLE_FORWARDING_CONFIGURATION |  |
 
+#### 4.2.5 PortalStatus_State
+
+ Name | Caption | Description |
+| --- | --- | --- |
+| CREATING | CREATING | The portal is being created. |
+| UPDATING  | UPDATING  | The portal is being updated. |
+| DELETING | DELETING | The portal is being deleted. |
+| ACTIVE | ACTIVE | The portal is active. |
+| FAILED | FAILED | The portal failed to validate during a create or update operation. |
+
+#### 4.2.6 MonitorErrorDetails_Code
+
+| Name | Caption | Description |
+| --- | --- | --- |
+| INTERNAL_FAILURE | INTERNAL_FAILURE |  |
+| VALIDATION_ERROR | VALIDATION_ERROR |  |
+| LIMIT_EXCEEDED | LIMIT_EXCEEDED |  |
+
 ### 4.3 Activities {#activities}
 
 Activities define the actions that are executed in a microflow or a nanoflow.
@@ -266,6 +321,16 @@ The `ListProjects` Amazon Iot SiteWise activity allows you to retrieve a list of
 | `ListProjectsRequest` | `ListProjectsResponse` |
 
 The `ListProjects` method supports pagination. The MaxResults in the request can be set to specify the maximum number of results to be returned in the response object. If you do not set MaxResults, the response includes 50 results by default. If you set MaxResults and there are additional results to display, the response includes a value for NextToken. Use NextToken as a parameter in your next request to the `ListProjects` method to receive the next page of results.
+
+#### 4.3.3 ListPortals {#list-portals}
+
+The `ListPortals` Amazon Iot SiteWise activity allows you to retrieve a list of all portal summaries for the given region. It requires a valid `AWS_Region` parameter and a `ListPortalsRequest` object and returns a `ListPortalsResponse` object, which can include a maximum of 250 results. The input and output for this service are shown in the table below: 
+
+| Input | Output | 
+| --- | --- | 
+| `ListPortalsRequest` | `ListPortalsResponse` |
+
+The `ListPortals` method supports pagination. The MaxResults in the request can be set to specify the maximum number of results to be returned in the response object. If you do not set MaxResults, the response includes 50 results by default. If you set MaxResults and there are additional results to display, the response includes a value for NextToken. Use NextToken as a parameter in your next request to the `ListAssetModels` method to receive the next page of results.
 
 ##### OPTIONAL, INCLUDE ONLY IF THE ACTIVITY RETURNS AN OUTPUT:
 

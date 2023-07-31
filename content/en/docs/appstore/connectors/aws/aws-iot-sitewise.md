@@ -168,32 +168,26 @@ NOT ALL ARE GENERALIZATIONS! -> The entities in the table below describe all gen
 
 | Attribute | Description |
 | --- | --- |
-| N/A | The object does not contain any attributes, but it inherits from the `AbstractProjectSummary` entity |
-
-### 4.1.11 AbstractProjectSummary {#abstractprojectsummary}
-
-| Attribute | Description |
-| --- | --- |
 | CreationDate | The creation date of the project |
 | Description | The description of the project |
 | ProjectID | The asset model ID of the project |
 | LastUpdateDate | The last update date of the project |
 | Name | The name of the project |
 
-### 4.1.12 ListPortalsRequest {#listportalsrequest}
+### 4.1.11 ListPortalsRequest {#listportalsrequest}
 
 | Attribute | Description |
 | --- | --- |
 | MaxResults | Describes the maximum number of portal summaries returned in the response. By default it is set to 50 and can return a maximum of 250 portals. |
 | NextToken | Describes to the Amazon IoT SiteWise service that the list is being continued on with a token |
 
-### 4.1.13 ListPortalsResponse {#listportalsresponse}
+### 4.1.12 ListPortalsResponse {#listportalsresponse}
 
 | Attribute | Description |
 | --- | --- |
 | NextToken | Describes whether there are more portals in the region that can be listed. The next list requests to Amazon IoT SiteWise can be continued with this `NextToken` |
 
-### 4.1.14  PortalSummary {#portalsummary}
+### 4.1.13  PortalSummary {#portalsummary}
 
 | Attribute | Description |
 | --- | --- |
@@ -205,13 +199,13 @@ NOT ALL ARE GENERALIZATIONS! -> The entities in the table below describe all gen
 | RoleARN | The ARN (Amazon Resource Name) of the service role that allows the portal's users to access the AWS IoT SiteWise resources |
 | StartURL | The URL for the AWS IoT SiteWise Monitor portal |
 
-### 4.1.15 PortalStatus {#portalstatus}
+### 4.1.14 PortalStatus {#portalstatus}
 
 | Attribute | Description |
 | --- | --- |
 | State | The current status state of the portal |
 
-### 4.1.16 MonitorErrorDetails {#monitorerrordetails}
+### 4.1.15 MonitorErrorDetails {#monitorerrordetails}
 
 | Attribute | Description |
 | --- | --- |

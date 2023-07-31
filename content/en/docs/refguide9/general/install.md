@@ -108,7 +108,19 @@ If the **AdoptOpenJDK 11 x64 failed; code 1639** error occurs during installatio
 * Install the Adopt Open JDK dependency manually from the dependencies folder using Administrator privileges
 * Try to install Studio Pro again
 
-## 6 Read More
+## 6 Signing In
+
+When starting Studio Pro for the first time after installation, it will ask you to sign in to the Mendix Platform. This will allow you to get access to Mendix platform services from within Studio Pro like the Team Server, Market Place, deployment of your app to the cloud, and other content.
+
+You can sign in with your Mendix account, or your own company account if this has been set up as an Identify Provider in the Mendix platform.
+
+In some situations, for example when your network has a firewall or proxy server, a warning about an untrusted certificate may be shown during the sign in process:
+
+{{< figure src="/attachments/refguide9/general/install/untrusted-certificate.png" width="600px" >}}
+
+To continue, you may accept the certificate for the current session by clicking the 'Accept for this session' button, or install it permanently by clicking the 'View certificate information' button. Note that accepting untrusted certificates involves a security risk, and you should only do so after receiving confirmation from your network administrator.
+
+## 7 Read More
 
 * [Studio Pro Overview](/refguide9/studio-pro-overview/)
 * [App Modeling](/refguide9/modeling/)

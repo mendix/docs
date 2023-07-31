@@ -1,7 +1,7 @@
 ---
 title: "Consistency Errors"
 url: /refguide/consistency-errors/
-weight: 10
+weight: 17
 description: "Describes consistency errors in Mendix Studio Pro and the way to fix them."
 tags: ["Studio Pro", "consistency errors", "checks", "errors"]
 ---
@@ -12,7 +12,7 @@ To make sure that your app is always consistent and properly built, Studio Pro d
 
 When a consistency check is not met, Studio Pro will notify you about this via consistency errors on the [Errors pane](/refguide/errors-pane/). The errors in pages, microflows, domain models, and document templates will be highlighted:
 
-{{< figure src="/attachments/refguide/modeling/menus/view-menu/errors-pane/consistency-errors/errors-pane.png" alt="Errors Pane" >}}
+{{< figure src="/attachments/refguide/modeling/consistency-errors/errors-pane.png" alt="Errors Pane" >}}
 
 If you cannot see the **Errors** pane, you can enable it from the menu option **View > Error list**.
 

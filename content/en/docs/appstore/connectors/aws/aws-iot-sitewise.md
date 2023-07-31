@@ -222,7 +222,7 @@ NOT ALL ARE GENERALIZATIONS! -> The entities in the table below describe all gen
 
 An enumeration is a predefined list of values that can be used as an attribute type. For the AWS IoT SiteWise connector, enumerations list values such as the list of available AWS regions, the asset model state, error details code and the detailed error codes.
 
-#### 4.2.1 AWS_Region {#aws-region}
+#### 4.2.1 ENUM_Region {#enum-region}
 
 | Name | Caption | 
 | --- | --- | 
@@ -249,7 +249,7 @@ An enumeration is a predefined list of values that can be used as an attribute t
 | `me_south_1` | Middle East (Bahrain) | 
 | `sa_east_1` | South America (São Paulo) |
 
-#### 4.2.2 AssetModelStatus_State
+#### 4.2.2 ENUM_AssetModelStatus_State
 
  Name | Caption | Description |
 | --- | --- | --- |
@@ -260,21 +260,21 @@ An enumeration is a predefined list of values that can be used as an attribute t
 | DELETING | DELETING | The asset model is being deleted. |
 | FAILED | FAILED | The asset model failed to validate during a create or update operation. |
 
-#### 4.2.3 ErrorDetails_Code
+#### 4.2.3 ENUM_ErrorDetails_Code
 
 | Name | Caption | Description |
 | --- | --- | --- |
 | VALIDATION_ERROR | VALIDATION_ERROR |  |
 | INTERNAL_FAILURE | INTERNAL_FAILURE |  |
 
-#### 4.2.4 DetailedError_Code
+#### 4.2.4 ENUM_DetailedError_Code
 
 | Name | Caption | Description |
 | --- | --- | --- |
 | INCOMPATIBLE_COMPUTE_LOCATION | INCOMPATIBLE_COMPUTE_LOCATION |  |
 | INCOMPATIBLE_FORWARDING_CONFIGURATION | INCOMPATIBLE_FORWARDING_CONFIGURATION |  |
 
-#### 4.2.5 PortalStatus_State
+#### 4.2.5 ENUM_PortalStatus_State
 
  Name | Caption | Description |
 | --- | --- | --- |
@@ -284,7 +284,7 @@ An enumeration is a predefined list of values that can be used as an attribute t
 | ACTIVE | ACTIVE | The portal is active. |
 | FAILED | FAILED | The portal failed to validate during a create or update operation. |
 
-#### 4.2.6 MonitorErrorDetails_Code
+#### 4.2.6 ENUM_MonitorErrorDetails_Code
 
 | Name | Caption | Description |
 | --- | --- | --- |
@@ -292,13 +292,55 @@ An enumeration is a predefined list of values that can be used as an attribute t
 | VALIDATION_ERROR | VALIDATION_ERROR |  |
 | LIMIT_EXCEEDED | LIMIT_EXCEEDED |  |
 
+#### 4.2.7 ENUM_AssetModelCompositeModelType
+
+| Name | Caption | Description |
+| --- | --- | --- |
+| AWS | INTERNAL_FAILURE | The type of the composite model. |
+| ALARM | VALIDATION_ERROR | The type of the composite model. |
+
+#### 4.2.8 ENUM_AssetModelStatus_State
+
+| Name | Caption | Description |
+| --- | --- | --- |
+| CREATING | CREATING | The asset model is being created. |
+| ACTIVE | ACTIVE | The asset model is active. |
+| UPDATING | UPDATING | The asset model is being updating. |
+| PROPAGATING | PROPAGATING | The asset model is propagating. |
+| DELETING | DELETING | The asset model is being deleted. |
+| FAILING | FAILING | The asset model is failing. |
+
+#### 4.2.7 ENUM_ComputeLocation
+
+| Name | Caption | Description |
+| --- | --- | --- |
+| EDGE | EDGE | The variable is being computed on the Edge device. |
+| CLOUD | CLOUD | The variable is being computed in the cloud. |
+
+#### 4.2.7 ENUM_DataType
+
+| Name | Caption | Description |
+| --- | --- | --- |
+| _STRING | STRING | The variable is of type string. |
+| INTEGER | INTEGER | The variable is of type string. |
+| _DOUBLE | DOUBLE | The variable is of type string. |
+| _BOOLEAN | BOOLEAN | The variable is of type string. |
+| STRUCT | STRUCT | The variable is of type string. |
+
+#### 4.2.7 ENUM_ForwardingConfigState
+
+| Name | Caption | Description |
+| --- | --- | --- |
+| DISABLED | DISABLED | The forwarding config state is disabled. |
+| ENABLED | ENABLED | The forwarding config state is enabled. |
+
 ### 4.3 Activities {#activities}
 
 Activities define the actions that are executed in a microflow or a nanoflow.
 
 #### 4.3.1 ListAssetModels {#list-asset-models}
 
-The `ListAssetModels` Amazon Iot SiteWise activity allows you to retrieve a list of all asset model summaries for the given region. It requires a valid `AWS_Region` parameter and a `ListAssetModelsRequest` object and returns a `ListAssetModelsResponse` object, which can include a maximum of 250 results. The input and output for this service are shown in the table below: 
+The `ListAssetModels` Amazon Iot SiteWise activity allows you to retrieve a list of all asset model summaries for the given region. It requires a valid `ENUM_Region` parameter and a `ListAssetModelsRequest` object and returns a `ListAssetModelsResponse` object, which can include a maximum of 250 results. The input and output for this service are shown in the table below: 
 
 | Input | Output | 
 | --- | --- | 
@@ -306,9 +348,17 @@ The `ListAssetModels` Amazon Iot SiteWise activity allows you to retrieve a list
 
 The `ListAssetModels` method supports pagination. The MaxResults in the request can be set to specify the maximum number of results to be returned in the response object. If you do not set MaxResults, the response includes 50 results by default. If you set MaxResults and there are additional results to display, the response includes a value for NextToken. Use NextToken as a parameter in your next request to the `ListAssetModels` method to receive the next page of results.
 
-#### 4.3.2 ListProjects {#list-projects}
+#### 4.3.2 DescribeAssetModel {#describe-asset-model}
 
-The `ListProjects` Amazon Iot SiteWise activity allows you to retrieve a list of all project summaries for an AWS IoT SiteWise Monitor portal. It requires a valid `AWS_Region` parameter and a `ListProjectsRequest` object with a valid PortalID and returns a `ListProjectsResponse` object, which can include a maximum of 250 results. The input and output for this service are shown in the table below: 
+The `DescribeAssetModel` Amazon Iot SiteWise activity allows you to retrieve information about an asset model. It requires a valid `ENUM_Region` parameter and a `DescribeAssetModelRequest` object and returns a `DescribeAssetModelResponse` object. The input and output for this service are shown in the table below: 
+
+| Input | Output | 
+| --- | --- | 
+| `DescribeAssetModelRequest` | `DescribeAssetModelResponse` |
+
+#### 4.3.3 ListProjects {#list-projects}
+
+The `ListProjects` Amazon Iot SiteWise activity allows you to retrieve a list of all project summaries for an AWS IoT SiteWise Monitor portal. It requires a valid `ENUM_Region` parameter and a `ListProjectsRequest` object with a valid PortalID and returns a `ListProjectsResponse` object, which can include a maximum of 250 results. The input and output for this service are shown in the table below: 
 
 | Input | Output | 
 | --- | --- | 
@@ -316,9 +366,9 @@ The `ListProjects` Amazon Iot SiteWise activity allows you to retrieve a list of
 
 The `ListProjects` method supports pagination. The MaxResults in the request can be set to specify the maximum number of results to be returned in the response object. If you do not set MaxResults, the response includes 50 results by default. If you set MaxResults and there are additional results to display, the response includes a value for NextToken. Use NextToken as a parameter in your next request to the `ListProjects` method to receive the next page of results.
 
-#### 4.3.3 ListPortals {#list-portals}
+#### 4.3.4 ListPortals {#list-portals}
 
-The `ListPortals` Amazon Iot SiteWise activity allows you to retrieve a list of all portal summaries for the given region. It requires a valid `AWS_Region` parameter and a `ListPortalsRequest` object and returns a `ListPortalsResponse` object, which can include a maximum of 250 results. The input and output for this service are shown in the table below: 
+The `ListPortals` Amazon Iot SiteWise activity allows you to retrieve a list of all portal summaries for the given region. It requires a valid `ENUM_Region` parameter and a `ListPortalsRequest` object and returns a `ListPortalsResponse` object, which can include a maximum of 250 results. The input and output for this service are shown in the table below: 
 
 | Input | Output | 
 | --- | --- | 

@@ -174,20 +174,39 @@ NOT ALL ARE GENERALIZATIONS! -> The entities in the table below describe all gen
 | LastUpdateDate | The last update date of the project |
 | Name | The name of the project |
 
-### 4.1.11 ListPortalsRequest {#listportalsrequest}
+### 4.1.11 DescribeProjectRequest {#describeprojectrequest}
+
+| Attribute | Description |
+| --- | --- |
+| PortalID | The ID of the portal the project is in |
+| ProjectARN | The ARN of the project |
+| CreationDate | The creation date of the project |
+| Description | The description of the project |
+| ProjectID | The asset model ID of the project |
+| LastUpdateDate | The last update date of the project |
+| Name | The name of the project |
+
+### 4.1.12 DescribeProjectResponse {#describeprojectresponse}
+
+| Attribute | Description |
+| --- | --- |
+| ProjectID | Describes the project ID |
+
+
+### 4.1.13 ListPortalsRequest {#listportalsrequest}
 
 | Attribute | Description |
 | --- | --- |
 | MaxResults | Describes the maximum number of portal summaries returned in the response. By default it is set to 50 and can return a maximum of 250 portals. |
 | NextToken | Describes to the Amazon IoT SiteWise service that the list is being continued on with a token |
 
-### 4.1.12 ListPortalsResponse {#listportalsresponse}
+### 4.1.14 ListPortalsResponse {#listportalsresponse}
 
 | Attribute | Description |
 | --- | --- |
 | NextToken | Describes whether there are more portals in the region that can be listed. The next list requests to Amazon IoT SiteWise can be continued with this `NextToken` |
 
-### 4.1.13  PortalSummary {#portalsummary}
+### 4.1.15  PortalSummary {#portalsummary}
 
 | Attribute | Description |
 | --- | --- |
@@ -199,13 +218,13 @@ NOT ALL ARE GENERALIZATIONS! -> The entities in the table below describe all gen
 | RoleARN | The ARN (Amazon Resource Name) of the service role that allows the portal's users to access the AWS IoT SiteWise resources |
 | StartURL | The URL for the AWS IoT SiteWise Monitor portal |
 
-### 4.1.14 PortalStatus {#portalstatus}
+### 4.1.16 PortalStatus {#portalstatus}
 
 | Attribute | Description |
 | --- | --- |
 | State | The current status state of the portal |
 
-### 4.1.15 MonitorErrorDetails {#monitorerrordetails}
+### 4.1.17 MonitorErrorDetails {#monitorerrordetails}
 
 | Attribute | Description |
 | --- | --- |
@@ -299,25 +318,14 @@ An enumeration is a predefined list of values that can be used as an attribute t
 | AWS | INTERNAL_FAILURE | The type of the composite model. |
 | ALARM | VALIDATION_ERROR | The type of the composite model. |
 
-#### 4.2.8 ENUM_AssetModelStatus_State
-
-| Name | Caption | Description |
-| --- | --- | --- |
-| CREATING | CREATING | The asset model is being created. |
-| ACTIVE | ACTIVE | The asset model is active. |
-| UPDATING | UPDATING | The asset model is being updating. |
-| PROPAGATING | PROPAGATING | The asset model is propagating. |
-| DELETING | DELETING | The asset model is being deleted. |
-| FAILING | FAILING | The asset model is failing. |
-
-#### 4.2.7 ENUM_ComputeLocation
+#### 4.2.8 ENUM_ComputeLocation
 
 | Name | Caption | Description |
 | --- | --- | --- |
 | EDGE | EDGE | The variable is being computed on the Edge device. |
 | CLOUD | CLOUD | The variable is being computed in the cloud. |
 
-#### 4.2.7 ENUM_DataType
+#### 4.2.9 ENUM_DataType
 
 | Name | Caption | Description |
 | --- | --- | --- |
@@ -327,7 +335,7 @@ An enumeration is a predefined list of values that can be used as an attribute t
 | _BOOLEAN | BOOLEAN | The variable is of type string. |
 | STRUCT | STRUCT | The variable is of type string. |
 
-#### 4.2.7 ENUM_ForwardingConfigState
+#### 4.2.10 ENUM_ForwardingConfigState
 
 | Name | Caption | Description |
 | --- | --- | --- |
@@ -366,7 +374,15 @@ The `ListProjects` Amazon Iot SiteWise activity allows you to retrieve a list of
 
 The `ListProjects` method supports pagination. The MaxResults in the request can be set to specify the maximum number of results to be returned in the response object. If you do not set MaxResults, the response includes 50 results by default. If you set MaxResults and there are additional results to display, the response includes a value for NextToken. Use NextToken as a parameter in your next request to the `ListProjects` method to receive the next page of results.
 
-#### 4.3.4 ListPortals {#list-portals}
+#### 4.3.4 DescribeProject {#describe-project}
+
+The `DescribeProject` Amazon Iot SiteWise activity allows you to get details on a specific project that exists within your AWS environment. It requires a valid `ENUM_Region` parameter and a `DescribeProjectRequest` object with a valid ProjectID and returns a `DescribeProjectResponse` object. The input and output for this service are shown in the table below: 
+
+| Input | Output | 
+| --- | --- | 
+| `DescribeProjectRequest` | `DescribeProjectResponse` |
+
+#### 4.3.5 ListPortals {#list-portals}
 
 The `ListPortals` Amazon Iot SiteWise activity allows you to retrieve a list of all portal summaries for the given region. It requires a valid `ENUM_Region` parameter and a `ListPortalsRequest` object and returns a `ListPortalsResponse` object, which can include a maximum of 250 results. The input and output for this service are shown in the table below: 
 

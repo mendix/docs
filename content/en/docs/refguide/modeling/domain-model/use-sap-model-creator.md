@@ -43,7 +43,7 @@ The Model Creator for SAP Integrations will produce a module which is in Mendix 
 
 The Model Creator for SAP Integrations is an app in the Marketplace. Search for it in the Mendix Marketplace, or find it here: [Model Creator for SAP Integrations - OData](https://sapmodelcreator.mendixcloud.com/link/odata). If the app gives you a choice between **SAP OData** and **SAP BAPI**, choose **SAP OData**.
 
-{{< figure src="/attachments/partners/sap/use-sap-model-creator/odata-bapi.png" >}}
+{{< figure src="/attachments/refguide/modeling/domain-model/use-sap-model-creator/odata-bapi.png" >}}
 
 {{% alert color="info" %}}
 The Model Creator for SAP Integrations is not currently available in the Marketplace within Studio Pro. It can only be run in a browser.
@@ -51,7 +51,7 @@ The Model Creator for SAP Integrations is not currently available in the Marketp
 
 Open the [Model Creator for SAP Integrations - OData](https://sapmodelcreator.mendixcloud.com/link/odata), where you will be asked how you want to generate your model:
 
-{{< figure src="/attachments/partners/sap/use-sap-model-creator/model-creator-wizard-1.png" >}}
+{{< figure src="/attachments/refguide/modeling/domain-model/use-sap-model-creator/model-creator-wizard-1.png" >}}
 
 There are four ways to generate your data model.
 
@@ -72,32 +72,32 @@ There may be several schemas in the packages of an API. Each of these will gener
 
     You will be presented with a list of packages containing OData API definitions. You can search this list (this includes text in the package description as well as the package name) , and page through it using the paging buttons.
 
-    {{< figure src="/attachments/partners/sap/use-sap-model-creator/model-creator-wizard-2-api.png" >}}
+    {{< figure src="/attachments/refguide/modeling/domain-model/use-sap-model-creator/model-creator-wizard-2-api.png" >}}
 
     {{% alert color="info" %}}You can return to any stage in this process by clicking on the relevant step number.{{% /alert %}}
 
 2. Click the package you want. It will be highlighted.
 3. Click **Next** to see the APIs within the package.
 
-    {{< figure src="/attachments/partners/sap/use-sap-model-creator/model-creator-wizard-3-api.png" >}}
+    {{< figure src="/attachments/refguide/modeling/domain-model/use-sap-model-creator/model-creator-wizard-3-api.png" >}}
 
     {{% alert color="info" %}}This will be shown even if only one API exists.{{% /alert %}}
 
 4. Click the API you want. It will be highlighted.
 5. Click **Next** to see the schemas within the API.
 
-    {{< figure src="/attachments/partners/sap/use-sap-model-creator/model-creator-wizard-4-api.png" >}}
+    {{< figure src="/attachments/refguide/modeling/domain-model/use-sap-model-creator/model-creator-wizard-4-api.png" >}}
 
     {{% alert color="info" %}}This will be shown even if only one schema exists.{{% /alert %}}
 
 6. Click the schema you want. It will be highlighted.
 7. Click **Next** to proceed to the confirmation screen.
 
-    {{< figure src="/attachments/partners/sap/use-sap-model-creator/model-creator-wizard-5-api.png" >}}
+    {{< figure src="/attachments/refguide/modeling/domain-model/use-sap-model-creator/model-creator-wizard-5-api.png" >}}
 
 8. Click **Generate .mpk** to generate the data model module.
 
-    {{< figure src="/attachments/partners/sap/use-sap-model-creator/model-creator-generated-api.png" >}}
+    {{< figure src="/attachments/refguide/modeling/domain-model/use-sap-model-creator/model-creator-generated-api.png" >}}
 
 9. Click **Download**.
 
@@ -119,31 +119,31 @@ There may be several schemas in the packages of an API. Each of these will gener
 
     You will be asked to sign in to you SAP Service Catalog. Enter your **User name**, **Password**, and **Server**. Select the correct protocol and **Port** if these are not the default.
 
-    {{< figure src="/attachments/partners/sap/use-sap-model-creator/model-creator-wizard-2-1-catalog.png" >}}
+    {{< figure src="/attachments/refguide/modeling/domain-model/use-sap-model-creator/model-creator-wizard-2-1-catalog.png" >}}
 
 2. Click **Next**.
 
     You will be presented with a list of OData API definitions. You can search this list (this includes text in the API description as well as the API name), and page through it using the paging buttons.
 
-    {{< figure src="/attachments/partners/sap/use-sap-model-creator/model-creator-wizard-2-catalog.png" >}}
+    {{< figure src="/attachments/refguide/modeling/domain-model/use-sap-model-creator/model-creator-wizard-2-catalog.png" >}}
 
     {{% alert color="info" %}}You can return to any stage in this process by clicking on the relevant step number.{{% /alert %}}
 
 3. Click the API you want. It will be highlighted.
 4. Click **Next** to see the schemas within the API.
 
-    {{< figure src="/attachments/partners/sap/use-sap-model-creator/model-creator-wizard-3-catalog.png" >}}
+    {{< figure src="/attachments/refguide/modeling/domain-model/use-sap-model-creator/model-creator-wizard-3-catalog.png" >}}
 
     {{% alert color="info" %}}This will be shown even if only one schema exists.{{% /alert %}}
 
 5. Click the schema you want. It will be highlighted.
 6. Click **Next** to proceed to the confirmation screen.
 
-    {{< figure src="/attachments/partners/sap/use-sap-model-creator/model-creator-wizard-4-catalog.png" >}}
+    {{< figure src="/attachments/refguide/modeling/domain-model/use-sap-model-creator/model-creator-wizard-4-catalog.png" >}}
 
 7. Click **Generate .mpk** to generate the data model module.
 
-    {{< figure src="/attachments/partners/sap/use-sap-model-creator/model-creator-generated-catalog.png" >}}
+    {{< figure src="/attachments/refguide/modeling/domain-model/use-sap-model-creator/model-creator-generated-catalog.png" >}}
 
 8. Click **Download**.
 
@@ -161,32 +161,32 @@ One way to do this is by getting the OData metadata XML file. This file can be d
 
 1. Download the XML metadata file to your local drive.
 
-    {{< figure src="/attachments/partners/sap/use-sap-model-creator/download-xml.png" >}}
+    {{< figure src="/attachments/refguide/modeling/domain-model/use-sap-model-creator/download-xml.png" >}}
 
 2. Open the Model Creator for SAP Integrations to generate a Domain Model for an SAP OData Service.
 
-    {{< figure src="/attachments/partners/sap/use-sap-model-creator/model-creator-wizard-1.png" >}}
+    {{< figure src="/attachments/refguide/modeling/domain-model/use-sap-model-creator/model-creator-wizard-1.png" >}}
 
 3. Click **Upload File**.
 
-    {{< figure src="/attachments/partners/sap/use-sap-model-creator/upload_metadata.png" >}}
+    {{< figure src="/attachments/refguide/modeling/domain-model/use-sap-model-creator/upload_metadata.png" >}}
 
 4. Drag the file you want into the Model Creator, or click **Upload** and upload the XML file you want to use.
 5. Click **Next** to see the schemas within the metadata.
 
-    {{< figure src="/attachments/partners/sap/use-sap-model-creator/upload-metadata-schemas.png" >}}
+    {{< figure src="/attachments/refguide/modeling/domain-model/use-sap-model-creator/upload-metadata-schemas.png" >}}
 
     {{% alert color="info" %}}This will be shown even if only one schema exists.{{% /alert %}}
 
 6. Click the schema you want. It will be highlighted.
 7. Click **Next** to proceed to the confirmation screen.
 
-    {{< figure src="/attachments/partners/sap/use-sap-model-creator/upload-metadata-confirmation.png" >}}
+    {{< figure src="/attachments/refguide/modeling/domain-model/use-sap-model-creator/upload-metadata-confirmation.png" >}}
 
 8. Click **Generate .mpk**. A progress bar will be shown during the parsing and generation of the module.
 9. Once the generation is complete, the **Download File** button appears. Notice that the file name of your data model module is extracted from the metadata file itself.
 
-    {{< figure src="/attachments/partners/sap/use-sap-model-creator/download_metadata.png" >}}
+    {{< figure src="/attachments/refguide/modeling/domain-model/use-sap-model-creator/download_metadata.png" >}}
 
 10. Click **Download**.
 
@@ -206,25 +206,25 @@ This method does not work where the destination needs authentication. You cannot
 
 1. Click **URL** on the OData page of the Model Creator for SAP Integrations.
 
-    {{< figure src="/attachments/partners/sap/use-sap-model-creator/metadata-url.png" >}}
+    {{< figure src="/attachments/refguide/modeling/domain-model/use-sap-model-creator/metadata-url.png" >}}
 
 2. Enter the URL of the service metadata which you want in **Enter a URL**.
 
 3. Click **Continue** to see the schemas within the metadata.
 
-    {{< figure src="/attachments/partners/sap/use-sap-model-creator/upload-metadata-schemas.png" >}}
+    {{< figure src="/attachments/refguide/modeling/domain-model/use-sap-model-creator/upload-metadata-schemas.png" >}}
 
     {{% alert color="info" %}}This will be shown even if only one schema exists.{{% /alert %}}
 
 4. Click the schema you want. It will be highlighted.
 5. Click **Continue** to proceed to the confirmation screen.
 
-    {{< figure src="/attachments/partners/sap/use-sap-model-creator/metadata-url-confirmation.png" >}}
+    {{< figure src="/attachments/refguide/modeling/domain-model/use-sap-model-creator/metadata-url-confirmation.png" >}}
 
 6. Click **Generate .mpk**. A progress bar will be shown during the parsing and generation of the module.
 7. Once the generation is complete, the **Download File** button appears. Notice that the file name of your data model module is extracted from the metadata file itself.
 
-    {{< figure src="/attachments/partners/sap/use-sap-model-creator/download-metadata-url.png" >}}
+    {{< figure src="/attachments/refguide/modeling/domain-model/use-sap-model-creator/download-metadata-url.png" >}}
 
 8. Click **Download File**.
 
@@ -240,37 +240,37 @@ Use [Model Creator for SAP Integrations](https://sapmodelcreator.mendixcloud.com
 
 1. Go to [Model Creator for SAP Integrations](https://sapmodelcreator.mendixcloud.com/) and click **SAP BAPI**.
 
-    {{< figure src="/attachments/partners/sap/use-sap-model-creator/model-creator-bapi-type.png" >}}
+    {{< figure src="/attachments/refguide/modeling/domain-model/use-sap-model-creator/model-creator-bapi-type.png" >}}
 
 2. Upload a [BAPI schema file](/appstore/connectors/sap/sap-bapi-connector/#bapi-schema) and click **Next**.
 
-    {{< figure src="/attachments/partners/sap/use-sap-model-creator/model-creator-bapi-upload-bapi-schema.png" >}}
+    {{< figure src="/attachments/refguide/modeling/domain-model/use-sap-model-creator/model-creator-bapi-upload-bapi-schema.png" >}}
 
-    {{< figure src="/attachments/partners/sap/use-sap-model-creator/model-creator-bapi-schema-uploaded.png" >}}
+    {{< figure src="/attachments/refguide/modeling/domain-model/use-sap-model-creator/model-creator-bapi-schema-uploaded.png" >}}
 
 3. Select the entities you need, then click on the related number of **Included Attributes** to go to attribute selection page for each of the entities.
 
-    {{< figure src="/attachments/partners/sap/use-sap-model-creator/model-creator-bapi-select-entities.png" >}}
+    {{< figure src="/attachments/refguide/modeling/domain-model/use-sap-model-creator/model-creator-bapi-select-entities.png" >}}
 
 4. For each entity, select the attributes you need to include and click **Save**. The number of selected attributes number will be reflected in the **Included Attributes** column.
 
-    {{< figure src="/attachments/partners/sap/use-sap-model-creator/model-creator-bapi-select-attributes.png" >}}
+    {{< figure src="/attachments/refguide/modeling/domain-model/use-sap-model-creator/model-creator-bapi-select-attributes.png" >}}
 
-    {{< figure src="/attachments/partners/sap/use-sap-model-creator/model-creator-bapi-select-more-entities.png" >}}
+    {{< figure src="/attachments/refguide/modeling/domain-model/use-sap-model-creator/model-creator-bapi-select-more-entities.png" >}}
 
     This step must be repeated for every entity you want to include in the domain model.
 
 5. Once you have selected all the entities and attributes you need, click **Next** to review the selection.
 6. Review the selection and click **Generate Domain Model**.
-    {{< figure src="/attachments/partners/sap/use-sap-model-creator/model-creator-bapi-generate-dm.png" >}}
+    {{< figure src="/attachments/refguide/modeling/domain-model/use-sap-model-creator/model-creator-bapi-generate-dm.png" >}}
 
 7. Click **Generate .mpk** to create the module containing the BAPI domain model.
 
-    {{< figure src="/attachments/partners/sap/use-sap-model-creator/model-creator-bapi-generate-mpk.png" >}}
+    {{< figure src="/attachments/refguide/modeling/domain-model/use-sap-model-creator/model-creator-bapi-generate-mpk.png" >}}
 
 8. Click **Download** to save the Mendix BAPI module for this BAPI schema.
 
-    {{< figure src="/attachments/partners/sap/use-sap-model-creator/model-creator-bapi-download.png" >}}
+    {{< figure src="/attachments/refguide/modeling/domain-model/use-sap-model-creator/model-creator-bapi-download.png" >}}
 
 ## 5 Using the Data Model Module in a Mendix App{#Using}
 
@@ -279,13 +279,13 @@ Now you have a Mendix module ready to import into your app.
 1. Open the app which you created as a prerequisite.
 2. Right-click your app in the **App Explorer** and select **Import module package...**.
 
-    {{< figure src="/attachments/partners/sap/use-sap-model-creator/import_module_package.png" >}}
+    {{< figure src="/attachments/refguide/modeling/domain-model/use-sap-model-creator/import_module_package.png" >}}
 
 3. Use the navigation dialog to find your module, which will have the suffix **.mpk**.
 
     You now have your service module, for example **GWSAMPLE_BASIC**, available in your app ready to use in combination with the OData Connector for SAP solutions.
 
-    {{< figure src="/attachments/partners/sap/use-sap-model-creator/app_explorer.png" >}}
+    {{< figure src="/attachments/refguide/modeling/domain-model/use-sap-model-creator/app_explorer.png" >}}
 
 {{% alert color="warning" %}}
 Do not change the names of entities, attributes, or associations in the Domain Model of the module; they need to match the names used by the SAP OData service for the OData Connector for SAP solutions to work correctly.

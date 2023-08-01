@@ -32,6 +32,12 @@ The [Mendix Feedback](https://marketplace.mendix.com/link/component/205506) modu
 
 {{< figure src="/attachments/appstore/modules/mendix-feedback/feedback-in-app.png" >}}
 
+{{% alert color="info" %}}
+On 12 August, 2023, the way that feedback is presented in the Developer Portal will be changed to become part of **App Insights**. See [App Insights Features](/developerportal/general/feedback/#app-insights) in the *Feedback* documentation for details of the improvements.
+
+Existing and new feedback items will continue to be available and you will not need to change the Mendix Feedback module in your app(s).
+{{% /alert %}}
+
 The Mendix Feedback module is easy to set up and automatically attaches additional information to each submitted issue such as the user’s name, role, active form, browser version, and screen resolution.
 
 ### 1.1 Typical Usage Scenario

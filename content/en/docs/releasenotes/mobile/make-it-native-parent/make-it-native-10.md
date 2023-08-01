@@ -10,6 +10,20 @@ For more information on the Make It Native app, see [Getting the Make It Native 
 
 You can download the Make It Native app for [iOS](https://apps.apple.com/us/app/make-it-native-10/id6450037464) or [Android](https://play.google.com/store/apps/details?id=com.mendix.developerapp.mx10).
 
+## iOS 1.0.3
+
+**iOS Release date: July 22nd, 2023**
+
+### Improvements
+
+* We made the **Launch App** screen consistently remember your previously used URL.
+* The **History** tab now automatically opens the launch screen to quickly launch your app.
+  
+### Fixes
+
+* We fixed the **History** tab so it no longer saves duplicate entries.
+* We fixed rendering the onboarding screens on all devices.
+* We fixed several design and usability issues throughout the app.
 
 ## Android 1.0.0
 

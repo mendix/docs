@@ -23,7 +23,7 @@ If you do not configure a [data source](/refguide/data-sources/) for a [list vie
 
 The scheme below shows that the data source of the list view has been set to **Database**, but the entity that needs to be retrieved from the database has not been specified. This results in a consistency error. 
 
-{{< figure src="/attachments/refguide/modeling/menus/view-menu/errors-pane/consistency-errors/consistency-errors-pages/list-view-error.png" alt="Data Source Consistency Error Scheme" >}}
+{{< figure src="/attachments/refguide/modeling/consistency-errors/consistency-errors-pages/list-view-error.png" alt="Data Source Consistency Error Scheme" >}}
 
 The table below describes the most common errors which can occur when configuring a list view,  the causes of these errors, and ways to fix them. 
 
@@ -40,7 +40,7 @@ If you do not configure a [data source](/refguide/data-sources/) for a [data vie
 
 For example, you have selected **Listen to widget** as the data source, but you have not selected the specific **List widget** you are listening to.
 
-{{< figure src="/attachments/refguide/modeling/menus/view-menu/errors-pane/consistency-errors/consistency-errors-pages/data-view-no-list-widget.png" alt="Data View With no List Widget Configured" >}}
+{{< figure src="/attachments/refguide/modeling/consistency-errors/consistency-errors-pages/data-view-no-list-widget.png" alt="Data View With no List Widget Configured" >}}
 
 The table below describes the most common errors you can come across when configuring a data view,  causes of these errors, and ways to fix them. 
 
@@ -72,11 +72,11 @@ When a page expects a context that is not passed to it from a calling page or a 
 
 For example, the **Customers** page contains a list view with a list of all customer names (**Customer** is set as **Entity** in the **Data Source** properties), and a **Details** button outside of the list view (placed in a [container](/refguide/container/) only). The **Details** button opens a **Customer Details** page when a user clicks it (the **On Click Action** for the button is set to **Page**). 
 
-{{< figure src="/attachments/refguide/modeling/menus/view-menu/errors-pane/consistency-errors/consistency-errors-pages/customers-page.png" alt="Button Properties on the Customers Page" >}}
+{{< figure src="/attachments/refguide/modeling/consistency-errors/consistency-errors-pages/customers-page.png" alt="Button Properties on the Customers Page" >}}
 
 However, the **Customer Details** page has a data view that expects an object *Customer* to be passed to it. In other words, this page needs to get data first to be able to display it. 
 
-{{< figure src="/attachments/refguide/modeling/menus/view-menu/errors-pane/consistency-errors/consistency-errors-pages/data-view-customer.png" alt="Data View Expects the Customer Object" >}}
+{{< figure src="/attachments/refguide/modeling/consistency-errors/consistency-errors-pages/data-view-customer.png" alt="Data View Expects the Customer Object" >}}
 
 As this object is not passed to it from the **Customers** page, you get a consistency error.
 
@@ -92,7 +92,7 @@ If you want the **Customer Details** page to open the details of a specific cust
 1. Open the **Customers** page.
 2. Drag the **Details** button inside the list view.
 
-    {{< figure src="/attachments/refguide/modeling/menus/view-menu/errors-pane/consistency-errors/consistency-errors-pages/details-button-inside-the-list-view.png" alt="The Details Button Example" >}}
+    {{< figure src="/attachments/refguide/modeling/consistency-errors/consistency-errors-pages/details-button-inside-the-list-view.png" alt="The Details Button Example" >}}
 
 Now the button gets the object of type *Customer* from the list view on the **Customers** page, and it will be passed to the **Customer Details** page. As a result, the details of a particular customer is displayed on the **Customer Details** page. 
 
@@ -105,7 +105,7 @@ If you want to create a new customer and fill in the customer's details on the *
 3. Set **Customer** as **Entity**.
 4. Set **Customer Details** as **Page**.
 
-    {{< figure src="/attachments/refguide/modeling/menus/view-menu/errors-pane/consistency-errors/consistency-errors-pages/button-create-object.png" alt="On Click Event Example" >}}
+    {{< figure src="/attachments/refguide/modeling/consistency-errors/consistency-errors-pages/button-create-object.png" alt="On Click Event Example" >}}
 
 5. Change the button's caption from **Details** to **Add**, as this button will now create a new customer instead of showing the details of an existing customer.
 
@@ -132,7 +132,7 @@ For example, on a page named *Customers* you have a button that calls a microflo
 
 However, the microflow contains a parameter *Customer*:
 
-{{< figure src="/attachments/refguide/modeling/menus/view-menu/errors-pane/consistency-errors/consistency-errors-pages/microflow-parameter.png" >}}
+{{< figure src="/attachments/refguide/modeling/consistency-errors/consistency-errors-pages/microflow-parameter.png" >}}
 
 The microflow parameter expects an argument *Customer*, and since this argument is not available on the page where the button is located, it results in an error. 
 
@@ -141,7 +141,7 @@ To fix it, do the following:
 1. Open the *Customers* page and drag a data container onto it. For example, you can drag and drop a list view.
 2. Set the data source type of the list view to *Database* and set **Entity (path)** to *Customer*.
 
-    {{< figure src="/attachments/refguide/modeling/menus/view-menu/errors-pane/consistency-errors/consistency-errors-pages/data-source-list-view.png" >}}
+    {{< figure src="/attachments/refguide/modeling/consistency-errors/consistency-errors-pages/data-source-list-view.png" >}}
 
 3. Place the button inside the list view.
 
@@ -155,11 +155,11 @@ For example, on a page named *Customers* you have a button that calls a microflo
 
 The microflow contains a parameter *Customer*:
 
-{{< figure src="/attachments/refguide/modeling/menus/view-menu/errors-pane/consistency-errors/consistency-errors-pages/microflow-parameter.png" >}}
+{{< figure src="/attachments/refguide/modeling/consistency-errors/consistency-errors-pages/microflow-parameter.png" >}}
 
 On the *Customers* page you also have a data container, for example, a data view, that has an object *Photo* available. That means that the data source type of the data view is set to *Context* and **Entity (path)** is set to *Photo*:
 
-{{< figure src="/attachments/refguide/modeling/menus/view-menu/errors-pane/consistency-errors/consistency-errors-pages/data-view-data-source.png" >}}
+{{< figure src="/attachments/refguide/modeling/consistency-errors/consistency-errors-pages/data-view-data-source.png" >}}
 
 As the microflow has the parameter *Customer*, and the data view has the object *Photo*, they are conflicting and resulting into an error.
 
@@ -183,7 +183,7 @@ A reference selector is a widget that is used to display and edit one-to-many or
 
 For example, you have several employees who are associated with one city where they work. This is a one-to-many association: multiple *Employees* objects are associated with one *City* object.  Associations that refer to a single object in this manner are *references*, as opposed to *reference sets*, in which multiple objects can refer to multiple other objects. In a reference, the "single object" side of the association is always the association's owner. For more information on associations and their types, see [Associations](/refguide/associations/).
 
-{{< figure src="/attachments/refguide/modeling/menus/view-menu/errors-pane/consistency-errors/consistency-errors-pages/many-to-one-association.png" alt="One-to-many Association" >}}
+{{< figure src="/attachments/refguide/modeling/consistency-errors/consistency-errors-pages/many-to-one-association.png" alt="One-to-many Association" >}}
 
 If you have the wrong type of association, you will get a consistency error: *Association {Name} must be a reference (not a reference set)*.
 
@@ -192,7 +192,7 @@ To fix this error, do the following:
 1. Open your domain model and double-click the association that you are using for the reference selector.
 2. In **Properties of Association** dialog box, change **Multiplicity** to one-to-many (in our example, multiple 'Employee' objects are associated with one 'City' objects).
 
-    {{< figure src="/attachments/refguide/modeling/menus/view-menu/errors-pane/consistency-errors/consistency-errors-pages/one-to-many-multiplicity.png" alt="Multiplicity for One-to-many Association" >}}
+    {{< figure src="/attachments/refguide/modeling/consistency-errors/consistency-errors-pages/one-to-many-multiplicity.png" alt="Multiplicity for One-to-many Association" >}}
 
 3. Click **OK** to save changes.
 
@@ -208,7 +208,7 @@ Reference set selector and input set selector are widgets that are used to displ
 
 For example, you have several employees who can visit customers in different cities during the week. Thus, many employees are associated with many cities, this is a many-to-many association between an *Employee* entity and a *City* entity (multiple employees are associated with multiple cities). Associations that refer to multiple objects in this manner are *reference set*. For more information on associations and their types, see [Associations](/refguide/associations/). 
 
-{{< figure src="/attachments/refguide/modeling/menus/view-menu/errors-pane/consistency-errors/consistency-errors-pages/many-to-many-association.png" alt="Many-to-many Association" >}}
+{{< figure src="/attachments/refguide/modeling/consistency-errors/consistency-errors-pages/many-to-many-association.png" alt="Many-to-many Association" >}}
 
 If you have a wrong type of association, you will get the following errors:
 
@@ -220,7 +220,7 @@ To fix the error, do the following:
 1. Open your domain model and double-click the association that you are using for the reference set selector or the input reference set selector and do the following: <br/>
 2. In **Properties of Association** dialog box, change **Multiplicity** to many-to-many (in our example, multiple 'Employee' objects are associated with multiple 'City' objects).
 
-    {{< figure src="/attachments/refguide/modeling/menus/view-menu/errors-pane/consistency-errors/consistency-errors-pages/changing-multiplicity.png" alt="Multiplicity for Many-to-many Association" >}}
+    {{< figure src="/attachments/refguide/modeling/consistency-errors/consistency-errors-pages/changing-multiplicity.png" alt="Multiplicity for Many-to-many Association" >}}
 
 3. Click **OK** to save changes.
 

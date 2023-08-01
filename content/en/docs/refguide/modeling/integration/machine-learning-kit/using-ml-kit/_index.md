@@ -332,10 +332,9 @@ To integrate a pre-trained model with an unsupported type from model repositorie
 
 This is currently not supported.
 
-### 6.4 Supported Mendix Apps
-
+### 6.4 Supported Integrations
 The current MLKit version has support for backend inference with Mendix Runtime via Microflows only.
-Support for Nanoflows, Web Progressive apps and Mobile Native is planned for future iterations of ML Kit
+Support for Nanoflows, Web Progressive apps and Mobile Native is not currently part of ML Kit as per the time being.
 
 ## 7 FAQs
 

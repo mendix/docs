@@ -12,7 +12,7 @@ aliases:
 ## 1 Introduction
 
 {{% alert color="warning" %}}
-SAP Cloud Connector is not available in OData Connector for SAP solutions version 4.0.0, and above. For these versions, use the method described in [SAP Destination Service](/partners/sap/sap-destination-service/) to use Cloud Connector functionality with OData Connector for SAP solutions.
+SAP Cloud Connector is not available in OData Connector for SAP solutions version 4.0.0, and above. For these versions, use the method described in [SAP Destination Service](/developerportal/deploy/sap-cloud-platform/sap-destination-service/) to use Cloud Connector functionality with OData Connector for SAP solutions.
 {{% /alert %}}
 
 A challenge when running an application in the cloud is to be able to access your on-premises systems in a secure way.

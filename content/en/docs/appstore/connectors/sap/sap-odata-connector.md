@@ -18,7 +18,7 @@ The [OData Connector for SAP solutions](https://marketplace.mendix.com/link/comp
 
 ### 1.1 Typical Use Cases
 
-When running the Mendix application on SAP Business Technology Platform (SAP BTP), you can choose to use the SAP Destination Service to gain access to your on-premises SAP instance. The SAP Destination Service can be configured to invoke the SAP Connectivity Service in SAP BTP to find a route to your OData service residing on-premises. This route is configured from the SAP Cloud Connector running as an agent in your on-premises SAP back-end. If no route is configured, the OData Connector for SAP solutions will route requests to the public OData service. For more information, see the [SAP Destination Service](/partners/sap/sap-destination-service/) documentation and the [OData Connector for SAP Solutions](https://marketplace.mendix.com/link/component/74525/Mendix/SAP-OData-Connector).
+When running the Mendix application on SAP Business Technology Platform (SAP BTP), you can choose to use the SAP Destination Service to gain access to your on-premises SAP instance. The SAP Destination Service can be configured to invoke the SAP Connectivity Service in SAP BTP to find a route to your OData service residing on-premises. This route is configured from the SAP Cloud Connector running as an agent in your on-premises SAP back-end. If no route is configured, the OData Connector for SAP solutions will route requests to the public OData service. For more information, see the [SAP Destination Service](/developerportal/deploy/sap-cloud-platform/sap-destination-service/) documentation and the [OData Connector for SAP Solutions](https://marketplace.mendix.com/link/component/74525/Mendix/SAP-OData-Connector).
 
 {{% alert color="info" %}}
 The SAP Destination Service replaces the SAP Cloud Connector flag which was used in previous version of the OData Connector for SAP solutions.
@@ -213,7 +213,7 @@ The following techniques can help in identifying issues which are causing your O
 
 #### 4.6.1 Setting Application Log level
 
-You can get more information from your app by setting the log level. For this you will need to have the Marketplace module [SAP Logging Connector](https://marketplace.mendix.com/link/component/110219/) set up in your app. For more information see the [SAP Logging Connector](/partners/sap/sap-logger/) documentation.
+You can get more information from your app by setting the log level. For this you will need to have the Marketplace module [SAP Logging Connector](https://marketplace.mendix.com/link/component/110219/) set up in your app. For more information see the [SAP Logging Connector](/developerportal/deploy/sap-cloud-platform/sap-logger/) documentation.
 
 To set log level for an application deployed to SAP BTP, go to ‘Model Options’ in the environment and set ‘SapApplicationLogs.SapLogLevel’ to the required level. (Debug, Info, Error, Warn, or Trace).
 
@@ -531,7 +531,7 @@ For example, you could catch an exception on **Get List** and display an error m
 ##### 5.1.2.5 Get cloud connector info
 
 {{% alert color="info" %}}
-This action is included for backward compatibility. The information about your cloud connector connection is available in the **Destination** entity after you have performed a **Get Destination** action. See [SAP Destination Service](/partners/sap/sap-destination-service/) for more information.
+This action is included for backward compatibility. The information about your cloud connector connection is available in the **Destination** entity after you have performed a **Get Destination** action. See [SAP Destination Service](/developerportal/deploy/sap-cloud-platform/sap-destination-service/) for more information.
 {{% /alert %}}
 
 This creates a **CloudConnectorInfo** object and fills the values for **ProxyHost**, **ProxyPort**, and **ProxyBearerToken** from the SAP environment, when the app is running on SAP BTP.
@@ -577,7 +577,7 @@ When an object is returned from an OData service, your app needs to know to whic
 
 ##### 5.2.1.3 Destination
 
-Destination is the name of the object of type SAPODataConnector.Destination where the details of a destination have been stored by a *Get Destination* action. An SAP Destination Service enables your Mendix app to use services defined in the SAP BTP cockpit without needing to know all the technical details of the endpoint. You can find more information about the SAP Destination Service in [SAP Destination Service](/partners/sap/sap-destination-service/).
+Destination is the name of the object of type SAPODataConnector.Destination where the details of a destination have been stored by a *Get Destination* action. An SAP Destination Service enables your Mendix app to use services defined in the SAP BTP cockpit without needing to know all the technical details of the endpoint. You can find more information about the SAP Destination Service in [SAP Destination Service](/developerportal/deploy/sap-cloud-platform/sap-destination-service/).
 
 {{% alert color="info" %}}
 The SAP Destination Service will only provide the correct information when run on SAP BTP. To test your app on your local machine you will have to use a URL to connect directly to an OData service which is available to you.
@@ -846,7 +846,7 @@ This domain model is part of the OData Connector for SAP solutions module and ca
 * **CSRFToken** – the Cross-Site Request Forgery (CSRF) token is maintained internally and is used to prevent CSRF attacks; a CSRF token is obtained when a **Get** or **Get list** OData action is performed and is maintained for a Mendix session (or transaction context) which means that:
     * where an asynchronous or background microflow is executed (for example, using *executeMicroflowInBackground* from Community Commons) a new CSRF token must be obtained before any other actions are performed
     * where a startup microflow or scheduled event is run, the context also supports CSRF but, again, the token must be obtained before performing any other actions
-* **Destination** – Information which defines the destination when using the *SAP Destination Service*. See [SAP Destination Service](/partners/sap/sap-destination-service/) for more information.<br />
+* **Destination** – Information which defines the destination when using the *SAP Destination Service*. See [SAP Destination Service](/developerportal/deploy/sap-cloud-platform/sap-destination-service/) for more information.<br />
     There are also some entities which are used to construct the *Destination* entity. Attribute values should always be taken from the Destination entity, rather than these entities:
     * DestinationConfiguration
     * ConnectivityInfo

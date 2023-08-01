@@ -65,7 +65,7 @@ For information on the current status of deployment to SAP BTP and any planned r
 
 #### Improvements – OData Connector for SAP Solutions
 
-* We improved the error handling for expired access tokens when using [Get Destination](/partners/sap/sap-destination-service/). Users will now be signed out so that they can retrieve a new access token.
+* We improved the error handling for expired access tokens when using [Get Destination](/developerportal/deploy/sap-cloud-platform/sap-destination-service/). Users will now be signed out so that they can retrieve a new access token.
 * We added the ability to fetch the SAP Destination even if the application is not XSUAA enabled or not using XSUAA.
 
 ### July 26, 2021
@@ -151,7 +151,7 @@ For more information see [SAP Business Technology Platform - deploy](/developerp
 
 #### Improvements
 
-* We have added an easy-to-use autoscaler configurator to allow you to easily create JSON configuration files for the **Application Autoscaler** on SAP Cloud Platform. See [Application Autoscaler for SAP Business Technology Platform](/partners/sap/sap-autoscaler/) for more information.
+* We have added an easy-to-use autoscaler configurator to allow you to easily create JSON configuration files for the **Application Autoscaler** on SAP Cloud Platform. See [Application Autoscaler for SAP Business Technology Platform](/developerportal/deploy/sap-cloud-platform/sap-autoscaler/) for more information.
     * There is currently an issue with how the JSON is uploaded. We are working on a fix for this but, in the meantime, please check the workaround in the documentation to ensure that the JSON is uploaded.
 
 ### March 26, 2020

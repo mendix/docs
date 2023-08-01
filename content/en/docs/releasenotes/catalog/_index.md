@@ -13,6 +13,12 @@ These release notes cover changes made to the [Catalog](/catalog/).
 
 ## 2023
 
+### July 24, 2023
+
+#### Fixes
+
+* We fixed an issue where datasets sometimes disappeared from an endpoint.
+
 ### July 6, 2023
 
 #### Improvements
@@ -87,7 +93,7 @@ These release notes cover changes made to the [Catalog](/catalog/).
 #### Fixes
 
 * We fixed an issue on the Catalog Admin page that displayed incorrect counts of data sources registered in the company.
-* We fixed an error that occured when no authentication is selected while registering a data source.
+* We fixed an error that occurred when no authentication is selected while registering a data source.
 
 ### February 27, 2023
 

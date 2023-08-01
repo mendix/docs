@@ -888,7 +888,8 @@ If you just need instructions how to get started, the [AWS IAM-based storage wal
                 ]
             },
             {
-                "Effect": "AllowCreateRDSTenants",
+                "Sid": "AllowCreateRDSTenants",
+                "Effect": "Allow",
                 "Action": [
                     "rds-db:connect"
                 ],
@@ -1763,7 +1764,8 @@ Create a new IAM role.
             ]
         },
         {
-            "Effect": "AllowCreateRDSTenants",
+            "Sid": "AllowCreateRDSTenants",
+            "Effect": "Allow",
             "Action": [
                 "rds-db:connect"
             ],

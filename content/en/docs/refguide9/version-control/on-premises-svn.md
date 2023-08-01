@@ -19,10 +19,6 @@ While this is the recommended way of working for almost all Mendix developers, y
 This document does not describe how to set up an SVN server from scratch; typically, this will be taken care of by the IT department of your organization.
 {{% /alert %}}
 
-{{% alert color="warning" %}}
-You will not be able to use Mendix Studio for collaborative development if you use an on-premises version control server. Collaborative development between Studio and Studio Pro will only work if you use the Mendix Team Server.
-{{% /alert %}}
-
 ## 2 Prerequisites
 
 Make sure you have completed the following prerequisites:

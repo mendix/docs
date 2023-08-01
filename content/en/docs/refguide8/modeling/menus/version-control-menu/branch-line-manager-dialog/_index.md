@@ -42,11 +42,7 @@ For more information about the Mendix Team Server, see [Team Server](/developerp
 
 In the **SVN repository address field**, enter the address of the app you want to manage and click **Connect** to load the available branches from the repository.
 
-## 3 Managing Branch Lines
-
-In the **Branch Line Manager**, you can create and delete branch line, enable and disable Mendix Studio for the project. For more information on how to perform these actions, see the [Managing Development Lines in Studio Pro](/refguide8/collaborative-development/#managing-branches) section in *Collaborative Development*. 
-
-## 4 Read More
+## 3 Read More
 
 * [Version Control](/refguide8/version-control/)
-* [Collaborative Development](/refguide8/collaborative-development/)
+

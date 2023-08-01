@@ -7,7 +7,7 @@ tags: ["Atlas", "UI", "UX", "user experience"]
 
 ## 1 Introduction
 
-Atlas UI and Mendix Studio bring a lot of features to the process of building an app. But what if you already have a Mendix app that looks great and runs smoothly? No problem! To get an existing Mendix app to work with Atlas UI and Studio, there are a couple of steps to follow. This how-to describes how to upgrade existing Mendix projects to Atlas UI.
+Atlas UI brings a lot of features to the process of building an app. But what if you already have a Mendix app that looks great and runs smoothly? No problem! To get an existing Mendix app to work with Atlas UI, there are a couple of steps to follow. This how-to describes how to upgrade existing Mendix projects to Atlas UI.
 
 This how-to will teach you how to do the following:
 
@@ -16,7 +16,7 @@ This how-to will teach you how to do the following:
 * Replace existing navigation layouts
 * Perform some optional actions
 
-## 2 Replace the UI Framework Module
+## 2 Replacing the UI Framework Module
 
 To get the full experience of Atlas UI, it’s necessary to import the Atlas UI Resources module. Every app includes a module called **UI_Resources** that can be found under **Project** > **App Store modules** in Studio Pro. This module contains all the layouts, page templates, and building blocks. The **UI Framework** folder in this module contains the old Mendix UI Framework content, which we will be upgrading to Atlas UI.
 
@@ -30,7 +30,7 @@ To replace the UI Framework, follow these steps:
 
 After the import is complete, there may be some errors in the **Error** pane for navigation profiles or layouts that do not exist. Be sure to resolve all of these errors.
 
-Once the Atlas UI Resources module is imported, all the new resources will be available in Studio Pro and Studio. When creating a new page, a new set of page templates for all devices will be available. In the **Toolbox**, a new tab will be added called **Building blocks**. You can drag building blocks from this pane onto your pages.
+Once the Atlas UI Resources module is imported, all the new resources will be available in Studio Pro. When creating a new page, a new set of page templates for all devices will be available. In the **Toolbox**, a new tab will be added called **Building blocks**. You can drag building blocks from this pane onto your pages.
 
 {{< figure src="/attachments/howto8/front-end/atlas-ui/migrate-existing-projects-to-atlasui/migrate_dm_bb_toolbox.png" alt="Image of Mendix Atlas UI" >}}
 
@@ -40,23 +40,16 @@ The Atlas UI Resources module comes with navigation layouts, which are required 
 
 {{< figure src="/attachments/howto8/front-end/atlas-ui/migrate-existing-projects-to-atlasui/migrate_dm_navlayouts.png" >}}
 
-## 4 Enabling Mendix Studio (Optional)
-
-After you complete the previous steps, all the new Atlas UI features will be available in your app while it is running in Studio Pro.
-
-But before your app can run in Studio, it is necessary to enable the Mendix Studio feature. This can be done in the [Mendix Developer Portal](https://sprintr.home.mendix.com/index.html) through your app's settings (app > **SETTINGS** > **General**).
-
-## 5 Reusing Parts of Your Old Theme (Optional)
+## 4 Reusing Parts of Your Old Theme (Optional)
 
 A lot of Mendix projects have a custom theme. If this is the case for your project, your old theme can be found in the Project Explorer folder named **theme_old**. The Atlas UI framework is similar to the Mendix UI Framework, so it is possible to reuse parts of your custom variables file.
 
 {{< figure src="/attachments/howto8/front-end/atlas-ui/migrate-existing-projects-to-atlasui/migrate_old_theme.png" alt="Image of Mendix Atlas UI" >}}
 
-## 6 Read More
+## 5 Read More
 
 * [Get Started with Atlas UI](/howto8/front-end/get-started-with-atlasui/)
 * [Create Company Atlas UI Resources](/howto8/front-end/create-company-atlas-ui-resources/)
 * [Create Custom Preview Images for Building Blocks and Page Templates](/howto8/front-end/create-custom-preview-images-for-building-blocks-and-page-templates/)
-* [Extend Design Properties to Customize Your Studio Experience](/howto8/front-end/extend-design-properties-to-customize/)
 * [Share Company Atlas UI Resources](/howto8/front-end/share-company-atlas-ui-resources/)
 * [Troubleshooting Atlas UI Changes](/refguide8/migration-atlas/)

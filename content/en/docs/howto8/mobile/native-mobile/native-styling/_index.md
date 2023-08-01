@@ -38,7 +38,7 @@ Default class names—which are the class names set by Mendix Studio Pro—will 
 
 ## 4 Design Properties
 
-Available in Mendix Studio and Mendix Studio Pro, design properties are an easier way to apply classes. Atlas already offers several useful design properties out of the box. You can see them by clicking on a widget and looking at the **Properties** panel. A design property can be either a drop-down menu or a toggle. A toggle will toggle one class, while a drop-down menu will apply a different class for each drop-down item. 
+Available in Mendix Studio Pro, design properties are an easier way to apply classes. Atlas already offers several useful design properties out of the box. You can see them by clicking on a widget and looking at the **Properties** panel. A design property can be either a drop-down menu or a toggle. A toggle will toggle one class, while a drop-down menu will apply a different class for each drop-down item. 
 
 ## 5 Read More
 

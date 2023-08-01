@@ -104,7 +104,6 @@ To allow the module to send and receive document generation requests on your Men
 2. For applications using Mendix [custom domains](/developerportal/deploy/custom-domains/), configure custom domain support.
 3. Register your app environment.
 
-
 The steps for each procedure are described in the sections below. 
 
 #### 3.2.1 Enabling the DocGen Request Handler {#enable-docgen}
@@ -141,7 +140,6 @@ The steps for each procedure are described in the sections below.
         * If it uses a Mendix custom domain, [set up your app to support the custom domain](#use-custom-domain).
         * If it does not use a Mendix custom domain, [register your app environment](#register-app).
     
-
 #### 3.2.2 Setting up Mendix Custom Domain Support (Only for Apps Deployed with Mendix Custom Domains){#use-custom-domain}
 
 If your app is deployed to Mendix Cloud and configured with a custom domain, the PDF Document Generation module needs to know the original Mendix Cloud URL in order to successfully generate your documents.

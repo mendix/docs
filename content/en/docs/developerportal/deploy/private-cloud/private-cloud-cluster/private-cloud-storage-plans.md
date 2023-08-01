@@ -264,6 +264,7 @@ This section provides technical details on how IAM authentication works with Pos
    To connect to a Postgres server, a login database is required. This database is not used - but is required, because Postgres needs a default login database to be specified.
    {{% /alert %}}
 * A *Postgres Admin* IAM role with permissions to access the database, with the following inline policy (replace `<aws_region>` with the database's region, `<account_id>` with your AWS account number, `<database_id>` with the RDS database instance identifier and `<database_user>` with the Postgres superuser account name):
+
     ```json
     {
         "Version": "2012-10-17",
@@ -328,19 +329,19 @@ In the Postgres plan configuration, enter the following details:
 * **Host** - Postgres server hostname, for example `postgres-shared-postgresql.privatecloud-storage.svc.cluster.local`.
 * **Port** - Postgres server port number; in most cases this should be set to `5432`.
 * **Strict TLS** - specifies if the TLS should always be validated.
-  * Enabling this option will enable full TLS certificate validation and require encryption when connecting to the PostgreSQL server. If the PostgreSQL server has a self-signed certificate, you will also need to configure custom TLS so that the self-signed certificate is accepted.
-  * Disabling this option will attempt to connect with TLS, but skip certificate validation. If TLS is not supported, it will fall back to an unencrypted connection.
+    * Enabling this option will enable full TLS certificate validation and require encryption when connecting to the PostgreSQL server. If the PostgreSQL server has a self-signed certificate, you will also need to configure custom TLS so that the self-signed certificate is accepted.
+    * Disabling this option will attempt to connect with TLS, but skip certificate validation. If TLS is not supported, it will fall back to an unencrypted connection.
 * **Database name** - login database for the admin/superuser; in most cases this is set to `postgres`.
 * **Username** - username of the admin/superuser, used by the Mendix Operator to create or delete tenants for app environments; typically, this is set to `postgres`.
 * **Authentication** - select `aws-iam` from the dropdown.
 * **IAM Role ARN** - the *Postgres Admin* IAM role ARN.
-  * We recommend to use the same IAM role to manage Postgres databases and S3 buckets, as this would be easier to set up and maintain.
+    * We recommend to use the same IAM role to manage Postgres databases and S3 buckets, as this would be easier to set up and maintain.
 * **K8s Service Account** - the Kubernetes Service Account to create and attach to the IAM role.
   {{% alert color="warning" %}}
   Do not use the name of an existing Service Account (environment name), or one of the reserved Kubernetes Service Account names:
-  * `mendix-operator`
-  * `mendix-agent`
-  * `mendix-storage-provisioner`
+    * `mendix-operator`
+    * `mendix-agent`
+    * `mendix-storage-provisioner`
   {{% /alert %}}
 
 {{% alert color="info" %}}
@@ -915,9 +916,9 @@ If you just need instructions how to get started, the [AWS IAM-based storage wal
 
 * Every environment has its own IAM role and associated Kubernetes Service Account.
 * The S3 bucket is shared. 
-  * The environment template policy uses the IAM role tags as a template, so that a user can only access a certain prefix (path or directory) in the bucket.
-  * In practice, this means that any environment can only access files if those files' prefix matches the environment's IAM role tags.
-  * An environment cannot access files from other environments.
+    * The environment template policy uses the IAM role tags as a template, so that a user can only access a certain prefix (path or directory) in the bucket.
+    * In practice, this means that any environment can only access files if those files' prefix matches the environment's IAM role tags.
+    * An environment cannot access files from other environments.
 * The Mendix Operator does not need permissions to create new policies, only to attach a manually created policy.
 
 ##### 3.3.2.4 Create Workflow
@@ -949,14 +950,14 @@ In the Amazon S3 plan configuration, enter the following details:
 * **Attach policy ARN** - The environment template policy ARN; this is the existing policy that will be attached to every environment's IAM role.
 * **EKS OIDC URL** - The OIDC URL of the EKS cluster; in most cases, the OIDC provider is [created automatically](https://docs.aws.amazon.com/eks/latest/userguide/enable-iam-roles-for-service-accounts.html), and its URL can be found in the AWS Management Console.
 * **IAM Role ARN** - the admin user role ARN.
-  * We recommend to use the same IAM role to manage Postgres databases and S3 buckets, as this would be easier to set up and maintain.
+    * We recommend to use the same IAM role to manage Postgres databases and S3 buckets, as this would be easier to set up and maintain.
 * **K8s Service Account** - the Kubernetes Service Account to create and attach to the IAM role.
 
   {{% alert color="warning" %}}
   Do not use the name of an existing Service Account (environment name), or one of the reserved Kubernetes Service Account names:
-  * `mendix-operator`
-  * `mendix-agent`
-  * `mendix-storage-provisioner`
+    * `mendix-operator`
+    * `mendix-agent`
+    * `mendix-storage-provisioner`
   {{% /alert %}}
 
 AWS IRSA allows a Kubernetes Service Account to assume an IAM role. For this to work correctly, the IAM role's trust policy needs to trust the Kubernetest Service Account:
@@ -1776,7 +1777,6 @@ Create a new IAM role.
     ]
 }
 ```
-
 
 In this template, replace:
 

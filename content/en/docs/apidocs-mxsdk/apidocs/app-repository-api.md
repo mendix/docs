@@ -31,7 +31,7 @@ All available endpoints are shown in the following table:
 
 ## 4 Authentication
 
-Authentication for the App Repository uses a personal access token (PAT).
+Authentication for the App Repository API uses a personal access token (PAT).
 
 ### 4.1 Generating a PAT
 

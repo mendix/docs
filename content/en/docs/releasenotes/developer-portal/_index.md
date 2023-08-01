@@ -17,7 +17,7 @@ To see the current status of the Mendix Developer Portal and Control Center, see
 
 ## 2023
 
-### July XX, 2023
+### August XX, 2023
 
 {{% todo %}}Fill in the right release date above and also update the release date of the Developer Portal in this file: docs >  layouts > patricians > landing page > latest-releases.html. {{% /todo %}}
 

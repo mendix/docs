@@ -5,6 +5,14 @@ weight: 9
 description: "Native Template 7 release notes."
 ---
 
+## 7.0.2 {#702}
+
+**Release date: August 1, 2023**
+
+### Fixes
+
+* We fixed an issue with QR code scanner not working on iOS version of the custom dev app
+
 ## 7.0.1 {#701}
 
 **Release date: April 13, 2023**

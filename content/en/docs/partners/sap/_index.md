@@ -22,7 +22,7 @@ To find out how to deploy your app to SAP Business Technology Platform, see [SAP
 * [XSUAA Connector for SAP Business Technology Platform](/appstore/connectors/sap/sap-xsuaa-connector/) – presents information on the [XSUAA Connector for SAP Business Technology Platform](https://marketplace.mendix.com/link/component/78091)
 * [Application Autoscaler for SAP Business Technology Platform](/developerportal/deploy/sap-cloud-platform/sap-autoscaler/) – has information on binding and configuring the Application Autoscaler
 * [SAP Single Sign-On](/developerportal/deploy/sap-cloud-platform/sap-single-sign-on/) – describes utilizing all the options of Mendix SSO as an SAP user
-* [SAP Fiori 3.0 Styling](/partners/sap/sap-fiori-3-0/) – summarizes the features of the Web UI Package for SAP Fiori theme module you can use to create an SAP Fiori-themed app
+* [SAP Fiori 3.0 Styling](/appstore/connectors/ui-resources/sap-fiori-3-0/) – summarizes the features of the Web UI Package for SAP Fiori theme module you can use to create an SAP Fiori-themed app
 * [SAP Cloud Connector](/appstore/connectors/sap/sap-cloud-connector/) – describes using the connector so that a Mendix app deployed on SAP BTP can access any SAP system running on premises
 
 ## 3 How-to Documents in This Category

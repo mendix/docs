@@ -11,7 +11,7 @@ description: "Native Template 7 release notes."
 
 ### Fixes
 
-* We fixed an issue with QR code scanner not working on iOS version of the custom dev app
+* We fixed an issue where the QR code scanner would not work on the iOS version of a custom developer app.
 
 ## 7.0.1 {#701}
 

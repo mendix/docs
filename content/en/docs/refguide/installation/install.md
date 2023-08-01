@@ -107,7 +107,7 @@ As compared to the regular installer, the portable installer installs Mendix Stu
 
 When starting Studio Pro for the first time after installation, it will ask you to sign in to the Mendix Platform. This allows you to get access to Mendix platform services from within Studio Pro, such as Team Server, Marketplace, and app deployment to the cloud.
 
-You can sign in with your Mendix account, or your own company account if this has been set up as an Identify Provider in the Mendix platform.
+You can sign in with your Mendix account, or with your own company account if this has been set up as an Identify Provider in the Mendix platform.
 
 In some situations, for example, when your network has a firewall or proxy server, a warning about an untrusted certificate may appear during the sign-in process:
 
@@ -116,7 +116,7 @@ In some situations, for example, when your network has a firewall or proxy serve
 To continue, you may accept the certificate for the current session by clicking the **Accept for this session** button, or install it permanently by clicking the **View certificate information** button. 
 
 {{% alert color="warning" %}}
-Accepting untrusted certificates can bring security risk. You should only do so after having received confirmation from your network administrator.
+Accepting untrusted certificates can bring security risks. You should only do so after having received confirmation from your network administrator.
 {{% /alert %}}
 
 ## 8 Next Steps

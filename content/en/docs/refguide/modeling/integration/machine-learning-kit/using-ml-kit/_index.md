@@ -111,7 +111,7 @@ See [Integrating Models with Pre-processors and Post-processors](#pre-post-proce
 
 ##### 2.2.3.1 Converting to Persistable Entities
 
-You can convert non-persistable entities into [peristable](/refguide/persistability/) ones and use other types, such as **Binary**. This can be done to decrease inference latency of ML mappings document used in the [Call ML model](/refguide/call-ml-model/) activity. 
+You can convert non-persistable entities into [persistable](/refguide/persistability/) ones and use other types, such as **Binary**. This can be done to decrease inference latency of ML mappings document used in the [Call ML model](/refguide/call-ml-model/) activity. 
 
 To convert an entity, do the following:
 
@@ -215,7 +215,7 @@ Once you import your model, the **Call ML Model** activity allows you to add you
 
 For information on design patterns that include pre-processors and post-processors, see [Pre/Post-Processor Design Patterns](/refguide/machine-learning-kit/design-patterns/pre-post-processor-patterns/).
 
-{{% alert color="info" %}}Check out pre- and post-processor sample files in our [Mendix ML Kit Demo Respository](https://github.com/mendix/mlkit-example-app/tree/main/javasource). In **Actions** folders, look for Java files named `PreProcessor.java` and `PostProcessor.java`.{{% /alert %}}
+{{% alert color="info" %}}Check out pre- and post-processor sample files in our [Mendix ML Kit Demo Repository](https://github.com/mendix/mlkit-example-app/tree/main/javasource). In **Actions** folders, look for Java files named `PreProcessor.java` and `PostProcessor.java`.{{% /alert %}}
 
 ## 4 Supported Frameworks and Libraries {#supported-frameworks}
 
@@ -302,7 +302,7 @@ For more information, see [Debug Java Actions](/howto/monitoring-troubleshooting
 
 ### 6.1 I/O Data Types
 
-ONNX values could be in multiple I/O types. The most common type is a Tensor. As mentioned in the examples, a Tensor could represent a primitive value, string, a boolean, or multi-dimensional form of those data types. Additionally, ONNX allows the creation of a value that actually a sequence or a map of tensors for inputs and outputs. However, these types are currently not supported. 
+ONNX values could be in multiple I/O types. The most common type is a Tensor. As mentioned in the examples, a Tensor could represent a primitive value, string, a Boolean, or multi-dimensional form of those data types. Additionally, ONNX allows the creation of a value that actually a sequence or a map of tensors for inputs and outputs. However, these types are currently not supported. 
 
 Below are the common types and their support status in *ML Kit*:
 
@@ -332,9 +332,9 @@ To integrate a pre-trained model with an unsupported type from model repositorie
 
 This is currently not supported.
 
-### 6.4 Supported Integrations
-The current MLKit version has support for backend inference with Mendix Runtime via Microflows only.
-Support for Nanoflows, Web Progressive apps and Mobile Native is not currently part of ML Kit as per the time being.
+### 6.4 ML Kit in Mendix Apps
+
+You can only call the ML model via the MLKit from Microflows.
 
 ## 7 FAQs
 

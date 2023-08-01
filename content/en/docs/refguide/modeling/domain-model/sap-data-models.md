@@ -51,4 +51,4 @@ The enumeration **FunctionNames** contains a list of functions which are exposed
 ## 3 Read More
 
 * [OData Connector for SAP Solutions](/appstore/connectors/sap/sap-odata-connector/)
-* [How To Use the Model Creator for SAP Integrations](refguide/use-sap-model-creator/)
+* [How To Use the Model Creator for SAP Integrations](/refguide/use-sap-model-creator/)

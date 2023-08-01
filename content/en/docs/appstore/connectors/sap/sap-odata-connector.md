@@ -280,7 +280,7 @@ Version 5.3.0 of the OData Connector for SAP solutions adds support for services
 
 Some inputs are necessary for the connector to work and these are marked **(required)**. Other inputs are not required, but in some cases this must be made explicit by setting them to *empty*.
 
-A more detailed description of the parameters is in the [Connector Action Parameters](#ConnectorActionParameters) section.
+A more detailed description of the parameters is in the [Parameters](#parameters) section.
 
 #### 5.1.1 Entity and Attribute Manipulation{#EntityManipulation}
 
@@ -551,7 +551,7 @@ Each [activity](#activities) requires a number of parameters which will be categ
 
 {{< figure src="/attachments/appstore/connectors/sap-odata-connector/actionparameters-sapodataconnector.png" >}}
 
-This section describes in more detail each of the parameters which is used by one or more of the actions described in the [Actions](#Actions) section, above.
+This section describes in more detail each of the parameters which is used by one or more of the actions described in the [Activities](#activities) section, above.
 
 Every action of the OData Connector for SAP solutions will ask for a set of parameters. For example, **Get List**:
 

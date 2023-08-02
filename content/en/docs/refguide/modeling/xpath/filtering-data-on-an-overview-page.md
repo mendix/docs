@@ -29,7 +29,7 @@ This how-to will teach you how to do the following:
 
 For this how-to, it is necessary that you set up a test app with test data. To do so, follow these steps:
 
-1. Follow the guide [Creating a Basic Data Layer](/refguide/create-a-basic-data-layer/) and create the following domain model:
+1. Follow the guide [Configuring a Domain Model](/refguide/configuring-a-domain-model/) and create the following domain model:
 
     {{< figure src="/attachments/refguide/modeling/xpath/define-access-rules-using-xpath/18581378.png" >}}
 
@@ -79,10 +79,10 @@ In the previous section, you set up a basic data structure and created some samp
 
 In the previous section, you used the search bar to filter data on the **Orders** overview page. In this section, you add an XPath constraint on the **Orders** data grid. With an XPath constraint on a data grid you can filter (in a hard-coded way) the objects shown in the list. Mendix XPath is one of the Mendix query languages designed to retrieve data. XPath uses path expressions to select data of Mendix objects and their attributes or associations. To learn more about XPath, see [XPath Constraints](/refguide/xpath-constraints/). In the follwing example, you constrain the data grid using XPath so that the data grid only displays orders with the status **Open**. 
 
-1. Select the **Orders** data grid to open its **Properties** pane.
-2. Change **Data source** > **Type** to **XPath** and then click the **XPath Constraint** field:
+1. Select the **Orders** data grid and go to its **Properties** pane.
+2. Choose **XPath** for **Data source** > **Type** and then click in the **XPath Constraint** field:
 
-    {{< figure src="/attachments/refguide/modeling/xpath/filtering-data-on-an-overview-page/open-XPath-constraint.png" width="400px">}}
+    {{< figure src="/attachments/refguide/modeling/xpath/filtering-data-on-an-overview-page/open-XPath-constraint.png" width="300px">}}
 
 3. Enter the following expression in the **XPath Constraint** editor: `[OrderStatus = ‘Open’]`. The data grid now only shows orders with the status **Open**. 
 

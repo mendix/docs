@@ -11,7 +11,7 @@ aliases:
 
 ## 1 Introduction
 
-The [Amazon Rekognition connector](https://marketplace.mendix.com/link/component/204717) provides a way for you to enrich your Mendix app with AI image analysis capabilities by implementing [Amazon Rekognition](https://aws.amazon.com/rekognition/).
+The [Amazon Rekognition](https://marketplace.mendix.com/link/component/204717) connector provides a way for you to enrich your Mendix app with AI image analysis capabilities by implementing [Amazon Rekognition](https://aws.amazon.com/rekognition/).
 
 ### 1.1 Typical Use Cases
 
@@ -32,6 +32,16 @@ To authenticate with Amazon Web Service (AWS), you must also install and configu
 ### 1.3 Example
 
 {{% youtube h_R1mMtkfd8 %}}
+
+### 1.4 Licensing and Cost
+
+This connector is available as a free download from the Mendix Marketplace, but the AWS service to which is connects may incur a usage cost. For more information, refer to AWS documentation.
+
+{{% alert color="info" %}}
+Most AWS services provide a free tier that allows easy access to most services. To find out if this service is included in the free tier, see [AWS Free Tier](https://aws.amazon.com/free/). To calculate the potential cost of using an AWS service outside of the free tier, use the [AWS Cost calculator](https://calculator.aws/).
+{{% /alert %}}
+
+Depending on your use case, your deployment environment, and the type of app that you want to build, you may also need a license for your Mendix app. For more information, refer to [Licensing Apps](/developerportal/deploy/licensing-apps-outside-mxcloud/).
 
 ## 2 Installation
 
@@ -93,11 +103,13 @@ After you configure the authentication profile for Amazon Rekognition, you can i
 
 ## 4 Technical Reference
 
-To help you work with the Amazon DynamoDB connector, the following sections of this document list the available entities, enumerations, and activities that you can use in your application.
+To help you work with the Amazon Rekognition connector, the following sections of this document list the available [constants](#constants), [entities](#domain-model), [enumerations](#enumerations), [activities](#activities), and [JavaScript actions](#js-actions) that you can use in your application.
 
 ### 4.1 Constants {#constants}
 
 Constants are used to define configuration values. All activities are exported as microflow activities that can directly be added to a microflow. Make sure the constants are configured correctly as shown in the table below, so the connector can authenticate the request with AWS.
+
+For more information, see [Constants](/refguide/constants/).
 
 | Name | Value |
 | --- | --- |
@@ -117,53 +129,57 @@ The entities in the table below describe all generalizations. These are (re-)use
 | Name | Description |
 | --- | --- |
 | `ConnectionDetails` | This entity holds information regarding the connection with Amazon's Rekognition service. |
-| `Face` | This entity includes a confidence. The confidence is that of Amazon Rekognition service in its accuracy of recognizing a face.<br />Additionally, this entity is a generalization, and the specialization(s) of this entity should be used instead. |
-| `BoundingBox` | This entity identifies the bounding box around the label, face, text, object of interest, or Personal Protective Equipment (PPE). The left (x) coordinate and top (y) coordinate are coordinates representing the top and left sides of the bounding box. Note that the upper-left corner of the image is the origin (0,0). The top and left values returned are ratios of the overall image size. For example, if the input image is 700 x 200 pixels, and the top-left coordinate of the bounding box is 350 x 50 pixels, the API returns a left value of 0.5 (350/700) and a top value of 0.25 (50/200).<br />The width and height values represent the dimensions of the bounding box as a ratio of the overall image dimension. For example, if the input image is 700 x 200 pixels, and the bounding box width is 70 pixels, the width returned is 0.1.<br />Additionally, this entity is a generalization, and the specialization(s) of this entity should be used instead. |
-| `Label` | This entity includes a confidence and a name. The confidence is that of Amazon Rekognition service's accuracy in recognizing a face and the name is that of the generated label. <br />Additionally, this entity is a generalization, and the specialization(s) of this entity should be used instead. |
-| `Polygon` | This entity contains the left (x) and top (y) coordinates of a point in an image or a video frame. The left (x) and top (y) values are ratios of the overall image size or video resolution. For example, if an input image is 700 x 200 and the values are X = 0.5 and Y = 0.25, then the point is at the (350,50) pixel coordinate in the image.<br />Additionally, this entity is a generalization, and the specialization(s) of this entity should be used instead. |
-| `Pose` | This entity indicates the pose of the face as determined by its pitch, roll, and yaw. These three Euler angles could be described as following: the pitch is the rotational movement of the head that resembles nodding, the yaw resembles the movement of shaking, and the roll resembles the movement of tilting.<br />Additionally, this entity is a generalization, and the specialization(s) of this entity should be used instead. |
+| `Face` | This entity includes a confidence. The confidence is that of Amazon Rekognition service in its accuracy of recognizing a face. Additionally, this entity is a generalization, and the specialization(s) of this entity should be used instead. |
+| `BoundingBox` | This entity identifies the bounding box around the label, face, text, object of interest, or Personal Protective Equipment (PPE). The left (x) coordinate and top (y) coordinate are coordinates representing the top and left sides of the bounding box. Note that the upper-left corner of the image is the origin (0,0). The top and left values returned are ratios of the overall image size. For example, if the input image is 700 x 200 pixels, and the top-left coordinate of the bounding box is 350 x 50 pixels, the API returns a left value of 0.5 (350/700) and a top value of 0.25 (50/200). The width and height values represent the dimensions of the bounding box as a ratio of the overall image dimension. For example, if the input image is 700 x 200 pixels, and the bounding box width is 70 pixels, the width returned is 0.1. Additionally, this entity is a generalization, and the specialization(s) of this entity should be used instead. |
+| `Label` | This entity includes a confidence and a name. The confidence is that of Amazon Rekognition service's accuracy in recognizing a face and the name is that of the generated label. Additionally, this entity is a generalization, and the specialization(s) of this entity should be used instead. |
+| `Polygon` | This entity contains the left (x) and top (y) coordinates of a point in an image or a video frame. The left (x) and top (y) values are ratios of the overall image size or video resolution. For example, if an input image is 700 x 200 and the values are X = 0.5 and Y = 0.25, then the point is at the (350,50) pixel coordinate in the image. Additionally, this entity is a generalization, and the specialization(s) of this entity should be used instead. |
+| `Pose` | This entity indicates the pose of the face as determined by its pitch, roll, and yaw. These three Euler angles could be described as following: the pitch is the rotational movement of the head that resembles nodding, the yaw resembles the movement of shaking, and the roll resembles the movement of tilting. Additionally, this entity is a generalization, and the specialization(s) of this entity should be used instead. |
 | `ImageQuality` | This entity identifies the brightness and sharpness of the face image. Additionally, this entity is a generalization, and the specialization(s) of this entity should be used instead. |
-| `Landmark` | This entity indicates the location of the landmark on the face, it includes the type and left (x) and top (y) coordinates. The type relates to the referenced region of the face.<br />Additionally, this entity is a generalization, and the specialization(s) of this entity should be used instead. |
-| `PhysicalProperty` | This entity is extracted from various entities that consist of the same attributes and can be described as physical properties. The attributes include a confidence and a value. The confidence is that of Amazon Rekognition service in its accuracy of recognizing a face and the value is whether the said physical property has been detected or not. These entities are the following:<br />- `Beard`<br />- `Eyeglasses`<br />- `EyesOpen`<br />- `CoversBodyPart`<br />- `MouthOpen`<br />- `Mustache`<br />- `Sunglasses`<br />- `SmileDetectFace`<br />- `SmileRecognizeFace`<br />- `SmileCompareFace`<br />Additionally, this entity is a generalization, and the specialization(s) of this entity should be used instead. |
-| `Emotion` | This entity holds the information regarding the emotions that appear to be expressed on the face, and the confidence level in the determination. The API is only making a determination of the physical appearance of a person's face. It is not a determination of the person’s internal emotional state and should not be used in such a way. For example, a person pretending to have a sad face might not be sad emotionally.<br />Additionally, this entity is a generalization, and the specialization(s) of this entity should be used instead. |
-| `PersonsEquipment` | This entity holds information regarding a person's status of wearing protective equipment, including the value. The value is a representation of the ID of the detected person.<br />Additionally, this entity is a generalization, and the specialization(s) of this entity should be used instead. |
+| `Landmark` | This entity indicates the location of the landmark on the face, it includes the type and left (x) and top (y) coordinates. The type relates to the referenced region of the face. Additionally, this entity is a generalization, and the specialization(s) of this entity should be used instead. |
+| `PhysicalProperty` | This entity is extracted from various entities that consist of the same attributes and can be described as physical properties. The attributes include a confidence and a value. The confidence is that of Amazon Rekognition service in its accuracy of recognizing a face and the value is whether the said physical property has been detected or not. These entities are the following:; `Beard`; `Eyeglasses`;  `EyesOpen`; `CoversBodyPart`; `MouthOpen`; `Mustache`; `Sunglasses`; `SmileDetectFace`; `SmileRecognizeFace`; `SmileCompareFace`. Additionally, this entity is a generalization, and the specialization(s) of this entity should be used instead. |
+| `Emotion` | This entity holds the information regarding the emotions that appear to be expressed on the face, and the confidence level in the determination. The API is only making a determination of the physical appearance of a person's face. It is not a determination of the person’s internal emotional state and should not be used in such a way. For example, a person pretending to have a sad face might not be sad emotionally. Additionally, this entity is a generalization, and the specialization(s) of this entity should be used instead. |
+| `PersonsEquipment` | This entity holds information regarding a person's status of wearing protective equipment, including the value. The value is a representation of the ID of the detected person. Additionally, this entity is a generalization, and the specialization(s) of this entity should be used instead. |
 
 ### 4.3 Enumerations {#enumerations}
 
-An enumeration is a predefined list of values that can be used as an attribute type.
+An enumeration is a predefined list of values that can be used as an attribute type. For more information, see [Enumerations](/refguide/enumerations/).
 
-#### 4.3.1 `QualityFilter`
+#### 4.3.1 QualityFilter
+
+This enumeration specifies how much filtering is applied, for example, to identify faces. If the quality filter is applied, then low-quality results are filtered out.
+
+| **Name** | **Caption** | **Description** |
+| --- | --- | --- |
+| `NONE` | NONE | No quality filtering is applied. |
+| `AUTO` | AUTO | Amazon Rekognition automatically selects the level of quality filtering that is applied. |
+| `LOW` | LOW | A low level of quality filtering is applied. |
+| `MEDIUM` | MEDIUM | A medium level of quality filtering is applied. |
+| `HIGH` | HIGH | A high level of quality filtering is applied. |
+
+#### 4.3.2 AWS_Region {#aws_region}
+
+This enumeration provides a list of available AWS regions.
 
 | **Name** | **Caption** |
 | --- | --- |
-| `NONE` | NONE |
-| `AUTO` | AUTO |
-| `LOW` | LOW |
-| `MEDIUM` | MEDIUM |
-| `HIGH` | HIGH |
-
-#### 3.3.2 `AWS_Region` {#aws_region}
-
-| **Name** | **Caption** |
-| --- | --- |
-| `us_east_2` | us-east-2 |
-| `us_east_1` | us-east-1 |
-| `us_west_1` | us-west-1 |
-| `us_west_2` | us-west-2 |
-| `ap_south_1` | ap-south-1 |
-| `ap_northeast_2` | ap-northeast-2 |
-| `ap_southeast_1` | ap-southeast-1 |
-| `ap_southeast_2` | ap-southeast-2 |
-| `ap_northeast_1` | ap-northeast-1 |
-| `ca_central_1` | ca-central-1 |
-| `eu_central_1` | eu-central-1 |
-| `eu_west_1` | eu-west-1 |
-| `eu_west_2` | eu-west-2 |
-| `us_gov_west_1` | us-gov-west-1 |
+| `us_east_2` | **us-east-2** |
+| `us_east_1` | **us-east-1** |
+| `us_west_1` | **us-west-1** |
+| `us_west_2` | **us-west-2** |
+| `ap_south_1` | **ap-south-1** |
+| `ap_northeast_2` | **ap-northeast-2** |
+| `ap_southeast_1` | **ap-southeast-1** |
+| `ap_southeast_2` | **ap-southeast-2** |
+| `ap_northeast_1` | **ap-northeast-1** |
+| `ca_central_1` | **ca-central-1** |
+| `eu_central_1` | **eu-central-1** |
+| `eu_west_1` | **eu-west-1** |
+| `eu_west_2` | **eu-west-2** |
+| `us_gov_west_1` | **us-gov-west-1** |
 
 ### 4.4 Activities {#activities}
 
-Activities define the actions that are executed in a microflow or a nanoflow.
+Activities define the actions that are executed in a microflow or a nanoflow. For more information, see [Activities](/refguide/activities/).
 
 #### 4.4.1 Compare Face
 
@@ -173,7 +189,7 @@ The input and output for this service are shown in the table below:
 
 | Input | Output |
 | --- |
-| - `SourceImage` (Image)<br />- `TargetImage` (Image)<br />\- `SimilarityThreshold` (Decimal)<br />- `QualityFilter` (Enumeration) | - Level of similarity among inputted images (Decimal) |
+| `SourceImage` (Image); `TargetImage` (Image); `SimilarityThreshold` (Decimal); `QualityFilter` (Enumeration) | Level of similarity among inputted images (Decimal) |
 
 This activity returns a `CompareFaces` entity with associated entities as shown in the table below:
 
@@ -196,8 +212,9 @@ The Amazon `DetectCustomLabels` service detects custom labels in a supplied imag
 The input and output for this service are shown in the table below:
 
 | Input | Output |
-| --- |
-| - `MinConfidence` (Integer/Long)<br />- `MaxResults` (Integer/Long)<br />- `ProjectARN` (String)<br />- `Image` (Image) | \- Custom label |
+| --- | --- |
+
+| `MinConfidence` (Integer/Long, value should be between 0 and 100); `MaxResults` (Integer/Long, minimum value of 0); `ProjectARN` (String); `Image` (Image) | Custom label |
 
 This activity returns a list of `DetectCustomLabels` objects and associated objects as shown in the table below:
 
@@ -207,7 +224,7 @@ This activity returns a list of `DetectCustomLabels` objects and associated obje
 | `BoundingBoxDetectCustomLabel` | `AmazonRekognitionConnector.BoundingBox` | This entity contains the bounding box results for the `DetectCustomLabels` activity. It includes the left (x) coordinates, top (y) coordinates, and the image's width and height. It is a specialization of the `BoundingBox` generalization entity. |
 | `PolygonDetectCustomLabel` | `AmazonRekognitionConnector.Polygon` | This entity contains the polygon results for the `DetectCustomLabels` activity. It includes left (x) and top (y) coordinates. It is a specialization of the `Polygon` generalization entity. An array of `Point` objects, `Polygon`, is returned by `DetectText` and `DetectCustomLabels` or used to define regions of interest in Amazon Rekognition Video operations such as `CreateStreamProcessor`. `Polygon` represents a fine-grained polygon around a detected item. |
 
-#### 3.4.3 Detect Faces – Default
+#### 4.4.3 Detect Faces – Default
 
 The Amazon `DetectFaces` service detects faces within an image that is provided as input.
 
@@ -215,7 +232,7 @@ The input and output for this service are shown in the table below:
 
 | Input | Output |
 | --- | --- |
-| \- `Image` (Image) | \- An array or object of detected face(s) |
+| `Image` (Image) | An array or object of detected face(s) |
 
 This activity returns a list of `DetectFaces` object with results as shown in the table below:
 
@@ -235,7 +252,7 @@ The input and output for this service are shown in the table below:
 
 | Input | Output |
 | --- | --- |
-| \- `Image` (Image) | \- An array or object of detected face(s) |
+| `Image` (Image) | An array or object of detected face(s) |
 
 This activity returns a list of `DetectFaces` object with results as shown in the table below:
 
@@ -266,7 +283,7 @@ The input and output for this service are shown in the table below:
 
 | Input | Output |
 | --- | --- |
-| \- `MinConfidence` (Integer/Long)<br />\- `Image` (Image) | \- An array or object of detected moderation label(s) |
+| `MinConfidence` (Integer/Long, value should be between 0 and 100); `Image` (Image) | An array or object of detected moderation label(s) |
 
 This activity returns a list of `DetectModerationLabels` objects and associated objects as shown in the table below:
 
@@ -285,7 +302,7 @@ The input and output for this service are shown in the table below:
 
 | Input | Output |
 | --- | --- |
-| \- `MinConfidence` (Integer/Long)<br />\- `MaxLabels` (Integer/Long)<br />- `Image` (Image) | \- An array or object of detected label(s) |
+| `MinConfidence` (Integer/Long, value should be between 0 and 100); `MaxLabels` (Integer/Long, minimum value of 0); `Image` (Image) | An array or object of detected label(s) |
 
 This activity returns a list of `DetectLabels` objects with associated objects as shown in the table below:
 
@@ -305,7 +322,7 @@ The input and output for this service are shown in the table below:
 
 | Input | Output |
 | --- | --- |
-| - `Image` (Image) | \- An array or object of detected text |
+| `Image` (Image) | An array or object of detected text |
 
 This activity returns a `DetectText` object with results as shown in the table below:
 
@@ -329,7 +346,7 @@ The input and output for this service are shown in the table below:
 
 | Input | Output |
 | --- | --- |
-| - `Image` (Image) | - An array or object of detected person(s), including their status of protective equipment (with, without or indeterminate) |
+| `Image` (Image) | An array or object of detected person(s), including their status of protective equipment (with, without or indeterminate) |
 
 This activity returns a `DetectProtectiveEquipment` object with the results as shown in the table below:
 
@@ -354,7 +371,7 @@ The input and output for this service are shown in the table below:
 
 | Input | Output |
 | --- | --- |
-| - `Image` (Image) | \- An array or object of detected celebrities |
+| `Image` (Image) | An array or object of detected celebrities |
 
 This activity returns a `RecognizeCelebrities` object with results as shown in the table below:
 
@@ -373,3 +390,11 @@ This activity returns a `RecognizeCelebrities` object with results as shown in t
 | `FaceRecognizedCelebrity` | `AmazonRekognitionConnector.FaceCelebrity` | This entity provides information about the celebrity's face, such as its location in the image. It is a specialization of the `FaceCelebrity` generalization entity. |
 | `Celebrity` | | This entity provides information about a celebrity recognized by the `RecognizeCelebrities` operation. It includes an identifier, a confidence, and a name. The identifier is an unique identifier for the recognized celebrity. The confidence is that of Amazon Rekognition service that it recognizes a celebrity. The name is that of the recognized celebrity. |
 | `LandmarkRecognizeCelebrity` | `AmazonRekognitionConnector.Landmark` | This entity contains the landmark results for the `RecognizeCelebrities` activity. It includes its type and left (x) and top (y) coordinates. It is a specialization of the `Landmark` generalization entity. |
+
+### 4.5 JavaScript Actions {#js-actions}
+
+JavaScript actions provide an additional way to extend the functionality of your application. For more information, see [JavaScript Actions](/refguide/javascript-actions/).
+
+#### 4.5.1 JS_AddBoundingBox
+
+The `AddBoundingBox` JavaScript action can be used to draw a rectangle around the labels that have been found on an image.

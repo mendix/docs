@@ -14,7 +14,7 @@ aliases:
 
 ## 1 Introduction
 
-Mendix Studio Pro enables you to build apps on the Mendix Platform. This document will guide you through the steps of installing the [latest version of Studio Pro](https://marketplace.mendix.com/link/studiopro/). For the full list of supported systems and required frameworks, see [System Requirements](/refguide9/system-requirements/). 
+Mendix Studio Pro enables you to build apps on the Mendix Platform. This document will guide you through the steps of installing **Studio Pro 9.24 LTS**. For the full list of supported systems and required frameworks, see [System Requirements](/refguide9/system-requirements/). 
 
 If you use a Mac device, see [Configuring Parallels](/refguide9/using-mendix-studio-pro-on-a-mac/) to configure your Windows virtual machine. 
 
@@ -27,7 +27,8 @@ For a deep-dive demonstration of how to install Studio Pro, follow along in this
 Mendix Studio Pro can be installed on your machine with a Windows executable file. This executable file can be downloaded from the Mendix Marketplace. Follow these steps to download Mendix Studio Pro:
 
 1. Go to the Studio Pro download page in the [Mendix Marketplace](https://marketplace.mendix.com/link/studiopro/).
-2. Click the **Download** button in the upper-right corner to download the latest Mendix Studio Pro.
+2. Go to the **LTS/MTS Releases** tab and find the latest **9.24** patch.
+3. Click **Download** for the latest 9.24 LTS patch version of Mendix Studio Pro.
 
 ## 3 Installing Mendix Studio Pro {#install}
 
@@ -107,7 +108,23 @@ If the **AdoptOpenJDK 11 x64 failed; code 1639** error occurs during installatio
 * Install the Adopt Open JDK dependency manually from the dependencies folder using Administrator privileges
 * Try to install Studio Pro again
 
-## 6 Read More
+## 6 Signing In
+
+When starting Studio Pro for the first time after installation, it will ask you to sign in to the Mendix Platform. This allows you to get access to Mendix platform services from within Studio Pro, such as Team Server, Marketplace, and app deployment to the cloud.
+
+You can sign in with your Mendix account, or with your own company account if this has been set up as an Identify Provider in the Mendix platform.
+
+In some situations, for example, when your network has a firewall or proxy server, a warning about an untrusted certificate may appear during the sign-in process:
+
+{{< figure src="/attachments/refguide9/general/install/untrusted-certificate.png" width="600px" >}}
+
+To continue, you may accept the certificate for the current session by clicking the **Accept for this session** button, or install it permanently by clicking the **View certificate information** button. 
+
+{{% alert color="warning" %}}
+Accepting untrusted certificates can bring security risks. You should only do so after having received confirmation from your network administrator.
+{{% /alert %}}
+
+## 7 Read More
 
 * [Studio Pro Overview](/refguide9/studio-pro-overview/)
 * [App Modeling](/refguide9/modeling/)

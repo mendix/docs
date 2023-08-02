@@ -4,7 +4,7 @@ linktitle: "Webhooks for Stories/Sprints"
 url: /apidocs-mxsdk/apidocs/webhooks-sprints/
 category: "API Documentation"
 description: "These webhooks allow you to build or set up Mendix Platform connectors that subscribe to certain events on the Developer Portal."
-weight: 97
+weight: 100
 ---
 
 ## 1 Introduction
@@ -35,13 +35,13 @@ Every POST payload contains the following delivery information as part of the he
 
 ## 2 Sprints
 
-Webhook events are generated when a [Sprint](/developerportal/collaborate/stories/#sprint-actions) is created or updated.
+Webhook events are generated when a [Sprint](/developerportal/project-management/stories/#sprint-actions) is created or updated.
 
 The required event category subscription is **Sprints**.
 
 ## 3 Stories
 
-Webhooks for stories and Sprints event are generated when a [story](/developerportal/collaborate/stories/) is created or updated.
+Webhooks for stories and Sprints event are generated when a [story](/developerportal/project-management/stories/) is created or updated.
 
 The required event category subscription is **Stories**.
 

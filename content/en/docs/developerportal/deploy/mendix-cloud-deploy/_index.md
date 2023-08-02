@@ -12,7 +12,7 @@ aliases:
     - /mendixcloud/deploying-to-the-cloud
 #To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
-#The anchor #plans, below, is mapped from the Control Center within the Developer Portal.
+#The anchor #plans, below, is mapped from Control Center within the Developer Portal.
 ---
 
 ## 1 Introduction
@@ -70,7 +70,7 @@ You can upgrade a Free App to a licensed node with a node in the Mendix Cloud. F
 
 #### 1.1.2 Free Apps Archiving {#free-apps-archival}
 
-If a Free App has been in sleep mode for three months or longer, it may be archived. For Free Apps which are going to be archived, the [Technical Contact](/developerportal/collaborate/app-roles/#technical-contact) is informed two weeks beforehand. Upon archiving, the project and model are retained, but the running app, database, and files for the Free App are deleted.
+If a Free App has been in sleep mode for three months or longer, it may be archived. For Free Apps which are going to be archived, the [Technical Contact](/developerportal/general/app-roles/#technical-contact) is informed two weeks beforehand. Upon archiving, the project and model are retained, but the running app, database, and files for the Free App are deleted.
 
 There are two ways to prevent your Free App from being archived:
 
@@ -101,11 +101,11 @@ Apps that run on the Mendix Cloud are automatically given their own URLs. The fo
 
 | License type | Environment | URL format | Example URL |
 | --- | --- | --- | --- |
-| Licensed app | production | Depends on the region:<br /> `{name of your app}.mendixcloud.com`*<br />or<br />`{name of your app}.apps.{region}.mendixcloud.com`\* | `myappname.mendixcloud.com`, <br /> `myappname.apps.ap-3a.mendixcloud.com` |
-| Licensed app | test, acceptance, flexible environments | Depends on the region:<br /> `{name of your app}-{environment type}.mendixcloud.com`*<br />or<br />`{name of your app}-{environment type}.apps.{region}.mendixcloud.com`\* | `myappname-accp.mendixcloud.com`, <br /> `myappname-accp.apps.ap-3a.mendixcloud.com` |
-| Free App | N/A | `{name of your app}.mxapps.io` | `myfreeappname.mxapps.io` |
+| Licensed app | production | Depends on the region:<br /> `{app-name}.mendixcloud.com`¹<br />*or*<br />`{app-name}.apps.{region}.mendixcloud.com`¹ | `myappname.mendixcloud.com`, <br /> `myappname.apps.ap-3a.mendixcloud.com` |
+| Licensed app | test, acceptance, flexible environments | Depends on the region:<br /> `{app-name}-{environment-type}.mendixcloud.com`¹<br />*or*<br />`{app-name}-{environment-type}.apps.{region}.mendixcloud.com`¹ | `myappname-accp.mendixcloud.com`, <br /> `myappname-accp.apps.ap-3a.mendixcloud.com` |
+| Free App | N/A | `{app-name}-sandbox.mxapps.io`<br />*or*<br />`{app-name}.mxapps.io` | `myfreeappname.mxapps.io` |
 
-{{% alert color="info" %}}*The URL of an app on some clusters in a region contains `apps.{region}`. You can only select the region for your app, but not the cluster.{{% /alert %}}
+{{% alert color="info" %}}¹The URL of an app on some clusters in a region contains `apps.{region}`. You can only select the region for your app, but not the cluster.{{% /alert %}}
 
 You can customize a URL by adding [custom domains](/developerportal/deploy/custom-domains/).
 
@@ -168,10 +168,6 @@ You can also deploy an app from Team Server. To do this, follow these steps:
 
 The package is deployed to the cloud.
 
-#### 2.2.3 Deploying via Studio
-
-To deploy your app from Studio, click **Publish**. For more information, see the [Publishing Your App](/studio/publishing-app/#publishing-your-app) section of *Previewing and Publishing Your App*.
-
 ### 2.3 Deploying the App to an Environment {#deploy-the-app-to-an-environment}
 
 The previous steps explained how to deploy a deployment package to the Mendix Cloud, but the actual app is not running yet. To deploy a deployment package to a node environment, follow these steps:
@@ -196,7 +192,7 @@ The app is now deployed. You can configure the administrative account.
 
 ### 2.4 Deploying a Free App to the Mendix Cloud
 
-With a Free App, you can deploy your app to the Mendix Cloud from Studio or Studio Pro by using one of the following methods:
+With a Free App, you can deploy your app to the Mendix Cloud from Studio Pro by using one of the following methods:
 
 * In the top bar of Studio Pro, click **Run** > **Publish**. This automatically deploys your app to a Free App environment.
 
@@ -285,13 +281,23 @@ You can have a pack using a fraction of a vCPU as several environments can run, 
 
 For Premium customers using a Premium resource pack, there are additional features available for apps deployed to the Mendix Cloud, and additional ways to deploy your Mendix App.
 
-#### 4.3.1 High Availability
+#### 4.3.1 High Availability and Fallback {#fallback}
 
-The High Availability option ensures that if there is a problem with the current availability zone, new copies of your app are started in the new availability zone (AZ). All FileDocument entities are replicated in this new zone, but the data still resides in a single database. This means that you may need to restore a backup of your database if it is no longer available to your app.
+Premium plans come with High Availability and Fallback out of the box. This ensures that copies of your app are spread across multiple availability zones (AZs). If there is a problem with a specific AZ, copies of your app running on other AZs will remain available.
 
-#### 4.3.2 Fallback {#fallback}
+With a Premium plan your app can be [horizontally scaled](/developerportal/deploy/scale-environment/). To fully benefit from high availability there should be at least two instances so the app is running in more than one AZ. This is important for critical production apps which cannot afford to have downtime during an AZ outage in the AWS data center.
 
-The Fallback option ensures that the data in your database is automatically copied to a database in a second AZ. This, together with the high availability option, ensures that all your data is still available to your app if there is an issue with current availability zone and app instances have to be started in the second AZ.
+Fallback ensures that the data in your database is automatically copied to a database in a second AZ. This ensures that all your data is still available to your app if there is an issue with the primary availability zone and app instances have to be started in the second AZ. 
+
+The implementation of these features means that, although the connections between AZs are low latency, your monitoring may indicate that apps deployed to the Mendix Cloud under a Premium plan suffer an additional latency of a few milliseconds compared with apps deployed using a Standard plan. For a well-designed app, this difference should not be noticeable for end-users. 
+
+#### 4.3.2 Regional Fallback
+
+You can also purchase a Premium Plus plan which provides all the features of the Premium plan, with the addition of Regional Fallback.
+
+With Regional Fallback, a copy of your database and FileDocuments is maintained in a completely separate region. For example, if your app normally runs in *us-east-1* a copy of your data is made in *us-west-2*. If all the AZs in the primary region become unavailable, you can then choose to run your app temporarily in the secondary region, with the data which has been copied to that region. Once the primary region is back online, you can then revert your app to running in the primary region.
+
+As this is designed for a catastrophic regional failure, there are some limitations to your normal operations (for example, you cannot deploy a new version of the app while it is running in the secondary region). The decision to switch to the secondary region is completely under your control.
 
 #### 4.3.3 On-premises and Private Cloud
 
@@ -301,4 +307,4 @@ If you want to deploy your Mendix apps to other environments, you can add these 
 
 * [Custom Domains](/developerportal/deploy/custom-domains/)
 * [Licensing Mendix Cloud Apps](/developerportal/deploy/licensing-apps/)
-* [App Roles](/developerportal/collaborate/app-roles/)
+* [App Roles](/developerportal/general/app-roles/)

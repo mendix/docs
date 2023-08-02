@@ -148,7 +148,7 @@ See the [Show a Page](/refguide8/on-click-event/#show-page) section of *On Click
 
 You can override the title of the page you open to, for example, indicate where you are opening it from.
 
-This is activated by checking the **Override page title** check box.
+This is activated by checking the **Override page title** checkbox.
 
 #### 2.7.4 Go-To Page
 
@@ -168,7 +168,7 @@ It is recommended that you generate a new go-to page by right-clicking the widge
 
 You can override the title of the page you open to, for example, indicate where you are opening it from.
 
-This is activated by checking the **Override page title** check box.
+This is activated by checking the **Override page title** checkbox.
 
 ### 2.8 Label Section{#label}
 

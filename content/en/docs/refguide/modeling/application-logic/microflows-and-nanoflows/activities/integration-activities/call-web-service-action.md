@@ -45,7 +45,7 @@ The properties dialog box consists of five tabs:
 
 ## 4 Operation Tab{#operation}
 
-{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/integration-activities/call-web-service-action/operation-tab.png" >}}
+{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/integration-activities/call-web-service-action/operation-tab.png" width="500px" >}}
 
 ### 4.1 Operation
 

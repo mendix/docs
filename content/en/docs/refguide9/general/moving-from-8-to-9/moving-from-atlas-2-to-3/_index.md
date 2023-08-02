@@ -3,6 +3,8 @@ title: "Migrate From Atlas 2 To Atlas 3"
 url: /refguide9/moving-from-atlas-2-to-3/
 weight: 6
 tags: ["Atlas", "UI", "UX", "user experience", "design"]
+aliases:
+    - /refguide/moving-from-atlas-2-to-3/
 ---
 
 ## 1 Introduction
@@ -43,7 +45,7 @@ To upgrade your theme directory to Atlas 3 specifications, please complete the f
 
 ### 2.2  Migrating UI Content {#upgrade-ui-content}
 
-**Atlas 3** distributes the UI content previously found in the Atlas_UI_Resources, in 3 seperate modules: **Atlas Core**, **Atlas Web Content** and **Atlas Native Content**. 
+**Atlas 3** distributes the UI content previously found in the Atlas_UI_Resources, in 3 separate modules: **Atlas Core**, **Atlas Web Content** and **Atlas Native Content**. 
 
 * [Atlas Core](https://marketplace.mendix.com/link/component/117187) - Contains Atlas core styling and layouts
 * [Atlas Web Content](https://marketplace.mendix.com/link/component/117183) - Contains Atlas's web page templates and building blocks
@@ -217,7 +219,7 @@ If you have made any of the above modifications, please follow the following ste
 
 * [Native Custom Variables](#native-custom-variables)
 * [Native Custom Styling](#native-custom-styling)
-* [Native Additonal Custom Styling](#native-additional-custom-styling)
+* [Native Additional Custom Styling](#native-additional-custom-styling)
 * [Native Design Properties](#native-design-properties)
 
 #### 2.4.1 Native Custom Variables {#native-custom-variables}

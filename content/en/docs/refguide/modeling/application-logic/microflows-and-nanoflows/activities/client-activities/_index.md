@@ -20,6 +20,7 @@ The following are the client activities you can use in your microflow or nanoflo
 * [Synchronize to device](/refguide/synchronize-to-device/) *(only in microflows)* – enables selectively synchronizing a set of objects to the device when calling a microflow from a nanoflow
 * [Synchronize](/refguide/synchronize/) *(only in nanoflows)* – synchronizes data between your device and the server
 * [Validation feedback](/refguide/validation-feedback/) – does a validation check, and if this check fails, it shows a message to the end-user
+* [Clear from device](/refguide/clear-from-device/) *(only in nanoflows)* – clears all objects of an entity only from the local database of the device
 
 ## 2 Read More
 

@@ -18,10 +18,10 @@ An example of microflow properties is represented in the image below:
 Microflow properties consist of the following sections:
 
 * [Common](#common)
-* [Concurrent execution](#concurrent)
+* [Usage](#usage)
 * [Output](#output)
 * [Security](#security)
-* [Usage](#usage)
+* [Concurrent execution](#concurrent)
 
 ### 2.1 Common Section {#common}
 
@@ -48,26 +48,15 @@ This property is only available for add-on and solution modules. For more inform
 
 **Documentation** allows you to describe your microflow to make it easier for people to use and modify it.
 
-### 2.2 Concurrent Execution Section {#concurrent}
+### 2.2 Usage Section {#usage}
 
-#### 2.2.1 Disallow
+#### 2.2.1 Mark as Used
 
-The **Disallow** property allows you to specify whether the microflow can be executed multiple times concurrently. This applies to all end-users who are using the app, not just within one user session.
+You can search for unused items (<kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>F</kbd>, then select **Unused items** in the **Search for** drop-down menu) in Studio Pro. Microflows that are only called from Java code will be listed as unused, because Studio Pro cannot look inside the Java source code.
 
-Disallowing concurrent execution of a microflow can be useful if a microflow would interfere with another running instance (for example, if it accesses a global resource).
+By setting the property **Mark as used** to **Yes**, you explicitly specify that the microflow is used and Studio Pro will no longer list it when searching for unused items.
 
-| Option | Description |
-| --- | --- |
-| No *(default)*  | It is possible to execute the microflow more than once concurrently. |
-| Yes | It is not possible to execute the microflow more than once concurrently; the user receives a message or another microflow is executed instead. |
-
-#### 2.2.2 Error Message
-
-**Error message** defines the message the user gets when concurrent execution is not allowed and the user tries to start the microflow while it is already being executed. This will not be shown if there is an **Error microflow** defined.
-
-#### 2.2.3 Error Microflow
-
-**Error microflow** defines another microflow to execute when concurrent execution is not allowed and the user tries to start the microflow while it is already being executed. When set, there will be no further message shown to the user.
+Default: *No*
 
 ### 2.3 Output Section {#output}
 
@@ -108,19 +97,32 @@ These roles are only checked when the microflow is executed from the client. A m
 
 For more information, see [Module Security](/refguide/module-security/).
 
-### 2.5 Usage Section {#usage}
+### 2.5 Concurrent Execution Section {#concurrent}
 
-#### 2.5.1 Mark as Used
+#### 2.5.1 Disallow
 
-You can search for unused items (<kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>F</kbd>, then select **Unused items** in the **Search for** drop-down menu) in Studio Pro. Microflows that are only called from Java code will be listed as unused, because Studio Pro cannot look inside the Java source code.
+The **Disallow** property allows you to specify whether the microflow can be executed multiple times concurrently. This applies to all end-users who are using the app, not just within one user session.
 
-By setting the property **Mark as used** to **Yes**, you explicitly specify that the microflow is used and Studio Pro will no longer list it when searching for unused items.
+Disallowing concurrent execution of a microflow can be useful if a microflow would interfere with another running instance (for example, if it accesses a global resource).
 
-Default: *No*
+| Option | Description |
+| --- | --- |
+| No *(default)*  | It is possible to execute the microflow more than once concurrently. |
+| Yes | It is not possible to execute the microflow more than once concurrently; the user receives a message or another microflow is executed instead. |
+
+#### 2.5.2 Error Message
+
+**Error message** defines the message the user gets when concurrent execution is not allowed and the user tries to start the microflow while it is already being executed. This will not be shown if there is an **Error microflow** defined.
+
+#### 2.5.3 Error Microflow
+
+**Error microflow** defines another microflow to execute when concurrent execution is not allowed and the user tries to start the microflow while it is already being executed. When set, there will be no further message shown to the user.
 
 ## 3 Expose as Microflow Action {#expose-as-microflow}
 
-This property is accessible by right-clicking in the microflow and selecting **Properties**.
+You can select this option by right-clicking in the microflow editor and selecting **Expose as action** > **Expose as microflow action**.
+
+It is also accessible by right-clicking in the microflow editor and selecting **Properties**.
 
 {{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/microflows/microflow/microflow-expose.jpg" alt="Expose as Microflow Action" width="550" >}}
 
@@ -130,7 +132,7 @@ The **Caption** and **Category** of the workflow action are required, but the **
 
 The required size for the icon is 64x64 pixels, and 256x192 pixels for the image; the required image format for both is PNG. 
 
-A separate icon and image can be provided for the [dark mode](/refguide/preferences-dialog/#dark-mode) of Studio Pro to fit its color scheme.
+A separate icon and image can be provided for the [dark mode](/refguide/preferences-dialog/#studio-pro-theme) of Studio Pro to fit its color scheme.
 
 {{% alert type="info" %}}
 
@@ -142,7 +144,9 @@ If only icon is specified, the icon image will be used for the toolbox tile view
 
 ## 4 Expose as Workflow Action {#expose-as-workflow-action}
 
-This property is accessible by right-clicking in the microflow and selecting **Properties**.
+You can select this option by right-clicking in the microflow editor and selecting **Expose as action** > **Expose as workflow action**.
+
+It is also accessible by right-clicking in the microflow editor and selecting **Properties**.
 
 {{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/microflows/microflow/workflow-expose.jpg" alt="Expose As Workflow Action" width="550" >}}
 
@@ -152,7 +156,7 @@ The **Caption** and **Category** of the workflow action are required, but the **
 
 The required size for the icon is 64x64 pixels, and 256x192 pixels for the image; the required image format for both is PNG. 
 
-A separate icon and image can be provided for the [dark mode](/refguide/preferences-dialog/#dark-mode) of Studio Pro to fit its color scheme.
+A separate icon and image can be provided for the [dark mode](/refguide/preferences-dialog/#studio-pro-theme) of Studio Pro to fit its color scheme.
 
 {{% alert type="info" %}}
 

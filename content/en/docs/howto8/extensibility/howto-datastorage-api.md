@@ -20,7 +20,7 @@ You can use these query languages in Mendix Studio Pro, but both languages are a
 This how to describes how you can build the following microflow actions:
 
 * Retrieve advanced XPath - returns a list of entities as specified by an XPath expression
-* Retrieve advanced OQL - returns a list of entities as specified by a OQL query
+* Retrieve advanced OQL - returns a list of entities as specified by an OQL query
 * Retrieve Dataset OQL - returns a list of entities as specified by a Dataset OQL query
 * Retrieve advanced SQL - returns a list of entities as specified by a SQL query
 * Create first Monday of month list - returns a list of dates of the first Monday of every month in a specified range
@@ -54,7 +54,7 @@ Finally, you should define how you want to display the microflow in the microflo
 
 {{< figure src="/attachments/howto8/extensibility/howto-datastorage-api/image007.png" >}}
 
-The implementation of this Java action is pretty straight forward; you can use the [Core.retrieveXPathQuery](https://apidocs.rnd.mendix.com/7/runtime/com/mendix/core/Core.html#retrieveXPathQuery-com.mendix.systemwideinterfaces.core.IContext-java.lang.String-) API to execute your XPath expression and return a list of Mendix objects.
+The implementation of this Java action is pretty straight forward; you can use the [Core.retrieveXPathQuery](https://apidocs.rnd.mendix.com/8/runtime/com/mendix/core/Core.html#retrieveXPathQuery(com.mendix.systemwideinterfaces.core.IContext,java.lang.String,int,int,java.util.Map,int)) API to execute your XPath expression and return a list of Mendix objects.
 
 The implementation also validates that the list returned contains objects of the entity specified.
 
@@ -139,7 +139,7 @@ The microflow to execute the Java action is similar to the previous example, but
 
 {{< figure src="/attachments/howto8/extensibility/howto-datastorage-api/image042.png" >}}
 
-Below is the Java code to get the Dataset OQL, execute the OQL, and retrieve the Objects. You use the [Core.createOQLTextGetRequestFromDataSet](https://apidocs.rnd.mendix.com/7/runtime/com/mendix/core/Core.html#createOQLTextGetRequestFromDataSet-java.lang.String-) method to get the OQL query of the Dataset specified.
+Below is the Java code to get the Dataset OQL, execute the OQL, and retrieve the Objects. You use the [Core.createOQLTextGetRequestFromDataSet](https://apidocs.rnd.mendix.com/8/runtime/com/mendix/core/Core.html#createOQLTextGetRequestFromDataSet(java.lang.String)) method to get the OQL query of the Dataset specified.
 
 {{< figure src="/attachments/howto8/extensibility/howto-datastorage-api/image043.png" >}}
 

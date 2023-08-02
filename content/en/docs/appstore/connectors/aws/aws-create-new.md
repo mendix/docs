@@ -91,8 +91,8 @@ After you have obtained an API response, you can use it to model the service in 
 
 9. Remove the entities that serve no purpose, such as the Root entity, by doing the following steps:
     1. Open the *IMM_DescribeVoices* import mapping document.
-    2. Clear the **Root (Object)** entity check box.
-    3. Clear the  **SupportedEngines** check box.
+    2. Clear the **Root (Object)** entity checkbox.
+    3. Clear the  **SupportedEngines** checkbox.
     4. Click **OK**
 10. Click **Map automatically**
 
@@ -126,7 +126,7 @@ The signing of headers may differ across AWS services, for example:
 After you create a microflow that connects to an AWS service, expose it as a microflow action. In this way, you can then use it as a building block for other, more complex microflows.
 
 1. Right-click on the work area of the microflow, and then select **Properties**.
-2. In the **Expose as microflow action** tab, select the **Expose as microflow action** check box.
+2. In the **Expose as microflow action** tab, select the **Expose as microflow action** checkbox.
 3. In the **Caption** field, name the microflow action according to the [best-practice naming conventions](#naming).
 4. In the **Category** field, enter the name of the AWS service.
 5. In the **Icon** section, select the official AWS icon.
@@ -150,7 +150,7 @@ When building the domain model for your connector, keep the following considerat
 
 ### 4.2 Naming Conventions for Elements within the Connector {#naming}
 
-To ensure that the naming conventions for your connector are easy to parse for the end user, refer to the the table below for a list of best practices by element type:
+To ensure that the naming conventions for your connector are easy to parse for the end user, refer to the table below for a list of best practices by element type:
 
 | Connector element | Naming convention |
 | --- | --- |

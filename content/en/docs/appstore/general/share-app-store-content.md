@@ -48,7 +48,7 @@ You can add information the end-user should know to the component [Documentation
 
 When considering intellectual property (IP) in the Mendix Marketplace, follow these guidelines:
 
-* Do not copy any text, names,or other data from other components published in the Marketplace, since you do not own the copyright. Do not create unnecessary ambiguity or confusion that would mislead consumers of Marketplace components.
+* Do not copy any text, names,or other data from other components published in the Marketplace, since you do not own the copyright. Do not create unnecessary ambiguity or confusion that would mislead users of Marketplace components.
 * Do not mention components published by others within your content on the Marketplace. 
 * Make sure your component documentation only includes intellectual property that you have created. Your component should not include information or content published by others on the Marketplace, as this may lead to removing your component from the Marketplace. This also means other components can also be removed if they are using your component information or content. 
 * If you come across instances of intellectual property abuse, let us know at *AppServices_Supplier_Team@mendix.com*.
@@ -124,7 +124,7 @@ Follow these steps to describe your content:
 5. Select the location where you want to publish your component:
 
     * <a id="public-app-store"></a>**Public Marketplace (all Mendix users)** – your component will be available to the Mendix community (this content will have to be reviewed and approved by Mendix before it is available)
-    * <a id="private-app-store"></a>**Private Marketplace (your company only)** – your content will receive the **Company only** label and be available only via your [Company Content](/appstore/general/app-store-overview/#company-content) page; selected private content of a user group can also be made available to [user group guests](/appstore/general/app-store-overview/#guests) for download; this content will not be reviewed by Mendix
+    * <a id="private-app-store"></a>**Private Marketplace (your company only)** – your content will receive the **Private** label and be available only via your [Company Content](/appstore/general/app-store-overview/#company-content) page; selected private content of a content group can also be made available to [content group guests](/appstore/general/app-store-overview/#guests) for download; this content will not be reviewed by Mendix
 
     {{% alert color="warning" %}}You can only set the location in the initial version of your content. You cannot change this setting by updating the Marketplace component later.{{% /alert %}}
 
@@ -150,9 +150,18 @@ These are the open-source software license options available and their requireme
 The [GNU General Public License (GPL), version 3](https://www.gnu.org/licenses/gpl-3.0.en.html)  is not available to use, as everything licensed under GNU GPL is public; GNU GPL has a strong copyleft effect; modification has a strong copyleft effect; and all consuming apps should make their code public.
 {{% /alert %}}
 
-##### 4.2.2.2 Partner Licenses
+##### 4.2.2.2 Proprietary License {#proprietary-license}
 
-If you participate in the [Mendix Component Partner Program](/appstore/creating-content/partner-program/), you can offer your own commercial license for your content.
+You can configure your own proprietary license for your company’s content. The license can be used for multiple components, and it can be used by everyone within your organization. 
+
+This license can be created for a new **Public Marketplace (all Mendix users)** component by requesting a new license and submitting it alongside the component. The license needs to be [approved by Mendix](/appstore/general/share-app-store-content/#guidelines) after you have created and submitted it the first time. Once it has been submitted for approval, you and the people within your organization can also use it it for other components.
+
+Follow these steps to configure a proprietary license for a new public component:
+
+1. Click **Request New License**.
+2. Add a **License Name**, which is the name that will be displayed on the [component details page](/appstore/general/app-store-overview/#details).
+3. Add a **License URL**, which should lead the user to a web page that lists the terms and conditions for using the component. Users can navigate to this web page by clicking the license name on the component details page.
+4. Add a **Reason** for the new license. This is for the purpose of the Mendix review only, and it will not be displayed on the component details page.
 
 #### 4.2.3 Generating New Leads {#lead-generation}
 
@@ -263,11 +272,26 @@ After you click **Publish Content**, your draft will be reviewed by Mendix befor
 
 ### 4.7 Approval Process {#approval}
 
-All components that are to be listed in the [Public Marketplace](#public-app-store) are subject to an approval process to ensure the quality and accuracy of the listing and that the component meets the expectations of users. 
+All components that are to be listed in the [Public Marketplace](#public-app-store) are subject to an approval process to ensure the quality and accuracy of the listing and that the component meets the expectations of users. Component submissions are processed in a queue and reviewed on a first-come, first-served basis within 5 working days after submission.
 
-Component submissions are processed in a queue and reviewed on a first-come, first-served basis within 5 working days after submission. Mendix checks a range of requirements (for example, that the component installs properly and reports no errors, and that the documentation is clear, accurate, and of sufficient detail). 
+{{% alert color="warning" %}}
+Mendix strongly recommends performing the checks below before you submit your component for approval. This will also speed up the approval process.
+{{% /alert %}}
 
-It may sometimes take a few iterations for a component to be approved, depending on the issues identified. To avoid a high number of necessary iterations, make sure you follow the [content development guidelines](#guidelines) before you submit a component for approval.
+Mendix does the following:
+
+* Checks the licenses used in the uploaded *.mpk* files using the [Fossology](https://fossology.osuosl.org/repo/) tool
+    * There should be no use of GPL, LGPL, or MPL licenses
+    * For more details, see the [Providing License Details](/appstore/general/share-app-store-content/#license) section above
+* Checks the *.mpk* files for malware using the [VirusTotal](https://www.virustotal.com/gui/home/upload) tool
+* Checks for third-party vulnerabilities using the [Snyk](https://snyk.io/) tool
+* If the component is a widget, module, connector, or solution template, Mendix checks that it can be used without errors in a specific Studio Pro version
+* Checks that the documentation mentions all the details per the template (for example, dependencies, configuration, and how to use the component)
+* Checks the grammar, alignment, and spelling for the component's description and documentation
+* Checks that the logo is related to the component's functionality
+* Checks that the screenshots are related to the configuration required to use the component in the end-user's app
+
+It may sometimes take a few iterations for a component to be approved, depending on the issues identified. To avoid a high number of necessary iterations, make sure you have followed the [content development guidelines](#guidelines) and have performed the checks above before you submit a component for approval.
 
 {{% alert color="info" %}}
 Review and approval by Mendix is required only for the first version of a publicly-listed component. Subsequent versions of a public component do not need review or approval by Mendix.
@@ -293,7 +317,7 @@ To update content that has already been published, follow these steps:
 1. Find the component by clicking **My Marketplace** and selecting one of the following:
     * **My Content**
     * **Company Content**
-    * **User Groups** (note that if an existing Marketplace component is assigned to a [user group](/appstore/general/app-store-overview/#user-groups) as specific user group [content](/appstore/general/app-store-overview/#group-content), you can only update the component if you are a member of that group)
+    * **Content Groups** (note that if an existing Marketplace component is assigned to a [content group](/appstore/general/app-store-overview/#content-groups) as specific content group [content](/appstore/general/app-store-overview/#group-content), you can only update the component if you are a member of that group)
 
 2. Click the menu item next to the component you want to update and select **Manage Draft**.
 

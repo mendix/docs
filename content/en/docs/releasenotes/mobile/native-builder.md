@@ -16,12 +16,12 @@ The [Native Builder](/refguide8/native-builder/) is a command line input tool wh
 We are heavily invested in streamlining the experience of building your apps and are continuously improving upon the tool's capabilities. For more information on using the Native Builder, see [Deploy Your First Mendix Native Mobile App](/refguide9/mobile/distributing-mobile-apps/building-native-apps/deploying-native-app/).
 
 {{% alert color="warning" %}}
-Please update to Native Builder v3.2.1 or higher. Version 3.2.1 includes the fixes required to accomodate Github's transition of using **main** instead of **master** for naming the default branch for new repositories. 
+Please update to Native Builder v3.2.1 or higher. Version 3.2.1 includes the fixes required to accommodate Github's transition of using **main** instead of **master** for naming the default branch for new repositories. 
 {{% /alert %}}
 
 ## 3.2.2
 
-**Release date: October 16th, 2020**
+**Release date: October 16, 2020**
 
 ### Improvements
 
@@ -33,7 +33,7 @@ Please update to Native Builder v3.2.1 or higher. Version 3.2.1 includes the fix
 
 ## 3.2.1
 
-**Release date: October 5th, 2020**
+**Release date: October 5, 2020**
 
 ### Improvements
 
@@ -42,7 +42,7 @@ Please update to Native Builder v3.2.1 or higher. Version 3.2.1 includes the fix
 
 ## 3.2.0
 
-**Release date: February 5th, 2020**
+**Release date: February 5, 2020**
 
 ### Improvements
 
@@ -57,7 +57,7 @@ Please update to Native Builder v3.2.1 or higher. Version 3.2.1 includes the fix
 
 ## 3.1.0
 
-**Release date: December 17th, 2019**
+**Release date: December 17, 2019**
 
 ### Improvements
 
@@ -73,7 +73,7 @@ Please update to Native Builder v3.2.1 or higher. Version 3.2.1 includes the fix
 
 ## 3.0.0
 
-**Release date: October 29th, 2019**
+**Release date: October 29, 2019**
 
 ### Improvements
 
@@ -105,7 +105,7 @@ Please update to Native Builder v3.2.1 or higher. Version 3.2.1 includes the fix
 
 ## 2.0.0
 
-**Release date: September 3rd, 2019**
+**Release date: September 3, 2019**
 
 ### Improvements
 
@@ -124,12 +124,12 @@ Please update to Native Builder v3.2.1 or higher. Version 3.2.1 includes the fix
 
 ## 1.0.0
 
-**Release date: August 15th, 2019**
+**Release date: August 15, 2019**
 
 ### Improvements
 
 * We optimized the Native Builder's build management. The Native Builder now uses GitHub templates instead of forking to create a unique repository for each app. This allows for better build management, as a separate repository can be created for each app. The repository created from the GitHub template is private by default.
-* We added the optional `output-path` parameter. This allows you to define the location where artifacts should be outputed. You must have sufficient access rights to that location for this to work.
+* We added the optional `output-path` parameter. This allows you to define the location where artifacts should be outputted. You must have sufficient access rights to that location for this to work.
 
 ### Known Issues
 
@@ -140,6 +140,6 @@ Please update to Native Builder v3.2.1 or higher. Version 3.2.1 includes the fix
 
 ## 0.1.0
 
-**Release date: August 1st, 2019**
+**Release date: August 1, 2019**
 
 * This marks the initial release of the Native Builder.

@@ -102,7 +102,7 @@ This generates a data view around your data grid, creates the necessary widgets 
 
 In the previous section you added the **Paging** input parameter to your microflow. This parameter contains the **PageNumber** attribute which is updated when you navigate through the pages with the paging bar in the client. In this section you will use the **PageNumber** attribute to retrieve a specified page from your REST service:
 
-1. Open the the **CallREST** microflow.
+1. Open the **CallREST** microflow.
 2. Double-click the **Call REST service** activity. 
 3. Click **Location** > **Edit**.
 4. Change **Template** to `https://my-json-server.typicode.com/mendix/howto-api-data/airports?limit=5&_page={1}`:

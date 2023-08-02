@@ -48,7 +48,7 @@ Depending on whether you plan to use the SAP Cloud Connector, you also need the 
 
 If you are using the SAP Cloud Connector to facilitate connection to the SAP backend system, you must install the *bapi-service* microservice component. The component minimizes the network complexity and helps make your application is compliant with the recommended SAP security standards.
 
-You can download the *bapi-service* component from the [Mendix Content Delivery Network](https://cdn.mendix.com/mcdep/bapi-service/bapi-service-1.0.0.zip), and then use the extracted manifest file to deploy the *bapi-service.war* file to SAP BTP. To use the component, you must also define an RFC-type destination in SAP BTP.
+You can download the *bapi-service* component from the [Mendix Content Delivery Network](https://cdn.mendix.com/mcdep/bapi-service/bapi-service-1.0.2.zip), and then use the extracted manifest file to deploy the *bapi-service.war* file to SAP BTP. To use the component, you must also define an RFC-type destination in SAP BTP.
 
 ### 2.2 Required Only When Not Using the SAP Cloud Connector
 
@@ -104,14 +104,16 @@ To use the BAPI Connector, you have to first set up your environment and configu
     {{< figure src="/attachments/partners/sap/sap-bapi-connector/sap-bapi-connector-module.png" alt="The SAPBAPIConnector module in the App Explorer" >}}
 
 3. Download the following files from [SAP Support](https://support.sap.com/en/product/connectors/jco.html):
-    * sapjco3.dll
-    * sapjco3.jar
 
-    You need the latest stable versions for *Microsoft Windows and Windows Server*. For more details on SAP JCo releases, please refer to official [SAP JCo release and support strategy](https://launchpad.support.sap.com/#/notes/2786882).
+    | Deployment environment type | Required files |
+    | --- | --- |
+    | **Microsoft Windows** | sapjco3.dll, sapjco3.jar |
+    | **Linux/Unix** | libsapjco3.so, sapjco3.jar |
 
-    Put both of these files in the `/userlib` folder where your Mendix application is stored on your local machine (that is `<app location>/userlib`). You can open this from within Studio Pro using the menu item **App > Show App Directory in Explorer**.
+    You need the latest stable versions for your operating system. For more details on SAP JCo releases, please refer to official [SAP JCo release and support strategy](https://launchpad.support.sap.com/#/notes/2786882).
 
-4. Configure the connection details. The specific configuration steps are different depending on whether you are using the SAP Cloud Connector. For more information, see the following sections:
+4. Put the downloaded files in the `/userlib` folder where your Mendix application is stored on your local machine (that is, `<app location>/userlib`). You can open this folder from within Studio Pro by clicking **App** > **Show App Directory in Explorer**.
+5. Configure the connection details. The specific configuration steps are different depending on whether you are using the SAP Cloud Connector. For more information, see the following sections:
     * [Configuring the Connection Details for the SAP Cloud Connector](#sap-cloud-connector-details)
     * [Configuring the Connection Details for Direct Connections to the SAP Backend System](#sap-connection-details)
 

@@ -27,7 +27,7 @@ The **Screen reader caption** property can be set on the following widgets:
 * [Text Box](/refguide/text-box/)
 * [Text Area](/refguide/text-area/)
 * [Drop-down](/refguide/drop-down/)
-* [Check Box](/refguide/check-box/)
+* [Checkbox](/refguide/check-box/)
 * [Radio Buttons](/refguide/radio-buttons/)
 * [Date Picker](/refguide/date-picker/)
 * [File Manager](/refguide/file-manager/)
@@ -40,7 +40,7 @@ The **Screen reader caption** property can be set on the following widgets:
 
 ### 3.1 Name{#name}
 
-The internal name of the widget. You can use this to give sensible names to widgets. The name property also appears in the generated HTML: the widget DOM element automatically includes the class `mx-name-{NAME}`, which can be useful for [Selenium testing](/howto7/integration/selenium-support/).
+The internal name of the widget. You can use this to give sensible names to widgets. The name property also appears in the generated HTML: the widget DOM element automatically includes the class `mx-name-{NAME}`, which can be useful for [Selenium testing](/howto/integration/selenium-support/).
 
 ### 3.2 Tab Index{#tab-index}
 
@@ -82,6 +82,10 @@ The dynamic classes property was introduced in Mendix Studio Pro v8.14.
 
 You can see which widgets in a page have styling applied via the style or class property by clicking the **Show styles** button.
 
+{{% alert color="info" %}}
+On a DataGrid column, a dynamic class is only applied to the `<col>` element, not to the `<td>` element (in contrast to the class property). 
+{{% /alert %}}
+
 ### 3.6 Documentation{#documentation}
 
 Some widgets, for example snippets and building blocks, have a **Documentation** property which can be used to store developer documentation. This can be used to explain to other developers how to use these widgets. End-users will never see this documentation.
@@ -101,7 +105,7 @@ With the following widgets, the Attribute (Path) specifies the attribute which i
 * [Text Box](/refguide/text-box/)
 * [Text Area](/refguide/text-area/)
 * [Drop-down](/refguide/drop-down/)
-* [Check Box](/refguide/check-box/)
+* [Checkbox](/refguide/check-box/)
 * [Radio Buttons](/refguide/radio-buttons/)
 * [Date Picker](/refguide/date-picker/)
 
@@ -360,7 +364,24 @@ A practical example would be a web shop in which the user must submit both billi
 
 ##### 9.1.1.1 Based on Attribute Value{#visibility-based-on-attribute-value}
 
-When selected, this shows the widget while a particular attribute has a certain value. Only Boolean and enumeration attributes can be used for this purpose.
+When selected, this shows the widget while a particular attribute has a certain value. 
+
+{{% alert color="info" %}}
+Visibility based on an attribute value can be set only for widgets that are inside data containers (a data view, list view, or data grid). 
+
+Only Boolean and enumeration attributes can be used for this purpose.
+
+{{% /alert %}}
+
+For example, you have a web shop and you would like to show a field with a billing address only when a customer unchecks the **Billing address is the same as delivery address** option (it is checked by default). 
+
+A page where a customer fills in their details can look the following way:
+
+{{< figure src="/attachments/refguide/modeling/pages/common-widget-properties/customer-page-example.png" alt="Customer Details"  width="500">}}
+
+The visibility of the billing address depends whether the customer checks that the billing address is different from the delivery address. In your domain model, you have an attribute of the Boolean type called **BillingAddressSame**, so when it is set to *false*, the billing address should be visible. This means that the visibility of the billing address depends on the value of the **BillingAddressSame** attribute:
+
+{{< figure src="/attachments/refguide/modeling/pages/common-widget-properties/condition-for-visibility-dialog.png" alt="An example of visibility properties" width="500">}}
 
 ##### 9.1.1.2 Based on Expression{#visibility-based-on-expression}
 

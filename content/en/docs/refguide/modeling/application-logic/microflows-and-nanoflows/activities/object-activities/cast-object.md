@@ -19,7 +19,7 @@ For more information about specialization and generalization, see [Entities](/re
 
 An example of cast object properties is represented in the image below:
 
-{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/object-activities/cast-object/cast-properties.png" alt="cast object properties" >}}
+{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/object-activities/cast-object/cast-properties.png" alt="cast object properties" width="650px" >}}
 
 There are two sets of properties for this activity, those in the dialog box on the left, and those in the properties pane on the right.
 

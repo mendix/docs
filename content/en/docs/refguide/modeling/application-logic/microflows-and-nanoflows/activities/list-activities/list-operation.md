@@ -36,7 +36,7 @@ See below for details on these actions.
 
 An example of list operation properties is represented in the image below:
 
-{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/list-activities/list-operation/list-operation-properties.png" alt="list operation properties" >}}
+{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/list-activities/list-operation/list-operation-properties.png" alt="list operation properties" width="650px" >}}
 
 There are two sets of properties for this activity, those in the dialog box on the left, and those in the properties pane on the right.
 
@@ -79,7 +79,7 @@ These operations takes a list and one or more members (attributes or association
 
 | Operation | Description | Result Type |
 | --- | --- | --- |
-| Sort | Allows you to sort a list based on a number of a attributes. The attributes are ordered to determine their priority while sorting. You cannot use associations to sort a list. Sorting attributes from generalized entities is not allowed. | List |
+| Sort | Allows you to sort a list based on a number of attributes. The attributes are ordered to determine their priority while sorting. You cannot use associations to sort a list. Sorting attributes from generalized entities is not allowed. | List |
 | Find | Finds the first object of which the member has the given value. | Object |
 | Filter | Finds all objects of which the member has the given value. | List |
 

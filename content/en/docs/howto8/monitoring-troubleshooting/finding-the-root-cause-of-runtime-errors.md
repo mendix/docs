@@ -55,7 +55,7 @@ With these three pieces of information, you should be able to find the cause of 
 ## 4 Read More
 
 * [Clear Warning Messages](/howto8/monitoring-troubleshooting/clear-warning-messages/)
-* [Test Web Services Using SoapUI](/howto8/testing/testing-web-services-using-soapui/)
+* [Test Web Services Using SoapUI](/howto8/integration/testing-web-services-using-soapui/)
 * [Monitor Mendix Using JMX](/howto8/monitoring-troubleshooting/monitoring-mendix-using-jmx/)
 * [Debug Java Actions Remotely](/howto8/monitoring-troubleshooting/debug-java-actions-remotely/)
 * [Log Levels](/howto8/monitoring-troubleshooting/log-levels/)

@@ -7,7 +7,6 @@ description_list: true
 weight: 35
 tags: ["studio pro", "machine learning", "ml kit", "models"]
 ---
-{{% alert color="info" %}}[Machine learning model](/refguide/machine-learning-kit/) support is currently in [Beta](/releasenotes/beta-features/).{{% /alert %}}
 
 ## 1 Introduction
 

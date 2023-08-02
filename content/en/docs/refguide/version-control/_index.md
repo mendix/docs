@@ -17,19 +17,15 @@ Version Control allows you to manage your app development in two ways:
 * Firstly, it allows you to store ([commit](#commit)) the current revision of your model and all its resources. You give it an identifier so that you can get that revision again and share it with other team members.
 * Secondly, it allows work to take place on multiple [development lines](#development-line) so that several different features can be worked on at once. These development lines can then be [merged](#merge) back together so that your [main line](#main-line) contains all the completed features that have been worked on separately.
 
-Version control in Mendix is built on top of either [Apache Subversion](https://subversion.apache.org/) or [Git](https://git-scm.com). The concepts will be familiar to seasoned users of these version control systems (VCS). Mendix simplifies the VCS commands by building them into Studio Pro and the Developer Portal.
-
-{{% alert color="info" %}}
-Team Server Git was released for GA in version [9.12.0](/releasenotes/studio-pro/9.12/#team-server-git). BYO Git (Bring Your Own) is in Beta since Mendix version [9.6.0](/releasenotes/studio-pro/9.6/#960). For more details, see [Working with Git On-Premises Version Control Server](/refguide/on-premises-git/) in the *Studio Pro Guide*. 
-{{% /alert %}}
+Version control in Mendix is built on top [Git](https://git-scm.com). The concepts will be familiar to seasoned users of these version control systems (VCS). Mendix simplifies the VCS commands by building them into Studio Pro and the Developer Portal.
 
 ## 2 Concepts {#concepts}
 
 ### 2.1 Team Server {#team-server}
 
-[Team Server](/developerportal/collaborate/team-server/) is where all the committed versions of Mendix apps are stored. If you commit a revision of an app, it is stored on the Team Server.
+[Team Server](/developerportal/general/team-server/) is where all the committed versions of Mendix apps are stored. If you commit a revision of an app, it is stored on the Team Server.
 
-To commit to the Team Server you will need to have a role in the app which allows you to edit the app. For more information, see the [Team Roles](/developerportal/collaborate/app-roles/#team-roles) section *App Roles*.
+To commit to the Team Server you will need to have a role in the app which allows you to edit the app. For more information, see the [Team Roles](/developerportal/general/app-roles/#team-roles) section *App Roles*.
 
 For more information on the Team Server and technologies involved, see [Version Control FAQ](/refguide/version-control-faq/).
 
@@ -62,16 +58,16 @@ A conflict occurs when two versions of the app cannot be combined automatically.
 
 When a conflict occurs, a developer has to intervene to decide how it should be resolved before it can be committed to the Team Server as a new revision.
 
-### 2.7 Update/Pull {#update}
+### 2.7 Pull {#pull}
 
-Updating (SVN terminology) or pulling (Git terminology) is the action, invoked in Studio Pro, which gets the latest revision of the current [development line](#development-line) from the repository and merges the differences into the current working copy.
+Pulling is the action, invoked in Studio Pro, which gets the latest revision of the current [development line](#development-line) from the repository and merges the differences into the current working copy.
 
 ### 2.8 Commit/Push {#commit}
 
-Committing is the action, invoked in Studio Pro, of creating a set of changes and sending/pushing all your changes to the [repository](#repository) and making a new [revision](#revision).
+Committing is the action, invoked in Studio Pro, of creating a set of changes and pushing all your changes to the [repository](#repository) and making a new [revision](#revision). It is possible to store the committed data in a local repository, but not yet push it to the central [repository](#repository).
 
 {{% alert color="info" %}}
-When using Git, it is possible to store the committed data in a local repository, but not yet push it to the central [repository](#repository). In SVN these actions are always done together.
+When using Git, it is possible to store the committed data in a local repository, but not yet push it to the central [repository](#repository). 
 {{% /alert %}}
 
 If there are no conflicts, the changes are then sent to the repository to make a new revision.
@@ -99,10 +95,6 @@ A Tag is a way of identifying a commit in addition to the [revision](#revision) 
 * Patch: used to identify a fix to an error in a previously-released app
 * Revision: this is added automatically and is the revision number of the commit
 
-{{% alert color="info" %}}
-Tags are supported by Studio Pro Git ([BYO](/refguide/branch-line-manager-dialog/#byo-server-app) and Team Server) from Mendix version 9.8.0.
-{{% /alert %}}
-
 ### 2.11 Repository Service
 
 The Repository Service manages communication between Studio Pro and other supporting services (for example, Team Server). The developer will not generally be aware that they are communicating via the Repository Service.
@@ -124,10 +116,6 @@ All apps are developed along the main line. Here you have all development happen
 When you add a branch line, you take a copy of an existing [revision](#revision) and work separately on that copy. Changes made to one branch do not impact any other branches.
 
 In Mendix each commit within a [repository](#repository) is given a unique identifier. 
-
-{{% alert color="info" %}}
-In SVN, the unique identifiers are numbers. As each commit has a unique number in this case, version numbers given to revisions along any chosen branch line may not be consecutive.
-{{% /alert %}}
 
 {{< figure src="/attachments/refguide/version-control/image8.png" >}}
 

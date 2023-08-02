@@ -11,16 +11,12 @@ aliases:
 
 ## 1 Introduction
 
-When developing Mendix applications, changes to these applications are stored in a version control system. This system is called [Team Server](/developerportal/collaborate/team-server/) and is part of the Mendix Platform. This means that the application's files are stored in the Mendix online environment. For more information, see the [Version Control Reference Guide](/refguide9/version-control/).
+When developing Mendix applications, changes to these applications are stored in a version control system. This system is called [Team Server](/developerportal/general/team-server/) and is part of the Mendix Platform. This means that the application's files are stored in the Mendix online environment. For more information, see the [Version Control Reference Guide](/refguide9/version-control/).
 
 While using Team Server is the recommended for most Mendix developers, you may prefer to store your application's files in a system controlled by your own organization. For version control, Mendix uses the [Subversion](https://subversion.apache.org) system (also known as SVN) and [Git](/refguide9/on-premises-git/). This document describes how to work with Git version control system.
 
 {{% alert color="info" %}}
 This document does not describe how to set up a Git server from scratch; typically, this will be taken care of by the IT department of your organization.
-{{% /alert %}}
-
-{{% alert color="warning" %}}
-You will not be able to use Mendix Studio for collaborative development if you use an on-premises version control server. Collaborative development between Studio and Studio Pro will only work if you use the Mendix Team Server.
 {{% /alert %}}
 
 ## 2 Prerequisites
@@ -199,5 +195,5 @@ Note that your previous app still exists, **Studio Pro** will simply make an unv
 ## 5 Read More
 
 * [Version Control Reference Guide](/refguide9/version-control/)
-* [Team Server](/developerportal/collaborate/team-server/)
+* [Team Server](/developerportal/general/team-server/)
 * [Upload to Version Control Server Reference Guide](/refguide9/upload-to-version-control-dialog/)

@@ -27,7 +27,7 @@ The **Screen reader caption** property can be set on the following widgets:
 * [Text Box](/refguide9/text-box/)
 * [Text Area](/refguide9/text-area/)
 * [Drop-down](/refguide9/drop-down/)
-* [Check Box](/refguide9/check-box/)
+* [Checkbox](/refguide9/check-box/)
 * [Radio Buttons](/refguide9/radio-buttons/)
 * [Date Picker](/refguide9/date-picker/)
 * [File Manager](/refguide9/file-manager/)
@@ -40,7 +40,7 @@ The **Screen reader caption** property can be set on the following widgets:
 
 ### 3.1 Name{#name}
 
-The internal name of the widget. You can use this to give sensible names to widgets. The name property also appears in the generated HTML: the widget DOM element automatically includes the class `mx-name-{NAME}`, which can be useful for [Selenium testing](/howto7/integration/selenium-support/).
+The internal name of the widget. You can use this to give sensible names to widgets. The name property also appears in the generated HTML: the widget DOM element automatically includes the class `mx-name-{NAME}`, which can be useful for [Selenium testing](/howto9/integration/selenium-support/).
 
 ### 3.2 Tab Index{#tab-index}
 
@@ -101,7 +101,7 @@ With the following widgets, the Attribute (Path) specifies the attribute which i
 * [Text Box](/refguide9/text-box/)
 * [Text Area](/refguide9/text-area/)
 * [Drop-down](/refguide9/drop-down/)
-* [Check Box](/refguide9/check-box/)
+* [Checkbox](/refguide9/check-box/)
 * [Radio Buttons](/refguide9/radio-buttons/)
 * [Date Picker](/refguide9/date-picker/)
 

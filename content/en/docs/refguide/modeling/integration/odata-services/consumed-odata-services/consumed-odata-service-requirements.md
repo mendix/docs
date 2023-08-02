@@ -44,7 +44,7 @@ Furthermore, an entity can only be used if it is uniquely identifiable with a ke
 
 * The properties cannot be nullable (so they must have `isNullable="false"` specified).
 * Only the following types are allowed: `Byte`, `SByte`, `Int16`, `Int32`, `Int64`, `Boolean`, `Decimal`, `Single`, `Double`, and `String`.
-* If the type of a key property is `String`, it must have a limited  (maximum) length specified. This is because not all databases support indexes on strings of unlimited length. It is sufficient if  a `MaxLength` is specified in the contract. However, if a `MaxLength` is not specified in the contract, and you know that the string is limited in length, you can still use the entity by specifying the maximum length of the attribute in the the domain model.
+* If the type of a key property is `String`, it must have a limited  (maximum) length specified. This is because not all databases support indexes on strings of unlimited length. It is sufficient if  a `MaxLength` is specified in the contract. However, if a `MaxLength` is not specified in the contract, and you know that the string is limited in length, you can still use the entity by specifying the maximum length of the attribute in the domain model.
 
 {{% alert color="info" %}}
 The list above for supported key fields does not include `Date` or `DateTime` data types.
@@ -88,7 +88,7 @@ Associations to the generalizations with other exposed entities in the published
 When a generalization and a specialized entity are exposed in the same service. Only the association for the generalization will be visible when both entities are consumed. The now discrete specialization will have the inherited association. A possible work-around for this is to publish a service with the specializations without the generalization. Alternatively, the association for the generalization should not be published, allowing for the inherited association in the specialization to be preserved.
 {{% /alert %}}
 
-### 3.4 Binary Attributes
+### 3.4 Binary Attributes {#binary-attributes}
 
 The binary data format is supported in the form of *media entities*. When a media entity is dragged into the domain model, a corresponding external entity is created. The entity will have a `contents` attribute with the binary data.
 

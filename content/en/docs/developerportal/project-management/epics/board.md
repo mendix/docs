@@ -95,7 +95,6 @@ The story details dialog box shows the following items:
 * **Comment** – You can type your comment in the text box and then click **Post Your Comments** to save and post the comment.
     * You can sort the comments by clicking the **Newest** or **Oldest** button.
 
-
 {{% alert color="info" %}}You can also edit the story in this story details dialog box. If you make any change, click **Save Story** at the bottom to save it.{{% /alert %}}
 
 ## 3 Scrum Board vs Kanban Board {#different-boards}

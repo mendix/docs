@@ -10,7 +10,7 @@ tags: ["Private Cloud","Storage","Database","File","S3","Minio","Postgres","Azur
 
 ## 1 Introduction
 
-Every Mendix app environment needs a database to store entities, and a blob file storage bucket to store the contents of `System.FileDocument` entities. When an app developer creates a new environment, the Mendix Operator will automatically create (provision) a database and blob file storage bucket for that environment. In this way, an app developer does not need to install or configure a database - the Mendix Operator automatically prepares the database and blob file storage bucket, and links it with the new environment. Creating a new enviornment can be completely automated, and can be done by an app developer without assistance from the infrastructure team.
+Every Mendix app environment needs a database to store entities, and a blob file storage bucket to store the contents of `System.FileDocument` entities. When an app developer creates a new environment, the Mendix Operator will automatically create (provision) a database and blob file storage bucket for that environment. In this way, an app developer does not need to install or configure a database - the Mendix Operator automatically prepares the database and blob file storage bucket, and links it with the new environment. Creating a new environment can be completely automated, and can be done by an app developer without assistance from the infrastructure team.
 
 The Mendix Operator has a modular architecture and offers a multitude of options how to create and attach databases and blob file storage buckets to environments.
 A storage plan specifies a configuration blueprint for providing a database or blob file storage bucket to a new environment. For example, if you create a `postgres-prod` storage plan and configure it to use a specific Postgres instance, an app developer will be able to choose a `postgres-prod` from the database plan dropdown when creating a new environment. This plan will create a new Postgres role (user) and a new database (schema and tenant) inside an existing Postgres instance (RDS instance). The new Mendix app environment will only be able to access its database and tenant, and will be isolated from other apps running on the same Postgres instance.
@@ -110,7 +110,7 @@ To retry a failed provisioner pod, do the following steps:
 It is not currently possible to read the configuration of an existing storage plan. The only way to update the configuration of a storage plan is by overwriting it with an updated version. If you have created a storage plan in the past and would like to update it, for example, to change the admin credentials, you must create a new storage plan and give it the same name as the currently existing storage plan. This new configuration will overwrite and replace the existing plan.
 
 {{% alert color="info" %}}
-Giving a storage plan (database or blob file bucket) a non-unique name always overwrites any previously created storage plans with the same name. To prevent your data from accitentally being overwritten, when you configure a new namespace, make sure that the database and blob file storage plans use unique, different names.
+Giving a storage plan (database or blob file bucket) a non-unique name always overwrites any previously created storage plans with the same name. To prevent your data from accidentally being overwritten, when you configure a new namespace, make sure that the database and blob file storage plans use unique, different names.
 {{% /alert %}}
 
 #### 1.3.5 You Are Responsible for Backing up and Restoring Files
@@ -264,6 +264,7 @@ This section provides technical details on how IAM authentication works with Pos
    To connect to a Postgres server, a login database is required. This database is not used - but is required, because Postgres needs a default login database to be specified.
    {{% /alert %}}
 * A *Postgres Admin* IAM role with permissions to access the database, with the following inline policy (replace `<aws_region>` with the database's region, `<account_id>` with your AWS account number, `<database_id>` with the RDS database instance identifier and `<database_user>` with the Postgres superuser account name):
+
     ```json
     {
         "Version": "2012-10-17",
@@ -328,26 +329,26 @@ In the Postgres plan configuration, enter the following details:
 * **Host** - Postgres server hostname, for example `postgres-shared-postgresql.privatecloud-storage.svc.cluster.local`.
 * **Port** - Postgres server port number; in most cases this should be set to `5432`.
 * **Strict TLS** - specifies if the TLS should always be validated.
-  * Enabling this option will enable full TLS certificate validation and require encryption when connecting to the PostgreSQL server. If the PostgreSQL server has a self-signed certificate, you will also need to configure custom TLS so that the self-signed certificate is accepted.
-  * Disabling this option will attempt to connect with TLS, but skip certificate validation. If TLS is not supported, it will fall back to an unencrypted connection.
+    * Enabling this option will enable full TLS certificate validation and require encryption when connecting to the PostgreSQL server. If the PostgreSQL server has a self-signed certificate, you will also need to configure custom TLS so that the self-signed certificate is accepted.
+    * Disabling this option will attempt to connect with TLS, but skip certificate validation. If TLS is not supported, it will fall back to an unencrypted connection.
 * **Database name** - login database for the admin/superuser; in most cases this is set to `postgres`.
 * **Username** - username of the admin/superuser, used by the Mendix Operator to create or delete tenants for app environments; typically, this is set to `postgres`.
 * **Authentication** - select `aws-iam` from the dropdown.
 * **IAM Role ARN** - the *Postgres Admin* IAM role ARN.
-  * We recommend to use the same IAM role to manage Postgres databases and S3 buckets, as this would be easier to set up and maintain.
+    * We recommend to use the same IAM role to manage Postgres databases and S3 buckets, as this would be easier to set up and maintain.
 * **K8s Service Account** - the Kubernetes Service Account to create and attach to the IAM role.
   {{% alert color="warning" %}}
   Do not use the name of an existing Service Account (environment name), or one of the reserved Kubernetes Service Account names:
-  * `mendix-operator`
-  * `mendix-agent`
-  * `mendix-storage-provisioner`
+    * `mendix-operator`
+    * `mendix-agent`
+    * `mendix-storage-provisioner`
   {{% /alert %}}
 
 {{% alert color="info" %}}
 To connect to an Amazon RDS database, the VPC and firewall must be configured to allow connections to the database from the Kubernetes cluster.
 {{% /alert %}}
 
-AWS IRSA allows a Kubernetes Service Account to assume an IAM role. For this to work correctly, the IAM role's trust policy needs to trust the Kubernetest Service Account:
+AWS IRSA allows a Kubernetes Service Account to assume an IAM role. For this to work correctly, the IAM role's trust policy needs to trust the Kubernetes Service Account:
 
 1. Open the role for editing and add an entry for the ServiceAccount(s) to the list of conditions:
 
@@ -506,7 +507,7 @@ In the Dedicated JDBC plan configuration, enter the following details:
 * **Database type** - The database type, one of the supported [DatabaseType](/refguide/custom-settings/#DatabaseType) values such as `PostgreSQL`.
 * **Host** - The database hostname, for example `postgres-shared-postgresql.privatecloud-storage.svc.cluster.local:5432` - specifies the value of [DatabaseHost](/refguide/custom-settings/#DatabaseType).
 * **Database name** - The name of the database or schema used by the Mendix app, for example `postgres` - specifies the value of [DatabaseName](/refguide/custom-settings/#DatabaseName).
-* **JDBC URL** - The JDBC URL used to connect to the databse, for example `jdbc:postgresql://postgres-shared-postgresql.privatecloud-storage.svc.cluster.local:5432/myappdb?sslmode=prefer`.
+* **JDBC URL** - The JDBC URL used to connect to the database, for example `jdbc:postgresql://postgres-shared-postgresql.privatecloud-storage.svc.cluster.local:5432/myappdb?sslmode=prefer`.
 * **User** - Specifies the username to be used by the Mendix app environment to connect to the database.
 * **Password** - Specifies the password for **Username**.
 
@@ -523,7 +524,7 @@ The **Prevent Data Deletion** option switches the bucket into immutable mode:
 * When a `System.FileDocument` entity is modified, a new blob file will be uploaded into the storage bucket.
 * When an environment is deleted, its files will not be cleaned up (deleted) from the storage bucket.
 
-This can increase storage costs, but in exchange removes the need to run file backups. To roll back an app environment to an earlier stage, only the database needs to be rolled back. All files referenced by that database shapshot are already available in the blob storage bucket.
+This can increase storage costs, but in exchange removes the need to run file backups. To roll back an app environment to an earlier stage, only the database needs to be rolled back. All files referenced by that database snapshot are already available in the blob storage bucket.
 
 If **Prevent Data Deletion** is enabled, you can remove `s3:DeleteObject` and `s3:DeleteBucket` permissions from example IAM policies.
 {{% /alert %}}
@@ -915,9 +916,9 @@ If you just need instructions how to get started, the [AWS IAM-based storage wal
 
 * Every environment has its own IAM role and associated Kubernetes Service Account.
 * The S3 bucket is shared. 
-  * The environment template policy uses the IAM role tags as a template, so that a user can only access a certain prefix (path or directory) in the bucket.
-  * In practice, this means that any environment can only access files if those files' prefix matches the environment's IAM role tags.
-  * An environment cannot access files from other environments.
+    * The environment template policy uses the IAM role tags as a template, so that a user can only access a certain prefix (path or directory) in the bucket.
+    * In practice, this means that any environment can only access files if those files' prefix matches the environment's IAM role tags.
+    * An environment cannot access files from other environments.
 * The Mendix Operator does not need permissions to create new policies, only to attach a manually created policy.
 
 ##### 3.3.2.4 Create Workflow
@@ -949,17 +950,17 @@ In the Amazon S3 plan configuration, enter the following details:
 * **Attach policy ARN** - The environment template policy ARN; this is the existing policy that will be attached to every environment's IAM role.
 * **EKS OIDC URL** - The OIDC URL of the EKS cluster; in most cases, the OIDC provider is [created automatically](https://docs.aws.amazon.com/eks/latest/userguide/enable-iam-roles-for-service-accounts.html), and its URL can be found in the AWS Management Console.
 * **IAM Role ARN** - the admin user role ARN.
-  * We recommend to use the same IAM role to manage Postgres databases and S3 buckets, as this would be easier to set up and maintain.
+    * We recommend to use the same IAM role to manage Postgres databases and S3 buckets, as this would be easier to set up and maintain.
 * **K8s Service Account** - the Kubernetes Service Account to create and attach to the IAM role.
 
   {{% alert color="warning" %}}
   Do not use the name of an existing Service Account (environment name), or one of the reserved Kubernetes Service Account names:
-  * `mendix-operator`
-  * `mendix-agent`
-  * `mendix-storage-provisioner`
+    * `mendix-operator`
+    * `mendix-agent`
+    * `mendix-storage-provisioner`
   {{% /alert %}}
 
-AWS IRSA allows a Kubernetes Service Account to assume an IAM role. For this to work correctly, the IAM role's trust policy needs to trust the Kubernetest Service Account:
+AWS IRSA allows a Kubernetes Service Account to assume an IAM role. For this to work correctly, the IAM role's trust policy needs to trust the Kubernetes Service Account:
 
 1. Open the role for editing and add an entry for the ServiceAccount(s) to the list of conditions:
 
@@ -1589,9 +1590,8 @@ To configure the required settings for an RDS database, do the following steps:
 
 1. Create a Postgres RDS instance and enable **Password and IAM database authentication**, or enable **Password and IAM database authentication** for an existing instance. See the [RDS IAM documentation](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/UsingWithRDS.IAMDBAuth.Enabling.html) for more details on enabling IAM authentication.
 
-{{% alert color="info" %}}
-The VPC and firewall must be configured to allow connections to the database from the Kubernetes cluster. When creating the RDS instance, as a best practice, make sure that it uses the same VPC as the Kubernetes cluster. Alternatively, you can also use a publicly accessible cluster. After an RDS instance has been created, it is not possible to modify its VPC.
-{{% /alert %}}
+    {{% alert color="info" %}}The VPC and firewall must be configured to allow connections to the database from the Kubernetes cluster. When creating the RDS instance, as a best practice, make sure that it uses the same VPC as the Kubernetes cluster. Alternatively, you can also use a publicly accessible cluster. After an RDS instance has been created, it is not possible to modify its VPC.
+    {{% /alert %}}
 
 2. Navigate to the RDS instance details, and write down the following information:
 
@@ -1776,7 +1776,6 @@ Create a new IAM role.
     ]
 }
 ```
-
 
 In this template, replace:
 

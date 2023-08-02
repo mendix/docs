@@ -383,6 +383,7 @@ If you enabled the [Mendix Event Broker](#mendix-event-broker) for an environmen
 #### 6.3.2 Deploy Order
 
 The app that defines a business event service (**app A**), needs to be deployed and ran before the app that uses that business events service (**app B**) is ran.
+
 When this requirement is not met, **app B** will either be terminated or, when using [Business Events Module](https://marketplace.mendix.com/link/component/202649) version 3.7.0 and higher, produce errors in the log.
 
 When this occurs, please execute the following steps:

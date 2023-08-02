@@ -377,18 +377,18 @@ Make sure you [enable the Mendix Event Broker](#enable-mx-event-broker) for ever
 If you enabled the [Mendix Event Broker](#mendix-event-broker) for an environment, you may receive a warning that it is not possible to enable the event broker service. If you see this message, do the following in the [Services](/developerportal/deploy/environments/#services) tab of the production environment screen:
 
 1. **Enable** the checkbox for the environment.
-2. Transport the mda to an environment.
-3. Restart the environment.
+1. Transport the *.mda* file to an environment.
+1. Restart the environment.
 
-#### 6.3.2 Deploy order
+#### 6.3.2 Deploy Order
 
-The app that defines a business event service (app A), needs to de deployed and ran before the app that uses that business events service (app B) is ran.
-When this requirement is not met, app B will either be terminated or, from [Business Events Module](https://marketplace.mendix.com/link/component/202649) version 3.7.0 and onward, produce errors in the log.
+The app that defines a business event service (**app A**), needs to be deployed and ran before the app that uses that business events service (**app B**) is ran.
+When this requirement is not met, **app B** will either be terminated or, when using [Business Events Module](https://marketplace.mendix.com/link/component/202649) version 3.7.0 and higher, produce errors in the log.
 
-When this happends please execute the following steps
+When this occurs, please execute the following steps:
 
-1. Make sure app A has started in the same [space](#521-environments-and-spaces) as app B
-2. Restart app B
+1. Ensure **app A** has started in the same [space](#521-environments-and-spaces) as **app B**.
+1. Restart **app B**.
    
 ### 6.4 Apps Running Own Kafka Cluster (Bring Your Own Kafka) {#byok}
 

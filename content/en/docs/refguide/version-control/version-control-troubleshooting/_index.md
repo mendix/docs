@@ -8,6 +8,7 @@ tags: ["version control", "troubleshoot", "Studio Pro"]
 aliases:
     - /howto/collaboration-requirements-management/troubleshoot-version-control-issues/
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
+#The anchor #cannot-create-package below is mapped from Studio Pro, so it should not be removed or changed.
 ---
 
 ## 1 Introduction
@@ -79,3 +80,26 @@ There are properties of the Git repository that provide you with the information
 `git remote -v` — lists the remotes specified for the repository
 
 `git config --list --show-origin --show-scope` — provides information on user's Git config
+
+### 3.4 Cannot Create Package from a Revision{#cannot-create-package}
+
+Sometimes it is impossible to create a package from a certain revision. This page contains description and troubleshooting steps for the most common cases.
+
+#### 3.4.1 Missing metadata
+
+##### 3.4.1.1 Issue
+
+When you commit (and push) changes to the repository Studio Pro adds an additional commit with so called metadata to a special refspec refs/notes/mx_metadata (to hide this from your commits history).
+This metadata contains the information needed to create a deployment package (for instance the version of StudioPro that was used to create this revision -- Mendix version). To create the deployment package Studio Pro downloads the specific revision into a temporary folder and then creates the packge from there. So StudioPro needs to check the Mendix version of the selected revision to confirm no conversion is needed to open it. 
+
+Without this metadata it is impossible to check it. 
+
+##### 3.4.1.2 Solution
+
+1. Checkout the revision you want to create a deployment package from into a separate directory.
+2. Open it with correct version of StudioPro.
+3. Create branch out of it and switch to it. 
+4. Do a cosmetic change (e.g. move an activity in a microflow a few pixels)
+5. Commit and Push changes from StudioPro.
+
+Now you should be able to create a deployment package from this new revision.

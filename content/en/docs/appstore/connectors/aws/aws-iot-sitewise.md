@@ -287,6 +287,26 @@ NOT ALL ARE GENERALIZATIONS! -> The entities in the table below describe all gen
 | --- | --- |
 | State | The current status state of the asset. |
 
+### 4.1.26 ListProjectAssetsRequest {#list-project-assets-request}
+
+| Attribute | Description |
+| --- | --- |
+| MaxResults | Describes the maximum number of project assets returned in the response. By default it is set to 50 and can return a maximum of 250 asset models |
+| NextToken | Describes to the Amazon IoT SiteWise service that the list is being continued on with a token |
+| ProjectID | Describes the project ID from which the assets will be retrieved from |
+
+### 4.1.27 ListProjectAssetsResponse {#list-project-assets-response}
+
+| Attribute | Description |
+| --- | --- |
+| NextToken | Describes whether there are more assets in the project that can be listed. The next list requests to Amazon IoT SiteWise can be continued with this `NextToken` |
+
+### 4.1.28 AssetID {#asset-id}
+
+| Attribute | Description |
+| --- | --- |
+| AssetID | Describes the ID of the asset |
+
 ### 4.1. ENTITY_NAME {#entity_name}
 
 | Attribute | Description |
@@ -465,6 +485,15 @@ The `ListAssets` Amazon Iot SiteWise activity allows you to retrieve a list of a
 
 The `ListAssets` method supports pagination. The MaxResults in the request can be set to specify the maximum number of results to be returned in the response object. If you do not set MaxResults, the response includes 50 results by default. If you set MaxResults and there are additional results to display, the response includes a value for NextToken. Use NextToken as a parameter in your next request to the `ListAssets` method to receive the next page of results.
 
+#### 4.3.4 ListProjectAssets {#list-project-assets}
+
+The `ListProjectAssets` Amazon Iot SiteWise activity allows you to retrieve a list of assets belonging to a project. It requires a valid `ENUM_Region` parameter and a `ListProjectAssetsRequest` object with a valid ProjectID and returns a `ListProjectAssetsResponse` object, which can include a maximum of 250 results. The input and output for this service are shown in the table below: 
+
+| Input | Output | 
+| --- | --- | 
+| `ListProjectAssetsRequest` | `ListProjectAssetsResponse` |
+
+The `ListProjectAssets` method supports pagination. The MaxResults in the request can be set to specify the maximum number of results to be returned in the response object. If you do not set MaxResults, the response includes 50 results by default. If you set MaxResults and there are additional results to display, the response includes a value for NextToken. Use NextToken as a parameter in your next request to the `ListProjectAssets` method to receive the next page of results.
 
 
 ##### OPTIONAL, INCLUDE ONLY IF THE ACTIVITY RETURNS AN OUTPUT:

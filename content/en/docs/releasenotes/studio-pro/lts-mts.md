@@ -112,7 +112,7 @@ The impact of upgrading between MTS versions is higher than upgrading between LT
 
 ## 4 Monthly Release Version {#patch}
 
-A monthly release is a a non-MTS/LTS minor release that only receives patches for critical/security issues if they can be released earlier and faster than the next minor version release.
+A monthly release is a non-MTS/LTS minor release that only receives patches for critical/security issues if they can be released earlier and faster than the next minor version release.
 
 ### 4.1 Support Duration
 

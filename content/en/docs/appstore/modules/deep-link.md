@@ -71,7 +71,7 @@ Make sure that all roles—including your guest roles—which need to access you
 
 Make sure that the roles that need to change the configuration of the Deep Link module at runtime have the **DeepLink.Admin** user role (via **App** > **Security** > **User roles**).
 
-### 3.4 Adding the Configuration Overview Snippet the Custom Admin Page
+### 3.4 Adding the Configuration Overview Snippet to the Custom Admin Page
 
 To configure and manage deep links at runtime, add the **DeepLink.DeeplinkConfigurationOverview** snippet to a custom admin page, and make sure that all the users who operate the app can access this page. You need to add the **DeepLink.Admin** module role to their user roles.
 

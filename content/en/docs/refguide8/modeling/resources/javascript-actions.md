@@ -72,7 +72,7 @@ This setting handles the parameter's name. A name is required. Names must start 
 |   Boolean   |   The Boolean parameter type allows you to pass a Boolean value to a JavaScript action.  |
 |   Date and Time   |  The date and time parameter type allows you to pass a date and time value to a JavaScript action. In the generated JavaScript action code, this type will be represented as a JavaScript `Date`.  |
 |   Decimal   |  The decimal parameter type allows you to pass a decimal value to a JavaScript action. In the generated JavaScript action code, this type will be represented as a [Big](https://www.npmjs.com/package/big-js) object.  |
-|   Enumeration   |  The enumeration parameter type allows you to pass a enumeration value to a JavaScript action. In the generated JavaScript action code, this type will be represented as a string.  |
+|   Enumeration   |  The enumeration parameter type allows you to pass an enumeration value to a JavaScript action. In the generated JavaScript action code, this type will be represented as a string.  |
 |   Integer/Long   |  The integer/long parameter type allows you to pass a decimal value to a JavaScript action. In the generated JavaScript action code, this type will be represented as a [Big](https://www.npmjs.com/package/big-js) object.  |
 |   String   |  The string parameter type allows you to pass a string value to a JavaScript action. |
 

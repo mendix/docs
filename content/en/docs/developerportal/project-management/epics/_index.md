@@ -6,13 +6,13 @@ weight: 1
 description_list: false
 description: "Describes how to use Epics for your app development."
 aliases:
-    -  /developerportal/collaborate/epics/
+    -  /developerportal/general/epics/
 tags: ["Epics", "Sprint", "Developer Portal"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details. 
 ---
 
 {{% alert color="warning" %}}
-As of the GA release on December 1st, 2022, Epics is the default tool for you to manage the development process of new apps. Epics is a replacement of [Stories](/developerportal/project-management/stories/). You can still use Stories in addition to Epics. However, Mendix recommends not using both of them at the same time as it will make data migration more difficult later. 
+As of the GA release on December 1, 2022, Epics is the default tool for you to manage the development process of new apps. Epics is a replacement of [Stories](/developerportal/project-management/stories/). You can still use Stories in addition to Epics. However, Mendix recommends not using both of them at the same time as it will make data migration more difficult later. 
 
 To migrate your data from Stories to Epics, see the [Data Migration](/developerportal/project-management/epics/planning/#data-migration) section in *Planning*.
 {{% /alert %}}

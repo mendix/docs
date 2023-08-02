@@ -38,7 +38,7 @@ These binary operations have as an input a list and either another list or an ob
 
 | Operation | Description | Result Type |
 | --- | --- | --- |
-| Sort | Allows you to sort a list based on a number of a attributes. The attributes are ordered to determine their priority while sorting. The input list remains in its original order while the sorted list is stored in the output variable. | List |
+| Sort | Allows you to sort a list based on a number of attributes. The attributes are ordered to determine their priority while sorting. The input list remains in its original order while the sorted list is stored in the output variable. | List |
 
 ### 2.3 Member Inspections
 

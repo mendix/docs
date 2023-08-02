@@ -20,7 +20,7 @@ You can use these query languages in Mendix Studio Pro, but both languages are a
 This how to describes how you can build the following microflow actions:
 
 * Retrieve advanced XPath - returns a list of entities as specified by an XPath expression
-* Retrieve advanced OQL - returns a list of entities as specified by a OQL query
+* Retrieve advanced OQL - returns a list of entities as specified by an OQL query
 * Retrieve Dataset OQL - returns a list of entities as specified by a Dataset OQL query
 * Retrieve advanced SQL - returns a list of entities as specified by a SQL query
 * Create first Monday of month list - returns a list of dates of the first Monday of every month in a specified range

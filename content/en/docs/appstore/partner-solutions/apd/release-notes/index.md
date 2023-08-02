@@ -351,7 +351,7 @@ At the same time, we fixed a bug in the trap tool that left empty trap records w
 
 ### Other Fixes/Improvements
 
-* The licensing mechanism is improved, so we can issue a one time code immediatly. When entering this code in the **License request code** field during the installation of APM, a license key will automatically be generated (24/7 within a minute as long as the
+* The licensing mechanism is improved, so we can issue a one time code immediately. When entering this code in the **License request code** field during the installation of APM, a license key will automatically be generated (24/7 within a minute as long as the
 license server is up).
 * The measurements tool **Search** tab shows the values in a decimal format with two decimals so that it is more readable.
 * We renamed the Java parameter that led to issues in installation of APM in some Mendix releases.

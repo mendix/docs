@@ -17,7 +17,7 @@ Version Control allows you to manage your app development in two ways:
 * Firstly, it allows you to store ([commit](#commit)) the current revision of your model and all its resources. You give it an identifier so that you can get that revision again and share it with other team members.
 * Secondly, it allows work to take place on multiple [development lines](#development-line) so that several different features can be worked on at once. These development lines can then be [merged](#merge) back together so that your [main line](#main-line) contains all the completed features that have been worked on separately.
 
-Version control in Mendix is built on top of either [Apache Subversion](https://subversion.apache.org/) or [Git](https://git-scm.com). The concepts will be familiar to seasoned users of these version control systems (VCS). Mendix simplifies the VCS commands by building them into Studio Pro, Studio, and the Developer Portal.
+Version control in Mendix is built on top of either [Apache Subversion](https://subversion.apache.org/) or [Git](https://git-scm.com). The concepts will be familiar to seasoned users of these version control systems (VCS). Mendix simplifies the VCS commands by building them into Studio Pro and the Developer Portal.
 
 {{% alert color="info" %}}
 Team Server Git was released for GA in version [9.12.0](/releasenotes/studio-pro/9.12/#team-server-git). BYO (Bring Your Own) Git was in Beta from Mendix version [9.6.0](/releasenotes/studio-pro/9.6/#960) and was GA in Mendix version [9.24.0](/releasenotes/studio-pro/9.24/#private-git). For more details, see [Working with Git On-Premises Version Control Server](/refguide9/on-premises-git/) in the *Studio Pro Guide*. 
@@ -27,9 +27,9 @@ Team Server Git was released for GA in version [9.12.0](/releasenotes/studio-pro
 
 ### 2.1 Team Server {#team-server}
 
-[Team Server](/developerportal/collaborate/team-server/) is where all the committed versions of Mendix apps are stored. If you commit a revision of an app, it is stored on the Team Server.
+[Team Server](/developerportal/general/team-server/) is where all the committed versions of Mendix apps are stored. If you commit a revision of an app, it is stored on the Team Server.
 
-To commit to the Team Server you will need to have a role in the app which allows you to edit the app. For more information, see the [Team Roles](/developerportal/collaborate/app-roles/#team-roles) section *App Roles*.
+To commit to the Team Server you will need to have a role in the app which allows you to edit the app. For more information, see the [Team Roles](/developerportal/general/app-roles/#team-roles) section *App Roles*.
 
 For more information on the Team Server and technologies involved, see [Version Control FAQ](/refguide9/version-control-faq/).
 
@@ -41,16 +41,11 @@ Within the [Team Server](#team-server) each app is stored in a repository. This 
 
 A revision is the version of your app at a moment in time, stored on the [Team Server](#team-server).
 
-Each revision of your app is given a unique alphanumeric identifier which enables you to find it in future. A new revision is created from Studio Pro in two circumstances:
-
-* The app is committed to the repository
-* A Studio Pro working copy is updated from a Studio working copy (if [Studio is enabled](#studio-enabled))
+Each revision of your app is given a unique alphanumeric identifier which enables you to find it in future. A new revision is created from Studio Pro when the app is committed to the repository.
 
 ### 2.4 Working Copy {#working-copy}
 
-A working copy is the version of your app which is currently being worked on in Studio Pro or Studio. For Studio Pro, there is one working copy for each development line of the app. This model is held locally, on each computer where development work is taking place.
-
-For Studio, there is one additional working copy, held in the cloud. Only one developer at a time can edit this.
+A working copy is the version of your app which is currently being worked on in Studio Pro. There is one working copy for each development line of the app. This model is held locally, on each computer where development work is taking place.
 
 ### 2.5 Merge {#merge}
 
@@ -71,8 +66,6 @@ When a conflict occurs, a developer has to intervene to decide how it should be 
 
 Updating (SVN terminology) or pulling (Git terminology) is the action, invoked in Studio Pro, which gets the latest revision of the current [development line](#development-line) from the repository and merges the differences into the current working copy.
 
-If Studio is enabled for this development line, the process first ensures that the Studio working copy is stored as a new revision.
-
 ### 2.8 Commit/Push {#commit}
 
 Committing is the action, invoked in Studio Pro, of creating a set of changes and sending/pushing all your changes to the [repository](#repository) and making a new [revision](#revision).
@@ -81,7 +74,7 @@ Committing is the action, invoked in Studio Pro, of creating a set of changes an
 When using Git, it is possible to store the committed data in a local repository, but not yet push it to the central [repository](#repository). In SVN these actions are always done together.
 {{% /alert %}}
 
-If Studio is enabled for this development line, the process first ensures that the Studio working copy is stored as a new revision and merged into the working copy of Studio Pro. If there are no conflicts, the changes are then sent to the repository to make a new revision.
+If there are no conflicts, the changes are then sent to the repository to make a new revision.
 
 ### 2.9 Development Line {#development-line}
 
@@ -97,19 +90,7 @@ A branch line is a way of making an independent set of changes which can be test
 
 See the [Branches](#branches) section below for more information on how branch lines can be used.
 
-### 2.10 Studio Enabled {#studio-enabled}
-
-{{% alert color="info" %}}
-From Mendix 9.21, we only support [collaborative development](/refguide9/collaborative-development/) between Studio Pro users. Mendix Studio is no longer supported for apps with Mendix version 9.21 or above. For more information, see the blog post [Coming in 2023: The Merging of Studio and Studio Pro](https://www.mendix.com/blog/coming-in-2023-the-merging-of-studio-and-studio-pro/).
-{{% /alert %}}
-
-You may enable Studio for one of the development lines. This means that a developer can make changes to the app through Studio and share changes with the team. All changes will be linked to the selected branch and committed as revisions to that branch. Changes made to other development lines will not be available in Studio.
-
-Studio cannot be used to develop the app if it is not enabled for any development lines.
-
-For app templates created via the Developer Portal, the main line of a new app will be Studio enabled.
-
-### 2.11 Tag {#tag}
+### 2.10 Tag {#tag}
 
 A Tag is a way of identifying a commit in addition to the [revision](#revision) number. It is specified by the developer and has four parts:
 
@@ -122,9 +103,9 @@ A Tag is a way of identifying a commit in addition to the [revision](#revision) 
 Tags are supported by Studio Pro Git ([BYO](/refguide9/branch-line-manager-dialog/#byo-server-app) and Team Server) from Mendix version 9.8.0.
 {{% /alert %}}
 
-### 2.12 Repository Service
+### 2.11 Repository Service
 
-The Repository Service manages communication between Studio or Studio Pro and other supporting services (for example, Team Server). The developer will not generally be aware that they are communicating via the Repository Service.
+The Repository Service manages communication between Studio Pro and other supporting services (for example, Team Server). The developer will not generally be aware that they are communicating via the Repository Service.
 
 ## 3 Branches {#branches}
 
@@ -172,6 +153,6 @@ It is also highly recommended to either commit or revert all changes before such
 
 There may be conflicts during the merge, and these will have to be resolved before you can commit the changes to your app.
 
-Note that errors can be introduced by the [merge](#merge) process even if no conflicts are identified during the merge. Errors are inconsistencies which are flagged in Studio and Studio Pro and will prevent the app from being deployed. They could lead to a revision not being deployable, so it is important to check for errors after you have done a merge.
+Note that errors can be introduced by the [merge](#merge) process even if no conflicts are identified during the merge. Errors are inconsistencies which are flagged in Studio Pro and will prevent the app from being deployed. They could lead to a revision not being deployable, so it is important to check for errors after you have done a merge.
 
 ## 4 Documents in This Category

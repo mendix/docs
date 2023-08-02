@@ -13,7 +13,34 @@ For information on the current status of deployment to Mendix for Private Cloud 
 
 ## 2023
 
-### June 15, 2023
+### July 13th, 2023
+
+#### Portal Improvements
+
+* We have now decoupled the scaling from *Start* and *Stop* in the members permission. This means that scaling does not come into effect until the application is started, and you have to click **Start application** in order for the changes to be sent to the cluster
+* We have added a banner on the **Namespace details** page to display information about the new Operator release.
+
+#### Deploy API Improvements
+
+* We have now decoupled the scaling from start and stop in members permissions.
+* We have added a new **runtimeVersion** field under **Runtime** in the **Manifest of the Environment** in DeployAPI.
+* We have fixed a core resource decimal conversion issue in the environment manifest file (Ticket 189615).
+* We have fixed an issue where upper-case letters in an email ID would prevent members invited to a cluster manager or namespace from accepting the invite. (Ticket 189975)
+
+### July 6th, 2023
+
+#### Mendix Operator v2.12.0 {#2.12.0}
+
+* We have added an option to use IAM-based authentication when connecting to an RDS database and S3 file storage, removing the need for static passwords. To use this feature, you must upgrade your apps to Mendix 9.22 or later. For a walkthrough guide on how to enable and use this feature, see the [walkthrough](/developerportal/deploy/private-cloud-storage-plans/#walkthrough-aws-irsa).
+* We have removed the need to specify a namespace name when applying a custom TLS trust config in [non-interactive mode](/developerportal/deploy/private-cloud-cli-non-interactive/).
+* We fixed an issue where Google Cloud and Ceph bucket configuration would not be saved or loaded in [non-interactive mode](/developerportal/deploy/private-cloud-cli-non-interactive/).
+* We have updated components to use Go 1.20 and the latest dependency versions, in order to improve security score ratings for all container images.
+* For apps based on Mendix versions 9.12.0 and above, scheduled events are now configured on all instances. This improves reliability in some scenarios where a restart or an update is required.
+* We have updated the list of supported platforms to include Kubernetes 1.27.
+* We fixed an issue where connections to Azure SQL would fail with a *TLS Handshake failed* error.
+* The Mendix Operator will ensure that environments using licenses from the Private Cloud License Manager always have a non-expired license. When an environment's license reaches its expiration date, the Mendix Operator will replace it with a non-expired license from PCLM.
+
+### June 15th, 2023
 
 #### Portal Enhancements
 
@@ -380,7 +407,7 @@ This issue is fixed in Mendix Operator [version 2.5.1](#2.5.1).
 #### Portal Improvement
 
 * We have improved the UX, and added a new button, **Save and Apply** to directly apply changes made in an environment. This button restarts the environment.
-* We have added the ability to add metrics configuration to a environment.
+* We have added the ability to add metrics configuration to an environment.
   
 ### January 13, 2022
 
@@ -551,7 +578,7 @@ To upgrade an existing installation of Mendix for Private Cloud to Mendix Operat
     * Ingress class
     * Ingress path and path type
 * When a custom `ApplicationRootUrl` is specified in Custom Runtime Settings, it will be used instead of the automatically generated application URL.
-* We have fixed a incorrect *Runtime has an empty (trial) license* log message which appeared when using a Subscription Secret license.
+* We have fixed an incorrect *Runtime has an empty (trial) license* log message which appeared when using a Subscription Secret license.
 * We extended the Mendix Operator trial period from 30 days to 90 days. (Tickets 118172, 121775, 124921)
 
 To upgrade an existing installation of Private Cloud to this version, follow the [Upgrade instructions](/developerportal/deploy/private-cloud-upgrade-guide/).
@@ -892,4 +919,4 @@ To upgrade an existing installation of Private Cloud to the latest version, foll
 
 #### Improvements
 
-* On the **General** page of [App Buzz](/developerportal/collaborate/buzz/#app-buzz), we added a **Private Cloud** target. This will currently take you to a closed Beta test that allows you to connect your private cluster to Mendix. You can ask to join the Beta program, but places are currently limited.
+* On the **General** page of [App Buzz](/developerportal/general/buzz/#app-buzz), we added a **Private Cloud** target. This will currently take you to a closed Beta test that allows you to connect your private cluster to Mendix. You can ask to join the Beta program, but places are currently limited.

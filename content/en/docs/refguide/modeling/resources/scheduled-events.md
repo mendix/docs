@@ -151,7 +151,7 @@ If a repeated scheduled event takes longer than the interval, an overlap would o
 
 * **Skip next** – If an event takes longer than its interval, subsequent events are skipped until it has completed. The next event will start at the next available scheduled time.
 
-    This is the default and will ensure that events are always executed at a scheduled time.
+    This is the default and will ensure that events are always executed at a scheduled time, subject to queue resources being available (see [Running Concurrently](#concurrently), below).
 
 * **Delay next** – If an event takes longer than its interval, the next event is delayed until it has completed. The next event will start immediately after the previous one has completed and will likely not be executed at a scheduled time.
 
@@ -168,9 +168,9 @@ However, if server time is chosen there may be daylight saving for the configure
 If a time is chosen which is in the daylight saving time window (the time at which the clocks change, for example between 01:00 and 03:00 in Europe), then that time will not occur on one day of the year and occur
 twice on another day of the year. The scheduled event will not be affected by this and will execute exactly once on those days.
 
-### 5.2 Running Concurrently
+### 5.2 Running Concurrently{#concurrently}
 
-You cannot run more than ten scheduled events in parallel per cluster node.
+No more than ten scheduled events can run in parallel per cluster node. Additional scheduled events will be queued and run in "first in, first out" order as currently running events finish.
 
 This limit cannot be overridden.
 

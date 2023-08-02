@@ -12,7 +12,7 @@ aliases:
     - /mendixcloud/deploying-to-the-cloud
 #To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
-#The anchor #plans, below, is mapped from the Control Center within the Developer Portal.
+#The anchor #plans, below, is mapped from Control Center within the Developer Portal.
 ---
 
 ## 1 Introduction
@@ -70,7 +70,7 @@ You can upgrade a Free App to a licensed node with a node in the Mendix Cloud. F
 
 #### 1.1.2 Free Apps Archiving {#free-apps-archival}
 
-If a Free App has been in sleep mode for three months or longer, it may be archived. For Free Apps which are going to be archived, the [Technical Contact](/developerportal/collaborate/app-roles/#technical-contact) is informed two weeks beforehand. Upon archiving, the project and model are retained, but the running app, database, and files for the Free App are deleted.
+If a Free App has been in sleep mode for three months or longer, it may be archived. For Free Apps which are going to be archived, the [Technical Contact](/developerportal/general/app-roles/#technical-contact) is informed two weeks beforehand. Upon archiving, the project and model are retained, but the running app, database, and files for the Free App are deleted.
 
 There are two ways to prevent your Free App from being archived:
 
@@ -168,10 +168,6 @@ You can also deploy an app from Team Server. To do this, follow these steps:
 
 The package is deployed to the cloud.
 
-#### 2.2.3 Deploying via Studio
-
-To deploy your app from Studio, click **Publish**. For more information, see the [Publishing Your App](/studio/publishing-app/#publishing-your-app) section of *Previewing and Publishing Your App*.
-
 ### 2.3 Deploying the App to an Environment {#deploy-the-app-to-an-environment}
 
 The previous steps explained how to deploy a deployment package to the Mendix Cloud, but the actual app is not running yet. To deploy a deployment package to a node environment, follow these steps:
@@ -196,7 +192,7 @@ The app is now deployed. You can configure the administrative account.
 
 ### 2.4 Deploying a Free App to the Mendix Cloud
 
-With a Free App, you can deploy your app to the Mendix Cloud from Studio or Studio Pro by using one of the following methods:
+With a Free App, you can deploy your app to the Mendix Cloud from Studio Pro by using one of the following methods:
 
 * In the top bar of Studio Pro, click **Run** > **Publish**. This automatically deploys your app to a Free App environment.
 
@@ -311,4 +307,4 @@ If you want to deploy your Mendix apps to other environments, you can add these 
 
 * [Custom Domains](/developerportal/deploy/custom-domains/)
 * [Licensing Mendix Cloud Apps](/developerportal/deploy/licensing-apps/)
-* [App Roles](/developerportal/collaborate/app-roles/)
+* [App Roles](/developerportal/general/app-roles/)

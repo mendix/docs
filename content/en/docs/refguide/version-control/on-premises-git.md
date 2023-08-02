@@ -11,7 +11,7 @@ aliases:
 
 ## 1 Introduction
 
-When developing Mendix applications, changes to these applications are stored in a version control system. This system is called [Team Server](/developerportal/collaborate/team-server/) and is part of the Mendix Platform. This means that the application's files are stored in the Mendix online environment. For more information, see the [Version Control Reference Guide](/refguide/version-control/).
+When developing Mendix applications, changes to these applications are stored in a version control system. This system is called [Team Server](/developerportal/general/team-server/) and is part of the Mendix Platform. This means that the application's files are stored in the Mendix online environment. For more information, see the [Version Control Reference Guide](/refguide/version-control/).
 
 While using Team Server is the recommended for most Mendix developers, you may prefer to store your application's files in a system controlled by your own organization. For version control, Mendix uses [Git](/refguide/on-premises-git/). This document describes how to work with Git version control system.
 
@@ -76,6 +76,10 @@ Create an unversioned app in Studio Pro:
 Once the app is created, you can upload it to your private Git repository. For more information on how to upload it, see the [Uploading to the Private Git Server](#upload-to-private-git-server) section below.
 
 ### 4.4 Downloading from a Private Repository
+
+{{% alert color="info" %}}
+Please note that the libraries Mendix uses to operate Git do not support <kbd>{Space}</kbd> characters in Git repo URLs.
+{{% /alert %}}
 
 Now that you have a Git app on your server, you can download it to another directory or one of your team members can download it on their machine. Follow the steps below:
 
@@ -191,5 +195,5 @@ Note that your previous app still exists, **Studio Pro** will simply make an unv
 ## 5 Read More
 
 * [Version Control Reference Guide](/refguide/version-control/)
-* [Team Server](/developerportal/collaborate/team-server/)
+* [Team Server](/developerportal/general/team-server/)
 * [Upload to Version Control Server Reference Guide](/refguide/upload-to-version-control-dialog/)

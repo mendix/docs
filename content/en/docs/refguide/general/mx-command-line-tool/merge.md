@@ -32,7 +32,7 @@ These are the `OPTIONS`:
 `MINE` is the second *.mpr* file, which is used as the changed version in comparison. The output will contain the changes that are in this file against the base. 
 
 {{% alert color="info" %}}
-For example, if the `BASE` *.mpr* has Microflow1 and the `MINE` *.mpr* does not have it, Microflow1 wil be listed as deleted in the output file. If you swap the `BASE` and `MINE` parameters and compare again, Microflow1 will be listed as added.{{% /alert %}}
+For example, if the `BASE` *.mpr* has Microflow1 and the `MINE` *.mpr* does not have it, Microflow1 will be listed as deleted in the output file. If you swap the `BASE` and `MINE` parameters and compare again, Microflow1 will be listed as added.{{% /alert %}}
 
 `OUTPUT` is the name of the outputted JSON file.
 
@@ -173,10 +173,10 @@ To confirm this works, you can create a blank version-controlled app and do the 
 6. Pull the changes from the remote.
 7. Change the caption of the home page to *Main*.
 8. Add a microflow named *main*.
-7. Commit and push your changes.
-8. Open the Git command line in your app's **Main** branch directory and run `git merge origin/branch`.
+9. Commit and push your changes.
+10. Open the Git command line in your app's **Main** branch directory and run `git merge origin/branch`.
 
-If you configured everything correctly, the command line outout should look like this:
+If you configured everything correctly, the command line output should look like this:
 
 ```code
 $ git merge origin/branch

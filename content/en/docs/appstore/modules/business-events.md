@@ -101,7 +101,7 @@ To consume a business event, you first need to create a **Consumed Business Even
 3. Import an AsyncAPI service document. Click **Browse** and select the YAML file (created in the [Create a Published Business Event Service](#create-be) step). This will make subscriptions to business events available for you to start mapping to entities within your consuming application.
 4. Click **OK**.
 
-{{< figure src="/attachments/appstore/modules/business-events/subscriptions-available-2.png" >}}
+{{< figure src="/attachments/appstore/modules/business-events/subscriptions-available.png" >}}
 
 #### 4.1.3 Subscribing to a Business Event
 

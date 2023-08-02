@@ -21,7 +21,7 @@ AWS IoT SiteWise is a managed service that simplifies collecting, organizing, an
 
 The AWS IoT SiteWise connector requires Mendix Studio Pro version 9.18.0 or above.
 
-To authenticate with Amazon Web Service (AWS), you must also install and configure the [AWS Authentication connector version {MINIMUM REQUIRED VERSION} or higher](https://marketplace.mendix.com/link/component/120333). It is crucial for the AWS IoT SiteWise connector to function correctly. For more information about installing and configuring the AWS Authentication connector, see [AWS Authentication](/appstore/connectors/aws/aws-authentication/).
+To authenticate with Amazon Web Service (AWS), you must also install and configure the [AWS Authentication connector version 2.3.0 or higher](https://marketplace.mendix.com/link/component/120333). It is crucial for the AWS IoT SiteWise connector to function correctly. For more information about installing and configuring the AWS Authentication connector, see [AWS Authentication](/appstore/connectors/aws/aws-authentication/).
 
 #### VARIANT 2 - IF THE CONNECTOR ALSO HAS OTHER DEPENDENCIES
 
@@ -29,7 +29,7 @@ The AWS IoT SiteWise connector requires Mendix Studio Pro version 9.18.0 or abov
 
 To use the AWS IoT SiteWise connector, you must also install and configure the following modules:
 
-* [AWS Authentication connector version {MINIMUM REQUIRED VERSION} or higher](https://marketplace.mendix.com/link/component/120333) - This connector is required to authenticate with Amazon Web Services (AWS). It is crucial for the AWS IoT SiteWise connector to function correctly. For more information about installing and configuring the AWS Authentication connector, see [AWS Authentication](/appstore/connectors/aws/aws-authentication/).
+* [AWS Authentication connector version 2.3.0 or higher](https://marketplace.mendix.com/link/component/120333) - This connector is required to authenticate with Amazon Web Services (AWS). It is crucial for the AWS IoT SiteWise connector to function correctly. For more information about installing and configuring the AWS Authentication connector, see [AWS Authentication](/appstore/connectors/aws/aws-authentication/).
 * {OTHER MODULES AS REQUIRED, WITH A SHORT DESCRIPTION OF THEIR PURPOSE AND A LINK TO THEIR PAGES ON MARKETPLACE.}
 
 ### 1.3 Licensing and Cost
@@ -48,17 +48,17 @@ Follow the instructions in [How to Use Marketplace Content in Studio Pro](/appst
 
 ## 3 Configuration
 
-After you install the connector, you can find it in the **App Explorer**, in the **{MODULENAME}** section. The connector provides a [domain model](#domain-model) and several [activities](#activities) that you can use to connect your app to {AWS SERVICE NAME}. Each activity can be implemented by using it in a microflow. To ensure that your app can connect to the AWS service, you must also configure AWS authentication for the connector.
+After you install the connector, you can find it in the **App Explorer**, in the **AWSIoTSiteWiseConnector** section. The connector provides a [domain model](#domain-model) and several [activities](#activities) that you can use to connect your app to AWS IoT SiteWise. Each activity can be implemented by using it in a microflow. To ensure that your app can connect to the AWS service, you must also configure AWS authentication for the connector.
 
 ### 3.1 Configuring AWS Authentication
 
 #### THIS SECTION HAS SCREENSHOTS FROM THE DYNAMODB CONNECTOR. REPLACE THEM WITH SIMILAR SCREENSHOTS FROM YOUR CONNECTOR.
 
-In order to use the {AWS SERVICE NAME} service, you must authenticate with AWS. To do so, you must set up a configuration profile in your Mendix app. After you set up the configuration profile, the connector module handles the authentication internally.
+In order to use the AWS IoT SiteWise service, you must authenticate with AWS. To do so, you must set up a configuration profile in your Mendix app. After you set up the configuration profile, the connector module handles the authentication internally.
 
 1. Ensure that you have installed and configured the AWS Authentication connector, as mentioned in [Prerequisites](#prerequisites).
 2. Decide whether you want to use session or static credentials to authenticate.
-    The AWS IoT SiteWise connector supports {SUPPORTED CONNECTION TYPES, USUALLY "both session and static credentials"}. By default, the connector is pre-configured to use {STATIC/SESSION, USUALLY "static"} credentials, but you may want to switch to {SESSION/STATIC, USUALLY "session"} credentials, for example, {IF SWITCHING TO SESSION, "to increase the security of your app"; IF SWITCHING TO STATIC, "to quickly test the authentication process"}. For an overview of both authentication methods, see [AWS Authentication](/appstore/connectors/aws/aws-authentication/).
+    The AWS IoT SiteWise connector supports both session and static credentials. By default, the connector is pre-configured to use static credentials, but you may want to switch to session credentials, for example, to increase the security of your app. For an overview of both authentication methods, see [AWS Authentication](/appstore/connectors/aws/aws-authentication/).
 3. In the **App Explorer**, double-click the **Settings** for your app.
 
     {{< figure src="/attachments/appstore/connectors/aws-dynamodb/appsettings.png" alt="The Settings option in the App Explorer">}}
@@ -66,7 +66,7 @@ In order to use the {AWS SERVICE NAME} service, you must authenticate with AWS. 
 4. In the **App Settings** dialog, in the **Configurations** tab, edit or create an authentication profile.
     If you have multiple sets of AWS credentials, or if you want to use both static and session credentials for different use cases, create separate authentication profiles for each set of credentials.
 5. In the **Edit Configuration** dialog, in the **Constants** tab, click **New** to add the constants required for the configuration.
-6. In the **Select Constants** dialog, find and expand the **{MODULENAME}** > **ConnectionDetails** section.
+6. In the **Select Constants** dialog, find and expand the **AWSIoTSiteWiseConnector** > **ConnectionDetails** section.
 
     {{< figure src="/attachments/appstore/connectors/aws-dynamodb/credentials.png" alt="The SessionCredentials and StaticCredentials items in the ConnectionDetails section">}}
 
@@ -86,7 +86,7 @@ In order to use the {AWS SERVICE NAME} service, you must authenticate with AWS. 
 
 ### 3.2 Configuring a Microflow for an AWS Service
 
-After you configure the authentication profile for {AWS SERVICE NAME}, you can implement the functions of the connector by using the provided activities in microflows. For example, to {DESCRIBE A TASK}, implement the {ACTIVITY NAME, WITH LINK TO THE RELEVANT SECTION IN TECHNICAL REFERENCE BELOW} activity by doing the following steps:
+After you configure the authentication profile for AWS IoT SiteWise, you can implement the functions of the connector by using the provided activities in microflows. For example, to {DESCRIBE A TASK}, implement the {ACTIVITY NAME, WITH LINK TO THE RELEVANT SECTION IN TECHNICAL REFERENCE BELOW} activity by doing the following steps:
 
 {A DETAILED STEP-BY-STEP CONFIGURATION PROCEDURE, WITH SCREENSHOTS. SEE THE DYNAMODB CONNECTOR DOC FOR THE LEVEL OF DETAIL THAT'S REQUIRED.}
 
@@ -130,27 +130,27 @@ NOT ALL ARE GENERALIZATIONS! -> The entities in the table below describe all gen
 | --- | --- |
 | N/A | The object does not contain any attributes, but it inherits from the `AbstractAssetModelStatus` entity |
 
-### 4.1.5 AbstractAssetModelStatus {#abstractassetmodelstatus}
+### 4.1.5 AbstractAssetModelStatus {#abstract-asset-model-status}
 
 | Attribute | Description |
 | --- | --- |
 | State | The current status state of the asset model |
 
-### 4.1.6 ErrorDetails {#errordetails}
+### 4.1.6 ErrorDetails {#error-details}
 
 | Attribute | Description |
 | --- | --- |
 | Code | The error code |
 | Message | The error message |
 
-### 4.1.7 DetailedError {#detailederror}
+### 4.1.7 DetailedError {#detailed-error}
 
 | Attribute | Description |
 | --- | --- |
 | Code | The error code |
 | Message | The error message |
 
-### 4.1.8 ListProjectsRequest {#listprojectsrequest}
+### 4.1.8 ListProjectsRequest {#list-projects-request}
 
 | Attribute | Description |
 | --- | --- |
@@ -158,13 +158,13 @@ NOT ALL ARE GENERALIZATIONS! -> The entities in the table below describe all gen
 | NextToken | Describes to the Amazon IoT SiteWise service that the list is being continued on with a token |
 | PortalID | Describes the portal ID from which the projects will be retrieved from |
 
-### 4.1.9 ListProjectsResponse {#listprojectsresponse}
+### 4.1.9 ListProjectsResponse {#list-projects-response}
 
 | Attribute | Description |
 | --- | --- |
 | NextToken | Describes whether there are more projects in the portal that can be listed. The next list requests to Amazon IoT SiteWise can be continued with this `NextToken` |
 
-### 4.1.10 ProjectSummary {#projectsummary}
+### 4.1.10 ProjectSummary {#project-summary}
 
 | Attribute | Description |
 | --- | --- |
@@ -174,39 +174,39 @@ NOT ALL ARE GENERALIZATIONS! -> The entities in the table below describe all gen
 | LastUpdateDate | The last update date of the project |
 | Name | The name of the project |
 
-### 4.1.11 DescribeProjectRequest {#describeprojectrequest}
+### 4.1.11 DescribeProjectRequest {#describe-project-request}
 
 | Attribute | Description |
 | --- | --- |
 | PortalID | The ID of the portal the project is in |
-| ProjectARN | The ARN of the project |
+| ProjectARN | The Amazon Resource Name (ARN) of the project |
 | CreationDate | The creation date of the project |
 | Description | The description of the project |
 | ProjectID | The asset model ID of the project |
 | LastUpdateDate | The last update date of the project |
 | Name | The name of the project |
 
-### 4.1.12 DescribeProjectResponse {#describeprojectresponse}
+### 4.1.12 DescribeProjectResponse {#describe-project-response}
 
 | Attribute | Description |
 | --- | --- |
 | ProjectID | Describes the project ID |
 
 
-### 4.1.13 ListPortalsRequest {#listportalsrequest}
+### 4.1.13 ListPortalsRequest {#list-portals-request}
 
 | Attribute | Description |
 | --- | --- |
 | MaxResults | Describes the maximum number of portal summaries returned in the response. By default it is set to 50 and can return a maximum of 250 portals. |
 | NextToken | Describes to the Amazon IoT SiteWise service that the list is being continued on with a token |
 
-### 4.1.14 ListPortalsResponse {#listportalsresponse}
+### 4.1.14 ListPortalsResponse {#list-portals-response}
 
 | Attribute | Description |
 | --- | --- |
 | NextToken | Describes whether there are more portals in the region that can be listed. The next list requests to Amazon IoT SiteWise can be continued with this `NextToken` |
 
-### 4.1.15  PortalSummary {#portalsummary}
+### 4.1.15  PortalSummary {#portal-summary}
 
 | Attribute | Description |
 | --- | --- |
@@ -218,18 +218,74 @@ NOT ALL ARE GENERALIZATIONS! -> The entities in the table below describe all gen
 | RoleARN | The ARN (Amazon Resource Name) of the service role that allows the portal's users to access the AWS IoT SiteWise resources |
 | StartURL | The URL for the AWS IoT SiteWise Monitor portal |
 
-### 4.1.16 PortalStatus {#portalstatus}
+### 4.1.16 PortalStatus {#portal-status}
 
 | Attribute | Description |
 | --- | --- |
 | State | The current status state of the portal |
 
-### 4.1.17 MonitorErrorDetails {#monitorerrordetails}
+### 4.1.17 MonitorErrorDetails {#monitor-error-details}
 
 | Attribute | Description |
 | --- | --- |
 | Code | The error code |
 | Message | The error message |
+
+### 4.1.18 ListAssetsRequest {#list-assets-request}
+
+| Attribute | Description |
+| --- | --- |
+| NextToken | Describes the token to be used for the next set of paginated results. |
+| MaxResults | Describes the maximum number of results to return for each request. The default value is 50. |
+| AssetModelID | Describes the ID of the asset model by which to filter the list of assets. This attribute is required if you choose `ALL`or `(empty)` for Filter attribute. |
+| Filter | The Filter attribute describes the filter for the requested list of assets. Choose one of the following options: <p><p>ALL – The list includes all assets for a given asset model ID. The assetModelID attribute is required if you filter by ALL. <p>TOP_LEVEL – The list includes only top-level assets in the asset hierarchy tree.<p>The default value for this attribute is ALL, not selecting either option will result in the ALL filter to be applied to your request. |
+
+### 4.1.19 ListAssetsResponse {#list-assets-response}
+
+| Attribute | Description |
+| --- | --- |
+| NextToken | Describes the token for the next set of results, or `(empty)` if there are no additional results. |
+
+### 4.1.20 DescribeAssetModelRequest {#describe-asset-model-request}
+
+| Attribute | Description |
+| --- | --- |
+| AssetModelID | Describes the ID of the asset model and is a required parameter. |
+
+### 4.1.21 DescribeAssetModelResponse {#describe-asset-model-response}
+
+| Attribute | Description |
+| --- | --- |
+| AssetModelArn | Describes the Amazon Resource Name (ARN) of the asset model. |
+| AssetModelCreationDate | Describes the date that the asset model resource was created. |
+| AssetModelDescription | Describes the asset model's description. |
+| AssetModelID | Describes the ID of the asset model. |
+| AssetModelLastUpdateDate | Describes the date the asset model was last updated. |
+| AssetModelName | Describes the name of the asset model. |
+
+### 4.1.22 _Type {#type}
+
+| Attribute | Description |
+| --- | --- |
+| N/A | The generalized entity does not contain any attributes, it is a wrapper entity holding references to property entities (Measurement, Transform, Attribute and Metric) |
+
+### 4.1.23 ProcessingConfig {#processing-config}
+
+| Attribute | Description |
+| --- | --- |
+| N/A | The generalized entity does not contain any attributes, it is a configuration profile for where information is processed and forwarded |
+
+### 4.1.24 Variable {#variable}
+
+| Attribute | Description |
+| --- | --- |
+| Name | Describes the friendly name of the variable to be used in the expression. |
+
+### 4.1.25 AbstractAssetStatus {#abstract-asset-status}
+
+| Attribute | Description |
+| --- | --- |
+| State | The current status state of the asset. |
 
 ### 4.1. ENTITY_NAME {#entity_name}
 
@@ -342,6 +398,13 @@ An enumeration is a predefined list of values that can be used as an attribute t
 | DISABLED | DISABLED | The forwarding config state is disabled. |
 | ENABLED | ENABLED | The forwarding config state is enabled. |
 
+#### 4.2.11 ENUM_ListAssetsFilter
+
+| Name | Caption | Description |
+| --- | --- | --- |
+| ALL | ALL | The filter to retrieve all assets associated with a specified asset model. |
+| TOP_LEVEL | TOP_LEVEL | The filter to retrieve only top-level assets. |
+
 ### 4.3 Activities {#activities}
 
 Activities define the actions that are executed in a microflow or a nanoflow.
@@ -390,7 +453,19 @@ The `ListPortals` Amazon Iot SiteWise activity allows you to retrieve a list of 
 | --- | --- | 
 | `ListPortalsRequest` | `ListPortalsResponse` |
 
-The `ListPortals` method supports pagination. The MaxResults in the request can be set to specify the maximum number of results to be returned in the response object. If you do not set MaxResults, the response includes 50 results by default. If you set MaxResults and there are additional results to display, the response includes a value for NextToken. Use NextToken as a parameter in your next request to the `ListAssetModels` method to receive the next page of results.
+The `ListPortals` method supports pagination. The MaxResults in the request can be set to specify the maximum number of results to be returned in the response object. If you do not set MaxResults, the response includes 50 results by default. If you set MaxResults and there are additional results to display, the response includes a value for NextToken. Use NextToken as a parameter in your next request to the `ListPortals` method to receive the next page of results.
+
+#### 4.3.6 ListAssets {#list-assets}
+
+The `ListAssets` Amazon Iot SiteWise activity allows you to retrieve a list of all asset summaries for the given region. It requires a valid `ENUM_Region` parameter and a `ListAssetsRequest` object and returns a `ListAssetsResponse` object, which can include a maximum of 50 results. The input and output for this service are shown in the table below: 
+
+| Input | Output | 
+| --- | --- | 
+| `ListAssetsRequest` | `ListAssetsResponse` |
+
+The `ListAssets` method supports pagination. The MaxResults in the request can be set to specify the maximum number of results to be returned in the response object. If you do not set MaxResults, the response includes 50 results by default. If you set MaxResults and there are additional results to display, the response includes a value for NextToken. Use NextToken as a parameter in your next request to the `ListAssets` method to receive the next page of results.
+
+
 
 ##### OPTIONAL, INCLUDE ONLY IF THE ACTIVITY RETURNS AN OUTPUT:
 

@@ -85,7 +85,7 @@ Make sure your Windows VM Firewall is active and properly configured.
 {{% alert color="warning" %}}
 Whenever you create or open a Mendix app in Mendix Studio Pro, be sure to do so from a mapped drive instead of a network drive.
 
-The Z: drive is typically how Parallels names the network drive on the Mac it's running on. This Z: drive starts with a letter, but is not a mapped drive. Use the C: drive instead.
+The **Z:** drive is typically how Parallels names the network drive on the Mac it is running on. This **Z:** drive starts with a letter, but *is not a mapped drive*. **Use the C: drive instead, as it is a mapped drive.**
 {{% /alert %}}
 
 Read the tips below to check the network drive before viewing your app on your testing device:

@@ -84,6 +84,8 @@ Make sure your Windows VM Firewall is active and properly configured.
 
 {{% alert color="warning" %}}
 Whenever you create or open a Mendix app in Mendix Studio Pro, be sure to do so from a mapped drive instead of a network drive.
+
+The **Z:** drive is typically how Parallels names the network drive on the Mac it is running on. This **Z:** drive starts with a letter, but *is not a mapped drive*. **Use the C: drive instead, as it is a mapped drive.**
 {{% /alert %}}
 
 Read the tips below to check the network drive before viewing your app on your testing device:
@@ -95,7 +97,7 @@ Read the tips below to check the network drive before viewing your app on your t
 * Incorrect network drives will always have **\\** at the start of their file location:
 
     {{< figure src="/attachments/refguide/installation/using-mendix-studio-pro-on-a-mac/network-drive.png" alt="network drive"   width="450"  >}}
-
+    
 ## 5 Viewing Your App on Your Testing Device
 
 When running your app on your test device, you cannot use the QR code within Mendix Studio Pro's **View Mobile App** dialog box:

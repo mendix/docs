@@ -82,7 +82,7 @@ For this section, you will need:
 * A [Personal Access Token](/developerportal/community-tools/mendix-profile/#pat)
 * The `application_UUID`
 * The `environment_UUID`
-* The Service `Path`, `Name`, and `ContractType`
+* The Service `Path`, `Name`, and `ApiTechnology`
 * Service `Version` and `Security Scheme`
 * Service `Contract` with `Type` and `Value`
 

@@ -20,12 +20,12 @@ To use the Catalog Search API, you need the following:
 * A [personal access token](/developerportal/community-tools/mendix-profile/#pat)
 * A search term
 
-For more details on what can and cannot be provided in your search query, see the [API specification](https://datahub-spec.s3.eu-central-1.amazonaws.com/search_v4.html#/Search/get_data).
+For more details on what can and cannot be provided in your search query, see the [API specification](https://datahub-spec.s3.eu-central-1.amazonaws.com/search_v5.html#/Search/get_data).
 
 You can see an example of a request below where the search term is `Customer`:
 
 ```curl
-curl --location --request GET 'https://catalog.mendix.com/rest/search/v3/data?query=Customer' \
+curl --location --request GET 'https://catalog.mendix.com/rest/search/v5/data?query=Customer' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: MxToken <your_Personal_Access_Token>'
 ```
@@ -34,190 +34,237 @@ A successful `GET` call results in a `200` status code and a JSON response body 
 
 ```json
 {
-    "TotalResults": 145,
+    "TotalResults": 177,
     "Links": [
         {
-            "Href": "https://catalog.mendix.com/rest/search/v3/data?query=Customer",
-            "Rel": "First"
+            "Rel": "First",
+            "Href": "https://catalog.mendix.com/rest/search/v4/data?offset=0&contractType=OData&query=Customer&limit=20"
         },
         {
-            "Href": "https://catalog.mendix.com/rest/search/v3/data?query=Customer",
-            "Rel": "Current"
+            "Rel": "Current",
+            "Href": "https://catalog.mendix.com/rest/search/v4/data?offset=0&contractType=OData&query=Customer&limit=20"
         },
         {
-            "Href": "https://catalog.mendix.com/rest/search/v3/data?query=Customer&afterId=18d7d608-723f-4f33-b247-a85271d5eefd",
-            "Rel": "Next"
+            "Rel": "Next",
+            "Href": "https://catalog.mendix.com/rest/search/v4/data?offset=20&contractType=OData&query=Customer&limit=20"
+        },
+        {
+            "Rel": "Last",
+            "Href": "https://catalog.mendix.com/rest/search/v4/data?offset=160&contractType=OData&query=Customer&limit=20"
         }
     ],
     "Data": [
         {
-            "Connections": 34,
+            "Connections": 11,
             "Validated": true,
-            "Description": "This is the primary data source for customer information.",
-            "SecurityClassification": "Internal",
+            "Description": "Primary data source for customer information. Requires approval for prod use - please contact owner for details.",
+            "MinProtocolVersion": "3.0",
             "TotalItems": 3,
+            "SecurityClassification": "Internal",
+            "ProtocolVersion": "3.0",
             "Name": "CustomerApi",
             "Version": "1.1.0",
-            "ContractType": "OData_3_0",
+            "ContractType": "OData",
             "Environment": {
                 "Type": "Production",
-                "UUID": "5f0e2439-cc8b-4b12-87a4-556437d9e4d1",
+                "UUID": "6e40b8c9-0d70-47ff-ba8c-cf1a074cafaf",
                 "Name": "Production",
-                "Location": "https://your-app-url.com"
+                "Location": "https://customermanagement103.mendixcloud.com"
             },
             "Links": [
                 {
                     "Rel": "Self",
-                    "Href": "https://catalog.mendix.com/rest/search/v3/endpoints/9756545b-9b36-4f51-8655-1102c36e9288"
+                    "Href": "https://catalog.mendix.com/rest/search/v4/endpoints/ca355a57-dae1-4449-873c-51e2d6fd1755"
                 },
                 {
                     "Rel": "Catalog",
-                    "Href": "https://catalog.mendix.com/link/endpoint?EndpointUUID=9756545b-9b36-4f51-8655-1102c36e9288"
+                    "Href": "https://catalog.mendix.com/link/endpoint?EndpointUUID=ca355a57-dae1-4449-873c-51e2d6fd1755"
                 }
             ],
             "Items": [
                 {
-                    "Type": "DataSource",
+                    "TopSupported": true,
+                    "Countable": true,
+                    "SkipSupported": true,
                     "Validated": false,
+                    "TotalItems": 6,
+                    "Namespace": "mx.customer.api",
+                    "EntityTypeName": "Customer",
+                    "Name": "Customer",
+                    "Type": "Dataset",
+                    "Sortable": true,
                     "EntitySetName": "Customers",
+                    "Filterable": true,
                     "Updatable": false,
-                    "Links": [{
-                        "Rel": "Catalog",
-                        "Href": "https://catalog.mendix.com/link/entity?EndpointUUID=9756545b-9b36-4f51-8655-1102c36e9288&EntityUUID=d27150f1-1ba3-41f0-965b-3ce3402412ef"
-                    }],
+                    "Links": [
+                        {
+                            "Rel": "Catalog",
+                            "Href": "https://catalog.mendix.com/link/entity?EndpointUUID=ca355a57-dae1-4449-873c-51e2d6fd1755&EntityUUID=9ef95bd7-198a-444a-958a-89c874443409"
+                        }
+                    ],
                     "Deletable": false,
                     "Items": [
                         {
+                            "Countable": true,
+                            "EdmType": "Edm.Int64",
                             "Type": "Attribute",
-                            "EdmxType": "Edm.Int64",
+                            "Sortable": true,
+                            "Filterable": true,
                             "Updatable": false,
                             "Insertable": false,
                             "Name": "CustomerId"
                         },
                         {
+                            "Countable": true,
                             "Type": "Association",
-                            "ReferencedDataSource": "ContactHistory",
                             "Multiplicity": "*",
                             "EntitySetName": "ContactHistorys",
                             "Updatable": false,
                             "Insertable": false,
                             "Namespace": "mx.customer.api",
+                            "ReferencedDataset": "ContactHistory",
                             "Name": "ContactHistory_Customer",
                             "EntityTypeName": "ContactHistory"
                         },
                         {
+                            "Countable": true,
                             "Type": "Association",
-                            "ReferencedDataSource": "ContactInfo",
                             "Multiplicity": "0..1",
                             "EntitySetName": "ContactInfos",
                             "Updatable": false,
                             "Insertable": false,
                             "Namespace": "mx.customer.api",
+                            "ReferencedDataset": "ContactInfo",
                             "Name": "ContactInfo_Customer",
                             "EntityTypeName": "ContactInfo"
                         }
                     ],
-                    "TotalItems": 6,
-                    "Insertable": false,
-                    "Namespace": "mx.customer.api",
-                    "Name": "Customer",
-                    "EntityTypeName": "Customer"
+                    "Insertable": false
                 },
                 {
-                    "Type": "DataSource",
+                    "TopSupported": true,
+                    "Countable": true,
+                    "SkipSupported": true,
                     "Validated": false,
-                    "EntitySetName": "ContactHistorys",
-                    "Updatable": false,
-                    "Links": [{
-                        "Rel": "Catalog",
-                        "Href": "https://catalog.mendix.com/link/entity?EndpointUUID=9756545b-9b36-4f51-8655-1102c36e9288&EntityUUID=3aeb0d6b-4205-4bc6-adef-67487e85e178"
-                    }],
-                    "Deletable": false,
-                    "Items": [{
-                        "Type": "Association",
-                        "ReferencedDataSource": "Customer",
-                        "Multiplicity": "0..1",
-                        "EntitySetName": "Customers",
-                        "Updatable": false,
-                        "Insertable": false,
-                        "Namespace": "mx.customer.api",
-                        "Name": "ContactHistory_Customer",
-                        "EntityTypeName": "Customer"
-                    }],
                     "TotalItems": 6,
-                    "Insertable": false,
                     "Namespace": "mx.customer.api",
+                    "EntityTypeName": "ContactHistory",
                     "Name": "ContactHistory",
-                    "EntityTypeName": "ContactHistory"
+                    "Type": "Dataset",
+                    "Sortable": true,
+                    "EntitySetName": "ContactHistorys",
+                    "Filterable": true,
+                    "Updatable": false,
+                    "Links": [
+                        {
+                            "Rel": "Catalog",
+                            "Href": "https://catalog.mendix.com/link/entity?EndpointUUID=ca355a57-dae1-4449-873c-51e2d6fd1755&EntityUUID=325261db-a8c0-427e-ab4c-14768bfd9c9a"
+                        }
+                    ],
+                    "Deletable": false,
+                    "Items": [
+                        {
+                            "Countable": true,
+                            "Type": "Association",
+                            "Multiplicity": "0..1",
+                            "EntitySetName": "Customers",
+                            "Updatable": false,
+                            "Insertable": false,
+                            "Namespace": "mx.customer.api",
+                            "ReferencedDataset": "Customer",
+                            "Name": "ContactHistory_Customer",
+                            "EntityTypeName": "Customer"
+                        }
+                    ],
+                    "Insertable": false
                 },
                 {
-                    "Type": "DataSource",
+                    "TopSupported": true,
+                    "Countable": true,
+                    "SkipSupported": true,
                     "Validated": false,
-                    "EntitySetName": "ContactInfos",
-                    "Updatable": false,
-                    "Links": [{
-                        "Rel": "Catalog",
-                        "Href": "https://catalog.mendix.com/link/entity?EndpointUUID=9756545b-9b36-4f51-8655-1102c36e9288&EntityUUID=6939a90c-c3bc-4eaf-a741-a484cf2248ad"
-                    }],
-                    "Deletable": false,
-                    "Items": [{
-                        "Type": "Association",
-                        "ReferencedDataSource": "Customer",
-                        "Multiplicity": "*",
-                        "EntitySetName": "Customers",
-                        "Updatable": false,
-                        "Insertable": false,
-                        "Namespace": "mx.customer.api",
-                        "Name": "ContactInfo_Customer",
-                        "EntityTypeName": "Customer"
-                    }],
                     "TotalItems": 11,
-                    "Insertable": false,
                     "Namespace": "mx.customer.api",
+                    "EntityTypeName": "ContactInfo",
                     "Name": "ContactInfo",
-                    "EntityTypeName": "ContactInfo"
+                    "Type": "Dataset",
+                    "Sortable": true,
+                    "EntitySetName": "ContactInfos",
+                    "Filterable": true,
+                    "Updatable": false,
+                    "Links": [
+                        {
+                            "Rel": "Catalog",
+                            "Href": "https://catalog.mendix.com/link/entity?EndpointUUID=ca355a57-dae1-4449-873c-51e2d6fd1755&EntityUUID=de5140bd-f181-4b0e-ab60-20664cc6184e"
+                        }
+                    ],
+                    "Deletable": false,
+                    "Items": [
+                        {
+                            "Countable": true,
+                            "Type": "Association",
+                            "Multiplicity": "*",
+                            "EntitySetName": "Customers",
+                            "Updatable": false,
+                            "Insertable": false,
+                            "Namespace": "mx.customer.api",
+                            "ReferencedDataset": "Customer",
+                            "Name": "ContactInfo_Customer",
+                            "EntityTypeName": "Customer"
+                        }
+                    ],
+                    "Insertable": false
                 }
             ],
-            "LastUpdated": "2021-07-24T16:12:52.795Z",
-            "UUID": "9756545b-9b36-4f51-8655-1102c36e9288",
+            "LastUpdated": "2021-05-26T16:12:52.795Z",
+            "UUID": "ca355a57-dae1-4449-873c-51e2d6fd1755",
+            "Application": {
+                "Type": "Other",
+                "TechnicalOwner": {
+                    "Email": "andrej.koelewijn@mendix.com",
+                    "OpenID": "https://mxid2.mendixcloud.com/mxid2/id?id=d9d4b5bc-ffe8-4c5c-b237-7358d01f7981",
+                    "Name": "Andrej Koelewijn"
+                },
+                "Icon": "https://catalog.mendix.com/resources/logos/other_icon.png",
+                "UUID": "1bed66d2-4477-39a9-9144-d0f848212f1e",
+                "RepositoryLocation": "https://sprintr.home.mendix.com/link/project/369386df-35b4-475b-a917-17adcc81c1b5",
+                "BusinessOwner": {
+                    "Email": "andrej.koelewijn@mendix.com",
+                    "OpenID": "https://mxid2.mendixcloud.com/mxid2/id?id=d9d4b5bc-ffe8-4c5c-b237-7358d01f7981",
+                    "Name": "Andrej Koelewijn"
+                },
+                "Name": "CustomerApp"
+            },
             "SecurityScheme": {
-                "Types": [{"Name": "Anonymous"}],
+                "SecurityTypes": [
+                    {
+                        "Name": "Anonymous"
+                    }
+                ],
                 "MxAllowedRoles": [
                     {
-                        "UUID": "abc56ffb-75ab-44f6-9c04-87fbe419ce74",
+                        "UUID": "8dd52bfa-6d7e-453b-b506-303c0a3d9567",
                         "Name": "Administrator"
                     },
                     {
-                        "UUID": "3f8cbb62-bbcc-4d9f-b583-27d4b50d5405",
+                        "UUID": "53f5d6fa-6da9-4a71-b011-454ec052cce8",
                         "Name": "User"
                     }
                 ]
             },
-            "Application": {
-                "Type": "Other",
-                "TechnicalOwner": {
-                    "Email": "roselien.opmeer@mendix.com",
-                    "OpenID": "https://mxid2.mendixcloud.com/mxid2/id?id=3abbc519-36cb-49e0-b158-120e9100e8be",
-                    "Name": "Roselien Opmeer"
-                },
-                "Icon": "https://catalog.mendix.com/resources/logos/other_icon.png",
-                "UUID": "34aacfda-8a85-497c-bb21-74f1c6ee2b18",
-                "RepositoryLocation": "https://sprintr.home.mendix.com/link/project/a2e76491-bd8d-4284-b865-00c9ae8dde94",
-                "BusinessOwner": {
-                    "Email": "roselien.opmeer@mendix.com",
-                    "OpenID": "https://mxid2.mendixcloud.com/mxid2/id?id=3abbc519-36cb-49e0-b158-120e9100e8be",
-                    "Name": "Roselien Opmeer"
-                },
-                "Name": "CustomerApp"
-            },
             "Tags": [
-                {"Name": "customer"},
-                {"Name": "contact"}
+                {
+                    "Name": "customer"
+                },
+                {
+                    "Name": "contact"
+                }
             ]
-        }, {...}, {...}, {...},
+        }, {},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{}
     ],
     "Limit": 20,
-    "LastId": "18d7d608-723f-4f33-b247-a85271d5eefd"
+    "LastId": "6808590a-4528-4355-a638-8b2e131614c7",
+    "Offset": 0
 }
 ```
 

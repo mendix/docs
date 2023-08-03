@@ -367,7 +367,7 @@ We renamed all the SAP-related connectors and app templates in the App Store to 
 
 #### Improvements
 
-We added a component in the App Store which, when configured in your app, allows you to use the logging format supported by SAP Kibana. For more information, see [SAP Logging Connector](/developerportal/deploy/sap-cloud-platform/sap-logger/).
+We added a component in the App Store which, when configured in your app, allows you to use the logging format supported by SAP Kibana. For more information, see [SAP Logging Connector](/appstore/connectors/sap/sap-logger/).
 
 ### June 6, 2019
 

@@ -213,7 +213,7 @@ The following techniques can help in identifying issues which are causing your O
 
 #### 4.6.1 Setting Application Log level
 
-You can get more information from your app by setting the log level. For this you will need to have the Marketplace module [SAP Logging Connector](https://marketplace.mendix.com/link/component/110219/) set up in your app. For more information see the [SAP Logging Connector](/developerportal/deploy/sap-cloud-platform/sap-logger/) documentation.
+You can get more information from your app by setting the log level. For this you will need to have the Marketplace module [SAP Logging Connector](https://marketplace.mendix.com/link/component/110219/) set up in your app. For more information see the [SAP Logging Connector](/appstore/connectors/sap/sap-logger/) documentation.
 
 To set log level for an application deployed to SAP BTP, go to ‘Model Options’ in the environment and set ‘SapApplicationLogs.SapLogLevel’ to the required level. (Debug, Info, Error, Warn, or Trace).
 

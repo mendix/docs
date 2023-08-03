@@ -47,7 +47,7 @@ Logs on the Mendix Cloud are rotated and archived every day. The logs are kept f
 For apps deployed to SAP Business Technology Platform (SAP BTP) you can see the logs using Kibana.
 
 {{% alert color="info" %}}
-To make full use of Kibana and see proper mapping of the log level, multiline log messages, and stack traces, you will need to configure the *SAP Logger Connector* in your app. For more information see [SAP Logger Connector](/developerportal/deploy/sap-cloud-platform/sap-logger/).
+To make full use of Kibana and see proper mapping of the log level, multiline log messages, and stack traces, you will need to configure the *SAP Logger Connector* in your app. For more information see [SAP Logger Connector](/appstore/connectors/sap/sap-logger/).
 {{% /alert %}}
 
 The logs page shows all the environments for this app. Click the **Logs** button to open the log in Kibana.

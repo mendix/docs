@@ -307,6 +307,35 @@ NOT ALL ARE GENERALIZATIONS! -> The entities in the table below describe all gen
 | --- | --- |
 | AssetID | Describes the ID of the asset |
 
+### 4.1.29 DescribeAssetRequest {#describe-asset-request}
+
+| Attribute | Description |
+| --- | --- |
+| AssetID | Describes the ID of the asset and is a required parameter. |
+
+### 4.1.30 DescribeAssetResponse {#describe-asset-response}
+
+| Attribute | Description |
+| --- | --- |
+| AssetARN | Describes the Amazon Resource Name (ARN) of the asset. |
+| AssetCreationDate | Describes the date the asset was created. |
+| AssetDescription | Describes a description for the asset. |
+| AssetID | Describes the ID of the asset. |
+| AssetLastUpdateDate | Describes the date the asset was last updated. |
+| AssetModelID | Describes the ID of the asset model that was used to create the asset. |
+| AssetName | Describes the name of the asset. |
+
+### 4.1.31 AssetProperty {#asset-property}
+
+| Attribute | Description |
+| --- | --- |
+| DataType | Describes the data type of the asset property. |
+| _ID | Describes the ID of the asset property. |
+| Name | Describes the name of the property. |
+| Alias | Describes the alias that identifies the property, such as an OPC-UA server data stream path, e.g., /company/windfarm/3/turbine/7/temperature. |
+| DataTypeSpec | Describes the data type of the structure for this property. This parameter exists on properties that have the STRUCT data type. |
+| Unit | Describes the unit (such as Newtons or RPM) of the asset property. |
+
 ### 4.1. ENTITY_NAME {#entity_name}
 
 | Attribute | Description |
@@ -425,6 +454,13 @@ An enumeration is a predefined list of values that can be used as an attribute t
 | ALL | ALL | The filter to retrieve all assets associated with a specified asset model. |
 | TOP_LEVEL | TOP_LEVEL | The filter to retrieve only top-level assets. |
 
+#### 4.2.11 ENUM_PropertyNotificationState
+
+| Name | Caption | Description |
+| --- | --- | --- |
+| ENABLED | ENABLED | Describes a property's notification state. |
+| DISABLED | DISABLED | Describes a property's notification state. |
+
 ### 4.3 Activities {#activities}
 
 Activities define the actions that are executed in a microflow or a nanoflow.
@@ -495,6 +531,13 @@ The `ListProjectAssets` Amazon Iot SiteWise activity allows you to retrieve a li
 
 The `ListProjectAssets` method supports pagination. The MaxResults in the request can be set to specify the maximum number of results to be returned in the response object. If you do not set MaxResults, the response includes 50 results by default. If you set MaxResults and there are additional results to display, the response includes a value for NextToken. Use NextToken as a parameter in your next request to the `ListProjectAssets` method to receive the next page of results.
 
+#### 4.3.4 DescribeAsset {#describe-asset}
+
+The `DescribeAsset` Amazon Iot SiteWise activity allows you to retrieve information for a given asset. It requires a valid `ENUM_Region` parameter and a `DescribeAssetRequest` object with a valid `AssetID` and returns a `DescribeAssetResponse` object. The input and output for this service are shown in the table below: 
+
+| Input | Output | 
+| --- | --- | 
+| `DescribeAssetRequest` | `DescribeAssetResponse` |
 
 ##### OPTIONAL, INCLUDE ONLY IF THE ACTIVITY RETURNS AN OUTPUT:
 

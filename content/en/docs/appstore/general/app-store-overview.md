@@ -25,7 +25,7 @@ The home page is your entry point to the various parts of the Mendix Marketplace
 * Click **My Marketplace** to go to pages presenting your [Marketplace activity](#my-marketplace) as well as your company's [private content](#company-content)
 * Click **Get Studio Pro** to get the latest version of [Studio Pro](/releasenotes/studio-pro/)
 * Click **Add Content** to [share new Marketplace content](/appstore/general/share-app-store-content/) you have developed
-* Explore various [industry solutions](#industry) and[content types](#types).
+* Explore various [industry solutions](#industry) and [content types](#types).
 
 {{< figure src="/attachments/appstore/general/app-store-overview/home-page.png" >}}
 
@@ -33,21 +33,23 @@ The home page is your entry point to the various parts of the Mendix Marketplace
 
 | Type | Description |
 | --- | --- |
-| **Solutions** | Out-of-the-box solutions are aimed at industries and domain problems, and they deliver instant value. These solutions can be adapted using the core Mendix Platform to fully meet your requirements. |
-| **Templates** | Templates and starter apps serve as accelerators for implementing solutions to help increase speed-to-value and time-to-market. |
-| **App Services** | App services are packages of preconfigured business capabilities provided as modules containing logic, UIs, workflows, connectors, and APIs. |
-| [Connectors](/appstore/connectors/) | Connectors are for connecting data services. They have content that you can drag from the [Connector](/refguide/view-menu/#connector) pane in Studio Pro into your app.|
-| [Modules](/appstore/modules/) | Modules are packages of functionality for your app. They consist of a domain model, security options, and other elements like microflows, pages, or Java actions. Modules are mostly used for complex functionality that needs business or Java logic. |
-| [Widgets](/appstore/widgets/) | Widgets are single user-interface elements like containers, drop-down menus, and buttons. Select a widget, configure it, and add it to pages and snippets in your app. |
-| **Platform Services** | These services for Mendix Platform integration accessible through the Marketplace include [Data Hub](/data-hub/). |
+| [Module](/appstore/modules/) | Packages of functionality for your app, which consist of a domain model, security options, and other elements like microflows, pages, or Java actions. Modules are mostly used for complex functionality that needs business or Java logic. |
+| [Widget](/appstore/widgets/) | Single user-interface element like containers, drop-down menus, and buttons. Select a widget, configure it, and add it to pages and snippets in your app. |
+| **Theme** | Ready to use layouts, themes of a personalised style which could be shared and used by Makers to enrich the app with a specific design. |
+| **Service** | Software functionality that can be re-used for different use cases. Services usually include APIs that users can interact with. |
+| **Starter Template** | A sample project which has certain capabilities in place to provide a basis for Maker to start developing app. Maker does not create an app from blank state rather has already some features configured. |
+| **Solution** | Out-of-the-box solutions are aimed at industries and domain problems, and they deliver instant value. These solutions are ready to use and can be adapted using the core Mendix Platform to fully meet customer’s requirements. |
+| **Industry Template** | Accelerators for implementing solutions to help increase speed-to-value and time-to-market. Industry Templates help to organize development content that customer wants to reuse for customer-specific solutions. |
 
-<a id="industry"></a>The Marketplace offers **Industry** solutions for manufacturing, financial services, and other industries.
 
 The following filter options are also available:
 
+* **Category**
+* **Industry**
+* **Support**
 * **Rating**
+* **Visibility**
 * **Compatibility**
-* **Tags**
 
 ## 3 Component Details Page {#details}
 

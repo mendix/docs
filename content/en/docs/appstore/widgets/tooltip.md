@@ -62,5 +62,5 @@ On mobile devices the **Hover** option will be triggered on touch.
 {{% /alert %}}
 
 {{% alert color="warning" %}}
-Known issue: On Safari, the on-hover tooltip may not work properly when used on a disabled element.
+On Safari, the on-hover tooltip may not work properly when used on a disabled element. We are working to fix this issue.
 {{% /alert %}}

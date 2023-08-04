@@ -54,11 +54,11 @@ If you create your app from an SAP app template, the Developer Portal will lead 
 
 For more information, see [SAP Business Technology Platform](/developerportal/deploy/sap-cloud-platform/).
 
-## 5 Siemens MindSphere
+## 5 Siemens Insights Hub
 
-You can deploy your app to MindSphere, the cloud-based, open IoT operating system from Siemens. Here you can leverage the information held within MindSphere and share your app with selected MindSphere tenants.
+You can deploy your app to Insights Hub, the cloud-based, open IoT operating system from Siemens. Here you can leverage the information held within Insights Hub and share your app with selected Insights Hub tenants.
 
-To find out how to do this, read [Siemens MindSphere](/developerportal/deploy/deploying-to-mindsphere/).
+To find out how to do this, read [Siemens Insights Hub](/developerportal/deploy/deploying-to-mindsphere/).
 
 ## 6 Private Cloud
 

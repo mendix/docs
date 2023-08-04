@@ -3,7 +3,7 @@ title: "Licensing Apps"
 url: /developerportal/deploy/licensing-apps-outside-mxcloud/
 weight: 5
 description: "How to apply licenses to apps which are outside Mendix Cloud"
-tags: ["App", "Developer Portal", "License", "Subscription Secret", "Upgrade", "SAP", "Siemens MindSphere"]
+tags: ["App", "Developer Portal", "License", "Subscription Secret", "Upgrade", "SAP", "MindSphere", "Insights Hub"]
 #To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 #NB have left out AWS and Azure Marketplace offerings for now, pending further research.
 ---
@@ -76,9 +76,9 @@ You can add this subscription secret as part of creating an environment on SAP B
 
 For more information, see [SAP Business Technology Platform - deploy](/developerportal/deploy/sap-cloud-platform/).
 
-### 3.3 Siemens MindSphere
+### 3.3 Siemens Insights Hub
 
-To license a MindSphere app, you need to provide your *License ID* and *License Key* as Cloud Foundry environment variables. See [Cloud Foundry](#cloudfoundry), below, for instructions on how to do this.
+To license a Insights Hub app, you need to provide your *License ID* and *License Key* as Cloud Foundry environment variables. See [Cloud Foundry](#cloudfoundry), below, for instructions on how to do this.
 
 ### 3.4 Mendix for Private Cloud
 

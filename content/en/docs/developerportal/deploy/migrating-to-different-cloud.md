@@ -1,5 +1,5 @@
 ---
-title: "Migrate from to a Different Public Cloud Datacenter"
+title: "Migrate to a Different Public Cloud Datacenter"
 url: /developerportal/deploy/migrating-on-public-cloud/
 weight: 10
 description: "How to migrate your app from one Mendix Public Cloud datacenter to another."

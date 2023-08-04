@@ -28,7 +28,7 @@ For the sake of simplicity, there are two methods for creating a tooltip:
 
 ### 2.2 Tooltip Position
 
-You can define how to position the tooltip in relation to the trigger element. 
+You can define how to position the tooltip in relation to the trigger element.
 
 **Tooltip Position** options are as follows:
 
@@ -39,7 +39,7 @@ You can define how to position the tooltip in relation to the trigger element.
 
 ### 2.3 Arrow Position
 
-With the new Tooltip widget you also can define how to position the tooltip arrow in relation to the tooltip. The arrow is the connection between the trigger element and the tooltip content. 
+With the new Tooltip widget you also can define how to position the tooltip arrow in relation to the tooltip. The arrow is the connection between the trigger element and the tooltip content.
 
 **Arrow Position** options are as follows:
 
@@ -49,7 +49,7 @@ With the new Tooltip widget you also can define how to position the tooltip arro
 
 ### 2.4 Open On
 
-This option defines how the tooltip will be triggered. 
+This option defines how the tooltip will be triggered.
 
 **Open on** options are as follows:
 
@@ -59,4 +59,8 @@ This option defines how the tooltip will be triggered.
 
 {{% alert color="warning" %}}
 On mobile devices the **Hover** option will be triggered on touch.
+{{% /alert %}}
+
+{{% alert color="warning" %}}
+On Safari, the on-hover tooltip may not work properly when used on a disabled element. If this issue occurs, please use a different web browser.
 {{% /alert %}}

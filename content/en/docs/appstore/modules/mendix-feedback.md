@@ -65,15 +65,15 @@ You should install the latest version of the Mendix Feedback module, as it will 
 ### 3.1 Adding the Feedback Widget to Your App
 
 1. Configure the **User roles** in the **App Security** for the Feedback module.
-2.  In the **Toolbox**, find the **Feedback** widget in the **Feedback** category.
+2. In the **Toolbox**, find the **Feedback** widget in the **Feedback** category.
 
     {{< figure src="/attachments/appstore/modules/mendix-feedback/Toolbox-feedback.png" width="250px">}} 
 
-3.  Drop the Feedback widget into a position in the layout:
+3. Drop the Feedback widget into a position in the layout:
 
     {{< figure src="/attachments/appstore/modules/mendix-feedback/feedback-on-layout.png" >}} 
 
-4.  [Configure the Feedback widget](#configuration).
+4. [Configure the Feedback widget](#configuration).
 
 5. If your app allows anonymous users, do as follows:
 

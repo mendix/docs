@@ -177,7 +177,7 @@ The On Change Behavior property lets users select how **on change** is handled v
 * When user leaves input field (Default)
 * While user is entering data
 
-##### 3.10.1 When user leaves input field (Default)
+#### 3.10.1 When user leaves input field (Default)
 
 This option will work as in previous versions of Studio Pro. Textbox will apply changes when a value is not the same as previously saved value in the database and one of the following conditions is met:
 

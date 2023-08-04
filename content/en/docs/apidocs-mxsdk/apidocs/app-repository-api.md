@@ -31,7 +31,22 @@ All available endpoints are shown in the following table:
 
 ## 4 Authentication
 
-The App Repository API requires a personal access token (PAT) as the authentication method. For details on how to get a PAT, see the [Personal Access Tokens](/developerportal/community-tools/mendix-profile/#pat) section of *Mendix Profile*. When you define the new PAT, you need to choose at least this scope: `mx:modelrepository:repo:read`.
+Authentication for the App Repository API uses a personal access token (PAT).
+
+### 4.1 Generating a PAT
+
+To generate a PAT, see the [Personal Access Tokens](/developerportal/community-tools/mendix-profile/#pat) section in *Mendix Profile*. When you define the new PAT, you need to choose at least this scope: `mx:modelrepository:repo:read`.
+
+Store the generated value `{GENERATED_PAT}` somewhere safe so you can use it to authorize your Mendix Cloud App Repository API calls.
+
+### 4.2 Using the PAT
+
+Each request must contain an `Authorization` header with the value `MxToken {GENERATED_PAT}`. For example:
+
+```http {linenos=false}
+GET /api/v3/clusters HTTP/1.1
+Authorization: MxToken 7LJE…vk
+```
 
 ## 5 Error response
 

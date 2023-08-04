@@ -62,7 +62,7 @@ To create a patch version, do the following:
 
 #### 3.2.1 Scenario
 
-You have a REST service in Petstore version 1.0.0 in production. You want to add an operation to retieve pets by status.
+You have a REST service in Petstore version 1.0.0 in production. You want to add an operation to retrieve pets by status.
 
 #### 3.2 Solution
 

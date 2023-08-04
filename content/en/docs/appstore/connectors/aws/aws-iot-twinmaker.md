@@ -343,7 +343,7 @@ The `ErrorDetails` entity does not have any associations.
 
 The `GetPropertyValueHistoryRequest` contains the request to retrieve information about the history of a time series property value for a component, component type, TwinMaker entity, or workspace.
 
-You must specify a value for workspaceId. For TwinMaker entity-specific queries, specify the values for `componentName` and `entityId`. For cross-entity quries, specify a value for `componentTypeId`.
+You must specify a value for workspaceId. For TwinMaker entity-specific queries, specify the values for `componentName` and `entityId`. For cross-entity queries, specify a value for `componentTypeId`.
 
 For more information, see [GetPropertyValueHistory](https://docs.aws.amazon.com/iot-twinmaker/latest/apireference/API_GetPropertyValueHistory.html) and [Class GetPropertyValueHistoryRequest](https://sdk.amazonaws.com/java/api/latest/software/amazon/awssdk/services/iottwinmaker/model/GetPropertyValueHistoryRequest.html).
 
@@ -451,7 +451,7 @@ For more information, see [GetPropertyValueHistory](https://docs.aws.amazon.com/
 
 | Name | Type | Default value | Description |
 | --- | --- | --- | --- |
-| `NextToken` | String (unlimited) | | The string that specifies the next page of results. Can be used to set on the next request to retieve the next page of results. |
+| `NextToken` | String (unlimited) | | The string that specifies the next page of results. Can be used to set on the next request to retrieve the next page of results. |
 
 ##### 4.1.15.2 Associations
 
@@ -1000,7 +1000,7 @@ The `GetSceneRequest` entity does not have any associations.
 
 #### 4.1.44 GetSceneResponse
 
-The `GetSceneResponse` entity contains the reponse of getting a specific scene.
+The `GetSceneResponse` entity contains the response of getting a specific scene.
 
 For more information, see [GetScene](https://docs.aws.amazon.com/iot-twinmaker/latest/apireference/API_GetScene.html) and [GetSceneResponse](https://sdk.amazonaws.com/java/api/latest/software/amazon/awssdk/services/iottwinmaker/model/GetSceneResponse.html).
 
@@ -1120,7 +1120,7 @@ The generalization of this entity is `AWSTwinMakerConnector.AbstractEntityFilter
 
 | Name | Type | Default value | Description |
 | --- | --- | --- | --- |
-| `FilterValue` | String (unlimited) | | Value for the CompontentType ID of the TwinMaker entities to filter on. |
+| `FilterValue` | String (unlimited) | | Value for the ComponentType ID of the TwinMaker entities to filter on. |
 
 ##### 4.1.50.3 Associations
 
@@ -2101,7 +2101,7 @@ The available interpolation types for interpolating results. For now, only one i
 
 | Name | Caption |
 | --- | --- |
-| `us_east_2` | US Easth (Ohio) |
+| `us_east_2` | US East (Ohio) |
 | `us_east_1` | US East (N. Virginia) |
 | `us_west_1` | US West (N. California) |
 | `us_west_2` | US West (Oregon) |
@@ -2257,7 +2257,7 @@ This activity returns an `AWSTwinMakerConnector.GetComponentTypeResponse` entity
 
 Retrieves information about the history of a time series property value for a component, component type, twinmaker entity, or workspace.
 
-You must specify a value for *workspaceId*. For TwinMaker entity-specific queries, specify values for *componentName* and *entityId*. For cross-entity quries, specify a value for *componentTypeId.*
+You must specify a value for *workspaceId*. For TwinMaker entity-specific queries, specify values for *componentName* and *entityId*. For cross-entity queries, specify a value for *componentTypeId.*
 
 For more information, see [GetPropertyValueHistory](https://docs.aws.amazon.com/iot-TwinMaker/latest/apireference/API_GetPropertyValueHistory.html).
 

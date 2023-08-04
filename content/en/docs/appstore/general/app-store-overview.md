@@ -33,13 +33,13 @@ The home page is your entry point to the various parts of the Mendix Marketplace
 
 | Type | Description |
 | --- | --- |
-| [Module](/appstore/modules/) | Packages of functionality for your app, which consist of a domain model, security options, and other elements like microflows, pages, or Java actions. Modules are mostly used for complex functionality that needs business or Java logic. |
+| [Module](/appstore/modules/) | Software functionality which can include a data model, logic, and UI with a portable security model. |
 | [Widget](/appstore/widgets/) | Single user-interface element like containers, drop-down menus, and buttons. Select a widget, configure it, and add it to pages and snippets in your app. |
 | **Theme** | Ready to use layouts, themes of a personalised style which could be shared and used by Makers to enrich the app with a specific design. |
-| **Service** | Software functionality that can be re-used for different use cases. Services usually include APIs that users can interact with. |
-| **Starter Template** | A sample project which has certain capabilities in place to provide a basis for Maker to start developing app. Maker does not create an app from blank state rather has already some features configured. |
+| **Service** | Software functionality that can be re-used for different use cases. Services usually include APIs that users can interact with by configuring connection in the app’s module. |
+| **Starter Template** | A sample project which has certain capabilities in place to provide a basis for Maker to start developing app. Maker does not create an app from blank state rather has already some features configured.|
 | **Solution** | Out-of-the-box solutions are aimed at industries and domain problems, and they deliver instant value. These solutions are ready to use and can be adapted using the core Mendix Platform to fully meet customer’s requirements. |
-| **Industry Template** | Accelerators for implementing solutions to help increase speed-to-value and time-to-market. Industry Templates help to organize development content that customer wants to reuse for customer-specific solutions. |
+| **Industry Template** | Accelerators for implementing solutions to help increase speed-to-value and time-to-market. Industry Templates help to organize development content that customer wants to reuse for customer-specific solutions.  |
 
 
 The following filter options are also available:
@@ -101,7 +101,6 @@ The details page for a component presents the following item information tabs:
 * **Documentation** – can include details on typical use cases, features and limitations, dependencies, installation and configuration, and frequently asked questions
     * [Platform-supported](/appstore/general/app-store-content-support/#category) components are documented in the various categories of this *Marketplace Guide*
     * Click **Edit documentation** to open a text editor where you can edit the Marketplace component's documentation
-* **Pricing**  – lists the pricing options (only for paid components)
 * **Releases** – lists all the versions of the component (any of which can be downloaded by clicking **Download**) along with details like the **Framework version** and the **UUID** (which can be used in the [CreateNewApp operation](/apidocs-mxsdk/apidocs/projects-api/#createnewapp) in the *Projects API*): 
 
 ## 4 My Marketplace {#my-marketplace}

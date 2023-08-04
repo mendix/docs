@@ -3,16 +3,16 @@ title: "Parse Integer"
 url: /refguide/parse-integer/
 weight: 140
 description: "Describes the function for parsing integer from strings in Mendix."
-tags: ["studio pro", "expressions", "parse", "integer", "casting", "conversion", "type casting", "type conversion"]
+tags: ["studio pro", "expressions", "parse", "integer", "long", "integer/long", "casting", "conversion", "type casting", "type conversion"]
 ---
 
 ## 1 Introduction
 
-This document describes functions that convert a string to an integer.
+This document describes the function that converts a string to a long integer.
 
 ## 2 parseInteger
 
-Takes a string and parses it to an integer.
+Takes a string and parses it to a long integer.
 
 ### 2.1 Input Parameters
 
@@ -21,7 +21,7 @@ The input parameters are described in the table below:
 | Value                        | Type    |
 | ---------------------------- | ------- |
 | The string to parse          | String  |
-| Default value **(optional)** | Integer |
+| Default value **(optional)** | Integer/Long |
 
 ### 2.2 Output
 
@@ -29,7 +29,7 @@ The output is described in the table below:
 
 | Value                                                        | Type    |
 | ------------------------------------------------------------ | ------- |
-| An integer if it is possible to parse it from the string. If  the string cannot be parsed to an integer, the default value will be returned. If no default value is provided, an error will occur. | Integer |
+| A long integer if it is possible to parse it from the string. If the string cannot be parsed to a long integer, the default value will be returned. If no default value is provided, an error will occur. | Integer/Long |
 
 ### 2.3 Examples
 

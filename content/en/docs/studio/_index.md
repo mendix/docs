@@ -5,7 +5,7 @@ tags: ["studio", "web modeler"]
 weight: 67
 cascade:
     - space: "Studio 9 Guide"
-    - mendix_version: "9"
+    - mendix_version: 9
     - old_content: true
     - sitemap:
         priority: 0.4

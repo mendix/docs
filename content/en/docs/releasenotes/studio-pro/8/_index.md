@@ -6,6 +6,8 @@ description: "The release notes for version 8 of Mendix Studio Pro."
 weight: 20
 no_list: false
 simple_list: true
+cascade:
+    - mendix_version: 8
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 

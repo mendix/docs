@@ -207,6 +207,10 @@ The definition of a tenant on Insights Hub is available in the Insights Hub docu
 
 This should be the tenant that the user has access to in a multi-tenant environment. For a developer tenant, this must be the same as the HostTenant. In an operator or iot plan tenant, you can change this to allow you to test multi-tenant apps.
 
+**UserEmail**
+
+Specify the email used for the local **MxAdmin** user account. Default value "max.mustermann@email.com" is used in case no value is provided.
+
 ### 5.4 User Roles
 
 If you are testing different roles in your app, do not use the demo users. If you switch between demo users, this will not correctly populate the tenant and role information from Insights Hub. To test different roles, allocate the role to MxAdmin, redeploy, and sign in again.
@@ -257,7 +261,7 @@ To do this:
     {{< figure src="/attachments/partners/siemens/mindsphere/mendix-on-mindsphere/mindsphere-development-considerations/css-icon.png" alt="Add an icon as CSS" >}}
 
 {{% alert color="info" %}}
-You will not see the icon in Studio Pro when it is in *Structure mode*. Switch to *Design mode* to confirm that you have selected the correct icon.
+You will not see the icon in Studio Pro when it is in **Structure mode**. Switch to **Design mode** to confirm that you have selected the correct icon.
 
 You can only add one icon per element.
 {{% /alert %}}

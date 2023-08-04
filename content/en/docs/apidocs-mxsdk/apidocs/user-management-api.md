@@ -2,7 +2,8 @@
 title: "User Management API"
 url: /apidocs-mxsdk/apidocs/user-management-api/
 category: "API Documentation"
-weight: 70
+description: "Use this API to integrate your company's user management systems with the Mendix Platform. You can then create and manage user accounts and groups as well as define group policies for your apps."
+weight: 96
 ---
 
 ## 1 Introduction

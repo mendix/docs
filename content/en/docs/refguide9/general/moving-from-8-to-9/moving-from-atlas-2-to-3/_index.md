@@ -3,6 +3,8 @@ title: "Migrate From Atlas 2 To Atlas 3"
 url: /refguide9/moving-from-atlas-2-to-3/
 weight: 6
 tags: ["Atlas", "UI", "UX", "user experience", "design"]
+aliases:
+    - /refguide/moving-from-atlas-2-to-3/
 ---
 
 ## 1 Introduction
@@ -217,7 +219,7 @@ If you have made any of the above modifications, please follow the following ste
 
 * [Native Custom Variables](#native-custom-variables)
 * [Native Custom Styling](#native-custom-styling)
-* [Native Additonal Custom Styling](#native-additional-custom-styling)
+* [Native Additional Custom Styling](#native-additional-custom-styling)
 * [Native Design Properties](#native-design-properties)
 
 #### 2.4.1 Native Custom Variables {#native-custom-variables}

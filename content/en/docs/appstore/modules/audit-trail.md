@@ -26,6 +26,13 @@ This module keeps keep track of what changes are made in your Mendix application
 
 The two sections below describe the two options for configuring this module.
 
+{{% alert color="info" %}}
+
+As both configuration options require changing the entity, it is not possible to use Audit Trail directly with entities in the **System** module. It is still possible to add audit to specializations of such entities using the associations and events option.
+
+While it is possible to add required associations and event handlers to marketplace modules, such model changes are overwritten when marketplace modules are updated. Therefore, in this scenario it is recommended to use specializations.
+{{% /alert %}} 
+
 ### 2.1 Associations and Events
 
 For this configuration option, add a reference set association from your entity to the **Log** entity or an association from the **Log** entity to the entity that needs to be audited. Add a before-commit and before-delete event to your entity that is identical to the events on the **AudittrailSuperClass**. The Java actions will automatically create the log item and all the required log lines based on the changes.

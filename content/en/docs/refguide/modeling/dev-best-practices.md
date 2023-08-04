@@ -8,7 +8,7 @@ description: "Describes Mendix best practices for developing Mendix applications
 tags: ["best practice", "development", "develop", "reusable", "prefix"]
 aliases:
     - /howto/general/dev-best-practices/
-#Academy are SMEs for verification, they discuss and link to this doc in training
+#Academy are SMEs for verification, they use/link to this doc in training; microflow prefix naming convention from ES and Academy
 ---
 
 ## 1 Introduction
@@ -53,7 +53,7 @@ Each user role should correspond to only one module role per module. In other wo
 
 Always store secret information in a safe place. A safe place is the database. Use the [Encryption](https://marketplace.mendix.com/link/component/1011) module to encrypt and store and to retrieve and decrypt the information.
 
-Using either the default value of a constant or the project's configuration setting is unsafe. Both these places are readable by others and visible in the version management copies made by SVN. 
+Using either the default value of a constant or the project's configuration setting is unsafe. Both these places are readable by others and visible in the version management copies. 
 
 ## 3 Naming Conventions {#naming-conventions}
 
@@ -308,7 +308,7 @@ When using inheritance (specialization/generalization), it is recommended to use
 
 #### 4.1.3 Delete Behavior
 
-[Delete behavior](/refguide/create-a-basic-data-layer/#delete-behavior) must be specified where possible. Delete behavior must, however, never be relied upon when deleting large amounts of data. For performance reasons it is better to explicitly delete dependent objects when doing batch deletes.
+[Delete behavior](/refguide/configuring-a-domain-model/#delete-behavior) must be specified where possible. Delete behavior must, however, never be relied upon when deleting large amounts of data. For performance reasons it is better to explicitly delete dependent objects when doing batch deletes.
 
 #### 4.1.4 Event Handlers
 
@@ -359,6 +359,32 @@ The number of parameters for a microflow should be kept to a minimum to facilita
 Use microflow [error handling](/refguide/error-handling-in-microflows/) for all integration and Java calls. Make sure to determine the correct rollback behavior. Always log the error that occurred, even if the process can continue, this is essential for later analysis of the error.
 
 Complex processes and important business logic (like workflow processing or validations) must include debug and trace [logging](/refguide/logging/). Logging actions must write the current state and progress of the process and must include a request ID or other identifying information. The log node should be the name of the module. This will greatly assist error analysis.
+
+#### 4.2.6 Validating Inputs in Microflows
+
+When microflows are invoked from the client side, it is important to validate the inputs. By having validations, you prevent incorrect, inappropriate, or potentially harmful data from being used in your microflows. This protects your application against security vulnerabilities. The following presents the best practices regarding the integrity and validation of inputs in your microflows.
+
+##### 4.2.6.1 Implementing Validation Checks
+
+Adding validation checks is vital for ensuring that input data conforms to the expected data type, format, range, or other application-specific constraints. For instance, if a numeric input is expected within a defined range, validation checks should confirm that the input is indeed numeric and falls within the specified range.
+
+##### 4.2.6.2 Managing Unexpected Values
+
+When building microflows, it is important to account for the potential occurrence of unexpected values. These could be empty values, or values outside the expected range or format. It is also important to ensure that read-only attributes only contain expected values.
+
+{{% alert color="warning" %}}
+We strongly recommend adding validation checks to all microflows inputs, including read-only attributes. 
+
+We also recommend avoiding storing intermediary values in attributes (such as, *TotalPrice*). Instead, calculate these values when needed to ensure you have the correct values.
+{{% /alert %}}
+
+Microflows should incorporate mechanisms to detect unexpected values and respond suitably – this might involve returning an error message to the end-user or executing a fallback operation. 
+
+##### 4.2.6.3 Updating Validation Logic Regularly
+
+As the application evolves, the validation logic within microflows should be updated accordingly to reflect changes in business logic or data models. This regular review and update of validation checks ensures that microflows remain secure and function correctly over time.
+
+By prioritizing the validation of inputs in microflows, you not only enhance the security of your application, but also ensure a more predictable and stable user experience. This practice underscores the development of reliable and robust applications.
 
 ### 4.3 Workflows
 

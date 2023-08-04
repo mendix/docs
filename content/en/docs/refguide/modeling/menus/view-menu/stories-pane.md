@@ -8,7 +8,7 @@ tags: ["Studio Pro", "stories", "stories pane"]
 
 ## 1 Introduction 
 
-For version control enabled apps (apps with Team Server or other SVN servers), the **Stories** pane displays the stories and tasks of the current Sprint. Stories, tasks, and Sprints are created and managed via [Stories](/developerportal/collaborate/stories/) or [Epics](/developerportal/collaborate/epics/) in the Developer Portal.
+For version control-enabled apps (apps with Team Server or other Git servers), the **Stories** pane displays the stories and tasks of the current Sprint. Stories, tasks, and Sprints are created and managed via [Stories](/developerportal/collaborate/stories/) or [Epics](/developerportal/collaborate/epics/) in the Developer Portal.
 
 In the **Stories** pane, you can view the stories and tasks of the current Sprint, show or hide done stories, open their details, change the status of the stories and tasks, and open documents connected to stories. 
 
@@ -83,10 +83,10 @@ If you use Stories in the Developer Portal for this app, you can change the stat
 
 To change the status of a *story*, click its status in the **Status** column. The status will change in the following succession: *To do* > *Running* > *Done* > *To do*. 
 
-To change the status of a task, tick or clear the check box in the **Status** column:
+To change the status of a task, tick or clear the checkbox in the **Status** column:
 
-* Clear the check box to set the done task in *To do*
-* Tick the check box to set the task to *Done*
+* Clear the checkbox to set the done task in *To do*
+* Tick the checkbox to set the task to *Done*
 
 ## 3 Read More
 

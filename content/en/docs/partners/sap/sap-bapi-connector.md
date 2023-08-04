@@ -74,9 +74,7 @@ To use BAPI Connector for SAP Solutions in your Mendix application to call the B
     1. Add the action `GetJCoDestination`. This will retrieve the JCoDestination to communicate 
     with SAP system.
 
-    {{% alert color="info" %}}
-    We recommend that you always use the `GetJcoDestination` action before using the BAPI. If the destination has already been registered it will not be registered again.
-    {{% /alert %}}
+        {{% alert color="info" %}}We recommend that you always use the `GetJcoDestination` action before using the BAPI. If the destination has already been registered it will not be registered again.{{% /alert %}}
 
     2. Add the action `CallBAPI` with the following parameters:
         
@@ -123,9 +121,10 @@ If you are using the SAP Cloud Connector to connect to your SAP backend system, 
 
 1. In the **App Explorer**, click **SAPBAPIConnector** > **USE_ME** > **Config**.
 2. Edit the following values:
-        * **BAPIServiceTimeout** - Specify a timeout value for the HTTP client to receive a response from the *bapi-service* deployed on SAP BTP. By default, this value is set to *20 seconds*.
-        * **BAPIServiceURL** - Specify the URL of the *bapi-service* deployed on SAP BTP.
-        * **UseRFCDestination** - Set to **true**.
+
+    * **BAPIServiceTimeout** - Specify a timeout value for the HTTP client to receive a response from the *bapi-service* deployed on SAP BTP. By default, this value is set to *20 seconds*.
+    * **BAPIServiceURL** - Specify the URL of the *bapi-service* deployed on SAP BTP.
+    * **UseRFCDestination** - Set to **true**.
 
 ### 4.2 Configuring the Connection Details for Direct Connections to the SAP Backend System {#sap-connection-details}
 
@@ -195,6 +194,7 @@ To configure application-to-application authentication, include the following li
 ```text
 grant-as-authority-to-apps" : [ "$XSAPPNAME(application,{your-Mendix-app-deployed-on-SAP-BTP})"]
 ``` 
+
 Also, include the following line in the *xs-security.json* file of the XSUAA service instance bound with your Mendix app deployed on SAP BTP:
 
 ```text
@@ -212,6 +212,7 @@ To configure user authentication, include the following line in the *xs-security
 ```text
 granted-apps" : [ "$XSAPPNAME(application,your-Mendix-app-deployed-on-SAP-BTP)"]
 ``` 
+
 The following sample shows a configuration of the *xs-security.json* file for *bapi-service*.
 
 {{% alert color="info" %}}
@@ -240,6 +241,7 @@ Also, include the following line in the *xs-security.json* file of the XSUAA ser
 ```text
 "foreign-scope-references": ["$XSAPPNAME(application,bapi-service).bapiAuth"]
 ```   
+
 The following sample shows a configuration of the *xs-security.json* file for your Mendix app deployed on SAP BTP:
 
 ```text
@@ -260,6 +262,7 @@ The following sample shows a configuration of the *xs-security.json* file for yo
     }
 }
 ```  
+
 {{% alert color="info" %}}
 In this example, *bapiAuth* is the scope for the provider app defined on in the *xs-security.json* file for *bapi-service*. You can replace it with the name of your choice.
 {{% /alert %}}

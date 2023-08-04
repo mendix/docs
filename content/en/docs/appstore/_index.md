@@ -7,7 +7,7 @@ no_list: false
 description_list: true 
 cascade:
     - space: "Marketplace Guide"
-    - mendix_version: ""
+    - mendix_version: 10
 tags: ["marketplace",  "component", "app service", "widget", "connector", "module", "platform support"]
 ---
 
@@ -21,6 +21,6 @@ This guide presents documentation on configuring and using the latest versions o
 
 It also contains guidelines on [creating Marketplace content](/appstore/creating-content/) to share and sell.
 
-For details on the Studio Pro version required for use and when the component was published, please see the specific component page in the Mendix Marketplace. For more information, see the [Marketplace release notes](/releasenotes/app-store/).
+For details on the Studio Pro version required for use and when the component was published, please see the specific component page in the Mendix Marketplace. For more information, see the [Marketplace release notes](/releasenotes/marketplace/).
 
 ## 2 Guide Categories

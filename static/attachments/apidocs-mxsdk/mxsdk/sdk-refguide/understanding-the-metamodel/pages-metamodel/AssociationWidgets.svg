@@ -1,0 +1,2363 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="1681.5"
+   height="1007"
+   version="1.1"
+   id="svg1045"
+   sodipodi:docname="AssociationWidgets.svg"
+   inkscape:version="1.2.2 (b0a8486, 2022-12-01)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns:lucid="lucid">
+  <defs
+     id="defs1049" />
+  <sodipodi:namedview
+     id="namedview1047"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     showgrid="false"
+     inkscape:zoom="0.22605364"
+     inkscape:cx="1063.9068"
+     inkscape:cy="504.30508"
+     inkscape:window-width="1309"
+     inkscape:window-height="456"
+     inkscape:window-x="0"
+     inkscape:window-y="65"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="svg1045" />
+  <g
+     transform="translate(-238.5,-98.5)"
+     lucid:page-tab-id="EgNMauj1-nO3"
+     id="g1043">
+    <path
+       d="m 980,234.5 a 6,6 0 0 1 6,-6 h 188 a 6,6 0 0 1 6,6 v 31 a 6,6 0 0 1 -6,6 H 986 a 6,6 0 0 1 -6,-6 z"
+       stroke="#2f3646"
+       stroke-width="3"
+       fill="#d9dbdd"
+       id="path2" />
+    <use
+       xlink:href="#a"
+       transform="translate(1002.43,257.88)"
+       id="use4" />
+    <path
+       d="m 900,366 a 6,6 0 0 1 6,-6 h 348 a 6,6 0 0 1 6,6 v 102 a 6,6 0 0 1 -6,6 H 906 a 6,6 0 0 1 -6,-6 z"
+       stroke="#2f3646"
+       stroke-width="3"
+       fill="#d9dbdd"
+       id="path6" />
+    <path
+       d="m 900,403.24 h 360"
+       stroke="#2f3646"
+       stroke-width="3"
+       fill="none"
+       id="path8" />
+    <use
+       xlink:href="#b"
+       transform="translate(986.96,389.76)"
+       id="use10" />
+    <use
+       xlink:href="#c"
+       transform="translate(912,432.88)"
+       id="use12" />
+    <use
+       xlink:href="#d"
+       transform="translate(928.64,432.88)"
+       id="use14" />
+    <use
+       xlink:href="#e"
+       transform="translate(1077.86,432.88)"
+       id="use16" />
+    <use
+       xlink:href="#c"
+       transform="translate(912,460.12)"
+       id="use18" />
+    <use
+       xlink:href="#f"
+       transform="translate(928.64,460.12)"
+       id="use20" />
+    <use
+       xlink:href="#g"
+       transform="translate(1116.32,460.12)"
+       id="use22" />
+    <path
+       d="M 1080,357.5 V 297.48"
+       stroke="#6b707b"
+       stroke-width="2"
+       fill="none"
+       id="path24" />
+    <path
+       d="m 1081,358.5 h -2 v -1.03 h 2 z"
+       stroke="#6b707b"
+       stroke-width="0.05"
+       fill="#6b707b"
+       id="path26" />
+    <path
+       d="m 1080,274.96 12.73,21.52 h -25.46 z"
+       stroke="#6b707b"
+       stroke-width="2"
+       fill="#ffffff"
+       id="path28" />
+    <path
+       d="m 1198.5,766 a 6,6 0 0 1 6,-6 h 188 a 6,6 0 0 1 6,6 v 29 a 6,6 0 0 1 -6,6 h -188 a 6,6 0 0 1 -6,-6 z"
+       stroke="#224c72"
+       stroke-width="3"
+       fill="#dfe3e8"
+       id="path30" />
+    <use
+       xlink:href="#h"
+       transform="translate(1223.4848,784.59795)"
+       id="use32" />
+    <path
+       d="M 1292.25,417 H 1734 a 6,6 0 0 1 6,6 v 351.5 a 6,6 0 0 1 -6,6 h -315.5"
+       stroke="#6b707b"
+       stroke-width="2"
+       fill="none"
+       id="path34" />
+    <path
+       d="m 1262.9,417 14.86,-14.85 15.14,14.85 -15.14,14.85 z m 140.34,363.5 14.26,-4.63 v 9.26 z"
+       stroke="#6b707b"
+       stroke-width="2"
+       fill="#6b707b"
+       id="path36" />
+    <path
+       d="m 1118.5,965 a 6,6 0 0 1 6,-6 h 348 a 6,6 0 0 1 6,6 v 133 a 6,6 0 0 1 -6,6 h -348 a 6,6 0 0 1 -6,-6 z"
+       stroke="#064ae4"
+       stroke-width="3"
+       fill="#c2e2ff"
+       id="path38" />
+    <path
+       d="m 1118.5,1002.24 h 360"
+       stroke="#064ae4"
+       stroke-width="3"
+       fill="none"
+       id="path40" />
+    <use
+       xlink:href="#i"
+       transform="translate(1177.68,988.76)"
+       id="use42" />
+    <use
+       xlink:href="#j"
+       transform="translate(1130.5,1033.76)"
+       id="use44" />
+    <use
+       xlink:href="#k"
+       transform="translate(1147.14,1033.76)"
+       id="use46" />
+    <use
+       xlink:href="#l"
+       transform="translate(1267.98,1061)"
+       id="use48" />
+    <use
+       xlink:href="#j"
+       transform="translate(1130.5,1088.24)"
+       id="use50" />
+    <use
+       xlink:href="#m"
+       transform="translate(1147.14,1088.24)"
+       id="use52" />
+    <use
+       xlink:href="#n"
+       transform="translate(1239.94,1088.24)"
+       id="use54" />
+    <path
+       d="m 678.5,965 a 6,6 0 0 1 6,-6 h 348 a 6,6 0 0 1 6,6 v 106 a 6,6 0 0 1 -6,6 h -348 a 6,6 0 0 1 -6,-6 z"
+       stroke="#064ae4"
+       stroke-width="3"
+       fill="#c2e2ff"
+       id="path56" />
+    <path
+       d="m 678.5,1002.24 h 360"
+       stroke="#064ae4"
+       stroke-width="3"
+       fill="none"
+       id="path58" />
+    <use
+       xlink:href="#o"
+       transform="translate(754.35005,988.76)"
+       id="use60" />
+    <use
+       xlink:href="#j"
+       transform="translate(690.50005,1033.88)"
+       id="use62" />
+    <use
+       xlink:href="#p"
+       transform="translate(707.14005,1033.88)"
+       id="use64" />
+    <use
+       xlink:href="#q"
+       transform="translate(868.90005,1033.88)"
+       id="use66" />
+    <use
+       xlink:href="#j"
+       transform="translate(690.50005,1061.12)"
+       id="use68" />
+    <use
+       xlink:href="#m"
+       transform="translate(707.14005,1061.12)"
+       id="use70" />
+    <use
+       xlink:href="#n"
+       transform="translate(799.94005,1061.12)"
+       id="use72" />
+    <path
+       d="m 1558.5,965 a 6,6 0 0 1 6,-6 h 348 a 6,6 0 0 1 6,6 v 106 a 6,6 0 0 1 -6,6 h -348 a 6,6 0 0 1 -6,-6 z"
+       stroke="#064ae4"
+       stroke-width="3"
+       fill="#c2e2ff"
+       id="path74" />
+    <path
+       d="m 1558.5,1002.24 h 360"
+       stroke="#064ae4"
+       stroke-width="3"
+       fill="none"
+       id="path76" />
+    <use
+       xlink:href="#r"
+       transform="translate(1614.63,988.76)"
+       id="use78" />
+    <use
+       xlink:href="#j"
+       transform="translate(1570.5,1033.88)"
+       id="use80" />
+    <use
+       xlink:href="#s"
+       transform="translate(1587.14,1033.88)"
+       id="use82" />
+    <use
+       xlink:href="#t"
+       transform="translate(1738.08,1061.12)"
+       id="use84" />
+    <path
+       d="M 858.5,956.5 V 886 a 6,6 0 0 1 6,-6 h 428 a 6,6 0 0 0 6,-6 v -47.02"
+       stroke="#6b707b"
+       stroke-width="2"
+       fill="none"
+       id="path86" />
+    <path
+       d="m 859.5,957.5 h -2 v -1.03 h 2 z"
+       stroke="#6b707b"
+       stroke-width="0.05"
+       fill="#6b707b"
+       id="path88" />
+    <path
+       d="m 1298.5,804.46 12.73,21.52 h -25.46 z"
+       stroke="#6b707b"
+       stroke-width="2"
+       fill="#ffffff"
+       id="path90" />
+    <path
+       d="M 1298.5,956.5 V 826.98"
+       stroke="#6b707b"
+       stroke-width="2"
+       fill="none"
+       id="path92" />
+    <path
+       d="m 1299.5,957.5 h -2 v -1.03 h 2 z"
+       stroke="#6b707b"
+       stroke-width="0.05"
+       fill="#6b707b"
+       id="path94" />
+    <path
+       d="m 1298.5,804.46 12.73,21.52 h -25.46 z"
+       stroke="#6b707b"
+       stroke-width="2"
+       fill="#ffffff"
+       id="path96" />
+    <path
+       d="M 1738.5,956.5 V 886 a 6,6 0 0 0 -6,-6 h -428 a 6,6 0 0 1 -6,-6 v -47.02"
+       stroke="#6b707b"
+       stroke-width="2"
+       fill="none"
+       id="path98" />
+    <path
+       d="m 1739.5,957.5 h -2 v -1.03 h 2 z"
+       stroke="#6b707b"
+       stroke-width="0.05"
+       fill="#6b707b"
+       id="path100" />
+    <path
+       d="m 1298.5,804.46 12.73,21.52 h -25.46 z"
+       stroke="#6b707b"
+       stroke-width="2"
+       fill="#ffffff"
+       id="path102" />
+    <path
+       d="m 678.5,607 a 6,6 0 0 1 6,-6 h 348 a 6,6 0 0 1 6,6 v 78 a 6,6 0 0 1 -6,6 h -348 a 6,6 0 0 1 -6,-6 z"
+       stroke="#064ae4"
+       stroke-width="3"
+       fill="#c2e2ff"
+       id="path104" />
+    <path
+       d="m 678.5,644.24 h 360"
+       stroke="#064ae4"
+       stroke-width="3"
+       fill="none"
+       id="path106" />
+    <use
+       xlink:href="#u"
+       transform="translate(767.75005,630.76)"
+       id="use108" />
+    <use
+       xlink:href="#j"
+       transform="translate(690.50005,676)"
+       id="use110" />
+    <use
+       xlink:href="#v"
+       transform="translate(707.14005,676)"
+       id="use112" />
+    <use
+       xlink:href="#w"
+       transform="translate(886.92005,676)"
+       id="use114" />
+    <path
+       d="m 1118.5,608 a 6,6 0 0 1 6,-6 h 348 a 6,6 0 0 1 6,6 v 78 a 6,6 0 0 1 -6,6 h -348 a 6,6 0 0 1 -6,-6 z"
+       stroke="#064ae4"
+       stroke-width="3"
+       fill="#c2e2ff"
+       id="path116" />
+    <path
+       d="m 1118.5,645.24 h 360"
+       stroke="#064ae4"
+       stroke-width="3"
+       fill="none"
+       id="path118" />
+    <use
+       xlink:href="#x"
+       transform="translate(1180.05,631.76)"
+       id="use120" />
+    <path
+       d="M 1298.5,599.5 V 544 a 6,6 0 0 0 -6,-6 H 1086 a 6,6 0 0 1 -6,-6 v -32.02"
+       stroke="#6b707b"
+       stroke-width="2"
+       fill="none"
+       id="path122" />
+    <path
+       d="m 1299.5,600.5 h -2 v -1.03 h 2 z"
+       stroke="#6b707b"
+       stroke-width="0.05"
+       fill="#6b707b"
+       id="path124" />
+    <path
+       d="m 1080,477.46 12.73,21.52 h -25.46 z"
+       stroke="#6b707b"
+       stroke-width="2"
+       fill="#ffffff"
+       id="path126" />
+    <path
+       d="m 858.5,598.5 v -55 a 6,6 0 0 1 6,-6 H 1074 a 6,6 0 0 0 6,-6 v -31.52"
+       stroke="#6b707b"
+       stroke-width="2"
+       fill="none"
+       id="path128" />
+    <path
+       d="m 859.5,599.5 h -2 v -1.03 h 2 z"
+       stroke="#6b707b"
+       stroke-width="0.05"
+       fill="#6b707b"
+       id="path130" />
+    <path
+       d="m 1080,477.46 12.73,21.52 h -25.46 z"
+       stroke="#6b707b"
+       stroke-width="2"
+       fill="#ffffff"
+       id="path132" />
+    <path
+       d="m 240,366 a 6,6 0 0 1 6,-6 h 348 a 6,6 0 0 1 6,6 v 78 a 6,6 0 0 1 -6,6 H 246 a 6,6 0 0 1 -6,-6 z"
+       stroke="#064ae4"
+       stroke-width="3"
+       fill="#c2e2ff"
+       id="path134" />
+    <path
+       d="M 240,403.24 H 600"
+       stroke="#064ae4"
+       stroke-width="3"
+       fill="none"
+       id="path136" />
+    <g
+       id="g140">
+      <use
+         xlink:href="#y"
+         transform="translate(354.42,389.76)"
+         id="use138" />
+    </g>
+    <g
+       id="g148">
+      <use
+         xlink:href="#j"
+         transform="translate(252,435)"
+         id="use142" />
+      <use
+         xlink:href="#z"
+         transform="translate(268.64,435)"
+         id="use144" />
+      <use
+         xlink:href="#A"
+         transform="translate(326.3,435)"
+         id="use146" />
+    </g>
+    <path
+       d="m 867.75,444.3 h -3.25 a 6,6 0 0 1 -6,-6 V 324.5 a 6,6 0 0 0 -6,-6 H 426 a 6,6 0 0 0 -6,6 V 340"
+       stroke="#6b707b"
+       stroke-width="2"
+       fill="none"
+       id="path150" />
+    <path
+       d="m 897.1,444.3 -14.86,14.84 -15.15,-14.85 15.14,-14.86 z M 420,355.26 415.37,341 h 9.26 z"
+       stroke="#6b707b"
+       stroke-width="2"
+       fill="#6b707b"
+       id="path152" />
+    <path
+       d="m 646.25,667.02 h -1.75 a 6,6 0 0 1 -6,-6 V 324.5 a 6,6 0 0 0 -6,-6 H 426 a 6,6 0 0 0 -6,6 V 340"
+       stroke="#6b707b"
+       stroke-width="2"
+       fill="none"
+       id="path154" />
+    <path
+       d="m 675.6,667.02 -14.86,14.85 -15.15,-14.85 15.14,-14.85 z M 420,355.26 415.37,341 h 9.26 z"
+       stroke="#6b707b"
+       stroke-width="2"
+       fill="#6b707b"
+       id="path156" />
+    <path
+       d="m 980,106 a 6,6 0 0 1 6,-6 h 188 a 6,6 0 0 1 6,6 v 31 a 6,6 0 0 1 -6,6 H 986 a 6,6 0 0 1 -6,-6 z"
+       stroke="#2f3646"
+       stroke-width="3"
+       fill="#d9dbdd"
+       id="path158" />
+    <g
+       id="g162">
+      <use
+         xlink:href="#B"
+         transform="translate(1044.37,129.38)"
+         id="use160" />
+    </g>
+    <path
+       d="M 1080,226 V 168.98"
+       stroke="#6b707b"
+       stroke-width="2"
+       fill="none"
+       id="path164" />
+    <path
+       d="m 1081,227 h -2 v -1.03 h 2 z"
+       stroke="#6b707b"
+       stroke-width="0.05"
+       fill="#6b707b"
+       id="path166" />
+    <path
+       d="m 1080,146.46 12.73,21.52 h -25.46 z"
+       stroke="#6b707b"
+       stroke-width="2"
+       fill="#ffffff"
+       id="path168" />
+    <defs
+       id="defs1041">
+      <path
+         fill="#1d262b"
+         d="m 712,0 c 1,-188 -3,-380 7,-559 h -4 L 531,0 H 392 L 220,-560 h -4 c 13,177 8,371 9,560 H 90 v -714 h 206 l 169,546 h 3 L 647,-714 H 853 V 0 H 712"
+         id="C" />
+      <path
+         fill="#1d262b"
+         d="m 45,-269 c 1,-179 86,-283 258,-287 151,-1 247,93 245,248 v 72 H 196 c 2,82 52,136 136,135 79,0 127,-16 185,-43 V -29 C 461,-2 409,10 325,10 148,7 46,-88 45,-269 Z m 363,-66 c -2,-66 -34,-117 -104,-115 -66,2 -100,46 -105,115 h 209"
+         id="D" />
+      <path
+         fill="#1d262b"
+         d="m 558,-476 c 27,-51 90,-79 161,-80 130,2 189,65 188,200 V 0 H 758 v -319 c 0,-79 -27,-118 -82,-118 -88,2 -109,69 -109,163 V 0 H 418 v -319 c 0,-79 -27,-118 -82,-118 -94,2 -109,78 -109,180 V 0 H 78 v -546 h 114 l 20,70 h 8 c 27,-51 88,-79 159,-80 81,0 138,26 166,80 h 13"
+         id="E" />
+      <path
+         fill="#1d262b"
+         d="M 378,10 C 302,12 260,-22 227,-60 H 217 L 192,0 H 78 v -760 h 149 c -1,95 4,199 -6,285 h 6 c 31,-45 77,-83 155,-81 141,5 206,121 206,282 0,164 -67,279 -210,284 z m 58,-286 c 1,-90 -26,-161 -102,-161 -91,0 -107,65 -107,162 0,96 18,164 109,164 74,0 101,-76 100,-165"
+         id="F" />
+      <path
+         fill="#1d262b"
+         d="m 220,-454 c 35,-62 109,-120 213,-98 l -11,140 c -106,-18 -195,24 -195,134 V 0 H 78 v -546 h 113 l 22,92 h 7"
+         id="G" />
+      <path
+         fill="#1d262b"
+         d="M 967,-714 785,0 H 613 C 569,-180 515,-350 483,-542 452,-349 397,-181 354,0 H 182 L 0,-714 h 149 c 42,193 95,373 126,577 30,-209 91,-384 137,-577 h 143 c 46,192 106,370 137,577 31,-204 84,-384 126,-577 h 149"
+         id="H" />
+      <path
+         fill="#1d262b"
+         d="m 72,-687 c -2,-54 33,-72 81,-73 47,1 81,20 81,73 0,52 -34,72 -81,73 -48,-1 -83,-21 -81,-73 z m 155,141 V 0 H 78 v -546 h 149"
+         id="I" />
+      <path
+         fill="#1d262b"
+         d="M 406,-71 C 375,-26 329,12 251,10 111,5 45,-111 45,-272 c 0,-164 67,-279 210,-284 78,-1 126,35 157,80 h 5 c -17,-79 -9,-188 -11,-284 H 555 V 0 H 441 L 412,-71 Z M 196,-270 c 0,92 27,161 107,161 95,0 113,-64 113,-162 0,-99 -19,-164 -115,-164 -77,0 -106,75 -105,165"
+         id="J" />
+      <path
+         fill="#1d262b"
+         d="m 45,-272 c -2,-159 65,-281 210,-284 67,0 120,27 158,80 h 4 l 12,-70 H 555 V 1 C 554,165 453,241 282,240 200,240 139,232 78,208 V 89 c 67,28 138,42 213,42 80,0 118,-46 115,-135 0,-21 3,-48 4,-67 h -4 C 373,-20 327,8 251,10 107,7 43,-115 45,-272 Z m 371,19 c 1,-111 -15,-180 -114,-182 -70,0 -105,55 -105,165 0,109 36,163 107,163 87,-3 112,-49 112,-146"
+         id="K" />
+      <path
+         fill="#1d262b"
+         d="m 243,-171 c -4,82 106,65 159,45 V -15 C 367,-1 316,11 265,10 150,9 94,-49 94,-171 V -434 H 23 v -63 l 82,-50 43,-115 h 95 v 116 h 153 v 112 H 243 v 263"
+         id="L" />
+      <g
+         id="a">
+        <use
+           transform="scale(0.02)"
+           xlink:href="#C"
+           id="use180" />
+        <use
+           transform="matrix(0.02,0,0,0.02,18.86,0)"
+           xlink:href="#D"
+           id="use182" />
+        <use
+           transform="matrix(0.02,0,0,0.02,30.68,0)"
+           xlink:href="#E"
+           id="use184" />
+        <use
+           transform="matrix(0.02,0,0,0.02,50.32,0)"
+           xlink:href="#F"
+           id="use186" />
+        <use
+           transform="matrix(0.02,0,0,0.02,62.98,0)"
+           xlink:href="#D"
+           id="use188" />
+        <use
+           transform="matrix(0.02,0,0,0.02,74.8,0)"
+           xlink:href="#G"
+           id="use190" />
+        <use
+           transform="matrix(0.02,0,0,0.02,83.88,0)"
+           xlink:href="#H"
+           id="use192" />
+        <use
+           transform="matrix(0.02,0,0,0.02,103.22,0)"
+           xlink:href="#I"
+           id="use194" />
+        <use
+           transform="matrix(0.02,0,0,0.02,109.32,0)"
+           xlink:href="#J"
+           id="use196" />
+        <use
+           transform="matrix(0.02,0,0,0.02,121.98,0)"
+           xlink:href="#K"
+           id="use198" />
+        <use
+           transform="matrix(0.02,0,0,0.02,134.64,0)"
+           xlink:href="#D"
+           id="use200" />
+        <use
+           transform="matrix(0.02,0,0,0.02,146.46,0)"
+           xlink:href="#L"
+           id="use202" />
+      </g>
+      <path
+         fill="#1d262b"
+         d="M 527,0 475,-170 H 215 L 163,0 H 0 L 252,-717 H 437 L 690,0 Z m -88,-297 c -32,-102 -65,-203 -94,-309 -28,107 -61,206 -92,309 h 186"
+         id="M" />
+      <path
+         fill="#1d262b"
+         d="m 408,-406 c -47,-19 -90,-39 -149,-40 -57,-2 -79,25 -57,60 81,70 264,66 257,224 C 456,-37 364,11 226,10 148,10 102,1 46,-22 v -123 c 48,22 123,40 185,46 81,8 106,-64 41,-97 -89,-45 -227,-66 -227,-208 0,-180 279,-177 408,-109"
+         id="N" />
+      <path
+         fill="#1d262b"
+         d="m 311,-556 c 169,3 261,108 263,282 C 577,-100 476,13 308,10 139,7 47,-99 45,-274 43,-449 142,-559 311,-556 Z m -2,120 c -89,0 -111,65 -112,162 1,97 23,164 113,164 89,0 111,-68 112,-164 -1,-97 -23,-162 -113,-162"
+         id="O" />
+      <path
+         fill="#1d262b"
+         d="M 466,-31 C 419,-1 377,10 300,10 128,8 45,-87 45,-270 c 0,-220 149,-320 365,-275 28,7 52,16 73,26 l -44,115 c -41,-15 -76,-31 -126,-32 -77,0 -116,55 -116,165 -1,96 31,157 116,160 68,0 109,-20 153,-47 v 127"
+         id="P" />
+      <path
+         fill="#1d262b"
+         d="m 93,-508 c 55,-29 128,-49 209,-49 140,0 227,57 227,193 V 0 H 425 l -29,-74 h -4 C 345,-18 309,9 211,10 109,9 39,-52 42,-163 c -1,-166 165,-176 339,-177 6,-70 -22,-108 -85,-107 -61,0 -108,21 -154,40 z m 174,409 c 64,0 116,-42 114,-109 v -45 c -95,1 -187,4 -186,91 -1,45 29,62 72,63"
+         id="Q" />
+      <path
+         fill="#1d262b"
+         d="m 220,-476 c 29,-51 93,-79 168,-80 124,2 194,67 194,200 V 0 H 433 v -319 c -1,-72 -20,-117 -88,-118 -100,1 -118,75 -118,180 V 0 H 78 v -546 h 114 l 20,70 h 8"
+         id="R" />
+      <g
+         id="b">
+        <use
+           transform="scale(0.02)"
+           xlink:href="#M"
+           id="use211" />
+        <use
+           transform="matrix(0.02,0,0,0.02,13.8,0)"
+           xlink:href="#N"
+           id="use213" />
+        <use
+           transform="matrix(0.02,0,0,0.02,23.74,0)"
+           xlink:href="#N"
+           id="use215" />
+        <use
+           transform="matrix(0.02,0,0,0.02,33.68,0)"
+           xlink:href="#O"
+           id="use217" />
+        <use
+           transform="matrix(0.02,0,0,0.02,46.06,0)"
+           xlink:href="#P"
+           id="use219" />
+        <use
+           transform="matrix(0.02,0,0,0.02,56.34,0)"
+           xlink:href="#I"
+           id="use221" />
+        <use
+           transform="matrix(0.02,0,0,0.02,62.44,0)"
+           xlink:href="#Q"
+           id="use223" />
+        <use
+           transform="matrix(0.02,0,0,0.02,74.52,0)"
+           xlink:href="#L"
+           id="use225" />
+        <use
+           transform="matrix(0.02,0,0,0.02,83.2,0)"
+           xlink:href="#I"
+           id="use227" />
+        <use
+           transform="matrix(0.02,0,0,0.02,89.3,0)"
+           xlink:href="#O"
+           id="use229" />
+        <use
+           transform="matrix(0.02,0,0,0.02,101.68,0)"
+           xlink:href="#R"
+           id="use231" />
+        <use
+           transform="matrix(0.02,0,0,0.02,114.82,0)"
+           xlink:href="#H"
+           id="use233" />
+        <use
+           transform="matrix(0.02,0,0,0.02,134.16,0)"
+           xlink:href="#I"
+           id="use235" />
+        <use
+           transform="matrix(0.02,0,0,0.02,140.26,0)"
+           xlink:href="#J"
+           id="use237" />
+        <use
+           transform="matrix(0.02,0,0,0.02,152.92,0)"
+           xlink:href="#K"
+           id="use239" />
+        <use
+           transform="matrix(0.02,0,0,0.02,165.58,0)"
+           xlink:href="#D"
+           id="use241" />
+        <use
+           transform="matrix(0.02,0,0,0.02,177.4,0)"
+           xlink:href="#L"
+           id="use243" />
+      </g>
+      <path
+         fill="#1d262b"
+         d="m 321,-388 h 199 v 71 H 321 v 206 H 249 V -317 H 50 v -71 h 199 v -207 h 72 v 207"
+         id="S" />
+      <use
+         transform="scale(0.02)"
+         xlink:href="#S"
+         id="c" />
+      <path
+         fill="#1d262b"
+         d="m 246,-474 c -75,0 -138,40 -98,102 80,80 284,66 286,224 C 434,-36 339,10 220,10 149,10 97,-1 52,-24 v -80 c 68,41 288,86 297,-36 -11,-69 -69,-74 -132,-104 -80,-36 -163,-53 -166,-160 -4,-161 250,-168 372,-106 l -30,70 c -42,-17 -91,-34 -147,-34"
+         id="T" />
+      <path
+         fill="#1d262b"
+         d="m 55,-264 c 2,-166 77,-282 237,-282 163,0 232,117 221,295 H 146 c 1,115 59,186 171,186 74,0 118,-15 172,-37 v 77 C 434,-2 390,10 313,10 146,6 56,-92 55,-264 Z m 366,-57 c -2,-88 -39,-155 -130,-153 -91,1 -135,65 -143,153 h 273"
+         id="U" />
+      <path
+         fill="#1d262b"
+         d="M 173,0 H 85 v -760 h 88 V 0"
+         id="V" />
+      <path
+         fill="#1d262b"
+         d="M 438,-19 C 399,0 360,10 300,10 136,6 55,-93 55,-265 c 0,-205 125,-311 330,-273 25,6 46,13 62,21 l -27,73 c -29,-11 -77,-25 -116,-25 -105,0 -158,68 -158,203 0,118 42,198 153,200 58,1 100,-14 139,-31 v 78"
+         id="W" />
+      <path
+         fill="#1d262b"
+         d="m 180,-158 c -9,93 83,112 159,85 V -6 C 321,4 278,10 249,10 146,8 92,-45 92,-156 V -468 H 16 v -42 l 77,-35 35,-114 h 52 v 123 h 155 v 68 H 180 v 310"
+         id="X" />
+      <path
+         fill="#1d262b"
+         d="m 304,-546 c 162,0 245,109 247,277 C 554,-102 461,10 301,10 140,10 57,-102 55,-269 52,-436 144,-546 304,-546 Z m -2,74 c -116,0 -155,84 -156,203 1,118 41,206 157,206 115,0 157,-88 157,-206 -1,-119 -42,-203 -158,-203"
+         id="Y" />
+      <path
+         fill="#1d262b"
+         d="m 171,-438 c 38,-67 114,-131 227,-102 l -11,81 c -127,-30 -214,51 -214,173 V 0 H 85 v -536 h 72 l 10,98 h 4"
+         id="Z" />
+      <path
+         fill="#1d262b"
+         d="m 457,-607 c -87,-45 -309,-75 -306,66 5,99 78,110 156,144 99,43 192,73 195,206 C 502,-56 390,12 247,10 173,10 99,-1 51,-24 v -86 c 98,48 366,86 361,-73 C 409,-284 328,-295 244,-330 140,-373 64,-412 60,-542 54,-741 333,-756 485,-684"
+         id="aa" />
+      <path
+         fill="#1d262b"
+         d="m 287,-63 c 123,0 158,-72 158,-194 v -279 h 88 V 0 h -72 l -13,-71 h -4 C 414,-19 350,9 274,10 142,9 79,-50 79,-185 v -351 h 89 v 345 c 0,85 40,128 119,128"
+         id="ab" />
+      <path
+         fill="#1d262b"
+         d="m 133,-414 c -37,-1 -63,-25 -61,-68 -2,-45 22,-66 61,-68 39,1 65,22 63,68 2,44 -25,67 -63,68 z m 0,428 C 96,13 70,-11 72,-54 c -2,-44 23,-66 61,-67 39,1 65,22 63,67 2,44 -25,67 -63,68"
+         id="ac" />
+      <g
+         id="d">
+        <use
+           transform="scale(0.02)"
+           xlink:href="#T"
+           id="use258" />
+        <use
+           transform="matrix(0.02,0,0,0.02,9.58,0)"
+           xlink:href="#U"
+           id="use260" />
+        <use
+           transform="matrix(0.02,0,0,0.02,20.86,0)"
+           xlink:href="#V"
+           id="use262" />
+        <use
+           transform="matrix(0.02,0,0,0.02,26.02,0)"
+           xlink:href="#U"
+           id="use264" />
+        <use
+           transform="matrix(0.02,0,0,0.02,37.3,0)"
+           xlink:href="#W"
+           id="use266" />
+        <use
+           transform="matrix(0.02,0,0,0.02,46.9,0)"
+           xlink:href="#X"
+           id="use268" />
+        <use
+           transform="matrix(0.02,0,0,0.02,54.12,0)"
+           xlink:href="#Y"
+           id="use270" />
+        <use
+           transform="matrix(0.02,0,0,0.02,66.22,0)"
+           xlink:href="#Z"
+           id="use272" />
+        <use
+           transform="matrix(0.02,0,0,0.02,74.48,0)"
+           xlink:href="#aa"
+           id="use274" />
+        <use
+           transform="matrix(0.02,0,0,0.02,85.46,0)"
+           xlink:href="#Y"
+           id="use276" />
+        <use
+           transform="matrix(0.02,0,0,0.02,97.56,0)"
+           xlink:href="#ab"
+           id="use278" />
+        <use
+           transform="matrix(0.02,0,0,0.02,109.92,0)"
+           xlink:href="#Z"
+           id="use280" />
+        <use
+           transform="matrix(0.02,0,0,0.02,117.78,0)"
+           xlink:href="#W"
+           id="use282" />
+        <use
+           transform="matrix(0.02,0,0,0.02,127.38,0)"
+           xlink:href="#U"
+           id="use284" />
+        <use
+           transform="matrix(0.02,0,0,0.02,138.66,0)"
+           xlink:href="#ac"
+           id="use286" />
+      </g>
+      <g
+         id="e">
+        <use
+           transform="scale(0.02)"
+           xlink:href="#aa"
+           id="use289" />
+        <use
+           transform="matrix(0.02,0,0,0.02,10.98,0)"
+           xlink:href="#U"
+           id="use291" />
+        <use
+           transform="matrix(0.02,0,0,0.02,22.26,0)"
+           xlink:href="#V"
+           id="use293" />
+        <use
+           transform="matrix(0.02,0,0,0.02,27.42,0)"
+           xlink:href="#U"
+           id="use295" />
+        <use
+           transform="matrix(0.02,0,0,0.02,38.7,0)"
+           xlink:href="#W"
+           id="use297" />
+        <use
+           transform="matrix(0.02,0,0,0.02,48.3,0)"
+           xlink:href="#X"
+           id="use299" />
+        <use
+           transform="matrix(0.02,0,0,0.02,55.52,0)"
+           xlink:href="#Y"
+           id="use301" />
+        <use
+           transform="matrix(0.02,0,0,0.02,67.62,0)"
+           xlink:href="#Z"
+           id="use303" />
+        <use
+           transform="matrix(0.02,0,0,0.02,75.88,0)"
+           xlink:href="#aa"
+           id="use305" />
+        <use
+           transform="matrix(0.02,0,0,0.02,86.86,0)"
+           xlink:href="#Y"
+           id="use307" />
+        <use
+           transform="matrix(0.02,0,0,0.02,98.96,0)"
+           xlink:href="#ab"
+           id="use309" />
+        <use
+           transform="matrix(0.02,0,0,0.02,111.32,0)"
+           xlink:href="#Z"
+           id="use311" />
+        <use
+           transform="matrix(0.02,0,0,0.02,119.18,0)"
+           xlink:href="#W"
+           id="use313" />
+        <use
+           transform="matrix(0.02,0,0,0.02,128.78,0)"
+           xlink:href="#U"
+           id="use315" />
+      </g>
+      <path
+         fill="#1d262b"
+         d="m 554,-504 c 0,158 -111,227 -285,226 H 187 V 0 H 97 v -714 h 189 c 168,-1 268,59 268,210 z m -93,4 c 0,-136 -129,-143 -274,-137 v 282 c 149,3 274,-3 274,-145"
+         id="ad" />
+      <path
+         fill="#1d262b"
+         d="m 105,-499 c 45,-24 114,-47 183,-46 129,1 191,52 192,180 V 0 h -64 l -17,-76 h -4 C 348,-20 314,9 215,10 116,9 43,-43 46,-149 c 3,-159 172,-173 348,-174 7,-99 -22,-152 -111,-151 -59,-1 -110,22 -151,41 z m 130,438 c 93,-1 161,-53 158,-153 v -48 c -125,5 -256,-1 -256,114 -1,59 41,87 98,87"
+         id="ae" />
+      <path
+         fill="#1d262b"
+         d="m 55,-267 c 0,-156 73,-278 220,-279 79,1 132,31 168,81 h 5 l 12,-71 h 70 V 9 C 529,166 451,240 290,240 211,240 147,229 97,206 v -81 c 53,28 119,42 198,42 98,0 156,-66 148,-172 0,-12 2,-55 3,-66 h -4 C 406,-17 351,10 276,10 127,9 55,-107 55,-267 Z m 389,21 c 2,-143 -28,-226 -157,-226 -102,0 -142,91 -141,206 0,117 37,204 143,204 116,0 154,-62 155,-184"
+         id="af" />
+      <path
+         fill="#1d262b"
+         d="m 78,-681 c -1,-36 20,-55 52,-56 30,1 53,21 51,56 2,34 -22,55 -51,56 -31,0 -53,-21 -52,-56 z m 95,145 V 0 H 85 v -536 h 88"
+         id="ag" />
+      <path
+         fill="#1d262b"
+         d="m 174,-463 c 29,-51 94,-82 169,-83 132,1 195,61 194,197 V 0 h -87 v -343 c 0,-86 -40,-129 -120,-129 -123,0 -157,72 -157,194 V 0 H 85 v -536 h 71 l 13,73 h 5"
+         id="ah" />
+      <g
+         id="f">
+        <use
+           transform="scale(0.02)"
+           xlink:href="#T"
+           id="use323" />
+        <use
+           transform="matrix(0.02,0,0,0.02,9.58,0)"
+           xlink:href="#U"
+           id="use325" />
+        <use
+           transform="matrix(0.02,0,0,0.02,20.86,0)"
+           xlink:href="#V"
+           id="use327" />
+        <use
+           transform="matrix(0.02,0,0,0.02,26.02,0)"
+           xlink:href="#U"
+           id="use329" />
+        <use
+           transform="matrix(0.02,0,0,0.02,37.3,0)"
+           xlink:href="#W"
+           id="use331" />
+        <use
+           transform="matrix(0.02,0,0,0.02,46.9,0)"
+           xlink:href="#X"
+           id="use333" />
+        <use
+           transform="matrix(0.02,0,0,0.02,54.12,0)"
+           xlink:href="#ad"
+           id="use335" />
+        <use
+           transform="matrix(0.02,0,0,0.02,66.22,0)"
+           xlink:href="#ae"
+           id="use337" />
+        <use
+           transform="matrix(0.02,0,0,0.02,77.44,0)"
+           xlink:href="#af"
+           id="use339" />
+        <use
+           transform="matrix(0.02,0,0,0.02,89.74,0)"
+           xlink:href="#U"
+           id="use341" />
+        <use
+           transform="matrix(0.02,0,0,0.02,101.02,0)"
+           xlink:href="#aa"
+           id="use343" />
+        <use
+           transform="matrix(0.02,0,0,0.02,112,0)"
+           xlink:href="#U"
+           id="use345" />
+        <use
+           transform="matrix(0.02,0,0,0.02,123.28,0)"
+           xlink:href="#X"
+           id="use347" />
+        <use
+           transform="matrix(0.02,0,0,0.02,130.5,0)"
+           xlink:href="#X"
+           id="use349" />
+        <use
+           transform="matrix(0.02,0,0,0.02,137.72,0)"
+           xlink:href="#ag"
+           id="use351" />
+        <use
+           transform="matrix(0.02,0,0,0.02,142.88,0)"
+           xlink:href="#ah"
+           id="use353" />
+        <use
+           transform="matrix(0.02,0,0,0.02,155.24,0)"
+           xlink:href="#af"
+           id="use355" />
+        <use
+           transform="matrix(0.02,0,0,0.02,167.54,0)"
+           xlink:href="#T"
+           id="use357" />
+        <use
+           transform="matrix(0.02,0,0,0.02,177.12,0)"
+           xlink:href="#ac"
+           id="use359" />
+      </g>
+      <g
+         id="g">
+        <use
+           transform="scale(0.02)"
+           xlink:href="#ad"
+           id="use362" />
+        <use
+           transform="matrix(0.02,0,0,0.02,12.1,0)"
+           xlink:href="#ae"
+           id="use364" />
+        <use
+           transform="matrix(0.02,0,0,0.02,23.32,0)"
+           xlink:href="#af"
+           id="use366" />
+        <use
+           transform="matrix(0.02,0,0,0.02,35.62,0)"
+           xlink:href="#U"
+           id="use368" />
+        <use
+           transform="matrix(0.02,0,0,0.02,46.9,0)"
+           xlink:href="#aa"
+           id="use370" />
+        <use
+           transform="matrix(0.02,0,0,0.02,57.88,0)"
+           xlink:href="#U"
+           id="use372" />
+        <use
+           transform="matrix(0.02,0,0,0.02,69.16,0)"
+           xlink:href="#X"
+           id="use374" />
+        <use
+           transform="matrix(0.02,0,0,0.02,76.38,0)"
+           xlink:href="#X"
+           id="use376" />
+        <use
+           transform="matrix(0.02,0,0,0.02,83.6,0)"
+           xlink:href="#ag"
+           id="use378" />
+        <use
+           transform="matrix(0.02,0,0,0.02,88.76,0)"
+           xlink:href="#ah"
+           id="use380" />
+        <use
+           transform="matrix(0.02,0,0,0.02,101.12,0)"
+           xlink:href="#af"
+           id="use382" />
+        <use
+           transform="matrix(0.02,0,0,0.02,113.42,0)"
+           xlink:href="#T"
+           id="use384" />
+      </g>
+      <path
+         d="m 169,-182 c -1,-43 -94,-46 -97,-3 18,66 151,10 154,114 3,95 -165,93 -204,36 -6,-8 -10,-19 -12,-30 l 50,-8 c 3,46 112,56 116,5 -17,-69 -150,-10 -154,-114 -4,-87 153,-88 188,-35 5,8 8,18 10,28"
+         id="ai" />
+      <path
+         d="M 185,-48 C 172,-18 148,5 103,4 43,2 14,-33 14,-96 c 0,-63 30,-98 90,-98 62,0 83,45 84,108 H 66 c 0,31 8,55 39,56 18,0 30,-7 34,-22 z m -45,-69 c 5,-46 -57,-63 -70,-21 -2,6 -4,13 -4,21 h 74"
+         id="aj" />
+      <path
+         d="M 25,0 V -261 H 75 V 0 H 25"
+         id="ak" />
+      <path
+         d="M 190,-63 C 183,-21 152,4 104,4 45,4 20,-34 14,-94 2,-204 168,-231 188,-130 l -49,2 c -2,-19 -15,-32 -35,-32 -30,0 -35,28 -38,64 -6,74 65,87 74,30"
+         id="al" />
+      <path
+         d="M 115,-3 C 79,11 28,4 28,-45 V -157 H 4 v -33 h 27 l 15,-45 h 31 v 45 h 36 v 33 H 77 v 99 c -1,23 16,31 38,25 v 30"
+         id="am" />
+      <path
+         d="m 110,-194 c 64,0 96,36 96,99 0,64 -35,99 -97,99 -61,0 -95,-36 -95,-99 0,-62 34,-99 96,-99 z m -1,164 c 35,0 45,-28 45,-65 0,-40 -10,-65 -43,-65 -34,0 -45,26 -45,65 0,36 10,65 43,65"
+         id="an" />
+      <path
+         d="m 135,-150 c -39,-12 -60,13 -60,57 V 0 H 25 l -1,-190 h 47 c 2,13 -1,29 3,40 6,-28 27,-53 61,-41 v 41"
+         id="ao" />
+      <path
+         d="M 85,4 C -2,5 27,-109 22,-190 h 50 c 7,57 -23,150 33,157 60,-5 35,-97 40,-157 h 50 l 1,190 h -47 c -2,-12 1,-28 -3,-38 -12,25 -28,42 -61,42"
+         id="ap" />
+      <g
+         id="h">
+        <use
+           transform="scale(0.05691595)"
+           xlink:href="#ai"
+           id="use395" />
+        <use
+           transform="matrix(0.05691595,0,0,0.05691595,13.659828,0)"
+           xlink:href="#aj"
+           id="use397" />
+        <use
+           transform="matrix(0.05691595,0,0,0.05691595,25.043019,0)"
+           xlink:href="#ak"
+           id="use399" />
+        <use
+           transform="matrix(0.05691595,0,0,0.05691595,30.734614,0)"
+           xlink:href="#aj"
+           id="use401" />
+        <use
+           transform="matrix(0.05691595,0,0,0.05691595,42.117804,0)"
+           xlink:href="#al"
+           id="use403" />
+        <use
+           transform="matrix(0.05691595,0,0,0.05691595,53.500995,0)"
+           xlink:href="#am"
+           id="use405" />
+        <use
+           transform="matrix(0.05691595,0,0,0.05691595,60.273993,0)"
+           xlink:href="#an"
+           id="use407" />
+        <use
+           transform="matrix(0.05691595,0,0,0.05691595,72.738586,0)"
+           xlink:href="#ao"
+           id="use409" />
+        <use
+           transform="matrix(0.05691595,0,0,0.05691595,80.70682,0)"
+           xlink:href="#ai"
+           id="use411" />
+        <use
+           transform="matrix(0.05691595,0,0,0.05691595,94.366648,0)"
+           xlink:href="#an"
+           id="use413" />
+        <use
+           transform="matrix(0.05691595,0,0,0.05691595,106.83124,0)"
+           xlink:href="#ap"
+           id="use415" />
+        <use
+           transform="matrix(0.05691595,0,0,0.05691595,119.29583,0)"
+           xlink:href="#ao"
+           id="use417" />
+        <use
+           transform="matrix(0.05691595,0,0,0.05691595,127.26407,0)"
+           xlink:href="#al"
+           id="use419" />
+        <use
+           transform="matrix(0.05691595,0,0,0.05691595,138.64726,0)"
+           xlink:href="#aj"
+           id="use421" />
+      </g>
+      <path
+         fill="#1d262b"
+         d="m 291,-598 c -84,-7 -119,90 -55,132 101,66 281,95 275,268 C 509,-59 400,13 248,10 173,10 105,-4 46,-33 v -141 c 61,24 133,59 214,59 85,0 135,-70 84,-122 -93,-93 -286,-96 -290,-284 -3,-172 177,-234 348,-190 34,9 69,21 106,37 l -49,118 c -57,-22 -99,-36 -168,-42"
+         id="aq" />
+      <path
+         fill="#1d262b"
+         d="M 227,0 H 78 V -760 H 227 V 0"
+         id="ar" />
+      <path
+         fill="#1d262b"
+         d="m 314,-714 c 229,4 366,119 368,350 C 684,-121 535,0 292,0 H 90 v -714 z m 211,354 c 1,-150 -62,-228 -203,-230 h -81 v 465 c 186,15 286,-53 284,-235"
+         id="as" />
+      <path
+         fill="#1d262b"
+         d="m 312,-109 c 100,-1 118,-75 118,-180 V -546 H 579 V 0 H 465 l -20,-70 h -8 C 408,-19 344,9 269,10 145,8 75,-57 75,-190 v -356 h 149 v 319 c 1,71 21,117 88,118"
+         id="at" />
+      <g
+         id="i">
+        <use
+           transform="scale(0.02)"
+           xlink:href="#aq"
+           id="use428" />
+        <use
+           transform="matrix(0.02,0,0,0.02,11.02,0)"
+           xlink:href="#D"
+           id="use430" />
+        <use
+           transform="matrix(0.02,0,0,0.02,22.84,0)"
+           xlink:href="#ar"
+           id="use432" />
+        <use
+           transform="matrix(0.02,0,0,0.02,28.94,0)"
+           xlink:href="#D"
+           id="use434" />
+        <use
+           transform="matrix(0.02,0,0,0.02,40.76,0)"
+           xlink:href="#P"
+           id="use436" />
+        <use
+           transform="matrix(0.02,0,0,0.02,51.04,0)"
+           xlink:href="#L"
+           id="use438" />
+        <use
+           transform="matrix(0.02,0,0,0.02,59.72,0)"
+           xlink:href="#O"
+           id="use440" />
+        <use
+           transform="matrix(0.02,0,0,0.02,72.1,0)"
+           xlink:href="#G"
+           id="use442" />
+        <use
+           transform="matrix(0.02,0,0,0.02,81.18,0)"
+           xlink:href="#as"
+           id="use444" />
+        <use
+           transform="matrix(0.02,0,0,0.02,95.98,0)"
+           xlink:href="#Q"
+           id="use446" />
+        <use
+           transform="matrix(0.02,0,0,0.02,108.06,0)"
+           xlink:href="#L"
+           id="use448" />
+        <use
+           transform="matrix(0.02,0,0,0.02,116.74,0)"
+           xlink:href="#Q"
+           id="use450" />
+        <use
+           transform="matrix(0.02,0,0,0.02,128.82,0)"
+           xlink:href="#F"
+           id="use452" />
+        <use
+           transform="matrix(0.02,0,0,0.02,141.48,0)"
+           xlink:href="#Q"
+           id="use454" />
+        <use
+           transform="matrix(0.02,0,0,0.02,153.56,0)"
+           xlink:href="#N"
+           id="use456" />
+        <use
+           transform="matrix(0.02,0,0,0.02,163.5,0)"
+           xlink:href="#D"
+           id="use458" />
+        <use
+           transform="matrix(0.02,0,0,0.02,175.32,0)"
+           xlink:href="#aq"
+           id="use460" />
+        <use
+           transform="matrix(0.02,0,0,0.02,186.34,0)"
+           xlink:href="#O"
+           id="use462" />
+        <use
+           transform="matrix(0.02,0,0,0.02,198.72,0)"
+           xlink:href="#at"
+           id="use464" />
+        <use
+           transform="matrix(0.02,0,0,0.02,211.86,0)"
+           xlink:href="#G"
+           id="use466" />
+        <use
+           transform="matrix(0.02,0,0,0.02,220.54,0)"
+           xlink:href="#P"
+           id="use468" />
+        <use
+           transform="matrix(0.02,0,0,0.02,230.82,0)"
+           xlink:href="#D"
+           id="use470" />
+      </g>
+      <use
+         transform="scale(0.02)"
+         xlink:href="#S"
+         id="j" />
+      <path
+         fill="#1d262b"
+         d="M 442,-72 C 408,-27 357,12 275,10 127,7 55,-102 55,-267 c 0,-165 73,-275 221,-279 82,-2 131,35 166,79 h 6 c -11,-89 -4,-195 -6,-293 h 88 V 0 H 459 L 446,-72 Z M 146,-265 c 0,115 37,200 143,202 125,0 156,-74 154,-203 -2,-127 -29,-207 -155,-207 -105,1 -142,96 -142,208"
+         id="au" />
+      <path
+         fill="#1d262b"
+         d="M 339,10 C 258,12 206,-24 173,-68 h -7 L 148,0 H 85 v -760 h 88 c -1,97 4,206 -5,295 h 5 c 33,-46 84,-82 166,-80 148,3 221,112 221,277 0,165 -74,274 -221,278 z m -13,-73 c 108,-3 143,-88 143,-206 0,-135 -48,-203 -145,-203 -125,2 -151,75 -151,205 0,126 28,204 153,204"
+         id="av" />
+      <path
+         fill="#1d262b"
+         d="m 565,-606 c -44,-19 -98,-40 -162,-39 -160,0 -250,121 -247,288 0,170 77,289 246,288 65,0 119,-13 171,-28 v 78 C 517,2 467,10 389,10 164,8 61,-134 61,-358 c 0,-224 119,-362 343,-366 75,0 141,14 197,42"
+         id="aw" />
+      <g
+         id="k">
+        <use
+           transform="scale(0.02)"
+           xlink:href="#au"
+           id="use477" />
+        <use
+           transform="matrix(0.02,0,0,0.02,12.3,0)"
+           xlink:href="#ae"
+           id="use479" />
+        <use
+           transform="matrix(0.02,0,0,0.02,23.52,0)"
+           xlink:href="#X"
+           id="use481" />
+        <use
+           transform="matrix(0.02,0,0,0.02,30.74,0)"
+           xlink:href="#ae"
+           id="use483" />
+        <use
+           transform="matrix(0.02,0,0,0.02,41.96,0)"
+           xlink:href="#av"
+           id="use485" />
+        <use
+           transform="matrix(0.02,0,0,0.02,54.26,0)"
+           xlink:href="#ae"
+           id="use487" />
+        <use
+           transform="matrix(0.02,0,0,0.02,65.48,0)"
+           xlink:href="#T"
+           id="use489" />
+        <use
+           transform="matrix(0.02,0,0,0.02,75.06,0)"
+           xlink:href="#U"
+           id="use491" />
+        <use
+           transform="matrix(0.02,0,0,0.02,86.34,0)"
+           xlink:href="#aw"
+           id="use493" />
+        <use
+           transform="matrix(0.02,0,0,0.02,98.98,0)"
+           xlink:href="#Y"
+           id="use495" />
+        <use
+           transform="matrix(0.02,0,0,0.02,111.08,0)"
+           xlink:href="#ah"
+           id="use497" />
+        <use
+           transform="matrix(0.02,0,0,0.02,123.44,0)"
+           xlink:href="#X"
+           id="use499" />
+        <use
+           transform="matrix(0.02,0,0,0.02,130.66,0)"
+           xlink:href="#Z"
+           id="use501" />
+        <use
+           transform="matrix(0.02,0,0,0.02,138.52,0)"
+           xlink:href="#ae"
+           id="use503" />
+        <use
+           transform="matrix(0.02,0,0,0.02,149.74,0)"
+           xlink:href="#ag"
+           id="use505" />
+        <use
+           transform="matrix(0.02,0,0,0.02,154.9,0)"
+           xlink:href="#ah"
+           id="use507" />
+        <use
+           transform="matrix(0.02,0,0,0.02,167.26,0)"
+           xlink:href="#X"
+           id="use509" />
+        <use
+           transform="matrix(0.02,0,0,0.02,174.48,0)"
+           xlink:href="#T"
+           id="use511" />
+        <use
+           transform="matrix(0.02,0,0,0.02,184.06,0)"
+           xlink:href="#ac"
+           id="use513" />
+      </g>
+      <path
+         fill="#1d262b"
+         d="m 317,-714 c 225,4 350,122 352,350 C 671,-125 531,0 296,0 H 97 v -714 z m 257,353 c 2,-185 -92,-274 -270,-276 H 187 v 560 h 97 c 193,0 290,-95 290,-284"
+         id="ax" />
+      <path
+         fill="#1d262b"
+         d="M 304,158 H 80 v -872 h 224 v 72 H 166 V 86 h 138 v 72"
+         id="ay" />
+      <path
+         fill="#1d262b"
+         d="M 25,86 H 163 V -642 H 25 v -72 H 249 V 158 H 25 V 86"
+         id="az" />
+      <g
+         id="l">
+        <use
+           transform="scale(0.02)"
+           xlink:href="#ax"
+           id="use519" />
+        <use
+           transform="matrix(0.02,0,0,0.02,14.6,0)"
+           xlink:href="#ae"
+           id="use521" />
+        <use
+           transform="matrix(0.02,0,0,0.02,25.82,0)"
+           xlink:href="#X"
+           id="use523" />
+        <use
+           transform="matrix(0.02,0,0,0.02,33.04,0)"
+           xlink:href="#ae"
+           id="use525" />
+        <use
+           transform="matrix(0.02,0,0,0.02,44.26,0)"
+           xlink:href="#av"
+           id="use527" />
+        <use
+           transform="matrix(0.02,0,0,0.02,56.56,0)"
+           xlink:href="#ae"
+           id="use529" />
+        <use
+           transform="matrix(0.02,0,0,0.02,67.78,0)"
+           xlink:href="#T"
+           id="use531" />
+        <use
+           transform="matrix(0.02,0,0,0.02,77.36,0)"
+           xlink:href="#U"
+           id="use533" />
+        <use
+           transform="matrix(0.02,0,0,0.02,88.64,0)"
+           xlink:href="#aw"
+           id="use535" />
+        <use
+           transform="matrix(0.02,0,0,0.02,101.28,0)"
+           xlink:href="#Y"
+           id="use537" />
+        <use
+           transform="matrix(0.02,0,0,0.02,113.38,0)"
+           xlink:href="#ah"
+           id="use539" />
+        <use
+           transform="matrix(0.02,0,0,0.02,125.74,0)"
+           xlink:href="#T"
+           id="use541" />
+        <use
+           transform="matrix(0.02,0,0,0.02,135.32,0)"
+           xlink:href="#X"
+           id="use543" />
+        <use
+           transform="matrix(0.02,0,0,0.02,142.54,0)"
+           xlink:href="#Z"
+           id="use545" />
+        <use
+           transform="matrix(0.02,0,0,0.02,150.4,0)"
+           xlink:href="#ae"
+           id="use547" />
+        <use
+           transform="matrix(0.02,0,0,0.02,161.62,0)"
+           xlink:href="#ag"
+           id="use549" />
+        <use
+           transform="matrix(0.02,0,0,0.02,166.78,0)"
+           xlink:href="#ah"
+           id="use551" />
+        <use
+           transform="matrix(0.02,0,0,0.02,179.14,0)"
+           xlink:href="#X"
+           id="use553" />
+        <use
+           transform="matrix(0.02,0,0,0.02,186.36,0)"
+           xlink:href="#ay"
+           id="use555" />
+        <use
+           transform="matrix(0.02,0,0,0.02,192.94,0)"
+           xlink:href="#az"
+           id="use557" />
+      </g>
+      <path
+         fill="#1d262b"
+         d="M 596,-203 C 596,-67 490,0 348,0 H 97 v -714 h 204 c 159,3 267,29 271,177 -1,90 -55,144 -136,158 v 5 c 93,16 161,60 160,171 z M 479,-527 c 5,-131 -159,-107 -292,-110 v 227 h 132 c 108,-1 156,-24 160,-117 z m 21,317 c 0,-93 -63,-125 -176,-125 H 187 v 259 h 144 c 112,2 169,-39 169,-134"
+         id="aA" />
+      <g
+         id="m">
+        <use
+           transform="scale(0.02)"
+           xlink:href="#T"
+           id="use561" />
+        <use
+           transform="matrix(0.02,0,0,0.02,9.58,0)"
+           xlink:href="#Y"
+           id="use563" />
+        <use
+           transform="matrix(0.02,0,0,0.02,21.68,0)"
+           xlink:href="#Z"
+           id="use565" />
+        <use
+           transform="matrix(0.02,0,0,0.02,29.94,0)"
+           xlink:href="#X"
+           id="use567" />
+        <use
+           transform="matrix(0.02,0,0,0.02,37.16,0)"
+           xlink:href="#aA"
+           id="use569" />
+        <use
+           transform="matrix(0.02,0,0,0.02,50.16,0)"
+           xlink:href="#ae"
+           id="use571" />
+        <use
+           transform="matrix(0.02,0,0,0.02,61.38,0)"
+           xlink:href="#T"
+           id="use573" />
+        <use
+           transform="matrix(0.02,0,0,0.02,70.96,0)"
+           xlink:href="#U"
+           id="use575" />
+        <use
+           transform="matrix(0.02,0,0,0.02,82.24,0)"
+           xlink:href="#ac"
+           id="use577" />
+      </g>
+      <path
+         fill="#1d262b"
+         d="m 424,-68 c 57,0 98,-7 140,-17 V -297 H 407 v -80 H 654 V -27 C 576,-2 506,10 403,10 175,8 64,-129 61,-357 c -3,-271 199,-407 483,-356 36,7 69,18 100,31 l -34,78 c -49,-21 -115,-42 -184,-41 -172,-2 -273,114 -271,288 3,180 83,290 269,289"
+         id="aB" />
+      <g
+         id="n">
+        <use
+           transform="scale(0.02)"
+           xlink:href="#aB"
+           id="use581" />
+        <use
+           transform="matrix(0.02,0,0,0.02,14.56,0)"
+           xlink:href="#Z"
+           id="use583" />
+        <use
+           transform="matrix(0.02,0,0,0.02,22.82,0)"
+           xlink:href="#ag"
+           id="use585" />
+        <use
+           transform="matrix(0.02,0,0,0.02,27.98,0)"
+           xlink:href="#au"
+           id="use587" />
+        <use
+           transform="matrix(0.02,0,0,0.02,40.28,0)"
+           xlink:href="#aa"
+           id="use589" />
+        <use
+           transform="matrix(0.02,0,0,0.02,51.26,0)"
+           xlink:href="#Y"
+           id="use591" />
+        <use
+           transform="matrix(0.02,0,0,0.02,63.36,0)"
+           xlink:href="#Z"
+           id="use593" />
+        <use
+           transform="matrix(0.02,0,0,0.02,71.62,0)"
+           xlink:href="#X"
+           id="use595" />
+        <use
+           transform="matrix(0.02,0,0,0.02,78.84,0)"
+           xlink:href="#aA"
+           id="use597" />
+        <use
+           transform="matrix(0.02,0,0,0.02,91.84,0)"
+           xlink:href="#ae"
+           id="use599" />
+        <use
+           transform="matrix(0.02,0,0,0.02,103.06,0)"
+           xlink:href="#Z"
+           id="use601" />
+      </g>
+      <path
+         fill="#1d262b"
+         d="M 667,0 H 494 L 328,-270 162,0 H 0 L 237,-368 15,-714 h 167 l 154,257 151,-257 h 163 l -224,354"
+         id="aC" />
+      <path
+         fill="#1d262b"
+         d="m 583,-491 c 0,183 -133,252 -342,237 V 0 H 90 v -714 h 228 c 169,-2 265,70 265,223 z m -342,113 c 103,5 189,-11 189,-108 0,-96 -84,-112 -189,-104 v 212"
+         id="aD" />
+      <path
+         fill="#1d262b"
+         d="m 345,-437 c -99,2 -118,75 -118,180 V 0 H 78 v -760 h 149 c -1,94 3,201 -7,284 h 8 c 30,-51 83,-79 158,-80 124,2 196,67 196,200 V 0 H 433 v -319 c 0,-79 -29,-118 -88,-118"
+         id="aE" />
+      <g
+         id="o">
+        <use
+           transform="scale(0.02)"
+           xlink:href="#aq"
+           id="use607" />
+        <use
+           transform="matrix(0.02,0,0,0.02,11.02,0)"
+           xlink:href="#D"
+           id="use609" />
+        <use
+           transform="matrix(0.02,0,0,0.02,22.84,0)"
+           xlink:href="#ar"
+           id="use611" />
+        <use
+           transform="matrix(0.02,0,0,0.02,28.94,0)"
+           xlink:href="#D"
+           id="use613" />
+        <use
+           transform="matrix(0.02,0,0,0.02,40.76,0)"
+           xlink:href="#P"
+           id="use615" />
+        <use
+           transform="matrix(0.02,0,0,0.02,51.04,0)"
+           xlink:href="#L"
+           id="use617" />
+        <use
+           transform="matrix(0.02,0,0,0.02,59.72,0)"
+           xlink:href="#O"
+           id="use619" />
+        <use
+           transform="matrix(0.02,0,0,0.02,72.1,0)"
+           xlink:href="#G"
+           id="use621" />
+        <use
+           transform="matrix(0.02,0,0,0.02,81.18,0)"
+           xlink:href="#aC"
+           id="use623" />
+        <use
+           transform="matrix(0.02,0,0,0.02,94.52,0)"
+           xlink:href="#aD"
+           id="use625" />
+        <use
+           transform="matrix(0.02,0,0,0.02,107.08,0)"
+           xlink:href="#Q"
+           id="use627" />
+        <use
+           transform="matrix(0.02,0,0,0.02,119.16,0)"
+           xlink:href="#L"
+           id="use629" />
+        <use
+           transform="matrix(0.02,0,0,0.02,127.84,0)"
+           xlink:href="#aE"
+           id="use631" />
+        <use
+           transform="matrix(0.02,0,0,0.02,140.98,0)"
+           xlink:href="#aq"
+           id="use633" />
+        <use
+           transform="matrix(0.02,0,0,0.02,152,0)"
+           xlink:href="#O"
+           id="use635" />
+        <use
+           transform="matrix(0.02,0,0,0.02,164.38,0)"
+           xlink:href="#at"
+           id="use637" />
+        <use
+           transform="matrix(0.02,0,0,0.02,177.52,0)"
+           xlink:href="#G"
+           id="use639" />
+        <use
+           transform="matrix(0.02,0,0,0.02,186.2,0)"
+           xlink:href="#P"
+           id="use641" />
+        <use
+           transform="matrix(0.02,0,0,0.02,196.48,0)"
+           xlink:href="#D"
+           id="use643" />
+      </g>
+      <path
+         fill="#1d262b"
+         d="M 212,-274 27,-536 h 100 l 138,202 137,-202 h 99 L 316,-274 511,0 H 411 L 265,-214 117,0 H 18"
+         id="aF" />
+      <path
+         fill="#1d262b"
+         d="m 330,-472 c -124,0 -157,72 -157,195 V 0 H 85 v -760 h 88 c -2,99 5,207 -5,298 h 6 c 30,-50 91,-82 167,-83 133,1 196,60 196,196 V 0 h -87 v -343 c 0,-86 -40,-129 -120,-129"
+         id="aG" />
+      <g
+         id="p">
+        <use
+           transform="scale(0.02)"
+           xlink:href="#aF"
+           id="use648" />
+        <use
+           transform="matrix(0.02,0,0,0.02,10.58,0)"
+           xlink:href="#ad"
+           id="use650" />
+        <use
+           transform="matrix(0.02,0,0,0.02,22.68,0)"
+           xlink:href="#ae"
+           id="use652" />
+        <use
+           transform="matrix(0.02,0,0,0.02,33.9,0)"
+           xlink:href="#X"
+           id="use654" />
+        <use
+           transform="matrix(0.02,0,0,0.02,41.12,0)"
+           xlink:href="#aG"
+           id="use656" />
+        <use
+           transform="matrix(0.02,0,0,0.02,53.48,0)"
+           xlink:href="#aw"
+           id="use658" />
+        <use
+           transform="matrix(0.02,0,0,0.02,66.12,0)"
+           xlink:href="#Y"
+           id="use660" />
+        <use
+           transform="matrix(0.02,0,0,0.02,78.22,0)"
+           xlink:href="#ah"
+           id="use662" />
+        <use
+           transform="matrix(0.02,0,0,0.02,90.58,0)"
+           xlink:href="#T"
+           id="use664" />
+        <use
+           transform="matrix(0.02,0,0,0.02,100.16,0)"
+           xlink:href="#X"
+           id="use666" />
+        <use
+           transform="matrix(0.02,0,0,0.02,107.38,0)"
+           xlink:href="#Z"
+           id="use668" />
+        <use
+           transform="matrix(0.02,0,0,0.02,115.24,0)"
+           xlink:href="#ae"
+           id="use670" />
+        <use
+           transform="matrix(0.02,0,0,0.02,126.46,0)"
+           xlink:href="#ag"
+           id="use672" />
+        <use
+           transform="matrix(0.02,0,0,0.02,131.62,0)"
+           xlink:href="#ah"
+           id="use674" />
+        <use
+           transform="matrix(0.02,0,0,0.02,143.98,0)"
+           xlink:href="#X"
+           id="use676" />
+        <use
+           transform="matrix(0.02,0,0,0.02,151.2,0)"
+           xlink:href="#ac"
+           id="use678" />
+      </g>
+      <g
+         id="q">
+        <use
+           transform="scale(0.02)"
+           xlink:href="#aa"
+           id="use681" />
+        <use
+           transform="matrix(0.02,0,0,0.02,10.98,0)"
+           xlink:href="#X"
+           id="use683" />
+        <use
+           transform="matrix(0.02,0,0,0.02,18.2,0)"
+           xlink:href="#Z"
+           id="use685" />
+        <use
+           transform="matrix(0.02,0,0,0.02,26.46,0)"
+           xlink:href="#ag"
+           id="use687" />
+        <use
+           transform="matrix(0.02,0,0,0.02,31.62,0)"
+           xlink:href="#ah"
+           id="use689" />
+        <use
+           transform="matrix(0.02,0,0,0.02,43.98,0)"
+           xlink:href="#af"
+           id="use691" />
+      </g>
+      <path
+         fill="#1d262b"
+         d="m 311,-647 c -53,-1 -64,45 -60,101 h 129 v 112 H 251 V 0 H 102 V -434 H 20 v -72 l 82,-40 C 67,-758 255,-800 432,-742 l -38,109 c -25,-7 -50,-15 -83,-14"
+         id="aH" />
+      <path
+         fill="#1d262b"
+         d="m 527,0 c -31,-144 -64,-289 -98,-432 h -4 C 393,-288 358,-143 325,0 H 165 L 10,-546 h 148 c 34,138 77,265 93,421 h 4 c 15,-157 60,-282 92,-421 h 164 c 30,140 75,263 88,421 h 4 c 17,-155 62,-284 97,-421 H 846 L 689,0 H 527"
+         id="aI" />
+      <g
+         id="r">
+        <use
+           transform="scale(0.02)"
+           xlink:href="#aq"
+           id="use696" />
+        <use
+           transform="matrix(0.02,0,0,0.02,11.02,0)"
+           xlink:href="#D"
+           id="use698" />
+        <use
+           transform="matrix(0.02,0,0,0.02,22.84,0)"
+           xlink:href="#ar"
+           id="use700" />
+        <use
+           transform="matrix(0.02,0,0,0.02,28.94,0)"
+           xlink:href="#D"
+           id="use702" />
+        <use
+           transform="matrix(0.02,0,0,0.02,40.76,0)"
+           xlink:href="#P"
+           id="use704" />
+        <use
+           transform="matrix(0.02,0,0,0.02,51.04,0)"
+           xlink:href="#L"
+           id="use706" />
+        <use
+           transform="matrix(0.02,0,0,0.02,59.72,0)"
+           xlink:href="#O"
+           id="use708" />
+        <use
+           transform="matrix(0.02,0,0,0.02,72.1,0)"
+           xlink:href="#G"
+           id="use710" />
+        <use
+           transform="matrix(0.02,0,0,0.02,81.18,0)"
+           xlink:href="#C"
+           id="use712" />
+        <use
+           transform="matrix(0.02,0,0,0.02,100.04,0)"
+           xlink:href="#I"
+           id="use714" />
+        <use
+           transform="matrix(0.02,0,0,0.02,106.14,0)"
+           xlink:href="#P"
+           id="use716" />
+        <use
+           transform="matrix(0.02,0,0,0.02,116.42,0)"
+           xlink:href="#G"
+           id="use718" />
+        <use
+           transform="matrix(0.02,0,0,0.02,125.1,0)"
+           xlink:href="#O"
+           id="use720" />
+        <use
+           transform="matrix(0.02,0,0,0.02,137.48,0)"
+           xlink:href="#aH"
+           id="use722" />
+        <use
+           transform="matrix(0.02,0,0,0.02,145.22,0)"
+           xlink:href="#ar"
+           id="use724" />
+        <use
+           transform="matrix(0.02,0,0,0.02,151.32,0)"
+           xlink:href="#O"
+           id="use726" />
+        <use
+           transform="matrix(0.02,0,0,0.02,163.3,0)"
+           xlink:href="#aI"
+           id="use728" />
+        <use
+           transform="matrix(0.02,0,0,0.02,180.42,0)"
+           xlink:href="#aq"
+           id="use730" />
+        <use
+           transform="matrix(0.02,0,0,0.02,191.44,0)"
+           xlink:href="#O"
+           id="use732" />
+        <use
+           transform="matrix(0.02,0,0,0.02,203.82,0)"
+           xlink:href="#at"
+           id="use734" />
+        <use
+           transform="matrix(0.02,0,0,0.02,216.96,0)"
+           xlink:href="#G"
+           id="use736" />
+        <use
+           transform="matrix(0.02,0,0,0.02,225.64,0)"
+           xlink:href="#P"
+           id="use738" />
+        <use
+           transform="matrix(0.02,0,0,0.02,235.92,0)"
+           xlink:href="#D"
+           id="use740" />
+      </g>
+      <path
+         fill="#1d262b"
+         d="m 721,0 c 2,-208 -6,-429 7,-625 h -4 L 486,0 H 412 L 177,-626 h -4 c 13,195 4,419 7,626 H 97 v -714 h 133 l 220,585 h 4 L 678,-714 H 810 V 0 h -89"
+         id="aJ" />
+      <path
+         fill="#1d262b"
+         d="m 284,-693 c -79,0 -90,69 -87,157 h 135 v 68 H 197 V 0 H 109 V -468 H 15 v -41 l 94,-30 C 85,-728 219,-803 387,-747 l -23,69 c -21,-6 -52,-16 -80,-15"
+         id="aK" />
+      <path
+         fill="#1d262b"
+         d="M 523,-1 C 480,-148 429,-291 394,-445 h -4 C 358,-288 301,-148 258,-1 H 158 L 11,-537 h 91 c 36,148 81,291 109,446 h 4 c 33,-159 87,-298 131,-446 h 96 c 42,149 95,287 128,445 h 4 c 29,-153 75,-298 111,-445 h 90 L 626,-1 H 523"
+         id="aL" />
+      <g
+         id="s">
+        <use
+           transform="scale(0.02)"
+           xlink:href="#au"
+           id="use746" />
+        <use
+           transform="matrix(0.02,0,0,0.02,12.3,0)"
+           xlink:href="#ae"
+           id="use748" />
+        <use
+           transform="matrix(0.02,0,0,0.02,23.52,0)"
+           xlink:href="#X"
+           id="use750" />
+        <use
+           transform="matrix(0.02,0,0,0.02,30.74,0)"
+           xlink:href="#ae"
+           id="use752" />
+        <use
+           transform="matrix(0.02,0,0,0.02,41.96,0)"
+           xlink:href="#aa"
+           id="use754" />
+        <use
+           transform="matrix(0.02,0,0,0.02,52.94,0)"
+           xlink:href="#Y"
+           id="use756" />
+        <use
+           transform="matrix(0.02,0,0,0.02,65.04,0)"
+           xlink:href="#ab"
+           id="use758" />
+        <use
+           transform="matrix(0.02,0,0,0.02,77.4,0)"
+           xlink:href="#Z"
+           id="use760" />
+        <use
+           transform="matrix(0.02,0,0,0.02,85.26,0)"
+           xlink:href="#W"
+           id="use762" />
+        <use
+           transform="matrix(0.02,0,0,0.02,94.86,0)"
+           xlink:href="#U"
+           id="use764" />
+        <use
+           transform="matrix(0.02,0,0,0.02,106.14,0)"
+           xlink:href="#aJ"
+           id="use766" />
+        <use
+           transform="matrix(0.02,0,0,0.02,124.28,0)"
+           xlink:href="#ag"
+           id="use768" />
+        <use
+           transform="matrix(0.02,0,0,0.02,129.44,0)"
+           xlink:href="#W"
+           id="use770" />
+        <use
+           transform="matrix(0.02,0,0,0.02,139.04,0)"
+           xlink:href="#Z"
+           id="use772" />
+        <use
+           transform="matrix(0.02,0,0,0.02,146.9,0)"
+           xlink:href="#Y"
+           id="use774" />
+        <use
+           transform="matrix(0.02,0,0,0.02,159,0)"
+           xlink:href="#aK"
+           id="use776" />
+        <use
+           transform="matrix(0.02,0,0,0.02,165.88,0)"
+           xlink:href="#V"
+           id="use778" />
+        <use
+           transform="matrix(0.02,0,0,0.02,171.04,0)"
+           xlink:href="#Y"
+           id="use780" />
+        <use
+           transform="matrix(0.02,0,0,0.02,182.74,0)"
+           xlink:href="#aL"
+           id="use782" />
+        <use
+           transform="matrix(0.02,0,0,0.02,198.46,0)"
+           xlink:href="#aa"
+           id="use784" />
+        <use
+           transform="matrix(0.02,0,0,0.02,209.44,0)"
+           xlink:href="#U"
+           id="use786" />
+        <use
+           transform="matrix(0.02,0,0,0.02,220.72,0)"
+           xlink:href="#X"
+           id="use788" />
+        <use
+           transform="matrix(0.02,0,0,0.02,227.94,0)"
+           xlink:href="#X"
+           id="use790" />
+        <use
+           transform="matrix(0.02,0,0,0.02,235.16,0)"
+           xlink:href="#ag"
+           id="use792" />
+        <use
+           transform="matrix(0.02,0,0,0.02,240.32,0)"
+           xlink:href="#ah"
+           id="use794" />
+        <use
+           transform="matrix(0.02,0,0,0.02,252.68,0)"
+           xlink:href="#af"
+           id="use796" />
+        <use
+           transform="matrix(0.02,0,0,0.02,264.98,0)"
+           xlink:href="#T"
+           id="use798" />
+        <use
+           transform="matrix(0.02,0,0,0.02,274.56,0)"
+           xlink:href="#ac"
+           id="use800" />
+      </g>
+      <g
+         id="t">
+        <use
+           transform="scale(0.02)"
+           xlink:href="#aJ"
+           id="use803" />
+        <use
+           transform="matrix(0.02,0,0,0.02,18.14,0)"
+           xlink:href="#ag"
+           id="use805" />
+        <use
+           transform="matrix(0.02,0,0,0.02,23.3,0)"
+           xlink:href="#W"
+           id="use807" />
+        <use
+           transform="matrix(0.02,0,0,0.02,32.9,0)"
+           xlink:href="#Z"
+           id="use809" />
+        <use
+           transform="matrix(0.02,0,0,0.02,40.76,0)"
+           xlink:href="#Y"
+           id="use811" />
+        <use
+           transform="matrix(0.02,0,0,0.02,52.86,0)"
+           xlink:href="#aK"
+           id="use813" />
+        <use
+           transform="matrix(0.02,0,0,0.02,59.74,0)"
+           xlink:href="#V"
+           id="use815" />
+        <use
+           transform="matrix(0.02,0,0,0.02,64.9,0)"
+           xlink:href="#Y"
+           id="use817" />
+        <use
+           transform="matrix(0.02,0,0,0.02,76.6,0)"
+           xlink:href="#aL"
+           id="use819" />
+        <use
+           transform="matrix(0.02,0,0,0.02,92.32,0)"
+           xlink:href="#aa"
+           id="use821" />
+        <use
+           transform="matrix(0.02,0,0,0.02,103.3,0)"
+           xlink:href="#U"
+           id="use823" />
+        <use
+           transform="matrix(0.02,0,0,0.02,114.58,0)"
+           xlink:href="#X"
+           id="use825" />
+        <use
+           transform="matrix(0.02,0,0,0.02,121.8,0)"
+           xlink:href="#X"
+           id="use827" />
+        <use
+           transform="matrix(0.02,0,0,0.02,129.02,0)"
+           xlink:href="#ag"
+           id="use829" />
+        <use
+           transform="matrix(0.02,0,0,0.02,134.18,0)"
+           xlink:href="#ah"
+           id="use831" />
+        <use
+           transform="matrix(0.02,0,0,0.02,146.54,0)"
+           xlink:href="#af"
+           id="use833" />
+        <use
+           transform="matrix(0.02,0,0,0.02,158.84,0)"
+           xlink:href="#T"
+           id="use835" />
+      </g>
+      <path
+         fill="#1d262b"
+         d="m 583,-500 c -1,103 -63,155 -133,189 L 660,0 H 492 L 322,-274 H 241 V 0 H 90 v -714 h 208 c 176,0 281,53 285,214 z m -153,4 c 0,-94 -88,-95 -189,-94 v 193 c 104,4 189,-5 189,-99"
+         id="aM" />
+      <g
+         id="u">
+        <use
+           transform="scale(0.02)"
+           xlink:href="#aM"
+           id="use839" />
+        <use
+           transform="matrix(0.02,0,0,0.02,13.2,0)"
+           xlink:href="#D"
+           id="use841" />
+        <use
+           transform="matrix(0.02,0,0,0.02,25.02,0)"
+           xlink:href="#aH"
+           id="use843" />
+        <use
+           transform="matrix(0.02,0,0,0.02,32.76,0)"
+           xlink:href="#D"
+           id="use845" />
+        <use
+           transform="matrix(0.02,0,0,0.02,44.58,0)"
+           xlink:href="#G"
+           id="use847" />
+        <use
+           transform="matrix(0.02,0,0,0.02,53.26,0)"
+           xlink:href="#D"
+           id="use849" />
+        <use
+           transform="matrix(0.02,0,0,0.02,65.08,0)"
+           xlink:href="#R"
+           id="use851" />
+        <use
+           transform="matrix(0.02,0,0,0.02,78.22,0)"
+           xlink:href="#P"
+           id="use853" />
+        <use
+           transform="matrix(0.02,0,0,0.02,88.5,0)"
+           xlink:href="#D"
+           id="use855" />
+        <use
+           transform="matrix(0.02,0,0,0.02,100.32,0)"
+           xlink:href="#aq"
+           id="use857" />
+        <use
+           transform="matrix(0.02,0,0,0.02,111.34,0)"
+           xlink:href="#D"
+           id="use859" />
+        <use
+           transform="matrix(0.02,0,0,0.02,123.16,0)"
+           xlink:href="#ar"
+           id="use861" />
+        <use
+           transform="matrix(0.02,0,0,0.02,129.26,0)"
+           xlink:href="#D"
+           id="use863" />
+        <use
+           transform="matrix(0.02,0,0,0.02,141.08,0)"
+           xlink:href="#P"
+           id="use865" />
+        <use
+           transform="matrix(0.02,0,0,0.02,151.36,0)"
+           xlink:href="#L"
+           id="use867" />
+        <use
+           transform="matrix(0.02,0,0,0.02,160.04,0)"
+           xlink:href="#O"
+           id="use869" />
+        <use
+           transform="matrix(0.02,0,0,0.02,172.42,0)"
+           xlink:href="#G"
+           id="use871" />
+      </g>
+      <path
+         fill="#1d262b"
+         d="M 323,0 H 233 V -635 H 10 v -79 h 535 v 79 H 323 V 0"
+         id="aN" />
+      <g
+         id="v">
+        <use
+           transform="scale(0.02)"
+           xlink:href="#af"
+           id="use875" />
+        <use
+           transform="matrix(0.02,0,0,0.02,12.3,0)"
+           xlink:href="#Y"
+           id="use877" />
+        <use
+           transform="matrix(0.02,0,0,0.02,24.4,0)"
+           xlink:href="#aN"
+           id="use879" />
+        <use
+           transform="matrix(0.02,0,0,0.02,34.12,0)"
+           xlink:href="#Y"
+           id="use881" />
+        <use
+           transform="matrix(0.02,0,0,0.02,46.22,0)"
+           xlink:href="#ad"
+           id="use883" />
+        <use
+           transform="matrix(0.02,0,0,0.02,58.32,0)"
+           xlink:href="#ae"
+           id="use885" />
+        <use
+           transform="matrix(0.02,0,0,0.02,69.54,0)"
+           xlink:href="#af"
+           id="use887" />
+        <use
+           transform="matrix(0.02,0,0,0.02,81.84,0)"
+           xlink:href="#U"
+           id="use889" />
+        <use
+           transform="matrix(0.02,0,0,0.02,93.12,0)"
+           xlink:href="#aa"
+           id="use891" />
+        <use
+           transform="matrix(0.02,0,0,0.02,104.1,0)"
+           xlink:href="#U"
+           id="use893" />
+        <use
+           transform="matrix(0.02,0,0,0.02,115.38,0)"
+           xlink:href="#X"
+           id="use895" />
+        <use
+           transform="matrix(0.02,0,0,0.02,122.6,0)"
+           xlink:href="#X"
+           id="use897" />
+        <use
+           transform="matrix(0.02,0,0,0.02,129.82,0)"
+           xlink:href="#ag"
+           id="use899" />
+        <use
+           transform="matrix(0.02,0,0,0.02,134.98,0)"
+           xlink:href="#ah"
+           id="use901" />
+        <use
+           transform="matrix(0.02,0,0,0.02,147.34,0)"
+           xlink:href="#af"
+           id="use903" />
+        <use
+           transform="matrix(0.02,0,0,0.02,159.64,0)"
+           xlink:href="#T"
+           id="use905" />
+        <use
+           transform="matrix(0.02,0,0,0.02,169.22,0)"
+           xlink:href="#ac"
+           id="use907" />
+      </g>
+      <g
+         id="w">
+        <use
+           transform="scale(0.02)"
+           xlink:href="#ad"
+           id="use910" />
+        <use
+           transform="matrix(0.02,0,0,0.02,12.1,0)"
+           xlink:href="#ae"
+           id="use912" />
+        <use
+           transform="matrix(0.02,0,0,0.02,23.32,0)"
+           xlink:href="#af"
+           id="use914" />
+        <use
+           transform="matrix(0.02,0,0,0.02,35.62,0)"
+           xlink:href="#U"
+           id="use916" />
+        <use
+           transform="matrix(0.02,0,0,0.02,46.9,0)"
+           xlink:href="#aa"
+           id="use918" />
+        <use
+           transform="matrix(0.02,0,0,0.02,57.88,0)"
+           xlink:href="#U"
+           id="use920" />
+        <use
+           transform="matrix(0.02,0,0,0.02,69.16,0)"
+           xlink:href="#X"
+           id="use922" />
+        <use
+           transform="matrix(0.02,0,0,0.02,76.38,0)"
+           xlink:href="#X"
+           id="use924" />
+        <use
+           transform="matrix(0.02,0,0,0.02,83.6,0)"
+           xlink:href="#ag"
+           id="use926" />
+        <use
+           transform="matrix(0.02,0,0,0.02,88.76,0)"
+           xlink:href="#ah"
+           id="use928" />
+        <use
+           transform="matrix(0.02,0,0,0.02,101.12,0)"
+           xlink:href="#af"
+           id="use930" />
+        <use
+           transform="matrix(0.02,0,0,0.02,113.42,0)"
+           xlink:href="#T"
+           id="use932" />
+      </g>
+      <path
+         fill="#1d262b"
+         d="M 357,0 H 32 v -86 l 87,-40 v -462 l -87,-40 v -86 h 325 v 86 l -87,40 v 462 l 87,40 V 0"
+         id="aO" />
+      <path
+         fill="#1d262b"
+         d="m 227,-475 c 31,-44 77,-83 155,-81 141,5 206,121 206,282 0,162 -69,279 -210,284 -75,2 -118,-33 -151,-70 h -8 c 16,91 5,198 8,300 H 78 v -786 h 121 l 21,71 z m 109,364 c 80,0 99,-74 100,-165 0,-107 -34,-161 -102,-161 -91,1 -107,65 -107,162 0,96 18,164 109,164"
+         id="aP" />
+      <g
+         id="x">
+        <use
+           transform="scale(0.02)"
+           xlink:href="#aO"
+           id="use937" />
+        <use
+           transform="matrix(0.02,0,0,0.02,7.78,0)"
+           xlink:href="#R"
+           id="use939" />
+        <use
+           transform="matrix(0.02,0,0,0.02,20.92,0)"
+           xlink:href="#aP"
+           id="use941" />
+        <use
+           transform="matrix(0.02,0,0,0.02,33.58,0)"
+           xlink:href="#at"
+           id="use943" />
+        <use
+           transform="matrix(0.02,0,0,0.02,46.72,0)"
+           xlink:href="#L"
+           id="use945" />
+        <use
+           transform="matrix(0.02,0,0,0.02,55.4,0)"
+           xlink:href="#aM"
+           id="use947" />
+        <use
+           transform="matrix(0.02,0,0,0.02,68.6,0)"
+           xlink:href="#D"
+           id="use949" />
+        <use
+           transform="matrix(0.02,0,0,0.02,80.42,0)"
+           xlink:href="#aH"
+           id="use951" />
+        <use
+           transform="matrix(0.02,0,0,0.02,88.16,0)"
+           xlink:href="#D"
+           id="use953" />
+        <use
+           transform="matrix(0.02,0,0,0.02,99.98,0)"
+           xlink:href="#G"
+           id="use955" />
+        <use
+           transform="matrix(0.02,0,0,0.02,108.66,0)"
+           xlink:href="#D"
+           id="use957" />
+        <use
+           transform="matrix(0.02,0,0,0.02,120.48,0)"
+           xlink:href="#R"
+           id="use959" />
+        <use
+           transform="matrix(0.02,0,0,0.02,133.62,0)"
+           xlink:href="#P"
+           id="use961" />
+        <use
+           transform="matrix(0.02,0,0,0.02,143.9,0)"
+           xlink:href="#D"
+           id="use963" />
+        <use
+           transform="matrix(0.02,0,0,0.02,155.72,0)"
+           xlink:href="#aq"
+           id="use965" />
+        <use
+           transform="matrix(0.02,0,0,0.02,166.74,0)"
+           xlink:href="#D"
+           id="use967" />
+        <use
+           transform="matrix(0.02,0,0,0.02,178.56,0)"
+           xlink:href="#ar"
+           id="use969" />
+        <use
+           transform="matrix(0.02,0,0,0.02,184.66,0)"
+           xlink:href="#D"
+           id="use971" />
+        <use
+           transform="matrix(0.02,0,0,0.02,196.48,0)"
+           xlink:href="#P"
+           id="use973" />
+        <use
+           transform="matrix(0.02,0,0,0.02,206.76,0)"
+           xlink:href="#L"
+           id="use975" />
+        <use
+           transform="matrix(0.02,0,0,0.02,215.44,0)"
+           xlink:href="#O"
+           id="use977" />
+        <use
+           transform="matrix(0.02,0,0,0.02,227.82,0)"
+           xlink:href="#G"
+           id="use979" />
+      </g>
+      <g
+         id="y">
+        <use
+           transform="scale(0.02)"
+           xlink:href="#aD"
+           id="use982" />
+        <use
+           transform="matrix(0.02,0,0,0.02,12.56,0)"
+           xlink:href="#Q"
+           id="use984" />
+        <use
+           transform="matrix(0.02,0,0,0.02,24.64,0)"
+           xlink:href="#K"
+           id="use986" />
+        <use
+           transform="matrix(0.02,0,0,0.02,37.3,0)"
+           xlink:href="#D"
+           id="use988" />
+        <use
+           transform="matrix(0.02,0,0,0.02,49.12,0)"
+           xlink:href="#aq"
+           id="use990" />
+        <use
+           transform="matrix(0.02,0,0,0.02,60.14,0)"
+           xlink:href="#D"
+           id="use992" />
+        <use
+           transform="matrix(0.02,0,0,0.02,71.96,0)"
+           xlink:href="#L"
+           id="use994" />
+        <use
+           transform="matrix(0.02,0,0,0.02,80.64,0)"
+           xlink:href="#L"
+           id="use996" />
+        <use
+           transform="matrix(0.02,0,0,0.02,89.32,0)"
+           xlink:href="#I"
+           id="use998" />
+        <use
+           transform="matrix(0.02,0,0,0.02,95.42,0)"
+           xlink:href="#R"
+           id="use1000" />
+        <use
+           transform="matrix(0.02,0,0,0.02,108.56,0)"
+           xlink:href="#K"
+           id="use1002" />
+        <use
+           transform="matrix(0.02,0,0,0.02,121.22,0)"
+           xlink:href="#N"
+           id="use1004" />
+      </g>
+      <path
+         fill="#1d262b"
+         d="m 173,-463 c 34,-47 82,-85 167,-83 148,4 220,111 220,277 0,164 -73,276 -221,279 -79,2 -133,-36 -166,-78 h -6 c 11,94 4,205 6,308 H 85 v -776 h 72 l 12,73 z m 296,193 c 0,-112 -38,-202 -145,-202 -123,0 -151,76 -151,203 0,125 28,206 153,206 108,-4 141,-95 143,-207"
+         id="aQ" />
+      <g
+         id="z">
+        <use
+           transform="scale(0.02)"
+           xlink:href="#aQ"
+           id="use1008" />
+        <use
+           transform="matrix(0.02,0,0,0.02,12.3,0)"
+           xlink:href="#ae"
+           id="use1010" />
+        <use
+           transform="matrix(0.02,0,0,0.02,23.52,0)"
+           xlink:href="#af"
+           id="use1012" />
+        <use
+           transform="matrix(0.02,0,0,0.02,35.82,0)"
+           xlink:href="#U"
+           id="use1014" />
+        <use
+           transform="matrix(0.02,0,0,0.02,47.1,0)"
+           xlink:href="#ac"
+           id="use1016" />
+      </g>
+      <g
+         id="A">
+        <use
+           transform="scale(0.02)"
+           xlink:href="#ad"
+           id="use1019" />
+        <use
+           transform="matrix(0.02,0,0,0.02,12.1,0)"
+           xlink:href="#ae"
+           id="use1021" />
+        <use
+           transform="matrix(0.02,0,0,0.02,23.32,0)"
+           xlink:href="#af"
+           id="use1023" />
+        <use
+           transform="matrix(0.02,0,0,0.02,35.62,0)"
+           xlink:href="#U"
+           id="use1025" />
+      </g>
+      <g
+         id="B">
+        <use
+           transform="scale(0.02)"
+           xlink:href="#H"
+           id="use1028" />
+        <use
+           transform="matrix(0.02,0,0,0.02,19.34,0)"
+           xlink:href="#I"
+           id="use1030" />
+        <use
+           transform="matrix(0.02,0,0,0.02,25.44,0)"
+           xlink:href="#J"
+           id="use1032" />
+        <use
+           transform="matrix(0.02,0,0,0.02,38.1,0)"
+           xlink:href="#K"
+           id="use1034" />
+        <use
+           transform="matrix(0.02,0,0,0.02,50.76,0)"
+           xlink:href="#D"
+           id="use1036" />
+        <use
+           transform="matrix(0.02,0,0,0.02,62.58,0)"
+           xlink:href="#L"
+           id="use1038" />
+      </g>
+    </defs>
+  </g>
+</svg>

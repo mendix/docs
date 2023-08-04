@@ -28,7 +28,7 @@ To be able to create a **Get by key**, a **Patch** or a **Delete** operation, th
 
 ## 4 Operations {#operations}
 
-Select the check box for the operations that you want to generate:
+Select the checkbox for the operations that you want to generate:
 
 * **Get all** – allows clients to get all the objects
 * **Get by key** – allows clients to get an object, given its key

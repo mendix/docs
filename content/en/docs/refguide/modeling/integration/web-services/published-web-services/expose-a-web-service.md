@@ -28,7 +28,7 @@ This how-to was written based on Studio Pro version 5.20. All the images, names,
 
 ## 3 Data Structure and GUI
 
-1. Create the following **Customer** entity in your domain model (for details on how to create an entity, see [Creating a Basic Data Layer](/refguide/create-a-basic-data-layer/):
+1. Create the following **Customer** entity in your domain model (for details on how to create an entity, see [Configuring a Domain Model](/refguide/configuring-a-domain-model/)):
 
     {{< figure src="/attachments/howto/integration/expose-a-web-service/8945665.png" >}}
 

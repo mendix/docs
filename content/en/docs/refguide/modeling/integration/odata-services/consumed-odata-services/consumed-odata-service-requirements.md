@@ -70,7 +70,6 @@ The most commonly used attribute types can be used in your app. The types of the
 | String, Guid                   | String |
 | (Other)                        | (Ignored) |
 
-
 {{% alert color="warning" %}}
 When the OData endpoint contains operations, these are not imported in the consumed OData service. You can use a [Call REST service](/refguide/call-rest-action/) activity to call these operations.
 {{% /alert %}}
@@ -89,7 +88,7 @@ Associations to the generalizations with other exposed entities in the published
 When a generalization and a specialized entity are exposed in the same service. Only the association for the generalization will be visible when both entities are consumed. The now discrete specialization will have the inherited association. A possible work-around for this is to publish a service with the specializations without the generalization. Alternatively, the association for the generalization should not be published, allowing for the inherited association in the specialization to be preserved.
 {{% /alert %}}
 
-### 3.4 Binary Attributes
+### 3.4 Binary Attributes {#binary-attributes}
 
 The binary data format is supported in the form of *media entities*. When a media entity is dragged into the domain model, a corresponding external entity is created. The entity will have a `contents` attribute with the binary data.
 
@@ -106,4 +105,3 @@ When you publish a self-referencing association, you can only publish one side o
 ### 3.6 Enumerations
 
 Enumeration types that have one or more members with a name that is not a valid [enumeration value name](/refguide/enumerations/#312-name) are not supported.
-

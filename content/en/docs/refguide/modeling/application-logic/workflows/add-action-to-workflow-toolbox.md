@@ -54,7 +54,7 @@ To create the calling microflow and add it as the custom action to the workflow 
 6. Set the **Return value** for it to **Boolean**.
 7. Right-click the working area of the microflow and select **Properties**.
 8. In the **Microflow properties** dialog box, open the **Expose as workflow action** tab.
-9. Select the **Expose as workflow action** check-box:
+9. Select the **Expose as workflow action** checkbox:
 
     {{< figure src="/attachments/refguide/modeling/application-logic/workflows/add-action-to-workflow-toolbox/expose-as-workflow-action.png" alt="Expose as Workflow Action" >}}
 

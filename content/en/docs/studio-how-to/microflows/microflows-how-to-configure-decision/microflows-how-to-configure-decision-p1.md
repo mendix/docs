@@ -51,7 +51,7 @@ The app will open the corresponding page depending on the grade of a customer, f
         {{< figure src="/attachments/studio-how-to/microflows/microflows-how-to-configure-decision/microflows-how-to-configure-decision-p1/new-enumeration-add-item-bronze.png" width="550" >}}
 
     7. Click **Add Item** and repeat the step above to create the **Silver** and **Gold** grades.
-    8. Click **Create** to close the dialog boxs and create the attribute.
+    8. Click **Create** to close the dialog box and create the attribute.
 
         {{< figure src="/attachments/studio-how-to/microflows/microflows-how-to-configure-decision/microflows-how-to-configure-decision-p1/new-enumeration-bronze-silver-gold.png" width="550" >}}
 

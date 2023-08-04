@@ -260,6 +260,10 @@ For certain use cases, it is important for the Mendix runtime to know the public
 
 Yes, you can configure multiple custom domains for the same application. Please note that this can only be done by [uploading multiple own custom domain certificates](#Uploading). You can only [generate one certificate signing request for one custom domain](#Generating) for your application.
 
+### 8.5 How Do I Rotate My Custom Domain Certificate?
+
+
+
 ## 9 Read More
 
 * [Certificates](/developerportal/deploy/certificates/)

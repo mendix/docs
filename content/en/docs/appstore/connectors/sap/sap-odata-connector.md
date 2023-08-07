@@ -78,7 +78,7 @@ In this example, you will display a list of products from the GWSAMPLE_BASIC ODa
 
     {{< figure src="/attachments/appstore/connectors/sap-odata-connector/data-model.png" >}}
 
-For more information, see [Use the Model Creator for SAP Integrations](/refguide/use-sap-model-creator/) and [SAP Data Models](/refguide/sap-data-models/).
+For more information, see [Use the Model Creator for SAP Integrations](/refguide/use-sap-model-creator/).
 
 ### 3.2 Using the OData Connector for SAP Solutions
 
@@ -862,5 +862,5 @@ This domain model is part of the OData Connector for SAP solutions module and ca
 * [Entities](/refguide/entities/)
 * [SAP Cloud Connector](/appstore/connectors/sap/sap-cloud-connector/)
 * [SAP Help Portal](https://help.sap.com)
-* [SAP Data Models](/refguide/sap-data-models/)
+* [SAP Data Models](/refguide/use-sap-model-creator/)
 * [OData Query Options](/refguide/odata-query-options/)

@@ -23,7 +23,6 @@ The following articles contain the documentation for all platform-supported SAP 
 
 * [OData Connector for SAP Solutions](/appstore/connectors/sap/sap-odata-connector/) – describes the actions and domain model of the [OData Connector for SAP solutions](https://marketplace.mendix.com/link/component/74525) 
 * [BAPI Connector for SAP Solutions](/appstore/connectors/sap/sap-bapi-connector/) – describes the actions and domain model used when using this connector to integrate with SAP BAPI
-* [SAP Data Models](/refguide/sap-data-models/) – describes resources for consuming the SAP OData service
 * [Use the Model Creator for SAP Integrations](/refguide/use-sap-model-creator/)
 * [XSUAA Connector for SAP Business Technology Platform](/appstore/connectors/sap/sap-xsuaa-connector/) – presents information on the [XSUAA Connector for SAP Business Technology Platform](https://marketplace.mendix.com/link/component/78091)
 * [SAP Cloud Connector](/appstore/connectors/sap/sap-cloud-connector/) – describes using the connector so that a Mendix app deployed on SAP BTP can access any SAP system running on premises

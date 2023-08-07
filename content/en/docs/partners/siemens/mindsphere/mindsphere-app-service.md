@@ -31,7 +31,7 @@ Insights Hub IIoT for Makers is easy to add to your app but has the following li
 * Your app cannot be deployed to the Insights Hub platform and cannot be added to the Insights Hub Developer Cockpit
 * End-users cannot use Insights Hub credentials to sign in to your app, so Insights Hub does not know anything about individual app end-users — you must design your app to handle any required security for each end-user
 
-Insights Hub IIoT for Makers can be used in any Mendix app, for example an app which is based on the Mendix **Blank App**. However, it is not suitable for apps which are designed to be deployed to Insights Hub, such as the **Siemens Insights Hub Starter Application**, the **Siemens Insights Hub Operation Insights Example**, or an app which is using the **Siemens Insights Hub SSO** module.
+Insights Hub IIoT for Makers can be used in any Mendix app, for example an app which is based on the Mendix **Blank App**. However, it is not suitable for apps which are designed to be deployed to Insights Hub, such as the **Siemens Insights Hub Starter Application**, the **Siemens Insights Hub Monitor Example**, or an app which is using the **Siemens Insights Hub SSO** module.
 
 Unless you are adding features to an existing app, it is recommended that you start with the Mendix **Blank App**.
 

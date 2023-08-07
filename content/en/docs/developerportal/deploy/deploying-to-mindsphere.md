@@ -31,7 +31,7 @@ You can easily copy code examples shown within grey blocks into the clipboard. H
 
 {{% /alert %}}
 
-To help you with your first Insights Hub apps, there is also an example app which contains modules which call the Insights Hub APIs. See [How to Use the Siemens Insights Hub Operations Insights Example App](/partners/siemens/mindsphere-example-app/) for more information.
+To help you with your first Insights Hub apps, there is also an example app which contains modules which call the Insights Hub APIs. See [How to Use the Siemens Insights Hub Monitor Example App](/partners/siemens/mindsphere-example-app/) for more information.
 
 ## 2 Prerequisites{#prerequisites}
 

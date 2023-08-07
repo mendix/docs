@@ -25,8 +25,6 @@ You begin by creating a mini survey in the Developer Portal, and then you implem
 
 This document first describes all the pages in Mini Surveys in the Developer Portal, and then it describes the procedure for running a mini survey.
 
-{{% alert color="info" %}}In the GA release, we will allow you customise these opt-out rules from the App Insights portal.{{% /alert %}} 
-
 ## 2 Mendix Mini Survey Configuration 
 
 ### 2.1 Survey Overview {#survey-overview}
@@ -232,8 +230,16 @@ A mini survey has the following opt-out rules:
 * If a user has answered one or more questions in a survey, but did not finished the survey, then the survey will show again. However, if the user has closed the survey before finishing for the second time, the survey will not show again to this user.
 * If the user has answered all questions, then the survey will not show again to the user.
 
-## 4 Troubleshooting
+Survey Opt-Out rule is a variable cached to your internet browser. You can reset and show a survey multiple times by clearing your browser cache. If you are testing it's recommend you use the TEST_MODE constant to avoid clearing everytime.
 
-### 4.1 Surveys Do Not Work Locally When Running Multiple Applications
+{{% alert color="info" %}}In the GA release, we will allow you customise these opt-out rules from the App Insights portal.{{% /alert %}} 
 
-For details on how to resolve this issue, see the [Troubleshooting](/appstore/modules/app-insights/#troubleshooting) section in *Mendix Mini Surveys*.
+### 3.6 Unfinished Survey's 
+
+If a user only answers 1 or 2 questions and closes the Mini Survey. The answers will be stored in your app. Every 15 minutes a Scheduled Event will submit all unfinished Surveys collected in your app to AppInsights. A Survey answer must be more than 1 hour old before it will be submitted by the scheduled event.
+
+## 4 Troubleshooting & FAQ
+
+Please visit the module configuration documentation for more details. [Click Here](/appstore/modules/app-insights/)
+
+

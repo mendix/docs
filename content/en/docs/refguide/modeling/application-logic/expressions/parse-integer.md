@@ -18,13 +18,13 @@ Takes a string and parses it to an Integer/Long.
 
 The input parameters are described in the table below:
 
-| Value                        | Type    |
-| ---------------------------- | ------- |
-| The string to parse          | String  |
+| Value                        | Type         |
+| ---------------------------- | ------------ |
+| The string to parse          | String       |
 | Default value **(optional)** | Integer/Long |
 
 {{% alert color="info" %}}
-A default value can be specified to handle parsing errors. The range of valid values for an Integer/Long can be found in the [table of supported data types](/refguide/data-types/#supported-data-types).
+A default value can be specified to handle parsing errors. If no default value is provided, an error will occur if the string is not a number or if the parsed value is not within the range of valid values for an Integer/Long. The range of valid values for an Integer/Long can be found in this [table of supported data types](/refguide/data-types/#supported-data-types).
 {{% /alert %}}
 
 ### 2.2 Output

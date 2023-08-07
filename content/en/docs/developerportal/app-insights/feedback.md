@@ -10,53 +10,68 @@ tags: ["Feedback","Developer Portal", "feedback widget"]
 
 ## 1 Introduction
 
-Whenever feedback is sent from your app, it is collected in the **Feedback** page in **App Insights** in the Developer Portal. Here, you can view, organize, and manage all your feedback.
+The **Feedback** feature in the Developer Portal enables you to view feedback whenever it is sent from your app. You can also organize and manage all your feedback items here.
 
 {{% alert color="info" %}}When new feedback is submitted for your app, you will get a notification. You can check the notification by clicking the [Notifications](/developerportal/#notifications) icon. If you no longer want to receive feedback notifications for a specific app, you can [stop watching](https://docs.mendix.com/developerportal/#my-apps) the app. {{% /alert %}}
 
-# 2 Inbox and Archive
+The **Feedback** feature contains two pages: **Inbox** and **Archive**.
 
-The **Feedback** feature is divided into two pages: **Inbox** and **Archive**.
+## 2 Inbox
 
-## 2.1 Overview
-
-Starting out you may not have any feedback items. You can manually add your own feedback by using the ‘create new feedback item’ button. You can fill in the Subject, Description, the Email and optionally attach a screenshot.
+To manually add a feedback item, click **Create new feedback item** (if there is not any feedback item yet on the **Inbox** page) or click **Add item** (if there are already feedback items on the **Inbox** page), and then fill in the **Subject**, **Description**, and **Submitter Email** fields, and optionally **Upload Screenshots** in the **New Feedback** item dialog box.
 
 {{< figure src="/attachments/developerportal/app-insights/feedback/feedback-items.png" >}}
 
-From the Inbox, you can access all the feedback that’s been sent to your app. You will find some information for your feedback on this page.
+To export all feedback items into one Excel file, click **Export**.
 
-- The **ID** holds the unique number that’s given to the feedback
-- The **Subject** is the title of the feedback given by the reporter
-- The **Submitter** shows the email address of the reporter
-- The **Tags** are a list of tags given by one of the makers. Read more about tags below this section.
-- The **Status** is the status given by one of the makers. Read more about status below this section.
-- **Linked** shows how many items are linked to this feedback. Read more about Linked items below this section.
-- The **Date** shows the submission date of the feedback.
+To search by **Subject**, **Description**, **User Email** and **Tags**, type the key words in the search bar.
 
-## 2.2 Actions
+Clicking the filter bar will open the **Filter by** side panel. In this side panel, you can filter the feedback items using the **Environment**, **Submission date**, and **Assignees**.
 
-You can do the following actions on the page.
+In the list, you can find the following information for each feedback item:
 
-- You can create new feedback by adding a new item.
-- You can export all the feedback to an excel sheet using the Export button.
-- You can search by **Subject**, **Description**, **User Email** and **Tags** using the search bar.
-- Clicking the filter bar will open a new side panel. In this side panel, you can also filter on the type of environment the feedback is sent from, filter on submission dates and filter on assignees.
+- **ID** – the unique number that is assigned to the feedback (clicking the ID opens the [Feedback Details](#feedback-details) page)
+- **Subject** – the title of the feedback given by the reporter
+- **Submitter** – the email address of the reporter
+- **Tags** – a list of tags given by one of the makers (for more information, see the [Tags](#tags) section)
+- **Status** – the status given by one of the makers (for more information, see the [Status and Custom Status](#status) section)
+- **Linked** – how many items are linked to this feedback (for more information, see the [Linking Feedback](#linking-feedback) section)
+- **Date** – the submission date of the feedback
 
-Selecting any of the feedback opens up more options. Most of these options are explained in the feedback section below.
+If you select feedback items, you can see the following buttons: 
 
-- Link Items will link the feedback items together. You get to choose which item will be the primary item. See below for more information on linking items.
-- Move will move the items to any of the other apps you have access to. You can find more information in Moving Feedback.
-- Archive will set all the feedback items as Archived. See Statuses for more information.
-- Delete will remove the feedback item completely from Feedback Management. This is irreversible.
+* **Link Items** – Clicking this links the feedback items together. You get to choose which item will be the primary item (for more information, see the [Linking Feedback](#linking-feedback) section).
+* **Move** – Clicking this moves the items to any of the other apps you have access to (for more information, see the [Moving Feedback](#move-feedback) section)
+* **Archive** – Clicking this sets all the feedback items as archived (for more information, see the [Statuses and Custom Status](#status) section)
+* **Delete** – Clicking this removes the feedback item completely from **Feedback**. This is irreversible.
 
-# 3 Managing Feedback
+## 3 Archive
 
-{{% alert color="info" %}}Only people with the right access can manage feedback. To see if you have the right access, go to the [Team](https://docs.mendix.com/developerportal/collaborate/team/) page for this app, and then change your role to a role that has the permission **Can edit** **‘Stories,** **Documents and Feedback’**.{{% /alert %}}
+The **Archive** page shows all the archived feedback items.
 
-There are two places where you can interact with feedback: the side panel and the full detail page. Both can be accessed from either the Inbox page or the Archive page.
+To export all the archived feedback items into one Excel file, click **Export**.
 
-Clicking the number will send you to the full detail page, clicking on another part of the bar will send you to the side panel. Most information is shown on both pages, with the exception of the Contact Reporter function.
+To search by **Subject** and **ID**, type the key words in the search bar.
+
+Clicking the filter bar will open the **Filter by** side panel. In this side panel, you can filter the feedback items using the **Environment**, **Closed date**, **Submission date**, and **Assignees**.
+
+In the list, you can find the following information for each feedback item:
+
+- **ID** – the unique number that is assigned to the feedback.
+- **Subject** – the title of the feedback given by the reporter
+- **Submitter** – the email address of the reporter
+- **Tags** – a list of tags given by one of the makers (for more information, see the [Tags](#tags) section)
+- **Status** – the status given by one of the makers (for more information, see the [Status and Custom Status](#status) section)
+- **Date** – the submission date of the feedback
+- **Archive Date** – the date when the feedback was archived
+
+## 4 Managing Feedback
+
+{{% alert color="info" %}}Only people with the right access can manage feedback. To have the right access, go to the [Team](https://docs.mendix.com/developerportal/collaborate/team/) page for this app, and then change your role to a role that has the permission **Can edit** **‘Stories,** **Documents and Feedback’**.{{% /alert %}}
+
+There are two places where you can interact with feedback: the side panel and the full detail page. Both can be accessed from either the **Inbox** page or the **Archive** page.
+
+Clicking the ID will send you to the full detail page, clicking on another part of the bar will send you to the side panel. Most information is shown on both pages, with the exception of the Contact Reporter function.
 
 ## 3.1 Summary
 
@@ -81,7 +96,7 @@ Both the User Feedback and Metadata sections are collapsible.
 
 It is possible to assign another person or yourself to a feedback item. You can assign any maker from the project as an assignee. Whenever you assign another person as an assignee, they will get an email letting them know they are assigned as an assignee.
 
-## 3.4 Status and Custom Status
+## 3.4 Status and Custom Status {#status}
 
 Every feedback has a status. By default, there are two statuses: New and Closed. Whenever a feedback arrives in the app, it is set to New. Whenever you close a feedback, it will be set to Closed and moved to the Archived folder.
 
@@ -89,7 +104,7 @@ Every feedback has a status. By default, there are two statuses: New and Closed.
 
 It is also possible to add custom statuses. By clicking the cog wheel, you will open a pop up where you can manage your own custom statuses. Just like the default statuses, you can apply your custom status to a feedback item. Custom statuses will be shown on the Inbox page. It is not possible to create a custom status for the Archived page.
 
-## 3.5 Tags
+## 3.5 Tags {#tags}
 
 It is also possible to assign Tags for a feedback item. In the Tag section, you can select a Tag from the dropdown. You can create new tags by typing inside the dropdown. This will create a new tag associated to the project. Unlike Statuses, a feedback item can have as many tags as you want. There is no cap on the amount of tags you can create, but a tag has a limit of 50 characters.
 
@@ -123,7 +138,7 @@ Comments submitted to this section are only visible to other makers connected to
 
 In the full detail page, you can access the contact reporter function. Here, you can read and reply to the reporter. Each message is sent as an email to the reporter. Whenever a reporter sends a reply, it will be shown in this message box. When there are multiple feedback items linked, you will only send an email to the reporter of the current selected feedback.
 
-## 3.10 Moving feedback
+## 3.10 Moving feedback {#move-feedback}
 
 Feedback can be moved between projects. You can move feedback between any project you are a part of. Whenever you move feedback, you will also move all linked feedback. If you only want to move one item, you need to unlink the item(s) first.
 

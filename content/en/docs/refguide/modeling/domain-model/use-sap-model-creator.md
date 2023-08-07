@@ -8,10 +8,15 @@ description: "Describes how to use the Model Creator for SAP Integrations to gen
 tags: ["SAP", "OData", "integration", "SAP services", "BAPI"]
 aliases:
     - /partners/sap/use-sap-model-creator/
+    - /partners/sap/sap-data-models/
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
 ## 1 Introduction
+
+Mendix apps can consume OData services exposed by SAP back-end systems. To do this you need to use the OData Connector for SAP solutions.
+
+The OData Connector for SAP solutions needs to know details of the OData service which has been exposed. This involves mapping the data structures exposed by the OData service (via the $metadata URL) to entities and attributes of the domain model. This information is created as a Mendix module (.mpk) file which can be imported into your Mendix app.
 
 SAP data models reflect an OData service or BAPI from SAP back-end systems like SAP Business Suite (SAP ERP 6.0), SAP S/4HANA, and SAP S/4HANA Cloud.
 
@@ -25,6 +30,37 @@ For an OData service, there are four ways to create the data model:
 * [Selecting an API from the SAP Catalog Service](#catalog)
 * [Uploading an OData Metadata XML File](#Uploading)
 * [Providing the URL to the Metadata](#URL)
+
+### 1.2 SAP Data Models
+
+The Data Model module contains up to four resources which help to consume the OData Service:
+
+* Domain Model
+* Service Root
+* Entity Set Names
+* Function Names
+
+#### 1.2.1 Domain Model
+
+Each Mendix SAP data model has a domain model that describes the information in the OData service. The domain model consists of entities and their relations represented by associations. For more information, see [Domain Model](/refguide/domain-model/).
+
+{{< figure src="/attachments/refguide/modeling/domain-model/sap-data-models/sap-service-example.png" >}}
+
+{{% alert color="warning" %}}
+Do not change the names of entities, attributes, or associations in the Domain Model; they need to match the names used by the SAP OData service for the OData Connector for SAP solutions to work correctly.
+{{% /alert %}}
+
+#### 1.2.2 Service Root
+
+The module contains a constant whose value is the service root of the OData service. For example, the **GWSAMPLE_BASIC** data model, generated from the SAP Catalog Service using the Model Creator for SAP Integrations has a Service Root which is the constant GWSAMPLE_BASIC which has the value `https://sapes5.sapdevcenter.com:443/sap/opu/odata/iwbep/GWSAMPLE_BASIC`.
+
+#### 1.2.3 Entity Set Names
+
+The enumeration **EntitySetNames** contains a list of the collections in the service. These are entities which can be queried to produce a list of matching objects.
+
+#### 1.2.4 Function Names
+
+The enumeration **FunctionNames** contains a list of functions which are exposed by the OData service. To assist in using these functions the domain model will also include an entity for each function, suffixed with the string *Parameters*, which is used to provide the required parameters to the function.
 
 ## 2 Prerequisites
 

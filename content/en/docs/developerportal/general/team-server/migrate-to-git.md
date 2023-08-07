@@ -1,9 +1,12 @@
 ---
 title: "Migrate to Git"
 url: /developerportal/general/migrate-to-git/
+aliases:
+    - /developerportal/collaborate/migrate-to-git/
 weight: 10
 description: "Describes how to migrate apps to Git."
 tags: ["Studio Pro", "Team Server", "migration", "Git", "migrate"]
+#If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details. 
 ---
 
 ## 1 Introduction

@@ -232,7 +232,7 @@ A mini survey has the following opt-out rules:
 
 Survey Opt-Out rule is a variable cached to your internet browser. You can reset and show a survey multiple times by clearing your browser cache. If you are testing it's recommend you use the TEST_MODE constant to avoid clearing everytime.
 
-{{% alert color="info" %}}In the GA release, we will allow you customise these opt-out rules from the App Insights portal.{{% /alert %}} 
+{{% alert color="info" %}}In a future release, we will allow you customise these opt-out rules from the App Insights portal.{{% /alert %}} 
 
 ### 3.6 Unfinished Survey's 
 

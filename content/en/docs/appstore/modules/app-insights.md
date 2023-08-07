@@ -62,7 +62,7 @@ Copy the snippet called 'ShowSurvey_UsingDataView' to the page you want the surv
 If a user only answers 1 or 2 questions and closes the Mini Survey. The answers will be stored in your app. 
 Every 15 minutes a Scheduled Event will submit all unfinished Surveys collected in your app to AppInsights. A Survey answer must be more than 1 hour old before it will be submitted by the scheduled event. 
 
-### 4.2 How does TEST_MODE constant affect unfinished surveys.
+### 4.2 How does TEST_MODE constant affect unfinished surveys?
 
 When using Test Mode. If a user only answers 1 or 2 questions and closes the Mini Survey. The answers will be stored in your app. 
 Every 15 minutes a Scheduled Event will submit all unfinished Surveys collected in your app to AppInsights. A Survey answer must be more than 1 hour old before it will be submitted by the scheduled event. 
@@ -72,7 +72,7 @@ Every 15 minutes a Scheduled Event will submit all unfinished Surveys collected 
 It's recommend that you use only 1 Mini Survey Widget per page. If you are experimenting please enable the TEST_MODE constant. 
 If you app uses a master layout page and many child pages. You can place 1 Mini Survey Widget on the master layout page and then use mutiple 'ShowSurvey_OnAction' or 'ShowSurvey_UsingDataView' nanoflows actions to trigger the Survey to show. 
 
-### Survey Opt-Out Rules 
+### Survey Opt-Out Rules {#survey-rules}
 
 A mini survey has the following opt-out rules:
 
@@ -89,12 +89,8 @@ Survey Opt-Out rule is a variable cached to your internet browser. You can reset
 
 1. In your App. Please double check the 'APIKEY_APPINSIGHTS' constant has the correct API key from AppInsights https://appinsights.mendix.com/
 2. In your App. Open the Mini Survey Widget Settings. Check the correct SurveyID has been entered.
-3. In your App. Enabled TEST_MODE constant. If the Survey loads, then the Survey has triggered a Op-Out rule and will not show. [Survey Opt-out Rules](/developerportal/general/product-insights/#obtain-api-key)
+3. In your App. Enabled TEST_MODE constant. If the Survey loads, then the Survey has triggered a Op-Out rule and will not show. [Survey Opt-out Rules](/developerportal/general/product-insights/#survey-rules)
 4. In your browser. You can clear the Survey Opt-out rules by clearing your browser cache or using igcognito mode. 
-
-
-
-
 
 ### 4.2 Surveys do not work locally when running multiple applications
 

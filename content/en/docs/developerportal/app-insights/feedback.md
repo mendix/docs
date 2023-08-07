@@ -10,13 +10,13 @@ tags: ["Feedback","Developer Portal", "feedback widget"]
 
 ## 1 Introduction
 
-Whenever feedback is sent from your app, it is collected in Feedback Management. In the developer portal, you can find the Feedback Management page. Here, you can view, organize and manage all your feedback.
+Whenever feedback is sent from your app, it is collected in the **Feedback** page in **App Insights** in the Developer Portal. Here, you can view, organize, and manage all your feedback.
 
-{{% alert color="info" %}}When new feedback is submitted for your app, you will also get a notification. You can check the notification by clicking the [Notifications](https://docs.mendix.com/developerportal/#notifications) icon. If you no longer want to receive feedback notifications for a specific app, you can [stop watching](https://docs.mendix.com/developerportal/#my-apps) the project. {{% /alert %}}
+{{% alert color="info" %}}When new feedback is submitted for your app, you will get a notification. You can check the notification by clicking the [Notifications](/developerportal/#notifications) icon. If you no longer want to receive feedback notifications for a specific app, you can [stop watching](https://docs.mendix.com/developerportal/#my-apps) the app. {{% /alert %}}
 
 # 2 Inbox and Archive
 
-The feedback management app is divided into two pages: Inbox and Archive.
+The **Feedback** feature is divided into two pages: **Inbox** and **Archive**.
 
 ## 2.1 Overview
 
@@ -24,23 +24,23 @@ Starting out you may not have any feedback items. You can manually add your own 
 
 {{< figure src="/attachments/developerportal/app-insights/feedback/feedback-items.png" >}}
 
-From the Inbox, you can access all the feedback that’s been sent to your app. You’ll find some information for your feedback on this page.
+From the Inbox, you can access all the feedback that’s been sent to your app. You will find some information for your feedback on this page.
 
-- The ID holds the unique number that’s given to the feedback
-- The Subject is the title of the feedback given by the reporter
-- The Submitter shows the email address of the reporter
-- The Tags are a list of tags given by one of the makers. Read more about tags below this section.
-- The Status is the status given by one of the makers. Read more about status below this section.
-- Linked shows how many items are linked to this feedback. Read more about Linked items below this section.
-- The date shows the submission date of the feedback.
+- The **ID** holds the unique number that’s given to the feedback
+- The **Subject** is the title of the feedback given by the reporter
+- The **Submitter** shows the email address of the reporter
+- The **Tags** are a list of tags given by one of the makers. Read more about tags below this section.
+- The **Status** is the status given by one of the makers. Read more about status below this section.
+- **Linked** shows how many items are linked to this feedback. Read more about Linked items below this section.
+- The **Date** shows the submission date of the feedback.
 
 ## 2.2 Actions
 
-There are a couple of actions you can do on this page.
+You can do the following actions on the page.
 
 - You can create new feedback by adding a new item.
 - You can export all the feedback to an excel sheet using the Export button.
-- You can search by Subject, Description, User Email and Tags using the search bar.
+- You can search by **Subject**, **Description**, **User Email** and **Tags** using the search bar.
 - Clicking the filter bar will open a new side panel. In this side panel, you can also filter on the type of environment the feedback is sent from, filter on submission dates and filter on assignees.
 
 Selecting any of the feedback opens up more options. Most of these options are explained in the feedback section below.
@@ -50,7 +50,7 @@ Selecting any of the feedback opens up more options. Most of these options are e
 - Archive will set all the feedback items as Archived. See Statuses for more information.
 - Delete will remove the feedback item completely from Feedback Management. This is irreversible.
 
-# 3 Manage Feedback
+# 3 Managing Feedback
 
 {{% alert color="info" %}}Only people with the right access can manage feedback. To see if you have the right access, go to the [Team](https://docs.mendix.com/developerportal/collaborate/team/) page for this app, and then change your role to a role that has the permission **Can edit** **‘Stories,** **Documents and Feedback’**.{{% /alert %}}
 

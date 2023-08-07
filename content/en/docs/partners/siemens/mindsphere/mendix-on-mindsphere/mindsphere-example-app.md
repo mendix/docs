@@ -149,7 +149,7 @@ The example app has two Mendix user roles, *Admin* and *User*. These are mapped 
 
 This means that a Insights Hub user who is given the **Admin Role** for the app will be given the *admin* scope and will therefore have the Mendix user roles *admin*.
 
-{{< figure src="/attachments/partners/siemens/mindsphere/mendix-on-mindsphere/mindsphere-example-app/image6.png" alt="Relationship of Insights Hub App user roles with Mendix App user roles" >}}
+{{< figure src="/attachments/partners/siemens/mindsphere/mendix-on-mindsphere/mindsphere-example-app/roles-and-scopes.png" alt="Relationship of Insights Hub App user roles with Mendix App user roles" >}}
 
 For more information see the Insights Hub documentation [Roles and Scopes for Applications](https://developer.mindsphere.io/concepts/concept-roles-scopes.html#available-roles-of-mindsphere-apis).
 

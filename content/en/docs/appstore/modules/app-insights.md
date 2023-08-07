@@ -47,8 +47,55 @@ To import this module into your app, follow the instructions in [How to Use Mark
 
 {{% alert color="info" %}}Once the start time of the mini survey is reached, the mini survey will start running, and all the target users of the mini survey will receive the survey automatically.{{% /alert %}}
 
-## 4 Troubleshooting {#troubleshooting}
 
-### 4.1 Surveys Do Not Work Locally When Running Multiple Applications
+## 4 FAQ {#FAQ}
+
+### 4.1 How do I use a constant variable Survey ID to show a Survey?
+
+This can be achieved using a Dataview and nanoflow solution we have provided in the module. In your app, goto Marketplace modules > AppInsights_MiniSurvey > Private(Do Not Touch) > Resources > Deprecated Widgets > ShowSurvey_UsingConstant folder. 
+Copy the snippet called 'ShowSurvey_UsingDataView' to the page you want the survey to load. You also need to insure that the Mini Survey Widget is on the same page. Next, open the 'ShowSurvey_UsingConstant' nanoflow and open the SurrveyID Action Activity, replace the string value with your constant variable. 
+
+{{% alert color="info" %}} We will continue to support this depreacted solution. In a future version you will be able to configure SurveyID's in AppInsights Dashboard, without configuring constants or string values in your app.{{% /alert %}}
+
+### 4.2 Scheduled Events; What happends if a user does not finish answering a Survey? 
+
+If a user only answers 1 or 2 questions and closes the Mini Survey. The answers will be stored in your app. 
+Every 15 minutes a Scheduled Event will submit all unfinished Surveys collected in your app to AppInsights. A Survey answer must be more than 1 hour old before it will be submitted by the scheduled event. 
+
+### 4.2 How does TEST_MODE constant affect unfinished surveys.
+
+When using Test Mode. If a user only answers 1 or 2 questions and closes the Mini Survey. The answers will be stored in your app. 
+Every 15 minutes a Scheduled Event will submit all unfinished Surveys collected in your app to AppInsights. A Survey answer must be more than 1 hour old before it will be submitted by the scheduled event. 
+
+### Can I use multiple widgets on a single page? 
+
+It's recommend that you use only 1 Mini Survey Widget per page. If you are experimenting please enable the TEST_MODE constant. 
+If you app uses a master layout page and many child pages. You can place 1 Mini Survey Widget on the master layout page and then use mutiple 'ShowSurvey_OnAction' or 'ShowSurvey_UsingDataView' nanoflows actions to trigger the Survey to show. 
+
+### Survey Opt-Out Rules 
+
+A mini survey has the following opt-out rules:
+
+* If a user has closed a survey, without answering any questions, then the survey will not show again to this user .
+* If a user has answered one or more questions in a survey, but did not finished the survey, then the survey will show again. However, if the user has closed the survey before finishing for the second time, the survey will not show again to this user.
+* If the user has answered all questions, then the survey will not show again to the user.
+
+Survey Opt-Out rule is a variable cached to your internet browser. You can reset and show a survey multiple times by clearing your browser cache. If you are testing it's recommend you use the TEST_MODE constant to avoid clearing everytime. 
+
+
+## 5 Troubleshooting {#troubleshooting}
+
+### 5.1 Why is my Survey not Showing? 
+
+1. In your App. Please double check the 'APIKEY_APPINSIGHTS' constant has the correct API key from AppInsights https://appinsights.mendix.com/
+2. In your App. Open the Mini Survey Widget Settings. Check the correct SurveyID has been entered.
+3. In your App. Enabled TEST_MODE constant. If the Survey loads, then the Survey has triggered a Op-Out rule and will not show. [Survey Opt-out Rules](/developerportal/general/product-insights/#obtain-api-key)
+4. In your browser. You can clear the Survey Opt-out rules by clearing your browser cache or using igcognito mode. 
+
+
+
+
+
+### 4.2 Surveys do not work locally when running multiple applications
 
 If this occurs, upgrade the module to v1.1.0 or above, and ensure to clear your browsers cached data to remove deprecated feature – you only need to do this one time in your browser.

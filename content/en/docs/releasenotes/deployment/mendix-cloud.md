@@ -17,6 +17,12 @@ For information on the current status of deployment to Mendix Cloud and any plan
 
 ## 2023
 
+### August 7, 2023
+
+#### Improvements
+
+* We added the AWS South America (São Paulo) region as a new deployment target.
+
 ### July 3, 2023
 
 #### Improvements

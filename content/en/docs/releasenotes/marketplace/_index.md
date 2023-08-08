@@ -17,8 +17,8 @@ These release notes cover changes made to the [Mendix Marketplace](/appstore/).
 
 #### Improvements
 
-* Categories are now **Content Types**. We have reduced the amount of Content Types and made them consistent across the platform. Visit the [Marketplace Guide](/appstore/general/app-store-overview/) to learn more about the different Content Types available.
-* Subcategories have been replaced with **Categories**. You can select one to max three Categories per component. Categories can be used by Marketplace consumers to filter on content and find the right component for their use case.
+* Categories are now **Content Types**. We have reduced the number of Content Types and made them consistent across the platform. Visit the [Marketplace Guide](/appstore/general/app-store-overview/) to learn more about the different Content Types available.
+* Subcategories have been replaced with **Categories**. You can select between one and three Categories per component. Categories can be used by Marketplace consumers to filter on content and find the right component for their use case.
 
 ### June 29, 2023
 

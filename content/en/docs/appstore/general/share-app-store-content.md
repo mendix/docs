@@ -101,22 +101,24 @@ To start, click **Add content** in the top bar of the Marketplace home screen. F
 
 ### 4.2 General {#general}
 
-On the **General** page,  you need to provide some details about your component. The information you entered above is pre-filled on this page.
+On the **General** page,  you need to provide some details about your component. 
 
 #### 4.2.1 Describing Your Content
 
 Follow these steps to describe your content:
 
-1. Enter a **Name** for your component.
-2. Enter a **Description** of your component.
+1. Select a **Content type** for your component. 
+
+    {{% alert color="warning" %}}You can only set the content type in the initial version of your content. You cannot change this setting after the initial version is published.{{% /alert %}}
+
+2. You can add up to 3 **Categories** for your component, what will help Makers find your component easier.
+
+3. Enter a **Name** for your component.
+4. Enter a **Description** of your component.
 
     {{% alert color="warning" %}}You can use rich text in the editor. However, using rich text at the beginning of the description is not recommended, as the rich text will not get rendered properly. You should add a few lines of regular text before using rich text.{{% /alert %}}
 
-3. Select a **Content type** of your component. 
-
-    {{% alert color="warning" %}}You can only set the category in the initial version of your content. You cannot change this setting after the inital version is published.{{% /alert %}}
-
-4. You can add up to 3 **Categories** for your component, what will help Makers find your component easier. 
+ 
 5. Select the location where you want to publish your component:
 
     * <a id="public-app-store"></a>**Public Marketplace (all Mendix users)** – your component will be available to the Mendix community (this content will have to be reviewed and approved by Mendix before it is available)
@@ -124,7 +126,6 @@ Follow these steps to describe your content:
 
     {{% alert color="warning" %}}You can only set the location in the initial version of your content. You cannot change this setting by updating the Marketplace component later.{{% /alert %}}
 
-6. Select the **Studio Pro Version** on which you built the content.
 
 #### 4.2.2 Providing License Details {#license}
 
@@ -204,6 +205,8 @@ If you are using **Solutions**, you will not see the option to select your conte
     * When you are finished, click **OK**
 * If you select **Manual upload**, follow the steps in the dialog box for uploading the package source file
     * When you are finished, click **Save**
+
+Select the **Studio Pro Version** on which you built the content.
 
 If this is the first version of the component you are uploading, the number in the **Version** section of the **Package** page will be automatically set to **1.0.0**. 
 

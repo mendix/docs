@@ -38,8 +38,8 @@ The home page is your entry point to the various parts of the Mendix Marketplace
 | **Theme** | Ready to use layouts, themes of a personalised style which could be shared and used by Makers to enrich the app with a specific design. |
 | **Service** | Software functionality that can be re-used for different use cases. Services usually include APIs that users can interact with by configuring connection in the app’s module. |
 | **Starter Template** | A sample project which has certain capabilities in place to provide a basis for Maker to start developing app. Maker does not create an app from blank state rather has already some features configured.|
-| **Solution** | Out-of-the-box solutions are aimed at industries and domain problems, and they deliver instant value. These solutions are ready to use and can be adapted using the core Mendix Platform to fully meet customer’s requirements. |
-| **Industry Template** | Accelerators for implementing solutions to help increase speed-to-value and time-to-market. Industry Templates help to organize development content that customer wants to reuse for customer-specific solutions.  |
+| **Solution** | Out-of-the-box solutions are aimed at industries and domain problems, and they deliver instant value. These solutions are usually 80% or more ready for use and need minimal adaptation to make it work for the customer specific use case. |
+| **Industry Template** | Accelerators for implementing industry specific processes. An Industry Template will increase speed-to-value and time-to-market. They are a great starting point for common use cases within the relevant Industry. Contrary to solutions, Industry Template are a starter template that’s intended to provide inspiration on how you can utilize Mendix to create apps for industry specific processes. It will maybe cover 20% of the process.  |
 
 
 The following filter options are also available:

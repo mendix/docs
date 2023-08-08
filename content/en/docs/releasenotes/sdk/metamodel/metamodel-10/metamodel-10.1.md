@@ -6,7 +6,7 @@ weight: 99
 
 ## 10.1.0
 
-**Release date: June 19, 2023**
+**Release date: July 24, 2023**
 
 ### Microflows
 

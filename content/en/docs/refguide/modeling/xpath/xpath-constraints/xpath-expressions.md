@@ -75,7 +75,7 @@ As with the example above, it does not retrieve customers with no orders.
 {{< tabpane >}}
   {{% tab header="Environments:" disabled=true /%}}
   {{< tab header="Studio Pro" lang="StudioPro" >}}
-    //Sales.Customer[Sales.Customer_Order/Sales.Order/Status = empty]
+    [Sales.Customer_Order/Sales.Order/Status = empty]
     {{% /tab %}}
   {{< tab header="Java" lang="JavaQuery" >}}
     //Sales.Customer[Sales.Customer_Order/Sales.Order/Status = empty]
@@ -100,7 +100,7 @@ The following query retrieves all the customers who have the same name as the ci
 {{< tabpane >}}
   {{% tab header="Environments:" disabled=true /%}}
   {{< tab header="Studio Pro" lang="StudioPro" >}}
-    //Sales.Customer[Name = City]
+    [Name = City]
     {{% /tab %}}
   {{< tab header="Java" lang="JavaQuery" >}}
     //Sales.Customer[Name = City]

@@ -41,7 +41,6 @@ The home page is your entry point to the various parts of the Mendix Marketplace
 | **Starter Template** | Sample projects which have certain capabilities in place to provide a basis for the Maker to start developing their app. The Maker does not create an app from a blank template but from a template which already has some features configured.|
 | **Industry Template** | Accelerators for implementing industry-specific processes. Industry Templates increase speed-to-value and time-to-market. They are a great starting point for common use cases within the relevant Industry. Contrary to solutions, Industry Templates are starter templates which are intended to provide inspiration for utilizing Mendix to create apps for industry-specific processes. They will usually cover around 20% of the process.  |
 
-
 The following filter options are also available:
 
 * **Category**
@@ -124,7 +123,7 @@ Click an item in the sidebar to go to the page for that content:
 
 On this page, you can see and manage the drafts for all the Marketplace content you have started.
 
-This page presents details on how many total drafts you have, which drafts are ready to publish or are awating approval, and which drafts have been declined.
+This page presents details on how many total drafts you have, which drafts are ready to publish or are awaiting approval, and which drafts have been declined.
 
 {{< figure src="/attachments/appstore/general/app-store-overview/my-drafts.png" >}}
 

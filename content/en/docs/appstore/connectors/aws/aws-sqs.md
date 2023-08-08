@@ -34,12 +34,12 @@ After you install the connector, you can find it in the **App Explorer**, in the
 
 ### 3.1 Configuring AWS Authentication
 
-In order to use the Amazon 3 service, you must authenticate with AWS. To do so, you must set up a configuration profile in your Mendix app. After you set up the configuration profile, the connector module handles the authentication internally.
+In order to use the Amazon SQS service, you must authenticate with AWS. To do so, you must set up a configuration profile in your Mendix app. After you set up the configuration profile, the connector module handles the authentication internally.
 
 1. Ensure that you have installed and configured the AWS Authentication connector, as mentioned in [Prerequisites](#prerequisites).
 2. Decide whether you want to use session or static credentials to authenticate.
 
-    The Amazon S3 connector supports both session and static credentials. By default, the connector is pre-configured to use static credentials, but you may want to switch to session credentials, for example, to increase the security of your app. For an overview of both authentication methods, see [AWS Authentication](/appstore/connectors/aws/aws-authentication/).
+    The Amazon SQS connector supports both session and static credentials. By default, the connector is pre-configured to use static credentials, but you may want to switch to session credentials, for example, to increase the security of your app. For an overview of both authentication methods, see [AWS Authentication](/appstore/connectors/aws/aws-authentication/).
 
 3. In the **App Explorer**, double-click the **Settings** for your app.
     
@@ -77,17 +77,22 @@ For example, to list all existing Amazon SQS subscriptions, implement the [List 
 2. Enter a name for your microflow, for example, *ACT_ListQueues*, and then click **OK**.
 3. In the new microflow, configure AWS Authentication with either session or static credentials.
     For more information, see [AWS Authentication](/appstore/connectors/aws-authentication/).
-4. In the **App Explorer**, in the **AmazonSQSConnector** section, find the **List Queues** activity.
-6. Drag the **List Queues** activity onto the work area of your microflow.
-7. In the **Toolbox** pane, search for the **Create object** activity and place it before the **List Queues** activity in the microflow.
-8. Double-click the **Create object** activity and select the [*ListQueuesRequest*](#listqueuesrequest) enitity.
-9. Pass the *Credentials*, *AWS Region* and *ListQueuesRequest* as input parameters to the *List Queues* activity.
-10. In the **Toolbox** pane, search for the **Retrieve** activity and drag it onto the microflow area.
-11. Position the **Retrieve** activity between the **ListQueue** activity and the microflow end event.
-12. Double-click the **Retrieve** activity.
-13. In the **Select Association** dialog box, in the **Association** section, click **Select**, and then under **ListQueueResponse** select *ListQueue_ListQueuesResponse* as the association.
-14. Click **OK**.
-15. Configure a method for triggering the **ACT_ListQueues** microflow.
+4. In the **App Explorer**, in the **AmazonSQSConnector** > **Operations** section, find the **List Queues** activity.
+5. Drag the **List Queues** activity onto the work area of your microflow.
+6. In the **Toolbox** pane, search for the **Create object** activity and place it before the **List Queues** activity in the microflow.
+7. Double-click the **Create object** activity and select the [*ListQueuesRequest*](#listqueuesrequest) entity.
+8. Double-click the **List Queues** activity to configure the required parameters.
+9. Click **Edit parameter value**, edit the **AWS_Region** parameter, and change **Type** to **Expression**.
+10. In the expression builder, type *AWS_Region*, and then press **Ctrl+Space**.
+11. In the autocomplete dialog, select **AWSTwinMakerConnector.AWS_Region**, then type **.** and select your AWS region from the list.
+12. Click **OK**.
+13. Click Edit parameter value, edit the **ListQueues** parameter, and let it auto-fill.
+14. In the **Toolbox** pane, search for the **Retrieve** activity and drag it onto the microflow area.
+15. Position the **Retrieve** activity between the **ListQueue** activity and the microflow end event.
+16. Double-click the **Retrieve** activity.
+17. In the **Select Association** dialog box, in the **Association** section, click **Select**, and then under **ListQueueResponse** select *ListQueue_ListQueuesResponse* as the association.
+18. Click **OK**.
+19. Configure a method for triggering the **ACT_ListQueues** microflow.
     For example, you can trigger a microflow by associating it with a custom button on a page in your app. For an example of how this can be implemented, see [Create a Custom Save Button](/howto/logic-business-rules/create-a-custom-save-button/).
 
 To help you work with the Amazon SQS connector, the following sections of this document list the available entities, enumerations, and activities that you can use in your application.

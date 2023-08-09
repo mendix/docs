@@ -21,7 +21,7 @@ The Mini Surveys feature consists of two parts:
 
 * A back-end dashboard in the Developer Portal for you to create surveys and aggregate your survey results.
 
-You begin by creating a mini survey in the Developer Portal, and then you implement the mini survey by configuring the [Mendix Mini Surveys](/appstore/modules/app-insights/) module in Studio Pro. After the mini survey is running, you can view responses that have been collected in Mini Surveys in the Developer Portal and export the responses to an XLSX file.
+You begin by creating a mini survey in the Developer Portal, and then you implement the mini survey by configuring the [Mendix Mini Surveys](/appstore/modules/mendix-mini-surveys/) module in Studio Pro. After the mini survey is running, you can view responses that have been collected in Mini Surveys in the Developer Portal and export the responses to an XLSX file.
 
 This document first describes all the pages in Mini Surveys in the Developer Portal, and then it describes the procedure for running a mini survey.
 
@@ -134,7 +134,7 @@ This tab shows the test data that has been collected from testers in the test mo
 
 You can collect test data using two methods:
 
-* Change the value of the **TEST_MODE** constant in the [Mendix Mini Surveys](/appstore/modules/app-insights/) module. This will show **[TEST_MODE]** on the survey widget UI.
+* Change the value of the **TEST_MODE** constant in the [Mendix Mini Surveys](/appstore/modules/mendix-mini-surveys/) module. This will show **[TEST_MODE]** on the survey widget UI.
 * Select the **Enable Mendix SSO test users"** checkbox on the **Settings** tab of **Survey Overview**, which marks the app team members as testers. Note that if an app team member is not authenticated through Mendix SSO, this setting does not work for them. The survey widget will not show **[TEST_MODE]** on the UI.
 
 ## 3 Running a Mini Survey
@@ -203,11 +203,11 @@ To obtain an API key for the implementation, follow these steps:
 
 #### 3.3.2 Installing and Configuring the Module
 
-To install the [Mendix Mini Surveys](/appstore/modules/app-insights/) module, follow these steps:
+To install the [Mendix Mini Surveys](/appstore/modules/mendix-mini-surveys/) module, follow these steps:
 
 1. Open your app in Studio Pro.
 2. Follow the instructions in [How to Use Marketplace Content in Studio Pro](/appstore/general/app-store-content/) to import the module into your app.
-3. Follow the instructions in the [Configuration](/appstore/modules/app-insights/#configuration) section in *Mendix Mini Surveys* to complete the implementation of the mini survey in Studio Pro.
+3. Follow the instructions in the [Configuration](/appstore/modules/mendix-mini-surveys/#configuration) section in *Mendix Mini Surveys* to complete the implementation of the mini survey in Studio Pro.
 
 ### 3.4 Viewing/Exporting Responses {#view-export-responses}
 
@@ -240,4 +240,4 @@ If a user only answers one or two questions before they close the mini survey. T
 
 ## 4 Troubleshooting & FAQ
 
-For troubleshooting information and FAQ, see the [Troubleshooting](/appstore/modules/app-insights/#troubleshooting) section and the [FAQ](#faq) section in *Mendix Mini Surveys*.
+For troubleshooting information and FAQ, see the [Troubleshooting](/appstore/modules/mendix-mini-surveys/#troubleshooting) section and the [FAQ](#faq) section in *Mendix Mini Surveys*.

@@ -1,12 +1,9 @@
 ---
 title: "Mendix Mini Surveys"
-url: /appstore/modules/app-insights/
+url: /appstore/modules/mendix-mini-surveys/
 category: "Modules"
 description: "Describes the configuration and usage of the Mendix Mini Surveys module, which is available in the Mendix Marketplace."
 tags: ["marketplace", "marketplace component", "app insights", "mini survey", "mini survey"]
-aliases:
-    - /appstore/modules/product-insights/
-#If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the app. See Mapping to Apps for more details. 
 ---
 
 ## 1 Introduction

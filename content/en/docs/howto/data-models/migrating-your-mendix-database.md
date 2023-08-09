@@ -137,7 +137,7 @@ The source database is a PostgreSQL database with the downloaded database from t
 
 Having configured the Mendix app, just run the application locally and it will automatically migrate the database schema and all the data from the source database to the target database. You should always validate it first by viewing the application in a browser.
 
-#### 5.2.2 Migrating to SAP HANA on SAP BTP CLI
+#### 5.2.2 Migrating to SAP HANA by using the SAP BTP CLI
 
 If you have a Mendix application running on SAP BTP with PostgreSQL as the database service and want to migrate the database to SAP HANA, you will need to take some extra steps to migrate the existing data.
 

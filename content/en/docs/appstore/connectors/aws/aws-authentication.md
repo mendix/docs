@@ -183,8 +183,8 @@ If you have credentials that have been generated without the help of the **GetSe
 
 1. Create a **Credentials** object with the following parameters:
     * **AccessKeyId** - your IAM access key 
-	* **SecretAccesskey** - your secret access key
-	* **Provider** - set to *_Session*
+    * **SecretAccesskey** - your secret access key
+    * **Provider** - set to *_Session*
 		
 2. Create a **SessionToken** object with the following parameters:
     * **Token** - your token 

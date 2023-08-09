@@ -33,7 +33,7 @@ To import this module into your app, follow the instructions in [How to Use Mark
     * For the on-action option:
 
         1. Open the **Show Survey** folder, then copy the **ShowSurvey_OnAction** nanoflow to your own module.
-        2. In the nanoflow, double-click **Create String variable**, fill in the **Survey ID** of the mini survey, and then save the changes. You can find the survey ID on the [Settings](/developerportal/app-insights/mini-surveys/#survey-details-settings) tab or [Implementation](/developerportal/app-insights/mini-surveys/#survey-details-implementation) tab of the survey details page in **App Insights** in the Developer Portal.
+        2. In the nanoflow, double-click **Create String variable**, fill in the **Survey ID** of the mini survey, and then save the changes. You can find the survey ID on the [Settings](/developerportal/app-insights/mini-surveys/#survey-details-settings) tab or [Implementation](/developerportal/app-insights/mini-surveys/#survey-details-implementation) tab of the survey details page in **Mini Surveys** in the Developer Portal.
         3. (Optional) Double-click **CHANGE ME**, add your microflow or nanoflow action, then save the changes.
         4. Create a button that calls the **ShowSurvey_OnAction** nanoflow on the page where **Template_SurveyWidget** is placed. Mendix recommends renaming the flow to something that describes the original action.
 
@@ -47,8 +47,53 @@ To import this module into your app, follow the instructions in [How to Use Mark
 
 {{% alert color="info" %}}Once the start time of the mini survey is reached, the mini survey will start running, and all the target users of the mini survey will receive the survey automatically.{{% /alert %}}
 
-## 4 Troubleshooting {#troubleshooting}
+ ## 4 FAQ {#FAQ} 
 
-### 4.1 Surveys Do Not Work Locally When Running Multiple Applications
+### 4.1 How to Use a Constant Variable Survey ID to Show a Survey? 
+
+You can achieve this using the data view and nanoflow solution we provide in the module as follows:
+
+1. In your app, go to **Marketplace modules** > AppInsights_MiniSurvey > **Private(Do Not Touch)** > **Resources** > **Deprecated Widgets** > **ShowSurvey_UsingConstant folder**. 
+2. Copy the **ShowSurvey_UsingDataView** snippet to the page where you want the survey to load. You also need to insure that the Mini Survey widget is on the same page.
+3. Open the **ShowSurvey_UsingConstant** nanoflow and open the **SurveyID** action activity, replace the string value with your constant variable.
+
+{{% alert color="info" %}} We will continue to support this deprecated solution. In a future version you will be able to configure survey IDs in the App Insights dashboard, without configuring constants or string values in your app.{{% /alert %}} 
+
+### 4.2 What Happens if a User Does Not Finish Answering a Survey? {#unfinished-survey}
+
+If a user only answers one or two questions before they close the mini survey. The answers will be stored in your app. Every 15 minutes a scheduled event will submit all unfinished surveys collected in your app to the **Mini Surveys** in the Developer Portal. A survey answer must be more than one hour old before it is submitted by the scheduled event.
+
+### 4.3 Does `TEST_MODE` Constant Affect Unfinished Surveys?
+
+No. The behaviors are exactly the same as described in the [What Happens if a User Does Not Finish Answering a Survey?](#unfinished-survey) section above.
+
+### 4.4 Can I use Multiple Widgets on a Single Page?
+
+We recommend you to use only one Mini Survey widget per page. If you are experimenting, enable the **TEST_MODE** constant.
+
+If you app uses a master layout page and many child pages. You can place one Mini Survey widget on the master layout page and then use multiple **ShowSurvey_OnAction** or **ShowSurvey_UsingDataView** nanoflows actions to trigger the survey to show.
+
+### 4.5 What Are the Survey Opt-Out Rules? {#survey-rules} 
+
+A mini survey has the following opt-out rules: 
+ * If a user has closed a survey, without answering any questions, then the survey will not show again to this user.
+
+* If a user has answered one or more questions in a survey, but did not finished the survey, then the survey will show again. However, if the user has closed the survey before finishing for the second time, the survey will not show again to this user.
+
+* If the user has answered all questions, then the survey will not show again to the user. 
+
+Survey opt-out rule is a variable cached to your internet browser. You can reset and show a survey multiple times by clearing your browser cache. If you are testing, we recommend you to use the `TEST_MODE` constant to avoid clearing every time.
+
+{{% alert color="info" %}}In a future release, we will allow you customise these opt-out rules from the App Insights portal.{{% /alert %}} 
+
+## 5 Troubleshooting {#troubleshooting} 
+
+### 5.1 The Survey Is Not Showing?
+
+1. In the app, make sure that the **APIKEY_APPINSIGHTS** constant has the correct  [API key](/developerportal/app-insights/mini-surveys/#obtain-api-key).
+2. In the app, open the settings of the Mini Survey widget. Make sure that you have entered the correct survey ID.
+3. In the app, enable the **TEST_MODE** constant. If the survey loads, then the Survey has triggered an [op-out rule](#survey-rules) and will not show. In this case, clear the survey opt-out rules by clearing your browser cache in your browser or using igcognito mode.
+
+### 5.2 Surveys do not work locally when running multiple applications
 
 If this occurs, upgrade the module to v1.1.0 or above, and ensure to clear your browsers cached data to remove deprecated feature – you only need to do this one time in your browser.

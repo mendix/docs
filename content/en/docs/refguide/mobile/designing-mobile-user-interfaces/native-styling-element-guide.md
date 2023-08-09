@@ -638,7 +638,31 @@ The default class to style all reference selector inputs is named `ReferenceSele
 
 Images, videos and files help your user app manage images and other files. For more information on these widgets, see [Images, Videos, and Files](/refguide/image-and-file-widgets/).
 
-### 7.1 Static Image {#image}
+### 7.1 Image (#new-image)
+
+The image widget can be used to show a static or dynamic image or an icon on a page, layout, or snippet.
+
+```javascript
+export const com_mendix_widget_native_image_Image = {
+  container: {
+    // All ViewStyle properties
+  },
+  image: {
+    // This has all ImageStyle properties.
+  },
+  backdrop: {
+    // All ViewStyle properties
+  }
+};
+```
+
+| Element             | Style Properties                    | Description                                                  |
+| ------------------- | ----------------------------------- | ------------------------------------------------------------ |
+| `container`         | This has all ViewStyle properties.  |                                                              |
+| `image`             | This has all ImageStyle properties. |                                                              |
+| `backdrop`          | This has all ViewStyle properties.  | Styles for the backdrop of an enlarged image view.           |
+
+### 7.2 Static Image {#image}
 
 The static image widget can be used to show a predefined image on a page, layout, or snippet. For more information on this widgets, see [Static Image](/refguide/image/). 
 
@@ -672,7 +696,7 @@ export const Image = {
 
 The default class to style all static image styles is named `Image`. Please note that images loaded from the model are styled with `NativeDynamicImage` as described in the [Dynamic Image](#dynamic-image) section below.
 
-### 7.2 Dynamic Image {#dynamic-image}
+### 7.3 Dynamic Image {#dynamic-image}
 
 A dynamic image can be used to display an image. This widget supports the same style properties and structure as the [Static Image](#image) widget above.
 

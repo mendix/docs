@@ -120,7 +120,7 @@ This is the request Entity of the CreateQueue action.
 
 #### 4.1.2 AbstractQueueAttributesUsage {#abstractqueueattributesusage}
 
-This is the abstract entity for QueueAttributesUsage. It references to the `QueueAttributes` entity.
+This is the abstract entity for QueueAttributesUsage. It references to the `QueueAttributes` entity. Do not use this entity. Instead, use one of its specializations.
 
 #### 4.1.3 CreateQueueAttributesUsage {#createqueueattributesusage}
 
@@ -149,7 +149,7 @@ This is a specialization of the `QueueAttributes` entity.
 
 #### 4.1.6 AbstractServerSideEncryption {#abstractserversideencryption}
 
-This is the abstract entity for `ServerSideEncryption`.
+This is the abstract entity for `ServerSideEncryption`. Do not use this entity. Instead, use one of its specializations.
 
 #### 4.1.7 SQSManagedServerSideEncryption {#sqsmanagedserversideencryption}
 
@@ -173,7 +173,7 @@ This is a specialization of the `AbstractServerSideEncryption` entity.
 
 #### 4.1.10 AbstractRedriveAllowPolicy {#abstractredriveallowpolicy}
 
-This is the abstract entity for `RedriveAllowPolicy`.
+This is the abstract entity for `RedriveAllowPolicy`. Do not use this entity. Instead, use one of its specializations.
 
 #### 4.1.11 AllowAll {#allowall}
 
@@ -277,11 +277,11 @@ This is the request entity of the ReceiveMessage action.
 
 #### 4.1.26 AbstractMessageAttributeUsage {#abstractmessageattributeusage}
 
-This is the abstract entity for MessageAttributeUsage. It references to the `AbstractMessageAttribute` entity.
+This is the abstract entity for MessageAttributeUsage. It references to the `AbstractMessageAttribute` entity. Do not use this entity. Instead, use one of its specializations.
 
 #### 4.1.27 AbstractReceiveMessageSystemAttribute {#abstractreceivemessagesystemattribute}
 
-This is the abstract entity for ReceiveMessageSystemAttribute.
+This is the abstract entity for ReceiveMessageSystemAttribute. Do not use this entity. Instead, use one of its specializations.
 
 | Attribute | Description |
 | --- | --- |
@@ -303,7 +303,7 @@ This is the response entity of the ReceiveMessagesAction.
 
 #### 4.1.31 AbstractReceivedMessage {#abstractreceivedmessage}
 
-This is the abstract entity for `ReceivedMessage`.
+This is the abstract entity for `ReceivedMessage`. Do not use this entity. Instead, use one of its specializations.
 
 | Attribute | Description |
 | --- | --- |
@@ -331,7 +331,7 @@ This is a specialization of the `AbstractReceiveMessageSystemAttribute` enitity.
 
 #### 4.1.35 AbstractMessageAttribute {#abstractmessageattribute}
 
-This is the abstract entity for MessageAttribute.
+This is the abstract entity for MessageAttribute. Do not use this entity. Instead, use one of its specializations.
 
 | Attribute | Description |
 | --- | --- |
@@ -382,7 +382,7 @@ This is the response entity of the `DeleteMessageBatch` action.
 
 #### 4.1.42 AbstractBatchResultErrorEntry {#abstractbatchresulterrorentry}
 
-This is the abstract entity for `BatchResultErrorEntry`.
+This is the abstract entity for `BatchResultErrorEntry`. Do not use this entity. Instead, use one of its specializations.
 
 | Attribute | Description |
 | --- | --- |
@@ -411,7 +411,7 @@ This is the request entity for the `SendMessageBatch` action.
 
 #### 4.1.46 AbstractSendMessage {#abstractsendmessage}
 
-This is the abstract entity for `SendMessage`.
+This is the abstract entity for `SendMessage`. Do not use this entity. Instead, use one of its specializations.
 
 | Attribute | Description |
 | --- | --- |
@@ -420,7 +420,7 @@ This is the abstract entity for `SendMessage`.
 
 #### 4.1.47 AbstractSendMessageUsage {#abstractsendmessageusage}
 
-This is the abstract entity for SendMessageUsage. It references to the `AbstractSendMessage` entity.
+This is the abstract entity for SendMessageUsage. It references to the `AbstractSendMessage` entity. Do not use this entity. Instead, use one of its specializations.
 
 #### 4.1.48 FifoMessage {#fifomessage}
 

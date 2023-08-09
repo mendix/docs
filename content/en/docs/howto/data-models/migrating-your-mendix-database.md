@@ -175,48 +175,54 @@ To do this, perform the following steps:
 8. Start the application either from the Developer Portal or the command line. 
 9. Once the application is started, verify the data in the application.
 
-#### 5.2.3 Migrating to SAP HANA on SAP BTP using the SAP BTP Cockpit
-If you have a Mendix application running on SAP BTP with PostgreSQL as the database service and want to migrate the database to SAP HANA, you will need to take some extra steps to migrate the existing data.
-To do this, perform the following steps:
-1. Sign in to the SAP BTP Cockpit
-2. Navigate to the subaccount containing the application you want to migrate the database from.
-3. Go to the service bindings of the application. Here you'll find the postgreSQL DB or the shared postgreSQL DB. Press "Show sensitive data".
-Write down the values of the following properties in the `postgresql` service:
+#### 5.2.3 Migrating to SAP HANA on SAP BTP by using the SAP BTP Cockpit
+
+If you have a Mendix application running on SAP BTP with PostgreSQL as the database service, and you want to migrate the database to SAP HANA, you need to perform some additional steps to migrate the existing data.
+
+1. Sign in to the SAP BTP Cockpit.
+2. Navigate to the subaccount containing the application from which you want to migrate the database.
+3. In the service bindings of the application, find the postgreSQL DB or the shared postgreSQL DB.
+4. Click **Show sensitive data**.
+5. Write down the values of the following properties in the `postgresql` service:
     * `dbname` – `{dbname}`
     * `hostname` – `{hostname}`
     * `password` – `{password}`
     * `port` – `{port}`
     * `username` – `{username}`
-Example shared database:
-```json
-{
-	"uri": "postgres://{username}:{password}@{hostname}:{port}/{databasename}"
-}
-```
-Example database:
-```json
-{
-	"dbname": "",
-	"hostname": "",
-	"password": "",
-	"port": "",
-	"uri": "",
-	"read_url": "",
-	"write_url": "",
-	"username": ""
-}
-```
-4. Create an environment using the SAP HANA database service using Mendix Developer Portal.
-5. Deploy the mda, but **do not start the application**.
-6. Sign in to the SAP BTP Cockpit.
-7. Navigate to the new application and go to `User-Provided Variables`.
-8. Set the following runtime properties by pressing `Add Variable`. Use the values from the PostgreSQL instance values you noted above.
+
+    Example shared database:
+   
+    ```json
+    {
+        "uri": "postgres://{username}:{password}@{hostname}:{port}/{databasename}"
+    }
     ```
+
+    Example database:
+   
+    ```json
+    {
+        "dbname": "",
+        "hostname": "",
+        "password": "",
+        "port": "",
+        "uri": "",
+        "read_url": "",
+        "write_url": "",
+        "username": ""
+    }
+    ```
+
+4. Create an environment using the SAP HANA database service and the Mendix Developer Portal.
+5. Deploy the .mda without starting the application.
+6. Sign in to the SAP BTP Cockpit.
+7. Navigate to the new application and go to **User-Provided Variables**.
+8. Set the following runtime properties by pressing `Add Variable`. Use the values from the PostgreSQL instance values you noted above.
     Key: MXRUNTIME_SourceDatabaseType     Value: POSTGRESQL
     Key: MXRUNTIME_SourceDatabaseHost     Value: {hostname}:{port}
     Key: MXRUNTIME_SourceDatabaseName     Value: {dbname}
     Key: MXRUNTIME_SourceDatabaseUserName Value: {username}
     Key: MXRUNTIME_SourceDatabasePassword Value: {password}
-    ```
+
 12. Start the application either from the Developer Portal or the SAP BTP Cockpit. 
 13. Once the application is started, verify the data in the application.

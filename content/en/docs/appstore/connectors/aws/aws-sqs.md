@@ -86,7 +86,7 @@ For example, to list all existing Amazon SQS subscriptions, implement the [List 
 10. In the expression builder, type *AWS_Region*, and then press **Ctrl+Space**.
 11. In the autocomplete dialog, select **AWSTwinMakerConnector.AWS_Region**, then type **.** and select your AWS region from the list.
 12. Click **OK**.
-13. Click Edit parameter value, edit the **ListQueues** parameter, and let it auto-fill.
+13. Click **Edit parameter value**, edit the **ListQueues** parameter, and let it auto-fill.
 14. In the **Toolbox** pane, search for the **Retrieve** activity and drag it onto the microflow area.
 15. Position the **Retrieve** activity between the **ListQueue** activity and the microflow end event.
 16. Double-click the **Retrieve** activity.
@@ -95,29 +95,32 @@ For example, to list all existing Amazon SQS subscriptions, implement the [List 
 19. Configure a method for triggering the **ACT_ListQueues** microflow.
     For example, you can trigger a microflow by associating it with a custom button on a page in your app. For an example of how this can be implemented, see [Create a Custom Save Button](/howto/logic-business-rules/create-a-custom-save-button/).
 
-To help you work with the Amazon SQS connector, the following sections of this document list the available entities, enumerations, and activities that you can use in your application.
-
 ## 4 Technical Reference
 
-To help you work with the Amazon S3 connector, the following sections of this document list the available entities, enumerations, and activities that you can use in your application.
+To help you work with the Amazon SQS connector, the following sections of this document list the available entities, enumerations, and activities that you can use in your application.
 
 ### 4.1 Domain Model {#domain-model}
 
 The domain model is a data model that describes the information in your application domain in an abstract way. For more information, see [Domain Model](/refguide/domain-model/).
 
 The entities in the table below describe all generalizations and specializations. Thes generalizations are reused by the different models for the specific microflow activities or for storing connection details.
+
 The entities are non-persistent. Because of that, you do not need remove the resulting objects after download.
 
 #### 4.1.1 CreateQueueRequest {#createqueuerequest}
+
 This is the request Entity of the CreateQueue action.
+
 | Attribute | Description |
 | --- | --- |
 |`QueueName`| Name of the queue to be created|
 
 #### 4.1.2 AbstractQueueAttributesUsage {#abstractqueueattributesusage}
+
 This is the abstract entity for QueueAttributesUsage. It references to the `QueueAttributes` entity.
 
 #### 4.1.3 CreateQueueAttributesUsage {#createqueueattributesusage}
+
 This is a specialization of the `AbstractQueueAttributesUsage` entity.
 
 #### 4.1.4 QueueAttributes {#queueattributes}
@@ -132,7 +135,9 @@ This is a specialization of the `AbstractQueueAttributesUsage` entity.
 |`VisibilityTimeout`| The visibility timeout for the queue, in seconds. Valid values: An integer from 0 to 43,200 (12 hours). Default: 30. For more information about the visibility timeout, see Visibility Timeout in the Amazon SQS Developer Guide.|
 
 #### 4.1.5 FifoQueueAttributes {#fifoqueueattributes}
-This is a specialization of the `QueueAttributes` entity
+
+This is a specialization of the `QueueAttributes` entity.
+
 | Attribute | Description |
 | --- | --- |
 |`ContentBasedDeduplication`| enables content-based deduplication. Valid values are true and false |
@@ -140,13 +145,17 @@ This is a specialization of the `QueueAttributes` entity
 |`FifoThroughputLimit`| Specifies whether the FIFO queue throughput quota applies to the entire queue or per message group. Valid values are perQueue and perMessageGroupId. The perMessageGroupId value is allowed only when the value for DeduplicationScope is messageGroup |
 
 #### 4.1.6 AbstractServerSideEncryption {#abstractserversideencryption}
-This is the abstract entity for ServerSideEncryption.
+
+This is the abstract entity for `ServerSideEncryption`.
 
 #### 4.1.7 SQSManagedServerSideEncryption {#sqsmanagedserversideencryption}
+
 This is a specialization of the `AbstractServerSideEncryption` entity.
 
 #### 4.1.8 KmsServerSideEncryption {#kmsserversideencryption}
+
 This is a specialization of the `AbstractServerSideEncryption` entity.
+
 | Attribute | Description |
 | --- | --- |
 |`KmsMasterKeyId`| KmsMasterKeyId is required and sets the key id|
@@ -160,15 +169,19 @@ This is a specialization of the `AbstractServerSideEncryption` entity.
 |`MaxReceiveCount`| The number of times a message is delivered to the source queue before being moved to the dead-letter queue. Default: 10. When the ReceiveCount for a message exceeds the maxReceiveCount for a queue, Amazon SQS moves the message to the dead-letter-queue.|
 
 #### 4.1.10 AbstractRedriveAllowPolicy {#abstractredriveallowpolicy}
-This is the abstract entity for RedriveAllowPolicy.
+
+This is the abstract entity for `RedriveAllowPolicy`.
 
 #### 4.1.11 AllowAll {#allowall}
+
 This is a specialization of the `AbstractRedriveAllowPolicy` entity.
 
 #### 4.1.12 DenyAll {#denyall}
+
 This is a specialization of the `AbstractRedriveAllowPolicy` entity.
 
 #### 4.1.13 ByQueue {#byqueue}
+
 This is a specialization of the `AbstractRedriveAllowPolicy` entity.
 
 #### 4.1.14 SourceQueueARN {#sourcequeuearn}
@@ -178,13 +191,17 @@ This is a specialization of the `AbstractRedriveAllowPolicy` entity.
 |`ARN`| ARN of the queue|
 
 #### 4.1.15 CreateQueueResponse {#createqueueresponse}
+
 This is the response Entity of the CreateQueue action.
 
 #### 4.1.16 DeleteQueueRequest {#deletequeuerequest}
+
 This is the request entity of the DeleteQueue action
 
 #### 4.1.17 GetQueueAttributesRequest {#getqueueattributesrequest}
+
 This is the request entity of the GetQueueAttributes action.
+
 | Attribute | Description |
 | --- | --- |
 |`QueueUrl`| Url of the queue|
@@ -196,9 +213,11 @@ This is the request entity of the GetQueueAttributes action.
 |`Attribute`| Attribute to be retrieved. Selecting ALL will retrieve all attributes|
 
 #### 4.1.19 GetQueueAttributesResponse {#getqueueattributesresponse}
-This is the response entity of the GetQueueAttributes action.
+
+This is the response entity of the `GetQueueAttributes` action.
 
 #### 4.1.20 GetQueueAttributesQueueUsage {#getqueueattributesqueueusage}
+
 This is a specialization of the `AbstractQueueAttributesUsage` entity.
 | Attribute | Description |
 | --- | --- |
@@ -210,7 +229,9 @@ This is a specialization of the `AbstractQueueAttributesUsage` entity.
 |`QueueARN`| ARN of the queue|
 
 #### 4.1.21 ListQueuesRequest {#listqueuesrequest}
-This is the request entity of the ListQueues action.
+
+This is the request entity of the `ListQueues` action.
+
 | Attribute | Description |
 | --- | --- |
 |`MaxResult`| Optional: Maximum number of results to include in the response. Value range is 1 to 1000. Default value is 1000.|
@@ -218,7 +239,9 @@ This is the request entity of the ListQueues action.
 |`NextToken`| Pagination token to request the next set of results. When not set, first set of results is returned.|
 
 #### 4.1.22 ListQueuesResponse {#listqueuesresponse}
+
 This is the response entity of the ListQueues action.
+
 | Attribute | Description |
 | --- | --- |
 |`NextToken`| Pagination token to include in the next request to retrieve next set of results.|
@@ -230,13 +253,17 @@ This is the response entity of the ListQueues action.
 |`QueueUrl`| The URL of the Amazon SQS queue, used as an unique identification key.|
 
 #### 4.1.24 PurgeQueueRequest {#purgequeuerequest}
+
 This is the request entity of the PurgeQueue action.
+
 | Attribute | Description |
 | --- | --- |
 |`QueueUrl`| URL of the queue to be purged|
 
 #### 4.1.25 ReceiveMessageRequest {#receivemessagerequest}
+
 This is the request entity of the ReceiveMessage action.
+
 | Attribute | Description |
 | --- | --- |
 |`MaxNoOfMessages`| Can be set to specifiy the maxinum number of messages to receive. If left empty, the SQS default value is used.|
@@ -246,28 +273,35 @@ This is the request entity of the ReceiveMessage action.
 |`VisibilityTimeout`| The duration (in seconds) that the received messages are hidden from subsequent retrieve requests. If left empty, the SQS default value is used.|
 
 #### 4.1.26 AbstractMessageAttributeUsage {#abstractmessageattributeusage}
+
 This is the abstract entity for MessageAttributeUsage. It references to the `AbstractMessageAttribute` entity.
 
 #### 4.1.27 AbstractReceiveMessageSystemAttribute {#abstractreceivemessagesystemattribute}
+
 This is the abstract entity for ReceiveMessageSystemAttribute.
+
 | Attribute | Description |
 | --- | --- |
 |`Key`| The key of the SystemAttribute. Can be any value of the Enumeration 'ReceiveMessageSystemAttributeNames'. Set it to 'All' to request all available SystemAttributes.|
 
 #### 4.1.28 RequestedSystemAttribute {#requestedsystemattribute}
+
 This is a specialization of the `AbstractReceiveMessageSystemAttribute` entity.
 
 #### 4.1.29 RequestedMessageAttribute {#requestedmessageattribute}
 
 | Attribute | Description |
 | --- | --- |
-|`Key`| The key of the requested MessageAttribute. Set it to 'All' to get all MessageAttributes.|
+|`Key`| The key of the requested `MessageAttribute`. Set it to **All** to get all `MessageAttributes`.|
 
 #### 4.1.30 ReceiveMessageResponse {#receivemessageresponse}
+
 This is the response entity of the ReceiveMessagesAction.
 
 #### 4.1.31 AbstractReceivedMessage {#abstractreceivedmessage}
-This is the abstract entity for ReceivedMessage.
+
+This is the abstract entity for `ReceivedMessage`.
+
 | Attribute | Description |
 | --- | --- |
 |`Body`| This attribute contains the body of the message.|
@@ -277,43 +311,57 @@ This is the abstract entity for ReceivedMessage.
 |`ReceiptHandle`| This attribute contains the receipt handle, an identifier associated with the act of receiving the message.|
 
 #### 4.1.32 ReceivedMessage {#receivedmessage}
+
 This is a specialization of the `AbstractReceivedMessage` entity.
 
 #### 4.1.33 ReceiveMessageAttribute {#receivemessageattribute}
+
 This is a specialization of the `AbstractMessageAttributeUsage` entity.
 
 #### 4.1.34 ReceiveMessageSystemAttribute {#receivemessagesystemattribute}
+
 This is a specialization of the `AbstractReceiveMessageSystemAttribute` enitity.
+
 | Attribute | Description |
 | --- | --- |
-|`Value`| This attribute represents the corresponding Value to the Key of a SystemAttribute|
+|`Value`| This attribute represents the corresponding Value to the Key of a `SystemAttribute`|
 
 #### 4.1.35 AbstractMessageAttribute {#abstractmessageattribute}
+
 This is the abstract entity for MessageAttribute.
+
 | Attribute | Description |
 | --- | --- |
 |`Key`| Key of the message attribute|
 
 #### 4.1.36 BinaryMessageAttribute {#binarymessageattribute}
+
 This is a specialization of the `AbstractMessageAttribtue` entity.
+
 | Attribute | Description |
 | --- | --- |
 |`Base64EncodedString`| The base64EncodedString attribute describes the binary value of the MessageAttribute as base64 encoded string. The 'Base64DecodeToFile' Action from the CommunityCommons marketplace module can be used to convert this into the desired type. The 'Base64EncodeFile' Action from the CommunityCommons marketplace module can be used to convert a file into a base64 encoded string.|
 
 #### 4.1.37 StringMessageAttribute {#stringmessageattribute}
+
 This is a specialization of the `AbstractMessageAttribtue` entity.
+
 | Attribute | Description |
 | --- | --- |
 |`Value`| The Value attribute describes the string value of the MessageAttribute..|
 
 #### 4.1.38 NumberMessageAttribute {#numbermessageattribute}
+
 This is a specialization of the `AbstractMessageAttribtue` entity.
+
 | Attribute | Description |
 | --- | --- |
 |`Value`| The Value attribute describes the decimal value of the MessageAttribute.|
 
 #### 4.1.39 DeleteMessageBatchRequest {#deletemessagebatchrequest}
+
 This is the request entity of the DeleteMessageBatch action.
+
 | Attribute | Description |
 | --- | --- |
 |`QueueUrl`| The URL of the Amazon SQS queue from which messages are deleted. Queue URLs and names are case-sensitive. QueueUrl is required.|
@@ -326,10 +374,13 @@ This is the request entity of the DeleteMessageBatch action.
 |`_id`| The identifier for this particular receipt handle. This is used to communicate the result. The id has to be unique and is required |
 
 #### 4.1.41 DeleteMessageBatchResponse {#deletemessagebatchresponse}
-This is the response entity of the DeleteMessageBatch action.
+
+This is the response entity of the `DeleteMessageBatch` action.
 
 #### 4.1.42 AbstractBatchResultErrorEntry {#abstractbatchresulterrorentry}
-This is the abstract entity for BatchResultErrorEntry.
+
+This is the abstract entity for `BatchResultErrorEntry`.
+
 | Attribute | Description |
 | --- | --- |
 |`Code`| The Code attribute describes the error code of the failure.|
@@ -338,6 +389,7 @@ This is the abstract entity for BatchResultErrorEntry.
 |`IsSenderFault`| The IsSenderFault attribute describes whether the failure is the fault of the Sender (true) or AWS (false).|
 
 #### 4.1.43 DeleteMessageBatchResultErrorEntry {#deletemessagebatchresulterrorentry}
+
 This is a specialization of the `AbstractBatchResultErrorEntry` entity.
 
 #### 4.1.44 DeleteMessageBatchResultEntry {#deletemessagebatchresultentry}
@@ -347,35 +399,45 @@ This is a specialization of the `AbstractBatchResultErrorEntry` entity.
 |`_id`| Describes the identifier of the deletion.|
 
 #### 4.1.45 SendMessageBatchRequest {#sendmessagebatchrequest}
-This is the request entity for the SendMessageBatch action.
+
+This is the request entity for the `SendMessageBatch` action.
+
 | Attribute | Description |
 | --- | --- |
 |`QueueURL`| The QueueURL attribute describes the URL of the queue to send messages to and is a required parameter.|
 
 #### 4.1.46 AbstractSendMessage {#abstractsendmessage}
-This is the abstract entity for SendMessage.
+
+This is the abstract entity for `SendMessage`.
+
 | Attribute | Description |
 | --- | --- |
 |`MessageBody`| The MessageBody attribute describes the contents of the message and is a required parameter.|
 |`_Id`| The _Id attribute describes the identifier for a message in a batch and needs to be unique within a batch request and is a required parameter.|
 
 #### 4.1.47 AbstractSendMessageUsage {#abstractsendmessageusage}
+
 This is the abstract entity for SendMessageUsage. It references to the `AbstractSendMessage` entity.
 
 #### 4.1.48 FifoMessage {#fifomessage}
+
 This is a specialization of the `AbstractSendMessage` entity.
+
 | Attribute | Description |
 | --- | --- |
 |`MessageGroupId`| The MessageGroupID attribute describes the tag that specifies that a message belongs to a specific message group and is a required parameter.|
 |`MessageDeduplicationId`| The MessageDeduplicationId attribute describes the token used for deduplication of messages within a 5-minute minimum deduplication interval.|
 
 #### 4.1.49 StandardMessage {#standardmessage}
+
 This is a specialization of the `AbstractSendMessage` entity.
+
 | Attribute | Description |
 | --- | --- |
-|`DelaySeconds`| The DelaySeconds attribute describes the length of time, in seconds, for which a specific message is delayed..|
+|`DelaySeconds`| The `DelaySeconds` attribute describes the length of time, in seconds, for which a specific message is delayed..|
 
 #### 4.1.50 SendMessageAttributeUsage {#sendmessageattributeusage}
+
 This is a specialization of the `AbstractSendMessageUsage` entity.
 
 #### 4.1.51 SendMessageSystemAttribute {#sendmessagesystemattribute}
@@ -386,6 +448,7 @@ This is a specialization of the `AbstractSendMessageUsage` entity.
 |`Value`| The Value attribute describes the value of the system attribute and is a required parameter.|
 
 #### 4.1.52 SendMessageBatchResponse {#sendmessagebatchresponse}
+
 This is the response entity of the SendMessageBatch action.
 
 #### 4.1.53 SendMessageBatchResultEntry {#sendmessagebatchresultentry}
@@ -400,6 +463,7 @@ This is the response entity of the SendMessageBatch action.
 |`SequenceNumber`| The SequenceNumber attribute describes a large, non-consecutive number that Amazon SQS assigns to each message. Only applies to Fifo queues.|
 
 #### 4.1.54 SendMessageBatchResultErrorEntry {#sendmessagebatchresulterrorentry}
+
 This is a specialization of the `AbstractBatchResultErrorEntry` entity.
 
 ### 4.2 Enumerations {#enumerations}

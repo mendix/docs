@@ -403,6 +403,20 @@ NOT ALL ARE GENERALIZATIONS! -> The entities in the table below describe all gen
 | --- | --- |
 | N/A | The object does not contain any attributes, but it inherits from the `AbstractAssetSummary` entity |
 
+### 4.1.40 DescribeAssetPropertyRequest {#describe-asset-property-request}
+
+| Attribute | Description |
+| --- | --- |
+| AssetID | Describes the ID of the asset and is a required parameter. |
+| PropertyID | Describes the ID of the asset property and is a required parameter. |
+
+### 4.1.41 DescribeAssetPropertyResponse {#describe-asset-property-response}
+
+| Attribute | Description |
+| --- | --- |
+| AssetID | Describes the ID of the asset. |
+| AssetModelID | Describes the ID of the asset model. |
+| AssetName | Describes the name of the asset. |
 
 ### 4.1. ENTITY_NAME {#entity_name}
 
@@ -633,6 +647,14 @@ The `ListAssetRelationships` Amazon Iot SiteWise activity allows you to retrieve
 | `ListAssetRelationshipsRequest` | `ListAssetRelationshipsResponse` |
 
 The `ListAssetRelationships` method supports pagination. The MaxResults in the request can be set to specify the maximum number of results to be returned in the response object. If you do not set MaxResults, the response includes 50 results by default. If you set MaxResults and there are additional results to display, the response includes a value for NextToken. Use NextToken as a parameter in your next request to the `ListAssetRelationships` method to receive the next page of results.
+
+#### 4.3.11 DescribeAssetProperty {#describe-asset-property}
+
+The `DescribeAssetProperty` Amazon Iot SiteWise activity allows you to retrieve information about an asset property. It requires a valid `ENUM_Region` parameter and a `DescribeAssetPropertyRequest` object with a valid AssetID & PropertyID, and returns a `DescribeAssetPropertyResponse` object.
+
+| Input | Output | 
+| --- | --- | 
+| `DescribeAssetPropertyRequest` | `DescribeAssetPropertyResponse` |
 
 ##### OPTIONAL, INCLUDE ONLY IF THE ACTIVITY RETURNS AN OUTPUT:
 

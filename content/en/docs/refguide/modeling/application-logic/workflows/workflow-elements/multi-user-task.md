@@ -101,6 +101,10 @@ If the number of [targeted users](#users) is less than the absolute number speci
 A fallback outcome can be both a selectable outcome and a fallback outcome at the same time.
 {{% /alert %}}
 
+{{% alert color="info" %}}
+Regarding the [completion moment](#completion-moment) option, the **When outcome is known** option is the default selection for all the decision methods below.
+{{% /alert %}}
+
 ##### 2.5.2.1 Consensus
 
 Select this decision method when all required users should be in agreement with the provided outcome. That is, they should all select the same outcome. There has to be consensus. When there is no consensus, the multi-user task will complete with the fallback outcome.
@@ -176,9 +180,9 @@ This property determines the majority type that will be applied when using the m
 
 Possible options of majority type are described in the table below:
 
-| Majority Type | Description |
-| --- | --- |
-| More than half | When one of the outcomes reaches more than 50% of all possible votes (absolute majority), the task is competed with this outcome. |
+| Majority Type | Description                                                                                                                                                                                                                                                            |
+| --- |------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| More than half | When one of the outcomes reaches more than 50% of all possible votes (absolute majority), the task is completed with this outcome.                                                                                                                                     |
 | Most chosen | As soon as one of the outcomes gets most of the votes (relative majority), the task is completed with this outcome. Adding additional votes will not change the final outcome. Currently, it is also not possible to add additional votes after the task is completed. |
 
 ###### 2.5.2.3.2 Fallback Outcome {#majority-fallback-outcome}
@@ -264,6 +268,28 @@ You can refer to the following properties settings for this example:
 * **Threshold type**: **Percentage**
 * **Fallback outcome**: An outcome users can select, but it will be selected automatically when there is no majority (in this example, `C`)
 * **Outcomes**: `A`, `B`, `C`
+
+###### 2.5.3 Completion moment {#completion-moment}
+
+This property determines when the user task will be marked as completed. That can be either when the outcome is known, meaning that sufficient users have completed the task so that the outcome be determined, or after all the targeted users have completed their task. This option has no influence on the final outcome of the user task. For the sake of efficiency, the option to complete the task once sufficient users have completed the task is selected.
+
+Possible options are described in the table below:
+
+| Completion moment | Description                                                                                                                                                                                                                                                                                                            |
+| --- |------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| When outcome is known | The completion condition is evaluated after each user selects an outcome. When a user selects an outcome and this results in the multi-user task to be completed, this multi-user task will be removed from the inbox of the remaining users, as their votes will not change the final outcome of the multi-user task. |
+| When all participants completed their task | The completion condition is evaluated after all the targeted users have selected an outcome. This means that even though the final outcome is already known, the multi-user task will not yet be completed until all targeted users have selected an outcome.                                                          |
+
+###### 2.5.3.1 Example
+
+The following example shows how the completion moment works. 
+
+The decision method is **Majority** and the majority type is **More than half** or **Most chosen**. There are 3 targeted users and 3 required votes from users. The possible outcomes are A, B and C. Both the first and the second user select option A.
+
+* In case the completion moment is **When outcome is known** the multi-user task is marked as completed as soon as the second user selected outcome A because a majority was reached (2 out of 3).
+* In case the completion moment is **When all participants completed their task** the multi-user task will be marked as completed after the third user selects an outcome.
+
+In both cases the multi-user task completes with outcome A as a majority was reached and selecting other outcomes (having the third user selected B or C in the second case) will not change the final outcome.
 
 ### 2.6 Outcomes Section {#outcomes}
 

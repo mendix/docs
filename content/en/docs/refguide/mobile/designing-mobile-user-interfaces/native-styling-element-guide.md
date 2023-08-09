@@ -634,9 +634,9 @@ The reference selector is an input widget that can be used to display and edit a
 
 The default class to style all reference selector inputs is named `ReferenceSelector`.
 
-## 7 Images, Videos and Files
+## 7 Images, Videos, and Files
 
-Images, videos and files help your user app manage images and other files. For more information on these widgets, see [Images, Videos, and Files](/refguide/image-and-file-widgets/).
+Images, videos, and files help your user app manage images and other files. For more information on these widgets, see [Images, Videos, and Files](/refguide/image-and-file-widgets/).
 
 ### 7.1 Image (#new-image)
 

@@ -217,12 +217,15 @@ If you have a Mendix application running on SAP BTP with PostgreSQL as the datab
 5. Deploy the .mda without starting the application.
 6. Sign in to the SAP BTP Cockpit.
 7. Navigate to the new application and go to **User-Provided Variables**.
-8. Set the following runtime properties by pressing `Add Variable`. Use the values from the PostgreSQL instance values you noted above.
-    Key: MXRUNTIME_SourceDatabaseType     Value: POSTGRESQL
-    Key: MXRUNTIME_SourceDatabaseHost     Value: {hostname}:{port}
-    Key: MXRUNTIME_SourceDatabaseName     Value: {dbname}
-    Key: MXRUNTIME_SourceDatabaseUserName Value: {username}
-    Key: MXRUNTIME_SourceDatabasePassword Value: {password}
+8. Set the following runtime properties by pressing `Add Variable`. Use the values from the PostgreSQL instance values that you noted above.
 
-12. Start the application either from the Developer Portal or the SAP BTP Cockpit. 
-13. Once the application is started, verify the data in the application.
+    | Key | Value |
+    | --- | --- |
+    | `MXRUNTIME_SourceDatabaseType` | `POSTGRESQL` |
+    | `MXRUNTIME_SourceDatabaseHost` | `{hostname}:{port}` |
+    | `MXRUNTIME_SourceDatabaseName` | `{dbname}` |
+    | `MXRUNTIME_SourceDatabaseUserName` | `{username}` |
+    | `MXRUNTIME_SourceDatabasePassword` | `{password}` |
+
+9. Start the application either from the Developer Portal or from the SAP BTP Cockpit. 
+10. Once the application is started, verify the data in the application.

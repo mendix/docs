@@ -10,9 +10,13 @@ tags: ["Feedback","Developer Portal", "feedback widget"]
 
 ## 1 Introduction
 
-**Feedback** in the Developer Portal enables you to view and manage all your feedback items that are sent from your app. It also allows you to add feedback items for your app manually yourself.
+If you app uses the [Mendix Feedback](/appstore/modules/mendix-feedback/) module, users can report feedback by clicking the feedback widget in your app, and all their feedback will go to **Feedback** in the Developer Portal. 
 
-{{% alert color="info" %}}When new feedback is submitted from your app, you will get a notification. You can check the notification by clicking the [Notifications](/developerportal/#notifications) icon in the Developer Portal. If you no longer want to receive feedback notifications for a specific app, you can [stop watching](https://docs.mendix.com/developerportal/#my-apps) the app. {{% /alert %}}
+**Feedback** enables you to view and manage all your feedback items users have sent from your app. It also allows you to add feedback items for your app manually yourself.
+
+{{% alert color="info" %}}When a user submits a feedback item from your app, you will get a notification. You can check the notification by clicking the [Notifications](/developerportal/#notifications) icon in the Developer Portal. If you no longer want to receive feedback notifications for a specific app, you can [stop watching](https://docs.mendix.com/developerportal/#my-apps) the app.{{% /alert %}}
+
+{{% alert color="info" %}}For information about what happens to a user after they submit a feedback item, see the [What Happens After a Reporter Submits Feedback](#after-reporter-submits-feedback) section.{{% /alert %}}
 
 **Feedback** contains two pages: **Inbox** and **Archive**.
 
@@ -133,13 +137,11 @@ The feedback details on the **Feedback Details** page or on the side panel conta
 
   {{% alert color="info" %}}**Contact reporter** only shows on the Feedback Details page, not on the side panel.{{% /alert %}}
 
-# 4 Reporter
+## 5 What Happens After a Reporter Submits Feedback
 
-Once the [Mendix Feedback](/appstore/modules/mendix-feedback/) module is installed in your app, any user of the app can report feedback by clicking the feedback widget. Besides sending the feedback, they will also get an email with a link to their reported feedback. 
+After a user reports feedback from your app by clicking the feedback widget, they will get an email with a link to their reported feedback. If they open the link, a page opens and shows details about their feedback item. The page also offers a message box for them to communicate with your team directly.The assigned maker will receive an email whenever a reporter posts a message. When your team replies, the reporter will get an email notification, if the reporter has not turned the notification off.
 
-When a reporter opens the link, a page opens and offers more information about the feedback item. See the table below:
-
-| What a Reporter Can See                                     | What a Reporter Cannot See                                   |
+| What a Reporter Can See on the Page                         | What a Reporter Cannot See on the Page                       |
 | ----------------------------------------------------------- | ------------------------------------------------------------ |
 | Name of the feedback they submitted                         | Metadata                                                     |
 | Description of the feedback they wrote                      | Summary of the feedback that makers wrote                    |
@@ -148,8 +150,4 @@ When a reporter opens the link, a page opens and offers more information about t
 | Submission date                                             | Other feedback items that are associated with this feedback item |
 | Last activity on the feedback item                          | Attachments uploaded for this feedback item                  |
 |                                                             | Team comments on this feedback item                          |
-
-A reporter can turn the notification on or off for this feedback item. If the notification is off, they will not receive any email about the responses to this feedback item.
-
-A reporter can contact the app maker using the message box on the page, the reporter can send messages to the assigned maker. The assigned maker will receive an email whenever the report posts a message.
 

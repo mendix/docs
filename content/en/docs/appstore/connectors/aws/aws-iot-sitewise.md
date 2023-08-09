@@ -246,13 +246,31 @@ NOT ALL ARE GENERALIZATIONS! -> The entities in the table below describe all gen
 | --- | --- |
 | NextToken | Describes the token for the next set of results, or `(empty)` if there are no additional results. |
 
-### 4.1.20 DescribeAssetModelRequest {#describe-asset-model-request}
+### 4.1.20 AssetSummary {#asset-summary}
+
+| Attribute | Description |
+| --- | --- |
+| N/A | The object does not contain any attributes, but it inherits from the `AbstractAssetSummary` entity |
+
+### 4.1.21  AbstractAssetSummary {#abstract-asset-summary}
+
+| Attribute | Description |
+| --- | --- |
+| ARN | The ARN of the asset |
+| AssetModelID | The ID of the asset model used to create this asset |
+| CreationDate | The creation date of the asset |
+| Description | The description of the asset |
+| _ID | The ID of the asset |
+| LastUpdateDate | The last update date of the asset |
+| Name | The name of the asset |
+
+### 4.1.22 DescribeAssetModelRequest {#describe-asset-model-request}
 
 | Attribute | Description |
 | --- | --- |
 | AssetModelID | Describes the ID of the asset model and is a required parameter. |
 
-### 4.1.21 DescribeAssetModelResponse {#describe-asset-model-response}
+### 4.1.23 DescribeAssetModelResponse {#describe-asset-model-response}
 
 | Attribute | Description |
 | --- | --- |
@@ -263,31 +281,31 @@ NOT ALL ARE GENERALIZATIONS! -> The entities in the table below describe all gen
 | AssetModelLastUpdateDate | Describes the date the asset model was last updated. |
 | AssetModelName | Describes the name of the asset model. |
 
-### 4.1.22 _Type {#type}
+### 4.1.24 _Type {#type}
 
 | Attribute | Description |
 | --- | --- |
 | N/A | The generalized entity does not contain any attributes, it is a wrapper entity holding references to property entities (Measurement, Transform, Attribute and Metric) |
 
-### 4.1.23 ProcessingConfig {#processing-config}
+### 4.1.25 ProcessingConfig {#processing-config}
 
 | Attribute | Description |
 | --- | --- |
 | N/A | The generalized entity does not contain any attributes, it is a configuration profile for where information is processed and forwarded |
 
-### 4.1.24 Variable {#variable}
+### 4.1.26 Variable {#variable}
 
 | Attribute | Description |
 | --- | --- |
 | Name | Describes the friendly name of the variable to be used in the expression. |
 
-### 4.1.25 AbstractAssetStatus {#abstract-asset-status}
+### 4.1.27 AbstractAssetStatus {#abstract-asset-status}
 
 | Attribute | Description |
 | --- | --- |
 | State | The current status state of the asset. |
 
-### 4.1.26 ListProjectAssetsRequest {#list-project-assets-request}
+### 4.1.28 ListProjectAssetsRequest {#list-project-assets-request}
 
 | Attribute | Description |
 | --- | --- |
@@ -295,25 +313,25 @@ NOT ALL ARE GENERALIZATIONS! -> The entities in the table below describe all gen
 | NextToken | Describes to the Amazon IoT SiteWise service that the list is being continued on with a token |
 | ProjectID | Describes the project ID from which the assets will be retrieved from |
 
-### 4.1.27 ListProjectAssetsResponse {#list-project-assets-response}
+### 4.1.29 ListProjectAssetsResponse {#list-project-assets-response}
 
 | Attribute | Description |
 | --- | --- |
 | NextToken | Describes whether there are more assets in the project that can be listed. The next list requests to Amazon IoT SiteWise can be continued with this `NextToken` |
 
-### 4.1.28 AssetID {#asset-id}
+### 4.1.30 AssetID {#asset-id}
 
 | Attribute | Description |
 | --- | --- |
 | AssetID | Describes the ID of the asset |
 
-### 4.1.29 DescribeAssetRequest {#describe-asset-request}
+### 4.1.31 DescribeAssetRequest {#describe-asset-request}
 
 | Attribute | Description |
 | --- | --- |
 | AssetID | Describes the ID of the asset and is a required parameter. |
 
-### 4.1.30 DescribeAssetResponse {#describe-asset-response}
+### 4.1.32 DescribeAssetResponse {#describe-asset-response}
 
 | Attribute | Description |
 | --- | --- |
@@ -325,7 +343,7 @@ NOT ALL ARE GENERALIZATIONS! -> The entities in the table below describe all gen
 | AssetModelID | Describes the ID of the asset model that was used to create the asset. |
 | AssetName | Describes the name of the asset. |
 
-### 4.1.31 AssetProperty {#asset-property}
+### 4.1.33 AssetProperty {#asset-property}
 
 | Attribute | Description |
 | --- | --- |
@@ -336,7 +354,7 @@ NOT ALL ARE GENERALIZATIONS! -> The entities in the table below describe all gen
 | DataTypeSpec | Describes the data type of the structure for this property. This parameter exists on properties that have the STRUCT data type. |
 | Unit | Describes the unit (such as Newtons or RPM) of the asset property. |
 
-### 4.1.32 ListAssetRelationshipsRequest {#list-asset-relationships-request}
+### 4.1.34 ListAssetRelationshipsRequest {#list-asset-relationships-request}
 
 | Attribute | Description |
 | --- | --- |
@@ -344,24 +362,46 @@ NOT ALL ARE GENERALIZATIONS! -> The entities in the table below describe all gen
 | MaxResults | Describes the maximum number of project assets returned in the response. By default it is set to 50 and can return a maximum of 250 asset models |
 | NextToken | Describes to the Amazon IoT SiteWise service that the list is being continued on with a token |
 
-### 4.1.33 ListAssetRelationshipsResponse {#list-asset-relationships-response}
+### 4.1.35 ListAssetRelationshipsResponse {#list-asset-relationships-response}
 
 | Attribute | Description |
 | --- | --- |
 | NextToken | Describes whether there are more assets in the project that can be listed. The next list requests to Amazon IoT SiteWise can be continued with this `NextToken` |
 
-### 4.1.34 AssetRelationshipSummary {#asset-relationship-summary}
+### 4.1.36 AssetRelationshipSummary {#asset-relationship-summary}
 
 | Attribute | Description |
 | --- | --- |
 | RelationshipType | Describes the relationship type of the assets in this relationship |
 
-### 4.1.35 AssetHierarchyInfo {#asset-hierarchy-info}
+### 4.1.37 AssetHierarchyInfo {#asset-hierarchy-info}
 
 | Attribute | Description |
 | --- | --- |
 | ChildAssetID | Describes the ID of the child asset in this asset relationship |
 | ParentAssetID | Describes the ID of the parent asset in this asset relationship |
+
+### 4.1.38 ListAssociatedAssetsRequest {#list-associated-assets-request}
+
+| Attribute | Description |
+| --- | --- |
+| AssetID | Describes the ID of the asset. |
+| HierarchyID | Describes the ID of the hierarchy by which child assets are associated to the asset. |
+| NextToken | Describes the token to be used for the next set of paginated results. |
+| MaxResults | Describes the maximum number of results to return for each request. The default value is 50. |
+| TraversalDirection | Describes the direction to list associated assets. Choose one of the following options: <p><p>CHILD – The list includes all child assets associated to the asset. The HierarchyId parameter is required if you choose CHILD. <p>PARENT – The list includes the asset's parent asset.<p>The default value for this attribute is CHILD, not selecting either option will result in the CHILD traversal direction to be applied to your request. |
+
+### 4.1.39 ListAssociatedAssetsResponse {#list-associated-assets-response}
+
+| Attribute | Description |
+| --- | --- |
+| NextToken | Describes the token for the next set of results, or `(empty)` if there are no additional results. |
+
+### 4.1.39 AssociatedAssetsSummary {#associated-assets-summary}
+
+| Attribute | Description |
+| --- | --- |
+| N/A | The object does not contain any attributes, but it inherits from the `AbstractAssetSummary` entity |
 
 
 ### 4.1. ENTITY_NAME {#entity_name}
@@ -482,12 +522,19 @@ An enumeration is a predefined list of values that can be used as an attribute t
 | ALL | ALL | The filter to retrieve all assets associated with a specified asset model. |
 | TOP_LEVEL | TOP_LEVEL | The filter to retrieve only top-level assets. |
 
-#### 4.2.11 ENUM_PropertyNotificationState
+#### 4.2.12 ENUM_PropertyNotificationState
 
 | Name | Caption | Description |
 | --- | --- | --- |
 | ENABLED | ENABLED | Describes a property's notification state. |
 | DISABLED | DISABLED | Describes a property's notification state. |
+
+#### 4.2.13 ENUM_AssociatedAsset_TraversalDirection
+
+| Name | Caption | Description |
+| --- | --- | --- |
+| CHILD | CHILD | Lists all child assets associated to the asset. |
+| PARENT | PARENT | The list includes the asset's parent asset. |
 
 ### 4.3 Activities {#activities}
 
@@ -541,7 +588,7 @@ The `ListPortals` method supports pagination. The MaxResults in the request can 
 
 #### 4.3.6 ListAssets {#list-assets}
 
-The `ListAssets` Amazon Iot SiteWise activity allows you to retrieve a list of all asset summaries for the given region. It requires a valid `ENUM_Region` parameter and a `ListAssetsRequest` object and returns a `ListAssetsResponse` object, which can include a maximum of 50 results. The input and output for this service are shown in the table below: 
+The `ListAssets` Amazon Iot SiteWise activity allows you to retrieve a list of all asset summaries for the given region. It requires a valid `ENUM_Region` parameter and a `ListAssetsRequest` object and returns a `ListAssetsResponse` object, which can include a maximum of 250 results. The input and output for this service are shown in the table below: 
 
 | Input | Output | 
 | --- | --- | 
@@ -567,7 +614,17 @@ The `DescribeAsset` Amazon Iot SiteWise activity allows you to retrieve informat
 | --- | --- | 
 | `DescribeAssetRequest` | `DescribeAssetResponse` |
 
-#### 4.3.9 ListAssetRelationships {#list-asset-relationships}
+#### 4.3.9 ListAssociatedAssets {#list-associated-assets}
+
+The `ListAssociatedAssets` Amazon Iot SiteWise activity allows you to retrieve a list of all associated assets for the given asset. It requires a valid `ENUM_Region` parameter and a `ListAssociatedAssetsRequest` object wit a valid AssetID and returns a `ListAssociatedAssetsResponse` object, which can include a maximum of 250 results. The input and output for this service are shown in the table below: 
+
+| Input | Output | 
+| --- | --- | 
+| `ListAssociatedAssetsRequest` | `ListAssociatedAssetsResponse` |
+
+The `ListAssociatedAssets` method supports pagination. The MaxResults in the request can be set to specify the maximum number of results to be returned in the response object. If you do not set MaxResults, the response includes 50 results by default. If you set MaxResults and there are additional results to display, the response includes a value for NextToken. Use NextToken as a parameter in your next request to the `ListAssociatedAssets` method to receive the next page of results.
+
+#### 4.3.10 ListAssetRelationships {#list-asset-relationships}
 
 The `ListAssetRelationships` Amazon Iot SiteWise activity allows you to retrieve a list of asset relationships for an asset. It requires a valid `ENUM_Region` parameter and a `ListAssetRelationshipsRequest` object with a valid AssetID and returns a `ListAssetRelationshipsResponse` object, which can include a maximum of 250 results. The input and output for this service are shown in the table below: 
 

@@ -188,7 +188,7 @@ If you have credentials that have been generated without the help of the **GetSe
 		
 2. Create a **SessionToken** object with the following parameters:
     * **Token** - your token 
-	* **Credentials_SessionToken** - the association between **Credentials** and **SessionToken** 
+    * **Credentials_SessionToken** - the association between **Credentials** and **SessionToken** 
 		
 You can then use the above as a valid set of credentials.
 

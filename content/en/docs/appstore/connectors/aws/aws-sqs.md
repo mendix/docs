@@ -14,7 +14,7 @@ The [Amazon SQS connector]([#needs-url]) enables your app to connect to other mi
 
 Amazon SQS helps improve your app by providing a queue service to send messages to other components or microservices in your infrastructure. Implement the Amazon SQS connector if you want your app to have the ability to communicate with other components at scale, for example, to send queue items to a work queue.
 
-### 1.2 Prerequisites
+### 1.2 Prerequisites {#prerequisites}
 
 The Amazon SQS connector requires Mendix Studio Pro version 9.18.0 or above.
 

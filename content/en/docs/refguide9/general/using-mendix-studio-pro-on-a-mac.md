@@ -106,7 +106,7 @@ Instead, you must enter your Mac's IP address into your Make It Native app. To r
 
 1. Make sure your test device and Mac are on the same Wi-Fi network.
 2. Place your cursor over your Wi-Fi symbol in your system tray, then and click while holding <kbd>Option</kbd> to see your Mac's advanced network information. You will see your **IP Address** in this drop-down menu.
-3. In your Make It Native app's **Host** field, type *{your IP address}:8080*:
+3. In your Make It Native app's **Host** field, type `{your IP address}:8080` like this:
 
     {{< figure src="/attachments/refguide9/general/using-mendix-studio-pro-on-a-mac/ip-in-dev-app.png" alt="ip in dev app"   width="200"  >}}
 

@@ -340,7 +340,7 @@ This button contains a list of actions which you can perform quickly on the envi
 * **Model Options** – allows you to change the running of scheduled events and the values of constants for your app by taking you to the **Model Options** tab of the **Environment Details** page
 * **Stop Application** (only shown if at least one replica is running) — stops the application by reducing the number of replicas to zero
 * **Delete Environment** – this deletes the environment (see [Current Limitations](#limitations), below, for additional details about what is deleted) — you will be asked to confirm this action
-* **Set as Studio Deployment target** - this allows you to select the default target environment for Studio deployment.
+* **Set as Studio Pro Deployment target** - this allows you to select the default target environment for Studio Pro deployment.
 
 ### 4.3 Activity
 
@@ -406,6 +406,8 @@ This allows you to scale your app by increasing the number of replicas.
 
 To apply the new value, click **Restart the App and Scale**. Because you restart your app, it will be unavailable for a short time.
 
+If an application is in the Stopped state, the scaling does not come into effect until the application is started. This means that you have to click **Start application** in order for the changes to be sent to the cluster.
+
 ##### 5.1.3.4 Clear Admin Password
 
 This allows you to clear the password for the local admin user set in the Private Cloud environment. This means that there will be no password pushed to your environment when your app is deployed - any password currently set in the environment will be retained.
@@ -457,6 +459,8 @@ If any of these garbage collection steps fail, you will no longer see the enviro
 If you need to enter or change the subscription secret, then you can do that here.
 
 Subscription secrets are obtained from [Mendix support](https://support.mendix.com/).
+
+We have also released an alternate way of licensing your apps in the Private Cloud by using PCLM. For more information, see [Private Cloud License Manager](/developerportal/deploy/private-cloud/private-cloud-license-manager/).
 
 #### 5.1.4 Security
 

@@ -29,7 +29,7 @@ Google Tag (gtag.js) should not be confused with Google Tag Manager, as those ar
 
 In **Basic** mode, the Google Tag widget sends a pre-configured `page_view` event as [suggested by Google](https://developers.google.com/tag-platform/gtagjs/reference/events#page_view). If this does not meet your needs, please use the **Advanced** mode of the widget.
 
-### 1.4 Compatibility
+### 1.4 Compatibility {#compatibility}
 
 The module is compatible with Studio Pro 9.18 and above.
 

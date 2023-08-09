@@ -13,6 +13,12 @@ These release notes cover changes made to the [Catalog](/catalog/).
 
 ## 2023
 
+### July 24, 2023
+
+#### Fixes
+
+* We fixed an issue where datasets sometimes disappeared from an endpoint.
+
 ### July 6, 2023
 
 #### Improvements
@@ -87,7 +93,7 @@ These release notes cover changes made to the [Catalog](/catalog/).
 #### Fixes
 
 * We fixed an issue on the Catalog Admin page that displayed incorrect counts of data sources registered in the company.
-* We fixed an error that occured when no authentication is selected while registering a data source.
+* We fixed an error that occurred when no authentication is selected while registering a data source.
 
 ### February 27, 2023
 
@@ -173,7 +179,7 @@ These release notes cover changes made to the [Catalog](/catalog/).
 #### Improvements
 
 * You can now view authentication details in the [data source details](/catalog/manage/search/#service-details) page. 
-* The **Technical Owner** can now only be changed in the **Control Center**, not within the **Catalog**. See the [Custom Owners](/developerportal/control-center/catalog-admin/#custom-owners) section of *Catalog Administration*.
+* The **Technical Owner** can now only be changed in **Control Center**, not within the **Catalog**. See the [Custom Owners](/developerportal/control-center/catalog-admin/#custom-owners) section of *Catalog Administration*.
 
 #### Fixes
 
@@ -217,7 +223,7 @@ These release notes cover changes made to the [Catalog](/catalog/).
 
 #### Improvements
 
-* Mendix Admins can now enable and disable sample data sets in the Catalog. To do so, go to the **Data Hub** page of the Control Center, click the **Settings** tab, and toggle **Sample Data Sources are hidden**. 
+* Mendix Admins can now enable and disable sample data sets in the Catalog. To do so, go to the **Data Hub** page of Control Center, click the **Settings** tab, and toggle **Sample Data Sources are hidden**. 
 
 #### Fixes
 
@@ -283,7 +289,7 @@ These release notes cover changes made to the [Catalog](/catalog/).
 
 #### Improvements
 
-* Mendix Admins can now assign a new [external user](/developerportal/control-center/catalog-admin/#external-users) when removing the existing one from company's Catalog. To remove a user, go to the **Control Center** > **Data Hub** > **External Users** and click **Remove**.
+* Mendix Admins can now assign a new [external user](/developerportal/control-center/catalog-admin/#external-users) when removing the existing one from company's Catalog. To remove a user, go to **Control Center** > **Data Hub** > **External Users** and click **Remove**.
 
 #### Fixes
 
@@ -317,7 +323,7 @@ These release notes cover changes made to the [Catalog](/catalog/).
 
 #### Improvements
 
-* Mendix Admins can now remove external participants from their company's Catalog. To do so, go to the **Control Center** > **Data Hub** > **External Users** and click **Remove**.
+* Mendix Admins can now remove external participants from their company's Catalog. To do so, go to **Control Center** > **Data Hub** > **External Users** and click **Remove**.
 
 #### Fixes
 
@@ -580,7 +586,7 @@ These release notes cover changes made to the [Catalog](/catalog/).
 
 #### Improvements
 
-* Non-company admins are now navigated to the Control Center landing page instead of getting the **Access Denied** message.
+* Non-company admins are now navigated to Control Center landing page instead of getting the **Access Denied** message.
 
 ### November 11, 2021
 

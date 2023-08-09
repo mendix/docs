@@ -2,7 +2,7 @@
 title: "Jira"
 url: /developerportal/project-management/jira-connector/
 weight: 5
-description: "Describes how to connec Mendix apps in the Developer Portal to Jira."
+description: "Describes how to connect Mendix apps in the Developer Portal to Jira."
 tags: ["app", "jira", "project management", "scrum master", "general settings", Developer Portal", "Scrum Master"]
 aliases:
     -  /developerportal/general/jira-connector/
@@ -86,7 +86,7 @@ Once the activation is completed, your app is connected to Jira. You can see the
 * In Studio Pro, you can see your Jira stories in the Stories pane:
     * If you connect your app to a Scrum board in Jira, the Stories pane shows all issues of the types "Story" and "Bug" from the active Sprint.
     * If you connect your app to a Kanban board, the Stories pane shows all issues that match the board’s filter and sub-filter. 
-        * You can find the filters and sub-filters in the board settings in Jira. Fore more information, see [Configure a company-managed board](https://support.atlassian.com/jira-software-cloud/docs/configure-a-company-managed-board/). 
+        * You can find the filters and sub-filters in the board settings in Jira. For more information, see [Configure a company-managed board](https://support.atlassian.com/jira-software-cloud/docs/configure-a-company-managed-board/). 
         * If you want to exclude issues from the backlog in the Stories pane, consider removing the backlog statuses from the board’s column settings.
 
 * After you commit your changes in Studio Pro, you can see the associated Jira stories in the details of the corresponding [revision](/developerportal/general/team-server/#revision-details) in the **Team Server** page of the Developer Portal.

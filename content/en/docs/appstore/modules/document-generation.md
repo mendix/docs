@@ -15,13 +15,13 @@ This module is currently in Public Beta and should be used for testing purposes 
 
 The [PDF Document Generation](https://marketplace.mendix.com/link/component/211553) module allows you to generate pixel-perfect PDF documents based on regular pages in your app.
 
-This module uses the document generation service on the Mendix Cloud to convert any regular web page in your app into a PDF document. The result is similar to what you would get when using the "Save as PDF" feature in the print dialog box of your browser. 
+This module uses the document generation service on Mendix Cloud to convert any regular web page in your app into a PDF document. The result is similar to what you would get when using the "Save as PDF" feature in the print dialog box of your browser. 
 
-You can use the module locally or on the Mendix Cloud.
+You can use the module locally or on Mendix Cloud.
 
 When running locally, a local service is used to run the headless browser next to your app. The service and browser run only at the moment of generating a document, and are terminated when the document is finished.
 
-When running on the Mendix Cloud, the document generation service on the Mendix Cloud is used, which is developed and maintained by Mendix. The cloud service opens the page in a headless browser and sends the resulting PDF back to the module. The diagram below illustrates this process.
+When running on Mendix Cloud, the document generation service on Mendix Cloud is used, which is developed and maintained by Mendix. The cloud service opens the page in a headless browser and sends the resulting PDF back to the module. The diagram below illustrates this process.
 
 {{< figure src="/attachments/appstore/modules/document-generation/request-flow.png" >}}
 
@@ -35,7 +35,7 @@ When running on the Mendix Cloud, the document generation service on the Mendix 
 
 ### 1.2 Security
 
-When deployed to the Mendix Cloud, the cloud service uses the user which was provided in the `Generate as user` parameter to access the requested page. A short-lived security token is used to authenticate each request. The lifetime of this token can be configured using the constant `TokenLifetimeInSeconds`.
+When deployed to Mendix Cloud, the cloud service uses the user which was provided in the `Generate as user` parameter to access the requested page. A short-lived security token is used to authenticate each request. The lifetime of this token can be configured using the constant `TokenLifetimeInSeconds`.
 
 The architecture is set up to process every request in a fully isolated context. The cloud service creates a request-specific worker instance for every PDF that is generated and sends the result back to the runtime when finished. After this, the worker instance is destroyed.
 
@@ -46,6 +46,7 @@ We do not store pages or documents at any time in the process.
 The document generation functionality is under active development. While we cannot guarantee that there will not be any breaking changes in future releases, we will clearly and timely communicate any breaking changes. We will build in backwards compatibility wherever possible.
 
 * Currently, PDF is the only supported document export format.
+* For deployment, currently only the public [Mendix Cloud](https://docs.mendix.com/developerportal/deploy/mendix-cloud-deploy/) is supported. Other deployment scenarios will be supported at a later stage.
 * The `Generate PDF from page` action does not support multiple page parameters.
 * We use a fixed 30 second timeout for the page to finish loading and rendering. A timeout exception is thrown if the page content did not finish loading within 30 seconds.
 * We currently do not enforce strict rate limits. However, take into account the following guidelines:
@@ -53,7 +54,6 @@ The document generation functionality is under active development. While we cann
     * For batch processing, do not exceed 25 documents per minute, to ensure stable performance.
 * Objects that are created in the microflow that contains the `Generate PDF from page` action are not available to use in your document. This is also applicable for changes made to existing objects. The reason is that those changes are not persisted to the database until the whole microflow has finished. The document generation service will access your document in its own context, and therefore have no access to the non-persisted changes.
 * For local development, we use the Chrome or Chromium executable that is available on the development machine. Even though we have not observed these yet, there might be minor differences in PDF output locally vs. when using the cloud service.
-* For deployment, currently only Mendix Cloud is supported. Other deployment scenarios will be supported at a later stage.
 * When you deploy your app, it needs to be accessible to our cloud service. This requires access to the DocGen request handler which can be configured in the Cloud Portal. If your app is configured to restrict access, for example using IP whitelisting and/or client certificates, our cloud service will not be able to reach your app and the module will not work properly.
 * The access (and refresh) tokens used to secure requests to the cloud service are stored unencrypted in the app database. No user roles have read access to these tokens and all communication with the cloud service is encrypted by requiring HTTPS. However, do consider this when sharing a backup of the database with other developers. We will introduce encryption at a later stage.
 
@@ -62,6 +62,7 @@ The document generation functionality is under active development. While we cann
 * When styling your document, you might see conflicting styles introduced by Atlas Core. These styles are specific to the print media and use the `!important` property. This means you can only override them using `!important` property as well. You can find this property in the file *atlas_core/web/core/\_legacy/bootstrap/_bootstrap.scss*.
 * The `System.Owner` association is currently not set to the user which has run the microflow.
 * Some widgets, such as the [Charts](/appstore/widgets/charts/) widget, might not be fully loaded if they are rendered before all data is available. We check on pending network requests to prevent this, but this is not 100% reliable.
+* If you have the [Application Performance Monitor (APM)](/appstore/partner-solutions/apd/) or [Application Performance Diagnostics (APD)](/appstore/partner-solutions/apd/) add-on enabled in your app, or set the log level of the **Services** log node to *Trace*, the PDF Document Generation module will not be able to generate documents when used in Mendix Cloud. Note: This is only applicable for apps built in Mendix versions below 9.24.5 and Mendix 10.0.0.
 
 ## 2 Installation {#installation}
 
@@ -70,10 +71,12 @@ Follow the instructions in [How to Use Marketplace Content in Studio Pro](/appst
 ## 3 Configuration {#configuration}
 
 1. In the **App Explorer**, double-click **Settings**, then go to the **Runtime** tab, and add the **ASu_DocumentGeneration_Initialize** microflow to run after startup. If there is already an after startup microflow, add the **ASu_DocumentGeneration_Initialize** microflow as an action in the existing microflow.
-2. In the **App Explorer**, double-click **Security**, and then set the **Security level** to **Prototype/demo** or **Production**.
-3. In the **App Explorer**, double-click **Security** again, then go to the **User roles** tab, and add the module role **User** from the **DocumentGeneration** module to all app roles that should be able to generate a document.
+2. In the **App Explorer**, double-click **Security**, and then set the **Security level** to *Prototype/demo* or *Production*.
+3. In the **App Explorer**, double-click **Security** again, then go to the **User roles** tab and perform the following steps: 
+    1. Add the module role **User** from the **DocumentGeneration** module to all app roles that should be able to generate a document.
+    2. Add the module role **Administrator** from the **DocumentGeneration** module to all app roles that should be able to [register](#register-app) the app environments on Mendix Cloud.
 4. To clean up document requests, enable the scheduled event **SE_DocumentRequest_Cleanup** to automatically remove expired **Document Request** objects after a configured offset in days. The offset is configured using the constant **DocumentGeneration.RequestCleanupOffsetInDays** (the default value is 7 days). The scheduled event runs daily at 03:00 UTC.
-5. Depending on where you run the module, continue to perform the procedure in the [Running Locally](#run-locally) section or in the [Running on the Mendix Cloud](#run-on-mendix-cloud) section.
+5. Depending on where you run the module, continue to perform the procedure in the [Running Locally](#run-locally) section or in the [Running on Mendix Cloud](#run-on-mendix-cloud) section.
 
 ### 3.1 Running Locally {#run-locally}
 
@@ -93,14 +96,13 @@ Download the *chrome-win.zip* package and extract the archive to a location of y
 
 Configure the path to the *chrome.exe* executable in the **CustomChromePath** constant in the **_UseMe** > **Configuration** folder.
 
-### 3.2 Running on the Mendix Cloud {#run-on-mendix-cloud}
+### 3.2 Running on Mendix Cloud {#run-on-mendix-cloud}
 
 To allow the module to send and receive document generation requests on your Mendix Cloud environments, you need to perform the following procedures:
 
 1. Enable the DocGen request handler.
-2. If your app is deployed on the Mendix Cloud with a [custom domain](/developerportal/deploy/custom-domains/), set up the URL for the Mendix custom domain.
+2. For applications using Mendix [custom domains](/developerportal/deploy/custom-domains/), configure custom domain support.
 3. Register your app environment.
-
 
 The steps for each procedure are described in the sections below. 
 
@@ -108,7 +110,7 @@ The steps for each procedure are described in the sections below.
 
 1. Make sure that you have the **ASu_DocumentGeneration_Initialize** already configured in your app’s runtime settings. For more information, see the [Configuration](#configuration) section.
 
-2. Make sure that you have the application deployed to the Mendix Cloud.
+2. Make sure that you have the application deployed to Mendix Cloud.
 
 3. To allow the module to send and receive document generation requests in your Mendix Cloud environments, enable the DocGen request handler as follows:
 
@@ -135,15 +137,14 @@ The steps for each procedure are described in the sections below.
     
     8. Depending whether this app environment uses a Mendix [custom domain](/developerportal/deploy/custom-domains/), continue with one of the following procedures:
     
-        * If it uses a Mendix custom domain, [set up the URL for the Mendix custom domain](#use-custom-domain).
+        * If it uses a Mendix custom domain, [set up your app to support the custom domain](#use-custom-domain).
         * If it does not use a Mendix custom domain, [register your app environment](#register-app).
     
+#### 3.2.2 Setting up Mendix Custom Domain Support (Only for Apps Deployed with Mendix Custom Domains){#use-custom-domain}
 
-#### 3.2.2 Setting up the URL for the Mendix Custom Domain (Only for Apps Deployed with Mendix Custom Domains){#use-custom-domain}
+If your app is deployed to Mendix Cloud and configured with a custom domain, the PDF Document Generation module needs to know the original Mendix Cloud URL in order to successfully generate your documents.
 
-If your app is deployed to the Mendix Cloud and configured with a custom domain, the PDF Document Generation module needs to know the URL for the custom domain in order to successfully generate your documents.
-
-To set up the URL for the custom domain, do as follows:
+To set it up you need to set the values of the constants **DocumentGeneration.UseCustomApplicationUrl** and **DocumentGeneration.CustomApplicationUrl** to point to Mendix Cloud URL for the desired app environment:
 
 1. Go to the **Environments** page for the app as follows:
 
@@ -168,7 +169,7 @@ To set up the URL for the custom domain, do as follows:
 
 8. Click **Edit**. The **Edit Constant** dialog box opens. 
 
-9. In the **New value** field, enter the URL for the custom domain without the trailing slash, for example: *https://exampleapp-accp.mendixcloud.com*, and then click **Save**. You can find the value of the URL by searching for the constant **DocumentGeneration.CustomApplicationUrl** in the folder **_UseMe** > **Configuration** > **Custom Domain** in the App Explorer in Studio Pro.
+9. In the **New value** field, enter the URL for Mendix Cloud domain of your app without trailing slash, for example: *https://exampleapp-accp.mendixcloud.com*, and then click **Save**.
 
     {{< figure src="/attachments/appstore/modules/document-generation/custom-application-url.png" >}}
 
@@ -180,7 +181,7 @@ Now you can [register your app environment](#register-app).
 
 1. Add the snippet **Snip_AppRegistration** to a page that is accessible to admin users in your app.
 2. Enable the scheduled event **SE_AccessToken_Refresh** to automatically refresh the access token that is used to secure access to the Document Generation cloud service.
-3. Make sure that your changes are deployed to the Mendix Cloud.
+3. Make sure that your changes are deployed to Mendix Cloud.
 4. Sign in to the app environment you want to register.
 5. Navigate to the page that contains the **Snip_AppRegistration** snippet.
 6. Follow the steps on the page to register your app environment.
@@ -230,13 +231,13 @@ For scenarios where you want to generate documents using a system context (for e
 
    {{% alert color="info" %}}Do not use regular user accounts for the **Generate as user** parameter, since this could have side effects, for example, changes in the last login date, or failures when multiple sessions are disabled and the applicable user logs in at the same time.{{% /alert %}}
 
-3. Run the app and create a new local user as the service user. Give the service user the app role that you created for document generation and use a strong password. The service user will be used to generate documents. When starting with a blank app, you can add the **Administration.Account_Overview** page to manage and create new users. 
+4. Run the app and create a new local user as the service user. Give the service user the app role that you created for document generation and use a strong password. The service user will be used to generate documents. When starting with a blank app, you can add the **Administration.Account_Overview** page to manage and create new users. 
 
    {{% alert color="info" %}}You could also add a **Find or create** microflow to your after startup logic that performs this step automatically.{{% /alert %}}
 
-4. Create a microflow to retrieve and return the configured service user.
+5. Create a microflow to retrieve and return the configured service user.
 
-5. In the microflow where you call the **Generate PDF from page** action, add a microflow call to the microflow you created in the previous step, and use the return value (the service user) as input for the **Generate as user** parameter of the action.
+6. In the microflow where you call the **Generate PDF from page** action, add a microflow call to the microflow you created in the previous step, and use the return value (the service user) as input for the **Generate as user** parameter of the action.
 
 {{% alert color="info" %}}
 We recommend to try to log in as the service user at least once, to verify if the service user has the required module roles to login. Depending on your app’s implementation, it might for example be required to assign the `Administration.Account` module role.
@@ -303,7 +304,7 @@ If you encounter any of the following error messages:
 * "Domain verification failed, invalid response from verification endpoint"
 * "Domain verification failed for unknown reason"
 
-Then an unexpected error occured.
+Then an unexpected error occurred.
 
 Verify that your app was not restarted by someone else during the registration process. If not, submit a ticket in the Mendix Support Portal.
 

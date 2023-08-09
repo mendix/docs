@@ -201,7 +201,7 @@ The entities in the table below describe all generalizations. These are reused b
 | `ContinuationToken` | Describes to the Amazon S3 service that the list is being continued on this bucket with a token |
 | `StartAfter` | Describes where you want Amazon S3 to start listing from. Amazon S3 starts listing after this specified key. `StartAfter` can be any key in the bucket |
 
-#### 4.1.11 ListObjectsRespose {#listobjectsresponse}
+#### 4.1.11 ListObjectsResponse {#listobjectsresponse}
 
 | Attribute | Description | 
 | --- | --- |

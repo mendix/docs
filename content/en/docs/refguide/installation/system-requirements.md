@@ -144,7 +144,7 @@ The Mendix Docker buildpack supports the following Kubernetes versions:
 
 ### 6.1 Operating System {#server-os}
 
-* Microsoft Windows Server 2008 SP2 and above
+* Microsoft Windows Server 2012 and above
 * The following Unix-like operating systems:
     * Debian 8 (Jessie) and above
     * Red Hat Enterprise Linux 6, Red Hat Enterprise Linux 7, and Red Hat Enterprise Linux 8
@@ -152,7 +152,7 @@ The Mendix Docker buildpack supports the following Kubernetes versions:
 
 ### 6.2 Web Server
 
-* Microsoft Internet Information Services 7 and above
+* Microsoft Internet Information Services 8 and above
 * Nginx (tested with versions included in Debian Jessie and Debian Jessie Backports)
 * Apache
 

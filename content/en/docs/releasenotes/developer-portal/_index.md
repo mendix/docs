@@ -17,11 +17,44 @@ To see the current status of the Mendix Developer Portal and Control Center, see
 
 ## 2023
 
+### August 8, 2023
+
+#### Improvements
+
+* We released the [Webhooks API](/apidocs-mxsdk/apidocs/webhooks-api/) for general use. This API allows you to manage webhooks for actions which are performed on your Mendix apps. 
+
+### July 27, 2023
+
+#### Improvements
+
+* In Mendix 10, we have combined the strength of Mendix Studio and Studio Pro - they are not separate anymore, so we have removed the last links from the Developer Portal to Studio.
+* We have improved the information regarding the sunset of [Mendix Stories](/developerportal/project-management/stories/) (remember, it's October 1)
+* We are preparing the platform for the [big upgrade of the feedback management experience](https://www.mendix.com/blog/mendix-release-10-0-a-new-era/#app-insights). The new feedback management and mini surveys are a part of our brand new product suite called App Insights. The date for this upgrade of feedback management is set to August 12. If you are using the current feedback management tool, you will have received more detailed information in an email sent on Monday, July 24 (subject line: Upgrade to new Feedback Management).
+* You asked, we listened: In Epics, you can now see who created a story on the story details page.
+
+### July 13, 2023
+
+#### New Features 
+
+* We added the **Member ID** column to the **Active Members** and **Deactivated Members** lists on the [Member](/developerportal/control-center/#41-active-and-deactivated-members) page in Control Center. The column also appears in the Excel file, when you export the member information from these lists.
+* We introduced **Member ID** search functionality on the **Member** page in Control Center.
+
+#### Improvements
+
+* We fixed column alignment issues and added responsive column resizing for member list columns to improve readability and visual aesthetics in Control Center.
+* We have improved your ability to create stories within Epics. You can now add a new story directly from any [swimlane](/developerportal/project-management/epics/board/#swimlane).
+* To streamline your app editing process, we have added a new **Edit in Studio Pro** button in Epics. With a single click, you can open your app directly in Studio Pro, similar to the rest of the platform.
+* In Epics, you now have the ability to sort your [story](/developerportal/project-management/epics/board/#story-details) and [epic](/developerportal/project-management/epics/epics/#epic-details) comments based on their time of submission, either showing the newest or the oldest on top.
+
+#### Fixes
+
+* We fixed a bug where we accidently tried to [migrate stories](/developerportal/project-management/epics/planning/#data-migration) that were marked for deletion from Mendix Stories to Epics. (They were not actually migrated, but they ended up as errors in the migration log.)
+
 ### July 3, 2023
 
 #### Deprecations
 
-* We removed the **Marketplace Content** section of Control Center](/developerportal/control-center/), which had been deprecated since March, 2023.
+* We removed the **Marketplace Content** section of [Control Center](/developerportal/control-center/), which had been deprecated since March, 2023.
 
 ### June 29, 2023
 
@@ -80,7 +113,7 @@ To see the current status of the Mendix Developer Portal and Control Center, see
 * We have upgraded our [Portfolio Management](/developerportal/portfolio-management/) tool with new features:
     * You can now have multiple portfolios at the same time!
     * You can now create portfolios with different levels of visibility to people in your company: private or restricted.
-* We have added the [Portfolios](/developerportal/control-center/#portfolios) page to the Control Center, which provides Mendix Admins with governance features for portfolio management in your company.
+* We have added the [Portfolios](/developerportal/control-center/#portfolios) page to Control Center, which provides Mendix Admins with governance features for portfolio management in your company.
 
 ### May 16, 2023{#byoidp}
 
@@ -721,7 +754,7 @@ In Portfolio Management, you can do the following
 #### Fixes
 
 * We fixed an issue where some graphs in the Control Center [Dashboard](/developerportal/control-center/#dashboard) were loading indefinitely. 
-* We fixed the page title of the [Mendix Studio](/studio/) landing page.
+* We fixed the page title of the Mendix Studio landing page.
 * Page links now open in the correct tab.
 
 ### April 26, 2021

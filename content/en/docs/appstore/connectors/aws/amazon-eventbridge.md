@@ -629,9 +629,9 @@ The input and output for this service are shown in the table below:
 
 #### 4.4.9 CreateConfiguration {#create-configuration}
 
-The `CreateConfiguration` java action allows you to create a EventRoutingConfiguration object for each event that you would want to be able to call. It takes an EventType and a CallbackMicroflow as parameters. The CallbackMicroflow is required to have an HttpRequest object as an input parameter. If the parameter is not provided, an IllegalArgumentException will be thrown.
+The `CreateConfiguration` Java action allows you to create an `EventRoutingConfiguration` object for each event that you would want to be able to call. It takes an `EventType` and a `CallbackMicroflow` as parameters. The `CallbackMicroflow` is required to have an `HttpRequest` object as an input parameter. If the parameter is not provided, an `IllegalArgumentException` will be thrown.
 
-If an `EventRoutingConfiguration` object with the same EventType already exists, the object will be updated with a new CallbackMicroflow value. The input and output for this service are shown in the table below:
+If an `EventRoutingConfiguration` object with the same `EventType` already exists, the object will be updated with a new `CallbackMicroflow` value. The input and output for this service are shown in the table below:
 
 | Input | Output | 
 | --- | --- | 

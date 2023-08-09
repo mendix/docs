@@ -13,7 +13,7 @@ Mendix lets you create native mobile apps for both Android and iOS from a single
 
 This guide will teach you how to do the following:
 
-* Understand how Mendix Studio and Studio Pro widgets relate to your native app
+* Understand how Mendix Studio Pro widgets relate to your native app
 * Set up Appium GUI to spy on a Mendix native iOS app
 * Set up Appium GUI to spy on a Mendix native Android app
 * Set up automatic testing for your Mendix native app
@@ -27,7 +27,7 @@ Before starting this guide, make sure you have completed the following prerequis
 
 ## 3 Understanding How Widgets Relate to Your Native App
 
-For each widget in the page editor of Studio and Studio Pro, the value of the named property will map to a property of the corresponding UI element in the native app. For iOS these UI elements will have an `accessibility id` property and for Android there will be a `view-tag` property. `view-tag` properties can only be read with the Espresso Android driver.
+For each widget in the page editor of Studio Pro, the value of the named property will map to a property of the corresponding UI element in the native app. For iOS these UI elements will have an `accessibility id` property and for Android there will be a `view-tag` property. `view-tag` properties can only be read with the Espresso Android driver.
 
 Under the hood, Mendix uses react-native to create your native apps. React-native's components have a property called `testID` that can be set. This `testID` is created specifically for end-to-end testing. For every component Mendix fills this with the value of the name property of the corresponding widget in the page editor. The `testID` is then mapped to a UI element's property in the native app by React Native. For iOS these UI elements will have an `accessibility id` property, and for Android there will be a `view-tag` property.
 

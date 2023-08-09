@@ -13,6 +13,20 @@ For information on the current status of deployment to Mendix for Private Cloud 
 
 ## 2023
 
+### July 13th, 2023
+
+#### Portal Improvements
+
+* We have now decoupled the scaling from *Start* and *Stop* in the members permission. This means that scaling does not come into effect until the application is started, and you have to click **Start application** in order for the changes to be sent to the cluster
+* We have added a banner on the **Namespace details** page to display information about the new Operator release.
+
+#### Deploy API Improvements
+
+* We have now decoupled the scaling from start and stop in members permissions.
+* We have added a new **runtimeVersion** field under **Runtime** in the **Manifest of the Environment** in DeployAPI.
+* We have fixed a core resource decimal conversion issue in the environment manifest file (Ticket 189615).
+* We have fixed an issue where upper-case letters in an email ID would prevent members invited to a cluster manager or namespace from accepting the invite. (Ticket 189975)
+
 ### July 6th, 2023
 
 #### Mendix Operator v2.12.0 {#2.12.0}
@@ -393,7 +407,7 @@ This issue is fixed in Mendix Operator [version 2.5.1](#2.5.1).
 #### Portal Improvement
 
 * We have improved the UX, and added a new button, **Save and Apply** to directly apply changes made in an environment. This button restarts the environment.
-* We have added the ability to add metrics configuration to a environment.
+* We have added the ability to add metrics configuration to an environment.
   
 ### January 13, 2022
 
@@ -564,7 +578,7 @@ To upgrade an existing installation of Mendix for Private Cloud to Mendix Operat
     * Ingress class
     * Ingress path and path type
 * When a custom `ApplicationRootUrl` is specified in Custom Runtime Settings, it will be used instead of the automatically generated application URL.
-* We have fixed a incorrect *Runtime has an empty (trial) license* log message which appeared when using a Subscription Secret license.
+* We have fixed an incorrect *Runtime has an empty (trial) license* log message which appeared when using a Subscription Secret license.
 * We extended the Mendix Operator trial period from 30 days to 90 days. (Tickets 118172, 121775, 124921)
 
 To upgrade an existing installation of Private Cloud to this version, follow the [Upgrade instructions](/developerportal/deploy/private-cloud-upgrade-guide/).

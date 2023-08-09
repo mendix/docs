@@ -42,7 +42,7 @@ The following steps describe how the security proposal is set with an OpenID Con
 1. The app end-user logs into an app that uses external entities.
 2. The end-user is not yet authenticated, so the OIDC module forwards the user to IDP for authentication.
 3. If the correct credentials are provided, IDP returns the UserInfo and an access token for SSO.
-4. When the end-user performs a query on a external entity, the JSON web tokens (JWTs) are set on the API call, and are validated with a microflow in the consumed OData service. Create a microflow for the **Headers from microflow** option, and add the value of your OIDC token to the **Authorization** header:
+4. When the end-user performs a query on an external entity, the JSON web tokens (JWTs) are set on the API call, and are validated with a microflow in the consumed OData service. Create a microflow for the **Headers from microflow** option, and add the value of your OIDC token to the **Authorization** header:
 
     {{< figure src="/attachments/catalog/security/authentication-headers-from-microflow.png" alt="authentication flow" >}}
 

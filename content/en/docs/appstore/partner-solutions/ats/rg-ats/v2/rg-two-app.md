@@ -33,7 +33,7 @@ The **7-day history** infographic will only be included in the PDF report when y
 
 Under **Recent Tests**, you can find detailed information about the status of all your test cases and test suites. You can see the duration since the latest completed run, a counter of passed/total test cases, and the success rate. The success rate is calculated using the results of all the containing test cases. 
 
-For data-driven tests, the dataset is diplayed in the **test data** column. The counter of a data-driven test cases shows the passed/total test runs of the related dataset records at the time of execution.
+For data-driven tests, the dataset is displayed in the **test data** column. The counter of a data-driven test cases shows the passed/total test runs of the related dataset records at the time of execution.
 
 The results of your test cases are displayed as the following labels:
 
@@ -59,7 +59,7 @@ There are two roles in ATS, which are at first assigned to the user by the syste
 
 ### 2.1 Tester
 
-The **Tester** role is assigned to a user when they have at least one Team Server project licensed in ATS. A tester has access to all the data and actions that are neccessary for writing and executing tests in ATS.
+The **Tester** role is assigned to a user when they have at least one Team Server project licensed in ATS. A tester has access to all the data and actions that are necessary for writing and executing tests in ATS.
 
 ### 2.2 App Admin
 
@@ -109,7 +109,7 @@ In the **Edit Selenium Hub** dialog box, set the following parameters:
 ATS automatically retrieves the parallel test session limit from the Selenium hub. This limit is updated every 15 minutes. If ATS is not able to get the limit from the Selenium hub, it is set to one single test execution at a time.
 
 {{% alert color="info" %}}
-Starting with ATS verson 2.0, ATS capabilites override custom capabilities.
+Starting with ATS version 2.0, ATS capabilities override custom capabilities.
 {{% /alert %}}
 
 ### 3.3 Access Rights Control from ATS

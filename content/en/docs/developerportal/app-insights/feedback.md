@@ -16,7 +16,7 @@ If you app uses the [Mendix Feedback](/appstore/modules/mendix-feedback/) module
 
 {{% alert color="info" %}}When a user submits a feedback item from your app, you will get a notification. You can check the notification by clicking the [Notifications](/developerportal/#notifications) icon in the Developer Portal. If you no longer want to receive feedback notifications for a specific app, you can [stop watching](https://docs.mendix.com/developerportal/#my-apps) the app.{{% /alert %}}
 
-{{% alert color="info" %}}For information about what happens to a user after they submit a feedback item, see the [What Happens After a Reporter Submits Feedback](#after-reporter-submits-feedback) section.{{% /alert %}}
+{{% alert color="info" %}}For information about what happens to a user after they submit a feedback item, see the [What Happens to a User After They Submit Feedback](#after-reporter-submits-feedback) section.{{% /alert %}}
 
 **Feedback** contains two pages: **Inbox** and **Archive**.
 
@@ -137,7 +137,7 @@ The feedback details on the **Feedback Details** page or on the side panel conta
 
   {{% alert color="info" %}}**Contact reporter** only shows on the Feedback Details page, not on the side panel.{{% /alert %}}
 
-## 5 What Happens After a Reporter Submits Feedback
+## 5 What Happens to a User After They Submit Feedback
 
 After a user reports feedback from your app by clicking the feedback widget, they will get an email with a link to their reported feedback. If they open the link, a page opens and shows details about their feedback item. The page also offers a message box for them to communicate with your team directly.The assigned maker will receive an email whenever a reporter posts a message. When your team replies, the reporter will get an email notification, if the reporter has not turned the notification off.
 

@@ -62,21 +62,12 @@ The prerequisites are the following:
 * [Eclipse Temurin JDK 11 (x64)](https://github.com/adoptium/temurin11-binaries/releases)
 * [Microsoft Visual C++ 2015 and 2019 Redistributable Package](https://aka.ms/vs/16/release/vc_redist.x64.exe)
 * [Mendix Native Mobile Builder one-click Installer](https://appdev-mx-cdn.s3.amazonaws.com/native-builders/latest.exe)
-* [Git for Windows (x64)](https://git-scm.com/download/win)
-	
-	Mendix 9
-	
-	| 9.18.0 - 9.24.5 | 9.24.6 - onwards| 
-	|-|-|
-	|[2.37.1](https://github.com/git-for-windows/git/releases/tag/v2.37.1.windows.1)|[2.41.0](https://github.com/git-for-windows/git/releases/tag/v2.41.0.windows.3)|
-	
-	Mendix 10
-	
-	| 10.0.0 - 10.1.0 | 10.2.0 - onwards| 
-	|-|-|
-	|[2.37.1](https://github.com/git-for-windows/git/releases/tag/v2.37.1.windows.1)|[2.41.0](https://github.com/git-for-windows/git/releases/tag/v2.41.0.windows.3)|
-	
-	
+* [Git for Windows (x64)](https://git-scm.com/download/win) using the following versions:
+
+    | 10.0.0 - 10.1.0 | 10.2.0 - onwards | 
+    | --- | --- |
+    | [2.37.1](https://github.com/git-for-windows/git/releases/tag/v2.37.1.windows.1) | [2.41.0](https://github.com/git-for-windows/git/releases/tag/v2.41.0.windows.3) |
+    
 * [Microsoft Edge WebView2 Evergreen Runtime (x64 or ARM64) (Evergreen Standalone Installer version)](https://developer.microsoft.com/en-us/microsoft-edge/webview2/)
 * [Gradle 7.6 or above](https://services.gradle.org/distributions/gradle-7.6-bin.zip)
 

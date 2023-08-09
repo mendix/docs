@@ -79,20 +79,23 @@ For example, to list all existing Amazon SQS subscriptions, implement the [List 
     For more information, see [AWS Authentication](/appstore/connectors/aws-authentication/).
 4. In the **App Explorer**, in the **AmazonSQSConnector** > **Operations** section, find the **List Queues** activity.
 5. Drag the **List Queues** activity onto the work area of your microflow.
-6. In the **Toolbox** pane, search for the **Create object** activity and place it before the **List Queues** activity in the microflow.
-7. Double-click the **Create object** activity and select the [*ListQueuesRequest*](#listqueuesrequest) entity.
-8. Double-click the **List Queues** activity to configure the required parameters.
-9. Click **Edit parameter value**, edit the **AWS_Region** parameter, and change **Type** to **Expression**.
-10. In the expression builder, type *AWS_Region*, and then press **Ctrl+Space**.
-11. In the autocomplete dialog, select **AWSTwinMakerConnector.AWS_Region**, then type **.** and select your AWS region from the list.
-12. Click **OK**.
-13. Click **Edit parameter value**, edit the **ListQueues** parameter, and let it auto-fill.
-14. In the **Toolbox** pane, search for the **Retrieve** activity and drag it onto the microflow area.
-15. Position the **Retrieve** activity between the **ListQueue** activity and the microflow end event.
-16. Double-click the **Retrieve** activity.
-17. In the **Select Association** dialog box, in the **Association** section, click **Select**, and then under **ListQueueResponse** select *ListQueue_ListQueuesResponse* as the association.
-18. Click **OK**.
-19. Configure a method for triggering the **ACT_ListQueues** microflow.
+6. In the **App Explorer**, in the **AmazonSQSConnector** > **Resources** > **Authentication** section, find the **GetCredentials** activity and place it at the beginning of your Microflow.
+7. In the **Toolbox** pane, search for the **Create object** activity and place it before the **List Queues** activity in the microflow.
+8. Double-click the **Create object** activity and select the [*ListQueuesRequest*](#listqueuesrequest) entity.
+9. Double-click the **List Queues** activity to configure the required parameter.
+10. Click **Edit parameter value**, edit the **AWS_Region** parameter, and change **Type** to **Expression**.
+11. In the expression builder, type *AWS_Region*, and then press **Ctrl+Space**.
+12. In the autocomplete dialog, select **AmazonSQSConnector.AWS_Region**, then type **.** and select your AWS region from the list and click **OK**.
+13. Double-click the **List Queues** activity to configure the required parameters.
+14. Set the value of the **AWS_Region** parameter in the same way as for the **GetCredentials** activity.
+15. Click **Edit parameter value**, edit the **ListQueuesRequest** parameter, and let it auto-fill.
+16. Click **Edit parameter value**, edit the **Credentials** parameter, and let it auto-fill.
+17. In the **Toolbox** pane, search for the **Retrieve** activity and drag it onto the microflow area.
+18. Position the **Retrieve** activity between the **ListQueue** activity and the microflow end event.
+19. Double-click the **Retrieve** activity.
+20. In the **Select Association** dialog box, in the **Association** section, click **Select**, and then under **ListQueueResponse** select *ListQueue_ListQueuesResponse* as the association.
+21. Click **OK**.
+22. Configure a method for triggering the **ACT_ListQueues** microflow.
     For example, you can trigger a microflow by associating it with a custom button on a page in your app. For an example of how this can be implemented, see [Create a Custom Save Button](/howto/logic-business-rules/create-a-custom-save-button/).
 
 ## 4 Technical Reference

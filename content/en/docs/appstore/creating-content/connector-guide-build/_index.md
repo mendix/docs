@@ -47,7 +47,7 @@ This chart shows the available solutions for when you want to connect Mendix app
 
 | Category | Solution |
 | --- | --- |
-| Platform-supported protocols | Connect to two or more Mendix applications using platform-supported facilities:<br> SOAP web services (see [Published Web Services](/refguide/published-web-services/) and [Consumed Web Services](/refguide/consumed-web-services/)), REST web services (see [Published REST Services](/refguide/published-rest-service/) and [Consumed REST Services](/refguide/consumed-rest-services/)), OData (see [Published OData Services](/refguide/published-odata-services/) and [Consumed OData Services](/refguide/consumed-odata-services/)), or Data Hub (see the [Data Hub Guide](/data-hub/)). | 
+| Platform-supported protocols | Connect to two or more Mendix applications using platform-supported facilities:<br> SOAP web services (see [Published Web Services](/refguide/published-web-services/) and [Consumed Web Services](/refguide/consumed-web-services/)), REST web services (see [Published REST Services](/refguide/published-rest-service/) and [Consumed REST Services](/refguide/consumed-rest-services/)), OData (see [Published OData Services](/refguide/published-odata-services/) and [Consumed OData Services](/refguide/consumed-odata-services/)), or Catalog (see the [Catalog Guide](/catalog/)). | 
 | Unsupported protocols   | Build a module to connect either with alternative protocols or by encapsulating one of the platform supported protocols. You can do this with [Java actions](/refguide/java-actions/) or [JavaScript actions](/refguide/javascript-actions/).  | 
 
 #### 2.1.2 Connecting Mendix Apps to Third-Party Systems  

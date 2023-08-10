@@ -68,7 +68,7 @@ No. The behaviors are exactly the same as described in the [What Happens if a Us
 
 We recommend you to use only one Mini Survey widget per page. If you are experimenting, enable the **TEST_MODE** constant.
 
-If you app uses a master layout page and many child pages. You can place one Mini Survey widget on the master layout page and then use multiple **ShowSurvey_OnAction** or **ShowSurvey_UsingDataView** nanoflows actions to trigger the survey to show.
+If your app uses a master layout page and many child pages. You can place one Mini Survey widget on the master layout page and then use multiple **ShowSurvey_OnAction** or **ShowSurvey_UsingDataView** nanoflows actions to trigger the survey to show.
 
 ### 4.5 What Are the Survey Opt-Out Rules? {#survey-rules} 
 

@@ -8,7 +8,7 @@ tags: ["studio pro", "mendix assist", "validation assist", "bot", "validation bo
 
 ## 1 Introduction 
 
-The Validation Assist helps you build validation microflows in a more automated way using pre-built expressions.  [Validation rules](https://docs.mendix.com/refguide/validation-rules/) are conditions that should be satisfied before an object is committed. There are different ways to [set up data validations](/refguide/setting-up-data-validation/) in Mendix. Building data validations in microflows is a manual and repetitive task and Validation Assist helps automate it. 
+The Validation Assist helps you build validation microflows in a more automated way using pre-built expressions.  [Validation rules](/refguide/validation-rules/) are conditions that should be satisfied before an object is committed. There are different ways to [set up data validations](/refguide/setting-up-data-validation/) in Mendix. Building data validations in microflows is a manual and repetitive task and Validation Assist helps automate it. 
 
 The main features of the Validation Assist are the following:
 
@@ -65,7 +65,7 @@ The dialog box consists of two sections:
     * **Duplicate** – duplicates selected validation
     * **Extract** **submicroflow** – extracts a list of validations and saves it as a new validation sub-microflow to reuse later
 
-## 3 Using Validation Assist to Build Data Validations
+## 3 Using Validation Assist to Build Data Validations {#data-validations}
 
 You can configure a custom **Save** button with the help of the Validation Assist. 
 

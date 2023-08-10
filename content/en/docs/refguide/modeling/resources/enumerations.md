@@ -65,7 +65,7 @@ The caption can be changed and can contain any character. For example, *In Progr
 
 This is a translatable text. For more information, see [Language Menu](/refguide/translatable-texts/). 
 
-#### 3.1.2 Name
+#### 3.1.2 Name {#name}
 
 This is the name of an enumeration value. It is a technical name of the value which is used to refer to the enumeration value in your app.
 

@@ -282,4 +282,4 @@ On the **Sheet Preferences** tab, you can define sheet preferences with the foll
 
 ## 4 Read More
 
-* [How to Export to Excel](https://docs.mendix.com/howto/integration/using-the-excel-exporter)
+* [How to Export to Excel](/howto/integration/using-the-excel-exporter/)

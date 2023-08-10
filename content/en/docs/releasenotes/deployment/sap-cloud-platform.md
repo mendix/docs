@@ -129,7 +129,7 @@ For more information see [SAP Business Technology Platform - deploy](/developerp
 
 #### Improvements
 
-* We released the [SAP Fiori 3 UI Resource](https://marketplace.mendix.com/link/component/116359) module in the Mendix Marketplace. This allows you to create the SAP Fiori 3 user experience in your Mendix apps. SAP Fiori 3 is the new target design system for all SAP products in the *Intelligent Suite*. For more information, see [SAP Fiori 3.0 Styling](/appstore/connectors/ui-resources/sap-fiori-3-0/).
+* We released the [SAP Fiori 3 UI Resource](https://marketplace.mendix.com/link/component/116359) module in the Mendix Marketplace. This allows you to create the SAP Fiori 3 user experience in your Mendix apps. SAP Fiori 3 is the new target design system for all SAP products in the *Intelligent Suite*. For more information, see [SAP Fiori UI Resources](/appstore/modules/sap-ui-resources/sap-fiori-3-0/).
 
 ### December 9, 2020
 

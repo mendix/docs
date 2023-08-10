@@ -33,7 +33,7 @@ The following articles contain the documentation for all platform-supported SAP 
 The following articles contain the documentation for all platform-supported SAP modules:
 
 * [SAP Fiori UI Resources](/appstore/modules/sap-ui-resources/sap-fiori-3-0/) – summarizes the features of the Web UI Package for SAP Fiori theme module you can use to create an SAP Fiori-themed app
-* [SAP Horizon Native UI Resources](/appstore/connectors/ui-resources/sap-native-resources/) - describes the module which you can use to design your native mobile app pages with SAP Horizon-styled widgets and building blocks as part of your layout
+* [SAP Horizon Native UI Resources](/appstore/modules/sap-ui-resources/sap-native-resources/) - describes the module which you can use to design your native mobile app pages with SAP Horizon-styled widgets and building blocks as part of your layout
 
 ### 2.3 SAP BTP Deployment
 

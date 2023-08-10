@@ -10,9 +10,7 @@ tags: ["Feedback","Developer Portal", "feedback widget"]
 
 ## 1 Introduction
 
-If you app uses the [Mendix Feedback](/appstore/modules/mendix-feedback/) module, users can report feedback to your team using the feedback widget in your app, and all their feedback will go to **Feedback** in the Developer Portal. **Feedback** enables your team to view and manage all the feedback items that users have sent from the app.
-
-{{% alert color="info" %}}When a user submits a feedback item from your app, everyone in your team will get a [notification](/developerportal/#notifications). If you no longer want to receive feedback notifications for a specific app, you can [stop watching](https://docs.mendix.com/developerportal/#my-apps) the app.{{% /alert %}}
+If you app uses the [Mendix Feedback](/appstore/modules/mendix-feedback/) module, users can report feedback to your team using the feedback widget in your app, and all their feedback will go to **Feedback** in the Developer Portal. **Feedback** enables your team to view and manage all the feedback items that users have sent from your app.
 
 ### 1.1 What Happens to a User After They Submit Feedback? {#what-happens-to-user}
 
@@ -38,7 +36,7 @@ If the user does not want to receive notifications anymore, they can clear the c
 
 After a user submits a feedback item from your app, it goes automatically to **Feedback** in the Developer Portal. **Feedback** enables your team to view all the feedback items. It also allows team members with the right permissions to organize the feedback items, and add feedback items manually.
 
-{{% alert color="info" %}}When a user submits a feedback item from your app, everyone in your team will get a [notification](/developerportal/#notifications) in the Developer Portal. If you no longer want to receive feedback notifications for a specific app, you can [stop watching](https://docs.mendix.com/developerportal/#my-apps) the app.{{% /alert %}}
+{{% alert color="info" %}}When a user submits a feedback item from your app, everyone in your team will get a [notification](/developerportal/#notifications) in the Developer Portal. If you no longer want to receive feedback notifications for a specific app, you can [stop watching](https://docs.mendix.com/developerportal/#my-apps) the app.</br>Next to getting a notification in the Developer Portal, Scrum Masters of your team will also receive an email with a link to the details of the new feedback item.{{% /alert %}}
 
 **Feedback** contains two pages: **Inbox** and **Archive**.
 
@@ -54,17 +52,17 @@ In the list on the **Inbox** page, you can find the following information for ea
 
 - **ID** – the unique number that is assigned to the feedback item
 - **Subject** – the title of the feedback item given by the reporter
-- **Submitter** – the email address of the user who submitted the feedback
-- **Tags** – tags that the app team members have assigned to the feedback item
-- **Status** – the status that app team has set to the feedback item
+- **Submitter** – the email address of the reporter
+- **Tags** – tags that your team has assigned to the feedback item
+- **Status** – the status that your team has set to the feedback item
 - **Linked** – number of the feedback items that are linked to this feedback
-- **Date** – the submission date of the feedback item
+- **Date** – the date when the feedback was submitted
 
 {{% alert color="info" %}}For more information about each bullet item above, see the list in the [Feedback Details](#feedback-details) section.{{% /alert %}}
 
 To export all feedback items into one Excel file, click **Export**.
 
-To search by **Subject**, **Description**, **User Email** and **Tags**, type the key words in the search bar.
+To search by **Subject**, **Description**, **User Email** and **Tags**, type the keywords in the search bar.
 
 Clicking the filter bar will open the **Filter by** side panel. In this side panel, you can filter the feedback items using the **Environment**, **Submission date**, and **Assignees**.
 
@@ -74,7 +72,7 @@ If your [role](/developerportal/general/app-roles/) has the permission that **Ca
 
 You can add new feedback items manually yourself. 
 
-To manually add a feedback item, click **Create new feedback item** (if there is not any feedback item yet on the **Inbox** page) or click **Add item** (if there are already feedback items on the **Inbox** page), and then fill in the **Subject**, **Description**, and **Submitter Email** fields, and optionally **Upload Screenshots** in the **New Feedback** item dialog box.
+To manually add a feedback item, click **Create new feedback item** (if there is not any feedback item yet on the **Inbox** page) or click **Add item** (if there are already feedback items on the **Inbox** page), and then fill in the **Subject**, **Description**, and **Submitter Email** fields, and optionally **Upload Screenshots** in the **New Feedback item** dialog box.
 
 If you select feedback items, you can see the following buttons: 
 
@@ -98,15 +96,15 @@ In the list on the **Archive** page, you can find the following information for 
 
 - **ID** – the unique number that is assigned to the feedback item
 - **Subject** – the title of the feedback item given by the reporter
-- **Submitter** – the email address of the user who submitted the feedback
+- **Submitter** – the email address of the reporter
 - **Tags** – tags that your team has assigned to the feedback item
 - **Status** – the status that your team has set to the feedback item
-- **Date** – the submission date of the feedback item
+- **Date** – the date when the feedback was submitted
 - **Archive Date** – the date when the feedback was archived
 
 To export all the archived feedback items into one Excel file, click **Export**.
 
-To search by **Subject** and **ID**, type the key words in the search bar.
+To search by **Subject** and **ID**, type the keywords in the search bar.
 
 Clicking the filter bar will open the **Filter by** side panel. In this side panel, you can filter the feedback items using the **Environment**, **Closed date**, **Submission date**, and **Assignees**.
 
@@ -122,8 +120,8 @@ The feedback details on the **Feedback Details** page or on the side panel conta
 
   {{< figure src="/attachments/developerportal/app-insights/feedback/third-party-integration.png" >}}
 
-  * **Convert to a story** – If your app is connected to [Epics](/developerportal/project-management/epics/epics/) or [Jira](https://www.atlassian.com/software/jira), clicking this button will convert the feedback item to a story on the designated board in Epics or Jira. Once the story is already created, clicking this button brings you to the story on the board right away.
-  * **Share** – Clicking this button copies the URL to the feedback item. You can share the URL to other people.
+  * **Convert to a story** – If your app is connected to [Epics](/developerportal/project-management/epics/) or [Jira](/developerportal/project-management/jira-connector/), clicking this button will convert the feedback item to a story on the designated board in Epics or Jira. Once the story is created, clicking this button brings you to the story on the board right away.
+  * **Share** – Clicking this button copies the URL to the feedback item. You can send the URL to other people.
   * Ellipsis (**...**)
     * **Move** – Clicking this button moves the items to any other app of which you are a member. Whenever you move feedback, you will also move all linked feedback. If you only want to move one item, you need to unlink the item from the group first.
     * **Delete** – Clicking this button removes the feedback item permanently from **Feedback**. The result is irreversible.
@@ -132,22 +130,22 @@ The feedback details on the **Feedback Details** page or on the side panel conta
 
 * **Assigned To** – This shows to whom the feedback item is assigned. When you assign the feedback item to someone,  they will get an email notification.
 
-* **Status** – This is the status of the feedback item. There are two default statuses: **New** and **Closed**. Whenever a feedback arrives in the app, it is set to **New**. Whenever you close a feedback, it will be set to **Closed** and moved to the **Archived** page. You an also add custom statuses by clicking the settings icon and adding the new statuses in the new dialog box. Custom statuses can only be used for feedback items that are not archived.
+* **Status** – This is the status of the feedback item. There are two default statuses: **New** and **Closed**. Whenever a feedback arrives in the app, it is set to **New**. When you close a feedback, it is set to **Closed** and moved to the **Archived** page. You can also add custom statuses by clicking the settings icon and adding the new statuses in the new dialog box. Custom statuses can only be used for feedback items that are not archived.
 
-* **Summary** – This is the summary of the feedback item. This field is only visible to the app team members. You can summarize the feedback in here. Everyone in your team can see this summary.
+* **Summary** – This is the summary of the feedback item. Only your team members can see this summary.
 
-* **User Feedback** – This shows the original feedback title, description, and screenshot from the reporter.
+* **User Feedback** – This shows the original feedback title, feedback description, and screenshot submitted by the reporter.
 
 * **Metadata** – This shows a list of metadata of the feedback item.
 
-  - **Active Userrole** – This is the role the reporter has in your app
-  - **Active form**– This is the page the reporter sent the feedback from
-  - **Screen Size** – This is the dimensions in pixels of the reporter’s screen
+  - **Active Userrole** – This is the user role the reporter has in your app
+  - **Active form**– This is the page from which the reporter sent the feedback
+  - **Screen Size** – This is the dimensions of the reporter’s screen in pixels
   - **Browser** – This is the version of the browser the reporter was using
   - **Application location** – This is the URL of the page from which the reporter sent the feedback
   - **Submitter name** – This shows the name of the reporter
   - **Submitter email** – This shows the email of the reporter
-  - **Submission date** – This shows the date when the feedback was submitted`
+  - **Submission date** – This shows the date when the feedback was submitted
 
 * **Tags** – These are the tags assigned to the feedback item. You can select a tag from the drop-down list or create new tags by typing the tag name inside the text box and then clicking **create [the tag name]**. A tag should contain maximum 50 characters. You can assign multiple tags to a feedback item.
 
@@ -167,8 +165,8 @@ The feedback details on the **Feedback Details** page or on the side panel conta
 
 * **Attachments** – This contains attachments to this feedback item. To upload an attachment, click **+** and select the file. The following formats are supported: .*peg*, *.png*, and *.gif*. Each attachment should be maximum 5 MB in size. Once an attachment is uploaded, only your team members can view, download, and delete the attachments.
 
-* **Team Comments** – This section shows all the comments on this feedback item from your team. You can leave comments here and attach attachments to each comment. Comments submitted to this section are only visible to other app team members.
+* **Team Comments** – This section shows all the comments on this feedback item from your team. You can leave comments here and attach attachments to each comment. Comments submitted to this section are only visible to your team members.
 
-* **Contact reporter** (not available on the side panel) – This section allows you to read messages from the reporter and reply to them. Whenever a reporter sends a message, it will be shown in this section. Whenever you reply a message from the reporter, they will receive an email. When there are multiple feedback items linked, the system only sends an email to the reporter of this specific feedback item, not other associated items in the same group.
+* **Contact reporter** (not available on the side panel) – This section allows you to read messages from the reporter and reply to them. Whenever the reporter sends a message, it will be shown in this section. Once you reply a message from the reporter, they will receive an email. When there are multiple feedback items linked, the system only sends an email to the reporter of this specific feedback item, not other associated items in the same group.
 
   For more information, see the [What Happens to a User After They Submit Feedback](#what-happens-to-user) section.

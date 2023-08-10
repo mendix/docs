@@ -44,7 +44,7 @@ To import this module into your app, follow the instructions in [How to Use Mark
 
 {{% alert color="info" %}}Once the start time of the mini survey is reached, the mini survey will start running, and all the target users of the mini survey will receive the survey automatically.{{% /alert %}}
 
- ## 4 FAQ {#FAQ} 
+ ## 4 FAQ {#faq} 
 
 ### 4.1 How to Use a Constant Variable Survey ID to Show a Survey? 
 

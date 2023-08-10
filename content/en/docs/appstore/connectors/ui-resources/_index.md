@@ -1,5 +1,5 @@
 ---
-title: "SAP Fiori Styling"
+title: "SAP Fiori UI Resources"
 url: /appstore/connectors/ui-resources/sap-fiori-3-0/
 category: "SAP"
 weight: 70

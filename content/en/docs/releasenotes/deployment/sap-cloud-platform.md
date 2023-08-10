@@ -86,7 +86,7 @@ For information on the current status of deployment to SAP BTP and any planned r
 
 #### Improvements
 
-* We released a new version of the [OData Model Creator for SAP Solutions](/refguide/use-sap-model-creator/) and [OData Connector for SAP Solutions](/appstore/connectors/sap/sap-odata-connector/) which support read-only access to SAP OData Gateway Services which use OData version 4. This is in addition to the existing support for OData versions 2 and 3.
+* We released a new version of the [OData Model Creator for SAP Solutions](/appstore/connectors/sap/use-sap-model-creator/) and [OData Connector for SAP Solutions](/appstore/connectors/sap/sap-odata-connector/) which support read-only access to SAP OData Gateway Services which use OData version 4. This is in addition to the existing support for OData versions 2 and 3.
 
 #### Fix
 

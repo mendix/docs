@@ -271,23 +271,23 @@ You can refer to the following properties settings for this example:
 
 ###### 2.5.3 Completion moment {#completion-moment}
 
-This property determines when the user task will be marked as completed. That can be either when the outcome is known, meaning that sufficient users have completed the task so that the outcome be determined, or after all the targeted users have completed their task. This option has no influence on the final outcome of the user task. For the sake of efficiency, the option to complete the task once sufficient users have completed the task is selected.
+This property determines when the multi-user task will be marked as completed. That can be either when the outcome is known, meaning that sufficient participants have completed the task so that the outcome be determined, or after all participants have completed their task. This option has no influence on the final outcome of the user task. The option **When outcome is known** is selected by default as this option is the most efficient because it completes the multi-user task with the minimum number of participants that have completed their task.
 
 Possible options are described in the table below:
 
-| Completion moment | Description                                                                                                                                                                                                                                                                                                            |
-| --- |------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| When outcome is known | The completion condition is evaluated after each user selects an outcome. When a user selects an outcome and this results in the multi-user task to be completed, this multi-user task will be removed from the inbox of the remaining users, as their votes will not change the final outcome of the multi-user task. |
-| When all participants completed their task | The completion condition is evaluated after all the targeted users have selected an outcome. This means that even though the final outcome is already known, the multi-user task will not yet be completed until all targeted users have selected an outcome.                                                          |
+| Completion moment | Description                                                                                                                                                                                                                                                                                                                                 |
+| --- |---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| When outcome is known | The completion condition is evaluated after each participant selects an outcome. When a participant selects an outcome and this results in the multi-user task to be completed, this multi-user task will be removed from the inbox of the remaining participants, as their votes will not change the final outcome of the multi-user task. |
+| When all participants completed their task | The completion condition is evaluated after all participants have selected an outcome. This means that only after **all** participants have completed their task, the final outcome of the multi-user task will be set.                                                                                                                     |
 
 ###### 2.5.3.1 Example
 
 The following example shows how the completion moment works. 
 
-The decision method is **Majority** and the majority type is **More than half** or **Most chosen**. There are 3 targeted users and 3 required votes from users. The possible outcomes are A, B and C. Both the first and the second user select option A.
+The decision method is **Majority** and the majority type is **More than half** or **Most chosen**. There are 3 targeted users and 3 required votes from participants. The possible outcomes are A, B and C. Both the first and the second participant select option A.
 
-* In case the completion moment is **When outcome is known** the multi-user task is marked as completed as soon as the second user selected outcome A because a majority was reached (2 out of 3).
-* In case the completion moment is **When all participants completed their task** the multi-user task will be marked as completed after the third user selects an outcome.
+* In case the completion moment is **When outcome is known** the multi-user task is marked as completed as soon as the second participant selected outcome A because a majority was reached (2 out of 3).
+* In case the completion moment is **When all participants completed their task** the multi-user task will be marked as completed after the third participant selects an outcome.
 
 In both cases the multi-user task completes with outcome A as a majority was reached and selecting other outcomes (having the third user selected B or C in the second case) will not change the final outcome.
 

@@ -48,7 +48,7 @@ To authenticate calls when using the Open API specification below, click **Autho
 
 ## 3 Examples
 
-If you need to retrieve app and environment information in an app, you will have to use the [Deploy API – Version 1](https://docs.mendix.com/apidocs-mxsdk/apidocs/deploy-api/) calls to do this.
+If you need to retrieve app and environment information in an app, you will have to use the [Deploy API – Version 1](/apidocs-mxsdk/apidocs/deploy-api/) calls to do this.
 
 {{% alert color="warning" %}}
 The {appId} in version 3 is retrieved as the {ProjectId} from the version 1 API.

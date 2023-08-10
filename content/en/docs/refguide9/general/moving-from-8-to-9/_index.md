@@ -131,7 +131,7 @@ For example: in the query `//Customer[Customer_Address/Address/City = 'Rotterdam
 Check out how the Mendix community resolves upgrade issues in the following Forum posts:
 
 * [Upgrade from Mendix 8 to Mendix 9](https://forum.mendix.com/link/space/studio-pro/questions/123696) – on *.jar* files and the *userlib* directory
-* [Native app styling difference with Mendix 9 upgrade](https://forum.mendix.com/link/space/mobile/questions/118280) – on [upgrading to Atlas 3](https://docs.mendix.com/refguide9/moving-from-atlas-2-to-3/)
+* [Native app styling difference with Mendix 9 upgrade](https://forum.mendix.com/link/space/mobile/questions/118280) – on [upgrading to Atlas 3](/refguide9/moving-from-atlas-2-to-3/)
 * [Error importing Excel file after upgrade to Mendix 9](https://forum.mendix.com/link/space/studio-pro/questions/117814) – on converting attribute values
 * [Does anyone have experience with upgrading Mx applications from 7 to 9?](https://forum.mendix.com/link/space/studio-pro/questions/112229) – on considerations for moving from 7 to 8 and then 8 to 9
 * [Native Mobile Synchronization Error after Mendix 9 Upgrade](https://forum.mendix.com/link/space/integrations/questions/112173) – on synchronizing objects and security rules

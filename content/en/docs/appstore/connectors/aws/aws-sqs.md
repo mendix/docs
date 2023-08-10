@@ -8,7 +8,7 @@ tags: ["marketplace", "marketplace component", "amazon", "sqs", "connector"]
 
 ## 1 Introduction
 
-The [Amazon SQS connector]([#needs-url]) enables your app to connect to other microservices by implementing [Amazon Simple Queue Service (SQS)](https://aws.amazon.com/sqs/). Amazon SQS lets you send, store, and receive messages between software components at any volume, without losing messages or requiring other services to be available.
+The [Amazon SQS connector](https://marketplace.mendix.com/link/component/214699) enables your app to connect to other microservices by implementing [Amazon Simple Queue Service (SQS)](https://aws.amazon.com/sqs/). Amazon SQS lets you send, store, and receive messages between software components at any volume, without losing messages or requiring other services to be available.
 
 ### 1.1 Typical Use Cases
 

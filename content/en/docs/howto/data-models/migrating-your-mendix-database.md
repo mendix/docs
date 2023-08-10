@@ -213,11 +213,11 @@ If you have a Mendix application running on SAP BTP with PostgreSQL as the datab
     }
     ```
 
-4. Create an environment using the SAP HANA database service and the Mendix Developer Portal.
-5. Deploy the .mda without starting the application.
-6. Sign in to the SAP BTP Cockpit.
-7. Navigate to the new application and go to **User-Provided Variables**.
-8. Set the following runtime properties by pressing `Add Variable`. Use the values from the PostgreSQL instance values that you noted above.
+6. Create an environment using the SAP HANA database service and the Mendix Developer Portal.
+7. Deploy the .mda without starting the application.
+8. Sign in to the SAP BTP Cockpit.
+9. Navigate to the new application and go to **User-Provided Variables**.
+10. Set the following runtime properties by pressing `Add Variable`. Use the values from the PostgreSQL instance values that you noted above.
 
     | Key | Value |
     | --- | --- |
@@ -227,5 +227,5 @@ If you have a Mendix application running on SAP BTP with PostgreSQL as the datab
     | `MXRUNTIME_SourceDatabaseUserName` | `{username}` |
     | `MXRUNTIME_SourceDatabasePassword` | `{password}` |
 
-9. Start the application either from the Developer Portal or from the SAP BTP Cockpit. 
-10. Once the application is started, verify the data in the application.
+11. Start the application either from the Developer Portal or from the SAP BTP Cockpit. 
+12. Once the application is started, verify the data in the application.

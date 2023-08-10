@@ -46,7 +46,7 @@ To import this module into your app, follow the instructions in [How to Use Mark
 
  ## 4 FAQ {#faq} 
 
-### 4.1 How to Use a Constant Variable Survey ID to Show a Survey? 
+### 4.1 How to Use a Constant Variable for Survey ID to Show a Survey? 
 
 You can achieve this using the data view and nanoflow solution we provide in the module as follows:
 

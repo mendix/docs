@@ -230,9 +230,9 @@ A mini survey has the following opt-out rules:
 * If a user has answered one or more questions in a survey, but did not finished the survey, then the survey will show again. However, if the user has closed the survey before finishing for the second time, the survey will not show again to this user.
 * If the user has answered all questions, then the survey will not show again to the user.
 
-Survey opt-out rule is a variable cached to your internet browser. You can reset and show a survey multiple times by clearing your browser cache. If you are testing, we recommend you to use the `TEST_MODE` constant to avoid clearing every time.
+Survey opt-out rule is a variable cached to your internet browser. You can reset and show a survey multiple times by clearing your browser cache. If you are testing, we recommend you use the **TEST_MODE** constant to avoid clearing every time.
 
-{{% alert color="info" %}}In a future release, we will allow you customise these opt-out rules from the App Insights portal.{{% /alert %}} 
+{{% alert color="info" %}}In a future release, we will allow you to customise these opt-out rules from the App Insights portal.{{% /alert %}} 
 
 ### 3.6 Unfinished Surveys
 

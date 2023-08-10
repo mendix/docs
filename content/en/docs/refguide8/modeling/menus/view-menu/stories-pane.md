@@ -75,7 +75,7 @@ To open the document, either click the **Open document** button in the top bar o
 
 {{< figure src="/attachments/refguide8/modeling/menus/view-menu/stories-pane/open-document-icon.png" alt="Open document icon" >}}
 
-For more information on how to create a story on the basis of a feedback item and add it to your backlog, see the [Adding a Feedback Item to Your Backlog](/developerportal/app-insights/feedback/#adding) section in *Feedback Management*.
+For more information on how to create a story on the basis of a feedback item and add it to your board in [Epics](/developerportal/project-management/epics/) or [Jira](/developerportal/project-management/jira-connector/), see the [Feedback Details](/developerportal/app-insights/feedback/#feedback-details) section in *Feedback*.
 
 ### 2.5 Changing the Status of a Story or a Task {#changing-status}
 

@@ -240,4 +240,4 @@ If a user only answers one or two questions before they close the mini survey. T
 
 ## 4 Troubleshooting & FAQ
 
-For troubleshooting information and FAQ, see the [Troubleshooting](/appstore/modules/mendix-mini-surveys/#troubleshooting) section and the [FAQ](#faq) section in *Mendix Mini Surveys*.
+For troubleshooting information and FAQ, see the [Troubleshooting](/appstore/modules/mendix-mini-surveys/#troubleshooting) section and the [FAQ](/appstore/modules/mendix-mini-surveys/#faq) section in *Mendix Mini Surveys*.

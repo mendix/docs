@@ -14,7 +14,7 @@ If you app uses the [Mendix Feedback](/appstore/modules/mendix-feedback/) module
 
 {{% alert color="info" %}}When a user submits a feedback item from your app, everyone in your team will get a [notification](/developerportal/#notifications). If you no longer want to receive feedback notifications for a specific app, you can [stop watching](https://docs.mendix.com/developerportal/#my-apps) the app.{{% /alert %}}
 
-### 1.1  What Happens to a User After They Submit Feedback? {#what-happens-to-user}
+### 1.1 What Happens to a User After They Submit Feedback? {#what-happens-to-user}
 
 After a user reports feedback in the app using the feedback widget, they will get an email with a link to their submitted feedback item. When they open the link, a page opens and shows feedback details. See the table below:
 

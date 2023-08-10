@@ -32,7 +32,7 @@ On the **Excel Exporter** page, there are the following items:
 * **New**: opens the **New template** dialog box that contains the following items:
     * **Document type**: the document type of the exported file (**Excel 97 - 2003**, **Excel 2007 or higher**, **Excel 2007 and higher (Macro-Enabled)**, or **CSV file**)
 
-    {{% alert color="info" %}}There is a provision now to specify "quotation" character during CSV export. The default is **"**, but the user can specify any single character of their choice as quotation character or even decide to *not* have any during export.{{% /alert %}}
+    {{% alert color="info" %}}The module uses `"` by default as the quotation character during CSV export. However, you can specify any single character of your choice as the quotation character or even decide NOT to have any during export.{{% /alert %}}
 
     * **Filename** : the name of the template
     * **Input object**(optional): an entity associated to your entity to be exported

@@ -2,7 +2,7 @@
 title: "Registry configuration"
 url: /developerportal/deploy/private-cloud-registry/
 description: "Describes how to configure the OCI image registry in Mendix for Private Cloud."
-weight: 10
+weight: 11
 tags: ["Private Cloud","Registry","Container","ACR","ECR","GCR","quay.io","OpenShift"]
 #To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 ---
@@ -170,12 +170,39 @@ Only the `amazon-ecr` option is validated and supported when using the Elastic C
 
 ### 2.4 Azure Container Registry
 
-TODO
+To improve security, Azure Container Registry recommends using [workload identity](https://learn.microsoft.com/en-us/azure/aks/workload-identity-overview) authentication instead of static credentials.
+
+To authenticate with ACR, the AKS cluster needs to be attached to ACR as described [in the Azure documentation](https://learn.microsoft.com/en-us/azure/aks/cluster-container-registry-integration?toc=%2Fazure%2Fcontainer-registry%2Ftoc.json&bc=%2Fazure%2Fcontainer-registry%2Fbreadcrumb%2Ftoc.json&tabs=azure-cli#attach-an-acr-to-an-existing-aks-cluster).
+
+To access the ACR registry, the Mendix Operator will use its Kubernetes Service Account for authentication, using the [msal-go](https://github.com/AzureAD/microsoft-authentication-library-for-go) library.
+
+To use ACR with the Mendix Operator, you will need to:
+
+1. Create an ACR container registry. 
+2. Follow the [guide](https://learn.microsoft.com/en-us/azure/aks/workload-identity-deploy-cluster) to 
+    
+    * enable workload identity authentication in AKS
+    * create a managed identity for the Mendix Operator image builder
+    * establish the federated identity credential
+    
+    Other steps are provided as examples and can be skipped.
+    You'll need to specify the Kubernetes namespace and name - the namespace where the Mendix Operator is installed, and a Kubernetes service account name.
+    The Mendix Operator will use this Service Account to authenticate itself with ACR.
+
+    Write down the `USER_ASSIGNED_CLIENT_ID`, it will be needed later.
+
+3. Open the ACR Access Control (IAM) tab, and add an `AcrPush` role assigment to the Managed Identity created on step 2.
+
+Use the following configuration options:
+
+* **Registry Name** - Path in the Azure Container Registry — for example `mendix-apps/mynamespace`.
+* **Registry URL** - domain name (login name) of the ACR registry, for example `example.azurecr.io`
+* **Kubernetes Service Account** - the Kubernetes service account that was linked with the Azure workload identity step 2; the Kubernetes Service Account will be created automatically when you apply the changes.
+* **AZWI Client ID** - the workload identity `USER_ASSIGNED_CLIENT_ID` created on step 2, for example `00000000-0000-0000-0000-000000000000`.
 
 ### 2.5 Google Container Registry
 
-To improve security, Google Container Registry recommends using workload identities instead of static credentials.
-Instead, GCR recomments using [workload identity](https://cloud.google.com/kubernetes-engine/docs/how-to/workload-identity) authentication.
+To improve security, Google Container Registry recommends using [workload identity](https://cloud.google.com/kubernetes-engine/docs/how-to/workload-identity) authentication instead of static credentials.
 
 To access the GCR registry, the Mendix Operator will use its Kubernetes Service Account for authentication, using the [docker-credential-gcr](https://github.com/GoogleCloudPlatform/docker-credential-gcr) plugin.
 

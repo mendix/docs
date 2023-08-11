@@ -21,8 +21,8 @@ To see the current status of the Mendix Developer Portal and Control Center, see
 
 #### Fixes
 
-* we fixed an issue with the support of Kanban boards in the Jira Connector where sub-tasks would cause duplicate entries in the interface to Studio Pro, causing it to throw an error
-* we fixed an issue where under certain circumstances it was possible to remove the last Scrum master of an App Project
+* We fixed an issue with Jira connector where sub-tasks in Kanban boards in Jira would cause duplicate entries in the interface to Studio Pro, causing it to throw an error. 
+* We fixed an issue where under certain circumstances it was possible to remove the last Scrum master of an app.
 
 ### August 8, 2023
 
@@ -81,7 +81,7 @@ To see the current status of the Mendix Developer Portal and Control Center, see
 
 #### New Features
 
-* Jira is here! You can now assign your Studio Pro commits to user stories in your Jira board. We offer this functionality as a Beta version and welcome your feedback. Read all about the features and how to set it up in [Jira Connector](/developerportal/project-management/jira-connector/).
+* Jira is here! You can now assign your Studio Pro commits to user stories in your Jira board. We offer this functionality as a Beta version and welcome your feedback. Read all about the features and how to set it up in [Jira connector](/developerportal/project-management/jira-connector/).
 
 #### Improvements
 

@@ -100,7 +100,15 @@ The domain model is a data model that describes the information in your applicat
 
 #### 4.1.1 {ENTITY NAME}
 
-{DESCRIBE THE ENTITY AND ITS PURPOSE. LIST ATTRIBUTES, GENERALIZATIONS AND ASSOCIATIONS WHERE RELEVANT}
+#### 4.1.1 InvokeModelGenericRequest {#invokemodelgenericrequest}
+This is the request entity of the InvokeModelGeneric action.
+
+| Attribute | Description |
+| --- | --- |
+|`ModelId`| The ModelId attribute describes identifier of the model and is a required parameter.|
+|`Accept`| The Accept attribute describes the desired MIME type of the inference body in the response. The default value is 'application/json'.|
+|`ContentType`| The Accept attribute describes the MIME type of the input data in the request. The default value is 'application/json'.|
+|`SavePrompt`| The SavePrompt attribute describes whether to save this prompt in your prompt history. Default value is false.|
 
 ### 4.2 Enumerations
 
@@ -116,21 +124,14 @@ An enumeration is a predefined list of values that can be used as an attribute t
 
 Activities define the actions that are executed in a microflow or a nanoflow. For the Amazon Bedrock connector, they {PURPOSE OF THE ACTIVITIES}.
 
-#### 4.3.1 {ACTIVITY NAME}
+#### 4.3.1 Invoke Model Generic {#invoke-model-generic}
 
-The `{ACTIVITYNAME}` {AWS SERVICE NAME} activity allows you to {ACTIVITY PURPOSE}. It requires {REQUIRED PARAMETERS}. {OPTIONAL, IF THE ACTIVITY HAS NO OUTPUT: "This activity has no return value.
+The `InvokeModel Generic` Bedrock activity allows you to invoke a model from amazon bedrock. this action provides the generic parts that are equal for the invokation of every model. It requires AWS_Region, RequestBody, InvokeModelGenericRequest as input parameters.
 "}
 
 The input and output for this service are shown in the table below:
 
 | Input | Output |
 | --- | --- |
-| `{INPUT OBJECT}` | `{OUTPUT OBJECT}` |
+| `AWS_Region (ENUM)`, `RequestBody (String)`, `InvokeModelGenericRequest` | `String` |
 
-##### OPTIONAL, INCLUDE ONLY IF THE ACTIVITY RETURNS AN OUTPUT:
-
-This activity returns a `{OUTPUT OBJECT}` object with objects from the following entities, as shown in the table below:
-
-| Name |    Generalization |    Documentation |
-| --- | --- | --- |
-| `{ENTITY NAME}` | `{ENTITY GENERALIZATION}` | {ENTITY DESCRIPTION} |

@@ -128,7 +128,7 @@ NOT ALL ARE GENERALIZATIONS! -> The entities in the table below describe all gen
 
 | Attribute | Description |
 | --- | --- |
-| N/A | The object does not contain any attributes, but it inherits from the `AbstractAssetModelStatus` entity |
+| N/A | The entity does not contain any attributes, but it inherits from the `AbstractAssetModelStatus` entity |
 
 ### 4.1.5 AbstractAssetModelStatus {#abstract-asset-model-status}
 
@@ -250,7 +250,7 @@ NOT ALL ARE GENERALIZATIONS! -> The entities in the table below describe all gen
 
 | Attribute | Description |
 | --- | --- |
-| N/A | The object does not contain any attributes, but it inherits from the `AbstractAssetSummary` entity |
+| N/A | The entity does not contain any attributes, but it inherits from the `AbstractAssetSummary` entity |
 
 ### 4.1.21  AbstractAssetSummary {#abstract-asset-summary}
 
@@ -397,26 +397,70 @@ NOT ALL ARE GENERALIZATIONS! -> The entities in the table below describe all gen
 | --- | --- |
 | NextToken | Describes the token for the next set of results, or `(empty)` if there are no additional results. |
 
-### 4.1.39 AssociatedAssetsSummary {#associated-assets-summary}
+### 4.1.40 AssociatedAssetsSummary {#associated-assets-summary}
 
 | Attribute | Description |
 | --- | --- |
-| N/A | The object does not contain any attributes, but it inherits from the `AbstractAssetSummary` entity |
+| N/A | The entity does not contain any attributes, but it inherits from the `AbstractAssetSummary` entity |
 
-### 4.1.40 DescribeAssetPropertyRequest {#describe-asset-property-request}
+### 4.1.41 DescribeAssetPropertyRequest {#describe-asset-property-request}
 
 | Attribute | Description |
 | --- | --- |
 | AssetID | Describes the ID of the asset and is a required parameter. |
 | PropertyID | Describes the ID of the asset property and is a required parameter. |
 
-### 4.1.41 DescribeAssetPropertyResponse {#describe-asset-property-response}
+### 4.1.42 DescribeAssetPropertyResponse {#describe-asset-property-response}
 
 | Attribute | Description |
 | --- | --- |
 | AssetID | Describes the ID of the asset. |
 | AssetModelID | Describes the ID of the asset model. |
 | AssetName | Describes the name of the asset. |
+
+### 4.1.43 GetAssetPropertyValueRequest {#get-asset-property-value-request}
+
+| Attribute | Description |
+| --- | --- |
+| AssetID | Describes the ID of the asset |
+| PropertyAlias | Describes alias that identifies the property |
+| PropertyID | Describes ID of the asset property |
+
+### 4.1.44 GetAssetPropertyValueResponse {#get-asset-property-value-response}
+
+| Attribute | Description |
+| --- | --- |
+| N/A | The entity does not contain any attributes |
+
+### 4.1.45 PropertyValue {#property-value}
+
+| Attribute | Description |
+| --- | --- |
+| N/A | The entity does not contain any attributes, but it inherits from the `AbstractAssetPropertyValue` entity |
+
+### 4.1.46 AbstractAssetPropertyValue {#abstract-asset-property-value}
+
+| Attribute | Description |
+| --- | --- |
+| Quality | Describes the quality of the asset property value |
+
+### 4.1.47 TimeInNanos {#time-in-nanos}
+
+| Attribute | Description |
+| --- | --- |
+| TimeInSeconds | Describes the timestamp date, in seconds, in the Unix epoch format |
+| OffsetInNanos | Describes the nanosecond offset from TimeInSeconds |
+
+### 4.1.48 Variant {#variant}
+
+| Attribute | Description |
+| --- | --- |
+| hasBooleanValue | Describes if the asset property has a BooleanValue  |
+| BooleanValue | Describes asset property data of type Boolean (true or false) |
+| DoubleValue | Describes asset property data of type double (floating point number) |
+| IntegerValue | Describes asset property data of type integer (whole number) |
+| StringValue | Describes asset property data of type string (sequence of characters). |
+
 
 ### 4.1. ENTITY_NAME {#entity_name}
 
@@ -550,6 +594,14 @@ An enumeration is a predefined list of values that can be used as an attribute t
 | CHILD | CHILD | Lists all child assets associated to the asset. |
 | PARENT | PARENT | The list includes the asset's parent asset. |
 
+#### 4.2.14 ENUM_AssetPropertyValue_Quality
+
+| Name | Caption | Description |
+| --- | --- | --- |
+| GOOD | GOOD | The data isn't affected by any issues. |
+| BAD | BAD | The data is affected by an issue such as sensor failure. |
+| UNCERTAIN | UNCERTAIN | The data is affected by an issue such as sensor inaccuracy. |
+
 ### 4.3 Activities {#activities}
 
 Activities define the actions that are executed in a microflow or a nanoflow.
@@ -655,6 +707,14 @@ The `DescribeAssetProperty` Amazon Iot SiteWise activity allows you to retrieve 
 | Input | Output | 
 | --- | --- | 
 | `DescribeAssetPropertyRequest` | `DescribeAssetPropertyResponse` |
+
+#### 4.3.12 GetAssetPropertyValue {#get-asset-property-value}
+
+The `GetAssetPropertyValue` Amazon Iot SiteWise activity allows you to retrieve an asset property's current value. It requires a valid `ENUM_Region` parameter and a `GetAssetPropertyValueRequest` object and returns a `GetAssetPropertyValueResponse` object.
+
+| Input | Output | 
+| --- | --- | 
+| `GetAssetPropertyValueRequest` | `GetAssetPropertyValueResponse` |
 
 ##### OPTIONAL, INCLUDE ONLY IF THE ACTIVITY RETURNS AN OUTPUT:
 

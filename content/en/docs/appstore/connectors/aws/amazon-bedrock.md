@@ -98,9 +98,23 @@ To help you work with the Amazon Bedrock connector, the following sections of th
 
 The domain model is a data model that describes the information in your application domain in an abstract way. For more information, see [Domain Model](/refguide/domain-model/).
 
-#### 4.1.1 {ENTITY NAME}
+#### 4.1.X {ENTITY NAME}
 
 {DESCRIBE THE ENTITY AND ITS PURPOSE. LIST ATTRIBUTES, GENERALIZATIONS AND ASSOCIATIONS WHERE RELEVANT}
+
+#### 4.1.1 ListFoundationModelsResponse
+
+The ListFoundationModelsResponse entity collects (via association) details needed to invoke all available foundational models that AWS provides in its response. The details per model are stored on the ModelSummary entity.
+
+#### 4.1.2 ModelSummary
+
+The ModelSummary entity stores details (per model) needed to invoke all the available foundational models. 
+
+| Attribute/Association | Description |
+| --- | --- |
+| `ModelArn` | the ARN (Amazon Resource Name) that identifies the foundational model (string)|
+| `ModelId` | ID assigned by Amazon Bedrock to their specific foundational models and is used to invoke the model in question (string)|
+| `ModelSummary_ListFoundationModelsResponse (*-1)` | For collecting the returned foundational models under the ListFoundationalModelsResponse (string)|
 
 ### 4.2 Enumerations
 
@@ -116,7 +130,7 @@ An enumeration is a predefined list of values that can be used as an attribute t
 
 Activities define the actions that are executed in a microflow or a nanoflow. For the Amazon Bedrock connector, they {PURPOSE OF THE ACTIVITIES}.
 
-#### 4.3.1 {ACTIVITY NAME}
+#### 4.3.X {ACTIVITY NAME}
 
 The `{ACTIVITYNAME}` {AWS SERVICE NAME} activity allows you to {ACTIVITY PURPOSE}. It requires {REQUIRED PARAMETERS}. {OPTIONAL, IF THE ACTIVITY HAS NO OUTPUT: "This activity has no return value.
 "}
@@ -126,6 +140,16 @@ The input and output for this service are shown in the table below:
 | Input | Output |
 | --- | --- |
 | `{INPUT OBJECT}` | `{OUTPUT OBJECT}` |
+
+#### 4.3.1 GET_V1_ListFoundationModels
+
+The GET_V1_ListFoundationModels Bedrock activity allows you to get all the available foundational models AWS Bedrock provides. It requires a Credentials object and ENUM_Region value (like "us_west_2").
+
+The input and output for this service are shown in the table below:
+
+| Input | Output |
+| --- | --- |
+| `Credentials + ENUM_Region` | `ListFoundationModelsResponse & ModelSummary` |
 
 ##### OPTIONAL, INCLUDE ONLY IF THE ACTIVITY RETURNS AN OUTPUT:
 

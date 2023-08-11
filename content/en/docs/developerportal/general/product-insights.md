@@ -134,8 +134,27 @@ This tab shows the test data that has been collected from testers in the test mo
 
 You can collect test data using two methods:
 
-* Change the value of the **TEST_MODE** constant in the [Mendix Mini Surveys](/appstore/modules/app-insights/) module. This will show **[TEST_MODE]** on the survey widget UI.
-* Select the **Enable Mendix SSO test users"** checkbox on the **Settings** tab of **Survey Overview**, which marks the app team members as testers. Note that if an app team member is not authenticated through Mendix SSO, this setting does not work for them. The survey widget will not show **[TEST_MODE]** on the UI.
+* See [Test Mode](#test-mode) for more details.
+
+### 2.2.5 Test Mode {#test-mode}
+
+Test Mode lets you capture Survey Response in a Test Results table instead of polluting your master results table. You can be free to experiment using the follow two modes.
+
+1. Test Mode - For Project Members
+   This is a special test mode that will filter out Survey Response made by your Mendix App Team members.
+   Any Survey Responses made by your Mendix Team members will be placed in the Test Data results table and your customer survey responses will be placed in the default Results table.
+   This means your team can actively test a survey in production and their responses will not pollute your main customer survey data.
+   You can enable this feature directly in the Settings page of the appinsights.mendix.com portal.
+   The survey widget will not show **[TEST_MODE]** on the UI
+   
+   Note that if an app team member is not authenticated through Mendix SSO, this setting does not work for them.
+
+3. Test Mode - For All Users
+   This test mode is used for experimentation and all Survey responses will go to the Test Results table.
+   When this Test Mode feature is enabled, the Mini Survey pop-up will have a visual **[TEST_MODE]** Text on the pop-up UI.
+   When  you are happy with the Survey you can switch off the Test Mode feature and the Survey will start to collect all customer survey data into the default Results table.
+   Change the value of the **TEST_MODE** constant in the [Mendix Mini Surveys](/appstore/modules/app-insights/) module.  Your App > Marketplace modules > AppInsights_MiniSurvey > _SETUP > 2. Set API Key & mode.
+
 
 ## 3 Running a Mini Survey
 

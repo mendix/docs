@@ -317,7 +317,7 @@ Your build may fail if you try to deploy the same deployment package more than o
 * We fixed a build error which happened when an MDA included a data snapshot.
 * We resolved an issue where the sidecar container didn’t process the shutdown signal, even when the app container was stopped (this meant that stopping an app took 30 seconds)
 * We have disabled the `enableServiceLinks` Kubernetes feature — this prevents app pods from receiving a list of all services running in a namespace through environment variables.
-* When connecting to the Development Portal, the Mendix Gateway Agent will now trust CAs specified through [Custom TLS](https://docs.mendix.com/developerportal/deploy/private-cloud-cluster/#custom-tls)
+* When connecting to the Development Portal, the Mendix Gateway Agent will now trust CAs specified through [Custom TLS](/developerportal/deploy/private-cloud-cluster/#custom-tls)
 * We fixed an issue where the Operator was restarting the build pod when using AWS identity webhooks.
 
 #### Portal Improvements

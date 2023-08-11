@@ -34,7 +34,7 @@ By default, Studio Pro shows styling files on the app level and from UI resource
 
 To learn more about the file and folder structure, see the [File and Folder Structure](#file-and-folder) section below.
 
-### 2.3 Adding Custom Styling
+### 2.3 Adding Custom Styling {#add-custom-styling}
 
 Developers can add custom styling for apps in the `theme/web` or `theme/native` folder.
 

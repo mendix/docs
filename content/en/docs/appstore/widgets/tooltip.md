@@ -15,6 +15,12 @@ You can use the [Tooltip](https://marketplace.mendix.com/link/component/119160) 
 
 When placing the new Tooltip widget onto a page, use the composable region to place the content which will trigger the tooltip. You can freely model and combine widgets per your use case.
 
+### 1.2 Limitations
+
+This widget is affected by the following limitation:
+
+* On Safari, the on-hover tooltip may not work properly when used on a disabled element. If this issue occurs, please use a different web browser.
+
 ## 2 Configuration
 
 Several options can be defined in the Tooltip widget. For more information, see the sections below.
@@ -59,8 +65,4 @@ This option defines how the tooltip will be triggered.
 
 {{% alert color="warning" %}}
 On mobile devices the **Hover** option will be triggered on touch.
-{{% /alert %}}
-
-{{% alert color="warning" %}}
-On Safari, the on-hover tooltip may not work properly when used on a disabled element. If this issue occurs, please use a different web browser.
 {{% /alert %}}

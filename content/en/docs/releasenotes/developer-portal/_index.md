@@ -17,6 +17,41 @@ To see the current status of the Mendix Developer Portal and Control Center, see
 
 ## 2023
 
+### August 12, 2023
+
+#### New features
+
+* It's here: Feedback 2.0. Together with Mini Surveys, the new feedback management tool forms our brand new suite called App Insights. App Insights is officially generally available as of today and it enables you to collect, analyze and act on the input of your users and innovate faster. So what's new when it comes to feedback management?
+
+   * Adding tags to feedback items so you can see patterns more easily
+   * Allow teams to define custom statuses for feedback items - no more wondering what "Handled" means, now you can create your workflow, your way
+   * Identifying which environment the feedback item comes from (for example Production or Test) - we know you wanted this for a long time
+   * Improved search capabilities (you can now filter on environment, submission dates, Assignee)
+   * Linking feedback items together, so if 5 users are reporting the same bug, now you can treat and update all of them as one
+   * Allowing reporters to see and update their feedback items in the Developer Portal
+   * Linking feedback items with Jira - for all of you who make use of our new Jira connector
+
+   Once you click on "Feedback" menu item in the project navigation, you will open the brand new feedback experience, with all your existing data already there. If you have set up Epics or Jira as your project management tool, the feedback will be linked to the right tool. In other words, you don't need to do anything, just try it out and tell us what you think.
+
+* Complementing Feedback Management, Mendix Mini Surveys will help to set short effective surveys to gather diverse feedback and empowers data-driven decision-making to improve app and features. What are the key benefits of our customisable Mini Survey?
+
+   * Easy to configure survey
+   * Tailor the survey setup to specify its display location, trigger timing, and target user group
+   * Define the duration of the survey
+   * Utilize the Toaster feature to designate the survey's on-screen placement
+   * Select your preferred survey format from options including rating scale, multiple choice, open questions, and NPS (Net Promoter Score)
+   * Configure a survey questionnaire with up to three questions in any desired format
+   * Record all survey responses, even if a customer doesn't complete the entire survey
+   * Employ the Test Mode functionality to experiment prior to deploying the survey to the broader audience
+   * Access a comprehensive view of responses for in-depth analysis
+
+### August 10, 2023
+
+#### Fixes
+
+* We fixed an issue with Jira connector where sub-tasks in Kanban boards in Jira would cause duplicate entries in the Stories pane in Studio Pro, causing it to throw an error. 
+* We fixed an issue where under certain circumstances it was possible to remove the last Scrum Master of an app.
+
 ### August 8, 2023
 
 #### Improvements
@@ -74,7 +109,7 @@ To see the current status of the Mendix Developer Portal and Control Center, see
 
 #### New Features
 
-* Jira is here! You can now assign your Studio Pro commits to user stories in your Jira board. We offer this functionality as a Beta version and welcome your feedback. Read all about the features and how to set it up in [Jira Connector](/developerportal/project-management/jira-connector/).
+* Jira is here! You can now assign your Studio Pro commits to user stories in your Jira board. We offer this functionality as a Beta version and welcome your feedback. Read all about the features and how to set it up in [Jira connector](/developerportal/project-management/jira-connector/).
 
 #### Improvements
 

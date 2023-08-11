@@ -46,7 +46,7 @@ We do not store pages or documents at any time in the process.
 The document generation functionality is under active development. While we cannot guarantee that there will not be any breaking changes in future releases, we will clearly and timely communicate any breaking changes. We will build in backwards compatibility wherever possible.
 
 * Currently, PDF is the only supported document export format.
-* For deployment, currently only the public [Mendix Cloud](https://docs.mendix.com/developerportal/deploy/mendix-cloud-deploy/) is supported. Other deployment scenarios will be supported at a later stage.
+* For deployment, currently only the public [Mendix Cloud](/developerportal/deploy/mendix-cloud-deploy/) is supported. Other deployment scenarios will be supported at a later stage.
 * The `Generate PDF from page` action does not support multiple page parameters.
 * We use a fixed 30 second timeout for the page to finish loading and rendering. A timeout exception is thrown if the page content did not finish loading within 30 seconds.
 * We currently do not enforce strict rate limits. However, take into account the following guidelines:

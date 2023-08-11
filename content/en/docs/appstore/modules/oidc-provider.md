@@ -5,12 +5,12 @@ category: "Modules"
 description: "Describes the configuration and usage of the OIDC Provider module, which is available in the Mendix Marketplace."
 tags: ["marketplace", "marketplace component", "OIDC", "IdP", "identity provider", "platform support", "Provider"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
-# Linked from https://marketplace.mendix.com/link/component/210202
+# Linked from https://marketplace.mendix.com/link/component/214681
 ---
 
 ## 1 Introduction
 
-The [OIDC Provider](https://marketplace.mendix.com/link/component/210202) can be used to build a Mendix app that acts as an OpenID provider for other apps, providing a Single Sign-On (SSO) experience for the end-users of those applications. This app could also delegate authentication of end-users to another Identity provider (IdP), causing it to act as an IAM broker.
+The [OIDC Provider](https://marketplace.mendix.com/link/component/214681) module can be used to build a Mendix app that acts as an OpenID provider for other apps, providing a Single Sign-On (SSO) experience for the end-users of those applications. This app could also delegate authentication of end-users to another Identity provider (IdP), causing it to act as an IAM broker.
 
 The module supports responsive browser-based applications and has been tested with applications that use the OIDC SSO module. This module can be used in Mendix version 9.22.0 and above.
 
@@ -62,7 +62,7 @@ The following modules need to be imported into your app
 
 To install the OIDC Provider module in your IAM broker app, you need to import the following into your app:
 
-* [OIDC Provider](https://example.com)
+* [OIDC Provider](https://marketplace.mendix.com/link/component/214681)
 * [Community Commons](https://marketplace.mendix.com/link/component/170)
 * [Mx Model reflection](https://marketplace.mendix.com/link/component/69)
 * [Administration](https://marketplace.mendix.com/link/component/23513)
@@ -89,7 +89,7 @@ To configure the app security, do the following:
 
 ### 3.2 Configure App Modules
 
-Every end-user that is known in Admin module also needs to be known in the OIDC Provider module. Access has to be given to allow an OIDCProvier.AccountDetail record to be created for every Administration.Account record when the end-user signs in. This can be achieved by the following steps:
+Every end-user that is known in Admin module also needs to be known in the OIDC Provider module. Access has to be given to allow an OIDCProvider.AccountDetail record to be created for every Administration.Account record when the end-user signs in. This can be achieved by the following steps:
 
 1. Open the **Domain model** of the **Administration** module.
 1. Edit the **Account** entity.
@@ -367,7 +367,7 @@ The format of non-custom claims in the ID-token is as follows:
 ### 6.1 Infinite Loop of Redirects
 
 The OIDC provider module sets a cookie as a means to persist the session in the user’s browser. If the cookie is not properly set, this may lead to problems. For example, when the OIDC Provider module is used to build an IAM Broker, no session is established and the broker may initiate a new session at the upstream IdP, which results in an ‘infinite loop’ of redirects via the user’s browser.
-To ensure the cookie is properly set, the runtime setting com.mendix.core.SameSiteCookies must have value None. See [Environment Details](https://docs.mendix.com/developerportal/deploy/environments-details/#4222-applying-a-different-samesite-setting) for more information how to set the correct value for SameSite runtime setting. Note that the default value for this setting has changed, see [Release Notes](https://docs.mendix.com/releasenotes/studio-pro/8.11/).
+To ensure the cookie is properly set, the runtime setting com.mendix.core.SameSiteCookies must have value None. See [Environment Details](/developerportal/deploy/environments-details/#samesite) for more information how to set the correct value for SameSite runtime setting. Note that the default value for this setting changed in [Mendix version 8.11](/releasenotes/studio-pro/8.11/).
 
 ## 7 About Authorization{#about-authorization}
 

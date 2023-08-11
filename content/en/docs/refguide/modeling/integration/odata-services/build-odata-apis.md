@@ -110,7 +110,7 @@ OData standardizes how to specify which resources to consume. This provides the 
 
 The following URL parameters are available:
 
-* **$filter** – This defines [filter expressions](https://docs.mendix.com/refguide/odata-query-options/#4-filtering) for the resource attributes (equals, not equal, smaller, larger, contains, etc.).
+* **$filter** – This defines [filter expressions](/refguide/odata-query-options/#4-filtering) for the resource attributes (equals, not equal, smaller, larger, contains, etc.).
 * **$top**, **$skip** – This indicates how many resource to skip and how many to return, helping to implement client-side pagination.
 * **$orderby** – This defines how to sort the resources in the response payload.
 * **$select** – This defines which attributes of the resource to return.

@@ -207,7 +207,7 @@ The Mendix Feedback widget is easy to set up and automatically attaches addition
 #### 6.1.3 Limitations
 
 * This widget can only be used in combination with Mendix apps
-* In native mobile apps, some of the feedback metadata such as username, email address, and document name will be hard-coded, as they cannot be retrieved dynamically (to address this you can use the [Native Feedback widget](https://docs.mendix.com/appstore/modules/native-mobile-resources/) instead, located in [Native Mobile Resources](https://marketplace.mendix.com/link/component/109513))
+* In native mobile apps, some of the feedback metadata such as username, email address, and document name will be hard-coded, as they cannot be retrieved dynamically (to address this you can use the [Native Feedback widget](/appstore/modules/native-mobile-resources/) instead, located in [Native Mobile Resources](https://marketplace.mendix.com/link/component/109513))
 
 ### 6.2 Configuration {#legacy-configuration}
 

@@ -13,6 +13,12 @@ These release notes cover changes made to the [Catalog](/catalog/).
 
 ## 2023
 
+### Aug 10, 2023
+
+#### Improvements
+
+* You can now easily update your data source to a newer version from the Data Source details Page. 
+
 ### July 24, 2023
 
 #### Fixes

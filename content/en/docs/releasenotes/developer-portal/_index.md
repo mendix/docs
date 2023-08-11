@@ -21,29 +21,30 @@ To see the current status of the Mendix Developer Portal and Control Center, see
 
 #### New features
 
-* It's here: Feedback 2.0. Together with Mini Surveys, the new feedback management tool forms our brand new suite called App Insights. App Insights is officially generally available as of today and it enables you to collect, analyze and act on the input of your users and innovate faster. So what's new when it comes to feedback management?
+* We released [App Insights](/developerportal/app-insights/) for GA, a brand new suite that enables you  to collect, analyze and act on the input of your users and innovate faster. App Insights includes two tools: [Feedback](/developerportal/app-insights/feedback/) and Mini Surveys.
 
-   * Adding tags to feedback items so you can see patterns more easily
-   * Allow teams to define custom statuses for feedback items - no more wondering what "Handled" means, now you can create your workflow, your way
-   * Identifying which environment the feedback item comes from (for example Production or Test) - we know you wanted this for a long time
-   * Improved search capabilities (you can now filter on environment, submission dates, Assignee)
-   * Linking feedback items together, so if 5 users are reporting the same bug, now you can treat and update all of them as one
-   * Allowing reporters to see and update their feedback items in the Developer Portal
-   * Linking feedback items with Jira - for all of you who make use of our new Jira connector
+* We released the new feedback management tool Feedback, which offers you the following new features:
 
-   Once you click on "Feedback" menu item in the project navigation, you will open the brand new feedback experience, with all your existing data already there. If you have set up Epics or Jira as your project management tool, the feedback will be linked to the right tool. In other words, you don't need to do anything, just try it out and tell us what you think.
+   * Allowing you to add tags to feedback items so you can see patterns more easily
+   * Enabling you to define custom statuses for feedback items – you can create your workflow, your way
+   * Supporting identifying which environment the feedback item comes from (for example, production or test environment)
+   * Improved search capabilities – you can now filter on environment, submission dates, and assignees
+   * Supporting linking feedback items together, so that if multiple users report the same bug, you can treat and update all their feedback as one
+   * Enabling reporters to see and update their feedback items in the Developer Portal
+   * Supporting linking feedback items with Jira – for all of you who make use of our new Jira connector
 
-* Complementing Feedback Management, Mendix Mini Surveys will help to set short effective surveys to gather diverse feedback and empowers data-driven decision-making to improve app and features. What are the key benefits of our customisable Mini Survey?
+   You can find all your existing feedback data already in the new Feedback. If you have set up Epics or Jira as your project management tool, Feedback is already linked to your tool. In other words, you do not need to do anything, just try it out and tell us what you think.
 
-   * Easy to configure survey
-   * Tailor the survey setup to specify its display location, trigger timing, and target user group
-   * Define the duration of the survey
-   * Utilize the Toaster feature to designate the survey's on-screen placement
-   * Select your preferred survey format from options including rating scale, multiple choice, open questions, and NPS (Net Promoter Score)
-   * Configure a survey questionnaire with up to three questions in any desired format
-   * Record all survey responses, even if a customer doesn't complete the entire survey
-   * Employ the Test Mode functionality to experiment prior to deploying the survey to the broader audience
-   * Access a comprehensive view of responses for in-depth analysis
+* Complementing Feedback, Mini Surveys will help you to set short, effective surveys to gather diverse feedback and enables data-driven decision-making to improve app and features. Mini Surveys have the following features:
+
+   * Easy to configure a survey questionnaire with up to three questions in any desired format
+   * Enabling you to tailor the survey setup to specify its display location, trigger timing, and target user group
+   * Supporting defining the duration of the survey
+   * Offering the toaster feature for you to designate the survey's on-screen placement
+   * Allowing you to select your preferred survey format from options including rating scales, multiple choices, open questions, and NPS (Net Promoter Score)
+   * Supporting recording all survey responses, even if a customer does not complete the entire survey
+   * Offering the test mode functionality for you to experiment prior to deploying the survey to a broader audience
+   * Providing a comprehensive view of responses for in-depth analysis
 
 ### August 10, 2023
 

@@ -3,7 +3,7 @@ title: "Mini Surveys"
 url: /developerportal/app-insights/mini-surveys/
 category: "App Insights"
 weight: 6
-description: "Describes how to set up mini surveys to gain insights into your app and view and export the survey results."
+description: "Describes how to set up mini surveys to gain insights into your app, and how to view and export the survey results."
 tags: ["mini survey", "app insights", "sprint", "developer portal"]
 ---
 

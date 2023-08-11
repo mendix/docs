@@ -76,9 +76,9 @@ To manually add a feedback item, click **Create new feedback item** (if there is
 
 If you select feedback items, you can see the following buttons: 
 
-* **Link Items** – Clicking this links the feedback items together into one feedback group. 
+* **Link Items** – Clicking this links the feedback items together into one feedback group.
 
-  You need to choose which item is the primary item of the group. After the feedback items are linked, only the primary feedback item appears in the list. The feedback items that are linked to the primary item will disappear from the list. You can only access these linked feedback items from their primary item.
+  You need to choose which item is the primary item of the group. After the feedback items are linked, only the primary feedback item appears in the list. The feedback items that are linked to the primary item will disappear from the list. You can only access these linked feedback items from their primary item. If you change the status of the primary feedback item, all the linked items will get the same status automatically.
 
   {{% alert color="info" %}}When you open a linked feedback item, you can click **Make [the linked feedback item] the Primary Item** to make this feedback item the primary item of the feedback group instead.{{% /alert %}}
 
@@ -157,7 +157,7 @@ The feedback details on the **Feedback Details** page or on the side panel conta
 
   {{< figure src="/attachments/developerportal/app-insights/feedback/linked-feedback.png" >}}
 
-  Once a feedback item is linked, it disappears from the list on the **Inbox** or **Archive** page. You can only access the linked feedback item from its primary feedback item to which it is linked.
+  Once a feedback item is linked, it disappears from the list on the **Inbox** or **Archive** page. You can only access the linked feedback item from its primary feedback item to which it is linked. If you change the status of the primary feedback item, all the linked items will get the same status automatically.
 
   {{% alert color="info" %}}When you open a linked feedback item, you can click **Make [the linked feedback item] the Primary Item** to make this feedback item the primary item of the feedback group instead.{{% /alert %}}
 

@@ -429,7 +429,7 @@ This issue is fixed in Mendix Operator [version 2.5.1](#2.5.1).
 #### Mendix Operator v2.3.0 and Mendix Gateway Agent v2.3.0
 
 * We have added a new field to set the Kubernetes ingress class as an annotation in the installer.
-* We have added a new feature to customize your image names in the registry using a [custom imageNameTemplate](/developerportal/deploy/private-cloud-cluster/#customize-registry-imagenametemplate).
+* We have added a new feature to customize your image names in the registry using a [custom imageNameTemplate](/developerportal/deploy/private-cloud-registry/#customize-registry-imagenametemplate).
 
 #### Portal Improvements
 

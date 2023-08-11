@@ -21,7 +21,7 @@ To see the current status of the Mendix Developer Portal and Control Center, see
 
 #### Fixes
 
-* We fixed an issue with Jira connector where sub-tasks in Kanban boards in Jira would cause duplicate entries in the interface to Studio Pro, causing it to throw an error. 
+* We fixed an issue with Jira connector where sub-tasks in Kanban boards in Jira would cause duplicate entries in the Stories pane in Studio Pro, causing it to throw an error. 
 * We fixed an issue where under certain circumstances it was possible to remove the last Scrum master of an app.
 
 ### August 8, 2023

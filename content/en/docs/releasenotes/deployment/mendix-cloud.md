@@ -17,6 +17,12 @@ For information on the current status of deployment to Mendix Cloud and any plan
 
 ## 2023
 
+### August 18, 2023 TODO: Date may need to be updated
+
+#### Improvements
+
+* Alerts webhooks are introduced.
+
 ### August 7, 2023
 
 #### Improvements

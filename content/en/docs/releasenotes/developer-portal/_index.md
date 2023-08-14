@@ -17,6 +17,35 @@ To see the current status of the Mendix Developer Portal and Control Center, see
 
 ## 2023
 
+### August 12, 2023
+
+#### New features
+
+* We released [App Insights](/developerportal/app-insights/) for GA, a brand new suite that enables you  to collect, analyze and act on the input of your users and innovate faster. App Insights includes two tools: [Feedback](/developerportal/app-insights/feedback/) and Mini Surveys.
+
+* We released the new feedback management tool Feedback, which offers you the following new features:
+
+   * Allowing you to add tags to feedback items so you can see patterns more easily
+   * Enabling you to define custom statuses for feedback items – you can create your workflow, your way
+   * Supporting identifying which environment the feedback item comes from (for example, production or test environment)
+   * Improved search capabilities – you can now filter on environment, submission dates, and assignees
+   * Supporting linking feedback items together, so that if multiple users report the same bug, you can treat and update all their feedback as one
+   * Enabling reporters to see and update their feedback items in the Developer Portal
+   * Supporting linking feedback items with Jira – for all of you who make use of our new Jira connector
+
+   You can find all your existing feedback data already in the new Feedback. If you have set up Epics or Jira as your project management tool, Feedback is already linked to your tool. In other words, you do not need to do anything, just try it out and tell us what you think.
+
+* Complementing Feedback, Mini Surveys will help you to set short, effective surveys to gather diverse feedback and enables data-driven decision-making to improve app and features. Mini Surveys have the following features:
+
+   * Easy to configure a survey questionnaire with up to three questions in any desired format
+   * Enabling you to tailor the survey setup to specify its display location, trigger timing, and target user group
+   * Supporting defining the duration of the survey
+   * Offering the toaster feature for you to designate the survey's on-screen placement
+   * Allowing you to select your preferred survey format from options including rating scales, multiple choices, open questions, and NPS (Net Promoter Score)
+   * Supporting recording all survey responses, even if a customer does not complete the entire survey
+   * Offering the test mode functionality for you to experiment prior to deploying the survey to a broader audience
+   * Providing a comprehensive view of responses for in-depth analysis
+
 ### August 10, 2023
 
 #### Fixes
@@ -150,7 +179,7 @@ To see the current status of the Mendix Developer Portal and Control Center, see
 
 #### Fixes
 
-* We fixed an issue where authors of a [feedback](/developerportal/general/feedback/) item would receive notifications on that item even though they specifically set the system not to send any notifications.
+* We fixed an issue where authors of a [feedback](/developerportal/app-insights/feedback/) item would receive notifications on that item even though they specifically set the system not to send any notifications.
 
 ### April 13, 2023
 
@@ -277,7 +306,7 @@ For more information on security issues, see [Security Advisories](/releasenotes
 
 #### New Features
 
-We have released the Beta version of [Product Insights](/developerportal/general/product-insights/), which is a new way for you to proactively get feedback from your users. The functionality consists of a tool for setting up mini surveys in addition to the [Product Insights - Mini Surveys](/appstore/modules/product-insights/) Marketplace module, which you can add to your app to set up the exact targeting criteria for a survey.
+We have released the Beta version of [Product Insights](/developerportal/app-insights/mini-surveys/), which is a new way for you to proactively get feedback from your users. The functionality consists of a tool for setting up mini surveys in addition to the [Product Insights - Mini Surveys](/appstore/modules/mendix-mini-surveys/) Marketplace module, which you can add to your app to set up the exact targeting criteria for a survey.
 
 A survey can have a maximum of three questions that appear in your app based on the implemented criteria. You can choose between four different question types (rating scale, multiple choice, open question, and NPS question), and you can place the survey toaster in any of corner of the page. You can also preview exactly what the survey will look like.
 
@@ -350,7 +379,7 @@ In Portfolio Management, you can do the following
 
 #### Deprecations
 
-* All [Mendix Feedback](/appstore/modules/mendix-feedback/) widgets with versions lower than 8.4.0 are disabled. The feedback provided via a widget version lower than 8.4.0 is no longer sent to the [Feedback](/developerportal/general/feedback/) section of the Developer Portal, but your app will keep working as usual. Please download and replace your current Mendix Feedback widget with version 8.4.0 or higher. If you are using the [Native Mobile Resources](/appstore/modules/native-mobile-resources/) module (which also includes a version of the Mendix Feedback widget), please upgrade to version 3.5.1 or higher of that module. 
+* All [Mendix Feedback](/appstore/modules/mendix-feedback/) widgets with versions lower than 8.4.0 are disabled. The feedback provided via a widget version lower than 8.4.0 is no longer sent to the [Feedback](/developerportal/app-insights/feedback/) section of the Developer Portal, but your app will keep working as usual. Please download and replace your current Mendix Feedback widget with version 8.4.0 or higher. If you are using the [Native Mobile Resources](/appstore/modules/native-mobile-resources/) module (which also includes a version of the Mendix Feedback widget), please upgrade to version 3.5.1 or higher of that module. 
 
 ### September 28, 2022
 
@@ -482,7 +511,7 @@ In Portfolio Management, you can do the following
 
 #### Fixes
 
-* We fixed an issue where replies on [Feedback](/developerportal/general/feedback/) emails were not correctly processed into comments.
+* We fixed an issue where replies on [Feedback](/developerportal/app-insights/feedback/) emails were not correctly processed into comments.
 
 #### Improvements
 
@@ -525,7 +554,7 @@ In Portfolio Management, you can do the following
 
 #### Fixes
 
-* We fixed an issue where the submitter of a [feedback item](/developerportal/general/feedback/) was no longer able to comment on that issue after they left the app.
+* We fixed an issue where the submitter of a [feedback item](/developerportal/app-insights/feedback/) was no longer able to comment on that issue after they left the app.
 
 ### March 10, 2022
 
@@ -576,7 +605,7 @@ In Portfolio Management, you can do the following
 
 #### Fixes
 
-* We fixed an error where it was not possible to edit a comment under a [Feedback](/developerportal/general/feedback/) item. (Tickets 134179, 136172)
+* We fixed an error where it was not possible to edit a comment under a [Feedback](/developerportal/app-insights/feedback/) item. (Tickets 134179, 136172)
 
 ### November 18, 2021
 
@@ -619,7 +648,7 @@ In Portfolio Management, you can do the following
 
 #### Fixes
 
-* We fixed an issue accidentally introduced in the [October 14th](#oct-fourteen) release where you were no longer able to post comments on a [feedback item's details page](/developerportal/general/feedback/#feedback-details). (Tickets 132892, 132959, 132983, 133075)
+* We fixed an issue accidentally introduced in the [October 14th](#oct-fourteen) release where you were no longer able to post comments on a [feedback item's details page](/developerportal/app-insights/feedback/#feedback-details). (Tickets 132892, 132959, 132983, 133075)
 
 ### October 14, 2021 {#oct-fourteen}
 
@@ -967,7 +996,7 @@ In Portfolio Management, you can do the following
 
 #### Fixes
 
-* We fixed an issue where email notifications on [feedback](/developerportal/general/feedback/) items were not sent under certain circumstances.
+* We fixed an issue where email notifications on [feedback](/developerportal/app-insights/feedback/) items were not sent under certain circumstances.
 
 ### July 13, 2020
 

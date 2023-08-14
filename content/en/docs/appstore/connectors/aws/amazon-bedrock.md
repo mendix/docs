@@ -132,7 +132,7 @@ This is the response entity of the InvokeModelGeneric action.
 | Attribute | Description |
 | --- | --- |
 | `ContentType` | The ContenType attribute describes the MIME type of the inference result.|
-| `X_Amz_Request_Id` | The X_Amz_Request_Id describes the identifier of the request.|
+| `ProomptId` | The PromptId describes the identifier of the prompt. Only is available for prompts that are saved.|
 | `ResponseBody` | The ResponseBody attribute holds the JSON response body of the specific model.|
 
 ### 4.2 Enumerations

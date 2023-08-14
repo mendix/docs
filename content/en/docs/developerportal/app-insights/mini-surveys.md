@@ -1,9 +1,9 @@
 ---
 title: "Mini Surveys"
-url: /developerportal/general/product-insights/
-category: "General"
-weight: 8
-description: "Describes how to set up mini surveys to gain insights into your app and view and export the survey results."
+url: /developerportal/app-insights/mini-surveys/
+category: "App Insights"
+weight: 6
+description: "The app development team can utilize Mendix's user-friendly [Mini Surveys](/appstore/modules/mendix-mini-surveys/) module to integrate surveys into their applications. This empowers the Product Owner (PO), Scrum Master, or the development team to craft surveys with personalized customizations, including survey goals, duration, and questionnaire types. After configuring the survey, end-users can conveniently submit their responses. Subsequently, the Product Owner, Scrum Master, or the team can analyze the survey results, extracting valuable insights."
 tags: ["mini survey", "app insights", "sprint", "developer portal"]
 ---
 
@@ -21,11 +21,9 @@ The Mini Surveys feature consists of two parts:
 
 * A back-end dashboard in the Developer Portal for you to create surveys and aggregate your survey results.
 
-You begin by creating a mini survey in the Developer Portal, and then you implement the mini survey by configuring the [Mendix Mini Surveys](/appstore/modules/app-insights/) module in Studio Pro. After the mini survey is running, you can view responses that have been collected in Mini Surveys in the Developer Portal and export the responses to an XLSX file.
+You begin by creating a mini survey in the Developer Portal, and then you implement the mini survey by configuring the [Mendix Mini Surveys](/appstore/modules/mendix-mini-surveys/) module in Studio Pro. After the mini survey is running, you can view responses that have been collected in Mini Surveys in the Developer Portal and export the responses to an XLSX file.
 
 This document first describes all the pages in Mini Surveys in the Developer Portal, and then it describes the procedure for running a mini survey.
-
-{{% alert color="info" %}}In the GA release, we will allow you customise these opt-out rules from the App Insights portal.{{% /alert %}} 
 
 ## 2 Mendix Mini Survey Configuration 
 
@@ -37,7 +35,7 @@ On the upper-left corner of the page, you can see the name of the app currently 
 
 The tabs of the **Survey Overview** page are described below.
 
-{{< figure src="/attachments/developerportal/general/product-insights/survey-overview.png" >}}
+{{< figure src="/attachments/developerportal/app-insights/mini-surveys/survey-overview.png" >}}
 
 #### 2.1.1 Active Tab {#active}
 
@@ -102,7 +100,7 @@ On the **Settings** tab of **Survey Overview**, you can enable the test mode, an
 
 When you click a mini survey on the [Survey Overview](#survey-overview) page, the survey details page of the mini survey opens.
 
-{{< figure src="/attachments/developerportal/general/product-insights/survey-details.png" >}}
+{{< figure src="/attachments/developerportal/app-insights/mini-surveys/survey-details.png" >}}
 
 On the upper-right corner, you can find the following buttons:
 
@@ -136,7 +134,7 @@ This tab shows the test data that has been collected from testers in the test mo
 
 You can collect test data using two methods:
 
-* Change the value of the **TEST_MODE** constant in the [Mendix Mini Surveys](/appstore/modules/app-insights/) module. This will show **[TEST_MODE]** on the survey widget UI.
+* Change the value of the **TEST_MODE** constant in the [Mendix Mini Surveys](/appstore/modules/mendix-mini-surveys/) module. This will show **[TEST_MODE]** on the survey widget UI.
 * Select the **Enable Mendix SSO test users"** checkbox on the **Settings** tab of **Survey Overview**, which marks the app team members as testers. Note that if an app team member is not authenticated through Mendix SSO, this setting does not work for them. The survey widget will not show **[TEST_MODE]** on the UI.
 
 ## 3 Running a Mini Survey
@@ -189,7 +187,7 @@ To edit a mini survey, perform the following steps:
 
 Before the start time of the mini survey is reached, you should implement the survey in Studio Pro. Otherwise, users will not actually receive the mini survey, even if it has the [Status](#survey-status) of **Running** on the **Survey Overview** page. You can [reset the start time in the Settings section](#edit-survey) if you need more time to implement the survey in Studio Pro.
 
-#### 3.3.1 Obtaining an API Key {#obtain-api-key}
+# 3.3.1 Obtaining an API Key {#obtain-api-key}
 
 To obtain an API key for the implementation, follow these steps:
 
@@ -205,11 +203,11 @@ To obtain an API key for the implementation, follow these steps:
 
 #### 3.3.2 Installing and Configuring the Module
 
-To install the [Mendix Mini Surveys](/appstore/modules/app-insights/) module, follow these steps:
+To install the [Mendix Mini Surveys](/appstore/modules/mendix-mini-surveys/) module, follow these steps:
 
 1. Open your app in Studio Pro.
 2. Follow the instructions in [How to Use Marketplace Content in Studio Pro](/appstore/general/app-store-content/) to import the module into your app.
-3. Follow the instructions in the [Configuration](/appstore/modules/app-insights/#configuration) section in *Mendix Mini Surveys* to complete the implementation of the mini survey in Studio Pro.
+3. Follow the instructions in the [Configuration](/appstore/modules/mendix-mini-surveys/#configuration) section in *Mendix Mini Surveys* to complete the implementation of the mini survey in Studio Pro.
 
 ### 3.4 Viewing/Exporting Responses {#view-export-responses}
 
@@ -232,8 +230,14 @@ A mini survey has the following opt-out rules:
 * If a user has answered one or more questions in a survey, but did not finished the survey, then the survey will show again. However, if the user has closed the survey before finishing for the second time, the survey will not show again to this user.
 * If the user has answered all questions, then the survey will not show again to the user.
 
-## 4 Troubleshooting
+Survey opt-out rule is a variable cached to your internet browser. You can reset and show a survey multiple times by clearing your browser cache. If you are testing, we recommend you use the **TEST_MODE** constant to avoid clearing every time.
 
-### 4.1 Surveys Do Not Work Locally When Running Multiple Applications
+{{% alert color="info" %}}In a future release, we will allow you to customise these opt-out rules from the App Insights portal.{{% /alert %}} 
 
-For details on how to resolve this issue, see the [Troubleshooting](/appstore/modules/app-insights/#troubleshooting) section in *Mendix Mini Surveys*.
+### 3.6 Unfinished Surveys
+
+If a user only answers one or two questions before they close the mini survey. The answers will be stored in your app. Every 15 minutes a scheduled event will submit all unfinished surveys collected in your app to the **Mini Surveys** in the Developer Portal. A survey answer must be more than one hour old before it is submitted by the scheduled event.
+
+## 4 Troubleshooting & FAQ
+
+For troubleshooting information and FAQ, see the [Troubleshooting](/appstore/modules/mendix-mini-surveys/#troubleshooting) section and the [FAQ](/appstore/modules/mendix-mini-surveys/#faq) section in *Mendix Mini Surveys*.

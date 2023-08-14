@@ -200,6 +200,11 @@ Use the following configuration options:
 * **Kubernetes Service Account** - the Kubernetes service account that was linked with the Azure workload identity step 2; the Kubernetes Service Account will be created automatically when you apply the changes.
 * **AZWI Client ID** - the workload identity `USER_ASSIGNED_CLIENT_ID` created on step 2, for example `00000000-0000-0000-0000-000000000000`.
 
+{{% alert color="warning" %}}
+Azure Workload Identity authentication is supported in Mendix Operator 2.13.0 and later versions.
+Older versions can only authenticate with ACR using static credentials; upgrading to Mendix Operator and switching to workload identity authentication is highly recommended.
+{{% /alert %}}
+
 ### 2.5 Google Container Registry
 
 To improve security, Google Container Registry recommends using [workload identity](https://cloud.google.com/kubernetes-engine/docs/how-to/workload-identity) authentication instead of static credentials.

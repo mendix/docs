@@ -10,6 +10,6 @@ tags: ["app insights", "feedback", "mini surveys"]
 
 ## 1 Introduction
 
-App Insights consists of Feedback and Mini Surveys. They help you gather valuable feedback from users, and empower you to make data-driven decisions to improve app and features. 
+Mendix App Insights is an effective suite of tools that includes Feedback and Mini Surveys. With App Insights, development teams can collect rapid, real-time feedback from business stakeholders and end-users during the development process. App Insights allows app development teams to make quick adjustments based on feedback, leading to faster development cycles and improved user satisfaction.
 
 ## 2 Documents in This Category

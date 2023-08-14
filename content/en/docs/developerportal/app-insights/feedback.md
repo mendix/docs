@@ -5,7 +5,7 @@ category: "App Insights"
 aliases:
     - /developerportal/collaborate/feedback/
 weight: 5
-description: "Describes how to manage feedback on your Mendix app in the Developer Portal."
+description: "Mendix supports [feedback management](/developerportal/app-insights/feedback/) by enabling [Feedback](/appstore/modules/mendix-feedback/)  module in any application. App users can easily provide feedback through the feedback button integrated within the applications. This feedback is efficiently processed by the app development team using the Mendix Feedback UI. With the enhanced Mendix Feedback module, your app users gain the ability to capture pixel-perfect screenshots and annotate them, enabling them to clearly convey their specific points and preferences to you."
 tags: ["Feedback","Developer Portal", "feedback widget"]
 #To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 ---

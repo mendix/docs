@@ -123,8 +123,17 @@ This is the request entity of the InvokeModelGeneric action.
 | --- | --- |
 | `ModelId` | The ModelId attribute describes identifier of the model and is a required parameter.|
 | `Accept` | The Accept attribute describes the desired MIME type of the inference body in the response. The default value is 'application/json'.|
-| `ContentType` | The Accept attribute describes the MIME type of the input data in the request. The default value is 'application/json'.|
+| `ContentType` | The ContentType attribute describes the MIME type of the input data in the request. The default value is 'application/json'.|
 | `SavePrompt` | The SavePrompt attribute describes whether to save this prompt in your prompt history. Default value is false.|
+
+#### 4.1.4 InvokeModelGenericResponde {#invokemodelgenericresponse}
+This is the response entity of the InvokeModelGeneric action.
+
+| Attribute | Description |
+| --- | --- |
+| `ContentType` | The ContenType attribute describes the MIME type of the inference result.|
+| `X_Amz_Request_Id` | The X_Amz_Request_Id describes the identifier of the request.|
+| `ResponseBody` | The ResponseBody attribute holds the JSON response body of the specific model.|
 
 ### 4.2 Enumerations
 

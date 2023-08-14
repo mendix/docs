@@ -222,6 +222,7 @@ The following plans are available for Mendix:
 * Basic
 * Standard
 * Premium
+* Premium Plus
 
 For more information, see [Pricing](https://www.mendix.com/pricing/).
 
@@ -229,7 +230,7 @@ For more information, see [Pricing](https://www.mendix.com/pricing/).
 
 Mendix environments are sized by reference to cloud resource packs. The table below shows the current cloud resource packs for standard and premium plans. Resources for the Basic package are fixed as described in [Mendix Basic Package](/developerportal/deploy/basic-package/).
 
-The Standard resource packs listed below can be used with both Standard and Premium plans.
+The Standard resource packs listed below can be used with Standard, Premium and Premium Plus plans.
 
 | Pack | App RAM | App vCPU | DB RAM | DB vCPU | DB Storage | File Storage |
 | --- | --- | --- | --- | --- | --- | --- |
@@ -242,7 +243,7 @@ The Standard resource packs listed below can be used with both Standard and Prem
 | XXXL21 | 64 GiB | 16 | 64 GiB | 8 | 320 GiB | 640 GiB |
 | XXXXL21 | 128 GiB | 32 | 128 GiB | 16 | 640 GiB | 1280 GiB |
 
-The Premium resource packs listed below can only be purchased with a Premium plan.
+The Premium resource packs listed below can only be purchased with a Premium or Premium Plus plan.
 
 | Pack | App RAM | App vCPU | DB RAM | DB vCPU | DB Storage | File Storage |
 | --- | --- | --- | --- | --- | --- | --- |
@@ -253,6 +254,16 @@ The Premium resource packs listed below can only be purchased with a Premium pla
 | XXL21 | 32 GiB | 8 | 32 GiB | 4 | 160 GiB | 320 GiB |
 | XXXL21 | 64 GiB | 16 | 64 GiB | 8 | 320 GiB | 640 GiB |
 | XXXXL21 | 128 GiB | 32 | 128 GiB | 16 | 640 GiB | 1280 GiB |
+
+The Premium Plus resource packs listed below can only be purchased with a Premium Plus plan.
+
+| Pack | App RAM | App vCPU | DB RAM | DB vCPU | DB Storage | File Storage |
+| --- | --- | --- | --- | --- | --- | --- |
+| XL21 | 16 GiB | 4 | 16 GiB | 4 | 80 GiB | 160 GiB |
+| XXL21 | 32 GiB | 8 | 32 GiB | 4 | 160 GiB | 320 GiB |
+| XXXL21 | 64 GiB | 16 | 64 GiB | 8 | 320 GiB | 640 GiB |
+| XXXXL21 | 128 GiB | 32 | 128 GiB | 16 | 640 GiB | 1280 GiB |
+
 
 The legacy cloud resource packs listed below are still being used but are not available to new customers. 
 

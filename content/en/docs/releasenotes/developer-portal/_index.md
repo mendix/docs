@@ -21,7 +21,7 @@ To see the current status of the Mendix Developer Portal and Control Center, see
 
 #### New features
 
-* We released [App Insights](/developerportal/app-insights/) for GA, a brand new suite that enables you  to collect, analyze and act on the input of your users and innovate faster. App Insights includes two tools: [Feedback](/developerportal/app-insights/feedback/) and Mini Surveys.
+* We released [App Insights](/developerportal/app-insights/) for GA, a brand new suite that enables you to collect, analyze, and act on the input of your users, and innovate faster. App Insights includes two tools: [Feedback](/developerportal/app-insights/feedback/) and [Mini Surveys](/developerportal/app-insights/mini-surveys/).
 
 * We released the new feedback management tool Feedback, which offers you the following new features:
 
@@ -35,7 +35,7 @@ To see the current status of the Mendix Developer Portal and Control Center, see
 
    You can find all your existing feedback data already in the new Feedback. If you have set up Epics or Jira as your project management tool, Feedback is already linked to your tool. In other words, you do not need to do anything, just try it out and tell us what you think.
 
-* Complementing Feedback, Mini Surveys will help you to set short, effective surveys to gather diverse feedback and enables data-driven decision-making to improve app and features. Mini Surveys have the following features:
+* Complementing Feedback, Mini Surveys helps you to set short, effective surveys to gather diverse feedback and enables data-driven decision-making to improve app and features. Mini Surveys has the following features:
 
    * Easy to configure a survey questionnaire with up to three questions in any desired format
    * Enabling you to tailor the survey setup to specify its display location, trigger timing, and target user group

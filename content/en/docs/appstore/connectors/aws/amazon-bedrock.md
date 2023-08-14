@@ -112,7 +112,7 @@ The ModelSummary entity stores details (per model) needed to invoke all the avai
 
 | Attribute/Association | Description |
 | --- | --- |
-| `ModelArn` | the ARN (Amazon Resource Name) that identifies the foundational model (string)|
+| `ModelArn` | The ARN (Amazon Resource Name) that identifies the foundational model (string)|
 | `ModelId` | ID assigned by Amazon Bedrock to their specific foundational models and is used to invoke the model in question (string)|
 | `ModelSummary_ListFoundationModelsResponse (*-1)` | For collecting the returned foundational models under the ListFoundationalModelsResponse (string)|
 

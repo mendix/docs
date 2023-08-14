@@ -13,7 +13,7 @@ For information on the current status of deployment to Mendix for Private Cloud 
 
 ## 2023
 
-### July 13th, 2023
+### July 13, 2023
 
 #### Portal Improvements
 
@@ -27,7 +27,7 @@ For information on the current status of deployment to Mendix for Private Cloud 
 * We have fixed a core resource decimal conversion issue in the environment manifest file (Ticket 189615).
 * We have fixed an issue where upper-case letters in an email ID would prevent members invited to a cluster manager or namespace from accepting the invite. (Ticket 189975)
 
-### July 6th, 2023
+### July 6, 2023
 
 #### Mendix Operator v2.12.0 {#2.12.0}
 
@@ -40,7 +40,7 @@ For information on the current status of deployment to Mendix for Private Cloud 
 * We fixed an issue where connections to Azure SQL would fail with a *TLS Handshake failed* error.
 * The Mendix Operator will ensure that environments using licenses from the Private Cloud License Manager always have a non-expired license. When an environment's license reaches its expiration date, the Mendix Operator will replace it with a non-expired license from PCLM.
 
-### June 15th, 2023
+### June 15, 2023
 
 #### Portal Enhancements
 

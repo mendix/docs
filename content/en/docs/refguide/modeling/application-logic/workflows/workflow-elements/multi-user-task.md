@@ -269,7 +269,7 @@ You can refer to the following properties settings for this example:
 #### 2.5.3 Completion Moment {#completion-moment}
 
 {{% alert color="warning" %}}
-This property was added in Studio Pro 10.2. In Studio Pro 10.0 and 10.1, the multi-user task is marked as completed as soon as its outcome is known. Adding additional votes is not possible once the outcome is known. 
+This property was added in Studio Pro 10.2. In Studio Pro 10.0 and 10.1, the multi-user task is marked as completed as soon as its outcome is known, and adding additional votes is not possible once the outcome is known. 
 {{% /alert %}}
 
 This property determines when the multi-user task is marked as completed. That can either be as soon as the outcome is known, meaning that sufficient participants have completed their task so that the final outcome is already determined, or after all participants have completed their task. This property has no influence on the final outcome of the multi-user task. 

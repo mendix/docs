@@ -116,6 +116,16 @@ The ModelSummary entity stores details (per model) needed to invoke all the avai
 | `ModelId` | ID assigned by Amazon Bedrock to their specific foundational models and is used to invoke the model in question (string)|
 | `ModelSummary_ListFoundationModelsResponse (*-1)` | For collecting the returned foundational models under the ListFoundationalModelsResponse (string)|
 
+#### 4.1.3 InvokeModelGenericRequest {#invokemodelgenericrequest}
+This is the request entity of the InvokeModelGeneric action.
+
+| Attribute | Description |
+| --- | --- |
+| `ModelId` | The ModelId attribute describes identifier of the model and is a required parameter.|
+| `Accept` | The Accept attribute describes the desired MIME type of the inference body in the response. The default value is 'application/json'.|
+| `ContentType` | The Accept attribute describes the MIME type of the input data in the request. The default value is 'application/json'.|
+| `SavePrompt` | The SavePrompt attribute describes whether to save this prompt in your prompt history. Default value is false.|
+
 ### 4.2 Enumerations
 
 An enumeration is a predefined list of values that can be used as an attribute type. For the Amazon Bedrock connector, enumerations list values such as {USUALLY "the list of available AWS regions", POSSIBLY ALSO OTHERS AS REQUIRED}.
@@ -141,6 +151,14 @@ The input and output for this service are shown in the table below:
 | --- | --- |
 | `{INPUT OBJECT}` | `{OUTPUT OBJECT}` |
 
+##### OPTIONAL, INCLUDE ONLY IF THE ACTIVITY RETURNS AN OUTPUT:
+
+This activity returns a `{OUTPUT OBJECT}` object with objects from the following entities, as shown in the table below:
+
+| Name |    Generalization |    Documentation |
+| --- | --- | --- |
+| `{ENTITY NAME}` | `{ENTITY GENERALIZATION}` | {ENTITY DESCRIPTION} |
+
 #### 4.3.1 GET_V1_ListFoundationModels
 
 The GET_V1_ListFoundationModels Bedrock activity allows you to get all the available foundational models AWS Bedrock provides. It requires a Credentials object and ENUM_Region value (like "us_west_2").
@@ -151,10 +169,13 @@ The input and output for this service are shown in the table below:
 | --- | --- |
 | `Credentials + ENUM_Region` | `ListFoundationModelsResponse & ModelSummary` |
 
-##### OPTIONAL, INCLUDE ONLY IF THE ACTIVITY RETURNS AN OUTPUT:
+#### 4.3.2 Invoke Model Generic {#invoke-model-generic}
+The `InvokeModel Generic` activity allows you to invoke a model from amazon bedrock. this action provides the generic parts that are equal for the invokation of every model. It requires AWS_Region, RequestBody, InvokeModelGenericRequest as input parameters.
 
-This activity returns a `{OUTPUT OBJECT}` object with objects from the following entities, as shown in the table below:
+The input and output for this service are shown in the table below:
 
-| Name |    Generalization |    Documentation |
-| --- | --- | --- |
-| `{ENTITY NAME}` | `{ENTITY GENERALIZATION}` | {ENTITY DESCRIPTION} |
+| Input | Output |
+| --- | --- |
+| `AWS_Region (ENUM)`, `RequestBody (String)`, `InvokeModelGenericRequest` | `String` |
+
+

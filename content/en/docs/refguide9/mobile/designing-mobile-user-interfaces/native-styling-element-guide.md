@@ -1538,7 +1538,7 @@ export const com_mendix_widget_native_animation_Animation = {
 | `icon` | `size` | The size of the icon. |
 | `icon` | `color` | The color of the icon. |
 
-The default class to style all into screen widgets is named `com_mendix_widget_native_animation_Animation`.
+The default class to style all into screen widgets is named `com_mendix_widget_native_introscreen_IntroScreen`.
 
 ### 11.22 List View Swipe
 

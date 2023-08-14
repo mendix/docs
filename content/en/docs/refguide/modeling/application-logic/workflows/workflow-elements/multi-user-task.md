@@ -122,11 +122,7 @@ For more details and examples of how each decision method works, see the sub-sec
 
 Select this decision method when all participants should be in agreement with the provided outcome. That is, they should all select the same outcome. There has to be consensus. When there is no consensus, the multi-user task will complete with the fallback outcome.
 
-**Fallback outcome**: This outcome will be the final outcome of the multi-user task in the following cases:
-
-* If any of the participants during consensus decision method selects a different outcome from the rest of the participants.
-* If the multi-user task is completed with a final outcome before all participants completed their task:
-    * For example, when 5 participants need to review a contract (`Approve`, `Reject`) and the first 2 participants are not in agreement (one selects `Approve` and the other one selects `Reject`), this multi-user task will be then completed with the fallback outcome. 
+**Fallback outcome**: This outcome will be the final outcome of the multi-user task if any of the participants during consensus decision method selects a different outcome from the rest of the participants.
 
 ###### 2.5.2.1.1 Example
 

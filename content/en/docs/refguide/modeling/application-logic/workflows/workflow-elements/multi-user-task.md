@@ -166,7 +166,7 @@ You can refer to the following properties settings for the example above:
 * **Completion moment**: **When outcome is known**
 * **Outcomes**: `Hire`, `DoNotHire`
 
-Another example is when a group of five experts needs to decide whether a change request is `Minor` or `Major`. In this example, the outcome `Major` is the veto outcome. If any one of the five experts decides it is a major request, the change request will be `Major`. The input from the other four experts will not change the outcome anymore. If all five of them decide it is a minor change request, the final multi-user task outcome will be `Minor`.
+Another example is from a group of experts, five of them need to decide whether a change request is `Minor` or `Major`. In this example, the outcome `Major` is the veto outcome. If any one of the five experts decides it is a major request, the change request will be `Major`. The input from the other four experts will not change the outcome anymore. If all five of them decide it is a minor change request, the final multi-user task outcome will be `Minor`.
 
 You can refer to the following properties settings for the second example above:
 
@@ -185,10 +185,10 @@ Select this decision method when a task should result in an outcome based on an 
 
 | Majority Type | Description |
 | --- | --- |
-| More than half | When one of the outcomes reaches more than 50% of all possible votes (absolute majority), the task is completed with this outcome. |
-| Most chosen | As soon as one of the outcomes gets most of the votes (relative majority), the task is completed with this outcome. Adding additional votes will not change the final outcome. |
+| More than half | The outcome that reaches more than 50% of all possible votes (absolute majority) will be set as the final outcome of the multi-user task. |
+| Most chosen | The outcome that gets most of the votes (relative majority) will be set as the final outcome of the multi-user task. |
 
-**Fallback outcome**: This outcome will be the final outcome of the multi-user task if it is determined that none of the remaining votes will result in a majority.
+**Fallback outcome**: This outcome will be the final outcome of the multi-user task if no majority was reached.
 
 {{% alert color="info" %}}
 When the **Majority type** is set to **More than half**, the fallback outcome is only required when there are 2 or more outcomes defined.
@@ -223,7 +223,7 @@ You can refer to the following properties settings for this example:
 
 ##### 2.5.2.4 Threshold {#threshold}
 
-Select this decision method when a task should complete with an outcome when the number of votes for this outcome reaches the amount of votes set as the threshold value. The number of required votes is defined as the result of the [participant input](#participant-input).
+Select this decision method when a task should complete with an outcome when the number of votes for this outcome reaches the amount of votes set as the threshold value. 
 
 **Threshold Type**: This property determines the threshold type that is applied when using the threshold decision method. Possible options of threshold type are described in the table below:
 
@@ -240,7 +240,7 @@ A threshold of `51%` is the same as using **Majority** as the decision method wi
 A threshold of `100%` is the same as using **Consensus** as the decision method.
 {{% /alert %}}
 
-**Fallback Outcome**: This outcome will be the final outcome of the multi-user task if it is determined that it is not possible to reach the threshold with the remaining votes.
+**Fallback Outcome**: This outcome will be the final outcome of the multi-user task if no outcome reached the amount of votes set as the threshold value.
 
 ###### 2.5.2.4.1 Example
 

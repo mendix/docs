@@ -17,11 +17,13 @@ For information on the current status of deployment to Mendix Cloud and any plan
 
 ## 2023
 
-### August 18, 2023 TODO: Date may need to be updated
+{{% todo %}}TODO: Date may need to be updated{{% /todo %}}
+
+### August 18, 2023 
 
 #### Improvements
 
-* Alerts webhooks are introduced.
+* We added webhooks for status [alerts](/developerportal/operate/monitoring-application-health/) generated for your environments.
 
 ### August 7, 2023
 

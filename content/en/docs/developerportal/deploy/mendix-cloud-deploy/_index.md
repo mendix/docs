@@ -247,28 +247,6 @@ The current resource packs are listed below.
 
 ² Can also be used with a Premium Plus plan to provide multi-region fallback
 
-The Premium resource packs listed below can only be purchased with a Premium or Premium Plus plan.
-
-| Pack | App RAM | App vCPU | DB RAM | DB vCPU | DB Storage | File Storage |
-| --- | --- | --- | --- | --- | --- | --- |
-| S21 | 2 GiB | 0.5 | 2 GiB | 2 | 10 GiB | 20 GiB |
-| M21 | 4 GiB | 1 | 4 GiB | 2 | 20 GiB | 40 GiB |
-| L21 | 8 GiB | 2 | 8 GiB | 2 | 40 GiB | 80 GiB |
-| XL21 | 16 GiB | 4 | 16 GiB | 4 | 80 GiB | 160 GiB |
-| XXL21 | 32 GiB | 8 | 32 GiB | 4 | 160 GiB | 320 GiB |
-| XXXL21 | 64 GiB | 16 | 64 GiB | 8 | 320 GiB | 640 GiB |
-| XXXXL21 | 128 GiB | 32 | 128 GiB | 16 | 640 GiB | 1280 GiB |
-
-The Premium Plus resource packs listed below can only be purchased with a Premium Plus plan.
-
-| Pack | App RAM | App vCPU | DB RAM | DB vCPU | DB Storage | File Storage |
-| --- | --- | --- | --- | --- | --- | --- |
-| XL21 | 16 GiB | 4 | 16 GiB | 4 | 80 GiB | 160 GiB |
-| XXL21 | 32 GiB | 8 | 32 GiB | 4 | 160 GiB | 320 GiB |
-| XXXL21 | 64 GiB | 16 | 64 GiB | 8 | 320 GiB | 640 GiB |
-| XXXXL21 | 128 GiB | 32 | 128 GiB | 16 | 640 GiB | 1280 GiB |
-
-
 The legacy cloud resource packs listed below are still being used but are not available to new customers. 
 
 | Legacy Pack | App RAM | App vCPU | DB RAM | DB vCPU | DB Storage | File Storage |

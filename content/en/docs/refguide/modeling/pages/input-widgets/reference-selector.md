@@ -167,6 +167,9 @@ The on-change property specifies an action that will be executed when leaving th
 #### 3.8.1 Accessible
 yes/no
 #### 3.8.2 Screen Reader Caption
+
+The Screen reader caption property allows information to be read by screen readers when **Show label** is set to **No** in an input widget.
+
 #### 3.8.3 Screen Reader Hint
 
 ### 3.9 Common Section{#common}

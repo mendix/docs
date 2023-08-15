@@ -8,7 +8,7 @@ tags: ["mobile", "native", "push", "local", "firebase"]
 
 ## 1 Introduction
 
-After setting up your configuration on the server, and deploying your native app it is now time to send your first test push notification.
+After [configuring the Push Notifications module](/howto8/mobile/notif-config-push/) and [building your native app](/howto8/mobile/notif-build-native/) it is now time to send your first test push notification.
 
 ## 2 Send the Test Notification
 

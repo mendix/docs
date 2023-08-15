@@ -61,6 +61,12 @@ After this activity, the `$latestHttpResponse` variable (of the [HttpResponse](/
 The feature to set `$latestHttpResponse` was introduced in Studio Pro [9.15.0](/releasenotes/studio-pro/9.15/).
 {{% /alert %}}
 
+After this activity, an external object would be update based on the received response.
+
+{{% alert color="info" %}}
+The feature to update an external entity was introduced in Studio Pro [10.2.0](/releasenotes/studio-pro/10.2/).
+{{% /alert %}}
+
 ## 5 Related
 
 Persistable objects are persisted by using the [commit](/refguide9/committing-objects/) activity. External entities cannot be committed. Use this activity instead.

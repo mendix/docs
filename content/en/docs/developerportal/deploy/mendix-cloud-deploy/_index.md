@@ -230,18 +230,22 @@ For more information, see [Pricing](https://www.mendix.com/pricing/).
 
 Mendix environments are sized by reference to cloud resource packs. The table below shows the current cloud resource packs for standard and premium plans. Resources for the Basic package are fixed as described in [Mendix Basic Package](/developerportal/deploy/basic-package/).
 
-The Standard resource packs listed below can be used with Standard, Premium, and Premium Plus plans.
+The current resource packs are listed below.
 
 | Pack | App RAM | App vCPU | DB RAM | DB vCPU | DB Storage | File Storage |
 | --- | --- | --- | --- | --- | --- | --- |
 | XS21 | 1 GiB | 0.25 | 1 GiB | 2 | 5 GiB | 10 GiB |
-| S21 | 2 GiB | 0.5 | 2 GiB | 2 | 10 GiB | 20 GiB |
-| M21 | 4 GiB | 1 | 4 GiB | 2 | 20 GiB | 40 GiB |
-| L21 | 8 GiB | 2 | 8 GiB | 2 | 40 GiB | 80 GiB |
-| XL21 | 16 GiB | 4 | 16 GiB | 4 | 80 GiB | 160 GiB |
-| XXL21 | 32 GiB | 8 | 32 GiB | 4 | 160 GiB | 320 GiB |
-| XXXL21 | 64 GiB | 16 | 64 GiB | 8 | 320 GiB | 640 GiB |
-| XXXXL21 | 128 GiB | 32 | 128 GiB | 16 | 640 GiB | 1280 GiB |
+| S21 ¹ | 2 GiB | 0.5 | 2 GiB | 2 | 10 GiB | 20 GiB |
+| M21 ¹ | 4 GiB | 1 | 4 GiB | 2 | 20 GiB | 40 GiB |
+| L21 ¹ | 8 GiB | 2 | 8 GiB | 2 | 40 GiB | 80 GiB |
+| XL21 ¹ ² | 16 GiB | 4 | 16 GiB | 4 | 80 GiB | 160 GiB |
+| XXL21 ¹ ² | 32 GiB | 8 | 32 GiB | 4 | 160 GiB | 320 GiB |
+| XXXL21 ¹ ² | 64 GiB | 16 | 64 GiB | 8 | 320 GiB | 640 GiB |
+| XXXXL21 ¹ ² | 128 GiB | 32 | 128 GiB | 16 | 640 GiB | 1280 GiB |
+
+¹ Can also be used with a Premium plan to provide multi-AZ fallback
+
+² Can also be used with a Premium Plus plan to provide multi-region fallback
 
 The Premium resource packs listed below can only be purchased with a Premium or Premium Plus plan.
 

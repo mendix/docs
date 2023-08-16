@@ -24,7 +24,7 @@ Use a Microsoft Windows version that is currently listed in the [System Requirem
 
 Keep your Microsoft Windows updated.
 
-### 2.2 Hardware
+### 2.3 Hardware
 
 Ensure that your hardware meets the [System Requirements](/refguide/system-requirements/#hardware).
 
@@ -32,13 +32,13 @@ Consider installing the operating system (OS) and Studio Pro, and storing your M
 
 Additionally, do not run your solution from a USB drive. Copy it to your hard-disk drive (HDD) or SSD.
 
-#### 2.2.1 Software Rendering Mode
+#### 2.3.1 Software Rendering Mode
 
 In some exceptional cases, hardware acceleration can cause errors when rendering desktop applications. When this occurs, Mendix recommends enabling software rendering.
 
 To this, navigate to **Preferences** > **Work Environment** and select [Enable software rendering mode](/refguide/preferences-dialog/#rendering), then restart Studio Pro. After restarting, check if you notice improvements. If you do not notice improvements, it is preferable to turn this setting off.
 
-### 2.3 Parallels
+### 2.4 Parallels
 
 For tips on using Parallels, see the [Improving Performance](/refguide/using-mendix-studio-pro-on-a-mac/#performance) section of *Configuring Parallels*.
 

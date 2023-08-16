@@ -40,9 +40,7 @@ To this, navigate to **Preferences** > **Work Environment** and select [Enable s
 
 ### 2.3 Parallels
 
-Store your apps in the Virtual Machine (VM) local disk *c:\*.
-
-Run Parallels in full-screen mode instead of Coherence mode.
+For tips on using Parallels, see the [Improving Performance](/refguide/using-mendix-studio-pro-on-a-mac/#performance) section of *Configuring Parallels*.
 
 ## 3 Advanced
 

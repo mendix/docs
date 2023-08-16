@@ -1,11 +1,9 @@
 ---
-title: "Performance tips"
+title: "Performance Tips"
 url: /refguide/performance-tips/
-category: "Installation"
-weight: 20
-description: "Presents performance tips to Studio Pro."
-tags: ["studio pro"]
-#If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
+weight: 50
+description: "Presents performance tips for installing and using Studio Pro."
+tags: ["studio pro", "performance", "tip", "best practice"]
 ---
 
 ## 1 Introduction
@@ -14,7 +12,7 @@ This document presents suggestions that can help improve Studio Pro performance.
 
 ## 2 Basic
 
-Simple actions you can take to improve your experience with Studio Pro.
+These are simple actions you can take to improve your experience with Studio Pro.
 
 ### 2.1 Update Studio Pro to the latest version (LTS)
 

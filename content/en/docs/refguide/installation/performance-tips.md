@@ -20,19 +20,19 @@ Update your Studio Pro to the latest [LTS](/releasenotes/studio-pro/lts-mts/#lts
 
 ### 2.2 Software
 
-Use a Microsoft Windows version that is currently listed in the [System Requirements](/refguide/system-requirements/).
+Use a Microsoft Windows version that is currently listed in the [System Requirements](/refguide/system-requirements/#software).
 
 Keep your Microsoft Windows updated.
 
 ### 2.2 Hardware
 
-Check if your hardware meets the [System Requirements](/refguide9/system-requirements/).
+Ensure that your hardware meets the [System Requirements](/refguide/system-requirements/#hardware).
 
-Consider installing the Operating System (OS), Studio Pro, and storing the Mendix Apps in a solid-state drive (SSD).
+Consider installing the operating system (OS) and Studio Pro, and storing your Mendix apps in a solid-state drive (SSD).
 
-Additionally, don't run your solution from a USB drive. Copy it to your hard disk drive (HDD) or SSD.
+Additionally, do not run your solution from a USB drive. Copy it to your hard-disk drive (HDD) or SSD.
 
-#### 2.2.1 Try enabling software rendering mode
+#### 2.2.1 Software Rendering Mode
 
 Hardware acceleration in some exceptional cases can cause some errors when rendering desktop applications when that is the case, we can recommend users enable Software Rendering instead.
 

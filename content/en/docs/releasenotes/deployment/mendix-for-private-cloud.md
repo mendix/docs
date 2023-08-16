@@ -17,18 +17,16 @@ For information on the current status of deployment to Mendix for Private Cloud 
 
 #### Portal Improvements
 
-* We have improved the user experience for Cluster Manager pages along with sorting and searching functionalities
-* We have changed the layout of Environment pages with a full width view
-* We have fixed the issue with refresh operation, where the click on refresh was redirecting users to Cluster overview page from Cluster details page
-
+* We have improved the user experience for the Cluster Manager pages by revamping the UI and adding sorting and searching functionalities.
+* We have changed the layout of the Environment pages in the Developer Portal to a full-width view with a left sidebar navigation panel.
 
 #### Deploy API Improvements
 
-* We have fixed the issue in Get Environment API where user was unable to retrieve the environment and getting 403 error
-* We have fixed the issue in Get Environments API where user was unable to retrieve all environments in an application when same internal id are used for environments (Ticket: 190490)
-* We have added a fix for update environment API where user was unable to update the environments using dedicated storage plan (Ticket 189615)
-* We have added automatic invitation accept functionality for namespace and cluster membership
-* We now require fields (email , role) to be mandatory in update namespace/cluster api
+* We have fixed the issue in the `Get Environments` API call, where the user was unable to retrieve all environments in an application when the same internal id was used for multiple environments. (Ticket: 190490)
+* We have added a fix for the `Update Environment` API call, where the user was unable to update the environments using dedicated storage plan. (Ticket 189615)
+* We have added automatic invitation accept functionality for namespace and cluster membership.
+* We have updated the mandatory fields (email, role) in the Update Namespace/Cluster API calls.
+* We have added the logic under which if the role is set to CUSTOM, then permissions also becomes mandatory
 
 ### July 13, 2023
 

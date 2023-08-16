@@ -106,7 +106,7 @@ The following steps will create a cluster, register and install a namespace, add
 13. Make an API call `POST /clusters/{namespaceId}` to update the namespace development mode and set `enableDevelopmentMode` to true . You can get the manifest for this update request from `GET /clusters/{namespaceId}`.
 
 {{% alert color="info" %}}
-If you would like the invited cluster/namespace member to autoaccept the invite, you can set the `autoAcceptInvite` to true in the update cluster/namespace api request.
+If required, the invitation for the cluster/namespace member can be auto-accepted by setting the autoAcceptInvite to true in the update cluster/namespace API request.
 {{% /alert %}}
 
 ### 3.2 Using the API to Restart an App {#restart}
@@ -158,5 +158,5 @@ Please note that there is a limited support for Custom permissions in Deploy API
 {{< swaggerui src="/openapi-spec/private-cloud-deploy-api.yaml"  >}}
 
 {{% alert color="info" %}}
-Please note that the fields marked as non-editable are used for read-only purposes. Any modifications made on the values of these fields will be ignored
+Please note that the fields marked as non-editable are used for read-only purposes. Any modifications made on the values of these fields will be ignored.
 {{% /alert %}}

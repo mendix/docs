@@ -40,7 +40,7 @@ These are some general guidelines for creating new Marketplace content:
 
 * Set up a separate app to build and maintain your Marketplace component
 * Use a relatively recent Mendix version when creating the item, not only the latest Mendix version
-* Create multiple versions of your Marketplace component (for example, for Studio Pro 7 and 8 and Desktop Modeler 7)
+* Create multiple versions of your Marketplace component (for example, for Studio Pro 8 and 9)
 
 You can add information the end-user should know to the component [Documentation](#doc) when you are adding the content to the Marketplace.
 
@@ -97,7 +97,14 @@ To add content to the Marketplace, follow the steps in each section below.
 
 ### 4.1 Getting Started {#get-started}
 
-To start, click **Add content** in the top bar of the Marketplace home screen. Follow these steps to continue adding content:
+To start, click **Add content** in the top bar of the Marketplace home screen. Follow the steps in the section below to add content.
+
+{{% alert color="info" %}}
+<a id="draft"></a>On each page of the upload flow, click one of the following buttons:
+
+* **Save Draft** to save the details you have entered so far to the draft (which you can access via the [My Drafts](/appstore/general/app-store-overview/#my-drafts) link in the top bar)
+* **Save & Continue** to go to the next page of the upload flow
+{{% /alert %}}
 
 ### 4.2 General {#general}
 
@@ -111,21 +118,20 @@ Follow these steps to describe your content:
 
     {{% alert color="warning" %}}You can only set the content type in the initial version of your content. You cannot change this setting after the initial version is published.{{% /alert %}}
 
-2. You can add up to 3 **Categories** for your component, which will help Makers find your component easier.
+2. You can add up to three **Categories** for your component, which will help Makers find your component easier.
 
 3. Enter a **Name** for your component.
 4. Enter a **Description** of your component.
 
     {{% alert color="warning" %}}You can use rich text in the editor. However, using rich text at the beginning of the description is not recommended, as the rich text will not get rendered properly. You should add a few lines of regular text before using rich text.{{% /alert %}}
 
- 
+
 5. Select the location where you want to publish your component:
 
     * <a id="public-app-store"></a>**Public Marketplace (all Mendix users)** – your component will be available to the Mendix community (this content will have to be reviewed and approved by Mendix before it is available)
     * <a id="private-app-store"></a>**Private Marketplace (your company only)** – your content will receive the **Private** label and be available only via your [Company Content](/appstore/general/app-store-overview/#company-content) page; selected private content of a content group can also be made available to [content group guests](/appstore/general/app-store-overview/#guests) for download; this content will not be reviewed by Mendix
 
     {{% alert color="warning" %}}You can only set the location in the initial version of your content. You cannot change this setting by updating the Marketplace component later.{{% /alert %}}
-
 
 #### 4.2.2 Providing License Details {#license}
 
@@ -180,16 +186,9 @@ In the **Provide one or more emails** field, you must specify the email address(
 
 #### 4.2.4 Finishing Up
 
-To finish up configuring this page, follow these steps:
+To finish up configuring this page, click **Upload** to upload an icon for your component.
 
-1. Click **Upload an Image** to upload an icon for the component.
-
-    {{< figure src="/attachments/appstore/general/share-app-store-content/general.jpg"   width="600"  >}}
-
-2. <a id="draft"></a>On each page of the upload flow, click one of the following buttons:
-
-    * **Save Draft** to save the details you have entered so far to the draft (which you can access via the [My Drafts](/appstore/general/app-store-overview/#my-drafts) link in the top bar)
-    * **Save & Continue** to go to the next page of the upload flow
+{{< figure src="/attachments/appstore/general/share-app-store-content/general.jpg"   width="600"  >}}
 
 ### 4.3 Package {#package}
 

@@ -1,7 +1,7 @@
 openapi: 3.0.0
 info:
   title: Mendix for Private Cloud Deploy API
-  version: 4.0.0
+  version: 4.3.0
   contact:
     name: Mendix Support
     url: 'https://support.mendix.com'
@@ -277,7 +277,102 @@ paths:
         '404':
           $ref: '#/components/responses/error404'
       operationId: get-environment-manifest
-      description: Retrieves the manifest of an environment.
+      description: |-
+        Retrieves the manifest of an environment.<br/>
+        This should only be used if your application doesn't have environments deployed in multiple namespaces.<br/>
+        We recommend using the endpoint `Get Environment Manifest for a specified Namespace`.<br/>
+        This endpoint **will be removed in future versions**.
+      tags:
+        - environments
+      deprecated: true
+    delete:
+      summary: Delete Environment
+      operationId: delete-environment
+      responses:
+        '202':
+          $ref: '#/components/responses/job'
+        '400':
+          $ref: '#/components/responses/error400'
+        '401':
+          $ref: '#/components/responses/error401'
+        '403':
+          $ref: '#/components/responses/error403'
+        '404':
+          $ref: '#/components/responses/error404'
+      description: Deletes a specific environment.
+      tags:
+        - environments
+    put:
+      summary: Update Environment
+      operationId: update-environment
+      responses:
+        '202':
+          $ref: '#/components/responses/job'
+        '400':
+          $ref: '#/components/responses/error400'
+        '401':
+          $ref: '#/components/responses/error401'
+        '403':
+          $ref: '#/components/responses/error403'
+        '404':
+          $ref: '#/components/responses/error404'
+      description: Updates a specific environment based on a manifest.
+      parameters:
+        - schema:
+            type: string
+          in: header
+          name: Content-Type
+          description: application/json
+          required: true
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/environmentManifest'
+          application/xml:
+            schema:
+              $ref: '#/components/schemas/environmentManifest'
+        description: Manifest of an environment.
+      tags:
+        - environments
+  '/apps/{appId}/namespaces/{namespaceId}/environments/{environmentId}':
+    parameters:
+      - name: appId
+        in: path
+        required: true
+        schema:
+          type: string
+          format: uuid
+          example: c533ee0b-f7db-4e62-868b-1192d392ccec
+        description: 'The ID of a Mendix App. In the Developer Portal, this is shown as the App ID and it is a UUID format.'
+      - name: namespaceId
+        in: path
+        required: true
+        schema:
+          type: string
+          maxLength: 8
+          example: d43aee0b-f7db-4e62-868b-1192d392cfed
+        description: The ID of a namespace.
+      - schema:
+          type: string
+          example: q8g3ns76
+        name: environmentId
+        in: path
+        required: true
+        description: The ID of an environment.
+    get:
+      summary: Get Environment Manifest for a specified Namespace
+      responses:
+        '200':
+          $ref: '#/components/responses/environmentManifest'
+        '401':
+          $ref: '#/components/responses/error401'
+        '403':
+          $ref: '#/components/responses/error403'
+        '404':
+          $ref: '#/components/responses/error404'
+      operationId: get-environment-manifest-for-namespace
+      description: Retrieves the manifest of an environment for a specified namespace.
       tags:
         - environments
     delete:
@@ -507,6 +602,7 @@ components:
                 - name
                 - production
                 - defaultStudioTarget
+                - secretsStoreEnabled
               properties:
                 name:
                   type: string
@@ -515,6 +611,9 @@ components:
                   type: boolean
                 defaultStudioTarget:
                   type: boolean
+                secretsStoreEnabled:
+                  type: boolean
+                  default: false
             deployment:
               type: object
               required:
@@ -598,6 +697,10 @@ components:
                 mxAdminPassword:
                   type: string
                   example: 'base64 encoded string, e.g. c3Vic2NyaXB0aW9uLXNlY3JldA=='
+                runtimeVersion:
+                  type: string
+                  default: 9.24.2
+                  example: 9.24.2
                 environmentVariables:
                   type: array
                   items:
@@ -619,6 +722,8 @@ components:
                 namespace:
                   type: string
                   example: my-namespace
+                namespaceId:
+                  $ref: '#/components/schemas/namespaceId'
             annotations:
               type: array
               items:
@@ -1018,6 +1123,12 @@ components:
                       scaleApp:
                         type: boolean
                         default: false
+                      startApp:
+                        type: boolean
+                        default: false
+                      stopApp:
+                        type: boolean
+                        default: false
                       editAppConstants:
                         type: boolean
                         default: false
@@ -1387,6 +1498,7 @@ components:
                     name: my-environment
                     production: true
                     defaultStudioTarget: true
+                    secretsStoreEnabled: false
                   deployment:
                     appUrl: 'https://test.app.url'
                     packageId: 045b8cf4-c9cd-41b4-b241-414b87a7f219
@@ -1419,6 +1531,7 @@ components:
                     subscriptionSecret: 'base64 encoded string, e.g. c3Vic2NyaXB0aW9uLXNlY3JldA=='
                     debuggerPassword: 'base64 encoded string, e.g. c3Vic2NyaXB0aW9uLXNlY3JldA=='
                     mxAdminPassword: 'base64 encoded string, e.g. c3Vic2NyaXB0aW9uLXNlY3JldA=='
+                    runtimeVersion: 9.24.2
                     environmentVariables:
                       - name: custom-env-variable1
                         value: custom-env-variable1-value
@@ -1428,6 +1541,7 @@ components:
                   provider:
                     clusterId: a712d8f4-a77c-4189-a211-e0ea1dfde03c
                     namespace: my-namespace
+                    namespaceId: b912d8f4-a77c-4189-a211-e0ea1dfde04f
                   annotations:
                     - key: prometheus.io/port
                       value: '8900'
@@ -1463,6 +1577,7 @@ components:
                         name: my-environment
                         production: true
                         defaultStudioTarget: true
+                        secretsStoreEnabled: false
                       deployment:
                         appUrl: 'http://test.app.url'
                         packageId: 045b8cf4-c9cd-41b4-b241-414b87a7f219
@@ -1507,6 +1622,7 @@ components:
                         subscriptionSecret: c3Vic2NyaXB0aW9uLXNlY3JldA==
                         debuggerPassword: NEtpKStwIjhiMzVVUUcodw==
                         mxAdminPassword: NEtpKStwIjhiMzVVUUcodw==
+                        runtimeVersion: 9.24.2
                         environmentVariables:
                           - name: custom-env-variable1
                             value: custom-env-variable1-value
@@ -1522,6 +1638,7 @@ components:
                       provider:
                         clusterId: a712d8f4-a77c-4189-a211-e0ea1dfde03c
                         namespace: my-namespace
+                        namespaceId: b912d8f4-a77c-4189-a211-e0ea1dfde04f
                       annotations:
                         - key: prometheus.io/path
                           value: /metrics
@@ -1635,6 +1752,8 @@ components:
                         manageEnvironment: false
                         deployApp: true
                         scaleApp: true
+                        startApp: true
+                        stopApp: true
                         editAppConstants: true
                         manageAppScheduledEvents: true
                         viewAppLogs: true
@@ -1708,6 +1827,8 @@ components:
                             manageEnvironment: false
                             deployApp: true
                             scaleApp: true
+                            startApp: true
+                            stopApp: true
                             editAppConstants: true
                             manageAppScheduledEvents: true
                             viewAppLogs: true
@@ -1766,6 +1887,8 @@ components:
                             manageEnvironment: false
                             deployApp: true
                             scaleApp: true
+                            startApp: true
+                            stopApp: true
                             editAppConstants: true
                             manageAppScheduledEvents: true
                             viewAppLogs: true
@@ -1826,7 +1949,7 @@ components:
       name: Authorization
       type: apiKey
       in: header
-      description: For more information about requesting and using a token see [Create a Personal Access Token with Warden](https://docs.mendix.com/developerportal/community-tools/warden).<br/> The header must be set to `MxToken <Your PAT>`.
+      description: 'For more information about requesting and using a token see the [documentation](https://docs.mendix.com/developerportal/community-tools/mendix-profile/#pat).<br/> The header must be set to `MxToken <Your PAT>`.'
   requestBodies:
     environmentManifest:
       content:
@@ -1883,6 +2006,7 @@ components:
             name: my-environment
             production: true
             defaultStudioTarget: true
+            secretsStoreEnabled: false
           deployment:
             appUrl: 'https://test.app.url'
             packageId: 045b8cf4-c9cd-41b4-b241-414b87a7f219
@@ -1915,6 +2039,7 @@ components:
             subscriptionSecret: 'base64 encoded string, e.g. c3Vic2NyaXB0aW9uLXNlY3JldA=='
             debuggerPassword: 'base64 encoded string, e.g. c3Vic2NyaXB0aW9uLXNlY3JldA=='
             mxAdminPassword: 'base64 encoded string, e.g. c3Vic2NyaXB0aW9uLXNlY3JldA=='
+            runtimeVersion: 9.24.2
             environmentVariables:
               - name: custom-env-variable1
                 value: custom-env-variable1-value
@@ -1924,6 +2049,7 @@ components:
           provider:
             clusterId: a712d8f4-a77c-4189-a211-e0ea1dfde03c
             namespace: my-namespace
+            namespaceId: b912d8f4-a77c-4189-a211-e0ea1dfde04f
           annotations:
             - key: prometheus.io/port
               value: '8900'
@@ -1996,6 +2122,8 @@ components:
                 manageEnvironment: false
                 deployApp: true
                 scaleApp: true
+                startApp: true
+                stopApp: true
                 editAppConstants: true
                 manageAppScheduledEvents: true
                 viewAppLogs: true

@@ -48,7 +48,7 @@ Depending on whether you plan to use the SAP Cloud Connector, you also need the 
 
 If you are using the SAP Cloud Connector to facilitate connection to the SAP backend system, you must install the *bapi-service* microservice component. The component minimizes the network complexity and helps make your application is compliant with the recommended SAP security standards.
 
-You can download the *bapi-service* component from the [Mendix Content Delivery Network](https://cdn.mendix.com/mcdep/bapi-service/bapi-service-1.0.0.zip), and then use the extracted manifest file to deploy the *bapi-service.war* file to SAP BTP. To use the component, you must also define an RFC-type destination in SAP BTP.
+You can download the *bapi-service* component from the [Mendix Content Delivery Network](https://cdn.mendix.com/mcdep/bapi-service/bapi-service-1.0.2.zip), and then use the extracted manifest file to deploy the *bapi-service.war* file to SAP BTP. To use the component, you must also define an RFC-type destination in SAP BTP.
 
 ### 2.2 Required Only When Not Using the SAP Cloud Connector
 
@@ -74,9 +74,7 @@ To use BAPI Connector for SAP Solutions in your Mendix application to call the B
     1. Add the action `GetJCoDestination`. This will retrieve the JCoDestination to communicate 
     with SAP system.
 
-    {{% alert color="info" %}}
-    We recommend that you always use the `GetJcoDestination` action before using the BAPI. If the destination has already been registered it will not be registered again.
-    {{% /alert %}}
+        {{% alert color="info" %}}We recommend that you always use the `GetJcoDestination` action before using the BAPI. If the destination has already been registered it will not be registered again.{{% /alert %}}
 
     2. Add the action `CallBAPI` with the following parameters:
         
@@ -106,14 +104,16 @@ To use the BAPI Connector, you have to first set up your environment and configu
     {{< figure src="/attachments/partners/sap/sap-bapi-connector/sap-bapi-connector-module.png" alt="The SAPBAPIConnector module in the App Explorer" >}}
 
 3. Download the following files from [SAP Support](https://support.sap.com/en/product/connectors/jco.html):
-    * sapjco3.dll
-    * sapjco3.jar
 
-    You need the latest stable versions for *Microsoft Windows and Windows Server*. For more details on SAP JCo releases, please refer to official [SAP JCo release and support strategy](https://launchpad.support.sap.com/#/notes/2786882).
+    | Deployment environment type | Required files |
+    | --- | --- |
+    | **Microsoft Windows** | sapjco3.dll, sapjco3.jar |
+    | **Linux/Unix** | libsapjco3.so, sapjco3.jar |
 
-    Put both of these files in the `/userlib` folder where your Mendix application is stored on your local machine (that is `<app location>/userlib`). You can open this from within Studio Pro using the menu item **App > Show App Directory in Explorer**.
+    You need the latest stable versions for your operating system. For more details on SAP JCo releases, please refer to official [SAP JCo release and support strategy](https://launchpad.support.sap.com/#/notes/2786882).
 
-4. Configure the connection details. The specific configuration steps are different depending on whether you are using the SAP Cloud Connector. For more information, see the following sections:
+4. Put the downloaded files in the `/userlib` folder where your Mendix application is stored on your local machine (that is, `<app location>/userlib`). You can open this folder from within Studio Pro by clicking **App** > **Show App Directory in Explorer**.
+5. Configure the connection details. The specific configuration steps are different depending on whether you are using the SAP Cloud Connector. For more information, see the following sections:
     * [Configuring the Connection Details for the SAP Cloud Connector](#sap-cloud-connector-details)
     * [Configuring the Connection Details for Direct Connections to the SAP Backend System](#sap-connection-details)
 
@@ -123,9 +123,10 @@ If you are using the SAP Cloud Connector to connect to your SAP backend system, 
 
 1. In the **App Explorer**, click **SAPBAPIConnector** > **USE_ME** > **Config**.
 2. Edit the following values:
-        * **BAPIServiceTimeout** - Specify a timeout value for the HTTP client to receive a response from the *bapi-service* deployed on SAP BTP. By default, this value is set to *20 seconds*.
-        * **BAPIServiceURL** - Specify the URL of the *bapi-service* deployed on SAP BTP.
-        * **UseRFCDestination** - Set to **true**.
+
+    * **BAPIServiceTimeout** - Specify a timeout value for the HTTP client to receive a response from the *bapi-service* deployed on SAP BTP. By default, this value is set to *20 seconds*.
+    * **BAPIServiceURL** - Specify the URL of the *bapi-service* deployed on SAP BTP.
+    * **UseRFCDestination** - Set to **true**.
 
 ### 4.2 Configuring the Connection Details for Direct Connections to the SAP Backend System {#sap-connection-details}
 
@@ -195,6 +196,7 @@ To configure application-to-application authentication, include the following li
 ```text
 grant-as-authority-to-apps" : [ "$XSAPPNAME(application,{your-Mendix-app-deployed-on-SAP-BTP})"]
 ``` 
+
 Also, include the following line in the *xs-security.json* file of the XSUAA service instance bound with your Mendix app deployed on SAP BTP:
 
 ```text
@@ -212,6 +214,7 @@ To configure user authentication, include the following line in the *xs-security
 ```text
 granted-apps" : [ "$XSAPPNAME(application,your-Mendix-app-deployed-on-SAP-BTP)"]
 ``` 
+
 The following sample shows a configuration of the *xs-security.json* file for *bapi-service*.
 
 {{% alert color="info" %}}
@@ -240,6 +243,7 @@ Also, include the following line in the *xs-security.json* file of the XSUAA ser
 ```text
 "foreign-scope-references": ["$XSAPPNAME(application,bapi-service).bapiAuth"]
 ```   
+
 The following sample shows a configuration of the *xs-security.json* file for your Mendix app deployed on SAP BTP:
 
 ```text
@@ -260,6 +264,7 @@ The following sample shows a configuration of the *xs-security.json* file for yo
     }
 }
 ```  
+
 {{% alert color="info" %}}
 In this example, *bapiAuth* is the scope for the provider app defined on in the *xs-security.json* file for *bapi-service*. You can replace it with the name of your choice.
 {{% /alert %}}

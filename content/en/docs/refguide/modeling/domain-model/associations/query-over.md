@@ -15,19 +15,19 @@ This example is for an implementation of folders on a computer, where one folder
 
 {{< figure src="/attachments/refguide/modeling/domain-model/associations/query-over/query-over-example-structure.png" >}}
 
-To implement this, a self-reference to **Folder** is used. The self-reference is an association called **Folder_SubFolder**. This allows you to build a folder structure with unlimited numbers and levels of folders.
+To implement this, a self-reference to **Folder** is used. The self-reference is an association called **SubFolder_Folder**. This allows you to build a folder structure with unlimited numbers and levels of folders.
 
 {{% alert color="info" %}}
-The association in this case is a one-to-many association, but the same techniques apply to many-to-many or one-to-one associations.
+The association in this case is a many-to-one association, but the same techniques apply to many-to-many or one-to-one associations.
 {{% /alert %}}
 
 {{< figure src="/attachments/refguide/modeling/domain-model/associations/query-over/self-reference-domain-model.png" >}}
 
-If we create our folder functionality in a module called **QueryOver**, the association **Folder_SubFolder** is described in two ways in the domain model:
+If we create our folder functionality in a module called **QueryOver**, the association **SubFolder_Folder** is described in two ways in the domain model:
 
 | Name | Type | Owner | Parent | Child |
 | --- | --- | --- | --- | --- |
-| Folder_Subfolder | Reference | Default | QueryOver.Folder | QueryOver.Folder |
+| SubFolder_Folder | Reference | Default | QueryOver.Folder | QueryOver.Folder |
 
 * Multiplicity: One 'Folder' object is associated with multiple 'Folder' objects
 
@@ -35,7 +35,7 @@ The **Child** is the **Owner** of the association - in other words, the associat
 
 {{< figure src="/attachments/refguide/modeling/domain-model/associations/query-over/query-over-association.png" >}}
 
-There are six folders in the example above, and the database is structured and the attributes filled as shown below. In the **Folder_SubFolder** table, the **ChildFolderID** is shown on the left as it is the owner of the association.
+There are six folders in the example above, and the database is structured and the attributes filled as shown below. In the **SubFolder_Folder** table, the **ChildFolderID** is shown on the left as it is the owner of the association.
 
 {{< figure src="/attachments/refguide/modeling/domain-model/associations/query-over/query-over-example-database.png" >}}
 
@@ -45,7 +45,7 @@ For more information on how domain models are implemented in databases, see the 
 
 If you have the $ChosenFolder object available in your microflow you can easily retrieve the subfolder(s). Each association has a right side (parent in the association) and a left side (child or owner of the association).  The platform reads each association and determines whether the parent is equal to the $ChosenFolder.
 
-This is implemented using the following XPath constraint: `[QueryOver.Folder_SubFolder=$ChosenFolder]`. The XPath constraint is read from right to left, with the resulting Folder(s) being the result. This is key to how you should interpret which direction you are following the association.  
+This is implemented using the following XPath constraint: `[QueryOver.SubFolder_Folder=$ChosenFolder]`. The XPath constraint is read from right to left, with the resulting Folder(s) being the result. This is key to how you should interpret which direction you are following the association.  
 
 {{< figure src="/attachments/refguide/modeling/domain-model/associations/query-over/query-over-retrieve-normal.png"   width="400"  >}}
 
@@ -65,7 +65,7 @@ Use the expression `[reversed ()]` to instruct Mendix to read the constraint in 
 The `[reversed()]` expression can only be applied on self-references. When an association is between two different object types, the platform will be able to determine the direction of the join automatically.
 {{% /alert %}}
 
-In our example, we want to find the folder which is the parent of $ChosenFolder. Now, the query becomes `[QueryOver.Folder_SubFolder [reversed ()]=$ChosenFolder]`. Instead of reading the association from right to left (Parent to Child), the association is read from left to right.
+In our example, we want to find the folder which is the parent of $ChosenFolder. Now, the query becomes `[QueryOver.SubFolder_Folder [reversed ()]=$ChosenFolder]`. Instead of reading the association from right to left (Parent to Child), the association is read from left to right.
 
 {{< figure src="/attachments/refguide/modeling/domain-model/associations/query-over/query-over-retrieve-reversed.png"   width="400"  >}}
 
@@ -87,7 +87,7 @@ Say, for example, that each folder can contain multiple files, associated with t
 
 You want to retrieve all the files in the parent folder of the folder object $ChosenFolder.
 
-Use the constraint `[QueryOver.File_Folder/QueryOver.Folder/QueryOver.Folder_SubFolder [reversed ()]=$ChosenFolder]` to return all the **File** objects associated with the **Folder** which is associated (as parent) with the **Folder** which is the same as **$ChosenFolder**.
+Use the constraint `[QueryOver.File_Folder/QueryOver.Folder/QueryOver.SubFolder_Folder [reversed ()]=$ChosenFolder]` to return all the **File** objects associated with the **Folder** which is associated (as parent) with the **Folder** which is the same as **$ChosenFolder**.
 
 {{< figure src="/attachments/refguide/modeling/domain-model/associations/query-over/query-over-retrieve-complex.png" >}}
 

@@ -18,36 +18,46 @@ You can also use the [text widget](/refguide/text/) as it provides more features
 
 A label shows static text, which describes the purpose of a specific widget to a user.
 
-## 2 Properties
+## 2 Properties Pane
 
-An example of label properties is represented in the image below:
+The properties pane is divided into two major sections by a toggle at the top of the pane: **Properties** and **Styling**. Label properties consist of the following sections:
 
-{{< figure src="/attachments/refguide/modeling/pages/text-widgets/label/label-properties.png" alt="Label Properties"   width="300"  >}}
+Properties:
 
-Label properties consist of the following sections:
-
-* [Common](#common)
-* [Design Properties](#design-properties)
 * [General](#general)
 * [Visibility](#visibility)
+* [Common](#common)
 
-### 2.1 Common Section {#common}
+Styling:
 
-{{% snippet file="/static/_includes/refguide/common-section-link.md" %}}
+* [Design Properties](#design-properties)
+* [Common](#common-styling)
 
-### 2.2 Design Properties Section {#design-properties}
+## 3 Properties
 
-{{% snippet file="/static/_includes/refguide/design-section-link.md" %}} 
-
-### 2.3 General Section {#general}
+### 3.1 General Section {#general}
 
 The **General** section contains the **Caption** property. **Caption** defines the text that will be shown to a user.
 
-### 2.4 Visibility Section {#visibility}
+### 3.2 Visibility Section {#visibility}
 
 {{% snippet file="/static/_includes/refguide/visibility-section-link.md" %}}
 
-## 3 Read More
+### 3.3 Common Section {#common}
+
+{{% snippet file="/static/_includes/refguide/common-section-link.md" %}}
+
+## 4 Styling
+
+### 4.1 Design Properties Section {#design-properties}
+
+{{% snippet file="/static/_includes/refguide/design-section-link.md" %}} 
+
+### 4.2 Common Section {#common-styling}
+
+{{% snippet file="/static/_includes/refguide/common-section-link.md" %}}
+
+## 5 Read More
 
 * [Page](/refguide/page/)
 * [Text Widgets](/refguide/text-widgets/)

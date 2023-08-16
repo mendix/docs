@@ -5,7 +5,7 @@ description: "Provides information on how to obtain support for your Mendix apps
 weight: 35
 no_list: false 
 description_list: true
-tags: ["support", "sla", "standard", "premier", "platform"]
+tags: ["support", "sla", "standard", "premier", "platform", "extended support"]
 aliases:
     - /howtogeneral/support/index.html
 ---
@@ -44,15 +44,17 @@ Please contact [Mendix Support](https://support.mendix.com/) or your Customer Su
 
 ### 1.3 Extended Support {#extended-support}
 
-Extended Support is available as a product for the oldest major Mendix version where support is scheduled to end upon release of a new major version. With this product, support according to the SLA for the oldest version is available from the GA release date of the newest major version in a six-month package that you can purchase once or twice (for a maximum duration of one year). 
+Extended Support may be offered in cases where the support of a major Mendix version is discontinued in line with its [end of Support date](/releasenotes/studio-pro/lts-mts/#end). Extended Support is available at cost and covers support within one year following the GA release of the current (meaning, latest) Mendix major version. 
 
-For example, support for Mx7 is scheduled to end upon the release of Mx10 GA. However, if you have purchased Extended Support, Mx7 remains supported for either six months or one year from the release date of Mx10 GA.
+There are 6-month and 12-month packages available for Extended Support.
+
+For example, support for Mendix version 7 is scheduled to end upon the release of Mendix version 10 GA. However, if you have purchased Extended Support, version 7 remains supported for either six months or one year from the release date of version 10 GA.
 
 Please contact your Customer Success Manager or [Mendix Support](https://support.mendix.com/hc/en-us) if you want to know more.
 
 ## 2 Finding Your Answers
 
-We expect that many questions and issues can be solved by reading the [Mendix Documentation](https://docs.mendix.com/) and by exploring the [Mendix Forum](https://forum.mendix.com/). If you cannot find the answer to your question in one of these locations, you can submit a question, incident, or change request to Mendix Support. We will act as the focal point for issues on Mendix Studio Pro, your applications, and the [Developer Portal](https://home.mendix.com/). We will forward the issue to the second- and third-line if necessary.
+We expect that many questions and issues can be solved by reading the [Mendix Documentation](/) and by exploring the [Mendix Forum](https://forum.mendix.com/). If you cannot find the answer to your question in one of these locations, you can submit a question, incident, or change request to Mendix Support. We will act as the focal point for issues on Mendix Studio Pro, your applications, and the [Developer Portal](https://home.mendix.com/). We will forward the issue to the second- and third-line if necessary.
 
 ## 3 Feature Requests
 
@@ -85,7 +87,7 @@ Please read more about this in [Control Center](/developerportal/control-center/
 
 ### 5.2 Technical Contacts
 
-You need to appoint a [Technical Contact](/developerportal/collaborate/app-roles/#technical-contact) for each of your applications running in the Mendix Public Cloud and Cloud Dedicated. The Technical Contact checks the performance of the applications in the Developer Portal and receives alerts from the Mendix Developer Portal based on errors and warnings in the application. It is possible to have other team members receive these alerts as well.
+You need to appoint a [Technical Contact](/developerportal/general/app-roles/#technical-contact) for each of your applications running in the Mendix Public Cloud and Cloud Dedicated. The Technical Contact checks the performance of the applications in the Developer Portal and receives alerts from the Mendix Developer Portal based on errors and warnings in the application. It is possible to have other team members receive these alerts as well.
 Reading these alerts carefully and acting upon them is important, as they can affect the performance of your app. For more information on alerts, see [Alerts](/developerportal/operate/monitoring-application-health/).
 
 ### 5.3 Training
@@ -108,7 +110,7 @@ Mendix supports the current major release and the two prior major releases (and 
 
 With our Multi-Cloud strategy, Mendix allows the apps that you build to be deployed in any Cloud. This can be in the [Mendix Public Cloud](/developerportal/deploy/mendix-cloud-deploy/), Mendix Dedicated Cloud, [Mendix Private Cloud](/developerportal/deploy/private-cloud/), [SAP Business Technology Platform](/developerportal/deploy/sap-cloud-platform/), or in other on-premises and Cloud architectures.
 
-The full stack is depicted in the table below. This indicates which components are **Mendix** supported, or supported by a **Mendix Partner** or 3rd party. If no support is indicated, then you will need to arrange support of this component yourself. Each of the components is described in more detail in [Components of the Mendix Stack](#components), below.
+The full stack is depicted in the table below. This indicates which components are **Mendix** supported, or supported by a **Mendix Partner** or a third party. If no support is indicated, then you will need to arrange support of this component yourself. Each of the components is described in more detail in [Components of the Mendix Stack](#components), below.
 
 | Stack (see [below](#components) for more information) | Public Cloud | Cloud Dedi&shy;cated | Private Cloud - Con&shy;nected | Private Cloud - Stand&shy;alone | SAP BTP or Tencent | Cloud Foundry/ Docker & Kuber&shy;netes | Tradi&shy;tional² |
 | --- | --- | --- | --- | --- | --- | --- | --- |

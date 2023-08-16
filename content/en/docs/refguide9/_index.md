@@ -8,7 +8,7 @@ no_list: false
 description_list: true
 cascade:
     - space: "Studio Pro 9 Guide"
-    - mendix_version: "9"
+    - mendix_version: 9
     - old_content: true
     - sitemap:
         priority: 0.4
@@ -44,7 +44,7 @@ For more information on options for deploying your app see [Deployment](/develop
 
 ## 3 Version Control
 
-[Version Control](/refguide9/version-control/) allows you to manage your app development, work on multiple development lines, as well as collaboratively work with [Mendix Studio](/studio/).  For information on how Studio Pro handles versioning of apps, see the [Versioning an App Deployed to the Cloud](/refguide9/using-version-control-in-studio-pro/#versioning-app) section in *Using Version Control in Studio Pro*. 
+[Version Control](/refguide9/version-control/) allows you to manage your app development and work on multiple development lines. For information on how Studio Pro handles versioning of apps, see the [Versioning an App Deployed to the Cloud](/refguide9/using-version-control-in-studio-pro/#versioning-app) section in *Using Version Control in Studio Pro*. 
 
 ## 4 Mendix Runtime
 

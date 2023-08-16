@@ -158,7 +158,7 @@ To customize your JavaScript actions, consult the sections below.
 
 #### 2.2.1 Understanding the Mendix Client API
 
-Within the JavaScript actions, the full Mendix Client API is available. For reference, see the [Mendix Client API](https://apidocs.rnd.mendix.com/8/client/index.html). Note that some parts of the Mendix Client API were created for widgets, and are less relevant for JavaScript actions.
+Within the JavaScript actions, the full Mendix Client API is available. For reference, see the [Mendix Client API](/apidocs-mxsdk/apidocs/client-api/). Note that some parts of the Mendix Client API were created for widgets, and are less relevant for JavaScript actions.
 
 #### 2.2.2 Using Numeric Parameters in Your JavaScript Actions
 
@@ -196,7 +196,7 @@ mx.data.create({
 });
 ```
 
-For more information on creating objects, consult the [Create](https://apidocs.rnd.mendix.com/7/client/mx.data.html#.create) section of the *Mendix Client API*.
+For more information on creating objects, consult the [Create](https://apidocs.rnd.mendix.com/8/client/mx.data.html#.create) section of the *Mendix Client API*.
 
 #### 2.2.4 Changing Objects
 
@@ -209,7 +209,7 @@ mxobj.get("Name");               // "Henry"
 mxobj.getOriginalValue("Name")   // "Fred"
 ```
 
-For more information on changing objects, consult the [Set](https://apidocs.rnd.mendix.com/7/client/mendix_lib_MxObject.html#set) section of the *Mendix Client API*.
+For more information on changing objects, consult the [Set](https://apidocs.rnd.mendix.com/8/client/mendix_lib_MxObject.html#set) section of the *Mendix Client API*.
 
 #### 2.2.5 Loading Platform-Shipped Dependencies
 
@@ -222,10 +222,10 @@ var lang = require("mendix/lang");
 
 The following libraries are provided by the Mendix Client:
 
-* [mendix/lang](https://apidocs.rnd.mendix.com/7/client/module-mendix_lang.html)
-* [mendix/validator](https://apidocs.rnd.mendix.com/7/client/module-mendix_validator.html)
-* [mxui/dom](https://apidocs.rnd.mendix.com/7/client/module-mxui_dom.html)
-* [mxui/html/parser](https://apidocs.rnd.mendix.com/7/client/module-mxui_html_parser.html)
+* [mendix/lang](https://apidocs.rnd.mendix.com/8/client/module-mendix_lang.html)
+* [mendix/validator](https://apidocs.rnd.mendix.com/8/client/module-mendix_validator.html)
+* [mxui/dom](https://apidocs.rnd.mendix.com/8/client/module-mxui_dom.html)
+* [mxui/html/parser](https://apidocs.rnd.mendix.com/8/client/module-mxui_html_parser.html)
 
 While there are Dojo and Document Object Model (DOM) functions available, they are not recommended. For more information on Dojo and DOM functions, see the [Understanding Bad Practice](#badpractice) section of this document below. 
 
@@ -249,13 +249,13 @@ Below is an example of using an external dependency based on [pdf-lib](https://g
     // Other code you write will be lost the next time you deploy the project.
     import { Big } from "big.js";
     import { PDFDocument } from "pdf-lib"
-
+    
     // BEGIN EXTRA CODE
     ```
 
 #### 2.2.7 Understanding Hybrid App External Dependencies
 
-The Mendix hybrid app ships with a large set of plugins by default. For more details on default plugins, see the [November 20th, 2018 Version Upgrades](/releasenotes/mobile/hybrid-app/#upgrades-20) section of the *Hybrid App Base and Template* release notes.
+The Mendix hybrid app ships with a large set of plugins by default. For more details on default plugins, see the [November 20, 2018 Version Upgrades](/releasenotes/mobile/hybrid-app/#upgrades-20) section of the *Hybrid App Base and Template* release notes.
 
 It is also possible to add new plugins during a mobile build. For more information on adding new plugins, see [Publish a Mendix Hybrid Mobile App in Mobile App Stores](/howto8/mobile/publishing-a-mendix-hybrid-mobile-app-in-mobile-app-stores/).
 
@@ -477,7 +477,7 @@ Not all capabilities are recommended for use. Consider the side effects that an 
 
 * [Build JavaScript Actions](/howto8/extensibility/build-javascript-actions/)
 * [JavaScript Actions](/refguide8/javascript-actions/)
-* [Mendix Client API](https://apidocs.rnd.mendix.com/7/client/index.html)
+* [Mendix Client API](/apidocs-mxsdk/apidocs/client-api/)
 * JavaScript basics:
     * [Mozilla JavaScript Basics](https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/JavaScript_basics)
     * [Promises](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise)

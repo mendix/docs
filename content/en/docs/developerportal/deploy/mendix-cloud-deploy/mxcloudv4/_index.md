@@ -29,6 +29,7 @@ The primary hosting locations are as follows:
 * Mendix Cloud UK: AWS London
 * Mendix Cloud US: AWS North Virginia
 * Mendix Cloud US: AWS Oregon
+* Mendix Cloud SA: AWS São Paulo
 
 Backups will always be stored in at least one secondary location, separate from the primary hosting location. Each individual backup is immutable, i.e. once it has been written to our storage location, it can no longer be modified or overwritten.
 
@@ -46,7 +47,7 @@ No, we do not. The Cloud Foundry API does not map one-to-one to our deployment o
 
 ## 4 How Do I Access the Underlying AWS Resources and How Can I Deploy in My AWS account?
 
-The Mendix Cloud runs in Mendix's own AWS account and you cannot interact with the AWS APIs directly via our credentials. We do not offer [VPC peering](http://docs.aws.amazon.com/AmazonVPC/latest/PeeringGuide/Welcome.html) or VPC connections. All access to Mendix-hosted AWS resources (such as EC2, RDS, and S3) is done via our APIs, such as the [Database API](https://apidocs.rnd.mendix.com/7/runtime/com/mendix/core/Core.html#retrieveXPathQuery-com.mendix.systemwideinterfaces.core.IContext-java.lang.String-) and [FileDocument API](https://apidocs.rnd.mendix.com/7/runtime/com/mendix/core/Core.html#storeFileDocumentContent-com.mendix.systemwideinterfaces.core.IContext-com.mendix.systemwideinterfaces.core.IMendixObject-java.io.InputStream-) in Runtime, and the [Deploy API](/apidocs-mxsdk/apidocs/deploy-api/) for cloud resources.
+The Mendix Cloud runs in Mendix's own AWS account and you cannot interact with the AWS APIs directly via our credentials. We do not offer [VPC peering](http://docs.aws.amazon.com/AmazonVPC/latest/PeeringGuide/Welcome.html) or VPC connections. All access to Mendix-hosted AWS resources (such as EC2, RDS, and S3) is done via our APIs, such as the [Database API](https://apidocs.rnd.mendix.com/10/runtime/com/mendix/core/Core.html#createXPathQuery(java.lang.String)) and [FileDocument API](https://apidocs.rnd.mendix.com/10/runtime/com/mendix/core/Core.html#storeFileDocumentContent(com.mendix.systemwideinterfaces.core.IContext,com.mendix.systemwideinterfaces.core.IMendixObject,java.io.InputStream)) in Runtime, and the [Deploy API](/apidocs-mxsdk/apidocs/deploy-api/) for cloud resources.
 
 You can, however, launch services on your own AWS account, in the same region to minimize latency, and you can access those services via connectors in your app.
 
@@ -61,7 +62,7 @@ You can also consider running your Mendix app using your own AWS account, and ha
 There are certain limits and behaviors which apply to your app when running in the Mendix Cloud. Here are a few considerations to bear in mind:
 
 * The Amazon RDS maintenance window is not aligned with the Mendix Developer Portal maintenance window for an application
-* It is not possible to deploy a model (*.mda*) larger than 4 GB when uncompressed or a model that contains approximately 64,000 or more files
+* It is not possible to deploy a model (*.mda*) larger than 1 GB when uncompressed or a model that contains approximately 64,000 or more files
 * You can't upload files bigger than 1 GB to your app
 * You can't download files bigger than 1 GB from your app
 * To use the debugger, you need to scale down to one instance

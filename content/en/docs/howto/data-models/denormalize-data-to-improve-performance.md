@@ -20,7 +20,7 @@ This how-to will teach you how to do the following:
 
 Before starting this how-to, make sure you have completed the following prerequisites:
 
-* Creating a [basic data layer](/refguide/create-a-basic-data-layer/)
+* [Configure a domain model](/refguide/configuring-a-domain-model/)
 
 ## 3 Denormalization
 
@@ -145,10 +145,10 @@ Now the application is ready to store redundant data, but you still need to keep
 
 ## 5 Read More
 
-* [Creating a Basic Data Layer](/refguide/create-a-basic-data-layer/)
+* [Configuring a Domain Model](/refguide/configuring-a-domain-model/)
 * [Setting Up Data Validation](/refguide/setting-up-data-validation/)
 * [Find the Root Cause of Runtime Errors](/howto/monitoring-troubleshooting/finding-the-root-cause-of-runtime-errors/)
-* [Stories](/developerportal/collaborate/stories/)
+* [Stories](/developerportal/project-management/stories/)
 * [Defining Access Rules Using XPath](/refguide/define-access-rules-using-xpath/)
 * [Attributes](/refguide/attributes/)
 * [Event Handlers](/refguide/event-handlers/)

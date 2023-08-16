@@ -10,7 +10,7 @@ This document will lead you through the process of setting up everything you nee
 
 ## 2 Quick Installation
 
-If you know what you are doing, the quick installation instructions below are for you. Otherwise, please skip this paragraph and continue with the [Setting Up Your Development Tools](#setting) section.
+If you know what you are doing, the quick installation instructions below are for you. Otherwise, skip this paragraph and continue with the [Setting Up Your Development Tools](#setting) section.
 
 For the quick installation, we assume that you have `node` already installed. 
 Set up a new `node` project and install the dependencies using the following steps:

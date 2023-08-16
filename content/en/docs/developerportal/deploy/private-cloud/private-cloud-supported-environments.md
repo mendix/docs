@@ -36,8 +36,8 @@ If deploying to Red Hat OpenShift, you need to specify that specifically when cr
 
 Mendix for Private Cloud Operator `v2.*.*` is the latest version which officially supports:
 
-* Kubernetes versions 1.19 through 1.26
-* OpenShift 4.6 through 4.11
+* Kubernetes versions 1.19 through 1.27
+* OpenShift 4.6 through 4.12
 
 {{% alert color="warning" %}}
 Kubernetes 1.22 is a [new release](https://kubernetes.io/blog/2021/08/04/kubernetes-1-22-release-announcement/) which removes support for several deprecated APIs and features.
@@ -171,7 +171,7 @@ It doesn't require any external database or provider and is great for quick test
 {{% alert color="info" %}}
 An app using an ephemeral database will lose all data if its environment is stopped or restarted.
 
-An app with an ephemeral database cannot have more than one replica. Only the first (master) replica will be able to start.
+An app with an ephemeral database cannot have more than one replica. Only the first (leader) replica will be able to start.
 {{% /alert %}}
 
 ### 4.2 Standard PostgreSQL Database
@@ -208,7 +208,7 @@ Azure PostgreSQL databases require additional firewall configuration to allow co
 Some managed PostgreSQL databases might have restrictions or require additional configuration.
 
 {{% alert color="info" %}}
-To use a PostgreSQL database, the Mendix Operator requires a master account with permissions to create new users and databases.
+To use a PostgreSQL database, the Mendix Operator requires a Superuser account with root privileges and permissions to create new users and databases.
 
 For every Mendix app environment, a new database schema and user (role) will be created so that the app can only access its own data.
 {{% /alert %}}
@@ -220,7 +220,7 @@ To ensure compatibility with all PostgreSQL databases (including ones with self-
 If Strict TLS is enabled, Mendix for Private Cloud will connect to the PostgreSQL server with TLS and validate the PostgreSQL server's TLS certificate. In this case, the connection will fail if: 
 
 * the PostgreSQL server has an invalid certificate
-* or its certificate is signed by an unknown Certificate Authority
+* or its certificate is signed by an unknown certificate authority
 * or the PostgreSQL server doesn't support TLS connections.
 
 The Mendix Operator allows you to specify custom Certificate Authorities to trust. This allows you to enable Strict TLS even for databases with self-signed certificates.
@@ -247,7 +247,7 @@ Amazon and Azure SQL servers require additional firewall configuration to allow 
 Some managed SQL Server databases might have restrictions or require additional configuration.
 
 {{% alert color="info" %}}
-To use a SQL Server database, the Mendix Operator requires a master account with permissions to create new users and databases.
+To use a SQL Server database, the Mendix Operator requires Superuser account with permissions to create new users and databases.
 
 For every Mendix app environment, a new database, user and login will be created so that the app can only access its own data.
 
@@ -260,7 +260,7 @@ If Strict TLS is enabled, the Mendix Operator will connect to SQL server with TL
 
 * SQL Server doesn't support encryption
 * the SQL Server server has an invalid certificate
-* or its certificate is signed by an unknown Certificate Authority
+* or its certificate is signed by an unknown certificate authority
 
 The Mendix Operator allows you to specify custom Certificate Authorities to trust. This allows you to enable Strict TLS even for databases with self-signed certificates.
 
@@ -297,7 +297,7 @@ For every Mendix app environment, a new bucket and user will be created so that 
 {{% /alert %}}
 
 {{% alert color="warning" %}}
-If MinIO is installed in [Gateway](https://github.com/minio/minio/tree/master/docs/gateway) mode, it needs to be configured to use etcd.
+If MinIO is installed in the deprecated Gateway mode, it needs to be configured to use etcd.
 MinIO uses etcd to store its configuration.
 Without etcd, MinIO will disable its admin API – which is required by the Mendix Operator to create new users for each environment.
 {{% /alert %}}

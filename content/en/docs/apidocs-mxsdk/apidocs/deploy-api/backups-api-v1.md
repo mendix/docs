@@ -1,5 +1,5 @@
 ---
-title: "Backups API V1"
+title: "Backups API v1"
 url: /apidocs-mxsdk/apidocs/backups-api-v1/
 description: "An API to allow the triggering of backups creation, restore, download and to get information about existing snapshots."
 weight: 20
@@ -8,7 +8,7 @@ weight: 20
 {{% alert color="warning" %}}
 This documents version 1 of the backups API **which is now deprecated**.
 
-You are advised to use the [Backups API V2](/apidocs-mxsdk/apidocs/backups-api/) which uses asynchronous calls to support  long-running tasks.
+You are advised to use the [Backups API v2](/apidocs-mxsdk/apidocs/backups-api/) which uses asynchronous calls to support  long-running tasks.
 {{% /alert %}}
 
 ## 1 Introduction

@@ -261,7 +261,7 @@ To do this:
     {{< figure src="/attachments/partners/siemens/mindsphere/mendix-on-mindsphere/mindsphere-development-considerations/css-icon.png" alt="Add an icon as CSS" >}}
 
 {{% alert color="info" %}}
-You will not see the icon in Studio Pro when it is in *Structure mode*. Switch to *Design mode* to confirm that you have selected the correct icon.
+You will not see the icon in Studio Pro when it is in **Structure mode**. Switch to **Design mode** to confirm that you have selected the correct icon.
 
 You can only add one icon per element.
 {{% /alert %}}
@@ -387,7 +387,7 @@ In some circumstances, this could lead to another user *using the same app in th
 
 ### 9.5 Native Mobile
 
-With Mendix Studio Pro V8.0.0, Mendix has released support for developing native mobile apps. This is not currently supported for apps using MindSphere.
+With Mendix Studio Pro 8.0.0, Mendix has released support for developing native mobile apps. This is not currently supported for apps using MindSphere.
 
 ### 9.6 Progressive Web Applications
 

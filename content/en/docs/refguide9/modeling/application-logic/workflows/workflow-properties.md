@@ -112,7 +112,15 @@ This setting overrides the app-wide setting in the **App Settings**. For more in
 
 ### 2.5 Due Date Section {#due-date}
 
-**Due by** is stored in the System module on the **Workflow** entity as an attribute and its data can be dynamically displayed in the running app. For example, you can use it to set a deadline for the workflow and display it in your app. However, this is not an automatic reminder but rather a deadline you reference when keeping track of the workflow. If you are using the **Workflow Commons** module, **Due by** is used in page templates. 
+**Due date** is stored in the System module on the **Workflow** entity as an attribute and its data can be dynamically displayed in the running app. For example, you can use it to set a deadline for the workflow and display it in your app. However, this is not an automatic reminder but rather a deadline you reference when keeping track of the workflow. If you are using the **Workflow Commons** module, **Due Date** is used in page templates.
+
+The **Due date** section properties are described in the table below:
+
+| Property   | Description                                                                                                                                                                                                                                                          |
+|------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| None       | No due date is set.                                                                                                                                                                                                                                                  |
+| Duration   | You can set the deadline for the workflow with the **Due in** option, which indicates the number of hours, days, or weeks the task is due in. Possible values of the property are the following ones:<br /><ul><li>Hour(s)</li><li>Day(s)</li><li>Week(s)</li> </ul> |
+| Expression | You can set a due date for the workflow writing an expression. For example, to set a due date to tomorrow, you can use `addDays([%CurrentDateTime%], 1)`.                                                                                                            |
 
 ### 2.6 General Section {#general}
 

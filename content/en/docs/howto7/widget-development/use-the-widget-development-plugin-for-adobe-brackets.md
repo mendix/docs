@@ -123,7 +123,7 @@ The `test` directory contains a fully prepared Mendix test app for testing your 
 
 To package the widget source into an *.mpk* file, follow these steps:
 
-1. Create an *.mpk* file by pressing **F4** or clicking the the play button on the right side of the editor:
+1. Create an *.mpk* file by pressing **F4** or clicking the play button on the right side of the editor:
 
     {{< figure src="/attachments/howto7/widget-development/use-the-widget-development-plugin-for-adobe-brackets/18579908.png" >}}
 
@@ -143,7 +143,7 @@ This how-to has enabled you to start working and building a custom widget for th
 
 These are some interesting books and articles you can read to dive into the source code of the `AppStoreWidgetBoilerplate`:
 
+* To communicate with Mendix, you need to use the Mendix JavaScript Client API – for more information, see the [Mendix Client API](/apidocs-mxsdk/apidocs/client-api/)
 * Custom Mendix widgets are based on DOJO widgets – for more information, see this blog post: 
 [Writing Your Own Widget](http://dojotoolkit.org/reference-guide/1.10/quickstart/writingWidgets.html)
-* To communicate with Mendix, you need to use the Mendix JavaScript Client API – for more information, see the [Mendix Client API Documentation](https://apidocs.rnd.mendix.com/7/client/index.html)
 * This is a nice book that helps you understand what JavaScript is all about: [Learning JavaScript Design Patterns](http://addyosmani.com/resources/essentialjsdesignpatterns/book/)

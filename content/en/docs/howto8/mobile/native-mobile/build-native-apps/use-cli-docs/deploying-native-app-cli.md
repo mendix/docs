@@ -132,7 +132,7 @@ You have successfully prepared your app, and in the next section will make a bui
 
 To initiate your first build in the Native Builder, you will execute a command in CLI with various parameters included. For more information on parameters, see the [Commands](/refguide8/native-builder/#commands) section in the *Native Builder* guide. While some parameters are optional, two are required: the `--project-name` parameter and the `--build-number` parameter.
 
-This is an example build command using the the two required parameters mentioned above, as well as the optional `--app-version` command (it is best practice to include a [new app version](https://semver.org/) with each release):
+This is an example build command using the two required parameters mentioned above, as well as the optional `--app-version` command (it is best practice to include a [new app version](https://semver.org/) with each release):
 
 ```bash {linenos=false}
 native-builder.exe build --project-name CoolApp --build-number 1 --app-version 0.1.0
@@ -376,7 +376,7 @@ By default, building for tablets is disabled in XCode. Do the following to enabl
 
     {{< figure src="/attachments/howto8/mobile/native-mobile/build-native-apps/use-cli-docs/deploying-native-app-cli/tablet-workspace.png" alt="select tablet options"   width="300"  >}}
 
-1. Commit these changes to your project's master branch so consecutive builds have the tablet settings enabled.
+1. Commit these changes to your project's primary branch so consecutive builds have the tablet settings enabled.
 
 ##### 6.2.3.2 Directly Change the Files on GitHub
 
@@ -426,7 +426,7 @@ First, navigate to your project's repository. This should be `www.github.com/<yo
 
 #### 6.2.4 Uploading to the Apple App Store
 
-To upload your app to the iOS App Store, follow these instructions (to continue, you must have completed the [Signing a Build](#signing-a-build) section above and recieved a build signed for the Apple Store):
+To upload your app to the iOS App Store, follow these instructions (to continue, you must have completed the [Signing a Build](#signing-a-build) section above and received a build signed for the Apple Store):
 
 1. Follow Apple's [Add an app to your account](https://help.apple.com/app-store-connect/#/dev2cd126805) tutorial to add an app entry to your account.
 2. After adding a new app to your account, follow Apple's [View and edit app information](https://help.apple.com/app-store-connect/#/dev97865727c) tutorial to describe your new app entry. Consult the other pages under the left menu's **Enter app information** category should they apply to your app:

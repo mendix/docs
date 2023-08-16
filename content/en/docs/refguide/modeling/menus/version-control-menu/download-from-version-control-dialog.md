@@ -11,7 +11,7 @@ aliases:
 
 ## 1 Introduction
 
-Use the **Download from Version Control Server** menu item to download an app from a version control server (for example, [Team Server](/developerportal/collaborate/team-server/)). If you are currently editing an app, the app will be closed (after prompting to save any changes) and the newly downloaded app will be opened using the current version of Studio Pro.
+Use the **Download from Version Control Server** menu item to download an app from a version control server (for example, [Team Server](/developerportal/general/team-server/)). If you are currently editing an app, the app will be closed (after prompting to save any changes) and the newly downloaded app will be opened using the current version of Studio Pro.
 
 {{% alert color="info" %}}
 If the downloaded app was created with a different version of Mendix, you will be asked if it can be converted to the current version.
@@ -23,17 +23,17 @@ You can also use the [Open App Dialog](/refguide/open-app-dialog/) to download a
 
 ## 2 Where Is Your App Stored?
 
-If **Enable private version control** (either for SVN or Git or for both) is set in the app [Preferences](/refguide/preferences-dialog/#enable), you can choose between the **Mendix Team Server** or a **Private server**. If it is not enabled, you will only be able to choose an app from the Mendix Team Server.
+If **Enable private version control with Git** is set in the app [Preferences](/refguide/preferences-dialog/#enable), you can choose between the **Mendix Team Server** or a **Private server**. If it is not enabled, you will only be able to choose an app from the Mendix Team Server.
 
 ### 2.1 Mendix Team Server
 
-Use the **Team Server App** dropdown to choose the app you want to download.
+Use the **Team Server App** dropdown to choose the Git app you want to download.
 
-For more information about the Mendix Team Server, see [Team Server](/developerportal/collaborate/team-server/).
+For more information about the Mendix Team Server, see [Team Server](/developerportal/general/team-server/).
 
 ### 2.2 Private Server
 
-Enter the URL of your private SVN server in **App repository address** and click **Connect**.
+Enter the URL of your private Git server in **App repository address** and click **Connect**.
 
 {{< figure src="/attachments/refguide/modeling/menus/version-control-menu/download-from-version-control-dialog/download-from-private-server.png" alt="Download from Version Control Server dialog box" >}}
 

@@ -2,7 +2,7 @@
 title: "MxBuild"
 url: /refguide/mxbuild/
 category: "General Info"
-weight: 50
+weight: 30
 description: "Describes MxBuild, which is a command-line tool for building and deploying Mendix Apps."
 tags: ["build", "deploy", "deployment package", "command-line", "studio pro"]
 ---
@@ -48,9 +48,9 @@ In Windows, use the following format for the command line:
 
 `MxBuild --java-home="JDKDirectory" --java-exe-path="javaExecutable" [options] projectFile`
 
-You can also run MxBuild under Linux using the the following command line format:
+You can also run MxBuild under Linux using the following command line format:
 
-`mono mxbuild.exe --java-home="JDKDirectory" --java-exe-path="javaExecutable" [options] projectFile`
+`mxbuild --java-home="JDKDirectory" --java-exe-path="javaExecutable" [options] projectFile`
 
 After creating the deployment package, the MxBuild process quits.
 

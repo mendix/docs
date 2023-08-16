@@ -8,7 +8,7 @@ tags: ["studio pro", "mendix assist", "validation assist", "bot", "validation bo
 
 ## 1 Introduction 
 
-The Validation Assist helps you build validation microflows in a more automated way using pre-built expressions.  [Validation rules](https://docs.mendix.com/refguide/validation-rules/) are conditions that should be satisfied before an object is committed. There are different ways to [set up data validations](/refguide/setting-up-data-validation/) in Mendix. Building data validations in microflows is a manual and repetitive task and Validation Assist helps automate it. 
+The Validation Assist helps you build validation microflows in a more automated way using pre-built expressions.  [Validation rules](/refguide/validation-rules/) are conditions that should be satisfied before an object is committed. There are different ways to [set up data validations](/refguide/setting-up-data-validation/) in Mendix. Building data validations in microflows is a manual and repetitive task and Validation Assist helps automate it. 
 
 The main features of the Validation Assist are the following:
 
@@ -30,7 +30,7 @@ The Validation Assist is activated by default in the page elements where data va
     * **Text box**
     * **Text area**
     * **Drop-down**
-    * **Check box**
+    * **Checkbox**
     * **Radio button**
     * **Date picker**
     * **Reference selector**
@@ -65,7 +65,7 @@ The dialog box consists of two sections:
     * **Duplicate** – duplicates selected validation
     * **Extract** **submicroflow** – extracts a list of validations and saves it as a new validation sub-microflow to reuse later
 
-## 3 Using Validation Assist to Build Data Validations
+## 3 Using Validation Assist to Build Data Validations {#data-validations}
 
 You can configure a custom **Save** button with the help of the Validation Assist. 
 
@@ -126,6 +126,6 @@ You can now  click the **Play** button in the Studio Pro top bar to run your app
 
 ## 4 Read More 
 
-* [MxAssist Performance Bot](/refguide/mx-assist-performance-bot/)
+* [MxAssist Best Practice Bot](/refguide/mx-assist-performance-bot/)
 * [MxAssist Logic Bot](/refguide/mx-assist-logic-bot/)
 * [Validation Rules](/refguide/validation-rules/)     

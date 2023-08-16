@@ -14,42 +14,38 @@ A group box can be used to visually group related widgets together. Group boxes 
 
 {{< figure src="/attachments/refguide/modeling/pages/structure-widgets/group-box/group-box.jpg" >}}
 
-## 2 Properties
+## 2 Properties Pane
 
-An example of group box properties is represented in the image below:
+The properties pane is divided into two major sections by a toggle at the top of the pane: **Properties** and **Styling**. Group box properties consist of the following sections:
 
-{{< figure src="/attachments/refguide/modeling/pages/structure-widgets/group-box/group-box-properties.png" alt="Group Box Properties"   width="300"  >}}
+Properties:
 
-Group box properties consist of the following sections:
-
-* [Common](#common)
-* [Design Properties](#design-properties)
 * [General](#general)
 * [Visibility](#visibility)
+* [Common](#common)
 
-### 2.1 Common Section {#common}
+Styling:
 
-{{% snippet file="/static/_includes/refguide/common-section-link.md" %}}
+* [Design Properties](#design-properties)
+* [Common](#common-styling)
 
-### 2.2 Design Properties Section {#design-properties}
+## 3 Properties
 
-{{% snippet file="/static/_includes/refguide/design-section-link.md" %}} 
+### 3.1 General Section {#general}
 
-### 2.3 General Section {#general}
-
-#### 2.3.1 Show Header
+#### 3.1.1 Show Header
 
 **Show Header** defines whether a header is shown above the group box. 
 
 Default: *True*
 
-#### 2.3.2 Caption
+#### 3.1.2 Caption
 
 This property is only displayed when the **Show Header** option is enabled. It defines the caption that is shown in the header.
 
 Default: *Group box*
 
-#### 2.3.3 Collapsible
+#### 3.1.3 Collapsible
 
 This property specifies whether the group box can be collapsed by clicking the header and if so, whether it is displayed collapsed or expanded. This property is only displayed when the **Show Header** is enabled.
 
@@ -59,11 +55,25 @@ Possible values of this property are the following:
 * **Yes (start collapsed)** – the elements inside the group box will be initially hidden and can be expanded when a user clicks a plus icon in the header
 * **No** – group box elements are always displayed and the group box cannot be collapsed
 
-### 2.4 Visibility Section {#visibility}
+### 3.2 Visibility Section {#visibility}
 
 {{% snippet file="/static/_includes/refguide/visibility-section-link.md" %}}
 
-## 3 Read More
+### 3.3 Common Section {#common}
+
+{{% snippet file="/static/_includes/refguide/common-section-link.md" %}}
+
+## 4 Styling
+
+### 4.1 Design Properties Section {#design-properties}
+
+{{% snippet file="/static/_includes/refguide/design-section-link.md" %}} 
+
+### 4.2 Common Section {#common-styling}
+
+{{% snippet file="/static/_includes/refguide/common-section-link.md" %}}
+
+## 5 Read More
 
 * [Page](/refguide/page/)
 * [Structure](/refguide/structure-widgets/)

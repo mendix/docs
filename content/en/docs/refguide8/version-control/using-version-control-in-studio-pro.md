@@ -27,7 +27,7 @@ The app is created on the Team Server, and a working copy is created in the **Pr
 
 ## 3 Joining a Project
 
-If there is already a Team Server enabled project, you can be invited to join it (see [Team](/developerportal/collaborate/team/)).
+If there is already a Team Server enabled project, you can be invited to join it (see [Team](/developerportal/general/team/)).
 
 Once you are a team member, providing you have been given a role with sufficient rights, you can work on the app by doing the following:
 
@@ -86,7 +86,7 @@ When you successfully commit your project, this becomes the new original and all
 
 Sending changes to the repository is called *committing*. The idea is that you commit small, consistent pieces of work to the repository. We recommend you commit your changes often. Preferably, the versions in the repository are always error-free, Studio Pro will warn against committing while there are errors in your project.
 
-To commit your changes, click the **Commit** button in the **Changes** dock, or choose the **Project > Commit...** menu item.
+To commit your changes, click the **Commit** button in the **Changes** dock, or choose the **Project** > **Commit...** menu item.
 
 {{< figure src="/attachments/refguide8/version-control/using-version-control-in-studio-pro/commit-button.png" alt="Commit Button" >}}
 
@@ -198,7 +198,7 @@ The involved document is marked as conflicted and you can see the reason in the 
 If a whole folder (or module) was *deleted* and another person changes a document inside that folder, the folder/module is restored and also marked as conflicted. This way you know that the intention was to delete that folder but it has been restored to show you the context of the changed document.
 {{% /alert %}}
 
-You can resolve a project conflict by choosing **Tasks > Use mine** or by deleting the involved documents or folders.
+You can resolve a project conflict by choosing **Tasks** > **Use mine** or by deleting the involved documents or folders.
 
 ## 7 Using Branches
 
@@ -215,7 +215,7 @@ It is often convenient to have more than one development line. For example, one 
 If you want to add some functionality to a deployed application or you want to fix a bug in it, you can do so without interfering with other development.
 
 1. Determine the version of the deployed application. This information is in the Developer Portal. Alternatively, you can find the version in the *metadata.json* file in the **model** subfolder of your deployment package (mda) archive. For example, `"ModelVersion": "1.0.0.16"`
-2. Choose **Version Control > Manage Branch Lines...** and create a branch based on the tag with the that version number as its name.
+2. Choose **Version Control** > **Manage Branch Lines...** and create a branch based on the tag with the that version number as its name.
 
     {{< figure src="/attachments/refguide8/version-control/using-version-control-in-studio-pro/create-from-tag.png" >}}
 
@@ -233,7 +233,7 @@ Of course, not all maintenance fixes need to be merged to the main line. Sometim
 
 Another reason for creating a branch is to develop a big new feature without interfering with other development. This gives you the freedom to commit a half-implemented feature, possibly even with errors, while other people can still commit and update on the main line. Without using a branch line, you would have to constantly make sure that your project is error free and does not break other parts of the system.
 
-Firstly, select **Version Control > Manage Branch Lines...** and create a branch from a revision of the main line.
+Firstly, select **Version Control** > **Manage Branch Lines...** and create a branch from a revision of the main line.
 
 {{< figure src="/attachments/refguide8/version-control/using-version-control-in-studio-pro/2018-02-28_13-50-39.png" >}}
 
@@ -242,7 +242,7 @@ Now work on the branch until the feature is done and commit the completed work.
 When you want to merge the whole branch back to the main line to integrate the feature there. Do the following:
 
 1. Open the main line.
-2. Choose **Version Control > Merge changes here**.
+2. Choose **Version Control** > **Merge changes here**.
 3. Choose **Merge feature branch**.
 
     {{< figure src="/attachments/refguide8/version-control/using-version-control-in-studio-pro/2018-02-28_14-05-23.png" >}}
@@ -259,7 +259,7 @@ You can delete the branch after merging it back, if you want.
 
 Development lines other than the main line are called branch lines. Our advice would be to develop new features in the *main line* and to use *branch lines* for fixing bugs in versions that have been deployed. This is the scenario Studio Pro makes easy but other scenarios for more complex projects are supported as well.
 
-You can create branch lines from the Branch Line Manager which you can find at **Version Control > Manage Branch Lines...**.
+You can create branch lines from the Branch Line Manager which you can find at **Version Control** > **Manage Branch Lines...**.
 
 {{< figure src="/attachments/refguide8/version-control/using-version-control-in-studio-pro/create-branch-line.png" >}}
 
@@ -269,7 +269,7 @@ If you have multiple development lines, you sometimes want to port changes from 
 
 Merging is always done while you have a working copy open. The merge will result in extra local changes in that working copy. It is advisable to commit local changes first before merging extra changes into a working copy. Otherwise, the uncommitted local changes and the changes caused by the merge will be combined and it is very hard to untangle them if you are unhappy with the merge. Studio Pro will warn you if you have uncommitted changes.
 
-Select **Version Control > Merge Changes Here**, then select the appropriate type of merge (for example, **Port fix**).
+Select **Version Control** > **Merge Changes Here**, then select the appropriate type of merge (for example, **Port fix**).
 
 {{< figure src="/attachments/refguide8/version-control/using-version-control-in-studio-pro/2018-02-21_14-19-47.png" >}}
 
@@ -279,7 +279,7 @@ You can merge a single revision or a whole range of revisions from one developme
 
 Reverting changes works for changes that have not been committed yet. Changes that have been committed can never be deleted. However, you can apply the changes 'in reverse' and commit that. This feature is called 'Reverse merging' in Studio Pro.
 
-Choose **Version Control > Reverse Merge Changes...**
+Choose **Version Control** > **Reverse Merge Changes...**
 
 {{< figure src="/attachments/refguide8/version-control/using-version-control-in-studio-pro/revert-committed-changes.png" >}}
 
@@ -291,7 +291,7 @@ There are two methods for fully replacing your main line with a branch line.
 
 The first method is to merge the entire branch line into the main line, essentially replacing the main line contents with the branch line contents). This works as long as the branch line is up to date with the main line (to avoid conflicts. To do this, follow these steps:
 
-1. Select **Version Control > Merge Changes Here** > **Merge feature branch**.
+1. Select **Version Control** > **Merge Changes Here** > **Merge feature branch**.
 2. Select the branch to merge into the main line.
 
 The second method should be used if the first method is not possible for some reason and you want to "overwrite" the main line with your branch line. For this method, you must follow these steps:
@@ -305,11 +305,11 @@ The second method should be used if the first method is not possible for some re
 
 ### 8.1 Deploying Locally
 
-While developing you can deploy and run your app on your local machine by using the menu item **Run > Run Locally**. This allows you to test the app as it currently is stored on your local machine.
+While developing you can deploy and run your app on your local machine by using the menu item **Run** > **Run Locally**. This allows you to test the app as it currently is stored on your local machine.
 
 ### 8.2 Deploying Your Working Copy
 
-When you deploy to the cloud, you can choose to use the version of the app stored on your local machine, the *working copy* and deploy that to the default environment. If you are using the [Mendix Cloud](/developerportal/deploy/mendix-cloud-deploy/), or other partner cloud (SAP BTP, for example), choose the menu item **Run > Run** to commit the version of the app stored on your local machine and deploy that to the default environment.
+When you deploy to the cloud, you can choose to use the version of the app stored on your local machine, the *working copy* and deploy that to the default environment. If you are using the [Mendix Cloud](/developerportal/deploy/mendix-cloud-deploy/), or other partner cloud (SAP BTP, for example), choose the menu item **Run** > **Run** to commit the version of the app stored on your local machine and deploy that to the default environment.
 
 ### 8.3 Choosing a Specific Development Line and Revision
 
@@ -325,13 +325,13 @@ When it creates the package, Studio Pro will also create a tag representing this
 
 #### 8.3.1 Deploying a Specific Version to a Mendix Licensed Cloud Node
 
-If you are using the Mendix Cloud you can choose **Project > Deploy to Licensed Cloud Node** to deploy a specific version.
+If you are using the Mendix Cloud you can choose **Project** > **Deploy to Licensed Cloud Node** to deploy a specific version.
 
 {{< figure src="/attachments/refguide8/version-control/using-version-control-in-studio-pro/2018-02-21_17-05-05.png" >}}
 
 #### 8.3.2 Creating a Deployment Package from a Specific Version
 
-If you are using a different hosting environment, you create a deployment package using the menu item **Project > Create Deployment Package...**.
+If you are using a different hosting environment, you create a deployment package using the menu item **Project** > **Create Deployment Package...**.
 
 {{< figure src="/attachments/refguide8/version-control/using-version-control-in-studio-pro/2018-02-28_13-44-04.png" >}}
 
@@ -373,7 +373,7 @@ To fix this, make a small commit on your branch in Studio Pro (for example, chan
 
 ### 9.5 Reverting Accidental Studio Pro App Model Upgrade
 
-When working in different app with different Studio Pro versions, you may one day find yourself with an app model upgraded and committed to a newer Studio Pro version, while the the rest of your team is not yet ready to upgrade. 
+When working in different app with different Studio Pro versions, you may one day find yourself with an app model upgraded and committed to a newer Studio Pro version, while the rest of your team is not yet ready to upgrade. 
 
 To revert this version upgrade of the app model, follow these steps:
 

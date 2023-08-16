@@ -18,7 +18,7 @@ Mendix Studio Pro has the requirements listed in the following sections.
 
 ### 2.1 Software Specifications
 
-Mendix [Studio Pro](/refguide9/modeling/) version 9 is supported on 64-bit versions of Windows 10 release 1809 and above. This also includes Windows 11. MTS versions starting from Mendix Studio Pro 9.6.5 and Mendix Studio 9.9.1 are enabled and tested to run on Apple Silicon Macs such as the M1, which requires [Parallels 17](https://www.parallels.com/) and Windows 11.
+Mendix [Studio Pro](/refguide9/modeling/) version 9 is supported on 64-bit versions of Windows 10 release 1809 and above. This also includes Windows 11. MTS versions starting from Mendix Studio Pro 9.6.5 are enabled and tested to run on Apple Silicon Macs such as the M1, which requires [Parallels 17](https://www.parallels.com/) and Windows 11.
 
 The following frameworks are required. They will be installed automatically by the Studio Pro installer if necessary:
 
@@ -88,6 +88,19 @@ For active development and running your application locally, your app folder sho
 
 ### 2.6 Supported Git Service Providers {#supported-providers}
 
+Git service providers have size limitations related to commits and repositories.
+
+Studio Pro does not support Large File Storage (LFS) for any provider.
+
+You can find a list of known limitations below, however, we advise you to check the most up-to-date limitations on respective web sites before considering using a certain service provider.
+
+| Vendor      | Repository Size Limit                      | Push Limit      | Non-LFS File Size Limit | LFS File Size Limit |
+| ----------- | ------------------------------------------ | --------------- | ----------------------- | ------------------- |
+| GitHub      | Warnings on 5 GB, 100 GB theoretical limit | Information n/a | 100 MB (warning 50 MB)  | 5 GB                |
+| GitLab      | 5 GB (free) and 250 GB (enterprise)        | 5 GB            | None                    | 5 GB                |
+| Azure Repos | 250 GB                                     | 5 GB            | None                    | 50 GB               |
+| Bitbucket   | 4 GB                                       | 3.5 GB          | None                    | 10 + 100 GB         |
+
 #### 2.6.1 Azure Repos and Azure DevOps Server 
 
 We support both Microsoft’s [Azure Repos](https://azure.microsoft.com/en-us/services/devops/repos/) hosted Git service, and Azure DevOps Server (former Team Foundation Server) which is an on-premises solution for hosting your Git repos on private infrastructure.
@@ -96,7 +109,7 @@ To get a PAT for your user account, see the [Use personal access tokens](https:/
 
 You need `Code (full)` permission for your token.
 
-##### 2.6.2 GitHub 
+#### 2.6.2 GitHub 
 
 We support GitHub’s hosting solutions, including the free GitHub.com cloud-hosted service and GitHub Enterprise, both hosted (Enterprise Cloud) and on-premises (Enterprise Server).
 
@@ -104,7 +117,7 @@ To get a PAT for your user account, see the [Creating a personal access token](h
 
 You need `repo` permissions for your token.
 
-##### 2.6.3 GitLab 
+#### 2.6.3 GitLab 
 
 We support all tiers of GitLab’s service, including GitLab.com, GitLab Community Edition, and GitLab Enterprise Edition.
 
@@ -112,7 +125,7 @@ To get a PAT for your user account , see the [Personal access tokens](https://do
 
 You need `write_repository` permission for the token.
 
-##### 2.6.4 BitBucket 
+#### 2.6.4 BitBucket 
 
 We support all tiers of Atlassian’s BitBucket service, including BitBucket.org, BitBucket Server, and BitBucket Data Center on-premises solutions.
 
@@ -130,38 +143,30 @@ If you are using the Intel® UHD Graphics 630 graphics processor, please ensure 
 
 ## 3 Team Server {#ts}
 
-The [Team Server](/developerportal/collaborate/team-server/) is implemented using Subversion, and Studio Pro uses the HTTPS protocol to communicate with that server. To access the Team Server from within Studio Pro, the network at your location needs the following settings:
+The [Team Server](/developerportal/general/team-server/) is implemented using Subversion, and Studio Pro uses the HTTPS protocol to communicate with that server. To access the Team Server from within Studio Pro, the network at your location needs the following settings:
 
 * The HTTPS port (TCP 443) needs to be open
 * The HTTP port (TCP 80) needs to be open
 * WebDAV (verbs within the HTTP protocol) needs to be enabled on the proxy server (if any)
 
-## 4 Mendix Studio
-
-[Mendix Studio](/studio/) is optimized for use with Google Chrome. While Chrome is the officially supported browser, you can also use Mendix Studio with other popular browsers like Mozilla Firefox, Apple Safari, and Microsoft Edge. 
-
-{{% alert color="info" %}}
-The browser you use needs to have JavaScript turned on.
-{{% /alert %}}
-
-## 5 Cloud Foundry
+## 4 Cloud Foundry
 
 The [Mendix Cloud Foundry buildpack](https://github.com/mendix/cf-mendix-buildpack) supports Cloud Foundry versions v9 and above. 
 
-## 6 Docker
+## 5 Docker
 
 The [Mendix Docker buildpack](https://github.com/mendix/docker-mendix-buildpack) supports Docker version 18.09.0 and above. 
 
-### 6.1 Kubernetes
+### 5.1 Kubernetes
 
 The Mendix Docker buildpack supports the following Kubernetes versions: 
 
 * Kubernetes version v1.12 and above
 * Red Hat OpenShift v3.11 and v4.2 and above
 
-## 7 Server
+## 6 Server
 
-### 7.1 Operating System {#server-os}
+### 6.1 Operating System {#server-os}
 
 * Microsoft Windows Server 2008 SP2 and above
 * The following Unix-like operating systems:
@@ -169,13 +174,13 @@ The Mendix Docker buildpack supports the following Kubernetes versions:
     * Red Hat Enterprise Linux 6, Red Hat Enterprise Linux 7, and Red Hat Enterprise Linux 8
     * CentOS 6, CentOS 7
 
-### 7.2 Web Server
+### 6.2 Web Server
 
 * Microsoft Internet Information Services 7 and above
 * Nginx (tested with versions included in Debian Jessie and Debian Jessie Backports)
 * Apache
 
-### 7.3 Java {#java}
+### 6.3 Java {#java}
 
 When running Mendix on a server, you will need Java Runtime Environment (JRE) 11. To download an OpenJDK distribution from Adoptium, see [Adoptium Installation](https://adoptium.net/temurin/releases). To download a commercial Oracle distribution, see [Java SE Downloads](http://www.oracle.com/technetwork/java/javase/downloads/index.html).
 
@@ -183,13 +188,13 @@ When running Mendix on a server, you will need Java Runtime Environment (JRE) 11
 There is an issue since Java 7 that causes timeouts when using web services with a certain amount of data. You can circumvent this issue by adding the VM params `-Djava.net.preferIPv4Stack=true`. Mendix Studio Pro will do this for you, but if you are running Mendix on premises on a Windows server, you will need to do this yourself. For more information about this issue, see [Possible Bug in Java 7](https://community.oracle.com/tech/developers/discussion/comment/9987709).
 {{% /alert %}}
 
-## 8 Databases {#databases}
+## 7 Databases {#databases}
 
 Mendix tries to support the most recent and patched database server versions from database vendors. We aim to add support for a new vendor version two minor Mendix versions after the vendor has released it. Dropping support for a database will be announced in the release notes at the date the vendor drops support. We will drop support two minor Mendix versions later.
 
 Current support:
 
-* [MariaDB](/refguide9/mysql/): 10.2, 10.3, 10.4, 10.5, 10.6, 10.11 (please note that support for 10.2 is deprecated and has been removed in Studio Pro versions 9.22.0, 9.18.5, and 9.12.11; it will also be removed in 9.6.17)
+* [MariaDB](/refguide9/mysql/): 10.4, 10.5, 10.6, 10.11
 * [Microsoft SQL Server](/developerportal/deploy/mendix-on-windows-microsoft-sql-server/): 2019, 2022
 * [Azure SQL](https://docs.microsoft.com/en-us/sql/t-sql/statements/alter-database-transact-sql-compatibility-level?view=sql-server-2017): v12 compatibility mode 140 or higher
 * [MySQL](/refguide9/mysql/): 8.0
@@ -206,9 +211,9 @@ If you want two apps to share the same database, then you need to share the data
 For more information on why data cannot be shared between apps see [Data Storage](/refguide9/data-storage/#databases). Use the [Database Replication](/appstore/modules/database-replication/) module if you need to copy the data from one app to another.
 {{% /alert %}}
 
-## 9 File Storage {#file-storage}
+## 8 File Storage {#file-storage}
 
-### 9.1 Storage Services for Containers
+### 8.1 Storage Services for Containers
 
 For container-based deployments using Docker, Kubernetes, or Cloud Foundry, the following storage services are supported:
 
@@ -220,7 +225,7 @@ For container-based deployments using Docker, Kubernetes, or Cloud Foundry, the 
 
 For container-mounted storage in Kubernetes, provided by an external storage class, see also [Use Docker with Minikube](/developerportal/deploy/run-mendix-on-kubernetes/).
 
-### 9.2 Storage Types for Servers
+### 8.2 Storage Types for Servers
 
 For server-based installations, the following storage types mounted by the OS are supported:
 
@@ -229,7 +234,7 @@ For server-based installations, the following storage types mounted by the OS ar
 * GFS
 * Local Storage 
 
-## 10 Browsers {#browsers}
+## 9 Browsers {#browsers}
 
 * Google Chrome (latest stable desktop and Android versions)
 * Mozilla Firefox (latest stable desktop version)
@@ -244,7 +249,7 @@ As of Studio Pro 9, app end-users still using IE will be shown an **Unsupported 
 If you still need to support IE11, note that Studio Pro [8](/releasenotes/studio-pro/8.18/) and [7](/releasenotes/studio-pro/7.23/) will continue supporting IE11. Mendix recommends using Studio Pro 8 or 7 until your app end-users have upgraded their browsers.
 {{% /alert %}}
 
-## 11 Mobile Operating Systems {#mobileos}
+## 10 Mobile Operating Systems {#mobileos}
 
 For native and hybrid apps built with Mendix the following operating system versions are supported:
 
@@ -262,20 +267,20 @@ We recommend the following minimum hardware requirements for all mobile devices 
 
 Depending on your app's complexity, these minimum hardware requirements might not be sufficient and should be adjusted.
 
-### 11.1 Hybrid Apps Preview
+### 10.1 Hybrid Apps Preview
 
 Using a hybrid preview feature is not the same as testing an app on a phone or simulator. A hybrid preview only shows a resized view of an app to give an impression of what that app might look like on a mobile device. Some hybrid app functionality will not be supported in this browser view. Full tests always need to be done on a device or emulator. Offline apps can only be previewed in Google Chrome.
 
 Hybrid apps cannot be tested in Android Emulator, only on a real device.
 
-## 12 MxBuild {#mxbuild}
+## 11 MxBuild {#mxbuild}
 
 MxBuild is a Windows and Linux command-line tool that can be used to build a Mendix Deployment Package. For more information, see [MxBuild](/refguide9/mxbuild/).
 
 * Mono v5.20.x or .NET v4.7.2
 * JDK 11
 
-## 13 mx Command-Line Tool {#mxtool}
+## 12 mx Command-Line Tool {#mxtool}
 
 The **mx** command-line tool is a Windows and Linux command-line tool that can be used to do useful things with your Mendix app. For more information, see [mx Command-Line Tool](/refguide9/mx-command-line-tool/).
 

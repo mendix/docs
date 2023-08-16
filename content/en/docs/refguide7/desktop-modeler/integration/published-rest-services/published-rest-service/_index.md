@@ -56,7 +56,7 @@ Example:
 http//localhost:8080/rest/my_service_name/v1
 ```
 
-You can change the the default location to almost any valid URL.
+You can change the default location to almost any valid URL.
 
 #### 2.3.1 Reserved Prefixes
 

@@ -12,15 +12,15 @@ tags: ["java", "connector kit", "microflow action", "parameter type", "sql", "xp
 
 The Mendix Modeler supports two query languages to retrieve data:
 
-* Xpath as an easy to use query language to retrieve objects
+* XPath as an easy to use query language to retrieve objects
 * OQL is a SQL based language, more focused on powerful reporting facilities
 
-You can use these query languages in the Mendix Modeler, but both languages are also available through a Java API. You can use these APIs to implement powerful reusable microflow actions through the Connector Kit. In addition to Xpath and OQL, the Mendix APIs also enable you to use standard SQL on your Mendix database.
+You can use these query languages in the Mendix Modeler, but both languages are also available through a Java API. You can use these APIs to implement powerful reusable microflow actions through the Connector Kit. In addition to XPath and OQL, the Mendix APIs also enable you to use standard SQL on your Mendix database.
 
 This how to describes how you can build the following microflow actions:
 
-* Retrieve advanced Xpath - returns a list of entities as specified by an Xpath expression
-* Retrieve advanced OQL - returns a list of entities as specified by a OQL query
+* Retrieve advanced XPath - returns a list of entities as specified by an XPath expression
+* Retrieve advanced OQL - returns a list of entities as specified by an OQL query
 * Retrieve Dataset OQL - returns a list of entities as specified by a Dataset OQL query
 * Retrieve advanced SQL - returns a list of entities as specified by a SQL query
 * Create first Monday of month list - returns a list of dates of the first Monday of every month in a specified range
@@ -32,15 +32,15 @@ For more information on Java programming for Mendix, see [Java Programming](/ref
 
 For more information on calling Java actions from a microflow, see [Java Actions](/refguide7/java-actions/).
 
-## 2 Retrieving Advanced Xpath
+## 2 Retrieving Advanced XPath
 
-The goal is to create a microflow action where a user can specify an Xpath expression and which result entities are expected. The action will execute the XPath statement and return the resulting list of objects.
+The goal is to create a microflow action where a user can specify an XPath expression and which result entities are expected. The action will execute the XPath statement and return the resulting list of objects.
 
-In practice, this is not a very useful microflow action as you can already do this with the standard Retrieve action in the Mendix modeler. The goal, however, is to illustrate how you can use the Xpath Java API.
+In practice, this is not a very useful microflow action as you can already do this with the standard Retrieve action in the Mendix modeler. The goal, however, is to illustrate how you can use the XPath Java API.
 
 The Java action needs the following parameters:
 
-* A string where the user can specify the Xpath expression to be executed
+* A string where the user can specify the XPath expression to be executed
 * A result entity where the user specifies which entity is to be returned
 * A return type which specifies that the action returns a list of the entities specified in the previous parameter.
 
@@ -54,7 +54,7 @@ Finally, you should define how you want to display the microflow in the microflo
 
 {{< figure src="/attachments/howto7/extensibility/howto-datastorage-api/image007.png" >}}
 
-The implementation of this Java action is pretty straight forward; you can use the [Core.retrieveXPathQuery](https://apidocs.rnd.mendix.com/7/runtime/com/mendix/core/Core.html#retrieveXPathQuery-com.mendix.systemwideinterfaces.core.IContext-java.lang.String-) API to execute your Xpath expression and return a list of Mendix objects.
+The implementation of this Java action is pretty straight forward; you can use the [Core.retrieveXPathQuery](https://apidocs.rnd.mendix.com/7/runtime/com/mendix/core/Core.html#retrieveXPathQuery-com.mendix.systemwideinterfaces.core.IContext-java.lang.String-) API to execute your XPath expression and return a list of Mendix objects.
 
 The implementation also validates that the list returned contains objects of the entity specified.
 
@@ -101,7 +101,7 @@ You can create a generic microflow action to execute OQL queries and return a li
 * ResultEntity – which entity will hold the retrieved data
 * A list of the ResultEntity specified as a return type.
 
-As in the Xpath example above, a **Type parameter** is defined to specify that the return list uses the type specified in ResultEntity.
+As in the XPath example above, a **Type parameter** is defined to specify that the return list uses the type specified in ResultEntity.
 
 Additionally, you need to expose the Java action as a microflow action, provide a caption and an icon.
 

@@ -21,7 +21,7 @@ The **Consumed OData Service** document that is added to the project displays th
 
 * Service name and the icon for the source application of the originating app
 * Version number of the consumed service
-* **View in Data Hub Catalog** link to the **Service Details** where you can see the full service details that are registered
+* **View in Catalog** link to the **Service Details** where you can see the full service details that are registered
 * **Update/Switch** – you can update the consumed service contract to another version that has been detected in [Mendix Data Hub](/data-hub/) for the same app and service; the button will show the following, depending on what has been returned for the consumed contract in Data Hub:
     * **Update** – this button is displayed so that you can **Update** the contract that is currently consumed (and shown in the **Consumed OData Service** document). You will be presented with the contract that is currently at the service end-point. It is good practice that only minor, non-breaking changes are deployed to the same end-point.
     * **Switch** – this button is shown if other registered instances of the same service (with the same name, from the same app) are available in Data Hub and are deployed to different endpoints (for example, to another environment or because of changes that would break existing apps consuming the previous version)
@@ -65,7 +65,7 @@ In most cases, this setting can be ignored, and the default **Use project settin
 
 ### 2.5 Authentication
 
-The **Use HTTP authentication** check box specifies if basic authentication should be used. If checked, you have to specify the following details:
+The **Use HTTP authentication** checkbox specifies if basic authentication should be used. If checked, you have to specify the following details:
 
 * **User name** – defines the user name that will be used for authentication
 * **Password** – defines the password that will be used for authentication
@@ -83,7 +83,7 @@ For more flexible HTTP request headers, you can select a microflow that returns 
 {{% /alert %}}
 
 {{% alert color="info" %}}
-Custom authentication can be done with the microflow where the authentication value is retrieved (such as SSO). For further information on access and authentication, see [Using Custom HTTP Header Validation for Published Entities](/data-hub/data-hub-catalog/security/#http-header-validation) in the *Data Hub Guide*.
+Custom authentication can be done with the microflow where the authentication value is retrieved (such as SSO). For further information on access and authentication, see [Using Custom HTTP Header Validation for Published Entities](/refguide/security-shared-datasets/#http-header-validation) in the *Security and Shared Datasets* document in the Studio Pro 10 guide.
 {{% /alert %}}
 
 ## 3 Metadata Tab {#metadata}
@@ -124,8 +124,8 @@ Click the **Properties** tab for the consumed OData service which displays the p
 * **Documentation** – an additional description about this service for the current app
 * **Service name** – the name of the published OData service that is consumed
 * **Service version** – the version of the service that is consumed
-* **Service ID** – the unique identifier of the service in the Data Hub Catalog
-* **Application ID** – the unique identifier of the application that the service was published from in the Data Hub Catalog
+* **Service ID** – the unique identifier of the service in the Catalog
+* **Application ID** – the unique identifier of the application that the service was published from in the Catalog
 * **Metadata** – the contents of the metadata file defining the service
 * **OData version** – the OData version: can be OData 3 or OData 4
 
@@ -135,7 +135,7 @@ Click the **Properties** tab for the consumed OData service which displays the p
 
 When you add an external entity to your project, you are consuming the entity from a specific version of a service (the *service endpoint*), deployed to a given environment. The metadata file or contract for the service is located at this endpoint.
 
-The same service, deployed to a different environment will be to a different service endpoint and this will be registered as a different asset in the Data Hub Catalog. In the following example, there are two endpoints for the **CustomerApi service version 1.1.0** which is deployed to the production environment and the **Acceptance** environment:
+The same service, deployed to a different environment will be to a different service endpoint and this will be registered as a different asset in the Catalog. In the following example, there are two endpoints for the **CustomerApi service version 1.1.0** which is deployed to the production environment and the **Acceptance** environment:
 
 {{< figure src="/attachments/refguide8/modeling/integration/consumed-odata-services/consumed-odata-service/same-service-different-endpoints.png" alt="2 endpoints"   width="250"  >}}
 
@@ -161,11 +161,11 @@ Minor service updates can be deployed to the same service endpoints, thereby ens
 
 When a major change has been made to a published service we recommend that the service is deployed to a *different endpoint* with the new service version number clearly indicating that there has been a major change—with semantic numbering this would be an incremental increase  of a whole number.
 
-In this case the new service will be registered in the Data Hub Catalog as a different service, and show up in the catalog as a separate asset. In the following example, there are 4 registered occurrences of the **OrderManagementService**:
+In this case the new service will be registered in the Catalog as a different service, and show up in the catalog as a separate asset. In the following example, there are 4 registered occurrences of the **OrderManagementService**:
 
 {{< figure src="/attachments/refguide8/modeling/integration/consumed-odata-services/consumed-odata-service/consume-major-service-update-version.png" alt="4 endpoints"   width="250"  >}}
 
-There is a major service update indicated by the change in the version number from **1.0.0** to **2.0.0**. Further, both versions have also been deployed to the **Acceptance** which also results in separately registered assets in the Data Hub Catalog.
+There is a major service update indicated by the change in the version number from **1.0.0** to **2.0.0**. Further, both versions have also been deployed to the **Acceptance** which also results in separately registered assets in the Catalog.
 
 {{% alert color="info" %}}
 Entities of non-Mendix OData services are identified with a key of one or more fields. If the key fields are changed in an update of the service, this will also be seen as a breaking change.
@@ -213,7 +213,7 @@ The consumed OData service that is currently consumed in the project (**1.0.0**)
 
 #### 4.3.2. Switch
 
-When an OData service is published to a different endpoint or to a different environment this will mean that it will be registered as a different asset in the Data Hub Catalog.
+When an OData service is published to a different endpoint or to a different environment this will mean that it will be registered as a different asset in the Catalog.
 
 In the example given in the [Consuming from Service Endpoints](#consume-service-endpoints) section above, if you are consuming the service from the **Acceptance** environment, the Consumed OData service screen will display the **Switch** button to enable you to consume the same service from the **Production**.
 

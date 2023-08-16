@@ -33,15 +33,17 @@ The **Start Time** of nightly backups in UTC is shown below. The **Local Time** 
 | --- | --- | --- | --- | --- |
 | Bahrain | Mumbai | 03:00 | 06:00 | 1 hour |
 | Canada | Oregon | 05:00 | 00:00 | 1 hour |
+| Cape Town | Frankfurt | 02:00 | 04:00 | 1 hour |
 | Dublin | Frankfurt | 23:00 | 00:00 | 3 hours |
 | Frankfurt | Dublin | 00:00 | 01:00 | 3 hours |
 | London | Frankfurt | 23:00 | 23:00 | 2 hours |
-| Mumbai | Singapore | 19:30 | 01:00 | 1 hour |
-| Oregon | Ohio | 07:00 | 00:00 | 1 hour |
-| Singapore | Sydney | 17:00 | 01:00 | 1 hour |
-| Cape Town | Frankfurt | 02:00 | 04:00 | 1 hour |
-| Tokyo | Osaka | 16:00 | 01:00 | 1 hour |
+| Mumbai | Hyderabad | 19:30 | 01:00 | 1 hour |
 | N. Virginia | N. California | 05:00 | 00:00 | 4 hours |
+| Oregon | Ohio | 07:00 | 00:00 | 1 hour |
+| São Paulo | N. Virginia | 00:00 | 21:00 | 1 hour |
+| Singapore | Sydney | 17:00 | 01:00 | 1 hour |
+| Sydney | Melbourne | 07:00 | 17:00 | 1 hour |
+| Tokyo | Osaka | 16:00 | 01:00 | 1 hour |
 
 Nightly backups will start once an app has been successfully deployed to, and started in, the environment.
 
@@ -59,7 +61,7 @@ The **Backups** page presents options for managing your backups. These are descr
 
 This will automatically generate a backup snapshot from your application data. See [Create a Backup](/developerportal/operate/create-backup/).
 
-### 3.2 Upload Backup
+### 3.2 Upload Backup {#upload}
 
 The sections below present details on uploading data in recent Mendix Cloud versions.
 

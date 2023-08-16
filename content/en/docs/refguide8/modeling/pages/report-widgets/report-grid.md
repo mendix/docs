@@ -18,7 +18,7 @@ A **Report grid** shows data retrieved from the database using a [Data set](/ref
 
 The difference between a data grid and a report grid is that you can use a data grid to edit the data shown. A report grid will only display data. However, in a report grid, you can create additional information by merging and processing attributes when you define the data set which retrieves the data.
 
-The report grid is displayed in structure mode with the data set source shown between square brackets and colored blue. The data fields returned by the data set are shown in the report grid columns, under the column captions. See [Report Grid Column Data Source](#column-data-source) for information on how to assign a data field to a column.
+The report grid is displayed in **Structure mode** with the data set source shown between square brackets and colored blue. The data fields returned by the data set are shown in the report grid columns, under the column captions. See [Report Grid Column Data Source](#column-data-source) for information on how to assign a data field to a column.
 
 {{< figure src="/attachments/refguide8/modeling/pages/report-widgets/report-grid/report-grid.png" alt="Report grid in structure mode" >}}
 

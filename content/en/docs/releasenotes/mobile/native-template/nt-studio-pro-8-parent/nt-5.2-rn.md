@@ -4,9 +4,25 @@ url: /releasenotes/mobile/nt-5.2-rn/
 weight: 10
 description: "Native Template 5.2 release notes."
 ---
+## 5.2.18
+
+**Release date: May 24, 2023**
+
+### Fixes
+
+* We fixed an issue which affected building apps with remote or local notifications enabled. (Tickets 185505, 186171)
+
+## 5.2.17
+
+**Release date: May 16, 2023**
+
+### Fixes
+
+* We updated AppCenter configurations.
+  
 ## 5.2.16
 
-**Release date: January 20th, 2023**
+**Release date: January 20, 2023**
 
 ### Fixes
 
@@ -14,7 +30,7 @@ description: "Native Template 5.2 release notes."
 
 ## 5.2.15
 
-**Release date: December 27th, 2022**
+**Release date: December 27, 2022**
 
 ### Fixes
 
@@ -22,7 +38,7 @@ description: "Native Template 5.2 release notes."
 
 ## 5.2.14
 
-**Release date: November 9th, 2022**
+**Release date: November 9, 2022**
 
 ### Fixes
 
@@ -31,7 +47,7 @@ description: "Native Template 5.2 release notes."
 
 ## 5.2.13
 
-**Release date: June 15th, 2022**
+**Release date: June 15, 2022**
 
 ### Fixes
 
@@ -39,7 +55,7 @@ description: "Native Template 5.2 release notes."
 
 ## 5.2.12
 
-**Release date: May 11th, 2022**
+**Release date: May 11, 2022**
 
 ### Fixes
 
@@ -47,7 +63,7 @@ description: "Native Template 5.2 release notes."
 
 ## 5.2.11
 
-**Release date: May 10th, 2022**
+**Release date: May 10, 2022**
 
 ### Fixes
 
@@ -55,7 +71,7 @@ description: "Native Template 5.2 release notes."
 
 ## 5.2.9
 
-**Release date: March 29th, 2022** 
+**Release date: March 29, 2022** 
 
 ### Improvements
 
@@ -63,7 +79,7 @@ description: "Native Template 5.2 release notes."
 
 ## 5.2.8
 
-**Release date: January 25th, 2022** 
+**Release date: January 25, 2022** 
 
 ### Fixes
 
@@ -71,7 +87,7 @@ description: "Native Template 5.2 release notes."
 
 ## 5.2.7
 
-**Release date: November 5th, 2021** 
+**Release date: November 5, 2021** 
 
 ### Fixes
 
@@ -79,7 +95,7 @@ description: "Native Template 5.2 release notes."
 
 ## 5.2.6
 
-**Release date: November 2nd, 2021**
+**Release date: November 2, 2021**
 
 ### Fixes
 
@@ -87,7 +103,7 @@ description: "Native Template 5.2 release notes."
 
 ## 5.2.5
 
-**Release date: October 25th, 2021**
+**Release date: October 25, 2021**
 
 ### Improvements
 
@@ -95,7 +111,7 @@ description: "Native Template 5.2 release notes."
 
 ## 5.2.4
 
-**Release date: September 29th, 2021**
+**Release date: September 29, 2021**
 
 ### Improvements
 
@@ -103,7 +119,7 @@ description: "Native Template 5.2 release notes."
 
 ## 5.2.3
 
-**Release date: September 7th, 2021**
+**Release date: September 7, 2021**
 
 ### Fixes
 
@@ -111,7 +127,7 @@ description: "Native Template 5.2 release notes."
 
 ## 5.2.2
 
-**Release date: August 9th, 2021**
+**Release date: August 9, 2021**
 
 ### Improvements
 
@@ -119,20 +135,20 @@ description: "Native Template 5.2 release notes."
 
 ## 5.2.1
 
-**Release date: July 28th, 2021**
+**Release date: July 28, 2021**
 
 This is a re-release of Native Template [5.2.0](#520).
 
 ## 5.2.0 {#520}
 
-**Release date: July 26th, 2021**
+**Release date: July 26, 2021**
 
 ### Improvements
 
-* We made an improvement to the the capability configurations. We added an implementation for the `appCenterOTA` capability. This removes the previous need to have `Codepush` bundled with every application even when over-the-air support is not enabled via the Native Mobile App Builder.
+* We made an improvement to the capability configurations. We added an implementation for the `appCenterOTA` capability. This removes the previous need to have `Codepush` bundled with every application even when over-the-air support is not enabled via the Native Mobile App Builder.
 * We implemented support for Android 11 devices.
 * We bumped `react-native-codepush` dependency to `6.4.1` due to security concerns on the previous version.
 
 ### Breaking Change
 
-* We bumped the `react-native-image` internal dependency to version `4.0.3` and introduced the `react-native-permissions` dependency. Developers would need to update their `NativeMobileResources` module from the App Store to the latest version to avoid unexpected behaviours. Due to this change, developers previously relying on over-the-air updates for their apps would have to release new applications to the app store.
+* We bumped the `react-native-image` internal dependency to version `4.0.3` and introduced the `react-native-permissions` dependency. Developers would need to update their `NativeMobileResources` module from the App Store to the latest version to avoid unexpected behaviors. Due to this change, developers previously relying on over-the-air updates for their apps would have to release new applications to the app store.

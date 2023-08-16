@@ -93,7 +93,7 @@ The **Show a page** event opens the specified page. Select the page which opens 
   
 * **Page title** – the page you open can be given a unique title, depending on where you open it from. This allows you to re-use the same page for different purposes. For example, by setting the title to **New Customer** from one button and **Edit Customer** from another, you can use the same page for editing new and existing customers.
 
-  This option is activated by checking the **Override page title** check box.
+  This option is activated by checking the **Override page title** checkbox.
 
 * **Page arguments** – a list of parameters of the selected page and the objects that will be passed to each of them.
 
@@ -250,7 +250,7 @@ The **Save changes** event commits all changes made to the objects in *Editable*
 The following properties are specific for this event:
 
 * **Close page** – specifies whether the current page should be closed.
-* **Auto-synchronize** – specifies whether synchronization should happen when the save button is clicked for a Mendix application running in an offline profile. When an object is saved in a Mendix application running in an offline profile it is stored in a local database until it can be synchronized with the server (for more information on the capabilities of offline apps, see [Offline First](/refguide9/offline-first/). In practice, this means that uploading a new object to the server requires two distinct actions: saving the object and [synchronizing it](/refguide9/mobile/building-efficient-mobile-apps/offlinefirst-data/synchronization/).
+* **Auto-synchronize** – specifies whether synchronization should happen when the save button is clicked for a Mendix application running in an offline profile. When an object is saved in a Mendix application running in an offline profile it is stored in a local database until it can be synchronized with the server (for more information on the capabilities of offline apps, see [Offline First](/refguide9/offline-first/)). In practice, this means that uploading a new object to the server requires two distinct actions: saving the object and [synchronizing it](/refguide9/mobile/building-efficient-mobile-apps/offlinefirst-data/synchronization/).
 
 This event cannot be used on pages that change [external entities](/refguide9/external-entities/). Use the [Send External Object](/refguide9/send-external-object/) activity to save changes to external entities.
 

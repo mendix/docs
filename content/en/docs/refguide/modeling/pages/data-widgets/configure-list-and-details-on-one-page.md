@@ -105,4 +105,4 @@ You can now preview your app and test your page.
 
 * [Page](/refguide/page/)
 * [Create Your First Two Overview and Detail Pages](/howto/front-end/create-your-first-two-overview-and-detail-pages/)
-* [Creating a Basic Data Layer](/refguide/create-a-basic-data-layer/)
+* [Configuring a Domain Model](/refguide/configuring-a-domain-model/)

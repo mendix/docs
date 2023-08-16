@@ -68,7 +68,7 @@ Decisions deal with making choices and merging different paths again.
 
 [Activities](/refguide/activities/) are the actions that are executed in a microflow:
 
-{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/microflows/activity.png" alt="Activity" >}}
+{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/microflows/activity.png" alt="Activity" width="150px" >}}
 
 ### 2.5 Loop {#loop}
 

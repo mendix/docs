@@ -78,7 +78,7 @@ This is the pattern from which the arguments are derived that are passed to the 
 
 #### 4.2.1 Enable Private Version Control {#enable}
 
-Select this option when you want to work on an app that is not stored in [Mendix Team Server](/developerportal/collaborate/team-server/), but in another Subversion server to which you have access. This will allow you to specify the location of the app on the Subversion server when opening, downloading, or uploading the app.
+Select this option when you want to work on an app that is not stored in [Mendix Team Server](/developerportal/general/team-server/), but in another Subversion server to which you have access. This will allow you to specify the location of the app on the Subversion server when opening, downloading, or uploading the app.
 
 ## 5 Advanced Tab
 
@@ -96,25 +96,25 @@ You need to restart Studio Pro for changes to these settings to take effect.
 
 ### 6.1 New Version of the Changes Pane {#new-changes}
 
-With this option, you can enable the new version of the [Changes](/refguide8/changes-pane/) pane. Should you find any issues in the new version, you can switch back to the old version by clearing this check box.
+With this option, you can enable the new version of the [Changes](/refguide8/changes-pane/) pane. Should you find any issues in the new version, you can switch back to the old version by clearing this checkbox.
 
 Default: *enabled*
 
 ### 6.2 New Version of the Connector {#new-connector}
 
-With this option, you can enable the new version of the [Connector](/refguide8/view-menu/#connector). Should you find any issues in the new version, you can switch back to the old version by clearing this check box.
+With this option, you can enable the new version of the [Connector](/refguide8/view-menu/#connector). Should you find any issues in the new version, you can switch back to the old version by clearing this checkbox.
 
 Default: *disabled*
 
 ### 6.3 New Version of the Project Explorer {#new-project-explorer}
 
-With this option, you can enable the new version of the [Project Explorer](/refguide8/project-explorer/). Should you find any issues in the new version, you can switch back to the old version by clearing this check box.
+With this option, you can enable the new version of the [Project Explorer](/refguide8/project-explorer/). Should you find any issues in the new version, you can switch back to the old version by clearing this checkbox.
 
 Default: *enabled*
 
 ### 6.4 New Version of the Toolbox {#new-toolbox}
 
-With this option, you can enable the new version of the [Toolbox](/refguide8/view-menu/#toolbox). Should you find any issues in the new version, you can switch back to the old version by clearing this check box.
+With this option, you can enable the new version of the [Toolbox](/refguide8/view-menu/#toolbox). Should you find any issues in the new version, you can switch back to the old version by clearing this checkbox.
 
 Default: *enabled*
 

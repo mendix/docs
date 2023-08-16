@@ -42,7 +42,7 @@ In the **General settings** section, you must provide the following information:
 * The **Name** of the app
 * The unique **App Identifier** (for example, `com.example.CompanyExpenses`)
 * A **Description** of the app
-* Whether a 5 digit PIN is enabled or disabled via the **PIN required?** check box
+* Whether a 5 digit PIN is enabled or disabled via the **PIN required?** checkbox
 
 ### 2.2 Profile Settings
 
@@ -58,7 +58,7 @@ For more information, see **Availability** in [Offline](/refguide/offline-first/
 
 ### 2.3 Permissions
 
-By default, Mendix hybrid applications require a set of device permissions. When users install the app or open the app for the first time, they will be asked to grant these permissions. You can use the check boxes below to control which permissions are requested.
+By default, Mendix hybrid applications require a set of device permissions. When users install the app or open the app for the first time, they will be asked to grant these permissions. You can use the checkboxes below to control which permissions are requested.
 
 The permissions that can be enabled/disabled:
 

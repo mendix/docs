@@ -8,175 +8,261 @@ description: "This page contains detailed explanations on how pages, layouts, an
 
 ## 1 Overview
 
-Pages are defined based on Layouts (see below). Pages, Layouts and Snippets inherit from FormBase, through which a list of top level widgets on the page can be defined. To secure access to pages, you can define allowed module roles for each page.
+The metamodel for pages contain several document types that help build pages in Studio Pro, as shown below.
 
-{{< figure src="/attachments/apidocs-mxsdk/mxsdk/sdk-refguide/understanding-the-metamodel/pages-metamodel/18582251.svg" >}}
+There are Pages, Layouts, and Snippets that represent the actual pages of an app. Pages are based on Layouts, and both
+can use Snippets to have bits of reusable UI.
 
-Studio Pro Guide | Model SDK API docs
---- | --- |
-[Pages overview](/refguide/pages/) | [Page](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/pages.page.html)
-[Page](/refguide/page/) | [FormBase](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/pages.formbase.html)
- | [LayoutCall](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/pages.layoutcall.html)
+Page Templates define starting points for creating new Pages, and Building Blocks are small bits of UI to quickly add structure
+to a page.
 
-## 2 Layouts
+{{< figure src="/attachments/apidocs-mxsdk/mxsdk/sdk-refguide/understanding-the-metamodel/pages-metamodel/DocumentOverview.svg" >}}
 
-A Page can have a LayoutCall to render a Layout. As a Layout has zero or more LayoutParameters, the amount of LayoutCallArguments the LayoutCall needs is equal to the amount of LayoutParameters.
+| Studio Pro Guide                            | Model SDK API docs                                                                                |
+|---------------------------------------------|---------------------------------------------------------------------------------------------------|
+| [Pages overview](/refguide/pages/)          | [pages namespace](https://apidocs.rnd.mendix.com/modelsdk/latest/modules/pages.html)              |
+| [Page](/refguide/page/)                     | [Page](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/pages.page.html)                    |
+| [Layout](/refguide/layout/)                 | [Layout](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/pages.layout.html)                |
+| [Snippet](/refguide/snippet/)               | [Snippet](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/pages.snippet.html)              |
+| [Page Template](/refguide/page-templates/)  | [Page Template](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/pages.pagetemplate.html)   |
+| [Building Block](/refguide/building-block/) | [Building Block](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/pages.buildingblock.html) |
 
-A Layout can contain one or more Widgets or Placeholders. For each Placeholder, the Layout will have a LayoutParameter. A LayoutCall that targets that Layout will have a LayoutCallArgument for each LayoutParameter/Placeholder pair.
+## 2 Pages and Layouts
 
-{{< figure src="/attachments/apidocs-mxsdk/mxsdk/sdk-refguide/understanding-the-metamodel/pages-metamodel/18582250.svg" >}}
+A layout defines a base structure for pages, containing widgets and structure that is applied for every page that is based on it.
+A key part of this structure is the Placeholder widget, through which a layout defines structure where the page can fill it with
+page-specific widgets.
 
-Studio Pro Guide | Model SDK API docs
---- | --- |
-[Layout](/refguide/layout/) | [Page](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/pages.page.html)
-| [Layout](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/pages.layout.html)
-| [LayoutParameter](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/pages.layoutparameter.html)
-| [Placeholder](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/pages.placeholder.html)
-| [LayoutCall](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/pages.layoutcall.html)
-| [LayoutCallArgument](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/pages.layoutcallargument.html)
+The content of a layout defines if it is a layout for native pages or web pages. All pages based on a layout with NativeLayoutContent
+will be native pages, and pages based on a layout with WebLayoutContent will be web pages.
+Both types of content contain a list of widgets that define the base structure of the layout.
+
+The page uses a layout through its LayoutCall. This defines the layout as well as the LayoutCallArguments.
+A LayoutCallArgument points to a Placeholder widget on the layout with the LayoutParameter, and defines a list of widgets
+to fill the placeholder with.
+
+In the same way, a web layout may also be based on a master layout by defining the LayoutCall inside the WebLayoutContents.
+If a layout has a master layout, it may not directly specify any widgets, but uses the LayoutCallArguments for that instead.
+
+{{< figure src="/attachments/apidocs-mxsdk/mxsdk/sdk-refguide/understanding-the-metamodel/pages-metamodel/PagesAndLayouts.svg" >}}
+
+| Studio Pro Guide                     | Model SDK API docs                                                                                           |
+|--------------------------------------|--------------------------------------------------------------------------------------------------------------|
+| [Page](/refguide/page/)              | [Page](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/pages.Page.html)                               |
+| [Placeholder](/refguide/placeholder/) | [Placeholder](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/pages.Placeholder.html)                 |
+| [Layout](/refguide/layout/)          | [Layout](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/pages.Layout.html)                           |
+|                                      | [LayoutCall](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/pages.LayoutCall.html)                   |
+|                                      | [LayoutCallArgument](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/pages.LayoutCallArgument.html)   |
+|                                      | [LayoutParameter](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/pages.LayoutParameter.html)         |
+|                                      | [WebLayoutContent](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/pages.WebLayoutContent.html)       |
+|                                      | [NativeLayoutContent](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/pages.NativeLayoutContent.html) |
 
 ## 3 Snippets
 
-Snippets are reusable interface parts that allow you to create a more maintainable interface. If you use a snippet in multiple pages, you only have to make a change once, and the result will be visible everywhere. For example, you can create a snippet with some navigation links, and include that on several pages. If you make a change in the snippet, all the pages will benefit.
+Snippets are reusable interface parts that allow you to create a more maintainable interface, and can be used on pages,
+layouts, and even other snippets. Changes made to the snippet will show up in all places the snippet is used.
 
-Similar to Layout and Page, a Snippet inherits from FormBase. You can add any widget to it, and it can be connected to an Entity in order for its contents to be populated. A Page can contain multiple Snippets, but only one Layout.
+A snippet contains widgets, and may define one or more parameters to use data inside the snippet.
 
-For a Page to include a Snippet, it needs to use the SnippetCallWidget which, in turn, calls the Snippet.
+To include a snippet, you need to use the SnippetCallWidget on a page, layout, or other snippet. The SnippetCallWidget
+has a SnippetCall which calls the Snippet and defines a SnippetParameterMapping for each parameter of the snippet.
 
-{{< figure src="/attachments/apidocs-mxsdk/mxsdk/sdk-refguide/understanding-the-metamodel/pages-metamodel/18582219.svg" >}}
+The SnippetParameterMapping points to the parameter of the snippet to provide data for, as well as a PageVariable that
+defines where this data comes from. A page variable can either point to a data widget, a page parameter, or a snippet parameter. 
 
-Studio Pro Guide | Model SDK API docs
---- | --- |
-[Snippet](/refguide/snippet/) | [Snippet](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/pages.snippet.html)
-| [SnippetCall](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/pages.snippetcall.html)
-| [SnippetCallWidget](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/pages.snippetcallwidget.html)
+{{< figure src="/attachments/apidocs-mxsdk/mxsdk/sdk-refguide/understanding-the-metamodel/pages-metamodel/Snippets.svg" >}}
 
-## 4 Data Widgets
+| Studio Pro Guide              | Model SDK API docs                                                                                                   |
+|-------------------------------|----------------------------------------------------------------------------------------------------------------------|
+| [Snippet](/refguide/snippet/) | [Snippet](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/pages.snippet.html)                                 | 
+|                               | [SnippetCall](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/pages.snippetcall.html)                         | 
+|                               | [SnippetCallWidget](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/pages.snippetcallwidget.html)             |
+|                               | [SnippetParameter](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/pages.SnippetParameter.html)               |
+|                               | [SnippetParameterMapping](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/pages.SnippetParameterMapping.html) |
+|                               | [PageVariable](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/pages.PageVariable.html)                       |
 
-Data widgets display data that they retrieve from a Data Source (see below). Typically, data widgets offer an aggregate view of multiple entities or a view of a single entity.
+## 4 Containers
 
-### 4.1 ListView
+Container widgets are widgets used to contain other widgets.
 
-A ListView is a widget that can contain other widgets or list of objects. The Client Action is the action that is performed when a list view entry is 'clicked'. This can either be opening a page or calling a microflow. If the entity that is connected to the list view has specializations, you can optionally specify templates for each specialization. This is what the ListViewTemplate can be used for.
+DivContainer is a simple container, which may be given a specific HTML tag (DIV by default) and can be used to style or
+hide a group of widgets simultaneously.
 
-Conditional visibility settings can determine whether or not the list view is visible, based on either an attribute value and/or module roles.
+GroupBox is a container with a header, and can be configured to allow collapsing/expanding the contents.
 
-{{< figure src="/attachments/apidocs-mxsdk/mxsdk/sdk-refguide/understanding-the-metamodel/pages-metamodel/18582258.svg" >}}
+LayoutGrid is used to layout widgets in rows and columns. A column can be given a concrete width (in 1/12ths) or take the amount
+of space its contents need, or fill up the remaining space of a row.
 
-### 4.2 Data View
+ScrollContainer is a widget to divide an area (usually on layouts) in multiple regions. It must have a center content, and may
+also be configured to have top, right, bottom, and left regions.
 
-The data view is a central component in Mendix applications. The data view typically contains input widgets, like text boxes with labels. In more complex screens, a data view can contain tab controls per topic, and data views and data grids for related objects.
+TabContainer contains one or more TabPages, of which one may be set as the default tab page (which is shown initially when opening the page).
+Only one TabPage is visible at the same time, allowing to show a subset of widgets.
 
-If a `noEntityMessage` is specified, a data view that receives no source data will show this message instead of its content. Otherwise, the data view will show its static content and disabled input widgets. This property is a translatable text. See [Language Menu](/refguide/translatable-texts/).
+{{< figure src="/attachments/apidocs-mxsdk/mxsdk/sdk-refguide/understanding-the-metamodel/pages-metamodel/ContainerWidgets.svg" >}}
 
-The control bar of the data view can have the following buttons: save, cancel, close, and microflow. A typical data view has a save and a cancel button. If it is not editable, a close button is sufficient. Microflow buttons trigger custom microflows that have been defined in the model.
+| Studio Pro Guide                                | Model SDK API docs                                                                                               |
+|-------------------------------------------------|------------------------------------------------------------------------------------------------------------------|
+| [Container](/refguide/container/)               | [DivContainer](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/pages.DivContainer.html)                   |
+| [Group Box](/refguide/group-box/)               | [GroupBox](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/pages.GroupBox.html)                           |
+| [Layout Grid](/refguide/layout-grid/)            | [LayoutGrid](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/pages.LayoutGrid.html)                       |
+|                                                 | [LayoutGridRow](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/pages.LayoutGridRow.html)                 |
+|                                                 | [LayoutGridColumn](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/pages.LayoutGridColumn.html)           |
+| [Scroll Container](/refguide/scroll-container/) | [ScrollContainer](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/pages.ScrollContainer.html)             |
+|                                                 | [ScrollContainerRegion](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/pages.ScrollContainerRegion.html) |
+| [Tab Container](/refguide/tab-container/)       | [TabContainer](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/pages.TabContainer.html)                   |
+|                                                 | [TabPage](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/pages.TabPage.html)                             |
 
-{{< figure src="/attachments/apidocs-mxsdk/mxsdk/sdk-refguide/understanding-the-metamodel/pages-metamodel/18582311.svg" >}}
+## 5 Buttons
 
-Studio Pro Guide | Model SDK API docs
---- | --- |
-[List View](/refguide/list-view/) | [ListView](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/pages.listview.html)
-[Data view](/refguide/data-view/) | [ListViewTemplate](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/pages.listviewtemplate.html)
-[Footer](/refguide/footer-document-template/) | [DataView](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/pages.dataview.html)
-| [DataViewControlBar](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/pages.dataviewcontrolbar.html)
-| [ConditionalVisibilitySettings](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/pages.conditionalvisibilitysettings.html)
+Buttons perform an action when clicked. They can be rendered as a button or as a hyperlink through the RenderType enumeration.
+The ButtonStyle enumeration determines the visual cues for the type of button (e.g. Warning, Success).
 
-## 5 Data Sources
+Buttons can have a caption, which is translatable and can be templated through the ClientTemplate.
+Through the icon property, the button can refer to an icon from either an image collection (using ImageIcon) or to a
+glyph icon (containing a UTF-8 code referring to a glyph from the [Bootstrap Halflings collection](https://getbootstrap.com/docs/3.3/components/#glyphicons-glyphs)).
 
-Most simple input widgets derive their content from their context. A text box will, for instance, only allow input for attributes of the target entity. The exceptions are widgets that require an entire object or a list of objects to function. The contents for these widgets can be supplied by four distinct methods:
+The ActionButton implementation determines what to do based on the ClientAction configured.
 
-* [Directly from the database](/refguide/database-source/)
-* [By association to an object already in the context](/refguide/association-source/)
-* [By microflow](/refguide/microflow-source/)
-* [By an object chosen from a grid or list view displayed in the same page (called 'listening')](/refguide/listen-to-grid-source/)
+{{< figure src="/attachments/apidocs-mxsdk/mxsdk/sdk-refguide/understanding-the-metamodel/pages-metamodel/ButtonWidgets.svg" >}}
 
-All Data Sources, except the last two (MicroflowSource and ListenTargetSource), need an EntityPath to know which entity they are connected to. An EntityPath takes a form like `MyFirstModule.Example_Account/Administration.Account.` In this example we are dealing with an association between the entity Example in the module MyFirstModule and the entity Account in the module Administration.
+| Studio Pro Guide                                  | Model SDK API docs                                                                                 |
+|---------------------------------------------------|----------------------------------------------------------------------------------------------------|
+| [Buttons](/refguide/button-widgets/)              | [ActionButton](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/pages.ActionButton.html)     |
+| [Button Properties](/refguide/button-properties/) | [RenderType](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/pages.RenderType.html)         |
+| [Language Menu](/refguide/translatable-texts/)    | [ButtonStyle](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/pages.ButtonStyle.html)       |
+|                                                   | [ClientTemplate](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/pages.ClientTemplate.html) |
+|                                                   | [Icon](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/pages.Icon.html)                     |
+|                                                   | [ImageIcon](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/pages.ImageIcon.html)           |
+|                                                   | [GlyphIcon](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/pages.GlyphIcon.html)           |
+|                                                   | [ClientAction](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/pages.ClientAction.html)     |
 
-There are basically two ways to retrieve entities from the database:
+## 6 Data Widgets
 
-1. By using a `ListViewDatabaseSource` or `GridDatabaseSource` (depending on the type of widget) and, if required, adding individual `DatabaseConstraint`s to it, or
-2. By specifying an XPath query yourself.
+Data widgets display data that they retrieve from a [Data Source](#7-data-sources).
 
-An `ImageViewerSource` only works with the ImageViewer widget and is restricted to (specializations of) the `System.Image` entity.
+A [DataView](#61-dataview) is used to show or edit content from a single object. [ListView](#62-listview) is used to show
+a list of objects.
 
-{{< figure src="/attachments/apidocs-mxsdk/mxsdk/sdk-refguide/understanding-the-metamodel/pages-metamodel/18582293.svg" >}}
+There are also a couple of grid widgets, with [DataGrid](#63-datagrid) showing data based on configured columns.
+[ReferenceSetSelector](#64-referencesetselector) allows displaying or selecting the values of many-to-many associations.
+[TemplateGrid](#65-templategrid) shows a list of objects in a tile view, where the number of columns can be configured.
 
-Studio Pro Guide | Model SDK API docs
---- | --- |
-[Data Sources](/refguide/data-sources/) | [DataSource](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/pages.datasource.html)
-[Listen to Grid Source](/refguide/listen-to-grid-source/) | [DatabaseConstraint](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/pages.databaseconstraint.html)
-[XPath](/refguide/xpath/) | [SortableEntityPathSource](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/pages.sortableentitypathsource.html)
+{{< figure src="/attachments/apidocs-mxsdk/mxsdk/sdk-refguide/understanding-the-metamodel/pages-metamodel/DataWidgets.svg" >}}
 
-## 6 Grids
+### 6.1 DataView
 
-Grids share a Control Bar that allows you to manipulate the objects displayed, by means of buttons. Furthermore, grids have to be connected to a Data Source.  A grid has properties, like the number of columns, number of rows, selectionMode, and selectFirst. These can be used to control the behavior of the Template Grid widget.
+The data view is a central component in Mendix applications. The data view typically contains input widgets, like text
+boxes with labels. In more complex screens, a data view can contain tab controls per topic, and data views and data
+grids for related objects.
 
-### 6.1 TemplateGrid
+If a `noEntityMessage` is specified, a data view that receives no source data will show this message instead of its
+content. Otherwise, the data view will show its static content and disabled input widgets. This property is a
+translatable text.
 
-A TemplateGrid is a widget that can contain other widgets, or display a grid of objects.
+The footer of a data view is often used to add buttons such as a save button or a cancel button. Note that footers
+can only be used for data views that are not nested inside other data widgets.
 
-### 6.2 Data Grid
+| Studio Pro Guide                               | Model SDK API docs                                                                     |
+|------------------------------------------------|----------------------------------------------------------------------------------------|
+| [Data View](/refguide/data-view/)              | [DataView](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/pages.DataView.html) |
+| [Language Menu](/refguide/translatable-texts/) | [Text](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/texts.Text.html)         |
 
-A data grid shows a list of objects in a grid. For example, a data grid can show all the orders a customer has placed. Using controls provided by the data grid you can browse, search, and edit those objects.
+### 6.2 ListView
 
-### 6.3 Reference Set selector
+The list view widget shows a list of objects using a template. The default template is configured through the `widgets` property.
+It is also possible to add specialized templates by adding a ListViewTemplate for a specialization of the base data source entity.
 
-A reference set selector allows you to set an association of type *reference set* by selecting objects. For example, if customers can belong to several groups, a reference set selector can be used to select the groups the customer belongs to. This requires that there is an association from customer to a group of type *reference set* in the domain model.
+The `clickAction` ClientAction is the action that is performed when a list view entry is clicked.
 
-{{< figure src="/attachments/apidocs-mxsdk/mxsdk/sdk-refguide/understanding-the-metamodel/pages-metamodel/18582297.svg" >}}
+| Studio Pro Guide                                            | Model SDK API docs                                                                                     |
+|-------------------------------------------------------------|--------------------------------------------------------------------------------------------------------|
+| [List View](/refguide/list-view/)                           | [ListView](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/pages.ListView.html)                 |
+| [Entity Generalization](/refguide/entities/#generalization) | [ListViewTemplate](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/pages.ListViewTemplate.html) |
+| [List View Templates](/refguide/list-view/#templates)       | [ClientAction](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/pages.ClientAction.html)         |
 
-Studio Pro Guide | Model SDK API Docs
---- | --- |
-[Template grid](/refguide/template-grid/) | [TemplateGrid](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/pages.templategrid.html)
-[Data grid](/refguide/data-grid/) | [DataGrid](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/pages.datagrid.html)
-[Reference set selector](/refguide/reference-set-selector/) | [ReferenceSetSelector](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/pages.referencesetselector.html)
-[Control Bar](/refguide/control-bar/) | [GridControlBar](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/pages.gridcontrolbar.html)
+### 6.3 DataGrid
 
-## 7 Buttons
+A data grid shows a list of objects in a table format. The configured columns determine which attributes are shown.
+It contains a control bar in which buttons can be added to create a new object, or show/edit an existing one.
 
-Button widgets perform an action when clicked. They can be rendered as a button or a hyperlink (RenderType). The ButtonStyle enumeration determines the visual cues for Warning, Success, and other styles that can be applied to the Button. A Button may refer to an Icon. Icons can either be ImageIcons (containing a bitmap image) or GlyphIcons (containing a UTF-8 code referring to a glyph from the [Bootstrap Halflings collection](http://getbootstrap.com#glyphicons)). The tooltip property determines the text you will see in the tooltip that appears when you hover over the button. The tooltip text is translatable. It can also be templated with the help of a ClientTemplate, in which case the text content of the button will be parameterizable (dynamic).
+| Studio Pro Guide                           | Model SDK API docs                                                                                 |
+|--------------------------------------------|----------------------------------------------------------------------------------------------------|
+| [Data Grid](/refguide/data-grid/)          | [DataGrid](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/pages.DataGrid.html)             |
+| [Grid Columns](/refguide/columns/)         | [GridColumn](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/pages.GridColumn.html)         |
+| [Grid Control Bar](/refguide/control-bar/) | [GridControlBar](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/pages.GridControlBar.html) |
 
-{{< figure src="/attachments/apidocs-mxsdk/mxsdk/sdk-refguide/understanding-the-metamodel/pages-metamodel/18582314.svg" >}}
+### 6.4 ReferenceSetSelector
 
-Studio Pro Guide | Model SDK API Docs
---- | --- 
-[Button Widgets](/refguide/button-widgets/) | [Button](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/pages.button.html)
-[Button Properties](/refguide/button-properties/) | [ButtonStyle](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/pages.buttonstyle.html)
-[Language Menu](/refguide/translatable-texts/) | [RenderType](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/pages.rendertype.html)
-| [Icon](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/pages.icon.html)
-| [Text](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/texts.text.html)
-| [ClientTemplate](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/pages.clienttemplate.html)
+A reference set selector displays a grid of objects from a many-to-many association. By adding a DataGridAddButton and DataGridRemoveButton
+to the control bar, the grid can be used to edit the linked objects.
 
-## 8 Containers
+| Studio Pro Guide                                            | Model SDK API docs                                                                                             |
+|-------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------|
+| [Reference Set Selector](/refguide/reference-set-selector/) | [ReferenceSetSelector](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/pages.ReferenceSetSelector.html) |
+| [Grid Columns](/refguide/columns/)                          | [GridColumn](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/pages.GridColumn.html)                     |
+| [Grid Control Bar](/refguide/control-bar/)                  | [GridControlBar](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/pages.GridControlBar.html)             |
+|                                                             | [DataGridAddButton](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/pages.DataGridAddButton.html)       |
+|                                                             | [DataGridRemoveButton](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/pages.DataGridRemoveButton.html) |
 
-DivContainers, Split Panes, Group Boxes, LayoutGridColumns, ScrollContainerRegions, and TabPages are widgets whose basic function is to contain other widgets. With the exception of SplitPanes, which refer to a VerticalFlow widget that, in turn, contains a list of other widgets. Split Panes (**deprecated** in favor of ScrollContainer) each refer to a firstWidget and secondWidget to fill their contents. ScrollContainers have regions (left, right, top, bottom, center) that each refer to contained widgets. TabContainers contain an array of TabPages, and one of those must be the default visible page.
+### 6.5 TemplateGrid
 
-{{< figure src="/attachments/apidocs-mxsdk/mxsdk/sdk-refguide/understanding-the-metamodel/pages-metamodel/18582317.svg" >}}
+A template grid shows a list of objects in a tile view using a template. This template is configured in the TemplateGridContents.
 
-Studio Pro Guide | Model SDK API docs
---- | --- |
-[Tab page](/refguide/tab-container/#tab-page) | [TabPage](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/pages.tabpage.html)
-[Layout grid](/refguide/layout-grid/) | [LayoutGrid](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/pages.layoutgrid.html)
-[Container](/refguide/container/) | [DivContainer](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/pages.divcontainer.html)
-[Scroll Container](/refguide/scroll-container/) | [SplitPane](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/pages.splitpane.html)
-[Scroll Container](/refguide/scroll-container/) | [ScrollContainer](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/pages.scrollcontainer.html)
+The number of columns to show can be set with the `numberOfColumns` property, the rows shown per page using `numberOfColumns`.
 
-## 9 Association Widgets
+| Studio Pro Guide                           | Model SDK API docs                                                                                             |
+|--------------------------------------------|----------------------------------------------------------------------------------------------------------------|
+| [Template Grid](/refguide/template-grid/)  | [TemplateGrid](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/pages.TemplateGrid.html)                 |
+|                                            | [TemplateGridContents](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/pages.TemplateGridContents.html) |
+| [Grid Control Bar](/refguide/control-bar/) | [GridControlBar](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/pages.GridControlBar.html)             |
 
-The *reference selector* is an input widget that can be used to display and edit associations. The *reference set selector* allows you to set an association of type reference set by selecting objects. When the value of an association widget changes, a microflow can be triggered. The way in which this happens is determined by the MicroflowSettings. An Association is, by nature, associated to an entity. Where this entity is retrieved from can be determined using a SelectorSource. There are two types of selector sources: one using an XPath query, and one that triggers a Microflow.
+## 7 Data Sources
 
-{{< figure src="/attachments/apidocs-mxsdk/mxsdk/sdk-refguide/understanding-the-metamodel/pages-metamodel/18582318.svg" >}}
+Input widgets, such as a text box, will derive their content from their context.
+The data widgets themselves get this data from their configured data source.
+Depending on the data widget, different sources are applicable (e.g. a ListViewDatabaseSource is only applicable for
+a ListView widget).
 
-Studio Pro Guide | Model SDK API docs
---- | --- |
-[Associations](/refguide/associations/) | [InputReferenceSelector](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/pages.inputreferencesetselector.html)
-[Input Widgets](/refguide/input-widgets/) | [ReferenceSetSelector](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/pages.referencesetselector.html)
-[Reference selector](/refguide/reference-selector/) | [PageSettings](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/pages.pagesettings.html)
-[Reference set selector](/refguide/reference-set-selector/) | [MicroflowSettings](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/pages.microflowsettings.html)
-[Call a Microflow](/refguide/on-click-event/#call-microflow) |
-[Pages](/refguide/pages/) |
+The data sources can be divided by how their retrieve their data:
 
-## 10 Read More
+* Querying [the database](/refguide/database-source/), possibly with an [XPath constraint](/refguide/xpath-source/)
+* By [context](/refguide/context-source/) from a surrounding data widget or a page (or snippet) parameter
+* By [association](/refguide/association-source/) to an object from a surrounding data widget
+* By a [microflow](/refguide/microflow-source/) or [nanoflow](/refguide/nanoflow-source/)
+* By [listening to a list view or grid widget](/refguide/listen-to-grid-source/), showing the data of the selected object 
+  of the target widget.
+
+Most data sources are configured with the target EntityRef. This reference can be a DirectEntityRef to fetch all objects
+of the given entity, or an IndirectEntityRef to fetch objects related to an object already in context
+(either a surrounding data widget, or a page parameter).
+
+{{< figure src="/attachments/apidocs-mxsdk/mxsdk/sdk-refguide/understanding-the-metamodel/pages-metamodel/DataSources.svg" >}}
+
+| Studio Pro Guide                        | Model SDK API docs                                                                         |
+|-----------------------------------------|--------------------------------------------------------------------------------------------|
+| [Data Sources](/refguide/data-sources/) | [DataSource](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/pages.DataSource.html) |
+| [XPath](/refguide/xpath/)               |                                                                                            |
+
+## 8 Association Widgets
+
+The reference selector and input reference set selector are input widgets that can be used to display and edit associations.
+Objects selectable for the association are determined by the SelectorSource, and can be queried from the database or
+retrieved from a microflow (only for the reference selector).
+
+Both widgets have a `selectPageSettings` that determines the page used to select the linked object(s). The reference selector
+optionally also has a `goToPageSettings` that determines the page used to display detailed information about the associated
+object.
+
+{{< figure src="/attachments/apidocs-mxsdk/mxsdk/sdk-refguide/understanding-the-metamodel/pages-metamodel/AssociationWidgets.svg" >}}
+
+| Studio Pro Guide                                                        | Model SDK API docs                                                                                                       |
+|-------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------|
+| [Reference Selector](/refguide/reference-selector/)                     | [ReferenceSelector](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/pages.ReferenceSelector.html)                 |
+| [Input Reference Set Selector](/refguide/input-reference-set-selector/) | [InputReferenceSetSelector](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/pages.InputReferenceSetSelector.html) |
+|                                                                         | [SelectorSource](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/pages.SelectorSource.html)                       |
+
+## 9 Read More
 
 * Blog: [Designing Flexible User Interfaces with Layouts](https://www.mendix.com/blog/designing-flexible-user-interfaces-layouts/)
 * Blog: [Creating Maintainable Interfaces with Snippets](https://www.mendix.com/blog/creating-maintainable-interfaces-with-snippets/)

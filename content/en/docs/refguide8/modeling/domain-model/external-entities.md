@@ -32,7 +32,7 @@ To add an external entity to your project, do the following:
 
 2. In the **Data Hub** pane, search for the entity that you would like to use in your app.
 
-    {{% alert color="info" %}}In the Data Hub Catalog, an OData service may be registered several times with different versions or deployed to different environments all exposing the entity that you may want to use. Search the Data Hub Catalog first and find the one most relevant to the requirements for your project.{{% /alert %}}
+    {{% alert color="info" %}}In the Catalog, an OData service may be registered several times with different versions or deployed to different environments all exposing the entity that you may want to use. Search the Catalog first and find the one most relevant to the requirements for your project.{{% /alert %}}
 
 3. Drag the entity into the domain model. The entity and its attributes are then added to your app:
 
@@ -52,7 +52,7 @@ If there is a newer version of a consumed service becomes available in the Data 
 
 You can make local changes to the properties of external entities that only affect how the data is used and presented in the consuming app. All other properties are defined in the source application and cannot be changed. When multiple external entities from the same OData service are used in a module or app, associations between the entities (made in the source app) will automatically be made in the local module.
 
-For more information on using published OData services and entities through the Data Hub Catalog, see [How to Consume Registered Assets](/data-hub/data-hub-catalog/consume/) in the *Data Hub Guide*.
+For more information on using published OData services and entities through the Catalog, see [How to Consume Registered Assets](/catalog/consume/) in the *Data Hub Guide*.
 
 ## 2 Properties of External Entities {#properties}
 
@@ -147,4 +147,4 @@ You can add any local information about the external entity in this tab.
 
 External entities are the endpoints that are defined in the published OData service from the originating app. The consumed OData service document displays the values from the service metadata when the external entity is used through the **Data Hub** pane. The limitation on external entities is that they are consume-only entities. The datasets associated with the entities are maintained in the originating apps.
 
-For more details on consuming services and exposed entities, including operations that can be performed on external entities, see [How to Consume Registered Assets](/data-hub/data-hub-catalog/consume/) in the *Data Hub Guide*.
+For more details on consuming services and exposed entities, including operations that can be performed on external entities, see [How to Consume Registered Assets](/catalog/consume/) in the *Data Hub Guide*.

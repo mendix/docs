@@ -58,7 +58,7 @@ The **Deploy for Eclipse** option deploys the app to the deployment directory. T
 
 Shortcut key: <kbd>F6</kbd>
 
-## 6 Create Deployment Package
+## 6 Create Deployment Package{#create-package}
 
 The **Create Deployment Package** option creates a Mendix Deployment Archive package (*.mda*) that contains all necessary files to run the app. This can be used if you want to deploy your app on a Windows server or on a custom Mendix Cloud.
 

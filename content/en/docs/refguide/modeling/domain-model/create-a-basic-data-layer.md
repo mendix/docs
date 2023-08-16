@@ -1,20 +1,21 @@
 ---
-title: "Creating a Basic Data Layer"
-url: /refguide/create-a-basic-data-layer/
+title: "Configuring a Domain Model"
+url: /refguide/configuring-a-domain-model/
 weight: 60
 description: "Describes how to create entities and attributes, add enumerations, create associations, and configure the delete behavior for associations with Studio Pro."
 tags: ["data layer", "domain model", "entities", "enumerations", "associations"]
 aliases:
     - /howto/data-models/create-a-basic-data-layer/
+    - /refguide/create-a-basic-data-layer/
 ---
 
 ## 1 Introduction
 
-This document explains how you can create a basic data layer for your application with Mendix. Each application can have multiple [modules](/refguide/modules/), and each module has its own domain model. All the domain models together define the data layer of the application. 
+This document explains how you can configure a domain model for your application with Mendix. Each application can have multiple [modules](/refguide/modules/), and each module has its own domain model. All the domain models together define the data layer of the application. 
 
 A [domain model](/refguide/domain-model/) consists of entities and associations. An entity is the blueprint for an object in your application, like the **Customer** and **Order** entities mentioned in the following sections. 
 
-Associations define the relation between two entities. As soon as you deploy the application, Mendix takes care of the underlying database for you. This means that you do not have to create tables and write queries yourself.
+[Associations](/refguide/associations/) define the relation between two entities. As soon as you deploy the application, Mendix takes care of the underlying database for you. This means that you do not have to create tables and write queries yourself.
 
 This document teaches you how to do the following:
 
@@ -22,6 +23,8 @@ This document teaches you how to do the following:
 * Add enumerations
 * Create associations
 * Delete association behavior
+
+This document also presents [an example for defining the domain model](#example-domain-model) for an online shopping shop.
 
 ## 2 Creating Entities and Attributes {#create-entity}
 
@@ -127,7 +130,73 @@ To configure the delete behavior, double-click the **Order_Customer** associatio
 Delete behavior includes objects which are in memory. This means that cascading delete or prevention of delete applies, even if the associated object has not been committed.
 {{% /alert %}}
 
-## 7 Read More
+## 7 An Example of Defining a Domain Model {#example-domain-model}
+
+In the above sections, you learn the basics of how to configure a domain model. In this section, we present an example for how you can define the domain model for an online shopping app.
+
+### 7.1 Defining What Data to Include
+
+Understanding the typical process helps you define what data to include to your domain model. The workflow for new customers of the online shopping app looks the following way:
+
+1. A customer registers in the online shopping app and enters the following details:
+    1. Full name
+    2. Address
+    3. Email
+    4. Date of birth
+2. When registration is complete, a *unique ID* is assigned to the customer. 
+3. The customer browses through *products* and the following product details are displayed:
+    1. Product image 
+    2. Name
+    3. Description 
+    4. Availability
+    5. Price 
+    6. Vendor
+    7. Unique product ID 
+4. The customer adds products to a shopping cart. 
+5. In the shopping cart, every item is presented as a separate line showing *quantity* and *price* per line. The customer checks the order, pays it, and gets a *confirmation* with the *order details* and the *date* the order is purchased on. 
+
+Based on the description above, you can divide your data into the following elements: 
+
+* Customer
+* Product
+* Order
+
+The following sections show how to represent the data you want to include in your app with entities and their attributes in the domain model and how you should set up the associations between the entities. 
+
+An example of the domain model for the online shopping app is shown below:
+
+{{< figure src="/attachments/refguide/modeling/domain-model/create-a-basic-data-layer/domain-model-online-shop.png" alt="Domain Model online shopping app" >}}
+
+### 7.2 Defining Entities
+
+ The following shows what entities you should create in your domain model for the online shopping app:
+
+* The customer information should be presented by the following entity:
+
+    * **Customer** – general information about the customer, such as their name, address, and email address
+
+* The product information should be divided into the following entities:
+
+    * **Product** – general information about the product, such as its name, description, and price
+    * **Product_Image** – each product has an image, but you do not create it as an attribute. You need to create an entity that is a specialization of the **System.Image** entity to allow you to store images. For an example on how to use the specialization of the **System.Image** entity to display images on a page, see [Image Uploader](/refguide/image-uploader/)
+
+* The order information should be divided into the following entities:
+
+    * **Order** – general information about the order, such as its status, order number, the name of the customer and their address
+    * **Order_line** – items ordered, their quantity and price
+    * **Order_confirmation** – confirmation that is sent to the customer that the order is placed
+
+### 7.3 Defining Associations
+
+The following explains how each entity is associated for the online shopping app:
+
+* **Product_Image** and **Product** have a one-to-one association – One product image is connected to only one product.
+* **Order** and **Customer** have a one-to-many association – An order is placed by a customer. Several orders can be connected to one customer.
+* **Product** and **Order_Line** have a one-to-many association – The **Order_Line** uses information about the product. One product can be associated with several order lines.
+* **Order** and **Order_Line** have a one-to-many association – One order can contain multiple items (order lines) in it.
+* **Order** and **Order_Confirmation** have a one-to-one association – One order confirmation is issued per order.
+
+## 8 Read More
 
 * [Denormalize Data to Improve Performance](/howto/data-models/denormalize-data-to-improve-performance/)
 * [Setting Up Data Validation](/refguide/setting-up-data-validation/)

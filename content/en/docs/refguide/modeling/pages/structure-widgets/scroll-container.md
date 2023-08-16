@@ -23,30 +23,30 @@ The scroll container example below divides the layout in three parts: a header c
 
 A scroll container can consist of several scroll container regions. For more information on scroll container regions and their properties, see the [Scroll Container Region](#scroll-container-region) section. 
 
-## 2 Properties
+## 2 Properties Pane
 
-An example of scroll container properties is represented in the image below:
+The properties pane is divided into two major sections by a toggle at the top of the pane: **Properties** and **Styling**. Scroll container properties consist of the following sections:
 
-{{< figure src="/attachments/refguide/modeling/pages/structure-widgets/scroll-container/scroll-container-properties.png" alt="Scroll Container Properties" >}}
+Properties:
 
-Scroll container properties consist of the following sections:
-
-* [Common](#common)
-* [Design Properties](#design-properties)
 * [General](#general)
-* [Regions](#regions)
+* [Common](#common)
+* [Regions](#region)
 
-### 2.1 Common Section {#common}
+Styling:
 
-{{% snippet file="/static/_includes/refguide/common-section-link.md" %}}
+* [Design Properties](#design-properties)
+* [Common](#common-styling)
 
-### 2.2 Design Properties Section {#design-properties}
+Miscellaneous:
 
-{{% snippet file="/static/_includes/refguide/design-section-link.md" %}} 
+* [Scroll Container Region](#scroll-container-region)
 
-### 2.3 General Section {#general}
+## 3 Properties
 
-#### 2.3.1 Layout Mode
+### 3.1 General Section {#general}
+
+#### 3.1.1 Layout Mode
 
 This property determines in which mode the scroll container operates.
 
@@ -57,7 +57,7 @@ This property determines in which mode the scroll container operates.
 
 {{% alert color="info" %}}This property is not supported on native mobile pages.{{% /alert %}}
 
-#### 2.3.2 Scroll Behavior
+#### 3.1.2 Scroll Behavior
 
 This property determines what happens when the content of a region does not fit in the region.
 
@@ -68,7 +68,7 @@ This property determines what happens when the content of a region does not fit 
 
 {{% alert color="info" %}}This property is not supported on native mobile pages.{{% /alert %}}
 
-#### 2.3.3 Width {#width}
+#### 3.1.3 Width {#width}
 
 By default the scroll container will extend the full width of its parent widget. It can also be given a specific width, which can be defined either in pixels or percentage of its parent widget.
 
@@ -76,17 +76,21 @@ Default: *Full width*
 
 {{% alert color="info" %}}This property is not supported on native mobile pages.{{% /alert %}}
 
-#### 2.3.4 Width Value
+#### 3.1.4 Width Value
 
 This property is displayed only when the [Width](#width) property is set to *Pixels* or *Percentage*. This property determines the width of the scroll container, either in pixels or a percentage.
 
-#### 2.3.5 Alignment 
+#### 3.1.5 Alignment 
 
 This property is displayed only when the [Width](#width) property is set to *Pixels* or *Percentage*. The scroll container can be aligned to the left, to the right, or in the middle of its parent widget.
 
 Default: *Center*
 
-### 2.4 Regions Section {#regions}
+### 3.2 Common Section {#common}
+
+{{% snippet file="/static/_includes/refguide/common-section-link.md" %}}
+
+### 3.3 Regions Section {#region}
 
 {{% alert color="info" %}}Regions are not supported on native mobile pages.{{% /alert %}}
 
@@ -96,23 +100,35 @@ Regions define the content area of a scroll container. For more information see 
 If you add regions in a [layout](/refguide/layout/), they will automatically be filled with [placeholders](/refguide/placeholder/).
 {{% /alert %}}
 
-#### 2.4.1 Enable Top
+#### 3.3.1 Enable Top
 
 Determines whether the scroll container should contain a top region.
 
-#### 2.4.2 Enable Bottom
+#### 3.3.2 Enable Bottom
 
 Determines whether the scroll container should contain a bottom region.
 
-#### 2.4.3 Enable Left
+#### 3.3.3 Enable Left
 
 Determines whether the scroll container should contain a left region.
 
-#### 2.4.4 Enable Right
+#### 3.3.4 Enable Right
 
 Determines whether the scroll container should contain a right region.
 
-## 3 Scroll Container Region {#scroll-container-region}
+## 4 Styling
+
+### 4.1 Design Properties Section {#design-properties}
+
+{{% snippet file="/static/_includes/refguide/design-section-link.md" %}} 
+
+### 4.2 Common Section {#common-styling}
+
+{{% snippet file="/static/_includes/refguide/common-section-link.md" %}}
+
+## 5 Miscellaneous
+
+### 5.1 Scroll Container Region Section {#scroll-container-region}
 
 A scroll container region is part of a scroll container, and defines a content area. A scroll container can contain the following regions:
 
@@ -124,38 +140,7 @@ A scroll container region is part of a scroll container, and defines a content a
 
 You can add and remove all the regions listed above except the center one. 
 
-### 3.1 Scroll Container Region Properties{#region}
-
-#### 3.1.1 Common Section
-
-{{% snippet file="/static/_includes/refguide/common-section-link.md" %}}
-
-#### 3.1.2 General Section
-
-##### 3.1.2.1 Width or Height
-
-A scroll container region has the following properties in the **General** section:
-
-| Property     | Property is available for: | Description                                                  |
-| ------------ | -------------------------- | ------------------------------------------------------------ |
-| Width        | Left and right regions     | Defines whether the **Width value** (described below) of the region is specified in pixels or in percentage. |
-| Width Value  | Left and right regions     | Allows you to specify the value of the width, either in pixels or in percentage. |
-| Height       | Top and bottom regions     | Defines whether the **Height value** (described below) of the region is specified in pixels or in percentage. |
-| Height Value | Top and bottom regions     | Allows you to specify the value of the height, either in pixels or in percentage. |
-
-##### 3.1.2.2 Toggle Mode (Layouts Only)
-
-One (left or right) scroll container region within a layout can be set to toggle using a [sidebar toggle button](/refguide/sidebar-toggle-button/). This setting determines which region (here called a sidebar) will be toggled, and how the toggling is implemented.
-
-| Mode | Effect |
-| --- | --- |
-| None *(default)* | This sidebar is not affected by the sidebar toggle button. |
-| Push content aside | The sidebar moves the rest of the content off-screen. |
-| Slide over content | The sidebar moves over the content. |
-| Shrink content (initially open) | The content is initially shrunk and the sidebar is displayed. The content expands when the sidebar is toggled. |
-| Shrink content (initially closed) | The sidebar is initially hidden and the content shrinks to make space for it when it is toggled. |
-
-## 4 Read More
+## 6 Read More
 
 * [Page](/refguide/page/)
 * [Structure](/refguide/structure-widgets/)

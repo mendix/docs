@@ -11,17 +11,13 @@ This activity can be used in both **Microflows** and **Nanoflows**.
 
 ## 1 Introduction
 
-The **Microflow call** activity can be used to call a [microflow](/refguide/microflows/). 
-
-{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/action-call-activities/microflow-call/microflow-call.png" alt="Call Microflow"   width="200"  >}}
-
-Arguments can be passed to the microflow and the result can be stored.
+The **Microflow call** activity can be used to call a [microflow](/refguide/microflows/). Arguments can be passed to the microflow and the result can be stored.
 
 ## 2 Properties
 
 There are two sets of properties for this activity, those in the dialog box on the left, and those in the properties pane on the right:
 
-{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/action-call-activities/microflow-call/microflow-call-properties.png" alt="Microflow Call Properties" >}}
+{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/action-call-activities/microflow-call/microflow-call-properties.png" alt="Microflow Call Properties" width="700px" >}}
 
 The **Microflow call** properties pane consists of the following sections:
 

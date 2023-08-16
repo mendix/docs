@@ -259,492 +259,17 @@ The options do the following:
 
 ##### 4.3.2.1 Database Plan {#database-plan}
 
-A database plan tells the Operator how the Mendix app needs to connect to a database when it is deployed. Although the database plan might be valid, there also has to be a database instance for it to connect to. This database instance may be created when the database plan is applied, or it may be an existing database instance which the database plan identifies.
+Every Mendix app environment needs its own dedicated database.
+Create a database plan to configure how the Mendix Operator will manage databases.
 
-{{% alert color="warning" %}}
-The database plan does not include any functionality for backing up or restoring data on your database. It is your responsibility to ensure that appropriate provision is made for backing up and restoring your database using the tools provided by your database management system and/or cloud provider.
-{{% /alert %}}
-
-Give your plan a **Name** and choose the **Database Type**. See the information below for more help in setting up plans for the different types of database which are supported by Mendix for Private Cloud.
-
-Once you have entered the details you can apply two validation checks by clicking the **Validate** and **Connection Validation** buttons:
-
-* **Validate** – checks that you have provided all the required values and that they are in the correct format
-* **Connection validation** –  checks whether the specified storage plan has been successfully created — this does not guarantee that the storage *instance* will be created successfully when the configuration is applied
-
-{{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/database-plan-config.png" alt="Database Plan Configuration" >}}
-
-{{% alert color="info" %}}
-You cannot create multiple database plans at the same time. Run the configuration tool multiple time to apply several database plans.
-{{% /alert %}}
-
-The following **Database Types** are supported:
-
-* PostgreSQL
-* Ephemeral (non-persistent)
-* SQL Server
-* Dedicated JDBC
-
-They are described in more detail below:
-
-**Postgres** will enable you to enter the values to configure a PostgreSQL database. You will need to provide all the information about your PostgreSQL database such as plan name, host, port, database, user, and password.
-
-{{% alert color="info" %}}
-If the plan name already exists, you will receive an error that it cannot be created. This is not a problem, you can continue to use the plan, and it will now have the new configuration.
-{{% /alert %}}
-
-{{% alert color="info" %}}
-To connect to an Azure PostgreSQL server, the Kubernetes cluster must be added to the list of allowed hosts in the firewall. For the database name, use `postgres`.
-{{% /alert %}}
-
-{{% alert color="info" %}}
-To connect to an Amazon RDS database, the VPC and firewall must be configured to allow connections to the database from the Kubernetes cluster.
-{{% /alert %}}
-
-{{% alert color="info" %}}
-Enabling the **Strict TLS** option will enable full TLS certificate validation and require encryption when connecting to the PostgreSQL server. If the PostgreSQL server has a self-signed certificate, you will also need to configure [custom TLS](#custom-tls) so that the self-signed certificate is accepted.
-
-Disabling **Strict TLS** will attempt to connect with TLS, but skip certificate validation. If TLS is not supported, it will fall back to an unencrypted connection.
-{{% /alert %}}
-
-**Ephemeral** will enable you to quickly set up your environment and deploy your app, but any data you store in the database will be lost when you restart your environment.
-
-**SQL Server** will enable you to enter the values to configure a Microsoft SQL Server database. You will need to provide all the information about your SQL Server database such as plan name, host, port, user, and password. 
-
-{{% alert color="info" %}}
-If the plan name already exists you will receive an error that it cannot be created. This is not a problem, you can continue to use the plan, and it will now have the new configuration.
-{{% /alert %}}
-
-{{% alert color="info" %}}
-To connect to an Azure SQL Server, the Kubernetes cluster must be added to the list of allowed hosts in the firewall.
-{{% /alert %}}
-
-{{% alert color="info" %}}
-For Azure SQL databases, the additional parameters `elastic pool name`, `tier`, `service objective`, and `maximum size` are required to specify the database. You can find information about these in the [Create Database](https://docs.microsoft.com/en-us/sql/t-sql/statements/create-database-transact-sql?view=azuresqldb-current&tabs=sqlpool#create-a-database) documentation for the Azure SQL Database on the Microsoft documentation site.
-{{% /alert %}}
-
-{{% alert color="info" %}}
-Enabling the **Strict TLS** option will enable full TLS certificate validation and require encryption when connecting to SQL Server. If the SQL Server has a self-signed certificate, you will also need to configure [custom TLS](#custom-tls) so that the self-signed certificate is accepted.
-
-Disabling **Strict TLS** will attempt to connect with TLS, but skip certificate validation. If encryption is not supported, it will fall back to an unencrypted connection.
-{{% /alert %}}
-
-**Dedicated JDBC** will enable you to enter the [database configuration parameters](/refguide/custom-settings/) for an existing database directly, as supported by the Mendix Runtime.
-
-{{% alert color="info" %}}
-A dedicated JDBC database cannot be used by more than one Mendix app.
-{{% /alert %}}
-
-{{% alert color="info" %}}
-Configuration parameters will not be validated and will be provided to the Mendix app as-is. If the arguments are not valid or there is an issue with permissions, the Mendix Runtime will fail to start the and deployment will appear to hang with **Replicas running** and **Runtime** showing a spinner.
-{{% /alert %}}
-
-{{% alert color="info" %}}
-If the plan name already exists you will receive an error that it cannot be created. This is not a problem, you can continue to use the plan, and it will now have the new configuration.
-{{% /alert %}}
-
-{{% alert color="info" %}}
-To use this plan, [upgrade](/developerportal/deploy/private-cloud-upgrade-guide/) the Mendix Operator to version 1.1.0 or later.
-{{% /alert %}}
+See the [Database plans](/developerportal/deploy/private-cloud-storage-plans/#database) document for a list and instructions for all options.
 
 ##### 4.3.2.2 Storage Plan {#storage-plan}
 
-{{% alert color="info" %}}
-Storage plans are “blueprints” that specify how to request/decommission a new database or blob storage and pass its credentials to an environment.
-{{% /alert %}}
+Every Mendix app environment needs a file (blob) storage bucket to store System.FileDocument entities, such as AWS S3, Azure Blob Storage or MinIO.
+Create a storage plan to configure how the Mendix Operator will manage file storage.
 
-{{% alert color="warning" %}}
-The storage plan does not include any functionality for backing up or restoring files used by your app. It is your responsibility to ensure that appropriate provision is made for backing up and restoring these files using the tools provided by your storage and/or cloud provider.
-{{% /alert %}}
-
-{{% alert color="info" %}}
-You cannot create multiple storage plans at the same time. Run the configuration tool multiple time to apply several storage plans.
-{{% /alert %}}
-
-The following **Storage Types** are supported:
-
-* MiniO
-* Ephemeral (non-persistent)
-* Amazon S3
-* Azure Blob Storage
-* Google Cloud Storage bucket
-* Ceph RADOS
-
-**MinIO** will connect to a [MinIO](https://min.io/product/overview) S3-compatible object storage. You will need to provide all the information about your MinIO storage such as endpoint, access key, and secret key. The MinIO server needs to be a full-featured MinIO server, or a [MinIO Gateway](https://github.com/MinIO/MinIO/tree/master/docs/gateway) with configured etcd.
-
-{{% alert color="info" %}}
-To use TLS, specify the MinIO URL with an `https` schema, for example `https://minio.local:9000`. If MinIO has a self-signed certificate, you'll also need to configure [custom TLS](#custom-tls) so that the self-signed certificate is accepted.
-
-If the MinIO URL is specified with an `http` schema, TLS will not be used.
-{{% /alert %}}
-
-**S3 (create bucket and account with inline policy)** will connect to an AWS account to create S3 buckets and associated IAM user accounts. Each app environment will receive a dedicated S3 bucket and an IAM user account with an inline policy which only has access to that specific S3 bucket. The Mendix Operator will use a **management IAM user account** to create and delete S3 buckets and IAM user accounts. You will need to provide all the information relating to your Amazon S3 storage such as plan name, region, access key, and secret key.
-
-To enable this mode, select the following options: **Create S3 Bucket per environment**, **Create account (IAM user) per environment**, **Create inline policy**.
-
-The **management IAM user account** needs to have the following IAM policy (replace `<account_id>` with your AWS account number):
-
-```json
-{
-    "Version": "2012-10-17",
-    "Statement": [
-        {
-            "Sid": "bucketPermissions",
-            "Effect": "Allow",
-            "Action": [
-                "s3:CreateBucket",
-                "s3:DeleteBucket"
-            ],
-            "Resource": "arn:aws:s3:::mendix-*"
-        },
-        {
-            "Sid": "iamPermissions",
-            "Effect": "Allow",
-            "Action": [
-                "iam:DeleteAccessKey",
-                "iam:PutUserPolicy",
-                "iam:DeleteUserPolicy",
-                "iam:DeleteUser",
-                "iam:CreateUser",
-                "iam:CreateAccessKey"
-            ],
-            "Resource": [
-                "arn:aws:iam::<account_id>:user/mendix-*"
-            ]
-        }
-    ]
-}
-```
-
-{{% alert color="info" %}}
-If the plan name already exists you will receive an error that it cannot be created. This is not a problem, you can continue to use the plan, and it will now have the new configuration.
-{{% /alert %}}
-
-{{% alert color="info" %}}
-To use this plan, [upgrade](/developerportal/deploy/private-cloud-upgrade-guide/) the Mendix Operator to version 1.8.0 or later.
-{{% /alert %}}
-
-**S3 (create bucket and account with existing policy)** will connect to an AWS account to create S3 buckets and associated IAM user accounts. Each app environment will receive a dedicated S3 bucket and an IAM user account. An existing policy, which you specify, will be attached to the account. The Mendix Operator will use a **management IAM user account** to create and delete S3 buckets and IAM user accounts. You will need to provide all the information relating to your Amazon S3 storage such as plan name, region, policy ARN, access key, and secret key.
-
-To enable this mode, select the following options: **Create S3 Bucket per environment**, **Create account (IAM user) per environment**.
-
-Create an IAM policy that will be attached to IAM user accounts and copy its Policy ARN (specify this value in the **Attach Policy ARN** field):
-
-```json
-{
-    "Version": "2012-10-17",
-    "Statement": [
-        {
-            "Sid": "AllowListingOfUserFolder",
-            "Action": [
-                "s3:ListBucket"
-            ],
-            "Effect": "Allow",
-            "Resource": [
-                "arn:aws:s3:::${aws:username}"
-            ],
-            "Condition": {
-                "StringLike": {
-                    "s3:prefix": [
-                        "${aws:username}/*",
-                        "${aws:username}"
-                    ]
-                }
-            }
-        },
-        {
-            "Sid": "AllowAllS3ActionsInUserFolder",
-            "Effect": "Allow",
-            "Resource": [
-                "arn:aws:s3:::${aws:username}/${aws:username}/*"
-            ],
-            "Action": [
-                "s3:AbortMultipartUpload",
-                "s3:DeleteObject",
-                "s3:GetObject",
-                "s3:ListMultipartUploadParts",
-                "s3:PutObject"
-            ]
-        }
-    ]
-}
-```
-
-The **management IAM user account** needs to have the following IAM policy (replace `<account_id>` with your AWS account number, and `<policy_arn>` with the Policy ARN):
-
-```json
-{
-    "Version": "2012-10-17",
-    "Statement": [
-        {
-            "Sid": "LimitedAttachmentPermissions",
-            "Effect": "Allow",
-            "Action": [
-                "iam:AttachUserPolicy",
-                "iam:DetachUserPolicy"
-            ],
-            "Resource": "*",
-            "Condition": {
-                "ArnEquals": {
-                    "iam:PolicyArn": [
-                        "<policy_arn>"
-                    ]
-                }
-            }
-        },
-        {
-            "Sid": "iamPermissions",
-            "Effect": "Allow",
-            "Action": [
-                "iam:DeleteAccessKey",
-                "iam:DeleteUser",
-                "iam:CreateUser",
-                "iam:CreateAccessKey"
-            ],
-            "Resource": [
-                "arn:aws:iam::<account_id>:user/mendix-*"
-            ]
-        },
-        {
-            "Sid": "bucketPermissions",
-            "Effect": "Allow",
-            "Action": [
-                "s3:CreateBucket",
-                "s3:DeleteBucket"
-            ],
-            "Resource": "arn:aws:s3:::mendix-*"
-        }
-    ]
-}
-```
-
-{{% alert color="info" %}}
-If the plan name already exists you will receive an error that it cannot be created. This is not a problem, you can continue to use the plan, and it will now have the new configuration.
-{{% /alert %}}
-
-{{% alert color="info" %}}
-To use this plan, [upgrade](/developerportal/deploy/private-cloud-upgrade-guide/) the Mendix Operator to version 1.8.0 or later.
-{{% /alert %}}
-
-**S3 (create account with inline policy)** will connect to an AWS account to IAM user accounts. Each app environment will receive a dedicated IAM user account with an inline policy. This inline policy only allows access to objects in the existing S3 bucket if the object name prefix matches the environment's account name (IAM user name). The Mendix Operator will use a **management IAM user account** to create and delete IAM user accounts. You will need to provide all the information relating to your Amazon S3 storage such as plan name, bucket name, region, access key, and secret key.
-
-To enable this mode, select the following options: **Create account (IAM user) per environment**, **Create Inline Policy**.
-
-The **management IAM user account** needs to have the following IAM policy (replace `<account_id>` with your AWS account number):
-
-```json
-{
-    "Version": "2012-10-17",
-    "Statement": [
-        {
-            "Sid": "iamPermissions",
-            "Effect": "Allow",
-            "Action": [
-                "iam:DeleteAccessKey",
-                "iam:PutUserPolicy",
-                "iam:DeleteUserPolicy",
-                "iam:DeleteUser",
-                "iam:CreateUser",
-                "iam:CreateAccessKey"
-            ],
-            "Resource": [
-                "arn:aws:iam::<account_id>:user/mendix-*"
-            ]
-        }
-    ]
-}
-```
-
-{{% alert color="info" %}}
-If the plan name already exists you will receive an error that it cannot be created. This is not a problem, you can continue to use the plan, and it will now have the new configuration.
-{{% /alert %}}
-
-{{% alert color="info" %}}
-To use this plan, [upgrade](/developerportal/deploy/private-cloud-upgrade-guide/) the Mendix Operator to version 1.8.0 or later.
-{{% /alert %}}
-
-**S3 (create account with existing policy)** will connect to an AWS account to IAM user accounts. Each app environment will receive a dedicated IAM user account. The specified existing policy will be attached to the account and should only allow access to objects in the existing S3 bucket if the object name prefix matches the environment's account name (IAM user name). The Mendix Operator will use a **management IAM user account** to create and delete IAM user accounts. You will need to provide all the information relating to your Amazon S3 storage such as plan name, bucket name, region, policy ARN, access key, and secret key.
-
-To enable this mode, select the following options: **Create account (IAM user) per environment**.
-
-Create an IAM policy that will be attached to app environment IAM user accounts (replacing `<bucket_name>` with the name of the existing bucket) and copy its Policy ARN (specify this value in the **Attach Policy ARN** field):
-
-```json
-{
-    "Version": "2012-10-17",
-    "Statement": [
-        {
-            "Sid": "AllowListingOfUserFolder",
-            "Action": [
-                "s3:ListBucket"
-            ],
-            "Effect": "Allow",
-            "Resource": [
-                "arn:aws:s3:::<bucket_name>"
-            ],
-            "Condition": {
-                "StringLike": {
-                    "s3:prefix": [
-                        "${aws:username}/*",
-                        "${aws:username}"
-                    ]
-                }
-            }
-        },
-        {
-            "Sid": "AllowAllS3ActionsInUserFolder",
-            "Effect": "Allow",
-            "Resource": [
-                "arn:aws:s3:::<bucket_name>/${aws:username}/*"
-            ],
-            "Action": [
-                "s3:AbortMultipartUpload",
-                "s3:DeleteObject",
-                "s3:GetObject",
-                "s3:ListMultipartUploadParts",
-                "s3:PutObject"
-            ]
-        }
-    ]
-}
-```
-
-The **management IAM user account** needs to have the following IAM policy (replace `<account_id>` with your AWS account number, and `<policy_arn>` with the Policy ARN):
-
-```json
-{
-    "Version": "2012-10-17",
-    "Statement": [
-        {
-            "Sid": "LimitedAttachmentPermissions",
-            "Effect": "Allow",
-            "Action": [
-                "iam:AttachUserPolicy",
-                "iam:DetachUserPolicy"
-            ],
-            "Resource": "*",
-            "Condition": {
-                "ArnEquals": {
-                    "iam:PolicyArn": [
-                        "<policy_arn>"
-                    ]
-                }
-            }
-        },
-        {
-            "Sid": "iamPermissions",
-            "Effect": "Allow",
-            "Action": [
-                "iam:DeleteAccessKey",
-                "iam:DeleteUser",
-                "iam:CreateUser",
-                "iam:CreateAccessKey"
-            ],
-            "Resource": [
-                "arn:aws:iam::<account_id>:user/mendix-*"
-            ]
-        }
-    ]
-}
-```
-
-{{% alert color="info" %}}
-If the plan name already exists you will receive an error that it cannot be created. This is not a problem, you can continue to use the plan, and it will now have the new configuration.
-{{% /alert %}}
-
-{{% alert color="info" %}}
-To use this plan, [upgrade](/developerportal/deploy/private-cloud-upgrade-guide/) the Mendix Operator to version 1.8.0 or later.
-{{% /alert %}}
-
-**S3 (existing bucket and account)** will connect to an existing S3 bucket with the provided IAM user access key and secret keys. All apps (environments) will use the same S3 bucket and an IAM user account. You will need to provide all the information relating to your Amazon S3 storage such as plan name, endpoint, access key, and secret key.
-
-If the Autogenerate Prefix option is selected, Mendix for Private Cloud will generate a unique bucket prefix for each environment to keep data from different apps separate.
-
-This prefix is specified in the `<environment name>-file` secret.
-
-If you want a new environment to reuse/inherit data from an existing environment, you can deselect the Autogenerate Prefix and provide the existing prefix you want to use.
-
-{{% alert color="info" %}}
-To use the Autogenerate Prefix option you need Mendix Operator version 2.7.0 or above. See [Upgrading Private Cloud](/developerportal/deploy/private-cloud-upgrade-guide/) for instructions on upgrading the Mendix Operator.
-{{% /alert %}}
-
-{{% alert color="warning" %}}
-Be sure to follow the naming guidelines for prefixes as described in the [AWS S3 documentation](https://docs.aws.amazon.com/AmazonS3/latest/userguide/object-keys.html).
-{{% /alert %}}
-
-The associated IAM user account needs to have the following IAM policy (replace `<bucket_name>` with the your S3 bucket name):
-
-```json
-{
-  "Version": "2012-10-17",
-  "Statement": [
-    {
-      "Effect": "Allow",
-      "Action": [
-        "s3:AbortMultipartUpload",
-        "s3:DeleteObject",
-        "s3:GetObject",
-        "s3:ListMultipartUploadParts",
-        "s3:PutObject"
-      ],
-      "Resource": [
-        "arn:aws:s3:::<bucket_name>/*"
-      ]
-    }
-  ]
-}
-```
-
-{{% alert color="info" %}}
-Configuration parameters will not be validated and will be provided to the Mendix app as-is. If the arguments are not valid or there is an issue with permissions, the Mendix Runtime will fail to start the and deployment will appear to hang with **Replicas running** and **Runtime** showing a spinner.
-{{% /alert %}}
-
-{{% alert color="info" %}}
-
-If you select *Yes* to the *Can this storage be used by multiple environments?* question, all environments using that Storage Plan will use the same Access and Secret keys and will have identical permissions. 
-Each app will write into its own directory inside the bucket.
-
-To avoid compromising security, answer *No* to the *Can this storage be used by multiple environments?* question. This way, only one app will be able to use this Storage Plan, and attaching another app to the same storage plan will not be possible.
-{{% /alert %}}
-
-{{% alert color="info" %}}
-If the plan name already exists you will receive an error that it cannot be created. This is not a problem, you can continue to use the plan, and it will now have the new configuration.
-{{% /alert %}}
-
-{{% alert color="info" %}}
-To use this plan, [upgrade](/developerportal/deploy/private-cloud-upgrade-guide/) the Mendix Operator to version 1.1.0 or later.
-{{% /alert %}}
-
-**Azure Blob storage Container (existing)** will connect to an existing Azure Blob storage Container with the provided storage account name and key. All apps will use the same Container bucket and account credentials. You will need to provide all the information about your Azure Blob storage such as plan name, account name, account key, and container name.
-
-{{% alert color="info" %}}
-Configuration parameters will not be validated and will be provided to the Mendix app as-is. If the arguments are not valid or there's an issue with permissions, the Mendix Runtime will fail to start the and deployment will appear to hang with **Replicas running** and **Runtime** showing a spinner.
-{{% /alert %}}
-
-{{% alert color="info" %}}
-
-If you select *Yes* to the *Can this storage be used by multiple environments?* question, all environments using that Storage Plan will be using the same account name and account keys keys and will have identical permissions.
-All apps using will write into the root directory of same Azure Blob storage Container.
-
-To avoid compromising security, answer *No* to the *Can this storage be used by multiple environments?* question. This way, only one app will be able to use this Storage Plan, and attaching another app to the same storage plan will not be possible.
-
-{{% /alert %}}
-
-{{% alert color="info" %}}
-If the plan name already exists you will receive an error that it cannot be created. This is not a problem, you can continue to use the plan, and it will now have the new configuration.
-{{% /alert %}}
-
-{{% alert color="info" %}}
-To use this plan, [upgrade](/developerportal/deploy/private-cloud-upgrade-guide/) the Mendix Operator to version 1.1.0 or later.
-{{% /alert %}}
-
-**Google Cloud Storage bucket** will connect to an existing Google cloud bucket. You need to create the bucket, get the credentials from the service account, and fill in all the details into the StoragePlan. You will need to provide all the information about your Google cloud storage such as plan name, endpoint, access key, and secret key.
-
-{{% alert color="info" %}}
-Please note that the bucket for the Google cloud needs to be created manually. Mx4PC will not create the Google cloud bucket. The format of the endpoint should be *https://storage.googleapis.com/<bucket-name>*. Keep in mind that the all the apps will be created in a separate folder in the bucket.
-{{% /alert %}}
-
-**Ephemeral** will enable you to quickly set up your environment and deploy your app, but any data objects you store will be lost when you restart your environment.
+See the [Blob storage plans](/developerportal/deploy/private-cloud-storage-plans/#blob-storage) document for a list and instructions for all options.
 
 ##### 4.3.2.3 Ingress {#ingress}
 
@@ -940,7 +465,17 @@ When using a connected cluster, its status will be shown as **Connected** in the
 
 {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/image22.png" >}}
 
-## 5 Advanced Operator Configuration
+### 5 Licensing the Application with Private Cloud License Manager
+
+You can license the Operator and Runtime of your application by configuring the Operator configuration with License Manager details. In order to start using Private Cloud License Manager, you need to first download the PCLM executable available in the Installation page. For more information, see [Private Cloud License Manager](/developerportal/deploy/private-cloud/private-cloud-license-manager/). The PCLM executable is available for download from this page.
+
+{{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/PCLMDownload.png" >}}
+
+{{% alert color="info" %}}
+In order to configure PCLM, make sure that the Operator version is 2.11.0 and above. 
+{{% /alert %}}
+
+## 6 Advanced Operator Configuration
 
 {{% alert color="warning" %}}
 Before updating the Operator with the advanced configurations, make sure to go through the [Introduction to Operators](/developerportal/deploy/private-cloud-technical-appendix-01/) which explains how Operators work in Mendix for Private Cloud.
@@ -969,7 +504,7 @@ kubectl -n {namespace} edit operatorconfiguration mendix-operator-configuration
 Changing options which are not documented here can cause the Mendix Operator to configure environments incorrectly. We recommend that you make a backup before applying any changes.
 {{% /alert %}}
 
-### 5.1 Endpoint (network) Configuration {#advanced-network-settings}
+### 6.1 Endpoint (network) Configuration {#advanced-network-settings}
 
 The OperatorConfiguration contains the following user-editable options for network configuration:
 
@@ -1087,7 +622,7 @@ You can change the following options:
 When switching between Ingress and OpenShift Routes, you need to [restart the Mendix Operator](#restart-after-changing-network-cr) for the changes to be fully applied.
 {{% /alert %}}
 
-### 5.2 Mendix App Deployment settings {#advanced-deployment-settings}
+### 6.2 Mendix App Deployment settings {#advanced-deployment-settings}
 
 The OperatorConfiguration contains the following user-editable options for configuring Mendix app Deployments (Pods):
 
@@ -1112,7 +647,7 @@ You can change the following options:
 * **runtimeAutomountServiceAccountToken**: – specify if Mendix app Pods should get a Kubernetes Service Account token; defaults to `false`; should be set to `true` when using Linkerd [Automatic Proxy Injection](https://linkerd.io/2.10/features/proxy-injection/) 
 * **runtimeDeploymentPodAnnotations**: – specify default annotations for Mendix app Pods
 
-### 5.3 Mendix App Resource Customization {#advanced-resource-customization}
+### 6.3 Mendix App Resource Customization {#advanced-resource-customization}
 
 The Deployment object that controls the pod of a given Mendix application contains user-editable options for fine-tuning the execution to the application's runtime resources.
 
@@ -1209,7 +744,7 @@ spec:
 # ...
 ```
 
-#### 5.3.1 Customize Liveness Probe to Resolve Crash Loopback Scenarios
+#### 6.3.1 Customize Liveness Probe to Resolve Crash Loopback Scenarios
 
 The `liveness probe` informs the cluster whether the pod is dead or alive. If the pod fails to respond to the liveness probe, the pod will be restarted (this is called a `crash loopback`).
 
@@ -1246,7 +781,7 @@ The following fields can be configured:
 If we are deploying a large application that takes much longer to start than the defined 60 seconds, we will observe it restarting multiple times. To solve this scenario we must edit field `initialDelaySeconds` for the **Liveness probe** to a substantially larger value.
 {{% /alert %}}
 
-#### 5.3.2 Customize Startup Probes for Slow Starting Applications
+#### 6.3.2 Customize Startup Probes for Slow Starting Applications
 
 If you want to wait before executing a liveness probe you should use `initialDelaySeconds` or a startup probe.
 
@@ -1276,7 +811,7 @@ Startup probes are available in the Mendix for Private Cloud Operator version 2.
 In Kubernetes version 1.19, startup probes are still a [beta feature](https://kubernetes.io/blog/2020/08/21/moving-forward-from-beta/).
 {{% /alert %}}
 
-#### 5.3.3 Customize terminationGracePeriodSeconds for Gracefully Shutting Down the Application Pod
+#### 6.3.3 Customize terminationGracePeriodSeconds for Gracefully Shutting Down the Application Pod
 
 Using `terminationGracePeriodSeconds`, the application is given a certain amount of time to terminate. The default value is 300 seconds. This time can be configured using the `terminationGracePeriodSeconds` key in the pod's spec and so if your pod usually takes longer than 300 seconds to shut down, you can increase the grace period. You can do that by setting the `terminationGracePeriodSeconds` key in the pod YAML.
 
@@ -1310,7 +845,7 @@ The settings in the example above mean that
 * if the server node where a pod is running has enough of a given resource available the container can be granted resource than its `requests`
 * a container will never be granted more than its resource `limits`
 
-##### 5.3.4.1 Meaning of CPU
+##### 6.3.4.1 Meaning of CPU
 
 Limits and requests for CPU resources are measured in cpu units. One CPU, in this context, is equivalent to 1 vCPU/Core for cloud providers and 1 hyperthread on bare-metal Intel processors.
 
@@ -1318,7 +853,7 @@ Fractional requests are allowed. For instance, in this example, we are requestin
 
 A precision finer than 1m is not allowed.
 
-##### 5.3.4.2 Meaning of Memory
+##### 6.3.4.2 Meaning of Memory
 
 Limits and requests for memory are measured in bytes. You can express memory as a plain integer or as a fixed-point number using one of these suffixes: E, P, T, G, M, K. You can also use the power-of-two equivalents: Ei, Pi, Ti, Gi, Mi, Ki. For example, the following represent roughly the same value: `128974848`, `129e6`, `129M`, `123Mi`
 
@@ -1328,7 +863,7 @@ For instance, in the example above, we are requesting and limiting memory usage 
 Modifying the resource configuration should be performed carefully as that might have direct implications on the performance of your application, and the resource usage of the server node.
 {{% /alert %}}
 
-#### 5.3.5 Resource Definition via Operator Configuration Manifest
+#### 6.3.5 Resource Definition via Operator Configuration Manifest
 
 For a given namespace all the resource information is aggregated in the `mendix-operator-configuration` manifest. This centralizes and overrides all the configuration explained above. An example of the operator configuration manifest is given below.
 
@@ -1387,7 +922,7 @@ The following fields can be configured:
 * `runtimeResources`: this is used for `mendix-runtime` containers in the namespace (but this is overwritten if the Mendix app CRD has a resources block)
 * `buildResources`  – this is used for the main container in `*-build` pods
 
-### 5.4 Customize Registry ImageNameTemplate {#customize-registry-imagenametemplate}
+### 6.4 Customize Registry ImageNameTemplate {#customize-registry-imagenametemplate}
 
 ImageNameTemplate allows you to specify how the image name and tag are generated. It allows both use of OpenShift-style "repository per app" and ECR-style "tag per app". For example, a value of imageNameTemplate may be `registry.example.com/mendix-apps/{{.Name}}-{{.Version}}-{{.UnixTimestamp}}` which would generate an image for the build like `registry.example.com/mendix-apps/pgv9gw71-0.0.1.2-1640699175.392`
 
@@ -1420,7 +955,7 @@ You can customize the registry imageNameTemplate in OperatorConfiguration with t
 * `{{.UnixTimestamp}}`: current UNIX timestamp with at least millisecond precision e.g. 1640615972.897.
 * `{{.Timestamp}}`: current timestamp in the following format 20211231.081224.789 for 2021-12-31 08:12:24.789.
 
-### 5.5 Customize Runtime Metrics {#customize-runtime-metrics}
+### 6.5 Customize Runtime Metrics {#customize-runtime-metrics}
 
 Mendix for Private Cloud provides a Prometheus API, which can be used to collect metrics from Mendix apps.
 
@@ -1479,7 +1014,7 @@ To disable the Prometheus metrics API, remove the `runtimeMetricsConfiguration` 
 
 For more information about collecting metrics in Mendix for Private Cloud, see [Monitoring Environments in Mendix for Private Cloud](/developerportal/deploy/private-cloud-monitor/).
 
-### 5.6 Customize Service Account {#customize-service-account}
+### 6.6 Customize Service Account {#customize-service-account}
 
 The Mendix environment can be configured to use a specific Kubernetes ServiceAccount instead of the default ServiceAccount.
 
@@ -1491,7 +1026,7 @@ The service account can be customized for Private Cloud Operator version 2.7.0 a
 
 If required, you can use additional annotations. For example, in order to authenticate with AWS services instead of with static credentials, you can attach an AWS IAM role to an environment and use [IRSA](https://aws.amazon.com/blogs/opensource/introducing-fine-grained-iam-roles-service-accounts/).
 
-### 5.7 Autoscaling
+### 6.7 Autoscaling
 
 Mendix for Private Cloud is compatible with multiple types of Kubernetes autoscalers.
 
@@ -1501,13 +1036,13 @@ To optimize resource utilization, autoscaling can terminate running instances of
 When autoscaling scales down an app or Kubernetes node, microflows in affected pods will be terminated, and the terminating pod will no longer accept new HTTP connections.
 {{% /alert %}}
 
-#### 5.6.1 Cluster Autoscaling
+#### 6.6.1 Cluster Autoscaling
 
 The Kubernetes [cluster autoscaler](https://github.com/kubernetes/autoscaler/tree/master/cluster-autoscaler) monitors resource usage and automatically adjusts the size of the cluster based on its resource needs.
 
 Mendix for Private Cloud is compatible with cluster autoscaling. To install and enable cluster autoscaling, follow your cluster vendor's recommended way of configuring the cluster autoscaler.
 
-#### 5.6.2 Horizontal Pod Autoscaling {#horizontal-autoscaling}
+#### 6.6.2 Horizontal Pod Autoscaling {#horizontal-autoscaling}
 
 {{% alert color="info" %}}
 You need to have the Mendix Operator version 2.4.0 or above installed in your namespace to use horizontal pod autoscaling.
@@ -1546,7 +1081,7 @@ When an environment is scaled (manually or automatically), it will not be restar
 Scaling an environment up (increasing the number of replicas) adds more pods - without restarting any already running pods; once the additional pods become available, they will start receiving HTTP(S) requests.
 Scaling an environment down (decreasing the number of replicas) removes some of the running pods - without restarting remaining pods; all HTTP(S) traffic will be routed to the remaining pods.
 
-#### 5.6.3 Vertical Pod Autoscaling
+#### 6.6.3 Vertical Pod Autoscaling
 
 [Vertical pod autoscaling](https://github.com/kubernetes/autoscaler/tree/master/vertical-pod-autoscaler) can automatically configure CPU and memory resources and requirements for a pod.
 
@@ -1565,11 +1100,48 @@ We recommend using *horizontal* pod autoscaling to adjust environments to meet d
 Vertical pod autoscaling cannot be combined with horizontal pod autoscaling.
 {{% /alert %}}
 
-## 6 Cluster and Namespace Management
+### 6.7 Log format
+
+#### 6.7.1 Runtime log format{#runtime-log-format}
+
+Mendix Operator version 2.11.0 or above allows you to specify the log format used by Mendix apps.
+
+To specify the log format, add a `runtimeLogFormatType` entry to `OperatorConfiguration`:
+
+```yaml
+apiVersion: privatecloud.mendix.com/v1alpha1
+kind: OperatorConfiguration
+spec:
+  # ...
+  # Other configuration options values
+  # Optional: log format type
+  runtimeLogFormatType: json
+```
+
+You can set `runtimeLogFormatType` to one of the following values:
+
+* **plain**: – default option, produces plaintext logs in the following format:
+
+    ```
+    2023-03-21 14:36:14.607 INFO - M2EE: Added admin request handler '/prometheus' with servlet class 'com.mendix.metrics.prometheus.PrometheusServlet'
+    ```
+
+* **json**: – produces JSON logs in the following format:
+
+    ```json
+    {"node":"M2EE","level":"INFO","message":"Added admin request handler '/prometheus' with servlet class 'com.mendix.metrics.prometheus.PrometheusServlet'","timestamp":1679409374607}
+    ```
+
+{{% alert color="warning" %}}
+In the `json` format, newline characters will be sent as `\n` (as specified in the [JSON spec](https://www.json.org/json-en.html)). You might need to configure your log viewer tool to display `\n` as line breaks.
+For example, to correctly display newline characters in Grafana, use the [Escape newlines](https://github.com/grafana/grafana/pull/31352) button.
+{{% /alert %}}
+
+## 7 Cluster and Namespace Management
 
 Once it is configured, you can manage your cluster and namespaces through the Developer Portal.
 
-### 6.1 Cluster Overview {#overview}
+### 7.1 Cluster Overview {#overview}
 
 Go to the Cluster Manager page by clicking **Cluster Manager** in the top menu of the **Clouds** page of the Developer Portal.
 
@@ -1577,7 +1149,7 @@ Go to the Cluster Manager page by clicking **Cluster Manager** in the top menu o
 
 From this page you can see a summary of your clusters with all their namespaces and an indication of the namespace status and how long it has been running (runtime).
 
-#### 6.1.1 Managing the Cluster
+#### 7.1.1 Managing the Cluster
 
 Here you can perform the following actions on the entire cluster:
 
@@ -1599,15 +1171,15 @@ When you add a cluster manager, the user will have most of the access which the 
 
 The only limitations are that:
 
-* an added cluster manager will not be able to operate on or manage the environments created in the namespaces which are already in the cluster — they need to be added as a member of the namespace if they want to manage environments in the namespaces
-* cluster managers who are added to the cluster cannot remove the cluster manager who created the cluster
+* An added cluster manager will not be able to operate on or manage the environments created in the namespaces which are already in the cluster — they need to be added as a member of the application if they want to manage existing environments in the namespaces.
+* Cluster managers who are added to the cluster cannot remove the cluster manager who created the cluster.
 {{% /alert %}}
 
 {{% alert color="info" %}}
 When you delete a cluster, this removes the cluster from the Developer Portal. However, it will not remove the associated namespace from your platform. You will need to explicitly delete the namespace using the tools provided by your platform.
 {{% /alert %}}
 
-### 6.2 Namespace Management
+### 7.2 Namespace Management
 
 If you are a member of a namespace, you can also manage a namespace in the cluster.
 
@@ -1622,6 +1194,7 @@ On the namespace management page, there are a number of tabs which allow you to 
 * Installation
 * Additional information
 * Customization
+* PCLM Statistics
 
 See the sections below for more information.
 
@@ -1662,7 +1235,7 @@ You can also see an activity log containing the following information for all na
 
 {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/namespace-activity-logs.PNG" >}}
 
-#### 6.2.1 Apps
+#### 7.2.1 Apps
 
 The **Apps** tab of namespace details in the cluster manager page lists all the app environments which are deployed to this namespace.
 
@@ -1676,7 +1249,7 @@ You can only see the environment details of an app if you are a member of the te
 
 If you are a cluster administrator, you can also click **Configure** to configure the environment by adding annotations for pods, ingress, and service.
 
-##### 6.2.1.1 Configure Environment
+##### 7.2.1.1 Configure Environment
 
 You can add, edit, and delete annotations for your environment.
 
@@ -1699,7 +1272,7 @@ The new value for the annotation will only be applied when the application is re
 
 You can also configure the runtime metrics for the environment in the Runtime section. For more details, see [Customize Runtime Metrics](#customize-runtime-metrics), above.
 
-#### 6.2.2 Members
+#### 7.2.2 Members
 
 By default, the cluster manager, who created the cluster in Mendix, and anyone added as a cluster manager has full administration rights to the cluster and its namespaces. These cluster managers will also need to be given the appropriate permissions on the Kubernetes or OpenShift Cluster. The administration rights are:
 
@@ -1715,6 +1288,7 @@ The following rights are available to the cluster creator, and members of a name
 
 The following actions require the appropriate access to the namespace **and** access to the app environment as a team member with appropriate authorization:
 
+* Manage environment
 * Deploy App – user can deploy a new app to the environment or start and stop existing apps
 * Scale App – user can change the number of replicas
 * Edit App Constants
@@ -1733,7 +1307,7 @@ The following actions require the appropriate access to the namespace **and** ac
 
 The **Members** tab allows you to manage the list of members of the namespace and control what rights they have.
 
-##### 6.2.2.1 Adding Members
+##### 7.2.2.1 Adding Members
 
 You can invite additional members to the namespace, and configure their role depending on what they should be allowed to do.
 
@@ -1749,13 +1323,15 @@ You can invite additional members to the namespace, and configure their role dep
     2. **Administrator** – a standard set of rights needed by an administrator, these are listed on the screen
     3. **Custom** – you can select a custom set of rights by checking the box next to each role you want to give to this person
 
+    With custom permissions, we have now decoupled the permissions for Scale, Start and Stop operations. If an application is in the Stopped state, the scaling does not come into effect until the application is Started. This means that you have to click **Start application** in order for the changes to be sent to the cluster.
+
 5. Click **Send Invite** to send an invite to this person.
 
     {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/image29.png" >}}
 
 6. The user will receive an email and will be required to follow a link to confirm that they want to join this namespace. They will need to be logged in to Mendix when they follow the confirmation link.
 
-##### 6.2.2.2 Editing and Removing Members
+##### 7.2.2.2 Editing and Removing Members
 
 You can change the access rights for, or completely remove, existing members.
 
@@ -1767,7 +1343,7 @@ You can change the access rights for, or completely remove, existing members.
 
         {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/image30.png" >}}
 
-#### 6.2.3 Operate {#operate}
+#### 7.2.3 Operate {#operate}
 
 The **Operate** tab allows you to add a set of links which are used when users request an operations page for their app in the Developer Portal.
 The following pages can be configured:
@@ -1783,21 +1359,21 @@ Open the **Operate** tab, enter the URLs relevant to your namespace, and click *
 
 {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/image32.png" >}}
 
-#### 6.2.4 Plans
+#### 7.2.4 Plans
 
 The **Plans** tab shows you the database and storage plans which are currently configured for your namespace.
 
 {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/image33.png" >}}
 
-##### 6.2.4.1 Deactivating a Plan
+##### 7.2.4.1 Deactivating a Plan
 
 Click **Deactivate** next to the name of the plan you wish to deactivate. You cannot remove plans from within the cluster manager, but you can deactivate them to ensure that developers cannot create environments using the plan. Any environments currently using the plan will not be affected by this setting.
 
-##### 6.2.4.2 Activating a Plan
+##### 7.2.4.2 Activating a Plan
 
 Click **Activate** next to the name of the plan you wish to activate. The plan can then be used by developers when they create an environment to deploy their apps.
 
-#### 6.2.5 Installation
+#### 7.2.5 Installation
 
 The **Installation** tab shows you the Configuration Tool which you used to create the namespace, together with the parameters which are used to configure the agent.
 
@@ -1805,11 +1381,11 @@ You can use the Configuration Tool again to change the configuration of your nam
 
 You can also download the Configuration Tool again, if you wish.
 
-#### 6.2.6 Additional Information
+#### 7.2.6 Additional Information
 
 This tab shows information on the versions of the various components installed in your namespace.
 
-#### 6.2.7 Customization
+#### 7.2.7 Customization
 
 This tab allows the cluster manager to customize the enablement of the secret store and developer mode for the developers. 
 
@@ -1829,9 +1405,37 @@ Enabling the Development Mode option will allow users to change the type of an e
 
 {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/Customization.png" >}}
 
-## 7 Current Limitations
+#### 7.2.8 PCLM Statistics
 
-### 7.1 Storage Provisioning
+This tab shows information about claimed licences, operator licenses and runtime licences.
+
+Select **Claim** to view a list of licenses from the license bundle which are claimed in the namespace.
+
+{{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/LicenseClaim.png" >}}
+
+Select **Operator** to view a list of all the Operator licenses in the bundle.
+
+{{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/OperatorList.png" >}}
+
+Select **Runtime** to view a list of all the Runtime licenses in the bundle.
+
+{{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/RuntimeList.png" >}}
+
+Select **Export in Excel** to export the above lists.
+
+If you would like to see the license payload, click **Show License Payload**.
+
+{{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/LicensePayload.png" >}}
+
+{{% alert color="info" %}}
+If you want to use the Private Cloud License Manager, the Mendix Operator must be in version 2.11.0 or later.
+{{% /alert %}}
+
+For more information, see [Private Cloud License Manager](/developerportal/deploy/private-cloud/private-cloud-license-manager/).
+
+## 8 Current Limitations
+
+### 8.1 Storage Provisioning
 
 If the Operator fails to provision or deprovision storage (a database or file storage), it will not retry the operation. If there is a failed `*-database` or `*-file` pod, you'll need to do the following:
 
@@ -1839,7 +1443,7 @@ If the Operator fails to provision or deprovision storage (a database or file st
 2. Troubleshoot and fix the cause of this error.
 3. Delete the failed pod to retry the process again.
 
-### 7.2 Restart Required When Switching Between Ingress and OpenShift Route {#restart-after-changing-network-cr}
+### 8.2 Restart Required When Switching Between Ingress and OpenShift Route {#restart-after-changing-network-cr}
 
 Starting with Mendix Operator version 1.5.0, the operator will monitor only one network resource type: Ingress or OpenShift route.
 
@@ -1859,9 +1463,9 @@ kubectl -n {namespace} scale deployment mendix-operator --replicas=0
 kubectl -n {namespace} scale deployment mendix-operator --replicas=1
 ```
 
-### 7.3 Terminal limitations {#terminal-limitations}
+### 8.3 Terminal limitations {#terminal-limitations}
 
-#### 7.3.1 Windows
+#### 8.3.1 Windows
 
 The Windows version of the Configuration Tool must be run in a terminal that supports the Windows console API and has mouse support. PowerShell and the Windows Command Prompt are supported.
 
@@ -1875,25 +1479,25 @@ Some previously released versions of Mendix for Private Cloud required using Git
 Starting from Mendix Operator version 1.9.0, Git Bash is no longer required.
 {{% /alert %}}
 
-#### 7.3.2 Linux and macOS
+#### 8.3.2 Linux and macOS
 
 When running the installation tool over SSH, make sure that the SSH client supports terminal emulation and has mouse support enabled.
 
 `ssh.exe` in Windows doesn't support mouse click forwarding and another SSH client should be used instead, such as [MobaXterm](https://mobaxterm.mobatek.net/) or [PuTTY](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html).
 
-## 8 Troubleshooting
+## 9 Troubleshooting
 
-### 8.1 Status Reporting
+### 9.1 Status Reporting
 
 This section covers an issue which can arise where Mendix cannot recover automatically and manual intervention may be required.
 
 Under some circumstances changes in the status of the cluster, namespaces, and environments will not be updated automatically. To ensure you are seeing the current status, you may need to click the **Refresh** button on the screen (not the browser page refresh button).
 
-### 8.2 Windows PowerShell
+### 9.2 Windows PowerShell
 
 This section covers how to troubleshoot an issue you may find when running the installation tool with Windows PowerShell Terminal.
 
-### 8.2.1 Enable Copy and Paste in Windows PowerShell
+### 9.2.1 Enable Copy and Paste in Windows PowerShell
 
 If you are unable to copy and paste in the installation tool, you may need to enable it from the Windows PowerShell Properties. Open the **Properties** menu by right clicking the header or by pressing <kbd>Alt</kbd> + <kbd>Space</kbd>.
 
@@ -1905,7 +1509,7 @@ Select the **Options** tab and enable **Use Ctrl+Shift+C/V as <u>C</u>opy/Paste*
 
 You can now copy and paste with <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>C</kbd> and <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>V</kbd> in the terminal.
 
-### 8.2.2 Unable to Click a Button
+### 9.2.2 Unable to Click a Button
 
 {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/image36.png" >}}
 
@@ -1915,7 +1519,7 @@ If you highlight a button instead of clicking the button, you may need to disabl
 
 After disabling the option you need to enable the new settings. You can do this by navigating to other page by pressing a shortcut key, or reopening the installer tool by closing it with **<kbd>Ctrl</kbd>+<kbd>C</kbd>** and reopening the tool with the installation command.
 
-## 9 Containerized Mendix App Architecture  {#containerized-architecture}
+## 10 Containerized Mendix App Architecture  {#containerized-architecture}
 
 Within your cluster you can run one, or several, Mendix apps. Each app runs in an environment, and each environment is in a namespace. You can see the relationship between the Mendix environments and the Kubernetes namespaces in the image below.
 

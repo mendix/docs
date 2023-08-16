@@ -105,6 +105,10 @@ The following steps will create a cluster, register and install a namespace, add
 12. Make an API call `POST /clusters/{clusterId}` to add/update the cluster member. You can get the manifest for this update request from `GET /clusters/{clusterId}`.
 13. Make an API call `POST /clusters/{namespaceId}` to update the namespace development mode and set `enableDevelopmentMode` to true . You can get the manifest for this update request from `GET /clusters/{namespaceId}`.
 
+{{% alert color="info" %}}
+If you would like the invited cluster/namespace member to autoaccept the invite, you can set the `autoAcceptInvite` to true in the update cluster/namespace api request.
+{{% /alert %}}
+
 ### 3.2 Using the API to Restart an App {#restart}
 
 The following steps will restart an app by setting the number of instances to zero and then setting it back to the number of instances required.
@@ -152,3 +156,7 @@ Please note that there is a limited support for Custom permissions in Deploy API
 ## 4 API Reference
 
 {{< swaggerui src="/openapi-spec/private-cloud-deploy-api.yaml"  >}}
+
+{{% alert color="info" %}}
+Please note that the fields marked as non-editable are used for read-only purposes. Any modifications made on the values of these fields will be ignored
+{{% /alert %}}

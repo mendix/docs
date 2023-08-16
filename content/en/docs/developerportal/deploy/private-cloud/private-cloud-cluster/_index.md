@@ -81,9 +81,11 @@ You now need to add a namespace to your cluster. Your cluster can contain severa
 
 To add a namespace, do the following:
 
-1. Click **Details**:
+1. Click Details Icon:
 
     {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/empty-cluster.png" >}}
+
+    {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/ClusterDetails.png" >}}
 
 2. Click **Add Namespace**:
 
@@ -111,11 +113,11 @@ If you are not already on the installation tab for your namespace, go to it by f
 
     {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/cluster-manager.png" >}}
 
-2. Click **Details** next to the namespace you want to use.
+2. Click Details icon next to the namespace you want to use.
 
     {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/cluster-details.png" >}}
 
-3. Select the **Installation** tab.
+3. Select the **Installation** section.
 
 Now you can download the Configuration Tool by doing the following:
 

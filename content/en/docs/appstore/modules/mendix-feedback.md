@@ -21,7 +21,9 @@ All [Mendix Feedback](https://marketplace.mendix.com/link/component/199/) widget
 
 The feedback provided via a widget version lower than 8.4.0 is no longer sent to the [Feedback](/developerportal/app-insights/feedback/) section of the Developer Portal, but your app will keep working as usual.
 
-If you are using the [Native Mobile Resources](/appstore/modules/native-mobile-resources/) module (which includes another version of the Mendix Native Feedback widget), upgrade to version 3.5.1 or higher.
+If you are using the [Native Mobile Resources](/appstore/modules/native-mobile-resources/) module (which includes another version of the Mendix Native Feedback widget), upgrade to version 3.5.1 or higher. 
+
+If you are using the old Mendix Native Feedback widget, you might face some issues to receive feedback. To make use of [Feedback](/developerportal/app-insights/feedback/) in the Developer Portal, we recommend that you remove the server location value within the widget and keep it empty.
 
 In case of any questions, contact [Mendix Support](https://support.mendix.com/hc/en-us).
 {{% /alert %}}

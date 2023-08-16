@@ -138,15 +138,15 @@ When you select groups in the list or members or accessible apps in the group de
 
 ## 6 Company Settings {#company}
 
-### 6.1 Company Details {#company-details}
+### 6.1 General Settings {#general-company-settings}
 
-On the **Company Details** tab of this page, you can edit your **Company Name** and **Description**.
+On the **General Settings** tab of this page, you can edit your **Company Name** and **Description**.
 
 You can request new **Company Email Domains** by clicking **Add Domain**, upon which a request is sent to [Mendix Support](/developerportal/support/). Once a domain is added, every user who signs up to Mendix with that email domain will be assigned to your company.
 
 If you have [configured single sign on using BYOIDP](/developerportal/control-center/set-up-sso-byoidp/), you will have to wait until the domain has been added, then deactivate and reactivate BYOIDP to pick up the new email domain. It is not possible to add email domains which do not use single sign-on if it is activated for your company.
 
-{{< figure src="/attachments/developerportal/control-center/company-email-domains.png" width="650px" >}}
+To export all the email domains, use the **Export to Excel** button.
 
 You can also provide a specific **Security Contact** who is informed if there are critical security issues with the Mendix Platform and platform-supported Marketplace components. Mendix strongly recommends applying a team email address or a functional mailbox instead of a personal individual email address.
 
@@ -161,6 +161,8 @@ Click **Edit** to edit the Security Contact's **Name**.
 Click **Delete** to delete the existing Security Contact. This is the first step in changing a validated Security Contact. After you make the deletion, you can add the new Security Contact.
 
 For more information on security issues, see [Security Advisories](/releasenotes/security-advisories/).
+
+6.1.12 
 
 ### 6.2 Mendix Admins
 

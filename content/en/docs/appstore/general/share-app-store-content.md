@@ -93,11 +93,7 @@ For more information on what this program offers, see [Mendix Component Partner 
 
 ## 4 Adding New Marketplace Content {#adding}
 
-To add content to the Marketplace, follow the steps in each section below.
-
-### 4.1 Getting Started {#get-started}
-
-To start, click **Add content** in the top bar of the Marketplace home screen. Follow the steps in the section below to add content.
+To get started, click **Add content** in the top bar of the Marketplace home screen. Follow the steps in the sections below to add and submit the content.
 
 {{% alert color="info" %}}
 <a id="draft"></a>On each page of the upload flow, click one of the following buttons:
@@ -106,11 +102,11 @@ To start, click **Add content** in the top bar of the Marketplace home screen. F
 * **Save & Continue** to go to the next page of the upload flow
 {{% /alert %}}
 
-### 4.2 General {#general}
+### 4.1 General {#general}
 
 On the **General** page,  you need to provide some details about your component. 
 
-#### 4.2.1 Describing Your Content
+#### 4.1.1 Describing Your Content
 
 Follow these steps to describe your content:
 
@@ -133,11 +129,11 @@ Follow these steps to describe your content:
 
     {{% alert color="warning" %}}You can only set the location in the initial version of your content. You cannot change this setting by updating the Marketplace component later.{{% /alert %}}
 
-#### 4.2.2 Providing License Details {#license}
+#### 4.1.2 Providing License Details {#license}
 
 Select the type of **License** you want applied to your app (if applicable).
 
-##### 4.2.2.1 Open-Source Software Licenses
+##### 4.1.2.1 Open-Source Software Licenses
 
 These are the open-source software license options available and their requirements:
 
@@ -153,7 +149,7 @@ These are the open-source software license options available and their requireme
 The [GNU General Public License (GPL), version 3](https://www.gnu.org/licenses/gpl-3.0.en.html)  is not available to use, as everything licensed under GNU GPL is public; GNU GPL has a strong copyleft effect; modification has a strong copyleft effect; and all consuming apps should make their code public.
 {{% /alert %}}
 
-##### 4.2.2.2 Proprietary License {#proprietary-license}
+##### 4.1.2.2 Proprietary License {#proprietary-license}
 
 You can configure your own proprietary license for your company’s content. The license can be used for multiple components, and it can be used by everyone within your organization. 
 
@@ -166,7 +162,7 @@ Follow these steps to configure a proprietary license for a new public component
 3. Add a **License URL**, which should lead the user to a web page that lists the terms and conditions for using the component. Users can navigate to this web page by clicking the license name on the component details page.
 4. Add a **Reason** for the new license. This is for the purpose of the Mendix review only, and it will not be displayed on the component details page.
 
-#### 4.2.3 Generating New Leads {#lead-generation}
+#### 4.1.3 Generating New Leads {#lead-generation}
 
 A lead is a potential sales contact that expresses interest in your product or service. Lead routing is the end-to-end process of collecting the leads and distributing them to you. It is possible to configure lead routing for the following content types in the Marketplace:
 
@@ -184,13 +180,13 @@ You can configure the name of your **Call-to-action (CTA)** button from the foll
 
 In the **Provide one or more emails** field, you must specify the email address(es) where notifications and information can be sent.
 
-#### 4.2.4 Finishing Up
+#### 4.1.4 Finishing Up
 
 To finish up configuring this page, click **Upload** to upload an icon for your component.
 
 {{< figure src="/attachments/appstore/general/share-app-store-content/general.jpg"   width="600"  >}}
 
-### 4.3 Package {#package}
+### 4.2 Package {#package}
 
 On the **Package** page, select your content source. 
 
@@ -222,7 +218,7 @@ If this report is not attached and during our approval process we identify secur
 
 {{< figure src="/attachments/appstore/general/share-app-store-content/package.jpg"   width="600"  >}}
 
-### 4.4 Enable {#doc}
+### 4.3 Enable {#doc}
 
 On the **Enable** page, you can enter details on requirements and configuration for your component in the **Documentation**. Note that this documentation option is only available when the **Import Documentation** box has not been checked (on the **Package** page above). 
 
@@ -248,7 +244,7 @@ The editor comes with a set of basic formatting tools, such as bold, bullet list
 
 You can optionally add a **Video** and **Demo**.
 
-### 4.5 Capabilities {#capabilities}
+### 4.4 Capabilities {#capabilities}
 
 On the **Capabilities** page, you can provide the following details about a solutions template:
 
@@ -260,7 +256,7 @@ On the **Capabilities** page, you can provide the following details about a solu
 
 {{< figure src="/attachments/appstore/general/share-app-store-content/capabilities.jpg"   width="600"  >}}
 
-### 4.6 Publish {#publish}
+### 4.5 Publish {#publish}
 
 Finally, on the **Publish** page, you can review all the details of your component you entered so far and edit as necessary (via the **Edit Section** button) before clicking **Publish Content**.
 
@@ -268,7 +264,7 @@ Finally, on the **Publish** page, you can review all the details of your compone
 
 After you click **Publish Content**, your draft will be reviewed by Mendix before it is visible in the Marketplace. See the next section on details for the approval process.
 
-### 4.7 Approval Process {#approval}
+### 4.6 Approval Process {#approval}
 
 All components that are to be listed in the [Public Marketplace](#public-app-store) are subject to an approval process to ensure the quality and accuracy of the listing and that the component meets the expectations of users. Component submissions are processed in a queue and reviewed on a first-come, first-served basis within 5 working days after submission.
 

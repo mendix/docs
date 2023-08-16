@@ -14,14 +14,15 @@ This document presents suggestions that can help improve Studio Pro performance.
 
 These are simple actions you can take to improve your experience with Studio Pro.
 
-### 2.1 Update Studio Pro to the latest version (LTS)
+### 2.1 LTS or MTS Version
 
-Update your Studio Pro to the LTS version, Mendix is constantly releasing improvements in all supported major versions.
+Update your Studio Pro to the latest [LTS](/releasenotes/studio-pro/lts-mts/#lts) or [MTS](/releasenotes/studio-pro/lts-mts/#mts) version, as Mendix is constantly releasing improvements in all supported major versions.
 
 ### 2.2 Software
 
-* Use a Windows version currently listed on the [System Requirements](/refguide9/system-requirements/)
-* Keep Windows updated
+Use a Microsoft Windows version that is currently listed in the [System Requirements](/refguide/system-requirements/).
+
+Keep your Microsoft Windows updated.
 
 ### 2.2 Hardware
 

@@ -16,7 +16,7 @@ If you app uses the [Mendix Feedback](/appstore/modules/mendix-feedback/) module
 
 ### 1.1 What Happens to a User After They Submit Feedback? {#what-happens-to-user}
 
-After a user reports feedback in the app using the feedback widget, they will get an email with a link to their submitted feedback item. When they open the link, a page opens and shows feedback details. See the table below:
+After a user reports feedback in the app using the feedback widget, they will get an email with a link to their submitted feedback item. When the user opens the link, a page opens and shows their feedback details. See the table below:
 
 | What a User Can See on the Page                             | What a User Cannot See on the Page                           |
 | ----------------------------------------------------------- | ------------------------------------------------------------ |
@@ -29,6 +29,8 @@ After a user reports feedback in the app using the feedback widget, they will ge
 |                                                             | Team comments on this feedback item                          |
 
 This page also has a message feature for the user to communicate with your team directly. When the user posts a message, the assigned team member will receive an email. When there is a reply from your team, the user will get an email notification.
+
+{{% alert color="warning" %}}Do not share the link to your feedback details with someone unless it is necessary. Anyone who has this link can access your feedback details, including the title and the description of the feedback item as well as the screenshot if there is one.{{% /alert %}}
 
 If the user does not want to receive notifications anymore, they can clear the check box for the notification on the page, as shown in the image below: 
 

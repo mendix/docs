@@ -469,7 +469,7 @@ To see more details about supported databases and Kubernetes versions, see the [
 #### Prometheus Metrics
 
 * We have documented how to collect logs and metrics in Mendix for Private Cloud.
-* We have created a reference Grafana dashboard that offers a familiar experience for [Mendix Cloud V4 metrics](/developerportal/operate/trends-v4/) users.
+* We have created a reference Grafana dashboard that offers a familiar experience for [Mendix Cloud v4 metrics](/developerportal/operate/trends-v4/) users.
 
 To use Prometheus metrics, upgrade to Mendix Operator v2.1.0 (or above) and follow the [instructions](/developerportal/deploy/private-cloud-monitor/).
 
@@ -493,7 +493,7 @@ To use Prometheus metrics, upgrade to Mendix Operator v2.1.0 (or above) and foll
 #### Data migration tool (preview)
 
 * We have added a data migration tool - that can be used to transfer data between Mendix for Private Cloud environments.
-* This tool is compatible with Mendix Cloud V4 [backup files](/developerportal/operate/restore-backup/#format-of-backup-file).
+* This tool is compatible with Mendix Cloud v4 [backup files](/developerportal/operate/restore-backup/#format-of-backup-file).
 
 This tool is available as a technical preview. For documentation and download links, see the [documentation](/developerportal/deploy/private-cloud-data-transfer/).
 

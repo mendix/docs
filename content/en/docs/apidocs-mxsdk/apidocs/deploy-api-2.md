@@ -16,12 +16,12 @@ The Deploy API only works for apps which are deployed to the Mendix Cloud.
 The Deploy API allows you to manage application environments in the Mendix Cloud. Version 2 introduces improved APIs for some actions.
 
 {{% alert color="warning" %}}
-The V2 Deploy API only supports the endpoints listed here. For all other API calls, the [V1 API](/apidocs-mxsdk/apidocs/deploy-api/) must be used.
+The v2 Deploy API only supports the endpoints listed here. For all other API calls, the [v1 API](/apidocs-mxsdk/apidocs/deploy-api/) must be used.
 {{% /alert %}}
 
 ## 2 Authentication{#authentication}
 
-The Deploy API requires authentication via API keys as discussed in the [Authentication](/apidocs-mxsdk/apidocs/deploy-api/#authentication) section of *Deploy API* (V1).
+The Deploy API requires authentication via API keys as discussed in the [Authentication](/apidocs-mxsdk/apidocs/deploy-api/#authentication) section of *Deploy API* (v1).
 
 ## 3 API Calls
 

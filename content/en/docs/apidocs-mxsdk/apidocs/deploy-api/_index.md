@@ -559,7 +559,7 @@ An object with the following key-value pairs:
 ### 3.10 Upload Package{#upload-package}
 
 {{% alert color="info" %}}
-When uploading large (>300 MB) packages, this API can time out. In this case, you should switch to the [V2 version of this API](/apidocs-mxsdk/apidocs/deploy-api-2/#upload-package).
+When uploading large (>300 MB) packages, this API can time out. In this case, you should switch to the [v2 version of this API](/apidocs-mxsdk/apidocs/deploy-api-2/#upload-package).
 {{% /alert %}}
 
 #### 3.10.1 Description

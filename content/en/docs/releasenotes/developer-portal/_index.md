@@ -17,6 +17,13 @@ To see the current status of the Mendix Developer Portal and Control Center, see
 
 ## 2023
 
+### August 16, 2023
+
+#### Improvements
+
+* In members page, you can now sort members based on the number of apps user belongs to .
+* We have introduced an export feature for email domains under general settings tab which is present in Company settings page.
+
 ### April 20th, 2023
 
 #### Improvements

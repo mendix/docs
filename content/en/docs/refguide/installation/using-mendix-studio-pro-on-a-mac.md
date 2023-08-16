@@ -129,7 +129,7 @@ For information on how to change to your app and then see that change on your de
 To improve the performance, you can do the following: 
 
 * Run Parallels in a window, instead of Coherence mode
-* Store apps on disk C:\
+* Store apps on disk *C:\*
 
 ### 7.1 Increasing Network Speed {#increase-network-speed}
 

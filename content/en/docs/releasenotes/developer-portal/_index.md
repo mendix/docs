@@ -21,8 +21,8 @@ To see the current status of the Mendix Developer Portal and Control Center, see
 
 #### Improvements
 
-* In members page, you can now sort members based on the number of apps user belongs to .
-* We have introduced an export feature for email domains under general settings tab which is present in Company settings page.
+* In Control Center, on the [Members](/developerportal/control-center/#members) page you can now sort members based on the number of apps to which they belong.
+* In Control Center, we introduced an export feature to make it possible for you to export email domains on the [Company Settings](/developerportal/control-center/#company) tab.
 
 ### April 20th, 2023
 

@@ -106,7 +106,7 @@ The following steps will create a cluster, register and install a namespace, add
 13. Make an API call `POST /clusters/{namespaceId}` to update the namespace development mode and set `enableDevelopmentMode` to true . You can get the manifest for this update request from `GET /clusters/{namespaceId}`.
 
 {{% alert color="info" %}}
-If required, the invitation for the cluster/namespace member can be auto-accepted by setting the autoAcceptInvite to true in the update cluster/namespace API request.
+If required, the invitation for the cluster/namespace member can be auto-accepted by setting `autoAcceptInvite` to true in the update cluster/namespace API request.
 {{% /alert %}}
 
 ### 3.2 Using the API to Restart an App {#restart}

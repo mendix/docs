@@ -93,7 +93,7 @@ For more information on what this program offers, see [Mendix Component Partner 
 
 ## 4 Adding New Marketplace Content {#adding}
 
-To get started, click **Add content** in the top bar of the Marketplace home screen. Follow the steps in the sections below to add and submit the content.
+To get started, click **Add Content** in the top bar of the Marketplace home screen. Follow the steps in the sections below to add and submit the content.
 
 {{% alert color="info" %}}
 <a id="draft"></a>On each page of the upload flow, click one of the following buttons:

@@ -7,10 +7,6 @@ description: "The app development team can utilize Mendix's user-friendly [Mini 
 tags: ["mini survey", "app insights", "sprint", "developer portal"]
 ---
 
-{{% alert color="warning" %}}
-This feature is in Beta. For more information on Beta products, see [Beta Releases](/releasenotes/beta-features/).
-{{% /alert %}}
-
 ## 1 Introduction
 
 The Mini Surveys feature is part of the Mendix App Insights collection of tools designed to help you collect and aggregate feedback from your customers. 

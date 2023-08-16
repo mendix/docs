@@ -14,9 +14,13 @@ For more information on the Make It Native app, see [Getting the Make It Native 
 
 You can download the Make It Native app for [iOS](https://apps.apple.com/app/make-it-native/id1334081181) or [Android](/refguide9/getting-the-make-it-native-app/).
 
+{{% alert color="warning" %}}
+In Studio Pro [9.18](/releasenotes/studio-pro/9.18/), scanning your Mendix app's QR Code to launch it in the Make It Native or a custom developer app on iOS does not work. Please type in the URL instead or migrate your app to the latest version of Studio Pro 9.24.
+{{% /alert %}}
+
 ## Android 2.0.0 / iOS 2.0.0
 
-**Release date: 28th March 2023**
+**Release date: March 28, 2023**
 
 ### Improvements
 
@@ -28,7 +32,7 @@ You can download the Make It Native app for [iOS](https://apps.apple.com/app/mak
 
 ## Android 1.1.2 / iOS 1.1.1
 
-**Release date: 16th August 2021**
+**Release date: August 16, 2021**
 
 ### Improvements
 
@@ -40,13 +44,13 @@ You can download the Make It Native app for [iOS](https://apps.apple.com/app/mak
 
 ## Android 1.1.0 / iOS 1.1.0
 
-**Release date: 30th March 2021**
+**Release date: March 30, 2021**
 
 This is the official release of the Android and iOS versions of the Make It Native 9 app with support for Mendix Studio Pro 9.0. Both the Android and iOS versions allow you to preview and debug your locally-running native app on any [supported mobile platforms](/refguide9/system-requirements/#mobileos).
 
 ## Android 1.0.5
 
-**Release date: 11th May 2021**
+**Release date: May 11, 2021**
 
 ### Improvements
 
@@ -55,6 +59,6 @@ This is the official release of the Android and iOS versions of the Make It Nati
 
 ## Android 1.0.4 / iOS 1.0.2
 
-**Release date: 30th March 2021**
+**Release date: March 30, 2021**
 
 This is the official release of the Android and iOS versions of the Make It Native 9 app, with support for Mendix Studio Pro 9.0. Both Android and iOS versions allow you to preview and debug your locally running native app on any supported mobile platform.

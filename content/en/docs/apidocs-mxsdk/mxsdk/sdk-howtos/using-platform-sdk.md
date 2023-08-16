@@ -43,9 +43,9 @@ You can pass the following options to `createNewApp`:
 | `templateDownloadURL` | The URL of the download location of the app template package file (*.mpk*). If the template package is private, this URL must be authenticated with a signature. |
 | `templateId` | The UUID of the app template on which the app should be based. |
 
-If both `templateDownloadURL` and `templateId` are left blank, the app project will be created using the standard blank app template in the latest Mendix version.
+If both `templateDownloadURL` and `templateId` are left blank, the app will be created using the standard blank app template in the latest Mendix version.
 
-Here is an example for creating a Mendix app based on the [Asset Management](https://marketplace.mendix.com/link/component/107652) template:
+Here is an example for creating a Mendix app based on the [Asset Manager App](https://marketplace.mendix.com/link/component/69674) template:
 
 ```ts
 const app = await client.createNewApp("My Asset Management", {

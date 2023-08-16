@@ -467,15 +467,15 @@ export const DropDown = {
 
 The default class to style all text areas is named `DropDown`.
 
-### 6.4 Check Box
+### 6.4 Checkbox
 
-A check box input widget can be used to display and edit Boolean attributes and is rendered as either a switch or a checkbox. This is how a check box widget in switch render mode looks by default:
+A checkbox input widget can be used to display and edit Boolean attributes and is rendered as either a switch or a checkbox. This is how a checkbox widget in switch render mode looks by default:
 
-{{< figure src="/attachments/refguide9/mobile/native-mobile/native-styling-refguide/check-box.png" alt="check box"   width="350"  >}}
+{{< figure src="/attachments/refguide9/mobile/native-mobile/native-styling-refguide/check-box.png" alt="checkbox"   width="350"  >}}
 
-This is how a check box widget in checkbox render mode looks by default:
+This is how a checkbox widget in checkbox render mode looks by default:
 
-{{< figure src="/attachments/refguide9/mobile/native-mobile/native-styling-refguide/check-box-checkbox.png" alt="check box in checkbox render mode"   width="350"  >}}
+{{< figure src="/attachments/refguide9/mobile/native-mobile/native-styling-refguide/check-box-checkbox.png" alt="checkbox in checkbox render mode"   width="350"  >}}
 
 ```javascript
 export const Checkbox = {
@@ -490,7 +490,7 @@ export const Checkbox = {
     numberOfLines: 1 // The maximum number of lines to wrap the label text. If the text is any longer it will be cut off with an ellipsis.
   },
   labelDisabled: {
-    // Same properties as `label`. Overrides `label` styles if the check box is non-editable.
+    // Same properties as `label`. Overrides `label` styles if the checkbox is non-editable.
   },
   validationMessage: {
     // This has all TextStyle properties.
@@ -508,7 +508,7 @@ export const Checkbox = {
     // This has the same properties as `input`. Overrides `input` styles if there are validation errors.
   },
   inputDisabled: {
-    // This has the same properties as `input`. Overrides `input` styles if the check box is non-editable.
+    // This has the same properties as `input`. Overrides `input` styles if the checkbox is non-editable.
   },
   
   // The following properties are only used for the render mode: Checkbox
@@ -519,7 +519,7 @@ export const Checkbox = {
     size: null, // Custom size for the tick icon.
   },
   checkboxInputDisabled: {
-    // This has the same properties as `checkboxInput`. Overrides `checkboxInput` styles if the check box is non-editable.
+    // This has the same properties as `checkboxInput`. Overrides `checkboxInput` styles if the checkbox is non-editable.
   },
   checkboxInputError: {
     // This has the same properties as `checkboxInput`. Overrides `input` styles if there are validation errors.
@@ -533,7 +533,7 @@ export const Checkbox = {
 | `containerDisabled` | Same properties as `container`. | Overrides `container` styles if the text box is non-editable. | Both |
 | `label` | This has all TextStyle properties.   |  | Both |
 | `label` | `numberOfLines` | The maximum number of lines to wrap the label text. If the text is any longer it will be cut off with an ellipsis. Defaults to `1`. | Both |
-| `labelDisabled` | Same properties as `label`. | Overrides `label` styles if the check box is non-editable. | Both |
+| `labelDisabled` | Same properties as `label`. | Overrides `label` styles if the checkbox is non-editable. | Both |
 | `validationMessage` | This has all TextStyle properties.   |  | Both |
 | `input` | This has all ViewStyle properties.   |   | Switch |
 | `input` | `trackColorOn` | Custom color for the switch track when turned on. | Switch  |
@@ -541,14 +541,14 @@ export const Checkbox = {
 | `input` | `thumbColorOn` | Color of the foreground switch grip when turned on. If this is set on iOS, the switch grip will lose its drop shadow. | Switch |
 | `input` | `thumbColorOff` | Color of the foreground switch grip when turned off. If this is set on iOS, the switch grip will lose its drop shadow. | Switch |
 | `inputError` | This has the same properties as `input`. | Overrides `input` styles if there are validation errors. | Switch |
-| `inputDisabled` | This has the same properties as `input`. | Overrides `input` styles if the check box is non-editable. | Switch |
+| `inputDisabled` | This has the same properties as `input`. | Overrides `input` styles if the checkbox is non-editable. | Switch |
 | `checkboxInput` | This has all ViewStyle properties. |  | Checkbox |
 | `checkboxInput` | `color` | Custom color for the tick icon. | Checkbox |
 | `checkboxInput` | `size` | Custom size for the tick icon. | Checkbox |
-| `checkboxInputDisabled` | This has the same properties as `checkboxInput`. | Overrides `checkboxInput` styles if the check box is non-editable. | Checkbox |
+| `checkboxInputDisabled` | This has the same properties as `checkboxInput`. | Overrides `checkboxInput` styles if the checkbox is non-editable. | Checkbox |
 | `checkboxInputError` | This has the same properties as `checkboxInput`. | Overrides `input` styles if there are validation errors. | Checkbox |
 
-The default class to style all check box inputs is named `Checkbox`.
+The default class to style all checkbox inputs is named `Checkbox`.
 
 ### 6.5 Date Picker
 
@@ -570,7 +570,7 @@ export const DatePicker = {
     numberOfLines: 1 // The maximum number of lines to wrap the label text. If the text is any longer it will be cut off with an ellipsis. Render mode: Both.
   },
   labelDisabled: {
-    // Same properties as `label`. Overrides `label` styles if the check box is non-editable.
+    // Same properties as `label`. Overrides `label` styles if the checkbox is non-editable.
     // Render mode: Both.
   },
   value: {
@@ -634,11 +634,35 @@ The reference selector is an input widget that can be used to display and edit a
 
 The default class to style all reference selector inputs is named `ReferenceSelector`.
 
-## 7 Images, Videos and Files
+## 7 Images, Videos, and Files
 
-Images, videos and files help your user app manage images and other files. For more information on these widgets, see [Images, Videos, and Files](/refguide9/image-and-file-widgets/).
+Images, videos, and files help your user app manage images and other files. For more information on these widgets, see [Images, Videos, and Files](/refguide9/image-and-file-widgets/).
 
-### 7.1 Static Image {#image}
+### 7.1 Image (#new-image)
+
+The image widget can be used to show a static or dynamic image or an icon on a page, layout, or snippet.
+
+```javascript
+export const com_mendix_widget_native_image_Image = {
+  container: {
+    // All ViewStyle properties
+  },
+  image: {
+    // This has all ImageStyle properties.
+  },
+  backdrop: {
+    // All ViewStyle properties
+  }
+};
+```
+
+| Element             | Style Properties                    | Description                                                  |
+| ------------------- | ----------------------------------- | ------------------------------------------------------------ |
+| `container`         | This has all ViewStyle properties.  |                                                              |
+| `image`             | This has all ImageStyle properties. |                                                              |
+| `backdrop`          | This has all ViewStyle properties.  | Styles for the backdrop of an enlarged image view.           |
+
+### 7.2 Static Image {#image}
 
 The static image widget can be used to show a predefined image on a page, layout, or snippet. For more information on this widgets, see [Static Image](/refguide9/image/). 
 
@@ -672,7 +696,7 @@ export const Image = {
 
 The default class to style all static image styles is named `Image`. Please note that images loaded from the model are styled with `NativeDynamicImage` as described in the [Dynamic Image](#dynamic-image) section below.
 
-### 7.2 Dynamic Image {#dynamic-image}
+### 7.3 Dynamic Image {#dynamic-image}
 
 A dynamic image can be used to display an image. This widget supports the same style properties and structure as the [Static Image](#image) widget above.
 
@@ -1514,7 +1538,7 @@ export const com_mendix_widget_native_animation_Animation = {
 | `icon` | `size` | The size of the icon. |
 | `icon` | `color` | The color of the icon. |
 
-The default class to style all into screen widgets is named `com_mendix_widget_native_animation_Animation`.
+The default class to style all into screen widgets is named `com_mendix_widget_native_introscreen_IntroScreen`.
 
 ### 11.22 List View Swipe
 
@@ -2143,7 +2167,7 @@ The default class to style all Pie/Doughnut Chart widgets is named `com_mendix_w
 
 A switch input widget can be used to display and edit Boolean attributes and is rendered as a switch. This is how a Switch widget looks by default:
 
-{{< figure src="/attachments/refguide9/mobile/native-mobile/native-styling-refguide/check-box.png" alt="check box"   width="350"  >}}
+{{< figure src="/attachments/refguide9/mobile/native-mobile/native-styling-refguide/check-box.png" alt="checkbox"   width="350"  >}}
 
 ```javascript
 export const com_mendix_widget_native_switch_Switch = {
@@ -2164,14 +2188,14 @@ export const com_mendix_widget_native_switch_Switch = {
     // This has the same properties as `input`. Overrides `input` styles if there are validation errors.
   },
   inputDisabled: {
-    // This has the same properties as `input`. Overrides `input` styles if the check box is non-editable.
+    // This has the same properties as `input`. Overrides `input` styles if the checkbox is non-editable.
   },
   label: {
     // This has all TextStyle properties 
     numberOfLines: 1, // The maximum number of lines to wrap the label text. If the text is any longer it will be cut off with an ellipsis.
   },
   labelDisabled: {
-    // Same properties as `label`. Overrides `label` styles if the check box is non-editable.
+    // Same properties as `label`. Overrides `label` styles if the checkbox is non-editable.
   },
   validationMessage: {
     // This has all TextStyle properties.
@@ -2189,13 +2213,13 @@ export const com_mendix_widget_native_switch_Switch = {
 | `input` | `thumbColorOn` | Color of the foreground switch grip when turned on. If this is set on iOS, the switch grip will lose its drop shadow. |
 | `input` | `thumbColorOff` | Color of the foreground switch grip when turned off. If this is set on iOS, the switch grip will lose its drop shadow. |
 | `inputError` | This has the same properties as `input` | Overrides `input` styles if there are validation errors. |
-| `inputDisabled` | This has the same properties as `input` | Overrides `input` styles if the check box is non-editable. |
+| `inputDisabled` | This has the same properties as `input` | Overrides `input` styles if the checkbox is non-editable. |
 | `label` | This has all TextStyle properties   |  |
 | `label` | `numberOfLines` | The maximum number of lines to wrap the label text. If the text is any longer it will be cut off with an ellipsis. Defaults to `1`. |
-| `labelDisabled` | Same properties as `label` | Overrides `label` styles if the check box is non-editable. |
+| `labelDisabled` | Same properties as `label` | Overrides `label` styles if the checkbox is non-editable. |
 | `validationMessage` | This has all TextStyle properties.   |  |
 
-The default class to style all check box inputs is named `com_mendix_widget_native_switch_Switch`.
+The default class to style all checkbox inputs is named `com_mendix_widget_native_switch_Switch`.
 
 ### 11.31 Background Gradient
 

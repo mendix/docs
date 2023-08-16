@@ -34,7 +34,7 @@ Before starting this guide, make sure you have completed the following prerequis
 Android devices running MIUI (Xiaomi/Redmi devices) are not supported as Mendix test devices. They can run a production version of your Mendix app, but not the development version based on the [Make It Native App](/releasenotes/mobile/make-it-native-9/) or a [custom developer app](/refguide9/mobile/distributing-mobile-apps/building-native-apps/how-to-devapps/).
 {{% /alert %}}
 
-## 3 Creating a New App Based on the Quickstart App {#quickstartapp}
+## 3 Creating a New App Based on the Quickstarter App {#quickstartapp}
 
 For more information on building native mobile apps, see the [Build a Native Mobile Inspection App](https://academy.mendix.com/link/path/66) learning path (you must be signed in to the Mendix Platform to see this learning path).
 
@@ -61,7 +61,7 @@ To view your app on an Android device (or emulator), you must download and insta
 
 #### 3.2.2 Downloading for iOS {#downloading-for-ios}
 
-To view your app on a iOS device, you must download and install the Make It Native 9 app from the [Apple App Store](https://apps.apple.com/us/app/make-it-native-9/id1542182000):
+To view your app on an iOS device, you must download and install the Make It Native 9 app from the [Apple App Store](https://apps.apple.com/us/app/make-it-native-9/id1542182000):
 
 {{< figure src="/attachments/howto9/mobile/native-mobile/get-started/getting-started-with-native-mobile/make-it-native-ios.png" alt="native app on app store"   width="500"  >}}
 

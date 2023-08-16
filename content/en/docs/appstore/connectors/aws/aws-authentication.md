@@ -33,6 +33,20 @@ You can implement the above authentication types by means of adding a correspond
 If you plan to use AWS Authentication with a [platform-supported AWS connector](/appstore/aws-connectors/), refer to the documentation provided with the connector for more information about the required authentication type.
 {{% /alert %}}
 
+### 1.2 Example
+
+{{% youtube b3uQONB3yoY %}}
+
+### 1.3 Licensing and Cost
+
+This connector is available as a free download from the Mendix Marketplace, but the AWS service to which is connects may incur a usage cost. For more information, refer to AWS documentation.
+
+{{% alert color="info" %}}
+Most AWS services provide a free tier that allows easy access to most services. To find out if this service is included in the free tier, see [AWS Free Tier](https://aws.amazon.com/free/). To calculate the potential cost of using an AWS service outside of the free tier, use the [AWS Cost calculator](https://calculator.aws/).
+{{% /alert %}}
+
+Depending on your use case, your deployment environment, and the type of app that you want to build, you may also need a license for your Mendix app. For more information, refer to [Licensing Apps](/developerportal/deploy/licensing-apps-outside-mxcloud/).
+
 ## 2 Prerequisites {#prerequisites}
 
 Before you can use the AWS Authentication connector, you must first configure the required setting in AWS. Depending on the authentication type that you plan to use, you may need to prepare the following items:
@@ -68,9 +82,16 @@ In general, session credentials are the recommended authentication method for us
 
 Session credentials use Amazon IAM Roles Anywhere to assume an AWS Role. IAM Roles Anywhere is used to create a session token valid for a specific duration. The default duration is one hour. This is the recommended authentication method for most use cases.
 
-To authenticate your app in AWS by using session credentials, first add a client certificate in the Deployment Portal, and then add the **GetSessionCredentials** activity to a microflow in Studio Pro.
+You can implement session credentials in one of the following ways:
 
-#### 4.1.1  Adding a Client Certificate in the Developer Portal
+* By using the **GetSessionCredentials** activity in Studio Pro. For more information, see [Generating AWS Credentials in Studio Pro](#credentials-studio-pro).
+* By using credentials generated outside of Studio Pro, for example, through the AWS command-line interface. For more information, see [Using Credentials Generated Outside of Studio Pro](#credentials-cli).
+
+#### 4.1.1 Generating AWS Credentials in Studio Pro {#credentials-studio-pro}
+
+To generate session credentials for your app directly from Mendix Studio Pro, first add a client certificate in the Deployment Portal, and then add the **GetSessionCredentials** activity to a microflow in Studio Pro.
+
+##### 4.1.1.1  Adding a Client Certificate in the Developer Portal
 
 When creating a trust anchor in Amazon IAM Roles Anywhere, you must provide a [certificate](#prerequisites) that acts as the trust anchor. You must then add the same certificate as the client certificate in the Developer portal.
 
@@ -83,7 +104,7 @@ To add the certificate, perform the following steps:
 
    {{< figure src="/attachments/appstore/connectors/aws-authentication/ongoing-connections-certificate.png" >}}
 
-5. Click **New** .
+5. Click **New**.
 6. In the **Details** dialog box, in the **Web Service Call name** field, enter an identifier for the certificate, for example, *MY_S3*.
     The client certificate identifier is used as input when you create the session credentials.
    {{< figure src="/attachments/appstore/connectors/aws-authentication/identifier.png" >}}
@@ -92,7 +113,7 @@ The client certificate that you added now shows as **Currently enabled**.
 
 {{< figure src="/attachments/appstore/connectors/aws-authentication/certificate-currently-enabled.png" >}}
 
-#### 4.1.2 Using the GetSessionCredentials Activity in Studio Pro
+##### 4.1.1.2 Using the GetSessionCredentials Activity in Studio Pro
 
 After enabling the certificate, you can now configure the microflow that authenticates your session in AWS. You can do this by adding the **GetSessionCredentials** activity to a microflow.
 
@@ -128,7 +149,7 @@ If you want to use the AWS Authentication connector with an existing [platform-s
     The activity returns a **Credentials** object that provides the required AWS authentication credentials for your microflow.
 5. Continue the configuration by adding more activities to your microflow, as required by your specific use case.
 
-#### 4.1.3 Configuring the Local Setup
+##### 4.1.1.3 Configuring the Local Setup
 
 To run the AWS Authentication connector locally using Studio Pro, you must add the client certificate as a runtime configuration in Studio Pro.
 
@@ -148,13 +169,30 @@ If you want to use the AWS Authentication connector with an existing [platform-s
 
    {{< figure src="/attachments/appstore/connectors/aws-authentication/custom-settings.png" >}}
 
-   {{% alert color="info" %}}Fore more information, see [Runtime Customization](/refguide/custom-settings/).{{% /alert %}}
+   {{% alert color="info" %}}For more information, see [Runtime Customization](/refguide/custom-settings/).{{% /alert %}}
 
 4. Click **OK**.
 5. Go to the microflow that uses the **GetSessionCredentials** activity, and then double-click the **GetSessionCredentials** activity to open the **GetSessionCredentials** dialog box.
 6. Make sure that the value of **Client certificate ID** correctly indicates the position of the certificate in the runtime setting. For example, if three certificates have been added in the runtime setting, and the client certificate that you want to use is the second one, then set **Client certificate ID** to *2*. 
 
    {{< figure src="/attachments/appstore/connectors/aws-authentication/client-certificate-id.png" >}}
+
+#### 4.1.2 Using Credentials Generated Outside of Studio Pro {#credentials-cli}
+
+If you have credentials that have been generated without the help of the **GetSessionCredentials** action, for example through the AWS command line interface, you can use them in your app in the following manner:
+
+1. Create a **Credentials** object with the following parameters:
+    * **AccessKeyId** - your IAM access key 
+    * **SecretAccesskey** - your secret access key
+    * **Provider** - set to *_Session*
+		
+2. Create a **SessionToken** object with the following parameters:
+    * **Token** - your token 
+    * **Credentials_SessionToken** - the association between **Credentials** and **SessionToken** 
+
+{{< figure src="/attachments/appstore/connectors/aws-authentication/association.png" >}}
+		
+You can then use the above as a valid set of credentials.
 
 ### 4.2 Implementing Static Credentials {#static}
 
@@ -234,3 +272,7 @@ In this example, a `SigV4Builder` activity is created and associated with a `Cre
 These entities are used as input for the `GetSigV4Headers` Java action, which returns a response in the form of a `SigV4Header` entity.
 
 The values set in the response entity are used as request headers in the REST call to AWS.
+
+#### 5 Read More
+
+* [Securely Connect with the AWS Authentication Connector](https://www.mendix.com/blog/securely-connect-with-the-aws-authentication-connector/)

@@ -10,25 +10,25 @@ These are the [Mendix Platform SDK](/apidocs-mxsdk/mxsdk/) release notes, includ
 
 ## 5.1.0
 
-**Release date: March 11th, 2022**
+**Release date: March 11, 2022**
 
 * It is no longer mandatory to include the `branches/` prefix for SVN branch names that are not `trunk`.
 
 ## 5.0.0
 
-**Release date: February 23rd, 2022**
+**Release date: February 23, 2022**
 
 * With this new version, you can use new public APIs and support apps with a Git repository.
 
 ## 4.1.1
 
-**Release date: June 11th, 2019**
+**Release date: June 11, 2019**
 
 * We fixed the incorrect return type for the `createNewApp` method. We downgraded the `rest` dependency to 1.3.2 to always return a `When.js` promise (instead of a regular `ES6` promise).
 
 ## 4.1.0
 
-**Release date: December 17th, 2018**
+**Release date: December 17, 2018**
 
 * We introduced `PlatformSdkClient.deleteApp()`, which allows users to delete an app from the Mendix Platform.
 * We made `loadAsPromise()` compatible with the [Model SDK version 4.18.0](/releasenotes/sdk/model-sdk-4/#418).

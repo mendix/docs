@@ -14,10 +14,10 @@ With Mendix 8, you have the capacity to alter design properties with Mendix Stud
 ## 2 Prerequisites 
 
 * Install an integrated development environment (IDE) of your choice (Mendix recommends [Microsoft Visual Studio Code](https://code.visualstudio.com/))
-* Create a Mendix app based on the Blank Native Mobile App template by following the [Creating a New App Based on the Quickstart App](/howto8/mobile/getting-started-with-native-mobile/#quickstartapp) section of *Get Started with Native Mobile*
+* Create a Mendix app based on the Blank Native Mobile App template by following the [Creating a New App Based on the Quickstarter App](/howto8/mobile/getting-started-with-native-mobile/#quickstartapp) section of *Get Started with Native Mobile*
 * Download the Make It Native 8 app on your mobile device via either the [Google Play](https://play.google.com/store/apps/details?id=com.mendix.developerapp) store or the [Apple App Store](https://apps.apple.com/us/app/make-it-native/id1334081181) so you can text your app and see your styling changes
 
-### 3 Customizing the Quickstart App
+### 3 Customizing the Quickstarter App
 
 The [Blank Native Mobile App](https://marketplace.mendix.com/link/component/109511/) is styled using an Atlas UI resources package. This package consists of:
 
@@ -112,7 +112,7 @@ When you have specific design requirements, you will need to build custom classe
 
     To alter a class on your own, consult the [Native Mobile Styling Reference Guide](/refguide8/native-styling-refguide/) to understand widget structures.
 
-6. Now you will edit the code you pasted. Apply a transparent background color to customize the the default button widget:
+6. Now you will edit the code you pasted. Apply a transparent background color to customize the default button widget:
 
     ```javascript
     export const className = {

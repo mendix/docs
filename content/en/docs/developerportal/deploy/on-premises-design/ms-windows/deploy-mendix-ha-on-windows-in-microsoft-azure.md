@@ -14,7 +14,7 @@ It describes the installation and configuration of the Mendix software on multip
 
 * Setting up an Azure Load Balancer
 
-* Deploying a Mendix app with master and slave nodes
+* Deploying a Mendix app with leader and follower nodes
 
 * Configuring Azure Blob Storage as shared storage
 

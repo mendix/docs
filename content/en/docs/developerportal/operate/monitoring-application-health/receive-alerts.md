@@ -28,7 +28,7 @@ Before starting this how-to, make sure you have completed the prerequisites desc
 There are two ways to start receiving alerts:
 
 * The Technical Contact can grant you the **Receive Alerts** permission in **Node Permissions**
-* You can click the check box of **Email Alerts** on the **Alerts** page
+* You can click the checkbox of **Email Alerts** on the **Alerts** page
 
 ### 3.1 Node Permissions  
 
@@ -39,7 +39,7 @@ The Technical Contact can grant you the **Receive Alerts** permission by followi
 3. Open the node by clicking **Details**.
 4. Click **Security** in the left-hand menu.
 5. Switch to the **Node Permissions** tab.
-6. Select the check box below **Receive Alerts**. It is possible to set this permission separately for each environment. The changes will be automatically saved.
+6. Select the checkbox below **Receive Alerts**. It is possible to set this permission separately for each environment. The changes will be automatically saved.
 
     {{< figure src="/attachments/developerportal/operate/monitoring-application-health/receive-alerts/receive-alerts.png" >}}
 
@@ -51,7 +51,7 @@ You can manage the alerts by yourself, follow these steps:
 2. Open the [Switch to menu](/developerportal/#navigation) and select **Cloud**.
 3. Open the node by clicking **Details**.
 4. Click **Alerts** in the left-hand menu. 
-5. Select the check box of **Email Alerts**.  It is possible to set this option separately for each environment. The changes will be automatically saved.
+5. Select the checkbox of **Email Alerts**.  It is possible to set this option separately for each environment. The changes will be automatically saved.
 
     {{< figure src="/attachments/developerportal/operate/monitoring-application-health/receive-alerts/email-alerts.png" >}}
 
@@ -67,6 +67,6 @@ If you cannot resolve the issue in the instance reporting the critical error, yo
 * [Trends in the Mendix Cloud](/developerportal/operate/trends-v4/)
 * [Mendix Cloud](/developerportal/deploy/mendix-cloud-deploy/)
 * [About the Mendix Cloud](/developerportal/deploy/mxcloudv4/)
-* [App Roles](/developerportal/collaborate/app-roles/)
+* [App Roles](/developerportal/general/app-roles/)
 * [Node Permissions](/developerportal/deploy/node-permissions/) 
-* [Technical Contact](/developerportal/collaborate/app-roles/#technical-contact)
+* [Technical Contact](/developerportal/general/app-roles/#technical-contact)

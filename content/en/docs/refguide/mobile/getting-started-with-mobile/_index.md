@@ -34,7 +34,7 @@ Before starting this guide, make sure you have completed the following prerequis
 Android devices running MIUI (Xiaomi/Redmi devices) are not supported as Mendix test devices. They can run a production version of your Mendix app, but not the development version based on the [Make It Native App](/releasenotes/mobile/make-it-native-9/) or a [custom developer app](/refguide/mobile/distributing-mobile-apps/building-native-apps/how-to-devapps/).
 {{% /alert %}}
 
-## 3 Creating a New App Based on the Quickstart App {#quickstartapp}
+## 3 Creating a New App Based on the Quickstarter App {#quickstartapp}
 
 For more information on building native mobile apps, see the [Build a Native Mobile Inspection App](https://academy.mendix.com/link/path/66) learning path (you must be signed in to the Mendix Platform to see this learning path).
 
@@ -55,15 +55,11 @@ At this point you have a running native mobile app. To view your app on a mobile
 
 #### 3.2.1 Downloading for Android
 
-To view your app on an Android device (or emulator), you must download and install the Make It Native 9 app from the [Google Play store](https://play.google.com/store/apps/details?id=com.mendix.developerapp.mx9):
-
-{{< figure src="/attachments/howto/mobile/native-mobile/get-started/getting-started-with-native-mobile/make-it-native-googleplay.png" alt="native app on googleplay"   width="500"  >}}
+To view your app on an Android device (or emulator), you must download and install the Make It Native 10 app from the [Google Play store](https://play.google.com/store/apps/details?id=com.mendix.developerapp.mx10).
 
 #### 3.2.2 Downloading for iOS {#downloading-for-ios}
 
-To view your app on a iOS device, you must download and install the Make It Native 9 app from the [Apple App Store](https://apps.apple.com/us/app/make-it-native-9/id1542182000):
-
-{{< figure src="/attachments/howto/mobile/native-mobile/get-started/getting-started-with-native-mobile/make-it-native-ios.png" alt="native app on app store"   width="500"  >}}
+To view your app on an iOS device, you must download and install the Make It Native 10 app from the [Apple App Store](https://apps.apple.com/us/app/make-it-native-10/id6450037464).
 
 ### 3.3 Viewing Your App on Your Testing Device
 

@@ -16,7 +16,7 @@ To open the **Preferences** dialog box, go to **Edit > Preferences**.
 
 #### 2.1.1 Keep Active Document Selected in Project Explorer
 
-When the check box is selected, **Project Explorer** automatically highlights the document that is currently active. When the check box is cleared, the selection in **Project Explorer** remains unchanged when the active document changes.
+When the checkbox is selected, **Project Explorer** automatically highlights the document that is currently active. When the checkbox is cleared, the selection in **Project Explorer** remains unchanged when the active document changes.
 
 ### 2.2 Error List
 
@@ -40,7 +40,7 @@ Enable this setting to increase the speed at which a running application is upda
 
 ### 3.1 When Prompted by a Widget to Automatically Fill Its Contents, Select 'Yes' by Default
 
-This setting defines the default response to the question whether to automatically fill the contents of a data widget. This question is asked, for example, when dragging an Entity onto a Data View widget. When the check box is selected, the pre-selected answer is **yes**; otherwise it is **no**.
+This setting defines the default response to the question whether to automatically fill the contents of a data widget. This question is asked, for example, when dragging an Entity onto a Data View widget. When the checkbox is selected, the pre-selected answer is **yes**; otherwise it is **no**.
 
 ## 4 Advanced Tab
 

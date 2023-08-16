@@ -66,7 +66,7 @@ Ownership is important as it defines two aspects of an association:
 * where the association is recorded
 
 {{% alert color="info" %}}
-An external entity cannot be the owner for an association between a external and a local entity.
+An external entity cannot be the owner for an association between an external and a local entity.
 {{% /alert %}}
 
 #### 2.3.1 Cardinality

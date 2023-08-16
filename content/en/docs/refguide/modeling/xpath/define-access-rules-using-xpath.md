@@ -29,7 +29,7 @@ To prepare the data structure, GUI, and example data, follow these steps:
 
     {{< figure src="/attachments/refguide/modeling/xpath/define-access-rules-using-xpath/18581378.png" >}}
 
-    For more information on creating a domain model, see [Creating a Basic Data Layer](/refguide/create-a-basic-data-layer/).
+    For more information on creating a domain model, see [Configuring a Domain Model](/refguide/configuring-a-domain-model/).
 2. Create overview and detail pages to manage the **Customer** and **Order** objects (for more information on creating these pages, see [How to Create Your First Two Overview and Detail Pages](/howto/front-end/create-your-first-two-overview-and-detail-pages/)).
 3. Create menu items to access the **Order** and **Customer** overview pages (for more information on creating menu items, see [Setting Up Navigation](/refguide/setting-up-the-navigation-structure/)).
 4. Set the **Security level** of you application to **Production** (for more information, see [How to Create a Secure App](/howto/security/create-a-secure-app/)).

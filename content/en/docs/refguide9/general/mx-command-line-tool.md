@@ -86,7 +86,7 @@ The `OPTIONS` are described in the table below:
 | `app-name` | App | Assigns the specified app name to the app. |
 | `output-dir` | Current directory | The directory in which to create the app. |
 | `language-code` | en_US | The default language of the app. | 
-| `sprintr-app-id` | Optional | Associates the app [feedback features](/developerportal/collaborate/feedback/) with the provided [Developer Portal app](/developerportal/#my-apps). The value is a GUID. When accessing the app in the Developer Portal, this ID can be found in the browser's URL (for example, `1a428ea7-b00e-4166-9b23-20b7be88a40e`). |
+| `sprintr-app-id` | Optional | Associates the app [feedback features](/developerportal/app-insights/feedback/) with the provided [Developer Portal app](/developerportal/#my-apps). The value is a GUID. When accessing the app in the Developer Portal, this ID can be found in the browser's URL (for example, `1a428ea7-b00e-4166-9b23-20b7be88a40e`). |
 
 `TEMPLATE-MPK-FILE` is an optional path to a Mendix app package (*.mpk*) file. If this argument is omitted, the app is created with a default empty project template.
 
@@ -256,6 +256,133 @@ If there are conflicts during the merge, you have to resolve those by opening th
 | 3           | This code means an exception – an error occurred during the merge. Error details are printed to the command line output. |
 | 4           | The version is unsupported.                                  |
 
-### 3.6 Undocumented Options
+### 3.6 mx show-app-version Command [version 9.24.2+]
+
+The mx show-app-version command allows you to see the [publisher-side](/appstore/creating-content/sol-solutions-guide/) version of your solution (meaning, the version of the solution that you develop) and the [consumer-side](/appstore/creating-content/sol-solutions-impl/) version of the solution package that your app is based on (meaning, the version of the solution package when you consumed the solution).
+
+#### 3.6.1 Usage
+
+Use the following command pattern for `mx show-app-version`:
+
+`mx show-app-version MPR-FILE [OPTIONS]`
+
+The `OPTIONS` are described in the table below:
+
+| Option       | Shortcut | Result                            |
+| ------------ | -------- | --------------------------------- |
+| `--based-on` | `-b`     | Show `Based on` version.          |
+| `--help`     | `-h`     | Displays the help text and exits. |
+
+For MPR-FILE enter a *.mpr* file.
+
+`Based on` version is a version of a solution package (.mxsolution) current App is based on.
+
+#### 3.6.2 Examples
+
+`mx show-app-version C:\MyApp\MyApp.mpr`
+
+`mx show-app-version C:\MyApp\MyApp.mpr -b`
+
+#### 3.6.3 Return Codes
+
+This command uses common format exit codes for all app-version related commands.
+
+The command outputs a version requested. If there is no errors, exit code is 0.
+
+In case of errors the exit code consists of 3 digits XYZ:
+
+**X:** determines the error type:
+
+ 1: Parameter validation error.
+
+ 2: Output-related error.
+
+ 3: Errors related to the execution of the operation.
+
+**Y:** is the number of the parameter the error is related to (if applicable).
+
+**Z:** determines the following error details:
+
+ 1: File not found.
+
+ 2: App is too old.
+
+ 3: Distribution is not enabled.
+
+ 4: Version is not in the SemVer format.
+
+ 5: App was not initialized from a solution package.
+
+ The table below shows return codes and their meaning:
+
+| Return Code | Description                                                  |
+| ----------- | ------------------------------------------------------------ |
+| 0           | No errors                                                    |
+| 315         | if -b was specified but the app is not based on a solution.  |
+| 313         | if -b was not specified but distribution as a solution is not enabled for the app. |
+
+### 3.7 mx set-app-version Command [version 9.24.2+]
+
+The mx set-app-version command allows you to set the version of your [solution when building it](/appstore/creating-content/sol-solutions-guide/).
+
+#### 3.7.1 Usage
+
+Use the following command pattern for `mx set-app-version`:
+
+`mx set-app-version MPR-FILE VERSION`
+
+The `OPTIONS` are described in the table below:
+
+| Option   | Shortcut | Result                            |
+| -------- | -------- | --------------------------------- |
+| `--help` | `-h`     | Displays the help text and exits. |
+
+For MPR-FILE enter a *.mpr* file.
+
+For VERSION enter a version in [SemVer](https://semver.org) format
+
+#### 3.7.2 Examples
+
+`mx set-app-version C:\MyApp\MyApp.mpr 1.2.3`
+
+#### 3.7.3 Return Codes
+
+This command uses common format exit codes for all app-version related commands.
+
+The command outputs a version requested. If there is no errors, exit code is 0.
+
+In case of errors the exit code consists of 3 digits XYZ:
+
+**X:** determines the error type:
+
+ 1: Parameter validation error.
+
+ 2: Output-related error.
+
+ 3: Errors related to the execution of the operation.
+
+**Y:** is the number of the parameter the error is related to (if applicable).
+
+**Z:** determines error details:
+
+ 1: File is not found.
+
+ 2: App is too old.
+
+ 3: Distribution is not enabled.
+
+ 4: Version is not in the SemVer format.
+
+ 5: App was not initialized from a solution package.
+
+ The table below shows return codes and their meaning:
+
+| Return Code | Description                                              |
+| ----------- | -------------------------------------------------------- |
+| 0           | No errors                                                |
+| 124         | if Version is not in SemVer format                       |
+| 313         | if Distribution as a solution is not enabled for the app |
+
+### 3.8 Undocumented Options
 
 The mx tool contains options that are not described in this document. Those are for internal Mendix usage and are not officially supported. This might change in the future, but these options can be used only at your own risk.

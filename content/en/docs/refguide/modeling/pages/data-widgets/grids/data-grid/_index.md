@@ -53,8 +53,8 @@ The data source determines which objects will be shown in a list view. For gener
 
 The list view supports the following types of data sources: 
 
-* [Database source](/refguide/database-source/) – objects are retrieved directly form the database. The database source can be used in [offline](/refguide/offline-first/) applications. 
-* [XPath source](/refguide/xpath-source/) – objects are retrieved directly form the database
+* [Database source](/refguide/database-source/) – objects are retrieved directly from the database. The database source can be used in [offline](/refguide/offline-first/) applications. 
+* [XPath source](/refguide/xpath-source/) – objects are retrieved directly from the database
 * [Microflow source](/refguide/microflow-source/) – calculates the list of objects by executing a microflow
 * [Association source](/refguide/association-source/) – follows an association to get to objects
 

@@ -31,12 +31,12 @@ To deploy an app to Tencent, you need the following:
 
 * A cluster and namespace (see [Cluster and Namespace Management](#cluster-namespace), below)
 
-* You can use Siemens Low Code Platform Studio to create your app online, but if you want to use Siemens Low Code Platform Studio Pro China Edition
+* Siemens Low Code Platform Studio Pro China Edition
 
     * You will be able to download Siemens Low Code Platform Studio Pro, as the first step of the onboarding during your initial sign up.
     * You can also get a copy from the **下载 Studio Pro** option in the **切换到** menu at the top left of **App & Team Management**.
 
-* A Siemens Low Code Platform app created with Studio or Studio Pro
+* A Siemens Low Code Platform app created with Studio Pro
 
 ## 3 Cluster and Namespace Management{#cluster-namespace}
 
@@ -201,7 +201,7 @@ You can remove existing members.
 1. On the **成员** tab of the namespace details, click **编辑** next to the member you want to remove.
 2. Search for the member in the **编辑成员** dialog box by entering their email address.
 3. To remove the member, click **移除成员**.
-4. To edit the member, select or deselect the check boxes to change their privileges.
+4. To edit the member, select or deselect the checkboxes to change their privileges.
 5. Click **保存** to save the changes.
 
 If you want to change the rights for an existing member, you will have to remove them and then add them again with the updated rights.
@@ -446,9 +446,9 @@ The **详情** button opens the **环境详情** page which is described in more
 
 #### 5.2.3 Actions
 
-THe **操作** button opens a list of actions which you can perform quickly on the environment. Most of these actions will be disabled if the app is currently starting or stopping. These actions are:
+The **操作** button opens a list of actions which you can perform quickly on the environment. Most of these actions will be disabled if the app is currently starting or stopping. These actions are:
 
-* **设置为 Studio 部署目标** – sets this environment as the target if you publish the app from Studio
+* **设置为 Studio Pro 部署目标** – sets this environment as the target if you publish the app from Studio Pro
 * **启动应用** (only shown if app is stopped) – allows you to start a stopped application
 * **传输包** – allows you to deploy the deployment package in the current environment to another environment within the app, or to redeploy it in the current environment
 * **环境日志** – takes you to the log page defined by the cluster manager when they registered the namespace

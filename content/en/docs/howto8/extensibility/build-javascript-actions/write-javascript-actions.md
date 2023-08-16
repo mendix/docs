@@ -118,7 +118,7 @@ To create a JavaScript action that can synthesize text to speech, follow these s
                 resolve(true);
             };
             utterance.onerror = function(event) {
-                reject("An error occured during playback: " + event.error);
+                reject("An error occurred during playback: " + event.error);
             };
             window.speechSynthesis.speak(utterance);
         });
@@ -155,7 +155,7 @@ To create a JavaScript action that can synthesize text to speech, follow these s
 * [Build JavaScript Actions: Part 2 (Advanced)](/howto8/extensibility/write-javascript-github/)
 * [Implement Best Practices for JavaScript Actions](/howto8/extensibility/best-practices-javascript-actions/)
 * [JavaScript Actions](/refguide8/javascript-actions/)
-* [Mendix Client API](https://apidocs.rnd.mendix.com/8/client/index.html) 
+* [Mendix Client API](/apidocs-mxsdk/apidocs/client-api/) 
 * JavaScript Resources:
     * [JavaScript basics](https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/JavaScript_basics)
     * [Promises](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise)

@@ -18,7 +18,7 @@ This how-to will teach you how to do the following:
 * Add custom validations
 * Create an onChange action
 * Improve accessibility for screen readers 
-* Enable Mendix Studio Pro and Mendix Studio previews
+* Enable Mendix Studio Pro preview
 
 ## 2 Prerequisites
 
@@ -41,7 +41,7 @@ Right now the input is editable for any user at all times. However, the input sh
 
 To add these restrictions, follow the instructions below:
 
-1. In *TextBox.xml* add the [system property](/apidocs-mxsdk/apidocs/property-types-pluggable-widgets-8/#editability)  for `Editability` inside the `propertyGroup` of `Data source` (where you put the attribute inside `propertyGroup` will affect how the attribute renders in the Mendix Studios): 
+1. In *TextBox.xml* add the [system property](/apidocs-mxsdk/apidocs/property-types-pluggable-widgets-8/#editability)  for `Editability` inside the `propertyGroup` of `Data source` (where you put the attribute inside `propertyGroup` will affect how the attribute renders in the Mendix Studio Pro): 
 
     ```xml
     <propertyGroup caption="Editability">
@@ -520,7 +520,7 @@ You have now made your widget compatible with screen readers. If a screen reader
 
 ### 3.6 Enabling Preview Mode
 
-To easily view changes to your widget while in Mendix Studio or Mendix Studio Pro's design mode, you can add preview functionality to your TextBox widget. Note that the properties received in preview mode will be slightly different than at the runtime level.
+To easily view changes to your widget while in Mendix Studio Pro's **Design mode**, you can add preview functionality to your TextBox widget. Note that the properties received in preview mode will be slightly different than at the runtime level.
 
 To add preview mode functionality, create a new file *src/TextBox.editorPreview.tsx* and add this code to it:
 

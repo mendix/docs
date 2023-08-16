@@ -1,12 +1,13 @@
 ---
 title: "XPath day-of-year-from-dateTime"
 url: /refguide/xpath-day-of-year-from-datetime/
+weight: 13
 tags: ["studio pro"]
 ---
 
 ## 1 Overview
 
-The `day-of-year-from-dateTime()` function extracts the day in the year from a **Date and time** attribute so it can be used to compare to a value. Values range from 1 (January 1st) to 366 (due to leap years).
+The `day-of-year-from-dateTime()` function extracts the day in the year from a **Date and time** attribute so it can be used to compare to a value. Values range from 1 (January 1) to 366 (due to leap years).
 
 ## 2 Syntax
 
@@ -28,12 +29,24 @@ day-of-year-from-dateTime ( attribute [, timezone ] )
 
 This query returns all the logs where the day in the year in `DateAttribute` is 40 in the local time zone (for example, "2011-02-09" and "2012-02-09"):
 
-```java {linenos=false}
-//Logging.Log[day-of-year-from-dateTime(DateAttribute) = 40]
-```
+{{< tabpane >}}
+  {{% tab header="Environments:" disabled=true /%}}
+  {{< tab header="Studio Pro" lang="StudioPro" >}}
+    [day-of-year-from-dateTime(DateAttribute) = 40]
+    {{% /tab %}}
+  {{< tab header="Java" lang="JavaQuery" >}}
+     //Logging.Log[day-of-year-from-dateTime(DateAttribute) = 40]
+    {{% /tab %}}
+{{< /tabpane >}}
 
 This query returns all the logs where the day in the year in `DateAttribute` is 40 in the New York time zone (for example, "2011-02-09" and "2012-02-09"):
 
-```java {linenos=false}
-//Logging.Log[day-of-year-from-dateTime(DateAttribute, 'America/New_York') = 40]
-```
+{{< tabpane >}}
+  {{% tab header="Environments:" disabled=true /%}}
+  {{< tab header="Studio Pro" lang="StudioPro" >}}
+    [day-of-year-from-dateTime(DateAttribute, 'America/New_York') = 40]
+    {{% /tab %}}
+  {{< tab header="Java" lang="JavaQuery" >}}
+     //Logging.Log[day-of-year-from-dateTime(DateAttribute, 'America/New_York') = 40]
+    {{% /tab %}}
+{{< /tabpane >}}

@@ -75,7 +75,7 @@ The feature to use objects and attributes can be used for [List view](/refguide9
 
 #### 2.4.1 Known Errors
 
-Currently, Studio Pro does not support database retreivals using XPath constraints that walk through both regular databases and [external entities](/refguide9/external-entities/). This results in the `Mixed source retrieval is currently not supported` error. If you experience this error, use Data Grid 2 instead of Data Grid, then disable sorting and remove the option to search on external entity attributes.
+Currently, Studio Pro does not support database retrievals using XPath constraints that walk through both regular databases and [external entities](/refguide9/external-entities/). This results in the `Mixed source retrieval is currently not supported` error. If you experience this error, use Data Grid 2 instead of Data Grid, then disable sorting and remove the option to search on external entity attributes.
 
 ## 3 Read More
 

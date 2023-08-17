@@ -55,7 +55,6 @@ The document generation functionality is under active development. While we cann
 
 ### 1.4 Known issues
 
-* When styling your document, you might see conflicting styles introduced by Atlas Core. These styles are specific to the print media and use the `!important` property. This means you can only override them using `!important` property as well. You can find this property in the file *atlas_core/web/core/\_legacy/bootstrap/_bootstrap.scss*.
 * The `System.Owner` association is currently not set to the user which has run the microflow.
 * Some widgets, such as the [Charts](/appstore/widgets/charts/) widget, might not be fully loaded if they are rendered before all data is available. We check on pending network requests to prevent this, but this is not 100% reliable.
 * If you have the [Application Performance Monitor (APM)](/appstore/partner-solutions/apd/) or [Application Performance Diagnostics (APD)](/appstore/partner-solutions/apd/) add-on enabled in your app, or set the log level of the **Services** log node to *Trace*, the PDF Document Generation module will not be able to generate documents when used in Mendix Cloud. Note: This is only applicable for apps built in Mendix versions below 9.24.5 and Mendix 10.0.0.

@@ -90,31 +90,31 @@ Placeholder text will not be displayed if a native date picker is available (tha
 
 {{% snippet file="/static/_includes/refguide/widget-validation-link.md" %}}
 
-### 3.6 Accessibility Section{#accessibility}
+### 3.7 Accessibility Section{#accessibility}
 
-#### 3.6.1 Aria Required
+#### 3.7.1 Aria Required
 
 In a text area widget, when **Aria required** is set to **Yes** then assistive technologies will read out the field that is required. When set to **No** then assistive technologies will not read the field out.
 
-### 3.7 Common Section{#common}
+### 3.8 Common Section{#common}
 
 {{% snippet file="/static/_includes/refguide/common-section-link.md" %}}
 
-### 3.8 Events Section{#events}
+### 3.9 Events Section{#events}
 
-#### 3.8.1 On Change{#on-change}
+#### 3.9.1 On Change{#on-change}
 
 The on-change property specifies an action that will be executed when leaving the widget, either by using the <kbd>Tab</kbd> key or by clicking another widget, after the value has been changed.
 
 {{% snippet file="/static/_includes/refguide/events-section-link.md" %}}
 
-#### 3.8.2 On Enter
+#### 3.9.2 On Enter
 
 The on-enter property specifies an action that will be executed when the widget is entered, either by using the <kbd>Tab</kbd> key or by clicking it with the mouse.
 
 {{% snippet file="/static/_includes/refguide/events-section-link.md" %}}
 
-#### 3.8.3 On Leave
+#### 3.9.3 On Leave
 
 The on-leave property specifies an action that will be executed when leaving the widget, either by using the <kbd>Tab</kbd> key or by clicking another widget.
 

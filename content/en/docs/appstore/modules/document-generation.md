@@ -318,11 +318,7 @@ In general, we recommend you to perform the following steps in case of any issue
 
 #### 5.2.1 Rendering/Styling Issues
 
-In case of issues regarding styling, we recommend you to temporarily add the page microflow to your app navigation (See step 2 in the [Module Usage and Runtime Issues](#module-usage-runtime-issues) section). Open the page using Chrome and verify if the print version of the page matches the expected page. You can do this as follows:
-
-* Enable print media type emulation, see [Emulate CSS Media Type (Enable Print Preview)](https://developer.chrome.com/docs/devtools/rendering/emulate-css/#emulate-css-media-type-enable-print-preview) in *Chrome Developers Documentation*. This is the preferred option, as this allows you to inspect the page and styling,
-
-* Alternatively, you can right-click the page and select **Print**.
+In case of issues regarding styling, we recommend you to temporarily add the page microflow to your app navigation (See step 2 in the [Module Usage and Runtime Issues](#module-usage-runtime-issues) section). This allows you to preview the page in your browser and inspect the applied styles. We recommend to use Chrome or Chromium and the [Chrome DevTools](https://developer.chrome.com/docs/devtools/css/) for this, since Chromium is the browser that is used by the document generation service.
 
 #### 5.2.2 Local Service Errors
 

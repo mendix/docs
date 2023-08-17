@@ -13,6 +13,21 @@ For information on the current status of deployment to Mendix for Private Cloud 
 
 ## 2023
 
+### August 17, 2023
+
+#### Portal Improvements
+
+* We have improved the user experience for the Cluster Manager pages by revamping the UI and adding sorting and searching.
+* We have changed the layout of the Environment pages in the Developer Portal to a full-width view with navigation panel in a sidebar to the left.
+
+#### Deploy API Improvements
+
+* We have fixed the issue in the `Get Environments` API call, where the user was unable to retrieve all environments in an application when the same internal id was used for multiple environments. (Ticket: 190490)
+* We have added a fix for the `Update Environment` API call, where the user was unable to update environments which are using a dedicated storage plan. (Ticket 189615)
+* We have added the ability to automatically accept invitations for namespace and cluster membership.
+* We have updated the mandatory fields (email, role) in the Update Namespace/Cluster API calls.
+* We have made permissions mandatory if the role is set to CUSTOM.
+
 ### July 13, 2023
 
 #### Portal Improvements

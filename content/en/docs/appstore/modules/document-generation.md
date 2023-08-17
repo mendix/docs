@@ -250,7 +250,7 @@ We recommend to try to log in as the service user at least once, to verify if th
 * You can use the **Page orientation** design property to set the page orientation for your documents. This property is available in the **Design properties** section in the properties for a page.
 * You can use the **Page size** design property to set the page size for your documents. This property is available in the **Design properties** section in the properties for a page.
 * You can use the **Show page numbers** design property to enable page numbers for your documents. At the moment, we only support basic page numbers. We will extend and add support for custom headers and footers at a later stage.
-* For advanced styling, you can use the styling editor in Studio Pro to style your documents, for example by using the `@media print` and `@page` rules in your style sheet.
+* For advanced styling, you can use the styling editor in Studio Pro to style your documents. The module stylesheet includes several variables, such as *$document-page-margin* and *$document-default-bgcolor*, to customize your documents.
 
 ## 5 Troubleshooting
 

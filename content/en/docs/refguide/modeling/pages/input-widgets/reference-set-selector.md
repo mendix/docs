@@ -41,21 +41,21 @@ The reference set selector looks a lot like a [data grid](/refguide/data-grid/) 
 You must explicitly commit the object in the data view containing your reference set selector to save the association changes. This can be done, for example, by having a **Save** button for the object in the data view (as shown for the *Customer* entity in the picture above).
 {{% /alert %}}
 
-## 2 Properties
+## 2 Properties Pane
 
-An example of reference set selector properties is represented in the image below:
+The properties pane is divided into two major sections by a toggle at the top of the pane: **Properties** and **Styling**. Reference set selector consist of the following sections:
 
-{{< figure src="/attachments/refguide/modeling/pages/input-widgets/reference-set-selector/reference-set-selector-properties.png"   width="250"  >}}
-
-Reference set selector properties consist of the following sections:
-
-* [Common](#common)
-* [Data source](#data-source)
-* [Design Properties](#design-properties)
-* [Events](#events)
+Properties:
 * [General](#general)
-* [Selectable Objects](#selectable-objects)
+* [Data source](#data-source)
 * [Visibility](#visibility)
+* [Events](#events)
+* [Common](#common)
+* [Selectable Objects](#selectable-objects)
+
+Styling:
+* [Design Properties](#design-properties)
+* [Common](#common-styling)
 
 There are three additional sets of properties which do not appear in the properties of the reference set selector widget.
 
@@ -66,6 +66,10 @@ There are three additional sets of properties which do not appear in the propert
     {{< figure src="/attachments/refguide/modeling/pages/input-widgets/reference-set-selector/sort-bar.png" >}}
 
 3. Each attribute is displayed in a column. You can find out more about the properties of these columns in [Grid Columns](/refguide/columns/)
+
+## 3 Properties
+
+## 4 Styling
 
 ### 2.1 Common Section{#common}
 

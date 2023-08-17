@@ -162,8 +162,6 @@ Click **Delete** to delete the existing Security Contact. This is the first step
 
 For more information on security issues, see [Security Advisories](/releasenotes/security-advisories/).
 
-6.1.12 
-
 ### 6.2 Mendix Admins
 
 The **Mendix Admins** tab lists all the current Mendix Admins in your company. A Mendix Admin will normally be someone in the IT department of your company, and they will have full access to Control Center to perform all available tasks. 

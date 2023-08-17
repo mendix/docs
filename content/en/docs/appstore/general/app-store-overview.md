@@ -6,10 +6,10 @@ weight: 1
 description: "Presents an overview of how to find and use content from the Mendix Marketplace."
 tags: ["marketplace",  "widget", "connector", "module", "partner"]
 aliases:
+    - /community/app-store/app-store-overview/
+    - /developerportal/app-store/app-store-overview/
     - /community/app-store/app-store-overview.html
     - /developerportal/app-store/app-store-overview.html
-    - /community/app-store/app-store-overview
-    - /developerportal/app-store/app-store-overview
 ---
 
 ## 1 Introduction

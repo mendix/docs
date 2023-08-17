@@ -164,7 +164,7 @@ The on-change property specifies an action that will be executed when leaving th
 
 ### 3.8 Accessibility{#accessibility}
 
-For more information on the **Accessible**, **Screen Reader Caption**, and **Screen Reader Hint** properties, see [Mobile Accessibility](/refguide/mobile/using-mobile-capabilities/mobile-accessibility/). That document also contains more details on how Mendix widgets can work with screen readers, as well as details on special use cases.
+The native version of this widget has multiple accessibility properties. For more information on the **Accessible**, **Screen Reader Caption**, and **Screen Reader Hint** properties, see [Mobile Accessibility](/refguide/mobile/using-mobile-capabilities/mobile-accessibility/). That document also contains more details on how Mendix widgets can work with screen readers, as well as details on special use cases.
 
 ### 3.9 Common Section{#common}
 

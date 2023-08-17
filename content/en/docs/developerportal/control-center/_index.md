@@ -138,7 +138,7 @@ When you select groups in the list or members or accessible apps in the group de
 
 ## 6 Company Settings {#company}
 
-### 6.1 General Settings {#general-company-settings}
+### 6.1 General Settings {#company-general-settings}
 
 On the **General Settings** tab of this page, you can edit your **Company Name** and **Description**.
 

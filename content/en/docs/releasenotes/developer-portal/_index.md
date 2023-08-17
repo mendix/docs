@@ -22,7 +22,7 @@ To see the current status of the Mendix Developer Portal and Control Center, see
 #### Improvements
 
 * In Control Center, on the [Members](/developerportal/control-center/#members) page you can now sort members based on the number of apps to which they belong.
-* In Control Center, we introduced an export feature to make it possible for you to export email domains on the [General Settings](/developerportal/control-center/#general-company-settings) tab of the [Company Settings](/developerportal/control-center/#company) page.
+* In Control Center, we introduced an export feature to make it possible for you to export email domains on the [General Settings](/developerportal/control-center/#company-general-settings) tab of the [Company Settings](/developerportal/control-center/#company) page.
 
 ### August 12, 2023
 
@@ -248,7 +248,7 @@ To see the current status of the Mendix Developer Portal and Control Center, see
 
 #### New Features
 
-We have released a feature in Control Center where you can add and manage a [Security Contact](/developerportal/control-center/#company-details) for your company. A Security Contact is informed if there are critical security issues with the Mendix Platform and platform-supported Marketplace components.
+We have released a feature in Control Center where you can add and manage a [Security Contact](/developerportal/control-center/#company-general-settings) for your company. A Security Contact is informed if there are critical security issues with the Mendix Platform and platform-supported Marketplace components.
 
 With this feature, you can do the following:
 

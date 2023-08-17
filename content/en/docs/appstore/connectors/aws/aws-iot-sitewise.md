@@ -461,6 +461,25 @@ NOT ALL ARE GENERALIZATIONS! -> The entities in the table below describe all gen
 | IntegerValue | Describes asset property data of type integer (whole number) |
 | StringValue | Describes asset property data of type string (sequence of characters). |
 
+### 4.1.49 GetAssetPropertyValueHistoryRequest {#get-asset-property-value-history-request}
+
+| Attribute | Description |
+| --- | --- |
+| AssetID | Describes the ID of the asset and is a required parameter coupled with PropertyID. Alternatively, the PropertyAlias attribute can be used instead. |
+| EndDate | Describes the inclusive end of the range from which to query historical data. |
+| MaxResults | Describes the maximum number of results to return for each paginated request. |
+| NextToken | Describes the token to be used for the next set of paginated results. |
+| PropertyAlias | Describes the alias that identifies the property, such as an OPC-UA server data stream path (for example, /company/windfarm/3/turbine/7/temperature) and is a required parameter when AssetID and PropertyID are not specified. |
+| PropertyID | Describes the ID of the asset property and is a required parameter coupled with AssetID. Alternatively, the PropertyAlias attribute can be used instead. |
+| Quality | Describes the quality by which to filter asset data. |
+| StartDate | Describes the exclusive start of the range from which to query historical data. |
+| TimeOrdering | Describes the chronological sorting order of the requested information. |
+
+### 4.1.50 GetAssetPropertyValueHistoryResponse {#get-asset-property-value-history-response}
+
+| Attribute | Description |
+| --- | --- |
+| NextToken | Describes the token for the next set of results, or null if there are no additional results. |
 
 ### 4.1. ENTITY_NAME {#entity_name}
 
@@ -602,6 +621,13 @@ An enumeration is a predefined list of values that can be used as an attribute t
 | BAD | BAD | The data is affected by an issue such as sensor failure. |
 | UNCERTAIN | UNCERTAIN | The data is affected by an issue such as sensor inaccuracy. |
 
+#### 4.2.54 ENUM_TimeOrdering
+
+| Name | Caption | Description |
+| --- | --- | --- |
+| ASCENDING | ASCENDING | Chronological sorting order of the requested information is ascending. |
+| DESCENDING | DESCENDING | Chronological sorting order of the requested information is descending. |
+
 ### 4.3 Activities {#activities}
 
 Activities define the actions that are executed in a microflow or a nanoflow.
@@ -715,6 +741,14 @@ The `GetAssetPropertyValue` Amazon Iot SiteWise activity allows you to retrieve 
 | Input | Output | 
 | --- | --- | 
 | `GetAssetPropertyValueRequest` | `GetAssetPropertyValueResponse` |
+
+#### 4.3.13 GetAssetPropertyValueHistory {#get-asset-property-value-history}
+
+The `GetAssetPropertyValueHistory` Amazon Iot SiteWise activity allows you to retrieve a set of an asset property's historic values. It requires a valid `ENUM_Region` parameter and a `GetAssetPropertyValueHistoryRequest` object and returns a `GetAssetPropertyValueHistoryResponse` object.
+
+| Input | Output | 
+| --- | --- | 
+| `GetAssetPropertyValueRequestHistory` | `GetAssetPropertyValueResponseHistory` |
 
 ##### OPTIONAL, INCLUDE ONLY IF THE ACTIVITY RETURNS AN OUTPUT:
 

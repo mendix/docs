@@ -81,7 +81,7 @@ You now need to add a namespace to your cluster. Your cluster can contain severa
 
 To add a namespace, do the following:
 
-1. Click Details Icon:
+1. Click the details icon on the top right of the page:
 
     {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/empty-cluster.png" >}}
 
@@ -113,11 +113,11 @@ If you are not already on the installation tab for your namespace, go to it by f
 
     {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/cluster-manager.png" >}}
 
-2. Click Details icon next to the namespace you want to use.
+2. Click **Details** next to the namespace you want to use.
 
     {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/cluster-details.png" >}}
 
-3. Select the **Installation** section.
+3. Select **Installation** from the navigation bar to the left of the page.
 
 Now you can download the Configuration Tool by doing the following:
 
@@ -1409,7 +1409,7 @@ Enabling the Development Mode option will allow users to change the type of an e
 
 #### 7.2.8 PCLM Statistics
 
-This tab shows information about claimed licences, operator licenses and runtime licences.
+This tab shows information about claimed licenses, operator licenses and runtime licenses.
 
 Select **Claim** to view a list of licenses from the license bundle which are claimed in the namespace.
 

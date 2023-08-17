@@ -155,8 +155,8 @@ Please note that there is a limited support for Custom permissions in Deploy API
 
 ## 4 API Reference
 
-{{< swaggerui src="/openapi-spec/private-cloud-deploy-api.yaml"  >}}
-
 {{% alert color="info" %}}
-Please note that the fields marked as non-editable are used for read-only purposes. Any modifications made on the values of these fields will be ignored.
+Please note that the fields marked as non-editable in the OpenAPI .yaml file are used for read-only purposes. Any modifications made to the values of these fields will be ignored.
 {{% /alert %}}
+
+{{< swaggerui src="/openapi-spec/private-cloud-deploy-api.yaml"  >}}

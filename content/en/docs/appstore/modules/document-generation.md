@@ -7,10 +7,6 @@ tags: ["marketplace", "marketplace component", "document generation", "platform 
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
-{{% alert color="warning" %}}
-This module is currently in Public Beta and should be used for testing purposes only. For more information on Beta products, see [Beta Releases](/releasenotes/beta-features/).
-{{% /alert %}}
-
 ## 1 Introduction
 
 The [PDF Document Generation](https://marketplace.mendix.com/link/component/211553) module allows you to generate pixel-perfect PDF documents based on regular pages in your app.

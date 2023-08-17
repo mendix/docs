@@ -164,13 +164,7 @@ The on-change property specifies an action that will be executed when leaving th
 
 ### 3.8 Accessibility{#accessibility}
 
-#### 3.8.1 Accessible
-yes/no
-#### 3.8.2 Screen Reader Caption
-
-The Screen reader caption property allows information to be read by screen readers when **Show label** is set to **No** in an input widget.
-
-#### 3.8.3 Screen Reader Hint
+For more information on the **Accessible**, **Screen Reader Caption**, and **Screen Reader Hint** properties, see [Mobile Accessibility](/refguide/mobile/using-mobile-capabilities/mobile-accessibility/). That document also contains more details on how Mendix widgets can work with screen readers, as well as details on special use cases.
 
 ### 3.9 Common Section{#common}
 
@@ -271,7 +265,7 @@ In microflow settings you can specify what parameters are passed to the microflo
 
 {{% snippet file="/static/_includes/refguide/design-section-link.md" %}} 
 
-### 4.1 Common Section{#common-styling}
+### 4.2 Common Section{#common-styling}
 
 {{% snippet file="/static/_includes/refguide/common-section-link.md" %}}
 

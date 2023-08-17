@@ -98,7 +98,7 @@ To allow the module to send and receive document generation requests on your Men
 
 1. Enable the DocGen request handler.
 2. For applications using Mendix [custom domains](/developerportal/deploy/custom-domains/), configure custom domain support.
-3. Register your app environment.
+3. Register your app environments.
 
 The steps for each procedure are described in the sections below. 
 
@@ -171,9 +171,9 @@ To set it up you need to set the values of the constants **DocumentGeneration.Us
 
 10. Restart your app for the new values to take effect.
 
-Now you can [register your app environment](#register-app).
+Now you can [register your app environments](#register-app).
 
-#### 3.2.3 Registering Your App Environment {#register-app}
+#### 3.2.3 Registering Your App Environments {#register-app}
 
 1. Add the snippet **Snip_AppRegistration** to a page that is accessible to admin users in your app.
 2. Enable the scheduled event **SE_AccessToken_Refresh** to automatically refresh the access token that is used to secure access to the Document Generation cloud service.
@@ -181,6 +181,9 @@ Now you can [register your app environment](#register-app).
 4. Sign in to the app environment you want to register.
 5. Navigate to the page that contains the **Snip_AppRegistration** snippet.
 6. Follow the steps on the page to register your app environment.
+7. Repeat the steps above for any other app environment that you want to register.
+
+{{% alert color="info" %}}Each of your app environments needs to be registered separately. A successful app registration is limited to the App URL that was provided during the registration. Note that a change in the App URL, or restoring a database backup from one environment to another, will require you to register the app environment(s) again.{{% /alert %}}
 
 ## 4 Usage
 

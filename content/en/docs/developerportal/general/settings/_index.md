@@ -59,14 +59,14 @@ Only users with the **App Settings** permission can change the description of th
 
 On the **Access Management** tab, you can manage and invite app users. App users are end-users who can access the deployed app on specific environments. They can use and test your deployed app, and provide feedback.
 
-To manage users or invite users for an app deployed on a specific environment, click **Mange Users** or **Invite Users** for that environment. For more information, see the [Manage Users](#manage-users) and [Invite Users](#invite-users) section below.
+To manage users or invite users for an app deployed on a specific environment, click **Mange Users** or **Invite Users** for that environment. For more information, see the [Managing Users](#manage-users) and [Inviting Users](#invite-users) section below.
 
 On the tab, you can only see the environments that satisfy these requirements:
 
 * [Mendix Single Sign-On](/developerportal/deploy/mendix-sso/) is implemented in the app using the [Mendix SSO](/appstore/modules/mendix-sso/) module (for more information, see [Mendix Single Sign-On](/developerportal/deploy/mendix-sso/))
 * Your user role allows you to manage other users (for more information, see the [User Management Properties](/refguide/user-roles/#user-management) section of *User Roles*)
 
-### 3.1 Manage Users {#manage-users}
+### 3.1 Managing Users {#manage-users}
 
 When you click **Manage Users** for your environment, a dialog box opens with a list of the current app users you can remove or edit:
 
@@ -78,7 +78,7 @@ To edit an app user's roles, click **Edit** by their name. Permissions for these
 If an app user has been granted access to an app environment through a [group](/developerportal/control-center/#groups), only a Mendix Admin can remove them from that environment (by removing them from that group) or edit the roles granted by that group policy.
 {{% /alert %}}
 
-### 3.2 Invite Users {#invite-users}
+### 3.2 Inviting Users {#invite-users}
 
 To invite new app users to your app, click **Invite Users** for that environment or via the **Manage Users** and follow these steps:
 
@@ -193,7 +193,7 @@ The **History** tab presents the collaboration actions for the app. On this page
 
 {{< figure src="/attachments/developerportal/general/settings/history.png"   width="700"  >}}
 
-When you select a history item and click **Show item**, the details of the story, Sprint, or [feedback item](/developerportal/general/feedback/) will be presented.
+When you select a history item and click **Show item**, the details of the story, Sprint, or [feedback item](/developerportal/app-insights/feedback/) will be presented.
 
 ## 9 Story Archive {#story-archive}
 

@@ -20,7 +20,7 @@ The **App Explorer** consists of the following:
     * **Domain model** – a model that describes the information (or *data*) used by your application in an abstract way; one module can have one domain model only 
     * **Document** – an individual file, for example, a [page](/refguide/pages/), [microflow](/refguide/microflows/), or a [scheduled event](/refguide/scheduled-events/). 
 
-## 2 Performing Basic Functions
+## 2 Performing Basic Functions {#basic-functions}
 
 In the **App Explorer**, you can do the following:
 

@@ -1,7 +1,7 @@
 ---
 title: Apply Jump-To Option
 url: /refguide9/apply-jump-to-option/
-weight: 05
+weight: 5
 tags: ["studio pro", "workflow", "jump-to option", "apply jump-to option"]
 ---
 

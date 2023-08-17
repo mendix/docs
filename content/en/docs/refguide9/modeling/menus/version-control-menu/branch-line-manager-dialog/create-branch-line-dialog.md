@@ -62,4 +62,3 @@ Since branch line names must be unique, this option shows the existing branch li
 ## 8 Read More
 
 * [Version Control](/refguide9/version-control/)
-* [Collaborative Development](/refguide9/collaborative-development/)

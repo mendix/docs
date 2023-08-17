@@ -65,7 +65,7 @@ Gradle is necessary to deploy Mendix applications if the **Build using Gradle** 
 
 ### 2.4 Disk Location
 
-#### 2.4.1 Default App Directory
+#### 2.4.1 Default App Directory {#default-directory}
 
 This is the directory where new apps are stored. It is used in the [App Settings](/refguide/new-app/#app-settings) dialog box when you create a new app. If a different directory is selected in the **App Settings** dialog box, that directory is stored as the new default app directory.
 

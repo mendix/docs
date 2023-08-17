@@ -81,9 +81,11 @@ You now need to add a namespace to your cluster. Your cluster can contain severa
 
 To add a namespace, do the following:
 
-1. Click **Details**:
+1. Click the details icon on the top right of the page:
 
     {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/empty-cluster.png" >}}
+
+    {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/ClusterDetails.png" >}}
 
 2. Click **Add Namespace**:
 
@@ -115,7 +117,7 @@ If you are not already on the installation tab for your namespace, go to it by f
 
     {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/cluster-details.png" >}}
 
-3. Select the **Installation** tab.
+3. Select **Installation** from the navigation bar to the left of the page.
 
 Now you can download the Configuration Tool by doing the following:
 
@@ -1171,8 +1173,8 @@ When you add a cluster manager, the user will have most of the access which the 
 
 The only limitations are that:
 
-* an added cluster manager will not be able to operate on or manage the environments created in the namespaces which are already in the cluster — they need to be added as a member of the namespace if they want to manage environments in the namespaces
-* cluster managers who are added to the cluster cannot remove the cluster manager who created the cluster
+* An added cluster manager will not be able to operate on or manage the environments created in the namespaces which are already in the cluster — they need to be added as a member of the application if they want to manage existing environments in the namespaces.
+* Cluster managers who are added to the cluster cannot remove the cluster manager who created the cluster.
 {{% /alert %}}
 
 {{% alert color="info" %}}
@@ -1288,6 +1290,7 @@ The following rights are available to the cluster creator, and members of a name
 
 The following actions require the appropriate access to the namespace **and** access to the app environment as a team member with appropriate authorization:
 
+* Manage environment
 * Deploy App – user can deploy a new app to the environment or start and stop existing apps
 * Scale App – user can change the number of replicas
 * Edit App Constants
@@ -1321,6 +1324,8 @@ You can invite additional members to the namespace, and configure their role dep
     1. **Developer** – a standard set of rights needed by a developer, these are listed on the screen
     2. **Administrator** – a standard set of rights needed by an administrator, these are listed on the screen
     3. **Custom** – you can select a custom set of rights by checking the box next to each role you want to give to this person
+
+    With custom permissions, we have now decoupled the permissions for Scale, Start and Stop operations. If an application is in the Stopped state, the scaling does not come into effect until the application is Started. This means that you have to click **Start application** in order for the changes to be sent to the cluster.
 
 5. Click **Send Invite** to send an invite to this person.
 
@@ -1404,7 +1409,7 @@ Enabling the Development Mode option will allow users to change the type of an e
 
 #### 7.2.8 PCLM Statistics
 
-This tab shows information about claimed licences, operator licenses and runtime licences.
+This tab shows information about claimed licenses, operator licenses and runtime licenses.
 
 Select **Claim** to view a list of licenses from the license bundle which are claimed in the namespace.
 

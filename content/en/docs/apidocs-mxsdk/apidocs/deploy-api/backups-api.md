@@ -1,5 +1,5 @@
 ---
-title: "Backups API V2"
+title: "Backups API v2"
 url: /apidocs-mxsdk/apidocs/backups-api/
 description: "An API to allow the triggering of backups creation, restore, download and to get information about existing snapshots."
 weight: 10
@@ -7,7 +7,7 @@ weight: 10
 
 ## 1 Introduction
 
-The **Backups API V2** allows you to manage backups of the data in your app hosted in the Mendix Cloud.
+The **Backups API v2** allows you to manage backups of the data in your app hosted in the Mendix Cloud.
 
 If you want to download a backup of your data, you need to perform three steps:
 
@@ -21,7 +21,7 @@ Database **archives** are a zip file which contains all the data in the snapshot
 
 You cannot currently upload an archive through this API. This function is currently only supported via the [Developer Portal](/developerportal/operate/backups/). However, you can use this API to restore data from an existing environment snapshot.
 
-V2 of this API is focused on working with snapshots and archives asynchronously, as these can be very long-running tasks for large quantities of data. The [older V1 API](/apidocs-mxsdk/apidocs/backups-api-v1/), in contrast, works synchronously. 
+The v2 of this API is focused on working with snapshots and archives asynchronously, as these can be very long-running tasks for large quantities of data. The [older v1 API](/apidocs-mxsdk/apidocs/backups-api-v1/), in contrast, works synchronously. 
 
 ## 2 Authentication
 

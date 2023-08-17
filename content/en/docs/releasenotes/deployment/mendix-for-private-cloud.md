@@ -13,7 +13,36 @@ For information on the current status of deployment to Mendix for Private Cloud 
 
 ## 2023
 
-### July 6th, 2023
+### August 17, 2023
+
+#### Portal Improvements
+
+* We have improved the user experience for the Cluster Manager pages by revamping the UI and adding sorting and searching.
+* We have changed the layout of the Environment pages in the Developer Portal to a full-width view with navigation panel in a sidebar to the left.
+
+#### Deploy API Improvements
+
+* We have fixed the issue in the `Get Environments` API call, where the user was unable to retrieve all environments in an application when the same internal id was used for multiple environments. (Ticket: 190490)
+* We have added a fix for the `Update Environment` API call, where the user was unable to update environments which are using a dedicated storage plan. (Ticket 189615)
+* We have added the ability to automatically accept invitations for namespace and cluster membership.
+* We have updated the mandatory fields (email, role) in the Update Namespace/Cluster API calls.
+* We have made permissions mandatory if the role is set to CUSTOM.
+
+### July 13, 2023
+
+#### Portal Improvements
+
+* We have now decoupled the scaling from *Start* and *Stop* in the members permission. This means that scaling does not come into effect until the application is started, and you have to click **Start application** in order for the changes to be sent to the cluster
+* We have added a banner on the **Namespace details** page to display information about the new Operator release.
+
+#### Deploy API Improvements
+
+* We have now decoupled the scaling from start and stop in members permissions.
+* We have added a new **runtimeVersion** field under **Runtime** in the **Manifest of the Environment** in DeployAPI.
+* We have fixed a core resource decimal conversion issue in the environment manifest file (Ticket 189615).
+* We have fixed an issue where upper-case letters in an email ID would prevent members invited to a cluster manager or namespace from accepting the invite. (Ticket 189975)
+
+### July 6, 2023
 
 #### Mendix Operator v2.12.0 {#2.12.0}
 
@@ -26,7 +55,7 @@ For information on the current status of deployment to Mendix for Private Cloud 
 * We fixed an issue where connections to Azure SQL would fail with a *TLS Handshake failed* error.
 * The Mendix Operator will ensure that environments using licenses from the Private Cloud License Manager always have a non-expired license. When an environment's license reaches its expiration date, the Mendix Operator will replace it with a non-expired license from PCLM.
 
-### June 15th, 2023
+### June 15, 2023
 
 #### Portal Enhancements
 
@@ -303,7 +332,7 @@ Your build may fail if you try to deploy the same deployment package more than o
 * We fixed a build error which happened when an MDA included a data snapshot.
 * We resolved an issue where the sidecar container didn’t process the shutdown signal, even when the app container was stopped (this meant that stopping an app took 30 seconds)
 * We have disabled the `enableServiceLinks` Kubernetes feature — this prevents app pods from receiving a list of all services running in a namespace through environment variables.
-* When connecting to the Development Portal, the Mendix Gateway Agent will now trust CAs specified through [Custom TLS](https://docs.mendix.com/developerportal/deploy/private-cloud-cluster/#custom-tls)
+* When connecting to the Development Portal, the Mendix Gateway Agent will now trust CAs specified through [Custom TLS](/developerportal/deploy/private-cloud-cluster/#custom-tls)
 * We fixed an issue where the Operator was restarting the build pod when using AWS identity webhooks.
 
 #### Portal Improvements
@@ -455,7 +484,7 @@ To see more details about supported databases and Kubernetes versions, see the [
 #### Prometheus Metrics
 
 * We have documented how to collect logs and metrics in Mendix for Private Cloud.
-* We have created a reference Grafana dashboard that offers a familiar experience for [Mendix Cloud V4 metrics](/developerportal/operate/trends-v4/) users.
+* We have created a reference Grafana dashboard that offers a familiar experience for [Mendix Cloud v4 metrics](/developerportal/operate/trends-v4/) users.
 
 To use Prometheus metrics, upgrade to Mendix Operator v2.1.0 (or above) and follow the [instructions](/developerportal/deploy/private-cloud-monitor/).
 
@@ -479,7 +508,7 @@ To use Prometheus metrics, upgrade to Mendix Operator v2.1.0 (or above) and foll
 #### Data migration tool (preview)
 
 * We have added a data migration tool - that can be used to transfer data between Mendix for Private Cloud environments.
-* This tool is compatible with Mendix Cloud V4 [backup files](/developerportal/operate/restore-backup/#format-of-backup-file).
+* This tool is compatible with Mendix Cloud v4 [backup files](/developerportal/operate/restore-backup/#format-of-backup-file).
 
 This tool is available as a technical preview. For documentation and download links, see the [documentation](/developerportal/deploy/private-cloud-data-transfer/).
 

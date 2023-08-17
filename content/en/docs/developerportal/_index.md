@@ -48,7 +48,7 @@ You can then access the following parts of the Mendix Platform:
 * [Marketplace](/appstore/)
 * [Data Hub](/data-hub/)
 * [Academy](https://academy.mendix.com/link/home)
-* [Docs](https://docs.mendix.com/)
+* [Docs](/)
 * [Forum](/developerportal/community-tools/mendix-forum/)
 * [Community](/developerportal/community-tools/)
 
@@ -114,7 +114,7 @@ Clicking the question icon in the Developer Portal brings up the options Mendix 
 * **What's New?** – click this to see our [latest features](https://www.mendix.com/releases/)
 * **Ask the Community** – click this to go to the [Mendix Forum](https://forum.mendixcloud.com/)
 * **Share an Idea** – click this to share your idea on Mendix Forum
-* **Check the documentation** – click this to go to the [Mendix Documentation](https://docs.mendix.com/)
+* **Check the documentation** – click this to go to the [Mendix Documentation](/)
 * **Contact Mendix Support** – click this to go to [Mendix Support](https://support.mendix.com/)
 
 ## 6 Notifications {#notifications}

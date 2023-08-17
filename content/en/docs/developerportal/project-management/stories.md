@@ -9,9 +9,9 @@ tags: ["Stories", "Sprint", "Project management", "Developer Portal"]
 ---
 
 {{% alert color="warning" %}}
-We will delete all data from Mendix Stories starting October 1, 2023. We strongly urge you to [download your work](/developerportal/collaborate/general-settings/#story-archive) before that date.
+We will delete all data from Mendix Stories starting October 1, 2024. We strongly urge you to [download your work](/developerportal/collaborate/general-settings/#story-archive) before that date or better yet, switch to Epics. Here's [how to migrate](/developerportal/project-management/epics/planning/#data-migration) your work to Epics.
 
-As of the GA release on December 1, 2022, [Epics](/developerportal/project-management/epics/) is the default tool for you to manage the development process of new apps. Epics is a replacement of Stories. You can still use Stories in addition to Epics. However, Mendix recommends not using both of them at the same time as it will make data migration more difficult later.
+As of the GA release on December 1, 2022, [Epics](/developerportal/project-management/epics/) is the default tool for you to manage the development process of new apps. Epics is a replacement of Stories.
 {{% /alert %}}
 
 ## 1 Introduction
@@ -143,7 +143,7 @@ On this page, you can perform a number of actions:
 * Update the story points via the drop-down menu
 * **Move Story** to a different app or Sprint (for details, see the [Moving Stories](#move-stories) section below)
 * **Duplicate** the story and its tasks, story points, status, and labels into a new user story
-* View the **Feedback** on which this story is based (if applicable; for details, see the [Adding a Feedback Item to Your Backlog](/developerportal/general/feedback/#adding) section of *Feedback Management*)
+* View the **Feedback** on which this story is based
 * View the committed **Revisions** linked to the story (which are configured in the [Related stories](/refguide/commit-dialog/#stories) tab of the **Commit** dialog box in Studio Pro)
 * **Change to Bug** to toggle the story type between **Bug** and **Feature** (by default, a story is created as a **Feature**)
 * **Delete** the story
@@ -208,4 +208,4 @@ By clicking a story's ID, you can see the [story details](#story-details).
 * [Buzz](/developerportal/general/buzz/)
 * [Team](/developerportal/general/team/)
 * [Team Server](/developerportal/general/team-server/)
-* [Feedback](/developerportal/general/feedback/)
+* [Feedback](/developerportal/app-insights/feedback/)

@@ -22,7 +22,7 @@ To view the **Create Branch Line** dialog box,  do the following:
 
 The **Create Branch Line** dialog box is displayed.
 
-For more information on how to manage branch lines, see the [Managing Development Lines in Studio Pro](/refguide8/collaborative-development/#managing-branches) section in *Collaborative Development* and [Branch Line Manager](/refguide8/branch-line-manager-dialog/). For information on the version control, see [Version Control](/refguide8/version-control/). 
+For more information on how to manage branch lines, see [Branch Line Manager](/refguide8/branch-line-manager-dialog/). For information on the version control, see [Version Control](/refguide8/version-control/). 
 
 ## 2 Create Branch From
 
@@ -65,4 +65,3 @@ Since branch line names must be unique, this option shows the existing branch li
 ## 8 Read More
 
 * [Version Control](/refguide8/version-control/)
-* [Collaborative Development](/refguide8/collaborative-development/)

@@ -59,7 +59,7 @@ When using the module, keep the following additional concerns in mind:
 
 ### 4.1 Customization
 
-If you want to apply custom styling to the SAP Horizon UI module, see [Customize Styling: Adding Custom Styling](/howto/front-end/customize-styling-new/#23-adding-custom-styling).
+If you want to apply custom styling to the SAP Horizon UI module, see [Customize Styling: Adding Custom Styling](/howto/front-end/customize-styling-new/#add-custom-styling).
 
 ## 5 Reference
 

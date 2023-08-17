@@ -24,7 +24,7 @@ This how-to will teach you how to do the following:
 To create a building block preview image in Sketch, follow these steps:
 
 1. Download the [Atlas UI image templates resources pack](https://atlas2.mendix.com/index3.html#/resources/7881299347899269).
-2. Open the Sketch file named **BB_previewimage.sketch**. This file contains two artboards. The first artboard shows an example of how custom preview images look in the Studio's Toolbox. The second artboard is where you place your image.
+2. Open the Sketch file named **BB_previewimage.sketch**. This file contains two artboards. The first artboard shows an example of how custom preview images look in the Studio Pro's Toolbox. The second artboard is where you place your image.
 3. Hide the layer called **Template**, then insert your preview image into the **Building Block preview** folder.
 4. When you are happy with your image, select your artboard.
 5. In the **Export** dialog box that appears on the lower-right side of your screen, make sure the preferences are set to the following:
@@ -54,7 +54,7 @@ To create a building block preview image in Photoshop, follow these steps:
 To create a building block preview image in Illustrator, follow these steps:
 
 1. Download the [Atlas UI image templates resources pack](https://atlas2.mendix.com/index3.html#/resources/7881299347899269).
-2. Open the Illustrator file named **BB_previewimage.ai**. This file contains two artboards. The first artboard shows an example of how custom preview images look in the Studio's Toolbox. The second artboard is where you place your image.
+2. Open the Illustrator file named **BB_previewimage.ai**. This file contains two artboards. The first artboard shows an example of how custom preview images look in the Studio Pro's Toolbox. The second artboard is where you place your image.
 3. Hide the layer called **Template**, then insert your preview image into the **Building Block preview** folder.
 4. When you are happy with your image, select your artboard.
 5. Click **File** > **Export for screens**, then select the **BB Image@2x** artboard.
@@ -79,7 +79,7 @@ You can also create your building block preview image in a different image edito
 To create a page template preview image in Sketch, follow these steps:
 
 1. Download the [Atlas UI image templates resources pack](https://atlas2.mendix.com/index3.html#/resources/7881299347899269).
-2. Open the Sketch file named **PT_previewimage.sketch**. This file contains three artboards. The first two artboards show examples of how page template preview images look in Studio. The third artboard is where you place your image.
+2. Open the Sketch file named **PT_previewimage.sketch**. This file contains three artboards. The first two artboards show examples of how page template preview images look. The third artboard is where you place your image.
 3. Hide the layer called **Template**, then insert your preview image into the **Building Block preview** folder.
 4. When you are happy with your image, select your artboard
 5. In the **Export** dialog box that appears on the lower-right side of your screen, make sure the preferences are set to the following:
@@ -108,7 +108,7 @@ To create a page template preview image in Photoshop, follow these steps:
 To create a page template preview image in Illustrator, follow these steps:
 
 1. Download the [Atlas UI image templates resources pack](https://atlas2.mendix.com/index3.html#/resources/7881299347899269).
-2. Open the Illustrator file named **PT_previewimage.ai**. This file contains three artboards. The first two artboards show examples of how page template preview images look in Studio. The third artboard is where you place your image.
+2. Open the Illustrator file named **PT_previewimage.ai**. This file contains three artboards. The first two artboards show examples of how page template preview images look. The third artboard is where you place your image.
 3. Hide the layer called **Template**, then insert your preview image into the **Page template preview** folder.
 4. When you are happy with your image, select your artboard
 5. Click **File** > **Export for screens**, then select the **PT@2x** artboard.
@@ -128,6 +128,5 @@ You can also create your page template preview image in a different image editor
 
 * [Get Started with Atlas UI](/howto8/front-end/get-started-with-atlasui/)
 * [Create Company Atlas UI Resources](/howto8/front-end/create-company-atlas-ui-resources/)
-* [Extend Design Properties to Customize Your Studio Experience](/howto8/front-end/extend-design-properties-to-customize/)
 * [Migrate Existing Apps to Atlas UI](/howto8/front-end/migrate-existing-projects-to-atlasui/)
 * [Share Company Atlas UI Resources](/howto8/front-end/share-company-atlas-ui-resources/)

@@ -22,7 +22,7 @@ For critical production incidents, please contact Mendix Support by [phone](http
 Before submitting a new Mendix Support request, check these resources to make sure your question has not already been answered:
 
 * [Mendix Forum](https://forum.mendix.com)
-* [Mendix Documentation](https://docs.mendix.com/)
+* [Mendix Documentation](/)
 * [Mendix Platform status](https://status.mendix.com)
 
 If you cannot find the answer to your question on the Mendix Forum or in the Mendix documentation, you can submit a support request. The Mendix Support Portal will walk you through the ticket creation by asking for relevant information based on the type of request. 
@@ -82,8 +82,8 @@ To submit a request with Mendix Support, follow these steps:
         * **Developer Platform - Academy** – issues/questions regarding the [Mendix Academy](https://academy.mendix.com/link/home) (for example, when you cannot open a learning path or you cannot find the attachments required for a module)
         * **Developer Platform - Forum** – issues/questions regarding the [Mendix Forum](https://forum.mendixcloud.com/index3.html) (for example, when you cannot create a new question or add an answer)
         * **Developer Platform - Cloud Portal** – issues/questions regarding [deploying in the Developer Portal](/developerportal/deploy/) (for example, when you cannot view your [log](/developerportal/operate/logs/) files or [scale](/developerportal/deploy/scale-environment/) your environment)
-        * **Developer Platform - Data Hub** – issues/questions regarding [Data Hub](/data-hub/) (for example, when you have difficulties accessing the Catalog)
-        * **Developer Platform - Control Center** - issues/questions regarding [Control Center](/developerportal/control-center/) (for example, when you have difficulties deactivating applications from the Control Center) 
+        * **Developer Platform - Catalog** – issues/questions regarding the [Catalog](/catalog/) (for example, when you have difficulties accessing the Catalog)
+        * **Developer Platform - Control Center** - issues/questions regarding [Control Center](/developerportal/control-center/) (for example, when you have difficulties deactivating applications from Control Center) 
         * **Developer Platform - Support Portal** - issues/questions regarding the [Support Portal](https://support.mendix.com/) (for example, when you have difficulties creating Support tickets)
         * **Developer Platform - Other** – any other issues/questions regarding the Mendix Platform itself
     * **Licensing** – select this component when you have issues/questions regarding your Mendix licenses

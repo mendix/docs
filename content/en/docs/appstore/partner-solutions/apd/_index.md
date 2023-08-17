@@ -6,7 +6,7 @@ no_list: false
 description_list: true
 tags: ["apd", "application test monitor", "application performance diagnostics"]
 aliases:
-    - /addons/apm-addon/index.html
+    - /addons/apm-addon/
     - /addons/apd-addon/index.html
 ---
 

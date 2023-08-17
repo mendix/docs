@@ -65,45 +65,37 @@ The [Team Server](/developerportal/general/team-server/) is implemented using Su
 * The HTTP port (TCP 80) needs to be open
 * WebDAV (verbs within the HTTP protocol) needs to be enabled on the proxy server (if any)
 
-## 4 Mendix Studio
-
-Mendix Studio is optimized for use with Google Chrome. While Chrome is the officially supported browser, you can also use Mendix Studio with other popular browsers like Mozilla Firefox, Apple Safari, and Microsoft Edge. 
-
-{{% alert color="info" %}}
-The browser you use needs to have JavaScript turned on.
-{{% /alert %}}
-
-## 5 Cloud Foundry
+## 4 Cloud Foundry
 
 The [Mendix Cloud Foundry buildpack](https://github.com/mendix/cf-mendix-buildpack) supports Cloud Foundry versions v9 and above. 
 
-## 6 Docker
+## 5 Docker
 
 The [Mendix Docker buildpack](https://github.com/mendix/docker-mendix-buildpack) supports Docker version 18.09.0 and above. 
 
-### 6.1 Kubernetes
+### 5.1 Kubernetes
 
 The Mendix Docker buildpack supports the following Kubernetes versions: 
 
 * Kubernetes version v1.12 and above
 * Redhat Openshift v3.11 and v4.2 and above
 
-## 7 Server
+## 6 Server
 
-### 7.1 Operating System
+### 6.1 Operating System
 
 * Microsoft Windows Server 2008 SP2 and above
 * Debian 8 (Jessie) and above
 * Red Hat Enterprise Linux 6, Red Hat Enterprise Linux 7
 * CentOS 6, CentOS 7
 
-### 7.2 Web Server
+### 6.2 Web Server
 
 * Microsoft Internet Information Services 7 and above
 * Nginx (tested with versions included in Debian Jessie and Debian Jessie Backports)
 * Apache
 
-### 7.3 Java
+### 6.3 Java
 
 When running Mendix on a server, you will need Java Runtime Environment (JRE) 11. To download an OpenJDK distribution from Adoptium, see [Adoptium Installation](https://adoptium.net/temurin/releases). To download a commercial Oracle distribution, see [Java SE Downloads](http://www.oracle.com/technetwork/java/javase/downloads/index.html).
 
@@ -111,7 +103,7 @@ When running Mendix on a server, you will need Java Runtime Environment (JRE) 11
 There is an issue since Java 7 that causes timeouts when using web services with a certain amount of data. You can circumvent this issue by adding the VM params `-Djava.net.preferIPv4Stack=true`. Mendix Studio Pro will do this for you, but if you are running Mendix on premises on a Windows server, you will need to do this yourself. For more information about this issue, see [Possible Bug in Java 7](https://community.oracle.com/tech/developers/discussion/comment/9987709).
 {{% /alert %}}
 
-## 8 Databases {#databases}
+## 7 Databases {#databases}
 
 Mendix tries to support the most recent and patched database server versions from database vendors. We aim to add support for a new vendor version two minor Mendix versions after the vendor has released it. Dropping support for a database will be announced in the release notes at the date the vendor drops support. We will drop support two minor Mendix versions later.
 
@@ -130,9 +122,9 @@ Current support:
 Each app should have its own database. Mendix apps cannot share data by sharing the same database. 
 {{% /alert %}}
 
-## 9 File Storage
+## 8 File Storage
 
-### 9.1 Storage Services for Containers
+### 8.1 Storage Services for Containers
 
 For container-based deployments using Docker, Kubernetes, or Cloud Foundry, the following storage services are supported:
 
@@ -144,7 +136,7 @@ For container-based deployments using Docker, Kubernetes, or Cloud Foundry, the 
 
 For container-mounted storage in Kubernetes, provided by an external storage class, see also [Use Docker with Minikube](/developerportal/deploy/run-mendix-on-kubernetes/).
 
-### 9.2 Storage types for Servers
+### 8.2 Storage types for Servers
 
 For server-based installations, the following storage types mounted by the OS are supported:
 
@@ -153,7 +145,7 @@ For server-based installations, the following storage types mounted by the OS ar
 * GFS
 * Local Storage 
 
-## 10 Browsers {#browsers}
+## 9 Browsers {#browsers}
 
 * Google Chrome (latest stable desktop and Android versions)
 * Mozilla Firefox (latest stable desktop version)
@@ -161,11 +153,11 @@ For server-based installations, the following storage types mounted by the OS ar
 * Microsoft Edge (latest stable desktop version)
 * Microsoft Internet Explorer 11
 
-## 11 Hybrid Preview
+## 10 Hybrid Preview
 
 Using a hybrid preview is not the same as using an emulator. A hybrid preview only shows a resized view of an app to give an impression of what that app might look like on a mobile device. Some hybrid app functionality will not be supported in this browser view. Full tests always need to be done on a device or emulator. Offline apps can only be previewed in Google Chrome.
 
-## 12 Mobile Operating Systems {#mobileos}
+## 11 Mobile Operating Systems {#mobileos}
 
 For native and hybrid apps built with Mendix (and the [Mendix Developer App](/refguide8/getting-the-mendix-app/)) the following operating system versions are supported:
 
@@ -183,14 +175,14 @@ We recommend the following minimum hardware requirements for all mobile devices 
 
 Depending on your app's complexity, these minimum hardware requirements might not be sufficient and should be adjusted.
 
-## 13 MxBuild {#mxbuild}
+## 12 MxBuild {#mxbuild}
 
 MxBuild is a Windows and Linux command-line tool that can be used to build a Mendix Deployment Package. For more information, see [MxBuild](/refguide8/mxbuild/).
 
 * Mono v5.20.x or .NET v4.7.2
 * JDK 11
 
-## 14 mx Command-Line Tool {#mxtool}
+## 13 mx Command-Line Tool {#mxtool}
 
 The **mx** command-line tool is a Windows and Linux command-line tool that can be used to do useful things with your Mendix app. For more information, see [mx Command-Line Tool](/refguide8/mx-command-line-tool/).
 

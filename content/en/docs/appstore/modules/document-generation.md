@@ -188,9 +188,11 @@ Now you can [register your app environment](#register-app).
 
 1. Add an entity in your domain model for storing the generated documents. Use **System.FileDocument** as its generalization. Give read access rights for the user roles that should be able to download the document.
 
-2. Create a page that you want to export as a document. Use the **DocumentLayout** layout from the **_UseMe** > **Layouts** folder as the layout for this page. If you want, you can duplicate the **ExampleDocument** in the **Examples** folder to get started. Make sure to move and include the new page in your own module.
+2. Create a page that you want to export as a document. In the properties of the page, set the design property **Enable export to PDF** to *Yes*. As the layout of the page, you can use the **DocumentGeneration_Default** layout from the **_UseMe** > **Layouts** folder. If you want, you can duplicate the **ExampleDocument** in the **Examples** folder to get started. Make sure to move and include the new page in your own module.
 
-    {{% alert color="info" %}}The **DocumentLayout** is required to determine if the page has finished loading. If you want to use your own layout, make sure that the document content is contained in a container or layout grid that has the class **document-content** configured, otherwise the action will wait until the configured timeout before exporting to PDF.{{% /alert %}}
+    {{% alert color="info" %}}Setting the **Enable export to PDF** design property to *Yes* is required. Otherwise, the action will result in a timeout.{{% /alert %}}
+
+    {{% alert color="info" %}}Using the **DocumentGeneration_Default** layout is not required. You can use any layout of layout type *Responsive*, or create your own layout, as long as the layout does not include a scroll container. Layouts that do include a scroll container, such as *Atlas_Default*, will not work properly. {{% /alert %}}
 
 3. Create a microflow that opens the page that you created in the previous step. If you want, you can use **DOC_ExampleDocument_Print** in the **Examples** folder to get started. 
 

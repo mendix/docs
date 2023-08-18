@@ -17,13 +17,11 @@ To see the current status of the Mendix Developer Portal and Control Center, see
 
 ## 2023
 
-### August XX, 2023
-
-{{% todo %}}Fill in the right release date above and also update the release date of the Developer Portal in this file: docs >  layouts > patricians > landing page > latest-releases.html. {{% /todo %}}
+### August 24, 2023
 
 #### New Features
 
-* We have released the Beta version of the [Application Health Dashboard](/developerportal/control-center/#application-health-dashboard), which provides an overview of the alert status of the whole application landscape of your company.
+* We have released the Beta version of the [Application Health Dashboard](/developerportal/control-center/#application-health-dashboard), which provides an overview of the alert status of the whole application landscape in your company.
 ### August 17, 2023
 
 #### Improvements

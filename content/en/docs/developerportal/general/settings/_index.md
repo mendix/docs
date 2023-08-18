@@ -15,7 +15,7 @@ aliases:
 
 ## 1 Introduction
 
-The **General Settings** page presents an overview of your app.
+The **Settings** page presents an overview of your app.
 
 On the top of page, you can see the image of the app, the app name, and the company that owns the app. You can also find the **Watch** / **Stop Watching** toggle which enables or disables notifications for this app.
 
@@ -25,7 +25,7 @@ On the top of page, you can see the image of the app, the app name, and the comp
 Only users with the **App Settings** permission can edit the image and the app name.
 {{% /alert %}}
 
-The **General Settings** page always contains the following tabs:
+The **Settings** page always contains the following tabs:
 
 * **General**
 * **Access Management**

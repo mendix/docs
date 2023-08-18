@@ -55,7 +55,9 @@ As an alternative to alert emails, you can set a webhook to receive alerts.
 
 Webhooks are set on the application level.
 
-### 3.1 Setting Webhooks
+See [webhooks](/developerportal/deploy/webhooks/) page for more information on webhooks.
+
+### 3.1 Setting Alerts Webhooks
 
 To set a new webhook in the developer portal:
 

@@ -15,6 +15,7 @@ Mendix provides webhooks to send project information when the following events h
 
 * On package upload – when a deployment package is available in the Developer Portal — this includes creating a package from the Team Server
 * Team Server push – when a new commit is pushed to the Team Server — this will only be triggered if your app is stored in a Git repository
+* Alerts - when an alert is triggered for your Mendix app
 
 The webhooks contain a retry mechanism if an error response is received from the endpoint to ensure that the trigger reaches the endpoint.
 
@@ -184,7 +185,27 @@ The **after**, **before**, and **id** values are git commit hashes. In most case
 Ensure you use the correct key names if using this payload information to call other Mendix APIs. The data may be labelled differently in the API.
 {{% /alert %}}
 
-## 6 Logging
+## 6 Alerts Webhooks
+
+When an alert is triggered for your Mendix app, a payload with the following format will be sent to the configured endpoint:
+
+```json {linenos=false}
+{ 
+  "app_name": "your-app-name",
+  "environment": "your-environment-name",
+  "environment_id": "n90c72er-344e-4a26-8efd-e0695234b465",
+  "id": "73eb456a-10d4-4821-ae58-31e4a49753ca",
+  "message": "INFORMATIONAL: Runtime heartbeat is okay.",
+  "service": "Application Status",
+  "severity": "Recovery",
+  "timestamp": "2023-08-18T08:11:22.586000+00:00",
+  "url": "https://your-mendix-app.mendixcloud.com"
+}
+```
+
+See [Receive Environment Status Alerts](/developerportal/operate/receive-alerts/) for detailed information on receiving alerts 
+
+## 7 Logging
 
 You will see [log messages](/developerportal/operate/logs/) in the Developer Portal from the creation or update of your webhooks.
 

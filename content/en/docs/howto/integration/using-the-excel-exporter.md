@@ -150,7 +150,14 @@ To create the worksheet layout, follow these steps:
 9. Specify if the **Default header text style** that will denote the pre-defined style to be applied to the header data:
 
     {{% alert color="info" %}}Specifying styles are addressed in the section below.{{% /alert %}}
+   
+10. In case multiple entities need to be exported into their own separate worksheets, then step #1 can be repeated to create new worksheet(s).
+11. Specify the **Name** that will be used by this worksheet and then configure the **Row Object** which will correspond to the entity that needs to be exported into this **Worksheet**.
+12. Further, in the **Worksheet** you can add various columns that need to be exported. The **Column data** tab provides facility to define column(s) and the column(s) can either come from an attribute of the Entity or from a Reference association.
+13. A representative image of multiple **Worksheets** definition and the resultant **Excel file** is as shown below. You can see 2 worksheets defined as **Topic** and **PubMessage** in the Template and the resultant Excel file has 2 worksheets with those names.
 
+    {{< figure src="/attachments/howto/integration/using-the-excel-exporter/xxxxxxxx.png" >}} 
+    
 ### 6.4 Configuring Dynamic Column Data {#dynamic-column-data}
 
 To configure the dynamic column data, follow these steps:

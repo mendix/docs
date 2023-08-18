@@ -155,7 +155,7 @@ To create the worksheet layout, follow these steps:
 
     {{% alert color="info" %}}Specifying styles are addressed in the section below.{{% /alert %}}
 
-10. If you export multiple entities into separate sheets, do as follows:
+10. If you want to export multiple entities into separate sheets, do as follows:
 
     1. Under the **Worksheets** section for the template, select **New** again to create a new sheet template.
 

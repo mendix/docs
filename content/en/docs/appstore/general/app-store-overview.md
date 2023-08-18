@@ -266,7 +266,7 @@ You can configure content groups for various levels of access to your company co
 
 This table breaks down the roles and permissions for content groups:
 
-| Roles | Manage (Create & Delete) Groups | Manage Group Members | Assign Apps to Group | Manage (Edit, Add New Version & Unpublish) Content | View & Download Group Content | View Group List |
+| Roles | Manage Groups (Create & Delete) | Manage Group Members | Assign Content to Group | Manage Content (Edit, Add New Version & Unpublish) | View & Download Group Content | View Group List |
 | --- | --- | --- | --- | --- | --- | --- |
 | Mendix Admin | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ |
 | Group Admin | ✘ | ✔ | ✔ | ✔ | ✔ | ✔ |

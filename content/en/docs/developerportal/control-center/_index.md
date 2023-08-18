@@ -433,7 +433,11 @@ The **Application Health Dashboard** is in Beta. For more information on Beta pr
 
 The **Application Health Dashboard** gives an overview of the alert status of the whole application landscape of your company. Here you can see all the alerts of the production environments of the apps.
 
-The label at the top of the page gives a summary of the total number of the environments with critical alerts and the total number of the environments with warning alerts. 
+On the top of the page, you can see the following numbers:
+
+* **Environment down** – This is the number of the environments for which a runtime heartbeat has not been received for over five minutes. 
+* **Environments with critical alerts** – This is the number of the environment with critical alerts.
+* **Environments with warning alerts** – This is the number of the environments with warning alerts. 
 
 On the list below, apps are ordered in the following order: environments with the most critical alerts are placed at the top, followed by environments with the most warning alerts, and then environments with no alerts. 
 
@@ -449,17 +453,17 @@ The list shows the following information:
 
 - **Critical** – This shows the number of critical alerts of this production environment.
 
-- **Warnings** – This shows the of warning alerts of this production environment.
+- **Warnings** – This shows the number of warning alerts of this production environment.
 
 - **Alerts** – This shows the types of the alerts of this production environment.
 
 ### 15.1 Refreshing the Dashboard
 
-The information on the dashboard is retrieved when you open the page. If you leave the page open, the alert data will be automatically refreshed every five minutes, and newly-deployed production environments will be automatically added to the dashboard every 60 minutes.
+The information on the dashboard is retrieved when you open the page. If you leave the page open, the alert data will be automatically refreshed every ten minutes, and newly-deployed production environments will be automatically added to the dashboard every six hours.
 
-You can also manually refresh your alerts using the **Refresh Alerts** button on the upper-right corner of the page. After clicking this button, the alerts of all the environments in your landscape are refreshed. You can do this once every minute.
+You can also manually refresh your alerts using the **Refresh Alerts** button on the upper-right corner of the page. After clicking this button, the alerts of all the environments in your landscape are refreshed. After the refreshing is completed, you need to wait one minute before you can refresh it again.
 
-You can also manually refresh the whole landscape using the **Refresh Environment List** button after you click the ellipsis button (**...**) on the upper-right of the page. You can do this once every 15 minutes.
+You can also manually refresh the whole landscape using the **Refresh Environment List** button after you click the ellipsis button (**...**) on the upper-right of the page. After the refreshing is completed, you need to wait 15 minutes before you can refresh it again.
 
 ### 15.2 Environment Details
 

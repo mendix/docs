@@ -9,7 +9,7 @@ tags: ["Scheduled Event", "Execution properties", "Timing", "intervals", "schedu
 
 ## 1 Introduction
 
-With scheduled events you can make the runtime execute a microflow repeatedly at specific intervals.
+With scheduled events you can make the runtime execute a microflow repeatedly at specific intervals. The microflow is run using a [task queue](/refguide/task-queue/).
 
 A scheduled event is added to your module as a document (right-click your module and you will find it listed under *Add other*).
 
@@ -21,7 +21,7 @@ Scheduled events can be tested locally, but they will not be run if your app is 
 
 | Property | Description |
 | --- | --- |
-| Name | The name of the scheduled event. This name is recorded in the `System.ProcessedQueueTask` objects at runtime, so that you can identify when this scheduled event has been processed. For compatibility with legacy scheduled events, it is also stored in the `ScheduledEventInformation` objects but this is deprecated and will be removed in Mendix version 10. |
+| Name | The name of the scheduled event. This name is recorded in the `System.ProcessedQueueTask` objects at runtime, so that you can identify when this scheduled event has been processed. For compatibility with legacy scheduled events, it is also stored in the `ScheduledEventInformation` objects but this is deprecated and will be removed in Mendix version 11. |
 | Documentation | This field is for documentation purposes in the app model only. Its value is not visible to end-users and doesn't influence the behavior of your application. |
 
 ## 3 Execution Properties
@@ -177,3 +177,7 @@ This limit cannot be overridden.
 ### 5.3 Unsupported Intervals
 
 Hour- and minute-based intervals can only be integer divisors of 24 or 60, respectively. For example you cannot schedule an event to run every seven minutes as this does not divide precisely into sixty minutes. If it is absolutely critical that an unsupported interval is used, you should schedule the event with interval value of one (every hour or every minute) and decide within the microflow whether it should continue executing at that particular time.
+
+### 5.4 Task Queues
+
+Scheduled events are run using [Task Queues](/refguide/task-queue/). See the task queue documentation for additional information.

@@ -4,6 +4,7 @@ url: /appstore/partner-solutions/qsm/
 linktitle: "QSM"
 description: "Introduces Mendix Quality and Security Management, which is a cloud service developed by Mendix and the Software Improvement Group (SIG), and the implemented checks for best practices."
 aliases:
+    - /addons/aqm-addon/
     - /addons/aqm-addon/index.html
 ---
 

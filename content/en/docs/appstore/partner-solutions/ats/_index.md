@@ -6,6 +6,7 @@ no_list: false
 description_list: true
 tags: ["ats", "application test suite", "clevr"]
 aliases:
+    - /addons/ats-addon/
     - /addons/ats-addon/index.html
 ---
 

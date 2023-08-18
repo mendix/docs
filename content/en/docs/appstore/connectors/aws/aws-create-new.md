@@ -131,7 +131,7 @@ After you create a microflow that connects to an AWS service, expose it as a mic
 4. In the **Category** field, enter the name of the AWS service.
 5. In the **Icon** section, select the official AWS icon.
 
-For more information, see [Microflow Properties: Expose as Microflow Action](https://docs.mendix.com/refguide/microflow/#expose-as-microflow).
+For more information, see [Microflow Properties: Expose as Microflow Action](/refguide/microflow/#expose-as-microflow).
 
 ## 4 Best Practices
 

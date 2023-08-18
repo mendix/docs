@@ -46,7 +46,7 @@ We do not store pages or documents at any time in the process.
 The document generation functionality is under active development. While we cannot guarantee that there will not be any breaking changes in future releases, we will clearly and timely communicate any breaking changes. We will build in backwards compatibility wherever possible.
 
 * Currently, PDF is the only supported document export format.
-* For deployment, currently only the public [Mendix Cloud](https://docs.mendix.com/developerportal/deploy/mendix-cloud-deploy/) is supported. Other deployment scenarios will be supported at a later stage.
+* For deployment, currently only the public [Mendix Cloud](/developerportal/deploy/mendix-cloud-deploy/) is supported. Other deployment scenarios will be supported at a later stage.
 * The `Generate PDF from page` action does not support multiple page parameters.
 * We use a fixed 30 second timeout for the page to finish loading and rendering. A timeout exception is thrown if the page content did not finish loading within 30 seconds.
 * We currently do not enforce strict rate limits. However, take into account the following guidelines:
@@ -104,7 +104,6 @@ To allow the module to send and receive document generation requests on your Men
 2. For applications using Mendix [custom domains](/developerportal/deploy/custom-domains/), configure custom domain support.
 3. Register your app environment.
 
-
 The steps for each procedure are described in the sections below. 
 
 #### 3.2.1 Enabling the DocGen Request Handler {#enable-docgen}
@@ -141,7 +140,6 @@ The steps for each procedure are described in the sections below.
         * If it uses a Mendix custom domain, [set up your app to support the custom domain](#use-custom-domain).
         * If it does not use a Mendix custom domain, [register your app environment](#register-app).
     
-
 #### 3.2.2 Setting up Mendix Custom Domain Support (Only for Apps Deployed with Mendix Custom Domains){#use-custom-domain}
 
 If your app is deployed to Mendix Cloud and configured with a custom domain, the PDF Document Generation module needs to know the original Mendix Cloud URL in order to successfully generate your documents.
@@ -233,13 +231,13 @@ For scenarios where you want to generate documents using a system context (for e
 
    {{% alert color="info" %}}Do not use regular user accounts for the **Generate as user** parameter, since this could have side effects, for example, changes in the last login date, or failures when multiple sessions are disabled and the applicable user logs in at the same time.{{% /alert %}}
 
-3. Run the app and create a new local user as the service user. Give the service user the app role that you created for document generation and use a strong password. The service user will be used to generate documents. When starting with a blank app, you can add the **Administration.Account_Overview** page to manage and create new users. 
+4. Run the app and create a new local user as the service user. Give the service user the app role that you created for document generation and use a strong password. The service user will be used to generate documents. When starting with a blank app, you can add the **Administration.Account_Overview** page to manage and create new users. 
 
    {{% alert color="info" %}}You could also add a **Find or create** microflow to your after startup logic that performs this step automatically.{{% /alert %}}
 
-4. Create a microflow to retrieve and return the configured service user.
+5. Create a microflow to retrieve and return the configured service user.
 
-5. In the microflow where you call the **Generate PDF from page** action, add a microflow call to the microflow you created in the previous step, and use the return value (the service user) as input for the **Generate as user** parameter of the action.
+6. In the microflow where you call the **Generate PDF from page** action, add a microflow call to the microflow you created in the previous step, and use the return value (the service user) as input for the **Generate as user** parameter of the action.
 
 {{% alert color="info" %}}
 We recommend to try to log in as the service user at least once, to verify if the service user has the required module roles to login. Depending on your app’s implementation, it might for example be required to assign the `Administration.Account` module role.

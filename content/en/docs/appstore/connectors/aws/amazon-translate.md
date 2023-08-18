@@ -113,7 +113,7 @@ An enumeration is a predefined list of values that can be used as an attribute t
 
 | Name | Caption |
 | --- | --- |
-| `us_east_2` |    **US Easth (Ohio)** |
+| `us_east_2` |    **US East (Ohio)** |
 | `us_east_1` |    **US East (N. Virginia)** |
 | `us_west_1` |    **US West (N. California)** |
 | `us_west_2` |    **US West (Oregon)** |

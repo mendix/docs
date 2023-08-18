@@ -46,7 +46,6 @@ The PCLM server will not create the database for the licenses, you need to creat
 
 You install the PCLM server by applying a manifest using `kubectl` or `oc`. This manifest can be created for you by the mx-pclm-cli tool. The mx-pclm-cli tool is available for download in the **Installation** tab of the **Namespace Details** page.
 
-
 ### 3.1 Creating the Manifest
 
 The `installer-gen` option of mx-pclm-cli is used to create a yaml manifest file to apply to your Kubernetes namespace.

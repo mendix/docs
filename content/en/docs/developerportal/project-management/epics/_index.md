@@ -5,9 +5,9 @@ category: "Project Management"
 weight: 1
 description_list: false
 description: "Describes how to use Epics for your app development."
+tags: ["Epics", "Sprint", "Developer Portal"]
 aliases:
     -  /developerportal/general/epics/
-tags: ["Epics", "Sprint", "Developer Portal"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details. 
 ---
 

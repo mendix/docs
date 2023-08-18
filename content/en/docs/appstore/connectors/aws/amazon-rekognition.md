@@ -118,7 +118,7 @@ For more information, see [Constants](/refguide/constants/).
 | `AWSRekognitionConnector.ProfileARN` | The ProfileARN for the IAM Roles Anywhere profile that has access to the Rekognition AWS service (Link to Auth v2 docs) |
 | `AWSRekognitionConnector.Region` | The region in which both the IAM Roles Anywhere and the Rekognition service are located |
 | `AWSRekognitionConnector.RoleARN` | The RoleARN of the IAM Role that has access to the Rekognition service. |
-| `AWSRekognitionConnector.AWS_TrustAnchorARN` | The TrustAnchorARN of the TrustAnchor configured in IAM Roles Anwhere that is used for the configured Role |
+| `AWSRekognitionConnector.AWS_TrustAnchorARN` | The TrustAnchorARN of the TrustAnchor configured in IAM Roles Anywhere that is used for the configured Role |
 
 ### 4.2 Domain Model {#domain-model}
 

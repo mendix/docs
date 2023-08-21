@@ -45,9 +45,13 @@ The document generation functionality is under active development. While we cann
 * For deployment, currently only the public [Mendix Cloud](/developerportal/deploy/mendix-cloud-deploy/) is supported. Other deployment scenarios will be supported at a later stage.
 * The `Generate PDF from page` action does not support multiple page parameters.
 * We use a fixed 30 second timeout for the page to finish loading and rendering. A timeout exception is thrown if the page content did not finish loading within 30 seconds.
+* The maximum file size is 25 MB per document. If your document exceeds this limit, the action will result in a timeout. We recommend to compress high-resolution images to reduce their file size.
+* Complex documents (e.g. large tables) may run into memory limitations, separate from the file size limitation. Try to reduce the number of widgets inside repeatable widgets as much as possible.
 * We currently do not enforce strict rate limits. However, take into account the following guidelines:
-    * Only set `Wait for result` parameter to *true* for direct user actions. Do not set it to *true* for batch processing. Under heavy load, requests that wait for the result may fail due to strict timeout limitations. 
-    * For batch processing, do not exceed 25 documents per minute, to ensure stable performance.
+    * Only set the `Wait for result` parameter to *true* for direct user actions. Do not set it to *true* for batch processing. Under heavy load, requests that wait for the result may fail due to strict timeout limitations.
+    * Do not exceed 250 documents per day.
+    * Do not exceed 5 documents per minute for actions that have the `Wait for result` parameter set to *true*. If your app requires more requests, consider setting the `Wait for result` parameter to *false*.
+    * Contact support if these guidelines do not fit your specific use case.
 * Objects that are created in the microflow that contains the `Generate PDF from page` action are not available to use in your document. This is also applicable for changes made to existing objects. The reason is that those changes are not persisted to the database until the whole microflow has finished. The document generation service will access your document in its own context, and therefore have no access to the non-persisted changes.
 * For local development, we use the Chrome or Chromium executable that is available on the development machine. Even though we have not observed these yet, there might be minor differences in PDF output locally vs. when using the cloud service.
 * When you deploy your app, it needs to be accessible to our cloud service. This requires access to the DocGen request handler which can be configured in the Cloud Portal. If your app is configured to restrict access, for example using IP whitelisting and/or client certificates, our cloud service will not be able to reach your app and the module will not work properly.

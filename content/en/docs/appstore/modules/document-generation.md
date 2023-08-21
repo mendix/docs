@@ -228,7 +228,7 @@ If no timezone is configured for the user that is passed in the **Generate as us
 * For advanced styling, you can use the styling editor in Studio Pro to style your documents. The module stylesheet includes several theme variables, such as *$document-background-color*, to customize your documents.
 
 {{% alert color="info" %}}
-We recommend not to use the viewport width (`vw`) and viewport height (`vh`) units when styling your document. These units are related to the browser viewport, not to the page size of your document. Use absolute length units (such as `px`, `mm` etc.) instead or other relative units (such as `%`, `em` or `rem`) instead.
+We recommend not to use the viewport width (`vw`) and viewport height (`vh`) units when styling your document. These units are related to the browser viewport, not to the page size of your document. Use absolute units (such as `px`, `mm` etc.) or other relative units (such as `%`, `em` or `rem`) instead.
 {{% /alert %}}
 
 ## 5 Troubleshooting

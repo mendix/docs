@@ -50,7 +50,7 @@ After selecting an action, Studio Pro will verify if the types that are used by 
 
 ### 4.2 Parameters
 
-In the table below the selected action, you will find the parameters that are defined by the external action, with its name, its type, and the provided argument.
+In the table below the selected action, you will find the parameters that are defined by the external action, with their name, their type, and the configured argument.
 
 Selecting a row in the table and hitting **Edit parameter value**, or simply double-clicking it, will show you the [Edit External Action Parameter Mapping](#edit-parameter-mapping) dialog, where you can edit the argument that will be passed when calling the external action.
 

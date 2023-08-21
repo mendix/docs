@@ -67,6 +67,14 @@ Click **Edit** to change the exposed name of the enumeration value (the name as 
 
 Use the **Refresh** button when the enumeration values have changed to update the list with the new values.
 
+### 2.7 Microflows
+
+This list gives an overview of all microflows published as [OData actions](/refguide/published-odata-microflow/).
+
+### 2.8 Parameters
+
+This list gives an overview of the [parameters](/refguide/published-odata-microflow-parameters/) of the selected microflow.
+
 ## 3 Settings
 
 ### 3.1 Configuration

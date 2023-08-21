@@ -27,6 +27,10 @@ The resulting location URI must be unique. This means that a published microflow
 
 In the **Public documentation** tab you can add a short **Summary** and a longer **Description** to describe the behaviour of the action.
 
+### 2.3 Return Type
+
+The return type of the published microflow is not editable as it is determined by the microflow itself. Changing this has to be done in the microflow, and would mean a change of the metadata of the published OData service.
+
 ## 3 Editing published microflow parameters
 
 By default, upon publishing a microfow all its parameters will be published. They will be shown in the **Parameters for microflow** grid on the right. 

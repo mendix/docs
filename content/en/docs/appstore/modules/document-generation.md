@@ -96,8 +96,7 @@ Configure the path to the *chrome.exe* executable in the **CustomChromePath** co
 To allow the module to send and receive document generation requests on your Mendix Cloud environments, you need to perform the following procedures:
 
 1. Enable the DocGen request handler.
-2. For applications using Mendix [custom domains](/developerportal/deploy/custom-domains/), configure custom domain support.
-3. Register your app environments.
+2. Register your app environments.
 
 The steps for each procedure are described in the sections below. 
 
@@ -130,49 +129,9 @@ The steps for each procedure are described in the sections below.
     
     7. Restart your application for the new request handler to take effect.
     
-    8. Depending whether this app environment uses a Mendix [custom domain](/developerportal/deploy/custom-domains/), continue with one of the following procedures:
-    
-        * If it uses a Mendix custom domain, [set up your app to support the custom domain](#use-custom-domain).
-        * If it does not use a Mendix custom domain, [register your app environment](#register-app).
-    
-#### 3.2.2 Setting up Mendix Custom Domain Support (Only for Apps Deployed with Mendix Custom Domains){#use-custom-domain}
+    8. Now you can [register your app environments](#register-app).
 
-If your app is deployed to Mendix Cloud and configured with a custom domain, the PDF Document Generation module needs to know the original Mendix Cloud URL in order to successfully generate your documents.
-
-To set it up you need to set the values of the constants **DocumentGeneration.UseCustomApplicationUrl** and **DocumentGeneration.CustomApplicationUrl** to point to Mendix Cloud URL for the desired app environment:
-
-1. Go to the **Environments** page for the app as follows:
-
-    * Go to the [Nodes](https://cloud.home.mendix.com/) page, then in the **My Nodes** list, find the desired app, and then click **Environments**.
-    * Alternatively, go to the [Developer Portal](https://sprintr.home.mendix.com), then in the **My Apps** list, find the desired app, and then click **Environments**.
-
-    The app’s environments page opens. The **Deploy** tab shows a list of available environments for your app.
-
-2. On the **Deploy** tab, click **Details** for the respective environment.
-
-3. In the specific **Environment Details** page, select the **Model Options** tab.
-
-4. In the **Constants** list, search for **DocumentGeneration.UseCustomApplicationUrl**.
-
-5. Click **Edit**. The **Edit Constant** dialog box opens. 
-
-6. Check the **New value** checkbox and click **Save**.
-
-    {{< figure src="/attachments/appstore/modules/document-generation/use-custom-application-url.png" >}}
-
-7. In the **Constants** list, search for **DocumentGeneration.CustomApplicationUrl**.
-
-8. Click **Edit**. The **Edit Constant** dialog box opens. 
-
-9. In the **New value** field, enter the URL for Mendix Cloud domain of your app without trailing slash, for example: *https://exampleapp-accp.mendixcloud.com*, and then click **Save**.
-
-    {{< figure src="/attachments/appstore/modules/document-generation/custom-application-url.png" >}}
-
-10. Restart your app for the new values to take effect.
-
-Now you can [register your app environments](#register-app).
-
-#### 3.2.3 Registering Your App Environments {#register-app}
+#### 3.2.2 Registering Your App Environments {#register-app}
 
 1. Add the snippet **Snip_AppRegistration** to a page that is accessible to admin users in your app.
 2. Enable the scheduled event **SE_AccessToken_Refresh** to automatically refresh the access token that is used to secure access to the Document Generation cloud service.

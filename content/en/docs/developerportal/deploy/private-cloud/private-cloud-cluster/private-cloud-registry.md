@@ -39,24 +39,26 @@ For more details about specific container registries see the [Configure registry
 
 ### 1.2 Limitations
 
-Combining multiple registries is not possible at the moment.
-For example, if you'd like to host [air-gapped images](/developerportal/deploy/private-cloud-migrating/) of Mendix for Private Cloud in a Nexus repository, but use ECR as the destination registry for Mendix apps, this can only be don by using the [existing docker-registry secret](#existing-docker-registry) option and static credentials.
+Combining multiple authentication methods is not possible at the moment.
+For example, Nexus uses static username/password credentials, while ECR requires using an authentication plugin that integrates with AWS IAM; if you'd like to host [air-gapped images](/developerportal/deploy/private-cloud-migrating/) of Mendix for Private Cloud in a Nexus repository, you will need to use Nexus (or another registry supporting static credentials) - using ECR or ACR as the target registry will not be possible.
 
 The Docker image URL standard doesn't have an way to specify if a registry should be accessed over HTTP or HTTPS.
-Mendix for Private Cloud relies on heuristics from the [go-containerregistry](https://github.com/google/go-containerregistry/blob/a54d64203cffcbf94146e04069aae4a97f228ee2/pkg/name/registry.go#L81-L100) project:
+Mendix for Private Cloud relies on heuristics from the [go-containerregistry](https://github.com/google/go-containerregistry/blob/a54d64203cffcbf94146e04069aae4a97f228ee2/pkg/name/registry.go#L81-L100) project.
+These heuristics are based on an assumption that it's not possible to get a valid TLS certificate for "local" addresses.
+If the registry domain name matches any of these rules, TLS will be disabled and all communication with the registry will happen over unencrypted HTTP:
 
-* Registries accessed by an private network RFC1918 IP address (`10.0.0.0/8`, `172.16.0.0/12`, `192.168.0.0/16`) will use unencrypted HTTP, as it's not possible to get a valid TLS certificate for those subnets.
-* Registries accessed by a `localhost` domain name will use unencrypted HTTP, as it's not possible to get a valid TLS certificate for the `localhost` domain.
-* Registries accessed by a `127.0.0.1` or `::1` IP address will use unencrypted HTTP, as it's not possible to get a valid TLS certificate for the `localhost` domain.
-* Registries which are subdomains of `.localhost` or `.local` will use unencrypted HTTP, as it's not possible to get a valid TLS certificate for the `localhost` domain.
+* A private network RFC1918 IP address (`10.0.0.0/8`, `172.16.0.0/12` or `192.168.0.0/16`).
+* A `localhost` domain name.
+* A `127.0.0.1` or `::1` IP address.
+* Subdomains of `.localhost` or `.local`.
 
 In all other cases, Mendix for Private Cloud will use HTTPS to access the registry.
 
 ### 1.3 Push and pull URLs
 
 Mendix for Private Cloud builds images from inside the cluster.
-After an image is built, the Mendix Operator sets (updates) image URLs of the app's Kubernetes Deployment;
-to start a copy of the app, Kubernetes will pull the image directly from the registry, bypassing the Mendix Operator
+After an image is built, the Mendix Operator sets (updates) image URLs of the app's Kubernetes Deployment resouce;
+to start a copy of the app, Kubernetes will pull the image directly from the registry.
 
 If the registry is hosted externally (outside the cluster), there's no difference between connecting to the registry from a pod in the cluster, or from the cluster node.
 

@@ -176,6 +176,8 @@ The steps for each procedure are described in the sections below.
 
     6. Set the value for the **Wait for result** parameter. If you set it to *false*, the result object will be available instantly, while the content will be added at a later stage. Set the **Wait for result** parameter to *true* only for direct user actions. Do not set the value to *true* for batch processing.
 
+        {{% alert color="info" %}}Whenever there are multiple document requests for the same app environment, the document generation service will prioritize requests that have the **Wait for result** parameter set to *true* above requests that have the parameter set to *false*.{{% /alert %}}
+
 5. Verify that the user which you configured in the **Generate document as** parameter has access to the page microflow created in step 3, as well as access to all relevant data used in the page to be exported.
 
 {{% alert color="info" %}}

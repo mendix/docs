@@ -8,7 +8,7 @@ tags: ["studio pro"]
 ---
 
 {{% alert color="warning" %}}
-The OData implementation in Mendix does not support all features in the OData specification, nor do we have any plans to provide a full implementation of the entire specification. The supported capabilities of OData are focused on providing a simple and productive way to share data between Mendix apps. Although OData [external entities](/refguide/external-entities/) may also work for third-party OData APIs, their use is not tested nor guaranteed. Please validate upfront that the functionality provided in Mendix matches the requirements of your third-party APIs. If [external entities](/refguide/external-entities/) do not work with your OData APIs, the advised alternative is to use [REST](/refguide/consumed-rest-services/) functionality.
+The OData implementation in Mendix does not support all features in the OData specification, nor do we have any plans to provide a full implementation of the entire specification. The supported capabilities of OData are focused on providing a simple and productive way to share data and logic between Mendix apps. Although OData [external entities](/refguide/external-entities/) may also work for third-party OData APIs, their use is not tested nor guaranteed. Please validate upfront that the functionality provided in Mendix matches the requirements of your third-party APIs. If [external entities](/refguide/external-entities/) do not work with your OData APIs, the advised alternative is to use [REST](/refguide/consumed-rest-services/) functionality.
 {{% /alert %}}
 
 ## 1 Introduction
@@ -105,3 +105,29 @@ When you publish a self-referencing association, you can only publish one side o
 ### 3.6 Enumerations
 
 Enumeration types that have one or more members with a name that is not a valid [enumeration value name](/refguide/enumerations/#name) are not supported.
+
+## 4 Requirements on the Service Actions {#actions}
+
+There are some limitations with regards to which actions can be consumed:
+
+* Bound actions are not supported
+* Actions that take an unsupported data type as parameter cannot be used
+* Actions that return a value of an unsupported data type cannot be used
+
+Supported data types, and their corresponding type in Mendix, are:
+
+| OData Type                     | Mendix Type                           |
+| ---                            | ---                                   |
+| Boolean                        | Boolean <sup><small>[1]</small></sup> |
+| Byte, SByte, Int16, Int32      | Integer |
+| Collection of Entities         | List of objects |
+| DateTime, DateTimeOffset, Time | Date/time |
+| Decimal, Double, Single        | Decimal <sup><small>[2]</small></sup> |
+| Entity                         | Object |
+| Enumeration                    | Enumeration |
+| Int64                          | Long |
+| String, Guid                   | String |
+
+In contrast to attributes of entities, actions do not support binary parameters. Also, note that the only supported Collection type is a Collection of Entities.
+
+<small><sup>[1]</sup> In Mendix, Booleans cannot be null. If the service returns null, the value will be false in Mendix.<br /><sup>[2]</sup> Decimal values outside of the range of a [Mendix decimal](/refguide/attributes/#type) are currently not supported. If the service returns a value outside of the range, there will be an error.</small>

@@ -240,7 +240,7 @@ Clients can only set values for an association from the entity that is the [owne
 
 When a published resource has the [Deletable](/refguide/published-odata-resource/#capabilities) capability, clients can delete an object by sending a `DELETE` request to the URL of the object (for example, `PATCH /odata/myservice/v1/Employees(8444249301330581)`).
 
-## 12 Calling microflows {#actions}
+## 13 Calling microflows {#actions}
 
 Microflows that are published in your OData service can be called by sending a `POST` request to the action's endpoint URL, which is defined by the base URL of the OData service and the exposed name of the microflow. For example: `POST /odata/myservice/v1/OnboardNewEmployee`. An example URL can be found when opening the **Edit published microflow** dialog; on the bottom you will find the **example of location** property.
 
@@ -266,6 +266,8 @@ If a parameter has type _object_ or _list_, the value of the parameter's propert
   }
 }
 ```
+
+If the action returns a value, it will always be contained in a JSON object with a single property named `value`.
 
 {{% alert type="info" %}}
 Note that an object that is passed to a microflow as parameter will not be committed automatically. If you want the passed object to be saved, you will have to implement this in the microflow. 

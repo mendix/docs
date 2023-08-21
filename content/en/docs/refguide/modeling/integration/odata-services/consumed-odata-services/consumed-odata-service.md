@@ -9,7 +9,7 @@ aliases:
 
 ## 1 Introduction
 
-When an external entity is used in an app module through the [Integration Pane](/refguide/integration-pane/), a consumed OData service document is added specifying the details of the consumed service. This is the API to the publishing app and the data associated with the entity.
+When an external entity or action is used in an app module through the [Integration Pane](/refguide/integration-pane/), a consumed OData service document is added specifying the details of the consumed service. This is the API to the publishing app and the data associated with the entity.
 
 ## 2 Consumed OData Service screen
 
@@ -124,7 +124,7 @@ When downloading the metadata from a URL, the server may request a username and 
 This information is not stored, so if you download the metadata from the same server again, you will have to enter your username and password again.
 {{% /alert %}}
 
-When you import the metadata, you can add external entities from the consumed OData service in the [Integration Pane](/refguide/integration-pane/).
+When you import the metadata, you can add external entities and actions from the consumed OData service in the [Integration Pane](/refguide/integration-pane/).
 
 ### 3.2 Properties
 

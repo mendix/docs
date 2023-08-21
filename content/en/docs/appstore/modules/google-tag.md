@@ -34,7 +34,7 @@ In **Basic** mode, the Google Tag widget sends a pre-configured `page_view` even
 The module is compatible with Studio Pro 9.18 and above.
 
 {{% alert color="info" %}}
-This module might not function correctly for users employing ad-blocking extensions in their browsers as such extensions often block tracking activities.
+This module might not function correctly for users employing ad-blocking extensions in their browsers, as such extensions often block tracking activities.
 {{% /alert %}}
 
 ## 2 Google Tag Widget

@@ -202,7 +202,16 @@ For scenarios where you want to generate documents using a system context (for e
 We recommend to try to log in as the service user at least once, to verify if the service user has the required module roles to login. Depending on your app’s implementation, it might for example be required to assign the `Administration.Account` module role.
 {{% /alert %}}
 
-### 4.3 Styling Documents
+
+### 4.3 Date and Time Handling
+
+For the localization of dates and times, the document generation service uses the timezone of the user that is passed in the **Generate as user** parameter.
+
+{{% alert color="info" %}}
+If no timezone is configured for the user that is passed in the **Generate as user** parameter, and the default time zone in the App Settings in Studio Pro is set to *(none)*, all dates and times will be displayed using UTC.
+{{% /alert %}}
+
+### 4.4 Styling Documents
 
 * You can use the **Page break** widget included in this module to structure your documents. The **Page break** widget enables you to add page breaks at any place in your document.
 * You can use the **Page orientation** design property to set the page orientation for your documents. This property is available in the **Design properties** section in the properties for a page.

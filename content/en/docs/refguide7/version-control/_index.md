@@ -3,6 +3,8 @@ title: "Version Control"
 url: /refguide7/version-control/
 #description: "Set a description with a maximum of 140 characters; this should describe what the goal of the document is, and it can be different from the document introduction; this is optional, and it can be removed"
 weight: 30
+no_list: false
+description_list: true 
 tags: ["Version Control", "Application Lifecycle Management", "Commit", "Collaborate"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
@@ -147,7 +149,4 @@ As with the examples in section 3, Version Control Processes for a Single Branch
 
 Note that *errors* can be introduced by the *merge* process even if no conflicts are identified during the merge. Errors are inconsistencies which are flagged in the Modeler and will prevent the app from being deployed. They could lead to a revision not being deployable, so it is important to check for errors after you have done a merge.
 
-## 5 Main Documents in This Category
-
-* [Using Version Control in the Desktop Modeler](/refguide7/using-version-control-in-the-dm/)
-* [Team Server](/refguide7/team-server/)
+## 5 Documents in This Category

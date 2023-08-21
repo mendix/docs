@@ -35,7 +35,7 @@ You can open a dialog box to configure this action by clicking the ellipsis (**â
 
 You can also open the dialog box by double-clicking the activity in the microflow or right-clicking the activity and selecting **Properties**.
 
-The properties dialog box consists of four tabs:
+The properties dialog box consists of two tabs:
 
 * [General](#general)
 * [Public documentation](#public-documentation)
@@ -52,9 +52,7 @@ After selecting an action, Studio Pro will verify if the types that are used by 
 
 In the table below the selected action, you will find the parameters that are defined by the external action, with their name, their type, and the configured argument.
 
-Selecting a row in the table and hitting **Edit parameter value**, or simply double-clicking it, will show you the [Edit External Action Parameter Mapping](#edit-parameter-mapping) dialog, where you can edit the argument that will be passed when calling the external action.
-
-For each parameter in the template, you can specify its value using a [microflow expression](/refguide/expressions/) resulting in a string value. This value will be inserted at the position of the parameter.
+Selecting a row in the table and hitting **Edit parameter value**, or simply double-clicking it, will show you the [Edit External Action Parameter Mapping](#edit-parameter-mapping) dialog, where you can edit the argument that will be passed when calling the external action.  
 
 ## 5 Public Documentation Tab {#public-documentation}
 
@@ -64,6 +62,6 @@ In the **Public documentation** tab, you can find a **Summary** and a **Descript
 
 [ image: TODO ]
 
-The **Edit External Action Parameter Mapping** dialog allows you to set the value of an external action's parameter. You can either select a **Variable** from the dropdown field, or write a custom **Expression**. 
+The **Edit External Action Parameter Mapping** dialog allows you to set the value of an external action's parameter. You can either select a **Variable** from the dropdown field, or write a custom [microflow expression](/refguide/expressions/) that results in a value of the expected type.
 
 Note that a parameter should always pass a value to the external action. When **Can be empty** is true, the selected variable or expression used may evaluate to `empty`. When it is false however, the microflow will throw an error when it attempts to pass a value that evaluates to `empty` to the external action.

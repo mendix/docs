@@ -108,11 +108,11 @@ Enumeration types that have one or more members with a name that is not a valid 
 
 ## 4 Requirements on the Service Actions {#actions}
 
-There are some limitations with regards to which actions can be consumed:
+There are some limitations with regards to which actions can be consumed. The following actions cannot be used:
 
-* Bound actions are not supported
-* Actions that take an unsupported data type as parameter cannot be used
-* Actions that return a value of an unsupported data type cannot be used
+* Bound actions
+* Actions that take an unsupported data type as parameter
+* Actions that return a value of an unsupported data type
 
 Supported data types, and their corresponding type in Mendix, are:
 
@@ -128,6 +128,6 @@ Supported data types, and their corresponding type in Mendix, are:
 | Int64                          | Long |
 | String, Guid                   | String |
 
-In contrast to attributes of entities, actions do not support binary parameters. Also, note that the only supported Collection type is a Collection of Entities.
+Note that the only supported Collection type is a Collection of Entities, and that binary parameters or return values are not supported at all for consumed OData actions.
 
 <small><sup>[1]</sup> In Mendix, Booleans cannot be null. If the service returns null, the value will be false in Mendix.<br /><sup>[2]</sup> Decimal values outside of the range of a [Mendix decimal](/refguide/attributes/#type) are currently not supported. If the service returns a value outside of the range, there will be an error.</small>

@@ -16,65 +16,30 @@ For example, the following date picker allows the end-user to see, and set, the 
 
 {{< figure src="/attachments/refguide/modeling/pages/input-widgets/date-picker/date-picker.png" >}}
 
-## 2 Properties
+## 2 Properties Pane
 
-An example of date picker properties is represented in the image below:
+The properties pane is divided into two major sections by a toggle at the top of the pane: **Properties** and **Styling**. Date picker properties consist of the following sections:
 
-{{< figure src="/attachments/refguide/modeling/pages/input-widgets/date-picker/date-picker-properties.png"   width="250"  >}}
-
-Date picker properties consist of the following sections:
-
-* [Common](#common)
-* [Data source](#data-source)
-* [Design Properties](#design-properties)
-* [Editability](#editability)
-* [Events](#events)
+Properties:
 * [General](#general)
+* [Data Source](#data-source)
 * [Label](#label)
-* [Validation](#validation)
+* [Editability](#editability)
 * [Visibility](#visibility)
+* [Validation](#validation)
+* [Accessibility](#accessibility)
+* [Common](#common)
+* [Events](#events)
 
-### 2.1 Common Section{#common}
+Styling:
+* [Design Properties](#design-properties)
+* [Common](#common-styling)
 
-{{% snippet file="/static/_includes/refguide/common-section-link.md" %}}
+## 3 Properties
 
-### 2.2 Data Source Section{#data-source}
+### 3.1 General Section{#general}
 
-{{% snippet file="/static/_includes/refguide/data-source-section-link.md" %}}
-
-### 2.3 Design Properties Section{#design-properties}
-
-{{% snippet file="/static/_includes/refguide/design-section-link.md" %}} 
-
-### 2.4 Editability Section{#editability}
-
-{{% snippet file="/static/_includes/refguide/editability-section-link.md" %}}
-
-### 2.5 Events Section{#events}
-
-#### 2.5.1 On Change{#on-change}
-
-The on-change property specifies an action that will be executed when leaving the widget, either by using the <kbd>Tab</kbd> key or by clicking another widget, after the value has been changed.
-
-{{% snippet file="/static/_includes/refguide/events-section-link.md" %}}
-
-#### 2.5.2 On Enter
-
-The on-enter property specifies an action that will be executed when the widget is entered, either by using the <kbd>Tab</kbd> key or by clicking it with the mouse.
-
-{{% snippet file="/static/_includes/refguide/events-section-link.md" %}}
-
-#### 2.5.3 On Leave
-
-The on-leave property specifies an action that will be executed when leaving the widget, either by using the <kbd>Tab</kbd> key or by clicking another widget.
-
-This differs from the [On change](#on-change) property in that the event will always be triggered, even if the value has not been changed.
-
-{{% snippet file="/static/_includes/refguide/events-section-link.md" %}}
-
-### 2.6 General Section{#general}
-
-#### 2.6.1 Date Format
+#### 3.1.1 Date Format
 
 The date format determines whether the date picker displays the attribute values as a date, time, date and time, or in a custom format.
 
@@ -87,7 +52,7 @@ The possible values for date format are shown below:
 * **Date and time**
 * **Custom** (see below for more details)
 
-#### 2.6.2 Custom Date Format
+#### 3.1.2 Custom Date Format
 
 If you choose **Custom** as the date format (see above), this property determines how the attribute value is formatted. The custom date format is a string that allows for any combination of symbols found in the table below. Any punctuation will be rendered literally.
 
@@ -97,7 +62,7 @@ If you choose **Custom** as the date format (see above), this property determine
 Even though a date picker with a custom date format is editable, the calendar drop-down button will only be shown if the custom format represents a full date (that is, the year [`y`-`yyyy`], month [`M`-`MMMM`], and day of month [`d`-`dd`] tokens are all present in the custom format).
 {{% /alert %}}
 
-#### 2.6.3 Placeholder Text
+#### 3.1.3 Placeholder Text
 
 The placeholder text is shown if the date attribute is empty. It can be used to give the end-user a hint as to the expected format.
 
@@ -105,19 +70,69 @@ The placeholder text is shown if the date attribute is empty. It can be used to 
 Placeholder text will not be displayed if a native date picker is available (that is, for iOS and Android versions 4.0 and above).
 {{% /alert %}}
 
-### 2.7 Label Section{#label}
+### 3.2 Data Source Section{#data-source}
+
+{{% snippet file="/static/_includes/refguide/data-source-section-link.md" %}}
+
+### 3.3 Label Section{#label}
 
 {{% snippet file="/static/_includes/refguide/label-section-link.md" %}}
 
-### 2.8 Validation Section{#validation}
+### 3.4 Editability Section{#editability}
 
-{{% snippet file="/static/_includes/refguide/widget-validation-link.md" %}}
+{{% snippet file="/static/_includes/refguide/editability-section-link.md" %}}
 
-### 2.9 Visibility Section{#visibility}
+### 3.5 Visibility Section{#visibility}
 
 {{% snippet file="/static/_includes/refguide/visibility-section-link.md" %}}
 
-## 3 Read More
+### 3.6 Validation Section{#validation}
+
+{{% snippet file="/static/_includes/refguide/widget-validation-link.md" %}}
+
+### 3.7 Accessibility Section{#accessibility}
+
+#### 3.7.1 Aria Required
+
+In a text area widget, when **Aria required** is set to **Yes** then assistive technologies will read out the field that is required. When set to **No** then assistive technologies will not read the field out.
+
+### 3.8 Common Section{#common}
+
+{{% snippet file="/static/_includes/refguide/common-section-link.md" %}}
+
+### 3.9 Events Section{#events}
+
+#### 3.9.1 On Change{#on-change}
+
+The on-change property specifies an action that will be executed when leaving the widget, either by using the <kbd>Tab</kbd> key or by clicking another widget, after the value has been changed.
+
+{{% snippet file="/static/_includes/refguide/events-section-link.md" %}}
+
+#### 3.9.2 On Enter
+
+The on-enter property specifies an action that will be executed when the widget is entered, either by using the <kbd>Tab</kbd> key or by clicking it with the mouse.
+
+{{% snippet file="/static/_includes/refguide/events-section-link.md" %}}
+
+#### 3.9.3 On Leave
+
+The on-leave property specifies an action that will be executed when leaving the widget, either by using the <kbd>Tab</kbd> key or by clicking another widget.
+
+This differs from the [On change](#on-change) property in that the event will always be triggered, even if the value has not been changed.
+
+{{% snippet file="/static/_includes/refguide/events-section-link.md" %}}
+
+## 4 Styling
+
+### 4.1 Design Properties Section{#design-properties}
+
+{{% snippet file="/static/_includes/refguide/design-section-link.md" %}} 
+
+### 4.2 Common Section{#common-styling}
+
+{{% snippet file="/static/_includes/refguide/common-section-link.md" %}}
+
+## 5 Read More
 
 * [Data View](/refguide/data-view/)
 * [Attributes](/refguide/attributes/)

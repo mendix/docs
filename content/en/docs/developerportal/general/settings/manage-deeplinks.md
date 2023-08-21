@@ -22,7 +22,7 @@ This how-to will teach you how to do the following:
 
 To create a deep link, you need the app ID, story ID, or feedback item number or the desired element in the Developer Portal:
 
-* For the app ID, select **Collaborate** > **General Settings** – you will find the ID at the bottom of the page:
+* For the app ID, select the **General** tab of the **Settings** – you will find the ID at the bottom of the page:
 
     {{< figure src="/attachments/developerportal/general/settings/manage-deeplinks/app-id.png" width="500px" alt="App ID on General Settings page" >}}
 

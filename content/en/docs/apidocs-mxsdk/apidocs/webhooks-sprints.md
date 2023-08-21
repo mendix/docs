@@ -14,7 +14,7 @@ The webhooks for stories and Sprints have been deprecated. For more information,
 {{% /alert %}}
 
 {{% alert color="warning" %}}
-The webhook payloads described in this document are for app stories and Sprints. These webhooks were enabled via **General Settings** > **Webhooks** or via your app.
+The webhook payloads described in this document are for app stories and Sprints. These webhooks were enabled via **Settings** > **Webhooks** or via your app.
 {{% /alert %}}
 
 {{% alert color="info" %}}

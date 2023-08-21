@@ -15,7 +15,7 @@ aliases:
 
 ## 1 Introduction
 
-The **General Settings** page presents an overview of your app.
+The **Settings** page presents an overview of your app.
 
 On the top of page, you can see the image of the app, the app name, and the company that owns the app. You can also find the **Watch** / **Stop Watching** toggle which enables or disables notifications for this app.
 
@@ -25,7 +25,7 @@ On the top of page, you can see the image of the app, the app name, and the comp
 Only users with the **App Settings** permission can edit the image and the app name.
 {{% /alert %}}
 
-The **General Settings** page always contains the following tabs:
+The **Settings** page always contains the following tabs:
 
 * **General**
 * **Access Management**
@@ -193,7 +193,7 @@ The **History** tab presents the collaboration actions for the app. On this page
 
 {{< figure src="/attachments/developerportal/general/settings/history.png"   width="700"  >}}
 
-When you select a history item and click **Show item**, the details of the story, Sprint, or [feedback item](/developerportal/general/feedback/) will be presented.
+When you select a history item and click **Show item**, the details of the story, Sprint, or [feedback item](/developerportal/app-insights/feedback/) will be presented.
 
 ## 9 Story Archive {#story-archive}
 

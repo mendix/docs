@@ -49,6 +49,8 @@ For information on the current status of deployment to Mendix Cloud and any plan
 
 ### May 4, 2023
 
+#### Improvements
+
 * In the Build and Deploy APIs, we have added a link to download packages from the Developer Portal. This is controlled by a parameter on the following API calls:
     * [Retrieve Package](/apidocs-mxsdk/apidocs/build-api/#retrieve-package) in the Build API
     * [Retrieve Environment Package](/apidocs-mxsdk/apidocs/deploy-api/#retrieve-environment-package) in the Deploy API
@@ -112,7 +114,7 @@ For information on the current status of deployment to Mendix Cloud and any plan
 
 #### Improvements
 
-* We have introduced support for [Dynatrace](/developerportal/operate/dynatrace-metrics/) monitoring in Mendix Cloud V4.
+* We have introduced support for [Dynatrace](/developerportal/operate/dynatrace-metrics/) monitoring in Mendix Cloud v4.
 
 ## 2022
 
@@ -174,7 +176,7 @@ For information on the current status of deployment to Mendix Cloud and any plan
 
 #### Improvements
 
-* We have introduced support for runtime application logs to be sent from Mendix Cloud V4 to [Splunk Cloud Platform](/developerportal/operate/splunk-metrics/).
+* We have introduced support for runtime application logs to be sent from Mendix Cloud v4 to [Splunk Cloud Platform](/developerportal/operate/splunk-metrics/).
 
 ### July 8, 2022
 
@@ -240,7 +242,7 @@ New Certificate Details: <https://crt.sh/?id=6940402070>
 
 #### Improvements
 
-* We have added two new graphs on the [Metrics page for Cloud V4](/developerportal/operate/trends-v4/):
+* We have added two new graphs on the [Metrics page for Cloudv v4](/developerportal/operate/trends-v4/):
     * Number of files in storage
     * Size of files in storage (in bytes)
 * We have updated the alert order on the [Alerts page](/developerportal/operate/monitoring-application-health/) for better visibility
@@ -248,7 +250,7 @@ New Certificate Details: <https://crt.sh/?id=6940402070>
 
 ### April 21, 2022
 
-* We have introduced support for [AppDynamics](/developerportal/operate/appdynamics-metrics/) monitoring in Mendix Cloud V4.
+* We have introduced support for [AppDynamics](/developerportal/operate/appdynamics-metrics/) monitoring in Mendix Cloud v4.
 
 ### March 31, 2022
 
@@ -332,7 +334,7 @@ New Certificate Details: <https://crt.sh/?id=5832398831>
 
 #### Improvements
 
-Mendix Cloud V4 now supports PostgreSQL 13. This adds significant performance improvements for some workloads.
+Mendix Cloud v4 now supports PostgreSQL 13. This adds significant performance improvements for some workloads.
 
 All newly-created applications will have a database running PostgreSQL 13.
 
@@ -361,7 +363,7 @@ Existing applications will be updated in the next few weeks. Technical contacts 
 * We added the ability to restore only a database, without restoring the other files in a backup.
     You can do this in one of two ways:
     * Through the [Developer Portal](/developerportal/operate/restore-backup/#restore-cloud-backup)
-    * Using the [Backups API V2](/apidocs-mxsdk/apidocs/backups-api/)
+    * Using the [Backups API v2](/apidocs-mxsdk/apidocs/backups-api/)
 
 ### August 6, 2021
 
@@ -395,11 +397,11 @@ Existing applications will be updated in the next few weeks. Technical contacts 
 
 #### Fixes
 
-* We fixed an issue where long-running restore jobs appear to fail when using [Backups API V1](/apidocs-mxsdk/apidocs/backups-api-v1/).  (Tickets 122197 and 125707)
+* We fixed an issue where long-running restore jobs appear to fail when using [Backups API v1](/apidocs-mxsdk/apidocs/backups-api-v1/).  (Tickets 122197 and 125707)
 
 #### Announcement
 
-* We are deprecating [Version 1 of the Backups API](/apidocs-mxsdk/apidocs/backups-api-v1/). We recommend that you use [Backups API V2](/apidocs-mxsdk/apidocs/backups-api/) which handles long-running backup and restore jobs more robustly.
+* We are deprecating [Version 1 of the Backups API](/apidocs-mxsdk/apidocs/backups-api-v1/). We recommend that you use [Backups API v2](/apidocs-mxsdk/apidocs/backups-api/) which handles long-running backup and restore jobs more robustly.
 
 ### June 14, 2021
 
@@ -409,9 +411,9 @@ Existing applications will be updated in the next few weeks. Technical contacts 
 
 ### June 11, 2021
 
-#### Mendix Cloud V3 Archived Logs
+#### Mendix Cloud v3 Archived Logs
 
-* We have deleted archived logs older than 6 months for all Mendix Cloud **V3** apps. This is in line with the warning given in the Developer Portal and the current commitment to keep logs for 6 months.
+* We have deleted archived logs older than 6 months for all Mendix Cloud v3 apps. This is in line with the warning given in the Developer Portal and the current commitment to keep logs for 6 months.
 
 ### June 8, 2021
 
@@ -423,7 +425,7 @@ Existing applications will be updated in the next few weeks. Technical contacts 
 
 #### Improvements
 
-* We now retain daily backups on Mendix Cloud V4 for 30 days. Previously, it was two weeks.
+* We now retain daily backups on Mendix Cloud v4 for 30 days. Previously, it was two weeks.
 
 ### May 18, 2021
 
@@ -513,7 +515,7 @@ In connected environments, this usage information will be sent back to Mendix au
 
 ### March 3, 2021
 
-* We updated the [deploy API](/apidocs-mxsdk/apidocs/deploy-api/), [Build API](/apidocs-mxsdk/apidocs/build-api/), [Team Server API](/apidocs-mxsdk/apidocs/team-server-api/), [Backups API V2](/apidocs-mxsdk/apidocs/backups-api/), and [Backups API V1](/apidocs-mxsdk/apidocs/backups-api-v1/) to:
+* We updated the [deploy API](/apidocs-mxsdk/apidocs/deploy-api/), [Build API](/apidocs-mxsdk/apidocs/build-api/), [Team Server API](/apidocs-mxsdk/apidocs/team-server-api/), [Backups API v2](/apidocs-mxsdk/apidocs/backups-api/), and [Backups API v1](/apidocs-mxsdk/apidocs/backups-api-v1/) to:
     * add json validation
     * add stricter API path validation (for example, a trailing `/` on the API path will result in `API not found`)
     * return differently formatted error messages for unhandled or unexpected errors

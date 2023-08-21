@@ -4,7 +4,7 @@ url: /appstore/partner-solutions/apd/rg-two-apm/
 weight: 1
 aliases:
     - /apm/reference-guide/rg-2/reference-guide-2.html
-    - /apm/reference-guide/rg-2/reference-guide-2
+    - /apm/reference-guide/rg-2/reference-guide-2/
 ---
 
 ## 1 Introduction

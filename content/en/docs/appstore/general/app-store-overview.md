@@ -6,10 +6,10 @@ weight: 1
 description: "Presents an overview of how to find and use content from the Mendix Marketplace."
 tags: ["marketplace",  "widget", "connector", "module", "partner"]
 aliases:
+    - /community/app-store/app-store-overview/
+    - /developerportal/app-store/app-store-overview/
     - /community/app-store/app-store-overview.html
     - /developerportal/app-store/app-store-overview.html
-    - /community/app-store/app-store-overview
-    - /developerportal/app-store/app-store-overview
 ---
 
 ## 1 Introduction
@@ -39,16 +39,16 @@ The home page is your entry point to the various parts of the Mendix Marketplace
 | **Service** | Software functionality that can be re-used for different use cases. Services usually include APIs that users can interact with by configuring a connection in the app’s module. |
 | <a id="industry"></a>**Solution** | Out-of-the-box solutions which are aimed at industry and domain problems, delivering instant value. These solutions are usually at least 80% ready for use and need minimal adaptation to make them work for the customer-specific use case. |
 | **Starter Template** | Sample projects which have certain capabilities in place to provide a basis for the Maker to start developing their app. The Maker does not create an app from a blank template but from a template which already has some features configured.|
-| **Industry Template** | Accelerators for implementing industry-specific processes. Industry Templates increase speed-to-value and time-to-market. They are a great starting point for common use cases within the relevant Industry. Contrary to solutions, Industry Templates are starter templates which are intended to provide inspiration for utilizing Mendix to create apps for industry-specific processes. They will usually cover around 20% of the process.  |
+| **Industry Template** | Accelerators for implementing industry-specific processes. Industry Templates increase speed-to-value and time-to-market. They are a great starting point for common use cases within the relevant Industry. Contrary to solutions, Industry Templates are starter templates which are intended to provide inspiration for utilizing Mendix to create apps for industry-specific processes. They will usually cover around 20% of the process. |
 
 The following filter options are also available:
 
 * **Category**
-* **Industry**
 * **Support**
-* **Rating**
-* **Visibility**
+* **Industry**
 * **Compatibility**
+* **Visibility**
+* **Rating**
 
 ## 3 Component Details Page {#details}
 
@@ -56,15 +56,12 @@ Clicking the tile of a Marketplace component will bring you to its details page 
 
 {{< figure src="/attachments/appstore/general/app-store-overview/component-details.png" >}}
 
-### 3.1 Header and Usage
-
 The header for a component presents the following details:
 
-* The name and category of the component
+* The name of the component
 * The review average (in stars) and the number of reviews
 * The number of times the component has been downloaded
-* <a id="saved"></a>The **Save and get notified** button which, when clicked, will add the component to the list on the [My Marketplace](#my-marketplace)
-* The **Share** button, which allows you to copy the URL of the component and share it to your networks
+* <a id="saved"></a>**Save and Get Notified** – click this to add the component to your [My Marketplace](#my-marketplace) list
 * **Download** – click this to download the component
     * This is only available for components that have a file attached (meaning, all shared Studio Pro components, but not promotions)
     * The best practice is to download a component from the Marketplace functionality built into Studio Pro, because it then downloads directly into Studio Pro (for details on importing downloaded Marketplace content into Studio Pro, see the [Installing Marketplace Content](/appstore/general/app-store-content/#install) section in *Use Marketplace Content in Studio Pro*))
@@ -83,24 +80,17 @@ The header for a component presents the following details:
 
 The **Publisher** section presents the name of the company who created the component as well as the **Date** when the component was first published.
 
-The **Developers** section presents the names of the developers who most recently updated the component, with links to their [Mendix Profile](/developerportal/mendix-profile/).
-
 The **Support** section presents the category of support Mendix offers for the component (for more details, see [Marketplace Content Support](/appstore/general/app-store-content-support/)).
 
 A **GitHub** link will take you to the GitHub source files of the component.
 
-### 3.2 Tabs {#tabs}
+The component details page also presents the following tabs:
 
-The details page for a component presents the following item information tabs:
-
-* **Overview** – contains the following sections:
-    * **Description** – a description of the component
-    * **Screenshots** – screenshots of the component
-    * **User Reviews** – user reviews of the component; to leave a review for the component, click **Add Review**, which will open a section where you can add text, rate the component, and submit the review (your reviews will be listed on your [Reviews](#my-reviews) page); if you are a developer of the component, you can **Reply** to a review
-* **Documentation** – can include details on typical use cases, features and limitations, dependencies, installation and configuration, and frequently asked questions
-    * [Platform-supported](/appstore/general/app-store-content-support/#category) components are documented in the various categories of this *Marketplace Guide*
-    * Click **Edit documentation** to open a text editor where you can edit the Marketplace component's documentation
-* **Releases** – lists all the versions of the component (any of which can be downloaded by clicking **Download**) along with details like the **Framework version** and the **UUID** (which can be used in the [CreateNewApp operation](/apidocs-mxsdk/apidocs/projects-api/#createnewapp) in the *Projects API*): 
+* **Overview** – contains a description and screenshot of the components
+* **Documentation** – can include details on typical use cases, features and limitations, dependencies, installation and configuration, frequently asked questions, and screenshots [platform-supported](/appstore/general/app-store-content-support/#category) components are documented in the various categories of this *Marketplace Guide*
+* **Releases** – lists all the versions of the component (any of which can be downloaded by clicking **Download**) along with details like the **Framework version** and the **UUID** (which can be used in the [CreateNewApp operation](/apidocs-mxsdk/apidocs/projects-api/#createnewapp) in the *Projects API*)
+* **Reviews** – user reviews of the component; to leave a review for the component, click **Add Review**, which opens a section where you can add text, rate the component, and submit the review (your reviews will be listed on your [Reviews](#my-reviews) page); if you are a developer of the component, you can **Reply** to a review
+* **Developers** – the names of the developers who most recently updated the component, with links to their [Mendix Profile](/developerportal/community-tools/mendix-profile/)
 
 ## 4 My Marketplace {#my-marketplace}
 
@@ -276,7 +266,7 @@ You can configure content groups for various levels of access to your company co
 
 This table breaks down the roles and permissions for content groups:
 
-| Roles | Manage (Create & Delete) Groups | Manage Group Members | Assign Apps to Group | Manage (Edit, Add New Version & Unpublish) Content | View & Download Group Content | View Group List |
+| Roles | Manage Groups (Create & Delete) | Manage Group Members | Assign Content to Group | Manage Content (Edit, Add New Version & Unpublish) | View & Download Group Content | View Group List |
 | --- | --- | --- | --- | --- | --- | --- |
 | Mendix Admin | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ |
 | Group Admin | ✘ | ✔ | ✔ | ✔ | ✔ | ✔ |

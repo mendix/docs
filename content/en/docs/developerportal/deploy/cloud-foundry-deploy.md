@@ -10,6 +10,7 @@ aliases:
     - /howto/deploying-a-mendix-app-to-cloud-foundry.html
     - /howto7/deploying-a-mendix-app-to-cloud-foundry.html
     - /refguide/deploying-a-mendix-app-to-cloud-foundry.html
+    - /deployment/cloud-foundry/
     - /howto/deploying-a-mendix-app-to-cloud-foundry
     - /howto7/deploying-a-mendix-app-to-cloud-foundry
     - /refguide/deploying-a-mendix-app-to-cloud-foundry

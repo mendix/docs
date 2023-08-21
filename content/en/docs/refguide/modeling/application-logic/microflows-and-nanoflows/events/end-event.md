@@ -28,7 +28,7 @@ The return value is the value that is returned to the flow that called the curre
 
 {{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/events/end-event/return-value.png"   width="300px"  >}}
 
-You can choose to return nothing, or to return, for example, a list, enumeration, or Boolean value. After you type an [expression](/refguide/expressions/) you will see a button that will allow you to update the return type:
+You can choose to return nothing, or to return, for example, a list, enumeration, or Boolean value. After you type an [expression](/refguide/expressions/) in the **End Event** dialog box, you will see an option that allows you to update the return type:
 
 {{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/events/end-event/end-event-form.png" width="500px" >}}
 

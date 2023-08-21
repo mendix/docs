@@ -203,7 +203,7 @@ When an alert is triggered for your Mendix app, a payload with the following for
 }
 ```
 
-See [Receive Environment Status Alerts](/developerportal/operate/receive-alerts/) for detailed information on receiving alerts 
+See [Receive Environment Status Alerts](/developerportal/operate/receive-alerts/) for detailed information on receiving alerts.
 
 ## 7 Logging
 

@@ -53,6 +53,12 @@ This setting defines how changes are reflected in the pages presented to the end
 
 After this activity, the `$latestHttpResponse` variable (of the [HttpResponse](/refguide/http-request-and-response-entities/#http-response) type) is available to inspect the response returned by the service.
 
+After this activity, an external object would be update based on the received response.
+
+{{% alert color="info" %}}
+The feature to update an external entity was introduced in Studio Pro [10.2.0](/releasenotes/studio-pro/10.2/).
+{{% /alert %}}
+
 ## 5 Related
 
 Persistable objects are persisted by using the [commit](/refguide/committing-objects/) activity. External entities cannot be committed. Use this activity instead.

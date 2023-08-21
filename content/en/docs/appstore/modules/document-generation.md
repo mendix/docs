@@ -225,7 +225,7 @@ If no timezone is configured for the user that is passed in the **Generate as us
 * You can use the **Page break** widget included in this module to structure your documents. The **Page break** widget enables you to add page breaks at any place in your document. In addition, you can use the **Add page break** design property that is available for Container widgets to add a page break before or after a specific container.
 * You can use the **Avoid break inside** design property that is available for Container widgets to prevent page breaks *within* a specific container. This can be useful to keep widgets grouped together on the same page.
 * You can use the **Show page numbers** design property to enable page numbers for your documents. At the moment, we only support basic page numbers. We will extend and add support for custom headers and footers at a later stage.
-* For advanced styling, you can use the styling editor in Studio Pro to style your documents. The module stylesheet includes several variables, such as *$document-page-margin* and *$document-default-bgcolor*, to customize your documents.
+* For advanced styling, you can use the styling editor in Studio Pro to style your documents. The module stylesheet includes several theme variables, such as *$document-background-color*, to customize your documents.
 
 ## 5 Troubleshooting
 

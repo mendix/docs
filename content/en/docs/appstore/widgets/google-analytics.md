@@ -13,7 +13,7 @@ The Google Analytics widgets set has been removed from our Marketplace. These wi
 
 ## 1 Introduction
 
-The [Google Analytics](https://marketplace.mendix.com/link/component/105/) widget enables tracking page views and custom events with Google Analytics. If you have an e-commerce application, you can also use this widget to keep track of your transactions.
+The Google Analytics widget enables tracking page views and custom events with Google Analytics. If you have an e-commerce application, you can also use this widget to keep track of your transactions.
 
 ### 1.1 Typical Usage Scenario
 

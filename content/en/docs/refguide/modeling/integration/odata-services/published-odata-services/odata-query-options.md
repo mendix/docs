@@ -1,7 +1,7 @@
 ---
 title: "OData Query Options"
 url: /refguide/odata-query-options/
-tags: ["OData", "filter", "count", "sort", "select", "page", "studio pro"]
+tags: ["OData", "filter", "count", "sort", "select", "page", "studio pro", "insert", "update", "delete", "actions"]
 ---
 
 ## 1 Introduction
@@ -239,3 +239,38 @@ Clients can only set values for an association from the entity that is the [owne
 ## 12 Deleting Objects {#deleting-objects}
 
 When a published resource has the [Deletable](/refguide/published-odata-resource/#capabilities) capability, clients can delete an object by sending a `DELETE` request to the URL of the object (for example, `PATCH /odata/myservice/v1/Employees(8444249301330581)`).
+
+## 12 Calling microflows {#actions}
+
+Microflows that are published in your OData service can be called by sending a `POST` request to the action's endpoint URL, which is defined by the base URL of the OData service and the exposed name of the microflow. For example: `POST /odata/myservice/v1/OnboardNewEmployee`. An example URL can be found when opening the **Edit published microflow** dialog; on the bottom you will find the **example of location** property.
+
+The request body is always a JSON object, with a property for each parameter that is defined in the published microflow. For example:
+
+```json
+{
+  "FirstName": "John",
+  "LastName": "Doe",
+  "FirstWorkingDay": "20240101T00:00:00.000Z",
+  "CreatePayrollAccount": true
+}
+```
+
+If a parameter has type _object_ or _list_, the value of the parameter's property is a JSON object or array respectively, serialised similarly to what is expected when [inserting new objects](#inserting-objects) for that entity. It is possible to pass an existing object by using the `@id` syntax to reference the existing object. It is also possible to pass both an `@id` reference _and_ attributes of the object combined, which results in an existing object being retrieved, with the additional attributes' values being applied to the existing object. For example:
+
+```json
+{
+  "OffboardingDate": "20231231T00:00:00.000Z",  
+  "Employee": {
+    "@id": "Employees(1783)",
+    "Email": "john.doe.personal@gmail.com"
+  }
+}
+```
+
+{{% alert type="info" %}}
+Note that an object that is passed to a microflow as parameter will not be committed automatically. If you want the passed object to be saved, you will have to implement this in the microflow. 
+{{% /alert %}}
+
+{{% alert type="info" %}}
+The *publish microflows* functionality was introduced in Studio Pro [10.2.0](/releasenotes/studio-pro/10.2/).
+{{% /alert %}}

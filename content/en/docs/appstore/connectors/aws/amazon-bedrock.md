@@ -9,7 +9,7 @@ tags: ["marketplace", "marketplace component", "amazon", "bedrock", "connector"]
 
 ## 1 Introduction
 
-The connector enables you to enrich your Mendix app with AI capabilities by connecting it to [Amazon Bedrock](https://aws.amazon.com/bedrock/). 
+The [Amazon Bedrock](#needs-link) connector enables you to enrich your Mendix app with AI capabilities by connecting it to [Amazon Bedrock](https://aws.amazon.com/bedrock/). 
 
 ### 1.1 Typical Use Cases
 

@@ -185,6 +185,6 @@ The input and output for this service are shown in the table below:
 
 | Input | Output |
 | --- | --- |
-| `AWS_Region (ENUM)`, `RequestBody (String)`, `InvokeModelGenericRequest` | `String` |
+| `AWS_Region (ENUM)`, `RequestBody (String)`, `InvokeModelGenericRequest` | `InvokeGenericModelResponse` |
 
 

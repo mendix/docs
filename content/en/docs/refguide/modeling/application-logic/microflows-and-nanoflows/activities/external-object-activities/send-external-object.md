@@ -56,7 +56,7 @@ After this activity, the `$latestHttpResponse` variable (of the [HttpResponse](/
 After this activity, an external object is updated based on the received response.
 
 {{% alert color="info" %}}
-The feature to update an external entity was introduced in Studio Pro [10.2.0](/releasenotes/studio-pro/10.2/).
+The feature to update an external entity was introduced in Studio Pro 10.3.0.
 {{% /alert %}}
 
 ## 5 Related

@@ -10,9 +10,7 @@ tags: ["studio pro", "domain model", "excel import", "spreadsheet", "app from sp
 
 ## 1 Introduction
 
-With the **App from a spreadsheet**, you can import a Microsoft Excel spreadsheet and build an app using your data. The data of the spreadsheet will be analyzed and converted into a domain model with entities, attributes, and associations. Also, pages and navigation items based on your data can be generated.
-
-You can create the **App from a spreadsheet** by using an app template in Studio Pro.
+With the **Start from spreadsheet** starting point, you can import a Microsoft Excel spreadsheet and build an app using your data. The data of the spreadsheet will be analyzed and converted into a domain model with entities, attributes, and associations. Also, pages and navigation items based on your data can be generated.
 
 ## 2 Preparing Your Data for Import
 

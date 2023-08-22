@@ -144,9 +144,8 @@ The steps for each procedure are described in the sections below.
 4. Sign in to the app environment you want to register.
 5. Navigate to the page that contains the **Snip_AppRegistration** snippet.
 6. Follow the steps on the page to register your app environment.
-7. Repeat the steps above for any other app environment that you want to register.
 
-{{% alert color="info" %}}Each of your app environments needs to be registered separately. A successful app registration is limited to the App URL that was provided during the registration. Note that a change in the App URL, or restoring a database backup from one environment to another, will require you to register the app environment(s) again.{{% /alert %}}
+{{% alert color="info" %}}Each of your app environments needs to be registered separately. A successful app registration is limited to the App URL that was provided during the registration. Note that a change in the App URL, or restoring a database backup from one environment to another, will require you to register the affected app environment(s) again.{{% /alert %}}
 
 ## 4 Usage
 

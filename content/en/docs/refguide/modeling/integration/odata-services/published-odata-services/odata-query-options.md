@@ -255,7 +255,7 @@ The request body is always a JSON object, with a property for each parameter tha
 }
 ```
 
-If a parameter has type _object_ or _list_, the value of the parameter's property is a JSON object or array respectively, serialised similarly to what is expected when [inserting new objects](#inserting-objects) for that entity. It is possible to pass an existing object by using the `@id` syntax to reference the existing object. It is also possible to pass both an `@id` reference _and_ attributes of the object combined, which results in an existing object being retrieved, with the additional attributes' values being applied to the existing object. For example:
+If a parameter has type _object_ or _list_, the value of the parameter's property is a JSON object or array respectively, similar to what is expected when [inserting new objects](#inserting-objects) for that entity. It is possible to pass an existing object by using the `@id` syntax to reference the existing object. It is also possible to pass both an `@id` reference _and_ attributes of the object combined, which results in an existing object with the additional attributes' values. For example:
 
 ```json
 {
@@ -270,7 +270,7 @@ If a parameter has type _object_ or _list_, the value of the parameter's propert
 If the action returns a value, it will always be contained in a JSON object with a single property named `value`.
 
 {{% alert type="info" %}}
-Note that an object that is passed to a microflow as parameter will not be committed automatically. If you want the passed object to be saved, you will have to implement this in the microflow. 
+Note that an object that is passed to a microflow will not be committed automatically. If you want the passed object to be saved, you will have to implement this in the microflow. 
 {{% /alert %}}
 
 {{% alert type="info" %}}

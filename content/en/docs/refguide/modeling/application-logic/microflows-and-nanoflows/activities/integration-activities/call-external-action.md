@@ -12,7 +12,7 @@ This activity can only be used in **Microflows**.
 
 ## 1 Introduction
 
-The **Call external action** activity allows you to call an external action that is defined by an OData service that your app consumes. You can configure the values that are passed as parameters, and how the value that is returned by the external action should be handled.
+The **Call external action** activity allows you to call an external action that is defined by an OData service that your app consumes. You can pass parameters to the action and use its result.
 
 ## 2 Properties
 
@@ -44,19 +44,19 @@ The properties dialog box consists of two tabs:
 
 ### 4.1 Action
 
-On the top of the General tab you will find the **Action** property, which contains the selected external action that will be called. By clicking **Select...** a selector dialog will pop up, which allows you to select an action from any external service that you have consumed in your app.
+On the top of the General tab you will find the **Action** property, which contains the selected external action that will be called. By clicking **Select...** a selector dialog will pop up, which allows you to select an action from an OData service that you have consumed in your app.
 
-After selecting an action, Studio Pro will verify if the types that are used by the parameters and the resulting return value of the external action are available in your project. If a parameter or the return value has an enumeration type which is not yet consumed in your project, it will be created for you. If a parameter or the return value is an object or a list of an external entity type that is not yet part of your domain model, it will ask you to confirm consuming this external entity. When you confirm this by clicking **Ok**, the necessary external entities will be added to the domain model of the same module as the current microflow you are editing. If you hit **Cancel**, the action will not be selected. 
+After selecting an action, Studio Pro will verify if the types that are used by the parameters and the return value of the external action are available in your app. If a parameter or the return value has an enumeration type which is not yet consumed in your app, Studio Pro will create it. If a parameter or the return value is an object or a list of an external entity type that is not yet part of your domain model, it will ask you to confirm adding this external entity to the domain model. When you confirm this by clicking **OK**, the necessary external entities and enumerations will be added to the domain model of the same module as the current microflow you are editing. If you hit **Cancel**, the action will not be selected. 
 
 ### 4.2 Parameters
 
-In the table below the selected action, you will find the parameters that are defined by the external action, with their name, their type, and the configured argument.
+In the table below the selected action, you will find the parameters that are defined by the external action, with their name, type, and the value passed to them.
 
-Selecting a row in the table and hitting **Edit parameter value**, or simply double-clicking it, will show you the [Edit External Action Parameter Mapping](#edit-parameter-mapping) dialog, where you can edit the argument that will be passed when calling the external action.  
+Selecting a row in the table and clicking **Edit parameter value**, or simply double-clicking it, will show you the [Edit External Action Parameter Mapping](#edit-parameter-mapping) dialog, where you can edit the value that will be passed when calling the external action.  
 
 ### 4.3 Output
 
-On the bottom of the dialog there will be an **Output** section if the action has a return value defined. If the action returns something, this box displays the type of the return value. The **Use return variable** toggle will by default be set to Yes, in which case you can enter a name for the variable that you want to be created with the return value.
+The **Output** section shows what the action returns. You can use this value in the microflow, or choose not to use it.
 
 ## 5 Public Documentation Tab {#public-documentation}
 
@@ -68,4 +68,4 @@ In the **Public documentation** tab, you can find a **Summary** and a **Descript
 
 The **Edit External Action Parameter Mapping** dialog allows you to set the value of an external action's parameter. You can either select a **Variable** from the dropdown field, or write a custom [microflow expression](/refguide/expressions/) that results in a value of the expected type.
 
-Note that a parameter should always pass a value to the external action. When **Can be empty** is true, the selected variable or expression used may evaluate to `empty`. When it is false however, the microflow will throw an error when it attempts to pass a value that evaluates to `empty` to the external action.
+Every parameter must have a value specified. When **Can be empty** is true, the selected variable or expression may evaluate to `empty`. When the value cannot be empty, the microflow will throw an error when the value evaluates to `empty`.

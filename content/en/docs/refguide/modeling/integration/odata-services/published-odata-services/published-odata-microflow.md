@@ -17,22 +17,22 @@ In the **Microflows** tab of the published OData service, click the **Add** butt
 
 Another way of publishing a microflow is from the microflow itself, by right-clicking on the canvas and clicking **Publish as OData action...**, or dragging the microflow from the connector pane onto the **Microflows** grid within the published OData service's **Microflows** tab.
 
+When you publish a microfow that has object, list or enumeration parameters or return type, these entities and enumerations need to be published as well.
+
 ### 2.2 Edit a published microflow
 
 Either select the microflow and click **Edit** or double-click the microflow to open its properties. In the **Edit published microflow** dialog you can change the **Exposed name** and change the **Microflow**. Below that, in the box **Example of location**, you will find the URI where the action will be located when the app is running.
 
 {{% alert color="info" %}}
-The resulting location URI must be unique. This means that a published microflow should not have the same exposed name as another published microflow or published entity. Doing so will result in a [consistency error](/refguide/consistency-errors/).
+The resulting location must be unique. This means that a published microflow cannot have the same exposed name as another published microflow or published entity.
 {{% /alert %}}
 
 In the **Public documentation** tab you can add a short **Summary** and a longer **Description** to describe the behaviour of the action.
 
 ### 2.3 Return Type
 
-The return type of the published microflow is not editable as it is determined by the microflow itself. Changing this has to be done in the microflow, and would mean a change of the metadata of the published OData service.
+This shows the return type of the published microflow.
 
 ## 3 Editing published microflow parameters
 
-By default, upon publishing a microfow all its parameters will be published. They will be shown in the **Parameters for microflow** grid on the right. 
-
-For information on these published parameters, check out [Published OData Microflow Parameters](/refguide/published-odata-microflow-parameters/).
+For information on these published parameters, see [Published OData Microflow Parameters](/refguide/published-odata-microflow-parameter/).

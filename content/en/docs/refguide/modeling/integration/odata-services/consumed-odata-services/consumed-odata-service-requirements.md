@@ -106,28 +106,27 @@ When you publish a self-referencing association, you can only publish one side o
 
 Enumeration types that have one or more members with a name that is not a valid [enumeration value name](/refguide/enumerations/#name) are not supported.
 
-## 4 Requirements on the Service Actions {#actions}
+## 4 Requirements on Actions {#actions}
 
-There are some limitations with regards to which actions can be consumed. The following actions cannot be used:
+The [Call External Action](/refguide/call-external-action/) activity calls actions. It cannot call
 
 * Bound actions
-* Actions that take an unsupported data type as parameter
-* Actions that return a value of an unsupported data type
+* Actions that take an unsupported type as parameter
+* Actions that return a value of an unsupported type
 
-Supported data types, and their corresponding type in Mendix, are:
+Supported types, and their corresponding type in Mendix, are:
 
-| OData Type                     | Mendix Type                           |
-| ---                            | ---                                   |
-| Boolean                        | Boolean <sup><small>[1]</small></sup> |
-| Byte, SByte, Int16, Int32      | Integer |
-| Collection of Entities         | List of objects |
-| DateTime, DateTimeOffset, Time | Date/time |
-| Decimal, Double, Single        | Decimal <sup><small>[2]</small></sup> |
-| Entity                         | Object |
-| Enumeration                    | Enumeration |
-| Int64                          | Long |
-| String, Guid                   | String |
+| OData Type                        | Mendix Type                           |
+| ---                               | ---                                   |
+| Boolean                           | Boolean <sup><small>[1]</small></sup> |
+| Byte, SByte, Int16, Int32, Int64  | Integer/Long |
+| Collection of Entities            | List |
+| DateTime, DateTimeOffset, Time    | Date/time |
+| Decimal, Double, Single           | Decimal <sup><small>[2]</small></sup> |
+| Entity                            | Object |
+| Enumeration                       | Enumeration |
+| String, Guid                      | String |
 
-Note that the only supported Collection type is a Collection of Entities, and that binary parameters or return values are not supported at all for consumed OData actions.
+Note that the only supported Collection type is a Collection of Entities, and that binary parameters or return values are not supported for consumed OData actions.
 
-<small><sup>[1]</sup> In Mendix, Booleans cannot be null. If the service returns null, the value will be false in Mendix.<br /><sup>[2]</sup> Decimal values outside of the range of a [Mendix decimal](/refguide/attributes/#type) are currently not supported. If the service returns a value outside of the range, there will be an error.</small>
+<small><sup>[1]</sup> In Mendix, Booleans cannot be null. If the action returns null, the value will be false in Mendix.<br /><sup>[2]</sup> Decimal values outside of the range of a [Mendix decimal](/refguide/attributes/#type) are currently not supported. If the action returns a value outside of the range, there will be an error.</small>

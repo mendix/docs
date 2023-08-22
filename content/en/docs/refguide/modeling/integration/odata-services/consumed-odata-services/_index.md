@@ -39,7 +39,7 @@ You can create associations between local [persistable entities](/refguide/persi
 
 ### 2.2 External Actions {#external-actions}
 
-External actions allow you to have the OData service executing an operation. It can take parameters and it may return a value, too. This is defined in the OData service contract. 
+External actions allow you to have the OData service execute operations. An action can take parameters and may return a value. This is defined in the OData service contract. 
 
 There are some limitations in place with regards to which actions can be consumed. To find out which actions are supported, see the [requirements for OData actions](/refguide/consumed-odata-service-requirements/#actions).
 

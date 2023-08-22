@@ -14,7 +14,7 @@ Use the Integration Pane in Studio Pro to use available data sources from the di
 
 You can search in the Catalog through the [Integration Pane](/refguide/integration-pane/) to discover data sources that you can use in your app. Via this pane you can add the entities that are exposed in the registered OData services—called **Data Sources** in Data Hub—into your app's domain model. These entities are called [external entities](/refguide/external-entities/) and are different because they enable the connection to the data associated with the entities in the originating app.
 
-Besides external entities, OData services can expose actions that can be called from within microflows. From this pane you can drag these actions into your microflow canvas, where they will be added as a  **Call external action** activity. In this activity you can configure the parameters, if any, and result variable, if the action returns anything.
+Besides external entities, OData services can expose actions that can be called from within microflows. From this pane you can drag these actions onto a microflow, where they will appear as a **Call external action** activity. In this activity you can configure the parameters and result variable.
 
 To display the [Integration Pane](/refguide/integration-pane/), click **View** > **Integration**.
 
@@ -141,13 +141,13 @@ Entities and associations can have any of the CRUD capabilities, while attribute
 
 ### 4.3 Actions {#actions}
 
-External actions are displayed under the service name, below the listed entities. By default the actions will be hidden and can be made visible by clicking **Show more...**
+External actions are displayed under the service, below the entities. By default the actions are hidden and can be made visible by clicking **Show more...**
 
-By clicking the expand button next to the action, the parameters and return type of that action will be shown. You can right-click and select **Find Usages** in order to search for all the places the action is used throughout the app.
+By clicking the expand button next to the action, the parameters and return type of that action are shown. You can right-click and select **Find Usages** in order to search for all the places the action is used throughout the app.
 
 {{< figure src="TODO" alt="Integration pane actions" >}}
 
-{{% alert color="info" %}}Actions that [are not supported](/refguide/consumed-odata-service-requirements/#actions) in your Mendix app are shown as non-selectable (gray) and cannot be dragged unto the microflow editor.{{% /alert %}}
+{{% alert color="info" %}}Actions that [are not supported](/refguide/consumed-odata-service-requirements/#actions) in your Mendix app are shown as non-selectable (gray) and cannot be dragged to a microflow.{{% /alert %}}
 
 ## 5 Read More
 
